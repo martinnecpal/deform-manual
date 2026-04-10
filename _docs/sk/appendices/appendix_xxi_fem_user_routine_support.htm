@@ -110,12 +110,12 @@ title: "Appendix XXI: How to setup Intel Fortran Compiler"
   <h2><a id="AXXI_3_Installation"></a>Installation</h2>
   <p>During the installation, be sure to check the <strong>Intel® Fortran Compiler </strong>&amp; <strong>Intel® Fortran Compiler Classic </strong>(See <a href="#Fig_AXXI_1_Intel_Fortran_Compiler"><span data-keyref="Appendix_XXI_FEM_Useroutine">Fig. AXXI.</span>1</a>).</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXXI_1_Intel_Fortran_Compiler"></a><img height="80" src="../../assets/images/appendices/appendix_xxi_intel_fortran/image0001.jpg" width="670"/></p>
+  <p style="text-align: center"><a id="Fig_AXXI_1_Intel_Fortran_Compiler"></a><img height="80" src="{{ '/assets/images/appendices/appendix_xxi_intel_fortran/image0001.jpg' | relative_url }}" width="670"/></p>
   <p class="Fig_numb" style="text-align: center;">Intel Fortran Compiler &amp; intel Fortran Compiler classic selection</p>
   <p style="text-align: center"> </p>
   <p style="text-align: justify">Intel® Fortran Compiler requires Microsoft Visual Studio 2019 or later versions to be preinstalled on the computer. During the installation, there will be a system check for Microsoft Visual Studio, as captured below <a href="#Fig_AXXI_2_Intel_Prerequisites_check"><span data-keyref="Appendix_XXI_FEM_Useroutine">Fig. AXXI.</span>2.</a> </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXXI_2_Intel_Prerequisites_check"></a><img height="422" src="../../assets/images/appendices/appendix_xxi_intel_fortran/image0002.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_AXXI_2_Intel_Prerequisites_check"></a><img height="422" src="{{ '/assets/images/appendices/appendix_xxi_intel_fortran/image0002.jpg' | relative_url }}" width="750"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb" style="text-align: center;">Intel Prerequisites check </p>
   <h2><a id="AXXI_4_DEFORM_User_Routine_Compilation"></a>DEFORM User Routine Compilation</h2>
@@ -126,7 +126,7 @@ title: "Appendix XXI: How to setup Intel Fortran Compiler"
   <p>The Absoft batch file is similar to that from past releases. When the preferred batch file is executed, DEF_SIM_64.EXE will be compiled with the Fortran (.f) user routine files and the static link library found in this directory. The released DEF_SIM_64.EXE
     should be replaced with the customized DEF_SIM_64.EXE, after first making a copy of the released executable.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXXI_3_UserRoutine_DEF_SIM_folder"></a><img src="../../assets/images/appendices/appendix_xxi_intel_fortran/image0003.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_AXXI_3_UserRoutine_DEF_SIM_folder"></a><img src="{{ '/assets/images/appendices/appendix_xxi_intel_fortran/image0003.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">UserRoutine DEF_SIM folder</p>
   <p> </p>
@@ -135,7 +135,7 @@ title: "Appendix XXI: How to setup Intel Fortran Compiler"
   <p>When the preferred batch file is executed, .dll files will be compiled with the Fortran (.f) user routine files found within this directory. The resulting .dll files and the Intel DEF_SIM_64.EXE (located in “&lt;2D or 3D&gt;\DEF_SIM_64\Intel_modern”)
     should be copied to a new folder. DEF_SIM_DIR.DAT should then be edited to specify the new folder as the location for the customized DEFORM implementation. Please note that either Absoft or Intel compiled .dll files may be linked with the Intel DEF_SIM_64.EXE.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXXI_4_UserRoutine_DEF_SIM_DLL_folder"></a><img src="../../assets/images/appendices/appendix_xxi_intel_fortran/image0004.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_AXXI_4_UserRoutine_DEF_SIM_DLL_folder"></a><img src="{{ '/assets/images/appendices/appendix_xxi_intel_fortran/image0004.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">UserRoutine DEF_SIM_DLL folder</p>
   <p> </p>
   <ol class="Decimal">

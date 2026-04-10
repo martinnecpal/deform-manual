@@ -104,71 +104,71 @@ title: "Shape Rolling Lab3"
   <p><a href="#3_18_Post_Processing">3.18. Post Processing</a></p>
   <p> </p>
   <h2><a id="3_1_Creating_a_New_problem"></a>Creating a New problem</h2>
-  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+  <p>On a <strong>Windows machine</strong>, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
     and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
   <p> </p>
-  <p>Create a new problem either by selecting <strong>File</strong><strong><strong> </strong><img height="12" src="../../../assets/icons/pre_icons/arrow_front.jpg" width="29"/> </strong> <strong>New Problem</strong> or by clicking the New Problem   icon.
+  <p>Create a new problem either by selecting <strong>File</strong><strong><strong> </strong><img height="12" src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}" width="29"/> </strong> <strong>New Problem</strong> or by clicking the New Problem   icon.
     The Problem Setup window will appear as shown in <a href="#Fig_L3_1_Problem_type_selection_window"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>1.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
     radio button and Unit system as &quot;<strong>SI</strong>&quot; using radio button. Define Problem Name as &quot;<strong>SHR_LAG_LAB3</strong>&quot; and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn
-    on the “Show option dialog” check box, then we will not get the New Project dialog in MO UI). Then click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg" style="cursor: nwse-resize;"/> button to open a new Problem using the Deform Integrated
+    on the “Show option dialog” check box, then we will not get the New Project dialog in MO UI). Then click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" style="cursor: nwse-resize;"/> button to open a new Problem using the Deform Integrated
     Manufacturing Process.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_1_Problem_type_selection_window"></a><img height="527" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0001.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_L3_1_Problem_type_selection_window"></a><img height="527" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0001.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Problem type selection window</p>
   <p><br/> Multiple operation wizard will open with the New Project dialog as shown in <a href="#Fig_L3_2_MO_Wizard_opening_window_in_MO_UI"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>2.</a>, at this point user will be
     prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘<strong>SHR_LAG_LAB3</strong>’ as the project name. 3D Shape Rolling operation can also be added
     in &quot;New Project&quot; dialog (see <a href="#Fig_L3_2_MO_Wizard_opening_window_in_MO_UI"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>2.</a>), in this lab we will add Shape rolling operation from Explorer operation
-    list, so do not check &quot;First operation&quot; check box and &quot;Shape Rolling&quot; operation in &quot;New Project&quot; dialog. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to continue to open the operation.</p>
+    list, so do not check &quot;First operation&quot; check box and &quot;Shape Rolling&quot; operation in &quot;New Project&quot; dialog. Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to continue to open the operation.</p>
   <p>   </p>
-  <p style="text-align: center"><a id="Fig_L3_2_MO_Wizard_opening_window_in_MO_UI"></a><img height="377" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0002.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_L3_2_MO_Wizard_opening_window_in_MO_UI"></a><img height="377" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0002.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_numb">MO Wizard opening window in MO UI</p>
   <p> </p>
   <h2><a id="3_2_Adding_Shape_Rolling_operation"></a>Adding Shape Rolling operation</h2>
-  <p>Add one Shape Rolling operation from the Explorer Operations list. Operation can be added by clicking on Shape Rolling operation <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button or user can also add by drag and drop into
+  <p>Add one Shape Rolling operation from the Explorer Operations list. Operation can be added by clicking on Shape Rolling operation <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button or user can also add by drag and drop into
     the Operation Editor.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_3_Adding_Shape_Rolling_Operation"></a><img height="378" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0003.jpg" width="750"/> </p>
+  <p style="text-align: center"><a id="Fig_L3_3_Adding_Shape_Rolling_Operation"></a><img height="378" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0003.jpg' | relative_url }}" width="750"/> </p>
   <p class="Fig_numb">Adding Shape Rolling Operation</p>
   <h2><a id="3_3_Set_process_conditions"></a>Set process conditions</h2>
   <p style="text-align: left">Select the rolling type as &quot;<strong>Lagrangian</strong>&quot; and symmetry type as <strong>Full </strong>as we will be setting up complete object. As we are interested in temperature gradient in rolls also, select the &quot;<strong>Workpiece and rolls (non-isothermal)</strong>&quot;
     option. Define the friction coefficient value as <strong>0.7 </strong>and heat transfer coefficient value as <strong>11</strong> as shown in <a href="#Fig_L3_4_Process_page"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>4.</a></p>
   <p style="text-align: center"><br/>
-    <a id="Fig_L3_4_Process_page"></a><img height="450" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0004.jpg" width="475"/></p>
+    <a id="Fig_L3_4_Process_page"></a><img height="450" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0004.jpg' | relative_url }}" width="475"/></p>
   <p class="Fig_numb">Process page</p>
   <h2><a id="3_4_Define_Workpiece"></a>Define Workpiece</h2>
   <p>In WP_CrossSection window keep the object type as ‘<strong>Plastic</strong>’ and specify workpiece temperature as <strong>100</strong>°C (see <a href="#Fig_L3_5_Workpiece_Object_Definition"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>5.</a>).
-    Other option available at this stage are ‘Import Object’ from another keyword file or database. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to continue.</p>
-  <p style="text-align: center"><a id="Fig_L3_5_Workpiece_Object_Definition"></a><img src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0005.jpg"/></p>
+    Other option available at this stage are ‘Import Object’ from another keyword file or database. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p style="text-align: center"><a id="Fig_L3_5_Workpiece_Object_Definition"></a><img src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0005.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">Workpiece Object Definition</p>
   <h3><a id="3_4_1_Create_Workpiece_Geometry"></a>Create Workpiece Geometry</h3>
   <p>To create a rectangular bar geometry for workpiece, in Geometry page select Define Primitive. From primitive geometry window select bar and define the parameters as mentioned below. A rectangular bar is created as shown in <a href="#Fig_L3_6_Workpiece_geometry_definition_in_Geometry_primitive_window"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>6.</a><br/>
     <strong>Origin Point</strong> = (-50, -42.5)<br/>
     <strong>Width </strong>W = 100mm<br/>
     <strong>Height </strong>H = 85mm</p>
-  <p style="text-align: center"><a id="Fig_L3_6_Workpiece_geometry_definition_in_Geometry_primitive_window"></a><img src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0006.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_L3_6_Workpiece_geometry_definition_in_Geometry_primitive_window"></a><img src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0006.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">Workpiece geometry definition in Geometry primitive window</p>
   <p> </p>
   <h3><a id="3_4_2_Generate_Workpiece_mesh"></a>Generate Workpiece mesh</h3>
   <p>Generate the workpiece mesh with default number of elements and settings.</p>
-  <p style="text-align: center"><a id="Fig_L3_7_Generating_Workpiece_mesh"></a><img height="500" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0007.jpg" width="347"/></p>
+  <p style="text-align: center"><a id="Fig_L3_7_Generating_Workpiece_mesh"></a><img height="500" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0007.jpg' | relative_url }}" width="347"/></p>
   <p class="Fig_numb">Generating Workpiece mesh</p>
   <h3><a id="3_4_3_Assigning_Workpiece_material"></a>Assigning Workpiece material</h3>
-  <p>To assign material for workpiece, select the material ‘<strong>AISI</strong><strong>-1045</strong>’ from material window. This can be done as shown in <a href="#Fig_L3_8_Assigning_material_for_Workpiece"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>8.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Groove list page.</p>
+  <p>To assign material for workpiece, select the material ‘<strong>AISI</strong><strong>-1045</strong>’ from material window. This can be done as shown in <a href="#Fig_L3_8_Assigning_material_for_Workpiece"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>8.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Groove list page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_8_Assigning_material_for_Workpiece"></a><img src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0008.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_L3_8_Assigning_material_for_Workpiece"></a><img src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0008.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">Assigning material for Workpiece</p>
   <h2><a id="3_5_Defining_Roll_Grooves"></a>Defining Roll Grooves</h2>
-  <p>In Groove List page, we can add grooves by clicking on the ‘<img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/>’ button. Click ‘<img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/>’ once to add one groove, we will be using same
+  <p>In Groove List page, we can add grooves by clicking on the ‘<img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/>’ button. Click ‘<img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/>’ once to add one groove, we will be using same
     grove for top and bottom roll.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_9_Groove_list_page"></a><img height="450" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0009.jpg" width="610"/></p>
+  <p style="text-align: center"><a id="Fig_L3_9_Groove_list_page"></a><img height="450" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0009.jpg' | relative_url }}" width="610"/></p>
   <p class="Fig_numb">Groove list page</p>
   <h3 class="h3_3_5_"><a id="3_5_1_Defining_Groove1_geometry"></a>Defining Groove1 geometry</h3>
-  <p>Select the First groove and click on <img src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/>. Roll Groove Primitive page will be opened, select Flat rolls. For roll geometry, Define <strong>width </strong>as <strong>120</strong>,
+  <p>Select the First groove and click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/>. Roll Groove Primitive page will be opened, select Flat rolls. For roll geometry, Define <strong>width </strong>as <strong>120</strong>,
     <strong>radius </strong>(r1) as <strong>5</strong> and <strong>Roll </strong><strong>Radius </strong><strong>RR </strong>as <strong>100 </strong>as shown in <a href="#Fig_L3_10_Defining_roll_pass_settings_in_Pass_table"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>10.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_10_Defining_roll_pass_settings_in_Pass_table"></a><img height="475" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0010.jpg" width="459"/></p>
+  <p style="text-align: center"><a id="Fig_L3_10_Defining_roll_pass_settings_in_Pass_table"></a><img height="475" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0010.jpg' | relative_url }}" width="459"/></p>
   <p class="Fig_numb">Defining Groove Geometry</p>
   <p> </p>
   <h2><a id="3_6_Defining_roll_pass_settings_in_Pass_table"></a>Defining roll pass settings in Pass table</h2>
@@ -176,9 +176,9 @@ title: "Shape Rolling Lab3"
     will define settings for Pass1.</p>
   <p>Turn on the &#39;Show all rolls (for asymmetric rolling)&#39; check box.</p>
   <p>Under Pass1, select Groove 1 from the groove list for both Top roll and Bottom roll.</p>
-  <p>Define the Roll speed (rpm) as 50, Roll gap (mm) as 80 and Roll temperature (C) as 40. Leave other settings as default and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to 3D setup page.</p>
+  <p>Define the Roll speed (rpm) as 50, Roll gap (mm) as 80 and Roll temperature (C) as 40. Leave other settings as default and click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 3D setup page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_11_Pass_Table"></a><img height="500" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0011.jpg" width="484"/></p>
+  <p style="text-align: center"><a id="Fig_L3_11_Pass_Table"></a><img height="500" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0011.jpg' | relative_url }}" width="484"/></p>
   <p class="Fig_numb">Pass Table</p>
   <h2><a id="3_7_3D_Setup"></a>3D Setup</h2>
   <p>From DEFORM v12, in 3D Setup page we have Pusher <strong>object </strong>options for Lagrangian rolling operation in Stand table page. Now we can create Pusher <strong>object </strong>using Object option or we can just assign <strong>Pusher </strong><strong>BCC </strong>without
@@ -190,58 +190,58 @@ title: "Shape Rolling Lab3"
   <p><strong>Auto position</strong>: using this option, Workpiece will be interference positioned with Top roll in Movement direction and Pusher will be interference positioned with Workpiece in Movement direction.</p>
   <p>In this lab select <strong>Object </strong>option for <strong>Pusher</strong>.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_12_3D_Setup_page"></a><img src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0012.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_L3_12_3D_Setup_page"></a><img src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0012.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">3D Setup page</p>
   <h3 class="h3_3_7_"><a id="3_7_1_3D_Roll_geometry_setup"></a>3D Roll geometry setup</h3>
-  <p>Click on <img src="../../../assets/icons/pre_icons/mo_3d_setup_edit_button.jpg"/> button of 3D rolls geometry to modify the settings of 3D roll object geometry generation, 3D roll geometry settings page will be opened. In 3D rolls Geometry settings
-    page, define the number of layers as 72 and select the &#39;Uniform geometry generation&#39;. Then click on <img src="../../../assets/icons/pre_icons/mo_apply_button.jpg"/>. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/> button of 3D rolls geometry to modify the settings of 3D roll object geometry generation, 3D roll geometry settings page will be opened. In 3D rolls Geometry settings
+    page, define the number of layers as 72 and select the &#39;Uniform geometry generation&#39;. Then click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/>. Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button
     to close the 3D rolls Geometry settings window.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_13_3D_Roll_Geometry_settings_page"></a><img src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0013.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_L3_13_3D_Roll_Geometry_settings_page"></a><img src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0013.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">3D Roll Geometry settings page</p>
   <h3 class="h3_3_7_"><a id="3_7_2_3D_Roll_mesh_settings"></a>3D Roll mesh settings</h3>
-  <p>Click on <img src="../../../assets/icons/pre_icons/mo_3d_setup_edit_button.jpg"/> button of 3D rolls mesh to modify the mesh settings of the roll, 3D roll mesh window will be opened with settings for 3D roll mesh. Define <strong>number of revolved sections for rolls</strong>    as <strong>72 </strong>using the “<strong>Uniform</strong><strong> mesh generation</strong>” option and import the die material ‘AISI-H-13’ from material library to assign to rolls as shown in <a href="#Fig_L3_14_3D_Roll_mesh_settings_page"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>14.</a>    Click on  <img src="../../../assets/icons/pre_icons/mo_apply_button.jpg"/> button to generate mesh for rolls with defined settings and the material. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button to close the 3D roll
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/> button of 3D rolls mesh to modify the mesh settings of the roll, 3D roll mesh window will be opened with settings for 3D roll mesh. Define <strong>number of revolved sections for rolls</strong>    as <strong>72 </strong>using the “<strong>Uniform</strong><strong> mesh generation</strong>” option and import the die material ‘AISI-H-13’ from material library to assign to rolls as shown in <a href="#Fig_L3_14_3D_Roll_mesh_settings_page"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>14.</a>    Click on  <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> button to generate mesh for rolls with defined settings and the material. Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button to close the 3D roll
     mesh window.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_14_3D_Roll_mesh_settings_page"></a><img src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0014.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_L3_14_3D_Roll_mesh_settings_page"></a><img src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0014.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">3D Roll mesh settings page</p>
   <p> </p>
   <h3 class="h3_3_7_"><a id="3_7_3_3D_Workpiece_setup_using_Tetrahedral_mesh"></a>3D Workpiece setup using Tetrahedral mesh</h3>
-  <p>In this lab, we will use Tetrahedral mesh for the Workpiece. Click on <img src="../../../assets/icons/pre_icons/mo_3d_setup_edit_button.jpg"/> button of 3D Workpiece mesh, Mesh window with 3D Workpiece mesh settings will be opened. Select user radio
+  <p>In this lab, we will use Tetrahedral mesh for the Workpiece. Click on <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/> button of 3D Workpiece mesh, Mesh window with 3D Workpiece mesh settings will be opened. Select user radio
     button for Workpiece Length and define the length as <strong>600 </strong>mm, select <strong>Tetrahedral </strong><strong>mesh </strong>radio button, define Target number of elements as <strong>20000 </strong>and Size ratio as <strong>1</strong>,
-    as shown in the <a href="#Fig_L3_15_3D_Workpiece_mesh_settings_page"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>15</a>. Click on <img src="../../../assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg"/> to generate
-    3D Workpiece mesh. Click <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close the Mesh window of the Workpiece mesh settings after generating the mesh.  </p>
+    as shown in the <a href="#Fig_L3_15_3D_Workpiece_mesh_settings_page"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>15</a>. Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}"/> to generate
+    3D Workpiece mesh. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the Mesh window of the Workpiece mesh settings after generating the mesh.  </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_15_3D_Workpiece_mesh_settings_page"></a><img height="350" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0015.jpg" width="402"/></p>
+  <p style="text-align: center"><a id="Fig_L3_15_3D_Workpiece_mesh_settings_page"></a><img height="350" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0015.jpg' | relative_url }}" width="402"/></p>
   <p class="Fig_numb">3D Workpiece mesh settings page</p>
   <p><br/>
-    <br/> Click on <img src="../../../assets/icons/pre_icons/mo_generate_all_button_2.jpg"/> button in 3D setup page and click on “<strong>Auto</strong><strong> position</strong>” button to position the Pusher, Rolls and workpiece correctly as shown
-    in below <a href="#Fig_L3_16_Positioning_the_3D_objects"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>16.</a> Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to continue.</p>
+    <br/> Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button_2.jpg' | relative_url }}"/> button in 3D setup page and click on “<strong>Auto</strong><strong> position</strong>” button to position the Pusher, Rolls and workpiece correctly as shown
+    in below <a href="#Fig_L3_16_Positioning_the_3D_objects"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>16.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_16_Positioning_the_3D_objects"></a><img height="380" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0016.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_L3_16_Positioning_the_3D_objects"></a><img height="380" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0016.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_numb">Positioning the 3D objects</p>
   <p> </p>
   <h2><a id="3_8_Simulation_controls"></a>Simulation controls</h2>
   <p>Accept the default settings in simulation controls page.</p>
   <p>Here save the project and select the Rolling Pass operation in operation editor.</p>
-  <p style="text-align: center"><a id="Fig_L3_17_Simulation_controls_page"></a><img height="480" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0017.jpg" width="479"/></p>
+  <p style="text-align: center"><a id="Fig_L3_17_Simulation_controls_page"></a><img height="480" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0017.jpg' | relative_url }}" width="479"/></p>
   <p class="Fig_numb">Simulation controls page</p>
   <p> </p>
   <h2><a id="3_9_Rolling_pass_operation"></a>Rolling pass operation</h2>
   <p>Select the Rolling Pass operation in the operation editor.</p>
-  <p style="text-align: center"><a id="Fig_L3_18_Rolling_pass_operation"></a><img height="380" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0018.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_L3_18_Rolling_pass_operation"></a><img height="380" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0018.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_numb">Rolling pass operation</p>
   <h2><a id="3_10_Stand_Table"></a>Stand Table</h2>
   <p>As you select the Rolling Pass operation, the Stand table page will appear as shown in figure <a href=""><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>18.</a> We will use tables at front and back
-    of the roll stand in this lab, so turn on the <strong>Table back </strong>and <strong>Table </strong><strong>front </strong>check boxes as shown in the <a href="#Fig_L3_19_Stand_Table_page"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>19.</a>    As mesh is generated and material is assigned for rolls, click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Table (Back) page.</p>
+    of the roll stand in this lab, so turn on the <strong>Table back </strong>and <strong>Table </strong><strong>front </strong>check boxes as shown in the <a href="#Fig_L3_19_Stand_Table_page"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>19.</a>    As mesh is generated and material is assigned for rolls, click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Table (Back) page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_19_Stand_Table_page"></a><img height="410" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0019.jpg" width="469"/></p>
+  <p style="text-align: center"><a id="Fig_L3_19_Stand_Table_page"></a><img height="410" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0019.jpg' | relative_url }}" width="469"/></p>
   <p class="Fig_numb">Stand Table page</p>
   <h2><a id="3_11_Defining_Tables"></a>Defining Tables</h2>
   <p>We need to define tables at front and back of the roll stand. The table at the back is named <strong>Table(Back)</strong> and the table at front is named <strong>Table(Front)</strong>. In <strong>Table(Back)</strong> page, accept the default temperature
-    and click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+    and click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_20_Table_(Back)_page"></a><img src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0020.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_L3_20_Table_(Back)_page"></a><img src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0020.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">Table (Back) page</p>
   <p> </p>
   <h3 class="h3_3_11_"><a id="3_11_1_Defining_Table(Back)_geometry"></a>Defining Table(Back) geometry</h3>
@@ -252,55 +252,55 @@ title: "Shape Rolling Lab3"
   <p><strong>Length </strong>= 750</p>
   <p><strong>Pass </strong><strong>Line</strong> = 2.5mm</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_21_Geometry_settings_for_Table(Back)"></a><img height="500" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0021.jpg" width="552"/></p>
+  <p style="text-align: center"><a id="Fig_L3_21_Geometry_settings_for_Table(Back)"></a><img height="500" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0021.jpg' | relative_url }}" width="552"/></p>
   <p class="Fig_numb">Geometry settings for Table(Back)</p>
   <h3 class="h3_3_11_"><a id="3_11_2_Generating_Mesh_for_Table(Back"></a>Generating Mesh for Table(Back) </h3>
   <p>Define the Uniform Thickness number of layers as 5 and keep the rest of the settings as default as shown in <a href="#Fig_L3_22_Mesh_settings_for_Table_Back"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>22.</a> Click
-    on  <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> to generate mesh for Table.</p>
+    on  <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> to generate mesh for Table.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_22_Mesh_settings_for_Table_Back"></a><img height="500" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0022.jpg" width="401"/></p>
+  <p style="text-align: center"><a id="Fig_L3_22_Mesh_settings_for_Table_Back"></a><img height="500" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0022.jpg' | relative_url }}" width="401"/></p>
   <p class="Fig_numb">Mesh settings for Table(Back)</p>
   <h3 class="h3_3_11_"><a id="3_11_3_Assigning_material_to_Table_Back"></a>Assigning material to Table(Back) </h3>
-  <p>To assign material for Table(Back) select the material ‘<strong>AISI</strong><strong>-H-13</strong>’ from material window. This can be done as shown in <a href="#Fig_L3_23_Assigning_material_to_Table(Back)"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>23.</a>    Click on  <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Table(Front) page.</p>
+  <p>To assign material for Table(Back) select the material ‘<strong>AISI</strong><strong>-H-13</strong>’ from material window. This can be done as shown in <a href="#Fig_L3_23_Assigning_material_to_Table(Back)"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>23.</a>    Click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Table(Front) page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_23_Assigning_material_to_Table(Back)"></a><img height="340" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0023.jpg" width="496"/></p>
+  <p style="text-align: center"><a id="Fig_L3_23_Assigning_material_to_Table(Back)"></a><img height="340" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0023.jpg' | relative_url }}" width="496"/></p>
   <p class="Fig_numb">Assigning material to Table(Back) </p>
   <h3 class="h3_3_11_"><a id="3_11_4_Defining_Table(Front)"></a>Defining Table(Front)</h3>
   <p>Similar to Table(Back), define the Table(Front) with same settings for the geometry, mesh and material.</p>
   <h2><a id="3_12_Pusher_object"></a>Pusher object</h2>
-  <p>The Pusher object is created automatically using the workpiece dimensions and a constant velocity is assigned based on the roll speed. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to check the created geometry and assigned
+  <p>The Pusher object is created automatically using the workpiece dimensions and a constant velocity is assigned based on the roll speed. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to check the created geometry and assigned
     movement controls.</p>
-  <p style="text-align: center"><a id="Fig_L3_24_Pusher_page"></a><img height="379" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0024.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_L3_24_Pusher_page"></a><img height="379" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0024.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_numb">Pusher page</p>
   <p> </p>
   <h3 class="h3_3_12_"><a id="3_12_1_Pusher_Geometry"></a>Pusher Geometry</h3>
-  <p>Check the default geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> option as shown in the <a href="#Fig_L3_25_Defining_Pusher_Geometry"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>25.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Pusher movement page.</p>
-  <p style="text-align: center"><a id="Fig_L3_25_Defining_Pusher_Geometry"></a><img height="379" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0025.jpg" width="750"/></p>
+  <p>Check the default geometry using <img src="{{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}"/> option as shown in the <a href="#Fig_L3_25_Defining_Pusher_Geometry"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>25.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Pusher movement page.</p>
+  <p style="text-align: center"><a id="Fig_L3_25_Defining_Pusher_Geometry"></a><img height="379" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0025.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_numb">Defining Pusher Geometry</p>
   <p> </p>
   <h3 class="h3_3_12_"><a id="3_12_2_Defining_Pusher_Movement"></a>Defining Pusher Movement </h3>
   <p>Select Speed option. Speed of the pusher should be 50 to 60% of the relative velocity of the rolls and hence assign a constant speed of <strong>340 </strong>mm/sec for pusher. (See <a href="#Fig_L3_26_Defining_Pusher_Movement"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>26.</a>)
-    The preview of the movement can be seen by clicking on the &quot;Preview Movement&quot; option. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> will take you to Object Positioning page.</p>
+    The preview of the movement can be seen by clicking on the &quot;Preview Movement&quot; option. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> will take you to Object Positioning page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_26_Defining_Pusher_Movement"></a><img height="500" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0026.jpg" width="412"/></p>
+  <p style="text-align: center"><a id="Fig_L3_26_Defining_Pusher_Movement"></a><img height="500" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0026.jpg' | relative_url }}" width="412"/></p>
   <p class="Fig_numb">Defining Pusher Movement </p>
   <p> </p>
   <h2><a id="3_13_Defining_Object_Positioning"></a>Defining Object Positioning</h2>
-  <p>The objects are automatically position correctly when we click <img src="../../../assets/icons/pre_icons/mo_auto_position_button.jpg"/> button in the 3D setup page and the Table(Front) and Table(Back) are created at proper position automatically, so
+  <p>The objects are automatically position correctly when we click <img src="{{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }}"/> button in the 3D setup page and the Table(Front) and Table(Back) are created at proper position automatically, so
     no need to position.</p>
   <p>The objects positioned should appear as shown in <a href="#Fig_L3_27_Position_of_the_objects"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>27.</a> </p>
   <p> </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_27_Position_of_the_objects"></a><img height="330" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0027.jpg" width="390"/></p>
+  <p style="text-align: center"><a id="Fig_L3_27_Position_of_the_objects"></a><img height="330" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0027.jpg' | relative_url }}" width="390"/></p>
   <p> </p>
   <p class="Fig_numb">Position of the objects</p>
   <p> </p>
   <h2><a id="3_14_Defining_Contact_Relations"></a>Defining Contact Relations</h2>
   <p>In the Contact relations page, master-slave relations will be automatically added. Define the <strong>shear </strong>friction as <strong>0.7</strong> and interface heat transfer coefficient as <strong>11 </strong>(see <a href="#Fig_L3_28_Contact_Relations_settings"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>28.</a>). Click
-    the <img src="../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> to determine an intelligent contact tolerance and click on <img src="../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> button to generate contacts between objects
-    (switch to surface patch model to view the contacts generated between the objects). Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+    the <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> to determine an intelligent contact tolerance and click on <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}"/> button to generate contacts between objects
+    (switch to surface patch model to view the contacts generated between the objects). Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> button.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_28_Contact_Relations_settings"></a><img height="380" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0028.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_L3_28_Contact_Relations_settings"></a><img height="380" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0028.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_numb">Contact Relations settings</p>
   <p> </p>
   <h2><a id="3_15_Simulation_Controls_page"></a>Simulation Controls page</h2>
@@ -308,40 +308,40 @@ title: "Shape Rolling Lab3"
     (see <a href="#Fig_L3_29_Defining_Number_of_Steps_and_Stopping_criteria"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>29.</a>). Click on the free end edge of the workpiece for stopping plane stopping controls (i.e.
     in +X direction) (see <a href="#Fig_L3_30_Stopping_plane_data_Expert_mode"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>30.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_29_Defining_Number_of_Steps_and_Stopping_criteria"></a><img height="320" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0029.jpg" width="462"/></p>
+  <p style="text-align: center"><a id="Fig_L3_29_Defining_Number_of_Steps_and_Stopping_criteria"></a><img height="320" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0029.jpg' | relative_url }}" width="462"/></p>
   <p class="Fig_numb">Defining Number of Steps and Stopping criteria</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_30_Stopping_plane_data_Expert_mode"></a><img height="380" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0030.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_L3_30_Stopping_plane_data_Expert_mode"></a><img height="380" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0030.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_numb">Stopping plane data (Expert mode)</p>
   <p> </p>
   <h2><a id="3_16_Generate_Database"></a>Generate Database</h2>
   <p>In the database generation stage user can check the data required for the analysis and proceed to generate the database (see <a href="#Fig_L3_31_Database_Generation"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>31</a>.).
     For First operation of any multiple operations, user is required to generate the database.</p>
   <p style="text-align: center"><br/>
-    <a id="Fig_L3_31_Database_Generation"></a><img src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0031.jpg"/></p>
+    <a id="Fig_L3_31_Database_Generation"></a><img src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0031.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">Database Generation</p>
   <h2><a id="3_17_Running_Simulation"></a>Running Simulation</h2>
-  <p>Once the database has been generated switch to the Simulation mode by clicking on <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the operation tree. Click on the <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_L3_32_Run_Simulation_Popup"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>32.</a> Use the default <strong>Continue Run</strong> option to select
-    “<strong>Continue</strong><strong> from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg"/> button to run
+  <p>Once the database has been generated switch to the Simulation mode by clicking on <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> button above the operation tree. Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog as shown in <a href="#Fig_L3_32_Run_Simulation_Popup"><span data-keyref="Labs_Shape_Rolling_labs_Shape_Rolling_Lab3">Fig. L3.</span>32.</a> Use the default <strong>Continue Run</strong> option to select
+    “<strong>Continue</strong><strong> from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}"/> button to run
     the simulation.</p>
-  <p>To define MPI settings, click on <img src="../../../assets/icons/simulator_icons/mo_more_button.jpg"/> button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend
+  <p>To define MPI settings, click on <img src="{{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}"/> button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend
     on your 3D MPI license).</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L3_32_Run_Simulation_Popup"></a><img height="275" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0032.jpg" width="685"/></p>
+  <p style="text-align: center"><a id="Fig_L3_32_Run_Simulation_Popup"></a><img height="275" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0032.jpg' | relative_url }}" width="685"/></p>
   <p> </p>
   <p class="Fig_numb">Run Simulation Popup</p>
   <h2><a id="3_18_Post_Processing"></a>Post Processing</h2>
   <p>In post processor Step list below the graphic area displays step numbers available from the different operations simulated. A set of state variables available from the ‘Post’ menu can be used to review the model response.</p>
   <p> </p>
-  <p style="text-align: center"><img height="379" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0033.jpg" style="cursor: nwse-resize;" width="750"/></p>
+  <p style="text-align: center"><img height="379" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0033.jpg' | relative_url }}" style="cursor: nwse-resize;" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Post Processing wizard</p>
   <p> </p>
-  <p style="text-align: center"><img height="325" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0034.jpg" width="750"/></p>
+  <p style="text-align: center"><img height="325" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0034.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Strain Effective plot</p>
   <p> </p>
-  <p style="text-align: center"><img height="327" src="../../../assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0035.jpg" width="750"/></p>
+  <p style="text-align: center"><img height="327" src="{{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab3/image0035.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Temperature plot</p>
 

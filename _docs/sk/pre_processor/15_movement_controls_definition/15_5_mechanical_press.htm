@@ -89,8 +89,8 @@ title: "15.5. Mechanical press"
     <a href="#15_5_3_Secondary_Control_s_">15.5.3. Secondary Control(s)</a><br/>
     <a href="#15_5_4_Elastic_Losses">15.5.4. Elastic Losses</a></p>
   <h2><a id="15_5_1_Crank_Press"></a>Crank Press [2D, 3D]</h2>
-  <p>The Mechanical Press type replicates the cyclic motion of a mechanical press. The parameters required to simulate the motion are the total displacement of the press (<img src="../../../assets/equations/pre_processor/15_movement_controls/dtot.jpg"/>)
-    relative to the current displacement (<img src="../../../assets/equations/pre_processor/15_movement_controls/dcur.jpg"/>) and the number of strokes per unit of time ( <img src="../../../assets/equations/pre_processor/15_movement_controls/s_dash.jpg"/>). Using these parameters, DEFORM can compute the die speed at any point of the travel of the die. The movement direction can only be specified in the X, Y, Z, -X, -Y or -Z directions. (See <a href="#Fig_15_5_1_2D_Mechanical_crank_press_movement_controls_window"><span data-keyref="Chapter_15_5_Mechanical_press">Fig. 15.5.</span>1.</a>    and <a href="#15_5_2_Knuckle_or_Wedge_Press"><span data-keyref="Chapter_15_5_Mechanical_press">Fig. 15.5.</span>2.</a>)</p>
+  <p>The Mechanical Press type replicates the cyclic motion of a mechanical press. The parameters required to simulate the motion are the total displacement of the press (<img src="{{ '/assets/equations/pre_processor/15_movement_controls/dtot.jpg' | relative_url }}"/>)
+    relative to the current displacement (<img src="{{ '/assets/equations/pre_processor/15_movement_controls/dcur.jpg' | relative_url }}"/>) and the number of strokes per unit of time ( <img src="{{ '/assets/equations/pre_processor/15_movement_controls/s_dash.jpg' | relative_url }}"/>). Using these parameters, DEFORM can compute the die speed at any point of the travel of the die. The movement direction can only be specified in the X, Y, Z, -X, -Y or -Z directions. (See <a href="#Fig_15_5_1_2D_Mechanical_crank_press_movement_controls_window"><span data-keyref="Chapter_15_5_Mechanical_press">Fig. 15.5.</span>1.</a>    and <a href="#15_5_2_Knuckle_or_Wedge_Press"><span data-keyref="Chapter_15_5_Mechanical_press">Fig. 15.5.</span>2.</a>)</p>
   <p>The equation to derive the die speed is:</p>
   <p> </p>
   <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF">
@@ -100,7 +100,7 @@ title: "15.5. Mechanical press"
     </colgroup>
     <tbody>
       <tr>
-        <td><img src="../../../assets/equations/pre_processor/15_movement_controls/eq_15_5_1.jpg"/></td>
+        <td><img src="{{ '/assets/equations/pre_processor/15_movement_controls/eq_15_5_1.jpg' | relative_url }}"/></td>
         <td>
           <p class="EQ_numb"> </p>
         </td>
@@ -109,11 +109,11 @@ title: "15.5. Mechanical press"
   </table>
   <p> </p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_15_5_1_2D_Mechanical_crank_press_movement_controls_window"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image001.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_15_5_1_2D_Mechanical_crank_press_movement_controls_window"></a><img src="{{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image001.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">2D Mechanical crank press movement controls window</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_15_5_2_3D_Mechanical_crank_press_movement_controls_window"></a><img height="541" src="../../../assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image002.jpg" width="492"/></p>
+  <p style="text-align: center"><a id="Fig_15_5_2_3D_Mechanical_crank_press_movement_controls_window"></a><img height="541" src="{{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image002.jpg' | relative_url }}" width="492"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb" style="text-align: center;">3D Mechanical crank press movement controls window</p>
   <p> </p>
@@ -130,7 +130,7 @@ title: "15.5. Mechanical press"
   <p><strong>Connecting-Rod Length</strong>:  As seen in <a href="#Fig_15_5_3_Sketch_of_a_simple_direct_crank_drive"><span data-keyref="Chapter_15_5_Mechanical_press">Fig. 15.5.</span>3.</a>, the connecting rod length can have an influence on the speed of
     the ram.  If the length of the connecting rod is known, it can be input as a field. If it is not known, it can left as zero and its contribution to the ram speed will not be considered.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_15_5_3_Sketch_of_a_simple_direct_crank_drive"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image003.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_15_5_3_Sketch_of_a_simple_direct_crank_drive"></a><img src="{{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image003.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Sketch of a simple direct crank drive</p>
   <p> </p>
@@ -143,11 +143,11 @@ title: "15.5. Mechanical press"
   <p> </p>
   <p><strong>Cycles/seconds</strong> represents the frequency of the press blows. This is a measure of blows per second or cycles per second.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_15_5_4_Knuckle_press_movement_controls_window"></a><img height="522" src="../../../assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image004.jpg" width="557"/></p>
+  <p style="text-align: center"><a id="Fig_15_5_4_Knuckle_press_movement_controls_window"></a><img height="522" src="{{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image004.jpg' | relative_url }}" width="557"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Knuckle press movement controls window   </p>
   <p class="Fig_name"> </p>
-  <p style="text-align: center"><a id="Fig_15_5_5_Knuckle_press_Stroke_Profile"></a><img height="374" src="../../../assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image005.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_15_5_5_Knuckle_press_Stroke_Profile"></a><img height="374" src="{{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image005.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Knuckle press Stroke Profile</p>
   <p> </p>
@@ -173,11 +173,11 @@ title: "15.5. Mechanical press"
   <p>The type of control will depend on the type of movement specified. In the case of a mechanical press and screw press (as seen in <a href="#Fig_15_5_6_2D_Secondary_controls_for_object_movement"><span data-keyref="Chapter_15_5_Mechanical_press">Fig. 15.5.</span>6.</a>    and <a href="#Fig_15_5_7_3D_Secondary_controls_for_object_movement"><span data-keyref="Chapter_15_5_Mechanical_press">Fig. 15.5.</span>7.</a>) the only control is based on load.  In the case of a hammer, there are no secondary controls since the only
     manner in which to stop is to run out of energy. In the case of a hydraulic press, it can stop based on the load or a minimum velocity.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_15_5_6_2D_Secondary_controls_for_object_movement"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image006.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_15_5_6_2D_Secondary_controls_for_object_movement"></a><img src="{{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image006.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">2D Secondary controls for object movement</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_15_5_7_3D_Secondary_controls_for_object_movement"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image007.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_15_5_7_3D_Secondary_controls_for_object_movement"></a><img src="{{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image007.jpg' | relative_url }}"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">3D Secondary controls for object movement</p>
   <p> </p>
@@ -185,7 +185,7 @@ title: "15.5. Mechanical press"
   <p>The stiffness of a press or a hammer can be defined in this dialog. (See <a href="#Fig_15_5_8_Stiffness_Compliance_definition_for_a_press_or_a_hammer"><span data-keyref="Chapter_15_5_Mechanical_press">Fig. 15.5.</span>8.</a>) In the case of a press
     there can be stretch based on the forging load and the final distance of the press will be less by the amount of the stretch. In the case of a hammer, the compliance accounts for elastic loss of energy.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_15_5_8_Stiffness_Compliance_definition_for_a_press_or_a_hammer"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image008.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_15_5_8_Stiffness_Compliance_definition_for_a_press_or_a_hammer"></a><img src="{{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image008.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Stiffness/Compliance definition for a press or a hammer</p>
   <p> </p>

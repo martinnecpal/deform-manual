@@ -83,7 +83,7 @@ title: "9.5. Solver Settings"
 
 
 
-  <h1>9. 5. Solver Settings <img height="25" src="../../../assets/icons/pre_icons/mo_solver_settings.jpg" width="25"/></h1>
+  <h1>9. 5. Solver Settings <img height="25" src="{{ '/assets/icons/pre_icons/mo_solver_settings.jpg' | relative_url }}" width="25"/></h1>
   <p><a href="#6.5.1._Deformation_solver_(SOLMTD)">9.5.1. Deformation solver (SOLMTD)</a></p>
   <p><a href="#Solver" style="margin-left: 40px">Solver</a></p>
   <p><a href="#Sparse_solver" style="margin-left: 80px">Sparse solver</a></p>
@@ -103,9 +103,9 @@ title: "9.5. Solver Settings"
   <p>The Solver criteria specify criteria the FEM solver uses to find a solution at each step of the problem simulation. For most problems, the default values should be acceptable. It may be necessary to change the values if non-convergence occurs (See
     <a href="#Fig._9.5.1._Solver_settings_for_the_Deformation_solver"><span data-keyref="Chapter_9_5_Solver_settings">Fig. 9.5.</span>1.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><img src="../../../assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image001.jpg"/></p>
+  <p style="text-align: center"><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image001.jpg' | relative_url }}"/></p>
   <p class="fig_name">(a)</p>
-  <p class="fig_name" style="text-align: center"><img src="../../../assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image002.jpg"/><br/>  (b)
+  <p class="fig_name" style="text-align: center"><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image002.jpg' | relative_url }}"/><br/>  (b)
   </p>
   <p class="fig_numb"><a id="Fig._9.5.1._Solver_settings_for_the_Deformation_solver"></a>Solver settings for the Deformation solver; (a) For 2D (b) For 3D</p>
   <h2><a id="9.5.1._Deformation_solver_(SOLMTD)"></a>Deformation solver (SOLMTD) [2D, 3D]</h2>
@@ -185,9 +185,9 @@ title: "9.5. Solver Settings"
     gives the recommended Solver and Iteration methods for 3D model.<br/> Keep an eye on the message file for the first few steps. The first step may be a bit slow converging. If the second step is still struggling to converge, or if the simulation stops,
     you may need to switch back to the sparse solver for a few more steps.<br/> In general, simulations in which you might expect convergence problems using the Sparse solver are not well suited for Conjugate Gradient. Most problems, particularly thin
     parts or flash parts, will do well after the first 20-30 steps, if not sooner.</p>
-  <p style="text-align: center"><img src="../../../assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image003.jpg"/></p>
+  <p style="text-align: center"><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image003.jpg' | relative_url }}"/></p>
   <p class="fig_numb">Plot of relative time versus elements for different solvers for Elastic Objects</p>
-  <p style="text-align: center"><img src="../../../assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image004.jpg"/></p>
+  <p style="text-align: center"><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image004.jpg' | relative_url }}"/></p>
   <p class="fig_numb">Plot of relative memory versus elements for different solvers for Elastic objects</p>
   <p> </p>
   <p> </p>
@@ -244,15 +244,15 @@ title: "9.5. Solver Settings"
           <p><strong>Rotation axis</strong>: This option is used to define the rotation axis of the object. For the selected rotation axis, we can define Inactive domain from the Property page - Partial domain tab of the Workpiece.</p>
         </li>
         <li>
-          <p><img src="../../../assets/icons/pre_icons/mo_preview_button.jpg"/><strong>Preview</strong>: Using this preview button, we can observe the active domain for the partial domain calculation zone on the workpiece. Active domain will be highlighted
+          <p><img src="{{ '/assets/icons/pre_icons/mo_preview_button.jpg' | relative_url }}"/><strong>Preview</strong>: Using this preview button, we can observe the active domain for the partial domain calculation zone on the workpiece. Active domain will be highlighted
             in White color in display region as shown in <a href="#Fig_9_5_4_Partial_domain_solver_options"><span data-keyref="Chapter_9_5_Solver_settings">Fig. 9.5.</span>4.</a> </p>
         </li>
         <li>
-          <p><strong>Add </strong><img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> : Using this button, we can add objects to the list for which active domain will be defined, if not added by default. Currently, the objects which are having
+          <p><strong>Add </strong><img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> : Using this button, we can add objects to the list for which active domain will be defined, if not added by default. Currently, the objects which are having
             translation (Speed, Path) movement data will be added to the table by default.  </p>
         </li>
         <li>
-          <p><strong>Delete </strong><img src="../../../assets/icons/pre_icons/mo_delete_icon2.jpg"/>: Using this button, we can delete the added objects from the list.</p>
+          <p><strong>Delete </strong><img src="{{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}"/>: Using this button, we can delete the added objects from the list.</p>
         </li>
         <li>
           <p><strong>Boundary constraints</strong>:</p>
@@ -269,7 +269,7 @@ title: "9.5. Solver Settings"
     </li>
   </ul>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_9_5_4_Partial_domain_solver_options"></a><img height="336" src="../../../assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image010.jpg" style="text-align: center;" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_9_5_4_Partial_domain_solver_options"></a><img height="336" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image010.jpg' | relative_url }}" style="text-align: center;" width="750"/></p>
   <p class="fig_numb" style="text-align: center;">Partial domain solver options</p>
   <p> </p>
   <ul class="Disc_wo_indent">
@@ -517,9 +517,9 @@ title: "9.5. Solver Settings"
   <p> </p>
   <p> </p>
   <h2><a id="9.5.2._Temperature_solver_(SOLMTT)"></a>Temperature solver (<a href="../../keyword_documentation/s/solmtt.htm">SOLMTT</a>)  [2D, 3D]</h2>
-  <p class="fig_name" style="text-align: center"><img src="../../../assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image005.jpg" style="text-align: center;"/><br/> (a)
+  <p class="fig_name" style="text-align: center"><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image005.jpg' | relative_url }}" style="text-align: center;"/><br/> (a)
   </p>
-  <p class="fig_name" style="text-align: center"><img src="../../../assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image006.jpg"/><br/> (b)
+  <p class="fig_name" style="text-align: center"><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image006.jpg' | relative_url }}"/><br/> (b)
   </p>
   <p class="fig_name"> </p>
   <p class="fig_numb">Temperature iteration settings;  (a) For 2D (b) For 3D</p>
@@ -558,14 +558,14 @@ title: "9.5. Solver Settings"
   <p> </p>
   <p> </p>
   <h2><a id="9.5.3._Induction_Heating_solver"></a>Induction Heating solver (<a href="../../keyword_documentation/s/solmti.htm">SOLMTI</a>) [3D]</h2>
-  <p style="text-align: center"><img src="../../../assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image007.jpg"/></p>
+  <p style="text-align: center"><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image007.jpg' | relative_url }}"/></p>
   <p class="fig_numb">Induction Heating solver settings</p>
   <p> </p>
   <p> </p>
   <h2><a id="9.5.4._Advanced"></a>Advanced</h2>
-  <p class="fig_name"><img src="../../../assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image009.jpg"/></p>
+  <p class="fig_name"><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image009.jpg' | relative_url }}"/></p>
   <p class="fig_name">(a)</p>
-  <p class="fig_name"><img src="../../../assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image008.jpg"/><br/> (b)
+  <p class="fig_name"><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image008.jpg' | relative_url }}"/><br/> (b)
   </p>
   <p class="fig_name"> </p>
   <p class="fig_numb">Advanced solver settings;  (a) For 2D (b) For 3D</p>

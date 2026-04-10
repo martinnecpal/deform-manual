@@ -101,10 +101,10 @@ title: "57.6. DEFORM Data Analytics Data Modeling"
   <p>Models establish relationships between columns of data in a data table. Models are defined (trained) by providing a model type and training data. The Training data consists of one or more inputs and one output from other columns in the data table. Once
     a model has been trained, it can be used to calculate (predict) output values for new input values. <a href="#Fig_57_6_1_Training_a_model"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>1.</a> and <a href="#Fig_57_6_2_Making_predictions_from_a_trained_model"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>2.</a>    illustrate this process.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_1_Training_a_model"></a><img height="251" src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0001.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_1_Training_a_model"></a><img height="251" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0001.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Training a model</p>
-  <p style="text-align: center"><a id="Fig_57_6_2_Making_predictions_from_a_trained_model"></a><img src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0002.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_2_Making_predictions_from_a_trained_model"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0002.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Making predictions from a trained model</p>
   <p><br/> DEFORM Data Analytics supports the following model types:</p>
@@ -122,7 +122,7 @@ title: "57.6. DEFORM Data Analytics Data Modeling"
     the model type. Once the inputs, the output and the model type are selected, the train button can be clicked to train the model. Once the model is trained, the cells under this column will be filled with values computed by the model for the input
     columns.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_3_Making_predictions_from_a_trained_model"></a><img src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0003.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_3_Making_predictions_from_a_trained_model"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0003.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Making predictions from a trained model</p>
   <p><br/> Model training works best if the inputs are independent. Many of the training algorithms rely on matrix inversion and dependent variables can result in matrices that cannot be inverted. So, the training will likely fail or the results may not
@@ -170,7 +170,7 @@ title: "57.6. DEFORM Data Analytics Data Modeling"
   <p><br/> Training time for a neural network model can be long.</p>
   <p><br/> The neural network model is not guaranteed to pass through all data points.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_4_Diagram_of_a_neural_network_model"></a><img height="306" src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0004.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_4_Diagram_of_a_neural_network_model"></a><img height="306" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0004.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Diagram of a neural network model</p>
   <p> </p>
@@ -182,7 +182,7 @@ title: "57.6. DEFORM Data Analytics Data Modeling"
   <p><br/> Training time for a deep neural network model can be long.</p>
   <p><br/> The deep neural network model is not guaranteed to pass through all data points.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_5_Diagram_of_a_deep_neural_network_model"></a><img height="357" src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0005.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_5_Diagram_of_a_deep_neural_network_model"></a><img height="357" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0005.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Diagram of a deep neural network model</p>
   <p><br/> In <span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>6., a list of models structures for DNN can be seen in User parameters section. There are four system-defined models, and 6 custom models that users can define
@@ -191,20 +191,20 @@ title: "57.6. DEFORM Data Analytics Data Modeling"
     Number of iterations determines how many times the model is going to propagate towards the minima. Default value is set to 100. Setting this value too low would not give an accurate result, whereas setting it too high may take excessive time with
     very little or no improvement of the model. </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_6_Deep_neural_network_model_user_interface"></a><img height="500" src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0006.jpg" width="609"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_6_Deep_neural_network_model_user_interface"></a><img height="500" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0006.jpg' | relative_url }}" width="609"/></p>
   <p> </p>
   <p class="Fig_numb">Deep neural network model user interface</p>
   <p> </p>
   <p><br/> After model parameters are defined, “Train” button in the left bottom corner of the interface can be clicked to initiate the training process. A progress bar will be shown in <a href="#Fig_57_6_7_Deep_neural_network_progress"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>7.</a>    to display the training process.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_7_Deep_neural_network_progress"></a><img src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0007.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_7_Deep_neural_network_progress"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0007.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Deep neural network progress</p>
   <p> </p>
   <p>After the training is finished, selected models should display the error representing the accuracy of the model. By clicking on those models, evaluated values are shown in the “Define model” column to compare the values with the reference training data
     (see <a href="#Fig_57_6_8_Deep_neural_network_completed_training"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>8.</a>). </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_8_Deep_neural_network_completed_training"></a><img src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0008.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_8_Deep_neural_network_completed_training"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0008.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Deep neural network completed training</p>
   <p> </p>
@@ -222,7 +222,7 @@ title: "57.6. DEFORM Data Analytics Data Modeling"
     to be specified. Although, the default search range is +/- infinity, this is actually just a very big number. The smaller the search range, the better chance the algorithm has of converging on a correct solution. Once the search ranges are entered,
     the model is ready for training.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_9_Equation_fit_model_user_interface"></a><img height="550" src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0009.jpg" width="355"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_9_Equation_fit_model_user_interface"></a><img height="550" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0009.jpg' | relative_url }}" width="355"/></p>
   <p> </p>
   <p class="Fig_numb">Equation fit model user interface</p>
   <p> </p>
@@ -234,11 +234,11 @@ title: "57.6. DEFORM Data Analytics Data Modeling"
   <p> </p>
   <p><a href="#Fig_57_6_10_Examples_of_models_with_noisy_data"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>10.</a> and <a href="#Fig_57_6_11_Example_of_piecewise_linear_model_with_noisy_data"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>11.</a>    show how some of these models represent some noisy data. Note that the Gaussian and piecewise linear models tend to over fit the data.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_10_Examples_of_models_with_noisy_data"></a><img height="498" src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0010.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_10_Examples_of_models_with_noisy_data"></a><img height="498" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0010.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Examples of models with noisy data</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_11_Example_of_piecewise_linear_model_with_noisy_data"></a><img height="400" src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0011.jpg" width="534"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_11_Example_of_piecewise_linear_model_with_noisy_data"></a><img height="400" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0011.jpg' | relative_url }}" width="534"/></p>
   <p> </p>
   <p class="Fig_numb">Example of piecewise linear model with noisy data</p>
   <p> </p>
@@ -259,10 +259,10 @@ title: "57.6. DEFORM Data Analytics Data Modeling"
   <p>RMS Error = 0.0815318</p>
   <p>Correlation = 0.996908 R^2 = 0.993783</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_12_Bar_plot_comparing_training_output_values_with_predicted_output_values"></a><img height="350" src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0012.jpg" width="350"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_12_Bar_plot_comparing_training_output_values_with_predicted_output_values"></a><img height="350" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0012.jpg' | relative_url }}" width="350"/></p>
   <p class="Fig_numb"> Bar plot comparing training output values with predicted output values</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_13_Scatter_plot_plotting_training_output_values_against_predicted_output_values"></a><img src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0013.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_13_Scatter_plot_plotting_training_output_values_against_predicted_output_values"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0013.jpg' | relative_url }}"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Scatter plot plotting training output values against predicted output values</p>
   <p> </p>
@@ -270,7 +270,7 @@ title: "57.6. DEFORM Data Analytics Data Modeling"
     could then provide average, minimum, maximum, etc. values for the errors. <a href="#Fig_57_6_14_Line_plot_plotting_error_values_along_with_original_training_data"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>14.</a>    shows an absolute value of difference plotted against the original output value. This gives an visual representation of the magnitude of the errors relative to the data values.</p>
   <p> </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_14_Line_plot_plotting_error_values_along_with_original_training_data"></a><img src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0014.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_14_Line_plot_plotting_error_values_along_with_original_training_data"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0014.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Line plot plotting error values along with original (training) data</p>
   <p> </p>
@@ -278,14 +278,14 @@ title: "57.6. DEFORM Data Analytics Data Modeling"
   <p>After a model has been trained, enter the inputs for which the output values are not known into new columns. Create another new column for the expression (set the usage to expression). The model/Expressions menu can be used to select the model to use.
     Add the new inputs inside the parenthesis for the model in the expression. Click apply. The cells of this column will be filled with the computed values. <a href="#Fig_57_6_15_Choosing_the_model_for_the_expression"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>15.</a>    – <a href="#Fig_57_6_17_Evaluating_the_expression"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>17.</a> show this procedure.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_15_Choosing_the_model_for_the_expression"></a><img height="479" src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0015.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_15_Choosing_the_model_for_the_expression"></a><img height="479" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0015.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Choosing the model for the expression</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_16_Choosing_new_inputs_for_the_expression"></a><img height="499" src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0016.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_16_Choosing_new_inputs_for_the_expression"></a><img height="499" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0016.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_numb">Choosing new inputs for the expression</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_57_6_17_Evaluating_the_expression"></a><img height="480" src="../../assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0017.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_57_6_17_Evaluating_the_expression"></a><img height="480" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0017.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Evaluating the expression</p>
   <p> </p>

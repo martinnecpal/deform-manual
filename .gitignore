@@ -16,3 +16,6 @@ _site/
 # Ruby
 vendor/
 Gemfile.lock
+
+# Local dev config override
+_config_dev.yml

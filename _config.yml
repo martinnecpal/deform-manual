@@ -33,6 +33,9 @@ exclude:
   - screendata.js
   - projectdata.js
   - index.ppf
+  - index.html        # replaced by index.md
+  - sk/index.html     # replaced by sk/index.md
+  - documentation_content/  # served from _docs/en/ instead
 
 # Keep assets untouched
 keep_files:

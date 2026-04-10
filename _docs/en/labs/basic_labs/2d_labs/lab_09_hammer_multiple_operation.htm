@@ -96,78 +96,78 @@ title: "Lab 09 Hammer Multiple Operation"
   <p><a href="#9_8_Starting_the_Simulation">9.8. Starting the Simulation</a></p>
   <p> </p>
   <h2><a id="9_1_Creating_a_New_Problem"></a>Creating a New Problem</h2>
-  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+  <p>On a <strong>Windows machine</strong>, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
     and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
   <p> </p>
-  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/>  icon. The Problem Setup window will appear. Select &quot;<strong>Integrated Manufacturing Process</strong>&quot; radio button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot;<strong>HM_FORGE</strong>&quot;
-    and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/><strong> New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/>  icon. The Problem Setup window will appear. Select &quot;<strong>Integrated Manufacturing Process</strong>&quot; radio button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot;<strong>HM_FORGE</strong>&quot;
+    and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
   <p> </p>
   <p>Multiple operation wizard will open with the New Project dialog (See <a href="#Fig_L9_1_Assigning_project_name"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>1.</a>), at this point user will be prompted to specify a project name (system
     will create a separate folder with this project name) and title for this session. In this lab we use ‘<strong><strong>HM_FORGE</strong></strong>’ as the project name.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L9_1_Assigning_project_name"></a><img height="424" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0001.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_L9_1_Assigning_project_name"></a><img height="424" src="{{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0001.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Assigning project name</p>
   <p> </p>
   <p>User can also change the Unit system, project saving file location and add operation by selecting from First operation pull down list and checkbox (See <a href="#Fig_L9_1_Assigning_project_name"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>1.</a>).
-    Using copy Existing project option we can import previous saved projects as new project. Click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> to continue to open the operation.</p>
+    Using copy Existing project option we can import previous saved projects as new project. Click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> to continue to open the operation.</p>
   <h2><a id="9_2_Adding_Operation"></a>Adding Operation</h2>
-  <p>Multiple Operation wizard will open. Add 2D Multi Blow Forging operation from the Explorer Operations list. Operation  can be add by clicking on 2D Multi Blow Forging operation <img height="20" src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg" width="19"/> button or user can also add by drag and drop into the Operation Editor. (See <a href="#Fig_L9_2_Added_Multi_Blow_Forging_operation_into_Operation_Editor"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>2.</a>)</p>
+  <p>Multiple Operation wizard will open. Add 2D Multi Blow Forging operation from the Explorer Operations list. Operation  can be add by clicking on 2D Multi Blow Forging operation <img height="20" src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}" width="19"/> button or user can also add by drag and drop into the Operation Editor. (See <a href="#Fig_L9_2_Added_Multi_Blow_Forging_operation_into_Operation_Editor"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>2.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L9_2_Added_Multi_Blow_Forging_operation_into_Operation_Editor"></a><img height="427" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0002.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_L9_2_Added_Multi_Blow_Forging_operation_into_Operation_Editor"></a><img height="427" src="{{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0002.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p> </p>
   <p class="Fig_numb">Added Multi Blow Forging operation into Operation Editor</p>
   <p> </p>
   <h2><a id="9_3_Importing_Keyfile"></a>Importing Keyfile</h2>
-  <p>Import <strong>HAMMER_LAB.KEY</strong> from DEFORM installation folder \2d\LABS using Import <img src="../../../../assets/icons/pre_icons/mo_import_icon.jpg"/> option.</p>
+  <p>Import <strong>HAMMER_LAB.KEY</strong> from DEFORM installation folder \2d\LABS using Import <img src="{{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}"/> option.</p>
   <p> </p>
   <h2><a id="9_4_Setup_Process_settings"></a>Setup Process settings</h2>
   <p>Energy has been loaded from the Primary Die movement definition. Keep the same energy. Check the Use Workpiece rotation checkbox to flip the workpiece after every blow. Keep the Use Dwell checkbox checked, as no heating is going on between the blows
-    in this lab. Do not check the Use Reheat checkbox. (see <a href="#Fig_L9_3_Process_page"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>3.</a>) Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to edit Blow table.</p>
+    in this lab. Do not check the Use Reheat checkbox. (see <a href="#Fig_L9_3_Process_page"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>3.</a>) Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to edit Blow table.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L9_3_Process_page"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0003.jpg" style="cursor: nwse-resize;"/></p>
+  <p style="text-align: center"><a id="Fig_L9_3_Process_page"></a><img src="{{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0003.jpg' | relative_url }}" style="cursor: nwse-resize;"/></p>
   <p> </p>
   <p class="Fig_numb">Process page</p>
   <h2><a id="9_5_Editing_Blow_table"></a>Editing Blow table</h2>
   <p>In the Blow Table add two more hits in addition to the default blow for a total of three blows. In all three rows change the Dwell time to 1.5 seconds by double clicking on the field. In the first row check the Flip checkbox. In the second row check
-    the Flip checkbox and change the % Blow to 90. In the third row check change the % Blow to 80. (See <a href="#Fig_L9_4_Edit_Blow_table"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>4.</a>). Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until the Contact page.</p>
+    the Flip checkbox and change the % Blow to 90. In the third row check change the % Blow to 80. (See <a href="#Fig_L9_4_Edit_Blow_table"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>4.</a>). Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until the Contact page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L9_4_Edit_Blow_table"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0004.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_L9_4_Edit_Blow_table"></a><img src="{{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0004.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Edit Blow table</p>
   <p> </p>
   <h2><a id="9_6_Generating_Inter-object_Contact"></a>Generating Inter-object Contact</h2>
-  <p>In contact page, click on workpiece -workpiece relationship <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> button for define Shear friction value as <strong>0</strong><strong><strong>.2</strong>5 - Warm forming</strong> from pull
+  <p>In contact page, click on workpiece -workpiece relationship <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> button for define Shear friction value as <strong>0</strong><strong><strong>.2</strong>5 - Warm forming</strong> from pull
     down menu list (See <a href="#Fig_L9_5_Deformation_Inter-object_data_definition_window"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>5.</a>), 0.25 value will be added as Shear friction value and define Heat transfer coefficient (HTC)
     value as <strong>Forming </strong>automatically 0.004 value will be added (See <a href="#Fig_L9_6_Thermal_Inter-object_data_definition_window"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>6.</a>).</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L9_5_Deformation_Inter-object_data_definition_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0005.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_L9_5_Deformation_Inter-object_data_definition_window"></a><img src="{{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0005.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Deformation Inter-object data definition window</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L9_6_Thermal_Inter-object_data_definition_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0006.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_L9_6_Thermal_Inter-object_data_definition_window"></a><img src="{{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0006.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Thermal Inter-object data definition window</p>
   <p> </p>
-  <p>Click  <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to go back to Contact window, since the friction conditions are the same for all the object pairs, the <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction of 0.25 and HTC of 0.004 defined. Use <img src="../../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> icon to determine a suitable contact tolerance (a value of about 0.00099&quot; will be calculated), then click <img src="../../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> button to generate contacts for all relationships (see
-    <a href="#Fig_l9_7_Generated_contact_relationship"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>7.</a>). Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Data base generation page.</p>
+  <p>Click  <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to go back to Contact window, since the friction conditions are the same for all the object pairs, the <img src="{{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}"/> button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction of 0.25 and HTC of 0.004 defined. Use <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> icon to determine a suitable contact tolerance (a value of about 0.00099&quot; will be calculated), then click <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}"/> button to generate contacts for all relationships (see
+    <a href="#Fig_l9_7_Generated_contact_relationship"><span data-keyref="Basic_labs_2D_labs_Lab9">Fig. 9.</span>7.</a>). Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Data base generation page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_l9_7_Generated_contact_relationship"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0007.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_l9_7_Generated_contact_relationship"></a><img height="426" src="{{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0007.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Generated contact relationship</p>
   <p> </p>
   <h2><a id="9_7_Generating_Database"></a>Generating Database</h2>
-  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/>  button to have the program check to see if anything was missed in the problem setup. During the checking process:</p>
+  <p>Click the <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/>  button to have the program check to see if anything was missed in the problem setup. During the checking process:</p>
   <p>Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).</p>
   <p> </p>
-  <p>Click on  <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. When the program is done writing the database, click on <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> tab to run simulation.</p>
+  <p>Click on  <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> button to generate the database. When the program is done writing the database, click on <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> tab to run simulation.</p>
   <p> </p>
   <h2><a id="9_8_Starting_the_Simulation"></a>Starting the Simulation</h2>
-  <p>Click on <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> under the simulation tab, as we click on the Run option, Run simulation dialog will open, use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option
-    and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p>Click on <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> under the simulation tab, as we click on the Run option, Run simulation dialog will open, use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option
+    and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation.</p>
   <p> </p>
-  <p>The progress of the simulation can be monitored as it is running by looking at the Simulation Message and Simulation Graphics in Simulation mode. Click the Simulation Message tab to view the Message file. As long as the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked, which is the default setting, the Message file will refresh every couple of seconds.</p>
+  <p>The progress of the simulation can be monitored as it is running by looking at the Simulation Message and Simulation Graphics in Simulation mode. Click the Simulation Message tab to view the Message file. As long as the <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked, which is the default setting, the Message file will refresh every couple of seconds.</p>
   <p> </p>
   <p>The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.</p>
   <p> </p>

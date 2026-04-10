@@ -107,20 +107,20 @@ title: "11. General Object Data Definition"
     objects data can be controlled by selecting specific data page under the object in the Object Tree. Once an object data page is selected, than in object data definition window contains the respective selected data such as the geometry, mesh, Material,
     boundary conditions, movement, initial conditions, and object specific numerical properties of the object.</p>
   <p> </p>
-  <p style="text-align: center"><img height="425" src="../../../assets/images/pre-processor/11_object_general_definition/11_image001.jpg" style="cursor: nesw-resize;" width="750"/></p>
+  <p style="text-align: center"><img height="425" src="{{ '/assets/images/pre-processor/11_object_general_definition/11_image001.jpg' | relative_url }}" style="cursor: nesw-resize;" width="750"/></p>
   <p> </p>
   <p class="Fig_numb"><a id="Fig_11_1_Pre-processor_with_the_object_tree_window_with_a_red_box"></a>Pre-processor with the object tree window with a red box</p>
   <p> </p>
   <h2><a id="11_1_Objects_list_page"></a>Objects list page</h2>
-  <p style="text-align: center"><a id="Fig_11_2_Object_list_page"></a><img src="../../../assets/images/pre-processor/11_object_general_definition/11_image002.jpg" style="cursor: nwse-resize;"/></p>
+  <p style="text-align: center"><a id="Fig_11_2_Object_list_page"></a><img src="{{ '/assets/images/pre-processor/11_object_general_definition/11_image002.jpg' | relative_url }}" style="cursor: nwse-resize;"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Object list page</p>
   <p> </p>
-  <p>To add an object to the object tree, click on the <img src="../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button as shown in <a href="#Fig_11_2_Object_list_page"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>2.</a>    This will insert a new object into the first available object number. To delete an object, select the appropriate object and press the <img src="../../../assets/icons/pre_icons/mo_delete_object_button.jpg"/> button. This will delete all entries associated
+  <p>To add an object to the object tree, click on the <img src="{{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}"/> button as shown in <a href="#Fig_11_2_Object_list_page"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>2.</a>    This will insert a new object into the first available object number. To delete an object, select the appropriate object and press the <img src="{{ '/assets/icons/pre_icons/mo_delete_object_button.jpg' | relative_url }}"/> button. This will delete all entries associated
     with the selected object, including movement controls, boundary conditions, inter-object boundary conditions, etc.</p>
-  <p>User can duplicate an existing object by selecting it and clicking on <img src="../../../assets/icons/pre_icons/mo_duplicate_object_button.jpg"/>.</p>
-  <p>The object position in the tree can be changed using <img src="../../../assets/icons/pre_icons/mo_move_object_down_button.jpg"/>  <img src="../../../assets/icons/pre_icons/mo_move_object_up_button.jpg"/> buttons.</p>
-  <p>User can import the object from a keyfile or database using <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>, the objects are appended to the existing object list.</p>
+  <p>User can duplicate an existing object by selecting it and clicking on <img src="{{ '/assets/icons/pre_icons/mo_duplicate_object_button.jpg' | relative_url }}"/>.</p>
+  <p>The object position in the tree can be changed using <img src="{{ '/assets/icons/pre_icons/mo_move_object_down_button.jpg' | relative_url }}"/>  <img src="{{ '/assets/icons/pre_icons/mo_move_object_up_button.jpg' | relative_url }}"/> buttons.</p>
+  <p>User can import the object from a keyfile or database using <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>, the objects are appended to the existing object list.</p>
   <p> </p>
   <p class="Note_text">Note: To replace an object geometry definition without deleting movement controls and inter-object relationships, it is possible to delete only the object geometry from the geometry window. This is useful for changing die geometries when performing
     two or more deformation operations on the same work piece. When redefining an object in this manner, it is extremely important to initialize and regenerate inter-object boundary conditions. It may also be necessary to reset the stroke definition in
@@ -130,22 +130,22 @@ title: "11. General Object Data Definition"
   <p>The workpiece and each piece of tooling must be identified as a unique object and assigned an object number and name. (See <a href="#Fig_11_3_3D_Object_Data_Definition_window"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>3.</a>)
     The object name (<a href="../../keyword_documentation/o/objnam.htm">OBJNAM</a>) is a string of up to 64 characters. It is highly recommended that it be set to something meaningful (e.g. punch, die, workpiece).</p>
   <p> </p>
-  <p style="text-align: center"><img height="423" src="../../../assets/images/pre-processor/11_object_general_definition/11_image003.jpg" width="750"/></p>
+  <p style="text-align: center"><img height="423" src="{{ '/assets/images/pre-processor/11_object_general_definition/11_image003.jpg' | relative_url }}" width="750"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb"><a id="Fig_11_3_3D_Object_Data_Definition_window"></a> 3D Object Data Definition window</p>
   <p> </p>
   <h2><a id="11_3_Object_initial_conditions"></a>Object initial conditions</h2>
   <p>Initial conditions can be specified for any object related state variable in DEFORM.  The most common initial condition specification is object temperature which can be specified in the respective object page.</p>
   <p>For heat treatment problems with variable carbon content in the workpiece, dominant atom content may also be specified. For meshed objects, initial object temperature and initial dominant atom content are specified by assigning values to all the nodes
-    by selecting the Object <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> object Nodes icon (<img height="21" src="../../../assets/icons/pre_icons/mo_nodal_data_icon.jpg" width="24"/>)<img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Diffusion tab.<br/> When a mesh is generated nodes and elements state variables will have their values initialized respectively based on the conditions defined for the object.<br/> Uniform object temperature can be specified in respective object
-    window. Nodal values may also be specified by selecting the Object <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Object Nodes icon (<img height="21" src="../../../assets/icons/pre_icons/mo_nodal_data_icon.jpg" width="24"/>)<img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Thermal tab. Values for an entire object can be set using the initialize  <img src="../../../assets/icons/pre_icons/mo_initialize_icon.jpg"/>  icon next to the appropriate data field.<br/> For non-meshed rigid tools, a constant object temperature
+    by selecting the Object <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> object Nodes icon (<img height="21" src="{{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}" width="24"/>)<img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Diffusion tab.<br/> When a mesh is generated nodes and elements state variables will have their values initialized respectively based on the conditions defined for the object.<br/> Uniform object temperature can be specified in respective object
+    window. Nodal values may also be specified by selecting the Object <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Object Nodes icon (<img height="21" src="{{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}" width="24"/>)<img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Thermal tab. Values for an entire object can be set using the initialize  <img src="{{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}"/>  icon next to the appropriate data field.<br/> For non-meshed rigid tools, a constant object temperature
     may be set using the r<span style="color:#0000ff;">eference temperature </span>( <a href="../../keyword_documentation/r/reftmp.htm">REFTMP</a>) under the <a href="../16_object_properties/16_object_properties.htm">Objects Properties.</a> </p>
   <p> </p>
   <p class="Note_text">Note:<br/> Using this approximation will tend to over-estimate temperature loss as the die surface will not heat up during the simulation. This effect can be compensated for by reducing the inter-object heat transfer coefficient (<a href="../../keyword_documentation/i/ihtcof.htm">IHTCOF</a>).</p>
   <p> <br/> For porous object relative density must be specified as described in porous object type using the Assign density button. This initializes the relative density value for all the elements by the value defined. Using the Element data values we can
-    specify the Objects <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Object Element icon (<img height="21" src="../../../assets/icons/pre_icons/mo_elemental_data_icon.jpg" width="24"/> ) <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Deformation <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/>  General tab.<br/> For any object defined as a mixture, the initial volume fraction (<a href="../../keyword_documentation/v/volfc.htm">VOLFC</a>) and maximum volume fraction
+    specify the Objects <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Object Element icon (<img height="21" src="{{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}" width="24"/> ) <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Deformation <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/>  General tab.<br/> For any object defined as a mixture, the initial volume fraction (<a href="../../keyword_documentation/v/volfc.htm">VOLFC</a>) and maximum volume fraction
     transformed (<a href="../../keyword_documentation/v/volfs.htm">VOLFS</a>) must be assigned for all volume fractions. In general <a href="../../keyword_documentation/v/volfc.htm">VOLFC</a> and <a href="../../keyword_documentation/v/volfs.htm">VOLFS</a> should
-    be initialized to the same value. The volume fraction can be defined by selecting the Object <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/>  Objects Element icon (<img height="21" src="../../../assets/icons/pre_icons/mo_elemental_data_icon.jpg" width="24"/>)   <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Transformation tab.</p>
+    be initialized to the same value. The volume fraction can be defined by selecting the Object <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/>  Objects Element icon (<img height="21" src="{{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}" width="24"/>)   <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Transformation tab.</p>
   <h2><a id="11_4_Object_type"></a>Object type (OBJTYP)</h2>
   <p>The object type (<a href="../../keyword_documentation/o/objtyp.htm">OBJTYP</a>) defines if and how deformation is modelled for each individual object in a DEFORM problem. </p>
   <p>Below are the different object type available in DEFORM: </p>
@@ -208,7 +208,7 @@ Limitations:</strong><br/> If yield stress for the tooling is exceeded, stress a
   <p>For the sintering material models available in DEFORM refer <a href="../10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data.htm#10.12.7._Sintering_Driving_Force_model">10.12.7. Sintering Driving Force Model.</a></p>
   <p>From v14.0, user can model the elastic behavior of porous materials by selecting the Elasto-plastic option from the Porous object type options as shown in <a href="#Fig_11_4_Porous_object_type_option"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>4.</a> </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_11_4_Porous_object_type_option"></a><img src="../../../assets/images/pre-processor/11_object_general_definition/11_image004.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_11_4_Porous_object_type_option"></a><img src="{{ '/assets/images/pre-processor/11_object_general_definition/11_image004.jpg' | relative_url }}"/></p>
   <p class="Fig_numb" style="text-align: center;">Porous object type option</p>
   <p><br/>
     <br/>
@@ -237,20 +237,20 @@ Limitations:</strong><br/> If yield stress for the tooling is exceeded, stress a
     object type options as shown in <a href="#Fig_11_5_User-defined_object_type"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>5.</a> , Elasto-plastic for Elasto-plastic and Plastic for rigid-plastic. SP solver is suggested for
     user-defined elasto-plastic problems. From v12, this implementation replaces the UMAT.DAT function in previous versions.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_11_5_User-defined_object_type"></a><img src="../../../assets/images/pre-processor/11_object_general_definition/11_image005.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_11_5_User-defined_object_type"></a><img src="{{ '/assets/images/pre-processor/11_object_general_definition/11_image005.jpg' | relative_url }}"/></p>
   <p class="Fig_numb" style="text-align: center;">User-defined object type</p>
   <p> </p>
   <h3><a id="11_4_8_Environment_Fluid_CFD"></a>Environment [Fluid(CFD)] [2D, 3D]</h3>
   <p>Users can define the Fluid environment using Environment (Fluid(CFD)) object type as shown in <a href="#Fig_11_6_Environment_Fluid_CFD_type_object_selection"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>6.</a> This option
     will be available when user turns on the “CFD flow” simulation type from the Simulation controls page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_11_6_Environment_Fluid_CFD_type_object_selection"></a><img height="341" src="../../../assets/images/pre-processor/11_object_general_definition/11_image006.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_11_6_Environment_Fluid_CFD_type_object_selection"></a><img height="341" src="{{ '/assets/images/pre-processor/11_object_general_definition/11_image006.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_numb" style="text-align: center;">Environment Fluid(CFD) type object selection</p>
   <h3><a id="11_4_9_Environment_Air_Electro-magnetic"></a>Environment [Air(Electro-magnetic)] [2D, 3D]</h3>
   <p>Air in Induction type electro-magnetic problems can be modeled using the Environment (Air(Electro-magnetic)) object type as shown in <a href="#Fig_11_7_Environment_Air_Electro-magnetic_type_object_selection"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>7.</a> This
     option is available to the users when the Induction type of Heating is selected under Heat Transfer in Simulation controls page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_11_7_Environment_Air_Electro-magnetic_type_object_selection"></a><img height="344" src="../../../assets/images/pre-processor/11_object_general_definition/11_image007.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_11_7_Environment_Air_Electro-magnetic_type_object_selection"></a><img height="344" src="{{ '/assets/images/pre-processor/11_object_general_definition/11_image007.jpg' | relative_url }}" width="750"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb" style="text-align: center;">Environment Air(Electro-magnetic) type object selection</p>
   <p> </p>
@@ -267,14 +267,14 @@ Limitations:</strong><br/> If yield stress for the tooling is exceeded, stress a
   </ul>
   <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
   <p>The primary die is defined in using a check box (See <a href="#Fig._11.3._3D_Object_Data_Definition_window"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>3.</a>). Only one object can be defined as the primary die.</p>
-  <h2><strong><a id="11_6_Import_object__from_file"></a>Import object  from file </strong><img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>:</h2>
+  <h2><strong><a id="11_6_Import_object__from_file"></a>Import object  from file </strong><img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>:</h2>
   <p>User can import object from key file or Database. This import all the object data available in the Keyfile or DB like Geometry, Mesh, BCC, Movement, Material and Nodal and elemental data.</p>
-  <h2><strong><a id="11_7_Import_object_from_library"></a>Import object from library</strong> <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>:</h2>
+  <h2><strong><a id="11_7_Import_object_from_library"></a>Import object from library</strong> <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/>:</h2>
   <p>User can import object from user library.</p>
-  <h2><strong><a id="11_8_Save_object_to_a_file"></a>Save object to a file</strong> <img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/> :</h2>
-  <p>User can save the object in key file format. This saved file can be imported back by <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> using  import object option in any other deform problem setup.</p>
-  <h2><strong><a id="11_9_Save_object_to_library"></a>Save object to library </strong><img height="20" src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg" width="21"/> :</h2>
-  <p>User can save the object data to library and saved file can be imported back by using <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>  import object option in any other deform problem setup.</p>
+  <h2><strong><a id="11_8_Save_object_to_a_file"></a>Save object to a file</strong> <img src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}"/> :</h2>
+  <p>User can save the object in key file format. This saved file can be imported back by <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> using  import object option in any other deform problem setup.</p>
+  <h2><strong><a id="11_9_Save_object_to_library"></a>Save object to library </strong><img height="20" src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}" width="21"/> :</h2>
+  <p>User can save the object data to library and saved file can be imported back by using <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/>  import object option in any other deform problem setup.</p>
   <p> </p>
   <p><strong>Related Topics:</strong></p>
   <p><a href="../9_simulation_controls/9_simulation_controls.htm">9. Simulation Controls</a></p>

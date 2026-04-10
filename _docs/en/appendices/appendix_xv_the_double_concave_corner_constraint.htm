@@ -84,13 +84,13 @@ title: "Appendix XV: The Double Concave Corner Constraint"
 
 
   <h1>Appendix XV: The Double Concave Corner Constraint</h1>
-  <p>This feature is available under the <strong>Simulation Controls</strong> <img src="../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Control Files</strong> menu in the preprocessor. Any given node in an FEM mesh has three degrees of freedom (DOF).
+  <p>This feature is available under the <strong>Simulation Controls</strong> <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> <strong>Control Files</strong> menu in the preprocessor. Any given node in an FEM mesh has three degrees of freedom (DOF).
      In a Cartesian coordinate system they can be the X, Y and Z directions. In a cylindrical system, they can be the radial, axial and hoop directions.  In any case, no matter what coordinate system one selects, there are no more and no less than three
     degrees of freedom for any node.  In the boundary condition dialog (as seen in <a href="#Fig_AXV_1_The_boundary_condition_dialog"><span data-keyref="Appendix_XV_The_Double_Concave_Corner_Constraint">Fig. AXV.</span>1.</a>), the DOF for the nodes are
     defined through contact, through velocity control and other conditions.  The way in which a DOF is defined for a node in contact is to not allow the node to penetrate into the object as well as do not allow separation if the tensile separation criteria
     is not exceeded (usually a small nominal value). Three contact conditions, completely specify the motion of a given node.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXV_1_The_boundary_condition_dialog"></a><img height="370" src="../../assets/images/appendices/appendix_xv_the_double_concave_corner/image0001.jpg" width="444"/></p>
+  <p style="text-align: center"><a id="Fig_AXV_1_The_boundary_condition_dialog"></a><img height="370" src="{{ '/assets/images/appendices/appendix_xv_the_double_concave_corner/image0001.jpg' | relative_url }}" width="444"/></p>
   <p> </p>
   <p class="Fig_numb">The boundary condition dialog</p>
   <p> </p>
@@ -98,7 +98,7 @@ title: "Appendix XV: The Double Concave Corner Constraint"
     Note that nodes 1,2,3 are in contact with the die surface and their vertical motion should follow the die surface. Note also that nodes 3,4,5 are in contact with the die surface and their horizontal motion should follow the die surface. The problem
     comes for node 3. It should have two boundary condition codes to restrict its motion in two DOF. These two degrees of freedom can be seen as the directions of the red arrows in <a href="#Fig_AXV_2_A_set_of_nodes_lying_on_a_die_surface"><span data-keyref="Appendix_XV_The_Double_Concave_Corner_Constraint">Fig. AXV.</span>2.</a>    However, if it only has one, it is only restricted in one direction and can thus penetrate the other direction.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXV_2_A_set_of_nodes_lying_on_a_die_surface"></a><img height="220" src="../../assets/images/appendices/appendix_xv_the_double_concave_corner/image0002.jpg" width="210"/></p>
+  <p style="text-align: center"><a id="Fig_AXV_2_A_set_of_nodes_lying_on_a_die_surface"></a><img height="220" src="{{ '/assets/images/appendices/appendix_xv_the_double_concave_corner/image0002.jpg' | relative_url }}" width="210"/></p>
   <p> </p>
   <p class="Fig_numb">A set of nodes lying on a die surface</p>
   <p> </p>
@@ -108,11 +108,11 @@ title: "Appendix XV: The Double Concave Corner Constraint"
   <p>For this reason, there is a new functionality to let nodes in convex corners be applied with 2 contact conditions. In order to specify which nodes should be given this constraint, two angles are to be given for this consideration. As seen in <a href="#Fig_AXV_3_The_two_angles_that_are_specified_in_the_double_concave_corner_"><span data-keyref="Appendix_XV_The_Double_Concave_Corner_Constraint">Fig. AXV.</span>3.</a>,
     angle a is the minimum angle value and angle b is the maximum. Between these two angles, nodes will be specified with a double contact constraint. <a href="#Fig_AXV_4_The_two_angles_that_are_specified_in_the_double_concave_corner_constraint"><span data-keyref="Appendix_XV_The_Double_Concave_Corner_Constraint">Fig. AXV.</span>4.</a>    indicates the corresponding settings in the simulation controls. (<a href="../pre_processor/9_simulation_controls/9_8_control_files.htm">Control Files</a> : <a href="../pre_processor/9_simulation_controls/9_8_control_files.htm#9.8.1._Category_1">Category 1</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXV_3_The_two_angles_that_are_specified_in_the_double_concave_corner_"></a><img height="220" src="../../assets/images/appendices/appendix_xv_the_double_concave_corner/image0003.jpg" width="234"/></p>
+  <p style="text-align: center"><a id="Fig_AXV_3_The_two_angles_that_are_specified_in_the_double_concave_corner_"></a><img height="220" src="{{ '/assets/images/appendices/appendix_xv_the_double_concave_corner/image0003.jpg' | relative_url }}" width="234"/></p>
   <p> </p>
   <p class="Fig_numb">The two angles that are specified in the double concave corner constraint</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXV_4_The_two_angles_that_are_specified_in_the_double_concave_corner_constraint"></a><img height="400" src="../../assets/images/appendices/appendix_xv_the_double_concave_corner/image0004.jpg" width="468"/></p>
+  <p style="text-align: center"><a id="Fig_AXV_4_The_two_angles_that_are_specified_in_the_double_concave_corner_constraint"></a><img height="400" src="{{ '/assets/images/appendices/appendix_xv_the_double_concave_corner/image0004.jpg' | relative_url }}" width="468"/></p>
   <p> </p>
   <p class="Fig_numb">The two angles that are specified in the double concave corner constraint</p>
   <p> </p>

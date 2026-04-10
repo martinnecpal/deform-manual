@@ -87,78 +87,78 @@ title: "Gear Blank EN Lab 9"
   <h3 class="h3_9_">Duplicate Project</h3>
   <p>Start DEFORM and create a new project named <strong>Gear_p</strong>.</p>
   <p> </p>
-  <p>Add <strong>3D Forming operation</strong> and click on <img src="../../../../assets/icons/pre_icons/mo_import_icon.jpg"/> (Import database) in the File menu. Open the “<strong>Gear</strong><strong>.</strong><strong>DB</strong>” file. Select the first
-    step of the third (Forge) operation and click<img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>.</p>
+  <p>Add <strong>3D Forming operation</strong> and click on <img src="{{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}"/> (Import database) in the File menu. Open the “<strong>Gear</strong><strong>.</strong><strong>DB</strong>” file. Select the first
+    step of the third (Forge) operation and click<img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/>.</p>
   <h3 class="h3_9_">Define simulation Controls</h3>
   <p>In this lab we show how to setup Hydraulic press controls for a non-isothermal simulation with heat transfer calculations for both workpiece and dies. So in  <strong>Simulation controls</strong>  check <strong>Heat Transfer</strong> checkbox status
     if not turned on, turn on the Heat Transfer checkbox.</p>
   <h3 class="h3_9_">Define Boundary condition for Workpiece</h3>
-  <p>Click on <strong>Workpiece Boundary condition</strong> branch and define Heat exchange with environment boundary condition for entire object using <img src="../../../../assets/icons/pre_icons/mo_select_all_icon.jpg"/> (Select all) icon, if system not
+  <p>Click on <strong>Workpiece Boundary condition</strong> branch and define Heat exchange with environment boundary condition for entire object using <img src="{{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}"/> (Select all) icon, if system not
     assigned automatically.</p>
   <h3 class="h3_9_">Define Heat transfer with Top die</h3>
   <p>Click on <strong>Top </strong><strong>die </strong>branch in operation tree and set temperature to <strong>300</strong>°F.</p>
-  <p>We&#39;ll mesh both tools in order to simulate the temperature of the die. Click on <strong>Mesh </strong>branch in operation tree and set <strong>20000 </strong>elements. Click on <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/>.</p>
+  <p>We&#39;ll mesh both tools in order to simulate the temperature of the die. Click on <strong>Mesh </strong>branch in operation tree and set <strong>20000 </strong>elements. Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/>.</p>
   <p> </p>
-  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> and click the <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material from library) button and select the <strong>Die_material </strong>category,
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and click the <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> (Load material from library) button and select the <strong>Die_material </strong>category,
     then <strong>AISI-H-13</strong>. Assign the loaded material by selecting it in material list.</p>
   <p> </p>
-  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> and define <strong>Heat exchange with environment boundary condition</strong> for entire object except top surface as shown in <a href="#Fig_L9_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab9">Fig. L9.</span>1.</a></p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and define <strong>Heat exchange with environment boundary condition</strong> for entire object except top surface as shown in <a href="#Fig_L9_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab9">Fig. L9.</span>1.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L9_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces"></a><img height="200" src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0001.jpg" width="454"/></p>
+  <p style="text-align: center"><a id="Fig_L9_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces"></a><img height="200" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0001.jpg' | relative_url }}" width="454"/></p>
   <p> </p>
   <p class="Fig_numb_Lab9">Top die Heat exchange with environment boundary condition surfaces</p>
   <h3 class="h3_9_">Define Hydraulic Press</h3>
-  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to change the movement controls for Top die. Select <strong>Hydraulic </strong>press from the top row of radio buttons. Enter:</p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to change the movement controls for Top die. Select <strong>Hydraulic </strong>press from the top row of radio buttons. Enter:</p>
   <p style="margin-left: 20px">- <strong>Speed </strong>(Constant): <strong>2.5 </strong>in/sec (See <a href="#Fig_L9_2_Hydraulic_press_movement_definition_main_tab"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab9">Fig. L9.</span>2.</a>)</p>
-  <p style="margin-left: 20px">- Check <strong>Power </strong><strong>limit </strong>and enter data using <img src="../../../../assets/icons/pre_icons/mo_define..._button2.jpg"/>  button as shown in below <a href="#Fig_L9_3_Power_limit_definition"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab9">Fig. L9.</span>3.</a></p>
+  <p style="margin-left: 20px">- Check <strong>Power </strong><strong>limit </strong>and enter data using <img src="{{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}"/>  button as shown in below <a href="#Fig_L9_3_Power_limit_definition"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab9">Fig. L9.</span>3.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L9_2_Hydraulic_press_movement_definition_main_tab"></a><img height="450" src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab9_image0002.jpg" width="467"/></p>
+  <p style="text-align: center"><a id="Fig_L9_2_Hydraulic_press_movement_definition_main_tab"></a><img height="450" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab9_image0002.jpg' | relative_url }}" width="467"/></p>
   <p> </p>
   <p class="Fig_numb_Lab9">Hydraulic press movement definition main tab</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L9_3_Power_limit_definition"></a><img height="411" src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab9_image0003.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_L9_3_Power_limit_definition"></a><img height="411" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab9_image0003.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb_Lab9">Power limit definition</p>
   <p> </p>
   <p>Input a <strong>stopping </strong><strong>limit </strong>(max load of primary die) of <strong>4000 </strong>klb in the <strong>Y</strong> direction. So select <strong>Dwell </strong>controls tab and define <strong>Maximum </strong><strong>load </strong>as
     <strong>4000 </strong>klb in <strong>Y </strong>data field as shown in <a href="#Fig_L9_4_Hydraulic_press_stopping_load_defined_in_dwell_controls_tab"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab9">Fig. L9.</span>4.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L9_4_Hydraulic_press_stopping_load_defined_in_dwell_controls_tab"></a><img height="450" src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab9_image0004.jpg" width="467"/></p>
+  <p style="text-align: center"><a id="Fig_L9_4_Hydraulic_press_stopping_load_defined_in_dwell_controls_tab"></a><img height="450" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab9_image0004.jpg' | relative_url }}" width="467"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb_Lab9">Hydraulic press stopping load defined in dwell controls tab</p>
   <p> </p>
   <h3 class="h3_9_">Define Heat transfer with Bottom die</h3>
   <p>Similar to Top die Heat transfer definition define <strong>Bottom </strong><strong>die </strong>initial Temperature to <strong>300</strong>°F and Mesh of <strong>50000 </strong>Elements. (See Section<a href="gear_blank_en_lab6.htm#6_4_Define_Heat_transfer_with_Top_die"> 6.4 Define Heat transfer with Top die</a>)</p>
   <p> </p>
-  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> and select <strong>AISI-H-13</strong> from material list to assign material. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to define the <strong>Heat exchange with environment boundary condition</strong>    and select all surfaces except bottom surface as shown in <a href="#Fig_L9_5_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab9">Fig. L9.</span>5.</a></p>
-  <p style="text-align: center"><a id="Fig_L9_5_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces"></a><img height="230" src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0003.jpg" width="549"/></p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and select <strong>AISI-H-13</strong> from material list to assign material. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define the <strong>Heat exchange with environment boundary condition</strong>    and select all surfaces except bottom surface as shown in <a href="#Fig_L9_5_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab9">Fig. L9.</span>5.</a></p>
+  <p style="text-align: center"><a id="Fig_L9_5_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces"></a><img height="230" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0003.jpg' | relative_url }}" width="549"/></p>
   <p> </p>
   <p class="Fig_numb_Lab9">Bottom die Heat exchange with environment boundary condition surfaces</p>
   <p> </p>
   <p>Click on <strong>Contact </strong>in operation tree to define inter-object relation ship.</p>
   <h3 class="h3_9_">Define Inter-object relation ship</h3>
-  <p>Click on <img height="21" src="../../../../assets/icons/pre_icons/mo_edit_button.jpg" width="56"/> for any relation and add <strong>heat </strong><strong>transfer </strong><strong>coefficient </strong>of <strong>0.004</strong>. Click on <img src="../../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/> to add for other relationships. Click the <img src="../../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> (Tolerance) button followed by the <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> button (at bottom of
+  <p>Click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}" width="56"/> for any relation and add <strong>heat </strong><strong>transfer </strong><strong>coefficient </strong>of <strong>0.004</strong>. Click on <img src="{{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}"/> to add for other relationships. Click the <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> (Tolerance) button followed by the <img src="{{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}"/> button (at bottom of
     the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See <a href="#Fig_L9_6_Top_and_bottom_die_contact_with_workpiece"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab9">Fig. L9.</span>6.</a>    for how the Inter object window looks and contact generation display in graphics window.</p>
   <p> </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_L9_6_Top_and_bottom_die_contact_with_workpiece"></a><img height="200" src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0004.jpg" width="529"/></p>
+  <p style="text-align: center"><a id="Fig_L9_6_Top_and_bottom_die_contact_with_workpiece"></a><img height="200" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0004.jpg' | relative_url }}" width="529"/></p>
   <p class="Fig_numb_Lab9">Top and bottom die contact with workpiece</p>
   <p> </p>
-  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to define stopping controls.</p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define stopping controls.</p>
   <h3 class="h3_9_">Define Stopping and Simulation Step controls</h3>
   <p>The Stopping controls <strong>maximum </strong><strong>load </strong>of <strong>primary </strong><strong>die </strong>(4000 klb) defined in primary die movement controls is reflected in stopping controls. Uncheck the Distance between die stopping controls
     imported from DB.</p>
   <p> </p>
-  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> and keep the step controls definition imported from DB.</p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and keep the step controls definition imported from DB.</p>
   <p> </p>
-  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to check and generate DB.</p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to check and generate DB.</p>
   <h3 class="h3_9_">Generate Database and Run the simulation</h3>
-  <p>Check and Generate database and click on the <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> Mode button (above the operation tree) to start the simulation.</p>
+  <p>Check and Generate database and click on the <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> Mode button (above the operation tree) to start the simulation.</p>
   <p> </p>
-  <p>Run simulation, after completing running click on <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> Mode button to review results.</p>
+  <p>Run simulation, after completing running click on <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> Mode button to review results.</p>
   <p> </p>
   <h3 class="h3_9_">Review Results</h3>
-  <p>In the postprocessor, go to the <img src="../../../../assets/icons/post_icons/mo_load_stroke_icon.jpg"/> [Graph (load-stroke)] plot, and plot the Top die velocity (Y speed) vs. Stroke.</p>
+  <p>In the postprocessor, go to the <img src="{{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}"/> [Graph (load-stroke)] plot, and plot the Top die velocity (Y speed) vs. Stroke.</p>
   <p>Plot the Y Load vs. Time.</p>
   <p> </p>
   <p>Note the temperature buildup in the die cavity near the surface.  </p>

@@ -87,7 +87,7 @@ title: "3D Nitriding Lab"
   <p>Gas nitriding is a surface hardening process, where nitrogen is added to the surface of steel parts using dissociated ammonia as the source. Gas nitriding develops a very hard case in a component at relatively low temperature, without the need for quenching.</p>
   <p> </p>
   <p>This lab will demonstrate how to use MO template to prepare a Nitriding simulation. The thickness of compound layers formed on the surface of pure iron during the nitriding process was analytically calculated. Two separate equations were applied for
-    predicting the thickness of the binary compound layers; epsilon (<img src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/epsilon.jpg"/>) and gamma prime (<img height="21" src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg" width="17"/>), in terms of the nitriding process parameters.</p>
+    predicting the thickness of the binary compound layers; epsilon (<img src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/epsilon.jpg' | relative_url }}"/>) and gamma prime (<img height="21" src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg' | relative_url }}" width="17"/>), in terms of the nitriding process parameters.</p>
   <p><br/>
     <a href="#1_1_Creating_a_New_Problem">1.1. Creating a New Problem</a>  </p>
   <p><a href="#1_2_Adding_Operation">1.2. Adding Operation</a></p>
@@ -112,109 +112,109 @@ title: "3D Nitriding Lab"
   <p><a href="#1_6_Post_Processing">1.6. Post Processing</a></p>
   <p> </p>
   <h2><a id="1_1_Creating_a_New_Problem"></a>Creating a New Problem  </h2>
-  <p>On a Windows machine, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear as shown in <a href="#Fig_3DNL1_1_DEFORM_GUI_Main_window"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>1.</a></p>
+  <p>On a Windows machine, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear as shown in <a href="#Fig_3DNL1_1_DEFORM_GUI_Main_window"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>1.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_1_DEFORM_GUI_Main_window"></a><img height="435" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_1_DEFORM_GUI_Main_window"></a><img height="435" src="{{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">DEFORM GUI Main window</p>
   <p> </p>
-  <p>Create a new problem either by selecting <strong>File </strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_3DNL1_2_New_Problem_page"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>2.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot; radio
+  <p>Create a new problem either by selecting <strong>File </strong><img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> <strong>New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_3DNL1_2_New_Problem_page"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>2.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot; radio
     button and unit system as &quot;<strong>SI</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong>3D_Nitrding_Lab1</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>”
-    check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+    check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_2_New_Problem_page"></a><img height="419" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image014.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_2_New_Problem_page"></a><img height="419" src="{{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image014.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">New Problem page</p>
   <p> </p>
   <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use &quot;<strong>3D_Nitrding_Lab1</strong>&quot;
-    as the project name. Click on  <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to continue to open the operation.</p>
+    as the project name. Click on  <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to continue to open the operation.</p>
   <h2><a id="1_2_Adding_Operation"></a>Adding Operation</h2>
   <p>Add a ‘2D to 3D Converter’ and a 3D Forming operations from operations explorer, in this lab 3D object is generated by extruding the 2D mesh prepared previously in the 2D Nitriding Lab (See <a href="#Fig_3DNL1_3_Added_forming_operation_into_operation_editor"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>3.</a>).</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_3_Added_forming_operation_into_operation_editor"></a><img height="424" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0003.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_3_Added_forming_operation_into_operation_editor"></a><img height="424" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0003.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Added forming operation into operation editor</p>
   <h2><a id="1_3_Convert_2D_Mesh_to_3D"></a>Convert 2D Mesh to 3D</h2>
   <p>Click on the first operation ‘2D to 3D Converter’, to generate the 3D meshed object for the Nitriding simulation’.</p>
   <h3><a id="1_3_1_Geometry_type"></a>Geometry type</h3>
-  <p>Turn on ‘<strong>2D</strong> <strong>Plane strain</strong>’ radio button in geometry type page, see <a href="#Fig_3DNL1_4_Plain_Strain_Geometry_type_selection"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>4.</a> Then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> twice to navigate to ‘Configuration’ page.</p>
+  <p>Turn on ‘<strong>2D</strong> <strong>Plane strain</strong>’ radio button in geometry type page, see <a href="#Fig_3DNL1_4_Plain_Strain_Geometry_type_selection"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>4.</a> Then click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> twice to navigate to ‘Configuration’ page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_4_Plain_Strain_Geometry_type_selection"></a><img height="380" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0004.jpg" width="382"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_4_Plain_Strain_Geometry_type_selection"></a><img height="380" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0004.jpg' | relative_url }}" width="382"/></p>
   <p> </p>
   <p class="Fig_numb">Plain Strain Geometry type selection</p>
   <h3><a id="1_3_2_Configuration"></a>Configuration</h3>
-  <p>Type <strong>1</strong> for the ‘Length (<a href="#Fig_3DNL1_5_Configuration_for_Extrude_Type_Object"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>5.</a>). Then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>, leave the default one object, click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> go to ‘<strong>Workpiece</strong>’ page.</p>
+  <p>Type <strong>1</strong> for the ‘Length (<a href="#Fig_3DNL1_5_Configuration_for_Extrude_Type_Object"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>5.</a>). Then click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>, leave the default one object, click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> go to ‘<strong>Workpiece</strong>’ page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_5_Configuration_for_Extrude_Type_Object"></a><img height="350" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0005.jpg" width="374"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_5_Configuration_for_Extrude_Type_Object"></a><img height="350" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0005.jpg' | relative_url }}" width="374"/></p>
   <p> </p>
   <p class="Fig_numb">Configuration for Extrude Type Object</p>
   <h3><a id="1_3_3_Workpiece"></a>Workpiece</h3>
-  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>, browse to the file ‘ <strong>3D/LABS/Nitrding/2D_Slab_Specimen.key</strong>’’, (import the 2D mesh generated in the 2D Nitriding Lab 1) and import it, observe the object
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>, browse to the file ‘ <strong>3D/LABS/Nitrding/2D_Slab_Specimen.key</strong>’’, (import the 2D mesh generated in the 2D Nitriding Lab 1) and import it, observe the object
     name &#39;<strong>Cold-rolled slab specimen</strong>&#39;, set the temperature to <strong>570</strong>°C and change ‘Object type’ to ‘<strong>Plastic</strong>’(see <a href="#Fig_3DNL1_6_Preview_of_the_imported_2D_Workpiece"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>6.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_6_Preview_of_the_imported_2D_Workpiece"></a><img height="423" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0006.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_6_Preview_of_the_imported_2D_Workpiece"></a><img height="423" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0006.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Preview of the imported 2D Workpiece</p>
   <p> </p>
-  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> twice to navigate to ‘Mesh’ page, the ‘Geometry’ is not required for this lab, hence it has been skipped.</p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> twice to navigate to ‘Mesh’ page, the ‘Geometry’ is not required for this lab, hence it has been skipped.</p>
   <h3><a id="1_3_4_Mesh"></a>Mesh</h3>
   <p>Click &quot;<strong>Hexahedron</strong>&quot; and <strong>uncheck </strong>&quot;<strong>Remesh</strong>&quot; check box to keep the same 2D mesh as the cross-section. Type 5 into ‘<strong># of Mesh Layers</strong>&#39;, this will bring the total number
-    of elements to <strong>41155</strong>. Now click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page. (See <a href="#Fig_3DNL1_7_Workpiece_Mesh_page"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>7.</a>)</p>
+    of elements to <strong>41155</strong>. Now click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Material page. (See <a href="#Fig_3DNL1_7_Workpiece_Mesh_page"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>7.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_7_Workpiece_Mesh_page"></a><img height="423" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0007.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_7_Workpiece_Mesh_page"></a><img height="423" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0007.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Workpiece Mesh page</p>
   <h3><a id="1_3_5_Material"></a>Material</h3>
-  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>, browse to the file ‘<strong>Iron_SI.key</strong>’ form 3D/LABS/Nitrding/ folder, to import ‘Iron’ ( <a href="#Fig_3DNL1_8_Material_(Import)_Selection_"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>8.</a>)
-    mixture material. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to go to ‘Convert’ page.</p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>, browse to the file ‘<strong>Iron_SI.key</strong>’ form 3D/LABS/Nitrding/ folder, to import ‘Iron’ ( <a href="#Fig_3DNL1_8_Material_(Import)_Selection_"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>8.</a>)
+    mixture material. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to go to ‘Convert’ page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_8_Material_(Import)_Selection_"></a><img height="300" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0008.jpg" width="364"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_8_Material_(Import)_Selection_"></a><img height="300" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0008.jpg' | relative_url }}" width="364"/></p>
   <p> </p>
   <p class="Fig_numb">Material (Import) Selection </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_9_Material_Assignment_Window"></a><img height="365" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0009.jpg" width="367"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_9_Material_Assignment_Window"></a><img height="365" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0009.jpg' | relative_url }}" width="367"/></p>
   <p> </p>
   <p class="Fig_numb">Material Assignment Window</p>
   <h3><a id="1_3_6_Convert"></a>Convert</h3>
-  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_generate_2_button.jpg"/>  to generate the 3D mesh, the mouse icon on the screen turns to busy, also a bar will show up at the right bottom indicating the converting progress.</p>
-  <p>In the end, mouse icon goes back to normal, ‘Conversion succeed ...’ messages can be seen on the bottom of the window too, which indicates the mesh has been generated, the results are also displayed on the central graphic area, see <a href="#Fig_3DNL1_10_Preview_of_Generated_3D_Object"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>10.</a>     Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Generate DB page.</p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}"/>  to generate the 3D mesh, the mouse icon on the screen turns to busy, also a bar will show up at the right bottom indicating the converting progress.</p>
+  <p>In the end, mouse icon goes back to normal, ‘Conversion succeed ...’ messages can be seen on the bottom of the window too, which indicates the mesh has been generated, the results are also displayed on the central graphic area, see <a href="#Fig_3DNL1_10_Preview_of_Generated_3D_Object"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>10.</a>     Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Generate DB page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_10_Preview_of_Generated_3D_Object"></a><img height="436" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0010.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_10_Preview_of_Generated_3D_Object"></a><img height="436" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0010.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Preview of Generated 3D Object</p>
   <h3><a id="1_3_7_Generate_DB"></a>Generate DB</h3>
-  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> to generate the DB which contains the 3D mesh. Now the 3D object is ready and can be passed to the next Nitrocarburizing simulation, ‘Convert 2D to 3D’ operation has
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> to generate the DB which contains the 3D mesh. Now the 3D object is ready and can be passed to the next Nitrocarburizing simulation, ‘Convert 2D to 3D’ operation has
     been completed.</p>
   <h2><a id="1_4_Setting_up_3D_Nitriding_Operation"></a>Setting up 3D Nitriding Operation</h2>
   <p>Now click on the second operation ‘Forming’, a window will pop up (<a href="#Fig_3DNL1_11_Setup_Type_Pop-up"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>11.</a>), click on ‘<strong>YES</strong>.’ Select ‘<strong>Interactive Setup</strong>’
     to continue.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_11_Setup_Type_Pop-up"></a><img height="230" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0011.jpg" width="451"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_11_Setup_Type_Pop-up"></a><img height="230" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0011.jpg' | relative_url }}" width="451"/></p>
   <p> </p>
   <p class="Fig_numb">Setup Type Pop-up</p>
   <p> </p>
   <p>Type the name tag of the second forming operation, change it to ‘<strong>Nitriding</strong>’.</p>
   <h3 class="h3_1_4_"><a id="1_4_1_Simulation_Controls"></a>Simulation Controls</h3>
-  <p>In this lab, we will be demonstrating how to setup Nitriding process which requires some advanced options here, Switch to <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> mode in ‘Simulation controls’ window make sure ‘<strong>Diffusion</strong>’
-    and ‘<strong>Transformation</strong>’ models under ‘<strong>Heat transfer</strong>’ are checked (See <a href="#Fig_3DNL1_12_Simulation_controls_window"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>12.</a>). Then click on  <img height="28" src="../../../../assets/icons/pre_icons/mo_process_conditions.jpg" width="28"/> ‘<strong>Process conditions</strong>’ page.</p>
+  <p>In this lab, we will be demonstrating how to setup Nitriding process which requires some advanced options here, Switch to <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> mode in ‘Simulation controls’ window make sure ‘<strong>Diffusion</strong>’
+    and ‘<strong>Transformation</strong>’ models under ‘<strong>Heat transfer</strong>’ are checked (See <a href="#Fig_3DNL1_12_Simulation_controls_window"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>12.</a>). Then click on  <img height="28" src="{{ '/assets/icons/pre_icons/mo_process_conditions.jpg' | relative_url }}" width="28"/> ‘<strong>Process conditions</strong>’ page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_12_Simulation_controls_window"></a><img height="500" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0012.jpg" width="392"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_12_Simulation_controls_window"></a><img height="500" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0012.jpg' | relative_url }}" width="392"/></p>
   <p> </p>
   <p class="Fig_numb">Simulation controls window</p>
   <p> </p>
   <p><strong>Nitriding </strong>is a heat treating process that diffuses nitrogen into the surface of a metal to create a case-hardened surface, so in this lab, we will deal only with atom – nitrogen. Click on &quot;<strong>Process condition</strong>&quot;
     then ‘<strong>Diffusion</strong>’ tab, change the atom’s name from ‘carbon’ to ‘Nitrogen’ (See <a href="#Fig_3DNL1_13_Modify_atom’s_name_in_simulation_control_window"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>13.</a>). Then
-    click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>. Click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> in popup.</p>
+    click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> in popup.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_13_Modify_atom’s_name_in_simulation_control_window"></a><img height="470" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0013.jpg" width="385"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_13_Modify_atom’s_name_in_simulation_control_window"></a><img height="470" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0013.jpg' | relative_url }}" width="385"/></p>
   <p> </p>
   <p class="Fig_numb">Modify atom’s name in simulation control window</p>
   <h3 class="h3_1_4_"><a id="1_4_2_Material_List"></a>Material List</h3>
-  <p>Iron has been added to the lab in the previous operation and assigned to object already. Now let’s review the material data. Compound layers (<img height="21" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/ghamma prime.jpg" width="17"/>+<img src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/epsilon.jpg"/>) will form on the surface of pure iron (<img src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/alpha.jpg"/>). So, in the material page, it can be observed that ‘Multiphase <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> Mixture material’ is checked for Iron and it has three child phases: <strong>Alpha</strong>, <strong>Gamma-prime</strong>,
+  <p>Iron has been added to the lab in the previous operation and assigned to object already. Now let’s review the material data. Compound layers (<img height="21" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/ghamma prime.jpg' | relative_url }}" width="17"/>+<img src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/epsilon.jpg' | relative_url }}"/>) will form on the surface of pure iron (<img src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/alpha.jpg' | relative_url }}"/>). So, in the material page, it can be observed that ‘Multiphase <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Mixture material’ is checked for Iron and it has three child phases: <strong>Alpha</strong>, <strong>Gamma-prime</strong>,
     and <strong>Epsilon</strong>.    </p>
   <p>In the nitriding of iron, when the nitrogen concentration exceeds the solubility limit, extra nitrogen atoms make stoichiometric compounds with iron atoms. The surface composition of the nitrided iron can be predicted by considering the Fe-N binary
-    phase diagram.  In this lab demonstration, the surface structure of the nitrided iron includes <img src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/alpha.jpg"/>-Fe (N) diffusion zone (solid solution of nitrogen in
-    <img src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/alpha.jpg"/>-Fe), <img height="21" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/ghamma prime.jpg" width="17"/> and  <img src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/epsilon.jpg"/>compound layers. The nitrogen contents (solubility limits) at the material interface are listed in <a href="#Table_1_Nitrogen_content">table 1.</a></p>
+    phase diagram.  In this lab demonstration, the surface structure of the nitrided iron includes <img src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/alpha.jpg' | relative_url }}"/>-Fe (N) diffusion zone (solid solution of nitrogen in
+    <img src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/alpha.jpg' | relative_url }}"/>-Fe), <img height="21" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/ghamma prime.jpg' | relative_url }}" width="17"/> and  <img src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/epsilon.jpg' | relative_url }}"/>compound layers. The nitrogen contents (solubility limits) at the material interface are listed in <a href="#Table_1_Nitrogen_content">table 1.</a></p>
   <p> </p>
   <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 300px;margin-left: auto;margin-right: auto">
     <colgroup>
@@ -241,7 +241,7 @@ title: "3D Nitriding Lab"
       </tr>
       <tr>
         <td>
-          <p style="text-align: center"><img src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/epsilon.jpg"/>/ <img height="21" src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg" width="17"/></p>
+          <p style="text-align: center"><img src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/epsilon.jpg' | relative_url }}"/>/ <img height="21" src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg' | relative_url }}" width="17"/></p>
         </td>
         <td>
           <p style="text-align: center">23.59</p>
@@ -249,7 +249,7 @@ title: "3D Nitriding Lab"
       </tr>
       <tr>
         <td>
-          <p style="text-align: center"><img height="21" src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg" width="17"/>/ <img src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/epsilon.jpg"/></p>
+          <p style="text-align: center"><img height="21" src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg' | relative_url }}" width="17"/>/ <img src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/epsilon.jpg' | relative_url }}"/></p>
         </td>
         <td>
           <p style="text-align: center">19.923</p>
@@ -257,7 +257,7 @@ title: "3D Nitriding Lab"
       </tr>
       <tr>
         <td>
-          <p style="text-align: center"><img height="21" src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg" width="17"/> / <img src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/alpha.jpg"/></p>
+          <p style="text-align: center"><img height="21" src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg' | relative_url }}" width="17"/> / <img src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/alpha.jpg' | relative_url }}"/></p>
         </td>
         <td>
           <p style="text-align: center">19.479</p>
@@ -265,7 +265,7 @@ title: "3D Nitriding Lab"
       </tr>
       <tr>
         <td>
-          <p style="text-align: center"><a id="Table_1_Nitrogen_content"></a><img src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/alpha.jpg"/> / <img height="21" src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg" width="17"/></p>
+          <p style="text-align: center"><a id="Table_1_Nitrogen_content"></a><img src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/alpha.jpg' | relative_url }}"/> / <img height="21" src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg' | relative_url }}" width="17"/></p>
         </td>
         <td>
           <p style="text-align: center">0.365</p>
@@ -276,32 +276,32 @@ title: "3D Nitriding Lab"
   <p> </p>
   <p class="Table_numb">Nitrogen content</p>
   <p> </p>
-  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>, comes to the Iron’s material page. For this Nitriding lab properties like phase transformation and diffusion coefficient are required.</p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>, comes to the Iron’s material page. For this Nitriding lab properties like phase transformation and diffusion coefficient are required.</p>
   <p> </p>
   <p><strong>Transformation</strong></p>
-  <p>To check the phase transformation relationships of Iron, click <img height="21" src="../../../../assets/icons/pre_icons/mo_transformation_icon.jpg" width="21"/>. In ‘Transformation’ page, there are two defined relationships. The first is Alpha <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> Gamma-prime. Under the ‘Kinetics’ tab, select ‘Diffusion (Solubility curve)’ from the pull - down list to model the transformation (See <a href="#Fig_3DNL1_14_&#39;Material_Editor&#39;_-_transformation_definition_1"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>14.</a>).</p>
+  <p>To check the phase transformation relationships of Iron, click <img height="21" src="{{ '/assets/icons/pre_icons/mo_transformation_icon.jpg' | relative_url }}" width="21"/>. In ‘Transformation’ page, there are two defined relationships. The first is Alpha <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Gamma-prime. Under the ‘Kinetics’ tab, select ‘Diffusion (Solubility curve)’ from the pull - down list to model the transformation (See <a href="#Fig_3DNL1_14_&#39;Material_Editor&#39;_-_transformation_definition_1"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>14.</a>).</p>
   <p> </p>
-  <p>The nitrided layer thickness growth of <img src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/epsilon.jpg"/>, <img height="21" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/ghamma prime.jpg" width="17"/> follow the parabolic law, select the following model for the <img height="21" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/ghamma prime.jpg" width="17"/> layer (Alpha<img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/>  Gamma-prime)</p>
+  <p>The nitrided layer thickness growth of <img src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/epsilon.jpg' | relative_url }}"/>, <img height="21" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/ghamma prime.jpg' | relative_url }}" width="17"/> follow the parabolic law, select the following model for the <img height="21" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/ghamma prime.jpg' | relative_url }}" width="17"/> layer (Alpha<img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/>  Gamma-prime)</p>
   <p> </p>
-  <p><img height="63" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/eqn1.jpg" width="500"/></p>
+  <p><img height="63" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/eqn1.jpg' | relative_url }}" width="500"/></p>
   <p>and 0.6 is set for the correction factor K. At 0.365, the solubility of nitrogen, Alpha starts transforming to Gamma-prime. In the end, the nitrogen content will reach 19.479, and Gamma-prime forms totally. So, at Alpha/Gamma-prime interface, nitrogen
     content ‘Start’ value is set as 0.365, and ‘End’ value 19.479 (See <a href="#Fig_3DNL1_14_&#39;Material_Editor&#39;_-_transformation_definition_1"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>14.</a>).  </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_14_&#39;Material_Editor&#39;_-_transformation_definition_1"></a><img height="580" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0014.jpg" width="465"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_14_&#39;Material_Editor&#39;_-_transformation_definition_1"></a><img height="580" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0014.jpg' | relative_url }}" width="465"/></p>
   <p> </p>
   <p class="Fig_numb">&#39;Material Editor&#39; - transformation definition 1</p>
   <p> </p>
-  <p>&quot;Add another transformation&quot; by choosing mother phase as Gamma Prime and child phase as Epsilon. Choose the layer growth model for <img src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/epsilon.jpg"/> (Gamma-prime
-    <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> Epsilon) as listed below, K has been set to 0.3. And the solubility of nitrogen starting from 19.923 to the end 23.59 as Gamma-prime transferring to Epsilon. (See <a href="#Fig_3DNL1_15_&#39;Material_Editor&#39;_-_transformation_definition_2"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>15.</a>).
+  <p>&quot;Add another transformation&quot; by choosing mother phase as Gamma Prime and child phase as Epsilon. Choose the layer growth model for <img src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/epsilon.jpg' | relative_url }}"/> (Gamma-prime
+    <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Epsilon) as listed below, K has been set to 0.3. And the solubility of nitrogen starting from 19.923 to the end 23.59 as Gamma-prime transferring to Epsilon. (See <a href="#Fig_3DNL1_15_&#39;Material_Editor&#39;_-_transformation_definition_2"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>15.</a>).
      </p>
-  <p><img height="45" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/eqn2.jpg" width="252"/>     </p>
+  <p><img height="45" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/eqn2.jpg' | relative_url }}" width="252"/>     </p>
   <p> </p>
-  <p style="text-align: center">      <a id="Fig_3DNL1_15_&#39;Material_Editor&#39;_-_transformation_definition_2"></a><img height="520" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0015.jpg" style="cursor: nesw-resize;" width="439"/></p>
+  <p style="text-align: center">      <a id="Fig_3DNL1_15_&#39;Material_Editor&#39;_-_transformation_definition_2"></a><img height="520" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0015.jpg' | relative_url }}" style="cursor: nesw-resize;" width="439"/></p>
   <p> </p>
   <p class="Fig_numb">&#39;Material Editor&#39; - transformation definition 2</p>
   <p> </p>
   <p><strong>Diffusion Coefficient</strong></p>
-  <p>The diffusion coefficients for all the phases are listed in <a href="#Table_2_Diffusion_coefficient_of_nitrogen">table. 2,</a> click the icon <img src="../../../../assets/icons/pre_icons/mo_diffusion_icon.jpg"/> on the material page to check the values.</p>
+  <p>The diffusion coefficients for all the phases are listed in <a href="#Table_2_Diffusion_coefficient_of_nitrogen">table. 2,</a> click the icon <img src="{{ '/assets/icons/pre_icons/mo_diffusion_icon.jpg' | relative_url }}"/> on the material page to check the values.</p>
   <p> </p>
   <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 500px;margin-left: auto;margin-right: auto">
     <colgroup>
@@ -326,7 +326,7 @@ title: "3D Nitriding Lab"
           <p> </p>
         </td>
         <td>
-          <p style="text-align: center">Epsilon (<img src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/epsilon.jpg"/>)</p>
+          <p style="text-align: center">Epsilon (<img src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/epsilon.jpg' | relative_url }}"/>)</p>
         </td>
         <td>
           <p style="text-align: center">3.4</p>
@@ -334,7 +334,7 @@ title: "3D Nitriding Lab"
       </tr>
       <tr>
         <td>
-          <p style="text-align: center">Gamma -prime (<img height="18" src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg" width="14"/>)</p>
+          <p style="text-align: center">Gamma -prime (<img height="18" src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/ghamma prime.jpg' | relative_url }}" width="14"/>)</p>
         </td>
         <td>
           <p style="text-align: center">18.1</p>
@@ -342,7 +342,7 @@ title: "3D Nitriding Lab"
       </tr>
       <tr>
         <td>
-          <p style="text-align: center">Alpha (<img src="../../../../assets/images/applications/55_nitriding_labs/2d_nitriding_labs/alpha.jpg"/>)</p>
+          <p style="text-align: center">Alpha (<img src="{{ '/assets/images/applications/55_nitriding_labs/2d_nitriding_labs/alpha.jpg' | relative_url }}"/>)</p>
         </td>
         <td>
           <p style="text-align: center">983.3</p>
@@ -357,15 +357,15 @@ title: "3D Nitriding Lab"
   <p>Thermal properties are not necessary because the object’s temperature is constant and same as the environment temperature in this lab. But they are still required for DB generation. For Iron, 30 has been defined for thermal conductivity, 5.5 as heat
     capacity, 0.7 as emissivity, and 7.85e-09 as density. Same values are also defined for all the child materials.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_6_Thermal_Properties_Page"></a><img height="420" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0016.jpg" width="455"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_6_Thermal_Properties_Page"></a><img height="420" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0016.jpg' | relative_url }}" width="455"/></p>
   <p> </p>
   <p class="Fig_numb">Thermal Properties Page</p>
   <h3 class="h3_1_4_"><a id="1_4_3_Workpiece"></a>Workpiece</h3>
   <p>Object ‘<strong>Cold</strong><strong>-rolled slab specimen</strong>’ has been imported from the previous 2D to 3D Converter operation. Observe from the &#39;Navigator&#39; window object information like mesh, material are listed.</p>
   <h3 class="h3_1_4_"><a id="1_4_4_Initialize_Volume_Fraction"></a>Initialize Volume Fraction</h3>
-  <p>At this moment, click on <img src="../../../../assets/icons/pre_icons/mo_elemental_data_icon.jpg"/> to access the element dialog to initialize the volume fraction. On the item list window click ‘Microstructure’<img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/>‘Phase’. Then choose ‘<strong>Alpha</strong>’ and click on <img height="21" src="../../../../assets/icons/pre_icons/mo_initialize_icon.jpg" width="21"/> to ‘Initialize Element Data’. Type in <strong>1</strong>, then click on <img src="../../../../assets/icons/pre_icons/mo_apply_button.jpg"/>, then close the window. click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until BCC page.</p>
+  <p>At this moment, click on <img src="{{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}"/> to access the element dialog to initialize the volume fraction. On the item list window click ‘Microstructure’<img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/>‘Phase’. Then choose ‘<strong>Alpha</strong>’ and click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}" width="21"/> to ‘Initialize Element Data’. Type in <strong>1</strong>, then click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/>, then close the window. click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until BCC page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_17_Element_Dialog_–_Initialization_of_Phase_Volume"></a><img height="393" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0017.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_17_Element_Dialog_–_Initialization_of_Phase_Volume"></a><img height="393" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0017.jpg' | relative_url }}" width="750"/></p>
   <p>  </p>
   <p class="Fig_numb">Element Dialog – Initialization of Phase Volume</p>
   <h3 class="h3_1_4_"><a id="1_4_5_Boundary_condition"></a>Boundary condition</h3>
@@ -373,56 +373,56 @@ title: "3D Nitriding Lab"
   <p>Click on &quot;Heat Exchange with Environment BCC&quot; then click on &quot;<strong>Environment</strong>&quot;  to change the ‘<strong>Environment</strong><strong> temperature</strong>’ to <strong>570</strong>°C, which is same as the object temperature
     (See <a href="#Fig_3DNL1_18_Heat_Exchange_with_Environment_Definition"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>18.</a>).</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_18_Heat_Exchange_with_Environment_Definition"></a><img height="423" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0018.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_18_Heat_Exchange_with_Environment_Definition"></a><img height="423" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0018.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Heat Exchange with Environment Definition</p>
   <p> </p>
   <p><strong>Diffusion BCC</strong></p>
   <p>Constant Nitrogen contents on the workpiece are assumed in this Nitriding Lab simulation, to do so click on &quot;Constant Nitrogen Surface Content&quot;. Then type in 26.34 for the ‘Atom Pct.’. Use the mouse, pick the surfaces except +Y and -Y surface
-    as they represent symmetry (See <a href="#Fig_3NDL1_19_Constant_Nitrogen_Surface_Content"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>19.</a>), then click on <img src="../../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/> to finish the assignment. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Stopping controls page.</p>
+    as they represent symmetry (See <a href="#Fig_3NDL1_19_Constant_Nitrogen_Surface_Content"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>19.</a>), then click on <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/> to finish the assignment. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Stopping controls page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3NDL1_19_Constant_Nitrogen_Surface_Content"></a><img height="422" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0019.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3NDL1_19_Constant_Nitrogen_Surface_Content"></a><img height="422" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0019.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Constant Nitrogen Surface Content</p>
   <h3 class="h3_1_4_"><a id="1_4_6_Stopping_Controls"></a>Stopping Controls</h3>
-  <p>Make sure the system is in ‘Expert’ mode, if not, click on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> will switch the system to the expert mode. Then type in <strong>36000 </strong>in the ‘<strong>Process</strong><strong> </strong><strong>duration</strong>’
-    field, see <a href="#Fig_3DNL1_20_Stopping_Controls_(Expert_Mode)"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>20.</a> Then click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to &quot;Step controls&quot;
+  <p>Make sure the system is in ‘Expert’ mode, if not, click on <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> will switch the system to the expert mode. Then type in <strong>36000 </strong>in the ‘<strong>Process</strong><strong> </strong><strong>duration</strong>’
+    field, see <a href="#Fig_3DNL1_20_Stopping_Controls_(Expert_Mode)"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>20.</a> Then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to &quot;Step controls&quot;
     page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_20_Stopping_Controls_(Expert_Mode)"></a><img height="400" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0020.jpg" width="381"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_20_Stopping_Controls_(Expert_Mode)"></a><img height="400" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0020.jpg' | relative_url }}" width="381"/></p>
   <p> </p>
   <p class="Fig_numb">Stopping Controls (Expert Mode)</p>
   <h3 class="h3_1_4_"><a id="1_4_7_Step_Controls"></a>Step Controls</h3>
-  <p>Switch back to the ‘Guided’ mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_guided_mode.jpg"/>, Since process duration has been defined simulation will stop accordingly, type <strong>999999</strong> into ‘<strong>Number</strong><strong> of steps</strong>’
+  <p>Switch back to the ‘Guided’ mode by clicking on <img src="{{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}"/>, Since process duration has been defined simulation will stop accordingly, type <strong>999999</strong> into ‘<strong>Number</strong><strong> of steps</strong>’
     field. Set <strong>5</strong> as ‘<strong>Step</strong><strong> increment</strong>’ and <strong>20 </strong>sec. as the <strong>time per step</strong> (see <a href="#Fig_3DNL1_21_Step_Controls_(Guide_Mode)"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>21.</a>).
-    Then click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to ‘Generate DB’ page.</p>
+    Then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to ‘Generate DB’ page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_21_Step_Controls_(Guide_Mode)"></a><img height="350" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0021.jpg" width="420"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_21_Step_Controls_(Guide_Mode)"></a><img height="350" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0021.jpg' | relative_url }}" width="420"/></p>
   <p> </p>
   <p class="Fig_numb">Step Controls (Guide Mode)</p>
   <h3 class="h3_1_4_"><a id="1_4_8_Generate_Database"></a>Generate Database</h3>
-  <p>In &#39;Generate DB&#39; page, click <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> to see if anything was missed in the setup and then click on the <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button
+  <p>In &#39;Generate DB&#39; page, click <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/> to see if anything was missed in the setup and then click on the <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> button
     to generate the database. Observe the messages in Message tab informing database generation status.</p>
   <h2><a id="1_5_Running_Simulation"></a>Running Simulation</h2>
-  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg" width="146"/>  button above the operation tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DNL1_22_Run_Simulation_Window"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>22.</a> Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>”
-    (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}" width="146"/>  button above the operation tree. Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DNL1_22_Run_Simulation_Window"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>22.</a> Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>”
+    (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_22_Run_Simulation_Window"></a><img height="291" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0022.jpg" width="725"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_22_Run_Simulation_Window"></a><img height="291" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0022.jpg' | relative_url }}" width="725"/></p>
   <p> </p>
   <p class="Fig_numb">Run Simulation Window</p>
   <p> </p>
-  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked. User can view the Nitriding
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked. User can view the Nitriding
     process as the simulation proceeds to the specified Step definition from Simulation graphics.</p>
   <h2><a id="1_6_Post_Processing"></a>Post Processing</h2>
   <p>After the simulation is finished, open the DB in Next Gen post - processor.</p>
   <p> </p>
   <p><strong>Nitrogen Profiles</strong></p>
   <p>‘State variables between two points’ function is a great tool to exam nitrogen concentration profile (vs. depth below the surface).</p>
-  <p>Click on <img src="../../../../assets/icons/post_icons/mo_state_variable_icon.jpg"/>, Under Diffusion <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> Dominant atom, select &quot; <strong>Nitrogen </strong>&quot; State variable and
-    click on <img src="../../../../assets/icons/pre_icons/mo_apply_button.jpg"/> to plot and click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>.</p>
-  <p>Go to last step, then click on State variables between two points <img src="../../../../assets/icons/post_icons/mo_state_variable_between_2_points_icon.jpg"/> to generate Nitrogen profile. Define Start and End points and click on generate <img src="../../../../assets/icons/pre_icons/mo_generate_2_button.jpg"/> (see <a href="#Fig_3DNL1_23_SV_between_2_Points:_Atom-Nitrogen"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>23.</a>).</p>
+  <p>Click on <img src="{{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}"/>, Under Diffusion <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Dominant atom, select &quot; <strong>Nitrogen </strong>&quot; State variable and
+    click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> to plot and click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/>.</p>
+  <p>Go to last step, then click on State variables between two points <img src="{{ '/assets/icons/post_icons/mo_state_variable_between_2_points_icon.jpg' | relative_url }}"/> to generate Nitrogen profile. Define Start and End points and click on generate <img src="{{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}"/> (see <a href="#Fig_3DNL1_23_SV_between_2_Points:_Atom-Nitrogen"><span data-keyref="Application- 3D_Nitriding_Lab">Fig. 3DNL1.</span>23.</a>).</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3DNL1_23_SV_between_2_Points:_Atom-Nitrogen"></a><img height="423" src="../../../../assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0023.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3DNL1_23_SV_between_2_Points:_Atom-Nitrogen"></a><img height="423" src="{{ '/assets/images/applications/55_nitriding_labs/3d_nitriding_lab1/image0023.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">SV between 2 Points: Atom-Nitrogen</p>
 

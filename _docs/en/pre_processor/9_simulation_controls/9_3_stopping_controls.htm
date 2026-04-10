@@ -83,7 +83,7 @@ title: "9.3. Stopping Controls"
 
 
 
-  <h1>9.3. Stopping Controls <img height="25" src="../../../assets/icons/pre_icons/mo_stopping_criteria.jpg" width="25"/></h1>
+  <h1>9.3. Stopping Controls <img height="25" src="{{ '/assets/icons/pre_icons/mo_stopping_criteria.jpg' | relative_url }}" width="25"/></h1>
   <p><a href="#9.3.1._Process_Duration_(TMAX)">9.3.1. Process Duration (TMAX)  [2D, 3D]</a></p>
   <p><a href="#9.3.2._Primary_Die_Displacement_(SMAX)">9.3.2. Primary Die Displacement (SMAX)</a></p>
   <p><a href="#9.3.3._Minimum_velocity_of_Primary_Die_(VMIN)">9.3.3. Minimum velocity of Primary Die (VMIN)</a> </p>
@@ -105,10 +105,10 @@ title: "9.3. Stopping Controls"
     (<a href="../../keyword_documentation/n/nstep.htm">NSTEP</a>), the parameter will not be used. If no other stopping parameters are specified, the simulation will run until it has utilized all of the specified steps. (See <a href="#Fig._9.3.1._Process_parameters_for_stopping_a_simulation"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>1.</a> and
     <a href="#Fig_9_3_2_3D_stopping_controls_in_Guided_mode"> <span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>2.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig._9.3.1._Process_parameters_for_stopping_a_simulation"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image001.jpg" width="511"/></p>
+  <p style="text-align: center"><a id="Fig._9.3.1._Process_parameters_for_stopping_a_simulation"></a><img height="500" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image001.jpg' | relative_url }}" width="511"/></p>
   <p class="Fig_numb">3D Process parameters for stopping a simulation</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_9_3_2_3D_stopping_controls_in_Guided_mode"></a><img height="400" src="../../../assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image007.jpg" style="text-align: center;" width="479"/></p>
+  <p style="text-align: center"><a id="Fig_9_3_2_3D_stopping_controls_in_Guided_mode"></a><img height="400" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image007.jpg' | relative_url }}" style="text-align: center;" width="479"/></p>
   <p class="Fig_numb" style="text-align: center;">3D stopping controls in Guided mode</p>
   <p> </p>
   <h2><a id="9.3.1._Process_Duration_(TMAX)"></a>Process Duration (TMAX) [2D, 3D]</h2>
@@ -131,7 +131,7 @@ title: "9.3. Stopping Controls"
     select the “&gt;” from the drop-down menu to define the stopping control diameter value.</p>
   <p> </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fing_9_3_3_Ring_diameter_measurement_option_for_ring_rolling_operation"></a><img height="364" src="../../../assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image011.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fing_9_3_3_Ring_diameter_measurement_option_for_ring_rolling_operation"></a><img height="364" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image011.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_numb">Ring diameter measurement option for ring rolling operation</p>
   <p> </p>
   <h2><a id="9_3_6_Maximum_outer_diameter_ODMAX"></a>Maximum outer diameter (ODMAX) [2D,3D]</h2>
@@ -173,26 +173,26 @@ title: "9.3. Stopping Controls"
   <p>When &quot;Contact area ratio&quot; is selected, if the workpiece surface area inside the window region reaches the defined contact ratio criteria then FEM simulation will stop.<br/>
     <br/> When Fold is selected, if fold is detected on the workpiece surface inside the window region then FEM simulation will stop.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_9_3_3_Stopping_plane_window"></a><img src="../../../assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image009.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_9_3_3_Stopping_plane_window"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image009.jpg' | relative_url }}"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Stopping plane window</p>
   <h2><a id="9.3.11._Die_distance_MDSOBJ"></a>Die Distance [2D, 3D]</h2>
   <p>Terminates a simulation when the distance between reference points (<a href="../../keyword_documentation/m/mdsobj.htm">MDSOBJ</a>) on two objects reaches the specified distance. Stopping distance must be used in conjunction with the reference point
     (<a href="../../keyword_documentation/r/refpos.htm">REFPOS</a>) definition Die Distance window. </p>
-  <p>From V12.0.2, for the reference objects if the reference points is defined (in Object Properties) we can observe the <img src="../../../assets/icons/pre_icons/mo_dis_bw_dies_check_mark_icon.jpg"/>  status and for the Reference object if reference object
-    is not defined then we can observe the  <img src="../../../assets/icons/pre_icons/mo_dis_bw_dies_question_mark_icon.jpg"/> status in Die-Distance tab as shown in <a href="#Fpg._9.3.4.a_Stopping_distance_based_on_die_distance"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>5.</a></p>
-  <p>For read from DB reference object (in successive operation), if the reference points is defined, then we can observe the <img src="../../../assets/icons/pre_icons/mo_dis_bw_dies_read_from_db_check_mark_icon.jpg"/> status and for the Reference object
-    if reference object is not defined then we can observe the <img src="../../../assets/icons/pre_icons/mo_dis_bw_dies_read_from_db_question_mark_icon.jpg"/> status in Die-Distance tab as shown in <a href="#Fig_9_3_5_Die-_Distance_Stopping_Controls_Expert_mode_window_for_read_from_DB_object"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>6.</a></p>
+  <p>From V12.0.2, for the reference objects if the reference points is defined (in Object Properties) we can observe the <img src="{{ '/assets/icons/pre_icons/mo_dis_bw_dies_check_mark_icon.jpg' | relative_url }}"/>  status and for the Reference object if reference object
+    is not defined then we can observe the  <img src="{{ '/assets/icons/pre_icons/mo_dis_bw_dies_question_mark_icon.jpg' | relative_url }}"/> status in Die-Distance tab as shown in <a href="#Fpg._9.3.4.a_Stopping_distance_based_on_die_distance"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>5.</a></p>
+  <p>For read from DB reference object (in successive operation), if the reference points is defined, then we can observe the <img src="{{ '/assets/icons/pre_icons/mo_dis_bw_dies_read_from_db_check_mark_icon.jpg' | relative_url }}"/> status and for the Reference object
+    if reference object is not defined then we can observe the <img src="{{ '/assets/icons/pre_icons/mo_dis_bw_dies_read_from_db_question_mark_icon.jpg' | relative_url }}"/> status in Die-Distance tab as shown in <a href="#Fig_9_3_5_Die-_Distance_Stopping_Controls_Expert_mode_window_for_read_from_DB_object"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>6.</a></p>
   <p> </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fpg._9.3.4.a_Stopping_distance_based_on_die_distance"></a><img height="450" src="../../../assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image002.jpg" width="460"/></p>
+  <p style="text-align: center"><a id="Fpg._9.3.4.a_Stopping_distance_based_on_die_distance"></a><img height="450" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image002.jpg' | relative_url }}" width="460"/></p>
   <p class="Fig_name" style="text-align: center">(a)</p>
   <p class="Fig_name" style="text-align: center"><br/>
-    <img height="450" src="../../../assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image003.jpg" width="460"/></p>
+    <img height="450" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image003.jpg' | relative_url }}" width="460"/></p>
   <p class="Fig_name"><a id="Fig._9.3.4.b_Stopping_distance_based_on_die_distance"></a>(b)</p>
   <p class="Fig_numb">Stopping distance based on die distance; (a) Defining the first reference point (b) Defining the second reference point</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_9_3_5_Die-_Distance_Stopping_Controls_Expert_mode_window_for_read_from_DB_object"></a><img src="../../../assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image008.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_9_3_5_Die-_Distance_Stopping_Controls_Expert_mode_window_for_read_from_DB_object"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image008.jpg' | relative_url }}"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Die- Distance Stopping Controls Expert mode window for read from DB object.</p>
   <p> </p>
@@ -210,7 +210,7 @@ title: "9.3. Stopping Controls"
   <h2> <a id="9.3.12._Stopping_Plane_(REFPOS)"></a>Stopping Plane (REFPOS) [2D, 3D]</h2>
   <p>Typically used in the models like transient rolling process, user can define a plane in space, and have the simulation terminate once the work piece completely crosses this plane. (See <a href="#Fig._9.3.6._Stopping_distance_based_on_stopping_plane"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>7.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig._9.3.6._Stopping_distance_based_on_stopping_plane"></a><img src="../../../assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image004.jpg"/></p>
+  <p style="text-align: center"><a id="Fig._9.3.6._Stopping_distance_based_on_stopping_plane"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image004.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">Stopping distance based on stopping plane</p>
   <p> </p>
   <p>From v13.0, we can define the Reference plane data separately for each deformable object. </p>
@@ -235,7 +235,7 @@ title: "9.3. Stopping Controls"
     </li>
   </ol>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_9_3_7_Defining_2D_Stopping_Plane_in_rolling_operation"></a><img height="426" src="../../../assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image010.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_9_3_7_Defining_2D_Stopping_Plane_in_rolling_operation"></a><img height="426" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image010.jpg' | relative_url }}" width="750"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb" style="text-align: center;">Defining 2D Stopping Plane in rolling operation </p>
   <h2><a id="9.3.13._Temperature_stopping_control"></a>Temperature stopping control [2D, 3D]</h2>
@@ -258,13 +258,13 @@ title: "9.3. Stopping Controls"
   <p><strong>Stop when temperature is outside range</strong>: Simulation stops when the temperature value is outside the specified range.</p>
   <p><strong>S</strong><strong>top when temperature is inside range</strong>: Simulation stops when the temperature value is inside the specified range.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig._9.3.8._Stopping_control_based_on_thermal"></a><img src="../../../assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image005.jpg"/></p>
+  <p style="text-align: center"><a id="Fig._9.3.8._Stopping_control_based_on_thermal"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image005.jpg' | relative_url }}"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Stopping control based on thermal</p>
   <h2><a id="9.3.14._ALE_Steady_state_(ALECON)"></a>ALE Steady state (ALECON) [3D]</h2>
   <p>From DEFORM V12, user can define ALE steady state (<a href="../../keyword_documentation/a/alecon.htm">ALECON</a>) stopping criteria for ALE rolling operation in Stopping controls - ALE Steady state stopping control tab. (See <a href="#Fig._9.3.9._ALE_Steady_state_stopping_criteria"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>10.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig._9.3.9._ALE_Steady_state_stopping_criteria"></a><img src="../../../assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image006.jpg"/></p>
+  <p style="text-align: center"><a id="Fig._9.3.9._ALE_Steady_state_stopping_criteria"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image006.jpg' | relative_url }}"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">ALE Steady state stopping criteria</p>
   <p> </p>

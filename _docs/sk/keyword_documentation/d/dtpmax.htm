@@ -212,7 +212,7 @@ title: "DTPMAX (2D)"
   <p class="P_10"> </p>
   <p class="P_10">If MaxTempInc = 0.0 then this option is ignored.</p>
   <p class="P_10"> </p>
-  <p class="P_10">If MaxTempInc ≠ 0.0 and STPDEF ≠ 3 then MaxTempInc controls when a solution will substep. If the temperature change over a time step Δt is greater than MaxTempInc, the simulation will substep. The substepping time (<img src="../../../assets/equations/keyword_documentation/d/t_dtpmax.jpg"/>) will be determined by the equation:</p>
+  <p class="P_10">If MaxTempInc ≠ 0.0 and STPDEF ≠ 3 then MaxTempInc controls when a solution will substep. If the temperature change over a time step Δt is greater than MaxTempInc, the simulation will substep. The substepping time (<img src="{{ '/assets/equations/keyword_documentation/d/t_dtpmax.jpg' | relative_url }}"/>) will be determined by the equation:</p>
   <p class="P_10"> </p>
   <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
     <colgroup>
@@ -221,7 +221,7 @@ title: "DTPMAX (2D)"
     </colgroup>
     <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
       <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
-        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/d/dtpmax_eq_1.jpg" style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="{{ '/assets/equations/keyword_documentation/d/dtpmax_eq_1.jpg' | relative_url }}" style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);"/></td>
         <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
           <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
         </td>
@@ -229,7 +229,7 @@ title: "DTPMAX (2D)"
     </tbody>
   </table>
   <p class="P_10"> </p>
-  <p class="P_10">The simulation will continue to substep until the original time step Δt has been reached. The substeps <img src="../../../assets/equations/keyword_documentation/d/t_dtpmax.jpg"/> are bounded by the minimum time step value <img src="../../../assets/equations/keyword_documentation/d/tmin.jpg"/> and the time step Δt, or</p>
+  <p class="P_10">The simulation will continue to substep until the original time step Δt has been reached. The substeps <img src="{{ '/assets/equations/keyword_documentation/d/t_dtpmax.jpg' | relative_url }}"/> are bounded by the minimum time step value <img src="{{ '/assets/equations/keyword_documentation/d/tmin.jpg' | relative_url }}"/> and the time step Δt, or</p>
   <p class="P_10"> </p>
   <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: rgb(255, 255, 255);margin-left: 12px">
     <colgroup>
@@ -238,7 +238,7 @@ title: "DTPMAX (2D)"
     </colgroup>
     <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
       <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
-        <td><img height="21" src="../../../assets/equations/keyword_documentation/d/dtpmax_eq_2.jpg" width="154"/></td>
+        <td><img height="21" src="{{ '/assets/equations/keyword_documentation/d/dtpmax_eq_2.jpg' | relative_url }}" width="154"/></td>
         <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
           <p class="EQ_numb" style="text-align: center"> </p>
         </td>
@@ -257,7 +257,7 @@ title: "DTPMAX (2D)"
     </colgroup>
     <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 0px">
       <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
-        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img height="119" src="../../../assets/equations/keyword_documentation/d/dtpmax_eq_3.jpg" style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);" width="435"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img height="119" src="{{ '/assets/equations/keyword_documentation/d/dtpmax_eq_3.jpg' | relative_url }}" style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);" width="435"/></td>
         <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
           <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
         </td>
@@ -265,7 +265,7 @@ title: "DTPMAX (2D)"
     </tbody>
   </table>
   <p class="P_10"> </p>
-  <p class="P_10">The new time step  <img src="../../../assets/equations/keyword_documentation/d/t_dtpmax.jpg"/> is bounded by the minimum time step <img src="../../../assets/equations/keyword_documentation/d/tmin.jpg"/> and the maximum time step <img src="../../../assets/equations/keyword_documentation/d/tmax.jpg"/>, or</p>
+  <p class="P_10">The new time step  <img src="{{ '/assets/equations/keyword_documentation/d/t_dtpmax.jpg' | relative_url }}"/> is bounded by the minimum time step <img src="{{ '/assets/equations/keyword_documentation/d/tmin.jpg' | relative_url }}"/> and the maximum time step <img src="{{ '/assets/equations/keyword_documentation/d/tmax.jpg' | relative_url }}"/>, or</p>
   <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: rgb(255, 255, 255);margin-left: 12px">
     <colgroup>
       <col style="width: 400px;"/>
@@ -273,7 +273,7 @@ title: "DTPMAX (2D)"
     </colgroup>
     <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
       <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
-        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img height="26" src="../../../assets/equations/keyword_documentation/d/dtpmax_eq_4.jpg" style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);" width="168"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img height="26" src="{{ '/assets/equations/keyword_documentation/d/dtpmax_eq_4.jpg' | relative_url }}" style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);" width="168"/></td>
         <td>
           <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
         </td>

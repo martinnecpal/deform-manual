@@ -87,14 +87,14 @@ title: "Appendix XIV: Rotating Workpiece Simulations"
   <p>In this, special techniques for spinning workpiece simulations are discussed. Among the applications that this would cover would be cross-rolling simulations. (See <a href="#Fig_AXIV_1_Cross-rolling_diagram"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>1.</a>)</p>
   <p> </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXIV_1_Cross-rolling_diagram"></a><img src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0001.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_AXIV_1_Cross-rolling_diagram"></a><img src="{{ '/assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0001.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Cross-rolling diagram</p>
   <p> </p>
   <p>In the above case, there is a problem when the workpiece rotates. The problem occurs due to the nature of updating nodal position based on integrating velocity over a time increment. The simple process of updating based on instantaneous velocity over
     a discrete time interval can cause an increase of the diameter of the workpiece. As seen in <a href="#Fig_AXIV_2_Velocity_profile_of_a_rotating_body"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>2.</a> all the nodal
     velocities are perpendicular to the radius where they are located. Thus, simply updating the coordinates based directly on their velocity will incur an increase in radius and in volume as well.</p>
-  <p style="text-align: center"><a id="Fig_AXIV_2_Velocity_profile_of_a_rotating_body"></a><img src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0002.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_AXIV_2_Velocity_profile_of_a_rotating_body"></a><img src="{{ '/assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0002.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Velocity profile of a rotating body</p>
   <p> </p>
@@ -139,7 +139,7 @@ title: "Appendix XIV: Rotating Workpiece Simulations"
       <p>The translational movement is non-zero in the direction non-parallel to the second rotational axis.</p>
     </li>
   </ol>
-  <p style="text-align: center"><a id="Fig_AXIV_3_Description_of_rotational_axis_definitions_and_angle_definitions"></a><img height="250" src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0003.jpg" width="335"/></p>
+  <p style="text-align: center"><a id="Fig_AXIV_3_Description_of_rotational_axis_definitions_and_angle_definitions"></a><img height="250" src="{{ '/assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0003.jpg' | relative_url }}" width="335"/></p>
   <p> </p>
   <p class="Fig_numb">Description of rotational axis definitions and angle definitions (derived from angular velocity values) for this case</p>
   <p> </p>
@@ -159,16 +159,16 @@ title: "Appendix XIV: Rotating Workpiece Simulations"
     </li>
   </ul>
   <p>In the case of two rotational axes, when the axes are parallel, the angular velocities are defined as follows (Seen <a href="#Fig_AXIV_4_Two_rotating_bodies_with_parallel_axes"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>4.</a>):</p>
-  <p><img src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/eq1.jpg"/></p>
+  <p><img src="{{ '/assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/eq1.jpg' | relative_url }}"/></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXIV_4_Two_rotating_bodies_with_parallel_axes"></a><img height="150" src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0004.jpg" width="166"/></p>
+  <p style="text-align: center"><a id="Fig_AXIV_4_Two_rotating_bodies_with_parallel_axes"></a><img height="150" src="{{ '/assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0004.jpg' | relative_url }}" width="166"/></p>
   <p> </p>
   <p class="Fig_numb">Two rotating bodies with parallel axes</p>
   <p> </p>
   <p>Otherwise, when the axes are at an angle to each other, such as in the case of orbital forming, the angular velocities are defined as, (Seen <a href="#Fig_AXIV_5_A_rotating_body_with_two_non-parallel_axes"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>5.</a>)</p>
   <p> </p>
-  <p><img src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/eq2.jpg"/></p>
-  <p style="text-align: center"><a id="Fig_AXIV_5_A_rotating_body_with_two_non-parallel_axes"></a><img height="240" src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0005.jpg" width="320"/></p>
+  <p><img src="{{ '/assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/eq2.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"><a id="Fig_AXIV_5_A_rotating_body_with_two_non-parallel_axes"></a><img height="240" src="{{ '/assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0005.jpg' | relative_url }}" width="320"/></p>
   <p> </p>
   <p class="Fig_numb"> A rotating body with two non-parallel axes</p>
   <p> </p>
@@ -220,7 +220,7 @@ title: "Appendix XIV: Rotating Workpiece Simulations"
   <p> </p>
   <p>If OMECTR != 0, XMIN and XMAX (discussed below) are defined as the minimum and maximum bounds with respect to the axis and the origin defined on Lines 2 and 3.  So are XMIN2 and XMAX2, if any.  ( <a href="#Fig_AXIV_6_Outline_of_dimensions_for_central_core"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>6.</a>)</p>
   <p>               </p>
-  <p style="text-align: center"><a id="Fig_AXIV_6_Outline_of_dimensions_for_central_core"></a><img src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0006.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_AXIV_6_Outline_of_dimensions_for_central_core"></a><img src="{{ '/assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0006.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Outline of dimensions for central core</p>
   <p> </p>

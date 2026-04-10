@@ -101,7 +101,7 @@ title: "3.1. Deform License Setup"
   <h2><a id="3.1.2._Computer_Locations_in_DEFORM_Setup"></a>Computer Locations in DEFORM Setup</h2>
   <p><strong>Run DEFORM Setup</strong></p>
   <p>In the “Simulation Server” tab user must add the simulation server system on which jobs which are submitted in batch mode would be running. The simulation server system can be local system or any remote high performance system, user can add simulation
-    server by clicking on <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button, see <a href="#Fig._3.1.13._Adding_version_in_Simulation_Server_window"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>13.</a> If it is a multi-processor
+    server by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button, see <a href="#Fig._3.1.13._Adding_version_in_Simulation_Server_window"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>13.</a> If it is a multi-processor
     or multi-core machine, specify the number of processors (cores) available and licensed in DEFORM (Processor number) and the maximum number of jobs that user would like to run simultaneously on that articular system based on the performance of the
     system (default is 1) button. If it is a multi-processor or multi-core machine, specify the number of processors (cores) available and licensed in DEFORM (Processor number) and the maximum number of jobs (default is 1).</p>
   <p> </p>
@@ -162,24 +162,24 @@ title: "3.1. Deform License Setup"
   <p>Since we are installing License manager in server machine, start DEFORM system Installation and continue till the select components page and choose &quot;Server installation&quot; from pulldown menu as shown in <a href="#Fig_3_1_1_Deform_Choose_components_window_(not_a_required_step_for_official_v11.0.2_release)"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>1</a>.
     Hence DEFORM Installer will install the support codes (Python and Sentinel protection driver) then start the License Manager installation.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_1_Deform_Choose_components_window_(not_a_required_step_for_official_v11.0.2_release)" style="cursor: nwse-resize;"></a><img src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image023.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_1_Deform_Choose_components_window_(not_a_required_step_for_official_v11.0.2_release)" style="cursor: nwse-resize;"></a><img src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image023.jpg' | relative_url }}"/></p>
   <p class="Fig_num">Deform Choose components window (not a required step for official v11.0.2 release)</p>
   <p> </p>
   <p>If old version License Manager is not uninstalled then installer recommends to uninstall the old license manager before installing new license manager as shown in <a href="#Fig_3_1_2_License_manager_installation_warning_(not_a_required_step_for_official_v11.0.2_release)"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>2.</a></p>
   <p> </p>
-  <p style="text-align: center"><img src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image022.jpg"/></p>
+  <p style="text-align: center"><img src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image022.jpg' | relative_url }}"/></p>
   <p class="Fig_num"> <a id="Fig_3_1_2_License_manager_installation_warning_(not_a_required_step_for_official_v11.0.2_release)"></a>License manager installation warning (not a required step for official v11.0.2 release)</p>
   <p> </p>
   <p> </p>
   <p>Turn on Configure windows firewall. Windows firewall needs to be configured to allow License and Batch queue service through windows firewall as shown in <a href="#Fig_3_1_3_Windows_Firewall_configure_page"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>3.</a>    and then click <strong>Next</strong>.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_3_Windows_Firewall_configure_page"></a><img height="464" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image025.jpg" width="598"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_3_Windows_Firewall_configure_page"></a><img height="464" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image025.jpg' | relative_url }}" width="598"/></p>
   <p class="Fig_num">Windows Firewall configure page</p>
   <p> </p>
   <p>During the DEFORM License Manager installation the system prompts the user for the DEFORM password (see <a href="#Fig_3_1_4_DEFORM_password_input_window"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>4</a>), user can browse the location of the DEFORM.PWD
     file using Browse button. When the user clicks the Next button, the password is copied to the License Manager Folder from the browsed location.  Automatic start of the DeformLicenseServer is a part of the installation.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_4_DEFORM_password_input_window"></a><img src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image024.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_4_DEFORM_password_input_window"></a><img src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image024.jpg' | relative_url }}"/></p>
   <p class="Fig_num">DEFORM password input window</p>
   <p><em><strong>Note:</strong></em></p>
   <p><em>If the user does not have the password at the time of installation, then password must be manually pasted into the License Manager folder and has to run the license manager batch file to activate the DeformLicenseServer Service.</em></p>
@@ -187,48 +187,48 @@ title: "3.1. Deform License Setup"
   <p>Turn on Install Batch Queue server. Batch queue is required for queueing the simulations as shown in <a href="#Fig_3_1_5_DEFORM_License_Manager_additional_task_selection_window"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>5.</a> and then click
     <strong>Next</strong>.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_5_DEFORM_License_Manager_additional_task_selection_window"></a><img src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image028.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_5_DEFORM_License_Manager_additional_task_selection_window"></a><img src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image028.jpg' | relative_url }}"/></p>
   <p class="Fig_num">DEFORM License Manager additional task selection window</p>
   <p> </p>
   <p>Review the License Manager setup selections and click <strong>Install </strong>to start installation. Otherwise go back to change the settings. (See <a href="#Fig_3_1_6_DEFORM_License_Manager_installation_confirmation_window"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>6.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_6_DEFORM_License_Manager_installation_confirmation_window"></a><img src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image026.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_6_DEFORM_License_Manager_installation_confirmation_window"></a><img src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image026.jpg' | relative_url }}"/></p>
   <p class="Fig_num">DEFORM License Manager installation confirmation window</p>
   <p> </p>
   <p>If the given system has any issues/restrictions with handling the DeformLicenseServer service then as administrator, run the file “InstallServer.bat” on the license server computer (available in installation path, typical location of this batch file
     is C:\Program Files\SFTC\License Manager) using the command prompt as shown in <a href="#Fig_3_1_7_Registering_and_run_the_license_manager_server_using_the_batch_file"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>7.</a>  Enter “N” as an option
     to install only Deform License server.</p>
   <p> </p>
-  <p style="text-align: center"><img height="536" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image001.jpg" style="text-align: center;" width="750"/></p>
+  <p style="text-align: center"><img height="536" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image001.jpg' | relative_url }}" style="text-align: center;" width="750"/></p>
   <p class="Fig_num"><a id="Fig_3_1_7_Registering_and_run_the_license_manager_server_using_the_batch_file" style="cursor: nesw-resize;" height="0" width="0"></a>Registering and run the license manager server using the batch file</p>
   <p> </p>
   <p>If the given system has any issues/restrictions with handling the DeformBatchQueue service then as administrator run the file “InstallServer.bat” with “Y” option on the license server computer (available in default installation path, typical location
     of this batch file is C:\Program Files\SFTC\License Manager) using the command prompt as shown in <a href="#Fig_3_1_8_Registering_and_running_the_license_manager_and_batch_queue_servers_using_the_batch_file_with_“Y”_option"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>8.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_8_Registering_and_running_the_license_manager_and_batch_queue_servers_using_the_batch_file_with_“Y”_option"></a><img height="449" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image002.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_8_Registering_and_running_the_license_manager_and_batch_queue_servers_using_the_batch_file_with_“Y”_option"></a><img height="449" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image002.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_num">Registering and running the license manager and batch queue servers using the batch file with “Y” option</p>
   <p><strong>Step 2:</strong></p>
   <p>For any subsequent changes user can open DEFORMSetup dialog (See <a href="#Fig_3_1_9_DEFORM_Setup_start_menu_shortcut"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>9.</a>), to indicate the name of the server computer name and port number (34445).
-    Click on <img src="../../../assets/icons/pre_icons/mo_syncronize_button.jpg"/> to make sure that Success is returned which is an indication of the fact that now a valid combination of License key, password file have been identified by the setup program.
-    Click <img height="21" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" width="67"/> to popup message, this activates other subsequent data tabs (Simulation and Shared folder) and save the settings using <img height="21" src="../../../assets/icons/pre_icons/mo_save_button.jpg" width="73"/> button. (See <a href="#Fig_3_1_10_Mandatory_input_fields_to_activate_the_license_configuration"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>10.</a>). Once user clicks on the save button Deform Services tab will be activated, for
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_syncronize_button.jpg' | relative_url }}"/> to make sure that Success is returned which is an indication of the fact that now a valid combination of License key, password file have been identified by the setup program.
+    Click <img height="21" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="67"/> to popup message, this activates other subsequent data tabs (Simulation and Shared folder) and save the settings using <img height="21" src="{{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}" width="73"/> button. (See <a href="#Fig_3_1_10_Mandatory_input_fields_to_activate_the_license_configuration"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>10.</a>). Once user clicks on the save button Deform Services tab will be activated, for
     subsequent opening of DEFORMSetup dialog Deform Services tab remains activated.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_9_DEFORM_Setup_start_menu_shortcut"></a><img src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image003.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_9_DEFORM_Setup_start_menu_shortcut"></a><img src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image003.jpg' | relative_url }}"/></p>
   <p class="Fig_num">DEFORM Setup start menu shortcut</p>
   <p> </p>
-  <p style="text-align: center"><img src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image004.jpg"/></p>
+  <p style="text-align: center"><img src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image004.jpg' | relative_url }}"/></p>
   <p class="Fig_num"><a id="Fig_3_1_10_Mandatory_input_fields_to_activate_the_license_configuration"></a>Mandatory input fields to activate the license configuration</p>
   <p> </p>
   <p> </p>
   <p>After the synchronize button is clicked, if the current computer hasn’t been set up as a Simulation Server with the current version and path then DEFORM Setup will offer to add it as one.  (See <a href="#Fig_3_1_11_DEFORM_Setup_License_Server_window"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>11.</a>) </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_11_DEFORM_Setup_License_Server_window" height="0" width="0"></a><img align="" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image009.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_11_DEFORM_Setup_License_Server_window" height="0" width="0"></a><img align="" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image009.jpg' | relative_url }}"/></p>
   <p class="Fig_num">DEFORM Setup License Server window</p>
   <p> </p>
   <p>If the <strong>Yes </strong>button is clicked to add the Simulation Server, DEFORM Setup will not automatically save the change to the License Server, but will prompt to save the changes. (See <a href="#Fig_3_1_12_DEFORM_Setup_reminder_to_save"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>12.</a>)
     Verify the change is correct in the Simulation Server tab before saving the settings. </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_12_DEFORM_Setup_reminder_to_save"></a><img align="" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image029.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_12_DEFORM_Setup_reminder_to_save"></a><img align="" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image029.jpg' | relative_url }}"/></p>
   <p class="Fig_num">DEFORM Setup reminder to save</p>
   <p> </p>
   <p><strong>Step 3:</strong></p>
@@ -239,17 +239,17 @@ title: "3.1. Deform License Setup"
   <p>When the License Manager server is on the same computer as that of DEFORM Setup is being run on, as many Simulation Servers as required can be defined. However, if the License Manager server is on a different computer, then only the local Simulation
     Server can be defined and edited. </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_13_DEFORM_Setup_Simulation_Server_window"></a><img height="642" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image007.jpg" style="text-align: center;" width="749"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_13_DEFORM_Setup_Simulation_Server_window"></a><img height="642" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image007.jpg' | relative_url }}" style="text-align: center;" width="749"/></p>
   <p class="Fig_num">DEFORM Setup Simulation Server window </p>
   <p> </p>
   <p> </p>
   <p>Within the Simulations tab,</p>
   <ul class="Disc">
     <li>
-      <p><img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button can be used to add a simulation server.</p>
+      <p><img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button can be used to add a simulation server.</p>
     </li>
     <li>
-      <p><img src="../../../assets/icons/pre_icons/mo_delete_icon2.jpg"/> button can be used to delete the local simulation server.</p>
+      <p><img src="{{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}"/> button can be used to delete the local simulation server.</p>
     </li>
     <li>
       <p>Address shows the name of the computer connected to the current License manger on which the simulation server is running.</p>
@@ -272,20 +272,20 @@ title: "3.1. Deform License Setup"
   </ul>
   <p> </p>
   <p>The lower area shows details about the currently selected Simulation Server.  (See <a href="#Fig_3_1_14_Checking_Simulation_serve_settings"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>14.</a>) In the Versions tab, the disk location for multiple
-    versions can be added using <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button or delete using <img src="../../../assets/icons/pre_icons/mo_delete_icon2.jpg"/> button, only one path per version is allowed. </p>
+    versions can be added using <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button or delete using <img src="{{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}"/> button, only one path per version is allowed. </p>
   <p>If the Processor Type is defined as a Cluster, the Clusters tab will be enabled and details about the cluster nodes can be defined. After making changes to the Simulation Server tab, click the Save button to save the settings. </p>
   <p>In Windows, user can specify Multiple versions (V12.1, V12.0, V11.3, v11.2, v11.1,v11.0 and v10) installation locations for each simulation server if user would like to use older versions (See <a href="#Fig_3_1_14_Checking_Simulation_serve_settings"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>14.</a>).
-    Different versions can be added by user using <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg" style="cursor: nwse-resize;"/> button, select the version number from the pull down menu and then specify the installation path information
+    Different versions can be added by user using <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}" style="cursor: nwse-resize;"/> button, select the version number from the pull down menu and then specify the installation path information
     for each version which will be used to run the jobs from the respective version when submitted in Batch Queue. But in Linux/UNIX, user can only specify one version.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_14_Checking_Simulation_serve_settings"></a><img src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image006.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_14_Checking_Simulation_serve_settings"></a><img src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image006.jpg' | relative_url }}"/></p>
   <p class="Fig_num">DEFORM Setup Simulation Server window</p>
   <p> </p>
   <p>User should make sure that the Simulation Server service is Running, if it is not running then user can visit DEFORM Services tab and run the local Simulation server by clicking on  [Start] button available next to the Simulation server under Deform
     Computers list.  The simulation servers that can be used to run a selected job are listed in Run options dialog as shown in <a href="#Fig_3_1_15_Run_Options_window"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>15.</a></p>
   <p class="Note"><strong>Note</strong>:  Install path information for each version is required to be defined so that the DBs of different versions queued using Batch queue can simulate using respective version.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_15_Run_Options_window"></a><img src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image008.jpg" style="text-align: center;"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_15_Run_Options_window"></a><img src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image008.jpg' | relative_url }}" style="text-align: center;"/></p>
   <p class="Fig_num" style="text-align: center;">Run Options window</p>
   <p style="text-align: center"> </p>
   <p><strong>Step 4:</strong></p>
@@ -298,7 +298,7 @@ title: "3.1. Deform License Setup"
     <a href="#Fig._3.1.14._Shared_folders_information_in_DEFORM_setup_window">.</a> )computer name as “Client2” and folder name as “Q:”  Be sure to include the colon (:).</p>
   <p>Now click “Save” (See 4 in <a href="#Fig_3_1_16_Shared_folders_information_in_DEFORM_setup_window"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>16.</a>). This information is all stored on the client and license server machine.</p>
   <p> </p>
-  <p style="text-align: center"><img src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image027.jpg"/></p>
+  <p style="text-align: center"><img src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image027.jpg' | relative_url }}"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_num"><a id="Fig_3_1_16_Shared_folders_information_in_DEFORM_setup_window"></a>Shared folders information in DEFORM setup window</p>
   <p> </p>
@@ -315,7 +315,7 @@ title: "3.1. Deform License Setup"
   <p style="margin-left: 80px">Simulation Server</p>
   <p style="margin-left: 80px">Web-based Simulation Monitoring (Not available in Linux)</p>
   <p style="margin-left: 80px"> </p>
-  <p style="text-align: center"><a id="Fig_3_1_17_DEFORM_Services_in_DEFORM_Setup_window"></a><img height="638" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image016.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_17_DEFORM_Services_in_DEFORM_Setup_window"></a><img height="638" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image016.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_num">DEFORM Services in DEFORM Setup window</p>
   <p> </p>
   <p>In DEFORM Services tab we have two options to access the computers with DEFORM services (See <a href="#Fig_3_1_17_DEFORM_Services_in_DEFORM_Setup_window"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>17.</a> ). User can view the services in a separate
@@ -324,21 +324,21 @@ title: "3.1. Deform License Setup"
   <p><strong>Open DEFORM Service for local DEFORM computer </strong>: Using this option we can monitor and control the services on Local computer only. If the local computer is a server computer then  we can see both DEFORM server Computer and DEFORM Computer
     list (See<a href="#Fig_3_1_18_DEFORM_Service_for_local_DEFORM_computer_window_in_Server_computer"> <span data-keyref="Chapter_3_1_">Fig. 3.1.</span>18.</a>) but in Client machine we can see only DEFORM Computer list (See <a href="#Fig_3_1_19_DEFORM_Service_for_local_DEFORM_computer_window_in_client_computer"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>19.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_18_DEFORM_Service_for_local_DEFORM_computer_window_in_Server_computer"></a><img height="638" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image011.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_18_DEFORM_Service_for_local_DEFORM_computer_window_in_Server_computer"></a><img height="638" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image011.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_num">DEFORM Service for local DEFORM computer window in Server computer</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_19_DEFORM_Service_for_local_DEFORM_computer_window_in_client_computer"></a><img height="644" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image012.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_19_DEFORM_Service_for_local_DEFORM_computer_window_in_client_computer"></a><img height="644" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image012.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_num">DEFORM Service for local DEFORM computer window in client computer</p>
   <p> </p>
   <p><strong>Open DEFORM Service for all DEFORM computers </strong>: Using this option user will be able to view all the clients that are connected to the server to which the local system is connected along with the server system. User must have passcode
-    or user must be an authorized user in order to monitor and control the services of other computers other than the local computer. Services can be started using <img src="../../../assets/icons/pre_icons/run_action_icon.jpg"/> and stop using <img src="../../../assets/icons/pre_icons/stop_action_icon.jpg"/> button available next to service, See <a href="#Fig_3_1_20_DEFORM_Service_for_all_DEFORM_computers"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>20.</a> From v14, information of all the computers connected to the License Server will not be
-    synched by default to improve the DEFROM Setup performance, only local computer and server computer information will be synched. Use <img src="../../../assets/icons/pre_icons/mo_deformsetup_sync_button.jpg"/> button to sync the respective computer
-    information and to sync all computers use <img src="../../../assets/icons/pre_icons/mo_deformsetup_sync_all_computers_button.jpg"/>. (See <a href="#Fig_3_1_21_DEFORM_Service_for_all_DEFORM_computers_after_sync"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>21.</a>)</p>
+    or user must be an authorized user in order to monitor and control the services of other computers other than the local computer. Services can be started using <img src="{{ '/assets/icons/pre_icons/run_action_icon.jpg' | relative_url }}"/> and stop using <img src="{{ '/assets/icons/pre_icons/stop_action_icon.jpg' | relative_url }}"/> button available next to service, See <a href="#Fig_3_1_20_DEFORM_Service_for_all_DEFORM_computers"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>20.</a> From v14, information of all the computers connected to the License Server will not be
+    synched by default to improve the DEFROM Setup performance, only local computer and server computer information will be synched. Use <img src="{{ '/assets/icons/pre_icons/mo_deformsetup_sync_button.jpg' | relative_url }}"/> button to sync the respective computer
+    information and to sync all computers use <img src="{{ '/assets/icons/pre_icons/mo_deformsetup_sync_all_computers_button.jpg' | relative_url }}"/>. (See <a href="#Fig_3_1_21_DEFORM_Service_for_all_DEFORM_computers_after_sync"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>21.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_20_DEFORM_Service_for_all_DEFORM_computers"></a><img height="662" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image013.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_20_DEFORM_Service_for_all_DEFORM_computers"></a><img height="662" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image013.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_num">DEFORM Service for all DEFORM computers</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_21_DEFORM_Service_for_all_DEFORM_computers_after_sync"></a><img height="662" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image030.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_21_DEFORM_Service_for_all_DEFORM_computers_after_sync"></a><img height="662" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image030.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_num">DEFORM Service for all DEFORM computers after sync</p>
   <p> </p>
   <p> </p>
@@ -353,7 +353,7 @@ title: "3.1. Deform License Setup"
   </ul>
   <p class="Note"><strong>Note: </strong>A passcode must be shared only among those users who would be controlling the services of all DEFORM Computers as they start and stop any service.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_22_Creating_Passcode_in_DEFORM_Services_windows_by_Authorized_user"></a><img height="319" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image014.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_22_Creating_Passcode_in_DEFORM_Services_windows_by_Authorized_user"></a><img height="319" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image014.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_num">Creating Passcode in DEFORM Services windows by Authorized user</p>
   <p> </p>
   <p><strong>Authorized DEFORM user:</strong></p>
@@ -381,30 +381,30 @@ title: "3.1. Deform License Setup"
     <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">If you do not have the privilege to edit the authorized_users.txt file, please ask your IT admin for help.</li>
   </ul>
   <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
-  <p style="text-align: center"><img height="638" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image015.jpg" width="750"/></p>
+  <p style="text-align: center"><img height="638" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image015.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_name">a. Authorized user DEFORM Services Main window.</p>
   <p> </p>
-  <p style="text-align: center"><img height="638" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image016.jpg" width="750"/></p>
+  <p style="text-align: center"><img height="638" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image016.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_name">b. Non Authorized user DEFORM Services main window</p>
   <p class="Fig_num"><a id="Fig_3_1_23_Showing_Authorized_user_and_Non_Authorized_user_DEFORM_Services_Main_window"></a>Showing Authorized user and Non Authorized user DEFORM Services Main window</p>
   <p> </p>
   <p><strong>Updating Simulation services modules:</strong></p>
-  <p>After installing DEFORM Services, if we are observing <img src="../../../assets/icons/pre_icons/error_status_icon.jpg"/> status then it could be due to the Simulation services files not available or available files are outdated, then we need to update
-    the files by using update button available next to the DEFORM computer which is displaying the error. User requires Passcode to update the services. When we click on <img src="../../../assets/icons/pre_icons/mo_deform_setup_update_icon.jpg"/> Update
+  <p>After installing DEFORM Services, if we are observing <img src="{{ '/assets/icons/pre_icons/error_status_icon.jpg' | relative_url }}"/> status then it could be due to the Simulation services files not available or available files are outdated, then we need to update
+    the files by using update button available next to the DEFORM computer which is displaying the error. User requires Passcode to update the services. When we click on <img src="{{ '/assets/icons/pre_icons/mo_deform_setup_update_icon.jpg' | relative_url }}"/> Update
     button then Simulation Server (SS), Simulation Client (SC), and Web-based Simulation Monitoring server (RS) files are copied to Configuration folder and we can see the message as</p>
   <p>“Updating sim_modules on TESTING1 ...</p>
   <p>SUCCESS”, TESTING1 is the computer which was showing an error (See <a href="#Fig_3_1_24_Updating_Simulation_services_files_in_DEFORM_Services_window"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>24.</a>).  </p>
   <p> </p>
-  <p>After successfully updating the Simulation services we can start the services by clicking on <img src="../../../assets/icons/pre_icons/run_action_icon.jpg"/>  button. If the DEFORM system is other than local then we need to enter Username and password
+  <p>After successfully updating the Simulation services we can start the services by clicking on <img src="{{ '/assets/icons/pre_icons/run_action_icon.jpg' | relative_url }}"/>  button. If the DEFORM system is other than local then we need to enter Username and password
     of the System else we need not. The services will be run under the Username which is entered while starting the service. In case of local system is Windows, the service will be started automatically under the current active logged username when we
-    click on <img src="../../../assets/icons/pre_icons/run_action_icon.jpg"/> button (See<a href="#Fig_3_1_26_Prompting_to_enter_Passcode_to_stop_the_Batch_queue_Server_Service"> <span data-keyref="Chapter_3_1_">Fig. 3.1.</span>26.</a>), while local
+    click on <img src="{{ '/assets/icons/pre_icons/run_action_icon.jpg' | relative_url }}"/> button (See<a href="#Fig_3_1_26_Prompting_to_enter_Passcode_to_stop_the_Batch_queue_Server_Service"> <span data-keyref="Chapter_3_1_">Fig. 3.1.</span>26.</a>), while local
     system is Linux Username (default username from deformscd file will be displayed) and password must be entered to start the service.</p>
   <p>Before updating Simulation services files, we need to Stop the services that are running and then need to update the files.</p>
   <p> </p>
-  <p style="text-align: center"><img height="638" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image017.jpg" width="750"/></p>
+  <p style="text-align: center"><img height="638" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image017.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_name">a. When Simulation services are outdated or not available</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_24_Updating_Simulation_services_files_in_DEFORM_Services_window"></a><img height="638" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image018.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_24_Updating_Simulation_services_files_in_DEFORM_Services_window"></a><img height="638" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image018.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_name">b. After updating Simulation services</p>
   <p class="Fig_num">Updating Simulation services files in DEFORM Services window</p>
   <p> </p>
@@ -439,17 +439,17 @@ title: "3.1. Deform License Setup"
   <p>Using Update License Password file button authorized user can update the password file when he receives new license password file (See<a href="#Fig_3_1_25_Updating_License_password_file_from_DEFORM_Services"> <span data-keyref="Chapter_3_1_">Fig. 3.1.</span>25.</a>).
     You must restart the License Server after updating password file.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_25_Updating_License_password_file_from_DEFORM_Services"></a><img height="638" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image019.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_25_Updating_License_password_file_from_DEFORM_Services"></a><img height="638" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image019.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_num">Updating License password file from DEFORM Services</p>
   <p> </p>
   <p><strong>Controlling Services on Server Computer</strong></p>
   <p>We require pass code to stop the services License server, Batch queue server and Web-Based Service Control on server computer in Windows while in Linux we require passcode even to start these services. If we stop the License server service even Batch
     queue Server service will also be stopped along with all Simulation Server and Simulation Client services on all DEFORM systems connected to that server, see<a href="#Fig_3_1_26_Prompting_to_enter_Passcode_to_stop_the_Batch_queue_Server_Service"> <span data-keyref="Chapter_3_1_">Fig. 3.1.</span>26.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_26_Prompting_to_enter_Passcode_to_stop_the_Batch_queue_Server_Service"></a><img height="638" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image021.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_26_Prompting_to_enter_Passcode_to_stop_the_Batch_queue_Server_Service"></a><img height="638" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image021.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_num">Prompting to enter Passcode to stop the Batch queue Server Service</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_3_1_27_Prompting_to_enter_user_name_and_Password_to_Start_the_other_user_services"></a><img height="638" src="../../../assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image020.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_3_1_27_Prompting_to_enter_user_name_and_Password_to_Start_the_other_user_services"></a><img height="638" src="{{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image020.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_num">Prompting to enter user name and Password to Start the other user services</p>
   <p> </p>
   <p><strong>Related Topics:</strong></p>

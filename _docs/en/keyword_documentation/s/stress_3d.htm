@@ -325,14 +325,14 @@ title: "STRESS (3D)"
       </tr>
       <tr>
         <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
-          <p class="P_10">X1 is the value of Sigma X(<img src="../../../assets/images/keyword_documentation/s/sigmax.jpg"/>), X2 is Sigma Y(<img src="../../../assets/images/keyword_documentation/s/sigma_y.jpg"/>), X3 is Sigma Z(<img src="../../../assets/images/keyword_documentation/s/sigma_z.jpg"/>), X4 is Tau XY(<img src="../../../assets/images/keyword_documentation/s/tau_xy.jpg"/>), X5 is Tau YZ(<img src="../../../assets/images/keyword_documentation/s/tau_yz.jpg"/>) and X6 is Tau XZ(<img src="../../../assets/images/keyword_documentation/s/tau_xz.jpg"/>). The keyword format varies depending on stress output selection made at ELMNOD.</p>
+          <p class="P_10">X1 is the value of Sigma X(<img src="{{ '/assets/images/keyword_documentation/s/sigmax.jpg' | relative_url }}"/>), X2 is Sigma Y(<img src="{{ '/assets/images/keyword_documentation/s/sigma_y.jpg' | relative_url }}"/>), X3 is Sigma Z(<img src="{{ '/assets/images/keyword_documentation/s/sigma_z.jpg' | relative_url }}"/>), X4 is Tau XY(<img src="{{ '/assets/images/keyword_documentation/s/tau_xy.jpg' | relative_url }}"/>), X5 is Tau YZ(<img src="{{ '/assets/images/keyword_documentation/s/tau_yz.jpg' | relative_url }}"/>) and X6 is Tau XZ(<img src="{{ '/assets/images/keyword_documentation/s/tau_xz.jpg' | relative_url }}"/>). The keyword format varies depending on stress output selection made at ELMNOD.</p>
           <p class="P_10">For element output (ELMNOD = 0) option, stress at the centroid of each element is written.</p>
           <p class="P_10">For dual output (ELMNOD = 2) option, stress at the centroid of element and at node are written.</p>
           <p class="P_10">For brick element case with integration point (ELMNOD = 3) option, stress at eight integration points in element are written.</p>
           <p class="P_10"> </p>
-          <p class="P_10">The stress tensor,<img src="../../../assets/images/keyword_documentation/s/sij.jpg"/> , of the object is represented by the matrix:</p>
+          <p class="P_10">The stress tensor,<img src="{{ '/assets/images/keyword_documentation/s/sij.jpg' | relative_url }}"/> , of the object is represented by the matrix:</p>
           <p class="P_10"> </p>
-          <p class="P_10">   <img src="../../../assets/images/keyword_documentation/s/stress_3d_image002.jpg"/> <img height="59" src="../../../assets/images/keyword_documentation/s/stress_3d_image001.jpg" width="151"/></p>
+          <p class="P_10">   <img src="{{ '/assets/images/keyword_documentation/s/stress_3d_image002.jpg' | relative_url }}"/> <img height="59" src="{{ '/assets/images/keyword_documentation/s/stress_3d_image001.jpg' | relative_url }}" width="151"/></p>
           <p class="P_10"> </p>
           <p class="P_10">Note: This integration point option is valid only for brick element whose stress values are evaluated at 8 integration points per element during FEM calculation. For Tetrahedral element, integration point output option is same as elemental output
             option.   </p>

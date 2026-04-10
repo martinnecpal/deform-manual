@@ -190,21 +190,21 @@ title: "29.1. Cogging Setup"
   <p style="margin-left:40px;"> </p>
   <p><strong>Die start position</strong>: Die center is the datum point used for initial position for each pass in its movement direction. (See <a href="#Fig_29_1_1_Die_start_and_Die_stop_position"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>1.</a>). </p>
   <p><strong>Die stop position:</strong> This option is enabled only when the option ’Auto-calculate bites’ is checked. Pass ends before the die center reaches the given end position.</p>
-  <p style="text-align: center"><a id="Fig_29_1_1_Die_start_and_Die_stop_position"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image054.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_1_Die_start_and_Die_stop_position"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image054.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">Die start and Die stop position.</p>
   <p><br/>
     <strong><a id="Die_positioning_using_the_percentage_as_reference"></a></strong> <strong>1.</strong> <u><strong>0% (Percentage or fraction of billet length between 0 to 1)</strong></u>:  <br/>
     <strong>Die start position</strong>: Die center is positioned at given distance (specified as a fraction of current billet length) from start of billet in the pass movement direction.(See <a href="#Fig_29_1_2_Percentage_or_fraction_of_billet_length_die_positioning_method"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>2.</a>)</p>
   <p><strong>Die stop position</strong>: Pass ends when die center reaches given distance (specified as a fraction of current billet length) from end of billet in the opposite direction of the pass movement direction.</p>
   <p>Default values are zeros, which means the die center is positioned at the start end of billet and stops until it reaches the other end.</p>
-  <p style="text-align: center"><a id="Fig_29_1_2_Percentage_or_fraction_of_billet_length_die_positioning_method"></a><img height="460" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image055.jpg" width="429"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_2_Percentage_or_fraction_of_billet_length_die_positioning_method"></a><img height="460" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image055.jpg' | relative_url }}" width="429"/></p>
   <p class="Fig_numb">(0-%) Percentage or fraction of billet length die positioning method</p>
   <p> </p>
   <p><strong><a id="Die_positioning_with_reference_point"></a>2. </strong><u><strong>1 -ref (Reference points)</strong></u>: When this method is selected, picking is enabled and two points on the billet can be picked. </p>
   <p>Start point should be picked after clicking on the cell ‘Die start position’ in the first pass. (See <a href="#Fig_29_1_3_1-Reference_point_die_positioning_method"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>3.</a>)</p>
   <p>Stop point should be picked after clicking on the cell ‘Die stop position’ in the first pass. </p>
   <p>Die center is positioned at the start point and the pass ends when it reaches the stop point. The same two reference points are used for all passes. The reference points are tracked on the deforming workpiece.</p>
-  <p style="text-align: center"><a id="Fig_29_1_3_1-Reference_point_die_positioning_method"></a><img height="425" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image056.jpg" width="467"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_3_1-Reference_point_die_positioning_method"></a><img height="425" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image056.jpg' | relative_url }}" width="467"/></p>
   <p> </p>
   <p class="Fig_numb">(1-ref) Reference point die positioning method</p>
   <p><br/>
@@ -213,7 +213,7 @@ title: "29.1. Cogging Setup"
     <strong>Die stop position</strong>: Pass ends when the die center reaches the specified distance from the end of the billet in the opposite direction of the pass movement direction. </p>
   <p>Negative values can be used for start and/or end positions.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_29_1_4_Absolute_distance_die_positioning_method"></a><img height="400" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image057.jpg" width="400"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_4_Absolute_distance_die_positioning_method"></a><img height="400" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image057.jpg' | relative_url }}" width="400"/></p>
   <p> </p>
   <p class="Fig_numb">(2-dst) Absolute distance die positioning method</p>
   <p> </p>
@@ -223,7 +223,7 @@ title: "29.1. Cogging Setup"
   <p>Offset method can be used with a zero value for the first pass if user wants to do manual positioning only. In certain processes, like infeed swaging for instance, dies need to be positioned in a certain specific configuration with reference to the
     billet. In such cases, the offset position method can be used with a zero value for the first pass. No additional die positioning is done by the system.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_29_1_5_Offset_die_positioning_method"></a><img height="265" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image058.jpg" width="586"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_5_Offset_die_positioning_method"></a><img height="265" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image058.jpg' | relative_url }}" width="586"/></p>
   <p> </p>
   <p class="Fig_numb">(3-ofst) Offset die positioning method</p>
   <p> </p>
@@ -235,22 +235,22 @@ title: "29.1. Cogging Setup"
   <p style="margin-left:40px;">Number of Bites to skip, this option is applicable for Crank press based movement controls only.  Using this option user can set Number of bites to be skipped between each bite in the respective pass of the simulation.</p>
   <p style="margin-left:40px;">Below <a href="#Fig_29_1_6_Bite_skip"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>6.</a> shows cogging process with two passes, where in first pass we skipped two bites for every bite and in second pass we do not skip any bites.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_29_1_6_Bite_skip"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image001.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_6_Bite_skip"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image001.jpg' | relative_url }}"/></p>
   <p>  </p>
   <p class="Fig_numb">Bite skip</p>
   <p> </p>
   <h2><a id="29_1_3_How_to_add_Cogging_operation"></a>How to add Cogging operation</h2>
-  <p>Cogging operation is accessible from MO Wizard that can be opened from Main GUI. In MO wizard, Cogging Operation can be added from explorer tab by clicking on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to 3D
+  <p>Cogging operation is accessible from MO Wizard that can be opened from Main GUI. In MO wizard, Cogging Operation can be added from explorer tab by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button next to 3D
     Cogging. Also, user can add the operation by drag and drop into the Operation Editor as shown in <a href="#Fig_29_1_7_Added_Cogging_operation_in_Operation_Explorer"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>7.</a></p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_7_Added_Cogging_operation_in_Operation_Explorer"></a><img height="372" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image002.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_7_Added_Cogging_operation_in_Operation_Explorer"></a><img height="372" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image002.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Added Cogging operation in Operation Explorer</p>
   <p> </p>
   <h2><a id="29_1_4__Process_window"></a>Process window</h2>
   <p>Below <a href="#Fig_29_1_8_Process_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>8.</a> shows the options to set the process conditions, these options are explained below.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_29_1_8_Process_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image003.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_8_Process_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image003.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">Process window</p>
   <p> </p>
   <p><strong><a id="Process_type"></a>Process type</strong></p>
@@ -319,7 +319,7 @@ title: "29.1. Cogging Setup"
     </li>
   </ul>
   <p> </p>
-  <p style="text-align: center"> <a id="Fig_29_1_9_Remaining_cycle_Time_as_HT"></a><img height="449" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image005.jpg" width="750"/> </p>
+  <p style="text-align: center"> <a id="Fig_29_1_9_Remaining_cycle_Time_as_HT"></a><img height="449" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image005.jpg' | relative_url }}" width="750"/> </p>
   <p> </p>
   <p class="Fig_numb">Remaining cycle Time as HT</p>
   <p> </p>
@@ -329,7 +329,7 @@ title: "29.1. Cogging Setup"
     </li>
   </ul>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_10_Remaining_Cycle_time_as_Dwell"></a><img height="460" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image004.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_10_Remaining_Cycle_time_as_Dwell"></a><img height="460" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image004.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Remaining Cycle time as Dwell</p>
   <p> </p>
@@ -425,30 +425,30 @@ title: "29.1. Cogging Setup"
   <p>New row has been added at the end where user can schedule Reheat for individual passes using check box (See <a href="#Fig_29_1_11_Pass_table_options_with_Use_Reheat_option"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>11.</a>). This
     row will be hidden when no Reheat options are selected or if Adaptive heating has been selected.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_29_1_11_Pass_table_options_with_Use_Reheat_option"></a><img height="441" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image053.jpg" width="625"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_11_Pass_table_options_with_Use_Reheat_option"></a><img height="441" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image053.jpg' | relative_url }}" width="625"/></p>
   <p class="Fig_numb">Pass table options with Use Reheat option</p>
   <h2><a id="29_1_5_Cogging_cycle_operation"></a>Cogging cycle operation</h2>
   <p>Cogging process involves several operations. A typical sequence of operations involved in cogging process is explained here. The below <a href="#Fig_29_1_12_Multiple_Operation_setup"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>12.</a>    shows the operations performed on billet before cogging process is started.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_12_Multiple_Operation_setup"></a><img height="545" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image006.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_12_Multiple_Operation_setup"></a><img height="545" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image006.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Multiple Operation setup</p>
   <p> </p>
   <p>Following are the operations involved in a typical cogging pass that can be setup as sequence in DEFORM using cogging wizard process parameters and pass table window.(See <a href="#Fig_29_1_13_Operation_involved_in_a_typical_pass"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>13.</a>)</p>
   <p> </p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_13_Operation_involved_in_a_typical_pass"></a><img height="450" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image007.jpg" width="315"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_13_Operation_involved_in_a_typical_pass"></a><img height="450" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image007.jpg' | relative_url }}" width="315"/></p>
   <p> </p>
   <p class="Fig_numb">Operation involved in a typical pass</p>
   <p> </p>
   <p>Based on the process requirement, user can control the operations to be performed and its settings. Below <a href="#Fig_29_1_14_Operation_cycle_without_Decompression_Time"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>14.</a> and
     <a href="#Fig_29_1_15_Operation_cycle_with_Decompression_Time"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>15.</a> shows difference in operation cycle when decompression time is not used and used.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_14_Operation_cycle_without_Decompression_Time"></a><img height="431" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image008.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_14_Operation_cycle_without_Decompression_Time"></a><img height="431" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image008.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Operation cycle without Decompression Time</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_15_Operation_cycle_with_Decompression_Time"></a><img height="430" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image009.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_15_Operation_cycle_with_Decompression_Time"></a><img height="430" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image009.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Operation cycle with Decompression Time</p>
   <p> </p>
@@ -456,26 +456,26 @@ title: "29.1. Cogging Setup"
   <p>Below <a href="#Fig_29_1_16_Pass_Table_Window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>16</a>. shows the Pass Table. In this table we will define the information of entire pass for the cogging setup. Various options available
     in pass table are explained in Cogging Terminology. Pass information is copied from previous pass whenever a new pass is added and necessary information can be edited based on the process requirement. Please refer <a href="#29_1_1_Cogging_Terminology">29.1.1. cogging Terminology.</a></p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_16_Pass_Table_Window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image010.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_16_Pass_Table_Window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image010.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Pass Table Window</p>
   <p> </p>
-  <p>  <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> Button: This button is used to increment pass by one.</p>
-  <p>  <img src="../../../assets/icons/pre_icons/mo_delete_icon2.jpg"/> Button: This button is used to delete the existing pass.</p>
+  <p>  <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> Button: This button is used to increment pass by one.</p>
+  <p>  <img src="{{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}"/> Button: This button is used to delete the existing pass.</p>
   <p>New passes can now be inserted anywhere in the pass table, not just at the end. (see <a href="#Fig_29_1_17_Adding_new_pass_between_5_and_6"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>17.</a>) </p>
-  <p style="text-align: center"><a id="Fig_29_1_17_Adding_new_pass_between_5_and_6"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image061.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_17_Adding_new_pass_between_5_and_6"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image061.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Adding new pass between 5 and 6</p>
   <p> </p>
-  <p>  <img src="../../../assets/icons/pre_icons/mo_swap_button.jpg"/> : If we click on swap button, the pass parameters are arranged horizontally for display.(see<a href="#Fig_29_1_18_Showing_Pass_table_information_in_Horizontal_Direction">  <span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>18.</a>)</p>
+  <p>  <img src="{{ '/assets/icons/pre_icons/mo_swap_button.jpg' | relative_url }}"/> : If we click on swap button, the pass parameters are arranged horizontally for display.(see<a href="#Fig_29_1_18_Showing_Pass_table_information_in_Horizontal_Direction">  <span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>18.</a>)</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_18_Showing_Pass_table_information_in_Horizontal_Direction"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image011.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_18_Showing_Pass_table_information_in_Horizontal_Direction"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image011.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Showing Pass table information in Horizontal Direction</p>
   <p> </p>
-  <p><img src="../../../assets/icons/pre_icons/mo_pass_details_button.jpg"/>:User can use this option to enter advanced pass information applicable to all passes, see <a href="#Fig_29_1_19_Advanced_Pass_Information_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>19.</a></p>
+  <p><img src="{{ '/assets/icons/pre_icons/mo_pass_details_button.jpg' | relative_url }}"/>:User can use this option to enter advanced pass information applicable to all passes, see <a href="#Fig_29_1_19_Advanced_Pass_Information_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>19.</a></p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_19_Advanced_Pass_Information_window"></a><img height="394" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image012.jpg" style="cursor: nwse-resize;" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_19_Advanced_Pass_Information_window"></a><img height="394" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image012.jpg' | relative_url }}" style="cursor: nwse-resize;" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Advanced Pass Information window</p>
   <p> </p>
@@ -487,7 +487,7 @@ title: "29.1. Cogging Setup"
   <p>a is the Min. Stopping distance between Top and Bottom dies</p>
   <p>b is the Min. Stopping distance required between Left and Right dies</p>
   <p> </p>
-  <p style="text-align: center">   <a id="Fig_29_1_20_Shift_between_the_pairs_of_dies_at_the_end_of_the_bite"></a><img height="550" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image013.jpg" width="496"/></p>
+  <p style="text-align: center">   <a id="Fig_29_1_20_Shift_between_the_pairs_of_dies_at_the_end_of_the_bite"></a><img height="550" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image013.jpg' | relative_url }}" width="496"/></p>
   <p> </p>
   <p class="Fig_numb">Shift between the pairs of dies at the end of the bite</p>
   <p> </p>
@@ -499,72 +499,72 @@ title: "29.1. Cogging Setup"
     more information related to Brick boolean before pass option refer 43.1. Shape Rolling Manual : <a href="../43_shape_rolling/43_1_shape_rolling_manual.htm#Boolean_between_passes">Boolean between passes</a> section</p>
   <p> </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_29_1_21_Brick_boolean_with_all_options_for_Start_position_0.15_and_End_position_0.85"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image062.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_21_Brick_boolean_with_all_options_for_Start_position_0.15_and_End_position_0.85"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image062.jpg' | relative_url }}"/></p>
   <p class="Fig_numb" style="text-align: center;">Brick boolean with all options for Start position 0.15 and End position 0.85</p>
   <p style="text-align: left"><br/>  From v14, Boolean operation between the passes can be added even for the workpiece with Tet mesh.(See <a href="#Fig_29_1_22_Tet_boolean_option_with_Start_position_0.15_and_End_position_0.85"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>22.</a>). </p>
-  <p style="text-align: center"><a id="Fig_29_1_22_Tet_boolean_option_with_Start_position_0.15_and_End_position_0.85"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image063.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_22_Tet_boolean_option_with_Start_position_0.15_and_End_position_0.85"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image063.jpg' | relative_url }}"/></p>
   <p class="Fig_numb" style="text-align: center;">Tet boolean option with Start position 0.15 and End position 0.85</p>
   <p> </p>
   <h2><a id="27_1_7_Material_List"></a>Material List</h2>
   <p>In order for a simulation to achieve a high level of accuracy, it is important to have an understanding of the material properties required to specify a material used in DEFORM.<br/> When setting up a simulation, material properties have to be specified
-    for the objects. In MO Cogging operation, all the materials required for the operation can be loaded at a time and the required material can be selected later as the problem is setup. User can add material by selecting  <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> load material data from library as shown in <a href="#Fig_29_1_23_Material_list_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>23.</a> User can select required material from the categories and  then click on <img src="../../../assets/icons/pre_icons/mo_load_button.jpg"/> button as shown in <a href="#Fig_29_1_24_Import_material_from_library_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>24.</a></p>
+    for the objects. In MO Cogging operation, all the materials required for the operation can be loaded at a time and the required material can be selected later as the problem is setup. User can add material by selecting  <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> load material data from library as shown in <a href="#Fig_29_1_23_Material_list_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>23.</a> User can select required material from the categories and  then click on <img src="{{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}"/> button as shown in <a href="#Fig_29_1_24_Import_material_from_library_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>24.</a></p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_23_Material_list_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image014.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_23_Material_list_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image014.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Material list window</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_24_Import_material_from_library_window"></a><img height="420" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image015.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_24_Import_material_from_library_window"></a><img height="420" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image015.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Import material from library window</p>
   <p><br/> (or)
   </p>
-  <p>Another way of adding material is click on  the material icon of the explorer tab, a list of materials from library that are divided into different categories will appear as shown in <a href="#Fig_29_1_25_Adding_Material_from_Explorer_tab"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>25.</a>    Select required material then click on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button. Also, user can add required material by drag and drop into the material window.</p>
+  <p>Another way of adding material is click on  the material icon of the explorer tab, a list of materials from library that are divided into different categories will appear as shown in <a href="#Fig_29_1_25_Adding_Material_from_Explorer_tab"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>25.</a>    Select required material then click on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button. Also, user can add required material by drag and drop into the material window.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_25_Adding_Material_from_Explorer_tab" height="0" width="0"></a><img height="422" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image016.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_25_Adding_Material_from_Explorer_tab" height="0" width="0"></a><img height="422" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image016.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Adding Material from Explorer tab</p>
   <p> </p>
   <p>(or)</p>
-  <p>In material list window, by clicking on <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button, new material can be added. After a dding material click   <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> and select respective
+  <p>In material list window, by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button, new material can be added. After a dding material click   <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and select respective
     tab to define required data for the simulation as shown in <a href="#Fig_29_1_26_Add_material_from_Material_List_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>26.</a></p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_26_Add_material_from_Material_List_window"></a><img height="334" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image017.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_26_Add_material_from_Material_List_window"></a><img height="334" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image017.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Add material from Material List window</p>
   <p> </p>
-  <p><strong>Import Material data from a file</strong> <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>: It imports the material from a .Key or .DB file.</p>
-  <p><strong>Load Material data from Library</strong> <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>  :It imports material from Library.</p>
-  <p><strong>Save the Material data to a file </strong><img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/> : It saves the material to a file.</p>
-  <p><strong>Save the Material data to Librar</strong><strong>y</strong>  <img src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/>: User can save material to the library using this option and can be loaded back as required in future for
+  <p><strong>Import Material data from a file</strong> <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>: It imports the material from a .Key or .DB file.</p>
+  <p><strong>Load Material data from Library</strong> <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/>  :It imports material from Library.</p>
+  <p><strong>Save the Material data to a file </strong><img src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}"/> : It saves the material to a file.</p>
+  <p><strong>Save the Material data to Librar</strong><strong>y</strong>  <img src="{{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}"/>: User can save material to the library using this option and can be loaded back as required in future for
     other simulations.</p>
   <p> </p>
   <p><strong>Mixture material</strong></p>
   <p>“Mixture” materials (<a href="../../keyword_documentation/m/mstmtr.htm">MSTMTR</a>) are used when a phase transformation is to be modeled in the simulation. The transforming material is modeled as a “mixture” of its constituent phases. For example,
     carbon steel might be modeled as a mixture of Austenite, Pearlite, Bainite, and Martensite. If a mixture material is defined, transformation rules should be defined which govern the transformation of one phase into another.(See <a href="#Fig_29_1_27_Adding_Mixture_material"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>27.</a>)</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_27_Adding_Mixture_material"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image018.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_27_Adding_Mixture_material"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image018.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Adding Mixture material</p>
   <p> </p>
   <p><strong>Copy Properties  </strong></p>
   <p>It is used to copy the regular material properties like plastic, elastic, thermal etc. from one material to other while creating/defining the material data as shown in <a href="#Fig_29_1_28_Copy_material_properties_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>28.</a>    In this dialog, source and destination for copying the properties and properties to be copied must be selected.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_28_Copy_material_properties_window"></a><img height="263" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image019.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_28_Copy_material_properties_window"></a><img height="263" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image019.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Copy material properties window</p>
   <p> </p>
-  <p><strong>Convert Units  <img src="../../../assets/icons/pre_icons/mo_convert_units_button.jpg"/></strong></p>
-  <p>It is used to convert the unit system of current selected material from material list from SI to English or English to SI or user can use any other multiplication factor as shown in <a href="#Fig_29_1_29_Unit_Conversion_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>29.</a>    Selecting the button will display the respective multiplication factors for converting from <img src="../../../assets/icons/pre_icons/mo_si_to_english_button.jpg"/> and <img src="../../../assets/icons/pre_icons/mo_english_to_si_button.jpg"/>, then
+  <p><strong>Convert Units  <img src="{{ '/assets/icons/pre_icons/mo_convert_units_button.jpg' | relative_url }}"/></strong></p>
+  <p>It is used to convert the unit system of current selected material from material list from SI to English or English to SI or user can use any other multiplication factor as shown in <a href="#Fig_29_1_29_Unit_Conversion_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>29.</a>    Selecting the button will display the respective multiplication factors for converting from <img src="{{ '/assets/icons/pre_icons/mo_si_to_english_button.jpg' | relative_url }}"/> and <img src="{{ '/assets/icons/pre_icons/mo_english_to_si_button.jpg' | relative_url }}"/>, then
     selecting the Convert button will convert and close the conversion window. This conversion table can be saved using save button and can also be edited by using wordpad/notepad and loaded back UNITCONV.DAT file using load button.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_29_Unit_Conversion_window"></a><img height="650" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image020.jpg" width="635"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_29_Unit_Conversion_window"></a><img height="650" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image020.jpg' | relative_url }}" width="635"/></p>
   <p> </p>
   <p class="Fig_numb">Unit Conversion window</p>
   <p> </p>
   <h2><a id="29_1_8_Object_window"></a>Object window</h2>
   <p>Below <a href="#Fig_29_1_30_Object_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>30.</a> shows the object window information.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_30_Object_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image021.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_30_Object_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image021.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Object window</p>
   <p> </p>
@@ -574,7 +574,7 @@ title: "29.1. Cogging Setup"
   <p><strong><a id="Aspect_ratio"></a>Aspect ratio</strong>: Aspect ratio: It is the ratio of the minimum edge length to maximum edge length of an element. In cogging, most of the times the billet expands in axial (X) direction as the cross-section is reduced
     (Z or Y), hence the ratio normally would be element length in X direction to minimum of element length in Y or Z direction.<br/> When aspect ratio exceeds the value specified, axial sub-division takes place to maintain the ratio. (See <a href="#Fig_29_1_31_Axial_subdivided_workpiece_mesh_while_simulation_in_progress"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>31</a>.)</p>
   <p> </p>
-  <p style="text-align: center"> <a id="Fig_29_1_31_Axial_subdivided_workpiece_mesh_while_simulation_in_progress"></a><img height="427" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image022.jpg" width="750"/> </p>
+  <p style="text-align: center"> <a id="Fig_29_1_31_Axial_subdivided_workpiece_mesh_while_simulation_in_progress"></a><img height="427" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image022.jpg' | relative_url }}" width="750"/> </p>
   <p> </p>
   <p class="Fig_numb" style="text-align: center;">Axial subdivided workpiece mesh while simulation in progress</p>
   <p> </p>
@@ -595,7 +595,7 @@ title: "29.1. Cogging Setup"
   <p>In this window user can define required temperature for the object and select type of the object as shown in <a href="#Fig_29_1_32_Assigning_temperature_for_billet"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>32.</a> For billet by
     default the object type selected is Plastic. User can also import object from other DB’s or Keyfile’s using button and browsing respective file.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_32_Assigning_temperature_for_billet"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image023.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_32_Assigning_temperature_for_billet"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image023.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Assigning temperature for billet</p>
   <p> </p>
@@ -603,14 +603,14 @@ title: "29.1. Cogging Setup"
   <p>Geometry window is used to define the geometry of an object as shown in <a href="#Fig_29_1_33_Geometry_Window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>33.</a> Only define primitive field will be in active mode rest other options
     will be in greyed out mode when no geometry is defined. Once after creating geometry all the options will be activated.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_33_Geometry_Window"></a><img height="277" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image024.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_33_Geometry_Window"></a><img height="277" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image024.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Geometry Window</p>
   <p> </p>
-  <p><strong>Define Primitive  <img src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/></strong></p>
+  <p><strong>Define Primitive  <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/></strong></p>
   <p>We have three different types of Geometry primitives for billet, Ring, Octagon and Rectangle as shown in <a href="#Fig_29_1_34_Geometry_primitive_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>34.</a></p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_34_Geometry_primitive_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image025.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_34_Geometry_primitive_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image025.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Geometry primitive window</p>
   <p> </p>
@@ -620,7 +620,7 @@ title: "29.1. Cogging Setup"
   <p><strong>Brick mesh</strong></p>
   <p>The below <a href="#Fig_29_1_35_Brick_Mesh_options_in_Guided_mode"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>35.</a> shows the mesh generation options for Brick Mesh in guided mode.</p>
   <p> </p>
-  <p style="text-align: center"> <a id="Fig_29_1_35_Brick_Mesh_options_in_Guided_mode"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image026.jpg"/> </p>
+  <p style="text-align: center"> <a id="Fig_29_1_35_Brick_Mesh_options_in_Guided_mode"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image026.jpg' | relative_url }}"/> </p>
   <p> </p>
   <p class="Fig_numb">Brick Mesh options in Guided mode</p>
   <p> </p>
@@ -643,14 +643,14 @@ title: "29.1. Cogging Setup"
       <p><strong>Number of Elements</strong>: The number of mesh elements represents the approximate number of elements that will be generated on an Object. The defined number of elements will be taken, when it hits the tetrahedral remeshing.</p>
     </li>
     <li>
-      <p><strong>Generate Mesh</strong> : The mesh can be generated by clicking <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg" style="cursor: nesw-resize;"/>.</p>
+      <p><strong>Generate Mesh</strong> : The mesh can be generated by clicking <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}" style="cursor: nesw-resize;"/>.</p>
     </li>
   </ul>
   <p> </p>
   <p><strong>Tetrahedral Mesh</strong></p>
   <p>The below <a href="#Fig_29_1_36_Tet_mesh_options_in_Guided_mode"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>36.</a> shows the mesh generation options for Tetrahedral Mesh in guided mode.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_29_1_36_Tet_mesh_options_in_Guided_mode"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image028.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_36_Tet_mesh_options_in_Guided_mode"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image028.jpg' | relative_url }}"/></p>
   <p>  </p>
   <p class="Fig_numb">Tet mesh options in Guided mode</p>
   <p> </p>
@@ -665,13 +665,13 @@ title: "29.1. Cogging Setup"
       <p><strong>Size ratio </strong>: Size ratio is the ratio of maximum element size to minimum element size on an object.</p>
     </li>
     <li>
-      <p><strong>Generate Mesh</strong>: The mesh can be generated by clicking <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/>.</p>
+      <p><strong>Generate Mesh</strong>: The mesh can be generated by clicking <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/>.</p>
     </li>
   </ul>
   <p> </p>
-  <p>In order to control the mesh parameters like size, shape, density, type of elements, etc..., user has to switch to expert mode <img src="../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/>  for more advanced mesh options. Below <a href="#Fig_29_1_37_Expert_mode_Mesh_generation_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>37.</a>    shows the mesh options available from Expert mode.</p>
+  <p>In order to control the mesh parameters like size, shape, density, type of elements, etc..., user has to switch to expert mode <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/>  for more advanced mesh options. Below <a href="#Fig_29_1_37_Expert_mode_Mesh_generation_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>37.</a>    shows the mesh options available from Expert mode.</p>
   <p>  </p>
-  <p style="text-align: center"><a id="Fig_29_1_37_Expert_mode_Mesh_generation_window"></a><img height="425" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image027.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_37_Expert_mode_Mesh_generation_window"></a><img height="425" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image027.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Expert mode Mesh generation window</p>
   <p> </p>
@@ -681,12 +681,12 @@ title: "29.1. Cogging Setup"
   <p>Below <a href="#Fig_29_1_38_Material_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>38.</a> shows the material window. User can assign required material from the list or can import from file or library. User can also add new
     material. For more information on how to assign material, Please refer chapter <a href="../../pre_processor/10_material_data/10_material_data.htm">10. Material Data</a></p>
   <p>  </p>
-  <p style="text-align: center"><a id="Fig_29_1_38_Material_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image029.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_38_Material_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image029.jpg' | relative_url }}"/></p>
   <p class="Fig_numb">Material window</p>
   <p> </p>
-  <p>Once after adding material click on <img src="../../../assets/icons/pre_icons/mo_material_edit_button.jpg"/> button, material window will open as shown in <a href="#Fig_29_1_39__Edit_material_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>39.</a></p>
+  <p>Once after adding material click on <img src="{{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}"/> button, material window will open as shown in <a href="#Fig_29_1_39__Edit_material_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>39.</a></p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_39__Edit_material_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image030.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_39__Edit_material_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image030.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Edit material window</p>
   <p> </p>
@@ -698,7 +698,7 @@ title: "29.1. Cogging Setup"
     cogging are heat exchange with the environment for simulations involving heat transfer, prescribed velocity for enforcing symmetry. <a href="#Fig_29_1_40__Boundary_Conditions_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>40.</a> shows
     various BCC that can be assigned to an object.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_40__Boundary_Conditions_window"></a><img height="428" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image031.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_40__Boundary_Conditions_window"></a><img height="428" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image031.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Boundary Conditions window</p>
   <p> </p>
@@ -707,14 +707,14 @@ title: "29.1. Cogging Setup"
   <p><a id="Property"></a><strong>Property</strong></p>
   <p><br/> Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See <a href="#Fig_29_1_41_Object_property_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>41.</a>).
     For more information on these options, Please refer <a href="../../pre_processor/10_material_data/10_material_data.htm">19. Object properties.</a></p>
-  <p style="text-align: center">  <a id="Fig_29_1_41_Object_property_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image032.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_41_Object_property_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image032.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Object property window</p>
   <h2><a id="Top_Die"></a>Top Die</h2>
   <p>In this window, user can define required temperature for the object and select type of the object as shown in <a href="#Fig_29_1_42_Top_Die_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>42.</a> For Top Die by default the object
     type selected is Rigid and user can also import object from other DB’s or Keyfile’s using  button and browsing respective file.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_42_Top_Die_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image033.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_42_Top_Die_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image033.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Top Die window</p>
   <p> </p>
@@ -722,14 +722,14 @@ title: "29.1. Cogging Setup"
   <p>Geometry window is used to create the geometry of an object as shown in <a href="#Fig_29_1_43_Geometry_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>43.</a> Only define primitive field will be in active mode rest other options
     will be in greyed out mode when no geometry is created. Once after creating geometry all the options will be active.</p>
   <p> </p>
-  <p style="text-align: center">   <a id="Fig_29_1_43_Geometry_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image034.jpg"/></p>
+  <p style="text-align: center">   <a id="Fig_29_1_43_Geometry_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image034.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Geometry window</p>
   <p> </p>
   <p><strong>Define Primitive  </strong></p>
   <p>Below <a href="#Fig_29_1_44_Top_Die_Geometry_Primitive_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>44.</a>  shows the Geometry primitive of Die.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_44_Top_Die_Geometry_Primitive_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image035.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_44_Top_Die_Geometry_Primitive_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image035.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Top Die Geometry Primitive window</p>
   <p> </p>
@@ -745,14 +745,14 @@ title: "29.1. Cogging Setup"
     refer Material in Forming 3D setup.</p>
   <p> </p>
   <p><a id="Movement_controls"></a><strong>Movement controls</strong></p>
-  <p>Depending on the process requirement and equipment used user can define movement control settings for dies. For a quick Cogging setup, Speed and Mechanical press movement controls will be used as shown in <a href="#Fig_29_1_45_Guided_Mode_Movement_controls_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>45.</a>    If user want to define other movement controls than these, then advanced radio button can be used by clicking  <img src="../../../assets/icons/pre_icons/mo_define_movement_button.jpg"/> button, these options can also be accessed by switching to Expert
+  <p>Depending on the process requirement and equipment used user can define movement control settings for dies. For a quick Cogging setup, Speed and Mechanical press movement controls will be used as shown in <a href="#Fig_29_1_45_Guided_Mode_Movement_controls_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>45.</a>    If user want to define other movement controls than these, then advanced radio button can be used by clicking  <img src="{{ '/assets/icons/pre_icons/mo_define_movement_button.jpg' | relative_url }}"/> button, these options can also be accessed by switching to Expert
     mode as shown in <a href="#Fig_29_1_46_Expert_mode_movement_controls_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>46.</a> For more information about these movement controls, please refer <a href="29_introduction_to_cogging.htm">10. Movement Controls Definition.</a></p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_45_Guided_Mode_Movement_controls_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image036.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_45_Guided_Mode_Movement_controls_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image036.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Guided Mode Movement controls window</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_46_Expert_mode_movement_controls_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image037.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_46_Expert_mode_movement_controls_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image037.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Expert mode movement controls window</p>
   <p> </p>
@@ -762,10 +762,10 @@ title: "29.1. Cogging Setup"
     <a href="#Fig_29_1_48_Defining_Reference_point_for_Asymmetric_dies"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>48.</a>).</p>
   <p> </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_29_1_47_Defining_reference_point_Right_and_using_system_default_reference_point_option_Left"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image059.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_47_Defining_reference_point_Right_and_using_system_default_reference_point_option_Left"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image059.jpg' | relative_url }}"/></p>
   <p class="Fig_numb" style="text-align: center;">Defining reference point (Right) and using system default reference point option (Left)</p>
   <p style="text-align: center"> </p>
-  <p style="text-align: center"><a id="Fig_29_1_48_Defining_Reference_point_for_Asymmetric_dies"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image060.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_48_Defining_Reference_point_for_Asymmetric_dies"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image060.jpg' | relative_url }}"/></p>
   <p class="Fig_numb" style="text-align: center;">Defining Reference point for Asymmetric dies</p>
   <p> </p>
   <h2><a id="29_1_11_Manipulators"></a>Manipulators</h2>
@@ -778,7 +778,7 @@ title: "29.1. Cogging Setup"
   <p><strong>Use spring loaded manipulators: </strong>Manipulators can be defined as spring loaded or rigid. Spring loaded manipulators can be defined by turning on this checkbox. The parameters required to control the spring load manipulators are set here
     (spring stiffness, preload and maximum spring displacement allowed). (See <a href="#Fig_29_1_49_Manipulators_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>49.</a>)</p>
   <p> </p>
-  <p style="text-align: center"> <a id="Fig_29_1_49_Manipulators_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image038.jpg"/> </p>
+  <p style="text-align: center"> <a id="Fig_29_1_49_Manipulators_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image038.jpg' | relative_url }}"/> </p>
   <p> </p>
   <p class="Fig_numb">Manipulators window</p>
   <p> </p>
@@ -786,7 +786,7 @@ title: "29.1. Cogging Setup"
   <p>In this window, user can define required temperature for the object and select type of the object as shown in <a href="#Fig_29_1_50_Left_Manipulator1_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>50.</a> For manipulator by
     default the object type selected is Rigid and user can also import object from other DB’s or Keyfile’s using   button and browsing respective file.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_50_Left_Manipulator1_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image039.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_50_Left_Manipulator1_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image039.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Left Manipulator1 window</p>
   <p> </p>
@@ -794,14 +794,14 @@ title: "29.1. Cogging Setup"
   <p>Geometry window is used to create the geometry of an object as shown in <a href="#Fig_29_1_51_Geometry_Window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>51.</a> Only define primitive field will be in active mode and rest other
     options will be in greyed out mode. Once after creating geometry all the options would get active.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_51_Geometry_Window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image040.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_51_Geometry_Window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image040.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Geometry Window</p>
   <p> </p>
   <p><strong>Define primitive  </strong></p>
   <p>Below <a href="#Fig_29_1_52_Manipulator_Geometry_primitive_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>52.</a> shows the Geometry primitive of Manipulator available in Cogging wizard.</p>
   <p>  </p>
-  <p style="text-align: center"><a id="Fig_29_1_52_Manipulator_Geometry_primitive_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image043.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_52_Manipulator_Geometry_primitive_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image043.jpg' | relative_url }}"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Manipulator Geometry primitive window</p>
   <p> </p>
@@ -814,7 +814,7 @@ title: "29.1. Cogging Setup"
   <h2><a id="29_1_12_Positioning"></a>Positioning</h2>
   <p>Below <a href="#Fig_29_1_53__Controls_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>53.</a> shows the positioning window.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_53__Controls_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image041.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_53__Controls_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image041.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Controls window</p>
   <p> </p>
@@ -824,19 +824,19 @@ title: "29.1. Cogging Setup"
   <p> </p>
   <ul class="Disc">
     <li>
-      <p><strong>Automatic Positioning <img src="../../../assets/icons/pre_icons/mo_automatic_positioning_button.jpg"/></strong></p>
+      <p><strong>Automatic Positioning <img src="{{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}"/></strong></p>
     </li>
   </ul>
   <p style="margin-left:40px;"><span>By clicking on this button, system automatically Positions the Objects with respect to the top die movement direction, this option works best for simple setup with three objects work piece, top die and bottom die.</span></p>
   <p> </p>
   <ul class="Disc">
     <li>
-      <p><strong>Positioning Objects  <img src="../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/></strong></p>
+      <p><strong>Positioning Objects  <img src="{{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}"/></strong></p>
     </li>
   </ul>
   <p style="margin-left:40px;">By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as Drag, Offset, Interference, Flip and Rotational as shown in <a href="#Fig_29_1_54_Object_positioning_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>54.</a>    For more information about these options, please refer <a href="../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm">16.Object Positioning.</a></p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_54_Object_positioning_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image042.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_54_Object_positioning_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image042.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Object positioning window</p>
   <p> </p>
@@ -855,15 +855,15 @@ title: "29.1. Cogging Setup"
   <p><br/> Frictional and Heat Transfer Coefficients can be applied even from simulation controls window, </p>
   <p>For more information please refer, <a href="../33_forming/33_2_3d_forming_setup.htm#33_2_6_Inter-Object_Relation"><span style="color:#0000ff;">Inter-Object Relations in Forming 3D setup</span></a>.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_55_Inter-Object_definition_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image044.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_55_Inter-Object_definition_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image044.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Inter-Object definition window</p>
   <p> </p>
   <h2><a id="29_1_15_Simulation_preview"></a>Simulation preview</h2>
   <p>Simulation Preview provides an overview of the operations like deformation, dwelling, reheat..etc. to be executed based on the process definition and pass table as animation. It also gives preview of the setup at each operation. In Simulation preview
-    window, by clicking the  <img height="20" src="../../../assets/icons/pre_icons/mo_simulation_preview_play_button.jpg" width="21"/> button animation would be played (See <a href="#Fig_29_1_56_Simulation_preview_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>56.</a>).</p>
+    window, by clicking the  <img height="20" src="{{ '/assets/icons/pre_icons/mo_simulation_preview_play_button.jpg' | relative_url }}" width="21"/> button animation would be played (See <a href="#Fig_29_1_56_Simulation_preview_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>56.</a>).</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_56_Simulation_preview_window"></a><img height="422" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image045.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_56_Simulation_preview_window"></a><img height="422" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image045.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Simulation preview window</p>
   <p> </p>
@@ -876,7 +876,7 @@ title: "29.1. Cogging Setup"
   <p>In guided mode user can define simulation controls for deformation operation and heat transfer operations independently. System will generate .MST file accordingly with the information and apply simulation controls respectively for all the operations to
     be executed. Frictional and Heat Transfer Coefficients can also be defined here.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_57_Guided_mode_Simulation_controls_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image046.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_57_Guided_mode_Simulation_controls_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image046.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Guided mode Simulation controls window</p>
   <p> </p>
@@ -928,35 +928,35 @@ title: "29.1. Cogging Setup"
     <a href="#Fig_29_1_58_Expert_mode_Simulation_controls"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>58.</a> shows the Simulation Controls in Expert mode. For more information and description about options in Simulation controls,
     Please refer <a href="../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm">9. Simulation Controls.</a></p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_58_Expert_mode_Simulation_controls"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image047.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_58_Expert_mode_Simulation_controls"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image047.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Expert mode Simulation controls</p>
   <p> </p>
   <h2><a id="29_1_17_Generate_DB"></a>Generate DB</h2>
   <p><br/>
-    <strong>Check Data  <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/></strong></p>
+    <strong>Check Data  <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/></strong></p>
   <p>It checks the Data. If Data is correct we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow
     the DB to be generated.</p>
   <p> </p>
-  <p><strong>Generate Database <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/></strong></p>
+  <p><strong>Generate Database <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/></strong></p>
   <p>By clicking on this button, it will generate the Database of the setup to start the simulation.(See <a href="#Fig_29_1_59_Generate_DB_window"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>59.</a>)</p>
   <p> </p>
   <p><strong>Append Key file</strong></p>
   <p>Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only .key
     file can be changed and simulation can be resubmitted.</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_59_Generate_DB_window"></a><img src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image048.jpg"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_59_Generate_DB_window"></a><img src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image048.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Generate DB window</p>
   <p> </p>
   <h2><a id="29_1_18_Running_Simulation"></a>Running Simulation</h2>
-  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg" width="146"/> button above the operation tree. Start the simulation by clicking
-    the  <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label and selecting run from last negative step option in Run simulation pop-up window.</p>
-  <p><br/> Monitor the progress of the simulation by looking at the Simulation graphics window, Simulation Message and Simulation Log tabs, making sure that the <img src="../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked (See
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}" width="146"/> button above the operation tree. Start the simulation by clicking
+    the  <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label and selecting run from last negative step option in Run simulation pop-up window.</p>
+  <p><br/> Monitor the progress of the simulation by looking at the Simulation graphics window, Simulation Message and Simulation Log tabs, making sure that the <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked (See
     <a href="#Fig_29_1_60_Simulation_Mode"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>60.</a>) so that message file and log files are refreshed automatically for monitoring the simulation progress. Simulation graphics tool bar options
     can be used to plot basic state variables such as temperature, strain and contact for objects while simulating the problem.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_29_1_60_Simulation_Mode"></a><img height="448" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image049.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_29_1_60_Simulation_Mode"></a><img height="448" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image049.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Simulation Mode</p>
   <p> </p>
@@ -965,20 +965,20 @@ title: "29.1. Cogging Setup"
     Simulation Log file we will see message as &quot;MULTIPLE OPERATION COMPLETED&quot;.</p>
   <p> </p>
   <h2><a id="29_1_19_Post_Processing"></a>Post Processing</h2>
-  <p>When the simulation is complete, user can review the results by switching to Post mode using the <img height="21" src="../../../assets/icons/post_icons/mo_play_button.jpg" width="22"/>  button above the Simulation tool bar. (See <a href="#Fig_29_1_61_Post_processor_mode"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>61.</a>)</p>
+  <p>When the simulation is complete, user can review the results by switching to Post mode using the <img height="21" src="{{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }}" width="22"/>  button above the Simulation tool bar. (See <a href="#Fig_29_1_61_Post_processor_mode"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>61.</a>)</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_61_Post_processor_mode"></a><img height="448" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image050.jpg" style="cursor: nwse-resize;" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_61_Post_processor_mode"></a><img height="448" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image050.jpg' | relative_url }}" style="cursor: nwse-resize;" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Post processor mode</p>
   <p> </p>
   <p>Play through the Steps and see the Temperature distribution and Strain distribution by plotting the Temperature and effective strain State variables. (See<a href="#Fig_29_1_62_Strain_Distribution_in_Billetig"> <span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>62.</a>) The
     temperature change in dies can also be noticed as shown in <a href="#Fig_29_1_63_emperature_distribution_in_Billet_and_Dies"><span data-keyref="Chapter_29_1_Cogging_Setup">Fig. 29.1.</span>63.</a></p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_62_Strain_Distribution_in_Billetig"></a><img height="448" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image051.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_62_Strain_Distribution_in_Billetig"></a><img height="448" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image051.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Strain Distribution in Billet</p>
   <p> </p>
-  <p style="text-align: center">  <a id="Fig_29_1_63_emperature_distribution_in_Billet_and_Dies" height="16" width="16"></a><img height="448" src="../../../assets/images/operation_templates/29_cogging/29_1_cogging_setup/image052.jpg" width="750"/></p>
+  <p style="text-align: center">  <a id="Fig_29_1_63_emperature_distribution_in_Billet_and_Dies" height="16" width="16"></a><img height="448" src="{{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image052.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Temperature distribution in Billet and Dies</p>
   <p> </p>

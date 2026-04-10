@@ -115,11 +115,11 @@ title: "56.3. 3D User Defined FEM Routines"
     and for other models. For example, there are many different methods for a user to control the movement of a rigid body within DEFORM, e.g. constant velocity, mechanical press, hammer press movement, speed as a function of time. However, there are
     some cases where a slightly more specialized movement control is required, such as movement based on variation of state variables of the workpiece. This can be performed using user-routines since these variables are available when the movement of
     the rigid die is calculated.</p>
-  <p style="text-align: center"><a id="Fig_56_3_1_Description_on_how_to_compile/link_a_new_FEM_engine_On_Linux"></a><img height="500" src="../../../assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0001.jpg" width="594"/></p>
+  <p style="text-align: center"><a id="Fig_56_3_1_Description_on_how_to_compile/link_a_new_FEM_engine_On_Linux"></a><img height="500" src="{{ '/assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0001.jpg' | relative_url }}" width="594"/></p>
   <p> </p>
   <p class="Fig_numb">Description on how to compile/link a new FEM engine on Linux</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_56_3_2_Description_on_how_to_compile/link_a_new_FEM_engine_On_PC"></a><img height="325" src="../../../assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0002.jpg" width="578"/></p>
+  <p style="text-align: center"><a id="Fig_56_3_2_Description_on_how_to_compile/link_a_new_FEM_engine_On_PC"></a><img height="325" src="{{ '/assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0002.jpg' | relative_url }}" width="578"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Description on how to compile/link a new 64 bit FEM engine on PC</p>
   <p> </p>
@@ -301,7 +301,7 @@ title: "56.3. 3D User Defined FEM Routines"
     <br/> C     TO WRITE DATA (10 RESERVED LINES)<br/> C
     <br/>       WRITE(IUSRVL(LINE NUMBER),*) NEWDATA1, NEWDATA2, NEWDATA3 ...</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_56_3_3_Preprocessor_IUSRVL_data_definition_from_simulation_controls_"></a><img src="../../../assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0003.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_56_3_3_Preprocessor_IUSRVL_data_definition_from_simulation_controls_"></a><img src="{{ '/assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0003.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Preprocessor IUSRVL data definition from simulation controls </p>
   <h3><a id="56_3_2_2_User_defined_flow_stress_routines_(USRMTR)"></a>User defined flow stress routines (USRMTR)</h3>
@@ -316,7 +316,7 @@ title: "56.3. 3D User Defined FEM Routines"
     be used should be specified for each material group which uses the user routine. (See <a href="#Fig_56_3_4_Defining_user_defined_flow_stress_routine_information_in_preprocessor"><span data-keyref="Chapter_56_3_3D_User_Defined_FEM_Routines">Fig. 56.3.</span>4.</a>)
     This routine number (NPTRTN)is passed to the user defined flow stress subroutine USRMTR to control branching to the specified UFLOW module.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_56_3_4_Defining_user_defined_flow_stress_routine_information_in_preprocessor"></a><img height="500" src="../../../assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0004.jpg" width="479"/></p>
+  <p style="text-align: center"><a id="Fig_56_3_4_Defining_user_defined_flow_stress_routine_information_in_preprocessor"></a><img height="500" src="{{ '/assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0004.jpg' | relative_url }}" width="479"/></p>
   <p> </p>
   <p class="Fig_numb"><span style="font-size: 12pt;">Defining user defined flow stress routine information in preprocessor</span><span style="font-size: 12pt;"></span></p>
   <p> </p>
@@ -434,7 +434,7 @@ title: "56.3. 3D User Defined FEM Routines"
   <p>DEFORM supports user definition of the die movement for machines which cannot be controlled using the movement mechanisms given in the DEFORM system. The die speed routines are functions which are called from the USRDSP subroutine based on the function
     number specified in the Object, Movement controls window as shown in <a href="#Fig_56_3_5_User_defined_die_speed_settings_in_Preprocessor"><span data-keyref="Chapter_56_3_3D_User_Defined_FEM_Routines">Fig. 56.3.</span>5.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_56_3_5_User_defined_die_speed_settings_in_Preprocessor"></a><img height="500" src="../../../assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0005.jpg" width="504"/></p>
+  <p style="text-align: center"><a id="Fig_56_3_5_User_defined_die_speed_settings_in_Preprocessor"></a><img height="500" src="{{ '/assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0005.jpg' | relative_url }}" width="504"/></p>
   <p> </p>
   <p class="Fig_numb">User defined die speed settings in Preprocessor</p>
   <p> </p>
@@ -481,7 +481,7 @@ title: "56.3. 3D User Defined FEM Routines"
     </colgroup>
     <tbody>
       <tr>
-        <td><img height="154" src="../../../assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0001.jpg" width="195"/></td>
+        <td><img height="154" src="{{ '/assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0001.jpg' | relative_url }}" width="195"/></td>
         <td>
           <p class="EQ_numb"> </p>
         </td>
@@ -501,7 +501,7 @@ title: "56.3. 3D User Defined FEM Routines"
     </colgroup>
     <tbody>
       <tr>
-        <td><img height="42" src="../../../assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0002.jpg" width="116"/></td>
+        <td><img height="42" src="{{ '/assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0002.jpg' | relative_url }}" width="116"/></td>
         <td>
           <p class="EQ_numb"> </p>
         </td>
@@ -523,7 +523,7 @@ title: "56.3. 3D User Defined FEM Routines"
     </colgroup>
     <tbody>
       <tr>
-        <td><img src="../../../assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0003.jpg"/></td>
+        <td><img src="{{ '/assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0003.jpg' | relative_url }}"/></td>
         <td>
           <p class="EQ_numb"> </p>
         </td>
@@ -541,7 +541,7 @@ title: "56.3. 3D User Defined FEM Routines"
     </colgroup>
     <tbody>
       <tr>
-        <td><img height="182" src="../../../assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0004.jpg" width="280"/></td>
+        <td><img height="182" src="{{ '/assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0004.jpg' | relative_url }}" width="280"/></td>
         <td>
           <p class="EQ_numb"> </p>
         </td>
@@ -558,7 +558,7 @@ title: "56.3. 3D User Defined FEM Routines"
     </colgroup>
     <tbody>
       <tr>
-        <td><img src="../../../assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0005.jpg"/></td>
+        <td><img src="{{ '/assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0005.jpg' | relative_url }}"/></td>
         <td>
           <p class="EQ_numb"> </p>
         </td>
@@ -576,7 +576,7 @@ title: "56.3. 3D User Defined FEM Routines"
     </colgroup>
     <tbody>
       <tr>
-        <td><img src="../../../assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0006.jpg"/></td>
+        <td><img src="{{ '/assets/equations/user_routines/56_2_2d_user_defined_fem_routines/eq_image0006.jpg' | relative_url }}"/></td>
         <td>
           <p class="EQ_numb"> </p>
         </td>
@@ -753,7 +753,7 @@ title: "56.3. 3D User Defined FEM Routines"
   <p>User defined damage models can be implemented for calculating damage or for use with the fracture module of DEFORM where elements can be deleted when their damage values exceeds a certain value. To use the damage model select the fracture mode (<a href="../../keyword_documentation/f/frcmod.htm">FRCMOD</a>)
     as User Routines in Materials Properties, Advanced and specify the user routine number to be called in the subroutine USRDMG.  (See <a href="#Fig_56_3_6_Selecting_the_user_defined_damage_model_in_Pre_processor"><span data-keyref="Chapter_56_3_3D_User_Defined_FEM_Routines">Fig. 56.3.</span>6.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_56_3_6_Selecting_the_user_defined_damage_model_in_Pre_processor"></a><img height="575" src="../../../assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0006.jpg" width="336"/></p>
+  <p style="text-align: center"><a id="Fig_56_3_6_Selecting_the_user_defined_damage_model_in_Pre_processor"></a><img height="575" src="{{ '/assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0006.jpg' | relative_url }}" width="336"/></p>
   <p class="Fig_numb">Selecting the user defined damage model in Pre processor</p>
   <p> </p>
   <p>The damage routines are functions USRDM1 onwards with the inputs being as follows:</p>
@@ -1004,7 +1004,7 @@ title: "56.3. 3D User Defined FEM Routines"
     a new FEM engine, named DEF_SIM_64.EXE. The released DEF_SIM_64.EXE should be replaced with the customized DEF_SIM_64.EXE, after first making a copy of the released executable.</p>
   <p> </p>
   <p> </p>
-  <p style="text-align: center"><img height="350" src="../../../assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0007.jpg" width="608"/></p>
+  <p style="text-align: center"><img height="350" src="{{ '/assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0007.jpg' | relative_url }}" width="608"/></p>
   <p> </p>
   <p class="Fig_numb">UserRoutine DEF_SIM folder</p>
   <p> </p>
@@ -1019,7 +1019,7 @@ title: "56.3. 3D User Defined FEM Routines"
   <p style="margin-left: 40px">When the preferred batch file is executed, .dll files will be compiled with the Fortran (.f) user routine files found within this directory. The resulting .dll files and the Intel DEF_SIM_64.EXE (located in &lt;3D&gt;\DEF_SIM_64\Intel_modern”) should
     be copied to a new folder. DEF_SIM_DIR.DAT should then be edited to specify the new folder as the location for the customized DEFORM implementation. Please note that either Absoft or Intel compiled .dll files may be linked with the Intel DEF_SIM_64.EXE.</p>
   <p> </p>
-  <p style="text-align: center"><img height="400" src="../../../assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0008.jpg" width="577"/></p>
+  <p style="text-align: center"><img height="400" src="{{ '/assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0008.jpg' | relative_url }}" width="577"/></p>
   <p> </p>
   <p class="Fig_numb"> UserRoutine DEF_SIM_DLL folder</p>
   <p> </p>

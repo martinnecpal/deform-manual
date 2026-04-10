@@ -90,30 +90,30 @@ title: "Appendix XVIII How to use Explicit Solver"
   <p><strong>Step 1:</strong> Object type should be “Elasto-plastic”.</p>
   <p>From object general settings window select object type to Elasto-Plastic as shown in <a href="#Fig_AXVIII_1_Object_General_settings_Window"><span data-keyref="Appendix_XVIII_How_to_use_Explicit_Solver">Fig. XVIII.</span>1.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXVIII_1_Object_General_settings_Window"></a><img height="411" src="../../assets/images/appendices/appendix_xviii_how_to_use_explicit_solver/image0001.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_AXVIII_1_Object_General_settings_Window"></a><img height="411" src="{{ '/assets/images/appendices/appendix_xviii_how_to_use_explicit_solver/image0001.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Object General settings Window</p>
   <p> </p>
   <p><strong>Step 2: </strong>Mass density should be defined.</p>
-  <p>Make sure that Mass Density value defined from material thermal properties can be accessed from object material window by using the <img src="../../assets/icons/pre_icons/mo_material_edit_button.jpg"/> button. Material<img src="../../assets/icons/pre_icons/arrow_front.jpg"/>thermal<img src="../../assets/icons/pre_icons/arrow_front.jpg"/>mass density window is as shown in <a href="#Fig_AXVIII_2_Object_Material_Thermal_properties_editing_window"><span data-keyref="Appendix_XVIII_How_to_use_Explicit_Solver">Fig. XVIII.</span>2.</a> </p>
+  <p>Make sure that Mass Density value defined from material thermal properties can be accessed from object material window by using the <img src="{{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}"/> button. Material<img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/>thermal<img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/>mass density window is as shown in <a href="#Fig_AXVIII_2_Object_Material_Thermal_properties_editing_window"><span data-keyref="Appendix_XVIII_How_to_use_Explicit_Solver">Fig. XVIII.</span>2.</a> </p>
   <p> </p>
   <p class="Note_text"><span style="font-style:italic;">Note that the English unit system density values published in literature typically represent weight density, not mass density. Please review Section <a href="../pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data.htm#Mass_Density">10.3.4. Mass density</a> to understand the requirements for defining mass density in DEFORM.</span></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXVIII_2_Object_Material_Thermal_properties_editing_window"></a><img height="550" src="../../assets/images/appendices/appendix_xviii_how_to_use_explicit_solver/image0002.jpg" width="447"/></p>
+  <p style="text-align: center"><a id="Fig_AXVIII_2_Object_Material_Thermal_properties_editing_window"></a><img height="550" src="{{ '/assets/images/appendices/appendix_xviii_how_to_use_explicit_solver/image0002.jpg' | relative_url }}" width="447"/></p>
   <p> </p>
   <p class="Fig_numb">Object Material Thermal properties editing window</p>
   <p> </p>
   <p><strong>Step3:</strong> Set “the number of steps” and “step increment to save” as big numbers.</p>
-  <p>From Simulation Controls <img src="../../assets/icons/pre_icons/arrow_front.jpg"/> Simulation Steps tab define Number of  Steps and Step increment to save as shown in <a href="#Fig_AXVIII_3_Simulation_control_window_Steps_tab_in_export_mode"><span data-keyref="Appendix_XVIII_How_to_use_Explicit_Solver">Fig. XVIII.</span>3.</a></p>
+  <p>From Simulation Controls <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Simulation Steps tab define Number of  Steps and Step increment to save as shown in <a href="#Fig_AXVIII_3_Simulation_control_window_Steps_tab_in_export_mode"><span data-keyref="Appendix_XVIII_How_to_use_Explicit_Solver">Fig. XVIII.</span>3.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXVIII_3_Simulation_control_window_Steps_tab_in_export_mode"></a><img height="375" src="../../assets/images/appendices/appendix_xviii_how_to_use_explicit_solver/image0003.jpg" width="454"/></p>
+  <p style="text-align: center"><a id="Fig_AXVIII_3_Simulation_control_window_Steps_tab_in_export_mode"></a><img height="375" src="{{ '/assets/images/appendices/appendix_xviii_how_to_use_explicit_solver/image0003.jpg' | relative_url }}" width="454"/></p>
   <p> </p>
   <p class="Fig_numb">Simulation control window Steps tab in export mode</p>
   <p> </p>
   <p><strong>Step4: </strong>Set mass scaling factor and damping. Newton-Raphson iteration method should be selected.</p>
-  <p>From Simulation Controls <img src="../../assets/icons/pre_icons/arrow_front.jpg"/> Iteration tab set Mass scaling factor and Damping coefficient for explicit solver and select Newton-Rapson Iteration method as shown in <a href="#Fig_AXVIII_4_Simulation_control_window_Iteration_tab_in_expert_mode"><span data-keyref="Appendix_XVIII_How_to_use_Explicit_Solver">Fig. XVIII.</span>4.</a></p>
+  <p>From Simulation Controls <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Iteration tab set Mass scaling factor and Damping coefficient for explicit solver and select Newton-Rapson Iteration method as shown in <a href="#Fig_AXVIII_4_Simulation_control_window_Iteration_tab_in_expert_mode"><span data-keyref="Appendix_XVIII_How_to_use_Explicit_Solver">Fig. XVIII.</span>4.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXVIII_4_Simulation_control_window_Iteration_tab_in_expert_mode"></a><img height="420" src="../../assets/images/appendices/appendix_xviii_how_to_use_explicit_solver/image0004.jpg" width="453"/></p>
+  <p style="text-align: center"><a id="Fig_AXVIII_4_Simulation_control_window_Iteration_tab_in_expert_mode"></a><img height="420" src="{{ '/assets/images/appendices/appendix_xviii_how_to_use_explicit_solver/image0004.jpg' | relative_url }}" width="453"/></p>
   <p> </p>
   <p class="Fig_numb">Simulation control window Iteration tab in expert mode</p>
   <p> </p>
@@ -148,7 +148,7 @@ title: "Appendix XVIII How to use Explicit Solver"
     </li>
   </ul>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_AXVIII_5_Mass_Scaling_factor_for_few_forming_processes_from_previous_examples"></a><img height="196" src="../../assets/images/appendices/appendix_xviii_how_to_use_explicit_solver/image0005.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_AXVIII_5_Mass_Scaling_factor_for_few_forming_processes_from_previous_examples"></a><img height="196" src="{{ '/assets/images/appendices/appendix_xviii_how_to_use_explicit_solver/image0005.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Mass Scaling factor for few forming processes from previous examples</p>
   <p> </p>

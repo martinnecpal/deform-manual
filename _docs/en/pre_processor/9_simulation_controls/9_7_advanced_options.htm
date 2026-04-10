@@ -83,7 +83,7 @@ title: "9.7. Advanced Options"
 
 
 
-  <h1>9.7. Advanced Options <img height="25" src="../../../assets/icons/pre_icons/mo_advanced_options.jpg" width="25"/></h1>
+  <h1>9.7. Advanced Options <img height="25" src="{{ '/assets/icons/pre_icons/mo_advanced_options.jpg' | relative_url }}" width="25"/></h1>
   <p><a href="#9.7.1._Variables">9.7.1. Variables</a> </p>
   <ul>
     <li>
@@ -146,7 +146,7 @@ title: "9.7. Advanced Options"
   <p> </p>
   <p>For Simulation control Advanced variables settings see <a href="#Fig._9.7.1._Advanced_variables_window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>1.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig._9.7.1._Advanced_variables_window"></a><img height="355" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image001.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig._9.7.1._Advanced_variables_window"></a><img height="355" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image001.jpg' | relative_url }}" width="750"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_Numb">Advanced variables window</p>
   <p> </p>
@@ -179,14 +179,14 @@ title: "9.7. Advanced Options"
   </ul>
   <p>This <a href="../../keyword_documentation/g/geoerr.htm">GEOERR</a> value is an estimate of the error between discretized objects. The default value for this is sufficient for most of the general applications. (See <a href="#Fig._9.7.2._Advanced_Error_tolerances_window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>2.</a>)</p>
   <p> </p>
-  <p style="text-align: center"><img height="355" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image002.jpg" width="750"/></p>
+  <p style="text-align: center"><img height="355" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image002.jpg' | relative_url }}" width="750"/></p>
   <p class="Fig_Name"> </p>
   <p class="Fig_Numb"><a id="Fig._9.7.2._Advanced_Error_tolerances_window"></a>Advanced Error tolerances window</p>
   <p> </p>
   <h2> <a id="9.7.3._User_defined_variables_(USRDEF)"></a>User defined variables (USRDEF) [2D, 3D]</h2>
   <p>User defined variables (<a href="../../keyword_documentation/u/usrdef.htm">USRDEF</a>) are 80 character string variables which are passed to user defined subroutines. Refer to the Chapter <a href="../../user_routines/56_user_routines_in_deform/56_user_routines_in_deform.htm">56. User Routines</a>    for more information on how to use these variables. (See <a href="#Fig._9.7.3._User_defined_values"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>3.</a>)</p>
   <p style="text-align: center"> </p>
-  <p style="text-align: center"><a id="Fig._9.7.3._User_defined_values"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image003.jpg" width="557"/></p>
+  <p style="text-align: center"><a id="Fig._9.7.3._User_defined_values"></a><img height="500" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image003.jpg' | relative_url }}" width="557"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_Numb">User defined values</p>
   <p> </p>
@@ -208,7 +208,7 @@ title: "9.7. Advanced Options"
   <p>Penalty method ( <a href="#Fig._9.7.7._Penalty_-_Contact_method___Conforming_Coupling"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>4.</a>) is the main approach for handling contact for all the deforming objects to handle die contact.
     However, for rigid plastic models with multiple deforming objects in contact or self-contact conformal coupling is also available.</p>
   <p style="text-align: center"> </p>
-  <p style="text-align: center"><a id="Fig._9.7.7._Penalty_-_Contact_method___Conforming_Coupling"></a><img height="540" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image004.jpg" width="653"/></p>
+  <p style="text-align: center"><a id="Fig._9.7.7._Penalty_-_Contact_method___Conforming_Coupling"></a><img height="540" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image004.jpg' | relative_url }}" width="653"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_Numb">Penalty - Contact method</p>
   <p> </p>
@@ -219,7 +219,7 @@ title: "9.7. Advanced Options"
   </ul>
   <p>Conforming coupling essentially handles contact by first generating contact elements automatically across the contacting mesh systems. For models involving rotational symmetry conforming coupling is used by default.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig._9.7.8._Conforming_Coupling_-_Contact_method"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image005.jpg" width="605"/></p>
+  <p style="text-align: center"><a id="Fig._9.7.8._Conforming_Coupling_-_Contact_method"></a><img height="500" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image005.jpg' | relative_url }}" width="605"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_Numb">Conforming Coupling - Contact method</p>
   <p> </p>
@@ -232,7 +232,7 @@ title: "9.7. Advanced Options"
     ALC method is not sensitive to penalty number and performs well with iterative CG solver.  ALC method can be used with both Newton - Raphson and Direct methods but models involving elasto-pastic object requires Newton - Raphson method. ALC works better
     with CG solver and for Large models involving multiple deforming objects or elastic dies.</p>
   <p style="text-align: center"> </p>
-  <p style="text-align: center"><a id="Fig._9.7.9._Augmented_Lagrangian_-_Contact_method"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image006.jpg" width="605"/></p>
+  <p style="text-align: center"><a id="Fig._9.7.9._Augmented_Lagrangian_-_Contact_method"></a><img height="500" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image006.jpg' | relative_url }}" width="605"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_Numb">Augmented Lagrangian - Contact method</p>
   <p> </p>
@@ -249,7 +249,7 @@ title: "9.7. Advanced Options"
     <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">No geometry update</li>
   </ul>
   <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
-  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"><a id="Fig._9.7.10.__Multiple_Deforming_methods"></a><img height="0" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image007.jpg" width="0"/><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image007.jpg" width="605"/></p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"><a id="Fig._9.7.10.__Multiple_Deforming_methods"></a><img height="0" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image007.jpg' | relative_url }}" width="0"/><img height="500" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image007.jpg' | relative_url }}" width="605"/></p>
   <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
   <p class="Fig_Numb"> Multiple Deforming methods</p>
   <p> </p>
@@ -293,14 +293,14 @@ title: "9.7. Advanced Options"
     and Yield surface calculation.</p>
   <p>Even for ALE steady state simulation, user can define Strain update method and Temperature update method.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig._9.7.11._3D_Frequency_Window"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image008.jpg" width="605"/></p>
+  <p style="text-align: center"><a id="Fig._9.7.11._3D_Frequency_Window"></a><img height="500" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image008.jpg' | relative_url }}" width="605"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_Numb">3D Frequency Window</p>
   <p> </p>
   <h2><a id="9.7.7._Nodal_Oscillations"></a>Nodal Oscillations [2D]</h2>
   <p><br/> For Simulation control Advanced Nodal oscillations (<a href="../../keyword_documentation/o/osctrl.htm">OSCTRL</a>) settings see <a href="#Fig._9.7.12._2D_Nodal_Oscillations_Window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>9.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig._9.7.12._2D_Nodal_Oscillations_Window"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image009.jpg" width="605"/></p>
+  <p style="text-align: center"><a id="Fig._9.7.12._2D_Nodal_Oscillations_Window"></a><img height="500" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image009.jpg' | relative_url }}" width="605"/></p>
   <p> </p>
   <p class="Fig_Numb">2D Nodal Oscillations Window</p>
   <p> </p>
@@ -327,7 +327,7 @@ title: "9.7. Advanced Options"
   <p> </p>
   <p> </p>
   <p class="Fig_Name" style="text-align: center;"> </p>
-  <p class="Fig_Name" style="text-align: center;"><img height="324" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image010.jpg" width="780"/></p>
+  <p class="Fig_Name" style="text-align: center;"><img height="324" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image010.jpg' | relative_url }}" width="780"/></p>
   <p class="Fig_Numb" style="text-align: center;"><a id="Fig._9.7.13._Object_copy_window"></a>Object copy window</p>
   <p> </p>
   <p><strong>Related Topics:</strong></p>

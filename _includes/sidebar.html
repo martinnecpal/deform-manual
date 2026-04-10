@@ -1,5 +1,5 @@
 {% assign nav = include.nav %}
-<ul class="nav-list{% if include.depth %} depth-{{ include.depth }}{% endif %}">
+<ul class="nav-list">
   {% for item in nav %}
     {% assign has_children = false %}
     {% if item.children and item.children.size > 0 %}
@@ -20,7 +20,7 @@
       </a>
       {% if has_children %}
         <ul class="nav-children{% if is_active %} open{% endif %}">
-          {% include sidebar.html nav=item.children depth=include.depth | plus: 1 %}
+          {% include sidebar.html nav=item.children %}
         </ul>
       {% endif %}
     </li>

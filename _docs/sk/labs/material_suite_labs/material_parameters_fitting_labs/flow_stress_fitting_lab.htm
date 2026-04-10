@@ -89,20 +89,20 @@ title: "Flow Stress Fitting Lab"
     fitted material parameters in the flow stress model, graphic comparison between original experimental data and model data. User can easily save the fitted flow stress data into keyword file for FEM simulation.</p>
   <p> </p>
   <h2><a id="1_2_Launch_Flow_Stress_Model_in_material_suite"></a>Launch Flow Stress Model in material suite</h2>
-  <p>On a Windows machine, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button, select DEFORM-v12.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span> and select DEFORM
+  <p>On a Windows machine, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button, select DEFORM-v12.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span> and select DEFORM
     GUI Main v1x.xx from the menu. The DEFORM GUI Main window will appear. From GUI Main click on <strong>Material Suite</strong> under “Post Processor” to open Material Suite module. User can also double click &quot;<strong>DEF_GUI_MAT.exe</strong>&quot;
     in the installation directory of DEFORM software to launch material suite. After the main window for material suite pops up, expand &quot;properties&quot; item and click &quot;Flow stress model&quot; icon, the new task item &quot;Flow stress&quot;
     is added to the task tree (See <a href="#Fig_FSL1_1_Launch_Flow_Stress_model_in_material_suite"><span data-keyref="Material_Suite_Labs_Flow_Stress_Fitting_Lab">Fig. FSL1.</span>1.</a>). Follow each tree item to prepare Flow stress model data in the
     property data window (right-bottom window).</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_FSL1_1_Launch_Flow_Stress_model_in_material_suite"></a><img height="424" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0001.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_FSL1_1_Launch_Flow_Stress_model_in_material_suite"></a><img height="424" src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0001.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb"> Launch Flow Stress model in material suite.</p>
   <p> </p>
   <p>Click &quot;<strong>Config</strong>&quot; to open the window to specify Working directories as shown in below <span data-keyref="Material_Suite_Labs_Flow_Stress_Fitting_Lab">Fig. FSL1.</span>2. Specify the working directory where the computed Flow stress
     data will be stored.</p>
   <p> </p>
-  <p style="text-align: center"><img height="376" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0010.jpg" width="750"/></p>
+  <p style="text-align: center"><img height="376" src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0010.jpg' | relative_url }}" width="750"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb" style="text-align: center;">Config window to define Working directory</p>
   <p> </p>
@@ -112,14 +112,14 @@ title: "Flow Stress Fitting Lab"
     defined data for each tree item will be automatically filled. User can also prepare the project data from scratch. After defining data in any tree item page, we can return to this “units and initial specimen geometry” page and click the “<strong>Save Project</strong>”
     button to save all defined data. In this lab we choose 100 for initial height and 10 for initial cross section area (see <span data-keyref="Material_Suite_Labs_Flow_Stress_Fitting_Lab">Fig. FSL1.</span>3.) .</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_FSL1_2_Units_and_Initial_specimen_geometry_page"></a><img height="550" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0002.jpg" width="365"/></p>
+  <p style="text-align: center"><a id="Fig_FSL1_2_Units_and_Initial_specimen_geometry_page"></a><img height="550" src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0002.jpg' | relative_url }}" width="365"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Units and Initial specimen geometry page</p>
   <h2><a id="1_4_Define_Testing_type_and_Conditions"></a>Define Testing type and Conditions</h2>
   <p>In the &quot;Flow stress&quot; task tree, click &quot;<strong>Testing type and Conditions</strong>&quot; item. Choose &quot;<strong>Tension</strong>&quot; as Testing type, &quot;<strong>Constant strain rate</strong>&quot; as Rate Control type as shown
     in <a href="#Fig_FSL1_3_Testing_type_and_Conditions_page"><span data-keyref="Material_Suite_Labs_Flow_Stress_Fitting_Lab">Fig. FSL1.</span>4.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_FSL1_3_Testing_type_and_Conditions_page"></a><img height="550" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0003.jpg" width="363"/></p>
+  <p style="text-align: center"><a id="Fig_FSL1_3_Testing_type_and_Conditions_page"></a><img height="550" src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0003.jpg' | relative_url }}" width="363"/></p>
   <p> </p>
   <p class="Fig_numb">Testing type and Conditions page</p>
   <p> </p>
@@ -128,14 +128,14 @@ title: "Flow Stress Fitting Lab"
     <a href="#Fig_FSL1_4_Testing_Temperature_and_rates_page"><span data-keyref="Material_Suite_Labs_Flow_Stress_Fitting_Lab">Fig. FSL1.</span>5.</a> In the next page, we are going to input 9 sets of flow stress data as a function of strain for each temperature
     and strain rate combinations.</p>
   <p> </p>
-  <p class="minitoc-caption" style="text-align: center;"><a id="Fig_FSL1_4_Testing_Temperature_and_rates_page"></a><img height="500" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0004.jpg" width="340"/></p>
+  <p class="minitoc-caption" style="text-align: center;"><a id="Fig_FSL1_4_Testing_Temperature_and_rates_page"></a><img height="500" src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0004.jpg' | relative_url }}" width="340"/></p>
   <p> </p>
   <p class="Fig_numb">Testing Temperature and rates page</p>
   <h2>Define Experimental Data</h2>
   <p>In the &quot;Flow stress&quot; task tree, click &quot;<strong>Experimental data</strong>&quot; page. Select Flow stress data radio button in Raw data type ( see <a href="#Fig_FSL1_5_Experimental_data_page"><span data-keyref="Material_Suite_Labs_Flow_Stress_Fitting_Lab">Fig. FSL1.</span>6.</a>)
-    and click on <img src="../../../../assets/icons/pre_icons/material_suite_delete_button.jpg"/> button  and Input flow stress data for each cell. An empty file icon (“<img src="../../../../assets/icons/pre_icons/material_suite_empty_file_icon.jpg"/> ”) denotes that the cell data has not been defined yet. After clicking an undefined cell, the cell image changes to a loading file icon (“<img src="../../../../assets/icons/pre_icons/mo_import_file_icon2.jpg"/>”), and the window for function definition
-    pops up in the display window. The stress-strain data can be manually input, copied and pasted, or loaded from an existing function data file. After data input is completed, click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> button
-    to close the function definition window. The cell image changes to a defined file icon (“<img src="../../../../assets/icons/pre_icons/material_suite_defined_file_icon.jpg"/>”). For this lab, import the data of each cell from &quot;3D\LABS\Material_Suite_Flow_stress_data&quot;
+    and click on <img src="{{ '/assets/icons/pre_icons/material_suite_delete_button.jpg' | relative_url }}"/> button  and Input flow stress data for each cell. An empty file icon (“<img src="{{ '/assets/icons/pre_icons/material_suite_empty_file_icon.jpg' | relative_url }}"/> ”) denotes that the cell data has not been defined yet. After clicking an undefined cell, the cell image changes to a loading file icon (“<img src="{{ '/assets/icons/pre_icons/mo_import_file_icon2.jpg' | relative_url }}"/>”), and the window for function definition
+    pops up in the display window. The stress-strain data can be manually input, copied and pasted, or loaded from an existing function data file. After data input is completed, click <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> button
+    to close the function definition window. The cell image changes to a defined file icon (“<img src="{{ '/assets/icons/pre_icons/material_suite_defined_file_icon.jpg' | relative_url }}"/>”). For this lab, import the data of each cell from &quot;3D\LABS\Material_Suite_Flow_stress_data&quot;
     folder inside the installation path,</p>
   <p>For Temperature 200 - Strain rate 0.1 cell, load &quot; Temp_200_Strain_rate_0.1.dat &quot; file.</p>
   <p>For Temperature 200 - Strain rate 0.5 cell, load &quot; Temp_200_Strain_rate_0.5.dat &quot; file.</p>
@@ -145,26 +145,26 @@ title: "Flow Stress Fitting Lab"
   <p>For Temperature 500 - Strain rate 1 cell, load &quot; Temp_500_Strain_rate_1.dat &quot; file.</p>
   <p>For Temperature 700 - Strain rate 0.1 cell, load &quot; Temp_700_Strain_rate_0.1.dat &quot; file.</p>
   <p>For Temperature 700 - Strain rate 0.5 cell, load &quot; Temp_700_Strain_rate_0.5.dat &quot; file.</p>
-  <p>For Temperature 700 - Strain rate 1 cell, load &quot; Temp_700_Strain_rate_1.dat &quot; file, after defining data click on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to Close.</p>
+  <p>For Temperature 700 - Strain rate 1 cell, load &quot; Temp_700_Strain_rate_1.dat &quot; file, after defining data click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to Close.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_FSL1_5_Experimental_data_page"></a><img height="525" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0005.jpg" width="359"/></p>
+  <p style="text-align: center"><a id="Fig_FSL1_5_Experimental_data_page"></a><img height="525" src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0005.jpg' | relative_url }}" width="359"/></p>
   <p> </p>
   <p class="Fig_numb">Experimental data page</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_FSL1_6_After_defining_Flow_stress_data_for_each_cells"></a><img height="425" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0006.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_FSL1_6_After_defining_Flow_stress_data_for_each_cells"></a><img height="425" src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0006.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">After defining Flow stress data for each cells</p>
   <p> </p>
   <h2><a id="1_7_Define_Heat_Capacity_correction"></a>Define Heat Capacity correction</h2>
   <p>In the &quot;Flow stress&quot; task tree, click &quot;<strong>Experimental data</strong>&quot; page. If we consider the heat capacity effect by choosing &quot;<strong>Yes</strong>&quot; on this page, the flow stress data will be corrected based on the
-    adiabatic heating effect. The temperature will be adjusted by <img height="50" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/eq_1.jpg" width="124"/> , and the corresponding flow stress
+    adiabatic heating effect. The temperature will be adjusted by <img height="50" src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/eq_1.jpg' | relative_url }}" width="124"/> , and the corresponding flow stress
     data will be adjusted. For this lab we will not be using Heat Capacity correction hence, select &quot;<strong>NO</strong>&quot; radio button.</p>
   <h2><a id="1_8_Define_Sampling_data"></a>Define Sampling data</h2>
   <p>In the &quot;Flow stress&quot; task tree, click &quot;<strong>Sampling</strong>&quot; page. input &quot;<strong>10</strong>&quot; as number of strain, <strong>0.1 </strong>as <strong>Minimum </strong><strong>strain</strong>, <strong>1</strong> as <strong>Maximum </strong><strong>strain </strong>and
     <strong>0</strong> as <strong>Zero </strong><strong>strain </strong><strong>offset</strong>. Choose &quot;<strong>Plot sampled flow stress curves</strong>&quot; then click &quot;<strong>Sampling</strong>&quot; button. The program will display the
     flow stress curve in the defined strain range.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_FSL1_7_Sampling_controls_page"></a><img height="423" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0007.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_FSL1_7_Sampling_controls_page"></a><img height="423" src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0007.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Sampling controls page</p>
   <p> </p>
@@ -172,12 +172,12 @@ title: "Flow Stress Fitting Lab"
   <p>In the &quot;Flow stress&quot; task tree, click &quot;<strong>Conversion of flow stress model</strong>&quot; page. On the &quot;<strong>Conversion of flow stress model</strong>&quot; page, user can choose which flow stress model he/she wants to fit,
     in this lab we will choose <strong>Johnson-Cook</strong> equation:</p>
   <p> </p>
-  <p><img src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/eq_2.jpg"/></p>
+  <p><img src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/eq_2.jpg' | relative_url }}"/></p>
   <p>For fitting method, choose &quot;<strong>quasi least square method</strong>&quot;, input initial guess parameter, click &quot;<strong>Fit</strong>&quot; to generate the fitted parameters as well as the flow stress curve using the fitted parameters.
     For each parameter, user can decide to fit it or to fix it without fitting. There is also a slider bar available for each parameter which allows user to modify values of parameters and display the parametric study results. In the following graphic
     display, the original experimental data is represented by points and model data is represented by solid lines (see <a href="#Fig_FSL1_8_Conversion_of_Flow_stress_model_page"><span data-keyref="Material_Suite_Labs_Flow_Stress_Fitting_Lab">Fig. FSL1.</span>9.</a>).</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_FSL1_8_Conversion_of_Flow_stress_model_page"></a><img height="423" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0008.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_FSL1_8_Conversion_of_Flow_stress_model_page"></a><img height="423" src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0008.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Conversion of Flow stress model page</p>
   <p> </p>
@@ -186,7 +186,7 @@ title: "Flow Stress Fitting Lab"
   <p><strong>FSTRES.KEY</strong> will have the selected Flow stress model data.</p>
   <p><strong>FSTRES_SAMPLED_TABULATE.KEY</strong> will have Sampling data (Tabular data format Flow stress model).</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_FSL1_9_Flow_stress_Output_Page"></a><img height="500" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0009.jpg" width="347"/></p>
+  <p style="text-align: center"><a id="Fig_FSL1_9_Flow_stress_Output_Page"></a><img height="500" src="{{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/image0009.jpg' | relative_url }}" width="347"/></p>
   <p class="Fig_numb">Flow stress Output Page</p>
 
 </body></html>

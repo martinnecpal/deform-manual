@@ -103,74 +103,74 @@ title: "2D Induction Heating Lab2"
   <p><a href="#2_13_Post_Processing">2.13. Post Processing</a></p>
   <p> </p>
   <h2><a id="2_1_Creating_a_New_Problem"></a>Creating a New Problem</h2>
-  <p>On a Windows machine, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear, as shown in <a href="#Fig_2DINDL2_1_DEFORM_GUI_Main_window"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>1.</a></p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_1_DEFORM_GUI_Main_window"></a><img height="438" src="../../../../assets/images/applications/55_2_arc_welding/image0001.jpg" width="750"/></p>
+  <p>On a Windows machine, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear, as shown in <a href="#Fig_2DINDL2_1_DEFORM_GUI_Main_window"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>1.</a></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_1_DEFORM_GUI_Main_window"></a><img height="438" src="{{ '/assets/images/applications/55_2_arc_welding/image0001.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">DEFORM GUI Main window</p>
   <p> </p>
-  <p>Create a new problem either by selecting <strong>File </strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href=""><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>2.</a>  Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+  <p>Create a new problem either by selecting <strong>File </strong><img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> <strong>New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. The Problem Setup window will appear as shown in <a href=""><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>2.</a>  Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
     radio button and unit system as &quot;<strong>SI</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong>IH_Lab_2DFEM2</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the
-    “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using the
+    “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new Problem using the
     Deform Integrated Manufacturing Process.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_2_New_Problem_page"></a><img height="417" src="../../../../assets/images/applications/55_2_arc_welding/image0002.jpg" width="745"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_2_New_Problem_page"></a><img height="417" src="{{ '/assets/images/applications/55_2_arc_welding/image0002.jpg' | relative_url }}" width="745"/></p>
   <p> </p>
   <p class="Fig_numb">New Problem page</p>
   <p> </p>
   <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use &quot;<strong>IH_Lab_2DFEM1a</strong>&quot;
-    as the project name. Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to continue to open the operation.</p>
+    as the project name. Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to continue to open the operation.</p>
   <h2><a id="2_2_Adding_Operation"></a>Adding Operation</h2>
-  <p>Add <strong>2D </strong><strong>Forming </strong>operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button available next to 2D Forming Operation or
+  <p>Add <strong>2D </strong><strong>Forming </strong>operation from the Explorer Operations list. Add the operation by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button available next to 2D Forming Operation or
     user can also add by drag and drop into the Operation Editor. When we add the 2D Forming operation, process settings window will open by default (see <a href="#Fig_2DINDL2_3_Adding_2D_Forming_operation"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>3.</a>).</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_3_Adding_2D_Forming_operation"></a><img height="373" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0003.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_3_Adding_2D_Forming_operation"></a><img height="373" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0003.jpg' | relative_url }}" width="750"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Adding 2D Forming operation</p>
   <h2><a id="2_3_Selecting_Geometry_Type"></a>Selecting Geometry Type</h2>
   <p>In this lab we will be using Axisymmetric geometries, so select <strong>2D Axisymmetric</strong> radio button from geometry type page as shown in <a href="#Fig_2DINDL2_4_Geometry_type_selection"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>4.</a>,
-    then click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+    then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_4_Geometry_type_selection"></a><img height="350" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0004.jpg" width="562"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_4_Geometry_type_selection"></a><img height="350" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0004.jpg' | relative_url }}" width="562"/></p>
   <p> </p>
   <p class="Fig_numb">Geometry type selection</p>
   <h2><a id="2_4_Simulation_Controls"></a>Simulation Controls</h2>
-  <p>Switch to <strong>Expert </strong><strong>mode </strong>by clicking on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> icon, Enter Operation name as &quot;<strong>Initial Heat Up</strong>&quot; and be sure that <strong>Deformation</strong>,
+  <p>Switch to <strong>Expert </strong><strong>mode </strong>by clicking on <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> icon, Enter Operation name as &quot;<strong>Initial Heat Up</strong>&quot; and be sure that <strong>Deformation</strong>,
     <strong>Heat </strong><strong>transfer</strong>, <strong>Transformation </strong>and <strong>Heating </strong>are checked with the <strong>Enthalpy </strong><strong>type </strong>for <strong>Solidification </strong>and <strong>Induction </strong><strong>(BEM)</strong>    method as Heating from drop boxes as shown in <a href="#Fig_2DINDL2_5_Simulation_controls_-_Main_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>5.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_5_Simulation_controls_-_Main_page"></a><img height="410" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0005.jpg" style="cursor: nwse-resize;" width="545"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_5_Simulation_controls_-_Main_page"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0005.jpg' | relative_url }}" style="cursor: nwse-resize;" width="545"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Simulation controls - Main page</p>
   <p> </p>
-  <p>Click on <strong>Simulation </strong><strong>Steps <img height="25" src="../../../../assets/icons/pre_icons/mo_simulation_step.jpg" width="25"/></strong>, enter the <strong>Number</strong> <strong>of </strong><strong>simulation </strong><strong>steps </strong>as
+  <p>Click on <strong>Simulation </strong><strong>Steps <img height="25" src="{{ '/assets/icons/pre_icons/mo_simulation_step.jpg' | relative_url }}" width="25"/></strong>, enter the <strong>Number</strong> <strong>of </strong><strong>simulation </strong><strong>steps </strong>as
     <strong>1500 </strong>and keep <strong>Step </strong><strong>increment </strong><strong>to </strong><strong>save </strong>as <strong>10</strong> as shown in <a href="#Fig_2DINDL2_6_Simulation_controls_-Simulation_steps_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>6.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_6_Simulation_controls_-Simulation_steps_page"></a><img height="410" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0006.jpg" width="545"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_6_Simulation_controls_-Simulation_steps_page"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0006.jpg' | relative_url }}" width="545"/></p>
   <p> </p>
   <p class="Fig_numb">Simulation controls -Simulation steps page</p>
   <p> </p>
-  <p>Click on <strong>Step increment</strong> <img height="25" src="../../../../assets/icons/pre_icons/mo_step_increment.jpg" width="25"/>, under the <strong>General </strong>tab, select the Solution step definition as <strong>Temperature </strong>and define
+  <p>Click on <strong>Step increment</strong> <img height="25" src="{{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }}" width="25"/>, under the <strong>General </strong>tab, select the Solution step definition as <strong>Temperature </strong>and define
     <strong>Initial </strong><strong>time </strong><strong>step </strong>as <strong>0.1</strong> sec, <strong>Max </strong><strong>temperature </strong><strong>change </strong>as <strong>5</strong>°C, <strong>Min </strong><strong>time </strong><strong>step </strong>as
     <strong>0.0001 </strong>sec and <strong>Max</strong> <strong>Time </strong><strong>Step </strong>as <strong>0.25 </strong>sec as shown in <a href="#Fig_2DINDL2_7_Simulation_controls_-_Step_increment_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>7.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_7_Simulation_controls_-_Step_increment_page"></a><img height="410" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0007.jpg" width="545"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_7_Simulation_controls_-_Step_increment_page"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0007.jpg' | relative_url }}" width="545"/></p>
   <p> </p>
   <p class="Fig_numb">Simulation controls - Step increment page</p>
   <p> </p>
-  <p>Click on <strong>Stopping </strong><strong>criteria <img height="25" src="../../../../assets/icons/pre_icons/mo_stopping_criteria.jpg" width="25"/> </strong>and enter <strong>Process </strong><strong>duration </strong>as <strong>25</strong> sec as shown
+  <p>Click on <strong>Stopping </strong><strong>criteria <img height="25" src="{{ '/assets/icons/pre_icons/mo_stopping_criteria.jpg' | relative_url }}" width="25"/> </strong>and enter <strong>Process </strong><strong>duration </strong>as <strong>25</strong> sec as shown
     in <a href="#Fig_2DINDL2_8_Simulation_controls_Stopping_criteria_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>8.</a></p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_8_Simulation_controls_Stopping_criteria_page"></a><img height="410" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0008.jpg" width="545"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_8_Simulation_controls_Stopping_criteria_page"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0008.jpg' | relative_url }}" width="545"/></p>
   <p> </p>
   <p class="Fig_numb">Simulation controls - Stopping criteria page</p>
   <p> </p>
-  <p>Click on <strong>Advanced options</strong> <img height="25" src="../../../../assets/icons/pre_icons/mo_advanced_options.jpg" width="25"/>, under <strong>Frequency </strong>tab for <strong>Maxwell </strong><strong>equation </strong>solving select <strong>User- defined</strong>    using drop-down list and define <strong>every </strong><strong>5</strong> step(s) as shown in <a href="#Fig_2DINDL2_9_Simulation_controls_Advanced_option_Frequency_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>9.</a>,
-    this is done so that electro-magnetic calculations are done for every 5 steps instead of each step. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material Page.</p>
+  <p>Click on <strong>Advanced options</strong> <img height="25" src="{{ '/assets/icons/pre_icons/mo_advanced_options.jpg' | relative_url }}" width="25"/>, under <strong>Frequency </strong>tab for <strong>Maxwell </strong><strong>equation </strong>solving select <strong>User- defined</strong>    using drop-down list and define <strong>every </strong><strong>5</strong> step(s) as shown in <a href="#Fig_2DINDL2_9_Simulation_controls_Advanced_option_Frequency_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>9.</a>,
+    this is done so that electro-magnetic calculations are done for every 5 steps instead of each step. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Material Page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_9_Simulation_controls_Advanced_option_Frequency_page"></a><img src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0009.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_9_Simulation_controls_Advanced_option_Frequency_page"></a><img src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0009.jpg' | relative_url }}"/></p>
   <p> </p>
   <p class="Fig_numb">Simulation controls - Advanced option Frequency page</p>
   <h2><a id="2_5_Material_list"></a>Material list</h2>
-  <p>In Material list Window, click on <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> to Load material data from DB file.</p>
+  <p>In Material list Window, click on <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> to Load material data from DB file.</p>
   <ul class="Disc">
     <li>
       <p>Choose the Database Files(*.db *.DB) option.</p>
@@ -185,52 +185,52 @@ title: "2D Induction Heating Lab2"
       <p>Again, load the <strong>Coil </strong>material from <strong>IH_Lab_2DFEM1a.DB</strong> database.</p>
     </li>
     <li>
-      <p>Since the BEM does not require the air to be meshed, this material data is sufficient for this lab. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Objects page.</p>
+      <p>Since the BEM does not require the air to be meshed, this material data is sufficient for this lab. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Objects page.</p>
     </li>
   </ul>
   <h2><a id="2_6_Adding_Objects"></a>Adding Objects</h2>
-  <p>For this lab we need 3 objects, by default 3 objects will be added in list. If not added by default, then add 3 objects to Objects list using <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Workpiece.</p>
+  <p>For this lab we need 3 objects, by default 3 objects will be added in list. If not added by default, then add 3 objects to Objects list using <img src="{{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}"/> button. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Workpiece.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_10_Objects_page"></a><img align="" height="410" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0010.jpg" width="545"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_10_Objects_page"></a><img align="" height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0010.jpg' | relative_url }}" width="545"/></p>
   <p> </p>
   <p class="Fig_numb">Objects page</p>
   <h2><a id="2_7_Workpiece"></a>Workpiece</h2>
-  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> and import the Workpiece object from <strong>IH_Lab_2DFEM1a.DB</strong> database (<strong>Induction Heating Lab1</strong>) at <strong>-1 </strong>step. Change the object
-    type to <strong>Elasto-plastic </strong>and keep object temperature as <strong>20</strong><strong>°C</strong>. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Boundary condition page (see <a href="#Fig_2DINDL2_11_Workpiece_Object_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>11.</a>).</p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> and import the Workpiece object from <strong>IH_Lab_2DFEM1a.DB</strong> database (<strong>Induction Heating Lab1</strong>) at <strong>-1 </strong>step. Change the object
+    type to <strong>Elasto-plastic </strong>and keep object temperature as <strong>20</strong><strong>°C</strong>. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Boundary condition page (see <a href="#Fig_2DINDL2_11_Workpiece_Object_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>11.</a>).</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_11_Workpiece_Object_page"></a><img height="372" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0011.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_11_Workpiece_Object_page"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0011.jpg' | relative_url }}" width="750"/></p>
   <p style="text-align: center"> </p>
   <p class="Fig_numb">Workpiece Object page</p>
   <h3>Workpiece Boundary Condition</h3>
-  <p>In <strong>Boundary </strong><strong>condition </strong>page, click on <strong>Velocity </strong>then choose the <img src="../../../../assets/icons/pre_icons/mo_bcc_one_by_one_icon.jpg"/> (one by one) selection method in picking tool bar and then choose
-    the lower left node, from BCC controls select direction as <strong>Y</strong> with velocity 0 to fix the node in <strong>Y </strong>direction and click the <img src="../../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/>, we can notice that
+  <p>In <strong>Boundary </strong><strong>condition </strong>page, click on <strong>Velocity </strong>then choose the <img src="{{ '/assets/icons/pre_icons/mo_bcc_one_by_one_icon.jpg' | relative_url }}"/> (one by one) selection method in picking tool bar and then choose
+    the lower left node, from BCC controls select direction as <strong>Y</strong> with velocity 0 to fix the node in <strong>Y </strong>direction and click the <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/>, we can notice that
     <strong>X</strong> direction on inside edge along the axis is already fixed as it is inside the object and geometry type is Axi-symmetric . Added <strong>Velocity BCC (Vy=0) </strong>is as shown in <span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>12.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_12_Workpiece_Velocity_(Vy_0)_Boundary_Condition_page"></a><img height="373" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0012.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_12_Workpiece_Velocity_(Vy_0)_Boundary_Condition_page"></a><img height="373" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0012.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Workpiece Velocity (Vy=0) Boundary Condition page</p>
   <p> </p>
-  <p>Click on the <strong>Induction BEM – Heating Surface</strong>, choose <img src="../../../../assets/icons/pre_icons/mo_bcc_edge_icon.jpg"/> (By edge) selection method instead of <img src="../../../../assets/icons/pre_icons/mo_bcc_one_by_one_icon.jpg"/> (one by one) and then select the three outside surfaces and click the <img src="../../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/>. Added Induction BEM - Heating surface is as shown in <a href="#Fig_2DINDL2_13_Workpiece_Induction_BEM_Heating_surface_Boundary_Condition_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>13.</a>    Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Top Die page.</p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_13_Workpiece_Induction_BEM_Heating_surface_Boundary_Condition_page"></a><img height="374" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0013.jpg" width="750"/></p>
+  <p>Click on the <strong>Induction BEM – Heating Surface</strong>, choose <img src="{{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}"/> (By edge) selection method instead of <img src="{{ '/assets/icons/pre_icons/mo_bcc_one_by_one_icon.jpg' | relative_url }}"/> (one by one) and then select the three outside surfaces and click the <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/>. Added Induction BEM - Heating surface is as shown in <a href="#Fig_2DINDL2_13_Workpiece_Induction_BEM_Heating_surface_Boundary_Condition_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>13.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Top Die page.</p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_13_Workpiece_Induction_BEM_Heating_surface_Boundary_Condition_page"></a><img height="374" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0013.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Workpiece Induction BEM - Heating surface Boundary Condition page</p>
   <h2><a id="2_8_Top_Coil"></a>Top Coil</h2>
-  <p>In Top die page, click on <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> and import the <strong>Lower </strong><strong>Middle </strong><strong>Coil </strong>object from <strong>IH_Lab_2DFEM1a.DB</strong> database (<a href="2d_induction_heating_lab1.htm">Induction Heating Lab1</a>)
+  <p>In Top die page, click on <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> and import the <strong>Lower </strong><strong>Middle </strong><strong>Coil </strong>object from <strong>IH_Lab_2DFEM1a.DB</strong> database (<a href="2d_induction_heating_lab1.htm">Induction Heating Lab1</a>)
     at <strong>-1</strong> step. Change the object name to <strong>Top Coil</strong> and keep object type as <strong>Rigid </strong>and object temperature as <strong>20</strong>°C (see  <a href="#Fig_2DINDL2_14_Top_Coil_General_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>14.</a>).
-    Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Boundary Condition page.</p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_14_Top_Coil_General_page" height="0" width="0"></a><img height="372" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0014.jpg" width="750"/></p>
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Boundary Condition page.</p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_14_Top_Coil_General_page" height="0" width="0"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0014.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Top Coil General page</p>
   <h3 class="h3_2_8_">Top Coil Boundary Condition</h3>
-  <p>Click on the Induction BEM – Heating Surface, click on <img height="21" src="../../../../assets/icons/pre_icons/mo_select_all_icon.jpg" width="23"/> so that all surfaces are selected and click the <img src="../../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/>. Added Induction BEM - Heating surface is as shown in <a href="#Fig_2DINDL2_15_Top_Coil_Induction_BEM_-_Heating_surface_Boundary_Condition_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>15.</a> Also make sure
-    that entire object surface is selected for heat exchange with environment. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Movement Controls page.</p>
+  <p>Click on the Induction BEM – Heating Surface, click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}" width="23"/> so that all surfaces are selected and click the <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/>. Added Induction BEM - Heating surface is as shown in <a href="#Fig_2DINDL2_15_Top_Coil_Induction_BEM_-_Heating_surface_Boundary_Condition_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>15.</a> Also make sure
+    that entire object surface is selected for heat exchange with environment. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Movement Controls page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_15_Top_Coil_Induction_BEM_-_Heating_surface_Boundary_Condition_page"></a><img height="373" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0015.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_15_Top_Coil_Induction_BEM_-_Heating_surface_Boundary_Condition_page"></a><img height="373" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0015.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Top Coil Induction BEM - Heating surface Boundary Condition page</p>
   <h3 class="h3_2_8_">Top Coil Movement</h3>
   <p>In this lab the Top coil will hold for 2 seconds and then move up at a rate of 10mm/sec. Select <strong>Movement </strong><strong>direction </strong>as <strong>+Y</strong>, define <strong>Speed</strong> as <strong>Function </strong><strong>of </strong><strong>Time </strong>and
-    add the following data, click on <img src="../../../../assets/icons/pre_icons/mo_apply_button2.jpg"/> and <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to close Function window. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Properties page.</p>
+    add the following data, click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}"/> and <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to close Function window. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Properties page.</p>
   <p> </p>
   <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 300px;margin-left: auto;margin-right: auto">
     <colgroup>
@@ -283,28 +283,28 @@ title: "2D Induction Heating Lab2"
   <p> </p>
   <h3 class="h3_2_8_">Top Coil Properties</h3>
   <p>Under <strong>Heating </strong>tab, we will be use <strong>Current frequency</strong> type as <strong>Single</strong>, the <strong>current </strong><strong>frequency </strong>should be <strong>6000 </strong><strong>Hz </strong>and the <strong>Current </strong><strong>density </strong>should
-    be a constant <strong>18 </strong><span style="font-weight:bold;">A/mm<span style="vertical-align:super;font-size:8pt">2 </span></span>as shown in <a href="#Fig_2DINDL2_16_Top_Coil_Properties_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>16.</a>    Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Bottom Die page.</p>
+    be a constant <strong>18 </strong><span style="font-weight:bold;">A/mm<span style="vertical-align:super;font-size:8pt">2 </span></span>as shown in <a href="#Fig_2DINDL2_16_Top_Coil_Properties_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>16.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Bottom Die page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_16_Top_Coil_Properties_page"></a><img height="410" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0016.jpg" width="545"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_16_Top_Coil_Properties_page"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0016.jpg' | relative_url }}" width="545"/></p>
   <p> </p>
   <p class="Fig_numb">Top Coil Properties page</p>
   <h2><a id="2_9_Bottom_Coil"></a>Bottom Coil</h2>
-  <p>In Bottom die page, click on <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> and import the <strong>Bottom Coil</strong> object from <strong>IH_Lab_2DFEM1a.DB</strong> database (<a href="2d_induction_heating_lab1.htm">Induction Heating Lab1</a>)
+  <p>In Bottom die page, click on <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> and import the <strong>Bottom Coil</strong> object from <strong>IH_Lab_2DFEM1a.DB</strong> database (<a href="2d_induction_heating_lab1.htm">Induction Heating Lab1</a>)
     at <strong>-1 </strong>step. Keep the object name to <strong>Bottom Coil</strong>, object type as <strong>Rigid </strong>and <strong>object temperature</strong> as <strong>20</strong><strong>°C</strong> (see <a href="#Fig_2DINDL2_17_Bottom_Coil_General_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>17.</a>).
-    Click  on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Boundary Condition page.</p>
+    Click  on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Boundary Condition page.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_17_Bottom_Coil_General_page"></a><img height="372" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0017.jpg" width="750"/>&#39;</p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_17_Bottom_Coil_General_page"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0017.jpg' | relative_url }}" width="750"/>&#39;</p>
   <p class="Fig_numb">Bottom Coil General page</p>
   <h3 class="h3_2_9_">Bottom Coil Boundary Condition</h3>
-  <p>Click on the I<strong>nduction BEM</strong> – <strong>Heating </strong><strong>Surface</strong>, click on <img height="21" src="../../../../assets/icons/pre_icons/mo_select_all_icon.jpg" width="23"/> so that all surfaces are selected and click the
-    <img src="../../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/>. Added Induction BEM - Heating surface is as shown in <a href="#Fig_2DINDL2_18_Bottom_Coil_Induction_BEM_-_Heating_surface_Boundary_Condition_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>18.</a>    Also make sure that the entire object surface are selected for heat exchange with environment. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Movement Controls page  </p>
+  <p>Click on the I<strong>nduction BEM</strong> – <strong>Heating </strong><strong>Surface</strong>, click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}" width="23"/> so that all surfaces are selected and click the
+    <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/>. Added Induction BEM - Heating surface is as shown in <a href="#Fig_2DINDL2_18_Bottom_Coil_Induction_BEM_-_Heating_surface_Boundary_Condition_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>18.</a>    Also make sure that the entire object surface are selected for heat exchange with environment. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Movement Controls page  </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_18_Bottom_Coil_Induction_BEM_-_Heating_surface_Boundary_Condition_page"></a><img height="372" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0018.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_18_Bottom_Coil_Induction_BEM_-_Heating_surface_Boundary_Condition_page"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0018.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Bottom Coil Induction BEM - Heating surface Boundary Condition page</p>
   <h3 class="h3_2_9_">Bottom Coil Movement</h3>
   <p>In this lab for the Bottom coil we will define the same Top coil movement. Select Movement direction as <strong>+Y,</strong> define <strong>Speed </strong>as <strong>Function </strong><strong>of </strong><strong>Time </strong>and add the following data,
-    click on <img src="../../../../assets/icons/pre_icons/mo_apply_button.jpg"/> and <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to close Function window. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Properties page.</p>
+    click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> and <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to close Function window. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Properties page.</p>
   <p> </p>
   <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 300px;margin-left: auto;margin-right: auto">
     <colgroup>
@@ -359,15 +359,15 @@ title: "2D Induction Heating Lab2"
   <p>Under <strong>Heating </strong>tab, we will use <strong>Current Frequency</strong> type as <strong>Single</strong>, the current frequency should be <strong>6000 </strong><strong>Hz </strong>and change the <strong>Current </strong><strong>density </strong>to
     <strong>constant </strong><strong>21</strong> <strong>A/mm<span style="vertical-align:super;font-size:8pt">2</span></strong> as shown in  <a href="#Fig_2DINDL2_19_Bottom_Coil_Properties_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>19.</a>    Now go back to Workpiece BCC page by clicking on <strong>Workpiece </strong>&quot;<strong>Boundary Condition</strong>&quot; list to define spray quench.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_19_Bottom_Coil_Properties_page"></a><img height="410" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0019.jpg" width="545"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_19_Bottom_Coil_Properties_page"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0019.jpg' | relative_url }}" width="545"/></p>
   <p> </p>
   <p class="Fig_numb">Bottom Coil Properties page</p>
   <h2><a id="2_10_Workpiece_Boundary_Condition"></a>Workpiece Boundary Condition</h2>
   <p>Here a spray quench will be added, the spray quench will be a 100mm high spray ring that will follow the coil as it heats and moves up the bar. The conditions will be that of water quench but if data can be found for more appropriate data then that
     data should replace those we are now using or adjusted accordingly. For now, add the convection window (spray bar).</p>
-  <p>Click <strong>Heat Exchange with Environment</strong>, click on <strong>Env. Windows </strong>button and click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button to add window. Then select <strong>Polygon </strong>type and add
-    any four points in a roughly rectangular shape. Then click the <img height="21" src="../../../../assets/icons/pre_icons/mo_edit_window_icon.jpg" width="25"/> pencil icon and change the points co-ordinates to these four as shown in below <a href="#Fig_2DINDL2_20_Rectangle_window_Edit_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>20.</a>,
-    then click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>.</p>
+  <p>Click <strong>Heat Exchange with Environment</strong>, click on <strong>Env. Windows </strong>button and click on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button to add window. Then select <strong>Polygon </strong>type and add
+    any four points in a roughly rectangular shape. Then click the <img height="21" src="{{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}" width="25"/> pencil icon and change the points co-ordinates to these four as shown in below <a href="#Fig_2DINDL2_20_Rectangle_window_Edit_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>20.</a>,
+    then click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/>.</p>
   <p> </p>
   <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 300px;margin-left: auto;margin-right: auto">
     <colgroup>
@@ -408,13 +408,13 @@ title: "2D Induction Heating Lab2"
     </tbody>
   </table>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_20_Rectangle_window_Edit_page"></a><img height="373" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0020.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_20_Rectangle_window_Edit_page"></a><img height="373" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0020.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Rectangle window Edit page</p>
   <p> </p>
   <p>Then select <strong>Follow </strong><strong>object </strong>as &quot;<strong>Bottom Coil </strong>&quot;, define <strong>Convection Coefficient</strong> as <strong>Function </strong><strong>of </strong><strong>Temperature </strong>with the below table
-    data in Function window and click on <img src="../../../../assets/icons/pre_icons/mo_apply_button2.jpg" style="cursor: nwse-resize;"/> and  <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to close Function window. Then enter the
-    Environment temperature as <strong>20</strong>°C as shown in <a href="#Fig_2DINDL2_22_Env._Windows_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>22.</a> Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close the Env. Windows page. Click on <strong>Generate DB </strong>in Operation tree to generate DB.</p>
+    data in Function window and click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}" style="cursor: nwse-resize;"/> and  <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to close Function window. Then enter the
+    Environment temperature as <strong>20</strong>°C as shown in <a href="#Fig_2DINDL2_22_Env._Windows_page"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>22.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the Env. Windows page. Click on <strong>Generate DB </strong>in Operation tree to generate DB.</p>
   <p> </p>
   <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 350px;margin-left: auto;margin-right: auto">
     <colgroup>
@@ -530,38 +530,38 @@ title: "2D Induction Heating Lab2"
   </table>
   <p> </p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_21_Convection Coefficient Function window"></a><img height="372" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0021.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_21_Convection Coefficient Function window"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0021.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Convection Coefficient Function window</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_22_Env._Windows_page"></a><img height="415" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0022.jpg" width="552"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_22_Env._Windows_page"></a><img height="415" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0022.jpg' | relative_url }}" width="552"/></p>
   <p> </p>
   <p class="Fig_numb">Env. Windows page</p>
   <h2><a id="2_11_Generate_DB"></a>Generate DB</h2>
-  <p>In &#39;Generate DB&#39; page, click <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> and correct any errors. Do not worry that certain material properties are not defined for Material 1 as they should be defined for the individual
+  <p>In &#39;Generate DB&#39; page, click <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/> and correct any errors. Do not worry that certain material properties are not defined for Material 1 as they should be defined for the individual
     phases of the mixture. Also do not worry that emissivity is not defined as the convection definition combines the convection with the emissivity. If you have data that you know to be more accurate, then you should use it and define these individually
     but in this case, this is a second order effect compared to the quench and the numbers as defined will be fine for this lab.</p>
   <p> </p>
-  <p>Click on the <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. Observe the message in Message tab informing database generation status.</p>
+  <p>Click on the <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> button to generate the database. Observe the message in Message tab informing database generation status.</p>
   <h2><a id="2_12_Running_Simulation"></a>Running Simulation</h2>
-  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg" width="146"/>  button above the operation tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_2DINDL2_23_Run_Simulation_Window"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>23.</a> Use the default <strong>Continue Run</strong> option
-    to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}" width="146"/>  button above the operation tree. Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog as shown in <a href="#Fig_2DINDL2_23_Run_Simulation_Window"><span data-keyref="Application- 2D_Induction_Heating_Lab2">Fig. 2DINDL2.</span>23.</a> Use the default <strong>Continue Run</strong> option
+    to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_23_Run_Simulation_Window"></a><img height="415" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0023.jpg" width="552"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_23_Run_Simulation_Window"></a><img height="415" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0023.jpg' | relative_url }}" width="552"/></p>
   <p> </p>
   <p class="Fig_numb">Run Simulation Window</p>
   <p> </p>
-  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked. User can view the Induction
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked. User can view the Induction
     heating process as the simulation proceeds to the specified Step definition from Simulation graphics.</p>
   <h2><a id="2_13_Post_Processing"></a>Post Processing</h2>
-  <p>When the simulation is completed, review the results by switching to Post mode using the <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> button above the Simulation tool bar.</p>
-  <p>In Step Browser click on <strong>All </strong>button, Plot <strong>Temperature </strong><strong>state </strong><strong>variable</strong>, Play the animation by clicking on  <img src="../../../../assets/icons/pre_icons/mo_preview_play_button.jpg"/> and
+  <p>When the simulation is completed, review the results by switching to Post mode using the <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> button above the Simulation tool bar.</p>
+  <p>In Step Browser click on <strong>All </strong>button, Plot <strong>Temperature </strong><strong>state </strong><strong>variable</strong>, Play the animation by clicking on  <img src="{{ '/assets/icons/pre_icons/mo_preview_play_button.jpg' | relative_url }}"/> and
     observe the temperature distribution.</p>
   <p> </p>
   <p>At the beginning, the simulation shows the workpiece heating up and then a reasonably steady state temperature following the coil as it goes up until you get to the top of the workpiece. You will see that the temperature distribution on the top gets
     and stays hot. This will require the heat to be turned off at the top at appropriate points. Also, the temperature is too low. Few iterations may be required to change the temperature profile to give a reasonable heating depth.</p>
   <p> </p>
-  <p style="text-align: center"><a id="Fig_2DINDL2_24_Temperature_distribution_at_the_last_step"></a><img height="374" src="../../../../assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0024.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig_2DINDL2_24_Temperature_distribution_at_the_last_step"></a><img height="374" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0024.jpg' | relative_url }}" width="750"/></p>
   <p> </p>
   <p class="Fig_numb">Temperature distribution at the last step</p>
   <p> </p>
