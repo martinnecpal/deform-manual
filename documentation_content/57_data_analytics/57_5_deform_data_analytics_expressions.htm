@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "12.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>57.5. DEFORM Data Analytics Expressions</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>57.5. DEFORM Data Analytics Expressions</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/57_data_analytics/57_5_deform_data_analytics_expressions.css"/>
+<meta name="brsnext" value="Documentation_content/57_Data_Analytics/57_6_DEFORM_Data_Analytics_Data_Modelin.htm"/><meta name="brsprev" value="Documentation_content/57_Data_Analytics/57_4_DEFORM_Data_Analytics_Plotting_Data.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="57.5. DEFORM Data Analytics Expressions">
+        <span>57.5. DEFORM Data Analytics Expressions</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>57.5. DEFORM Data Analytics Expressions</h1>
+  <p>Expressions are simply equations used to derive new data from existing data. A simple use of an expression would be to convert units. Expressions are defined as equations using column names as variables. A resulting value is computed for row of data
+    and the result is placed in the expression’s column.</p>
+  <p> </p>
+  <p>The standard math symbols are available for addition (+), subtraction (-), multiplication (*) and division (/). The ‘^’ symbol is used for exponent (i.e., x2 would be x^2). Common math function such as sin, cos, tan, abs (absolute value) are also available.
+    A full list is in the Functions menu at the bottom of the expressions property page. A list of column names (variables) is in the Variables menu at the bottom of the expressions property page. Selecting items from these menus adds the function or
+    variable to the expression at the text cursor location. This saves the trouble of typing them in and avoids the potential of typing error.</p>
+  <p><br/> An expression can be used as a model and in a sense an expression is a model.</p>
+  <p> </p>
+  <p>The only difference is that an expression does not need to be trained. All parameters are known.</p>
+  <p><br/> A defined model can be used as a function in an expression. A list of column names (variables) is in the Variables menu at the bottom of the expressions property page.</p>
+  <p><br/> Expressions serve several purposes. They can be used to perform unit conversions, transform from one coordinate system to another, scale data, compute differences between data columns, etc. Expressions can also be used to make predictions from
+    models and validate models (more on this in <a href="57_6_deform_data_analytics_data_modelin.htm">section 57.6</a>)</p>
+  <p><br/>
+    <a href="#Fig_57_5_1_Setting a column usage to expression"><span data-keyref="Chapter_57_5_DEFORM_Data_Analytics_Expressions">Fig. 57.5.</span>1</a> – <a href="#Fig_57_5_4_Evaluating_the_expression"><span data-keyref="Chapter_57_5_DEFORM_Data_Analytics_Expressions">Fig. 57.5.</span>4</a>.
+    shows using an expression to convert temperature units.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_57_5_1_Setting a column usage to expression"></a><img height="478" src="../../assets/images/data_analytics/57_5_deform_data_analytics_expressions/57_5_image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Setting a column usage to expression</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_5_2_Selecting_columns_for_the_expression_to_operate_on"></a><img height="482" src="../../assets/images/data_analytics/57_5_deform_data_analytics_expressions/57_5_image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting columns for the expression to operate on</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_5_3_Selecting_math_function"></a><img height="484" src="../../assets/images/data_analytics/57_5_deform_data_analytics_expressions/57_5_image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting math function</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_5_4_Evaluating_the_expression"></a><img height="477" src="../../assets/images/data_analytics/57_5_deform_data_analytics_expressions/57_5_image0004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Evaluating the expression<br/>
+  </p>
+
+</body></html>

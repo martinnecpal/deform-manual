@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix VIII: Preventing leakage of nodes in sectioned simulations</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix VIII: Preventing leakage of nodes in sectioned simulations</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_viii.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_IX_Generating_a_Circular_Geometry_With_a_Hole.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_VII__Checking_the_Forming_loads_of_a_simulation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix VIII: Preventing leakage of nodes in sectioned simulations">
+        <span>Appendix VIII: Preventing leakage of nodes in sectioned simulations</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix VIII: Preventing leakage of nodes in sectioned simulations</h1>
+  <p>In many cases, To prevent the leaking of nodes about symmetry planes, requires extra information so that the simulation engine knows the exact definition of the symmetric condition. This is done by two definitions:</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>The deforming body needs a symmetric plane definition on the cut surfaces.</p>
+    </li>
+    <li>
+      <p>The rigid geometry require a symmetric surface definition on their cut surfaces.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p>In the example used for this section, the spike simulation (See <a href="#Fig_AVIII_1_Spike_problem_being_used_as_the_example_case"><span data-keyref="Appendix_VIII_preventing_Leakage">Fig. AVIII.</span>1.</a>) will be used to demonstrate this capability.
+     Note that the die geometries and the workpiece mesh are the same size. What follows is a step-by-step procedure that shows how this simulation is constructed in order to allow the geometry and mesh to coincide in size.</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong></p>
+  <p class="Note_text">If there is a difference in the size of the die versus the workpiece in the symmetry surfaces, it is safer to error in making the dies larger.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AVIII_1_Spike_problem_being_used_as_the_example_case"></a><img src="../../assets/images/appendices/appendix_viii_preventing_leakage/image0001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Spike problem being used as the example case</p>
+  <p> </p>
+  <p><strong>Step 1:  Define symmetric surface on workpiece cut faces to allow for proper meshing.</strong></p>
+  <p>On the workpiece geometry, the cut faces should have symmetric surface defined prior to the meshing step (See <a href="#Fig_AVIII_2_Adding_symmetric_surface_to_the_part_helps_the_part_maintain_the_centerline_during_meshing"><span data-keyref="Appendix_VIII_preventing_Leakage">Fig. AVIII.</span>2.</a>).
+    This option is available from the geometry selection under the symmetric surface tab. This information allows the mesh generator to maintain a tight seam of nodes on the centerline.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AVIII_2_Adding_symmetric_surface_to_the_part_helps_the_part_maintain_the_centerline_during_meshing"></a><img src="../../assets/images/appendices/appendix_viii_preventing_leakage/image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding symmetric surface to the part helps the part maintain the centerline during meshing</p>
+  <p> </p>
+  <p><strong>Step 2:  Define symmetry surface boundary condition on cut faces of workpiece to maintain proper symmetry.</strong></p>
+  <p>After the mesh has been generated for the workpiece, the nodes on the symmetry surfaces must be given a boundary condition to hold them in the plane.  This is done under the BCC window. Use the symmetry plane selection and define symmetry planes for
+    both cut surfaces (See <a href="#Fig_AVIII_3_Adding_symmetry_planes_in_the_boundary_condition_window_"><span data-keyref="Appendix_VIII_preventing_Leakage">Fig. AVIII.</span>3.</a>). After this, the workpiece boundary conditions are taken care of
+    in terms of leakage.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AVIII_3_Adding_symmetry_planes_in_the_boundary_condition_window_"></a><img src="../../assets/images/appendices/appendix_viii_preventing_leakage/image0003.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding symmetry planes in the boundary condition window maintains the nodes in a planar condition</p>
+  <p> </p>
+  <p><strong>Step 3:  Add symmetric surface to die geometry cut surfaces.</strong></p>
+  <p>Adding symmetric surface condition to the geometry of both the top die (See <a href="#Fig_AVIII_4_Adding_a_symmetric_surface_to_the_top_die_prevents"><span data-keyref="Appendix_VIII_preventing_Leakage">Fig. AVIII.</span>4.</a>) and the bottom die completes
+    the specification that allows the dies and workpiece to be the same size.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AVIII_4_Adding_a_symmetric_surface_to_the_top_die_prevents"></a><img src="../../assets/images/appendices/appendix_viii_preventing_leakage/image0004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Adding a symmetric surface to the top die prevents any leakage from occurring</p>
+  <p> </p>
+  <p><strong></strong></p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../pre_processor/12_geometry_modelling/12_geometry_modelling.htm">Object Geometry</a></p>
+  <p><a href="../pre_processor/14_boundary_conditions/14_boundary_conditions.htm">Boundary Conditions</a></p>
+
+</body></html>

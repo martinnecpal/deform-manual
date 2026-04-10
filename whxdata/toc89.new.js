@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"2D Rivet Lab","type":"item","tilePath":"","url":"documentation_content/applications/55_applications/55_rivet_installation/2d_rivet_lab.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

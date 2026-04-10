@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"2D Boolean Trimming Lab","type":"item","tilePath":"","url":"documentation_content/applications/55_applications/55_material_removal/2d_boolean_trimming_lab.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

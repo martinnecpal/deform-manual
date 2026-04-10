@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.18.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>SIZESH (2D3D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>SIZESH (2D3D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/s/s_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/S/SLDERR.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/S/SIZEMD.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SIZESH (2D3D)">
+        <span>SIZESH (2D3D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>SIZESH</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Object data)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"><u>Update History:</u></p>
+          <p class="P_10">v11 – Particle shape information has been introduced.</p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 09-08-2013</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">SIZESH  Object, FieldWidth, Nelem, DefSize</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Object</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Object Number</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">FieldWidth</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">The field width of this state variable</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">1</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Nelem</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of element</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DefSize</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Default FieldWidth value of all elements</p>
+          <p class="P_10">not listed in the element data</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">SIZESH specifies the particle shape information.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">REMARKS</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Depending on a selection of particle size mode of SIZEMD, SIZESH will store the following particle information at each element in object.</p>
+          <p class="P_10">1) SizeMode = Spherical particles</p>
+          <p class="P_10">- Particle size</p>
+          <p class="P_10"> </p>
+          <p class="P_10">2) SizeMode  = Secondary alpha lath</p>
+          <p class="P_10">- Thickness of secondary alpha</p>
+          <p class="P_10">- Starting temperature</p>
+          <p class="P_10">- Starting primary alpha Volume fraction</p>
+          <p class="P_10"> </p>
+          <p class="P_10">3) SizeMode  = Grain boundary alpha</p>
+          <p class="P_10">- Thickness of grain boundary alpha</p>
+          <p class="P_10">- Starting temperature of grain boundary alpha</p>
+          <p class="P_10"> </p>
+          <p class="P_10">4) SizeMode  = Side plate alpha</p>
+          <p class="P_10">- Thickness of side plate alpha</p>
+          <p class="P_10">- Assumed spacing of grain boundary alpha</p>
+          <p class="P_10">- Starting temperature of grain boundary</p>
+          <p class="P_10">- Starting temperature of side plate alpha</p>
+          <p class="P_10"> </p>
+          <p class="P_10">5) SizeMode  = Gamma prime Nickel</p>
+          <p class="P_10">- Particle size</p>
+          <p class="P_10"> </p>
+          <p class="P_10">Applicable object types: <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic">Plastic</a>, <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic">Elastoplastic</a>,
+            and <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.4._Porous">Porous</a>.</p>
+          <p class="P_10">Applicable simulation type: <a href="../../operation_templates/37_heat_treatment/37_introduction_to_heat_treatment.htm">Heat treatment</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">Keywords: <a href="sizemd.htm">SIZEMD</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

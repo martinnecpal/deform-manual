@@ -1,0 +1,232 @@
+/*Created with Adobe RoboHelp 2019.*/
+body {
+  font-family: Calibri;
+  counter-reset: p\.fig_numb h2 h3 p\.fig_name h3\.h3_28_2_ p\.table_numb;
+}
+h1 {
+  font-weight: bold;
+  font-size: 24.0pt;
+  font-family: Arial;
+}
+h2 {
+  font-weight: bold;
+  font-size: 20pt;
+  font-family: Arial;
+}
+h3 {
+  font-weight: bold;
+  font-size: 16pt;
+  font-family: Arial;
+}
+h4 {
+  font-weight: bold;
+  font-size: 12.0pt;
+}
+h5 {
+  font-weight: bold;
+  font-size: 12pt;
+  font-family: Arial;
+}
+h6 {
+  font-weight: bold;
+  font-size: 12pt;
+  font-family: Arial;
+}
+p {
+  font-size: 12pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  text-align: justify;
+  line-height: 1.5;
+  font-family: Arial;
+}
+p.Fig_numb {
+  font-size: 10pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  text-align: center;
+  line-height: 1;
+  font-family: Arial;
+  font-weight: bold;
+}
+p.Table_numb {
+  font-size: 10pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  text-align: center;
+  line-height: 1;
+  font-family: Arial;
+  font-weight: bold;
+}
+p.Fig_name {
+  font-size: 10pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  text-align: center;
+  line-height: 1;
+  font-family: Arial;
+  font-weight: bold;
+}
+p.Note_text {
+  font-size: 11pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  text-align: justify;
+  line-height: 1.5;
+  font-family: 'Times New Roman';
+  font-style: italic;
+}
+a.expandspot {
+  color: #008000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+span.expandtext {
+  font-style: italic;
+  font-weight: normal;
+  color: #ff0000;
+}
+a.dropspot {
+  cursor: pointer;
+  color: #008000;
+  font-style: italic;
+  text-decoration: none;
+}
+a.glossterm {
+  color: #800000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+span.glosstext {
+  font-style: italic;
+  font-weight: normal;
+  color: #0000ff;
+}
+ol {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+a.minitoc-caption {
+  text-decoration: none;
+  color: initial;
+  font-weight: bold;
+  font-size: 12pt;
+}
+p.minitoc-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+ol.minitoc-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+ol.minitoc-list ol {
+  list-style: none;
+}
+a.minitoc-list-item {}
+p.seealso-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+ol.seealso-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+a.seealso-list-item {}
+p.reltopics-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+ol.reltopics-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+a.reltopics-list-item {}
+p.Fig_numb::before {
+  counter-increment: p\.fig_numb;
+  content: "Fig. 39."counter(p\.fig_numb, decimal)".";
+  padding-right: 0.5rem;
+}
+p.Table_numb::before {
+  counter-increment: p\.fig_numb;
+  content: "Table. 39."counter(p\.table_numb, decimal)".";
+  padding-right: 0.5rem;
+  counter-increment: p\.table_numb;
+}
+p.Fig_name::before {
+  counter-increment: p\.fig_numb;
+  content: ;
+  padding-right: 0rem;
+  counter-increment: p\.fig_name;
+}
+h2::before {
+  counter-increment: h2;
+  content: "39."counter(h2, decimal)".";
+  padding-right: 0.5rem;
+}
+ul.Disc {
+  list-style-type: disc;
+}
+h3::before {
+  counter-increment: h3;
+  content: "39.1."counter(h3, decimal)".";
+  padding-right: 0.5rem;
+}
+ol.Decimal {
+  list-style-type: decimal;
+  counter-reset: item1;
+  list-style: none;
+  padding-left: 40px;
+  margin-left: 0px;
+}
+ul.Circle {
+  list-style-type: circle;
+  list-style: none;
+  counter-reset: item1;
+  padding-left: 40px;
+  margin-left: 32px;
+}
+ul.Circle>li:before {
+  counter-increment: item1;
+  content: counter(item1, circle);
+  text-align: right;
+  position: absolute;
+  left: -52px;
+  margin-right: 12px;
+  width: 40px;
+  overflow: hidden;
+  margin-left: 4px;
+  font-size: 14pt;
+  font-family: Arial;
+}
+ul.Circle>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Decimal>li {
+  position: relative;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+ol.Decimal>li:before {
+  counter-increment: item1;
+  content: counter(item1, decimal)".";
+  text-align: right;
+  position: absolute;
+  left: -48px;
+  margin-right: 8px;
+  width: 40px;
+  overflow: hidden;
+  font-family: Arial;
+  font-size: 12pt;
+}

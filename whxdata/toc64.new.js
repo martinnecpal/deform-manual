@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"46.1. Copy Mirroring","type":"item","tilePath":"","url":"documentation_content/operation_templates/46_copy_mirroring/46_1_copy_mirroring.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

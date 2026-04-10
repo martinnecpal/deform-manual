@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.16.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Cup Drawing Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Cup Drawing Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_3_cup_drawing_labs/3d_cup_drawing_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_Stress_Relaxation/55_Stress_Relaxation_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_Sheet_Forming/2D_Cup_Drawing_Lab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Cup Drawing Lab">
+        <span>3D Cup Drawing Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3D Cup Drawing Lab</h1>
+  <p>In this Lab we will be setting up 3D Cup Drawing </p>
+  <p> </p>
+  <p><a href="3d_cup_drawing_lab.htm#1_1_Creating_a_New_Problem">1.1. Creating a New Problem</a></p>
+  <p><a href="3d_cup_drawing_lab.htm#1_2_Simulation_controls">1.2. Simulation controls</a></p>
+  <p><a href="3d_cup_drawing_lab.htm#1_3_Pressure_Pad">1.3. Pressure Pad</a></p>
+  <p><a href="3d_cup_drawing_lab.htm#1_4_Object">1.4. Object</a></p>
+  <p style="margin-left: 20px"><a href="3d_cup_drawing_lab.htm#1_4_1_Workpiece">1.4.1. Workpiece</a></p>
+  <p style="margin-left: 20px"><a href="3d_cup_drawing_lab.htm#1_4_2_Punch">1.4.2. Punch</a></p>
+  <p style="margin-left: 20px"><a href="3d_cup_drawing_lab.htm#1_4_3_Die">1.4.3. Die</a></p>
+  <p style="margin-left: 20px"><a href="3d_cup_drawing_lab.htm#1_4_4_Pressure_Pad">1.4.4. Pressure Pad</a></p>
+  <p><a href="3d_cup_drawing_lab.htm#1_4_Scheduled_Positioning">1.5. Scheduled Positioning</a></p>
+  <p><a href="3d_cup_drawing_lab.htm#1_6_Contact">1.6. Contact</a></p>
+  <p><a href="3d_cup_drawing_lab.htm#1_7_Stopping_Controls">1.7. Stopping Controls</a></p>
+  <p><a href="3d_cup_drawing_lab.htm#1_8_Step_controls_Definition">1.8. Step controls Definition</a></p>
+  <p><a href="3d_cup_drawing_lab.htm#1_9_Generate_Database">1.9. Generate Database</a></p>
+  <p><a href="3d_cup_drawing_lab.htm#1_10_Running_Simulation">1.10. Running Simulation</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_a_New_Problem"></a>Creating a New Problem</h2>
+  <p>On a Windows machine, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select DEFORM
+    GUI Main v1x.x. from the menu. The <strong>DEFORM GUI Main</strong> window will appear as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_1_DEFORM_GUI_Main"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_1_DEFORM_GUI_Main"></a><img height="435" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DEFORM GUI Main</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_2_New_Problem_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>2.</a> Select &quot; <strong>I</strong><strong>ntegrated Manufacturing Process</strong>&quot;
+    radio button and units system as &quot;<strong>English</strong>&quot; radio button in units field. Define Problem Name as &quot;<strong></strong><strong>3DCup</strong><strong></strong>&quot; and make sure the “<strong>Show option dialog</strong>”
+    check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a
+    new problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_2_New_Problem_page"></a><img height="419" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> New Problem page</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘<strong>3DCup</strong>’
+    as the project name. Click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> to continue to open the operation.<br/>
+    <br/> Add 3D Forming operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button available next to 3D Forming or user can also add the operation by
+    drag and drop into the Operation Editor (see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_3_Opened_3D_Forming_operation"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>3.</a>). </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_3_Opened_3D_Forming_operation"></a><img height="426" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">GUI after adding 3D Forming operation</p>
+  <h2><a id="1_2_Simulation_controls"></a>Simulation controls</h2>
+  <p>In this operation, we will be setting up simple Isothermal operation hence in Simulation control page Sim Mode tab, turn off the Heat transfer mode check box (see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_4_Simulation_control_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>4.</a>).
+    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_4_Simulation_control_page"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image003.jpg" style="text-align: center;"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation control page</p>
+  <h2><a id="1_3_Pressure_Pad"></a>Material list</h2>
+  <p>In Material page, import the material “<strong>steel_cold_70F_20C__e.key</strong>” from DEFORM  installation folder “\2D\Labs\CupDrawing\”  directory. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button. </p>
+  <h3 class="h3_1_3_"><strong>Defining Anisotropy yield model:</strong></h3>
+  <p>In 3D models, planar anisotropic behaviour can be captured by setting the yield criteria to “<strong>Hill’s quadratic (R value</strong>)” (see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_5_Steel,_COLD_[70F(20C)]_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>5.</a>)
+    and then defining R0, R45 and R90 parameters. Changing the default values to those shown below will result in earring. To change the values, click on Hill’s quadratic (R value) and define values for R0, R45 and R90 as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_6_Hill’s_quadratic_(R_value)_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>6.</a>    The R0, R45 and R90 are aligned to X, XY and Y directions in global space by default. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_5_Steel,_COLD_[70F(20C)]_page"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Steel, COLD [70F(20C)] page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_6_Hill’s_quadratic_(R_value)_page"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image005.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Hill’s quadratic (R value) page</p>
+  <h2><a id="1_4_Object"></a>Object</h2>
+  <p>In object page, click on <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button and add 4 objects in list as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1__7_Object_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>7.</a> Click
+    on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1__7_Object_page"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image006.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Object page</p>
+  <h3><a id="1_4_1_Workpiece"></a>Workpiece</h3>
+  <p>In the Workpiece page, keep the object name as <strong>Workpiece </strong>and object temperature as 68F. Select object type as <strong>Elasto-plastic</strong> (see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_8_Workpiece_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>8.</a>).
+    Click  <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_8_Workpiece_page"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece page</p>
+  <h4>Create a Workpiece geometry</h4>
+  <p>We will generate workpiece geometry using geometry primitives. Click on <img src="../../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> label in geometry page and select “<strong>Cylinder</strong>” from “<strong>Geometry Primitive</strong>”
+    window. Define the cylinder <strong>Radius (R) as 2.95276</strong>, <strong>Height (H) as 0.118</strong><strong>11,</strong> <strong>Start angle as 90</strong> with <strong>Revolve angle 45</strong> and <strong>Sections as 45</strong> (see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_9_Defining_the_Workpiece_geometry"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>9.</a>)
+    to create a 45 degree sheet metal blank. Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to Close the Geometry Primitive window. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_9_Defining_the_Workpiece_geometry"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image008.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining the Workpiece geometry</p>
+  <h4>Define Planar Symmetry</h4>
+  <p>Since the object is symmetry, we will be defining planar symmetry to the sheet metal blank. Click on <img src="../../../../assets/icons/pre_icons/mo_symmetry_planes_label.jpg"/> label. Select Planar Symmetry and select cut surfaces of the blank as
+    shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_10_Defining_the_Workpiece_Symmetry"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>10.</a> Click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg" width="73"/> button to close the &quot;Symmetry Planes <strong>&quot;</strong> window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_10_Defining_the_Workpiece_Symmetry"></a><img height="423" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image009.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Defining the Workpiece Symmetry</p>
+  <h4>Setup Brick Mesh</h4>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_setup_brick_mesh_label.jpg"/> label from Geometry page. Select Extrude as brick mesh type and then define extrusion “<strong>Start</strong><strong> </strong><strong>Surface</strong>” (bottom
+    face) and click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/>, select extrusion “<strong>End Surface</strong>” (top face) and click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/>, see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_11_Setup_Brick_Mesh"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>11.</a>    This is necessary for extruded brick mesh generation. Click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg" width="73"/> button to close &quot;Setup Brick Mesh&quot; window. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button until Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_11_Setup_Brick_Mesh"></a><img height="422" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image010.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Setup Brick Mesh</p>
+  <h4>Generating Mesh</h4>
+  <p>We will have 3 layers in thickness direction hence in Mesh page, select <strong>Brick mesh</strong> and define <strong>uniform thickness # of layers</strong> as <strong>3</strong>, see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_12_Brick_mesh_settings_for_Workpiece"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>12.</a>     For 2D cross-section mesh, define <strong>number of elements</strong> as <strong>1000</strong>, set <strong>thickness elements</strong> to <strong>1</strong> and <strong>Size ratio</strong> as <strong>1</strong>, see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_13_2D_cross_section_mesh_settings_for_Workpiece"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>13.</a>    Go to “<strong>Advanced settings</strong>” and reduce the node addition <strong>Distance tolerance</strong> to <strong>1e-05</strong>,(see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_14_2D_mesh_Advanced_settings_for_Workpiece_and_Generated_3D_Mesh"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>14.</a>).
+    Click on <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button and click <img src="../../../../assets/icons/pre_icons/mo_yes_button.jpg"/> in &quot;Default Boundary Conditions&quot; popup. The Mesh should like a shown in
+    <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_14_2D_mesh_Advanced_settings_for_Workpiece_and_Generated_3D_Mesh"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>14.</a> Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>  button to Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_12_Brick_mesh_settings_for_Workpiece"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image011.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Brick mesh settings for Workpiece</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_13_2D_cross_section_mesh_settings_for_Workpiece"></a><img height="550" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image012.jpg" width="441"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D cross section mesh settings for Workpiece</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_14_2D_mesh_Advanced_settings_for_Workpiece_and_Generated_3D_Mesh"></a><img height="425" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D mesh Advanced settings for Workpiece and Generated 3D Mesh</p>
+  <p> </p>
+  <h4> Assign Material</h4>
+  <p>Select the &quot;<strong>Steel,COLD[70F(20C)]</strong>&quot; material in material list which is already available for Workpiece. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button to BCC.</p>
+  <h4>Boundary Conditions</h4>
+  <p>Verify symmetry planes defined on the cut faces in Boundary Conditions page, symmetry BCC (see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_14_2D_mesh_Advanced_settings_for_Workpiece_and_Generated_3D_Mesh"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>15.</a>)
+    are assigned by default during mesh generation as symmetry planes were defined in Geometry page. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button until top die.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_15_Symmetry_Plane"></a><img height="357" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image014.jpg" width="750"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb"> Symmetry Plane</p>
+  <h3><a id="1_4_2_Punch"></a>Punch</h3>
+  <p>In the Top die object page, change the object name to <strong>Punch </strong>and make sure object type is <strong>Rigid </strong>(see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_16_Punch_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>16.</a>).
+    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button to Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_16_Punch_page"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image015.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Punch page</p>
+  <p> </p>
+  <h4 class="h4_1_4_2_">Importing Punch Geometry</h4>
+  <p>In Punch’s Geometry page, click on <img src="../../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> label and select “<strong>Revolve</strong>” <img height="24" src="../../../../assets/icons/pre_icons/mo_revolve_3d_geometry_primitive.jpg" width="24"/> from “Define Primitive” window, import Geometry <strong>cup_draw-op1-punch-english.dxf </strong>from DEFORM installation folder “\2D\Labs\CupDrawing\” directory using &quot;Load Cross section&quot; option. Set the revolve angle to 360
+    degrees about the Z axis with 120 sections as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL_1_17_Punch_Geometry"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>17.</a> The Punch geometry should look like as shown in
+    <a href="3d_cup_drawing_lab.htm#Fig_3DCDL_1_17_Punch_Geometry"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>17.</a> Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button to close the primitive window. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button until Movement Page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL_1_17_Punch_Geometry"></a><img height="427" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Punch Geometry</p>
+  <p> </p>
+  <h4 class="h4_1_4_2_">Assign Movement for Punch</h4>
+  <p>Select “<strong>Speed</strong>” under the movement options. Be sure movement is in the “<strong>-Z”</strong> direction. Enter a speed of <strong>10</strong> in/sec as shown in<a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_18_Punch_Movement_page">  <span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>18.</a> Click
+    on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button until Property page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_18_Punch_Movement_page"></a><img height="500" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image017.jpg" width="427"/></p>
+  <p> </p>
+  <p class="Fig_numb">Punch Movement page</p>
+  <p> </p>
+  <h4 class="h4_1_4_2_">Reference point on Punch </h4>
+  <p>In property page, select “<strong>Reference</strong>” tab and enter “<strong>0</strong>” for X, Y and Z coordinates as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL_1_19_Punch_Property_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>19.</a>    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button until Bottom Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL_1_19_Punch_Property_page"></a><img height="423" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Reference point on Punch </p>
+  <h3><a id="1_4_3_Die"></a>Die</h3>
+  <p>In the Bottom die object page, change the object name to<strong> Die</strong> and make sure object type is <strong>Rigid </strong>(see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_20_Die_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>20.</a>).
+    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button to Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_20_Die_page"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image019.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Die page</p>
+  <h4 class="h4_1_4_3_">Importing Die Geometry</h4>
+  <p>In Die’s Geometry page, click on <img src="../../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> label and select “<strong>Revolve</strong>” <img height="24" src="../../../../assets/icons/pre_icons/mo_revolve_3d_geometry_primitive.jpg" width="24"/> from “Define Primitive” window, import <strong>cup_draw-op1-die-english.dxf</strong> from “\2D\Labs\CupDrawing\” folder. Set the <strong>revolve angle</strong> to <strong>360</strong> degrees about the <strong>Z</strong> axis with <strong>120</strong>    <strong>sections </strong>as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_21_Die_Geometry"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>21.</a> The Die geometry should look like as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_21_Die_Geometry"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>21.</a> Click
+    on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button to close the primitive window. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button until Property page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_21_Die_Geometry"></a><img height="426" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Die Geometry</p>
+  <h4 class="h4_1_4_3_">Reference point on Die</h4>
+  <p>In Die’s property page, select “<strong>Reference</strong>” tab and enter the values<strong> 5</strong>, <strong>5 </strong>and <strong>-4</strong> to X, Y and Z coordinates respectively (see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_22_Die_property_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>22.</a>).
+    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button until Object4 object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_22_Die_property_page"></a><img height="425" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image021.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Reference point on Die</p>
+  <h3><a id="1_4_4_Pressure_Pad"></a>Pressure Pad</h3>
+  <p>In the Object4 object page, change the object name to <strong>Pressure Pad</strong> and make sure object type is <strong>Rigid </strong>(see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_23_Pressure_Pad_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>23.</a>).
+    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button to Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_23_Pressure_Pad_page"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image022.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Pressure Pad page</p>
+  <h4 class="h4_1_4_4_">Importing Pressure Pad Geometry</h4>
+  <p>In Pressure Pad’s Geometry page, click on <img src="../../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> label and select “<strong>Revolve</strong>” <img height="24" src="../../../../assets/icons/pre_icons/mo_revolve_3d_geometry_primitive.jpg" width="24"/> from “Define Primitive” window, import <strong>cup_draw-op1-pressure_pad-english.dxf</strong> from “\2D\Labs\CupDrawing\” folder. Set the <strong>revolve </strong><strong>angle </strong>to <strong>360 </strong>degrees about the <strong>Z</strong>    axis with <strong>120 </strong><strong>sections </strong>as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_24_Pressure_Pad_Geometry"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>24.</a> The Pressure Pad geometry should
+    look like as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_24_Pressure_Pad_Geometry"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>24.</a>Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button
+    to close the primitive window. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button until Movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_24_Pressure_Pad_Geometry"></a><img height="426" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image023.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Pressure Pad Geometry</p>
+  <h4 class="h4_1_4_4_">Assign Movement for Pressure Pad</h4>
+  <p>In Movement page, select movement type as “<strong>Sliding die</strong>”. The preload exerted on Pressure Pad is 8 klb, since we are modelling 1/8th symmetry we will define <strong>preload </strong>as <strong>1klb</strong>. Set <strong>Maximum displacement</strong>    as <strong>2 in </strong>and movement direction as <strong>+Z </strong><strong>direction </strong>which is a spring compression direction, see <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_25_Pressure_Pad_Movement_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>25.</a>    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button until Controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_25_Pressure_Pad_Movement_page"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image024.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Pressure Pad Movement settings</p>
+  <h2><a id="1_4_Scheduled_Positioning"></a>Scheduled Positioning </h2>
+  <p>Add first schedule position as <strong>interference positioning</strong> of the <strong>punch </strong>to the <strong>workpiece </strong>in the <strong>–Z</strong> direction with <strong>interference tolerance</strong> of <strong>1e-06</strong>. Add
+    second scheduled positioning as <strong>interference positioning</strong> of the <strong>pressure pad</strong> to the <strong>workpiece</strong> in the <strong>–Z</strong> direction with <strong>interference tolerance</strong> of <strong>1e-06</strong>,
+    turn on the “<strong>Update</strong><strong> sliding die current displacement</strong>” and “<strong>Update</strong><strong> current stroke</strong>” check boxes. After completing the definition, the scheduled positioning page looks like as shown
+    in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_26_Schedule_Positioning_page_after_completion_of_positioning_definition"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>26.</a> Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button until Contact page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_26_Schedule_Positioning_page_after_completion_of_positioning_definition"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image025.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Schedule Positioning page after completion of positioning definition</p>
+  <h2><a id="1_6_Contact"></a>Contact</h2>
+  <p>In Contact page, click on <img src="../../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/> to automatically define all relevant contact pairs. Click on <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> for one
+    of the pairs and select <strong>hybrid friction</strong> with <strong>coulomb friction</strong> as <strong>0.05</strong> and <strong>shear friction</strong> as <strong>0.12 </strong>as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_27_Hybrid_Friction_model_definition"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>27.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button to close the “Inter-Object Data Definition” window. In “Contact” page click on <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> to apply same
+    conditions to all contact pairs. Click on <img src="../../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> button to calculate default contact tolerance value and Generate contact by clicking on <img src="../../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> button. Set the <strong>scheduled contact tolerance </strong>to <strong>0.00001 </strong>as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_28_Contact_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>28.</a> Click
+    on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button until Stopping controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_27_Hybrid_Friction_model_definition"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image026.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Hybrid Friction model definition</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_28_Contact_page"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image027.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Contact page</p>
+  <h2><a id="1_7_Stopping_Controls"></a>Stopping Controls</h2>
+  <p>In Stopping Controls page, define a die distance stopping control based on the reference points of the punch and die. Select the <strong>Punch </strong>object for “<strong>Reference 1”</strong> and the <strong>Die </strong>object as “<strong>Reference 2</strong>”.
+    “<strong>Method</strong>” should be set to “<strong>Z Distance</strong>”. Define the stopping distance as <strong>1.375</strong>” as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_29_Stopping_Control_definition"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>29.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_29_Stopping_Control_definition"></a><img height="426" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image028.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Stopping Control definition</p>
+  <p> </p>
+  <h2><a id="1_8_Step_controls_Definition"></a>Step controls Definition</h2>
+  <p>In “Step” page under “<strong>Simulation steps</strong>” <img height="24" src="../../../../assets/icons/pre_icons/mo_simulation_step.jpg" width="24"/>tab, define <strong>number of steps</strong> as <strong>1000 </strong>and <strong>step increment to save</strong>    as <strong>20</strong>. In “<strong>Step increment</strong>” <img height="24" src="../../../../assets/icons/pre_icons/mo_step_increment.jpg" width="24"/> tab, select step definition type as “<strong>die displacement</strong>” and set the step size
+    to <strong>0.005</strong> in/step. Edit “<strong>Max polygon length</strong>” to “<strong>0</strong>” as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_30_Step_increment_page"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>30.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_30_Step_increment_page"></a><img src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image029.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step increment page</p>
+  <p><br/> Select “<strong>Solver settings</strong>” <img height="24" src="../../../../assets/icons/pre_icons/mo_solver_settings.jpg" width="24"/> tab, select solver as “<strong>MUMPS</strong>” and iteration method as “<strong>Newton-Raphson</strong>”.
+    Set the “<strong>Force error</strong>” tolerance to <strong>0.005 </strong>from Advanced tab in Solver Setting as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_31_Solver_settings"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>31</a>. Click
+    on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_31_Solver_settings"></a><img height="160" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image030.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Solver settings</p>
+  <h2><a id="1_9_Generate_Database"></a>Generate Database</h2>
+  <p>When we visit Generate DB page, &quot;Apply Scheduled positioning&quot; popup appears since we defined scheduled positioning data. Click on <img src="../../../../assets/icons/pre_icons/mo_yes_button.jpg"/> button in popup to apply scheduled positioning.</p>
+  <p>The completed setup looks like as shown in <a href="3d_cup_drawing_lab.htm#Fig_3DCDL1_32_Completed_cup_drawing_model_setup"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>32.</a> In Generate DB page, click on the <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. Observe the message in Message tab informing database generation status.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_32_Completed_cup_drawing_model_setup"></a><img height="425" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image031.jpg" style="cursor: nwse-resize;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Completed cup drawing model setup</p>
+  <h2><a id="1_10_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated switch to the Simulation mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the operation tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DCDL1_33_Run_simulation_window"><span data-keyref="Applications-3D_Cup_Drawing_lab">Fig. 3DCDL1.</span>33.</a> Use the default <strong>Continue </strong><strong>Run </strong>option
+    to select “<strong>Continue</strong><strong> from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>radio button <strong> </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation..</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DCDL1_33_Run_simulation_window"></a><img height="293" src="../../../../assets/images/applications/55_3_sheet_forming/3d_cup_drawing_lab/3d_cpdwl1_image033.jpg" width="725"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Run simulation window</p>
+  <p> </p>
+
+</body></html>

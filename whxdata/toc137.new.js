@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Cogging Lab1","type":"item","tilePath":"","url":"documentation_content/labs/cogging_labs/cogging_lab1.htm"},{"name":"Swaging Lab1","type":"item","tilePath":"","url":"documentation_content/labs/cogging_labs/swaging_lab1.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

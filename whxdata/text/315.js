@@ -1,0 +1,1 @@
+rh._.exports({"0":["55_Inertia_Welding_main_Pg"],"1":["\n  ","\n  ","2D Inertia Welding","\n\n"],"2":["Inertia Welding"],"id":"315"})

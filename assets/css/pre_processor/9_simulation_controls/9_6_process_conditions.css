@@ -1,0 +1,214 @@
+/*Created with Adobe RoboHelp 2019.*/
+body {
+  font-family: Calibri;
+  counter-reset: h2 h3 p\.fig_numb h3\.h3_9_6_2_ h3\.h3_9_6_3_ h3\.h3_9_6_4_ p\.fig_name;
+}
+h1 {
+  font-weight: bold;
+  font-size: 24.0pt;
+}
+h2 {
+  font-weight: bold;
+  font-size: 20pt;
+}
+h3 {
+  font-weight: bold;
+  font-size: 16pt;
+  font-family: Arial;
+}
+h3.h3_9_6_2_ {
+  font-weight: bold;
+  font-size: 16pt;
+  font-family: Arial;
+}
+h3.h3_9_6_3_ {
+  font-weight: bold;
+  font-size: 16pt;
+  font-family: Arial;
+}
+h3.h3_9_6_4_ {
+  font-weight: bold;
+  font-size: 16pt;
+  font-family: Arial;
+}
+h4 {
+  font-weight: bold;
+  font-size: 12.0pt;
+  font-family: Arial;
+}
+h5 {
+  font-weight: bold;
+  font-size: 12pt;
+}
+h6 {
+  font-weight: bold;
+  font-size: 12pt;
+}
+p {
+  font-size: 12pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  text-align: justify;
+  line-height: 1.5;
+  font-family: Arial;
+}
+p.Note_text {
+  font-size: 11pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  text-align: justify;
+  line-height: 1.5;
+  font-family: 'Times New Roman';
+  font-style: italic;
+}
+p.Fig_numb {
+  font-size: 10pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  text-align: center;
+  line-height: 1;
+  font-family: Arial;
+  font-weight: bold;
+}
+p.Fig_name {
+  font-size: 10pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  text-align: center;
+  line-height: 1;
+  font-family: Arial;
+  font-weight: bold;
+}
+a.expandspot {
+  color: #008000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+span.expandtext {
+  font-style: italic;
+  font-weight: normal;
+  color: #ff0000;
+}
+a.dropspot {
+  cursor: pointer;
+  color: #008000;
+  font-style: italic;
+  text-decoration: none;
+}
+a.glossterm {
+  color: #800000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+span.glosstext {
+  font-style: italic;
+  font-weight: normal;
+  color: #0000ff;
+}
+ol {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+a.minitoc-caption {
+  text-decoration: none;
+  color: initial;
+  font-weight: bold;
+  font-size: 12pt;
+}
+p.minitoc-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+ol.minitoc-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+ol.minitoc-list ol {
+  list-style: none;
+}
+a.minitoc-list-item {}
+p.seealso-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+ol.seealso-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+a.seealso-list-item {}
+p.reltopics-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+ol.reltopics-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+a.reltopics-list-item {}
+h2::before {
+  counter-increment: h2;
+  content: "9.6."counter(h2, decimal)".";
+  padding-right: 0.5rem;
+}
+h3::before {
+  counter-increment: h3;
+  content: "9.6.1."counter(h3, decimal)".";
+  padding-right: 0.5rem;
+}
+h3.h3_9_6_2_::before {
+  counter-increment: h3;
+  content: "9.6.2."counter(h3\.h3_9_6_2_, decimal)".";
+  padding-right: 0.5rem;
+  counter-increment: h3\.h3_9_6_2_;
+}
+h3.h3_9_6_3_::before {
+  counter-increment: h3;
+  content: "9.6.3."counter(h3\.h3_9_6_3_, decimal)".";
+  padding-right: 0.5rem;
+  counter-increment: h3\.h3_9_6_2_;
+  counter-increment: h3\.h3_9_6_3_;
+}
+h3.h3_9_6_4_::before {
+  counter-increment: h3;
+  content: "9.6.4."counter(h3\.h3_9_6_4_, decimal)".";
+  padding-right: 0.5rem;
+  counter-increment: h3\.h3_9_6_2_;
+  counter-increment: h3\.h3_9_6_3_;
+  counter-increment: h3\.h3_9_6_4_;
+}
+p.Fig_numb::before {
+  counter-increment: p\.fig_numb;
+  content: "Fig. 9.6."counter(p\.fig_numb, decimal)".";
+  padding-right: 0.5rem;
+}
+ul.Disc {
+  list-style-type: disc;
+  counter-reset: item1;
+  list-style: none;
+  padding-left: 40px;
+  margin-left: -4px;
+}
+ul.Disc>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ul.Disc>li:before {
+  counter-increment: item1;
+  content: counter(item1, disc);
+  text-align: right;
+  position: absolute;
+  left: -72px;
+  margin-right: 32px;
+  width: 40px;
+  overflow: hidden;
+}

@@ -1,0 +1,1 @@
+rh._.exports({"0":["56. User Routines in DEFORM"],"1":["\n  ","\n  ","56.1. Introduction to User Routines","\n  ","56.2. 2D User Defined FEM Routines","\n  ","56.3. 3D User Defined FEM Routines","\n  ","56.4. User-Defined Post-Processing Routines","\n\n"],"2":["56. User Routines in DEFORM"],"id":"351"})

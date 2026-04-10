@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"43.1. Shape Rolling Manual","type":"item","tilePath":"","url":"documentation_content/operation_templates/43_shape_rolling/43_1_shape_rolling_manual.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

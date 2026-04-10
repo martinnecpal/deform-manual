@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.14.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>20.4. Tool Wear</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>20.4. Tool Wear</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/20_inter-object_data_definition/20_4_tool_wear.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/20_Inter-object_Data_Definition/20_5_Rigid_Contact.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/20_Inter-object_Data_Definition/20_3_Interface_Resisitivity.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="20.4. Tool Wear">
+        <span>20.4. Tool Wear</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>20.4. Tool Wear</h1>
+  <p><a href="#20_4_1_Archards_model">20.4.1. Archard&#39;s model</a></p>
+  <p><a href="#20_4_2_Usuis_model">20.4.2. Usui&#39;s model</a></p>
+  <p> </p>
+  <p><strong>[2D, 3D]</strong>: Tool wear can be calculated for tools which are in contact with other objects using wear models under Tool wear tab. There are two predefined models for predicting wear: Archard’s model and Usui’s model. In addition to Archard&#39;s
+    and Usui&#39;s models, user routine functionality has been also provided, where in user can evaluate any other model, using the basic model data like, sliding velocity, interface pressure and interface temperature. (See <a href="#Fig_20_4_1_Inter_object_Tool_wear_window"><span data-keyref="Chapter_20_4_Tool_Wear">Fig. 20.4.</span>1.</a>).</p>
+  <p>Wear models can be defined for each pair of objects that come into contact during the process, they are defined under Inter-Object Data.  Wear rates are computed for the master object in a relation, and that object must have a mesh (therefore heat transfer
+    calculations must be activated under Simulation Controls).<strong></strong></p>
+  <p>Typically, the coefficients used for these models should come from a series of calibration experiments. In lieu of calibrated data, standard values can be used to obtain relative wear rates for similar processes. Proper technique for the modelling of
+    coatings and surface treatments (such as nitriding) is still a topic of very active research.  Therefore, comparison of the effects of different surface treatments is difficult without additional data. Contact DEFORM support at <a href="mailto:support@deform.com">support@deform.com</a>    for assistance in finding the latest research in this area. Nonetheless, the following guidelines can be offered:</p>
+  <p>To use tool wear, the following conditions must be met:</p>
+  <ul class="Disc">
+    <li>
+      <p>Thermal calculations must be turned on.</p>
+    </li>
+    <li>
+      <p>The tool should be meshed.</p>
+    </li>
+    <li>
+      <p>The tool should have a hardness value defined under Elements Data<img height="21" src="../../../assets/icons/pre_icons/mo_elemental_data_icon.jpg" width="24"/><img src="../../../assets/icons/pre_icons/arrow_front.jpg"/>Hardness.</p>
+    </li>
+    <li>
+      <p>The tool wear model should be turned on for the respective relation in the inter-object dialog and non-zero values should be placed for the tool wear model coefficients.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p class="Note_text"><u><strong>Note:</strong></u></p>
+  <p><em>From DEFORM v11.0 the material hardness data must be specified at the material level.</em></p>
+  <p><em>This means hardness can be defined as a constant or a function of temperature.</em></p>
+  <p>The user can evaluate the total (integrated) wear depth up to a specified step for the process as well as the incremental wear depth for the time interval of the last step in the Post Processor. Additionally, the user can obtain the sliding velocities,
+    contact pressure and interface temperatures at the contacting die surface in the Post Processor.</p>
+  <p>This means for a given model for which deformation data has been computed, user can evaluate different tool wear models, without having to re-run the simulation. All the tool wear variables are stored for both the master and slave meshed objects.</p>
+  <p> </p>
+  <p><strong>Update worn geometry: </strong>User can turn on this check box to update the die geometry and mesh for meshed dies based on tool wear calculation. The geometry will be smoothened and updated with smoothing factor 5.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_20_4_1_Inter_object_Tool_wear_window"></a><img src="../../../assets/images/pre-processor/20_inter-object_data_definition/20_4_tool_wear/image001.jpg"/></p>
+  <p class="Fig_numb">Inter object Tool wear window</p>
+  <p> </p>
+  <h2><a id="20_4_1_Archards_model"></a>Archard&#39;s model </h2>
+  <p>Archard proposed a basic wear models based on the adhesion wear between the friction pairs. This model is generally better suited for discrete processes such as cold or hot forging. In these cases, abrasive wear is the dominant wear mode.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 40px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img height="228" src="../../../assets/equations/pre_processor/20_inter-object_data_definition/eq_20_4_1.jpg" width="344"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>In the Archard wear equation, exponents a,b and c are dimensionless. If they are assumed to be 1 and K is assumed to be dimensionless, then hardenss [H] needs to be in units of MPa or KSI (depending on unit system).</p>
+  <p>Brinell and Vickers hardness values can be converted to units of MPa by multiplying the hardness values by the metric standard gravity value (9.80665 m/s^2). If units of KSI are desired, then perform an additional conversion from MPa to KSI.</p>
+  <p>Any hardness unit may be used in DEFORM, if it is used in conjunction with the coefficients that were calibrated to the specific hardness unit. For example, if coefficients were determined based on experimental HRC data, then the HRC hardness unit must
+    be used in the DEFORM simulation that uses those coefficients.</p>
+  <p>There is a specific inter-relationship between the hardness unit and the K coefficient unit. The units of the K coefficient will depend on the hardness units that were utilized during coefficient calibration. The hardness and K coefficient units must
+    provide a final wear rate in terms of Length/Time.</p>
+  <p>For <strong>Archard’s</strong> <strong>model</strong>, the following coefficients will give reasonable results for common tool steels:</p>
+  <p><strong><span style="margin-left:40px;">a = 1</span></strong></p>
+  <p><strong><span style="margin-left:40px;">b = 1</span></strong></p>
+  <p><strong><span style="margin-left:40px;">c = 2</span></strong></p>
+  <p><strong><span style="margin-left:40px;">K = 1e-02 ~ 1e-03</span></strong></p>
+  <p>If the K=1e-02 ~ 1e-03 value is used, then hardness values should be entered using the Rockwell C hardness scale.  </p>
+  <p>It should be noted that these values are for qualitative comparison of similar processes only and will not give quantitative estimates of actual tool life.</p>
+  <h2><a id="20_4_2_Usuis_model"></a>Usui&#39;s model</h2>
+  <p>This model is generally better for continuous processes such as metal cutting, where diffusion is a major contributor to wear.</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 40px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../assets/equations/pre_processor/20_inter-object_data_definition/eq_20_4_2.jpg"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> For <strong>Usui’s model</strong>, typical values for machining processes are,</p>
+  <p><span style="margin-left:40px;"><strong>A = 1.0E-5</strong>   (or interface sliding velocity * interface pressure) -1</span></p>
+  <p><span style="margin-left:40px;"><strong>B = 1000</strong>      (order of magnitude of absolute interface temperature)</span></p>
+  <p> </p>
+  <p>It should be noted that these values are for qualitative comparison of similar processes only, and will not give quantitative estimates of actual tool life.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="20_1_friction_and_contact_criteria.htm">20. Inter-Object Data Definition</a></p>
+  <p><a href="20_1_friction_and_contact_criteria.htm">20.1. Friction and Contact criteria</a></p>
+  <p><a href="20_2_interface_thermal_data.htm">20.2. Interface Thermal Data</a></p>
+  <p><a href="20_3_interface_resisitivity.htm">20.3. Interface Resisitivity</a></p>
+  <p><a href="20_5_rigid_contact.htm"><span>20.5. Rigid Contact</span></a></p>
+  <p> </p>
+
+</body></html>

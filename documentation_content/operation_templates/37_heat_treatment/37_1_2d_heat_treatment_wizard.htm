@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.9.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>37.1. 2D Heat Treatment Wizard</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>37.1. 2D Heat Treatment Wizard</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/37_Heat_Treatment/37_2_3D_Heat_Treatment_Wizard.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/37_Heat_Treatment/37_Introduction_to_Heat_Treatment.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="37.1. 2D Heat Treatment Wizard">
+        <span>37.1. 2D Heat Treatment Wizard</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>37.1. 2D Heat Treatment Wizard Manual</h1>
+  <p><a href="#37_1_1_How_to_add_Heat_Treatment_Operation">37.1.1. How to add 2D Heat Treatment Operation</a> </p>
+  <p><a href="#37_1_2_Process_Selection">37.1.2. Process Selection</a></p>
+  <p><a href="#37_1_3_Initialization">37.1.3. Initialization</a></p>
+  <p><a href="#37_1_4_Material_selection">37.1.4. Material selection</a></p>
+  <p><a href="#37_1_5_Objects">37.1.5. Objects</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Workpiece_Object_General">Workpiece /Object General</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Object_Geometry">Object Geometry</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Object_Mesh">Object Mesh</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Object_Material">Object Material</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Object_Boundary_Condition">Object Boundary Condition</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="37_2_3d_heat_treatment_wizard.htm#Object_Property">Object Properties</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Initialize">Initialize</a></p>
+    </li>
+  </ul>
+  <p><a href="#37_1_6_Medium_Details">37.1.6. Medium Details</a></p>
+  <p><a href="#37_1_7_Schedule">37.1.7. chedule</a></p>
+  <p><a href="#37_1_8_Positioning">37.1.8. ontrols</a></p>
+  <p><a href="#37_1_9_Stopping_controls">37.1.9. topping controls</a></p>
+  <p><a href="#37_1_10_Simulation_Controls">37.1.10. Simulation Controls</a></p>
+  <p><a href="#37_1_11_Generation_Database">37.1.11. Generation Database</a></p>
+  <h2><a id="37_1_1_How_to_add_Heat_Treatment_Operation"></a>How to add Heat Treatment Operation</h2>
+  <p>Heat Treatment operation can be setup in MO environment that can be accessed from GUI Main. Create a new problem by either selecting File <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> New Problem or by clicking the New Problem <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. Select &quot; Integrated Manufacturing Process&quot;  and unit system. MO window will be opened with New Project popup,  in New Project popup Define Project Name, Title and Unit system (File menu selected unit system will be selected). Also
+    we can add 2D HT Wizard operation by selecting from First operation pull down list and check the Check box to add operation as Operation1 in new project (as shown in <a href="#Fig_37_1_1_Assign_Project_name_and_First_Operation_selection_in_New_Project_window"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>1.</a>).
+    Then Click <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> in New project window, MO wizard will open and in Operation editor we are seeing 3D Heat Treat wizard added in Operation editor. Using copy Existing project
+    option we can import previous saved projects as new project.  </p>
+  <p style="text-align: center"><a id="Fig_37_1_1_Assign_Project_name_and_First_Operation_selection_in_New_Project_window"></a><img height="422" src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image001.jpg" width="750"/></p>
+  <p class="Fig_numb">Assign Project name and First Operation selection in New Project window</p>
+  <p> </p>
+  <p>We can also add 2D HT Wizard operation to operation editor from explorer tab, by clicking on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to 2D HT Wizard operation (as shown in <a href="#Fig_37_1_2_Adding_operation_from_Explorer_Operation_list"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>2.</a>)
+    or by drag and drop 2D HT Wizard into operation editor window. by default process selection page will be open in property settings modification area.</p>
+  <p style="text-align: center"><a id="Fig_37_1_2_Adding_operation_from_Explorer_Operation_list"></a><img height="422" src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image002.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Adding operation from Explorer Operation list</p>
+  <h2><a id="37_1_2_Process_Selection"></a>Process Selection</h2>
+  <p>In Process page, user can select the Simulation mode as Phase transformation or Diffusion or Deformation or combination of these. If user is interested only to simulate phase transformations during heat treatment then only phase transformation can be
+    turned on, but if user would like to simulate the effect of phase transformation change on geometry then both phase transformation and deformation should be turned on. If user would like to simulate carbon diffusion process only, then only Diffusion
+    can be turned on but if user would like to simulate the diffusion effect on geometry, then both diffusion and Deformation should be turned on.</p>
+  <p>In this page user can set controls for the duration of the step (See <a href="#Fig_37_1_3_Process_page"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>3.</a>). Step Definition can be either User or Auto.  When step definition
+    is defined as user mode, user needs to define time per step along with the step increment to write the step into DB.</p>
+  <p><br/> If step definition is Auto mode, then user needs to mention the maximum change in temperature allowed per step along with the minimum and maximum process time per step, also step increment to write the step into DB.</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_37_1_3_Process_page"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Process page</p>
+  <p> </p>
+  <h2><a id="37_1_3_Initialization"></a>Initialization</h2>
+  <p>In Initialization page, user can select the Geometry type either as Axisymmetric or Plane strain using respective radio button. The simulation mode can also be selected here. User can import the Medium details and scheduled data of HT wizard (.HTWZ) of
+    older versions project using Import wizard file option (See <a href="#Fig_37_1_4_Initialization_page"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>4.</a>).</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_37_1_4_Initialization_page"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Initialization page</p>
+  <h2><a id="37_1_4_Material_selection"></a>Material selection</h2>
+  <p>Materials required for the process can be loaded either from library using <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>  or from DB or Keyfile using  <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> as
+    shown in <a href="#Fig_37_1_5_Importing_Material_from_Library"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>5.</a> User can also add new material and define required data from respective tab by clicking <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>. For more information on Material data definition please refer <a href="../../pre_processor/10_material_data/10_material_data.htm">Material data</a>.  </p>
+  <p style="text-align: center"><a id="Fig_37_1_5_Importing_Material_from_Library"></a><img height="423" src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing Material from Library</p>
+  <h2><a id="37_1_5_Objects"></a>Objects</h2>
+  <p>If user would like to include fixtures and other objects along with the billet then in Objects page, Add the number of Objects required for Heat Treatment operation by clicking on <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button.
+    By default one object will be added in operation as shown in <a href="#Fig_37_1_6_Objects_window"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>6.</a></p>
+  <p style="text-align: center"><a id="Fig_37_1_6_Objects_window"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image006.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Objects window</p>
+  <h3><a id="Workpiece_Object_General"></a>Workpiece /Object General</h3>
+  <p>In Object general page (See <a href="#Fig_37_1_7_Object_General_page"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>7.</a>), User can select Object type by selecting respective radio button. For more information on object
+    types please refer. By default object type for workpiece will be set as Plastic. User can initialize the object temperature by setting value in Object Temp. field. User can also import object from other DB’s or Keyfile’s using <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> option and browsing respective file. </p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_37_1_7_Object_General_page"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object General page</p>
+  <h3><a id="Object_Geometry"></a>Object Geometry</h3>
+  <p>User can define new geometry using primitives and also can import the geometry from other file using <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> or from library using <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>, user can also import geometries in other formats such as .DXF and .IGES. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 2D geometries please refer to <a href="../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm">12.1. 2D Geometry Data Defining</a> and
+    <a href="../../pre_processor/12_geometry_modelling/12_2_2d_geometry_editing.htm">12.2. 2D Geometry Data Editing</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_37_1_8_Object_Geometry_page"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image008.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object Geometry page</p>
+  <h3><a id="Object_Mesh"></a>Object Mesh</h3>
+  <p>Mesh Page provides options to mesh the object. Guided <img src="../../../assets/icons/pre_icons/mo_guided_mode.jpg"/> mode provides option to set number of elements only using slider bar to generate mesh. If the object geometry is complex or user would
+    like to control the mesh density over the object, then user has to switch to expert mode by clicking on <img src="../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/>. Expert mode provides various options like weighing factors, Mesh windows
+    and user defined mode to control the mesh density. Meshing options available inexpert mode and Guided more are shown in <a href="#Fig_37_1_9_Guided_mode_Mesh_option"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>9.</a> and
+    <a href="#Fig_37_1_10_Expert_mode_mesh_option"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>10.</a> For more detail description of these options, please refer <a href="../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm">13.1. 2D Mesh Generation.</a></p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_37_1_9_Guided_mode_Mesh_option"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image009.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Guided mode Mesh option</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_37_1_10_Expert_mode_mesh_option"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image010.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Expert mode mesh option</p>
+  <h3><a id="Object_Material"></a>Object Material</h3>
+  <p>In material page, all the materials added to material list are displayed (as shown in <a href="#Fig_37_1_11_Material_selection_Window"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>11.</a>) and user can select the required
+    material to assign it to respective object from material list. Also user can load the material in Object material page using Import Material data from a file <img height="20" src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg" width="21"/> or Using Load from Library option  <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg" style="cursor: nwse-resize;"/>.   </p>
+  <p style="text-align: center"><a id="Fig_37_1_11_Material_selection_Window"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image011.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Material selection Window</p>
+  <h3><a id="Object_Boundary_Condition"></a>Object Boundary Condition</h3>
+  <p>System will automatically assign thermal and diffusion BCC depending on the process selection and symmetry conditions based on geometry type. User can review these BCC and can also assign require BCC depending on the process (See <a href="#Fig_37_1_12_Assigned_Velocity_BCC_for_Axisymmetric_object"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>12.</a>    and <a href="#Fig_37_1_13_Assigned_Velocity_BCC_for_Plane_Strain_object"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>13</a>.).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_37_1_12_Assigned_Velocity_BCC_for_Axisymmetric_object"></a><img height="422" src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image012.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Assigned Velocity BCC for Axisymmetric object</p>
+  <p style="text-align: center">  </p>
+  <p style="text-align: center"><a id="Fig_37_1_13_Assigned_Velocity_BCC_for_Plane_Strain_object"></a><img height="424" src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image013.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Assigned Velocity BCC for Plane Strain object</p>
+  <h3><a id="Object_Property"></a>Object Property</h3>
+  <p>Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See <a href="#Fig_37_1_14_Property_Window"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>14.</a>)
+    For more information, Please refer <a href="../../pre_processor/16_object_properties/16_object_properties.htm">16. Object properties</a>.</p>
+  <p><a id="Fig_37_1_14_Property_Window"></a></p>
+  <p style="text-align: center"><img height="331" src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image014.jpg" width="350"/>   <img align="" height="331" src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image015.jpg" width="350"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Property Window: (a) Axi-symmetric/plane Stress/Torsion Geometry type  (b) Plane Strain</p>
+  <h3><a id="Initialize"></a>Initialize</h3>
+  <p>In Initialize page, user has options to initialize Temperature, Strain, Stress, Damage, Velocity, Displacement, Grain Size, Recrystallization Vol Frac and Density values (as shown in <a href="#Fig_37_1_15_Initialize_page"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>15.</a>).</p>
+  <p><br/> Also user can define Average strain rate and Limiting strain rate value for the object.If the object type is plastic then limiting strain rate defines a limiting value of effective strain rate under which the plastic material is considered rigid.
+    The average strain rate is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation. DEFORM automatically maintains the ratio between average strain rate and limiting
+    strain rate. Generally, the value of limiting strain rate should be 0.01.</p>
+  <p> </p>
+  <p style="text-align: center"> <a id="Fig_37_1_15_Initialize_page"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image016.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Initialize page</p>
+  <p> </p>
+  <p>User should initialize the initial atom percentage for diffusion at nodal level if diffusion process is simulated. For heat treatment user should initialize volume fraction of each phase existing initially at element level and summation of all phases volume
+    fraction should be equal to 1.  Nodal values can be accessed by clicking on <img src="../../../assets/icons/pre_icons/mo_nodal_data_icon.jpg"/> icon from tool bar and initialization can be done using  <img src="../../../assets/icons/pre_icons/mo_initialize_icon.jpg"/> icon. Similarly element values can be can be accessed by clicking on <img src="../../../assets/icons/pre_icons/mo_initialize_icon.jpg"/> icon from tool bar and initialization can be done using <img src="../../../assets/icons/pre_icons/mo_elemental_data_icon.jpg"/> icon. Node data and Element data options are as shown in <a href="#Fig_37_1_16_Nodal_data_window"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>16.</a> and <a href="#Fig_37_1_17_Element_data_window"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>17.</a></p>
+  <p style="text-align: center"><a id="Fig_37_1_16_Nodal_data_window"></a><img height="424" src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image017.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Nodal data window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_37_1_17_Element_data_window"></a><img height="423" src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image018.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Element data window</p>
+  <p> </p>
+  <h2><a id="37_1_6_Medium_Details"></a>Medium Details</h2>
+  <p>In Medium details page, user can define the media and its Heat transfer coefficients along with the zones associated to that media (See <a href="#Fig_37_1_18_Medium_page"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>18.</a>)</p>
+  <p><br/>
+    <strong>Media </strong>– Different types of media used in the heat treatment process can be defined here, using   <img src="../../../assets/icons/pre_icons/mo_add_icon.jpg"/> button media can be added and using <img src="../../../assets/icons/pre_icons/mo_delete_icon.jpg"/> button defined media can be removed. Media can be renamed using <img height="21" src="../../../assets/icons/pre_icons/mo_rename_button.jpg" style="cursor: nwse-resize;" width="73"/> button.<br/>
+    <strong>Zones </strong>– Zones are the surfaces of the workpiece that are associated to the Media selected under media tab, by default one zone is defined as Default which cannot be deleted. Each zone can be assigned different Heat transfer co-efficients
+    and these co-efficients can be constant or function of temperature or function of time. For the remaining surfaces where no zone is defined, the conditions defined for Default zone is applied. The Heat Transfer co-efficient values for each zone can
+    be stored using button and can be loaded back using <img height="20" src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg" width="21"/> button.</p>
+  <p><strong>Radiation</strong> – User can turn on the Radiation check box if radiation needs to be activated for the respective media.</p>
+  <p><strong>Diffusion surface reaction coefficient </strong>- Diffusion surface reaction co-efficient values associated with the media can be defined here when applicable and these values can be constant or function of temperature or function of atom %.</p>
+  <p><strong>Emissivity : </strong>If any particular zone is to be modeled for Radiation then user can turn on Radiation checkbox and define Emssivity value for that zone. Emissivity can be defined as constant or function of temperature or function of time.<strong><br/>
+ </strong> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_37_1_18_Medium_page"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image019.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Medium page</p>
+  <h2><a id="37_1_7_Schedule"></a>Schedule</h2>
+  <p>In schedule page, user can scheduled the Annealing, Normalizing and Quenching process by defining its process duration, media, Environment temperature and Atom contents as shown in <a href="#Fig_37_1_19_Schedule_page"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>19.</a></p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>User can add an operation using <img src="../../../assets/icons/pre_icons/mo_add_button.jpg"/> button.</p>
+    </li>
+    <li>
+      <p>User can delete a defined operation using  <img src="../../../assets/icons/pre_icons/mo_delete_button.jpg"/> button.</p>
+    </li>
+    <li>
+      <p>User can delete all the operations defined at a time using<img src="../../../assets/icons/pre_icons/mo_delete_all_button.jpg"/> button.</p>
+    </li>
+    <li>
+      <p>User can insert an operation between two operations using <img height="22" src="../../../assets/icons/pre_icons/mo_insert_button.jpg" width="74"/> button.</p>
+    </li>
+    <li>
+      <p>By clicking <img src="../../../assets/icons/pre_icons/mo_display_button.jpg" style="cursor: nwse-resize;"/> button we can see the Thermal schedule graph of Time vs. Temperature for all operations as shown in <a href="#Fig_37_1_21_Schedule_Graph"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>21.</a></p>
+    </li>
+    <li>
+      <p>User can also define specific environment conditions using advanced option for each operation independently by clicking on <img src="../../../assets/icons/pre_icons/mo_define.._button.jpg"/>  .</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Advanced Options:</strong></p>
+  <p>User can define Environment Temperature and Atom content in Function of time as shown in <a href="#Fig_37_1_20_Schedule_Advanced_options"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>20.</a> for a specific operation by
+    turning on the check boxes.<br/>
+    <strong>Use local time for functions </strong>– When user turns on this option, the local time of the operation is considered to apply the function values defined else by default global time is used. Global time is the accumulation of process time
+    of all the operations, while local time will start when the operation starts and end with operation.<br/>
+    <strong>Initialize trasf. Incubation</strong> – User can initialize transformation incubation by turning on this check box.<br/>
+    <strong>User’s .KEY </strong>– user can indicate the path of .KEY file which can be used along with the existing definition by entering the path in this fields.<br/>
+    <strong>Active Transformation</strong> – All the transformation defined in the material file are displayed here and user can turn on the transformations applicable for the operation by turning on the check the boxes next to transformation.<br/> User
+    can return to the schedule page by clicking on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button and by clicking on <img src="../../../assets/icons/pre_icons/mo_cancel_button.jpg"/> button user can come out without applying the
+    changes defined in that session only.</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_37_1_19_Schedule_page"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image020.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Schedule page</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_37_1_20_Schedule_Advanced_options"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image021.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Schedule Advanced options</p>
+  <p style="text-align: center">  </p>
+  <p style="text-align: center"><a id="Fig_37_1_21_Schedule_Graph"></a><img height="400" src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image022.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Schedule Graph</p>
+  <p> </p>
+  <h2><a id="37_1_8_Positioning"></a>Positioning</h2>
+  <p>User can position the objects using position objects button. Various positioning options are available to position the objects as shown in <a href="#Fig_37_1_22_Object_Positioning_options"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>22.</a>,
+    for more information on these options please refer <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm">19. Object Positioning</a>.</p>
+  <p style="text-align: center"><a id="Fig_37_1_22_Object_Positioning_options"></a><img height="267" src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image023.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Object Positioning options</p>
+  <p> </p>
+  <h2><a id="37_1_9_Stopping_controls"></a>Stopping controls</h2>
+  <p>Thermal stop controls provides a way that stop the simulation at pre-defined conditions (See <a href="#Fig_27_1_23_Thermal_Stopping_Controls"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>23.</a>), like selected temperature
+    for all nodes therefore the heating time can be predicted. They are applied for the object selected from the pull down list of objects.</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>None</strong>: Applies no thermal stopping controls</p>
+    </li>
+    <li>
+      <p><strong>Any Node</strong>: Simulation stops when any node in the billet reaches the specified value.</p>
+    </li>
+    <li>
+      <p><strong>All Nodes</strong>: Simulation stops when all the nodes in the billet reach the specified value.</p>
+    </li>
+    <li>
+      <p><strong>Selected Node</strong>: Simulation stops when specified node in the billet reaches the specified value.</p>
+    </li>
+    <li>
+      <p><strong>Average All Nodes</strong>: Simulation stops when average temperature of all the nodes in the billet reaches the specified value.</p>
+    </li>
+    <li>
+      <p><strong>Average surface Temp +Max. Temp</strong>:Simulation stops when average temperature of all the nodes on the surface of billet + Maximum temperature in the billet reaches the specified value.</p>
+    </li>
+  </ul>
+  <p><strong>Temperature Range:</strong></p>
+  <p>Apart from single value a range of temperature also can be used to stop the simulation.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Stop when temperature is outside range</strong>:Simulation stops when the temperature value is outside the specified range.</p>
+    </li>
+    <li>
+      <p><strong>Stop when temperature is inside range</strong>: Simulation stops when the temperature value is inside the specified range.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_27_1_23_Thermal_Stopping_Controls"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image024.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Thermal Stopping Controls</p>
+  <p> </p>
+  <h2><a id="37_1_10_Simulation_Controls"></a>Simulation Controls</h2>
+  <p>In Simulation controls page ( <a href="#Fig_37_1_24_Simulation_Controls"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>24.</a>), user can define the Step definition in User or Auto type by selecting respect Radio button.</p>
+  <p><br/>
+    <strong>Auto </strong>– When user selects Auto option, system will automatically control the time step value based on the conditions specified. The conditions used to control time step are,</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Temp. change per step</strong> – Maximum change in the temperature allowed per step, whenever it exceeds this value time step is reduced and whenever it reduces than this value time step is increased.</p>
+    </li>
+    <li>
+      <p><strong>Min/Max Time per step</strong> – It specifies the range of time step within which system can vary the time step value. Minimum allowed value of time step and Maximum allowed value of time step can be set here.</p>
+    </li>
+    <li>
+      <p><strong>Step Increment to Save</strong> – The step increment (STPINC) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need
+        to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_37_1_24_Simulation_Controls"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image025.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation Controls</p>
+  <p> </p>
+  <h2><a id="37_1_11_Generation_Database"></a>Generation Database</h2>
+  <p>Once the problem has been completely set up, the last step is to generate a database file. The FEM engine (the part of DEFORM® that calculates the solution) uses a database file to store the finite element solutions for the problem. When you generate
+    a database in the DEFORM MO Pre-processor, all of the information defined in the Pre-processor (such as the material properties, movement controls, object geometries, etc.) is transferred to the database file.</p>
+  <p>In Generate DB page (See <a href="#Fig_37_1_25_Generate_database"><span data-keyref="Chapter_37_1_2D_Heat_Treatment_Wizard">Fig. 37.1.</span>25.</a>). From v12.0.2, we can observe the Operation Simulation setup summary. Click the  <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. During the checking process, messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any
+    material data).  </p>
+  <p>Click on  <img height="18" src="../../../assets/icons/pre_icons/mo_generate_database.jpg" width="127"/> button to generate the database. When the program is done with writing the database, switch to <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> tab to run simulation.</p>
+  <p><strong>Append Key file</strong></p>
+  <p>Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only .key
+    file can be changed and simulation can be resubmitted.</p>
+  <p style="text-align: center">  <a id="Fig_37_1_25_Generate_database"></a><img src="../../../assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image026.jpg"/></p>
+  <p class="Fig_numb">Generate database</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm">6.1. Integrated Manufacturing Process Pre- Processor Layout</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout.htm">6.2. Integrated Manufacturing Process.Simulation layout</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout.htm">6.3. Integrated Manufacturing Process Post - Processor layout</a></p>
+  <p><a href="../../labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1.htm">2D Heat Treatment Wizard Lab1</a></p>
+
+</body></html>

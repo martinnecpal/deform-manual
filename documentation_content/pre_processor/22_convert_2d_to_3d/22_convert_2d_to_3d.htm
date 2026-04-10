@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>22. Convert 2D to 3D</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>22. Convert 2D to 3D</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d.css"/>
+<meta name="brsnext" value="Documentation_content/Simulator/Simulator_MainPg.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/21_Database_Generation/21_Database_Generation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="22. Convert 2D to 3D">
+        <span>22. Convert 2D to 3D</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>22. Convert 2D to 3D <img src="../../../assets/icons/pre_icons/convert_2d_to_3d_icon.jpg"/></h1>
+  <p><a href="#22_1_Built-in_Conversion_module_Introduction">22.1. Built-in Conversion module Introduction</a></p>
+  <p><a href="#22_2_Procedure_to_convert_objects_from_2D_to_3D">22.2. Procedure to convert objects from 2D to 3D</a></p>
+  <p><a href="#22_3_Advanced_Geometry_Options">22.3. Advanced Geometry Options</a></p>
+  <p> </p>
+  <p>The integrated system can handle both 2D DB and 3D DB, one DB can contain either 2D result, 3D result, or hybrid 2D/3D result. Each step will be either 2D or 3D. The Integrated system offers streamlined data flow quick setup of 3D problem from 2D problem,
+    quick setup of 2D problem from 3D problem (under development) and easy comparison between 2D and 3D result</p>
+  <p>Pre-processor offers dual definitions, unified <a href="../9_simulation_controls/9_simulation_controls.htm">simulation controls</a>, <a href="#22_1_Built-in_Conversion_module_Introduction">built in conversion module</a> and model conversion from 2D
+    to 3D.</p>
+  <p> </p>
+  <p>Integrated Database offers unified storage to store/retrieve 2D/3D simulation data. The Integrated DB will have information about dimension and version number for each step, and stores 2D and 3D simulation to a single DB.</p>
+  <p> </p>
+  <p>Pre-processor has been provided with option to switch between 2D to 3D Mode (See <a href="#Fig_22_1_GUI_pre_processor_window_highlighted_with_2D,_3D_mode_buttons_and_convert_object_button"><span data-keyref="Chapter_22_Convert_2D_to_3D">Fig. 22.</span>1.</a>).</p>
+  <p> </p>
+  <p> <strong>Show 2D Model <img src="../../../assets/icons/pre_icons/show_2d_model.jpg"/> </strong>:  Using this button user can switch 2D mode after converting.</p>
+  <p> <strong>Show 3D Model <img src="../../../assets/icons/pre_icons/show_3d_model.jpg"/> </strong>: Using this button user can switch 3D mode after converting.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_22_1_GUI_pre_processor_window_highlighted_with_2D,_3D_mode_buttons_and_convert_object_button"></a><img height="372" src="../../../assets/images/pre-processor/22_convert_2d_to_3d/image001.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">GUI pre processor window highlighted with 2D, 3D mode buttons and convert object button</p>
+  <p> </p>
+  <p> </p>
+  <h2><a id="22_1_Built-in_Conversion_module_Introduction"></a>Built-in Conversion module Introduction</h2>
+  <p>The built-in conversion module is an enhancement of previous advanced geometry option.</p>
+  <p>The fast creation of 3D geometry from 2D geometry can be accomplished using Revolution type and extrusion type option provided in the advanced geometry option.</p>
+  <p> </p>
+  <p>The fast creation of 3D mesh from 2D mesh can be accomplished using the built in conversion module as shown in <a href="#22_2_Procedure_to_convert_objects_from_2D_to_3D"><span data-keyref="Chapter_22_Convert_2D_to_3D">Fig. 22.</span>2.</a> It can handle
+    both keyword and DB files as input. The user can convert a single object or multiple objects at a time. Conversion axis has been introduced to provide the link between 2D model and 3D model. It will be updated during positioning. The user can control
+    the Revolution and Start angles of the object (See <a href="#Fig_22_3__2D_to_3D_Converter_window_after_conversion"><span data-keyref="Chapter_22_Convert_2D_to_3D">Fig. 22.</span>3.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_22_2_2D_to_3D_Converter_window_before_conversion"></a><img height="521" src="../../../assets/images/pre-processor/22_convert_2d_to_3d/image002.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">2D to 3D Converter window before conversion</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_22_3__2D_to_3D_Converter_window_after_conversion"></a><img height="521" src="../../../assets/images/pre-processor/22_convert_2d_to_3d/image003.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">2D to 3D Converter window after conversion</p>
+  <p> </p>
+  <h2><a id="22_2_Procedure_to_convert_objects_from_2D_to_3D" height="0" width="0"></a>Procedure to convert objects from 2D to 3D</h2>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p><strong>Open the 2D to 3D converter</strong>: Open 2D setup in an  Pre-processor. Click on converter (<img src="../../../assets/icons/pre_icons/convert_2d_to_3d_icon.jpg"/>) to convert entire setup.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;" value="2">
+      <p><strong>Object list</strong>: User can select the objects from object list by checking check box next to the objects.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2;" value="3">
+      <p><strong>Co-ordinate system selection</strong>: The axis direction for revolution or extrusion can be selected from Co-ordinate system</p>
+    </li>
+  </ol>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2;" value="4">
+      <p><strong>3D parameters</strong>:</p>
+    </li>
+  </ol>
+  <ul class="Circle">
+    <li style="" value="4">
+      <p>For rotating a 2D cross-section into 3D,start angle, revolution angle and tolerance can be specified under 3D parameters tab.</p>
+    </li>
+    <li style="" value="4">
+      <p>For extruding a 2D cross-section into 3D, length of extrusion and start location needs to be defined.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 3;" value="4">
+      <p><strong>Geometry</strong>: If only geometry needs to be converted, number of sections has to be defined and check output geometry check box to turned on.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 4;" value="5">
+      <p><strong>Mesh</strong>: In case of meshed objects, turn on output mesh and select mesh type. Enter number of 3D elements  for meshed objects. Advanced button can be used to assign the various 3D mesh parameters. For more information please refer
+        <a href="../13_mesh_generation/13_2_3d_tet_mesh_generation.htm">13.2. 3D Tet Mesh Data Generation</a> and <a href="../13_mesh_generation/13_3_3d_brick_mesh_generation.htm">13.3. 3D Brick Mesh Generation</a>.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 5;" value="6">
+      <p><strong>Preview <img height="21" src="../../../assets/icons/pre_icons/converter_preview_button.jpg" width="72"/> </strong>: This can be used to preview the objects.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 6;" value="7">
+      <p><strong>Convert <img height="21" src="../../../assets/icons/pre_icons/converter_convert_button.jpg" width="60"/> </strong>: This can be used for Converting objects.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 7;" value="8">
+      <p>The 3D model settings can be applied by clicking <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" style="cursor: nwse-resize;" width="73"/>, it switches to the 3D mode showing the converted objects.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p><img height="21" src="../../../assets/icons/pre_icons/converter_cancel_button.jpg" width="83"/> button can be used to exit from converter window without applying changes.</p>
+  <p> <img height="21" src="../../../assets/icons/pre_icons/converter_2d_toggle_button.jpg" width="62"/> button can be used to toggle between 2D and 3D after converting.</p>
+  <p> </p>
+  <p>The user can create object with tetrahedron mesh using the <a href="../13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.6._Mesh_density_windows">3D mesh windows</a> (See <a href="#Fig_22_4_Brick_mesh_model_generated_using_2D_Mesh_window"><span data-keyref="Chapter_22_Convert_2D_to_3D">Fig. 22.</span>4.</a>)
+    option and brick mesh using <a href="../13_mesh_generation/13_3_3d_brick_mesh_generation.htm#Fig._13.3.6.Mesh_density_windows_for_2D">2D mesh windows</a> (See <a href="#Fig_22_5_Tetrahedron_mesh_model_generated_using_2D_Mesh_window"><span data-keyref="Chapter_22_Convert_2D_to_3D">Fig. 22.</span>5.</a>)
+    option with full control for meshing parameters including Weighting factors. 2D mesh density window (poly-line type) will be converted to polygon surface type of mesh density window during conversion. (See <a href="#Fig_22_6_Mesh_density_window_handling"><span data-keyref="Chapter_22_Convert_2D_to_3D">Fig. 22.</span>6</a>.)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_22_4_Brick_mesh_model_generated_using_2D_Mesh_window"></a><img src="../../../assets/images/pre-processor/22_convert_2d_to_3d/image004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Brick mesh model generated using 2D Mesh window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_22_5_Tetrahedron_mesh_model_generated_using_2D_Mesh_window"></a><img src="../../../assets/images/pre-processor/22_convert_2d_to_3d/image005.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tetrahedron mesh model generated using 2D Mesh window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_22_6_Mesh_density_window_handling"></a><img height="425" src="../../../assets/images/pre-processor/22_convert_2d_to_3d/image006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Mesh density window handling</p>
+  <p> </p>
+  <p>The user can use interpolation module directly from the built in conversion window to plot the stress, strain, temperature values.</p>
+  <p>When the model is converted from 2D to 3D the <a href="../14_boundary_conditions/14_1_symmetry_boundary_conditions.htm#Fig._14.1.1_Symmetry_plane_BCC_for_quarter_symmetry_model">symmetry plane</a>, <a href="../14_boundary_conditions/14_boundary_conditions.htm">BCC</a>    assignments and materials are assigned automatically to the respective objects. (See <a href="22_convert_2d_to_3d.htm#Fig_22_7_Automated_symmetry_plane_assignment_to_die/workpiece_geometry_and_boundary_code_assignment_for_mesh"><span data-keyref="Chapter_22_Convert_2D_to_3D">Fig. 22.</span>7.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_22_7_Automated_symmetry_plane_assignment_to_die/workpiece_geometry_and_boundary_code_assignment_for_mesh"></a><img height="298" src="../../../assets/images/pre-processor/22_convert_2d_to_3d/image007.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Automated symmetry plane assignment to die/workpiece geometry and boundary code assignment for mesh</p>
+  <p> </p>
+  <h2> <a id="22_3_Advanced_Geometry_Options"></a>Advanced Geometry Options</h2>
+  <p><br/>
+    <strong>Extrude</strong><br/> The user can import or ceate the 2d cross section of the geometry and extrude it in the desired direction in 3D Geometry Primitive page. This can also be done while importing the 2d cross section files from the DB or
+    key file.When we convert the 2D model to 3D model by default it take Z as the Extrude direction (See <a href="#Fig_22_8_Extruded_object_in_display_window"><span data-keyref="Chapter_22_Convert_2D_to_3D">Fig. 22.</span>8.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_22_8_Extruded_object_in_display_window"></a><img height="349" src="../../../assets/images/pre-processor/22_convert_2d_to_3d/image008.jpg" width="750"/></p>
+  <p class="Fig_numb">Extruded object in display window</p>
+  <p> </p>
+  <p><strong>Revolve</strong><br/> The user can import or create the 2d cross section of the geometry and revolve the geometry based upon the symmetry to get a 3d geometry in 3D Geometry Primitive page. This feature can be used to create 3D geometry from
+    2D geometry when the geometry is not too complex.</p>
+  <p>User can controls the Rotation angle, Direction and Revolved sections of the geometry as per the requirement (See <a href="#Fig_22_9_The_2D_Geo_is_converted_in_to_3D_Geo_by_revaluing_in_Z_direction"><span data-keyref="Chapter_22_Convert_2D_to_3D">Fig. 22.</span>9.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_22_9_The_2D_Geo_is_converted_in_to_3D_Geo_by_revaluing_in_Z_direction"></a><img height="349" src="../../../assets/images/pre-processor/22_convert_2d_to_3d/image009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">The 2D Geo is converted in to 3D Geo by revaluing in Z direction</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../12_geometry_modelling/12_1_2d_geometry_data_defining.htm">2D Geometry Data Defining</a></p>
+  <p><a href="../12_geometry_modelling/12_3_3d_geometry_data_defining.htm">3D Geometry Data Defining</a></p>
+  <p><a href="../13_mesh_generation/13_1_2d_mesh_generation.htm">2D Mesh Data Generation</a></p>
+  <p><a href="../13_mesh_generation/13_2_3d_tet_mesh_generation.htm">3D Tet Mesh Generation</a></p>
+  <p><a href="../13_mesh_generation/13_3_3d_brick_mesh_generation.htm">3D Brick Mesh Generation</a></p>
+  <p><a href="../14_boundary_conditions/14_boundary_conditions.htm">Boundary condition</a></p>
+  <p><a href="../9_simulation_controls/9_simulation_controls.htm">Simulation controls</a></p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

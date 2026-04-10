@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Friction Stir Welding Lab","type":"item","tilePath":"","url":"documentation_content/applications/55_applications/55_friction_stir_welding/55_friction_stir_welding.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

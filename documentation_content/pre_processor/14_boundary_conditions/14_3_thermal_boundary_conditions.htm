@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>14.3. Thermal Boundary Conditions</title>
+  <meta name="topic-status" content="Draft" />
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/Pre_Processor/14_Boundary_Conditions/14_3_Thermal_Boundary_Conditions.css" />
+</head>
+<body>
+  <h1>14.3. Thermal Boundary Conditions</h1>
+  <p><a href="#14.3.1._Heat_exchange_with_the_environment_BCC">14.3.1. Heat exchange with the environment BCC</a> <br/>
+    <a href="#14.3.2._Temperature_BCC">14.3.2. Temperature BCC</a><br/>
+    <a href="#14.3.3._Heat_flux_BCC">14.3.3. Heat flux BCC</a><br/>
+    <a href="#14.3.4._Nodal_heat_BCC">14.3.4. Nodal heat BCC</a><br/>
+    <a href="#14.3.5._Advanced_Thermal__BCC">14.3.5. Advanced Thermal BCC</a> </p>
+  <p> </p>
+  <h2><a id="14.3.1._Heat_exchange_with_the_environment_BCC"></a>Heat exchange with the environment BCC [2D,3D]</h2>
+  <p>This boundary condition <a href="../../Keyword_Documentation/E/ECCTMP.htm">ECCTMP</a> specifies that heat exchange between element faces bounded by these nodes and their environment should occur. The contact boundary condition determines whether exchange
+    will occur to the ambient atmosphere or to a contacting object.</p>
+  <p> </p>
+  <p>Default heat exchange with the environment occurs to the ambient environment as described above. However, heat exchange windows may be specified using the heat exchange windows icon. Heat exchange for nodes within these windows is controlled by the
+    parameters set for each window.</p>
+  <p> </p>
+  <p><strong><a id="Heat_Exchange_windows"></a>Heat Exchange windows</strong></p>
+  <p>This function allows the user to define heat exchange conditions for local areas on a body by use of three dimensional window. To use heat exchange windows, perform the following actions:</p>
+  <ol class="Decimal">
+    <li style="font-size: 12pt;font-family: Arial;text-align: justify;line-height: 1.5">Go to the Boundary Conditions window.</li>
+    <li style="font-size: 12pt;font-family: Arial;text-align: justify;line-height: 1.5">Select the Thermal tab.</li>
+    <li style="font-size: 12pt;font-family: Arial;text-align: justify;line-height: 1.5">Select the Heat exchange windows button.</li>
+    <li style="font-size: 12pt;font-family: Arial;text-align: justify;line-height: 1.5">Note the tools in the top left corner of the display window changes and the new heat exchange window that comes up.</li>
+    <li style="font-size: 12pt;font-family: Arial;text-align: justify;line-height: 1.5">At this point, heat exchange windows can be defined using the tools in the top left corner of the display window. Each window has its own local environmental temperature, convection coefficient, Heat flux and emissivity. See <a href="#Fig._14.3.1._Heat_exchange_with_Environment_window"><span data-keyref="Chapter_14_3_Thermal Boundary Conditions">Fig. 14.3.</span>1.</a>      of  heat exchange window.  </li>
+    <li style="font-size: 12pt;font-family: Arial;text-align: justify;line-height: 1.5">You can define up to 20 independent windows by the method. If two regions share the same space, the lower number window wins.</li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><img height="424" src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_3_Thermal_Boundary_Conditions/14_3_Image003.jpg" width="750" /></p>
+  <p class="Fig_name">(a)</p>
+  <p class="Fig_name"> </p>
+  <p class="Fig_name" style="text-align: center"><img height="424" src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_3_Thermal_Boundary_Conditions/14_3_Image001.jpg" width="750" /></p>
+  <p class="Fig_name">(b)</p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._14.3.1._Heat_exchange_with_Environment_window"></a>Heat exchange with Environment window; (a) For 2D and (b) For 3D</p>
+  <p> </p>
+  <h2><a id="14.3.2._Temperature_BCC"></a>Temperature BCC [2D, 3D]</h2>
+  <p>Specifies a fixed temperature at the given nodes.</p>
+  <p> </p>
+  <h2> <a id="14.3.3._Heat_flux_BCC"></a>Heat flux BCC [2D, 3D]</h2>
+  <p>This (<a href="../../Keyword_Documentation/E/ECHFLX.htm">ECHFLX</a>) Specifies an energy flux per unit area over the face of the element bounded by the nodes. Units are energy/time/area.</p>
+  <p> </p>
+  <h2><a id="14.3.4._Nodal_heat_BCC"></a>Nodal heat BCC [2D, 3D]</h2>
+  <p>Specifies a heat source at the given nodes. Units are energy/time.</p>
+  <p> </p>
+  <h2><a id="14.3.5._Advanced_Thermal__BCC"></a>Advanced Thermal BCC [2D, 3D]</h2>
+  <p>The purpose of this boundary condition definition is to allow the user to have the flexibility to specify all the various types of heat boundary conditions on the same edge. The user can specify either a user-subroutine number or a local heat transfer
+    definition. (See <a href="#Fig._14.3.2._Advanced_Thermal_object_boundary_condition_window"><span data-keyref="Chapter_14_3_Thermal Boundary Conditions">Fig. 14.3.</span>2.</a>) If the user wants to specify a user routine, the User Routine Number should
+    be specified. The User Routine number specified will correspond to the subroutine the boundary condition will correspond to. Refer to User Routines for more information on how to use these user-defined boundary conditions. If the routine number is
+    left zero, the user may then define a local defined boundary condition where the environmental temperature, the convection coefficient, the emissivity and the heat flux needs to be specified the edge.  All four of these variables may be defined as
+    either constants or functions. To apply a local user defined boundary condition, set the variables you want, set the local defined number to a unique value, and apply this to a set of element edges. The new keywords for local edge definition are
+    <a
+      href="../../Keyword_Documentation/E/ECCDEF.htm">ECCDEF</a>, <a href="../../Keyword_Documentation/E/ECTMFN.htm">ECTMFN</a> and <a href="../../Keyword_Documentation/L/LOCTMP.htm">LOCTMP</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_3_Thermal_Boundary_Conditions/14_3_Image002.jpg" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._14.3.2._Advanced_Thermal_object_boundary_condition_window"></a>Advanced Thermal object boundary condition window</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="14_boundary_conditions.htm">14. Boundary Conditions</a></p>
+  <p><a href="14_1_symmetry_boundary_conditions.htm">14.1. Symmetry Boundary Conditions</a></p>
+  <p><a href="14_2_deformation_boundary_conditions.htm">14.2. Deformation Boundary Conditions</a></p>
+  <p><a href="14_4_diffusion_boundary_conditions.htm">14.4. Diffusion Boundary Conditions</a></p>
+  <p><a href="14_5_heating_boundary_conditions.htm">14.5. Heating Boundary Conditions</a></p>
+  <p> </p>
+</body>
+</html>

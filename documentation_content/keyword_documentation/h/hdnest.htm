@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.8.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>HDNEST (2D3D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>HDNEST (2D3D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/h/h_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/H/HDNOBJ.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/H/H_Keywords.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="HDNEST (2D3D)">
+        <span>HDNEST (2D3D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>HDNEST</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Object  data)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 07-08-2013</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">HDNEST Obj, Type, Unit, Temph, Templ</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Obj</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Object number</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Type</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Kind of hardness estimation</p>
+          <p class="P_10">=<strong>0</strong> No estimate</p>
+          <p class="P_10">=<strong>1</strong> Using Jominy Curve (for quenching process)</p>
+          <p class="P_10">=<strong>2</strong> Using volume fractions of each phase</p>
+          <p class="P_10">=<strong>3</strong> Using only cooling time</p>
+          <p class="P_10"><strong>-n </strong>User routine n</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Temph</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Referenced high temperature</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Templ</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Referenced low temperature</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">HDNEST specifies the hardness for a material.</p>
+          <p class="P_10">SYSTEM UNITS: USER DEFINED</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">REMARKS</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">HDNEST specifies the estimation method of hardness.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">For Type=1 (Using Jominy Curve), the user must specify the high and low reference temperatures under which the Jominy curve is valid. The hardness is estimated using both the cooling time and Jominy data.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">The data is specified in the keywords HDNTIM and JOMINY.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">For Type=2, the weighted average of hardness of each phase (defined in HDNPHA) is used to estimate the hardness.</p>
+          <p class="P_10"> </p>
+          <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+            <colgroup>
+              <col style="width: 400px;"/>
+              <col style="width: 150px;"/>
+            </colgroup>
+            <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+              <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+                <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/h/hdnest_eq_1.jpg"/></td>
+                <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+                  <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="P_10"> </p>
+          <p class="P_10"> </p>
+          <p class="P_10">For Type=3 only the cooling versus distance curve is used for the estimation of hardness.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">General Guidelines for selecting the hardness estimation method</p>
+          <p class="P_10">If the user does not want to spend the time with entering vast amounts of data it is recommended that the user selects estimation method type 2, volume fraction. The disadvantage in using this method is that it may not be as accurate as using
+            the Jominy estimation.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">Note: The cooling time is only valid in a given temperature range.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">Applicable Simulation Modules: Microstructure</p>
+          <p class="P_10">Applicable Simulation Modes: Transformation</p>
+          <p class="P_10">Applicable Object Types: ALL except Rigid</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Material Data: <a href="../../pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data.htm">Hardness</a></p>
+          <p class="P_10">Keyword: <a href="hdntim.htm">HDNTIM</a>, <a href="../j/jominy.htm">JOMINY</a>, <a href="hdnpha.htm">HDNPHA</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.6.0_14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>FRCROT (2D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>FRCROT (2D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/f/f_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/F/FRCSTP.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/F/FRCNEL_3D.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="FRCROT (2D)">
+        <span>FRCROT (2D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>FRCROT</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Inter-Object data - 2D)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"><u>Update History:</u></p>
+          <p class="P_10">(New definition has been introduced in v10.0)</p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 06-08-2013</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">FRCROT Object1, Object2, DefType, AngVel</p>
+  <p class="P_10_Bold">or</p>
+  <p class="P_10_Bold">FRCROT Object1, Object2, DefType, Ndata</p>
+  <p class="P_10_Bold">Time/Press(1), AngVel(1)</p>
+  <p class="P_10_Bold">: :</p>
+  <p class="P_10_Bold">Time/Press(Ndata), AngVel(Ndata)</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Object1</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Object number of first object</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Object2</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Object number of second object</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DefType</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Function type None</p>
+          <p class="P_10">=<strong> 0</strong> Constant angular velocity</p>
+          <p class="P_10">= <strong>1</strong> Angular velocity is a function of time</p>
+          <p class="P_10">= <strong>2</strong> Angular velocity is a function of pressure</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">AngVel</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Angular velocity Ftype = 0</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Ndata</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of Time/Press angular velocity data pairs</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Time/Press(i)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Time (Ftype = 1), or pressure (Ftype = 2) of i<span style="vertical-align:super;">th</span> data pair</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">AngVel(i)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Relative angular velocity (radians / unit time) of i<span style="vertical-align:super;">th</span> data pair</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">FRCROT specifies the relative angular rotation at the interface between two objects. This enables DEFORM to calculate the heat generation from axisymmetric rotation between two objects.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">REMARKS</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">The angular velocity may be specified as a constant, a function of time, or a function of interface pressure. If Ftype = 0, use the operand AngVel. If DefType = 1 or 2, use the operands Ndata, Time/Press, AngVel(i). When DefType =1, each data
+            pair should be provided on a separate line, resulting in Ndata lines of Time/Press(i), AngVel(i).</p>
+          <p class="P_10"> </p>
+          <p class="P_10">Applicable object types: <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.5._Rigid">Rigid</a>, <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.2._Elastic">Elastic</a>,
+            <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic">Plastic</a>, <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic">Elastoplastic</a>,
+            and <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.4._Porous">Porous</a>.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10"><a href="../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm">Inter-Object data</a>: Thermal</p>
+          <p class="P_10">Keywords: <a href="../i/ihtcof.htm">IHTCOF (2D)</a>, <a href="../i/ihtcof_3d.htm">IHTCOF (3D)</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

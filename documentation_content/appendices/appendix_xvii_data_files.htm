@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_17";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XVII Data Files</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XVII Data Files</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_xvii.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_XVIII_How_to_use_Explicit_Solver.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_XVI_Adding_Gas_Trap_Calculation_to_a_Simulation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix XVII Data Files">
+        <span>Appendix XVII Data Files</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix XVII Data Files</h1>
+  <p>Below is a brief list of DAT files that can influence solution behavior. Keeping these DAT files in the problem folder along with DB at the run time gives user additional controls to guide the solution. Brief description of these DAT files and their
+    purpose is indicated here. (This information will be updated from time to time, please contact SFTC for most up to date information about DAT files.)</p>
+  <p> </p>
+  <p>1.    <a href="#AXIS_DAT"> AXIS.DAT</a></p>
+  <p>2.     <a href="#DEF_RSE_DAT">DEF_RSE.DAT</a></p>
+  <p>3.    <a href="#DEF_GAS_DAT"> DEF_GAS.DAT</a></p>
+  <p>4.     <a href="#LAY_DAT">LAY.DAT</a></p>
+  <p>5.     <a href="#NBC_DAT">NBC.DAT</a></p>
+  <p>6.     <a href="#PKVEL_DAT">PKVEL.DAT</a></p>
+  <p>7.    <a href="#STRETCH_DAT"> STRETCH.DAT</a></p>
+  <p>8.     <a href="#SW2SP_DAT">SW2SP.DAT</a></p>
+  <p>9.     <a href="#DEF_CNT_DAT">DEF_CNT.DAT</a></p>
+  <p>10.  <a href="#TSMOOTH_DAT">TSMOOTH.DAT</a></p>
+  <p>11.  <a href="#TWEAR_DAT">TWEAR.DAT</a></p>
+  <p>12.  <a href="#MULTIPLE_DAT">MULTIPLE.DAT</a></p>
+  <p>13.  <a href="#DIEGEO_DAT">DIEGEO.DAT</a></p>
+  <p>14.  <a href="#NO_DIEGEO-DAT">NO_DIEGEO.DAT</a></p>
+  <p>15.  <a href="#DEF_ELAON_DAT">DEF_ELAON.DAT</a></p>
+  <p>16.  <a href="#DEF_PCN_DAT">DEF_PCN.DAT</a></p>
+  <p>17.  <a href="#OPT_DAT">OPT.DAT</a></p>
+  <p>18.  <a href="#STRAIN_DST_DAT">STRAIN_DST.DAT</a></p>
+  <p>19.  <a href="#STRAIN_RATE_DST_DAT">STRAIN_RATE_DST.DAT</a></p>
+  <p>20.  <a href="#LOCAL_REMESH_DAT">LOCAL_REMESH.DAT</a></p>
+  <p>21.  <a href="#DEF_LCDSTS_DAT">DEF_LCDSTS.DAT</a></p>
+  <p>22.  <a href="#MDIR_DAT">MDIR.DAT</a></p>
+  <p>23.  <a href="#DEF_SIM_DIR_DAT">DEF_SIM_DIR.DAT</a></p>
+  <p>24.  <a href="#SHEET_DAT">SHEET.DAT</a></p>
+  <p>25.  <a href="#DEF_INCDISP_DAT">DEF_INCDISP.DAT</a></p>
+  <p>26.  <a href="#DEF_EP_DAT">DEF_EP.DAT</a></p>
+  <p>27.  <a href="#COARSED_DAT">COARSED.DAT</a></p>
+  <p>28.  <a href="#DEF_TSHOCK_DAT">DEF_TSHOCK.DAT</a></p>
+  <p>29.  <a href="#DEF_ALEC_DAT">DEF_ALEC.DAT</a></p>
+  <p>30.  <a href="#DEF_ANISOF_DAT">DEF_ANISOF.DAT</a> (3D)</p>
+  <p>31.  <a href="#DEF_ADDMPARM_DAT">DEF_ADDMPARM.DAT</a></p>
+  <p>32.  <a href="#FILE_TO_COPY">FILE_TO_COPY</a></p>
+  <p> </p>
+  <h2><a id="AXIS_DAT"></a>AXIS.DAT</h2>
+  <hr/>
+  <p>This data file allows the user to perform special options on rotating workpiece simulations.</p>
+  <p>Refer Application XIV: Rotating Workpiece Simulations for more information.</p>
+  <p> </p>
+  <h2><a id="DEF_RSE_DAT"></a>DEF_RSE.DAT</h2>
+  <hr/>
+  <p>This file allows to enable special features of the Rigid Super-Element scheme to be used during a simulation.</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>: Details provided upon request, please contact <a href="mailto:support.deform.com">support.deform.com</a></p>
+  <p> </p>
+  <h2><a id="DEF_GAS_DAT"></a>DEF_GAS.DAT</h2>
+  <hr/>
+  <p><strong><u>Function:</u></strong> The file <a href="#DEF_GAS_DAT">DEF_GAS.DAT</a> is a flag used activate gas trapping. Gas trapping can be predicted if the file <a href="#DEF_GAS_DAT">DEF_GAS.DAT</a> is added to the directory where a simulation is
+    running. The file DEF_GAS.INI is a file output by the program and should not be changed during a simulation. Program will detect the air/oil trap region and apply back pressure based on the trapped volume change. <a href="#Fig_AXVII_Example_showing_the_air_oil_trapped_during_simulation"><span data-keyref="Appendix_XVII_Data_Files">Fig. AXVII.</span>1</a>    shows the air/oil entrapment between the work piece and die. <a href="#Fig_AXVII_2_Example_of_showing_various_deformed_shapes_when_there_is_air_oil_entrapment"><span data-keyref="Appendix_XVII_Data_Files">Fig. AXVII.</span>2</a> shows various deformed
+    shapes of the work piece when there is air/oil entrapment.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AXVII_Example_showing_the_air_oil_trapped_during_simulation"></a><img height="355" src="../../assets/images/appendices/appendix_xvii_data_files/image0001.jpg" width="550"/></p>
+  <p> </p>
+  <p class="Fig_numb">Example showing the air/oil trapped during simulation</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AXVII_2_Example_of_showing_various_deformed_shapes_when_there_is_air_oil_entrapment"></a><img height="305" src="../../assets/images/appendices/appendix_xvii_data_files/image0002.jpg" width="550"/></p>
+  <p> </p>
+  <p class="Fig_numb">Example of showing various deformed shapes when there is air/oil entrapment</p>
+  <p> </p>
+  <p><strong>Format:</strong></p>
+  <p>For entrapment of air</p>
+  <p>Empty file or a file with</p>
+  <p style="margin-left: 16px">Line 1:  1</p>
+  <p> </p>
+  <p>For entrapment of lubricant</p>
+  <p style="margin-left: 16px">Line 1: 2</p>
+  <p style="margin-left: 16px">Line 2: Bulk modulus of lubricant (MPa or Ksi)</p>
+  <p> </p>
+  <p>Refer <a href="appendix_xvi_adding_gas_trap_calculation_to_a_simulation.htm">Appendix XVI: Adding Gas Trap Calculation to a Simulation for more information</a>.</p>
+  <p> </p>
+  <h2><a id="LAY_DAT"></a>LAY.DAT</h2>
+  <hr/>
+  <p>This data file is used for mesh consolidation for cogging simulations. This file used to control the element layer consolidation in the older version to increase computing speed for cogging models. After implementation of rigid super elements (RSE)
+    this layer consolidation is not recommended any more for cogging models.</p>
+  <p> </p>
+  <h2><a id="NBC_DAT"></a>NBC.DAT</h2>
+  <hr/>
+  <p><strong><u>Function:</u></strong> Used to add an orthogonal constraint to nodes at a concave die corner. This file allows the user to enable multiple contact conditions on nodes in die corners. This eliminates nodal oscillation in die corners.</p>
+  <p><u><strong>Format:</strong></u></p>
+  <p style="margin-left: 16px">Line 3: A1, A2</p>
+  <p><u><strong>Discription:</strong></u></p>
+  <p style="margin-left: 16px">A1 – starting binding angle</p>
+  <p style="margin-left: 16px">A2 – ending binding angle</p>
+  <p style="margin-left: 16px">If the concave angle is between A1 and A2,the additional constraint is applied.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AXVII_3_Adding_Constraint_to_Concave_Surface"></a><img height="425" src="../../assets/images/appendices/appendix_xvii_data_files/image0003.jpg" width="290"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Constraint to Concave Surface</p>
+  <p> </p>
+  <p>Refer <a href="appendix_xv_the_double_concave_corner_constraint.htm">Appendix XV: The Double Concave Corner Constraint</a> for more information.</p>
+  <p> </p>
+  <h2><a id="PKVEL_DAT"></a>PKVEL.DAT</h2>
+  <hr/>
+  <p><strong><u>Function:</u></strong> Aims to check potential node leaking by comparing the surface node velocity against the theoretical speed calculated by the mass balance equation</p>
+  <p><u><strong>Format:</strong></u></p>
+  <p style="margin-left: 16px">Line 1: I11</p>
+  <p style="margin-left: 16px">Line 2: I21, I22, I23, A21</p>
+  <p style="margin-left: 16px">Line 3 and later: A31, A32</p>
+  <p><u><strong>Description:</strong></u></p>
+  <p style="margin-left: 16px">Line 1:   I11 – Optional number, fixed as 6</p>
+  <p style="margin-left: 16px">Line 2:   I21 – Total number of cross-section areas to be input</p>
+  <p style="margin-left: 52px">     I22 – extrusion direction</p>
+  <p style="margin-left: 52px">     I23 – billet object number</p>
+  <p style="margin-left: 52px">     A21 – Ram speed</p>
+  <p style="margin-left: 12px">Line 3:   A31 – Coordinate of  cross-section in the extrusion direction `</p>
+  <p>                A32 – Area of cross section</p>
+  <p> </p>
+  <h2><a id="STRETCH_DAT"></a>STRETCH.DAT</h2>
+  <hr/>
+  <p>This data file is used to activate the check of elemental surface edge stretch/shrinkage and determine if a remeshing is needed. The single-line data file contains the object number, stretch limit and shrink limit. Elemental stretch/shrink is evaluated
+    as the change in edge length divided by the original edge length. </p>
+  <p>If remeshing needs to be triggered for object #2 when an element edge either shrinks or expands more than 50% from its original size, then the contents of the DAT file should be:<br/>
+  </p>
+  <p style="margin-left: 16px">Line 1 - 2, 1.5, 0.5</p>
+  <p> </p>
+  <h2><a id="SW2SP_DAT"></a>SW2SP.DAT</h2>
+  <hr/>
+  <p>This file allows the user to specify the maximum number of elements which the solver can use the Sparse solver.  The purpose of this is to control the size of the problem where the sparse solver can be used since it requires more memory than the C-G
+    solver.  In the case where sparse solver is not used, the simulation will only use the C-G solver.  This option should only be enabled for cases where the C-G solver can be used, i.e. single deforming plastic workpiece with no load controlled dies.</p>
+  <p> </p>
+  <h2><a id="DEF_CNT_DAT"></a>DEF_CNT.DAT</h2>
+  <hr/>
+  <p>Placing this file in the working folder provides implicit contact controls for EP and plastic models.</p>
+  <p>Using &#39;1&#39; in the first line of this file means do not adjust the contact nodes, adjust and account for penetration depth only at the next step. Using &#39;2&#39; in the first line means repeat the current step one time once change of penetration
+    depth has been identified at the end of the current step. Using &#39;3&#39; in the first line means repeat the current step twice ..etc. Please note that using any value more than &#39;1&#39; can significantly increase computing time.</p>
+  <p> </p>
+  <h2><a id="TSMOOTH_DAT"></a>TSMOOTH.DAT</h2>
+  <hr/>
+  <p>Placing this file in the problem folder turns on heat Capacity Smoothing to improve thermal solution behavior using unstructured tet mesh systems. Number &#39;2&#39; in the first line of this file activates this thermal smoothing (for tet mesh systems
+    only)</p>
+  <p> </p>
+  <h2><a id="TWEAR_DAT"></a>TWEAR.DAT</h2>
+  <hr/>
+  <p>Placing this file (no contents) in the problem folder activates simple averaging of tool wear parameters (interface pressure and sliding velocity) on to die surface, thus minimizing the mesh size dependent effects involved with regular shape function
+    based interpolation schemes. This option is made available from DEFORM3D v6.1.1.</p>
+  <p> </p>
+  <h2><a id="MULTIPLE_DAT"></a>MULTIPLE.DAT</h2>
+  <hr/>
+  <p>Place this file with &quot;Number of Boundaries&quot; in the problem folder allows to keep multiple boundaries after remeshing. The default behavior in 3D without this file is to only keep the biggest boundaries. For example, placing this file with
+    2 inside for a fracture problem will keep both split objects after fracture.</p>
+  <p> </p>
+  <h2><a id="DIEGEO_DAT"></a>DIEGEO.DAT</h2>
+  <hr/>
+  <p>Placing this file (no contents) in the problem folder enables Writing geometry files with marked surface information showing hidden surfaces as seen by FEM at the run time. This file does not effect solution behavior and used only for debugging purpose.</p>
+  <p> </p>
+  <h2><a id="NO_DIEGEO-DAT"></a>NO_DIEGEO.DAT</h2>
+  <hr/>
+  <p>Placing this file (no contents) in the problem folder suppress automatic determination of hidden surfaces by FEM procedures.</p>
+  <p> </p>
+  <h2><a id="DEF_ELAON_DAT"></a>DEF_ELAON.DAT</h2>
+  <hr/>
+  <p>Take first iteration of elastic solution for the models with only elastic objects thus saving computing time involved with additional iterations and default convergence checks.</p>
+  <p> </p>
+  <h2><a id="DEF_PCN_DAT"></a>DEF_PCN.DAT</h2>
+  <hr/>
+  <p>Placing this file in the problem folder limits max number of contacting nodes per substep. Two parameters in the first line of this DAT file A,B are used as controls by FEM procedures. A = max number of contact nodes before substep, B = object number
+    (this file is automatically created by shape rolling template)</p>
+  <p> </p>
+  <h2><a id="OPT_DAT"></a>OPT.DAT</h2>
+  <hr/>
+  <p>Placing this file in the problem folder allows different interpolation techniques. Using &#39;1&#39; in the first line of this file, allows using local shape function based interpolation used in the earlier versions of DEFORM3D prior to v6.0. Current
+    default procedures use polynomial based least square fit that more accurately preserves gradient information of the variables being interpolated.</p>
+  <p> </p>
+  <h2><a id="STRAIN_DST_DAT"></a>STRAIN_DST.DAT</h2>
+  <hr/>
+  <p>While GUI has controls that put mesh weights based on strain gradients, placing this file in problem folder (no contents) can force the weights based on the absolute strain magnitudes.</p>
+  <p> </p>
+  <h2><a id="STRAIN_RATE_DST_DAT"></a>STRAIN_RATE_DST.DAT</h2>
+  <hr/>
+  <p>While GUI has controls that put mesh weights based on strain rate gradients, placing this file in problem folder (no contents) can force the weights based on the absolute strain rate magnitudes.</p>
+  <p> </p>
+  <h2><a id="LOCAL_REMESH_DAT"></a>LOCAL_REMESH.DAT</h2>
+  <hr/>
+  <p>Local remeshing control file. Controlling parameters can be defined in GUI and can be saved to this file in the problem folder. Without this file, global remesh procedures take preference, unless extreme meshing conditions arise that require switching
+    to local remesh procedures.</p>
+  <p> </p>
+  <h2><a id="DEF_LCDSTS_DAT"></a>DEF_LCDSTS.DAT</h2>
+  <hr/>
+  <p>Placing this file in the problem folder triggers coupled die stress analysis. Refer the Application: How to do coupled die stress analysis for 3D models for detailed explanation on this procedures.</p>
+  <p> </p>
+  <h2><a id="MDIR_DAT"></a>MDIR.DAT</h2>
+  <hr/>
+  <p>Placing this file (no contents) in the problem folder suppresses direct iteration in EP solutions and stay always in newton-raphson iterations. Otherwise default procedures are allowed to switch to approximate direct iterations to overcome convergence
+    issues in a given step.</p>
+  <p> </p>
+  <h2><a id="DEF_SIM_DIR_DAT"></a>DEF_SIM_DIR.DAT</h2>
+  <hr/>
+  <p>Placing this file (Line 1 to indicate folder path to the local simulation engine DEF_SIM.EXE) in the problem folder allows use of local copy of DEF_SIM.EXE in PC environment.</p>
+  <p> </p>
+  <h2><a id="SHEET_DAT"></a>SHEET.DAT</h2>
+  <hr/>
+  <p>Placing this file (no contents) in the problem folder enables 2nd order nodal coordinate updating accounting for rotational components of velocity field. Default updating procedures use linear updates based on magnitude of nodal velocity, direction
+    and time step size.</p>
+  <p> </p>
+  <h2><a id="DEF_INCDISP_DAT"></a>DEF_INCDISP.DAT</h2>
+  <hr/>
+  <p>Placing this file (no contents) in the problem folder activates incremental displacement formulations for EP models. (available from DEFORM v11.0). For EP models default mode without this file is to use velocity based formulations.</p>
+  <p> </p>
+  <h2><a id="DEF_EP_DAT"></a>DEF_EP.DAT</h2>
+  <hr/>
+  <p>Placing this file (no contents) in the problem folder allows checking both the force and velocity norms for convergence always. Without this file the procedures are allowed to relax convergence checks on velocity norm in the event of  convergence failures
+    in a given step.</p>
+  <p> </p>
+  <h2><a id="COARSED_DAT"></a>COARSED.DAT</h2>
+  <hr/>
+  <p>Placing this file (uses defaults when empty file is used) in the problem folder allows coarse internal 2d mesh when remesh is triggered. This file is automatically created by ring rolling template for 2D mesh cross section control. The first parameter
+    (first line, integer, default is 5 if not specified) is just to control number of smoothing cycles. Each smoothing,  the mesh density of a given internal node/point is averaged by the density of the neighboring points.  The boundary density is the
+    same and does not change during smoothing. The larger this first parameter, the deeper the smoothing procedure can affect the resulting meshing. The 2nd parameter (second line, real number) is used to compute the largest element size to be placed
+    inside the part initially.  The boundary will have the regular mesh density definition.</p>
+  <p> </p>
+  <h2><a id="DEF_TSHOCK_DAT"></a>DEF_TSHOCK.DAT</h2>
+  <hr/>
+  <p>Scale up factor can be specified (in the first line of this DAT file) on thermal conductivity, to compute stable time step to minimize numerical oscillations in thermal solution. These numerical oscillations can result from using very small time step,
+    compared to stable time step, and depends on specific heat, thermal conductivity and mesh size.</p>
+  <p> </p>
+  <h2><a id="DEF_ALEC_DAT"></a>DEF_ALEC.DAT</h2>
+  <hr/>
+  <p>Data in this file can be used to override the default convergence criteria in ALE models (e.g Rolling).</p>
+  <p>(Line #1) First line of this can be used to enable (&#39;0&#39; in the first line) or disable automatic stop (&#39;1&#39; in the first line).</p>
+  <p>(Linne #2) Second line can be used to control displacement criteria for convergence defined by DSmax / ELavg (DSmax is maximum displacement compared to previous step at end surface, ELavg is average edge length at beginning surface), 0.01 being default
+    value of this ratio.</p>
+  <p>(Line #3) Third line can be used to control effective strain stopping criteria defined by (Emax - E1) / Emax (Emax is maximum strain and E1 is maximum strain at end surface), 0.05 being default value of this ratio.</p>
+  <p>(Line #4) Fourth line can be used to define convergence criteria for ALE thermal solution defined by DTmax which is maximum temperature change compared to previous step at end surface (default being 0.05).</p>
+  <p> </p>
+  <h2><a id="DEF_ANISOF_DAT"></a>DEF_ANISOF.DAT (3D)</h2>
+  <hr/>
+  <p>This DAT file provides capability that allows user to model anisotropic friction model. If User&#39;s problem is cross rolling where die surface has a texture/serration in the rolling direction, DEF_ANISOF.DAT can be introduced in the problem folder
+    so that user can define different friction values in global axis system.</p>
+  <p>(Line #1) Total number of Inter-object relation,</p>
+  <p>(Line #2) (Inter-object relation) Salve object, Master object (pair of object numbers) of definition #1,</p>
+  <p>(Line #3) (Directional and friction coef.) C1, C2, C3</p>
+  <p>(Line #4) (Inter-object relation) Salve object, Master object (pair of object numbers) of definition #2,</p>
+  <p>(Line #5) (Directional and friction coef.) C1, C2, C3.</p>
+  <p> </p>
+  <h2><a id="DEF_ADDMPARM_DAT"></a>DEF_ADDMPARM.DAT  </h2>
+  <hr/>
+  <p>Place this DAT file in working folder, to activate Line scan or Layer by layer scan model.</p>
+  <p>Without this file, default is Heat source model, and scan path should be input.</p>
+  <p><u><strong>Format:</strong></u></p>
+  <p style="margin-left: 16px">Line 1:  1</p>
+  <p style="margin-left: 16px">Line 2: P1, P2, P3</p>
+  <p style="margin-left: 16px">Line 3: 1    </p>
+  <p style="margin-left: 16px">Line 4: Q1, Q2, Q3</p>
+  <p style="margin-left: 16px">Line 5: T1</p>
+  <p style="margin-left: 16px">Line 6: N</p>
+  <p style="margin-left: 16px">Line 7: ANG1, ANG2, ….</p>
+  <p><u><strong>Description:</strong></u></p>
+  <p>Line 1:</p>
+  <p style="margin-left: 16px">0 = Heat Source scan path model (default)</p>
+  <p style="margin-left: 16px">1 = Layer by Layer scan activation, use fixed time for one layer activation</p>
+  <p style="margin-left: 16px">2 = Layer by Layer scan activation, use Laser speed and deposition size</p>
+  <p style="margin-left: 16px">3 = Line scan activation, use fixed time for one line activation</p>
+  <p style="margin-left: 16px">4 = Line scan activation, use Laser speed and deposition size</p>
+  <p>Line 2:</p>
+  <p style="margin-left: 16px">P1 = Time for option 1,3.   Speed for option 2,4</p>
+  <p style="margin-left: 16px">P2 = Start Angle for scan line from x-axis (0 ~ 360 degree),  for option 3,4</p>
+  <p style="margin-left: 16px">P3 = Angle increment for next layer scan,  for option 3,4</p>
+  <p>Line 3:</p>
+  <p style="margin-left: 16px">0 = Initial Temperature (default)</p>
+  <p style="margin-left: 16px">1 = Power Input, Laser</p>
+  <p style="margin-left: 16px">2 = Inherent Strain Model</p>
+  <p>Line 4:</p>
+  <p style="margin-left: 16px">Power input</p>
+  <p style="margin-left: 16px">Q1 = Power (milli-Watt)</p>
+  <p style="margin-left: 16px">Q2 = efficiency</p>
+  <p style="margin-left: 16px">Q3 = Laser speed</p>
+  <p style="margin-left: 16px">Inherent Strain</p>
+  <p style="margin-left: 16px">Q1,Q2,Q3 = Inherent strain value, ex, ey, ez</p>
+  <p>Line 5:</p>
+  <p style="margin-left: 16px">T1 = time between layers, DTRECOAT</p>
+  <p>Line 6:</p>
+  <p style="margin-left: 16px">N = number of angle for line scanning or for inherent scan</p>
+  <p>Line 7:</p>
+  <p style="margin-left: 16px">ANG1, ANG2, …..  = angle</p>
+  <p> </p>
+  <h2><a id="FILE_TO_COPY"></a>FILE_TO_COPY</h2>
+  <hr/>
+  <p>When we run DOE, so far some DAT files has been copied to each run folder. But sometimes we need to copy more DAT files. To copy manually &#39;FILE_TO_COPY&#39; file has been introduced. When this file exists in the main problem folder, during DOE/OPT,
+    files listed in this file will be copied to each run folder.</p>
+  <p>In DOE/OPT procedure, following DAT files will be copied to each RUN folder from problem directory as default.</p>
+  <p>AXIS.DAT</p>
+  <p>DEF_RSE.DAT</p>
+  <p>DEFORM.PAR</p>
+  <p>LOCAL_REMESH.DAT</p>
+  <p>LOC_DEN_CTRL.DAT</p>
+  <p>SW2SP.DAT</p>
+  <p>64bit.dat</p>
+  <p>DEF_SIM_DIR.DAT</p>
+  <p>DEF_AMG2L.DAT</p>
+  <p>DEF_AMG3L.DAT</p>
+
+</body></html>

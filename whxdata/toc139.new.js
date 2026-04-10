@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"2D DOE Lab1","type":"item","tilePath":"","url":"documentation_content/labs/doe_labs/2d_doe_lab/2d_doe_lab1.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

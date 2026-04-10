@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Tube Flaring Lab","type":"item","tilePath":"","url":"documentation_content/applications/55_applications/55_tube_flaring/tube_flaring_lab.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Tool Life Study Lab1","type":"item","tilePath":"","url":"documentation_content/labs/tool_life_study_lab/tool_life_study_lab1.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

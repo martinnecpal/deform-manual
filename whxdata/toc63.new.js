@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"45.1. Boolean Operator","type":"item","tilePath":"","url":"documentation_content/operation_templates/45_boolean_operation/45_1_boolean_operation.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

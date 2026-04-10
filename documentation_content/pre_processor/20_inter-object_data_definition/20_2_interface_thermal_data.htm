@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.14.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>20.2 Interface Thermal Data</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>20.2 Interface Thermal Data</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/20_Inter-object_Data_Definition/20_3_Interface_Resisitivity.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/20_Inter-object_Data_Definition/20_1_Friction_and_Contact_criteria.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="20.2 Interface Thermal Data">
+        <span>20.2 Interface Thermal Data</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>20.2. Interface Thermal Data</h1>
+  <p><a href="#20_2_1_Interface_heat_transfer_coefficient_(IHTCOF)">20.2.1. Interface heat transfer coefficient</a><br/>
+    <a href="#20_2_2_Relative_rotation_(FRCROT)">20.2.2. Relative rotation</a> </p>
+  <h2><a id="20_2_1_Interface_heat_transfer_coefficient_(IHTCOF)"></a>Interface heat transfer coefficient (IHTCOF)</h2>
+  <p><strong>[2D, 3D]</strong>: The interface heat transfer coefficient (<a href="../../keyword_documentation/i/ihtcof.htm">IHTCOF</a>) specifies the coefficient of heat transfer between two objects in contact. This can be specified as a constant or a function
+    of time or interface pressure. The interface heat transfer coefficient is generally a complex function determined by the interface pressure, amount of sliding, and interface temperature. If this data is available, it can be entered as a table.</p>
+  <p>If no data is available, values of 0.004 (English) or 11 (SI) should give reasonable results (See <a href="#Fig_20_2_1_Inter_object_Thermal_window_for_2D"><span data-keyref="Chapter_20_2_Interface_Thermal_Data">Fig. 20.2.</span>1.</a> and <a href="#Fig_20_2_2_Inter_object_Thermal_window_for_3D"><span data-keyref="Chapter_20_2_Interface_Thermal_Data">Fig. 20.2.</span>2.</a>).</p>
+  <h2> <a id="20_2_2_Relative_rotation_(FRCROT)"></a>Relative rotation (FRCROT)</h2>
+  <p><strong>[2D]:</strong> This (<a href="../../keyword_documentation/f/frcrot.htm">FRCROT</a>) specifies the rotation difference between two objects about the axis of symmetry. The units are radians/second. For example, if a top die is rotating while moving
+    downward, the interface between the top die and the billet should have the same angular speed (rad/sec) of the top die applied to it. This enables DEFORM to calculate the heat generation from friction due to rotation for processes such as inertia
+    welding. Relative rotation can be defined as a constant or a function of time.</p>
+  <p> </p>
+  <p>Modelling inertia welding is possible with DEFORM, but it is recommended to be performed using the torsional element formulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_20_2_1_Inter_object_Thermal_window_for_2D"></a><img src="../../../assets/images/pre-processor/20_inter-object_data_definition/20_2_interface_thermal_data/image001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter object Thermal window for 2D</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_20_2_2_Inter_object_Thermal_window_for_3D"></a><img src="../../../assets/images/pre-processor/20_inter-object_data_definition/20_2_interface_thermal_data/image002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter object Thermal window for 3D</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p> </p>
+  <p><a href="20_1_friction_and_contact_criteria.htm">20. Inter-Object Data Definition</a></p>
+  <p><a href="20_1_friction_and_contact_criteria.htm">20.1. Friction and Contact criteria</a></p>
+  <p><a href="20_3_interface_resisitivity.htm">20.3. Interface Resisitivity</a></p>
+  <p><a href="20_4_tool_wear.htm">20.4. Tool Wear</a></p>
+  <p><a href="20_5_rigid_contact.htm"><span>20.5. Rigid Contact</span></a></p>
+  <p><span></span></p>
+  <p> </p>
+
+</body></html>

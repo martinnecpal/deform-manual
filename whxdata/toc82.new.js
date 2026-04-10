@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"2D Inertia Welding","type":"item","tilePath":"","url":"documentation_content/applications/55_applications/55_inertia_welding/2d_inertia_welding.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

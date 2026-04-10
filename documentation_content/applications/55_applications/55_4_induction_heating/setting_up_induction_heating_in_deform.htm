@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.7.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Setting up Induction heating in DEFORM</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Setting up Induction heating in DEFORM</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_induction_heating/setting_up_induction_heating_in_deform.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_4_Induction_Heating/2D_Induction_Heating_Lab1.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_4_Induction_Heating/55_4_Induction_Heating_Labs_Main_Pg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Setting up Induction heating in DEFORM">
+        <span>Setting up Induction heating in DEFORM</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Setting up induction heating in DEFORM-2D</h1>
+  <p><br/>
+    <a href="#1_Defining the simulation">1.Defining the simulation</a></p>
+  <p><a href="#2_Post-Processing the simulation">2. Post-Processing the simulation</a></p>
+  <p> </p>
+  <p class="Note_text">Note:</p>
+  <p class="Note_text">This documentation is assumes familiarity with induction heating and with the DEFORM-2D interface.</p>
+  <p> </p>
+  <h2><a id="1_Defining the simulation"></a>Defining the simulation</h2>
+  <ol class="Decimal">
+    <li>
+      <p><strong>Simulation Controls</strong> – To activate induction heating, turn on the heat module and set the type to induction as seen in <a href=""><span data-keyref="Application- 2D_Setting_up_Induction_Heating_in_DEFORM">Fig. IND.</span>1.</a>        Deformation is not required to perform a heating simulation unless thermal expansion is important. In that case, the user should set the object type to elasto-plastic, add deformation boundary conditions to constrain the part and ensure that thermal
+        expansion is defined under the material properties.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DIND_1_Turning_&#39;on&#39;_induction_heating"></a><img height="420" src="../../../../assets/images/applications/55_induction_heating/setting_up_induction_heating_in_deform/image0001.jpg" width="479"/></p>
+  <p> </p>
+  <p class="Fig_numb">Turning &#39;on&#39; induction heating</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;" value="2">
+      <p><strong>Material properties</strong> – The three material properties to provide for induction heating are electrical resistivity, relative magnetic permeability and relative magnetic permittivity (See <a href="#Fig_2DIND_2_Induction heating material properties"><span data-keyref="Application- 2D_Setting_up_Induction_Heating_in_DEFORM">Fig. IND.</span>2</a>).
+        These material properties should be defined for the coil material, the air and the material of the billet being heated. The resistivity indicates the amount a given material resists an electrical current over an applied voltage difference. The
+        relative permeability defines the ability of a material to increase the density of magnetic flux lines as compared to air. The relative permittivity defines the capacitance of a material. For more information related to units, refer chapter
+        <a href="../../../about_deform/1_introduction_to_deform/1_9_units.htm">1.9. Units</a>.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DIND_2_Induction heating material properties"></a><img src="../../../../assets/images/applications/55_induction_heating/setting_up_induction_heating_in_deform/image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Induction heating material properties</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2;" value="3">
+      <p><strong>Defining objects</strong> – As seen in <a href="#Fig_IND_3_Workpiece with surrounding meshed air and coil objects"><span data-keyref="Application- 2D_Setting_up_Induction_Heating_in_DEFORM">Fig. IND.</span>3.</a>, the workpiece is shown
+        as the large red object with a purple object (air) surrounding it. The small, multicolored rectangles correspond to the coil wrappings. To construct the air geometry, there is a tool under <strong>Geometry </strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Construct</strong><strong> </strong>as seen in <a href="#Fig_IND_4_Tool_for_creating_air_geometry"><span data-keyref="Application- 2D_Setting_up_Induction_Heating_in_DEFORM">Fig. IND.</span>4.</a> This tool will allow the user to create
+        a rectangular box and subtract geometry from the box.  </p>
+    </li>
+    <li style="" value="3">
+      <p><strong>Defining inter-object relations</strong> – The inter-object relations should be defined as the object that is the source of the EM field should be the master.  In the case of air to coil relations, the coil is the source of the EM field
+        for the air thus the coil should be the master object and the air should be the slave object. In the case of the air to workpiece relation, the air is the source of the EM field to the workpiece and thus the air should be the master and the workpiece
+        should be the slave. Once this is defined, generate the contact between all the objects as seen in <a href="#Fig_IND_5_Workpiece,_air_and_coil_objects_with_contact_generation"><span data-keyref="Application- 2D_Setting_up_Induction_Heating_in_DEFORM">Fig. IND.</span>5.</a></p>
+    </li>
+    <li style="" value="3">
+      <p><strong>Defining the coil electrical settings</strong> – This determines the intensity of the magnetic field generated by the coils. There are various ways in which this can be defined as seen in <a href="#FIg_IND_6_Defining the induction heating settings on the coil objects"><span data-keyref="Application- 2D_Setting_up_Induction_Heating_in_DEFORM">Fig. IND.</span>6.</a>        This menu is located for each coil under <strong>Object </strong><strong>Properties </strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Induction</strong><strong> </strong><strong>Heating</strong>. For each coil,
+        the frequency of the voltage, a definition of the current (either through a power definition, a voltage drop or a current density) and a level for the current must be defined.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_IND_3_Workpiece with surrounding meshed air and coil objects"></a><img src="../../../../assets/images/applications/55_induction_heating/setting_up_induction_heating_in_deform/image0003.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece with surrounding meshed air and coil objects</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_IND_4_Tool_for_creating_air_geometry"></a><img src="../../../../assets/images/applications/55_induction_heating/setting_up_induction_heating_in_deform/image0004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tool for creating air geometry</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_IND_5_Workpiece,_air_and_coil_objects_with_contact_generation"></a><img src="../../../../assets/images/applications/55_induction_heating/setting_up_induction_heating_in_deform/image0005.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece, air and coil objects with contact generation</p>
+  <p> </p>
+  <p>The contact generated for all objects is as shown in <a href="#Fig_IND_5_Workpiece,_air_and_coil_objects_with_contact_generation"><span data-keyref="Application- 2D_Setting_up_Induction_Heating_in_DEFORM">Fig. IND.</span>5.</a>, note that everything
+    is in perfect contact.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_IND_6_Defining the induction heating settings on the coil objects"></a><img height="385" src="../../../../assets/images/applications/55_induction_heating/setting_up_induction_heating_in_deform/image0006.jpg" width="450"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining the induction heating settings on the coil objects</p>
+  <p> </p>
+  <h2><a id="2_Post-Processing the simulation"></a>Post-Processing the simulation</h2>
+  <ol class="Decimal">
+    <li>
+      <p><strong>Electric </strong><strong>intensity </strong>– It is directly related to the magnetic flux intensity and determines the amount of eddy current is induced in the workpiece and thus determines the amount of heating in the workpiece.</p>
+    </li>
+    <li>
+      <p><strong>Temperature </strong>– This is the end result of the analysis of induction heating. This is a function of many variables such as the thermal properties of the material, the electric field intensity, the relative permeability and the resistivity.
+        If these variables are not correct, the temperature may not be correct.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../../about_deform/1_introduction_to_deform/1_9_units.htm">1.9 Units</a></p>
+  <p><a href="../../../pre_processor/9_simulation_controls/9_simulation_controls.htm">Simulation Controls</a></p>
+  <p><a href="../../../pre_processor/10_material_data/10_material_data.htm">Material Properties</a></p>
+  <p><a href="../../../pre_processor/16_object_properties/16_object_properties.htm">Object Properties</a></p>
+  <p><a href="../../../post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor.htm">Post Processing</a></p>
+  <p> </p>
+
+</body></html>

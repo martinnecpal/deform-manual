@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.9.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>15.6. Hydraulic press</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>15.6. Hydraulic press</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/15_movement_controls/15_6_hydraulic_press.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/15_Movement_Controls_Definition/15_7_Sliding_Die.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/15_Movement_Controls_Definition/15_5_Mechanical_press.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="15.6. Hydraulic press">
+        <span>15.6. Hydraulic press</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>15.6. Hydraulic press</h1>
+  <p><a href="#15_6_1_Speed">15.6.1. Speed</a><br/>
+    <a href="#15_6_2_Average_strain_rate">15.6.2. Average strain rate</a><br/>
+    <a href="#15_6_3_Dwell_Controls">15.6.3. Dwell Controls</a> <br/>
+    <a href="#15_6_4_Elastic_Losses">15.6.4. Elastic Losses</a></p>
+  <p> </p>
+  <p><strong>[2D, 3D]:</strong> To use the hydraulic press model the user can control one of two manners.</p>
+  <h2><a id="15_6_1_Speed"></a>Speed [2D, 3D]</h2>
+  <p>The speed of the press may be defined in one of the following ways (See <a href="#Fig_15_6_1_2D_Hydraulic_press_speed_movement_controls_settings"><span data-keyref="Chapter_15_6_Hydraulic_press">Fig. 15.6.</span>1.</a> and <a href="#Fig_15_6_2_3D_Hydraulic_press_speed_movement_controls_settings"><span data-keyref="Chapter_15_6_Hydraulic_press">Fig. 15.6.</span>2.</a>).</p>
+  <ul class="Disc">
+    <li>
+      <p>Constant</p>
+    </li>
+    <li>
+      <p>Function of time</p>
+    </li>
+    <li>
+      <p>Function of stroke of the primary object</p>
+    </li>
+  </ul>
+  <p>A power limit curve characterizing the hydraulic press may also be entered as a function of load. See Example <a href="../../labs/basic_labs/2d_labs/lab_10_hydraulic_press.htm"><span style="color:#0000FF">2D Basic lab 10 Hydraulic press.</span></a></p>
+  <p> </p>
+  <p class="Note_text">Note:</p>
+  <p class="Note_text">To activate maximum speed control, the power limit must be defined.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_15_6_1_2D_Hydraulic_press_speed_movement_controls_settings"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_6_hydraulic_press/15_6_image001.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">2D Hydraulic press speed movement controls settings</p>
+  <p style="text-align: center;"> </p>
+  <p style="text-align: center"><a id="Fig_15_6_2_3D_Hydraulic_press_speed_movement_controls_settings"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_6_hydraulic_press/15_6_image002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Hydraulic press speed movement controls settings</p>
+  <p> </p>
+  <h2><a id="15_6_2_Average_strain_rate"></a>Average strain rate [2D, 3D]</h2>
+  <p><br/> The average strain rate control can also used to define the press speed (See <a href="#Fig_15_6_3_Hydraulic_press_Average_strain_rate_movement_controls_settings"><span data-keyref="Chapter_15_6_Hydraulic_press">Fig. 15.6.</span>3.</a>). Note that
+    the initial billet height needs to be provided and should be a reasonably accurate measurement.</p>
+  <p> </p>
+  <p><strong>Allowed maximum strain rate</strong>: This setting can be defined in addition to the controls mentioned above. This will prevent the speed from exceeding a condition where the maximum strain rate in the part would exceed the defined maximum
+    strain rate.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_15_6_3_Hydraulic_press_Average_strain_rate_movement_controls_settings"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_6_hydraulic_press/15_6_image003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Hydraulic press Average strain rate movement controls settings</p>
+  <p> </p>
+  <h2><a id="15_6_3_Dwell_Controls"></a>Dwell Controls [2D, 3D]</h2>
+  <p><span style="color:#ff0000;"><span style="color:#000000;">In hydraulic press, we can stop the simulation based on the load or a minimum velocity stopping criteria. Also we can define Dwell time in Hydraulic press, when stopping criteria reaches Dwell calculation will starts till the defined Total dwell time. Dwell controls options is as shown in </span>    <a href="#FIg_15_6_4_Hydraulic_Press_Dwell_Controls"><span data-keyref="Chapter_15_6_Hydraulic_press">Fig. 15.6.</span> <span style="color:#000000;">4.</span> </a> </span>
+  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_15_6_4_Hydraulic_Press_Dwell_Controls"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_6_hydraulic_press/15_6_image004.jpg"/></p>
+  <p class="Fig_numb" style="text-align: center;">Hydraulic Press Dwell Controls</p>
+  <p> </p>
+  <h2><a id="15_6_4_Elastic_Losses"></a>Elastic Losses</h2>
+  <p>The stiffness of a press or a hammer can be defined in this dialog. In the case of a press there can be stretch based on the forging load and the final distance of the press will be less by the amount of the stretch. In the case of a hammer, the compliance
+    accounts for elastic loss of energy.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="15_movement_controls_settings.htm">15. Movement Controls Settings</a></p>
+  <p><a href="15_1_speed.htm">15.1. Speed</a></p>
+  <p><a href="15_2_force.htm">15.2. Force</a></p>
+  <p><a href="15_3_hammer.htm">15.3. Hammer</a></p>
+  <p><a href="15_4_screw_press.htm">15.4. Screw press</a></p>
+  <p><a href="15_5_mechanical_press.htm">15.5. Mechanical press</a></p>
+  <p><a href="15_7_sliding_die.htm">15.7. Sliding Die</a></p>
+  <p><a href="15_8_path.htm">15.8.  Path</a></p>
+  <p><a href="15_9_rotational_movement.htm">15.9. Rotational Movement</a></p>
+  <p><a href="15_10_torsional_movement.htm">15.10. Torsional movement</a></p>
+  <p><a href="15_11_friction_welding_movement.htm">15.11. Friction Welding movement</a></p>
+  <p> </p>
+
+</body></html>

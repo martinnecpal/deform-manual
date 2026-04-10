@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "3.1.1.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.6.5. Adding Cycles</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.6.5. Adding Cycles</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_5_adding_cycles.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/Pre-Processor_MainPg.htm"/><meta name="brsprev" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_6_Operations_Management/6_6_4_Upgrading_Operations.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="6.6.5. Adding Cycles">
+        <span>6.6.5. Adding Cycles</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>6.6.5. Adding Cycles</h1>
+  <ul class="Disc">
+    <li>
+      <p><a href="#Introduction_to_Add_cycles">Introduction to Add cycles</a></p>
+    </li>
+    <li>
+      <p><a href="#Add_Cycles">Add Cycles</a></p>
+    </li>
+    <li>
+      <p><a href="#Delete_Cycles">Delete Cycles</a></p>
+    </li>
+    <li>
+      <p><a href="#Changing_the_number_of_cycles">Changing the number of cycles</a></p>
+    </li>
+    <li>
+      <p><a href="#Change_the_name_of_the_cycle_operation">Change the name of the cycle operation</a></p>
+    </li>
+    <li>
+      <p><a href="#Moving_operations_(Drag_and_Drop)">Moving operations (Drag and Drop)</a></p>
+    </li>
+    <li>
+      <p><a href="#Examples">Examples</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><a id="Introduction_to_Add_cycles"></a><strong>Introduction to Add cycles</strong></p>
+  <p>Add cycles to am operation performs same operations repetitively in cycle. User needs to select the operations to repeat and the number of times to repeat (See <a href="#Fig._6.6.5.1.__Extent_to_use_the_add_cycles"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>1.</a>). To
+    add cycle to operation, the first operation in cycle must have read from DB object. To analyze the die stress and temperatures after the multiple components manufacturing is an example where user can use the cycles, user can add as number of cycles
+    as components produced.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="219" src="../../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image018.jpg" style="cursor: nesw-resize;" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.6.5.1.__Extent_to_use_the_add_cycles"></a> Extent to use the add cycles</p>
+  <p> </p>
+  <p><a id="Add_Cycles"></a><strong>Add Cycles</strong></p>
+  <p>All the operations to be cycled must be selected by using the Left mouse button (LMB) and Ctrl button from Keyboard and then RMB click on any of the selected operation will give option to select Add Cycles as shown in <a href="#Fig._6.6.5.2._Add_cycles_from_Operation_editor"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="202" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_5_adding_cycles/6_6_5_image006.jpg" width="750"/></p>
+  <p class="Fig_name">(a)</p>
+  <p style="text-align: center"><img src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_5_adding_cycles/6_6_5_image007.jpg"/></p>
+  <p class="Fig_name">(b)</p>
+  <p class="Fig_numb"><a id="Fig._6.6.5.2._Add_cycles_from_Operation_editor"></a>Add cycles from Operation editor; (a) Before adding the cycle (b) After adding the cycle</p>
+  <p> </p>
+  <p>The other option to cycle operations is by adding the cycle operator from operations explorer &#39;Simulation operator&quot; as shown in <a href="#Fig._6.6.5.3._Adding_cycle_operator_from_Operations_explorer"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>3.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.6.5.3._Adding_cycle_operator_from_Operations_explorer"></a><img src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_5_adding_cycles/6_6_5_image008.jpg"/></p>
+  <p class="Fig_numb">Adding cycle operator from Operations explorer</p>
+  <p> </p>
+  <p>After adding the cycle an orange color outline appears in operation editor around the operations that are cycled (See <a href="#Fig._6.6.5.2._Add_cycles_from_Operation_editor"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>2b</a>)
+    and Add cycles property window opens in property editor. In add cycles property window user has can enter the required number of cycles and select   button to update the changes as shown in <a href="#Fig._6.6.5.4._Add_cycles_property_window"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>4.</a> The
+    text on the outline of the operations that are cycled indicates the number of cycles as shown in <a href="#Fig._6.6.5.5._Delete_added_cycle_option"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.6.5.4._Add_cycles_property_window"></a><img src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_5_adding_cycles/6_6_5_image009.jpg"/></p>
+  <p class="Fig_numb">Add cycles property window</p>
+  <p> </p>
+  <p><a id="Delete_Cycles"></a><strong>Delete Cycles</strong></p>
+  <p>Added cycles can be removed easily from RMB click options on the orange outline around cycled operations in operation editor and selecting option Delete cycle as shown in <a href="#Fig._6.6.5.5._Delete_added_cycle_option"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>5.</a></p>
+  <p style="text-align: center"><img src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_5_adding_cycles/6_6_5_image010.jpg"/></p>
+  <p class="Fig_numb"><a id="Fig._6.6.5.5._Delete_added_cycle_option"></a>Delete added cycle option</p>
+  <p> </p>
+  <p><a id="Changing_the_number_of_cycles"></a><strong>Changing the number of cycles</strong></p>
+  <p>By clicking on the border (orange outline) around the cycled operations in the operation editor cycles property editor window will open, in this window user can change the number of cycles and click apply to apply changed number of cycles as shown in
+    <a href="#Fig._6.6.5.6._Changing_number_of_cycles"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>6.</a></p>
+  <p style="text-align: center"><img height="241" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_5_adding_cycles/6_6_5_image001.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.6.5.6._Changing_number_of_cycles"></a>Changing number of cycles</p>
+  <p> </p>
+  <p><a id="Change_the_name_of_the_cycle_operation"></a><strong>Change the name of the cycle operation</strong></p>
+  <p>By default cycle operation is named by &quot;cycle (number of cycles)&quot; on the outline around cycled operations. Cycle operation name can be changed by clicking on the cycle default name on the orange outline and after changing the name press the
+    enter button from keyboard as shown in <a href="#Fig._6.6.5.7._Changing_the_cycle_operation_name"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>7.</a></p>
+  <p style="text-align: center"><img src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_5_adding_cycles/6_6_5_image002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._6.6.5.7._Changing_the_cycle_operation_name"></a>Changing the cycle operation name</p>
+  <p> </p>
+  <p><a id="Moving_operations_(Drag_and_Drop)"></a><strong>Moving operations (Drag and Drop)</strong></p>
+  <p>After adding cycles by selecting a set of operations, user can move operations into or out of cycles by drag and dropping the operation into and out of cycle in operation editor as shown in <a href="#Fig._6.6.5.8._Moving_operations_into_and_out_of_the_cycle"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>8.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_5_adding_cycles/6_6_5_image003.jpg"/></p>
+  <p class="Fig_numb"><a id="Fig._6.6.5.8._Moving_operations_into_and_out_of_the_cycle"></a>Moving operations into and out of the cycle</p>
+  <p> </p>
+  <p><a id="Examples"></a><strong>Examples</strong></p>
+  <p><strong>Example1</strong>: Steady state thermal behavior of the dies for multiple hits can be setup by adding the cycles to the operation in which keeping the same die set from previous forming operation and changing the workpiece. This changes the
+    workpiece in each forming cycle by keeping the same dies with previous hits thermal history. The operation editor for such cycle operation looks like as shown in <a href="#Fig._6.6.5.9._Operation_editor_for_example1"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>9.</a></p>
+  <p style="text-align: center"><a id="Fig._6.6.5.9._Operation_editor_for_example1"></a><img height="275" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_5_adding_cycles/6_6_5_image004.jpg" width="406"/></p>
+  <p style="text-align: center">  </p>
+  <p class="Fig_numb">Operation editor for example1</p>
+  <p> </p>
+  <p><strong>Example2:</strong> In extrusion simulation computational efficiency can be increased by removing the material outside the area of interest. This is done by breaking down the extrusion into multiple cycles and cutting the workpiece in each cycle
+    with boolean operation. The operation editor for such cycle operation looks like as shown in <a href="#Fig._6.6.5.10._Operation_editor_for_example2"><span data-keyref="Chapter_6_6_5_ Adding cycle">Fig. 6.6.5.</span>10.</a></p>
+  <p style="text-align: center">  <img src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_5_adding_cycles/6_6_5_image005.jpg"/></p>
+  <p class="Fig_numb"><a id="Fig._6.6.5.10._Operation_editor_for_example2"></a>Operation editor for example2</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../6_1_integrated_manufacturing_process_preprocessor_layout.htm">6.1.  Integrated Manufacturing Porcess (MO) Pre-processor Layout</a></p>
+
+</body></html>

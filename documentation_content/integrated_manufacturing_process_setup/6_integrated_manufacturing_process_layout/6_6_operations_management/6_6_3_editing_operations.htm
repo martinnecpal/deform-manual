@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "3.1.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.6.3. Editing Operations</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.6.3. Editing Operations</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_3_editing_operations.css"/>
+<meta name="brsnext" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_6_Operations_Management/6_6_4_Upgrading_Operations.htm"/><meta name="brsprev" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_6_Operations_Management/6_6_2_Read_from_DB_concept.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="6.6.3. Editing Operations">
+        <span>6.6.3. Editing Operations</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>6.6.3. Editing Operations</h1>
+  <p>The operations added to the project can be edited by select the operations to edit from Operation Editor, the selected operation contents will reflect in operation tree or property editor as shown in <a href="#Fig._6.6.3.1._Selecting_operation_for_editing"><span data-keyref="Chapter_6_6_3_Edting_operations">Fig. 6.6.3.</span>1.</a> Using
+    operation tree or property editor user can sequentially edit the operations.</p>
+  <p style="text-align: center"> <br/>
+    <a id="Fig._6.6.3.1._Selecting_operation_for_editing"></a><img height="500" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_1_connecting_operations/6_6_1_image004.jpg" width="578"/></p>
+  <p class="Fig_numb">Selecting operation for editing</p>
+  <p><br/> If the user would like to modify the existing setup of already simulated DB then user has to switch to Pre tab and use Step Editor option to select the appropriate step to modify the setup and continue simulation. Step editor tab is available
+    in same session in Pre mode only if DB is having atleast one positive step or new session is opened after DB generation, steps available for selection in Step Editor is shown in <a href="#Fig._6.6.3.2._Step_editor"><span data-keyref="Chapter_6_6_3_Edting_operations">Fig. 6.6.3.</span>2.</a>    Once the appropriate step is selected the operation tree or property editor will reflect the contents of the operation at the selected step. (See <a href="#Fig._6.6.3.3._Step_editor_with_intermediate_step_selected_for_editing"><span data-keyref="Chapter_6_6_3_Edting_operations">Fig. 6.6.3.</span>3.</a>)</p>
+  <p style="text-align: center"><img height="480" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_3_editing_operations/6_6_3_image001.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.6.3.2._Step_editor"></a>Step editor</p>
+  <p> </p>
+  <p style="text-align: center"><img height="481" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_3_editing_operations/6_6_3_image002.jpg" style="cursor: nesw-resize;" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.6.3.3._Step_editor_with_intermediate_step_selected_for_editing"></a>Step editor with intermediate step selected for editing</p>
+  <p> </p>
+  <p>For more details on property editor setting of typical forming operation refer the chapter <a href="../../../operation_templates/33_forming/33_introduction_to_forming.htm">Forming Operation Setup</a>.</p>
+  <p> </p>
+  <p><img height="23" src="../../../../assets/icons/pre_icons/mo_outline_button.jpg" width="50"/>: When selected displays only the first and last step of the operations in the step editor</p>
+  <p><img height="23" src="../../../../assets/icons/pre_icons/mo_auto_button.jpg" width="50"/>: When selected displays only first, last and one intermediate saved step of the operations in the step editor.</p>
+  <p><img height="23" src="../../../../assets/icons/pre_icons/mo_brief_button.jpg" width="50"/>: When selected displays steps that are selected by system automatically for display in the step list.</p>
+  <p> <img height="21" src="../../../../assets/icons/pre_icons/mo_all_button.jpg" width="46"/> : When selected displays all saved steps of the all operations in the step editor.</p>
+  <p><img height="21" src="../../../../assets/icons/pre_icons/mo_step_list.jpg" width="24"/> : This will provide more detailed information of all saved steps like Simulation number, Mesh number, Time, Stroke of primary die, Dimension, Version number and
+    Fold (for 3D). It also list the operations sequence on the left side window and provides more step selection option on right side window.</p>
+  <p>For more information on step selection types and step list options refer the section <a href="../6_1_integrated_manufacturing_process_preprocessor_layout.htm#Step_Editor">6.1.7 Step Editor.</a></p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../6_1_integrated_manufacturing_process_preprocessor_layout.htm">6.1. Integrated Manufacturing Porcess (MO) Pre-processor Layout</a></p>
+  <p><a href="../../../operation_templates/33_forming/33_introduction_to_forming.htm">Forming Operation </a></p>
+
+</body></html>

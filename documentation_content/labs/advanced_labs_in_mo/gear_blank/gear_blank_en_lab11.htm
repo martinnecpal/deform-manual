@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.3.1.0_12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gear Blank EN Lab 11</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gear Blank EN Lab 11</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/advanced_labs_in_mo/gear_blank/gear_blank_en.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Blank/Gear_Blank_EN_Lab12.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Blank/Gear_Blank_EN_Lab10.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Gear Blank EN Lab 11">
+        <span>Gear Blank EN Lab 11</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 11 Interpreting Results</h1>
+  <p>Browse the project <strong>Gear_t </strong>in DEFORM GUI Main and select DB. Click on <img src="../../../../assets/icons/pre_icons/2d_3d_post_label.jpg"/> Post Processor link to open it in Next Gen Post.</p>
+  <p> </p>
+  <p><strong>Play through the steps</strong></p>
+  <p>Click on <img height="21" src="../../../../assets/icons/post_icons/mo_play_button.jpg" width="22"/> Play steps forward and watch the workpiece fill the tooling. Set up a simple view without the mesh <img src="../../../../assets/icons/pre_icons/mo_shading_mode_icon.jpg"/> and turn on contact <img src="../../../../assets/icons/pre_icons/mo_show_cotact_icon.jpg"/>. Play through the process one step at a time (use Next <img src="../../../../assets/icons/post_icons/mo_next_step_icon.jpg"/> and Previous <img src="../../../../assets/icons/post_icons/mo_prevoius_step_icon.jpg"/> step buttons) and watch the workpiece contact with the top and bottom die. (See <a href="#Fig_L11_1_Workpiece_contact_with_tools_as_it_fill_the_tooling"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab11">Fig. L11.</span>1.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L11_1_Workpiece_contact_with_tools_as_it_fill_the_tooling"></a><img height="203" src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab11_image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab11">Workpiece contact with tools as it fill the tooling</p>
+  <p> </p>
+  <p>FLOWNET can be used to create a pattern on the workpiece at the start of the forging operation and to track the distortion through the simulation. Turn off the field variables and click on the FLOWNET <img src="../../../../assets/icons/post_icons/mo_flownet_icon.jpg"/> icon  to open flownet definition window. Click the <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button and choose the <strong>Polygon grid</strong> pattern. Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>, Define the slicing plane down the center of the workpiece. Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> and define 4 as the Number of polygons. Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> &amp; <img src="../../../../assets/icons/post_icons/mo_generate_button.jpg"/> to generate a default circular pattern, which can be reviewed by stepping through the step list. To watch the pattern deform with the workpiece, turn on the
+    workpiece <img src="../../../../assets/icons/pre_icons/mo_shading_mode_icon.jpg"/> and then slice it so that you can see the mesh and flownet as shown in <a href="#Fig_L11_2_Workpiece_at_last_step_with_polygon_grid_pattern_with_sliced_plane"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab11">Fig. L11.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L11_2_Workpiece_at_last_step_with_polygon_grid_pattern_with_sliced_plane"></a><img src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab11_image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab11">Workpiece at last step with polygon grid pattern with sliced plane</p>
+  <p> </p>
+  <p>Open “<strong>Gear_sym</strong><strong>.</strong><strong>DB</strong>” in Next Gen Post as explained for Gear_t.DB. The DEFORM has an enhanced offset flownet that helps to predict folds. Go to the post, slice the object and watch the fold form. Go to
+    the last step, right click on the folding icon in the tree  and select <strong>Show folding</strong>. This will show you areas where the workpiece folded over and made contact with itself. DEFORM removes these regions to help with convergence.</p>
+  <p>Use the Offset flownet used for finding folds. It can detect a folding tendency that is not shown in the mesh.  Go to the last step and view the flownet. You can see that the fold remains even though the fold has been removed from the workpiece mesh.</p>
+  <p> </p>
+  <hr/>
+  <p>Optional exercise – time permitting– PIP (Picture in picture) / Animation</p>
+  <p> </p>
+  <p style="margin-left: 20px">- On the toolbar, go to File/Import DB (PIP) and import the same DB. You now have two pictures in graphics window that you can manipulate. Rotate, pan and zoom in on the workpiece in the top viewport. Plot strain and play through the simulation.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px">- Create a load-stroke graph in the one picture. Play through the simulation.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px">- On the toolbar,click on <img src="../../../../assets/icons/post_icons/mo_animation_icon.jpg"/> (Animation Setup). View the settings below and click Save. Play the animation file.</p>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p><strong>General tab: </strong>File name is the name of the animation.  The animation files will be saved in a DEF_ANIM folder in the current simulation directory (by default).</p>
+    </li>
+    <li style="margin-left: 20px;">
+      <p><strong>Settings tab:</strong> adjusts the time stepping between frames and at the beginning and end of the animation</p>
+    </li>
+    <li style="margin-left: 20px;">
+      <p><strong>Export tab:</strong> Select WMV file to create a WMV format animation that can be played on almost any computer.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <hr/>
+  <p>Optional exercise – time permitting – Purge</p>
+  <p> </p>
+  <p style="margin-left: 20px">- Open the steplist <img src="../../../../assets/icons/post_icons/mo_step_list_icon.jpg"/>. The steps that are highlighted in blue are selected. The highlighted steps are what you see when you play through the simulation. You can click any step or
+    click and drag several steps to select/de-select one or more steps. There are also tools on the right to help you select the desired steps.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px">- Click on None then enter 50 into the Increment field and press the Enter key. Click on the Remeshing button.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px">- Go to Database Purging then click Save Selected Steps. This will create a new database called Gear_sym_PUR.DB. The new database will only contain the steps that you selected. Any unselected step will be removed (purged). The result is a database that
+    is smaller and easy to archive.</p>
+  <p> </p>
+  <hr/>
+  <p> </p>
+
+</body></html>

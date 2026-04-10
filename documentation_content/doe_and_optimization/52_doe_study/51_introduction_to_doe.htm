@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>52. Introduction to DOE</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>52. Introduction to DOE</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/doe_and_optimization/52_doe_study/52_introduction_to_doe_study.css"/>
+<meta name="brsnext" value="Documentation_content/DOE_and_Optimization/52_DOE_Study/52_1_DOE_and_DOE_Output_Operation_Setup.htm"/><meta name="brsprev" value="Documentation_content/DOE_and_Optimization/DOE_and_Optimization_MainPg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="52. Introduction to DOE">
+        <span>52. Introduction to DOE</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>52. Introduction to DOE</h1>
+  <p>DOE (design of experiments) is a systematic approach to investigation of a system or process. A series of structured tests are designed in which planned changes are made to the input variables of a process or system. The effects of these changes on
+    a pre-defined output are then assessed using DOE Post. DOE environment in DEFORM can be used for,</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Sensitivity analysis to address variabilities / uncertainties in processing conditions, material data and boundary conditions.</p>
+    </li>
+    <li>
+      <p>Model “multiple operations” and run multiple jobs for sensitivity study.</p>
+    </li>
+    <li>
+      <p>Statistical analysis and probabilistic modeling.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>Typical structure explaining the role of the DOE in process or product design in Multiple operation environment  is as shown in <a href="#Fig_52_1_Role_of_DOE_in_Process_or_Product_design"><span data-keyref="Chapter_52_Introduction_to_DOE">Fig. 52.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_Role_of_DOE_in_Process_or_Product_design"></a><img src="../../../assets/images/doe_and_optimization/52_doe_study/image001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Role of DOE in Process or Product design</p>
+  <p> </p>
+  <p>DOE can be performed only after a nominal simulation is completed. DOE simulation is carried out in  three stages those are Preprocessing, Simulating and Postprocessing the DOE samples.</p>
+  <p>DOE Preprocessor is where user needs to define the DOE variables, range of fluctuations/uncertainty of study variables, total sample size or sampling method. Using unified control program DOE Job samples can be simulated by one click in batch mode.
+    DOE post provides user friendly tools to investigate the input parameters and output response from multiple samples simulation results at specified operations and locations.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="52_1_doe_and_doe_output_operation_setup.htm">52.1. DOE and DOE Output Operation Setup</a></p>
+  <p><a href="52_2_doe_simulation_running_and_monitoring.htm">52.2. DOE Simulation Running and Monitoring</a></p>
+  <p><a href="../54_doe_post_processor/54_1_doe_post_processor.htm">54.1.  DOE Post Processor</a></p>
+  <p><a href="../../labs/doe_labs/2d_doe_lab/2d_doe_lab1.htm">2D DOE Lab1</a></p>
+
+</body></html>

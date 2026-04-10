@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.20.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>48.1. Spinning</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>48.1. Spinning</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/48_spinning/48_1_spinning.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/48_Spinning/48_2_Flow_Forming.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/48_Spinning/48_Introduction_to_Spinning.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="48.1. Spinning">
+        <span>48.1. Spinning</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>48.1. Spinning Manual</h1>
+  <p><a href="#48_1_1_How_to_add_the_Spinning_Operation">48.1.1. How to add the Spinning Operation</a></p>
+  <p><a href="#48_1_2_Process">48.1.2. Process</a></p>
+  <p><a href="#48_1_3_Simulation_setup">48.1.3. Simulation setup</a></p>
+  <p><a href="#48_1_4_Objects_selection_for_setup">48.1.4. Objects selection for setup</a></p>
+  <p><a href="#48_1_5_Workpiece_page">48.1.5. Workpiece page</a></p>
+  <p style="margin-left: 40px"><a href="#48_1_5_1_Defining_Workpiece_2D_cross-section">48.1.5.1. Defining Workpiece 2D cross-section</a></p>
+  <p style="margin-left: 40px"><a href="#48_1_5_2_Workpiece_Mesh_page">48.1.5.2. Workpiece Mesh page</a></p>
+  <p style="margin-left: 40px"><a href="#48_1_5_3_Material_Page">48.1.5.3. Material Page</a></p>
+  <p style="margin-left: 40px"><a href="#48_1_5_4_Defining_WorkpieceBCC">48.1.5.4. Defining Workpiece  BCC</a></p>
+  <p><a href="#48_1_6_Defining_Mandrel_Object">48.1.6. Defining Mandrel Object</a></p>
+  <p style="margin-left: 40px"><a href="#48_1_6_1_Defining_Mandrel_2D_Cross-section">48.1.6.1. Defining Mandrel 2D Cross-section</a> </p>
+  <p style="margin-left: 40px"><a href="#48_1_6_2_Generating_Mandrel_3D_Geometry">48.1.6.2. Generating Mandrel 3D Geometry</a> </p>
+  <p style="margin-left: 40px"><a href="#48_1_6_3_Generating_Mandrel_Mesh">48.1.6.3. Generating Mandrel Mesh</a> </p>
+  <p style="margin-left: 40px"><a href="#48_1_6_4_Defining_Mandrel_Material">48.1.6.4. Defining Mandrel Material</a> </p>
+  <p style="margin-left: 40px"><a href="#48_1_6_5_Generating_Mandrel_BCC">48.1.6.5. Generating Mandrel BCC</a></p>
+  <p style="margin-left: 40px"><a href="#48_1_6_6_Reference_point_setup_for_Mandrel">48.1.6.6. Reference point setup for Mandrel</a></p>
+  <p><a href="#48_1_7_Defining_Roll_Object">48.1.7. Defining Roll Object</a></p>
+  <p style="margin-left: 40px"><a href="#48_1_7_1_Defining_Roll_Geometry,_Mesh,_Material_and_BCC">48.1.7.1. Defining Roll Geometry, Mesh, Material and BCC</a></p>
+  <p style="margin-left: 40px"><a href="#48_1_7_2_Roll_Orientation_Page">48.1.7.2. Roll Orientation Page</a> </p>
+  <p><a href="#48_1_8_Pass_table">48.1.8. Pass table</a></p>
+  <p><a href="#48_1_9_Controls_">48.1.9. Controls</a> </p>
+  <p style="margin-left: 40px"><a href="#48_1_9_1_Automatic_Positioning">48.1.9.1. Automatic Positioning</a></p>
+  <p style="margin-left: 40px"><a href="#48_1_9_2_Advanced_Object_Positioning">48.1.9.2. Advanced Object Positioning</a></p>
+  <p><a href="#48_1_10_Contact">48.1.10. Contact</a></p>
+  <p><a href="#48_1_11_Stopping_controls">48.1.11. Stopping controls</a></p>
+  <p><a href="#48_1_12_Simulation_controls">48.1.12. Simulation controls</a></p>
+  <p><a href="#48_1_13_Generate_DB">48.1.13. Generate DB</a></p>
+  <p> </p>
+  <h2><a id="48_1_1_How_to_add_the_Spinning_Operation"></a>How to add the Spinning Operation</h2>
+  <p>Spinning operation can be setup in Integrated Manufacturing Process environment that can be accessed from GUI Main. Create a new problem by either selecting File <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> New Problem or by clicking
+    the New Problem <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. Select 3D Spinning radio button under problem type and unit system. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> button (as shown
+    in <a href="#Fig_48_1_1_Adding_Spinning_Operation_from_GUI_Main"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>1.</a>). Integrated Manufacturing Process template will open, we can see that 3D Spinning operation is added in Operation editor.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_1_Adding_Spinning_Operation_from_GUI_Main"></a><img height="375" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Spinning Operation from GUI Main</p>
+  <p><br/> We can also add Spinning operation into Integrated Manufacturing Process environment from the New Project pop-up when a new problem is opened in Integrated Manufacturing Process environment as shown in <a href="#Fig_48_1_2_Assign_Project_name_and_First_Operation_selection_in_New_Project_window"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>2.</a>    Using “Copy Existing project” option, we can import previous saved projects as new project from the New Project pop-up.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_2_Assign_Project_name_and_First_Operation_selection_in_New_Project_window"></a><img height="372" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assign Project name and First Operation selection in New Project window</p>
+  <p><br/> We can also add Spinning operation to operation editor from explorer tab in Integrated Manufacturing Process environment, by clicking on <img height="20" src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg" width="19"/> button next
+    to Spinning operation or by drag and drop Spinning operation into operation editor window. As the Spinning operation is added into operation editor, If the current Screen upward direction is &quot;Z&quot; direction then we will get below popup as
+    shown in <a href="#Fig_48_1_3_Adding_operation_from_Explorer_Operation_list_-_Screen_upward_direction_popup"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>3.</a> Click <img src="../../../assets/icons/pre_icons/mo_yes_change_button.jpg"/> in &quot;Change screen upward axis&quot; popup.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_3_Adding_operation_from_Explorer_Operation_list_-_Screen_upward_direction_popup"></a><img height="372" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding operation from Explorer Operation list - Screen upward direction popup</p>
+  <p> </p>
+  <p>Now the Process selection page will be opened in property settings modification window as shown in <a href="#Fig_48_1_4_Opened_3D_Spinning_operation"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>4.</a></p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_48_1_4_Opened_3D_Spinning_operation"></a><img height="372" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0004.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Opened 3D Spinning operation</p>
+  <h2><a id="48_1_2_Process"></a>Process</h2>
+  <p>In the process page by default “Spinning” option is selected. We can use spinning operation template to set up “Flow forming” operation. We can define the shaft rotational speed (w) in process page as shown in the <a href="#Fig_48_1_5_Spinning_Process_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>5.</a></p>
+  <p><strong>Rotation speed (w)</strong>: The user can define the speed mandrel which will be applied to tail stock and head stock if used.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_5_Spinning_Process_Page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0005.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Spinning Process Page</p>
+  <p> </p>
+  <h2><a id="48_1_3_Simulation_setup"></a>Simulation setup</h2>
+  <p>The user can select the solution method (ALE or Lagrangian), solver (Implicit or Explicit) and thermal calculations as shown in the <a href="#Fig_48_1_6_Simulation_Setup_page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>6.</a></p>
+  <p><strong>Thermal Calculations:</strong> In thermal calculations tab (see <a href="#Fig_48_1_6_Simulation_Setup_page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>6.</a>) we have options to select the object types on which thermal calculations
+    need to be performed.  User has options to select Calculations in workpiece alone or even in rolls in case of non-isothermal. User may turn off thermal calculations by selecting constant temperature in case of isothermal models.</p>
+  <p><strong>Target Volume</strong>: When we turned on Active in FEM check box, Target volume for Workpiece with &quot;<strong>Active in FEM</strong>&quot; method will be assigned for Workpiece.</p>
+  <p><strong>Express </strong>:User can select ALE express solver to accelerate the simulation speed of ALE spinning simulation. When this solver is selected the roll must have hole at the center and Non separable criteria must be defined between Head stock/Tail
+    stock and workpiece.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_6_Simulation_Setup_page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0006.jpg" style="cursor: nwse-resize;"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Setup page</p>
+  <p><br/> Spinning setup behavior based on solution and solver selection is explained in below table,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;text-align: center;margin-left: auto;margin-right: auto">
+    <colgroup>
+      <col style="width: 150px;"/>
+      <col style="width: 140px;"/>
+      <col style="width: 160px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="text-align: center">
+          <p class="p_table_text" style="text-align: left"><strong>Object</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p class="p_table_text" style="text-align: left"><strong>ALE+Implicit</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p class="p_table_text" style="text-align: left"><strong>ALE+ Explicit</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p class="p_table_text" style="text-align: left"><strong>Lagrangian + Implicit</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p class="p_table_text" style="text-align: left"><strong>Lagrangian + Explicit</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="p_table_text"><strong>Workpiece Object type</strong></p>
+        </td>
+        <td>
+          <p class="p_table_text">Rigid Plastic</p>
+        </td>
+        <td>
+          <p class="p_table_text">Elasto Plastic</p>
+        </td>
+        <td>
+          <p class="p_table_text">Rigid Plastic</p>
+        </td>
+        <td>
+          <p class="p_table_text">Elasto Plastic</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="p_table_text"><strong>Iteration method</strong></p>
+        </td>
+        <td>
+          <p class="p_table_text">MUMPS+ Direct iteration</p>
+        </td>
+        <td>
+          <p class="p_table_text">Explicit + N-R</p>
+        </td>
+        <td>
+          <p class="p_table_text">MUMPS + Direct Iteration</p>
+        </td>
+        <td>
+          <p class="p_table_text">Explicit + N-R</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="p_table_text"><strong>Workpiece Mesh</strong></p>
+        </td>
+        <td colspan="2" rowspan="1">
+          <p class="p_table_text">Non-uniform mesh in hoop direction</p>
+          <p class="p_table_text">(Fine mesh at contact)</p>
+          <p class="p_table_text">Uniform mesh preferred for Explicit</p>
+        </td>
+        <td colspan="2" rowspan="1">
+          <p class="p_table_text">Uniform mesh in hoop direction</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="1" rowspan="2">
+          <p class="p_table_text"><strong>Workpiece Movement</strong></p>
+        </td>
+        <td colspan="4" rowspan="1">
+          <p class="p_table_text">No movement is assigned to workpiece</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="1">
+          <p class="p_table_text">Mesh is not updated in hoop direction in ALE hence no rotation of object is observed</p>
+        </td>
+        <td colspan="2" rowspan="1" style="text-align: center">
+          <p class="p_table_text">Lagrangian simulation shows actual rotation of workpiece.</p>
+          <p class="p_table_text">Workpiece movement is achieved by imposing sticking BCC at interface with mandrel and Head stock.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="p_table_text"><strong>Mandrel/ Tailstock Headstock/ Rolls Object type</strong></p>
+        </td>
+        <td colspan="4" rowspan="1">
+          <p class="p_table_text">Rigid</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="p_table_text"><strong>Mandrel/ Tailstock Headstock Movement </strong> </p>
+        </td>
+        <td colspan="4" rowspan="1">
+          <p class="p_table_text">Only “Rotation 1” type angular motion is defined about the objects center axis</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="p_table_text"><strong>Rolls Movement</strong></p>
+        </td>
+        <td colspan="4" rowspan="1">
+          <p class="p_table_text">“Rotation 1” type angular motion or Torque is defined about the objects center axis<br/> Translation of rolls (speed, force or path definition type) is can be defined. Rolls do not orbit.</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="1" rowspan="2">
+          <p class="p_table_text"><strong>Interface</strong></p>
+        </td>
+        <td colspan="4" rowspan="1">
+          <p class="p_table_text">Interface with sticking BCC at interface of “’Workpiece/mandrel” and “Workpiece/ head stock”.</p>
+        </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>
+          <p class="p_table_text"> “Lite contact search” will be used when friction window is detected.<br/> Rigid Zone is automatically generated when sticking BCC is detected     </p>
+        </td>
+        <td> </td>
+        <td>
+          <p class="p_table_text">“Lite contact search” will be used when friction window is detected.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h2><a id="48_1_4_Objects_selection_for_setup"></a>Objects selection for setup</h2>
+  <p>The user can select the objects to be used in the setup from the available object types as shown in the <a href="#Fig_48_1_7_Objects_Page_(Spinning_setup)"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>7.</a> User can select the “Number
+    of rolls” as used in the setup. If the rolls are more than 1 then angle between them in counter-clock direction can be define in the table below “Number of rolls” field as shown in <a href="#Fig_48_1_7_Objects_Page_(Spinning_setup)"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>7.</a></p>
+  <p class="Note_text"><br/> Note: User can define maximum of 3 Rolls in “Number of rolls” field.</p>
+  <p class="Note_text"> </p>
+  <p class="Note_text" style="text-align: center"><a id="Fig_48_1_7_Objects_Page_(Spinning_setup)"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0007.jpg"/></p>
+  <p class="Note_text"> </p>
+  <p class="Fig_numb">Objects Page (Spinning setup)</p>
+  <h2><a id="48_1_5_Workpiece_page"></a>Workpiece page</h2>
+  <p>The user can define the Workpiece name, temperature and Object type as shown in the <a href="#Fig_48_1_8_Workpiece_object_page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>8.</a> Depending on the solver selection in Simulation setup user
+    need to select the object type. Plastic object type for Implicit solver and Elasto-plastic object type for Explicit solver. User can import objects from other databases or key files using <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> and <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> options or save the object data using <img height="20" src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg" width="21"/> and <img src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> options.</p>
+  <p> </p>
+  <p style="text-align: center;"><a id="Fig_48_1_8_Workpiece_object_page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0008.jpg"/></p>
+  <p class="Fig_numb" style="text-align: center;"> Workpiece object page</p>
+  <p> </p>
+  <h3><a id="48_1_5_1_Defining_Workpiece_2D_cross-section"></a>Defining Workpiece 2D cross-section</h3>
+  <p>The user can define the 2D Cross section of the workpiece using the <img src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> or <img src="../../../assets/icons/pre_icons/mo_edit_lable.jpg"/> option. Center and Axis of the geometry
+    is defined in “2D cross-section info” as shown in the <a href="#Fig_48_1_9_2D_Geometry_page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>9.</a> The system assumes that the geometry will be revolved about the X-axis by default. Therefore,
+    the center axis of the 2D cross-section geometry should be colinear with the global X-axis. User can import 2D Cross-section from other databases or key files using <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> , <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> options or save the 2D Cross-section data using <img height="20" src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg" width="21"/>, <img src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/>  options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_9_2D_Geometry_page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0009.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D Geometry page</p>
+  <h3><a id="48_1_5_2_Workpiece_Mesh_page"></a>Workpiece Mesh page</h3>
+  <p>Spinning setup uses brick mesh as initial mesh generation method for both Lagrangian and ALE. If brick mesh generation has any issues in Lagrangian type of simulation, then tetrahedral mesh will be used during remeshing. User can generate the cross-section
+    mesh for defined settings by clicking on <img src="../../../assets/icons/pre_icons/mo_generate_2d_mesh_button.jpg"/> label and 3D mesh with defined settings can be generated by clicking on <img src="../../../assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg"/>, see <a href="#Fig_48_1_10_Workpiece_Mesh_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>10.</a></p>
+  <h4>Cross-section mesh</h4>
+  <ul class="Disc">
+    <li>
+      <p><strong>Number of Elements:</strong> User can define number of elements to be used in cross-section mesh here, see <a href="#Fig_48_1_10_Workpiece_Mesh_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>10.</a> System generated Cross-section
+        mesh when user clicks on <img src="../../../assets/icons/pre_icons/mo_generate_2d_mesh_button.jpg"/> label which will be rotated to generate 3D Mesh.</p>
+    </li>
+  </ul>
+  <h4><br/> 3D meshing parameters</h4>
+  <ul class="Disc">
+    <li>
+      <p><strong> Number of Revolved sections:</strong> The user can generate the 3D mesh by defining the number of revolved sections along the hoop direction and click on <img src="../../../assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg"/>, see
+        <a href="#Fig_48_1_10_Workpiece_Mesh_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>10.</a></p>
+    </li>
+    <li>
+      <p><strong>Uniform thickness of layers in hoop direction:</strong> When this option is used then 3D mesh is generated with layers of uniform thickness along the hoop direction, see <a href="#Fig_48_1_10_Workpiece_Mesh_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>10.</a>        This option is preferred for “Explicit” type of simulation setup.</p>
+    </li>
+    <li>
+      <p><strong>Finer mesh in contact region: </strong>User can generate finer mesh at contact region by specifying the angle in the “Angle” field. A fine mesh with the size ratio specified in “Size ratio” field will be generated within specified angle
+        at contact with rolls, see <a href="#Fig_48_1_10_Workpiece_Mesh_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>10.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_10_Workpiece_Mesh_Page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0010.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Mesh Page</p>
+  <h3><a id="48_1_5_3_Material_Page"></a>Material Page</h3>
+  <p>In material page, user can load the material using Import Material data from a file <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>  or using Load form Library option <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>, see <a href="#Fig_48_1_11_Assigning_material_to_workpiece"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>11.</a> Once the material is loaded user can select the material to be used for respective object. User can also create new material
+    if the material is not available in DEFORM library using <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/>. User can delete the material from list using <img src="../../../assets/icons/pre_icons/mo_delete_icon2.jpg"/> or edit the material
+    data using <img src="../../../assets/icons/pre_icons/mo_material_edit_button.jpg"/>. Modified / newly defined Material can be saved using <img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/>, <img src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_11_Assigning_material_to_workpiece"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0011.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Assigning material to workpiece</p>
+  <p> </p>
+  <h3><a id="48_1_5_4_Defining_WorkpieceBCC"></a>Defining Workpiece  BCC</h3>
+  <p>In Boundary conditions page, user can assign various boundary constraints to an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. Commonly used boundary conditions are heat exchange
+    with the environment for simulations involving heat transfer and Contact between objects in the model. Depending on the “Process” selection and “Simulation setup”, system generates default BCC for non-isothermal process and with contacting objects.
+    <a href="#Fig_48_1_12_Workpiece_BCC_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>12.</a> shows various BCC that can be assigned to an object. For more information please go through the <a href="../../pre_processor/14_boundary_conditions/14_boundary_conditions.htm">14. Boundary Conditions</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_12_Workpiece_BCC_Page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0012.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece BCC Page</p>
+  <h2><a id="48_1_6_Defining_Mandrel_Object"></a>Defining Mandrel Object</h2>
+  <p>Mandrel is a very important object in Spinning as the material flows along the Mandrel surface taking the shape of the mandrel. Mandrel can be simple cylinder or may have some profile. Mandrel object type is “Rigid”. In Mandrel object page user can
+    define the Object name and temperature (see <a href="#Fig_48_1_13_Mandrel_Object_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>13.</a>). The user can import object from other databases or key files using <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> , <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> options or save the object data using <img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/>, <img src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_13_Mandrel_Object_Page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0013.jpg"/></p>
+  <p class="Fig_numb">Mandrel Object Page</p>
+  <p> </p>
+  <h3 class="h3_48_1_6"><a id="48_1_6_1_Defining_Mandrel_2D_Cross-section"></a>Defining Mandrel 2D Cross-section</h3>
+  <p>2D cross-section for Mandrel can be defined similar to the workpiece 2D Cross-section as explained in Workpiece <a href="#48_1_5_1_Defining_Workpiece_2D_cross-section">Defining Workpiece 2D cross-section</a>. User can define the 2D Cross-section which
+    will be used to generate 3D Geometry.</p>
+  <h3 class="h3_48_1_6"> <a id="48_1_6_2_Generating_Mandrel_3D_Geometry"></a>Generating Mandrel 3D Geometry </h3>
+  <p>User need to generate 3D geometry for all objects in Spinning operation setup. Flow forming/ Spinning operation uses 2D Cross-section to generate 3D by revolving about defined axis and center at <a href="#48_1_5_Workpiece_page">Workpiece object page</a>.
+    After defining the digitalization options, Number of revolved sections and Finer geometry in contact region user need to click on <img height="19" src="../../../assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg" width="135"/> button to create
+    a 3D geometry as shown in the <span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>14.</p>
+  <p><strong>Digitization:</strong> “Length tolerance fraction”/ “Maximum allowable angle”/ “Minimum allowable angle” can be used to control digitization points on the 2D cross-section for accurate representation of 2D Cross-section, see <a href="#Fig_48_1_14_3D_geometry_generation_page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>14.</a></p>
+  <p><strong>Number of revolved sections:</strong>  User can define number of layers in the hoop direction while generating 3D Geometry from 2D cross-section.</p>
+  <p><strong>Fine Geometry in Contact Region:</strong> User can turn on this check box if user need to generate Finer 3D geometry at contact with workpiece to improve contact calculations. User can define the value of “Angle” at contact and “Size ratio”
+    for finer mesh.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_14_3D_geometry_generation_page"></a><img height="333" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> 3D geometry generation page</p>
+  <h3 class="h3_48_1_6"><a id="48_1_6_3_Generating_Mandrel_Mesh"></a>Generating Mandrel Mesh</h3>
+  <p>If user wants to perform thermal calculations in a Non-isothermal simulation setup then user can generate mesh for mandrel. Mesh settings and Mesh generating procedure is similar to <a href="#48_1_5_2_Workpiece_Mesh_page">Generating Workpiece Mesh</a>.</p>
+  <h3 class="h3_48_1_6"><a id="48_1_6_4_Defining_Mandrel_Material"></a>Defining Mandrel Material </h3>
+  <p>User can assign the material from the list on load from Library similar to <a href="#48_1_5_3_Material_Page">Defining Workpiece Material</a>.</p>
+  <h3 class="h3_48_1_6"><a id="48_1_6_5_Generating_Mandrel_BCC"></a>Generating Mandrel BCC</h3>
+  <p>Depending on the “Simulation setup” and “Solver” selection system generates BCC automatically. “Heat exchange with Environment” and “Contact” BCC are commonly used BCC, for more information refer <a href="../../pre_processor/14_boundary_conditions/14_boundary_conditions.htm">14. BCC Controls</a>.</p>
+  <h3 class="h3_48_1_6"><a id="48_1_6_6_Reference_point_setup_for_Mandrel"></a>Reference point setup for Mandrel</h3>
+  <p>User can define reference point for mandrel and position the mandrel with respect to DEFORM origin along X-axis. The system will display calculated value of D from DEFORM origin using the present position of mandrel as shown in  <a href="#Fig_48_1_15_Reference_Point_Setup_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>15.</a>    “D” is the distance between the Deform Origin and the origin of the Mandrel along X axis and will be used to position the mandrel.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_15_Reference_Point_Setup_Page"></a><img height="372" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0015.jpg" style="cursor: nesw-resize;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Reference Point Setup Page</p>
+  <h2><a id="48_1_7_Defining_Roll_Object"></a>Defining Roll Object</h2>
+  <p>Each Roll must be defined separately. Rolls are of Rigid Object types and can be meshed if thermal calculations need to be performed in non-isothermal simulation setup. In roll’s object page user can define the Object name and temperature. User can
+    import roll’s object from other databases or key files using <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>, <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> options or save the object data using <img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/>, <img src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> options.</p>
+  <h3 class="h3_48_1_7"><a id="48_1_7_1_Defining_Roll_Geometry,_Mesh,_Material_and_BCC"></a>Defining Roll Geometry, Mesh, Material and BCC</h3>
+  <p>Roll geometry, Mesh (in case of non-isothermal setup), Material and BCC can be defined similar to methodology as explained in <a href="#48_1_5_1_Defining_Workpiece_2D_cross-section">48.1.5.1. Defining Workpiece 2D cross-section</a>, <a href="#48_1_6_2_Generating_Mandrel_3D_Geometry">48.1.6.2. Generating Mandrel 3D Geometry</a>,
+    <a href="#48_1_5_3_Material_Page">48.1.5.3. Defining Workpiece Material</a> and <a href="#48_1_5_4_Defining_WorkpieceBCC">48.1.5.4. Defining Workpiece </a><a href="#48_1_5_4_Defining_WorkpieceBCC">BCC</a>.</p>
+  <h3 class="h3_48_1_7"><a id="48_1_7_2_Roll_Orientation_Page"></a>Roll Orientation Page</h3>
+  <p>In spinning operation rolls require a unique setup approach due to their use of the path movement control. Roll translation will be defined by a path that is applied in a local UV (axial/radial) coordinate system. A single point on the roll, the reference
+    point (datum), will follow this path. The current location of the reference point, and thus the roll, is determined by the path data and the current time. Each roll following a path must have a reference point defined for it.<br/> User can select
+    the Roll datum point using the button <img src="../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> next to Roll Datum field (See <a href="#Fig_48_1_16_Roll_Orientation_Page_-_Datum_Wizard"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>16.</a>)
+    which will provide options of “Rotation center”, “Nose center” and “Corner point” as shown in <a href="#Fig_48_1_16_Roll_Orientation_Page_-_Datum_Wizard"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>16.</a> to be used as “Roll Datum
+    point”, based on the selection the datum point co-ordinates are automatically calculated. When picking the roll datum point, the user should select a point on the black half of the displayed roll cross-section. User can also enter the datum co-ordinates
+    manually. User can define the “Orientation Angle” with respect to X-axis as shown in <a href="#Fig_48_1_17_Roll_Orientation_Page_–_Orientation_Angle"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>17.</a>  The orientation angle must be
+    applied before the roll datum point is defined. The roll datum point must be reselected whenever the orientation angle is modified.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_16_Roll_Orientation_Page_-_Datum_Wizard"></a><img height="320" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll Orientation Page - Datum Wizard</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_17_Roll_Orientation_Page_–_Orientation_Angle"></a><img height="372" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll Orientation Page – Orientation Angle</p>
+  <p> </p>
+  <h2><a id="48_1_8_Pass_table"></a>Pass table</h2>
+  <p>Spinning process may involve single pass or multiple passes, user can define the multi pass and multi roll movement data using “Pass Table” as shown in the <a href="#Fig_48_1_18_Pass_Table_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>18.</a>    When we click on the   button we will get the Roll movement controls as shown in the <a href="#Fig_48_1_19__Roll_Movement_Controls"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>19.</a> The user can define the Translation movement using
+    the “<a href="../../pre_processor/15_movement_controls_definition/15_1_speed.htm">Speed</a>” and “<a href="../../pre_processor/15_movement_controls_definition/15_8_path.htm">Path</a>” type. For the Rotation movement we have Angular velocity and Torque
+    type. </p>
+  <p>“Path” type translation movement is commonly used in Spinning process. For more information on how to define “<a href="../../pre_processor/15_movement_controls_definition/15_8_path.htm">Path</a>” type movement please refer <a href="../../pre_processor/15_movement_controls_definition/15_movement_controls_settings.htm">15. Movement controls</a>.
+    After defining the path movement data user can use the <img src="../../../assets/icons/pre_icons/mo_show_path_movement_info_in_2d_button.jpg"/> to display the path that roller datum is going to trace in 2D as shown in the <a href="#Fig_48_1_20_Path_movement_info_in_2D"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>20.</a></p>
+  <p>User can also define other data in pass table as explained below,</p>
+  <p><strong>Process duration: </strong>We can define the process duration value as the stopping criteria to stop the defined  Pass simulation.</p>
+  <p><strong>Roll Friction:</strong> We can define the friction coefficient value between roll and workpiece. This friction co-efficient value is applied between only roll and workpiece, user can modify this value at contact page if required. </p>
+  <p><strong>Roll Heat transfer coeff.:</strong> We can define the Heat transfer coefficient value between roll and workpiece. This Heat transfer co-efficient value is applied between only roll and workpiece; user can modify this value at contact page if
+    required. </p>
+  <p><strong>Dwell time:</strong> For all passes, we can use “Dwell time” in pass table to specify the time between end of current selected pass and next pass.</p>
+  <p><strong>Dwell temperature: </strong>We can use “Dwell temp.” in pass table to specify the environment temperature during Dwell time.</p>
+  <p><strong>Convection Coeff.</strong> : We can use “Convection Coeff.” in pass table to specify the Convection coeffecient value during Dwell time.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_18_Pass_Table_Page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0018.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Pass Table Page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_19__Roll_Movement_Controls"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0019.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Roll Movement Controls</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_48_1_20_Path_movement_info_in_2D"></a><img height="372" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Path movement info in 2D</p>
+  <p> </p>
+  <h2><a id="48_1_9_Controls_"></a>Controls (Object Positioning)</h2>
+  <p>Objects positioning can be varied using <img src="../../../assets/icons/pre_icons/mo_automatic_positioning_button.jpg"/> and “Advanced Object Positioning&quot;  <img src="../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/>  options
+    available in “Controls” page as shown in <a href="#Fig_48_1_21_Controls_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>21.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_21_Controls_Page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0021.jpg"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Controls Page</p>
+  <h3 class="h3_48_1_9"><a id="48_1_9_1_Automatic_Positioning"></a>Automatic Positioning</h3>
+  <p>In Spinning the automatic positioning is mostly used for path base roller positioning. We have two positioning options they are “Initial (t=0)” and “At contact” as shown in the <a href="#Fig_48_1_22_Automatic_Positioning_options"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>22.</a><br/>    The <strong> Initial (t=0)</strong> is used to position the workpiece along defined path coordinates when time is zero, see <a href="#Fig_48_1_23_Spinning_Roll_positioning_at_initial_(t=0)"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>23.</a><br/>    The <strong>At contact</strong> option is used to move the roll in the define path until it makes the contact with workpiece and updates the time, see <a href="#Fig_48_1_24_Spinning_Roll_positioning_at_contact"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>24.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_22_Automatic_Positioning_options"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0022.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Automatic Positioning options</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_23_Spinning_Roll_positioning_at_initial_(t=0)"></a><img height="372" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0023.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Spinning Roll positioning at initial (t=0)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_24_Spinning_Roll_positioning_at_contact"></a><img height="372" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0024.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Spinning Roll positioning at contact</p>
+  <p> </p>
+  <h3 class="h3_48_1_9"><a id="48_1_9_2_Advanced_Object_Positioning"></a>Advanced Object Positioning</h3>
+  <p>If user wants to modify any of the objects position, then user can use Advanced object position button in control page. Various positioning options are available to position the objects as shown in <a href="#Fig_48_1_25_Advanced_Object_Positioning_options"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>25.</a>,
+    for more information on these options please refer <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm">19. positioning objects.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_25_Advanced_Object_Positioning_options"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0025.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Advanced Object Positioning options</p>
+  <p> </p>
+  <h2><a id="48_1_10_Contact"></a>Contact</h2>
+  <p>The user can define the contact between the Workpiece and other roll objects by defining the inter object relations. For spinning operation, we will use the sticking conditions for Workpiece with Mandrel and Tail stock as shown in <a href="#Fig_48_1_26_Contact_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>26.</a>    User must define friction and Interface heat transfer co-efficient for non-isothermal rolling processes and friction value for isothermal rolling process.<br/>
+    <strong>System:</strong> By selecting this radio button, system assigns default inter-object relationships. Also, user can add the lubricants if necessary, by selecting Add New from pull down menu and clicking on <img height="22" src="../../../assets/icons/pre_icons/mo_edit_button.jpg" width="59"/> button or user can load the required lubricants from the library for the simulation.</p>
+  <p><strong>User: </strong>By default, user radio button will be selected for Spinning operation. User can add relationships by clicking on <img src="../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/> button as shown in <a href="#Fig_48_1_26_Contact_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>26.</a>    User can modify the value of each relation by selecting it and clicking on <img height="22" src="../../../assets/icons/pre_icons/mo_edit_button.jpg" width="59"/> button. User can use <img src="../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> to assign same values to all relations. User can click on to calculate contact tolerance. User can click on <img src="../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> to generate contact relation. User can turn on check box next to
+    contact relation to define sticking contact. For more information please refer, <a href="../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm">20.Inter-Object Relations.</a></p>
+  <p class="Note_text">Note: User can define Friction windows for rolls and mandrel as shown in <a href="#Fig_48_1_27_Defining_Friction_Window"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>27</a> in ALE type of simulation setup to activate Lite Contact search
+    which will reduce the contact search time</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_26_Contact_Page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0026.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Contact Page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_27_Defining_Friction_Window"></a><img height="372" src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0027.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Friction Window</p>
+  <p>  </p>
+  <h2><a id="48_1_11_Stopping_controls"></a>Stopping controls</h2>
+  <p>The user can define the process duration as the stopping criteria to stop the simulation as shown in the <a href="#Fig_48_1_28_Stopping_controls_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_28_Stopping_controls_Page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0028.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Stopping controls Page</p>
+  <h2><a id="48_1_12_Simulation_controls"></a>Simulation controls</h2>
+  <p>The user can define the Step controls for simulation as shown in the <a href="#Fig_48_1_29_Simulation_controls_Page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>29.</a></p>
+  <p><strong>Number of steps: </strong>Number of steps to be simulated can be defined here. Simulation can stop earlier due to stopping criteria, if heat transfer is defined in pass table then it continues with “Heat Transfer” operation. These “Number of
+    steps” do not include transfer time, by default the transfer time will simulate 100 steps always.</p>
+  <p><strong>Step increment: </strong> The step increment to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the
+    database. Storing more steps will preserve more information about the process, consequently it will require more storage space.</p>
+  <p><strong>Time per Step:</strong> If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.</p>
+  <p><strong>Stroke per Step: </strong>If stroke per step is specified, the primary die will move the specified amount in each time step. The total movement of the primary die will be the displacement per step multiplied by the total number of steps.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_29_Simulation_controls_Page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0029.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Simulation controls Page</p>
+  <h2><a id="48_1_13_Generate_DB"></a>Generate DB</h2>
+  <p><strong>Check Data <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> : </strong>When user clicks on this label system checks the Data. If Data is correct, then we can generate DB. But while checking Data if it gives any errors or
+    warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.</p>
+  <p><strong>Generate Database</strong> <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/>: User can generate database by clicking on this label. (See <a href="#Fig_48_1_30_Generate_DB_page"><span data-keyref="Chapter_48_1_Spinning">Fig. 48.1.</span>30.</a>)<br/>
+    <strong>Append Key file</strong>: Any information that is not defined in the template but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values
+    can be defined as .key file and stored in specified path. When necessary only values in .key file can be changed and simulation can be resubmitted to study the effect of the change in parameters.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_48_1_30_Generate_DB_page"></a><img src="../../../assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0030.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Generate DB page</p>
+
+</body></html>

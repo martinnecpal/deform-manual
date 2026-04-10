@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.4.1.0_16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab 25 Stub Shaft Labs</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab 25 Stub Shaft Labs</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Basic_labs/2D_Labs/Lab_16_Forming_of_a_Roller_Bearing_race.htm"/><meta name="brsprev" value="Documentation_content/Labs/Basic_labs/2D_Labs/Lab_15__Sliding_die_lab__Punch_Sleeve.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Lab 25 Stub Shaft Labs">
+        <span>Lab 25 Stub Shaft Labs</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 25 Stub Shaft Labs</h1>
+  <p><a href="#25_1_Stub_Shaft_Lab_in_2D_MO_Forming">25.1. Stub Shaft Lab in 2D MO Forming</a></p>
+  <p><a href="#25_2_Tool_Stress_Analysis">25.2. Tool Stress Analysis</a></p>
+  <p><a href="#25_3_Adding_a_Shrink_ring_to_the_Die">25.3. Adding a Shrink ring to the Die</a></p>
+  <p><a href="#25_4_Simulating_Thermal_Effects">25.4. Simulating Thermal Effects</a></p>
+  <p><a href="#25_5_Warm_Stub_shaft_with_Mechanical_press_movement">25.5. Warm Stub shaft with Mechanical press movement</a></p>
+  <p><a href="#25_6_Warm_Stub_shaft_with_Hydraulic_press_movement">25.6. Warm Stub shaft with Hydraulic press movement</a></p>
+  <p><a href="#25_7_Warm_Stub_shaft_with_Screw_press_movement">25.7. Warm Stub shaft with Screw press movement</a></p>
+  <p><a href="#25_8_Warm_Stub_shaft_with_Hammer_movement">25.8. Warm Stub shaft with Hammer movement</a></p>
+  <p> </p>
+  <h2><a id="25_1_Stub_Shaft_Lab_in_2D_MO_Forming"></a>Stub Shaft Lab in 2D MO Forming</h2>
+  <p>In this lab we will setup 2 operations :</p>
+  <p><a href="#Operation1:_Cone_Operation"><strong>Operation1: </strong>Cone Operation.</a></p>
+  <p><a href="#Operation2:_Head_operation"><strong>Operation2:</strong> Head operation</a>.</p>
+  <p> </p>
+  <p><strong><a id="Operation1:_Cone_Operation"></a>Operation1: Cone Operation</strong></p>
+  <h3>Create New Problem</h3>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear as shown below <a href=""><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>1.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l25_1_DEFORM_GUI_main_"></a><img height="435" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DEFORM GUI Main </p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_L25_2_Problem_type_selection_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>2.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>English</strong>&quot; using radio button. Define Problem Name as &quot;<strong>Stub_Shaft</strong>&quot; and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn
+    on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing
+    Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_2_Problem_type_selection_window"></a><img height="419" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem type selection window</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog (see <a href="#Fig_L25_3_MO_wizard_New_Project"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>3.</a>), at this point user will be prompted to specify a project
+    name (system will create a separate folder with this project name) and title for this session. In this session we use ‘<strong>Stub_Shaft</strong>’ as the project name. Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>  to
+    continue to open the operation.</p>
+  <p style="text-align: center"><a id="Fig_L25_3_MO_wizard_New_Project"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO wizard New Project</p>
+  <p> </p>
+  <h3>Adding 2D Forming operations</h3>
+  <p>Multiple Operation wizard will opens with new project called <strong>Stub_Shaft </strong>to setup the problem. Add <strong>two </strong><strong>2D Forming operations</strong> from Operations list in Explorer. Operation can be add by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to 2D Forming operation (see <a href="#Fig_L25_4_Added_2D_Forming_operation_into_Operation_Editor"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>4.</a>)
+    or user can also add the operation by dragging and dropping the operation into Operation Editor region.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_4_Added_2D_Forming_operation_into_Operation_Editor"></a><img height="427" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added 2D Forming operation into Operation Editor</p>
+  <h3>Geometry Type</h3>
+  <p>In this lab we will be using Axisymmetric geometries, so select <strong>2D </strong><strong>Axisymmetric </strong>radio button from geometry type page as shown in <a href="#Fig_l25_5_Axisymmetric_Geometry_type_selection"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>5.</a> and
+    click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l25_5_Axisymmetric_Geometry_type_selection"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0003.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Axisymmetric Geometry type selection</p>
+  <h3>Simulation Controls</h3>
+  <p>In this lab we will be showing how to setup simple Isothermal problem. So in Simulation controls <strong>uncheck </strong>the <strong>Heat </strong><strong>transfer </strong><strong>mode </strong>check box (see <a href="#Fig_L25_6_Simulation_control_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>6.</a>).
+    Then click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_6_Simulation_control_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation control window</p>
+  <p> </p>
+  <h3>Assigning Material for Workpiece</h3>
+  <p>In Material list window, Load the material &#39;<strong>AISI-4120</strong>&#39; from DEFORM Material library, <strong>Steel </strong>category using <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material data from
+    library) option. This can be done as shown in below by clicking <img src="../../../../assets/icons/pre_icons/mo_load_button.jpg"/> button as shown in <a href="#Fig_L25_7_Material_List_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>7.</a>    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_7_Material_List_window"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material List window</p>
+  <h3>Adding objects</h3>
+  <p> For this operation we required four objects, hence in Object window add four objects by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button (see <a href="#Fig_l25_8_Adding Object Window" style="text-align: right"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>8.</a>)
+    and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l25_8_Adding Object Window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0006.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Object Window</p>
+  <h3>Workpiece</h3>
+  <p>In Workpiece window, change the object Name to <strong>Billet </strong>and select object type as <strong>Plastic </strong>as shown in <a href="#Fig_L25_9_Billet_object_Window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>9.</a>    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_9_Billet_object_Window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Billet object Window</p>
+  <h4>Billet Geometry</h4>
+  <p>In the Geometry page, select <img src="../../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> and define a <strong>cylinder </strong>that has a <strong>radius </strong>of <strong>0.4</strong>” and a <strong>height </strong>of <strong>2.7</strong>”
+    (see <a href="#Fig_L25_10_Defining_the_Geometry"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>10.</a>). Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button. Check geometry and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_10_Defining_the_Geometry"></a><img height="424" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining the Geometry</p>
+  <h4>Mesh generation</h4>
+  <p>Switch to expert mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/>, the default settings are adequate for generating a mesh. Click on <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> to
+    generate the Mesh (see <a href="#Fig_L25_11_Billet_Mesh_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>11.</a>).</p>
+  <p>Measure one of the smaller elements in the workpiece – they are in the range of 0.020”. Click the <strong>Remesh criteria</strong> <strong>tab </strong>and set the Interference Depth to ½ of this value, or <strong>0.01</strong>” This setting prevents
+    excessive overlap between the tools and the workpiece as material flows around corners (See <a href="#Fig_L25_12_Defining_Remeshing_Criteria"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>12.</a>). Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_11_Billet_Mesh_window"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Billet Mesh window</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_L25_12_Defining_Remeshing_Criteria"></a><img height="514" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0010.jpg" width="500"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Remeshing Criteria</p>
+  <h4>Assigning Billet Material</h4>
+  <p>To assign material for workpiece select the material <strong>AISI-4120</strong> from material window. This can be done as shown in below <a href="#Fig_L25_13_Material_selection_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>13.</a>    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_13_Material_selection_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0011.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Material selection window</p>
+  <h4>Billet Boundary conditions</h4>
+  <p>In BCC page, check the default assigned Deformation BCC for Left side of the workpiece in X-Direction as shown in <a href="#Fig_L25_14_Billet_BCC_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>14.</a>, default BCC are
+    assigned automatically due to selection of problem type as axisymmetric. Then click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> up to Top die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_14_Billet_BCC_window"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0012.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Billet BCC window</p>
+  <h3>Top Die Definition</h3>
+  <p>In Top Die page, change the name of the top die to <strong>Punch</strong>, Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <h4 class="h4_25_1_8_">Import Punch geometry</h4>
+  <p>Import <strong>StubShaft_ConeTools.igs</strong> file using Load Geometry from Library <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button as shown in <a href="#Fig_l25_15_Importing_Punch_Geometry"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>15.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_yes_button.jpg"/> for the Multiple boundary popup ( see <a href="#Fig_L25_16_Popup_to_visit_edit_geometry"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>16.</a>). When
+    we click &#39;Yes&#39; for the popup edit geometry will open as shown in <a href="#Fig_L25_17_Edit_Geometry_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>17.</a> <strong>Delete </strong><strong>the Loop 2 </strong>by
+    using <img src="../../../../assets/icons/pre_icons/mo_delete_loop_button.jpg"/> (see <a href="#Fig_L25_18_Deleting_the_Loop_2_from_imported_geometry"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>18.</a>) and click <img height="21" src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg" width="73"/>. Check geometry and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l25_15_Importing_Punch_Geometry"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing Punch Geometry</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_16_Popup_to_visit_edit_geometry"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0014.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Popup to visit edit geometry</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_17_Edit_Geometry_window"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Edit Geometry window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_18_Deleting_the_Loop_2_from_imported_geometry"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deleting the Loop 2 from imported geometry</p>
+  <p> </p>
+  <h4 class="h4_25_1_8_">Assign Movement to Top Die</h4>
+  <p>Define a <strong>S</strong><strong>peed </strong>of <strong>10 </strong>in/sec in<strong> -Y</strong> direction for this lab. Then click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Bottom Die page.</p>
+  <h3>Bottom Die Definition</h3>
+  <p>In Bottom die page accept the Object type as <strong>Rigid </strong>and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> (see <a href="#Fig_L25_19_Bottom_Die_page"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>19.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_19_Bottom_Die_page"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0017.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Bottom Die page</p>
+  <p> </p>
+  <h4 class="h4_25_1_9_">Import Bottom Die Geometry</h4>
+  <p>Import <strong>StubShaft_ConeTools.igs</strong> file using Load Geometry from Library <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button. Click <img src="../../../../assets/icons/pre_icons/mo_yes_button.jpg"/> for
+    the Multiple boundary popup. When we click &#39;Yes&#39; for the popup edit geometry will open. <strong>Delete </strong><strong>the Loop 1 </strong>by using <img src="../../../../assets/icons/pre_icons/mo_delete_loop_button.jpg"/> (see <a href="#Fig_L25_20_Deleting_Loop1_from_Imported_geometry"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>20.</a>)
+    and click <img height="21" src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg" width="73"/>. Check geometry and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Object 4 page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_20_Deleting_Loop1_from_Imported_geometry"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deleting Loop1 from Imported geometry</p>
+  <p> </p>
+  <h3>Ejector Definition</h3>
+  <p>In object 4 window, change the Object 4 Name to <strong>Ejector </strong>and select Object type as <strong>Rigid </strong>as shown in <a href="#Fig_L25_21_Ejector object window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>21.</a> Click
+    on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_21_Ejector object window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0019.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Ejector object window</p>
+  <p> </p>
+  <h4 class="h4_25_1_10_">Ejector Geometry</h4>
+  <p>In Ejector geometry window, select the <img src="../../../../assets/icons/pre_icons/mo_edit_lable.jpg"/> to visit the edit geometry window and enter the geometry points in the table as shown in <a href="#Fig_L25_22_Ejector_geometry_defining"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>22.</a>    and click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Check geometry and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Controls page.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:50%;margin-left:auto;margin-right:auto">
+    <colgroup>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"><strong>X</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Y</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>R</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">-2</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0.406</p>
+        </td>
+        <td>
+          <p style="text-align: center">-2</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0.406</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Table_numb">Ejector geometry data</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_22_Ejector_geometry_defining"></a><img height="427" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Ejector geometry defining</p>
+  <h3>Controls</h3>
+  <p>Confirm that the workpiece is positioned against the ejector, bottom die is positioned to workpiece and the punch is positioned against the workpiece, see <a href="#Fig_L25_23_Positioning_of_the_objects"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>23.</a>    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Contact page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_23_Positioning_of_the_objects"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0021.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Positioning of the objects</p>
+  <p> </p>
+  <h3><a id="25_1_12_Contact_Generation"></a>Contact Generation</h3>
+  <p>Select <strong>user </strong>type contact and click on <img src="../../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/>  button. It will add the relationship between the Billet, Punch, Bottom Die and Ejector as shown in <a href="#Fig_L25_24_Contact_Generation_page"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>24.</a>     As the Dies are Rigid and Billet is plastic, Punch, Bottom Die and Ejector are considered as Master and Billet as Slave. In order to predict the fold during deformation, self contact will be assigned for Billet.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_24_Contact_Generation_page"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0022.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact Generation page</p>
+  <p> </p>
+  <p>Highlight the <strong>Punch – Billet</strong> relationship and click the <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> button to modify the contact conditions. In the friction section of the screen (see <a href="#Fig_L25_25_Inter-Object_data_definition_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>25.</a>),
+    there is a pull-down menu that allows the user to choose the appropriate friction conditions of common forming processes.</p>
+  <p> </p>
+  <p>Since this simulation takes place at room temperature and the dies are steel, use the pull down menu and select<strong> Cold forming (steel dies)</strong> from the list. A friction value of <strong>0.12</strong> will automatically be selected.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_25_Inter-Object_data_definition_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0023.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-Object data definition window</p>
+  <p> </p>
+  <p>Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg" style="cursor: nesw-resize;"/> to go back to contact window, Since the friction conditions are the same for all the object pairs, the <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/>  button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction of 0.12 defined. Use <img src="../../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> icon to determine a suitable contact tolerance (a value of about 0.00040&quot; will be calculated), then click <img src="../../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> button to generate contact. Switch to Message tab or Observe
+    status bar to know about the contacts generated. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3><a id="25_1_13_First_operation_Stopping_Controls"></a>Stopping Controls</h3>
+  <p>We want to stop the simulation when the punch and die are within 0.025” of one another. In the Stopping Controls screen click on <img src="../../../../assets/icons/pre_icons/mo_guided_mode.jpg"/> guided mode, <strong>check </strong>the <strong>Distance between objects</strong>    option. Set the value for this distance to <strong>0.025</strong>” in the <strong>Y</strong> direction. Click <img src="../../../../assets/icons/pre_icons/mo_mouse_icon.jpg"/> next to <strong>Object 1</strong> and click the bottom of the Punch object
+    in the display. Click <img src="../../../../assets/icons/pre_icons/mo_mouse_icon.jpg"/> next to <strong>Object 2</strong> and click the top of the Bottom Die object in the display (see <a href="#Fig_l25_26_Stopping_Controls_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>26.</a>),
+    click on  <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Step page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l25_26_Stopping_Controls_window"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0024.jpg" style="cursor: nesw-resize;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping Controls window</p>
+  <h3><a id="25_1_14_First_operation_Step_Controls"></a>Step Controls</h3>
+  <p>We want the punch to travel 0.5” in <strong>100 </strong><strong>steps</strong>, so each step will be 0.5/100 or 0.005”. In the Step Controls enter the Solution Steps Definition to be With Equal <strong>Die </strong><strong>Displacement </strong>of
+    <strong>0.005</strong>.” set the <strong>Number of Simulation Steps</strong> to <strong>100 </strong>and <strong>Step Increment to Save</strong> as 5. Set the Punch as Primary Die if not selected automatically (see <a href="#Fig_L25_27_Step_Controls_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>27.</a>),
+    click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_27_Step_Controls_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0025.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Step Controls window</p>
+  <p> </p>
+  <h3>Generate Database</h3>
+  <p>In Generate DB page. Click the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. During the checking process:</p>
+  <p>Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).</p>
+  <p> </p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. When the program is done writing the database, click on  <img src="../../../../assets/icons/pre_icons/mo_next_opr_button.jpg"/> to go
+    to Next operation.</p>
+  <p> </p>
+  <p><strong><a id="Operation2:_Head_operation"></a>Operation2: Head operation.</strong></p>
+  <h3>Geometry Type</h3>
+  <p>Select <strong>2D </strong><strong>Axisymmetric </strong><strong>radio </strong>button from geometry type page and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <h3>Simulation Controls</h3>
+  <p>In Simulation controls <strong>uncheck </strong>the <strong>Heat </strong><strong>transfer </strong><strong>mode </strong>check box. Then click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Objects
+    page.</p>
+  <p> </p>
+  <h3>Adding objects</h3>
+  <p>For this operation we required four objects, by default previous operation added four objects are added in object list. if not added objects by default, then add four objects by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button (see <a href="#Fig_L25_28_Adding_Object_Window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>28.</a>), then click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> .</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_28_Adding_Object_Window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0026.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Adding Object Window</p>
+  <p> </p>
+  <h3>Workpiece Definition</h3>
+  <p>We will make the Workpiece object as Read Form DB. Select the Read from DB radio button in Workpiece page. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Top Die page. (See <a href="#Fig_L25_29_Workpiece_object_page"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>29.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_29_Workpiece_object_page"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0027.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece object page</p>
+  <h3>Top Die Definition</h3>
+  <p>In Top Die page, change the object type from Read from DB to <strong>Rigid</strong>, Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <h4 class="h4_25_1_20_">Import Punch geometry:</h4>
+  <p>Import <strong>StubShaft_HeadTools.igs</strong> file using  Load Geometry from Library <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>  button as shown in <a href="#Fig_L25_30_Load_Punch_geometry"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>30.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_yes_button.jpg"/> for the Multiple boundary popup. When we click &#39;yes&#39; for the popup edit geometry will open. <strong>Delete the Loop 1</strong> by using <img src="../../../../assets/icons/pre_icons/mo_delete_loop_button.jpg"/> (see <a href="#Fig_L25_31_Edit_Geometry_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>31.</a>) and click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Check geometry and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_30_Load_Punch_geometry"></a><img height="423" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0028.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Load Punch geometry</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_31_Edit_Geometry_window"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0029.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Edit Geometry window</p>
+  <h4 class="h4_25_1_20_">Assign Movement to Top Die</h4>
+  <p>Define a <strong>speed </strong>of <strong>10</strong> in/sec in<strong> -Y</strong> direction for this lab. Then click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Bottom Die page.</p>
+  <p> </p>
+  <h3>Bottom Die Definition</h3>
+  <p>In Bottom die page, change the object type from Read from DB to <strong>Rigid</strong><strong> </strong>and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <h4 class="h4_25_1_21_">Import Bottom Die Geometry</h4>
+  <p>Import <strong>StubShaft_HeadTools.igs</strong> file using Load Geometry from Library <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button. Click <img src="../../../../assets/icons/pre_icons/mo_yes_button.jpg"/> for
+    the Multiple boundary popup. When we click &#39;yes&#39; for the popup edit geometry will open. <strong>Delete the Loop 2</strong> by using <img src="../../../../assets/icons/pre_icons/mo_delete_loop_button.jpg"/> (see <a href="#Fig_L25_32_Deleting_Loop2_from_Imported_geometry"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>32.</a>)
+    and click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Check geometry and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Ejector page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_32_Deleting_Loop2_from_Imported_geometry"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0030.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deleting Loop2 from Imported geometry</p>
+  <h3>Ejector Definition</h3>
+  <p>We will make the Ejector object as Read Form DB. Select the Read from DB radio button in Ejector page. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Positioning page.</p>
+  <p> </p>
+  <h3>Positioning</h3>
+  <p>In Object positioning page, position the <strong>punch </strong>using <strong>offset </strong><strong>positioning </strong>(x=0, y=2) towards Y direction (see <a href="#Fig_L25_33_Positioning_the_Punch"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>33.</a>). Click
+    on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Scheduled positioning page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_33_Positioning_the_Punch"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0031.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Positioning the Punch</p>
+  <h3>Scheduled Positioning</h3>
+  <p>Using Interference positioning we are positioning the Punch to the Workpiece. In <strong>Scheduled </strong><strong>positioning </strong>page, Click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button and select <img src="../../../../assets/icons/pre_icons/mo_interference_radio_button.jpg"/> radio button. Change the <strong>Positioning </strong><strong>Object </strong>to the <strong>Punch </strong>and the <strong>Reference </strong>to the <strong>Billet</strong>. Change the Approach Direction to <strong>-Y</strong> and then click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. (See <a href="#Fig_L25_34_Scheduled_Positioning_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>34.</a>)  Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_34_Scheduled_Positioning_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0032.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scheduled Positioning window</p>
+  <h3>Contact Generation</h3>
+  <p>Define the contact relations using the same settings which we defined for the first operation, see <a href="#25_1_12_Contact_Generation">25.1.12.Contact Generation</a>. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <h3>Stopping Controls</h3>
+  <p>We want to stop the simulation when the punch and billet are within 0.401” of one another. In the Stopping Controls screen, check the <strong>Distance between objects</strong> option.  Set the value for this distance to<strong> 0.401</strong>” in the
+    Y direction. Click <img src="../../../../assets/icons/pre_icons/mo_mouse_icon.jpg"/> next to <strong>Object 1</strong> and click the <strong>Punch </strong>object as seen in <a href="#Fig_L25_35_Distance_Between_Objects_stopping_control"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>35.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_mouse_icon.jpg"/> next to <strong>Object 2</strong> and click the <strong>Die </strong>object as seen in <a href="#Fig_L25_35_Distance_Between_Objects_stopping_control"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>35.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_35_Distance_Between_Objects_stopping_control"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0033.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Distance Between Objects stopping control</p>
+  <p> </p>
+  <p>We will also specify a maximum load for this part. check the <strong>Max load</strong> option. Set the Max load to X = 0, Y = 600 as shown in <a href="#Fig_L25_36_Stop controls page"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>36.</a> Now
+    if the press load exceeds 600Klb (300Tons), the simulation will stop, even if the distance between tools has not been reached. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_36_Stop controls page"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0034.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Stop controls page</p>
+  <h3>Step Controls</h3>
+  <p>Estimate the total punch travel, which will be roughly 1.25”. We will maintain the stroke per step of <strong>0.005</strong>”, so the simulation will require about 250 steps (1.25/0.005). Set the <strong>Number of Simulation Steps</strong> to <strong>250.</strong> (See
+    <a href="#Fig_L25_37_Step_Controls_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>37.</a>) Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_37_Step_Controls_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0035.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step Controls window</p>
+  <h3>Generate Database</h3>
+  <p>See the Status in Generate DB page, if we see Input error, check the data missing and complete it, for this lab sequence expect &quot;DB generation is not required for this operation.  It will occur at tun time.&quot; message.</p>
+  <p>Save the project and click on <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> mode to run the simulation.</p>
+  <p> </p>
+  <h3>Running simulation</h3>
+  <p>Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_l25_38_Run_Simulation_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>38.</a> Use
+    the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l25_38_Run_Simulation_window"></a><img height="423" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0060.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation window</p>
+  <p> </p>
+  <p>The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.</p>
+  <p> </p>
+  <p>The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.</p>
+  <p> </p>
+  <p>When the simulation is finished without any issues, check the messages in LOG file, when all operation completes we will see messages in LOG file:&quot;MULTIPLE OPERATION COMPLETED&quot;.</p>
+  <h3>Post process the results</h3>
+  <p>After the simulation is completed, Switch to <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab.</p>
+  <h4 class="h4_25_1_30_">State variables:</h4>
+  <p>From the State variables list, click the <strong>Effective strain</strong> icon to plot the amount of strain that went into the workpiece. To change the plot settings, you can click on the <img src="../../../../assets/icons/post_icons/mo_state_variable_icon.jpg"/> Set up icon. In this screen, you can display different kinds of contours (line, shaded or solid) as well as change the variable range that is shown on the contour bar. Using the Settings option, the range of the contour bar can be user-defined.
+    Feel free to experiment with the display of the different state variables and plot options.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="423" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0036.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Strain effective plot</p>
+  <p> </p>
+  <p style="text-align: center"><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0037.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stress Effective Plot</p>
+  <p> </p>
+  <h4 class="h4_25_1_30_">Flownet</h4>
+  <p>Flownet can be used to create a grid on the starting workpiece shape, the track the distortion of that grid through the simulation.</p>
+  <p>Click the Flownet <img src="../../../../assets/icons/post_icons/mo_flownet_icon.jpg"/> icon to open the Flownet dialog.</p>
+  <p>We will start with a <strong>rectangular </strong>Flownet. Select “<strong>Grid</strong>” and click the <img src="../../../../assets/icons/post_icons/mo_flownet_next_button.jpg"/> button.  Assign a “<strong>Spacing</strong>” of <strong>0.1</strong>    in the X direction, and <strong>1</strong> in the Y direction. Click <img src="../../../../assets/icons/post_icons/mo_preview_button.jpg"/> to view the grid. Then click <img src="../../../../assets/icons/post_icons/mo_flownet_next_button.jpg"/>.
+    We will not save any data, so click the <img src="../../../../assets/icons/post_icons/mo_generate_button.jpg"/> button. After the Flownet is calculated, play through the simulation to watch the evolution (see <a href="#Fig_L25_41_Grid_Flownet_at_second_operation_first_step"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>41.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_41_Grid_Flownet_at_second_operation_first_step"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0038.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">(a) Grid Flownet at second operation first step. (b) Grid Flownet at second operation last step</p>
+  <p> </p>
+  <h2><a id="25_2_Tool_Stress_Analysis"></a>Tool Stress Analysis</h2>
+  <h3 class="h3_25_2_">Opening project file</h3>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear. Select &quot; <strong>Integrated Manufacturing Process</strong>&quot; radio button and unit system as &quot;<strong>English</strong>&quot; using radio button. Define Problem Name as &quot;<strong>StubShaft_ToolStress</strong>&quot;
+    and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog (see <a href="#Fig_L25_42_Copying_Stub_Shaft_project_using_Copy_project_option"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>42.</a>), at this point user will
+    be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we use ‘<strong>StubShaft_ToolStress</strong>’ as the project name. Select the copy existing project radio
+    button, select the source location browse button and import the <strong>Stub_Shaft.moproj </strong>From the previously simulated Stub_shaft Project, <strong>turn on</strong> the <strong>copy </strong><strong>Database </strong>check box, click <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> for project naming window. Stub_shaft simulation will get imported to &#39;StubShaft_ToolStress&#39; project.</p>
+  <p> </p>
+  <p><a id="Fig_L25_42_Copying_Stub_Shaft_project_using_Copy_project_option"></a><img height="424" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0039.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Copying Stub_Shaft project using Copy project option</p>
+  <p> </p>
+  <h3 class="h3_25_2_">Add Die stress Operation</h3>
+  <p>Select Die stress 2D operation from the Explorer Operations list and Add the operation by selecting <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button or user can also add by drag and drop into the Operation Editor. Now,
+    in Operation Editor,select the Die stress 2D operation.</p>
+  <p> </p>
+  <h3 class="h3_25_2_">Add Objects </h3>
+  <p>For this operation we required three objects, hence Keep workpiece, Top Die and Bottom Die objects and delete the Ejector object using <img src="../../../../assets/icons/pre_icons/mo_delete_object_button.jpg"/> button. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <h3 class="h3_25_2_">Object1</h3>
+  <p>By default for object 1, Workpiece (Read object from DB) radio button is selected. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <h3 class="h3_25_2_">Top Die</h3>
+  <p>For Top Die, by default for Dies (Elastic) radio button is selected. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Mesh page.</p>
+  <h4 class="h4_25_2_5_">Mesh Generation</h4>
+  <p>Generate the mesh with <strong>2000 </strong>elements. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Material page.</p>
+  <h4 class="h4_25_2_5_">Assign material for Top die</h4>
+  <p>Import a die material <strong>AISI-D3</strong> from the material library. Choose<strong> AISI-D3</strong> from the list to assign the material for Top die. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to BCC page.</p>
+  <h4 class="h4_25_2_5_">Assign Boundary condition for Top die</h4>
+  <p>Next we need to apply boundary conditions to the Top die, so that it does not fly off into space when the forming loads are applied to it. Assign Vy=0 boundary condition on the top edge of the Top die. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Force interpolation page.</p>
+  <h4 class="h4_25_2_5_">Force Interpolation</h4>
+  <p>Once the mesh is generated, the forming loads from the workpiece need to be interpolated onto the Top die. Interpolate the force by clicking <img src="../../../../assets/icons/pre_icons/mo_interpolate_force_button.jpg"/> option. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Bottom Die page.</p>
+  <p> </p>
+  <h3 class="h3_25_2_">Bottom Die</h3>
+  <p>For Bottom Die, by default Dies (Elastic) radio button is selected. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Mesh page. </p>
+  <h4 class="h4_25_2_6_">Mesh Generation</h4>
+  <p>Generate the mesh with <strong>2000 </strong>elements. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Material page.</p>
+  <h4 class="h4_25_2_6_">Assign material for Bottom Die</h4>
+  <p>Choose<strong> AISI-D3</strong> from the list to assign the material for Bottom Die. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to BCC page.</p>
+  <h4 class="h4_25_2_6_">Assign Boundary condition for Bottom Die</h4>
+  <p>Next we need to apply boundary conditions to the Bottom die, so that it does not fly off into space when the forming loads are applied to it.</p>
+  <p>Assign Vy=0 boundary condition on the bottom Edge of the Bottom Die. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Force interpolation page.</p>
+  <h4 class="h4_25_2_6_">Force Interpolation</h4>
+  <p>Once the mesh is generated, the forming loads from the workpiece need to be interpolated onto the Bottom die. Interpolate the force by clicking <img src="../../../../assets/icons/pre_icons/mo_interpolate_force_button.jpg"/> option. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Simulation controls.</p>
+  <h3 class="h3_25_2_">Simulation Controls</h3>
+  <p>Define the <strong>Number </strong><strong>of </strong><strong>steps </strong><strong>as</strong> <strong>1</strong>, <strong>step </strong><strong>increment </strong><strong>to </strong><strong>save </strong>as <strong>1</strong> and <strong>time </strong><strong>per </strong><strong>step </strong>as
+    <strong>1</strong>. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <h3 class="h3_25_2_">Generate Database</h3>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> action label to check the problem. Generate a database by clicking <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> action label.</p>
+  <h3 class="h3_25_2_">Running simulation</h3>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg" width="146"/>  button above the operation tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <h3 class="h3_25_2_">Post Processing</h3>
+  <p>After the simulation is completed, Switch to <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab.</p>
+  <p>Using the State Variable option, plot Effective stress and Max Principal stress.</p>
+  <p>If the effective stress exceeds the yield stress of the material, plastic deformation of the tools will occur.</p>
+  <p>If the maximum principal stress is large, it may be a site for fatigue failure initiation.</p>
+  <p>In carbide tools, positive principal stresses, even if they are of relatively small magnitude, may be indicative of fatigue failure initiation.</p>
+  <p>Note that in this simulation, effective stress is extremely high.</p>
+  <p> </p>
+  <h2><a id="25_3_Adding_a_Shrink_ring_to_the_Die"></a>Adding a Shrink ring to the Die</h2>
+  <p>After post processing switch back to the Pre- processor mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_pre_mode_button.jpg"/> tab.</p>
+  <h3 class="h3_25_3_">Add Die stress Operation</h3>
+  <p>Select Die stress 2D operation from the Explorer Operations list and Add the operation by selecting <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button or user can also add by drag and drop into the Operation Editor.</p>
+  <p>Now, in Operation Editor select the added Die stress 2D operation.</p>
+  <h3 class="h3_25_3_"> Add Objects</h3>
+  <p>For this operation we required four objects, hence in Object window add another one object by clicking <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Object 4 page. </p>
+  <h3 class="h3_25_3_">Defining Ring</h3>
+  <p>In Object4 page, change the object name to <strong>Ring </strong>and accept the<strong> Dies (Elastic) </strong>object type. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nwse-resize;" width="73"/>.</p>
+  <h4 class="h4_25_3_3_">Case Geometry definition</h4>
+  <p>Select the <img src="../../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/>  and define a <strong>hollow </strong><strong>cylinder </strong>with <strong>Inner </strong><strong>radius</strong> as <strong>1.5</strong>&quot;, <strong>Outer </strong><strong>radius</strong>    as <strong>3.5</strong>&quot; and  <strong>height </strong>will be <strong>3.25</strong>”, click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Mesh page.</p>
+  <h4 class="h4_25_3_3_">Mesh generation</h4>
+  <p>Generate the mesh with 2000 elements. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>. </p>
+  <h4 class="h4_25_3_3_">Assign material for Case</h4>
+  <p>Choose <strong>AISI-D3</strong>  from the list to assign the material for Ring. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> </p>
+  <h4 class="h4_25_3_3_">Boundary conditions</h4>
+  <p>Assign Velocity Vy=0 along the bottom edge of the Ring.</p>
+  <p>Assign a shrink fit of 0.007” along the ID of the Ring. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Positioning page.</p>
+  <h3 class="h3_25_3_">Positioning objects</h3>
+  <p>Using <strong>offset </strong>with <strong>Two points</strong>, make the <strong>Ring </strong>as the <strong>positioning object</strong>. Click on the <strong>bottom inside corner of the ring</strong>, then the<strong> bottom outside corner of the Bottom die</strong>.
+    DEFORM should pick the points From (1.5, 0) To (1.5, -0.75). If these are not the exact values in the object positioning window, edit the values to make them exact. Click the <img src="../../../../assets/icons/pre_icons/mo_apply_button.jpg"/> button
+    to move the Ring. Then click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to exit object positioning. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Contact page.</p>
+  <h3 class="h3_25_3_">Contact generation</h3>
+  <p>We will make the Bottom Die as Slave, and the Ring as Master. click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button to add <b>Ring</b>- <strong>Bottom Die </strong>relation, select <strong>Master object </strong>as <strong>Ring </strong>and
+    <strong>Slave object </strong>as <strong>Bottom Die,</strong> define Friction value as <strong>0.12 </strong>and generate contact by click <img height="21" src="../../../../assets/icons/pre_icons/mo_generate_button.jpg" width="54"/> button. User
+    should see a line of dots along the boundary. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <h3 class="h3_25_3_">Simulation Controls</h3>
+  <p>Define the Number of steps as 1, step increment to save as 1 and time per step as 1. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to generate Database page. </p>
+  <h3 class="h3_25_3_">Generate Database</h3>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> action label to check the problem. Generate a database by clicking <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> action label.</p>
+  <h3 class="h3_25_3_">Running simulation</h3>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg" width="146"/>  button above the operation tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <h3 class="h3_25_3_">Post Processing</h3>
+  <p>Compare the stresses in first die stress operation (no shrink ring) with second die stress operation (with shrink ring). Stresses in second die stress operation should be lower, but still quite high. Use the state variable properties and use global
+    rather than local scaling.</p>
+  <p>Note the stresses in the case are in the order of 1000KSI or higher. Adding a heavier interference fit will likely cause the ring to yield.</p>
+  <p> </p>
+  <h2><a id="25_4_Simulating_Thermal_Effects"></a>Simulating Thermal Effects</h2>
+  <p>In the next simulation, we will repeat the process as a warm forging.  We will simulate transfer from the heat transfer, resting on the die, and the cone-forging blow.</p>
+  <h3 class="h3_25_4_">Transfer in Air</h3>
+  <h4 class="h4_25_4_1_">Opening project file</h4>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear. Select &quot; <strong>Integrated Manufacturing Process</strong>&quot; radio button and unit system as &quot;<strong>English</strong>&quot; using radio button. Define Problem Name as &quot;<strong>Stub_shaft_Warm</strong>&quot;
+    and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p>MO wizard will open along with project naming window (see <a href="#Fig_L25_43_Problem_defining_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>43.</a>). In the field of project name, in this session we use ‘<strong><strong>Stub_shaft_Warm</strong></strong>’
+    as the project name. Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>  to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_43_Problem_defining_window"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0040.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem defining window</p>
+  <p> </p>
+  <h4 class="h4_25_4_1_">Add operations</h4>
+  <p>Add two <strong>2D Heat Transfer</strong> operations and <strong>one </strong><strong>2D Forming </strong>operation from Operation list in Explorer as shown in <a href="#Fig_L25_44_Adding_operations"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>44.</a> Operation
+    can be added by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to respective operation or user can also add the operation by dragging and dropping the operation into Operation Editor region.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_44_Adding_operations"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0041.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding operations</p>
+  <p> </p>
+  <h4 class="h4_25_4_1_">Importing the DB</h4>
+  <p>After adding all Three operations, import previously simulated <strong>Stub_Shaft</strong>.<strong>DB</strong>, select the first step and click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> as shown in <a href="#Fig_L25_45_Importing_DB"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>46.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_45_Importing_DB"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0042.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing DB</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_46_Step_selection_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0043.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Step selection window</p>
+  <p> </p>
+  <h4 class="h4_25_4_1_">Geometry Type</h4>
+  <p>In this lab we will be using Axisymmetric geometries, So select <strong>2D </strong><strong>Axisymmetric </strong>radio button from geometry type page and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>. (See <a href="#Fig_L25_47_Axisymmetric_Geometry_type_selection"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>47.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_47_Axisymmetric_Geometry_type_selection"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0003.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Axisymmetric Geometry type selection</p>
+  <p> </p>
+  <h4 class="h4_25_4_1_">Selecting Heat Transfer Type</h4>
+  <p>Select Heat Transfer Type as &quot;<strong>Transfer through air</strong>&quot; for first operation as shown in <a href="#Fig_L25_48_Heat_transfer_type_selection_for_Furnace_Heating_operation"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>48.</a>    This will set the default heat transfer settings for heating operation. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_48_Heat_transfer_type_selection_for_Furnace_Heating_operation"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0044.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat transfer type selection for Furnace Heating operation</p>
+  <p> </p>
+  <h4 class="h4_25_4_1_">Set Process Conditions</h4>
+  <p>Define <strong>Heating </strong><strong>time </strong>as <strong>5</strong> <strong>sec </strong>at 68F furnace temperature or environment temperature as shown in <a href="#Fig_L25_49_Process_condition_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>49</a>    and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_49_Process_condition_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0045.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Process condition window</p>
+  <p> </p>
+  <h4 class="h4_25_4_1_">Select Simulation Controls</h4>
+  <p>Keep <strong>only Heat Transfer mode</strong> checked as only heat transfer is modelling as shown in <a href="#Fig_L25_50_Simulation_Controls_settings_for_Furnace_Heating"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>50.</a>    and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Billet page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_50_Simulation_Controls_settings_for_Furnace_Heating"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0046.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation Controls settings for Furnace Heating</p>
+  <p> </p>
+  <h4 class="h4_25_4_1_">Defining  Billet</h4>
+  <p>In Billet object window accept the object type as ‘<strong>Plastic</strong>’ and change the object temperature to <strong>1750°F </strong>as shown in<b> </b><a href="#Fig_L25_51_Billet_Definition_Page"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>51.</a> We
+    will use the same geometry and mesh from the cold forming simulation. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Punch page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_51_Billet_Definition_Page"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0047.jpg" style="cursor: nesw-resize;"/></p>
+  <p> </p>
+  <p class="Fig_numb">Billet Definition Page</p>
+  <h4 class="h4_25_4_1_">Punch Definition</h4>
+  <p>In Punch page define the object temp to <strong>300F </strong>and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Mesh page.</p>
+  <h5>Mesh Generation</h5>
+  <p>Generate the mesh for the existing geometry. Generate a mesh with the default number of elements (see <a href="#Fig_L25_52_Punch_Mesh_generation"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>52.</a>). Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_52_Punch_Mesh_generation"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0048.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Punch Mesh generation</p>
+  <h5>Assigning Material for the Punch</h5>
+  <p>Import a die material AISI-H-13 from the material library. Choose <strong>AISI-H-13 </strong>from the list to assign the material for Punch. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Movement page.</p>
+  <h5>Deleting Movement definition</h5>
+  <p>Delete the Punch existing movement by using <img src="../../../../assets/icons/pre_icons/mo_delete_folder_icon.jpg"/> button in the top die movement page. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Bottom Die
+    page.</p>
+  <h4 class="h4_25_4_1_">Bottom die Definition</h4>
+  <p>In Bottom die page define the object temp to <strong>300F </strong>and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Mesh page.</p>
+  <h5 class="h5_25_4_1_10_">Mesh Generation</h5>
+  <p>Generate the mesh for the existing geometry. Generate a mesh with the default number of elements. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.</p>
+  <h5 class="h5_25_4_1_10_">Assigning Material for the Bottom die</h5>
+  <p>Choose <strong>AISI-H-13 </strong>from the list to assign the material for Bottom die. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Ejector page.</p>
+  <h4 class="h4_25_4_1_">Ejector Definition</h4>
+  <p>In Ejector page define the object temp to <strong>300F </strong>and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Mesh page.</p>
+  <h5 class="h5_25_4_1_11_">Mesh Generation</h5>
+  <p>Generate the mesh for the existing geometry. Generate a mesh with the default number of elements. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.</p>
+  <h5 class="h5_25_4_1_11_">Assigning Material for the Ejector</h5>
+  <p>Choose <strong>AISI-H-13</strong> from the list to assign the material for Ejector. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Positioning page.</p>
+  <h4 class="h4_25_4_1_">Positioning</h4>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/> button. Use <img src="../../../../assets/icons/pre_icons/mo_offset_radio_button.jpg"/> to move the <strong>Punch </strong><strong>3 </strong>inches in the “Y”
+    direction. Also move the <strong>workpiece</strong> <strong>2 </strong>inches in the “Y” direction. Click on to <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> exit the positioning menu. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Step controls window.</p>
+  <h4 class="h4_25_4_1_">Step control</h4>
+  <p>Set the <strong>number of simulation steps</strong> as <strong>50 </strong>at 0.1sec each and saving every <strong>5 </strong>steps (See <a href="#Fig_L25_53_Step_controls_settings"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>53</a>.).
+    Advanced Simulation controls settings are available in expert mode (<img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/>). Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to proceed
+    to the database generation stage.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_53_Step_controls_settings"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0049.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step controls settings</p>
+  <h4 class="h4_25_4_1_">Generate Database</h4>
+  <p>In Generate DB page. Click the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. During the checking process:</p>
+  <p>Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).</p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. When the program is done writing the database, click on  <img src="../../../../assets/icons/pre_icons/mo_next_opr_button.jpg"/> to go
+    to Next operation.</p>
+  <h3 class="h3_25_4_">Rest on die</h3>
+  <h4 class="h4_25_4_2_">Selecting Heat Transfer Type</h4>
+  <p>Select <strong>Rest on die transfer</strong> type for second operation. This will set the default heat transfer settings for heating operation. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to continue.</p>
+  <p> </p>
+  <h4 class="h4_25_4_2_">Set Process Conditions</h4>
+  <p>Define <strong>Resting time</strong> as <strong>1</strong> second with an environment temperature of 68<strong>°</strong>F as shown in <a href="#Fig_L25_54_Process_condition_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>54.</a>    and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_54_Process_condition_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0050.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process condition window</p>
+  <p> </p>
+  <h4 class="h4_25_4_2_">Select Simulation Controls</h4>
+  <p>Keep only <strong>Heat Transfer mode</strong> <strong>checked </strong>as only heat transfer is modelling and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <h4 class="h4_25_4_2_">Defining Objects</h4>
+  <p>By default all the objects will be in Read from DB, accept the default object types and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until scheduled positioning page.</p>
+  <h4 class="h4_25_4_2_">Scheduled positioning</h4>
+  <p>click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> (Add) button and use <img src="../../../../assets/icons/pre_icons/mo_interference_radio_button.jpg"/> Positioning option to position the <strong>Billet </strong>against the
+    <strong>Ejector </strong>in &quot; -Y&quot; direction. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <h4 class="h4_25_4_2_">Contact Generation</h4>
+  <p>Select <strong>user </strong>type contact and click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> (Add relationship) button twice and select <strong>Bottom </strong><strong>die </strong>as <strong>Master </strong>and <strong>Billet </strong>as
+    <strong>Slave </strong>for first relation and for second relation select <strong>Ejector </strong>as Master and <strong>Billet </strong>as Slave as shown in <a href="#Fig_L25_55_Inter-object_relationship_between_workpiece_and_bottom_die"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>55.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_55_Inter-object_relationship_between_workpiece_and_bottom_die"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0051.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Inter-object relationship between workpiece and bottom die</p>
+  <p> </p>
+  <p>Click on <strong>Bottom die- Billet </strong><img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> (Edit) relationship button and select the pull down option &quot;<strong>Free Resting</strong>&quot; in the thermal section to define
+    the inter-object heat transfer coefficient as shown in <a href="#Fig_L25_56_Inter-object_Heat_transfer_coefficient_selection_for_resting"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>56.</a> Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close the Editing window. Then click on <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/>  button to copy the interface properties from the first relationship to the other relationships. It will generate the inter-object
+    contact at the beginning of the resting operation while simulating. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until step controls window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_56_Inter-object_Heat_transfer_coefficient_selection_for_resting"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0052.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Inter-object Heat transfer coefficient selection for resting</p>
+  <p> </p>
+  <h4 class="h4_25_4_2_">Step control</h4>
+  <p>Set the <strong>number of simulation steps</strong> as <strong>50 </strong>at <strong>0.1 </strong>sec each and saving every <strong>5 steps</strong>. Advanced Simulation controls settings are available in expert mode (<img src="../../../../assets/icons/pre_icons/mo_explorer_mode_icon.jpg"/>). Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to proceed to the database generation stage.</p>
+  <p> </p>
+  <h4 class="h4_25_4_2_">Generate Database</h4>
+  <p>See the Status in Generate DB page.  If we see Input error, check the data missing and complete it. For this lab sequence we expect to see &quot;DB generation is not required for this operation. It will occur at run time.&quot; message. click on  <img src="../../../../assets/icons/pre_icons/mo_next_opr_button.jpg"/> to go to Next operation.</p>
+  <p> </p>
+  <h3 class="h3_25_4_"> Form cone Operation</h3>
+  <p>For the forming operation <strong>turn </strong><strong>on </strong>the <strong>Deformation </strong>check box along with <strong>Heat transfer</strong> in Simulation controls page. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nwse-resize;" width="73"/>.</p>
+  <p> </p>
+  <h4 class="h4_25_4_3_">Defining the objects</h4>
+  <p>In the Objects page, by default all four objects are added in list. If not, add four objects by using <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button and make all four objects as Read from DB objects by visiting every
+    object page. (See <a href="#Fig_L25_57_Objects_page"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>57.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_57_Objects_page"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0053.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objects page</p>
+  <p> </p>
+  <h4 class="h4_25_4_3_">Punch Definition</h4>
+  <p><strong>Defining the Punch movement</strong><br/> Define a <strong>speed </strong>of <strong>10</strong> in/sec in <strong>-Y</strong> direction for the Punch object. Then click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>     until Scheduled positioning page.</p>
+  <p> </p>
+  <h4 class="h4_25_4_3_">Scheduled Positioning</h4>
+  <p>In scheduled Positioning page, click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> (Add) button and select the ‘<strong>Positioning</strong><strong> object</strong>’ as <strong>Punch</strong>, method as ‘<strong>Interference</strong>’
+    with respect to ‘<strong>Billet</strong>’ in the <strong>-Y </strong>direction. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to continue.</p>
+  <h4 class="h4_25_4_3_">Contact Generation</h4>
+  <p>Select <strong>user </strong>type contact and click on <img src="../../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/> button. It will add the relationship between the Billet, Punch, Bottom Die and Ejector. As the Dies are Rigid
+    and Billet is plastic, Top and Bottom Dies are considered as Master and Billet as Slave.</p>
+  <p>Highlight the <strong>Punch – Billet </strong>relationship and click the <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> button to modify the contact conditions. In the friction section of the screen (see <a href="#Fig_L25_58_Inter-object_friction_coefficient_definition_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>58.</a>),
+    there is a pull-down menu that allows the user to choose the appropriate friction conditions of common forming processes.</p>
+  <p>Since this is hot forming simulation and the dies are steel, use the pull down menu and select <strong>Warm forming</strong> from the list. A friction value of <strong>0.25</strong> will automatically be selected. Switch to <strong>Thermal </strong><strong>tab </strong>and
+    select forming and select the pull down option &quot;<strong>Forming</strong>&quot; to define the inter-object heat transfer coefficient.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_58_Inter-object_friction_coefficient_definition_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0054.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-object friction coefficient definition window</p>
+  <p> </p>
+  <p>Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to go back to Inter-Object window, since the friction conditions are the same for all the object pairs, the <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction of <strong>0.25</strong> and Interface heat transfer as <strong>0.004</strong> as shown
+    in <a href="#Fig_L25_59_Inter-Object_relationship_definition_for_forming_operation"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>59.</a> Since the contact will initialize and generate while generating database. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_59_Inter-Object_relationship_definition_for_forming_operation"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0055.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-Object relationship definition for forming operation</p>
+  <p> </p>
+  <h4 class="h4_25_4_3_">Stopping Controls</h4>
+  <p>Set the stopping controls as explained in the section Stopping controls <a href="#25_1_13_First_operation_Stopping_Controls">25.1.13.</a></p>
+  <h4 class="h4_25_4_3_">Step Controls</h4>
+  <p>Set the step controls as explained in the section Step controls <a href="#25_1_14_First_operation_Step_Controls">25.1.14.</a></p>
+  <h4 class="h4_25_4_3_">Generate Database</h4>
+  <p>See the Status in Generate DB page.  If we see Input error, check the data missing and complete it. For this lab sequence we expect to see &quot;DB generation is not required for this operation. It will occur at run time.&quot; message.</p>
+  <h4 class="h4_25_4_3_">Running simulation</h4>
+  <p>Switch to the Simulation mode by clicking on <img height="21" src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg" width="146"/>  button above the operation tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <h4 class="h4_25_4_3_">Post process the results</h4>
+  <p>After the simulation is completed, Switch to <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab.</p>
+  <p> </p>
+  <p>check the load in the post-processor.  </p>
+  <p>How does the load compare to the cold forming case?</p>
+  <p>Point track temperature at several points in the head of the part.  What happens to the temperature as the part is formed?</p>
+  <p> </p>
+  <p> </p>
+  <h2><a id="25_5_Warm_Stub_shaft_with_Mechanical_press_movement"></a>Warm Stub shaft with Mechanical press movement</h2>
+  <h3 class="h3_25_5_">Opening project file</h3>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear. Select &quot; <strong>Integrated Manufacturing Process</strong>&quot; radio button and unit system as &quot;<strong>English</strong>&quot; using radio button. Define Problem Name as &quot;<strong>StubShaft_Mecahical</strong>&quot;
+    and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p>MO wizard will open along with project naming window (see <a href="#Fig_L25_60_Problem_defining_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>60.</a>). In the field of project name, in this session we use ‘<strong><strong>StubShaft_Mecahical</strong></strong>’
+    as the project name. Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>  to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_60_Problem_defining_window"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0056.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem defining window</p>
+  <p> </p>
+  <h3 class="h3_25_5_">Add Forming Operation</h3>
+  <p><br/> Add 2D Forming operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button or user can also add by drag and drop into the Operation Editor.</p>
+  <p> </p>
+  <h3 class="h3_25_5_">Importing the DB</h3>
+  <p>After adding 2D Forming operation, import previously simulated <strong>Stub_shaft_Warm.DB</strong>, select the <strong>first step of the third operation</strong> and click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Punch Movement page.</p>
+  <p> </p>
+  <h3 class="h3_25_5_">Punch Definition</h3>
+  <p><strong>Punch Movement Definition</strong></p>
+  <p>Select the movement type as <strong>Mechanical press</strong>. The total stroke is the movement of the ram from top dead center to bottom dead center (or back to front, for a horizontal press).</p>
+  <p>We will specify a<strong> total stroke </strong>of <strong>10</strong>”.</p>
+  <p>The forging stroke is the distance the punch travels from the time it contacts the workpiece until it reaches bottom dead center. For this simulation, the<strong> forging stroke</strong> will be <strong>0.5</strong>”.</p>
+  <p>The number of Cycles/second is the speed of the flywheel. On a header, or a press without a clutch, it will equal the Cycles/second of the press. On a press with a clutch, it will be Flywheel RPM / 60 rev/sec or cycles/sec.</p>
+  <p>We will specify <strong>1.1 Cycles / sec</strong>.</p>
+  <p>We will keep rest of the settings as imported. click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until DB Generation page.</p>
+  <p> </p>
+  <h3 class="h3_25_5_">Generate DB</h3>
+  <p>Check the data and generate the DB. After generating DB switch to <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> mode to run the simulation.</p>
+  <p> </p>
+  <h3 class="h3_25_5_">Running simulation</h3>
+  <p>Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and
+    then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p>After simulation complete, switch to <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab.</p>
+  <p> </p>
+  <h3 class="h3_25_5_">Post processor</h3>
+  <p>In Step Browser click on <img src="../../../../assets/icons/pre_icons/mo_all_button.jpg"/> button to view all steps. Play through the steps to see the deformation.</p>
+  <p>Go to the load-stroke <img src="../../../../assets/icons/post_icons/mo_load_stroke_icon.jpg"/> plot and plot the punch velocity vs time. Plot the load vs. time.</p>
+  <p>User can compare the maximum load using the press model to the maximum load using the constant speed approximation.</p>
+  <p> </p>
+  <h2><a id="25_6_Warm_Stub_shaft_with_Hydraulic_press_movement"></a>Warm Stub shaft with Hydraulic press movement</h2>
+  <h3 class="h3_25_6_">Opening project file</h3>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear. Select &quot; <strong>Integrated Manufacturing Process</strong>&quot; radio button and unit system as &quot;<strong>English</strong>&quot; using radio button. Define Problem Name as &quot;<strong>StubShaft_Hydraulic</strong>&quot;
+    and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p>MO wizard will open along with project naming window (see <a href="#Fig_L25_61_Problem_defining_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>61.</a>). In the field of project name, in this session we use ‘<strong><strong>StubShaft_Hydraulic</strong></strong>’
+    as the project name. Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>  to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_61_Problem_defining_window"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0057.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem defining window</p>
+  <p> </p>
+  <h3 class="h3_25_6_">Add Forming Operation</h3>
+  <p>Add 2D Forming operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button or user can also add by drag and drop into the Operation Editor.</p>
+  <p> </p>
+  <h3 class="h3_25_6_">Importing the DB</h3>
+  <p>After adding 2D Forming operation, import previously simulated <strong>Stub_shaft_Warm.DB</strong>, select the <strong>first step of the third operation</strong> and click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Punch Movement page.</p>
+  <p> </p>
+  <h3 class="h3_25_6_">Punch Movement Definition</h3>
+  <p>Select the movement type as <strong>Hydraulic press</strong>. For this simulation, check the Power limit box, click the <img src="../../../../assets/icons/pre_icons/mo_define..._button2.jpg"/> button, and define the following values.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:50%;margin-left:auto;margin-right:auto">
+    <colgroup>
+      <col style="width:50.00%"/>
+      <col style="width:50.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"><strong>Force </strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Speed</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">1.5</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">20</p>
+        </td>
+        <td>
+          <p style="text-align: center">1.3</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">25</p>
+        </td>
+        <td>
+          <p style="text-align: center">1.1</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">30</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.7</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">35</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.25</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">38</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>This means that the max speed of the press – unloaded – is 1.5 in/sec.</p>
+  <p>The max load of the press is 38 Klb at final step (stall speed.)</p>
+  <p>At 25 Klb, the press can maintain 1.1 in/sec.</p>
+  <p>Note that these load values are constructed to illustrate press behavior in this tutorial. The loads are quite small.</p>
+  <p>Define<strong> constant speed </strong>as <strong>1.5</strong> in/sec</p>
+  <p>We will keep rest of the settings as imported. Click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to close the definition then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until the DB Generation page.</p>
+  <p> </p>
+  <h3 class="h3_25_6_">Generate DB</h3>
+  <p>Check the data and generate the DB. After generating DB switch to <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> mode to run the simulation.</p>
+  <p> </p>
+  <h3 class="h3_25_6_">Running simulation</h3>
+  <p>Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and
+    then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p>After simulation complete, switch to <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab..</p>
+  <p> </p>
+  <h3 class="h3_25_6_">Post processor</h3>
+  <p>In Step Browser click on <img src="../../../../assets/icons/pre_icons/mo_all_button.jpg"/> button to view all steps. Play through the steps to see the deformation.</p>
+  <p>Go to the load-stroke  plot and plot the punch velocity vs time. Plot the load vs. time.</p>
+  <p>User can compare the maximum load using the press model to the maximum load using the constant speed approximation.</p>
+  <p> </p>
+  <h2><a id="25_7_Warm_Stub_shaft_with_Screw_press_movement"></a>Warm Stub shaft with Screw press movement</h2>
+  <h3 class="h3_25_7_">Opening project file</h3>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear. Select &quot; <strong>Integrated Manufacturing Process</strong>&quot; radio button and unit system as &quot;<strong>English</strong>&quot; using radio button. Define Problem Name as &quot;<strong>StubShaft_Screw</strong>&quot;
+    and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p>MO wizard will open along with project naming window (see <a href="#Fig_L25_62_Problem_defining_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>62.</a>). In the field of project name, in this session we use ‘<strong><strong>StubShaft_Screw</strong></strong>’
+    as the project name. Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>  to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_62_Problem_defining_window"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0058.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem defining window</p>
+  <h3 class="h3_25_7_">Add Forming Operation</h3>
+  <p>Add 2D Forming operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button or user can also add by drag and drop into the Operation Editor.</p>
+  <p> </p>
+  <h3 class="h3_25_7_">Importing the DB</h3>
+  <p>After adding 2D Forming operation, import previously simulated <strong>Stub_shaft_Warm.DB</strong>, select the <strong>f</strong><strong><strong>irs</strong>t step of the third operation</strong> and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <h3 class="h3_25_7_">Punch Definition</h3>
+  <p><strong>Punch Movement Definition</strong></p>
+  <p>Select the movement type as <strong>Screw press</strong>.</p>
+  <p>Specify:</p>
+  <p><strong>Energy</strong> = <strong>9 </strong>Klb-in<br/>
+    <strong>Moment of inertia</strong> = 0.125 Klb-in-s^2<br/>
+    <strong>Lead Screw Pitch</strong> = 5 in/rev<br/>
+    <strong>Efficienc</strong><strong>y</strong> = 0.8<br/> We will keep rest of the settings as imported. click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until DB Generation page.</p>
+  <p> </p>
+  <h3 class="h3_25_7_">Generate DB</h3>
+  <p>Check the data and generate the DB. After generating DB switch to <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> mode to run the simulation.</p>
+  <p> </p>
+  <h3 class="h3_25_7_">Running simulation</h3>
+  <p>Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and
+    then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p>After simulation complete, switch to <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> tab.</p>
+  <p> </p>
+  <h3 class="h3_25_7_">Post processor</h3>
+  <p>In Step Browser click on <img src="../../../../assets/icons/pre_icons/mo_all_button.jpg"/> button to view all steps. Play through the steps to see the deformation.</p>
+  <p>Go to the load-stroke  plot and plot the punch velocity vs time. Plot the load vs. time.</p>
+  <p>User can rerun the simulation from the beginning with a higher energy.</p>
+  <p> </p>
+  <h2><a id="25_8_Warm_Stub_shaft_with_Hammer_movement"></a>Warm Stub shaft with Hammer movement</h2>
+  <h3 class="h3_25_8_">Opening project file</h3>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear. Select &quot; <strong>Integrated Manufacturing Process</strong>&quot; radio button and unit system as &quot;<strong>English</strong>&quot; using radio button. Define Problem Name as &quot;<strong>StubShaft_Hammer</strong>&quot;
+    and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p>MO wizard will open along with project naming window (see <a href="#Fig_L25_63_Problem_defining_window"><span data-keyref="Basic_labs_2D_labs_Lab25_Stub_shaft">Fig. L25.</span>63.</a>). In the field of project name, in this session we use ‘<strong><strong>StubShaft_Hammer</strong></strong>’
+    as the project name. Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>  to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L25_63_Problem_defining_window" height="0" width="0"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/2d_mobl25_image0059.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem defining window</p>
+  <p> </p>
+  <h3 class="h3_25_8_">Add Multi Blow Forging Operation</h3>
+  <p>Add <strong>2D Multi Blow Forging</strong> operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button or user can also add by drag and drop into the
+    Operation Editor.</p>
+  <p> </p>
+  <h3 class="h3_25_8_"> Importing the DB</h3>
+  <p>After adding 2D Multi Blow Forging operation, import previously simulated <strong>Stub_shaft_Warm.DB</strong>, select the <strong>first step of the third operation</strong> and click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>.</p>
+  <p> </p>
+  <h3 class="h3_25_8_">Punch Definition</h3>
+  <p><strong>Punch Movement Definition</strong><br/> Select the movement type as <strong>Hammer</strong>.</p>
+  <p>Specify Hammer controls.</p>
+  <p>Set:</p>
+  <p><strong>Energy</strong> = <strong>6</strong> Klb-in<br/>
+    <strong>Mass </strong>= <strong>0.03 </strong>Klb-s^2/in</p>
+  <p> </p>
+  <h3 class="h3_25_8_">Blow table</h3>
+  <p>In the <strong>Blow table </strong>page, set 0.5 for the efficiency and define the number of hits as 4.</p>
+  <p>We will keep rest of the settings as imported. click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until DB Generation page.</p>
+  <p> </p>
+  <h3 class="h3_25_8_">Generate DB</h3>
+  <p>Check the data and generate the DB. After generating DB switch to <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/>  mode to run the simulation.</p>
+  <p class="Note_text"><strong>Note</strong>: While running the simulation, if the stopping criteria is met then further operations will not simulated.</p>
+  <p> </p>
+  <h3 class="h3_25_8_">Running simulation</h3>
+  <p>Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and
+    then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation. As we click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" style="cursor: nwse-resize;" width="75"/> button simulation starts.</p>
+  <p>After simulation complete, switch to <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> tab.</p>
+  <p> </p>
+  <h3 class="h3_25_8_">Post processor</h3>
+  <p>In Step Browser click on <img src="../../../../assets/icons/pre_icons/mo_all_button.jpg"/> button to view all steps. Play through the steps to see the deformation.</p>
+  <p>Go to the load-stroke  plot and plot the punch velocity vs time. Plot the load vs. time.</p>
+  <p>User can rerun the simulation from the beginning with a higher energy.</p>
+  <p> </p>
+
+</body></html>

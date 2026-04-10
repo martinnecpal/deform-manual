@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"42.1. Ring Rolling","type":"item","tilePath":"","url":"documentation_content/operation_templates/42_ring_rolling/42_1_ring_rolling.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

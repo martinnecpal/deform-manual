@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.13.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Radiation Analysis Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Radiation Analysis Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_radiation_analysis_lab/2d_radiation_analysis_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_Resistance_Heating_Labs/Resistance_Heating_Labs_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_Radiation_Analysis_Lab/Radiation_Analysis_Labs_Main_Pg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="2D Radiation Analysis Lab">
+        <span>2D Radiation Analysis Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>2D Radiation analysis of a plane finned surface</h1>
+  <p><a href="#1_1_Creating_a_New_problem">1.1. Creating a New problem</a></p>
+  <p><a href="#1_2_Operation1:_Heat_Transfer_operation">1.2. Operation1: Heat Transfer operation</a></p>
+  <p><a href="#1_3_Operation2:_Steady_state_heat_transfer_operation">1.3. Operation2: Steady state heat transfer operation</a></p>
+  <p><a href="#1_4_Operation3:_Transient_state_heat_transfer_operation">1.4. Operation3: Transient state heat transfer operation</a></p>
+  <p><a href="#1_5_Post_Processing">1.5. Post Processing</a></p>
+  <h2><a id="1_1_Creating_a_New_problem"></a>Creating a New problem</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_2DRAL1_1_Problem_Setup_window"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>1.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>SI</strong>&quot; radio button in unit field. Define Problem Name as &quot;<strong>Fin_Radiation_Analysis</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn
+    on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using
+    the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_1_Problem_Setup_window"></a><img height="417" src="../../../../assets/images/applications/55_2_arc_welding/image0002.jpg" style="cursor: nwse-resize;" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem Setup window</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, along with project naming window, defined  problem name is updated as ‘<strong>Fin_Radiation_Analysis</strong>’ as the project name and selected unit system updated. Confirm that First
+    operation check box is unchecked as we will add operation later and use the default (home) directory. Click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to add project. This lab will be referenced in future labs so it is important
+    to use the name above.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_2_MO_New_Project_window"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO New Project window</p>
+  <p> </p>
+  <h2><a id="1_2_Operation1:_Heat_Transfer_operation"></a>Operation1: Heat Transfer operation</h2>
+  <p>Multiple Operation wizard will opens new project. Add 2D Heat transfer operation from the Explorer Operations list. Operation can be add by clicking on 2D Heat transfer operation <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button (see <a href="#Fig_2DRAL1_3_Added_2D_Heat_Transfer_operation_into_Operation_Editor"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>3.</a>) or user can also add by drag and drop into
+    the Operation Editor.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_3_Added_2D_Heat_Transfer_operation_into_Operation_Editor"></a><img height="386" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Added 2D Heat Transfer operation into Operation Editor</p>
+  <p> </p>
+  <h3>Selecting Geometry Type</h3>
+  <p>In this lab we are using Plane strain geometries, so activate 2D <strong>Plane </strong><strong>strain </strong>radio button in geometry type page as shown in <a href="#Fig_2DRAL1_14_Assigning_first_Heat_Exchange_window_for_Fin"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>4.</a>,
+    then click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="2DRAL1_4_2D_Plane_strain_Geometry_type_selection"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0004.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">2D Plane strain Geometry type selection</p>
+  <p> </p>
+  <h3>Selecting Heat transfer type</h3>
+  <p>Select &quot;<strong>Transfer through air</strong>&quot; as heat transfer type for Air Transfer operation as shown in <a href="#Fig_2DRAL1_5_Heat_Transfer_type_selection_page"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>5.</a>    This will set the default heat transfer settings for heating operation. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_5_Heat_Transfer_type_selection_page"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0005.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat Transfer type selection page</p>
+  <h3>Process condition</h3>
+  <p>In this operation we are heating the Fin bottom surface from External fluid for 1200 sec. So, define <strong>Process </strong><strong>duration </strong>as <strong>1200 </strong>sec as shown in <a href="#Fig_2DRAL1_6_Process_condition_page"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>6.</a> Use
+    default Environment temperature and Convection coefficient, then click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> .</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_6_Process_condition_page"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0006.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process condition page</p>
+  <h3>Simulation mode selection</h3>
+  <p>In Simulation controls by default only Heat transfer mode will be selected for <strong>Heat </strong><strong>transfer </strong>operation under Sim mode Tab (In guided mode) (see <a href="#Fig_2DRAL1_7_Simulation_controls_page"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>7.</a>).
+    Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_7_Simulation_controls_page"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls page</p>
+  <h3>Adding Objects</h3>
+  <p>In Object window now by default one object will be added in list. For this lab we required two objects, so add another object by click on <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button (see <a href="#Fig_2DRAL1_8_Adding_Object_window"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>8.</a>),
+    then click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_8_Adding_Object_window"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0008.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Object window</p>
+  <h3>Workpiece</h3>
+  <p>In Workpiece window, change the Object Name to <strong>Fin </strong>and select Object type as <strong>Plastic </strong>and Define Object temperature as <strong>38</strong>°C as shown in <a href="#Fig_2DRAL1_9_Workpiece_object_window"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>9.</a>    Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_9_Workpiece_object_window"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0009.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece object window</p>
+  <p> </p>
+  <h3>Importing Fin geometry</h3>
+  <p>In Geometry window, load <strong>Fin_Geometry.geo</strong> geometry file from library using <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) option. The geometry is located in DEFORM installation folder
+    \2D\LABS\ Radiational_analysis directory. Check the geometry using <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> option to make sure the geometry is OK.  Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_10_Check_and_Correct_Geometry_window"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0010.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Check and Correct Geometry window</p>
+  <h3>Fin mesh page</h3>
+  <p>Switch to Expert mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> (switch to expert mode) icon from the tool bar. Expert mode will provide more options for detailed settings. Define <strong>Target number of elements</strong>    as <strong>3000</strong>, <strong>Thickness </strong><strong>elements </strong>as <strong>2 </strong>and <strong>Size </strong><strong>ratio </strong>as <strong>1</strong>,  generate the mesh by clicking  on <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button as shown in <a href="#Fig_2DRAL1_11_Workpiece_mesh_page"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>11.</a> Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_11_Workpiece_mesh_page"></a><img height="400" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece mesh page</p>
+  <p> </p>
+  <h3>Assigning material for Fin</h3>
+  <p>In Material window, using <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>Import material data from a file option import <strong>Fin_material.key</strong> from DEFORM installation folder \2D\Labs\ Radiational_analysis directory
+    (see <a href="#Fig_2DRAL1_12_Assigning_Fin_material_page"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>12.</a>). Assign Fin_material and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_12_Assigning_Fin_material_page"></a><img height="384" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0012.jpg" width="750"/></p>
+  <p class="Fig_numb">Assigning Fin material page</p>
+  <p> </p>
+  <h3>Defining Boundary condition for Fin</h3>
+  <p>In BCC, assign Heat exchange with Environment to entire surface except right and left sides as shown in <a href="#Fig_2DRAL1_13_Assigned_Heat_exchange_with_Environment_for_Fin"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>13.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_13_Assigned_Heat_exchange_with_Environment_for_Fin"></a><img height="385" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Heat exchange with Environment for Fin</p>
+  <h4>Adding Heat Exchange with Environment BCC windows</h4>
+  <p>From Environment window option we are adding <strong>two</strong> <strong>windows</strong>, one on Top surface of the Fin and one at the bottom surface of Fin. Click on Env. Window button, In Heat Exchange window page click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button to add first window, <strong>Add window on top surface of Fin</strong> as shown in <a href="#Fig_2DRAL1_14_Assigning_first_Heat_Exchange_window_for_Fin"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>14.</a>    Define Environment temperature as <strong>38</strong>°C and Emissivity as 1, select Convection Coefficient as Function of Temperature, click on <img src="../../../../assets/icons/pre_icons/mo_define..._button2.jpg"/> button and import <strong>Convection_coeffecient_win1.dat</strong>    from \2D\Labs\ Radiational_analysis directory using Load button as shown in <a href="#Fig_2DRAL1_15_Convection_coefficient_value_for_first_window_region"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>15.</a>    and click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_14_Assigning_first_Heat_Exchange_window_for_Fin"></a><img height="400" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning first Heat Exchange window for Fin</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_2DRAL1_15_Convection_coefficient_value_for_first_window_region"></a><img height="384" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Convection coefficient value for first window region</p>
+  <p> </p>
+  <p>Now click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button to add second window, Add window on bottom surface of Fin as shown in <a href="#Fig_2DRAL1_16_Assigning_second_Heat_Exchange_window_for_Fin"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>16.</a>,
+    Define <strong>Environment </strong><strong>temperature </strong>as <strong>100</strong>°C and <strong>Emissivity </strong>as <strong>0.8</strong>, select <strong>Convection </strong><strong>Coefficient </strong>as <strong>Function </strong><strong>of </strong><strong>Temperature</strong>,
+    click on Define button and import <strong>Convection_coeffecient_win2.dat</strong> from \2D\LABS\ Radiational_analysis directory using <img src="../../../../assets/icons/pre_icons/mo_load.._button.jpg"/> button as shown in <a href="#Fig_2DRAL1_17_Convection_coefficient_value_for_second_window_region"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>17.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to close Function window. Close Heat Exchange window by click on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Top die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_16_Assigning_second_Heat_Exchange_window_for_Fin"></a><img height="400" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning second Heat Exchange window for Fin</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_17_Convection_coefficient_value_for_second_window_region"></a><img height="382" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Convection coefficient value for second window region</p>
+  <p> </p>
+  <h3>Top die page</h3>
+  <p>In Top Die page change the Object name to <strong>External_Body </strong>and define Temperature to <strong>38°C</strong> as shown in <a href="#Fig_2DRAL1_18_External Body page"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>18.</a>    Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_18_External Body page"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0018.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">External Body page</p>
+  <p> </p>
+  <h3>Import External body geometry</h3>
+  <p>In Geometry window, <strong>External_body.geo</strong> geometry file from library using <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) option. The geometry is located in DEFORM installation folder
+     \2D\Labs\ Radiational_analysis directory. Check the geometry using <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> option to make sure the geometry is OK. Then click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <h3>Generating mesh for External body</h3>
+  <p>Define <strong>Target number of elements</strong> as <strong>100 </strong>and <strong>Size ratio</strong> as <strong>1</strong>, generate the mesh by clicking  on  <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/>  button as shown
+    in <a href="#Fig_2DRAL1_19_External_body_mesh_page"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>19.</a> Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_19_External_body_mesh_page"></a><img height="386" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">External body mesh page</p>
+  <p> </p>
+  <h3>Assigning material for External body</h3>
+  <p>In Material window, using Import material data from a file <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> option import <strong>External_Fluid.key</strong> from DEFORM installation folder  \2D\Labs\ Radiational_analysis directory
+    (see <a href="#Fig_2DRAL1_20_Assigning_material_for_External_Body"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>20.</a>). Assign <strong>External_Fluid </strong>material and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_20_Assigning_material_for_External_Body"></a><img height="384" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning material for External Body</p>
+  <p> </p>
+  <h3>Defining Boundary condition for External Body </h3>
+  <p>Delete the default assigned Heat exchange with Environment BCC over the entire outer surface. Then assign the Temperature BCC on Top and Bottom side of External body and assign 38°C as Temperature as shown in <a href="#Fig_2DRAL1_21_Assigned_Temperature_BCC_for_External_Body"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>21.</a>    Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Step page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_21_Assigned_Temperature_BCC_for_External_Body"></a><img height="381" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0021.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Temperature BCC for External Body</p>
+  <p> </p>
+  <h3>Assigning Step definition</h3>
+  <p>In Step window, select  process condition tab and check <strong>View </strong><strong>factor </strong>calculation check box. Select <strong>Simulation Steps</strong> <img height="25" src="../../../../assets/icons/pre_icons/mo_simulation_step.jpg" width="25"/> tab and define <strong>Number </strong><strong>of </strong><strong>Simulation </strong><strong>steps </strong>as <strong>6000</strong> and <strong>Step</strong> <strong>increment </strong><strong>to</strong> <strong>save </strong>as <strong>5 sec</strong>    (see <a href="#Fig_2DRAL1_22_Simulation_Steps_page"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>22</a>.).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_22_Simulation_Steps_page"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0022.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Steps page</p>
+  <p> </p>
+  <p>Under <strong>Step increment <img height="25" src="../../../../assets/icons/pre_icons/mo_step_increment.jpg" width="25"/> </strong>tab, select <strong>Temperature</strong> type Solution step definition, Define <strong>Initial time step</strong> and
+    <strong>Min Time step</strong> as <strong>1e-06 </strong>and <strong>Max time step</strong> and <strong>Max </strong><strong>temperature </strong><strong>change </strong>as <strong>5</strong> as shown in <a href="#Fig_2DRAL1_23_Step_increment_controls_page"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>23.</a>    Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_23_Step_increment_controls_page"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0023.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Step increment controls page</p>
+  <h3>Generate database</h3>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. During the checking process: Messages in the red color signify data that needs to
+    be fixed before a simulation can be run (such as when you forget to define any material data).  </p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. When the program is done writing the database, click on  tab to run simulation.</p>
+  <p> </p>
+  <h3>Run and monitor a simulation</h3>
+  <p>Once the database has been generated switch to the Simulation mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the operation tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options Use the default <strong>Continue </strong><strong>Run </strong>option to select “<strong>Continue</strong><strong> from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>radio
+    button.</p>
+  <p> </p>
+  <p>After completion of simulation observe the last messages in Message file. We will observe the message as &quot;</p>
+  <p>PROGRAM STOPPED!</p>
+  <p>THE CURRENT TIME 1200.0000000</p>
+  <p>THE CURRENT LOCAL TIME 1200.0000000 HAS REACHED THE SPECIFIED LIMIT 1200.0000000 &quot;</p>
+  <p> </p>
+  <h2><a id="1_3_Operation2:_Steady_state_heat_transfer_operation"></a>Operation2: Steady state heat transfer operation</h2>
+  <p>In this operation we are setting up steady state heat transfer operation with ambient temperature of 800°C for 30 min.</p>
+  <p> </p>
+  <p>Now go to <img src="../../../../assets/icons/pre_icons/mo_pre_mode_button.jpg"/> mode add another Heat transfer operation. Then click on second Heat transfer operation to open second Heat transfer operation. When we click on second operation we will
+    get Setup type popup, in popup click on Yes -Interactive setup <img src="../../../../assets/icons/pre_icons/mo_yes_interactive_setup_button.jpg"/> button.</p>
+  <p> </p>
+  <h3 class="h3_1_3_">Heat transfer type selection</h3>
+  <p>In Heat transfer type page,  select Transfer through air mode and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <h3 class="h3_1_3_">Define Process Condition</h3>
+  <p>In Process condition page, define <strong>process </strong><strong>duration </strong>as <strong>1800</strong> sec. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>  until Fin BCC page.</p>
+  <h3 class="h3_1_3_">Defining Fin BCC</h3>
+  <p>Click on Env. window button, select <strong>window1</strong> and define Temperature as <strong>800°C</strong> and <strong>Convective coefficient</strong> as <strong>constant </strong><strong>0.01 </strong>as shown in <a href="#Fig_2DRAL1_24_Fin_Heat_Exchange_Window_BCC_page"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>24.</a>,
+    click on  <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until External body BCC page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_24_Fin_Heat_Exchange_Window_BCC_page"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0024.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fin Heat Exchange Window BCC page</p>
+  <p> </p>
+  <h3 class="h3_1_3_">Defining External Body BCC page</h3>
+  <p>Change the assigned <strong>Temperature </strong><strong>BCC </strong>value to<strong> 800°C </strong>from 38°C as shown in <a href="#Fig_2DRAL1_25_External_Body_BCC_page"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>25.</a>,
+    click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Generate DB page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_25_External_Body_BCC_page"></a><img height="385" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0025.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">External Body BCC page</p>
+  <h3 class="h3_1_3_">Generating Database</h3>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. Click on <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. When the program is done writing the database, click on <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> tab to run simulation.</p>
+  <p> </p>
+  <h3 class="h3_1_3_">Run and monitor a simulation</h3>
+  <p>Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options Use the default <strong>Continue </strong><strong>Run </strong>option to select “<strong>Continue</strong><strong> from the last step</strong>”
+    option and then select the Simulation mode as <strong>Interactive </strong>radio button.  </p>
+  <h2><a id="1_4_Operation3:_Transient_state_heat_transfer_operation"></a>Operation3: Transient state heat transfer operation</h2>
+  <p>In this operation we are setting up transient state heat transfer operation with ambient temperature of 38°C for 60 min.</p>
+  <p>After completion of simulation go to <img src="../../../../assets/icons/pre_icons/mo_pre_mode_button.jpg"/> mode add another Heat transfer operation.  Then click on third Heat transfer operation to open the added Heat transfer operation. When we click
+    on operation we will get Setup type popup, in popup click on Yes -Interactive setup <img src="../../../../assets/icons/pre_icons/mo_yes_interactive_setup_button.jpg"/> button.</p>
+  <p> </p>
+  <h3 class="h3_1_4_">Heat transfer type selection</h3>
+  <p>In Heat transfer type page, select <strong>Transfer through air</strong> mode and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3 class="h3_1_4_">Define Process Condition</h3>
+  <p>In Process condition page, define <strong>process </strong><strong>duration</strong> as <strong>3600 </strong>sec. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> Fin BCC page.</p>
+  <h3 class="h3_1_4_">Defining Fin BCC</h3>
+  <p>Click on Env. window button, select window1 and define Temperature as <strong>38°C</strong> and select Convection Coefficient as Function of Temperature, click on Define button and import <strong>Convection_coeffecient_win1.dat </strong>from \2D\LABS\
+    Radiational_analysis directory. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until External body BCC page.</p>
+  <h3 class="h3_1_4_">Defining External Body BCC page</h3>
+  <p>Change the assigned Temperature BCC value to<strong> 38°C</strong>. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Generate DB page.</p>
+  <h3 class="h3_1_4_">Generating Database</h3>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. Click on <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. When the program is done writing the database, click on <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> tab to run simulation.</p>
+  <h3 class="h3_1_4_">Run and monitor a simulation</h3>
+  <p>Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options Use the default <strong>Continue </strong><strong>Run </strong>option to select “<strong>Continue</strong><strong> from the last step</strong>”
+    option and then select the Simulation mode as <strong>Interactive </strong>radio button <strong> </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation..
+    After completion of simulation go to <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab.</p>
+  <h2><a id="1_5_Post_Processing"></a>Post Processing</h2>
+  <h3 class="h3_1_5_">State variable <img src="../../../../assets/icons/post_icons/mo_state_variable_icon.jpg"/></h3>
+  <p>Plot <strong>Temperature </strong><strong>state </strong><strong>variable</strong> for <strong>F</strong>in object and observe temperature distribution in each operation last step (see <a href="#Fig_2DRAL1_26_Temperature_distribution_in_each_operation_last_step"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>26.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_26_Temperature_distribution_in_each_operation_last_step"></a><img height="178" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0026.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature distribution in each operation last step</p>
+  <p> </p>
+  <h3 class="h3_1_5_">Point tracking <img src="../../../../assets/icons/post_icons/mo_point_tracking_icon.jpg"/></h3>
+  <p>Select <strong>point tracking</strong> add 3 points as explained below (see <a href="#Fig_2DRAL1_27_Point_selection_for_Point_tracking"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>27.</a>) and
+    click on <img src="../../../../assets/icons/post_icons/mo_track_button.jpg"/>.</p>
+  <p>Point1: On 3rd fin center top surface.</p>
+  <p>Point2: In between 2nd and 3rd fin top surface.</p>
+  <p>Point3: Below point 2 on bottom surface.</p>
+  <p>Now Plot temperature state variable and observe the Point tracking graph (see <a href="#Fig_2DRAL1_28_Point__Tracking_Graph"><span data-keyref="Applications_Radiation_Analysis_Labs_2D Radiation_Analysis_lab">Fig. 2DRAL1.</span>28.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_27_Point_selection_for_Point_tracking"></a><img src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0027.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Point selection for Point tracking</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRAL1_28_Point__Tracking_Graph"></a><img height="400" src="../../../../assets/images/applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/image0028.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Point  Tracking Graph</p>
+
+</body></html>
