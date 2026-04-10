@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"3D Press Model Lab","type":"item","tilePath":"","url":"documentation_content/applications/55_applications/55_press_model/3d_press_model_lab.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

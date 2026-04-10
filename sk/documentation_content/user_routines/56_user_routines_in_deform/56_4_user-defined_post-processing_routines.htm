@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "11.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>56.4. User-Defined Post-Processing Routines</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>56.4. User-Defined Post-Processing Routines</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/user_routine/56_4_user_defined_post_processing_routines.css"/>
+<meta name="brsnext" value="Documentation_content/57_Data_Analytics/Data_Analytics_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/User_Routines/56_User_Routines_in_DEFORM/56_3_3D_User_Defined_FEM_Routines.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="56.4. User-Defined Post-Processing Routines">
+        <span>56.4. User-Defined Post-Processing Routines</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>56.4. User-Defined Post-Processing Routines</h1>
+  <p><a href="#56_4_1_User_defined_post-processing_(USRVAR)">56.4.1. User defined post-processing (USRVAR)</a></p>
+  <p><a href="#56_4_2_Compiling_user_routines_on_Linux">56.4.2. Compiling user routines on Linux</a></p>
+  <p><a href="#56_4_3_Compiling_user_routines_on_Windows">56.4.3. Compiling user routines on Windows</a></p>
+  <p><a href="#56_4_4_Running_the_modified_post-processor_in_LINUX">56.4.4. Running the modified post-processor in LINUX</a></p>
+  <p><a href="#56_4_5_Running_the_modified_post-processor_in_Windows">56.4.5. Running the modified post-processor in Windows</a></p>
+  <p> </p>
+  <p>In the post-processor, user defined post-processing routines can be used to calculate field variables using the steps stored in the database. The manner in which these values are computed is based on creating a shared library file to compute variables
+    based on the variables stored in the database. To implement user-defined post-processing variables,</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>The user defined post processor source file is available on in the $DEFORM_DIR/USR subdirectory of DEFORM install folder on Linux. In case of PC this file is available in the installation folder (such as c:\Program Files\SFTC\DEFORM\v11.1\UserRoutine\PostProcessor).
+        User should make a local copy of this folder and the file PSTUSR23.FOR (Linux) or pstusr23.f (on Windows ) can be edited to compute the user defined post variables.</p>
+    </li>
+    <li>
+      <p>After editing, this file can be compiled and linked as a shared object file (LINUX) or a dynamically-linked library (Windows).</p>
+    </li>
+    <li>
+      <p>This shared library can be called by going to the User Variable dialog from the post processor. User can browse for the compiled dll file (Windows) or SL file (Linux) and select the library that was built. After this, go back to the tracking window
+        and press the Track Data button.</p>
+    </li>
+    <li>
+      <p> After the data has been tracked, go to the State Variables window and select the USR tab and then the state variables can be plotted to User Variables.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>:</p>
+  <p class="Note_text">User-defined Post-Processor routines can only use data that was saved in the database.  If a very coarse step increment was made, variables having a cumulative effect can have considerable error.</p>
+  <p> </p>
+  <p><strong>User defined post-processing routines:</strong></p>
+  <p>User defined post-processing can be used to generate plots of user variables after running a simulation. It uses the steps that are stored in the database and any type of variable can be plotted in the post-processor for these steps. The calculation
+    of this variable is done using a FORTRAN program PSTUSR23.FOR which is stored in the $DEFORM_DIR/USR directory. It is important to note that these variables do not affect the results of the simulation.</p>
+  <p>There are 10 user defined routines, each of these can be used to calculate 20 different user variables.</p>
+  <p>Some applications of user variables are to evaluate the micro-structure after the simulation, to predict the hardness, yield strength of different regions of the forged part, to evaluate failure using a critical damage value, calculate the cooling rate,
+    etc.</p>
+  <h2><a id="56_4_1_User_defined_post-processing_(USRVAR)"></a>User defined post-processing (USRVAR)</h2>
+  <p>The user defined post-processing routines have to be written using FORTRAN in the file PSTUSR23.FOR. When user variable tracking is done the functions in this FORTRAN program are called for the steps that have been selected in the post-processor. The
+    user function is evaluated at each node/element of the object for which the variables are tracked. The user subroutine is called at the beginning of tracking to get the variable names, then at the first step to get the initial values for all variables
+    and then called for all the steps present in the database being tracked. There are three phases in the tracking process:</p>
+  <p> </p>
+  <p><strong>PHASE 1</strong></p>
+  <p>The user variable function is called with the INIT flag set to to &quot;0&quot;. This is done once before tracking is started. During this phase the variables names (VNAME) should be defined so that they can be displayed in plots on the screen. The
+    variables for which &quot;VNAME&quot; is defined are tracked.</p>
+  <p>For easier identification purpose, it is recommended that proper name or descriptions be assigned to &quot;VNAME&quot;. This can be done when the user subroutine is called with INIT = 0 as shown below :</p>
+  <p>IF(INIT.EQ.0) THEN</p>
+  <p>VNAME(1) = &#39;User Example-1&#39;</p>
+  <p>VNAME(2) = &#39;User Example-2&#39;</p>
+  <p>VNAME(3) = &#39;User Example-3&#39;</p>
+  <p>VNAME(4) = &#39;User Example-4&#39;</p>
+  <p>VNAME(5) = &#39;User Example-5&#39;</p>
+  <p>RETURN</p>
+  <p>ENDIF</p>
+  <p> </p>
+  <p><strong>PHASE 2</strong></p>
+  <p>The user variable function is then called with INIT flag set to &quot;1&quot;. This is the second phase in which all user variables have to be initialized to their starting values. This is called at the first step in the list of steps which are being
+    tracked (ISTEP equals to the starting step) for each node/element in the object.</p>
+  <p>IF(INIT.EQ.1) THEN</p>
+  <p>VAR2(1)= (STS(1)+STS(2)+STS(3))/3.</p>
+  <p>VAR2(2)=EFEPS</p>
+  <p>VAR2(3)=0.0</p>
+  <p>VAR2(4)=0.0</p>
+  <p>VAR2(5)=0.0</p>
+  <p>RETURN</p>
+  <p>ENDIF</p>
+  <p> </p>
+  <p>If the initial value of a variable is zero the this is defined using the following code (Here variable 5 is used)</p>
+  <p>VAR2(5) = 0.</p>
+  <p>If the maximum value of a variable is being tracked (for example temperature) then this value can be set to (Here variable 5 is used).</p>
+  <p>VAR2(5) = -10000</p>
+  <p>and then checked and increased if temperature at any step is greater than this.</p>
+  <p> </p>
+  <p><strong>PHASE 3</strong></p>
+  <p>The user variable function is called with the INIT flag set to &quot;2&quot; in the phase in which all calculations of the user variables are done. This function is called for all steps for each node/element of the object and the user is expected to
+    update the values of the state variables based on the inputs passed to this program. The inputs to the function (pstusr2.f, subroutine USRVAR) are:</p>
+  <p>C                            *** INPUT ***</p>
+  <p>C</p>
+  <p>C     TNOW        : Current time</p>
+  <p>C     DTMAX       : Max time step when set in simulation controls</p>
+  <p>C                 : TNOW between successive steps can also be</p>
+  <p>C                 : used to compute time step size.</p>
+  <p>C     RZ          : Element center coord.</p>
+  <p>C     TEMP        : Temperature</p>
+  <p>C     EFEPS       : Effective strain rate</p>
+  <p>C     TEPS        : Total accumulated strain</p>
+  <p>C     EFSTS       : Effective stress</p>
+  <p>C     DAMGE       : Damge factor</p>
+  <p>C     RDTY        : Relative density</p>
+  <p>C     STS         : Stress tensor</p>
+  <p>C     EPS         : Strain rate tensor</p>
+  <p>C     TSR         : Strain tensor</p>
+  <p>C     WEAR(5)     : WEAR(1)=Interface temperature on master object nodes</p>
+  <p>C                 : WEAR(2)=Sliding velocity on master object nodes</p>
+  <p>C                 : WEAR(3)=Interface pressure on master object nodes</p>
+  <p>C</p>
+  <p>C     ATOM        : Dominating Atom Contents</p>
+  <p>C     NTMATR      : Number of Material Phases</p>
+  <p>C     VF          : Volume Fraction</p>
+  <p>C     VFN         : Transformation Starting Volume Fraction</p>
+  <p>C</p>
+  <p>C     VAR1(1-95)  : Initial state variables</p>
+  <p>C     VAR2(1-95)  : Updated state variables</p>
+  <p>C     VNAME(1-95) : Name for each variables</p>
+  <p>C     ISTEP       : Step number</p>
+  <p>C     INIT        : Flag for Different Operations</p>
+  <p>C                   0 - Define characteristic of the subroutine</p>
+  <p>C                   1 - Initialize User Defined Variables</p>
+  <p>C                       (Initial Step)</p>
+  <p>C                   2 - Calculate User Defined Variables</p>
+  <p>C                       (Subsequent Steps)</p>
+  <p>C     IOBJ        : Object number in current object</p>
+  <p>C     NUMNP       : Number of nodes in current object (when INIT=1,2)</p>
+  <p>C     NUMEL       : Number of elements in current object (when INIT=1,2)</p>
+  <p>C     ICURNE      : Current node/element number in object (when INIT=1,2)</p>
+  <p>C                   (depending on tracking at node or element)</p>
+  <p>C*************************************************</p>
+  <p>C ************ The following variable structure is available only if the definitions</p>
+  <p>C                  are set in .als file and point to PC_USRVAR2 routine, these details</p>
+  <p>C           are available in PC_pstusr23.f (…/v11.0/UserRoutine/PostProcessor)</p>
+  <p>C           in the comments section.</p>
+  <p>C    ATOM  : Dominating Atom Contents  (available in the integrated system only)</p>
+  <p>C  NTMATR:Number of Material Phases (available in the integrated system only)</p>
+  <p>C     VF          : Volume Fraction (available in the integrated system only)</p>
+  <p>C  VFN : Transformation Starting Volume Fraction (available in the integrated</p>
+  <p>C            system only)</p>
+  <p>C*************************************************</p>
+  <p>C</p>
+  <p>In the example given below the maximum mean stress is stored in the first variable, the maximum strain rate is stored in the second variable.</p>
+  <p>IF(INIT.EQ.2) THEN</p>
+  <p>STSM = (STS(1)+STS(2)+STS(3))/3.</p>
+  <p>IF(STSM.GT.VAR1(1)) THEN</p>
+  <p>VAR2(1)=STSM</p>
+  <p>ELSE</p>
+  <p>VAR2(1)=VAR1(1)</p>
+  <p>ENDIF</p>
+  <p>IF(EFEPS.GT.VAR1(2)) THEN</p>
+  <p>VAR2(2)=EFEPS</p>
+  <p>ELSE</p>
+  <p>VAR2(2)=VAR1(1)</p>
+  <p>ENDIF</p>
+  <p>VAR2(3) = VAR1(3)</p>
+  <p>VAR2(4) = VAR1(4)</p>
+  <p>VAR2(5) = VAR1(5)</p>
+  <p>ENDIF</p>
+  <p> </p>
+  <p>In the statement to check for INIT = 2, each user variable is checked with some criterion, if it meets this then the value is updated, else the new value is set the same as the previous value VAR1. It is very important that if the value is not updated,
+    the value is set to the VAR1 value as this allows tracking of variables across remeshing steps where data is interpolated from an old mesh to a new mesh.</p>
+  <p>Since this calculation is done for each step and for each node/element the code should be written efficiently. You should not open close files for each subroutine call as this can degrade performance. The /DATA/ statements in FORTRAN can be used to
+    store parameters and the /COMMON/ block fields can be used to hold static data. If files are to be opened then use UNIT numbers from 91..99 for opening these files as opening other unit numbers might clash with files opened in other parts of the program.</p>
+  <p>The mesh number should always be incriminated when there is a change in the mesh. If a remeshing step has been purged from a database then user-variable tracking will not work with the database.</p>
+  <h2><a id="56_4_2_Compiling_user_routines_on_Linux"></a>Compiling user routines on Linux</h2>
+  <p>After the code has been modified the new TEXT based post-processor and the shared dynamic library for the GUI post-processor have to be generated using the script DEF_INS.COM. If you wish to make a local copy of the code then copy all files from the
+    $DEFORM_DIR/USR directory to your local directory. Then run the script build_pst using the following command:</p>
+  <p>&gt; build_pst23</p>
+  <p>(Please note that these build scripts may not work consistently across all the varieties of the operating systems, in the event of any issues with the above indicated scripts, please use the lower level script called &#39;DEF_INS23.COM&#39; and follow
+    the system prompts to complete this building)</p>
+  <p>This builds a new copy of the post-processor DEF_PST.EXE in the local directory and also builds DEF_PST23.SL, a shared library that can be used with the GUI post-processor.</p>
+  <p>After this process is completed then the new variables can be accessed from the text-based and GUI post-processors. In the GUI based post-processor, when tracking of user variables is done, a post-processor database (PDB) is generated for the values
+    of the tracked variables. If the same data is to be viewed again in the post-processor, after loading the database, the post-processor database can be loaded to view the data. This saves the time required to track these variables again.</p>
+  <h2><a id="56_4_3_Compiling_user_routines_on_Windows"></a>Compiling user routines on Windows</h2>
+  <p>Like in the Linux environment, make local copy of the folder PostProcessor (from the install structure e.g c:\Program Files\SFTC\DEFORM\v11.1\UserRoutine) and using the build scripts provided (USR_DEF_PST23.amake or USR_DEF_PST23.atools in the Absoft
+    compiler or using the batch file build_usr_def_pst23_Absoftv110.bat) users locally modified user post processor file pstusr2.f, user can generate the required dll file.</p>
+  <p> </p>
+  <p>FILES PROVIDED BY SFTC: (in the installation folder … v11.1\UserRoutine\PostProcessor)</p>
+  <ol class="wo_space_Decimal">
+    <li>
+      <p>Files needed by the project scripts</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px">-      Pstusr23.f</p>
+  <p style="margin-left: 40px">-      PC_pstusr23.f</p>
+  <p style="margin-left: 40px">-      PC_pstusr23.als</p>
+  <p style="margin-left: 40px">-      PC_pstusr23.xps</p>
+  <p> </p>
+  <ol class="wo_space_Decimal">
+    <li style="counter-reset: item1 1;" value="2">
+      <p>Project/build files that can be used from the Absoft compiler interface</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px">-      USR_DEF_PST23.amake</p>
+  <p>or</p>
+  <p style="margin-left: 40px">-      USR_DEF_PST23.atools</p>
+  <p>or if the Absoft compiler environment is set up</p>
+  <p style="margin-left: 40px">-      build_usr_def_pst23_Absoftv110.bat</p>
+  <p> </p>
+  <h2> <a id="56_4_4_Running_the_modified_post-processor_in_LINUX"></a>Running the modified post-processor in LINUX</h2>
+  <p>The GUI post-processor looks for the shared library DEF_PST23.SL first in the current working directory (or can browse for the location of this file from the post processor) then in the users HOME directory under the subdirectory DEFORM and then in
+    the DEFORM_DIR/USR directory. It reads this shared library and displays the list of existing variables which can be tracked. In User Variables dialog the routine number, the object for which tracking is to be done, and the option to track at the node
+    or element can be selected to carry out tracking. Once tracking is carried out all the data is stored in a post-processor database (PDB) file. Variables can then be plotted by selecting the variables in the State Variables menu.</p>
+  <h2><a id="56_4_5_Running_the_modified_post-processor_in_Windows"></a>Running the modified post-processor in Windows</h2>
+  <p>The Post-processor provides the &quot;User Defined Variable Tracking&quot; option to select the dynamic link library DLL file complied from Absoft and generate the  post-processor database (PDB) with user defined variables in post user routine. (See
+    <a href="#Fig_56_4_1_Post_user_variables_tracking_user_interface"><span data-keyref="Chapter_56_4_User_Defined_Post_processing_Routines">Fig. 56.4.</span>1.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_56_4_1_Post_user_variables_tracking_user_interface"></a><img height="372" src="../../../assets/images/user_routines/56_4_user-defined_post-processing_routines/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Post user variables tracking user interface</p>
+  <p> </p>
+  <p>For detailed steps to use this user interface refer section <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_13_set_user_defined_variable_tracking.htm">26.6.13. Set User Defined Variable Tracking.</a></p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="56_1_introduction_to_user_routines.htm">56.1. Introduction to User Routines</a></p>
+  <p><a href="56_2_2d_user_defined_fem_routines.htm">56.2. 2D User Defined FEM Routines</a></p>
+  <p><a href="56_3_3d_user_defined_fem_routines.htm">56 3 3D User Defined FEM Routines</a></p>
+
+</body></html>

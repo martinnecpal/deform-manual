@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.3.1.0_23";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gear Blank SI Lab 9</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gear Blank SI Lab 9</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/advanced_labs_in_mo/gear_blank/gear_blank_si.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Blank/Gear_Blank_SI_Lab10.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Blank/Gear_Blank_SI_Lab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Gear Blank SI Lab 9">
+        <span>Gear Blank SI Lab 9</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 9. Hydraulic Press</h1>
+  <h3 class="h3_9_">Duplicate Project</h3>
+  <p>Start DEFORM and create a new project named <strong>Gear_p</strong>.</p>
+  <p>Add <strong>3D </strong><strong>Forming </strong>operation and click on <img src="../../../../assets/icons/pre_icons/mo_import_icon.jpg"/> (Import database) in the File menu. Open the “<strong>Gear.DB</strong>” file. Select the first step of the third
+    (Forge) operation and click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>.</p>
+  <h3 class="h3_9_">Define simulation Controls</h3>
+  <p>In this lab we show how to setup Hydraulic press controls for a non-isothermal simulation with heat transfer calculations for both workpiece and dies. So in Simulation controls check <strong>Heat </strong><strong>Transfer </strong>check box status if
+    not turned on, turn on the Heat Transfer checkbox.</p>
+  <h3 class="h3_9_">Define Boundary condition for Workpiece</h3>
+  <p>Click on <strong>Workpiece Boundary condition</strong> branch and define <strong>Heat exchange with environment boundary condition</strong> for entire object using <img src="../../../../assets/icons/pre_icons/mo_select_all_icon.jpg"/> (Select all)
+    icon, if system not assigned automatically.</p>
+  <h3 class="h3_9_">Define Heat transfer with Top die</h3>
+  <p>Click on Top die branch in operation tree and set temperature to <strong>148.889</strong> <strong>°C</strong>.</p>
+  <p>We will mesh both tools in order to simulate the temperature of the die. Click on the Top Die <strong>Mesh </strong>branch in operation tree and set <strong>20000 </strong>elements. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> and click the <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material from library) button and select the <strong>Die_material </strong>category,
+    then <strong>AISI-H-13</strong>. Assign the loaded material by selecting it in material list.</p>
+  <p> </p>
+  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> and define Heat exchange with environment boundary condition for entire object except top surface as shown in <a href="gear_blank_si_lab9.htm#Fig_L9_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab9">Fig. L9.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L9_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces"></a><img height="360" src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab6_image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab9">Top die Heat exchange with environment boundary condition surfaces</p>
+  <h3 class="h3_9_">Define Hydraulic Press</h3>
+  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to change the movement controls for Top die. Select <strong>Hydraulic </strong>press from the top row of radio buttons. Enter:</p>
+  <p>- <strong>Speed </strong>(Constant): <strong>63.5</strong> mm/sec (See <a href="gear_blank_si_lab9.htm#Fig_L9_2_Hydraulic_press_movement_definition_main_tab"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab9">Fig. L9.</span>2.</a>)</p>
+  <p>- <strong>Check </strong><strong>Power </strong><strong>limit </strong>and enter <strong>data</strong> using<strong> <img src="../../../../assets/icons/pre_icons/mo_define..._button2.jpg"/> </strong>button as shown in below <a href="gear_blank_si_lab9.htm#Fig_L9_3_Power_limit_definition"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab9">Fig. L9.</span>3.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L9_2_Hydraulic_press_movement_definition_main_tab"></a><img src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab9_image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab9">Hydraulic press movement definition main tab</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L9_3_Power_limit_definition"></a><img height="374" src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab9_image0003.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab9">Power limit definition</p>
+  <p> </p>
+  <p>Input a stopping limit (max load of primary die) of <strong>17792880 </strong>N in the Y direction. So, select <strong>Dwell </strong>controls tab and define <strong>Maximum </strong><strong>load </strong>as 17792880 N in <strong>Y</strong> data field
+    as shown in <a href="gear_blank_si_lab9.htm#Fig_L9_4_Hydraulic_press_stopping_load_defined_in_dwell_controls_tab"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab9">Fig. L9.</span>4.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L9_4_Hydraulic_press_stopping_load_defined_in_dwell_controls_tab"></a><img height="400" src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab9_image0004.jpg" width="457"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab9">Hydraulic press stopping load defined in dwell controls tab</p>
+  <p> </p>
+  <h3 class="h3_9_">Define Heat transfer with Bottom die</h3>
+  <p>Similar to Top die Heat transfer definition define Bottom die initial Temperature to <strong>148.889</strong>° C and Mesh of <strong>50000 </strong>Elements. (See <a href="gear_blank_si_lab6.htm#Fig_L6_4_Top_and_bottom_die_contact_with_workpiece">Section 6.4 Define Heat transfer with Top die</a>)</p>
+  <p> </p>
+  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> and select <strong>AISI-H-13</strong> from material list to assign material. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to define the Heat exchange
+    with environment boundary condition and select all surfaces except bottom surface as shown in <a href="gear_blank_si_lab9.htm#Fig_L9_5_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab9">Fig. L9.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L9_5_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces"></a><img src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab6_image0003.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab9">Bottom die Heat exchange with environment boundary condition surfaces</p>
+  <p> </p>
+  <p>Click on <strong>Contact </strong>in operation tree to define inter-object relation ship.</p>
+  <h3 class="h3_9_">Define Inter-object relation ship</h3>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> for any relation and add <strong>heat </strong><strong>transfer </strong><strong>coefficient </strong>of <strong>11 </strong>N/s/mm/C. Click on <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> to add for other relationships. Click the <img src="../../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> (Tolerance) button followed by the <img src="../../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> button (at bottom of
+    the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See <a href="gear_blank_si_lab9.htm#Fig_L9_6_Top_and_bottom_die_contact_with_workpiece"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab9">Fig. L9.</span>6.</a>    for how the Inter object window looks and contact generation displays in graphics window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L9_6_Top_and_bottom_die_contact_with_workpiece"></a><img height="333" src="../../../../assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab6_image0004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab9">Top and bottom die contact with workpiece</p>
+  <p> </p>
+  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to define stopping controls.</p>
+  <h3 class="h3_9_">Define Stopping and Simulation controls</h3>
+  <p>The Stopping controls maximum load of primary die (<strong>17792880</strong> N) defined in primary die movement controls is  reflected in stopping controls. <strong>Uncheck </strong>the <strong>Distance between die </strong>stopping controls imported
+    from DB.</p>
+  <p> </p>
+  <p>Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> and keep the step controls definition imported from DB.</p>
+  <p> </p>
+  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to check and generate DB.</p>
+  <h3 class="h3_9_">Generate Database and Run the simulation</h3>
+  <p>Check and Generate database and click on the <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> Mode button (above the operation tree) to start the simulation.</p>
+  <p> </p>
+  <p>Run simulation, after completing running click on <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> Mode button to review results.</p>
+  <h3 class="h3_9_">Review Results</h3>
+  <p>In the postprocessor, go to the <img src="../../../../assets/icons/post_icons/mo_load_stroke_icon.jpg"/> [Graph (load-stroke)] plot, and plot the Top die velocity (Y speed) vs. Stroke.</p>
+  <p>Plot the Y Load vs. Time.</p>
+  <p> </p>
+  <p>Note the temperature buildup in the die cavity near the surface.  </p>
+  <p> </p>
+  <hr/>
+  <p>Optional exercise – time permitting</p>
+  <p style="margin-left: 20px">- Compare the maximum load with the simulation using a constant speed approximation.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px">- Compare the process time with the simulation using a constant speed approximation.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px">- Rerun the <strong>Gear </strong>problem with meshed tooling and by turning on <strong>Heat transfer</strong> check box option. Use the same inputs for the die mesh, material and temperature. Compare the temperature on the center surface of the bottom
+    die between a constant speed approximation and this case using a hydraulic press model.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px">- Export graph data and import into Excel or another program. You can right click on any graph and select <strong>Export graph data</strong> to create a text file output.</p>
+  <p style="margin-left: 20px"> </p>
+  <hr/>
+  <p> </p>
+
+</body></html>

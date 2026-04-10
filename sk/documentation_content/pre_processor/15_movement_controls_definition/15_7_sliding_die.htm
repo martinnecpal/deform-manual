@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.9.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>15.7. Sliding Die</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>15.7. Sliding Die</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/15_movement_controls/15_7_sliding_die.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/15_Movement_Controls_Definition/15_8_Path.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/15_Movement_Controls_Definition/15_6_Hydraulic_press.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="15.7. Sliding Die">
+        <span>15.7. Sliding Die</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>15.7. Sliding Die</h1>
+  <p>[2D, 3D]: Defining sliding movement can be done in the movement controls window as seen in <a href="#Fig_15-7_1_2D_Sliding_die_movement_controls_window"><span data-keyref="Chapter_15_7_Sliding_Die">Fig. 15.7.</span>1.</a> and <a href="#Fig_15_7_2_3D_Sliding_die_movement_controls_window"><span data-keyref="Chapter_15_7_Sliding_Die">Fig. 15.7.</span>2.</a> To
+    use spring-loaded dies, the object should be rigid and should not have any other movement specified.</p>
+  <p> </p>
+  <p>The following items should be specified for all spring-loaded die cases:</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Turn spring-loaded die controls to ON.</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">The movement direction should be specified in the direction that compresses the spring.  The spring force will be applied opposite the direction of movement.</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Stiffness </strong>specifies the stiffness in klb/in (English) or N/mm (SI) units. The stiffness can be either a constant or a function of compression amount.</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Preload</strong> specifies the amount of force to overcome before compression occurs in klb (English) or N (SI).</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Maximum displacement</strong> is the distance where the spring eventually bottoms out and which cause the spring to not move anymore in the compression direction.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Other end of spring</strong> determines whether the spring is fixed to another rigid object or whether the other end is fixed to a position in space.  In the case where the object is fixed to a position in space, the compression direction,
+      the current displacement and maximum displacement determine how much the spring is compressed and whether it is bottomed out.  In the case where the spring is attached to another object, the distance between the two objects will determine the amount
+      of compression.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>No of Steps before Damping</strong>: <strong style="color: #FF0000">Text to be added</strong></li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_15-7_1_2D_Sliding_die_movement_controls_window"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_7_sliding_die/15_7_image001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D Sliding die movement controls window</p>
+  <p style="text-align: center"><a id="Fig_15_7_2_3D_Sliding_die_movement_controls_window"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_7_sliding_die/15_7_image002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Sliding die movement controls window</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="15_movement_controls_settings.htm">15. Movement Controls Settings</a></p>
+  <p><a href="15_1_speed.htm">15.1. Speed</a></p>
+  <p><a href="15_2_force.htm">15.2. Force</a></p>
+  <p><a href="15_3_hammer.htm">15.3. Hammer</a></p>
+  <p><a href="15_4_screw_press.htm">15.4. Screw press</a></p>
+  <p><a href="15_5_mechanical_press.htm">15.5. Mechanical press</a></p>
+  <p><a href="15_6_hydraulic_press.htm">15.6. Hydraulic press</a></p>
+  <p><a href="15_8_path.htm">15.8.  Path</a></p>
+  <p><a href="15_9_rotational_movement.htm">15.9. Rotational Movement</a></p>
+  <p><a href="15_10_torsional_movement.htm">15.10. Torsional movement</a></p>
+  <p><a href="15_11_friction_welding_movement.htm">15.11. Friction Welding movement</a></p>
+  <p> </p>
+
+</body></html>

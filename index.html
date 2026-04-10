@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="template/scripts/layoutwidgets.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="template/styles/layoutfix.min.css">
 		<link rel="stylesheet" type="text/css" href="template/styles/layout.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/lang-switcher.css">
 	  <script type="text/javascript" src="whxdata/projectsettings.js"></script>
 
 		<script type="text/javascript" >
@@ -28,6 +29,11 @@
 	</head>
 
 	<body class="hide-children loading" data-rhwidget="Basic" data-class="media-desktop: KEY_SCREEN_DESKTOP; media-landscape: KEY_SCREEN_TABLET; media-mobile: KEY_SCREEN_PHONE;  ios: KEY_SCREEN_IOS" data-controller="ModernLayoutController: mc; JsLoadingController" data-attr="dir:KEY_DIR">
+		<!-- Language Switcher -->
+		<div class="lang-switcher">
+			<a href="index.html" class="active"><span class="flag">🇬🇧</span> EN</a>
+			<a href="sk/index.html"><span class="flag">🇸🇰</span> SK</a>
+		</div>
 		<div class="header" data-class="mobile-header-visible: @.l.mobile_header_visible" role="banner">
 			<a data-controller="HomeController: hc" data-click="$hc.goToHome()" data-attr="title: @KEY_LNG.HomeButton; aria-label: @KEY_LNG.HomeButton">
 				<div class="logo" data-attr="title:@KEY_LNG.HomeButton; data-logo-selector:@KEY_DO_NOT_PRESERVE_AR">

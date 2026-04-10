@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"10.12.1. Fracture Models","type":"item","tilePath":"","url":"documentation_content/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

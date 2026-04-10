@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.4.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab 01 Geometry Manipulation and Uniform mesh</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab 01 Geometry Manipulation and Uniform mesh</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/basic_labs/2d_labs/lab_01_geometry_manipulation_and_uniform_mesh.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Basic_labs/2D_Labs/Lab_02_Geometry_Correction.htm"/><meta name="brsprev" value="Documentation_content/Labs/Basic_labs/2D_Labs/2D_LABS.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Lab 01 Geometry Manipulation and Uniform mesh">
+        <span>Lab 01 Geometry Manipulation and Uniform mesh</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 01 Geometry Manipulation and Uniform mesh</h1>
+  <p><br/>
+    <a href="#1_1_Creating_a_New_problem">1.1. Creating a New problem</a></p>
+  <p><a href="#1_2_Adding_Forming_operation">1.2. Adding Forming operation</a></p>
+  <p><a href="#1_3_Selecting_Geometry_Type">1.3. Selecting Geometry Type</a></p>
+  <p><a href="#1_4_Adding_Object">1.4. Adding Object</a></p>
+  <p><a href="#1_5_Workpiece">1.5. Workpiece</a></p>
+  <p><a href="#1_6_Creating_Workpiece_geometry">1.6. Creating Workpiece geometry</a></p>
+  <p><a href="#1_7_Workpiece_mesh_page">1.7. Workpiece mesh page</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_a_New_problem"></a>Creating a New problem</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear, as shown below.(See <a href="#Fig_L1_1_DEFORM_GUI_main_window"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>1.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_1_DEFORM_GUI_main_window" height="0" width="0"></a><img height="435" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg" width="750"/></p>
+  <p class="Fig_numb">DEFORM GUI main window</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/>  icon. The Problem Setup window will appear as shown in <a href="#Fig_L1_2_Problem_type_selection_window"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>2.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot; radio
+    button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong>Mesh</strong> &quot; and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn
+    on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing
+    Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_2_Problem_type_selection_window"></a><img height="419" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Problem type selection window</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog (See <a href="#Fig_L1_3_MO_wizard_New_project"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>3.</a>), at this point user will be prompted to specify a project name (system
+    will create a separate folder with this project name) and title for this session. In this session we use ‘<strong>Mesh</strong>’ as the project name.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_3_MO_wizard_New_project"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0003.jpg" width="750"/></p>
+  <p class="Fig_numb">MO wizard New project</p>
+  <p> </p>
+  <p>User can also change the Unit system and add operation by selecting from First operation pull down list and checkbox (See <a href="#Fig_L1_4_New_project_window_settings"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>4.</a>). Using copy
+    Existing project option we can import previous saved projects as new project. Click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> to continue to open the operation. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_4_New_project_window_settings"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">New project window settings</p>
+  <p> </p>
+  <h2><a id="1_2_Adding_Forming_operation"></a>Adding Forming operation</h2>
+  <p>Multiple Operation wizard will opens new project. Add 2D Forming operation from the Explorer Operations list. Operation  can be add by clicking on 2D Forming operation <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/>  button
+    (See <a href="#Fig_L1_5_Added_2D_Forming_operation_into_Operation_Editor"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>5.</a>) or user can also add by drag and drop into the Operation Editor.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_5_Added_2D_Forming_operation_into_Operation_Editor"></a><img height="423" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0005.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Added 2D Forming operation into Operation Editor</p>
+  <h2><a id="1_3_Selecting_Geometry_Type"></a>Selecting Geometry Type</h2>
+  <p>In this lab we are using Axisymmetric geometries, so activate 2D Axisymmetric radio button in geometry type page, then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Object page.</p>
+  <p style="text-align: center"><a id="Fig_L1_6_Axisymmetric_Geometry_type_selection"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0006.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Axisymmetric Geometry type selection</p>
+  <p> </p>
+  <h2><a id="1_4_Adding_Object"></a>Adding Object</h2>
+  <p>In this lab we need only one object, if already there are three objects in object list, then delete the last two objects by clicking <img src="../../../../assets/icons/pre_icons/mo_delete_object_button.jpg"/>  object button and keep only Workpiece
+    object in list (See <a href="#Fig_L1_7_Adding_Object_Window"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>7.</a>), then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_7_Adding_Object_Window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0007.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Adding Object Window</p>
+  <p> </p>
+  <h2><a id="1_5_Workpiece"></a>Workpiece</h2>
+  <p>In Workpiece window, change the Object name to <strong>Billet</strong> and select Object type as <strong>Plastic </strong>as shown in <a href="#Fig_L1_8_Billet_object_Window"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>8.</a>, Click
+    <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p style="text-align: center"><a id="Fig_L1_8_Billet_object_Window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0008.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Billet object Window</p>
+  <h2><a id="1_6_Creating_Workpiece_geometry"></a>Creating Workpiece geometry</h2>
+  <p>In DEFORM-2D, the surface definition of an object is referred to as it&#39;s geometry. An object&#39;s geometry can either be created within DEFORM or it can be imported as a .dxf or .igs file. In this lab, the geometry of the billet will be created
+    within DEFORM.</p>
+  <p> </p>
+  <p>In Geometry page click on <img src="../../../../assets/icons/pre_icons/mo_edit_lable.jpg"/> label and observe the options available to create and modify the geometry (See <a href="#Fig_L1_9_Edit_Geometry_window"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>9.</a>),</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_9_Edit_Geometry_window"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Edit Geometry window</p>
+  <p> </p>
+  <p><strong>Select  </strong><img src="../../../../assets/icons/pre_icons/mo_click_select.jpg"/> :<strong> </strong>Select Tool is used to select the vertex or Edge of the geometry. Using this vertex or edge can be positioned by drag and drop.</p>
+  <p> </p>
+  <p><strong>Area select </strong> <img src="../../../../assets/icons/pre_icons/mo_area select.jpg"/> : Area Select tool is used to select the geometry more than one entity within a box.</p>
+  <p> </p>
+  <p><strong>Create Loop </strong> <img src="../../../../assets/icons/pre_icons/mo_create_loop.jpg"/> : Create Loop tool is used to create the geometry loop by creating points and connecting them.  </p>
+  <p> </p>
+  <p><strong>Add Point to Loop</strong>  <img src="../../../../assets/icons/pre_icons/mo_add_points_to_loop.jpg"/> : Add Point Loop tool is used to add the new points to an existing loop.</p>
+  <p><strong>Delete Point</strong>  <img src="../../../../assets/icons/pre_icons/mo_delete point.jpg"/> : Delete Point tool is used to delete the point in the loop.</p>
+  <p><strong>Round corner  </strong><img src="../../../../assets/icons/pre_icons/mo_round_corner.jpg"/> : Round Corner tool is used to create fillet at selected point.</p>
+  <p> </p>
+  <p><strong>Set angle </strong> <img src="../../../../assets/icons/pre_icons/mo_set_angle.jpg"/>:  is used to change the angle of edge.</p>
+  <p> </p>
+  <p><strong>Move </strong><img src="../../../../assets/icons/pre_icons/mo_move.jpg"/> :  is used to move the point.</p>
+  <p> </p>
+  <p><strong>Move to centerline  <img src="../../../../assets/icons/pre_icons/mo_move_to_centerline.jpg"/> </strong>:   is used to move the loop nearest point to centerline</p>
+  <p> </p>
+  <p><strong>Offset</strong>  <img src="../../../../assets/icons/pre_icons/mo_offset.jpg"/> : Offset tool is used to resize the geometry loop.</p>
+  <p> </p>
+  <p><strong>Make First point</strong>  <img src="../../../../assets/icons/pre_icons/mo_make_first_point.jpg"/> : Make First Point tool is used to make the selected point as first point in a loop, this will be used for closed loop and we cannot make  an
+    arc mid point as first point.</p>
+  <p> </p>
+  <p><strong>Reverse direction</strong>  <img src="../../../../assets/icons/pre_icons/mo_reverse_direction.jpg"/> : Reverse direction is used to reverse the direction of loop to change the orientation of the geometry. The geometry should be create in Counter
+    clockwise, if the geometry is created in clockwise, using this option we can change the direction of loop.</p>
+  <p> </p>
+  <p><strong>Close loop </strong><img src="../../../../assets/icons/pre_icons/mo_close_loop.jpg"/> : Closed loop tool is used to close the open loop</p>
+  <p> </p>
+  <p><strong>Split loop</strong><img src="../../../../assets/icons/pre_icons/mo_split_loop.jpg"/>  : Split loop tool is used to split the loop at selected point</p>
+  <p> </p>
+  <p><strong>Sub loop  </strong><img src="../../../../assets/icons/pre_icons/mo_sub_loop.jpg"/> : Sub loop tool is used to select a inner loop as sub loop in case of multi loops topology, by selecting this we can assign the material for a multiple loop
+    geometry</p>
+  <p> </p>
+  <p><strong>Join loops</strong>  <img src="../../../../assets/icons/pre_icons/mo_join_loop.jpg"/> : join loops option is used to merge the 2 loops by selecting the loops to be joined, the end point of first loop will be joined to first point of the second
+    loop</p>
+  <p> </p>
+  <p><strong>Join all loops</strong>  <img src="../../../../assets/icons/pre_icons/mo_join_all_loops.jpg"/> : Join all loops tool is used to merge all loops.</p>
+  <p> </p>
+  <p><strong>Delete selected</strong> <img src="../../../../assets/icons/pre_icons/mo_delete_selected.jpg"/>  : Delete selected is used to delete the selected loops or edges.</p>
+  <p> </p>
+  <p><strong>Delete unselected</strong> <img src="../../../../assets/icons/pre_icons/mo_delete_unselected.jpg"/> : Delete unselected is used to delete the unselected loops edges.</p>
+  <p> </p>
+  <p><strong>Show Vertex</strong>  <img src="../../../../assets/icons/pre_icons/mo_show_vertex.jpg"/> : is used to display the vertexes of the geometry.</p>
+  <p> </p>
+  <p><strong>Show Vertex numbers</strong>  <img src="../../../../assets/icons/pre_icons/mo_show_vertex_numbers_icon.jpg"/>  : is used to display the vertexes number of the geometry.</p>
+  <p> </p>
+  <p><strong>Show Inside </strong><img src="../../../../assets/icons/pre_icons/mo_show_inside.jpg"/>  : is used to show the orientation of the geometry.</p>
+  <p> </p>
+  <p><strong>Show Edge direction</strong> <img height="21" src="../../../../assets/icons/pre_icons/mo_show_edge_direction.jpg" width="23"/> : is used to plot the direction of loop created.</p>
+  <p> </p>
+  <p><strong>Show Material</strong> <img src="../../../../assets/icons/pre_icons/mo_material_icon.jpg"/> : is used to load and assign the material to the geometry region.</p>
+  <p> </p>
+  <p><strong>Grid Lines</strong>: It shows the Grid Lines in Horizontal and Vertical direction in Display window. </p>
+  <p> </p>
+  <p><strong>Grid Points</strong>: It shows the Grid Points in Horizontal and Vertical direction in Display window.</p>
+  <p> </p>
+  <p><strong>Grid None</strong>: When this option is selected, the Grid points and Grid Lines in Horizontal and Vertical direction are not displayed in Display window.</p>
+  <p> </p>
+  <p>Under <strong>Objects </strong>tab, we can select the object in list to hide the selected object geometry in graphical display window.</p>
+  <p> </p>
+  <p>Under <strong>Geometry </strong>tab, we can enter or modify the geometry entities. Geometry entities can be enter in two methods, in Line-Arc method and XYR methods.</p>
+  <p> </p>
+  <p>Under the  <strong>l</strong><strong>oop </strong>tab, we can load and assign the material to the selected loops. Also we can see the assigned material to the corresponding loop details.</p>
+  <p> </p>
+  <p>in this lab we will create a geometry by enter the following XYR coordinates value in the Table.1. (see <a href="#Fig_L1_10_2D_Edit_Geometry_page"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>10.</a>)  and click on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 450px;text-align: left;margin-left: 184px">
+    <colgroup>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center">X</p>
+        </td>
+        <td>
+          <p style="text-align: center">Y</p>
+        </td>
+        <td>
+          <p style="text-align: center">R</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1.5</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.12</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1.5</p>
+        </td>
+        <td>
+          <p style="text-align: center">4</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.12</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">4</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Table_numb">Geometry XYR coordinates value</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_10_2D_Edit_Geometry_page"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D Edit Geometry page</p>
+  <p> </p>
+  <p>Then click on <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> button, Use the default checking parameters and click <img height="28" src="../../../../assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg" width="111"/> as shown
+    in <a href="#Fig_L1_11_Check_and_Correct_Geometry_window"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>11.</a> A message saying, &quot;Geometry is legal&quot; will appear. then click on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_11_Check_and_Correct_Geometry_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0011.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Check and Correct Geometry window</p>
+  <p> </p>
+  <h2><a id="1_7_Workpiece_mesh_page"></a>Workpiece mesh page</h2>
+  <p>Switch to Expert mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> (Switch to expert mode) icon. Expert mode will provide more options for detailed settings.</p>
+  <h3><a id="1_7_1_Generating__mesh_for_Default_settings"></a>Generating  mesh for Default settings</h3>
+  <p>Using default mesh settings, (Size ratio 3 and Number of elements 1000), generate the mesh by clicking  on <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button as shown in <a href="#Fig_L1_12_Mesh_generated_for_Size_ratio_3"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>12.</a></p>
+  <p> </p>
+  <p>The Size Ratio determines the difference between the smallest and largest element. A ratio of 3 allows the smallest element to be 1/3 the size of the largest element. The Weighting Factors determine where the small and large elements are placed in the
+    object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_12_Mesh_generated_for_Size_ratio_3"></a><img height="425" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0012.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Mesh generated for Size ratio 3</p>
+  <p> </p>
+  <h3><a id="1_7_2_Generating_uniform_mesh"></a>Generating uniform mesh</h3>
+  <p>To create a uniform mesh on an object, where all the elements are the same size, set the Size Ratio to 1 and click <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/>  again. (See <a href="#Fig_L1_13_Mesh_generated_for_Size_ratio_1"><span data-keyref="Basic_labs_2D_Labs _Lab1">Fig. L1.</span>13.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_13_Mesh_generated_for_Size_ratio_1"></a><img height="433" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0013.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Mesh generated for Size ratio 1</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>: It is important to know that all information about the old mesh will be lost when a new mesh is generate.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../../pre_processor/12_geometry_modelling/12_2_2d_geometry_editing.htm">12.2. 2D Geometry Data Editing</a></p>
+  <p> </p>
+
+</body></html>

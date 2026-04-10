@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XVI: Adding Gas Trap Calculation to a Simulation </title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XVI: Adding Gas Trap Calculation to a Simulation </title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_xvi.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_XVII_Data_Files.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_XV_The_Double_Concave_Corner_Constraint.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix XVI: Adding Gas Trap Calculation to a Simulation ">
+        <span>Appendix XVI: Adding Gas Trap Calculation to a Simulation </span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix XVI: Adding Gas Trap Calculation to a Simulation</h1>
+  <p> </p>
+  <p> </p>
+  <p>In 2D, gas trapping can be predicted if the file <a href="appendix_xvii_data_files.htm#DEF_GAS_DAT">DEF_GAS.DAT</a> is added to the directory where a simulation is running. The contents of the file <a href="appendix_xvii_data_files.htm#DEF_GAS_DAT">DEF_GAS.DAT</a>    is unimportant in that the file is merely a flag to indicate that gas trapping is to be performed.</p>
+  <p> </p>
+  <p>The gas trapping is modeled as a perfect law for any time a boundary of a deformable object traps a region of a rigid object. When a volume is closed off by contact with a single body (See <a href="#Fig_AXVI_1_A_trapped_volume_under_compression"><span data-keyref="Appendix_XVI_Adding_Gas_Trap">Fig. AXVI.</span>1.</a>),
+    a pressure is applied to the surface of the body which increases as a perfect gas law. At the end, slight underfill can be noted in the workpiece when you highlight the contact nodes (See <a href="#Fig_AXVI_2_The_final_trapped_volume_with_slight_underfill"><span data-keyref="Appendix_XVI_Adding_Gas_Trap">Fig. AXVI.</span>2.</a>).
+     In the case that the boundary of the deformable traps a split between two objects, there will be no trapping even if the two objects are flush or overlapped.</p>
+  <p> </p>
+  <p>If a gas trap simulation is run, delete the files <a href="appendix_xvii_data_files.htm#DEF_GAS_DAT">DEF_GAS.DAT</a> and DEF_GAS.INI in the case of running a simulation that does not use gas trapping. The file <a href="appendix_xvii_data_files.htm#DEF_GAS_DAT">DEF_GAS.DAT</a>    is a flag used activate gas trapping. The file DEF_GAS.INI is a file output by the program and should not be changed during a simulation.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_AXVI_1_A_trapped_volume_under_compression"></a><img height="350" src="../../assets/images/appendices/appendix_xvi_adding_gas_trap_calculation_to_a_simulation/image0001.jpg" width="419"/></p>
+  <p> </p>
+  <p class="Fig_numb">A trapped volume under compression</p>
+  <p> </p>
+  <p>In <a href="#Fig_AXVI_1_A_trapped_volume_under_compression"><span data-keyref="Appendix_XVI_Adding_Gas_Trap">Fig. AXVI.</span>1.</a> red circle shows where the air is trapped as the workpiece is being extruded.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AXVI_2_The_final_trapped_volume_with_slight_underfill"></a><img height="320" src="../../assets/images/appendices/appendix_xvi_adding_gas_trap_calculation_to_a_simulation/image0002.jpg" width="372"/></p>
+  <p> </p>
+  <p class="Fig_numb">The final trapped volume with slight underfill</p>
+  <p> </p>
+  <p>The final volume is small but it can be easily seen as slight underfill by the highlighted contact nodes as shown in <a href="#Fig_AXVI_2_The_final_trapped_volume_with_slight_underfill"><span data-keyref="Appendix_XVI_Adding_Gas_Trap">Fig. AXVI.</span>2.</a></p>
+  <p> </p>
+
+</body></html>

@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.8.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>36.1. 2D Heat Transfer Express</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>36.1. 2D Heat Transfer Express</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/36_Heat_Transfer_Express/36_2_3D_Heat_Transfer_Express.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/36_Heat_Transfer_Express/36_Introduction_to_Heat_Transfer_Express_Operations.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="36.1. 2D Heat Transfer Express">
+        <span>36.1. 2D Heat Transfer Express</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>36.1. 2D Heat Transfer Express</h1>
+  <p><a href="#36_1_1_How_to_add_2D_Heat_Transfer_Express_operation">36.1.1. How to add 2D Heat Transfer Express operation</a></p>
+  <p><a href="#36_1_2_Process_settings_definition">36.1.2. Process settings definition</a></p>
+  <p><a href="#36_1_3_Defining_Heating_operation">36.1.3. Defining Heating operation</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Object_Basic_definition">Object Basic definition</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Object_geometry_definition">Object geometry definition</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Object_Mesh_Definition">Object Mesh Definition</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Material_Definition">Material Definition</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Boundary_Condition_Definition">Boundary Condition Definition</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Heat_Condition_Definition">Heat Condition Definition</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Stopping_controls_Definition">Stopping controls Definition</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Simulation_controls_Definition">Simulation controls Definition</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Generate_Database">Generate Database</a></p>
+    </li>
+  </ul>
+  <p><a href="#36_1_4_Defining_Transfer_Operation">36.1.4. Defining Transfer Operation</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Selecting_Objects">Selecting Objects</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Objects_positioning_and_generating_inter_object_relation">Objects positioning and generating inter object relation</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Heat_condition_Definition_oprn2">Heat condition Definition</a></p>
+    </li>
+  </ul>
+  <p><a href="#36_1_5_Defining_Rest_on_die_Operation">36.1.5. Defining Rest on die Operation</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Define_Thermal_Calculations">Define Thermal Calculations</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Selecting_objects">Selecting objects</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Positioning">Positioning</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Schedule_Positioning">Schedule Positioning</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Inter-object_Contact_Generation">Inter-object Contact Generation</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Heat_Condition_Definition_oprn3">Heat Condition Definition</a></p>
+    </li>
+  </ul>
+  <p><a href="#36_1_6_Continue_Defining_the_Forming_Operations">36.1.6. Continue Defining the Forming Operations</a></p>
+  <p><a href="#36_1_7_Defining_Dwell_on_die_Operation">36.1.7. Defining Dwell on die Operation</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Heat_Condition_Definition_oprn4">Heat Condition Definition</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <h2><a id="36_1_1_How_to_add_2D_Heat_Transfer_Express_operation"></a>How to add 2D Heat Transfer Express operation</h2>
+  <p>Heat Transfer Express operation is accessible from MO Wizard that can be opened from Main GUI. Heat Transfer Express Operation can be added in MO wizard, from explorer tab by clicking on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to 2D Heat Transfer Express. Also, user can add by drag and drop into the Operation Editor as shown in <a href="#FIg_36_1_1_Added_2D_Heat_Transfer_Express_operation_into_operation_editor"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>1.</a>    Heat Transfer express operation can also be added after the Heat transfer operations interactively after the simulation of preceding operations or in batch/scheduled mode.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_36_1_1_Added_2D_Heat_Transfer_Express_operation_into_operation_editor"></a><img height="434" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added 2D Heat Transfer Express operation into operation editor</p>
+  <p> </p>
+  <h2><a id="36_1_2_Process_settings_definition"></a>Process settings definition</h2>
+  <p>In Process window simulation modes such as Geometry Type, Heating Type and Shape Complexity and Accuracy has to set for the heat transfer operation as shown in <a href="#FIg_36_1_1_Added_2D_Heat_Transfer_Express_operation_into_operation_editor"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>1.</a></p>
+  <p> </p>
+  <p><strong>Geometry Type</strong></p>
+  <p>In Forming express only two geometry models can be setup, those are Axisymmetric and Plane Strain.</p>
+  <p>The Axisymmetric models as a cross-section with respect to the central axis. Therefore, the model requires the deforming geometry to be axially symmetric and in the first quadrant and fourth quadrant (i.e. X &gt; 0). In addition, the system assumes
+    that the flow in every radial plane is identical. (See <a href="../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model"><span data-keyref="Chapter_9_1_Simulation_type_settings">Fig. 9.1.</span>2.</a>)</p>
+  <p>The Plane-strain assumes that the geometry to have an unit depth with both front and back faces constrained. The simulation assumes that the objects will behave identically in any given cross-section across the width and height of the object. (See
+    <a href="../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model"><span data-keyref="Chapter_9_1_Simulation_type_settings">Fig. 9.1.</span>2.</a>)</p>
+  <p>Other Geometry types Plane-stress and Torsion are available only in 2D Forming operation, For more information about these geometry types please refer <a href="../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_(GEOTYP)_[2D]">9.1.2. Geometry type (GEOTYP</a>).</p>
+  <p><br/>
+    <strong>Heating Type</strong></p>
+  <p>There are four heating types or heat transfer operations available in both 2D and 3D Heat Transfer Express operation those are (See <a href="#FIg_36_1_1_Added_2D_Heat_Transfer_Express_operation_into_operation_editor"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>1.</a>),</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Heating</p>
+    </li>
+    <li>
+      <p>Transfer</p>
+    </li>
+    <li>
+      <p>Rest on die and</p>
+    </li>
+    <li>
+      <p>Dwell on die</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>Heating workpiece, heat transfer during transferring workpiece form furnace to press, resting workpiece on die (before forming) and workpiece dwell on die after forming operations can be setup easily by using the respective heating type. For more details about
+    these heating types are described in <a href="36_introduction_to_heat_transfer_express_operations.htm">36. Introduction to Heat transfer express operation</a>, refer Heating Types.</p>
+  <p>For resting and dwelling operation thermal calculation window will activate to give options to select heat transfer with dies and not to calculate heat transfer with dies. These options will be explained further in respective operations explanations.</p>
+  <p><strong>Shape Complexity and Accuracy</strong></p>
+  <p>The shape complexity and simulation accuracy slider bars (See <a href="#FIg_36_1_1_Added_2D_Heat_Transfer_Express_operation_into_operation_editor"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>1.</a>) influence the mesh
+    settings and number of time steps used in the simulation. This in turn influences the run time and level of detail available in the simulation.</p>
+  <p><strong>Shape Complexity:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Simple</strong>: The geometry of the objects are simple in nature. They require minimum number of elements, are easier to solve and takes less time.</p>
+    </li>
+    <li>
+      <p><strong>Moderate</strong>: The geometry of the objects are moderate (not too complex) in nature.</p>
+    </li>
+    <li>
+      <p><strong>Complex</strong>: The geometry of the objects are complex in nature.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Shape Accuracy:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Fast</strong>: Useful for fast evaluation of a process. In exchange for faster run times, there is a higher risk of missing important details.</p>
+    </li>
+    <li>
+      <p><strong>Moderate</strong>: The simulation uses settings which attempt to balance calculation time and accuracy.</p>
+    </li>
+    <li>
+      <p><strong>Accurate</strong>: Very detailed analysis of the process is done, which will generally capture minute details. Calculation time and storage requirements are more.</p>
+    </li>
+  </ul>
+  <h2><a id="36_1_3_Defining_Heating_operation"></a>Defining Heating operation</h2>
+  <p>In heating or heat furnace operation, heating of billet in a furnace is modeled. After selecting the process settings system will gives the customized heating operation windows to guide the user to setup this operation. Only one object is allowed for this
+    operation (See <a href="#Fig_36_1_2_Heating_operation_object_definition_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>2.</a>) and that object will be added automatically. The default process settings will be added
+    suited to heating operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_2_Heating_operation_object_definition_window"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heating operation object definition window</p>
+  <p> </p>
+  <h3><a id="Object_Basic_definition"></a>Object Basic definition</h3>
+  <p>Object basic definition includes object name, type and temperature. In addition to this object state variable values can be initialized by using Advanced button and object data like geometry, mesh, boundary conditions and material can be imported from
+    DEFORM .DB /.Key file. (See <a href="#Fig_36_1_3_Workpiece_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>3.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_3_Workpiece_window"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Workpiece window</p>
+  <p> </p>
+  <p><strong>Object Name</strong>: User can define the name for all the objects available in the operation.</p>
+  <p> </p>
+  <p><strong>Object Type</strong>: The object type (OBJTYP) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two
+    are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are available in Forming operation, for its details refer <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type">11.4. Object Type</a></p>
+  <p><br/>
+    <strong>Plastic</strong>: Plastic objects are modelled as rigid-plastic or rigid-viscoplastic material depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold
+    strain rate, referred to as the limiting strain rate (<a href="../../keyword_documentation/l/lmtstr.htm">LMTSTR</a>). The material deforms plastically beyond the limiting strain rate. The plastic material behaviour of the object is specified with
+    a material flow stress function or flow stress data (<a href="../../keyword_documentation/f/fstres.htm">FSTRES</a>). In heat transfer express workpiece is automatically assigned to Plastic object type.<br/>
+    <strong>Rigid</strong>: Rigid objects are modelled as non-deformable materials. In the deformation analysis, the object is represented by the geometric profile (<a href="../../keyword_documentation/d/diegeo.htm">DIEGEO</a>). Deformation solution data
+    available for rigid objects include object stroke, load, and velocity. The mesh for the rigid object is used only for thermal, transformation, and diffusion calculations. In heat transfer express dies or tools  are automatically assigned to Rigid
+    as they are non-deformable objects.</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong></p>
+  <p class="Note_text">Should note that object type is predefined by object number in Heat transfer Express operation. For 1st object type will be plastic and for further addition only rigid objects will add.<br/> There is an Import Object button on the Object page. This
+    is for importing complete object data from another DEFORM file.</p>
+  <p> </p>
+  <p><strong>Object Temperature</strong>: User can define the object temperature in the Temperature field of the respective object window as shown in <a href="#Fig_36_1_3_Workpiece_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>3.</a></p>
+  <p> </p>
+  <p>Advanced Object Settings: The advanced setting Initialization options (See <a href="#Fig_36_1_4_Advanced_object_settings"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>4.</a>) will be useful when user import the object from
+    previously run project or problem or when forming express operation is added after few other operations and if there is need to initialize few important state variables.</p>
+  <p><br/> The user can initialize temperature, strain, velocity, damage and displacement that has taken place in the deformable object using the advanced setting options. (See <a href="#Fig_36_1_4_Advanced_object_settings"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>4.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_4_Advanced_object_settings"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image004.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Advanced object settings</p>
+  <p> </p>
+  <p>More variables can be initialized in Forming operation, for detail refer <a href="../35_heat_transfer/35_1_2d_heat_transfer_operation.htm">35. 2D Heat Transfer</a> operation <a href="../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize">Initialize</a>.</p>
+  <p> </p>
+  <p>The average strain rate (<a href="../../keyword_documentation/a/avgstr.htm">AVGSTR</a>) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation.</p>
+  <p> </p>
+  <p>The limiting strain rate (<a href="../../keyword_documentation/l/lmtstr.htm">LMTSTR</a>) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material.</p>
+  <p><img src="../../../assets/icons/pre_icons/mo_reset_button.jpg"/>  : Using this user can rest back the initialized state variables value.</p>
+  <p> </p>
+  <p>For more Deformation object properties options available in Forming operation refer <a href="../../pre_processor/16_object_properties/16_1_deformation_properties.htm">16.1. Deformation Properties.</a></p>
+  <p> </p>
+  <h3><strong><a id="Object_geometry_definition"></a>Object geometry definition</strong></h3>
+  <p>Geometry window is used to create the geometry of an object as shown in <a href="#Fig_36_1_5_Geometry_definition_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>5.</a> Before creating geometry only Define Primitive
+    and Edit Geometry options are available but after creating geometry Check, Scale and Reverse geometry options will activate and after generating mesh Extract border option will activate.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_5_Geometry_definition_window"></a><img height="315" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry definition window</p>
+  <p> </p>
+  <p><strong>Define primitive  <img src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/></strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>For Axisymmetric Type</strong>: There are five primitive shapes in geometry primitive page that can be used to generate geometries as shown in <a href="#Fig_36_1_6_Geometry_primitive_window_for_Axisymmetric_geometry_type"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>6.</a>        In each case, the user has to scale appropriately to the problem by defining the dimensions.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_36_1_6_Geometry_primitive_window_for_Axisymmetric_geometry_type"></a><img src="../../../assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image011.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry primitive window for Axisymmetric geometry type</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>For Plane strain Type</strong>: There are three primitive shapes in geometry primitive page that can be used to generate geometries as shown in <a href="#FIg_36_1_7_Geometry_primitive_window_for_Plane_strain_geometry_type"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>7.</a>        In each case, the user has to scale appropriately to the problem by defining the dimensions.</p>
+    </li>
+  </ul>
+  <p>  </p>
+  <p style="text-align: center"><a id="FIg_36_1_7_Geometry_primitive_window_for_Plane_strain_geometry_type"></a><img src="../../../assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image012.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry primitive window for Plane strain geometry type</p>
+  <p> </p>
+  <p><strong>Check </strong><img height="19" src="../../../assets/icons/pre_icons/mo_check_label.jpg" width="38"/> </p>
+  <p>Once the geometry of the object is created, <img height="19" src="../../../assets/icons/pre_icons/mo_check_label.jpg" width="38"/> button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the
+    <img height="19" src="../../../assets/icons/pre_icons/mo_check_label.jpg" width="38"/> button. Check and correct Geometry window appears as shown in below <a href="#Fig_36_1_8_Check_and_correct_Geometry_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>8.</a>    The Geometry gets corrected, if they are any errors, when we click on <img height="25" src="../../../assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg" width="99"/> button. A message saying, &quot;Geometry is legal&quot; will appear once
+    the geometry is corrected or does not have any errors and then click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> . For more information please refer <a href="../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm">12.1. 2D Geometry Data Defining</a>    section <a href="../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry">Check Geometry</a>.  </p>
+  <p> </p>
+  <p style="text-align: center"> <a id="Fig_36_1_8_Check_and_correct_Geometry_window"></a><img height="435" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image006.jpg" width="750"/> </p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Check and correct Geometry window</p>
+  <p> </p>
+  <p><strong>Scale  </strong><img src="../../../assets/icons/pre_icons/mo_scale_label.jpg"/> </p>
+  <p>Geometry can be scaled in forming operation to accommodate thermal expansion by specifying the scaling factor. (See <a href="#Fig_36_1_9_Scale_Geo_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>9.</a>) The scaling
+    factor can be calculated by temperature differential and temperature dependent material data. The scaled geometry can be saved into different Geometry saving formats.</p>
+  <p> </p>
+  <p><a id="Fig_36_1_9_Scale_Geo_window"></a><img height="265" src="../../../assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scale Geo window</p>
+  <p> </p>
+  <p><strong>Reverse  <img src="../../../assets/icons/pre_icons/mo_reverse_label.jpg"/></strong></p>
+  <p>This feature reverses the orientation of the geometry. Orientation of the 2D geometry must be always inside for single loop geometry, for multiple loop geometry the loop which share between the two regions can have the orientation on either side but
+    topology must be defined.</p>
+  <p> </p>
+  <p><strong>Extract Border  <img src="../../../assets/icons/pre_icons/mo_extract_border_button.jpg"/></strong></p>
+  <p>This feature extracts the geometry data from the current database meshed object for all object types except the rigid object.</p>
+  <p> </p>
+  <p><strong>Edit <img src="../../../assets/icons/pre_icons/mo_edit_lable.jpg"/> </strong></p>
+  <p>The Geometry editing option is used to create geometry for an object or edit the existing geometry. Imported geometry can be modified in Edit Geometry window. In Geometry page click on <img src="../../../assets/icons/pre_icons/mo_edit_lable.jpg"/> label
+    and observe the options available to create and modify the geometry as shown in <a href="#Fig_36_1_10_Edit_Geometry_Window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>10.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_10_Edit_Geometry_Window"></a><img height="436" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image007.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Edit Geometry Window</p>
+  <p> </p>
+  <p>Geometry can be created by using the create loop tool or by entering the geometry coordinates in Geometry editor table at right side bottom of the window as shown in <a href="#Fig_36_1_10_Edit_Geometry_Window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>10.</a>    either in XYR or Line-Arc mode. For more details on 2D geometry editor refer the chapter <a href="../../pre_processor/12_geometry_modelling/12_2_2d_geometry_editing.htm">12.2. 2D Geometry Data Editing</a>.</p>
+  <p> </p>
+  <p><strong>Other Geometry options:</strong></p>
+  <p><strong>Show geometry inside mark: </strong>Checking this option enables the Geometry orientation display.</p>
+  <p><strong>Define reference point</strong>: User can select the geometry reference point by clicking on this button from display window. This reference point is required to define the distance between objects stopping controls stopping controls.</p>
+  <p><strong>Import Geometry from a file</strong>  <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>: It imports the  geometry from a file<br/>
+    <strong>Load Geometry from Library</strong>  <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> :It imports geometry from Library<br/>
+    <strong>Save the Geometry to a file</strong> <img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/> : It saves the Geometry to a file.<br/>
+    <strong>Save Geometry to Library</strong> <img src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> : User can save geometry to the library using this option.<br/>
+    <strong>Delete Geometry</strong>  <img src="../../../assets/icons/pre_icons/mo_clear_icon.jpg"/>: user can delete the geometry.</p>
+  <p> </p>
+  <h3><a id="Object_Mesh_Definition"></a>Object Mesh Definition</h3>
+  <p>The Mesh Generation window allows the user to generate a mesh for the current object. Below <a href="#Fig_36_1_11_Mesh_settings_window_in_System_mode"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>11.</a> shows the Mesh
+    generation window in system mode. In this mode system automatically sets the number of mesh elements based on the shape complexity and accuracy setting selection in process window.</p>
+  <p> </p>
+  <p><strong>System </strong><strong>Mode</strong>: Using <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> user has to generate mesh for objects and after generating the mesh <strong><img src="../../../assets/icons/pre_icons/mo_delete_button.jpg"/> </strong>Mesh
+    button will get activate, useful to delete the current mesh of the object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_11_Mesh_settings_window_in_System_mode"></a><img height="437" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh settings window in System mode</p>
+  <p> </p>
+  <p><strong>User Defined Mode</strong>: For user defined mesh mode option see <a href="#Fig_36_1_12_User_defined_mode_mesh_settings"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>12.</a>, in this mode user can vary number of
+    elements by adjusting the slider bar and use advanced options to change the Size ratio, Thickness elements, Weighting factor and Remesh criteria.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_12_User_defined_mode_mesh_settings"></a><img height="310" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">User defined mode mesh settings</p>
+  <p> </p>
+  <p><strong>Number of elements (MGNELM)</strong></p>
+  <p>The number of mesh elements  represents the approximate number of elements that will be generated by the system. The Automatic Mesh Generator (AMG) takes the value for <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> and generates a mesh
+    that will contain approximately the same number of elements.</p>
+  <p> </p>
+  <p>The error between the number of specified elements and the number of generated elements is typically about ten per-cent. When the mesh is generated, the specified total number of elements is used in conjunction with the &quot;Point&quot; and &quot;Parameter&quot;
+    controls to determine the mesh density.</p>
+  <p> </p>
+  <p><strong>Advanced Mesh Options</strong></p>
+  <p><strong>General Settings</strong></p>
+  <p>In addition to the Number of elements user can select Thickness elements and Size ratio values to get desired mesh.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Number of thickness elements (MGTELM)</strong></p>
+    </li>
+  </ul>
+  <p>The max thickness ratio is one of several ways to control the mesh density during automatic mesh generation (AMG). The number of elements in thickness direction represents the approximate number of elements that will be generated by the system across
+    the thickness direction of any region of the part. The Automatic Mesh Generator (AMG) takes the value for <a href="../../keyword_documentation/m/mgtelm.htm">MGTELM</a> and generates a mesh that will have that number of elements across the thinnest
+    portion. For instance, if <a href="../../keyword_documentation/m/mgtelm.htm">MGTELM</a> is set to 4, the AMG will try to have 4 elements across the thickness of the geometry.</p>
+  <p>The thickness direction of an object is perpendicular to a branched centre line axis for each region of the part.  The total number of elements to be generated in a mesh is controlled by the value of number of elements in keyword <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a>    .  If the value of thickness elements results in a mesh that contains more than the value specified in <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> elements, the value of <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a>    would be scaled down so that the mesh contains approximately <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> elements. If the value of <a href="../../keyword_documentation/m/mgtelm.htm">MGTELM</a> results in a mesh that contains fewer
+    than <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> elements, the remaining elements will be distributed to other user specified mesh density controls (curvature, strain, strain rate, and temperature).</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Element size ratio (MGSIZR)</strong></p>
+    </li>
+  </ul>
+  <p>The maximum size ratio between elements is one of several ways to control the mesh density during automatic mesh generation (AMG) by specifying the ratio of node densities.</p>
+  <p>For a value of 3 for <a href="../../keyword_documentation/m/mgsizr.htm">MGSIZR</a>, the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then Size
+    Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.</p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Weighing Factors</strong></p>
+  <p>The weighting factors or parameters (system defined mesh density) for boundary curvature, temperature, strain and strain rate specify relative mesh density weights to be assigned to the associated parameter. (See <a href="#Fig_36_1_13_Weighting_factors_settings_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>13.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_13_Weighting_factors_settings_window"></a><img src="../../../assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image018.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Weighting factors settings window</p>
+  <p> </p>
+  <p>Temperature, strain, and strain rate densities are assigned based on gradients in these parameters, not absolute parameter values. That is, a region with a rapid temperature change in a particular direction will receive more elements than a region with
+    a uniform high temperature.</p>
+  <p> </p>
+  <p>The values from all the mesh density keywords are combined during the mesh generation process to create a mesh density distribution within the geometric boundary. </p>
+  <p> </p>
+  <p>Forming operation contains other weighting factor that is, Mesh Density window options using this user can define specific area in space which will move with other objects during deformation with an appropriate mesh density, please refer <a href="../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.5._Mesh_weighting_factors">13.1.5. Mesh Weighting factors.</a></p>
+  <p> </p>
+  <p><strong>Remeshing criteria</strong></p>
+  <p>Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation, so for heat transfer operations this is not applicable.</p>
+  <p> </p>
+  <p><strong>Advanced Settings</strong></p>
+  <p>Below <a href="#Fig_36_1_14_Advanced_mesh_settings_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>14.</a> shows the Advanced Settings window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_14_Advanced_mesh_settings_window"></a><img src="../../../assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image020.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced mesh settings window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Grid resolution (MGGRID)</strong></p>
+    </li>
+  </ul>
+  <p>When an object is meshed in 2D, a sampling grid is required to discretize density of the mesh throughout the starting geometry. Grid resolution (MGGRID) specifies the spacing of the sampling grids that are used to sample mesh densities. Increasing the
+    value of X division or Y division will result in sharper gradients between areas of differing mesh density.  In the case of blanking, where a very high mesh gradient is required over a narrow region, these values may need to increase to capture high changes
+    in mesh gradient over short distances.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Node addition parameters (MGERR)</strong></p>
+    </li>
+  </ul>
+  <p>The node addition parameters (MGERR) specify the maximum distance and angle error permitted between the object boundary and its associated grid element side.  The distance and angle tolerances are used to capture critical boundary geometry that might
+    otherwise be lost when the mesh is generated.  If an object is required to capture very small features, the maximum distance can be decreased or if a node needs to be placed on a shallow angle, the angle error can be decreased as well.  Rarely will
+    the user ever have to change these values. For parts that are very small, a value of 0.01% of the object’s bounding box is a good starting number that can be used for MGERR for better handling of mesh resolution.</p>
+  <p> </p>
+  <p><strong>Check Mesh <img src="../../../assets/icons/pre_icons/mo_check_mesh_button.jpg"/> </strong></p>
+  <p>The mesh can be examined for problems using the Check Mesh function. A perfect mesh will give the popup as shown in the <a href="#Fig_36_1_15_Check_mesh_popup_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>15.</a>, when
+    user clicks on check mesh option.  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_15_Check_mesh_popup_window"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Check mesh popup window</p>
+  <p> </p>
+  <p><strong>Delete Mesh</strong>  <img src="../../../assets/icons/pre_icons/mo_delete_mesh_button.jpg"/></p>
+  <p>Deletes the mesh generated for the object.</p>
+  <p> </p>
+  <p><strong>Show mesh <img src="../../../assets/icons/pre_icons/mo_show_mesh_button.jpg"/> </strong></p>
+  <p>When user clicks on show mesh it shows the generated mesh in display window. Show mesh button toggles between display of mesh and geometry of the object.</p>
+  <p> </p>
+  <p><strong>Default Setting</strong> <img src="../../../assets/icons/pre_icons/mo_default_settings_button.jpg"/><br/> When user clicks on Default settings tab all the settings will be changed to default values, by default Mesh window will be in greyed
+    out mode as no mesh windows are defined. If user wants to activate mesh window, user has to change the weighting factor for mesh density by increasing the sliding bar value to 1.</p>
+  <p> </p>
+  <p>More mesh options are available in forming operations and Pre-Processor refer  <a href="../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm">13.1. 2D Mesh Generation.</a></p>
+  <p> </p>
+  <h3><a id="Material_Definition"></a>Material Definition</h3>
+  <p>Below <a href="#Fig_36_1_16_Material_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>16.</a> shows the material window. User can add or import material from a keyword file or load  from DEFORM material library.</p>
+  <p><br/> After loading system automatically assign the loaded material to an object. User can also edit the material properties using  <img src="../../../assets/icons/pre_icons/mo_material_edit_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_16_Material_window"></a><img height="437" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material window</p>
+  <p> </p>
+  <p>Once after adding material click on <img src="../../../assets/icons/pre_icons/mo_material_edit_button.jpg"/> button, material window will open as shown in <a href="#Fig_36_1_17_Material_editing_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>17.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_17_Material_editing_window"></a><img src="../../../assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image022.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material editing window</p>
+  <p> </p>
+  <p>The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. In Forming operation user
+    can get access to all material properties for more information refer <a href="../../pre_processor/10_material_data/10_material_data.htm">10. Material Data.</a></p>
+  <p> </p>
+  <h3><a id="Boundary_Condition_Definition"></a>Boundary Condition Definition</h3>
+  <p>In heat transfer express Boundary conditions window, user can assign only Thermal Heat exchange with Environment and Temperature boundary constraints for an object. Boundary conditions specify how the boundary of an object interacts with other objects and
+    with the environment. The most commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer. <a href="#Fig_36_1_18_Symmetry_boundary_condition_assigned_for_workpiece"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>18.</a>    shows various BCC that can be assigned to an object.</p>
+  <p>By default heat exchange with environment will be assigned to all surfaces except the symmetric surface (that is centerline) in axisymmetric model and for complete outer surface for plane strain model as shown in <a href="#Fig_36_1_18_Symmetry_boundary_condition_assigned_for_workpiece"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>18.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_18_Symmetry_boundary_condition_assigned_for_workpiece"></a><img height="437" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Symmetry boundary condition assigned for workpiece</p>
+  <p> </p>
+  <p>Defined BCC can be initialized first by selecting the BCC type in tree and clicking on <img src="../../../assets/icons/pre_icons/mo_initialize_button.jpg"/> button. Defined particular BCC can also be  deleted by selecting on defined branch from the
+    BCC tree and clicking on <img src="../../../assets/icons/pre_icons/mo_delete_bcc_button.jpg"/> button. Environment temperature can be varied from the Heat condition window. Environment windows are not allowed for heat exchange with environment BCC
+    in heat transfer operation but available in forming operation, for more details refer Thermal under <a href="../../pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions.htm">14.3 Thermal  Boundary Conditions</a>.</p>
+  <p> </p>
+  <p>More thermal BCC options and other different BCC categories are available in Pre-Processor and Forming Operation such as <a href="../../pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions.htm">Deformation</a>,<a href="../../pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions.htm">Thermal</a>,
+    <a href="../../pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions.htm">Diffusion</a> and <a href="../../pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions.htm">Heating</a>. For more information about these BCC&#39;s
+    please refer <a href="../../pre_processor/14_boundary_conditions">14. Boundary Conditions.</a></p>
+  <p> </p>
+  <h3><a id="Heat_Condition_Definition"></a>Heat Condition Definition</h3>
+  <p>Heat conditions like Heating time (Process duration), Environment temperature and Convection coefficient has be defined in this window as shown in <a href="#Fig_36_1_19_Heat_condition_settings_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>19.</a> For
+    all heating types system by default define the heating conditions has to input the process settings data by changing the defaults.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_19_Heat_condition_settings_window"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image012.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat condition settings window</p>
+  <p> </p>
+  <h3><a id="Stopping_controls_Definition"></a>Stopping controls Definition</h3>
+  <p>Only for heating operation heat transfer operation provides the stopping controls to stop the simulation when all nodes of the workpiece are within the specified degree range from the set point temperature or environment temperature as shown in <a href=""><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>20.</a> In
+    <a href=""><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>20.</a> simulation stops if all nodes temperatures are within 1199.5 C to 1200.5 C.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_20_Heating_stopping_controls_window"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image013.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Heating stopping controls window</p>
+  <p> </p>
+  <h3><a id="Simulation_controls_Definition"></a>Simulation controls Definition</h3>
+  <p>The DEFORM system solves time dependent non-linear problems by generating a series of FEM solutions at discrete time increments. At each time increment, the velocities, temperatures and other key variables of each node in the finite element mesh are determined
+    based on boundary conditions, thermo mechanical properties of the work piece materials and possibly solutions at previous steps. Other state variables are derived from these key values and updated for each time increment. The length of this time step
+    and number of steps simulated are determined based on the information specified in the step controls menu. <a href="#Fig_36_1_21_Simulation_controls_window_in_system_definition"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>21.</a>    shows simulation control options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_21_Simulation_controls_window_in_system_definition"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image014.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation controls window in system definition</p>
+  <p> </p>
+  <p>User needs to specify the time per step (step definition), total number of steps and step increment to save in user and system step definition. In heat transfer express three types of step definitions are available, those are system, user and auto.</p>
+  <p> </p>
+  <p>System type (See <a href="#Fig_36_1_21_Simulation_controls_window_in_system_definition"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>21.</a> ) step definition auto calculate the step definition based on the heating time
+    defined and accuracy and complexity settings selected. For different accuracy and complexity settings system will vary the object mesh elements and step size by varying number of steps. If user needs to vary the auto calculated step definition then
+    User type allows to change the step definition.</p>
+  <p> </p>
+  <p>In User type user will get the access to change the step definitions as required as shown in <a href="#Fig_36_1_22_User_step_definition_controls"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_22_User_step_definition_controls"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image015.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">User step definition controls</p>
+  <p> </p>
+  <p>Auto type is temperature based step controls, the (<a href="../../keyword_documentation/d/dtpmax.htm">DTPMAX)</a> settings control the time stepping. The purpose for these controls is to specify the time stepping of a simulation that is driven by thermal-induced
+    deformation. User has to specify the Initial time step (Time per step), Max. Temperature change per step, Min. time per step and Max. time per step as shown in <a href="#Fig_36_1_23_Advanced_step_definition_controls"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>23.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_23_Advanced_step_definition_controls"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image016.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Advanced step definition controls</p>
+  <p> </p>
+  <p><strong>Temperature change per step </strong>((<a href="../../keyword_documentation/d/dtpmax.htm">DTPMAX</a>)<br/> The maximum temperature change increment limits the amount that the temperature of any node can change during one time step. If a non-zero
+    value is assigned, a new sub step will be initiated when the temperature change at any node reaches the value of (<a href="../../keyword_documentation/d/dtpmax.htm">DTPMAX</a>. The maximum/minimum time step are the largest and smallest time step allowable with
+    the temperature based sub-stepping.</p>
+  <p> </p>
+  <h3><a id="Generate_Database"></a>Generate Database</h3>
+  <p><strong>Check Data  <strong><img height="19" src="../../../assets/icons/pre_icons/mo_check_data_button.jpg" width="88"/></strong></strong>
+  </p>
+  <p>It checks the Data. If Data is correct we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow
+    the DB to be generated.</p>
+  <p> </p>
+  <p><strong>Generate Database <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/></strong></p>
+  <p>By clicking on this button, it generated the Database for the setup. (See <a href="#Fig_36_1_24_Generate_Database_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>24.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_24_Generate_Database_window"></a><img src="../../../assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image050.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate Database window</p>
+  <p> </p>
+  <h2><a id="36_1_4_Defining_Transfer_Operation"></a>Defining Transfer Operation</h2>
+  <p>Heat Transfer operation is used to setup the air convection operation normally during the transfer of workpiece from furnace to press. User can add this operation after heating operation or start with heated workpiece heat transfer itself as first operation. In
+    Transfer operation user will be guided by setup windows as in Heating operation except heating Stopping controls as shown in <a href="#Fig_36_1_25_Add_Heat_transfer_operation_after_furnace_heating"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>25.</a>    For basic object definition, geometry, mesh, material and boundary condition details refer Defining Heating operation. In addition to heating operation options user can add more than one object, so it adds object positioning and inter-object definition
+    options. These options are discussed under this section.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_25_Add_Heat_transfer_operation_after_furnace_heating"></a><img height="435" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Add Heat transfer operation after furnace heating</p>
+  <p> </p>
+  <h3><a id="Selecting_Objects"></a>Selecting Objects</h3>
+  <p>In Heat Transfer operation more than one object is allowed. The user can select the number of objects that is required to perform the operation from this window depending on the process set up (See <a href="#Fig_36_1_26_Transfer_operation_object_selection_settings"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>26.</a>).
+    User has to note that we can have only one plastic object in a simulation. A maximum of 100 dies can be added.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_26_Transfer_operation_object_selection_settings"></a><img height="437" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image018.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Transfer operation object selection settings</p>
+  <p> </p>
+  <h3><a id="Objects_positioning_and_generating_inter_object_relation"></a>Objects positioning and generating inter object relation</h3>
+  <p>If user selects more than one object then system adds the controls (positioning) and scheduled positioning and contact windows after objects to position the objects and to generate inter object contact if any in the setup. More details about these options
+    refer <a href="#36_1_5_Defining_Rest_on_die_Operation">Defining Rest on die operation</a> section <a href="#Positioning">Positioning</a> and  <a href="#Schedule_Positioning">Scheduled Positioning</a>.</p>
+  <p> </p>
+  <h3><a id="Heat_condition_Definition_oprn2"></a>Heat condition Definition</h3>
+  <p>Heat conditions like Transfer time (Process duration), Environment temperature and Convection coefficient has be defined in this window as shown in <a href="#Fig_36_1_27_Transfer_operation_heat_conditions"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>27.</a> For
+    all heating types system by default define the heating conditions, user has to input the process settings data by changing the defaults.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_27_Transfer_operation_heat_conditions"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image019.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Transfer operation heat conditions</p>
+  <p> </p>
+  <p>After setting the heat condition user has to define the simulations controls for simulation controls settings details refer <a href="#Simulation_controls_Definition">Simulation Control Definition</a>.</p>
+  <p><br/> Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation
+    refer <a href="#Simulation_controls_Definition">Simuation controls Definition</a>  and <a href="#Generate_Database">Generate Database</a> section .</p>
+  <p> </p>
+  <h2><a id="36_1_5_Defining_Rest_on_die_Operation"></a>Defining Rest on die Operation</h2>
+  <p>Rest on die or Resting operation is used to setup the hot workpiece heat transfer with environment and with die on which it is resting before forming. User can add this operation after heat transfer operation or can start with heated workpiece resting operation
+    itself as first operation. In Resting operation user will be guided by setup windows as in Heating operation except heating Stopping controls as shown in <span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>28. In addition to
+    heating operation options user can add more than one object, so it adds thermal calculation, object positioning and inter-object definition options. These options are discussed under this section.</p>
+  <p> </p>
+  <p>By default system will add two die objects and thermal calculations selection option gets added after process window as shown in <a href="#Fig_36_1_28_Adding_Resting_operation_after_heat_transfer_operation"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_28_Adding_Resting_operation_after_heat_transfer_operation"></a><img height="437" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Resting operation after heat transfer operation</p>
+  <p> </p>
+  <h3><a id="Define_Thermal_Calculations"></a>Define Thermal Calculations</h3>
+  <p>Temperature Calculation (See <a href="#Fig_36_1_29_Temperature_calculation_type_selection_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>29.</a>) window gives Non isothermal options to select calculate temperature
+    only in workpiece or workpiece and dies.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_29_Temperature_calculation_type_selection_window"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image021.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature calculation type selection window</p>
+  <p> </p>
+  <p><strong>Non-isothermal</strong>: A process in which the temperature of system is not constant. Adding temperature calculations will improve material flow predictions and load predictions, particularly in processes where there are substantial changes
+    in temperature. Calculating temperature in tools further improves workpiece temperature calculation, because evolving tool temperature influences heat loss from the workpiece.</p>
+  <p> </p>
+  <h3><a id="Selecting_objects"></a>Selecting objects</h3>
+  <p>The user can select the number of objects that is required to perform the operation from this window depending on the process set up (See <a href="#Fig_36_1_30_Objects_selection_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>30.</a>).
+    User has to note that we can have only one plastic object in a simulation. A maximum of 100 dies can be added.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_30_Objects_selection_window"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image022.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objects selection window</p>
+  <p> </p>
+  <p>For <a href="#Object_Basic_definition">basic object definition</a>, <a href="#Object_geometry_definition">geometry</a>, <a href="#Object_Mesh_Definition">mesh</a>, <a href="#Material_Definition">material</a> and <a href="#Boundary_Condition_Definition">boundary condition</a>    details refer <a href="#36_1_3_Defining_Heating_operation">36.1.3. Defining Heating operation.</a></p>
+  <p> </p>
+  <h3><a id="Positioning"></a>Positioning</h3>
+  <p>User has to select position objects button to position the objects as per the setup requirements, if objects are not read from DB as shown in <a href="#Fig_36_1_31__Positioning_Objects_window_settings_for_Read_from_DB_and_other_object_types"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>31.</a>    For more details about positioning options refer <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm">19.Object Positioning</a>. If objects are read from DB then those objects positioning must be scheduled.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_31__Positioning_Objects_window_settings_for_Read_from_DB_and_other_object_types"></a><img height="437" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image023.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Positioning Objects window settings for Read from DB and other object types</p>
+  <p> </p>
+  <h3><a id="Schedule_Positioning"></a>Schedule Positioning</h3>
+  <p>When user is not sure about the location of an object as in case of Read From DB objects, scheduled positioning will help to position the objects accurately.</p>
+  <p> </p>
+  <p>Schedule positioning allows the user to define the positioning for objects in MO setup for successive operations for which DB is not generated so that the objects will position before generation of DB while running simulation in Batch mode. (See
+    <a href=""><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>32.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_32_Schedule_position_the_objects_in_successive_operations"></a><img height="272" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image024.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Schedule position the objects in successive operations</p>
+  <p> </p>
+  <h3><a id="Inter-object_Contact_Generation"></a>Inter-object Contact Generation</h3>
+  <p>The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined. In
+    Heat transfer express system automatically define the relation between the workpiece and dies and self contact for workpiece then generate contact when user click on  as shown in <a href="#Fig_36_1_33_Inter-object_contact_generation_window_settings_in_batch_mode"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>33.</a>    Generated contacts message will display in the message tab below the graphics window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_33_Inter-object_contact_generation_window_settings_in_batch_mode"></a><img height="437" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image025.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-object contact generation window settings in batch mode</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_36_1_34_Inter-object_contact_generation_window_settings_in_interactive_mode_(or_for_first_operation)"></a><img height="437" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image026.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Inter-object contact generation window settings in interactive mode (or for first operation)</p>
+  <p> </p>
+  <p>In case if heat transfer express operation is a successive operation then in batch mode system schedule the defining and generating contacts by initializing previous contacts while running, so generate and initialize contact nodes and restore mesh options
+    not available as shown in <a href="#Fig_36_1_34_Inter-object_contact_generation_window_settings_in_interactive_mode_(or_for_first_operation)"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>34.</a> User can select the tolerance
+    value for contact generation by selecting the User defined radio button.</p>
+  <p><br/> Conduction heat transfer coefficient value can be defined by user and also typical values are provided by system those are, (See <a href="#Fig_36_1_33_Inter-object_contact_generation_window_settings_in_batch_mode"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>33.</a>)<br/>    (1 N/sec/mm/C or 0.0003 Btu/sec/in^2/F) for Free Resting<br/> (1 N/sec/mm/C or 0.0003 Btu/sec/in^2/F) for Dwelling<br/> (11 N/sec/mm/C or 0.004 Btu/sec/in^2/F) for Forming</p>
+  <p> </p>
+  <h3><a id="Heat_Condition_Definition_oprn3"></a>Heat Condition Definition</h3>
+  <p>Heat conditions like Resting time (Process duration), Environment temperature and Convection coefficient has be defined in this window as shown in <a href="#Fig_36_1_35_Heat_condition_settings_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>35.</a> For
+    all heating types system by default define the heating conditions, user has to input the process settings data by changing the defaults.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_35_Heat_condition_settings_window"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image027.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat condition settings window</p>
+  <p> </p>
+  <p>After setting the heat condition user has to define the simulations controls for simulation controls settings details refer <a href="#Simulation_controls_Definition">Simulation Control Definition</a>.</p>
+  <p><br/> Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation
+    refer <a href="#Simulation_controls_Definition">Simulation_controls_Definition</a> and <a href="#Generate_Database">Generate Database</a>.</p>
+  <p> </p>
+  <h2><a id="36_1_6_Continue_Defining_the_Forming_Operations"></a>Continue Defining the Forming Operations</h2>
+  <p>After the Heat transfer express operations user can add the forming operations (See <a href="#Fig_36_1_36_Adding_Forming_operation_after_heat_transfer_express_operation"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>36.</a>)
+    and continue with the non-isothermal deformation setup. Heat transfer operations can  also be added between the forming operations, especially after forming operation customized Heat Dwelling heating type available for dwelling simulation explained
+    in the next section <a href="#36_1_7_Defining_Dwell_on_die_Operation">36.1.7. Defining dwell on die operation</a>. For more information about forming operations setup refer <a href="../33_forming/33_1_2d_forming_setup.htm">33.1. 2D Forming Setup</a>    or <a href="../34_forming_express/34_1_2d_forming_express_setup.htm">34.1. 2D Forming Express Setup</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_36_Adding_Forming_operation_after_heat_transfer_express_operation"></a><img height="437" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image028.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Forming operation after heat transfer express operation</p>
+  <p> </p>
+  <h2><a id="36_1_7_Defining_Dwell_on_die_Operation"></a>Defining Dwell on die Operation</h2>
+  <p><br/> Dwell on die or Dwelling operation is used to setup the hot workpiece heat transfer with environment and with die after forming and before die retract back from workpiece. User has to add this operation after forming operations as shown in
+    <a href="#Fig_36_1_37_Adding_Heat_transfer_express_operation_after_forming_operation_for_dwelling_operation_setup"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>37.</a>
+  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_37_Adding_Heat_transfer_express_operation_after_forming_operation_for_dwelling_operation_setup"></a><img height="437" src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image029.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Heat transfer express operation after forming operation for dwelling operation setup</p>
+  <p> </p>
+  <p>In Dwelling operation user will be guided by setup windows as in <a href="#36_1_3_Defining_Heating_operation">Heating operation</a> except heating Stopping controls as shown in <a href="#Fig_36_1_38_Heat_condition_settings_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>38.</a>    In addition to heating operation more than one objects are allowed and system automatically pass all the objects from previous operation to this operation. This operation also adds thermal calculation, object positioning and inter-object definition
+    options required to select the thermal calculations for dies, position objects and define and generate the inter-object contact conditions. These additional options other than heating operation options are discussed in <a href="#36_1_5_Defining_Rest_on_die_Operation">36.1.5. Defining Rest on die Operation.</a></p>
+  <p> </p>
+  <h3><a id="Heat_Condition_Definition_oprn4"></a>Heat Condition Definition</h3>
+  <p>Heat conditions like Dwell time (Process duration), Environment temperature and Convection coefficient has be defined in this window as shown in <a href="#Fig_36_1_38_Heat_condition_settings_window"><span data-keyref="Chapter_36_1_2D_Heat_Transfer_Express">Fig. 36.1.</span>38.</a>    For all heating types system by default define the heating conditions, user has to input the process settings data by changing the defaults.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_38_Heat_condition_settings_window"></a><img src="../../../assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image030.jpg" style="cursor: nesw-resize;"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat condition settings window</p>
+  <p> </p>
+  <p>After setting the heat condition user has to define the simulations controls for simulation controls settings details refer <a href="#Simulation_controls_Definition">Simulation Control Definition</a>.</p>
+  <p><br/> Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation
+    refer <a href="#Simulation_controls_Definition">Simulation_controls_Definition</a> and <a href="#Generate_Database">Generate Database</a>.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../33_forming/33_1_2d_forming_setup.htm">33.1. 2D Forming Setup</a></p>
+  <p><a href="../34_forming_express/34_1_2d_forming_express_setup.htm">34.1. 2D Forming Express Setup</a>.</p>
+  <p><a href="36_2_3d_heat_transfer_express.htm">36.2.3D Heat Transfer Express Operation</a></p>
+  <p> </p>
+
+</body></html>

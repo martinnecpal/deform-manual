@@ -1,0 +1,1 @@
+rh._.exports({"0":["6.6. Operations Management"],"1":["\n  ","\n  "," ","\n  ","6.6.1. Connecting Operations","\n  ","6.6.2. Read from DB concept","\n  ","6.6.3. Editing Operations","\n  ","6.6.4. Upgrading Operations","\n  ","6.6.5. Adding Cycles","\n\n"],"2":["6.6. Operation Management"],"id":"35"})

@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"10.6.1 Avrami Model","type":"item","tilePath":"","url":"documentation_content/pre_processor/10_material_data/10_6_grain_data/10_6_1_avrami_model.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

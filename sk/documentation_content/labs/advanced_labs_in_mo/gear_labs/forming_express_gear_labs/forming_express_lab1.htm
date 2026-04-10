@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "15.3.2.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Express Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Express Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Express_Gear_Labs/Forming_Express_Lab2.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Express_Gear_Labs/Forming_Express_Gear_Labs.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Forming Express Lab1">
+        <span>Forming Express Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 1. 2D Gear Lab</h1>
+  <h3>Creating a New problem</h3>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File <img src="../../../../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>New Problem</strong> or by clicking the New Problem <img src="../../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_L1_1_Problem_setup_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>1.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and Unit system as &quot;<strong>English</strong>&quot; using radio button. Define Problem Name as &quot;<strong>FE_Gear</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>”
+    check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_1_Problem_setup_window"></a><img height="419" src="../../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Problem setup window</p>
+  <p> </p>
+  <p>MO GUI opens along with New Project window, specify the project name as <strong>FE_Gear </strong>and confirm that <strong>First </strong><strong>operation </strong>check box is <strong>checked</strong> and select the <strong>[2D] Forming Express</strong>    operation from the list and use the default (home) directory Location as shown in <a href="#Fig_L1_2_New_MO_Project_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>2.</a> Click <img src="../../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to add project. This lab will be referenced in future labs, so it is important to use the name above.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_2_New_MO_Project_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">New MO Project window</p>
+  <h3>Open Preprocessor</h3>
+  <p>Change the default operation name from Forming to &quot;<strong>Upset</strong>&quot; by double-clicking the title in the operation tile. The mouse scroll wheel can be used to zoom in on this operation tile if needed. Press <strong>Enter </strong>to
+    accept the new name.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_3_Changing_operation_name_to_Upset"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Changing operation name to Upset</p>
+  <h3>Process type</h3>
+  <p>Confirm that the Geometry type is <strong>2D Axisymmetric</strong> and Set the Process type to <strong>Hot </strong><strong>forging</strong>.</p>
+  <p> </p>
+  <p>Forming Express operations use Complexity and Accuracy slider bars to establish meshing and time step parameters for the simulation.  As Complexity and Accuracy are set higher, more elements and smaller time steps will be used in the analysis.</p>
+  <p> </p>
+  <p>Generally, there is a trade-off between resolution and run time.  Setting the slider bars all the way to the left (Simple/Fast) will yield faster run times, but there is an increased likelihood of missing important geometry details or defects due to
+    the larger elements.</p>
+  <p> </p>
+  <p>For this lab, leave the <strong>Complexity </strong>slider at <strong>Moderate </strong>and change the <strong>Accuracy </strong>slide to <strong>Fast </strong>as shown in <a href="#Fig_L1_4_Process_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>4.</a>     Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_4_Process_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process window</p>
+  <h3>Thermal Calculation</h3>
+  <p>For this first lab, we will ignore temperature changes that occur during forming, so set the Temperature Calculation to <strong>Constant temperature (Isothermal)</strong>. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <h3>Set number of objects</h3>
+  <p>The forging operation to be simulated requires a workpiece and a top and bottom die. So, we will have <strong>1 workpiece + 2 dies</strong>. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3>Define Workpiece General Object Data</h3>
+  <p>Accept the default object name Workpiece and the temperature of <strong>2</strong><strong><strong>2</strong>50</strong>°F. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.  </p>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong> The <img src="../../../../../assets/icons/pre_icons/mo_import_object.._button.jpg"/> button is for importing data from a different DEFORM problem keyword or database. In most cases, you will use the Import Geometry <img src="../../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> option on the next page.</p>
+  <h3>Create workpiece geometry from primitive</h3>
+  <p>Click on the <img src="../../../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> button to create a geometry within DEFORM. The workpiece being modeled has a diameter of 5 in. and a height of 7.48 in., with corner radii of <strong>0.1</strong>    in. Axisymmetric simulations model a radial slice of the part, so select <strong>Cylinder </strong>set the Radius to <strong>2.5</strong> in., the <strong>Height </strong>to <strong>7.48</strong> in., and R1 &amp; R2 to <strong>0.1</strong> in (See
+    <a href="#Fig_L1_5_Workpiece_geometry_Primitive_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>5.</a>). Click <img src="../../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to accept these part dimensions.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_5_Workpiece_geometry_Primitive_window"></a><img height="377" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0005.jpg" width="750"/></p>
+  <p>                                                                     </p>
+  <p class="Fig_numb">Workpiece geometry Primitive window</p>
+  <p> </p>
+  <p><em><strong>Display Manipulation</strong></em></p>
+  <p>Functions that manipulate the DISPLAY window (such as Pan, Zoom, Magnify, and Rotate) can be activated using icons at the top of the Pre-processor window. These functions also have easy keyboard/mouse combination hotkeys that allow you to quickly perform
+    these functions.  Once you have read about these functions, feel free to use them to manipulate the view of the Billet in the DISPLAY window.</p>
+  <p> </p>
+  <p><em><strong>Display Icons</strong></em></p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;margin-left:20px">
+    <colgroup>
+      <col style="width: 5%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 70%;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="margin-left: 4px"><u><strong>Icon</strong></u></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center"><u><strong>Function</strong></u></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center"><u><strong>Description</strong></u></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_pan_icon.jpg"/></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Pan</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">The objects in the DISPLAY window can be dynamically panned up, down, left, or right by moving the mouse while holding the left mouse button.</p>
+          <p style="margin-left: 4px">(Shortcut:  Shift + Left Mouse Button)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_zoom_icon.jpg"/></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Zoom</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">The DISPLAY window can be dynamically zoomed in or out by holding the left mouse button and moving the mouse up or down.</p>
+          <p> (Shortcut:  Alt + Left Mouse Button)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_box_zoom_icon.jpg"/></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Magnify</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">A portion of the DISPLAY window can to be magnified by clicking and holding the left mouse button at one corner of the zoom box and dragging the cursor to create a window encompassing the zoom area.</p>
+          <p style="margin-left: 4px">(Shortcut:  Ctrl + Alt + Left Mouse Button)</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p><em><strong>Point Selection</strong></em></p>
+  <p>Point coordinates and distances between points can be obtained from the current display.</p>
+  <p> </p>
+  <p><strong>Point Selection Icons</strong></p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;margin-left:20px">
+    <colgroup>
+      <col style="width: 5%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 70%;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="margin-left: 4px"><u><strong>Icon</strong></u></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center"><u><strong>Function</strong></u></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center"><u><strong>Description</strong></u></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_measure_tool_icon.jpg"/></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Measure</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Distances between any two points can be measured by clicking the first point and then   clicking the second point. The measuring line will remain on the screen until the Refresh     button is clicked.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_select_icon.jpg"/></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Select</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">This is the default display mode and is used to select and get information about nodes and element faces.  This is also the mode to be used when measuring.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button to generate workpiece mesh.</p>
+  <h3>Generate Workpiece Mesh page</h3>
+  <p>The default target number of elements is <strong>2000 </strong>for the current slider bar settings. This value is grayed out since the mesh is set to System. Users can change this value or have access to some advanced meshing options using User-defined
+    method. Accept this <strong>System </strong>setting and click the <img src="../../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/>  button to generate the workpiece mesh. Generated mesh for workpiece is as shown in <a href="#Fig_L1_6_Workpiece_Mesh_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>6.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_6_Workpiece_Mesh_window"></a><img height="388" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Mesh window</p>
+  <p> </p>
+  <p><strong>Graphic Display Icons</strong></p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;margin-left:20px">
+    <colgroup>
+      <col style="width: 10%;"/>
+      <col style="width: 30%;"/>
+      <col style="width: 65%;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><u><strong>Icon</strong></u></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><u><strong>Function</strong></u></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><u><strong>Description</strong></u></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_shading_mode_icon.jpg"/></p>
+        </td>
+        <td style="text-align: left">
+          <p style="text-align: left;margin-left: 4px">View shaded objects</p>
+        </td>
+        <td style="text-align: left">
+          <p style="text-align: left;margin-left: 4px">Displays all objects shaded without a mesh</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_wirefrane_mode_icon.jpg"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">View mesh only</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Displays all objects unshaded with a mesh</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_shade_wireframe_icon.jpg"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">View shaded mesh</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Displays all objects shaded with a mesh</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_feature_line_mode_icon.jpg"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">View surface patch</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Only the feature lines of the objects are shown</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_refresh_icon.jpg"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Refresh</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Refreshes the DISPLAY window and clears previous measuring lines</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_fit_all_icon.jpg"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Fit view</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Fits all objects into the DISPLAY window</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_capture_screen_image_to_file_icon.jpg"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Capture image</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Captures the DISPLAY window and saves it to a file</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="../../../../../assets/icons/pre_icons/mo_capture_screen_to_clip_board_icon.jpg"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Capture image to clipboard</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Captures DISPLAY window and saves in memory clipboard</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button to assign material for workpiece.</p>
+  <h3>Assign Workpiece material</h3>
+  <p>Click the (Load material from library) <img src="../../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> icon and browse to the <strong>Steel </strong>category. Scroll to find <strong>AISI-8620[1550-2200F(850 -1200C)]</strong> in the
+    material list and click <img src="../../../../../assets/icons/pre_icons/mo_load_button.jpg"/> to assign the material to the workpiece. Users can view or modify the material data using the <img src="../../../../../assets/icons/pre_icons/mo_material_edit_button.jpg"/> button. For this lab, no changes are needed so click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to the boundary conditions page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_7_Material_Library_window"></a><img height="550" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0007.jpg" width="473"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material Library window</p>
+  <h3>Verify Workpiece boundary conditions</h3>
+  <p>Since the geometry type is Axisymmetric, a velocity boundary condition of X, Fixed was automatically assigned along the centerline of the workpiece. Click the &quot;<strong>X, Fixed</strong>&quot; in the boundary condition tree to observe which nodes
+    are being constrained not to move in the X direction. (See <a href="#Fig_L1_8_Workpiece_BCC_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>8.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_8_Workpiece_BCC_window"></a><img height="388" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece BCC window</p>
+  <p> </p>
+  <p>If a user needs to add additional boundary conditions, they can highlight Velocity in the boundary condition tree and then use the tools along the left edge of the screen <img src="../../../../../assets/icons/pre_icons/mo_2d_picking_option.jpg"/> to
+    select to appropriate nodes to constrain.</p>
+  <p>For this lab, we only want the default &quot;X, Fixed&quot; boundary condition on the centerline, so click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to start defining the Top Die.</p>
+  <h3>Top Die general object data</h3>
+  <p>The Temperature should be set to <strong>300</strong>°F and the Object type will be <strong>Rigid </strong>as shown in <a href="#Fig_L1_9_Top_die_general_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>9.</a> These
+    are the defaults for a die, and we will use these settings. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to the Top Die geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_9_Top_die_general_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0009.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die general window</p>
+  <h3>Import and edit the Top Die geometry</h3>
+  <p>Import the flat top die geometry from an igs file. Click the <img src="../../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and <img src="../../../../../assets/icons/pre_icons/mo_load_button.jpg"/> open
+    (import) the file “<strong>flat top die.</strong><strong>igs</strong>”. The geometry for top die is located in DEFORM installation folder  \Tutorials directory.</p>
+  <p> </p>
+  <p class="Note_text">Note: Make sure you don’t choose FlatTopDieSI.igs.</p>
+  <p> </p>
+  <p>It is always good practice to check the geometry to make sure that it is legal.  </p>
+  <p>Click on the <img src="../../../../../assets/icons/pre_icons/mo_check_label.jpg"/> button to open the Check and Correct Geometry menu. Change the Geometry open/close/auto type to open and click the <img height="25" src="../../../../../assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg" width="99"/> button. You should receive a message that the geometry is legal as shown in <a href="#Fig_L1_10_Check_and_correct_geometry_window_for_top_die_geometry"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>10.</a>    Click <img src="../../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to exit the menu.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_10_Check_and_correct_geometry_window_for_top_die_geometry"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0010.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Check and correct geometry window for top die geometry</p>
+  <p> </p>
+  <p>The geometry checking tool should be used on every 2D geometry you bring into DEFORM, even if the geometry looks legal.</p>
+  <p>Since this is an isothermal simulation, there is no need to generate mesh or assign material for the Top Die. Therefore these options are not shown in the Operation Tree,  Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to
+    Top die movement page.</p>
+  <h3>Assign Top Die movement</h3>
+  <p>This lab will use a constant speed for the Top Die. Verify that Speed is selected and the direction is set to <strong>–Y</strong>.  Define the speed as <strong>3</strong> <strong>in</strong>/sec as shown in <a href="#Fig_L1_11_Top_die_movement_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>11.</a> Click
+    <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to the Bottom Die.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_11_Top_die_movement_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0011.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Top die movement window</p>
+  <h3>Bottom Die general data</h3>
+  <p>The Temperature should be set to <strong>300</strong>°F and the Object type will be <strong>Rigid</strong>. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to geometry page.</p>
+  <h3>Bottom die Geometry page</h3>
+  <p>Click on the<img src="../../../../../assets/icons/pre_icons/mo_check_label.jpg"/>  button to define the bottom die geometry from geometry editor. Make sure XYR format is selected in geometry table. To define the geometry, enter the geometry points
+    in table form as shown in <a href="#Fig_L1_12_Bottom_die_Edit_geometry_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>12.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_12_Bottom_die_Edit_geometry_window"></a><img height="385" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0012.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bottom die Edit geometry window</p>
+  <p> </p>
+  <p>These points will trace out the geometry in a counter clockwise fashion to ensure that the geometry orientation is on the inside of the geometry as shown in <a href="#Fig_L1_12_Bottom_die_Edit_geometry_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>12.</a>    Click <img src="../../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close the geometry definition and click <img height="22" src="../../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Positioning page.</p>
+  <h3>Positioning</h3>
+  <p>Use the <img src="../../../../../assets/icons/pre_icons/mo_automatic_positioning_button.jpg"/> button to position the tools in contact with the workpiece (in the vertical forming direction). Confirm that the Workpiece is positioned on top of the Bottom
+    Die and that the Top Die is positioned against the Workpiece as shown in <a href="#Fig_L1_13_After_positioning_the_objects_using_Automatic_position_option"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>13.</a> Click
+    <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to the contact page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_13_After_positioning_the_objects_using_Automatic_position_option"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0013.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">After positioning the objects using Automatic position option</p>
+  <p> </p>
+  <h3>Inter-object relationships – friction and contact generation</h3>
+  <p>DEFORM will automatically create inter-object relationships between the workpiece and the dies. The friction settings are set automatically based on the <strong>Process </strong><strong>type </strong>defined at the top of the Process Tree. Since we
+    defined this simulation as <strong>Hot </strong><strong>forging</strong>, the friction coefficient was set to a <strong>System</strong>-<strong>defined </strong>value of<strong> 0.3 </strong><strong>Shear </strong>as shown in <a href="#Fig_L1_14_Contact_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>14.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_14_Contact_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0014.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact window</p>
+  <p> </p>
+  <p>If needed, users can switch to User-defined to define different friction values. Next, contact among the objects needs to be generated. Use the default System-defined contact tolerance and click <img src="../../../../../assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg"/>. You should see contact highlighted on the nodes on the workpiece where contact has been generated. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Stopping controls page.</p>
+  <h3>Define Primary die stroke</h3>
+  <p>The Primary die stroke field is an estimate of the total movement of the top die during the forming process. Total primary die stroke is used to establish time step size and other controls. If the exact travel is not known, a best guess value should
+    be used. In this case, the Top Die will travel exactly 6 in. Set the <strong>Total </strong><strong>primary </strong><strong>die </strong><strong>travel </strong>to be <strong>6</strong> in. and check the<strong> Exact Amount</strong> box as shown
+    in <a href="#Fig_L1_15_Primary_die_travel_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>15.</a> Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Primary die stroke.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_15_Primary_die_travel_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0015.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Primary die travel window</p>
+  <h3>Assign Stopping controls</h3>
+  <p>The Stopping controls dialog sets the exact criteria used for stopping the simulation. For this operation, stop the analysis when the <strong>Max </strong><strong>die </strong><strong>stroke </strong>has <strong>reached </strong><strong>6 </strong>in.
+    Check <strong>Max die stroke</strong> check box and enter the value as <strong>6</strong> in as shown in  <a href="#Fig_L1_16_Stopping_controls_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>16.</a> Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to simulation controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_16_Stopping_controls_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0016.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping controls window</p>
+  <h3>Assign Simulation controls</h3>
+  <p>For this operation, the tool needs to move 6 in. to produce the desired shape. For a simple upset like this, a<strong> Number of steps</strong> of approximately <strong>100 </strong>steps should be sufficient. This is the default value of steps for
+    the slider settings defined in this problem.</p>
+  <p>Change the <strong>Step Increment </strong>to <strong>5</strong>. This means that every fifth step of the simulation will be saved to the database, and results at these steps will be visible in the Post-processor.</p>
+  <p class="Note_text">Note that if another stopping method is used, as it is in this case, the number of steps does not need to be precise.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_17_Simulation_controls_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0017.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls window</p>
+  <h3>Confirm Movement</h3>
+  <p>Click on <strong>Movement </strong>under Top Die in operation tree to preview movement. Click on the <img src="../../../../../assets/icons/pre_icons/mo_preview_icon.jpg"/> (Preview object movement) button in the lower right hand corner of the screen
+    (See <a href="#Fig_L1_11_Top_die_movement_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>11.</a>). Click on the <img src="../../../../../assets/icons/pre_icons/mo_movement_play_button.jpg"/> (play) button (See
+    <a href="#Fig_L1_18_Top_die_movement_preview_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>18.</a>) and watch the top die move through the workpiece. This tool will confirm that your tool is moving in the correct
+    direction and that you have enough steps to complete the stroke.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_18_Top_die_movement_preview_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0018.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die movement preview window</p>
+  <p> </p>
+  <p>Click <img src="../../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to exit the menu and click on <strong>Generate </strong><strong>DB </strong>in the operation tree to go for DB generation.</p>
+  <h3>Data checking and database generation</h3>
+  <p>Click on the <img src="../../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button. DEFORM will check all the inputs and verify that all necessary data is defined. The following messages should be shown in the Message window.</p>
+  <p><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/image0001.jpg"/></p>
+  <p>Red marks indicate missing or incorrect data that will prevent a simulation from running. It is necessary to correct the error before the database can be generated.</p>
+  <p> </p>
+  <p>Yellow marks indicate data which may be suspect and should be reviewed. These should be investigated carefully, as they might result in system instability or erroneous (incorrect) results.</p>
+  <p> </p>
+  <p>Review the data checking information. If there are no yellow or red marks, click the <img src="../../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button.</p>
+  <p>You should look for the following messages in the Message window.</p>
+  <p> </p>
+  <p><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/image0002.jpg"/></p>
+  <p> </p>
+  <p>When you see this message, the simulation setup has been saved to the database and the simulation is ready to be run.</p>
+  <p>Click on the MO <img src="../../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h3>Run and monitor a simulation</h3>
+  <p>Click on the <img src="../../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>”
+    option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation. (See <a href="#Fig_L1_19_Running_the_simulation_from_MO_simulation_mode"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>19.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_19_Running_the_simulation_from_MO_simulation_mode"></a><img height="389" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Running the simulation from MO simulation mode</p>
+  <p> </p>
+  <p>In the upper-right, the Status field updates to let you know that the simulation is currently running on a particular computer.</p>
+  <p style="text-align: center"><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/image0003.jpg"/></p>
+  <p>The Simulation Message and Simulation Log tabs in the lower-right will give you information on how the simulation is running.</p>
+  <p>The progress of a simulation can be observed in the graphics window as it is running. By default, the graphics update when a new step is saved to the database.  </p>
+  <p style="text-align: center"><img height="120" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/image0004.jpg" width="259"/></p>
+  <p>To have the graphics update more frequently, you can use the Update pull-down menu (bottom right of graphics window) to change the setting to Current Step. This is typically not needed in 2D simulations since they run so fast.</p>
+  <p>It is good practice to watch the first few steps of a simulation in simulation graphics mode to confirm that the tool movements and workpiece deformation are proceeding as expected.</p>
+  <p> </p>
+  <p>When the simulation is completed, the image in the graphics window will stop changing and the final deformed shape of the part will be shown. The last lines of the <strong>Simulation Message</strong> tab will indicate that the simulation has been completed.</p>
+  <p> </p>
+  <p>&quot;******Message*******</p>
+  <p> </p>
+  <p>Simulation is completed and stopped at the user specified time step &quot;.</p>
+  <h3>Review results in Post Mode</h3>
+  <p>When the simulation is completed, click the MO <img src="../../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> Mode button to review results.</p>
+  <h3>Step list and play controls</h3>
+  <p>The graphics window displays the results of the simulation. The saved steps are listed in a step browser at the bottom of the graphics window as shown in <a href="#Fig_L1_20_Step_browser_for_upset_operation"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>20.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_20_Step_browser_for_upset_operation"></a><img height="167" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step browser for upset operation</p>
+  <p> </p>
+  <p>The play controls can be used to:</p>
+  <p> </p>
+  <p><img height="20" src="../../../../../assets/icons/pre_icons/mo_preview_play_button.jpg" width="21"/> <strong>Play forward</strong>: Displays the steps one by one until the last step is displayed from the current selected step.</p>
+  <p><img height="21" src="../../../../../assets/icons/pre_icons/mo_preview_stop_button.jpg" width="23"/> <strong>Stop </strong>: Stops the playing (forward or backward) of steps.</p>
+  <p><strong><img src="../../../../../assets/icons/pre_icons/mo_preview_one step_forward_button.jpg"/> Single step forward</strong>: Move to the next saved step in the step list.</p>
+  <p><img src="../../../../../assets/icons/pre_icons/mo_preview_last_step_button.jpg"/> <strong>Jump to the end</strong>: Fast forward to the last saved step in the step list.</p>
+  <p><img src="../../../../../assets/icons/pre_icons/mo_preview_play_back_button.jpg"/> <strong>Play backward</strong>: Displays the steps one by one in reverse order until the first step is displayed from the current selected step.</p>
+  <p><img src="../../../../../assets/icons/pre_icons/mo_preview_one_step_back_button.jpg"/> <strong>Single step backward</strong>: Rewind the step list back to one saved step.</p>
+  <p><strong><img src="../../../../../assets/icons/pre_icons/mo_preview_last_step_button.jpg"/> Jump to the beginning</strong>: Rewind the step list back to the first saved step.</p>
+  <p> </p>
+  <p><em><strong>Load – stroke plot</strong></em></p>
+  <p>Click the <img src="../../../../../assets/icons/post_icons/mo_load_stroke_icon.jpg"/> (load-stroke) icon in the post tools. Plot the Y load (Y-Axis) vs. Stroke (X-Axis) for the top die by selecting <img src="../../../../../assets/icons/post_icons/mo_plot_button.jpg"/> button (See <a href="#Fig_L1_21_Load_stroke_graph_for_top_die"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>21.</a>). The graph displays the load throughout the simulation. The vertical step tracer bar indicates
+    the current step.</p>
+  <p> </p>
+  <p>Clicking at any point on the load-stroke plot (or any graph in DEFORM) will display the results at that step.  Alternatively, any step in the step list can be selected and the vertical step tracer will jump to that point in the simulation. The graph
+    may be removed by right-clicking on the graph and selecting <strong>Delete</strong>.</p>
+  <p> </p>
+  <p class="Note_text">Note: By default, graphs open in the same graphics window as the simulation. To achieve a similar look as the image below, go to Options <img src="../../../../../assets/icons/pre_icons/arrow_front.jpg"/>  Preference and under Graph Display check the
+    box next to New window then hit . Replot the graph to see the changes.</p>
+  <p class="Note_text"> </p>
+  <p style="text-align: center"><a id="Fig_L1_21_Load_stroke_graph_for_top_die"></a><img height="388" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0021.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Load stroke graph for top die</p>
+  <p> </p>
+  <p><em><strong>State variable plots</strong></em></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Velocity plot</strong></p>
+    </li>
+  </ul>
+  <p>Select step 75 (or any other intermediate step on the step selection bar). Click the <img src="../../../../../assets/icons/post_icons/mo_vel_sv_icon.jpg"/> (Total Velocity) state variable icon in the Post tools State Variables. Click the <img src="../../../../../assets/icons/post_icons/mo_state_variable_icon.jpg"/> icon to open the state variable properties dialog. Select the <img src="../../../../../assets/icons/post_icons/mo_vector_plot_button.jpg"/> display type. The instantaneous velocities are displayed as vectors at the selected time step. The colors
+    of the arrows denote the magnitude of the velocity. (See <a href="#Fig_L1_22_Velocity_vector_plot_with_Load_stroke_graph_for_top_die"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>22.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_22_Velocity_vector_plot_with_Load_stroke_graph_for_top_die"></a><img height="386" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0022.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Velocity vector plot with Load stroke graph for top die</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Effective strain plot</strong></p>
+    </li>
+  </ul>
+  <p>In the State Variable dialog, select <strong>Strain </strong><img src="../../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Effective</strong>. Set the Scaling to <strong>Global </strong>and click <img src="../../../../../assets/icons/pre_icons/mo_apply_button.jpg"/>. Effective strain represents the amount of deformation during the simulated process.  In cold forming, this is related to work hardening.</p>
+  <p> </p>
+  <p>Play through the simulation and watch how strain evolves as the part forms. With <strong>Global </strong>scaling, the color bar represents the maximum range of the variable anywhere in the workpiece.</p>
+  <p> </p>
+  <p>Set the Scaling to <strong>Local </strong>and click <img src="../../../../../assets/icons/pre_icons/mo_apply_button.jpg"/>.  Play through the simulation.  At each step, the state variables rescale to the maximum value at that step.</p>
+  <p>Select <img src="../../../../../assets/icons/post_icons/mo_solid_plot_button.jpg"/> display and click <img src="../../../../../assets/icons/pre_icons/mo_apply_button.jpg"/>. The contour borders become sharp edges (See <a href="#Fig_L1_23_Effective_strain_state_variable_contour_at_local,_global_scale"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>23.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_23_Effective_strain_state_variable_contour_at_local,_global_scale"></a><img height="189" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0023.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Effective strain state variable contour at local, global scale</p>
+  <p> </p>
+  <p>When you are finished viewing results, click <img src="../../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to exit from State variable window. The scale and plot type can also be changed from right click options on contour bar.</p>
+  <p>Click on <img src="../../../../../assets/icons/pre_icons/mo_pre_mode_button.jpg"/> MO mode button to switch to Pre mode to continue with the Next lab.</p>
+  <h3>Finish forge operation</h3>
+  <h4>Insert new operation</h4>
+  <p>We will add a finisher forging operation to the pancaked part. From the Explorer tab on the left side of the user interface, go to <strong>Forming </strong><img src="../../../../../assets/icons/pre_icons/arrow_front.jpg"/> Single and then click the
+    <img src="../../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to <strong>[2D] Forming Express </strong>as shown in <a href="#Fig_L1_24_Adding_operation_from_Explore"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>24.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_24_Adding_operation_from_Explore"></a><img height="400" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0024.jpg" width="209"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding operation from Explorer</p>
+  <p> </p>
+  <p>A new operation tile will be added in the Operation Editor (See <a href="#Fig_L1_25_Added_Forming_express_operation_"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>25.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_25_Added_Forming_express_operation_"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0025.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added Forming express operation </p>
+  <p> </p>
+  <p>Click on the <strong>Forming </strong>tile. You will get a pop-up window asking you to select Interactive or Batch setup. Interactive setup allows more direct control over inputs. However, Batch setup ensures that it will be possible to back up and
+    rerun the full project from the beginning without interruption. <u>For almost all projects,<span style="text-decoration: underline;font-style: "> </span>Batch setup gives greater flexibility.</u></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_26_Setup_type_popup_for_2D_Forming_operation"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0026.jpg" style="cursor: nwse-resize;"/></p>
+  <p> </p>
+  <p class="Fig_numb">Setup type popup for 2D Forming operation</p>
+  <p> </p>
+  <p>Click <img src="../../../../../assets/icons/pre_icons/mo_no_batch_setup_button.jpg"/> in this dialog as shown in <a href="#Fig_L1_26_Setup_type_popup_for_2D_Forming_operation"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>26.</a>    The 2nd operation will open in the process tree. Notice how the objects in the 1st operation are now linked to the 2nd operation and are shown as Read from DB. All the objects appear red in the 2nd operation, indicating that they are being read from
+    the previous operation in the database.</p>
+  <p> </p>
+  <p>This operation inherits properties from the previous operation, so this operation will also be an isothermal hot forging process.</p>
+  <h4>Import dies</h4>
+  <p>New dies will be imported for this operation, so dies really won’t be Read from DB like the Workpiece. This is easy to change. When importing the dies below, remember that the geometries are in DEFORM installation folder \Tutorials directory.</p>
+  <h4>Top Die</h4>
+  <p>Click on Top Die in the Operation Tree. Change the object type to <strong>Define </strong>as shown in <a href="#Fig_L1_27_Top_die_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>27.</a> Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_27_Top_die_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0027.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die window</p>
+  <h4>Top die Geometry</h4>
+  <p>Import the geometry “<strong>gear top die.</strong><strong>IGS</strong>”. Click the <img src="../../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and <img src="../../../../../assets/icons/pre_icons/mo_open_button.jpg"/> open (import) the file “gear top die.IGS”. The geometry for Top Die is located in DEFORM installation folder  \Tutorials directory. Use <img height="28" src="../../../../../assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg" width="111"/> to check the geometry and fix the shading so that it is correctly on the inside of the part. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Top die Movement  page.</p>
+  <p> </p>
+  <p>Later in this setup, we will define a stopping criteria based on the spacing of the dies at the flash gap. To define this, we need to define reference points on the dies.</p>
+  <p>In the lower right corner of the geometry page, click <img src="../../../../../assets/icons/pre_icons/mo_define_reference_point_button.jpg"/> to turn the button blue.</p>
+  <p>Use the mouse to pick the bump in the top die corresponding to the flash land, as shown in the <a href="#Fig_L1_28_Defining_reference_point_for_Top_die_geometry"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_28_Defining_reference_point_for_Top_die_geometry"></a><img height="387" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0028.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining reference point for Top die geometry</p>
+  <p> </p>
+  <h4>Assign Top die movement</h4>
+  <p>The speed of <strong>3</strong> in/sec. is already defined from the previous operation so no changes are needed. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Bottom die page.</p>
+  <h4>Bottom Die</h4>
+  <p>Change the object type to <strong>Define</strong>. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Geometry page.</p>
+  <h4>Bottom die geometry</h4>
+  <p>Import the geometry “<strong>gear bottom die.</strong><strong>IGS</strong>”. Click the <img src="../../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and <img src="../../../../../assets/icons/pre_icons/mo_open_button.jpg"/> open (import) the file “gear bottom die.IGS”. The geometry for bottom die is located in DEFORM installation folder  \Tutorials directory. Use <img height="25" src="../../../../../assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg" width="99"/> to check the geometry and fix the shading so that it is correctly on the inside of the part.  In the lower right corner of the geometry page, click <img src="../../../../../assets/icons/pre_icons/mo_define_reference_point_button.jpg"/>  to turn
+    the button blue. Use the mouse to pick and select the below point on the bottom die flash land, as shown in the <a href="#Fig_L1_29_Defining_reference_point_for_Bottom_die_geometry"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>29.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_29_Defining_reference_point_for_Bottom_die_geometry"></a><img height="391" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0029.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining reference point for Bottom die geometry</p>
+  <h4>Scheduled positioning</h4>
+  <p>Because the workpiece is being read from the database after an earlier forming operation, the size and shape may change if the project is rerun from the beginning. For this reason, it is better to allow a flexible positioning of the tools relative to
+    the workpiece, rather than setting a firm position for them.</p>
+  <p> </p>
+  <p>In DEFORM, there is an operation called Scheduled positioning which allows the tools to be moved into contact with an arbitrary workpiece shape whenever the workpiece is imported from a prior operation.  </p>
+  <p> </p>
+  <p>Go to<strong> Scheduled positioning </strong>in the Process Tree and click the <img src="../../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button to add a positioning operation.  </p>
+  <p>First, we will schedule the bottom die to move up to the workpiece.   </p>
+  <p>Select <strong>Interference </strong>and pick the <strong>Bottom </strong><strong>Die </strong>as the <strong>Positioning </strong><strong>object</strong>, and the <strong>Workpiece </strong>as the <strong>Reference </strong><strong>object</strong>.
+     Make the approach direction <strong>Y</strong> (up).  Click <img src="../../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>.  </p>
+  <p> </p>
+  <p>Note that the tool does not move at this time, but positioning will be performed when the database is generated for this operation.</p>
+  <p> </p>
+  <p>Click <img src="../../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> again to schedule a second positioning. Select <strong>Interference </strong>and position the <strong>Top </strong><strong>Die </strong>down (<strong>-Y</strong>) to the <strong>Workpiece</strong>.
+     Click <img src="../../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. (See <a href="#Fig_L1_30_Scheduled_positioning_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>30.</a>). Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Contact page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_30_Scheduled_positioning_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0030.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scheduled positioning window</p>
+  <h4>Inter-object relationships</h4>
+  <p>In the Contact dialog, the same <strong>System</strong>-<strong>defined </strong>contact of <strong>0.3</strong> Shear will be used as the first operation. So, no changes are needed. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to  Primary die stroke page</p>
+  <h4>Primary die stroke</h4>
+  <p>When defining the above stopping criteria, we saw that the flash gap between the dies was approximately <strong>1.75</strong> in (before the scheduled positioning). A good estimate of how much the Top Die will move in this operation is around 1.5 in.
+     Set the Total primary die travel to 1.5 in. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Stopping controls page (See <a href="#Fig_L1_31_Primary_die_stroke_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>31.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_31_Primary_die_stroke_window"></a><img height="527" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0031.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Primary die stroke window</p>
+  <p> </p>
+  <h4>Stopping controls</h4>
+  <p>Rather than measuring the tool movement distance as we did in the first operation, we will stop this process with a fixed distance between tools.  In this case we will set the flash thickness to 0.2 in.</p>
+  <p> </p>
+  <p>The flash distance is measured at the reference points defined on the top and bottom dies.</p>
+  <p> </p>
+  <p>Click on Stopping controls in the Process Tree. Check the box for <strong>Distance </strong><strong>between </strong><strong>objects </strong>and define the value as<strong> 0.2</strong> in. Select Object 1 as the <strong>Top </strong><strong>Die </strong>and
+    Object 2 as the <strong>Bottom </strong><strong>Die </strong>and select <strong>Y</strong> direction. Once you complete the settings, the reference points and current distance will be shown in the graphics window (See <a href="#Fig_l1_32_Stopping_controls_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>32.</a>).
+    Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Simulation controls page.</p>
+  <p>                                    </p>
+  <p style="text-align: center"><a id="Fig_l1_32_Stopping_controls_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0032.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Stopping controls window        </p>
+  <h4>Simulation controls</h4>
+  <p>Click on Simulation controls. We want to travel about 1.5 in. in 100 steps, so we will use a step increment of 0.015 in/step.  HOWEVER, we do not want the simulation to run out of steps since there is another stopping criteria (die distance) set. Since
+    we want to have flexibility when rerunning this case, we will set the number of simulation steps to 1000, not 100.  This will ensure that if we rerun the project with different settings, we will not need to worry about running out of steps. The stopping
+    will always be controlled by the distance between the tools.</p>
+  <p>Change the time stepping from System to <strong>User</strong>. Change the <strong>Number of steps</strong> to <strong>1000 </strong>and the <strong>Step increment</strong> to <strong>5</strong> and set the With <strong>constant </strong><strong>die </strong><strong>displacement </strong>to
+    <strong>0.015 </strong>in (See <a href="#Fig_L1_33_Simulation_controls_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>33</a>.).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_33_Simulation_controls_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0033.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls window</p>
+  <h4>Generate DB</h4>
+  <p>The system will pause briefly as it executes the scheduled positioning and contact generation. The workpiece color turns from red (Read from DB) to yellow (Plastic object).</p>
+  <p>Click <img src="../../../../../assets/icons/pre_icons/mo_generate_database.jpg"/>.</p>
+  <p> </p>
+  <p>Click on the MO <img src="../../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h4>Run and monitor a simulation</h4>
+  <p>Click the <img src="../../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> button and then uncheck submit job to the simulation queue. Unchecking this option will make the job run on the local computer. Use the default <strong>Start from last negative step</strong>    option. Click the <img src="../../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> button to start the simulation.</p>
+  <p> </p>
+  <h4>Review the results</h4>
+  <p>When the simulation is completed, click the MO <img src="../../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> Mode button to review results.</p>
+  <p>Play through all steps.  Note that the part does not completely fill out the die cavity (See <a href="#Fig_L1_34_Workpiece_shape_at_last_step_of_second_operation"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab1">Fig. L1.</span>34.</a>). </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_34_Workpiece_shape_at_last_step_of_second_operation"></a><img height="527" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab1_image0034.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece shape at last step of second operation</p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

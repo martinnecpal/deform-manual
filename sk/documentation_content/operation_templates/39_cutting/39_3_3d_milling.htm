@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.11.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>39.3. 3D Milling</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>39.3. 3D Milling</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/39_cutting/39_3_3d_milling.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/39_Cutting/39_4_Drilling.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/39_Cutting/39_2_3D_Turning.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="39.3. 3D Milling">
+        <span>39.3. 3D Milling</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>39.3. 3D Milling</h1>
+  <p><a href="#39_3_1_System_Summary">39.3.1. System Summary</a></p>
+  <p><a href="#39_3_2_Adding_Milling_Operation">39.3.2. Adding Milling Operation</a></p>
+  <p><a href="#39_3_3_Process_page">39.3.3. Process page</a></p>
+  <p><a href="#39_3_4_Material_List">39.3.4. Material List</a></p>
+  <p><a href="#39_3_5_Tool">39.3.5. Tool</a> </p>
+  <p style="margin-left: 40px"><a href="#39_3_5_1_Insert_Geometry">39.3.5.1. Insert Geometry</a> </p>
+  <p style="margin-left: 40px"><a href="#39_3_5_2_Coating_Material">39.3.5.2. Coating Materia</a>l </p>
+  <p style="margin-left: 40px"><a href="#39_3_5_3_Tool_Material_Selection">39.3.5.3. Tool Material Selection</a></p>
+  <p style="margin-left: 40px"><a href="#39_3_5_4_Tool_Mesh_Generation">39.3.5.4. Tool Mesh Generation</a></p>
+  <p style="margin-left: 40px"><a href="#39_3_5_5_Tool_BCC">39.3.5.5. Tool BCC</a> </p>
+  <p><a href="#39_3_6_Workpiece">39.3.6. Workpiece</a> </p>
+  <p style="margin-left: 40px"><a href="#39_3_6_1_Workpiece_Geometry">39.3.6.1. Workpiece Geometry</a> </p>
+  <p style="margin-left: 40px"><a href="#39_3_6_2_Workpiece_Material_Selection">39.3.6.2. Workpiece Material Selection</a></p>
+  <p style="margin-left: 40px"><a href="#39_3_6_3_Workpiece_Mesh_Generation">39.3.6.3. Workpiece Mesh Generation</a></p>
+  <p style="margin-left: 40px"><a href="#39_3_6_4_Workpiece_BCC">39.3.6.4. Workpiece BCC</a> </p>
+  <p><a href="#39_3_7_Control">39.3.7. Control</a></p>
+  <p><a href="#39_3_8_Tool_Wear">39.3.8. Tool Wear</a></p>
+  <p><a href="#39_3_9_Contact">39.3.9. Contact</a></p>
+  <p><a href="#39_3_10_Step_Control">39.3.10. Step Control</a></p>
+  <p><a href="#39_3_11_Generate_DB">39.3.11. Generate DB</a></p>
+  <h2><a id="39_3_1_System_Summary"></a>System Summary</h2>
+  <p>DEFORM® provides machining template which can be used to setup the Milling process. The template can be used to study cutting forces, cutting temperatures, chip shape, tool wear and perform tool life computations. The engineer can study the effect of
+    process parameters like, cutting speed, feed rate and depth of cut on the process response. The template simplifies the model definition and uses the same engineering language of process engineer. The simplified model is generated based on the feed
+    rate and depth of cut as shown in <a href="#Fig_39_3_1_Simulation_model_and_basic_cutting_parameters_definition"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>1.</a> The milling tool rotates about Z axis while depth of cut is in +Y direction
+    and feed direction is -X, feed and depth of cut will be measured from X= Z= 0.</p>
+  <h2><a id="39_3_2_Adding_Milling_Operation"></a>Adding Milling Operation</h2>
+  <p>To set up Milling process user need to add the 3D cutting template and select “<strong>Milling</strong>” option in the “Process” page as shown in <a href="#Fig_39_3_2_Milling_type_process_page"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>2.</a> For
+    more details on how to add problem please refer <a href="39_2_3d_turning.htm#39_2_1_How_to_add_3D_Cutting_Operation">39.2.1. How to add 3D Cutting Operation</a>.</p>
+  <h2><a id="39_3_3_Process_page"></a>Process page</h2>
+  <p>The process parameters to setup milling process are as shown in <a href="#Fig_39_3_2_Milling_type_process_page"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>2.</a><br/> Environment Heat Transfer: Environment temperature and convection co-efficient
+    are defined under this tab, for more information on defining these parameters refer.</p>
+  <p><strong>Cutting speed</strong> (v): It is defined as the speed at which the tool moves. The cutting speed can be defined as mm/sec or m/min in SI and in/sec or ft/min in English units.</p>
+  <p><strong>Rotation speed</strong>: It defines the rotational speed of the tool. The rotation speed can be defined in rpm and radians/sec.</p>
+  <p><strong>Mill diameter</strong> (D): It defines the diameter of the Mill. This diameter value will be used to generate the workpiece primitive.</p>
+  <p><strong>Depth of cut</strong> (d): It is the thickness of metal that is removed during machining. The perpendicular distance measured between the machined surface and the uncut surface of the workpiece.</p>
+  <p><strong>Feed rate</strong> (f): It is defined as the distance the tool travels during one revolution of the workpiece. This feed rate value gets updated in the workpiece geometry primitive page. This can be defined mm/rev or mm/sec in SI and in/rev
+    or in/sec in English units.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_1_Simulation_model_and_basic_cutting_parameters_definition"></a><img height="319" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0001.jpg" width="750"/></p>
+  <p class="Fig_numb">Simulation model and basic cutting parameters definition</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_2_Milling_type_process_page"></a><img height="400" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0002.jpg" width="439"/></p>
+  <p class="Fig_numb">Milling type process page</p>
+  <h2><a id="39_3_4_Material_List"></a>Material List</h2>
+  <p>In this Material List page, user can load a material from the library or keyword or database file using the <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>, <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> options as shown in <a href="#Fig_39_3_3_Assigning_the_Material_to_Material_list"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>3.</a> The materials loaded here can be assigned to the objects from their respective material page. User
+    can also add a new material using <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/>  button and define its properties. User can use <img src="../../../assets/icons/pre_icons/mo_delete_icon2.jpg"/> button to delete the loaded material.
+    User can also save the material using <img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/>, <img src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_3_Assigning_the_Material_to_Material_list"></a><img height="372" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0003.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Assigning the Material to Material list</p>
+  <h2><a id="39_3_5_Tool"></a>Tool </h2>
+  <p>In this Tool page, the user can define the temperature of the tool object. We can import the tool object using the <img src="../../../assets/icons/pre_icons/mo_import_object_button.jpg"/> button (see <a href="#Fig_39_3_4_Tool_Page"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>4.</a>).
+    If user wants to calculate the thermal data for tool object, select the “<strong>Calculate tool temperature</strong>” check box and we can observe that mesh options for tool are enabled so that we can mesh the tool to calculate temperature distribution.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_4_Tool_Page"></a><img height="325" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0004.jpg" width="449"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Tool Page</p>
+  <h3><a id="39_3_5_1_Insert_Geometry"></a>Insert Geometry </h3>
+  <p>Milling operation do not have primitive geometry definition for tool inserts as shown in <a href="#Fig_39_3_5_Insert_geometry_page"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>5.</a> User can import the tool geometry using the Import geometry <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> options. After importing the geometry if user can re-position the tool using <img src="../../../assets/icons/pre_icons/mo_edit_position_label_button.jpg"/> option.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_5_Insert_geometry_page"></a><img src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0005.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Insert geometry page</p>
+  <h4><br/> Defining Tool Geometry using Import geometry option</h4>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> and import DNMA432 geometry from DEFORM installed &quot;\3D\Machining\Insert\SI&quot; or &quot;<span class="misspell-word">\3D\Machining\Insert\EN</span>&quot; folder with
+    respect to Unit system. As the geometry is imported, a window with instructions for manual positioning is opened. If the imported tool is already in correct position, then user need not position it else user can proceed to manual positioning based
+    on the instructions. After completing the positioning user can click on   to close the window as shown in <a href="#Fig_39_3_6_After_importing_the_geometry_it_will_provide_the_positioning_options"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>6.</a>    The Manual positioning option are available as shown in <a href="#Fig_39_3_7_Manual_positioning_options"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>7.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_6_After_importing_the_geometry_it_will_provide_the_positioning_options"></a><img height="372" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0006.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">After importing the geometry, it will provide the positioning options</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_7_Manual_positioning_options"></a><img height="341" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0007.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Manual positioning options</p>
+  <h3><a id="39_3_5_2_Coating_Material"></a>Coating Material </h3>
+  <p>User can apply coating to tool insert by defining coating layer and its thickness in “Coating Material” page. User can define the coating layer material and its thickness by clicking on <img height="21" src="../../../assets/icons/pre_icons/mo_add_icon.jpg" width="21"/>  button  as shown in the <a href="#Fig_39_3_8_Coating_Material_Page"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>8.</a> If user wants to delete any layer then user has to select the respective layer and click on <img src="../../../assets/icons/pre_icons/mo_delete_icon.jpg"/>  button.</p>
+  <p><strong>Extract Coating Info</strong>: After Generating the coating, we can extract the coating info using this button.</p>
+  <p><strong>Delete Coating</strong>: We can also delete the Costing layers using this button. </p>
+  <p>Using the “<strong>Preserve state variables and boundary conditions</strong>” check box the user can create the coating layer without losing the state variable and boundary conditions data of the tool.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_8_Coating_Material_Page"></a><img height="325" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0008.jpg" width="389"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Coating Material Page</p>
+  <h3><a id="39_3_5_3_Tool_Material_Selection"></a>Tool Material Selection</h3>
+  <p>In material page, all the materials added to material list are displayed as shown in <a href="#Fig_39_3_9_Assigning_the_Tool_Material"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>9.</a> User can select the required material to assign it
+    to respective object. If the desired material is not available in the list, then the user can load the material in object material page using “Import Material” data from a File <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> or
+    using “Load form Library” option <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>. User can also create new material if the material is not available in DEFORM library using <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/>. User can delete the material from list using <img src="../../../assets/icons/pre_icons/mo_delete_icon2.jpg"/> or edit the material data using <img height="21" src="../../../assets/icons/pre_icons/mo_edit_button.jpg" width="56"/> . Modified /
+    newly defined material can be saved using <img height="20" src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg" width="21"/>, <img src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> .</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_9_Assigning_the_Tool_Material"></a><img src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0009.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Assigning the Tool Material</p>
+  <p> </p>
+  <h3><a id="39_3_5_4_Tool_Mesh_Generation"></a>Tool Mesh Generation</h3>
+  <p>User can generate mesh for the tool by defining relative or absolute mesh size data as shown in the <a href="#Fig_39_3_10_Tool_Mesh_Generation_using_relative_mesh_size"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>10</a>. &amp; <a href="#Fig_39_3_11_Tool_Mesh_Generation_using_absolute_mesh_size"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>11.</a>    It also provides the preview of the mesh when we click on <img src="../../../assets/icons/pre_icons/mo_preview_mesh_button.jpg"/> option. Cutting edge information being part of the insert data, the wizard automatically applies finer mesh near the
+    cutting zone.</p>
+  <p><br/>
+    <strong>Relative Mesh Method</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Target number of elements</strong>: The number of elements to be generated for an object can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation.</p>
+    </li>
+    <li>
+      <p><strong>Size Ratio:</strong>  It is the size ratio between the largest element edge length to smallest element edge length.</p>
+    </li>
+  </ul>
+  <p style="text-align: center"><a id="Fig_39_3_10_Tool_Mesh_Generation_using_relative_mesh_size"></a><img src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0010.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Tool Mesh Generation using relative mesh size</p>
+  <p><br/>
+    <strong>Absolute Mesh Method</strong></p>
+  <p><strong>Minimum element size</strong>: Feed rate automatically calculates the minimum element size of the mesh to be generated which calculates the Number of elements value automatically as shown in the <a href="#Fig_39_3_11_Tool_Mesh_Generation_using_absolute_mesh_size"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>11.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_11_Tool_Mesh_Generation_using_absolute_mesh_size"></a><img src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0011.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tool Mesh Generation using absolute mesh size</p>
+  <h3><a id="39_3_5_5_Tool_BCC"></a>Tool BCC </h3>
+  <p>In this BCC Page, the user can define the Thermal BCC like “Heat Exchange with Environment” and “Temperature”. The default BCC are assigned automatically after generating the mesh as shown in the <a href="#Fig_39_3_12_Default_Heat_exchange_BCC"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>12.</a></p>
+  <p style="text-align: center"><a id="Fig_39_3_12_Default_Heat_exchange_BCC"></a><img height="372" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0012.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Default Heat exchange BCC</p>
+  <h2><a id="39_3_6_Workpiece"></a>Workpiece </h2>
+  <p>In this Workpiece page, the user can define the object type and set its initial temperature. Plastic object type is selected by default as shown in <a href="#Fig_39_3_13_Workpiece_Page"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>13.</a>,
+    if user is interested to consider the effect of elastic properties then Elasto-plastic object type can be used. We can also import the object data using the <img src="../../../assets/icons/pre_icons/mo_import_object_button.jpg"/> button. </p>
+  <p style="text-align: center"><a id="Fig_39_3_13_Workpiece_Page"></a><img height="325" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0013.jpg" width="449"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Page</p>
+  <h3 class="h3_39_3_6"><a id="39_3_6_1_Workpiece_Geometry"></a>Workpiece Geometry </h3>
+  <p>In this Workpiece Geometry page, the user can define the workpiece geometry using the <img src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/>. The user can also import the geometry using the Import geometry <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>,<img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> options as shown in <a href="#Fig_39_3_14_Workpiece_Geometry_Page"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>14.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_14_Workpiece_Geometry_Page"></a><img height="325" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0014.jpg" width="389"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Workpiece Geometry Page</p>
+  <h4><br/> Defining Workpiece Geometry using Define Primitive option</h4>
+  <p>Using the <img src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> we will enter the ‘Workpiece Geo Primitive’ page. In this page user need to define the geometry parameters and click on button <img src="../../../assets/icons/pre_icons/mo_generate_2_button.jpg"/> to generate geometry as shown in the <a href="#Fig_39_3_15_Milling_Workpiece_Geometry"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>15.</a>  Based on the tool position user needs to define the start angle. User need to define the “Rotation
+    angle” to cover the simulation process time. The workpiece will be generate using start angle, rotation angle, mill dia, feed rate and depth of cut.</p>
+  <p style="text-align: center"><a id="Fig_39_3_15_Milling_Workpiece_Geometry"></a><img height="372" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Milling Workpiece Geometry</p>
+  <h3 class="h3_39_3_6"><a id="39_3_6_2_Workpiece_Material_Selection"></a>Workpiece Material Selection</h3>
+  <p>In material page, all the materials added to material list are displayed as shown in <a href="#Fig_39_3_16_Assigning_the_material_for_the_workpiece"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>16.</a> User can select the required material
+    to assign it to respective object. If the desired material is not available in the list, then the user can load the material in object material page using “Import Material” data from a File <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> or using “Load form Library” option <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>. User can also create new material if the material is not available in DEFORM library using <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> . User can delete the material from list using <img src="../../../assets/icons/pre_icons/mo_delete_icon2.jpg"/> or edit the material data using <img height="21" src="../../../assets/icons/pre_icons/mo_edit_button.jpg" width="56"/>. Modified /
+    newly defined material can be saved using <img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/>, <img src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> .</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_16_Assigning_the_material_for_the_workpiece"></a><img height="296" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Assigning the material for the workpiece</p>
+  <h3 class="h3_39_3_6"><a id="39_3_6_3_Workpiece_Mesh_Generation"></a>Workpiece Mesh Generation</h3>
+  <p>The User can generate the mesh by defining relative or absolute mesh size data as shown in the <a href="#Fig_39_3_17_Workpiece_mesh_generation_using_relative_mesh_size"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>17</a> &amp; <a href="#Fig_39_3_18_Workpiece_mesh_generation_using_absolute_mesh_size"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>18.</a>    It also provides the preview of the mesh when we click on <img src="../../../assets/icons/pre_icons/mo_preview_mesh_button.jpg"/> option.</p>
+  <p><br/>
+    <strong>Relative Mesh Method:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Target number of elements</strong>: The number of elements to be generated for an object can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation.</p>
+    </li>
+    <li>
+      <p><strong>Size Ratio</strong>: It is the size ratio between the largest element edge length to smallest element edge length.</p>
+    </li>
+  </ul>
+  <p style="text-align: center"><a id="Fig_39_3_17_Workpiece_mesh_generation_using_relative_mesh_size"></a><img height="325" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0017.jpg" width="389"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Workpiece mesh generation using relative mesh size</p>
+  <p><br/>
+    <strong>Absolute Mesh Method:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Define size by percentage of feed:</strong> The percentage of feed will automatically calculate the minimum element size of the mesh.</p>
+    </li>
+    <li>
+      <p><strong>Minimum element size:</strong> It sets the minimum element size of the mesh to be generated which is calculated from the percentage of feed value.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_18_Workpiece_mesh_generation_using_absolute_mesh_size"></a><img height="325" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0018.jpg" width="389"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece mesh generation using absolute mesh size</p>
+  <h3 class="h3_39_3_6"><a id="39_3_6_4_Workpiece_BCC"></a>Workpiece BCC </h3>
+  <p>In this BCC Page, the user can define the Deformation and Thermal BCC (like Velocity, Heat Exchange with Environment and Temperature). The BCC data will be automatically assigned after generating the mesh as shown in the <a href="#Fig_39_3_19_Default_velocity_BCC_has_been_assigned"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>19</a>    &amp; <a href="#Fig_39_3_20_Default_Heat_Exchange_BCC_has_been_assigned"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>20.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_19_Default_velocity_BCC_has_been_assigned"></a><img height="372" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0019.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Default velocity BCC has been assigned</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_20_Default_Heat_Exchange_BCC_has_been_assigned"></a><img height="372" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0020.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Default Heat Exchange BCC has been assigned</p>
+  <h2> <a id="39_3_7_Control"></a>Control</h2>
+  <p>Using “Position objects” the tool can be positioned based on the feed rate and workpiece location. Various positioning options are available to position the objects as shown in <a href="#Fig_39_3_21_Object_positioning_options"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>21</a>,
+    for more information on these options please refer <a href="../../pre_processor/16_object_properties/16_object_properties.htm">16. Object Properties</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_21_Object_positioning_options"></a><img height="267" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0021.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object positioning options</p>
+  <h2><a id="39_3_8_Tool_Wear"></a>Tool Wear</h2>
+  <p>User can turn on tool wear calculation using “<strong>Define model to calculate tool wea</strong><strong>r</strong>” check box. After turning on check box user can select the tool wear model and define its parameters as shown in the <a href="#Fig_39_3_22_Tool_Wear_page"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>22.</a>,
+    for more information on these options please refer <a href="../../pre_processor/20_inter-object_data_definition/20_4_tool_wear.htm">20.4. Tool Wear</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_22_Tool_Wear_page"></a><img height="350" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0022.jpg" width="463"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tool Wear page</p>
+  <h2><a id="39_3_9_Contact"></a>Contact</h2>
+  <p>By default, user radio button will be selected and default relations also will be defined for 3D Cutting operation as shown in <a href="#Fig_39_3_23_Contact_page"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>23.</a> User can modify the
+    value of each relation by selecting it and clicking on <img height="21" src="../../../assets/icons/pre_icons/mo_edit_button.jpg" width="56"/>  button. User can click on <img src="../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/>  button to
+    calculate contact tolerance. User can click on <img src="../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> to generate contact relation. User can turn on check box next to contact relation to define sticking contact.<br/> For more information
+    please refer <a href="../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm">20. Inter-Object Relations</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_23_Contact_page"></a><img height="375" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0023.jpg" width="496"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Contact page</p>
+  <h2><a id="39_3_10_Step_Control"></a>Step Control</h2>
+  <p>The user can define the step controls data using the Guided mode (<img src="../../../assets/icons/pre_icons/mo_guided_mode.jpg"/>) as shown in the <a href="#Fig_39_3_24_Step_controls_page_in_Guided_Mode"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>24.</a>    If user wants to use the advanced simulation controls than we can switch to the Expert mode (<img src="../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/>) as shown in the <a href="#Fig_39_3_25_Step_controls_page_in_Expert_Mode"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>25.</a>    For more information and description about options in Simulation controls please refer <a href="../../pre_processor/9_simulation_controls/9_simulation_controls.htm">9.Simulation Controls</a>.</p>
+  <p>In Guided Mode the user can define the Number of steps, Step increment and step increment control. User can define Arc angle to cut so that simulation stops after reaching the defined Arc angle.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_24_Step_controls_page_in_Guided_Mode"></a><img height="325" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0024.jpg" width="350"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Step controls page in Guided Mode</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_3_25_Step_controls_page_in_Expert_Mode"></a><img height="500" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0025.jpg" width="461"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Step controls page in Expert Mode</p>
+  <p> </p>
+  <h2><a id="39_3_11_Generate_DB"></a>Generate DB</h2>
+  <p><strong>Check Data</strong> <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/>: It checks the Data. If Data is correct, we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before
+    generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.<br/>
+    <br/>
+    <strong>Generate Database</strong> <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/>: By clicking on this button, it generates the Database for the setup (See <a href="#Fig_39_3_26_Generate_DB_page"><span data-keyref="Chapter_39_3_MIlling">Fig. 39.3.</span>26.</a>).<br/>
+    <br/>
+    <strong>Append Key file</strong> : Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values
+    can be defined as .key file and only .key file can be changed, and simulation can be resubmitted.</p>
+  <p style="text-align: center"><a id="Fig_39_3_26_Generate_DB_page"></a><img height="375" src="../../../assets/images/operation_templates/39_cutting/39_3_3d_milling/image0026.jpg" width="415"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate DB page</p>
+  <p> </p>
+  <p><strong>Related Topics :</strong></p>
+  <p><a href="39_introduction_to_cutting.htm">39 Introduction to Cutting</a></p>
+  <p><a href="39_1_2d_cutting.htm">39.1. 2D Cutting</a></p>
+  <p><a href="39_2_3d_turning.htm">39.2. 3D Turning</a></p>
+
+</body></html>

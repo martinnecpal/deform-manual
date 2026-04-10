@@ -1,0 +1,1 @@
+rh._.exports({"0":["55_4_Induction_Heating Labs"],"1":["\n  ","\n  ","Setting up Induction heating in DEFORM","\n  "," ","\n  ","Labs:","\n  ","2D Induction Heating Lab 1","\n  ","2D Induction Heating Lab 2","\n  "," ","\n  ","3D Induction Heating Lab1","\n  ","3D Induction Heating Lab2","\n  ","3D Induction Heating Lab3","\n\n"],"2":["Induction Heating "],"id":"307"})

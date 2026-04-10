@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Stress Relaxation Lab","type":"item","tilePath":"","url":"documentation_content/applications/55_applications/55_stress_relaxation/stress_relaxation_lab.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

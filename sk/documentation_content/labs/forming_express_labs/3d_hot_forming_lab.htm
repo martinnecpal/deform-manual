@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.10.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Hot Forming Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Hot Forming Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/forming_express_labs/3d_hot_forming_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Forming_Express_Labs/Tee_Non_Isothermal_Forging_Lab.htm"/><meta name="brsprev" value="Documentation_content/Labs/Forming_Express_Labs/3D_Gear_Mech_Press_Lab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Hot Forming Lab">
+        <span>3D Hot Forming Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3D Hot Forming Lab</h1>
+  <p>In this lab we will setup Tee forging operation in Forming Express operation.</p>
+  <p> </p>
+  <p><a href="#Operation1_Upsetting_operation">Operation 1 : Upsetting Operation</a></p>
+  <p><a href="#Operation2_Finish_Forge_operation">Operation 2 : Finish Forge operation</a></p>
+  <p> </p>
+  <h2>: <a id="Operation1_Upsetting_operation"></a>Upsetting operation</h2>
+  <h3>Creating a New Problem</h3>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear, as shown in <a href="#Fig_3DHFL1_1_DEFORM__GUI_Main_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_1_DEFORM__GUI_Main_window"></a><img height="435" src="../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> DEFORM  GUI Main window</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/>  icon. The Problem Setup window will appear as shown in <a href="#Fig_3DHFL1_2_Problem_type_selection_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>2.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong>Tee </strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>”
+    check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" style="cursor: nwse-resize;" width="73"/> button to open a new Problem using the Deform Integrated
+    Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_2_Problem_type_selection_window"></a><img height="419" src="../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem type selection window</p>
+  <p> </p>
+  <p>Integrated Manufacturing Process will open (see <a href="#Fig_3DHFL1_3_Problem_location_selection_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>3.</a>), at this point user will be prompted to specify a project
+    name (system will create a separate folder with this project name) and title for this session. In this session we will use &quot;<strong><strong>Tee </strong></strong>&quot; as the project name. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_3_Problem_location_selection_window"></a><img height="400" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem location selection window</p>
+  <h3>Adding 3D Forming Express operation - Bush</h3>
+  <p>Once you click on Finish button, a Multiple Operation wizard will open to setup the problem. <strong>Add </strong><strong>3D Forming Express</strong> operation from Operations list in Explorer. Operation can be add by clicking on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to 3D Forming express operation (see <a href="#Fig_3DFEL1_4_Added_3D_Forming_Express_operation_into_Operation_editor"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>4.</a>) or user can also add by
+    drag and drop into the Operation Editor.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFEL1_4_Added_3D_Forming_Express_operation_into_Operation_editor"></a><img height="386" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added 3D Forming Express operation into Operation editor</p>
+  <p> </p>
+  <p><strong>Change Operation Name</strong></p>
+  <p>Change the Operation name to &quot;<strong>Bush</strong>&quot; by double click on Forming field in Operation editor as shown in <a href="#Fig_3DHFL1_5_Changing_Operation_name_from_Operation_Editor"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_5_Changing_Operation_name_from_Operation_Editor"></a><img height="157" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Changing Operation name from Operation Editor</p>
+  <h3>Define Process settings</h3>
+  <p>In <strong>Process page</strong>, select Process type as Hot Forging by selecting <strong>Hot Forging</strong> radio button. For this lab, we will simulate the whole part, by default Whole part will be selected if not select Geometry type as Whole part.
+    The shape complexity and simulation accuracy slider bars influence the mesh settings and number of time steps used in the simulation. This in turn, influences the run time and level of details available in the simulation. For this simulation, we will
+    use a “<strong>Simple</strong>” geometry and “<strong>Fast</strong>” calculations, so drag both slider bars all the way to the left as shown in <a href="#Fig_3DHFL1_6_Process_page"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>6.</a>    then click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_6_Process_page"></a><img height="315" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0006.jpg" width="393"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process page</p>
+  <h3>Select Thermal Calculation</h3>
+  <p>For this simulation, we will run with <strong>constant temperature (isothermal)</strong>. This means that an initial workpiece temperature will be assigned, but DEFORM will neglect any changes in temperature during the calculations. Select <strong>Constant temperature (Isothermal) </strong>radio
+    button as shown in <a href="#Fig_3DHFL1_7_Thermal_calculation_mode_selection_page"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>7.</a> Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_7_Thermal_calculation_mode_selection_page"></a><img height="325" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0007.jpg" width="406"/></p>
+  <p> </p>
+  <p class="Fig_numb">Thermal calculation mode selection page</p>
+  <h3>Select Number of Objects</h3>
+  <p>This simulation will have 1 workpiece and 2 dies, use default selection as shown in Fig L1.8 then click .</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0008.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Number of Objects window</p>
+  <p> </p>
+  <h3>Workpiece General Definition</h3>
+  <p>The workpiece will have an initial temperature of 2250°F, Change the <strong>Workpiece </strong><strong>Temperature </strong>to <strong>2150°F </strong>as shown in <span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>9.
+    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong> There is an “import object” button on the “object” page. This is for importing complete object data from another object data file.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_9_Workpiece_Object_page"></a><img src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0009.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Object page</p>
+  <h4 class="h4_1_6_">Import Workpiece Geometry</h4>
+  <p>In Geometry page,  click on Load Geometry from Library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button, Import <strong>TeeBillet.stl </strong>file as shown in <span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>10.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_10_Import_Geometry_page"></a><img height="386" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Import Geometry page</p>
+  <p> </p>
+  <p>Check the Geometry by clicking on <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> action label. The “Geometry Checking Result” window contains a description of what constitutes a legal geometry as shown in <a href="#Fig_3DHFL1_11_Check_geometry_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>11.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> .</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_11_Check_geometry_window"></a><img height="377" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Check geometry window</p>
+  <h4 class="h4_1_6_">Workpiece mesh Generation</h4>
+  <p>Generate mesh for the <strong>system </strong>type mesh settings value by click on<img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> option as shown in <a href="#Fig_3DHFL1_12_Workpiece_Mesh_page"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>12.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_12_Workpiece_Mesh_page"></a><img height="320" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0012.jpg" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Mesh page</p>
+  <h4 class="h4_1_6_">Assign Material for Workpiece</h4>
+  <p>In Material window, load the material <strong>AISI-316[70-2020F(20-1100C)]</strong> from DEFORM Material library, from <strong>Steel_at_Extended_Temperature </strong>category using  <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material data from library) option. This can be done as shown in below <a href="#Fig_3DHFL1_13_Material_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>13.</a> by clicking <img src="../../../assets/icons/pre_icons/mo_load_button.jpg"/> button. Material can also be loaded from Materials list in Explorer. Then click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Top Die page.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_13_Material_window"></a><img height="463" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material window</p>
+  <h3>Top Die Definition</h3>
+  <p>In Top Die page, use the default Object Temperature (<strong>300</strong>°F) as shown in <a href="#Fig_3DHFL1_14_Top_Die_page"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>14.</a>, Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_14_Top_Die_page"></a><img height="320" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0014.jpg" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top Die page</p>
+  <h4 class="h4_1_7_">Import Top Die geometry</h4>
+  <p>Click on Load Geometry from Library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button, Import <strong>TeeTop.stl</strong> file as shown in <a href="#Fig_3DHFL1_15_Import_Geometry_option"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>15.</a>    Then check the geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> option. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_15_Import_Geometry_option"></a><img height="382" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Import Geometry option</p>
+  <h4 class="h4_1_7_">Assign Top Die movement</h4>
+  <p>Under the movement options, select speed option. Be sure movement is in the <strong>–Z</strong> direction and enter a <strong>speed </strong>of <strong>10 </strong>in/sec as shown in <a href="#Fig_3DHFL1_16_Top_Die_Movement_page"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>16.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_16_Top_Die_Movement_page"></a><img height="320" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0016.jpg" width="396"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top Die Movement page</p>
+  <h3>Bottom Die Definition</h3>
+  <p>In Bottom Die page, use the default Object <strong>Temperature </strong>(<strong>300</strong>°F), Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h4>Import Bottom Die Geometry</h4>
+  <p>Click on Load Geometry from Library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button, Import <strong>TeeBottom.stl</strong> file. Then check the geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/>option. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3>Object Positioning</h3>
+  <p>We will perform this operation with the workpiece in vertical direction. We will first position the workpiece on the bottom die. To make it easier to see, change to “<strong>User Defined Object Display</strong>” mode in the control bar at the bottom
+    of the object tree. Select Top Die in Object mode window and uncheck the check box in Visible column as shown in <a href="#Fig_3DHFL1_17_Object_mode_window_to_Turn_of_Top_die_in_Display_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>17.</a>,
+    then click <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_17_Object_mode_window_to_Turn_of_Top_die_in_Display_window"></a><img height="385" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object mode window to Turn of Top die in Display window</p>
+  <p> </p>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/> option object positioning will open, select <img src="../../../assets/icons/pre_icons/mo_rotational_radio_button.jpg"/> positioning. Select the workpiece. Use
+    the mouse to pick a point around the center of the workpiece, and then select the “<strong>X</strong>” axis as the axis of rotation. Enter an angle of <strong>90 </strong>degrees, and <img src="../../../assets/icons/pre_icons/mo_apply_button.jpg"/>. The workpiece should now be  positioned vertical. (See <a href="#Fig_3DHFL1_18_Object_positioning_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>18.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_18_Object_positioning_window"></a><img height="320" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0018.jpg" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object positioning window</p>
+  <p> </p>
+  <p>Switch to <img height="20" src="../../../assets/icons/pre_icons/mo_drag_radio_button.jpg" width="49"/> positioning. Click on the “<strong>X</strong>” or “<strong>Y</strong>” axis and use the mouse to drag the billet to a flat spot on the die, not too
+    close to either the forming cavity or the edge of the die. Use <img src="../../../assets/icons/pre_icons/mo_interference_radio_button.jpg"/> positioning to place the billet on the bottom die. (See <a href="#Fig_3DHFL1_19_Positioning_the_billet_on_the_bottom_die"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>19</a>.)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_19_Positioning_the_billet_on_the_bottom_die"></a><img height="385" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Positioning the billet on the bottom die</p>
+  <p> </p>
+  <p>Now click on  User defined mode <img src="../../../assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg" style="cursor: nesw-resize;"/> and check the <strong>Top Die</strong> visible check box, then position Top die using Interference Positioning
+    on Billet so that it is in contact with the billet. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> and <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3>Contact (Inter object Relation) Definition</h3>
+  <p>Select <strong>User </strong><strong>defined </strong>- “<strong>Hot forging (lubricated)</strong>” for friction condition as shown in <a href="#Fig_3DHFL1_20_Contact generation page"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>20.</a>    and click on <img src="../../../assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg"/>. DEFORM will automatically mark the nodes that are initially in contact with the die. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_20_Contact generation page"></a><img height="320" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0020.jpg" width="394"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact generation page</p>
+  <h3>Primary Die stroke definition</h3>
+  <p>The primary die stroke is an estimate of the distance the die will travel during forming. This value does not have to be exact (exact stopping criteria will be specified at the next screen).</p>
+  <p>For this problem, we will upset a 3.300” billet to 1.500”. The primary die stroke is about 1.800”, so define <strong>Total Primary die travel</strong> as <strong>1.8</strong> inches as shown in <a href="#Fig_3DHFL1_21_Primary_Die_stroke_page"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>21.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_21_Primary_Die_stroke_page"></a><img height="320" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0021.jpg" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb">Primary Die stroke page</p>
+  <h3>Stopping Controls Definition</h3>
+  <p>We want to stop when the dies are 1.500” apart. So set “Stop Controls” to “Distance between objects&quot;. Enter a value of <strong>1.5</strong>” as shown in <a href="#Fig_3DHFL1_22_Stopping_controls_page"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>22.</a>    Turn on shaded mesh, and select a point on the bottom surface of the top die, and a second point on the top surface of the bottom die. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_22_Stopping_controls_page"></a><img height="385" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0022.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping controls page</p>
+  <h3>Simulation Controls Definition</h3>
+  <p>The number of simulation steps and step increment are established by the object shape complexity slider bar settings. If you want to change the default values, you can do it at this window. We will accept default values for this lab as shown in <a href="#Fig_3DHFL1_23_Simulation_controls"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>23.</a>,
+    then click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_23_Simulation_controls"></a><img height="320" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0023.jpg" width="396"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls</p>
+  <h3>Generate Database</h3>
+  <p>In Generate DB page. Click the <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. During the checking process:</p>
+  <p>Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).  </p>
+  <p> </p>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. When the program is done writing the database, click on <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> tab
+    to run simulation.</p>
+  <h3>Running simulation</h3>
+  <p>Click on the <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DHFL1_24_Run_Simulation_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>24.</a> Use
+    the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_24_Run_Simulation_window"></a><img height="282" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0024.jpg" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation window</p>
+  <p> </p>
+  <p>The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as the <img src="../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.</p>
+  <p> </p>
+  <p> The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.</p>
+  <p> </p>
+  <p>When the simulation is finished without any issues, check the messages in Message file, when operation completes we will see messages as .&quot;THE DISTANCE BETWEEN TWO OBJECTS (   2   3):           1.5000000 HAS REACHED THE SPECIFIED LIMIT        1.5000000
+    &quot;.</p>
+  <h3>Post process the upsetting operation</h3>
+  <p>After completion of Simulation, switch to <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> mode for post processing. Click on <img src="../../../assets/icons/pre_icons/mo_all_button.jpg"/> button in Step Browser to see all saved
+    steps as shown in <a href="#Fig_3DHFL1_25_MO_Post__mode"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>25.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_25_MO_Post__mode"></a><img height="374" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0025.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO Post  mode</p>
+  <p><strong>State Variable:</strong></p>
+  <p>From the state variable menu, click on <img height="21" src="../../../assets/icons/post_icons/mo_state_variable_icon.jpg" width="22"/> button, select strain effective variable, Display type as <strong>Solid </strong>and click on <strong><img src="../../../assets/icons/pre_icons/mo_apply_button.jpg"/> </strong>as
+    shown in <a href="#Fig_3DHFL1_26_Strain_-_Effective_State_variable_plot"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>26,</a> you can display line or shaded contours. It is also possible to select solid shading,
+    or element shading. Experiment with each of these settings.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_26_Strain_-_Effective_State_variable_plot"></a><img height="380" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0026.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Strain - Effective State variable plot</p>
+  <p><strong>Point Tracking:</strong></p>
+  <p>Select <img src="../../../assets/icons/post_icons/mo_point_tracking_icon.jpg"/> <strong>point tracking</strong>. Select few points on the object, and track the points using <img src="../../../assets/icons/post_icons/mo_track_button.jpg"/> option (see
+    <a href="#Fig_3DHFL1_27_Point_tracking"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>27.</a>). If a state variable is displayed, the values of the variables will be graphed at these points.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_27_Point_tracking"></a><img height="390" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0027.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Point tracking</p>
+  <p> </p>
+  <h2>: <a id="Operation2_Finish_Forge_operation"></a>Finish Forge operation</h2>
+  <p>After completion of simulation switch to <img src="../../../assets/icons/pre_icons/mo_pre_mode_button.jpg"/> mode.</p>
+  <h3 class="h3_operation2">Add and Define 2nd operation</h3>
+  <p>Add another Forming express operation to setup Finish forge operation. In this operation we are positioning the Workpiece over the cavity in Die and simulating the Finish forge operation.</p>
+  <p> </p>
+  <p><strong>Select batch mode:</strong></p>
+  <p>Select 2nd operation from Operation editor, Setup type popup will appear and click on  <img src="../../../assets/icons/pre_icons/mo_no_batch_setup_button.jpg"/> button (Since we are setting up second operation in Batch mode).</p>
+  <p> </p>
+  <p><strong>Change operation name:</strong></p>
+  <p>Change operation name to &quot;<strong>Finish Forge</strong>&quot; from Operation editor as shown in <a href="#Fig_3DHFL1_28_Changing_operation_name"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_28_Changing_operation_name"></a><img height="179" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0028.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Changing operation name</p>
+  <p> </p>
+  <h3 class="h3_operation2">Define Process settings for finishing operation</h3>
+  <p>Change the object shape complexity to “<strong>Moderate</strong>”. Leave accuracy at “<strong>Fast</strong>&quot; as shown in <a href="#Fig_3DHFL1_29_Process_settings_for_finishing_operation"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>29.</a>    and click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Scheduled positioning page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_29_Process_settings_for_finishing_operation"></a><img height="320" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0029.jpg" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process settings for finishing operation</p>
+  <p> </p>
+  <h3 class="h3_operation2">Scheduled positioning</h3>
+  <p>Add relation by clicking on <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button, select positioning object as <strong>Workpiece </strong>and select <strong>Offset </strong>option, define the <strong>X</strong> and <strong>Y</strong>    value to position the workpiece on Die cavity.</p>
+  <p>Similarly add relations to position<strong> Top die</strong> on <strong>Workpiece </strong>in <strong>-Z</strong> direction and <strong>Bottom </strong><strong>Die </strong>below <strong>Workpiece </strong>in <strong>+Z </strong>Direction using <strong>Interference </strong>positioning
+    options as shown in <a href="#Fig_3DHFL1_30_Scheduled_positioning_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>30.</a> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_30_Scheduled_positioning_window"></a><img height="320" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0030.jpg" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scheduled positioning window</p>
+  <p> </p>
+  <h3 class="h3_operation2">Contact (Inter object Relation) Definition</h3>
+  <p>Select <strong>User </strong><strong>defined </strong>- “<strong>Hot forging (lubricated)</strong>” for friction condition as shown in <a href="#Fig_3DHFL1_20_Contact generation page"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>20.</a>     Click on <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <h3 class="h3_operation2">Defining Primary Die stroke</h3>
+  <p>We will forge from an initial height of 1.500” to a flash height of 0.250”, for a total stroke of 1.250”. Enter <strong>1.25 </strong>value as the <strong>primary </strong><strong>die </strong><strong>stroke </strong>value as shown in <a href="#Fig_3DHFL1_31_Primary_Die_stroke_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>31.</a>    Click on <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_31_Primary_Die_stroke_window"></a><img height="320" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0031.jpg" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb">Primary Die stroke window</p>
+  <h3 class="h3_operation2">Stopping controls</h3>
+  <p>We are forging to a flash thickness of 0.250&quot;. So check the Distance between objects check box, Select points on the bottom of the top die, and the top of the bottom die. Enter a stopping distance of <strong>0.250 </strong>and Select <strong>Z</strong>    direction as shown in <a href="#Fig_3DHFL1_32_Stopping_controls_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>32.</a> Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_32_Stopping_controls_window"></a><img height="382" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0032.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping controls window</p>
+  <h3 class="h3_operation2">Simulation controls</h3>
+  <p>Use the Default System Step definition values as shown in <a href="#Fig_3DHFL1_33_Simulation_controls_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>33.</a> and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_33_Simulation_controls_window"></a><img height="340" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0033.jpg" width="425"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls window</p>
+  <h3 class="h3_operation2">Generating DB</h3>
+  <p>When user visit DB generation page, you can see the objects are positioned with respect to Scheduled positioning data, check the position of Workpiece on Die cavity is ok, then check and Generate Database (see <a href="#Fig_3DHFL1_34_Generate_Database_page"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>34.</a>),
+    after generating Database switch to  <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> mode to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_34_Generate_Database_page"></a><img height="389" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0034.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate Database page</p>
+  <h3 class="h3_operation2">Running simulation</h3>
+  <p>Click on the <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DHFL1_24_Run_Simulation_window"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>24.</a>     Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.  As we click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button simulation starts.</p>
+  <p> </p>
+  <p>When the simulation is finished without any issues, check the messages in Message file, when operation completes we will see messages as,</p>
+  <p>“PROGRAM STOPPED!</p>
+  <p>THE DISTANCE BETWEEN TWO OBJECTS ( 2 3): 0.2500000 HAS REACHED THE SPECIFIED LIMIT 0.2500000 “.</p>
+  <p>After completion of simulation, switch to <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> mode.</p>
+  <p> </p>
+  <h3 class="h3_operation2">Post processing finishing operation</h3>
+  <p>Play through the simulation. Did the part fill the die cavity? You may want to turn one or the other die off, or use transparency to better visualize the part.</p>
+  <p> </p>
+  <p>Right click on the workpiece icon in the process tree and turn on display contact. Watch how the contact evolves as the part fills out die, see <a href="#Fig_3DHFL1_35_Contact_display_to_check_the_underfill"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>35.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_35_Contact_display_to_check_the_underfill"></a><img height="380" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0035.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact display to check the underfill</p>
+  <p> </p>
+  <p>Plot the<strong> load-stroke</strong> curve as shown in <a href="#Fig_3DHFL1_36_Load_-Stroke_Graph_plot"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>36.</a> Observe how the load increases as the part fills out
+    the die and forms flash.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_36_Load_-Stroke_Graph_plot"></a><img height="375" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0036.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Load -Stroke Graph plot</p>
+  <p> </p>
+  <p>Plot the strain rate during forming as shown in <a href="#Fig_3DHFL1_37_Strain_Rate_Effective_state_variable_plot"><span data-keyref="Labs_Forming_Express_lab_3D_Hot_Forming_Lab">Fig. 3DHFL1.</span>37.</a> Observe what happens in the flash area.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_37_Strain_Rate_Effective_state_variable_plot"></a><img height="388" src="../../../assets/images/labs/forming_express_labs/3d_hot_forming_lab/image0037.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Strain Rate Effective state variable plot</p>
+  <p> </p>
+
+</body></html>

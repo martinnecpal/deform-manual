@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"56. User Routines in DEFORM","type":"book","tilePath":"","url":"documentation_content/user_routines/56_user_routines_in_deform/56_user_routines_in_deform.htm","key":"toc97"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

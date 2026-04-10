@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.9.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>ALE Extrusion Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>ALE Extrusion Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/extrusion_labs/ale_extrusion_lab1.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Extrusion_Labs/Lagrangian_Extrusion_Lab1.htm"/><meta name="brsprev" value="Documentation_content/Labs/Extrusion_Labs/Extrusion_Labs_Main_Pg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="ALE Extrusion Lab1">
+        <span>ALE Extrusion Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>ALE Extrusion Lab1</h1>
+  <p>In this Lab we are setting up a operation of ALE extrusion. We will also introduce the acceleration updating of state variables, and compare its simulation result with that of without acceleration updating in this Lab.</p>
+  <p>The application of this lab will extrude 5 small cylinder parts from a large cylinder billet. The model of the workpiece is shown as <a href="#Fig_ALEEXL1_1_Model_of_the_Workpiece"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>1.</a>    The diameter of D0 is 140 mm. The diameter of D1 is 26 mm. The diameters of D2 and D4 are 27 mm. The diameters of D3 and D5 are 28 mm. Due to the model with symmetry, we will use a quarter model for simulation in this lab.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_1_Model_of_the_Workpiece"></a><img height="343" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0001.jpg" width="720"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Model of the Workpiece</p>
+  <p> </p>
+  <p> </p>
+  <p><a href="#1_1_Creating_a_New_Problem">1.1. Creating a New Problem </a> </p>
+  <p><a href="#1_2_Add_Operation">1.2. Add Operation</a></p>
+  <p><a href="#1_3_Simulation_Setup">1.3. Simulation Setup</a></p>
+  <p><a href="#1_4_Material_list">1.4. Material list</a></p>
+  <p><a href="#1_5_Dies">1.5. Dies</a></p>
+  <p><a href="#1_6_Ram">1.6. Ram</a></p>
+  <p><a href="#1_7_Container">1.7. Container</a></p>
+  <p><a href="#1_8_Die">1.8. Die</a></p>
+  <p><a href="#1_9_Workpiece">1.9. Workpiece</a></p>
+  <p><a href="#1_10_Controls">1.10. Controls</a> </p>
+  <p><a href="#1_11_Contact">1.11. Contact</a></p>
+  <p><a href="#1_12_Step_Controls">1.12. Step Controls</a></p>
+  <p><a href="#1_13_Generate_DB">1.13. Generate DB</a></p>
+  <p><a href="#1_14_Running_Simulation">1.14. Running Simulation</a></p>
+  <p><a href="#1_15_Acceleration_Updating_of_State_Variables">1.15. Acceleration Updating of State Variables</a> </p>
+  <p><a href="#1_16_Post_Processing">1.16. Post Processing</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_a_New_Problem"></a>Creating a New Problem  </h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear as shown below <a href="#Fig_ALEEXL1_2_DEFORM_GUI_Main_window"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1" style="font-size: 12pt;">Fig. ALEEXL1.</span><span style="font-size: 12pt;">2.</span></a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_2_DEFORM_GUI_Main_window"></a><img height="372" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0002.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">DEFORM GUI Main window</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/>  icon. The Problem Setup window will appear as shown in <a href="#Fig_ALEEXL1_3_New_Problem_page"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>3.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>SI</strong>&quot; radio button in unit field. Define Problem Name as &quot;<strong><strong>3D_ALE_EX_Lab1</strong></strong>&quot; and make sure the “<strong>Show option dialog</strong>” check box is turned
+    on (if we do not turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open
+    a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_3_New_Problem_page"></a><img height="372" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem page</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use &quot;<strong>3D_ALE_EX_Lab1 </strong>&quot;
+    as the project name. In this lab we will add Extrusion operation from Explorer operation list, so do not check &quot;First operation&quot; check box in &quot;New Project&quot; dialog.   Click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to continue to open the operation.</p>
+  <h2><a id="1_2_Add_Operation"></a>Add Operation</h2>
+  <p>Add 3D Extrusion operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button available next to 3D Extrusion or can also be added by drag and drop into the
+    Operation editor (see <a href="#Fig_ALEEXL1_4_Adding_3D_Extrusion_operation"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>4.</a>). When we add the Extrusion operation, process settings Window will open by default.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_4_Adding_3D_Extrusion_operation"></a><img height="372" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding 3D Extrusion operation</p>
+  <h2><a id="1_3_Simulation_Setup"></a>Simulation Setup</h2>
+  <p>In the Simulation setup dialog, choose <strong>ALE extrusion</strong> radio button as Simulation method. Set Thermal calculation as<strong> Workpiece only (non–isothermal) </strong>and Die model type as <strong>With symmetry condition</strong>. select
+    both <strong>Strain update</strong> and <strong>Temperature update</strong> and set the value with<strong> 1</strong> per step in Acceleration, which means there is no acceleration updating in this simulation. Simulation setup looks like as shown
+    as <a href="#Fig_ALEEXL1_5_Simulation_setup_settings"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>5.</a> Then click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material list page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_5_Simulation_setup_settings"></a><img height="400" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0005.jpg" width="397"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation setup settings</p>
+  <h2><a id="1_4_Material_list"></a>Material list</h2>
+  <p>In the Material dialog, click Load material data from library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>. Load the material &#39;<strong>ALUMINUM-6061[70-1000F(20-550C)]</strong>&#39; from <strong>Aluminum </strong>category,
+    as shown in <a href="#Fig_ALEEXL1_6_Material_list"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>6.</a>, and then click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Dies page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_6_Material_list"></a><img height="350" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0006.jpg" width="389"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material list</p>
+  <h2><a id="1_5_Dies"></a>Dies</h2>
+  <p>By Default, 2 dies will be added in operation, in this lab we need 3 dies. So, click on <img height="25" src="../../../assets/icons/pre_icons/mo_add_icon.jpg" width="25"/>  button to make Number of Dies as 3 (see <a href="#Fig_ALEEXL1_7_Added_Dies"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>7</a>.).
+    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Top Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_7_Added_Dies"></a><img height="350" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0007.jpg" width="389"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added Dies</p>
+  <h2><a id="1_6_Ram"></a>Ram</h2>
+  <p>Change the name of the Top Die object to <strong>Ram</strong>. Set the die <strong>temperature </strong>to <strong>400</strong>°C and keep the object type to <strong>Rigid </strong>and uncheck the Assign Bearing surface check box. Then click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Geometry page.</p>
+  <h3>Ram Geometry</h3>
+  <p>Click on Import geometry from library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> and <strong>load Ram_Geo.stl </strong>from 3D/LABS folder, then click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to
+    Symmetry page.  In Symmetry dialog, define P<strong>lanar Symmetry</strong> for the Ram on Symmetry planes as shown in (see <a href="#Fig_ALEEXL1_8_Ram_Geometry"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>8.</a>).
+    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_8_Ram_Geometry"></a><img height="372" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Ram Geometry</p>
+  <h3>Ram Movement</h3>
+  <p>In the <strong>Movement </strong><strong>dialog</strong>, define the <strong>Speed </strong>as <strong>4</strong> mm/sec as shown in <a href="#Fig_ALEEXL1_9_Ram_Movement_page"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>9.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Bottom Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_9_Ram_Movement_page"></a><img height="325" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0009.jpg" width="361"/></p>
+  <p> </p>
+  <p class="Fig_numb">Ram Movement page</p>
+  <h2><a id="1_7_Container"></a>Container</h2>
+  <p>Change the name of the Bottom die to <strong>Container</strong>. Set the die <strong>temperature </strong>to <strong>350</strong>°C and keep the object type to <strong>Rigid </strong>and uncheck the Assign Bearing surface check box. Then click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Geometry page.</p>
+  <h3 class="h3_1_7_">Container Geometry</h3>
+  <p>Click on Import geometry from library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> and load <strong>Container_Geo.stl</strong> file from 3D/LABS folder, then click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>. In Symmetry dialog, define <strong>Planar Symmetry </strong>for the Container on Symmetry planes as shown in <a href="#Fig_ALEEXL1_10_Container_geometry"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>10.</a> Click
+    on  <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_10_Container_geometry"></a><img height="373" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Container geometry</p>
+  <h3 class="h3_1_7_">Container Movement</h3>
+  <p>In the Movement dialog, leave the <strong>Speed</strong> as <strong>0</strong> mm/sec. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Object 4 page.</p>
+  <h2><a id="1_8_Die"></a>Die</h2>
+  <p>Change the name of the Object 4 to <strong>Die</strong>. Set the die temperature to <strong>350</strong>°C. Keep the object type to <strong>Rigid </strong>and <strong>check </strong><strong>Assign Bearing Surface</strong> for ALE extrusion (see <a href="#Fig_ALEEXL1_11_Setting_of_the_Die"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>11.</a>).
+    Then click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_11_Setting_of_the_Die"></a><img height="350" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0011.jpg" width="389"/></p>
+  <p> </p>
+  <p class="Fig_numb">Setting of the Die</p>
+  <h3 class="h3_1_8_">Die Geometry</h3>
+  <p>Click Import geometry from library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> and load <strong>Die_Geo.stl</strong> file from 3D/LABS folder, then click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>. In Symmetry dialog, define <strong>Planar Symmetry </strong>for the Die on Symmetry planes as shown in <a href="#Fig_ALEEXL1_12_Die_geometry"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>12.</a> Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Bearing Surface page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_12_Die_geometry"></a><img height="372" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0012.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Die geometry</p>
+  <h3 class="h3_1_8_">Bearing Surface</h3>
+  <p>In Bearing Surface page, we will define bearing surfaces and add them to the bearing surface list. For this die object, there are 3 bearing surfaces. Keep the <strong>Select </strong>mode in the left column. To define the bearing surface, we select
+    all the patches related to the bearing and click <img height="23" src="../../../assets/icons/pre_icons/mo_add_icon.jpg" width="23"/> button. A highlighted bearing surface with<strong> ID &lt;1&gt;</strong> will be added to the list when we defined
+    the first bearing surface. Then we define the second and the third bearing surfaces similarly. Complete list of bearing surfaces is shown in <a href="#Fig_ALEEXL1_13_Bearing_Surface"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>13.</a>    The first, second and third bearing surfaces are highlighted with yellow, red and orange color respectively in the die geometry display. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to go to Bearing Control Points page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_13_Bearing_Surface"></a><img height="372" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bearing Surface</p>
+  <h3 class="h3_1_8_">Bearing Control points</h3>
+  <p>After define the bearing surface, a virtual bearing and it bearing length distribution will be generated for bearing control points definition (see <a href="#Fig_ALEEXL1_14_Bearing_surface_original_settings"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>14.</a>).
+    In &quot;<strong>3D_SS_EX_Lab1</strong>&quot;, we will introduce how to define bearing control points to adjust the bearing length. In this lab, we will not adjust the bearing length, so there is no need to define bearing control points. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_14_Bearing_surface_original_settings"></a><img height="374" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bearing surface original settings</p>
+  <h3 class="h3_1_8_">Die Movement</h3>
+  <p>In the Movement dialog, leave the <strong>Speed </strong>as <strong>0</strong> mm/sec. Go to next page by clicking <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button .</p>
+  <h2><a id="1_9_Workpiece"></a>Workpiece</h2>
+  <p>Keep the default name of the Workpiece object as <strong>Workpiece</strong>. Set the Workpiece <strong>temperature </strong>to <strong>400</strong>°C and keep the object type as <strong>Plastic</strong>. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Geometry page.</p>
+  <h3 class="h3_1_9_">Workpiece geometry</h3>
+  <p>Click Import geometry from library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> and load <strong>ALE_Workpiece_Geo.stl</strong> from 3D/LABS folder, then click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>. In <strong>Symmetry</strong> dialog, define<strong> Planar Symmetry</strong> for the workpiece on <strong>Symmetry </strong><strong>planes </strong>as shown in (see <a href="#Fig_ALEEXL1_15_Workpiece_geometry"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>15.</a>).
+    In this lab, the length of extrudate is 120 mm, the length in container is 150 mm. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Mesh generation type page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_15_Workpiece_geometry"></a><img height="371" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece geometry</p>
+  <h3 class="h3_1_9_">Workpiece Mesh Generation type</h3>
+  <p>In the <strong>Mesh Generation Type</strong> page, two options are provided for mesh generation of ALE workpiece. One is <strong>Mesh Extruding Utility</strong> and the other is <strong>Regular Meshing</strong>.</p>
+  <p> </p>
+  <p>In the previous versions for ALE and Steady state extrusion simulations, mesh was generated using <strong>Regular Meshing</strong> (DEFORM-3D mesh generator). The mesh generator first creates a surface mesh and then generates an unstructured tetrahedral
+    volumetric mesh.</p>
+  <p> </p>
+  <p>In this lab, we will demonstrate how to generate extruded mesh using <strong>Mesh Extruding Utility</strong>.</p>
+  <p> </p>
+  <p>In simulations of ALE and Steady state extrusion, we can consider the workpiece consisting of three different regions: container region, extrudate region and deforming region. The container region and extrudate region are simple extruded shapes, while
+    the deforming region is much more complex.</p>
+  <p> </p>
+  <p>The <strong>Mesh Extruding Utility</strong> allows users to mesh only the complex deforming region using DEFORM-3D mesh generator firstly. Then, extruded mesh of the container region and the extrudate region can be generated by adding layers of elements
+    in those areas.</p>
+  <p> </p>
+  <p>Choose<strong> Mesh Extruding Utility</strong> and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>. The system will give a template for mesh generation of three regions.</p>
+  <p>Using right click menu options from the display area select &quot;<strong>Show rulers</strong>&quot; as shown in <a href="#Fig_ALEEXL1_16_Mesh_Extruding_Utility"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>16.</a>    to display ruler which will help us in placing the different regions.</p>
+  <p> </p>
+  <p>The default setting of the three regions are based on the cross-section areas of the workpiece along the Z direction. The region division is shown as <a href="#Fig_ALEEXL1_17_Region_division"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>17.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_16_Mesh_Extruding_Utility"></a><img height="424" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh Extruding Utility</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_17_Region_division"></a><img height="350" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0017.jpg" width="639"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Region division</p>
+  <p> </p>
+  <p>In this lab, we will adjust the parameters in the <strong>Mesh Extruding Utility</strong>.</p>
+  <p>Firstly, we will adjust the deformation region. The deformation region (subdomain) between the top red line and the bottom red line will be used to generate regular mesh with DEFORM-3D mesh generator. So, we can use the regular method to define the
+    mesh density which is similar to Mesh Window setting.</p>
+  <p> </p>
+  <p>Keep 3 zones and drag the zone lines to our expected positions. Approximately drag the top red line to Z = 25 mm, the second red line to Z = 5 mm, the third red line to Z = -15 mm, the bottom red line to Z = -25 mm.</p>
+  <p> </p>
+  <p>Zone 1 will define the mesh density near container region. Zone 2 will define the mesh density near bearing entry. Zone 3 will define mesh density near extrudate region. In <strong>Mesh setting in deformation region</strong> dialog, select &#39;<strong>Absolute</strong>&#39;
+    Type and set <strong>Min elem size</strong> with &#39;<strong>2</strong> mm&#39;. In the table of Deformation Region, set Element Size of Zone 1 with &#39;6 mm&#39;, Zone 2 with &#39;2 mm&#39; and Zone 3 with &#39;3 mm&#39;. If the deformation region
+    is much more complex, we should add zones by clicking &#39; <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/>&#39; and define their suitable mesh densities.</p>
+  <p> </p>
+  <p>Then in Container Region, delete 1 zone by clicking &#39;<img src="../../../assets/icons/pre_icons/mo_delete_symmetry_icon.jpg"/>&#39;. Set Number of layers with &#39;10&#39; in Zone 1.</p>
+  <p> </p>
+  <p>In Extrudate Region, keep 2 zones and drag the zone line (blue line) to Z = -50 mm. Set Number of layers with &#39;10&#39; in Zone 1, and with &#39;12&#39; in Zone 2.</p>
+  <p> </p>
+  <p>The adjusted parameters settings in <strong>Mesh Extruding Utility</strong> is shown as <a href="#Fig_ALEEXL1_18_Parameters_settings_for_Mesh_Extruding_Utility"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>18.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_18_Parameters_settings_for_Mesh_Extruding_Utility"></a><img height="422" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Parameters settings for Mesh Extruding Utility</p>
+  <p> </p>
+  <p>In <a href="#Fig_ALEEXL1_18_Parameters_settings_for_Mesh_Extruding_Utility"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>18.</a>, we can see three buttons at the bottom of the widget – <strong>Default Setting</strong>,
+    <strong>Preview </strong>and <strong>Generate</strong>. Default Setting will reset all the mesh parameters to the default setting. <strong>Preview </strong>will create a subdomain geometry and generate surface mesh for the deforming region. <strong>Generate </strong>will
+    generate solid mesh for the deforming region and add layered elements in the container and extrudate regions. If <strong>Preview </strong>is not clicked previously, <strong>Generate </strong>will complete all the tasks consecutively.</p>
+  <p> </p>
+  <p>Click on <strong>Generate </strong>to generate the mesh of the workpiece. The generated workpiece mesh is shown in <a href="#Fig_ALEEXL1_19_Workpiece_mesh_generated"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>19.</a>    We can clearly see the regular mesh in deformation region and extruded mesh in container &amp; extrudate regions. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_19_Workpiece_mesh_generated"></a><img height="400" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0019.jpg" width="289"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece mesh generated</p>
+  <p> </p>
+  <h3 class="h3_1_9_">Workpiece Material</h3>
+  <p>Assign <strong>ALUMINUM-6061[70-1000F(20-550C)]</strong> as the material for Workpiece, click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Boundary condition page.</p>
+  <h3 class="h3_1_9_">Workpiece Boundary condition</h3>
+  <p>The system automatically assigned the symmetry plane BCC to the workpiece after mesh generation (see <a href="#Fig_ALEEXL1_20_Symmetry_BCC_of_the_Workpiece"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>20.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_20_Symmetry_BCC_of_the_Workpiece"></a><img height="421" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Symmetry BCC of the Workpiece</p>
+  <p> </p>
+  <p>For ALE and Steady state extrusion, a Free Surface needs to be defined at the end of the extrudate. In the <strong>Boundary</strong> <strong>conditions</strong> dialog, click <strong>Free </strong><strong>Surface </strong>in the tree, rotate the workpiece
+    so that you can see the bottom of the extrudate, select the bottom surface and then Click <img src="../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/> to add the Free surface boundary condition (see <a href="#Fig_ALEEXL1_21_Free_Surface_BCC_of_the_Workpiece"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>21.</a>).</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_21_Free_Surface_BCC_of_the_Workpiece"></a><img height="423" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0021.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Free Surface BCC of the Workpiece</p>
+  <p> </p>
+  <p>The system automatically assigned Heat Exchange with Environment BCC to the workpiece after mesh generation. For ALE &amp; Steady state extrusion, Free Surface should not be assigned with Heat Exchange with Environment BCC hence, we should delete the
+    existing Heat Exchange with Environment BCC on the free surface by clicking on &#39;<strong>Defined</strong>&#39; and <img src="../../../assets/icons/pre_icons/mo_delete_bcc_button.jpg"/>. We redefine the Heat Exchange with Environment BCC. In the
+    left pick bar, click the <img src="../../../assets/icons/pre_icons/mo_select_all_icon.jpg"/> button to select all the surfaces, then click  and click the Free Surface &amp; symmetry surfaces to unselect them. Click <img src="../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/> to add the Heat Exchange with Environment BCC. Defined Heat Exchange with Environment BCC is as shown in <a href="#Fig_ALEEXL1_22_Heat_Exchange_with_Environment_BCC_of_the_Workpiece"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>22.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Control page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_22_Heat_Exchange_with_Environment_BCC_of_the_Workpiece"></a><img height="422" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0022.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat Exchange with Environment BCC of the Workpiece</p>
+  <h2><a id="1_10_Controls"></a>Controls</h2>
+  <p>In the Control page. we can use <img src="../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/> to adjust the positions of objects.</p>
+  <p>All the die components were imported from the .stl files. The container and the die were in the correct locations. The ram is away from the workpiece. Hence, we need to move the ram down to touch the workpiece.</p>
+  <p> </p>
+  <p>Click <img height="21" src="../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg" width="118"/> and specify <img src="../../../assets/icons/pre_icons/mo_interference_radio_button.jpg"/> positioning. Select the <strong>Ram </strong>as
+    the Positioning object and the <strong>Workpiece </strong>as the Reference. Verify that the Approach direction is<strong> –Z</strong>. Click on <img src="../../../assets/icons/pre_icons/mo_apply_button.jpg"/> and then <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Click on <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Contact page.</p>
+  <h2><a id="1_11_Contact"></a>Contact</h2>
+  <p>A message will pop-up (see <a href="#Fig_ALEEXL1_23_FULL_CONTACT_GENERATION_popup"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>23.</a>) as we enter the Inter-object relations page and ask if user wants to use special
+    contact generation algorithm to generate full contact. Click <img src="../../../assets/icons/pre_icons/mo_yes_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_23_FULL_CONTACT_GENERATION_popup"></a><img src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0023.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">FULL CONTACT GENERATION popup</p>
+  <p> </p>
+  <p>In the Contact page, click <img src="../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/> to create all the relationships of the workpiece with other objects. Then click on <img src="../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> to generate full contact of the workpiece with other objects. Then, let&#39;s edit the parameters setting for contact relationships of the workpiece.</p>
+  <p>Select the <strong>Ram – Workpiece</strong> relationship and click <img src="../../../assets/icons/pre_icons/mo_define_button.jpg"/>. Define contact separation as &#39;<strong>Non-separable</strong>&#39;, <strong>Shear</strong> friction as &#39;<strong>1.0</strong>&#39;
+    and  heat transfer coefficient as&#39;<strong>11.0</strong>&#39;.</p>
+  <p>Select the <strong>Container – Workpiece</strong> relationship and click <img src="../../../assets/icons/pre_icons/mo_define_button.jpg"/>. Define contact separation as &#39;<strong>Non-separable</strong>&#39;, <strong>Shear </strong>friction as&#39;<strong>1.0</strong>&#39;
+    and  heat transfer coefficient as&#39;<strong>11.0</strong>&#39;.</p>
+  <p>Select the <strong>Die – Workpiece</strong> relationship and click <img src="../../../assets/icons/pre_icons/mo_define_button.jpg"/>. Define contact separation as &#39;<strong>Non-separable</strong>&#39;, <strong>Shear </strong>friction as &#39;<strong>0.4</strong>&#39;
+    and heat transfer coefficient as &#39;<strong>11.0</strong>&#39; (See <a href="#Fig_ALEEXL1_24_Full_contact_generation_of_the_workpiece"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>24.</a>). Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Step controls.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_24_Full_contact_generation_of_the_workpiece"></a><img height="423" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0024.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Full contact generation of the workpiece</p>
+  <h2><a id="1_12_Step_Controls"></a>Step Controls</h2>
+  <p>Click &#39;<img src="../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> &#39; to switch to expert mode in the top menu bar for step control.</p>
+  <h3 class="h3_1_12_">Simulation steps</h3>
+  <p>In the Simulation steps <img height="25" src="../../../assets/icons/pre_icons/mo_simulation_step.jpg" width="25"/> dialog, set <strong>Number of simulation steps</strong> as &#39;<strong>2000</strong>&#39; and <strong>Step </strong><strong>Increment </strong><strong>to </strong><strong>save </strong>as
+    &#39;<strong>100</strong>&#39;. Set<strong> Primary die</strong> as &#39;<strong>2 - Ram</strong>&#39; (see <a href="#Fig_ALEEXL1_25_Simulation_step_Setup"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>25.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_25_Simulation_step_Setup"></a><img height="420" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0025.jpg" width="455"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation step Setup</p>
+  <p> </p>
+  <p>In ALE extrusion simulation, since there is no gap between the workpiece and the container, we can use constant step increment. But in ALE extrusion simulation, we must consider the limitations of the minimum element size and the workpiece dimensions
+    to set the time step setting.</p>
+  <ol class="Decimal">
+    <li>
+      <p>In this lab, the minimum element size is 2 mm. From the &quot;3D_Lagrangian_EX_Lab1&quot;, the movement velocity of the extrudate is 21.16 mm/s, so the appropriate time/step of the ram would be 0.03 sec/step.</p>
+    </li>
+    <li>
+      <p>The material should at least flow out the entire extrudate. In this lab, the length of extrudate is 120 mm, the minimum time for the material to flow out the free surface (the end of the extrudate) is 5.67 (120/21.16) s. If we want to simulation
+        2000 steps, the minimum time step increment should be 0.00284 sec/step.</p>
+    </li>
+    <li>
+      <p>The material cannot flow out of the container completely. In this lab, the length in container is 150 mm, the movement velocity of the ram is 4 mm/s, the maximum time for the material to flow out of the container completely is 37.5 (150/4) s. If
+        we want to simulation 2000 steps, the maximum time step increment should be 0.01875 sec/step.</p>
+    </li>
+  </ol>
+  <p>Base on above three aspects, we can select <strong>0.01</strong> sec/step as the step increment. In the <strong>Step </strong><strong>increment <img height="25" src="../../../assets/icons/pre_icons/mo_step_increment.jpg" width="25"/> </strong>dialog,
+    set Solution step definition as <strong>Time</strong>. Set Step increment control to Constant and define it as &#39;<strong>0.01</strong>&#39; sec/step (see <a href="#Fig_ALEEXL1_26_Step_increment_setup"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>26.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_26_Step_increment_setup"></a><img src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0026.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Step increment setup</p>
+  <h3 class="h3_1_12_"> Stop criteria</h3>
+  <p>In the <strong>Stop criteria </strong><img height="25" src="../../../assets/icons/pre_icons/mo_stopping_criteria.jpg" width="25"/>  dialog, click the <strong>ALE </strong><strong>Steady </strong><strong>State </strong>page, uncheck &#39;<strong>Turn on steady-state stop control</strong>&#39;
+    if not unchecked (see <a href="#Fig_ALEEXL1_27_Stopping_control"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>27.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_27_Stopping_control"></a><img height="410" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0027.jpg" width="507"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping control</p>
+  <h3 class="h3_1_12_">Double constraints settings</h3>
+  <p>For ALE and Steady state extrusion, the system will generate double constraints automatically in simulation.</p>
+  <h2><a id="1_13_Generate_DB"></a>Generate DB</h2>
+  <p>Then go to Generate DB page. Click <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> to see if anything was missed in the setup and then click on the <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button
+    to generate the database. Observe the message in Message tab informing database generation status.</p>
+  <h2><a id="1_14_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated switch to the Simulation mode by clicking on <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the operation tree. Click on the <img height="15" src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg" style="cursor: nwse-resize;" width="26"/> action label to open the Run Options dialog as shown in  <a href="#Fig_ALEEXL1_28_Run_Simulation_Window"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>28.</a>Use the default
+    <strong>Continue </strong><strong>Run </strong>option to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg"/> button to run the simulation.</p>
+  <p>To define MPI settings, click on <img src="../../../assets/icons/simulator_icons/mo_more_button.jpg"/> button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend
+    on your 3D MPI license).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_28_Run_Simulation_Window"></a><img height="282" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0028.jpg" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation Window</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, make sure that the <img src="../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked. User can view the Extrusion process
+    from simulation graphics as the simulation proceeds to the specified Step definition.</p>
+  <h2><a id="1_15_Acceleration_Updating_of_State_Variables"></a>Acceleration Updating of State Variables</h2>
+  <p>After above simulation is completed, save the project by clicking <img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/> in the extrusion template. We should keep the simulation set up and simulation result of this project and do the
+    simulation of acceleration with another project.</p>
+  <h3 class="h3_1_15_">Simulation step up of Acceleration</h3>
+  <p>In File menu <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> click on <strong>New </strong><img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> and click on <img src="../../../assets/icons/pre_icons/mo_yes_button.jpg"/> in both Question popups, new Project will be open with New project popup.</p>
+  <p>In New Project popup define the Project name as &quot;<strong>3D_ALE_EX_Lab1_ACC</strong> &quot;, select <strong>Copy existing project </strong>radio button, click on <strong>browse </strong>and browse &quot; 3D_ALE_EX_Lab1&quot; project and click on
+    <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> in New Project popup as shown in <a href="#Fig_ALEEXL1_29_New_Project_for_Acceleration_updating_lab"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>29.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_29_New_Project_for_Acceleration_updating_lab"></a><img height="423" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0029.jpg" width="750"/></p>
+  <p class="Fig_numb">New Project for Acceleration updating lab</p>
+  <p> </p>
+  <p>In the <strong>Simulation setup</strong> dialog, change both the <strong>Strain </strong><strong>update </strong>and <strong>Temperature </strong><strong>update </strong>with<strong> 50 </strong>per step in Acceleration, which means there will be 50
+    times acceleration updating in the next simulation. Keep other parameters settings untouched. Simulation setup is shown as <a href="#Fig_ALEEXL1_30_Simulation_setup_settings_with_State_Variable_update_Acceleration"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>30.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_30_Simulation_setup_settings_with_State_Variable_update_Acceleration"></a><img height="372" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0030.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation setup settings with State Variable update Acceleration</p>
+  <p> </p>
+  <p>Go to <strong>Step </strong><strong>Control </strong>page. In the <strong>Simulation </strong><strong>steps </strong>dialog, set <strong>Number of simulation</strong> steps as &#39;<strong>40</strong>&#39; and <strong>Step Increment to save</strong>    as &#39;<strong>2</strong>&#39; (see <a href="#Fig_ALEEXL1_31_Simulation_steps_for_Acceleration"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>31.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_31_Simulation_steps_for_Acceleration"></a><img height="400" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0031.jpg" width="481"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation steps for Acceleration</p>
+  <p> </p>
+  <p> Check the defined acceleration setting is in Step Control page -&gt; <strong>Advanced </strong>options dialog -&gt; <strong>Frequency </strong>page (see <a href="#Fig_ALEEXL1_32_Acceleration_settings_in_Frequency"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>32.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_32_Acceleration_settings_in_Frequency"></a><img height="410" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0032.jpg" width="573"/></p>
+  <p> </p>
+  <p class="Fig_numb">Acceleration settings in Frequency</p>
+  <p> </p>
+  <p>Then go to Generate DB page. Click <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> to see if anything was missed in the setup and then click on the <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button
+    to generate the database. Observe the message in Message tab informing database generation status.</p>
+  <h3 class="h3_1_15_">Running Simulation</h3>
+  <p>Once the database has been generated, switch to the Simulation mode by selecting the <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the object tree. Click on the <img height="15" src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg" style="cursor: nwse-resize;" width="26"/> action label to open the Run Options dialog as shown in  <a href="#Fig_ALEEXL1_28_Run_Simulation_Window"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>28.</a>Use the default
+    <strong>Continue </strong><strong>Run </strong>option to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg"/> button to run the simulation.</p>
+  <h2><a id="1_16_Post_Processing"></a>Post Processing</h2>
+  <p>After the simulation of Extrusion process with acceleration of state variable update is completed, we can compare the simulation results in Post processor.</p>
+  <p> </p>
+  <p>In DEFORM GUI Main window, highlight &quot;3D_ALE_EX_Lab1.DB&quot;, then click <img src="../../../assets/icons/pre_icons/mo_post_processor_gui_link.jpg"/> to open &quot;<strong>3D_ALE_EX_Lab1.DB</strong>&quot; in DEFORM Post processor.</p>
+  <p>In DEFORM-2D/3D DEFORM Post, from the top menu bar, click <strong>File </strong><img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Open</strong>, select &quot;<strong>3D_ALE_EX_Lab1_ACC.DB</strong>&quot;, then click <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/>.</p>
+  <p>From the top menu bar, click <strong>Windows <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>Tile Vertically</strong>, we can see that both &quot;3D_ALE_EX_Lab1.DB&quot; and &quot;3D_ALE_EX_Lab1_ACC.DB&quot; are opened
+    in DEFORM-2D/3D Post. Thus, we can compare the simulation results of 2 databases in the same display window.</p>
+  <p> </p>
+  <p>For acceleration simulation, the effective step = simulation step * acceleration frequency. For example, in this lab, the acceleration frequency is 50, so the effective step is 1000 in simulation step 20, the effective step is 2000 in simulation step
+    40. The effective step of acceleration simulation corresponds to the simulation step of simulation without acceleration.</p>
+  <p> </p>
+  <p>In the display window, with the right mouse, check both &#39;<strong>DB Info</strong>&#39; and &#39;<strong>Title</strong>&#39; to display the name of database and the simulation step.</p>
+  <p> </p>
+  <p>Comparisons of Effective strain and Temperature of the workpiece at last step are given in <a href="#Fig_ALEEXL1_33_Strain_Effective_distribution_at_last_step"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>33.</a> and
+    <a href="#FIg_ALEEXL1_34_Temperature_distribution_at_last_step"><span data-keyref="Labs_Extrusion_labs_ALE_Extrusion_lab1">Fig. ALEEXL1.</span>34.</a> respectively. User can also compare the simulation results in other corresponding simulation steps.</p>
+  <p> </p>
+  <p>From the comparisons of simulation results, we can see the state variables match very well in the corresponding simulation step. On the other hand, from the message files in this lab, the simulation time without acceleration is about 2 hours, the simulation
+    time with acceleration is about 20 minutes. So, acceleration updating of state variables is a useful way to save simulation time in ALE extrusion simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEEXL1_33_Strain_Effective_distribution_at_last_step"></a><img height="422" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0033.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Strain Effective distribution at last step</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_ALEEXL1_34_Temperature_distribution_at_last_step"></a><img height="422" src="../../../assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0034.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature distribution at last step</p>
+
+</body></html>

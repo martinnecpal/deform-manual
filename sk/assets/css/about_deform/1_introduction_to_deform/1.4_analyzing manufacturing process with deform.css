@@ -1,0 +1,180 @@
+/*Created with Adobe RoboHelp 2019.*/
+body {
+  font-family: Calibri;
+  counter-reset: p h2 0 h3 h4 p\.fig_name 0;
+}
+h1 {
+  font-weight: bold;
+  font-size: 24.0pt;
+  color: #000000;
+  font-family: Arial;
+}
+h2 {
+  font-weight: bold;
+  font-size: 20pt;
+  color: #000000;
+  font-family: Arial;
+}
+h3 {
+  font-weight: bold;
+  font-size: 16pt;
+  color: #000000;
+  font-family: Arial;
+}
+h4 {
+  font-weight: bold;
+  font-size: 12.0pt;
+  color: #000000;
+  font-family: Arial;
+}
+h5 {
+  font-weight: bold;
+  font-size: 12pt;
+  color: #000000;
+  font-family: Arial;
+}
+h6 {
+  font-weight: bold;
+  font-size: 12pt;
+}
+p {
+  font-size: 12pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  font-family: Arial;
+  color: #000000;
+  text-align: justify;
+  line-height: 1.5;
+}
+a.expandspot {
+  color: #008000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+span.expandtext {
+  font-style: italic;
+  font-weight: normal;
+  color: #ff0000;
+}
+a.dropspot {
+  cursor: pointer;
+  color: #008000;
+  font-style: italic;
+  text-decoration: none;
+}
+a.glossterm {
+  color: #800000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+span.glosstext {
+  font-style: italic;
+  font-weight: normal;
+  color: #0000ff;
+}
+a.minitoc-caption {
+  text-decoration: none;
+  color: initial;
+  font-weight: bold;
+  font-size: 12pt;
+}
+p.minitoc-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+a.minitoc-list-item {}
+p.seealso-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+a.seealso-list-item {}
+p.reltopics-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+a.reltopics-list-item {}
+p::before {
+  counter-increment: p;
+  content: ;
+  padding-right: 0rem;
+}
+h2::before {
+  counter-increment: h2;
+  content: "1.4."counter(h2, decimal)".";
+  padding-right: 0.5rem;
+}
+h3::before {
+  counter-increment: h3;
+  content: "1.4."counter(h3, decimal)"."counter(h3, decimal)".";
+  padding-right: 0.5rem;
+}
+h4::before {
+  counter-increment: h4;
+  content: "1.4."counter(h4, decimal)"."counter(h4, decimal)"."counter(h4, decimal)".";
+  padding-right: 0.5rem;
+}
+p.Fig_Name {
+  font-family: Arial;
+  font-size: 10pt;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+p.Fig_Name::before {
+  counter-increment: p\.fig_name;
+  content: "Fig. 1.4."counter(p\.fig_name, decimal)".";
+  padding-right: 0.5rem;
+}
+ol.Multi_level {
+  list-style: disc;
+}
+ol.Multi_level>li>ol {
+  list-style: circle;
+}
+ul.Disc {
+  list-style-type: disc;
+}
+ul.Circle {
+  list-style-type: circle;
+  list-style: none;
+  counter-reset: item1;
+  padding-left: 40px;
+  margin-left: 36px;
+}
+ol.RoundSquare {
+  list-style: disc;
+}
+ol.RoundSquare>li>ol {
+  list-style: square;
+}
+ol.RoundSquare>li>ol>li>ol {
+  list-style: circle;
+}
+ol.RoundSquare>li>ol>li>ol>li>ol {
+  list-style: disc;
+}
+ol.RoundSquare>li>ol>li>ol>li>ol>li>ol {
+  list-style: square;
+}
+ol.RoundSquare>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: circle;
+}
+ul.Circle>li:before {
+  counter-increment: item1;
+  content: counter(item1, circle);
+  text-align: right;
+  position: absolute;
+  left: -44px;
+  margin-right: 4px;
+  width: 40px;
+  overflow: hidden;
+  font-family: Arial;
+  font-size: 14pt;
+}
+ul.Circle>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

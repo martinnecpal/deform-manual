@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Report Generation Lab in MO","type":"item","tilePath":"","url":"documentation_content/labs/report_generation_lab/report_generation_lab_in_mo.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

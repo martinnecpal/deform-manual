@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "6.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>27. Introduction to Report Generation</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>27. Introduction to Report Generation</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/post_processor/27_report_generation/27_introduction_to_report_generation.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/post_processor/27_report_generation/27_introduction_to_report_generation.css"/>
+<meta name="brsnext" value="Documentation_content/Post_Processor/28_Report_Generation/28_Report_Generation.htm"/><meta name="brsprev" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_6_Post_Processing_tools/26_6_24_Forming_Limit_Diagram.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="27. Introduction to Report Generation">
+        <span>27. Introduction to Report Generation</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>27. Introduction to Report Generation</h1>
+  <p>Report generation feature in MO and Next Gen Post helps user to generate report automatically with contour plots for selected state variables, point tracking, load – stroke graphs, .. etc. The report can be saved in pdf format ( 2D &amp; 3D) or as an
+    ppt file. We can generate the report either as interactive mode or batch mode (See <a href="#Fig_27_1_Report_generation_setup"><span data-keyref="Chapter_27_Introduction_to_Report_Generation">Fig. 27.</span>1.</a>).</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_27_1_Report_generation_setup"></a><img src="../../../assets/images/post_processor/27_introduction_to_report_generation/image001.jpg"/></p>
+  <p class="Fig_numb">Report generation setup</p>
+  <p> </p>
+  <p><strong>In Batch post mode </strong>:  After completion of setup of all operations, add Report generation operation from Explorer operation list. Complete the report generation setup and run simulation. After completion of simulation of all operations
+    prior to report generation, report generation operation will start to generate report for the selected state variables and graphs.</p>
+  <p><strong>In Interactive batch mode </strong>: In Next Gen post from Report tab we can generate the report by selecting required state variables and graphs or . DS file can also be used to generate report.</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center;"> </p>
+  <p><strong>Section Menu:</strong> User defined custom sections can be added and deleted by using the <img src="../../../assets/icons/post_icons/mo_add_section_button.jpg"/> (Add new section) and <img src="../../../assets/icons/post_icons/mo_delete_section_button.jpg"/> (Delete section)  under Section tab also using tool bar icons. See<a href="#Fig_27_2_Section_Menu"> <span data-keyref="Chapter_27_Introduction_to_Report_Generation">Fig. 27.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_27_2_Section_Menu"></a><img src="../../../assets/images/post_processor/27_introduction_to_report_generation/image002.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Section Menu</p>
+  <p> </p>
+  <p><strong>Report Menu: </strong>Below are the options available under Report tab as shown in <a href="#Fig_27_3_Report_Menu"><span data-keyref="Chapter_27_Introduction_to_Report_Generation">Fig. 27.</span>3.</a>,</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_27_3_Report_Menu"></a><img src="../../../assets/images/post_processor/27_introduction_to_report_generation/image003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Report Menu</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Generate</strong>: This option is used to generate the report for the added chapter under Report tab. Also for the imported loaded report template report can be generated using this option.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p><strong>Generate </strong><strong>Auto </strong><strong>report </strong>: It will generate auto report with generate the report by using the default section of metal flow, state variable plot with Stress-Effective, Strain-Effective and Temperature
+        state variables,  Stroke V/S Load Graph and temperature summary plot.</p>
+    </li>
+    <li>
+      <p><strong>Open Folder</strong> : It open the working directory in windows explorer.</p>
+    </li>
+    <li>
+      <p><strong>Load Report template</strong>: Using this option user can import the saved report template (*.ds file).</p>
+    </li>
+    <li>
+      <p><strong>Save Report template</strong>: Using this option user can save the report data to a template (*.ds file).</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>MikTex:</strong> From DEFORM v12.0., MikTex software is used to generate Report in DEFORM.</p>
+  <p>In Generate PDF file, now user can observe the Contents of each chapter, Summary summary  of each operation and object/s data and each section output. For more information related generated report refer chapter <a href="../28_report_generation/28_report_generation.htm">28. Report Generation</a>    section <a href="../28_report_generation/28_report_generation.htm#Generating__Report">Generating Report</a></p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../28_report_generation/28_report_generation.htm">28. Report Generation</a></p>
+  <p> </p>
+
+</body></html>

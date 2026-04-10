@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Electro-Magnetic Forming Lab1","type":"item","tilePath":"","url":"documentation_content/applications/55_applications/55_electro_magenetic_forming/54_4_electro-magnetic_forming.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

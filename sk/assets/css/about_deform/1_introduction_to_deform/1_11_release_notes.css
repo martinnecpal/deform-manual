@@ -1,0 +1,267 @@
+/*Created with Adobe RoboHelp 2019.*/
+body {
+  font-family: Calibri;
+  counter-reset: p h2 0 p\.fig_name;
+}
+h1 {
+  font-weight: bold;
+  font-size: 24.0pt;
+  color: #000000;
+  font-family: Arial;
+}
+h2 {
+  font-weight: bold;
+  font-size: 20pt;
+  color: #000000;
+  font-family: Arial;
+}
+h3 {
+  font-weight: bold;
+  font-size: 16pt;
+  color: #000000;
+  font-family: Arial;
+}
+h4 {
+  font-weight: bold;
+  font-size: 12.0pt;
+  color: #000000;
+  font-family: Arial;
+}
+h5 {
+  font-weight: bold;
+  font-size: 12pt;
+  color: #000000;
+  font-family: Arial;
+}
+h6 {
+  font-weight: bold;
+  font-size: 12pt;
+}
+p {
+  font-size: 12pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  font-family: Arial;
+  color: #000000;
+  text-align: justify;
+  line-height: 1.5;
+}
+a.expandspot {
+  color: #008000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+span.expandtext {
+  font-style: italic;
+  font-weight: normal;
+  color: #ff0000;
+}
+a.dropspot {
+  cursor: pointer;
+  color: #008000;
+  font-style: italic;
+  text-decoration: none;
+}
+a.glossterm {
+  color: #800000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+span.glosstext {
+  font-style: italic;
+  font-weight: normal;
+  color: #0000ff;
+}
+a.minitoc-caption {
+  text-decoration: none;
+  color: initial;
+  font-weight: bold;
+  font-size: 12pt;
+}
+a.minitoc-list-item {}
+a.seealso-list-item {}
+a.reltopics-list-item {}
+h2::before {
+  counter-increment: h2;
+  content: "1.1."counter(h2, decimal)".";
+  padding-right: 0.5rem;
+}
+img.Figure {
+  font-family: Arial;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  line-height: 1.5;
+}
+p.Fig_name {
+  font-family: Arial;
+  color: #000000;
+  text-align: center;
+  font-size: 10pt;
+  font-weight: bold;
+}
+p.Fig_name::before {
+  counter-increment: p\.fig_name;
+  content: ;
+  padding-right: 0rem;
+}
+p.p_center {
+  font-family: Arial;
+  font-size: 12pt;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+}
+ol.Decimal {
+  counter-reset: item1;
+  list-style: none;
+  padding-left: 20px;
+  margin-left: 40px;
+}
+ul.Disc {
+  counter-reset: item1;
+  list-style: none;
+  padding-left: 20px;
+  margin-left: 0px;
+}
+ul.Disc>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ul.Disc>li:before {
+  counter-increment: item1;
+  content: counter(item1, disc);
+  text-align: justify;
+  position: absolute;
+  left: -24px;
+  margin-right: 4px;
+  width: 20px;
+  overflow: hidden;
+  font-family: Arial;
+  font-size: 15pt;
+  color: #000000;
+  line-height: 1.5;
+  font-weight: ;
+}
+ol.Decimal>li {
+  position: relative;
+}
+ol.Decimal>li:before {
+  counter-increment: item1;
+  content: counter(item1, decimal)".";
+  text-align: justify;
+  position: absolute;
+  left: -48px;
+  margin-right: 8px;
+  width: 40px;
+  overflow: hidden;
+  font-family: Arial;
+  font-size: 12pt;
+  color: #000000;
+}
+ol.disc_2_tab {
+  counter-reset: item1;
+  list-style: none;
+  padding-left: 40px;
+  margin-left: 160px;
+}
+ol.disc_2_tab>li {
+  position: relative;
+}
+ol.disc_2_tab>li:before {
+  counter-increment: item1;
+  content: counter(item1, disc);
+  text-align: justify;
+  position: absolute;
+  left: -44px;
+  margin-right: 4px;
+  width: 40px;
+  overflow: hidden;
+  font-family: Arial;
+  font-size: 12pt;
+  line-height: 1.5;
+}
+ol.RoundSquare {
+  list-style: disc;
+}
+ol.RoundSquare>li>ol {
+  list-style: none;
+  counter-reset: item2;
+  padding-left: 40px;
+  margin-left: -8px;
+}
+ol.RoundSquare>li>ol>li>ol {
+  list-style: circle;
+}
+ol.RoundSquare>li>ol>li>ol>li>ol {
+  list-style: disc;
+}
+ol.RoundSquare>li>ol>li>ol>li>ol>li>ol {
+  list-style: square;
+}
+ol.RoundSquare>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: circle;
+}
+ul.Circle {
+  list-style-type: circle;
+  counter-reset: item1;
+  list-style: none;
+  padding-left: 40px;
+  margin-left: 0px;
+}
+ol.RoundSquare>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.RoundSquare>li>ol>li:before {
+  counter-increment: item2;
+  content: counter(item2, circle);
+  text-align: right;
+  position: absolute;
+  left: -60px;
+  margin-right: 20px;
+  width: 40px;
+  overflow: hidden;
+}
+ul.Circle>li>ul {
+  counter-reset: item2;
+  list-style: none;
+  padding-left: 20px;
+  margin-left: 60px;
+}
+ul.Circle>li>ul>li {
+  position: relative;
+}
+ul.Circle>li>ul>li:before {
+  counter-increment: item2;
+  content: counter(item2, circle);
+  text-align: right;
+  position: absolute;
+  left: -44px;
+  margin-right: 4px;
+  width: 40px;
+  overflow: hidden;
+}
+ul.Circle>li {
+  position: relative;
+}
+ul.Circle>li:before {
+  counter-increment: item1;
+  content: counter(item1, circle);
+  text-align: right;
+  position: absolute;
+  left: -48px;
+  margin-right: 8px;
+  width: 40px;
+  overflow: hidden;
+  font-family: Arial;
+  font-size: 16pt;
+  font-weight: ;
+}
+ul.Square {
+  list-style-type: square;
+}

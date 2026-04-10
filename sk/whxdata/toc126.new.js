@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Cold Forming","type":"item","tilePath":"","url":"documentation_content/labs/quick_reference/cold_forming.htm"},{"name":"Hot Forming","type":"item","tilePath":"","url":"documentation_content/labs/quick_reference/hot_forming.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

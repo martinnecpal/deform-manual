@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>9.7. Advanced Options</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>9.7. Advanced Options</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/9_simulation_controls/9_7_advanced_options.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/9_Simulation_Controls/9_8_Control_files.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/9_Simulation_Controls/9_6_Process_Conditions.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="9.7. Advanced Options">
+        <span>9.7. Advanced Options</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>9.7. Advanced Options <img height="25" src="../../../assets/icons/pre_icons/mo_advanced_options.jpg" width="25"/></h1>
+  <p><a href="#9.7.1._Variables">9.7.1. Variables</a> </p>
+  <ul>
+    <li>
+      <p><a href="9_7_advanced_options.htm#Current_Global_Time/Current_Local_Time_(TNOW)" style="margin-left: 40px">Current Global Time/Current Local Time (TNOW)</a> </p>
+    </li>
+    <li>
+      <p><a href="#Primary_Workpiece_(PDIE)" style="margin-left: 40px">Primary Workpiece (PDIE)</a> </p>
+    </li>
+    <li>
+      <p><a href="#Use_original_additive_rule_for_transformation_kinetics_(TRANS)" style="margin-left: 40px">Use original additive rule for transformation kinetics (TRANS)</a> </p>
+    </li>
+  </ul>
+  <p><a href="#9.7.2._Error_Tolerances">9.7.2.Error Tolerances</a> </p>
+  <ul>
+    <li>
+      <p><a href="#Contact_release_method_(CNTERR)" style="margin-left: 40px">Contact release method (CNTERR)</a> </p>
+    </li>
+    <li>
+      <p><a href="#Geometry_error_(GEOERR)" style="margin-left: 40px">Geometry error (GEOERR)</a> </p>
+    </li>
+  </ul>
+  <p><a href="#9.7.3._User_defined_variables_(USRDEF)">9.7.3. User defined variables (USRDEF)</a> </p>
+  <p><a href="#9.7.5._Contact_">9.7.4. Contact</a>  </p>
+  <ul>
+    <li>
+      <p><a href="#Penalty" style="margin-left: 40px">Penalty</a> </p>
+    </li>
+    <li>
+      <p><a href="#Conforming_Coupling" style="margin-left: 40px">Conforming Coupling</a> </p>
+    </li>
+    <li>
+      <p><a href="#Augmented_Lagrangian" style="margin-left: 40px">Augmented Lagrangian</a> </p>
+    </li>
+    <li>
+      <p><a href="#Multiple_deforming_Method_(MULDEF)" style="margin-left: 40px">Multiple deforming Method (MULDEF)</a> </p>
+    </li>
+  </ul>
+  <p><a href="#_Fully_coupled" style="margin-left: 80px">Fully coupled</a>  </p>
+  <p><a href="#Loosely_coupled" style="margin-left: 80px">Loosely coupled </a>  </p>
+  <p><a href="#No_geometry_update" style="margin-left: 80px">No geometry update</a> </p>
+  <ul>
+    <li>
+      <p><a href="#Deformation_calculation_" style="margin-left: 40px">Deformation calculation</a>  </p>
+    </li>
+    <li>
+      <p><a href="#Thermal_calculation" style="margin-left: 40px">Thermal calculation</a> </p>
+    </li>
+  </ul>
+  <p><a href="#9.7.6._Frequency">9.7.5. Frequency</a> </p>
+  <p><a href="#9.7.7._Nodal_Oscillations">9.7.6. Nodal Oscillations (OSCTRL)</a> </p>
+  <ul>
+    <li>
+      <p><a href="#Corner_oscillations" style="margin-left: 40px">Corner oscillations</a> </p>
+    </li>
+    <li>
+      <p><a href="9_7_advanced_options.htm#Repeated_touching_/_separating" style="margin-left: 40px">Repeated touching / separating</a>   </p>
+    </li>
+  </ul>
+  <p><a href="#9.7.8._Object_Copy">9.7.7. Object Copy</a> </p>
+  <p> </p>
+  <p>For Simulation control Advanced variables settings see <a href="#Fig._9.7.1._Advanced_variables_window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._9.7.1._Advanced_variables_window"></a><img height="355" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image001.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_Numb">Advanced variables window</p>
+  <p> </p>
+  <h2><a id="9.7.1._Variables"></a>Variables [2D, 3D]</h2>
+  <h3><strong><a id="Current_Global_Time/Current_Local_Time_(TNOW)"></a>Current Global Time/Current Local Time (TNOW)</strong></h3>
+  <p>This (<a href="../../keyword_documentation/t/tnow.htm">TNOW</a>) specifies the values of global process time and the local process time. (See <a href="#Fig._9.7.1._Advanced_variables_window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>1.</a> ).
+    The global time is the time since the beginning of the problem, and should never be reset. Local time is a parameter that can be reset by the user. The global time should not be reset during a simulation as the post-processor uses this time for many
+    post processing operations. Below the local and global time definitions is a selector box that determines which time is to be used for time dependent functions such as movement controls. The default is global time, however, the time dependent functions
+    can also be made a function of local time.</p>
+  <h3><strong><a id="Primary_Workpiece_(PDIE)"></a>Primary Workpiece (PDIE)</strong></h3>
+  <p>This (<a href="../../keyword_documentation/p/pdie.htm">PDIE</a>) parameter allows the user to specify the workpiece as an object that must not possess rigid body motion. (See <a href="#Fig._9.7.1._Advanced_variables_window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>1.</a> )
+    If the body does not deform, the simulation will stop. One purpose of this function is to prevent a rolling simulation from continuing past the rolled length of material.</p>
+  <h3><a id="Use_original_additive_rule_for_transformation_kinetics_(TRANS)"></a><strong>Use original additive rule for transformation kinetics (TRANS)</strong></h3>
+  <p>We have improved the transformation kinetics (<a href="../../keyword_documentation/t/trans.htm">TRANS</a>) rule from version 6.0.  With the new version, multiple transformations can occur at the same time and temperature for a given material.  If the
+    user does not want to use this new rule and wants to use the previous one, checking this box will allow this. (See <a href="#Fig._9.7.1._Advanced_variables_window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>1.</a>)</p>
+  <p> </p>
+  <h2> <a id="9.7.2._Error_Tolerances"></a>Error Tolerances [2D, 3D]</h2>
+  <ul class="Disc">
+    <li>
+      <p><a id="Contact_release_method_(CNTERR)"></a><strong>Contact release method (CNTERR) [2D] : </strong></p>
+    </li>
+  </ul>
+  <p>In certain cases, the present contact algorithm does not release nodes that are touching a master surface within the time step. This option <a href="../../keyword_documentation/c/cnterr.htm">CNTERR</a> allows the contact condition for a slave node to
+    be released if it moves away from the master boundary by a prescribed distance. This value can be used as an alternative to the sliding error (<a href="../../keyword_documentation/s/slderr.htm">SLDERR</a>). (See <a href="#Fig._9.7.2._Advanced_Error_tolerances_window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>2.</a>)</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong><a id="Geometry_error_(GEOERR)"></a>Geometry error (GEOERR) [2D, 3D]</strong></p>
+    </li>
+  </ul>
+  <p>This <a href="../../keyword_documentation/g/geoerr.htm">GEOERR</a> value is an estimate of the error between discretized objects. The default value for this is sufficient for most of the general applications. (See <a href="#Fig._9.7.2._Advanced_Error_tolerances_window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>2.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><img height="355" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image002.jpg" width="750"/></p>
+  <p class="Fig_Name"> </p>
+  <p class="Fig_Numb"><a id="Fig._9.7.2._Advanced_Error_tolerances_window"></a>Advanced Error tolerances window</p>
+  <p> </p>
+  <h2> <a id="9.7.3._User_defined_variables_(USRDEF)"></a>User defined variables (USRDEF) [2D, 3D]</h2>
+  <p>User defined variables (<a href="../../keyword_documentation/u/usrdef.htm">USRDEF</a>) are 80 character string variables which are passed to user defined subroutines. Refer to the Chapter <a href="../../user_routines/56_user_routines_in_deform/56_user_routines_in_deform.htm">56. User Routines</a>    for more information on how to use these variables. (See <a href="#Fig._9.7.3._User_defined_values"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>3.</a>)</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig._9.7.3._User_defined_values"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image003.jpg" width="557"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_Numb">User defined values</p>
+  <p> </p>
+  <h2><a id="9.7.5._Contact_"></a>Contact [3D]</h2>
+  <p>From DEFORM-V12 Contact tab has been added under Advanced page, Contact method ( <a href="../../keyword_documentation/c/cntmth.htm">CNTMTH</a>) which was available for 3D object in Inter - object relations page has been moved to this page. Now we have
+    3 types of Contact methods:</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Penalty</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Conforming coupling</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Augmented Lagrangian </li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Penalty"></a><strong>Penalty</strong></p>
+    </li>
+  </ul>
+  <p>Penalty method ( <a href="#Fig._9.7.7._Penalty_-_Contact_method___Conforming_Coupling"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>4.</a>) is the main approach for handling contact for all the deforming objects to handle die contact.
+    However, for rigid plastic models with multiple deforming objects in contact or self-contact conformal coupling is also available.</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig._9.7.7._Penalty_-_Contact_method___Conforming_Coupling"></a><img height="540" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image004.jpg" width="653"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_Numb">Penalty - Contact method</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p> <a id="Conforming_Coupling"></a><strong>Conforming Coupling</strong></p>
+    </li>
+  </ul>
+  <p>Conforming coupling essentially handles contact by first generating contact elements automatically across the contacting mesh systems. For models involving rotational symmetry conforming coupling is used by default.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._9.7.8._Conforming_Coupling_-_Contact_method"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image005.jpg" width="605"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_Numb">Conforming Coupling - Contact method</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Augmented_Lagrangian"></a><strong>Augmented Lagrangian</strong></p>
+    </li>
+  </ul>
+  <p>New Augmented Lagrangian contact (ALC) method has been introduced from v12 for faster computation for models involving multiple deforming objects like coupled die stress (Elastic Dies – Rigid Plastic workpiece, Elastic Dies – Elasto-Plastic Workpiece).
+    ALC method is not sensitive to penalty number and performs well with iterative CG solver.  ALC method can be used with both Newton - Raphson and Direct methods but models involving elasto-pastic object requires Newton - Raphson method. ALC works better
+    with CG solver and for Large models involving multiple deforming objects or elastic dies.</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig._9.7.9._Augmented_Lagrangian_-_Contact_method"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image006.jpg" width="605"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_Numb">Augmented Lagrangian - Contact method</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Multiple_deforming_Method_(MULDEF)"></a><strong>Multiple deforming Method (<a href="../../keyword_documentation/m/muldef.htm">MULDEF</a>)</strong></p>
+    </li>
+  </ul>
+  <p>In Older versions to simulate Coupled die stress analysis we need to create DEF_LCDSTS.DAT file, now these options can be defined in GUI itself from DEFORM-V12 as shown in <a href="#Fig._9.7.10.__Multiple_Deforming_methods"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>7.</a></p>
+  <p> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Fully coupled</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Loosely coupled </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">No geometry update</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"><a id="Fig._9.7.10.__Multiple_Deforming_methods"></a><img height="0" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image007.jpg" width="0"/><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image007.jpg" width="605"/></p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p class="Fig_Numb"> Multiple Deforming methods</p>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><a id="_Fully_coupled"></a> <strong>Fully coupled :</strong> Fully coupled means the deflection of the tool is reflected in the deformation of the workpiece at the current step.  In general, Fully coupled is the most accurate, and most computationally
+        expensive. No geometry update option is the least computationally expensive, and offers the most simplification of the process.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><a id="Loosely_coupled"></a><strong>Loosely coupled </strong> : When this option is selected the stresses are calculated in the tool, but the updated die geometry will not be reflected in workpiece deformation until the next step. Loosely coupled
+        is more numerically efficient than Fully coupled but may cause some inconsistencies in workpiece surface position (and therefore workpiece volume) if the change in the die shape is substantial.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><strong><a id="No_geometry_update"></a>No geometry update :</strong> In No geometry update only stress is calculated in the die, but the die geometry is never updated. If the user interest is only tool stress, No geometry update option is generally
+        adequate. If tool deflection is important then Fully coupled or Loosely coupled should be selected.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Deformation_calculation_"></a><strong>Deformation calculation </strong></p>
+    </li>
+  </ul>
+  <p>User can define the interval of steps for calculating Deformation on tool by using user-defined option. By default, Auto step will be selected, so Deformation calculations are done at every step.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong><a id="Thermal_calculation"></a>Thermal calculation</strong></p>
+    </li>
+  </ul>
+  <p>User can define the interval of steps for Thermal calculations on tool by using user-defined option. By default, Auto step will be selected, so thermal calculations are done at every step.</p>
+  <p> </p>
+  <h2><a id="9.7.6._Frequency"></a>Frequency [2D,3D]</h2>
+  <p>Under Frequency (see <a href="#Fig._9.7.11._3D_Frequency_Window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>8.</a>), user can define calcuation control value for Explicit solver, Maxwell equation solving, viewfactor calculation
+    and Yield surface calculation.</p>
+  <p>Even for ALE steady state simulation, user can define Strain update method and Temperature update method.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._9.7.11._3D_Frequency_Window"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image008.jpg" width="605"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_Numb">3D Frequency Window</p>
+  <p> </p>
+  <h2><a id="9.7.7._Nodal_Oscillations"></a>Nodal Oscillations [2D]</h2>
+  <p><br/> For Simulation control Advanced Nodal oscillations (<a href="../../keyword_documentation/o/osctrl.htm">OSCTRL</a>) settings see <a href="#Fig._9.7.12._2D_Nodal_Oscillations_Window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>9.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._9.7.12._2D_Nodal_Oscillations_Window"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image009.jpg" width="605"/></p>
+  <p> </p>
+  <p class="Fig_Numb">2D Nodal Oscillations Window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Corner_oscillations"></a><strong>Corner oscillations</strong></p>
+    </li>
+  </ul>
+  <p>Corner oscillation controls are used to control oscillation of a node between adjacent line segments of a surface. If the number of oscillations exceeds the limit, the node will be locked for a fixed number of sub steps.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Repeated_touching_/_separating"></a><strong>Repeated touching / separating</strong></p>
+    </li>
+  </ul>
+  <p>When slave nodes touch and separate from a master surface, after two oscillations the nodes are made to touch for the sub step. The touching/separating control can be used to make the node separate from the surface for the sub step after a specified
+    number of oscillations.</p>
+  <p> </p>
+  <h2><a id="9.7.8._Object_Copy"></a>Object Copy [3D]</h2>
+  <p>To replace the DEF_VIEWSYM.DAT file Object copy (<a href="../../keyword_documentation/o/objcpy.htm">OBJCPY</a>) option has been developed under Simulation controls (See <a href="#Fig._9.7.13._Object_copy_window"><span data-keyref="Chapter_9_7_Advanced_options">Fig. 9.7.</span>10.</a>).
+    User can select the object arranged type (By Translating or By Mirroring) </p>
+  <p><strong>By Translating:</strong> In Translatinn method user need to define the Distance vector value to copy object.</p>
+  <p><strong>By Mirroring: </strong>In Mirroring method user need to define the Reference Point and Vector value  respectively.</p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_Name" style="text-align: center;"> </p>
+  <p class="Fig_Name" style="text-align: center;"><img height="324" src="../../../assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image010.jpg" width="780"/></p>
+  <p class="Fig_Numb" style="text-align: center;"><a id="Fig._9.7.13._Object_copy_window"></a>Object copy window</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="9_1_simulation_type_settings.htm">9.1. Simulation type Settings</a> <br/>
+    <a href="9_2_defining_step.htm">9.2. Defining Step</a> <br/>
+    <a href="9_3_stopping_controls.htm">9.3. Stopping Controls</a> <br/>
+    <a href="9_4_remesh_criteria.htm">9.4. Remesh Criteria</a> <br/>
+    <a href="9_5_solver_settings.htm">9.5. Solver Settings</a> <br/>
+    <a href="9_6_process_conditions.htm">9.6. Process Conditions</a> <br/>
+    <a href="9_8_control_files.htm">9.8. Control Files</a> <br/>
+    <a href="9_9_thermomechanical_variables.htm">9.9. Thermomechanical variables</a> </p>
+  <p><a href="9_10_output_controls.htm">9.10. Output controls</a></p>
+  <p> </p>
+
+</body></html>

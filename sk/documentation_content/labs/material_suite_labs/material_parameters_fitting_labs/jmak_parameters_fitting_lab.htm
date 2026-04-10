@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.18.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>JMAK Parameters Fitting Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>JMAK Parameters Fitting Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Material_Suite_labs/Material_Parameters_Fitting_labs/TTT_Calculation_Lab.htm"/><meta name="brsprev" value="Documentation_content/Labs/Material_Suite_labs/Material_Parameters_Fitting_labs/Flow_Stress_Fitting_Lab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="JMAK Parameters Fitting Lab">
+        <span>JMAK Parameters Fitting Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Material Suite Lab for fitting material parameters in JMAK model</h1>
+  <p><a href="#1_1_Abstract">1.1. Abstract</a></p>
+  <p><a href="#1_2_Launch_JMAK_Model_in_material_suite">1.2. Launch JMAK Model in material suite</a></p>
+  <p><a href="#1_3_Define_testing_controls_and_temperature_groups">1.3. Define testing controls and temperature groups</a></p>
+  <p><a href="#1_4_Fit_material_parameters_in_DRX_kinetics">1.4. Fit material parameters in DRX kinetics</a></p>
+  <p><a href="jmak_parameters_fitting_lab.htm#1_5_Fit_material_parameters_in_MRX/SRX_kinetics_The_procedure_to_imp">1.5. Fit material parameters in MRX/SRX kinetics</a></p>
+  <p><a href="#1_6_Fit_material_parameters_in_grain_growth_kinetics">1.6. Fit material parameters in grain growth kinetics</a> </p>
+  <p><a href="#1_7_Output_the_fitting_results_to_keyword_file">1.7. Output the fitting results to keyword file</a></p>
+  <p> </p>
+  <h2> <a id="1_1_Abstract"></a>Abstract</h2>
+  <p>JMAK (Johnson-Mehl-Avrami-Kolmogorov) model describes the recrystallization kinetics (evolution of grain size and volume fraction of recrystallized grains) of metals during thermo-mechanical processing. Depending on the specific thermal-mechanical processing
+    conditions, different recrystallization mechanisms may take place, including dynamic recrystallization (DRX) occurring during deformation, meta-dynamic recrystallization (MRX) or static recrystallization (SRX) occurring after deformation, and static
+    grain growth after the recrystallization is completed.  JMAK model generally consists of a set of phenomenological or empirical equations, which are functions of strain, strain rate, temperature, time, and the initial grain size. A lot of material
+    parameters are introduced in JMAK model, and it is a tedious and time-consuming task to determine these material parameters from the experimentally measured data. JMAK model in DEFORM Material Suite provides a convenient tool to fit material parameters
+    in JMAK model.</p>
+  <p> </p>
+  <p>In this lab, the procedures to import experimentally measured data into JMAK module in DEFORM Material Suite and to fit material parameters in JMAK model automatically are demonstrated.  </p>
+  <p> </p>
+  <h2><a id="1_2_Launch_JMAK_Model_in_material_suite"></a>Launch JMAK Model in material suite</h2>
+  <p>On a Windows machine, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button, select DEFORM-v12.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span> and select DEFORM
+    GUI Main v1x.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p>From GUI Main click on Material Suite under “Post Processor” to open Material Suite module. User can also double click &quot;DEF_GUI_MAT.exe&quot; in the installation directory of DEFORM software to launch material suite. After the main window for material
+    suite pops up, expand &quot;properties&quot; item and click &quot;<strong>JMAK Model</strong>&quot; icon, the new task item &quot;JMAK&quot; is added to the task tree (See <a href="#Fig_JMAKL1_1_Launch_JMAK_model_in_material_suite"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>1.</a>).
+    Follow each tree item to prepare JMAK model data in the property data window (right-bottom window).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_1_Launch_JMAK_model_in_material_suite"></a><img height="438" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Launch JMAK model in material suite.</p>
+  <p> </p>
+  <p>Click &quot;<strong>Config</strong>&quot; to open the window to specify Working directories as shown in below <a href="#Fig_JMAKL1_2_Config_window_to_define_Working_directory"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>2.</a>    Specify the working directory where the computed JMAK data will be stored.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_2_Config_window_to_define_Working_directory"></a><img height="438" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Config window to define Working directory</p>
+  <p> </p>
+  <h2><a id="1_3_Define_testing_controls_and_temperature_groups"></a>Define testing controls and temperature groups</h2>
+  <p>In the &quot;<strong>JMAK Model</strong>&quot; task tree, click &quot;Testing controls&quot; item as shown in <a href="#Fig_JMAKL1_2_Definition_of_mechanical_testing_controls"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>3.</a>    In the property window, we have two different ways to start the JMAK project. If there is an existing project saved previously, we can click the “Import Project” button to import the project data, and the defined data for each tree item will be automatically
+    filled. user can also prepare the project data from scratch.  After defining data in any tree item page, we can return to this “Testing controls” page and click the “Save Project” button to save all defined data.</p>
+  <p>In this Lab, define the system of units to represent the experimental results (such as “SI” in this lab). Click “ <img src="../../../../assets/icons/pre_icons/material_suite_add_button.jpg"/> ” or “<img src="../../../../assets/icons/pre_icons/material_suite_delete_button.jpg"/>” button to add or delete each testing condition. Input the following data, for the initial grain size (in microns): 40 and 100.  Input three testing temperatures (in °C) : 900, 1200 and 1400, and two testing strain rates (in mm/mm/s) : 0.2 and
+    0.5. Each mechanical test is conducted at a constant strain rate and a constant temperature (such as uniaxial uniform compression test).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_2_Definition_of_mechanical_testing_controls"></a><img height="423" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Definition of mechanical testing controls</p>
+  <p> </p>
+  <p>In the &quot;JMAK Model&quot; task tree, click &quot;<strong>Temperature groups</strong>&quot; item. In the property data window, click “<img src="../../../../assets/icons/pre_icons/material_suite_add_button.jpg"/>” or “<img src="../../../../assets/icons/pre_icons/material_suite_delete_button.jpg"/>” button to define the temperature group name (see <a href="#Fig_JAMKL1_3_Definition_of_Temperature_groups"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>4.</a>).  For each temperature group, select the temperatures
+    included. In each temperature group, the material parameters for recrystallization kinetics are assumed to be constant. The material parameters may change in different temperature groups. As a result, material parameters are defined as function of
+    temperature. In this Lab, define Temperature group as &quot;AA&quot; and assign two temperatures 900°C and 1200°C into the group by selecting them as shown in   <a href="#Fig_JAMKL1_3_Definition_of_Temperature_groups"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>4.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JAMKL1_3_Definition_of_Temperature_groups"></a><img height="422" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Definition of Temperature groups</p>
+  <h2><a id="1_4_Fit_material_parameters_in_DRX_kinetics"></a>Fit material parameters in DRX kinetics</h2>
+  <p>Expand &quot;Dynamic recrystallization (DRX)&quot; item in task tree and click the first subitem “<strong>DRX peak strain</strong>”. In the data window, specify a temperature group. For each initial grain size, define the flow stress curves for all
+    temperatures in the group and all strain rates. Each cell in the testing table highlighted by a red rectangular in <a href="#Fig_JMAKL1_4_Import_flow_stress_data_and_extract_the_peak_strain"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>5.</a>    defines a flow stress curve at a constant temperature under a constant strain rate.</p>
+  <p>An empty file icon (“<img src="../../../../assets/icons/pre_icons/material_suite_empty_file_icon.jpg"/>”) denotes that the cell data has not been defined yet. After clicking an undefined cell, the cell image changes to a loading file icon (“<img src="../../../../assets/icons/pre_icons/mo_import_file_icon2.jpg"/>”), and the window for function definition pops up in the display window. The stress-strain data can be manually input, copied and pasted, or loaded from an existing function data file. After data input is completed, click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> button to close the function definition window. The cell image changes to a defined file icon (“<img src="../../../../assets/icons/pre_icons/material_suite_defined_file_icon.jpg"/>”) and the peak strain is automatically extracted and displayed
+    in the line editor. The value of peak strain in the line editor can be manually edited. We can double click the view icon on the header (“<img src="../../../../assets/icons/pre_icons/mo_visible.jpg"/> ”) to plot the flow stress curves at a fixed
+    strain rate or a fixed temperature. It should be noted that, it is not necessary to define data for all cells, but the minimum requirement for fitting the interested parameters must be satisfied. The same method is used to define the cell data in
+    the testing table for each item or subitem in the task tree. In this lab, we will import the data for each cell of AA group from &quot;3D\LABS\MAK_Parameter_fitting_lab_data\DRX_Peak_strain_data folder&quot;.</p>
+  <p>For Grain size 40 - Stain rate 0.2 - Temperature 900 cell,  load &quot; 40_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Stain rate 0.2 - Temperature 1200 cell,   load &quot; 40_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 40 - Stain rate 0.5 - Temperature 900 cell,   load &quot; 40_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Stain rate 0.5 - Temperature 1200 cell,   load &quot; 40_0.5_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.2 - Temperature 900 cell,  load &quot; 100_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.2 - Temperature 1200 cell,  load &quot; 100_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.5 - Temperature 900 cell,  load &quot; 100_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.5 - Temperature 1200 cell,  load &quot; 100_0.5_1200.dat &quot; file.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_4_Import_flow_stress_data_and_extract_the_peak_strain"></a><img height="422" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0004.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Import flow stress data and extract the peak strain</p>
+  <p> </p>
+  <p>For a temperature group, after the flow stress data for all initial grain sizes are defined, click the “<strong>Fit</strong>’ button to fit material parameters in the peak strain equation (see <a href="#Fig_JMAKL1_5_Fit_material_parameters_in_the_peak_strain_equation"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>6.</a>).
+    The fitted parameters are displayed in the fitting table, and the graphic comparison between the measured data and the predicted data by the fitted material parameters is shown in the display window. For any known parameter, the value can be input
+    directly and check its “Fixed” flag. After fitting, parametric study can be performed by dragging the horizontal slider of a parameter and graphically examine the measured and predicted data.</p>
+  <p>For each additional temperature group if there is any, repeat this procedure to import its experimental data and fit material parameters.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_5_Fit_material_parameters_in_the_peak_strain_equation"></a><img height="422" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fit material parameters in the peak strain equation</p>
+  <p> </p>
+  <p>Click the “<strong>DRX volume fraction</strong>” subitem.  In the data window, define the available cell data (experimentally measured) of the testing table. In this lab, import each cell data from &quot;3D\LABS\JMAK_Parameter_fitting_lab_data\DRX_volume_fraction&quot;
+    folder.</p>
+  <p>For Grain size 40 - Stain rate 0.2 - Temperature 900 cell, load &quot; 40_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 40_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 40 - Stain rate 0.5 - Temperature 900 cell, load &quot; 40_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 40_0.5_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.2 - Temperature 900 cell, load &quot; 100_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 100_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.5 - Temperature 900 cell, load &quot; 100_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 100_0.5_1200.dat &quot; file.</p>
+  <p> </p>
+  <p> Each cell data defines the curve of DRX Vf~strain for a constant temperature and a constant strain rate. For each DRX Vf~strain curve, it is recommended that microstructures for at least 3 strain values should be measured, corresponding to low, medium,
+    and high DRX volume fractions, so that the basic shape of DRX Vf~strain curve can be well described. For each defined curve, the strain for 50% DRX will be automatically extracted and displayed in the line editor of its cell. If the extracted strain
+    for 50% DRX is not reasonable or desirable, it can be manually modified. In the display window after fitting, for each mechanical testing condition, the experimental data is displayed by solid dots, and the predicted data by the fitted parameters
+    is displayed as a solid line with the same color (as shown in <a href="#Fig_JMAKL1_6_Fit_material_parameters_in_the_DRX_volume_fraction"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>7.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_6_Fit_material_parameters_in_the_DRX_volume_fraction"></a><img height="423" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fit material parameters in the DRX volume fraction</p>
+  <p> </p>
+  <p>Click “<strong>DRX grain size</strong>” subitem in the task tree. For each available cell data of the testing table, define the curve of DRX grain size versus strain. Import each cell data from &quot;3D\LABS\JMAK_Parameter_fitting_lab_data\DRX_grain_size&quot;
+    folder.</p>
+  <p>For Grain size 40 - Stain rate 0.2 - Temperature 900 cell, load &quot; 40_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 40_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 40 - Stain rate 0.5 - Temperature 900 cell, load &quot; 40_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 40_0.5_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.2 - Temperature 900 cell, load &quot; 100_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 100_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.5 - Temperature 900 cell, load &quot; 100_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 100_0.5_1200.dat &quot; file.</p>
+  <p> After data definition is finished for the selected temperature group, click “<strong>Fit</strong>” button to fit material parameters in the DRX grain size equation as shown in <a href="#Fig_JMAKL1_7_Fit_material_parameters_in_the_DRX_grain_size"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>8.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_7_Fit_material_parameters_in_the_DRX_grain_size"></a><img height="422" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0007.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Fit material parameters in the DRX grain size</p>
+  <p> </p>
+  <p><a href="#Fig_JMAKL1_8_Definition_of_material_parameters_in_strain_rate_boundary_equation"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>9.</a> illustrates the definition of strain rate boundary. Its definition
+    is based</p>
+  <p>on user’s empirical rule on the working material. We don’t fit the parameters in the equation for strain rate boundary. We include this page in order that we can output the keyword file for a complete JMAK model after we finish fitting material parameters.
+    Import Strain_rate_boundary.dat file from &quot;3D\LABS\JMAK_Parameter_fitting_lab_data&quot; folder.</p>
+  <p>Strain rate boundary, together with the average deforming strain rate and the critical strain, is used to determine whether static or meta-dynamic recrystallization should be activated when deformation stops.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_8_Definition_of_material_parameters_in_strain_rate_boundary_equation" height="0" width="0"></a><img height="421" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Definition of material parameters in strain rate boundary equation</p>
+  <p> </p>
+  <h2><a id="1_5_Fit_material_parameters_in_MRX/SRX_kinetics_The_procedure_to_imp"></a>Fit material parameters in MRX/SRX kinetics</h2>
+  <p>The procedure to import MRX experimental data and fit its material parameters is the same as the procedure for SRX. Only the procedure to fit material parameters in MRX kinetics is introduced here.</p>
+  <p>The pre-deformed strain is an important controlling factor in MRX/SRX experimental test. The mechanical tests are terminated at the pre-deformed strains, then the specimens are hold at the same temperature for different times, followed by quenching
+    for microstructure measurement. At least two pre-deformed strains should be employed. For MRX tests, the pre-deformed strains are large than the critical strain but less than the 100% DRX strain. For SRX tests, the pre-deformed strains should be less
+    than the critical strain (thus DRX has not occurred yet). The definition of pre-deformed strains is shown in <a href="#Fig_JMAKL1_9_Definition_of_pre-deformed_strain_for_MRX_kinetics"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>10.</a></p>
+  <p> </p>
+  <p> In the task tree, click “<strong>Meta-dynamic recrystallization (MRX)</strong>” item. In the data window, input two pre-deformed strains, 0.1 and 0.2.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_9_Definition_of_pre-deformed_strain_for_MRX_kinetics"></a><img height="550" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0009.jpg" width="381"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Definition of pre-deformed strain for MRX kinetics</p>
+  <p> </p>
+  <p>Click the “<strong>MRX volume fraction</strong>” subitem in the task tree. In the data window, specify a temperature group. For each initial grain size and pre-deformed strain, for each available cell in the testing table, define the curve of MRX volume
+    fraction versus time. Import each cell data from &quot; 3D\LABS\JMAK_Parameter_fitting_lab_data\MRX_volume_fraction&quot; folder.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900 cell, load &quot; 40_0.1_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 900 cell, load &quot; 40_0.1_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 40_0.1_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 40_0.1_0.5_1200.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900 cell, load &quot; 40_0.2_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900 cell, load &quot; 40_0.2_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 40_0.2_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 40_0.2_0.5_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900 cell, load &quot; 100_0.1_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 900 cell, load &quot; 100_0.1_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 100_0.1_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 100_0.1_0.5_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900 cell, load &quot; 100_0.2_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900 cell, load &quot; 100_0.2_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 100_0.2_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 100_0.2_0.5_1200.dat &quot; file.</p>
+  <p> </p>
+  <p>After the curve of a cell is defined, the time for 50% MRX will be extracted automatically and filled in the line editor. This time for 50% MRX can be manually edited. After data definition is completed, click “<strong>Fit</strong>” button to fit material
+    parameters in the MRX volume fraction equation (see <a href="#Fig_JMAKL1_10_Fit_material_parameters_for_MRX_volume_fraction_equation"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>11.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_10_Fit_material_parameters_for_MRX_volume_fraction_equation"></a><img height="423" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fit material parameters for MRX volume fraction equation</p>
+  <p> </p>
+  <p>Click the “<strong>MRX grain size</strong>” subitem in the task tree. Fitting the material parameters for MRX grain size equation is shown in <a href="#Fig_JMAKL1_11_Fit_material_parameters_for_MRX_grain_size_equation"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>12.</a>    For each available cell in the testing table, the measured MRX grain size is input. It is assumed that MRX grain size depends on the initial grain size and pre-deformation conditions, but does not vary with the time of MRX process. In this lab, define
+    the values using below <a href="#Table_1_For_Predeformed_Strain_0.1_value">Table1</a> and <a href="#Table_2_For_Predeformed_Strain_0.2_value">Table 2</a> data. After data definition is completed, click “<strong>Fit</strong>” button to fit the material
+    parameters in the MRX grain size equation.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;margin-left: auto;margin-right: auto">
+    <colgroup>
+      <col style="width:20.00%"/>
+      <col style="width:20.00%"/>
+      <col style="width:20.00%"/>
+      <col style="width:20.00%"/>
+      <col style="width:20.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td colspan="1" rowspan="2">
+          <p style="text-align: center"><strong>Temperature<a id="Table_1_For_Predeformed_Strain_0.1_value"></a></strong></p>
+        </td>
+        <td colspan="2" rowspan="1">
+          <p style="text-align: center"><strong>Initial grain size 40</strong></p>
+        </td>
+        <td colspan="2" rowspan="1">
+          <p style="text-align: center"><strong>Initial grain size 100</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">Strain rate 0.2</p>
+        </td>
+        <td>
+          <p style="text-align: center">Strain rate 0.5</p>
+        </td>
+        <td>
+          <p style="text-align: center">Strain rate 0.2</p>
+        </td>
+        <td>
+          <p style="text-align: center">Strain rate 0.5</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">900</p>
+        </td>
+        <td>
+          <p style="text-align: center">68.0606</p>
+        </td>
+        <td>
+          <p style="text-align: center">65.1158</p>
+        </td>
+        <td>
+          <p style="text-align: center">100.715</p>
+        </td>
+        <td>
+          <p style="text-align: center">96.3075</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1200</p>
+        </td>
+        <td>
+          <p style="text-align: center">93.952</p>
+        </td>
+        <td>
+          <p style="text-align: center">89.8477</p>
+        </td>
+        <td>
+          <p style="text-align: center">139.463</p>
+        </td>
+        <td>
+          <p style="text-align: center">133.32</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Table_numb">For Predeformed Strain 0.1 value</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;margin-left: auto;margin-right: auto">
+    <colgroup>
+      <col style="width:20.00%"/>
+      <col style="width:20.00%"/>
+      <col style="width:20.00%"/>
+      <col style="width:20.00%"/>
+      <col style="width:20.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td colspan="1" rowspan="2">
+          <p style="text-align: center"><strong>Temperature</strong><a id="Table_2_For_Predeformed_Strain_0.2_value"></a></p>
+        </td>
+        <td colspan="2" rowspan="1">
+          <p style="text-align: center"><strong>Initial grain size 40</strong></p>
+        </td>
+        <td colspan="2" rowspan="1">
+          <p style="text-align: center"><strong>Initial grain size 100</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">Strain rate 0.2</p>
+        </td>
+        <td>
+          <p style="text-align: center">Strain rate 0.5</p>
+        </td>
+        <td>
+          <p style="text-align: center">Strain rate 0.2</p>
+        </td>
+        <td>
+          <p style="text-align: center">Strain rate 0.5</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">900</p>
+        </td>
+        <td>
+          <p style="text-align: center">44.208</p>
+        </td>
+        <td>
+          <p style="text-align: center">42.3313</p>
+        </td>
+        <td>
+          <p style="text-align: center">65.0177</p>
+        </td>
+        <td>
+          <p style="text-align: center">62.2092</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1200</p>
+        </td>
+        <td>
+          <p style="text-align: center">60.708</p>
+        </td>
+        <td>
+          <p style="text-align: center">58.0924</p>
+        </td>
+        <td>
+          <p style="text-align: center">89.711</p>
+        </td>
+        <td>
+          <p style="text-align: center">85.7966</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Table_numb">For Predeformed Strain 0.2 value</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_11_Fit_material_parameters_for_MRX_grain_size_equation"></a><img height="425" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fit material parameters for MRX grain size equation</p>
+  <p> </p>
+  <p>In the task tree, click “<strong>Static- recrystallization (SRX)</strong>” item. In the data window, input two pre-deformed strains, 0.1 and 0.2 as shown in <a href="#Fig_JMAKL1_12_Definition_of_pre-deformed_strain_for_SRX_kinetics"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>13.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_12_Definition_of_pre-deformed_strain_for_SRX_kinetics"></a><img height="422" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0012.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Definition of pre-deformed strain for SRX kinetics</p>
+  <p> </p>
+  <p>Click the “<strong>SRX volume fraction</strong>” subitem in the task tree. In the data window, specify a temperature group. For each initial grain size and pre-deformed strain, for each available cell in the testing table, define the curve of SRX volume
+    fraction versus time. Import each cell data from &quot; 3D\LABS\\JMAK_Parameter_fitting_lab_data\SRX_volume_fraction&quot; folder.</p>
+  <p> </p>
+  <p>For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900  cell, load &quot; 40_0.1_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 900  cell, load &quot; 40_0.1_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 40_0.1_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 40_0.1_0.5_1200.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900  cell, load &quot; 40_0.2_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900  cell, load &quot; 40_0.2_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 40_0.2_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 40_0.2_0.5_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900  cell, load &quot; 100_0.1_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 900  cell, load &quot; 100_0.1_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 100_0.1_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 100_0.1_0.5_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900  cell, load &quot; 100_0.2_0.2_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900  cell, load &quot; 100_0.2_0.5_900.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load &quot; 100_0.2_0.2_1200.dat &quot; file.</p>
+  <p>For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load &quot; 100_0.2_0.5_1200.dat &quot; file.</p>
+  <p> </p>
+  <p>After the curve of a cell is defined, the time for 50% SRX will be extracted automatically and filled in the line editor. This time for 50% SRX can be manually edited. After data definition is completed, click “<strong>Fit</strong>” button to fit material
+    parameters in the SRX volume fraction equation (see <a href="#Fig_JMAKL1_13_Fit_material_parameters_for_SRX_volume_fraction_equation"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>14.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_13_Fit_material_parameters_for_SRX_volume_fraction_equation"></a><img height="422" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fit material parameters for SRX volume fraction equation</p>
+  <p> </p>
+  <p>Click the “<strong>SRX grain size</strong>” subitem in the task tree. Fitting the material parameters for SRX grain size equation is shown in <a href="#Fig_JMAKL1_14_Fit_material_parameters_for_SRX_grain_size_equation"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>15.</a>    For each available cell in the testing table, the measured SRX grain size is input. It is assumed that SRX grain size depends on the initial grain size and pre-deformation conditions but does not vary with the time of SRX process. In this lab define
+    the values using same <a href="#Table_1_For_Predeformed_Strain_0.1_value">Table1</a> and <a href="#Table_2_For_Predeformed_Strain_0.2_value">Table 2</a> data. After data definition is completed, click “<strong>Fit</strong>” button to fit the material
+    parameters in the SRX grain size equation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_14_Fit_material_parameters_for_SRX_grain_size_equation"></a><img height="422" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fit material parameters for SRX grain size equation</p>
+  <p> </p>
+  <h2><a id="1_6_Fit_material_parameters_in_grain_growth_kinetics"></a>Fit material parameters in grain growth kinetics</h2>
+  <p>In the task tree, click “<strong>Grain growth</strong>” item. For each temperature group, define the available cell data in the testing table. Each cell defines the curve of grain size versus time measured from grain growth tests. Import each cell data
+    from &quot; 3D\LABS\JMAK_Parameter_fitting_lab_data\Grain growth&quot; folder.</p>
+  <p>For Grain size 40 -  Temperature 900 cell, load &quot; 40_900.dat &quot; file.</p>
+  <p>For Grain size 40 -  Temperature 1200 cell, load &quot; 40_1200.dat &quot; file.</p>
+  <p>For Grain size 100 -  Temperature 900 cell, load &quot;100_900.dat &quot; file.</p>
+  <p>For Grain size 100 -  Temperature 1200 cell, load &quot; 100_1200.dat &quot; file.</p>
+  <p>After the data input is completed, click “<strong>Fit</strong>” button to fit the material parameters in the grain growth equation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_15_Fit_material_parameters_for_grain_growth_kinetics"></a><img height="423" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fit material parameters for grain growth kinetics</p>
+  <p> </p>
+  <h2><a id="1_7_Output_the_fitting_results_to_keyword_file"></a>Output the fitting results to keyword file</h2>
+  <p>After fitting material parameters for JMAK model is completed, click “<strong>Save keyword file</strong>” in the task tree, and input necessary data as shown in <a href="#Fig_JMAKL1_16_Save_a_keyword_file_for_JMAK_model"><span data-keyref="Material_Suite_Labs_JAMK_Parameter_Fitting_Lab">Fig. JMAKL1.</span>17.</a>     to complete the JMAK model definition. Click “<strong>Save keyword</strong>” button to save the keyword file in the directory specified by file path. The keyword file name in this lab is “JMAK.key”, the data can be viewed under DEFORM keyword “GRNDAT”
+    in the saved keyword file. In FEM model definition, we can import this keyword file for JMAK model definition.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_JMAKL1_16_Save_a_keyword_file_for_JMAK_model"></a><img height="550" src="../../../../assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0016.jpg" width="382"/></p>
+  <p> </p>
+  <p class="Fig_numb">Save a keyword file for JMAK model</p>
+  <p> </p>
+
+</body></html>

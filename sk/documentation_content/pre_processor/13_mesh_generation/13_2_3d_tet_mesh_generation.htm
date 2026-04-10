@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.7.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>13.2. 3D Tet Mesh Generation</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>13.2. 3D Tet Mesh Generation</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/13_Mesh_Generation/13_3_3D_Brick_Mesh_Generation.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/13_Mesh_Generation/13_1_2D_Mesh_Generation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="13.2. 3D Tet Mesh Generation">
+        <span>13.2. 3D Tet Mesh Generation</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>13.2. 3D Tet Mesh Generation</h1>
+  <p><a href="#13.2.1._Guided_Mode_3D_Mesh_Generation">13.2.1. Guided Mode 3D Mesh Generation</a><br/>
+    <a href="#13.2.2._Expert_Mode_3D_Mesh_Generation">13.2.2. Expert Mode 3D Mesh Generation</a></p>
+  <p><a href="#13.2.3._3D_Mesh_generation_tools_in_Expert_mode">13.2.3. 3D Mesh generation tools in Expert mode</a></p>
+  <ul>
+    <li>
+      <p><a href="#Import_Mesh" style="margin-left: 40px">Import Mesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Save_Mesh" style="margin-left: 40px">Save Mesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Check_Mesh" style="margin-left: 40px">Check Mesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Area_and_Volume" style="margin-left: 40px">Area and Volume</a></p>
+    </li>
+    <li>
+      <p><a href="#Delete_Mesh" style="margin-left: 40px">Delete Mesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Surface_mesh" style="margin-left: 40px">Surface mesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Solid_mesh" style="margin-left: 40px">Solid mesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Manual_Remesh" style="margin-left: 40px">Manual Remesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Show_3D" style="margin-left: 40px">Show 3D</a></p>
+    </li>
+    <li>
+      <p><a href="#Show_2D_Cross_section_" style="margin-left: 40px">Show 2D Cross section</a> </p>
+    </li>
+    <li>
+      <p><a href="#Default_Setting" style="margin-left: 40px">Default Setting</a></p>
+    </li>
+  </ul>
+  <p><a href="#13.2.4._General_Settings_of_Tetrahehdral_(Tet)_mesh">13.2.4. General Settings for Tetrahehdral (Tet) mesh</a></p>
+  <p><a href="#13.2.5._Mesh_weighting_factors">13.2.5. Mesh weighting factors</a></p>
+  <p><a href="#13.2.6._Mesh_density_windows">13.2.6. Mesh density windows</a></p>
+  <p><a href="#13.2.7._Coating_Mesh">13.2.7. Coating Mesh</a></p>
+  <p><a href="#13.2.8._Remeshing_criteria">13.2.8. Remeshing criteria</a></p>
+  <p><a href="#13_2_9_Built_In_Flownet">13.2.9. Built in Flownet</a></p>
+  <h2><a id="13.2.1._Guided_Mode_3D_Mesh_Generation"></a>Guided Mode 3D Mesh Generation</h2>
+  <p>The below <a href="#Fig._13.2.1._Guided_Mode_3D_Mesh_window"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>1.</a> shows the mesh generation options in guided mode (<img height="20" src="../../../assets/icons/pre_icons/mo_guided_mode.jpg" width="23"/>). In guided mode mesh page we can generate only Tetrahedral mesh type.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="422" src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._13.2.1._Guided_Mode_3D_Mesh_window"></a>Guided Mode 3D Mesh window</p>
+  <p class="Fig_name"> </p>
+  <p><strong><a id="Number_of_Elements"></a>Number of Elements : </strong>The number of elements to be generated for an object can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation.</p>
+  <p> </p>
+  <p><strong><a id="Preview"></a>Preview <img height="21" src="../../../assets/icons/pre_icons/mo_mesh_preview_button.jpg" width="70"/> :</strong>This feature allows the user to preview the surface mesh of the object.</p>
+  <p> </p>
+  <p><strong><strong><a id="Generate_Mesh"></a></strong>Generate Mesh <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> : </strong>Once the user is satisfied with the preview of surface mesh, the mesh can be generated on an object by clicking
+    Generate Mesh.</p>
+  <p> </p>
+  <p><strong>Delete </strong><img height="21" src="../../../assets/icons/pre_icons/mo_delete_button.jpg" width="73"/> : This feature deletes the generated mesh.</p>
+  <p> </p>
+  <p>In order to control the mesh parameters like size, shape, density, type of elements, etc..., user has to switch to expert mode <img height="21" src="../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg" width="24"/> for more advanced mesh options.
+    Below <a href="#Fig._13.2.2._Expert_Mode_3D_Mesh_window"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>2.</a> shows the mesh options available from Expert mode.</p>
+  <h2><a id="13.2.2._Expert_Mode_3D_Mesh_Generation"></a>Expert Mode 3D Mesh Generation </h2>
+  <p>The below  <a href="#Fig._13.2.2._Expert_Mode_3D_Mesh_window"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>2.</a> shows the mesh generation options in Expert mode.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._13.2.2._Expert_Mode_3D_Mesh_window"></a>Expert Mode 3D Mesh window </p>
+  <p> </p>
+  <h2><a id="13.2.3._3D_Mesh_generation_tools_in_Expert_mode"></a>3D Mesh generation tools in Expert mode</h2>
+  <p><strong><a id="Import_Mesh"></a>Import Mesh</strong> <img src="../../../assets/icons/pre_icons/mo_import_mesh_button.jpg"/> : A mesh can be imported into the MO wizard  from a keyword file, database file or any supported mesh formats (PDA or universal
+    file).</p>
+  <p> </p>
+  <p><strong><a id="Save_Mesh"></a>Save Mesh</strong> <img src="../../../assets/icons/pre_icons/mo_save_mesh_button.jpg"/> : This feature saves the current generated mesh into a file.</p>
+  <p> </p>
+  <p><strong><a id="Check_Mesh"></a>Check Mesh</strong> <img src="../../../assets/icons/pre_icons/mo_check_mesh_button.jpg"/> : The mesh can be examined for problems using the Check Mesh function. A perfect mesh will give the popup as shown in the <a href="#Fig._13.2.3._Check_Mesh_popup_window"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>3.</a>,
+     when user clicks on check mesh option.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.2.3._Check_Mesh_popup_window"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image004.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Check Mesh popup window</p>
+  <p> </p>
+  <p><strong><a id="Area_and_Volume"></a>Area and Volume</strong> <img src="../../../assets/icons/pre_icons/mo_area_volume.jpg"/> : This feature gives information of the meshed area and volume of the object. (See <a href="#Fig._13.2.4._Mesh_Area_and_Volume_popup_window"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>4.</a>    )</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.2.4._Mesh_Area_and_Volume_popup_window"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image005.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Mesh Area and Volume popup window</p>
+  <p> </p>
+  <p><strong>Generate Mesh</strong> <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> :  The mesh can be generated by clicking Generate Mesh.</p>
+  <p> </p>
+  <p><strong><a id="Delete_Mesh"></a>Delete Mesh</strong> <img src="../../../assets/icons/pre_icons/mo_delete_mesh_button.jpg"/> : This feature deletes the generated mesh. Once, user clicks on <img src="../../../assets/icons/pre_icons/mo_delete_mesh_button.jpg"/> button, popup appears as shown in ( <a href="#Fig._13.2.5._Delete_mesh_popup_window"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>5</a>.). By clicking on <img src="../../../assets/icons/pre_icons/mo_yes_button.jpg"/> button, mesh can be deleted.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig._13.2.5._Delete_mesh_popup_window"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Delete mesh popup window</p>
+  <p> </p>
+  <p><strong><a id="Surface_mesh"></a>Surface mesh </strong><img height="21" src="../../../assets/icons/pre_icons/mo_surface_mesh_button.jpg" width="73"/> : When all of the Mesh parameters have been set, a surface mesh can be generated by clicking on the
+    <img src="../../../assets/icons/pre_icons/mo_surface_mesh_button.jpg"/> button. When a new mesh is generated for an object that currently has a mesh, the old mesh will be deleted and replaced with the new mesh. If there is a failure in the generation
+    of the surface mesh, please refer to the <a href="../../simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running.htm"><span style="color:#0000ff;">Trouble shooting</span></a> section.</p>
+  <p> </p>
+  <p><strong><a id="Solid_mesh"></a>Solid mesh</strong> <img src="../../../assets/icons/pre_icons/mo_solid_mesh_button.jpg"/> : After the surface mesh is generated, the user should inspect the mesh before generating the solid mesh. Pay particular attention
+    to adequate mesh density in regions with complex geometry. After an acceptable surface mesh has been generated the solid mesh may be generated by clicking the Generate Solid Mesh button. If a surface mesh is imported as the geometry, the user may
+    forgo the surface mesh generation and directly place a solid mesh on the surface mesh. If the solid mesh generation fails, please refer to the <a href="../../simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running.htm"><span style="color:#0000ff;">Trouble shooting</span></a>    section.</p>
+  <p> </p>
+  <p><strong><a id="Manual_Remesh"></a>Manual Remesh</strong> <img src="../../../assets/icons/pre_icons/mo_manual_remesh_button.jpg"/> : If a simulation is continued from a previously running simulation, the recommended button to click is Manual Remesh.
+    This automatically performs border extraction and will prompt the user for boundary condition interpolation.</p>
+  <p> </p>
+  <p>During the course of a DEFORM simulation, extensive deformation of plastic or porous objects may cause elements in those object meshes to become so distorted that the mesh is no longer usable (negative Jacobian). If this condition occurs, the simulation
+    will abort and an error message will be written to the ProblemID.MSG file. To continue a simulation after a mesh has become unusable, the object must be remeshed. Remeshing is the process of replacing a distorted mesh with a new undistorted mesh and
+    interpolating the field variables (strain, velocity, damage, and temperature etc.) from the old mesh to the new mesh.</p>
+  <p> </p>
+  <p>In the case of a hexahedral (brick) mesh, 3D cannot currently create a brick mesh so if a remesh is required for a Elasto-plastic brick mesh, the user needs to remesh outside of DEFORM and interpolate the state variables and re-apply the boundary conditions
+    to the new mesh.</p>
+  <p> </p>
+  <p>In most cases, remeshing and interpolation occurs automatically without user intervention.</p>
+  <p>It is also possible to manually regenerate a mesh on an object and interpolate the data from the old mesh. The procedure to perform a manual remeshing is as follows:</p>
+  <p> </p>
+  <p><strong>Procedure:</strong></p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Open the pre-processor.</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select the step from the database where remeshing is to be performed and load this in the pre-processor. If the object will not remesh at the last step, it may be necessary to remesh at an earlier step.</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select the object to be remeshed.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select the Manual Remeshing option in the Objects window.</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">If the part geometry is to be modified (such as trimming flash or punching out a web, it may be done at this point using the geometry editor).</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Adjust mesh windows or other mesh parameters as necessary.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Generate a new surface mesh.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Generate a new solid mesh.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Interpolate data from the old mesh to the new mesh by clicking on the OK button.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Interpolate boundary conditions from the old mesh to the new mesh unless:</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Dies are being changed at the same time the part is being remeshed</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">The mesh visibly distorts on remeshing.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">A negative Jacobian error occurs immediately when the problem is restarted.</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Generate a database and start simulation.</li>
+  </ul>
+  <p> </p>
+  <p>If the mesh visibly distorts after remeshing or if you are changing dies at the same time, regenerate the mesh and interpolate data but not boundary conditions. If boundary conditions are not interpolated, it is necessary to recreate all velocity, heat
+    transfer, inter-object, or other boundary conditions. If there are no changes to the geometry (such as trimming the part) then just click on , this extracts the border and shows the mesh generation dialog. After meshing when exiting, interpolation
+    of state variables and boundary conditions is carried out.</p>
+  <p> </p>
+  <p><strong><a id="Default_Setting"></a>Default Setting</strong> <img src="../../../assets/icons/pre_icons/mo_default_settings_button.jpg"/> :    When user clicks on Default settings tab all the settings will be changed to default values, by default Mesh
+    window will be in greyed out mode as no mesh windows are defined. If user wants to activate mesh window, user has to change the weighting factor for mesh density by increasing the sliding bar value to 1.</p>
+  <p> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong><a id="Show_3D"></a>Show 3D</strong></p>
+  <p>By selecting this option user can see the 3D object in Display window. This option is more useful for the brick mesh option.</p>
+  <p> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong><a id="Show_2D_Cross_section_"></a>Show 2D Cross section </strong></p>
+  <p>By selecting this option user can see the 2D cross section object in Display window. This option is more useful for the brick mesh option.</p>
+  <p> </p>
+  <p style="font-family: Arial;font-size: 12pt"><strong>Mesh Type</strong>: </p>
+  <p style="font-family: Arial;font-size: 12pt"> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Tetrahedral mesh</strong> : Using this option user can generate tetrahedral (tet) mesh with existing mesh settings for the object. By default in DEFORM tetraherdal mesh will be selected.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Brick mesh : </strong>Using this option user can generate brick mesh with existing mesh settings for the object. For brick mesh options refer chapter 13.3. Brick Mesh Generation </li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <h2><strong><a id="13.2.4._General_Settings_of_Tetrahehdral_(Tet)_mesh" height="16" width="16"></a>General Settings for Tetrahehdral (Tet) mesh</strong></h2>
+  <p>Within DEFORM, there are two different types of mesh that can be generated for 3D objects.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Relative Mesh </strong></li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Using the relative mesh setting, the user specifies the number of solid elements to be generated. No matter how complex the shape of the part gets, the number of elements will remain essentially constant. ( <a href="#Fig._13.2.6._Relative_mesh_window_options"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>6.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.2.6._Relative_mesh_window_options"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image006.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Relative mesh window options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Absolute Mesh</strong></li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Using the absolute mesh setting, the user specifies the size of the elements, and the system determines the total number of elements that are required based on the size of the element specified and geometry. As part complexity increases, the number of
+    elements tends to increase. ( <a href="#Fig._13.2.7._Absolute_mesh_window_options"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>7.</a>)</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig._13.2.7._Absolute_mesh_window_options"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Absolute mesh window options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Surface elements</strong></li>
+  </ul>
+  <p>The number of surface elements (MGNELS) represents the approximate number of surface elements that will be generated by the mesh generator. The Automatic Mesh Generator (AMG) takes the value for MGNELS and generates a mesh that will contain approximately
+    the same number of elements. This value is ignored if mesh windows are used with absolute mesh density definition.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Element size ratio </strong>(<a href="../../keyword_documentation/m/mgsizr.htm">MGSIZR</a>)</li>
+  </ul>
+  <p>The maximum size ratio between elements is one of several ways to control the mesh density during automatic mesh generation (AMG) by specifying the ratio of node densities.</p>
+  <p><br/> For a value of 3 for <a href="../../keyword_documentation/m/mgsizr.htm">MGSIZR</a>, the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then
+    Size Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Finer internal mesh</strong></li>
+  </ul>
+  <p>This feature defines fine internal mesh for the object when meshing. This feature is active for DEFORM-3D.A check box has been added to allow the user to create a finer internal mesh. This feature can be used when the user would like to see more solid
+    elements throughout the thickness of the part.  Note that the total number of elements may be significantly increased when this option is used. A comparison of with and without finer internal mesh is seen in <a href="#Fig._13.2.8._Comparison_of_mesh_with_10000_elements"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>8.</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="331" src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._13.2.8._Comparison_of_mesh_with_10000_elements"></a>Comparison of mesh with 10000 elements specified at generation; (a) Internal mesh without finer internal mesh (b) Internal mesh with finer internal mesh</p>
+  <p> </p>
+  <h2><a id="13.2.5._Mesh_weighting_factors"></a>Mesh weighting factors</h2>
+  <p>The weighting factors or parameters (system defined mesh density) for boundary curvature, temperature, strain and strain rate specify relative mesh density weights to be assigned to the associated parameter. (See <a href="#Fig._13.2.9._3D_Mesh_Weighting_Factors_window"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>9.</a>)</p>
+  <p>Temperature, strain, and strain rate densities are assigned based on gradients in these parameters, not absolute parameter values. That is, a region with a rapid temperature change in a particular direction will receive more elements that a region with
+    a uniform high temperature.</p>
+  <p>The values from all the mesh density keywords are combined during the mesh generation process to create a mesh density distribution within the geometric boundary.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.2.9._3D_Mesh_Weighting_Factors_window"></a><img height="550" src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image009.jpg" width="449"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Mesh Weighting Factors window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Surface curvature based weighting factor</strong> (MGWCUV) </li>
+  </ul>
+  <p>The surface curvature weighting (<a href="../../keyword_documentation/m/mgwcuv.htm">MGWCUV</a>) will apply a higher mesh density to regions where the geometry edge lengths are smaller. The purpose of this is to apply a finer mesh in regions where smaller
+    facets are used to give a finer mesh in the region of small features. If <a href="../../keyword_documentation/m/mgwcuv.htm">MGWCUV</a> is greater than 0, the boundary area with curves will receive a higher mesh density in that area. If <a href="../../keyword_documentation/m/mgwcuv.htm">MGWCUV</a> is
+    set to 0, this weighting criterion is ignored.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Temperature based weighting factor</strong> (MGWTMP)</li>
+  </ul>
+  <p>This (<a href="../../keyword_documentation/m/mgwtmp.htm">MGWTMP</a>) weighting factor can be used to specify fine elements in areas of high temperature gradients.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Strain base weighting factor</strong> (MGWSTN)</li>
+  </ul>
+  <p>To keep a fine mesh in areas of high strain this (<a href="../../keyword_documentation/m/mgwstn.htm">MGWSTN</a>) weighting factor can be adjusted.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Strain rate based weighting factor </strong>(MGWSTR) </li>
+  </ul>
+  <p>If there are areas on the deforming object which see high strain rates and localized deformation then using (<a href="../../keyword_documentation/m/mgwstr.htm">MGWSTR</a>) weighting factor will put a fine mesh in areas where there is a high strain rate
+    gradient</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Mesh Density Windows weighting factor</strong> (MGWUSR)</li>
+  </ul>
+  <p>The user defined windows weighting factor (<a href="../../keyword_documentation/m/mgwusr.htm">MGWUSR</a>) is used in conjunction with Mesh Density Windows. User-defined distribution weighting will apply a higher mesh density to areas with a specified
+    density window. If this parameter is set to 0, the mesh windows are ignored during automatic remeshing.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Additional weight weighting factor</strong></li>
+  </ul>
+  <p> </p>
+  <p class="Note_text">Note:</p>
+  <p class="Note_text">When an object is deformed, the user-defined mesh window will move according to the velocity component assigned to that window. This window will carry the mesh density weight with it throughout the simulation.</p>
+  <p class="Note_text"> </p>
+  <h2><a id="13.2.6._Mesh_density_windows"></a>Mesh density windows for Tet mesh</h2>
+  <p>The Mesh density window (See <a href="#Fig._13.2.10._3D_Mesh_Density_window"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>10.</a>) concept is similar to a user defined mesh density. The mesh density specified for a given
+    window is applied to any geometry point (node or STL vertex) inside the window. However, the mesh density window is used during remeshing as well as initial mesh generation, whereas user defined mesh densities are used only during initial generation.
+    It can also be assigned a velocity, or follow another object&#39;s movement and it can be defined in an area where the workpiece has not yet been deformed through.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.2.10._3D_Mesh_Density_window"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image012.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">3D Mesh Density window</p>
+  <p> </p>
+  <p>Mesh density is defined by the number of surface nodes per unit length. The mesh density values may specify a mesh density ratio between two regions in the object or an absolute element edge length in a region on a surface. In the case of a relative
+    mesh density between one or more regions, the unspecified areas will be given the global value. In the case of absolute mesh density, the unspecified regions will also take on the global value. In the case of absolute mesh density specification, the
+    user should be careful what value of density is used.</p>
+  <p> </p>
+  <p>The user can also import any user defined geometry (in GEO format) as a mesh density window (See<a href="#Fig._13.2.11._Specification_of_Mesh_Window_using_Geometry">  <span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>11.</a>)
+    for more precise mesh density control on the certain areas on the object during initial mesh generation (See <a href="#Fig._13.2.12._Mesh_generated_using_geometry_defined_mesh_surface"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>12.</a>)
+    as well as remeshing.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image011.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._13.2.11._Specification_of_Mesh_Window_using_Geometry"></a>Specification of Mesh Window using Geometry</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image010.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._13.2.12._Mesh_generated_using_geometry_defined_mesh_surface"></a>Mesh generated using geometry defined mesh surface</p>
+  <p> </p>
+  <p><strong>Defining mesh density windows</strong>: Mesh density window can be defined using the below mentioned steps,</p>
+  <ol class="Decimal" style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5;">
+    <li>Select a window number under the mesh density window header. Up to 20 different windows can be defined. Apart from the basic mesh window types available, user can also define any arbitrary shaped mesh density window which can be any valid 3D GEO file
+      generated from DEFORM system.</li>
+  </ol>
+  <ul class="Disc_with_indent" style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">
+    <li>Click on the Add bounding point button and click on the part to create a mesh density window.</li>
+    <li>Drag window to adjust the size and location of the mesh density window.</li>
+    <li>Once a window is defined, its density is entered in the box under the Parameters header.</li>
+  </ul>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5" value="2">A velocity for the mesh window can also be defined in the x and/or y direction. These values are also found under the Parameters header.</li>
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; counter-reset: item1 2;" value="3">If the window needs to be rotated, the user can use rotation buttons in the display box.</li>
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; counter-reset: item1 3;" value="4">After the window is applied in the position that the user desires, pressing the Show button in the display box will highlight the surface nodes that are encapsulated by the mesh window. The Hide button will de-highlight the nodes contained by the
+      mesh density window.</li>
+  </ol>
+  <p> </p>
+  <p><strong>Window Definition</strong>: Using these options different 3d mesh windows can be created and modified as explained below,</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Box <img src="../../../assets/icons/pre_icons/mo_box_window_icon.jpg"/></strong>, <strong>Cylinder <img src="../../../assets/icons/pre_icons/mo_cylinder_window_icon.jpg"/></strong>, <strong>Ring <img src="../../../assets/icons/pre_icons/mo_hollow_cylinder_icon.jpg"/> </strong>and
+      <strong>Polygon <img src="../../../assets/icons/pre_icons/mo_polygon_window_icon.jpg"/>  </strong>window options  are used to define mesh window. </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Resize, Move and Rotate window </strong>: user can resize the window using Size control point option, user can move the window using axis arrow option and user can rotate the window using Rotational axis option.</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5;">
+      <p><strong>Axis arrow</strong>: using this option user can move the window in selected axis direction along global axis. User need to select the axis arrow of which direction to be moved and then drag the axis arrow, window will interactively changes
+        its position when we drag the axis arrow.</p>
+    </li>
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5;">
+      <p><strong>Rotational arrow</strong> : using this option user can rotate the window in selected axis direction along global axis.  User need to select the axis of which direction to be moved and then rotate the rotational arrow, window will interactively
+        rotate as we rotate the rotational arrow.</p>
+    </li>
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5;">
+      <p><strong>Size control point </strong>: window size can be controlled using size control points based on the window local co-ordinate system. User can observe sizing option based on the type of window. User can drag the size control points to interactively
+        change the size along the axis in the direction of dragging.</p>
+    </li>
+  </ul>
+  <p style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5;"> </p>
+  <p style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5;"><img height="354" src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image015.jpg" width="750"/></p>
+  <p style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5;"> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Modify </strong><img src="../../../assets/icons/pre_icons/mo_edit_window_icon.jpg"/>: using this option user can modify the previously defined window definition. </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Duplicate window </strong><img src="../../../assets/icons/pre_icons/mo_duplicate_window_button.jpg"/>: using this option user can duplicate the existing window and can change the position or the size of the duplicated window.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Preview </strong><img src="../../../assets/icons/pre_icons/mo_preview_icon.jpg"/>: using this option user can see the preview of mesh window on the object. </li>
+  </ul>
+  <p> </p>
+  <p><strong>Points</strong>: The Points represents the total number of points that make up the mesh density window.</p>
+  <p> </p>
+  <p><strong>Density </strong>: The Density is the desired density value for a given window.</p>
+  <p> </p>
+  <p><strong>Velocity</strong>: The Velocity is the velocity of the window. This allows the window to move with the dies. In cases where punch velocity is not known, such as a hammer forging, or a load controlled press, the best estimate of a constant velocity
+    should be made.</p>
+  <p> </p>
+  <p><strong>Local remeshing window: </strong></p>
+  <p class="Note_text">Note:</p>
+  <p class="Note_text">If a velocity is assigned to a window, it should be repositioned as necessary before a second or third operation is performed.</p>
+  <p> </p>
+  <p><strong>Important considerations in mesh density window definition:</strong></p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">There needs to be only one mesh density window. The global density values will used for any region that is not inside a window.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Be aware of large mesh density ratios. A 5:1 density ratio is large, and a 10:1 ratio is extreme. Extremely large density ratios may lead to problems in mesh generation including much longer times taken to generate mesh.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Absolute mesh density is a powerful tool, in that it allows specific resolution to be defined in various areas of a part. Consider a feature .5&#39;&#39; thick. To maintain 3 elements across the thickness of the feature, specify an absolute mesh density
+      of 6 elements/inch in that region. As more material enters this region, the total number of elements will be increased as necessary to maintain the desired resolution.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> If absolute density is used, the user must be careful of the values that are specified since there is no specified upper bound on the number of elements.</li>
+  </ul>
+  <p> </p>
+  <h2><a id="13.2.7._Coating_Mesh"></a>Coating Mesh</h2>
+  <p>The user can add coating layers using this option and generate mesh for the same. Coating mesh is a thin layer of elements along the object boundary with specific characteristics. For added coating layers user can assign material. (See <a href="#Fig._13.2.13._Coating_mesh_window"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>13.</a>)
+    For further information on the usage of coating mesh please refer to <span style="color:#0000ff;"><a href="../../appendices/appendix_xi__near_surface_mesh_functions.htm">Appendix XI</a>.</span></p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig._13.2.13._Coating_mesh_window"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image013.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Coating mesh window</p>
+  <p> </p>
+  <p><strong>Preserve state varaible and boundary conditions</strong>: </p>
+  <h2><a id="13.2.8._Remeshing_criteria"></a>Remeshing criteria</h2>
+  <p>Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See <a href="#Fig._13.2.14._Remeshing_Criteria_settings_window"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>14.</a>    ) contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they
+    are Interference Depth (RMDPTH), Max. Time Increment (RMTIME), Max. Step Increment (RMSTEP) and Max. Stroke Increment (RMSTRK). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian),
+    the object will be remeshed. During the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig._13.2.14._Remeshing_Criteria_settings_window"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image014.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Remeshing Criteria settings window</p>
+  <p> </p>
+  <p>For details about Maximum interference depth (RMDPTH), Maximum stroke increment (RMSTRK), Maximum time increment (RMTIME), Maximum step increment (RMSTEP) and Purpose of Criteria please refer <a href="13_1_2d_mesh_generation.htm#13.1.8._Remeshing_criteria">13.1.8. Remeshing criteria</a></p>
+  <p> </p>
+  <p><strong>Penetration Distance </strong>(<strong>Absolute</strong>) : If a positive number (in the unit of length) is entered, the program will conduct a check on each surface edge that has a contact node on each end. The distance from the middle of the
+    edge to the die surface is calculated. If the maximum penetration depth exceeds the specified limit, remeshing will be triggered.</p>
+  <p> </p>
+  <p><strong>Penetration Distance</strong> (<strong>Relative</strong>) : If a negative number (a fraction) is entered, the program will conduct a check on each surface edge that has a contact node on each end. The distance from the middle of the edge to
+    the die surface is calculated and divided by the original length of the edge.  If the ratio exceeds the magnitude of the specified value, remeshing will be triggered.</p>
+  <p> </p>
+  <p><strong>Default Value : </strong>The pre-processor now has a default value 0.7 with a relative setting.</p>
+  <p> </p>
+  <p><strong>Global and Local Remeshing Options: </strong></p>
+  <p>For DEFORM-3D, mesh generation has been enhanced with local meshing functionality.<br/> Default settings point to existing global remeshing procedures, where in every element of the old mesh gets replaced with new mesh element, followed by interpolation. <br/>    In the current version, all the local meshing related settings are stored in the local files, not in the database.</p>
+  <p>This means when the user copies the database file from one folder to another, local remesh settings will not be carried over unless all the files are copied to the working folder.</p>
+  <p> </p>
+  <p><strong>Local surface:</strong> Using this local remeshing method, we can remesh only bad element mesh on the surface as per defined level of nodes. Local surface mesh type is faster than solid mesh type. </p>
+  <p> </p>
+  <p><strong>Local Solid: </strong>In local solid meshing functionality allows several options to control the element size and quality. Local remeshing also has options to keep the meshing truly local, to minimize the interpolation related errors.</p>
+  <p><br/>
+    <strong>Internal Elements</strong></p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Size control</strong></li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Average of Neighbors</strong>: The size of the element is decided based on the average sizeof the surrounding elements of distorted mesh.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Scaling Factor</strong>: The size of the element will be  scaled based on the scaling factor mentioned for each layer inward.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Skip Elements with Good shape</strong>: The elements which are of good shape will be skipped from remeshing.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Skip good Surface Element</strong>: The elements which are good on surface will be skipped from remeshing.</li>
+  </ul>
+  <p> </p>
+  <h2><strong><a id="13_2_9_Built_In_Flownet"></a>Built In Flownet</strong></h2>
+  <p>In a DB with large number of steps, plotting a Flownet will take lot of time, user can overcome this issue by using Built in Flownet. When user uses Built in Flownet, the Flownet is plotted as the problem is simulated.</p>
+  <p> </p>
+  <p><strong>Procedure to setup Built in Flownet:</strong></p>
+  <p> </p>
+  <p>1.  For Workpiece object after geometry and mesh generation select Built-in Flownet page. (See <a href="#Fig_13_2_15_Built_in_Flownet_window_for_workpiece"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>15.</a>)</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_13_2_15_Built_in_Flownet_window_for_workpiece"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image016.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Built in Flownet window for workpiece</p>
+  <p> </p>
+  <p>2. Create built-in flownet using the available options &quot;Generate by Offset&quot; or &quot;Define Primitive&quot; and after creating flownet it can be scaled or positioned using &quot;Scale&quot; and &quot;Positioning&quot; options.</p>
+  <p><br/> Generate by Offset option will popup asking to enter the offset amount to offset the mesh to generate built-in flownet, click OK and accept the generate flownet. If generated offset distance is not OK then again select &quot;Generate by Offest&quot;
+    and enter new offset amount and accept as shown in <a href="#Fig_13_2_16_Built_in_Flownet_generation_by_offset_option"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>16.</a></p>
+  <p style="text-align: center">  <a id="Fig_13_2_16_Built_in_Flownet_generation_by_offset_option"></a><img height="373" src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image017.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Built in Flownet generation by offset option</p>
+  <p> </p>
+  <p>Primitive geometry option can also be used to use primitive geometries as built-in flownet after creating primitives positioning will be required  to locate or scaling may be required to vary the size of the created primitive to use as built in flownet  as
+    shown in <a href="#Fig_13_2_17_Built_in_Flownet_generation_by_define_primitive_option"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>17.</a></p>
+  <p style="text-align: center">  <a id="Fig_13_2_17_Built_in_Flownet_generation_by_define_primitive_option"></a><img height="373" src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Built in Flownet generation by define primitive option</p>
+  <p> </p>
+  <p>3. Once generating built-in flownet use the slicing option and slice the object to better visualize the generated built-in flownet  as shown in <a href="#Fig_13_2_18_Built_in_Flownet_with_sliced_object"><span data-keyref="Chapter_13_2_ 3D Tet Mesh Generation">Fig. 13.2.</span>18.</a>    User can also observe only built in flownet by checking &quot;Show built-in flownet only&quot; checkbox.  </p>
+  <p style="text-align: center"><a id="Fig_13_2_18_Built_in_Flownet_with_sliced_object"></a><img height="372" src="../../../assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image019.jpg" style="cursor: nesw-resize;" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Built in Flownet with sliced object</p>
+  <p> </p>
+  <p>For built-in flownet remesh options provided to undergo built-in flownet remeshing or to remesh the built-in flownet for every few simulation step increments.</p>
+  <p><br/> Other options to save the generated built-in flownet, import the geometry file for built-in flownet and delete built-in flownet  options are also provided.</p>
+  <p><br/>
+    <strong>Import Built in Flownet</strong>  <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>: It imports the Built in Flownet</p>
+  <p><strong>Save the Built in Flownet to the Geometry File</strong> <img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/> : It saves the Built in Flownet to geometry file (Only GEO format).</p>
+  <p><strong>Remove the Built in Flownet </strong><img src="../../../assets/icons/pre_icons/mo_clear_icon.jpg"/> : It removes the built in Flownet</p>
+  <p> </p>
+  <p><strong>Related topics:</strong></p>
+  <p><a href="13_mesh_generation.htm">13. Mesh Generation</a></p>
+  <p><a href="13_1_2d_mesh_generation.htm">13.1. 2D Mesh Generation</a></p>
+  <p><a href="13_3_3d_brick_mesh_generation.htm">13.3. 3D Brick Mesh Generation</a></p>
+
+</body></html>

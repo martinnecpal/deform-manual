@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.19.0_20";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>TTTD (2D3D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>TTTD (2D3D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/t/t_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/T/TTTN.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/T/TRNSFP.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="TTTD (2D3D)">
+        <span>TTTD (2D3D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>TTTD</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Inter-material data)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"><u>Update History:</u></p>
+          <p class="P_10">v11 - New types of (9, 10, 11, and 12) MEDC, Secondary alpha lath, Ti-beta to GB alpha and Ti-beta to SP alpha have been added.</p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 09-08-2013</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">TTTD  Mat1, Mat2, Type, ThmDirCond</p>
+  <p class="P_10_Bold">(please see Remark for detail data format)</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Mat1</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Material number 1</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Mat12</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Material number 2</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Type</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= <strong>1</strong> Diffusion data (TTT table form)</p>
+          <p class="P_10">Function of time, atom content, and mean stress</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= <strong>2</strong> Martensitic data (TMS, TM50 table form)<br/> Function of atom content and mean stress</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= <strong>3 </strong>Diffusion data (function form)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= <strong>4</strong> Diffusion data (function form, f(T) is as point data)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= <strong>5</strong> Martensitic data (function form)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= <strong>6</strong> Simplified form for diffusion type</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= <strong>7</strong> Diffusion data for recrystallization    (not available in GUI)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= <strong>8</strong> Melting and solidification    (not available in GUI)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= <strong>9</strong> MEDC   (new in v11)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= <strong>10</strong> secondary alpha lath  (new in v11)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">=<strong> 11</strong> Ti – beta to GB (grain boundary) alpha    (new in v11)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= <strong>12</strong> Ti – beta to SP (side plate) alpha    (new in v11)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">=<strong> -N</strong> User routine N</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">ThmDirCond</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Thermal direction condition</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">=<strong>0</strong> No condition</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">=<strong>1</strong> Heating</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">=<strong>2</strong> Cooling</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">TTTD defines the time, temperature, and transformation diagram data that are needed in a phase transformation analysis. GUI is not supported for the types of 7 and 8.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">REMARKS</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">Type 1: Diffusion data (TTT table form) function (t, c, s)</p>
+          <p class="P_10"> </p>
+          <p class="P_10">TTT (time-temperature-transformation) diagram, TTA (time-temperature-austenitizing), PTT (precipitation-time-temperature) and so on are specified as a table form. The other diffusion type transformations including recrystallization are applied
+            as this data. TTT is used for ferrite, pearlite, bainite and tempering transformations, and TTA and PTT are named for only Austenite transformation and Precipitation, respectively.  The transformation start and end curves are inputted by the
+            time in the logarithmic value at some temperature, carbon content and stress levels. In case of recrystallization and precipitation the curves depend on grain size and plastic strain, not carbon content and stress.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">T<span style="border-color:#ffffff;border-style:none;border-width:1px;">TTD  Mat1, Mat2, Type(=1), ThmDirCond</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">Kdpnd, nocurves</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">Kdpnd-  Kind of dependency</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">Nocurves- Number of curves (max 2)</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">=0 depends on carbon content and stress</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">=1 depends on plastic strain and grain size</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">if (ncurves=1) then</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">coefficient n of Avrami eq, volume fraction of curve</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">else</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">volume fraction of each curve</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">end if</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">no atom, no stress, no temp</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">carb 1, carb 2, .. (kdpnd=0) or pstr1, pstr2, .. (kdpnd=1)</span></p>
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF"><span style="border-color:#ffffff;border-style:none;border-width:1px;">sts1, sts2, sts3 .. (kdpnd=0) or grns1, grns2, .. (kdpnd=1)</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">temp1, temp2, ..</span></p>
+          <p class="P_10_Bold"><span style="border-color:#ffffff;border-style:none;border-width:1px;">t1, t2, (carb1, sts1, temp1, … or pstr1</span>, grns1, temp1, …)</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10_Bold">Type 2: Martensitic data (TMS, TM50 table form) function (c, s)</p>
+  <p class="P_10"> </p>
+  <p class="P_10">The transformation start and 50% level temperature are inputted as a table format by depending on carbon content and stress levels.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">TTTD  Mat1, Mat2, Type(=2), ThmDirCond</p>
+          <p class="P_10_Bold">Number of curves</p>
+          <p class="P_10_Bold">Number of carbon content</p>
+          <p class="P_10_Bold">Number of mean stresses</p>
+          <p class="P_10_Bold">Car1, Car2, …</p>
+          <p class="P_10_Bold">Sts1, Sts2, Sts3, …</p>
+          <p class="P_10_Bold">Temp1, Temp2 (carb1, sts1, …)</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10_Bold">Type 3: Diffusion data (function data form)</p>
+  <p> </p>
+  <p class="P_10">Volume fraction <img src="../../../assets/equations/keyword_documentation/t/zeta_1.jpg"/>  is represented by the Avrami equation as follows:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_1.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10">The power <img src="../../../assets/equations/keyword_documentation/t/small_n.jpg"/> depends on the kinds of the transformation and <img src="../../../assets/equations/keyword_documentation/t/ft_t.jpg"/> can be expressed by the following simplified
+    formula,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_2.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10"><img src="../../../assets/equations/keyword_documentation/t/fs_m.jpg"/> in addition, <img src="../../../assets/equations/keyword_documentation/t/fc_c.jpg"/> describes the stress and carbon content dependency of transformation, respectively as follows:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_3.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_4.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">TTTD  Mat1, Mat2, Type(=3), ThmDirCond</p>
+          <p class="P_10_Bold">AT1, AT2, AT3, AT4, AT5, AT6, AT7, AS, AC1, AC2, N; coefficient</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10_Bold">Type: 4 Diffusion data (function form, f(T) is as point data)</p>
+  <p class="P_10"> </p>
+  <p class="P_10">f(T) in the above type is specified as data points of temperature</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">TTTD  Mat1, Mat2, Type(=4), ThmDirCond</p>
+          <p class="P_10_Bold">AS, AC1, AC2, N; coefficients</p>
+          <p class="P_10_Bold">Number of temperature</p>
+          <p class="P_10_Bold">T1, F(T1), T2, F(T2)..</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10_Bold">Type 5: Martensitic data (function data form)</p>
+  <p> </p>
+  <p class="P_10">The volume fraction of diffusionless-type (martensite) transformation depended on temperature, stress and carbon content is introduced by modifying the Magee&#39;s equation as follows:</p>
+  <p class="P_10">The volume fraction of diffusionless-type (martensite) transformation depended on temperature, stress and carbon content is introduced by modifying the Magee&#39;s equation as follows:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_5.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10">When the martensite transformation start temperatures under carburized conditions and applied stress are given, <img src="../../../assets/equations/keyword_documentation/t/phi2_by_phi1.jpg"/>,  <img src="../../../assets/equations/keyword_documentation/t/phi31_by_phi1.jpg"/> and <img src="../../../assets/equations/keyword_documentation/t/phi32_byphi1.jpg"/> can be determined <img src="../../../assets/equations/keyword_documentation/t/phi1.jpg"/> and <img src="../../../assets/equations/keyword_documentation/t/phi4.jpg"/> are identified, if temperatures for martensite-start TMS and for 50% martensite TM50 at<img src="../../../assets/equations/keyword_documentation/t/zeta_m.jpg"/> = 0  and <img src="../../../assets/equations/keyword_documentation/t/zeta_m.jpg"/> =
+    0.5  are provided respectively.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">TTTD  Mat1, Mat2, Type(=5), ThmDirCond</p>
+          <p class="P_10_Bold">Psi1, si2, psi31, psi32, psi4, C0; coefficients</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10_Bold">Type 6: Simplified form for diffusion type</p>
+  <p> </p>
+  <p class="P_10">The volume fraction can be evaluated by the following equation as the first approximation for diffusion type:</p>
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_6.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"> TTTD  Mat1, Mat2, Type(=6), ThmDirCond</p>
+          <p class="P_10_Bold">A: D: TS: TE: coefficients</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <p class="P_10_Bold">Type 7: Diffusion data for recrystallization (GUI is not implemented)</p>
+  <p> </p>
+  <p class="P_10">The volume fraction of recrystallization is usually defined by the equation including the time for 50% recrystallization as follows:</p>
+  <p class="P_10"> </p>
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img height="420" src="../../../assets/equations/keyword_documentation/t/tttd_eq_7.jpg" width="497"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"> </p>
+          <p class="P_10_Bold">TTTD  Mat1, Mat2, Type(=7), ThmDirCond</p>
+          <p class="P_10_Bold">B, n1, a, m, n2, Q, R; coefficients</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10_Bold">Type 8: Melting and solidification (GUI is not implemented)</p>
+  <p class="P_10">The volume fraction of solid is specified as a point data of temperatures.</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"> </p>
+          <p class="P_10_Bold">TTTD  Mat1, Mat2, Type(=8), ThmDirCond</p>
+          <p class="P_10_Bold">Number of temperature</p>
+          <p class="P_10_Bold">T1, V(T1), T2, V(T2),....</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10_Bold">Type 9:  MEDC</p>
+  <p class="P_10">MEDC model is developed by AFRL in the United States to predict the microstructure evolution during continuous cooling of wrought alpha/beta titanium alloys in the two-phase field.  The growth of the primary (globular) alpha during cooling is modeled
+    using an exact solution of the diffusion equation:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_8.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> The particle radius is converted to volume fraction using the following expression:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 600px; margin-left: 12px; border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);">
+    <colgroup>
+      <col style="width: 500px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_9.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10">The intrinsic diffusion coefficients of alloying elements in beta titanium can be expressed by,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_10.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10">The parameter <img src="../../../assets/equations/keyword_documentation/t/lamda.jpg"/> in Equation 8 is related to the supersaturation ( <img src="../../../assets/equations/keyword_documentation/t/omega_s.jpg"/>) by the following expression:</p>
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_11.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <p class="P_10">In each calculation step, the supersaturation (<img src="../../../assets/equations/keyword_documentation/t/omega_s.jpg"/> ) is determined as,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img height="40" src="../../../assets/equations/keyword_documentation/t/tttd_eq_12.jpg" width="76"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10">Here, <img src="../../../assets/equations/keyword_documentation/t/cm.jpg"/> ,  <img src="../../../assets/equations/keyword_documentation/t/ci.jpg"/> and <img src="../../../assets/equations/keyword_documentation/t/cp.jpg"/>  represent the compositions
+    of the matrix far from the matrix-particle interface, the matrix at the matrix-particle interface, and the particle at the matrix- particle interface respectively. For a diffusion-controlled reaction, <img src="../../../assets/equations/keyword_documentation/t/ci.jpg"/> and <img src="../../../assets/equations/keyword_documentation/t/cp.jpg"/> correspond to the equilibrium matrix and particle compositions respectively and they were obtained from the phase diagram. <img src="../../../assets/equations/keyword_documentation/t/cm.jpg"/> considers the effect of soft impingement on the “far-field” matrix composition, and is calculated by the usual approximation derived from a mass balance:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_13.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>                   </p>
+  <p class="P_10">The input parameters of MEDC model include the beta approach curves (showing the volume fraction of beta as a function of temperature), the equilibrium chemical compositions of alpha and beta phases, and diffusivity as a function of temperature, solution
+    temperature / initial volume fraction of alpha phase, initial alpha particle radius, and cooling rates.  The initial volume fraction of primary alpha (<img src="../../../assets/equations/keyword_documentation/t/fao.jpg"/>) is automatically computed
+    based on the provided beta approach curve in terms of the solution temperature (the starting temperature of the cooling process). The initial particle size (<img src="../../../assets/equations/keyword_documentation/t/rao.jpg"/>) is determined by
+    user, generally based on the experimental data.  The evolution of primary alpha volume fraction and the size are computed based on the local cooling rate during DEFORM heat transfer simulation.</p>
+  <p class="P_10">If secondary alpha lath thickening model (Type 10) is defined, MEDC model is automatically coupled with secondary alpha growth model. The growth of primary alpha is terminated by the starting growth of secondary alpha.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">TTTD  Mat1, Mat2, Type(=9), ThmDirCond</p>
+          <p class="P_10_Bold">Ndata(=2), NCurve(=2)</p>
+          <p class="P_10_Bold">ConstA, ConstB (for Vanadium or Aluminum)</p>
+          <p class="P_10_Bold">1,1, NTemp</p>
+          <p class="P_10_Bold">Chemical composition (of Valadium or Aluminum, C0)</p>
+          <p class="P_10_Bold">0.00</p>
+          <p class="P_10_Bold">Temp(1), Temp(2),  ..., Temp(NTemp)</p>
+          <p class="P_10_Bold">CI(1), CI(2), ..., CI(NTemp)</p>
+          <p class="P_10_Bold">CP(1), CP(2),  ..., CP(NTemp)</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10_Bold">Type 10: Secondary alpha lath</p>
+  <p class="P_10">A fast acting model is developed to predict the thickening kinetics of secondary alpha lath. Considering the soft impingement between the adjacent advancing laths, the thickening kinetics of a secondary alpha in a colony structure can be expressed as:</p>
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 650px; margin-left: 12px; border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_14.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10">    </p>
+  <p class="P_10">The alpha equilibrium disolving temperature is assumed to be 980<span style="vertical-align:super;">o</span>C.</p>
+  <p class="P_10">The CCT curve to describe the secondary alpha starting temperatures under various cooling rates is fitted by a fifth order polynomial equation:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img height="21" src="../../../assets/equations/keyword_documentation/t/tttd_eq_15.jpg" width="424"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"> TTTD  Mat1, Mat2, Type(=10), ThmDirCond</p>
+          <p class="P_10_Bold">Ndata(=10)</p>
+          <p class="P_10_Bold">AlphaMatNo, A_sp, Q_sp, C_sp, a5, a4, a3, a2, a1, a0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10_Bold">Type 11: Ti-beta to grain boundary alpha</p>
+  <p> </p>
+  <p class="P_10">A fast acting model is developed to predict the thickening kinetics of grain boundary alpha in Ti-6Al-4V. It is assumed that a layer of grain boundary alpha of negligible thickness develops right after the temperature drops below the beta transus. During
+    further cooling or isothermal holding, grain boundary alpha continues to grow until the sideplate alpha starts to develop. Therefore, this type of transformation is generally coupled with Type 12 (Ti-beta to sideplate alpha). The thickening kinetics
+    of grain boundary can be described as,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_16.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10">The CCT curves to describe the grain boundary alpha starting temperature ( <img src="../../../assets/equations/keyword_documentation/t/tu.jpg"/> ) and sideplate starting temperature (<img src="../../../assets/equations/keyword_documentation/t/tl.jpg"/> ) under various cooling rates are fitted by a fifth order polynomial equation as follows:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_17.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">TTTD  Mat1, Mat2, Type(=11), ThmDirCond</p>
+          <p class="P_10_Bold">Ndata(=14)</p>
+          <p class="P_10_Bold">A1, Q1,</p>
+          <p class="P_10_Bold">a5upper, a4upper, a3upper, a2upper, a0upper,</p>
+          <p class="P_10_Bold">a5lower, a4lower, a3lower, a2lower, a1lower, a0lower</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10_Bold">   </p>
+  <p class="P_10_Bold"> Type 12: Ti-beta to side plate alpha</p>
+  <p class="P_10">A fast acting model is developed to predict the thickening kinetics of side plate alpha in Ti-6Al-4V. It is assumed that the sideplate alpha starts to develop when the growth of grain boundary alpha stops. Therefore, this type of transformation is coupled
+    with Type 11 (Ti-beta to grain boundary alpha).  Considering the soft impingement between the adjacent advancing plates, the thickening kinetics of a can be described as,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 650px; margin-left: 12px; border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);">
+    <colgroup>
+      <col style="width: 500px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img height="322" src="../../../assets/equations/keyword_documentation/t/tttd_eq_18.jpg" width="563"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 650px; margin-left: 12px; border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);">
+    <colgroup>
+      <col style="width: 500px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_19.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10">The two CCT curves describing the starting temperature of grain boundary alpha (<img src="../../../assets/equations/keyword_documentation/t/tu.jpg"/> ) and that of side plate (<img src="../../../assets/equations/keyword_documentation/t/tl.jpg"/> )
+    under various cooling rates are fitted by a fifth order polynomial equation as follows:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="../../../assets/equations/keyword_documentation/t/tttd_eq_17.jpg"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 500px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">(format) </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">TTTD  Mat1, Mat2, Type(=11), ThmDirCond</p>
+          <p class="P_10_Bold">Ndata(=14)</p>
+          <p class="P_10_Bold">A1, Q1,</p>
+          <p class="P_10_Bold">a5upper, a4upper, a3upper, a2upper, a0upper,</p>
+          <p class="P_10_Bold">a5lower, a4lower, a3lower, a2lower, a1lower, a0lower</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>      </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Inter-Material Data: <a href="../../pre_processor/10_material_data/10_9_transformation_data/10_9_1_transformation_kinetics_models.htm#Transformation_Kinetics_Models">Transformation Kinetics</a></p>
+          <p class="P_10">Related keywords: <a href="../v/volfs.htm">VOLFS</a>, <a href="../v/volfc.htm">VOLFC</a>, <a href="../s/stnout.htm">STNOUT</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

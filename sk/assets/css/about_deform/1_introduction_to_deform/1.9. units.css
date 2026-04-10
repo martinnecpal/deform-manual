@@ -1,0 +1,222 @@
+/*Created with Adobe RoboHelp 2019.*/
+body {
+  font-family: Calibri;
+  counter-reset: p h2 0 p\.fig_name 0 p\.table_name 0;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 24.0pt;
+  color: #000000;
+  font-family: Arial;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 20pt;
+  color: #000000;
+  font-family: Arial;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 16pt;
+  color: #000000;
+  font-family: Arial;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 12.0pt;
+  color: #000000;
+  font-family: Arial;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 12pt;
+  color: #000000;
+  font-family: Arial;
+}
+
+h6 {
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+p {
+  font-size: 12pt;
+  margin-top: 4.0pt;
+  margin-bottom: 4.0pt;
+  font-family: Arial;
+  color: #000000;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+a.expandspot {
+  color: #008000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+
+span.expandtext {
+  font-style: italic;
+  font-weight: normal;
+  color: #ff0000;
+}
+
+a.dropspot {
+  cursor: pointer;
+  color: #008000;
+  font-style: italic;
+  text-decoration: none;
+}
+
+a.glossterm {
+  color: #800000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+
+span.glosstext {
+  font-style: italic;
+  font-weight: normal;
+  color: #0000ff;
+}
+
+ol {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+a.minitoc-caption {
+  text-decoration: none;
+  color: initial;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+p.minitoc-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+ol.minitoc-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+ol.minitoc-list ol {
+  list-style: none;
+}
+
+a.minitoc-list-item {}
+
+p.seealso-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+ol.seealso-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+a.seealso-list-item {}
+
+p.reltopics-caption {
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+ol.reltopics-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+a.reltopics-list-item {}
+
+ul.Disc {
+  list-style-type: disc;
+}
+
+h2::before {
+  counter-increment: h2;
+  content: "1.1."counter(h2, decimal)".";
+  padding-right: 0.5rem;
+}
+
+img.Figure {
+  font-family: Arial;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  line-height: 1.5;
+}
+
+p.Fig_name {
+  font-family: Arial;
+  color: #000000;
+  text-align: center;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+p.Fig_name::before {
+  counter-increment: p\.fig_name;
+  content: "Fig. 1.1. "counter(p\.fig_name, decimal)".";
+  padding-right: 0.5rem;
+}
+
+table.table1 {
+  border-spacing: 0px 0px;
+  font-family: Arial;
+  font-size: 10pt;
+  color: #000000;
+  text-align: left;
+  border-collapse: separate;
+  column-span: none;
+}
+
+table.table1 td {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+table.table1 tr:first-child td {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 12pt;
+  color: #000000;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  padding-left: 1px;
+}
+
+p.table_name {
+  font-family: Arial;
+  font-size: 10pt;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+p.table_name::before {
+  counter-increment: p\.table_name;
+  content: "Table 1.9."counter(p\.table_name, decimal)". ";
+  padding-right: 0.5rem;
+}

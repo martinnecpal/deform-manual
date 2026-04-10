@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>16.7. Symmetry Properties</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/Pre_Processor/16_Object_Properties/16_7_Symmetry_Properties.css"/>
+</head>
+<body>
+  <h1>16.7. Symmetry Properties</h1>
+  <p><strong>[3D]</strong>: This boundary condition allows the user to match the velocity of the nodes of any surface of a body to the nodes of any other surface on the same body. The purpose of this is to model the more general case where rotational motion
+    occurs during the forming of a part such as in the case of the forging of a helical gear. The manner in which to setup a rotational symmetry problem is to go to the Object, Properties window for the object and select the Symmetry tab then set the
+    following values:  (See <a href="#Fig_16_7_1_Rotational_Symmetry_Object_properties_window"><span data-keyref="Chapter_16_7_Symmetry_Properties">Fig. 16.7.</span>1</a>.).</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Angle</strong>: The angle of the part simulated in units of degrees. For example, 180 means that only half the part is simulated and 90 means one quarter of the part is simulated.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Centre</strong>: A point on the centreline about which the deformation occurs. The format is in global (x, y, z) coordinates.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Axis</strong>: The vector through which the centreline is parallel to. The format is in (x, y, z) coordinates. For example, if the user wants to specify a vector parallel to the z axis, the value of (0, 0, 1) should be typed in.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">The second item the user needs to specify is the surfaces which have the rotational symmetry relationship to one another. The manner in which this is done is to place contact boundary conditions on face which obeys the right-hand rule. The boundary
+    condition can be applied under the Objects, boundary conditions window using the advanced boundary conditions. The user needs to select the face which obeys the right-hand rule and apply self-contact conditions. This will allow the simulation engine
+    to know which faces the rotational symmetry condition applies to.</p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"><a id="Fig_16_7_1_Rotational_Symmetry_Object_properties_window"></a><img src="../../../assets/Images/Pre-Processor/16_Object_Properties/16_7_Symmetry_Properties/16_7_Image001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rotational Symmetry Object properties window</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="16_object_properties.htm">16. Object properties</a></p>
+  <p><a href="16_1_deformation_properties.htm">16.1. Deformation properties</a></p>
+  <p><a href="16_2_thermal_properties.htm">16.2. Thermal properties</a></p>
+  <p><a href="16_3_Reference.htm">16.3. Reference</a></p>
+  <p><a href="16_4_Fracture_properties.htm">16.4. Fracture Properties</a></p>
+  <p><a href="16_5_hardness_properties.htm">16.5. Hardness Properties</a></p>
+  <p><a href="16_6_heating_properties.htm">16.6. Heating Properties</a></p>
+  <p><a href="16_8_body_force.htm">16.8. Body Force</a></p>
+  <p><a href="16_9_rse.htm">16.9. RSE</a></p>
+  <p><a href="16_10_user.htm">16.10. User</a></p>
+  <p><a href="../12_Geometry_Modelling/12_3_3d_geometry_data_defining.htm#Parallel_symmetry_planes">3D-Geometry symmetry surface definition</a></p>
+  <p><a href="../14_Boundary_Conditions/14_1_symmetry_boundary_conditions.htm">3D-Mesh symmetry BCC definition</a></p>
+
+</body></html>

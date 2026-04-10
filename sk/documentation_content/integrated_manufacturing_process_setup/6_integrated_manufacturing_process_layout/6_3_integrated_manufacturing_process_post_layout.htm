@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "3.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.3. Integrated Manufacturing Process Post-processor layout</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.3. Integrated Manufacturing Process Post-processor layout</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6.3. integrated manufacturing process post layout.css"/>
+<meta name="brsnext" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_4_Main_Menu.htm"/><meta name="brsprev" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_2_Integrated_Manufacturing_Process_Simulation_layout.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="6.3. Integrated Manufacturing Process Post-processor layout">
+        <span>6.3. Integrated Manufacturing Process Post-processor layout</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>6.3. Integrated Manufacturing Process (MO) Post layout</h1>
+  <p><a href="#6.3.1._Step_browser">6.3.1. Step browser</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Step_Tools">Step Tools</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Step_list_magnifier">Step list magnifier</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Step_Selection_options">Step Selection options</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Right_Mouse_button_step_browser_options">Right Mouse button step browser options</a></p>
+    </li>
+  </ul>
+  <p><a href="#6.3.2._Graphics_window">6.3.2. Graphics window</a></p>
+  <p><a href="#6.3.3._Post_Tools">6.3.3. Post Tools</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#State_variables">State variables</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Tools">Tools</a></p>
+    </li>
+  </ul>
+  <p><a href="#6.3.4._Output_tree">6.3.4. Output tree</a></p>
+  <p> </p>
+  <p>Integrated Manufacturing Process (MO) Post mode is used to review the results. Post mode GUI layout (See <a href="#Fig._6.3.1._MO_Post_mode_GUI_layout"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>1.</a>) is divided into Graphics
+    window, Post Tools, Output Tree and Step browser regions. </p>
+  <p> </p>
+  <p style="text-align: center"><img height="497" src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image001.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.3.1._MO_Post_mode_GUI_layout"></a>MO Post mode GUI layout</p>
+  <p><br/>
+    <strong>Graphics window </strong>will display graphical representation of objects. The graphics window can be used for displaying the contour plots, graphs, grain flow, etc.</p>
+  <p><strong>Post Tools</strong> are used to plot different state variables, point track the variables, studying the grain flow using flownet, extract the data, plot summary graphs, create the animation, etc.</p>
+  <p><strong>Output Tree</strong> lists the objects and controls their display.</p>
+  <p><strong>Step browser </strong>is used to select and play the simulated steps.</p>
+  <h2><a id="6.3.1._Step_browser"></a>Step browser</h2>
+  <p style="text-align: center"><img height="131" src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image002.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.3.2._Step_browser"></a>Step browser</p>
+  <p><br/> Step browser (See <a href="#Fig._6.3.2._Step_browser"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>2.</a>) is used to select steps to review, selected step objects will display in the graphics window. Different step selection
+    options, step tools for quick step selection and playing steps  options are available in step browser.</p>
+  <p><a id="Step_Tools"></a><strong>Step Tools</strong></p>
+  <p>Step tools (See <a href="#Fig._6.3.3._Step_tools"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>3.</a>) are used to navigate across the steps and operations in DB.</p>
+  <p style="text-align: center"><a id="Fig._6.3.3._Step_tools"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image003.jpg"/></p>
+  <p class="Fig_numb">Step tools</p>
+  <p><br/>
+    <img src="../../../assets/icons/post_icons/mo_first_step_icon.jpg"/> First step: Rewind the step list back to the first saved step.</p>
+  <p><img src="../../../assets/icons/post_icons/mo_last step_icon.jpg"/> Last step: Fast forward to the last saved step in the step list.</p>
+  <p><img src="../../../assets/icons/post_icons/mo_next_step_icon.jpg" style="cursor: nwse-resize;"/> Next step: Move to the next saved step in the step list.</p>
+  <p><img src="../../../assets/icons/post_icons/mo_prevoius_step_icon.jpg"/> Previous step: Rewind the step list back to one saved step.</p>
+  <p><img src="../../../assets/icons/post_icons/mo_play_button.jpg"/> Play forward: Displays the steps one by one until the last step is displayed from the current selected step.</p>
+  <p><img src="../../../assets/icons/post_icons/mo_play_backward_icon.jpg"/> Play backward: Displays the steps one by one in reverse order until the first step is displayed from the current selected step.</p>
+  <p><img src="../../../assets/icons/post_icons/mo_stop_button.jpg"/> Stop playing: Stops the playing (forward or backward) of steps.</p>
+  <p> </p>
+  <p><a id="Step_list_magnifier"></a><strong>Step list magnifier</strong></p>
+  <p> </p>
+  <p>Steps list can be magnified by using the Step list magnifier slide bar as shown in <a href="#Fig._6.3.2._Step_browser"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>2.</a></p>
+  <p> </p>
+  <p><a id="Step_Selection_options"></a><strong>Step Selection options</strong></p>
+  <p> Different step selection types are available like, outline, brief, auto, all and user (also available in <img height="21" src="../../../assets/icons/pre_icons/mo_step_list.jpg" width="24"/> Step list), these can be used to select the required steps easily.</p>
+  <p><br/>
+    <img height="23" src="../../../assets/icons/pre_icons/mo_outline_button.jpg" width="50"/>: When selected displays only the first and last step of the operations in the step editor</p>
+  <p><img height="23" src="../../../assets/icons/pre_icons/mo_auto_button.jpg" width="50"/>: When selected displays only first, last and one intermediate saved step of the operations in the step editor.</p>
+  <p><img height="23" src="../../../assets/icons/pre_icons/mo_brief_button.jpg" width="50"/>: When selected displays steps that are selected by system automatically for display in the step list.</p>
+  <p> <img height="21" src="../../../assets/icons/pre_icons/mo_all_button.jpg" width="46"/> : When selected displays all saved steps of the all operations in the step editor.</p>
+  <p><img height="21" src="../../../assets/icons/pre_icons/mo_step_list.jpg" width="24"/> : This will provide more detailed information of all saved steps like Simulation number, Mesh number, Time, Stroke of primary die, Dimension, Version number and Fold (for
+    3D). It also list the operations sequence on the left side window and provides more step selection option on right side window.</p>
+  <p>For more information of step selection types and step list options refer the <a href="6_1_integrated_manufacturing_process_preprocessor_layout.htm#Step_Editor">section 6.1.7 Step Editor</a>.</p>
+  <p> </p>
+  <p><a id="Right_Mouse_button_step_browser_options"></a><strong>Right Mouse button step browser options</strong></p>
+  <p> </p>
+  <p>Right mouse click on step browser listed steps will give the options for step selection, display stroke or time at each step and plot few graphs like load, speed, volume and energy in step browser. (See <a href="#Fig._6.3.4._Step_browser_RMB_option"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>4.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.3.4._Step_browser_RMB_option"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step browser RMB option</p>
+  <p><br/>
+    <strong>Show all steps:</strong> This will list all steps in step browser, even those which are not saved in database.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.3.5._Step_browser_with_all_steps"></a><img height="181" src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image005.jpg" style="text-align: center;" width="711"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step browser with all steps</p>
+  <p><br/>
+    <strong>Show stored steps:</strong> This will list all the stored steps which can be loaded and reviewed with all post features. Stored steps are highlighted by an orange dot in the step browser as shown in <a href="#Fig._6.3.5._Step_browser_with_all_steps"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>5.</a></p>
+  <p><br/>
+    <strong>Show selected steps: </strong>This will list only those steps which were selected by using the <img height="21" src="../../../assets/icons/pre_icons/mo_step_list.jpg" width="24"/> (step list) option.</p>
+  <p><br/>
+    <strong>Display step: </strong>This will display the step number in step browser for the steps which are displayed in step browser. (See <a href="#Fig._6.3.5._Step_browser_with_all_steps"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>5.</a>.)</p>
+  <p><br/>
+    <strong>Display stroke: </strong>This will display the primary die stroke in step browser for the steps which are displayed in step browser. (See <a href="#Fig._6.3.6._Step_browser_displaying_primary_die_stroke"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>6.</a>)</p>
+  <p style="text-align: center"><img height="131" src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image006.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.3.6._Step_browser_displaying_primary_die_stroke"></a>Step browser displaying primary die stroke</p>
+  <p><br/>
+    <strong>Display time:</strong> This display the process time in step browser for the steps which are displayed in step browser. (See<a href="#Fig._6.3.7._Step_browser_displaying_primary_die_time"> <span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>7.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><img height="131" src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image007.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.3.7._Step_browser_displaying_primary_die_time"></a>Step browser displaying primary die time</p>
+  <p><br/>
+    <strong>Load/Speed/Volume/energy graph</strong>: This will plot the Load, Speed graphs in the selected direction in step browser. Volume and energy graphs can also be plotted as shown in <a href="#Fig._6.3.8._Step_browser_displaying_Energy,_Volume,_Speed_and_Load_graphs"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>8.</a></p>
+  <p><br/>
+    <a id="Fig._6.3.8._Step_browser_displaying_Energy,_Volume,_Speed_and_Load_graphs"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image008.jpg"/></p>
+  <p class="Fig_numb">Step browser displaying Energy, Volume, Speed and Load graphs</p>
+  <p><br/>
+    <strong>Operation Info:</strong> Right mouse click on the operation in the step browser gives the information about operation like  dimension, number of objects, primary die number, range of step numbers, process  time, primary die stroke.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig._6.3.9._Operation_information_for_3D_operation"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image009.jpg"/></p>
+  <p class="Fig_numb">Operation information for 3D operation</p>
+  <h2><a id="6.3.2._Graphics_window"></a>Graphics window</h2>
+  <p>Graphics window displays the graphical representation of the objects. This will display state variables contours over objects, graphs, histograms, flownet and die fill (contact nodes). (See <a href="#Fig._6.3.1._MO_Post_mode_GUI_layout"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>1.</a>)</p>
+  <p>Right mouse click on the graphics window will provide few options to display the simulation information, set the viewport, measure dimension and change background theme. For more information about these options refer the <a href="6_1_integrated_manufacturing_process_preprocessor_layout.htm#Graphics_window_RMB_options">6.1.8. Graphics window RMB options.</a></p>
+  <h2><a id="6.3.3._Post_Tools"></a>Post Tools</h2>
+  <p>Post tools can be used to plot state variables contour plot, summary graphs, point tracking graphs, flownet for material flow analysis, mirroring the symmetry portions, animation file creation for presentation, 3d view mode for 2d objects and slicing operations
+    for 3d objects. (See <a href="#Fig._6.3.10._Post_Tools_window"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>10.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image010.jpg"/><br/> (a)
+  </p>
+  <p style="text-align: center"><a id="Fig._6.3.10._Post_Tools_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image011.jpg"/></p>
+  <p style="text-align: center">(b)</p>
+  <p class="Fig_numb">Post Tools window; (a) For 2D (b) For 3D</p>
+  <p> </p>
+  <p><a id="State_variables"></a><strong>State variables</strong></p>
+  <p>Some of the most commonly used state variables like <img src="../../../assets/icons/post_icons/mo_disp_sv_icon.jpg"/> Total displacement, <img height="21" src="../../../assets/icons/post_icons/mo_vel_sv_icon.jpg" style="cursor: nwse-resize;" width="26"/> (Total Velocity),  <img height="21" src="../../../assets/icons/post_icons/mo_strain_sv_icon.jpg" style="cursor: nesw-resize;" width="26"/> (Effective strain), <img height="21" src="../../../assets/icons/post_icons/mo_strain_rate_sv_icon.jpg" style="cursor: nesw-resize;" width="26"/>  (Effective strain rate), <img height="21" src="../../../assets/icons/post_icons/mo_eff_stress_sv_icon.jpg" width="23"/> (Effective stress), <img height="21" src="../../../assets/icons/post_icons/mo_temp_sv.jpg" style="cursor: nwse-resize;" width="22"/> (Temperature) and <img height="21" src="../../../assets/icons/post_icons/mo_damage_sv_icon.jpg" width="26"/> (Damage) shortcut icons can be used to view contour plot for the objects displaying on the graphics window. <img src="../../../assets/icons/post_icons/mo_clear_sv_icon.jpg"/> (Clear State Variable) icon can be used to clear the selected state variable for the objects.</p>
+  <p><br/> More state variables can be accessed using <img height="21" src="../../../assets/icons/post_icons/mo_state_variable_icon.jpg" width="22"/> (State variables setup) post tool bar icon as shown in <a href="#Fig._6.3.11._State_variables_window"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>11.</a>    For more information on state variables different state variable groups and there plot options refer <span style="color:#0000ff;">section <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm">26.6.3. State Variables</a></span>
+    <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm">.</a>
+  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.3.11._State_variables_window"></a><img height="693" src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image012.jpg" width="469"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center">State variables window</p>
+  <p style="text-align: center;"> </p>
+  <p><a id="Tools"></a><strong>Tools</strong></p>
+  <p>MO post provides post processor tools (See <a href="#Fig._6.3.10._Post_Tools_window"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>10.</a>) like Point tracking, Flownet, Summary graphs, Load-Stroke graphs, Animation setup, 3D viewer
+    (for 2D only), Mirroring (for 3D only) and slicing (for 3D only). These tools can be  used to track the state variables variation at specific key locations, study the material flow behavior, know the important state variables min, max values variation
+    throughout the simulation, predict the load, studying the lap areas and presentation.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Summary </strong><img src="../../../assets/icons/post_icons/mo_summary_icon.jpg"/> [2D,3D]: Gives the Summary graphs for important state variables verses simulation time. For Detailed information refer the section <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_summary.htm">26.6.6. Summary.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p> <strong>Load</strong>-<strong>Stroke </strong><img src="../../../assets/icons/post_icons/mo_load_stroke_icon.jpg"/>  [2D,3D]: </p>
+    </li>
+  </ul>
+  <p>Gives the options to plot the Load, Speed, Torque, Angular velocity, Energy and Volume verses Time, Stroke, Step and Force. For Detailed information refer the section<span style="color:#0000ff;"> <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_7_load_stroke.htm">26.6.7. Load Stroke.</a></span></p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt"><strong>Point tracking </strong><img height="24" src="../../../assets/icons/post_icons/mo_point_tracking_icon.jpg" width="26"/> [2D,3D]:</li>
+  </ul>
+  <p>Using this state variable variation at any particular fixed or moving location in the objects can be tracked. For detailed information refer the section<span style="color:#0000ff;"> <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_9_point_tracking.htm">26.6.9. Point Tracking.</a></span></p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Flownet </strong><img src="../../../assets/icons/post_icons/mo_flownet_icon.jpg"/>  [2D,3D]:</p>
+    </li>
+  </ul>
+  <p>Using this user can create a grid pattern across the deforming object and observe the irregularities in the grain structure and surface defects such as folds. For detailed information refer the section<span style="color:#0000ff;"> <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_12_flownet_tracking.htm">26.6.12. Flownet Tracking.</a></span></p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Animation setup</strong> <img src="../../../assets/icons/post_icons/mo_animation_setup_icon.jpg"/>[2D,3D]: </p>
+    </li>
+  </ul>
+  <p>Using this user can create simulation animation files in HTML, WMV, AVI and PPT formats. It also provides different options to change animation saving settings. For detailed information refer the section <span style="color:#0000ff;"><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_19_animation_setup.htm">26.6.19. Animation Setup</a>.</span></p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>3D viewer </strong><img src="../../../assets/icons/post_icons/mo_3d_view_icon.jpg"/>[3D]:</p>
+    </li>
+  </ul>
+  <p>Using this user can view the revolved or extruded 3d view of the 2d objects. For detailed information refer the section<span style="color:#0000ff;"> <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup.htm">26.6.20. 3D Viewer.</a></span></p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Mirroring </strong><img src="../../../assets/icons/post_icons/mo_3d_mirroring_icon.jpg"/>[3D]:</p>
+    </li>
+  </ul>
+  <p>Using this user can visualize the full part in case of symmetric problem simulation. For detailed information refer the section <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_15_mirror_symmetry.htm"><span style="color:#0000ff;">26.6.15. Mirroring Symmetry.</span></a></p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Slicing </strong><img src="../../../assets/icons/post_icons/mo_slice.jpg"/>[3D]:</p>
+    </li>
+  </ul>
+  <p>Using this user can section the objects at various depths and observe the state variable contours and defects in the cut area. For detailed information refer the section <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing.htm"><span style="color:#0000ff;">26.6.16. Slicing.</span></a></p>
+  <h2><a id="6.3.4._Output_tree"></a>Output tree</h2>
+  <p>The objects and its display information (such as objects visibility, geometry, mesh, transparency, slice plane, point tracking and Flownet information) is available in this window as shown in <a href="#Fig._6.3.12._Output_Tree"><span data-keyref="Chapter_6_3_Int_Manu_proc_Post">Fig. 6.3.</span>12.</a></p>
+  <p><br/> User can select the object to be visible display in graphics window by left click on the particular object in the tree and change its display modes. Point tracking and Flownet can be hidden or deleted by RMB click on the point tracking/Flownet
+    tracking link in the output tree.  </p>
+  <p style="text-align: center"><br/>
+    <a id="Fig._6.3.12._Output_Tree"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image013.jpg"/></p>
+  <p class="Fig_numb">Output Tree</p>
+  <p><br/>
+    <strong>Operation tree tool bar options:</strong> Using these options user can switch on or off the object, geometry, mesh, transparency, backface and contacts display. For detailed information refer the section <a href="6_1_integrated_manufacturing_process_preprocessor_layout.htm#Operation_Tree_Tool_bar_options">6.1.4. Operation Tree Tool Bar options</a>    from <a href="6_1_integrated_manufacturing_process_preprocessor_layout.htm">Chapter 6.1. Intergrated Manufacturing process (MO) Pre-processor Layout.</a></p>
+  <p> </p>
+  <p><strong>Database tab:</strong></p>
+  <p>This list the number of DB&#39;s available in the current project folder, it will be only one for the all MO operations except in case where Diestress study, DOE and Optimization has been carried over, in these cases the project folder will have more than
+    one DB.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../post_processor/25_post_processor_layout/25_post_processor_layout.htm">Post -processor</a></p>
+  <p><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_summary.htm">26.6.6.. Simulation summary</a></p>
+  <p><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm">26.6.3. State Variables</a></p>
+  <p><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_7_load_stroke.htm">26.6.7. Load Stroke</a></p>
+  <p><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_9_point_tracking.htm">26.6.9. Point Tracking</a></p>
+  <p><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_12_flownet_tracking.htm">26.6.12.. Flownet</a></p>
+  <p><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points.htm">26.6.8. State variables distribution b/w two points</a></p>
+  <p><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_15_mirror_symmetry.htm">26.6.15. Mirroring</a></p>
+  <p><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_17_data_extraction.htm">26.6.17. Data Extraction</a></p>
+  <p><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing.htm">26.6.16. Slicing</a></p>
+  <p><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_19_animation_setup.htm">26.6.19. Animation controls and saving</a></p>
+  <p><a href="6_1_integrated_manufacturing_process_preprocessor_layout.htm#Operation_Tree_Tool_bar_options">Operation Tree Tool Bar options</a></p>
+  <p> </p>
+
+</body></html>

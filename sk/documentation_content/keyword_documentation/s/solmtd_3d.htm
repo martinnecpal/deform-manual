@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.18.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>SOLMTD (3D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>SOLMTD (3D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/s/s_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/S/SOLMTT.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/S/SOLMTD.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SOLMTD (3D)">
+        <span>SOLMTD (3D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>SOLMTD</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Simulation control - 3D)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"><u>Update History:</u></p>
+          <p class="P_10">v11 – CG-Hybrid, NUMPS and Explicit solvers have been added for 3D deformation calculation.</p>
+          <p class="P_10">v11.1 – Domain Decomposition, Dual Mesh, DD+DM solvers have been added for 3D deformation calculation</p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 29-07-2013</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">SOLMTD  Solver, Npara</p>
+  <p class="P_10_Bold">or</p>
+  <p class="P_10_Bold">SOLMTD  Solver, Npara(=4) (for Solver=2, CG-Hybrid)</p>
+  <p class="P_10_Bold">Par1, Par2, Par3, Par4</p>
+  <p class="P_10_Bold">or</p>
+  <p class="P_10_Bold">SOLMTD  Solver, Npara(=3) (for Solver=6, Explicit)</p>
+  <p class="P_10_Bold">Par1, Par2, Par3</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Solver</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Solver type</p>
+          <p class="P_10">=<strong>1</strong> Sparse</p>
+          <p class="P_10">=<strong>2</strong> CG-Hybrid (new in v11)</p>
+          <p class="P_10">=<strong>3</strong> Skyline (obsolete)</p>
+          <p class="P_10">=<strong>4</strong> GMRES</p>
+          <p class="P_10">=<strong>5</strong> MUMPS (new in v11)</p>
+          <p class="P_10">=<strong>6</strong> Explicit (new in v11)</p>
+          <p class="P_10">=<strong>7</strong> Domain Decomposition (DD) (Rigid plastic only) (new in v11.1)</p>
+          <p class="P_10">=<strong>8</strong> Dual Mesh (DM) (Rigid plastic only)(new in v11.1)</p>
+          <p class="P_10">=<strong>9 </strong>DD + DM (Elasto-plastic only)(new in v11.1)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">1</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Npara</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of control parameters</p>
+          <p class="P_10">=<strong>0</strong> (for Sparse, Skyline, GMRES, MUMPS)</p>
+          <p class="P_10">=<strong>4</strong> (for CG-Hybrid)</p>
+          <p class="P_10">=<strong>3</strong> (for Explicit)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td colspan="3" style="padding-left: 4px">
+          <p class="P_10_Bold">(for Solver=2, CG-Hybrid)</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Part1    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">CG solver type                                                               </p>
+          <p class="P_10">= <strong>0</strong> for Old CG</p>
+          <p class="P_10">=<strong> 1</strong> for New CG</p>
+          <p class="P_10">= <strong>2</strong> for Old and New CG</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">2</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Part2    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Level of fill-in</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">4</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Part3    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Partitioning method</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">1</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Part4    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Direct solver in case of poor convergence</p>
+          <p class="P_10">= <strong>1</strong> for Sparse</p>
+          <p class="P_10">= <strong>5</strong> for MUMPS</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">1</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td colspan="3" style="padding-left: 4px">
+          <p class="P_10_Bold">(for Solver=6, Explicit)</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Part1    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Damping    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Part2    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Mass Scaling</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Part3    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Cycle</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">SOLMTD specifies the solver type and associated control parameters used in deformation simulation.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">REMARKS</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">The skyline solver uses the skyline storage method in conjunction with Gaussian elimination.</p>
+          <p class="P_10">The sparse solver is optimized for sparse matrix problems.</p>
+          <p class="P_10">The conjugate gradient solver is recommended when a part is well contacted due to its speed and efficient use of system memory.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">(For Domain decomposition)</p>
+          <p class="P_10">- Domain decomposition method is recommended only for single plastic object with Tet. mesh.</p>
+          <p class="P_10">- Domain decomposition method does not allow meshed die(s).</p>
+          <p class="P_10"> </p>
+          <p class="P_10">(For Dual mesh)</p>
+          <p class="P_10">- Dual mesh method is recommended only for single plastic object with Tet. mesh.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">(For DD + DM)</p>
+          <p class="P_10">- DD + DM method is recommended only for single elasto-plastic object with Tet. mesh.</p>
+          <p class="P_10">- DD + DM method does not allow meshed die(s).</p>
+          <p class="P_10"> </p>
+          <p class="P_10">Applicable simulation types:  Isothermal/Non-Isothermal Deformations</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Keywords: <a href="solmtt.htm">SOLMTT (2D)</a>, <a href="solmtt_3d.htm">SOLMTT (3D)</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

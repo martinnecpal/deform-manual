@@ -1,0 +1,184 @@
+/*Created with Adobe RoboHelp 2019.*/
+body {
+  font-family: Calibri;
+  counter-reset: p p\.fig_name 0 h2 0;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 24.0pt;
+  color: #000000;
+  font-family: Arial;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 20pt;
+  color: #000000;
+  font-family: Arial;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 16pt;
+  color: #000000;
+  font-family: Arial;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 12.0pt;
+  color: #000000;
+  font-family: Arial;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 12pt;
+  color: #000000;
+  font-family: Arial;
+}
+
+h6 {
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+p {
+  font-size: 12pt;
+  margin-top: 4pt;
+  margin-bottom: 4pt;
+  font-family: Arial;
+  color: #000000;
+  text-align: justify;
+  line-height: 1.5;
+  margin-left: 4pt;
+  margin-right: 4pt;
+}
+
+a.expandspot {
+  color: #008000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+
+span.expandtext {
+  font-style: italic;
+  font-weight: normal;
+  color: #ff0000;
+}
+
+a.dropspot {
+  cursor: pointer;
+  color: #008000;
+  font-style: italic;
+  text-decoration: none;
+}
+
+a.glossterm {
+  color: #800000;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+}
+
+span.glosstext {
+  font-style: italic;
+  font-weight: normal;
+  color: #0000ff;
+}
+
+ol {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+a.minitoc-caption {
+  text-decoration: none;
+  color: initial;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+ol.minitoc-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+ol.minitoc-list ol {
+  list-style: none;
+}
+
+a.minitoc-list-item {}
+
+ol.seealso-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+a.seealso-list-item {}
+
+ol.reltopics-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+a.reltopics-list-item {}
+
+p::before {
+  counter-increment: p;
+  content: ;
+  padding-right: 0rem;
+}
+
+p.Fig_Name {
+  font-family: Arial;
+  font-size: 10pt;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+
+p.Fig_Name::before {
+  counter-increment: p\.fig_name;
+  content: "Fig.1.2."counter(p\.fig_name, decimal)".";
+  padding-right: 0.5rem;
+}
+
+p.Table_style {
+  font-family: Arial;
+  border-width: 1px;
+  border-style: none;
+  border-color: #000000;
+  font-size: 12pt;
+  margin-top: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  text-align: left;
+  color: #000000;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  column-rule-width: 1px;
+  column-rule-style: none;
+  column-rule-color: #000000;
+}
+
+h2::before {
+  counter-increment: h2;
+  content: "1.2."counter(h2, decimal)".";
+  padding-right: 0.5rem;
+}
+
+p.default_table {}

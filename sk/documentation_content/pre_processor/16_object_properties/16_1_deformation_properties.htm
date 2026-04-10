@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>16.1. Deformation_Properties</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/Pre_Processor/16_Object_Properties/16_1_Deformation_Properties.css"/>
+</head>
+<body>
+  <h1>16.1. Deformation Properties</h1>
+  <p><a href="#16_1_1_Creep_calculation">16.1.1. Creep calculation</a></p>
+  <p><a href="#16_1_2_Elasto-plastic_initial_guess_(ELPSOL)">16.1.2. Elasto-plastic initial guess</a> </p>
+  <p><a href="#16_1_3_Target_Volume_(TRGVOL)">16.1.3. Target Volume</a></p>
+  <p><a href="#16_1_4_Volume_penalty_constant_(PENVOL)">16.1.4. Volume penalty constant</a></p>
+  <p><a href="#16_1_5_Average_strain_rate_(AVGSTR)">16.1.5. Average strain rate</a></p>
+  <p><a href="#16_1_6_Limiting_strain_rate_(LMTSTR)">16.1.6. Limiting strain rate</a></p>
+  <p><a href="16_7_symmetry_properties.htm">16.1.7. Generalized plane strain control</a></p>
+  <p><a href="#16_1_8_Update_Controls">16.1.8. Update Controls</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_16_1_1_2D_Object_Properties_window"></a><img height="367" src="../../../assets/Images/Pre-Processor/16_Object_Properties/16_Image001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D Object Properties window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_16_1_2_3D_Object_Properties_window"></a><img height="388" src="../../../assets/Images/Pre-Processor/16_Object_Properties/16_Image002.jpg" style="cursor: nwse-resize;" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">3D Object Properties window</p>
+  <p> </p>
+  <h2><a id="16_1_1_Creep_calculation"></a>Creep calculation</h2>
+  <p>Activates creep calculations (<a href="../../Keyword_Documentation/C/CREEP.htm">CREEP</a>) for a particular object. For more information on available creep models, refer to section <a href="../10_Material_Data/10_1_Plastic_Data/10_1_2_Creep/10_1_2_Creep_Models.htm">10.1.2. Creep</a>    (CREEP).</p>
+  <p><br/> If the user would like to see the Creep strain in post processor then Creep check box in &quot;Simulation controls<img src="../../../assets/Icons/Pre_icons/arrow_front.jpg"/> Advanced <img src="../../../assets/Icons/Pre_icons/arrow_front.jpg"/> Output controls&quot; path should be activated.</p>
+  <p> </p>
+  <p><strong><span style="color:#ff0000;">Text to added related to new creep options</span></strong></p>
+  <p> </p>
+  <h2><a id="16_1_2_Elasto-plastic_initial_guess_(ELPSOL)"></a>Elasto-plastic initial guess (ELPSOL) [2D, 3D]</h2>
+  <p>The convergence of an Elasto-plastic solution (<a href="../../Keyword_Documentation/E/ELPSOL.htm">ELPSOL</a>)  is dependent on the initial guess of the stress-strain state. Three initial guess solutions are available:</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Plastic solution</strong>: Uses the purely plastic deformation data to generate the initial guess.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Elastic solution</strong>: Uses the purely elastic deformation data to generate the initial guess.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Previous step solution</strong>: Uses the Elasto-plastic solution from the previous step to generate the initial guess.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">The previous step solution seems to give the best convergence in most cases. If convergence<br/> is poor for a particular problem, the elastic or plastic solution can be used.</p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <h2><a id="16_1_3_Target_Volume_(TRGVOL)"></a>Target Volume (TRGVOL) [2D, 3D]</h2>
+  <p>Maintaining volume of the deforming object in the simulation is very important for accurate model predictions. Good mesh size and finer time step alone cannot ensure volume constancy for some class of the simulations. The user can now activate volume
+    compensation under &quot;Properties&quot; option (See <a href="#Fig_16_1_1_2D_Object_Properties_window"><span data-keyref="Chapter_16_1_Deformation_Properties">Fig. 16.1.</span>1.</a> and <a href="#Fig_16_1_2_3D_Object_Properties_window"><span data-keyref="Chapter_16_1_Deformation_Properties">Fig. 16.1.</span>2.</a>)</p>
+  <p><br/> You can turn on &quot;Activate Target Volume Options&quot; (<a href="../../Keyword_Documentation/T/TRGVOL.htm">TRGVOL</a>) and then use <img src="../../../assets/Icons/Pre_icons/MO_Target_volume_icon.jpg"/> to automatically calculate the volume.
+    If the volume compensation is turned on then while running simulation the volume of the mesh will be compensated to the value mentioned.</p>
+  <p><br/> There are several causes of volume loss in finite element analysis.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">The penalty formulation used by DEFORM will naturally loose a fractional percentage of volume at each step. This is normal and generally not a significant cause of concern.</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">If a large time step is used and sub stepping is disabled, when contact occurs nodes will penetrate slave surfaces, then be repositioned at the end of the step. This repositioning can cause slight volume loss. Over the course of a simulation, this
+      can become significant.</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">As elements of slave objects stretch around corners of master objects, the elements will cut the corner of the object. The volume which crosses the corner will be lost on remeshing. This phenomenon can be limited by the use of small elements around
+      corners.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><br/> The system provides several controls to minimize this volume loss during the simulation.(See <a href="#Fig_16_1_1_2D_Object_Properties_window"><span data-keyref="Chapter_16_1_Deformation_Properties">Fig. 16.1.</span>1.</a> and <a href="#Fig_16_1_2_3D_Object_Properties_window"><span data-keyref="Chapter_16_1_Deformation_Properties">Fig. 16.1.</span>2.</a>.)
+    Typical volume compensation can be activated to maintain or restore part volume during remeshing. The target volume should be set to the initial part volume. This value can be obtained from the volume icon on the Meshing/Remeshing window.</p>
+  <p><br/> For porous materials, the volume is expected to change throughout the simulation. If volume compensation is activated, the current part volume will be maintained during remeshing.</p>
+  <p> </p>
+  <p>For certain geometries with large free surfaces, volume compensation can cause distortion.</p>
+  <p>If this distortion is unacceptable, the best alternative is to use a fine mesh, and set polygon length sub stepping to a small value. Frequent forced remeshing may be useful if element stretching around corners is a problem.</p>
+  <p> </p>
+  <h2><a id="16_1_4_Volume_penalty_constant_(PENVOL)"></a>Volume penalty constant (PENVOL) [2D, 3D]</h2>
+  <p>The volume penalty constant (<a href="../../Keyword_Documentation/P/PENVOL.htm">PENVOL</a>) specifies a large positive value that is used to enforce volume constancy of plastic objects. The default value of 106 is adequate for most simulations. If the
+    value is too small, unacceptably large volume losses may occur. If the value is too large, the solution may have difficulty converging.</p>
+  <h2><a id="16_1_5_Average_strain_rate_(AVGSTR)"></a>Average strain rate (AVGSTR) [2D, 3D]</h2>
+  <p>The average strain rate (<a href="../../Keyword_Documentation/A/AVGSTR.htm">AVGSTR</a>) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation. A reasonable approximation
+    can be obtained from:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img height="106" src="../../../assets/Equations/Pre_Processor/16_Object_Properties/EQ_16_1_1.jpg" width="249"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>   </p>
+  <h2><a id="16_1_6_Limiting_strain_rate_(LMTSTR)"></a>Limiting strain rate (LMTSTR) [2D, 3D]</h2>
+  <p>The limiting strain rate (<a href="../../Keyword_Documentation/L/LMTSTR.htm">LMTSTR</a>) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material. The
+    stress-strain-rate relationship in the rigid region is approximated by,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../assets/Equations/Pre_Processor/16_Object_Properties/EQ_16_1_2.jpg"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>DEFORM automatically maintains the ratio between average strain rate and limiting strain rate. Generally, the value of limiting strain rate should be 0.1% to 1.0% of the average strain rate.</p>
+  <p>If the limiting strain rate is too small, the solution may have difficulty converging. If it is too large, the accuracy of the solution will be degraded. If the problem is not converging, the limiting strain rate can be increased for 2 or 3 steps, then
+    returned to the original value.</p>
+  <p> </p>
+  <h2><a id="16_1_7_Generalized_plane_strain_control_(ZSTR)"></a>Generalized plane strain control (ZSTR) [2D]</h2>
+  <p>Generalized plane strain control (<a href="../../Keyword_Documentation/Z/ZSTR.htm">ZSTR</a>) allows certain object to have thickness direction deformation for plane strain element. The thickness direction deformation can be controlled either by prescribed
+    velocity or by traction in thickness direction. This option is available for Elasto-plastic material with both velocity and traction control and for rigid plastic material with velocity control only.</p>
+  <p>The object lies between two bounding planes which may move as rigid bodies with respect each other, thus causing strain of the thickness direction of the object. Let  P0(X0, Y0) be a fixed point in the reference planes. The length between P0 and its
+    image in the other plane P1 is  t0 + DuZ , where t0 is the initial thickness and DuZ is change in length in thickness.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../assets/Equations/Pre_Processor/16_Object_Properties/EQ_16_1_3.jpg"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>In this definition the plane is only allowed to move parallel to the reference plane, therefore all the points in the object will have same thickness strain.</p>
+  <p> </p>
+  <p><strong>Z Rate [2D]</strong>:</p>
+  <p>This is applied usually for plain strain and sheet metal problems. The z strain rate is the rate of out of plane material flow.</p>
+  <p>This is defined as the ratio of total strain (natural log of reduction in cross sectional area) to process time. This specifies constant strain rate in the z-directions.</p>
+  <p> </p>
+  <h2><a id="16_1_8_Update_Controls"></a>Update Controls [3D]</h2>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="16_object_properties.htm">16. Object properties</a></p>
+  <p><a href="16_2_thermal_properties.htm">16.2. Thermal properties</a></p>
+  <p><a href="16_3_Reference.htm">16.3. Reference</a></p>
+  <p><a href="16_4_Fracture_properties.htm">16.4. Fracture Properties</a></p>
+  <p><a href="16_5_hardness_properties.htm">16.5. Hardness Properties</a></p>
+  <p><a href="16_6_heating_properties.htm">16.6. Heating Properties</a></p>
+  <p><a href="16_7_symmetry_properties.htm">16.7. Symmetry Properties</a></p>
+  <p><a href="16_8_body_force.htm">16.8. Body Force</a></p>
+  <p><a href="16_9_rse.htm">16.9. RSE</a></p>
+  <p><a href="16_10_user.htm">16.10. User</a></p>
+  <p><a href="../9_Simulation_Controls/9_7_Advanced_Options.htm#9.7.4._Output_Control">Selecting the Creep strain from simulation output controls</a></p>
+  <p><a href="../10_Material_Data/10_1_Plastic_Data/10_1_2_Creep/10_1_2_Creep_Models.htm">Material Creep models</a></p>
+  <p><a href="../11_General_Object_Data_Definition/11_General_Object_Data_Definition.htm#11.4._Object_type">Object type selection from object data definition window</a></p>
+  <p><a href="../13_Mesh_Generation/13_1_2D_Mesh_Generation.htm#13.1.8._Remeshing_criteria">Remeshing-2D Settings</a><br/>
+    <a href="../13_Mesh_Generation/13_2_3D_Tet_Mesh_Generation.htm#13.2.8._Remeshing_criteria">Remeshing-3D Settings</a></p>
+
+</body></html>

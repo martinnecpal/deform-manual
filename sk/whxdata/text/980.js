@@ -1,0 +1,1 @@
+rh._.exports({"0":["10.10. Coarsening Data"],"1":["\n  ","\n  "," ","\n\n"],"2":["10.10. Coarsening Data"],"id":"980"})

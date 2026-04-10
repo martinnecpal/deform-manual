@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>10.9. Transformation Data</title>
+  <meta name="topic-status" content="Draft" />
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_Transformation_Data.css" />
+</head>
+<body>
+  <h1>10.9. Transformation Data</h1>
+  <p><a href="#10.9.1._Inter_material_Data">10.9.1 Inter material Data</a><br/>
+    <a href="#10.9.2._Transformation_relation">10.9.2. Transformation relation (PHASTF)</a> </p>
+  <ul class="Disc">
+    <li>
+      <p><a href="#Kinetics_model_(TTTD)" style="margin-left: 40px">Kinetics model (TTTD)</a></p>
+    </li>
+    <li>
+      <p><a href="#Latent_heat_and_volume(PHASLH)" style="margin-left: 40px">Latent heat and volume(PHASLH)</a></p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><a href="#Latent_Heat" style="margin-left: 80px">Latent Heat</a></p>
+    </li>
+    <li>
+      <p><a href="#Transformation_induced_volume_change_" style="margin-left: 80px">Transformation induced volume change (PHASVL)</a></p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p><a href="#Transformation_plasticity_(TRNSFP)" style="margin-left: 40px">Transformation plasticity (TRNSFP)</a> </p>
+    </li>
+    <li>
+      <p><a href="#Other" style="margin-left: 40px">Other</a></p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><a href="#Thermal_Direction" style="margin-left: 80px">Thermal Direction</a></p>
+    </li>
+    <li>
+      <p><a href="#Equilibrium_volume_fraction" style="margin-left: 80px">Equilibrium volume fraction</a></p>
+    </li>
+    <li>
+      <p><a href="#Variation_selection_model" style="margin-left: 80px">Variation selection model</a> </p>
+    </li>
+    <li>
+      <p><a href="#Interface_Energy" style="margin-left: 80px">Interface Energy</a></p>
+    </li>
+  </ul>
+  <h2><a id="10.9.1._Inter_material_Data"></a>Inter material Data</h2>
+  <p>The purpose of inter-material data is to define the relationships between the phases of a mixture. As defined in the material data, a mixture is defined by the user as a set of phases. The relationships between the phases are defined in terms of the
+    following transformation characteristics:</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><a href="#Kinetics_model_(TTTD)_[MIC]">Transformation kinetics model</a></li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><a href="#Latent_heat_(PHASLH)_[MIC]">Latent heat of transformation</a></li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><a href="#Transformation_induced_volume_change_">Transformation induced volume change</a></li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><a href="#Transformation_plasticity_(TRNSFP)_[MIC]">Transformation plasticity</a></li>
+  </ul>
+  <p>The purpose of this section is to give the user an understanding of how to properly define a transformation relationship between two phases. This section will explain in how DEFORM handles the above concepts. Transformation is a crucial concept in metal
+    forming and heat treatment. <a href="../../../About_DEFORM/1_Introduction_to_DEFORM/1_3_Capabilities.htm#Fig._1.3.1._Relationship_between_various_DEFORM_modules"><span data-keyref="Chapter_1_3_Capabilities">Fig. 1.3.</span>1.</a> illustrates the coupling
+    between temperature, deformation, transformation, and carbon content. Transformation is modelled by defining the volume fraction for each possible phase in each element of a meshed object. For low carbon steel object, each element may contain different
+    volume fraction of Martensite, Bainite, Pearlite or Austenite. Each phase is defined by its own set of material properties. These material properties define the plastic behavior of the phase, the thermal properties of the phase, and possibly (if using
+    an elastic-plastic mate-rial) the elastic properties of the phase. </p>
+  <p> </p>
+  <p>The relationship between the transformations from one phase to another is de-fined by the inter-material data. This relationship is defined in terms of a kinetics model (in order to determine rate of phase transformation) and a few relational properties
+    such as latent heat and volume change.</p>
+  <h2><a id="10.9.2._Transformation_relation"></a>Transformation relation (PHASTF) </h2>
+  <p>In DEFORM, the manner in which transformation is defined is in terms of transformation relationships (<a href="../../../Keyword_Documentation/P/PHASTF.htm">PHASTF</a>). The basic unit for transformation relationships are phases. Phases can be grouped
+    together to define a mixture. A mixture corresponds to a material such as AISI-1045 or Ti-6Al-4V. For each phase defined, there may be a transformation relation to any other phase that is defined. For example, in the case of low carbon steel, austenite
+    has a relationship to pearlite since austenite may form pearlite upon the proper cooling conditions. Also, upon proper heating conditions, pearlite can convert to austenite. Thus, in DEFORM, to specify the relationship of austenite converting to pearlite,
+    one needs to select the austenite as Material 1 and the pearlite as Material 2 and then click the Phase 1 Phase 2 relationship. This will then allow the user to define the kinetics of the transformation, the latent heat of the transformation, volume
+    change of the transformation, etc. (See  <a href="../../../About_DEFORM/1_Introduction_to_DEFORM/1_3_Capabilities.htm#Fig._1.3.1._Relationship_between_various_DEFORM_modules"><span data-keyref="Chapter_1_3_Capabilities">Fig. 1.3.</span>1.</a>)</p>
+  <p> <br/> The mixture material data can be created by specifying the Mother material and its phases and defining there general material data and inter material or transformation data as mentioned below, (See <a href="#FIg._10.9.1._Creating_the_mixture_material"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>1.</a>)</p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Click on the <img src="../../../../assets/Icons/Pre_icons/MO_Add_Icon2.jpg" /> button to create the material (See <strong>1.1</strong> in <a href="#FIg._10.9.1._Creating_the_mixture_material"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>1.</a>),
+      then select the Mixture material check box to make the added material as mixture material (See<strong> 1.2</strong> in <a href="#FIg._10.9.1._Creating_the_mixture_material"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>1.</a>),
+      it becomes the Mother material of the mixture material.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select the Mother material (See <strong>2.1</strong> in <a href="#FIg._10.9.1._Creating_the_mixture_material"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>1.</a>) and click on the <img src="../../../../assets/Icons/Pre_icons/MO_Add_Phase_button.jpg"
+      /> button (See <strong>2.2</strong> in <a href="#FIg._10.9.1._Creating_the_mixture_material"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>1.</a>), this will add its phases, also added phases can be removed using the <img
+        src="../../../../assets/Icons/Pre_icons/MO_Remove_phase_button.jpg" /> button by selecting phases.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Repeat the step<strong> 2 </strong>as many times as the number of phases (See <strong>3</strong> in <a href="#FIg._10.9.1._Creating_the_mixture_material"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>1.</a>).</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Define the General material data using the plastic, Elastic, etc icons (See <strong>4.1</strong> in <a href="#FIg._10.9.1._Creating_the_mixture_material"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>1.</a>) for Mother material
+      and other phases, then click on Transformation icon (See <strong>4.2</strong> in Fig <a href="#FIg._10.9.1._Creating_the_mixture_material"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>1.</a>) to define the Transformation
+      data between the child phases. If user wants to define the Coarsening data than select the Coarsening icon.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select the Mother to Child phase transformation relation (See <strong>5.1</strong> and <strong>5.2</strong> in <a href="#FIg._10.9.1._Creating_the_mixture_material"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>1.</a>) and
+      then click on <img src="../../../../assets/Icons/Pre_icons/MO_Add_Icon2.jpg" /> button (See 5.3 in <a href="#FIg._10.9.1._Creating_the_mixture_material"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>1.</a>) then define the
+      transformation kinetics, Latent heat, volume change, Transformation plasticity and other data (See 5.4 in <a href="#FIg._10.9.1._Creating_the_mixture_material"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>1.</a>).</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Repeat the step 5 for the other phase’s transformations.</li>
+  </ol>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>:<br/> Grain model data for the mixture materials can be defined only for the phases by selecting the Phases using the Grain button.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="317" src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_Image001.jpg" width="750" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="FIg._10.9.1._Creating_the_mixture_material"></a>Creating the mixture material</p>
+  <p> </p>
+  <ul class="Disc_wo_indent">
+    <li>
+      <p><a id="Kinetics_model_(TTTD)"></a><strong>Kinetics model (TTTD)</strong></p>
+    </li>
+  </ul>
+  <p style="text-align: center"><img src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_Image002.jpg" /></p>
+  <p> </p>
+  <p class="Fig_numb">Transformation kinetics definition window</p>
+  <p> </p>
+  <p>A kinetics model (<a href="../../../Keyword_Documentation/T/TTTD.htm">TTTD</a>) is a function that defines the conditions and manner in which one phase may transform into another. The amount of data required is often considerable as in the case for
+    a full TTT diagram, so unless necessary, often using coefficients for a function can suffice.  A model defines one relationship only so many relationships are required for such cases as steel where many phases can be produced. There are two classifications
+    for kinetics models, diffusion-type transformations, and diffusion less type transformations.  The system is designed for both ferrous and nonferrous metals. Using carbon steel as an example, the Austenite-ferrite and Austenite-Pearlite structure
+    changes and vice versa are governed by the diffusion type transformation. The transformation is driven by the diffusion processes depending on the temperature, stress history, and carbon content. The diffusion less transformation from Austenite to
+    Martensite involves a shear process, which depends on the temperature, stress, and carbon content. For more information of Kinetics model Refer <a href="10_9_1_Transformation_Kinetics_Models.htm">Chapter 10.9.1.Transformation Kinetics Models.</a></p>
+  <p> </p>
+  <ul class="Disc_wo_indent">
+    <li>
+      <p><a id="Latent_heat_and_volume(PHASLH)"></a><strong>Latent heat and Volume (PHASLH)</strong></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._10.9.3._Transformation_induced_volume_and_latent_heat_window"></a><img src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_Image003.jpg" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">  Transformation induced volume and latent heat window</p>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><a id="Latent_Heat"></a><strong>Latent Heat : </strong><strong>Latent heat</strong> (<a href="../../../Keyword_Documentation/P/PHASLH.htm">PHASLH</a>) accounts for the net energy gain or loss when a phase change occurs from one phase to another.
+        Latent heat may be a constant value, a function of either temperature or a function of the dominant atom content.(See <a href="#Fig._10.9.3._Transformation_induced_volume_and_latent_heat_window"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>3.</a>)
+        The energy release due to the latent heat can prolong the time of transformation. A positive sign on the latent heat value means that the transformation acts as a heat source and a negative sign means that the transformation acts as a heat sink.
+        The units for this variable are Btu/in3 for English units and N/mm2 for SI units.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><strong><a id="Transformation_induced_volume_change_"></a></strong><strong>T</strong><strong>ransformation induced volume change (<a href="../../../Keyword_Documentation/P/PHASVL.htm">PHASVL</a>)  : </strong>Volume change may be the result of a
+        phase transformation. This volume change (<a href="../../../Keyword_Documentation/P/PHASVL.htm">PHASVL</a>)  may induce stresses in the transforming object and will certainly affect the final dimensions after processing. Volume change may be a
+        constant value, a function of either temperature, dominant atom content or temperature and dominant atom content. The volume change due to transformation is induced by a change in the lattice structure of a metal. The transformation strain is
+        used mainly to account for the structure change during the transformation and is in the form of: </p>
+    </li>
+  </ul>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: rgb(255, 255, 255);margin-left: 40px">
+    <colgroup>
+      <col style="width: 500px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/EQ_10_9_1.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> A positive sign in the volume change means there is an increase in volume change and a negative sign means there is a decrease in volume over the transformation. This variable is without units.</p>
+  <p> </p>
+  <ul class="Disc_wo_indent">
+    <li>
+      <p><a id="Transformation_plasticity_(TRNSFP)"></a><strong>Transformation plasticity (TRNSFP) </strong></p>
+    </li>
+  </ul>
+  <p>As a material undergoes transformation, it will plastically deform at a stress lower than the flow  stress. This phenomenon is known as Transformation Plasticity (<a href="../../../Keyword_Documentation/T/TRNSFP.htm">TRNSFP</a>). The change of the dimensions
+    of a part due to transformation plasticity occurs in combination with the dimension changes due to transformation induced volume change. In DEFORM the equation for transformation plasticity is as shown in <a href="#Fig._10.9.4.__Transformation_plasticity_window"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>4.</a>    and EQ(10.9.2).</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig._10.9.4.__Transformation_plasticity_window"></a><img src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_Image004.jpg" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Transformation plasticity window</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 500px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/EQ_10_9_2.jpg" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>The only data that the user needs to provide for this relationship is the transformation plasticity coefficient. The other terms are automatically calculated by DEFORM. The transformation plasticity coefficient may be a function of temperature.<br/>    A general range for <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/K_ij.jpg" /> for steel is given below,</p>
+  <p> </p>
+  <ul style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">
+    <li>Austenite - Ferrite, Pearlite or Bainite (4 - 13 *10-5 /MPa)</li>
+    <li>Austenite - Martensite (5 - 21 * 10-5 /MPa)</li>
+    <li>Ferrite &amp; Pearlite - Austenite (6 - 21 *10-5 /MPa)</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc_wo_indent">
+    <li>
+      <p><a id="Other"></a>Other</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><a id="Thermal_Direction"></a><strong>Thermal Direction : </strong>Thermal direction gives the simulation a bit more information, so transformation does not errantly generate volume fraction. For example, when heating steel from room temperature
+        to austentizing temperature, any bainite will be converted, over time, to austenite. During the heating, austenite may be converted back to bainite since it may be defined as a possibility. This definition prevents this. It is recommended to use
+        this sparingly. (See <a href="#Fig._10.9.5._Other_transformation_properties_window"><span data-keyref="Chapter_10_9_Transformation Data">Fig. 10.9.</span>5</a> )</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._10.9.5._Other_transformation_properties_window"></a><img src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_Image005.jpg" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Other transformation properties window</p>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><a id="Equilibrium_volume_fraction"></a><strong>Equilibrium volume fraction : </strong>Equilibrium volume fraction defines the maximum amount of a phase volume fraction generation during an isothermal condition.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><a id="Variation_selection_model"></a><strong>Variation selection model </strong></p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><a id="Interface_Energy"></a><strong>Interface Energy</strong></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p> </p>
+</body>
+</html>

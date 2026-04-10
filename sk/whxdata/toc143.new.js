@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"3D Heat Treatment Furnace Lab","type":"item","tilePath":"","url":"documentation_content/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

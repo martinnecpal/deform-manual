@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.22.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>50.1. 3D Geo Tool</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>50.1. 3D Geo Tool</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/50_3d_geo_tool/50_1_3d_geometry_tool.css"/>
+<meta name="brsnext" value="Documentation_content/Inverse_Heat/Inverse_Heat_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/50_3D_GEO_Tool/50_Introduction_to_3D_GEO_Tool.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="50.1. 3D Geo Tool">
+        <span>50.1. 3D Geo Tool</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>50.1.3D Geometry Tool</h1>
+  <p><a href="#50_1_1_Geometry_Tool_Layout">50.1.1. Geometry Tool Layout</a></p>
+  <p><a href="#50_1_2_Display_window">50.1.2. Display window</a></p>
+  <p><a href="#50_1_3_Object_tree">50.1.3. Object tree</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_3_1_Number_of_Objects">50.1.3.1. Number of Objects</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_3_2_Visibility">50.1.3.2. Visibility</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_3_3_Object_color">50.1.3.3. Object color</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_3_4_Transparency">50.1.3.4. Transparency</a></p>
+  <p><a href="#50_1_4_Graphical_Utilities">50.1.4. Graphical Utilities</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_4_1_File_Menu">50.1.4.1. File Menu</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_4_2_Edit_Menu">50.1.4.2. Edit Menu</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_4_3_Tool_Menu">50.1.4.3. Tool Menu</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_4_4_Select_Menu">50.1.4.4. Select Menu</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_4_5_Display_Menu">50.1.4.5. Display Menu</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_4_6_Viewport">50.1.4.6. Viewport</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_4_7_Window_menu">50.1.4.7. Window menu</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_4_8_Options_menu">50.1.4.8. Options menu</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_4_9_Help_menu">50.1.4.9. Help menu</a></p>
+  <p><a href="#50_1_5_Property_editor">50.1.5. Property editor</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_5_1_Analysis">50.1.5.1. Analysis</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_5_2_Measure">50.1.5.2. Measure</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_5_3_Slicing">50.1.5.3. Slicing</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_5_4_Modify">50.1.5.4. Modify</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_5_5_Verify">50.1.5.5. Verify</a></p>
+  <p style="margin-left: 40px"><a href="#50_1_5_6_Morphing">50.1.5.6. Morphing</a></p>
+  <h2><a id="50_1_1_Geometry_Tool_Layout"></a>Geometry Tool Layout</h2>
+  <p>Geometry tool layout is divided into Display window, Object tree, Graphical Utilities window and Project editor. (See <a href="#Fig_50_1_1_3D_Geo_tool_Layout"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>1.</a>).</p>
+  <p style="text-align: center"><a id="Fig_50_1_1_3D_Geo_tool_Layout"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Geo tool Layout</p>
+  <h2><a id="50_1_2_Display_window"></a>Display window</h2>
+  <p>The display window is the graphical display for all imported or created geometries. In Display window, we can see the Geometry as the changes made takes effect.</p>
+  <h2><a id="50_1_3_Object_tree"></a>Object tree</h2>
+  <p>In object tree we can see the objects imported or created and their viewing information, such as number of objects, Displaying, color of the objects and Transparency information is available in this window.</p>
+  <h3><a id="50_1_3_1_Number_of_Objects"></a>Number of Objects</h3>
+  <p>Number of objects (geometry) imported or created can be seen in the object tree as they will be listed out in the Object tree.</p>
+  <h3> <a id="50_1_3_2_Visibility"></a>Visibility</h3>
+  <p>By clicking on the <img src="../../../assets/icons/pre_icons/mo_visible.jpg"/> icon, user can toggle the visibility of the objects in the display window.</p>
+  <h3><a id="50_1_3_3_Object_color"></a>Object color</h3>
+  <p>User can change the object color by using this option. If user clicks on the box under the object color option for the selected object, a color palette dialog will open and user can select the color to  be used for selected object.</p>
+  <h3><a id="50_1_3_4_Transparency"></a>Transparency</h3>
+  <p>User can use this option to toggle the transparency display of the selected object. If user clicks on this option, respective object gets transparent.</p>
+  <h2><a id="50_1_4_Graphical_Utilities"></a>Graphical Utilities</h2>
+  <p>The graphical utilities window provides view manipulation and other utility functions to control the display of the objects in Display window. Features include zoom and pan, Rotate. The graphics utilities window also contains tool bar options for creating
+    geometry and modifying like Geometry Primitive, Translate, Rotate, scale, mirror, Offset, Extrude, Soft move and Boolean  and  selection options like Pick Shell, Pick Face, Pick Polygon, Pick polygons by box, Pick polygons by cylinder, Pick polygons
+    by window, Pick Polygons by line, Pick Loop, Pick Curve, Pick Slicing Plane, Pick Point and Invent selection.</p>
+  <h3 class="h3_50_1_4"><a id="50_1_4_1_File_Menu"></a>File Menu</h3>
+  <p>The below <a href="#Fig_50_1_2_File_Menu_options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>2.</a> Shows the File menu options,</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_2_File_Menu_options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">File Menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>New Session <img height="21" src="../../../assets/icons/pre_icons/geo_tool_new_session.jpg" width="24"/></strong>: It opens the new session for creating and modifying geometries in 3D geometry tool.</p>
+    </li>
+    <li>
+      <p> <strong>Open <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg" style="cursor: nesw-resize;"/> </strong>: It opens 3D geometry of different formats like *.STL, *.GEO, *.PDA, *.UNV, *KEY and *.PBR .</p>
+    </li>
+    <li>
+      <p><strong>Save<img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/> </strong>: It saves the geometry in the current session into *.STl file.</p>
+    </li>
+    <li>
+      <p><strong>Save as</strong> : Save as saves geometry in the current session into selected format from the available formats in the selected path.</p>
+    </li>
+    <li>
+      <p><strong>Save All  : </strong>Save all option is used save all geometries in one click.</p>
+    </li>
+    <li>
+      <p><strong>Import :</strong> Using this option user can import the geometries having the formats *.IGS and *.STP .</p>
+    </li>
+    <li>
+      <p><strong>Export </strong>: Export the geometry in the current session into *.IGS  or *.STP .</p>
+    </li>
+    <li>
+      <p><strong>Close Session</strong> : Close session option is used to close the currently opened session but does not quit the 3D Geo Tool.</p>
+    </li>
+    <li>
+      <p><strong>Exit </strong>: Exit option is used to close the 3D Geo Tool wizard.</p>
+    </li>
+  </ul>
+  <h3 class="h3_50_1_4"><a id="50_1_4_2_Edit_Menu"></a>Edit Menu</h3>
+  <ul class="Disc">
+    <li>
+      <p><strong>Undo</strong>: This option is used to undo the last action.</p>
+    </li>
+    <li>
+      <p><strong>Redo :</strong> This option is used to redo the action that is deleted using undo.</p>
+    </li>
+  </ul>
+  <h3 class="h3_50_1_4"><a id="50_1_4_3_Tool_Menu"></a>Tool Menu</h3>
+  <ul class="Disc">
+    <li>
+      <p><strong>Geometry Primitive<img src="../../../assets/icons/pre_icons/geo_tool_geometry_primitive.jpg"/> : </strong>When we click on the Geometry primitive option, Primitive window will open with options to create a new geometry. (See <a href="#Fig_50_1_3_Geometry_Primitive_window"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>3.</a>)
+         For more information about the Geometry Primitive options please visit the section <a href="../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#12.3.2._3D_Geometry_Tools">12.3.2. 3D Geometry Tool</a> - <a href="../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Define_Primitive">Define Primitive.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"> <a id="Fig_50_1_3_Geometry_Primitive_window"></a><img height="471" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0003.jpg" width="700"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Geometry Primitive window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Translate object <img src="../../../assets/icons/pre_icons/geo_tool_translate_icon.jpg"/> </strong>: Translate object option is used to move the objects for quantified distance in X, Y and Z direction. When we click on this option by selecting
+        an object, a pop-up window will appear to define the distance value in the respective direction to move the object in that direction. (See <a href="#Fig_20_1_4_Translate_object_Dialog"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>4.</a>).</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_20_1_4_Translate_object_Dialog"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Translate object Dialog</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Rotate object <img src="../../../assets/icons/pre_icons/geo_tool_rotate_icon.jpg"/>:</strong> This option is used to rotate the object in specified direction with specified angle. When we click on this option by selecting an object, a pop-up
+        window will appear to define the direction and Angle. Then if we click on the apply button, objects are rotated in the specified direction. (See <a href="#Fig_50_1_5_Rotate_Dialog"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>5.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0005.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig_50_1_5_Rotate_Dialog"></a>Rotate Dialog</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Scale object</strong> <img src="../../../assets/icons/pre_icons/geo_tool_scale_icon.jpg"/> : This option is used to scale the Geometry. Geometry can be scaled in Geo tool by specifying the scaling factor. For 0.5 it scales down to half
+        of original geometry and for 2 it doubles original geometry. (See <a href="#Fig_50_1_6_Scale_Objects_dialog"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>6.</a>) This scaling can be restricted for specified direction. In
+        Scaling dialog, user can uncheck the direction in which scaling is not required.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_6_Scale_Objects_dialog"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0006.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scale Objects dialog</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Mirror Object <img src="../../../assets/icons/pre_icons/geo_tool_mirror_icon.jpg"/> : </strong>This option will mirror the objects along the specified axis and won&#39;t retain the original objects. (See <a href="#Fig_50_1_7_Mirror_Objects_dialog"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>7.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_7_Mirror_Objects_dialog"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mirror Objects dialog</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Offset <img src="../../../assets/icons/pre_icons/geo_tool_offset_icon.jpg"/>:</strong> This Option is used to Offset a surface to a specified length. Offsetting the surface can be done using following steps,</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p>Select Offset option (Offset dialog will open),</p>
+    </li>
+    <li>
+      <p>Enter offset length or target volume.</p>
+    </li>
+    <li>
+      <p>Turn on Keep original part if the modified geometry should be created as new part, original part geometry is left untouched.</p>
+    </li>
+    <li>
+      <p>Select a surface to be offset by clicking on it (surface will get highlighted)</p>
+    </li>
+    <li>
+      <p>Click on <img src="../../../assets/icons/pre_icons/apply_button.jpg"/>. Surface that we selected is offset to defined length or to target volume. (See <a href="#Fig_50_1_8_Offsetting_the_surface"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>8.</a>).</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_8_Offsetting_the_surface"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Offsetting the surface</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Extrude<img src="../../../assets/icons/pre_icons/geo_tool_extrude_icon.jpg"/>: </strong>This Option is used to extrude the surface to defined length. Extruding the surface can be done using following steps,</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p>Select Extrude option (Extrude dialog will open),</p>
+    </li>
+    <li>
+      <p>Enter extrude length or target volume.</p>
+    </li>
+    <li>
+      <p>Turn on Keep original part if the modified geometry should be created as new part, original part geometry is left untouched.</p>
+    </li>
+    <li>
+      <p>Select a surface to be extruded by clicking on the surface (surface will get highlighted)</p>
+    </li>
+    <li>
+      <p>Define direction or select auto so that system automatically identifies the direction based on the selected surface.</p>
+    </li>
+    <li>
+      <p>Click on <img height="24" src="../../../assets/icons/pre_icons/apply_button.jpg" width="80"/>.Surface that we selected will Extrude to defined length or to target volume. (See <a href="#Fig_50_1_9_Extruding_the_Surface"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>9.</a>).</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_9_Extruding_the_Surface"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0009.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Extruding the Surface</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Soft move</strong> <img src="../../../assets/icons/pre_icons/geo_tool_soft_move_icon.jpg"/>: This option is used to modify the surface profile. Soft moving the surface can be done using following steps,</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p>Select Soft move option (Soft move dialog will open),</p>
+    </li>
+    <li>
+      <p>Select a surface whose profile has to be modified by clicking on the surface (Cylinder will get added, modify the cylinder to select the surface)</p>
+    </li>
+    <li>
+      <p>Select the method of modifying the profile, Around the point or Along the curve</p>
+    </li>
+    <li>
+      <p>Pull the arrow on the cylinder window to define the Profile shape. (See <a href="#Fig_50_1_10_Creating_profile_shape_for_soft_move"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>10.</a>)</p>
+    </li>
+    <li>
+      <p>Profile curve shape can be defined using the sliding bar.</p>
+    </li>
+    <li>
+      <p>Click on <img height="24" src="../../../assets/icons/pre_icons/apply_button.jpg" width="80"/> and <img src="../../../assets/icons/pre_icons/ok_button.jpg"/>. Surface that we selected will Soft move to defined length. (See <a href="#Fig_50_1_11_Soft_moving_the_surface"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>11.</a>).</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_10_Creating_profile_shape_for_soft_move"></a><img height="449" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0010.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Creating profile shape for soft move</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_11_Soft_moving_the_surface"></a><img height="447" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0011.jpg" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Soft moving the surface</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Boolean wizard</strong> <img src="../../../assets/icons/pre_icons/geo_tool_boolean_icon.jpg"/>: Boolean wizard guides the user regarding the options need to be used while performing Boolean operations like subtracting the unwanted region
+        in the geometry using another geometry or joining the two geometries. It can be used to create ALE workpiece.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Step 1 : Start</strong></p>
+  <p>Start page is the beginning page to perform the Boolean operations. (See <a href="#Fig_50_1_12_Boolean_Wizard_Start_Page"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>12.</a>)</p>
+  <p style="text-align: center"><a id="Fig_50_1_12_Boolean_Wizard_Start_Page"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0012.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Boolean Wizard Start Page</p>
+  <p> </p>
+  <p><strong>Step 2 : Modify objects</strong></p>
+  <p>In Modify objects page, we can position the objects using offset positioning to avoid the Overwrap surface. (See <a href="#Fig_50_1_13_Boolean_Wizard_Modify_Page"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>13.</a>)</p>
+  <p style="text-align: center"><a id="Fig_50_1_13_Boolean_Wizard_Modify_Page"></a><img height="447" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0013.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Boolean Wizard Modify Page</p>
+  <p> </p>
+  <p><strong>Step 3 : Boolean Union</strong></p>
+  <p>After modifying the objects user can combine two geometries in to one by selecting the Union option in the modify tab. (See <a href="#Fig_50_1_14_Boolean_Wizard_Union_page"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>14.</a>). Also
+    <a href="#50_1_5_2_Measure"> refer 50.1.5.2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_14_Boolean_Wizard_Union_page"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0014.jpg" width="750"/></p>
+  <p class="Fig_numb">Boolean Wizard Union page</p>
+  <p> </p>
+  <p><strong>Step 4 : Geometry creation</strong></p>
+  <p>In geometry Creation page user can create new cylinder geometry by defining the values for Diameter, Height and Position fields. (See <a href="#Fig_50_1_15_Boolean_wizard_Geometry_Creation_page"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>15.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_15_Boolean_wizard_Geometry_Creation_page"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Boolean wizard Geometry Creation page</p>
+  <p> </p>
+  <p><strong>Step 5 : Boolean Subtract</strong></p>
+  <p>In slice page, user can slice the previously Cleaned geometry at required location in desired direction.  This slicing creates new geometry from the sliced object, user has an option to retain original geometry (See <a href="#Fig_50_1_16_Boolean_Wizard_Subtract_Page"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>16.</a>). Also
+    refer Boolean in <a href="#50_1_5_2_Measure">50.1.5.2. Measure</a><span style="color:#0000ff;"> </span></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_16_Boolean_Wizard_Subtract_Page"></a><img height="447" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Boolean Wizard Subtract Page</p>
+  <p> </p>
+  <p><strong>Step 6 : Clean up</strong></p>
+  <p>In clean up page, user can fix the previously combined or subtracted geometry by deleting the illegal shells/polygons and this can be done by using the Analysis tab options. (See <a href="#Fig_50_1_17_Boolean_Wizard_Clean_up_page"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>17.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_17_Boolean_Wizard_Clean_up_page"></a><img height="447" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Boolean Wizard Clean up page</p>
+  <p> </p>
+  <p><strong>Step 7 : Slice</strong></p>
+  <p>In slice page, user can slice the previously Cleaned geometry in to required shape and distance with defined direction. This slicing divides the complete geometry in to two separate geometries. (See <a href="#Fig_50_1_18_Boolean_Wizard_Slice_page"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>18.</a>)
+     Also for more information on slicing, please refer <a href="#50_1_5_3_Slicing">50.1.5.3. Slicing</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_18_Boolean_Wizard_Slice_page"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Boolean Wizard Slice page</p>
+  <p> </p>
+  <p><strong>Step 8 : Extrude</strong></p>
+  <p>In extrude page, user can extrude the required surface to defined length and direction. This extends the surface to the defined length. (See <a href="#Fig_50_1_19_Boolean_Wizard_Extrude_page"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>19.</a>)</p>
+  <p style="text-align: center"><a id="Fig_50_1_19_Boolean_Wizard_Extrude_page"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Boolean Wizard Extrude page</p>
+  <p> </p>
+  <p><strong>Step 9 : Finish</strong></p>
+  <p>After getting the Final geometry shape, user can save the geometry by clicking Finish button in the Finish page. (See <a href="#Fig_50_1_20__Boolean_Wizard_Finish_page"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>20.</a>)</p>
+  <p style="text-align: center"><a id="Fig_50_1_20__Boolean_Wizard_Finish_page"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Boolean Wizard Finish page</p>
+  <h3 class="h3_50_1_4"><a id="50_1_4_4_Select_Menu"></a>Select Menu</h3>
+  <ul class="Disc">
+    <li>
+      <p><strong>Pick Shell</strong><img src="../../../assets/icons/pre_icons/geo_tool_pick_shell.jpg"/> : This option is used to select the complete shell of the geometry for editing.</p>
+    </li>
+    <li>
+      <p><strong>Pick Face</strong><img src="../../../assets/icons/pre_icons/geo_tool_pick_face.jpg"/>: This option is used to select a geometry face for editing.</p>
+    </li>
+    <li>
+      <p><strong>Pick Polygon</strong> <img src="../../../assets/icons/pre_icons/geo_tool_pick_polygon.jpg"/>: This option is used to select a polygon for editing.</p>
+    </li>
+    <li>
+      <p><strong>Pick polygons by box </strong><img src="../../../assets/icons/pre_icons/geo_tool_pick_polygons_by_box.jpg"/>: This option is used to select the polygons by using box window. Modifying the box length and width picks the polygons which are
+        completely in the box for editing.</p>
+    </li>
+    <li>
+      <p><strong>Pick polygons by cylinder <img src="../../../assets/icons/pre_icons/geo_tool_pick_polygos_by_cylinder.jpg"/>: </strong>This option is used to select the polygons by using cylinder window. Modifying the cylinder diameter and height picks
+        the polygons which are completely in the cylinder for editing.</p>
+    </li>
+    <li>
+      <p><strong>Pick polygons by window </strong><img src="../../../assets/icons/pre_icons/geo_tool_pick_polygons_by_window.jpg"/>:  This option is used to select the polygons by using window which is drawn across the polygons.</p>
+    </li>
+    <li>
+      <p><strong>Pick Polygons by line</strong> <img src="../../../assets/icons/pre_icons/geo_tool_pick_polygons_by_line.jpg"/>: Using this option user can draw a line across the polygons that are to be picked for editing.</p>
+    </li>
+    <li>
+      <p><strong>Pick Loop</strong> <img src="../../../assets/icons/pre_icons/geo_tool_pick_loop.jpg"/>: Using this option is user can select the open loop to fill.</p>
+    </li>
+    <li>
+      <p><strong>Pick Curve</strong>  <img src="../../../assets/icons/pre_icons/geo_tool_pick_curve_by_line.jpg"/>: This option is used to select the curves in the geometry.</p>
+    </li>
+    <li>
+      <p><strong>Pick Slicing Plane</strong> <img src="../../../assets/icons/pre_icons/geo_tool_pick_slicing_curve.jpg"/>: This option is used to select the defined slicing plane.</p>
+    </li>
+    <li>
+      <p><strong>Pick Point</strong> <img src="../../../assets/icons/pre_icons/geo_tool_pick_point.jpg"/>: Pick Point option is used to select points on the geometry.</p>
+    </li>
+    <li>
+      <p><strong>Invert selection</strong> <img src="../../../assets/icons/pre_icons/geo_tool_invert_selection.jpg"/>: This option is used to toggle the selection between selected and unselected regions of the geometry.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h3 class="h3_50_1_4"><a id="50_1_4_5_Display_Menu"></a>Display Menu</h3>
+  <p>Display has options for varying the display mode of the geometry. See <a href="#Fig_50_1_21_Display_Menu_options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>21.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_21_Display_Menu_options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0021.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Display Menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Display Points <img src="../../../assets/icons/pre_icons/geo_tool_display_points.jpg"/></strong>: Shows geometry points on the Display window.</p>
+    </li>
+    <li>
+      <p><strong>Display Shading</strong> <img src="../../../assets/icons/pre_icons/mo_shading_mode_icon.jpg"/>: Smoothly shades the geometry within viewport.</p>
+    </li>
+    <li>
+      <p><strong>Display Wireframe</strong> <img src="../../../assets/icons/pre_icons/mo_wirefrane_mode_icon.jpg"/>: Displays Polygons lines of the geometry within viewport.</p>
+    </li>
+    <li>
+      <p><strong>Display Shading and Wireframe</strong> <img src="../../../assets/icons/pre_icons/mo_shade_wireframe_icon.jpg"/>: Smoothly shades and displays Geometry along with the polygons lines within the viewport.</p>
+    </li>
+    <li>
+      <p><strong>Display edges</strong> <img src="../../../assets/icons/pre_icons/geo_tool_display_edge_icon.jpg"/>: Displays the surface edges of the geometry.</p>
+    </li>
+    <li>
+      <p><strong>+Edges </strong><img src="../../../assets/icons/pre_icons/geo_tool_plus_surface patch_icon.jpg"/>: This feature will display surface edges with other display modes options.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h3 class="h3_50_1_4"><a id="50_1_4_6_Viewport"></a>Viewport</h3>
+  <p><a href="#Fig_50_1_22_Viewport_menu"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>22.</a> Shows the Viewport menu options. Using this option user can place geometry for better visualization.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_22_Viewport_menu"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0022.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Viewport menu</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Refresh screen</strong>: The Refresh Screen option redraws the screen, removing any measurement marks.</p>
+    </li>
+    <li>
+      <p><strong>Fit View</strong>: Fits all displayed geometries inside the current viewport.</p>
+    </li>
+    <li>
+      <p><strong>Previous view</strong> : Resets objects to previously viewed display position.</p>
+    </li>
+    <li>
+      <p><strong>Multiple </strong><strong>viewports</strong>: Multiple Viewports can be used by user to visualize geometry from different orientations at a time.</p>
+    </li>
+    <li>
+      <p><strong>Sync multiple </strong><strong>viewports</strong>: When we select the Sync multiple viewports, it will sync the two windows, if we change the properties in one viewport, it is reflected in other viewports.</p>
+    </li>
+    <li>
+      <p><strong>Select </strong>: The select button is a general pointing utility. It performs several functions which vary with context. It can be used to report coordinates of an arbitrary point, to select a node or an element, to change the primary viewport,
+        and many similar functions. </p>
+    </li>
+    <li>
+      <p><strong>Pan  </strong>(Shift+LMB) : Pan adjusts the region filling the active viewport without changing the size of the displayed object.</p>
+    </li>
+    <li>
+      <p><strong>Dynamic zoom </strong>(Alt+LMB) : The dynamic zoom dynamically changes the size of the region of the object which fills the active view port. The view size can be changed by holding Alt key and clicking left mouse button in the active view
+        port, and rolling the mouse backward or forward to increase or decrease the size of the object in the display window.</p>
+    </li>
+    <li>
+      <p><strong>Box Zoom Window</strong> (Ctrl+Alt+LMB) : The zoom window function allows close up inspection of a small region of the currently display object or graph. The zoom region is selected by holding Ctrl + Alt key and clicking the left mouse button,
+        while dragging the mouse to enclose the selected region with the displayed box. When the mouse button is released the selected region will fill the display window.</p>
+    </li>
+    <li>
+      <p><strong>Rotate  </strong>(Ctrl+LMB): This will allow the mouse pointer to rotate the geometries in the required direction.</p>
+    </li>
+    <li>
+      <p><strong>Rotate X</strong> : This will allow the mouse pointer to rotate the object along X-direction.</p>
+    </li>
+    <li>
+      <p><strong>Rotate Y</strong> : This will allow the mouse pointer to rotate the object along Y-direction.</p>
+    </li>
+    <li>
+      <p><strong>Rotate Z</strong>: This will allow the mouse pointer to rotate the object along Z-direction. </p>
+    </li>
+  </ul>
+  <h3 class="h3_50_1_4"><a id="50_1_4_7_Window_menu"></a>Window menu</h3>
+  <ul class="Disc">
+    <li>
+      <p><strong>Cascade</strong>: If we select Cascade type, each and every time Database opens in new window.</p>
+    </li>
+    <li>
+      <p><strong>Tile</strong>: Database will fit into the Display window.</p>
+    </li>
+    <li>
+      <p><strong>Tile Horizontally</strong>: Database will show in Horizontal direction in Display window.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h3 class="h3_50_1_4"><a id="50_1_4_8_Options_menu"></a>Options menu</h3>
+  <p><strong>Environment</strong>: </p>
+  <p>The user can adjust the DEFORM working environment using environment option. Here the user can make changes in display and graphical settings. Defined settings will update from next session onwards.</p>
+  <p>Region: The user can select the preferred language under Language option and set to English or SI units under Unit option as a Default unit system for a new session. (See <a href="#Fig_50_1_23_Environment_Region_tab"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>23.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_23_Environment_Region_tab"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0023.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Environment Region tab</p>
+  <p> </p>
+  <p><strong>Directories</strong>: Directories option under Environment Settings window appears as shown in <a href="#Fig_50_1_24_Environment_Directories_tab"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>24.</a> User can browse to the
+    required location to set it as working directory, this directory will be used as a default location to store the geometries unless user specifies different location. The temporary files generated while running Geo tool are stored in the specified
+    path under Temporary file location.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_24_Environment_Directories_tab"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0024.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Environment Directories tab</p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Feature angle</strong>: User can use this option to change the range of selection when selecting the polygons for editing geometry using surface patch method. It displays the surface patch by treating surfaces within the feature angle as the
+    one surface. A curved surface with smaller feature angle means fewer surface polygons will be picked at a time. The feature tab to change the feature angle is as shown in <a href="#Fig_50_1_25_Environment_Feature_Tab"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>25.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_25_Environment_Feature_Tab"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0025.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Environment Feature Tab</p>
+  <p> </p>
+  <p><strong>Icon/Font</strong>: The user can change the icon and font size depending on the requirement as shown in the <a href="50_1_3d_geo_tool.htm#Fig_50_1_26_Icon/Font_options_under_Environment_Settings_window"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>26.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_26_Icon/Font_options_under_Environment_Settings_window"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0026.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Icon/Font options under Environment Settings window</p>
+  <p> </p>
+  <h3 class="h3_50_1_4"><a id="50_1_4_9_Help_menu"></a>Help menu</h3>
+  <p>The help menu options are shown in <a href="#Fig_50_1_27_Help_menu_options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>27</a>., these options can be used to open the help manual and view brief information about product.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_27_Help_menu_options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0027.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Help menu options</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>: Help Menu options are not yet functional.</p>
+  <p> </p>
+  <h2><a id="50_1_5_Property_editor"></a>Property editor</h2>
+  <p>Property editor options (such as Analysis, Measure, Slicing, Modifying, Verifying and Morphing) are the crucial options to Analyze and modify the geometries.</p>
+  <h3 class="h3_50_1_5"><a id="50_1_5_1_Analysis"></a>Analysis</h3>
+  <p>Analysis window shows the details about the geometry imported/created and allows to modifying the geometries using various options.(See <a href="#Fig_50_1_28_Analysis_tab_options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>28</a>.)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_28_Analysis_tab_options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0028.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Analysis tab options</p>
+  <p> </p>
+  <p><strong>Auto Fix</strong> <img src="../../../assets/icons/pre_icons/geo_tool_auto_fix.jpg"/> : This option automatically fixes the illegal geometry. This option deletes the illegal shells, free loops, free Edges, Noisy shells, free curves, bad edges
+    and makes the geometry water tight geometry.</p>
+  <p><strong>Create :</strong> This option is used to create a polygon by selecting the points.</p>
+  <p><strong>Delete :</strong>This option deletes the selected part of a geometry or entire geometry selected.</p>
+  <p><strong>Flip :</strong> This option flips the surface of the geometry selected.</p>
+  <p><strong>Normal : </strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Orient Shells Consistently</strong> : This action button will make all the selected geometry polygons continuous by orienting them in one direction. To check this create a primitive cylinder geometry select any polygon &gt; click on Flip
+        &gt; now click on Orient shells consistently, this will make all the polygons which are disoriented to orient consistent with rest of the polygons.(See <a href="#Fig_50_1_29_Example_for_Orient_Shell_consistently_option"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>29.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_29_Example_for_Orient_Shell_consistently_option"></a><img height="295" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0029.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Example for Orient Shell consistently option</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Auto Fix Orientation:</strong> When user uses auto fix orientation option, system corrects polygons orientation towards counterclockwise and orients them consistently towards counter clockwise direction.(see <a href="#Fig_50_1_30_Example_for_Auto_Fix_orientation_option"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>30.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_30_Example_for_Auto_Fix_orientation_option"></a><img height="266" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0030.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Example for Auto Fix orientation option</p>
+  <p> </p>
+  <p><strong>Stitch</strong>: This option is used to fill gaps between polygons that are not connected along the surface. When we click on the Stitch button, existing polygons which are not connected along the surface are edited to connect within the stitching
+    tolerance.(See <a href="#Fig_50_1_31_Stitch_tab_options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>31.</a>)</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Estimate Stitching Tolerance</strong>: When we click on the Estimate Stitching Tolerance, it estimates the tolerance value for stitching the polygons in the geometry.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Auto Stitch</strong>: When this option is used, system automatically estimates the stitching tolerance and connects the polygons of the entire geometry which are within the Stitching tolerance.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_31_Stitch_tab_options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0031.jpg"/></p>
+  <p class="Fig_numb">Stitch tab options</p>
+  <p> </p>
+  <p><strong>Fill</strong>: The missing surfaces or polygons in the geometry due to which geometry cannot be closed are considered as holes.(See <a href="#Fig_50_1_32_Fill_tab_Options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>32.</a>)</p>
+  <p style="text-align: center"><a id="Fig_50_1_32_Fill_tab_Options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0032.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fill tab Options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Fill Holes</strong>: When we click on the Fill holes, new polygons are created to fill missing surfaces or polygons.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Fill all holes</strong>: When we click on the Fill all holes, all holes in the geometry gets filled with new polygons.</p>
+    </li>
+  </ul>
+  <p>.</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Connect two Loops</strong>: This option is used to join two distinct loops. Selecting two loops and clicking on connect two loops option will join the loops.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Auto Fill</strong>: When user uses auto fill option, system automatically identifies the missing  surfaces/ polygons in the geometry and fills them with new polygons.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Shell</strong>: Under Shell tab, information of each shell regarding status, Number of polygons in the shell, Shell Surface Area and volume will be displayed in the table.(See <a href="#Fig_50_1_33_Shell_tab_Options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>33.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_33_Shell_tab_Options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0033.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Shell tab Options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Mark Noisy shells</strong>: When user clicks on Mark Noisy Shells button, system will highlight the noisy shells based on the criteria specified in the Noisy Shell Options.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Noisy shell options: </strong>User can use Noisy Shell Options button to specify the criteria to decide whether the shell is a noisy shell or not.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Triangle</strong>: </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Tool </strong>: Under Tool tab we have a Check button to check the geometry and identify and display the number of polygons with double surface, number of polygons intersecting, number of polygons attached to bad edge and number of polygons
+        duplicated.  Under this tab user can specify the criteria like distance, angle and normal direction to identify the double surface polygons.(See <a href="#Fig_50_1_34_Triangle_tab_options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>34.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_34_Triangle_tab_options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0034.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Triangle tab options</p>
+  <p> </p>
+  <p><strong>Point </strong>: Point tab is used to create new points or duplicate exiting points of 3D geometry.(See <a href="#Fig_50_1_35_Point_Tab_Options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>35.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_35_Point_Tab_Options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0035.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Point Tab Options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Tool</strong>: Tool options are used to create new points or duplicate exiting points of 3D geometry.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Property</strong>: Under Property, system displays the point number and co-ordinates of selected point or point to be created.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Geometry</strong>: Under this tab user can specify the criteria like distance, angle and normal direction to identify the double surface polygons.(See <a href="#Fig_50_1_36_Geometry_tab_options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>36.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_36_Geometry_tab_options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0036.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry tab options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Double surface</strong>: Check double surface option is used to check the geometry whether it contains more than one surface based on the specified distance and angle to check the double surface, as DEFORM requires the geometry to have single
+        surface.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Intersecting Triangle</strong>: Check Intersecting Triangle option is used to check the geometry whether it contains any intersecting polygons.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Advanced</strong>: </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Tool :</strong></p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><strong>Refine (conformal): </strong>When user clicks on Refine Conformal, system will refine the geometry by reducing the polygon size and thereby increasing the number of polygons.(See <a href="#Fig_50_1_37_Advanced_Tab_options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>37.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_37_Advanced_Tab_options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0037.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced Tab options</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_38_Example_for_Refining_the_geometry_face"></a><img height="447" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0038.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Example for Refining the geometry face</p>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><strong>Split (not conformal):</strong></p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><strong>Fairing</strong>:</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><strong>Select Contact region</strong>: This is typically used in Lagrangian Extrusion cases. In extrusion where material coming out of different pockets will form self contact, to cleanup these sub-contacted polygons and make the continuous material
+        flow by importing the contact BCC keyword conditions.</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><strong>Connect one shell</strong>:</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><strong>Connect all shells</strong>:</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h3 class="h3_50_1_5"><a id="50_1_5_2_Measure"></a>Measure</h3>
+  <p><strong>Measuring</strong>: In this section, it shows the measuring type when the distance is measured between point to point or between polygon to polygon along with the vector, Length and Label of the measured distance. (See <a href="#Fig_50_1_39_Measure_Tab_options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>39.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_39_Measure_Tab_options"></a><img src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0039.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Measure Tab options</p>
+  <p> </p>
+  <p><strong>Direction</strong>: Using direction options user can select the direction in which the measurement has to be done between two selected entities.</p>
+  <p><strong>Filter</strong>: This section helps to measure the distance between points, edges, Triangle and Face, by turning on the respective check boxes user can measure the distance.</p>
+  <p><strong>Information</strong>: This section provides information regarding the polygon over which the cursor is placed or picked. The information includes polygon number, co-ordinates, area and normal direction.</p>
+  <p><strong>Delete </strong>: Using Delete button user can delete the last measured distance.</p>
+  <p><strong>Delete All</strong> : Using Delete All button user can delete all the measured distances.</p>
+  <h3 class="h3_50_1_5"><a id="50_1_5_3_Slicing"></a>Slicing</h3>
+  <p>Slicing tab can be used to slice the geometry and view. Geometry can be sliced in any direction by turning on the respective check boxes. Position of the slicing plane can be adjusted using the sliding bar.(See <a href="#Fig_50_1_40_Geometry_Slicing"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>40.</a>)</p>
+  <p style="text-align: center"><a id="Fig_50_1_40_Geometry_Slicing"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0040.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry Slicing</p>
+  <p> </p>
+  <p><strong>Slicing Objects:</strong> When user clicks on the slicing objects button it creates new object by slicing the exiting object geometry at the specified slicing plane. Original part is retained and holes are filled based on the respective check
+    boxes status.</p>
+  <p> </p>
+  <p><strong>Imprint Objects</strong>: Using imprint option user can imprint the geometry of one object on the other, like using cylinder option to make circular groves after splitting the grooved portion, see <a href="#Fig_50_1_41_Example_for_using_the_imprint_option_to_produce_projections"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>41.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_41_Example_for_using_the_imprint_option_to_produce_projections"></a><img height="332" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0041.jpg" style="cursor: nwse-resize;" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Example for using the imprint option to produce projections</p>
+  <p> </p>
+  <h3 class="h3_50_1_5"><a id="50_1_5_4_Modify"></a>Modify</h3>
+  <p><strong>Trimming</strong>: Trimming options are used to remove the part of the geometry by defining the trimming line. This can be done by following steps,</p>
+  <ol class="Decimal">
+    <li>
+      <p>Defining the Trimming line on the Geometry. (See <a href="#Fig_50_1_42_Defining_the_trimming_line"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>42.</a>)</p>
+    </li>
+    <li>
+      <p>User can see the preview of the trimming geometry. (See <a href="#Fig_50_1_43_Trimming_preview"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>43.</a>)</p>
+    </li>
+    <li>
+      <p>Click Trim button to trim the geometry. (See <a href="#Fig_50_1_44_Geometry_after_Trimming"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>44.</a>)</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p><a id="Fig_50_1_42_Defining_the_trimming_line"></a><img height="447" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0042.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining the trimming line</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_43_Trimming_preview"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0043.jpg" width="750"/></p>
+  <p class="Fig_numb">Trimming preview</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_44_Geometry_after_Trimming"></a><img height="447" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0044.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Geometry after Trimming</p>
+  <p> </p>
+  <p>User can keep the original object by turning on the Keep original part check box.</p>
+  <p> </p>
+  <p><strong>Boolean : </strong>Boolean options are used to join, Subtract and to take out the common of two geometries.</p>
+  <p> </p>
+  <p><strong>Union </strong>: Union option is used to combine two geometries into one. Union can be done using following steps,</p>
+  <ol class="Decimal">
+    <li>
+      <p>Create two geometries or import two geometries.</p>
+    </li>
+    <li>
+      <p>Position the geometries overlapping based on the new geometry requirement.</p>
+    </li>
+    <li>
+      <p>Shift to Modify property editor page. (See <a href="#Fig_50_1_45_Defining_two_new_geometries"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>45.</a>)</p>
+    </li>
+    <li>
+      <p>Select the union button to combine the two geometries, color shades of the geometries to be combined are shown in Modify page. (See <a href="#Fig_50_1_46_Joining_the_geometries_using_Union_option"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>46.</a>)</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_45_Defining_two_new_geometries"></a><img height="445" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0045.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Defining two new geometries</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_46_Joining_the_geometries_using_Union_option"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0046.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Joining the geometries using Union option</p>
+  <p> </p>
+  <p><strong>Subtract :</strong> Subtracting option is used to remove the unwanted area of the Geometry using other object geometry. Subtracting can be done using following steps,</p>
+  <ol class="Decimal">
+    <li>
+      <p>Create two geometries or import two geometries.</p>
+    </li>
+    <li>
+      <p>Position the geometries to overlap one on another. (See <a href="#Fig_50_1_47_Defining_two_new_geometries_for_subtracting"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>47.</a>)</p>
+    </li>
+    <li>
+      <p>Shift to Modify property editor page.</p>
+    </li>
+    <li>
+      <p>Select the subtract option to subtract one geometry from another geometry, color shades of the geometry that is subtracted  and  geometry from which it is subtracted are shown in Modify page (See<a href="#Fig_50_1_48_Subtracting_geometry"> <span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>48.</a>).</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_47_Defining_two_new_geometries_for_subtracting"></a><img height="446" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0047.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Defining two new geometries for subtracting</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_48_Subtracting_geometry"></a><img height="447" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0048.jpg" width="750"/></p>
+  <p class="Fig_numb"> Subtracting geometry</p>
+  <p> </p>
+  <p><strong>Intersect </strong>: This option is used to take out the common part of the two geometries, this can be done by using following steps,</p>
+  <ol class="Decimal">
+    <li>
+      <p>Create two geometries or import two geometries.</p>
+    </li>
+    <li>
+      <p>Position the geometries to overlap one on another.</p>
+    </li>
+    <li>
+      <p>Shift to Modify property editor page. (See <a href="#Fig_50_1_49_Creating_two_geometries"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>49.</a>)</p>
+    </li>
+    <li>
+      <p>Select the Intersect button option to take out the common part of the two geometries, color shades of the geometries from which common geometry will be taken out are shown in Modify page (See <a href="#Fig_50_1_50_Taking_out_the_intersecting_part"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>50.</a>).</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_49_Creating_two_geometries"></a><img height="435" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0049.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Creating two geometries</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_50_Taking_out_the_intersecting_part"></a><img height="433" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0050.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Taking out the intersecting part</p>
+  <p> </p>
+  <p>User can keep the original object by turning on the Keep original part check box.</p>
+  <h3 class="h3_50_1_5"> <a id="50_1_5_5_Verify"></a>Verify</h3>
+  <p><strong>Quality</strong>: In the quality box, user can analyze the Fold in the geometry based on the specified criteria and also delete the Folds. (See <a href="#Fig_50_1_51_Verify_tab_options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>51.</a>)</p>
+  <p> </p>
+  <p><strong>Comparison</strong>: Using the comparison;; options, user can compare the two geometries in terms of number of polygons, number of points, Min Length of Polygon, Min Area of Polygon, Number of shells, Number of Noisy shells, Number of Bad edges,
+    Number of Free edges, Volume and Surface Area. (See <a href="#Fig_50_1_51_Verify_tab_options"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>51.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_51_Verify_tab_options"></a><img height="475" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0051.jpg" width="435"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Verify tab options</p>
+  <h3 class="h3_50_1_5"><a id="50_1_5_6_Morphing"></a>Morphing</h3>
+  <p>Morphing can be used by user to modify the geometry of one object to the other. Morphing is mostly used while setting up optimization problems.(See <a href="#Fig_50_1_53_Preview_Morphing_Results_window"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>53.</a>)</p>
+  <p> </p>
+  <p><strong>Connect pairs:</strong> Two objects are required to perform morphing. One object is considered as source, the geometry of which needs to be transformed and other object is considered as target, the geometry to be achieved. User can select the
+    surface from source to be transformed and corresponding surface on target  and pair them.</p>
+  <p>In connect pairs page, user can add, remove, import and export the connected pairs. (See <a href="#Fig_50_1_52_Connect_Pairs_window"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>52.</a>)</p>
+  <p>User can calculate the results by clicking on the calculate button.</p>
+  <p>After calculating the results user can see the preview of the morphed geometry.</p>
+  <p style="text-align: center"><a id="Fig_50_1_52_Connect_Pairs_window"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0052.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Connect Pairs window</p>
+  <p> </p>
+  <p><strong>Preview Morphing Results</strong>: After calculating the results user can see the preview of the various stages of morphing using sliding bar. User can remove the preview of the morphing results using <img src="../../../assets/icons/pre_icons/mo_clear_icon.jpg"/> icon. (See <a href="#Fig_50_1_53_Preview_Morphing_Results_window"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>53.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_53_Preview_Morphing_Results_window"></a><img height="447" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0053.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Preview Morphing Results window</p>
+  <p> </p>
+  <p><strong>Save Morphing Results</strong>: User can save the Morphing results by browsing a location and it is saved in *.GEO format. (See <a href="#Fig_50_1_54_Save_morphing_results_window"><span data-keyref="Chapter_50_1_3D_Geometry_Tool">Fig. 50.1.</span>54.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_50_1_54_Save_morphing_results_window"></a><img height="448" src="../../../assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0054.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Save morphing results window</p>
+  <p> </p>
+
+</body></html>

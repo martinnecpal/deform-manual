@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>39 Introduction to Cutting</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>39 Introduction to Cutting</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/39_cutting/39_introduction_to_cutting.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/39_Cutting/39_1_2D_Cutting.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/38_Furnace_Heating/38_Introduction_to_3D_HT_Furnace.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="39 Introduction to Cutting">
+        <span>39 Introduction to Cutting</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>39. Introduction to Cutting</h1>
+  <p>Cutting Operation template setup is designed for guiding user to setup different types of Cutting processes. The template simplifies the cutting process and models it. The template can be used to study tool wear, tool temperature at interface, chip
+    shape and cutting forces.  A typical Cutting setup consists of simplified workpiece and Tool. Template also provides options to model steady-state analysis for cutting processes to reduce the computation time. Typical 2D and 3D cutting processes modelled
+    in 2D and 3D are shown in <a href="#Fig_39_1_2D_Cutting_Transient_analysis_type"><span data-keyref="Chapter_39_Introduction_to_Cutting">Fig. 39.</span>1.</a>, <a href="#Fig_39_2_2D_Cutting_Steady-state_analysis_type"><span data-keyref="Chapter_39_Introduction_to_Cutting">Fig. 39.</span>2.</a>    and <a href="#Fig_39_3_3D_Cutting_Setup"><span data-keyref="Chapter_39_Introduction_to_Cutting">Fig. 39.</span>3.</a> DEFORM uses “openscad” and “gmsh” tools to generate 3D geometry of the cutting tools and user must make sure it is available in.
+    “C:\Program Files\SFTC\DEFORM\v*.*\Machining\” and at 3D level “C:\Program Files\SFTC\DEFORM\v*.*\3D\ Machining\” and at 2D level “C:\Program Files\SFTC\DEFORM\v*.*\2D\Machining\”, these folders also consists of primitive geometries of the cutting
+    tools.  Using this template user can model,</p>
+  <p><strong>In 2D:</strong></p>
+  <ol class="Decimal">
+    <li>
+      <p>Transient analysis of cutting process</p>
+    </li>
+    <li>
+      <p>Steady-state analysis of cutting process</p>
+    </li>
+  </ol>
+  <p><strong>In 3D:</strong></p>
+  <ol class="Decimal">
+    <li>
+      <p>Turning</p>
+    </li>
+    <li>
+      <p>Milling</p>
+    </li>
+    <li>
+      <p>Boring</p>
+    </li>
+    <li>
+      <p>Drilling</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_1_2D_Cutting_Transient_analysis_type"></a><img height="250" src="../../../assets/images/operation_templates/39_cutting/39_introduction_to_cutting/image0001.jpg" width="575"/></p>
+  <p class="Fig_numb" style="text-align: center;">2D Cutting (Transient analysis type)</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_39_2_2D_Cutting_Steady-state_analysis_type"></a><img height="250" src="../../../assets/images/operation_templates/39_cutting/39_introduction_to_cutting/image0002.jpg" width="519"/></p>
+  <p class="Fig_numb" style="text-align: center;">2D Cutting (Steady-state analysis type)</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_39_3_3D_Cutting_Setup"></a><img height="325" src="../../../assets/images/operation_templates/39_cutting/39_introduction_to_cutting/image0003.jpg" width="376"/></p>
+  <p class="Fig_numb" style="text-align: center;">3D Cutting Setup</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="setting_up_3d_machining_models.htm">Setting up 3D Machining Models </a></p>
+  <p><a href="39_1_2d_cutting.htm">39.1. 2D Cutting</a></p>
+  <p><a href="39_2_3d_turning.htm">39.2. 3D Turning</a></p>
+  <p><a href="39_3_3d_milling.htm">39.3. 3D Milling</a></p>
+  <p><a href="39_4_drilling.htm">39.4. 3D Drilling</a></p>
+
+</body></html>

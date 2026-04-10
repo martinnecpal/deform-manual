@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.17.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Cutting Lab2</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Cutting Lab2</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/machining_labs/3d_cutting_lab2.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Machining_Labs/3D_Drilling_Lab.htm"/><meta name="brsprev" value="Documentation_content/Labs/Machining_Labs/3D_Cutting_Lab1.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Cutting Lab2">
+        <span>3D Cutting Lab2</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3D Cutting Lab 2</h1>
+  <p><a href="#2_1_Summary">2.1. Summary</a></p>
+  <p><a href="#2_2_Starting_the_3D_machining_wizard">2.2. Starting the 3D machining wizard</a></p>
+  <p><a href="#2_3_Define_Machining_Process_data">2.3. Define Machining Process data</a></p>
+  <p><a href="#2_4_Defining_Insert_geometry">2.4. Defining Insert geometry</a></p>
+  <p><a href="#2_5_Cutting_tool_positioning">2.5. Cutting tool positioning</a></p>
+  <p><a href="#2_6_Assigning_Tool_Material">2.6. Assigning Tool Material</a></p>
+  <p><a href="#2_7_Generating_Mesh_for_Tool">2.7. Generating Mesh for Tool</a></p>
+  <p><a href="#2_8_Workpiece_Geometry">2.8. Workpiece Geometry</a></p>
+  <p><a href="#2_9_Assigning_Workpiece_Material">2.9. Assigning Workpiece Material</a></p>
+  <p><a href="#2_10_Generating_Mesh_for_Workpiece">2.10. Generating Mesh for Workpiece</a></p>
+  <p><a href="#2_11_Workpiece_Boundary_Condition_page">2.11. Workpiece Boundary Condition page</a></p>
+  <p><a href="#2_12_Tool_Positioning">2.12. Tool Positioning</a></p>
+  <p><a href="#2_13_Tool_wear_setting">2.13. Tool Wear Setting</a></p>
+  <p><a href="#2_14_Contact_page">2.14. Contact page</a></p>
+  <p><a href="#2_15_Step_Control_page">2.15. Step Control page</a></p>
+  <p><a href="#2_16_Generate_Database">2.16. Generate Database</a></p>
+  <p><a href="#2_17_Running_simulation">2.17. Running Simulation</a></p>
+  <p><a href="#2_18_Post_Processing">2.18. Post Processing</a></p>
+  <p> </p>
+  <h2><a id="2_1_Summary"></a>Summary</h2>
+  <p>In this lab we will demonstrate how to setup turning lab by importing insert geometry in 3D Cutting wizard.</p>
+  <h2><a id="2_2_Starting_the_3D_machining_wizard"></a>Starting the 3D machining wizard</h2>
+  <p><strong>We can open 3D Cutting wizard in two ways:</strong></p>
+  <p>a. Create a new problem either by selecting <strong>File <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>New Problem</strong> or by clicking the <strong>New </strong><strong>Problem </strong><img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear. Select &quot;<strong>Integrated Manufacturing Process</strong>&quot; radio button and Unit system as &quot;<strong>English</strong>&quot; using radio button. Define Problem Name as &quot; <strong>3D_turning</strong>&quot;
+    and and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p>Multiple operation wizard will open, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use &quot;<strong>3D_turning</strong>&quot;
+    as the project name. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to continue to open the operation. MO wizard will open, add 3D Cutting operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/>  button available next to 3D Cutting or by drag and drop into the Operation editor.</p>
+  <p> </p>
+  <p>b. Create a new problem either by selecting <strong>File <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>New Problem</strong> or by clicking the <strong>New </strong><strong>Problem <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> </strong>icon.
+    The Problem Setup window will appear. Select &quot;<strong>3D Cutting</strong>&quot; radio button and Unit system as &quot;<strong>English</strong>&quot; using radio button (see <a href="#Fig_3DTL2_1_Problem_Setup_Page"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>1.</a>).
+    Define Problem Name as &quot; <strong>3D_turning</strong>&quot; and click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> button to open a new Problem with 3D Cutting operation in MO wizard.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_1_Problem_Setup_Page"></a><img height="398" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem Setup Page</p>
+  <h2><a id="2_3_Define_Machining_Process_data"></a>Define Machining Process data</h2>
+  <p>Under the ‘<strong>Process</strong>’ menu, Define Cutting  type as &#39;<strong>Turning</strong>&#39;, enter the Environment Heat Transfer temperature as <strong>68F </strong>and use default Convection coefficient <strong>7.7e-06 </strong>BTU/sec/in^2/F.
+    Select the <strong>Cutting</strong><strong> speed (v) </strong>as <strong>500 </strong><strong>in/sec</strong>, <strong>feed rate (f) </strong>as <strong>0.012 </strong><strong>in/rev </strong>and <strong>Depth of cut (d)</strong> as <strong>0.02 in</strong>    (see <a href="#Fig_3DTL2_2_Process_page"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>2.</a>). Alternatively user can also specify rotational speed of the workpiece and part diameter instead of surface speed. Then click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Tool page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_2_Process_page"></a><img height="350" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0002.jpg" width="424"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process page</p>
+  <h2><a id="2_4_Defining_Insert_geometry"></a>Defining Insert geometry</h2>
+  <p>In ‘<strong>Tool</strong>’ page, enter the tool temperature as 68F. User can import the cutting edge geometry from a previously defined simulation keyword file or a database file using Import Object <img src="../../../assets/icons/pre_icons/mo_import_object_button.jpg"/> option. For this lab we will import cutting edge geometry using the import geometry option. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to import the Insert Geometry. Click on <img height="20" src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg" width="21"/> and import <strong>DNMA432 </strong>geometry from DEFORM installation  \3D\Machining\Insert\EN folder. Select the Cutting Face direction as &quot;<strong> Y</strong> &quot;, click  <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> and select the Reference point and click <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>.  (See <a href="#Fig_3DTL2_3_Tool_geometry_orientation_selection_page"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>3.</a>).</p>
+  <p> </p>
+  <p>In this lab we will position the Cutting tool manually using positioning option. Go to the Controls page by clicking on the &quot;<strong>Control</strong>&quot; option in the Operation tree.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_3_Tool_geometry_orientation_selection_page"></a><img height="307" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tool geometry orientation selection page</p>
+  <h2><a id="2_5_Cutting_tool_positioning"></a>Cutting tool positioning</h2>
+  <p>We will use a -5 degree face rake and a -5 degree side rake on the tool. Click on <img src="../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/> button in the Controls page. In the Object Positioning page select <img src="../../../assets/icons/pre_icons/mo_rotational_radio_button.jpg"/> position and specify a rotation about the <strong>+X</strong> axis of &quot;<strong>-5</strong>&quot; degrees. Click <img src="../../../assets/icons/pre_icons/mo_apply_button.jpg"/>. Now specify a rotation of &quot;<strong>5</strong>&quot; degrees
+    around the <strong>+Z</strong> axis and click <img src="../../../assets/icons/pre_icons/mo_apply_button.jpg"/> again.  Click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close the Object Positioning page. Go back to the Tool
+    material page by clicking on the &quot;Tool material&quot; option under Tool in the Operation tree.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_4_Cutting_Tool_positioning"></a><img height="426" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Cutting Tool positioning</p>
+  <h2><a id="2_6_Assigning_Tool_Material"></a>Assigning Tool Material</h2>
+  <p>In the &#39;<strong>Tool materia</strong>l’ page, choose the ‘Load material data from library’ <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> option, select ‘<strong>Tool</strong><strong> Material</strong>&#39; category
+    and ‘<strong>Carbide</strong><strong> (15% Cobalt)</strong>” (see <a href="#Fig_3DTL2_5_Loading_Tool_material"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>5.</a>). ‘Load’ this material and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to generate Mesh.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_5_Loading_Tool_material"></a><img height="424" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Loading Tool material</p>
+  <h2><a id="2_7_Generating_Mesh_for_Tool"></a>Generating Mesh for Tool</h2>
+  <p>After the tool geometry is generated, generate mesh with Relative mesh type with element <strong>size </strong><strong>ratio </strong>of <strong>7</strong> and <strong>10000 </strong>target number of elements as shown in <a href="#2_6_Assigning_Tool_Material"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>6.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/>  to complete mesh generation for the workpiece. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to BCC page. In BCC observe the default Heat exchange
+    BCC assigned for tool and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Workpiece page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_6_Generating_Tool_mesh"></a><img height="445" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0006.jpg" width="450"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generating Tool mesh</p>
+  <h2><a id="2_8_Workpiece_Geometry"></a>Workpiece Geometry</h2>
+  <p>In the ‘Workpiece&#39; page define workpiece as a plastic object with a temperature as 68F and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to proceed. Click on the <img src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> label in the ‘Workpiece geometry’ page. In the &#39;Workpiece Geo Primitive&#39; page specify the workpiece details. Depending upon the workpiece diameter user can specify either a flat model or a curved model.  The template will prompt for the
+    related data, and will generate the workpiece setup in the display area. For the current lab select the ‘<strong>Simplified</strong><strong> mode</strong>’ with a <strong>length </strong>of <strong>0.3</strong> in.  Click on <img src="../../../assets/icons/pre_icons/mo_generate_2_button.jpg"/> to create the workpiece geometry (see <a href="#Fig_3DTL2_8_Loading_Workpiece_material_form_Library"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>7.</a>). Click <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close this page and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to go to the Object material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_7_Defining_Workpiece_geometry"></a><img height="350" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0007.jpg" width="424"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Workpiece geometry</p>
+  <h2><a id="2_9_Assigning_Workpiece_Material"></a>Assigning Workpiece material</h2>
+  <p>In &#39;Object Material’ page, choose the ‘Load material data from library’ <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> option, select ‘<strong>Steel</strong>’ category and ‘<strong>AISI</strong><strong>-1045 (machining)</strong>’
+    (see <a href="#Fig_3DTL2_8_Loading_Workpiece_material_form_Library"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>8.</a>). ‘Load’ this material and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to
+    generate Mesh.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_8_Loading_Workpiece_material_form_Library"></a><img height="425" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Loading Workpiece material form Library</p>
+  <h2><a id="2_10_Generating_Mesh_for_Workpiece"></a>Generating mesh for Workpiece</h2>
+  <p>After the work piece geometry is generated, generate mesh with element <strong>size </strong><strong>ratio </strong>of <strong>7</strong>, and minimum element size of <strong>0.0024</strong> inch.(<a href="#Fig_3DTL2_9_Workpiece_Mesh_page"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>9.</a>).
+    Click on <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> to complete mesh generation for the workpiece. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to BCC page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_9_Workpiece_Mesh_page"></a><img height="350" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0009.jpg" width="424"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Mesh page       </p>
+  <h2><a id="2_11_Workpiece_Boundary_Condition_page"></a>Workpiece Boundary Condition page</h2>
+  <p>In the ‘View Workpiece BCC’ menu, check the boundary conditions imposed on workpiece by the system (see <a href="#Fig_3DTL2_10_Assigned_Temperature_Boundary_Condition_for_workpiece"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>10.</a>),
+    and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Controls page. Note the velocity BCC assigned to the bottom surfaces away from the cutting surfaces to prevent workpiece from flying. Heat Exchange with BCC is assigned
+    to all surfaces and temperature BCC is assigned for all surfaces except cutting surfaces.</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_10_Assigned_Temperature_Boundary_Condition_for_workpiece"></a><img height="426" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Temperature Boundary Condition for workpiece</p>
+  <h2><a id="2_12_Tool_Positioning"></a>Tool Positioning</h2>
+  <p>In the ‘Controls’ menu, click on <img src="../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/>, Check the position of Insert. If Insert is not contact with workpiece using <img src="../../../assets/icons/pre_icons/mo_interference_radio_button.jpg"/> method position the Insert  and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h2><a id="2_13_Tool_wear_setting"></a>Tool wear setting</h2>
+  <p>In this lab we are not calculating the tool wear so, uncheck the Define model to calculate tool wear check box (see <a href="#Fig_3DTL2_11_Tool_wear_setup_window"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>11.</a>), Click
+    <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to contact page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_11_Tool_wear_setup_window"></a><img height="350" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0011.jpg" width="424"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tool wear setup window</p>
+  <h2><a id="2_14_Contact_page"></a>Contact page</h2>
+  <p>In Contact page, use default relations. Click on <strong>Tool - Workpiece</strong> relation <img src="../../../assets/icons/pre_icons/mo_edit_button.jpg"/> button and define <strong>shear </strong>friction factor as <strong>0.5</strong> and the <strong>interface heat transfer coefficient</strong>    as <strong>0.01359 </strong>BTU/sec/in^2/F (as shown in <a href="#Fig_3DTL2_12_Contact_page"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>12.</a>), click on <img src="../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> to generate contact. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Step Control page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_12_Contact_page"></a><img height="350" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0012.jpg" width="424"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact page</p>
+  <h2><a id="2_15_Step_Control_page"></a>Step Control page</h2>
+  <p>Check the ‘Simulation Controls’ and set the length of cut as ‘<strong>0.3</strong> in&#39; (Full length of cut) and leave the rest as default values and proceed to generate the Database.</p>
+  <h2><a id="2_16_Generate_Database"></a>Generate Database</h2>
+  <p>In Generate DB page, click on the  <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. Observe the message in Message tab informing database generation status.</p>
+  <h2><a id="2_17_Running_simulation"></a>Running simulation</h2>
+  <p>Once the database has been generated switch to the Simulation mode by clicking on <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the operation tree. Click on the <img height="15" src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg" style="cursor: nwse-resize;" width="26"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DTL2_13_Run_Simulation_Window"><span data-keyref="Labs_Machining_Labs-3D_Cutting_Lab2">Fig. 3DTL2.</span>13.</a> Use the default <strong>Continue </strong><strong>Run </strong>option
+    to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg"/> button
+    to run the simulation.</p>
+  <p> </p>
+  <p>To define MPI settings, click on <img src="../../../assets/icons/simulator_icons/mo_more_button.jpg"/> button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend
+    on your 3D MPI license).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTL2_13_Run_Simulation_Window"></a><img height="282" src="../../../assets/images/labs/machining_labs/3d_cutting_lab2/image0013.jpg" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation Window</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked. User can view the cutting process
+    as the simulation proceeds to the specified cutting length from Simulation graphics.</p>
+  <h2><a id="2_18_Post_Processing"></a>Post Processing</h2>
+  <p>When the simulation is completed, review the results by switching to Post mode using the <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> button above the Simulation tool bar. Play through the steps of the simulation and look how
+    the chip has been formed during cutting process.</p>
+  <p> </p>
+
+</body></html>

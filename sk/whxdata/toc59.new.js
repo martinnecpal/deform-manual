@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"41.1. Report Generation","type":"item","tilePath":"","url":"documentation_content/operation_templates/41_report_generation/41_1_report_generation.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.13.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>MGUSER (3D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>MGUSER (3D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/m/m_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/M/MGWCUV.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/M/MGUSER.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="MGUSER (3D)">
+        <span>MGUSER (3D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>MGUSER</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Object Data – 3D)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 27-09-2023</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">MGUSER  Object, WinNo, Density, VelocityX, VelocityY, VelocityZ, WindowType, SpdTyp, AxisType, Remesh<br/> If WindowType = 1, parallelipiped defined by 8 corners<br/> Point(1), X(1), Y(1), Z(1)<br/> : : :<br/> Point(8), X(8), Y(8), Z(8)<br/> If WindowTyp
+    = 2: Cylinder<br/> OriginA_X, OriginA_Y, OriginA_Z<br/> OriginB_X, OriginB_Y, OriginB_Z <br/> inner radius, outer radius</p>
+  <p class="P_10_Bold">If WindowTyp = 3: Polygon<br/> Node
+    <br/> Point(1), X(1), Y(1), Z(1)<br/> ::
+    <br/> Point(Node), X(Node), Y(Node), Z(Node)<br/> NElem
+    <br/> Element(1), Nd1(1), Nd2(1), Nd3(1), Nd4(1)<br/> ::
+    <br/> Element(NElem), Nd1(NElem), Nd2(NElem), Nd3(NElem), Nd4(NElem)</p>
+  <p class="P_10_Bold">If WindowTyp = 11: 3-D planar polygon<br/> Ndata
+    <br/> Point(1), X(1), Y(1), Z(1)<br/> ::
+    <br/> Point(Ndata), X(Ndata), Y(Ndata), Z(Ndata)</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Object</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Object Number</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">WinNo</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Index of user defined mesh window (1 to N)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Density</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Mesh Density of i<span style="vertical-align:super;">th</span> point in defined area</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">VelocityX</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">X component of window velocity</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0.0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">VelocityY</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Y component of window velocity</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0.0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">VelocityZ</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Z component of window velocity</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0.0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">WindowTyp</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Shape type of the window:</p>
+          <p class="P_10">=<strong>1</strong>: box;    </p>
+          <p class="P_10">=<strong>2</strong>: cylinder;   </p>
+          <p class="P_10">=<strong>3</strong>: polygon;    </p>
+          <p class="P_10">=<strong>4</strong>: 3-D planar polygon</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">1</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">SpdTyp</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Speed type: =<strong>0</strong> or <strong>1</strong>: constant;  </p>
+          <p class="P_10"> = <strong>2</strong>: f(time);</p>
+          <p class="P_10"> = <strong>-n</strong>: following object n</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Point(i)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Index of i<span style="vertical-align:super;">th</span> points describing area (1 to Ndata)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">AxisType</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Axis information type</p>
+          <p class="P_10">= <strong>0</strong> brought from WPAXIS;  </p>
+          <p class="P_10">= <strong>1</strong> not defined</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">1</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Remesh</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">= 0  regular mesh window<br/> = 1  local remesh window</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">X(i),Y(i),Z(i)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">coordinate of i<span style="vertical-align:super;">th</span> point in defined area</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0.0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OriginA_X, OriginA_Y, OriginA_Z</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">coordinates of bottom origin of cylinder</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0.0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OriginB_X, OriginB_Y, OriginB_Z</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">coordinates of top origin of cylinder</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0.0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">inner radius, outer radius</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">inner and outer radii of cylinder</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0.0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Nd1(i), Nd2(i), Nd3(i), Nd4(i)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">elemental connectivity</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">MGUSER specifies an area in space, which will move with and object during deformation. This area has a mesh density definition applied to it and will cause the area to be meshed with an appropriate mesh density Density.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">Polygon window (type 3) allows user to import any window shapes defined in a DEOFRM geometry format file (*.GEO). (Supported for 3dv6.1) </p>
+          <p class="P_10"><br/> 3-D planar window (type 11) allows user to define a planar polygon window in 3D space to control 2D cross-section mesh of 3D object. As an example, in the ring rolling or shape rolling (3D template), 3D planar mesh window can be used for
+            mesh density control on 2D cross-section of the workpiece before generate 3D mesh with brick elements. (Supported for 3dv10.0)</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">REMARKS</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10" style="border-width: 1px;border-style: none;border-color: #FFFFFF">Applicable object types: <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.5._Rigid">Rigid</a>, <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.2._Elastic">Elastic</a>,
+            <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic">Plastic</a>, <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic">Elastoplastic</a>,
+            and <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.4._Porous">Porous</a>.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Mesh: <a href="../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.6._Mesh_density_windows">Mesh density Window</a></p>
+          <p class="P_10">Keywords: <a href="mgnelm.htm">MGNELM</a>, <a href="mggrid.htm">MGGRID</a>, <a href="mgerr.htm">MGERR</a>, <a href="mgtelm.htm">MGTELM</a>, <a href="mgsizr.htm">MGSIZR</a>, <a href="mgwcuv.htm">MGWCUV</a>, <a href="mgwtmp.htm">MGWTMP</a>,
+            <a href="mgwstn.htm">MGWSTN</a>, <a href="mgwstr.htm">MGWSTR</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Diffusion Bonding Lab","type":"item","tilePath":"","url":"documentation_content/applications/55_applications/55_diffusion_bonding/diffusion_bonding_lab.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

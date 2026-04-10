@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.24.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Spinning Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Spinning Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/spinning_labs/spinning_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Spinning_Labs/Tube_Piercing_Lab1.htm"/><meta name="brsprev" value="Documentation_content/Labs/Spinning_Labs/Flow_Forming_Lab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Spinning Lab">
+        <span>Spinning Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Spinning Lab</h1>
+  <p>In this Lab we will be setting up simple Spinning process with ALE model and Implicit solver</p>
+  <p><br/>
+    <a href="#1_1_Creating_a_New_Problem">1.1. Creating a New Problem</a></p>
+  <p><a href="#1_2_Process_Page">1.2. Process Page</a></p>
+  <p><a href="#1_3_Simulation_setup">1.3. Simulation setup</a></p>
+  <p><a href="#1_4_Objects">1.4. Objects</a></p>
+  <p><a href="#1_5_Workpiece">1.5. Workpiece</a></p>
+  <p><a href="#1_6_Mandrel">1.6.  Mandrel</a></p>
+  <p><a href="#1_7_Tail_stock">1.7. Tail stock</a></p>
+  <p><a href="#1_8_Roll">1.8. Roll</a></p>
+  <p><a href="#1_9_Pass_Table">1.9. Pass Table</a></p>
+  <p><a href="#1_10_Controls">1.10. Controls</a></p>
+  <p><a href="#1_11_Contact">1.11. Contact</a></p>
+  <p><a href="#1_12_Stopping_Controls">1.12. Stopping Controls</a></p>
+  <p><a href="#1_13_Simulation_controls">1.13. Simulation controls</a></p>
+  <p><a href="#1_14_Generate_Database">1.14. Generate Database</a></p>
+  <p><a href="#1_15_Running_Simulation">1.15. Running Simulation</a></p>
+  <p><a href="#1_16_Post_processing">1.16. Post processing</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_a_New_Problem"></a>Creating a New Problem</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>New Problem</strong> or by clicking the New Problem <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_3DSPL1_1_New_Problem_page"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>1.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and Unit system as &quot;<strong>SI</strong>&quot; using radio button. Define Problem Name as &quot;<strong>SpinLab</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>”
+    check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_1_New_Problem_page"></a><img height="417" src="../../../assets/images/applications/55_2_arc_welding/image0002.jpg" style="cursor: nwse-resize;" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem page</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, At this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘SpinLab’
+    as the project name. 3D Spinning operation can also be added in &quot;New Project&quot; dialog, in this lab we will add Spinning g operation from Explorer operation list, so do not check &quot;First operation&quot; check box  in &quot;New Project&quot;
+    dialog. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>  to continue to open the operation.</p>
+  <p> </p>
+  <p>Add 3D Spinning operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button available next to 3D Spinning or user can also add by drag and drop into the
+    Operation Editor (see <a href="#Fig_3DSPL1_2_Screen upward direction popup"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>2.</a>). When we add the Spinning operation, If the current Screen upward direction is &quot;Z&quot;
+    direction then we will get below popup. Click &quot;<strong>YES-Change</strong>&quot; in &quot;Change screen upward axis&quot; popup.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_2_Screen upward direction popup"></a><img height="422" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Screen upward direction popup</p>
+  <p> </p>
+  <p>Now the process settings window will open by default. 3D Spinning operation can also be added from Operation Explorer in MO.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_3_Opened 3D Spinning operation"></a><img height="428" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0003.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Opened 3D Spinning operation</p>
+  <p> </p>
+  <h2><a id="1_2_Process_Page"></a>Process Page</h2>
+  <p>In Process page select &quot;<strong>Spinning</strong>&quot; and define Mandrel <strong>Rotational </strong><strong>speed </strong>as <strong>90 </strong>rpm as shown in <a href="#Fig_3DSPL1_4_Process_page"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>4.</a>    This speed is also applied to both tail stock and head stock if we used. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Simulation setup page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_4_Process_page"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0004.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Process page</p>
+  <p> </p>
+  <h2><a id="1_3_Simulation_setup"></a>Simulation setup</h2>
+  <p>In Simulation setup, select solution method as  &quot;<strong>ALE</strong>&quot; and solver type as &quot;<strong>Implicit</strong>&quot;. Since, we are not interested in temperature profile we will select &quot;<strong>Constant temperature (isothermal)</strong>&quot;
+    type Thermal calculation and Turn on <strong>Active in FEM </strong>check box to activate Target volume calculation (see <a href="#Fig_3DSPL1_5_Simulation_setup_page"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>5.</a>).
+    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Objects page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_5_Simulation_setup_page"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0005.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation setup page</p>
+  <h2><a id="1_4_Objects"></a>Objects</h2>
+  <p>In this spinning lab, we will use Workpiece, Mandrel, Tail stock and one Roll. In Objects list, by default Mandrel, Tail stock and Head stock check box will be checked. Uncheck the Head stock check box and keep Number of Rolls as 1 as shown in <a href="#Fig_3DSPL1_6_Objects_list"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>6.</a> Click
+    on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Workpiece page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_6_Objects_list"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0006.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objects list</p>
+  <p> </p>
+  <h2><a id="1_5_Workpiece"></a>Workpiece</h2>
+  <p>In the Workpiece page, keep the object name as <strong>Workpiece</strong>, object temperature of 20°C and Object type as <strong>Plastic </strong>as shown in <a href="#Fig_3DSPL1_7_Workpiece_General_page"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>7.</a>    Click on <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to 2D Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_7_Workpiece_General_page"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece General page</p>
+  <p> </p>
+  <h3>Importing Workpiece 2D Geometry</h3>
+  <p>Import 2D geometry, “<strong>SpinLab-blank.DXF</strong>” from the &quot;3D/Labs/Spinning&quot; folder. Click on <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> and then click on Check and correct geometry in the pop-up to verify the
+    geometry. The geometry will be corrected for its orientation, click <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> in the message pop-up window and then ok button to close the geometry verification window. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Mesh page.</p>
+  <h3>Generating Mesh</h3>
+  <p>In mesh page, select mesh type as Brick mesh and define <strong>Target number of Elements</strong> as <strong>90 </strong>for Cross section mesh. For 3D mesh define <strong>Number of revolved sections</strong> as <strong>100</strong>. Since the set
+    up is ALE implicit we need finer mesh at contact for capturing accurate contact hence, we will define Finer Mesh in the contact region by 15 degree Angle and Size ratio as 4. Click on <img src="../../../assets/icons/pre_icons/mo_generate_2d_mesh_button.jpg"/>and then click on <img src="../../../assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg"/>. The mesh should look like as shown in <a href="#Fig_3DSPL1_8_Generated_3D_Mesh_for_Workpiece"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>8.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_8_Generated_3D_Mesh_for_Workpiece"></a><img height="389" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generated 3D Mesh for Workpiece</p>
+  <h3>Assign Material</h3>
+  <p>In Material page, click on <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material from library) icon and load the material <strong>Steel </strong>group material &quot;<strong>AISI-1010,COLD[70F(20C)]</strong>&quot;
+    from material library window. Assign the &quot;<strong>AISI-1010,COLD[70F(20C)]</strong>&quot; material for Workpiece as shown in <a href="#Fig_3DSPL1_9_Assigning_Material_for_Workpiece"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>9.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Mandrel page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_9_Assigning_Material_for_Workpiece"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0009.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Assigning Material for Workpiece</p>
+  <h2><a id="1_6_Mandrel"></a>Mandrel</h2>
+  <p>In the Mandrel General page keep the default values for name as <strong>Mandrel </strong>and temperature as 200°C. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Geometry 2D cross-section page.</p>
+  <h3 class="h3_1_6_">Importing Mandrel 2D Geometry - Cross section</h3>
+  <p>Import 2D geometry, “<strong>SpinLab-mandrel.DXF</strong>” from the &quot;3D/Labs/Spinning&quot; folder. Click on <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> and then click on Check and correct geometry in the pop-up to verify the
+    geometry. The geometry will be corrected for its orientation, click ok in the message pop-up window and then click <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button to close the geometry verification window. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to 3D Geometry page.</p>
+  <h3 class="h3_1_6_">Generate Mandrel 3D Geometry</h3>
+  <p>Using default value of 100 as &quot;Number of revolved sections&quot; generate 3D geometry by clicking on <img height="19" src="../../../assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg" width="135"/> option (see <a href="#Fig_3DSPL1_10_Generated_Mandrel_3D_Geometry"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>10.</a>).
+    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Reference point setup page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_10_Generated_Mandrel_3D_Geometry"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0010.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generated Mandrel 3D Geometry</p>
+  <p> </p>
+  <h3 class="h3_1_6_">Mandrel Reference Page</h3>
+  <p>In this page we can define Reference point of Mandrel, we will use default calculated value of D &quot;-63.5&quot; as shown in <a href="#Fig_3DSPL1_11_Reference_point_setup_page"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>11.</a>    “D” is the distance between the Deform Origin and the origin of the Mandrel along X axis and will be used to position the mandrel. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Tail Stock page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_11_Reference_point_setup_page"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0011.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Reference point setup page</p>
+  <h2><a id="1_7_Tail_stock"></a>Tail stock</h2>
+  <p>In the Tail stock General page keep the default values for name as <strong>Tail stock </strong>and temperature as 200°C. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Geometry 2D cross- section page.</p>
+  <h3 class="h3_1_7_">Importing Tail stock 2D Geometry - Cross section</h3>
+  <p>Import 2D geometry, “<strong>SpinLab-tailstock.DXF</strong>” from the &quot;<strong>3D/Labs/Spinning</strong>&quot; folder. Click on  <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/>and then click on <img height="28" src="../../../assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg" width="111"/> in the pop-up to verify the geometry. The geometry will be corrected for its orientation, click ok in the message pop-up window and then <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button to close the geometry verification
+    window. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to 3D Geometry page.</p>
+  <h3 class="h3_1_7_">Generate Tail stock 3D Geometry</h3>
+  <p>Using default value of 100 for &quot;<strong>Number of revolved sections</strong>&quot; generate 3D geometry by clicking on <img height="19" src="../../../assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg" width="135"/> option (see <a href="#Fig_3DSPL1_12_Generated_Tail_stock_3D__geometry"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>12.</a>).
+    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Roll page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_12_Generated_Tail_stock_3D__geometry"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0012.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generated Tail stock 3D  geometry</p>
+  <h2><a id="1_8_Roll"></a>Roll</h2>
+  <p>In the Roll General page keep the default values for name as Roll and temperature as 200°C. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to 2D cross- section page.</p>
+  <h3 class="h3_1_8_">Importing Roll 2D Geometry - Cross section</h3>
+  <p>Import 2D geometry, “<strong>SpinLab-roll.DXF</strong>” from the &quot;<strong>3D/Labs/Spinning</strong>&quot; folder. Click on <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> and then click on <img height="28" src="../../../assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg" width="111"/> in the pop-up to verify the geometry. The geometry will be corrected for its orientation, click ok in the message pop-up window and then <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button to close the geometry verification
+    window. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to 3D Geometry page.</p>
+  <h3 class="h3_1_8_">Generate Roll 3D Geometry</h3>
+  <p>Using default value <strong>100 </strong>for &quot;<strong>Number of revolved sections</strong>&quot; generate 3D geometry by clicking on <img height="19" src="../../../assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg" width="135"/> option
+    (see <a href="#Fig_3DSPL1_13_Generated_Roll_3D_geometry"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>13.</a>). Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Orientation page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_13_Generated_Roll_3D_geometry"></a><img height="300" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0013.jpg" width="194"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generated Roll 3D  geometry</p>
+  <h3 class="h3_1_8_">Orientation</h3>
+  <p>In this lab the movement of the roll along the mandrel axis is defined using path movement which requires roll datum to be defined. It should be noted that rolls require a unique setup approach due to their use of the path movement control. Roll translation
+    will be defined by a path that is applied in a local UV (axial/radial) coordinate system.  A single point on the roll, the reference point (datum), will follow this path. The current location of the reference point, and thus the roll, is determined
+    by the path data and the current time. Each roll following a path must have a reference point defined for it.  </p>
+  <p>User can select the Roll datum point using the button <img src="../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> next to Roll Datum field (see <a href="#Fig_3DSL1_15_Roll_Datum_Wizard"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>15.</a>)
+    which will provide options as shown in <a href="#Fig_3DSPL1_16_Roll_Orientation_page"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>16.</a> User can also enter the Datum Co-ordinates manually. In this lab, Rotation center
+    will be selected in Roll Datum wizard dialog, path definition for the roller are already properly configured according to the origin (0,0) reference point hence we will leave Roll Datum co-ordinates to default (0,0).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_14_Orientation_page"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0014.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Orientation page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSL1_15_Roll_Datum_Wizard"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0015.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Roll Datum Wizard</p>
+  <p> </p>
+  <p>The roll needs to be tilted to the proper spinning orientation, which is 45 degrees in this case. To do so, in Orientation page define Orientation angle as 45 as shown in <a href="#Fig_3DSPL1_16_Roll_Orientation_page"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>16.</a> and
+    click <img src="../../../assets/icons/pre_icons/mo_apply_orientation_angle_button.jpg"/>. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Pass Table page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_16_Roll_Orientation_page"></a><img height="426" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll Orientation page</p>
+  <h2><a id="1_9_Pass_Table"></a>Pass Table</h2>
+  <p>Click on <img height="24" src="../../../assets/icons/pre_icons/mo_edit_button.jpg" width="64"/> button to define Movement for Roll 1 in Pass table (see <a href="#Fig_3DSPL1_17_Path_Table_window"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>17</a>.).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_17_Path_Table_window"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0017.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Path Table window</p>
+  <p> </p>
+  <p>Since the roll moves along a particular path we will select Path and definition of path type as <strong>Function of Time</strong> path type as shown in <a href="#Fig_3DSRL1_18_Roll_1_Movement_page"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>18.</a></p>
+  <p class="Note_text">Note that curvilinear G-Code path data must be reduced to linear data, since DEFORM does not support curvilinear paths.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSRL1_18_Roll_1_Movement_page"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0018.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll 1 Movement page</p>
+  <p> </p>
+  <p>Click <img src="../../../assets/icons/pre_icons/mo_define_button2.jpg"/> and click <img src="../../../assets/icons/pre_icons/mo_load_button_2.jpg"/> to open <strong>SpinLab-roll-path_table.dat</strong>. from<strong> /3D/Labs/Spinning</strong> folder.
+    Change the plot type to <strong>U-V</strong> to see a graphical representation of the axial (U) and radial (V) roller movement profile (see <a href="#Fig_3DSPL1_20_U-V_Plot"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>20.</a>).
+    Click <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> in Synchronization with path movement popup and click  <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to close the definition.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_19_Synchronization_with_path_movement_popup"></a><img src="../../../assets/images/labs/spinning_labs/spinning_lab/image0019.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Synchronization with path movement popup</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_20_U-V_Plot"></a><img height="400" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">U-V Plot  </p>
+  <p> </p>
+  <p class="Note_text">Note that the Rotation 1 center point is already defined by the path translation data.</p>
+  <p> </p>
+  <p>Select Rotation type as &quot;<strong>Torque</strong>&quot; for Roll 1and leave the value at 0 since the roll rotates based on torque free. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close movement page. We will not
+    define any other values for this lab and click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Positioning page.</p>
+  <h2><a id="1_10_Controls"></a>Controls</h2>
+  <p>All of the objects that are mounted along the machine axis (headstock, mandrel, workpiece, tailstock) were imported at the correct location.  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_21_Automatic_positioning_issue"></a><img height="400" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0021.jpg" width="421"/></p>
+  <p> </p>
+  <p class="Fig_numb">Automatic positioning issue</p>
+  <p> </p>
+  <p>Go to <strong>Controls </strong>page, then click on <strong>Automatic Positioning</strong>. <strong>Initial (t=0) </strong>option will move the roller to the path location of time = 0. At contact option will move the roller to the path location of the
+    time at contact. Use <strong>At contac</strong><strong>t</strong> and click on <img src="../../../assets/icons/pre_icons/mo_apply_button.jpg"/>. Click <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> in popup. Click on  <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close Contact page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_22_Automatic_positioning_window"></a><img height="424" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0022.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Automatic positioning window</p>
+  <h2><a id="1_11_Contact"></a>Contact</h2>
+  <p>In Contact page, select &quot;<strong>User</strong>&quot; type and click on <img src="../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/> button. In table we will observe default relations being added, turn on sticking check box
+    for Mandrel -Workpiece and Tail stock - Workpiece relations. Now define <strong>Shear </strong>friction value of <strong>0.12 </strong>and click on   <img src="../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> button. Click on <img src="../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> button to calculate default contact tolerance value and Generate contact by clicking on <img src="../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> button. Select Yes in &quot;STICKING CONDITION&quot; popup. Generated contact which
+    looks like as shown in <a href="#Fig_3DSPL1_23_Contact_page"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>23.</a> Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Stopping controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_23_Contact_page"></a><img height="424" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0023.jpg" style="cursor: nwse-resize;" width="750"/></p>
+  <p class="Fig_numb">Contact page</p>
+  <p> </p>
+  <h2><a id="1_12_Stopping_Controls"></a>Stopping Controls</h2>
+  <p>Define <strong>Process Duration</strong> as <strong>22 </strong>sec as shown in <a href="#Fig_3DSPL1_24_Process_Duration_page"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>24.</a> Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Simulation controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_24_Process_Duration_page"></a><img height="400" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0024.jpg" width="402"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process Duration page</p>
+  <h2><a id="1_13_Simulation_controls"></a>Simulation controls</h2>
+  <p>Enter<strong> Number of steps</strong> as <strong>999999</strong>, <strong>Step increment to save</strong> as <strong>50 </strong>and <strong>Time per step</strong> as <strong>0.001</strong> sec in Simulation controls page as shown in <a href="#Fig_3DSPL1_25_Simulation_Controls_page"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>25</a>.
+    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Generate DB page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_25_Simulation_Controls_page"></a><img height="400" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0025.jpg" width="402"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation Controls page</p>
+  <h2><a id="1_14_Generate_Database"></a>Generate Database</h2>
+  <p>In Generate DB page, click on the <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. Observe the message in Message tab informing database generation status.</p>
+  <h2><a id="1_15_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated, switch to the Simulation mode by selecting the <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the object tree. Click on the <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in  <a href="#Fig_3DSPL1_26_Run_Simulation_Window"><span data-keyref="Labs_Spinning_labs_Spinning_Lab">Fig. 3DSPL1.</span>26.</a>. Use the default <strong>Continue Run</strong> option to select
+    “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the
+    simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSPL1_26_Run_Simulation_Window"></a><img height="291" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0026.jpg" width="725"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Run Simulation Window</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked. User can view the Spinning process
+    as the simulation proceeds to the specified stopping criteria from Simulation graphics.</p>
+  <h2><a id="1_16_Post_processing"></a>Post processing</h2>
+  <p>When the simulation is completed, review the results by switching to Post mode using the  button above the Simulation tool bar.</p>
+  <p> </p>
+  <p>Play through the steps of the simulation and look how the Workpiece part is formed during Spinning  process.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="450" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0027.jpg" width="447"/></p>
+  <p> </p>
+  <p class="Fig_numb">At step -1</p>
+  <p> </p>
+  <p style="text-align: center"><img height="420" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0028.jpg" width="403"/></p>
+  <p> </p>
+  <p class="Fig_numb">At Step 10000</p>
+  <p> </p>
+  <p style="text-align: center"><img height="400" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0029.jpg" width="507"/></p>
+  <p> </p>
+  <p class="Fig_numb">At last step</p>
+  <p> </p>
+  <p>Plot <strong>Strain - Effective</strong> State variable and observe the Strain distribution.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="400" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0030.jpg" width="573"/></p>
+  <p> </p>
+  <p class="Fig_numb">At step -1</p>
+  <p> </p>
+  <p style="text-align: center"><img height="420" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0031.jpg" width="567"/></p>
+  <p> </p>
+  <p class="Fig_numb">At step 10000</p>
+  <p> </p>
+  <p style="text-align: center"><img height="424" src="../../../assets/images/labs/spinning_labs/spinning_lab/image0032.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">At last step</p>
+
+</body></html>

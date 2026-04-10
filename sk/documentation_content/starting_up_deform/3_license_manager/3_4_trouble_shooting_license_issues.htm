@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "2.2.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3.4. Trouble Shooting License Issues</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3.4. Trouble Shooting License Issues</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/starting_up_deform/3_license_manager/3.4. trouble shooting license issues.css"/>
+<meta name="brsnext" value="Documentation_content/Starting_up_DEFORM/4_GUI_Main/GUI_Main_MainPg.htm"/><meta name="brsprev" value="Documentation_content/Starting_up_DEFORM/3_License_Manager/3_3_Services_Monitoring.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3.4. Trouble Shooting License Issues">
+        <span>3.4. Trouble Shooting License Issues</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3.4. Trouble Shooting License Issues</h1>
+  <p><a href="#3.4.1._Identifying_License_Server_3.0.6_Problem">3.4.1. Identifying License Server v12.1 Problem</a></p>
+  <p><a href="#3.4.2._Solving_License_Server_v3.0.6_Problem:_Specific_Topic_Issues">3.4.2. Solving License Server v12.1 Problem: Specific Topic Issues</a></p>
+  <p><a href="#3.4.3._Miscellaneous_Service_Related_Notes">3.4.3.  Miscellaneous Service Related Notes</a></p>
+  <p> </p>
+  <h2><a id="3.4.1._Identifying_License_Server_v_12_1_Problem"></a>Identifying License Server v12.1 Problem</h2>
+  <p><strong>Step 1</strong></p>
+  <p>Check whether the License Server is running by opening the “services” tab in Task Manager.  If DeformLicenseserver appears as a running service, then it is running.</p>
+  <ul class="Disc">
+    <li>
+      <p>If it is running, go to Step 2 (A) explained below.</p>
+    </li>
+    <li>
+      <p>If it is not running, go to Step 2 (B) explained below.</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Step 2</strong></p>
+  <p>(A) This is likely a password or hardware key problem. There are three ways to check:</p>
+  <ul class="Disc">
+    <li>
+      <p>View the most recent log file [usually in C:\Program Files\SFTC\License Manager\log\&lt;year&gt;\].</p>
+    </li>
+    <li>
+      <p>Run the diagnostics tool from INSIDE the License Manager folder [usually located at C:\Program Files\SFTC\License Manager\Defdiag.exe], and click the Get Information… button.  The resulting .dgf file will help support team to diagnose the issue.</p>
+    </li>
+    <li>
+      <p>If in DEFORM Setup, clicking the <img src="../../../assets/icons/pre_icons/mo_syncronize_button.jpg"/> button results in “license server is terminated”: hardware key problem.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>If log file is used to check for errors:</p>
+  <ul class="Disc">
+    <li>
+      <p>If the log file indicates the hardware key is invalid: hardware key problem. Please send the .dgf file to <a href="mailto:support@deform.com">support@deform.com</a></p>
+    </li>
+    <li>
+      <p>If the log file says “no password” or “no available password”: password problem.  Please contact <a href="mailto:support@deform.com">support@deform.com</a>.  Please note that if you have received a new password file to replace an expired password
+        file, it is important to restart the License Manager Service or reboot the License Manager Server machine.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>(B) An old license server is running, register service problem or installation problem:</p>
+  <p>If the log file [usually in C:\Program Files\SFTC\License Manager\log\&lt;year&gt;\] says “old license server (v2.1) may be running”, problem identified: old license server is running.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Please open DEFORMSetup and visit Services tab. In Services tab click on “Open DEFORM Service for local DEFORM computer”. We should be seeing an error mark as shown in <a href="3_1_deform_license_setup.htm#Fig._3.1.21._Updating_Simulation_services_files_in_DEFORM_Services_window"><span data-keyref="Chapter_3_1_">Fig. 3.1.</span>21.</a>(a).
+        The error mark  <img src="../../../assets/icons/pre_icons/error_status_icon.jpg"/> indicates that Local DEFORM computer is not using the same version of the License Manger as that of the DEFORM License server system hence click on <img src="../../../assets/icons/pre_icons/mo_deform_setup_update_icon.jpg"/> icon to update the Local DEFORM Computer services. Once the services are updated, we can notice <img src="../../../assets/icons/pre_icons/mo_deform_setup_valid_sucess_icon.jpg"/> icon next to the Local DEFORM Computer. DEFORMsetup can be closed
+        and DEFORM GUI can be launched from Start <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Programs.</p>
+    </li>
+  </ul>
+  <p>If problem is still not identified, please contact <a href="mailto:support@deform.com">support@deform.com</a>.</p>
+  <ul class="Disc">
+  </ul>
+  <p> </p>
+  <h2><a id="3_4_2_Solving_License_Server_v12_1_Problem:_Specific_Topic_Issues"></a>Solving License Server v12.1 Problem: Specific Topic Issues</h2>
+  <h3>Password problem</h3>
+  <p> </p>
+  <p>Copy the correct v*_* (where *_* is the version number of the DEFORM) DEFORM.PWD to the license server directory (C:\Program Files\SFTC\License Manager). A reboot or service restart is required to load/activate the new password file.</p>
+  <h3>Hardware key problem check list</h3>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">It is important to uninstall Sentinel driver versions 7.5 or older.  Please remove the hardware key, uninstall the old driver(s) and install the new driver.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Check whether the user installed Sentinel driver version 7.6.3 (being an option in the installation process).  If not, please install the new driver.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Check whether the USB port is inactive.  Switch the USB key to another USB port and try to restart the service and server.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">If an error message of “Failed to add Sentinel64.cat file” occurs while installing the Sentinel driver on Windows 7, and you are using a USB hardware key, this error can be safely ignored.</li>
+  </ul>
+  <h3>Old license is running</h3>
+  <p style="text-align: justify">User needs to uninstall the old license server (v2.1) or disable it.</p>
+  <h3>Service startup problem</h3>
+  <p>This may happen occasionally, particularly if the user swaps the USB key between computers.  Following methods can be used to start the DeformLicenseServer service when it shows up in the Windows service list and is also stopped. </p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Reboot the License Server computer.</p>
+    </li>
+    <li>
+      <p>Open the Services management console (not Task Manager) and manually start the service.</p>
+    </li>
+    <li>
+      <p>Open DEFORMSetup and visit services tab, if license server is on local system then select “Open DEFORM Service for local DEFORM computer” else select “Open DEFORM Service for all DEFORM computers” and enter pass code. Click on<img src="../../../assets/icons/pre_icons/run_action_icon.jpg"/> button next to License Server under “Actions” column to start the service.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h2><a id="3.4.3._Miscellaneous_Service_Related_Notes"></a>Miscellaneous Service Related Notes</h2>
+  <p><strong>Notes on Services in Windows Vista and later</strong><br/> Elevated administrator permission via Windows User Access Control [UAC] is required to register, start or unregister service. This is needed even if the user already has administrative
+    privileges on the computer. Service management can be performed in the Services management console or by using “Run as administrator” with DEFORM service start menu shortcuts.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="3_1_deform_license_setup.htm">3.1. DEFORM License Setup</a></p>
+  <p><a href="3_2_license_monitoring.htm">3.2. License Monitoring</a></p>
+  <p><a href="3_3_services_monitoring.htm">3.3. Services Monitoring</a></p>
+
+</body></html>
