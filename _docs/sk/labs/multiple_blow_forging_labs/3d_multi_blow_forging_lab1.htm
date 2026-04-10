@@ -1,0 +1,365 @@
+---
+lang: sk
+title: "3D Multi Blow Forging Lab1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.19.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Multi Blow Forging Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Multi Blow Forging Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Report_Generation_Lab/Report_Generation_Lab_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Labs/Multiple_Blow_Forging_Labs/2D_Multi_Blow_Forging_Lab1.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Multi Blow Forging Lab1">
+        <span>3D Multi Blow Forging Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3D Multi Blow Forging Lab</h1>
+  <p>The intent of the lab is to demonstrate to the user how to prepare a multiple-blow simulation in DEFORM for three successive hammer blows using 3D Multi Blow Forging operation with adaptive reheat DEFORM feature. The simulation is performed as a 3D
+    non-isothermal simulation.</p>
+  <p> </p>
+  <p><a href="#1_1_Creating_a_New_Problem">1.1. Creating a New Problem</a></p>
+  <p><a href="#1_2_Adding_Operation">1.2. Adding Operation</a></p>
+  <p><a href="#1_3_Defining_Process_settings">1.3. Defining Process settings</a></p>
+  <p><a href="#1_4_Defining_Blow_Table">1.4. Defining Blow Table</a> </p>
+  <p><a href="#1_5_Simulation_Controls">1.5. Simulation Controls</a></p>
+  <p><a href="#1_6_Loading_Material_from_library">1.6. Loading Material from library</a></p>
+  <p><a href="#1_7__Adding_Objects">1.7. Adding Objects</a></p>
+  <p><a href="#1_8_Defining_Workpiece">1.8. Defining Workpiece</a></p>
+  <p style="margin-left: 20px"><a href="#1_8_1_Defining_Workpiece_geometry">1.8.1. Defining Workpiece geometry</a></p>
+  <p style="margin-left: 20px"><a href="#1_8_2_Generating_mesh_for_Workpiece">1.8.2. Generating mesh for Workpiece</a></p>
+  <p style="margin-left: 20px"><a href="#1_8_3_Assign_Workpiece_Material">1.8.3. Assign Workpiece Material</a></p>
+  <p style="margin-left: 20px"><a href="#1_8_4_Assigning_BCC">1.8.4. Assigning BCC</a></p>
+  <p><a href="#1_9_Defining_Top_die">1.9. Defining Top die</a></p>
+  <p style="margin-left: 20px"><a href="#1_9_1_Defining_Top_die_geometry">1.9.1. Defining Top die geometry</a> </p>
+  <p style="margin-left: 20px"><a href="#1_9_2_Defining_Top_Die_movement">1.9.2. Defining Top Die movement</a></p>
+  <p><a href="#1_10_Defining_Bottom_die">1.10. Defining Bottom die</a> </p>
+  <p style="margin-left: 20px"><a href="#1_10_1_Defining_Bottom_Die_geometry">1.10.1. Defining Bottom Die geometry</a></p>
+  <p><a href="#1_11_Positioning">1.11. Positioning</a></p>
+  <p><a href="#1_12_Contact_Generation">1.12. Contact Generation</a></p>
+  <p><a href="#1_13_Step_controls">1.13. Step controls</a> </p>
+  <p><a href="#1_14_Generating_Database">1.14. Generating Database</a></p>
+  <p><a href="#1_15_Starting_the_Simulation">1.15. Starting the Simulation</a></p>
+  <p><a href="#1_16_Post_processing_the_results">1.16. Post processing the results</a> </p>
+  <p> </p>
+  <h2><a id="1_1_Creating_a_New_Problem"></a>Creating a New Problem</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_1_New_Problem_popup"></a><img height="446" src="../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="799"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem popup</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. <span style="font-size: 12pt;">The Problem Setup window will appear as shown in <a href=""><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>1.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and units system as &quot;<strong>English</strong>&quot; using radio button. Define Problem Name as &quot;<strong>3D_MB_Forging</strong>&quot; <span style="font-size: 12pt;">and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</span></span>
+  </p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use &quot;<strong>3</strong><strong>D_MB_Forging</strong>&quot;
+    as the project name. To add first operation as <strong>3D Multi Blow Forging operation </strong><strong>check </strong>the <strong>checkbox </strong>as shown in <a href="#Fig_3DMBL1_2_MO_wizard_New_Project_opening_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>2.</a> Click
+    on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_2_MO_wizard_New_Project_opening_window"></a><img height="400" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO wizard New Project opening window</p>
+  <p> </p>
+  <p>User can also change the Unit system and project saving file location (see <a href="#Fig_3DMBL1_2_MO_wizard_New_Project_opening_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>2.</a>). Using copy
+    Existing project option we can import previous saved projects as new project. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to continue to open the operation.</p>
+  <p> </p>
+  <h2><a id="1_2_Adding_Operation"></a>Adding Operation</h2>
+  <p>Multiple Operation wizard will open by adding the 3D Multi Blow Forging operation automatically, if user selects to use it as first operation as shown in <a href="#Fig_3DMBL1_3_Added_multiple_blow_forging_operation_into_operation_editor"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>3.</a>    Operation can also be add by clicking on 3D Multi Blow Forging operation  <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button or user can also add by drag and drop into the Operation Editor.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_3_Added_multiple_blow_forging_operation_into_operation_editor"></a><img height="387" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added multiple blow forging operation into operation editor</p>
+  <p> </p>
+  <h2><a id="1_3_Defining_Process_settings"></a>Defining Process settings</h2>
+  <p>Define the process settings as below, (see <a href="#Fig_3DMBL1_4_Process_settings_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>4.</a>)</p>
+  <ul class="Disc">
+    <li>
+      <p>In Process page, define the Press <strong>energy </strong>as <strong>240 </strong>Klb-in.</p>
+    </li>
+    <li>
+      <p>Turn on the Use dwell check box, Define the <strong>Dwell </strong><strong>time </strong>as <strong>1</strong>sec, <strong>Time per step</strong> as <strong>0.2</strong> and <strong>Heat transfer coefficient </strong>as <strong>0.0003</strong>.</p>
+    </li>
+    <li>
+      <p><strong>Turn </strong><strong>on </strong>Use <strong>workpiece </strong><strong>rotation </strong>check box.</p>
+    </li>
+    <li>
+      <p><strong>Turn </strong><strong>on </strong><strong>Reheat </strong>check box and define the <strong>reheat </strong><strong>temperature </strong>as <strong>2150</strong>F.</p>
+    </li>
+    <li>
+      <p><strong>Turn </strong><strong>on </strong><strong>Use </strong><strong>heating </strong><strong>Simulation </strong>check box, define the <strong>Heating </strong><strong>time </strong>as <strong>800 </strong>sec, <strong>Heat </strong><strong>Time </strong><strong>step </strong>as
+        <strong>1</strong> sec, to simulate heat loss during transfer from dies to furnace and vice versa define <strong>Transfer-in-time</strong> as <strong>3</strong> secs, <strong>Transfer-out-time</strong> as <strong>3</strong> secs and <strong>Transfer time step</strong>        as <strong>1</strong> sec.</p>
+    </li>
+    <li>
+      <p><strong>Turn on Use Adaptive reheat</strong> check box so that system automatically identifies when to start reheat based on the billet temperature at the end of the blow, define the <strong>Upper limit </strong>as <strong>2150 </strong>F,<strong> Lower limit</strong>        as <strong>1750 </strong>F and <strong>Temp to stop reheat</strong> as <strong>1950 </strong>F.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_4_Process_settings_window"></a><img height="400" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0004.jpg" width="445"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Process settings window</p>
+  <p> </p>
+  <h2><a id="1_4_Defining_Blow_Table"></a>Defining Blow Table</h2>
+  <p>In Blow table, define the <strong>number of hits</strong> as<strong> 9</strong> and define the rest of the settings as shown in the <a href="#Fig_3DMBL1_5_Blow_table_settings_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_5_Blow_table_settings_window"></a><img src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0005.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Blow table settings window</p>
+  <p> </p>
+  <p>To define the workpiece rotation settings click on button <img height="25" src="../../../assets/icons/pre_icons/mo_target_volume_icon.jpg" width="34"/> next to the undefined parameter status and define the upside down rotation movement for workpiece
+    about its center along Z axis as shown in <a href="#Fig_3DMBL1_6_Rotation_parameter_defining_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>6.</a> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_6_Rotation_parameter_defining_window"></a><img height="400" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0006.jpg" width="549"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rotation parameter defining window</p>
+  <p> </p>
+  <h2><a id="1_5_Simulation_Controls"></a>Simulation Controls</h2>
+  <p>In this lab we will be showing how to setup simple non Isothermal problem. So in Simulation controls keep both the Heat transfer and Deformation modes turned on (see <a href="#Fig_3DMBL1_7_Simulation_control_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>7.</a>).
+    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> .</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_7_Simulation_control_window"></a><img src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation control window</p>
+  <p> </p>
+  <h2><a id="1_6_Loading_Material_from_library"></a>Loading Material from library</h2>
+  <p>Load the material &#39;<strong>AISI-4340[1550-2200F(850-1200C)]</strong>&#39; from DEFORM Material library, <strong>Steel </strong>category using <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material data from library)
+    option. This can be done as shown in below by clicking <img src="../../../assets/icons/pre_icons/mo_load_button.jpg"/> button as shown in <a href="#Fig_3DMBL1_8_Material_library_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>8.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_8_Material_library_window"></a><img height="500" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0008.jpg" width="631"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material library window</p>
+  <p> </p>
+  <h2><a id="1_7__Adding_Objects"></a> Adding Objects</h2>
+  <p>For this operation we required three objects, hence in Object window keep the three objects which are added by default, else add 3 objects as shown in <a href="#Fig_3DMBL1_9_Adding_objects_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>9.</a>,
+    click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_9_Adding_objects_window"></a><img height="320" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0009.jpg" width="383"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Adding objects window</p>
+  <h2><a id="1_8_Defining_Workpiece"></a>Defining Workpiece</h2>
+  <p>In workpiece home page define the workpiece temperature as <strong>1950</strong>F and select Object type as <strong>Plastic </strong>as shown in <a href="#Fig_3DMBL1_10_Workpiece_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>10.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_10_Workpiece_window"></a><img height="350" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0010.jpg" width="387"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece window</p>
+  <h3><a id="1_8_1_Defining_Workpiece_geometry"></a>Defining Workpiece geometry</h3>
+  <p>In Geometry window, load <strong>MB_Forging_workpiece.geo</strong> geometry file from library using <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button. Check geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> and <img src="../../../assets/icons/pre_icons/mo_show_geometry_normal_vectors_option.jpg"/> options for invalid polygons and no. of surfaces (see <a href="#Fig_3DMBL1_11_Defining_workpiece_Geometry"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>11.</a>). Click
+    on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> to mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_11_Defining_workpiece_Geometry"></a><img height="380" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining workpiece Geometry</p>
+  <h3><a id="1_8_2_Generating_mesh_for_Workpiece"></a>Generating mesh for Workpiece</h3>
+  <p>Define the target number of elements as <strong>25000 </strong>and click <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/>. A mesh with approximately 22000 elements will be generated (see <a href="#Fig_3DMBL1_12_Workpiece_mesh_generation"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>12.</a>)
+    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_12_Workpiece_mesh_generation"></a><img height="389" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0012.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece mesh generation</p>
+  <p> </p>
+  <h3><a id="1_8_3_Assign_Workpiece_Material"></a>Assign Workpiece Material</h3>
+  <p>In Material list window, select the <strong>AISI-4340[1550-2200F(850-1200C)]</strong> from the list as shown in <a href="#Fig_3DMBL1_13_Workpiece_material_assigning_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>13.</a> Click
+    <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_13_Workpiece_material_assigning_window"></a><img height="320" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0013.jpg" width="480"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece material assigning window</p>
+  <p> </p>
+  <h3><a id="1_8_4_Assigning_BCC"></a>Assigning BCC</h3>
+  <p>In BCC page, check the default assigned Deformation BCC for the workpiece, default BCC is assigned automatically based on the geometry symmetry type (see <a href="#Fig_3DMBL1_14_Workpiece_BCC_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>14.</a>).
+    The default BCC is fine, click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> unitl Top die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_14_Workpiece_BCC_window"></a><img height="379" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece BCC window</p>
+  <p> </p>
+  <h2><a id="1_9_Defining_Top_die"></a>Defining Top die</h2>
+  <p>In Top die page (see <a href="#Fig_3DMBL1_15_Top_die_object_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>15.</a>) select Object type as <strong>Rigid </strong>and keep the temperature as <strong>300F </strong>as
+    we will not mesh the dies in this lab as we are not interested in dies temperature. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_15_Top_die_object_window"></a><img height="350" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0015.jpg" width="387"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die object window</p>
+  <h3 class="h3_1_9_"><a id="1_9_1_Defining_Top_die_geometry"></a>Defining Top die geometry</h3>
+  <p>In Geometry window, load <strong>MB_Forging_Top_die.geo </strong>geometry file from library using <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button. Check geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> and <img src="../../../assets/icons/pre_icons/mo_show_geometry_normal_vectors_option.jpg"/> options for invalid polygons and no. of surface (see <a href="#Fig_3DMBL1_16_Top_die_geometry_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>16.</a>).
+    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until top die movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_16_Top_die_geometry_window"></a><img height="381" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die geometry window</p>
+  <p> </p>
+  <h3 class="h3_1_9_"><a id="1_9_2_Defining_Top_Die_movement"></a>Defining Top Die movement</h3>
+  <p>User can use Multi blow forging template for both hammer and screw presses. In this lab we will be using hammer, hence  select hammer movement type and define energy as 240 Klb-in and Mass <strong>0.025 </strong>Klb-s^2/in (see <a href="#Fig_3DMBL1_17_Top_die_movement_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>17.</a>).
+    As it is multiple blow simulation constant blow efficiency values for multiple blows definition is allowed in blow table only. If user using blow efficiency as function of force then efficiency function data is allowed to define in movement window.
+    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Bottom Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_17_Top_die_movement_window"></a><img height="385" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0017.jpg" width="550"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Top die movement window</p>
+  <p> </p>
+  <h2><a id="1_10_Defining_Bottom_die"></a>Defining Bottom die</h2>
+  <p>In Bottom die page select Object type as <strong>Rigid </strong>and define the temperature as <strong>300</strong>F, (see <a href="#Fig_3DMBL1_18_Bottom_die_object_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>18.</a>)
+    click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to geometry page.</p>
+  <p> </p>
+  <p style="margin-left: 4px;text-align: center"><a id="Fig_3DMBL1_18_Bottom_die_object_window"></a><img src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0018.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bottom die object window</p>
+  <p> </p>
+  <h3 class="h3_1_10_1"><a id="1_10_1_Defining_Bottom_Die_geometry"></a>Defining Bottom Die geometry</h3>
+  <p>In Geometry window, load <strong>MB_Forging_Bottom_die.geo</strong> geometry file from library using <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button. Check geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> and <img src="../../../assets/icons/pre_icons/mo_show_geometry_normal_vectors_option.jpg"/> options for invalid polygons and no. of surface. (See <a href="#Fig_3DMBL1_19_Bottom_die_geometry_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>19.</a>) Click
+    on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until positioning page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_19_Bottom_die_geometry_window"></a><img height="381" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bottom die geometry window</p>
+  <p> </p>
+  <h2><a id="1_11_Positioning"></a>Positioning</h2>
+  <p>In this operation setup we will use Automatic position option to position the objects. In positioning page select positioning direction as Z - direction and click on <img height="21" src="../../../assets/icons/pre_icons/mo_automatic_positioning_button.jpg" style="cursor: nwse-resize;" width="118"/> button, it will position the objects as shown in <a href="#Fig_3DMBL1_20_Object_positioning_controls_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>20.</a>    Then click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Contact page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_20_Object_positioning_controls_window"></a><img height="423" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object positioning controls window</p>
+  <p> </p>
+  <h2><a id="1_12_Contact_Generation"></a>Contact Generation</h2>
+  <p>Select <strong>user </strong>type contact and click on <img src="../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/> button. It will add the relationship between the Billet, Top Die and Bottom Die as shown in <a href="#Fig_3DMBl1_21_Inter-object_definition_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>21.</a>    As the Dies are Rigid and Billet is plastic, Top and Bottom Dies are considered as Master and Billet as Slave. Define the shear friction value of 0.2 and Heat transfer coefficient as 0.004 for Top die and workpiece relation. Define the shear friction
+    value of 0.25 and Heat transfer coefficient as 0.004 for Bottom die and workpiece relation. Click <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to go back to Inter-Object window, use <img src="../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> icon to determine a suitable contact tolerance (a value of about 0.00530&quot; will be calculated) and then click <img src="../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> button to generate contact. If you rotate the objects around
+    in graphics window, you will see that contact was generated between the two objects. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Step page as no Stopping controls are necessary to define for this simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBl1_21_Inter-object_definition_window"></a><img height="425" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0021.jpg" style="cursor: nesw-resize;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-object definition window</p>
+  <h2><a id="1_13_Step_controls"></a>Step controls </h2>
+  <p>In Step controls, define the <strong>Number of steps</strong> as <strong>400</strong>, <strong>step </strong><strong>increment </strong>of <strong>10 </strong>and <strong>time </strong><strong>increment </strong>of <strong>0.0001sec</strong>. ( <a href="#Fig_3DMBL1_22_Simulation_controls_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>22.</a>)
+    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> for DB generation window.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_22_Simulation_controls_window"></a><img height="360" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0022.jpg" width="438"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Simulation controls window</p>
+  <p> </p>
+  <h2> <a id="1_14_Generating_Database"></a>Generating Database</h2>
+  <p>Once the problem has been completely set up, the last step is to generate a database file. The FEM engine (the part of DEFORM® that calculates the solution) uses a database file to store the finite element solutions for the problem. When you generate
+    a database in the DEFORM Integrated Manufacturing Proc., all of the information defined in the Pre-processor (such as the material properties, movement controls, object geometries, etc.) is transferred to the database file.</p>
+  <p> </p>
+  <p> In Generate DB window, click the <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. During the checking process, messages in the red color signify
+    data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).</p>
+  <p> </p>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. When the program is done writing the database, switch to <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> tab
+    to run simulation.</p>
+  <h2><a id="1_15_Starting_the_Simulation"></a>Starting the Simulation</h2>
+  <p>Click on the <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DMBL1_23_Run_Simulation_window"><span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>23.</a> Use
+    the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_23_Run_Simulation_window"></a><img height="279" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0023.jpg" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation window</p>
+  <p> </p>
+  <p>The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode.  As long as the <img src="../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.</p>
+  <p> </p>
+  <p>The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.</p>
+  <p> </p>
+  <p>When the simulation is finished without any issues, the following message will be added to the end of the Message file:&quot;NORMAL STOP: Simulation is completed and stopped at the user specified time step&quot;. (See <span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>24.)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_24_Simulation_message_tab"></a><img height="450" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0024.jpg" width="372"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation message tab</p>
+  <p> </p>
+  <h2><a id="1_16_Post_processing_the_results"></a>Post processing the results</h2>
+  <p>After simulation has been completed, switch to <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab to view results, MO post processor will open.</p>
+  <p>Play the Animation to go through the rotation of the workpiece (Workpiece rotation).</p>
+  <p> </p>
+  <p>Directly by clicking on the State variables icons user can plot the important state variables contour plots as shown in below <span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>25. and <span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>26.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_25_Effective_Stress_State_variable_plot"></a><img height="553" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0025.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Effective Stress State variable plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_26_Effective_Strain_State_variable_plot"></a><img height="537" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0026.jpg" width="700"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Effective Strain State variable plot</p>
+  <p> </p>
+  <p>User can go through the multiple blows and reheat operations by selecting particular step from step browser and playing the steps. In step browser operations order we can observe that adaptive reheat triggered only after BL5-DWL operation onwards as
+    the object minimum temperature dropped below the adaptive reheat lower limit temperature 1750F. Also adaptive heat simulation stopped after the workpiece reached the reheat stopping temperature 1950F has been reached. (See <span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>27.)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_27_Step_browser_indicating_adaptive_reheat_simulations"></a><img height="112" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0027.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step browser indicating adaptive reheat simulations</p>
+  <p> </p>
+  <p>Temperature contour of the workpiece before and after the adaptive reheat as shown in blow <span data-keyref="Labs_Multi_Blow_Forging_Labs-3D_Multi_Blow_Forging_Lab1">Fig. 3DMBL1.</span>28. Note that before adaptive heating is started, the minimum temperature
+    of the billet is 1748.845F (specified limit is 1750F).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DMBL1_28_Workpiece_temperature_contour_before_and_after_the_adaptive_reheat_after_BL3-DWL"></a><img height="318" src="../../../assets/images/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/image0028.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece temperature contour before and after the adaptive reheat after BL3-DWL</p>
+
+</body></html>

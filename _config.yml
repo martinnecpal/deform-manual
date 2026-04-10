@@ -1,0 +1,42 @@
+title: DEFORM V14.0.2 Manual
+description: Documentation for DEFORM V14.0.2 metal-forming simulation software.
+baseurl: "/HTML-DEFORM-manual"   # GitHub Pages repo path — adjust if repo name differs
+url: "https://martinnecp.github.io"
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  - scope:
+      path: "_docs"
+      type: docs
+    values:
+      layout: topic
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude build/tooling files from the site output
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - "*.ppf"
+  - whxdata/
+  - template/
+  - parentdata.js
+  - screendata.js
+  - projectdata.js
+  - index.ppf
+
+# Keep assets untouched
+keep_files:
+  - assets
+
+sass:
+  style: compressed

@@ -1,0 +1,132 @@
+---
+lang: sk
+title: "42. Introduction to Ring Rolling"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>42. Introduction to Ring Rolling</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>42. Introduction to Ring Rolling</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/42_Ring_Rolling/42_1_Ring_Rolling.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/41_Report_Generation/41_1_Report_Generation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="42. Introduction to Ring Rolling">
+        <span>42. Introduction to Ring Rolling</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>42. Introduction to Ring Rolling</h1>
+  <p>Ring Rolling Operation template setup is designed for guiding user to setup different types of typical Ring Rolling processes. A typical Ring Rolling setup consists of Ring(workpiece), Pressure Roll, Mandrel and Axial rolls (2 nos) and looks like as
+    shown in <a href="#Fig_42_1_Ring_Rolling_setup"><span data-keyref="Chapter_42_Ring_Rolling">Fig. 42.</span>1.</a> Ring Rolling template can also be used to setup Railroad Wheel Rolling process, for Railroad wheel Rolling one Tread Roll, 2 Web Rolls
+    and 2 Axial rolls are allowed as shown in <a href="#Fig_42_2_Railroad_Wheel_Rolling_setup"><span data-keyref="Chapter_42_Ring_Rolling">Fig. 42.</span>2.</a> Ring Rolling process can be setup in batch mode or in interactive mode along with Heat Transfer
+    and Forming operations. The workpiece object can be passed from other operations to Ring Rolling template where necessary mesh settings and process settings can be made to simulate the process.<br/> Only brick type mesh can be used for Workpiece/
+    Ring and Dies. As the simulation runs the workpiece expands and message file is updated with information like current maximum radius, current angle of rotation and total number of revolutions..etc. Simulation can also be stopped based on the workpiece
+    diameter. Template has additional options to apply constraints on the workpiece displacement to bring stability to the workpiece during simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_42_1_Ring_Rolling_setup"></a><img src="../../../assets/images/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/image001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Ring Rolling setup</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_42_2_Railroad_Wheel_Rolling_setup"></a><img src="../../../assets/images/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/image002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Railroad Wheel Rolling setup</p>
+  <p><br/>
+    <strong>Ring Rolling Operation setup</strong><br/> Ring Rolling operation is designed based on the following system (applicable to Rail Wheel Rolling also): </p>
+  <ol class="Decimal">
+    <li>
+      <p>Object 1 is the deforming object. </p>
+    </li>
+    <li>
+      <p>The workpiece or rolling stock is always defined as object 1 and then followed by defining rolls.</p>
+    </li>
+    <li>
+      <p>The order of the objects should be maintained in the Ring Rolling/ Rail Wheel rolling setup</p>
+    </li>
+    <li>
+      <p>The rolling stock is of rigid-plastic type. </p>
+    </li>
+    <li>
+      <p>The rolls are rigid objects during for the rolling simulations. </p>
+    </li>
+    <li>
+      <p>The rolling axis is in the Z direction.</p>
+    </li>
+  </ol>
+  <p>The operation tree of a Ring Rolling setup is shown in <a href="#Fig_42_3_Object_tree_for_Ring_Rolling_setup"><span data-keyref="Chapter_42_Ring_Rolling">Fig. 42.</span>3.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_42_3_Object_tree_for_Ring_Rolling_setup"></a><img height="700" src="../../../assets/images/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/image003.jpg" width="336"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object tree for Ring Rolling setup</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="42_1_ring_rolling.htm">42.1. Ring Rolling</a></p>
+
+</body></html>

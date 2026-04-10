@@ -1,0 +1,124 @@
+---
+lang: en
+title: "Appendix II : Launching the Simulation Engine from a Command Prompt"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix II : Launching the Simulation Engine from a Command Prompt</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix II : Launching the Simulation Engine from a Command Prompt</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_ii.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_III_Running_DEFORM_in_text_mode.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_I_Elementary_Concepts_in_Metalforming_and_FEM.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix II : Launching the Simulation Engine from a Command Prompt">
+        <span>Appendix II : Launching the Simulation Engine from a Command Prompt</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix II: Launching the Simulation Engine from a Command Prompt ( Windows Only)</h1>
+  <p><strong>Purpose:</strong>  Sometimes a new engine is given to a user for a special application that is not covered in a release version. The user can use this document to see how to run the engine without having to overwrite the current engine.</p>
+  <p> </p>
+  <p><strong>Step 1:  Place the new engine in the installation directory of DEFORM-2D being careful not to overwrite the current engine. </strong></p>
+  <p> </p>
+  <p>When receiving the engine, it must be located in the directory where DEFORM-2D is installed. The installed engine name will be DEF_SIM.EXE, so be sure to rename the new executable to other name than any of the file available in install directory before
+    copying to the install directory.</p>
+  <p> </p>
+  <p><strong>Step 2:  Rename a current database to the name FOR003 in the necessary problem directory.</strong></p>
+  <p> </p>
+  <p>This is the name of the database while a simulation is running. After the simulation is completed, be sure to rename it back to it’s original name.</p>
+  <p> </p>
+  <p class="Note_text"><strong>Warning:</strong></p>
+  <p class="Note_text">Make sure that the simulation is finished before renaming it back or risk losing all the work.  If you are unsure, rename it back to a different name than the original name. </p>
+  <p> </p>
+  <p><strong>Step 3:  Execute the Simulation Engine</strong>.</p>
+  <p> </p>
+  <p>This is done by opening a dos prompt and changing to the directory where the problem is located. A dos prompt can be accessed by either selected a shortcut from the Start Menu or by typing cmd in the Run menu. Once the dos prompt is open, it will look
+    like the <a href="#Fig_AII_1_A_new_dos_window"><span data-keyref="Appendix_II_Launching_the_Simulation_engine">Fig. AII.</span>1.</a> Let’s assume that the dos prompt starts in the C:\ directory and the problem we want to run is the &quot;C:\Users\TESTING1\PROBLEM&quot;
+    directory. To navigate from the C:\ directory to the end directory type the following:</p>
+  <p> </p>
+  <p><strong>cd “C:\Users\TESTING1\PROBLEM”</strong></p>
+  <p> </p>
+  <p>and the current working directory will become Settings and documents/test. To then run the new version of DEFORM-2D, make sure that the file FOR003 is in this directory. After this, execute the new engine by calling the executable in the DEFORM-2D directory.
+    An example is seen in <a href="#Fig_AII_2_Running_a_simulation_from_a_dos_window"><span data-keyref="Appendix_II_Launching_the_Simulation_engine">Fig. AII.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AII_1_A_new_dos_window"></a><img height="393" src="../../assets/images/appendices/appendix_ii_launching_the_simulation_engine/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">A new dos window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AII_2_Running_a_simulation_from_a_dos_window"></a><img height="393" src="../../assets/images/appendices/appendix_ii_launching_the_simulation_engine/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Running a simulation from a dos window</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="appendix_iii_running_deform_in_text_mode.htm">Appendix III: Running the DEFORM in text mode</a></p>
+  <p><a href="appendix_xvii_data_files.htm">Appendix XVII: Data Files</a></p>
+
+</body></html>

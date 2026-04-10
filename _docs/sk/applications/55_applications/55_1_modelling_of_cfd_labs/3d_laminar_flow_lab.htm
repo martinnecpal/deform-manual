@@ -1,0 +1,232 @@
+---
+lang: sk
+title: "3D Laminar Flow Lab"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Laminar Flow Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Laminar Flow Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_1_Modelling_of_CFD_Labs/3D_Rayleigh_Benard_convection_Lab.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_1_Modelling_of_CFD_Labs/2D_Turbulent_Flow_Lab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Laminar Flow Lab">
+        <span>3D Laminar Flow Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3D Laminar Flow Lab</h1>
+  <p>This lab will demonstrate how to use MO to prepare a simulation of laminar flow around a cylinder.</p>
+  <p> </p>
+  <p><a href="#1_1_Creating_a_New_problem">1.1. Creating a New problem</a></p>
+  <p><a href="#1_2_Adding_3D_Forming_operation">1.2. Adding 3D Forming operation</a></p>
+  <p><a href="#1_3_Simulation_controls">1.3. Simulation controls</a></p>
+  <p><a href="#1_4_Add_new_material_Ideal_fluid">1.4. Add new material ‘Ideal fluid’</a></p>
+  <p><a href="#1_5_Define_object">1.5. Define object</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_1_Import_Object">1.5.1. Import Object</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_2_Assign_Material">1.5.2. Assign Material</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_3_Review_BCC">1.5.3. Review BCC</a></p>
+  <p><a href="#1_6_Step_page">1.6. Step page</a></p>
+  <p><a href="#1_7_Generate_Database">1.7. Generate Database</a></p>
+  <p><a href="#1_8_Run_Simulation">1.8. Run Simulation</a></p>
+  <p><a href="#1_9_Post-Processing">1.9. Post-Processing</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_a_New_problem"></a>Creating a New problem</h2>
+  <p>On a Windows machine, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select DEFORM
+    GUI Main v1x.xx. from the menu. The <strong>DEFORM GUI Main</strong> window will appear.</p>
+  <p>Create a new problem either by selecting <strong>File <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_3DLFL_1_Problem_type_selection_window"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>1.</a> Select &quot; Integrated Manufacturing Process&quot; radio button and
+    units system as &quot;<strong>SI</strong>&quot; radio button in units field. Define Problem Name as &quot;<strong>3</strong><strong>D</strong><strong>_</strong><strong>Laminar_Flow</strong>&quot; and make sure the “Show option dialog” check box is
+    turned on (if we do not turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button
+    to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_1_Problem_type_selection_window"></a><img height="396" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0001.jpg" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem type selection window</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we use ‘<strong>3D_Laminar_Flow</strong>’
+    as the project name. Click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> to continue to open the operation.</p>
+  <h2><a id="1_2_Adding_3D_Forming_operation"></a>Adding 3D Forming operation</h2>
+  <p>Add one 3D Forming operation from the Explorer Operations list. Operation can be added by clicking on 3D Forming operation <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg" style="cursor: nwse-resize;"/> button or user can also
+    add by drag and drop into the Operation Editor (See <a href="#Fig_3DLFL_2_Adding_3D_Forming_Operation"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>2.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_2_Adding_3D_Forming_Operation"></a><img height="425" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0002.jpg" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding 3D Forming Operation</p>
+  <h2><a id="1_3_Simulation_controls"></a>Simulation controls</h2>
+  <p>Turn ON ‘<strong>Heat transfer</strong>’ and ‘<strong>CFD </strong><strong>flow</strong>’ options and uncheck ‘<strong>Deformation</strong>’ as shown in <a href="#Fig_3DLFL_3_Simulation_controls_page"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>3.</a>,
+    then click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_3_Simulation_controls_page"></a><img height="364" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0003.jpg" style="text-align: center;" width="450"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation controls page</p>
+  <p> </p>
+  <h2><a id="1_4_Add_new_material_Ideal_fluid"></a>Add new material ‘Ideal fluid’</h2>
+  <p>On ‘Material list’ page, click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> to add a new material. Double click on the new material name tag, change the material’s name to ‘<strong>Ideal fluid</strong>’ (See <a href="#Fig_3DLFL_4_Material_List_page"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>4.</a>).
+    Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to material page to edit the material parameters.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_4_Material_List_page"></a><img height="364" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0004.jpg" style="text-align: center;" width="450"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material List page</p>
+  <p> </p>
+  <p>Click on ‘<strong>Elastic</strong>’ tab, then type the <strong>Young&#39;s modulus</strong> value as<strong> 1</strong> as shown in <a href="#Fig_3DLFL_5_Material_page_Elastic_data"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>5.</a> for
+    elastic material data. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_5_Material_page_Elastic_data"></a><img height="364" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0005.jpg" style="text-align: center;" width="450"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Material page - Elastic data</p>
+  <p><br/>  Click on ‘<strong>Thermal</strong>’ tab, then type the values as shown in <a href="#Fig_3DLFL_6_Object_list_page"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>6.</a> for thermal/flow material data. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_6_Material_page_-_Thermal_data"></a><img height="364" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0006.jpg" style="text-align: center;" width="450"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material page - Thermal data</p>
+  <h2><a id="1_5_Define_object"></a>Define object</h2>
+  <p>This lab only needs one object, so on ‘<strong>Object</strong>’ list page, removes all objects except ‘Workpiece’, then click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>. (See <a href="#Fig_3DLFL_7_Object_list_page"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>7.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_7_Object_list_page"></a><img height="364" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0007.jpg" style="text-align: center;" width="450"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Object list page</p>
+  <h3><a id="1_5_1_Import_Object"></a>Import Object</h3>
+  <p>In ‘Workpiece’ page, click on <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> ‘Import Object from a file’ then choose ‘<strong>Flow_cylinder_3D.KEY</strong>’ from DEFORM installation folder \3D\LABS\ directory folder an select
+    object &quot;<strong>Workpiece</strong>&quot; in object selection page to import. (See <a href="#Fig_3DLFL_8_Import_object"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>8.</a>)</p>
+  <p> </p>
+  <p style="text-align: center">   <a id="Fig_3DLFL_8_Import_object"></a><img height="425" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0008.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Import object</p>
+  <p> </p>
+  <p>Choose ‘<strong>Environment - Fluid(CFD)</strong>’ as object type with Object temperature as 20<span style="vertical-align:super;font-size:8pt">0</span>C as shown in <a href="#Fig_3DLFL_9_Workpiece_Object_page"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>9.</a>    and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_9_Workpiece_Object_page"></a><img height="370" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0009.jpg" width="502"/></p>
+  <p> </p>
+  <p class="Fig_numb" style="text-align: center;">Workpiece Object page</p>
+  <p> </p>
+  <p>Observe the imported object mesh (See <a href="#Fig_3DLFL_10_View_imported_object_mesh"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>10.</a>). Click on  <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to &#39;Material&#39;
+    page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_10_View_imported_object_mesh"></a><img height="424" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0010.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">View imported object mesh</p>
+  <p> </p>
+  <h3><a id="1_5_2_Assign_Material"></a>Assign Material</h3>
+  <p>In object &#39;Material&#39; selection page ( <a href="#Fig_3DLFL_11_Material_assignment_page"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>11.</a>), it shows the material name that has been added to the project. Select &#39;<strong>Idea fluid</strong>&#39;
+    for the workpiece, then click  <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to accept it.</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_11_Material_assignment_page"></a><img height="423" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0011.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Material assignment page</p>
+  <h3><a id="1_5_3_Review_BCC"></a>Review BCC</h3>
+  <p style="text-align: left">The boundary conditions used in this simulation are shown as below <a href="#Fig_3DLFL_12_Boundary_conditions"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>12</a>.</p>
+  <p style="text-align: center"><br/>
+    <br/>
+    <a id="Fig_3DLFL_12_Boundary_conditions"></a><img height="391" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0012.jpg" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb" style="text-align: center;">Boundary conditions </p>
+  <p> </p>
+  <p>These boundary conditions are already defined in the imported object, see <a href="#Fig_3DLFL_13_Defined_BCC"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>13.</a> and  <a href="#Fig_3DLFL_14_Defined_Inlet_Outlet_BCC"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>14.</a> Click
+    on  <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until ‘<strong>Step</strong>’ page, to define simulation control. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_13_Defined_BCC"></a><img height="424" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defined BCC  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_14_Defined_Inlet_Outlet_BCC"></a><img height="424" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defined Inlet/ Outlet BCC</p>
+  <h2><a id="1_6_Step_page"></a>Step page</h2>
+  <p>In &#39;Step&#39; page enter the Number of steps as 200 and ‘<strong>Time</strong>’ of step increment as 0.04 sec (see <a href="#Fig_3DLFL_15_Step_page"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>15.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_15_Step_page"></a><img height="292" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0015.jpg" width="425"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Step page</p>
+  <p> </p>
+  <p>Click on Expert mode <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/>, Under Solver setting - Thermal tab select <strong>MUMPS </strong>solver as shown in <a href="#Fig_3DLFL_16_Thermal_solver_selection_page"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>16.</a> Click
+    on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Generate DB page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_16_Thermal_solver_selection_page"></a><img src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0016.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Thermal solver selection page </p>
+  <p> </p>
+  <h2><a id="1_7_Generate_Database"></a>Generate Database</h2>
+  <p>Click on  <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/>, database has been successfully generated.</p>
+  <h2><a id="1_8_Run_Simulation"></a>Run Simulation</h2>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg" width="146"/>  button above the operation tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DLFL_17_Run_Simulation"><span data-keyref="3D_Laminarl_Flow_lab">Fig. 3DLFL.</span>17.</a>  Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>”
+    (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_3DLFL_17_Run_Simulation"></a><img height="282" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0017.jpg" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation</p>
+  <h2><a id="1_9_Post-Processing"></a>Post-Processing</h2>
+  <p> </p>
+  <p style="text-align: center"><img height="444" src="../../../../assets/images/applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/image0018.jpg" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">Velocity profile </p>
+  <p> </p>
+
+</body></html>

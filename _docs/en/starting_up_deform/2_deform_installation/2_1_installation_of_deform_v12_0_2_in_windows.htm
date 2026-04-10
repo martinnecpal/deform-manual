@@ -1,0 +1,690 @@
+---
+lang: en
+title: "2.1. Installation of DEFORM V14.0.2. in Windows"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "2.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2.1. Installation of DEFORM V14.0.2. in Windows</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2.1. Installation of DEFORM V14.0.2. in Windows</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/starting_up_deform/2_deform_installation/2.1. installation of deform v12.0.1 in windows.css"/>
+<meta name="brsnext" value="Documentation_content/Starting_up_DEFORM/2_DEFORM_Installation/2_2_Installation_of_DEFORM_V12_0_2_in_Unix_or_Linux.htm"/><meta name="brsprev" value="Documentation_content/Starting_up_DEFORM/2_DEFORM_Installation/2_DEFORM_Installation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="2.1. Installation of DEFORM V14.0.2. in Windows">
+        <span>2.1. Installation of DEFORM V14.0.2. in Windows</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>2.1. Installation of DEFORM V14.0.2 in Windows</h1>
+  <p><a href="#2_1_1_INTRODUCTION">2.1.1. INTRODUCTION</a></p>
+  <p><a href="#2_1_2_INSTALLATION_REQUIREMENTS">2.1.2. INSTALLATION REQUIREMENTS</a></p>
+  <p><a href="#2_1_3_INSTALLING_THE_SECURITY_KEY_DEVICE">2.1.3. INSTALLING THE SECURITY KEY DEVICE</a></p>
+  <p><a href="#2_1_4_INSTALLING_DEFORM_v14_0_IN_WINDOWS">2.1.4. INSTALLING DEFORM v14.0.2 IN WINDOWS</a></p>
+  <p><a href="#2_1_5_UPDATING_THE_DEFORM_LICENSE_PASSWORD_FILE">2.1.5. UPDATING THE DEFORM LICENSE PASSWORD FILE</a></p>
+  <p><a href="#2_1_6_QUESTIONS__PROBLEMS">2.1.6. QUESTIONS / PROBLEMS</a></p>
+  <p><a href="#2_1_7_COMMAND_LINE_INSTALLER_OPTIONS">2.1.7. COMMAND LINE INSTALLER OPTIONS</a></p>
+  <p><a href="#2_1_8_WINDOWS_START_MENU">2.1.8. WINDOWS START MENU</a></p>
+  <p> </p>
+  <h2><a id="2_1_1_INTRODUCTION"></a>INTRODUCTION</h2>
+  <p>The following steps are to be executed in order to install DEFORM v14.0.2 (Subsequent service packs also follow a similar sequence, but install in a different folder and create new short cuts accordingly). <br/> These steps include:</p>
+  <ul class="Disc">
+    <li>
+      <p>Meeting the minimum system requirements.</p>
+    </li>
+    <li>
+      <p>Installing the DEFORM v14.0.2 program files.</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p>License Manager (Installing the Security Key Driver v7.6.9).</p>
+    </li>
+    <li>
+      <p>Support Codes ( MPICH2 v1.2 64-bit and MiKTeX v21.4)</p>
+    </li>
+    <li>
+      <p>v14.0.2 files</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p>Troubleshooting, should you run into problems.</p>
+    </li>
+  </ul>
+  <p>Installing DEFORM is started by running <strong>DEFORM_System_Installer_v14.0.2.exe.</strong><br/> Running this installer will give the user the option to choose which parts of DEFORM to install.See <a href="#2.1.4._INSTALLING_DEFORM_v12.0.1_IN_WINDOWS">section 2.1.4</a>.
+    for more details.</p>
+  <p><strong>DEFORM_License_Manager_Installer_v14.0.2.exe</strong> installs the DEFORM License Manager and Batch Queue.<br/>
+    <strong>DEFORM_Core_Installer_v14.0.2.exe</strong> installs the DEFORM system.<br/>
+    <strong>DEFORM_Service_Control_Installer_v14.0.2.exe</strong> installs the DEFORM Service Control. This is new from v11.2 and allows for managing DEFORM services via the DEFORM Services tab of the DEFORM Setup application.</p>
+  <p>Unless told otherwise by SFTC support, installation of any part of DEFORM should be handled by running <strong>DEFORM_System_Installer_v14.0.2.exe</strong>.</p>
+  <h2><a id="2_1_2_INSTALLATION_REQUIREMENTS"></a>INSTALLATION REQUIREMENTS</h2>
+  <ul class="Disc">
+    <li>
+      <p>Operating system: Windows 10, and 11 (64-Bit only) (Server Versions are not supported.)</p>
+    </li>
+    <li>
+      <p>Suggested RAM: 16+GB</p>
+    </li>
+    <li>
+      <p>Hard drive space required for installation: ~12GB.</p>
+    </li>
+  </ul>
+  <h2><a id="2_1_3_INSTALLING_THE_SECURITY_KEY_DEVICE"></a>INSTALLING THE SECURITY KEY DEVICE</h2>
+  <p>The Security Key allows the DEFORM v14.0.2 system to be highly portable while still allowing only one system to be operable as a license server with a valid password at any time. The actual software can be installed on as many computers as you like,
+    but each DEFORM system will only be operable with the Security Key attached or is configured as a client connected to a valid DEFORM license server. The Security Key is a USB key. Plug the Security USB hardware Key into the USB port. </p>
+  <p class="Note_style"><br/>
+    <strong>CAUTION</strong>:<br/> The Security Key keeps track of the date on your PC. Make sure the date is correct before initially running DEFORM v14.0.2. Changing the date backwards or forwards may make the DEFORM v14.0.2 system inoperable.</p>
+  <p class="Note_style"><br/>  When uninstalling an earlier version of DEFORM v14.0.2. (alpha or beta versions) then the sentinel security hardware key must be unplugged during uninstallation and plugged back in after uninstallation. </p>
+  <p> </p>
+  <h2><a id="2_1_4_INSTALLING_DEFORM_v14_0_IN_WINDOWS"></a>INSTALLING DEFORM v14.0.2 IN WINDOWS</h2>
+  <p>The DEFORM v14.0.2 installer is available for download from the DEFORM User Area website (<a href="https://support.deform.com">https://support.deform.com</a>). All supporting (required and optional) code is included in subfolders.</p>
+  <p><br/>
+    <strong>Before Installation:</strong></p>
+  <ol class="Decimal">
+    <li>
+      <p><strong></strong>Uninstall the previous version of the License Manager and the Sentinel key drivers (If user is uninstalling an earlier version of DEFORM v14.0.2 (alpha or beta) detach the hardware key while uninstalling the sentinel key driver
+        and plug it back in after uninstallation.</p>
+    </li>
+    <li>
+      <p>Before beginning to install DEFORM v14.0.2 in Windows, it is necessary for the user to be logged in as an Administrator.</p>
+    </li>
+    <li>
+      <p>Antivirus programs should be temporarily disabled during installation. They can cause substantial delays and/or installation problems.</p>
+    </li>
+  </ol>
+  <p><strong>Procedure:</strong></p>
+  <p><strong></strong></p>
+  <ol class="Decimal">
+    <li>
+      <p>Start up Windows (Log in as the Administrator or with Administrator privileges).</p>
+    </li>
+    <li>
+      <p>Extract the contents of the downloaded zip file into a suitable location with a minimum of 3.5 GB of free space.</p>
+    </li>
+    <li>
+      <p>Open an Explorer window, go to the extracted folder and double-click the <strong>DEFORM_System_Installer_v14.0.2.exe</strong> file.</p>
+    </li>
+    <li>
+      <p>Select the setup language like English, Japanese, Italian, Deutsch, etc. and click <strong>OK </strong>as shown in  <a href="#Fig_2_1_1_DEFORM_Setup_language_selection_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>1.</a></p>
+    </li>
+  </ol>
+  <p style="text-align: center"><a id="Fig_2_1_1_DEFORM_Setup_language_selection_window"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0001.jpg"/></p>
+  <p class="Fig_num">DEFORM Setup language selection window</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 4;" value="5">
+      <p>The Deform System installer v14.0.2 setup welcome window comes up as shown in <a href="#Fig_2_1_2_Deform_system_installer_welcome_window_"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>2.</a> Click the <strong>Next </strong>button. </p>
+    </li>
+  </ol>
+  <p style="text-align: center"><a id="Fig_2_1_2_Deform_system_installer_welcome_window_"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_num">Deform system installer welcome window </p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 5;" value="6">
+      <p>Accept the DEFORM License (See <a href="#Fig_2_1_3_DEFORM_License_Agreement_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>3.</a>)</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_3_DEFORM_License_Agreement_window"></a><img height="445" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0003.jpg" width="550"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_num">DEFORM License Agreement window</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 6;" value="7">
+      <p>If the default DEFORM Setup installation location needs to be changed then browse to the location and click the <strong>Next </strong>button. (See <a href="#Fig_2_1_4_DEFORM_installation_location_selection_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>4.</a>)</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_4_DEFORM_installation_location_selection_window"></a><img height="445" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0004.jpg" width="550"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM installation location selection window </p>
+  <p> </p>
+  <p>If any other DEFORM versions are present in the same path then a &quot;Folder Exists&quot; popup asks whether to install to the same folder or not, so click the <strong>Yes </strong>button. (See <a href="#Fig_2_1_5_Folder_Exists_popup"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>5.</a>) </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_5_Folder_Exists_popup"></a><img height="445" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0005.jpg" width="550"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_num">Folder Exists popup </p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 7;" value="8">
+      <p>Select the features of the DEFORM system installer you wish to install from the list in the Select Components window as shown in <a href="#Fig_2_1_6_DEFORM_select_components_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>6.</a>        At the top of the window a menu box can be used to  choose between different types of installations, including Client only and Server only. This choice  will update the components selected for installation. (See  <a href="#Fig_2_1_6_DEFORM_select_components_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>7.</a>)
+        Click the <strong>Next </strong>button to  continue.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_6_DEFORM_select_components_window"></a><img height="445" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0006.jpg" width="550"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM select components window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_7_select_components_window_combo_box"></a><img height="445" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0007.jpg" width="550"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_num">DEFORM select components window combo box</p>
+  <p> </p>
+  <p style="margin-left: 40px">For the initial setup all options should be selected to install the entire DEFORM v14.0.2 system and  supporting code. Check the sections that match your license and the appropriate shortcuts will be created in the Windows start menu. The License Manager
+    is a required component of the install pack and if a previous License Manager version is already installed then uninstall before installing the new license manager. If the license manager version is the same then there is no need to install. The Support
+    Code option will launch the installers for MPICH, MiKTeX, and the Microsoft C++ redistributables, though these can be individually (de)selected.</p>
+  <p style="margin-left: 40px">Starting with DEFORM v11.2, the DEFORM Service Control allows for the starting and stopping of DEFORM services on the server and also allows for updating the services programs on DEFORM client computers. Therefore, it is required to install it on all
+    the computers where the DEFORM system is installed regardless of versions.</p>
+  <p style="margin-left: 40px">Starting with DEFORM v12.0, the MiKTeX installer is included as a part of the Support Code.MiKTeX is used with report generation.<br/> Starting with DEFORM v13.0, the 32-bit MPICH installer has been removed.<br/> Starting with DEFORM v13.0, the Microsoft
+    C++ 2015 64-bit Redistributable is part of the Support Code.<br/> Starting with DEFORM v13.1.1, the Microsoft C++ 2008 32-bit and 64-bit Redistributables have been update to v9.0.3.30729.6161.<br/> Starting with DEFORM v13.1.1, Python 3.12.2 is an
+    optional installation.<br/> Python is used by the (currently beta) DEFORM API system. The DEFORM API allows users to access DEFORM functionality from Python scripts.<br/> Python is also needed for the optional Web-based Service Control. Web-based
+    Service Control allows for access to DEFORM services (as seen in the “DEFORM Services” tab of DEFORM Setup) from a web browser</p>
+  <p style="margin-left: 40px">Starting with DEFORM v14.0.1, the MiKTeX installer has been updated to 24.1. </p>
+  <p style="margin-left: 24px"> </p>
+  <p style="margin-left: 40px">Click the <strong>Next </strong>button after selecting the products that match your license.</p>
+  <p> </p>
+  <p style="text-align: center"><u><strong>DEFORM v14.0.2 and License Manager v14.0.2 Installation Options</strong></u></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 8;" value="9">
+      <p>Select the “Configure Windows Firewall” checkbox to allow the DEFORM programs and the License and batch queue services access through the Windows firewall as shown in<a href="#Fig_2_1_8_DEFORM_Windows_Firewall_configuration_window"> <span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>8.</a> and
+        then click the <strong>Next </strong>button.</p>
+      <p> </p>
+      <p style="text-align: center"><a id="Fig_2_1_8_DEFORM_Windows_Firewall_configuration_window"></a><img height="454" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0008.jpg" width="585"/></p>
+      <p class="Fig_num">DEFORM Windows Firewall configuration window</p>
+      <p> </p>
+      <p style="text-align: center"><u><strong>DEFORM License Manager v14.0.2 Installation Options</strong></u></p>
+    </li>
+    <li style="" value="9">
+      <p>If the License Manager v14.0.2 component is selected, the DEFORM installer will present options relating to the License Manager. If the machine is a license server system (where the hardware key is plugged in), the DEFORM license password file supplied
+        by SFTC must be selected. Browse to the password file to select it. Otherwise don&#39;t select a password file. Click the <strong>Next </strong>button to continue. (See <a href="#Fig_2_1_9_DEFORM_License_Manager_Password_browsing_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>9.</a>)</p>
+    </li>
+  </ol>
+  <p style="counter-reset: p 7;"> </p>
+  <p style="text-align: center"><a id="Fig_2_1_9_DEFORM_License_Manager_Password_browsing_window"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0009.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_num">DEFORM License Manager Password browsing window</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 10;" value="11">
+      <p>Select the “Install Batch Queue Server” checkbox, which is required for queuing simulations as shown in <a href="#Fig_2_1_10_DEFORM_License_Manager_additional_task_selection_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>10.</a>        and then click the <strong>Next </strong>button.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_10_DEFORM_License_Manager_additional_task_selection_window"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0010.jpg"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM License Manager additional task selection window  </p>
+  <p> </p>
+  <p style="text-align: center"><u><strong>DEFORM v14.0.2 Installation Options</strong></u></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 11;" value="12">
+      <p>If the DEFORM v14.0.2 component is selected, the DEFORM installer will present options relating to DEFORM. Starting with DEFORM v13.1, there is a new option to choose the FEM Engine. SFTC recommends using the Intel® Fortran option unless the Absoft
+        Fortran compiler is being used or DEFORM is installed on a computer using a legacy (non-modern) CPU. Please be aware that the Intel Fortran option is compatible with both Intel Core and AMD Ryzen CPUs. Make your FEM engine selection as shown in
+        <a href="#Fig_2_1_11_DEFORM_Setup_additional_tasks_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>11.</a> and click the <strong>Next </strong>button. Note that starting with DEFORM v14.0.2, the Absoft
+        Legacy FEM engine is no longer available. </p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_11_DEFORM_Setup_additional_tasks_window" height="0" width="0"></a><img height="445" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0011.jpg" width="550"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup FEM Engine window </p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 12;" value="13">
+      <p>Confirm the DEFORM Setup settings and click the <strong>Install </strong>button to install the DEFORM files. Otherwise click the <strong>Back </strong>button to change any settings. (See <a href="#Fig_2_1_12_DEFORM_Setup_settings_confirmation_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>12.</a>)</p>
+    </li>
+  </ol>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_2_1_12_DEFORM_Setup_settings_confirmation_window"></a><img height="445" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0012.jpg" width="550"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup settings confirmation window</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 13;" value="14">
+      <p>DEFORM setup will proceed to install all the components selected and take several minutes for installation as shown in <a href="#Fig_2_1_13_DEFORM_System_installing_status_window_"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>13.</a></p>
+    </li>
+  </ol>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_2_1_13_DEFORM_System_installing_status_window_"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0013.jpg"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM System installing status window </p>
+  <p> </p>
+  <p style="margin-left: 40px">Note that the MiKTeX installer will be displayed, but no interaction is required as shown in <a href="#Fig_2_1_14_MiKTeX_installer_status_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>14.</a></p>
+  <p style="margin-left: 40px"> </p>
+  <p style="margin-left: 20px;text-align: center"><a id="Fig_2_1_14_MiKTeX_installer_status_window"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0014.jpg"/></p>
+  <p style="margin-left: 20px"> </p>
+  <p class="Fig_num">MiKTeX installer status window </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 14;" value="15">
+      <p>Under certain conditions, namely if the Sentinel Key Driver installer is selected, DEFORM will require the computer to be restarted prior to running DEFORM Setup. If the window shown in <a href="#Fig_2_1_15_DEFORM_requires_reboot_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>15.</a>        is shown, DEFORM Setup will run at Windows login the next time Windows is rebooted. Click the <strong>Next </strong>button to continue setup as shown in <a href="#Fig_2_1_15_DEFORM_requires_reboot_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>15.</a></p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_15_DEFORM_requires_reboot_window"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0015.jpg"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM requires reboot window</p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 15;" value="16">
+      <p>Click the <strong>Finish </strong>button to end the installation as shown in <a href="#Fig_2_1_16_DEFORM_System_Installer_setup_completion_window_"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>16.</a></p>
+    </li>
+  </ol>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_2_1_16_DEFORM_System_Installer_setup_completion_window_"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0016.jpg"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM System Installer setup completion window </p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 16;" value="17">
+      <p>If the DEFORM installer recommends restarting the computer, select the “Yes, restart the computer now” radio button and click the <strong>Finish </strong>button to restart the computer as shown in <a href="#Fig_2_1_17_DEFORM_System_Installer_setup_restart_window_"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>17.</a></p>
+    </li>
+  </ol>
+  <p style="text-align: center"><a id="Fig_2_1_17_DEFORM_System_Installer_setup_restart_window_"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0017.jpg"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM System Installer setup restart window </p>
+  <p> </p>
+  <p style="margin-left: 40px">Upon completion of the installation, DEC_SC.EXE, found at &quot;&lt;Installation path&gt;\DEFORM\Configuration\DEF_SC.EXE&quot;, will launch.<br/> This DEFORM service utility program (DEC_SC.EXE) will be run as a &quot;service&quot; on Windows PCs.<br/>    This service communicates with the License Server and, in the DEFORM Setup program, the user can monitor the status of the Simulation Server (SS), Simulation Client (SC), and Web-based Simulation Monitoring server (RS) on any DEFORM computer. As discussed
+    in the next section, the DEFORM Services tab can be used to update them as needed.</p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 17;" value="18">
+      <p>The DEFORM Setup application will launch next. Here you can configure the license server location and save those changes.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px">If the license server is running on a remote machine, select the &quot;On Remote License Server&quot; radio button and enter the remote server machine name or IP address. Click the <strong>Synchronize </strong>button. If the license server is running
+    on the remote machine the user will get a license server running status as shown in <a href="#Fig_2_1_18_DEFORM_Setup_License_Server_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>18.</a> Otherwise an
+    error popup indicating &quot;Can not connect to license server&quot; is shown.</p>
+  <p style="margin-left: 40px">If the license server is running on this local machine then select the &quot;On Local Computer&quot; radio button and click the <strong>Synchronize </strong>button.</p>
+  <p style="margin-left: 40px">Once synchronization is successful, whether the license server is running on the local computer or a remote computer, click the <strong>Save </strong>button to save the settings. (See <a href="#Fig_2_1_18_DEFORM_Setup_License_Server_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>18.</a>) </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_18_DEFORM_Setup_License_Server_window"></a><img height="689" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup License Server window </p>
+  <p><br/> After the synchronize button is clicked, if the current computer hasn’t been set up as a Simulation Server for the current version and path, DEFORM Setup will offer to add it as one (<a href="#Fig_2_1_20_DEFORM_Setup_DEFORM_Services_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>19.)</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_19_DEFORM_Setup_Simulation_Server_window"></a><img height="692" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup Simulation Server window</p>
+  <p> </p>
+  <p>If the Yes button is clicked to add the Simulation Server, DEFORM Setup will not automatically save the change to the License Server, but will prompt to save the changes. (See <a href="#Fig_2_1_20_DEFORM_Setup_reminder_to_save"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>20.</a>)
+    Verify the change is correct in the Simulation Server tab before saving the settings.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_20_DEFORM_Setup_reminder_to_save"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0020.jpg"/></p>
+  <p class="Fig_num">DEFORM Setup reminder to save</p>
+  <p> </p>
+  <p>The Simulation Server tab allows for managing computers connected to the License Server. As shown in <a href="#Fig_2_1_21_DEFORM_Setup_Simulation_Server_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>21.</a>,
+    the top area of the tab shows the defined Simulation Servers. If the local computer isn’t defined as a Simulation Server, click the &quot;Add Simulation Server&quot; button to define it.<br/> When adding a Simulation Server, by default the local computer
+    will be defined, and some values will be set automatically. These defaults include the processor type, the number of processors, the maximum number of jobs, and the latest version will be set to the current path.<br/> When the License Manager is on
+    the same computer that DEFORM Setup is being run on, as many Simulation Servers as required can be defined. However if the License Manager is on a different computer, only the local Simulation Server can be defined and edited.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_21_DEFORM_Setup_Simulation_Server_window"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0021.jpg"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup Simulation Server window</p>
+  <p> </p>
+  <p>The <strong>Versions </strong>column shows a list of all versions defined for a given Simulation Server.<br/> The <strong>Maximum </strong>Jobs option allows setting the number of jobs in the queue that can be run simultaneously on the respective simulation
+    server.<br/> The lower area shows details about the currently selected Simulation Server. (See <a href="#Fig_2_1_22_DEFORM_Setup_Simulation_Server_window"> <span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>22.</a>)<br/>    In the <strong>Versions </strong>tab, the disk location for multiple versions can be defined. Only one path per version is allowed.<br/> If the Processor Type is defined as a <strong>Cluster</strong>, the Clusters tab will be enabled and details about
+    the cluster nodes can be defined.<br/> After making changes to the Simulation Server tab, click the Save button to save the settings.<br/>
+    <em><strong>Note</strong>: </em><em><em>Install</em> path information for each version is required to be defined for the Batch queue to  work properly.</em>
+  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_22_DEFORM_Setup_Simulation_Server_window"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0022.jpg"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup Simulation Server window</p>
+  <p> </p>
+  <p>Running jobs on remote computers can be performed by using the Shared Folders tab. (See <a href="#Fig_2_1_23_DEFORM_Setup_Shared_Folders_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>23.</a>)<br/> For more
+    detailed information refer to Chapter <a href="../../simulator/23_deform_simulator/23_6_running_shared_folder_simulations.htm">23.6. Running Shared folder Simulations.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_23_DEFORM_Setup_Shared_Folders_window"></a><img height="644" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0023.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup Shared Folders window</p>
+  <p> </p>
+  <p>The DEFORM Services tab allows for managing of DEFORM services as shown in <a href="#Fig_2_1_24_DEFORM_Setup_DEFORM_Services_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>24.</a> You have <br/> two options:</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Open DEFORM Services for local DEFORM computer.</p>
+    </li>
+    <li>
+      <p>Open DEFORM Services for all DEFORM computers.</p>
+    </li>
+  </ol>
+  <p>The first option is available for all DEFORM users, while the second option is only available to  “authorized users”, or users who knows the “pass code” created by the authorized users.<br/> The “authorized users” and “pass code” are introduced to avoid
+    misuse of the new capabilities provided by the DEFORM services tab. For more information, please follow the instructions provided in the DEFORM Setup user interface.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_24_DEFORM_Setup_DEFORM_Services_window"></a><img height="644" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0024.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup DEFORM Services window</p>
+  <p> </p>
+  <p>The DEFORM Services tab allows for starting and stopping DEFORM services on the license server computer and DEFORM computers as well as updating the service applications on DEFORM computers. If any of the services are stopped, click the corresponding
+    start button to start the service as shown in <a href="#Fig_2_1_25_DEFORM_Setup_DEFORM_Services_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>25.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_25_DEFORM_Setup_DEFORM_Services_window"></a><img height="644" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0025.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup DEFORM Services window</p>
+  <p> </p>
+  <p>When all the DEFORM services are marked as “running”, click the Close button as shown in <a href="#Fig_2_1_26_DEFORM_Setup_DEFORM_Services_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>26.</a> <br/> The
+    Simulation Client and Simulation Server services should be running on DEFORM computers. <br/> The Web-based Simulation Monitoring and GeoCAD Server are optional.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_26_DEFORM_Setup_DEFORM_Services_window"></a><img height="644" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0026.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup DEFORM Services window</p>
+  <p> </p>
+  <h2><a id="2_1_5_UPDATING_THE_DEFORM_LICENSE_PASSWORD_FILE"></a>UPDATING THE DEFORM LICENSE PASSWORD FILE</h2>
+  <p>To update the DEFORM license file using DEFORM Setup, switch to the DEFORM Services tab. Click on the “update license password file” button next to the server name as shown in <a href="#Fig_2_1_27_DEFORM_Setup_update_license_password_file_button"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>27.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_27_DEFORM_Setup_update_license_password_file_button"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0027.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_num">DEFORM Setup update license password file button</p>
+  <p> </p>
+  <p>On the Update DEFORM license password file page, click the folder icon and browse to the password file. Then click the “<strong>Update password file”</strong> button as shown in <a href="#Fig_2_1_28_DEFORM_Setup_select_password_file"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_28_DEFORM_Setup_select_password_file"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0028.jpg"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup select password file</p>
+  <p> </p>
+  <p>Click to stop the License Server and click yes in the warning prompt, as shown in <a href="#Fig_2_1_29_DEFORM_Setup_stop_the_License_Server"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>29.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_29_DEFORM_Setup_stop_the_License_Server"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0029.jpg"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup stop the License Server</p>
+  <p> </p>
+  <p>Next, start any stopped Server service as shown in <a href="#Fig_2_1_30_DEFORM_Setup_start_Server_services"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>30.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_30_DEFORM_Setup_start_Server_services"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0030.jpg"/></p>
+  <p class="Fig_num">DEFORM Setup start Server services</p>
+  <p><br/> Next, start any stopped Client service as shown in <a href="#Fig_2_1_31_DEFORM_Setup_start_Client_services"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>31.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2_1_31_DEFORM_Setup_start_Client_services"></a><img src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0031.jpg" style="cursor: nwse-resize;"/></p>
+  <p> </p>
+  <p class="Fig_num">DEFORM Setup start Client services</p>
+  <p> </p>
+  <h2><a id="2_1_6_QUESTIONS__PROBLEMS"></a>QUESTIONS / PROBLEMS</h2>
+  <p>If you have any questions, comments, or problems installing DEFORM v14.0.2, contact:</p>
+  <p> </p>
+  <p style="text-align: center"><strong>Scientific Forming Technologies Corporation</strong></p>
+  <p style="text-align: center"><strong>2545 Farmers Drive, Suite 200</strong></p>
+  <p style="text-align: center"><strong>Columbus, OH 43235 USA</strong></p>
+  <p style="text-align: center"><strong>Phone: (614) 451-8330</strong></p>
+  <p style="text-align: center"><strong>E-mail: <span style="color:#0000ff;">support@deform.com</span></strong></p>
+  <p style="text-align: center"><strong>Or</strong></p>
+  <p style="text-align: center"><strong>Visit our website at</strong></p>
+  <p style="text-align: center"><strong><a href="http://www.deform.com"><span style="color:#0000ff;">http://www.deform.com</span></a></strong></p>
+  <p> </p>
+  <h2><a id="2_1_7_COMMAND_LINE_INSTALLER_OPTIONS"></a>COMMAND LINE INSTALLER OPTIONS</h2>
+  <p>Starting in v12.1, the DEFORM System installer allows for command line parameters to be passed to it. This is useful for system administrators in order to do automated installations. For automated installations, all options are optional except /CPUType;
+    either modern or legacy must be specified.</p>
+  <p> </p>
+  <p><strong>/LANG</strong>=language</p>
+  <p style="margin-left: 20px">This option specifies the language the installer will use. When a valid /LANG parameter is used, the Select Language dialog will be suppressed. This affects the <strong>Select Setup Language</strong> dialog, as shown in <a href="#Fig_2_1_1_DEFORM_Setup_language_selection_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>1.</a></p>
+  <p style="margin-left: 20px">Valid options:<br/> english, french, german, japanese, russian, spanish, italian, korean, chinesesimplified, chinesetraditional</p>
+  <p><br/>
+    <strong>/DIR</strong>=&quot;path to install DEFORM to&quot;</p>
+  <p style="margin-left: 20px">This option specifies the location to install DEFORM. This affects path in the Select Destination Location window, as shown in <a href="#Fig_2_1_4_DEFORM_installation_location_selection_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>4.</a></p>
+  <p style="margin-left: 20px">Default option: The default installation location is C:\Program Files\SFTC.</p>
+  <p><br/> / <strong>COMPONENTS</strong>=&quot;comma separated list of component names&quot;</p>
+  <p style="margin-left: 20px">This option specifies which components of DEFORM will be installed. Using this command line parameter causes Setup to automatically select a custom type, meaning all components will be unselected except the one’s passed to this parameter. This affects
+    selected components in the <strong>Select Components</strong> window, as shown in <a href="#Fig_2_1_6_DEFORM_select_components_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>6.</a></p>
+  <p style="margin-left: 20px">Valid options:</p>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>LicenseManager</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs the DEFORM License Manager but not the Sentinel Key Driver.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>*LicenseManager</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs the DEFORM License Manager and the Sentinel Key Driver. Note the asterisk before LicenseManager.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>LicenseManager\Sentinel</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs the Sentinel Key Driver and the DEFORM License Manager.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>*SupportCode</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs all the support code. Note the asterisk before SupportCode.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>SupportCode\MPICH64</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs the 64-bit MPICH.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>SupportCode\MiKTeX</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs MiKTeX.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>SupportCode\vc32</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs the 32-bit Microsoft C++ 2008 redistributable.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>SupportCode\vc64</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs the 64-bit Microsoft C++ 2008 redistributable.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>SupportCode\vc2015x64</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs the 64-bit Microsoft C++ 2015 redistributable</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>OptionalCodeP\Python</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs Python. (Only required for DEFORM API and Web-based Service Control)</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>DEFORMComponent</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs the DEFORM system.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>ServiceControl</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="margin-left: 20px;">
+      <p>Installs the DEFORM Service Control.</p>
+    </li>
+  </ul>
+  <p style="margin-left: 20px">Default option: The default option is to install all components except any optional components.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 0px">/<strong>PasswordFile</strong>=&quot;path to DEFORM.PWD file&quot;</p>
+  <p style="margin-left: 20px">This option specifies the location of the DEFORM password file. If the License Manager isn’t being installed, this is ignored. This affects the path in the <strong>DEFORM Password</strong> window, as shown in <a href="#Fig_2_1_9_DEFORM_License_Manager_Password_browsing_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>9.</a></p>
+  <p style="margin-left: 20px">Default option: no password file specified.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 0px">/<strong>BatchQueue</strong>=batch queue option</p>
+  <p style="margin-left: 20px;">This option specifies whether the Batch Queue Server should be installed or not. This affects the Install <strong>Batch Queue Server </strong>option in the <strong>DEFORM License Manager</strong> window, as shown in <a href="#Fig_2_1_9_DEFORM_License_Manager_additional_task_selection_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>10.</a></p>
+  <p style="margin-left: 20px">Valid options:</p>
+  <p style="margin-left: 20px">yes, no</p>
+  <p style="margin-left: 20px">Default option: yes</p>
+  <p style="margin-left: 0px"><br/> / <strong>Firewall</strong>=firewall option</p>
+  <p style="margin-left: 20px">This option specifies whether to allow DEFORM programs access through the Windows firewall.</p>
+  <p style="margin-left: 20px"><span style="font-size: 12pt;">This affects the </span><strong style="font-size: 12pt;">Configure Windows Firewall</strong><span style="font-size: 12pt;"> option in the Windows Firewall window, </span><span style="font-size: 12pt;">as shown in </span>    <a href="#Fig_2_1_8_DEFORM_Windows_Firewall_configuration_window" style="font-size: 12pt;"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>8.</a></p>
+  <p style="margin-left: 20px">Valid options:</p>
+  <p style="margin-left: 20px">yes, no</p>
+  <p style="margin-left: 20px">Default option: yes</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px"> </p>
+  <p>/<strong>FEMType</strong>=FEM Fortran type option</p>
+  <p>     New option starting with DEFORM v13.1. This replaces the CPUType option</p>
+  <p style="margin-left: 20px">This option specifies whether the Intel Fortran or Absoft Fortran FEM engine should be installed. This affects the <strong>Intel Fortran (Default)</strong> and <strong>Absoft Fortran</strong>  options in the <strong>FEM Engine</strong> window, as shown
+    in <a href="#Fig_2_1_11_DEFORM_Setup_64-bit_FEM_Engine_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>11.</a><br/> Valid options:<br/> intel, absoft</p>
+  <p style="margin-left: 20px">Default option: intel</p>
+  <p><br/> / <strong>SILENT</strong></p>
+  <p style="margin-left: 20px">Instructs the installer to run in silent mode. When Setup is silent the wizard window is not displayed but the installation progress window is.</p>
+  <p style="margin-left: 20px">There are no options for this parameter.</p>
+  <p style="margin-left: 20px"> </p>
+  <p><strong>/DEFORMSetup</strong>=DEFORM Setup option</p>
+  <p style="margin-left: 20px">New option starting with DEFORM v13.0.1.</p>
+  <p style="margin-left: 20px">This option instructs the installer to launch DEFORM Setup to configure the license server.</p>
+  <p style="margin-left: 20px">Valid options:</p>
+  <p style="margin-left: 20px">yes, no</p>
+  <p style="margin-left: 20px">Default option: yes</p>
+  <p><br/>
+    <strong>/ConfigurationFile</strong>=&quot;path to DEFORM_NLM_CONF file&quot;</p>
+  <p style="margin-left: 20px">New option starting with DEFORM v13.0.1.</p>
+  <p style="margin-left: 20px">This option specifies the location of the License Server configuration file to use. This file is created by DEFORM Setup and is located in the Configuration folder, so run DEFORM Setup on at least one computer first and use it for additional installations.</p>
+  <p style="margin-left: 20px">This is useful for using the same configuration file on multiple computers and works well when setting the DEFORMSetup option to no.<br/> If an existing DEFORM_NLM_CONF file exists in the Configuration folder, it will be overwritten.</p>
+  <p style="margin-left: 20px">If installing the License Manager (either stand alone or as part of a node locked license) either DEFORM_NLM_CONF or DEFORM_NLM_CONF_SERVER can be used as the source file. In this case the file will also be copied to both the Configuration folder (as
+    DEFORM_NLM_CONF) and the License Manager folder (as DEFORM_NLM_CONF_LMSERVER).</p>
+  <p style="margin-left: 20px">This overrides the LicenseServerName option.</p>
+  <p style="margin-left: 20px">Default option: no License Server configuration file specified.</p>
+  <p> </p>
+  <p><strong>/</strong><strong>LicenseServerName</strong>=”License Server name”</p>
+  <p style="margin-left: 20px">New option starting with DEFORM v13.0.1.</p>
+  <p style="margin-left: 20px">This option specifies the server name as shown in <a href="#Fig_2_1_18_DEFORM_Setup_License_Server_window"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>18.</a></p>
+  <p style="margin-left: 20px">This is useful for using the same configuration file on multiple computers and works well when setting the DEFORMSetup option to no.</p>
+  <p style="margin-left: 20px">If an existing DEFORM_NLM_CONF file exists in the Configuration folder it will be overwritten.</p>
+  <p style="margin-left: 20px">This is ignored if the ConfigurationFile option is set.</p>
+  <p style="margin-left: 20px">Default option: no Server name specified</p>
+  <p style="margin-left: 20px"> </p>
+  <p><strong>Examples</strong></p>
+  <p>Install Node Locked<br/> DEFORM_System_Installer_v14.0.2.exe /LANG=english /SILENT</p>
+  <p>Install Client Installation<br/> DEFORM_System_Installer_v14.0.2.exe /LANG=english /COMPONENTS=&quot;*SupportCode,DEFORMComponent,ServiceControl&quot; /SILENT</p>
+  <p>Install Server Installation with Password file</p>
+  <p>DEFORM_System_Installer_v14.0.2.exe /LANG=english /COMPONENTS=&quot;*LicenseManager, SupportCode\vc32,ServiceControl&quot; /PasswordFile=&quot;C:\DEFORM.PWD&quot; /SILENT</p>
+  <p class="p_align_left"><span></span><strong></strong></p>
+  <p> </p>
+  <p><strong>Deprecated Options</strong></p>
+  <p> </p>
+  <p><strong>legacy in /FEMType</strong><br/>     This option has been deprecated starting with DEFORM v14.0.2.  The legacy Absoft FEM engine has been retired.</p>
+  <p><strong>ReleaseNotes in /COMPONENTS</strong><br/> This option has been deprecated starting with DEFORM v14.0.</p>
+  <p> </p>
+  <p><strong>/NodeLocked</strong><br/> This option has been deprecated starting with DEFORM v14.0.</p>
+  <p> </p>
+  <p><strong>/CAD</strong><br/> This option has been deprecated starting with DEFORM v14.0. The GeoCAD Server option has been moved to DEFORM Setup.</p>
+  <p> </p>
+  <p><strong>/CPUType</strong><br/> This option has been deprecated starting with DEFORM v13.1. The FEMType option supersedes this.</p>
+  <p> </p>
+  <h2><a id="2_1_8_WINDOWS_START_MENU"></a>WINDOWS START MENU</h2>
+  <p>Starting with DEFORM v14.0.2, DEFORM Setup allows for selecting which DEFORM shortcuts appear in the Windows Start menu as shown in <a href="#Fig_2_1_32_DEFORM_Setup_Start_menu_tab"><span data-keyref="Chapter_2_1_Installation_of_PC_installation_note">Fig.  2.1.</span>32.</a>    The installer will include a selection of applications in the Start menu. To change these, applications can be selected in the New <strong>start </strong><strong>menu </strong>column. Clicking the <strong>Update start menu</strong> button will update
+    the Start menu with the selected applications. The <strong>Select all</strong> and <strong>Deselect </strong><strong>all </strong>buttons are used to select and deselect all the optional applications, respectively. The <strong>Refresh </strong>button
+    updates the Current start menu column, which shows the applications that are currently in the Start menu.</p>
+  <p><em>Note that the Start menu tab won’t be displayed if DEFORM Setup is launched from the <strong>DEFORM Setup for License Manager </strong>Start menu item.</em></p>
+  <p style="text-align: center"><a id="Fig_2_1_32_DEFORM_Setup_Start_menu_tab"></a><img height="650" src="../../../assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0032.jpg" style="cursor: nwse-resize;" width="593"/></p>
+  <p class="Fig_num">DEFORM Setup Start menu tab</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../3_license_manager/3_introduction_to_license_manager.htm">3. License Manager</a></p>
+  <p><a href="../3_license_manager/3_4_trouble_shooting_license_issues.htm">3.4. Trouble Shooting License Issues</a></p>
+  <p><a href="../../../assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations">23.6. Running simulations remotely</a></p>
+  <p><a href="../../../assets/images/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running">23.8. Trouble Shooting Simulation Running</a></p>
+
+</body></html>

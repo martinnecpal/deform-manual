@@ -1,0 +1,239 @@
+---
+lang: sk
+title: "Appendix III: Running DEFORM in text mode"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix III: Running DEFORM in text mode</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix III: Running DEFORM in text mode</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_iii.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_IV_Determining_R_coefficientss.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_II_Launching_the_Simulation_Engine_from_a_Command_Prompt.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix III: Running DEFORM in text mode">
+        <span>Appendix III: Running DEFORM in text mode</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix III: Running DEFORM in text mode</h1>
+  <p><br/>
+    <a href="#AIII_1_Assembling input data">AIII.1. Assembling input data</a></p>
+  <p><a href="#AIII_2_Brief_Introduction_to_Keywords">AIII.2. Brief Introduction to Keywords</a></p>
+  <p><a href="#AIII_3_Help_For_Optimization_Users">AIII.3. Help For Optimization Users</a></p>
+  <p><a href="#AIII_4_Running_a_Simulation">AIII.4. Running a Simulation</a></p>
+  <p><a href="#AIII_5_Extracting_the_Results">AIII.5. Extracting the Results</a></p>
+  <p> </p>
+  <p>DEFORM contains text based modules which can be used to set up and run simulations in automatic mode without going through the graphic user interface (GUI). The text based preprocessor DEF_PRE.EXE can be used to assemble input data and generate a DEFORM
+    database. It contains most of the same functionality of the graphic interface. The job can be submitted by calling the simulation control script DEF_ARM_CTL.COM.</p>
+  <p> </p>
+  <h2><a id="AIII_1_Assembling input data"></a>Assembling input data</h2>
+  <p>The preprocessor can be controlled by redirecting a text input control file to the following program.</p>
+  <p>C:\Program Files\SFTC\DEFORM\v*_*\3D\DEF_PRE.EXE &lt; DEF_PRE_INP.txt</p>
+  <p>Where</p>
+  <p>*_* is the version number of the DEFORM</p>
+  <p> </p>
+  <p>DEF_PRE_INP.txt contains the following lines:</p>
+  <p> </p>
+  <p>&lt;CR&gt;</p>
+  <p>2</p>
+  <p>1</p>
+  <p>DEF_COMMANDS.KEY</p>
+  <p>&lt;CR&gt;</p>
+  <p>E</p>
+  <p>E</p>
+  <p>Y</p>
+  <p>&lt;CR&gt;</p>
+  <p> </p>
+  <p>Which are the user inputs if the text based system were run in interactive mode.</p>
+  <p>The file DEF_COMMANDS.KEY contains a series of “Action Keywords” which trigger the preprocessor to perform a series of options. (The file name is the users choice). Action keywords are documented separately.  It also can contain standard keywords to
+    define simulation controls. (time stepping, stopping controls, etc)</p>
+  <p> </p>
+  <p>An important function of action keywords is to trigger the input of other keyword files, which can include geometry definition, boundary conditions, etc.</p>
+  <p>Sample contents of the DEF_COMMANDS.KEY file. Contents of an actual file will be defined by the user.</p>
+  <p> </p>
+  <p>KFREAD</p>
+  <p>DEFAULT.KEY</p>
+  <p>CURSIM 1</p>
+  <p>SIMNAM</p>
+  <p>Solution</p>
+  <p>DTMAX 0.001</p>
+  <p>DTPMAX 10 0.01 100</p>
+  <p>STPINC 10</p>
+  <p>KFREAD</p>
+  <p>DEF_MESH.KEY</p>
+  <p>KFREAD</p>
+  <p>DEF_EDGE_BCF.KEY</p>
+  <p>NDTMP 1 0 70.0</p>
+  <p>TMAX 10800</p>
+  <p>ENVTMP 2130</p>
+  <p>KFREAD</p>
+  <p>AIR_BC.KEY</p>
+  <p>USRSUB  1  1</p>
+  <p>GENDB 2</p>
+  <p>DEFORM_DEMO.DB</p>
+  <p> </p>
+  <p>This file:</p>
+  <p>Reads DEFAULT.KEY which contains default problem settings</p>
+  <p>Sets the operation number to 1</p>
+  <p>Sets temperature substepping and save increment</p>
+  <p>Reads DEF_MESH.KEY</p>
+  <p>Reads DEF_EDGE_BCF.KEY which contains boundary condition definitions</p>
+  <p>Sets the temperature of all nodes to 70 degrees</p>
+  <p>Sets simulation time</p>
+  <p>Sets environment temperature</p>
+  <p>Loads AIR_BC.KEY which contains convection coefficients for air</p>
+  <p>Defines a user subroutine to be used</p>
+  <p>Generates a database called DEFORM_DEMO.DB.</p>
+  <p> </p>
+  <h2><a id="AIII_2_Brief_Introduction_to_Keywords"></a>Brief Introduction to Keywords</h2>
+  <p>There are two different types of keywords that can be read by the <a href="../pre_processor/7_introduction_to_pre-processor.htm">Preprocessor</a>:  Input keywords and Action keywords.  Input keywords contain data that is directly used as data for a
+    simulation. This can be a geometry definition, convection coefficient values, or other such data. Action keywords perform certain operations when the Preprocessor is reading the data. For example, the keyword <a href="../keyword_documentation/k/kfread.htm">KFREAD</a>    tells the Preprocessor to read the next line into the Preprocessor as a keyword file. This is quite useful for segregating data into different keyword files and being able to load them in a modular manner into the Preprocessor. The most commonly used
+    Action keywords are <a href="../keyword_documentation/k/kfread.htm">KFREAD</a> (keyword file reading), <a href="../keyword_documentation/d/dbread.htm">DBREAD</a> (database file reading), <a href="../keyword_documentation/g/genctc.htm">GENCTC</a> (generate
+    contact based on proximity distance to dies), and <a href="../keyword_documentation/g/gendb.htm">GENDB</a> (generate database). All the keywords are referenced with their specification method in the keyword reference.</p>
+  <p> </p>
+  <h2><a id="AIII_3_Help_For_Optimization_Users"></a>Help For Optimization Users</h2>
+  <p>In the case where optimization being performed, many simulations have to be run sequentially. In this case, it means that the input data will have to change each time a simulation is run. This can be done by segregating the data into different keyword
+    files and loading the all together at the initialization phase. For example, consider the case where the heat flux is different between each simulation.  As long as that is the only difference between each run, the initial data can be stored in a
+    keyword file and the heat flux data can be stored in another keyword file (or created on the fly by the optimization script).</p>
+  <p>This can be done in a few easy steps:</p>
+  <ol class="Decimal">
+    <li>
+      <p>Define the simulation and save it in a keyword without the heat flux definition.</p>
+    </li>
+    <li>
+      <p>Read the definition of heat flux in the keyword manual (keyword:  ECHFLX).</p>
+    </li>
+    <li>
+      <p>Define a keyword file with the heat flux data. An easy cheat would be to define it in the graphical preprocessor, save it to a keyword file, extract it from the saved keyword, and modify it as necessary during run time.</p>
+    </li>
+    <li>
+      <p>Run a simple script file as above that loads in both keyword files and generates a database.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <h2><a id="AIII_4_Running_a_Simulation"></a>Running a Simulation</h2>
+  <p>(1)<strong> Direct Job Submission</strong>:  </p>
+  <p> </p>
+  <p>(Note: the following text should be entered in a single line)</p>
+  <p>“C:\Program Files\SFTC\DEFORM\v12.1.1\DEF_SIMULATION.EXE”</p>
+  <p>ENV_PROBLEM_ID_TAG=TEST.DB</p>
+  <p>ENV_RUNNING_DIRCTORY_TAG=&quot;C:\Users\deform\Documents\PROBLEM\TEST&quot;</p>
+  <p>ENV_JOB_DIMENSION_TAG=3 ENV_JOB_TYPE_TAG=E_MO_JOB</p>
+  <p> </p>
+  <p>(2) <strong>Text line Batch Queue submission</strong>: (from version 11.1 SP1)</p>
+  <p>                                                                   </p>
+  <p class="Note_text">(Note: the following text is a single line)</p>
+  <p> </p>
+  <p>&quot;<strong>C:\Program Files\SFTC\DEFORM\Configuration\SimClient.EXE</strong>&quot; -submit</p>
+  <p>&lt;PROBLEM_PATH&gt; &lt;PROBLEM_ID&gt; &lt;PROBLEM_TYPE&gt; &lt;PROBLEM_DIMENSION&gt; &lt;SIMULATION_SERVER&gt; &lt;CLIENT_TYPE&gt; &lt;VERSION_NUMBER&gt;</p>
+  <p> </p>
+  <p><strong>Problem type can be</strong>: MO, DOE, OPT</p>
+  <p> </p>
+  <p><strong>Problem dimension can be</strong>: 2, 3, 23</p>
+  <p> </p>
+  <p><strong>Simulation Server</strong>: one or more simulation server names   </p>
+  <p>(For DOE/OPT, multiple simulation servers can be used)</p>
+  <p>To specify multiple simulation server, the server name need to be separated with &#39;,&#39; and enclosed with double quote. eg. &quot;SimulationServer1,SimulationServer2&quot;.</p>
+  <p> </p>
+  <p><strong>Client type can be</strong>: QT3, QT4     </p>
+  <p>(use QT4 only if the problem has been submitted with Qt4 run option dialog before)</p>
+  <p> </p>
+  <p><strong>DEFORM Version number can be</strong>: &quot;11.1&quot;, &quot;11.0&quot;, &quot;0.0&quot;  </p>
+  <p>(0.0 for version before 11.0)</p>
+  <p> </p>
+  <p>(3) <strong>Post-processing with a DEFORM Session (.ds) file</strong>.</p>
+  <p> </p>
+  <p class="Note_text">(Note: the following text is a single line)</p>
+  <p> </p>
+  <p> “<strong>C:\Program Files\SFTC\DEFORM\v12.1.1\DEF_GUI_PST.EXE</strong>” -b FileName.DS -d ProbID.DB</p>
+  <p> </p>
+  <p>.DS file can be created interactively by post-processor.</p>
+  <p> </p>
+  <h2><a id="AIII_5_Extracting_the_Results"></a>Extracting the Results</h2>
+  <p>There are two ways of performing this action:  the text-based <a href="../pre_processor/7_introduction_to_pre-processor.htm">Preprocessor</a> and the text-based <a href="../post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor.htm">Postprocessor</a>.
+    Which one is used depends on the desired output. The most brute-force but straightforward operation is to open the text-based preprocessor, load the last step of the database and save the data as a keyword file. This keyword file can then be parsed
+    for any required information such as node temperatures (keyword:  <a href="../keyword_documentation/n/ndtmp.htm">NDTMP</a>). The action keyword that allows the user to read a database file is <a href="../keyword_documentation/d/dbread.htm">DBREAD</a>    and the action keyword that allows the user to write a keyword file out is <a href="../keyword_documentation/k/kfwrit.htm">KFWRIT</a> that is specified the same manner as the <a href="../keyword_documentation/k/kfread.htm">KFREAD</a> keyword.  The
+    keyword file can be read as in the case of assembling the input data as such:</p>
+  <p> </p>
+  <p>DBREAD 0</p>
+  <p>DEFORM_DEMO.DB</p>
+  <p>KFWRIT</p>
+  <p>OUTPUT.KEY</p>
+  <p> </p>
+  <p>The DEF_PRE_INP.txt would be the same where the DEF_COMMANDS.KEY file would contain the four lines above. The last step of the database would be read and stored in the keyword file named OUTPUT.KEY.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p>1. <a href="../about_deform/1_introduction_to_deform/1_10_basic_file_system.htm">Basic File System</a></p>
+  <p>2. <a href="../pre_processor/7_introduction_to_pre-processor.htm">Preprocessor</a></p>
+  <p>3. <a href="../simulator/23_deform_simulator/23_introduction_to_deform_simulator.htm">Simulation</a></p>
+  <p>4. <a href="../post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor.htm">Post Processor</a></p>
+
+</body></html>

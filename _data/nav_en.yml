@@ -1,0 +1,2078 @@
+- name: DEFORM V14.0.2
+  url: /docs/en/deform-integrated-2d-3d/
+- name: About DEFORM
+  url: /docs/en/about_deform/about_deform/
+  children:
+    - name: 1. Introduction to DEFORM
+      url: /docs/en/about_deform/1_introduction_to_deform/1_introduction_to_deform/
+      children:
+        - name: 1.1. Overview of DEFORM
+          url: /docs/en/about_deform/1_introduction_to_deform/1_1_overview_of_deform/
+        - name: 1.2. Deform Family products
+          url: /docs/en/about_deform/1_introduction_to_deform/1_2_deform_family_products/
+        - name: 1.3. Capabilities
+          url: /docs/en/about_deform/1_introduction_to_deform/1_3_capabilities/
+        - name: 1.4. Analyzing Manufacturing Process with DEFORM
+          url: /docs/en/about_deform/1_introduction_to_deform/1_4_analyzing_manufacturing_process_with_deform/
+        - name: 1.5. Before you Begin
+          url: /docs/en/about_deform/1_introduction_to_deform/1_5_before_you_begin/
+        - name: 1.6. The Deform System
+          url: /docs/en/about_deform/1_introduction_to_deform/1_6_the_deform_system/
+        - name: 1.7. Geometry Representation
+          url: /docs/en/about_deform/1_introduction_to_deform/1_7_geometry_representation/
+        - name: 1.8. Creating Input data
+          url: /docs/en/about_deform/1_introduction_to_deform/1_8_creating_input_data/
+        - name: 1.9. Units
+          url: /docs/en/about_deform/1_introduction_to_deform/1_9_units/
+        - name: 1.10. Basic File System
+          url: /docs/en/about_deform/1_introduction_to_deform/1_10_basic_file_system/
+        - name: 1.11. Release Notes
+          url: /docs/en/about_deform/1_introduction_to_deform/1_11_release_notes/
+- name: Starting up DEFORM
+  url: /docs/en/starting_up_deform/starting_up_deform/
+  children:
+    - name: 2. DEFORM Installation
+      url: /docs/en/starting_up_deform/2_deform_installation/2_deform_installation/
+      children:
+        - name: 2.1. Installation of DEFORM V14.0.2. in Windows
+          url: /docs/en/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_2_in_windows/
+        - name: 2.2. Installation of DEFORM V14.0.2. in Unix or Linux
+          url: /docs/en/starting_up_deform/2_deform_installation/2_2_installation_of_deform_v12_0_2_in_unix_or_linux/
+    - name: 3. License Manager
+      url: /docs/en/starting_up_deform/3_license_manager/license_manager_mainpg/
+      children:
+        - name: 3. Introduction to License Manager
+          url: /docs/en/starting_up_deform/3_license_manager/3_introduction_to_license_manager/
+        - name: 3.1. Deform License Setup
+          url: /docs/en/starting_up_deform/3_license_manager/3_1_deform_license_setup/
+        - name: 3.2. License Monitoring
+          url: /docs/en/starting_up_deform/3_license_manager/3_2_license_monitoring/
+        - name: 3.3. Services Monitoring
+          url: /docs/en/starting_up_deform/3_license_manager/3_3_services_monitoring/
+        - name: 3.4. Trouble Shooting License Issues
+          url: /docs/en/starting_up_deform/3_license_manager/3_4_trouble_shooting_license_issues/
+    - name: 4. GUI Main
+      url: /docs/en/starting_up_deform/4_gui_main/gui_main_mainpg/
+      children:
+        - name: 4. Introduction to GUI Main
+          url: /docs/en/starting_up_deform/4_gui_main/4_introduction_to_gui_main/
+        - name: 4.1. GUI Main layout
+          url: /docs/en/starting_up_deform/4_gui_main/4_1_gui_main_layout/
+- name: Integrated Manufacturing Process Setup
+  url: /docs/en/integrated_manufacturing_process_setup/integrated_manufacturing_process_mainpg/
+  children:
+    - name: 5. Introduction to Integrated Manufacturing Process
+      url: /docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/
+    - name: 6. Integrated Manufacturing Process Layout
+      url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/
+      children:
+        - name: 6.1. Integrated Manufacturing Process Pre-processor layout
+          url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/
+        - name: 6.2. Integrated Manufacturing Process Simulation layout
+          url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/
+        - name: 6.3. Integrated Manufacturing Process Post-processor layout
+          url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/
+        - name: 6.4. Main Menu
+          url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu/
+        - name: 6.5. File Structure
+          url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure/
+        - name: 6.6. Operations Management
+          url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_operations_management/
+          children:
+            - name: 6.6.1. Connecting Operations
+              url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_1_connecting_operations/
+            - name: 6.6.2. Read from DB concept
+              url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_2_read_from_db_concept/
+            - name: 6.6.3. Editing Operations
+              url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_3_editing_operations/
+            - name: 6.6.4. Upgrading Operations
+              url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations/
+            - name: 6.6.5. Adding Cycles
+              url: /docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_5_adding_cycles/
+- name: Pre Processor
+  url: /docs/en/pre_processor/pre-processor_mainpg/
+  children:
+    - name: 7. Introduction to Pre-Processor
+      url: /docs/en/pre_processor/7_introduction_to_pre-processor/
+    - name: 8. Pre Processor Layout
+      url: /docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/
+    - name: 9. Simulation Controls
+      url: /docs/en/pre_processor/9_simulation_controls/9_simulation_controls/
+      children:
+        - name: 9.1. Simulation type Settings
+          url: /docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/
+        - name: 9.2. Defining Step
+          url: /docs/en/pre_processor/9_simulation_controls/9_2_defining_step/
+        - name: 9.3. Stopping Controls
+          url: /docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/
+        - name: 9.4. Remesh Criteria
+          url: /docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/
+        - name: 9.5. Solver Settings
+          url: /docs/en/pre_processor/9_simulation_controls/9_5_solver_settings/
+        - name: 9.6. Process Conditions
+          url: /docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/
+        - name: 9.7. Advanced Options
+          url: /docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/
+        - name: 9.8. Control Files
+          url: /docs/en/pre_processor/9_simulation_controls/9_8_control_files/
+        - name: 9.9. Thermomechanical variables
+          url: /docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/
+        - name: 9.10. Output controls
+          url: /docs/en/pre_processor/9_simulation_controls/9_10_output_controls/
+    - name: 10. Material Data
+      url: /docs/en/pre_processor/10_material_data/10_material_data/
+      children:
+        - name: 10.1. Plastic Data
+          url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/
+          children:
+            - name: 10.1.1. FlowStress
+              url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/
+              children:
+                - name: 10.1.1.1. Tabular data format
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_1_tabular_data_format/
+                - name: 10.1.1.2. Power Law
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_2_power_law/
+                - name: 10.1.1.3. Flow stress for aluminum alloys (Type 1)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_3_flow_stress_for_aluminum_alloys_type_1/
+                - name: 10.1.1.4. Flow stress for aluminum alloys (Type 2)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_4_flow_stress_for_aluminum_alloys_type_2/
+                - name: 10.1.1.5. Linear hardening
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_5_linear_hardening/
+                - name: 10.1.1.6. Tabular_data_format_2
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_6_tabular_data_format_2/
+                - name: 10.1.1.7. Generalized Johnson and Cook model
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_7_generalized_johnson_and_cook_model/
+                - name: 10.1.1.8. Zerilli-Armstrong model
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_8_zerilli-armstrong_model/
+                - name: 10.1.1.9. Norton-Hoff Law model
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_9_norton-hoff_law_model/
+                - name: 10.1.1.10. Microstructure Flow stress model based on dislocation density and burgers vector
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_10_microstructure_dislocation_density_and_burgers_vector/
+                - name: 10.1.1.11. Texture based flow stress model f(strn,strnrt,O,T)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_11_texture_based_flow_stress_model_fstrnstrnrtot/
+                - name: 10.1.1.12. User defined Tabular data
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_12_user_defined_tabular_data/
+                - name: 10.1.1.13. User defined Tabular data (log)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_13_user_defined_tabular_data_log/
+                - name: 10.1.1.14. Bird-Mukharjee-Dorn equation
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_14_bird-mukharjee-dorn_equation/
+                - name: 10.1.1.15.User defined flow stress routine
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_15_user_defined_flow_stress_routine/
+                - name: 10.1.1.16. Flow stress database
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_16_flow_stress_database/
+                - name: 10.1.1.17. Material model data conversion utilities
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_17_material_model_data_conversion_utilities/
+            - name: 10.1.2. Creep
+              url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_creep_models/
+              children:
+                - name: "10.1.2.1. Perzyna's model"
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_1_perzyna_s_model/
+                - name: 10.1.2.2. Power Law
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_2_power_law/
+                - name: "10.1.2.3. Baily-Norton's model"
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_3_baily-norton_s_model/
+                - name: "10.1.2.4. Soderburg's model"
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_4_soderburg_s_model/
+                - name: 10.1.2.5. Tabular data (strain)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_5_tabular_data/
+                - name: 10.1.2.6. Tabular data  type2 (time)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_6_tabular_data_2_(time)/
+                - name: 10.1.2.7. Tabular (Linear)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_7_tabular_(linear)/
+                - name: 10.1.2.8. Tabular (Log)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_8_tabular_(log)/
+                - name: 10.1.2.9. Exponential law
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_9_exponential_law/
+                - name: 10.1.2.10. User Routines
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_10_user_routines/
+            - name: 10.1.3. Yield Models
+              url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_yield_models/
+              children:
+                - name: 10.1.3.1. Von Mises
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_1_von_mises/
+                - name: 10.1.3.2. Hill’s quadratic (FGHLMN)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_2_hill’s_quadratic_(fghlmn)/
+                - name: 10.1.3.3. Hill’s quadratic (R)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_3_hill’s_quadratic_(r)/
+                - name: 10.1.3.4. Lankford coefficient (R value)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_4_lankford_coefficient_(r_value)/
+                - name: 10.1.3.5. Hill’s Quadratic (polycrystalline plasticity model)
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_5_hill’s_quadratic_(polycrystalline_plasticity_model)/
+                - name: "10.1.3.6. User's routine"
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_6_user_s_routine/
+            - name: 10.1.5. Hardening rule models
+              url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_5_hardening_rule/10_1_5_hardening_rule/
+        - name: 10.2. Elastic Data
+          url: /docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/
+          children:
+            - name: 10.2.5. Hyperelastic
+              url: /docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_5_hyperelastic/
+        - name: 10.3. Thermal Data
+          url: /docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/
+        - name: 10.4. Diffusion Data
+          url: /docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/
+        - name: 10.6. Grain Data
+          url: /docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/
+          children:
+            - name: 10.6.1 Avrami Model
+              url: /docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_1_avrami_model/
+        - name: 10.7. Hardness Data
+          url: /docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/
+        - name: 10.8. Elec_Mag Data
+          url: /docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/
+        - name: 10.9. Transformation Data
+          url: /docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/
+          children:
+            - name: 10.9.1. Transformation Kinetics Models
+              url: /docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_1_transformation_kinetics_models/
+        - name: 10.12. Miscellaneous Data
+          url: /docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/
+          children:
+            - name: 10.12.1. Fracture Models
+              url: /docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/
+    - name: 11. General Object  Data Definition
+      url: /docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/
+    - name: 12. Geometry Modelling
+      url: /docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/
+      children:
+        - name: 12.1. 2D Geometry Data Defining 
+          url: /docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/
+        - name: 12.2. 2D Geometry Data Editing
+          url: /docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/
+        - name: 12.3. 3D Geometry Data Defining 
+          url: /docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/
+        - name: 12.4. 3D Geometry data Editing (GEO TOOL)
+          url: /docs/en/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_editing_geo_tooll/
+    - name: 13. Mesh Generation
+      url: /docs/en/pre_processor/13_mesh_generation/13_mesh_generation/
+      children:
+        - name: 13.1. 2D Mesh Generation
+          url: /docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/
+        - name: 13.2. 3D Tet Mesh Generation
+          url: /docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/
+        - name: 13.3. 3D Brick Mesh Generation
+          url: /docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/
+    - name: 14. Boundary Conditions
+      url: /docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/
+      children:
+        - name: 14.1. Symmetry Boundary Conditions
+          url: /docs/en/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/
+        - name: 14.2. Deformation Boundary Conditions
+          url: /docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/
+        - name: 14.3. Thermal Boundary Conditions
+          url: /docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/
+        - name: 14.4.  Diffusion Boundary Conditions
+          url: /docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/
+        - name: 14.5. Heating Boundary Conditions
+          url: /docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/
+    - name: 15. Movement Controls Definition
+      url: /docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/
+      children:
+        - name: 15.1. Speed
+          url: /docs/en/pre_processor/15_movement_controls_definition/15_1_speed/
+        - name: 15. 2. Force
+          url: /docs/en/pre_processor/15_movement_controls_definition/15_2_force/
+        - name: 15.3. Hammer
+          url: /docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/
+        - name: 15.4. Screw press
+          url: /docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/
+        - name: 15.5. Mechanical press
+          url: /docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/
+        - name: 15.6. Hydraulic press
+          url: /docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/
+        - name: 15.7. Sliding Die
+          url: /docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/
+        - name: 15.8. Path
+          url: /docs/en/pre_processor/15_movement_controls_definition/15_8_path/
+        - name: 15.9. Rotational Movement
+          url: /docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/
+        - name: 15.10. Torsional movement
+          url: /docs/en/pre_processor/15_movement_controls_definition/15_10_torsional_movement/
+        - name: 15.11. Friction Welding movement
+          url: /docs/en/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/
+    - name: 16 Object Properties
+      url: /docs/en/pre_processor/16_object_properties/16_object_properties/
+      children:
+        - name: 16.1. Deformation_Properties
+          url: /docs/en/pre_processor/16_object_properties/16_1_deformation_properties/
+        - name: 16.2. Thermal Properties
+          url: /docs/en/pre_processor/16_object_properties/16_2_thermal_properties/
+        - name: 16.3. Reference
+          url: /docs/en/pre_processor/16_object_properties/16_3_reference/
+        - name: 16.4. Fracture Properties
+          url: /docs/en/pre_processor/16_object_properties/16_4_fracture_properties/
+        - name: 16.5. Hardness estimation type
+          url: /docs/en/pre_processor/16_object_properties/16_5_hardness_properties/
+        - name: 16.6. Heating Properties
+          url: /docs/en/pre_processor/16_object_properties/16_6_heating_properties/
+        - name: 16.7. Symmetry Properties
+          url: /docs/en/pre_processor/16_object_properties/16_7_symmetry_properties/
+        - name: 16.8. Body Force
+          url: /docs/en/pre_processor/16_object_properties/16_8_body_force/
+        - name: 16.9. RSE
+          url: /docs/en/pre_processor/16_object_properties/16_9_rse/
+        - name: 16.10. Partial Domain 
+          url: /docs/en/pre_processor/16_object_properties/16_11_partial_domain/
+        - name: 16.11. User
+          url: /docs/en/pre_processor/16_object_properties/16_10_user/
+    - name: 17. Object Data Initialization
+      url: /docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/
+      children:
+        - name: 17.1. Node Data Window
+          url: /docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/
+        - name: 17.2. Element Data Window
+          url: /docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/
+        - name: 17.3. Data interploation window
+          url: /docs/en/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/
+    - name: 18. Object Manipulation Tools
+      url: /docs/en/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/
+      children:
+        - name: 18.1. Boolean
+          url: /docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/
+        - name: 18.2. Slicing
+          url: /docs/en/pre_processor/18_object_manipulation_tools/18_2_slicing/
+        - name: 18.3. Mirror Merge
+          url: /docs/en/pre_processor/18_object_manipulation_tools/18_3_mirror_merge/
+    - name: 19. Object Positioning
+      url: /docs/en/pre_processor/19_object_positioning/19_object_positioning/
+    - name: 20. Inter-object Data Definition
+      url: /docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/
+      children:
+        - name: 20.1. Friction and Contact criteria
+          url: /docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/
+        - name: 20.2. Interface Thermal Data
+          url: /docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/
+        - name: 20.3. Interface Resisitivity
+          url: /docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/
+        - name: 20.4. Tool Wear
+          url: /docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/
+        - name: 20.5. Rigid Contact
+          url: /docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/
+    - name: 21. Database Generation
+      url: /docs/en/pre_processor/21_database_generation/21_database_generation/
+    - name: 22. Convert 2D to 3D
+      url: /docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/
+- name: Simulator
+  url: /docs/en/simulator/simulator_mainpg/
+  children:
+    - name: 23. DEFORM Simulator
+      url: /docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/
+      children:
+        - name: 23.1. Start Stop and Resume Simulations
+          url: /docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/
+        - name: 23.2. Interactive and batch mode
+          url: /docs/en/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/
+        - name: 23.3. Simulation Graphics
+          url: /docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/
+        - name: 23.4. Process Monitor
+          url: /docs/en/simulator/23_deform_simulator/23_4_process_monitor/
+        - name: 23.5. Setting up MPICH
+          url: /docs/en/simulator/23_deform_simulator/23_5_setting_up_mpich/
+        - name: 23.6. Running Shared folder Simulations
+          url: /docs/en/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/
+        - name: 23.7. Email notification of the simulation
+          url: /docs/en/simulator/23_deform_simulator/23_7_email_the_results/
+        - name: 23.8. Trouble Shooting Simulation Running
+          url: /docs/en/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/
+- name: Post-Processor
+  url: /docs/en/post_processor/post_processor_mainpg/
+  children:
+    - name: 24. Introduction to Post Processor
+      url: /docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/
+    - name: 25. Post Processor Layout
+      url: /docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/
+    - name: 26. Post Processing tools and controls
+      url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/
+      children:
+        - name: 26.1. File operations in Post-processor
+          url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_1_file_operations_in_post_processor/
+        - name: 26.2. Handling Viewport and Windows in Post-Processor
+          url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/
+        - name: 26.3. Object Display Controls
+          url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_3_object_display_controls/
+        - name: 26.4. Simulation Step Display Controls
+          url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_4_simulation_step_display_controls/
+        - name: 26.5. Post-Processing Options
+          url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/
+        - name: 26.6. Post Processing tools
+          url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/
+          children:
+            - name: 26.6.1. Object Node
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_1_object_node/
+            - name: 26.6.2. Object Elements
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_2_object_elements/
+            - name: 26.6.3. State Variables
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/
+            - name: 26.6.4. SV Value Table 
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_4_sv_value_table/
+            - name: 26.6.5. Region of Interest
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_5_region_of_interest/
+            - name: 26.6.6. Summary
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_summary/
+            - name: 26.6.7. Load Stroke
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_7_load_stroke/
+            - name: 26.6.8. State variables between 2 points
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/
+            - name: 26.6.9. Point tracking
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_9_point_tracking/
+            - name: 26.6.10. CA Model setup
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_10_ca_model_setup/
+            - name: 26.6.11. Coupon Data Extraction
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_11_coupon_data_extraction/
+            - name: 26.6.12. Flownet Tracking
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/
+            - name: 26.6.13. Set User Defined Variable Tracking
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_13_set_user_defined_variable_tracking/
+            - name: 26.6.14. Volume Tracking
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_14_volume_tracking/
+            - name: 26.6.15. Mirror Symmetry
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_15_mirror_symmetry/
+            - name: 26.6.16. Interactive slicing
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/
+            - name: 26.6.17. Data Extraction
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_17_data_extraction/
+            - name: 26.6.18. CCT Curve
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_18_cct_curve/
+            - name: 26.6.19. Animation setup
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_19_animation_setup/
+            - name: 26.6.20 3D Viewer and Setup
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup/
+            - name: 26.6.21. Text and Image Annotation
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_21_text_and_image_annotation/
+            - name: 26.6.22. Superimpose
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_22_superimpose/
+            - name: 26.6.23. Presentation Editor and Presentation Player
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_23_presentation_editor/
+            - name: 26.6.24. Forming Limit Diagram
+              url: /docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_24_forming_limit_diagram/
+    - name: 27. Introduction to Report Generation
+      url: /docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/
+    - name: 28. Report Generation
+      url: /docs/en/post_processor/28_report_generation/28_report_generation/
+      children:
+        - name: 28.1. Editing Chapters
+          url: /docs/en/post_processor/28_report_generation/28_1_editing_chapters/
+- name: Operation Templates
+  url: /docs/en/operation_templates/operation_templates_mainpg/
+  children:
+    - name: 29. Cogging
+      url: /docs/en/operation_templates/29_cogging/29_introduction_to_cogging/
+      children:
+        - name: 29.1. Cogging Setup
+          url: /docs/en/operation_templates/29_cogging/29_1_cogging_setup/
+        - name: 29.2. Swaging Setup
+          url: /docs/en/operation_templates/29_cogging/29_2_swaging_setup/
+    - name: 30. Die Stress
+      url: /docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/
+      children:
+        - name: 2D Die Stress Analysis Theory
+          url: /docs/en/operation_templates/30_die_stress/2d_die_stress_analysis_theory/
+        - name: 3D Die Stress Analysis Theory
+          url: /docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/
+        - name: 30.1. 2D Die stress setup
+          url: /docs/en/operation_templates/30_die_stress/30_1_2d_die_stress_setup/
+        - name: 30.2. 3D Die stress setup
+          url: /docs/en/operation_templates/30_die_stress/30_2_3d_die_stress_setup/
+    - name: 31. Extrusion
+      url: /docs/en/operation_templates/31_extrusion/31_introduction_to_extrusion/
+      children:
+        - name: 31.1. 3D Extrusion
+          url: /docs/en/operation_templates/31_extrusion/31_1_3d_extrusion/
+    - name: 32. Multi Blow Forging
+      url: /docs/en/operation_templates/32_multi_blow_forging/32_introduction_to_multi_blow_forging/
+      children:
+        - name: 32.1. 2D Multi Blow Forging setup
+          url: /docs/en/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/
+        - name: 32.2. 3D Multi Blow Forging setup
+          url: /docs/en/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/
+    - name: 33. Forming
+      url: /docs/en/operation_templates/33_forming/33_introduction_to_forming/
+      children:
+        - name: 33.1. 2D Forming Setup
+          url: /docs/en/operation_templates/33_forming/33_1_2d_forming_setup/
+        - name: 33.2. 3D Forming Setup
+          url: /docs/en/operation_templates/33_forming/33_2_3d_forming_setup/
+    - name: 34. Forming Express
+      url: /docs/en/operation_templates/34_forming_express/34_introduction_to_forming_express/
+      children:
+        - name: 34.1. 2D Forming Express Setup
+          url: /docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/
+        - name: 34.2. 3D Forming Express Setup
+          url: /docs/en/operation_templates/34_forming_express/34_2_3d_forming_express_setup/
+    - name: 35. Heat Transfer
+      url: /docs/en/operation_templates/35_heat_transfer/35_introduction_to_heat_transfer_operations/
+      children:
+        - name: 35.1. 2D Heat Transfer Operation
+          url: /docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/
+        - name: 35.2. 3D Heat Transfer Operation
+          url: /docs/en/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/
+    - name: 36. Heat Transfer Express
+      url: /docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/
+      children:
+        - name: 36.1. 2D Heat Transfer Express
+          url: /docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/
+        - name: 36.2. 3D Heat Transfer Express
+          url: /docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/
+    - name: 37. Heat Treatment
+      url: /docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/
+      children:
+        - name: 37.1. 2D Heat Treatment Wizard
+          url: /docs/en/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/
+        - name: 37.2. 3D Heat Treatment Wizard
+          url: /docs/en/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/
+    - name: 38. Furnace Heating
+      url: /docs/en/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/
+    - name: 39. Cutting
+      url: /docs/en/operation_templates/39_cutting/39_introduction_to_cutting/
+      children:
+        - name: 39.1. 2D Cutting
+          url: /docs/en/operation_templates/39_cutting/39_1_2d_cutting/
+        - name: 39.2. 3D Turning
+          url: /docs/en/operation_templates/39_cutting/39_2_3d_turning/
+        - name: 39.3. 3D Milling
+          url: /docs/en/operation_templates/39_cutting/39_3_3d_milling/
+        - name: 39.4. 3D Drilling
+          url: /docs/en/operation_templates/39_cutting/39_4_drilling/
+        - name: Setting up 3D Machining Models 
+          url: /docs/en/operation_templates/39_cutting/setting_up_3d_machining_models/
+    - name: 40. Machining Distortion
+      url: /docs/en/operation_templates/40_machining_distortion/40_introduction_to_machining_distortion/
+      children:
+        - name: 40.1. 2D Machining Distortion
+          url: /docs/en/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/
+        - name: 40.2. 3D Machining Distortion
+          url: /docs/en/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/
+    - name: 41. Report Generation
+      url: /docs/en/operation_templates/41_report_generation/41_introduction_to_report_generation/
+      children:
+        - name: 41.1. Report Generation
+          url: /docs/en/operation_templates/41_report_generation/41_1_report_generation/
+    - name: 42. Ring Rolling
+      url: /docs/en/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/
+      children:
+        - name: 42.1. Ring Rolling
+          url: /docs/en/operation_templates/42_ring_rolling/42_1_ring_rolling/
+    - name: 43. Shape Rolling
+      url: /docs/en/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/
+      children:
+        - name: 43.1. Shape Rolling Manual
+          url: /docs/en/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/
+    - name: 44. 2D to 3D Converter
+      url: /docs/en/operation_templates/44_2d_to_3d_converter/44_introduction_to_2d_to_3d_converter/
+      children:
+        - name: 44.1. 2D to 3D Converter
+          url: /docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/
+    - name: 45. Boolean Operation
+      url: /docs/en/operation_templates/45_boolean_operation/43_introduction_to_boolean_operation/
+      children:
+        - name: 45.1. Boolean Operator
+          url: /docs/en/operation_templates/45_boolean_operation/45_1_boolean_operation/
+    - name: 46_Copy_Mirroring
+      url: /docs/en/operation_templates/46_copy_mirroring/44_introduction_to_copy_mirroring/
+      children:
+        - name: 46.1. Copy Mirroring
+          url: /docs/en/operation_templates/46_copy_mirroring/46_1_copy_mirroring/
+    - name: 47. Add Cycle
+      url: /docs/en/operation_templates/47_add_cycle/47_introduction_to_add_cycle/
+    - name: 48. Spinning
+      url: /docs/en/operation_templates/48_spinning/48_introduction_to_spinning/
+      children:
+        - name: 48.1. Spinning
+          url: /docs/en/operation_templates/48_spinning/48_1_spinning_manual/
+        - name: 48.2. Flow Forming
+          url: /docs/en/operation_templates/48_spinning/48_2_flow_forming/
+    - name: 49. Die Stress Study
+      url: /docs/en/operation_templates/49_die_stress_study/49_introduction_to_die_stress_study/
+      children:
+        - name: 49.1. 2D Die Stress Study
+          url: /docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/
+        - name: 49.2. 3D Die Stress Study
+          url: /docs/en/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/
+    - name: 50. 3D Geometry Tool
+      url: /docs/en/operation_templates/50_3d_geo_tool/50_introduction_to_3d_geo_tool/
+      children:
+        - name: 50.1. 3D Geo Tool
+          url: /docs/en/operation_templates/50_3d_geo_tool/50_1_3d_geo_tool/
+- name: Inverse Heat Wizard
+  url: /docs/en/inverse_heat/inverse_heat_main_pg/
+  children:
+    - name: 51 Introduction to Inverse Heat
+      url: /docs/en/inverse_heat/51_introduction_to_inverse_heat/
+    - name: 51.1. 2D Inverse Heat Manual
+      url: /docs/en/inverse_heat/51_1_2d_inverse_heat_manual/
+    - name: 51.2. 3D Inverse Heat Manual
+      url: /docs/en/inverse_heat/51_2_3d_inverse_heat_manual/
+- name: DOE and Optimization
+  url: /docs/en/doe_and_optimization/doe_and_optimization_mainpg/
+  children:
+    - name: 52. DOE Study
+      url: /docs/en/doe_and_optimization/52_doe_study/51_introduction_to_doe/
+      children:
+        - name: 52.1. DOE and DOE Output Operation Setup
+          url: /docs/en/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/
+        - name: 52.2. DOE Simulation Running and Monitoring
+          url: /docs/en/doe_and_optimization/52_doe_study/52_2_doe_simulation_running_and_monitoring/
+    - name: 53. Optimization Study
+      url: /docs/en/doe_and_optimization/53_optimization_study/53_introduction_to_optimization/
+      children:
+        - name: 53.1. Optimization Setup
+          url: /docs/en/doe_and_optimization/53_optimization_study/53_1_optimization_setup/
+        - name: 53.2. Optimization Simulation Running and Monitoring
+          url: /docs/en/doe_and_optimization/53_optimization_study/53_2_optimization_simulation_running_and_monitoring/
+    - name: 54. DOE Post-Processor
+      url: /docs/en/doe_and_optimization/54_doe_post_processor/54_introduction_to_doe_post/
+      children:
+        - name: 54.1. DOE Post Processor
+          url: /docs/en/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/
+- name: Applications
+  url: /docs/en/applications/55_applications/54_applications/
+  children:
+    - name: Additive Manufacturing Lab
+      url: /docs/en/applications/55_applications/55_additive_manufacturing/55_additive_manufacturing/
+    - name: Arc Welding
+      url: /docs/en/applications/55_applications/55_1_arc_welding/
+    - name: 2D Cartridge case drawing lab
+      url: /docs/en/labs/forming_labs/2d_cartridge_case_drawing_lab/
+    - name: Modelling of CFD Labs
+      url: /docs/en/applications/55_applications/55_1_modelling_of_cfd_labs/55_1_modelling_of_cfd_labs_main_pg/
+      children:
+        - name: 2D Laminar Flow Lab 
+          url: /docs/en/applications/55_applications/55_1_modelling_of_cfd_labs/2d_laminar_flow_lab/
+        - name: 2D Rayleigh-Benard convection Lab
+          url: /docs/en/applications/55_applications/55_1_modelling_of_cfd_labs/2d_rayleigh-benard_convection_lab/
+        - name: 2D Turbulent Flow Lab 
+          url: /docs/en/applications/55_applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/
+        - name: 3D Laminar Flow Lab
+          url: /docs/en/applications/55_applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/
+        - name: 3D Rayleigh-Benard convection Lab
+          url: /docs/en/applications/55_applications/55_1_modelling_of_cfd_labs/3d_rayleigh_benard_convection_lab/
+        - name: 3D Gas Quenching Lab 
+          url: /docs/en/applications/55_applications/55_1_modelling_of_cfd_labs/3d_gas_quenching_lab/
+    - name: Creep
+      url: /docs/en/applications/55_applications/55_creep/55_creep_main_pg/
+      children:
+        - name: 2D Creep
+          url: /docs/en/applications/55_applications/55_creep/2d_creep/
+    - name: Deformation Texture lab
+      url: /docs/en/applications/55_applications/55_deformation_texture_lab/deformation_texture_lab/
+    - name: Diffusion Bonding Lab
+      url: /docs/en/applications/55_applications/55_diffusion_bonding/55_diffusion_bonding_main_pg/
+      children:
+        - name: Diffusion Bonding Lab
+          url: /docs/en/applications/55_applications/55_diffusion_bonding/diffusion_bonding_lab/
+    - name: Electro Magnetic Forming
+      url: /docs/en/applications/55_applications/55_electro_magenetic_forming/55_electro_magnetic_forming_main_pg/
+      children:
+        - name: Electro-Magnetic Forming Lab1
+          url: /docs/en/applications/55_applications/55_electro_magenetic_forming/54_4_electro-magnetic_forming/
+    - name: Fracture
+      url: /docs/en/applications/55_applications/55_fracture/55_fracture_main_pg/
+      children:
+        - name: 2D Fracture
+          url: /docs/en/applications/55_applications/55_fracture/2d_fracture/
+        - name: 2D Fracture Element deactivation Lab
+          url: /docs/en/applications/55_applications/55_fracture/2d_fracture_element_deactivation_lab/
+        - name: 3D Fracture
+          url: /docs/en/applications/55_applications/55_fracture/3d_fracture/
+        - name: 3D Fracture Element deactivation Lab
+          url: /docs/en/applications/55_applications/55_fracture/3d_fracture_element_deactivation_lab/
+    - name: Friction Stir Welding
+      url: /docs/en/applications/55_applications/55_friction_stir_welding/55_friction_stir_welding_main_pg/
+      children:
+        - name: Friction Stir Welding Lab
+          url: /docs/en/applications/55_applications/55_friction_stir_welding/55_friction_stir_welding/
+    - name: Induction Heating
+      url: /docs/en/applications/55_applications/55_4_induction_heating/55_4_induction_heating_labs_main_pg/
+      children:
+        - name: Setting up Induction heating in DEFORM
+          url: /docs/en/applications/55_applications/55_4_induction_heating/setting_up_induction_heating_in_deform/
+        - name: 2D Induction Heating Lab 1
+          url: /docs/en/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab1/
+        - name: 2D Induction Heating Lab2
+          url: /docs/en/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab2/
+        - name: 3D Induction Heating Lab1
+          url: /docs/en/applications/55_applications/55_4_induction_heating/3d_induction_heating_lab1/
+        - name: 3D Induction Heating Lab2
+          url: /docs/en/applications/55_applications/55_4_induction_heating/3d_induction_heating_lab2/
+        - name: 3D Induction Heating Lab3
+          url: /docs/en/applications/55_applications/55_4_induction_heating/3d_induction_heating_lab3/
+    - name: Inertia Welding
+      url: /docs/en/applications/55_applications/55_inertia_welding/55_inertia_welding_main_pg/
+      children:
+        - name: 2D Inertia Welding
+          url: /docs/en/applications/55_applications/55_inertia_welding/2d_inertia_welding/
+    - name: Material Removal
+      url: /docs/en/applications/55_applications/55_material_removal/55_material_removal_main_pg/
+      children:
+        - name: 2D Boolean Trimming Lab
+          url: /docs/en/applications/55_applications/55_material_removal/2d_boolean_trimming_lab/
+    - name: Multipass spinning with Quick Evaluation solver lab
+      url: /docs/en/applications/55_applications/55_mulitpass_spinning_with_qe_solver/multipass_spinning_with_qe_lab/
+    - name: Nitiriding Labs
+      url: /docs/en/applications/55_applications/55_nitriding_labs/55_nitriding_labs_main_pg/
+      children:
+        - name: 2D Nitriding Lab
+          url: /docs/en/applications/55_applications/55_nitriding_labs/2d_nitriding_labs/
+        - name: 2D Nitrocarburizing Lab1
+          url: /docs/en/applications/55_applications/55_nitriding_labs/2d_nitrocarburizing_lab1/
+        - name: 3D Nitriding Lab
+          url: /docs/en/applications/55_applications/55_nitriding_labs/3d_nitriding_lab/
+        - name: 3D Nitrocarburizing Lab1
+          url: /docs/en/applications/55_applications/55_nitriding_labs/3d_nitrocarburizing_lab1/
+    - name: Orbital Forming
+      url: /docs/en/applications/55_applications/55_orbital_movement/55_orbital_forming_main_pg/
+      children:
+        - name: 3D Orbital Movement
+          url: /docs/en/applications/55_applications/55_orbital_movement/3d_orbital_movement/
+    - name: Press Model
+      url: /docs/en/applications/55_applications/55_press_model/55_press_model_main_pg/
+      children:
+        - name: 3D Press Model Lab
+          url: /docs/en/applications/55_applications/55_press_model/3d_press_model_lab/
+    - name: Radiation Analysis Lab
+      url: /docs/en/applications/55_applications/55_radiation_analysis_lab/radiation_analysis_labs_main_pg/
+      children:
+        - name: 2D Radiation Analysis Lab
+          url: /docs/en/applications/55_applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/
+    - name: Resistance Heating Labs
+      url: /docs/en/applications/55_applications/55_resistance_heating_labs/resistance_heating_labs_main_pg/
+      children:
+        - name: A Theoretical Background to Resistance Heating
+          url: /docs/en/applications/55_applications/55_resistance_heating_labs/a_theoretical_background_to_resistance_heating/
+        - name: 2D Resistance Heating Lab1
+          url: /docs/en/applications/55_applications/55_resistance_heating_labs/2d_resistance_heating_lab1/
+    - name: Rivet Installation
+      url: /docs/en/applications/55_applications/55_rivet_installation/rivet_installation_labs_main_pg/
+      children:
+        - name: 2D Rivet Lab
+          url: /docs/en/applications/55_applications/55_rivet_installation/2d_rivet_lab/
+    - name: Sheet Forming
+      url: /docs/en/applications/55_applications/55_sheet_forming/55_3_cup_drawing_lab_mian_pg/
+      children:
+        - name: Sheet Forming in DEFORM 3D
+          url: /docs/en/applications/55_applications/55_sheet_forming/sheet_forming_in_deform_3d/
+        - name: 2D Cup Drawing Lab
+          url: /docs/en/applications/55_applications/55_sheet_forming/2d_cup_drawing_lab/
+        - name: 3D Cup Drawing Lab
+          url: /docs/en/applications/55_applications/55_sheet_forming/3d_cup_drawing_lab/
+    - name: Stress Relaxation
+      url: /docs/en/applications/55_applications/55_stress_relaxation/55_stress_relaxation_main_pg/
+      children:
+        - name: Stress Relaxation Lab
+          url: /docs/en/applications/55_applications/55_stress_relaxation/stress_relaxation_lab/
+    - name: Thermal Cycling
+      url: /docs/en/applications/55_applications/55_thermal_cycling/55_thermal_cycling_main_pg/
+      children:
+        - name: 2D Thermal Cycling
+          url: /docs/en/applications/55_applications/55_thermal_cycling/2d_thermal_cycling/
+    - name: Thermal Distortion
+      url: /docs/en/applications/55_applications/55_thermal_distortion/thermal_distorsion_main_pg/
+      children:
+        - name: Thermal Distortion Lab
+          url: /docs/en/applications/55_applications/55_thermal_distortion/thermal_distortion_lab/
+    - name: Tool Wear Labs
+      url: /docs/en/applications/55_applications/55_tool_wear_labs/55_tool_wear_labs_main_pg/
+      children:
+        - name: 2D Tool Wear Lab in MO
+          url: /docs/en/applications/55_applications/55_tool_wear_labs/2d_tool_wear_lab_in_mo/
+        - name: 3D Tool Wear Lab
+          url: /docs/en/applications/55_applications/55_tool_wear_labs/3d_tool_wear_lab/
+    - name: Tube Flaring
+      url: /docs/en/applications/55_applications/55_tube_flaring/tube_piercing_main_pg/
+      children:
+        - name: Tube Flaring Lab
+          url: /docs/en/applications/55_applications/55_tube_flaring/tube_flaring_lab/
+- name: User Routines
+  url: /docs/en/user_routines/user_routine_mainpg/
+  children:
+    - name: 56. User Routines in DEFORM
+      url: /docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/
+      children:
+        - name: 56. 1. Introduction to User Routines
+          url: /docs/en/user_routines/56_user_routines_in_deform/56_1_introduction_to_user_routines/
+        - name: 56.2. 2D User Defined FEM Routines
+          url: /docs/en/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/
+        - name: 56.3. 3D User Defined FEM Routines
+          url: /docs/en/user_routines/56_user_routines_in_deform/56_3_3d_user_defined_fem_routines/
+        - name: 56.4. User-Defined Post-Processing Routines
+          url: /docs/en/user_routines/56_user_routines_in_deform/56_4_user-defined_post-processing_routines/
+- name: Data Analytics
+  url: /docs/en/57_data_analytics/data_analytics_main_pg/
+  children:
+    - name: 57. Introduction to DEFORM Data Analytics
+      url: /docs/en/57_data_analytics/57_introduction_to_data_analytics/
+    - name: 57.1. DEFORM Data Analytics User Interface Overview
+      url: /docs/en/57_data_analytics/57_1_data_analytics/
+    - name: 57.2. DEFORM Data Analytics Data Table
+      url: /docs/en/57_data_analytics/57_2_deform_data_analytics_data_table/
+    - name: 57.3. DEFORM Data Analytics Data Import and Export
+      url: /docs/en/57_data_analytics/57_3_deform_data_analytics_data_import_and_export/
+    - name: 57.4. DEFORM Data Analytics Plotting Data
+      url: /docs/en/57_data_analytics/57_4_deform_data_analytics_plotting_data/
+    - name: 57.5. DEFORM Data Analytics Expressions
+      url: /docs/en/57_data_analytics/57_5_deform_data_analytics_expressions/
+    - name: 57.6. DEFORM Data Analytics Data Modeling
+      url: /docs/en/57_data_analytics/57_6_deform_data_analytics_data_modelin/
+- name: Appendices
+  url: /docs/en/appendices/appendices_list/
+  children:
+    - name: "Appendix I : Elementary Concepts in Metal forming and Finite Element  Analysis"
+      url: /docs/en/appendices/appendix_i_elementary_concepts_in_metalforming_and_fem/
+    - name: "Appendix II : Launching the Simulation Engine from a Command Prompt"
+      url: /docs/en/appendices/appendix_ii_launching_the_simulation_engine_from_a_command_prompt/
+    - name: "Appendix III: Running DEFORM in text mode"
+      url: /docs/en/appendices/appendix_iii_running_deform_in_text_mode/
+    - name: "Appendix IV: Determining 'R' coefficients for anisotropy models"
+      url: /docs/en/appendices/appendix_iv_determining_r_coefficientss/
+    - name: "Appendix V: The elasto-plastic model"
+      url: /docs/en/appendices/appendix_v__the_elasto-plastic_model/
+    - name: "Appendix VI: Part is deforming but strain does not accumulate"
+      url: /docs/en/appendices/appendix_vi__part_is_deforming_but_strain_does_not_accumulate/
+    - name: "Appendix VII: Checking the Forming loads of a simulation"
+      url: /docs/en/appendices/appendix_vii__checking_the_forming_loads_of_a_simulation/
+    - name: "Appendix VIII: Preventing leakage of nodes in sectioned simulations"
+      url: /docs/en/appendices/appendix_viii_preventing_leakage_of_nodes/
+    - name: "Appendix IX: Generating a Circular Geometry With a Hole"
+      url: /docs/en/appendices/appendix_ix_generating_a_circular_geometry_with_a_hole/
+    - name: "Appendix X: Meshing an object with multiple material group"
+      url: /docs/en/appendices/appendix_x_meshing_an_object_with_multiple_material_group/
+    - name: "Appendix XI: Near surface mesh functions"
+      url: /docs/en/appendices/appendix_xi__near_surface_mesh_functions/
+    - name: "Appendix XII: Modelling of Spring Loaded Die Using Force Controlled Objects"
+      url: /docs/en/appendices/appendix_xii__modelling_of_spring_loaded_die/
+    - name: "Appendix XIII: Fine Points on Using Force Controlled Dies"
+      url: /docs/en/appendices/appendix_xiii_fine_points_on_using_force_controlled_dies/
+    - name: "Appendix XIV: Rotating Workpiece Simulations"
+      url: /docs/en/appendices/appendix_xiv_rotating_workpiece_simulations/
+    - name: "Appendix XV: The Double Concave Corner Constraint"
+      url: /docs/en/appendices/appendix_xv_the_double_concave_corner_constraint/
+    - name: "Appendix XVI: Adding Gas Trap Calculation to a Simulation "
+      url: /docs/en/appendices/appendix_xvi_adding_gas_trap_calculation_to_a_simulation/
+    - name: Appendix XVII Data Files
+      url: /docs/en/appendices/appendix_xvii_data_files/
+    - name: Appendix XVIII How to use Explicit Solver
+      url: /docs/en/appendices/appendix_xviii_how_to_use_explicit_solver/
+    - name: Appendix XIX Settings for CG solver for 3D simulation
+      url: /docs/en/appendices/appendix_xix_settings_for_cg_solver_for_3d_simulation/
+    - name: "Appendix XX: Coupled Die stress Analysis"
+      url: /docs/en/operation_templates/30_die_stress/coupled_die_stress_analysis/
+    - name: "Appendix XXI: How to setup Intel Fortran Compiler"
+      url: /docs/en/appendices/appendix_xxi_fem_user_routine_support/
+- name: Keyword Documentation
+  url: /docs/en/keyword_documentation/deform_keywords_list/
+  children:
+    - name: Action Keywords
+      url: /docs/en/keyword_documentation/action_keywords_list/
+    - name: Inter-Material keywords
+      url: /docs/en/keyword_documentation/inter-material_keywords/
+    - name: Inter-Object keywords
+      url: /docs/en/keyword_documentation/inter-object_keywords/
+    - name: Material keywords
+      url: /docs/en/keyword_documentation/material_keywords/
+    - name: Object Data keywords
+      url: /docs/en/keyword_documentation/object_data_keywords/
+    - name: Simulation Controls keywords
+      url: /docs/en/keyword_documentation/simulation_controls_keywords/
+    - name: A
+      url: /docs/en/keyword_documentation/a/a_main_page/
+      children:
+        - name: ACTOUT (2D3D)
+          url: /docs/en/keyword_documentation/a/actout/
+        - name: ACVCOF (2D3D)
+          url: /docs/en/keyword_documentation/a/acvcof/
+        - name: ALPHA (2D3D)
+          url: /docs/en/keyword_documentation/a/alpha/
+        - name: ANGMOV (2D)
+          url: /docs/en/keyword_documentation/a/angmov/
+        - name: ANGMOV(3D)
+          url: /docs/en/keyword_documentation/a/angmov(3d)/
+        - name: ANGMO2 (3D)
+          url: /docs/en/keyword_documentation/a/angmo2_(3d)/
+        - name: ANGMVY (2D)
+          url: /docs/en/keyword_documentation/a/angmvy/
+        - name: ANISO (2D3D)
+          url: /docs/en/keyword_documentation/a/aniso/
+        - name: AVGSTR (2D3D)
+          url: /docs/en/keyword_documentation/a/avgstr/
+    - name: B
+      url: /docs/en/keyword_documentation/b/b_keywords/
+      children:
+        - name: BCCANG (2D3D)
+          url: /docs/en/keyword_documentation/b/bccang/
+        - name: BCCCRB (2D)
+          url: /docs/en/keyword_documentation/b/bcccrb/
+        - name: BCCCRB (3D)
+          url: /docs/en/keyword_documentation/b/bcccrb_3d/
+        - name: BCCDEF (2D)
+          url: /docs/en/keyword_documentation/b/bccdef/
+        - name: BCCDEF (3D)
+          url: /docs/en/keyword_documentation/b/bccdef_3d/
+        - name: BCCDFN (2D)
+          url: /docs/en/keyword_documentation/b/bccdfn/
+        - name: BCCDFN (3D)
+          url: /docs/en/keyword_documentation/b/bccdfn_3d/
+        - name: BCCFNC (2D3D)
+          url: /docs/en/keyword_documentation/b/bccfnc/
+        - name: BCCRHT (2D3D)
+          url: /docs/en/keyword_documentation/b/bccrht/
+        - name: BCCTFN (2D3D)
+          url: /docs/en/keyword_documentation/b/bcctfn/
+        - name: BCCTMP (2D3D)
+          url: /docs/en/keyword_documentation/b/bcctmp/
+        - name: BLZMAN (2D3D)
+          url: /docs/en/keyword_documentation/b/blzman/
+        - name: BRDEXT (2D3D)
+          url: /docs/en/keyword_documentation/b/brdext/
+        - name: BURGRS (2D3D)
+          url: /docs/en/keyword_documentation/b/burgrs/
+    - name: C
+      url: /docs/en/keyword_documentation/c/c_keywords/
+      children:
+        - name: CAPARA (2D3D)
+          url: /docs/en/keyword_documentation/c/capara/
+        - name: CNTACT (2D)
+          url: /docs/en/keyword_documentation/c/cntact/
+        - name: CNTACT (3D)
+          url: /docs/en/keyword_documentation/c/cntact_3d/
+        - name: CNTERR (2D)
+          url: /docs/en/keyword_documentation/c/cnterr/
+        - name: CNTMTH (3D)
+          url: /docs/en/keyword_documentation/c/cntmth/
+        - name: CNTRA2 (3D)
+          url: /docs/en/keyword_documentation/c/cntra2/
+        - name: CNTRAX(3D)
+          url: /docs/en/keyword_documentation/c/cntrax(3d)/
+        - name: CNTRAX (2D)
+          url: /docs/en/keyword_documentation/c/cntrax/
+        - name: CNVCOF (2D3D)
+          url: /docs/en/keyword_documentation/c/cnvcof/
+        - name: CNVT3D (2D3D)
+          url: /docs/en/keyword_documentation/c/cnvt3d/
+        - name: COARSE (2D3D)
+          url: /docs/en/keyword_documentation/c/coarse/
+        - name: CPYOBJ (2D3D)
+          url: /docs/en/keyword_documentation/c/cpyobj/
+        - name: CRBFLX (2D3D)
+          url: /docs/en/keyword_documentation/c/crbflx/
+        - name: CRDSYS (2D3D)
+          url: /docs/en/keyword_documentation/c/crdsys/
+        - name: CREEP (2D3D)
+          url: /docs/en/keyword_documentation/c/creep/
+        - name: CRPTIM (2D3D)
+          url: /docs/en/keyword_documentation/c/crptim/
+        - name: CSFREQ (2D3D)
+          url: /docs/en/keyword_documentation/c/csfreq/
+        - name: CSPMTX (3D)
+          url: /docs/en/keyword_documentation/c/cspmtx/
+        - name: CURRNT (2D)
+          url: /docs/en/keyword_documentation/c/currnt/
+        - name: CURRNT (3D)
+          url: /docs/en/keyword_documentation/c/currnt_3d/
+        - name: CURSIM (2D3D)
+          url: /docs/en/keyword_documentation/c/cursim/
+        - name: CUSVAR (2D3D)
+          url: /docs/en/keyword_documentation/c/cusvar/
+        - name: CVGERR (2D)
+          url: /docs/en/keyword_documentation/c/cvgerr/
+        - name: CVGERR (3D)
+          url: /docs/en/keyword_documentation/c/cvgerr_3d/
+        - name: CVNAME (2D3D)
+          url: /docs/en/keyword_documentation/c/cvname/
+    - name: D
+      url: /docs/en/keyword_documentation/d/d_keywords/
+      children:
+        - name: DAMAGE (2D)
+          url: /docs/en/keyword_documentation/d/damage/
+        - name: DAMAGE (3D)
+          url: /docs/en/keyword_documentation/d/damage_3d/
+        - name: DATOM (2D3D)
+          url: /docs/en/keyword_documentation/d/datom/
+        - name: DBREAD (2D)
+          url: /docs/en/keyword_documentation/d/dbread/
+        - name: DBREAD (3D)
+          url: /docs/en/keyword_documentation/d/dbread_3d/
+        - name: DEFAMG (2D3D)
+          url: /docs/en/keyword_documentation/d/defamg/
+        - name: DEFBWD (2D3D)
+          url: /docs/en/keyword_documentation/d/defbwd/
+        - name: DEFFRZ (2D3D)
+          url: /docs/en/keyword_documentation/d/deffrz/
+        - name: DEFINT (2D3D)
+          url: /docs/en/keyword_documentation/d/defint/
+        - name: DEMAX (2D3D)
+          url: /docs/en/keyword_documentation/d/demax/
+        - name: DENSTY (2D3D)
+          url: /docs/en/keyword_documentation/d/densty/
+        - name: DIEEDG (3D)
+          url: /docs/en/keyword_documentation/d/dieedg_3d/
+        - name: DIEGEO (2D)
+          url: /docs/en/keyword_documentation/d/diegeo/
+        - name: DIEGEO (3D)
+          url: /docs/en/keyword_documentation/d/diegeo_3d/
+        - name: DIEPNT (3D)
+          url: /docs/en/keyword_documentation/d/diepnt/
+        - name: DIFBND (2D3D)
+          url: /docs/en/keyword_documentation/d/difbnd/
+        - name: DIFCOE (2D3D)
+          url: /docs/en/keyword_documentation/d/difcoe/
+        - name: DIM (2D3D)
+          url: /docs/en/keyword_documentation/d/dim/
+        - name: DOESCL (2D3D)
+          url: /docs/en/keyword_documentation/d/doescl/
+        - name: DPLEN (3D)
+          url: /docs/en/keyword_documentation/d/dplen/
+        - name: DRMESH (3D)
+          url: /docs/en/keyword_documentation/d/drmesh/
+        - name: DRZ (2D)
+          url: /docs/en/keyword_documentation/d/drz/
+        - name: DRZ (3D)
+          url: /docs/en/keyword_documentation/d/drz_3d/
+        - name: DSMAX (2D3D)
+          url: /docs/en/keyword_documentation/d/dsmax/
+        - name: DSTROKE (2D3D)
+          url: /docs/en/keyword_documentation/d/dstroke/
+        - name: DTMAX (2D3D)
+          url: /docs/en/keyword_documentation/d/dtmax/
+        - name: DTPMAX (2D)
+          url: /docs/en/keyword_documentation/d/dtpmax/
+        - name: DTPMAX (3D)
+          url: /docs/en/keyword_documentation/d/dtpmax_3d/
+        - name: DTSUB (2D)
+          url: /docs/en/keyword_documentation/d/dtsub/
+        - name: DTSUB (3D)
+          url: /docs/en/keyword_documentation/d/dtsub_3d/
+        - name: DTTYPE (2D3D)
+          url: /docs/en/keyword_documentation/d/dttype/
+        - name: DVMAX (2D3D)
+          url: /docs/en/keyword_documentation/d/dvmax/
+        - name: DVOLF (2D3D)
+          url: /docs/en/keyword_documentation/d/dvolf/
+        - name: DYNARY (2D3D)
+          url: /docs/en/keyword_documentation/d/dynary/
+    - name: E
+      url: /docs/en/keyword_documentation/e/e_keywords/
+      children:
+        - name: ECAFLX (2D)
+          url: /docs/en/keyword_documentation/e/ecaflx/
+        - name: ECAFLX (3D)
+          url: /docs/en/keyword_documentation/e/ecaflx_3d/
+        - name: ECATFN (2D)
+          url: /docs/en/keyword_documentation/e/ecatfn/
+        - name: ECATFN (3D)
+          url: /docs/en/keyword_documentation/e/ecatfn_3d/
+        - name: ECCATM (2D)
+          url: /docs/en/keyword_documentation/e/eccatm/
+        - name: ECCATM (3D)
+          url: /docs/en/keyword_documentation/e/eccatm_3d/
+        - name: ECCDEF (2D)
+          url: /docs/en/keyword_documentation/e/eccdef/
+        - name: ECCDEF (3D)
+          url: /docs/en/keyword_documentation/e/eccdef_3d/
+        - name: ECCRHT (2D)
+          url: /docs/en/keyword_documentation/e/eccrht/
+        - name: ECCRHT (3D)
+          url: /docs/en/keyword_documentation/e/eccrht_3d/
+        - name: ECCTMP (2D)
+          url: /docs/en/keyword_documentation/e/ecctmp/
+        - name: ECCTMP (3D)
+          url: /docs/en/keyword_documentation/e/ecctmp_3d/
+        - name: ECDEFN (2D)
+          url: /docs/en/keyword_documentation/e/ecdefn/
+        - name: ECDEFN (3D)
+          url: /docs/en/keyword_documentation/e/ecdefn_3d/
+        - name: ECHFLX (2D)
+          url: /docs/en/keyword_documentation/e/echflx/
+        - name: ECHFLX (3D)
+          url: /docs/en/keyword_documentation/e/echflx_3d/
+        - name: ECPRES (2D)
+          url: /docs/en/keyword_documentation/e/ecpres/
+        - name: ECPRES (3D)
+          url: /docs/en/keyword_documentation/e/ecpres_3d/
+        - name: ECRFLX (2D)
+          url: /docs/en/keyword_documentation/e/ecrflx/
+        - name: ECRFLX (3D)
+          url: /docs/en/keyword_documentation/e/ecrflx_3d/
+        - name: ECRHFN (2D)
+          url: /docs/en/keyword_documentation/e/ecrhfn/
+        - name: ECRHFN (3D)
+          url: /docs/en/keyword_documentation/e/ecrhfn_3d/
+        - name: ECTMFN (2D)
+          url: /docs/en/keyword_documentation/e/ectmfn/
+        - name: ECTMFN (3D)
+          url: /docs/en/keyword_documentation/e/ectmfn_3d/
+        - name: ELMCON (2D)
+          url: /docs/en/keyword_documentation/e/elmcon/
+        - name: ELMCON (3D)
+          url: /docs/en/keyword_documentation/e/elmcon_3d/
+        - name: ELMNOD (2D3D)
+          url: /docs/en/keyword_documentation/e/elmnod/
+        - name: ELPSOL (2D3D)
+          url: /docs/en/keyword_documentation/e/elpsol/
+        - name: ELRST (2D3D)
+          url: /docs/en/keyword_documentation/e/elrst/
+        - name: EMAX (2D3D)
+          url: /docs/en/keyword_documentation/e/emax/
+        - name: EMSVTY (2D3D)
+          url: /docs/en/keyword_documentation/e/emsvty/
+        - name: ENVATM (2D3D)
+          url: /docs/en/keyword_documentation/e/envatm/
+        - name: ENVTMP (2D3D)
+          url: /docs/en/keyword_documentation/e/envtmp/
+        - name: ERECID (2D3D)
+          url: /docs/en/keyword_documentation/e/erecid/
+        - name: ERECVL (2D3D)
+          url: /docs/en/keyword_documentation/e/erecvl/
+        - name: EXECMD (2D3D)
+          url: /docs/en/keyword_documentation/e/execmd/
+        - name: EXPAND (2D3D)
+          url: /docs/en/keyword_documentation/e/expand/
+    - name: F
+      url: /docs/en/keyword_documentation/f/f_keywords/
+      children:
+        - name: FLDGEO (3D)
+          url: /docs/en/keyword_documentation/f/fldgeo/
+        - name: FLWNET (3D)
+          url: /docs/en/keyword_documentation/f/flwnet/
+        - name: FORCE (2D)
+          url: /docs/en/keyword_documentation/f/force/
+        - name: FORCE (3D)
+          url: /docs/en/keyword_documentation/f/force_3d/
+        - name: FPERV (2D)
+          url: /docs/en/keyword_documentation/f/fperv/
+        - name: FPERV (3D)
+          url: /docs/en/keyword_documentation/f/fperv_3d/
+        - name: FRAE2H (2D3D)
+          url: /docs/en/keyword_documentation/f/frae2h/
+        - name: FRCFAC (2D3D)
+          url: /docs/en/keyword_documentation/f/frcfac/
+        - name: FRCFAI (3D)
+          url: /docs/en/keyword_documentation/f/frcfai/
+        - name: FRCMOD (2D3D)
+          url: /docs/en/keyword_documentation/f/frcmod/
+        - name: FRCMTH (2D)
+          url: /docs/en/keyword_documentation/f/frcmth/
+        - name: FRCNEL (2D)
+          url: /docs/en/keyword_documentation/f/frcnel/
+        - name: FRCNEL (3D)
+          url: /docs/en/keyword_documentation/f/frcnel_3d/
+        - name: FRCROT (2D)
+          url: /docs/en/keyword_documentation/f/frcrot/
+        - name: FRCSTP (2D)
+          url: /docs/en/keyword_documentation/f/frcstp/
+        - name: FRCWIN (2D)
+          url: /docs/en/keyword_documentation/f/frcwin/
+        - name: FRCWIN (3D)
+          url: /docs/en/keyword_documentation/f/frcwin_3d/
+        - name: FRNNAM (2D3D)
+          url: /docs/en/keyword_documentation/f/frnnam/
+        - name: FRQNCY (2D3D)
+          url: /docs/en/keyword_documentation/f/frqncy/
+        - name: FRZ (2D)
+          url: /docs/en/keyword_documentation/f/frz/
+        - name: FRZ (3D)
+          url: /docs/en/keyword_documentation/f/frz_3d/
+        - name: FSTRES (2D3D)
+          url: /docs/en/keyword_documentation/f/fstres/
+    - name: G
+      url: /docs/en/keyword_documentation/g/g_keywords/
+      children:
+        - name: GBENGY (2D3D)
+          url: /docs/en/keyword_documentation/g/gbengy/
+        - name: GBMOBI (2D3D)
+          url: /docs/en/keyword_documentation/g/gbmobi/
+        - name: GENAXS (3D)
+          url: /docs/en/keyword_documentation/g/genaxs/
+        - name: GENCTC (2D3D)
+          url: /docs/en/keyword_documentation/g/genctc/
+        - name: GENDB (2D3D)
+          url: /docs/en/keyword_documentation/g/gendb/
+        - name: GENGEO (2D3D)
+          url: /docs/en/keyword_documentation/g/gengeo/
+        - name: GENSUB (3D)
+          url: /docs/en/keyword_documentation/g/gensub/
+        - name: GENTDB (2D3D)
+          url: /docs/en/keyword_documentation/g/gentdb/
+        - name: GEO23 (2D3D)
+          url: /docs/en/keyword_documentation/g/geo23/
+        - name: GEOERR (2D3D)
+          url: /docs/en/keyword_documentation/g/geoerr/
+        - name: GEOPR2
+          url: /docs/en/keyword_documentation/g/geopr2/
+        - name: GEOPR3
+          url: /docs/en/keyword_documentation/g/geopr3/
+        - name: GEOSEC (2D3D)
+          url: /docs/en/keyword_documentation/g/geosec/
+        - name: GEOTYP (2D)
+          url: /docs/en/keyword_documentation/g/geotyp/
+        - name: GFREAD (2D3D)
+          url: /docs/en/keyword_documentation/g/gfread/
+        - name: GRAIN (2D3D)
+          url: /docs/en/keyword_documentation/g/grain/
+        - name: GRNDAT (2D3D)
+          url: /docs/en/keyword_documentation/g/grndat/
+        - name: GRNMDL (2D3D)
+          url: /docs/en/keyword_documentation/g/grnmdl/
+    - name: H
+      url: /docs/en/keyword_documentation/h/h_keywords/
+      children:
+        - name: HDNEST (2D3D)
+          url: /docs/en/keyword_documentation/h/hdnest/
+        - name: HDNOBJ (2D3D)
+          url: /docs/en/keyword_documentation/h/hdnobj/
+        - name: HDNPHA (2D3D)
+          url: /docs/en/keyword_documentation/h/hdnpha/
+        - name: HDNRUL (2D3D)
+          url: /docs/en/keyword_documentation/h/hdnrul/
+        - name: HDNTIM (2D3D)
+          url: /docs/en/keyword_documentation/h/hdntim/
+        - name: HEATCP (2D3D)
+          url: /docs/en/keyword_documentation/h/heatcp/
+        - name: HITSRC (3D)
+          url: /docs/en/keyword_documentation/h/hitsrc/
+        - name: HTMTHD (2D3D)
+          url: /docs/en/keyword_documentation/h/htmthd/
+    - name: I
+      url: /docs/en/keyword_documentation/i/i_keywords/
+      children:
+        - name: IHTCOF (2D)
+          url: /docs/en/keyword_documentation/i/ihtcof/
+        - name: IHTCOF (3D)
+          url: /docs/en/keyword_documentation/i/ihtcof_3d/
+        - name: IMPEQP (2D3D)
+          url: /docs/en/keyword_documentation/i/impeqp/
+        - name: INICTC (2D3D)
+          url: /docs/en/keyword_documentation/i/inictc/
+        - name: INIGES (2D3D)
+          url: /docs/en/keyword_documentation/i/iniges/
+        - name: INTRST (2D3D)
+          url: /docs/en/keyword_documentation/i/intrst/
+        - name: IPSNRG (2D3D)
+          url: /docs/en/keyword_documentation/i/ipsnrg/
+        - name: ITRMTH (2D3D)
+          url: /docs/en/keyword_documentation/i/itrmth/
+        - name: ITRMXD (2D3D)
+          url: /docs/en/keyword_documentation/i/itrmxd/
+        - name: ITRMXT (2D3D)
+          url: /docs/en/keyword_documentation/i/itrmxt/
+    - name: J
+      url: /docs/en/keyword_documentation/j/j_keywords/
+      children:
+        - name: JOMINY (2D3D)
+          url: /docs/en/keyword_documentation/j/jominy/
+    - name: K
+      url: /docs/en/keyword_documentation/k/k_keywords/
+      children:
+        - name: KFREAD (2D3D)
+          url: /docs/en/keyword_documentation/k/kfread/
+        - name: KFWRIT (2D3D)
+          url: /docs/en/keyword_documentation/k/kfwrit/
+    - name: L
+      url: /docs/en/keyword_documentation/l/l_keywords/
+      children:
+        - name: LATENT (2D3D)
+          url: /docs/en/keyword_documentation/l/latent/
+        - name: LMAX (2D)
+          url: /docs/en/keyword_documentation/l/lmax/
+        - name: LMAX (3D)
+          url: /docs/en/keyword_documentation/l/lmax_3d/
+        - name: LMTSTR (2D3D)
+          url: /docs/en/keyword_documentation/l/lmtstr/
+        - name: LOCATM (2D3D)
+          url: /docs/en/keyword_documentation/l/locatm/
+        - name: LOCCNT (3D)
+          url: /docs/en/keyword_documentation/l/loccnt/
+        - name: LOCDEF (2D)
+          url: /docs/en/keyword_documentation/l/locdef/
+        - name: LOCDEF (3D)
+          url: /docs/en/keyword_documentation/l/locdef_3d/
+        - name: LOCTMP (2D3D)
+          url: /docs/en/keyword_documentation/l/loctmp/
+        - name: LTHEAT (2D3D)
+          url: /docs/en/keyword_documentation/l/ltheat/
+    - name: M
+      url: /docs/en/keyword_documentation/m/m_keywords/
+      children:
+        - name: MASDEN (2D3D)
+          url: /docs/en/keyword_documentation/m/masden/
+        - name: MATAXI (2D3D)
+          url: /docs/en/keyword_documentation/m/mataxi/
+        - name: MATDEN (3D)
+          url: /docs/en/keyword_documentation/m/matden/
+        - name: MDSOBJ (2D)
+          url: /docs/en/keyword_documentation/m/mdsobj/
+        - name: MDSOBJ (3D)
+          url: /docs/en/keyword_documentation/m/mdsobj_3d/
+        - name: MESHNO (2D3D)
+          url: /docs/en/keyword_documentation/m/meshno/
+        - name: MGERR (2D3D)
+          url: /docs/en/keyword_documentation/m/mgerr/
+        - name: MGGRID (2D3D)
+          url: /docs/en/keyword_documentation/m/mggrid/
+        - name: MGNELM (2D)
+          url: /docs/en/keyword_documentation/m/mgnelm/
+        - name: MGNELM (3D)
+          url: /docs/en/keyword_documentation/m/mgnelm_3d/
+        - name: MGSIZM (3D)
+          url: /docs/en/keyword_documentation/m/mgsizm/
+        - name: MGSIZR (2D3D)
+          url: /docs/en/keyword_documentation/m/mgsizr/
+        - name: MGTELM (2D3D)
+          url: /docs/en/keyword_documentation/m/mgtelm/
+        - name: MGUSER (2D)
+          url: /docs/en/keyword_documentation/m/mguser/
+        - name: MGUSER (3D)
+          url: /docs/en/keyword_documentation/m/mguser_3d/
+        - name: MGWCUV (2D3D)
+          url: /docs/en/keyword_documentation/m/mgwcuv/
+        - name: MGWSTN (2D3D)
+          url: /docs/en/keyword_documentation/m/mgwstn/
+        - name: MGWSTR (2D3D)
+          url: /docs/en/keyword_documentation/m/mgwstr/
+        - name: MGWTMP (2D3D)
+          url: /docs/en/keyword_documentation/m/mgwtmp/
+        - name: MGWUSR (2D)
+          url: /docs/en/keyword_documentation/m/mgwusr/
+        - name: MGWUSR (3D)
+          url: /docs/en/keyword_documentation/m/mgwusr_3d/
+        - name: MORP (2D3D)
+          url: /docs/en/keyword_documentation/m/morp/
+        - name: MOVCTL (2D)
+          url: /docs/en/keyword_documentation/m/movctl_(2d)/
+        - name: MOVCTL (3D)
+          url: /docs/en/keyword_documentation/m/movctl_(3d)/
+        - name: MSHSEC (2D3D)
+          url: /docs/en/keyword_documentation/m/mshsec/
+        - name: MSTMTR (2D3D)
+          url: /docs/en/keyword_documentation/m/mstmtr/
+        - name: MTLGRP (2D3D)
+          url: /docs/en/keyword_documentation/m/mtlgrp/
+        - name: MTNAME (2D3D)
+          url: /docs/en/keyword_documentation/m/mtname/
+    - name: N
+      url: /docs/en/keyword_documentation/n/n_keywords/
+      children:
+        - name: NDFLUX (2D3D)
+          url: /docs/en/keyword_documentation/n/ndflux/
+        - name: NDHEAT (2D3D)
+          url: /docs/en/keyword_documentation/n/ndheat/
+        - name: NDISFM (2D3D)
+          url: /docs/en/keyword_documentation/n/ndisfm/
+        - name: NDTMP (2D)
+          url: /docs/en/keyword_documentation/n/ndtmp/
+        - name: NDTMP (3D)
+          url: /docs/en/keyword_documentation/n/ndtmp_3d/
+        - name: NRECID (2D3D)
+          url: /docs/en/keyword_documentation/n/nrecid/
+        - name: NRECVL (2D3D)
+          url: /docs/en/keyword_documentation/n/nrecvl/
+        - name: NSTART (2D3D)
+          url: /docs/en/keyword_documentation/n/nstart/
+        - name: NSTEP (2D3D)
+          url: /docs/en/keyword_documentation/n/nstep/
+        - name: NUCSIZ (2D3D)
+          url: /docs/en/keyword_documentation/n/nucsiz/
+        - name: NWEAR (2D3D)
+          url: /docs/en/keyword_documentation/n/nwear/
+    - name: O
+      url: /docs/en/keyword_documentation/o/o_keywords/
+      children:
+        - name: OBJNAM (2D3D)
+          url: /docs/en/keyword_documentation/o/objnam/
+        - name: OBJPOS (2D)
+          url: /docs/en/keyword_documentation/o/objpos/
+        - name: OBJPOS (3D)
+          url: /docs/en/keyword_documentation/o/objpos_3d/
+        - name: OBJSTP (2D)
+          url: /docs/en/keyword_documentation/o/objstp/
+        - name: OBJSTP (3D)
+          url: /docs/en/keyword_documentation/o/objstp_3d/
+        - name: OBJTYP (2D)
+          url: /docs/en/keyword_documentation/o/objtyp/
+        - name: OBJTYP (3D)
+          url: /docs/en/keyword_documentation/o/objtyp_3d/
+        - name: OBJUPD (3D)
+          url: /docs/en/keyword_documentation/o/objupd/
+        - name: ODMAX (3D)
+          url: /docs/en/keyword_documentation/o/odmax/
+        - name: OPRNAM (2D3D)
+          url: /docs/en/keyword_documentation/o/oprnam/
+        - name: OPSTOP (2D3D)
+          url: /docs/en/keyword_documentation/o/opstop/
+        - name: OSCTRL (2D)
+          url: /docs/en/keyword_documentation/o/osctrl/
+        - name: OTPRNG (2D3D)
+          url: /docs/en/keyword_documentation/o/otprng/
+    - name: P
+      url: /docs/en/keyword_documentation/p/p_keywords/
+      children:
+        - name: PDIE (2D3D)
+          url: /docs/en/keyword_documentation/p/pdie/
+        - name: PENINF (2D3D)
+          url: /docs/en/keyword_documentation/p/peninf/
+        - name: PENVOL (2D)
+          url: /docs/en/keyword_documentation/p/penvol/
+        - name: PENVOL (3D)
+          url: /docs/en/keyword_documentation/p/penvol_3d/
+        - name: PHASLH (2D3D)
+          url: /docs/en/keyword_documentation/p/phaslh/
+        - name: PHASTF (2D3D)
+          url: /docs/en/keyword_documentation/p/phastf/
+        - name: PHASVL (2D3D)
+          url: /docs/en/keyword_documentation/p/phasvl/
+        - name: PHEQVF (2D3D)
+          url: /docs/en/keyword_documentation/p/pheqvf/
+        - name: PMEAB (2D3D)
+          url: /docs/en/keyword_documentation/p/pmeab/
+        - name: PMITT (2D3D)
+          url: /docs/en/keyword_documentation/p/pmitt/
+        - name: POISON (2D3D)
+          url: /docs/en/keyword_documentation/p/poison/
+        - name: POLYTP (3D)
+          url: /docs/en/keyword_documentation/p/polytp/
+        - name: PROBID (2D3D)
+          url: /docs/en/keyword_documentation/p/probid/
+        - name: PRSNAM (2D3D)
+          url: /docs/en/keyword_documentation/p/prsnam/
+        - name: PRSTRE (2D3D)
+          url: /docs/en/keyword_documentation/p/prstre/
+        - name: PRZ (2D)
+          url: /docs/en/keyword_documentation/p/prz/
+        - name: PRZ (3D)
+          url: /docs/en/keyword_documentation/p/prz_3d/
+    - name: R
+      url: /docs/en/keyword_documentation/r/r_keywords/
+      children:
+        - name: RECVRY (2D3D)
+          url: /docs/en/keyword_documentation/r/recvry/
+        - name: REFPOS (2D)
+          url: /docs/en/keyword_documentation/r/refpos/
+        - name: REFPOS (3D)
+          url: /docs/en/keyword_documentation/r/refpos_3d/
+        - name: REFTMP (2D3D)
+          url: /docs/en/keyword_documentation/r/reftmp/
+        - name: REMESH (2D3D)
+          url: /docs/en/keyword_documentation/r/remesh/
+        - name: RGDCNT (2D3D)
+          url: /docs/en/keyword_documentation/r/rgdcnt/
+        - name: RHTFLX (2D3D)
+          url: /docs/en/keyword_documentation/r/rhtflx/
+        - name: RMDPTH (2D3D)
+          url: /docs/en/keyword_documentation/r/rmdpth/
+        - name: RMSTEP (2D3D)
+          url: /docs/en/keyword_documentation/r/rmstep/
+        - name: RMSTRK (2D3D)
+          url: /docs/en/keyword_documentation/r/rmstrk/
+        - name: RMTIME (2D3D)
+          url: /docs/en/keyword_documentation/r/rmtime/
+        - name: ROTSYM (3D)
+          url: /docs/en/keyword_documentation/r/rotsym_(3d)/
+        - name: RSEDEF (3D)
+          url: /docs/en/keyword_documentation/r/rsedef/
+        - name: RUNTYP (2D3D)
+          url: /docs/en/keyword_documentation/r/runtyp/
+        - name: RZ (2D)
+          url: /docs/en/keyword_documentation/r/rz/
+        - name: RZ (3D)
+          url: /docs/en/keyword_documentation/r/rz_3d/
+    - name: S
+      url: /docs/en/keyword_documentation/s/s_keywords/
+      children:
+        - name: SEPDEN (2D)
+          url: /docs/en/keyword_documentation/s/sepden/
+        - name: SEPRES (2D3D)
+          url: /docs/en/keyword_documentation/s/sepres/
+        - name: SIMNAM (2D3D)
+          url: /docs/en/keyword_documentation/s/simnam/
+        - name: SINTER (2D3D)
+          url: /docs/en/keyword_documentation/s/sinter/
+        - name: SIZEMD (2D3D)
+          url: /docs/en/keyword_documentation/s/sizemd/
+        - name: SIZESH (2D3D)
+          url: /docs/en/keyword_documentation/s/sizesh/
+        - name: SLDERR (2D3D)
+          url: /docs/en/keyword_documentation/s/slderr/
+        - name: SMAX (2D3D)
+          url: /docs/en/keyword_documentation/s/smax/
+        - name: SMODE (2D3D)
+          url: /docs/en/keyword_documentation/s/smode/
+        - name: SOLMTD (2D)
+          url: /docs/en/keyword_documentation/s/solmtd/
+        - name: SOLMTD (3D)
+          url: /docs/en/keyword_documentation/s/solmtd_3d/
+        - name: SOLMTT (2D)
+          url: /docs/en/keyword_documentation/s/solmtt/
+        - name: SOLMTT (3D)
+          url: /docs/en/keyword_documentation/s/solmtt_3d/
+        - name: SPDLMT (2D3D)
+          url: /docs/en/keyword_documentation/s/spdlmt/
+        - name: STNCMP (2D)
+          url: /docs/en/keyword_documentation/s/stncmp/
+        - name: STNCMP (3D)
+          url: /docs/en/keyword_documentation/s/stncmp_3d/
+        - name: STNOUT (2D3D)
+          url: /docs/en/keyword_documentation/s/stnout/
+        - name: STNPAT (2D3D)
+          url: /docs/en/keyword_documentation/s/stnpat/
+        - name: STPDEF (2D3D)
+          url: /docs/en/keyword_documentation/s/stpdef/
+        - name: STPINC (2D3D)
+          url: /docs/en/keyword_documentation/s/stpinc/
+        - name: STRAIN (2D)
+          url: /docs/en/keyword_documentation/s/strain/
+        - name: STRAIN (3D)
+          url: /docs/en/keyword_documentation/s/strain_3d/
+        - name: STRESS (2D)
+          url: /docs/en/keyword_documentation/s/stress/
+        - name: STRESS (3D)
+          url: /docs/en/keyword_documentation/s/stress_3d/
+        - name: STROKE (2D)
+          url: /docs/en/keyword_documentation/s/stroke/
+        - name: STROKE (3D)
+          url: /docs/en/keyword_documentation/s/stroke_3d/
+        - name: STYPE (2D)
+          url: /docs/en/keyword_documentation/s/stype/
+        - name: STYPE (3D)
+          url: /docs/en/keyword_documentation/s/stype_3d/
+        - name: SVSCAL (2D3D)
+          url: /docs/en/keyword_documentation/s/svscal/
+        - name: SYMSUF (3D)
+          url: /docs/en/keyword_documentation/s/symsuf/
+    - name: T
+      url: /docs/en/keyword_documentation/t/t_keywords/
+      children:
+        - name: TCYCLE (2D3D)
+          url: /docs/en/keyword_documentation/t/tcycle/
+        - name: THRCND (2D3D)
+          url: /docs/en/keyword_documentation/t/thrcnd/
+        - name: TICF (2D3D)
+          url: /docs/en/keyword_documentation/t/ticf/
+        - name: TIMEID (2D3D)
+          url: /docs/en/keyword_documentation/t/timeid/
+        - name: TIMERC (2D3D)
+          url: /docs/en/keyword_documentation/t/timerc/
+        - name: TINTGF (2D3D)
+          url: /docs/en/keyword_documentation/t/tintgf/
+        - name: TITLE (2D3D)
+          url: /docs/en/keyword_documentation/t/title/
+        - name: TLOC (2D3D)
+          url: /docs/en/keyword_documentation/t/tloc/
+        - name: TMAX (2D3D)
+          url: /docs/en/keyword_documentation/t/tmax/
+        - name: TMPBWD (2D3D)
+          url: /docs/en/keyword_documentation/t/tmpbwd/
+        - name: TMPLIQ (2D3D)
+          url: /docs/en/keyword_documentation/t/tmpliq/
+        - name: TMPLMT (2D3D)
+          url: /docs/en/keyword_documentation/t/tmplmt/
+        - name: TMPSOL (2D3D)
+          url: /docs/en/keyword_documentation/t/tmpsol/
+        - name: TNOW (2D3D)
+          url: /docs/en/keyword_documentation/t/tnow/
+        - name: TPLOGY (2D)
+          url: /docs/en/keyword_documentation/t/tplogy/
+        - name: TRANS (2D3D)
+          url: /docs/en/keyword_documentation/t/trans/
+        - name: TRGVOL (2D)
+          url: /docs/en/keyword_documentation/t/trgvol/
+        - name: TRGVOL (3D)
+          url: /docs/en/keyword_documentation/t/trgvol_3d/
+        - name: TRNSFP (2D3D)
+          url: /docs/en/keyword_documentation/t/trnsfp/
+        - name: TTTD (2D3D)
+          url: /docs/en/keyword_documentation/t/tttd/
+        - name: TTTN (2D3D)
+          url: /docs/en/keyword_documentation/t/tttn/
+        - name: TXTODF (2D3D)
+          url: /docs/en/keyword_documentation/t/txtodf/
+        - name: TXTURE (2D3D)
+          url: /docs/en/keyword_documentation/t/txture/
+    - name: U
+      url: /docs/en/keyword_documentation/u/u_keywords/
+      children:
+        - name: UENAME (2D3D)
+          url: /docs/en/keyword_documentation/u/uename/
+        - name: UNIT (2D3D)
+          url: /docs/en/keyword_documentation/u/unit/
+        - name: UNNAME (2D3D)
+          url: /docs/en/keyword_documentation/u/unname/
+        - name: UNTE2H (2D3D)
+          url: /docs/en/keyword_documentation/u/unte2h/
+        - name: URZ (2D)
+          url: /docs/en/keyword_documentation/u/urz/
+        - name: URZ (3D)
+          url: /docs/en/keyword_documentation/u/urz_3d/
+        - name: USRDEF (2D3D)
+          url: /docs/en/keyword_documentation/u/usrdef/
+        - name: USRELM (2D3D)
+          url: /docs/en/keyword_documentation/u/usrelm/
+        - name: USRNOD (2D3D)
+          url: /docs/en/keyword_documentation/u/usrnod/
+        - name: USRSUB (2D3D)
+          url: /docs/en/keyword_documentation/u/usrsub/
+        - name: UTSDAT (2D3D)
+          url: /docs/en/keyword_documentation/u/utsdat/
+    - name: V
+      url: /docs/en/keyword_documentation/v/v_keywords/
+      children:
+        - name: VARSEL (2D3D)
+          url: /docs/en/keyword_documentation/v/varsel/
+        - name: VFACTR (2D)
+          url: /docs/en/keyword_documentation/v/vfactr/
+        - name: VFACTR (3D)
+          url: /docs/en/keyword_documentation/v/vfactr_3d/
+        - name: VMIN (2D3D)
+          url: /docs/en/keyword_documentation/v/vmin/
+        - name: VOLCRG (2D3D)
+          url: /docs/en/keyword_documentation/v/volcrg/
+        - name: VOLFC (2D3D)
+          url: /docs/en/keyword_documentation/v/volfc/
+        - name: VOLFS (2D3D)
+          url: /docs/en/keyword_documentation/v/volfs/
+        - name: VOTAGE (2D3D)
+          url: /docs/en/keyword_documentation/v/votage/
+    - name: W
+      url: /docs/en/keyword_documentation/w/w_keywords/
+      children:
+        - name: WINATM (2D)
+          url: /docs/en/keyword_documentation/w/winatm/
+        - name: WINATM (3D)
+          url: /docs/en/keyword_documentation/w/winatm_3d/
+        - name: WININD (3D)
+          url: /docs/en/keyword_documentation/w/winind/
+        - name: WINPRS (2D)
+          url: /docs/en/keyword_documentation/w/winprs/
+        - name: WINPRS (3D)
+          url: /docs/en/keyword_documentation/w/winprs_3d/
+        - name: WINRSE (2D3D)
+          url: /docs/en/keyword_documentation/w/winrse/
+        - name: WINSTP (2D)
+          url: /docs/en/keyword_documentation/w/winstp_(2d)/
+        - name: WINSTP (3D)
+          url: /docs/en/keyword_documentation/w/winstp_(3d)/
+        - name: WINTMP (2D)
+          url: /docs/en/keyword_documentation/w/wintmp/
+        - name: WINTMP (3D)
+          url: /docs/en/keyword_documentation/w/wintmp_3d/
+        - name: WMODEL (2D3D)
+          url: /docs/en/keyword_documentation/w/wmodel/
+        - name: WPAXIS (2D)
+          url: /docs/en/keyword_documentation/w/wpaxis/
+        - name: WPAXIS (3D)
+          url: /docs/en/keyword_documentation/w/wpaxis_3d/
+        - name: WRTOBJ (2D3D)
+          url: /docs/en/keyword_documentation/w/wrtobj/
+    - name: Y
+      url: /docs/en/keyword_documentation/y/y_keywords/
+      children:
+        - name: YLDS (2D)
+          url: /docs/en/keyword_documentation/y/ylds/
+        - name: YLDS (3D)
+          url: /docs/en/keyword_documentation/y/ylds_3d/
+        - name: YOUNG (2D3D)
+          url: /docs/en/keyword_documentation/y/young/
+    - name: Z
+      url: /docs/en/keyword_documentation/z/z_keywords/
+      children:
+        - name: ZEFI (2D3D)
+          url: /docs/en/keyword_documentation/z/zefi/
+        - name: ZMFI (2D3D)
+          url: /docs/en/keyword_documentation/z/zmfi/
+        - name: ZSTR (2D)
+          url: /docs/en/keyword_documentation/z/zstr/
+- name: Technical Notes
+  url: /docs/en/technical_notes/technical_notes_main_pg/
+- name: Labs
+  url: /docs/en/labs/labs_main_pg/
+  children:
+    - name: Quick Reference
+      url: /docs/en/labs/quick_reference/quick_reference/
+      children:
+        - name: Cold Forming
+          url: /docs/en/labs/quick_reference/cold_forming/
+        - name: Hot Forming
+          url: /docs/en/labs/quick_reference/hot_forming/
+    - name: Add Cycles Labs
+      url: /docs/en/labs/add_cycles_labs/add_cylces_labs/
+      children:
+        - name: Add Cycles for 2D Operation
+          url: /docs/en/labs/add_cycles_labs/add_cycles_for_2d_operation/
+        - name: Add Cycles for 3D Operations
+          url: /docs/en/labs/add_cycles_labs/add_cycles_for_3d_operations/
+    - name: Advanced Labs in MO
+      url: /docs/en/labs/advanced_labs_in_mo/advanced_labs_in_mo_main_pg/
+      children:
+        - name: Gear Blank
+          url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_labs/
+          children:
+            - name: Gear Blank (EN)
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/
+            - name: Gear Blank EN Lab 1
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/
+            - name: Gear Blank EN Lab 2
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab2/
+            - name: Gear Blank EN Lab 3
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab3/
+            - name: Gear Blank EN Lab 4
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab4/
+            - name: Gear Blank EN Lab 5
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab5/
+            - name: Gear Blank EN Lab 6
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab6/
+            - name: Gear Blank EN Lab 7
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab7/
+            - name: Gear Blank EN Lab 8
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab8/
+            - name: Gear Blank EN Lab 9
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab9/
+            - name: Gear Blank EN Lab 10
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab10/
+            - name: Gear Blank EN Lab 11
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab11/
+            - name: Gear Blank EN Lab 12
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab12/
+            - name: Gear Blank (SI)
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/
+            - name: Gear Blank SI Lab 1
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/
+            - name: Gear Blank SI Lab 2
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab2/
+            - name: Gear Blank SI Lab 3
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab3/
+            - name: Gear Blank SI Lab 4
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/
+            - name: Gear Blank SI Lab 5
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab5/
+            - name: Gear Blank SI Lab 6
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab6/
+            - name: Gear Blank SI Lab 7
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/
+            - name: Gear Blank SI Lab 8
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab/
+            - name: Gear Blank SI Lab 9
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab9/
+            - name: Gear Blank SI Lab 10
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab10/
+            - name: Gear Blank SI Lab 11
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab11/
+            - name: Gear Blank SI Lab 12
+              url: /docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab12/
+        - name: Gear_Labs
+          url: /docs/en/labs/advanced_labs_in_mo/gear_labs/gear_labs/
+          children:
+            - name: Forming Express Gear Labs
+              url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_gear_labs/
+              children:
+                - name: Forming Express Lab1
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab1/
+                - name: Forming Express Lab2
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab2/
+                - name: Forming Express Lab3
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/
+                - name: Forming Express Lab4
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab4/
+                - name: Forming Express Lab5
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab5/
+                - name: Forming Express Lab6
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab6/
+                - name: Forming Express Lab7
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab7/
+                - name: Forming Express Lab8
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab8/
+                - name: Forming Express Lab9
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab9/
+                - name: Forming Express Lab10
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab10/
+                - name: Forming Express Lab11
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab11/
+            - name: Forming Gear Labs
+              url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_gear_labs/
+              children:
+                - name: Forming Lab 1
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab1/
+                - name: Forming Lab 2
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab2/
+                - name: Forming Lab 3
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab3/
+                - name: Forming Lab 4
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab4/
+                - name: Forming Lab 5
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab5/
+                - name: Forming Lab 6
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab6/
+                - name: Forming Lab 7
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab7/
+                - name: Forming Lab 8
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab8/
+                - name: Forming Lab 9
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab9/
+                - name: Forming Lab 10
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab10/
+                - name: Forming Lab 11
+                  url: /docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab11/
+    - name: Basic Labs
+      url: /docs/en/labs/basic_labs/basic_labs_main_pg/
+      children:
+        - name: 2D Labs
+          url: /docs/en/labs/basic_labs/2d_labs/2d_labs/
+          children:
+            - name: Lab 01 Geometry Manipulation and Uniform mesh
+              url: /docs/en/labs/basic_labs/2d_labs/lab_01_geometry_manipulation_and_uniform_mesh/
+            - name: Lab 02 Geometry Correction
+              url: /docs/en/labs/basic_labs/2d_labs/lab_02_geometry_correction/
+            - name: Lab 03 Spike Isothermal
+              url: /docs/en/labs/basic_labs/2d_labs/lab_03_spike_isothermal/
+            - name: Lab 04 Heat Transfer
+              url: /docs/en/labs/basic_labs/2d_labs/lab_04_heat_transfer/
+            - name: Lab 05 Spike Non-Isothermal
+              url: /docs/en/labs/basic_labs/2d_labs/lab_05_spike_non-isothermal/
+            - name: Lab 06 Die Stress
+              url: /docs/en/labs/basic_labs/2d_labs/lab_06_die_stress/
+            - name: Lab 07 Mechanical Press
+              url: /docs/en/labs/basic_labs/2d_labs/lab_07_mechanical_press/
+            - name: Lab 08 Hammer Press
+              url: /docs/en/labs/basic_labs/2d_labs/lab_08_hammer_press/
+            - name: Lab 09 Hammer Multiple Operation
+              url: /docs/en/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/
+            - name: Lab 10 Hydraulic press
+              url: /docs/en/labs/basic_labs/2d_labs/lab_10_hydraulic_press/
+            - name: Lab 11 Screw press
+              url: /docs/en/labs/basic_labs/2d_labs/lab_11_screw_press/
+            - name: Lab 12 Die Stress with Holder
+              url: /docs/en/labs/basic_labs/2d_labs/lab_12_die_stress_with_holder/
+            - name: Lab 13 Die Stress with Shrink Fit
+              url: /docs/en/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/
+            - name: Lab 14 Sliding die lab - Die Sleeve
+              url: /docs/en/labs/basic_labs/2d_labs/lab_14_sliding_die_lab__die_sleeve/
+            - name: Lab 15 Sliding die lab - Punch Sleeve
+              url: /docs/en/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/
+            - name: Lab 25 Stub Shaft Labs
+              url: /docs/en/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/
+            - name: Lab 16 Forming of a Roller Bearing race using a Porous material
+              url: /docs/en/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing_race/
+        - name: 3D Labs
+          url: /docs/en/labs/basic_labs/3d_labs/3d_labs/
+          children:
+            - name: Lab01 Block Forging
+              url: /docs/en/labs/basic_labs/3d_labs/lab01_block_forging/
+            - name: Lab02 Square Ring
+              url: /docs/en/labs/basic_labs/3d_labs/lab02_square_ring/
+            - name: Lab03 Spike Forging
+              url: /docs/en/labs/basic_labs/3d_labs/lab03_spike_forging/
+            - name: Lab04 Steering Link
+              url: /docs/en/labs/basic_labs/3d_labs/lab04_steering_link/
+            - name: Lab05 Stub Shaft Labs
+              url: /docs/en/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/
+            - name: Lab06 Hot Forming Labs
+              url: /docs/en/labs/basic_labs/3d_labs/lab06_hot_forming_labs/
+            - name: Lab07 Gear Carrier Lab
+              url: /docs/en/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/
+    - name: Boolean Operation Labs
+      url: /docs/en/labs/boolean_operation_labs/boolean_operation_labs_main_pg/
+      children:
+        - name: 2D Boolean Operation Lab
+          url: /docs/en/labs/boolean_operation_labs/2d_boolean_operation_lab/
+    - name: Cogging Labs
+      url: /docs/en/labs/cogging_labs/cogging_labs_main_pg/
+      children:
+        - name: Cogging Lab1
+          url: /docs/en/labs/cogging_labs/cogging_lab1/
+        - name: Swaging Lab1
+          url: /docs/en/labs/cogging_labs/swaging_lab1/
+    - name: Die Stess Study Labs
+      url: /docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/
+      children:
+        - name: 2D Die Stress Study with Single step
+          url: /docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/
+        - name: 2D Die Stress Study with Multiple Steps
+          url: /docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/
+        - name: 3D Die stress Study with Single step Lab1
+          url: /docs/en/labs/die_stess_study_labs/3d_die_stress_study_lab1/
+        - name: 3D Die stress study with Shrink Fit Lab
+          url: /docs/en/labs/die_stess_study_labs/3d_die_stress_study_lab2/
+        - name: 3D Die Stress study with Multiple steps
+          url: /docs/en/labs/die_stess_study_labs/3d_die_stress_study_across_multiple_operations/
+    - name: DOE Labs
+      url: /docs/en/labs/doe_labs/doe_labs_main_pg/
+      children:
+        - name: 2D DOE Lab1
+          url: /docs/en/labs/doe_labs/2d_doe_lab/2d_doe_lab1/
+    - name: Extrusion Labs
+      url: /docs/en/labs/extrusion_labs/extrusion_labs_main_pg/
+      children:
+        - name: ALE Extrusion Lab1
+          url: /docs/en/labs/extrusion_labs/ale_extrusion_lab1/
+        - name: Lagrangian Extrusion Lab1
+          url: /docs/en/labs/extrusion_labs/lagrangian_extrusion_lab1/
+        - name: Steady State Extrusion Lab1
+          url: /docs/en/labs/extrusion_labs/steady_state_extrusion_lab1/
+    - name: Forming Express Labs
+      url: /docs/en/labs/forming_express_labs/forming_express_labs_main_pg/
+      children:
+        - name: 2D Cold Forming Lab1
+          url: /docs/en/labs/forming_express_labs/2d_cold_forming_lab1/
+        - name: 2D Gear-Mech Press Lab
+          url: /docs/en/labs/forming_express_labs/2d_gear-mech_press_lab/
+        - name: 3D Cold Forming Lab
+          url: /docs/en/labs/forming_express_labs/3d_cold_forming_lab/
+        - name: 3D Gear-Mech Press Lab
+          url: /docs/en/labs/forming_express_labs/3d_gear_mech_press_lab/
+        - name: 3D Hot Forming Lab
+          url: /docs/en/labs/forming_express_labs/3d_hot_forming_lab/
+        - name: 3D Tee Non Isothermal Forging Lab
+          url: /docs/en/labs/forming_express_labs/tee_non_isothermal_forging_lab/
+    - name: Forming Labs
+      url: /docs/en/labs/forming_labs/forming_labs_main_pg/
+      children:
+        - name: 2D Forming Operation in Guided Mode Lab
+          url: /docs/en/labs/forming_labs/2d_forming_operation_lab_in_guided_mode/
+        - name: 2D Forming Operation in Expert mode Lab
+          url: /docs/en/labs/forming_labs/2d_forming_opn_in_expert_mode_lab/
+        - name: 3D Forming Operation in Guided mode Lab
+          url: /docs/en/labs/forming_labs/3d_forming_operation_in_guided_mode/
+        - name: 3D Forming Operation in Expert mode Lab
+          url: /docs/en/labs/forming_labs/3d_forming_operation_in_expert_mode/
+    - name: Furnace Heating Labs
+      url: /docs/en/labs/furnace_heating_labs/furnace_heating__labs_main_pg/
+      children:
+        - name: 3D Heat Treatment Furnace Lab
+          url: /docs/en/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/
+    - name: Heat Transfer Operation Labs
+      url: /docs/en/labs/heat_transfer_operation_labs/heat_transfer_operation_labs_main_pg/
+      children:
+        - name: 2D Heat Transfer Operations Lab 
+          url: /docs/en/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/
+        - name: 3D Heat Transfer operation Lab
+          url: /docs/en/labs/heat_transfer_operation_labs/3d_heat_transfer_operation_lab/
+    - name: Heat Treatment Labs
+      url: /docs/en/labs/heat_treatment_labs/heat_treatment_labs_main_pg/
+      children:
+        - name: 2D HT Lab 1 Heating
+          url: /docs/en/labs/heat_treatment_labs/2d_ht_lab1_heating/
+        - name: 2D HT Lab 2 Carburization
+          url: /docs/en/labs/heat_treatment_labs/2d_ht_lab2_carburization/
+        - name: 2D HT Lab 3 Diffusion
+          url: /docs/en/labs/heat_treatment_labs/2d_ht_lab_3_diffusion/
+        - name: 2D HT Lab 4 Quenching 
+          url: /docs/en/labs/heat_treatment_labs/2d_ht_lab4_quenching/
+        - name: 2D HT Lab 5 Material Input
+          url: /docs/en/labs/heat_treatment_labs/2d_ht_lab5_material_input/
+        - name: 2D HT Lab 6 Grain Modeling
+          url: /docs/en/labs/heat_treatment_labs/2d_ht_lab6_grain_modeling/
+        - name: 2D Heat Treatment Wizard Lab1
+          url: /docs/en/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/
+        - name: 2D Heat Treatment Wizard Lab2
+          url: /docs/en/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab2/
+        - name: 3D Heat Treatment Wizard Lab
+          url: /docs/en/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/
+    - name: Inverse Heat Labs
+      url: /docs/en/labs/inverse_heat_labs/inverse_heat_labs_main_pg/
+      children:
+        - name: 2D Inverse Heat Lab1
+          url: /docs/en/labs/inverse_heat_labs/2d_inverse_heat_lab1/
+        - name: 2D Inverse Heat Lab2
+          url: /docs/en/labs/inverse_heat_labs/2d_inverse_heat_lab2/
+        - name: 3D Inverse Heat Lab1
+          url: /docs/en/labs/inverse_heat_labs/3d_inverse_heat_lab1/
+    - name: Machining Distortion Labs
+      url: /docs/en/labs/machining_distortion_labs/machining_distortion_labs_main_pg/
+      children:
+        - name: 2D Machining Distortion Lab1
+          url: /docs/en/labs/machining_distortion_labs/2d_machining_distortion_lab1/
+        - name: 3D Machining Distortion Lab1
+          url: /docs/en/labs/machining_distortion_labs/3d_machining_distortion_lab1/
+    - name: Machining Labs
+      url: /docs/en/labs/machining_labs/machining_labs_main_pg/
+      children:
+        - name: 2D Cutting Lab
+          url: /docs/en/labs/machining_labs/2d_cutting_lab/
+        - name: 2D Steady State Machining Lab
+          url: /docs/en/labs/machining_labs/2d_steady_state_machining_lab/
+        - name: 3D Cutting Lab1
+          url: /docs/en/labs/machining_labs/3d_cutting_lab1/
+        - name: 3D Cutting Lab2
+          url: /docs/en/labs/machining_labs/3d_cutting_lab2/
+        - name: 3D Drilling Lab
+          url: /docs/en/labs/machining_labs/3d_drilling_lab/
+    - name: Material Suite Labs
+      url: /docs/en/labs/material_suite_labs/material_suite_labs/
+      children:
+        - name: Deformation Texture Model Lab
+          url: /docs/en/labs/material_suite_labs/deformation_texture_model_lab/
+        - name: Material Suite Labs for Cellular Automata (CA) model
+          url: /docs/en/labs/material_suite_labs/material_suite_labs_for_ca_model/
+        - name: MEDC Model Lab
+          url: /docs/en/labs/material_suite_labs/medc_model_lab/
+        - name: RVE Lab1
+          url: /docs/en/labs/material_suite_labs/rve_lab1/
+        - name: RVE Lab2
+          url: /docs/en/labs/material_suite_labs/rve_lab2/
+        - name: SIESTA Lab
+          url: /docs/en/labs/material_suite_labs/siesta_lab/
+        - name: Material_Parameters_Fitting_labs
+          url: /docs/en/labs/material_suite_labs/material_parameters_fitting_labs/material_parameters_fitting_labs_main_pg/
+          children:
+            - name: Flow Stress Fitting Lab
+              url: /docs/en/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/
+            - name: JMAK Parameters Fitting Lab
+              url: /docs/en/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/
+            - name: TTT Calculation Lab
+              url: /docs/en/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/
+    - name: Multiple Blow Forging Labs
+      url: /docs/en/labs/multiple_blow_forging_labs/multiple_blow_forging_labs_main_pg/
+      children:
+        - name: 2D Multi Blow Forging Lab1
+          url: /docs/en/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/
+        - name: 3D Multi Blow Forging Lab1
+          url: /docs/en/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/
+    - name: Report Generation Lab
+      url: /docs/en/labs/report_generation_lab/report_generation_lab_main_pg/
+      children:
+        - name: Report Generation Lab in MO
+          url: /docs/en/labs/report_generation_lab/report_generation_lab_in_mo/
+    - name: Ring Rolling Labs
+      url: /docs/en/labs/ring_rolling_labs/ring_rolling_labs_main_pg/
+      children:
+        - name: Ring Rolling Lab1
+          url: /docs/en/labs/ring_rolling_labs/ring_rolling_lab1/
+        - name: Ring Rolling Lab2
+          url: /docs/en/labs/ring_rolling_labs/ring_rolling_lab2/
+        - name: Ring Rolling Lab3
+          url: /docs/en/labs/ring_rolling_labs/ring_rolling_lab3/
+        - name: Ring Rolling Lab4
+          url: /docs/en/labs/ring_rolling_labs/ring_rolling_lab4/
+    - name: Shape Rolling Labs
+      url: /docs/en/labs/shape_rolling_labs/shape_rolling_labs_main_pg/
+      children:
+        - name: ALE Shape Rolling Lab1
+          url: /docs/en/labs/shape_rolling_labs/ale_shape_rolling_lab1/
+        - name: ALE Shape Rolling Lab2
+          url: /docs/en/labs/shape_rolling_labs/ale_shape_rolling_lab2/
+        - name: ALE Shape Rolling Lab3 
+          url: /docs/en/labs/shape_rolling_labs/ale_shape_rolling_lab3/
+        - name: ALE Shape Rolling Lab4 
+          url: /docs/en/labs/shape_rolling_labs/ale_shape_rolling_lab4/
+        - name: Shape Rolling Lab1
+          url: /docs/en/labs/shape_rolling_labs/shape_rolling_lab1/
+        - name: Shape Rolling Lab2
+          url: /docs/en/labs/shape_rolling_labs/shape_rolling_lab2/
+        - name: Shape Rolling Lab3
+          url: /docs/en/labs/shape_rolling_labs/shape_rolling_lab3/
+    - name: Shot Peening Lab
+      url: /docs/en/labs/shot_peening_labs/shot_peening_lab_mainpg/
+      children:
+        - name: Shot Peening Lab1
+          url: /docs/en/labs/shot_peening_labs/shot_peening_lab1/
+    - name: Spinning Labs
+      url: /docs/en/labs/spinning_labs/spinning_labs_main_pg/
+      children:
+        - name: Flow Forming Lab
+          url: /docs/en/labs/spinning_labs/flow_forming_lab/
+        - name: Spinning Lab
+          url: /docs/en/labs/spinning_labs/spinning_lab/
+        - name: Tube Piercing Lab1
+          url: /docs/en/labs/spinning_labs/tube_piercing_lab1/
+    - name: Tool Life Study
+      url: /docs/en/labs/tool_life_study_lab/tool_life_study_lab_main_pg/
+      children:
+        - name: Tool Life Study Lab1
+          url: /docs/en/labs/tool_life_study_lab/tool_life_study_lab1/

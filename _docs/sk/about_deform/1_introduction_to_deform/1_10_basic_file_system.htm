@@ -1,0 +1,111 @@
+---
+lang: sk
+title: "1.10. Basic File System"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1.1.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>1.10. Basic File System</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>1.10. Basic File System</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/about_deform/1_introduction_to_deform/1.10. basic file system.css"/>
+<meta name="brsnext" value="Documentation_content/About_DEFORM/1_Introduction_to_DEFORM/1_11_Release_Notes.htm"/><meta name="brsprev" value="Documentation_content/About_DEFORM/1_Introduction_to_DEFORM/1_9_Units.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="1.10. Basic File System">
+        <span>1.10. Basic File System</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>1.10. Basic File System</h1>
+  <p>The primary data storage structure is the database file. The database file stores a complete set of simulation data, including object data, simulation controls, material data, and inter-object relations, both from the original input, and from selected
+    solution steps. The sequence of information storage in a database file is shown in <a href="#Fig._1.10.1._DEFORM_Database_structure">Fig. 1.10.1.</a> The pre-processor uses an ASCII format file called the keyword file to create inputs.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._1.10.1._DEFORM_Database_structure"></a><img height="292" src="../../../assets/images/about_deform/1_10_basic_file_system/1_10_image001.jpg" width="581"/></p>
+  <p class="Fig_name">DEFORM Database structure</p>
+  <p> </p>
+  <p>Each DEFORM problem has an associated problem ID and should be created in its own folder or directory. For every problem, the DEFORM system creates four types of files that are generally accessible to users:</p>
+  <p> </p>
+  <p><strong>Database (DB) files</strong></p>
+  <p>The database file contains the complete simulation data set for input data and each saved simulation step. The information is stored in a compressed, machine readable format, and is accessible only through the DEFORM <a href="../../pre_processor/7_introduction_to_pre-processor.htm">pre-procesor</a> and
+    <a href="../../post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor.htm">post-processor</a>. As the simulation runs, data for each step is written to the end of the database file. If the step being written is specified
+    as a step to be saved, information for the next step will be appended after the current data step. If the step is not specified to be saved, and a solution is found for the next step, the data for the current step will be overwritten by the data for
+    the next step.</p>
+  <p> </p>
+  <p><strong>Keyword (KEY) files</strong></p>
+  <p>Keyword files contain specific problem definition data which is read by the pre-processor and used to create an input database file. A keyword file may contain a complete problem definition, or it may contain only specific information about, for example,
+    a specific object or material. The information is stored in ASCII format, and can be read and edited with any text editor, such as Notepad, VI, or Emacs. A keyword reference is available which describes the data format for each keyword.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="1_8_creating_input_data.htm">Creating Input data</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure.htm">File structure</a></p>
+  <p><a href="../../pre_processor/21_database_generation/21_database_generation.htm">Database Generation</a></p>
+  <p><a href="../../keyword_documentation/deform_keywords_list.htm">Keyword Documentation</a></p>
+
+</body></html>

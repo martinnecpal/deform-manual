@@ -1,0 +1,773 @@
+---
+lang: en
+title: "6.4. Main Menu"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "3.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.4. Main Menu</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.4. Main Menu</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6.4. main_menu.css"/>
+<meta name="brsnext" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_5_Files_Structure.htm"/><meta name="brsprev" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_3_Integrated_Manufacturing_Process_Post_layout.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="6.4. Main Menu">
+        <span>6.4. Main Menu</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>6.4. Main Menu</h1>
+  <p><a href="#6.4.1._Pre_Mode_menu_bar_options">6.4.1. Pre Mode menu bar options</a> </p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#File_Menu">File Menu</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Viewport_Menu">Viewport Menu</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Display_menu">Display menu</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Mouse_Menu">Mouse Menu</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Tool_Menu">Tool Menu</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Options_Menu">Options Menu</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Project_Menu">Project Menu</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Help_Menu">Help Menu</a></p>
+    </li>
+  </ul>
+  <p><a href="#6.4.2._Simulation_Mode_menu_bar_options">6.4.2. Simulation Mode menu bar options</a></p>
+  <p><a href="#6.4.3._Post_Mode_menu_bar_options">6.4.3. Post Mode menu bar options</a> </p>
+  <p><a href="#6.4.4._Tool_bar_options">6.4.4. Tool bar options</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Switch_to_guided_mode">Switch to guided mode</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Switch_to_expert_mode">Switch to expert mode</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Boolean">Boolean</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Data_Interpolation">Data Interpolation</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Slicing">Slicing</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Stop_current_task">Stop current task</a></p>
+    </li>
+  </ul>
+  <p><br/> The Menu and Tool bar options provides project browsing view manipulation and other utility functions for the object window. Features include add, open and save project, zoom, magnify and pan viewport, measurement utilities, Viewport controls
+    and Rendering type utilities as shown in<a href="#Fig._6.4.1._MO_Pre_mode_Menu_and_Tool_bar"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>1.</a></p>
+  <p><br/> These are grouped under multiple menu&#39;s, those are File, Viewport, Display, Mouse, Tool, Project, Simulation and Help. These menu options will available or activate based on the MO modes, like in Pre mode Simulation menu is not available as
+    it is not required and will be available only in Simulation Mode.</p>
+  <h2><a id="6.4.1._Pre_Mode_menu_bar_options"></a>Pre Mode menu bar options</h2>
+  <p>In Pre Mode File, Viewport, Display, Mouse, Tool, Project and Help menu options are available.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="23" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image001.jpg" width="750"/></p>
+  <p class="Fig_name">  (a)</p>
+  <p><img height="21" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image002.jpg" width="750"/></p>
+  <p class="Fig_name"><a id="Fig._6.4.1._MO_Pre_mode_Menu_and_Tool_bar"></a>(b)</p>
+  <p class="Fig_numb">MO Pre mode Menu and Tool bar; (a) For 2D (b) For 3D</p>
+  <p><br/> These menu options are explained in below sections,</p>
+  <p> </p>
+  <p><a id="File_Menu"></a><strong>File Menu</strong></p>
+  <p><a href="#Fig._6.4.2._File_Menu_options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>2.</a> shows the File menu options using these options or icons in tool bar user can open new project, open the old projects, save the project file, import the
+    setup Keyword/DB file for project setup, export the setup keyword file, open the working directory or recently worked projects, close the project and quit the MO GUI.</p>
+  <p style="text-align: center"><a id="Fig._6.4.2._File_Menu_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">File Menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>New Project  (Ctrl+N)</strong> <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/></p>
+    </li>
+  </ul>
+  <p>New project can be added using this option. This pops up the New Project window (See<a href="#Fig._6.4.3._MO_New_Project_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>3</a>.) where Project Name, Title, Location, First operation and Unit system
+    can be selected. By default New Project will give the selected directory as working directory.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.3._MO_New_Project_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image004.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">MO New Project window</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Open Project (Ctrl+O)</strong> <img src="../../../assets/icons/pre_icons/mo_open_icon.jpg"/>  : Previous MO projects can be opened back in MO using this option.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Save   (Ctrl+S)</strong>  <img src="../../../assets/icons/pre_icons/mo_save_icon.jpg"/> : Save the MO project file in “moproj” format. This project file is essential to open the MO project. So before closing the MO session it is preferred
+        to save and close or quit the MO project. While closing the Project a File close popup ask whether to save the MO project before closing.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Import (Ctrl+D)</strong> <img src="../../../assets/icons/pre_icons/mo_import_icon.jpg"/> : Problem setup Keyword or DB file can be imported after adding the operation into the operation editor using this option. In some special operations
+        like Cogging previous versions .MDB files can also be imported to retrieve the old versions data.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Import Keyword File (Ctrl + K) :</strong>User can import a keyword file for the selected operation using Import Key word file option from File menu or using ‘Ctrl + K’ buttons on keyboard</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Import User Template : </strong>Saved User MO Template (.motmpl) which was saved using Export User template or Operation Editor Save as Template RMB options can be loaded using Import User Template.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Export : </strong>The problem setup data can be exported to the user readable Keyword file format using this option.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Export User Template : </strong>If user is setting up similar processes and most of the data is identical then user can save the setup including the sequence of operations, process data and object data into a template which can be imported
+        later and modified to suit the new setup with less time involving in setting up the problem. Export User Template option is available under File menu in MO gui and from right click options (right click between two horizontal tiles or between two
+        empty vertical tiles) in Operation Editor. Object data saving into template is optional hence, selected objects data can be saved into template using checkboxes available from the Export user template window  (See<a href="#Fig._6.4.4._Export_user_Template_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>4.</a>).</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.4._Export_user_Template_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image005.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Export user Template window</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Folder options : </strong>Using Folder option Open working folder user can open the working directory in windows explorer. (See <a href="#Fig._6.4.5._Folder_Open_working_folder_option"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>5.</a>)</p>
+    </li>
+  </ul>
+  <p style="text-align: center"><a id="Fig._6.4.5._Folder_Open_working_folder_option"></a><img height="35" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image006.jpg" width="345"/></p>
+  <p class="Fig_numb">Folder Open working folder option</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong><a id="Database_Archive"></a>Database Archive : </strong>This function is used to get a completed project down to a size to fit on archive media (like a DVD) for backup or distribution.(See<a href="#Fig._6.4.6._Archive_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>6.</a>)</p>
+    </li>
+  </ul>
+  <p style="margin-left: 40px">This option is used to Archive Project files, project databases and DOE/OPT databases with No Purge or Save first/last steps or Save Operation start/end steps by selecting respective radio buttons into selected Destination.</p>
+  <p style="margin-left: 40px">This option is also available in Integrated GUI from RMB menu of a folder. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.6._Archive_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image007.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Archive window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Image setup (Ctrl+M) : </strong>It is used to setup the current display window or the work space to the required pixel size and capture images to required location in required format as shown in<a href="#Fig._6.4.7._Image_setup_settings_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>7.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.7._Image_setup_settings_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image008.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Image setup settings window</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Capture image (Ctrl+I)</strong> <img height="22" src="../../../assets/icons/pre_icons/mo_capture_screen_image_to_file_icon.jpg" width="26"/> : Writes the current screen image to a file using the specified image format.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Capture Image to clipboard (Ctrl+Shift+I)</strong>  <img src="../../../assets/icons/pre_icons/mo_capture_screen_to_clip_board_icon.jpg"/> : Writes the current screen image to the clipboard.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Recent Projects : </strong>This option is helpful to open the last ten previously worked MO projects.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Close (Ctrl+W) : </strong>MO currently opened project can be closed using this option. After closing the current MO project user can add and work on new project.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Quit (Ctrl+Q)</strong>  <img src="../../../assets/icons/pre_icons/mo_quit_icon.jpg"/> : MO GUI can be closed using this option, before quitting ask whether to save or not to save the changes done to the current project.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><a id="Viewport_Menu"></a><strong>Viewport Menu</strong></p>
+  <p><a href="#Fig._6.4.8._Viewport_Menu_options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>8.</a> shows the Viewport menu options using these options or icons in tool bar user can refresh or fit the view, switch to Iso or any directional view, set
+    the upward axis, save and load the viewports and viewport lighting settings can be varied.</p>
+  <p style="text-align: center"><a id="Fig._6.4.8._Viewport_Menu_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image009.jpg" style="cursor: nesw-resize;"/></p>
+  <p class="Fig_numb">Viewport Menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Refresh (F5)</strong> <img src="../../../assets/icons/pre_icons/mo_refresh_icon.jpg"/> : The refresh icon redraws the screen, removing any measurement marks, and updating any changes made to the color pallet.</p>
+    </li>
+    <li>
+      <p><strong>Fit View  (F3)  : </strong>Fits all displayed objects or graphs inside the current viewport.</p>
+    </li>
+    <li>
+      <p><strong>View back (F4)  : </strong>Resets objects to the previously viewed display position.</p>
+    </li>
+    <li>
+      <p><strong>Iso view </strong> <img src="../../../assets/icons/pre_icons/mo_iso_view_icon.jpg"/> : This will show the isometric view of the current viewport. This option is not available for 2D systems. This options are not available in 2D mode, as
+        this are not applicable for 2D mode.</p>
+    </li>
+    <li>
+      <p><strong>Screen upward : </strong><strong>[3D]: </strong>This option shows the isometric view in 3D, such that the selected axis will be pointing in the upward direction. For example, if the user select positive Z-axis from the screen upward option
+        as shown in<a href="#Fig._6.4.9._Screen_upward_viewport_menu_options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>9.</a> and then select isometric view option, Z-axis will be pointing upwards in the isometric view. This is not applicable for
+        2D mode.</p>
+    </li>
+  </ul>
+  <p style="text-align: center"><a id="Fig._6.4.9._Screen_upward_viewport_menu_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image010.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Screen upward viewport menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>View point </strong><img src="../../../assets/icons/pre_icons/mo_plus_x_view_icon.jpg"/>,<img src="../../../assets/icons/pre_icons/mo_minus_x_view_icon.jpg"/>, <img src="../../../assets/icons/pre_icons/mo_plus_y_view_icon.jpg"/>,<img src="../../../assets/icons/pre_icons/mo_minus_y_view_icon.jpg"/> , <img src="../../../assets/icons/pre_icons/mo_plus_z_icon.jpg"/> , <img src="../../../assets/icons/pre_icons/mo_minus_z_icon.jpg"/> : <strong>[3D]: </strong>This option allows
+        the user to show the object in the selected direction. For example if we select positive X- direction as a viewpoint from the<a href="#Fig._6.4.10._Different_view_selection_options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>10.</a>, the Deform
+        will show the object from the positive X-direction. These options are not available in 2D mode, as these are not applicable for 2D mode.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.10._Different_view_selection_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image011.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center">Different view selection options</p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Load_and_Save"></a><strong>Load and Save : </strong>The user can move or change the views of the geometries by using display tools such as pan, dynamic zoom and box zoom in the display window. These views can be saved using save option provided
+        under viewport tab as shown in<a href="#Fig._6.4.11._Save_view_port_Menu_options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>11.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.11._Save_view_port_Menu_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image013.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Save view port Menu options</p>
+  <p> </p>
+  <p>If the view is saved as a local viewport, this view gets saved for the current working project only and can be viewed using load option as shown in Fig. 6.4.12. If the view is saved as a global viewport the set views becomes the default views for any
+    project, for global viewports to get activated for the projects, the user has to exit from current project. The user can copy global viewports as a local viewports under load option and local viewports to global viewports under save option.</p>
+  <p> </p>
+  <p style="text-align: center">  <img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image012.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Load view port Menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Lighting : </strong>This allows the user to change the brightness and color of the graphics window lighting, can also add more light switches and control its positions as shown in<a href="#Fig._6.4.13._Lighting_General_properties_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>13.</a>        ,<a href="#Fig._6.4.14._Lighting_Settings_properties_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>14.</a> and<a href="#Fig._6.4.15._Light_Advanced_Properties_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>15.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.13._Lighting_General_properties_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image014.jpg"/></p>
+  <p class="Fig_numb">Lighting General properties window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.14._Lighting_Settings_properties_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image015.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Lighting Settings properties window</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig._6.4.15._Light_Advanced_Properties_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image016.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Light Advanced Properties window</p>
+  <p> </p>
+  <p>For More details, please refer Chapter<a href="../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm"> 8. Pre-Processor Layout</a> <span style="color:#0000ff;"><span style="color:#000000;">section </span><a href="../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Set_Lighting_Property">Set Lighting Property</a>.</span>
+  </p>
+  <p> </p>
+  <p><a id="Display_menu"></a><strong>Display menu</strong></p>
+  <p><a href="#Fig._6.4.16._Display_Menu_options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>16.</a> shows the display menu options using these options or icons in the tool bar user can select the different objects display rendering types like shading,
+    wireframe, shading and wireframe, feature line (surface patch) and adding feature line to any other rendering types. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.16._Display_Menu_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image017.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Display Menu options</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Shading (F6)</strong>  <img src="../../../assets/icons/pre_icons/mo_shading_mode_icon.jpg"/> : Smoothly shades the objects within viewport.</p>
+    </li>
+    <li>
+      <p><strong>Wireframe (F7) </strong> <img src="../../../assets/icons/pre_icons/mo_wirefrane_mode_icon.jpg"/> : Displays mesh of the object within viewport.</p>
+    </li>
+    <li>
+      <p><strong>Shading and Wireframe (F8) </strong> <img src="../../../assets/icons/pre_icons/mo_shade_wireframe_icon.jpg"/> : Smoothly shades and display mesh of objects within viewport.</p>
+    </li>
+    <li>
+      <p><strong>Feature line or Surface patch</strong> <img src="../../../assets/icons/pre_icons/mo_feature_line_mode_icon.jpg"/>  : Displays the surface edges of the object. For 3D mode refer feature angle to vary the surface patches display.</p>
+    </li>
+    <li>
+      <p><strong>Add feature line </strong> <img src="../../../assets/icons/pre_icons/mo_add_feature_line_icon.jpg"/> : This feature will combine surface edges with other display modes options. For 3D mode refer feature angle to vary the surface patches
+        display.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><a id="Mouse_Menu"></a><strong>Mouse Menu</strong></p>
+  <p><a href="#Fig._6.4.17._Mouse_menu_options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>17.</a> shows the Mouse menu options using these options or icons in the tool bar user can select different mouse modes to measure the objects linear distance and
+    change or move the objects view in graphics window like panning, rotate (only for 3D), zoom and magnify.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.17._Mouse_menu_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image018.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Mouse menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Measurement <img src="../../../assets/icons/pre_icons/mo_measure_tool_icon.jpg"/> : This tool allows the user to measure any distance between two points by clicking consecutively on both points. The measurement can be plot in either X or Y or XY direction,
+        in 3D Z direction will come into picture, using the available CAD style option  which displays the measured values in the selected direction. To access the CAD style option user need to right mouse click in the display window when user is in the
+        measurement mode (See<a href="#Fig._6.4.18._Right_mouse_button_measurement_style_options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>18.</a>). The measurement marks are not erased until the viewport is refreshed and as such are also convenient
+        for marking arbitrary reference points on the screen, which will maintain their location through view changes.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p class="Fig_name" style="text-align: center"><a id="Fig._6.4.18._Right_mouse_button_measurement_style_options"></a><img height="115" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image019.jpg" style="text-align: center;" width="350"/><img height="96" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image020.jpg" style="text-align: center;" width="350"/><br/>            (a)                                                                                         (b)
+  </p>
+  <p class="Fig_numb">Right mouse button measurement style options; (a) For 3D (b) For 2D</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Select  : The select button is a general pointing utility. It performs several functions which vary with context. It can be used to select a node or an element, to select BCC, stopping controls points on objects and many similar functions. From
+        Right mouse click option menu in graphics window user can change the selected nodes display to point or polygon as shown in<a href="#Fig._6.4.19._Selected_node_display_RMB_option_on_graphics_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>19.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.19._Selected_node_display_RMB_option_on_graphics_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image021.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Selected node display RMB option on graphics window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Pan (Shift+LMB) </strong> <img src="../../../assets/icons/pre_icons/mo_pan_icon.jpg"/> : Pan adjusts the region filling the active viewport without changing the size of the displayed object.</p>
+    </li>
+    <li>
+      <p><strong>Rotate (Ctrl+LMB) </strong><img src="../../../assets/icons/pre_icons/mo_rotate_icon.jpg"/>  : This will allow the mouse pointer to rotate the geometries in the required direction. This can also done by holding the Ctrl key and clicking
+        the left mouse button in the active viewport and rolling the mouse backward or forward to rotate the objects.</p>
+    </li>
+    <li>
+      <p><strong>Rotate X</strong> <img src="../../../assets/icons/pre_icons/mo_rotate_x_icon.jpg"/>  : This will allow the mouse pointer to rotate the object along X-direction.</p>
+    </li>
+    <li>
+      <p><strong>Rotate Y </strong><img src="../../../assets/icons/pre_icons/mo_rotate_y_icon.jpg"/>  : This will allow the mouse pointer to rotate the object along Y-direction.</p>
+    </li>
+    <li>
+      <p><strong>Rotate Z</strong> <img src="../../../assets/icons/pre_icons/mo_rotate_z_icon.jpg"/>  : This will allow the mouse pointer to rotate the object along Z-direction. This option is not available for 2D systems. Even though the user can see this
+        icon while 2D problem setup, if user clicks on it, it will give a notice &quot;This feature is not available in 2D view&quot;.</p>
+    </li>
+    <li>
+      <p><strong>Dynamic zoom (Alt+LMB)</strong> <img src="../../../assets/icons/pre_icons/mo_zoom_icon.jpg"/> : The dynamic zoom dynamically changes the size of the region of the object which fills the active view port. The view size can be changed by
+        holding Alt key and clicking left mouse button in the active view port and rolling the mouse backward or forward to increase or decrease the size of the object in the display window.</p>
+    </li>
+    <li>
+      <p><strong>Box Zoom (Ctrl+Alt+LMB) </strong><img src="../../../assets/icons/pre_icons/mo_box_zoom_icon.jpg"/> : The Box zoom or magnify function allows close up inspection of a small region of the currently display object or graph. The zoom region
+        is selected by holding Ctrl + Alt key and clicking the left mouse button, while dragging the mouse to enclose the selected region with the displayed box. When the mouse button is released the selected region will fill the display window.</p>
+    </li>
+  </ul>
+  <p><a id="Tool_Menu"></a><strong>Tool Menu</strong></p>
+  <p><a href="#Fig._6.4.20._Tool_menu_options"> Fig. 6.4.20.</a> shows the tool menu options, using these options or icons in the tool bar user can access the tools like object nodes and elements data window and Image capturing tools and its settings.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.20._Tool_menu_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image022.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Tool menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Object Nodes</strong> <img src="../../../assets/icons/pre_icons/mo_nodal_data_icon.jpg"/> : The object node data window displays all available information about object nodes. All information can be modified and many of the variables can
+        be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to <a href="../../pre_processor/17_object_data_initialization/17_1_node_data_window.htm"><span style="color:#0000ff;">section 17.1. Node Datae.</span></a></p>
+    </li>
+    <li>
+      <p><strong>Object Elements</strong> <img src="../../../assets/icons/pre_icons/mo_elemental_data_icon.jpg"/>  : The element data window displays all available information about object elements. All information can be modified and many of the variables
+        can be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to <span style="color:#0000ff;">section <a href="../../pre_processor/17_object_data_initialization/17_2_element_data_window.htm">17.2 .Element Data.</a></span></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong><a id="Options_Menu"></a>Options Menu</strong></p>
+  <p><a href="#Fig._6.4.21._Options_menu_options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>21.</a> shows the Options menu options, using these options user can set the DEFORM working environment different settings.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.21._Options_menu_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image023.jpg"/></p>
+  <p class="Fig_numb" style="text-align: center"> Options menu options</p>
+  <p style="text-align: center;"> </p>
+  <ol class="Decimal">
+    <li>
+      <p><strong><a id="Environment"></a>Environment: </strong>The user can adjust the DEFORM working environment using environment option. Here the user can make changes in display and graphical settings and can save the settings as for his convenience.
+        Setting will update from next session onwards.</p>
+    </li>
+  </ol>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Region:</li>
+  </ul>
+  <p>The user can select the preferred language under Language option and set to English or SI units under Unit option as a Default unit system for a new problem. The user can select the standards for materials under Material Library to be used as a default for
+    importing materials in the problem. (See <a href="#Fig._6.4.22._Region_options_under_Environment_Settings_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>22.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><img height="357" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image024.jpg" style="text-align: center;" width="748"/></p>
+  <p style="text-align: center"><a id="Fig._6.4.22._Region_options_under_Environment_Settings_window"></a></p>
+  <p class="Fig_numb">Region options under Environment Settings window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">User Type:</li>
+  </ul>
+  <p>User Type option under Environment Settings window appears as shown in<a href="#Fig._6.4.23._User_type_options_under_Environment_Settings_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>23.</a> Depending on the user type the default conditions
+    and pop-up windows are activated. </p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image025.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig._6.4.23._User_type_options_under_Environment_Settings_window"></a></p>
+  <p class="Fig_numb">User type options under Environment Settings window</p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Novice</strong>: If the user is new to DEFORM then this option is preferred.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>I</strong><strong><strong>n</strong>termediate</strong>: This option is for an user who is bit familiar to DEFORM environment. For example, if we select quit option in the GUI, a pop up appears with a message &quot; Do you want to quit&quot;,
+      the user can click &quot;Yes&quot; to exit from GUI. </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Advanced:</strong> This option is for an user who is well aware of DEFORM, he can eliminate few pop-ups. For example, if we select quit option in the GUI, Deform will close without a popup warning message.</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">User Directory:</li>
+  </ul>
+  <p>User Directory option under Environment Settings window appears as shown in<a href="#Fig._6.4.24._User_directory_options_under_Environment_Settings_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>24.</a> The user can browse for the required
+    location to set it as the working directory under Problem, this directory will be used as a default location to store the generated DB&#39;s, key files and working files related to DEFORM. The path under Library root will be used as a default path
+    to store the user data generated in DEFORM.The path under Geometry import will be used as the default path to access the geometries, which can be a problem directory itself. If it is a different location it has to be mentioned under geometry import
+    path separately for 2D and 3D. The temporary files generated while running deform are in the specified path under Temporary Directory.</p>
+  <p> </p>
+  <p style="text-align: center">  <img height="358" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image026.jpg" style="cursor: nesw-resize;" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.4.24._User_directory_options_under_Environment_Settings_window"></a>User directory options under Environment Settings window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">System Directory:</li>
+  </ul>
+  <p>System Directory option under Environment Settings window appears as shown in<a href="#Fig._6.4.25._System_directories_options_under_Environment_settings_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>25.</a> Only Advanced user type selection
+    (as mentioned in user type section) activates this tab access to user. Using this option user can change the DEFORM material, press and equipment library path under respective fields, this directory will be used as a default location for the material,
+    press and equipment library in DEFORM. By default these are pointed to the DEFORM library available in the installation location, user can changed to user library paths, this path will be called when import material, movement or insert geometries
+    are selected from DEFORM GUI.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image048.jpg" width="750"/></p>
+  <p><a id="Fig._6.4.25._System_directories_options_under_Environment_settings_window"></a></p>
+  <p class="Fig_numb">System directories options under Environment settings window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Simulation Option: </li>
+  </ul>
+  <p>In DEFORM - V12, default settings to run a Simulation can be set using options under Simulation Option tab in Environment settings. Simulation Options window appears as shown in<a href="#Fig._6.4.26._Simulation_Options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>26.</a> By
+    turning on the Keep Message Files DEFORM saves simulation messages without overwriting even after remesh. User can turn on Parallel meshing and set it as default for all simulations, user can apply the parallel meshing either to Solid or to both Solid+Surface.
+    User can turn on No automatic remeshing as default setting for simulations so that simulation can skip the automatic remesh due to non-convergence. The default settings can be changed for each simulation from Run options dialog.</p>
+  <p>(Optional) If user want to use beta mesher binaries in the problem setup then by turning on Use backup 2D mesher and Use backup 3D Mesher check box option/s user can use beta version mesher binaries during meshing/remeshing procedure.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image027.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig._6.4.26._Simulation_Options"></a></p>
+  <p class="Fig_numb">Simulation Options</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Multiple Processor:</li>
+  </ul>
+  <p>Multiple processor option under Environment Settings window appears as shown in<a href="#Fig._6.4.27._Multiple_Processor"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>27.</a> The user can activate the table just by checking next to the Use multiple processor
+    option as shown in the<a href="#Fig._6.4.27._Multiple_Processor"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>27</a>. The user can specify the computers used to solve the problem as well as the number of processors used on each computer. It is
+    very important that the user enters the correct network name of the computer for the simulation to run.  It also provides information about the memory shared between the processors.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="371" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image028.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig._6.4.27._Multiple_Processor"></a></p>
+  <p class="Fig_numb">Multiple Processor</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Process:</li>
+  </ul>
+  <p>Process option under Environment Settings window appears as shown in<a href="#Fig._6.4.28._Process_options_under_Environment_Settings_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>28.</a> User can set the default simulation modes like Deformation,
+    Heat transfer Transformation..etc and control the auto assignment of primary die.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image029.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig._6.4.28._Process_options_under_Environment_Settings_window"></a></p>
+  <p class="Fig_numb">Process options under Environment Settings window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Output Control:</li>
+  </ul>
+  <p>The user can set default output type as either Elemental or Elemental+Node for Strain, Stress and Damage variables as shown in<a href="#Fig._6.4.29._Output_Controls_options_under_Environment_Settings_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>29.</a></p>
+  <p style="text-align: center"><img height="328" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image030.jpg" width="750"/><a id="Fig._6.4.29._Output_Controls_options_under_Environment_Settings_window"></a></p>
+  <p class="Fig_numb">Output Controls options under Environment Settings window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Email</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;">Email option under Environment Settings window appears as shown in<a href="#Fig_6_4_30_Email_options_under_Environment_Settings_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>30.</a> This function allows DEFORM to send an email notification
+    at the start of the simulation and with last 25 lines from the Message file and Log file at end of the simulation. Emails are sent via SMTP using StartTLS (or no security). For more information refer <a href="../../simulator/23_deform_simulator/23_7_email_the_results.htm">23.7. Email notification of the simulation</a>.</p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;"> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"><a id="Fig_6_4_30_Email_options_under_Environment_Settings_window"></a><img height="328" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image031.jpg" width="750"/></p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"> </p>
+  <p class="Fig_numb">Email options under Environment Settings window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Memory:</li>
+  </ul>
+  <p>The user can set the required  memory size depending upon the usage as shown in <a href="#Fig._6.4.31._Memory_options_under_Environment_Settings_window"><span data-keyref="Chapter_6_4">Fig. 6.4.</span>31.</a> For most part, the default values of these
+    settings can cover wide range of model requirements. For very large size models (with respect to total number of elements and nodes) depending up on the operating system these settings may need to be increased to handle some run time procedures such
+    as remeshing.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image032.jpg"/></p>
+  <p><a id="Fig._6.4.31._Memory_options_under_Environment_Settings_window"></a></p>
+  <p class="Fig_numb">Memory options under Environment Settings window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Icon/Font:</li>
+  </ul>
+  <p>The user can change the icon and font size depending on the requirement as shown in the<a href="6_4_main_menu.htm#Fig._6.4.32._Icon/Font_options_under_Environment_Settings_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>32.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image033.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig._6.4.32._Icon/Font_options_under_Environment_Settings_window"></a></p>
+  <p class="Fig_numb">Icon/Font options under Environment Settings window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Job Protection:</li>
+  </ul>
+  <p>The user can protect Running job from being terminated by setting password as shown in <a href="#Fig._6.4.33._Job_protection_options_under_Environment_Settings_window"><span data-keyref="Chapter_6_4">Fig. 6.4.</span>33.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.33._Job_protection_options_under_Environment_Settings_window"></a><img height="358" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image034.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Job protection options under Environment Settings window</p>
+  <p><br/> In Linux system select the enable protection radio button then enter the password in the password field and click on save button to save the password (see<a href="#Fig._6.4.33._Job_protection_options_under_Environment_Settings_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>33.</a>).</p>
+  <p>In windows system select the continue button then use password in setup job password popup window and click  as shown in<a href="#Fig._6.4.34._Running_Job_protection_in_windows_password_set_up_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>34.</a></p>
+  <p style="text-align: center"><a id="Fig._6.4.34._Running_Job_protection_in_windows_password_set_up_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image035.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Running Job protection in windows password set up window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Report: </li>
+  </ul>
+  <p>From V12 Auto report generation options are provided under Report option in Environment Settings window, the auto report generation settings appears as shown in<a href="#Fig._6.4.35.__Report_options_under_Environment_Settings_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>35.</a>    User can set the default Auto Report option as per the requirement for Normal run, DOE runs and OPT runs by turning on the check box. Depending on the settings DEFORM generates the report automatically at the end of simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image036.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig._6.4.35.__Report_options_under_Environment_Settings_window"></a></p>
+  <p class="Fig_numb">Report options under Environment Settings window</p>
+  <p style="counter-reset: h4\.h4_6_4_1_6_ 1;"> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5" value="2"><strong style="font-family: Arial;font-size: 12pt"><strong><a id="Preferences" style="cursor: nwse-resize;"></a></strong>Preferences</strong><strong> : </strong>Provides viewing and object type information of the geometries. In this option, the user
+      can modify the display of the objects in the graphic display window.</li>
+  </ol>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">General:</li>
+  </ul>
+  <p>Show object selection mark allows the user to highlight the selected object in the graphical display window of the Pre processor or the Post processor as shown in<a href="#Fig._6.4.36 General options under Preferences window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>36.</a>    The user can select either of the option as shown in <a href="#Fig._6.4.37._Entity_color_option_under_Preferences_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>37.</a> encoding the colors for the objects in pre and post processor depending
+    on the requirement. The user can view back portion of the die geometry from the front view of the object by checking next to the Show back face for dies under Die geometry option.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.36 General options under Preferences window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image037.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">General options under Preferences window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Entity color:</li>
+  </ul>
+  <p>The user can set colors for different entities as shown in the<a href="#Fig._6.4.37._Entity_color_option_under_Preferences_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>37.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.37._Entity_color_option_under_Preferences_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image038.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Entity color option under Preferences window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Color Bar:</li>
+  </ul>
+  <p>The user can select the type of color bar depending on the requirement as shown in<a href="#Fig._6.4.38_Color_bar_options_under_Preferences_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>38.</a> If Print friendly is selected, than the Deform
+    adjusts the display to obtain a better image when printed.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.38_Color_bar_options_under_Preferences_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image039.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Color bar options under Preferences window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Object color:</li>
+  </ul>
+  <p>The user can set the color directly for the objects under Object color in Preference as shown in<a href="#Fig._6.4.39._Object_color_option_under_Preference_window"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>39.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.39._Object_color_option_under_Preference_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image040.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Object color option under Preference window</p>
+  <p> </p>
+  <p><a id="Project_Menu"></a><strong>Project Menu</strong></p>
+  <p>The Project menu options are shown in<a href="#Fig._6.4.40._Project_Menu_options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>40.</a>, these options can be used to list  the normal, DOE , optimization and die stress study projects, add, delete
+    and rename DOE, Optimization and Die stress study projects.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.40._Project_Menu_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image041.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Project Menu options</p>
+  <p> </p>
+  <p><a id="Help_Menu"></a><strong>Help Menu</strong></p>
+  <p>The help menu options are shown in<a href="#Fig._6.4.41._Help_menu_options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>41.</a>, these options can be used open the help manual, get the help about icons in the display, to get the SFTC contact information and
+    to get the product brief information.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.41._Help_menu_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image042.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Help menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Deform manual (F1) : </strong>This option open the DEFORM manual through the default web browser. Short cut key for Help document is F1.</p>
+    </li>
+    <li>
+      <p><strong>What&#39;s this?    (Shift+F1): </strong>This icon helps in determining the functions of the other icons in the display utilities window. This can be done by clicking the icon and placing it on the icon or field about which the user requires
+        information and then click. ‘Shift+F1’ keys on the Keyboard can be used to activate this function.</p>
+    </li>
+    <li>
+      <p><strong>About SFTC: </strong>Provides SFTC contact information in a window.</p>
+    </li>
+    <li>
+      <p><strong>About: </strong>Provides brief information about DEFORM product in a window. For more details on the release note refer the <a href="../../about_deform/1_introduction_to_deform/1_11_release_notes.htm">chapter 1.11. Release Notes.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <h2><a id="6.4.2._Simulation_Mode_menu_bar_options"></a>Simulation Mode menu bar options</h2>
+  <p>In Simulation mode except Options and Project menu options and File menu option import DB/Keyword  option all other Pre mode menu options (File, Viewport, Display, Mouse, Tool and Help) are available. In addition to the pre mode menu options Simulation menu
+    gets added to the menu bar before help menu as shown in <a href="#Fig._6.4.42._MO_Simulation_mode_Menu_and_Tool_bars"><span data-keyref="Chapter_6_4">Fig. 6.4.</span>42.</a> For Pre mode File, Viewport, Display, Mouse, Tool and Help menu bar options
+    refer the section Pre mode menu options.</p>
+  <p> </p>
+  <p class="Fig_name" style="text-align: center"><img height="21" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image043.jpg" width="750"/><br/> (a)
+  </p>
+  <p style="text-align: center"><img height="20" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image044.jpg" width="750"/></p>
+  <p class="Fig_name">(b)</p>
+  <p class="Fig_numb"><a id="Fig._6.4.42._MO_Simulation_mode_Menu_and_Tool_bars"></a>MO Simulation mode Menu and Tool bars; (a) For 3D (b) For 2D</p>
+  <p> </p>
+  <p><a id="Simulation_Menu"></a><strong>Simulation Menu</strong></p>
+  <p>The simulation menu options are shown in<a href="#Fig._6.4.43. Simulation Menu bar options"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>43.</a>, these options or icons on tool bar can be used to start, stop and continue the simulation running,
+    open the run options for advanced run options and process monitor to monitor the jobs submitted to run.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.4.43. Simulation Menu bar options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image045.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation Menu bar options</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Run (F9) or Submit simulation of the current Project </strong> <img src="../../../assets/icons/simulator_icons/mo_run_icon.jpg"/> : This is used to run the job. In case of DOE and Optimization study run option opens the run options as these
+        includes the multiple jobs to run. Then user needs to select submit to queue option, this will generate all samples DB’s and submit to simulate based on the number of simultaneous simulations selected, till then all other samples will be pending
+        in queue. For more details on Run options refer <a href="6_2_integrated_manufacturing_process_simulation_layout.htm#6.2.1._Simulation_Options">6.2.1 Simulation options</a><span style="color:#0000ff;">.</span></p>
+    </li>
+    <li>
+      <p><strong>Stop (F10)</strong> <img src="../../../assets/icons/simulator_icons/mo_stop_icon.jpg"/> :  This option is used to Stop the running job.</p>
+    </li>
+    <li>
+      <p><strong>Continue (Ctrl+ F9) : </strong>This option is used to continue the stopped job.</p>
+    </li>
+    <li>
+      <p><strong>Add to Batch Queue (Ctrl+Shift+A): </strong>It is used to add the jobs in queue for simulation.</p>
+    </li>
+    <li>
+      <p><strong>Run options : </strong>This provides run options like run normally, run in queue, multiple processors run settings, fem run types.. etc. For more details on Run options refer <span style="color:#0000ff;"><a href="6_2_integrated_manufacturing_process_simulation_layout.htm#6.2.1._Simulation_Options">6.2.1 Simulation options</a><span style="color:#0000ff;">.</span></span>
+      </p>
+    </li>
+    <li>
+      <p><strong>Process Monitor </strong> : The process monitor displays the status of any simulations running on the CPU and pending jobs in queue for running.</p>
+    </li>
+    <li>
+      <p><strong>Simulation Job Status - Built In : </strong>This provides simulating jobs status window, which shows status as Running, Pending or Finished next to that particular job. In case of DOE jobs its more useful to observe status of the multiple
+        jobs in simulation  tab itself without visiting the process monitor.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h2><a id="6.4.3._Post_Mode_menu_bar_options" height="0" width="0"></a>Post Mode menu bar options</h2>
+  <p>In Post mode except Project menu options and File menu option import DB/Keyword option all other Pre mode menu options (File, Viewport, Display, Mouse, Tool and Help) are available.(See<a href="#Fig._6.4.44._MO_Post_mode_menu_and_Tool_bars;"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>44</a>.)
+    There are no additional menu options gets added in post mode, so for Pre mode File, Viewport, Display, Mouse, Tool and Help menu bar options refer the section <a href="#Pre_Mode_menu_bar_options">6.5.1. Pre mode menu bar options</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="37" src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image046.jpg" width="750"/><br/> (a)
+  </p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image047.jpg"/><br/> (b)
+  </p>
+  <p class="Fig_numb"><a id="Fig._6.4.44._MO_Post_mode_menu_and_Tool_bars;"></a>MO Post mode menu and Tool bars; (a) For 3D (b) For 2D.</p>
+  <p> </p>
+  <h2><a id="6.4.4._Tool_bar_options"></a>Tool bar options</h2>
+  <p>Tool bar below the menu bar contains icons which are the shortcut for the different menu bar options (See<a href="#Fig._6.4.1._MO_Pre_mode_Menu_and_Tool_bar"> <span data-keyref="Chapter_6_4">Fig. 6.4.</span>1.</a> ).</p>
+  <p>In MO Pre mode except the data input modes (guided and expert) and advanced object tools Boolean, Data interpolation and Slicing icons all tool bar icons available under different menu bars.</p>
+  <p>Tool bar icons are listed below,</p>
+  <p> </p>
+  <p>New Project, Open Project, Save Project and Import DB/Keyword file options functions refer the section <a href="#File_Menu">File menu</a>.</p>
+  <p> </p>
+  <p>Capture screen to image file and Capture screen to clipboard options functions refer the section <a href="#Tool_Menu">Tool menu</a>.</p>
+  <p> </p>
+  <p>Measurement tool, Select mode, Explore mode (select, pan, rotate, zoom), Panning, Rotate, Zoom and Box zoom options functions refer the section <a href="#Mouse_Menu">Mouse Menu</a>.</p>
+  <p><br/> Refresh, Fit View, Iso view, View point (+X View, -X View, +Y View, -Y View, +Z View, -Z View) options functions refer the section <a href="#Viewport_Menu">Viewport Menu.</a></p>
+  <p><br/> Display model in shading mode, Display model in wireframe mode, Display model in shading and wireframe mode, Display model in feature line mode and Add feature line display options functions refer the section <a href="#Display_menu">Display Menu</a>.</p>
+  <p> </p>
+  <p>Object Nodes and Object Elements options functions refer the section <a href="#Tool_Menu">Tool menu</a>..</p>
+  <p> </p>
+  <p><strong><a id="Switch_to_guided_mode"></a>Switch to guided mode</strong>  <img src="../../../assets/icons/pre_icons/mo_guided_mode.jpg"/></p>
+  <p>Guided data input mode will provide only basic settings in property editor windows, as the name indicates this guides the user without displaying all advanced options.</p>
+  <p> </p>
+  <p><strong><a id="Switch_to_expert_mode"></a>Switch to expert mode</strong>  <img src="../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/></p>
+  <p>Expert data input mode as the name indicates will provide advanced settings in property editor windows.</p>
+  <p> </p>
+  <p>For example in forming operation object mesh window in expert mode having all advanced options like number of elements, size ratio, mesh windows, remesh settings..etc unlike only number of elements in guided mode. Similarly for contact and simulation
+    controls property editor windows in forming operation. So this option will activate only when there is a difference between the guided and expert mode settings and also dependent the operation type for which advanced settings are allowed.</p>
+  <p> </p>
+  <p><a id="Boolean"></a><strong>Boolean  </strong><img src="../../../assets/icons/pre_icons/mo_boolean_icon.jpg"/></p>
+  <p>This capability allows the user to subtract volume from the mesh of an object from the geometry of another object or Boolean with respect to a plane. (option available only for 3D). This will activate only when user selected the object windows like geometry,
+    mesh, boundary conditions..etc. For more information on Boolean option refer <a href="../../pre_processor/18_object_manipulation_tools/18_1_boolean.htm">s<span style="color:#0000ff;">ection  18.1. Boolean</span>.</a></p>
+  <p> </p>
+  <p><a id="Data_Interpolation"></a><strong>Data Interpolation</strong>  <img src="../../../assets/icons/pre_icons/mo_data_interpolation_icon.jpg"/></p>
+  <p>While doing the manual remeshing in the preprocessor, user can transfer data from another object from a different database using this dialog. Once the database is selected user can select the object, and step number from where the data needs to be interpolated.
+    For more information on Data interpolation refe<span style="color:#0000ff;">r section  <a href="../../pre_processor/17_object_data_initialization/17_3_data_interpolation_window.htm">17.3. Data interpolation</a></span><a href="../../pre_processor/17_object_data_initialization/17_3_data_interpolation_window.htm">.</a></p>
+  <p> </p>
+  <p><a id="Slicing"></a><strong>Slicing   </strong><img src="../../../assets/icons/pre_icons/mo_slicing_option.jpg"/></p>
+  <p>This utility enables the users to slice an object and save the 2D cross section,either as geometry or as a keyword file including the state variable data from the slicing plane. (option available only for 3D) For more information on Data interpolation refer
+    section <a href="../../pre_processor/18_object_manipulation_tools/18_2_slicing.htm"><span style="color:#0000ff;">18.2. Slicing.</span></a></p>
+  <p> </p>
+  <p><strong><a id="Stop_current_task"></a>Stop current task</strong>  <img src="../../../assets/icons/pre_icons/mo_stop_current_task_icon.jpg"/></p>
+  <p>This utility enables the users to stop the current running tasks like Point tracking, flownet generation etc. It will activate only when such tasks are running.</p>
+  <p><br/>
+    <strong>Related Topics:</strong></p>
+  <p><a href="6_1_integrated_manufacturing_process_preprocessor_layout.htm">6.1. Integrated manufacturing process Pre-processor Layout</a></p>
+  <p><a href="6_2_integrated_manufacturing_process_simulation_layout.htm">6.2. Integrated manufacturing process Simulation layout</a></p>
+  <p><a href="6_3_integrated_manufacturing_process_post_layout.htm">6.3. Integrated manufacturing process Post layout</a></p>
+  <p><a href="6_5_files_structure.htm">6.5. Files Structure</a></p>
+
+</body></html>

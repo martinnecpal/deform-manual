@@ -1,0 +1,343 @@
+---
+lang: sk
+title: "Electro-Magnetic Forming Lab1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.4.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Electro-Magnetic Forming Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Electro-Magnetic Forming Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_electro_magenetic_forming/electro_magenetic_forming_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_Fracture/55_Fracture_Main_PG.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_Electro_Magenetic_Forming/55_Electro_Magnetic_Forming_Main_Pg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Electro-Magnetic Forming Lab1">
+        <span>Electro-Magnetic Forming Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Electro-Magnetic Forming Lab</h1>
+  <p>In this lab we will demonstrate how to setup a simple Electro-magnetic forming operation.</p>
+  <p> </p>
+  <p><a href="#1_1_Creating_a_New_Problem">1.1. Creating a New Problem</a>  </p>
+  <p><a href="#1_2_Adding_Forming_Operation">1.2. Adding Forming Operation</a></p>
+  <p><a href="#1_3_Simulation_Controls">1.3. Simulation Controls</a></p>
+  <p><a href="#1_4_Material_list">1.4. Material list</a></p>
+  <p><a href="#1_5_Objects">1.5. Objects</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_1_Workpiece">1.5.1. Workpiece</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_2_Top_Die">1.5.2. Top Die</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_3_Bottom_Die">1.5.3. Bottom Die</a></p>
+  <p><a href="#1_6_Contact">1.6. Contact</a></p>
+  <p><a href="#1_7_Stopping_controls">1.7. Stopping controls</a></p>
+  <p><a href="#1_8_Step_controls">1.8. Step controls</a></p>
+  <p><a href="#1_9_Generate_DB">1.9. Generate DB</a></p>
+  <p><a href="#1_10_Running_Simulation">1.10. Running Simulation</a></p>
+  <p><a href="#1_11_Post_Processing">1.11. Post Processing</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_a_New_Problem"></a>Creating a New Problem  </h2>
+  <p>On a Windows machine, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear, as shown in <a href="#Fig_EMFL1_1_QT4_GUI_Main_window"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>1</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_1_QT4_GUI_Main_window"></a><img height="435" src="../../../../assets/images/applications/55_2_arc_welding/image0001.jpg" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">QT4 GUI Main window</p>
+  <p> </p>
+  <p> Create a new problem either by selecting <strong>File </strong><img height="12" src="../../../../assets/icons/pre_icons/arrow_front.jpg" width="29"/> <strong>New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_EMFL1_2_New_Problem_page"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>2.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>SI</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong>3D_EMFORMING </strong>&quot; and click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using the Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_2_New_Problem_page"></a><img height="417" src="../../../../assets/images/applications/55_2_arc_welding/image0002.jpg" style="cursor: nwse-resize;" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem page</p>
+  <p> </p>
+  <p>Multiple operation wizard will open, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use  &quot;<strong>3D_EMFORMING</strong>&quot;
+    as the project name. Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" style="cursor: nesw-resize;"/> to continue to open the operation.</p>
+  <h2><a id="1_2_Adding_Forming_Operation"></a>Adding Forming Operation</h2>
+  <p>Add 3D Forming operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button available next to [3D] Forming or can also be added by drag and drop into
+    the Operation editor (See <a href="#Fig_EMFL1_3_Adding_3D_Forming_operation_from_Explorer"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>3.</a>). When we add the Forming operation, process settings Window will open
+    by default.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_3_Adding_3D_Forming_operation_from_Explorer"></a><img height="418" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0003.jpg" width="738"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Adding 3D Forming operation from Explorer</p>
+  <h2><a id="1_3_Simulation_Controls"></a>Simulation Controls</h2>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> button to switch to Expert mode since advanced settings are required to set up Electro-magnetic forming operation, by default &quot;<strong>Deformation</strong>&quot;
+    and &quot;<strong>Heat </strong><strong>Transfer</strong>&quot; Mode check box would be checked if not, check the &quot;Deformation&quot; and &quot;Heat Transfer&quot; Mode check boxes. Select &quot;<strong>Electro-magnetic forming</strong>&quot;
+    <strong>Simulation </strong><strong>type </strong>(See <a href="#Fig_EMFL1_4_Simulation_controls"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>4</a> ), when we select Electro-magnetic forming simulation type by
+    default  &quot;<strong>Induction (BEM)</strong>&quot; <strong>type </strong>&quot;<strong>Heating</strong>&quot; will be selected and in <strong>Solver </strong>setting <strong>Explicit </strong><strong>solver </strong>Under Deformation will be selected.
+    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_4_Simulation_controls"></a><img height="450" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0004.jpg" width="464"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation controls</p>
+  <h2><a id="1_4_Material_list"></a>Material list</h2>
+  <p>Using <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> button import materials from &quot;<strong>AL-1100,COLD[70F(20C)].key</strong>&quot; and &quot;<strong>coil_material.key</strong>&quot; from /<strong>3D/ LABS/ EM_Forming</strong>    folder. Imported materials will be displayed as shown in below <a href="#Fig_EMFL1_5_Material_list"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>5.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_5_Material_list"></a><img height="325" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0005.jpg" width="516"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material list</p>
+  <h2> <a id="1_5_Objects"></a>Objects</h2>
+  <p>In this lab we need three objects, in the list keep all three objects, Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Workpiece page.</p>
+  <h3><a id="1_5_1_Workpiece"></a>Workpiece</h3>
+  <p>Keep the default <strong>Object </strong><strong>name </strong>as &quot;<strong>Workpiece</strong>&quot;, Object <strong>Temperature </strong>as <strong>20</strong>°C and change Object Type to <strong>Elasto-plastic</strong> as shown in <a href="#Fig_EMFL1_6_Workpiece_General_page"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>6.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_6_Workpiece_General_page"></a><img height="325" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0006.jpg" width="458"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece General page</p>
+  <h4>Workpiece Geometry</h4>
+  <p>To define tube workpiece geometry for electro-magnetic forming click on <img src="../../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/>, select <strong>Hollow cylinder</strong> type and define <strong>Inside </strong><strong>Radius </strong>(R1)
+    as <strong>6.5 </strong>mm, <strong>Outside </strong><strong>Radius </strong>(R2) as<strong> 7.5</strong> mm and <strong>Height </strong>(H) as <strong>50 </strong>mm as shown in <a href="#Fig_EMFL1_7_Workpiece_geometry_primitive"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>7.</a>    and click on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_7_Workpiece_geometry_primitive"></a><img height="423" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0007.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Workpiece geometry primitive</p>
+  <h4>Workpiece Mesh</h4>
+  <p>Select type of mesh as <strong>Brick </strong>mesh, under &quot;<strong>2D Cross section</strong>&quot; tab define Target number of elements as <strong>80</strong>, <strong>Thickness </strong>as <strong>2</strong> and <strong>Size </strong><strong>ratio </strong>as
+    <strong></strong><strong>1</strong> and check the <strong>Mapped mesh generation </strong>check box as shown in below <a href="#Fig_EMFL1_8_Brick_Mesh_-_2D_Cross_section_page"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>8.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_8_Brick_Mesh_-_2D_Cross_section_page"></a><img height="450" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0008.jpg" width="459"/></p>
+  <p> </p>
+  <p class="Fig_numb">Brick Mesh - 2D Cross section page</p>
+  <p> </p>
+  <p>Under &quot;<strong>General</strong>&quot; tab, select <strong>Uniform thickness of layers</strong> and define <strong># of layers </strong>as <strong>52 </strong>as shown in <a href="#Fig_EMFL1_9_Brick_Mesh_-_General_page"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>9.</a>    and click on <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> and click <strong>No </strong>for Default Boundary condition popup as we will be defining required BCC. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_9_Brick_Mesh_-_General_page"></a><img height="423" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Brick Mesh - General page</p>
+  <h4>Workpiece Material</h4>
+  <p>Assign &quot;<strong>AL-1100,COLD[70F(20C)]</strong>&quot; for the workpiece as shown in <a href="#Fig_EMFL1_10_Workpiece_Material_page"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>10.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to BCC page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_10_Workpiece_Material_page"></a><img height="425" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0010.jpg" width="433"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Material page</p>
+  <h4>Workpiece Boundary condition</h4>
+  <p>Fix the bottom surface of the workpiece by assigning Vz=0 to the bottom surface (see <a href="#Fig_EMFL1_11_Assigned_Velocity_BCC_(Vz_0)_for_workpiece"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>11.</a>) and fix
+    both Top surface and Bottom surface of the workpiece in X and Y directions by assigning Vx=0 and Vy=0 to the respective surfaces as shown in <a href="#Fig_EMFL1_12_Assigned_Velocity_BCC_(Vy_0)_for_workpiece"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>12.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_11_Assigned_Velocity_BCC_(Vz_0)_for_workpiece"></a><img height="424" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Velocity BCC (Vz=0) for workpiece</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_12_Assigned_Velocity_BCC_(Vy_0)_for_workpiece"></a><img height="423" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0012.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Velocity BCC (Vy=0) for workpiece</p>
+  <p> </p>
+  <p>Under <strong>Induction </strong><strong>BEM </strong>from BCC tree, select <strong>Heating </strong><strong>Surface </strong>option and select <strong>Outer </strong><strong>surface </strong>of the workpiece, then click on <img src="../../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/> to finish the assignment. Defined Heating Surface BCC as shown in below <a href="#Fig_EMFL1_13_Workpiece_Heating_surface_BCC"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>13.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Top die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_13_Workpiece_Heating_surface_BCC"></a><img height="424" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0013.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Workpiece Heating surface BCC</p>
+  <p> </p>
+  <h3><a id="1_5_2_Top_Die"></a>Top Die</h3>
+  <p>In Top Die page, change the Object name to <strong>COIL </strong>and using <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> option import <strong>COIL.key</strong> from <strong>/3D/ LABS/EM_Forming</strong> folder. The imported
+    COIL.key is having COIL geometry along with Brick mesh data as shown in <a href="#Fig_EMFL1_14_Imported_Top_die_object"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>14.</a> Since we don’t need to generate geometry
+    and mesh, we will navigate using  until Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_14_Imported_Top_die_object"></a><img height="423" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Imported Top die object</p>
+  <h4 class="h4_1_5_2_">COIL Material</h4>
+  <p>Assign <strong>coil </strong>Material from list to COIL as shown in <a href="#Fig_EMFL1_15_COIL_Material_page"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>15.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Boundary condition page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_15_COIL_Material_page"></a><img height="425" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0015.jpg" width="433"/></p>
+  <p> </p>
+  <p class="Fig_numb">COIL Material page</p>
+  <h4 class="h4_1_5_2_">COIL Boundary Condition</h4>
+  <p>Under Induction BEM from BCC tree, select Heating Surface option and select all surfaces of the Coil except Coil begin and Coil End surface, then click on <img src="../../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/>  to finish the assignment
+    (See <a href="#Fig_EMFL1_16_Assigned_Heating_Surface_BCC"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>16.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_16_Assigned_Heating_Surface_BCC"></a><img height="423" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Heating Surface BCC</p>
+  <p> </p>
+  <p>Select <strong>Coil </strong><strong>Begin </strong><strong>surface </strong>option under BCC and select COIL begin surface and assign as shown in <a href="#Fig_EMFL1_17_Assigned_Coil_Begin_Surface_BCC"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>17.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_17_Assigned_Coil_Begin_Surface_BCC"></a><img height="423" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Coil Begin Surface BCC</p>
+  <p> </p>
+  <p>Similarly, select Coil End Surface option under BCC and select COIL End surface and assign as shown in <a href="#Fig_EMFL1_18_Assigned_Coil_End_Surface_BCC"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>18.</a> Click
+    <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Properties page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_18_Assigned_Coil_End_Surface_BCC"></a><img height="424" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Assigned Coil End Surface BCC</p>
+  <p> </p>
+  <h4 class="h4_1_5_2_">COIL Properties</h4>
+  <p>Select &quot;<strong>Heating</strong>&quot; tab in object “<strong>Properties</strong>” page, select <strong>Current </strong><strong>frequency </strong>type as <strong>Single</strong>, define <strong>Current </strong><strong>frequency </strong>as <strong>Constant </strong>value
+    of <strong>8800 </strong>Hz, select <strong>Volume </strong>charge type as &quot;<strong>Current </strong><strong>density</strong>&quot; and define <strong>Current </strong><strong>Density  </strong>as <strong>function </strong><strong>of </strong><strong>time </strong>by
+    selecting Function of time type under “<strong>Data </strong><strong>Definition</strong>” as shown in <a href="#Fig_EMFL1_19_COIL_Properties_page"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>19.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_19_COIL_Properties_page"></a><img src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0019.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">COIL Properties page</p>
+  <p> </p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_define..._button2.jpg"/> and import <strong>volume_charge.dat</strong> file from <strong> /3D/ LABS/EM_Forming</strong> folder and click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>, imported file will have data as shown in <a href="#Fig_EMFL1_20_Imported_volume_charge_file_data"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>20.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Bottom Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_20_Imported_volume_charge_file_data"></a><img height="442" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Imported volume charge file data</p>
+  <h3><a id="1_5_3_Bottom_Die"></a>Bottom Die</h3>
+  <p>In Bottom Die page, change the object name to <strong>Mandrel </strong>and keep object type to default &quot;<strong>Rigid</strong>&quot; and object temperature as 20°C as shown in <a href="#Fig_EMFL1_21_Bottom_die_page"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>21.</a> Click
+    <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to object geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_21_Bottom_die_page"></a><img height="320" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0021.jpg" width="440"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bottom die page</p>
+  <p> </p>
+  <h4 class="h4_1_5_3_">Mandrel Geometry</h4>
+  <p>In Geometry page, using <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> button import <strong>Mandrel.geo </strong>file from <strong>/3D/ LABS/EM_Forming</strong> folder, after importing any geometry use <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> action label to check the Geometry and click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to close Check popup and Click  <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Contact page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_22_Mandrel_geometry_page"></a><img height="424" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0022.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mandrel geometry page</p>
+  <h2><a id="1_6_Contact"></a>Contact</h2>
+  <p>In <strong>Contact </strong>page, add one relation by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button, select <strong>Mandrel </strong>as <strong>Master </strong>and <strong>Workpiece </strong>as <strong>Slave</strong>.
+    Click on <img height="21" src="../../../../assets/icons/pre_icons/mo_edit_button.jpg" width="56"/>  and define <strong>Shear </strong>as <strong>0.12</strong>.  Click the <img src="../../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> to determine
+    an intelligent contact tolerance. Click <img src="../../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> to generate contact. Navigate using <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Stopping controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_23_Contact_page"></a><img height="425" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0023.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact page</p>
+  <h2><a id="1_7_Stopping_controls"></a>Stopping controls</h2>
+  <p>Define <strong>Process </strong><strong>duration </strong>as <strong>0.0003 </strong>as shown in <a href="#Fig_EMFL1_24_Stopping_controls"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>24.</a>, click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Step page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_24_Stopping_controls"></a><img height="375" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0024.jpg" width="425"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping controls</p>
+  <h2><a id="1_8_Step_controls"></a>Step controls</h2>
+  <p>Switch to Guided mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_guided_mode.jpg"/>, define the <strong>Number of Steps </strong>as <strong>500</strong>, <strong>Step increment</strong> as <strong>1</strong> and <strong>Time per step </strong>as
+    <strong>1e-06 </strong>as shown in <a href="#Fig_EMFL1_25_Step_controls_-Guided_mode"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>25.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_25_Step_controls_-Guided_mode"></a><img height="375" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0025.jpg" width="425"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step controls -Guided mode</p>
+  <p> </p>
+  <p>Switch to <strong>Expert </strong><strong>mode </strong>by clicking on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> button, under <strong>Solver </strong><strong>setting </strong>- <strong>Deformation </strong>tab we can
+    observe by default <strong>Explicit </strong>solver has been selected when we selected simulation type as Electro-magnetic forming. Define explicit solver settings <strong>Damping </strong><strong>coefficient </strong>as <strong>1</strong>, <strong>Mass </strong><strong>scaling </strong><strong>factor </strong>as
+     <strong>1</strong> and <strong>cycle </strong>as <strong>10</strong>. Select <strong>iteration </strong><strong>method </strong>type as <strong>Newton-Rapson</strong> as shown in <a href="#Fig_EMFL1_26_Solver_settings_-_Deformation_tab"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>26.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_26_Solver_settings_-_Deformation_tab"></a><img height="400" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0026.jpg" width="408"/></p>
+  <p> </p>
+  <p class="Fig_numb">Solver settings - Deformation tab</p>
+  <p> </p>
+  <p>Under Solver setting - <strong>Advanced </strong>tab, <strong>uncheck </strong>the <strong>Deformation </strong>check box within <strong>Bandwidth optimization – deformation solver</strong> tab, Define <strong>maximum </strong><strong>iterations </strong><strong>per </strong><strong>deformation </strong><strong>time </strong>step
+    as <strong>1000 </strong>in Maximum iterations- deformation solver tab and <strong>uncheck </strong>the <strong>Temperature check box in Bandwidth optimization - temperature solver</strong> tab, after making these changes the settings should look
+    like as shown in <a href="#Fig_EMFL1_27_Solver_settings_-_Advanced_tab"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>27.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_27_Solver_settings_-_Advanced_tab"></a><img height="430" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0027.jpg" width="439"/></p>
+  <p> </p>
+  <p class="Fig_numb">Solver settings - Advanced tab</p>
+  <p> </p>
+  <p>Under <strong>Process </strong><strong>conditions </strong>- <strong>Induction </strong>tab, define <strong>Source energy ratio</strong> as <strong>1000 </strong>as shown in <a href="#Fig_EMFL1_28_Process_conditions_-_Induction_tab"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_28_Process_conditions_-_Induction_tab"></a><img height="420" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0028.jpg" width="428"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process conditions - Induction tab</p>
+  <p> </p>
+  <p>Under <strong>Advanced </strong><strong>options </strong>- <strong>Frequency </strong>tab we can define frequency of calculations for <strong>Contact</strong>, <strong>Temperature </strong>and <strong>Database </strong><strong>writing </strong>for explicit
+    solver, for this lab we will use <strong>Auto </strong>as shown in <a href="#Fig_EMFL1_29_Advanced_options_-_Frequency_tab"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>29.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to DB Generation page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_29_Advanced_options_-_Frequency_tab"></a><img height="440" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0029.jpg" width="449"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced options - Frequency tab</p>
+  <h2><a id="1_9_Generate_DB"></a>Generate DB</h2>
+  <p>Click<img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/>  to see if anything was missed in the setup and then click on the <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/>  button to generate the database.
+    Observe the message in Message tab informing database generation status.</p>
+  <h2><a id="1_10_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated, switch to the Simulation mode by selecting the <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the object tree. To start the simulation c<span style="font-size: 12pt;">lick on the </span><img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg" style="font-size: 12pt;"/><span style="font-size: 12pt;"> action label to open the Run Options dialog as shown in</span><span style="font-size: 12pt;"> </span><a href="#Fig_EMFL1_30_Run_Simulation_Window" style="font-size: 12pt;"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>30.</a><span style="font-size: 12pt;">)</span><span style="font-size: 12pt;"></span><span style="font-size: 12pt;"> Use the default </span>
+    <strong style="font-size: 12pt;">Continue Run</strong><span style="font-size: 12pt;"> option to select “</span><strong style="font-size: 12pt;">Continue from the last step</strong> <span style="font-size: 12pt;">” option and then select the Simulation mode as </span><strong style="font-size: 12pt;">Interactive </strong>
+      <span style="font-size: 12pt;">and click on </span><img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" style="font-size: 12pt;" width="75"/><span style="font-size: 12pt;"> button to run the simulation.</span></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_30_Run_Simulation_Window"></a><img height="293" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0030.jpg" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation Window</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked. User can view the Electro- magnetic
+    forming  process as the simulation proceeds to the specified Step definition from Simulation graphics.</p>
+  <h2><a id="1_11_Post_Processing"></a>Post Processing</h2>
+  <p>When the simulation is completes, review the results by switching to Post mode using the <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> button above the Simulation tool bar.</p>
+  <p> </p>
+  <p>Play through the steps using animation option and observe the workpiece deformation.</p>
+  <p> </p>
+  <p><strong>Slicing:</strong></p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_slice.jpg"/> and slice the object in <strong>X </strong>direction as shown in <a href="#Fig_EMFL1_31_Sliced_object_using_Slicing_option"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>31.</a>    Play the steps and observe the workpiece deformation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_31_Sliced_object_using_Slicing_option"></a><img height="423" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0031.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Sliced object using Slicing option</p>
+  <p> </p>
+  <p><strong>State variable:</strong></p>
+  <p>Select single object mode <img src="../../../../assets/icons/pre_icons/mo_show_single_obj_icon.jpg"/> and plot <strong>Strain-Effective</strong> state variable and observe the strain distribution. (See <a href="#Fig_EMFL1_32_Strain_-_Effective_distribution_in_Workpiece"><span data-keyref="Applications-Electro-Magnetic-Forming-Lab1">Fig. EMFL1.</span>32.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_EMFL1_32_Strain_-_Effective_distribution_in_Workpiece"></a><img height="263" src="../../../../assets/images/applications/55_electro_magenetic_forming_lab/image0032.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Strain - Effective distribution in Workpiece</p>
+  <p> </p>
+
+</body></html>

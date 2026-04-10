@@ -1,0 +1,309 @@
+---
+lang: en
+title: "3D Die stress study with Shrink Fit Lab"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.7.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Die stress study with Shrink Fit Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Die stress study with Shrink Fit Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/die_stess_study_labs/3d_die_stress_study_lab2.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Die_Stess_Study_Labs/3D_Die_Stress_study_across_multiple_operations.htm"/><meta name="brsprev" value="Documentation_content/Labs/Die_Stess_Study_Labs/3D_Die_stress_Study_Lab1.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Die stress study with Shrink Fit Lab">
+        <span>3D Die stress study with Shrink Fit Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3D Die stress study Lab 2</h1>
+  <p><a href="#2_1_Introduction">2.1. Introduction</a></p>
+  <p><a href="#2_2_Opening_project_file">2.2. Opening project file</a></p>
+  <p><a href="#2_3_Add_Die_Stress_Study">2.3. Add Die Stress Study</a></p>
+  <p><a href="#2_4_Adding_Objects">2.4. Adding Objects</a></p>
+  <p><a href="#2_5_Top_Die">2.5. Top Die</a> </p>
+  <p><a href="#2_6_Bottom_Die">2.6. Bottom Die</a></p>
+  <p><a href="#2_7_Upper_Support">2.7. Upper Support</a> </p>
+  <p><a href="#2_8_Lower_Support">2.8. Lower Support</a> </p>
+  <p><a href="#2_9_Define_Inter-Object_Relation">2.9. Define Inter-Object Relation</a></p>
+  <p><a href="#2_10_Simulation_Controls">2.10. Simulation Controls</a> </p>
+  <p><a href="#2_11_Generate_Database">2.11. Generate Database</a></p>
+  <p><a href="#2_12_Post_Processing">2.12. Post Processing</a></p>
+  <p> </p>
+  <h2><a id="2_1_Introduction"></a>Introduction</h2>
+  <p>The objective of this lab is to run a die stress analysis. When the stress analysis is being done on only one tool, a one step simulation is sufficient to get accurate stresses. When the stress analysis is being done on die assemblies where there is
+    interaction between the tools, more than one step is typically needed for the die stack to come to a state of equilibrium under the applied load.</p>
+  <p>In a typical die stress simulation, the workpiece is removed and the forces exerted onto the dies by the workpiece are interpolated onto the tools. In this lab, a shrink fit will also be modeled.</p>
+  <p> </p>
+  <h2><a id="2_2_Opening_project_file"></a>Opening project file</h2>
+  <p>Open Previously simulated <a href="../basic_labs/3d_labs/lab03_spike_forging.htm"><strong>Spike_Forging.moproj</strong></a> file in <img src="../../../assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg"/> (DEFORM Integrated Manufacturing Proc.)
+    in   <a href="../basic_labs/3d_labs/lab03_spike_forging.htm">Lab03 Spike Forging</a> as shown in <a href="#Fig_3DDSL2_1_Opening_Project_file_from_GUI_main"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>1.</a>     Integrated Manufacturing Process user interface will open.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_1_Opening_Project_file_from_GUI_main"></a><img height="385" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Opening Project file from GUI main</p>
+  <h2><a id="2_3_Add_Die_Stress_Study"></a>Add Die Stress Study</h2>
+  <p>At top Left corner of the Display window, Left mouse click on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button and select <strong>Add Die stress Study</strong> operation as shown in <a href="#Fig_3DDSL2_2_Adding_Die_stress_Study"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>2.</a></p>
+  <p style="text-align: center">                                                                  <a id="Fig_3DDSL2_2_Adding_Die_stress_Study"></a><img height="552" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Die stress Study</p>
+  <p> </p>
+  <p>Die stress operation will add automatically to operation editor under new tab as shown in <a href="#Fig_3DDSL2_3_Adding_Die_stress_Operation_From_Explorer"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>3.</a>    To perform Die stress operation, select <strong>step 90</strong> in Step selection page as shown in <a href="#Fig_3DDSL2_3_Adding_Die_stress_Operation_From_Explorer"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>3.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_3_Adding_Die_stress_Operation_From_Explorer"></a><img height="550" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Die stress Operation From Explorer</p>
+  <h2><a id="2_4_Adding_Objects"></a>Adding Objects</h2>
+  <p>We need two new objects to analyze the effect of shrink fit on Top Die and provide support to Bottom die. By selecting <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button, add two objects and name them as Upper support and
+    Lower Support respectively, as shown in  <a href="#Fig_3DDSL2_4_Adding_Objects"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>4.</a> We will accept the object type as Elastic for all objects. As Top Die
+    is already having mesh, click <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Top die object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_4_Adding_Objects"></a><img height="350" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0004.jpg" width="405"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Objects</p>
+  <h2><a id="2_5_Top_Die"></a>Top Die</h2>
+  <h3>Top die object definition</h3>
+  <p>By default, the object type of rigid objects from the loaded step will be changed to elastic. Keep the object type as elastic for the Top Die object. From v13.1.1, two new options have been introduced in the object page to position the dies in future
+    steps for Multiple steps die stress analysis, we need not use these options for single step die stress analysis hence, keep the Need positioning check box turned off. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> till Material
+    page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_5_Top_Die_object_general_page"></a><img height="350" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_with_multiple_step/image0013.jpg" width="481"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Top Die object page</p>
+  <h3>Assign Material</h3>
+  <p>In material window, select <strong>AISI-H-13</strong> material as shown in <a href="#Fig_3DDSL2_6_Material_Window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>6.</a> and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_6_Material_Window"></a><img height="410" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0005.jpg" width="443"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material Window</p>
+  <h3>Assigning Boundary Conditions</h3>
+  <ol class="Decimal">
+    <li>
+      <p>Select the <strong>Symmetry plane boundary condition</strong>, and then add a boundary condition to each of the Top Die symmetry planes as shown in <a href="#Fig_3DDSL2_7_Assigning_Symmetry_Boundary_conditions"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>7.</a></p>
+    </li>
+    <li>
+      <p>Apply <strong>Vz = 0</strong> Velocity boundary condition on the top surface of the Top Die. This boundary condition prevents the die from flying off when the forces are applied. (See <a href="#Fig_3DDSL2_8_Assigning_Velocity_BCC"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>8.</a>) Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Force interpolation page.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_7_Assigning_Symmetry_Boundary_conditions"></a><img height="424" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Symmetry Boundary conditions</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_8_Assigning_Velocity_BCC"></a><img height="425" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0007.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Velocity BCC</p>
+  <h3>Interpolate Forces for Top die</h3>
+  <p>In Force interpolation page, click on <img src="../../../assets/icons/pre_icons/mo_interpolate_force_button.jpg"/> action label as shown in <a href="#Fig_3DDSL2_9_Force_Interpolation_window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>9.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Bottom Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_9_Force_Interpolation_window"></a><img height="553" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Force Interpolation window</p>
+  <h2><a id="2_6_Bottom_Die"></a>Bottom Die</h2>
+  <h3 class="h3_2_6_">Bottom die object definition</h3>
+  <p>We will keep the object type as Elastic for the Bottom Die and turn off Need positioning check box.Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_10_Bottom_Die_object_page"></a><img height="350" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_with_multiple_step/image0014.jpg" width="481"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Bottom Die object page</p>
+  <h3 class="h3_2_6_">Assign Material</h3>
+  <p>In material window, select <strong>AISI-H-13</strong> material as shown in <a href="#Fig_3DDSL2_5_Material_Window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>6.</a> and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3 class="h3_2_6_"> Assigning Boundary Conditions</h3>
+  <p>Select the Symmetry plane boundary condition, and then add a boundary condition to each of the symmetry surfaces as shown in<a href="3d_die_stress_study_across_multiple_operations.htm#Fig_3DDSL3_11_Interpolated_forces_onto_Punch_from_Billet">  <span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>11.</a>    We will use Lower support object to prevent Bottom Die from flying off in Z direction. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Force interpolation page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_11_BCC_Window"></a><img height="426" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">BCC Window</p>
+  <p> </p>
+  <h3 class="h3_2_6_">Interpolate Forces for Bottom die</h3>
+  <p>In Force interpolation page, click on <img src="../../../assets/icons/pre_icons/mo_interpolate_force_button.jpg"/> action label as shown in <a href="#Fig_3DDSL2_12_Force_interpolation_window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>12.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Object3 General page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_12_Force_interpolation_window"></a><img height="426" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Force interpolation window</p>
+  <h2><a id="2_7_Upper_Support"></a>Upper Support</h2>
+  <p>Change the name of Object 3 to <strong>Upper Support </strong>with <strong>Elastic </strong>object type as shown in <a href="#Fig_3DDSL2_13_Upper_Support_Object_definition_page"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>13.</a>    and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_13_Upper_Support_Object_definition_page"></a><img height="400" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0011.jpg" width="406"/></p>
+  <p> </p>
+  <p class="Fig_numb">Upper Support Object page</p>
+  <h3 class="h3_2_7_">Import Geometry</h3>
+  <p>In Geometry page, click on import geometry from library option (<img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>) and import the <strong>UpperSupport.STL </strong>file from installation path \SFTC\DEFORM\v*_*\3d\LABS) . Use
+    <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> button to check the Geometry. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Mesh page.</p>
+  <h3 class="h3_2_7_">Generate Mesh</h3>
+  <p>Enter <strong>Target number of elements</strong> as <strong>12000 </strong>as shown in <a href="#Fig_3DDSL2_14_Mesh_Generation_Window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>14.</a> then click on <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/>. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_14_Mesh_Generation_Window"></a><img src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0012.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh Generation Window</p>
+  <h3 class="h3_2_7_">Assign Material</h3>
+  <p>In material window, select <strong>AISI-H-13</strong> material as shown in <a href="#Fig_3DDSL2_6_Material_Window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>6.</a> and click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3 class="h3_2_7_">Assigning Boundary Conditions</h3>
+  <p>Specify <strong>Symmetry plane boundary conditions</strong> on the <strong>two symmetry surfaces</strong> of the Upper Support as shown in <a href="#Fig_3DDSL2_15_Assigning_Symmetry_BCC"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>15.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_15_Assigning_Symmetry_BCC"></a><img height="426" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0013.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Assigning Symmetry BCC</p>
+  <p> </p>
+  <p>Apply <strong>Vz = 0</strong> Velocity boundary condition on the <strong>top surface</strong> so that the object does not fly off in the Z-direction as shown in  <a href="#Fig_3DDSL2_16_Assigning_Velocity_BCC"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>16.</a></p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_16_Assigning_Velocity_BCC"></a><img height="426" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Velocity BCC</p>
+  <p> </p>
+  <p>This object also gets a shrink fit applied to it, so select the Shrink Fit boundary condition. Shrink fit is defined radially, so an axis and a point need to be defined. For this analysis, (0, 0, 0) is the point at the center of the dies, and the Z
+    axis is the axis of the objects. If the shrink fit is applied to the inner object, the value should be negative. If the shrink fit is applied to the outer object then the value should be positive. Since we are applying the shrink to the outer object,
+    use a value of 0.004 for the Interference and click on <img src="../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/> button. When prompted if you want to move the coordinates of the nodes, click <img src="../../../assets/icons/pre_icons/mo_no_button.jpg"/>. (See <a href="#Fig_3DDSL2_17_Move_object_nodal_coordinates_message"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>17.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_17_Move_object_nodal_coordinates_message"></a><img src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0015.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Move object nodal coordinates message</p>
+  <p> </p>
+  <p>Once the above parameters have been set, Upper support appears as shown in <a href="#Fig_3DDSL2_18_BCC_definition_Window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>18.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_18_BCC_definition_Window"></a><img height="426" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0016.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">BCC definition Window</p>
+  <p> </p>
+  <p>For a better look at the applied shrink fit, click on Object Nodes <img src="../../../assets/icons/pre_icons/mo_nodal_data_icon.jpg"/> icon. Plot Displacement variable vector plot using <img src="../../../assets/icons/pre_icons/mo_plot_vector_icon.jpg"/> button to view the applied shrink fit on the Upper Support as shown in <a href="#Fig_3DDSL2_19_Node_Data_window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>19.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_19_Node_Data_window"></a><img height="425" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0017.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Node Data window</p>
+  <h2><a id="2_8_Lower_Support"></a>Lower Support</h2>
+  <p>Change the name of Object 4 to<strong> Lower Support </strong>with <strong>Elastic </strong>object type as shown in <a href="#Fig_3DDSL2_20_Lower_support_Object_Definition"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>20.</a>    and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_20_Lower_support_Object_Definition"></a><img src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0018.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Lower support Object page</p>
+  <h3 class="h3_2_8_">Import Geometry</h3>
+  <p>In Geometry page, click on import geometry from library option (<img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>) and import the <strong>LowerSupport.STL</strong> file from installation path \SFTC\DEFORM\v*_*\3d\LABS). Use
+    <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> button to check the Geometry. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3 class="h3_2_8_">Generate Mesh</h3>
+  <p>Enter <strong>T</strong><strong>arget number of Element</strong><strong>s</strong> as <strong>14000 </strong>as shown in <a href="#Fig_3DDSL2_21_Mesh_generation_window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>21.,</a> then
+    click on <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_21_Mesh_generation_window"></a><img src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0019.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh generation window</p>
+  <h3 class="h3_2_8_">Assign Material</h3>
+  <p>In material window, select <strong>AISI-H-13</strong> material as shown in <a href="#Fig_3DDSL2_6_Material_Window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>6.</a> and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3 class="h3_2_8_">Assigning Boundary Conditions</h3>
+  <p>Specify <strong>Symmetry plane boundary conditions</strong> on the <strong>two </strong><strong>symmetry </strong><strong>surfaces </strong>of the Lower Support as shown in <a href="#Fig_3DDSL2_22_Assigning_Symmetry_BCC"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_22_Assigning_Symmetry_BCC"></a><img height="423" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0020.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Assigning Symmetry BCC</p>
+  <p> </p>
+  <p>Apply <strong>Vz = 0</strong> <strong>Velocity </strong>boundary condition on the <strong>bottom surface</strong> so that the object does not fly off in the Z-direction. (See <a href="#Fig_3DDSL2_23_BCC_Definition_Window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>23</a>.)
+    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Contact page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_23_BCC_Definition_Window"></a><img height="425" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0021.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">BCC Definition Window</p>
+  <p> </p>
+  <h2><a id="2_9_Define_Inter-Object_Relation"></a>Define Inter-Object Relation</h2>
+  <p>In Contact page, click on <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button twice to add two relations in list. In First relation, select <strong></strong><strong>Upper support </strong>as <strong>Master </strong>and <strong>Top Die</strong>    as <strong>Slave </strong>object with friction value <strong>0.3.</strong> In second relation, select<strong> <strong>Lower support</strong></strong> as <strong>Master </strong>and <strong>Bottom Die</strong><strong> </strong>as <strong>Slave </strong>with
+    friction value <strong>0.3</strong>. Click on <img src="../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> button to set a suitable tolerance and click on <img src="../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> to generate
+    contacts. (See <a href="#Fig_3DDSL2_24_Inter-Object_Window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>24.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_24_Inter-Object_Window"></a><img height="551" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0022.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-Object Window</p>
+  <p> </p>
+  <h2><a id="2_10_Simulation_Controls"></a>Simulation Controls</h2>
+  <p>Set <strong>Number of Simulation Steps</strong> to <strong></strong><strong>6</strong> and the <strong>Step Increment to Save</strong> to <strong>1</strong>. Set the <strong>Max. elapsed process time per step</strong> as <strong>1 </strong>sec. (See
+    <a href="#Fig_3DDSL2_25_Simulation_Controls_window"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>25.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_25_Simulation_Controls_window"></a><img src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0023.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Controls window</p>
+  <p> </p>
+  <h2><a id="2_11_Generate_Database"></a>Generate Database</h2>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> action label to check the problem. Generate a database by clicking  <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> action label.</p>
+  <p>Once the database has been generated, switch to the Simulation mode by selecting the <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the object tree. Start the simulation by clicking the <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label and selecting &quot;Start from last negative step&quot; option. After completion of Simulation, switch to Post mode by selecting <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> button.</p>
+  <p> </p>
+  <h2><a id="2_12_Post_Processing"></a>Post Processing</h2>
+  <p>Click the <img src="../../../assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg"/> to switch to User-Defined Object Mode, which allows you to change the appearance of the objects. Use <img src="../../../assets/icons/pre_icons/mo_show_cotact_icon.jpg"/> to turn on contact for both the Top Die and the Bottom Die and make both supports transparent by clicking the <img src="../../../assets/icons/pre_icons/mo_transparent.jpg"/> icon for each.</p>
+  <p>This simulation was run with multiple steps so that the contact and stresses could stabilize and come to equilibrium.</p>
+  <p>Play through the steps and observe how the contact changes. The Top Die contact remains essentially the same throughout the analysis but the contact on the Bottom Die changes quite a bit. The applied load pushes the center of the die downward, causing
+    the OD of the die to raise off of the support. At the end of the simulation, the contact has stabilized and no longer changes much from one step to the next.</p>
+  <p> </p>
+  <p>Using the State Variable pull-down menu, plot Effective stress and Max Principal stress as shown in <a href="#Fig_3DDSL2_26_Effective_Stress_state_variable_plot"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>26.</a>    and <a href="#Fig_3DDSL2_27_Stress-Max_Principle__State_variable_plot"><span data-keyref="Labs_Die_Stress_study_Labs_3D_Die_Stress_Study_Lab2">Fig. 3DDSL2.</span>27.</a>, two of the most important variables in die stress simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_26_Effective_Stress_state_variable_plot"></a><img height="549" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0024.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Effective Stress state variable plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDSL2_27_Stress-Max_Principle__State_variable_plot"></a><img height="551" src="../../../assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0025.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stress-Max Principle  State variable plot</p>
+
+</body></html>

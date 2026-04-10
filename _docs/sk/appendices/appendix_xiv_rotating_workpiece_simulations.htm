@@ -1,0 +1,284 @@
+---
+lang: sk
+title: "Appendix XIV: Rotating Workpiece Simulations"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XIV: Rotating Workpiece Simulations</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XIV: Rotating Workpiece Simulations</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_xiv.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_XV_The_Double_Concave_Corner_Constraint.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_XIII_Fine_Points_on_Using_Force_Controlled_Dies.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix XIV: Rotating Workpiece Simulations">
+        <span>Appendix XIV: Rotating Workpiece Simulations</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix XIV Rotating Workpiece Simulations</h1>
+  <p>In this, special techniques for spinning workpiece simulations are discussed. Among the applications that this would cover would be cross-rolling simulations. (See <a href="#Fig_AXIV_1_Cross-rolling_diagram"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>1.</a>)</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AXIV_1_Cross-rolling_diagram"></a><img src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Cross-rolling diagram</p>
+  <p> </p>
+  <p>In the above case, there is a problem when the workpiece rotates. The problem occurs due to the nature of updating nodal position based on integrating velocity over a time increment. The simple process of updating based on instantaneous velocity over
+    a discrete time interval can cause an increase of the diameter of the workpiece. As seen in <a href="#Fig_AXIV_2_Velocity_profile_of_a_rotating_body"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>2.</a> all the nodal
+    velocities are perpendicular to the radius where they are located. Thus, simply updating the coordinates based directly on their velocity will incur an increase in radius and in volume as well.</p>
+  <p style="text-align: center"><a id="Fig_AXIV_2_Velocity_profile_of_a_rotating_body"></a><img src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Velocity profile of a rotating body</p>
+  <p> </p>
+  <p>Another issue that may arise in simulations where the workpiece is turning based on friction at very localized regions of the surface (particularly thread-rolling cases). The workpiece may tend to slide rather than be rotated. This arises due to sparse
+    contact that can occur between the tool and the workpiece. The sparse contact arises when the workpiece has a coarse mesh definition or when the tool geometry is coarsely defined.</p>
+  <p> </p>
+  <p>Currently, there exists a number of different solutions for handling these types of problems. These solutions are listed below.</p>
+  <p> </p>
+  <h2>Moving tools about a non-spinning workpiece</h2>
+  <p><strong>Motivation:</strong> Although in the reality the workpiece rotates during deformation, it may be advantageous to not allow the workpiece to rotate and let the tools move about it. This will not change the nature of deformation, but has the following
+    advantages:</p>
+  <ol class="Decimal">
+    <li>
+      <p>Since the workpiece does not spin, the increase in volume is avoided and</p>
+    </li>
+    <li>
+      <p>Flow-net can be used in post-processing.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p><strong>Cartesian coordinates vs. cylindrical coordinates</strong>: For most of the cases, it is straightforward to specify the orbiting movement in the Cartesian coordinate system for a rotating tool, which orbits like a planetary gear. The user has
+    to define the first and second rotations. However, when there is a tool translation that is not parallel to the second rotational axis, it is convenient to use a cylindrical coordinate system for the tool. We will only elaborate the latter case in
+    this section.</p>
+  <p> </p>
+  <p><strong>Examples:</strong></p>
+  <ol class="Decimal">
+    <li>
+      <p>Spinning with a roller, if the user wants to fix the workpiece and to rotate the roller (See <a href="#Fig_AXIV_3_Description_of_rotational_axis_definitions_and_angle_definitions"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>3.</a>),
+        and</p>
+    </li>
+    <li>
+      <p>Thread rolling between two flat dies, if the user wants to fix the workpiece and to rotate the two flat dies (See <a href="#Fig_AXIV_1_Cross-rolling_diagram"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>1.</a>).</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p><strong>How to Implement:</strong>  If the following conditions are all met, DEFORM-3D will adopt the cylindrical coordinate for that object:</p>
+  <ol class="Decimal">
+    <li>
+      <p>The first rotational axis and the second rotational axis are defined and they are apart from each other.  </p>
+    </li>
+    <li>
+      <p>The translational movement is non-zero in the direction non-parallel to the second rotational axis.</p>
+    </li>
+  </ol>
+  <p style="text-align: center"><a id="Fig_AXIV_3_Description_of_rotational_axis_definitions_and_angle_definitions"></a><img height="250" src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0003.jpg" width="335"/></p>
+  <p> </p>
+  <p class="Fig_numb">Description of rotational axis definitions and angle definitions (derived from angular velocity values) for this case</p>
+  <p> </p>
+  <p>These values are defined in the Rotational Movement window. As seen in <a href="#Fig_AXIV_3_Description_of_rotational_axis_definitions_and_angle_definitions"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>3.</a>, the
+    first axis is the axis of the rotating tool and the second axis superimposes with  the axis for the non-rotating workpiece.  The first rotational axis defines the rotational properties of the tool about it&#39;s own axis.  If the tool does not spin
+    about its own axis, as in a cross-rolling simulation, the axis center should be specified far from the workpiece axis. The second rotational axis defines the rotational properties of tool about the axis of the workpiece.</p>
+  <p> </p>
+  <p><strong>As a note:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>The initial position of this object is always used as a reference. The “Current Angle” in the Rotational Movement window should be zero at Step –1 and will be updated by the system at the end of every step or sub-step. The user should not change
+        its value in a later step in the pre-processor without changing the position of this object accordingly.</p>
+    </li>
+    <li>
+      <p>The direction of the translational movement of this object is defined with respect to this reference position only. It will not be changed in a later step even the object rotates about the second rotational axis. The stroke will be updated in the
+        same way.</p>
+    </li>
+  </ul>
+  <p>In the case of two rotational axes, when the axes are parallel, the angular velocities are defined as follows (Seen <a href="#Fig_AXIV_4_Two_rotating_bodies_with_parallel_axes"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>4.</a>):</p>
+  <p><img src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/eq1.jpg"/></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AXIV_4_Two_rotating_bodies_with_parallel_axes"></a><img height="150" src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0004.jpg" width="166"/></p>
+  <p> </p>
+  <p class="Fig_numb">Two rotating bodies with parallel axes</p>
+  <p> </p>
+  <p>Otherwise, when the axes are at an angle to each other, such as in the case of orbital forming, the angular velocities are defined as, (Seen <a href="#Fig_AXIV_5_A_rotating_body_with_two_non-parallel_axes"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>5.</a>)</p>
+  <p> </p>
+  <p><img src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/eq2.jpg"/></p>
+  <p style="text-align: center"><a id="Fig_AXIV_5_A_rotating_body_with_two_non-parallel_axes"></a><img height="240" src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0005.jpg" width="320"/></p>
+  <p> </p>
+  <p class="Fig_numb"> A rotating body with two non-parallel axes</p>
+  <p> </p>
+  <h2>Spinning Workpiece</h2>
+  <p>There are some features used to model the deformation of a rotating workpiece with DEFORM-3D. They are under testing and have yet been officially added to DEFORM-3D. However, the user may activate these features when necessary by defining a data file
+    &quot;<a href="appendix_xvii_data_files.htm#AXIS_DAT">AXIS.DAT</a>&quot; in the working directory of a simulation. The options and contents of <a href="appendix_xvii_data_files.htm#AXIS_DAT">AXIS.DAT</a> are explained as follows. This functionality
+    works for a single rigid-plastic object and rigid tools only.</p>
+  <p> </p>
+  <p>Here is the outline of <a href="appendix_xvii_data_files.htm#AXIS_DAT">AXIS.DAT</a> file structure as described on a line-by-line basis. Each line is data that define how this feature will work for the current simulation. Once this file is created and
+    placed in the current directory that is running a simulation, it will be read by DEFORM and applied to the simulation.</p>
+  <p> </p>
+  <p><em><strong>Caution:</strong></em></p>
+  <p><em>When finished using this file in a simulation, be careful to not run another simulation that does not require it as DEFORM will use this and may cause an errant simulation.  Either rename or delete the file before running another simulation in the same directory.</em></p>
+  <p> </p>
+  <p><strong>There are two functionalities that are available in this feature: </strong>Coordinate updating based on rotational motion and enforced rotational motion of the workpiece. These two features (modes) can be enabled either separately or simultaneously
+    depending on the mode set in the AXIS.DAT file. The rest of the data defines certain options on how these modes apply to the current case.  Here is a line by-by-line description of the file.</p>
+  <p> </p>
+  <p>Line 1: KOBJAX - Object number (an integer)</p>
+  <p> </p>
+  <p>Line 2: Mode – An integer value that determines which function this feature should use. </p>
+  <p> </p>
+  <p>Line 3: RAXIS(1),RAXIS(2),RAXIS(3) (3 real numbers)</p>
+  <p>Direction vector parallel to the axis of rotation.  These components are unit less.</p>
+  <p> </p>
+  <p>Line 4: ORGN(1),ORGN(2),ORGN(3) (3 real numbers)</p>
+  <p>A point that lies on the axis of rotation.  This point can be any point on the central axis. The units for each component is mm for SI simulations and inches for the English unit system.</p>
+  <p> </p>
+  <p>Line 5: RADCTR,OMECTR (2 real numbers)</p>
+  <p>RADCTR is the radius of a specified central core about the rotational axis for which rotational speed is fixed to the rotational speed of OMECTR.  The units of RADCTR is mm for SI simulations and inches for the english unit system.  The units of OMECTR
+    is rad/s for SI and the English unit system.</p>
+  <p> </p>
+  <p>Line 6: XMIN, XMAX (2 real numbers; optional)</p>
+  <p>RADCTR, XMIN and XMAX define the dimensions of a cylinder within which the nodes of object KOBJAX are forced to rotate about RAXIS at a rotational velocity OMECTR.  (See Figure D.3).</p>
+  <p> </p>
+  <p>Line 7: XMIN2, XMAX2 (2 real numbers; optional)</p>
+  <p>XMIN2 and XMAX2, if available, define a second cylinder with an infinite radius within which the nodes of object KOBJAX  are forced to rotate about RAXIS, but the magnitude of the nodal velocity is the result of simulation.        </p>
+  <p> </p>
+  <p><u>Notes on Line 2</u></p>
+  <p>    Mode = 1 Enforces rotational update of nodal coordinates (This solves the problem described </p>
+  <p>                    above with the volume increase).</p>
+  <p>    Mode = 3 Part of object KOBJAX (defined below) is forced to spin</p>
+  <p>                   about an axis (defined by RAXIS) in addition to enforcement of rotational updating.</p>
+  <p>    Mode = 5 Part of object KOBJAX (defined below) is forced to spin</p>
+  <p>                  about an axis (defined by RAXIS) in addition to enforcement of rotational updating, but the</p>
+  <p>                   consolidation technique is applied.</p>
+  <p> </p>
+  <p><u>Notes on Line 5 </u></p>
+  <p>If OMECTR = 0, the nodal updating direction is specified as rotational, while the magnitude of each node velocity is the result of simulation (i.e. rigid tool(s) will control the speed of the nodes).  </p>
+  <p> </p>
+  <p>If OMECTR != 0, XMIN and XMAX (discussed below) are defined as the minimum and maximum bounds with respect to the axis and the origin defined on Lines 2 and 3.  So are XMIN2 and XMAX2, if any.  ( <a href="#Fig_AXIV_6_Outline_of_dimensions_for_central_core"><span data-keyref="Appendix_XIV_Rotating_Workpiece_Smulations">Fig. AXIV.</span>6.</a>)</p>
+  <p>               </p>
+  <p style="text-align: center"><a id="Fig_AXIV_6_Outline_of_dimensions_for_central_core"></a><img src="../../assets/images/appendices/appendix_xiv_rotating_workpiece_smulations/image0006.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Outline of dimensions for central core</p>
+  <p> </p>
+  <p><u>Notes on Line 6</u></p>
+  <p>XMIN and XMAX, if available,are the axial bounds of the central core with the respect to ORGN.  </p>
+  <p> </p>
+  <p>If Line 6 is not defined, the cylinder has an unlimited length and Line 7 is not needed.         </p>
+  <p> </p>
+  <p>(Lines 5,6 and 7 are used only if Mode 3 is selected)</p>
+  <p> </p>
+  <p>Option = 5 allows for the user to specify two independent cores that can drive spinning.</p>
+  <p> </p>
+  <p>Only new inputs are explained.</p>
+  <p>Line 1: KOBJAX - Object number (an integer)</p>
+  <p>Line 2: Option (an integer)</p>
+  <p>    Option = 5 Part of object KOBJAX (defined below) is forced to spin</p>
+  <p>                    about an axis (defined by RAXIS) PLUS Option 1, but the</p>
+  <p>                    consolidation techinique is applied.</p>
+  <p>Line 3: RAXIS(1),RAXIS(2),RAXIS(3) (3 real numbers)</p>
+  <p>               Direction vector defining the axis of rotation.</p>
+  <p>Line 4: ORGN(1),ORGN(2),ORGN(3) (3 real numbers)</p>
+  <p>               Origin of the above axis.</p>
+  <p>Line 5: NUMSEC,ISECPL (2 integers)</p>
+  <p>               NUMSEC = 1 or 2 -- How many rigid zones to be specified</p>
+  <p>       ISECPL = 0: if NUMSEC = 1, nothing is implied</p>
+  <p>                      NUMSEC = 2, two zones are not coupled</p>
+  <p>       ISECPL = 1: if NUMSEC = 2, two zones are coupled</p>
+  <p>INPUT FOR SECTION 1:</p>
+  <p>Line 6: RADCTR, OMECTR (2 real numbers)</p>
+  <p>               PLEASE NOTE: The meaning of OMECTR is different than that in</p>
+  <p>       Option 3:</p>
+  <p>               If OMECTR is set to 1.e+12, the rotating direction is specified,</p>
+  <p>       while the magnitude of each nodal velocity is the result of</p>
+  <p>               simulation.</p>
+  <p>       If OMECTR is set to 0, the part of workpiece is fixed.</p>
+  <p>       </p>
+  <p>Line 7: XMIN, XMAX , VXMIN, VXMAX (4 real numbers; optional)</p>
+  <p>       VXMIN is the speed of the left bounding point, XMIN</p>
+  <p>       VXMAX is the speed of the right bounding point, XMAX</p>
+  <p>INPUT FOR SECTION 2, IF NUMSEC=2:</p>
+  <p>Line 6: RADCTR, OMECTR (2 real numbers)</p>
+  <p>               PLEASE NOTE: The meaning of OMECTR is different than that in</p>
+  <p>       Option 3:</p>
+  <p>               If OMECTR is set to 1.e+12, the rotating direction is specified,</p>
+  <p>       while the magnitude of each nodal velocity is the result of</p>
+  <p>               simulation.</p>
+  <p>       If OMECTR is set to 0, the part of workpiece is fixed.</p>
+  <p>       </p>
+  <p>Line 7: XMIN, XMAX , VXMIN, VXMAX (4 real numbers; optional)</p>
+  <p>       VXMIN is the speed of the left bounding point, XMIN</p>
+  <p>       VXMAX is the speed of the right bounding point, XMAX</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong></p>
+  <p class="Note_text">When using a core region, the user should be cautious not to regard the stress or strain within the core region as significant. This core region should be far from the deformation area and in the case of simulations where there is interest in the material
+    at the central region of the spinning object, this method cannot be used. Also, in order for the AXIS.DAT file to work properly in DEFORM-3D, a file named DEF_RSE.DAT containing a single 0 should also exist in the working directory.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../pre_processor/15_movement_controls_definition/15_movement_controls_settings.htm">15. Movement Controls Settings</a></p>
+  <p><a href="../pre_processor/15_movement_controls_definition/15_9_rotational_movement.htm">15.9. Rotational Movement</a></p>
+
+</body></html>

@@ -1,0 +1,644 @@
+---
+lang: en
+title: "6.1. Integrated Manufacturing Process Pre-processor layout"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "3.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.1. Integrated Manufacturing Process Pre-processor layout</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.1. Integrated Manufacturing Process Pre-processor layout</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6.1 integrated manufacturing process pre-processor layout.css"/>
+<meta name="brsnext" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_2_Integrated_Manufacturing_Process_Simulation_layout.htm"/><meta name="brsprev" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_Integrated_Manufacturing_Process_layout.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="6.1. Integrated Manufacturing Process Pre-processor layout">
+        <span>6.1. Integrated Manufacturing Process Pre-processor layout</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>6.1. Integrated Manufacturing Process Pre-processor layout</h1>
+  <p><a href="#6.1.1._Explorer">6.1.1. Explorer</a></p>
+  <p><a href="#6.1.2._Operation_Editor">6.1.2. Operation Editor</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#General_options">General options</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Operation_options">Operation options</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Object_options">Object options</a></p>
+    </li>
+  </ul>
+  <p><a href="#6.1.3._Operation_Tree">6.1.3. Operation Tree</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Operation_Tree_Tool_bar_options">Operation Tree Tool bar options</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Object_Tree_Right_Mouse_button_(RMB)_options">Object Tree Right Mouse button (RMB) options</a></p>
+    </li>
+  </ul>
+  <p><a href="#6.1.4._Property_Editor">6.1.4. Property Editor</a></p>
+  <p><a href="#6.1.5._Message_tab">6.1.5. Message tab</a></p>
+  <p><a href="#6.1.6._Step_Editor">6.1.6. Step Editor</a></p>
+  <p><a href="#6.1.7._Graphics_window">6.1.7. Graphics window</a></p>
+  <p><a href="#6.1.8._Tool_Bar_Options">6.1.8. Tool Bar Options</a></p>
+  <p> </p>
+  <p>Integrated Manufacturing Process Pre-processor (MO) has Pre, Simulation and Post modes in one window. Pre mode GUI layout (See<a href="#Fig._6.1.1._MO_Pre_GUI_layout"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>1</a>.) is mainly
+    divided into Object tree, Graphics window, Property editor, Operation Editor and Explorer and Operation Manager regions.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="436" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image001.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.1.1._MO_Pre_GUI_layout"></a>MO Pre GUI layout</p>
+  <p> </p>
+  <p><strong>Explorer tab</strong> displays list of different templates/modules, DEFORM material library and Press movement library in MO environment.</p>
+  <p>User can navigate through <strong>Operation Tree</strong> and <strong>Property Editor</strong> to setup problem.<br/>
+    <strong>Graphics window</strong> will display graphical representation of objects. The graphic tab can be used for displaying the geometry and mesh information of the simulation objects.<br/>
+    <strong>Operation Editor </strong>will provide the space to edit and organize the sequence of multiple operations.</p>
+  <p><strong>Message tab </strong>will display the information or errors related to the setup.<br/> Preprocessor data can be changed at any of the simulated step by using the <strong>Step Editor</strong>.</p>
+  <p><strong>Operation Manager </strong>list operations, objects, material, equipment&#39;s used in the project.</p>
+  <p> </p>
+  <h2><a id="6.1.1._Explorer"></a>Explorer</h2>
+  <p>Explorer is having the list of available Operations, Material library and Press library.</p>
+  <p>Operations explorer lists different operations available in MO. The list of operations available in MO are,</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">Cogging</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D Cogging</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">Die Stress</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">Die Stress 2D</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">Die Stress 3D</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">Extrusion</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D Extrusion</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">Forming</li>
+    <li>
+      <p><strong> Multiple</strong></p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">2D Multi Blow Forging</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D Multi Blow Forging</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial; font-size: 12pt; text-align: left; line-height: 1.5;"><strong>Single</strong></li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;">
+      <p>2D Forming</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">2D Forming Express</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;">
+      <p>3D Forming</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D Forming Express</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">General</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">2D General</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D General</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">Heat Transfer</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">2D Heat Transfer</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">2D Heat Transfer Express</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D Heat Transfer</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D Heat Transfer Express</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">Heat Treatment</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">2D HT Wizard</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D HT Wizard</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D HT Furnace</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">Machining</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">2D Cutting</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D Cutting</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">2D Machining Distortion</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D machining Distortion</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">Report</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">Report Generation</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">Rolling</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">Ring Rolling</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">Shape Rolling</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">Simulation Operator</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">2D to 3D Converter</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">Boolean Operator 2D</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">Boolean Operator 3D</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">Copy/Mirroring</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">Cycle</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5;font-weight: bold">Spinning</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5">3D Spinning</li>
+  </ul>
+  <p class="Note_field"><br/>
+    <strong>Note:</strong></p>
+  <p class="Note_field">General pre is converted into Forming operation and Forming operations are converted into Forming express in MO.</p>
+  <p class="Note_field"> </p>
+  <p>Operations can be added in sequence of manufacturing process by clicking the <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to the operations name or by dragging and dropping into the operation editor region or by
+    double clicking the operation in the operation explorer (See<a href="#Fig._6.1.2._Operations_Explorer_tab"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>2.</a>). Depending on requirement of setup, user can filter the operations
+    for easy selection based on 2D, 3D, Express and Advanced modules. Also we can load the saved Template under User tab.</p>
+  <p style="text-align: center"><br/>      <img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image002.jpg"/>  <img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image006.jpg"/></p>
+  <p class="fig_name"><br/> (a)                     <a id="Fig._6.1.2._Operations_Explorer_tab"></a>                                                        (b)</p>
+  <p class="fig_name"> </p>
+  <p class="Fig_numb">Operations Explorer tab; (a) System (b) User</p>
+  <p><br/> Material Explorer provides access to DEFORM material library. Material library has different categories like Aluminum, Steel, Stainless, Super alloys, Titanium, Die material, Tool material etc. Depending on requirement of setup, user can filter
+    materials selection based on Cold Forming, Hot Forming, Heat treatment and Machining. User can create new material or modify the material properties and save them into user library depending on category, these can be accessed from the material explorer
+    user tab (See<a href="#Fig._6.1.3._Material_Explorer_tab"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>3.</a>).</p>
+  <p style="text-align: center"><br/>        <a id="Fig._6.1.3._Material_Explorer_tab"></a><img height="614" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image003.jpg" width="281"/>  <img height="376" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image004.jpg" width="279"/></p>
+  <p class="fig_name"><br/> (a)                                                                             (b)</p>
+  <p class="fig_name"> </p>
+  <p class="Fig_numb">Material Explorer tab; (a) System (b) User</p>
+  <p> </p>
+  <p>Equipment Explorer provides access to Hammer, Mechanical and Screw press equipment data required for simulation for few standard equipment&#39;s standard operating loads as per the industry standards. User can create new equipment or modify existing
+    equipment movement data and store in user library, the user library can be accessed through the user tab (See<a href="#Fig._6.1.4._Equipment_Explorer_tab"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>4.</a>).</p>
+  <p> </p>
+  <p style="text-align: center">      <a id="Fig._6.1.4._Equipment_Explorer_tab"></a><img height="376" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image005.jpg" width="279"/>   <img height="376" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image007.jpg" width="279"/></p>
+  <p class="fig_name"><br/> (a)                                                                             (b)</p>
+  <p class="fig_name"> </p>
+  <p class="Fig_numb">Equipment Explorer tab; (a) System (b) User</p>
+  <p> </p>
+  <h2><a id="6.1.2._Operation_Editor"></a>Operation Editor</h2>
+  <p>Operation editor (See<a href="#Fig._6.1.5._Operation_Editor"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>5.</a>) is the region where the operations can be added, deleted,  selected for editing and arrange sequence of operations.
+    Operations can be reordered by dragging them in the operation editor. Options are provided to transfer required object data across operations.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.5._Operation_Editor"></a><img height="213" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Operation Editor</p>
+  <p> </p>
+  <p>User needs to setup the operations sequentially as displaying in the operation editor by using operation tree or property editor. After the setup user can edit any operations properties by selecting the particular operation from the operation editor,
+    selection will highlight the operation by orange outline as shown in<a href="#Fig._6.1.5._Operation_Editor"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>5.</a></p>
+  <p><br/> In Operation Editor right mouse button click will provide options as listed below. (See<a href="#Fig._6.1.6._Operation_editor_options"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>6.</a>)</p>
+  <p style="text-align: center"><br/>
+    <img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image008.jpg"/> <img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image009.jpg"/></p>
+  <p class="fig_name">      (a)                                                  (b)</p>
+  <p> </p>
+  <p class="fig_name"><a id="Fig._6.1.6._Operation_editor_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image010.jpg"/><br/> (c)
+  </p>
+  <p class="fig_name"> </p>
+  <p class="Fig_numb">Operation editor options; (a) General options (b) Operation options and (c) Object options</p>
+  <p> </p>
+  <p><strong><a id="General_options"></a>General options</strong></p>
+  <p><strong>Fit View:</strong> Fit the view of the Operations in operation editor. (See<a href="#Fig._6.1.7._Fit_view"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>7.</a>) </p>
+  <p> </p>
+  <p style="text-align: center"><img height="185" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image012.jpg" width="750"/></p>
+  <p class="fig_name">(a)</p>
+  <p style="text-align: center"><img height="185" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image013.jpg" width="750"/></p>
+  <p class="fig_name">(b)</p>
+  <p class="fig_name"><a id="Fig._6.1.7._Fit_view"></a></p>
+  <p class="Fig_numb">Fit view; (a) Before view fit (b) After view fit</p>
+  <p><br/>
+    <strong>Fit Selected</strong>: Fit the view of the selected operation in operation editor. (See <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>8)</p>
+  <p style="text-align: center"> <img height="500" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image014.jpg" width="660"/></p>
+  <p class="fig_name">(a)</p>
+  <p class="fig_name"> </p>
+  <p class="fig_name"><img height="231" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image015.jpg" width="750"/></p>
+  <p class="fig_name"><br/> (b)
+  </p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._6.1.8._Fit_selected_operation_view."></a>Fit selected operation view; (a) Before view fit (b) After view fit</p>
+  <p><br/> Enable magnifier: Simply keeping the cursor on the operation editor region will magnify that region (See <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>9). By default this magnifier is disabled, this can be disabled by unchecking
+    check box.</p>
+  <p style="text-align: center"><img height="436" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image016.jpg" width="750"/></p>
+  <p class="Fig_numb">  <a id="Fig._6.1.9._Operation_Editor_magnifier"></a>Operation Editor magnifier</p>
+  <p> </p>
+  <p><strong><a id="Operation_options"></a>Operation options</strong></p>
+  <p> </p>
+  <p><strong>Delete Operation:</strong> Deletes the selected operation from the MO Project (See <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>10). Delete option available in the operations RMB options also.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="451" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image017.jpg" width="750"/></p>
+  <p style="text-align: center"><a id="Fig._6.1.10._Delete_operation_option"></a></p>
+  <p class="Fig_numb">Delete operation option</p>
+  <p><br/>
+    <strong>Add cycle:</strong> This is used to perform same operations repetitively in cycle. User needs to select the operations to repeat and the number of times to repeat (See <a href="#Fig._6.1.11._Extent_to_use_the_add_cycles"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>11</a>).To add
+    cycle to operation, the first operation in cycle must have read from DB object. To analyze the die stress and temperatures after the multiple components manufacturing is an example where user can use the add number of cycles as components produced.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.11._Extent_to_use_the_add_cycles"></a><img height="219" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image018.jpg" width="750"/></p>
+  <p class="Fig_numb">Extent to use the add cycles</p>
+  <p> </p>
+  <p>For more details on add cycles refer the chapter<a href="6_6_operations_management/6_6_5_adding_cycles.htm"> 6.6.5. Adding Cycles.</a></p>
+  <p> </p>
+  <p><strong>Copy/Paste operation: </strong>Copy/Paste operation option can be used to eliminate the duplicated input effort to speed up the problem preparation.</p>
+  <p><br/> To do Copy/pasting operation:</p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select one or more operations in the operation editor by Clicking in the background of the operation editor and dragging the mouse to select one or more operations or using ctrl + mouse click to select/unselect an operation </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Use mouse to right-click on one of the selected operations, and then click the ‘Copy’ menu item (<a href="6_1_integrated_manufacturing_process_preprocessor_layout.htm#Fig._6.1.12.a_Select_copy_option_to_copy_the_selected_operation/s"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>12 a.</a>).Use
+      mouse to right-click on an operation and the click the ‘Paste’ menu item. The copied operations will be pasted after this operation<a href="6_1_integrated_manufacturing_process_preprocessor_layout.htm#Fig._6.1.12.b_Select_paste_to_paste_the_copied_operation/s"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>12. b</a>,
+      <a href="#Fig._6.1.12.c_copied_operations_added_in_operation_list."> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>12. c</a> ).</li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.12.a_Select_copy_option_to_copy_the_selected_operation/s"></a><img height="510" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image019.jpg" width="529"/></p>
+  <p class="fig_name"><br/> (a) Select copy option to copy the selected operation/s</p>
+  <p class="fig_name"> </p>
+  <p class="fig_name" style="text-align: center"><a id="Fig._6.1.12.b_Select_paste_to_paste_the_copied_operation/s"></a><img height="528" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image020.jpg" width="567"/></p>
+  <p class="fig_name"><br/> (b) Select paste to paste the copied operation/s</p>
+  <p class="fig_name"> </p>
+  <p style="text-align: center"><a id="Fig._6.1.12.c_copied_operations_added_in_operation_list."></a> <img height="227" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image021.jpg" width="750"/></p>
+  <p class="fig_name">(c) copied operations added in operation list.</p>
+  <p class="fig_name"> </p>
+  <p class="Fig_numb">Copy/Paste operation</p>
+  <p> </p>
+  <p><strong>Breakpoint </strong>: Using Breakpoint option user can add Breakpoint to stop the simulation before the selected operation by selecting Breakpoint option as shown in <a href="#Fig._6.1.13._Adding_Breakpoint_Operation"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>13.</a>This will
+    help the user to view simulation behaviour until that operation before proceeding with other operations</p>
+  <p> </p>
+  <p style="text-align: center"><img height="418" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image022.jpg" width="750"/></p>
+  <p class="fig_name">(a) adding Breakpoint operation using before this operation option</p>
+  <p> </p>
+  <p class="fig_name" style="text-align: center"><img height="430" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image023.jpg" width="750"/><br/> (b) added Breakpoint operation using before this operation option</p>
+  <p class="fig_name" style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._6.1.13._Adding_Breakpoint_Operation"></a>Adding Breakpoint Operation</p>
+  <p><br/>
+    <strong>Delete Breakpoint:</strong> Added Breakpoint operation can be deleted by unchecking the Breakpoint check box.</p>
+  <p> </p>
+  <p><strong>No. 1</strong>: Display’s the operation number.</p>
+  <p><strong>Type</strong>: Display’s the type of the selected Operation.</p>
+  <p><strong>Folder (Open task folder)</strong>: Using this option user can open the selected operation task folder which consists files related to the selected operation (See<a href="#Fig._6.1.14._Operation_options"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>14.</a>).</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig._6.1.14._Operation_options"></a><img height="400" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image024.jpg" width="502"/></p>
+  <p class="Fig_numb">Operation Editor options</p>
+  <p> </p>
+  <p><strong><a id="Object_options"></a>Object options</strong></p>
+  <p> </p>
+  <p>Pass Object To Next Operation: Using this option object data can be transferred to the next operation. (See <a href="#Fig._6.1.15._Pass_object_to_next_operation_option"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>15.</a>)</p>
+  <p style="text-align: center"><img height="550" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image025.jpg" width="453"/></p>
+  <p class="fig_name">(a)</p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image026.jpg"/></p>
+  <p class="fig_name">(b)</p>
+  <p class="Fig_numb"><a id="Fig._6.1.15._Pass_object_to_next_operation_option"></a>Pass object to next operation option; (a) Before passing and (b) After passing</p>
+  <p> </p>
+  <p><strong>Pass Object To All Operations: </strong>Using this option object data can be transferred to all operations. (See<a href="#Fig._6.1.16._Pass_object_to_all_operation_option"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>16.</a>)</p>
+  <p style="text-align: center"><br/>
+    <img height="550" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image027.jpg" width="532"/> </p>
+  <p class="fig_name">(a)</p>
+  <p class="fig_name" style="text-align: center"><img height="248" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image028.jpg" width="549"/><br/> (b)
+  </p>
+  <p class="fig_name" style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._6.1.16._Pass_object_to_all_operation_option"></a>Pass object to all operation option; (a) Before passing and (b) After passing</p>
+  <p> </p>
+  <p><strong>Pass All objects to Next operation</strong> : Using this option All objects and their data can be transferred to the next operation.</p>
+  <p><strong>Pass All objects to All operations</strong> : Using this option All objects and their data can be transferred to all operations.</p>
+  <p><br/>
+    <strong>Delete Object: </strong>Using this option user can delete the selected object in any particular operation. (See <a href="#Fig._6.1.17._Delete_object_option"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>17.</a>)</p>
+  <p style="text-align: center"><img height="550" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image029.jpg" width="702"/></p>
+  <p class="Fig_numb"><a id="Fig._6.1.17._Delete_object_option"></a>Delete object option</p>
+  <p><br/> For more details on connecting operations and passing objects across operation refer the <a href="6_6_operations_management/6_6_1_connecting_operations.htm">6.1.1. Connecting Operations.</a></p>
+  <p> </p>
+  <p><strong>Set As Primary Die</strong>: Using this user can set object as Primary die.</p>
+  <p>After setting the object as primary die, user can see an arrow mark before the object name in operation editor for particular operation as shown in <a href="#Fig._6.1.18._Set_as_primary_Die"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>18.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.18._Set_as_primary_Die"></a><img height="550" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image030.jpg" width="657"/></p>
+  <p> </p>
+  <p class="Fig_numb">Set as primary Die</p>
+  <h2><a id="6.1.3._Operation_Tree"></a>Operation Tree</h2>
+  <p>The purpose of this tree is to provide the user with a systematic list of required data for a given simulation. The data in the list is edited in the setting modification window. The data that is being edited is controlled by the current active position within
+    the operation tree. The structure of the program will progress directly down this list by clicking next in Property Editor region. Alternatively, if any data needs to be modified, clicking on given item in the list will allow that item to be edited
+    in the property editor region.  </p>
+  <p>Operation tree (See <a href="#Fig._6.1.19._Operation_Tree"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>19.</a>) contains list of required data like geometry, mesh, boundary conditions, movement controls of an object, process type
+    and simulation controls etc. The tool bar below the object tree is used to switch on or off the object, geometry, mesh and contacts display.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig._6.1.19._Operation_Tree"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image031.jpg"/></p>
+  <p>  </p>
+  <p class="Fig_numb">Operation Tree</p>
+  <p> </p>
+  <p><a id="Operation_Tree_Tool_bar_options"></a><strong>Operation Tree Tool bar options</strong></p>
+  <p><strong>[2D][3D]:</strong></p>
+  <p><strong>Show Object<img src="../../../assets/icons/pre_icons/mo_show_obj_icon.jpg"/>:</strong> Turns on/off the selected object from object tree.</p>
+  <p><strong>Show Mesh<img src="../../../assets/icons/pre_icons/mo_show_mesh_icon.jpg"/>:</strong> Shows or hides mesh of  the selected object from object tree.</p>
+  <p><strong>Show Geometry<img src="../../../assets/icons/pre_icons/mo_show_geo_icon.jpg"/>:</strong> Shows or hides geometry of  the selected object geometry from the object tree.</p>
+  <p><strong>Show Contact Nodes:<img src="../../../assets/icons/pre_icons/mo_show_cotact_icon.jpg"/> </strong>Turns on the contact display for the selected object from object tree with all other all object. (See<a href="#Fig._6.1.21._Multi_object_mode_when_plastic_workpiece_object_get_selected"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>21.</a>)</p>
+  <p><br/>
+    <strong>[3D]:</strong></p>
+  <p> <strong>Make Transparent<img src="../../../assets/icons/pre_icons/mo_transparent.jpg"/>:</strong> Turns on/off  transparency of the selected object from the object tree.</p>
+  <p> <strong>Show Backface<img src="../../../assets/icons/pre_icons/mo_show_backfac_icon.jpg"/>:</strong> Turns on/off the back surface of the object selected object from the object tree, it will be more useful when the object are made transparent. (See
+    <a href="#Fig._6.1.20._Plastic object mesh in shaded rendering type"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>20.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.20._Plastic object mesh in shaded rendering type"></a>   <img height="281" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image032.jpg" width="180"/>   <img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image033.jpg"/></p>
+  <p class="fig_name"><br/> (a)                                              (b)</p>
+  <p class="fig_name"> </p>
+  <p class="Fig_numb">Plastic object mesh in shaded rendering type; (a) With Back face on (b) With Back face off</p>
+  <p> </p>
+  <p><strong>[2D][3D]:</strong><br/>
+    <a id="Object_Display_Modes"></a><strong>Object Display Modes:</strong> DEFORM has 3 different object display modes as shown in<a href="#Fig._6.1.19._Operation_Tree"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>19.</a></p>
+  <p><strong>Single Object mode<img src="../../../assets/icons/pre_icons/mo_show_single_obj_icon.jpg"/> :</strong> Only the selected object from object tree is displayed. All other objects are hidden.</p>
+  <p><strong>Multi Object mode</strong><img src="../../../assets/icons/pre_icons/mo_show_multi_obj_icon.jpg"/> : All objects are displayed in graphics window. The selected object from object tree is displayed in solid color and all other objects are transparent in
+    3d mode. (See<a href="#Fig._6.1.21._Multi_object_mode_when_plastic_workpiece_object_get_selected"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>21.</a>)</p>
+  <p style="text-align: center"><a id="Fig._6.1.21._Multi_object_mode_when_plastic_workpiece_object_get_selected"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image034.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Multi object mode when plastic workpiece object get selected</p>
+  <p><br/>
+    <strong>User Object mode</strong><img src="../../../assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg"/>: User can toggle the object&#39;s Display, Geometry, Mesh, Transparency (only for 3D), Slice plane (only for 3D) modes independently.
+    This can be done by checking and unchecking respective check boxes as shown in<a href="#Fig._6.1.22._User_defined_Object_Mode_window"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.22._User_defined_Object_Mode_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image035.jpg"/></p>
+  <p class="Fig_numb">User defined Object Mode window</p>
+  <p><br/> Following are the settings we have to select based on the objects display requirements,</p>
+  <p><strong>Apply Display options</strong><img src="../../../assets/icons/pre_icons/mo_apply_display_option.jpg"/>: Applies the selected display option for the objects.</p>
+  <p><strong>Visible</strong><img src="../../../assets/icons/pre_icons/mo_visible.jpg"/>: Turns on/off the selected object display.</p>
+  <p><strong>Mesh</strong><img src="../../../assets/icons/pre_icons/mo_mesh_icon.jpg"/>: Shows or hides display of the selected object mesh.</p>
+  <p><strong>Geometry</strong><img src="../../../assets/icons/pre_icons/mo_geometry _icon.jpg"/>: Shows or hides display of the selected object geometry.</p>
+  <p><strong>Transparency<img src="../../../assets/icons/pre_icons/mo_transparent.jpg"/></strong>: Turns on/off  transparency of the selected object.</p>
+  <p><strong>Slice</strong><img src="../../../assets/icons/pre_icons/mo_slice.jpg"/>: Turns on/off  sliced plane for the selected sliced object.</p>
+  <p> </p>
+  <p><a id="Object_Tree_Right_Mouse_button_(RMB)_options"></a><strong>Object Tree Right Mouse button (RMB) options</strong></p>
+  <p>By using the RMB on Object or its Geometry branches in object tree user will get few options to export the geometry or control the object display.</p>
+  <p>By RMB click on the Object any particular object branch (<img src="../../../assets/icons/pre_icons/mo_plastic_workpiece_branch.jpg"/>) user can export the geometry, turn on the contact nodes display, make the 3d objects transparent and turn on the 3d
+    objects back face display as shown in<a href="#Fig._6.1.23._Operation_tree_Object_RMB_options"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>23.</a> below. Geometry inside mark for 2d and Geometry normal vectors for 3d display can
+    be activated by RMB option on  <img src="../../../assets/icons/pre_icons/mo_geometry_branch.jpg"/>(Geometry branch) as shown in<a href="#Fig._6.1.24._Operation_tree_Geometry_RMB_options"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>24.</a>    For more details on Enable contact nodes and Show backface options refer<a href="#Operation_Tree_Tool_bar_options"> operation tree tool bar</a> options.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig._6.1.23._Operation_tree_Object_RMB_options"></a><img height="221" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image036.jpg" width="300"/> <img height="330" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image037.jpg" width="300"/></p>
+  <p class="fig_name">      <br/> (a)                                            (b)</p>
+  <p class="Fig_numb">Operation tree Object RMB options; (a) For 2D (b) For 3D</p>
+  <p> </p>
+  <p class="fig_name" style="text-align: center"><a id="Fig._6.1.24._Operation_tree_Geometry_RMB_options"></a><img height="132" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image038.jpg" width="300"/><img height="152" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image039.jpg" width="300"/><br/>    <br/> (a)                                           (b)</p>
+  <p class="Fig_numb">Operation tree Geometry RMB options; (a) For 2D (b) For 3D</p>
+  <p> </p>
+  <h2><a id="6.1.4._Property_Editor"></a>Property Editor</h2>
+  <p>As the project is being constructed most of the information is specified in the Property Editor (See<a href="#Fig._6.1.1._MO_Pre_GUI_layout"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>1.</a>) like Geometry, Mesh , Boundary conditions,
+    Material, Simulation control etc. By clicking <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> in the window, it allows user to traverse the project list in order. Each window will have an effect on how the simulation performs so, care
+    must be taken on each window. For detail information on editing varies properties of an object and operation setup, please refer <a href="../../operation_templates/33_forming/33_introduction_to_forming.htm">Basic forming operation setup</a>.</p>
+  <p> </p>
+  <h2><a id="6.1.5._Message_tab"></a>Message tab</h2>
+  <p>In Pre mode message tab display the preprocessing setup (data definitions) information related to geometry checking output, mesh generation, mesh checking, Database check and generation messages. (See<a href="#Fig._6.1.25._MO_Pre_Mode_Message_tab"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>25.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><img height="231" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image040.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.1.25._MO_Pre_Mode_Message_tab"></a>MO Pre Mode Message tab</p>
+  <h2><a id="6.1.6._Step_Editor"></a>Step Editor</h2>
+  <p>Step editor is used after the simulation of project to modify operation setup from any of the intermediate saved steps and continue the simulation from there on. It displays all saved steps in the database. User can select the step at which operation needs
+    to be edited., database needs to be generated and simulate to reflect the modifications. (See<a href="#Fig._6.1.26._Step editor tab"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>26</a>.)</p>
+  <p> </p>
+  <p style="text-align: center"><img height="167" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image041.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.1.26._Step editor tab"></a>Step editor tab</p>
+  <p><br/> User can use the below listed step selection options for selecting the step easily,</p>
+  <p> <img height="23" src="../../../assets/icons/pre_icons/mo_outline_button.jpg" width="50"/> : When selected displays only the first and last step of the operations in the step editor</p>
+  <p> <img height="23" src="../../../assets/icons/pre_icons/mo_auto_button.jpg" width="50"/>: When selected displays only first, last and one intermediate saved step of the operations in the step editor.</p>
+  <p> <img height="23" src="../../../assets/icons/pre_icons/mo_brief_button.jpg" width="50"/>: When selected displays steps that are selected by system automatically for display in the step list.</p>
+  <p> <img height="21" src="../../../assets/icons/pre_icons/mo_all_button.jpg" width="46"/> : When selected displays all saved steps of the all operations in the step editor.</p>
+  <p><img height="21" src="../../../assets/icons/pre_icons/mo_step_list.jpg" width="24"/>  : This will provide more detailed information of all saved steps like Simulation<br/> number, Mesh number, Time, Stroke of primary die, Dimension, Version number
+    and Fold (for 3D). It also list the operations sequence on the left side window and provides more step selection option on right side window.</p>
+  <p>It provides user defined step selection option in addition to the all above listed step selection options, selecting this will activates few advanced step selection types style and range. (See<a href="#Fig._6.1.27._Step_List_step_selection_options"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>27.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.27._Step_List_step_selection_options"></a><img height="514" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image042.jpg" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step List step selection options</p>
+  <p><br/>
+    <strong>Style options:</strong></p>
+  <p>The selection method for the step list to be displayed in the Post-Processor.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>All Steps</strong></li>
+  </ul>
+  <p style="margin-left: 40px">All steps will be selected for use in the Post-Processor.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>None</strong></li>
+  </ul>
+  <p style="margin-left: 40px">No steps are selected for use in the Post-Processor.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Operation Start /End Step</strong></li>
+  </ul>
+  <p style="margin-left: 40px">Selects the starting and the end step of the increment range when no other steps are selected.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Remeshing</strong></li>
+  </ul>
+  <p style="margin-left: 40px">Toggle Remeshing will select/deselect the remeshing steps from the step list for use in the Post-Processor.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Start Step</strong></li>
+  </ul>
+  <p style="margin-left: 40px">The starting step for the increment range.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>End Step</strong></li>
+  </ul>
+  <p style="margin-left: 40px">The ending step for the increment range.</p>
+  <p> </p>
+  <p><strong style="font-size: 12pt;">Range options:</strong></p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Increment: </strong>This will select saved steps for display, but the increment will be across the saved steps. For example: An Increment value of 5 in Increment Saved mode will select 1 step for every 5 saved steps between the starting and
+      ending step for inclusion into the Post-Processor display.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Number of steps: </strong>The number of steps specified here will be used for the saved step Increment selection. Depending upon the no. of steps specified, the saved steps to be displayed or highlighted.</li>
+  </ul>
+  <p> </p>
+  <p>Huge database can be purged into small one based on the user requirement using Database purge tab. It is necessary that user must select all the negative steps (operation starting steps and remeshing steps), first step and last step of simulation in
+    addition to the important steps to purge. (See<a href="#Fig._6.1.28._Database_purging_window"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>28.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><img height="518" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image043.jpg" width="750"/></p>
+  <p><a id="Fig._6.1.28._Database_purging_window"></a></p>
+  <p class="Fig_numb">Database purging window</p>
+  <h2><a id="6.1.7._Graphics_window"></a>Graphics window</h2>
+  <p>Graphics window displays the graphical representation of the objects. It can be used for displaying the geometry and mesh information of the simulation objects in pre mode. (See<a href="#Fig._6.1.1._MO_Pre_GUI_layout"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>1.</a>)</p>
+  <p> </p>
+  <p><a id="Graphics_window_RMB_options"></a><strong>Graphics window RMB options</strong>: Right mouse click in pre mode graphics window will provide options as shown in<a href="#Fig._6.1.29._Right_mouse_button_graphics_window_options"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>29.</a></p>
+  <p style="text-align: center"><a id="Fig._6.1.29._Right_mouse_button_graphics_window_options"></a><img height="486" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image044.jpg" width="170"/> <img height="514" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image045.jpg" width="170"/></p>
+  <p class="fig_name">(a)                                            (b)</p>
+  <p class="Fig_numb">Right mouse button graphics window options; (a) For 2D (b) For 3D</p>
+  <p> </p>
+  <p><strong>DB Info</strong>: It display the name of the database at the top left corner in the graphics window.</p>
+  <p><strong>Title</strong>: It display the current operation name at the top left corner in the graphics window.</p>
+  <p><strong>Show Ruler</strong>: Using this user can turn on/off the ruler display in the display window.</p>
+  <p><strong>Show Dimensions : </strong>Display the maximum dimensions of the object in X and Y directions in 2D and in X, Y and Z directions in 3D.</p>
+  <p><strong>Show Center line [2D]:  </strong>It display the center axis line for Axisymmetric or Torsion geometry type in the graphics window.</p>
+  <p><strong>Show Origin Axis [3D]: </strong>Using this user can turn on/off the origin axis display in the display window.</p>
+  <p><strong>Show current object mark</strong>: This shows the mark in graphics display at the top and bottom corners for the <strong>selected objects from object tree</strong>. This will be more helpful in multiple object mode display when there are many
+    objects in a setup. (See<a href="#Fig._6.1.23._Operation_tree_Object_RMB_options"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>21.</a>)</p>
+  <p><strong>Show Current Object mark</strong>: This shows the mark at the top and bottom plane four corners of the 3D object and  top and bottom plane two corners of the 2D object in multiple and user object modes indicating that object is the current selected
+    object in the object tree, so for that object user can define the data from the data definition window and also help while positing the objects by showing these marks for the selected positioning object.</p>
+  <p><strong>Show View Axis:</strong> It display the 2D or 3D axis at right bottom corner in the graphics window as shown in <a href="#Fig._6.1.30._Axis_display_in_graphics_window"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>30.</a></p>
+  <p style="text-align: center"><img height="78" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image047.jpg" width="75"/>   <img height="78" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image049.jpg" width="82"/>    <img height="91" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image048.jpg" style="cursor: nwse-resize;" width="100"/>     </p>
+  <p class="fig_name" style="margin-left:">(a)                     (b)                       (b)</p>
+  <p class="Fig_numb"><a id="Fig._6.1.30._Axis_display_in_graphics_window"></a>Axis display in graphics window; (a) For 2D Plane strain and plane stress (b) For 2D Axisymmetric and Torsion mode  (c) For 3D</p>
+  <p> </p>
+  <p><strong>Refresh</strong>: Refreshes the Graphical Display Area.</p>
+  <p><strong>Fit View</strong>: Fits all displayed objects or graphs inside the current View port.</p>
+  <p><strong>View Back</strong>: Resets objects to the previously viewed display position.</p>
+  <p><strong>Auto fit </strong>: This option is used to automatically fit the view of the object (s) as per the selection.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image046.jpg"/></p>
+  <p class="Fig_numb"><a id="Fig._6.1.31._Auto_fit_options"></a>Auto fit options</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Load and Save Viewport</strong>: The user can move or change the views of the geometries by using display tools such as pan, dynamic zoom and box zoom in the display window. These views can be saved using save option (See<a href="#Fig._6.1.32._Load_and_Save_viewport_options"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>32a</a>)
+    provided under viewport tab. If the view is saved as a local viewport, this view gets saved for the current working project only and can be viewed using load option as shown in<a href="#Fig._6.1.32._Load_and_Save_viewport_options"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>32b.</a><br/>    If the view is saved as a global viewport the set views are available for any database or a key file, for global viewports to get activated for the projects, the user has to exit from current project.</p>
+  <p>The user can copy global viewports as a  local viewports under load option and local viewports to  global viewports under save option.</p>
+  <p><br/>
+    <a id="Fig._6.1.32._Load_and_Save_viewport_options"></a><img height="326" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image050.jpg" width="300"/> <img height="327" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image051.jpg" width="300"/></p>
+  <p>     </p>
+  <p class="fig_name">(a)                                                                                                    (b)</p>
+  <p class="Fig_numb">Load and Save viewport options; (a) Lod viewport (b) Save viewport</p>
+  <p><br/>
+    <strong>Object display mode</strong>: Using this user can control the object display in graphics window, there are three types of object display modes, those are single Multi and user defined object display modes. Refer to <a href="#Object_Display_Modes">Object display mode</a>    explanation under <a href="#Operation_Tree">Operation Tree</a> for more details.</p>
+  <p><strong>Contact display:</strong> Using this user can turn on/off the inter-object contact nodes display. (See<a href="6_1_integrated_manufacturing_process_preprocessor_layout.htm#Fig._6.1.33._Contact_display_turn_on/off_options"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>33.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.33._Contact_display_turn_on/off_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image052.jpg"/></p>
+  <p class="Fig_numb">Contact display turn on/off options</p>
+  <p> </p>
+  <p><strong>Calculate Contact Area</strong> : Shows the contact objects contact area information.<br/>
+    <strong>Measurement style:</strong> This option gets activate only when <img src="../../../assets/icons/pre_icons/mo_measure_tool_icon.jpg"/> icon (Measurement tool) is selected. Using this tool user can measure the distance between two points in the
+    linear (X,Y or Z direction) and angular directions (XYZ direction) in CAD style. (See<a href="#Fig._6.1.34._Right_mouse_button_measurement_style_options"> <span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>34.</a>)</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig._6.1.34._Right_mouse_button_measurement_style_options"></a><img height="99" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image053.jpg" width="300"/>  <img height="82" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image054.jpg" width="300"/>    </p>
+  <p class="fig_name"><br/> (a)                                                                (b)</p>
+  <p class="Fig_numb">Right mouse button measurement style options; (a) For 2D (b) For 3D</p>
+  <p><br/>
+    <strong>Measurement options:</strong> Measure option available are clear, to clear last , Change color text , change Line color and Background color options as show in <a href="#Fig._6.1.35._Right_mouse_button_measurement_options"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>35.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.35._Right_mouse_button_measurement_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image055.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Right mouse button measurement options</p>
+  <p><br/>
+    <strong>Picking Sensitivity: </strong>Using this user can select the sensitivity of picking the nodes and elements of the object and points on the object or anywhere in the display window. There are five levels of sensitivities Super fine Fine, Normal,
+    Coarse and Rough (See <a href="#Fig._6.1.36._Picking_Sensitivity_option"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>36.</a>). If user wants to pick precisely then Fine picking is preferred otherwise default Normal picking is enough.
+    If the user wants to select the nodes or elements near the picking point on the object then Coarse picking is preferred.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.36._Picking_Sensitivity_option"></a><img height="116" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image056.jpg" width="285"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center">Picking Sensitivity option</p>
+  <p><br/>
+    <strong>Background Theme</strong>: Using this option user can select the different background themes available like Navy blue, White, Black and Gray for the graphics window as shown in <a href="#Fig._6.1.37._Right_mouse_button_background_themes_options"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>37.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.37._Right_mouse_button_background_themes_options"></a><img height="103" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image057.jpg" width="300"/></p>
+  <p class="Fig_numb">Right mouse button background themes options</p>
+  <p> </p>
+  <p><strong>Display Options</strong>: Using this option (See <a href="#Fig._6.1.38._Right_mouse_button_selected_nodes_display_options"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>38.</a>) user can select the point or polygon type display
+    of the selected contact node. Also can select point size under Point size list.</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig._6.1.38._Right_mouse_button_selected_nodes_display_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image058.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Right mouse button selected nodes display options</p>
+  <p> </p>
+  <p>After turning on the contact display user can select point or polygon type display option, 2d example with point and polygon contact node display is shown in <a href="#Fig._6.1.39._2D_Point_and_polygon_contact_nodes_display_example"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>39.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.1.39._2D_Point_and_polygon_contact_nodes_display_example"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image059.jpg"/>  </p>
+  <p class="Fig_numb">2D Point and polygon contact nodes display example</p>
+  <p> </p>
+  <p><br/>
+    <strong>Feature Angle (3D)</strong>: <span style="color:#000000">User can use this option to change the range of selection when selecting the elements/nodes/polygons for adding BCC or editing geometry etc using surface patch method. It displays the surface patch by treating surfaces within the feature angle as the one surface. A curved surface with smaller feature angle means fewer surface polygons will be picked at a time. For more information refer 8. Pre-processor <a href="../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Change_feature_angle">Feature Angle</a></span></p>
+  <h2><a id="6.1.8._Tool_Bar_Options"></a>Tool Bar Options</h2>
+  <p>Tool bar options has been explained in <a href="6_4_main_menu.htm#Tool_bar_options">section 6.4.4. Tool bar options</a>, hence please refer that section for more details.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../pre_processor/10_material_data/10_material_data.htm">Material data</a></p>
+  <p><a href="../../pre_processor/9_simulation_controls/9_simulation_controls.htm">Expert mode Simulation Controls settings</a></p>
+  <p><a href="../../pre_processor/12_geometry_modelling/12_geometry_modelling.htm">Geometry Definition</a></p>
+  <p><a href="../../pre_processor/13_mesh_generation/13_mesh_generation.htm">Mesh definition</a></p>
+  <p><a href="../../pre_processor/14_boundary_conditions/14_boundary_conditions.htm">Boundary condition definitions</a></p>
+  <p><a href="../../pre_processor/15_movement_controls_definition/15_movement_controls_settings.htm">Movement controls</a></p>
+  <p><a href="../../pre_processor/16_object_properties/16_object_properties.htm">Object properties definitions</a></p>
+  <p><a href="../../pre_processor/19_object_positioning/19_object_positioning.htm">Object Positioning</a></p>
+  <p><a href="../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm">Inter-Object data definitions</a></p>
+  <p> </p>
+
+</body></html>

@@ -1,0 +1,158 @@
+---
+lang: sk
+title: "9.10. Output controls"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>9.10. Output controls</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>9.10. Output controls</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/9_simulation_controls/9_10_output_controls.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/10_Material_Data/10_Material_Data.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/9_Simulation_Controls/9_9_Thermomechanical_variables.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="9.10. Output controls">
+        <span>9.10. Output controls</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>9.10. Output Controls <img height="32" src="../../../assets/icons/pre_icons/mo_output_controls.jpg" width="35"/></h1>
+  <p><a href="#9_10_1_Elemental_Nodal">9.10.1. Elemental/Nodal [2D, 3D]</a></p>
+  <p><a href="#9_10_2_Strain">9.10.2. Strain [2D, 3D]</a></p>
+  <p><a href="#9_10_3_Nodal_heat">9.10.3. Nodal heat [2D, 3D]</a></p>
+  <p> </p>
+  <h2><a id="9_10_1_Elemental_Nodal"></a>Elemental/Nodal [2D, 3D]</h2>
+  <p>The output control that is available to the user is intended to improve the state variable representation in the analysis domain and minimize the interpolation error involved in the remeshing procedures. Such representation can also better maintain
+    the local gradients of the state variables compared to the existing the element based representation. In the current version, the user can choose to represent damage, strain and stress state as Element+Nodal data. This means in addition to the currently
+    available element data, the user can store these variables as nodal variables. From v11 onwards, the state variables can also be calculated at integration points.</p>
+  <p>From V14.0, the Output Control tab has been removed from Advanced options and made available as separate tab as shown in <a href="#Fig_9_10_1_Elemental_Nodal_output_selection_page"><span data-keyref="Chapter_9_10_Output_Controls">Fig. 9.10.</span>1.</a>    In addition to the existing Stress, Strain and Damage state variables, Heat generated at the nodal level can be calculated.<br/>
+  </p>
+  <p style="text-align: center"><a id="Fig_9_10_1_Elemental_Nodal_output_selection_page"></a><img height="540" src="../../../assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image001.jpg" width="538"/></p>
+  <p> </p>
+  <p class="Fig_numb">Elemental/Nodal output selection page</p>
+  <h2><a id="9_10_2_Strain"></a>Strain [2D, 3D]</h2>
+  <p>The wide selection of strain components that can be stored by the user depends upon the analysis and object type. These options for a typical elasto-plastic object enable user to store plastic, elastic and total strains. For non-isothermal models with
+    elasto-plastic objects, additionally thermal volumetric strains can also be stored for each stored step of the simulation. When transformation is turned on, the strain components that are produced due to phase transformation can be stored as well. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_9_10_2_Strain_output_options"></a><img height="442" src="../../../assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image002.jpg" width="750"/></p>
+  <p class="Fig_numb"> Strain output options</p>
+  <p> </p>
+  <p>Once set in the Pre-Processor, each of these strain components (STNOUT) as shown in <a href="#Fig_9_10_3_Setting_the_additional_strain_components_and_element_node_data"><span data-keyref="Chapter_9_10_Output_Controls">Fig. 9.10.</span>3.</a> are available
+    in post processing for point tracking, contour plots and other normal display options (See <a href="#Fig_9_10_4_State_variable_list_for_additional_strain_components_and_Elemental_Node_data"><span data-keyref="Chapter_9_10_Output_Controls">Fig. 9.10.</span>4.</a>). </p>
+  <p>These additional nodal and element variables can be accessed from the corresponding nodal and element dialogs as shown in <a href="#Fig_9_10_5_Enhanced_node_and_element_dialogs_including_additional_nodal_variables_and_strain_components"><span data-keyref="Chapter_9_10_Output_Controls">Fig. 9.10.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_9_10_3_Setting_the_additional_strain_components_and_element_node_data"></a><img height="377" src="../../../assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image003.jpg" width="750"/></p>
+  <p class="Fig_numb">Setting the additional strain components and element + node data</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_9_10_4_State_variable_list_for_additional_strain_components_and_Elemental_Node_data"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image004.jpg" width="477"/></p>
+  <p class="Fig_numb">State variable list for additional strain components and Elemental+Node data</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_9_10_5_Enhanced_node_and_element_dialogs_including_additional_nodal_variables_and_strain_components"></a><img src="../../../assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image005.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Enhanced node and element dialogs including additional nodal variables and strain components.</p>
+  <p> </p>
+  <h2><a id="9_10_3_Nodal_heat"></a>Nodal heat[2D, 3D]</h2>
+  <p>From v14.0, Nodal heat option added under Simulation controls. </p>
+  <p>Nodal heat output can be created either as time integrated or for the current step. These options are available to the user when Heat transfer mode check box is turned on in Main settings page.  </p>
+  <p>By default, Time integrated nodal heat output is activated and cannot be deactivated.</p>
+  <p>Nodal heat output due to various factors during forming at a particular step can be captured as Normalized nodal heat components. Currently, we can plot nodal heat output due to Deformation and Friction along with the Total output.</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Total</strong>: When we turn on Total check box, during simulation Total nodal heat at the current step will be calculated and saved in database.</p>
+    </li>
+    <li>
+      <p><strong>Deformation</strong>: When we turn on the Deformation check box, during simulation nodal heat generated due to deformation at the current step will be calculated and saved in database.</p>
+    </li>
+    <li>
+      <p><strong>Friction</strong>: When we turn on Friction check box, during simulation nodal heat generated due to friction at the current step will be calculated and saved in the database.</p>
+    </li>
+  </ul>
+  <p>According to the selection of Normalized nodal heat components in Pre, under State variable- Thermal tab (see <a href="#Fig_9_10_6_Nodal_heat_output_selection_page"><span data-keyref="Chapter_9_10_Output_Controls">Fig. 9.10.</span>6.</a>), we can observe
+    the selected Normalized nodal heat components outputs (See <a href="#Fig_9_10_7_Normalized_nodal_heat_components_options"><span data-keyref="Chapter_9_10_Output_Controls">Fig. 9.10.</span>7</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_9_10_6_Nodal_heat_output_selection_page"></a><img height="400" src="../../../assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image006.jpg" width="457"/></p>
+  <p class="Fig_numb">Nodal heat output selection page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_9_10_7_Normalized_nodal_heat_components_options"></a><img height="500" src="../../../assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image007.jpg" width="607"/> </p>
+  <p class="Fig_numb">Normalized nodal heat components options.</p>
+  <p> </p>
+  <p><br/>
+    <strong>Related Topics:</strong></p>
+  <p><a href="9_1_simulation_type_settings.htm">9.1. Simulation type Settings</a> <br/>
+    <a href="9_2_defining_step.htm">9.2. Defining Step</a> <br/>
+    <a href="9_3_stopping_controls.htm">9.3. Stopping Controls</a> <br/>
+    <a href="9_4_remesh_criteria.htm">9.4. Remesh Criteria</a> <br/>
+    <a href="9_5_solver_settings.htm">9.5. Solver Settings</a> <br/>
+    <a href="9_6_process_conditions.htm">9.6. Process Conditions</a> <br/>
+    <a href="9_7_advanced_options.htm">9.7. Advanced Options</a> <br/>
+    <a href="9_8_control_files.htm">9.8. Control Files</a> </p>
+  <p><a href="9_9_thermomechanical_variables.htm">9.9. Thermomechanical variables</a></p>
+
+</body></html>

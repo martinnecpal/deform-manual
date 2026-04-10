@@ -1,0 +1,405 @@
+---
+lang: sk
+title: "3D Heat Treatment Wizard Lab"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.14.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Heat Treatment Wizard Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Heat Treatment Wizard Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Inverse_Heat_Labs/Inverse_Heat_Labs_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Labs/Heat_Treatment_Labs/2D_Heat_Treatment_Wizard_Lab2.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Heat Treatment Wizard Lab">
+        <span>3D Heat Treatment Wizard Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3D Heat Treatment Wizard Lab</h1>
+  <p><a href="#1_1_Introduction">1.1. Introduction</a></p>
+  <p><a href="#1_2_Starting_a_New_problem">1.2. Starting a New problem</a></p>
+  <p><a href="#1_3_Process_Settings">1.3. Process Settings</a></p>
+  <p><a href="#1_4_Material_definition">1.4. Material definition</a></p>
+  <p><a href="#1_5_Workpiece_Object_Type">1.5. Workpiece Object Type</a></p>
+  <p><a href="#1_6_Workpiece_initialization">1.6. Workpiece initialization</a></p>
+  <p><a href="#1_7_Medium_Definition">1.7. Medium Definition</a></p>
+  <p><a href="#1_8_Scheduled_Definition">1.8. Scheduled Definition</a></p>
+  <p><a href="#1_9_Simulation_controls">1.9. Simulation controls</a> </p>
+  <p><a href="#1_10_Generate_Database">1.10. Generate Database</a> </p>
+  <p><a href="#1_11_Starting_the_Simulation">1.11. Starting the Simulation</a> </p>
+  <p><a href="#1_12_Post_processing">1.12. Post processing</a></p>
+  <p> </p>
+  <h2><a id="1_1_Introduction"></a>Introduction</h2>
+  <p>The Heat Treatment Wizard is a convenient tool to set up complex multiple-operation heat treatment problem. This lab will demonstrate how to use this wizard to prepare a carburization-quench-tempering simulation of a steel part. This lab can also help
+    users understand the capabilities of DEFORM-HT&#39;s phase transformation calculation scheme.</p>
+  <h2><a id="1_2_Starting_a_New_problem"></a>Starting a New problem</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear as shown in below (see <a href="#Fig_3DHTWL1_1_DEFORM_GUI_main_window"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>1.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_1_DEFORM_GUI_main_window"></a><img height="435" src="../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DEFORM GUI main window</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>New Problem</strong> or by clicking the New Problem <img height="20" src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg" width="17"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_3DHTWL1_2_Problem_type_selection_window"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>2.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and units system as &quot;<strong>SI</strong>&quot; using radio button. Define Problem Name as &quot;<strong>GearHT</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>”
+    check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_2_Problem_type_selection_window"></a><img height="419" src="../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem type selection window</p>
+  <p> </p>
+  <p>Integrated Manufacturing Process wizard will open (see <a href="#Fig_3DHTWL1_3_MO_wizard_New_project"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>3.</a>), at this point user will be prompted to specify
+    a project name (system will create a separate folder with this project name) and title. In this lab we will use ‘<strong>GearHT</strong>’ as the project name.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_3_MO_wizard_New_project"></a><img height="435" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO wizard New project</p>
+  <p> </p>
+  <p>User can also change the Unit system (File menu selected unit system will be selected by default) and add HT operation by selecting it from First operation pull down list and checkbox (see <a href="#Fig_3DHTWL1_3_MO_wizard_New_project"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>3.</a>).
+    Using copy Existing project option we can import previous saved projects as new project. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to continue to open the operation.</p>
+  <p> </p>
+  <p>Multiple Operation wizard will open. Add 3D HT Wizard operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to <strong>3D HT Wizard </strong> or
+    user can also add by drag and drop into the Operation Editor (see <a href="#Fig_3DHTWL1_4_Added_3D_HT_Wizard_into_Operation_Editor"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>4.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_4_Added_3D_HT_Wizard_into_Operation_Editor"></a><img height="435" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added 3D HT Wizard into Operation Editor</p>
+  <h2><a id="1_3_Process_Settings"></a>Process Settings</h2>
+  <p>As the operation is added, Process settings page opens as shown in <a href="#Fig_3DHTWL1_4_Added_3D_HT_Wizard_into_Operation_Editor"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>4.</a> User can set the
+    simulation mode based on the simulation requirement along with step definition controls.</p>
+  <p> </p>
+  <p> Turn on &quot;<strong>Deformation</strong>&quot;, &quot;<strong>Diffusion</strong>&quot;, and &quot;<strong>Phase </strong><strong>Transformation</strong>&quot;. Step definition will be defined in Simulation controls page. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> leave the settings in initialization page as it is (see <a href="#Fig_3DHTWL1_5_Initialization_Setup_window"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>5.</a>) and click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_5_Initialization_Setup_window"></a><img height="320" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0005.jpg" width="383"/></p>
+  <p> </p>
+  <p class="Fig_numb">Initialization Setup window</p>
+  <h2><a id="1_4_Material_definition"></a>Material definition</h2>
+  <p>In Material page, click on <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Import material from file) and import material &quot;<strong>Demo_Temper_Steel.KEY</strong>&quot; from installation path  \SFTC\DEFORM\v*_*\3d\LABS directory
+    (see <a href="#Fig_3DHTWL1_6_Importing_Material"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>6.</a>). Click <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to material Selection popup
+    dialog and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until workpiece object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_6_Importing_Material"></a><img height="437" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing Material</p>
+  <h2><a id="1_5_Workpiece_Object_Type"></a>Workpiece Object Type</h2>
+  <p>In Workpiece page, change the object type to <strong>Elasto-plastic</strong> type and select &quot;<strong>Mixed (Tet mesh)</strong>&quot; as element type for Elasto-plastic from drop - down menu (see in <a href="#Fig_3DHTWL1_7_Workpiece_object_page"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>7.</a>). Click
+    <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Geometry page.</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>: For almost all 3D heat treat models, (Tet Mesh) or brick mesh element should be used but not &quot;Standard&quot; tet.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_7_Workpiece_object_page"></a><img src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece object page</p>
+  <h3>Import Geometry</h3>
+  <p>In Geometry page, click on <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (import geometry from library) option and import the <strong>GearTooth.STL</strong> file from installation path \SFTC\DEFORM\v*_*\3d\LABS as shown
+    in <a href="#Fig_3DHTWL1_8_Importing_Geometry"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>8.</a> Use <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> action label to check the Geometry.
+    A perfect geometry should display message as shown in as shown in <a href="#Fig_3DHTWL1_9_Check_Geometry"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>9.</a> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_8_Importing_Geometry" height="16" width="16"></a><img height="436" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing Geometry</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_9_Check_Geometry"></a><img height="436" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Check Geometry</p>
+  <h3>Generate Mesh</h3>
+  <p>In Mesh page, Enter Target number of  mesh elements as <strong>16000 </strong>or drag the slider bar to 16000 then click on<img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> .  Mesh is generated and meshed object looks as shown in
+    <a href="#Fig_3DHTWL1_10_Generate_Mesh_Window"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>10.</a> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_10_Generate_Mesh_Window"></a><img height="435" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate Mesh Window</p>
+  <h3>Assigning Material</h3>
+  <p>Select and assign <strong>Demo.Steel</strong> Material as shown in <a href="#Fig_3DHTWL1_11__Assigning_Material_to_workpiece"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>11.</a> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_11__Assigning_Material_to_workpiece"></a><img height="330" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0011.jpg" width="395"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Assigning Material to workpiece</p>
+  <h3>Assigning Boundary conditions</h3>
+  <ol class="Decimal">
+    <li>
+      <p>Assign symmetry surfaces on two sides of workpiece as shown in <a href="#Fig_3DHTWL1_12_Assigning_Symmetry_BCC"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>12.</a> Note that this geometry represents
+        half a tooth of the gear.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_12_Assigning_Symmetry_BCC"></a><img height="435" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0012.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Symmetry BCC</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;" value="2">
+      <p>In addition, as Elasto-plastic deformation will be modeled, some fixed-node boundary conditions need to be specified here. To do so, select a boundary condition item and then assign it to appropriate boundary nodes. For this model, as the symmetric
+        planes provide the constraints in the directions perpendicular to their own plane, we need constraints in the Z direction. Here, we fix a node on the bottom as shown in the <a href="#Fig_3DHTWL1_13_Assigning_Velocity_BCC"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>13.</a></p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_13_Assigning_Velocity_BCC"></a><img height="436" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Velocity BCC</p>
+  <h2><a id="1_6_Workpiece_initialization"></a>Workpiece initialization</h2>
+  <p>Click on Object Nodes <img src="../../../assets/icons/pre_icons/mo_nodal_data_icon.jpg"/> and select <strong>diffusion </strong>then define <strong>atom </strong><strong>percentage </strong>as <strong>0.2</strong> using <img src="../../../assets/icons/pre_icons/mo_initialize_icon.jpg"/> button (see <a href="#Fig_3DHTWL1_14_Object_Node_data_definition_window"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>14.</a>), assign using <strong>Range </strong>option by defining <strong>0.2</strong>    as value then click on <img src="../../../assets/icons/pre_icons/mo_close_button2.jpg"/> button. Click on <img height="19" src="../../../assets/icons/pre_icons/mo_ok_button2.jpg" style="cursor: nesw-resize;" width="63"/> button to close the Initialization
+    dialog and click  to close Nodal data dialog.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_14_Object_Node_data_definition_window"></a><img height="437" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object Node data definition window</p>
+  <p> </p>
+  <p>Click on Object Elements <img src="../../../assets/icons/pre_icons/mo_elemental_data_icon.jpg"/> and select <strong>Phase </strong><strong>transformation </strong>tab under <strong>Microstructure</strong>. Initialize <strong>Pearlite+Bainite</strong>    as <strong>1</strong> and zero for the rest by selecting each phase and using <img src="../../../assets/icons/pre_icons/mo_initialize_icon.jpg"/> (see <a href="#Fig_3DHTWL1_15_Object_Element_Data_definition_window"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>15.</a>),
+    assign using Range option by defining 1 as value then click on <img src="../../../assets/icons/pre_icons/mo_apply_button.jpg"/> button. Click on <img src="../../../assets/icons/pre_icons/mo_close_button2.jpg"/> button to close the Initialization
+    dialog and click <img height="19" src="../../../assets/icons/pre_icons/mo_ok_button2.jpg" width="63"/> to close Element data dialog. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to define the medium details.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_15_Object_Element_Data_definition_window"></a><img height="434" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object Element Data definition window</p>
+  <h2><a id="1_7_Medium_Definition"></a>Medium Definition</h2>
+  <p>In page “<strong>Medium</strong><strong> details</strong>”, you will define various media and heat transfer zones associated with them as shown in <a href="#Fig_3DHTWL1_16_Medium_Details_window"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>16.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_16_Medium_Details_window"></a><img height="385" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0016.jpg" width="413"/></p>
+  <p> </p>
+  <p class="Fig_numb">Medium Details window</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Rename the first medium to “Heating Furnace” and set the “default” heat transfer coefficient (HTC) to constant 0.1. Activate Radiation by checking on Radiation button.</p>
+    </li>
+    <li>
+      <p>Add medium “Carb. Furnace” (Carb. for Carburization). Set the “default” heat transfer coefficient (HTC) to constant 0.05. For “Carb. Furnace”, input 0.0001 for the &quot;Diffusion Surface Reaction Rate&quot;. Activate Radiation by checking on Radiation
+        button.</p>
+    </li>
+    <li>
+      <p>Add a media “Oil”. Deactivate the &quot;Radiation&quot;. Input 5.5 for the &quot;default&quot; HTC.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="margin-left: 20px">Add a heat transfer zone (Zone #1) to the media “Oil”. Click on the workpiece boundary to specify this zone to the bottom of the workpiece as shown in the <a href="#Fig_3DHTWL1_17_Medium_detail_window_showing_zone_allocation"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>17.</a>    Note that you may need to change the picking modes in point selection window in order to specify the zone properly.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_17_Medium_detail_window_showing_zone_allocation"></a><img height="430" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Medium detail window showing zone allocation</p>
+  <p> </p>
+  <p>For Zone #1, define the HTC as a function of temperature as follows, by selecting f(Temp) from pull down menu and using <img src="../../../assets/icons/pre_icons/mo_define_button.jpg"/> button, (see <a href="#Fig_3DHTWL1_18_HTC_table"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>18.</a>    and <a href="#Fig_3DHTWL1_19_Function_definition_window"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>19.</a> )</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 300px;margin-left: auto;margin-right: auto">
+    <colgroup>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"><strong>Temperature</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>HTC</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">20</p>
+        </td>
+        <td>
+          <p style="text-align: center">2.1</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">250</p>
+        </td>
+        <td>
+          <p style="text-align: center">2.8</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">500</p>
+        </td>
+        <td>
+          <p style="text-align: center">6.8</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">750</p>
+        </td>
+        <td>
+          <p style="text-align: center">4.0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1000</p>
+        </td>
+        <td>
+          <p style="text-align: center">2.5</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig_3DHTWL1_18_HTC_table"></a>HTC table</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_19_Function_definition_window"></a><img height="430" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Function definition window</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 3;" value="4">
+      <p>Add one more media “Air”. Input 0.02 for the default HTC. Activate Radiation by checking on Radiation button.</p>
+    </li>
+  </ol>
+  <h2><a id="1_8_Scheduled_Definition"></a>Scheduled Definition</h2>
+  <p>In this lab we are going to carry out a five stage Heat Treatment process. In order to do this, in “Schedule” page, input a five-stage schedule as explained below.(See <a href="#Fig_3DHTWL1_20_Heat_Treatment_Schedule_window"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>20.</a>)</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Half an hour (1800 s) of pre-heating at 550C.</p>
+    </li>
+    <li>
+      <p>Two hours (7200 s) of carburization at 850C. Specify the &quot;Atom&quot; content to be 0.8.</p>
+    </li>
+    <li>
+      <p>20 minutes (1200 s) of oil quench with oil temperature 100C.</p>
+    </li>
+    <li>
+      <p>30 minutes (1800 s) of tempering at 280C.</p>
+    </li>
+    <li>
+      <p>One hour (3600 s) cooling in the air.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_20_Heat_Treatment_Schedule_window"></a><img height="320" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0020.jpg" width="550"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat Treatment Schedule window</p>
+  <p> </p>
+  <p>The settings for each stage can be set or modified using <img src="../../../assets/icons/pre_icons/mo_define.._button.jpg"/> button in advanced column. User can start from any stage by setting the Start Operation number based on the stages defined.
+    For this lab we will use 1. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Simulation controls page.</p>
+  <h2><a id="1_9_Simulation_controls"></a>Simulation controls</h2>
+  <p>In &quot;Step Definition&quot;, Select <strong>Auto </strong>radio button and change &quot;Temp. Change per step&quot; to <strong>2</strong> C. Accept other default settings. (See <a href="#Fig_3DHTWL1_21_Simulation_controls_window"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>21.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_21_Simulation_controls_window"></a><img height="330" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0021.jpg" width="454"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls window</p>
+  <h2><a id="1_10_Generate_Database"></a>Generate Database</h2>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> action label to check the problem. Generate a database by clicking <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> action label.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_22_Generate_Database_Window"></a><img height="320" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0022.jpg" width="440"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate Database Window</p>
+  <h2><a id="1_11_Starting_the_Simulation"></a>Starting the Simulation</h2>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg" width="146"/>  button above the operation tree. Click on the <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DHTWL1_23_Run_simulation_window"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>23.</a> Use the default <strong>Continue Run</strong>    option to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p>To define MPI settings, click on <img src="../../../assets/icons/simulator_icons/mo_more_button.jpg"/> button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend
+    on your 3D MPI license).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_23_Run_simulation_window"></a><img height="280" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0023.jpg" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run simulation window</p>
+  <p> </p>
+  <p>The progress of the simulation can be monitored as it is running by looking at the Simulation Message and process monitor in Simulation mode. Click the Simulation Message tab to view the Message file. As long as the <img src="../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked, which is the default setting, the Message file will refresh every couple of seconds.</p>
+  <p> </p>
+  <p>The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.</p>
+  <p>When the simulation has finished, the message will be added to the end of the Message file. (See <a href="#Fig_3DHTWL1_24_Simulation_Message_tab"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>24.</a>).</p>
+  <p> </p>
+  <p>Each stage defined will be executed as individual operation and user need to wait until all the stages simulation is completed.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_24_Simulation_Message_tab"></a><img height="438" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0024.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Message tab</p>
+  <h2><a id="1_12_Post_processing"></a>Post processing</h2>
+  <p>When the simulation has finished, click on <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/>. In Step Browser click on  <img src="../../../assets/icons/pre_icons/mo_all_button.jpg"/> button to view all steps. The temperature min-max
+    history should be like the graph below (see <a href="#Fig_3DHTWL1_25_State_Variable_showing_Temperature_Min-Max_history"><span data-keyref="Labs_Heat_Treatment_Labs_3D_Heat_Treatment_Wizard_Lab1">Fig. 3DHTWL1.</span>25.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHTWL1_25_State_Variable_showing_Temperature_Min-Max_history"></a><img height="434" src="../../../assets/images/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/image0025.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">State Variable showing Temperature Min-Max history</p>
+  <p> </p>
+  <p>In post-processing, we recommend following tasks to be performed:</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Examine the state of the workpiece after oil quenching. The state variables of interest may include carbon content, volume fractions of Martensite (M), Ferrite (F), and Perlite + Banite (PB), and the residual stress. Note that at this point, M is
+        as high as 0.797 near tooth surface, and the maximum effective stress is ~128 MPa.</p>
+    </li>
+    <li>
+      <p><span style="font-size: 12pt;">Check the same state variables after tempering. Note that M is reduced to ~0.2 near tooth surface, most of which is transformed into Tempered Ferrite + Cementite (TFC). The maximum effective stress is reduced to ~82 MPa.</span></p>
+    </li>
+    <li>
+      <p>In addition, point tracking phase volume fractions at different locations of the work-piece can be helpful for understanding the complex phenomena occurred.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p> </p>
+
+</body></html>

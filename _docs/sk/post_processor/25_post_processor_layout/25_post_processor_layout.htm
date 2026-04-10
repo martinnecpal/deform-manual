@@ -1,0 +1,280 @@
+---
+lang: sk
+title: "25. Post Processor Layout"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "6.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>25. Post Processor Layout</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>25. Post Processor Layout</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/post_processor/25_post_processor_layout.css"/>
+<meta name="brsnext" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_Post_Processor_Features.htm"/><meta name="brsprev" value="Documentation_content/Post_Processor/24_Introduction_to_Post_Processor/24_Introduction_to_Post_Processor.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="25. Post Processor Layout">
+        <span>25. Post Processor Layout</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>25. Post-Processor Layout</h1>
+  <p><a href="#25_1_Post_features_settings_modifications_window">25.1. Post features settings modifications window</a></p>
+  <p><a href="#25_2_Object_Tree">25.2. Object Tree</a></p>
+  <p><span style="margin-left:40px;"><a href="#25_2_1_Operation_tree_options">25.2.1. Operation tree options</a></span></p>
+  <p><span style="margin-left:40px;"><a href="#25_2_2_Object_Tree_Right_Mouse_button_(RMB)_options">25.2.2. Object Tree Right Mouse button (RMB) options</a></span></p>
+  <p><a href="#25_3_Graphics_window">25.3. Graphics window</a></p>
+  <p><a href="#25_4_Report_Generation">25.4. Report Generation</a></p>
+  <p><a href="#25_5_Dock_Widget_menu">25.5. Dock Widget menu</a></p>
+  <p> </p>
+  <p>Post-processor provides an intuitive GUI for the user to view simulation output, interpret results and generate report in various formats such as pdf, ppt…etc. PIP feature of Next Gen Post helps the user to compare simulation output across multiple
+    databases.</p>
+  <p>Post-processor GUI layout (See <a href="#Fig_25_1_Post-processor_layout"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>1.</a>) can be divided into Step View, Object Tree, Post features settings modifications window and graphics
+    window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_1_Post-processor_layout"></a><img height="423" src="../../../assets/images/post_processor/25_post_processor_layout/image001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Post-processor  layout</p>
+  <p> </p>
+  <p><strong>Step View Window</strong> provides options to select and play the simulated steps and also to select the operations and display information related to current operation and step.</p>
+  <p> </p>
+  <p><strong>Graphics window</strong> will display graphical representation of objects. The graphics window can be used for displaying the contour plots, graphs, grain flow, etc.</p>
+  <p> </p>
+  <p><strong>Post Tools</strong> are used to plot different state variables, point track state variables, study grain flow using flownet, extract data from DB, plot summary graphs, create animation, etc.</p>
+  <p> </p>
+  <p><strong>Object Tree</strong> lists the objects and controls their display. Report Tab within object tree window can be used by user for generating report of simulation results.</p>
+  <p> </p>
+  <p><strong>Post features</strong> settings modifications window is used to select and modify the post features and its settings for state variables plot, point tracking, flownet, summary graphs, data extraction, load-stroke graphs, symmetry, slicing (only
+    for 3D), region of interest, animation setup, etc.</p>
+  <p> </p>
+  <h2><a id="25_1_Post_features_settings_modifications_window"></a>Post features settings modifications window</h2>
+  <p>Post features settings modifications window is a region that displays options and settings for selected features of the post processor as shown in <a href="#Fig_25_1_Post-processor_layout"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>1.</a> The
+    options and settings can be set and modified in this region.</p>
+  <p>The options and settings for each feature are explained along with the feature further in section Post Features.</p>
+  <p> </p>
+  <h2><a id="25_2_Object_Tree"></a>Object Tree</h2>
+  <p>The objects and its display information such as objects visibility, geometry, mesh, transparency, slice plane, point tracking and Flownet information is available in this window as shown in <a href="#Fig_25_1_Post-processor_layout"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>1.</a> </p>
+  <p>User can select the object to be visible for display in graphics window using left mouse click on the particular object in the tree and change its display modes. Point tracking and Flownet can be hidden or deleted using RMB click on the Point tracking/Flownet
+    tracking link in the object tree.</p>
+  <p> </p>
+  <h3><strong><a id="25_2_1_Operation_tree_options"></a>Operation tree options</strong></h3>
+  <p><strong>[2D][3D]:</strong></p>
+  <p><strong>Show Object<img src="../../../assets/icons/pre_icons/mo_show_obj_icon.jpg"/>:</strong> Turns on/off the selected object from object tree.</p>
+  <p><strong>Show Mesh<img src="../../../assets/icons/pre_icons/mo_show_mesh_icon.jpg"/>:</strong> Shows or hides mesh of  the selected object from object tree.</p>
+  <p><strong>Show Geometry<img src="../../../assets/icons/pre_icons/mo_show_geo_icon.jpg"/>:</strong> Shows or hides geometry of  the selected object geometry from the object tree.</p>
+  <p><strong>Show Contact Nodes:<img src="../../../assets/icons/pre_icons/mo_show_cotact_icon.jpg"/> </strong>Turns on the contact display for the selected object from object tree with all other all object. (See <a href="#Fig_25_1_Post-processor_layout"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>1.</a> )</p>
+  <p><br/>
+    <strong>[3D]:</strong></p>
+  <p> <strong>Make Transparent<img src="../../../assets/icons/pre_icons/mo_transparent.jpg"/>:</strong> Turns on/off  transparency of the selected object from the object tree.</p>
+  <p> <strong>Show Backface<img src="../../../assets/icons/pre_icons/mo_show_backfac_icon.jpg"/>:</strong> Turns on/off the back surface of the object selected object from the object tree, it will be more useful when the object are made transparent. (See
+    <a href="#Fig_25_2_Plastic_object_mesh_in_shaded_rendering_type"> Fig. 25.2.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_2_Plastic_object_mesh_in_shaded_rendering_type"></a>   <img height="281" src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image032.jpg" width="180"/>   <img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image033.jpg"/></p>
+  <p class="Fig_name"><br/> (a)                                              (b)</p>
+  <p class="fig_name"> </p>
+  <p class="Fig_numb">Plastic object mesh in shaded rendering type; (a) With Back face on (b) With Back face off</p>
+  <p> </p>
+  <p><strong>[2D][3D]:</strong><br/>
+    <a id="Object_Display_Modes"></a><strong>Object Display Modes:</strong> DEFORM has 3 different object display modes as shown in <a href="#Fig_25_1_Post-processor_layout"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>1.</a> </p>
+  <p><strong>Single Object mode<img src="../../../assets/icons/pre_icons/mo_show_single_obj_icon.jpg"/> :</strong> Only the selected object from object tree is displayed. All other objects are hidden.</p>
+  <p><strong>Multi Object mode</strong><img src="../../../assets/icons/pre_icons/mo_show_multi_obj_icon.jpg"/> : All objects are displayed in graphics window. The selected object from object tree is displayed in solid color and all other objects are transparent in
+    3d mode. (See <a href="#Fig_25_3_Multi_object_mode_when_plastic_workpiece_object_get_selected"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>3</a>.)</p>
+  <p style="text-align: center"><a id="Fig_25_3_Multi_object_mode_when_plastic_workpiece_object_get_selected"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image034.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Multi object mode when plastic workpiece object get selected</p>
+  <p><br/>
+    <strong>User Object mode</strong><img src="../../../assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg"/>: User can toggle the object&#39;s Display, Geometry, Mesh, Transparency (only for 3D), Slice plane (only for 3D) modes independently.
+    This can be done by checking and unchecking respective check boxes as shown in <a href="#Fig_25_4_User_defined_Object_Mode_window"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>4.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_4_User_defined_Object_Mode_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image035.jpg"/></p>
+  <p class="Fig_numb">User defined Object Mode window</p>
+  <p><br/> Following are the settings we have to select based on the objects display requirements,</p>
+  <p><strong>Apply Display options</strong><img src="../../../assets/icons/pre_icons/mo_apply_display_option.jpg"/>: Applies the selected display option for the objects.</p>
+  <p><strong>Visible</strong><img src="../../../assets/icons/pre_icons/mo_visible.jpg"/>: Turns on/off the selected object display.</p>
+  <p><strong>Mesh</strong><img src="../../../assets/icons/pre_icons/mo_mesh_icon.jpg"/>: Shows or hides display of the selected object mesh.</p>
+  <p><strong>Geometry</strong><img src="../../../assets/icons/pre_icons/mo_geometry _icon.jpg"/>: Shows or hides display of the selected object geometry.</p>
+  <p><strong>Transparency<img src="../../../assets/icons/pre_icons/mo_transparent.jpg"/></strong>: Turns on/off  transparency of the selected object.</p>
+  <p><strong>Slice</strong><img src="../../../assets/icons/pre_icons/mo_slice.jpg"/>: Turns on/off  sliced plane for the selected sliced object.</p>
+  <p> </p>
+  <h3><strong><a id="25_2_2_Object_Tree_Right_Mouse_button_(RMB)_options"></a>Object Tree Right Mouse button (RMB) options</strong></h3>
+  <p> </p>
+  <p><strong>Problem Data</strong> [2D, 3D]: <br/> The Problem Data menu contains the following command as shown in <a href="#Fig_25_5_RMB_menu_options_on_objects_in_Operation_tree_for_2D"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>5.</a>    and <a href="#Fig_25_6_RMB_menu_options_on_objects_in_Operation_tree_for_3D"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>6.</a></p>
+  <p><strong>[2D, 3D]:</strong></p>
+  <p> </p>
+  <p><strong>Select All objects</strong>: When user clicks on this option it turns on all the objects Select column check boxes in Operation tree.</p>
+  <p><strong>Unselect All objects</strong>: When user clicks on this option it turns off all the objects Select column check boxes in Operation tree.</p>
+  <p><strong>Turn on all objects</strong>: When user clicks on this option it turns on all the objects in display window.</p>
+  <p><strong>Turn off all objects</strong>: When user clicks on this option it turns off all the objects in display window.</p>
+  <p><strong>Turn on all workpieces (not RIGID)</strong>: Turns on any object which is not rigid. (Turns off all rigid objects)</p>
+  <p><strong>T</strong><strong><strong>ur</strong>n on all dies (RIGID)</strong>: Turns on any object which is rigid. (Turns off all other objects)</p>
+  <p><strong>Turn on contact display for all</strong>: It turns on the contact display of all objects in display window.</p>
+  <p><strong>Turn off contact display for all</strong>: It turns off the contact display of all objects in display window.</p>
+  <p><strong>Import Object</strong>: User can import object from key file or Database.</p>
+  <p><strong>Import Geometry</strong>: User can import  geometry from key file, database, IGS, STL, DXF formats.</p>
+  <p> </p>
+  <p><strong>[3D]:</strong></p>
+  <p><strong>Turn on transparency for all</strong>: It makes objects transparent in display window.</p>
+  <p><strong>Turn off transparency for all</strong>: It turns off the transparency of objects in display window.</p>
+  <p><strong>Turn on backface for all:</strong> It shows the back surface of the object, it will be more useful when the objects are made transparent.</p>
+  <p><strong>Turn off backface for all</strong>: It turns off the Backface of objects.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_5_RMB_menu_options_on_objects_in_Operation_tree_for_2D"></a><img src="../../../assets/images/post_processor/25_post_processor_layout/image008.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">RMB menu options on objects in Operation tree for 2D </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_6_RMB_menu_options_on_objects_in_Operation_tree_for_3D"></a><img src="../../../assets/images/post_processor/25_post_processor_layout/image007.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">RMB menu options on objects in Operation tree for 3D </p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Object Data [2D, 3D]</strong><br/> The Object Data menu (See <a href="#Fig_25_7_RMB_menu_options_on_selected_object_in_Operation_tree"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>7.</a>, <a href="#Fig_25_8_RMB_menu_options_on_Object_Mesh_in_Operation_tree"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>8.</a>    and <a href="#Fig_25_9_RMB_menu_options_on_Object_Geometry_in_Operation_tree"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>9.</a>) contains some or all of the following commands, depending on object type:</p>
+  <p><strong>[2D, 3D]:</strong></p>
+  <p><strong>Show Geometry</strong> : It shows the object Geometry</p>
+  <p><strong>Change shade color (Geometry)</strong>:  Changes the surface facet fill color.</p>
+  <p><strong>Change line color (Geometry)</strong>:  Changes the color of lines delineating facet edges.</p>
+  <p><strong>Export Geometry</strong>: Using this option object geometry data can be saved.</p>
+  <p><strong>Show Mesh </strong>: It shows the object Mesh</p>
+  <p><strong>Change shade color (Mesh)</strong>: Changes the element fill color.</p>
+  <p><strong>Change line color (Mesh)</strong>: Changes the color of the lines delineating element edges.</p>
+  <p><strong>Show contact node</strong>: Highlights contact for selected object with any Master object. This is a quick way to display contact. This is a toggle menu selection. Select it once to turn the contact node display on. Select it again to turn the
+    display back off.</p>
+  <p> </p>
+  <p><strong>[3D]:</strong></p>
+  <p><strong>Show Geometry and Normal Vecto</strong>r: Turns on the geometry with normal vectors display.</p>
+  <p><strong>Use smooth shading (Mesh)</strong>: Renders the mesh shading display to smooth.</p>
+  <p><strong>Make Transparent</strong>: It makes objects transparent.</p>
+  <p><strong>Change transparency: </strong>Using this option the transparency of the 3D object mesh can be varied.</p>
+  <p><strong>Show backface</strong>:  It shows the back surface of the object.</p>
+  <p><strong>Movement (only For Primary Die)</strong></p>
+  <p><strong>Show translational movement</strong>: It displays the translational movement direction in the display window.</p>
+  <p><strong>Show rotational movement</strong>: It displays the rotational movement direction in the display window.</p>
+  <p><strong>Load (only For Primary Die)</strong> : It displays the load movement direction in the display window.</p>
+  <p><strong>Diff Step (Increment SV)</strong>: User can plot the State variable value at that particular step using Diff Step option<br/> (See <a href="#Fig_25_10_Plotting_Diff_step"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>10.</a>).
+    User can plot the difference in the step that is loaded to the current step (See below <a href="#FIg_25_11_Plotted_Interpolated_SV_option"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>11</a>.).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_7_RMB_menu_options_on_selected_object_in_Operation_tree"></a><img height="389" src="../../../assets/images/post_processor/25_post_processor_layout/image003.jpg" width="200"/>  <img height="197" src="../../../assets/images/post_processor/25_post_processor_layout/image004.jpg" width="200"/></p>
+  <p class="Fig_name" style="text-align: center;">(a)                                                      (b)</p>
+  <p class="Fig_numb" style="text-align: center;">RMB menu options on selected object in Operation tree (a) for 3D and (b) for 3D</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_8_RMB_menu_options_on_Object_Mesh_in_Operation_tree"></a><img src="../../../assets/images/post_processor/25_post_processor_layout/image006.jpg"/>  <img src="../../../assets/images/post_processor/25_post_processor_layout/image005.jpg"/></p>
+  <p class="Fig_name" style="text-align: center;">(a)                                                      (b)</p>
+  <p class="Fig_numb">RMB menu options on Object Mesh in Operation tree (a) for 3D and (b) for 3D</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_9_RMB_menu_options_on_Object_Geometry_in_Operation_tree"></a><img height="261" src="../../../assets/images/post_processor/25_post_processor_layout/image010.jpg" width="200"/>  <img height="118" src="../../../assets/images/post_processor/25_post_processor_layout/image009.jpg" width="200"/></p>
+  <p> </p>
+  <p class="Fig_name" style="text-align: center;">(a)                                                      (b)</p>
+  <p class="Fig_numb">RMB menu options on Object Geometry in Operation tree (a) for 3D and (b) for 3D</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_10_Plotting_Diff_step"></a><img height="393" src="../../../assets/images/post_processor/25_post_processor_layout/image011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Plotting Diff step</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_25_11_Plotted_Interpolated_SV_option"></a><img height="484" src="../../../assets/images/post_processor/25_post_processor_layout/image012.jpg" width="750"/></p>
+  <p>  </p>
+  <p class="Fig_numb">Plotted Interpolated SV option</p>
+  <p> </p>
+  <p><strong>Material Data <img src="../../../assets/icons/pre_icons/mo_material_icon.jpg"/>: [2D, 3D]: </strong>The RMB Material Data buttons allows the user to access the material properties window (See<a href="#Fig_25_12_RMB_menu_options_on_material_in_Operation_tree"> <span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>12.</a>).
+    For more information please refer <a href="../../pre_processor/10_material_data/10_material_data.htm">Chapter 10. Material Data</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_12_RMB_menu_options_on_material_in_Operation_tree"></a><img src="../../../assets/images/post_processor/25_post_processor_layout/image013.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">RMB menu options on material in Operation tree</p>
+  <p style="text-align: center"> </p>
+  <h2><a id="25_3_Graphics_window"></a>Graphics window</h2>
+  <p>Graphics window displays the graphical representation of the objects. This will display state variables contours over objects, graphs, histograms, flownet and die fill (contact nodes). (See <a href="#Fig_25_1_Post-processor_layout"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>1.</a> )</p>
+  <p> </p>
+  <p>Right mouse click on the graphics window will provide few options to display the simulation information, set the viewport, measure dimension and change background theme.(See <a href="#Fig_25_13_Right_mouse_button_graphics_window_options"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>13.</a>)
+    For more information about these options refer the <a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm#Graphics_window_RMB_options">Graphics window RMB options.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_13_Right_mouse_button_graphics_window_options"></a><img height="449" src="../../../assets/images/post_processor/25_post_processor_layout/image014.jpg" width="150"/>   <img height="473" src="../../../assets/images/post_processor/25_post_processor_layout/image015.jpg" width="150"/></p>
+  <p> </p>
+  <p class="Fig_name">(a)                             (b)</p>
+  <p class="Fig_numb">Right mouse button graphics window options; (a) For 2D (b) For 3D</p>
+  <p> </p>
+  <p><strong>Show title bar: </strong>It displays the Title bar in display window.</p>
+  <h2><a id="25_4_Report_Generation"></a>Report Generation</h2>
+  <p>Report Generation feature provided can be used to generate report in different formats such as ppt and pdf for selected post-processing features like State variables contour, Point tracking, Flownet, Coupons of data extraction, Regions of interest,
+    Summary graphs, Load-stroke graphs and data extraction.</p>
+  <p><br/> For more information on report generation setup refer <a href="../27_introduction_to_report_generation/27_introduction_to_report_generation.htm">Chapter 28. Report Generation</a>.</p>
+  <p> </p>
+  <h2><a id="25_5_Dock_Widget_menu"></a>Dock Widget menu</h2>
+  <p>Using Dock widget menu options, user can turn on/off Step view, Operation tree and Post features settings modifications window. (See <a href="#Fig_25_14_Post_processor_Dock_widget_menu"><span data-keyref="Chapter_25_Post_Processor_Layout">Fig. 25.</span>14.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_25_14_Post_processor_Dock_widget_menu"></a><img height="423" src="../../../assets/images/post_processor/25_post_processor_layout/image002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Post processor Dock widget menu </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../24_introduction_to_post_processor/24_introduction_to_post_processor.htm">24. Introduction to Post-Processor</a></p>
+  <p><a href="../26_post_processing_tools_and_controls/26_post_processor_features.htm">26. Post Processor Display controls</a></p>
+  <p><a href="../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools.htm">27. Post Processing tools</a></p>
+  <p><a href="../27_introduction_to_report_generation/27_introduction_to_report_generation.htm">28. Report Generation</a></p>
+  <p> </p>
+
+</body></html>

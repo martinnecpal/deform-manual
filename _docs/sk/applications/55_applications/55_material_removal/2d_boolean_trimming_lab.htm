@@ -1,0 +1,286 @@
+---
+lang: sk
+title: "2D Boolean Trimming Lab"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.9.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Boolean Trimming Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Boolean Trimming Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_material_removal/2d_boolean_trimming_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_Mulitpass_Spinning_with_QE_solver/Multipass_spinning_with_QE_lab.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_Material_Removal/55_Material_Removal_Main_Pg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="2D Boolean Trimming Lab">
+        <span>2D Boolean Trimming Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>2D Boolean and Trimming with Fracture Lab</h1>
+  <p>DEFORM includes many ways of removing material:</p>
+  <ul class="Disc">
+    <li>
+      <p>Boolean</p>
+    </li>
+    <li>
+      <p>Shearing</p>
+    </li>
+    <li>
+      <p>Fracture</p>
+    </li>
+  </ul>
+  <p>Boolean can be performed either as an interactive pre-processing operation, or as an operator between operations.   </p>
+  <p>In this lab, a Boolean operation will be performed interactively in the preprocessor, followed by a forming operation with fracture.</p>
+  <p> </p>
+  <p><a href="#1_1_Creating_New_problem">1.1. Creating New problem</a></p>
+  <p><a href="#1_2_Adding_2D_Forming_Operation">1.2. Adding 2D Forming Operation</a></p>
+  <p><a href="#1_3_Select__Geometry_type_and_Simulation_Modes">1.3. Select Geometry type and Simulation Modes</a></p>
+  <p><a href="#1_4_Adding_Objects">1.4. Adding Objects</a></p>
+  <p><a href="#1_5_Loading_Workpiece_data">1.5. Loading Workpiece data</a></p>
+  <p><a href="#1_6_Defining_Top_die_object_data">1.6. Defining Top die object data</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_1_Create_Top_Die_geometry_from_primitive">1.6.1. Create Top Die geometry from primitive</a></p>
+  <p><a href="#1_7_Performing_Boolean_operation">1.7. Performing Boolean operation</a></p>
+  <p><a href="#1_8_Workpiece_Mesh_page">1.8. Workpiece Mesh page</a></p>
+  <p style="margin-left: 20px"><a href="#1_8_1_Defining_Fracture_data_in_Material">1.8.1. Defining Fracture data in Material</a></p>
+  <p style="margin-left: 20px"><a href="#1_8_2_Assigning_Workpiece_Fracture_properties">1.8.2. Assigning Workpiece Fracture properties</a></p>
+  <p><a href="#1_9_Defining_Top_die_object_data_for_Flash_trimming_operation">1.9. Defining Top die object data for Flash trimming operation</a></p>
+  <p style="margin-left: 20px"><a href="#1_9_1_Import_the_trim_punch_geometry">1.9.1. Import the trim punch geometry</a></p>
+  <p style="margin-left: 20px"><a href="#1_9_2_Assigning_movement_controls_to_trim_punch">1.9.2. Assigning movement controls to trim punch</a></p>
+  <p><a href="#1_10_Defining_Bottom_die_object_data">1.10. Defining Bottom die object data</a></p>
+  <p style="margin-left: 20px"><a href="#1_10_1_Import_the_trim_die_geometry">1.10.1. Import the trim die geometry</a></p>
+  <p><a href="#1_11_Defining_Object_4_object_data">1.11. Defining Object 4 object data</a></p>
+  <p style="margin-left: 20px"><a href="#1_11_1_Import_the_trim_flash_holder_geometry">1.11.1.  Import the trim flash holder geometry</a></p>
+  <p style="margin-left: 20px"><a href="#1_11_2_Assigning_movement_controls_to_trim_flash_holder">1.11.2.  Assigning movement controls to trim flash holder</a></p>
+  <p style="margin-left: 0px"><a href="#1_12_Positioning_object">1.12. Positioning object</a></p>
+  <p style="margin-left: 0px"><a href="#1_13_Define_Inter-object_relations">1.13. Define Inter-object relations</a></p>
+  <p style="margin-left: 0px"><a href="#1_14_Assign_Step_controls">1.14. Assign Step controls</a></p>
+  <p style="margin-left: 0px"><a href="#1_15_Data_checking_and_database_generation">1.15. Data checking and database generation</a></p>
+  <p style="margin-left: 0px"><a href="#1_16_Run_and_monitor_a_simulation">1.16. Run and monitor a simulation</a></p>
+  <p style="margin-left: 0px"><a href="#1_17_Review_Results">1.17. Review Results</a></p>
+  <h2><a id="1_1_Creating_New_problem"></a>Creating New problem</h2>
+  <p>On a Windows machine, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_2DBTL1_1_Problem_Setup_Window"><span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>1.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong>Boolean_Trimming </strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn
+    on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using
+    the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_1_Problem_Setup_Window"></a><img height="419" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem Setup Window</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use  &quot;<strong>Boolean_Trimming </strong>&quot;
+    as the project name. Confirm that First operation check box is unchecked as we will add operation later, click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" style="cursor: nesw-resize;"/> to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_2_New_MO_Project_window"></a><img height="310" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0002.jpg" width="427"/></p>
+  <p> </p>
+  <p class="Fig_numb">New MO Project window</p>
+  <h2><a id="1_2_Adding_2D_Forming_Operation"></a>Adding 2D Forming Operation</h2>
+  <p>Multiple Operation wizard will open new project. Add 2D Forming operation from the Explorer Operations list. Operation can be add by clicking on <strong>2D Forming operation</strong> <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button (See <a href="../55_friction_stir_welding/55_friction_stir_welding.htm#Fig_FSWL1_3_Adding_3D_Forming_operation"><span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>3.</a>) or user can also added by drag and drop
+    into the Operation Editor.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_3_Adding_2D_Forming_operation_from_operation_explorer"></a><img height="385" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding 2D Forming operation from operation explorer</p>
+  <p> </p>
+  <h2><a id="1_3_Select__Geometry_type_and_Simulation_Modes"></a>Select  Geometry type and Simulation Modes</h2>
+  <p>Confirm the geometry type selected is <strong>Axi-symmetric</strong> in Geometry type page, then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p>In this lab we will be showing how to setup trimming operation with Isothermal condition, so in Simulation controls page, Check the <strong>Deformation</strong> <strong>mode </strong>check box, then click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Objects page.</p>
+  <h2><a id="1_4_Adding_Objects"></a>Adding Objects</h2>
+  <p>The forming operation to be simulated requires a workpiece and three dies. By default three objects will be added in Forming operation list, so add another object by clicking the <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> (insert object) button to add 4th object in list, Workpiece and three dies. Object window looks as shown in <a href="#Fig_2DBTL1_4_Adding_Objects_in_list"><span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>4.</a> Click
+    <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_4_Adding_Objects_in_list"></a><img height="320" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0004.jpg" width="371"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Objects in list</p>
+  <h2> <a id="1_5_Loading_Workpiece_data"></a>Loading Workpiece data</h2>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> button and Import the  &quot;<strong>gear2.DB</strong>&quot; file from DEFORM installation folder  \<strong>Tutorials</strong> directory. Select <strong>Last step</strong>    in Step List page (See <a href="#Fig_2DBTL1_5_Step_selection_page_popup_window"><span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>5.</a>) and Select workpiece in Object selection window. Now the loaded workpiece shape  from
+    the database should be like as shown in <a href="#Fig_2DBTL1_6_Loaded_Workpiece_object_data_from_Database"><span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>6.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Top die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_5_Step_selection_page_popup_window"></a><img height="389" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step selection page popup window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_6_Loaded_Workpiece_object_data_from_Database"></a><img height="386" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Loaded Workpiece object data from Database</p>
+  <h2><a id="1_6_Defining_Top_die_object_data"></a>Defining Top die object data</h2>
+  <p>Change the Object name to &quot;<strong>Trim Geo</strong>&quot;, Keep the Top die default temperature as <strong>68</strong>° F and confirm the object type selected as <strong>rigid</strong> and Primary die. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Top die geometry page.</p>
+  <h3><a id="1_6_1_Create_Top_Die_geometry_from_primitive"></a>Create Top Die geometry from primitive</h3>
+  <p>Click on the <img src="../../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> button to create a geometry within DEFORM. The Trim Geo dia is 5.5”, and Height of 3&quot;  with Y: -1&quot;, so you will define a width of half the diameter.
+    Define <strong>Radius </strong>as <strong>2.75</strong>&quot; and <strong>Height </strong>(H) as <strong>3</strong>&quot; (See <a href="#Fig_2DBTL1_7_Geometry_Primitive_window"><span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>7.</a>).
+    Click on <img height="21" src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg" style="cursor: nesw-resize;" width="73"/> button to close the Geometry Primitive dialog. Select <img src="../../../../assets/icons/pre_icons/mo_object_positioning_icon.jpg"/>, using &quot;<strong>Offset</strong>&quot; positioning move the Top Die object down in -<strong>Y</strong> direction by <strong>-1</strong>” as shown in<a href="#Fig_2DBTL1_8_Positioning_the_Workpiece_using_Object_Postioning_option">  <span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>8.</a>    and observe the geometry in graphics window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_7_Geometry_Primitive_window"></a><img height="388" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0007.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry Primitive window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_8_Positioning_the_Workpiece_using_Object_Postioning_option"></a><img height="388" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Positioning the Workpiece using Object Postioning option</p>
+  <h2><a id="1_7_Performing_Boolean_operation"></a>Performing Boolean operation</h2>
+  <p>Now Click on <img src="../../../../assets/icons/pre_icons/mo_show_multi_obj_icon.jpg"/> mode, select Workpiece object from Operation tree and click on Boolean (<img height="21" src="../../../../assets/icons/pre_icons/mo_boolean_icon.jpg" width="24"/>) icon on Top line Menu (See <a href="#Fig_3DBTL1_9_Opening_Boolean_wizard_by_clicking_on_Boolean_icon"><span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>9.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DBTL1_9_Opening_Boolean_wizard_by_clicking_on_Boolean_icon" height="0" width="0"></a><img height="386" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Opening Boolean wizard by clicking on Boolean icon</p>
+  <p> </p>
+  <p>In Boolean wizard, select <strong>Trim </strong><strong>Geo </strong>from Object to be subtracted list and click on <img src="../../../../assets/icons/pre_icons/mo_apply_button.jpg"/> button. After boolean, the workpiece will be as shown in <a href="#Fig_2DBTL1_10_Workpiece_after_boolean_operation"><span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>10.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_10_Workpiece_after_boolean_operation" height="0" width="0"></a><img height="385" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece after boolean operation  </p>
+  <p> </p>
+  <p>Now we will setup Flash trimming operation. Go to <strong>Workpiece </strong><strong>Mesh </strong>page.</p>
+  <h2><a id="1_8_Workpiece_Mesh_page"></a>Workpiece Mesh page</h2>
+  <p>Define <strong>Target number of Elements</strong> as <strong>5000 </strong>and no need to regenerate mesh. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.</p>
+  <h3 class="h3_1_8_"><a id="1_8_1_Defining_Fracture_data_in_Material"></a>Defining Fracture data in Material</h3>
+  <p>Click on <img height="23" src="../../../../assets/icons/pre_icons/mo_edit_material_button.jpg" width="73"/> button to define Fracture data, Click on <strong>Miscellaneous</strong> tab, select <strong>Normalized C&amp;L Fracture</strong> model click
+    on <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> button and define <strong>Critical </strong><strong>value </strong>as <strong>1</strong> (See <a href="#Fig_2DBTL1_11_Workpiece_material_Fracture_model_window"><span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>11.</a>)
+    Now Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> and close the Material Edit window. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Properties page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_11_Workpiece_material_Fracture_model_window" height="0" width="0"></a><img height="320" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0010.jpg" width="371"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece material Fracture model window</p>
+  <p> </p>
+  <h3 class="h3_1_8_"><a id="1_8_2_Assigning_Workpiece_Fracture_properties"></a>Assigning Workpiece Fracture properties</h3>
+  <p>Click on <strong>Fracture </strong>tab and select &quot;<strong>Fracture </strong><strong>element </strong><strong>deletion</strong>&quot; from pull down menu and define <strong>Fracture </strong><strong>Elements </strong>value as <strong>2</strong>. Click
+    <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Top die page.</p>
+  <h2><a id="1_9_Defining_Top_die_object_data_for_Flash_trimming_operation"></a>Defining Top die object data for Flash trimming operation</h2>
+  <p>Change the <strong>Object </strong><strong>name</strong> to &quot;<strong>trim punch</strong>&quot;, Keep the default <strong>temperature </strong>as <strong>68</strong>° F and confirm the object type selected as <strong>rigid </strong>and <strong>Primary</strong>    <strong>die</strong>. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Punch geometry page.</p>
+  <h3 class="h3_1_9_"><a id="1_9_1_Import_the_trim_punch_geometry"></a>Import the trim punch geometry</h3>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and <img src="../../../../assets/icons/pre_icons/mo_import_button.jpg"/> open (import) the file “<strong>TrimPunch</strong><strong>.</strong><strong>IGS</strong>”
+    by browsing the geometry file path located in DEFORM installation folder  \<strong>Tutorials</strong><strong> </strong>directory. Check the geometry using <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> option to make sure the
+    geometry is OK. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Punch movement page.</p>
+  <h3 class="h3_1_9_"><a id="1_9_2_Assigning_movement_controls_to_trim_punch"></a>Assigning movement controls to trim punch</h3>
+  <p>The default mode is constant <strong>speed</strong>. Input a value of <strong>3</strong> in/sec for the Constant value and confirm that the Direction is <strong>-Y</strong>. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until
+    Bottom die page.  </p>
+  <h2><a id="1_10_Defining_Bottom_die_object_data"></a>Defining Bottom die object data</h2>
+  <p>Change the Object name to &quot;<strong>trim die</strong>&quot;, Keep the <strong>default </strong><strong>temperature </strong>as <strong>68</strong>° F and confirm that the object type selected is <strong>rigid</strong>. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to trim die geometry page.</p>
+  <h3 class="h3_1_10_"><a id="1_10_1_Import_the_trim_die_geometry"></a>Import the trim die geometry</h3>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and <img src="../../../../assets/icons/pre_icons/mo_open_button.jpg"/> open (import) the file “<strong>TrimDie</strong><strong>.</strong><strong>IGS</strong>”
+    by browsing the geometry file path located in DEFORM installation folder  \<strong>Tutorials</strong> directory. Check the geometry using <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> option to make sure the geometry is OK. Click
+    <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Object 4page.</p>
+  <h2><a id="1_11_Defining_Object_4_object_data"></a>Defining Object 4 object data</h2>
+  <p>Change the Object name to &quot;<strong>trim flash holder</strong>&quot;, Keep the default temperature as <strong>68</strong>°F and confirm the object type selected is <strong>rigid</strong>. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to geometry page.</p>
+  <h3 class="h3_1_11_"><a id="1_11_1_Import_the_trim_flash_holder_geometry"></a>Import the trim flash holder geometry</h3>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and <img src="../../../../assets/icons/pre_icons/mo_open_button.jpg"/> open (import) the file “<strong>TrimFlashHolder</strong><strong>.</strong><strong>IGS</strong>”
+    by browsing the geometry file path located in DEFORM installation folder \<strong>Tutorials</strong> directory. Check the geometry using <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> option to make sure the geometry is OK. Click
+    <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until  Movement page.</p>
+  <h3 class="h3_1_11_"><a id="1_11_2_Assigning_movement_controls_to_trim_flash_holder"></a>Assigning movement controls to trim flash holder</h3>
+  <p>Select <strong>Sliding </strong><strong>die </strong>type movement radio button. Input a value of <strong>1</strong> klb/in as <strong>Constant</strong> <strong>Stiffness</strong>, <strong>0.1klb </strong>as <strong>Preload</strong>, <strong>3</strong>&quot;
+    as <strong>Max. disp,</strong> select &quot;<strong>trim punch</strong>&quot; object in <strong>Mounted </strong><strong>on </strong><strong>object</strong> list and <strong>confirm </strong>that the <strong>Direction </strong>is <strong>+Y</strong>    (See <a href="#Fig_2DBTL1_12_Trim_Flash_holder_Movement_page"><span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>12</a>.). Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Positioning page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_12_Trim_Flash_holder_Movement_page"></a><img height="320" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0011.jpg" width="306"/></p>
+  <p> </p>
+  <p class="Fig_numb">Trim Flash holder Movement page</p>
+  <h2><a id="1_12_Positioning_object"></a>Positioning object</h2>
+  <p>Using <strong>Interference </strong><strong>method</strong>, position the <strong>Workpiece </strong>on Trim die in <strong>-Y </strong>direction, then position the trim flash holder on Workpiece  in -Y direction and  trim punch on Workpiece  in -Y
+    direction. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Contact page.</p>
+  <h2><a id="1_13_Define_Inter-object_relations"></a>Define Inter-object relations</h2>
+  <p>Assign the default inter-object relationships using <img height="21" src="../../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg" width="110"/> button. Click on the <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> button for one of the relationships. Select Shear type friction radio button, use the <strong>Constant </strong>radio button and define<strong> 1</strong> value. Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to exit the
+    menu. Click  <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> to apply the friction value to the three other relationships. Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to
+    Step controls page.</p>
+  <h2><a id="1_14_Assign_Step_controls"></a>Assign Step controls</h2>
+  <p>Define <strong>Number of steps</strong> as <strong>100</strong>, <strong>Step increment</strong> as <strong>10 </strong>and define constant <strong>die displacement</strong> as <strong>0.005</strong> in/step as shown in <a href="#Fig2DBTL1_13_Running_the_simulation_from_MO_simulation_mode"><span data-keyref="Applications-2D_Boolean_Trimming_Lab1">Fig. 2DBTL1.</span>13.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DBTL1_12_Step_controls_page"></a><img height="320" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0012.jpg" width="371"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step controls page</p>
+  <h2><a id="1_15_Data_checking_and_database_generation"></a>Data checking and database generation</h2>
+  <p>Click on the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button, the data checking system will confirm that all defined data is appropriate for running a simulation.</p>
+  <p>Red marks indicate missing or incorrect data that will prevent a simulation from running. It is necessary to correct these errors before the database can be generated.</p>
+  <p> </p>
+  <p>Yellow marks indicate data which may be suspect and should be reviewed. These should be investigated carefully, as they might result in system instability or erroneous (incorrect) results.</p>
+  <p> </p>
+  <p>Review the data checking information. If there are no yellow or red marks, click the  <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button.</p>
+  <p>You should look for the words: <strong>Database has been generated</strong>. When you see this, it means that your inputs have been saved to the database and you are now ready to run the simulation.</p>
+  <p>Click on the MO <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h2><a id="1_16_Run_and_monitor_a_simulation"></a>Run and monitor a simulation</h2>
+  <p>Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” (from
+    step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p>Watching the simulation graphics provides an initial idea of what to expect when opening the post processor. Also monitor simulation from Simulation and log messages. The message file and log file will indicate that the simulation has been completed
+    on the last line, confirming that click on <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> mode button to review results.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig2DBTL1_13_Running_the_simulation_from_MO_simulation_mode"></a><img height="390" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Running the simulation from MO simulation mode</p>
+  <p> </p>
+  <h2><a id="1_17_Review_Results"></a>Review Results</h2>
+  <p>Play through the Steps and see the Damage distribution by plotting the Damage State variable.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="388" src="../../../../assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Damage distribution at last step</p>
+  <p> </p>
+
+</body></html>

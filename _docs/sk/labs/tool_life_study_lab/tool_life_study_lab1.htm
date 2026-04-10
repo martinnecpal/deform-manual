@@ -1,0 +1,329 @@
+---
+lang: sk
+title: "Tool Life Study Lab1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.25.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Tool Life Study Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Tool Life Study Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/tool_life_study_lab/tool_life_study_lab1.css"/>
+<meta name="brsprev" value="Documentation_content/Labs/Tool_life_study_lab/Tool_life_study_Lab_Main_pg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Tool Life Study Lab1">
+        <span>Tool Life Study Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Tool Life Study Lab1</h1>
+  <p><a href="#1_1_Introduction">1.1. Introduction</a></p>
+  <p><a href="#1_2_Creating_a_New_problem">1.2. Creating a New problem</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_1_Adding_Tool_life_study">1.2.1. Adding Tool life study</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_2_Objects_definition">1.2.2. Objects definition</a></p>
+  <p style="margin-left: 40px"><a href="#1_2_2_1_Top_Die">1.2.2.1. Top Die</a></p>
+  <p style="margin-left: 40px"><a href="#1_2_2_2_Bottom_Die">1.2.2.2. Bottom Die</a></p>
+  <p style="margin-left: 20px"><a href="tool_life_study_lab1.htm#1_2_3_SS_Temperature/Wear">1.2.3. SS Temperature/Wear</a></p>
+  <p style="margin-left: 40px"><a href="#1_2_3_1_Data_Extraction">1.2.3.1. Data Extraction</a></p>
+  <p style="margin-left: 40px"><a href="#1_2_3_2_Curve_fitting">1.2.3.2. Curve fitting</a></p>
+  <p style="margin-left: 40px"><a href="#1_2_3_3_Simulation_Controls">1.2.3.3. Simulation Controls</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_4_Fatigue">1.2.4. Fatigue</a></p>
+  <p style="margin-left: 40px"><a href="#1_2_4_1_Cycle_selection">1.2.4.1. Cycle selection</a></p>
+  <p style="margin-left: 40px"><a href="#1_2_4_2_Simulation_controls">1.2.4.2. Simulation controls</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_5_Generate_Database">1.2.5. Generate Database</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_6_Running_simulation">1.2.6. Running simulation</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_7_Post_Processing">1.2.7. Post Processing</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_7_1_Tool_Life_Post" style="margin-left: 20px">1.2.7.1 Tool Life Post</a></p>
+  <p> </p>
+  <h2><a id="1_1_Introduction"></a>Introduction</h2>
+  <p>Tool life impacts manufacturing cost. It is determined by many factors such as tool temperature, tool wear, tool fatigue and so on. In the Tool Life Module, we perform steady-state temperature, tool wear prediction and multi-step die stress calculation
+    in the preprocessor which will be used for fatigue analysis in the postprocessor.</p>
+  <p> </p>
+  <p>In this lab, we will be copying already simulated 2D Spike project that has a forming  operation simulated over 5 cycles with tool wear calculation for dies.</p>
+  <p> </p>
+  <h2><a id="1_2_Creating_a_New_problem"></a>Creating a New problem</h2>
+  <p>On a Windows machine, go to the <img src="../../../assets/icons/pre_icons/windows_start.jpg"/> button, select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File <img height="12" src="../../../assets/icons/pre_icons/arrow_front.jpg" width="29"/>  </strong><strong>New Problem</strong> or by clicking the New Problem  <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_TLSL1_1_Problem_type_selection_window"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>1.</a> Select &quot;<strong> Integrated Manufacturing Process</strong>&quot;
+    radio button and <strong>Unit </strong>system as &quot;<strong>SI</strong>&quot; using radio button. Define Problem Name as &quot;<strong>2D_Tool_Life_Study</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not
+    turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using
+    the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_1_Problem_type_selection_window"></a><img height="529" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem type selection window</p>
+  <p><br/> Multiple operation wizard will open with the New Project dialog as shown in <a href="#Fig_TLSL1_2_MO_wizard_New_Project_with_Copy_existing_project_option"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>2.</a>, at this point user
+    will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘<strong>2D_Tool_Life_Study</strong>’ as the project name. We will import already simulated
+    2D project “2D_Tool_Life_Study” from 2D/LABS/ installation folder using “Copy existing Project” option. </p>
+  <p> </p>
+  <p>Select “<strong>Copy existing project</strong>” radio button in New Project dialog, then click on Source location and browse the “<strong>2D_Tool_Life_Study.moproj</strong>” file from 2D\LABS\2D_Tool_Life_Study installation folder using <img src="../../../assets/icons/pre_icons/mo_browse_button.jpg"/> button. Turn on “<strong>Copy database file</strong>” check box as shown in <a href="#Fig_TLSL1_2_MO_wizard_New_Project_with_Copy_existing_project_option"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>2.</a> so that database file
+    is copied along with the project file. Click on <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> to continue to open the operation. The loaded MO project is as shown in <a href="#Fig_TLSL1_3_Copied_2D_Tool_life_study_project_Loaded_in_MO_wizard"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>3.</a></p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_2_MO_wizard_New_Project_with_Copy_existing_project_option"></a><img height="425" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> MO wizard New Project with Copy existing project option</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_3_Copied_2D_Tool_life_study_project_Loaded_in_MO_wizard"></a><img height="427" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0003.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Copied 2D_Tool_Life_Study project Loaded in MO wizard</p>
+  <p> </p>
+  <h3><a id="1_2_1_Adding_Tool_life_study"></a>Adding Tool life study</h3>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> (Add new study) button and select “<strong>Add Tool Life Study</strong>” option as shown in <a href="#Fig_TLSL1_4_Adding_Tool_life_study"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>4.</a>    Added Tool life study is as shown in <a href="#Fig_TLSL1_5_Added_Tool_life_study_operation_in_MO"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>5.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_4_Adding_Tool_life_study"></a><img height="426" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Tool life study</p>
+  <p style="text-align: center"><a id="Fig_TLSL1_5_Added_Tool_life_study_operation_in_MO"></a><img height="424" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added Tool life study operation in MO.</p>
+  <p> </p>
+  <p>The die objects are loaded from Forming operation. There are three options in Task Item,</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Steady state temperature, </p>
+    </li>
+    <li>
+      <p>Tool Wear and </p>
+    </li>
+    <li>
+      <p>Fatigue</p>
+    </li>
+  </ul>
+  <p><br/> The first two options, Steady state temperature and Tool Wear, will predict the steady-state temperature and tool wear based on the history data from Forming operation. The Fatigue option will activate multiple step die stress study and use the
+    stress data to perform Fatigue analysis in the post processor. In this example, we will select all the three options. Notice that as we update the task item options, the operation tree will be also updated, as shown in <a href="#Fig_TLSL1_6_Task_Item_Update"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>6.</a> </p>
+  <p><br/> In Task Item, make sure Steady state temperature, Tool Wear and Fatigue check boxes are in checked status and then click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Object page.</p>
+  <p class="Note_text"><br/>
+    <strong>Note</strong>:  <br/> •    The dies which are studied for Steady-State temperature and Tool wear must be meshed in nominal setup, for Fatigue-only task mesh in nominal setup is not required.</p>
+  <p class="Note_text">•    “Define model to calculate tool wear” checkbox must be turned on in inter-object relations of nominal setup for dies whose tool wear will be studied.</p>
+  <p class="Note_text">•    Tool life study can be executed only for one forming operation and that forming operation must be in cycle in nominal setup to execute Tool life study.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_6_Task_Item_Update"></a><img height="288" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Task Item Update</p>
+  <h3><a id="1_2_2_Objects_definition"></a>Objects definition</h3>
+  <p>We will use all dies object from “Forming” operation for tool life study in this lab, so click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Top Die page.</p>
+  <h4><a id="1_2_2_1_Top_Die"></a>Top Die</h4>
+  <p><a href="#Fig_TLSL1_7_Top_Die_object_page"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>7.</a> shows the object page of top die. For each object, we also have three options – steady state temperature, tool wear and fatigue. This allows
+    us to choose if a specific analysis is needed/excluded for the current object. In this lab, we will keep the default selection and perform all the three tasks for each die object. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until BCC page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_7_Top_Die_object_page"></a><img height="575" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0007.jpg" width="345"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top Die object page</p>
+  <h5>Top Die Boundary Conditions</h5>
+  <p>Apply Velocity boundary condition (Vy=0) for Top die on Top surface as shown in <a href="#Fig_TLSL1_8_Assigned_Velocity_(Vy_0)_boundary_condition_for_Top_die"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>8.</a> Then click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Bottom Die page.</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_8_Assigned_Velocity_(Vy_0)_boundary_condition_for_Top_die"></a><img height="427" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Velocity (Vy=0) boundary condition for Top die</p>
+  <h4><a id="1_2_2_2_Bottom_Die"></a>Bottom Die</h4>
+  <p>In this lab, we will keep the default selection and perform all the three tasks for each die object. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until BCC page.</p>
+  <h5 class="h5_1_2_2_2_">Bottom Die Boundary conditions</h5>
+  <p>Apply Vx=0 velocity boundary condition on the symmetry surface and Vy=0 velocity boundary condition for Bottom die on Bottom surface as shown in <a href="#Fig_TLSL1_9_Assigned_Velocity_boundary_condition_for_Bottom_die"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>9.</a>    Then click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until SS Temperature/Wear page.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_TLSL1_9_Assigned_Velocity_boundary_condition_for_Bottom_die"></a><img height="425" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Velocity boundary condition for Bottom die</p>
+  <p> </p>
+  <h3><a id="1_2_3_SS_Temperature/Wear"></a>SS Temperature/Wear</h3>
+  <p>Now we are going to setup the steady state temperature and tool wear simulation. The idea is to extract heat flux/wear from the contact area with workpiece and fit the data using exponential functions. And then, impose the fitted data on the die objects
+    and run heat transfer simulation for a sufficiently longer period until the convergence of thermal state.</p>
+  <h4 class="h4_1_2_3_"><a id="1_2_3_1_Data_Extraction"></a>Data Extraction</h4>
+  <p>Click on <strong>Data Extraction</strong> from Operation tree, click on <img src="../../../assets/icons/pre_icons/mo_extract_data_button.jpg"/> button to start extracting heat flux/wear from the contact area with workpiece. The progress bar in Data
+    Extraction page shows the progress of extracting heat flux and wear from the contact area of the die objects. Once the extraction and fitting are complete, we can see the fitted coefficients in the curve fitting page. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Curve Fitting page.</p>
+  <p> </p>
+  <p style="text-align: center"> <a id="Fig_TSL1_10_Data_Extraction_page"></a><img height="421" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Data Extraction page</p>
+  <h4 class="h4_1_2_3_"><a id="1_2_3_2_Curve_fitting"></a>Curve fitting</h4>
+  <p>We can check the contacted area and the fitted curve by clicking on the <img src="../../../assets/icons/pre_icons/mo_visible.jpg"/> icon as shown in <a href="#Fig_TLSL1_11_Curve_Fitting_page"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>11.</a>    Meanwhile, Intermediate and final result files will be generated and saved in Operations/Task00004 directory, which includes two subfolders – HeatFlux and ToolWear storing the results for heat flux extraction and tool wear extraction respectively,
+    and OutputForPredict.KEY which is the object keyword file containing the fitted coefficients.  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_11_Curve_Fitting_page"></a><img height="425" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Curve Fitting page</p>
+  <h4 class="h4_1_2_3_"><a id="1_2_3_3_Simulation_Controls"></a>Simulation Controls</h4>
+  <p>We set up the simulation control parameters for steady state temperature prediction, which involves heat transfer simulation on the die objects with heat flux BCC using the fitted coefficients. As shown in <a href="#Fig_TLSL1_12_Temp_Simulation_controls_page"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>12.</a> we
+    only need to define three parameters - # of cycles to predict (total time will be calculated automatically based on process time of the forming operation which is in cycle), either time step or total steps and step increment. The default # of cycles
+    to predict is set to be 10 times of the number of cycles in the forming operation, which is 50 in this case. In this lab, we will use <strong># of cycles</strong> to predict as <strong>50 </strong>with <strong>time </strong><strong>step </strong>as
+    <strong>0.0100093</strong> sec/step and <strong>step increment</strong> as <strong>1 </strong>as shown in <a href="#Fig_TLSL1_12_Temp_Simulation_controls_page"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>12.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_12_Temp_Simulation_controls_page"></a><img src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0012.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temp Simulation controls page</p>
+  <p> </p>
+  <h3><a id="1_2_4_Fatigue"></a>Fatigue</h3>
+  <p>The final task in the preprocessor is Fatigue, which is essentially setting up die stress calculation at multiple steps from cycle operation. The first step is to select cycles from the forming operation to perform die stress calculation (see <a href="#Fig_TLSL1_13_Cycle_selection_page"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>13.</a>).
+    We can either select the last cycle from the database, all cycles or select cycles incrementally. We will also need to set up simulation control parameters for die stress calculation (see <a href="#Fig_TLSL1_14_Fatigue-_Simulation_controls_page"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>14.</a>).
+     </p>
+  <h4 class="h4_1_2_4_"><a id="1_2_4_1_Cycle_selection"></a>Cycle selection</h4>
+  <p>Select “<strong>Cycle</strong><strong> </strong><strong>Selection</strong>” under Fatigue from Operation tree, make sure by default “<strong>Last</strong><strong> cycle</strong>” is selected as shown in <a href="#Fig_TLSL1_13_Cycle_selection_page"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>13.</a>    If not selected, then select “<strong>Last</strong><strong> cycle</strong>” radio button. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Simulation controls page. </p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_TLSL1_13_Cycle_selection_page"></a><img src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0013.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Cycle selection page</p>
+  <p> </p>
+  <h4 class="h4_1_2_4_"><a id="1_2_4_2_Simulation_controls"></a>Simulation controls</h4>
+  <p>In Simulation controls, we will use default <strong>Number of simulation steps</strong> as <strong>1</strong>, <strong>Step increment to save</strong> as <strong>1</strong> and <strong>Time per step</strong> as <strong>1e-06</strong> as shown in
+    <a href="#Fig_TLSL1_14_Fatigue-_Simulation_controls_page"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>14</a>. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Generate DB page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_14_Fatigue-_Simulation_controls_page"></a><img src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0014.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fatigue- Simulation controls page</p>
+  <p> </p>
+  <h3><a id="1_2_5_Generate_Database"></a>Generate Database</h3>
+  <p>As we click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Generate DB, we will get Data Extraction popup while loading generate DB page as shown in <a href="#Fig_TLSL1_15_Data_Extraction_popup"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>15.</a>    Select <img src="../../../assets/icons/pre_icons/mo_no_button.jpg"/> in the popup since we had already done the data extraction.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_15_Data_Extraction_popup"></a><img src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0015.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Data Extraction popup</p>
+  <p> </p>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> action label to check if there are any errors or warnings that would stop DB generation. Generate the database if there are no errors or warnings by clicking <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> action label (see <a href="#Fig_TLSL1_16_Generate_Database_window"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>16.</a>). </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_16_Generate_Database_window"></a><img height="427" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate Database window</p>
+  <p> </p>
+  <h3><a id="1_2_6_Running_simulation"></a>Running simulation</h3>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg" width="146"/>  button above the operation tree. Click on the <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_TLSL1_17_Run_Options_Popup"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>17.</a> Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>”
+    (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_17_Run_Options_Popup"></a><img src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0017.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Run Options Popup</p>
+  <p> </p>
+  <p>The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. If <img src="../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.</p>
+  <p style="text-align: justify"><br/> The Message file provides information about which simulation step the simulation is currently on and information regarding how well the simulation is running as shown in <a href="#Fig_TLSL1_18_Simulation_mode"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>18.</a></p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_TLSL1_18_Simulation_mode"></a><img height="425" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation mode</p>
+  <p> </p>
+  <h3><a id="1_2_7_Post_Processing"></a>Post Processing</h3>
+  <p>After the simulation is completed, click on <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab to visit MO post processor. The simulated results can be seen in Post ( <a href="#Fig_TLSL19_MO_Post_–_Fatigue_-Step52"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>19.</a>).
+    It contains two parts, one is the temperature history from running heat transfer with imposed heat flux BCC and the other is the die stress. </p>
+  <p><br/> The steady state heat transfer analysis and tool wear analysis steps are grouped under simulation name SS Temp. Here the simulation name <strong>Fatigue-Step52</strong> means the die stress result from step 52 in the forming operation. There is
+    a highlighted toolbox used for fatigue analysis based on the calculated die stress data. <a href="#Fig_TLSL19_MO_Post_–_Fatigue_-Step52"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>19.</a> summarizes the simulation results of temperature
+    and die stresses from SS Temperature prediction and multi-step die stress study. We take the last step from heat transfer simulation as the steady-state temperature and impose it on the die objects while running die stress calculation. Note that if
+    we select fatigue as the only task, we will impose the temperature profile from the corresponding steps from the forming operation as initial temperature.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL19_MO_Post_–_Fatigue_-Step52"></a><img height="425" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO Post – Fatigue -Step52 </p>
+  <p> </p>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_all_button.jpg"/> button in Step browser, then Play animation from first step with Temperature State Variable to observe the die temperature as they approach steady state. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_20_Simulation_Results"></a><img height="307" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0020.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation Results </p>
+  <p> </p>
+  <h4 class="h4_1_2_7_"><a id="1_2_7_1_Tool_Life_Post"></a>Tool Life Post</h4>
+  <p>Tool Life Post is used for analysis of steady-state temperature and tool wear results, as well as fatigue life prediction of dies. From MO post, we can access Tool life post by clicking on <img src="../../../assets/icons/post_icons/mo_tool_life_post_icon.jpg"/> button as shown in <a href="#Fig_TLSL19_MO_Post_–_Fatigue_-Step52"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>19.</a> Tool life post is opened as shown in <a href="#Fig_TLSL1_21_Tool_life_results_for_SS_Temp_Wear"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>21</a></p>
+  <p><br/>
+    <strong>SS Temp&amp; Wear</strong>: By selecting this option, we can plot the results for SS Temp &amp; Wear operation (See <a href="#Fig_TLSL1_21_Tool_life_results_for_SS_Temp_Wear"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>21.</a>).
+    Under this option, we can plot Tool temperature, Tool wear depth, tool wear rate and Worn geometry output for selected Cycle no. </p>
+  <p><br/> We can select the different cycle number under <strong>Cycle section</strong> by dragging sliding bar or by entering the respective cycle number in input field. Once you enter the cycle number, user can select one of tool wear results to view
+    the results in display, <a href="#Fig_TLSL1_22_Tool_wear_rate_result_at_Cycle_40"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>22</a> shows Tool Wear depth at Cycle 40. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_21_Tool_life_results_for_SS_Temp_Wear"></a><img height="425" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0021.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tool life results for SS Temp &amp; Wear</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_22_Tool_wear_rate_result_at_Cycle_40"></a><img height="424" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0022.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tool wear rate result at Cycle 40</p>
+  <p><br/>
+    <strong>Fatigue</strong>: By selecting this option, we can plot the results for Fatigue operation (See <a href="#Fig_TLSL1_23_Tool_Life_post_–_Fatigue_output"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>23.</a>). Initially there
+    will not be any fatigue model in the list. We can add fatigue model by clicking the <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button. The model named “<strong>AISI</strong><strong>-1025:</strong><strong>SNSD_CONST</strong>” is
+    added, where AISI-1025 stands for the material name and SNSD_CONST stands for the stress-based standard model. We can observe that a Stress-based standard model is selected as Model type. We can define the model parameters by clicking the <img src="../../../assets/icons/pre_icons/mo_define_button.jpg"/> button and a function editor will pop up. The parameters we defined for this model can be found in <a href="#Fig_TLSL1_24_Fatigue_model_definition"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>24.</a> The other way to add fatigue
+    model is by loading model files from a user directory or Fatigue library. Note that we need to be in Fatigue page to enable the load buttons (see <a href="#Fig_TLSL1_25_Loading_model_file"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span>25.</a>).
+    The model file has the same format as keyword file, where the keyword is followed by its value. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_23_Tool_Life_post_–_Fatigue_output"></a><img height="425" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0023.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tool Life post – Fatigue output        </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_24_Fatigue_model_definition"></a><img height="418" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0024.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fatigue model definition</p>
+  <p> </p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_TLSL1_25_Loading_model_file"></a><img src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0025.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Loading model file</p>
+  <p> </p>
+  <p>Once the model is defined, we can see the fatigue life prediction plot by selecting either Absolute Max principal or Signed Von Mises or Signed Shear as the combination method with model and clicking the <img src="../../../assets/icons/post_icons/mo_plot_button.jpg"/> button. The result is shown in <a href="#Fig_TLSL1_26_Fatigue_Life_Plot"><span data-keyref="Labs_Tool_Life_Study_Lab1">Fig. TLSL1.</span> 26.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_TLSL1_26_Fatigue_Life_Plot"></a><img height="423" src="../../../assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0026.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fatigue Life Plot</p>
+
+</body></html>

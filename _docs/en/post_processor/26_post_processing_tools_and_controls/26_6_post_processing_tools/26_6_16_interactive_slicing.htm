@@ -1,0 +1,157 @@
+---
+lang: en
+title: "26.6.16. Interactive slicing"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.2.1.0_16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>26.6.16. Interactive slicing</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>26.6.16. Interactive slicing</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing.css"/>
+<meta name="brsnext" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_6_Post_Processing_tools/26_6_17_Data_Extraction.htm"/><meta name="brsprev" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_6_Post_Processing_tools/26_6_15_Mirror_Symmetry.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="26.6.16. Interactive slicing">
+        <span>26.6.16. Interactive slicing</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>26.6.16. Slicing</h1>
+  <p>[3D]:The slicing dialog allows the user to cut a section into the workpiece. When the section is made, shaded contours can be seen in the cut area. The dialog appears as shown in <a href="#Fig_26_6_16_1_3D_Slicing_window"><span data-keyref="Chapter_26_6_16_Interactive_slicing">Fig. 26.6.16.</span>1.</a> The
+    cut section can be made by clicking on a line of the bounding box of the object. The default mode for a slicing plane is to define it by a point on which the plane lies and a vector that is normal (or perpendicular) to the slicing plane. The normal
+    direction indicates the side of the plane that will be cut away. Once a plane has been selected, the location of point can be changed by selecting the point value that corresponds to the normal direction of the plane and dragging the slider bar.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_16_1_3D_Slicing_window"></a><img height="423" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/image001.jpg" width="750"/></p>
+  <p>  </p>
+  <p class="Fig_numb">3D Slicing window</p>
+  <p> </p>
+  <p><strong>Modes</strong>: point +Normal: Input a point and normal to determine a slicing plane. (See <a href="#Fig_26_6_16_2_Slicing_example_using_Point_+_Normal_method_with_single_plane"><span data-keyref="Chapter_26_6_16_Interactive_slicing">Fig. 26.6.16.</span>2.</a> and
+    <a href="#Fig_26_6_16_3_Slicing_example_using_Point_+_Normal_method_with_two_planes"><span data-keyref="Chapter_26_6_16_Interactive_slicing">Fig. 26.6.16.</span>3.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_16_2_Slicing_example_using_Point_+_Normal_method_with_single_plane"></a><img height="252" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/image002.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Slicing example using Point + Normal method with single plane</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_16_3_Slicing_example_using_Point_+_Normal_method_with_two_planes"></a><img height="374" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/image003.jpg" width="749"/></p>
+  <p>  </p>
+  <p class="Fig_numb">Slicing example using Point + Normal method with two planes</p>
+  <p> </p>
+  <p><strong>3 points</strong>: Input three points to determine the slicing plane. (See <a href="#Fig_26_6_16_4_Slicing_example_using_3_points_method_for_different_values"><span data-keyref="Chapter_26_6_16_Interactive_slicing">Fig. 26.6.16.</span>4.</a>)</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_16_4_Slicing_example_using_3_points_method_for_different_values"></a><img height="661" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/image004.jpg" width="750"/></p>
+  <p class="Fig_numb">Slicing example using 3 points method for different values</p>
+  <p> </p>
+  <p><strong>Point+Axis+Angle</strong>: Input a point, Axis and Angle  to determine a slicing plane. (See <a href="#Fig_26_6_16_5_Slicing_example_using__point+axis+Angle_method"><span data-keyref="Chapter_26_6_16_Interactive_slicing">Fig. 26.6.16.</span>5.</a>)</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_16_5_Slicing_example_using__point+axis+Angle_method"></a><img height="375" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/image008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">  Slicing example using  point+axis+Angle method</p>
+  <p> </p>
+  <p><strong></strong></p>
+  <p><strong>Add <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> </strong>: using this option user can add a slicing plane.</p>
+  <p><strong>Delete <img src="../../../../assets/icons/pre_icons/mo_delete_icon2.jpg"/>  </strong>: using this option user can delete defined slicing plane</p>
+  <p><strong>Cutter <img src="../../../../assets/icons/pre_icons/mo_cutter_icon.jpg"/> </strong>: using this option user can slice the object.</p>
+  <p><strong>Preview <img src="../../../../assets/icons/pre_icons/mo_preview_icon.jpg"/> </strong>: using this user can show/hide the slicing plane.</p>
+  <p><strong>SV max plot</strong> <img src="../../../../assets/icons/pre_icons/mo_sv_max_point_button.jpg"/> :  to slice through the point which has the maximum value of the state variable.</p>
+  <p><strong>SV min plo</strong>t <img src="../../../../assets/icons/pre_icons/mo_sv_min_point_button.jpg"/>:  to slice through the point which has the minimum value of the state variable.</p>
+  <p><strong>Duplicate </strong><img src="../../../../assets/icons/pre_icons/mo_duplicate_button.jpg"/> : Make a set of slicing planes parallel to the selected plane. (See <a href="#Fig_26_6_16_6_Slicing_plane_duplicate_example_with_3_slicing_planes"><span data-keyref="Chapter_26_6_16_Interactive_slicing">Fig. 26.6.16.</span>6.</a>)</p>
+  <p><strong>Reverse</strong>: Check to reverse the normal of the selected slicing plane</p>
+  <p><strong>Save<img src="../../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/> </strong>: using this option user can Save 2D slice geometry and/or state variable. 2D Geometry can be saved in .IGS, DXF or in .KEY format.</p>
+  <p><strong>Save Slicing planes</strong> <img src="../../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/>: Using this option user can save the Slicing plane data to a file in .dss file format.</p>
+  <p><strong>Load Slicing Planes <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> : </strong>Using this option user can import the saved Slicing plane file.</p>
+  <p> </p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_16_6_Slicing_plane_duplicate_example_with_3_slicing_planes"></a><img height="420" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/image005.jpg" width="750"/></p>
+  <p class="Fig_numb">Slicing plane duplicate example with 3 slicing planes</p>
+  <p> </p>
+  <p><strong>Reverse</strong>: Check to reverse the normal of the selected slicing plane. (See <a href="#Fig_26_6_16_7_Reverse_slicing_plane_example"><span data-keyref="Chapter_26_6_16_Interactive_slicing">Fig. 26.6.16.</span>7</a>.)</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_16_7_Reverse_slicing_plane_example"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/image007.jpg"/></p>
+  <p>  </p>
+  <p class="Fig_numb">Reverse slicing plane example</p>
+  <p> </p>
+  <p><strong>Slicing plane display</strong>:</p>
+  <p><strong>Curve</strong>: In display it shows only the boundary of the object while slicing an object.</p>
+  <p><strong>Plane</strong>: In display it shows only the surface of the object while slicing an object.</p>
+  <p><strong>Curve +Plane</strong>: In display it shows both boundary and surface of the object while slicing an object. (See <a href="#Fig_26_6_16_8_Slicing_plane_display_options_example"><span data-keyref="Chapter_26_6_16_Interactive_slicing">Fig. 26.6.16.</span>8.</a>)</p>
+  <p><strong>Slice All Objects </strong><img src="../../../../assets/icons/pre_icons/mo_slice_all_objects_button.jpg"/> : slice all the shown objects using the selected plane.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_16_8_Slicing_plane_display_options_example"></a><img height="374" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/image008.jpg" width="749"/></p>
+  <p class="Fig_numb">Slicing plane display options example</p>
+  <p> </p>
+  <p><strong>Section Color</strong> : It is sed to turn on and off the color to sliced plane. (See <a href="#Fig_26_6_16_9_Slicing_plane_section_color_display_option"><span data-keyref="Chapter_26_6_16_Interactive_slicing">Fig. 26.6.16.</span>9.</a>)</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_16_9_Slicing_plane_section_color_display_option"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/image009.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Slicing plane section color display option</p>
+  <p> </p>
+
+</body></html>

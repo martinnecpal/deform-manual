@@ -1,0 +1,241 @@
+---
+lang: en
+title: "Appendix X: Meshing an object with multiple material group"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix X: Meshing an object with multiple material group</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix X: Meshing an object with multiple material group</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_x.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_XI__Near_surface_mesh_functions.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_IX_Generating_a_Circular_Geometry_With_a_Hole.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix X: Meshing an object with multiple material group">
+        <span>Appendix X: Meshing an object with multiple material group</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix X:  2D Topology definition and Multiple Material Groups</h1>
+  <p><em>*From QT3 interface</em></p>
+  <p><br/>
+    <a href="#AX_1_2D_Topology_Definition">AX.1. 2D Topology Definition</a></p>
+  <p><a href="#AX_2_User_Interface_for_Topology_Building">AX.2. User Interface for Topology Building</a></p>
+  <p><a href="#AX_3_Summary">AX.3. Summary</a></p>
+  <p><a href="#AX_4_Applications_of_Multiple_Material_Groups">AX.4. Applications of Multiple Material Groups</a></p>
+  <p><a href="#AX_5_Two_examples_from_the_references">AX.5. Two examples from the references</a></p>
+  <p> </p>
+  <p>New topology concepts have been implemented which enable multiple material group definition within a single object. From the geometry point of view this forms a single set of data that can be conveniently defined, with each region (and the associated
+    mesh) having it&#39;s own material assignment. Coating mesh or internal voids can be special cases of this new data set as explained in the following examples. And this topology data can be retained across remesh steps. In summary the following section
+    gives specific details on,</p>
+  <ul class="Disc">
+    <li>
+      <p>Development of 2D topology definition and multiple material groups.</p>
+    </li>
+    <li>
+      <p>Example applications of multiple material groups in 2D.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>One object, one mesh, multiple material groups as shown in <a href="#Fig_AX_1_One_object_with_multiple__materials_group"><span data-keyref="Appendix_X_Meshing_an_object_with_MMG">Fig. AX.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AX_1_One_object_with_multiple__materials_group"></a><img align="" height="282" src="../../assets/images/appendices/appendix_x_meshing_an_object_with_mmg/image001.jpg" width="554"/></p>
+  <p> </p>
+  <p class="Fig_numb">One object with multiple  materials group</p>
+  <p> </p>
+  <h2><a id="AX_1_2D_Topology_Definition"></a>2D Topology Definition</h2>
+  <p>Introduce Vertex, Edge, Loop, Region topology entities to the data structure. (See <a href="#Fig_AX_2_Defining_the_region_topology_entities"><span data-keyref="Appendix_X_Meshing_an_object_with_MMG">Fig. AX.</span>2.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AX_2_Defining_the_region_topology_entities"></a><img src="../../assets/images/appendices/appendix_x_meshing_an_object_with_mmg/image002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining the region topology entities</p>
+  <p> </p>
+  <p>Material can be defined on geometry (topological regions).</p>
+  <p> </p>
+  <p>Basic boundaries represented by Edge 1(open), Edge 2(open), Edge 3(open) and Edge 4 (closed) can be either imported from files (.GEO, .IGES, .DXF) or created interactively.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AX_3_Adding_loops_to_Region"></a><img height="227" src="../../assets/images/appendices/appendix_x_meshing_an_object_with_mmg/image003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding loops to Region</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>(Loop 1, Loop 2, and Loop 3)  can be generated automatically (by default) or interactively. (See <a href="#Fig_AX_3_Adding_loops_to_Region"><span data-keyref="Appendix_X_Meshing_an_object_with_MMG">Fig. AX.</span>3.</a>)</p>
+    </li>
+    <li>
+      <p>(Region 1 and Region 2) can be generated interactively. The region is generated automatically when only one loop exists.</p>
+    </li>
+    <li>
+      <p>As a default, Loops and regions are automatically generated for most common cases when only one region exists. If there are more than two loops,  user needs to define regions interactively.</p>
+    </li>
+  </ul>
+  <h2><a id="AX_2_User_Interface_for_Topology_Building"></a>User Interface for Topology Building</h2>
+  <p style="text-align: center"><a id="Fig_AX_4_Building_Region_and_assigning_Materials"></a><img height="463" src="../../assets/images/appendices/appendix_x_meshing_an_object_with_mmg/image004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Building Region and assigning Materials</p>
+  <p> </p>
+  <p><strong>Topology Building Example–Open Boundary:</strong></p>
+  <p> </p>
+  <p style="text-align: center"><img height="501" src="../../assets/images/appendices/appendix_x_meshing_an_object_with_mmg/image005.jpg" width="750"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Topology Building for open Boundary region and assigning Materials</p>
+  <p> </p>
+  <p><strong>Topology Building Example–Closed Boundary:</strong></p>
+  <p> </p>
+  <p style="text-align: center"><img height="461" src="../../assets/images/appendices/appendix_x_meshing_an_object_with_mmg/image006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Topology Building for closed Boundary region and assigning Materials</p>
+  <p> </p>
+  <p style="text-align: center"><img height="373" src="../../assets/images/appendices/appendix_x_meshing_an_object_with_mmg/image007.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Topology Building with Internal void</p>
+  <p> </p>
+  <p><strong>Handling Multiple Material Groups with Coating:</strong></p>
+  <p> </p>
+  <p style="text-align: center"><img height="477" src="../../assets/images/appendices/appendix_x_meshing_an_object_with_mmg/image008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Handling the multiple material group with Coating</p>
+  <p> </p>
+  <p><strong>Extracting Geometry and Topology from Existing Mesh:</strong></p>
+  <p> </p>
+  <p style="text-align: center"><img height="472" src="../../assets/images/appendices/appendix_x_meshing_an_object_with_mmg/image009.jpg" width="750"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb"> Extracting Geometry and Topology from Existing Mesh.</p>
+  <p> </p>
+  <p><strong>Topology Saving and Loading –Geo and Keyword File:</strong></p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../assets/images/appendices/appendix_x_meshing_an_object_with_mmg/image010.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Saving and Loading the Topology geometry</p>
+  <p> </p>
+  <h2><a id="AX_3_Summary"></a>Summary</h2>
+  <ul class="Disc">
+    <li>
+      <p>New topology definition for 2D geometry.</p>
+    </li>
+    <li>
+      <p>Material defined on geometry (topological regions).</p>
+    </li>
+    <li>
+      <p>Auto loop construction of both manifold and non-manifold geometry.</p>
+    </li>
+    <li>
+      <p>Automatic region construction when only one loop exists or extracting geometry from mesh.</p>
+    </li>
+    <li>
+      <p>Interactive region construction when more than one loop exists (not well defined).</p>
+    </li>
+    <li>
+      <p>Related display/picking, topology editing UI, etc.</p>
+    </li>
+    <li>
+      <p>Topology data saving/loading  (keyword file, GEO file).</p>
+    </li>
+    <li>
+      <p>Multiple material mesh with coating mesh.</p>
+    </li>
+    <li>
+      <p>Geometry/topology extraction from multiple material group mesh.</p>
+    </li>
+    <li>
+      <p>Functionality available for all other 2D and 3D applications - currently available in Regular Pre 2D,  MO2 and Shape Rolling template.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h2><a id="AX_4_Applications_of_Multiple_Material_Groups"></a>Applications of Multiple Material Groups</h2>
+  <ul class="Disc">
+    <li>
+      <p>Rolling and extrusion are commonly used to produce bimetallic products  such as wire or sheet and plate, as well as other simple geometries from shape rolling.</p>
+    </li>
+    <li>
+      <p>Forming of bimetallic material involves non-uniformity caused by different material  properties of bimetal components.</p>
+    </li>
+    <li>
+      <p>Properly designed bimetallic products and optimal process parameters exhibit   an desired mechanical properties without any defects</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h2><a id="AX_5_Two_examples_from_the_references"></a>Two examples from the references</h2>
+  <p><strong><em>Co-extrusion ~ extrusion of bimetallic tubes</em></strong></p>
+  <p style="margin-left: 20px">Wojciech Z. Misiolek (Lehigh University), Vinod K. Sikka(Oak Ridge Natrional Lab.)</p>
+  <p style="margin-left: 20px">“Physical and Numerical Analysis of Extrusion Process for Production of Bimetallic Tubes”</p>
+  <p style="margin-left: 20px">Final Technical Report (2006) available at US. Dept. of Energy, http://www.osti.gov/bridge</p>
+  <p> </p>
+  <p><strong><em>Asymmetric rolling ~ rolling of bimetallic plates</em></strong></p>
+  <p style="margin-left: 20px">D. Rydz et al, “The Prediction of Curvature of Bimetallic Plate Au-Cu during Asymmetrical Cold Rolling”</p>
+  <p style="margin-left: 20px">METALUGIJA 42 (2003) 4, 261-264</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../pre_processor/12_geometry_modelling/12_geometry_modelling.htm">Geometry Data</a></p>
+  <p> </p>
+
+</body></html>

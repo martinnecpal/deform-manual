@@ -1,0 +1,294 @@
+---
+lang: sk
+title: "11. General Object Data Definition"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>11. General Object Data Definition</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>11. General Object Data Definition</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/11_object_general_definition/11_object_general_definition.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/12_Geometry_Modelling/12_geometry_modelling.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="11. General Object Data Definition">
+        <span>11. General Object Data Definition</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>11. General Object Data Definition</h1>
+  <p><a href="#11_1_Objects_list_page">11.1. Objects list page</a></p>
+  <p><a href="#Fig_11_2_Object_list_page">11.2. Object name</a></p>
+  <p><a href="#11_3_Object_initial_conditions">11.3. Object initial conditions</a></p>
+  <p><a href="#11_4_Object_type">11.4. Object type</a></p>
+  <p><a href="#11_4_1_Plastic"><span style="margin-left:40px;">11.4.1. Plastic</span></a></p>
+  <p><a href="#11_4_2_Elastic"><span style="margin-left:40px;">11.4.2. Elastic</span></a></p>
+  <p><a href="#11_4_3_Elasto-plastic"><span style="margin-left:40px;">11.4.3. Elasto-plastic</span></a></p>
+  <p><a href="#11_4_4_Porous"><span style="margin-left:40px;">11.4.4. Porous</span></a></p>
+  <p><a href="#11_4_5_Rigid"><span style="margin-left:40px;">11.4.5. Rigid</span></a></p>
+  <p><a href="#11_4_6_Hyperelastic"><span style="margin-left:40px;">11.4.6. Hyper-Elastic </span></a></p>
+  <p><a href="#11_4_7_User_Defined"><span style="margin-left:40px;">11.4.7. User-Defined</span></a></p>
+  <p><a href="#11_4_8_Environment_Fluid_CFD"><span style="margin-left:40px;">11.4.8. Environment (Fluid(CFD))</span></a></p>
+  <p><a href="#11_4_9_Environment_Air_Electro-magnetic"><span style="margin-left:40px;">11.4.9. Environment (Air(Electro-magnetic))</span></a></p>
+  <p><a href="#11_5_Primary_Die">11.5. Primary Die</a></p>
+  <p><a href="#11_6_Import_object__from_file">11.6. Import object  from file</a></p>
+  <p><a href="#11_7_Import_object_from_library">11.7. Import object from library</a> </p>
+  <p><a href="#11_8_Save_object_to_a_file">11.8. Save object to a file</a> </p>
+  <p><a href="#11_9_Save_object_to_library">11.9. Save object to library</a> </p>
+  <p> </p>
+  <p>The Object Tree in the Pre-processor shows all the currently available objects. (See <a href="#Fig_11_1_Pre-processor_with_the_object_tree_window_with_a_red_box"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>1.</a>) The available
+    objects data can be controlled by selecting specific data page under the object in the Object Tree. Once an object data page is selected, than in object data definition window contains the respective selected data such as the geometry, mesh, Material,
+    boundary conditions, movement, initial conditions, and object specific numerical properties of the object.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="425" src="../../../assets/images/pre-processor/11_object_general_definition/11_image001.jpg" style="cursor: nesw-resize;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig_11_1_Pre-processor_with_the_object_tree_window_with_a_red_box"></a>Pre-processor with the object tree window with a red box</p>
+  <p> </p>
+  <h2><a id="11_1_Objects_list_page"></a>Objects list page</h2>
+  <p style="text-align: center"><a id="Fig_11_2_Object_list_page"></a><img src="../../../assets/images/pre-processor/11_object_general_definition/11_image002.jpg" style="cursor: nwse-resize;"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Object list page</p>
+  <p> </p>
+  <p>To add an object to the object tree, click on the <img src="../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button as shown in <a href="#Fig_11_2_Object_list_page"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>2.</a>    This will insert a new object into the first available object number. To delete an object, select the appropriate object and press the <img src="../../../assets/icons/pre_icons/mo_delete_object_button.jpg"/> button. This will delete all entries associated
+    with the selected object, including movement controls, boundary conditions, inter-object boundary conditions, etc.</p>
+  <p>User can duplicate an existing object by selecting it and clicking on <img src="../../../assets/icons/pre_icons/mo_duplicate_object_button.jpg"/>.</p>
+  <p>The object position in the tree can be changed using <img src="../../../assets/icons/pre_icons/mo_move_object_down_button.jpg"/>  <img src="../../../assets/icons/pre_icons/mo_move_object_up_button.jpg"/> buttons.</p>
+  <p>User can import the object from a keyfile or database using <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>, the objects are appended to the existing object list.</p>
+  <p> </p>
+  <p class="Note_text">Note: To replace an object geometry definition without deleting movement controls and inter-object relationships, it is possible to delete only the object geometry from the geometry window. This is useful for changing die geometries when performing
+    two or more deformation operations on the same work piece. When redefining an object in this manner, it is extremely important to initialize and regenerate inter-object boundary conditions. It may also be necessary to reset the stroke definition in
+    Movement controls to zero.</p>
+  <p> </p>
+  <h2><a id="11_2_Object_name"></a>Object name (OBJNAM)</h2>
+  <p>The workpiece and each piece of tooling must be identified as a unique object and assigned an object number and name. (See <a href="#Fig_11_3_3D_Object_Data_Definition_window"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>3.</a>)
+    The object name (<a href="../../keyword_documentation/o/objnam.htm">OBJNAM</a>) is a string of up to 64 characters. It is highly recommended that it be set to something meaningful (e.g. punch, die, workpiece).</p>
+  <p> </p>
+  <p style="text-align: center"><img height="423" src="../../../assets/images/pre-processor/11_object_general_definition/11_image003.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig_11_3_3D_Object_Data_Definition_window"></a> 3D Object Data Definition window</p>
+  <p> </p>
+  <h2><a id="11_3_Object_initial_conditions"></a>Object initial conditions</h2>
+  <p>Initial conditions can be specified for any object related state variable in DEFORM.  The most common initial condition specification is object temperature which can be specified in the respective object page.</p>
+  <p>For heat treatment problems with variable carbon content in the workpiece, dominant atom content may also be specified. For meshed objects, initial object temperature and initial dominant atom content are specified by assigning values to all the nodes
+    by selecting the Object <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> object Nodes icon (<img height="21" src="../../../assets/icons/pre_icons/mo_nodal_data_icon.jpg" width="24"/>)<img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Diffusion tab.<br/> When a mesh is generated nodes and elements state variables will have their values initialized respectively based on the conditions defined for the object.<br/> Uniform object temperature can be specified in respective object
+    window. Nodal values may also be specified by selecting the Object <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Object Nodes icon (<img height="21" src="../../../assets/icons/pre_icons/mo_nodal_data_icon.jpg" width="24"/>)<img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Thermal tab. Values for an entire object can be set using the initialize  <img src="../../../assets/icons/pre_icons/mo_initialize_icon.jpg"/>  icon next to the appropriate data field.<br/> For non-meshed rigid tools, a constant object temperature
+    may be set using the r<span style="color:#0000ff;">eference temperature </span>( <a href="../../keyword_documentation/r/reftmp.htm">REFTMP</a>) under the <a href="../16_object_properties/16_object_properties.htm">Objects Properties.</a> </p>
+  <p> </p>
+  <p class="Note_text">Note:<br/> Using this approximation will tend to over-estimate temperature loss as the die surface will not heat up during the simulation. This effect can be compensated for by reducing the inter-object heat transfer coefficient (<a href="../../keyword_documentation/i/ihtcof.htm">IHTCOF</a>).</p>
+  <p> <br/> For porous object relative density must be specified as described in porous object type using the Assign density button. This initializes the relative density value for all the elements by the value defined. Using the Element data values we can
+    specify the Objects <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Object Element icon (<img height="21" src="../../../assets/icons/pre_icons/mo_elemental_data_icon.jpg" width="24"/> ) <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Deformation <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/>  General tab.<br/> For any object defined as a mixture, the initial volume fraction (<a href="../../keyword_documentation/v/volfc.htm">VOLFC</a>) and maximum volume fraction
+    transformed (<a href="../../keyword_documentation/v/volfs.htm">VOLFS</a>) must be assigned for all volume fractions. In general <a href="../../keyword_documentation/v/volfc.htm">VOLFC</a> and <a href="../../keyword_documentation/v/volfs.htm">VOLFS</a> should
+    be initialized to the same value. The volume fraction can be defined by selecting the Object <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/>  Objects Element icon (<img height="21" src="../../../assets/icons/pre_icons/mo_elemental_data_icon.jpg" width="24"/>)   <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> Transformation tab.</p>
+  <h2><a id="11_4_Object_type"></a>Object type (OBJTYP)</h2>
+  <p>The object type (<a href="../../keyword_documentation/o/objtyp.htm">OBJTYP</a>) defines if and how deformation is modelled for each individual object in a DEFORM problem. </p>
+  <p>Below are the different object type available in DEFORM: </p>
+  <p><a href="#11_4_1_Plastic">11.4.1. Plastc</a></p>
+  <p><a href="#11_4_2_Elastic">11.4.2. Elastic</a></p>
+  <p><a href="#11_4_3_Elasto-plastic">11.4.3. Elasto-plastic</a></p>
+  <p><a href="#11_4_4_Porous">11.4.4. Porous</a></p>
+  <p><a href="#11_4_5_Rigid">11.4.5. Rigid</a></p>
+  <p><a href="#11_4_6_Hyperelastic">11.4.6. Hyper-Elastic</a></p>
+  <p><a href="#11_4_7_User_Defined">11.4.7. User-Defined</a></p>
+  <p><a href="#11_4_8_Environment_Fluid_CFD">11.4.8. Environment (Fluid(CFD))</a></p>
+  <p><a href="#11_4_9_Environment_Air_Electro-magnetic">11.4.9. Environment (Air(Electro-magnetic))</a></p>
+  <p> </p>
+  <h3><a id="11_4_1_Plastic"></a>Plastic [2D, 3D]</h3>
+  <p>Plastic objects are modelled as rigid-plastic or rigid-viscoplastic material depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as
+    the limiting strain rate (<a href="../../keyword_documentation/l/lmtstr.htm">LMTSTR</a>). The material deforms plastically beyond the limiting strain rate. The plastic material behaviour of the object is specified with a material flow stress function
+    or flow stress data (<a href="../../keyword_documentation/f/fstres.htm">FSTRES</a>).<br/>
+    <br/>
+    <strong>Applications:</strong><br/> When used to model workpiece, provides very good simulation of real material behavior.  Accurately captures strain rate sensitivity.<br/>
+    <br/>
+    <strong>Limitations:</strong><br/> Does not model elastic recovery (spring back) and is therefore inappropriate for bending or other operations where spring back has a significant effect on the final part geometry. Does not model strains due to thermal
+    expansion / contraction. Cannot capture residual stresses.</p>
+  <h3><a id="11_4_2_Elastic"></a>Elastic [2D, 3D]</h3>
+  <p>The elastic material behaviour is specified with Young&#39;s modulus (<a href="../../keyword_documentation/y/young.htm">YOUNG</a>) and Poisson&#39;s ratio (<a href="../../keyword_documentation/p/poison.htm">POISON</a>). Elastic objects are used if the
+    knowledge of the tooling stress and deflection are important throughout the process. If maximum stress or deflection information is required for die stress, it is recommended that rigid dies be used for the deformation simulation, then a single step
+    die stress simulation be used.<br/> Refer to the die stress <span style="color:#0000ff;">3D - <a href="../../operation_templates/30_die_stress/30_2_3d_die_stress_setup.htm">3D Die stress setup</a> </span>,  <span style="color:#0000ff;">2D- </span>    <a href="../../operation_templates/30_die_stress/2d_die_stress_analysis_theory.htm">2D Die Stress Analysis Theory</a> and <a href="../../labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg.htm"><span style="color:#0000ff;">Die Stress study</span></a>    <span style="color:#0000ff;"><a href="../../labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg.htm"> labs</a> </span>in the online help for more information. For 3D at this time a fully coupled elastic tool with plastic workpiece
+    analysis is required, to be recommended to use coupled die stress analysis as explained in <span style="color:#0000ff;"><a href="../../operation_templates/30_die_stress/coupled_die_stress_analysis.htm">Coupled Die stress Analysis</a>.</span><br/>
+    <br/>
+    <strong>Applications:</strong><br/> When used to model tooling, the elastic model can provide information on tool stress and deflection. Useful in rare situations when tooling deflection can have a significant influence on the shape of the part.<br/>
+    <strong><br/>
+Limitations:</strong><br/> If yield stress for the tooling is exceeded, stress and deflection results will be incorrect. However, in most cases, if tooling yield stress is exceeded, this represents an unacceptable situation, and tooling deformation
+    beyond yield is not useful. It is good practice to check stresses in simulations with elastic tooling to ensure that this situation is not violated.</p>
+  <h3><a id="11_4_3_Elasto-plastic"></a>Elasto-plastic (Ela-Pla) [2D, 3D]</h3>
+  <p>Elasto-plastic objects are treated as elastic objects until the yield point is reached.<br/> Then, any portions of the object that reach the yield point are treated as plastic, while the remainder of the object is treated as elastic. In the Elasto-plastic
+    deformation the total strain in the object is a combination of elastic strain and non-elastic strain. The non-elastic strain consists of plastic strain, creep strain, thermal strain and transformation strain depending on the characteristics of materials.
+    For more details related to material model refer the Chapter <a href="../10_material_data/10_material_data.htm">10. Material Data</a>. In the case of brick elements, the Elasto-plastic model is valid for all levels of strain.</p>
+  <p>Three element formulations are available for the elasto-plastic object type.</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Standard – Default setting. Recommended for most applications.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Mixed (Tet mesh) – Suitable for heat treat simulations involving small deformation.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Assumed strain (Brick mesh) – Suitable for brick meshed models with only 1-2 layers of elements through the thickness.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong><a id="Assumed_strain_Brick_Mesh"></a>Assumed strain (Brick mesh)</strong></p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">The &quot;<strong>Assumed strain</strong>&quot; setting should be activated in elasto-plastic sheet metal forming models that are limited to only 1-2 layers of brick elements though the sheet thickness. This setting helps to avoid a possible numerical
+    shear locking by adopting the assumed transverse shear strain field. The &quot;Assumed strain&quot; setting is not necessary if the sheet metal object has 3 or more layers of brick elements through the thickness.</p>
+  <p><br/>
+    <strong>Applications:</strong><br/> Provides a realistic simulation of elastic recovery (spring back), and strains due to the thermal expansion. Useful for problems such as bending where spring back has a significant effect on the final part geometry.
+    Also useful for residual stress calculations. This object type can also handle strain rate sensitive materials. Object type must be elastic-plastic for creep calculations.<br/>
+    <br/>
+    <strong>Limitations:</strong><br/> Generally, takes long solution time, convergence behaviour is greatly influence by material data defined for the initial yield conditions and the contact conditions of the deforming objects.<br/>
+    <br/>
+    <strong>Note: </strong>If flow stress is defined for multiple strain rates, the flow stress of an Elasto-plastic material is evaluated at the strain rate value specified in limiting strain rate under object-&gt;properties.</p>
+  <h3><a id="11_4_4_Porous"></a>Porous [2D, 3D]</h3>
+  <p>Porous objects are treated the same as plastic objects (compressible rigid-viscoplastic materials) except that the material density is calculated and updated as part of the simulation. The material behavior is modelled similar to plastic objects but
+    the model includes the compressibility of the material in the formulation. The limiting strain rate (<a href="../../keyword_documentation/l/lmtstr.htm">LMTSTR</a>) and the flow stress (<a href="../../keyword_documentation/f/fstres.htm">FSTRES</a>)
+    must be specified at the fully dense state. The material density is specified at each element (<a href="../../keyword_documentation/d/densty.htm">DENSTY</a>). Objects with changing material densities such as materials used in powder forming, should
+    be modelled as Porous objects. The only iteration method currently available for the porous material is the direct solution method. This method does not have fast convergence capabilities, subsequently a porous simulation may take longer than a comparable
+    plastic simulation.</p>
+  <p>For the sintering material models available in DEFORM refer <a href="../10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data.htm#10.12.7._Sintering_Driving_Force_model">10.12.7. Sintering Driving Force Model.</a></p>
+  <p>From v14.0, user can model the elastic behavior of porous materials by selecting the Elasto-plastic option from the Porous object type options as shown in <a href="#Fig_11_4_Porous_object_type_option"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>4.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_11_4_Porous_object_type_option"></a><img src="../../../assets/images/pre-processor/11_object_general_definition/11_image004.jpg"/></p>
+  <p class="Fig_numb" style="text-align: center;">Porous object type option</p>
+  <p><br/>
+    <br/>
+    <br/>
+    <strong>Applications</strong><br/> Appropriate for compacted, sintered powders, beyond around 70 /accurately models consolidation and densification during forging.<br/>
+    <br/>
+    <strong>Limitations</strong><br/> Is not designed to model loose powder compaction processes.</p>
+  <h3><a id="11_4_5_Rigid"></a>Rigid [2D, 3D]</h3>
+  <p>Rigid objects are modelled as non-deformable materials. In the deformation analysis, the object is represented by the geometric profile (<a href="../../keyword_documentation/d/diegeo.htm">DIEGEO</a>). Deformation solution data available for rigid objects
+    include object stroke, load, and velocity. The mesh for the rigid object is used only for thermal, transformation, and diffusion calculations.<br/>
+    <br/>
+    <strong>Applications:</strong><br/> When used to model tooling, increases simulation speed (over elastic tooling) by reducing the number of deformable objects, and hence the number of equations which must be solved. Negligible loss of accuracy for
+    typical simulations where the tools have a much higher yield stress than the workpiece.<br/>
+    <br/>
+    <strong>Limitations:</strong><br/> Stress and deflection data for the dies is not available during deformation. This data can be obtained at selected single steps by performing a single step die stress analysis.</p>
+  <h3><a id="11_4_6_Hyperelastic"></a>Hyperelastic [2D,3D]</h3>
+  <p>A hyperelastic material behaviour is specified with the hyperelastic (<a href="../../keyword_documentation/h/hyprel.htm">HYPREL</a>) object type. A hyperelastic material is a type of constitutive model for ideally elastic material for which the stress-strain
+    relationship derives from a strain energy density function. Hyperelastic objects are used for applications like rubber pad forming and when deforming certain polymer objects. User can select this option if the object type is hyper-elastic. In DEFORM,
+    Neo-Hookean and Mooney-Rivlin are the two hyperelastic constitutive models provided to simulate hyperelasticity.<br/>
+    <br/>
+    <strong> Applications</strong><br/>  Rubber pad forming, deforming certain polymer objects, etc.<br/>
+    <br/>
+    <strong> Limitations</strong><br/>  Not available for 2D plane stress</p>
+  <h3><a id="11_4_7_User_Defined"></a>User Defined [2D] [3D]</h3>
+  <p>User has been provided an option to customize the material behavior. Users can customize the material behavior using <a href="../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_5_User_defined_material_models_(USRMAT)"><span style="color:#0000ff;">usr_mat.f.</span></a>    by defining a unique constitutive model. Only one object with such definition is allowed, hence no need to pass any routine number. Users can model the elasto-plastic or rigid-plastic behavior and can select the respective option from the User Defined
+    object type options as shown in <a href="#Fig_11_5_User-defined_object_type"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>5.</a> , Elasto-plastic for Elasto-plastic and Plastic for rigid-plastic. SP solver is suggested for
+    user-defined elasto-plastic problems. From v12, this implementation replaces the UMAT.DAT function in previous versions.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_11_5_User-defined_object_type"></a><img src="../../../assets/images/pre-processor/11_object_general_definition/11_image005.jpg"/></p>
+  <p class="Fig_numb" style="text-align: center;">User-defined object type</p>
+  <p> </p>
+  <h3><a id="11_4_8_Environment_Fluid_CFD"></a>Environment [Fluid(CFD)] [2D, 3D]</h3>
+  <p>Users can define the Fluid environment using Environment (Fluid(CFD)) object type as shown in <a href="#Fig_11_6_Environment_Fluid_CFD_type_object_selection"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>6.</a> This option
+    will be available when user turns on the “CFD flow” simulation type from the Simulation controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_11_6_Environment_Fluid_CFD_type_object_selection"></a><img height="341" src="../../../assets/images/pre-processor/11_object_general_definition/11_image006.jpg" width="750"/></p>
+  <p class="Fig_numb" style="text-align: center;">Environment Fluid(CFD) type object selection</p>
+  <h3><a id="11_4_9_Environment_Air_Electro-magnetic"></a>Environment [Air(Electro-magnetic)] [2D, 3D]</h3>
+  <p>Air in Induction type electro-magnetic problems can be modeled using the Environment (Air(Electro-magnetic)) object type as shown in <a href="#Fig_11_7_Environment_Air_Electro-magnetic_type_object_selection"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>7.</a> This
+    option is available to the users when the Induction type of Heating is selected under Heat Transfer in Simulation controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_11_7_Environment_Air_Electro-magnetic_type_object_selection"></a><img height="344" src="../../../assets/images/pre-processor/11_object_general_definition/11_image007.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Environment Air(Electro-magnetic) type object selection</p>
+  <p> </p>
+  <h3>User Defined (Plastic) [2D] [3D]</h3>
+  <p>User has been provided with an option to customize the plastic material behaviour. User can customize the material behaviour using<span style="color:#0000ff;"> <a href="../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#User_Defined_(Plastic)">usr_mat.f.</a></span>    by defining an unique constitutive model. Only one object with such definition is allowed hence no need to pass any routine number. This object type can be used to simulate rigid-plastic material model. From v12 this new implementation replace the
+    <span style="color:#0000ff;">UMAT.DAT</span> function in previous versions. In current v12 DEFORM, SP solver is suggested for user-defined elasto-plastic object problems.</p>
+  <h2><a id="11_5_Primary_Die"></a>Primary Die (PDIE)</h2>
+  <p>The primary die (<a href="../../keyword_documentation/p/pdie.htm">PDIE</a>) specifies the primary object for the simulation. The primary object is usually assigned to the object most closely controlled by the forming machinery.<br/> For example, the
+    die attached to the ram of a mechanical press would be designated as the primary die. Characteristics of the primary die can be used to control various aspects of a simulation including:</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Simulation time step size (<a href="../../keyword_documentation/d/dsmax.htm">DSMAX</a>)</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Object movement (<a href="../../keyword_documentation/m/movctl_(2d).htm">MOVCTL</a>)</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Simulation termination criteria (<a href="../../keyword_documentation/s/smax.htm">SMAX</a>, <a href="../../keyword_documentation/v/vmin.htm">VMIN</a> and <a href="../../keyword_documentation/l/lmax.htm">LMAX</a>)</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p>The primary die is defined in using a check box (See <a href="#Fig._11.3._3D_Object_Data_Definition_window"><span data-keyref="Chapter_11_Object General Definition">Fig. 11.</span>3.</a>). Only one object can be defined as the primary die.</p>
+  <h2><strong><a id="11_6_Import_object__from_file"></a>Import object  from file </strong><img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>:</h2>
+  <p>User can import object from key file or Database. This import all the object data available in the Keyfile or DB like Geometry, Mesh, BCC, Movement, Material and Nodal and elemental data.</p>
+  <h2><strong><a id="11_7_Import_object_from_library"></a>Import object from library</strong> <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>:</h2>
+  <p>User can import object from user library.</p>
+  <h2><strong><a id="11_8_Save_object_to_a_file"></a>Save object to a file</strong> <img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/> :</h2>
+  <p>User can save the object in key file format. This saved file can be imported back by <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> using  import object option in any other deform problem setup.</p>
+  <h2><strong><a id="11_9_Save_object_to_library"></a>Save object to library </strong><img height="20" src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg" width="21"/> :</h2>
+  <p>User can save the object data to library and saved file can be imported back by using <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>  import object option in any other deform problem setup.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../9_simulation_controls/9_simulation_controls.htm">9. Simulation Controls</a></p>
+  <p><a href="../10_material_data/10_material_data.htm">10. Material Properties</a></p>
+  <p><a href="../12_geometry_modelling/12_geometry_modelling.htm">12. Geometry Modelling</a></p>
+  <p><a href="../13_mesh_generation/13_mesh_generation.htm">13. Mesh Generation</a></p>
+  <p><a href="../14_boundary_conditions/14_boundary_conditions.htm">14. Boundary Conditions</a></p>
+  <p><a href="../15_movement_controls_definition/15_movement_controls_settings.htm">15. Movement Controls Settings</a></p>
+  <p><a href="../16_object_properties/16_object_properties.htm">16. Object Properties</a></p>
+  <p><a href="../17_object_data_initialization/17_object_data_initialize.htm">17. Object Data Initialize</a></p>
+  <p><a href="../18_object_manipulation_tools/18_object_manipulation_tools.htm">18. Advanced Object Data Definition</a></p>
+  <p><a href="../19_object_positioning/19_object_positioning.htm">19. Object positioning</a></p>
+  <p><a href="../20_inter-object_data_definition/20_inter-object_data_definition.htm">20. Inter-Object Definition</a></p>
+  <p><a href="../21_database_generation/21_database_generation.htm">21. Database Generation</a></p>
+  <p><a href="../22_convert_2d_to_3d/22_convert_2d_to_3d.htm">22. Convert 2D to 3D</a></p>
+
+</body></html>

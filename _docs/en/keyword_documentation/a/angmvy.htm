@@ -1,0 +1,253 @@
+---
+lang: en
+title: "ANGMVY (2D)"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.1.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>ANGMVY (2D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>ANGMVY (2D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/a/a_keyword_documentation.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/A/ANISO.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/A/ANGMO2_(3D).htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="ANGMVY (2D)">
+        <span>ANGMVY (2D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>ANGMVY</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Object Data - 2D)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 29-07-2013</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <hr/>
+  <p class="P_10_Bold"> ANGMVY Object, Rtype, Rdef, RotVelocity/Torque, CurAng  (Rtype = 0, 1, Rdef = 0)<br/> or
+    <br/> ANGMVY Object, Rtype, Rdef, Ndata, CurAng  (Rtype = 0, 1, Rdef = 1,2 )<br/> Time(1) AngVel/Torque(1)<br/> : :<br/> Time(Ndata) AngVel/Torque(Ndata)<br/> or
+    <br/> ANGMVY Object, Rtype, Energy, Inertia, Efficiency, CurAng (Rtype = 2)</p>
+  <hr/>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:solid;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: solid;border-color: #000000">
+      <tr style="border-width: 2px;border-style: none;border-color: #000000">
+        <td style="padding-left: 4px;border-width: 1px;border-style: none;border-color: #000000;border-left: 0;border-top: 0;border-right: 0">
+          <p class="P_10_Bold" style="border-width: 2px;border-style: none;border-color: #000000">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="border-width: 2px;border-style: none;border-color: #000000">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Object</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Object Number</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="border-width: 2px;border-style: none;border-color: #000000">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Rtype</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Rotation type 1<br/> = <strong>0</strong> Torque (force * unit length)<br/> = <strong>1</strong> Angular velocity (rad/unit time)<br/> = <strong>2</strong> Energy</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">1</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Rdef</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Rotational definition method<br/> = <strong>0</strong> Constant<br/> = <strong>1</strong> f(time) -Angular velocity or torque as a function of time<br/> = <strong>2</strong> f(angle)-Angular velocity or torque as a function of angle</p>
+        </td>
+        <td style="padding-left: 4px"> </td>
+      </tr>
+      <tr>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">RotVelocity/Torque</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Rotational velocity or torque</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Ndata</p>
+        </td>
+        <td style="padding-left: 4px">Number of data points</td>
+        <td style="padding-left: 4px">0</td>
+      </tr>
+      <tr>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Time(i)</p>
+        </td>
+        <td style="padding-left: 4px">Time of i<span style="font-family:Arial;"><span style="vertical-align:super;font-family:Arial;font-size:8pt">th</span></span> data set</td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Angle(i)</p>
+        </td>
+        <td style="padding-left: 4px">Angle of i<span style="font-family:Arial;"><span style="vertical-align:super;font-family:Arial;font-size:8pt">th</span></span> data set</td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">AngVel/Torque(i)</p>
+        </td>
+        <td style="padding-left: 4px">Angular velocity or torque of ith data set</td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">ANGMVY specifies the torsion rotational movement. Note this is meaningful only for Torsion case (e.g. inertial welding).</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Applicable Geometry types: <a href="../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_(GEOTYP)_[2D]">Torsion</a></p>
+          <p class="P_10"><br/> Keywords: <a href="../m/movctl_(2d).htm">MOVCTL</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

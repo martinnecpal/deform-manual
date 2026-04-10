@@ -1,0 +1,706 @@
+---
+lang: sk
+title: "53.1. Optimization Setup"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>53.1. Optimization Setup</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>53.1. Optimization Setup</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/doe_and_optimization/53_optimization_study/53_1_optimization_setup.css"/>
+<meta name="brsnext" value="Documentation_content/DOE_and_Optimization/53_Optimization_Study/53_2_Optimization_Simulation_Running_and_Monitoring.htm"/><meta name="brsprev" value="Documentation_content/DOE_and_Optimization/53_Optimization_Study/53_Introduction_to_Optimization.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="53.1. Optimization Setup">
+        <span>53.1. Optimization Setup</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>53.1. Optimization Setup</h1>
+  <p><a href="#53_1_1_Adding_Optimization_Study">53.1.1. Adding Optimization Study</a></p>
+  <p><a href="#53_1_2_Defining_DOE_Variables">53.1.2. Defining DOE Variables</a></p>
+  <p><a href="#53_1_3_Failed_DOE_Variable_definition">53.1.3. Failed DOE Variable definition</a></p>
+  <p><a href="#53_1_4_Deleting_DOE_Variable">53.1.4. Deleting DOE Variable</a></p>
+  <p><a href="#53_1_5_DOE_Table">53.1.5. DOE Table</a></p>
+  <p><a href="#53_1_6_Defining_Case_variables">53.1.6. Defining Case variables</a></p>
+  <p><a href="#53_1_7_Deleting_Case_variable">53.1.7. Deleting Case variable</a></p>
+  <p><a href="#53_1_8_Case_variable_table">53.1.8. Case variable table</a></p>
+  <p><a href="#53_1_9_Case_definition_table">53.1.9. Case definition table</a></p>
+  <p><a href="#53_1_10_Defining_Shape_optimization_operation">53.1.10. Defining Shape optimization operation</a></p>
+  <p style="margin-left: 20px"><a href="#53_1_10_1_Operation_selection">53.1.10.1. Operation selection</a></p>
+  <p style="margin-left: 20px"><a href="#53_1_10_2_Define_Outputs">53.1.10.2. Define Outputs</a></p>
+  <p style="margin-left: 40px"><a href="#Defining_Region_of_Interest">Defining Region of Interest</a></p>
+  <p style="margin-left: 40px"><a href="#Probe">Probe</a></p>
+  <p style="margin-left: 40px"><a href="#Operation_min_max_value">Operation min/max value</a></p>
+  <p style="margin-left: 40px"><a href="#Local_min_max_Value_Summary_min_max_One_step">Local min/max Value (Summary min/max (One step))</a></p>
+  <p style="margin-left: 40px"><a href="#State_variable_in_regions_State_Variable_minmax_one_step">State variable in regions (State Variable min/max (One step))</a></p>
+  <p style="margin-left: 40px"><a href="#Summary_plot_(all_steps_from_selected_operation)">Summary plot (all steps from selected operation)</a></p>
+  <p style="margin-left: 40px"><a href="#Probe_output">Probe output</a></p>
+  <p style="margin-left: 20px"><a href="#53_1_10_3_Define_Variable_constraints">53.1.10.3. Define Variable constraints</a></p>
+  <p style="margin-left: 20px"><a href="#53_1_10_4_Define_Fill_constraints">53.1.10.4. Define Fill constraints</a></p>
+  <p style="margin-left: 20px"><a href="#53_1_10_5_Global_Min_Max_(All_steps)">53.1.10.5. Global Min/Max (All steps)</a></p>
+  <p style="margin-left: 20px"><a href="#53_1_10_6_Define_Objective_Function">53.1.10.6. Define Objective Function</a></p>
+  <p style="margin-left: 20px"><a href="#53_1_10_7_Define_Optimization_controls">53.1.10.7. Define Optimization controls</a></p>
+  <p style="margin-left: 20px"><a href="#53_1_10_8_Define_Stopping_controls">53.1.10.8. Define Stopping controls</a></p>
+  <p style="margin-left: 20px"><a href="#53_1_10_9_Database_Management">53.1.10.9. Database Management</a></p>
+  <p> </p>
+  <h2><a id="53_1_1_Adding_Optimization_Study"></a>Adding Optimization Study</h2>
+  <p>User must have nominal setup to which Optimization Study can be added. Optimization Study can be added either before completion of nominal simulation or without completion of nominal simulation from V12, while in previous versions Optimization Study
+    can be added only after completion of the nominal simulation. User can add Optimization operation using Add Optimization Study option from  <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> (Add new study) button as shown in
+    <a href="#Fig_53_1_1_Adding_Optimization_Study_Project"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_1_Adding_Optimization_Study_Project"></a><img height="364" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image001.jpg" width="735"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Optimization Study Project</p>
+  <p><br/> After adding the Optimization study, Optimization study project gets added next to the nominal project and adds Shape Optimization output operation automatically for adding variables to study in DOE post as shown in <a href="#Fig_53_1_2_Optimization_Project_with_Shape_Optimization_operation"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_2_Optimization_Project_with_Shape_Optimization_operation"></a><img height="369" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image002.jpg" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">Optimization Project with Shape Optimization operation</p>
+  <h2><a id="53_1_2_Defining_DOE_Variables"></a>Defining DOE Variables</h2>
+  <p>The material properties, object data, inter-object data and process variables can be added as DOE variables from property editor window. In Property editor window, if a variable field has green ribbon around the fields (See <a href="#Fig_53_1_3_Adding_DOE_variable_by_right_click_on_green_ribbon_of_Study_variable_field"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>3.</a>)
+    then that variable can be added as DOE or Case variable. Constants, functions and geometry data definition types can also be added as DOE variables. The DOE variable can be continuous or discrete.</p>
+  <p><strong>Continuous Input Variable : </strong>Continuous variables can be added as normal DOE variable by defining the range of study variables fluctuation/uncertainty as upper and lower bound values and number of samples required within the range. Example
+    object temperature etc.</p>
+  <p><strong>Discrete Input Variable </strong>: Variables which are not continuous can be defined as discrete DOE variables by defining number of samples and sample values. Example billet diameter etc. DOE variable can also be named by the user.</p>
+  <p> </p>
+  <p><strong>Steps to define DOE Variable</strong></p>
+  <p>The steps to define the DOE variables are as follows,</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Before adding the DOE variable user needs to select the operation for which DOE variable needs to be defined. (See <a href="#Fig_53_1_2_Optimization_Project_with_Shape_Optimization_operation"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>2.</a>)</p>
+    </li>
+    <li>
+      <p>Identify the variables to add as DOE variables, fields which are having green ribbon around them in property editor window can only be selected. Right click in green ribbon region and select Add DOE variable option as shown in <a href="#Fig_53_1_3_Adding_DOE_variable_by_right_click_on_green_ribbon_of_Study_variable_field"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>3.</a></p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_3_Adding_DOE_variable_by_right_click_on_green_ribbon_of_Study_variable_field"></a><img height="369" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image003.jpg" width="745"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Adding DOE variable by right click on green ribbon of Study variable field</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2;" value="3">
+      <p>In DOE variable definition window, if DOE variable is continuous then define study variable range as upper and lower bound values as shown in <a href="#Fig_53_1_4_Study_variable_definition_window_for_Die_Speed_constant_value"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>4.</a> else
+        if data is not continuous, define the discrete samples by checking the Discrete checkbox and selecting number of samples to input as shown in <a href="#Fig_53_1_5_Discrete_DOE_variable_definition_window_for_constant_value_data"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>5.</a>        The default number of samples are three, user can increase the number of samples as required.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_4_Study_variable_definition_window_for_Die_Speed_constant_value"></a><img src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image004.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Study variable definition window for Die Speed constant value</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_5_Discrete_DOE_variable_definition_window_for_constant_value_data"></a><img height="209" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image005.jpg" width="745"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Discrete DOE variable definition window for constant value data</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 3;" value="4">
+      <p>Enter description for the DOE variable if necessary, as shown in <a href="#Fig_53_1_4_Study_variable_definition_window_for_Die_Speed_constant_value"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>4.</a> Some useful note about
+        the selection and variation defined can be entered here. Click <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close the definition.</p>
+    </li>
+    <li style="" value="4">
+      <p>Confirm the DOE variable definition by observing the green fill around the variable field after definition. The field filled with green color indicates that it has been added as DOE variable. Right click in the green colored area will display the
+        defined upper and lower bound values (See <a href="#Fig_53_1_6_DOE_variable_definition_indicators"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>6.</a> and <a href="#Fig_53_1_7_Discrete_DOE_variable_definition_indicators"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>7.</a>). </p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_6_DOE_variable_definition_indicators"></a><img height="372" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE variable definition indicators</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_7_Discrete_DOE_variable_definition_indicators"></a><img height="372" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image007.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Discrete DOE variable definition indicators</p>
+  <p><br/> In operation editor green color DOE text can be observed on operations top right end indicating operations with DOE variables are defined as shown in <a href="#Fig_53_1_6_DOE_variable_definition_indicators"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>6.</a>    and <a href="#Fig_53_1_7_Discrete_DOE_variable_definition_indicators"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>7.</a> DOE variable name can be edited from “DOE Variables” tab.</p>
+  <p><br/> The examples mentioned below demonstrates adding different input data types as DOE variable.</p>
+  <p><br/>
+    <strong>Example1:</strong> Material property like flow stress, which is function of strain, strain rate and temperature can be added as DOE variable by offsetting or scaling the function curve. Files required to exercise this example are available
+    at installation path 3D\LABS\Gear_blank, open the Gear_blank.moprj file from <img src="../../../assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg"/>, simulate the Nominal run and add Optimization study and follow instructions as mentioned
+    below. First add the DOE variable by navigating to material page and using right click option on Flow stress <img src="../../../assets/icons/pre_icons/mo_define_button.jpg"/> (Define) button as shown in <a href="#Fig_53_1_8_Add_function_data_as_DOE_variable"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>8.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_8_Add_function_data_as_DOE_variable"></a><img height="372" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Add function data as DOE variable</p>
+  <p><br/> In DOE definition window, add description about definition and click on   <img src="../../../assets/icons/pre_icons/mo_define_function.._button.jpg"/>  button to define continuous DOE definition upper and lower bound values as shown in <a href="#Fig_53_1_9_DOE_variable_definition_window_for_function_value_data_Flow_stress"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>9.</a>    or if you need to experiment with specific flow stress data of different materials, select discrete DOE definition by checking “Discrete” checkbox and select as many samples as needed to input as shown in <a href="#Fig_53_1_10_Discrete_DOE_variable_definition_window_for_function_value_data_Flow_stress"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>10.</a>    For Discrete samples definition, click on the <img src="../../../assets/icons/pre_icons/mo_define_button.jpg"/> button under edit column to define flow stress curves. We will use continuous DOE variable for this example.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_9_DOE_variable_definition_window_for_function_value_data_Flow_stress"></a><img height="350" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image009.jpg" width="443"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> DOE variable definition window for function value data Flow stress</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_10_Discrete_DOE_variable_definition_window_for_function_value_data_Flow_stress"></a><img height="375" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image010.jpg" width="439"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Discrete DOE variable definition window for function value data Flow stress</p>
+  <p><br/> Function definition window will open with nominal values when we click on <img src="../../../assets/icons/pre_icons/mo_define_function.._button.jpg"/> button for Continuous DOE as shown in <a href="#Fig_53_1_11_Nominal_function_data_curves"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>11.</a>    or  <img src="../../../assets/icons/pre_icons/mo_define_button.jpg"/> button for discrete DOE definition as shown in <a href="#Fig_53_1_12_Nominal_function_data_curves_of_Flow_Stress_for_Discrete_DOE"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>12.</a>    For function data of continuous DOE variable definition, user can select definition type such as Nominal, Upper or Lower from DOE field pull down menu. User can only change the Upper and Lower bound curves using scale, offset options or by editing
+    values or by dragging the curve or point.</p>
+  <p>For function data of discrete DOE variable, user can define the sample value using scale, offset options or by editing values or importing the flow stress curves DAT file as shown in <a href="#Fig_53_1_12_Nominal_function_data_curves_of_Flow_Stress_for_Discrete_DOE"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>12.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_11_Nominal_function_data_curves"></a><img height="372" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Nominal function data curves</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_53_1_12_Nominal_function_data_curves_of_Flow_Stress_for_Discrete_DOE"></a><img height="346" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image012.jpg" width="745"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Nominal function data curves of Flow Stress for Discrete DOE</p>
+  <p><br/> Select the DOE type as Upper to define the upper bound values. Values can be defined by using scale or offset options. In this example we will define it by scaling the function data. Select Scale radio button and enter 1.01 to scale up nominal
+    stress curves by 1%. Click on Set to apply. See <a href="#Fig_53_1_13_Upper_bound_scaled_up_function_curves"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>13.</a> for scaled upper bound curves.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_13_Upper_bound_scaled_up_function_curves"></a><img height="369" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image013.jpg" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">Upper bound scaled up function curves</p>
+  <p><br/> Select the DOE type as Lower to define the lower bound values by using scale option. Select Scale radio button and enter 0.99 to scale down nominal stress curves by 1%. Click on Set to apply. See <a href="#Fig_53_1_14_Lower_bound_scaled_down_function_curves"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>14.</a>    for scaled down lower bound curves.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_14_Lower_bound_scaled_down_function_curves"></a><img height="372" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Lower bound scaled down function curves</p>
+  <p><br/> Confirm the definition by observing the green fill in define button and green color Optimization text in operation editor on operation right top corner. Right click in the green colored area and confirm whether upper and lower bound values are
+    defined (See <a href="#Fig_53_1_15_Study_variable_right_click_options"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>15.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_15_Study_variable_right_click_options"></a><img height="372" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Study variable right click options</p>
+  <p><br/>
+    <strong>Example2</strong>: Object geometry can be added as normal DOE variable using 2d geometry editor or using discrete DOE definition by directly importing different geometry designs. Continuous DOE definition is done by varying the nominal geometry
+    values to define the upper and lower bound geometries. Files required to exercise this example are available at installation path 3D\LABS\Gear_blank. Open the Gear_blank.moprj file from <img src="../../../assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg"/> then simulate the Nominal run and add Optimization study. Follow below description to complete Optimization study setup. (To exercise 2D geometry adding as Study variable refer <a href="../52_doe_study/52_1_doe_and_doe_output_operation_setup.htm#Defining_DOE_variables-_Example2">Defining DOE variables- Example2</a>).</p>
+  <p>First to add the workpiece geometry as Study variable, navigate to geometry page of workpiece and right click on <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button next to variable field as shown in <a href="#Fig_53_1_16_Geometry_variation_adding_as_DOE_variable"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>16.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_16_Geometry_variation_adding_as_DOE_variable"></a><img height="372" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image016.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Geometry variation adding as DOE variable</p>
+  <p><br/> Add description and click on <img src="../../../assets/icons/pre_icons/mo_edit_geometry_button.jpg"/> button (See <a href="#Fig_53_1_17_Geometry_Study_variable_definition_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>17.</a>)
+    to define upper and lower bound geometry profiles.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_17_Geometry_Study_variable_definition_window"></a><img height="415" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image017.jpg" width="525"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry Study variable definition window</p>
+  <p><br/> The 3d Geo tool window will open with morphing wizard window to guide user to add upper and lower boundaries as shown in <a href="#Fig_53_1_18_3D_Geo_Tool_window_with_Morphing_wizard"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>18.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_18_3D_Geo_Tool_window_with_Morphing_wizard"></a><img height="442" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Geo Tool window with Morphing wizard</p>
+  <p><br/> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Morphing wizard to open the Lower bound geometry window, edit the geometry using available tools to define the lower bound geometry. In this example geometry height is reduced
+    from 207.01 to 200.64, we will be using <img src="../../../assets/icons/pre_icons/geo_tool_offset_icon.jpg"/> (Offset) option for this, so select the offset icon and pick the top face to offset to 6.37 in -Z direction by entering -6.37. Click <img src="../../../assets/icons/pre_icons/apply_button.jpg"/> to perform the offset. as shown in <a href="#Fig_53_1_19_Reducing_the_object_height_by_Offset_option"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>19.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_19_Reducing_the_object_height_by_Offset_option"></a><img height="439" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image019.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Reducing the object height by Offset option</p>
+  <p><br/> Observe the lower bound geometry after offsetting as shown in <a href="#Fig_53_1_20_Object_Height_after_offset"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>20.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_20_Object_Height_after_offset"></a><img height="442" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object Height after offset</p>
+  <p><br/>
+    <strong>Select  </strong><img src="../../../assets/icons/pre_icons/geo_tool_scale_icon.jpg"/> (Scale) option to scale only the diameter of the cylinder as shown in <a href="#Fig_53_1_21_Selecting_the_scale_window_to_scale_cylinder_object_diameter"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>21.</a>,
+    check only X and Y direction check box to scale only diameter not height, enter the scaling factor 1.05748 as shown in <a href="#Fig_53_1_22_After_scaling_the_cylinder_object_diameter"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>22.</a> Click
+    <img src="../../../assets/icons/pre_icons/apply_button.jpg"/>  button to perform scaling.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_21_Selecting_the_scale_window_to_scale_cylinder_object_diameter"></a><img height="442" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image021.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting the scale window to scale cylinder object diameter</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_22_After_scaling_the_cylinder_object_diameter"></a><img height="440" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image022.jpg" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">After scaling the cylinder object diameter</p>
+  <p> </p>
+  <p>After defining the lower bound geometry click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button to complete Lower bound Morphing. User needs to select the reference plane for the nominal and lower bound geometries, using Pick curve
+    option select Top edges of Nominal geometry and Lower geometry and click on Add button to add connect pair data in table (as shown in <a href="#Fig_53_1_23_Added_connectivity_between_nominal_and_lower_bound_geometries"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>23.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_23_Added_connectivity_between_nominal_and_lower_bound_geometries"></a><img height="435" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image023.jpg" width="745"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Added connectivity between nominal and lower bound geometries</p>
+  <p><br/> Similarly select Bottom edges of Nominal geometry and Lower geometry and click on Add button. Then click on Calculate button in Morph tab to build the connectivity between nominal and lower bound geometries as shown in <a href="#Fig_53_1_24_Added_connectivity_between_nominal_and_lower_bound_geometries"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>24.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_24_Added_connectivity_between_nominal_and_lower_bound_geometries"></a><img height="442" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image024.jpg" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added connectivity between nominal and lower bound geometries</p>
+  <p><br/> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button to define the upper bound geometry. Similar to the lower bound geometry in this example increase the height from 207.01 to 213.68 by offsetting the top face to 6.67
+    mm and diameter is reduced to 62.5 from 63.5 by scaling factor 0.98425. as shown in <a href="#Fig_53_1_25_Offset_geometry_height_for_upper_bound_geometry"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>25.</a> and <a href="#Fig_53_1_26_Scaled_geometry_diameter_for_upper_bound_geometry"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>26.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_25_Offset_geometry_height_for_upper_bound_geometry"></a><img height="443" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image025.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Offset geometry height for upper bound geometry</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_26_Scaled_geometry_diameter_for_upper_bound_geometry"></a><img height="444" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image026.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scaled geometry diameter for upper bound geometry</p>
+  <p><br/> After defining the upper bound geometry click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button to complete Upper bound Morphing, similar to lower bound Morphing, using Pick curve option select Top edges of Nominal geometry
+    and Upper geometry and click on Add button to add connect pair data in table (as shown in <a href="#Fig_53_1_27_Added_connectivity_between_nominal_and_upper_bound_geometries"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>27.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_27_Added_connectivity_between_nominal_and_upper_bound_geometries"></a><img height="441" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image027.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added connectivity between nominal and upper bound geometries</p>
+  <p><br/> Similarly select Bottom edges of Nominal geometry and Upper geometry and click on Add button. Then click on Calculate button in Morph tab build the connectivity between nominal and Upper bound geometries as shown in <a href="#Fig_53_1_28_Added_connectivity_between_nominal_and_Upper_bound_geometries"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_28_Added_connectivity_between_nominal_and_Upper_bound_geometries"></a><img height="443" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image028.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added connectivity between nominal and Upper bound geometries</p>
+  <p><br/> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button to Preview and Finish page, Morphed geometry can be previewed by selecting the &quot;Preview morphing result&quot; option below connect pairs in Morph tab as shown in
+    <a href="#Fig_53_1_29_Morphed_geometry_between_lower_bound_and_nominal"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>29.</a> and <a href="#Fig_53_1_30_Morphed_geometry_between_upper_bound_and_nominal"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>30.</a>    and sliding the slider bar T1 and T2 for Lower bound and Upper bound respectively.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_29_Morphed_geometry_between_lower_bound_and_nominal"></a><img height="439" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image029.jpg" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">Morphed geometry between lower bound and nominal</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_30_Morphed_geometry_between_upper_bound_and_nominal"></a><img height="437" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image030.jpg" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">Morphed geometry between upper bound and nominal</p>
+  <p><br/> It can also be observed from Morphing wizard Preview and Finish window as shown in <a href="#Fig_53_1_31_Morphed_geometry_from_Morphing_Preview_and_Finish_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>31.</a> and
+    click on <img src="../../../assets/icons/pre_icons/finish_button.jpg"/> button to close the geometry variable definition.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_31_Morphed_geometry_from_Morphing_Preview_and_Finish_window"></a><img height="444" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image031.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Morphed geometry from Morphing Preview and Finish window</p>
+  <p><br/> Select Yes to Save Changes popup to save the modification before exiting the 3D Geo Tool, selecting No will not save changes made and cancel will keep the 3D Geo tool will open so that any further changes can be made. (See<a href="#Fig_53_1_32_Save_geometry_variable_definition_popup">  <span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>32.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_32_Save_geometry_variable_definition_popup"></a><img src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image032.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Save geometry variable definition popup</p>
+  <p><br/> Other 3D Geo tool basic tools to define the lower and upper bound geometry are Extrude, Mirror, Rotate and Translate object. These options are briefly described below.</p>
+  <p><br/>
+    <strong>Extrude <img src="../../../assets/icons/pre_icons/geo_tool_extrude_icon.jpg"/> </strong>: To extrude an object select the <img src="../../../assets/icons/pre_icons/geo_tool_extrude_icon.jpg"/>  icon then it will popup the extrude geometry
+    popup window as shown in <a href="#Fig_53_1_33_Extrude_object_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>33.</a> In the extrude window select the extrusion length and direction and enter the extrusion length. Click
+    <img src="../../../assets/icons/pre_icons/apply_button.jpg"/> button to extrude the object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_33_Extrude_object_window"></a><img height="459" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image033.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Extrude object window</p>
+  <p><br/> Checking the Direction auto checkbox will automatically detect the extrusion direction as shown in <a href="#Fig_53_1_34_Object_after_extrusion_in_Z_direction"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>34.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_34_Object_after_extrusion_in_Z_direction"></a><img height="459" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image034.jpg" width="745"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Object after extrusion in Z direction</p>
+  <p><br/>
+    <strong>Mirror Object</strong> <img src="../../../assets/icons/pre_icons/geo_tool_mirror_icon.jpg"/> : To mirror an object select <img src="../../../assets/icons/pre_icons/geo_tool_mirror_icon.jpg"/> icon then it pops up an Mirror Objects window
+    as shown in <a href="#Fig_35_1_35_Mirror_Object_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>35.</a> In the Mirror objects window, select Yes for the direction in which object to be mirrored and then click on <img src="../../../assets/icons/pre_icons/apply_button.jpg"/>  button to mirror the object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_35_1_35_Mirror_Object_window"></a><img height="460" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image035.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Mirror Object window</p>
+  <p><br/> Observe the object after mirroring about Z plane as shown in <a href="#Fig_35_1_36_Object_after_mirror_in_Z_direction"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>36.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_35_1_36_Object_after_mirror_in_Z_direction"></a><img height="462" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image036.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object after mirror in Z direction</p>
+  <p><br/>
+    <strong>Rotate Object</strong> <img src="../../../assets/icons/pre_icons/geo_tool_rotate_icon.jpg"/> : To rotate an object select <img src="../../../assets/icons/pre_icons/geo_tool_rotate_icon.jpg"/> icon then it pops up an Rotate window as shown
+    in <a href="#Fig_53_1_37_Rotate_Object_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>37.</a> In rotate window select direction about which to rotate and angle, then click on <img src="../../../assets/icons/pre_icons/apply_button.jpg"/> button to rotate the object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_37_Rotate_Object_window"></a><img height="461" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image037.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rotate Object window</p>
+  <p><br/> Observe the object rotated about 90 deg in Z direction as shown in <a href="#Fig_53_1_38_Object_after_rotation_in_Z_direction"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>38.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_38_Object_after_rotation_in_Z_direction"></a><img height="462" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image038.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object after rotation in Z direction</p>
+  <p><br/>
+    <strong>Translate object</strong> <img src="../../../assets/icons/pre_icons/geo_tool_translate_icon.jpg"/> : To move object only along X, Y and Z direction select <img src="../../../assets/icons/pre_icons/geo_tool_translate_icon.jpg"/> icon then
+    it pops up an Translate window as shown in <a href="#Fig_53_1_39_Translate_object_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>39.</a> In translate window enter the distance to move about any of three principle directions
+    and then click on <img src="../../../assets/icons/pre_icons/apply_button.jpg"/> button to move the object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_39_Translate_object_window"></a><img height="463" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image039.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Translate object window</p>
+  <p><br/> Observe the object after moving in all X, Y and Z direction as shown in <a href="#Fig_53_1_40_Object_after_moving_in_X,Y_and_Z_direction"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>40.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_40_Object_after_moving_in_X,Y_and_Z_direction"></a><img height="465" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image040.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object after moving in X,Y and Z direction</p>
+  <p> </p>
+  <h2><a id="53_1_3_Failed_DOE_Variable_definition"></a>Failed DOE Variable definition</h2>
+  <p>In Optimization design variable definition if upper or lower or both range values are not defined or in discrete DOE definition any discrete samples are not defined then such design variable will be highlighted with red color fill around the field or
+    button as shown in <a href="#Fig_53_1_41_Failed_DOE_variable_definition"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>41.</a> Then by right clicking on the field, missing data can be edited and corrected.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_41_Failed_DOE_variable_definition"></a><img height="372" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image041.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Failed DOE variable definition</p>
+  <h2><a id="53_1_4_Deleting_DOE_Variable"></a>Deleting DOE Variable</h2>
+  <p>Defined DOE variables will be highlighted by green color shading around DOE variables field (See <a href="#Fig_53_1_42_Delete_Study_variable_definition"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>42.</a>), right click on the
+    defined DOE variable field gives an option to delete the added variable. User can also delete the added DOE variables from DOE table using <img src="../../../assets/icons/pre_icons/mo_delete_symmetry_icon.jpg"/> button or using right mouse button
+    menu option on variables listed in study variable column. (See <a href="#Fig_53_1_42_Delete_Study_variable_definition"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>42.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_42_Delete_Study_variable_definition"></a><img height="372" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image042.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Delete Study variable definition</p>
+  <h2><a id="53_1_5_DOE_Table"></a>DOE Table</h2>
+  <p>DOE table tabulates the details of DOE variables defined for each operation as shown in <a href="#Fig_53_1_43_DOE_table_with_added_DOE_study_variables_details"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>43.</a> DOE table includes
+    the details of Operation Name, Study variable (Defined DOE variable) Name, Number of samples, Lower, Upper and Nominal values, Keyword and object or material to which it belongs. User can edit the defined Study variable name, # of samples, constant
+    Lower and Upper bound values for continuous DOE definitions by double clicking on that cell. User can click on <img src="../../../assets/icons/pre_icons/mo_edit_function..._button.jpg"/> in table to edit function data of continuous DOE definition
+    which will open the function DOE definition window. To edit the geometry user can click on <img src="../../../assets/icons/pre_icons/mo_edit_geometry_button.jpg"/> in DOE table, which will open 2D geometry editor or 3D geo tool.</p>
+  <p>For Discrete DOE definition only DOE variable name can be edited directly in table. For constant and function type discrete DOE variable, user must click on <img src="../../../assets/icons/pre_icons/mo_discrete_edit_button.jpg"/> in table in the respective
+    variable row then discrete DOE definition window will be opened to edit the values.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_43_DOE_table_with_added_DOE_study_variables_details"></a><img height="158" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image043.jpg" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE table with added DOE study variables details</p>
+  <p><br/>
+    <strong>DOE table terminology:</strong></p>
+  <p><strong></strong><strong>Operation Name</strong>: Operation in which DOE Study variable is added.</p>
+  <p><strong>Study Variable</strong>: Name of the Study variable added for DOE study, by default this name is defined by system based on variable selection and can be renamed by the user.</p>
+  <p><strong># of Samples</strong>: Number of study variable samples to prepare total DOE samplings to study. The number of samples will affect the sampling and the number of simulation studies to be carried over.</p>
+  <p><strong>Lower</strong>: Lower bound value of the study variable in case of continuous DOE variables (for Continuous DOE definition).</p>
+  <p><strong>Upper</strong>: Upper bound value of the study variable in case of continuous DOE variables (for Continuous DOE definition).</p>
+  <p><strong>Nominal</strong>: Nominal value of the study variable in case of continuous DOE variables (for Continuous DOE definition), the values of DOE variables defined in nominal project are considered as nominal values.</p>
+  <p><strong>Keyword</strong>: Keyword which define the added study variable.</p>
+  <p><strong>Object/Material</strong>: It displays the object name to which study variable belongs to or it displays the material name if it belongs to any material properties. In case of process data like heat transfer time system does not display any name.</p>
+  <p><strong>Delete Study variable</strong> <img src="../../../assets/icons/pre_icons/mo_delete_symmetry_icon.jpg"/> : User can select added study variable and delete it using this button. </p>
+  <p><strong>Export DOE Table</strong> <img src="../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/>: The DOE study variables definition can be saved to an XML file using this option.</p>
+  <p><strong>Export DOE table to library</strong> <img src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> : This saves the DOE study variables definition to a XML file in user data library. In windows system with user name &quot;user1&quot;
+    the default library path will be &quot;C:\Users\user1\Documents\userDataLib\DOE&quot;.</p>
+  <p><strong>Import DOE Table</strong> <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> : Saved DOE study variable definitions XML file can be imported to redefine the same.</p>
+  <p><strong>Import DOE Table from library</strong> <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>: Saved DOE study variable definitions XML file can be imported from user library to redefine the same.</p>
+  <p><strong>Sort by:</strong> Sort by is used to sort the DOE table display content by operation or by study variables definition order.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_44_DOE_table_details_sorted_by_study_variable_number"></a><img height="202" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image044.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE table details sorted by study variable number</p>
+  <p><br/>
+    <strong>Link To</strong>: DOE Variables can be linked to each other from the right click menu of the selected variable as shown in the <a href="#Fig_53_1_45_Linking_the_two_different_DOE_Variables"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>45.</a>    If DOE variables behavior is similar, then those DOE variables can be linked so that they vary similarly and number of DOE variables for sampling can be reduced. When two variables are linked, in effect they act as single variable and variables for
+    DOE sampling are reduced.</p>
+  <p style="text-align: center"><a id="Fig_53_1_45_Linking_the_two_different_DOE_Variables"></a><img height="447" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image045.jpg" width="725"/></p>
+  <p class="Fig_numb">Linking the two different DOE Variables</p>
+  <h2><a id="53_1_6_Defining_Case_variables"></a>Defining Case variables</h2>
+  <p>The case variable can be defined for all the fields having green ribbon around them (See <a href="#Fig_53_1_46_Adding_case_variable_for_object_temp"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>46.</a>.). Constants, functions
+    and geometry data definition types can be added as case variables. The case variables can only be discrete. Once a case variable is defined then user can observe that the field will be filled with blue color.</p>
+  <p>Defining a case variable is similar to discrete DOE variable definition hence please refer <a href="../52_doe_study/52_1_doe_and_doe_output_operation_setup.htm#Edit_function_Discrete_doe_variable_example">Discrete Input variable</a> to know about defining
+    case variable definition. Below example demonstrates the case variable definition.</p>
+  <p> </p>
+  <p><strong>Example1:</strong> Material property like flow stress which is function of strain, strain rate and temperature can be added as Case variable by offsetting or scaling the function curve. To exercise this example, required files are available
+    at installation path 3D\LABS\Gear_blank, open the Gear_blank.moprj file from <img src="../../../assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg"/>. Simulate the Nominal run, add Optimization study and follow instructions as mentioned
+    below.</p>
+  <p>First add the Case variable by navigating to Workpiece object page and then using right click option on object temperature field select the Add case variable option as shown in <a href="#Fig_53_1_46_Adding_case_variable_for_object_temp"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>46.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_46_Adding_case_variable_for_object_temp"></a><img height="376" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image046.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding case variable for object temp.</p>
+  <p><br/> When we click on “Add case variable” option we will get the Define DOE Variable window and we can observe that only discrete type input can be defined.  By default, we will be having the 3 samples as shown in the <a href="#Fig_53_1_47_Case_variable_definition_window_for_object_temp_data"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>47.</a></p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_53_1_47_Case_variable_definition_window_for_object_temp_data"></a><img height="343" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image047.jpg" width="525"/></p>
+  <p> </p>
+  <p class="Fig_numb">Case variable definition window for object temp. data</p>
+  <p><br/> We are defining the 3 samples in this example. We must define the samples data from the lower value to upper value as shown in the <a href="#Fig_53_1_48_After_defining_the_case_variables_data"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>48.</a>    After defining the case variable data click on ok button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_48_After_defining_the_case_variables_data"></a><img height="343" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image048.jpg" width="525"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">After defining the case variables data</p>
+  <p><br/> Confirm the definition by observing the Blue fill in “Object temp.” field. Right click in the blue coloured area and confirm the definition of sample data. (See <a href="#Fig_53_1_49_Right_click_options_after_defining_the_case_variable"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>49.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_49_Right_click_options_after_defining_the_case_variable"></a><img height="343" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image049.jpg" width="525"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Right click options after defining the case variable</p>
+  <p> </p>
+  <h2><a id="53_1_7_Deleting_Case_variable"></a>Deleting Case variable</h2>
+  <p>Defined case variables will be highlighted by blue color shading around variables field (See <a href="#Fig_53_1_50_Deleting_the_Case_variable"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>50.</a>), right click on the defined
+    variable field gives an option to delete the added case variable. User can also delete the added case variables from “Case variables” table using <img src="../../../assets/icons/pre_icons/mo_delete_symmetry_icon.jpg"/> button or right mouse button
+    menu option on variables listed in study variable column (See <a href="#Fig_53_1_51_Deleting_the_case_variable_from_case_variable_table"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>51.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_50_Deleting_the_Case_variable"></a><img height="343" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image050.jpg" width="525"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deleting the Case variable</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_51_Deleting_the_case_variable_from_case_variable_table"></a><img height="182" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image051.jpg" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deleting the case variable from case variable table</p>
+  <h2><a id="53_1_8_Case_variable_table"></a>Case variable table</h2>
+  <p>Case variable table tabulates the details of case variables defined for each operation as shown in <a href="#Fig_53_1_52_Case_variable_table"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>52.</a> Case variable table includes the
+    details of Operation Name, Study variable (Defined Case variable) Name, Number of samples, Lower, Upper and Nominal values, Keyword and object or material to which it belongs. User can edit the defined Study variable name, # of samples, constant Lower
+    and Upper bound values. For Case variable definition only Study variable name can be edited directly in table, while for constant and function data DOE variable user must click on <img src="../../../assets/icons/pre_icons/mo_discrete_edit_button.jpg"/> in table in the respective variable row, this will open the discrete DOE definition window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_52_Case_variable_table"></a><img height="180" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image052.jpg" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Case variable table</p>
+  <p> </p>
+  <h2><a id="53_1_9_Case_definition_table"></a>Case definition table</h2>
+  <p>User can either use full factorial or user defined methods as sampling methods for case variables. (See <a href="#Fig_53_1_53_Case_definition_table"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>53</a>.)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_53_Case_definition_table"></a><img height="180" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image053.jpg" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">Case definition table</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_54_Full_factorial_samples"></a><img height="353" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image054.jpg" width="725"/></p>
+  <p class="Fig_numb">Full factorial samples</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_55_User_defined_samples"></a><img height="270" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image055.jpg" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">User defined samples</p>
+  <p> </p>
+  <h2><a id="53_1_10_Defining_Shape_optimization_operation"></a>Defining Shape optimization operation</h2>
+  <p>The Shape optimization operation objective is to define pre-defined required state variables that need to be studied to automatically post-process multiple databases.</p>
+  <h3 class="h3_53_1_10_"><a id="53_1_10_1_Operation_selection"></a>Operation selection</h3>
+  <p>Select the Shape optimization operation from operation editor after defining DOE and Case variables to define variables and other settings for post-processing DOE studies.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_56_OPT_Output_for_single_operation"></a><img height="199" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image056.jpg" width="725"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">OPT Output for single operation</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_53_1_57_OPT_output_for_multi_operations"></a><img height="248" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image057.jpg" width="725"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">OPT output for multi operations</p>
+  <p><br/> Operation selection page displays all the operations that are defined in the nominal setup and user can select any one operation (See <a href="#Fig_53_1_56_OPT_Output_for_single_operation"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>56.</a>)
+    or multiple operations (See <a href="#Fig_53_1_57_OPT_output_for_multi_operations"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>57.</a>) by selecting the respective check box and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to define the output for the respective operation. For each operation we can define the Region of Interest, Probes, Output variables, Variable constraints and Fill constraints.</p>
+  <h3 class="h3_53_1_10_"><a id="53_1_10_2_Define_Outputs"></a>Define Outputs</h3>
+  <p>Once operations for which we are going to define outputs are selected then they are listed in the tree as shown in <a href="#Fig_53_1_57_OPT_output_for_multi_operations"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>57.</a> User
+    can select the operation to define outputs, then user can observe output types in property editor window and user need to check the output types for that operation, the selected outputs are added to tree as shown in <a href="#Fig_53_1_58_OPT_outputs_selection_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>58.</a> The
+    output types available are Single output, Transient output and Special output types as shown in <a href="#Fig_53_1_58_OPT_outputs_selection_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>58.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_58_OPT_outputs_selection_window"></a><img src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image058.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">OPT outputs selection window</p>
+  <p><br/>
+    <strong><a id="Defining_Region_of_Interest"></a>Defining Region of Interest:</strong><br/> A Region of Interest (ROI) is a region of an object that could be smaller or larger than the entire object and is used to limit the study to what happens inside
+    the final shape of the part (i.e., machined shape or chip shape). It can be used to study an area to include or exclude for forming feature/defect (end effects, under-fill or fold) and to determine success or failure for the process. (See <a href="#Fig_53_1_59_Under-fill_and_unwanted_area_example"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>59.</a>)
+    Multiple ROI can be added from v11.0 onwards in optimization.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_59_Under-fill_and_unwanted_area_example"></a><img height="418" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image059.jpg" width="700"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Under-fill and unwanted area example</p>
+  <p><br/> Common mesh is one way of defining the ROI. In common mesh all the results of individual DOE&#39;s are interpolated onto a common mesh for the purpose of comparison and response surface generation. (See <a href="#Fig_53_1_60_Common_mesh_concept"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>60.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_60_Common_mesh_concept"></a><img height="365" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image060.jpg" width="475"/></p>
+  <p> </p>
+  <p class="Fig_numb">Common mesh concept</p>
+  <p><br/> To define the ROI region geometry first click on  <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button (See <a href="#Fig_53_1_61_ROI_Definition_window_for_3D"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>61.</a>)
+    then click on <img src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> to create ROI using geometry primitives or import the ROI geometry. After creating the ROI geometry other geometry options like Scale, Check, Reverse and object
+    positioning are activated as shown in<a href="#Fig_53_1_62_After_creating_ROI_geometry_for_3D"> <span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>62.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_61_ROI_Definition_window_for_3D"></a><img src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image061.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">ROI Definition window for 3D</p>
+  <p><br/> ROI can be deleted by using the <img src="../../../assets/icons/pre_icons/mo_delete_symmetry_icon.jpg"/> (Delete ROI) button after selecting the respective ROI as shown in <a href="#Fig_53_1_62_After_creating_ROI_geometry_for_3D"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>62.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_62_After_creating_ROI_geometry_for_3D"></a><img height="359" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image062.jpg" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">After creating ROI geometry for 3D</p>
+  <p><br/>
+    <strong><a id="Probe"></a>Probe:</strong><br/> Probe can be used to obtain the co-ordinate data of the point on the object nearest to the probe position, this option would be helpful to validate the geometry of the object. Multiple probes with different
+    probe types and orientation can be defined.</p>
+  <p><br/> To add a probe and define its data like shape, orientation and position, click on <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button in the Probe page (See <a href="#Fig_53_1_63_Probe_definition_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>63.</a>),</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Select Probe Shape from <strong>Type </strong>pull down menu,</p>
+    </li>
+    <li>
+      <p>Define the Probe size in <strong>Size </strong>field.</p>
+    </li>
+    <li>
+      <p>Define the orientation of the probe in <strong>Approach Direction</strong> field,</p>
+    </li>
+    <li>
+      <p>Define <strong>Start position</strong> Coordinate of the Probe and</p>
+    </li>
+    <li>
+      <p>Click next to<strong> probe output</strong> page to define the outputs.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_63_Probe_definition_window"></a><img height="359" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image063.jpg" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">Probe definition window</p>
+  <p><br/>
+    <strong><a id="Operation_min_max_value"></a>Operation min/max value:</strong><br/> Selected state variable minimum / maximum value is plotted across all steps and all simulations of the selected operation for the selected object.<br/> To select the
+    state variable first click on <img src="../../../assets/icons/pre_icons/mo_add_button_2.jpg"/>  button to add rows and double click on each cell under Variable row to select state variable and double click on the cell in the same row under components
+    to select the maximum or minimum or other directional components and Min/Max to select options like Min., Max., (Absolute)Min., (Absolute)Max., Diff (Max and Min difference), Average and Standard Deviation based on requirement. In <a href="#Fig_53_1_64_Operation_MinMax_state_variable_for_all_steps_selection_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>64.</a>    out of minimum Temperature values of all steps Max. value and out of maximum Effective strain state values of all steps Max. value for workpiece and Top die Z-Load Absolute Max. values are added as output variables across all steps of the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_64_Operation_MinMax_state_variable_for_all_steps_selection_window"></a><img height="500" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image064.jpg" width="397"/></p>
+  <p> </p>
+  <p class="Fig_numb">Operation Min/Max state variable for all step’s selection window</p>
+  <p><br/>
+    <strong><a id="Local_min_max_Value_Summary_min_max_One_step"></a>Local min/max Value (Summary min/max (One step)):</strong><br/> Selected state variable output’s minimum / maximum value is plotted at last step of selected operation for the selected
+    object.</p>
+  <p>To select the state variable first click on <img src="../../../assets/icons/pre_icons/mo_add_button_2.jpg"/> button to add rows and double click on each cell under variable row to select state variable and double click on the cell in the same row under
+    components to select the maximum or minimum or directional components based on requirement. In <a href="#Fig_53_1_65_Summary_Min_Max_state_variable_for_one_step_selection_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>65.</a>    Maximum Effective strain and Effective stress state variables for workpiece object and Top die Z-Load variables are added as Local min/max output of the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_65_Summary_Min_Max_state_variable_for_one_step_selection_window"></a><img height="500" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image065.jpg" width="397"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Summary Min/Max state variable for one step selection window</p>
+  <p><br/>
+    <strong><a id="State_variable_in_regions_State_Variable_minmax_one_step"></a>State variable in regions (State Variable min/max (One step)):</strong><br/> Selected state variable component output’s min/max and other computed value is plotted at last
+    step of selected operation for the selected object, region of interest or probe.<br/> To select the state variable first click on  <img height="21" src="../../../assets/icons/pre_icons/mo_add_button_2.jpg" width="64"/> button to add rows and double
+    click on each cell under Variable row to select state variable and double click on the cells in the same row to select component, Min/Max, Object and Region/Probe under respective columns. For State variable output type, components will be the variable
+    components like Directional values or Effective or Principal, Mean etc. Min/Max will give options like Min., Max., (Absolute)Min., (Absolute)Max., Diff (Max and Min difference), Average and Standard Deviation. In <a href="#Fig_53_1_66_State_variable_Min_Max_within_a_region_for_one_step_selection_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>66.</a>    Maximum Effective stress of whole workpiece object, Maximum Effective strain within the region defined and Maximum Damage within probe are added.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_66_State_variable_Min_Max_within_a_region_for_one_step_selection_window"></a><img height="500" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image066.jpg" width="397"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">State variable Min/Max within a region for one step selection window</p>
+  <p><br/>
+    <strong><a id="Summary_plot_(all_steps_from_selected_operation)"></a>Summary plot (all steps from selected operation):</strong><br/> The selected state variables summary throughout all the steps of the selected operation is plotted.</p>
+  <p>Add state variables using <img height="21" src="../../../assets/icons/pre_icons/mo_add_button_2.jpg" width="64"/> button and select X-axis, state variable, components and object. In <a href="#Fig_53_1_67_Summary_plot_selection_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>67.</a>    we have select the Maximum effective strain with respect to time for workpiece, Minimum temperature with respect to time for workpiece and Z-Load with respect to stroke for Top die.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_67_Summary_plot_selection_window"></a><img height="500" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image067.jpg" width="397"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Summary plot selection window</p>
+  <p><br/>
+    <strong><a id="Probe_output"></a>Probe output:</strong><br/> Probe output can be used to obtain the co-ordinate data of the point on the object nearest to the probe position, this option would be helpful to validate the geometry of the object. Multiple
+    probes with different probe types and orientation can be defined. (See <a href="#Fig_53_1_68_Probe_output_selection_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>68.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_68_Probe_output_selection_window"></a><img height="500" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image068.jpg" width="397"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Probe output selection window</p>
+  <h3 class="h3_53_1_10_"><a id="53_1_10_3_Define_Variable_constraints"></a>Define Variable constraints</h3>
+  <p>Variables Constraints can define constraints by selecting the respective variables from the left side of the window and clicking on the <img src="../../../assets/icons/pre_icons/mo_add_doe_variable_constraint_button.jpg"/> button to add constraint
+    and constraint value as shown in <a href="#Fig_53_1_69_Variable_constraints_definition_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>69.</a> The constraint can be Less than, Greater than or Min-Max difference Less than
+    depending on the variable. Constraints can be applied to object or any Region available in pull down menu as shown in <a href="#Fig_53_1_70_Variable_constraint_for_ROI"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>70.</a> Constraints
+    can be removed by selecting the added constraint from right side window list and clicking on the   <img src="../../../assets/icons/pre_icons/mo_delete_doe_variable_constraint_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_69_Variable_constraints_definition_window"></a><img height="359" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image069.jpg" width="725"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Variable constraints definition window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_70_Variable_constraint_for_ROI"></a><img height="375" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image070.jpg" width="467"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Variable constraint for ROI</p>
+  <p> </p>
+  <h3 class="h3_53_1_10_"><a id="53_1_10_4_Define_Fill_constraints"></a>Define Fill constraints</h3>
+  <p>In Fill constraints window user can check the fill constraints like Complete Fill, Under fill volume ratio, Minimum die distance and No Fold constraint.</p>
+  <p><strong>Complete Fill</strong>: Complete Fill constraint will check the die fill, user can also select the interested region to check the die fill using ROI.</p>
+  <p><strong>Underfill volume ratio:</strong> Run cases can be constrained as pass/fail based on underfill volume ratio compared with specified percentage value.</p>
+  <p><strong>Minimum die distance</strong>: Run cases can also be constrained as pass/fail based on surface nodes distance and comparing with specified value.</p>
+  <p><strong>No folds</strong>: No folds option is used to check the run without fold in selected object or region and constrained as fail if there is a fold.</p>
+  <p>These constraints checks are tabulated as Pass/Fail in DOE post table for easy analysis (See <a href="#Fig_53_1_71_Fill_constraints_Definition_Window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>71.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_71_Fill_constraints_Definition_Window"></a><img height="359" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image071.jpg" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fill constraints Definition Window</p>
+  <h3 class="h3_53_1_10_"><a id="53_1_10_5_Global_Min_Max_(All_steps)"></a>Global Min/Max (All steps)</h3>
+  <p>Selected state variable minimum / maximum value is plotted across all steps of all operations for the selected object.</p>
+  <p>To select the state variable first click on   button to add rows and double click on each cell under Variable row to select state variable and double click on the cell in the same row under components to select the maximum or minimum or other directional
+    components and MIn/Max to select options like Min., Max., (Absolute)Min., (Absolute)Max., Diff (Max and Min difference), Average and Standard Deviation based on requirement. In <a href="53_1_optimization_setup.htm#Fig_53_1_72_Global_Min/Max_state_variable_for_all_steps_selection_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>72.</a>    out of minimum Temperature values of all steps Max. value and out of maximum Effective strain state values of all steps Max. value for workpiece and Top die Z-Load Absolute Max. values are added as global min/max outputs.</p>
+  <p style="text-align: center"><a id="Fig_53_1_72_Global_Min/Max_state_variable_for_all_steps_selection_window"></a><img height="500" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image072.jpg" width="397"/></p>
+  <p> </p>
+  <p class="Fig_numb">Global Min/Max state variable for all steps selection window</p>
+  <h3 class="h3_53_1_10_"><a id="53_1_10_6_Define_Objective_Function"></a>Define Objective Function</h3>
+  <p>The objective function is used to run optimization process using the defined DOE and Case variables. The Objective function can be defined in three types they are,</p>
+  <ol class="Decimal">
+    <li>
+      <p><a href="#Single">Single</a></p>
+    </li>
+    <li>
+      <p><a href="#Weighted_Sum">Weighted sum</a></p>
+    </li>
+    <li>
+      <p><a href="#Equation">Equation</a></p>
+    </li>
+  </ol>
+  <p><br/>
+    <strong><a id="Single"></a>Single</strong><br/> Objective function has to be define by selecting the state variable and its objective for a particular object, operation and specific region of the object can also be selected (See <a href="#Fig_53_1_73_Objective_Function_window_for_single_type"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>73.</a>).Different
+    objective options are available depending on variables and, those are Minimize, Maximize, Minimize Min/Max Difference and Minimize error from target value and Minimize error from target curve. Major variables are grouped to ease the definition, apart
+    from major variables other variables are also available to add as objective function in the respective state variable groups. Now all state variables can be added as objective functions for optimization. Only one objective function is allowed per
+    optimization study.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_73_Objective_Function_window_for_single_type"></a><img height="400" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image073.jpg" width="442"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Objective Function window for single type</p>
+  <p><br/>
+    <strong><a id="Weighted_Sum"></a>Weighted Sum</strong><br/> Using the Weighted sum type objective function, we can define the multiple variable by selecting the respective check box and defining the reference value and scale value. The priority of
+    the multi state variables will be depending on the weight value defined. (See <a href="#Fig_53_1_74_Objective_Function_window_for_Weighted_Sum_type"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>74.</a>) </p>
+  <p style="text-align: center"><a id="Fig_53_1_74_Objective_Function_window_for_Weighted_Sum_type"></a><img height="500" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image074.jpg" width="688"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objective Function window for Weighted Sum type</p>
+  <p><br/>
+    <strong><a id="Equation"></a>Equation</strong><br/> Using the Equation type Objective function, the optimization process is defined as equation from the defined output state variables. We can use the function pull down menu to select the operator.
+    (See <a href="#Fig_53_1_75_Objective_Function_window_for_Equation_type"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>75.</a>) </p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_53_1_75_Objective_Function_window_for_Equation_type"></a><img height="475" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image075.jpg" width="441"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Objective Function window for Equation type</p>
+  <h3 class="h3_53_1_10_"><a id="53_1_10_7_Define_Optimization_controls"></a>Define Optimization controls</h3>
+  <p>The user can select the check box to Enable LHC sampling as shown in the <a href="#Fig_53_1_76_Optimization_control_page"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>76.</a> The LHC (Latin hypercube) sampling is a statistical
+    method for generating a near-random sample of parameter values from the defined DOE and Case variables. The user can select the LHC up to Level 1, 2 &amp; 3. After selecting the level, we must define the multiplier for that respective level and scope
+    reducer using the slider bar. The total LHC runs will be calculated automatically from the above data. The optimization can be stopped or continued after completion LHC runs based on gradient algorithm.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_76_Optimization_control_page"></a><img height="400" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image076.jpg" width="442"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Optimization control page</p>
+  <h3 class="h3_53_1_10_"><a id="53_1_10_8_Define_Stopping_controls"></a>Define Stopping controls</h3>
+  <p>Optimization simulation can be stopped by two stopping controls those are Maximum Simulations and If objective function error is less than defined value as shown in <a href="#Fig_53_1_77_Optimization_stopping_criteria_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>77.</a><br/>    When optimization is started initially 8 times of design variables simulations are simulated to set up response surface and continues depending on simultaneous runs defined in run options until stop criterion is met. It will stop when total simulation
+    runs exceeds or equal to the user defined Max simulation number or when error in objective function value is less than the user specified value in Objective function less than field.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_53_1_77_Optimization_stopping_criteria_window"></a><img height="400" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image077.jpg" width="442"/></p>
+  <p> </p>
+  <p class="Fig_numb">Optimization stopping criteria window</p>
+  <h3 class="h3_53_1_10_"><a id="53_1_10_9_Database_Management"></a>Database Management</h3>
+  <p>DOE / Optimization study involves multiple simulations and requires large amount of storage space. User can manage the size of these projects using options available in Database output page. In Database output page, user can select the steps that can
+    be stored in DB by selecting suitable option. If DOE/ Optimization study is already completed and still the user would like to control the storage space then user can select the suitable option in Database output page and click on <img src="../../../assets/icons/pre_icons/mo_purge_button.jpg"/>button.  (See <a href="#Fig_53_1_78_Optimization_Database_Management_window"><span data-keyref="Chapter_53_1_Optimization_Setup">Fig. 53.1.</span>78.</a>).</p>
+  <p><br/>
+    <strong>Save Only Last Step in Database</strong>: Using this option we can save only Last step data in database.</p>
+  <p><strong>Save First/Last Step in Database</strong>: Using this option we can save only First and Last step data in database.</p>
+  <p><strong>Save First/Last Step of Each operation in Database</strong>: Using this option we can save First and Last step data of Each operation data in database.</p>
+  <p><strong>Save First/Last Step and Remesh steps in Database</strong>: Using this option we can save First step and Last step and Remesh steps data in database.</p>
+  <p><strong>Save All Step in Database</strong>: Using this option we can save data of All Steps in database.</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_53_1_78_Optimization_Database_Management_window"></a><img height="400" src="../../../assets/images/doe_and_optimization/53_optimization_study/53_1_optimization_setup/image078.jpg" width="442"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Optimization Database Management window</p>
+  <p> </p>
+
+</body></html>

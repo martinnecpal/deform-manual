@@ -1,0 +1,265 @@
+---
+lang: sk
+title: "3D Drilling Lab"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.17.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Drilling Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Drilling Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/machining_labs/3d_drilling_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Material_Suite_labs/Material_Suite_Labs.htm"/><meta name="brsprev" value="Documentation_content/Labs/Machining_Labs/3D_Cutting_Lab2.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Drilling Lab">
+        <span>3D Drilling Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3D Drilling Lab</h1>
+  <p><a href="#1_1_Summary">1.1. Summary</a></p>
+  <p><a href="#1_2_Starting_the_3D_machining_wizard">1.2. Starting the 3D machining wizard</a></p>
+  <p><a href="#1_3_Define_Machining_Process_data">1.3. Define Machining Process data</a></p>
+  <p><a href="#1_4_Defining_Drill_bit">1.4. Defining Drill bit</a></p>
+  <p style="margin-left: 20px"><a href="#1_4_1_Drill_bit_object_definition">1.4.1. Drill bit object definition</a></p>
+  <p style="margin-left: 20px"><a href="#1_4_2_Defining_drill_bit_geometry">1.4.2. Defining drill bit geometry</a></p>
+  <p style="margin-left: 20px"><a href="#1_4_3_Assigning_the_tool_material">1.4.3. Assigning the tool material</a></p>
+  <p style="margin-left: 20px"><a href="#1_4_4_Generating_mesh_for_Tool">1.4.4. Generating mesh for Tool</a></p>
+  <p style="margin-left: 20px"><a href="#1_4_5_Defining_BCC_for_Tool">1.4.5. Defining BCC for Tool</a></p>
+  <p><a href="#1_5_Defining_Workpiece">1.5. Defining Workpiece</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_1_Workpiece_object_definition">1.5.1. Workpiece object definition</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_2_Defining_geometry_for_Workpiece">1.5.2. Defining geometry for Workpiece</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_3_Defining_Workpiece_material">1.5.3. Defining Workpiece material</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_4_Workpiece_Mesh_Generation">1.5.4. Workpiece Mesh Generation</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_5_Defining_BCC_for_Workpiece">1.5.5. Defining BCC for Workpiece</a></p>
+  <p><a href="#1_6_Positioning_the_objects">1.6. Positioning the objects</a></p>
+  <p><a href="#1_7_Defining_tool_wear_parameters">1.7. Defining tool wear parameters</a></p>
+  <p><a href="#1_8_Defining_inter-object_relations">1.8. Defining inter-object relations</a></p>
+  <p><a href="#1_9_Defining_step_controls">1.9. Defining step controls</a></p>
+  <p><a href="#1_10_Generating_database">1.10. Generating database</a></p>
+  <p><a href="#1_11_Running_Simulation">1.11.Running Simulation</a> </p>
+  <p><a href="#1_12_Post_Processing_simulation_results">1.12. Post Processing simulation results</a></p>
+  <p> </p>
+  <h2><a id="1_1_Summary"></a>Summary</h2>
+  <p>In this lab, we will demonstrate how to setup drilling lab using 3D Cutting wizard. Drilling simulations in DEFORM are time consuming due to the number of revolutions of a drill necessary to establish characteristic behaviour. Therefore, every effort
+    will be made to optimize problem size. Considerations include keeping the workpiece as small as possible while capturing geometry (both in diameter and thickness), using the largest element which can adequately capture chip geometry, and possibly
+    pre-shaping the workpiece to eliminate the necessity to simulate the transient point penetration before the drill reaches full depth. This tutorial will use the example of a 6mm two flute twist drill running at 400RPM with a 0.15mm/rev feed.</p>
+  <p> </p>
+  <h2><a id="1_2_Starting_the_3D_machining_wizard"></a>Starting the 3D machining wizard</h2>
+  <p>Create a new problem either by selecting <strong>File <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>New Problem</strong> or by clicking the New Problem <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_3DDL1_1_Creating_new_Machining_operation"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>1.</a>) Select &quot; <strong>3D Cutting</strong>&quot; radio
+    button and Unit system as &quot;<strong>SI</strong>&quot; (See <a href="#Fig_3DDL1_1_Creating_new_Machining_operation"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>1.</a>). Define Problem Name as &quot;<strong>3D_drilling</strong>&quot;
+    and click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> button to open a new Problem with 3D Cutting operation in MO wizard.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_1_Creating_new_Machining_operation"></a><img height="527" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Creating new Machining operation</p>
+  <p> </p>
+  <h2><a id="1_3_Define_Machining_Process_data"></a>Define Machining Process data</h2>
+  <p>In the ‘Process’ page, select Cutting type as &#39;<strong>Drilling</strong>&#39;, enter the <strong>Environment temperature</strong> as <strong>20</strong>°C and use default <strong>Convection coefficient </strong>as <strong>0.02 </strong>N/sec/mm/C.
+    Define <strong>Rotational speed </strong>as <strong>400 </strong>rpm and <strong>feed rate</strong> (f) as <strong>0.15 </strong>mm/rev as shown in the <a href="#Fig_3DDL1_2_Setting_up_process_parameters_for_Drilling_operation"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>2.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Tool page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_2_Setting_up_process_parameters_for_Drilling_operation"></a><img height="340" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0002.jpg" width="425"/></p>
+  <p> </p>
+  <p class="Fig_numb">Setting up process parameters for Drilling operation</p>
+  <h2><a id="1_4_Defining_Drill_bit"></a>Defining Drill bit</h2>
+  <h3><a id="1_4_1_Drill_bit_object_definition"></a>Drill bit object definition</h3>
+  <p>In this Tool page, Define the <strong>temperature </strong>as <strong>20</strong>°C and turn on the “<strong>Calculate</strong><strong> tool temperature</strong>” check box so that we can mesh the tool to calculate temperature distribution as shown
+    in the <a href="#Fig_3DDL1_3_Tool_object_page"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>3.</a> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Tool geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_3_Tool_object_page"></a><img height="360" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0003.jpg" width="387"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Tool object page</p>
+  <h3><a id="1_4_2_Defining_drill_bit_geometry"></a>Defining drill bit geometry</h3>
+  <p>In this Insert Geometry page, the user needs to define the tool geometry using the Define primitive link. Using the <img src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> link as shown in the <a href="#Fig_3DDL1_4_Tool_geometry_page"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>4.</a>,
+    we will be opening ‘Drillbit Primitive’ window as shown in the <a href="#Fig_3DDL1_5_Defining_drill_bit_geometry"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>5.</a> click on <img src="../../../assets/icons/pre_icons/mo_generate_2_button.jpg"/> button to create drill bit geometry using the parameters as shown in the <a href="#Fig_3DDL1_5_Defining_drill_bit_geometry"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_4_Tool_geometry_page"></a><img height="330" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0004.jpg" width="521"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tool geometry page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_5_Defining_drill_bit_geometry"></a><img height="372" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining drill bit geometry</p>
+  <h3><a id="1_4_3_Assigning_the_tool_material"></a>Assigning the tool material</h3>
+  <p>In Material Window, we need to load the material from the library. So, click on “Load form Library” option <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> and select <strong>hot forming </strong><strong>die material </strong>category
+    and select &#39;<strong>Carbide(15%Cobalt)</strong>&#39; material from the list to assign the material for tool as shown in the <a href="#Fig_3DDL1_6_Assigning_the_Tool_Material"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>6.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to generate mesh for tool.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_6_Assigning_the_Tool_Material"></a><img height="372" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning the Tool Material</p>
+  <h3><a id="1_4_4_Generating_mesh_for_Tool"></a>Generating mesh for Tool</h3>
+  <p>In Tool mesh page, select the <strong>Use </strong><strong>Relative</strong> <strong>mesh</strong> <strong>size </strong>method. Define <strong>target number of elements</strong> as <strong>20000 </strong>and <strong>size ratio </strong>as <strong>0.3</strong>    as shown in the <a href="#Fig_3DDL1_7_Tool_Mesh_Generation_using_relative_mesh_size"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>7.</a> Click on <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> to generate
+    mesh. Mesh looks like as shown in <a href="#Fig_3DDL1_7_Tool_Mesh_Generation_using_relative_mesh_size"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>7.</a> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to BCC page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_7_Tool_Mesh_Generation_using_relative_mesh_size"></a><img height="400" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0007.jpg" width="430"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tool Mesh Generation using relative mesh size</p>
+  <h3><a id="1_4_5_Defining_BCC_for_Tool"></a>Defining BCC for Tool</h3>
+  <p>In this BCC Page, the user can define Thermal BCCs “<strong>Heat</strong><strong> Exchange with </strong><strong>Environment</strong>” and “<strong>Temperature</strong>”. The default BCC is assigned to the entre outer surface of the drill bit automatically
+    after generating the mesh as shown in the <a href="#Fig_3DDL1_8_Heat_exchange_BCC_over_Tool"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>8.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_8_Heat_exchange_BCC_over_Tool"></a><img height="372" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat exchange BCC over Tool</p>
+  <p> </p>
+  <h2><a id="1_5_Defining_Workpiece"></a>Defining Workpiece</h2>
+  <h3 class="h3_1_5_"><a id="1_5_1_Workpiece_object_definition"></a>Workpiece object definition</h3>
+  <p>In this Workpiece object page, define the temperature as <strong>20</strong>°C and object type as <strong>plastic</strong> as shown in the <a href="#1_9_Defining_step_controls"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>9.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to workpiece geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_9_Workpiece_object_Page"></a><img height="400" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0009.jpg" width="430"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece object Page</p>
+  <h3 class="h3_1_5_"><a id="1_5_2_Defining_geometry_for_Workpiece"></a>Defining geometry for Workpiece</h3>
+  <p>In this Workpiece Geometry page, we need to define the workpiece geometry using the <img src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/>. In workpiece geometry primitive page, select the <strong>cylinder </strong>radio button
+    and define<strong> Diameter</strong>(D) as <strong>12mm</strong>, <strong>Thickness </strong>as <strong>4mm </strong>and <strong>Drill </strong><strong>tip </strong>depth as <strong>3.15mm </strong>as shown in the <a href="#Fig_3DDL1_10_Creating_the_cylinder_workpiece_geometry"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>10.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_10_Creating_the_cylinder_workpiece_geometry"></a><img height="372" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Creating the cylinder workpiece geometry</p>
+  <h3 class="h3_1_5_"><a id="1_5_3_Defining_Workpiece_material"></a>Defining Workpiece material</h3>
+  <p>In Material Window, we need to load the material from the library. So, click on “<strong>Load</strong><strong> form </strong><strong>Library</strong>” option <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> and select <strong>AISI-1045(Machining)</strong>    from the <strong>Steel </strong>category to assign the material for workpiece as shown in the <a href="#Fig_3DDL1_11_Assigning_the_material_for_the_workpiece"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>11.</a> Click
+    <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>  to generate mesh for workpiece.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_11_Assigning_the_material_for_the_workpiece"></a><img height="372" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning the material for the workpiece</p>
+  <p> </p>
+  <h3 class="h3_1_5_"><a id="1_5_4_Workpiece_Mesh_Generation"></a>Workpiece Mesh Generation</h3>
+  <p>After the work piece geometry is generated, in mesh page, using the <strong>absolute mesh size </strong>method define element <strong>size ratio</strong> as <strong>10</strong>, and <strong>Minimum element size</strong> as <strong>0.04</strong> mm as
+    shown in <a href="#Fig_3DDL1_12_Workpiece_mesh_generation_using_absolute_mesh_size"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>12.</a> Click on <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> to complete
+    mesh generation for the Workpiece.</p>
+  <p><strong>Runtime meshing parameters:</strong></p>
+  <p>To set runtime meshing parameters, switch to expert mode using <img src="../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/>. In expert mode select<strong> weighting factors</strong> tab and define <strong>Strain </strong>weight to about <strong>0.65</strong>,
+    <strong>Strain </strong><strong>Rate </strong>weight to about <strong>0.35 </strong>and make other weights to zero (Including mesh windows) as runtime mesh parameters (See the <a href="#Fig_3DDL1_13_Runtime_Workpiece_mesh_generation_weighting_factor_parameters"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>13.</a>).
+    After setting weighing factors, switch to guided mode using <img src="../../../assets/icons/pre_icons/mo_guided_mode.jpg"/>. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to BCC page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_12_Workpiece_mesh_generation_using_absolute_mesh_size"></a><img height="390" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0012.jpg" width="420"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece mesh generation using absolute mesh size</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_13_Runtime_Workpiece_mesh_generation_weighting_factor_parameters"></a><img height="372" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Runtime Workpiece mesh generation weighting factor parameters</p>
+  <h3 class="h3_1_5_"><a id="1_5_5_Defining_BCC_for_Workpiece"></a>Defining BCC for Workpiece</h3>
+  <p>In BCC Page, by default the velocity of all nodes on the circumference of the workpiece are fixed in X, Y and Z directions as shown in the <a href="#Fig_3DDL1_14_Defining_the_velocity_BCC_data"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>14.</a>    Heat exchange boundary conditions are assigned to top and bottom surfaces automatically during mesh generation as shown in the <a href="#Fig_3DDL1_15_Defining_Heat_Exchange_BCC"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>15.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Control page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_14_Defining_the_velocity_BCC_data"></a><img height="372" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining the velocity BCC data</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_15_Defining_Heat_Exchange_BCC"></a><img height="372" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Heat Exchange BCC</p>
+  <p> </p>
+  <h2><a id="1_6_Positioning_the_objects"></a>Positioning the objects</h2>
+  <p>In Control page, click on <strong>&#39;Position objects’</strong> and check the position of Tool. If the Tool is not in contact with Workpiece, position the tool using interference method and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to define tool wear parameters.</p>
+  <p> </p>
+  <h2><a id="1_7_Defining_tool_wear_parameters"></a>Defining tool wear parameters</h2>
+  <p>In Tool wear page, turn on the “<strong>Define</strong><strong> model to calculate tool wea</strong>r” check box and select <strong>Usui </strong>model, use the default parameters for Usui model as shown in the  <a href="#Fig_3DDL1_16_Defining_Tool_Wear_parameters"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>16.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Contact page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_16_Defining_Tool_Wear_parameters"></a><img height="380" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0016.jpg" width="443"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Tool Wear parameters</p>
+  <p> </p>
+  <h2><a id="1_8_Defining_inter-object_relations"></a>Defining inter-object relations</h2>
+  <p>In Contact page, we will use default relations. Click on <strong>Tool - Workpiece </strong>relation Edit button and define shear friction factor as <strong>0.6</strong> and the interface heat transfer coefficient as <strong>40</strong> N/sec/mm/C (as
+    shown in <a href="#Fig_3DDL1_17_Contact_page"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>17.</a>), click on <img src="../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> to generate contacts. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Step Control page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_17_Contact_page"></a><img height="390" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0017.jpg" width="455"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact page</p>
+  <h2><a id="1_9_Defining_step_controls"></a>Defining step controls</h2>
+  <p>In Step control page, define the <strong>drill</strong> <strong>depth </strong>as <strong>3.5mm </strong>and select <strong>User </strong>radio button to set user defined<strong> time step increment</strong> as <strong>0.0005</strong>, keep the rest
+    of the values to default as shown in the <a href="#Fig_3DDL1_18_Step_controls_page_in_GUIDED_Mode"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>18.</a> and proceed to generate the database by clicking  <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_18_Step_controls_page_in_GUIDED_Mode"></a><img height="330" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0018.jpg" width="521"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step controls page in GUIDED Mode</p>
+  <h2><a id="1_10_Generating_database"></a>Generating database</h2>
+  <p>In Generate database page, click on the  <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/>  button to generate the database. Observe messages in Message tab informing database generation status. If there are any errors, we need
+    to correct them before generating Database</p>
+  <h2><a id="1_11_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated switch to the Simulation mode by clicking on <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the operation tree. Click on the <img height="15" src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg" style="cursor: nwse-resize;" width="26"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DDL1_19_Run_Simulation_Window"><span data-keyref="Labs_Machining_Labs-3D_Drilling_Lab">Fig. 3DDL1.</span>19.</a> Use the default <strong>Continue </strong><strong>Run </strong>option
+    to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg"/> button
+    to run the simulation.</p>
+  <p>To define MPI settings, click on <img src="../../../assets/icons/simulator_icons/mo_more_button.jpg"/> button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend
+    on your 3D MPI license).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DDL1_19_Run_Simulation_Window"></a><img height="282" src="../../../assets/images/labs/machining_labs/3d_drilling_lab/image0019.jpg" width="700"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Run Simulation Window</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that  <img src="../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/>  option is checked. User can view the drilling process
+    as the simulation proceeds to the specified drill depth from Simulation graphics.</p>
+  <h2> <a id="1_12_Post_Processing_simulation_results"></a>Post Processing simulation results</h2>
+  <p>When the simulation is completed, review the results by switching to Post mode using the <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> button above the Simulation tool bar. Play through the steps of the simulation and observe
+    the chip formation during drilling process.</p>
+
+</body></html>

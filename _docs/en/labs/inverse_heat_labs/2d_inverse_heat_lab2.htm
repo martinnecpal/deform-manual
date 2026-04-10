@@ -1,0 +1,311 @@
+---
+lang: en
+title: "2D Inverse Heat Lab2"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.15.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Inverse Heat Lab2</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Inverse Heat Lab2</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/inverse_heat_labs/2d_inverse_heat_lab2.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Inverse_Heat_Labs/3D_Inverse_Heat_Lab1.htm"/><meta name="brsprev" value="Documentation_content/Labs/Inverse_Heat_Labs/2D_Inverse_Heat_Lab1.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="2D Inverse Heat Lab2">
+        <span>2D Inverse Heat Lab2</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>2D Inverse Heat Lab 2 : Oil Quenching of Disk</h1>
+  <p><br/>
+    <strong>Problem Summary:</strong></p>
+  <p>This lab will demonstrate how to use the Inverse Heat Transfer Wizard to determine heat transfer coefficients of a disk quench process. Experimentally measured temperature data is needed. Heat transfer coefficients can be functions of temperature or
+    time. Multiple Zones of heat-transfer coefficients are assigned to the disk.</p>
+  <p> </p>
+  <p><a href="#2_1_Starting_a_new_problem">2.1. Starting a new problem</a></p>
+  <p><a href="#2_2_Set_Geometry_type_and_mode">2.2. Set Geometry type and mode</a></p>
+  <p><a href="#2_3_Setting_Process_Conditions">2.3. Setting Process Conditions</a></p>
+  <p><a href="#2_4_Defining_Material">2.4. Defining Material</a></p>
+  <p><a href="#2_5_Defining_Workpiece_Object">2.5. Defining Workpiece Object</a></p>
+  <p><a href="#2_6_Import_geometry">2.6. Import geometry</a></p>
+  <p><a href="#2_7_Generate_mesh">2.7. Generate mesh</a></p>
+  <p><a href="#2_8_Assigning_Material">2.8. Assigning Material</a></p>
+  <p><a href="#2_9_Generating_Structured_Mesh">2.9. Generating Structured Mesh</a></p>
+  <p><a href="#2_10_Temperature_Measurement_Points">2.10. Temperature Measurement Points</a></p>
+  <p><a href="#2_11_Defining_Time_Zones">2.11. Defining Time Zones</a></p>
+  <p><a href="#2_12_HT_Zone_Partitioning">2.12. HT Zone Partitioning</a></p>
+  <p><a href="#2_13_Defining_Heat_Transfer_Zones">2.13. Defining Heat Transfer Zones</a></p>
+  <p><a href="#2_14_Defining_Step_controls">2.14. Defining Step controls</a></p>
+  <p><a href="#2_15_Optimization_control">2.15. Optimization control</a></p>
+  <p><a href="#2_16_Database_Generation">2.16. Database Generation</a></p>
+  <p><a href="#2_17_Optimization">2.17. Optimization</a></p>
+  <p><a href="#2_18_Optimization_results">2.18. Optimization results</a></p>
+  <p> </p>
+  <h2><a id="2_1_Starting_a_new_problem"></a>Starting a new problem</h2>
+  <p>Start a new Inverse Heat Transfer Wizard problem with problem ID <strong>DISK_INVHEAT</strong>.  You can do so by clicking the <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> button and choose “<strong>2D Inverse Heat</strong>”, enter
+    Problem name as <strong><strong>DISK_INVHEAT</strong> </strong> and choose “<strong>English</strong>” for &quot;Unit System&quot; (see <a href="#Fig_2DINVL2_1_Problem_Setup_window"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>1.</a>).
+    You can select the directory under Location filed  and then click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to open Inverse Heat wizard.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_1_Problem_Setup_window"></a><img height="419" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem Setup window</p>
+  <h2><a id="2_2_Set_Geometry_type_and_mode"></a>Set Geometry type and mode</h2>
+  <p>As the 2D Inverse Heat wizard opens, you should see a window as shown in <a href="#FIg_2DINVL2_2_Initialization_Window"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>2.</a> Set “<strong>Geometry </strong><strong>Type</strong>”
+    as “<strong>Axisymmetric</strong>”. If user is interested in calculating transformations or atom content due to diffusion then user can turn on respective check boxes under “Mode” tab. In this lab we will not turn on any check box as we will be calculating
+    only heat transfer co-efficients. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_2DINVL2_2_Initialization_Window"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Initialization Window</p>
+  <h2><a id="2_3_Setting_Process_Conditions"></a>Setting Process Conditions</h2>
+  <p>In this page user can set the environment conditions. If the process involves Quenching and heat transfer then respective check boxes can be turned on to define the environment conditions. Our process involves only quenching and environment temperature
+    is constant, hence <strong>turn</strong><strong> </strong><strong>on</strong> “<strong>Quench</strong>” check box and define <strong>environment</strong> <strong>temperature</strong> as <strong>68</strong>°F (see <a href="#FIg_2DINVL2_3_Setting_up_Process_conditions"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>3.</a>).
+    Click on  <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_2DINVL2_3_Setting_up_Process_conditions"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0003.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Setting up Process conditions</p>
+  <h2><a id="2_4_Defining_Material"></a>Defining Material</h2>
+  <p>In page “<strong>Material</strong> <strong>list</strong>”, choose <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> and in the material library, choose &quot;<strong>Super alloy</strong>&quot; category and load “<strong>INCONEL-718- 11[1700-2050F (925-1120C)]</strong>”
+    as shown in <a href="#Fig_2DINVL2_4_Loading_Material_data_from_library"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>4.</a> (Note that the temperature ranges are only for the plastic data). Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until “Workpiece” page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_4_Loading_Material_data_from_library"></a><img height="373" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Loading Material data from library</p>
+  <h2><a id="2_5_Defining_Workpiece_Object"></a>Defining Workpiece Object</h2>
+  <p>In workpiece page define “Object Temp.” as<strong> 2000</strong><strong>°F</strong> as shown in <a href="#Fig_2DINVL2_5_Workpiece_Object_Definition"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>5.</a> Make sure
+    the object type is <strong>plastic </strong>and Primary Die check box is checked. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_5_Workpiece_Object_Definition"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0005.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Object Definition</p>
+  <h2><a id="2_6_Import_geometry"></a>Import geometry</h2>
+  <p>In <strong>Geometry</strong> page, click on “Load Geometry from File” <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> icon and import geometry file “<strong>INVHEAT_DISK</strong><strong>.</strong><strong>GEO</strong>” from ‘2D/LABS’
+    directory as shown in <a href="#FIg_2DINVL2_6_Geometry_window"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>6.</a> Turn on “Show geometry inside mark” check box and click on <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> label to check and correct the geometry, see <a href="#FIg_2DINVL2_6_Geometry_window"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>6.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_2DINVL2_6_Geometry_window"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0006.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry window</p>
+  <p> </p>
+  <p>Click on <img height="25" src="../../../assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg" width="99"/> and then click <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button to geometry correction pop-up and then click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button to come out of Geometry Correction page, see <a href="#FIg_2DINVL2_7_Check_and_Correct_Geometry_window"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>7.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_2DINVL2_7_Check_and_Correct_Geometry_window"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Check and Correct Geometry window</p>
+  <h2><a id="2_7_Generate_mesh"></a>Generate mesh</h2>
+  <p>While user is in “Mesh” page, expert mode can be used to access the advanced mesh options. Click on <img src="../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> icon in tool bar to change to expert mode and then enter <strong>800 </strong>as
+    <strong>T</strong><strong><strong>a</strong>rget number of elements</strong> in “<strong>General</strong>” tab for unstructured mesh, see <a href="#FIg_2DINVL2_8_Defining_unstructured_mesh"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>8.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button, Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page to assign material.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_2DINVL2_8_Defining_unstructured_mesh"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0008.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining unstructured mesh</p>
+  <h2><a id="2_8_Assigning_Material"></a>Assigning Material</h2>
+  <p>Select material “<strong>INCONEL</strong><strong>-718- 11[1700-2050F (925-1120C)]</strong>” from the material list to assign to workpiece as shown in <a href="#Fig_2DINVL2_9_Assigning_Material"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>9.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_9_Assigning_Material"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0009.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Assigning Material</p>
+  <p> </p>
+  <h2><a id="2_9_Generating_Structured_Mesh"></a>Generating Structured Mesh</h2>
+  <p>The structured surface mesh helps provide better thermal solution accuracy with less computing time. Hence click <img src="../../../assets/icons/pre_icons/mo_back_button.jpg"/> from Material page. We will use <strong>2 layers</strong> of structured
+    surface mesh using coating mesh with thickness of <strong>818 </strong><strong>Microns </strong>and <strong>1116 </strong><strong>microns </strong>for layer 1 and 2 respectively with “<strong>INCONEL</strong><strong>-718- 11[1700-2050F (925-1120C)]”</strong>    material and click on <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button as shown in <a href="#Fig_2DINVL2_10_Structured_mesh_generation_using_Coating_mesh"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>10.</a>    Do not use “Generate Coating” button. Click <img src="../../../assets/icons/pre_icons/mo_yes_button.jpg"/> button for the pop-up “Do you want generate coating mesh?”. After generating mesh Zoom into the top left corner of the object and check generated
+    mesh for structured layers. Meshed object looks as shown in <a href="#Fig_2DINVL2_11_Meshed_Workpiece_After_Generating_Structured_Mesh"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>11.</a> Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until “Temperature Measurement Points” page as default assigned BCC are fine for this lab.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_10_Structured_mesh_generation_using_Coating_mesh"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0010.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Structured mesh generation using Coating mesh</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_11_Meshed_Workpiece_After_Generating_Structured_Mesh"></a><img height="399" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0011.jpg" width="720"/></p>
+  <p> </p>
+  <p class="Fig_numb">Meshed Workpiece After Generating Structured Mesh</p>
+  <h2><a id="2_10_Temperature_Measurement_Points"></a>Temperature Measurement Points</h2>
+  <p>In “Temperature Measurement Points” page, click the button <img src="../../../assets/icons/pre_icons/mo_import_file_icon2.jpg"/> (as indicated in <a href="#Fig_2DINVL2_12_Temperature_measurement_Points"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>12.</a>)
+    and load the file &quot;<strong>InvHeat_Disk_Meas_Pnts.DAT</strong>” from <strong>/2D/LABS</strong>. You should see points in the graphical window as shown below in <a href="#Fig_2DINVL2_12_Temperature_measurement_Points"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>12.</a>    We can notice that 13 temperature measurement points are loaded onto the workpiece from the file.</p>
+  <p>Thermal history data for each point can be defined by clicking on the <img src="../../../assets/icons/pre_icons/mo_inverse_heat_define_button.jpg"/> button in the last column of the table. Click on <img src="../../../assets/icons/pre_icons/mo_inverse_heat_define_button.jpg"/> and load “InvHeat_Disk_Thermal_History_P1” file for point 1 using “Load” button from the /2D/Labs folder and click<img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/>  button (see <a href="#Fig_2DINVL2_13_Thermal_History_Data_window_for_Point_1"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>13.</a>)),
+    similarly load for points 2 to 13 from respective files “InvHeat_Disk_Thermal_History_P2”  to “InvHeat_Disk_Thermal_History_P13” available in /2D/LABS folder. “Define” button in the last column of the table will change into <img src="../../../assets/icons/pre_icons/mo_inverse_heat_edit_button.jpg"/> after you had defined the Thermal History Data for the point. We can use <img src="../../../assets/icons/pre_icons/mo_exam_ all_button.jpg"/> button (see <a href="#Fig_2DINVL2_13_Thermal_History_Data_window_for_Point_1"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>13.</a>)
+    to verify the data defined for all points. <a href="#FIg_2DINVL2_14_Thermal_History_Data_defined_for_all_13_points"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>14.</a> shows the temperature defined for all
+    points. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_12_Temperature_measurement_Points"></a><img height="427" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0012.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature measurement Points</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_13_Thermal_History_Data_window_for_Point_1"></a><img height="425" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Thermal History Data window for Point 1</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_2DINVL2_14_Thermal_History_Data_defined_for_all_13_points"></a><img height="372" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Thermal History Data defined for all 13 points</p>
+  <h2><a id="2_11_Defining_Time_Zones"></a>Defining Time Zones</h2>
+  <p>In time zones page user can define time zones for Quenching and Transfer. Since in this lab we had opted to simulate only “Quench”, only “Quench” time zone definition is available. We would like to simulate the process for 600 sec as the last point
+    of temperature measurement is available from thermal history is at 600 sec. So enter <strong>Start </strong><strong>time </strong>as <strong>0 </strong><strong>sec </strong>and <strong>End </strong><strong>time </strong>as <strong>600 </strong>sec.
+    Thermal History graph of all the points within the specified time can be seen in display area, see <a href="#FIg_2DINVL2_15_Quench_Time_Definition_in_Time_Zone_Page"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>15.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_2DINVL2_15_Quench_Time_Definition_in_Time_Zone_Page"></a><img height="421" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Quench Time Definition in Time Zone Page</p>
+  <h2><a id="2_12_HT_Zone_Partitioning"></a>HT Zone Partitioning</h2>
+  <p>In page “HT Zone Partioning” we can see that system has automatically generated zones based upon temperature points defined, Turn on “Display Zone” check box to verify the zones created. For this lab we will create five zones manually. Inner Radius
+    as Zone1, bottom edge as Zone2, Outer radius and top surface until end point of step fillet as Zone 3, step fillet as Zone4 and Top surface from the inner radius up to start of step fillet as Zone5.</p>
+  <p> </p>
+  <p>We will delete the already defined zones using “Delete All” button. By default entire outer surface edges will be considered as one zone.  After deleting points, we will pick the start point of inner radius as first point, end point of inner radius
+    as second point, bottom edge corner point as third point, end point of step fillet as fourth point and start point of step fillet as fifth point as shown in<a href="#Fig_2DINVL2_16_HT_Zone_Partitioning_Window">  <span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>16.</a>    Click on “Generate Zone” to generate zones. Zones are created between the pair of points selected, see <a href="#Fig_2DINVL2_16_HT_Zone_Partitioning_Window"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>16.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_16_HT_Zone_Partitioning_Window"></a><img height="425" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">HT Zone Partitioning Window</p>
+  <h2><a id="2_13_Defining_Heat_Transfer_Zones"></a>Defining Heat Transfer Zones</h2>
+  <p>In “Heat Transfer Zones” page, we can see that 5 zones are created. Selected zone in the table will display respective zone on the object, see <a href="#Fig_2DINVL2_17_Displaying_Zone1"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>17.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_17_Displaying_Zone1"></a><img height="424" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Displaying Zone1</p>
+  <p> </p>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_iniitialize_htc_button.jpg"/> button to define control points and limits, make sure HTC function is based on temperature. By default system will add some control points, we will delete them for
+    this lab and use eight points. Click on <img src="../../../assets/icons/pre_icons/mo_delete_all_button2.jpg"/> button and then enter eight values <strong>70, 600, 900, 1200, 1400, 1600, 1800, </strong>and <strong>2000</strong>, see <a href="#Fig_2DINVL2_18_Deleting_Unwanted_Zone_3"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>18.</a>    Make sure interpolation method is Linear. We will use <strong>1e-3 for</strong> the <strong>initial </strong><strong>guess</strong>, and use <strong>7e-5</strong> and <strong>5e-3</strong> for <strong>lower </strong>and <strong>upper </strong><strong>bounds</strong>.
+    Click on <img src="../../../assets/icons/pre_icons/mo_apply_button.jpg"/> button and click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close Initializing Window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_18_Deleting_Unwanted_Zone_3"></a><img height="475" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0018.jpg" width="459"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deleting Unwanted Zone #3</p>
+  <p> </p>
+  <p>Control points and limits settings can be set for each zone separately using <img src="../../../assets/icons/pre_icons/mo_edit..._button.jpg"/> button next Zone in “Heat Transfer Zones” page, see <a href="#Fig_2DINVL2_17_Displaying_Zone1"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>17.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until “Step” page.        </p>
+  <h2><a id="2_14_Defining_Step_controls"></a>Defining Step controls</h2>
+  <p>In “Step” page, change “<strong>Temperature</strong><strong> change per step</strong>” to<strong> 5.0 </strong>and leave other values to defaults as shown in <a href="#Fig_2DINVL2_19_Defining_Step_controls"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>19.</a>    Click on .<img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_19_Defining_Step_controls"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0019.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Defining Step controls</p>
+  <h2><a id="2_15_Optimization_control"></a>Optimization control</h2>
+  <p>In “Optimization Control” page as shown in <a href="#Fig_2DINVL2_20_Optimization_control_Window"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>20.</a>, all default settings are fine and make sure that <strong>BFGS </strong>is
+    <strong>checked </strong><strong>on</strong>, click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_20_Optimization_control_Window"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0020.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Optimization control Window</p>
+  <h2><a id="2_16_Database_Generation"></a>Database Generation</h2>
+  <p>In DB Generation page, click on <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> to verify the set up for errors and warnings, you should see a message “Data Valid!” if there are no errors. Click on <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> to generate Database.</p>
+  <p> </p>
+  <h2><a id="2_17_Optimization"></a>Optimization</h2>
+  <p>After Database is generated switch to <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> tab above the object tree and click on <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> to start the optimization,
+    see <a href="#Fig_2DINVL2_21_Running_Optimization"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>21.</a> You can see a message “MULTIPLE OPERATION COMPLETED.” at the end of Simulation Log file after optimization
+    is completed.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_21_Running_Optimization"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0021.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Running Optimization</p>
+  <p> </p>
+  <h2><a id="2_18_Optimization_results"></a>Optimization results</h2>
+  <p>To view optimization results click on <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab. In  Tools” page under “Tools” you can see two icons (see <a href="#Fig_2DINVL2_22_Post_Tools_to_view_Optimization_Results"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>22.</a>),</p>
+  <p> </p>
+  <p><img src="../../../assets/icons/pre_icons/mo_inverse_heat_optimal_htc.jpg"/> <img height="12" src="../../../assets/icons/pre_icons/arrow_front.jpg" width="28"/> To view Optimized HTC values.</p>
+  <p> </p>
+  <p><img src="../../../assets/icons/pre_icons/mo_inverse_heat_local_objective_button.jpg"/> <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> To view simulated temperature values at Temperature Measurement Points.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_22_Post_Tools_to_view_Optimization_Results"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0022.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Post Tools to view Optimization Results</p>
+  <p> </p>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_inverse_heat_optimal_htc.jpg"/> to view optimized HTC values for each zone, a Heat Transfer Zone window will open as shown in <a href="#Fig_2DINVL2_23_Heat_Transfer_Zones_Window_in_Post_Tab"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>23.</a>
+    Select each zone and click on <img src="../../../assets/icons/pre_icons/mo_inverse_heat_view_thermal_icon.jpg"/> to view optimized HTC values, see <a href="#Fig_2DINVL2_24_Optimized_HTC_values_for_Zone_1"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>24.</a>    for Zone #1 optimized HTC values.  </p>
+  <p> </p>
+  <p><img src="../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> can be used to view objective value history, see <a href="#Fig_2DINVL2_25_Objective_Value_History"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>25.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_23_Heat_Transfer_Zones_Window_in_Post_Tab"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0023.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat Transfer Zones Window in Post Tab</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_24_Optimized_HTC_values_for_Zone_1"></a><img height="399" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0024.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Optimized HTC values for Zone #1</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_25_Objective_Value_History"></a><img height="399" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0025.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objective Value History</p>
+  <p> </p>
+  <p>The local objective optimization result can be viewed using <img src="../../../assets/icons/pre_icons/mo_inverse_heat_local_objective_button.jpg"/>, it gives the comparison between the experimental temperature and the simulated temperature values when
+    the optimized heat transfer coefficient values are used. These values can be saved if necessary using <img src="../../../assets/icons/pre_icons/mo_save_icon.jpg"/> button (see <a href="#Fig_2DINVL2_26_Temperature_Measurement_Points_in_Post"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>26.</a>).
+    User can select a point (See <a href="#Fig_2DINVL2_28_Local_Objective_Optimization_Result_for_all_Points"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>28.</a>) and click on <img src="../../../assets/icons/pre_icons/mo_inverse_heat_view_thermal_icon.jpg"/> to plot the comparison between the experimental temperature and the simulated temperature values, <a href="#Fig_2DINVL2_27_Local_Objective_Optimization_Result_for_Point_1"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>27.</a>    shows the comparison between the experimental temperature and the simulated temperature values for Point 1. <img src="../../../assets/icons/pre_icons/mo_inverse_heat_view_all_button.jpg"/>  (see <a href="#Fig_2DINVL2_26_Temperature_Measurement_Points_in_Post"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>26.</a>)
+    can be used to plot comparison between the experimental temperature and the simulated temperature values for all points, see <a href="#Fig_2DINVL2_28_Local_Objective_Optimization_Result_for_all_Points"><span data-keyref="Labs_Inverse_Heat_Labs-2D_Inverse_ Heat_lab2">Fig. 2DINVL2.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_26_Temperature_Measurement_Points_in_Post"></a><img src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0026.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature Measurement Points in Post</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_27_Local_Objective_Optimization_Result_for_Point_1"></a><img height="391" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0027.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Local Objective Optimization Result for Point 1</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINVL2_28_Local_Objective_Optimization_Result_for_all_Points"></a><img height="605" src="../../../assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab2/image0028.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Local Objective Optimization Result for all Points</p>
+
+</body></html>

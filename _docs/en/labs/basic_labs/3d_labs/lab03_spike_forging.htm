@@ -1,0 +1,614 @@
+---
+lang: en
+title: "Lab03 Spike Forging"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.4.2.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab03 Spike Forging</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab03 Spike Forging</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/basic_labs/3d_labs/lab03_spike_forging.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Basic_labs/3D_Labs/Lab04_Steering_Link.htm"/><meta name="brsprev" value="Documentation_content/Labs/Basic_labs/3D_Labs/Lab02_Square_Ring.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Lab03 Spike Forging">
+        <span>Lab03 Spike Forging</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 3. Spike Forging</h1>
+  <p><br/>
+    <a href="#3_1_Spike_Forging_-_Transfer_from_Furnace_to_Dies">3.1.  Spike Forging - Transfer from Furnace to Dies</a></p>
+  <p><a href="#3_2_Spike_Forging_-_Dwell_On_Bottom_Die">3.2.  Spike Forging - Dwell On Bottom Die</a></p>
+  <p><a href="#3_3_Spike_Forging_-_Forging_Blow1">3.3.  Spike Forging - Forging Blow1</a></p>
+  <p><a href="#3_4_Spike_Forging_-_Die_Change_and_Blow2">3.4.  Spike Forging - Die Change and Blow2</a></p>
+  <p> </p>
+  <p>In four operations, a hot spike forging will be modeled. Since the process is hot, the most accurate simulation will model not only the forging operation but also any heat transfer operations that occur. The entire process will be divided as follows:</p>
+  <ul class="Disc">
+    <li>
+      <p>Heat transfer operation will model a 10 second transfer of the billet from the furnace to the dies. This is solely a heat transfer simulation.</p>
+    </li>
+    <li>
+      <p>Dwelling Operation will model the 2 second dwell period of the billet resting on the bottom die prior to forging. This is also a heat transfer simulation.</p>
+    </li>
+    <li>
+      <p>Forming operation will model the first blow and do a Die change for Second Blow of a two blow forging process.</p>
+    </li>
+  </ul>
+  <p>To perform Die Stress for this setup, please refer to Die Stress Wizard lab 2.</p>
+  <p>  </p>
+  <p>Since the billet and dies are axisymmetric, the process could be modeled in 2D. However, in order to further explore symmetry and other important 3D concepts, the process will be modeled in 3D using 1/4 symmetry for the billet and the dies.</p>
+  <p> </p>
+  <h2><a id="3_1_Spike_Forging_-_Transfer_from_Furnace_to_Dies"></a>Spike Forging - Transfer from Furnace to Dies</h2>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/>  icon. The Problem Setup window will appear as shown in <a href="#Fig_3DL3_1_Assigning_problem_name"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>1.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot; radio
+    button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot;<strong>Spike_Forging</strong>&quot; and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not
+    turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated
+    Manufacturing Process.</p>
+  <p> </p>
+  <p>MO wizard will open at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we use ‘<strong>Spike_Forging</strong>’ as the project name. User
+    can also change the Unit system (File menu selected unit system will be selected by default) and add operation by selecting from First operation pull down list and checkbox. Using copy Existing project option we can import previous saved projects
+    as new project. Click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_1_Assigning_problem_name"></a><img height="419" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning problem name</p>
+  <p> </p>
+  <p>Multiple Operation wizard will open. Add 3D Heat Transfer operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to <strong>3D Heat Transfer</strong>    or user can also add by drag and drop into the Operation Editor. (See <a href="#Fig_3DL3_2_MO_Wizard_Window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>2.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_2_MO_Wizard_Window"></a><img height="434" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO Wizard Window</p>
+  <h3>Assign Heat transfer Type</h3>
+  <p>Since we are doing Air transfer operation, select the Heat transfer type as <strong>Transfer through Air</strong>. click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3>Assign Process Condition</h3>
+  <p>Define <strong>heat </strong><strong>transfer </strong><strong>time</strong> as <strong>10</strong> sec and keep rest other fields as it is. (See <a href="#Fig_3DL3_3_Assigning_Transfer_operation_Process_condition"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>3.</a>)
+    . Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_3_Assigning_Transfer_operation_Process_condition"></a><img height="420" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0003.jpg" width="483"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Assigning Transfer operation Process condition</p>
+  <h3>Objects</h3>
+  <p>In this initial heat transfer simulation, the billet will be getting transferred from the furnace to the dies. For this operation by default only one object will be added in list, use the default selection and (see <a href="#Fig_3DL3_4_Objects_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>4.</a>)
+    click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_4_Objects_window"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0004.jpg" width="472"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objects window</p>
+  <h3>Defining Object Temperature</h3>
+  <p>In Workpiece page Define <strong>Object temperature </strong>as <strong>2000</strong>°F as shown in <a href="#Fig_3DL3_5_Defining_Workpiece_temperature"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>5.</a> Click  on<img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_5_Defining_Workpiece_temperature"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0005.jpg" width="472"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Workpiece temperature</p>
+  <h3>Import Geometry</h3>
+  <p>In Geometry page, click on import geometry from library option (<img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>) and import the <strong>Spike_Billet.STL</strong> file from DEFORM installed folder \3d\LABS directory as
+    shown in <a href="#Fig_3DL3_6_Importing_Geometry"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>6.</a> Use <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> action label to check the Geometry. A perfect geometry
+    should display message as shown in <a href="#Fig_3DL3_7_Geometry_Checking_popup"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>7.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_6_Importing_Geometry"></a><img height="436" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0006.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Importing Geometry</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_7_Geometry_Checking_popup"></a><img height="436" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0007.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry Checking popup</p>
+  <p> </p>
+  <h3>Assigning Symmetry Conditions</h3>
+  <p>Click on the <img src="../../../../assets/icons/pre_icons/mo_symmetry_planes_label.jpg"/> option, select one of the symmetry planes of the Workpiece and click the to define planar symmetry as shown in <a href="#Fig_3DL3_8_Assigning_Planar_symmetry_to_the_workpiece"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>8.</a>    Repeat this for the other symmetry plane then click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_8_Assigning_Planar_symmetry_to_the_workpiece"></a><img height="437" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Planar symmetry to the workpiece</p>
+  <p> </p>
+  <h3>Meshing the Workpiece</h3>
+  <p>Switch to Expert mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> (Switch to expert mode) icon from the tool bar. Expert mode will provide more options for detailed settings.</p>
+  <p>In Mesh page, Select Absolute type, set the <strong>Min Element Size</strong> to <strong>0.04 </strong>and also set the <strong>Size </strong><strong>Ratio</strong> to <strong>3</strong>. After changing these settings, click on <img height="17" src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg" width="93"/> . Click <img src="../../../../assets/icons/pre_icons/mo_yes_button.jpg"/> for Default Boundary condition popup. (See <a href="#FIg_3DL3_9_Defining_Mesh_Data"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>9.</a>) Click
+    on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_3DL3_9_Defining_Mesh_Data"></a><img height="439" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Mesh Data</p>
+  <p> </p>
+  <h3>Assigning Material to the Workpiece</h3>
+  <p>In Material Window, click on  to Load material data from Library <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> and load &#39;<strong>AISI-1025[1800-2200F(1000-1200C)]</strong>&#39; material from  <strong>Steel </strong>category
+    by clicking <img src="../../../../assets/icons/pre_icons/mo_load_button.jpg"/> button as shown in <a href="#Fig_3DL3_10_Material_Window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>10.</a> Select the added material from window
+    to assign it to the workpiece as shown in <a href="#Fig_3DL3_11_Assigning_Material_to_workpiece"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>11.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_10_Material_Window"></a><img height="480" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0010.jpg" width="428"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material Window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_11_Assigning_Material_to_workpiece"></a><img height="400" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0011.jpg" width="432"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Assigning Material to workpiece</p>
+  <h3>Boundary Conditions</h3>
+  <p>For this lab, Assigned Default Boundary conditions are OK for Workpiece in this setup (see <a href="#Fig_3DL3_12_Boundary_Conditions_Window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>12.</a>). Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Step page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_12_Boundary_Conditions_Window"></a><img height="437" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0012.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Boundary Conditions Window</p>
+  <p> </p>
+  <h3>Setting Step Controls</h3>
+  <p>In Step Definition define Set the <strong>Number of Simulation Steps</strong> to <strong>50</strong>, the <strong>Step </strong><strong>Increment</strong> <strong>to</strong> <strong>Save </strong>at <strong>5 </strong>and Solution step definition <strong>Time </strong>as
+    <strong>0.2</strong> sec (see <a href="#Fig_3DL3_13_Simulation_Step_Controls_Window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>13.</a>). Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_13_Simulation_Step_Controls_Window"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0013.jpg" width="468"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Step Controls Window</p>
+  <p> </p>
+  <h3>Generate Database</h3>
+  <p>By selecting the <strong>File </strong>menu <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Export </strong>option, save a keyword file for the problem as &quot;<strong>Spike_Air_transfer</strong>&quot;.</p>
+  <p> </p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> action label to check the problem. Generate database by clicking <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> action label.</p>
+  <h3>Running Simulation</h3>
+  <p>Once the database has been generated, switch to the Simulation mode by selecting the <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the object tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label under the simulation tab,  Run Options dialog will open as shown in <a href="#Fig_3DL3_14_Run_Simulation_Window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>14..</a> Use the default <strong>Continue Run</strong>    option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_14_Run_Simulation_Window"></a><img height="303" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation Window</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked. (See <a href="#Fig_3DL3_15_Simulation_Message_File"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>15.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_15_Simulation_Message_File"></a><img height="500" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0015.jpg" width="501"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation Message File</p>
+  <p> </p>
+  <h3>Post processing</h3>
+  <p>When the simulation is complete, review the results by switching to Post mode using the <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> button above the Simulation tool bar.</p>
+  <p>Plot Temperature State variable <img src="../../../../assets/icons/post_icons/mo_temp_sv.jpg"/>. Also, right-click on the Color Bar in the DISPLAY window and select <strong>Temperature </strong>as the Color Bar Type. This provides a more intuitive
+    color scheme when viewing temperatures.</p>
+  <p> </p>
+  <p>Play through the steps of the simulation and look at how the Billet cools down as it is transferred from the furnace to the dies. (See <a href="#Fig_3DL3_16_Post_processor_window_with_Temperature_plot"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>16.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_16_Post_processor_window_with_Temperature_plot"></a><img height="436" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Post processor window with Temperature plot</p>
+  <p> </p>
+  <p>Now, select last step in Step browser and click on <img src="../../../../assets/icons/pre_icons/mo_pre_mode_button.jpg"/> button to continue the setup.</p>
+  <p> </p>
+  <h2><a id="3_2_Spike_Forging_-_Dwell_On_Bottom_Die"></a>Spike Forging - Dwell On Bottom Die</h2>
+  <p>In earlier operation, workpiece was transferred from the furnace to the dies. Once the workpiece gets to the dies, it will rest on the bottom die for 2 seconds prior to forging operation. This dwell will be modeled in this operation. By selecting Batch
+    mode setup type the dwell operation will be set up.</p>
+  <p>Add 3D Heat Transfer operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to 3D Heat Transfer or can also be added by drag and drop into
+    the Operation editor as shown in <a href="#Fig_3DL3_17_MO_wizard_with_two_operations"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>17.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_17_MO_wizard_with_two_operations"></a><img height="439" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO wizard with two operations</p>
+  <p> </p>
+  <p>Select 2nd operation from Operation editor, Setup type popup will appear and click on <img src="../../../../assets/icons/pre_icons/mo_no_batch_setup_button.jpg"/> mode button (since we are setting up Dwell operation in Batch mode). See <a href="#Fig_3DL3_18_Setup_type_selection_popup"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>18.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_18_Setup_type_selection_popup"></a><img height="431" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Setup type selection popup</p>
+  <p> </p>
+  <p>In Heat transfer page, by default <strong>Rest on </strong><strong><strong>Die</strong> </strong>Heating type will be selected if not select Rest on Die Heat transfer type. Previous operation settings will be carried over the operation see <a href="#Fig_3DL3_19_Heat_Transfer_type_selection_page"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>19.</a>    Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_19_Heat_Transfer_type_selection_page"></a><img height="437" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat Transfer type selection page</p>
+  <h3 class="h3_3_2_">Process condition</h3>
+  <p>Define <strong>Resting </strong><strong>Time</strong> as <strong>2</strong> Sec, as the workpiece will rest on the bottom die for 2 seconds (See <a href="#Fig-3DL3_20_Resting_operation_Process_Condition_page"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>20.</a>).
+    Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Objects page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig-3DL3_20_Resting_operation_Process_Condition_page"></a><img height="350" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0020.jpg" width="487"/></p>
+  <p> </p>
+  <p class="Fig_numb">Resting operation Process Condition page</p>
+  <p> </p>
+  <h3 class="h3_3_2_"> Adding Objects</h3>
+  <p>In Object page, by default 3 objects will be added. Depending upon the number of objects required for the simulation, user can add as many dies as needed by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button.
+    For this lab, we will use 3 objects (workpiece and 2 dies) (see <a href="#Fig_3DL3_21_Objects_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>21.</a>). Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_21_Objects_window"></a><img height="350" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0021.jpg" width="487"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objects window</p>
+  <p> </p>
+  <p>Since we are continuing into heat dwelling operation from Heat transfer operation, Workpiece is automatically considered as read from DB object. As the object is read from DB type, all the data like temperature, mesh and BCC of the Object will be carried
+    over from previous operation (see <a href="#Fig_3DL3_22_Workpiece_as_Read_From_DB_object"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>22.</a>). Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Top
+    die page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_22_Workpiece_as_Read_From_DB_object"></a><img height="400" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0022.jpg" width="520"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece as Read From DB object</p>
+  <p> </p>
+  <h3 class="h3_3_2_">Top Die</h3>
+  <p>In, Top Die page, user can define required object temperature for Top die. For this lab default temperature <strong>300°F</strong> is OK (see <a href="#Fig_3DL3_23_Top_die_object_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>23.</a>).
+    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_23_Top_die_object_window"></a><img height="400" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0023.jpg" width="520"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die object window</p>
+  <h4>Import Geometry</h4>
+  <p>In Geometry page, click on import geometry from library option (<img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>) and import the <strong>Spike_Topdie1.STL</strong> file from DEFORM installed folder \3D\LABS directory. Use
+    <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> button to check the Geometry. Click on <img src="../../../../assets/icons/pre_icons/mo_symmetry_planes_label.jpg"/> option, define planar symmetry and click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> (see <a href="#Fig_3DL3_24_Assigned_Top_Die_plane_Symmetry"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>24.</a>). Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_24_Assigned_Top_Die_plane_Symmetry"></a><img height="436" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0024.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Top Die plane Symmetry</p>
+  <h4>Generate Mesh</h4>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button and select yes in Default Boundary condition popup, a mesh with 28000 elements is generated.</p>
+  <h4>Assigning material Data</h4>
+  <p>In Material Window, click on <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> to Load material data from Library and load &#39;<strong>AISI-H-13</strong>&#39; material from <strong>Die_material</strong> category by clicking
+    <img src="../../../../assets/icons/pre_icons/mo_load_button.jpg"/> button as shown in <a href="#Fig-3DL3_25_Material_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>25.</a> Select the added material from window to assign
+    it to Top Die as shown in <a href="#Fig_3DL3_26_Assigning_Material_to_Top_Die"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>26.</a> Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig-3DL3_25_Material_window"></a><img height="500" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0025.jpg" width="397"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Material window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_26_Assigning_Material_to_Top_Die"></a><img height="325" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0026.jpg" width="459"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Material to Top Die</p>
+  <h4>Assigning BCC</h4>
+  <p>Assigned Default Heat Exchange with Environment Boundary conditions for Top die are OK ( see <a href="#Fig_3DL3_27_Assigned_Heat_exchange_Boundary_conditions_for_Top_Die"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>27.</a>), click
+    <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Bottom Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_27_Assigned_Heat_exchange_Boundary_conditions_for_Top_Die"></a><img height="437" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0027.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Heat exchange Boundary conditions for Top Die</p>
+  <p> </p>
+  <h3 class="h3_3_2_">Bottom Die</h3>
+  <p>For this lab, default temperature 300°F is OK for Bottom die (see <a href="#Fig_3DL3_28_Bottom_Die_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>28.</a>), click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_28_Bottom_Die_window"></a><img height="400" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0028.jpg" width="479"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Bottom Die window</p>
+  <h4 class="h4_3_2_4_1">Import Geometry</h4>
+  <p>In Geometry page, click on import geometry from library option (<img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>) and import the <strong>Spike_BottomDie.STL</strong> file from DEFORM installed folder \3d\LABS directory.
+    Use <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> button to check the Geometry. Click on <img src="../../../../assets/icons/pre_icons/mo_symmetry_planes_label.jpg"/> option, define planar symmetry and click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> (see <a href="#Fig_3DL3_29_Bottom_Die_Plane_symmetry_page"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>29.</a>) Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_29_Bottom_Die_Plane_symmetry_page"></a><img height="441" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0029.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bottom Die Plane symmetry page</p>
+  <h4 class="h4_3_2_4_1">Generate Mesh</h4>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button, select <img src="../../../../assets/icons/pre_icons/mo_yes_button.jpg"/> in Default Boundary condition popup, a mesh with 30500 elements is generated. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h4 class="h4_3_2_4_1">Assigning material Data</h4>
+  <p>Select the <strong>AISI-H-13</strong> material from Material list to assign it to Bottom Die as shown in  <a href="#Fig_3DL3_26_Assigning_Material_to_Top_Die"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>26.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h4 class="h4_3_2_4_1">Assigning BCC</h4>
+  <p>Assigned Default Heat Exchange with Environment Boundary conditions for Bottom die are OK, see <a href="#Fig_3DL3_30_Assigned_Heat_exchange_Boundary_conditions_for_Bottom_Die"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>30.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until scheduled positioning page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_30_Assigned_Heat_exchange_Boundary_conditions_for_Bottom_Die"></a><img height="437" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0030.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Heat exchange Boundary conditions for Bottom Die</p>
+  <p> </p>
+  <h3 class="h3_3_2_">Scheduled Positioning</h3>
+  <p>Workpiece needs to be positioned so that it is resting on top of the Bottom Die. Since workpiece is read from DB type, it needs to be positioned by scheduled positioning. To schedule position click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button and select <img src="../../../../assets/icons/pre_icons/mo_interference_radio_button.jpg"/>. Change the Positioning Object to the <strong>Workpiece </strong>and the Reference to the <strong>Bottom </strong><strong>Die</strong>. Select the
+    Approach Direction to<strong> -Z </strong>as shown in <a href="#Fig_3DL3_31_Object_positioning_Window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>31.</a> and then click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Defined scheduled positioning will appears as shown in <a href="#Fig_3DL3_32_Scheduled_Positioning_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>32.</a> and click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_31_Object_positioning_Window"></a><img height="400" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0031.jpg" width="479"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object positioning Window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_32_Scheduled_Positioning_window"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0032.jpg" width="491"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scheduled Positioning window</p>
+  <p> </p>
+  <h3 class="h3_3_2_">Inter-Object relations</h3>
+  <p>Select <strong>user </strong>type contact and click on <img src="../../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/> button. It will add the relationship between the Workpiece, Top Die and Bottom Die as shown in <a href="#Fig_3DL3_33_Inter-object_relations_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>33.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_33_Inter-object_relations_window"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0033.jpg" width="491"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-object relations window</p>
+  <p> </p>
+  <p>Highlight the Bottom Die – Workpiece relationship and click the <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> button to modify the relationship. In the friction section of the screen (see <a href="#Fig_3DL3_34_Inter_Object_Relation_Thermal_page"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>34.</a>),
+    there is a pull-down menu that allows the user to choose the appropriate friction conditions of Heat transfer processes. Under Thermal tab select <strong>Free Resting type</strong> Heat transfer coefficient in List. <strong>0.0002 </strong>value will
+    be added to Heat transfer coefficient field.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_34_Inter_Object_Relation_Thermal_page"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0034.jpg" width="491"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter Object Relation Thermal page</p>
+  <p> </p>
+  <p>Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to go back to Inter-Object window, since the Problem setup type is Batch mode Contact will generate while generating Database. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Step page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_35_Inter_object_relation_window"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0035.jpg" width="491"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter object relation window</p>
+  <p> </p>
+  <h3 class="h3_3_2_">Setting Simulation Controls</h3>
+  <p>In Step Definition, Set the <strong>Number of steps</strong> to <strong>10</strong>, the <strong>Step Increment </strong>to <strong>5</strong> and <strong>Solution step definition</strong> <strong>Time </strong>to<strong> 0.2 sec</strong> (see <a href="#Fig_3DL3_36_Step_controls_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>36.</a>).
+    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_36_Step_controls_window"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0036.jpg" width="491"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step controls window</p>
+  <h3 class="h3_3_2_">Generate Database</h3>
+  <p>When we visit Generate Database page, objects will be positioned as per defined Scheduled positioning data (see <a href="#Fig_3DL3_37_Generate_Database"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>37.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_37_Generate_Database"></a><img height="437" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0037.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Generate Database</p>
+  <p> </p>
+  <p>By selecting the <strong>File </strong>menu <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Export</strong><strong> </strong>option, Save the Keyword File as &quot;<strong>Spike_Dwelling</strong>&quot;.</p>
+  <p> </p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> action label to check the problem. Generate database by clicking <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> action label.</p>
+  <p> </p>
+  <p>Once the database has been generated, switch to the Simulation mode by selecting the <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the object tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label under the simulation tab,  Run Options dialog will open as shown in <a href="#Fig_3DL3_38_Run_Simulation_Popup"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>38.</a>. Use the default <strong>Continue Run</strong>    option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_38_Run_Simulation_Popup"></a><img height="302" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0038.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Run Simulation Popup</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked.</p>
+  <h3 class="h3_3_2_">Post processing</h3>
+  <p>When the simulation has finished, click on <img height="20" src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg" width="151"/>. In Step Browser click  <img src="../../../../assets/icons/pre_icons/mo_all_button.jpg"/> on button to view
+    all steps.  </p>
+  <p>To better view the chilling of the workpiece on the die, select the workpiece in the Object Tree and click the Single object mode <img src="../../../../assets/icons/pre_icons/mo_show_single_obj_icon.jpg"/> icon. Only the workpiece will be shown in
+    the DISPLAY window. Select Temperature (<img src="../../../../assets/icons/post_icons/mo_temp_sv.jpg"/>) state variable and right-click on the Color Bar and select <strong>Temperature </strong>as the <strong>Color Bar</strong> Type. (See <a href="#FIg_3DL3_39_Temperature_state_variable_plot_for_workpiece"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>39.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_3DL3_39_Temperature_state_variable_plot_for_workpiece"></a><img height="435" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0039.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature state variable plot for workpiece</p>
+  <p> </p>
+  <p>Play through the steps of the simulation to look at the workpiece temperature. At Step -51, the position of the workpiece will shift downward where it was rested on the bottom die. Note how the base of the workpiece chills from Step -51 to Step 60 where
+    it is in contact with the die. Turn on the Bottom Die and look at it&#39;s temperature distribution. Observe how the die heats up during the 2 second dwell. (See <a href="#Fig_3DL3_40_Temperature_State_variable_plot_for_bottom_Die"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>40.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_40_Temperature_State_variable_plot_for_bottom_Die"></a><img height="450" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0040.jpg" width="716"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature State variable plot for bottom Die</p>
+  <p> </p>
+  <p>Now, select last step in Step browser and click on <img src="../../../../assets/icons/pre_icons/mo_pre_mode_button.jpg"/> button to continue the setup.</p>
+  <h2><a id="3_3_Spike_Forging_-_Forging_Blow1"></a>Spike Forging - Forging Blow1</h2>
+  <p>In the previous operations, the workpiece underwent furnace transfer and dwell on the bottom die. The last step of the Dwell will be loaded into the Pre-processor mode and the first forging blow will be set up.</p>
+  <p> </p>
+  <p>Add 3D Forming operation from the Explorer Operations list. Add the operation by clicking on 3D Forming <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button or can also be added by drag and drop into the Operation editor
+    as shown in <a href="#Fig_3DL3_41_Adding_Forming_operation_to_the_Operation_Editor"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>41.</a> Select Forming operation from Operation editor, Setup type popup will appear and click on
+    <img src="../../../../assets/icons/pre_icons/mo_no_batch_setup_button.jpg"/> button in Popup. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until objects page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_41_Adding_Forming_operation_to_the_Operation_Editor"></a><img height="430" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0041.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Forming operation to the Operation Editor</p>
+  <h3 class="h3_3_3_">Add objects</h3>
+  <p>By default the three objects from the previous operation will be displayed. If not, by selecting <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button, add three objects as shown in <a href="#Fig_3DL3_42_Adding_Objects"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>42.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_42_Adding_Objects"></a><img src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0042.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Adding Objects</p>
+  <h3 class="h3_3_3_">Workpiece</h3>
+  <p>In workpiece page, select &quot;<strong>Read from DB</strong>&quot; radio button as shown in <a href="#Fig_3DL3_43_Selecting_Workpiece_as_read_from_DB"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>43.</a>  Since it is a read from
+    DB object, all the data of this object will be carried over to this operation from previous operations. Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Top Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_43_Selecting_Workpiece_as_read_from_DB"></a><img height="400" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0022.jpg" width="520"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Selecting Workpiece as read from DB</p>
+  <p> </p>
+  <h3 class="h3_3_3_">Top Die</h3>
+  <p>In Top Die page, select &quot;<strong>Read from DB</strong>&quot; radio button. Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Movement page.</p>
+  <h4 class="h4_3_3_4_"><strong>Assigning Die Movement</strong></h4>
+  <p><strong></strong>In Movement Page, Set a <strong>Speed </strong>of <strong>2</strong> in/sec in the <strong>-Z</strong> Direction as shown in <a href="#Fig_3DL3_44_Movement_control_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>44.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Bottom Die page.</p>
+  <p style="text-align: center"><a id="Fig_3DL3_44_Movement_control_window"></a></p>
+  <p style="text-align: center"><img height="480" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0044.jpg" width="490"/></p>
+  <p> </p>
+  <p class="Fig_numb">Movement control window</p>
+  <h3 class="h3_3_3_">Bottom Die</h3>
+  <p>In Bottom Die page, select &quot;<strong>Read from DB</strong>&quot; radio button. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Scheduled positioning page.</p>
+  <h3 class="h3_3_3_">Scheduled Positioning the Top Die</h3>
+  <p>In Scheduled positioning page, Click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button and select <img src="../../../../assets/icons/pre_icons/mo_interference_radio_button.jpg"/> radio button. Change the Positioning Object
+    to the <strong>Top Die</strong> and the Reference to the <strong>workpiece</strong>. Change the Approach Direction to <strong>-Z</strong> and then click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> (see <a href="#Fig_3DL3_45_Scheduled_positioning_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>45.</a>)
+    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_45_Scheduled_positioning_window"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0045.jpg" width="511"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scheduled positioning window</p>
+  <h3 class="h3_3_3_">Inter-Object relations</h3>
+  <p>In Inter-Object window, click on <img src="../../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/> button. Default relations get added as shown in <a href="#Fig_3DL3_46_Inter-Object_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>46.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_46_Inter-Object_window"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0046.jpg" width="511"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Inter-Object window</p>
+  <p> </p>
+  <p>The Thermal data needs to be modified so that a Forming heat transfer coefficient is used instead of the Free resting coefficient used in the previous operation. The default heat transfer coefficient for hot forming  is added automatically which is
+    used in this lab.</p>
+  <p> </p>
+  <p>Friction needs to be defined between the workpiece and the dies since deformation will now be occurring. Highlight the first relationship in the table and click <img src="../../../../assets/icons/pre_icons/mo_edit_button.jpg"/>. On the <strong>Deformation </strong><strong>tab</strong>,
+    use the friction pull-down menu to select <strong>Hot forging (lubricated) </strong>from the list as shown in <a href="#Fig_3DL3_47_Inter-Object_Data_Deformation_definition_Window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>47.</a>,
+    then click on <strong>Thermal </strong><strong>tab </strong>and Select <strong>Forming </strong>in pull down menu (see <a href="#Fig_3DL3_48_Inter-Object_Data_Thermal_definition_Window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>48.</a>),
+    then click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Back in the INTER-OBJECT window, click on <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> to change the other relationship to these settings.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_47_Inter-Object_Data_Deformation_definition_Window"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0047.jpg" width="511"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-Object Data Deformation definition Window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_48_Inter-Object_Data_Thermal_definition_Window"></a><img height="410" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0048.jpg" width="511"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-Object Data Thermal definition Window</p>
+  <p> </p>
+  <p>Contact will be generated while generating Database, Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Step page.</p>
+  <h3 class="h3_3_3_">Assigning Step Controls</h3>
+  <p>Set the <strong>Number of Simulation Steps</strong> to <strong>30 </strong>and the <strong>Step Increment to Save</strong> to <strong>5</strong>. Change the <strong>Primary Die</strong> to the <strong>Top </strong><strong>Die </strong>since it is the
+    Top Die that is moving, and under Solution Steps Definition, set With <strong>Constant Die Displacement</strong> to <strong>0.025</strong>&quot; as shown in <a href="#Fig_3DL3_49_Simulation_Step_controls_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>49.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_49_Simulation_Step_controls_window"></a><img src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0049.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Step controls window</p>
+  <p> </p>
+  <h3 class="h3_3_3_">Database Generation</h3>
+  <p>By selecting the <strong>File</strong> menu <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Export</strong> option, Save a keyword file for the problem as &quot;<strong>Spike_Forging_Blow1</strong>&quot;.</p>
+  <p> </p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> action label to check the problem. Generate a database by clicking  <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> action label.</p>
+  <h3 class="h3_3_3_">Running Simulations</h3>
+  <p>Once the database has been generated, switch to the Simulation mode by selecting the <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the object tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label under the simulation tab,  Run Options dialog will open as shown in <a href="#Fig_3DL3_38_Run_Simulation_Popup"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>38.</a>. Use the default <strong>Continue Run</strong>    option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked.</p>
+  <p> </p>
+  <p>While the simulation is running, the recent saved step can be viewed. Many different variables can be viewed such as plastic strain, plastic strain rate, temperature, etc... from state variables tool bar as shown in <a href="#Fig_3DL3_50_Simulation_Graphics_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>50.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_50_Simulation_Graphics_window"></a><img height="448" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0050.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Graphics window</p>
+  <h3 class="h3_3_3_">Post processing</h3>
+  <p>When the simulation has finished, click on <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/>. In Step Browser click on <img src="../../../../assets/icons/pre_icons/mo_all_button.jpg"/> button to view all steps.</p>
+  <p> </p>
+  <p>Look at both <strong>Temperature </strong>and <strong>Effective </strong><strong>Strain </strong>as shown in <a href="#Fig_3DL3_51_Temperature_State_variables_plot"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>51.</a> and<a href="#Fig_3DL3_52_Effective_stress_State_variables_plot">  <span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>52.</a>    Depending on the variable being viewed, user may want to toggle between the geometry and the mesh on the dies. When viewing Temperature, the mesh/temperature gradient in the dies can be shown by clicking the Show Mesh <img src="../../../../assets/icons/pre_icons/mo_show_mesh_icon.jpg"/>  button (and also clicking the Show Geo <img src="../../../../assets/icons/pre_icons/mo_show_geo_icon.jpg"/> button to toggle off the geometry). Likewise, when viewing a variable like Effective Strain that only deforming objects would have, the
+    geometries of the dies should probably be viewed instead of the mesh.</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_3DL3_51_Temperature_State_variables_plot"></a><img height="428" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0051.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature State variables plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_52_Effective_stress_State_variables_plot"></a><img height="430" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0052.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Effective stress State variables plot</p>
+  <p> </p>
+  <p>The amount of load required to deform an object is an important result that can be obtained from a simulation. Click on the <img src="../../../../assets/icons/post_icons/mo_load_stroke_icon.jpg"/> icon. When the GRAPH window appears, select only Top
+    Die and the X-Axis is set to <strong>Stroke </strong>and the Y-Axis is set to <strong>Z-Load</strong>. Click <img src="../../../../assets/icons/post_icons/mo_plot_button.jpg"/> and a transparent Load-Stroke curve will display over the objects in
+    the DISPLAY window as shown in <a href="#Fig_3DL3_53_Load_Stroke_plot"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>53.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_53_Load_Stroke_plot"></a><img height="429" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0053.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Load Stroke plot</p>
+  <p> </p>
+  <p>In Load Stroke Graph window, Switch to options tab and check Step tracer check box as shown in <a href="#Fig_3DL3_54_Load_Stroke_Graph_Options_window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>54.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_54_Load_Stroke_Graph_Options_window"></a><img height="450" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0054.jpg" width="561"/></p>
+  <p> </p>
+  <p class="Fig_numb">Load Stroke Graph Options window</p>
+  <p> </p>
+  <p>So that, when a different step is selected, the bar in the Load-Stroke curve will highlight that step and the load for that step will be shown in the graph. Also, a point on the graph can be picked with the mouse and the displayed step will automatically
+    change to the one corresponding to that point on the graph.</p>
+  <p> </p>
+  <p>Now select last step in Step browser and click on <img src="../../../../assets/icons/pre_icons/mo_pre_mode_button.jpg"/> button to continue the setup.</p>
+  <p> </p>
+  <h2><a id="3_4_Spike_Forging_-_Die_Change_and_Blow2"></a>Spike Forging - Die Change and Blow2</h2>
+  <p>The first forging blow has been simulated and it is now time to model the second blow which uses a different top die. The new top die geometry will be imported and the second forging operation will be set up.</p>
+  <p> </p>
+  <p>Add 3D Forming operation from the Explorer Operations list. Add the operation by clicking on 3D Forming <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button or can also be added by drag and drop into the Operation editor.
+    Select Forming operation from Operation editor, Setup type popup will appear and click on NO- Batch mode button in Popup. Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until objects page.</p>
+  <p> </p>
+  <h3 class="h3_3_4_">Add objects</h3>
+  <p>Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Objects page. By default the three objects from the previous operation will be displayed. If not, by selecting <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> button, add three objects as shown in <a href="#Fig_3DL3_42_Adding_Objects"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>42.</a> Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <h3 class="h3_3_4_">Workpiece</h3>
+  <p>In workpiece page, select &quot;<strong>Read from DB</strong>&quot; radio button. Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Top Die page.</p>
+  <h3 class="h3_3_4_">Changing Top die for Blow2</h3>
+  <p>Both the geometry and mesh of the top die have to be changed. In Top Die page, change Object type to <strong>rigid </strong>and assign temperature as <strong>300</strong>°F then Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <h4 class="h4_3_4_3_">Import Geometry</h4>
+  <p>In Geometry page, click on import geometry from library option (<img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>) and import the <strong>Spike_Topdie2.STL</strong> file file from DEFORM installed folder \3d\LABS directory.
+    Use <img height="19" src="../../../../assets/icons/pre_icons/mo_check_label.jpg" width="38"/> button to check the Geometry. Click on <img src="../../../../assets/icons/pre_icons/mo_symmetry_planes_label.jpg"/> option, define planar symmetry and
+    Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> (see <a href="#Fig_3DL3_55_Assigned_Plane_Symmetry_for_Top_Die"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>55.</a>) Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_55_Assigned_Plane_Symmetry_for_Top_Die"></a><img height="435" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0055.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Plane Symmetry for Top Die</p>
+  <p> </p>
+  <h4 class="h4_3_4_3_">Generate Mesh</h4>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button, select <img src="../../../../assets/icons/pre_icons/mo_yes_button.jpg"/> in Default Boundary condition popup. A mesh with default number of elements will be generated.</p>
+  <h4 class="h4_3_4_3_">Assign Material</h4>
+  <p>Select the material &#39;<strong>AISI-H-13</strong>&#39; material from material window and assign it to the Top Die. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nwse-resize;"/>.</p>
+  <h4 class="h4_3_4_3_">Assigning BCC</h4>
+  <p>In BCC page, Check the default assigned Heat exchange with Environment BCC for Top Die and make sure that default assigned Heat Exchange with Environment BCC is assigned to the entire outer surface of the top die except the symmetry planes (see <a href="#Fig_3DL3_56_Assigning_Heat_Exchange_with_Environment_BCC_for_Top_Die"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>56.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_56_Assigning_Heat_Exchange_with_Environment_BCC_for_Top_Die"></a><img height="437" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0056.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Heat Exchange with Environment BCC for Top Die</p>
+  <p> </p>
+  <h4 class="h4_3_4_3_">Assigning Die Movement</h4>
+  <p>In Movement Page, Set a <strong>Speed </strong>of <strong>2</strong> in/sec in the -Z Direction. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3 class="h3_3_4_">Bottom Die</h3>
+  <p>In Bottom Die page select &quot;<strong>Read from DB</strong>&quot; radio button. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3 class="h3_3_4_">Scheduled Positioning the Top Die</h3>
+  <p>In Scheduled positioning page, Click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button and select <img src="../../../../assets/icons/pre_icons/mo_interference_radio_button.jpg"/> radio button. Change the Positioning Object
+    to the <strong>Top </strong><strong>Die </strong>and the Reference to the <strong>workpiece</strong>. Change the Approach Direction to<strong> -Z </strong>and then click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>. </p>
+  <h3 class="h3_3_4_">Inter-Object relations</h3>
+  <p>In Inter-Object window, click on <img src="../../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/> button. Default relations get added as shown in <a href="#Fig_3DL3_47_Inter-Object_Data_Deformation_definition_Window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>47.</a></p>
+  <p> </p>
+  <p>Friction needs to be defined between the workpiece and the dies since deformation will now be occurring. Also, the Thermal data needs to be modified so that a Forming heat transfer coefficient is used instead of the Free resting coefficient used in
+    the previous operation.</p>
+  <p> </p>
+  <p>Highlight the first relationship in the table and click <img src="../../../../assets/icons/pre_icons/mo_edit_button.jpg"/>. On the Deformation tab, use the friction pull-down menu to select <strong>Hot forging (lubricated)</strong> from the list as
+    shown in <a href="#Fig_3DL3_48_Inter-Object_Data_Thermal_definition_Window"><span data-keyref="Labs_Basic_labs_3D_labs_Lab3">Fig. 3DL3.</span>48.</a> then click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Back in the INTER-OBJECT
+    window, click on <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> to change the other relationship to these settings.</p>
+  <p> </p>
+  <p>Contact will be generated between the Billet and both the Top and Bottom Dies while generating Database.</p>
+  <p> </p>
+  <p>Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> up to Step controls page.</p>
+  <h3 class="h3_3_4_">Assigning Step Controls</h3>
+  <p>Set the<strong> Number of Simulation Steps </strong>to <strong>10</strong> and the <strong>Step Increment to Save</strong> to <strong>5</strong>. Change the Primary Die to the Top Die since it is the Top Die that is moving, and under Solution Steps
+    Definition, set <strong>With Constant Die Displacement</strong> to <strong>0.025</strong>&quot;. Click<img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3 class="h3_3_4_">Database Generation</h3>
+  <p>By selecting the <strong>File </strong><strong>menu</strong> <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Export</strong><strong> </strong>option, Save a keyword file for the problem as &quot;<strong>Spike_Forging_Blow2</strong>&quot;.</p>
+  <p> </p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> action label to check the problem. Generate a database by clicking <img height="18" src="../../../../assets/icons/pre_icons/mo_generate_database.jpg" width="127"/> action
+    label.</p>
+  <p> </p>
+  <p>Once the database has been generated, switch to the Simulation mode by selecting the <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the object tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label under the simulation tab,  Run Options dialog will open. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and
+    click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked.</p>
+  <h3 class="h3_3_4_">Post processing</h3>
+  <p>When the simulation has finished, click on <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/>. In Step Browser click on <img src="../../../../assets/icons/pre_icons/mo_all_button.jpg"/> button to view all steps.</p>
+  <p> </p>
+  <p>Play through the steps, focusing especially on the steps for the second forging blow, Steps-90 to 101. Use the <img src="../../../../assets/icons/pre_icons/mo_show_cotact_icon.jpg"/> button to view how the contact evolves through the simulation. Also,
+    investigate temperature, effective strain and load vs. stroke behavior.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DL3_57_Load-stroke_Window_with_effective_stress_state_variable_plot"></a><img height="428" src="../../../../assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0057.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Load-stroke Window with effective strain state variable plot</p>
+  <p> </p>
+
+</body></html>

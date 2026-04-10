@@ -1,0 +1,147 @@
+---
+lang: sk
+title: "32. Introduction to Multi Blow Hammer"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>32. Introduction to Multi Blow Hammer</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>32. Introduction to Multi Blow Hammer</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/32_multi_blow_forging/32_introduction_to_multi_blow_forging.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/32_Multi_Blow_Forging/32_1_2D_Multi_Blow_Forging_setup.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/31_Extrusion/31_1_3D_Extrusion.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="32. Introduction to Multi Blow Hammer">
+        <span>32. Introduction to Multi Blow Hammer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>32. Introduction to Multi Blow Forging</h1>
+  <p>A forging system comprises all the input variables such as the billet or blank (geometry and material), the tooling (geometry and material), the conditions at the tool/material interface, the mechanics of plastic deformation, the equipment used, the
+    characteristics of the final product, and the finally the plant environment where the process is being conducted.</p>
+  <p>Multi blow forging operation is used to setup the problem which is having successive blows by either hammer or screw press. In this operation user is able to setup the Forging problem without having manually restart each pass and in blow table user is
+    allowed to define the number of blows. For every blow we are able to define the percentage of blow, energy, reheating and separate dwelling time. In V11.0 New MO, advanced features like, Adaptive process controls, Blow efficiency can be defined as
+    function, All simulation models are available (transformation, carburization, recrystallization etc).</p>
+  <p><br/>
+    <strong>How to add Multi blow Forging operation</strong></p>
+  <p>Multi blow Forging operation is accessible from MO Wizard that can be opened from Main GUI. Multi blow Forging Operation can be added in MO wizard, from explorer tab by clicking on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to 2D Multi blow Forging. Also, user can add by drag and drop into the Operation Editor as shown in <a href="#Fig_32_1_Added_2D_Multi_blow_Forging_operation_into_Operation_Editor"><span data-keyref="Chapter_32_Introduction_to_Multi_Blow_Forging">Fig. 32.</span>1.</a></p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_32_1_Added_2D_Multi_blow_Forging_operation_into_Operation_Editor"></a><img height="421" src="../../../assets/images/operation_templates/32_multi_blow_forging/32_introduction_to_multi_blow_forging/image001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added 2D Multi blow Forging operation into Operation Editor</p>
+  <p> </p>
+  <p>Following are the steps to Setup Multi blow forging operation in MO wizard:</p>
+  <ul class="Disc">
+    <li>
+      <p>Define Process Details</p>
+    </li>
+    <li>
+      <p>Define Blow Table</p>
+    </li>
+    <li>
+      <p>Geometry type</p>
+    </li>
+    <li>
+      <p>Simulation controls</p>
+    </li>
+    <li>
+      <p>Load Object material</p>
+    </li>
+    <li>
+      <p>Add Number of Objects</p>
+    </li>
+    <li>
+      <p>Create object geometry and Generate Mesh for the objects</p>
+    </li>
+    <li>
+      <p>Assign Material and Boundary conditions</p>
+    </li>
+    <li>
+      <p>Define the movement for top die (number of blows)</p>
+    </li>
+    <li>
+      <p>Stopping controls and Step Controls</p>
+    </li>
+    <li>
+      <p>Generate Database</p>
+    </li>
+    <li>
+      <p>Running the simulation.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm">6.1. Integrated Manufacturing Process Pre- Processor Layout</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout.htm">6.2. Integrated Manufacturing Process.Simulation layout</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout.htm">6.3. Integrated Manufacturing Proces Post - Processor layout</a></p>
+  <p><a href="32_1_2d_multi_blow_forging_setup.htm">32.1. 2D Multi Blow Forging</a></p>
+  <p><a href="32_2_3d_multi_blow_forging_setup.htm">32.2. 3D Multi Blow Forging setup</a></p>
+
+</body></html>

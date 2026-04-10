@@ -1,0 +1,376 @@
+---
+lang: sk
+title: "Lab 15 Sliding die lab - Punch Sleeve"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.4.1.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab 15 Sliding die lab - Punch Sleeve</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab 15 Sliding die lab - Punch Sleeve</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Basic_labs/2D_Labs/Lab_25_Stub_Shaft_Labs.htm"/><meta name="brsprev" value="Documentation_content/Labs/Basic_labs/2D_Labs/Lab_14_Sliding_die_lab__Die_Sleeve.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Lab 15 Sliding die lab - Punch Sleeve">
+        <span>Lab 15 Sliding die lab - Punch Sleeve</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 15 Sliding die lab - Punch Sleeve</h1>
+  <p>This lab will demonstrate how to setup movement controls for a Punch Sleeve loaded with springs, the other end of the springs or mounted onto punch. The Sleeve slides back when load is applied beyond pre-load.</p>
+  <p><br/>
+    <a href="#15_1_Create_New_Problem">15.1. Create New Problem</a></p>
+  <p><a href="#15_2_Geometry_Type">15.2. Geometry Type</a></p>
+  <p><a href="#15_3_Simulation_Controls">15.3. Simulation Controls</a></p>
+  <p><a href="#15_4_Loading_Material_for_Workpiece">15.4. Loading Material for Workpiece</a></p>
+  <p><a href="#15_5_Adding_objects">15.5. Adding objects</a></p>
+  <p><a href="#15_6_Workpiece">15.6. Workpiece</a></p>
+  <p><a href="#15_7_Punch_Definition">15.7. Punch Definition</a></p>
+  <p><a href="#15_8_Die_Definition">15.8. Die Definition</a></p>
+  <p><a href="#15_9_Sleeve_Definition">15.9. Sleeve Definition</a></p>
+  <p><a href="#15_10_Ejector_Definition">15.10. Ejector Definition</a></p>
+  <p><a href="#15_11_Positioning">15.11. Positioning</a></p>
+  <p><a href="#15_12_Contact_Generation">15.12. Contact Generation</a></p>
+  <p><a href="#15_13_Stopping_Controls">15.13. Stopping Controls</a></p>
+  <p><a href="#15_14_Step_Controls">15.14. Step Controls</a></p>
+  <p><a href="#15_15_Generate_Database">15.15. Generate Database</a></p>
+  <p><a href="#15_16_Running_Simulation">15.16. Running Simulation</a></p>
+  <p><a href="#15_17_Post_Processing_the_Results">15.17. Post Processing the Results</a></p>
+  <p> </p>
+  <h2><a id="15_1_Create_New_Problem"></a>Create New Problem</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear. Select &quot;<strong>Integrated Manufacturing Process</strong>&quot; radio button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot;<strong>Punch_Sleeve</strong>&quot;
+    and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session, we use ‘<strong>Punch_Sleeve</strong>’
+    as the project name. Add <strong>2d forming operation</strong> as<strong> first operation</strong> by selecting it from First operation pull down list and turning on checkbox as shown in <a href="#Fig_L15_1_MO_wizard_New_Project"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>1.</a> Click
+    on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_1_MO_wizard_New_Project"></a><img height="424" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO wizard New Project</p>
+  <p> </p>
+  <h2><a id="15_2_Geometry_Type"></a>Geometry Type</h2>
+  <p>In this lab, we will be using Axisymmetric geometries so, select <strong>2D Axisymmetric</strong> radio button from geometry type page as shown in <a href="#Fig_L15_2_Axisymmetric_Geometry_type_selection"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>2.</a>    and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_2_Axisymmetric_Geometry_type_selection"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Axisymmetric Geometry type selection</p>
+  <p> </p>
+  <h2><a id="15_3_Simulation_Controls"></a>Simulation Controls</h2>
+  <p>We will be modelling Non- Isothermal sliding die movement setup in this lab so, in Simulation controls make sure both <strong>Deformation</strong> and <strong>Heat transfer</strong> <strong>modes </strong>are checked as shown in <a href="#Fig_L15_3_Simulation_control_window"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>3.</a>    Then click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_3_Simulation_control_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0003.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation control window</p>
+  <p> </p>
+  <h2><a id="15_4_Loading_Material_for_Workpiece"></a>Loading Material for Workpiece</h2>
+  <p>In Material list window, Load the material &#39;<strong>AISI-1015</strong>&#39; from DEFORM Material library, <strong>Steel </strong>category using <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material data from
+    library) option. This can be done as shown in below by clicking <img src="../../../../assets/icons/pre_icons/mo_load_button.jpg"/> button, see <a href="#Fig_L15_4_Material_List_window"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>4.</a>    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_4_Material_List_window"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material List window</p>
+  <p> </p>
+  <h2> <a id="15_5_Adding_objects"></a>Adding objects</h2>
+  <p>For this operation we need five objects, hence in Object window add <strong>five </strong><strong>objects </strong>by clicking <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button (see <a href="#Fig_L15_5_Adding_Object_Window"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>5.</a>)
+    and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_5_Adding_Object_Window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0005.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Adding Object Window</p>
+  <p> </p>
+  <h2><a id="15_6_Workpiece"></a>Workpiece</h2>
+  <p>In Workpiece window select the object type as <strong>Plastic </strong>and keep the temperature as 68°F, see <a href="#Fig_l15_6_Workpiece_object_Window"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>6.</a> Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l15_6_Workpiece_object_Window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0006.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece object Window</p>
+  <p> </p>
+  <h3>Workpiece Geometry</h3>
+  <p>In the Geometry page, select  <img src="../../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> and define a cylinder with <strong>radius </strong>of <strong>0.4</strong>” and a <strong>height </strong>of <strong>2.7</strong>” (see <a href="#Fig_L15_7_Defining_the_Geometry"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>7.</a>).
+    Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button. Check geometry and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_7_Defining_the_Geometry"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0007.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining the Geometry</p>
+  <p> </p>
+  <h3>Mesh generation</h3>
+  <p>The default number of elements are adequate for this lab, so keep the <strong>number of elements</strong> as <strong>1000 </strong>and click on <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> to generate the Mesh (see <a href="#Fig_L15_8_Workpiece_Mesh_window"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>8.</a>).
+    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_8_Workpiece_Mesh_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0008.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Mesh window</p>
+  <p> </p>
+  <h3>Assigning Workpiece Material</h3>
+  <p>To assign material for workpiece select the material <strong>AISI-1015</strong> from material window. This can be done by selecting material from the list in the material window as shown in below <a href="#Fig_L15_9_Material_selection_window"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>9.</a>    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_9_Material_selection_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0009.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material selection window</p>
+  <p> </p>
+  <h3>Workpiece Boundary conditions</h3>
+  <p>In BCC page, verify the Deformation BCC assigned to Left side of the workpiece in X-Direction and Heat exchange with Environment BCC to the entire outer surface of the workpiece (which does not include the centerline since these nodes are inside the
+    object) that are assigned by default during meshing. If the BCC’s are not assigned, assign them manually as shown in below <a href="#Fig_L15_10_Assigned_Velocity_BCC_for_Workpiece"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>10.</a>    and <a href="#Fig_L15_15_Sleeve_object_page"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>11.</a> Then click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Top die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_10_Assigned_Velocity_BCC_for_Workpiece"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0010.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Velocity BCC for Workpiece</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_11_Assigned_Heat_Exchange_with_Environment_BCC_for_Workpiece"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0011.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Heat Exchange with Environment BCC for Workpiece</p>
+  <p> </p>
+  <h2><a id="15_7_Punch_Definition"></a>Punch Definition</h2>
+  <p>In Top Die page change the Name to <strong>Punch</strong>, keep the Object type as <strong>Rigid  </strong>and Object Temperature 68°F, Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <h3 class="h3_15_7_">Import Punch geometry</h3>
+  <p>In Geometry window, load <strong>PunchSleeve_Lab_Punch.geo</strong> geometry file from library using <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load geometry from library) option as shown in <a href="#Fig_L15_12_Punch_Geometry_page"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>12.</a>,
+    Click <strong>Yes </strong>for the &#39;User Library&#39; popup asking whether to use the installation labs folder path as default library location. The geometry is located in DEFORM installation folder \2D\Labs directory. Check the geometry using
+    <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> option to make sure the geometry is OK. Then click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_12_Punch_Geometry_page"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0012.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Punch Geometry page</p>
+  <p> </p>
+  <h3 class="h3_15_7_">Assign Movement to Punch</h3>
+  <p>Define a <strong>speed </strong>of <strong>10 </strong>in/sec in <strong>-Y </strong>direction for this lab (see<a href="#Fig_l15_13_Punch_Movement_page"> <span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>13.</a>). Then click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Bottom Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l15_13_Punch_Movement_page"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0013.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Punch Movement page</p>
+  <p> </p>
+  <h2><a id="15_8_Die_Definition"></a>Die Definition</h2>
+  <p>In Bottom Die page change the name to <strong>Die</strong>, keep the object type as <strong>rigid </strong>and temperature 68°F, Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <h3 class="h3_15_8_">Import Die Geometry</h3>
+  <p>Import <strong>PunchSleeve_Lab_Die.geo</strong> file using Load Geometry from Library <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button as shown in <a href="#Fig_L15_14_Die_Geometry_page"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>14</a>.
+    Check geometry and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> up to object 4 page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_14_Die_Geometry_page"></a><img height="433" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0014.jpg" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">Die Geometry page</p>
+  <p> </p>
+  <h2><a id="15_9_Sleeve_Definition"></a>Sleeve Definition</h2>
+  <p>In Object 4 page change the Name to <strong>Sleeve</strong>, keep the Object type as <strong>Rigid </strong>and Object Temperature as 68°F, Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <h3 class="h3_15_9_">Import Die Geometry</h3>
+  <p>Import <strong>PunchSleeve_Lab_Sleeve.geo</strong> file using Load Geometry from Library <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button as shown in <a href="#Fig_L15_15_Sleeve_object_page"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>15.</a>    Check geometry and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_15_Sleeve_object_page"></a><img height="430" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0015.jpg" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb">Sleeve object page</p>
+  <p> </p>
+  <h3 class="h3_15_9_">Assign Movement to Sleeve</h3>
+  <p>Select Movement type as <strong>Sliding </strong><strong>die</strong>. Define Sliding movement direction as <strong>Y </strong>with constant <strong>stiffness </strong><strong>10 </strong><strong>klb/in</strong>, <strong>Preload </strong><strong>1</strong>    <strong>klb </strong>and <strong>Max. displacement </strong><strong>0.5</strong>&quot;. Select other end of spring as mounted on <strong>Punch object</strong> as shown in <a href="#Fig_l15_16_Sleeve_Movement_Page"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>16.</a>    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until object 5 page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l15_16_Sleeve_Movement_Page"></a><img height="546" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0016.jpg" width="490"/></p>
+  <p> </p>
+  <p class="Fig_numb">Sleeve Movement Page</p>
+  <p> </p>
+  <h2><a id="15_10_Ejector_Definition"></a>Ejector Definition</h2>
+  <p>In Object 5 page change the Name to <strong>Ejector</strong>, keep the Object type as <strong>Rigid  </strong>and Object Temperature 68°F, Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <h3 class="h3_15_10_">Ejector Geometry</h3>
+  <p>Import <strong>DieSleeve_Lab_Ejector.geo</strong> file using Load Geometry from Library <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button (see <a href="#Fig_L15_17_Ejector_geometry_defining"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>17</a>.).
+    Check geometry and click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Positioning page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_17_Ejector_geometry_defining"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0017.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Ejector geometry defining</p>
+  <p> </p>
+  <h2><a id="15_11_Positioning"></a>Positioning</h2>
+  <p>In this lab if objects are created or imported as per instructions then objects will be at correct position (see <a href="#Fig_L15_18_Objects_position"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>18.</a> ). If objects are not positioned
+    correctly, use <img src="../../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/> button to position the objects as shown in <a href="#Fig_L15_18_Objects_position"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>18.</a>    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until contact page.</p>
+  <p style="text-align: center"><a id="Fig_L15_18_Objects_position"></a><img height="400" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0018.jpg" width="106"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Objects position</p>
+  <p> </p>
+  <h2><a id="15_12_Contact_Generation"></a>Contact Generation</h2>
+  <p>Select <strong>User </strong>type contact and click on <img src="../../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/> button. It will add relationships between the Workpiece, Punch, Die, Sleeve and Ejector as shown in <a href="#Fig_L15_19_Default_relations_in_contact_Generation_page"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>19.</a></p>
+  <p style="text-align: center"><a id="Fig_L15_19_Default_relations_in_contact_Generation_page"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0019.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Default relations in contact Generation page</p>
+  <p> </p>
+  <p>Highlight the <strong>Punch – Workpiece</strong> relationship and click the <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> button to modify the relationship. In the friction section of the screen (see <a href="#Fig_L15_20_Inter-Object_data_definition_window"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>20.</a>),
+    there is a pull-down menu that allows the user to choose the appropriate friction conditions for common forming processes.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_20_Inter-Object_data_definition_window"></a><img height="460" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0020.jpg" width="490"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-Object data definition window</p>
+  <p> </p>
+  <p>In <strong>F</strong><strong><strong>riction </strong>pull down menu</strong> select <strong>Cold Forming (carbide dies)</strong> from the list, a friction value of <strong>0.08</strong> will be added to the Constant friction field. Under <strong>Thermal </strong><strong>tab </strong>select
+    <strong>Forming </strong>type Heat transfer coefficient from list, <strong>0.002 </strong>value will be added to Heat transfer coefficient field. (See <a href="#Fig_L15_21_Inter_Object_Relation_Thermal_page"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>21.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_21_Inter_Object_Relation_Thermal_page"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0021.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter Object Relation Thermal page</p>
+  <p> </p>
+  <p>Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to go back to contact window, Since the friction conditions are the same for all the object pairs, the <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> button can be used to copy the interface properties from the first relationship to all of the other relationships. After this is done, all relationships will have a friction of 0.08 and Heat transfer coefficient of 0.002 defined.</p>
+  <p> </p>
+  <p>The sleeve with sliding movement controls is mounted on the punch and moves with the punch as the simulation progresses.  The sleeve contacts, and may penetrate, the die, so define a contact relation between the die and the sleeve and make die the master.
+    Click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button to add a contact relation.  Select <strong>Die </strong>as the <strong>master </strong>and <strong>Sleeve </strong>(which has sliding movement controls) as the <strong>slave</strong>.
+    (See <a href="#Fig_L15_22_Contact_generated_between_objects"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>22.</a>)</p>
+  <p> </p>
+  <p>Use <img src="../../../../assets/icons/pre_icons/mo_tolerance_icon.jpg"/> icon to determine a suitable contact tolerance (a value of about 0.000403&quot; will be calculated), then click <img src="../../../../assets/icons/pre_icons/mo_generate_all_button.jpg"/> button to generate contact. (See <a href="#Fig_L15_22_Contact_generated_between_objects"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>22.</a>) Switch to Message tab or Observe status bar to know about the contacts generated. Click
+    on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_22_Contact_generated_between_objects"></a><img height="490" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0022.jpg" width="683"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact generated between objects</p>
+  <p> </p>
+  <h2><a id="15_13_Stopping_Controls"></a>Stopping Controls</h2>
+  <p>We will stop the simulation when punch moves by 0.48”. In the Stopping Controls screen, check the <strong>Max Die stroke</strong> option and then define the <strong>Y</strong> stroke value as <strong>0.48</strong>&quot;. (See <a href="#Fig_L15_23_Stopping_Controls_window"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>23.</a>)
+    Click on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_23_Stopping_Controls_window"></a><img height="478" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0023.jpg" width="500"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping Controls window</p>
+  <p> </p>
+  <h2><a id="15_14_Step_Controls"></a>Step Controls</h2>
+  <p>In step controls page, define <strong>Number of steps</strong> as <strong>1000</strong>, <strong>Step increment to save</strong> as <strong>5</strong> and <strong>Die displacement per step</strong> as <strong>0.005</strong>&quot;. As we defined more
+    number of steps than required for total primary die displacement, simulation will stop when it reaches the stopping control. Set the punch as Primary Die if not selected automatically, see <a href="#Fig_L15_24_Step_Controls_window"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>24.</a> Click
+    on <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_24_Step_Controls_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0024.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Step Controls window</p>
+  <p> </p>
+  <h2><a id="15_15_Generate_Database"></a>Generate Database</h2>
+  <p>In Generate DB page, click the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. During the checking process:</p>
+  <p>Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).</p>
+  <p> </p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/>  button to generate the database.</p>
+  <p> </p>
+  <h2><a id="15_16_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg" width="146"/>  button above the operation tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_L15_25_Run_Simulation_window"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>25.</a> Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option
+    and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_25_Run_Simulation_window"></a><img height="302" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0033.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation window</p>
+  <p> </p>
+  <p>The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.</p>
+  <p> </p>
+  <p>The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.</p>
+  <p> </p>
+  <p>When the simulation has finished, the following message will be displayed at the end of the Message file (See <a href="#Fig_L15_26_Simulation_Message_file"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>26.</a>):</p>
+  <p>&quot;PROGRAM STOPPED!</p>
+  <p>THE STROKE -0.4800000 HAS EXCEEDED THE SPECIFIED LIMIT 0.4800000&quot;.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_26_Simulation_Message_file"></a><img height="525" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0025.jpg" width="485"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Message file</p>
+  <p> </p>
+  <h2><a id="15_17_Post_Processing_the_Results"></a>Post Processing the Results</h2>
+  <p>After simulation has been completed, click on <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab, MO post processor will open. Select Display Stroke from right click options in step list. Play the steps until sleeve starts
+    moving upward when punch stroke is around 0.275&quot;. (See <a href="#Fig_L15_27_Load-Stroke_graph_at_step__sleeve_starts_sliding_up"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>27.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_27_Load-Stroke_graph_at_step__sleeve_starts_sliding_up"></a><img height="422" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0026.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Load-Stroke graph at step  sleeve starts sliding up</p>
+  <p> </p>
+  <p>Plot <strong>Load-stroke</strong> curve and observe the load at this point. We observe that as sleeve experiences load beyond defined Pre-load that is 1 klb, it starts moving upwards. Continue to play animation and stop it when sleeve reverses its movement
+    direction, at this point measure the distance between the Sleeve bottom right corner and Die top right corner and compare it with the Max. Displacement defined in Sleeve sliding movement controls. We can observe that sleeve stopped moving upward once
+    the Max. Displacement defined in Sleeve sliding movement controls is reached. (See <a href="#Fig_L15_28_Sleeve_load_and_displacement_when_it_reached_max_displacement"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>28.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_28_Sleeve_load_and_displacement_when_it_reached_max_displacement"></a><img height="423" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0027.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Sleeve load and displacement when it reached max displacement</p>
+  <p> </p>
+  <p>Continue to play animation to observe material flow and at last step check the total top die displacement using measurement option. (See <a href="#Fig_L15_29_Workpiece_at_last_step"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>29.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_29_Workpiece_at_last_step"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0028.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Workpiece at last step</p>
+  <h4> State variables:</h4>
+  <p>Go to last step and from the <strong>State variables</strong> list, plot important state variables like <strong>Effective strain</strong>, <strong>Effective stress</strong>, <strong>Temperature </strong>and <strong>Damage </strong>as shown in <a href="#Fig_L15_30_Effective_Strain_state_variable_plot"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>30.</a>    to <a href="#Fig_L15_33_Damage_state_variable_plot"><span data-keyref="Basic_labs_2D_labs_Lab15">Fig. L15.</span>33.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_30_Effective_Strain_state_variable_plot"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0029.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Effective Strain state variable plot</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0030.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Effective Stress state variable plot</p>
+  <p> </p>
+  <p style="text-align: center"><img height="327" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0031.jpg" width="349"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature state variable plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L15_33_Damage_state_variable_plot"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0032.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Damage state variable plot</p>
+
+</body></html>

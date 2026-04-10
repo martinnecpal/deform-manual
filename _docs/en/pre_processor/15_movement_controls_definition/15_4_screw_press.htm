@@ -1,0 +1,142 @@
+---
+lang: en
+title: "15.4. Screw press"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.9.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>15.4. Screw press</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>15.4. Screw press</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/15_movement_controls/15_4_screw_press.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/15_Movement_Controls_Definition/15_5_Mechanical_press.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/15_Movement_Controls_Definition/15_3_Hammer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="15.4. Screw press">
+        <span>15.4. Screw press</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>15.4. Screw press</h1>
+  <p><strong>[2D, 3D]:</strong> The unique characteristic of a screw press is the method of driving it. A motor drives a flywheel which is either directly connected or can be connected to a screw spindle. The screw spindle transmits the rotation through
+    the threads, which have pitch angles usually between 13 and 17 degrees, to a linear movement of the main ram. On contact with the work piece, the complete kinetic energy of the flywheel and the ram is transformed into useful work (work on the work
+    piece) and losses (elastic deformation work in the work piece and the frame of the structure and friction). The elastic deformation work results in a reaction force in all the press parts lying in the force transmission path.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_15_4_1_2D_Screw_Press_movement_controls_window"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_4_screw_press/15_4_image001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D Screw Press movement controls window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_15_4_2_3D_Screw_Press_movement_controls_window"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_4_screw_press/15_4_image002.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">3D Screw Press movement controls window</p>
+  <p> </p>
+  <p>The Screw press energy method will mimic the movement of a screw type press on the selected die. In a screw press a flywheel is taken to a given speed and a clutch is engaged. Once the clutch is engaged, the screw press begins to draw energy to drive
+    the screw from the flywheel. Once the flywheel energy is expended the stroke is over and the movement will stop. Screw controlled movement can only be specified for rigid objects or deforming objects with a movement boundary condition applied. Motion
+    of which is controlled by screw press parameters can only be applied in the +X, +Y, +Z, -X, -Y or -Z directions (X, Y, -X, or -Y directions in case of DEFORM-2D).</p>
+  <p>For Screw press movement settings see <a href="#Fig_15_4_1_2D_Screw_Press_movement_controls_window"><span data-keyref="Chapter_15_4_Screw_press">Fig. 15.4.</span>1.</a> and <a href="#Fig_15_4_2_3D_Screw_Press_movement_controls_window"><span data-keyref="Chapter_15_4_Screw_press">Fig. 15.4.</span>2.</a></p>
+  <p> </p>
+  <p>The data required to run a screw press driven tool are:</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Energy</strong>: The Blow Energy is a measure of the total energy that the flywheel will contain when the desired speed has been reached and prior to engaging the clutch. The units for blow energy in English units are klb-in and in SI units
+      are N-mm. </li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Blow Efficiency</strong>: The Blow Efficiency represents the fraction of the total energy that will be converted to deformation energy. The rest of the energy is absorbed through the clutch mechanism, friction, and the machine frame. There
+      are no units for this quantity. </li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Moment of Inertia</strong>: The Moment of Inertia is the moment of inertia of the flywheel. The English units of inertia are klb*in*s2 and the SI units are N-mm*s2. The mass moment of inertia for a circular disc with the Z-axis perpendicular
+      to the center is I = 2 ET /ω2 where ET is the total energy of the flywheel, and ω is the angular velocity in radians per second.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Ram Displacement or Lead screw pitch</strong>: The Ram Displacement specifies the distance per revolution of the flywheel that the screw will advance. This helps in determining the linear velocity of the ram. The English units for Ram Displacement
+      are inch/revolution, while the SI units are mm/revolution. If only the pitch angle and diameter of the spindle is known, the Ram Displacement can be calculated using πdsin(θt) where d is the diameter of spindle and θt is the pitch angle of the spindle.</li>
+  </ul>
+  <p> </p>
+  <p class="Note_text">Note:</p>
+  <p class="Note_text">Multiple pass can be setup for Hammer, Screw press and rolling operations using the tools menu option provided in the menu bar of pre-processor window.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="15_movement_controls_settings.htm">15. Movement Controls Settings</a></p>
+  <p><a href="15_1_speed.htm">15.1. Speed</a></p>
+  <p><a href="15_2_force.htm">15.2. Force</a></p>
+  <p><a href="15_3_hammer.htm">15.3. Hammer</a></p>
+  <p><a href="15_5_mechanical_press.htm">15.5. Mechanical press</a></p>
+  <p><a href="15_6_hydraulic_press.htm">15.6. Hydraulic press</a></p>
+  <p><a href="15_7_sliding_die.htm">15.7. Sliding Die</a></p>
+  <p><a href="15_8_path.htm">15.8.  Path</a></p>
+  <p><a href="15_9_rotational_movement.htm">15.9. Rotational Movement</a></p>
+  <p><a href="15_10_torsional_movement.htm">15.10. Torsional movement</a></p>
+  <p><a href="15_11_friction_welding_movement.htm">15.11. Friction Welding movement</a>.</p>
+
+</body></html>

@@ -1,0 +1,193 @@
+---
+lang: en
+title: "13.3. 3D Brick Mesh Generation"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.7.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>13.3. 3D Brick Mesh Generation</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>13.3. 3D Brick Mesh Generation</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/14_Boundary_Conditions/14_boundary_conditions.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/13_Mesh_Generation/13_2_3D_Tet_Mesh_Generation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="13.3. 3D Brick Mesh Generation">
+        <span>13.3. 3D Brick Mesh Generation</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>13.3. 3D Brick Mesh Generation</h1>
+  <p> </p>
+  <p><a href="#13.3.1._General_Settings_for_Brick_mesh">13.3.1. General Settings for Brick mesh</a><br/>
+    <a href="#13.3.2._2D_Cross_section_for_Brick_mesh">13.3.2. 2D Cross section for Brick mesh</a><br/>
+    <a href="#13.3.3._Mesh_Weighing_Factors">13.3.3. Mesh Weighing Factors</a><br/>
+    <a href="#13.3.4._Mesh_Density_Window_for_Brick_mesh">13.3.4. Mesh Density Window for Brick mesh</a><br/>
+    <a href="#13.3.5_Coating_Mesh">13.3.5. Coating Mesh</a><br/>
+    <a href="#13.3.6._Remeshing_Criteria">13.3.6. Remeshing Criteria</a><br/>
+    <a href="#13.3.7._Advanced_Settings">13.3.7. Advanced Settings</a></p>
+  <p> </p>
+  <p>The below <a href="#Fig._13.3.1._Expert_mode_Brick_mesh_generation"><span data-keyref="Chapter_13_3_3D Brick Mesh Generation">Fig. 13.3.</span>1.</a> shows the Brick mesh generation options in Expert mode.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="423" src="../../../assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image001.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;"><a id="Fig._13.3.1._Expert_mode_Brick_mesh_generation"></a>Expert mode Brick mesh generation</p>
+  <p style="text-align: center;"> </p>
+  <h2><a id="13.3.1._General_Settings_for_Brick_mesh"></a>General Settings for Brick mesh</h2>
+  <p><strong>Uniform Thickness of Layers</strong>: When this option is selected, a mesh with layers of uniform thickness is generated based on the number of layers defined.  </p>
+  <p> </p>
+  <p><strong>Finer mesh Areas</strong>:User can define the finer mesh areas by defining number of layers required within specified area as shown in <a href="#Fig._13.3.2._Finer_Mesh_Areas_Definition"><span data-keyref="Chapter_13_3_3D Brick Mesh Generation">Fig. 13.3.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.3.2._Finer_Mesh_Areas_Definition"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image003.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Finer Mesh Areas Definition</p>
+  <p> </p>
+  <p>The density of mesh layers can be controlled by using Fine Mesh areas option. User can control the number of mesh layers within area by selecting the start point and end point of the area. <a href="#Fig._13.3.3_Example_showing_Finer_Mesh_Areas_definition"><span data-keyref="Chapter_13_3_3D Brick Mesh Generation">Fig. 13.3.</span>3.</a>    shows the object with variable mesh density.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="423" src="../../../assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._13.3.3_Example_showing_Finer_Mesh_Areas_definition"></a>Example showing Finer Mesh Areas definition</p>
+  <p> </p>
+  <p><strong>Sheet application: </strong></p>
+  <p>Sheet application option activates projection-based remeshing for sheet-shaped objects that have been constructed with brick elements. The setting only applies to an object that was initially generated as 2D mesh and then extruded into 3D mesh.</p>
+  <p>When sheet application option is deactivated (default), the object is meshed with tet elements during any subsequent remeshing.</p>
+  <p>With the setting activated, brick remeshing will be attempted using projection techniques. The remesher will fall back to tet elements if the deformed shape significantly deviates from a sheet shape, since such a condition may cause the sheet brick
+    remesher to fail. (See <a href="#Fig_13_3_4_Sheet_application_option_selelcted_Sheet_application_option_selelcted"><span data-keyref="Chapter_13_3_3D Brick Mesh Generation">Fig. 13.3.</span>4</a>.)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_13_3_4_Sheet_application_option_selelcted_Sheet_application_option_selelcted"></a><img height="370" src="../../../assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image009.jpg" width="400"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Sheet application option selelcted </p>
+  <p> </p>
+  <h2><a id="13.3.2._2D_Cross_section_for_Brick_mesh"></a>2D Cross section for Brick mesh</h2>
+  <p>In order to generate a brick mesh a 2D cross-section is defined which is meshed and either extruded or revolved with specified number of layers depending on the 3D geometry requirement.</p>
+  <p> </p>
+  <p><strong>Mapped Mesh Generation</strong>: Mapped meshing can be used at the initial stages of forming process. As the geometry of the workpiece takes a complex shape during forming, mesh is subjected to several remeshings and mapped meshing may not be
+    able to survive such changes to geometry and remeshing may fail. Mapped mesh generation can been seen in the<a href="#Fig._13.3.5._Mapped_Mesh_Generation_for_2D_Cross-section"> <span data-keyref="Chapter_13_3_3D Brick Mesh Generation">Fig. 13.3.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="423" src="../../../assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image004.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._13.3.5._Mapped_Mesh_Generation_for_2D_Cross-section"></a>Mapped Mesh Generation for 2D Cross-section</p>
+  <p> </p>
+  <p><strong>Use coarse internal mesh:  </strong>User can generate coarse mesh inside region as shown in <a href="#Fig._13.3.6.__Coarse_internal_mesh_generation_for_2D_Cross-section"><span data-keyref="Chapter_13_3_3D Brick Mesh Generation">Fig. 13.3.</span>6.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="424" src="../../../assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._13.3.6.__Coarse_internal_mesh_generation_for_2D_Cross-section"></a> Coarse internal mesh generation for 2D Cross-section</p>
+  <p> </p>
+  <h2><a id="13.3.3._Mesh_Weighing_Factors"></a>Mesh Weighing Factors</h2>
+  <p>The weighting factors or parameters (system defined mesh density) for boundary curvature, temperature, strain and strain rate specify relative mesh density weights to be assigned to the associated parameter. For more information Refer <a href="13_2_3d_tet_mesh_generation.htm#13.2.5._Mesh_weighting_factors">13.2.5. Mesh weighting factors.</a></p>
+  <p> </p>
+  <h2><strong><a id="13.3.4._Mesh_Density_Window_for_Brick_mesh"></a>Mesh Density Window for Brick mesh</strong></h2>
+  <p>The Mesh density window (See <a href="#Fig._13.3.7.Mesh_density_windows_for_2D"><span data-keyref="Chapter_13_3_3D Brick Mesh Generation">Fig. 13.3.</span>7.</a>) concept is similar to a user defined mesh density. The mesh density specified for a given
+    window is applied to any geometry point (node or STL vertex) inside the window. However, the mesh density window is used during remeshing as well as initial mesh generation, whereas user defined mesh densities are used only during initial generation.
+    It can also be assigned a velocity, or follow another object&#39;s movement and it can be defined in an area where the workpiece has not yet been deformed through.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="422" src="../../../assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image006.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;"><a id="Fig._13.3.7.Mesh_density_windows_for_2D"></a>Mesh density windows for 2D</p>
+  <p style="text-align: center"> </p>
+  <h2><a id="13.3.5_Coating_Mesh"></a>Coating Mesh</h2>
+  <p>The user can add coating layers using this option and generate mesh for the same. Coating mesh is a thin layer of elements along the object boundary with specific characteristics. For added coating layers user can assign material. For further information
+    on the usage of coating mesh please refer to <span style="color:#0000ff;"><a href="../../appendices/appendix_xi__near_surface_mesh_functions.htm">Appendix XI</a>.</span></p>
+  <p> </p>
+  <h2><a id="13.3.6._Remeshing_Criteria"></a>Remeshing Criteria</h2>
+  <p>Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See <a href="#Fig._13.3.8_Remesh_criteria_option_for_Brick_mesh"><span data-keyref="Chapter_13_3_3D Brick Mesh Generation">Fig. 13.3.</span>8.</a>)
+    contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they
+    are Interference Depth (<a href="../../keyword_documentation/r/rmdpth.htm">RMDPTH</a>),Max. Time Increment (<a href="../../keyword_documentation/r/rmtime.htm">RMTIME</a>), Max. Step Increment (<a href="../../keyword_documentation/r/rmstep.htm">RMSTEP</a>)
+    and Max. Stroke Increment (<a href="../../keyword_documentation/r/rmstrk.htm">RMSTRK</a>). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed. During
+    the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.3.8_Remesh_criteria_option_for_Brick_mesh"></a><img src="../../../assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image007.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Remesh criteria option for Brick mesh</p>
+  <p><br/> For details about Maximum interference depth (RMDPTH), Maximum stroke increment (RMSTRK), Maximum time increment (RMTIME), Maximum step increment (RMSTEP) and Purpose of Criteria please refer <a href="13_2_3d_tet_mesh_generation.htm#13.2.8._Remeshing_criteria">13.2.8. Remeshing criteria.</a></p>
+  <p> </p>
+  <h2><a id="13.3.7._Advanced_Settings"></a>Advanced Settings</h2>
+  <p><br/> Below <a href="#Fig._13.3.9_Advanced_settings_window_for_Brick_mesh"><span data-keyref="Chapter_13_3_3D Brick Mesh Generation">Fig. 13.3.</span>9.</a> shows the Advanced Settings window for 3D Brick mesh.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.3.9_Advanced_settings_window_for_Brick_mesh"></a><img height="550" src="../../../assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image008.jpg" width="471"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Advanced settings window for Brick mesh </p>
+  <p> </p>
+  <p><strong>Grid resolution </strong>(<strong>MGGRID</strong>)</p>
+  <p>When an object is meshed in 2D, a sampling grid is required to discretize density of the mesh throughout the starting geometry. Grid resolution (<a href="../../keyword_documentation/m/mggrid.htm">MGGRID</a>) specifies the spacing of the sampling grids
+    that are used to sample mesh densities. Increasing the value of X division or Y division will result in sharper gradients between areas of differing mesh density.  In the case of blanking, where a very high mesh gradient is required over a narrow
+    region, these values may need to increase to capture high changes in mesh gradient over short distances.</p>
+  <p> </p>
+  <p><strong>Node addition parameters</strong> (<strong>MGERR</strong>)<br/> The node addition parameters (<a href="../../keyword_documentation/m/mgerr.htm">MGERR</a>) specify the maximum distance and angle error permitted between the object boundary and
+    its associated grid element side. The distance and angle tolerances are used to capture critical boundary geometry that might otherwise be lost when the mesh is generated.  If an object is required to capture very small features, the maximum distance
+    can be decreased or if a node needs to be placed on a shallow angle, the angle error can be decreased as well.  Rarely will the user ever have to change these values. For parts that are very small, a value of 0.01% of the object’s bounding box is
+    a good starting number that can be used for <a href="../../keyword_documentation/m/mgerr.htm">MGERR</a> for better handling of mesh resolution.</p>
+  <p> </p>
+  <p>Related Topics:</p>
+  <p><a href="13_mesh_generation.htm">13. Mesh Generation</a></p>
+  <p><a href="13_1_2d_mesh_generation.htm">13.1. 2D Mesh Generation</a></p>
+  <p><a href="13_2_3d_tet_mesh_generation.htm">13.2. 3D Tet Mesh Generation</a></p>
+
+</body></html>

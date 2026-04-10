@@ -1,0 +1,124 @@
+---
+lang: en
+title: "9.8. Control Files"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>9.8. Control Files</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>9.8. Control Files</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/9_simulation_controls/9_8_control_files.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/9_Simulation_Controls/9_9_Thermomechanical_variables.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/9_Simulation_Controls/9_7_Advanced_Options.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="9.8. Control Files">
+        <span>9.8. Control Files</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>9.8. Control files <img height="25" src="../../../assets/icons/pre_icons/mo_control_files.jpg" width="25"/></h1>
+  <p><a href="#9.8.1._Category_1">9.8.1. Category 1</a></p>
+  <ul>
+    <li>
+      <p><a href="#Double_corner_constraints" style="margin-left: 40px">Double corner constraints</a></p>
+    </li>
+    <li>
+      <p><a href="#Solver_switch_control" style="margin-left: 40px">Solver switch control</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>[3D]</strong>: There are many different specialized features within DEFORM - Preprocessor that are controlled through data files. The purpose for this type of implementation is that these functions are used in only a few rare instances and if
+    they find popular use, they can be incorporated into DEFORM keywords. When these data files are used, the functionality is available if the data file is located in the same directory as the current problem running.  Since they are not contained within
+    neither in database nor the keyword files, the control file has to be moved with the database or the keyword to run the problem with the same functionality if a different directory or computer is used to run a simulation.  When one of these control
+    files are used, a warning is automatically posted in the message file heading letting the user know that one of these files exists. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._9.8.1._Control_files_category1_settings"></a><img src="../../../assets/images/pre-processor/9_simulation_controls/9_8_control_files/9_8_image001.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Control files category1 settings</p>
+  <p> </p>
+  <p>From version 6.0, these data files can be specified through the graphical interface in the Control File window. (See <a href="#Fig._9.8.1._Control_files_category1_settings"><span data-keyref="Chapter_9_8_Control_Files">Fig. 9.8.</span>1.</a>)</p>
+  <h2><a id="9.8.1._Category_1"></a>Category 1</h2>
+  <p><a id="Double_corner_constraints"></a><strong>Double corner constraints</strong></p>
+  <p>This defines two angles where if a node is contacting a die corner an angle between these values, the node will be given a double contact condition. This is further explained in the <a href="../../appendices/appendix_xv_the_double_concave_corner_constraint.htm">A<span style="color:#0000ff;">ppendix XV: The Double Concave Corner Constraint.</span></a></p>
+  <p> </p>
+  <p> <a id="Solver_switch_control"></a><strong>Solver switch control</strong></p>
+  <p>This defines a number of elements where the switch to sparse solver is blocked. The purpose of this is to prevent the sparse solver from being activated in cases where the problem is too large.</p>
+  <p> </p>
+  <p>Related Topics:</p>
+  <p><a href="9_1_simulation_type_settings.htm">9.1. Simulation type Settings</a> <br/>
+    <a href="9_2_defining_step.htm">9.2. Defining Step</a> <br/>
+    <a href="9_3_stopping_controls.htm">9.3. Stopping Controls</a> <br/>
+    <a href="9_4_remesh_criteria.htm">9.4. Remesh Criteria</a> <br/>
+    <a href="9_5_solver_settings.htm">9.5. Solver Settings</a> <br/>
+    <a href="9_6_process_conditions.htm">9.6. Process Conditions</a> <br/>
+    <a href="9_7_advanced_options.htm">9.7. Advanced Options</a> <br/>
+    <a href="9_9_thermomechanical_variables.htm">9.9. Thermomechanical variables</a> </p>
+
+</body></html>

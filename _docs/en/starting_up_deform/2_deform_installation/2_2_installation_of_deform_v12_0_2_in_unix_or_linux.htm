@@ -1,0 +1,789 @@
+---
+lang: en
+title: "2.2. Installation of DEFORM V14.0.2. in Unix or Linux"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "2.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2.2. Installation of DEFORM V14.0.2. in Unix or Linux</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2.2. Installation of DEFORM V14.0.2. in Unix or Linux</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/starting_up_deform/2_deform_installation/2.2. installation of deform v12.0.1 in linux.css"/>
+<meta name="brsnext" value="Documentation_content/Starting_up_DEFORM/3_License_Manager/License_Manager_Mainpg.htm"/><meta name="brsprev" value="Documentation_content/Starting_up_DEFORM/2_DEFORM_Installation/2_1_Installation_of_DEFORM_v12_0_2_in_windows.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="2.2. Installation of DEFORM V14.0.2. in Unix or Linux">
+        <span>2.2. Installation of DEFORM V14.0.2. in Unix or Linux</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>2.2. Installation of DEFORM V14.0.2 in Unix or Linux</h1>
+  <p><strong></strong></p>
+  <p><a href="#2.2.1._INTRODUCTION">2.2.1. Introduction</a></p>
+  <p><a href="#2.2.2._INSTALLATION_REQUIREMENTS">2.2.2. Installation Requirements</a></p>
+  <p><a href="#2.2.3._The_Security_Key_Device">2.2.3. The Security Key Device</a></p>
+  <p><a href="#2_2_4_Obtaining_DEFORM_Software">2.2.4. Obtaining DEFORM Software</a></p>
+  <p><a href="#2_2_5_Installation_Notes">2.2.5. Installation Notes</a></p>
+  <p><a href="#2_2_6_LZMA_XZ_Utilities_installation">2.2.6. LZMA / XZ Utilities installation</a></p>
+  <p><a href="#2_2_7_Python_Installation">2.2.7. Python Installation</a></p>
+  <p><a href="#2_2_8_Sentinel_Key_Driver_Installation">2.2.8. Sentinel Key Driver Installation</a></p>
+  <p><a href="#2_2_9_License_Manager_Installation">2.2.9. License Manager Installation</a></p>
+  <p><a href="#2_2_10_DEFORM_Installation">2.2.10. DEFORM Installation</a></p>
+  <p><a href="#2_2_11_Additional_Installation">2.2.11. Additional Installation</a></p>
+  <p><a href="#2_2_12_Setup_a_user_account">2.2.12. Setup a user account</a></p>
+  <p><a href="#2_2_13_DEFORM_Setup">2.2.13. DEFORM Setup</a></p>
+  <p><a href="#2_2_14_System_Execution">2.2.14. System Execution</a></p>
+  <p><a href="#2_2_15_QUESTIONS_PROBLEMS">2.2.15. Questions / Problems</a></p>
+  <p><a href="#2_2_16_CPU_Types">2.2.16. CPU Types</a></p>
+  <p> </p>
+  <h2><a id="2.2.1._INTRODUCTION"></a>INTRODUCTION</h2>
+  <p>The following steps are to be executed in order to install DEFORM v14.0.2. (Subsequent service packs also follow a similar sequence, but install in a different folder). These steps include: </p>
+  <ul class="Disc">
+    <li>
+      <p>Meeting the minimum system requirements. </p>
+    </li>
+    <li>
+      <p>Installing the DEFORM v14.0.2 program files.  </p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p>License Manager (Installing the Security Key Driver v7.6.3). </p>
+    </li>
+    <li>
+      <p>v14.0.2 files </p>
+    </li>
+    <li>
+      <p>Support Codes (lzma/xz utils, tar, MPICH2 v1.3.1 64-bit, Python, openSCAD, and TeX Live) </p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p>Troubleshooting, should you run into problems.  </p>
+    </li>
+  </ul>
+  <h2><a id="2.2.2._INSTALLATION_REQUIREMENTS"></a>INSTALLATION REQUIREMENTS</h2>
+  <ul class="Disc">
+    <li>
+      <p>Operating system:</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p>CentOS (Red Hat Enterprise Linux) 6.10+ Linux (x86_64)</p>
+    </li>
+    <li>
+      <p>CentOS (Red Hat Enterprise Linux) 7.7+ Linux (x86_64)</p>
+    </li>
+    <li>
+      <p>Red Hat Enterprise Linux (RHEL) 8.8+ (x86_64)</p>
+      <ul>
+        <li>
+          <p>Red Hat 8 support is currently in beta</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Suggested RAM: 16+ GB</p>
+    </li>
+    <li>
+      <p>Hard drive space required for installation: ~8 GB </p>
+    </li>
+    <li>
+      <p>Supporting Software:</p>
+    </li>
+    <li>
+      <p>LZMA/XZ Utils</p>
+    </li>
+    <li>
+      <p>GNU Tar</p>
+    </li>
+  </ul>
+  <h2><a id="2.2.3._The_Security_Key_Device"></a>The Security Key Device</h2>
+  <p>The Security Key allows the DEFORM v14.0.2 system to be highly portable while still allowing only one system to be operable as a license server with a valid password at any time. The actual software can be installed on as many computers as you like,
+    but each DEFORM system will only be operable with the Security Key attached or is configured as a client connected to a valid DEFORM license server. The Security Key is a USB key. Plug the Security USB hardware Key into the USB port.</p>
+  <p> </p>
+  <p class="Note_style"><strong>CAUTION</strong>:</p>
+  <p class="Note_style">The Security Key keeps track of the date on your PC. Make sure the date is correct before initially running DEFORM v14.0.2. Changing the date backwards or forwards may make the DEFORM v14.0.2 system inoperable.</p>
+  <p class="Note_style"> </p>
+  <h2><a id="2_2_4_Obtaining_DEFORM_Software"></a>Obtaining DEFORM Software</h2>
+  <p>The DEFORM v14.0.2 pack is available for download from the DEFORM User Area website at <a href="https://support.deform.com">https://support.deform.com</a>.</p>
+  <p>The DEFORM password file (DEFORM.PWD) is available for download from the DEFORM User Area website at <a href="https://support.deform.com">https://support.deform.com</a>.  or by contacting Ms. Engelbrecht at <a href="http://mengelbrecht@deform.com">mengelbrecht@deform.com</a>.</p>
+  <p>The Sentinel hardware key driver is available for download from <a href="https://www.deform.com/redirects/sentinel.html">https://www.deform.com/redirects/sentinel.html</a>. Driver v7.6.2 installer is also available for download from the DEFORM User
+    Area website at <a href="https://support.deform.com">https://support.deform.com</a>. </p>
+  <p> </p>
+  <h2><a id="2_2_5_Installation_Notes"></a>Installation Notes</h2>
+  <ol class="Decimal">
+    <li>
+      <p>In order to install DEFORM v14.0.2 you need to have root access on the system where you want to install the software. Instructions requiring root access are denoted by beginning with [root].</p>
+    </li>
+    <li>
+      <p>The user’s system must have the supporting software required to install the DEFORM software.</p>
+    </li>
+    <li>
+      <p>The examples shown assume installation on CentOS Linux unless otherwise specified. </p>
+    </li>
+  </ol>
+  <h2><a id="2_2_6_LZMA_XZ_Utilities_installation"></a>LZMA / XZ Utilities installation </h2>
+  <p>DEFORM on Linux is distributed as a GNU tar file compressed with LZMA. The installation files must be uncompressed using an LZMA decompression tool; the resulting file must then be unpacked using GNU tar. Direct login as root is required to carry out
+    installation.</p>
+  <p><br/> Check to see if LZMA/XZ is already installed on your system by issuing the following command:<br/> On CentOS 7 and Red Hat (RHEL)8:</p>
+  <p style="margin-left: 20px;"><span style="font-style:italic;">xz --version</span></p>
+  <p style="margin-left: 20px;"> </p>
+  <p>On CentOS 6:</p>
+  <p style="margin-left: 20px"><span style="font-style:italic;">lzma --version</span></p>
+  <p style="margin-left: 20px"> </p>
+  <p>If XZ is installed, the response will be similar to:</p>
+  <p style="margin-left: 20px"><span style="font-style:italic;">xz (XZ Utils) 5.5.2</span></p>
+  <p style="margin-left: 20px"><span style="font-style:italic;">liblzma 5.2.2</span></p>
+  <p style="margin-left: 20px"> </p>
+  <p>If LZMA is installed, the response will be similar to:</p>
+  <p style="margin-left: 20px"><span style="font-style:italic;">LZMA command line tool 4.32.7</span></p>
+  <p style="margin-left: 20px"><span style="font-style:italic;">LZMA SDK 4.43</span></p>
+  <p> </p>
+  <p>If you receive an error with the above command, but you know that LZMA/XZ is installed on your system, modify the system path to include the path to the LZMA/XZ binaries. If LZMA/XZ is installed, running the ‘<span style="font-style:italic;">which </span>    <span style="font-style:italic;">lzma</span>’ or ‘<span style="font-style:italic;">which </span><span style="font-style:italic;">xz</span>’ command will return the path.</p>
+  <p>If the LZMA/XZ Utilities are not installed on your system, the easiest way to install LZMA/XZ is through the system’s package manager.</p>
+  <p> </p>
+  <p>CentOS 7 and Red Hat (RHEL)8:</p>
+  <p style="margin-left: 20px"><span style="font-style:italic;">yum install xz</span></p>
+  <p>CentOS 6:</p>
+  <p style="margin-left: 20px"><span style="font-style:italic;">yum install lzma</span></p>
+  <p> </p>
+  <p>LZMA is also available in the DEFORM User Area for manual installation. Download the appropriate rpms for your system to a writable directory. Both the lzma-4* and lzma-libs-4* rpms are required. Obtaining the files from the User Area is the easiest
+    method. Precompiled rpm files for CentOS (Red Hat Enterprise Linux Compatible) Linux are available at <a href="https://tukaani.org/lzma">https://tukaani.org/lzma</a>.</p>
+  <p> </p>
+  <p>Once the rpms are in a writable directory, the lzma-libs-4* rpm needs to be installed first. Some Linux variants (more recent versions of Centos Linux) allow the files to be installed by double clicking on them in the File Browser. If this method is
+    available, a root password will be requested and then the file will be installed. Make sure to install both of the lzma files.</p>
+  <p> </p>
+  <p>Alternatively, the files can be installed with the following command (issued as root) from the directory containing the files:</p>
+  <p><span style="font-style:italic;">rpm –Uvh lzma-4.32.7-1.el4.rf.x86_64.rpm lzma-libs-4.32.7-1.el4.rf.x86_64.rpm</span> </p>
+  <p> </p>
+  <h2><a id="2_2_7_Python_Installation"></a>Python Installation </h2>
+  <ol class="Decimal">
+    <li>
+      <p>Starting with DEFORM v13.1, Python only needs to be installed if using Web-based Service Control or Email notifications.  </p>
+    </li>
+    <li>
+      <p>[root] On some versions of Linux, the included version of Python may be too old for the DEFORM Services utility to run. If a newer version isn’t available through a repository *yum, zipper), follow these instructions for updating to Python 2.7. </p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">wget http://www.python.org/ftp/python/2.7.2/Python-2.7.2.tgz </span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">tar -xzvf Python-2.7.2.tgz</span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;"></span><span style="font-style:italic;"></span><span style="font-style:italic;">cd Python-2.7.2 </span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;"></span><span style="font-style:italic;">./configure </span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">make install </span></p>
+  <p style="margin-left: 40px"> </p>
+  <p style="margin-left: 40px"><span style="font-style:italic;"></span><span style="font-style:italic;"></span>If there are any problems installing Python, gcc might need to be installed first. On CentOS, type <em>yum install gcc</em> . </p>
+  <h2><a id="2_2_8_Sentinel_Key_Driver_Installation"></a>Sentinel Key Driver Installation</h2>
+  <ol class="Decimal">
+    <li>
+      <p>The 7.6.2 driver zip (sentinel_protection_installer_7.6.2_linux.zip) is available in <br/> the installed License Manager at /usr/local/SFTC/LicenseManager/UTILS/. See section <a href="#2_2_9_License_Manager_Installation">2.2.9.</a> for details on
+        installing the License Manager.</p>
+    </li>
+    <li>
+      <p>Copy the compressed Sentinel key driver archive file to a writeable directory on the system on which you wish to install it.</p>
+    </li>
+    <li>
+      <p>[root] Run the following commands to install the driver.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">cd /path_to_zip</span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">unzip sentinel_protection_installer_7.6.2_linux.zip</span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">cd sentinel_protection_installer_7.6.2</span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">chmod +x protection_install.sh</span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">./protection_install.sh</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 3;" value="4">
+      <p>Insert the USB key into the computer. In the case of using a cluster, insert the key into the Master node.</p>
+    </li>
+    <li style="" value="3">
+      <p>[root] Start the driver daemon.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">cd /opt/safenet_sentinel/common_files/sentinel_usb_daemon</span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">./load_daemon.sh start</span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">./load_daemon.sh support</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 5;" value="6">
+      <p style="">[root] Repeating <span style="font-style:italic;">./load_daemon.sh</span> start a second time should indicate that the daemon is already running. Any subsequent system restart will initiate this service enabling the DEFORM License Manager to communicate
+        with the hardware key and the password file.</p>
+    </li>
+    <li style="" value="5">
+      <p style="">Using some versions of this driver (like v7.4 and greater), requires the user to manually maintain compatibility with previous releases for restart/reboot sequence of the machine. (‘./load_daemon.sh support’ is required to be executed manually on
+        each system restart).</p>
+    </li>
+    <li style="" value="5">
+      <p style="">DEFORM requires the v7.1 driver or later. With driver v7.1, the default location of the daemon startup script is <span style="font-style:italic;">/opt/sentinel/sud/usb.</span></p>
+    </li>
+  </ol>
+  <h2><a id="2_2_9_License_Manager_Installation"></a>License Manager Installation</h2>
+  <p>The DEFORM License Manager can be run on the same Linux machine that DEFORM is installed on or any other supported Linux machine or PC on the network.</p>
+  <ol class="Decimal">
+    <li>
+      <p>If an earlier version of DEFORM or the License Server is installed, run the following command to stop the existing DEFORM services.</p>
+    </li>
+  </ol>
+  <p><em style="margin-left: 40px">/etc/init.d/deformscd cleanstop</em></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;" value="2">
+      <p>Copy the compressed License Manager archive file to a writeable directory on the system on which you wish to install it.</p>
+    </li>
+    <li>
+      <p>Decompress the tar.lzma file.</p>
+    </li>
+  </ol>
+  <ol class="LowerAlpha">
+    <li>
+      <p>On CentOS 6 use unlzma.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">unlzma DEFORM_LicenseManager_v14_0_2_CentOS_v6.x_x86_64.tar.lzma</span></p>
+  <ol class="LowerAlpha">
+    <li style="counter-reset: item1 1;" value="2">
+      <p style="counter-reset: p 1;">On CentOS 7 use unxz.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">unxz DEFORM_LicenseManager_v14_0_2_CentOS_v7.x_x86_64.tar.lzma</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 3;" value="4">
+      <p>[root] Create the installation directory for DEFORM.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">mkdir /usr/local/SFTC</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 4;" value="5">
+      <p>[root] Change into the installation directory.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">cd /usr/local/SFTC</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 5;" value="6">
+      <p>[root] Untar the uncompressed installation file.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">tar –xvf /path_to_file/DEFORM_LicenseManager_v14_0_2_CentOS_v6.x_x86_64.tar</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 6;" value="7">
+      <p>[root] <span style="font-weight:bold;">Required System Libraries</span>. Depending on the how the operating system was installed, some 64-bit systems may be missing some required 32-bit system libraries required by DEFORM. Run the commands below
+        to install the most likely missing libraries. This requires access to a valid software repository.<br/>
+        <em><span style="font-style:italic;">  cd /usr/local/SFTC/LicenseManager/UTILS<br/>
+	./DEF_INSTALL_LIBS.sh </span></em></p>
+    </li>
+    <li style="" value="8">
+      <p>[root] Run the following script to set up the DEFORM services. This will set up deformlmd, deformbqd, and deformscd which are required to start the services for license manager, batch queue server, and services control.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">cd /usr/local/SFTC/LicenseManager/UTILS</span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">./DEF_INSTALL_SERVERS.sh</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 8;" value="9">
+      <p>[root] If the License Manager is installed in the default location (<span style="font-style:italic;">/usr/local/SFTC</span>) this step can be skipped.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px">The deform* scripts in /etc/init.d need to contain the correct paths. Please edit each deform* file and update the paths contained to point to the installation location used.</p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 9;">
+      <p>The Services Control cannot be run as root. The script at <span style="font-style:italic;">/etc/init.d/deformscd</span> assumes that a non-root user named “deform” exists. If there isn’t a non-root user named “deform” adjust the line below to reference
+        an existing, non-root user.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">export DEFORM_SIM_USER=deform</span></p>
+  <p style="margin-left: 40px"> </p>
+  <p style="margin-left: 40px">The Services Control needs to be started before running DEFORM Setup. Do not launch the  service using “service deformscd start”; this will cause problems with report generation. Instead  launch it as shown below.</p>
+  <p style="margin-left: 40px"><br/>
+    <em>/etc/init.d/deformscd start</em></p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 10;" value="11">
+      <p>[root] If the DEFORM.PWD has not been downloaded yet, please see <a href="#2_2_4_Obtaining_DEFORM_Software">section 2.2.4.</a><span style="font-size: 12pt;"> Obtaining </span><span style="font-size: 12pt;">DEFORM Software now. Copy DEFORM.PWD to the directory where the DEFORM License </span>        <span style="font-size: 12pt;">Manager has been installed. The default installation location is </span><span style="font-style:italic;">/usr/local/SFTC/LicenseManager</span>. Make sure that this file has read permissions enabled for all users
+        (the chmod command can be used).</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">cd /usr/local/SFTC/LicenseManager</span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;"></span><span style="font-style:italic;">cp /path_to_file/DEFORM.PWD </span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">chmod +r DEFORM.PWD</span></p>
+  <p><br/>
+    <span style="font-style:italic;">NOTE: On a system reboot, the license manager, batch queue, and services control services should get started automatically, and any user login should be able to use these services.</span></p>
+  <p> </p>
+  <p><span style="font-style:italic;">NOTE: Running the License Manager requires that the Sentinel key driver has been installed. After the driver has been installed (following the steps listed above), the License Manager will be started automatically after a reboot in most Linux systems.</span></p>
+  <p> </p>
+  <p><span style="font-style:italic;">NOTE: If a user wants to restart the DEFORM License Manager without rebooting the machine (e.g. if a new DEFORM.PWD file needs to be installed) they can log in as root and run the following commands.</span></p>
+  <p style="margin-left: 40px"><br/>
+    <span style="font-style:italic;">/etc/init.d/deformlmd restart</span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">/etc/init.d/deformbqd restart</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 11;" value="12">
+      <p><span style="font-size: 12pt;"> </span>[root] Start the DEFORM services.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 28px">   <em>/etc/init.d/deformbqd start<br/>
+   /etc/init.d/deformlmd start<br/>
+   /etc/init.d/deformscd start</em></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 12;" value="13">
+      <p>If DEFORM is going to be installed on this same computer proceed to the next section, <a href="#2_2_10_DEFORM_Installation">2.2.10. DEFORM Installation</a>. Otherwise skip to section <a href="#2_2_11_Additional_Installation">2.2.11. Additional Installation</a>. </p>
+    </li>
+  </ol>
+  <h2><a id="2_2_10_DEFORM_Installation"></a>DEFORM Installation</h2>
+  <ol class="Decimal">
+    <li>
+      <p>If an earlier version of DEFORM or the License Server is installed, run the following command to stop the existing DEFORM services.<br/>
+        <em>/etc/init.d/deformscd cleanstop</em></p>
+    </li>
+    <li>
+      <p>Copy the compressed License Manager archive file to a writeable directory on the system on which you wish to install it.</p>
+    </li>
+    <li>
+      <p>Decompress the tar.lzma file.</p>
+    </li>
+  </ol>
+  <ol class="LowerAlpha">
+    <li>
+      <p>On CentOS 6 use unlzma.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">unlzma DEFORM _v14_0_2_CentOS_v6.x_x86_64.tar.lzma</span></p>
+  <ol class="LowerAlpha">
+    <li style="counter-reset: item1 1;" value="2">
+      <p>On CentOS 7 use unxz.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">unxz DEFORM_ v14_0_2_CentOS_v7.x_x86_64.tar.lzma</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 3;" value="4">
+      <p>[root] Create the installation directory for DEFORM.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">mkdir /usr/local/SFTC</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 4;" value="5">
+      <p>[root] Change into the installation directory.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">cd /usr/local/SFTC</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 5;" value="6">
+      <p>[root] Untar the uncompressed installation file</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">tar –xvf /path_to_file/DEFORM _v14_0_2_CentOS_v6.x_x86_64.tar</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 6;" value="7">
+      <p>[root] <strong>Required System Libraries</strong>. Depending on the how the operating system was installed, some 64-bit systems may be missing some required 32-bit system libraries required by DEFORM. Run the commands below to install the most likely
+        missing libraries. This requires access to a valid software repository.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">cd /usr/local/SFTC/DEFORM/v14.0.2/UTILS<br/>
+./DEF_INSTALL_LIBS.sh</span><br/>
+    <span style="font-style:italic;"></span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 7;" value="8">
+      <p>[root] Run the following script to set up the DEFORM services. This will set up deformlmd, deformbqd, and deformscd which are required to start the services for license manager, batch queue server, and services control.</p>
+      <p><span style="font-style:italic;"><em>cd /usr/local/SFTC/DEFORM/v14.0.2/UTILS<br/>
+	./DEF_INSTALL_SERVERS.sh </em></span></p>
+      <p><em></em></p>
+    </li>
+    <li style="" value="8">
+      <p>[root] If the License Manager is installed in the default location (<span style="font-style:italic;">/usr/local/SFTC</span>) this step can be skipped. </p>
+    </li>
+  </ol>
+  <p style="margin-left: 44px">The deform* scripts in /etc/init.d need to contain the correct paths. Please edit each deform* file and update the paths contained to point to the installation location used.</p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 9;" value="10">
+      <p>[root] The Services Control cannot be run as root. The script at <span style="font-style:italic;">/etc/init.d/deformscd  </span>assumes that a non-root user named “deform” exists. If there isn’t a non-root user named “deform” adjust the line below
+        to reference an existing, non-root user.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">export DEFORM_SIM_USER=deform</span></p>
+  <p> </p>
+  <p style="margin-left: 40px">The Services Control needs to be started before running DEFORM Setup. Do <span style="font-weight:bold;">not </span>launch the service using “<span style="font-style:italic;">service deformscd start</span>”; this will cause problems with report generation.
+    Instead launch it as shown below.</p>
+  <p style="margin-left: 40px"> </p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">/etc/init.d/deformscd start</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 10;" value="11">
+      <p>[root] <strong>Report Generation Libraries</strong>. Starting with DEFORM v12.0.1 report generation requires the Latex PDF library. Run the commands below to install the Latex libraries.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">cd /usr/local/SFTC/DEFORM/v14.0.2/UTILS</span></p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">./DEF_INSTALL_LATEX.sh</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 11;" value="12">
+      <p><strong>3D Machining</strong>. Starting with DEFORM v11.1, the 3D machining module is enhanced to include creation of drill bit geometry, which requires the following additional steps.</p>
+    </li>
+  </ol>
+  <ol class="LowerAlpha">
+    <li>
+      <p>Copy the <span style="font-style:italic;">openscad-2014.03.x86-32.tar.gz</span> file from</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">/usr/local/SFTC/DEFORM/v14.0.2/UTILS</span> folder to a writeable folder</p>
+  <ol class="LowerAlpha">
+    <li style="counter-reset: item1 1;" value="2">
+      <p>unzip this using tar command &quot;<em>tar -xzvf openscad-2014.03.x86-32.tar.gz</em>&quot;</p>
+    </li>
+    <li style="counter-reset: item1 2;" value="3">
+      <p>Go to the resulting folder &quot;<em>cd openscad-2014.03</em>&quot;</p>
+    </li>
+    <li style="counter-reset: item1 3;" value="4">
+      <p style="counter-reset: p 3;">[root] Install the package &quot;<em>./install.sh</em>&quot;.</p>
+    </li>
+  </ol>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 12;" value="13">
+      <p>[root] <strong>64-bit FEM Engine installation</strong>. Starting with DEFORM v10.2 support for 64-bit 3D FEM engine has been extended to Linux. On these 64-bit operating systems, the 64-bit 3D FEM support includes user routine support as well. From
+        GUI Main, in the Run Options dialog, user can now select to run the model in 32-bit mode or 64-bit mode. Related instructions on the user routine compilation in 64-bit mode are available in the system documentation (please refer to Chapter
+        <a href="../../user_routines/56_user_routines_in_deform/56_3_3d_user_defined_fem_routines.htm">56.3. 3D User Defined FEM Routines</a> system documentation). Starting with DEFORM v10.2.1 for 64-bit MPI support, the mpich1 library has been updated to mpich2 for 64-bit MPI support (no change for 32-bit MPI support which still uses mpich1).
+          Starting with DEFORM v11.1 the mpich2 library was updated.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px">Run the following commands to install mpich2 for 64-bit DEFORM.</p>
+  <p style="margin-left: 40px"><em>cd /usr/local</em></p>
+  <p style="margin-left: 40px"><em>tar -xvf /usr/local/SFTC/DEFORM/v14.0.2/UTILS/mpich2-1.3.1.tar</em></p>
+  <p style="margin-left: 40px"> </p>
+  <p style="margin-left: 40px">In user .cshrc file, add these 2 environment variables.</p>
+  <p style="margin-left: 40px"><em>setenv DEFORM_MPI MPICH2</em></p>
+  <p style="margin-left: 40px"><em>setenv MPI_ROOT /usr/local/mpich2-1.3.1</em></p>
+  <p style="margin-left: 40px"> </p>
+  <p class="Note_style" style="margin-left: 40px;">NOTE: The MPI_ROOT definition is only needed if the mpich2 installation is not made in the /usr/local path.</p>
+  <p class="Note_style" style="margin-left: 40px;">NOTE: Starting with DEFORM v11.1 64-bit support has been also extended to 2D FEM, but has no MPI support.</p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 13;" value="14">
+      <p>[root] <strong>64-bit FEM Engine setup</strong>. Starting with DEFORM v13.1.1, there is a new option to choose the FEM Engine. For Centos 7, the Intel<span style="vertical-align:super;font-size:8pt">®</span> Fortran compiler has been added, and
+        is installed by default. SFTC recommends using this option unless the Absoft Fortran compiler is being used or DEFORM is installed on a computer using a legacy (non-modern) CPU. For Centos 6, the Intel Fortran option is not available, so the Absoft
+        Modern Engine is installed by default. SFTC recommends the modern Absoft Fortran compiler option unless DEFORM is installed on a computer using a legacy (non-modern) CPU. Please be aware that the Intel Fortran option is compatible with both Intel
+        Core and AMD Ryzen CPUs. Note that starting with DEFORM v14.0.2, the Absoft Legact engine is no longer available.</p>
+    </li>
+  </ol>
+  <p><span style="margin-left:40px;">a. In order to change the FEM engine, run the commands below and follow the prompts.</span></p>
+  <p><span style="font-style:italic;"><span style="margin-left:60px;">cd /usr/local/SFTC/DEFORM/v14.0.2/UTILS</span></span>
+  </p>
+  <p><span style="font-style:italic;"><span style="margin-left:60px;">./DEF_SETUP_FEM.sh</span></span>
+  </p>
+  <p style="margin-left: 40px"> </p>
+  <h2> <a id="2_2_11_Additional_Installation"></a>Additional Installation</h2>
+  <ol class="Decimal">
+    <li>
+      <p><strong>Permissions</strong>. For simulations being run by a user other than the defined simulation server user, the following minimum permission requirements must be met.</p>
+    </li>
+  </ol>
+  <ol class="LowerAlpha">
+    <li>
+      <p>The DEFORM user and Simulation Server users must be in each other’s primary groups.</p>
+    </li>
+    <li>
+      <p>The DEFORM user and Simulation Server user must have a umask that allows for full permissions for user and group. i.e. umask 007</p>
+    </li>
+    <li>
+      <p>The DEFORM user’s home directory must be group readable.</p>
+    </li>
+    <li>
+      <p>Run <em>/usr/local/SFTC/DEFORM/v14.0.2/UTILS/DEF_CHECK_CONFIG.sh</em> from a problem directory to check for these and any other related permission issues. Please have your systems administrator check the output of this check before contacting SFTC Support.
+        Note that some errors may appear depending on when this step is run (for example, if a user account hasn’t been setup yet).</p>
+    </li>
+  </ol>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;" value="2">
+      <p>Set the root environment to contain DEF_CFG_DIR by adding the following to root’s shell configuration file (<em>~/.cshrc</em>) file:</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><em>setenv DEF_CFG_DIR &#39;/usr/local/SFTC/DEFORM/Configuration&#39;</em></p>
+  <p class="Note_style"><br/> NOTE: This will also need to be defined in the user’s environment as well as explained in section. <a href="#2_2_12_Setup_a_user_account">2.2.12. Setup a user account.</a></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2;" value="3">
+      <p><strong>User defined post functionality</strong> <strong>in 64-bit mode</strong>. In order to use user defined post functionality in 64-bit mode.</p>
+    </li>
+  </ol>
+  <ol class="LowerAlpha">
+    <li>
+      <p>The system must have Absoft v11.0 (64-bit) compiler installed on the machine.</p>
+    </li>
+    <li>
+      <p>The user shell configuration file (~/.cshrc) needs to have the following line.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">setenv LD_LIBRARY_PATH /opt/absoft11.0/shlib64</span></p>
+  <p style="margin-left: 40px;"><br/> If the above haven’t been setup you may encounter the following error when loading a 64-bit .SL file to activate user defined post functionality.<br/>
+    <span style="font-style:italic">&quot;libaf77math.so: cannot open shared object file : No such file or directory.&quot;</span></p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 3;" value="4">
+      <p>[root] The Services Control cannot be run as root. The script at <span style="font-style:italic;">/etc/init.d/deformscd</span> assumes that a non-root user named “deform” exists. If there isn’t a non-root user named “deform” adjust the line below
+        to reference an existing, non-root user.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px"><span style="font-style:italic;">export DEFORM_SIM_USER=deform</span></p>
+  <p> </p>
+  <p style="margin-left: 40px">The Services Control needs to be started before running DEFORM Setup. Do not launch the<br/> service using “<span style="font-style:italic;">service deformscd start</span>”; this will cause problems with report generation. Instead launch it as shown
+    below.</p>
+  <p style="margin-left: 40px"> </p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">/etc/init.d/deformscd start</span></p>
+  <p> </p>
+  <h2><a id="2_2_12_Setup_a_user_account"></a>Setup a user account</h2>
+  <p>Some Linux distributions don’t have csh, but instead have tcsh, such as RHEL 8. In this case using tcsh is fine; just replace .cshrc below with .tcshrc.</p>
+  <p>Make sure the default login shell is &quot;C&quot; shell (csh). Users can determine their default login shell by using</p>
+  <p style="margin-left: 40px"><br/>
+    <span style="font-style:italic;">cat /etc/passwd | grep ‘user name’</span></p>
+  <p><br/> and observing the last segment of the system response. If csh is not the default login shell, the chsh command can be used to change this. To check the format of this command, type ‘<span style="font-style:italic;">man </span><span style="font-style:italic;">chsh</span>’.
+    We will assume the DEFORM user name is &quot;<span style="font-style:italic;">user1</span>&quot; and the login directory is &quot;<span style="font-style:italic;">/home/user1</span>&quot;.</p>
+  <p><br/> Log into the user account and edit the “C” shell login command file, &quot;<span style="font-style:italic;">.cshrc</span>&quot;, to include the following command lines (based on typical installation location):</p>
+  <p><br/>
+    <span style="font-style:italic;">setenv DEF_CFG_DIR &#39;/usr/local/SFTC/DEFORM/Configuration&#39;</span></p>
+  <p><span style="font-style:italic;">setenv DEFORM23_DIR &#39;/usr/local/SFTC/DEFORM/v14.0.2&#39;</span></p>
+  <p><span style="font-style:italic;">setenv DEFORM_DIR $DEFORM23_DIR/2d</span></p>
+  <p><span style="font-style:italic;">setenv DEFORM3_DIR $DEFORM23_DIR/3d</span></p>
+  <p><span style="font-style:italic;">setenv DEFORM_MPI MPICH2</span></p>
+  <p><span style="font-style:italic;">setenv MPI_ROOT /usr/local/mpich2-1.3.1</span></p>
+  <p><span style="font-style:italic;">source $DEFORM23_DIR/CONFIG.COM</span></p>
+  <p><span style="font-style:italic;">umask 007</span></p>
+  <p><br/> The first four command lines define the global symbols &quot;DEF_CFG_DIR&quot;, “DEFORM23_DIR”, “DEFORM_DIR”, and “DEFORM3_DIR” to be the DEFORM product and license configuration locations. Lines five and six set up 64-bit DEFORM mpich2. The “source”
+    line executes the DEFORM configuration file &quot;CONFIG.COM&quot; to set all the symbols needed (alias) to run the DEFORM system. For the symbols set in the configuration file CONFIG.COM, user should not override these symbols or define them any
+    differently than the original text.</p>
+  <p class="Note_style"><br/>
+    <strong>Note</strong>: The settings should be active for all shells, not just interactive shells.</p>
+  <p><br/> User may log out of the system at this time. The next time you log into the system, the above command lines will be executed automatically.</p>
+  <p><br/> If you decide to stay in the system at this time, you need to execute &quot;.cshrc&quot; manually since its contents have changed. To do that, enter ‘source .cshrc’.</p>
+  <p><br/> Run the following commands to verify the environment variables are set correctly.</p>
+  <p><em style="margin-left: 40px">echo $DEFORM_DIR</em> (should result in 2d installation path)</p>
+  <p><em style="margin-left: 40px">echo $DEFORM3_DIR</em> (should result in 3d installation path)</p>
+  <p><em style="margin-left: 40px">echo $DEFORM23_DIR</em> (should result in integrated system installation path)</p>
+  <p><em style="margin-left: 40px">echo $DEF_CFG_DIR</em> (should result license configuration folder path) </p>
+  <h2><a id="2_2_13_DEFORM_Setup"></a>DEFORM Setup</h2>
+  <p>The Services Control needs to be started before running DEFORM Setup. Do not launch the service using “service deformscd start”; this will cause problems with report generation. Instead launch it as shown below.</p>
+  <p> </p>
+  <p><em style="margin-left: 40px">/etc/init.d/deformscd start</em></p>
+  <p> </p>
+  <p>Execute the setup program to indicate the installation path, and the server details for License Manager and Batch Queue servers.<br/> (based on the default installation path, change to the v14.0.2 folder and execute the setup)</p>
+  <p> </p>
+  <p><em style="margin-left: 40px">cd /usr/local/SFTC/DEFORM/v14.0.2</em></p>
+  <p><em style="margin-left: 40px">./DEFORMSetup.EXE</em></p>
+  <p> </p>
+  <p>(Appropriate X server settings are required to be set when this action is carried out from a remote machine) </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._2.2.1._DEFORM_Setup_Window"></a><img height="506" src="../../../assets/images/starting_up_deform/2_deform_installation/2_2_installation_of_deform_v12_0_1_in_linux/2_2_image001.jpg" width="750"/></p>
+  <p class="Fig_num">DEFORM Setup Window</p>
+  <p> </p>
+  <p>Once the DEFORMSetup dialog opens, the following basic information needs to be provided:</p>
+  <ul class="Disc">
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">
+      <p>Machine name or IP address of where the license manager is running as identified in the network. </p>
+    </li>
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">
+      <p>License Manager Server Port to be defined as 34445. Please note that this number cannot be changed.</p>
+    </li>
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">
+      <p>When you click on ‘Synchronize’ it should return a positive running status on the License Manager. If not, check the required components such as the Sentinel key driver daemon status, hardware key, running status on License Manager daemon, and the
+        password file. </p>
+    </li>
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">
+      <p>Once synchronization is successful, whether the license server is running on the local computer or a remote computer, click the ‘Save’ button to save the settings.</p>
+    </li>
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">
+      <p>Simulation server set up also needs the machine name hosting the service and the port number. In the event of multiple simulation server definitions, it is recommended to first read/synchronize the existing information from the license manager server,
+        correct or add the information and save to the license manager server. Again, this information is only needed if Batch Queue is licensed. Please note that batch queue and simulation server setup is mandatory for running DOE and OPT jobs. Simulation
+        servers can be started in the Simulation Server tab.</p>
+    </li>
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">
+      <p><span style="font-size: 12pt;">Please note that when any information is changed and saved in DEFORMSetup, the services could be interrupted while using the same server.</span><span style="font-size: 12pt;"></span></p>
+    </li>
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">
+      <p><span style="font-size: 12pt;"></span>Configure the system firewall such that the ports used for DEFORM services (34444 and 34445 (License manager), 34446 (Batch Queue server), 34447 (Simulation server), and 34448 (DEFORM Services, with TCP) are
+        accessible.</p>
+    </li>
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">
+      <p>System ports for 34449+ need to be accessible as well. The number of ports that need to be opened in the range is dependent on the number of simultaneous DOE/OPT jobs that may run at any given time. </p>
+    </li>
+  </ul>
+  <p>The DEFORM Services tab allows for managing of DEFORM services and is new since v11.2.</p>
+  <p>You have two options:</p>
+  <ol class="Decimal">
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">Manage the DEFORM Service running on your local computer.</li>
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">Manage the DEFORM Services running on all computers.</li>
+  </ol>
+  <p>The first option is available for every DEFORM user. The second option is only available to the “authorized users” or users who know the “pass code” created by an authorized user.</p>
+  <p> </p>
+  <p style="text-align: center">  <img height="644" src="../../../assets/images/starting_up_deform/2_deform_installation/2_2_installation_of_deform_v12_0_1_in_linux/2_2_image002.jpg" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p>To set up a user to be an authorized user, you’ll need root access on the computer running the License Manager. In the License Manager folder (usually at</p>
+  <p><em>/usr/local/SFTC/LicenseManager</em>) create or edit the file “authorized_users.txt”. In this file will be a list of users that are authorized users.  The format of the list is:  </p>
+  <p style="margin-left: 40px"><em>user_name1@computer_name1</em></p>
+  <p style="margin-left: 40px"><em>user_name2@computer_name2</em></p>
+  <p>An authorized user has full control of the DEFORM services.</p>
+  <ul class="Disc">
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">Access the DEFORM Services of all DEFORM computers.</li>
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">Set or change the DEFORM Services pass code.</li>
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">Update the DEFORM license password file (DEFORM.PWD).</li>
+  </ul>
+  <p>The DEFORM Service pass code allows for access to DEFORM Services on all DEFORM computers from:</p>
+  <ul class="Disc">
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">Any DEFORM computer (other than the authorized computer)</li>
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt">Any computer with a web browser (no need to install DEFORM)</li>
+  </ul>
+  <p>Only an authorized DEFORM user can create or change the pass code.</p>
+  <p>The DEFORM Services tab allows for starting and stopping of DEFORM services on server and DEFORM computers as well as updating the service applications on DEFORM computers. If any of the services are stopped, click the corresponding start button to
+    start the service.</p>
+  <p> </p>
+  <h2><a id="2_2_14_System_Execution"></a>System Execution</h2>
+  <p>The following procedure may be used to run the DEFORM system:</p>
+  <ol class="Decimal">
+    <li>
+      <p>Log into the DEFORM user account from an X-terminal</p>
+    </li>
+    <li>
+      <p>Run the following commands to invoke the DEFORM system.</p>
+    </li>
+  </ol>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 80%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEF_GUI</p>
+        </td>
+        <td>
+          <p style="border-width: 1px;border-style: none;border-color: #FFFFFF">Main interface for DEFORM</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="border-width: 1px;border-style: none;border-color: #FFFFFF">mo</p>
+        </td>
+        <td>
+          <p style="border-width: 1px;border-style: none;border-color: #000000">Integrated Manufacturing<span style="border-color:#ffffff;border-style:none;border-width:1px;"> </span>Process (MO)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="border-width: 1px;border-style: none;border-color: #FFFFFF">mo64</p>
+        </td>
+        <td>
+          <p style="border-width: 1px;border-style: none;border-color: #FFFFFF">64-bit Integrated Manufacturing Process (MO)</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2;" value="3">
+      <p>A complete list of commands can be found by typing alias. </p>
+    </li>
+  </ol>
+  <h2><a id="2_2_15_QUESTIONS_PROBLEMS"></a>QUESTIONS / PROBLEMS</h2>
+  <p>If you have any questions, comments, or problems installing DEFORM V14.0.2, contact:</p>
+  <p> </p>
+  <p style="text-align: center"><strong>Scientific Forming Technologies Corporation</strong></p>
+  <p style="text-align: center"><strong>2545 Farmers Drive, </strong><strong>Suite 200</strong></p>
+  <p style="text-align: center"><strong>Columbus, OH 43235 USA</strong></p>
+  <p style="text-align: center"><strong>Phone: (614) 451-8330</strong></p>
+  <p style="text-align: center"><strong>E-mail: <a href="mailto:support@deform.com">support@deform.com</a></strong></p>
+  <p style="text-align: center"><strong>Or</strong></p>
+  <p style="text-align: center"><strong>Visit our website at <a href="http://www.deform.com">http://www.deform.com</a></strong></p>
+  <p> </p>
+  <h2><a id="2_2_16_CPU_Types"></a>CPU Types</h2>
+  <p>Here are some resources for determining the generation of your Intel CPU.</p>
+  <p><br/> To determine the user CPU, type</p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">cat /proc/cpuinfo | grep &quot;model name&quot;</span></p>
+  <p style="margin-left: 40px"> </p>
+  <p>This Intel site gives an overview of how to determine the generation of your Core-based CPU by comparing it to the detected CPU, as shown above.</p>
+  <p><a href="https://www.intel.com/content/www/us/en/processors/processor-numbers.html">https://www.intel.com/content/www/us/en/processors/processor-numbers.html</a></p>
+  <p><br/> If you were unable to determine your Intel CPU generation from the above link, please try the following.</p>
+  <ol class="Decimal">
+    <li>
+      <p>Click on one of the following links (depending on CPU type) and search for your CPU.</p>
+    </li>
+  </ol>
+  <p>For Intel Xeon CPUs:<br/>
+    <a href="https://en.wikipedia.org/wiki/List_of_Intel_Xeon_microprocessors">https://en.wikipedia.org/wiki/List_of_Intel_Xeon_microprocessors</a></p>
+  <p>For Intel Core i7 CPUs:</p>
+  <p><a href="https://en.wikipedia.org/wiki/List_of_Intel_Core_i7_microprocessors">https://en.wikipedia.org/wiki/List_of_Intel_Core_i7_microprocessors</a></p>
+  <p>For other Intel Core CPUs, look at the “See also” section at the bottom of the Intel Core i7 CPUs page.</p>
+  <p><br/> For example, if the instructions above display the detected CPU as:</p>
+  <p> </p>
+  <p style="margin-left: 40px"><span style="font-style:italic;">model name : Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz</span></p>
+  <p> </p>
+  <p>Then search for “6700”.</p>
+  <p>There will be a link that will take you to Intel’s website with more information.</p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;" value="2">
+      <p>Click that link.</p>
+    </li>
+    <li style="" value="2">
+      <p>On the Intel page, the architecture can be found by looking at the code name “Products formerly _______”.</p>
+    </li>
+    <li style="" value="2">
+      <p>Now you that you know the architecture, you can determine if it is older or newer than Haswell by clicking the following link and searching for the architecture.</p>
+    </li>
+  </ol>
+  <p><a href="https://en.wikipedia.org/wiki/List_of_Intel_CPU_microarchitectures">https://en.wikipedia.org/wiki/List_of_Intel_CPU_microarchitectures</a></p>
+  <p style="text-align: justify"> </p>
+  <p><strong></strong></p>
+
+</body></html>

@@ -1,0 +1,162 @@
+---
+lang: sk
+title: "Forming Lab 6"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "15.3.2.2.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 6</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 6</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_lab7.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_Lab5.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Forming Lab 6">
+        <span>Forming Lab 6</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 6. Mechanical Press</h1>
+  <h3 class="h3_6_">Background</h3>
+  <p>In multiple operations, interactive mechanical press setup is significantly different than scheduled setup. We will work through both.</p>
+  <p> </p>
+  <p>Because of the unique kinematics of a mechanical press, we need to know exactly whether the press is in the top-bottom (or front-back) stroke at any time.  This means we need knowledge of the starting position.</p>
+  <p> </p>
+  <p>When defining a mechanical press, there are special terms that should be understood:</p>
+  <p><strong>Total stroke</strong> is the total ram movement from Top Dead Center (TDC) to Bottom Dead Center (BDC).</p>
+  <p><strong>Forging stroke</strong> is the distance the ram travels from the time it first touches the workpiece until it reaches BDC.</p>
+  <p><strong>Strokes/second</strong> is the flywheel speed in cycles/second (matches the press speed on a non- clutch driven press).</p>
+  <p>For this tutorial, we will use a Total Stroke of 16 in. and a Strokes/second of 1 (i.e. 60 RPM).</p>
+  <h3 class="h3_6_">Operation1- Interactive setup</h3>
+  <h4 class="h4_6_2_">Creating New problem</h4>
+  <p>Create a new project called <strong>Gear_Mechanical </strong>and copy the existing project <strong>Gear_LargerBillet</strong>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L6_1_MO_New_Project_window"></a><img height="300" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab6_image0001.jpg" width="408"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab6">MO New Project window</p>
+  <p> </p>
+  <p>In an interactive setup, we can start with the Top Die positioned correctly on the workpiece. So, click the first <strong>Upset </strong><strong>operation </strong>tile. Go to <strong>Top</strong> <strong>Die  </strong><strong>Movement </strong>page
+    from Operation tree.</p>
+  <h4 class="h4_6_2_">Top die Movement</h4>
+  <p>Change the movement type to <strong>Mechanical </strong><strong>press</strong>. Set the <strong>Total </strong><strong>stroke </strong>to <strong>16 </strong>in. and the <strong>Forging </strong><strong>stroke </strong>to <strong>6.3 </strong>in (distance
+    from the current position to BDC). Set the <strong>Cycles/sec</strong> to <strong>1</strong> (See <a href="#Fig_L6_2_Top_die_movement_page"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab6">Fig. L6.</span>2.</a>). Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/>  until Stopping controls page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L6_2_Top_die_movement_page"></a><img height="500" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab6_image0002.jpg" width="384"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab6">Top die movement page</p>
+  <p> </p>
+  <h4 class="h4_6_2_">Stopping controls</h4>
+  <p>Set the stopping stroke (Primary die displacement) to <strong>16 </strong>in. (<strong>Y </strong>direction), which is equal to the total press stroke. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Generate DB page.</p>
+  <h4 class="h4_6_2_">Generate DB</h4>
+  <p>Generate the Database and click <img src="../../../../../assets/icons/pre_icons/mo_next_opr_button.jpg"/> to 2<span style="vertical-align:super;font-size:8pt">nd</span> operation.</p>
+  <h3 class="h3_6_">Operation 2 - scheduled (batch) setup</h3>
+  <p>In a batch setup, we generally do not know where the ram will be relative to BDC when it touches the workpiece. Therefore, we need to start with the ram in a known position, and update the movement controls when the model is run.</p>
+  <p>We will use the TDC position as a standard reference position, then use scheduled positioning to update the tool position and forging stroke.  </p>
+  <p>Go to <strong>Positioning</strong> <strong>page </strong>from Operation tree.</p>
+  <h4 class="h4_6_3_">Object Positioning</h4>
+  <ol class="Decimal">
+    <li>
+      <p>Interference position the Top Die down to the Bottom Die</p>
+    </li>
+    <li>
+      <p>Offset position the Top Die up by the flash gap of 0.2 in</p>
+    </li>
+    <li>
+      <p>Offset position the Top Die up by the total forging stroke of 16 in.  Now the die is at TDC.</p>
+    </li>
+  </ol>
+  <p>Now go back to <strong>Top </strong><strong>die </strong><strong>movement </strong>page.</p>
+  <h4 class="h4_6_3_">Top die movement</h4>
+  <p>Define Mechanical press with <strong>Cycles/sec</strong> = <strong>1</strong> and define both the <strong>Total </strong><strong>stroke </strong>and <strong>Forging </strong><strong>stroke </strong>to <strong>16</strong> in. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Scheduled positioning page.</p>
+  <h4 class="h4_6_3_">Scheduled Positioning</h4>
+  <p>Interference positioning the Workpiece down to the Bottom die.</p>
+  <p>Interference positioning the Top Die down to the Workpiece. Notice how the Update current stroke option is checked and grayed out. The die stroke will be automatically updated when this positioning occurs during the simulation. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Stopping controls page.</p>
+  <h4 class="h4_6_3_">Stopping controls</h4>
+  <p>Set the <strong>Primary </strong><strong>die </strong><strong>displacement </strong>to <strong>16</strong> in (Y direction) and under <strong>Die </strong><strong>distance </strong><strong>tab </strong>click the <img src="../../../../../assets/icons/pre_icons/mo_initialize_icon.jpg"/> to initialize the Die distance stopping controls data.</p>
+  <p> </p>
+  <p>When the project runs, the tool will be moved into position in contact with the workpiece (whatever the shape is) and the forging stroke will be updated to reflect the new distance above BDC.</p>
+  <p> </p>
+  <p>Save the project and click on the MO <img src="../../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h3 class="h3_6_">Run and monitor a simulation</h3>
+  <p>Click on the <img height="15" src="../../../../../assets/icons/simulator_icons/mo_run_label_button.jpg" style="cursor: nwse-resize;" width="26"/> action label to open the Run Options dialog. Use the default <strong>Continue </strong><strong>Run </strong>option
+    to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="../../../../../assets/icons/simulator_icons/mo_run_job_button.jpg"/> button to run
+    the simulation.</p>
+  <h3 class="h3_6_">Review the results</h3>
+  <p>When the simulation is completed, click the MO <img src="../../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> Mode button to review results.</p>
+  <p>Play through all steps.  </p>
+  <p><strong>Graph</strong></p>
+  <p>Click the  <img src="../../../../../assets/icons/post_icons/mo_load_stroke_icon.jpg"/> tool and plot Y Speed vs. Time graph. Note that the velocity goes to zero at the end of each operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L6_3_Y-Speed_v_s_Time_graph"></a><img height="527" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab6_image0003.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab6"> Y-Speed v/s Time graph</p>
+  <p> </p>
+
+</body></html>

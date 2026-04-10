@@ -1,0 +1,338 @@
+---
+lang: en
+title: "Swaging Lab1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.6.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Swaging Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Swaging Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/cogging_labs/swaging_lab1.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Die_Stess_Study_Labs/Die_Stess_Labs_across_Single_steps_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Labs/Cogging_Labs/Cogging_Lab1.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Swaging Lab1">
+        <span>Swaging Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Swaging Lab1</h1>
+  <p>In this lab for quarter symmetry 3d model <strong>Infeed swaging</strong> operation setup is demonstrated using ICFG example.</p>
+  <p> </p>
+  <p><a href="#1_1_Creating_New_Problem">1.1.  Creating New Problem</a></p>
+  <p><a href="#1_2_How_to_add_3D_Swaging_operation">1.2.  How to add 3D Swaging operation</a> </p>
+  <p><a href="#1_3_Define_Swaging_Process_Settings">1.3.  Define Swaging Process Settings</a></p>
+  <p><a href="#1_4_Define_pass_table_data">1.4.  Define pass table data</a> </p>
+  <p><a href="#1_5_Load_material">1.5.  Load material</a></p>
+  <p><a href="#1_6_Define_Workpiece_object">1.6.  Define Workpiece Object</a></p>
+  <p><a href="#1_7_Define_Top_die_Object">1.7.  Define Top die Object</a> </p>
+  <p><a href="#1_8_Defining_Inter-object_relations">1.8.  Defining Inter-object relations</a></p>
+  <p><a href="#1_9_Preview_the_Swaging_pass">1.9  Preview the Swaging pass</a></p>
+  <p><a href="#1_10_Define_Simulation_controls">1.10.  Define Simulation controls</a></p>
+  <p><a href="#1_11_Check_and_Generate_Database">1.11.  Check and Generate Database</a> </p>
+  <p><a href="#1_12_Submit_to_Simulate">1.12.  Submit to Simulate</a> </p>
+  <p><a href="#1_13_Post_process_the_Results">1.13.  Post process the Results</a> </p>
+  <p><a href="#1_14_Setting_up_the_Swaging_Explicit_setup">1.14.  Setting up the Swaging Explicit setup</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_New_Problem"></a>Creating New Problem</h2>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/>  icon. The Problem Setup window will appear as shown in <a href="#Fig_3DSWL1_1_Opening_New_Problem"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>1.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>SI</strong>&quot; radio button in unit field. Define Problem Name as &quot;<strong></strong><strong>Swaging_ICFG_Ex</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do
+    not turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem
+    using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_1_Opening_New_Problem"></a><img height="417" src="../../../assets/images/applications/55_2_arc_welding/image0002.jpg" style="cursor: nwse-resize;" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">Opening New Problem</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog as shown in <a href="#Fig_3DSWL1_2_Add_new_Project_Name_and_Unit_System"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>2.</a>, at this point user will be prompted
+    to specify a project name (system will create a separate folder with this project name) and title for this session. In Problem Name popup define Problem Name as &quot;<strong>Swaging_ICFG_Ex</strong>&quot; as the project name as shown in <a href="#Fig_3DSWL1_2_Add_new_Project_Name_and_Unit_System"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_2_Add_new_Project_Name_and_Unit_System"></a><img height="426" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Add new Project Name and Unit System</p>
+  <h2><a id="1_2_How_to_add_3D_Swaging_operation"></a>How to add 3D Swaging operation</h2>
+  <p>Add swaging operation from MO explorer by clicking on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to <strong>Cogging </strong>operation or user can also add by drag and drop into the Operation Editor as shown
+    in <a href="#Fig_3DSWL1_3_Add_Swaging_operation_from_operation_explorer"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>3.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_3_Add_Swaging_operation_from_operation_explorer"></a><img height="426" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Add Swaging operation from operation explorer</p>
+  <h2><a id="1_3_Define_Swaging_Process_Settings"></a>Define Swaging Process Settings</h2>
+  <p>Select the Swaging process type radio button and enter the stroke value as<strong> 1.9</strong> mm as shown in <a href="#Fig_3DSWL1_4_Swaging_Process_window"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>4.</a> User must enter
+    the swaging stroke value so it stops the simulation after each bite if it crosses the stroke of primary die in movement direction.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_4_Swaging_Process_window"></a><img height="550" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0004.jpg" width="439"/></p>
+  <p> </p>
+  <p class="Fig_numb">Swaging Process window</p>
+  <p> </p>
+  <p>As this is cold forging operation select temperature calculation as <strong>Cold-Isothermal</strong>. Select <strong>4 dies</strong> and <strong>uncheck </strong><strong>Use </strong><strong>Manipulators </strong>checkbox they are normally used in cogging
+    operation to hold the workpiece.</p>
+  <p> </p>
+  <p>For symmetric setup select <strong>Use Rotational Symmetry </strong>checkbox this gives the respective geometry primitives and generates the necessary boundary conditions by default. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to define the swaging pass data.</p>
+  <h2><a id="1_4_Define_pass_table_data"></a>Define pass table data</h2>
+  <p>Swaging entire pass information like Number of bites, Axial die feed per bite, Radial die feed per bite, Die Movement direction, Workpiece rotation per bite, workpiece rotation per pass and die positioning can be entered in pass table. New pass can
+    be added by using the  icon similarly added pass can be deleted using  icon. Pass information is copied from previous pass whenever a new pass is added and necessary information can be edited based on the process requirement.</p>
+  <p> </p>
+  <p>Enter <strong>number of bites</strong> as <strong>2500</strong>, Die <strong>Axial feed per bite</strong> <strong>0.027 </strong>mm, workpiece <strong>rotation per bite</strong> to <strong>22.56</strong>, leave the Die movement direction as –X and select<strong> Die start positioning </strong><strong>method </strong>as
+    &quot;<strong>3-ofst</strong>&quot; as shown in <a href="#Fig_3DSWL1_5_Pass_table_information"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>5.</a></p>
+  <p>Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to load the material for workpiece.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_5_Pass_table_information"></a><img height="480" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0005.jpg" width="404"/></p>
+  <p> </p>
+  <p class="Fig_numb">Pass table information</p>
+  <h2><a id="1_5_Load_material"></a>Load material</h2>
+  <p>Load the material “<strong>Steel</strong><strong> 16MnCr5</strong>” from DEFORM installation path \3d\LABS\ folder &quot;<strong>Steel 16MnCr5.key</strong>&quot; file using <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (load
+    material from file) option, system popups a dialog with material list and list is the materials available in the keyword file as there is only one material in key file click <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> as shown in
+    <a href="#Fig_3DSWL1_6_Load_material_from_file"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>6.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_6_Load_material_from_file"></a><img height="423" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Load material from file</p>
+  <p> </p>
+  <p>Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Object window leaving the defaults as axial subdivision is intended for cogging where huge deformation takes place and click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to go for Workpiece object window.</p>
+  <h2><a id="1_6_Define_Workpiece_object"></a>Define Workpiece object</h2>
+  <p>Leave the object name as <strong>Billet </strong>and default object type <strong>Plastic </strong>as it is. Assign the temperature to <strong>20</strong>°C as shown in <a href="#Fig_3DSWL1_7_Billet_object_window"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>7.</a> Click
+    <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to define the Geometry for billet.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_7_Billet_object_window"></a><img src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Billet object window</p>
+  <h3>Define Billet Geometry</h3>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> geometry option to define the geometry using primitives as shown in <a href="#Fig_3DSWL1_8_Geometry_window"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>8.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_8_Geometry_window"></a><img src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0008.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Geometry window</p>
+  <p> </p>
+  <p>Enter the <strong>Length </strong><strong>130 </strong>mm, <strong>Inner </strong><strong>diameter </strong><strong>24 </strong>mm and <strong>Outer </strong><strong>diameter </strong><strong>30 </strong>mm to create the symmetric geometry as shown
+    in <a href="#Fig_3DSWL1_9_Billet_3D_Geometry"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>9.</a> Click <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close the Geometry Primitive.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_9_Billet_3D_Geometry"></a><img height="425" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0009.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Billet 3D Geometry</p>
+  <p> </p>
+  <p>Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> for 2D Cross-section window and observe the 2D geometry extracted from the 3D geometry used for brick mesh generation as shown in <a href="#Fig_3DSWL1_10_Billet_2D_extracted_geometry"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>10.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_10_Billet_2D_extracted_geometry"></a><img height="425" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0010.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Billet 2D extracted geometry</p>
+  <h3>Define Billet Mesh</h3>
+  <p>Select brick mesh radio button and enter number of <strong>elements </strong>to <strong>390</strong>, <strong>Size ratio</strong> <strong>1</strong> and # of <strong>layers </strong>to <strong>47</strong> and generate the mesh clicking on <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button and click <img src="../../../assets/icons/pre_icons/mo_yes_button.jpg"/> in &quot;Default Boundary conditions&quot; popup.</p>
+  <p> </p>
+  <p>For 2D cross section geometry as observed in <a href="#Fig_3DSWL1_10_Billet_2D_extracted_geometry"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>10.</a> system generates <strong>390 </strong>mesh elements and revolve about
+    90 deg in 47 layers as shown in <a href="#Fig_3DSWL1_11_Billet_mesh_window"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>11.</a> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_11_Billet_mesh_window"></a><img height="426" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Billet mesh window</p>
+  <h3>Assign Material for Billet</h3>
+  <p>Select the loaded material “<strong>Steel</strong><strong> 16MnCr5</strong>” from material list to assign it to workpiece as shown in <a href="#Fig_3DSWL1_12_Assign_billet_material"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>12.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_12_Assign_billet_material"></a><img height="425" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0012.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assign billet material</p>
+  <h3>Define Boundary Conditions</h3>
+  <p>Observe the system assigned default rotational symmetry BCC and Fixed velocity at the free end of the billet BCC as shown in  <a href="#Fig_3DSWL1_13_Rotational_Symmetry_BCC"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>13.</a>    and <a href="#Fig_3DSWL1_14_Velocity_BCC"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>14.</a> Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Top die page to define Top die.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_13_Rotational_Symmetry_BCC"></a><img height="425" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rotational Symmetry BCC</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_14_Velocity_BCC"></a><img height="424" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Velocity BCC</p>
+  <h2><a id="1_7_Define_Top_die_Object"></a>Define Top die Object</h2>
+  <p>Leave the object name as <strong>Top die</strong> and default object type <strong>Rigid </strong>as it is and assign the temperature to <strong>20</strong>°C as shown in <a href="#Fig_3DSWL1_15_Top_die_object_page"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>15.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_15_Top_die_object_page"></a><img src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0015.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die object page</p>
+  <h3 class="h3_1_7_">Define Die geometry</h3>
+  <p>Import the Die geometry <strong>Swaging_ICFG_Die_SI.stl </strong>from installation path \3d\LABS\ folder as shown in <a href="#Fig_3DSWL1_16_Importing_Die_geometry"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>16.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_16_Importing_Die_geometry"></a><img height="424" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing Die geometry</p>
+  <p> </p>
+  <p>For User library popup asking to use the current geometry file browsed location as default library location. By default 3d LABS path will geometry library path, so click <img src="../../../assets/icons/pre_icons/mo_yes_button.jpg"/>.(See <a href="#Fig_3DSWL1_17_User_Library_path_update"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>17.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_17_User_Library_path_update"></a><img src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0017.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">User Library path update</p>
+  <p> </p>
+  <p>Observe the imported geometry internal profile showing the Inlet feed angle, Calibration Length and Outlet Run out angle as shown in <a href="#Fig_3DSWL1_18_Imported_Die_geometry"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>18.</a></p>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong> If the Die needs positioning, then user should select the Die positioning method as &quot;3-offset&quot; in Pass Table page. This allows user to position the Die.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_18_Imported_Die_geometry"></a><img height="425" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0018.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Imported Die geometry</p>
+  <h3 class="h3_1_7_">Define Die movement</h3>
+  <p>Select Advanced radio button type and click on <img src="../../../assets/icons/pre_icons/mo_define_movement_button.jpg"/> button, define the die movement as constant <strong>Speed </strong>as <strong>200 </strong>mm/sec and set the<strong> Current Stroke</strong>    as <strong>-1.9</strong>, since the die geometry is imported in its closed position as shown in <a href="#Fig_3DSWL1_19_Die_movement_window"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>19.</a> Click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close Advanced movement page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_19_Die_movement_window"></a><img height="423" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Die movement window</p>
+  <h2><a id="1_8_Defining_Inter-object_relations"></a>Defining Inter-object relations</h2>
+  <p>Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Contact page as the swaging operation automatically position dies around the workpiece at equal angles manual position is not needed. Select <strong>System </strong>contact
+    definition type and check scheduled contact Initialize and Generate check boxes and enter small contact <strong>tolerance </strong>value <strong>0.0001</strong> as shown in <a href="#Fig_3DSWL1_20_System_type_Inter-object_settings"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>20.</a> System
+    will generate the contact automatically during database generation. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Simulation preview page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_20_System_type_Inter-object_settings"></a><img height="400" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0020.jpg" width="403"/></p>
+  <p> </p>
+  <p class="Fig_numb">System type Inter-object settings</p>
+  <h2><a id="1_9_Preview_the_Swaging_pass"></a>Preview the Swaging pass</h2>
+  <p>Observe the Die and workpiece movement and positioning preview by playing with step manipulation options. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Simulation controls controls.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_21_Swaging_preview_window"></a><img height="425" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0021.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Swaging preview window</p>
+  <h2><a id="1_10_Define_Simulation_controls"></a>Define Simulation controls</h2>
+  <p>Enter the <strong>number of steps</strong> to <strong>10000,</strong> <strong>step increment to save</strong> to <strong>1000</strong> and <strong>0.0015 </strong>mm stroke/step as shown in <a href="#Fig_3DSWL1_22_Simulation_control_window"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>22.</a>    In addition to this friction coefficient value <strong>0.4</strong> is defined will be used in contact friction calculation. Implicit solver is used to solve this setup. Leave the implicit solver default settings. To know more about RSE and Implicit
+    contact refer and respectively. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_22_Simulation_control_window"></a><img height="420" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0022.jpg" width="358"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation control window</p>
+  <p> </p>
+  <h2><a id="1_11_Check_and_Generate_Database"></a>Check and Generate Database</h2>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> and observe the message tab for DB checking messages, if there is any input errors will be indicated by red color and also display the warning messages. Error message block
+    the user to generate DB. Confirm the DB checking is OK and click on <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/>. (See <a href="#Fig_3DSWL1_23_Generate_Database_window"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>23.</a>)
+    After generating Database switch to Simulation mode by clicking on <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_23_Generate_Database_window"></a><img src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0023.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate Database window</p>
+  <h2><a id="1_12_Submit_to_Simulate"></a>Submit to Simulate</h2>
+  <p>Click on the <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DSWL1_24_Submit_to_simulate"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>24.</a> Use
+    the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_24_Submit_to_simulate"></a><img height="424" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0024.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Submit to simulate</p>
+  <p> </p>
+  <p>User can use more processors and run in 64 bit by using the <img src="../../../assets/icons/simulator_icons/mo_run_options_action_lable.jpg"/>. As the simulation starts simulated saved steps will update in simulation graphics window and also Message
+    and LOG files display the status of the current simulation as shown in  <a href="#Fig_3DSWL1_25_Monitor_using_simulation_graphics"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>25.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_25_Monitor_using_simulation_graphics"></a><img height="423" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0025.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Monitor using simulation graphics</p>
+  <p> </p>
+  <p>Simulation completion or stop will be indicated in the message file. After completion of the simulation click on <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab to post process the DB.</p>
+  <h2><a id="1_13_Post_process_the_Results"></a>Post process the Results</h2>
+  <p>Play through the Steps and see the Strain distribution by plotting the effective strain State variable. (See <a href="#Fig_3DSWL1_26_Strain_Distribution"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>26</a><a href="#Fig_3DSWL1_27_Workpiece_cross_section_thickness">.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_26_Strain_Distribution"></a><img height="441" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0026.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Strain Distribution</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_27_Workpiece_cross_section_thickness"></a><img height="400" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0027.jpg" width="654"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece cross section thickness</p>
+  <p> </p>
+  <h2><a id="1_14_Setting_up_the_Swaging_Explicit_setup"></a>Setting up the Swaging Explicit setup</h2>
+  <p>In Explicit solver make workpiece as<strong> Elasto plastic</strong> object by visiting back to Billet object window as shown in <a href="#Fig_3DSWL1_28_Billet_Object_selected_as_Elasto_plastic_object"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_28_Billet_Object_selected_as_Elasto_plastic_object"></a><img height="426" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0028.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Billet Object selected as Elasto plastic object</p>
+  <p> </p>
+  <p>After making the billet as Elasto plastic go to workpiece material page, click on <img src="../../../assets/icons/pre_icons/mo_edit_material_button.jpg"/> define the <strong>Mass </strong><strong>density </strong>as <strong>7.85e-09</strong> under
+    <strong>Thermal </strong>tab as shown in <a href="#Fig_3DSWL1_29_Defining_Mass_density_data"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>29.</a> Click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to
+    close the material edit page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_29_Defining_Mass_density_data"></a><img height="423" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0029.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Mass density data</p>
+  <p> </p>
+  <p>Go to <strong>S</strong><strong><strong>im</strong>ulation controls</strong> window and select <strong>Explicit </strong><strong>solver </strong>method radio button as shown in <a href="#Fig_3DSWl1_30_imulation_controls_for_Explicit_solver_method"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>30.</a>    Enter the <strong>Damping </strong><strong>coefficient </strong>as <strong>0.5</strong>, <strong>Mass scaling </strong>as <strong>30 </strong>and <strong>Contact Frequency </strong>as <strong>1</strong>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWl1_30_imulation_controls_for_Explicit_solver_method"></a><img height="420" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0030.jpg" width="379"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls for Explicit solver method</p>
+  <p> </p>
+  <p>Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to go the Database generation window and check and generate the Database to submit to simulate in Next steps. Similar to the section<a href="#1_12_Submit_to_Simulate"> 1.12.</a> and
+    <a href="#1_13_Post_process_the_Results">1.13.</a> submit the generated DB to simulate and post process using MO post respectively.</p>
+  <p> </p>
+  <p>Plot Strain Effective at last step for the Simulated Database (See <a href="#Fig_3DSWl1_30_imulation_controls_for_Explicit_solver_method"><span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>30.</a> and<a href="#Fig_3DSWL1_31_Strain_effective_plot">  <span data-keyref="Labs_Cogging_labs_3D_Swaging_Lab1">Fig. 3DSWL1.</span>31.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_31_Strain_effective_plot"></a><img height="444" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0031.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Strain effective plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DSWL1_32_Workpiece_cross_section"></a><img height="450" src="../../../assets/images/labs/cogging_labs/swaging_lab1/image0032.jpg" width="567"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece cross section</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../operation_templates/29_cogging/29_2_swaging_setup.htm">Swaging Setup</a></p>
+  <p> </p>
+
+</body></html>

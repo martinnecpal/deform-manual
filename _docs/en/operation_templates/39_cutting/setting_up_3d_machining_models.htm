@@ -1,0 +1,193 @@
+---
+lang: en
+title: "Setting up 3D Machining Models"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.11.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Setting up 3D Machining Models </title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Setting up 3D Machining Models </title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/39_cutting/setting_up_3d_machining_models.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/40_Machining_Distortion/40_Introduction_to_Machining_Distortion.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/39_Cutting/39_4_Drilling.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Setting up 3D Machining Models ">
+        <span>Setting up 3D Machining Models </span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Setting up 3D Machining Models</h1>
+  <p>Mesh definition is the most critical factor in simulation performance. The goal is to adoptively refine the mesh to maintain small elements in areas where they are necessary to maintain geometry or state variables. At the same time, we wish to keep
+    the total number of elements in the simulation to a minimum.</p>
+  <p>The most significant enhancement of DEFORM is local remeshing – rather than completely regenerating the mesh, as was done in earlier versions of DEFORM, elements are simply split or merged to improve quality and match local element size requirements.
+    Elements which meet local size and quality requirements are not changed.</p>
+  <p>Major advantages of this new feature are that the problem of element deletion due to the chip touching the edge of a workpiece has been nearly (if not completely) eliminated, and the changing shape of sharp curves such as the nose radius feature has
+    been substantially reduced.</p>
+  <p>A new interpolation scheme has been implemented which uses a least squares fit of surrounding elements, and reduces state variable smoothing during repeated remeshings.  Because mesh element size definition is based on these state variables (particularly
+    strain), mesh generation behavior is also changed.</p>
+  <p>Different approaches to mesh generation are appropriate depending on whether the user’s primary interest is the chip or the workpiece.  Both approaches are described below.</p>
+  <p> </p>
+  <p><u><strong>A) For capturing chip geometry</strong></u></p>
+  <ul class="Disc">
+    <li>
+      <p>these settings will give good resolution in the chip, but will tend to loose or smooth out temperature, residual stress, and microstructure information in the workpiece.</p>
+    </li>
+    <li>
+      <p>There is no need for mesh windows.  In nearly every case, properly defined adaptive meshing will consistently provide a good quality mesh with substantially fewer elements than can be achieved with mesh windows.</p>
+    </li>
+    <li>
+      <p>Use Absolute Element Size. Set the minimum element size to about 1/3 or ¼ of the uncut chip thickness.  ¼ will give better results, but run time will be significantly longer.  </p>
+    </li>
+    <li>
+      <p>Set the size ratio between 10 and 15.</p>
+    </li>
+    <li>
+      <p>Use Local Remeshing: under Mesh<img src="../../../assets/icons/pre_icons/arrow_front.jpg"/>Remesh Criteria<img src="../../../assets/icons/pre_icons/arrow_front.jpg"/>Remeshing Method <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> select
+        “Local solid”</p>
+    </li>
+    <li>
+      <p>Set the mesh weighting factor slider bars to 50% strain, 50% strain rate, all other values = 0.</p>
+    </li>
+    <li>
+      <p>The mesh generator normally determines mesh refinement based on the gradient of state variables. In other words, a region where state variables (strain or strain rate) are changing quickly will get relatively fine elements, but regions which have
+        high constant values will get a relatively coarse mesh.  For machining we want fine elements in the chip (high constant strain), and in the primary shear zone (high strain rate).  To trigger the mesh generator to do this, Under Weighting factor
+        tab, check the Strain distribution - Use Gradient check box and Strain rate distribution - Use Gradient check box.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p><strong>Summary</strong>: (these settings will maintain chip geometry, but will tend to loose state variables in the workpiece)</p>
+  <ul class="Disc">
+    <li>
+      <p>Absolute element size – minimum size 1/3 to ¼ of uncut chip thickness.  Size ratio 10 to 15.</p>
+    </li>
+    <li>
+      <p>Local Solid</p>
+    </li>
+    <li>
+      <p>Slider bar weighting 50% strain, 50% strain rate</p>
+    </li>
+    <li>
+      <p>Under Weighting factor tab, check the Strain distribution - Use Gradient check box and Strain rate distribution - Use Gradient check box.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>B) For capturing workpiece properties</strong></p>
+  <p>For simulations where workpiece surface properties (residual stress, microstructure, temperature) are of interest, but chip geometry is not. For these simulations, a mesh window may be helpful to maintain mesh size on the cut surface. Strain based meshing
+    may also be adequate. The user may wish to experiment with both approaches to find which gives better results.</p>
+  <p> </p>
+  <p><strong>With mesh windows:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Use absolute element size.  Use a size ratio of 1, and set the global element size to be about 5 x larger than the expected surface layer thickness.  Windows will be used to refine the mesh in the surface layer.</p>
+    </li>
+    <li>
+      <p>Define a mesh window from slightly in front of the tool edge, and extending backward.  Define window movement to follow the cutting tool.  The window can extend substantially behind the workpiece, such that it covers more and more of the workpiece
+        surface as the tool advances.</p>
+    </li>
+    <li>
+      <p>Assign element size in window to be roughly 30-70% of the size of the expected surface layer effect.  In other words, if the residual stress variations are over a depth of 0.01mm, the minimum element size should be around 0.005mm.  Note that there
+        will always be a difficult balance between adequate resolution and acceptable run times.</p>
+    </li>
+    <li>
+      <p>The size ratio between elements in the window and elements outside the window should not exceed about 5:1.  If necessary, nested windows should be used with 5:1 ratio maintained between adjacent windows.  The smallest elements (innermost window)
+        should be first in the list of windows.</p>
+    </li>
+    <li>
+      <p>Slider bars should be weighted either fully to mesh windows,  or roughly 80% mesh windows, 20% divided between strain &amp; strain rate.</p>
+    </li>
+    <li>
+      <p>Local remeshing will do a better job of maintaining state variables.  Use Local Remeshing:  under Mesh<img src="../../../assets/icons/pre_icons/arrow_front.jpg"/>Remesh Criteria<img height="12" src="../../../assets/icons/pre_icons/arrow_front.jpg" width="29"/>Remeshing Method select “Local Solid”.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Without mesh windows:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Use absolute element size, with the minimum element size 30-70% of the expected surface layer effect thickness.</p>
+    </li>
+    <li>
+      <p>Use a size ratio of 10</p>
+    </li>
+    <li>
+      <p>Use Local Solid</p>
+    </li>
+    <li>
+      <p>The new interpolation scheme will do a good job of maintaining strain in the cut surface of the workpiece, so this can be used as a key meshing parameter.  Set slider bars to 80% strain, 20% strain rate.</p>
+    </li>
+    <li>
+      <p>Check the Strain distribution - Use Gradient check box. This will cause the mesh generator to maintain a fine mesh in regions where the strain is high (i.e. the cut surface).  The contents of the file are arbitrary.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../pre_processor/13_mesh_generation/13_mesh_generation.htm">Object Mesh Data</a></p>
+
+</body></html>

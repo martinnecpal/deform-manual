@@ -1,0 +1,128 @@
+---
+lang: en
+title: "26.6.14. Volume Tracking"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.2.1.0_14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>26.6.14. Volume Tracking</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>26.6.14. Volume Tracking</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_14_volume_tracking.css"/>
+<meta name="brsnext" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_6_Post_Processing_tools/26_6_15_Mirror_Symmetry.htm"/><meta name="brsprev" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_6_Post_Processing_tools/26_6_13_Set_User_Defined_Variable_Tracking.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="26.6.14. Volume Tracking">
+        <span>26.6.14. Volume Tracking</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>26.6.14. Volume Tracking <img height="21" src="../../../../assets/icons/post_icons/mo_volume_tracking_icon.jpg" width="21"/></h1>
+  <p>Volume tracking method tracks back underfill and flash area from finish part to preform. This information will be used to update preform shape.  </p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_14_1_Region_of_Interest_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_14_volume_tracking/image001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Region of Interest window</p>
+  <p><br/> User can navigate Volume tracking wizard using <img src="../../../../assets/icons/post_icons/mo_flownet_next_button.jpg"/> button or can move to specific page directly by clicking on the respective option.</p>
+  <p> </p>
+  <p><strong>ROI </strong>: User can define the ROI window by importing the Geometry from a file. Outside ROI is considered as flash region. For the region inside ROI, underfill area and volume are calculated and tracked back into the initial billet. User
+    must define ROI for volume tracking (See <a href="#Fig_26_6_14_1_Region_of_Interest_window"><span data-keyref="Chapter_26_6_14_Volume_Tracking">Fig.26.6.14.</span>1.</a>).</p>
+  <p> </p>
+  <p><strong>Analyze</strong>: After defining ROI, in Analyze window user can use Analyze button to display underfill and flash regions over the workpiece. In Fig., red indicates Under-fill region and Blue indicates Flash region, we can also observe the
+    Under fill volume and Flash volume along with percentage in Analysis window (See <a href="#Fig_26_6_14_2_Volume_tracking_Analysis_window"><span data-keyref="Chapter_26_6_14_Volume_Tracking">Fig.26.6.14.</span>2.</a>) .  </p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_14_2_Volume_tracking_Analysis_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_14_volume_tracking/image002.jpg"/></p>
+  <p class="Fig_numb">Volume tracking Analysis window</p>
+  <p> </p>
+  <p><strong>Back Track :</strong> After analyzing user can navigate to Back Track page and click on Back Track button to start calculation of volume tracking back into initial billet. User can use step browser to go to first step where initial billet is
+    available and we can observe the volume of material moved into flash (blue in <a href="#Fig_26_6_14_3_Back_Track_window"><span data-keyref="Chapter_26_6_14_Volume_Tracking">Fig.26.6.14.</span>3.</a>), Under-fill (red in <a href="#Fig_26_6_14_3_Back_Track_window"><span data-keyref="Chapter_26_6_14_Volume_Tracking">Fig.26.6.14.</span>3.</a>).</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_14_3_Back_Track_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_14_volume_tracking/image003.jpg"/></p>
+  <p class="Fig_numb">Back Track window</p>
+  <p> </p>
+  <p><strong>Preform</strong>: Once back tracking is completed user can navigate to Preform page to generate preform shape based on the back tracking calculations. User can also define volume tolerance for flash which will be considered while generating
+    preform. User can generate Preform by clicking on Generate button in Preform page. In preform page user also have options to generate preform for full object or Half symmetry object. (see <a href="#Fig_26_6_14_4_Volume_Tracking_Preform_Window"><span data-keyref="Chapter_26_6_14_Volume_Tracking">Fig.26.6.14.</span>4.</a>)</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_14_4_Volume_Tracking_Preform_Window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_14_volume_tracking/image004.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Volume Tracking Preform Window</p>
+  <p> </p>
+  <p><strong>Output </strong>: In Output window, Generated preform shape can be saved into geometry file using Save Geometry option (See <a href="#Fig_26_6_14_5_Volume_Tracking_Output_window"><span data-keyref="Chapter_26_6_14_Volume_Tracking">Fig.26.6.14.</span>5.</a>)
+    .</p>
+  <p style="text-align: justify"><br/> Different resolutions can be selected to fine tune the preform shape. If preform is generated for half symmetry user can use Make full model by mirroring half model option available to mirror the Half model geometry to Full model. After selecting Resolution
+    option or Make full model by mirroring half model option, click on Export to create new preform geometry for selected and save. User can save geometry into file <img src="../../../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/> icon or into
+    library <img src="../../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> icon in Output page.</p>
+  <p style="text-align: center"><br/>
+    <br/>
+    <a id="Fig_26_6_14_5_Volume_Tracking_Output_window"></a> <img height="286" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_14_volume_tracking/image005.jpg" width="652"/></p>
+  <p> </p>
+  <p class="Fig_numb">Volume Tracking Output window</p>
+  <p> </p>
+
+</body></html>

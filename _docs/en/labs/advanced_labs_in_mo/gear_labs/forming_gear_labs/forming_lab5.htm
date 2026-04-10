@@ -1,0 +1,176 @@
+---
+lang: en
+title: "Forming Lab 5"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "15.3.2.2.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 5</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 5</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_Lab6.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_Lab4.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Forming Lab 5">
+        <span>Forming Lab 5</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 5. 2D to 3D conversion</h1>
+  <h3 class="h3_5_">Creating a New Problem</h3>
+  <p>Create a new project called <strong>Gear23 </strong>and copy the existing project <strong>Gear_LargerBillet</strong>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L5_1_MO_New_Project_window"></a><img src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab5_image0001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab5">MO New Project window</p>
+  <h3 class="h3_5_">Adding operations</h3>
+  <p>Right-click on the 2nd operation tile in operation editor and delete it. Add the following operations:</p>
+  <ul class="Disc">
+    <li>
+      <p>[2D] Heat Transfer Express</p>
+    </li>
+    <li>
+      <p>2D to 3D Converter (located in Simulation Operator)</p>
+    </li>
+    <li>
+      <p>[3D] Forming Express</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L5_2_Operations_list_in_Operation_Editor"></a><img height="225" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab5_image0002.jpg" width="639"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab5">Operations list in Operation Editor</p>
+  <h3 class="h3_5_">Upset Operation</h3>
+  <p>In the initial Upset tile in Operation Editor, right-click on the <strong>Workpiece </strong>and <strong>Pass object to All operations</strong>.</p>
+  <p>Select <strong>Upset </strong>operation and Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/>. Go to Simulation controls and <strong>check </strong><strong>Heat </strong><strong>transfer </strong>mode.</p>
+  <p> </p>
+  <p><strong>Generating DB</strong><br/> Select <strong>Generate </strong><strong>DB </strong>from the operation tree and Generate the Database. Click <img src="../../../../../assets/icons/pre_icons/mo_next_opr_button.jpg"/> to Heat Transfer Express operation.</p>
+  <h3 class="h3_5_">Heat Transfer Express operation</h3>
+  <h4 class="h4_5_4_">Process</h4>
+  <p>In Process page, select the heating type as <strong>Transfer</strong>. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Object list.</p>
+  <h4 class="h4_5_4_">Object selection</h4>
+  <p>Select<strong> 1 workpiece only</strong> radio button. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Heat condition.</p>
+  <h4 class="h4_5_4_">Heat Condition</h4>
+  <p>Set the <strong>transfer </strong><strong>time </strong>to <strong>5</strong> seconds and accept the <strong>default temperature</strong> and <strong>convection </strong><strong>coefficient</strong>. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Simulation controls.</p>
+  <h4 class="h4_5_4_">Simulation Controls</h4>
+  <p>Use the default value and click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until 2D to 3D Convertor operation.</p>
+  <h3 class="h3_5_">Convert 2D to 3D operation</h3>
+  <p>Verify <strong>Z</strong> is up (consistent with other models) and  in 3D parameters start angle and Revolve angle should be 0 and 360 to generate whole workpiece. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Workpiece
+    geometry page.</p>
+  <h4 class="h4_5_5_">Workpiece Geometry</h4>
+  <p>The <strong># of sections</strong> sets the number of geometry sections around the circumference. One section per degree of rotation works well, so set the <strong># of sections</strong> to <strong>360</strong>. click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to workpiece mesh page.</p>
+  <h4 class="h4_5_5_">Workpiece Mesh</h4>
+  <p>Leave the Mesh at the default <strong>32000 </strong>elements. click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to workpiece Material page.</p>
+  <h4 class="h4_5_5_">Workpiece Material</h4>
+  <p>Leave the Material as (inherited) in Material page. click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Forming express Top die general page.</p>
+  <h3 class="h3_5_">3D Forming Express</h3>
+  <h4 class="h4_5_6_">Top die general</h4>
+  <p>Keep the default <strong>300</strong>°F temperature for Top die, click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Top die geometry page.</p>
+  <h4 class="h4_5_6_">Top die geometry</h4>
+  <p>Click the <img src="../../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and <img src="../../../../../assets/icons/pre_icons/mo_open_button.jpg"/> open (import) the file “<strong>gear top die.STL</strong>”.
+    The geometry for top die is located in DEFORM installation folder  \Tutorials directory. Define a reference point on the flash land using <img src="../../../../../assets/icons/pre_icons/mo_define_reference_point_button.jpg"/> option. click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Top die movement page.</p>
+  <h4 class="h4_5_6_">Top die Movement</h4>
+  <p>Set the <strong>Speed </strong>to a constant value of <strong>3</strong> in/sec in the <strong>-Z</strong> direction. click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Bottom die page.</p>
+  <h4 class="h4_5_6_">Bottom Die general</h4>
+  <p>Keep the default <strong>300</strong>°F temperature for bottom die, click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to bottom die geometry page.</p>
+  <h4 class="h4_5_6_">Bottom die geometry</h4>
+  <p>Click the <img src="../../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and <img src="../../../../../assets/icons/pre_icons/mo_open_button.jpg"/> open (import) the file “<strong>gear bottom die.STL</strong>”.
+    The geometry for gear  bottom die is located in DEFORM installation folder  \Tutorials directory. Define a reference point on the flash gutter using <img src="../../../../../assets/icons/pre_icons/mo_define_reference_point_button.jpg"/> option. click
+    <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to positioning page.</p>
+  <h4 class="h4_5_6_">Positioning dies</h4>
+  <p>Rotate both dies 90° about the X axis so that they line up with the Workpiece. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Scheduled positioning page.</p>
+  <h4 class="h4_5_6_">Scheduled positioning</h4>
+  <p>Click on <img src="../../../../../assets/icons/pre_icons/mo_auto_button.jpg"/> in scheduled positioning page and you can see the positioning scheduled as shown in <span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab5">Fig. L5.</span>3.
+     Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until stopping controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L5_3_Scheduled_positioning_window"></a><img height="528" src="../../../../../assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab5_image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab5">Scheduled positioning window</p>
+  <h4 class="h4_5_6_">Stopping controls</h4>
+  <p>Set the Distance between objects to <strong>0.25 </strong>in. and set the <strong>Top Die</strong> and <strong>Bottom Die</strong> as reference objects. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to assign Primary die
+    stroke page.</p>
+  <h4 class="h4_5_6_">Primary die stroke</h4>
+  <p>Define <strong>Primary die stroke</strong> value as <strong>1.5</strong> in input field. Click <img src="../../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Simulation controls page.</p>
+  <h4 class="h4_5_6_">Simulation controls</h4>
+  <p>Set <strong>Number of steps</strong> to <strong>1000</strong>, <strong>Step </strong><strong>increment </strong>to <strong>5</strong>, select <strong>User </strong><strong>type </strong>step definition method and define <strong>constant </strong><strong>die </strong><strong>displacement </strong>as
+    <strong>0.02</strong> in.</p>
+  <p> </p>
+  <p>Save the project and click on the MO <img src="../../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h3 class="h3_5_">Run and monitor a simulation</h3>
+  <p>3D simulations can be made to run faster by taking advantage of multiple processors or multiple cores on one processor. If your computer processors has 4 cores, then Click the <img src="../../../../../assets/icons/simulator_icons/mo_run_options_action_lable.jpg"/> label.</p>
+  <p>set the Simulation Mode to <strong>Interactive </strong>and select <strong>Continue </strong><strong>Run</strong><br/> specify the Processors Per Job as <strong>4. <strong>(</strong></strong>See <strong><strong><a href="forming_lab3.htm#Fig_L3_13_Run_option_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab3">Fig. L3.</span>13.</a>)</strong></strong>
+  </p>
+  <p><strong></strong>Then click on  <img src="../../../../../assets/icons/pre_icons/mo_save_button.jpg"/> button and then <strong><img src="../../../../../assets/icons/simulator_icons/mo_run_job_button.jpg"/>. </strong></p>
+  <p> </p>
+  <p>Once the simulation is completed, click the MO <img src="../../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> Mode button to review results.</p>
+  <h3 class="h3_5_">Review the results</h3>
+  <p>Play through all steps and observe the object shapes in 2D and 3D operations.</p>
+
+</body></html>

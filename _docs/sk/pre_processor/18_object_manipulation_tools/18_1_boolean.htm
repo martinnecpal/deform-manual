@@ -1,0 +1,238 @@
+---
+lang: sk
+title: "18.1. Boolean"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.12.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>18.1. Boolean</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>18.1. Boolean</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/18_object_manipulation_tools/18_1_boolean.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/18_Object_Manipulation_Tools/18_2_Slicing.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/18_Object_Manipulation_Tools/18_Object_Manipulation_Tools.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="18.1. Boolean">
+        <span>18.1. Boolean</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>18.1. Boolean Operation<img src="../../../assets/icons/pre_icons/mo_boolean_icon.jpg"/></h1>
+  <p> </p>
+  <p><a href="#18_1_1_Boolean_operation_for_2D_object">18.1.1. Boolean operation for 2D object</a></p>
+  <p><a href="#18_1_2_Boolean_operation_for_3D_object">18.1.2. Boolean operation for 3D object</a></p>
+  <p><a href="#What_to_do_after_Boolean_operation" style="margin-left: 40px">What to do after Boolean operation</a></p>
+  <p> </p>
+  <p><strong>[2D, 3D]</strong> This capability allows the user to subtract volume from the mesh of an object from the geometry of another object or Boolean with respect to a plane (option available only for 3D) or Slice layers (option available only for
+    3D) </p>
+  <p> </p>
+  <p><strong>Definitions:</strong></p>
+  <p><strong>Meshed object:</strong>  An object with a solid mesh giving the object a volume definition.</p>
+  <p> </p>
+  <p><strong>Geometry object:</strong>  An object with a surface definition only.</p>
+  <p>Note that some objects can have both definitions such as a rigid object with thermal calculations turned on. The geometry is used for deformation calculations and the mesh is used for thermal calculations.  In the case of a plastic, elastic, porous
+    or elasto-plastic object, the geometry is only used for meshing purposes and is not used for simulation calculations.</p>
+  <p> </p>
+  <p>The Boolean operation dialog is available on Top Tool bar and the object to be subtracted from should be selected and the Boolean <img height="21" src="../../../assets/icons/pre_icons/mo_boolean_icon.jpg" width="24"/> button should be selected.</p>
+  <p> </p>
+  <h2><a id="18_1_1_Boolean_operation_for_2D_object"></a>Boolean operation for 2D object</h2>
+  <p>There is only one way to perform this Boolean calculation fro 2D:</p>
+  <p> </p>
+  <p style="text-align: left"><strong>Boolean with respect to another object </strong> <strong>:</strong> the user should pick the object to be subtracted.  After this please click <img height="21" src="../../../assets/icons/pre_icons/mo_apply_button.jpg" width="52"/> (See <a href="#Fig_18_1_1_Boolean_Workpiece_from_Top_die_Before_Boolean"><span data-keyref="Chapter_18_1_Boolean">Fig. 18.1.</span>1.)</a>. In
+    below See <a href="#Fig_18_1_2_Boolean_Workpiece_from_Top_die_After_Boolean"><span data-keyref="Chapter_18_1_Boolean">Fig. 18.1.</span>2.</a> showing boolean the workpiece with respect to Top object.</p>
+  <p style="text-align: left"> </p>
+  <p style="text-align: center"><a id="Fig_18_1_1_Boolean_Workpiece_from_Top_die_Before_Boolean"></a><img height="422" src="../../../assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image001.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Boolean Workpiece from Top die (Before Boolean)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_18_1_2_Boolean_Workpiece_from_Top_die_After_Boolean"></a><img height="424" src="../../../assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image002.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Boolean Workpiece from Top die (After Boolean)</p>
+  <p> </p>
+  <p class="Note_text">Note:  </p>
+  <p class="Note_text">In some rare cases where the Boolean definition corresponds exactly to the node locations, some nodes can cross the Boolean plane you have defined.  In this case, slightly tweaking the position of the plane will solve this (as little as 1e-6 inches
+    or mm).</p>
+  <p> </p>
+  <h2><a id="18_1_2_Boolean_operation_for_3D_object"></a>Boolean operation for 3D object</h2>
+  <p>To boolean 3D object we have three options:</p>
+  <ul class="Disc_wo_indent">
+    <li>
+      <p><strong>Subtract object</strong>: using this user should pick the object to be subtracted from the current selected object.  After selecting the object user can click <img height="21" src="../../../assets/icons/pre_icons/mo_apply_button.jpg" width="52"/>  button.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>We have two type of Boolean method in subtract object option:</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Geometry based (new method)</strong>: Using Geometry based option if we do Boolean operation, it will Perform Boolean and then Local Remeshing as per the defined input( See <a href="#Fig_18_1_3_3D_Object_Geometry_based_new_method_Boolean_operation"><span data-keyref="Chapter_18_1_Boolean">Fig. 18.1.</span>3.</a>).
+        This will generate smooth mesh as shown in <a href="#Fig_18_1_5_Generate_Mesh_after_boolean_operation_with_different_Subtract_object_type_option"><span data-keyref="Chapter_18_1_Boolean">Fig. 18.1.</span>5.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_18_1_3_3D_Object_Geometry_based_new_method_Boolean_operation"></a><img height="372" src="../../../assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image008.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">3D Object Geometry based (new method) Boolean operation</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Solid mesh based (old method)</strong>: Using Solid mesh based if we do Boolean operation (See <a href="#Fig_18_1_4_3D_operation_Solid_mesh_based_old_method_Boolean_operation"><span data-keyref="Chapter_18_1_Boolean">Fig. 18.1.</span>4.</a>),
+        it will perform boolean and then generate only Solid mesh, please refer <a href="#Fig_18_1_5_Generate_Mesh_after_boolean_operation_with_different_Subtract_object_type_option"><span data-keyref="Chapter_18_1_Boolean">Fig. 18.1.</span>5.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_18_1_4_3D_operation_Solid_mesh_based_old_method_Boolean_operation"></a><img align="" height="372" src="../../../assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image006.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">3D operation Solid mesh based (old method) Boolean operation</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_18_1_5_Generate_Mesh_after_boolean_operation_with_different_Subtract_object_type_option"></a><img src="../../../assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate Mesh after boolean operation with different Subtract object type option</p>
+  <p> </p>
+  <ul class="Disc_wo_indent">
+    <li>
+      <p><strong>Cut with plane</strong>: User can also boolean object by defining just plane even if object is not available using this option, user should pick the Plane and then define a point and a normal to the Boolean plane (see  <a href="#Fig_18_1_6_3D_Object_Cut_with_plane_Boolean_operation__Before_Boolean"><span data-keyref="Chapter_18_1_Boolean">Fig. 18.1.</span>6.</a>).
+        After this click on <img height="21" src="../../../assets/icons/pre_icons/mo_apply_button.jpg" width="52"/>. (See <a href="#Fig_18_1_7_3D_Object_Cut_with_plane_Boolean_operation__After_Boolean_"><span data-keyref="Chapter_18_1_Boolean">Fig. 18.1.</span>7.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_18_1_6_3D_Object_Cut_with_plane_Boolean_operation__Before_Boolean"></a><img src="../../../assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image009.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">3D Object Cut with plane Boolean operation (Before Boolean)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_18_1_7_3D_Object_Cut_with_plane_Boolean_operation__After_Boolean_"></a><img src="../../../assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image010.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">3D Object Cut with plane Boolean operation (After Boolean)</p>
+  <p> </p>
+  <ul class="Disc_wo_indent">
+    <li>
+      <p><strong>Slice layers:</strong> Using Slice layers option we can do multiple slices of an object and after slicing the objects we can generate new mesh for each sliced layer by defining Mesh settings in Output options. This option is useful for additive
+        manufacturing simulations and for objects having multiple materials similar to multi layer composites. Following example demonstrates the slicing of bearing into 6 layers.(See <a href="#Fig_18_1_8_Slice_layers_page"><span data-keyref="Chapter_18_1_Boolean">Fig. 18.1.</span>8.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_18_1_8_Slice_layers_page"></a><img height="455" src="../../../assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image003.jpg" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Slice layers page</p>
+  <p> </p>
+  <p>We are slicing simple Bearing block into 6 layers using Slicing layers option.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>After generating <strong>Tet Mesh</strong> for Bearing block, open <strong>Boolean </strong>option and select Slice layers. Define Number of layers as 6 and with mesh data click on <img height="21" src="../../../assets/icons/pre_icons/mo_apply_button.jpg" width="52"/>  button. See <a href="#Fig_18_1_9_Sliced_Bearing_block_using_Slice_layers_option"><span data-keyref="Chapter_18_1_Boolean">Fig. 18.1.</span>9.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_18_1_9_Sliced_Bearing_block_using_Slice_layers_option"></a><img height="460" src="../../../assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Sliced Bearing block using Slice layers option</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Now go back to <strong>Geometry </strong>page, select <strong>Examine </strong>and observe the Number of Surfaces of Bearing Block. (See <a href="#Fig_18_1_10_Examine_Window"><span data-keyref="Chapter_18_1_Boolean">Fig. 18.1.</span>10.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_18_1_10_Examine_Window"></a><img height="471" src="../../../assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Examine Window</p>
+  <p> </p>
+  <p> </p>
+  <p><strong><a id="What_to_do_after_Boolean_operation"></a>What to do after Boolean operation?</strong></p>
+  <p>The cut planes will show a poorly structured mesh. This is because many elements were cut.  To improve the mesh quality perform the following actions (From DEFORM V12, Geometry based method can be used to generate smoother mesh ):</p>
+  <ol class="Decimal">
+    <li>
+      <p>Press <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> when the Boolean operation is satisfactory.</p>
+    </li>
+    <li>
+      <p>Go to Geometry</p>
+    </li>
+    <li>
+      <p>Extract the mesh (The purpose is to prevent any geometry definition from being used for the meshing)</p>
+    </li>
+    <li>
+      <p>Go to mesh and mesh the object (Do not perform a manual remesh)</p>
+    </li>
+    <li>
+      <p>Go to <a href="../17_object_data_initialization/17_3_data_interpolation_window.htm">Data Interpolation</a> to restore the state variables.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p>After this, you should have successfully updated your part with the desired volume removed.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="18_object_manipulation_tools.htm">18. Object Manipulation Tools</a></p>
+  <p><a href="18_2_slicing.htm">18.2. Slicing</a></p>
+  <p><a href="18_3_mirror_merge.htm">18.3. Mirror Merge</a></p>
+  <p><a href="../17_object_data_initialization/17_3_data_interpolation_window.htm">17.3. Data Interpolation Window</a></p>
+  <p><a href="../13_mesh_generation/13_2_3d_tet_mesh_generation.htm">13.2. 3D Tet Mesh Generation</a></p>
+  <p> </p>
+
+</body></html>

@@ -1,0 +1,267 @@
+---
+lang: en
+title: "3D Induction Heating Lab3"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.7.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Induction Heating Lab3</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Induction Heating Lab3</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_induction_heating/3d_induction_heating_lab3.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_Inertia_Welding/55_Inertia_Welding_main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_4_Induction_Heating/3D_Induction_Heating_Lab2.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Induction Heating Lab3">
+        <span>3D Induction Heating Lab3</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 3:  Dual Frequency Hot switching type Induction Heating</h1>
+  <p><br/>
+    <a href="#3_1_Creating_New_Problem">3.1. Creating New Problem</a></p>
+  <p><a href="#3_2_Adding_3D_Forming_operation">3.2. Adding 3D Forming Operation</a></p>
+  <p><a href="#3_3_Defining_Simulation_Controls">3.3. Defining Simulation controls</a></p>
+  <p><a href="#3_4_Loading_material_into_Material_list">3.4. Loading material into Material list</a></p>
+  <p><a href="#3_5_Adding_Objects">3.5. Adding Objects</a></p>
+  <p><a href="#3_6_Defining_Workpiece">3.6. Defining Workpiece</a></p>
+  <p><a href="#3_7_Defining_Coil">3.7. Defining Coil</a></p>
+  <p><a href="#3_8_Defining_Step_controls">3.8. Defining Step controls</a></p>
+  <p><a href="#3_9_Generate_Database">3.9. Generate Data Base</a></p>
+  <p><a href="#3_10_Running_Simulation">3.10. Running Simulation</a></p>
+  <p><a href="#3_11_Post-Processing">3.11. Post-Processing</a></p>
+  <h2><a id="3_1_Creating_New_Problem"></a>Creating New Problem</h2>
+  <p>On a Windows machine, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button, select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select
+    <strong>DEFORM GUI Main</strong> v1x.x from the DEFORM v1x.xxx menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_1_New_Problem_dialog"></a><img height="527" src="../../../../assets/images/applications/55_2_arc_welding/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem dialog.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>New</strong> <strong>Problem </strong>or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear. Select &quot;<strong>Integrated Manufacturing Process&quot;</strong> radio button and unit system as &quot;<strong>SI</strong>&quot; radio button in Unit field as shown in <a href="#Fig_3DINDL3_1_New_Problem_dialog"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>1.</a>    Define problem Name as “<strong>3D_Induction_Heating_HotSwitching</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New
+    Project dialog in MO UI). Click on  <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.<br/>
+    <br/> Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session, we will
+    use “<strong>3D_Induction_Heating_HotSwitching</strong>&quot; as the project name (see <a href="#Fig_3DINDL3_2_New_Project_Window_in_Multiple_Operation_Wizard"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>2.</a>).
+    Click on <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_2_New_Project_Window_in_Multiple_Operation_Wizard"></a><img height="374" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Project Window in Multiple Operation Wizard.</p>
+  <p> </p>
+  <h2><a id="3_2_Adding_3D_Forming_operation"></a>Adding 3D Forming operation</h2>
+  <p>Multiple Operation wizard will open, add one <strong>3D Forming operation </strong>from Operations list in Explorer by clicking <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button as shown in <a href="#Fig_3DINDL3_3_Adding_3D_Forming_operation_into_Operation_Editor"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>3.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_3_Adding_3D_Forming_operation_into_Operation_Editor"></a><img height="380" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Adding 3D Forming operation into Operation Editor.</p>
+  <h2><a id="3_3_Defining_Simulation_Controls"></a>Defining Simulation Controls</h2>
+  <p>As the 3D forming operation is added, Simulation controls page is displayed in property editor region. In the Simulation controls page, <strong>uncheck</strong> the <strong>Deformation </strong>check box and <strong>check </strong>the <strong>Heating </strong>check
+    box. From drop down menu of <strong>Heating</strong>, select <strong>Induction (BEM)</strong> as shown in <a href="#Fig_3DINDL3_4_Simulation_control_window"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>4.</a> Click
+    <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_4_Simulation_control_window"></a><img height="320" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0004.jpg" width="440"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation control window.</p>
+  <h2><a id="3_4_Loading_material_into_Material_list"></a>Loading material into Material list</h2>
+  <p>In Material list page, using <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> option load the material from file <strong>AL 1100 COLD [70F(20C)].</strong><strong>key </strong>available under <strong>/3D/LABS/Induction_Heating/Hot_switching</strong>.
+    Similarly, load the material from file <strong>coil.key.</strong> This can be done as shown in <a href="#Fig_3DINDL3_5_Loading_material_into_Material_list"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>5.</a> by clicking
+    <img src="../../../../assets/icons/pre_icons/mo_open_button.jpg"/> button. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Objects page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_5_Loading_material_into_Material_list"></a><img height="400" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Loading material into Material list.</p>
+  <h2><a id="3_5_Adding_Objects"></a>Adding Objects</h2>
+  <p>By default, 3 objects are added into the objects list. We require only two objects for this lab, hence delete the last object “Bottom Die”. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Workpiece page (See <a href="#Fig_3DINDL3_6_Adding_required_objects_in_Object_page"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>6.</a>). </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_6_Adding_required_objects_in_Object_page"></a><img height="320" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0006.jpg" width="440"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding required objects in Object page.</p>
+  <h2><a id="3_6_Defining_Workpiece"></a>Defining Workpiece</h2>
+  <h3><a id="3_6_1_Workpiece_object_general_definition"></a>Workpiece object general definition</h3>
+  <p>Keep default object name as “<strong>Workpiece</strong>”, Temperature as <strong>20</strong>°C and object type as “<strong>Plastic</strong>” as shown in <a href="#Fig_3DINDL3_7_Workpiece_object_page"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>7.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Geometry page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_7_Workpiece_object_page"></a><img height="320" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0007.jpg" width="383"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Workpiece object page.</p>
+  <h3><a id="3_6_2_Defining_Workpiece_Geometry"></a>Defining Workpiece Geometry</h3>
+  <p>In Geometry page, click on <img src="../../../../assets/icons/pre_icons/mo_define_primitive_label.jpg"/> link and create <strong>cylinder </strong>geometry with <strong>Diameter(2R) 200mm</strong> and <strong>Height (H) </strong><strong>300mm </strong>as
+    shown in the <a href="#Fig_3DINDL3_8_Defining_Workpiece_Geometry"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>8.</a> Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button to close the Geometry
+    Primitive page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_8_Defining_Workpiece_Geometry"></a><img height="375" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Workpiece Geometry. </p>
+  <p> </p>
+  <p><strong>Brick Mesh settings in Geometry page:</strong></p>
+  <p>We will be generating brick mesh for Workpiece. To generate the brick mesh, click on the <img height="16" src="../../../../assets/icons/pre_icons/mo_setup_brick_mesh_label.jpg" style="cursor: nesw-resize;" width="86"/> link in the geometry page. Select
+    the &quot;<strong>Revolve</strong>&quot; radio button and select revolve type as “<strong>Full Revolve</strong>”, accept the default revolve angle as shown in (  <a href="#Fig_3DINDL3_9_Defining_brick_mesh_settings_in_geometry_page"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>9.</a>).
+     Click on the <img height="21" src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg" style="cursor: nesw-resize;" width="73"/> button to exit the brick mesh geometry setup. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_9_Defining_brick_mesh_settings_in_geometry_page"></a><img height="376" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Defining brick mesh settings in geometry page.</p>
+  <h3><a id="3_6_3_Generating_Mesh_for_Workpiece"></a>Generating Mesh for Workpiece</h3>
+  <p>Switch to expert mode using <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> to define brick mesh settings. From General tab of Mesh page, select the &quot;<strong>Brick</strong> <strong>Mesh</strong>&quot; radio button and the
+    &quot;<strong>Uniform </strong><strong>thickness</strong>&quot; radio button, set the &quot;<strong># of layers</strong>&quot; to <strong>60 </strong>as shown in <a href="#Fig_3DINDL3_10_Brick_mesh_settings_in_mesh_page_for_Workpiece"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>10.</a>    In the &quot;<strong>2D Cross Section</strong>&quot; tab, set the <strong>Number of elements</strong> as <strong>200</strong>, <strong>Thickness </strong><strong>elements </strong>as <strong>4</strong> and the <strong>Size </strong><strong>ratio</strong>    as <strong>1</strong>. Click on <img height="17" src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg" style="cursor: nesw-resize;" width="93"/> button and click <img src="../../../../assets/icons/pre_icons/mo_yes_button.jpg"/> in Default
+    Boundary conditions popup to assign default BCC as shown <a href="#Fig_3DINDL3_11_2D_Cross-section_mesh_settings_for_Workpiece_and_mesh_generated"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>11.</a>  Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to assign material.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_10_Brick_mesh_settings_in_mesh_page_for_Workpiece"></a><img height="311" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Brick mesh settings in mesh page for Workpiece.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_11_2D_Cross-section_mesh_settings_for_Workpiece_and_mesh_generated"></a><img height="389" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D Cross-section mesh settings for Workpiece and mesh generated.  </p>
+  <p> </p>
+  <h3><a id="3_6_4_Assigning_Material_to_Workpiece"></a>Assigning Material to Workpiece</h3>
+  <p>Click on the <strong>AL 1100 COLD[70F(20C)]</strong> in the Material window to assign the material to Workpiece as shown in <a href="#Fig_3DINDL3_12_Assigning_Material_to_Workpiece"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>12.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Boundary conditions page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_12_Assigning_Material_to_Workpiece"></a><img height="320" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0012.jpg" width="440"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Assigning Material to Workpiece.</p>
+  <p> </p>
+  <h3><a id="3_6_5_Assigning_Boundary_Conditions_to_Workpiece"></a>Assigning Boundary Conditions to Workpiece</h3>
+  <p>In Boundary conditions page, check whether the Heat exchange with environment Boundary condition has been assigned to the workpiece surface by default during mesh generation. If it is not applied, then add Heat exchange with environment BCC to all surfaces. <br/>    Click on the <strong>Induction BEM – Heating Surface</strong>, click on <img src="../../../../assets/icons/pre_icons/mo_select_all_icon.jpg"/> so that all surfaces are selected, then assign BCC by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/>.  Added Induction BEM - Heating surface is as shown in <a href="#Fig_3DINDL3_13_Assigning_Induction_BEM_BCC"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>13.</a> Click <img height="22" src="../../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;" width="73"/> until Top Die object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_13_Assigning_Induction_BEM_BCC"></a><img height="377" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Induction BEM BCC.</p>
+  <h2><a id="3_7_Defining_Coil"></a>Defining Coil</h2>
+  <h3 class="h3_3_7_"><a id="3_7_1_Coil_general_object_data_definition"></a>Coil general object data definition</h3>
+  <p>In Top Die page, change the object name to Coil. Using <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> option, import <strong>Coil_Object.key</strong> from <strong>/3D/LABS/Induction_Heating/ </strong><strong>Hot_switching</strong> folder.
+    The imported object is having Coil geometry along with mesh data as shown in <a href="#Fig_3DINDL3_14_Importing_Coil_object_data"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>14.</a> Since, we don’t need to generate
+    geometry and mesh, we will navigate using <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Material page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_14_Importing_Coil_object_data"></a><img height="377" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing Coil object data.</p>
+  <h3 class="h3_3_7_"><a id="3_7_2_Assigning_Material_to_Coil"></a>Assigning Material to Coil</h3>
+  <p>Click on the <strong>Coil </strong>in the Material page to assign the material to Coil as shown in <a href="#Fig_3DINDL3_15_Assigning_material_to_Coil"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>15.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Boundary conditions page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_15_Assigning_material_to_Coil"></a><img src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0015.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning material to Coil.</p>
+  <h3 class="h3_3_7_"><a id="3_7_3_Assigning_Boundary_Conditions_to_Coil"></a>Assigning Boundary Conditions to Coil</h3>
+  <p>In BCC page, under<strong> Induction BEM</strong> from BCC tree, select <strong>Heating Surface</strong> option and select all surfaces of the Coil using <img height="21" src="../../../../assets/icons/pre_icons/mo_select_all_icon.jpg" width="23"/> and
+    then click on <img src="../../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/> to finish the assignment (See <a href="#Fig_3DINDL3_16_Assigning_Heating_Surface_BCC"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>16.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_16_Assigning_Heating_Surface_BCC"></a><img height="378" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Heating Surface BCC.</p>
+  <p> </p>
+  <p>Select <strong>Coil Begin surface</strong> option under Induction BEM BCC, select Coil begin surface and assign using <img src="../../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/> as shown <a href="#Fig_3DINDL3_17_Assigning_Coil_Begin_Surface_BCC"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>17.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_17_Assigning_Coil_Begin_Surface_BCC"></a><img height="381" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Coil Begin Surface BCC.</p>
+  <p> </p>
+  <p>Similarly, select Coil <strong>End Surface</strong> option under Induction BEM BCC, select Coil End surface and assign using <img src="../../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/> as shown in <a href="#Fig_3DINDL3_18_Assigning_Coil_End_Surface_BCC"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>18.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Properties page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_18_Assigning_Coil_End_Surface_BCC"></a><img height="383" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Coil End Surface BCC.</p>
+  <h3 class="h3_3_7_"><a id="3_7_4_Defining_Coil_properties"></a>Defining Coil properties</h3>
+  <p>Select &quot;<strong>Heating</strong>&quot; tab in object “<strong>Properties</strong>” page, select <strong>Dual </strong>radio button from <strong>Current </strong><strong>frequency </strong>type. Select “<strong>Hot</strong><strong> switching</strong>”
+    radio button as <strong>Dual </strong><strong>frequency </strong>type and define <strong>frequency </strong>information as,<strong> f1=1000</strong>, <strong>f2=10000</strong>, <strong>w1=0.5 </strong>and <strong>w2=0.5</strong> under Dual frequency
+    as shown in <a href="#Fig_3DINDL3_19_Coil_Property"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>19.</a> Select <strong>Volume </strong><strong>charge </strong>type as <strong>Current </strong><strong>density </strong>and
+    define <strong>constant </strong>value <strong>65 </strong>under “<strong>Data</strong><strong> </strong><strong>Definition</strong>” tab as shown in <a href="#Fig_3DINDL3_19_Coil_Property"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>19.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Step page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_19_Coil_Property"></a><img height="320" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0019.jpg" width="383"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Coil Property.</p>
+  <h2><a id="3_8_Defining_Step_controls"></a>Defining Step controls</h2>
+  <p>In Step controls page, define <strong>Number of Simulation steps</strong> as <strong>40 </strong>and <strong>Step Increment to save </strong>as <strong>1</strong>. Select <strong>Time</strong> as Solution step definition type and define constant<strong> 0.1</strong>    sec/step as step definition as shown in <a href="#Fig_3DINDL3_20_Defining_step_controls_for_simulation"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>20.</a> Click on  <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button to Generate database page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_20_Defining_step_controls_for_simulation"></a><img height="350" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0020.jpg" width="392"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining step controls for simulation.</p>
+  <h2><a id="3_9_Generate_Database"></a>Generate Database</h2>
+  <p>In Generate database page, click the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. During the checking process, messages in the red color
+    signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).</p>
+  <p><br/> Click on <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database.</p>
+  <h2><a id="3_10_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg" width="146"/> button above the operation tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DINDL3_21_Run_Simulation_window"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>21.</a> Use the default <strong>Continue Run</strong> option
+    to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive. </strong>Click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_21_Run_Simulation_window"></a><img height="281" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0021.jpg" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation window.</p>
+  <p><br/> The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. if the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.</p>
+  <p> <br/> The Message file provides information about which simulation step the simulation is currently on and information dealing with how well the simulation is running.</p>
+  <h2><a id="3_11_Post-Processing"></a>Post-Processing</h2>
+  <p>When the simulation is completed, review the results by switching to Post mode using the <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> button above the Simulation tool bar.<br/> In Step Browser, click on <strong>All </strong>button
+    and plot <strong>Temperature </strong>state variable, observe the temperature distribution at last step which should look like as shown in <a href="#Fig_3DINDL3_22_Temperature_distribution_at_the_last_step"><span data-keyref="Application- 3D_Induction_Heating_Lab3">Fig. 3DINDL3.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINDL3_22_Temperature_distribution_at_the_last_step"></a><img height="269" src="../../../../assets/images/applications/55_induction_heating/3d_induction_heating_lab3/image0022.jpg" width="600"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Temperature distribution at the last step.</p>
+  <p> </p>
+
+</body></html>

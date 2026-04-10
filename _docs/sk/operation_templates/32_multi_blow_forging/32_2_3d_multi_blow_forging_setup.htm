@@ -1,0 +1,417 @@
+---
+lang: sk
+title: "32.2. 3D Multi Blow Forging setup"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.4.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>32.2. 3D Multi Blow Forging setup</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>32.2. 3D Multi Blow Forging setup</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/33_Forming/33_Introduction_to_Forming.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/32_Multi_Blow_Forging/32_1_2D_Multi_Blow_Forging_setup.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="32.2. 3D Multi Blow Forging setup">
+        <span>32.2. 3D Multi Blow Forging setup</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>32.2. 3D Multi Blow Forging setup</h1>
+  <p><a href="#32_2_1_Process_Details">32.2.1. Process Details</a></p>
+  <p><a href="#32_2_2_Blow_table">32.2.2. Blow table</a></p>
+  <p><a href="#32_2_3_Simulation_Controls">32.2.3. Simulation Controls</a></p>
+  <p><a href="#32_2_4_Material_List">32.2.4. Material List</a></p>
+  <p><a href="#32_2_5_Add_objects">32.2.5. Add objects</a></p>
+  <p><a href="#32_2_6_Workpiece">32.2.6. Workpiece</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Geometry">Geometry</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Object_Mesh">Object Mesh</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Object_Material">Object Material</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Boundary_conditions">Boundary conditions</a></p>
+    </li>
+  </ul>
+  <p><a href="#32_2_7_Top_Die">32.2.7. Top Die</a></p>
+  <p><a href="#32_2_8_Bottom_Die">32.2.8. Bottom Die</a></p>
+  <p><a href="#32_2_9_Positioning">32.2.9. Positioning</a></p>
+  <p><a href="#32_2_10_Scheduled_Positioning">32.2.10. Scheduled Positioning</a></p>
+  <p><a href="#32_2_11_Contact">32.2.11. Contact</a> </p>
+  <p><a href="#32_2_11_Contact">32.2.12. Stopping Controls</a></p>
+  <p><a href="#32_2_13_Step_controls">32.2.13. Step controls</a></p>
+  <p><a href="#32_2_14_Generate_DB">32.2.14. Generate DB</a></p>
+  <p> </p>
+  <h2><a id="32_2_1_Process_Details"></a>Process Details</h2>
+  <p>In this process page, user can define the Hammer energy and method of energy specification along with the process controls like Reheat and Dwell. User can define Reheat conditions and its controls along with the Dwell conditions. User also has options
+    to specify if object is rotated between blows and also can Initialize strain on Reheat. (See <a href="#Fig_32_2_1_Process_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>1.</a>)</p>
+  <p> </p>
+  <p style="text-align: center">   <a id="Fig_32_2_1_Process_window"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process window</p>
+  <p> </p>
+  <p><strong>Press</strong>: User can define Hammer name and energy details. Using Load movement from file <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> and Load movement from Library  <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> user can load the hammer data. </p>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>: At this moment press data cannot be loaded from explorer tab equipment library.</p>
+  <p class="Note_text"> </p>
+  <p><strong>Energy specification Method:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Absolute</strong>: Energy will be consumed with respect to the defined energy value.</p>
+    </li>
+    <li>
+      <p><strong>Ratio to Max Energy(%)</strong>: Energy will be consumed in terms of percentage value.</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Dwell</strong>: Using this user can set the time that workpiece rests on the die before the starting of the next Blow. User can also specify Simulation time step and Heat Transfer Co-efficient to be used during dwell process simulation.</p>
+  <p> </p>
+  <p><strong>Workpiece Rotation</strong>: By turning on this option, user can specify rotation for workpiece between blows in specified directions.</p>
+  <p> </p>
+  <p><strong>Use Reheat</strong>: During hammer forging process involving multiple blows, the workpiece temperature drops and may require reheating. User can schedule reheat process between blows by turning on this option. </p>
+  <p> </p>
+  <p><strong>Reheat Temperature</strong>: Reheat Temperature is the temperature to which the workpiece temperature will be raised. If only Reheat Temperature is turned on without Heating Simulations, then the temperature at all nodes of the workpiece is
+    simply initialized to the reheating temperature.</p>
+  <p> </p>
+  <p><strong>Heating Simulations</strong>: When Heating Simulations is turned on, an simulation of workpiece heating is carried on at the specified time between the blows. It includes, heating time, Transfer In time, Transfer Out Time, along with specific
+    simulation time step for heat time and Transfer Time.</p>
+  <p> </p>
+  <p><strong>Adaptive Reheat:</strong> By turning on Adaptive Reheat, system will decide and schedule reheating of the workpiece based on the nodal temperatures of the workpiece and adaptive reheat controls. If it is off, user has to schedule reheating manually.
+    If the nodal temperature of the workpiece drops below the Lower limit, reheating process will be scheduled automatically. During non-deformation simulation, simulation stops if nodal temperature of the workpiece is out of range specified in upper
+    limit and lower limit. Simulation stops during reheating if all the nodes reach the temperature specified in Temperature to stop reheat.</p>
+  <p> </p>
+  <p><strong>Initialize Strain on Reheat:</strong> Buy turning on this, user can initialize strain in the workpiece after reheating.</p>
+  <p> </p>
+  <p><strong>Heating Simulations</strong>: It includes, heating time, heat time per step, Transfer In time, Transfer Out Time, Transfer Time Step.</p>
+  <h2><a id="32_2_2_Blow_table"></a>Blow table</h2>
+  <p>In hammer forging process multiple blows are used and blow table helps the user to define number of blows and schedule work piece rotation, Dwelling and Reheating.</p>
+  <p> </p>
+  <p><strong>Energy</strong>: The Blow Energy is a measure of the total energy that the flywheel will contain when the desired speed has been reached and prior to engaging the clutch. The units for blow energy in English units are klb-in and in SI units
+    are N-mm. (See <a href="#Fig_32_2_2_Blow_Table_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>2.</a>)</p>
+  <p> </p>
+  <p><strong>No.Hits</strong>: User can specify number of hits/blows required for the process. Once the user enters the hits/blows number, we can see equal number of rows are added to the table with default values. User can control each blow’s efficiency
+    and the energy to be utilized. User can also schedule Reheating and Flip of workpiece after each blow by turning on respective boxes. User can also define different dwell times for different blows if required. An example of blow table is shown in
+    below <a href="#Fig_32_2_2_Blow_Table_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_32_2_2_Blow_Table_window"></a><img height="278" src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image002.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Blow Table window</p>
+  <h2><a id="32_2_3_Simulation_Controls"></a>Simulation Controls</h2>
+  <p>In Guided mode simulation controls, user can select Simulation mode type and Output type (See <a href="#Fig_32_2_3_Guided_mode_Simulation_controls"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>3.</a>). The basic options
+    required for forming operation are provided here while Expert mode provides more detailed options. For more information on Export mode simulation options, please refer <a href="../../pre_processor/9_simulation_controls/9_simulation_controls.htm">9. Simulation Controls</a>  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_32_2_3_Guided_mode_Simulation_controls"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image004.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Guided mode Simulation controls</p>
+  <p> </p>
+  <h2><a id="32_2_4_Material_List"></a>Material List</h2>
+  <p>Materials required for the process can be loaded either from library using <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>  or from DB or Key file using <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>    as shown in <a href="#Fig_32_2_4_Import_Material_from_Library"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>4.</a> User can also add new material and define required data from respective tab by clicking <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/>. For more information on Material data definition please refer Material List</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_32_2_4_Import_Material_from_Library"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image005.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Import Material from Library</p>
+  <h2><a id="32_2_5_Add_objects"></a>Add objects</h2>
+  <p>User can add required number of objects for the simulation by selecting <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button. <a href="#Fig_32_2_5_Objects_Window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>5.</a>    shows three objects added for a simple upsetting operation.  </p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_32_2_5_Objects_Window"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image006.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Objects Window</p>
+  <p style="text-align: center"> </p>
+  <h2><a id="32_2_6_Workpiece"></a>Workpiece</h2>
+  <p>In this page user can define required temperature for the object and select type of the object as shown in <a href="#Fig_32_2_6_Workpiece_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>6.</a> For workpiece by default
+    the object type selected is Plastic and user can also import object from other DB’s or Keyfile’s using <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> button and browsing respective file.  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_32_2_6_Workpiece_window"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image003.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece window</p>
+  <p> </p>
+  <p><strong><a id="Geometry"></a>Geometry</strong></p>
+  <p>Geometry window is used to define the geometry of an object as shown in <a href="#Fig_32_2_7_Geometry_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>7.</a> Only define primitive field will be in active mode rest
+    other options will be in greyed when no geometry is defined. Once after creating geometry all the options will be activated.</p>
+  <p><br/> User can define new geometry using primitives and also can import the geometry from other file using   or from library using  , user can also import geometries in other formats such as .STL,.UNV,.PDA,.GEO and .. Primitives are provided for easy
+    definition of basic geometry shapes. For more information on creating and editing 2D geometries please refer <a href="../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm">12.1. 2D Geometry Data Defining.</a></p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_32_2_7_Geometry_window"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry window</p>
+  <p><br/>
+    <strong><a id="Object_Mesh"></a>Object Mesh</strong></p>
+  <p>Mesh Page provides options to mesh the object. Guided <img src="../../../assets/icons/pre_icons/mo_guided_mode.jpg"/> mode provides option to set number of elements only using slider bar to generate mesh. If the object geometry is complex or user would
+    like to control the mesh density over the object, then user has to switch to expert mode by clicking on <img src="../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/>. Expert mode provides various options like weighing factors, Mesh windows
+    and user defined mode to control the mesh density. Meshing options available in expert mode and Guided more are shown in <a href="#Fig_32_2_8_Guided_mode_Mesh_option"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>8.</a>    and <a href="#Fig_32_2_9_Expert_mode_mesh_option"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>9.</a> For more detail description of these options, please refer <a href="../../pre_processor/13_mesh_generation/13_mesh_generation.htm">13. Mesh Generation.</a></p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_32_2_8_Guided_mode_Mesh_option"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image005.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Guided mode Mesh option</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_32_2_9_Expert_mode_mesh_option"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image006.jpg"/></p>
+  <p>  </p>
+  <p class="Fig_numb">Expert mode mesh option</p>
+  <p> </p>
+  <p><strong><a id="Object_Material"></a>Object Material</strong></p>
+  <p>In material page, all the materials added to material list are displayed (as shown in <a href="#Fig_32_2_10_Material_selection_Window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>10.</a>) and user can select the required
+    material to assign to respective object from material list. Also user can load the material in Object material page using Import Material data from a File <img src="../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> or Using Load form Library
+    option <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> .</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_32_2_10_Material_selection_Window"></a><img height="371" src="../../../assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image011.jpg" style="text-align: center;" width="508"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Material selection Window</p>
+  <p><br/>
+    <strong><a id="Boundary_conditions"></a>Boundary conditions</strong></p>
+  <p>In Boundary conditions page, user can assign various boundary constraints for an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. The most commonly used boundary conditions are
+    heat exchange with the environment for simulations involving heat transfer, prescribed velocity for enforcing symmetry or prescribing movement in problems such as drawing where a part is pulled through a die, shrink fit for modelling shrink rings
+    on tooling, prescribed force for die stress analysis and Contact between objects in the model. <a href="#Fig_32_2_11_Boundary_conditions_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>11.</a> shows various BCC
+    that can be assigned to an object.</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_32_2_11_Boundary_conditions_window"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image007.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Boundary conditions window</p>
+  <p> </p>
+  <p>The BCC’s are categorized as <a href="../../pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions.htm">Deformation</a>,<a href="../../pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions.htm">Thermal</a>, <a href="../../pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions.htm">Diffusion</a>    and <a href="../../pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions.htm">Heating</a>. For more information about these BCC&#39;s please refer <a href="../../pre_processor/14_boundary_conditions/14_boundary_conditions.htm">14. Boundary Conditions</a>.</p>
+  <p> </p>
+  <h2><a id="32_2_7_Top_Die"></a>Top Die</h2>
+  <p>For Top Die, user can define all the required details like Geometry, mesh, Material and BCC as explained for the workpiece object. <br/> But Top die Movement we have to define it separately for top die.</p>
+  <p><strong>Top Die movement</strong></p>
+  <p><strong>Hammer Press</strong></p>
+  <p>Hammer forging operation is controlled by energy. During a working stroke, the deformation proceeds until the total kinetic energy is dissipated by plastic deformation of the material and by elastic deformation of ram and anvil when the die and ram
+    faces contact each other.(See <a href="#Fig_32_2_12_Hammer_movement_control_settings"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>12.</a>)</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_32_2_12_Hammer_movement_control_settings"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image008.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Hammer movement control settings</p>
+  <p><br/> During hammer forging operation, only a portion of the kinetic energy of ram is used for the plastic deformation of work piece. The rest of the energy is lost through anvil and machine frame. These values can be set in the movement controls window.</p>
+  <p> </p>
+  <p>There are basically two types of hammer. The first is an <a href="../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer">anvil type hammer</a> and the other c<a href="../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer">ounter blow hammer</a>. For
+    the formulations and assumptions used for the two types of hammer forging operations please refer <a href="../../pre_processor/15_movement_controls_definition/15_3_hammer.htm">15.3. Hammer</a></p>
+  <p> </p>
+  <p>In an <strong>Anvil type hammer</strong>, the workpiece, together with the lower die set, is placed on an anvil which is stationary. In a simple gravity drop hammer, the ram is accelerated by gravity and accumulates energy.</p>
+  <p> </p>
+  <p> A <strong>counterblow hammer</strong> can be specified for movement by selecting the Counter blow hammer check box as seen in Fig 6.7.5.3.12. After this, the other moving hammer object can be specified as well as the mass of the other moving hammer.
+    The mass of the objects do not have to be equal but the total energy is split between the two hammer dies.</p>
+  <p> </p>
+  <p><strong>Screw Press</strong></p>
+  <p>The unique characteristic of a screw press (See <a href="#Fig32_3_13_Screw_press_movement_control_settings"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>13.</a>) is the method of driving it. A motor drives a flywheel
+    which is either directly connected or can be connected to a screw spindle.</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig32_3_13_Screw_press_movement_control_settings"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image009.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Screw press movement control settings</p>
+  <p><br/>
+    <strong>The data required to run a screw press driven tool are:</strong></p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Energy</strong>: The Blow Energy is a measure of the total energy that the flywheel will contain when the desired speed has been reached and prior to engaging the clutch. The units for blow energy in English units are klb-in and in SI units
+        are N-mm.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Blow Efficiency</strong>:  The Blow Efficiency represents the fraction of the total energy that will be converted to deformation energy. The rest of the energy is absorbed through the clutch mechanism, friction and the machine frame. There
+        are no units for this quantity. In Forming express only constant value we can use but in forming operation user can also define function of force, for more information refer <a href="../../pre_processor/15_movement_controls_definition/15_4_screw_press.htm">15.4. Screw Press.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Moment </strong><strong>of </strong><strong>Inertia</strong>: The Moment of Inertia is the moment of inertia of the flywheel. The English units of inertia are klb*in*s2 and the SI units are N-mm*s2. The mass moment of inertia for a circular
+        disc with the Z-axis perpendicular to the center is I = 2 ET /ω2 where ET is the total energy of the flywheel, and ω is the angular velocity in radians per second.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Ram </strong><strong>Displacement</strong><strong> or Lead screw pitch</strong>: The Ram Displacement specifies the distance per revolution of the flywheel that the screw will advance. This helps in determining the linear velocity of the
+        ram. The English units for Ram Displacement are inch/revolution, while the SI units are mm/revolution. If only the pitch angle and diameter of the spindle is known, the Ram Displacement can be calculated using πdsin(θt) where d is the diameter
+        of spindle and θt is the pitch angle of the spindle</p>
+    </li>
+  </ul>
+  <p><br/> For more details about Screw press refer <a href="../../pre_processor/15_movement_controls_definition/15_4_screw_press.htm">15.4. Screw Press.</a></p>
+  <p> </p>
+  <h2><a id="32_2_8_Bottom_Die"></a>Bottom Die</h2>
+  <p>For Bottom Die, user can define all the required details like Geometry, mesh, Material and BCC as explained for the workpiece object.</p>
+  <p> </p>
+  <h2><a id="32_2_9_Positioning"></a>Positioning</h2>
+  <p>Below <a href="#Fig_32_2_14_Positioning_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>14.</a> shows the positioning window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_32_2_14_Positioning_window"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image010.jpg"/></p>
+  <p class="Fig_numb">Positioning window</p>
+  <p> </p>
+  <p><strong>Automatic Positioning  <img src="../../../assets/icons/pre_icons/mo_automatic_positioning_button.jpg"/></strong></p>
+  <p>By clicking on this button, system automatically Positions the Objects with respect to the top die movement direction, this option works best for simple setup with three objects work piece, top die and bottom die.</p>
+  <p><strong>Positioning Objects <img src="../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/> </strong></p>
+  <p>By clicking on this button, user can position the objects in required directions.Various types of Positioning Options are available such as <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning">Drag</a>,
+    <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning">Offset</a>, <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning">Interference</a>, <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning">Flip</a>    and <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning">Rotational</a> as shown in <a href="#Fig_32_2_15_Object_positioning_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>15.</a>    For more information about these options, please refer <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm">19. Object Positioning</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_32_2_15_Object_positioning_window"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image011.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Object positioning window</p>
+  <p> </p>
+  <h2><a id="32_2_10_Scheduled_Positioning"></a>Scheduled Positioning</h2>
+  <p>When user is not sure about the location of an object, scheduled positioning will help to position the objects accurately.</p>
+  <p><br/> Schedule positioning allows the user to define the positioning for objects in MO setup for successive operations for which DB is not generated so that the objects are positioned before generation of DB while running simulation in Batch mode.</p>
+  <h2><a id="32_2_11_Contact"></a>Contact</h2>
+  <p>The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined.  </p>
+  <p><br/> Inter-Object relations define what objects can contact each other, and how contacted objects will behave while in contact. Contact relations, Inter-Object boundary conditions, Friction and Heat transfer relations are set here for each object pair.(See
+    <a href="#Fig_32_2_!6_Contact_generation_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>16.</a>) Generated contacts message will display in the message tab below the graphics window.</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_32_2_!6_Contact_generation_window"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image015.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Contact generation window</p>
+  <p><br/> User can select the Shear or Coulomb friction type and define the friction coefficient. The lubricant used on the tooling plays a large role in the amount of friction that exists between the tooling and workpiece. The friction in turn affects
+    the metal flow at contact surfaces.</p>
+  <p><br/> Typical values are provided for shear friction as shown below,<br/> (0.08) for cold forming (carbide dies) processes</p>
+  <p>(0.12) for cold forming (Steel dies) processes</p>
+  <p>(0.25) for warm forming processes</p>
+  <p>( 0.3) for lubricated hot forging processes</p>
+  <p>(0.7) for un lubricated (dry) hot forging processes</p>
+  <p>(0.4) for Aluminium forming processes</p>
+  <p> </p>
+  <p>Conduction heat transfer coefficient value can be defined by user and also typical values are provided by system those are,</p>
+  <p>(1 N/sec/mm/C or 0.0003 Btu/sec/in^2/F) for Free Resting</p>
+  <p>(1 N/sec/mm/C or 0.0003 Btu/sec/in^2/F) for Dwelling</p>
+  <p>(11 N/sec/mm/C or 0.004 Btu/sec/in^2/F) for Forming</p>
+  <h2><a id="32_2_12_Stopping_Controls"></a>Stopping Controls</h2>
+  <p>The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on maximum number of time steps simulated or the maximum accumulated elemental strain or the maximum process time or maximum
+    stroke or minimum velocity or maximum load on the primary object. A simulation will be stopped when the condition of any of the stopping parameters are met.(See <a href="#Fig_32_2_17_Stopping_controls_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>17.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_32_2_17_Stopping_controls_window"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image012.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping controls window</p>
+  <p> </p>
+  <p>For more information, please refer <span style="color:#0000ff;"><a href="../33_forming/33_2_3d_forming_setup.htm#33_2_7_Stopping_Controls">Stopping Controls in Forming 3D setup</a>.</span></p>
+  <h2><a id="32_2_13_Step_controls"></a>Step controls</h2>
+  <p>The DEFORM system solves time dependent non-linear problems by generating a series of FEM solutions at discrete time increments. At each time increment, the velocities, temperatures, and other key variables of each node in the finite element mesh are determined
+    based on boundary conditions, thermo mechanical properties of the work piece materials and possibly solutions at previous steps. Other state variables are derived from these key values, and updated for each time increment. The length of this time
+    step, and number of steps simulated, are determined based on the information specified in the step controls menu. <a href="#Fig_32_2_18_Guided_mode_Step_controls_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>18.</a>    Shows simulation control options in Guided mode, the basic options required for forming operation are provided here while Expert mode provides more detailed options.</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_32_2_18_Guided_mode_Step_controls_window"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image017.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Guided mode Step controls window</p>
+  <p> </p>
+  <p><strong>Number of simulation steps (NSTEP)</strong></p>
+  <p>The number of simulation steps parameter defines the number of steps to run from the starting step number. The simulation will stop after this number of simulation steps have run, unless stopping control is triggered to stop the simulation or if the
+    simulation runs into a problem. For example, if the starting step number is -35 (<a href="../../keyword_documentation/n/nstart.htm">NSTART</a>), and 30 steps (<a href="../../keyword_documentation/n/nstep.htm">NSTEP</a>) are specified, the simulation
+    will stop after the 65th step, unless another stopping control is triggered first. In case of reheating process it could be Temp. to stop reheating.</p>
+  <p>For more information, please refer <a href="../../pre_processor/9_simulation_controls/9_3_stopping_controls.htm">Stopping Controls.</a></p>
+  <p><br/>
+    <strong>Step increment to save (STPINC)</strong></p>
+  <p>The step increment (<a href="../../keyword_documentation/s/stpinc.htm">STPINC</a>) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily
+    need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.</p>
+  <p><br/>
+    <strong>Primary die (PDIE)</strong></p>
+  <p>The primary die (<a href="../../keyword_documentation/p/pdie.htm">PDIE</a>) is the object for which many stopping and stepping criteria are defined. For example, stopping distance based on primary die stroke. When the stroke of the object defined as
+    the primary die reaches the value for primary die displacement, the simulation will be stopped whether or not more steps were specified. The Step by Stroke feature determines step size based on the movement of the primary die. The primary die is usually
+    assigned to the object most closely controlled by the forging machinery. For example, the die attached to the ram of a mechanical press would be designated as the primary object. The primary die is usually assigned to Top Die in case of Hammer / Screw
+    Press.</p>
+  <p> </p>
+  <p><strong>Step increment control (<a href="../../keyword_documentation/d/dsmax.htm">DSMAX</a>/<a href="../../keyword_documentation/d/dtmax.htm">DTMAX</a>)</strong></p>
+  <p>Solution step size can be controlled by time step or by displacement of the primary die. If stroke per step is specified, the primary die will move the specified amount in each time step. The total movement of the primary die will be the displacement per
+    step multiplied by the total number of steps. If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.</p>
+  <p>The definition of step increment control have been enhanced to include both the time and stroke dependent step functions,these options are available under Expert mode. This means, step size (both time per step and stroke per step) can now be defined as
+    a function of time or stroke. This functionality enables finer resolution of saved model information, where it is desired. (typically towards the end of the stroke, where steep changes of die load and cavity filling or flash formation can take place)</p>
+  <p><br/> Stroke per step is frequently more intuitive. However, time per step must be specified for any problem in which there is no die movement (such as heat transfer), or for any problem where force control is used.</p>
+  <p> <a href="#Fig_32_2_19_Expert_mode_Simulation_controls_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>19.</a>. shows the Simulation Controls in Expert mode.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_32_2_19_Expert_mode_Simulation_controls_window"></a><img src="../../../assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image013.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Expert mode Simulation controls window</p>
+  <p><br/> Options defined under Simulation Controls (See <a href="#Fig_32_2_19_Expert_mode_Simulation_controls_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>19.</a>) control the numerical behavior of the solution.
+    Main controls details with specifying the simulation title, unit system, geometry type, etc.</p>
+  <p><br/> Step and stopping controls are used to specify the time step, the total number of steps and the criteria used to terminate the simulation.</p>
+  <p><br/> Processing conditions like the environment temperature, convection coefficient can be specified here.</p>
+  <p>For more information and description about options in Simulation controls, Please refer <a href="../../pre_processor/9_simulation_controls/9_simulation_controls.htm">9. Simulation Controls.</a></p>
+  <h2><a id="32_2_14_Generate_DB"></a>Generate DB</h2>
+  <p><strong>Check Data <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> </strong></p>
+  <p>It checks the Data. If Data is correct we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow
+    the DB to be generated.</p>
+  <p><strong>Generate Database <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/></strong></p>
+  <p>By clicking on this button, it generated the Database for the setup.(See <a href="#Fig_32_2_30_Generate_DB_window"><span data-keyref="Chapter_32_2_3D_Multi_Blow_Forging_setup">Fig. 32.2.</span>20.</a>)</p>
+  <p> </p>
+  <p><strong>Append Key file</strong></p>
+  <p>Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only .key
+    file can be changed and simulation can be resubmitted.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_32_2_30_Generate_DB_window"></a><img src="../../../assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image024.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Generate DB window</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm">6.1. Integrated Manufacturing Process Pre- Processor Layout</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout.htm">6.2. Integrated Manufacturing Process.Simulation layout</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout.htm">6.3. Integrated Manufacturing Process Post - Processor layout</a></p>
+  <p><a href="32_1_2d_multi_blow_forging_setup.htm">32.1. 2D Multi Blow Forging</a></p>
+
+</body></html>

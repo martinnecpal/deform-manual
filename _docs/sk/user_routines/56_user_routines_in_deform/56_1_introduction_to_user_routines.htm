@@ -1,0 +1,151 @@
+---
+lang: sk
+title: "56.1. Introduction to User Routines"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "11.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>56.1. Introduction to User Routines</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>56.1. Introduction to User Routines</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/user_routine/56_1_introduction_to_user_routine.css"/>
+<meta name="brsnext" value="Documentation_content/User_Routines/56_User_Routines_in_DEFORM/56_2_2D_User_Defined_FEM_Routines.htm"/><meta name="brsprev" value="Documentation_content/User_Routines/56_User_Routines_in_DEFORM/56_User_Routines_in_DEFORM.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="56.1. Introduction to User Routines">
+        <span>56.1. Introduction to User Routines</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>56.1. Introduction to User Routines</h1>
+  <p><br/> This chapter explains the various user routines available in the DEFORM system in the FEM (Finite Element Method) engine and the post-processor. Examples on how to use each type of routine, how to compile the code and how to run the modified FEM
+    engine and post-processor are also covered.</p>
+  <p> </p>
+  <p>DEFORM V13.1 brings with it a few important changes in its support for Fortran compilers. Historically, SFTC has relied upon the Absoft Fortran compiler for DEFORM release and user routine code compiling. The Absoft Corporation closed their business
+    in late 2022, ending sales and support for the Absoft Fortran Pro compiler. SFTC has committed to continuing to support the Absoft compilers for a period of time as the Absoft compiler is phased out.</p>
+  <p> </p>
+  <p>DEFORM V13.1 introduces support for Intel<span style="vertical-align:super;font-size:10px">®</span> Fortran Compiler. The free Intel compiler represents a computing upgrade, as it is designed for modern hardware. Testing has shown that it generally
+    provides improved performance over the older Absoft compiler.</p>
+  <p><br/> For instructions on how to download and install Intel<span style="vertical-align:super;font-size:10px">®</span> Fortran Compiler, please refer <a href="../../appendices/appendix_xxi_fem_user_routine_support.htm">Appendix XXI: FEM User routine support</a>.</p>
+  <p> </p>
+  <p><strong>Prerequisites:</strong></p>
+  <p>The user should have at least a rudimentary understanding of the FORTRAN language. This section is not meant to be an introduction into the FORTRAN language rather it is meant to explain how to build the user routines and how to implement them within
+    DEFORM. For more information on the FORTRAN language, please refer to many books or the documentation that was included with your compiler or on the web.</p>
+  <p> </p>
+  <p><strong>Overview:</strong></p>
+  <p>There are two different types of user routines available:</p>
+  <ol class="Decimal">
+    <li>
+      <p>User-Defined FEM Routines</p>
+    </li>
+    <li>
+      <p>User-Defined Post-Processing Routines</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p>The two different types of User Routines will be outlined below as to their purpose and how they are implemented. Later in this chapter, each one of these routines is explained in greater detail on how to implement each subroutine. To implement the
+    user routines user must have a FORTRAN compiler installed on your system. The build scripts are provided with the system installation. 64 bit FEM support is available for 3D and 2D FEM.</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong></p>
+  <p class="Note_text">The manner in which the User-Routines are compiled and linked is slightly different between Windows and Linux platforms. These differences are outlined in detail later in this chapter.</p>
+  <p class="Note_text"> </p>
+  <p class="Note_text">From v13.1 onwards, DEFORM<span style="vertical-align:super;font-size:12px">®</span> supports both static linked library (which builds DEF_SIM.EXE) and dynamic linked library (which builds DLL file) for user-defined FEM Routines.</p>
+  <p> </p>
+  <p>Supported Machine and Compiler related details are,</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Centos 5.10 (2.6.18-371 x86-64 Equivalent to Redhat Enterprise Linux 5) using Absoft Fortran90 v11.0 (64 bit version of the compiler).</p>
+    </li>
+    <li>
+      <p>Centos 6.5 (2.6.32-431 x86-64 Equivalent to Redhat Enterprise Linux 6) using Absoft Fortran90 v11.0 (64 bit version of the compiler).</p>
+    </li>
+    <li>
+      <p>Suse Enterprise Linux Desktop (3.0.101-0.18  x86-64 Equivalent to Suse11 sp3) using Absoft Fortran90 v11.0 (64 bit version of the compiler).</p>
+    </li>
+    <li>
+      <p> PC Win7, Win8, Win10 using Absoft Fortran90 v11.0 and Intel Fortran compiler (64 bit version of the compiler).</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p>In PC Win10 environment the DEF_SIM system is built using Absoft Fortran90 v11.0 and Intel Fortran compilers. However the DEF_SIM object files for the earlier versions of Absoft Fortran90 v9.0 (has only 32bit support) is also built and released as a
+    part of official release pack. It was noted that the code generated using Absoft Fortran90 v11.0 is faster compared to the earlier versions of the same compiler. (Support for Absoft v7.0 and Absoft v7.5 compilers has been dropped from DEFORM v10.2
+    release).</p>
+  <p> </p>
+  <p>From DEFORM v13.0, support for 32bit User-Defined FEM Routines and User-Defined Post-Processing Routines has been dropped.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="56_2_2d_user_defined_fem_routines.htm">56.2. 2D User Defined FEM Routines</a></p>
+  <p><a href="56_3_3d_user_defined_fem_routines.htm">56.3. 3D User Defined FEM Routines</a></p>
+  <p><a href="56_4_user-defined_post-processing_routines.htm">56.4. User-Defined Post-Processing Routines</a></p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

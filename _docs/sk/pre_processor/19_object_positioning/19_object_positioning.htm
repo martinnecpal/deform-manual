@@ -1,0 +1,304 @@
+---
+lang: sk
+title: "19. Object Positioning"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>19. Object Positioning</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>19. Object Positioning</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/19_object_positioning/19_object_positioning.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/20_Inter-object_Data_Definition/20_Inter-Object_Data_Definition.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/18_Object_Manipulation_Tools/18_3_Mirror_Merge.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="19. Object Positioning">
+        <span>19. Object Positioning</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>19. Object Positioning</h1>
+  <p><a href="#19_1_Drag_Positioning">19.1. Drag Positioning</a></p>
+  <p><a href="#19_2_Offset_Positioning">19.2. Offset Positioning</a></p>
+  <p><a href="#19_3_Interference_positioning">19.3. Interference positioning</a></p>
+  <p><a href="#19_4_Rotational_positioning">19.4. Rotational positioning</a></p>
+  <p><a href="#19_5_Drop_positioning">19.5. Drop positioning</a></p>
+  <p><a href="#19_6_Flip_positioning">19.6 Flip positioning</a></p>
+  <p><a href="#19_7_Coupled_positioning">19.7. Coupled positioning</a></p>
+  <p> </p>
+  <p>Object positioning dialog can be accessed by clicking on <img height="21" src="../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg" width="118"/> button in Positioning page. (See <a href="#Fig_19_1_2D_Object_positioning_window"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>1.</a>    and <a href="#Fig_19_2_3D_Object_positioning_window"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>2.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_1_2D_Object_positioning_window"></a><img height="423" src="../../../assets/images/pre-processor/19_object_positioning/19_image001.jpg" width="750"/></p>
+  <p class="Fig_numb" style="text-align: center;">2D Object positioning window</p>
+  <p style="text-align: center;"> </p>
+  <p style="text-align: center"><a id="Fig_19_2_3D_Object_positioning_window"></a><img height="423" src="../../../assets/images/pre-processor/19_object_positioning/19_image002.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">3D Object positioning window</p>
+  <p> </p>
+  <p>Once the object is defined, a variety of positioning features are available to place the objects in the correct position before the process is modelled. The object can be dragged using mouse, can be dropped in to the die cavity, moved by a specific
+    offset distance, positioned with interference or positioned with rotational movement. A set of components can also be selected and positioned together using coupled positioning.</p>
+  <p> </p>
+  <p><strong>Update Current Stroke</strong>: When user checks this check box, &quot;positioning object&quot; current stroke value will update w.r.t. positioned distance.</p>
+  <p> </p>
+  <p><strong>Update Windows Following positioning object</strong>: When user checks this check box, defined windows (mesh window or Env. windows) will position with respect to the object positioning methods like Drag, Interference, etc. which are described
+    in below sections 19.1 to 19.7.</p>
+  <p> </p>
+  <p><strong>Reset <img src="../../../assets/icons/pre_icons/mo_reset_button.jpg"/> </strong>: using this option user can reset the objects to its initial position. </p>
+  <p> </p>
+  <h2><a id="19_1_Drag_Positioning"></a>Drag Positioning</h2>
+  <p><strong>[2D, 3D]:</strong> Objects can be dragged or dynamically rotated using drag option in a certain direction using the mouse. Drag the mouse in the required direction so that we can place as per we required. If you select Translation motion the
+    object will translate based on your dragging direction. If you select Rotation motion the object will rotate based on dragging of your mouse. (See <a href="#Fig_19_3_Drag_Positioning_window_for_2D"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>3.</a>,
+    <a href="#Fig_19_4_Drag_Positioning_window_for_3D"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>4.</a> and  <a href="#Fig_19_5_Example_showing_usage_of_drag_positioning"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>5.)</a></p>
+  <p> </p>
+  <p><strong>Mouse driven positioning</strong></p>
+  <p>Mouse driven positioning is used to move or rotate the object by allowing the user to select a vector along which to drag or spin any specified object along or about that vector.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_3_Drag_Positioning_window_for_2D"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image003.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Drag Positioning window for 2D</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_4_Drag_Positioning_window_for_3D"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Drag Positioning window for 3D</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_5_Example_showing_usage_of_drag_positioning"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image005.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Example showing usage of drag positioning</p>
+  <p> </p>
+  <h2><a id="19_2_Offset_Positioning"></a>Offset Positioning</h2>
+  <p><strong>[2D, 3D]:</strong> Offset positioning is used to move the object to position by a given displacement in the chosen direction. The object to be positioned should be highlighted in the Positioning object list table. The displacement in the X,
+    Y, and Z (for 3D) coordinates should be entered in the appropriate fields. ( <a href="#Fig_19_6_Distance_vector__Offset_Positioning_window_for_2D"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>6.</a> and <a href="#Fig_19_7_Distance_vector__Offset_Positioning_window_for_3D"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>7.)</a></p>
+  <p> </p>
+  <p><strong>Distance Vector</strong><strong>:</strong> using<strong> </strong><strong><strong>Distance Vector</strong> </strong>option user need to define the displacement in the X, Y, and Z (for 3D) coordinates should be entered in the appropriate fields.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_6_Distance_vector__Offset_Positioning_window_for_2D"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image006.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Distance vector - Offset Positioning window for 2D</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_19_7_Distance_vector__Offset_Positioning_window_for_3D"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image007.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Distance vector - Offset Positioning window for 3D</p>
+  <p> </p>
+  <p><strong>Two points: </strong>using Two point option user can offset by enter the From and To fields values. Even by mouse click on the boundary points user can define the From and To fields values. (See <a href="#Fig_19_8_Two_points__Offset_Positioning_window_for_2D"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>8.</a>,
+    <a href="#Fig_19_9_Two_points_-_Offset_Positioning_window_for_3D"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>9.</a> and <a href="#Fig_19_10_Example_showing_usage_of_offset_positioning_using_two_point_method"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>10.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_19_8_Two_points__Offset_Positioning_window_for_2D"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image008.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Two points - Offset Positioning window for 2D</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_19_9_Two_points_-_Offset_Positioning_window_for_3D"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image009.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Two points - Offset Positioning window for 3D</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_10_Example_showing_usage_of_offset_positioning_using_two_point_method"></a><img height="266" src="../../../assets/images/pre-processor/19_object_positioning/19_image010.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Example showing usage of offset positioning using two point method</p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Centroid of Two objects type Offset Positioning : </strong>The user can offset using the centroid to align positioning object. (See <a href="#Fig_19_11_Offset_Centroid_Positioning_example"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>11.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_11_Offset_Centroid_Positioning_example"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image011.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Offset Centroid Positioning example</p>
+  <p> </p>
+  <h2><a id="19_3_Interference_positioning"></a>Interference positioning</h2>
+  <p><strong>[2D, 3D]</strong>: Interference positioning moves the object for a given set of &quot;positioning&quot; and &quot;reference&quot; relationship between two objects, the distance between two objects is calculated both from the positioning and
+    reference objects then, the smaller value of this distance is used as an offset value for positioning (See <a href="#Fig_19_12__Interference_Positioning_window_for_2D"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>12.</a>, <a href="#Fig_19_13_Interference_Positioning_window_for_3D"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>13.</a>    and <a href="#Fig_19_14_Example_showing_usage_interference_positioning"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>14.</a>). During the positioning process, the object being positioned is first moved a large distance away from
+    the reference object, then moved back towards the reference object in the indicated direction, until first contact is made.</p>
+  <p>For a non-rigid object (plastic, elastic, porous, Elasto-plastic) if the mesh is not existing, object geometry is used for interference positioning.</p>
+  <p> </p>
+  <p><strong>Common Question: What is a reasonable value of Interference?</strong></p>
+  <p><strong>Answer</strong>: Interference should be adjusted such that when inter-object boundary conditions are generated, a reasonable number of nodes are in contact with tools. Contact nodes should be generated wherever the object should reasonably be
+    touching the tools.</p>
+  <p>This may require increasing or decreasing both the interference value and the contact node generation tolerance.</p>
+  <p> </p>
+  <p><strong>Do not move object outside bounding box of reference object before positioning</strong>:  option for interference positioning is available for DEFORM-2D pre-processor (from v10.2.1), this positioning option is implemented for machining distortion
+    case with undercut surface where interference positioning didn’t work correctly.</p>
+  <p>It positions the object by interference with respect to the innermost (Internal boundary) boundary of the reference object in the specified direction.</p>
+  <p> </p>
+  <p><strong>For example</strong>: In 2d Plane strain for Hollow cylinder or prism top section with internal pressure applying by any object then that object to position against the internal surface we need to use positioning by bounding box.</p>
+  <p> </p>
+  <p><strong>For example</strong>: in 3d ring rolling setup, to position the Mandrel with respect to or against workpiece ring inner circle surface then we need to use positioning by bounding box.</p>
+  <p> </p>
+  <p><strong>Follow Movement Direction</strong>: When user checks this check box object will position with respect to the movement defined direction.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_12__Interference_Positioning_window_for_2D"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image012.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">     Interference Positioning window for 2D</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_13_Interference_Positioning_window_for_3D"></a><img height="441" src="../../../assets/images/pre-processor/19_object_positioning/19_image013.jpg" width="446"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Interference Positioning window for 3D</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_19_14_Example_showing_usage_interference_positioning"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image014.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Example showing usage interference positioning</p>
+  <p> </p>
+  <p>From DEFORM V12.0.2, &quot;First encountered&quot; object positioning option provided in interference object positioning (See <a href="#Fig_19_15_First_encoutered_Reference_option_"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>15.</a>).
+    This option allows the user to position the object in such a way that the positioning object will come and position automatically with the object which is going to encounter first along its moving path.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_15_First_encoutered_Reference_option_"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image026.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">First encoutered Reference option </p>
+  <h2><a id="19_4_Rotational_positioning"></a>Rotational positioning</h2>
+  <p><strong>[2D, 3D]:</strong> Rotation positioning allows the user to rotate any object about a specified axis. The axis of rotation is specified from a point and a direction vector. The specified rotation angle is positive for a right hand rotation about
+    the axis.</p>
+  <p>In rotational positioning, positioning object can have its own object center as rotation center. Angle (degree) is measured in counter-clock wise direction. (See <a href="#Fig_19_16_Rotational_Positioning_window_for_2D"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>16.</a>    to <a href="#Fig_19_20_3D_Example_2_showing_usage_of_rotation_positioning"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>20.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_16_Rotational_Positioning_window_for_2D"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image015.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Rotational Positioning window for 2D</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_19_17_Rotational_Positioning_window_for_3D"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image016.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Rotational Positioning window for 3D</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_19_18_2D_Example_showing_usage_of_rotation_positioning"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image017.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">2D Example showing usage of rotation positioning</p>
+  <p style="text-align: center;"> </p>
+  <p style="text-align: center"><a id="Fig_19_19_3D_Example_1_showing_usage_of_rotation_positioning"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image018.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">3D Example 1 showing usage of rotation positioning</p>
+  <p style="text-align: center;"> </p>
+  <p style="text-align: center"><a id="Fig_19_20_3D_Example_2_showing_usage_of_rotation_positioning"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image019.jpg"/></p>
+  <p class="Fig_numb">3D Example 2 showing usage of rotation positioning</p>
+  <p> </p>
+  <h2><a id="19_5_Drop_positioning"></a>Drop positioning</h2>
+  <p><strong>[3D]:</strong> Drop positioning is used to move an object towards another object by interference or by gravity (See <a href="#Fig_19_21_3D_Drop_Positioning_window"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>21.</a> and
+    <a href="#Fig_19_22_Example_showing_usage_of_Drop_positioning"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>22.</a>).</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Allow Rotation only about:</strong> User can limit the direction of rotation by dropping the object  by checking the check box and the direction mentioned.</p>
+    </li>
+    <li>
+      <p><strong>Don&#39;t allow rotation:</strong> If user don&#39;t want to define rotation before dropping an object, by checking this check box user can do drop positioning.</p>
+    </li>
+    <li>
+      <p><strong>Save Movie File:</strong> By checking this check box user can save the animation of Drop positioning.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_21_3D_Drop_Positioning_window"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image020.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Drop Positioning window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_22_Example_showing_usage_of_Drop_positioning"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image021.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Example showing usage of Drop positioning</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Gravity activated</strong> : In the case of gravity activated, the positioned object should be the meshed object. The direction should be the direction that gravity would drive it to fall on the other object. The object can move in 6 degrees
+        of freedom (3 directions of translation and 3 axes of rotation) without any given constraint. Constraint in rotational direction can be added if only one rotational degree of freedom is required. If only one rotational direction is required, the
+        Allow rotation only about box should be selected and the vector about which to rotate should be specified.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Gravity not activated</strong> : In the case where gravity is not activated, this behaves exactly like the interference positioning method.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h2><a id="19_6_Flip_positioning"></a>Flip positioning</h2>
+  <p><strong>[2D]</strong>: Flip allows the user to mirror an object about the selected-axis or any line parallel to the selected-axis as shown in <a href="#Fig_19_23_2D_Flip_Positioning_window"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>23.</a>    and <a href="#Fig_19_24_Example_showing_usage_of_flip_positioning"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>24.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_23_2D_Flip_Positioning_window"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image022.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">2D Flip Positioning window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_24_Example_showing_usage_of_flip_positioning"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image023.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Example showing usage of flip positioning</p>
+  <p> </p>
+  <h2><a id="19_7_Coupled_positioning"></a>Coupled positioning</h2>
+  <p><strong>[2D, 3D]</strong>: This allows several objects to move on the same positioning action (See <a href="#Fig_19_25_Coupled_Positioning_window"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>25.</a> and <a href="#Fig_19_26_Example_showing_usage_of_couple_positioning"><span data-keyref="Chapter_19_Object_Positioning">Fig. 19.</span>26.</a>).
+    By checking objects in the couple positioning dialog, the objects will be positioned by the exact same amount as the positioned object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_19_25_Coupled_Positioning_window"></a><img src="../../../assets/images/pre-processor/19_object_positioning/19_image024.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Coupled Positioning window</p>
+  <p> </p>
+  <p style="text-align: center"> <a id="Fig_19_26_Example_showing_usage_of_couple_positioning"></a><img height="280" src="../../../assets/images/pre-processor/19_object_positioning/19_image025.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Example showing usage of couple positioning with Drag positioning option</p>
+  <p> </p>
+  <p><strong></strong></p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Define_Primitives">2D-Primitive geometries</a></p>
+  <p><a href="../12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Define_Primitive">3D-Primitive geometries</a></p>
+  <p><a href="../12_geometry_modelling/12_geometry_modelling.htm">12. Geometry Modelling</a></p>
+  <p><a href="../13_mesh_generation/13_mesh_generation.htm">13. Mesh Generation</a></p>
+  <p><a href="../15_movement_controls_definition/15_movement_controls_settings.htm#Directions">Selecting the Movement direction of the objects</a></p>
+  <p><a href="../20_inter-object_data_definition/20_inter-object_data_definition.htm">20. Inter-object Data Definition</a></p>
+
+</body></html>

@@ -1,0 +1,263 @@
+---
+lang: en
+title: "36. Intorduction to Heat Transfer Express Operations"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>36. Intorduction to Heat Transfer Express Operations</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>36. Intorduction to Heat Transfer Express Operations</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/36_Heat_Transfer_Express/36_1_2D_Heat_Transfer_Express.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/35_Heat_Transfer/35_2_3D_Heat_Transfer_Operation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="36. Intorduction to Heat Transfer Express Operations">
+        <span>36. Intorduction to Heat Transfer Express Operations</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>36. Introduction to Heat Transfer Express Operations</h1>
+  <p>Heat transfer is energy in transit due to temperature difference. Whenever there exist a temperature difference in a medium or between media, heat transfer must occur. Heat transfer mechanisms can be grouped into 3 broad categories:</p>
+  <p><strong>Conduction</strong>: Heat transfer through a solid material by contact of one molecule to the next. Heat flows from a higher-temperature area to a lower-temperature one. </p>
+  <p><br/>
+    <strong>Convection</strong>: A heat transfer process involving motion in a fluid (such as air) caused by the difference in density of the fluid and the action of gravity.</p>
+  <p><br/>
+    <strong>Radiation</strong>: The transfer of heat in the form of electromagnetic waves from one separate surface to another. The energy radiated is either transmitted, absorbed, reflected or a combination of all three.</p>
+  <p><br/> In Multiple operations Heat transfer Express operations will simulate only heat transfer by conduction and convection modes.</p>
+  <p><br/> Heat Transfer Express operations are customized to setup only heat transfer process during forging like heating workpiece, transferring workpiece form furnace to press, resting workpiece on die (before forming) and workpiece dwell on die after
+    forming. Using these operation user can setup the multiple operations to replicate the real life hot or warm forging process in one go. Appropriate selection of heat transfer type (heating, transfer, resting or dwelling) will add related settings
+    windows and guide the user to quickly setup the heat transfer operations during hot/warm forging operations only in guided mode.</p>
+  <p> There are four heating types or heat transfer operations available in both 2D and 3D Heat Transfer Express operation those are (See <a href=""><span data-keyref="Chapter_36_Introduction_to_Heat_Transfer_Express_Operations">Fig. 36.</span>1</a>.),</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Heating</p>
+    </li>
+    <li>
+      <p>Transfer</p>
+    </li>
+    <li>
+      <p>Rest on die and</p>
+    </li>
+    <li>
+      <p>Dwell on die</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_36_1_2D_and_3D_Process_settings_window"></a><img height="251" src="../../../assets/images/operation_templates/36_heat_transfer_express/image001.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">2D and 3D Process settings window</p>
+  <p><br/>
+    <strong>Heating</strong>: In heating or heat furnace operation, heating of billet in a furnace is modeled. Only one object is allowed for this operation and that object will be added automatically. The default process settings will be added suited
+    to heating operation (See <a href="#Table_36_1_Default_process_settings_(heat_condition)_and_object_temperatures_for_different_heating_types">Table. 36.1.</a>), changes can be made to the default setting while defining the particular operation.</p>
+  <p><strong>Transfer</strong>: In heat transfer operation, heat transfer or heat loss to environment before workpiece/billet is placed on the die is modeled. By default one object, workpiece, will be added to the project tree for this operation. The default
+    process settings for heat transfer is as shown in <a href="#Table_36_1_Default_process_settings_(heat_condition)_and_object_temperatures_for_different_heating_types">Table. 36.1.</a></p>
+  <p><strong>Rest on die</strong>: In heat resting operation, heat resting on the die prior to deformation is modeled. By default workpiece, top and bottom die objects will be added to the project tree. Default process settings for heat resting operation
+    is as shown in <a href="#Table_36_1_Default_process_settings_(heat_condition)_and_object_temperatures_for_different_heating_types">Table. 36.1.</a></p>
+  <p><strong>Dwell on die</strong>: In heat dwell operation, heat transfer after deformation (after the dies retract from  the workpiece) is modeled in this operation. By default workpiece, top and bottom die objects will be added to the project tree. Default
+    process settings for heat resting operation is as shown in <a href="#Table_36_1_Default_process_settings_(heat_condition)_and_object_temperatures_for_different_heating_types">Table. 36.1.</a></p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:750px;margin-left:auto;margin-right:auto">
+    <colgroup>
+      <col style="width:125px"/>
+      <col style="width:125px"/>
+      <col style="width:100px"/>
+      <col style="width:100px"/>
+      <col style="width:125px"/>
+      <col style="width:175px"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="text-align: center"><strong>Heating type</strong></td>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Workpiece Temperature </strong></p>
+          <p style="text-align: center"><strong>(C or F)</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Dies Temperature</strong></p>
+          <p style="text-align: center"><strong>(C or F)</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Process Time</strong></p>
+          <p style="text-align: center"><strong>(sec)</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Env<span>i</span>ronment Temperature</strong></p>
+          <p style="text-align: center"><strong>(C or F)</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Convection coefficient</strong></p>
+          <p style="text-align: center"><strong>(N/sec/mm/C or Btu/sec/in^2/F)</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center">Heating</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">1200 C or</p>
+          <p style="text-align: center">2250 F</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">NA</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">3600</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">1200 C or</p>
+          <p style="text-align: center">2250 F</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center;">0.0226611 N/sec/mm/C or 7.7e-6 Btu/sec/in^2/F</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align">
+          <p style="text-align: center">Transfer</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">1200 C or</p>
+          <p style="text-align: center">2250 F</p>
+        </td>
+        <td style="text-align: center">NA</td>
+        <td style="text-align: center">
+          <p style="text-align: center">15</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">20 C or</p>
+          <p style="text-align: center">68 F</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center;">0.0226611 N/sec/mm/C or 7.7e-6 Btu/sec/in^2/F</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center">Resting</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">1200 C or</p>
+          <p style="text-align: center">2250 F</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">150 C or</p>
+          <p style="text-align: center">300 F</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">4</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">20 C or</p>
+          <p style="text-align: center">68 F</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">0.0226611N/sec/mm/C</p>
+          <p style="text-align: center">or 7.7e-6 Btu/sec/in^2/F</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center">Dwelling</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">1200 C or</p>
+          <p style="text-align: center">2250 F</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">150 C or</p>
+          <p style="text-align: center">300 F</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">4</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">20 C or</p>
+          <p style="text-align: center">68 F</p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center;">0.0226611 N/sec/mm/C or 7.7e-6 Btu/sec/in^2/F</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><a id="Table_36_1_Default_process_settings_(heat_condition)_and_object_temperatures_for_different_heating_types"></a></p>
+  <p class="Table_numb">Default process settings (heat condition) and object temperatures for different heating types</p>
+  <p> </p>
+  <p> </p>
+  <p>Default process settings (heat condition) and object temperatures for different heating types</p>
+  <p><br/> For more information about the all four heat transfer operations setup refer the <a href="36_1_2d_heat_transfer_express.htm">2D Heat Transfer Express Operation</a> and <a href="36_2_3d_heat_transfer_express.htm">3D Heat Transfer Express Operation</a>.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="36_1_2d_heat_transfer_express.htm">36.1. 2D Heat Transfer Express Operation</a></p>
+  <p><a href="36_2_3d_heat_transfer_express.htm">36.2. 3D Heat Transfer Express Operation</a></p>
+  <p> </p>
+
+</body></html>

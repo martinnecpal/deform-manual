@@ -1,0 +1,302 @@
+---
+lang: sk
+title: "2D Rivet Lab"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.15.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Rivet Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Rivet Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_rivet_installation/2d_rivet_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_Sheet_Forming/55_3_Cup_Drawing_Lab_Mian_Pg.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_Rivet_installation/Rivet_Installation_Labs_Main_pg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="2D Rivet Lab">
+        <span>2D Rivet Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>2D Rivet Lab</h1>
+  <p>In this lab we will setup simple 2D Rivet installation operation in 2D Forming operation.</p>
+  <p><br/>
+    <a href="#1_1_Creating_New_problem">1.1. Creating New problem</a></p>
+  <p><a href="#1_2_Adding_2D_Forming_Operation">1.2. Adding 2D Forming Operation</a></p>
+  <p><a href="#1_3_Select__Geometry_type_and_Simulation_Modes">1.3. Select Geometry type and Simulation Modes</a></p>
+  <p><a href="#1_4_Add_material_from_Library">1.4. Add material from Library</a></p>
+  <p><a href="#1_5_Adding_Objects">1.5. Adding Objects</a></p>
+  <p><a href="#1_6_Define_Rivet_general_object_data">1.6. Define Rivet general object data</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_1_Import_the_rivet_geometry">1.6.1. Import the rivet geometry</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_2_Generating_mesh_for_Rivet">1.6.2. Generating mesh for Rivet</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_3_Assign_Material_for_Rivet">1.6.3. Assign Material for Rivet</a></p>
+  <p><a href="#1_7_Define_Rivet_pin_general_object_data">1.7. Define Rivet pin general object data</a></p>
+  <p style="margin-left: 20px"><a href="#1_7_1_Import_the_Rivet_pin_geometry">1.7.1. Import the Rivet pin geometry</a></p>
+  <p style="margin-left: 20px"><a href="#1_7_2_Generating_mesh_for_Rivet_pin">1.7.2. Generating mesh for Rivet pin</a></p>
+  <p style="margin-left: 20px"><a href="#1_7_3_Assigning_BCC_for_Rivet_pin">1.7.3. Assigning BCC for Rivet pin</a></p>
+  <p style="margin-left: 20px"><a href="#1_7_4_Assign_Movement_for_Rivet_pin">1.7.4. Assign Movement for Rivet pin</a></p>
+  <p style="margin-left: 20px"><a href="#1_7_5_Assign_pin_Properties">1.7.5. Assign pin Properties</a></p>
+  <p><a href="#1_8_Define_Top_sheet_general_object_data">1.8. Define Top sheet general object data</a></p>
+  <p style="margin-left: 16px"><a href="#1_8_1_Define_Top_sheet_general_object_data">1.8.1. Import the Top sheet geometry</a></p>
+  <p><a href="#1_9_Define_Bottom_sheet_general_object_data">1.9. Define Bottom sheet general object data</a></p>
+  <p style="margin-left: 16px"><a href="#1_9_1_Import_the_Bottom_sheet_geometry">1.9.1. Import the Bottom sheet geometry</a></p>
+  <p><a href="#1_10_Define_Anvil_general_object_data">1.10. Define Anvil general object data</a></p>
+  <p style="margin-left: 16px"><a href="#1_10_1_Import_the_Anvil_geometry">1.10.1. Import the Anvil geometry</a></p>
+  <p><a href="#1_11_Define_Inter-object_relations">1.11. Define Inter-object relations</a></p>
+  <p><a href="#1_12_Assign_Stopping_controls">1.12. Assign Stopping controls</a></p>
+  <p><a href="#1_13_Assign_Step_controls">1.13. Assign Step controls</a></p>
+  <p><a href="#1_14_Data_checking_and_database_generation">1.14. Data checking and database generation</a></p>
+  <p><a href="#1_15_Run_and_monitor_a_simulation">1.15. Run and monitor a simulation</a></p>
+  <p><a href="#1_16_Review_Results">1.16. Review Results</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_New_problem"></a>Creating New problem</h2>
+  <p>On a Windows machine, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_2DRL1_1_Problem_Setup_Window"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>1.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot; radio
+    button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong>Rivet</strong>&quot; and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn
+    on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing
+    Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_1_Problem_Setup_Window"></a><img height="419" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem Setup Window</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use &quot;<strong>Rivet </strong>&quot;
+    as the project name. Confirm that First operation check box is unchecked as we will add operation later (See <a href="#Fig_2DRL1_2_New_MO_Project_window"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>2.</a>), click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to continue to open the operation.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_2_New_MO_Project_window"></a><img src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0002.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">New MO Project window</p>
+  <p> </p>
+  <h2><a id="1_2_Adding_2D_Forming_Operation"></a>Adding 2D Forming Operation</h2>
+  <p>Multiple Operation wizard will open new project. Add 2D Forming operation from the Explorer Operations list. Operation can be added by clicking on 2D Forming operation <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button
+    (See <a href="#Fig_2DRL1_3_Adding_2D_Forming_operation_from_operation_explorer"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>3.</a>) or user can also add by drag and drop into the Operation Editor.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_3_Adding_2D_Forming_operation_from_operation_explorer"></a><img height="385" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding 2D Forming operation from operation explorer</p>
+  <p> </p>
+  <p>Change the default operation title to &quot;<strong>Rivet</strong>&quot; from Forming by selecting the title in the operation editor  as shown in <a href="#Fig_2DRL1_4_Renaming_operation_title_to_Flair"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>4.</a>    and press Enter keyboard button after editing is completed.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_4_Renaming_operation_title_to_Flair"></a><img src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Renaming operation title to Flair</p>
+  <p> </p>
+  <h2><a id="1_3_Select__Geometry_type_and_Simulation_Modes"></a>Select  Geometry type and Simulation Modes</h2>
+  <p>Confirm the geometry type selected is <strong>Axi-symmetric</strong> in Geometry type page, then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p>In this lab we will be showing how to setup simple Isothermal problem, so in Simulation controls page, <strong>uncheck </strong>the <strong>Heat </strong><strong>transfer </strong>mode check box (See <a href="#Fig_2DRL1_5_Simulation_control_window"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>5.</a>).
+    then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_5_Simulation_control_window"></a><img height="350" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0005.jpg" width="521"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation control window</p>
+  <h2><a id="1_4_Add_material_from_Library"></a>Add material from Library</h2>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material data from library) button, select the <strong>Aluminum </strong>category, then <strong>AL-6061-O,COLD[70F(20C)]</strong> and click the <img src="../../../../assets/icons/pre_icons/mo_load_button.jpg"/> button. Click the <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material data from library) button,select the <strong>Steel </strong>category, then <strong>AISI-1035,COLD[70-400F(20-200C)]</strong> and click
+    the<img src="../../../../assets/icons/pre_icons/mo_load_button.jpg"/>  button. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Object page.</p>
+  <h2><a id="1_5_Adding_Objects"></a>Adding Objects</h2>
+  <p>In this Rivet lab we need 5 objects, by default three objects will be added in Forming operation list, if not added click the <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> (insert object) button three times to add 3 objects
+    in list, then add another 2 objects in list using <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> (insert object) button. After adding objects, object window looks as shown in <a href="#Fig_2DRL1_6_Objects_window_to_Add_or_Delete_the_objects"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>6.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_6_Objects_window_to_Add_or_Delete_the_objects"></a><img height="320" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0006.jpg" width="371"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objects window to Add or Delete the objects</p>
+  <h2><a id="1_6_Define_Rivet_general_object_data"></a>Define Rivet general object data</h2>
+  <p>Change the object name to <strong>Rivet</strong>. Assign the <strong>temperature </strong>as <strong>70</strong>°F and select the object type as <strong>Plastic</strong>. (See <a href="#Fig_3DRL1_7_Rivet_object_window"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>7.</a>).
+    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DRL1_7_Rivet_object_window"></a><img height="320" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0007.jpg" width="371"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rivet object window</p>
+  <h3><a id="1_6_1_Import_the_rivet_geometry"></a>Import the rivet geometry</h3>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and import the file &quot; <strong>Rivet.dxf </strong>” by browsing the geometry file path located in DEFORM installation folder  <strong>\Tutorials</strong>    directory. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to mesh page.</p>
+  <h3><a id="1_6_2_Generating_mesh_for_Rivet"></a>Generating mesh for Rivet</h3>
+  <p>The default <strong>target number of elements</strong> is <strong>1000</strong>. Accept the default number of elements and click the <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button to generate the mesh for Rivet. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page to assign material for Rivet.</p>
+  <h3><a id="1_6_3_Assign_Material_for_Rivet"></a>Assign Material for Rivet</h3>
+  <p>Select the <strong>AL-6061-O,COLD[70F(20C)]</strong> in the material window to assign the material to the Rivet as shown in <a href="#Fig_2DRL1_8_Rivet_object_material_window"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>8.</a> Click
+    <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Top die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_8_Rivet_object_material_window"></a><img height="320" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0008.jpg" width="371"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rivet object material window</p>
+  <p> </p>
+  <h2><a id="1_7_Define_Rivet_pin_general_object_data"></a>Define Rivet pin general object data</h2>
+  <p>Change the object name to <strong>Rivet </strong><strong>pin</strong>. Assign the <strong>temperature</strong> as <strong>70</strong>° F, select the object type as <strong>Plastic</strong> and check <strong>Primary </strong><strong>die</strong> check
+    box. (See <a href="#Fig_2DRL1_9_Rivet_pin_object_window"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>9.</a>). Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_9_Rivet_pin_object_window"></a><img height="320" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0009.jpg" width="371"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rivet pin object window</p>
+  <p> </p>
+  <h3 class="h3_1_7_"><a id="1_7_1_Import_the_Rivet_pin_geometry"></a>Import the Rivet pin geometry</h3>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and import the file &quot; <strong>RivetPin.dxf</strong> ” by browsing the geometry file path located in DEFORM installation folder
+     \Tutorials directory. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to mesh page.</p>
+  <h3 class="h3_1_7_"><a id="1_7_2_Generating_mesh_for_Rivet_pin"></a>Generating mesh for Rivet pin</h3>
+  <p>We will generate mesh with mesh windows. To generate mesh with mesh windows we need to be in expert mode, click on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> icon to switch to expert mode. Define <strong>Target number of elements</strong>    as <strong>1000</strong>, Under <strong>Weighting </strong><strong>Factors </strong>tab change the <strong>Mesh </strong><strong>window</strong> weighting factor value to <strong>1</strong>. Now select Mesh window tab and add <strong>two </strong><strong>mesh </strong>windows.</p>
+  <p>Define <strong>Window </strong><strong>1 </strong>to cover bottom of pin with <strong>relative </strong><strong>element </strong>size <strong>0.2</strong> and <strong>Window </strong><strong>2 </strong>to cover the entire pin with <strong>relative </strong><strong>element </strong>size
+    <strong>1.0</strong> as shown in <a href="#Fig_2DRL1_10_Expert_mode_mesh_page"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>10.</a> Then click the <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button to generate
+    the mesh for Rivet pin. Click on <img src="../../../../assets/icons/pre_icons/mo_guided_mode.jpg"/> icon to switch to Guided mode</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_10_Expert_mode_mesh_page"></a><img height="388" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Expert mode mesh page.</p>
+  <p> </p>
+  <p>Select the <strong>AISI-1035,COLD[70-400F(20-200C)]</strong> in the material window to assign the material to the Rivet pin as shown in <a href="#Fig_2DRL1_11_Selecting_Material_for_Rivet_pin"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>11.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_11_Selecting_Material_for_Rivet_pin"></a><img height="340" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0011.jpg" width="394"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting Material for Rivet pin</p>
+  <p> </p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_edit_material_button.jpg"/> button to define Fracture data, Click on <strong>Miscellaneous </strong>tab, select <strong>Normalized </strong><strong>C&amp;L Fracture</strong> model click on <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> button and define <strong>Critical </strong><strong>value </strong>as <strong>1</strong> (See <a href="#Fig_2DRL1_12_Workpiece_material_Fracture_model_window"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>12.</a>).
+    Now click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> and close the Material Edit window. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to BCC page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_12_Workpiece_material_Fracture_model_window"></a><img height="340" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0012.jpg" width="394"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece material Fracture model window</p>
+  <p> </p>
+  <h3 class="h3_1_7_"><a id="1_7_3_Assigning_BCC_for_Rivet_pin"></a>Assigning BCC for Rivet pin</h3>
+  <p>Assign Movement BCC for roughly top half of the pin as shown in <a href="#Fig_2DRL1_13_Movement_BCC_assigned_for_Rivet_pin"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>13.</a> and retain default velocity BCC on symmetry surface.
+    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Movement BCC page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_13_Movement_BCC_assigned_for_Rivet_pin"></a><img height="388" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Movement BCC assigned for Rivet pin</p>
+  <p> </p>
+  <h3 class="h3_1_7_"><a id="1_7_4_Assign_Movement_for_Rivet_pin"></a>Assign Movement for Rivet pin</h3>
+  <p>The default mode is constant <strong>speed</strong>. Input a value of <strong>1</strong> in/sec for the Constant value and select  the Direction of <strong>+Y</strong> as shown in <a href="#Fig_2DRL1_14_Rivet_pin_movement__window"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>14.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Properties page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_14_Rivet_pin_movement__window"></a><img src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0014.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rivet pin movement window</p>
+  <p> </p>
+  <h3 class="h3_1_7_"><a id="1_7_5_Assign_pin_Properties"></a>Assign pin Properties</h3>
+  <p>Click on <strong>Fracture </strong>tab and define <strong>Fracture</strong> <strong>Elements </strong>value as <strong>2</strong>. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Bottom die page.</p>
+  <h2><a id="1_8_Define_Top_sheet_general_object_data"></a>Define Top sheet general object data</h2>
+  <p>Change the <strong>object </strong><strong>name </strong>to <strong>Top sheet</strong>. Assign the <strong>temperature </strong>as <strong>70</strong>° F and select the object type as <strong>Rigid </strong>as shown in <a href="#Fig_2DRL1_15_Top_pin_object_window"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>15.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_15_Top_pin_object_window"></a><img height="330" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0015.jpg" width="382"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top pin object window</p>
+  <h3 class="h3_1_8_"><a id="1_8_1_Define_Top_sheet_general_object_data"></a>Import the Top sheet geometry</h3>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and import the file &quot; <strong>RivetTopSheet.DXF</strong>” by browsing the geometry file path located in DEFORM installation folder
+    <strong> \Tutorials</strong> directory. Click  <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Object 4 page.</p>
+  <h2><a id="1_9_Define_Bottom_sheet_general_object_data"></a>Define Bottom sheet general object data</h2>
+  <p>Change the <strong>object </strong><strong>name </strong>to <strong>Bottom</strong> <strong>sheet</strong>. Assign the <strong>temperature </strong>as <strong>70</strong>° F and select the <strong>object </strong><strong>type </strong>as <strong>Rigid</strong>.
+    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button to assign geometry.</p>
+  <h3 class="h3_1_9_"><a id="1_9_1_Import_the_Bottom_sheet_geometry"></a>Import the Bottom sheet geometry</h3>
+  <p>Click the <img height="20" src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg" width="21"/> (Load geometry from a file) button and import the file &quot; <strong>RivetBottomSheet.DXF</strong> ” by browsing the geometry file path located
+    in DEFORM installation folder  <strong>\Tutorials </strong>directory. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Object 5 page.</p>
+  <h2><a id="1_10_Define_Anvil_general_object_data"></a>Define Anvil general object data</h2>
+  <p>Change the <strong>object </strong><strong>name </strong>to <strong>Anvil</strong>. Assign the <strong>temperature </strong>as <strong>70</strong>° F and select the <strong>object</strong> <strong>type </strong>as <strong>Rigid</strong>. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button to assign geometry.</p>
+  <h3 class="h3_1_10_"><a id="1_10_1_Import_the_Anvil_geometry"></a>Import the Anvil geometry</h3>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> (Load geometry from a file) button and import the file &quot;<strong>Anvil.</strong><strong>DXF</strong>” by browsing the geometry file path located in DEFORM installation
+    folder <strong>\Tutorials</strong> directory. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Contact page.</p>
+  <h2><a id="1_11_Define_Inter-object_relations"></a>Define Inter-object relations</h2>
+  <p>Add four relations in table by clicking on (<img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/>) Add relation button, select Rivet Pin as Master and Rivet as slave in first relation, select Top sheet as master and Rivet as slave for second
+    relation, select Bottom sheet as master and Rivet as slave for third relation and select Anvil as master and Rivet as slave for fourth relation. Click on the  <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> button for one of
+    the relationships. Select Shear type friction radio button, use the Constant drop down menu and define <strong>0.1</strong> value. Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to exit the menu. Click <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> to apply the friction value to the three other relationships (See <a href="#Fig_2DRL1_16_Inter-Object_relation_window"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>16.</a>). Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Stopping controls  page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_16_Inter-Object_relation_window"></a><img height="370" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0016.jpg" width="354"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-Object relation window</p>
+  <h2><a id="1_12_Assign_Stopping_controls"></a>Assign Stopping controls</h2>
+  <p>Turn on <strong>Max </strong><strong>die </strong><strong>stroke </strong>check box and define <strong>0.5 </strong>in <strong>Y </strong>field. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Step  controls page.</p>
+  <h2><a id="1_13_Assign_Step_controls"></a>Assign Step controls</h2>
+  <p>Define <strong>Number of steps</strong> as <strong>500</strong>, <strong>Step increment</strong> as <strong>10 </strong>and define <strong>constant die displacement </strong>as 0.002 in/step as shown in <span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>17.
+    Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to generate DB.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_17_Step_controls_window"></a><img height="320" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0017.jpg" width="371"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Step controls window</p>
+  <p> </p>
+  <h2><a id="1_14_Data_checking_and_database_generation"></a>Data checking and database generation</h2>
+  <p>Click on the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button, the data checking system will confirm that defined data is appropriate for running a simulation.</p>
+  <p>Red marks indicate missing or incorrect data that will prevent a simulation from running. It is necessary to correct those errors before the database can be generated.</p>
+  <p> </p>
+  <p>Yellow marks indicate data which may be suspect and should be reviewed. These should be investigated carefully, as they might result in system instability or erroneous (incorrect) results.</p>
+  <p> </p>
+  <p>Review the data checking information. If there are no yellow or red marks, click the <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button.</p>
+  <p>You should look for the words: Database has been generated. When you see this, it means that your inputs have been saved to the database and you are now ready to run the simulation.</p>
+  <p>Click on the MO <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> Mode button (above the operation tree) to start the simulation.</p>
+  <p> </p>
+  <h2><a id="1_15_Run_and_monitor_a_simulation"></a>Run and monitor a simulation</h2>
+  <p>Once the database has been generated switch to the Simulation mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> button above the operation tree. Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog. Use the default <strong>Continue </strong><strong>Run </strong>option to select “<strong>Continue</strong><strong> from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>radio
+    button <strong> </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p>Watching the simulation graphics provides an initial idea of what to expect when opening the postprocessor (See <a href="#Fig_2DRL1_18_Running_the_simulation_from_MO_simulation_mode"><span data-keyref="Application-2D_Rivet_Lab1">Fig. 2DRL1.</span>18.)</a>.
+    Also monitor simulation from Simulation and log messages. The message file and log file will indicate that the simulation has been completed on the last line, confirming that click on  <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> Mode button to review results.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DRL1_18_Running_the_simulation_from_MO_simulation_mode"></a><img height="387" src="../../../../assets/images/applications/55_rivet_installation/2d_rivet_lab/image0018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Running the simulation from MO simulation mode</p>
+  <p> </p>
+  <h2><a id="1_16_Review_Results"></a>Review Results</h2>
+  <p>Play through the Steps and see the Damage distribution by plotting the Damage State variable.</p>
+  <p> </p>
+
+</body></html>

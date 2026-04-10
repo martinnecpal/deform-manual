@@ -1,0 +1,777 @@
+---
+lang: sk
+title: "26.6.3. State Variables"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.2.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>26.6.3. State Variables</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>26.6.3. State Variables</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables.css"/>
+<meta name="brsnext" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_6_Post_Processing_tools/26_6_4_SV_Value_Table.htm"/><meta name="brsprev" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_6_Post_Processing_tools/26_6_2_Object_Elements.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="26.6.3. State Variables">
+        <span>26.6.3. State Variables</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>26.6.3. State Variables</h1>
+  <ul class="Disc">
+    <li>
+      <p><a href="#Different_State_variable_types">Different State variable types</a></p>
+    </li>
+    <li>
+      <p><a href="#Display_options">Display options</a></p>
+    </li>
+    <li>
+      <p><a href="#State_variables_settings">State variables settings </a></p>
+    </li>
+    <li>
+      <p><a href="#Controls_Settings">Controls Settings</a></p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><span style="margin-left:40px;"><a href="#Scaling">Scaling</a></span></p>
+    </li>
+    <li>
+      <p><span style="margin-left:40px;"><a href="#Color_cut_off">Color cut -off</a> </span></p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p><a href="#Deflection_settings">Deflection settings</a></p>
+    </li>
+    <li>
+      <p><a href="#Coordinates">Coordinates</a></p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><span style="margin-left:40px;"><a href="#Rectangular_and_Cylindrical_co-ordinates">Rectangular and Cylindrical co-ordinates</a></span></p>
+    </li>
+    <li>
+      <p><span style="margin-left:40px;"><a href="#User_Defined">User Defined</a></span></p>
+    </li>
+    <li>
+      <p><span style="margin-left:40px;"><a href="#Local_(material_axis)">Local (material axis) </a></span></p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p><a href="#Mapping">Mapping</a><strong> </strong></p>
+    </li>
+    <li>
+      <p><a href="#Allowable_Value_ratio">Allowable Value ratio</a></p>
+    </li>
+    <li>
+      <p><a href="#Reference">Reference</a></p>
+    </li>
+    <li>
+      <p><a href="#Tool_wear_settings">Tool wear settings</a></p>
+    </li>
+    <li>
+      <p><a href="#Strain_-Total">Strain - Total</a></p>
+    </li>
+    <li>
+      <p><a href="#Relative_Velocity">Relative Velocity</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>Some of the most commonly used state variables like  Total displacement <img src="../../../../assets/icons/post_icons/mo_disp_sv_icon.jpg"/>, Total Velocity<img height="21" src="../../../../assets/icons/post_icons/mo_vel_sv_icon.jpg" style="cursor: nwse-resize;" width="26"/>, Effective strain <img height="21" src="../../../../assets/icons/post_icons/mo_strain_sv_icon.jpg" style="cursor: nesw-resize;" width="26"/>, Effective strain rate <img height="21" src="../../../../assets/icons/post_icons/mo_strain_rate_sv_icon.jpg" style="cursor: nesw-resize;" width="26"/>, Effective stress<img height="21" src="../../../../assets/icons/post_icons/mo_eff_stress_sv_icon.jpg" width="23"/>, Temperature <img height="21" src="../../../../assets/icons/post_icons/mo_temp_sv.jpg" style="cursor: nesw-resize;" width="22"/> and Damage <img height="21" src="../../../../assets/icons/post_icons/mo_damage_sv_icon.jpg" style="cursor: nesw-resize;" width="26"/> shortcut icons can be used to view contour plot for the objects displaying on the graphics window.
+    <img src="../../../../assets/icons/post_icons/mo_clear_sv_icon.jpg"/> (Clear State Variable) icon can be used to clear the selected state variable for the objects.</p>
+  <p> </p>
+  <p>More state variables can be accessed by using the <img height="24" src="../../../../assets/icons/post_icons/mo_state_variable_icon.jpg" width="25"/> (State variables setup) icon (see <a href="#Fig_26_6_3_2_State_variables_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>2.</a>)
+    State variables are grouped under different categories which are, <img src="../../../../assets/icons/post_icons/mo_analysis_icon.jpg"/> (Analysis),  <img src="../../../../assets/icons/post_icons/mo_deformation_icon.jpg"/> (Deformation), <img src="../../../../assets/icons/post_icons/mo_thermal_sv_icon.jpg"/> (Thermal),  <img src="../../../../assets/icons/post_icons/mo_heating_sv_icon.jpg"/> (Heating), <img src="../../../../assets/icons/post_icons/mo_micro_sv_icon.jpg"/> (Microstructure), <img src="../../../../assets/icons/post_icons/mo_diffn_sv_icon.jpg"/> (Diffusion), <img src="../../../../assets/icons/post_icons/mo_prop_sv_icon.jpg"/> (Properties), <img src="../../../../assets/icons/post_icons/mo_user_sv_icon.jpg"/> (User) and <img src="../../../../assets/icons/post_icons/mo_postprocssing_sv_icon.jpg"/> (Thermomechanical) and these can be accessed using icons as shown in <a href="#Fig_26_6_3_1_State_variable_groups"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_1_State_variable_groups"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image001.jpg"/></p>
+  <p class="Fig_numb">State variable groups</p>
+  <p> </p>
+  <p>In order to plot state variables <img height="21" src="../../../../assets/icons/post_icons/mo_state_variable_icon.jpg" width="22"/>, the variable and the component of the variable must be selected (See <a href="#Fig_26_6_3_2_State_variables_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>2.</a>).
+    Also one of the scaling types: global (min/max of all objects for all simulation steps), local (min/max of all objects for the particular step) and user-defined (which defaults to the global values) must be selected. For user-defined, the min/max
+    values can be entered in the input fields provided to the right of the window. Then the type of contour (line/shaded/vector) and the class of objects to be plotted can be selected and finally specific objects can be selected by toggling them on/off
+    in Object Tree. Clicking on the <img height="21" src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg" width="67"/>  button plots the state variable in the current viewport.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_6_3_2_State_variables_window"></a><img height="422" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">State variables window</p>
+  <p> </p>
+  <p><strong><a id="Different_State_variable_types"></a>Different State variable types</strong></p>
+  <p>The following state variables  <img height="24" src="../../../../assets/icons/post_icons/mo_state_variable_icon.jpg" width="25"/> can be plotted in the MO Post:</p>
+  <p> </p>
+  <p><strong>Analysis variables</strong></p>
+  <p><strong>[2D]:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Minimum distance</p>
+    </li>
+    <li>
+      <p>Thickness</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Tool wear:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Interface temperature</p>
+    </li>
+    <li>
+      <p>Sliding velocity</p>
+    </li>
+    <li>
+      <p>Interface pressure</p>
+    </li>
+    <li>
+      <p>Wear rate</p>
+    </li>
+    <li>
+      <p>Wear depth (total)</p>
+    </li>
+    <li>
+      <p>Tool life (no. of parts)</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>[3D]:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Minimum distance</p>
+    </li>
+    <li>
+      <p>Contact time</p>
+    </li>
+    <li>
+      <p>Folding angle</p>
+    </li>
+    <li>
+      <p>Surface expansion ratio</p>
+    </li>
+    <li>
+      <p>Surface area</p>
+    </li>
+    <li>
+      <p>Thickness</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Tool wear:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Interface temperature</p>
+    </li>
+    <li>
+      <p>Sliding velocity</p>
+    </li>
+    <li>
+      <p>Interface pressure</p>
+    </li>
+    <li>
+      <p>Wear rate</p>
+    </li>
+    <li>
+      <p>Wear depth (total)</p>
+    </li>
+    <li>
+      <p>Tool life (no. of parts)</p>
+    </li>
+    <li>
+      <p>Worn Geometry</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Deformation [2D, 3D]:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Coordinates</p>
+    </li>
+    <li>
+      <p>Damage</p>
+    </li>
+    <li>
+      <p>Damage Nodal</p>
+    </li>
+    <li>
+      <p>Displacement</p>
+    </li>
+    <li>
+      <p>Density</p>
+    </li>
+    <li>
+      <p>Strain effective</p>
+    </li>
+    <li>
+      <p>Strain nodal</p>
+    </li>
+    <li>
+      <p>Strain total</p>
+    </li>
+    <li>
+      <p>Strain rate</p>
+    </li>
+    <li>
+      <p>Stress</p>
+    </li>
+    <li>
+      <p>Stress nodal</p>
+    </li>
+    <li>
+      <p>Velocity</p>
+    </li>
+    <li>
+      <p>Relative Velocity</p>
+    </li>
+    <li>
+      <p>Back stress</p>
+    </li>
+    <li>
+      <p>Normal pressure</p>
+    </li>
+    <li>
+      <p>Rotation angle</p>
+    </li>
+    <li>
+      <p>Force</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Thermal [2D, 3D]:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Temperature</p>
+    </li>
+    <li>
+      <p>Diffusion Bonding</p>
+    </li>
+    <li>
+      <p>Nodal heat</p>
+    </li>
+    <li>
+      <p>Heat flux</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Microstructure [2D, 3D]:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Volume fraction</p>
+    </li>
+    <li>
+      <p>Grain Model</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Hardness <strong> [2D, 3D]:</strong></strong>
+  </p>
+  <ul class="Disc">
+    <li>
+      <p>Hardness</p>
+    </li>
+    <li>
+      <p>Cooling time</p>
+    </li>
+    <li>
+      <p>Cooling rate</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Diffusion [2D, 3D]:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Dominant Atom</p>
+    </li>
+    <li>
+      <p>Atom flux</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Heating [2D, 3D]:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Voltage</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Properties [2D, 3D]:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Material</p>
+    </li>
+    <li>
+      <p>Material axes</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>User [2D, 3D]:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>FEM User nodal variables</p>
+    </li>
+    <li>
+      <p>FEM User element variables</p>
+    </li>
+    <li>
+      <p>Post user variables</p>
+    </li>
+    <li>
+      <p>Custom variable</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Thermomechanical [2D,3D]:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Thermomechanical node variables</p>
+    </li>
+    <li>
+      <p>Thermomechanical element variables</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Additive Manufacturing [3D]</strong></p>
+  <ul class="Disc">
+    <li>
+      <p>Normal Density</p>
+    </li>
+    <li>
+      <p>Layer ID</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong><a id="Display_options"></a>Display options</strong></p>
+  <p>Different contour plot display options like Line, Shaded, Solid, MinMax, Vector plot, Iso surface Elemental contours are available for the applicable state variables. The contour plot settings can also be varied by using <img src="../../../../assets/icons/pre_icons/mo_settings_icon.jpg"/> (settings) button at the bottom of the state variables window.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Line contour [2D, 3D]</strong>: Plots the state variable selected as a line contour.</p>
+    </li>
+    <li>
+      <p><strong>Shaded contour [2D, 3D]</strong>: Plots the state variable selected as a shaded contour.</p>
+    </li>
+    <li>
+      <p><strong>Solid Contour [2D, 3D]</strong>: Shows the state variable with each element shaded with a constant color with very discrete color transitions of the color bar.  This makes it easy to extract values from each element and to visualize low
+        and high value regions.</p>
+    </li>
+    <li>
+      <p><strong>Elemental Contour [2D, 3D]</strong>: Shows the state variable with each element shaded with a constant color with very smooth color transitions of the color bar. This makes it easy to visualize low and high value regions.</p>
+    </li>
+    <li>
+      <p><strong>Vector Plot  [2D, 3D]</strong>: This plots variables as vector quantities, i.e. with a scale and a direction. Only certain variables are applicable to be plotted in this manner such as velocity and displacement. For controlling vector size,
+        shape and density of vector plot, please refer section State variables settings - Vector.</p>
+    </li>
+    <li>
+      <p><strong>Iso-surface [3D]</strong>: Iso-Surface is a surface that represents points of a constant value. This plot type shows the plane along which a particular value of state variable is constant within object. Also for Iso-Surface properties please refer
+        section State variables settings - Iso-Surface.</p>
+    </li>
+    <li>
+      <p><strong>Min/Max Plot [3D]</strong>: This plot type shows only the minimum and maximum values of the defined variable on the workpiece.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong><a id="State_variables_settings"></a>State variables settings  </strong></p>
+  <p><strong>[2D,3D] </strong>: This provides the options to vary the Contours, Vectors and Iso surface state variable display types settings. This   (Settings) button is located at the bottom of the State variables window.</p>
+  <p><br/>
+    <strong>Contours settings</strong>: Contour settings are used to vary the Title, Label, Shaded contour settings, Line contour settings and Min/Max plot size ratio. </p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_26_3_3_3_Contour__Title_type_settings_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Contour - Title type settings window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Title</strong>: The user can change the title by activating User-defined title, change the color and font as shown in <a href="#Fig_26_3_3_3_Contour__Title_type_settings_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>3.</a> </p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Label</strong>: The user can change the number format to the set significant decimal value, change the color for line contour and font. Also can turn on /off the Min/Max value Display. (See <a href="#Fig_26_6_3_4_Contour_-_Label_type_settings_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>4.</a>        )</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image004.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig_26_6_3_4_Contour_-_Label_type_settings_window"></a>Contour - Label type settings window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Shaded</strong>: Use can select the Color bar type and the # of values.( See <a href="#Fig_26_6_3_5_Contour__Shaded_type_settings_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>5.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_5_Contour__Shaded_type_settings_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image005.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Contour - Shaded type settings window</p>
+  <p style="text-align: center"> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Line: </strong>Use can control the Line contour color, number of lines, Thickness and style (see <a href="#Fig_26_6_3_5_Contour__Shaded_type_settings_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>6.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image006.jpg" style="text-align: center;"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;"><a id="Fig_26_6_3_6_Contour__Line_type_settings_window"></a>Contour - Line type settings window</p>
+  <p style="text-align: center"> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Min/Max Plot</strong> :  User can control the size of Min/Max plot using size ration option as shown in <a href="26_6_3_state_variables.htm#Fig_26_6_3_7_Contour__Min/Max_plot_type_settings_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>7.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_7_Contour__Min/Max_plot_type_settings_window"></a><img height="422" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image007.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Contour - Min/Max plot type settings window</p>
+  <p> </p>
+  <p><strong>Iso surface settings [3D]</strong>: Iso surface settings are used to vary the number of Iso-surfaces and values of the Iso surface plot. After Iso surface plotting for any state variable, user can select the settings button and vary the Number
+    of iso surfaces and even the values of the iso surface planes using the Value sliding bar as shown in <a href="#Fig_26_6_3_8_Iso_Surface_state_variable_display_type_settings_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>8.</a> The
+    modified settings can be saved as default settings by selecting the Set as default checkbox.</p>
+  <p style="text-align: center">  <br/>
+    <a id="Fig_26_6_3_8_Iso_Surface_state_variable_display_type_settings_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image008.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Iso Surface state variable display type settings window</p>
+  <p><br/>
+    <strong>Vector settings</strong>: Vector settings are used to vary the vectors type, sampling ratio, body length, thickness, head type and head scaling. </p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>General:  </strong>The user can change the vector type to constant size or variable size and can also change the sampling ratio under General option as shown in <a href="#Fig_26_6_3_9_Vector_general_display_properties_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>9.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_9_Vector_general_display_properties_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image009.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Vector general display properties window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Body</strong>: The user can change the vector body thickness and can also change minimum and maximum length under Body options as shown in <a href="#Fig_26_6_3_10_Vector_body_display_properties_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>10.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_10_Vector_body_display_properties_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image010.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Vector body display properties window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Head: </strong>The user can change the Head type and can also scale under Head option as shown in <a href="#Fig_26_6_3_11_Vector_head_display_properties_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>11.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_11_Vector_head_display_properties_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image011.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Vector head display properties window</p>
+  <p> </p>
+  <p><strong><a id="Controls_Settings"></a>Controls Settings</strong></p>
+  <p><br/>
+    <strong><a id="Scaling"></a>Scaling [2D, 3D]</strong>:</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Local (current step)</strong>: There is a different minimum and maximum value for every step. This provides better resolution for a single step, but will cause colors to shift over multiple steps, making it difficult to track the evolution
+        of variables. (See <a href="#Fig_26_6_3_12_State_variable__Control__Scaling_properties_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>12.</a>)</p>
+    </li>
+    <li>
+      <p><strong>G</strong><strong><strong>lo</strong>bal (all steps)</strong>: The same minimum and maximum value will be used for every step. This makes it easier to track evolution of a variable over several steps, but sacrifices resolution on a single
+        step. (See <a href="#Fig_26_6_3_12_State_variable__Control__Scaling_properties_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>12.</a>)</p>
+    </li>
+    <li>
+      <p><strong>Global (user defined)</strong>: The same minimum and maximum value will be used for every step, which the user can define. This is particularly useful for state variables exhibiting small regions with extreme values. Resolution of the remaining
+        area may be lost because of auto-scaling to an extreme peak. Resetting the maximum and minimum values to more reasonable values will wash out the peak values, but give much better resolution to intermediate values. (See <a href="#Fig_26_6_3_12_State_variable__Control__Scaling_properties_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>12.</a>)</p>
+    </li>
+    <li>
+      <p><strong>Object Limits</strong>: The Object Limits allows the user to set different minimum and maximum values for different objects. This is only activated for line contours. (See <a href="#Fig_26_6_3_12_State_variable__Control__Scaling_properties_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>12.</a>)</p>
+    </li>
+    <li>
+      <p><strong>User Variables</strong>: User defined variables allows one to plot any user defined variable in the post-processor. (See <a href="#Fig_26_6_3_12_State_variable__Control__Scaling_properties_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>12.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_12_State_variable__Control__Scaling_properties_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image012.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">State variable  Control - Scaling properties window</p>
+  <p><br/>
+    <strong><a id="Color_cut_off"></a>Color cut -off </strong>: </p>
+  <p><strong>[2D ,3D] </strong>Color cutoff can be activated by turning on Cutoff Min and Cut off Max check boxes and defining the range. The region for the Cutoff range can be viewed when <img height="21" src="../../../../assets/icons/pre_icons/mo_apply_button.jpg" width="52"/> button is clicked and this region can be saved as a custom region using &quot;Save as custom region&quot; button (See <a href="#Fig_26_6_3_13_Defining_Color_Cutoff"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>13.</a>)
+    so that user can view other state variables distribution within this region.  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_13_Defining_Color_Cutoff"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image013.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Defining Color Cutoff</p>
+  <p><br/> In Below <a href="#Fig_26_6_14_Color_Cutoff_function"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>14.</a> in left side viewport Effective Strain state variable is plotted using User type scaling with Min: 0.00 and Max:
+    2 value without defining color cutoff and in Right side viewport Effective Strain state variable is plotted using User type scaling for Min: 0.00 and Max: 2 value and with Color cutoff function. We can observe that in right viewport where Color cutoff
+    is used system displays only the regions of the object that are within the cutoff range.</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_26_6_3_14_Color_Cutoff_function" height="0" width="0"></a><img height="434" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Color Cutoff function</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Control tab other options [2D,3D]</strong>: Histogram: It plots the histogram of a state variable distribution at the particular step.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Exclude rigid zone</strong>: General velocity solution can be a combination of rigid and deforming velocity fields. For models like shape rolling or ring rolling, most of the workpiece stays in rigid zone with a velocity field. To see pure
+        deforming velocity field in the deforming zone, this feature can be used.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>None decrease</strong>: &lt;Text to be added&gt;</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Custom region</strong>: This is used to select a particular region on the object to study. After checking this checkbox user needs to select the interested region of study by clicking on <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> (Define) button next to checkbox. Then in graphics window left side palette will display the options to select the nodes of the interested region. In DEFORM-V12, &quot;Selected node only&quot; functionality can be accessed using &quot;Custom
+        region&quot;. In older versions user can plot the selected region in Shaded type display only, from DEFORM-V12, selected region display is extended to solid shading. </p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong><a id="Deflection_settings"></a>Deflection settings </strong></p>
+  <p><strong>[2D, 3D] : </strong>The user can scale the deflection using slider bar or by changing the values as shown in <a href="#Fig_26_6_3_15_Deflection_window_For_2D"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>15.</a> and
+    <a href="#Fig_26_6_3_16_Deflection_window_For_3D"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>16.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_15_Deflection_window_For_2D"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image015.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Deflection window For 2D</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_16_Deflection_window_For_3D"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image016.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deflection window For 3D</p>
+  <p> </p>
+  <p>The user can hide or show the reference object boundary and can also change its color as shown in <a href="#Fig_26_6_17_Deflection__Reference_option_for_2D"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>17.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_17_Deflection__Reference_option_for_2D"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image017.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Deflection - Reference option for 2D</p>
+  <p> </p>
+  <p><strong>3D</strong>: The user can also change the transparency of the reference object by activating the Use transparency and sliding the sliding bar as shown in <a href="#Fig_26_6_3_18_Use_transparency_Deflection_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>18.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_18_Use_transparency_Deflection_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image018.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Use transparency Deflection window</p>
+  <p> </p>
+  <p><a id="Coordinates"></a><strong>Coordinates</strong></p>
+  <p> </p>
+  <ul class="Disc_wo_indent">
+    <li>
+      <p><a id="Rectangular_and_Cylindrical_co-ordinates"></a><strong>Rectangular and Cylindrical co-ordinates</strong> :  </p>
+    </li>
+  </ul>
+  <p style="margin-left:40px;"><span><strong>[3D]</strong>: There are currently two types of coordinates systems for which stress, strain and strain rate components can be viewed: Cartesian (rectangular) and Cylindrical. Cartesian coordinates is the default setting, however the Coordinates button in the display properties window allows the user to switch to Cylindrical Coordinates (only in 3D, See <a href="#Fig_26_6_3_19_Cylindrical_coordinates_properties_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>19.</a>).
+    Clicking the Coordinates tab brings up a window that allows the user to select the cylindrical coordinates. The user needs to define by z-axis for the cylindrical coordinates. This axis is defined through a single point on the z-axis and one vector
+    direction. User can use <img height="21" src="../../../../assets/icons/pre_icons/mo_tolerance_icon.jpg" width="22"/> to calculate the Center and Z &#39;direction value parameters. This works for contour plots and for point tracking. The cylindrical
+    coordinates won&#39;t be viewed until the user selects either a stress, strain or strain rate components.</span>
+  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_19_Cylindrical_coordinates_properties_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image019.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Cylindrical coordinates properties window</p>
+  <p> </p>
+  <p style="margin-left:40px;"><strong>[2D]:</strong> <strong>Cartesian or rectangular coordinates</strong> is the default setting for 2D DB. Which is having the R,Z,Theta and RZ components for the Axi-symmetric and Torsion geometry types, for Plane strain and Plane stress having
+    only X,Y and XY components. (See <span><a href="#Fig_26_6_3_20_User_defined_coordinates_properties_window_for_2D_with_SV_window_highlighted_with_user_defined_axis_state_variable"><span><span><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>20.</span>
+    </span>
+    </a>
+    </span> )</p>
+  <p> </p>
+  <ul class="Disc_wo_indent">
+    <li>
+      <p><strong><a id="User_Defined"></a>User Defined [2D, 3D]</strong>: </p>
+    </li>
+  </ul>
+  <p style="margin-left:40px;">This coordinate system can be used to plot variable components in any direction.</p>
+  <p> </p>
+  <p style="margin-left:40px;"><span><strong>[2D]</strong>: (Only for Plane strain and Plane stress) By using this user can select the required axis angle from the current axis to plot the variables on that axis. (See <a href="#Fig_26_6_3_20_User_defined_coordinates_properties_window_for_2D_with_SV_window_highlighted_with_user_defined_axis_state_variable"><span><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>20.</span>
+    </a>)</span>
+  </p>
+  <p style="margin-left:40px;"><span>If user plot the User defined axis1 component then entering the angle 0 or 180 or 360 will plot the X component of the variable, changing this to 90 or 270 will plot the Y component of the variable.</span></p>
+  <p style="margin-left:40px;"><span>If user plot the User defined axis1-2 then entering the angle 0 or 180 or 360 will plot the XY component of the variable, changing this to 90 or 270 will plot the -XY component of the variable.</span></p>
+  <p> </p>
+  <p style="margin-left:40px;"><span><strong>[3D]</strong>: By using this user can select the axis for which user want to plot the variable in the two rows provided. (See <a href="#Fig_26_6_3_21__User_defined_coordinates_properties_window_for_3D_with_SV_window_highlighted_with_user_defined_axis_state_variables"><span><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>21.</span>
+    </a>)</span>
+  </p>
+  <p style="margin-left:40px;"><span>If user plot the User defined axis1 component then enter the 1 in the 1st row X cell and 1 in the 2nd row X cell will plot the X component of the variable, similarly for Y and Z components.</span></p>
+  <p style="margin-left:40px;"><span>If user plot the User defined axis1 component then enter the 1 in the 1st row Y cell and 1 in the 2nd row Z cell will plot the YZ component of the variable, similarly for XY and ZX components.</span></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_20_User_defined_coordinates_properties_window_for_2D_with_SV_window_highlighted_with_user_defined_axis_state_variable"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image020.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">User defined coordinates properties window for 2D with SV window highlighted with user defined axis state variables</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_21__User_defined_coordinates_properties_window_for_3D_with_SV_window_highlighted_with_user_defined_axis_state_variables"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image021.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">User defined coordinates properties window for 3D with SV window highlighted with user defined axis state variables</p>
+  <p> </p>
+  <ul class="Disc_wo_indent">
+    <li>
+      <p><a id="Local_(material_axis)"></a><strong>Local (material axis) </strong></p>
+    </li>
+  </ul>
+  <p style="margin-left:40px;"><strong>[2D, 3D] : </strong>When user uses local material axis, the variables will be plotted with respect to each element local material axis. From state variable window local material axis implemented state variables can be accessed as shown in below
+    <a href="#Fig_26_6_3_22_SV_window_highlighted_with_local_material_axis_state_variables"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_22_SV_window_highlighted_with_local_material_axis_state_variables"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image022.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">SV window highlighted with local material axis state variables</p>
+  <p> </p>
+  <p><strong><a id="Mapping"></a>Mapping </strong></p>
+  <p><strong>[2D, 3D]:</strong> A special post-processing variable can be “<strong>Mapped</strong>” from a state variable stored in a database via a look-up table (See <a href="#Fig_26_6_3_23_SV_Mapping_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>23.</a>).
+    The user selects a state variable on the tree, then defines a name for the new User Defined State Variable and supplies cross reference values.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_23_SV_Mapping_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image023.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">SV Mapping window</p>
+  <p> </p>
+  <p><strong>Procedure to define the Mapping</strong>:</p>
+  <ul class="Disc">
+    <li>
+      <p>Click on<img height="21" src="../../../../assets/icons/post_icons/mo_state_variable_icon.jpg" width="22"/> icon.</p>
+    </li>
+    <li>
+      <p>Select a State variable</p>
+    </li>
+    <li>
+      <p>Click on Mapping tab</p>
+    </li>
+    <li>
+      <p>Turn on Use SV Mapping check box</p>
+    </li>
+    <li>
+      <p>Click on <img src="../../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button to add new user defined state variable</p>
+    </li>
+    <li>
+      <p>Define name for the user defined state variable</p>
+    </li>
+    <li>
+      <p>Click on <img height="21" src="../../../../assets/icons/pre_icons/mo_edit_button.jpg" width="56"/> and define the look up table.</p>
+    </li>
+    <li>
+      <p>Click on <img src="../../../../assets/icons/pre_icons/mo_apply_button.jpg"/>.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_24_State_Variable_Mapping_Example"></a><img height="470" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image024.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">State Variable Mapping Example</p>
+  <p> </p>
+  <p><a id="Allowable_Value_ratio"></a><strong>Allowable Value ratio</strong><br/> This is a kind of safety plot, with ratio numbers indicating in which regions that are exceeding safety limit as per defined table data for given variable like max principle
+    stress. For example if we define safe max principle stress value at different temperatures in the table, this should plot this ratio on the object with regions/values over 1.0 indicating the regions over the safety limit. (See <a href="#Fig_26_6_3_25_Allowable_Value_ratio"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>25.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_25_Allowable_Value_ratio"></a><img height="322" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image025.jpg" width="750"/></p>
+  <p class="Fig_numb">Allowable Value ratio</p>
+  <p> </p>
+  <p><a id="Reference"></a><strong>Reference </strong></p>
+  <p><strong>[3D]:</strong> User can now define reference frame to calculate minimum distance. When user selects Minimum Distance state variable, Reference tab is added in State variable page (See <a href="#Fig_26_6_3_26_tate_Variable__Reference_Tab"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>26.</a>).
+    In Reference tab user can Turn on  Reference surface check box by clicking on   button and select the Reference frame, then system uses this reference frame for calculating the minimum distance (See <a href="#Fig_26_6_3_27_Reference_Surface_picking_option"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>27.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_26_tate_Variable__Reference_Tab"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image026.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">State Variable - Reference Tab</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_27_Reference_Surface_picking_option"></a><img height="423" src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image027.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Reference Surface picking option</p>
+  <p> </p>
+  <p><a id="Tool_wear_settings"></a><strong>Tool wear settings</strong><br/> Tool wear rate and Tool life analysis variables can be reviewed with different tool wear model parameters and tool life criteria (See <a href="#Fig_26_6_3_29_Tool_wear_rate_settings"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>29.</a>    and <a href="#Fig_26_6_3_30_Tool_life_settings"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>30.</a>). Changing the tool wear rate parameters will instantaneously affect wear rate calculation. These can be accessed from Tool
+    wear tab, but these will activate when respective analysis state variables are selected as shown in <a href="#Fig_26_6_3_28_State_variable_Tool_wear_options"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_28_State_variable_Tool_wear_options"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image028.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">State variable Tool wear options</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_29_Tool_wear_rate_settings"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image029.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Tool wear rate settings</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_30_Tool_life_settings"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image030.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tool life settings</p>
+  <p> </p>
+  <p><a id="Strain_-Total"></a><strong>Strain -Total</strong><br/> User can customize the display of the Total strain variable by turning off the respective components under Strain -Total tab as shown in below <a href="#Fig_26_6_3_31_Strain_Total_selection_option_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>31.</a> Strain-Total
+    tab is activated when user selects Strain-Total State Variable in State Variable dialog.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_31_Strain_Total_selection_option_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image031.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Strain Total selection option window</p>
+  <p> </p>
+  <p><a id="Relative_Velocity"></a><strong>Relative Velocity</strong><br/> Relative velocity allows the user to plot the relative velocity with reference to other objects.  User can select either translation or Rotation to observe the respective relative
+    motion and from the reference pull down menu user can select the reference object with respect to which the relative velocity to be plotted, see below <a href="#Fig_26_6_3_32_Relative_velocity_selection_option_window"><span data-keyref="Chapter_26_6_3_State_Variables">Fig. 26.6.3.</span>32.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_3_32_Relative_velocity_selection_option_window"></a><img src="../../../../assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image032.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Relative velocity selection option window</p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

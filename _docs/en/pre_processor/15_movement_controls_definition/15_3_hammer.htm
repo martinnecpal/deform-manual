@@ -1,0 +1,375 @@
+---
+lang: en
+title: "15.3. Hammer"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.9.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>15.3. Hammer</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>15.3. Hammer</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/15_movement_controls/15_3_hammer.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/15_Movement_Controls_Definition/15_4_Screw_press.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/15_Movement_Controls_Definition/15_2_Force.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="15.3. Hammer">
+        <span>15.3. Hammer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>15.3. Hammer</h1>
+  <p><a href="#15_3_1_Anvil_Type_Hammer">15.3.1. Anvil Type Hammer</a></p>
+  <p><a href="#15_3_2_Counterblow_Hammer">15.3.2. Counterblow Hammer</a></p>
+  <p> </p>
+  <p><strong>[2D, 3D]</strong>: Hammer forging operation is controlled by energy. During a working stroke, the deformation proceeds until the total kinetic energy is dissipated by plastic deformation of the material and by elastic deformation of ram and
+    anvil when the die and ram faces contact each other. (See <a href="#Fig_15_3_1_2D_Hammer_Press_movement_controls_window"><span data-keyref="Chapter_15_3_Hammer">Fig. 15.3.</span>1.</a> and <a href="#Fig_15_3_2_3D_Hammer_Press_movement_controls_window"><span data-keyref="Chapter_15_3_Hammer">Fig. 15.3.</span>2.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_15_3_1_2D_Hammer_Press_movement_controls_window"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_3_hammer/15_3_image001.jpg"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">2D Hammer Press movement controls window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_15_3_2_3D_Hammer_Press_movement_controls_window"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_3_hammer/15_3_image002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Hammer Press movement controls window</p>
+  <p> </p>
+  <p>During hammer forging operation, only a portion of the kinetic energy of ram is used for the plastic deformation of work piece. The rest of the energy is lost through anvil and machine frame.</p>
+  <p>The blow efficiency <img src="../../../assets/equations/pre_processor/15_movement_controls/eta_b.jpg"/> is defined by:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../assets/equations/pre_processor/15_movement_controls/eq_15_3_1.jpg"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>These values can be set in the movement controls window.</p>
+  <p>There are basically two types of hammer. The first is an <a href="#15_3_1_Anvil_Type_Hammer">anvil type hammer</a> and the other <a href="#15_3_2_Counterblow_Hammer">counter blow hammer</a>. The formulations and assumptions used for the two types of
+    hammer forging operations are given below:</p>
+  <h2><a id="15_3_1_Anvil_Type_Hammer"></a>Anvil Type Hammer [2D, 3D]</h2>
+  <p>In an anvil type hammer, the workpiece, together with the lower die set, is placed on an anvil which is stationary. In a simple gravity drop hammer, the ram is accelerated by gravity and accumulates energy.</p>
+  <p>Therefore the blow energy <img src="../../../assets/equations/pre_processor/15_movement_controls/et.jpg"/> is calculated by:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../assets/equations/pre_processor/15_movement_controls/eq_15_3_2.jpg"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>In a power drop hammer, the ram is accelerated by steam, cold or hot air pressure in addition to gravity.</p>
+  <p>The total blow energy is given by:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../assets/equations/pre_processor/15_movement_controls/eq_15_3_3.jpg"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>The velocity of ram <img src="../../../assets/equations/pre_processor/15_movement_controls/vt.jpg"/> is calculated by:</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../assets/equations/pre_processor/15_movement_controls/eq_15_3_4.jpg"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>The plastic deformation energy during a small time increment <img src="../../../assets/equations/pre_processor/15_movement_controls/delta_t.jpg"/> is calculated by:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../assets/equations/pre_processor/15_movement_controls/eq_15_3_5.jpg"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>After the increment, the blow energy is adjusted by:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../assets/equations/pre_processor/15_movement_controls/eq_15_3_6.jpg"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>This adjustment accounts for elastic energy loss. The simulation is repeated until the blow energy <img height="17" src="../../../assets/equations/pre_processor/15_movement_controls/et.jpg" width="19"/> becomes zero.  </p>
+  <p>The characteristic values of Anvil type hammers are given in the following <a href="#Table_15_3_1_Characteristic_values_of_Anvil_type_hammers">Table 15.3.1.</a></p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;font-family:Arial;font-size:10pt;text-align:center">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 20%;"/>
+      <col style="width: 15%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 15%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 10%;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="text-align: center"><strong>Hammer ype</strong></td>
+        <td style="text-align: center"><strong></strong></td>
+        <td style="text-align: center"><strong>E, KN-m (ft-lbf)</strong></td>
+        <td style="text-align: center"><strong>nB</strong></td>
+        <td style="text-align: center"><strong>Vs, m/sec (ft/sec)</strong></td>
+        <td style="text-align: center"><strong>nB, min-1</strong></td>
+        <td style="text-align: center"><strong>nH</strong></td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">Free Drop Hammer</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">Belt</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">40(29,440)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.3-0.6</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">4-5(13-16.4)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">40</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.2-0.3</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt"> </td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">Board</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">16(11,780)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.3-0.6</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">4-5(13-16.4)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">35</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.2-0.3</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt"> </td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">Chain</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">100(73,600)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.3-0.6</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">4-5(13-16.4)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">55</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.5</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt"> </td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">Piston</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">63(46,370)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.3-0.6</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">4-5(13-16.4)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">60</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.5</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">Power Drop Hammer</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">Pneumatic</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">50(36,800)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.8-0.9</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">5-8(16.4-26.3)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">80-250</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.45-0.55</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt"> </td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">Open-die, single frame</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">40(29,440)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.8-0.9</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">5-8(16.4-26.3)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">450</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.45-0.55</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt"> </td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">Open-die, double frame</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">250(184,000)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.8-0.9</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">5-8(16.4-26.3)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">55-240</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.5</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt"> </td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">Die forging</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">100(73,600)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.3-0.6</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">5-8(16.4-26.3)</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">55-240</td>
+        <td style="text-align: center;font-family: Arial;font-size: 10pt">0.5</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Table_numb"><a id="Table_15_3_1_Characteristic_values_of_Anvil_type_hammers"></a>Characteristic values of Anvil type hammers</p>
+  <h2><a id="15_3_2_Counterblow_Hammer"></a>Counterblow Hammer [2D, 3D]</h2>
+  <p>A counterblow hammer is defined by specifying the counterblow hammer checkbox for one die, as shown in <a href="#Fig_15_3_3_2D_Counter_blow_hammer_press_settings"><span data-keyref="Chapter_15_3_Hammer">Fig. 15.3.</span>3.</a> and <a href="#Fig_15_3_4_3D_Counter_blow_hammer_press_settings"><span data-keyref="Chapter_15_3_Hammer">Fig. 15.3.</span>4.</a> The
+    total energy should be defined for the first die (generally the primary die). The mass of each die should be assigned to that respective die.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_15_3_3_2D_Counter_blow_hammer_press_settings"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_3_hammer/15_3_image003.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D Counter blow hammer press settings</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_15_3_4_3D_Counter_blow_hammer_press_settings" style="cursor: nwse-resize;"></a><img src="../../../assets/images/pre-processor/15_movement_controls/15_3_hammer/15_3_image004.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">3D Counter blow hammer press settings</p>
+  <p> </p>
+  <p>DEFORM assumes that momentum is matched between dies in counterblow hammers.  That is, M1* V1 = M2* V2, where M and V are the mass and velocity of the respective dies. DEFORM will automatically split energy between the two dies and calculate the velocity
+    of each die. The inputs are as summarized in Table 15.3.2.</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;font-family:Arial;font-size:12pt">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 50%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="font-family: Arial;font-size: 12pt">
+      <tr>
+        <td> </td>
+        <td>    Die 1</td>
+        <td>    Die 2</td>
+      </tr>
+      <tr>
+        <td>    Energy</td>
+        <td>    Total Energy</td>
+        <td>    0</td>
+      </tr>
+      <tr>
+        <td>    Mass</td>
+        <td>    Mass of Die 1</td>
+        <td>    Mass2</td>
+      </tr>
+      <tr>
+        <td style="font-size: 12pt">
+          <p>    Efficiency</p>
+        </td>
+        <td>    Blow efficiency</td>
+        <td>    Inherited from Die 1</td>
+      </tr>
+      <tr>
+        <td>    Velocity</td>
+        <td>    Sqrt (2*E*M2/((M1+M2)*M1))</td>
+        <td>    V1*M1/M2</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Table_numb"><a id="Table_15_3_2_Hammer_movement_input_summary"></a>Hammer movement input summary</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="15_movement_controls_settings.htm">15. Movement Controls Settings</a></p>
+  <p><a href="15_1_speed.htm">15.1. Speed</a></p>
+  <p><a href="15_2_force.htm">15.2. Force</a></p>
+  <p><a href="15_4_screw_press.htm">15.4. Screw press</a></p>
+  <p><a href="15_5_mechanical_press.htm">15.5. Mechanical press</a></p>
+  <p><a href="15_6_hydraulic_press.htm">15.6. Hydraulic press</a></p>
+  <p><a href="15_7_sliding_die.htm">15.7. Sliding Die</a></p>
+  <p><a href="15_8_path.htm">15.8.  Path</a></p>
+  <p><a href="15_9_rotational_movement.htm">15.9. Rotational Movement</a></p>
+  <p><a href="15_10_torsional_movement.htm">15.10. Torsional movement</a></p>
+  <p><a href="15_11_friction_welding_movement.htm">15.11. Friction Welding movement</a>.</p>
+
+</body></html>

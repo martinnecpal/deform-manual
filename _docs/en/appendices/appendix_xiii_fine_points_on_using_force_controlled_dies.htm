@@ -1,0 +1,107 @@
+---
+lang: en
+title: "Appendix XIII: Fine Points on Using Force Controlled Dies"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XIII: Fine Points on Using Force Controlled Dies</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XIII: Fine Points on Using Force Controlled Dies</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_xiii.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_XIV_Rotating_Workpiece_Simulations.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_XII__Modelling_of_Spring_Loaded_Die.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix XIII: Fine Points on Using Force Controlled Dies">
+        <span>Appendix XIII: Fine Points on Using Force Controlled Dies</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix XIII: Fine Points on Using Force Controlled Dies</h1>
+  <p><a href="#AXIII_1_Objective">AXIII.1. Objective</a></p>
+  <p><a href="#AXIII_2_Theory">AXIII.2. Theory</a></p>
+  <p><a href="#AXIII_3_Solution">AXIII.3. Solution</a></p>
+  <h2><a id="AXIII_1_Objective"></a>Objective</h2>
+  <p>In many simulations, force-controlled dies are used in order to simulate real-world tool loading conditions. As seen in <a href="appendix_xii__modelling_of_spring_loaded_die.htm">Appendix XII</a>, these can be used in order to simulate spring-loaded
+    dies. The purpose of this section is to explain the pitfalls that can occur while trying to simulate force-loaded dies in terms of obtaining good results and improving convergence of the solution</p>
+  <p> </p>
+  <h2><a id="AXIII_2_Theory"></a>Theory</h2>
+  <p>In reality, there is no such thing as an ideal step function. It takes time, no matter how small, for things to change. If a sudden load is applied, there must be a time span over which things occur as a ramp function. In the case of applying a load
+    to a deformable object, there are generally two ways in which a body may respond to a given amount of force. The body may increase its reaction load by strain hardening or increase its reaction load by strain rate hardening. In the case of a high
+    load, the final deformed shape may be quite different than the initial shape. The problem with a step function is that over one step, the body may have to deform much to achieve equilibrium with the applied load. Also, with two different possible
+    ways in which to react can place much pressure on the simulation engine.</p>
+  <p> </p>
+  <h2><a id="AXIII_3_Solution"></a>Solution</h2>
+  <p>As implied with the above statement on step functions, if there are no step functions then the solution must be to use ramp functions. This is the key to getting all of these simulations using force control to converge nicely. The time step size may
+    be very small (ideally it should be realistic to the process) but as long as the deformation is spread over an ample number of steps, a good solution will result. </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../pre_processor/15_movement_controls_definition/15_2_force.htm">Movement Controls Definition-Force</a></p>
+
+</body></html>

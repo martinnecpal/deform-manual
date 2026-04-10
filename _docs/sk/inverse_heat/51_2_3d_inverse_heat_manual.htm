@@ -1,0 +1,329 @@
+---
+lang: sk
+title: "51.2. 3D Inverse Heat Manual"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>51.2. 3D Inverse Heat Manual</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>51.2. 3D Inverse Heat Manual</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/inverse_heat/51_2_3d_inverse_heat_manual.css"/>
+<meta name="brsnext" value="Documentation_content/DOE_and_Optimization/DOE_and_Optimization_MainPg.htm"/><meta name="brsprev" value="Documentation_content/Inverse_Heat/51_1_2D_Inverse_Heat_Manual.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="51.2. 3D Inverse Heat Manual">
+        <span>51.2. 3D Inverse Heat Manual</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>51.2. 3D Inverse Heat Manual</h1>
+  <p><a href="#51_2_1_How_to_open_3D_Inverse_Heat_wizard">51.2.1. How to open 3D Inverse Heat wizard</a></p>
+  <p><a href="#51_2_2_Initialization">51.2.2. Initialization</a></p>
+  <p><a href="#51_2_3_Process_condition">51.2.3. Process condition</a></p>
+  <p><a href="#51_2_4_Material_List">51.2.4. Material List</a></p>
+  <p><a href="#51_2_5_Workpiece_object_page">51.2.5. Workpiece object page</a></p>
+  <p style="margin-left: 20px"><a href="#51_2_5_1_Geometry_page">51.2.5.1. Geometry page</a></p>
+  <p style="margin-left: 20px"><a href="#51_2_5_2_Mesh_page">51.2.5.2. Mesh page</a></p>
+  <p style="margin-left: 20px"><a href="#51_2_5_3_Material_Selection">51.2.5.3. Material Page</a></p>
+  <p style="margin-left: 20px"><a href="#51_2_5_4_BCC_Page">51.2.5.4. BCC Page</a></p>
+  <p style="margin-left: 20px"><a href="#51_2_5_5_Property_Page">51.2.5.5. Property Page</a></p>
+  <p><a href="#51_2_6_Temperature_Measurement_Points">51.2.6. Temperature Measurement Points</a></p>
+  <p><a href="#51_2_7_Time_Zones">51.2.7. Time Zones</a></p>
+  <p><a href="#51_2_8_Heat_Transfer_Zones">51.2.8. Heat Transfer Zones</a></p>
+  <p><a href="#51_2_9_Positioning">51.2.9. Positioning</a></p>
+  <p><a href="#51_2_10_Step">51.2.10. Step</a></p>
+  <p><a href="#51_2_11_Optimization_Controls">51.2.11. Optimization Controls</a></p>
+  <p><a href="#51_2_12_Generate_DB">51.2.12. Generate DB</a></p>
+  <p><a href="#51_2_13_Post-Processing_the_Inverse_HT_Optimized_results">51.2.13. Post-Processing the Inverse HT Optimized results</a></p>
+  <p> </p>
+  <h2><a id="51_2_1_How_to_open_3D_Inverse_Heat_wizard"></a>How to open 3D Inverse Heat wizard</h2>
+  <p>3D Inverse heat wizard can be accessed from GUI Main. Create a new problem by either selecting <strong>File <img src="../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>New Problem</strong> or by clicking the New Problem <img src="../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. Select 3D Inverse heat Problem type and unit system as shown in the <a href="#Fig_52_2_1_Opening_3D_Inverse_heat_Wizard_from_GUI_Main"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>1.</a> then click <img src="../../assets/icons/pre_icons/mo_ok_button.jpg"/>. 3D Inverse Heat Wizard will be opened and in Operation editor we can observe 3D Inverse heat operation being added as shown in <a href="#Fig_51_2_2_3D_Inverse_Heat_Wizard"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_2_1_Opening_3D_Inverse_heat_Wizard_from_GUI_Main"></a><img height="375" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0001.jpg" width="750"/></p>
+  <p class="Fig_numb">Opening 3D Inverse heat Wizard from GUI Main</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_2_3D_Inverse_Heat_Wizard"></a><img height="372" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0002.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">3D Inverse Heat Wizard</p>
+  <h2><a id="51_2_2_Initialization"></a>Initialization</h2>
+  <p>In this page user have options to import wizard file using <img src="../../assets/icons/pre_icons/mo_import_wizard_file_button.jpg"/> button, “*.IHWZ” file will be imported as shown in the <a href="#Fig_51_2_3_Initialization_page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>3.</a>    In Sim mode tab , depending on the requirement user can turn on the Phase transformation check box to include phase transformation calculations and Diffusion check box to include atom diffusion while estimating the Heat transfer Coefficients (HTC).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_3_Initialization_page"></a><img height="325" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0003.jpg" style="text-align: center;" width="385"/></p>
+  <p> </p>
+  <p class="Fig_numb">Initialization page</p>
+  <h2><a id="51_2_3_Process_condition"></a>Process condition</h2>
+  <p>In Inverse HT wizard user can model both heat transfer while transferring to quench and then Quench. Depending on the requirement user can select any one or both processes. Heat transfer operation will be simulated first followed by quenching. User
+    need to define the environment temperature data for the selected process as shown in the <a href="#Fig_51_2_4_Process_condition_page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>4.</a> The environment temperature can be defined
+    as a constant or function of time.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_4_Process_condition_page"></a><img height="325" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0004.jpg" width="385"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Process condition page</p>
+  <h2><a id="51_2_4_Material_List"></a>Material List</h2>
+  <p>In this Material List page, user can load the material for the Workpiece using Import Material data from a File <img src="../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> or using Load form Library option <img src="../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>. If user has created a new material, then user can save the material using <img src="../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/>, <img src="../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> buttons.(See<a href="#Fig_51_2_5_Material_List_Page"> <span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>5.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_5_Material_List_Page"></a><img height="372" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material List Page</p>
+  <h2><a id="51_2_5_Workpiece_object_page"></a>Workpiece object page</h2>
+  <p>In Workpiece page, user can define object name, object initial temperature and object type of a workpiece as shown in the <a href="#Fig_51_2_6_Workpiece_Object_page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>6.</a> The object
+    type is selected as “Plastic” by default, if user is interested to consider the effect of elastic properties then Elasto-plastic object type can be used. User can import objects from other databases or key files using <img src="../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>, <img src="../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> options or save the object data using <img src="../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/>, <img src="../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_6_Workpiece_Object_page"></a><img height="325" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0006.jpg" width="385"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Workpiece Object page</p>
+  <p> </p>
+  <h3><a id="51_2_5_1_Geometry_page"></a>Geometry page</h3>
+  <p>The geometry can be imported from a file using <img src="../../assets/icons/pre_icons/mo_import_file_icon.jpg"/>, <img src="../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> options or can be created from the primitives. Modifications
+    to the imported or created geometry can be made using <img src="../../assets/icons/pre_icons/mo_edit_lable.jpg"/> option. The geometry can be saved using <img src="../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/>, <img src="../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/> options. (See <a href="#Fig_51_2_7_Geometry_Page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>7.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_7_Geometry_Page"></a><img height="375" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0007.jpg" width="354"/> </p>
+  <p> </p>
+  <p class="Fig_numb">Geometry Page</p>
+  <h3><a id="51_2_5_2_Mesh_page"></a>Mesh page</h3>
+  <p>Mesh Page provides options to mesh the object. Guided <img src="../../assets/icons/pre_icons/mo_guided_mode.jpg"/> mode provides option only to set number of elements using slider bar to generate mesh. If the object geometry is complex or user would
+    like to control the mesh density over the object, then user must switch to expert mode by clicking on <img src="../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/>. Expert mode provides various options like weighing factors and mesh windows to
+    control the mesh density. Meshing options available in Guided mode and expert mode are shown in <a href="#Fig_51_2_8_Guided_Mode_mesh_options"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>8.</a> and <a href="#Fig_51_2_9_Expert_Mode_mesh_options"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>9.</a></p>
+  <p>For more detail description of these options, please refer <a href="../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm">3D Mesh</a>.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_51_2_8_Guided_Mode_mesh_options"></a><img height="325" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0008.jpg" width="385"/></p>
+  <p> </p>
+  <p class="Fig_numb">Guided Mode mesh options</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_9_Expert_Mode_mesh_options"></a><img height="400" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0009.jpg" width="390"/></p>
+  <p> </p>
+  <p class="Fig_numb">Expert Mode mesh options</p>
+  <h3><a id="51_2_5_3_Material_Selection"></a>Material Selection</h3>
+  <p>In material page, all the materials added to material list are displayed as shown in <a href="#Fig_51_2_10_Assigning_material_to_workpiece"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>10.</a> User can select the required material
+    to assign it to respective object. If the desired material is not available in the list, then the user can load the material in object material page using Import Material data from a file <img src="../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> or using Load form Library option <img src="../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/>. User can also create new material if the material is not available in DEFORM library using <img src="../../assets/icons/pre_icons/mo_add_icon2.jpg"/>. User can delete the material from list using <img src="../../assets/icons/pre_icons/mo_delete_icon2.jpg"/> or edit the material data using <img src="../../assets/icons/pre_icons/mo_edit_material_button.jpg"/>. Modified / newly defined Material
+    can be saved using <img src="../../assets/icons/pre_icons/mo_save_to_a_file_icon.jpg"/>, <img src="../../assets/icons/pre_icons/mo_save_to_library_icon.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_10_Assigning_material_to_workpiece"></a><img height="325" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0010.jpg" width="385"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning material to workpiece</p>
+  <h3><a id="51_2_5_4_BCC_Page"></a>BCC Page</h3>
+  <p>In Boundary conditions page, user can assign various boundary constraints to an object. Boundary conditions specify how the boundary of an object interacts with the environment. Commonly used boundary conditions are heat exchange with the environment
+    for simulations involving heat transfer and object symmetry BCC data. (See <a href="#Fig_51_2_11_BCC_Page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>11.</a>)</p>
+  <p style="text-align: center"><a id="Fig_51_2_11_BCC_Page"></a><img height="372" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">BCC Page</p>
+  <h3><a id="51_2_5_5_Property_Page"></a>Property Page</h3>
+  <p>Miscellaneous object parameters, which affect either thermo-mechanical behaviour of the object or numerical solution behaviour are specified in the Object-Properties window (See <a href="#Fig_51_2_12_Property_Page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>12.</a>).
+    For more information please refer <a href="../pre_processor/16_object_properties/16_object_properties.htm">Object properties</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_12_Property_Page"></a><img height="425" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0012.jpg" width="435"/></p>
+  <p> </p>
+  <p class="Fig_numb">Property Page</p>
+  <h2><a id="51_2_6_Temperature_Measurement_Points"></a>Temperature Measurement Points</h2>
+  <p>The user can define the temperature measurement points by clicking on add button and selecting the point on the workpiece as shown in the <a href="#Fig_51_2_13_Temperature_Measurement_Points_Page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>13.</a>    The user can define the thermal data measured from experiments for the respective point using <img src="../../assets/icons/pre_icons/mo_inverse_heat_define_button.jpg"/> button as shown in the <a href="#Fig_51_2_14_Defining_the_Thermal_Data_by_using_Define_button"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>14.</a>    or we can import the .DAT file containing the thermal data using the <img src="../../assets/icons/post_icons/mo_import_button.jpg"/> option.. We can also save the defined thermal data using the <img src="../../assets/icons/pre_icons/mo_save_icon.jpg"/>  button. After defining the thermal data, the <img src="../../assets/icons/pre_icons/mo_inverse_heat_define_button.jpg"/> button will change to <img height="30" src="../../assets/icons/pre_icons/mo_inverse_heat_edit_button.jpg" width="85"/>button. </p>
+  <p><br/> The <img src="../../assets/icons/pre_icons/mo_exam_ all_button.jpg"/> button is used to display experimental temperature curves at all points as shown in the <a href="#Fig_51_2_15_Display_of_all_points_thermal_data_using_Exam_all_button"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>15.</a>     User can plot the temperature curves selectively by turning on or off the respective measurement points check boxes, “Hide All” and “Select All” buttons can be used to hide or display curves at all measurement points respectively.</p>
+  <p>The temperature curves defined from experiments can have large number of values and user can filter the data by applying the tolerance value and using either &quot;Collinear points&quot; or &quot;Douglas-Peucker&quot; method. After defining the tolerance
+    value and selecting the method of filtering, user can click on <img height="21" src="../../assets/icons/pre_icons/mo_apply_button2.jpg" width="74"/> button to observe the effect of tolerance value and use &quot;Reset&quot; button to go back to previous
+    experimental data before entering the filtering window. User can apply filtering to the selected curves using &quot;Selected Curve only&quot; check box.</p>
+  <p style="text-align: center"><a id="Fig_51_2_13_Temperature_Measurement_Points_Page"></a><img height="372" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature Measurement Points Page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_14_Defining_the_Thermal_Data_by_using_Define_button"></a><img height="282" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining the Thermal Data by using Define button</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_15_Display_of_all_points_thermal_data_using_Exam_all_button"></a><img height="283" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Display of all points thermal data using Exam all button</p>
+  <p> </p>
+  <h2><a id="51_2_7_Time_Zones"></a>Time Zones</h2>
+  <p>Time zone page provides option to define the duration of the selected processes in “Process Condition” page. If user has selected both processes, then “End time” of the “Transfer” process is automatically assigned to the “Start time” of the Quench,
+    see <a href="#Fig_51_2_16_Time_zone_for_only_the_Transfer_process"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>16</a>. and <a href="#Fig_51_2_17_Time_zone_for_both_Transfer_and_Quench_process"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>17</a>.
+    If user clicks on <img src="../../assets/icons/pre_icons/mo_next_button.jpg"/> button without defining any data, then “End time” will be assigned as 10 secs. Display area displays the graph with temperature curves of all measurement points, a vertical
+    line can be observed when both the processes are used indicating the end of “Transfer” process and start of “Quench”.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_16_Time_zone_for_only_the_Transfer_process"></a><img height="372" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Time zone for only the Transfer process</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_51_2_17_Time_zone_for_both_Transfer_and_Quench_process"></a><img height="372" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0017.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Time zone for both Transfer and Quench process</p>
+  <p> </p>
+  <h2><a id="51_2_8_Heat_Transfer_Zones"></a>Heat Transfer Zones</h2>
+  <p>In “Heat Transfer Zones” page”, click <img src="../../assets/icons/pre_icons/mo_add_htc_zone_button.jpg"/> button. To define heat transfer zone, first select the appropriate row in the table and then pick surfaces on the object. Zones are the continuous
+    surfaces which are exposed to similar conditions. We may need to use the picking options in the lower tool bar in order to achieve ideal picking results as shown in the <a href="#Fig_51_2_18_Heat_Transfer_Zones_page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>18.</a> </p>
+  <p class="Note_text"><strong>Note:</strong> The symmetric planes should not be included in any heat transfer zone.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_18_Heat_Transfer_Zones_page"></a><img height="372" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0018.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat Transfer Zones page</p>
+  <p> </p>
+  <h4>Heat Transfer Coefficient Function Definition</h4>
+  <p> <img src="../../assets/icons/pre_icons/mo_iniitialize_htc_button.jpg"/> button (see <a href="#Fig_51_2_19_Heat_Transfer_Coefficient_Function_Definition_page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>19.</a>) can be used to
+    initialize the HTC values for all zones. Once the user clicks on “Initialize HTC” button it opens Heat Transfer Coefficient Function Definition page as shown in <a href="#Fig_51_2_19_Heat_Transfer_Coefficient_Function_Definition_page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>19.</a>    User can define the control points that can be used to construct temperature or time dependent HTC function. User can set the initial guess value, the minimum and maximum values for the heat transfer coefficients. Once the user initializes the data,
+    user can modify the values for each zone independently using <img height="23" src="../../assets/icons/pre_icons/mo_edit..._button.jpg" width="62"/> button as shown in <a href="#Fig_51_2_20_Defined_Function_data_page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>20</a>.
+    Defining a reasonable initial HTC guess values helps the DEFORM optimization routines to get to the desired results quicker. For example, defining a huge range of lower and upper bound heat transfer values for a heat treat process, and an unreasonably
+    higher or lower initial guess, which is not representative of the quench process, would drive the optimization routine to take a longer time to solve the problem.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_19_Heat_Transfer_Coefficient_Function_Definition_page"></a><img height="384" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat Transfer Coefficient Function Definition page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_20_Defined_Function_data_page"></a><img height="284" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defined Function data page</p>
+  <p> </p>
+  <h2><a id="51_2_9_Positioning"></a>Positioning</h2>
+  <p>User can position the objects using <img src="../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/> button. Various positioning options are available to position the objects as shown in <a href="#Fig_51_2_21_Positioning_options"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>21.</a>,
+    for more information on these options please refer <a href="../pre_processor/19_object_positioning/19_object_positioning.htm">3D Positioning objects</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_21_Positioning_options"></a><img height="313" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0021.jpg" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">Positioning options</p>
+  <h2><a id="51_2_10_Step"></a>Step</h2>
+  <p>The user can define the step definition data for the selected process. If we select any one process, then the respective process step definition will be as shown in the <a href="#Fig_51_2_22_Step_controls_for_Transfer_Process"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>22.</a>    If we select both the process, then the transfer and quench step definition will be as shown in the <a href="#Fig_51_2_23_Step_controls_for_both_Transfer_and_Quench_process"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>23.</a><br/>
+    <strong>Number of steps</strong> (NSTEP): he number of simulation steps parameter is fixed for inverse heat wizard as 999999. The simulation will stop after the optimization is finished.</p>
+  <p><strong>Step Increment </strong>(STPINC) : The step increment to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved
+    in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.<br/>
+    <strong>Step increment control </strong>: Time (DTMAX): If time per step is specified, the time interval per step will be used.</p>
+  <p><strong>Temperature (DTPMAX)</strong>: If user selects the temperature-based step increment, then the time interval for step increment is controlled by the settings defined as shown in <a href="#Fig_51_2_22_Step_controls_for_Transfer_Process"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>22.</a>.</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Temp. change per step:</strong> It specifies maximum change in the temperature allowed per step, whenever change in temperature in the object exceeds this value then time per step is reduced and whenever it is less than the specified value
+        then the  time per step is increased.</p>
+    </li>
+    <li>
+      <p><strong>Min/Max Time per step:</strong> It specifies the range for time per step within which system can set the value when temperature change in the object is less than or more than “Temp. change per step” value.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_22_Step_controls_for_Transfer_Process"></a><img height="410" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0022.jpg" width="394"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step controls for Transfer Process</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_51_2_23_Step_controls_for_both_Transfer_and_Quench_process"></a><img height="400" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0023.jpg" width="385"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step controls for both Transfer and Quench process</p>
+  <p> </p>
+  <h2><a id="51_2_11_Optimization_Controls"></a>Optimization Controls</h2>
+  <p>In Optimization Control user can define the criteria to stop the optimization as show in the <a href="#Fig_51_2_24_Optimization_Controls_page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>24.</a><br/>
+    <strong>Stopping Controls:</strong></p>
+  <p><strong></strong><strong>Relative improvement less than (%):</strong> When the Relative improvement in the predicted temperature curves between the current HTC values and previous HTC values is less than the defined value, then the optimization will
+    stop.</p>
+  <p><br/>
+    <strong>Maximum iteration</strong>: Simulation stops when the iterations reaches the Maximum iteration value.</p>
+  <p><br/>
+    <strong>Maximum simulation</strong>: When the number of simulations exceeds the defined Maximum simulation value, optimization will stop.</p>
+  <p> </p>
+  <p><strong>Objective function less than</strong>: Simulation stops when the Objective function error is less than the defined “Objective function less than value”.</p>
+  <p> </p>
+  <p><strong>Decision vector changes less than</strong>: Simulation stops when the decision vector change is less than the defined “Decision vector changes less than” value.</p>
+  <p><br/>
+    <strong>Local optimization when relative improvement is less than (%) </strong>: By checking “Local optimization when relative improvement is less than (%)” check box, Local optimization will be carried out when the relative improvement in the temperature
+    prediction using current HTC values compared to that of the temperature prediction using previous HTC values is less than the defined value.</p>
+  <p> </p>
+  <p><strong>BFGS</strong>: By checking BFGS (Broyden–Fletcher–Goldfarb–Shanno ) check box,  optimization uses BFGS algorithm to optimize the HTC values.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_24_Optimization_Controls_page"></a><img height="325" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0024.jpg" width="378"/></p>
+  <p> </p>
+  <p class="Fig_numb">Optimization Controls page</p>
+  <h2><a id="51_2_12_Generate_DB"></a>Generate DB</h2>
+  <p><strong>Check Data</strong>  <img src="../../assets/icons/pre_icons/mo_check_data_button.jpg"/>: It checks the Data. If Data is correct, we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before
+    generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.<br/>
+    <strong>Generate Database<img src="../../assets/icons/pre_icons/mo_generate_database.jpg"/>:  </strong>By clicking on this button, system generates the Database for the setup (See <a href="#Fig_51_2_25_Generate_DB_page"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>25.</a>).</p>
+  <p><strong>Append Key file</strong> : Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values
+    can be defined as .key file and only .key file can be changed, and simulation can be resubmitted.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_25_Generate_DB_page"></a><img height="325" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0025.jpg" width="389"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Generate DB page</p>
+  <p> </p>
+  <h2><a id="51_2_13_Post-Processing_the_Inverse_HT_Optimized_results"></a>Post-Processing the Inverse HT Optimized results</h2>
+  <p>Once the optimization is completed, we can notice that there will be two DBs in the project folder, one with Project_INI.DB and other one as Project_Optimized.DB. The Project_INI.DB has initial settings defined while generating the database while Project_Optimized.DB
+    has optimized HTCs. When user shifts to POST tab in Inverse HT wizard, we can notice two icons as shown in  <a href="#Fig_51_2_26_3D_Inverse_Heat_post_processor"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>26.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_26_3D_Inverse_Heat_post_processor"></a><img height="373" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0026.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Inverse Heat post processor</p>
+  <p><br/>
+    <strong>Local Objectives <img src="../../assets/icons/pre_icons/mo_inverse_heat_local_objective_button.jpg"/> :</strong><br/>
+    <img src="../../assets/icons/pre_icons/mo_inverse_heat_local_objective_button.jpg"/> is used to plot the experimental temperature values and predicted values in optimized solution. . When user clicks on the <img src="../../assets/icons/pre_icons/mo_inverse_heat_local_objective_button.jpg"/> icon it opens window as shown in <a href="#Fig_51_2_27_Thermal_history_of_the_temperature_measurement_points"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>27.</a>, user can click on <img src="../../assets/icons/pre_icons/mo_inverse_heat_view_all_button.jpg"/> button to display the experimental and predicted temperature curves. The plotted graphs have display controls to control the display of curves for selected points as shown in <a href="#Fig_51_2_27_Thermal_history_of_the_temperature_measurement_points"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>27.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_27_Thermal_history_of_the_temperature_measurement_points"></a><img height="373" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0027.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Thermal history of the temperature measurement points</p>
+  <p><br/>
+    <strong>Optimal HTC <img src="../../assets/icons/pre_icons/mo_inverse_heat_optimal_htc.jpg"/> :</strong><br/>
+    <img src="../../assets/icons/pre_icons/mo_inverse_heat_optimal_htc.jpg"/> is used to plot the HTC values for each zone defined in the pre-processor as function of temperature or time from the optimized solution, see <a href="#Fig_51_2_28_Optimal_HTC_output_for_defined_zones"><span data-keyref="Chapter_51_2_3D_Inverse_Heat">Fig. 51.2.</span>28.</a>    The HTC values can be exported from the graph and can be used in simulation of quenching or other heat treatment processes.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_2_28_Optimal_HTC_output_for_defined_zones"></a><img height="373" src="../../assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0028.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Optimal HTC output for defined zones</p>
+  <p><br/> For more details on other post-processing tools please refer <a href="../post_processor/25_post_processor_layout/25_post_processor_layout.htm">Post processor</a>.</p>
+  <p> </p>
+
+</body></html>

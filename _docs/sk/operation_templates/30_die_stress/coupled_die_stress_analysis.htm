@@ -1,0 +1,242 @@
+---
+lang: sk
+title: "Coupled Die stress Analysis"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "13.0_20";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Coupled Die stress Analysis</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Coupled Die stress Analysis</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/30_die_stress/coupled_die_stress_analysis.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_XXI_FEM_User_routine_support.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_XIX_Settings_for_CG_solver_for_3D_simulation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Coupled Die stress Analysis">
+        <span>Coupled Die stress Analysis</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix XX: How to do coupled die stress analysis for 3D models</h1>
+  <p><em>*From QT3 interface</em></p>
+  <p> </p>
+  <p>Starting from 3D V10.0+ the system supports a convenient way to carryout Multiple-time stepping (MTS) Die stress analysis. Current structure depends on a local DAT file (DEF_LCDSTS.DAT) to trigger these procedures. In a typical die stress analysis since
+    fine mesh systems are needed on the die objects, models are memory intensive and need long computing time. Procedures developed in DEFORM allow user to specify different time step sizes for plastic workpiece (deformation) and elastic dies (die stress
+    analysis), It helps in CPU cost saving. User can specify loosely coupled die stress analysis on elastic tools only at selected steps, rather than at every step. This gives a reasonable balance of coupled stress with efficient run (computational) times.
+    The factor defines a ratio of multiple-time stepping like,</p>
+  <p> </p>
+  <p><img src="../../../assets/images/operation_templates/30_die_stress/coupled_die_stress_study/eq001.jpg"/></p>
+  <p> </p>
+  <p>Currently the following requirements have to be met by the model to be able to use these analysis features.</p>
+  <ul class="Disc">
+    <li>
+      <p>The dies should be elastic and use tetrahedral mesh.</p>
+    </li>
+    <li>
+      <p>The dies should have movement conditions defined in the BCC dialogs.</p>
+    </li>
+    <li>
+      <p>The dies movement should be specified in the movement control dialogs.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>There are several options for coupling the interactions of the workpiece and tool. In any way the model stores the results in the same database. Those are,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;margin-left:auto;margin-right:auto">
+    <colgroup>
+      <col style="width:25.00%"/>
+      <col style="width:25.00%"/>
+      <col style="width:25.00%"/>
+      <col style="width:25.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"><strong>Option</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Solution Method</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Stress Update</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Geometry Update</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1</p>
+        </td>
+        <td>
+          <p style="text-align: center">Fully coupled</p>
+        </td>
+        <td>
+          <p style="text-align: center">Die and workpiece</p>
+        </td>
+        <td>
+          <p style="text-align: center">Die and workpiece</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">2</p>
+        </td>
+        <td>
+          <p style="text-align: center">One way coupled</p>
+        </td>
+        <td>
+          <p style="text-align: center">Die and workpiece</p>
+        </td>
+        <td>
+          <p style="text-align: center">Die and workpiece</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">3</p>
+        </td>
+        <td>
+          <p style="text-align: center">One way coupled</p>
+        </td>
+        <td>
+          <p style="text-align: center">Die and workpiece</p>
+        </td>
+        <td>
+          <p style="text-align: center">Workpiece only</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Fig_name">Coupling workpiece and tool interaction options</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Fully coupled means the deflection of the tool is reflected in the deformation of the workpiece at the current step.  </p>
+    </li>
+    <li>
+      <p>One way coupling means the stresses are calculated in the tool.  If die geometry is updated, it will not be reflected in workpiece shape until the next step.  </p>
+    </li>
+    <li>
+      <p>If option 3 is used, stress is calculated in the die, but the die geometry is never updated.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p>To activate loosely coupled die stress analysis, use a text editor such as notepad to create a file in the same directory as the database, named <strong>DEF_LCDSTS.DAT.</strong></p>
+  <p> </p>
+  <p><strong>Contents of the DAT file are as follows:</strong></p>
+  <p> </p>
+  <p>Line 1: = Coupling option (1, 2 or 3)</p>
+  <p style="margin-left: 40px">= 1 for fully coupled</p>
+  <p style="margin-left: 40px">= 2 for one way coupled (die geometry is updated, it will not be reflected in workpiece shape until the next step)</p>
+  <p style="margin-left: 40px">= 3 for one way coupled (die geometry is never updated)</p>
+  <p> </p>
+  <p>Line 2: = n, ratio of the time steps for Stress coupling (Δt_elastic_dies/Δt_plastic_workpiece).  </p>
+  <p>     </p>
+  <p>Line 3: = m, thermal time step ratio for Temperature coupling (Δt_elastic_dies/Δt_plastic_workpiece).</p>
+  <p> </p>
+  <p><strong>For example:</strong></p>
+  <p> </p>
+  <p>Line 1 with entry 1, for Option 1 -Fully coupled option.</p>
+  <p> </p>
+  <p>n = 5 in Line 2 indicates that the coupled calculations are computed every 5 steps, and every 5th step elastic object sees 5 times the step size compared to plastic workpiece.</p>
+  <p> </p>
+  <p>m = 5 in Line 3 indicates time step size used by thermal computations is 5 times that of deformations computations.</p>
+  <p> </p>
+  <p>So a typical DEF_LCDSTS.DAT file for option 1- Fully Coupled distress the text in file might look like,</p>
+  <p>1</p>
+  <p>5</p>
+  <p>5</p>
+  <p> </p>
+  <p><strong>Selection criteria for Die Stress analysis options:</strong></p>
+  <p><strong>Option 1 </strong>- In general, option 1 is the most accurate, and most computationally expensive. Option 3 is the least computationally expensive, and offers the most simplification of the process.</p>
+  <p> </p>
+  <p><strong>Option 2</strong> - more numerically efficient than option 1, but may cause some inconsistencies in workpiece surface position (and therefore workpiece volume) if the change in the die shape is substantial.</p>
+  <p> </p>
+  <p><strong>Option 3 </strong>- If the only interest is tool stress, option 3 is generally adequate.  If tool deflection is important option 1 or 2 should be selected.</p>
+  <p> </p>
+  <p>For the Schematic setup as shown below, See <span data-keyref="Chapter_30_Coupled_Die_stress_Analysis_Theory">Fig. </span>1, the die stress results are compared for all three options, See <span data-keyref="Chapter_30_Coupled_Die_stress_Analysis_Theory">Fig. </span>2.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/operation_templates/30_die_stress/coupled_die_stress_study/imaage001.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simple Coupled die-stress problem setup for the bottom die</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/operation_templates/30_die_stress/coupled_die_stress_study/imaage002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Die-stress result comparison for all three options at the same step</p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg.htm">Die Stress Lab</a></p>
+  <p><a href="2d_die_stress_analysis_theory.htm">2D Die Stress Analysis - Theory</a></p>
+  <p><a href="3d_die_stress_analysis_theory.htm">3D Die Stress Analysis</a> </p>
+  <p> </p>
+
+</body></html>

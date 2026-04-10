@@ -1,0 +1,231 @@
+---
+lang: en
+title: "14.2. Deformation Boundary Conditions"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>14.2. Deformation Boundary Conditions</title>
+  <meta name="topic-status" content="Draft" />
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/Pre_Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions.css" />
+</head>
+<body>
+  <h1>14.2. Deformation Boundary Conditions</h1>
+  <p><a href="#14.2.1._Velocity_BCC">14.2.1. Velocity BCC</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Free_Distortion_BCC">Free Distortion BCC</a></p>
+    </li>
+  </ul>
+  <p><a href="#14.2.2._Pressure_BCC">14.2.2. Pressure BCC</a></p>
+  <p><a href="#14.2.3._Force_BCC">14.2.3. Force BCC</a></p>
+  <p><a href="#14.2.4._Movement_BCC">14.2.4. Movement BCC</a></p>
+  <p><a href="#14.2.5._Shrink_fit_BCC">14.2.5. Shrink fit BCC</a></p>
+  <p><a href="#14.2.6._Contact">14.2.6. Contact BCC</a></p>
+  <p><a href="#14.2.7._Beginning_surface_BCC">14.2.7. Beginning surface BCC</a></p>
+  <p><a href="#14.2.8._Free_Surface_BCC">14.2.8. Free surface BCC</a></p>
+  <p><a href="#14.2.9._Rolling_BCC">14.2.9. Rolling BCC</a></p>
+  <p><a href="#14.2.10._Advanced_deformation_BCC">14.2.10. Advanced deformation BCC</a></p>
+  <p> </p>
+  <h2><a id="14.2.1._Velocity_BCC"></a>Velocity BCC [2D, 3D]</h2>
+  <p>[2D]: Velocity of each node can be specified independently in the X and Y directions. Velocity boundary conditions are normally set to zero for symmetry conditions, but may also be set to a specified non-zero value for processes such as drawing in which
+    a workpiece is pulled through a die. (See <a href="#Fig._14.2.1._2D_velocity_BCC_window"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>1.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image001.jpg" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.1._2D_velocity_BCC_window"></a>2D velocity BCC window</p>
+  <p> </p>
+  <p>[3D]: Velocity of each node can be specified independently in the X, Y, and Z directions. Velocity boundary conditions are normally set to zero for symmetry conditions (Symmetry BCC [3D]), but may also be set to a specified non-zero value for processes
+    such as drawing in which a workpiece is pulled through a die.</p>
+  <p> </p>
+  <p>Even, we can define Velocity BCC using All direction option for both 2D and 3D, with this option user can assign BCC for all directions at a time.</p>
+  <p> </p>
+  <p class="Note_text">Note:</p>
+  <p class="Note_text">If parallel symmetry planes are to be defined, velocity boundary conditions can only be used on one plane. A rigid surface should be defined on the other.</p>
+  <p class="Note_text"> </p>
+  <p><strong><a id="Free_Distortion_BCC"></a>Free Distortion BCC</strong><strong> [3D]</strong></p>
+  <p>The free distortion window can be accessed from the velocity BCC window. (See <a href="#Fig.14.2.2._Free_Distortion_BCC_window"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>2.</a>) Free distortion boundary condition
+    is applied where there is a possibility of maximum distortion taking place.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="408" src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image002.jpg" width="750" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig.14.2.2._Free_Distortion_BCC_window"></a>Free Distortion BCC window</p>
+  <p> </p>
+  <p><strong>Procedure for applying free distortion boundary condition:</strong></p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Fix one node in X, Y, Z direction respectively.  This removes the three-degree of freedom in translation. </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Find a point at the same X and Z value but different Y – fix this in Z direction – X-rotation. </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Find a point at the same Y and X value but different Z – fix this in X direction – Y rotation. </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Find a point at the same Z and Y value but different X – fix this in Y direction – Z rotation (See <a href="#Fig._14.2.3._Fixing_of_nodes_in_X,_Y_and_Z_direction"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>3.</a>)</li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image003.jpg" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.3._Fixing_of_nodes_in_X,_Y_and_Z_direction"></a>Fixing of nodes in X, Y and Z direction</p>
+  <p> </p>
+  <p>A typical example showing how to define free distortion BCC:</p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">User picks a node to fix in X, Y, Z directions as shown in <a href="#Fig._14.2.4._Selection_of_node_to_be_fixed_in_XYZ_direction"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>4.</a></li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><img height="289" src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image004.jpg" width="750" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.4._Selection_of_node_to_be_fixed_in_XYZ_direction"></a>Selection of node to be fixed in XYZ direction</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;counter-reset: item1 1;" value="2">System suggests a node to fix in Z direction. The suggested node has minimum angle to Y axis and is furthest from the XYZ fixed node. (See <a href="#Fig._14.2.5._Selection_of_node_to_be_fixed_in_Z_direction"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>5.</a>)</li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image005.jpg" width="750" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.5._Selection_of_node_to_be_fixed_in_Z_direction"></a>Selection of node to be fixed in Z direction</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;counter-reset: item1 2;" value="3">System suggests a node to fix in X direction. The suggested node has minimum angle to Z axis and is furthest from the XYZ fixed node. (See <a href="#Fig._14.2.6._Selection_of_node_to_be_fixed_in_X_direction"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>6.</a>)</li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><img height="280" src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image006.jpg" width="750" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.6._Selection_of_node_to_be_fixed_in_X_direction"></a>Selection of node to be fixed in X direction</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;counter-reset: item1 3;" value="4">System suggests a node to fix in Y direction. The suggested node has minimum angle to X axis and is furthest from the XYZ fixed node. User input can also be used while fixing the X, Y, Z nodes. (See <a href="#Fig._14.2.7._Selection_of_node_to_be_fixed_in_Y_direction"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>7.</a>)</li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><img height="284" src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image007.jpg" width="750" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.7._Selection_of_node_to_be_fixed_in_Y_direction"></a>Selection of node to be fixed in Y direction</p>
+  <p> </p>
+  <p>The defined free distortion BCC is as shown in <a href="#Fig._14.2.8._Defined_free_distortion_BCC"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>8.</a>,</p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image008.jpg" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.8._Defined_free_distortion_BCC"></a>Defined free distortion BCC</p>
+  <p> </p>
+  <h2><a id="14.2.2._Pressure_BCC"></a>Pressure BCC [2D, 3D]</h2>
+  <p><strong>[2D]</strong>: The pressure boundary conditions specifies a uniform, or linearly varying, force per unit area on the element faces connecting the specified edges. Two values for the normal pressure are required, the first value is the beginning
+    value of pressure from the beginning point where pressure is set, the second value is the value at the end of where the pressure is specified. The pressure is linearly interpolated between the start and the end. The keywords for pressure are <a href="../../Keyword_Documentation/E/ECCDEF.htm">ECCDEF</a>    and <a href="../../Keyword_Documentation/E/ECPRES.htm">ECPRES</a>. User can define Pressure window as shown in <a href="#Fig._14.2.9._2D_pressure_window_definition"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>9.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="423" src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image009.jpg" width="750" /></p>
+  <p> </p>
+  <p class="Fig_name">(a)</p>
+  <p class="Fig_name"> </p>
+  <p class="Fig_name"><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image010.jpg" /></p>
+  <p class="Fig_name"> </p>
+  <p class="Fig_name">(b)</p>
+  <p class="Fig_name"> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.9._2D_pressure_window_definition"></a>2D pressure window definition; (a) For 2D (b) pressure window</p>
+  <p> </p>
+  <p><strong>[3D]</strong>: The pressure boundary conditions specifies a uniform, or linearly varying, force per unit area on the element faces connecting the specified nodes. For more information about how to define free distortion BCC please refer <a href="#Free_Distortion_BCC">Free Distortion BCC</a>    [ 3D].</p>
+  <p> </p>
+  <p style="text-align: center"><img height="424" src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image011.jpg" width="750" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.10._3D_pressure_window_definition"></a>3D pressure window definition</p>
+  <p> </p>
+  <h2><a id="14.2.3._Force_BCC"></a>Force BCC [2D, 3D]</h2>
+  <p>Force boundary conditions specify the force applied on each node. The force is  specified in default units. For die stress analysis, the force that the die exerted on the workpiece can be reversed and interpolated onto the dies by using the interpolation
+    function.</p>
+  <p> </p>
+  <p><strong>Steps to Define Force interpolation:</strong></p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Click on <img height="21" src="../../../assets/Icons/Pre_icons/MO_Interpolate_button.jpg" width="70" />  Button, a window will pops up as shown in <a href="#Fig._14.2.11._Database_interpolation_widow"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>11.</a></li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image012.jpg" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.11._Database_interpolation_widow"></a>Database interpolation widow</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; counter-reset: item1 1;" value="2">Click on <img src="../../../assets/Icons/Pre_icons/MO_Browse_button.jpg" /> select step from the loaded DB at which interpolation of forces needs to be carried over. (See <a href="#Fig._14.2.12._Database_interpolation_widow_showing__step_number_selection"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>12.</a>)</li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._14.2.12._Database_interpolation_widow_showing__step_number_selection"></a><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image013.jpg" /></p>
+  <p> </p>
+  <p class="Fig_numb">Database interpolation widow showing  step number selection</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; counter-reset: item1 2;" value="3">Select workpiece object from the popup window. System will define tolerance automatically required for interpolation if the tolerance field has 0.00 value. User can specify required tolerance value in error tolerance tab as shown in <a href="#Fig._14.2.13._Database_Interpolation_window_showing_Defining_object_number_and_Error_tolerance"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>13.</a>      Click on <img src="../../../assets/Icons/Pre_icons/MO_Interpolate_button2.jpg" />.</li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image014.jpg" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.13._Database_Interpolation_window_showing_Defining_object_number_and_Error_tolerance"></a>Database Interpolation window showing Defining object number and Error tolerance</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; counter-reset: item1 3;" value="4">Click <img src="../../../assets/Icons/Pre_icons/MO_OK_button.jpg" /> when Force interpolation tolerance window will pop up. (See <a href="#Fig._14.2.14._Force_Interpolation_window"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>14</a>)</li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image015.jpg" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.14._Force_Interpolation_window"></a>Force Interpolation window  </p>
+  <p> </p>
+  <p>The interpolated forces will be displayed under force tab as shown in <a href="#Fig._14.2.15._Force_interpolation_of_2D_Top_die"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>15.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="423" src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image016.jpg" width="750" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._14.2.15._Force_interpolation_of_2D_Top_die"></a>Force interpolation of 2D Top die      </p>
+  <p> </p>
+  <h2><a id="14.2.4._Movement_BCC"></a>Movement BCC [2D, 3D]</h2>
+  <p>The movement of specific nodes on an object can be specified. If the movement boundary condition is specified, object movement controls must also be specified. </p>
+  <p> </p>
+  <h2><a id="14.2.5._Shrink_fit_BCC"></a>Shrink fit BCC [2D, 3D]</h2>
+  <p>A specified displacement can be specified in any direction for each node. This is frequently used for specifying shrink fit conditions between a die insert and a shrink ring.</p>
+  <p>Shrink Fit BCC in 3D used  for die stress analysis, This can be defined by following steps,</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Entering the interference value. </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Selecting the Direction (Direction perpendicular to the inner surface of the shrink ring or outer surface of the Die insert)</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Selecting the inner surface of the shrink ring or outer surface of the Die insert (surface which is contact with the die)</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">If shrink fit is applied to the inner object, the value should be negative and If shrink fit is applied to the outer object then the value should be positive.</p>
+  <p>For more information on shrink fit, Please refer<span style="color:#0000ff;"> <a href="../../Operation_Templates/30_Die_Stress/2D_Die_Stress_Analysis_Theory.htm">2D Die Stress Analysis Theory</a></span>.</p>
+  <p> </p>
+  <h2><a id="14.2.6._Contact"></a>Contact BCC [2D, 3D]</h2>
+  <p>The Contact boundary condition displays inter-object boundary contact conditions on a given object. The user should gain some experience with DEFORM before using this option. The contact conditions are stored in three components to represent the fact
+    that there are three degrees of freedom for any given node.</p>
+  <p> </p>
+  <p>Contact boundary conditions are applied to nodes of a slave object, and specify contact between those nodes and the surface of a master object (See <a href="#Fig._14.2.1._2D_velocity_BCC_window"><span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>1.</a>).
+    If a node is specified to be in contact with a particular object, it will be placed on the surface of that object. If this requires changing the position of that node, it will be changed as necessary. Contact boundary conditions are generated under
+    the Inter-object Contact relation (<a href="../../Keyword_Documentation/C/CNTACT.htm">CNTACT</a>) section.</p>
+  <p>Contact boundary conditions can be displayed for a given object using the Objects, Boundary Conditions, Advanced Deformation BCC&#39;s icon.</p>
+  <p> </p>
+  <h2><a id="14.2.7._Beginning_surface_BCC"></a>Beginning surface BCC [3D]</h2>
+  <p>In Extrusion process this specifies the beginning surface of the workpiece.</p>
+  <p> </p>
+  <h2><a id="14.2.8._Free_Surface_BCC"></a>Free Surface BCC [3D]</h2>
+  <p> In Extrusion process this specifies the end surface of the workpiece.</p>
+  <p> </p>
+  <h2><a id="14.2.9._Rolling_BCC"></a>Rolling BCC [3D]</h2>
+  <p style="text-align: center"><a id="Fig._14.2.16._Rolling_Boundary_condition_window"></a><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image017.jpg" /></p>
+  <p class="Fig_numb" style="text-align: center;">Rolling Boundary condition window </p>
+  <p> </p>
+  <p><strong style="color: #FF0000">Text to be added</strong></p>
+  <p> </p>
+  <h2><a id="14.2.10._Advanced_deformation_BCC"></a>Advanced deformation BCC [2D, 3D]</h2>
+  <p>The Advanced boundary condition displays inter-object boundary contact conditions on a given object. This is the same information displayed in the Inter-Object BCC&#39;s window. There is no physical significance to the X or Y components of contact.
+    Rather, the ``directions&#39;&#39; are dictated by numerical convenience. Contact conditions are first assigned to the Y direction. If that position is occupied by another value, conditions are assigned in the X direction. For more information please
+    refer section <a href="../17_Object_Data_Initialization/17_1_Node_Data_Window.htm#Deform_BCC"><span style="color:#0000ff;">Nodal data- Deform BCC</span></a> (<a href="../../Keyword_Documentation/B/BCCDEF.htm">BCCDEF</a>).</p>
+  <p> </p>
+  <p>Depending upon the BCC usr_bcc.f fortan file, user has to enter User Routine number. Please refer to <a href="../../User_Routines/56_User_Routines_in_DEFORM/56_User_Routines_in_DEFORM.htm"><span style="color:#0000ff;">Chapter 56. User Routines</span></a>    for a description of how to implement user defined BCC routines. (See<a href="#Fig._14.2.17._Advanced_Deformation_object_boundary_condition_window"> <span data-keyref="Chapter_14_2_Deformation Boundary_Conditions">Fig. 14.2.</span>17.</a>)</p>
+  <p> </p>
+  <p class="Fig_name"><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image018.jpg" /></p>
+  <p class="Fig_name"> </p>
+  <p class="Fig_name">(a)</p>
+  <p class="Fig_name"> </p>
+  <p class="Fig_name"><img src="../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image019.jpg" /></p>
+  <p class="Fig_name"> </p>
+  <p class="Fig_name">(b)</p>
+  <p class="Fig_numb"><a id="Fig._14.2.17._Advanced_Deformation_object_boundary_condition_window"></a>Advanced Deformation object boundary condition window; (a) For 2D (b) For 3D</p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="14_boundary_conditions.htm">14. Boundary Conditions</a></p>
+  <p><a href="14_1_symmetry_boundary_conditions.htm">14.1. Symmetry Boundary Conditions</a></p>
+  <p><a href="14_3_thermal_boundary_conditions.htm">14.3. Thermal Boundary Conditions</a></p>
+  <p><a href="14_4_diffusion_boundary_conditions.htm">14.4. Diffusion Boundary Conditions</a></p>
+  <p><a href="14_5_heating_boundary_conditions.htm">14.5. Heating Boundary Conditions</a></p>
+</body>
+</html>

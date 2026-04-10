@@ -1,0 +1,674 @@
+---
+lang: sk
+title: "GEOPR2"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.7.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>GEOPR2</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>GEOPR2</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/g/g_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/G/GEOPR3.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/G/GEOERR.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="GEOPR2">
+        <span>GEOPR2</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>GEOPR2</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Object data)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"><u>Update History:</u></p>
+          <p class="P_10">V11.1 – GEOPR2 has been introduced.</p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 21-05-2016</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">GEOPR2 Object, GeoParamType, NumSections</p>
+  <p class="P_10_Bold">SectionType1    NumParams1</p>
+  <p class="P_10_Bold">ParamName1</p>
+  <p class="P_10_Bold">ParamValue1</p>
+  <p class="P_10_Bold">...</p>
+  <p class="P_10_Bold">ParamNameN</p>
+  <p class="P_10_Bold">ParamValueN</p>
+  <p class="P_10_Bold">...</p>
+  <p class="P_10_Bold">SectionTypeM    NumParamsM</p>
+  <p class="P_10_Bold">ParamName1</p>
+  <p class="P_10_Bold">ParamValue1</p>
+  <p class="P_10_Bold">...</p>
+  <p class="P_10_Bold">ParamNameN</p>
+  <p class="P_10_Bold">ParamValueN</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Object</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Object number</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">GeoParamType</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Parametric Geometry Type</p>
+          <p class="P_10">-1 - Imported File</p>
+          <p class="P_10">0 - Undefined</p>
+          <p class="P_10">1 - DEFORM Primitive</p>
+          <p class="P_10">2 - CAD Geometry</p>
+          <p class="P_10">3 - Preform Generation</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">NumSections (M)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of Parameter Sections</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">SectionTypeM</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Type of a section</p>
+          <p class="P_10">1 - General Parameters (values are either strings or integers)</p>
+          <p class="P_10">2 - Geometry Parameters (values are doubles)</p>
+          <p class="P_10">3 - CAD Export Options (values are doubles)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">NumParamsM (N)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of Parameters in a section</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">ParamNameN</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Name of a Parameter</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">ParamValueN</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Value of a Parameter</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">GEOPR2 specifies parameters used to define geometry.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">REMARKS</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">This keyword stores geometry parameters a name-value pairs.  Each parameter name is followed by its value.  The parameters are grouped into sections to allow one level of organization.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">The general parameters section is used to store information about the geometry type.  For DEFORM primitives, the primitive type is stored here.  For, imported files and CAD geometry, the file format, file name, and CAD system name are stored
+            here.  Table 1 lists the recognized parameters used in this section.  This section is not used for preform generation.</p>
+          <p class="P_10"> </p>
+          <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 650px; text-align: center; margin-left: 12px;">
+            <colgroup>
+              <col style="width: 200px;"/>
+              <col style="width: 250px;"/>
+              <col style="width: 200px;"/>
+            </colgroup>
+            <tbody>
+              <tr>
+                <td>
+                  <p class="P_10_Bold">Parameter Name</p>
+                </td>
+                <td>
+                  <p class="P_10">Description    </p>
+                </td>
+                <td>
+                  <p class="P_10">Applicable GeoParamType</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="P_10_Bold">FileName</p>
+                </td>
+                <td>
+                  <p class="P_10">The name of the imported file</p>
+                </td>
+                <td>
+                  <p class="P_10">-1</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="P_10_Bold">CadProgram    </p>
+                </td>
+                <td>
+                  <p class="P_10">The name of the CAD program1</p>
+                </td>
+                <td>
+                  <p class="P_10">2</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="P_10_Bold">CadFilePath    </p>
+                </td>
+                <td>
+                  <p class="P_10">The name of the CAD file</p>
+                </td>
+                <td>
+                  <p class="P_10">2</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="P_10_Bold">GeoType  </p>
+                </td>
+                <td>
+                  <p class="P_10">The basic geometry type<span style="vertical-align:super;">1</span></p>
+                </td>
+                <td>
+                  <p class="P_10">1</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="P_10_Bold">SymType    </p>
+                </td>
+                <td>
+                  <p class="P_10">Symmetry type</p>
+                  <p class="P_10">0 - Full Symmetry</p>
+                  <p class="P_10">1 - Half Vertical Symmetry</p>
+                  <p class="P_10">2 - Half Horizontal Symmetry</p>
+                  <p class="P_10">3 - Quarter Symmetry</p>
+                </td>
+                <td>
+                  <p class="P_10">1</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="P_10_Bold">PrimType     </p>
+                </td>
+                <td>
+                  <p class="P_10">The primitive type<span style="vertical-align:super;">2</span></p>
+                </td>
+                <td>
+                  <p class="P_10">1</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="P_10"> </p>
+          <p class="P_10"><span style="vertical-align:super;">1</span> - A list of supported shapes in shown in Table 2</p>
+          <p class="P_10"><span style="vertical-align:super;">2</span> - A list of supported primitives is shown in Table 3.  Note that different primitives may use the same basis geometry shape.</p>
+          <p class="Fig_name">Table 1 - Recognized Section 1 Parameters</p>
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 450px;text-align: center;margin-left: 80px">
+    <colgroup>
+      <col style="width: 300px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p class="P_10">Geometry Shape</p>
+        </td>
+        <td>
+          <p class="P_10">ID</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Rectangle</p>
+        </td>
+        <td>
+          <p class="P_10">2001</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Circle</p>
+        </td>
+        <td>
+          <p class="P_10">2002</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Half Circle</p>
+        </td>
+        <td>
+          <p class="P_10">2003</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Half Hollow Circle</p>
+        </td>
+        <td>
+          <p class="P_10">2004</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Octagon</p>
+        </td>
+        <td>
+          <p class="P_10">2005</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Rectangle for Cylinder</p>
+        </td>
+        <td>
+          <p class="P_10">2006</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Shape Roll Round Cross Section</p>
+        </td>
+        <td>
+          <p class="P_10">2301</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Shape Roll Box1 Cross Section</p>
+        </td>
+        <td>
+          <p class="P_10">2302</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Shape Roll Box2 Cross Section</p>
+        </td>
+        <td>
+          <p class="P_10">2303</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Shape Roll Oval Cross Section</p>
+        </td>
+        <td>
+          <p class="P_10">2304</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Shape Roll Oval Double Cross Section</p>
+        </td>
+        <td>
+          <p class="P_10">2305</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Shape Roll Flat Cross Section</p>
+        </td>
+        <td>
+          <p class="P_10">2306</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Shape Roll Knocks Cross Section</p>
+        </td>
+        <td>
+          <p class="P_10">2307</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Shape Roll UH Cross Section</p>
+        </td>
+        <td>
+          <p class="P_10">2308</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Shape Roll UV Cross Section</p>
+        </td>
+        <td>
+          <p class="P_10">2309</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Shape Roll Octagon Cross Section</p>
+        </td>
+        <td>
+          <p class="P_10">2310</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Shape Roll Knocks2 Cross Section</p>
+        </td>
+        <td>
+          <p class="P_10">2311</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10_Bold" style="text-align: center">Table 2 - Supported Geometry Shapes.</p>
+  <p class="P_10_Bold"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;text-align: center;margin-left: 60px">
+    <colgroup>
+      <col style="width: 200px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 200px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p class="P_10">Primitive Type</p>
+        </td>
+        <td>
+          <p class="P_10">ID</p>
+        </td>
+        <td>
+          <p class="P_10">Appropriate Geometry Shape ID</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Axis Symetric Cylinder</p>
+        </td>
+        <td>
+          <p class="P_10">0</p>
+        </td>
+        <td>
+          <p class="P_10">2006</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Axis Symetric Hollow Cylinder</p>
+        </td>
+        <td>
+          <p class="P_10">1</p>
+        </td>
+        <td>
+          <p class="P_10">2006</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Axis Symetric Torus</p>
+        </td>
+        <td>
+          <p class="P_10">2</p>
+        </td>
+        <td>
+          <p class="P_10">2002</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Axis Symetric Sphere</p>
+        </td>
+        <td>
+          <p class="P_10">3</p>
+        </td>
+        <td>
+          <p class="P_10">2003</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Axis Symetric Hollow Sphere</p>
+        </td>
+        <td>
+          <p class="P_10">4</p>
+        </td>
+        <td>
+          <p class="P_10">2004</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Plane Strain Bar</p>
+        </td>
+        <td>
+          <p class="P_10">0</p>
+        </td>
+        <td>
+          <p class="P_10">2001</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Plane Strain Cylinder</p>
+        </td>
+        <td>
+          <p class="P_10">1</p>
+        </td>
+        <td>
+          <p class="P_10">2002</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Plane Strain Hollow Cylinder</p>
+        </td>
+        <td>
+          <p class="P_10">2</p>
+        </td>
+        <td>
+          <p class="P_10">2004</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="P_10">Plane Strain Octogonal Bar</p>
+        </td>
+        <td>
+          <p class="P_10">3</p>
+        </td>
+        <td>
+          <p class="P_10">2005</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10_Bold"> </p>
+  <p class="Fig_name">Table 3 - Primitive Types</p>
+  <p class="P_10"> </p>
+  <p class="P_10">The geometry parameters section stores the actual geometry parameters.  For CAD geometry, this stores the named parameters define on the geometry by the CAD system.  For DEFORM primitives, imported geometry and Preform geometry, this stores the named
+    parameters used by the DEFORM system.</p>
+  <p class="P_10"> </p>
+  <p class="P_10">The CAD Export Options section is only used for CAD geometry (GeoParamType = 2).  This will store options used to export the CAD file to a format that can be read by DEFORM (usually DXF or IGES).</p>
+  <p class="P_10"> </p>
+  <p class="P_10">The action keyword, GENGEO can be used to create geometry defined by GEOPR2.</p>
+  <p class="P_10_Bold"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Related keywords: <a href="geopr3.htm">GEOPR3</a>, <a href="gengeo.htm">GENGEO</a>, <a href="../w/wpaxis.htm">WPAXIS(2D)</a>, <a href="../w/wpaxis_3d.htm">WPAXIS (3D)</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

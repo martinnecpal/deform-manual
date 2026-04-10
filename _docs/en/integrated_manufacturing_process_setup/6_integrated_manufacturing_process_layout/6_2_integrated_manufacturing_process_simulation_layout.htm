@@ -1,0 +1,593 @@
+---
+lang: en
+title: "6.2. Integrated Manufacturing Process Simulation layout"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "3.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.2. Integrated Manufacturing Process Simulation layout</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.2. Integrated Manufacturing Process Simulation layout</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6.2. integrated manufacturing process simulation layout.css"/>
+<meta name="brsnext" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_3_Integrated_Manufacturing_Process_Post_layout.htm"/><meta name="brsprev" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_1_Integrated_Manufacturing_Process_Preprocessor_layout.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="6.2. Integrated Manufacturing Process Simulation layout">
+        <span>6.2. Integrated Manufacturing Process Simulation layout</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>6.2. Integrated Manufacturing Process (MO) Simulation layout</h1>
+  <p><a href="#6.2.1._Simulation_Options">6.2.1. Simulation Options</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Run">Run</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Run_Options">Run Options</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Stop">Stop</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Continue">Continue</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Refresh">Refresh</a> </p>
+    </li>
+  </ul>
+  <p><a href="#6.2.2._Simulation_Jobs_tab">6.2.2. Simulation Jobs tab</a> </p>
+  <p><a href="#6.2.3._Simulation_Message_tab">6.2.3. Simulation Message tab</a> </p>
+  <p><a href="#6.2.4._Simulation_LOG_tab">6.2.4. Simulation LOG tab</a></p>
+  <p><a href="#6.2.5._Simulation_graphics">6.2.5. Simulation graphics</a> </p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Simulation_graphics_tool_bar_options">Simulation graphics tool bar options</a>  </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Right_Mouse_Button_options">Right Mouse Button options</a> </p>
+    </li>
+  </ul>
+  <p><a href="#6.2.6._Step_View_and_Monitor_window">6.2.6. Step View and Monitor window</a> </p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Simulation_Monitor_Window">Simulation Monitor Window</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Step_View_window">Step View window</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>MO Simulation mode is used to submit the problem setup to simulate and monitor the simulation progress. Simulation mode GUI layout (See <a href="#Fig._6.2.1._MO_Simulation_Mode_Layout"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>1</a>.)
+    is mainly divided into Simulation Graphics, Simulation Jobs, Message and Log and Simulation running options.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="372" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image001.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.2.1._MO_Simulation_Mode_Layout"></a>MO Simulation Mode Layout</p>
+  <h2><a id="6.2.1._Simulation_Options"></a>Simulation Options</h2>
+  <p>Simulation options are used to start, stop and continue simulation along with refresh simulation display as shown in <a href="#Fig._6.2.2._Simulation_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>2.</a></p>
+  <p>The main Simulation options Run, Run options, Stop, Continue and Refresh are explained as below,</p>
+  <p style="text-align: center"><a id="Fig._6.2.2._Simulation_options"></a><img height="146" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image002.jpg" width="482"/></p>
+  <p class="Fig_numb">Simulation options</p>
+  <p><a id="Run"></a><strong>Run</strong></p>
+  <p>The simulation can be started by clicking <img height="21" src="../../../assets/icons/simulator_icons/mo_run_icon.jpg" width="23"/> (Submit simulation of current project) icon or <img height="15" src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg" width="26"/>action label or Submit Simulation option from Simulation menu (See <a href="#Fig._6.2.3._Run_Simulation_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>3.</a>) and selecting an appropriate run simulation
+    options. This initiates a series of actions to run the simulation and generate new meshes as necessary.  Run simulation provides three options to run a simulation interactively, those are,</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Start from last negative step</strong>: This will start the simulation from the last negative step of the database. To start a simulation negative step is must, any changes made to the setup in preprocessor will be written to the negative
+      step of DB. Now we can run the job in Interactive mode by unchecked Add simulation job to the queue check box and in Batch mode by checked Add simulation job to the queue check box (<a href="#Fig._6.2.3._Run_Simulation_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>3.</a>).</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Start from beginning (Initial Run)</strong>: Starts the simulation from first step (-1) of the database. (See <a href="#Fig._6.2.3._Run_Simulation_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>3.</a>)</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Add Simulation job to the Queue</strong>: This will add the job to queue and job will simulate the job in Batch mode using available simulation server. We can add the job in queue using Start from last negative step and Start form beginning
+      (Initial Run) options.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="text-align: center"><a id="Fig._6.2.3._Run_Simulation_options"></a><img height="143" src="../../../assets/icons/simulator_icons/run_simulation_mo.jpg" width="327"/></p>
+  <p class="Fig_numb">Run Simulation options</p>
+  <p><strong><strong><a id="Run_Options"></a></strong></strong><strong>Run Options</strong><strong></strong></p>
+  <p><img height="18" src="../../../assets/icons/simulator_icons/mo_run_options_action_lable.jpg" width="76"/> action label or Simulation menu Run (options) will provide more advanced options to run the simulation like interactive or batch mode, running
+    with single and multiple (only for 3D) processors and 32 and 64 bit running.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Job Type</strong>: This Indicates type of the running jobs like MO (Multiple operations), DOE (Design of Experiments) or OPT (Optimization).</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>DB Name/Problem ID</strong>: Displays the current project DB name in case of normal MO operations project. For DOE and OPT it shows the Problem ID as DOE/OPT project name, required DB&#39;s to complete DOE/OPT study are generated after submitting
+      the problem to simulate.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Submitted By</strong> : It will display the project location machine name.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Password to Kill Job</strong>: If user used any password to protect simulation in simulation server of DEFORM setup then that password should be entered here before selecting  <img height="21" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="69"/> or <img height="21" src="../../../assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg" width="81"/>  buttons to start the simulation.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Simultaneous Jobs</strong>: User can indicate number of simulations or Jobs that can be run simultaneously and this number should be equal to or less than the maximum number of jobs specified in DEFORMSetup and also based on the license available.
+      This option is available only for DOE/OPT jobs submission in queue.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Simulation Mode</strong>: There are two simulation modes those are,</li>
+  </ul>
+  <p style="margin-left: 40px"><br/>
+    <img src="../../../assets/icons/simulator_icons/mo_interactive_mode_rb.jpg" style="margin-left: "/> : Using this option, user can run simulations without simulation server by selecting  <img src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg"/> button. This option does not require simulation server to be running. (See <a href="#Fig._6.2.4._Run_options_window_for_MO_job_in_interactive_simulation_mode"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>4.</a>)  </p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image003.jpg"/></p>
+  <p class="Fig_numb"><a id="Fig._6.2.4._Run_options_window_for_MO_job_in_interactive_simulation_mode"></a>Run options window for MO job in interactive simulation mode</p>
+  <p style="margin-left: 0px"><br/> Interactive simulation mode settings are,</p>
+  <p><span><strong style="margin-left:">Computer Name:</strong> This will display the name of the Machine</span></p>
+  <p><span><strong>Type</strong>: This will display whether it is a Single or Multi Processor simulation</span></p>
+  <p><span><strong>Path on Computer:</strong> This will display the path of the DB and in case of DOE/OPT it indicates the path where  DB&#39;s would be generated.</span></p>
+  <p><span><strong>Processors Per Job:</strong> Using this option user can select the number of processors required to be used per job during simulation, currently available only for 3D simulation or job.</span></p>
+  <p><span><strong>Shared Memory Size: </strong>It displays Shared Memory allocated on the simulation server system for DEFORM simulation.</span></p>
+  <p>User can save the settings using <img height="21" src="../../../assets/icons/pre_icons/mo_save_button.jpg" width="73"/> button and close the Run options window using <img height="21" src="../../../assets/icons/pre_icons/mo_close_button.jpg" width="73"/> button.</p>
+  <p><img src="../../../assets/icons/simulator_icons/mo_batch_mode_rb.jpg" style="margin-left: 0px"/>  : Using this option, user can run simulations only in batch mode (See <a href="#Fig._6.2.5._Run_options_window_for_MO_job_in_batch_simulation_mode"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>5.</a>).
+    It is essential to select any one of the available simulation servers listed or first available simulation server to simulate batch queue problems and click on <img height="23" src="../../../assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg" width="88"/> button to start adding job to the queue. The displayed list contains only simulation servers that are added to the DEFORM Setup.</p>
+  <p> </p>
+  <p style="margin-left: 40px;text-align: center"><img height="707" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image004.jpg" width="722"/></p>
+  <p style="margin-left: 40px;text-align: center"><a id="Fig._6.2.5._Run_options_window_for_MO_job_in_batch_simulation_mode" style="cursor: nesw-resize;"></a></p>
+  <p class="Fig_numb">Run options window for MO job in batch simulation mode</p>
+  <p style="margin-left: 0px"><br/> In Batch simulation mode selected simulation servers settings can be set by selecting the particular simulation server and clicking on <img height="23" src="../../../assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg" style="cursor: nwse-resize;" width="88"/>  button. (See <a href="#Fig._6.2.6._Batch_simulation_mode_server_settings"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>6.</a>)</p>
+  <p> <img src="../../../assets/icons/simulator_icons/mo_server_settings_button.jpg"/><a id="Server_Settings"></a>: Using this button user can set the selected simulation server settings like processors to be utilized per job during simulation and shared
+    memory.</p>
+  <p><strong>Server Name</strong>: This will display the selected simulation server machine name</p>
+  <p><strong>Type</strong>: This will display whether it is a Single or Multi Processor simulation</p>
+  <p><strong>Path on Server</strong>: This will display path of the DB if user selected the local machine as simulation server or else  will display as &quot;Copied from :&lt;Phisical_DB_existing_Machine_name&gt;&quot;</p>
+  <p><strong>Processors Per Job</strong>: Using this user can select the number of processors to be used per 3D simulation or job.</p>
+  <p><strong>Shared Memory Size:</strong> It displays Shared Memory allocated on the simulation server<br/> system for DEFORM simulation.</p>
+  <p><br/> User can save the settings using <img height="21" src="../../../assets/icons/pre_icons/mo_save_button.jpg" width="73"/> button and close the Run options window using <img height="21" src="../../../assets/icons/pre_icons/mo_close_button.jpg" width="73"/> button.</p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image005.jpg"/></p>
+  <p class="Fig_numb"><a id="Fig._6.2.6._Batch_simulation_mode_server_settings" style="cursor: nesw-resize;"></a>Batch simulation mode server settings</p>
+  <p><br/>
+    <strong>Simulation Run types:</strong> For normal multiple operations project in both interactive and batch mode user can run the simulation from the initial step or if it is stopped in between or wanted to restart from the mod we can do so by continue
+    options. (See <a href="#Fig._6.2.7._Simulation_Run_types_from_Run_options_for_normal_projects"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>7.</a>)</p>
+  <p> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Initial Run:</strong> This will start the simulation from the first operation starting step. User can also use this option to restart the simulation from the beginning in case of simulation has stopped in the mid due to some license or network
+    issues.</p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Continue Run:</strong> This continue run will provide two options those are, </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Continue from the last step:</strong> This will continue the simulation from the last available negative step. It is useful  when user done some corrections to the setup and tries to restart from any stage of the simulation.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Restart from the selected Simulation:</strong> This will restart the simulation from any of the intermediate operation&#39;s simulations by selecting that particular operation and its simulation.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="text-align: center"><img height="131" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image006.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.2.7._Simulation_Run_types_from_Run_options_for_normal_projects"></a>Simulation Run types from Run options for normal projects</p>
+  <p> </p>
+  <ul class="Disc_wo_intent">
+    <li style="font-family: Arial;font-size: 12pt;text-align: left;line-height: 1.5"><a id="Run_Simulation_on"></a><strong>Run Simulation on</strong>:</li>
+  </ul>
+  <p>DOE or OPT projects has to be simulated only in batch mode, for these projects with multiple DB&#39;s to be simulated, user can run all the DB&#39;s or Run cases in single or multiple simulation servers.</p>
+  <p> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong> Single Simulation Server:</strong></li>
+  </ul>
+  <p>User can run multiple DB&#39;s or Run cases in any one of the available simulation servers in the list. User can select the number of simultaneous simulation to simulated up to available number of licenses based on the requirement. (See <a href="#Fig._6.2.8._Run_options_window_for_DOE_job_using_single_sim_server"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>8.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.2.8._Run_options_window_for_DOE_job_using_single_sim_server"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run options window for DOE job using single sim server</p>
+  <p> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Multiple Simulation Servers:</strong></li>
+  </ul>
+  <p>From version 11.1 user can run the batch queue jobs using the remote machine simulation servers, using the simulation server other than the local will provide opportunity to reduce the load on the local will provide opportunity to reduce the load on
+    the local simulation servers and also the time required to complete the DOE/OPT project.</p>
+  <p>To use multiple simulation severs user needs to check the checkbox next to the available simulation servers  listed in the table. User can change the simulation severs settings, Multiple processors per job and MPI shared memory as mentioned in the batch
+    simulation mode. In addition to the batch simulation mode settings for DOE and OPT, user needs to set maximum Jobs per simulation server in server settings. (See <a href="#Fig._6.2.9._Run_options_window_for_DOE_job_using_multi_sim_server"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>9.</a>) </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.2.9._Run_options_window_for_DOE_job_using_multi_sim_server"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image008.jpg"/></p>
+  <p class="Fig_numb">Run options window for DOE job using multi sim server</p>
+  <p><br/> For DOE and OPT simulations, simulation server settings can be edited by selecting the particular simulation server and clicking on <img height="21" src="../../../assets/icons/simulator_icons/mo_server_settings_button.jpg" width="73"/>  button.  Refer
+    <span style="color:#0000ff;"><a href="#Server_Settings"> Server_Settings</a> f</span>or most of the server settings.</p>
+  <p><br/>
+    <strong>Max Jobs:</strong> User can indicate maximum number of simulations that can be run simultaneously and this number should be equal to or less than the maximum number of jobs specified in DEFORMSetup for each simulation server and also based
+    on the license available. This option is active only for DOE/OPT jobs submitted in queue. (See <a href="6_2_integrated_manufacturing_process_simulation_layout.htm#Fig._6.2.10._DOE_/_OPT_project_sim_server_settings_window"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>10.</a>)</p>
+  <p>User can save the settings using <img height="21" src="../../../assets/icons/pre_icons/mo_save_button.jpg" width="73"/> button and close the Run options window using <img height="21" src="../../../assets/icons/pre_icons/mo_close_button.jpg" width="73"/> button.</p>
+  <p style="text-align: center"><br/>
+    <img height="707" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image009.jpg" width="722"/></p>
+  <p class="Fig_numb"><a id="Fig._6.2.10._DOE_/_OPT_project_sim_server_settings_window"></a>DOE / OPT project sim server settings window</p>
+  <p><br/>
+    <strong>Files to copy</strong>: Create a new file with name &quot;FILES_TO_COPY&quot; inside the working directory without any extension. The file can be edited with notepad or Wordpad or with any text editor. User can enter the name of the files
+    like *.DAT in <a href="../../appendices/appendix_xvii_data_files.htm#FILE_TO_COPY"><strong>FILES_TO_COPY</strong></a> file that are necessary to be copied to the remote system or to Run folders in DOE/OPT in addition to default files that are copied.</p>
+  <p><strong>Simulation Run types:</strong> For DOE/OPT projects user can start the simulation from the first operation or if DOE/OPT variables added only from the intermediate operations then user can continue only from those intermediate operations. Even
+    if DOE/OPT simulation stops abnormally then user can restart the incomplete projects from runs where it stopped and also these incomplete runs can be restarted from the intermediate operations. (See <a href="6_2_integrated_manufacturing_process_simulation_layout.htm#Fig._6.2.11._Simulation_Run_types_for_DOE/OPT_projects"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>11.</a>)</p>
+  <p> </p>
+  <ul class="Disc_wo_intent">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Initial Run:</strong> This initial run will provide two options those are, </li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Start from the beginning:</strong> This will start the simulation from the first operation starting step. User can also use this option to restart the simulation from the beginning in case simulation has stopped in the mid due to some license
+      or network issues.</li>
+  </ul>
+  <p> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Start from the Selected Simulation:</strong> This will start the simulation from any of the intermediate  operation&#39;s simulations by selecting that particular operation and its simulation. If user added DOE study only in the intermediate
+      operation then using this option will reduce the total time required to complete DOE study.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc_wo_intent">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Continue Run: </strong>This continue run will provide two options those are,</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Continue incomplete DOE study:</strong> This will continue the incomplete DOE study simulations from the last available negative step and complete the DOE/OPT project.</li>
+  </ul>
+  <p> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Restart DOE from the selected Simulation:</strong> This will continue the incomplete DOE study runs simulations from any of the intermediate operations simulations by selecting that particular operation and its simulation.</li>
+  </ul>
+  <p><br/> Continue does not need to run successfully simulated DOE run cases again to complete the incomplete DOE project.</p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image010.jpg"/></p>
+  <p class="Fig_numb"><a id="Fig._6.2.11._Simulation_Run_types_for_DOE/OPT_projects"></a>Simulation Run types for DOE/OPT projects</p>
+  <p> </p>
+  <ul class="Disc_wo_intent">
+    <li style="font-family: Arial;font-size: 12pt;text-left: justify;line-height: 1.5"><strong>Simulation Options:</strong></li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>64bit</strong></li>
+  </ul>
+  <p style="margin-left: 40px">Based on the Operating system user can choose the Run type as 64 bit, if user wont check 64 bit checkbox then the run type will be 32bit. In 64 bit machine we can use either 32 bit or 64 bit option based on the processing speed required. From version 11.1
+    64bit option is available even for 2D problems.</p>
+  <p> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Partially Parallel FEM</strong></li>
+  </ul>
+  <p style="margin-left: 40px">Option runs only the solver part of the simulation in parallel mode, while the other operations like model stiffness matrix, remeshing and interpolation are run in single CPU on the primary host machine. In PC environment this results in the execution of
+    one DEF_SIM_P4.EXE on each of the processors requested.</p>
+  <p> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Keep the message file</strong></li>
+  </ul>
+  <p style="margin-left: 40px">This prevents the message file from being deleted after each remesh by renaming it to a unique name for each simulation run.</p>
+  <p> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Auto Report</strong></li>
+  </ul>
+  <p style="margin-left: 40px">When Auto Report is turned on system will generate report for the project with default template even though report generation operation is not added in batch mode. </p>
+  <p> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Parallel meshing</strong>:</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;margin-left: 40px">Using this option we can reduce remeshing time for large models by distributing the remeshing of independent zones of the solid mesh across multiple processors. Multiple processors defined for running simulations will be used to distributethe zones.</p>
+  <p><strong style="margin-left: 40px">Surface + Solid:</strong> Parallel meshing will be applied for both surface and solid meshing.</p>
+  <p><strong style="margin-left: 40px">Solid only: </strong>Parallel meshing will be applied only for solid meshing. </p>
+  <p> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>No automatic remeshing (for no convergence)</strong></li>
+  </ul>
+  <p style="margin-left: 40px">This prevents the simulation from automatic remeshing of an object,  if the simulation stops due to convergence problems.</p>
+  <p><a id="Stop"></a><strong>Stop</strong></p>
+  <p>The simulation can be stopped at the current step by using the <img height="21" src="../../../assets/icons/simulator_icons/mo_stop_icon.jpg" width="25"/> (Stop) icon or <img src="../../../assets/icons/simulator_icons/mo_stop_action_label.jpg"/> action
+    label or Simulation menu option Stop Simulation. (See <span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>1.) Stopping the simulation changes the status from Running to Aborting in the simulating jobs tab or Process Monitor
+    window. After stopping the current simulation it will take the pending jobs in queue to simulate. If the simulation is performing the remesh then we can not stop the problem, only after completing the remesh we can stop the simulation. In the simulation
+    message tab &quot; ***  Simulation Aborted by User  ***&quot; message will appear after stopping the simulation.</p>
+  <p> </p>
+  <p><strong><a id="Continue"></a>Continue</strong></p>
+  <p>The stopped simulation can be continued by using the <img src="../../../assets/icons/simulator_icons/mo_continue_action_label.jpg"/> action label or Continue Simulation option from simulation menu. In background this will automatically generate the
+    database from pre-processor at last step of database, required to start simulation.</p>
+  <p> </p>
+  <p><strong><a id="Refresh"></a>Refresh</strong></p>
+  <p>Refresh is used to update the simulating job status and informations like simulation message and log file along with the simulation graphics display.</p>
+  <p> </p>
+  <h2><a id="6.2.2._Simulation_Jobs_tab"></a>Simulation Jobs tab</h2>
+  <p>The Simulation job will display the status of simulation submitted from the current MO project (See <a href="#Fig._6.2.12._Simulation_jobs_tab;_(a)_FEM_running_status_(b)_REMESH_running_status"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>12.</a>).
+    The status of job could be Running, Remeshing or Pending (when delay in simulation start or when in queue). Refresh button in the simulation options can be used to refresh the status and even to update the status as and when required. For more information
+    on the jobs user can refer to the Simulation menu Process Monitor option. Refer the chapter <a href="../../simulator/23_deform_simulator/23_4_process_monitor.htm">2</a><span style="color:#0000ff;"><a href="../../simulator/23_deform_simulator/23_4_process_monitor.htm">3.4. Process Monitor</a> </span>for
+    details.</p>
+  <p> </p>
+  <p class="Fig_name" style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image011.jpg"/><br/> (a)
+  </p>
+  <p class="Fig_name" style="text-align: center"><a id="Fig._6.2.12._Simulation_jobs_tab;_(a)_FEM_running_status_(b)_REMESH_running_status"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image012.jpg"/><br/> (b)
+  </p>
+  <p class="Fig_numb">Simulation jobs tab; (a) FEM running status (b) REMESH running status</p>
+  <h2><a id="6.2.3._Simulation_Message_tab"></a>Simulation Message tab</h2>
+  <p>Run-time information will be written to the ProblemId.MSG and ProblemId.LOG files. Execution information, including convergence information for each step and simulation error messages, can be found in the .MSG file. For normal stop it gives the message at
+    the end as &quot;NORMAL STOP: The assigned steps have been completed&quot; and for simulation aborted by user the message will be displayed as &quot; ***  Simulation Aborted by User  ***&quot;.</p>
+  <p> </p>
+  <h2><a id="6.2.4._Simulation_LOG_tab"></a>Simulation LOG tab</h2>
+  <p>The Information on simulation and remeshing, execution times, fatal errors and type of FEM job running (32-bit or 64-bit simulation) in case of 3D job can be found in the .LOG file. When simulating the Multiple operations project, it even records the DB
+    checking, DB generation, scheduled remesh, positioning and contact generation messages. So it is help full to investigate in case of setup related mistakes.</p>
+  <p> </p>
+  <h2><a id="6.2.5._Simulation_graphics"></a>Simulation graphics</h2>
+  <p>While the simulation is running, the second most recent saved step can be viewed. Many different variables can be viewed such as plastic strain, plastic strain rate, temperature and many more. (See <a href="#Fig._6.2.1._MO_Simulation_Mode_Layout"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>1.</a>)</p>
+  <p> </p>
+  <p><a id="Simulation_graphics_tool_bar_options"></a><strong>Simulation graphics tool bar options:</strong></p>
+  <p>The simulation graphics tool bar contains the state variables window icon <img height="21" src="../../../assets/icons/post_icons/mo_state_variable_icon.jpg" width="22"/> and major state variables contour icons <img height="21" src="../../../assets/icons/post_icons/mo_temp_sv.jpg" width="22"/> (Temperature),<img height="21" src="../../../assets/icons/post_icons/mo_damage_sv_icon.jpg" width="26"/> (Damage), <img height="21" src="../../../assets/icons/post_icons/mo_vel_sv_icon.jpg" width="26"/> (Velocity),  <img src="../../../assets/icons/post_icons/mo_disp_sv_icon.jpg"/> (Displacement), <img src="../../../assets/icons/post_icons/mo_eff_stress_sv_icon.jpg"/> (Effective stress), <img height="21" src="../../../assets/icons/post_icons/mo_strain_sv_icon.jpg" width="26"/> (Effective strain) and <img height="21" src="../../../assets/icons/post_icons/mo_strain_rate_sv_icon.jpg" width="26"/> (Effective strain rate). The plotted state variables can be removed using the <img src="../../../assets/icons/post_icons/mo_clear_sv_icon.jpg"/> (Clear) icon. For more detailed information about state variables refer to the <span style="color:#0000ff;"><span style="color:#000000;">NG Post mode section</span>    <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm">26.6.3</a></span><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm">. State Variables</a>.</p>
+  <p> </p>
+  <p>Other options like Object mode <img src="../../../assets/icons/post_icons/mo_show_user_defined_obj_icon.jpg"/>, Contact display <img src="../../../assets/icons/post_icons/mo_show_cotact_icon.jpg"/>, Contour plot types , Summary <img src="../../../assets/icons/post_icons/mo_summary_icon.jpg"/> , Load-Stroke graph <img src="../../../assets/icons/post_icons/mo_load_stroke_icon.jpg"/>, Mirror symmetry <img src="../../../assets/icons/post_icons/mo_3d_mirroring_icon.jpg"/> , Slicing <img src="../../../assets/icons/post_icons/mo_slicing_option.jpg"/> , Measurement <img src="../../../assets/icons/post_icons/mo_measure_tool.jpg"/>  and 3D view <img src="../../../assets/icons/post_icons/mo_3d_view_icon.jpg"/> ,3D setup <img src="../../../assets/icons/post_icons/mo_3d_setup_icon.jpg"/> (only
+    for 2D models) and Display Properties <img src="../../../assets/icons/post_icons/mo_disp_porp_icon.jpg"/> are also available in Simulation graphics and are explained below,</p>
+  <p> </p>
+  <p><strong><img src="../../../assets/icons/post_icons/mo_show_user_defined_obj_icon.jpg"/>Object mode</strong>: User can toggle the object&#39;s Display, Geometry, Mesh, Transparency (only for 3D) modes independently. This can be done by turning on/off
+    respective check boxes as shown in <a href="6_1_integrated_manufacturing_process_preprocessor_layout.htm#Fig._6.1.22._User_defined_Object_Mode_window"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>22.</a></p>
+  <p><img src="../../../assets/icons/post_icons/mo_show_cotact_icon.jpg"/> <strong>Show Contact Nodes</strong>: Turns on the contact display for the selected object from object tree with all other objects. (See <a href="6_1_integrated_manufacturing_process_preprocessor_layout.htm#Fig._6.1.22._User_defined_Object_Mode_window"><span data-keyref="Chapter_6.1_Int_man_pro_pre">Fig.  6.1.</span>22.</a>)</p>
+  <p> <img src="../../../assets/icons/post_icons/mo_contour_line_icon.jpg"/> <strong>Contour Line</strong>: This plots the state variables in line contour mode. User can change contour plot type, color bar type, label type, its significants etc as shown
+    in<a href="#Fig._6.2.13._Line,_smooth_and_solid_contour_display_example">  <span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>13.</a> and <a href="#Fig._6.2.14._Contour_bar_plot_type_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>14.</a></p>
+  <p><img height="22" src="../../../assets/icons/post_icons/mo_contour_smooth_icon.jpg" width="27"/><strong>Contour Smooth</strong>: This plots the state variables in smooth shaded contour mode as shown in <a href="#Fig._6.2.14._Contour_bar_plot_type_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>14.</a></p>
+  <p> <img src="../../../assets/icons/post_icons/mo_contour_solid_icon.jpg"/> <strong>Contour Solid</strong>: This plots the state variables in solid contour mode as shown in <a href="#Fig._6.2.14._Contour_bar_plot_type_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>14.</a></p>
+  <p> <strong><img src="../../../assets/icons/post_icons/mo_contour_vector_icon.jpg"/> Contour Vector</strong>: This plots the state variables in vector contour mode.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="311" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image013.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._6.2.13._Line,_smooth_and_solid_contour_display_example"></a>Line, smooth and solid contour display example</p>
+  <p><br/>
+    <strong>Color bar options:</strong> After plotting different contour types as shown in <a href="#Fig._6.2.14._Contour_bar_plot_type_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>14.</a>, user can right click
+    on the color bar and change its properties (See <a href="#Fig._6.2.16._Contour_bar_colorbar_type_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>16.</a>).</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Hide colorbar:</strong> This hides the color bar from simulation graphics.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Plot type:</strong> Using this user can plot different contour types (See  <a href="#Fig._6.2.14._Contour_bar_plot_type_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>14.</a>) for objects like Line,
+      Smooth shading, Solid, Elemental shading, Iso surface, Deflection and MinMax. (See <a href="#Fig._6.2.14._Contour_bar_plot_type_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>14.</a>)</li>
+  </ul>
+  <p class="Fig_name">    <br/>
+    <a id="Fig._6.2.14._Contour_bar_plot_type_options"></a><img height="302" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image015.jpg" width="300"/> <img height="302" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image014.jpg" width="300"/></p>
+  <p class="Fig_name" style="margin-left: "><br/> (a)                                                                                             (b)</p>
+  <p class="Fig_numb">Contour bar plot type options; (a) For 3D (b) For 2D</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Scale type: </strong>Using this user can plot the contours by considering only the current step max and Min values (Local) or All currently available steps max and Min values (Global) or required available range can be set under then user
+      defined type (within the Global). (See <a href="#Fig._6.2.15._Contour_bar_scale_type_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>15.</a>)</li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.2.15._Contour_bar_scale_type_options"></a>   <img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image016.jpg"/></p>
+  <p class="Fig_numb">Contour bar scale type options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Colorbar type</strong>: Using this user can select standard color combination contours or user defined color bar types.(See <a href="#Fig._6.2.16._Contour_bar_colorbar_type_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>16.</a>)</li>
+  </ul>
+  <p style="text-align: center"><a id="Fig._6.2.16._Contour_bar_colorbar_type_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image017.jpg"/></p>
+  <p class="Fig_numb">Contour bar colorbar type options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Label type</strong>: Using this user can change the color bar values display types to Float decimal, Float significants, Exponential and Auto. (See <a href="#Fig._6.2.17._Contour_bar_label_type_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>17.</a>)</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="text-align: center"><a id="Fig._6.2.17._Contour_bar_label_type_options"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image018.jpg"/></p>
+  <p class="Fig_numb">Contour bar label type options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Significants: </strong>Using this user can change the color bar values number of significants. (See <a href="#Fig._6.2.18._Contour_bar_significants_option"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>18.</a>)</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"><a id="Fig._6.2.18._Contour_bar_significants_option"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image019.jpg"/></p>
+  <p class="Fig_numb">Contour bar significants option</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Display Min/Max: </strong>Checking this check box will display Min and Max values of the state variable contour at current step.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Change values color: </strong>Using this user can change color of the color bar values.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Change values font:</strong> Using this user can change font type, style and size of the color bar values displaying.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Color Bar Preference: </strong>This provides two options display friendly and print friendly based on the requirement. (See <a href="#Fig._6.2.19._Contour_bar_colorbar_Preference"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>19.</a>)</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="text-align: center">      <a id="Fig._6.2.19._Contour_bar_colorbar_Preference"></a> <img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image020.jpg"/></p>
+  <p class="Fig_numb">Contour bar colorbar Preference</p>
+  <p><br/>
+    <strong>Summary</strong> <img src="../../../assets/icons/post_icons/mo_summary_icon.jpg"/> : Certain characteristic data, such as press loads, principle die velocities and maximum and minimum values of state variables are stored for every simulation step,
+    whether complete data is stored for that step or not in the respective tabs. This summary data vs time graphs for all the saved steps can be viewed in the graphics window. For more information refer the <span style="color:#0000ff;">Section <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_summary.htm">26.6.6. Summary Graphs</a>.</span></p>
+  <p> </p>
+  <p>Load/Stroke Graphs <img src="../../../assets/icons/post_icons/mo_load_stroke_icon.jpg"/>: The graphs window is used to generate load, speed, torque, angular velocity, energy and volume vs. time (or stroke) plots for the object. For more information
+    refer the <span style="color:#0000ff;">Section <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_7_load_stroke.htm">26.6.7. Load Stroke</a> Graphs.</span></p>
+  <p> </p>
+  <p>Mirror Symmetry <img src="../../../assets/icons/post_icons/mo_3d_mirroring_icon.jpg"/> : The purpose of object mirroring and symmetry is to allow the user to visualize the object both sides of the centerline of a part for 2D and in 3D user can visualize
+    the entire part from symmetry model. For more information refer the Section <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_15_mirror_symmetry.htm">26.6.15. Mirror Symmetry</a>.</p>
+  <p><br/>
+    <strong>Interactive Slicing</strong> <img src="../../../assets/icons/post_icons/mo_slicing_option.jpg"/> :</p>
+  <p>[3D]: The slicing dialog allows the user to cut a section into the workpiece. When the section is made, shaded contours can be seen in the cut area. For more information refer the <span style="color:#0000ff;">Section <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing.htm">26.6.15.Slicing</a>.</span></p>
+  <p><br/>
+    <strong>Delete Slicing </strong><img src="../../../assets/icons/post_icons/mo_del_slicing_icon.jpg"/> :</p>
+  <p><strong>[3D]:</strong> The Sliced plane can be deleted by clicking on this option to see the un-sliced object.</p>
+  <p><br/>
+    <strong>Measurement </strong><img src="../../../assets/icons/post_icons/mo_measure_tool.jpg"/> : For this option refer the next <span style="color:#0000ff;"><a href="#Right_Mouse_Button_options">Section 6.2.5.2. Right Mouse Button options</a> -<span style="color:#000000;">Measure</span></span>
+    <span style="color:#000000;">.</span></p>
+  <p><strong>3D View <img src="../../../assets/icons/post_icons/mo_3d_view_icon.jpg"/>  : </strong>[2D]:This is used to view the 2D simulation results by revolving or extruding the objects into 3D.</p>
+  <p> </p>
+  <p><strong>3D Setup</strong> <img src="../../../assets/icons/post_icons/mo_3d_setup_icon.jpg"/> : [2D]: The revolved or extruded 2D simulation results 3D view settings can be controlled by using 3D Setup. For more information on 3D View and Setup refer the
+    <span style="color:#0000ff;"><a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup.htm">Section 26.6.20. 3D Viewer and Setup</a>.</span></p>
+  <p><br/> For Menu bar and Tool bar options like Axis views, Display rendering modes, View fit, Display Refresh and Display modification options (Zoom, Pan, Rotate) refer the sections <a href="6_4_main_menu.htm#Viewport_Menu">6.4.1.2.Viewport Menu</a>,
+    <a href="6_4_main_menu.htm#Display_menu">6.4.1.3.Display Menu</a> and <a href="6_4_main_menu.htm#Mouse_Menu">6.4.1.4.Mouse Menu.</a></p>
+  <p><br/>
+    <strong>Display Properties</strong> <img src="../../../assets/icons/post_icons/mo_disp_porp_icon.jpg"/>: This option used to define the Define the DB info and Title Labels to display in Graphical Display window. (See <a href="#Fig._6.2.20._Display_Properties_window"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>20.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.2.20._Display_Properties_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image021.jpg"/></p>
+  <p class="Fig_numb">Display Properties window</p>
+  <p> </p>
+  <p><a id="Right_Mouse_Button_options"></a><strong>Right Mouse Button options</strong></p>
+  <p>DB Info: This by default displays the DB name, while simulating it shows the DB name as &quot;FOR003&quot;, after completing it Shows the User Default, actual DB name. DB path, DB folder, Simulation title, Operation Name, Simulation Name can also be
+    set as DB Info in the Simulation Monitor window as shown in <a href="#Fig._6.2.21._DB_Info_display_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>21.</a></p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image022.jpg"/></p>
+  <p class="Fig_numb"><a id="Fig._6.2.21._DB_Info_display_options"></a>DB Info display options</p>
+  <p><strong>Title: </strong> Title will by default displays the User Defined, Step number. Process Time, Die Stroke and Remaining Stroke. User can set one of these options as Title in the Simulation Monitor window as shown in <a href="#Fig._6.2.22._Title_Display_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>22.</a></p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image023.jpg"/></p>
+  <p class="Fig_numb"><a id="Fig._6.2.22._Title_Display_options"></a>Title Display options</p>
+  <p><strong><br/>
+Show Dimensions:</strong> This will display the major dimensions for the displaying objects.</p>
+  <p> </p>
+  <p><strong>Show current Object Mark: </strong>This will highlight the current selected object by marks at boundary to identify when multiple objects mode is selected.</p>
+  <p> </p>
+  <p><strong>Show View Axis:</strong> This will hide or show the axis in graphics display window.</p>
+  <p><br/>
+    <strong>Colorbar: </strong>This will hide or display the state variable contour color bar in graphics display window.</p>
+  <p><br/>
+    <strong>Load and Save Viewport:</strong> The user can move or change the views of the geometries by using display tools such as pan, dynamic zoom and box zoom in the display window. These views can be saved using save option. For more information
+    refer the <a href="6_4_main_menu.htm#Load_and_Save">Section 6.4.1.2.6. Load and Save viewport</a>.</p>
+  <p><br/>
+    <strong>Objects Display mode: </strong>This is used to select the different objects display modes like Single, Multiple and User. Selecting this option will give popup to the user defined object selection window as shown in</p>
+  <p><a href="#Fig._6.2.23._Contact_Display_RMB_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>23.</a></p>
+  <p><br/>
+    <strong>Contact display</strong> <img src="../../../assets/icons/post_icons/mo_show_cotact_icon.jpg"/> : This turns on the contact nodes display of all objects in display window. Contact nodes display types can also be changed to Region, Node and
+    Region, Show Underfill and self contact region as shown in <a href="#Fig._6.2.23._Contact_Display_RMB_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>23.</a></p>
+  <p>   </p>
+  <p class="Fig_name"><img height="354" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image024.jpg" width="300"/>  <img height="417" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image025.jpg" width="300"/></p>
+  <p class="Fig_name"><br/> (a)                                                                           (b)</p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._6.2.23._Contact_Display_RMB_options"></a>Contact Display RMB options; (a) For 2D (b) For 3D</p>
+  <p><br/>
+    <strong>Display Option:</strong> After turning on the contact display (<img src="../../../assets/icons/post_icons/mo_show_cotact_icon.jpg"/>),  this option can be used to change the contact display type to point or polygon and the point size as shown in
+    <a href="#Fig._6.2.24._Display_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>24.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image026.jpg"/></p>
+  <p class="Fig_name">(a) Selected node Display options</p>
+  <p class="Fig_name"><br/>
+    <img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image027.jpg"/><br/> (b) point size Display options</p>
+  <p class="Fig_numb"><a id="Fig._6.2.24._Display_options"></a>Display options</p>
+  <p><br/>
+    <strong>Calculate Contact Area: [3D]</strong> This option will calculate the contact area for the deformable object and popup the area information with respective objects as shown in <a href="#Fig._6.2.25._Calculated_contact_area_information_popup"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>25.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.2.25._Calculated_contact_area_information_popup"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image028.jpg"/></p>
+  <p class="Fig_numb">Calculated contact area information popup</p>
+  <p><br/>
+    <strong>Measurement Style</strong><strong><img src="../../../assets/icons/post_icons/mo_measure_tool.jpg"/></strong>: This tool allows the user to measure any distance between two points by clicking consecutively on both points. The measurement can
+    be plot in either X or Y or XY direction, in 3D Z direction will come into picture, using the CAD style option available which displays the measured values in the selected direction.(See <a href="#Fig._6.2.26._Measure_RMB_options"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>26.</a>)  </p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_name" style="text-align: center"><img height="125" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image029.jpg" width="750"/><br/> (a)                                                                  (b)</p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._6.2.26._Measure_RMB_options"></a>Measure RMB options; (a) For 2D (b) For 3D</p>
+  <p><br/>
+    <strong>Measurement options: </strong>This provides to clear previous measurements, modify  different font size and backgound color for the measurement display in the graphics display window as shown in <a href="#Fig._6.2.27._Measurement_background_color_option"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>27. </a>     </p>
+  <p> </p>
+  <p style="text-align: center"><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image030.jpg"/></p>
+  <p class="Fig_numb"><a id="Fig._6.2.27._Measurement_background_color_option"></a>Measurement background color option</p>
+  <p><br/>
+    <strong>Background Theme:</strong> Using this option user can select the different background themes available like Navy blue, White, Black and Gray for the graphics window.</p>
+  <p> </p>
+  <p><strong>Show title bar: </strong>This option can be used to show the Title bar of simulation graphics window.</p>
+  <p><br/>
+    <strong>Change feature angle:</strong> User can use this option to change the range of selections when selecting the elements/nodes/polygons for adding BCC or editing geometry etc. using surface patch method. It displays the surface patch by treating
+    surfaces within the feature angle as the one surface. A curved surface with smaller feature angle means fewer surface polygons will be picked at a time. Selecting the option Change feature angle pops up the feature angle changing window as shown in
+    <a href="#Fig._6.2.28._3D_feature_angle_entry_window"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>28.</a></p>
+  <p><br/> Also see the <a href="#Fig._6.2.29._Surface_path_display_with_different_feature_angle"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>29.</a> for the surface patch display for the die geometry with different feature
+    angle.</p>
+  <p style="text-align: center"><a id="Fig._6.2.28._3D_feature_angle_entry_window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image031.jpg"/></p>
+  <p class="Fig_numb">3D feature angle entry window</p>
+  <p style="text-align: center"><br/>
+    <img height="306" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image033.jpg" width="300"/>   <img height="305" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image032.jpg" width="300"/>  </p>
+  <p class="Fig_name">(a)                                                                                     (b)</p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._6.2.29._Surface_path_display_with_different_feature_angle"></a>Surface path display with different feature angle; (a) For angle 10 (b) For angle 20</p>
+  <h2><a id="6.2.6._Step_View_and_Monitor_window"></a>Step View and Monitor window</h2>
+  <p><a id="Simulation_Monitor_Window"></a><strong>Simulation Monitor Window</strong></p>
+  <p>Simulation Monitor window will be displaying the % of simulation completed using progress bar, % value and the completed number of steps out of defined total number of steps is as shown in <a href="#Fig._6.2.30._Simulation_Monitor_Window"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>30.</a>    It also gives a update button by clicking on it will update the DB step in simulation graphics window also we can use auto update check box to update automatically based on selected monitoring type.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.2.30._Simulation_Monitor_Window"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image034.jpg"/></p>
+  <p class="Fig_numb">Simulation Monitor Window</p>
+  <p><br/>
+    <strong>Monitoring: </strong>This option is used update the graphics display of the current step or Last saved step or to automatically update the steps as simulation running as shown in<a href="#Fig._6.2.31._Monitoring_RMB_options"> <span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>31.</a></p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Auto: </strong>This automatically updates the saved step while simulating in simulation graphics.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Current Step:</strong> This shows the current step in simulation graphics.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Last Saved Step: </strong>This shows the last saved step in simulation graphics.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"><img height="137" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image035.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.2.31._Monitoring_RMB_options"></a>Monitoring RMB options</p>
+  <p> </p>
+  <p>DB Info and Title options can be used to view certain useful information related to simulation like DB path, operation name and simulation title, current step, process time, current die stroke and remaining stroke. For more information refer the Section
+    <a href="#Right_Mouse_Button_options">6.2.5.2. Right_Mouse_Button_options.</a></p>
+  <p> </p>
+  <p><a id="Step_View_window"></a><strong>Step View window</strong></p>
+  <p>While the Monitoring option in Simulation monitor window will update the simulation step based on selection, any step till the current simulated steps can be reviewed using Step viewer. Step Viewer window tab will be named from  &quot;Operation Name
+    and Simulation Title&quot;.</p>
+  <p><br/> Step viewer is used to select simulated steps for review, selected step objects will be displayed in the graphics window. Step view window has options for  selecting different steps &amp; operations, step tools for quick step selection &amp; playing
+    steps. Step view window also displays information like simulation title, operation name, stroke, time, selected step and operation number. (See <a href="#Fig._6.2.32._Step_view_window"><span data-keyref="Chapter_6_2_int_man_pro_simulation_layout">Fig.  6.2.</span>32.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><img height="304" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image036.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.2.32._Step_view_window"></a>Step view window</p>
+  <p><br/> There are also four additional ways to monitor a simulation those are,</p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Use the Process Monitor to determine the current step number.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Read the message file to determine the current step number and iteration information.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Open the simulation in the Post-Processor.  During a simulation the database file is renamed to FOR003 and is renamed back to the original database file name upon remeshing and stopping/completion.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Depending up on the frequency of the steps saved in the database, it is recommended to opt for saved steps display rather than the current step.</li>
+  </ol>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><br/>
+    <strong>Related Topics:</strong></p>
+  <p><span><a href="../../simulator/23_deform_simulator/23_3_simulation_graphics.htm">23.3. Simulation Graphics</a></span></p>
+  <p><span><a href="../../simulator/23_deform_simulator/23_4_process_monitor.htm">23.4. Process Monitor</a></span><span style="margin-left:40px;"></span></p>
+  <p><span><a href="../../simulator/23_deform_simulator/23_5_setting_up_mpich.htm">23.5. Setting up MPICH</a></span></p>
+  <p><span><a href="../../simulator/23_deform_simulator/23_6_running_shared_folder_simulations.htm">23.6. Running Shared folder Simulations</a></span></p>
+  <p><span><a href="../../simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running.htm">23.8. Trouble Shooting Simulation Running</a></span></p>
+  <p> </p>
+
+</body></html>

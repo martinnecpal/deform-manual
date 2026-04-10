@@ -1,0 +1,279 @@
+---
+lang: sk
+title: "23.2. Interactive and batch mode"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "5.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>23.2. Interactive and batch mode</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>23.2. Interactive and batch mode</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/simulator/23_deform_simulator/23_2_interactive_and_batch_mode.css"/>
+<meta name="brsnext" value="Documentation_content/Simulator/23_DEFORM_Simulator/23_3_Simulation_Graphics.htm"/><meta name="brsprev" value="Documentation_content/Simulator/23_DEFORM_Simulator/23_1_Start_Stop_and_Resume_Simulations.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="23.2. Interactive and batch mode">
+        <span>23.2. Interactive and batch mode</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>23.2. Interactive and batch mode</h1>
+  <p><a href="#23_2_1_Interactive_Mode">23.2.1. Interactive Mode</a></p>
+  <p><a href="#23_2_2_Batch_Queue_Mode">23.2.2. Batch Queue Mode</a></p>
+  <p><a href="#23_2_3_Queuing_Simulations">23.2.3. Queuing Simulations</a></p>
+  <ul>
+    <li style="margin-left: 40px;">
+      <p><a href="#Running_Batch_Queue_Server_and_Simulation_Server">Running Batch Queue Server and Simulation Server</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><span><a href="#Computer_configuration_requirements">Computer configuration requirements</a></span></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><span><a href="#Simulation_Server__setup">Simulation Server setup</a></span></p>
+    </li>
+  </ul>
+  <p><a href="#23_2_4_Run_Options_dialog_features">23.2.4. Run Options dialog features</a></p>
+  <p> </p>
+  <h2><a id="23_2_1_Interactive_Mode"></a>Interactive Mode</h2>
+  <p>If batch of problems to be simulated then after completing the previous simulation using the Run option from Integrated GUI or from Run options dialog <img src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg"/> can be used for submitting
+    simulations interactively one after the other.</p>
+  <p> </p>
+  <h2><a id="23_2_2_Batch_Queue_Mode"></a>Batch Queue Mode</h2>
+  <p>Interactive submission of simulations requires user monitoring to start simulation one after the other however user can use <img src="../../../assets/icons/simulator_icons/gui_add_to_queue.jpg"/> option from GUI or from Run options dialog <img src="../../../assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg"/> to pick automatically each job one after the other or simultaneously based on the simulation server settings.</p>
+  <p> </p>
+  <p>The problem running status can be monitored from the Process monitor and also for additional options related to executing of interactive and batch mode simulations refer to  chapter <a href="23_4_process_monitor.htm">23.4. Process Monitor</a>.</p>
+  <p> </p>
+  <p>From version 11.0 users can submit jobs for simulation using remote machine Simulation servers in batch mode from  Run options dialog. (Refer section <a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout.htm">6.2. MO Simulation layout</a>)
+    This will temporarily move the jobs to remote simulation server machine for simulation, after completion of simulation it copies back the project, so it reduces the load on the local machine.</p>
+  <p> </p>
+  <h2><a id="23_2_3_Queuing_Simulations"></a>Queuing Simulations</h2>
+  <p><strong><a id="Running_Batch_Queue_Server_and_Simulation_Server"></a>Running Batch Queue Server and Simulation Server</strong></p>
+  <p><strong></strong><br/> (Please refer to <a href="23_6_running_shared_folder_simulations.htm">Chapter 23.6. Running Shared folder Simulations</a> on how to setup, simulation servers, batch queue servers and handle mapped drives on a network to run DEFORM
+    simulations)</p>
+  <p>(Installing this Batch Queue and Simulation server services is a part of the default installation process, and the details indicated here are only standby options, if the given system has any issues/restrictions with handling the services)</p>
+  <p>If you would like to queue up jobs or run jobs on the other machine, please install simulation server.</p>
+  <p>The installations are easy, just run the provided batch files (at the DEFORM installation directory):</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>InstallBatchQueueServer.bat (example PC path C:\Program Files\SFTC\License Manager\)</p>
+    </li>
+    <li>
+      <p>InstallSimulationServer.bat (example PC path C:\Program Files\SFTC\DEFORM\Configuration\)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>Then these two programs will also be registered as services just like the license manager. They will start automatically.</p>
+  <p> </p>
+  <p><strong><a id="Computer_configuration_requirements"></a>Computer configuration requirements</strong></p>
+  <p><strong></strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Si</strong><strong><strong>m</strong>ulation server</strong>: A central computer – presumably high performance – for running FEM calculations.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>License server</strong>:  A central computer – not necessarily high powered – for managing licenses.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Batch queue server</strong>:  A central computer for managing run sequence of jobs. The License and Batch servers will run on the same machine and Simulation server must run on machines from where user submits the jobs to queue.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Pre / Post client(s)</strong>: Computer at which user(s) will pre and post process simulations. Pre and post processor programs are executed on this computer.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>DB file location</strong>: The database files should be on a shared network drive accessible from the simulation serer and the pre/post client computer. For optimum simulation performance, the DB files should be on a hard drive physically
+        integrated into the simulation server.  In other words, forcing the simulation server to access a database across a network will likely cause longer run times.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong><a id="Simulation_Server__setup"></a>Simulation Server  setup</strong><br/> On the “Simulation Server” tab, specify the share name or IP address of the simulation server machine. If it is a multi-processor or multi-core machine, specify the
+    number of processors (cores) available and licensed in DEFORM (Processor number) and the maximum number of jobs (normally 1). The user can use simulation and batch queue server as other than local computer by pointing it in DEFORM setup (See <a href="#Fig_23_2_1_DEFORM_setup_Simulation_Server_window"><span data-keyref="Chapter_23_2_Interactive_and_batch_mode">Fig. 23.2.</span>1.</a>).</p>
+  <p style="text-align: center"><a id="Fig_23_2_1_DEFORM_setup_Simulation_Server_window"></a><img height="637" src="../../../assets/images/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/image001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DEFORM setup Simulation Server window</p>
+  <p> </p>
+  <p><strong><a id="Run_(Options)_settings"></a>Run (Options) settings</strong><br/> After configuration, please use <img height="19" src="../../../assets/icons/simulator_icons/gui_run_options_button.jpg" style="cursor: nesw-resize;" width="103"/> settings
+    from GUI Main to utilize batch queue and simulation server when desired.</p>
+  <p> </p>
+  <p><strong>How to add jobs in Queue:</strong></p>
+  <p>Pick the DB from GUI Main (from working folder).</p>
+  <p>From GUI Main open <img height="19" src="../../../assets/icons/simulator_icons/gui_run_options_button.jpg" width="103"/>.</p>
+  <p>Initial details are normally picked up from the details provided from DEFORMSetup run.</p>
+  <p>Check the servers required for batch queue status using Check Server<img src="../../../assets/icons/simulator_icons/mo_check_server_button.jpg"/>  button.</p>
+  <p>From this dialog, click on <img height="23" src="../../../assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg" width="88"/>  to add the job1  to Queue.</p>
+  <p>Select job2 click on <img src="../../../assets/icons/simulator_icons/gui_add_to_queue.jpg"/> under Simulator in GUI main, repeat same for remaining jobs 3 and 4 (See <a href="#Fig_23_2_2_Queuing_simulations_from_Run_options"><span data-keyref="Chapter_23_2_Interactive_and_batch_mode">Fig. 23.2.</span>2.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_23_2_2_Queuing_simulations_from_Run_options"></a><img height="565" src="../../../assets/images/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/image002.jpg" width="750"/></p>
+  <p class="Fig_numb">Queuing simulations from Run options</p>
+  <p> </p>
+  <p>The jobs added to queue can be seen in Process Monitor window under Running and Pending list.</p>
+  <p>Once a job is finished, it is removed from the Batch Queue list and the next job waiting will take for running.</p>
+  <p>The user can change the position of the job with the help of &quot;Move UP&quot; ( <img src="../../../assets/icons/simulator_icons/move_up_button.jpg"/> ) and &quot;Move Down&quot; ( <img src="../../../assets/icons/simulator_icons/move_down_button.jpg"/> ) buttons and job can be removed from queue using &quot;Terminate or Remove&quot; button ( <img src="../../../assets/icons/simulator_icons/mo_kill_button.jpg"/> ). (See Fig 23.4.2)</p>
+  <p> </p>
+  <h2><strong><a id="23_2_4_Run_Options_dialog_features"></a>Run Options dialog features</strong><strong></strong></h2>
+  <p><img src="../../../assets/icons/simulator_icons/run_option_icon.jpg"/> or Simulation menu Run (options) <img src="../../../assets/icons/simulator_icons/gui_run_options_button.jpg"/>will provide more advanced options to run the simulation like interactive
+    or batch mode, running with single and multiple (only for 3D) processors and 32 and 64 bit running.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Job Type</strong>: This Indicates type of the running jobs like MO (Multiple operations), DOE (Design of Experiments) or OPT (Optimization).</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>DB Name/Problem ID</strong>: Displays the current project DB name in case of normal MO operations project. For DOE and OPT it shows the Problem ID as DOE/OPT project name, required DB&#39;s to complete DOE/OPT study are generated after submitting
+      the problem to simulate.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Submitted By</strong> : It will display the project location machine name.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Password to Kill Job</strong>: If user used any password to protect simulation in simulation server of DEFORM setup then that password should be entered here before selecting  <img height="21" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="69"/> or <img height="21" src="../../../assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg" width="81"/>  buttons to start the simulation.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Simultaneous Jobs</strong>: User can indicate number of simulations or Jobs that can be run simultaneously and this number should be equal to or less than the maximum number of jobs specified in DEFORMSetup and also based on the license available.
+      This option is available only for DOE/OPT jobs submission in queue.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Simulation Mode</strong>: There are two simulation modes those are,</li>
+  </ul>
+  <p style="margin-left: 40px"><br/>
+    <img src="../../../assets/icons/simulator_icons/mo_interactive_mode_rb.jpg"/> : Using this option, user can run simulations without simulation server by selecting  <img src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg"/> button.
+    This option does not require simulation server to be running. (See <a href="#Fig_23_2_3_Run_options_window_for_MO_job_in_interactive_simulation_mode"><span data-keyref="Chapter_23_2_Interactive_and_batch_mode">Fig. 23.2.</span>3.</a>)  </p>
+  <p style="margin-left: 40px"> </p>
+  <p style="text-align: center"><a id="Fig_23_2_3_Run_options_window_for_MO_job_in_interactive_simulation_mode"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Run options window for MO job in interactive simulation mode</p>
+  <p style="margin-left: 0px"><br/> Interactive simulation mode settings are,</p>
+  <p><span><strong style="margin-left:">Computer Name:</strong> This will display the name of the Machine</span></p>
+  <p><span><strong>Type</strong>: This will display whether it is a Single or Multi Processor simulation</span></p>
+  <p><span><strong>Path on Computer:</strong> This will display the path of the DB and in case of DOE/OPT it indicates the path where  DB&#39;s would be generated.</span></p>
+  <p><span><strong>Processors Per Job:</strong> Using this option user can select the number of processors required to be used per job during simulation, currently available only for 3D simulation or job.</span></p>
+  <p><span><strong>Shared Memory Size: </strong>It displays Shared Memory allocated on the simulation server system for DEFORM simulation.</span></p>
+  <p>User can save the settings using <img height="21" src="../../../assets/icons/pre_icons/mo_save_button.jpg" width="73"/> button and close the Run options window using <img height="21" src="../../../assets/icons/pre_icons/mo_close_button.jpg" width="73"/> button.</p>
+  <p><img src="../../../assets/icons/simulator_icons/mo_batch_mode_rb.jpg" style="margin-left: 0px"/>  : Using this option, user can run simulations only in batch mode (See <a href="#Fig_23_2_4_Run_options_window_for_MO_job_in_batch_simulation_mode"><span data-keyref="Chapter_23_2_Interactive_and_batch_mode">Fig. 23.2.</span>4.</a>).
+    It is essential to select any one of the available simulation servers listed or first available simulation server to simulate batch queue problems and click on <img height="23" src="../../../assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg" width="88"/> button to start adding job to the queue. The displayed list contains only simulation servers that are added to the DEFORM Setup.</p>
+  <p> </p>
+  <p style="margin-left: 40px;text-align: center"><a id="Fig_23_2_4_Run_options_window_for_MO_job_in_batch_simulation_mode"></a><img height="707" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image004.jpg" width="722"/></p>
+  <p style="margin-left: 40px;text-align: center"> </p>
+  <p class="Fig_numb">Run options window for MO job in batch simulation mode</p>
+  <p style="margin-left: 0px"><br/> In Batch simulation mode selected simulation servers settings can be set by selecting the particular simulation server and clicking on <img height="23" src="../../../assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg" style="cursor: nwse-resize;" width="88"/>  button. (See <a href="#Fig_23_2_5_Batch_simulation_mode_server_settings"><span data-keyref="Chapter_23_2_Interactive_and_batch_mode">Fig. 23.2.</span>5.</a>)</p>
+  <p> <img src="../../../assets/icons/simulator_icons/mo_server_settings_button.jpg"/>: Using this button user can set the selected simulation server settings like processors to be utilized per job during simulation and shared memory.</p>
+  <p><strong>Server Name</strong>: This will display the selected simulation server machine name</p>
+  <p><strong>Type</strong>: This will display whether it is a Single or Multi Processor simulation</p>
+  <p><strong>Path on Server</strong>: This will display path of the DB if user selected the local machine<br/> as simulation server or else  will display as &quot;Copied from :&lt;Phisical_DB_existing_Machine_name&gt;&quot;</p>
+  <p><strong>Processors Per Job</strong>: Using this user can select the number of processors to be used<br/> per 3D simulation or job.</p>
+  <p><strong>Shared Memory Size:</strong> It displays Shared Memory allocated on the simulation server<br/> system for DEFORM simulation.</p>
+  <p><br/> User can save the settings using <img height="21" src="../../../assets/icons/pre_icons/mo_save_button.jpg" width="73"/> button and close the Run options window using <img height="21" src="../../../assets/icons/pre_icons/mo_close_button.jpg" width="73"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_23_2_5_Batch_simulation_mode_server_settings"></a><img src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image005.jpg"/></p>
+  <p class="Fig_numb">Batch simulation mode server settings</p>
+  <p><br/>
+    <strong>Simulation Run types:</strong> For normal multiple operations project in both interactive and batch mode user can run the simulation from the initial step or if it is stopped in between or wanted to restart from the mod we can do so by continue
+    options. (See <a href="#Fig_23_2_6_Simulation_Run_types_from_Run_options_for_normal_projects"><span data-keyref="Chapter_23_2_Interactive_and_batch_mode">Fig. 23.2.</span>6.</a>)</p>
+  <p> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Initial Run:</strong> This will start the simulation from the first operation starting step. User can also use this option to restart the simulation from the beginning in case of simulation has stopped in the mid due to some license or network
+    issues.</p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Continue Run:</strong> This continue run will provide two options those are, </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Continue from the last step:</strong> This will continue the simulation from the last available negative step. It is useful  when user done some corrections to the setup and tries to restart from any stage of the simulation.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Restart from the selected Simulation:</strong> This will restart the simulation from any of the intermediate operation&#39;s simulations by selecting that particular operation and its simulation.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="text-align: center"><a id="Fig_23_2_6_Simulation_Run_types_from_Run_options_for_normal_projects"></a><img height="131" src="../../../assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image006.jpg" width="750"/></p>
+  <p class="Fig_numb">Simulation Run types from Run options for normal projects</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="23_3_simulation_graphics.htm">23.3 Simulation Graphics</a></p>
+  <p><a href="23_4_process_monitor.htm">23.4. Process Monitor</a></p>
+  <p><a href="23_5_setting_up_mpich.htm">23.5. Setting up MPICH</a></p>
+  <p><a href="23_8_trouble_shooting_simulation_running.htm">23.8. Trouble Shooting Simulation Running</a></p>
+  <p><a href="../../post_processor/post_processor_mainpg.htm">Pre-Processor</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout.htm">Integrated Manufacturing Process (MO)</a></p>
+  <p><a href="../../post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor.htm">Post -Processor</a></p>
+  <p> </p>
+
+</body></html>

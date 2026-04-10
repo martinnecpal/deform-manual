@@ -1,0 +1,366 @@
+---
+lang: en
+title: "STRESS (3D)"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.18.0_24";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>STRESS (3D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>STRESS (3D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/s/s_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/S/STROKE.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/S/STRESS.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="STRESS (3D)">
+        <span>STRESS (3D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>STRESS</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Object data - 3D)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"><u>Update History:</u></p>
+          <p class="P_10">v11 - Stress tensor at 8 integration points has been added for 3D brick element.</p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on :  13-08-2013</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">STRESS    Object, Ndata, DefStress, Nnode, DefNodeStress</p>
+  <p class="P_10_Bold">or</p>
+  <p class="P_10_Bold">(If “Integration Point” stress is requested for output, ELMNOD=3)</p>
+  <p class="P_10_Bold">STRESS Object, Ndata, 0.0, Nnode, 0.0, NIntPts</p>
+  <p class="P_10_Bold">(If “element” stress is requested for output, ELMNOD=0)</p>
+  <p class="P_10_Bold">Element(1), X1(1), X2(1), X3(1), X4(1), X5(1), X6(1)</p>
+  <p class="P_10_Bold">::</p>
+  <p class="P_10_Bold">Element(Ndata), X1(Ndata), X2(Ndata),X3(Ndata),X4(Ndata),X5(Ndata),X6(Ndata)</p>
+  <p class="P_10_Bold">(If dual “element + nodal” stress is requested for output, ELMNOD=2)</p>
+  <p class="P_10_Bold">Element(1), X1(1), X2(1), X3(1), X4(1), X5(1), X6(1)</p>
+  <p class="P_10_Bold">::</p>
+  <p class="P_10_Bold">Element(Ndata), X1(Ndata), X2(Ndata),X3(Ndata),X4(Ndata),X5(Ndata),X6(Ndata)</p>
+  <p class="P_10_Bold">Node(1), X1(1), X2(1), X3(1), X4(1), X5(1), X6(1)</p>
+  <p class="P_10_Bold">::</p>
+  <p class="P_10_Bold">Node(Nnode), X1(Nnode), X2(Nnode), X3(Nnode), X4(Nnode), X5(Nnode), X6(Nnode)</p>
+  <p class="P_10_Bold">(Only for brick element with eight integration points, NIntPts=8)</p>
+  <p class="P_10_Bold">(If “Integration Point” stress is requested for output, ELMNOD=3)</p>
+  <p class="P_10_Bold">Element(1)</p>
+  <p class="P_10_Bold">X1(1,1), X2(1,1), X3(1,1), X4(1,1), X5(1,1), X6(1,1)</p>
+  <p class="P_10_Bold">::</p>
+  <p class="P_10_Bold">X1(NIntPts,1), X2(NIntPts,1), X3(NIntPts,1), X4(NIntPts ,1), X5(NIntPts,1), X6(NIntPts,1)</p>
+  <p class="P_10_Bold">::</p>
+  <p class="P_10_Bold">Element(Ndata)</p>
+  <p class="P_10_Bold">X1(1,Ndata), X2(1,Ndata), X3(1,Ndata), X4(1,Ndata), X5(1,Ndata), X6(1,Ndata )</p>
+  <p class="P_10_Bold">::</p>
+  <p class="P_10_Bold">X1(NIntPts,Ndata), X2(NIntPts,Ndata), X3(NIntPts,Ndata), X4(NIntPts,Ndata),</p>
+  <p class="P_10_Bold">X5(NIntPts,Ndata), X6(NIntPts,Ndata)</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Object</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Object Number</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Ndata</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of elements</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DefStress</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Default elemental stress value</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0.0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Nnode</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of nodes</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DefNodeStress   </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Default nodal stress value</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">NIntPts</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of integration points per element</p>
+          <p class="P_10">= <strong>8</strong>  Brick element</p>
+          <p class="P_10">= <strong>1</strong>  Tet element (same as elemental output option)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">8</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">X1(i)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Sigma X of i<span style="vertical-align:super;">th</span> data set</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">X2(i)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Sigma Y of i<span style="vertical-align:super;">th</span> data set</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">X3(i)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Sigma Z of i<span style="vertical-align:super;">th</span> data set</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">X4(i)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Tau XY of i<span style="vertical-align:super;">th</span> data set</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">X5(i)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Tau YZ of i<span style="vertical-align:super;">th</span> data set</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">X6(i)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Tau XZ of i<span style="vertical-align:super;">th</span> data set</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">STRESS defines the stress tensors of each element of an object.  </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">REMARKS</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">X1 is the value of Sigma X(<img src="../../../assets/images/keyword_documentation/s/sigmax.jpg"/>), X2 is Sigma Y(<img src="../../../assets/images/keyword_documentation/s/sigma_y.jpg"/>), X3 is Sigma Z(<img src="../../../assets/images/keyword_documentation/s/sigma_z.jpg"/>), X4 is Tau XY(<img src="../../../assets/images/keyword_documentation/s/tau_xy.jpg"/>), X5 is Tau YZ(<img src="../../../assets/images/keyword_documentation/s/tau_yz.jpg"/>) and X6 is Tau XZ(<img src="../../../assets/images/keyword_documentation/s/tau_xz.jpg"/>). The keyword format varies depending on stress output selection made at ELMNOD.</p>
+          <p class="P_10">For element output (ELMNOD = 0) option, stress at the centroid of each element is written.</p>
+          <p class="P_10">For dual output (ELMNOD = 2) option, stress at the centroid of element and at node are written.</p>
+          <p class="P_10">For brick element case with integration point (ELMNOD = 3) option, stress at eight integration points in element are written.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">The stress tensor,<img src="../../../assets/images/keyword_documentation/s/sij.jpg"/> , of the object is represented by the matrix:</p>
+          <p class="P_10"> </p>
+          <p class="P_10">   <img src="../../../assets/images/keyword_documentation/s/stress_3d_image002.jpg"/> <img height="59" src="../../../assets/images/keyword_documentation/s/stress_3d_image001.jpg" width="151"/></p>
+          <p class="P_10"> </p>
+          <p class="P_10">Note: This integration point option is valid only for brick element whose stress values are evaluated at 8 integration points per element during FEM calculation. For Tetrahedral element, integration point output option is same as elemental output
+            option.   </p>
+          <p class="P_10"> </p>
+          <p class="P_10">Applicable <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type">object types</a>:  <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic">Plastic</a>,
+            Elastoplastic, <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.4._Porous">Porous</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Related keywords: ELMN<a href="../e/elmnod.htm">ELMNOD (2D3D)</a>OD</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

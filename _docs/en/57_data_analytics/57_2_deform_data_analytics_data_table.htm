@@ -1,0 +1,356 @@
+---
+lang: en
+title: "57.2. DEFORM Data Analytics Data Table"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "12.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>57.2. DEFORM Data Analytics Data Table</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>57.2. DEFORM Data Analytics Data Table</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/57_data_analytics/57_2_deform_data_analytics_data_table.css"/>
+<meta name="brsnext" value="Documentation_content/57_Data_Analytics/57_3_DEFORM_Data_Analytics_Data_Import_and_Export.htm"/><meta name="brsprev" value="Documentation_content/57_Data_Analytics/57_1_Data_Analytics.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="57.2. DEFORM Data Analytics Data Table">
+        <span>57.2. DEFORM Data Analytics Data Table</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>57.2. DEFORM Data Analytics Data Table</h1>
+  <p><a href="#57_2_1_Data_table_overview">57.2.1. Data table overview</a>    </p>
+  <p><a href="#57_2_2_Column_variable_properties">57.2.2. Column/variable properties</a> </p>
+  <p><a href="#57_2_3_Entering_data">57.2.3. Entering data  </a>  </p>
+  <p><a href="#57_2_4_Adding_removing_tables">57.2.4. Adding/removing tables</a>  </p>
+  <p><a href="#57_2_5_Adding_removing_columns">57.2.5. Adding/removing columns </a> </p>
+  <p><a href="#57_2_6_Adding_removing_rows">57.2.6. Adding/removing rows</a></p>
+  <p><a href="#57_2_7_Hide_Show_columns">57.2.7. Hide/Show columns</a></p>
+  <p><a href="#57_2_8_Excluding_rows">57.2.8. Excluding rows</a> </p>
+  <p><a href="#57_2_9_Column_statistics">57.2.9. Column statistics</a></p>
+  <p> </p>
+  <h2><a id="57_2_1_Data_table_overview"></a>Data table overview</h2>
+  <p>The data table is where data is entered and modeled within DEFORM Data Analytics. The data table is organized as rows and columns of values.  The columns represent variables and the rows represent samples (individual values of a variable).</p>
+  <p> </p>
+  <p>The data table consists of 2 sections as shown in <a href="#Fig_57_2_1_Data_table"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>1.</a> These are the data section and the variable definition area.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_1_Data_table"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0001.jpg"/></p>
+  <p class="Fig_numb">Data table</p>
+  <h2><a id="57_2_2_Column_variable_properties"></a>Column/variable properties</h2>
+  <p>At the top of the data table is the variable definition section. This contains 3 rows which are 3 column properties required to define the data within a column. These 3 properties are column/variable name, usage and data type.</p>
+  <p><br/> The name is the name of the variable. This will be used later to define models and supply inputs to expressions.</p>
+  <p><br/> The usage defines how the data us created or used. It can be one of these types:</p>
+  <p> </p>
+  <p><strong>Data</strong>: The data is entered by the user and is used to train models or as inputs to expressions.</p>
+  <p> </p>
+  <p><strong>Model definition</strong>: This is a column that is used to create, define and train a model. The values in this column will be computed from the trained model.</p>
+  <p> </p>
+  <p><strong>Expression</strong>: This is a column the defines and evaluated an expression. The values in this column are computed from a user defined equation.</p>
+  <p> </p>
+  <p>The data type specified the type of data stored in the column. It can be one of 3 types:</p>
+  <p> </p>
+  <p><strong>Number</strong>: This specifies a numeric value.</p>
+  <p> </p>
+  <p><strong>Text</strong>: This specifies a text string value. They are typically used to apply meaningful label to rows of data. These columns cannot be used to train models or as inputs to expressions.</p>
+  <p> </p>
+  <p><strong>Function</strong>: This specifies that the values in the column are not single values.  Function data is composed of inputs, one output and a model.</p>
+  <p> </p>
+  <p>Additional column properties can be set within the properties area for the selected column (see <a href="#Fig_57_2_2_Additional_column_properties"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>2.</a>).  A column
+    can be selected by clicking on a cell within the column, clicking on the column header, or clicking the column name in the project tree.  These properties include:</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_2_Additional_column_properties"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0002.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Additional column properties</p>
+  <p><br/>
+    <strong>Description</strong>: This is an optional textual description of the column data. </p>
+  <p>The following properties apply only to the number data type:</p>
+  <p> </p>
+  <p><strong>Expected range</strong>: This optionally specifies the minimum and maximum expected values of the column data.</p>
+  <p> </p>
+  <p><strong>Format</strong>: This controls the display of the data. This can either be Normal or Exponent.  </p>
+  <p> </p>
+  <p><strong>Precision</strong>: This specifies the number of digits to the right of the decimal point. <a href="#Fig_57_2_3_Additional_column_properties"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>3.</a> shows that
+    format and precision options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_3_Additional_column_properties"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Additional column properties</p>
+  <p> </p>
+  <p><a href="#Table_57_2_1_Data_formatting">Table 57.2.1</a> shows the effect of the precision and format options on the value 253.824:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:400pt;margin-left:auto;margin-right:auto">
+    <colgroup>
+      <col style="width:25.00%"/>
+      <col style="width:25.00%"/>
+      <col style="width:25.00%"/>
+      <col style="width:25.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td> </td>
+        <td colspan="3" rowspan="1" style="text-align: center">
+          <p style="text-align: center">Format</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">Precision</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">Normal</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">Exponent</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">Best</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">0</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">254</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">3e+02</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">254</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">1</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">253.8</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">2.5e+02</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">253.8</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">2</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">253.82</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">2.54e+02</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">253.52</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">3</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">253.824</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">2.538e+02</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">253.524</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">4<a id="Table_57_2_1_Data_formatting"></a></p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">253.8240</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">2.5382e+02</p>
+        </td>
+        <td>
+          <p style="margin-top: 4pt;margin-bottom: 4pt;margin-left: 8pt">253.5240</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Table_numb"> Data formatting</p>
+  <p> </p>
+  <p><strong>Units</strong>: This specifies the units of the data. The units will be shown in the data table column header under the column name and in parenthesis as shown in <a href="#Fig_57_2_4_Units_display_in_column_headers"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>4.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_4_Units_display_in_column_headers"></a><img height="51" src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0004.jpg" width="329"/></p>
+  <p> </p>
+  <p class="Fig_numb">Units display in column headers</p>
+  <p><br/>
+    <strong>Error ranges</strong>: Some data is provided with a range. This is to reflect tolerances, or measurement error, or some other uncertainty with the data. Checking Use error bounds will create additional columns under a variable for this data
+    (see <a href="#Fig_57_2_5_Error_ranges"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>5.</a>). There are several ways these errors can be represented:</p>
+  <p><br/> +/- a fixed value</p>
+  <p>+/- a percentage</p>
+  <p>Standard Deviation</p>
+  <p>Variance</p>
+  <p>Multiple of the Standard Deviation (i.e. 3 times the Standard Deviation is referred to as 3 sigma (3σ))</p>
+  <p>Upper and Lower value<br/>           </p>
+  <p style="text-align: center"><a id="Fig_57_2_5_Error_ranges"></a><img height="461" src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Error ranges</p>
+  <p> </p>
+  <p>There are also other properties that are dependent on the usage.</p>
+  <h2><a id="57_2_3_Entering_data"></a>Entering data</h2>
+  <p>Data can be entered into the data table by clicking on a cell and typing. The return key will complete the edit and move to the next cell in the column.</p>
+  <p><br/>
+    <strong>Copy/paste</strong></p>
+  <p>Copying data is performed by selecting one or more contiguous cells in the table and either selecting Copy from right click menu or using ctrl-c key shortcut. Pasting data is performed by selecting a cell as the location of the first item in the table
+    and either selecting Paste from right click menu or using ctrl-v key shortcut. New rows and columns will be added as needed.</p>
+  <p><br/> Data can be copied from one location in a table and pasted into another location</p>
+  <p><br/> Data can be copied from one table to another</p>
+  <p><br/> Data can be copied from other applications (like a spread sheet) and pasted into a Data Analytics table. Data can be copied from a Data analytics table and pasted into other applications (like a spread sheet).</p>
+  <p><br/> Data can be copied from a text editor as long as the data is organized in rows and columns with each row separated by a new line and each column separated by a single tab character. Data can be pasted into a text editor. The pasted data will be
+    organized in rows and columns with each row separated by a new line and each column separated by a single tab character. <a href="#Fig_57_2_6_Copy"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>6.</a> and <a href="#Fig_57_2_7_Paste"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>7</a>    show the copy and paste context menus</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_6_Copy"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0006.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Copy</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_7_Paste"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0007.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Paste</p>
+  <p> </p>
+  <h2><a id="57_2_4_Adding_removing_tables"></a>Adding/removing tables</h2>
+  <p>A single DEFORM Data Analytics project can contain multiple data tables. Tables can be added or removed from the project tree or from the tab bar under the table view.</p>
+  <p> </p>
+  <p>To add a data table from the project tree, click on the project icon (with the project name). An Add analytics table button will appear at the bottom of the tree. Click this  <img src="../../assets/icons/post_icons/data_analytics_add_analytics_table_button.jpg"/> button to add a table. To remove a table from the project tree, select the table in the tree. A Delete analytics table will appear at the bottom of the tree. Click this <img src="../../assets/icons/post_icons/data_analytics_delete_analytics_table_button.jpg"/> button to delete the selected table. See <a href="#Fig_57_2_8_Add_table_from_project_tree"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>8.</a> and <a href="#Fig_57_2_9_Remove_table_from_project_tree"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>9</a></p>
+  <p> </p>
+  <p>To Add a data table from the tab bar, press the blue <img src="../../assets/icons/post_icons/data_analytics_add_table_icon.jpg"/> button on the tab bar. To remove a table from the tab bar, select the table to delete, then click the orange <img src="../../assets/icons/post_icons/data_analytics_delete_table_icon.jpg"/> button. See <a href="#Fig_57_2_10_Add_and_remove_tables_from_tab_bar"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>10.</a></p>
+  <p><br/> Tables can also be renamed. Each table has a name and description which can be edited by selecting the table (either from the project tree or the tab bar). The property area will show the name and description fields for the table. See <a href="#Fig_57_2_11_Table_properties"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>11.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_8_Add_table_from_project_tree"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0008.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Add table from project tree</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_9_Remove_table_from_project_tree"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0009.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Remove table from project tree</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_10_Add_and_remove_tables_from_tab_bar"></a><img height="36" src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0010.jpg" width="600"/></p>
+  <p> </p>
+  <p class="Fig_numb">Add and remove tables from tab bar</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_11_Table_properties"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0011.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Table properties</p>
+  <h2><a id="57_2_5_Adding_removing_columns"></a>Adding/removing columns</h2>
+  <p>Generally columns will not need to be added to a data table. There will always be at least one extra column to enter data into. To remove a column, right click on the column header and select Remove column (see <a href="#Fig_57_2_12_Removing_a_column"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>12.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_12_Removing_a_column"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0012.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Removing a column</p>
+  <h2><a id="57_2_6_Adding_removing_rows"></a>Adding/removing rows</h2>
+  <p>Generally rows will not need to be added to a data table. There will always be at least one extra row to enter data into. To remove a row, right click on the row header and select Remove row (see <a href="#Fig_57_2_13_Removing_a_column"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>13.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_13_Removing_a_column"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0013.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Removing a column</p>
+  <h2><a id="57_2_7_Hide_Show_columns"></a>Hide/Show columns</h2>
+  <p>To compact the data table, columns can be hidden and later reshown. This is done using the check box under the <img src="../../assets/icons/pre_icons/mo_visible.jpg"/> icon in the project tree (see <a href="#Fig_57_2_14_Show_hide_columns"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>14.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_14_Show_hide_columns"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0014.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Show/hide columns</p>
+  <h2><a id="57_2_8_Excluding_rows"></a>Excluding rows</h2>
+  <p>Rows with missing data are not used in training a model (if the column with the missing data is defined as an input or output of the model). Other rows can be marked to exclude from training (see <a href="#Fig_57_2_15_Excluding_including_rows"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>15.</a>).
+    This could be to exclude outliers.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_15_Excluding_including_rows"></a><img height="314" src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Excluding/including rows</p>
+  <h2><a id="57_2_9_Column_statistics"></a>Column statistics</h2>
+  <p>To obtain statistics from a column of data, hover the mouse over the column header. The statistics will appear as a tool tip (see <a href="#Fig_57_2_16_Column_statistics_as_a_tool_tip"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>16.</a>).
+    Using the right click context menu on the column header, the statistics can be printed to the message area (see <a href="#Fig_57_2_17_Column_statistics_printed_to_message_area"><span data-keyref="Chapter_57_2_DEFORM_Data_Analyitics_Data_Table">Fig. 57.2.</span>17.</a>)
+    where they can be copied and pasted into another document. The statistics include:</p>
+  <p>Average</p>
+  <p>Median</p>
+  <p>Standard Deviation</p>
+  <p>InterQuartile Range (IQR)</p>
+  <p>Minimum</p>
+  <p>Maximum</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_16_Column_statistics_as_a_tool_tip"></a><img src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0016.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Column statistics as a tool tip</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_2_17_Column_statistics_printed_to_message_area"></a><img height="500" src="../../assets/images/data_analytics/57_2_deform_data_analytics_data_table/57_2_image0017.jpg" width="308"/></p>
+  <p> </p>
+  <p class="Fig_numb">Column statistics printed to message area</p>
+  <p> </p>
+
+</body></html>

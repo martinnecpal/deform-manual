@@ -1,0 +1,196 @@
+---
+lang: en
+title: "Lab 02 Geometry Correction"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.4.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab 02 Geometry Correction</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab 02 Geometry Correction</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/basic_labs/2d_labs/lab_02_geometry_correction.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Basic_labs/2D_Labs/Lab_03_Spike_Isothermal.htm"/><meta name="brsprev" value="Documentation_content/Labs/Basic_labs/2D_Labs/Lab_01_Geometry_Manipulation_and_Uniform_mesh.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Lab 02 Geometry Correction">
+        <span>Lab 02 Geometry Correction</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 02 Geometry Correction</h1>
+  <p><a href="#2_1_Creating_a_New_Problem">2.1. Creating a New Problem</a></p>
+  <p><a href="#2_2_Adding_Forming_Operation">2.2. Adding Forming Operation</a></p>
+  <p><a href="#2_3_Geometry_Type">2.3. Geometry Type</a></p>
+  <p><a href="#2_4_Adding_Object">2.4. Adding Object</a></p>
+  <p><a href="#2_5_Geometry_Editing">2.5. Geometry Editing</a></p>
+  <p><a href="#2_6_Saving_the_Problem">2.6. Saving the Problem</a></p>
+  <p> </p>
+  <h2><a id="2_1_Creating_a_New_Problem"></a>Creating a New Problem</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear. as shown below <a href="#Fig_L2_1_DEFORM_GUI_main_window"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>1.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_1_DEFORM_GUI_main_window"></a><img height="435" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DEFORM GUI main window</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/>  icon. The Problem Setup window will appear as shown in <a href="#Fig_l2_2_Problem_type_selection_window"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>2.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot; <b>Junk</b>&quot; and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the
+    “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing
+    Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l2_2_Problem_type_selection_window"></a><img height="419" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem type selection window</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog (See <a href="#Fig_L2_3_Problem_location_selection_window"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>3.</a>), at this point user will be prompted to specify
+    a project name (system will create a separate folder with this project name) and title for this session. In this session we use ‘<strong>Junk</strong>’ as the project name.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_3_Problem_location_selection_window"></a><img height="390" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_02_geometry_correction/lab2_image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem location selection window</p>
+  <p> </p>
+  <p>User can also change the Unit system (File menu selected unit system will be selected by default) and add operation by selecting from First operation pull down list and checkbox (See <a href="#Fig_l2_4_Assigning_problem_name"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>4.</a>).
+    Using copy Existing project option we can import previous saved projects as new project. Click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l2_4_Assigning_problem_name"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_02_geometry_correction/lab2_image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning problem name</p>
+  <p> </p>
+  <h2><a id="2_2_Adding_Forming_Operation"></a>Adding Forming Operation</h2>
+  <p>Multiple Operation wizard will open with new project called Junk. Add 2D Forming operation from the Explorer Operations list. Add the operation by clicking on <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to
+    2D Forming or user can also add by drag and drop into the Operation Editor.(See <a href="#Fig_L2_5_MO_wizard_with_2D_Forming_Operation"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>5.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_5_MO_wizard_with_2D_Forming_Operation"></a><img height="390" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_02_geometry_correction/lab2_image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO wizard with 2D Forming Operation</p>
+  <h2><a id="2_3_Geometry_Type"></a>Geometry Type</h2>
+  <p>For this lab, Default Geometry Type (Axisymmetric) is OK. To setup a problem, user can select required Geometry type. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Objects page.</p>
+  <p> </p>
+  <h2><a id="2_4_Adding_Object"></a>Adding Object</h2>
+  <p>In this lab we need only one object, if already there are three objects in object list, then delete the last two objects by clicking <img src="../../../../assets/icons/pre_icons/mo_delete_object_button.jpg"/> object button and keep only Workpiece object
+    in list (see <a href="#Fig_L2_6_Adding_Objects"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>6.</a>). Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until workpiece geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_6_Adding_Objects"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_02_geometry_correction/lab2_image0004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Objects</p>
+  <p> </p>
+  <h2><a id="2_5_Geometry_Editing"></a>Geometry Editing</h2>
+  <p>In Geometry page, Click on <img src="../../../../assets/icons/pre_icons/mo_edit_lable.jpg"/> button as shown in <a href="#Fig_l2_7_Geometry_window"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>7.</a> A geometry edit window
+    will open as shown in <a href="#Fig_L2_8_Edit_Geometry_window"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>8.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l2_7_Geometry_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_02_geometry_correction/lab2_image0005.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_8_Edit_Geometry_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_02_geometry_correction/lab2_image0006.jpg"/></p>
+  <p class="Fig_numb"> Edit Geometry window</p>
+  <p> </p>
+  <p>In 2D Geometry Editor window, enter the following XYR coordinates in the table as shown in <a href="#Fig_l2_9_2D_Geometry_Editor"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>9.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_l2_9_2D_Geometry_Editor"></a><img height="388" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_02_geometry_correction/lab2_image0007.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D Geometry Editor</p>
+  <p> </p>
+  <p>Click on show vertex Number <img height="21" src="../../../../assets/icons/pre_icons/mo_show_vertex_numbers_icon.jpg" width="24"/> icon, for the created geometry it will assign numbers at each point as shown in <a href="#Fig_L2_10_Geometry_with_show_normal_vectors"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>10.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_10_Geometry_with_show_normal_vectors"></a><img height="388" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_02_geometry_correction/lab2_image0008.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry with show normal vectors</p>
+  <p> </p>
+  <p>Using the Box Zoom <img src="../../../../assets/icons/pre_icons/mo_box_zoom_icon.jpg"/> icon, zoom in on the intersection between the two arcs. User can see that the endpoints of the two arcs do not meet correctly as shown in <a href="#Fig_L2_11_Showing_Error_Geometry"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>11.</a>    Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_11_Showing_Error_Geometry"></a><img height="390" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_02_geometry_correction/lab2_image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Showing Error Geometry</p>
+  <p> </p>
+  <p>Defined Geometry get displayed in Display window as shown in <a href="#Fig_L2_12_Geometry_in_Display_window"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>12.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_12_Geometry_in_Display_window"></a><img height="388" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_02_geometry_correction/lab2_image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry in Display window</p>
+  <p> </p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_check_label.jpg"/> button and then click on <img height="24" src="../../../../assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg" width="95"/>. The message &quot;Geometry has been corrected&quot;
+    should pop up as shown in <a href="#Fig_L2_13_Check_geometry_popup"><span data-keyref="Basic_labs_2D_Labs_Lab2_Geo_manipulation">Fig. L2.</span>13.</a> Click <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> for the popup. Depending
+    upon the size of entity and default tolerance picked up by the system, some correction may need multiple attempts or increased tolerance value based on user judgement.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_13_Check_geometry_popup"></a><img height="386" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_02_geometry_correction/lab2_image0011.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Check geometry popup</p>
+  <p> </p>
+  <p>The default correction settings worked well for this geometry, creating a small line between the two arcs.</p>
+  <p> </p>
+  <h2><a id="2_6_Saving_the_Problem"></a>Saving the Problem</h2>
+  <p>By selecting the File menu Export option,save a keyword file for the problem as &quot;Junk&quot;. The data will be saved in the file Junk.KEY.</p>
+  <p> </p>
+  <p><strong></strong></p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../../pre_processor/12_geometry_modelling/12_2_2d_geometry_editing.htm">12.2. 2D Geometry Data Editing</a></p>
+  <p> </p>
+
+</body></html>

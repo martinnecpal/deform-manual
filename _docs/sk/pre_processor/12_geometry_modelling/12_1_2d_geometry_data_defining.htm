@@ -1,0 +1,193 @@
+---
+lang: sk
+title: "12.1. 2D Geometry Data Defining"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>12.1. 2D Geometry Data Defining </title>
+  <meta name="topic-status" content="Draft" />
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/Pre_Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining.css" />
+</head>
+<body>
+  <h1>12.1. Defining 2D Geometry Data</h1>
+  <p><a href="#12.1.1._Geometry_Rules_for_2D">12.1.1. Geometry Rules for 2D</a></p>
+  <p><a href="#12.1.2._2D_Geometry_Tools">12.1.2. 2D Geometry Tools</a></p>
+  <p><a href="#12.1.3._2D_Geometry_data_Loading_and_Saving">12.1.3. 2D Geometry data Importing and Saving</a> </p>
+  <p><a href="#12.1.4._Settings">12.1.4  Settings</a></p>
+  <p style="margin-left: 20px"> </p>
+  <p> </p>
+  <p>2D Geometry page is as shown in  below <a href="#Fig._12.1.1._2D_Geometry_page"><span data-keyref="Chapter_12_1_2D_Geometry_Data_Defining">Fig. 12.1.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="436" src="../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image003.jpg" width="750" /></p>
+  <p class="Fig_numb"><a id="Fig._12.1.1._2D_Geometry_page"></a>2D Geometry page</p>
+  <p> </p>
+  <h2><a id="12.1.1._Geometry_Rules_for_2D"></a>Geometry Rules for 2D</h2>
+  <p><strong>Orientation</strong><br/> The endpoints of line segments are defined numerically. For all die definitions, all objects should be numbered such that the die block is on the left, and open air (contact zone) on the right as you move along the
+    points in the order. Failure to follow this orientation may cause any of the following problems:</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Object won&#39;t mesh.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Mesh distorts when boundary conditions are applied.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Object positioning error using interference positioning.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p><strong>Direction</strong></p>
+  <p>Objects must be defined counter clockwise (CCW). The orientation direction may be checked using the point numbering button in the geometry editing window.</p>
+  <p>If the current connectivity is clockwise (either after drawing or after importing), it can be reversed. The geometry reverse function reverses the current connectivity of the object by clicking the Reverse button.</p>
+  <p> </p>
+  <p><strong>Edges</strong><br/> The die starting and stopping point must be away from the contact zone, unless points are on the axis of symmetry. Tooling which crosses the centerline should do so at 90 degrees: other angles may lead to non-convergence.
+    In case of a pointed punch, a very short line segment should be added at the center.</p>
+  <p> </p>
+  <p><strong>Blended fillets</strong></p>
+  <p>The connectivity between blended fillets is ill-defined in IGES format. To avoid problems, it is helpful to define a very short line segments between arcs. Blended fillets can cause DEFORM-2D to continuously give an incorrect geometry message, even
+    once the geometry has been checked and corrected. To correct this, simply add an extremely small line segment between the two fillets.</p>
+  <p> </p>
+  <p><strong>End points</strong></p>
+  <p>The radius of the first and last points must be zero.</p>
+  <p> </p>
+  <p><strong>Clearance fits</strong></p>
+  <p>Tooling with close clearance fits should be drawn to overlap slightly. Failure to overlap tooling may allow nodes to slip between the punch and the die, and cause problems when the mesh regenerates. A &quot;negative jacobian&quot; error in the message
+    file will result.</p>
+  <p> </p>
+  <h2><a id="12.1.2._2D_Geometry_Tools"></a>2D Geometry Tools</h2>
+  <p> </p>
+  <p> <a id="Define_Primitives"></a><strong>Define Primitives</strong> <img src="../../../assets/Icons/Pre_icons/MO_Define_Primitive_label.jpg" />: There are now five primitive shapes in general geometry page that can be used to generate geometries as seen
+    in <a href="#Fig._12.1.2._2D_Axisymmetric_and_Torsion_Geo_Primitive_options"><span data-keyref="Chapter_12_1_2D_Geometry_Data_Defining">Fig. 12.1.</span>2.</a> and <a href="#Fig._12.1.3._2D_Plane_strain_and_Stress_Geo_Primitive_options"><span data-keyref="Chapter_12_1_2D_Geometry_Data_Defining">Fig. 12.1.</span>3.</a>     In each case, the user has to scale appropriately to the problem by defining the dimensions.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._12.1.2._2D_Axisymmetric_and_Torsion_Geo_Primitive_options"></a><img src="../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image004.JPG" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">2D Axisymmetric and Torsion Geo Primitive options</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._12.1.3._2D_Plane_strain_and_Stress_Geo_Primitive_options"></a><img src="../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image005.JPG" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">2D Plane strain and Stress Geo Primitive options</p>
+  <p> </p>
+  <p><a id="Scale_Geometry"></a><strong>Scale Geometry </strong><img src="../../../assets/Icons/Pre_icons/MO_Scale_label.jpg" /> <strong>: </strong>Geometry can be scaled in Preprocessor specifying the scaling factor. (See <a href="#Fig._12.1.4._Geometry_scaling_options"><span data-keyref="Chapter_12_1_2D_Geometry_Data_Defining">Fig. 12.1.</span>4.</a>)
+    The scaling factor can be calculated by temperature differential and temperature dependent material data and scaled geometry can be saved in the Geometry saving formats.</p>
+  <p style="text-align: center"><img height="343" src="../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image001.jpg" width="750" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;"><a id="Fig._12.1.4._Geometry_scaling_options"></a>Geometry scaling options</p>
+  <p> </p>
+  <p><a id="CAD_Interface"></a><strong>CAD Interface</strong> <img height="14" src="../../../assets/Icons/Pre_icons/MO_CAD_Interface_Label.jpg" width="72" /><strong>: </strong>Using this option user can import CAD geometry file  directly for Soildworks directly.</p>
+  <p><a id="Construct_by_Subtract"></a><strong>Construct by Subtract </strong><img src="../../../assets/Icons/Pre_icons/MO_Construct_by_substraction_button.jpg" /> <strong>: </strong>This option is used to create geometry by subtracting geometry of other
+    objects that are already present. Here the starting point, width and height of the object geometry from which other geometries to be subtracted must be specified as shown in Fig. (See <a href="#Fig._12.1.5._Construct_by_Subtract_window"><span data-keyref="Chapter_12_1_2D_Geometry_Data_Defining">Fig. 12.1.</span>5.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._12.1.5._Construct_by_Subtract_window"></a><img src="../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image006.jpg" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Construct by Subtract window</p>
+  <p> </p>
+  <p><a id="Check_Geometry"></a><strong>Check Geometry</strong> <img src="../../../assets/Icons/Pre_icons/MO_Check_label.jpg" /></p>
+  <p>Once the geometry of the object is created, Check GEO button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the <img src="../../../assets/Icons/Pre_icons/MO_Check_label.jpg" style="cursor: nwse-resize;"
+    />button a popup appears as shown in below <a href="#Fig._12.1.6.Check_Geometry_options_window_in_2D_mode"><span data-keyref="Chapter_12_1_2D_Geometry_Data_Defining">Fig. 12.1.</span>6.</a> The Geometry gets corrected when we click on check &amp;
+    correct geometry button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._12.1.6.Check_Geometry_options_window_in_2D_mode"></a><img src="../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image002.JPG" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Check Geometry options window in 2D mode</p>
+  <p> </p>
+  <p>Below are a few common geometric errors in DEFORM 2D and how they are corrected by DEFORM.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;font-family:Arial;font-size:12pt;line-height:1.5;margin-left:4px;text-align:justify">
+    <colgroup>
+      <col style="width:50.00%" />
+      <col style="width:50.00%" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><strong>GEOMETRY ERROR </strong></td>
+        <td><strong>RECOMMENDED CORRECTION</strong></td>
+      </tr>
+      <tr>
+        <td> Duplicate points</td>
+        <td> Remove the duplicate point</td>
+      </tr>
+      <tr>
+        <td> Adjacent points are collinear</td>
+        <td> Remove the collinear point (s)</td>
+      </tr>
+      <tr>
+        <td> Corner radius is so large that at least one of the tangent points lies outside the tangent line defined by the adjacent points  </td>
+        <td> Reduce the corner radius so that both tangent points lie within the tangent line segments</td>
+      </tr>
+      <tr>
+        <td> Arc interference at adjacent points: opposite arc orientations</td>
+        <td> Adjust the radii of the points so that the common tangent point lies on the line connecting the points</td>
+      </tr>
+      <tr>
+        <td> Arc interference at adjacent points: same arc orientation </td>
+        <td> Adjust the radii so that the common tangent point becomes the intersection point of the two arcs projected on the common tangent line</td>
+      </tr>
+      <tr>
+        <td> Line entity with zero length</td>
+        <td> Remove entity</td>
+      </tr>
+      <tr>
+        <td> Arc entity with zero radius</td>
+        <td> Remove entity</td>
+      </tr>
+      <tr>
+        <td> Adjacent entities cross </td>
+        <td> Modify entities so that the intersection point becomes the ending point of one entity and the starting point of the other entity</td>
+      </tr>
+      <tr>
+        <td> Unconnected adjacent entities</td>
+        <td>  Add a line segment to connect the entities</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Fig_name">Corrective measures to be taken for DEFORM 2D geometry</p>
+  <p> </p>
+  <p><strong>System Defects:</strong> when user checks geometry if there is any misorientation it gets corrected whether it is closed or open Geometry.</p>
+  <p><strong>Closed:</strong> It checks the orientation of geometry and closes the geometry. If user creates an open geometry, it get closes by joining start and end points by selecting closed geometry.</p>
+  <p><strong>Open Geometry:</strong> If user creates an open geometry, it checks the orientation and keeps the geometry in open.</p>
+  <p><strong>Remove collinear points:</strong> When user check remove collinear points check box it removes the collinear points present in the geometry.</p>
+  <p> </p>
+  <p><a id="Reverse"></a><strong>Reverse </strong><img src="../../../assets/Icons/Pre_icons/MO_Reverse_label.jpg" />: This feature reverses the orientation of the geometry. Orientation of the 2D geometry must be always inside for single loop geometry, for
+    multiple loop geometry the loop which share between the two regions can have the orientation on either side, but topology must be defined.</p>
+  <p> </p>
+  <p><a id="Edit"></a><strong>Edit </strong><img src="../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg" />  : This feature helps to edit boundary of the 2D object. The Geometry editing window is used to create, modify or view the geometry of a given object.
+    The window appears upon selecting the <img src="../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg" /> in the Geometry window. Refer <a href="12_2_2d_geometry_editing.htm">Chapter 12.2. 2D Geometry Editing.</a></p>
+  <p> </p>
+  <p><a id="Extract_Border"></a><strong>Extract Border </strong><img src="../../../assets/Icons/Pre_icons/MO_Extract_border_button.jpg" /> : This feature extracts the geometry data from the current database for all object types except the rigid object.</p>
+  <p> </p>
+  <p><a id="Extract_from_Mesh"></a><strong>Extract from Mesh </strong><img src="../../../assets/Icons/Pre_icons/MO_Extract_From_mesh.jpg" /> : This feature extracts geometry from the mesh.</p>
+  <p> </p>
+  <p><a id="Show_geometry_inside_mark"></a><strong>Show geometry inside mark</strong> : Checking this option enables the Geometry orientation display.</p>
+  <p> </p>
+  <p><a id="Delete_geometry"></a><strong>Delete geometry : </strong>Using Delete <img src="../../../assets/Icons/Pre_icons/MO_clear_icon.jpg" style="cursor: nesw-resize;" /> option the object geometry gets deleted.</p>
+  <p> </p>
+  <h2><a id="12.1.3._2D_Geometry_data_Loading_and_Saving"></a>2D Geometry data Loading and Saving </h2>
+  <p><a id="Importing_Geometry"></a><strong>Importing Geometry : </strong>Geometry can be imported from a file <img src="../../../assets/Icons/Pre_icons/MO_Import_file_icon.jpg" /> or Load geometry from library <img src="../../../assets/Icons/Pre_icons/MO_Load_from_Library_icon.jpg"
+    /> options, a DEFORM native graphics file (AMGGEO), keyword file, database file or created using the geometry editor. When importing IGES files or dxf files, use the mouse to select the object you wish to import. Click on any line segment in the object.
+    Any segments connected to this object will also be selected and highlighted.</p>
+  <p> </p>
+  <p><strong>AMGGEO format input [2D]</strong></p>
+  <p>The AMGGEO format is the mesh generators internal format for handling geometries. This format can specify geometry as a set of connect points, the XYR format, the line-arc format, and as a set of boundary nodes.</p>
+  <p> </p>
+  <p class="Note_text">Note:</p>
+  <p class="Note_text">It is necessary to use the mouse to select the object to be imported even if there is only a single object in the drawing file.</p>
+  <p class="Note_text"> </p>
+  <p><a id="Assign_the_file_name_to_the_object_name_while_loading_geometry"></a><strong>Assign the file name to the object name while loading geometry</strong> : When user checks this option while loading or importing geometry file, it assigns the geometry
+    file name to the Object name.</p>
+  <p class="Note_text"> </p>
+  <p><a id="Save_geometry"></a><strong>Save geometry :</strong> Saves geometry to a file <img src="../../../assets/Icons/Pre_icons/MO_Save_to_a_file_icon.jpg" /> or to library uisng <img src="../../../assets/Icons/Pre_icons/MO_Save_to_Library_icon.jpg" />.
+    Saves geometry in IGES, DXF and DEFORM native GEO format for 2D.</p>
+  <p> </p>
+  <h2><a id="12.1.4._Settings"></a>Settings <img src="../../../assets/Icons/Pre_icons/MO_Settings_icon.jpg" /></h2>
+  <p style="text-align: center"><img src="../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image007.jpg" style="cursor: nesw-resize;" /></p>
+  <p class="Fig_numb" style="text-align: center;"><a id="Fig._12.1.7._2D_Geometry_Settings_Window"></a>2D Geometry Settings Window</p>
+  <p style="text-align: center;"> </p>
+  <p><strong>Tolerance: </strong>Sets the tolerance level for joining two boundary points which are close together when an object is imported in IGS and DXF geometry formats, and before transferring the data into DEFORM are defined here. ( <a href="#Fig._12.1.7._2D_Geometry_Settings_Window"><span data-keyref="Chapter_12_1_2D_Geometry_Data_Defining">Fig. 12.1.</span>7.</a>)</p>
+  <p> </p>
+  <p><strong>No. of discretization points: </strong></p>
+  <p> </p>
+  <p><a href="12_geometry_modelling.htm">12. Geometry Modelling</a></p>
+  <p><a href="12_2_2d_geometry_editing.htm">12.2. 2D Geometry data Editing</a></p>
+  <p><a href="12_3_3d_geometry_data_defining.htm">12.3. 3D Geometry data Defining</a></p>
+  <p><a href="12_4_3d_geometry_data_Editing_geo_toolL.htm">12.4. 3D Geometry data Editing (GEO TOOL)</a></p>
+</body>
+</html>

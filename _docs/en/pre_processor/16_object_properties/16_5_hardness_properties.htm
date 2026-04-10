@@ -1,0 +1,105 @@
+---
+lang: en
+title: "16.5. Hardness estimation type"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>16.5. Hardness estimation type</title>
+  <meta name="topic-status" content="Draft" />
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/Pre_Processor/16_Object_Properties/16_5_Hardness_Properties.css" />
+</head>
+<body>
+  <h1>16.5. Hardness Estimation type</h1>
+  <p>[2D, 3D]: Material hardness predictions can be based on: (See <a href="#16_5_1_2D_Hardness_Object_properties_window"><span data-keyref="Chapter_16_5_Hardness_Properties">Fig. 16.5.</span>1.</a> to <span data-keyref="Chapter_16_5_Hardness_Properties">Fig. 16.5.</span>5.)</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Volume fraction of various phases</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Jominy curve data</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Cooling time</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Solid solution with precipitation</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Hardness data for a material can be defined in the Material Properties of the respective object material and will be estimated based on the estimation type selected under Properties of the respective object, <a href="#16_5_1_2D_Hardness_Object_properties_window"><span data-keyref="Chapter_16_5_Hardness_Properties">Fig. 16.5.</span>1.</a>    shows estimation type options available under Hardness in Object Properties. A description of the hardness prediction method is given there. For more information on defining Hardness in Material Properties, please refer section <a href="../10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data.htm">10.7. Hardness data.</a></p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><br/>
+    <strong>Referenced Start temperature, End temperature</strong>: Upper and lower temperature values for Jominy or cooling time hardness prediction curves. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="16_5_1_2D_Hardness_Object_properties_window"></a><img src="../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image001.jpg" /></p>
+  <p> </p>
+  <p class="Fig_numb">Hardness estimation type in Object properties window</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="">
+      <p>&quot;<strong>Use volume fractions</strong>&quot;: Hardness is computed based on the individual phases (Mixture rule) evolving during the quench process at the respective element using the hardness data defined in material properties of the respective
+        phase.</p>
+    </li>
+  </ol>
+  <p style=""> </p>
+  <p style="text-align: center"><a id="Fig_16_5_2_Hardness_estimation_type_-_Use_jominy_curves"></a><img height="450" src="../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image003.jpg" width="531" /></p>
+  <p style=""> </p>
+  <p class="Fig_numb" style="">Use jominy curves type Hardness estimation</p>
+  <p style=""> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span lang="EN-US" style="color:black"></span></span>
+    </span>
+  </p>
+  <ol class="Decimal">
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; counter-reset: item1 1;" value="2">&quot;<strong>Use jominy curves</strong>&quot;: Referenced Start temperature and End temperature needs to be defined for hardness estimation using Jominy curves which will be used to activate cooling range. Time spent by a material point in the temperature
+      range + the Jominy data provided under material properties will be used for the hardness computations, see <a href="#Fig_16_5_3_Use_jominy_curve_type_Hardness_estimation"><span data-keyref="Chapter_16_5_Hardness_Properties">Fig. 16.5.</span>3.</a>      Time spent by a material point in this temperature range and rate of temperature range is the basis for cooling time and rate computations. </li>
+  </ol>
+  <ol class="RoundSquare">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;margin-left: 20px">When the temperature is higher than the referenced high temperature, the hardness flag is set to -2.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;margin-left: 20px">When the temperature reaches (equal to or less than) the referenced high temperature, the &quot;Hardness&quot; flag is set to -3, and this instantaneous time is recorded in the &quot;cooling time&quot;. This flag and cooling time is set only one time
+      and will be kept for the subsequent steps until the temperature reaches the referenced low temperature, see <a href="#Fig_16_5_4_Simualtion_results_with_Use_jominy_curve_type_Hardness_estimation"><span data-keyref="Chapter_16_5_Hardness_Properties">Fig. 16.5.</span>4.</a></li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;margin-left: 20px">When the material point is inside the Reference temperature range, cooling time only indicates the time stamp of a material point entering in this temperature range, see <a href="#Fig_16_5_4_Simualtion_results_with_Use_jominy_curve_type_Hardness_estimation"><span data-keyref="Chapter_16_5_Hardness_Properties">Fig. 16.5.</span>4.</a></li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;margin-left: 20px">When the material point completely cools below the cooling the correct value of hardness is updated, see <a href="#Fig_16_5_4_Simualtion_results_with_Use_jominy_curve_type_Hardness_estimation"><span data-keyref="Chapter_16_5_Hardness_Properties">Fig. 16.5.</span>4.</a></li>
+  </ol>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;margin-left: 20px"> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"><a id="Fig_16_5_3_Use_jominy_curve_type_Hardness_estimation"></a><img height="420" src="../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image002.jpg" width="442" /></p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"> </p>
+  <p class="Fig_numb" style="font-family: Arial; font-size: 12pt; text-align: center; line-height: 1.5;">Use jominy curve type Hardness estimation</p>
+  <p style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5;"> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"><a id="Fig_16_5_4_Simualtion_results_with_Use_jominy_curve_type_Hardness_estimation"></a><img height="700" src="../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image006.jpg" width="624" /></p>
+  <p class="Fig_numb" style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5">Simulation results with Use jominy curve type Hardness estimation</p>
+  <p style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5;"> </p>
+  <ol class="Decimal">
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; counter-reset: item1 2;" value="3">&quot;<strong>Only cooling time</strong>&quot;: Referenced Start temperature and End temperature is used to activate cooling range. Time spent by a material point in this temperature range + the Jominy data provided is the basis for cooling time,
+      see <a href="#Fig_16_5_5_Only_cooling_time_type_Hardness_estimation"><span data-keyref="Chapter_16_5_Hardness_Properties">Fig. 16.5.</span>5.</a>. No hardness is computed.</li>
+  </ol>
+  <p style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; margin-left: 40px;">In the element data dialogue,</p>
+  <ol class="RoundSquare">
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; margin-left: 20px;">When the temperature is higher than the referenced high temperature, the hardness flag is set to -2.</li>
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; margin-left: 20px;">When the temperature reaches (equal to or less than) the referenced high temperature, the &quot;Hardness&quot; flag is set to -3, and this instantaneous time is recorded in the &quot;cooling time&quot;. This flag and cooling time is set only one time
+      and will be kept for the subsequent steps until the temperature reaches the referenced low temperature.</li>
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; margin-left: 20px;">When the temperature reaches (equal to or less than) the referenced low temperature, the &quot;Hardness&quot; flag is set to -4, the elapse time from reaching the referenced high temperature to reaching the low referenced temperature is recorded in
+      the &quot;Cooling time&quot;. This flag and cooling time is set only one time, and will be kept in the subsequent steps.  In each simulation step, it is divided into 10 sub-steps, so that the time to reach the referenced temperature can be more
+      accurately determined.</li>
+  </ol>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;margin-left: 40px">In summary, for the cooling process, when the &quot;Hardness&quot; flag is -3, the &quot;cooling time&quot; means the time to reach the referenced high temperature; when the &quot;Hardness&quot; flag is -4, the &quot;cooling time&quot; means the time
+    interval from the referenced high temperature to the referenced low temperature.</p>
+  <p style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5;"> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"><a id="Fig_16_5_5_Only_cooling_time_type_Hardness_estimation"></a><img height="450" src="../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image003.jpg" width="531" /></p>
+  <p class="Fig_numb" style="font-family: Arial; font-size: 12pt; text-align: center; line-height: 1.5;">Only cooling time type Hardness estimation</p>
+  <p style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5;"> </p>
+  <ol class="Decimal">
+    <li style="font-family: Arial; font-size: 12pt; text-align: justify; line-height: 1.5; counter-reset: item1 3;" value="4">For &quot;<strong>Solid solution with precipitate</strong>” option, hardness is computed based on the precipitation model, see <a href="#Fig_16_5_6_Solid_solution_with_precipitate_type_Hardness_estimation"><span data-keyref="Chapter_16_5_Hardness_Properties">Fig. 16.5.</span>6.</a>.</li>
+  </ol>
+  <p> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: center;line-height: 1.5"><a id="Fig_16_5_6_Solid_solution_with_precipitate_type_Hardness_estimation"></a><img height="450" src="../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image003.jpg" width="531" /></p>
+  <p class="Fig_numb" style="font-family: Arial; font-size: 12pt; text-align: center; line-height: 1.5;">Solid solution with precipitate type Hardness estimation</p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="16_object_properties.htm">16. Object properties</a></p>
+  <p><a href="16_1_deformation_properties.htm">16.1. Deformation properties</a></p>
+  <p><a href="16_2_thermal_properties.htm">16.2. Thermal properties</a></p>
+  <p><a href="16_3_Reference.htm">16.3. Reference</a></p>
+  <p><a href="16_4_Fracture_properties.htm">16.4. Fracture Properties</a></p>
+  <p><a href="16_6_heating_properties.htm">16.6. Heating Properties</a></p>
+  <p><a href="16_7_symmetry_properties.htm">16.7. Symmetry Properties</a></p>
+  <p><a href="16_8_body_force.htm">16.8. Body Force</a></p>
+  <p><a href="16_9_rse.htm">16.9. RSE</a></p>
+  <p><a href="16_10_user.htm">16.10. User</a></p>
+  <p><a href="../10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data.htm">Material Hardness properties</a></p>
+</body>
+</html>

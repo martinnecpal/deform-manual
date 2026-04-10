@@ -1,0 +1,344 @@
+---
+lang: en
+title: "2D Thermal Cycling"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.18.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Thermal Cycling</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Thermal Cycling</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_thermal_cycling/2d_thermal_cycling_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_Thermal_Distortion/Thermal_Distorsion_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_Thermal_Cycling/55_Thermal_Cycling_Main_pg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="2D Thermal Cycling">
+        <span>2D Thermal Cycling</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>2D Thermal Cycling Lab</h1>
+  <p><br/>
+    <a href="#1_1_Creating_New_problem">1.1. Creating New problem</a></p>
+  <p><a href="#1_2_Adding_2D_Forming_Operation">1.2. Adding 2D Forming Operation</a></p>
+  <p><a href="#1_3_Import_the_gear2_DB_Database">1.3. Import the gear2.DB Database</a></p>
+  <p><a href="#1_4_Select_Geometry_type_and_Simulation_Modes">1.4. Select Geometry type and Simulation Modes</a></p>
+  <p><a href="#1_5_Deleting_workpiece_object">1.5. Deleting workpiece object</a></p>
+  <p><a href="#1_6_Defining_Top_die_object_data">1.6. Defining Top die object data</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_1_Generating_mesh_for_Top_die">1.6.1. Generating mesh for Top die</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_2_Assign_Top_die_material">1.6.2. Assign Top die material</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_3_Assign_Top_die_BCC">1.6.3. Assign Top die BCC</a></p>
+  <p><a href="#1_7_Defining_Bottom_die_object_data">1.7. Defining Bottom die object data</a></p>
+  <p><a href="#1_8_Assign_Step_controls">1.8. Assign Step controls</a></p>
+  <p><a href="#1_9_Data_checking_and_database_generation">1.9. Data checking and database generation</a></p>
+  <p><a href="#1_10_Passing_all_objects_to_all_operation">1.10. Passing all objects to all operation</a></p>
+  <p><a href="#1_11_Setting_up_Forming_operation">1.11. Setting up Forming operation</a></p>
+  <p style="margin-left: 20px"><a href="#1_11_1_Select_Simulation_Modes">1.11.1. Select Simulation Modes</a></p>
+  <p style="margin-left: 20px"><a href="#1_11_2_Adding_Workpiece_object_in_object_list">1.11.2. Adding Workpiece object in object list</a></p>
+  <p style="margin-left: 20px"><a href="#1_11_3_Loading_workpiece_object_data">1.11.3. Loading workpiece object data</a></p>
+  <p style="margin-left: 20px"><a href="#1_11_4_Define_scheduled_positioning_data">1.11.4. Define scheduled positioning data</a></p>
+  <p style="margin-left: 20px"><a href="#1_11_5_Define_Inter_-Object_relation">1.11.5. Define Inter -Object relation</a></p>
+  <p style="margin-left: 20px"><a href="#1_11_6_Assign_Stopping_controls">1.11.6. Assign Stopping controls</a></p>
+  <p style="margin-left: 20px"><a href="#1_11_7_Assigning_Step_controls_page">1.11.7. Assigning Step controls page</a></p>
+  <p><a href="#1_12_Setting_up_Air_Before_Spray_operation">1.12. Setting up Air Before Spray operation</a></p>
+  <p style="margin-left: 20px"><a href="#1_12_1_Select_Simulation_Modes">1.12.1. Select Simulation Modes</a></p>
+  <p style="margin-left: 20px"><a href="#1_12_2_Step_controls_page">1.12.2. Step controls page</a></p>
+  <p><a href="#1_13_Setting_up_Spray_operation">1.13. Setting up Spray operation</a></p>
+  <p style="margin-left: 20px"><a href="#1_13_1_Select_Simulation_Modes">1.13.1. Select Simulation Modes</a></p>
+  <p style="margin-left: 20px"><a href="#1_13_2_Step_controls_page">1.13.2. Step controls page</a></p>
+  <p><a href="#1_14_Setting_up_Air_cool_after_Spray_operation">1.14. Setting up Air cool after Spray operation</a></p>
+  <p style="margin-left: 20px"><a href="#1_14_1_Select_Simulation_Modes">1.14.1. Select Simulation Modes</a></p>
+  <p style="margin-left: 20px"><a href="#1_14_2_Step_controls_page">1.14.2. Step controls page</a></p>
+  <p><a href="#1_15_Adding_Cycle_operation">1.15. Adding Cycle operation</a></p>
+  <p><a href="#1_16_Run_and_monitor_a_simulation">1.16. Run and monitor a simulation</a></p>
+  <p><a href="#1_17_Review_Results">1.17. Review Results</a></p>
+  <p style="margin-left: 20px"><a href="#1_17_1_Point_tracking">1.17.1. Point tracking</a></p>
+  <p> </p>
+  <p>This lab will introduce the concept of cycling where we repeatedly run simulation with a new workpiece through an existing set of tools to study temperature evolution over time.</p>
+  <p>Rather than reading the workpiece from the database and introducing new tools, we will read the tools from the database, and introduce a new workpiece.  We will start the cycle with a &quot;dummy&quot; operation in which the tools are introduced, and
+    then begin the cycle where each time we loop back to the beginning, the tools are read from the last operation.</p>
+  <p>We will model a typical tool thermal cycle, which includes</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Forming</p>
+    </li>
+    <li>
+      <p>Rest in air</p>
+    </li>
+    <li>
+      <p>Spray tool with lubricant/ coolant</p>
+    </li>
+    <li>
+      <p>Rest in air again</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h2><a id="1_1_Creating_New_problem"></a>Creating New problem</h2>
+  <p>On a Windows machine, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_L1_1_New_Problem_Setup_Window"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>1.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong><strong><strong>2D_Thermal_Cycling</strong></strong>
+    </strong>&quot; and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_1_New_Problem_Setup_Window"></a><img height="419" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem Setup Window</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, retain the project name as <strong>2D_Thermal_Cycling </strong>and confirm that First operation check box is unchecked as we will add operation later and use the default (home) directory
+    as shown in <a href="#FIg_L1_2_New_MO_Project_window"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>2.</a> Click <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> to add project.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_L1_2_New_MO_Project_window"></a><img height="290" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0002.jpg" width="434"/></p>
+  <p> </p>
+  <p class="Fig_numb">New MO Project window</p>
+  <p> </p>
+  <h2><a id="1_2_Adding_2D_Forming_Operation"></a>Adding 2D Forming Operation</h2>
+  <p>Multiple Operation wizard will open a new project. Add five 2D Forming operations from the Explorer Operations list. Operation  can also be add by clicking on 2D Forming operation <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button (See <a href="#Fig_L1_3_Adding_2D_Forming_operation_from_operation_explorer"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>3.</a>) or user can also add by drag and drop into the Operation Editor.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_3_Adding_2D_Forming_operation_from_operation_explorer"></a><img height="387" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding 2D Forming operation from operation explorer</p>
+  <p> </p>
+  <p>Change the first operation default operation title to &quot;<strong>Start</strong>&quot; from Forming by selecting the title in the operation editor as shown in <a href="#Fig_L1_4_Renaming_operation_name_to_Start"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>4.</a>    and press Enter keyboard button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_4_Renaming_operation_name_to_Start"></a><img src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Renaming operation name to Start</p>
+  <p> </p>
+  <h2><a id="1_3_Import_the_gear2_DB_Database"></a>Import the gear2.DB Database</h2>
+  <p>In this operation we will import objects data from <strong>gear2.DB</strong>. Click on Import <img src="../../../../assets/icons/pre_icons/mo_import_icon.jpg"/>  button under <strong>File </strong><strong>menu </strong>and load <strong>gear2.DB </strong>file
+    from DEFORM installation folder <strong> \Tutorials</strong> directory.</p>
+  <p>Select<strong> -106</strong> step in Step selection list and click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> button (See <a href="#Fig_L1_5_Selecting_step_to_load_objects_data_from_database"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>5.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_5_Selecting_step_to_load_objects_data_from_database"></a><img height="386" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting step to load objects data from database</p>
+  <h2><a id="1_4_Select_Geometry_type_and_Simulation_Modes"></a>Select Geometry type and Simulation Modes</h2>
+  <p>Confirm the geometry type selected is<strong> Axi-symmetric</strong> in Geometry type page, then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p>In this operation we will setup dummy operation, so in Simulation controls page, <strong>uncheck </strong>the <strong>Deformation </strong>mode and <strong>check </strong>the <strong>Heat </strong><strong>transfer </strong>operation (if not checked
+    by default), then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Objects page.</p>
+  <h2><a id="1_5_Deleting_workpiece_object"></a>Deleting workpiece object</h2>
+  <p>We will delete workpiece object from this operation and we will load this object in next operation. So, delete the Workpiece object from the list using <img src="../../../../assets/icons/pre_icons/mo_delete_object_button.jpg"/> button. Click  <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Top die page.</p>
+  <h2><a id="1_6_Defining_Top_die_object_data"></a>Defining Top die object data</h2>
+  <p>Change the object temperature to <strong>300</strong>°F. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Mesh page.</p>
+  <h3><a id="1_6_1_Generating_mesh_for_Top_die"></a>Generating mesh for Top die</h3>
+  <p>We will generate mesh with mesh window. So, Click on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> icon to switch to expert mode. Define Target number of elements as <strong>1000</strong>, Under <strong>Weighting </strong><strong>Factors </strong>tab
+    change the <strong>Mesh </strong><strong>window </strong>value to <strong>1</strong>. Now select Mesh window tab and add two mesh windows.</p>
+  <p>Define <strong>Window </strong><strong>1</strong> to <strong>cover </strong><strong>bottom </strong><strong>region </strong>as shown in <a href="#Fig_L1_6_Top_die_mesh_window"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>6.</a> with
+    <strong>element </strong><strong>size </strong><strong>0.3</strong></p>
+  <p>Define <strong>Window </strong><strong>2 </strong>to cover the <strong>entire </strong><strong>top </strong><strong>die </strong>with relative <strong>element </strong><strong>size </strong><strong>1.0</strong> as shown in <a href="#Fig_L1_6_Top_die_mesh_window"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>6.</a>    Then click the <img src="../../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button to generate the mesh for Top die. After generating mesh switch to Guided mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_guided_mode.jpg"/> mode icon. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_6_Top_die_mesh_window"></a><img height="387" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die mesh window</p>
+  <h3><a id="1_6_2_Assign_Top_die_material"></a>Assign Top die material</h3>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material from library) button, select the <strong>Die_Material </strong>category, then select <strong>AISI-H-13</strong>  and click the <img src="../../../../assets/icons/pre_icons/mo_load_button.jpg"/> button. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <h3><a id="1_6_3_Assign_Top_die_BCC"></a>Assign Top die BCC</h3>
+  <p>By default, Heat Exchange BCC is assigned for whole outer surface except symmetry plane. In this lab we will define the Heat Exchange BCC only for bottom surface. Delete the default assigned heat exchange BCC and assign Heat Exchange BCC only for bottom
+    surface as shown in <a href="#Fig_L1_7_Heat_Exchange_with_Environment_BCC_assigned_for_Top_die"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>7.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button
+    until Bottom die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_7_Heat_Exchange_with_Environment_BCC_assigned_for_Top_die"></a><img height="387" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0007.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Heat Exchange with Environment BCC assigned for Top die</p>
+  <p> </p>
+  <h2><a id="1_7_Defining_Bottom_die_object_data"></a>Defining Bottom die object data</h2>
+  <p>Change the object temperature to<strong> 300</strong>°F. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until step page.</p>
+  <h2><a id="1_8_Assign_Step_controls"></a>Assign Step controls</h2>
+  <p>This operation will run only for 1 step, so define <strong>Number of steps</strong> as <strong>1</strong>, <strong>Step increment</strong> as <strong>1</strong> and define <strong>constant </strong><strong>time </strong>as <strong>1</strong> <strong>sec/step</strong>    as shown in <a href="#Fig_L1_8_Step_controls_window"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>8</a>. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to generate DB.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_8_Step_controls_window"></a><img height="320" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0008.jpg" width="371"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step controls window</p>
+  <h2><a id="1_9_Data_checking_and_database_generation"></a>Data checking and database generation</h2>
+  <p>Click on the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button, the data checking system will confirm that defined data is appropriate for running a simulation.</p>
+  <p>Red marks indicate missing or incorrect data that will prevent a simulation from running. It is necessary to correct those errors before the database can be generated.</p>
+  <p> </p>
+  <p>Yellow marks indicate data which may be suspect and should be reviewed. These should be investigated carefully, as they might result in system instability or erroneous (incorrect) results.</p>
+  <p> </p>
+  <p>Review the data checking information. If there are no yellow or red marks, click the  <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button.</p>
+  <h2><a id="1_10_Passing_all_objects_to_all_operation"></a>Passing all objects to all operation</h2>
+  <p>In Operation editor, right click on first operation Top die and select &quot; <strong>Pass object to all operations</strong>&quot; (see <a href="#Fig_L1_9_Passing_all_objects_to_all_operations"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>9.</a>),
+    similarly pass bottom die data to all operations,  then  Click <img src="../../../../assets/icons/pre_icons/mo_next_opr_button.jpg" style="cursor: nwse-resize;"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_9_Passing_all_objects_to_all_operations"></a><img height="399" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Passing all objects to all operations</p>
+  <h2><a id="1_11_Setting_up_Forming_operation"></a>Setting up Forming operation</h2>
+  <p>In second operation, change the default operation title to &quot;<strong>Forming</strong>&quot; from Forming (2) by selecting the title in the operation editor and press Enter keyboard button. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3 class="h3_1_11_"><a id="1_11_1_Select_Simulation_Modes"></a>Select Simulation Modes</h3>
+  <p>Confirm the geometry type selected is <strong>Axi-symmetric</strong> in Geometry type page, then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p>In this operation we will setup forming operation, so in Simulation controls page, check the Deformation mode and Heat transfer operation (if not checked by default), then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until
+    Objects page.</p>
+  <h3 class="h3_1_11_"><a id="1_11_2_Adding_Workpiece_object_in_object_list"></a>Adding Workpiece object in object list</h3>
+  <p>We will Add workpiece object to this operation using <img src="../../../../assets/icons/pre_icons/mo_add_object_button.jpg"/> (insert object)  button. Click  to Object 1 page.</p>
+  <h3 class="h3_1_11_"><a id="1_11_3_Loading_workpiece_object_data"></a>Loading workpiece object data</h3>
+  <p>Click on Import object from a file <img src="../../../../assets/icons/pre_icons/mo_import_file_icon.jpg"/> button and load <strong>gear2.DB</strong> file from DEFORM installation folder  <strong>\Tutorials</strong> directory. Select <strong>-106</strong>    step in Step selection list and click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> button, then select Workpiece object in Object selection page and click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> button
+    to load Workpiece object data (See <a href="#Fig_L1_10_Object_selection_window"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>10.</a>). Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Scheduled
+    positioning.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_10_Object_selection_window"></a><img height="387" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object selection window</p>
+  <h3 class="h3_1_11_"><a id="1_11_4_Define_scheduled_positioning_data"></a>Define scheduled positioning data</h3>
+  <p>Add two steps:</p>
+  <ol class="Decimal">
+    <li>
+      <p>Top die interference positioning with Workpiece in -Y direction and</p>
+    </li>
+    <li>
+      <p>Bottom die interference positioning with Workpiece in +Y direction. then click  to Contact page.</p>
+    </li>
+  </ol>
+  <h3 class="h3_1_11_"><a id="1_11_5_Define_Inter_-Object_relation"></a>Define Inter -Object relation</h3>
+  <p>Assign the default inter-object relationships using <img src="../../../../assets/icons/pre_icons/mo_add_default_relations_button.jpg"/>button. The workpiece should be slave to both the Top die and Bottom Die. Click on the <img src="../../../../assets/icons/pre_icons/mo_define_button.jpg"/> button for one of the relationships. Select <strong>Coulomb </strong>type friction radio button, define <strong>0.3</strong> friction value and in thermal tab define Heat Transfer Coefficient as 0.004. Click  <img src="../../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to exit the menu. Click <img src="../../../../assets/icons/pre_icons/mo_apply_to_all_button.jpg"/> to apply the friction value and Heat Transfer Coefficient value to the two other relationships. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Stopping controls page.</p>
+  <h3 class="h3_1_11_"><a id="1_11_6_Assign_Stopping_controls"></a>Assign Stopping controls</h3>
+  <p>Check <strong>Distance between objects</strong> check box and select <strong>Top die </strong>and <strong>Bottom die</strong> as <strong>Object 1</strong> and <strong>Object 2</strong> (reference points were imported with the dies), define value as
+    <strong>0.2</strong> and select <strong>Y</strong> direction. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Step controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_11_Stopping_controls_window"></a><img height="320" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0011.jpg" width="371"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Stopping controls window</p>
+  <h3 class="h3_1_11_"><a id="1_11_7_Assigning_Step_controls_page"></a>Assigning Step controls page</h3>
+  <p>Define <strong>Number of steps</strong> as <strong>100</strong>, <strong>Step increment</strong> as <strong>10, </strong>define <strong>constant </strong><strong>die </strong><strong>displacement </strong>as <strong>0.01</strong> in/step and select
+    Primary die as &quot;Top Die&quot; as shown in <a href="#Fig_L1_12_Step_controls_window"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>12.</a> Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until
+    Next operation page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_12_Step_controls_window"></a><img height="320" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0012.jpg" width="371"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step controls window</p>
+  <p> </p>
+  <h2><a id="1_12_Setting_up_Air_Before_Spray_operation"></a>Setting up Air Before Spray operation</h2>
+  <p>In third operation, change the default operation title to &quot;<strong>Air Before Spray</strong>&quot; by selecting the title in the operation editor and press Enter keyboard button. Click <img src="../../../../assets/icons/pre_icons/mo_next_opr_button.jpg"/>.</p>
+  <h3 class="h3_1_12_"><a id="1_12_1_Select_Simulation_Modes"></a>Select Simulation Modes</h3>
+  <p>Confirm the geometry type selected is <strong>Axi-symmetric</strong> in Geometry type page, then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p>In this operation we will setup heat transfer operation so, in Simulation controls page, <strong>uncheck </strong>the <strong>Deformation </strong>mode and check <strong>Heat </strong><strong>transfer </strong>operation (if not checked by default),
+    then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Step controls page.</p>
+  <h3 class="h3_1_12_"><a id="1_12_2_Step_controls_page"></a>Step controls page</h3>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> icon to switch to expert mode, Under Stopping criteria <img height="21" src="../../../../assets/icons/pre_icons/mo_stopping_criteria.jpg" width="21"/><img height="12" src="../../../../assets/icons/pre_icons/arrow_front.jpg" width="29"/> Process parameters tab define process duration as <strong>1</strong>. Then switch to Guided mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_guided_mode.jpg"/> icon. Now define <strong>Time </strong><strong>constant </strong>value as <strong>0.05</strong> and retain other default value. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Next operation page.</p>
+  <h2><a id="1_13_Setting_up_Spray_operation"></a>Setting up Spray operation</h2>
+  <p>In fourth operation, change the default operation title to &quot;<strong>Spray</strong>&quot; by selecting the title in the operation editor and press Enter keyboard button. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3 class="h3_1_13_"><a id="1_13_1_Select_Simulation_Modes"></a>Select Simulation Modes</h3>
+  <p>Confirm the geometry type selected is<strong> Axi-symmetric</strong> in Geometry type page, then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <p> </p>
+  <p>In this operation we will setup heat transfer operation so, in Simulation controls page, <strong>uncheck </strong>the <strong>Deformation </strong>mode and <strong>check </strong><strong>Heat </strong><strong>transfer </strong>operation (if not checked
+    by default), then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Step controls page.</p>
+  <h3 class="h3_1_13_"><a id="1_13_2_Step_controls_page"></a>Step controls page</h3>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> mode icon to switch to expert mode, Under <strong>Stopping </strong><strong>criteria </strong><img height="21" src="../../../../assets/icons/pre_icons/mo_stopping_criteria.jpg" width="21"/><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Process parameters</strong> tab define <strong>process </strong><strong>duration </strong>as <strong>3</strong> sec. Under <strong>Process </strong><strong>conditions </strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Heat Transfer</strong> tab define <strong>Convection </strong><strong>coefficient </strong>value as <strong>1e-3 </strong>Btu/sec/in^2/F. Then switch to Guided mode by clicking on
+    <img src="../../../../assets/icons/pre_icons/mo_guided_mode.jpg"/> mode icon. Now define <strong>Time constant</strong> value as <strong>0.05 </strong>and retain other default value. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Next operation page.</p>
+  <h2><a id="1_14_Setting_up_Air_cool_after_Spray_operation"></a>Setting up Air cool after Spray operation</h2>
+  <p>In fifth operation, change the default operation title to &quot;<strong>Air After Spray</strong>&quot; by selecting the title in the operation editor and press Enter keyboard button. Click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/>.</p>
+  <h3 class="h3_1_14_"><a id="1_14_1_Select_Simulation_Modes"></a>Select Simulation Modes</h3>
+  <p>Confirm the geometry type selected is <strong>Axi-symmetric</strong> in Geometry type page, then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> </p>
+  <p> </p>
+  <p>In this operation we will setup heat transfer operation, so in Simulation controls page, uncheck the <strong>Deformation </strong>mode and check <strong>Heat </strong><strong>transfer </strong>operation (if not checked by default),. then click <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Step controls page.</p>
+  <h3 class="h3_1_14_"><a id="1_14_2_Step_controls_page"></a>Step controls page</h3>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_expert_mode_icon.jpg"/> icon to switch to expert mode, Under <strong>Stopping </strong><strong>criteria <img height="21" src="../../../../assets/icons/pre_icons/mo_stopping_criteria.jpg" width="21"/></strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/> <strong>Process </strong><strong>parameters </strong>tab define process duration as 1sec. Under <strong>Process </strong><strong>conditions </strong><img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/><strong>Heat </strong><strong>Transfer </strong>tab change the <strong>Convection </strong><strong>coefficient </strong>value is <strong>7.7e-6 </strong>Btu/sec/in^2/F if  it is not default. Then switch to Guided mode by clicking on <img src="../../../../assets/icons/pre_icons/mo_guided_mode.jpg"/> icon. Now define <strong>Time </strong>constant value as <strong>0.05 </strong>and retain other default value. </p>
+  <h2><a id="1_15_Adding_Cycle_operation"></a>Adding Cycle operation</h2>
+  <p>In operation editor, use the mouse to drag a window around operations 2-5. Right click and select &quot;<strong>Add Cycle</strong>&quot; In the dialog on the right, define <strong>5</strong> cycles (See <a href="#Fig_L1_12_Step_controls_window"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>12</a>).</p>
+  <p class="Note_text">Note:  placing a window around the tiles can be tricky. Drag them to the right to create a space between operation 1 and 2, then define the window around tiles 2-5. If you grab one you didn&#39;t intend, you can right click on the line to delete the
+    cycle and try again.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_13_Adding_cycle_operation"></a><img height="400" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding cycle operation</p>
+  <p> </p>
+  <p>Click on the MO <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> Mode button (above the operation tree) to start the simulation.</p>
+  <p> </p>
+  <h2><a id="1_16_Run_and_monitor_a_simulation"></a>Run and monitor a simulation</h2>
+  <p>Click on the <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> action label to open the Run Options dialog. Use the default <strong>Continue </strong><strong>Run </strong>option to select “<strong>Continue</strong><strong> from the last step</strong>”
+    option and then select the Simulation mode as <strong>Interactive </strong>radio button <strong> </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p>Watching the simulation graphics provides an initial idea of what to expect when opening the postprocessor (See <a href="#Fig_L1_14_Running_the_simulation_from_MO_simulation_mode"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>14.</a>).
+    Also monitor simulation from Simulation and log messages. The message file and log file will indicate that the simulation has been completed on the last line, confirming that click on <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/>  Mode button to review results.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_14_Running_the_simulation_from_MO_simulation_mode"></a><img height="388" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Running the simulation from MO simulation mode</p>
+  <p> </p>
+  <h2><a id="1_17_Review_Results"></a>Review Results</h2>
+  <p>Play through the Steps and see the Temperature distribution in Top die by plotting the Temperature State variables.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_15_Top_die_temperature_distribution_at_last_step"></a><img height="388" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die temperature distribution at last step.</p>
+  <p> </p>
+  <h3 class="h3_1_17_"><a id="1_17_1_Point_tracking"></a>Point tracking</h3>
+  <p>Select Top die and click on Single object mode ( <img src="../../../../assets/icons/pre_icons/mo_show_single_obj_icon.jpg"/> ) button, click <img src="../../../../assets/icons/post_icons/mo_point_tracking_icon.jpg"/> on Point tracking  option  and
+    select points as shown in <a href="#1_16_Run_and_monitor_a_simulation"><span data-keyref="Application-2D_Thermal_Cycling_Lab">Fig. L1.</span>16.</a> near the bottom surface of the Top die, click on <img src="../../../../assets/icons/post_icons/mo_track_button.jpg"/> button. Observe the Point tracking graph with Temperature state variable.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="384" src="../../../../assets/images/applications/55_thermal_cycling/2d_thermal_cycling_lab/image0016.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Point tracking graph with Temperature state variable</p>
+  <p> </p>
+
+</body></html>

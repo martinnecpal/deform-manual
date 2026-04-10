@@ -1,0 +1,112 @@
+---
+lang: sk
+title: "Appendix XIX Settings for CG solver for 3D simulation"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_19";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XIX Settings for CG solver for 3D simulation</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XIX Settings for CG solver for 3D simulation</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_xix.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/30_Die_Stress/Coupled_Die_stress_Analysis.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_XVIII_How_to_use_Explicit_Solver.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix XIX Settings for CG solver for 3D simulation">
+        <span>Appendix XIX Settings for CG solver for 3D simulation</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix XIX: Settings for CG solver for 3D simulation</h1>
+  <p><a href="#AXIX_1_Level_of_fill_in">AXIX.1. Level of fill in</a></p>
+  <p><a href="#AXIX_2_Method_of_partitioning">AXIX.2. Method of partitioning</a></p>
+  <p> </p>
+  <p>New Conjugate Gradient (CG) solver setting has two parameters of &quot;Level of fill in&quot; and &quot;Partitioning&quot;. Both terminologies are commonly used in describing the iterative methods based on the incomplete LU decomposition method.</p>
+  <h2><a id="AXIX_1_Level_of_fill_in"></a>Level of fill in</h2>
+  <p>The profile of matrix based on FEM is originally banded and there are non-zero off-diagonal values between all connected nodes of FEM mesh.</p>
+  <p>During the factorization of a matrix to solve a set of equations (similar to the elimination process in the Gaussian elimination method), the off-diagonal value, originally zero, is gradually filled.</p>
+  <p> </p>
+  <p>The level of fill &quot;0&quot; means the original matrix.</p>
+  <p>The level of fill &quot;1&quot; means that any new filling is allowed between the interaction of non-zero terms in the original matrix, otherwise, it is ignored.</p>
+  <p>The level of fill &quot;2&quot; means that any new filling is allowed between the interaction of non-zero terms in the &quot;level 1&quot; matrix, otherwise, it is ignored.</p>
+  <p>And go on.</p>
+  <p> </p>
+  <p>Thus, the decomposed matrices prepared for the iterative method become more close to the exact as the level of fill-in increases, but the computational time increases greatly. In other words, the number of iterations can be reduced with a higher level
+    of fill, but the cost to get a pre-conditioner becomes expensive. On the other hand, the number of iterations can be increased or may not converge with a lower level of fill although the cost to get a pre-conditioner is cheap.</p>
+  <p> </p>
+  <p>The optimal value depends on each problem (the type of manufacturing process, the mesh topology, the number of nodes and so on).</p>
+  <p>Our default value is selected as 4 based on our extensive testing.</p>
+  <p>The users may try to find a better value for their specific problem.</p>
+  <h2><a id="AXIX_2_Method_of_partitioning"></a>Method of partitioning</h2>
+  <p>The partitioning has two meaning in our algorithm: for best node numbering and for evenly distribution of computation for multiple processors. Depending on the node numbering, the amount of filling during factorization explained previously can be increased
+    greatly. We had tested various different methods and selected the default method with some modifications.</p>
+  <p>For multiple processors, it is better to decompose the whole domain into a number of sub-domains having a minimum interface between sub-domains. We do partitioning first with METIS and then adjust the sub-domains from METIS by changing the interface
+    suitable for our algorithm. Thus, we recommend using our default value for the method of partitioning.</p>
+
+</body></html>

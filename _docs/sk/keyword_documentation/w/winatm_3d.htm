@@ -1,0 +1,294 @@
+---
+lang: sk
+title: "WINATM (3D)"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.22.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>WINATM (3D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>WINATM (3D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/w/w_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/W/WININD.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/W/WINATM.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="WINATM (3D)">
+        <span>WINATM (3D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>WINATM</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Object data - 3D)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 12-08-2013</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">WINATM Object, WinNo, WindowShape, AtmType, SRCtype</p>
+  <p class="P_10_Bold">Velx, Vely, Velz</p>
+  <p class="P_10_Bold">window corrdinate data :</p>
+  <p class="P_10_Bold"> {</p>
+  <p class="P_10_Bold">if WindowShape = 1 (box defined by 8 corners)</p>
+  <p class="P_10_Bold">Point(1), X(1), Y(1), Z(1)</p>
+  <p class="P_10_Bold">:  :  :</p>
+  <p class="P_10_Bold">Point(8), X(8), Y(8), Z(8)</p>
+  <p class="P_10_Bold">If WindowShape = 2 (Cylinder)</p>
+  <p class="P_10_Bold">OriginA_X, OriginA_Y, OriginA_Z</p>
+  <p class="P_10_Bold">OriginB_X, OriginB_Y, OriginB_Z</p>
+  <p class="P_10_Bold">inner radius, outer radius</p>
+  <p class="P_10_Bold">}</p>
+  <p class="P_10_Bold">Atom content data :</p>
+  <p class="P_10_Bold">{</p>
+  <p class="P_10_Bold">If AtmType = 0:</p>
+  <p class="P_10_Bold">AtmValue</p>
+  <p class="P_10_Bold">If AtmType = 1:</p>
+  <p class="P_10_Bold">Ndata</p>
+  <p class="P_10_Bold">Time(1) Atom(1)</p>
+  <p class="P_10_Bold">:  :</p>
+  <p class="P_10_Bold">Time(Ndata) Atom(Ndata)</p>
+  <p class="P_10_Bold">}</p>
+  <p class="P_10_Bold">Surface reaction coefficient data :</p>
+  <p class="P_10_Bold">{</p>
+  <p class="P_10_Bold">If SRCtype=0</p>
+  <p class="P_10_Bold">SRCvalue</p>
+  <p class="P_10_Bold">If SRCtype=1 or 2</p>
+  <p class="P_10_Bold">Ndata</p>
+  <p class="P_10_Bold">Time/Atom(1)  SRC(1)</p>
+  <p class="P_10_Bold">:  :</p>
+  <p class="P_10_Bold">Time/Atom(Ndata)  SRC(Ndata)</p>
+  <p class="P_10_Bold">If SRCtype = 3</p>
+  <p class="P_10_Bold">NumTim NumAtm</p>
+  <p class="P_10_Bold">Time(1) ... Time(NumTim)</p>
+  <p class="P_10_Bold">Atom(1) ... Atom(NumAtm)</p>
+  <p class="P_10_Bold">SRC(1) ... SRC(NumTim*NumAtm)</p>
+  <p class="P_10_Bold">}</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Object</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Object number</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">WinNo    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Window number</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">WindowShape    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Shape of window definition </p>
+          <p class="P_10">= <strong>1</strong>  rectangular</p>
+          <p class="P_10">= <strong>2</strong>  cylindrical</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">AtmType</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Type of atom content definition </p>
+          <p class="P_10">=<strong>0</strong> constant</p>
+          <p class="P_10">=<strong>1</strong> function of time</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">SRCtype</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Type of surface reaction coefficient definition</p>
+          <p class="P_10">=<strong>0</strong> constant</p>
+          <p class="P_10">=<strong>1</strong> function of time</p>
+          <p class="P_10">=<strong>2</strong> function of atom content</p>
+          <p class="P_10">=<strong>3</strong> function of time and atom content</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">WINATM specifies the diffusion window and window parameters for an object.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">REMARKS</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Applicable Simulation Modules: Microstructure</p>
+          <p class="P_10">Applicable Simulation Mode: Transformation</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10"><a href="../../pre_processor/14_boundary_conditions/14_boundary_conditions.htm">Boundary Constraints</a>: <a href="../../pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions.htm#14.4.1._Diffusion_with_the_environment_BCC_">Diffusion windows</a></p>
+          <p class="P_10">Keywords: <a href="../e/envatm.htm">ENVATM</a>, <a href="../a/acvcof.htm">ACVCOF</a>, <a href="../l/locatm.htm">LOCATM</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

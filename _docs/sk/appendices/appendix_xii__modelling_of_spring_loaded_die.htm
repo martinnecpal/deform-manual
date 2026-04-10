@@ -1,0 +1,176 @@
+---
+lang: sk
+title: "Appendix XII: Modelling of Spring Loaded Die Using Force Controlled Objects"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XII: Modelling of Spring Loaded Die Using Force Controlled Objects</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix XII: Modelling of Spring Loaded Die Using Force Controlled Objects</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_xii.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_XIII_Fine_Points_on_Using_Force_Controlled_Dies.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_XI__Near_surface_mesh_functions.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix XII: Modelling of Spring Loaded Die Using Force Controlled Objects">
+        <span>Appendix XII: Modelling of Spring Loaded Die Using Force Controlled Objects</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix XII: Modelling  of Spring Loaded Die using Force Controlled objects</h1>
+  <p><strong>Overview:</strong></p>
+  <p>A simulation of a spring-loaded sliding die can be broken down into three typical phases of sliding die movement</p>
+  <ol class="Decimal">
+    <li>
+      <p>Force on the sliding die is below the preload - die is stationary resting on a stop or another die.</p>
+    </li>
+    <li>
+      <p>Force on die exceeds preload - die begins moving under spring load control.</p>
+    </li>
+    <li>
+      <p>Die hits a stop - forming process completes with die stationary.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>:</p>
+  <p class="Note_text">Depending on the type of sliding die being modeled, this behavior may or may not be fully realized in any particular simulation. For example, some pneumatic springs don&#39;t require the modeling of a preload.  In such a case, the first phase can be
+    omitted.</p>
+  <p> </p>
+  <p><strong>Methods for modeling sliding dies in DEFORM<span style="vertical-align:super;font-size:8pt">®</span>:</strong></p>
+  <p><strong>Option 1</strong>: Make the sliding die as primary die, use load and/or stroke stopping controls to stop the simulation when die starts (Preload exceeded) or stops motion (spring goes solid), then change movement controls and restart.</p>
+  <p> </p>
+  <p><strong>Option 2</strong>: Use artificial elastic spacer (s) to allow the spring-loaded die to react against deformable body, and allow simulation to run through. (More initial setup time but less intervention during run time)</p>
+  <p> </p>
+  <p><strong>Option 1 described:</strong></p>
+  <p> </p>
+  <p><strong>Phase 1: </strong> (See <a href="#Fig_AXII_1_Sketch_of_spring-loaded_die_simulation_with_spring-loaded_die"><span data-keyref="Appendix_XII_Modelling_of_Spring_loaded">Fig. AXII.</span>1.</a>)</p>
+  <ol class="LowerAlpha">
+    <li>
+      <p>Set object 2 velocity control.</p>
+    </li>
+    <li>
+      <p>Object 4 primary die, no movement control.</p>
+    </li>
+    <li>
+      <p>Stop on load = preload on object 4.</p>
+    </li>
+    <li>
+      <p>Step control by time (primary die is not moving).</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p><strong>Phase 2: </strong>(See <a href="#Fig_AXII_2_Sketch_of_spring-loaded_die_simulation_with_spring-loaded_die_set_with_movement_"><span data-keyref="Appendix_XII_Modelling_of_Spring_loaded">Fig. AXII.</span>2.</a>)</p>
+  <ol class="LowerAlpha">
+    <li>
+      <p>Object 4 load control. Direction should be direction load is applied, not direction of movement.</p>
+    </li>
+    <li>
+      <p>If movement of object 4 is limited, stop on stroke can be set.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AXII_1_Sketch_of_spring-loaded_die_simulation_with_spring-loaded_die"></a><img height="400" src="../../assets/images/appendices/appendix_xii_modelling_of_spring_loaded/image0001.jpg" width="179"/></p>
+  <p> </p>
+  <p class="Fig_numb">Sketch of spring-loaded die simulation with spring-loaded die set with a stopping criteria based on load</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AXII_2_Sketch_of_spring-loaded_die_simulation_with_spring-loaded_die_set_with_movement_"></a><img height="350" src="../../assets/images/appendices/appendix_xii_modelling_of_spring_loaded/image0002.jpg" width="179"/></p>
+  <p> </p>
+  <p class="Fig_numb">Sketch of spring-loaded die simulation with spring-loaded die set with movement type based on load</p>
+  <p> </p>
+  <p><strong>Option 2 described</strong>: Using an artificial elastic “spacer” (See <a href="#Fig_AXII_3_Sketch_of_spring-loaded_die_simulation_with_spring-loaded_die"><span data-keyref="Appendix_XII_Modelling_of_Spring_loaded">Fig. AXII.</span>3.</a> and
+    <a href="#Fig_AXII_4_Sketch_of_spring-loaded_die_simulation_with_spring-loaded_die_set_"><span data-keyref="Appendix_XII_Modelling_of_Spring_loaded">Fig. AXII.</span>4.</a>)</p>
+  <p> </p>
+  <ol class="LowerAlpha">
+    <li>
+      <p>Create a thin elastic object (5 in this case) with about 10-20 elements</p>
+    </li>
+    <li>
+      <p>Make object 5 slave to both objects 3 and 4.</p>
+    </li>
+    <li>
+      <p>Set movement on object 4 to load control, with the load as the preload.</p>
+    </li>
+    <li>
+      <p>Run the simulation. When load exceeds preload, die will automatically move up.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AXII_3_Sketch_of_spring-loaded_die_simulation_with_spring-loaded_die"></a><img height="400" src="../../assets/images/appendices/appendix_xii_modelling_of_spring_loaded/image0003.jpg" width="195"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Sketch of spring-loaded die simulation with spring-loaded die set with movement type based on load and an additional elastic body (5) that provides a reaction force for the spring-loaded die (4).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AXII_4_Sketch_of_spring-loaded_die_simulation_with_spring-loaded_die_set_"></a><img height="350" src="../../assets/images/appendices/appendix_xii_modelling_of_spring_loaded/image0004.jpg" width="196"/></p>
+  <p> </p>
+  <p class="Fig_numb">Sketch of spring-loaded die simulation with spring-loaded die set with movement type based on load and an additional elastic body.  At this stage, the material has filled beneath the sliding die and is pushing the sliding die upward.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../pre_processor/15_movement_controls_definition/15_movement_controls_settings.htm">Movement Controls</a></p>
+
+</body></html>

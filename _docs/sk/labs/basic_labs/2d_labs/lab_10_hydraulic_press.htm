@@ -1,0 +1,286 @@
+---
+lang: sk
+title: "Lab 10 Hydraulic press"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.4.1.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab 10 Hydraulic press</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lab 10 Hydraulic press</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/basic_labs/2d_labs/lab_10_hydraulic_press.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Basic_labs/2D_Labs/Lab_11_Screw_press.htm"/><meta name="brsprev" value="Documentation_content/Labs/Basic_labs/2D_Labs/Lab_09_Hammer_Multiple_Operation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Lab 10 Hydraulic press">
+        <span>Lab 10 Hydraulic press</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 10 Hydraulic press</h1>
+  <p>Requirement: To setup this operation, First we have to setup <a href="lab_03_spike_isothermal.htm">Lab 03 Spike Isothermal Lab</a>.</p>
+  <p> </p>
+  <p>This lab will repeat the spike isothermal forging simulation on a 1000 ton hydraulic press. The deformation results will appear similar to the previous spike forging labs, but the velocity will decrease as the press runs out of power during the end
+    of the stroke. An initial die speed of 2”/second will be applied to the top die. As the forming load increases, it will require more power than the press can deliver with subsequent deceleration of the moving die.</p>
+  <p> </p>
+  <p><a href="#10_1_Creating_a_New_Problem">10.1. Creating a New Problem</a></p>
+  <p><a href="#10_2_Adding_Operation">10.2. Adding Operation</a></p>
+  <p><a href="#10_3_Importing_Database">10.3. Importing Database</a></p>
+  <p><a href="#10_4_Assigning_Hydraulic_movement_for_Top_Die">10.4. Assigning Hydraulic movement for Top Die</a></p>
+  <p><a href="#10_5_Generating_Database">10.5. Generating Database</a></p>
+  <p><a href="#10_6_Starting_the_Simulation">10.6. Starting the Simulation</a></p>
+  <p><a href="#10_7_Post-Processing_the_Results">10.7. Post-Processing the Results</a></p>
+  <p> </p>
+  <h2><a id="10_1_Creating_a_New_Problem"></a>Creating a New Problem</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/> icon. The Problem Setup window will appear. Select &quot;<strong>Integrated Manufacturing Process</strong>&quot; radio button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong></strong><strong>Spike_Hydraulic</strong>&quot;
+    and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog (See <a href="#Fig_L10_1_Assigning_Project_name"><span data-keyref="Basic_labs_2D_Labs _Lab10">Fig. L10.</span>1.</a>), at this point user will be prompted to specify a project name (system
+    will create a separate folder with this project name) and title for this session. In this lab we use ‘<strong>Spike_Hydraulic</strong>’ as the project name.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L10_1_Assigning_Project_name"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_10_hydraulic_press/2d_mobl10_image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Project name</p>
+  <p> </p>
+  <p>User can also change the Unit system, project saving file location and add operation by selecting from First operation pull down list and checkbox (see <a href="#Fig_L10_1_Assigning_Project_name"><span data-keyref="Basic_labs_2D_Labs _Lab10">Fig. L10.</span>1.</a>).
+    Using copy Existing project option we can import previous saved projects as new project. Click on <img height="23" src="../../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> to continue to open the operation.</p>
+  <p> </p>
+  <h2><a id="10_2_Adding_Operation"></a>Adding Operation</h2>
+  <p>Multiple Operation wizard will open. Add 2D Forming operation from the Explorer Operations list. Operation can be add by clicking on 2D Forming operation <img src="../../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button or user can also
+    add by drag and drop into the Operation Editor.</p>
+  <p> </p>
+  <h2><a id="10_3_Importing_Database"></a>Importing Database</h2>
+  <p>Using Import option <img src="../../../../assets/icons/pre_icons/mo_import_icon.jpg"/>, Load the database of problem <strong>Spike_Isothermal</strong>, select<strong> -1 </strong>step in the Step selection window (see <a href="#Fig_L10_2_Selecting_step_in_Step_Selection_window"><span data-keyref="Basic_labs_2D_Labs _Lab10">Fig. L10.</span>2.</a>),
+    then click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/>. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> button until Top Die movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L10_2_Selecting_step_in_Step_Selection_window"></a><img src="../../../../assets/images/labs/basic_labs/2d_labs/lab_10_hydraulic_press/2d_mobl10_image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting step in Step Selection window</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>:</p>
+  <p class="Note_text">Two parameters are required to run the hydraulic press model.</p>
+  <p class="Note_text"> </p>
+  <p class="Note_text">1. A control speed or nominal starting speed should be supplied to the movement control field. If the press is being run at maximum possible speed, then the speed should be identical to the speed at no load. Any controls within the power envelope are
+    possible including speed (or load) as a function of time or stroke.</p>
+  <p class="Note_text"> </p>
+  <p class="Note_text">2. The power envelope defining the maximum speed available at any load can be described in data pairs. This data is constant for any press configuration. Typically five or more points can adequately define this limit with DEFORM® interpolating data
+    between points. One point at zero load and one at zero force should be included.</p>
+  <p class="Note_text"> </p>
+  <p class="Note_text">Stopping controls such as maximum stroke, maximum load or minimum velocity are all available when using the hydraulic press model.</p>
+  <p> </p>
+  <h2><a id="10_4_Assigning_Hydraulic_movement_for_Top_Die"></a>Assigning Hydraulic movement for Top Die</h2>
+  <p>Select <strong>Hydraulic </strong><strong>movement</strong> type, define Constant <strong>speed </strong>as <strong>2</strong> in/sec, <strong>check </strong>the <strong>power </strong><strong>limit </strong>check box and click on <img src="../../../../assets/icons/pre_icons/mo_define..._button2.jpg"/> button and define the below power limit curve values in the table (see <a href="#Fig_L10_3_Top_Die_Movement_Power_limit_definition_dialog"><span data-keyref="Basic_labs_2D_Labs _Lab10">Fig. L10.</span>3.</a>). Then click <img src="../../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to close the Function window. Click on <img src="../../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Generate DB page.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 325px;text-align: center;margin-left: auto; margin-right: auto;">
+    <colgroup>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="margin-left: 4px;text-align: center"><strong>Force (Klb-s)</strong></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center"><strong>Speed (in/s)</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-left: 4px;text-align: center">0</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center">2.51</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-left: 4px;text-align: center">100</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center">2.50</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-left: 4px;text-align: center">250</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center">2.46</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-left: 4px;text-align: center">450</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center">2.40</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-left: 4px;text-align: center">700</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center">2.26</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-left: 4px;text-align: center">1000</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center">1.98</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-left: 4px;text-align: center">1250</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center">1.65</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-left: 4px;text-align: center">1500</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center">1.25</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-left: 4px;text-align: center">1750</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center">0.75</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="margin-left: 4px;text-align: center">2000</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center">0.0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Table_numb">Top Die Movement- Power Limit Curve data</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L10_3_Top_Die_Movement_Power_limit_definition_dialog"></a><img height="424" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_10_hydraulic_press/2d_mobl10_image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top Die Movement Power limit definition dialog</p>
+  <p> </p>
+  <h2><a id="10_5_Generating_Database"></a>Generating Database</h2>
+  <p>Click the <img src="../../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. During the checking process:</p>
+  <p>Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).  </p>
+  <p> </p>
+  <p>Click on <img src="../../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. When the program is done writing the database, click on <img src="../../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> tab
+    to run simulation.</p>
+  <p> </p>
+  <h2><a id="10_6_Starting_the_Simulation"></a>Starting the Simulation</h2>
+  <p>Click on <img src="../../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> under the simulation tab, as we click on the Run option, Run simulation dialog will open, use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option
+    and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p>The progress of the simulation can be monitored as it is running by looking at the Simulation Message and Simulation Graphics in Simulation mode. Click the Simulation Message tab to view the Message file. As long as the <img src="../../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked, which is the default setting, the Message file will refresh every couple of seconds.</p>
+  <p> </p>
+  <p> The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.</p>
+  <p> </p>
+  <p>When the simulation has finished, the following message will be added to the end of the Message file:</p>
+  <p>&quot;******Message*******</p>
+  <p>Simulation is completed and stopped at the user specified time step&quot;.</p>
+  <p> </p>
+  <h2><a id="10_7_Post-Processing_the_Results"></a>Post-Processing the Results</h2>
+  <p>After simulation has been completed, click on <img src="../../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab, MO post processor will open.</p>
+  <p> </p>
+  <p><strong>Load-Stroke Graph:</strong></p>
+  <p>Plot <strong>Load-Stroke</strong> and <strong>Speed- Stroke graph</strong> and observe the graph as shown in <a href="#Fig_L10_4_Load-Stroke_Graph_plot"><span data-keyref="Basic_labs_2D_Labs _Lab10">Fig. L10.</span>4.</a> and<a href="#Fig_L10_5_Speed-Stoke_Graph_plot">  <span data-keyref="Basic_labs_2D_Labs _Lab10">Fig. L10.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L10_4_Load-Stroke_Graph_plot"></a><img height="426" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_10_hydraulic_press/2d_mobl10_image0004.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Load-Stroke Graph plot</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_L10_5_Speed-Stoke_Graph_plot"></a><img height="424" src="../../../../assets/images/labs/basic_labs/2d_labs/lab_10_hydraulic_press/2d_mobl10_image0005.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Speed-Stoke Graph plot</p>
+  <p> </p>
+  <p><strong></strong></p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../../pre_processor/15_movement_controls_definition/15_movement_controls_settings.htm">15. Movement Controls Settings</a></p>
+  <p><a href="../../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout.htm">6.2. Integrated Manufacturing Process Simulation layout</a></p>
+  <p><a href="../../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout.htm">6.3. Integrated Manufacturing Process Post-processor layout</a></p>
+  <p><a href="../../../post_processor/25_post_processor_layout/25_post_processor_layout.htm">25. Post Processor Layout</a></p>
+
+</body></html>

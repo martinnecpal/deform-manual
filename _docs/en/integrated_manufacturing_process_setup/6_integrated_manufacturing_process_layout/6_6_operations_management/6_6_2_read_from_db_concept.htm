@@ -1,0 +1,136 @@
+---
+lang: en
+title: "6.6.2. Read from DB concept"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "3.1.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.6.2. Read from DB concept</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.6.2. Read from DB concept</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_2_read_from_db_concept.css"/>
+<meta name="brsnext" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_6_Operations_Management/6_6_3_Editing_Operations.htm"/><meta name="brsprev" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_6_Operations_Management/6_6_1_Connecting_Operations.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="6.6.2. Read from DB concept">
+        <span>6.6.2. Read from DB concept</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>6.6.2. Read from DB concept</h1>
+  <p>In multiple operations simulation, user may have to pass the objects along with its state variable history to multiple operations as they are simulated sequentially, in such scenario user can &quot;Read from DB&quot; object type. Once the objects are
+    passed across operations a link between the passed objects across operations is displayed in operation editor. Read from DB concept is the basic idea behind Multiple operations setup and simulation in batch mode or single stretch. The Read from DB
+    object type will read the object data from previous operation last step from the Database before generation of new database  by .MST file for the next operation simulation, hence it retains the previous operation state variables history. This object
+    type will reduce interruption after every simulation as in earlier versions preprocessor environment.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="481" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_2_read_from_db_concept/6_6_2_image001.jpg" width="750"/></p>
+  <p class="Fig_name">(a)</p>
+  <p> </p>
+  <p style="text-align: center"><img height="480" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_2_read_from_db_concept/6_6_2_image002.jpg" width="750"/></p>
+  <p class="Fig_name">(b)</p>
+  <p class="Fig_numb"><a id="Fig._6.6.2.1._Read_from_DB_object_type_selection_from_object_window;"></a>Read from DB object type selection from object window; (a) For 2D (b) For 3D</p>
+  <p><br/> Read from DB object type option is available either in object window (See <a href="#Fig._6.6.2.1._Read_from_DB_object_type_selection_from_object_window;"><span data-keyref="Chapter_6_6_2_Rad_from_DB_concept">Fig. 6.6.2.</span>1.)</a> or can also
+    be selected from operation editor context menu option &quot;Pass object to Next operation&quot; or &quot;Pass object to All operation&quot; (See <a href="#Fig._6.6.2.2._Read_from_DB_object_type_selection_by_passing_the_objects_from_operation_editor_context_menu"> <span data-keyref="Chapter_6_6_2_Rad_from_DB_concept">Fig. 6.6.2.</span>2.</a>).
+    As Pass object option will pass to the next operations these objects object type will be Read from DB only. </p>
+  <p style="text-align: center"><br/>
+    <img height="448" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_2_read_from_db_concept/6_6_2_image003.jpg" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.6.2.2._Read_from_DB_object_type_selection_by_passing_the_objects_from_operation_editor_context_menu"></a>Read from DB object type selection by passing the objects from operation editor context menu</p>
+  <p><br/>
+    <strong>Note:</strong></p>
+  <p class="Note_text">Read from DB option is not available in first operation object types, as there is no DB is available before first operation.</p>
+  <p><br/> For more information on Connecting operations and passing objects refer the chapter <a href="6_6_1_connecting_operations.htm">6.6.1.Connecting Operations.</a></p>
+  <p> </p>
+  <p>When user wants to pass objects to Forming operation, user has to select the objects to be passed from previous operations as Forming operation is an open environment. But in guided operations like Heat transfer express, Heat treatment, forming express etc
+    opening the operations will automatically add the objects and object type is set to Read from DB.</p>
+  <p>In case of heat transfer express operations like Heating and Transfer operation only one object is allowed and if these operations are subsequent operations then selecting them will automatically read the object from previous operation and its object
+    type is set to Read from DB as shown in <a href="#Fig._6.6.2.3._Object_type_selection_in_heat_transfer_operations"><span data-keyref="Chapter_6_6_2_Rad_from_DB_concept">Fig. 6.6.2.</span>3.</a> Similarly Heat transfer Express - Dwell  operation will
+    automatically read all objects from previous operation.</p>
+  <p class="Fig_name" style="text-align: center"><br/>
+    <img height="480" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_2_read_from_db_concept/6_6_2_image004.jpg" width="750"/><br/> (a)
+  </p>
+  <p class="Fig_name" style="text-align: center"><img height="478" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_2_read_from_db_concept/6_6_2_image005.jpg" width="750"/><br/>
+    <br/> (b)
+  </p>
+  <p class="Fig_numb"><a id="Fig._6.6.2.3._Object_type_selection_in_heat_transfer_operations"></a>Object type selection in heat transfer operations, (a) Before opening the Heating Express 2nd operation (transfer operation) (b) After opening the Heating Express 2nd operation
+    (transfer operation)</p>
+  <p> </p>
+  <p>In case of subsequent forming express operation even though all objects object type is set to Red from DB (See <a href="#Fig._6.6.2.4._Object_type_selection_in_forming_express_operation"><span data-keyref="Chapter_6_6_2_Rad_from_DB_concept">Fig. 6.6.2.</span>4.</a>)
+    by default but still user is allowed to change the dies by selecting the define radio button and defining the object data for dies as shown in <a href="#Fig._6.6.2.4._Object_type_selection_in_forming_express_operation"><span data-keyref="Chapter_6_6_2_Rad_from_DB_concept">Fig. 6.6.2.</span>4b</a>.</p>
+  <p> </p>
+  <p class="Fig_name" style="text-align: center"><img height="479" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_2_read_from_db_concept/6_6_2_image006.jpg" width="750"/> <br/> (a)
+  </p>
+  <p style="text-align: center">  <img height="480" src="../../../../assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_2_read_from_db_concept/6_6_2_image007.jpg" width="750"/></p>
+  <p class="Fig_name">(b)</p>
+  <p class="Fig_numb"><a id="Fig._6.6.2.4._Object_type_selection_in_forming_express_operation"></a>Object type selection in forming express operation; (a) Before opening the 2nd operation (b) After opening the 2nd operation</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../6_1_integrated_manufacturing_process_preprocessor_layout.htm">6.1. Integrated Manufacturing Porcess (MO) Pre-processor Layout</a></p>
+  <p><a href="6_6_1_connecting_operations.htm">6.6.1. Connecting Operations</a></p>
+
+</body></html>

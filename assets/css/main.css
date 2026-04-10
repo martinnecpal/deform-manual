@@ -1,0 +1,246 @@
+/* ==========================================================================
+   DEFORM V14.0.2 Manual — Main Stylesheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Reset & base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; height: auto; }
+
+/* --------------------------------------------------------------------------
+   Site layout — sidebar + content
+   -------------------------------------------------------------------------- */
+.site-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  background: #f5f5f5;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+.site-logo { max-height: 40px; width: auto; }
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  padding: 4px 8px;
+  display: none;
+}
+
+/* Search */
+.search-box {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.search-results {
+  position: absolute;
+  left: 12px; right: 12px;
+  top: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.search-results li a {
+  display: block;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.search-results li a:hover { background: #f0f0f0; text-decoration: none; }
+
+/* TOC navigation */
+.toc-holder { flex: 1; padding: 8px 0; overflow-y: auto; }
+
+.nav-list { list-style: none; margin: 0; padding: 0; }
+
+.nav-item { position: relative; }
+
+.nav-link {
+  display: block;
+  padding: 5px 12px 5px 16px;
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.nav-link:hover { background: #e8e8e8; text-decoration: none; }
+.nav-link.current { background: #d0e4f7; color: #003d7a; font-weight: 600; border-left: 3px solid #0066cc; }
+
+/* Book nodes with toggle */
+.has-children > .nav-link { padding-left: 30px; }
+
+.nav-toggle {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 20px; height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.toggle-icon {
+  display: inline-block;
+  width: 0; height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid #666;
+  transition: transform 0.2s;
+}
+
+.nav-toggle[aria-expanded="true"] .toggle-icon { transform: rotate(90deg); }
+
+/* Nested lists */
+.nav-children {
+  list-style: none;
+  padding-left: 12px;
+  display: none;
+}
+
+.nav-children.open { display: block; }
+
+.nav-children .nav-link { font-size: 0.82rem; }
+.nav-children .nav-children .nav-link { font-size: 0.8rem; padding-left: 28px; }
+
+/* --------------------------------------------------------------------------
+   Main content area
+   -------------------------------------------------------------------------- */
+.main-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.topbar {
+  height: 48px;
+  background: #002b5c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.topbar-title { font-size: 1rem; font-weight: 500; }
+
+.content {
+  flex: 1;
+  padding: 32px 40px;
+  max-width: 960px;
+}
+
+/* Topic content — passthrough from RoboHelp HTML */
+.topic-content { }
+
+.topic-content h1 { font-size: 1.75rem; margin-bottom: 16px; color: #002b5c; }
+.topic-content h2 { font-size: 1.35rem; margin: 28px 0 12px; color: #003d7a; }
+.topic-content h3 { font-size: 1.1rem; margin: 20px 0 8px; }
+.topic-content p  { margin-bottom: 12px; }
+.topic-content ul, .topic-content ol { margin: 0 0 12px 24px; }
+.topic-content li { margin-bottom: 4px; }
+.topic-content table { border-collapse: collapse; width: 100%; margin-bottom: 16px; font-size: 0.9rem; }
+.topic-content th, .topic-content td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+.topic-content th { background: #e8eef5; font-weight: 600; }
+.topic-content pre, .topic-content code { font-family: "Courier New", monospace; background: #f4f4f4; border-radius: 3px; }
+.topic-content pre { padding: 12px 16px; overflow-x: auto; margin-bottom: 12px; }
+.topic-content code { padding: 1px 4px; font-size: 0.9em; }
+.topic-content img { display: block; margin: 16px 0; max-width: 100%; }
+
+/* Footer */
+.site-footer {
+  padding: 16px 40px;
+  border-top: 1px solid #ddd;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    height: 100%;
+    z-index: 200;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open { left: 0; box-shadow: 4px 0 16px rgba(0,0,0,0.2); }
+
+  .sidebar-toggle { display: block; }
+  .mobile-only { display: flex !important; }
+
+  .content { padding: 20px 16px; }
+
+  .lang-switcher { top: auto; bottom: 10px; right: 10px; }
+}
+
+@media (min-width: 769px) {
+  .mobile-only { display: none !important; }
+}

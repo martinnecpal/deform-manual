@@ -1,0 +1,491 @@
+---
+lang: sk
+title: "Shot Peening Lab1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.23.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Shot Peening Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Shot Peening Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/shot_peening_labs/shot_peening_lab1.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Spinning_Labs/Spinning_Labs_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Labs/Shot_Peening_Labs/Shot_Peening_Lab_MainPg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Shot Peening Lab1">
+        <span>Shot Peening Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab1: Shot Peening Lab</h1>
+  <p>This lab will demonstrate the setting up of shot peening of helical gear using Shot peening template.</p>
+  <p> </p>
+  <p><a href="#1_1_Launching_Shot_Peen_wizard">1.1. Launching Shot Peen wizard</a> </p>
+  <p><a href="#1_2_Creating_New_Project">1.2. Creating New Project</a></p>
+  <p><a href="#1_3_Defining_Shot_Peening_Process_parameters">1.3. Defining Shot Peening Process parameters</a></p>
+  <p><a href="#1_4_Loading_material_for_helical_gear">1.4. Loading material for helical gear</a></p>
+  <p><a href="#1_5_Defining_Stress_Input">1.5. Defining Stress Input</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_1_Setting_up_Micro_model_2D">1.5.1. Setting up Micro model (2D)</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_2_Run">1.5.2. Run</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_3_2D_micro_model_impact_stress_and_residual_stress_output">1.5.3. 2D micro model impact stress and residual stress output</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_4_Measured_Residual_stress">1.5.4. Measured Residual stress</a></p>
+  <p><a href="#1_6_Defining_3D_model_for_shot_peening">1.6. Defining 3D model for shot peening</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_1_Defining_Workpiece">1.6.1. Defining Workpiece</a></p>
+  <p style="margin-left: 40px"><a href="#1_6_1_1_Workpiece_object_page">1.6.1.1. Workpiece object page</a></p>
+  <p style="margin-left: 40px"><a href="#1_6_1_2_Defining_Workpiece_geometry">1.6.1.2. Defining Workpiece geometry</a> </p>
+  <p style="margin-left: 40px"><a href="#1_6_1_3_Defining_Material_for_Workpiece">1.6.1.3. Defining Material for Workpiece</a> </p>
+  <p style="margin-left: 40px"><a href="#1_6_1_4_Generating_mesh_for_Workpiece">1.6.1.4. Generating mesh for Workpiece</a></p>
+  <p style="margin-left: 40px"><a href="#1_6_1_5_Assigning_boundary_conditions_to_Workpiece">1.6.1.5. Assigning boundary conditions to Workpiece</a></p>
+  <p style="margin-left: 40px"><a href="#1_6_1_6_Defining_Workpiece_movement">1.6.1.6. Defining Workpiece movement</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_2_Defining_Nozzle_1">1.6.2. Defining Nozzle #1 </a> </p>
+  <p style="margin-left: 40px"><a href="#1_6_2_1_Nozzle_1_Object_definition">1.6.2.1. Nozzle#1 Object definition</a></p>
+  <p style="margin-left: 40px"><a href="#1_6_2_2_Defining_Nozzle_Location">1.6.2.2. Defining Nozzle Location</a> </p>
+  <p style="margin-left: 40px"><a href="#1_6_2_3_Defining_Nozzle_movement">1.6.2.3. Defining Nozzle movement</a> </p>
+  <p style="margin-left: 20px"><a href="#1_6_3_Positioning">1.6.3. Positioning</a></p>
+  <p><a href="#1_7_Analysis_of_shot_peening_process">1.7. Analysis of shot peening process</a></p>
+  <p style="margin-left: 20px"><a href="#1_7_1_Particle_Simulation">1.7.1. Particle Simulation</a></p>
+  <p style="margin-left: 40px"><a href="#1_7_1_1_Particle_Simulation_settings">1.7.1.1. Particle Simulation settings</a></p>
+  <p style="margin-left: 40px"><a href="#1_7_1_2_Particle_Simulation_Result">1.7.1.2. Particle Simulation Result</a></p>
+  <p style="margin-left: 20px"><a href="#1_7_2_Impact_simulation">1.7.2. Impact simulation</a></p>
+  <p style="margin-left: 40px"><a href="#1_7_2_1_Impact_Simulation_settings">1.7.2.1. Impact Simulation settings</a></p>
+  <p style="margin-left: 40px"><a href="#1_7_2_2_Impact_simulation_result">1.7.2.2. Impact simulation result</a> </p>
+  <p style="margin-left: 20px"><a href="#1_7_3_Residual_stress_analysis">1.7.3. Residual stress analysis</a></p>
+  <p style="margin-left: 40px"><a href="#1_7_3_1_Residual_stress_analysis_settings">1.7.3.1. Residual stress analysis settings</a></p>
+  <p style="margin-left: 40px"><a href="#1_7_3_2_Simulating_Residual_stress_analysis">1.7.3.2. Simulating Residual stress analysis</a></p>
+  <p style="margin-left: 40px"><a href="#1_7_3_3_Residual_Stress_analysis_results">1.7.3.3. Residual Stress analysis results</a></p>
+  <p> </p>
+  <h2><a id="1_1_Launching_Shot_Peen_wizard"></a>Launching Shot Peen wizard </h2>
+  <p>To launch Shot peening wizard, double click on &quot;DEF_GUI_SHOTPEEN_64.EXE&quot; in the installation directory of DEFORM software. Shot peening wizard looks like as shown in <a href="#Fig_STPL1_1_Shot_peening_wizard_UI"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>1.</a></p>
+  <p style="text-align: center"><a id="Fig_STPL1_1_Shot_peening_wizard_UI"></a><img height="375" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Shot peening wizard UI</p>
+  <h2><a id="1_2_Creating_New_Project"></a>Creating New Project</h2>
+  <p>Create a new problem either by selecting <strong>File <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/> </strong><strong>New </strong>or by clicking the New project <img src="../../../assets/icons/pre_icons/mo_new_file_button.jpg"/> icon.
+    The New project window will appear (See <a href="#Fig_STPL1_2_Creating_New_Project"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>2.</a>), define Project name as “<strong>Gear_Lab</strong>” and select Unit system as “<strong>System</strong><strong> International (SI)</strong>”
+    as shown in <a href=""><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>2</a>., click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> button to open Shot peen project.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_2_Creating_New_Project"></a><img height="391" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Creating New Project</p>
+  <p> </p>
+  <p>A new tab Gear_Lab is added in UI and we can observe that shot peening operation tree is available to setup the process. “Shot Peen Process” window is opened by default to define shot peening process parameters, see <a href="#Fig_STPL1_3_Shot_Peening_UI_showing_operation_tree_and_Shot_Peen_Process_window"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>3.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_3_Shot_Peening_UI_showing_operation_tree_and_Shot_Peen_Process_window"></a><img height="390" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Shot Peening UI showing operation tree and Shot Peen Process window</p>
+  <h2><a id="1_3_Defining_Shot_Peening_Process_parameters"></a>Defining Shot Peening Process parameters</h2>
+  <p>In Shot Peen Process page, we can import previously saved Data Analytics (DA) model file using <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button and by using <img height="20" src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg" width="21"/> option we can save the existing project DA model file to Library or inside the project folder.</p>
+  <p> </p>
+  <p>In Process Tag field, we can enter Process information for Reference.</p>
+  <p> </p>
+  <p>Under Pellet, Diameter of the pellet and its Mass can be defined. Select “New…”  option using Name drop down field and define pellet Diameter as 0.2794mm and Mass as 0.08976 mg and save the DA model file inside the project folder using <img height="20" src="../../../assets/icons/pre_icons/mo_save_to_library_icon.jpg" width="21"/> option. Also, we can load the saved pallet parameters by selecting respective name from Name drop-down list. Since we are simulating Shot peening operation for 20 seconds,
+    define the Peening time as <strong>20 </strong>sec as shown in <a href="#Fig_STPL1_4_Defining_shot_peening_process_parameters"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>4.</a> Under Process, we can define process parameters like
+    Peening time, Mass flow rate, Air pressure and Exit velocity. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Material list page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_4_Defining_shot_peening_process_parameters"></a><img src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0004.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining shot peening process parameters</p>
+  <h2><a id="1_4_Loading_material_for_helical_gear"></a>Loading material for helical gear</h2>
+  <p>In material list page, click on <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material from library) icon and load the material &quot;<strong>AISI-302,COLD[70F(20C)]</strong>” available under <strong>Stainless_steel</strong>    group in material library as shown in <a href="#Fig_STPL1_5_Loading_material_from_library_for_helical_gar"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>5.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_5_Loading_material_from_library_for_helical_gar"></a><img height="383" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Loading material from library for helical gar</p>
+  <h2><a id="1_5_Defining_Stress_Input"></a>Defining Stress Input</h2>
+  <p>The stress input values for object undergoing shot peening can be given either from simulated Micro model (2D) or from experimentally measured residual stress values. In this lab, we will use both Micro model (2D) and experimentally measured residual
+    stress values.</p>
+  <h3><a id="1_5_1_Setting_up_Micro_model_2D"></a>Setting up Micro model (2D)</h3>
+  <p>Click on “<strong>Micro</strong><strong> model (2D</strong>)” item in operation tree under stress input. under Process tab, by default material “AISI-302,COLD[70F(20C)]” is selected in list. Set Max number of hits as 10 and Number of impact angles as
+    3. Default Impact angles are 80, 50 and 20 with 0.5, 0.5 and 0.85 efficiency respectively as shown in <a href="#Fig_STPL1_6_Process_settings_for_2D_micro_model_simulation"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>6.</a></p>
+  <p>Under Settings tab, we can define simulation control settings like time per step, number of steps and step increment to save for Loading simulation and Unloading simulation. In this lab, we will use default simulation control settings, so click on <img src="../../../assets/icons/pre_icons/mo_generate_2_button.jpg"/> button to generate Databases for Micro model 2D simulation. An independent database each impact angle will be generated. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Run page to simulate micro model 2D databases.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_6_Process_settings_for_2D_micro_model_simulation"></a><img height="375" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0006.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process settings for 2D micro model simulation</p>
+  <h3><a id="1_5_2_Run"></a>Run</h3>
+  <p>In Run page, we can simulate 2D micro model Databases using Run action button at the bottom (See <a href="#Fig_STPL1_7__Run_Options_page_to_simulate_2D_micro_model"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>7.</a>). When we click
+    on <img src="../../../assets/icons/post_icons/run_label_button.jpg"/>, Run options dialog will be opened. Select simulation server and click on <img src="../../../assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg"/> button to start the simulation. </p>
+  <p>After completion of simulation, we can observe the Progress status as 100 %. Once the simulation completes, automatically data extraction will start to extract output (impact stress and residual stress output) from the simulated database and then exported
+    to Data Analytics (DA model) file for further processing. Once the data extraction and exporting is completed, we can observe the message as “Done” (See <a href="#Fig_STPL1_8_Run_page_showing_status_after_completion_of_simulation"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>8.</a>).
+    By using <img height="20" src="../../../assets/icons/post_icons/mo_extract_label_button.jpg" width="58"/> option we can re-extract the data and save to DA model file. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Impact
+    stress page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_7__Run_Options_page_to_simulate_2D_micro_model"></a><img height="390" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0007.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Run Options page to simulate 2D micro model</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_8_Run_page_showing_status_after_completion_of_simulation"></a><img src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0008.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run page showing status after completion of simulation</p>
+  <p> </p>
+  <h3><a id="1_5_3_2D_micro_model_impact_stress_and_residual_stress_output"></a>2D micro model impact stress and residual stress output</h3>
+  <p>Once the simulation is completed, we can click on Impact stress or Residual Stress item in operation tree to view respective output from 2D Micro model. The Micro model simulation results can be displayed with contour plots and graphs.</p>
+  <p>Using <img height="30" src="../../../assets/icons/post_icons/mo_contour_plot_button.jpg" width="23"/>,  we can plot contours and using <img height="25" src="../../../assets/icons/post_icons/mo_graph_plot_button.jpg" width="25"/>, we can plot graphs
+    for Radial stress, Effective stress and Effective strain as shown in <a href="#Fig_STPL1_9_Radial_impact_stress_Contour_plot"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>9.</a> and <a href="#Fig_STPL1_10_Impact_radial_stress_along_depth"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>10.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_9_Radial_impact_stress_Contour_plot"></a><img height="376" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Radial impact stress Contour plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_10_Impact_radial_stress_along_depth"></a><img height="376" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0010.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Impact radial stress along depth</p>
+  <p> </p>
+  <p>Display of graphs and contour plots for multiple angles and multiple hits can be controlled using options available under Display control as shown in <a href="#Fig_STPL1_11_Selecting_data_range_Hit_10_of_graphs_display"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>11.</a>    User can select the range of data to be displayed using <img height="21" src="../../../assets/icons/post_icons/mo_grid_selection_button.jpg" width="21"/>, in <a href="#Fig_STPL1_11_Selecting_data_range_Hit_10_of_graphs_display"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>11.</a>    hit #10 is selected to be displayed. (See <a href="#Fig_STPL1_11_Selecting_data_range_Hit_10_of_graphs_display"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>11.</a>). The graph plots can be superimposed together to compare the results
+    using <img src="../../../assets/icons/post_icons/mo_superimpose_icon.jpg"/> as shown in <a href="#Fig_STPL1_12_Super imposing graphs over one another for selected data range"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>12.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_11_Selecting_data_range_Hit_10_of_graphs_display"></a><img height="380" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0011.jpg" width="674"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting data range (Hit #10) of graphs display</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_12_Super imposing graphs over one another for selected data range"></a><img height="420" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0012.jpg" width="539"/></p>
+  <p> </p>
+  <p class="Fig_numb">Super imposing graphs over one another for selected data range (Hit #10)</p>
+  <p><br/> Using <img src="../../../assets/icons/post_icons/mo_sv_value_table_icon.jpg"/> options, we can view Max radial stress, Max effective stress, Max effective strain, Dimple diameter and Dimple height state variables values either as Table or as
+    Chart display depending on the selection in Display control. (See <a href="#Fig_STPL1_13_Max_Impact_radial_stress_values_as_table"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>13</a>. and <a href="#Fig_STPL1_14_Max_Impact_radial_stress_values_as_Chart"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>14.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_13_Max_Impact_radial_stress_values_as_table"></a><img height="377" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0013.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Max Impact radial stress values as table</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_14_Max_Impact_radial_stress_values_as_Chart"></a><img height="377" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Max Impact radial stress values as Chart</p>
+  <p> </p>
+  <h3><a id="1_5_4_Measured_Residual_stress"></a>Measured Residual stress</h3>
+  <p>To provide measured residual stresses as input, click on “<strong>Measured Residual stress</strong>“ item in Object tree. We need to provide data for at least two impact angles. In this lab, we will define same measured residual stress values for both
+    impact angles 90 and 20 as shown in <a href="#Fig_STPL1_15_Input_data_of_measured_residual_stress_values"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>15.</a> </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 300px; margin-left: auto; margin-right: auto;">
+    <colgroup>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Depth  </strong></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Stress</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center">0.0001  </p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">-93</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center">0.00025  </p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">-95</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center">0.0005  </p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">-72</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center">0.00075  </p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">-50</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center">0.001  </p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">-27</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center">0.002  </p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">-11</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center">0.005  </p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center">0.01  </p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center">0.2</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="text-align: center"><br/>
+    <br/>
+    <a id="Fig_STPL1_15_Input_data_of_measured_residual_stress_values"></a><img height="374" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0015.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Input data of measured residual stress values</p>
+  <p> </p>
+  <h2><a id="1_6_Defining_3D_model_for_shot_peening"></a>Defining 3D model for shot peening</h2>
+  <p>Click on “<strong>Model</strong><strong> 3D</strong>” item in object tree, in Model 3D page we can select the objects required to setup 3D model. In this lab, we require a Workpiece and one Nozzle object. By default one Workpiece and one Nozzle object
+    will be selected, see <a href="#Fig_STPL1_16_Defining_required_objects_for_3D_shot_peening_model"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>16.</a> So, with default settings click <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> to Workpiece page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_16_Defining_required_objects_for_3D_shot_peening_model"></a><img height="500" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0016.jpg" width="404"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining required objects for 3D shot peening model</p>
+  <h3 class="h3_1_6_"><a id="1_6_1_Defining_Workpiece"></a>Defining Workpiece</h3>
+  <h4><a id="1_6_1_1_Workpiece_object_page"></a>Workpiece object page</h4>
+  <p>In Workpiece page, keep the default object name as “<strong>Workpeice</strong>” and click <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/>  to Workpiece Geometry page.</p>
+  <h4><a id="1_6_1_2_Defining_Workpiece_geometry"></a>Defining Workpiece geometry </h4>
+  <p>Click on Import geometry from library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> and load <strong>Gear.stl</strong> from <strong>3D/LABS/Shotpeening</strong> folder, imported Helical gear geometry looks like as shown
+    in <a href="#Fig_STPL1_17_Imported_Gear_geometry"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>17.</a> Click <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Workpiece Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_17_Imported_Gear_geometry"></a><img height="374" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0017.jpg" style="cursor: nesw-resize;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Imported Gear geometry</p>
+  <h4><a id="1_6_1_3_Defining_Material_for_Workpiece"></a>Defining Material for Workpiece </h4>
+  <p>Assign “<strong>AISI</strong><strong>-302,COLD[70F(20C)]</strong>” material for workpiece, click <img src="../../../assets/icons/pre_icons/mo_back_button.jpg"/> button to generate mesh for workpiece.</p>
+  <h4><a id="1_6_1_4_Generating_mesh_for_Workpiece"></a>Generating mesh for Workpiece</h4>
+  <p>In Mesh page, define Target number of elements as <strong>128000 </strong>and size ratio as <strong>2</strong>. Click on <strong>Coating </strong>Tab, click on <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button to add <strong>8 </strong><strong>layers </strong>and
+    for each layer define coating thickness (micron) as <strong>10</strong>, then click on <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/> button to generate mesh. Click “<strong>Yes</strong>” in “Generate coating mesh?” popup and “<strong>No</strong>”
+    in “Default Boundary condition” popup. Generated mesh for Workpiece is as shown in <a href="#Fig_STPL1_19_Coating_mesh_settings_for_Workpiece"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>19.</a> Click <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> till Boundary condition page.</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>:  It is a good idea to check mesh after mesh generation.  If a problem is detected, the mesh density may need to be decreased (make larger elements) or decrease the total coating depth.  There is currently a limitation that the
+    total coating depth can not be more than ½ the size of the smallest element.</p>
+  <p class="Note_text"> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_18_General_mesh_setting_for_workpiece"></a><img src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0018.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">General mesh setting for workpiece</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_19_Coating_mesh_settings_for_Workpiece"></a><img height="376" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Coating mesh settings for Workpiece</p>
+  <h4><a id="1_6_1_5_Assigning_boundary_conditions_to_Workpiece"></a>Assigning boundary conditions to Workpiece</h4>
+  <p>In this lab, we will fix the nodes on the bottom projection at the center of the gear as shown in <a href="#Fig_STPL1_20_Assigned_Velocity_boundary_condition_for_Workpiece"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>20</a>. So, select
+    Velocity option, pick the surface as shown in <a href="#Fig_STPL1_20_Assigned_Velocity_boundary_condition_for_Workpiece"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>20</a>., then select “<strong>All</strong>” direction radio button
+    and click on <img src="../../../assets/icons/pre_icons/mo_add_bcc_button.jpg"/> button, assigned Velocity BCC for Gear object is as shown in <a href="#Fig_STPL1_20_Assigned_Velocity_boundary_condition_for_Workpiece"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>20</a>. Click
+    <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> till Movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_20_Assigned_Velocity_boundary_condition_for_Workpiece"></a><img height="374" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0020.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Velocity boundary condition for Workpiece</p>
+  <p> </p>
+  <h4><a id="1_6_1_6_Defining_Workpiece_movement"></a>Defining Workpiece movement</h4>
+  <p>In Movement page, define Angular Speed as <strong>10 </strong><strong>rpm</strong>. Define the center value as 0, 0, 0 and Axis value as 0, 0, 1 as shown in <a href="#Fig_STPL1_21_Workpiece_movement_page"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>21.</a>    Click <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> till Nozzle #1 page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_21_Workpiece_movement_page"></a><img src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0021.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece movement page</p>
+  <h3 class="h3_1_6_"><a id="1_6_2_Defining_Nozzle_1"></a>Defining Nozzle #1  </h3>
+  <h4 class="h4_1_6_2_"><a id="1_6_2_1_Nozzle_1_Object_definition"></a>Nozzle#1 Object definition</h4>
+  <p>For a nozzle, we can define name and its geometry in nozzle object page. In Nozzle #1 object page, we will keep the name as Nozzle # 1. We will define the <strong>Diameter </strong>as <strong>5mm </strong>and <strong>Cone </strong><strong>angle </strong>as
+    <strong>20 </strong>degrees, keep the <strong>mass </strong><strong>flow </strong>as <strong>2.3 kg/min</strong> and <strong>Air </strong><strong>pressure </strong>as <strong>172 kpa</strong> as shown in <span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>22.
+    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Location page.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_22_Defined_Nozzle_1_parameters_in_object_page"></a><img src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0022.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defined Nozzle #1 parameters in object page</p>
+  <h4 class="h4_1_6_2_"><a id="1_6_2_2_Defining_Nozzle_Location"></a>Defining Nozzle Location </h4>
+  <p>Define <strong>Reference </strong><strong>co-ordinate</strong> <strong>X</strong> as <strong>9.793</strong>, <strong>Y </strong>as <strong>-12.395</strong> and <strong>Z </strong>as <strong>1.86717</strong>. Define <strong>Distance </strong>as <strong>37mm</strong>,
+    <strong>Theta </strong>as <strong>61 degrees</strong> and <strong>Phi </strong>as <strong>308 </strong><strong>degrees </strong>with respect to reference point as shown in <a href="#Fig_STPL1_23_Defining_Nozzle_location"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>23.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_23_Defining_Nozzle_location"></a><img height="375" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0023.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Defining Nozzle location</p>
+  <h4 class="h4_1_6_2_"><a id="1_6_2_3_Defining_Nozzle_movement"></a>Defining Nozzle movement </h4>
+  <p>Define nozzle <strong>Speed </strong>as <strong>1</strong> <strong>mm/sec</strong> and direction of movement as <strong>Z </strong>as shown in <a href="#Fig_STPL1_24_Defining_Nozzle_movement"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>24.</a>    Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Positioning page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_24_Defining_Nozzle_movement"></a><img src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0024.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Nozzle movement</p>
+  <h3 class="h3_1_6_"><a id="1_6_3_Positioning"></a>Positioning</h3>
+  <p>In positioning page, using <img src="../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/> we can position the object. In this lab, we need not use positioning as the Workpiece and Nozzle objects are in correct position. </p>
+  <h2><a id="1_7_Analysis_of_shot_peening_process"></a>Analysis of shot peening process</h2>
+  <p>Shot peening process in 3D can be analyzed based on the stress input, process parameters and geometry of the objects. </p>
+  <p><strong>Particle Simulation</strong>: During particle simulation, randomly generated particles hit the workpiece and calculates averages of impact angles, hit counts, impact velocities, etc. on each surface element. Particle simulation is slower than
+    the Impact simulation and it handles ricochets.</p>
+  <p><strong>Impact Simulation</strong>: During impact simulation, it performs simple cone intersections with workpiece and calculates impact angles, hit counts, impact velocities, etc. for each surface element. impact simulation is fast and does not consider
+    impacts from ricochets. Also, it does not consider partial coverage of surface elements. </p>
+  <p><strong>Residual stress Analysis</strong>: Impact stresses either from particle simulation or impact simulation can be assigned to the object for running the residual stress analysis to predict the residual stresses. If the stress input is only from
+    Measured residual stress the residual stress analysis is not required, the Measured residual stress will be interpolated over the 3D model based on the Particle simulation output or Impact simulation output, depending on user selection.</p>
+  <h3 class="h3_1_7_"><a id="1_7_1_Particle_Simulation"></a>Particle Simulation</h3>
+  <h4 class="h4_1_7_1_"><a id="1_7_1_1_Particle_Simulation_settings"></a>Particle Simulation settings</h4>
+  <p>Click on “<strong>Particle</strong><strong> simulation</strong>” item in Object tree. In this lab, we will define % of energy loss during Shot-Workpiece collision as 0.3. We will not shot to shot collisions, hence turn of Shot-shot collision check box.
+    We will define time step as 0.002, too large time step may lead to shots penetrating the workpiece.</p>
+  <p>We can run simulation either with preview or without preview, if we run simulation with preview, the simulation will take more time, but we can observe the pellets striking the workpiece and if needed we can adjust the parameters by stopping the simulation.
+    For this lab, we will run the simulation by turning off the Run with preview checkbox. Click on <img src="../../../assets/icons/post_icons/mo_run_simulation_label_button.jpg"/> button, simulation will start running and current process time will be
+    updated in console as shown in <a href="#Fig_STPL1_25_Particle_simulation_settings"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>25.</a> Once the particle simulation is completed, click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to results page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_25_Particle_simulation_settings"></a><img height="376" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0025.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Particle simulation settings</p>
+  <h4 class="h4_1_7_1_"><a id="1_7_1_2_Particle_Simulation_Result"></a>Particle Simulation Result</h4>
+  <p>From particle, the following output parameters will be obtained:</p>
+  <ul class="Disc">
+    <li>
+      <p>Vertical (normal to the surface element) velocity.</p>
+    </li>
+    <li>
+      <p>Impact angle.</p>
+    </li>
+    <li>
+      <p>Hit count.</p>
+    </li>
+    <li>
+      <p>Hit density (hit count divided by surface element area).</p>
+    </li>
+    <li>
+      <p>Exposure time.</p>
+    </li>
+    <li>
+      <p>Coverage.</p>
+    </li>
+  </ul>
+  <p>Click on “<strong>Result</strong>” item under Particle simulation in Object tree. In Particle simulation results page, we can plot contour of different outputs along with histograms as shown in <a href="#Fig_STPL1_26_Vertical_velocity_histogram_along_with_contour_from_particle_simulation"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>26.</a>    Under <strong>State variable </strong>tab, we can plot contours of impact stress, residual stresses and measured stress state variables. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_26_Vertical_velocity_histogram_along_with_contour_from_particle_simulation" height="0" width="0"></a><img height="373" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0026.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Vertical velocity histogram along with contour from particle simulation</p>
+  <p> </p>
+  <p style="text-align: center"><img height="377" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0027.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Impact stress histogram along with contour from particle simulation</p>
+  <p><br/> We can view an animation of the particle simulation by clicking on <img src="../../../assets/icons/post_icons/mo_show_animation_button.jpg"/>action button.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="341" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0028.jpg" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Particle simulation animation page </p>
+  <h3 class="h3_1_7_"><a id="1_7_2_Impact_simulation"></a>Impact simulation</h3>
+  <h4 class="h4_1_7_2_"><a id="1_7_2_1_Impact_Simulation_settings"></a>Impact Simulation settings</h4>
+  <p>Click on “<strong>Impact</strong><strong> simulation</strong>” item in Object tree. In this lab, we will use default time step of <strong>0.0333</strong> sec. We can control the display of nozzle, nozzle cone and nozzle path but turning on/ off respective
+    check boxes. Click on <img src="../../../assets/icons/post_icons/mo_run_simulation_label_button.jpg"/> and observe the Impact simulation. In this lab, we will turn off all checkboxes. During impact simulation, we can observe the impact cone and path
+    in the display and status in status bar, Determining hits : time  on left side and total completion in percentage on right side. (See <a href="#Fig_STPL1_29_Impact_simulation_settings"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>29.</a>).
+     Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to impact simulation results page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_29_Impact_simulation_settings"></a><img height="390" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0029.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Impact simulation settings</p>
+  <h4 class="h4_1_7_2_"><a id="1_7_2_2_Impact_simulation_result"></a>Impact simulation result </h4>
+  <p>Similar to Particle simulation results page, we can plot contour of different Hit results along with histogram as shown in <a href="#Fig_STPL1_30_Vertical_velocity_histogram_along_with_contour_from_impact_simulation"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>30.</a>    and <a href="#Fig_STPL1_31_Impact_stress_histogram_along_with_contour_from_Impact_simulation"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>31.</a> Under State variable tab, we can plot contour of Impact stress, Residual stresses and
+    Measured stress State variable output. Click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Residual stress analysis page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_30_Vertical_velocity_histogram_along_with_contour_from_impact_simulation"></a><img height="376" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0030.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Vertical velocity histogram along with contour from impact simulation</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_31_Impact_stress_histogram_along_with_contour_from_Impact_simulation" height="0" width="0"></a><img height="376" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0031.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Impact stress histogram along with contour from Impact simulation</p>
+  <p> </p>
+  <h3 class="h3_1_7_"><a id="1_7_3_Residual_stress_analysis"></a>Residual stress analysis</h3>
+  <h4 class="h4_1_7_3_"><a id="1_7_3_1_Residual_stress_analysis_settings"></a>Residual stress analysis settings</h4>
+  <p>In residual stress analysis page, we can assign initial impact stress values either from Particle simulation or Impact simulation to the workpiece. In this lab, we will select <strong>Impact simulation</strong> radio button and click on <strong>Assign Initial stress</strong>    button. With &quot;<strong>MUMPS</strong>&quot; as solver, click on <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> and then click on the  <img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate
+    the database (See <a href="#Fig_STPL1_32_Residual_stress_analysis_settings"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>32.</a>)  Once the database is generated click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to
+    the Run page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_32_Residual_stress_analysis_settings"></a><img height="375" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0032.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Residual stress analysis settings</p>
+  <h4 class="h4_1_7_3_"><a id="1_7_3_2_Simulating_Residual_stress_analysis"></a>Simulating Residual stress analysis</h4>
+  <p>Click on <img src="../../../assets/icons/post_icons/run_label_button.jpg"/> to run single step FEM stress re-equilibrium simulation (Residual stress analysis) simulation. Once the simulation is completed, click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Results page. <a href="#Fig_STPL1_33_Residual_stress_analysis_Run_page"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>33.</a> Shows end of residual stress analysis.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_33_Residual_stress_analysis_Run_page"></a><img height="377" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0033.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Residual stress analysis Run page</p>
+  <p> </p>
+  <h4 class="h4_1_7_3_"><a id="1_7_3_3_Residual_Stress_analysis_results"></a>Residual Stress analysis results</h4>
+  <p>In results page, we can plot contours for selected output, <a href="#Fig_STPL1_34_Effective_stress_output_for_different_outputs_Micromodel,_Measured_stress_and_FEM"><span data-keyref="Labs_Shot_Peening_Lab1">Fig. STPL1.</span>34.</a> Shows Effective
+    residual stress contour plot.</p>
+  <p><strong>Residual stress (FEM)</strong> – Calculated from FEM simulation based on the Impact/ Particle simulation</p>
+  <p><strong>Residual stress (from micro model)</strong> – Residual stresses from 2D micro model are interpolated onto 3D model based on the Impact/ Particle simulation</p>
+  <p><strong>Impact stress (from micro model)</strong> – Impact stresses from 2D micro model are interpolated onto 3D model based on the Impact/ Particle simulation</p>
+  <p><strong>Measured stress</strong> - Residual stresses from the measured data provided by the user are interpolated onto 3D model based on the Impact/ Particle simulation</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_STPL1_34_Effective_stress_output_for_different_outputs_Micromodel,_Measured_stress_and_FEM"></a><img height="374" src="../../../assets/images/labs/shot_peening_labs/shot_peening_lab1/image0034.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Effective stress output for different outputs Micromodel, Measured stress and FEM</p>
+
+</body></html>

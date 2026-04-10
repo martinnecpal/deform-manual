@@ -1,0 +1,479 @@
+---
+lang: en
+title: "2D Cold Forming Lab1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.10.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Cold Forming Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Cold Forming Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/forming_express_labs/2d_cold_forming_lab1.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Forming_Express_Labs/2D_Gear-Mech_Press_Lab.htm"/><meta name="brsprev" value="Documentation_content/Labs/Forming_Express_Labs/Forming_Express_Labs_Main_PG.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="2D Cold Forming Lab1">
+        <span>2D Cold Forming Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>2D Cold Forming Lab</h1>
+  <p>In this lab we will setup simple Bolt forming operation in MO 2D forming express operation. In this Forming operation we have 3 stages:</p>
+  <ol class="Decimal">
+    <li>
+      <p>Extrude operation</p>
+    </li>
+    <li>
+      <p>Cone blow operation</p>
+    </li>
+    <li>
+      <p>Hex Head operation</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p>After completion of Forming operation, we are doing Die stress to investigate stresses in the Top die.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="398" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0008.jpg" width="650"/></p>
+  <p style="text-align: left"> </p>
+  <p style="text-align: left"><a href="#Operation_1_Extrude_operation">Operation 1 : Extrude operation</a></p>
+  <p style="text-align: left"><a href="#Operation_2_Cone_blow_Operation">Operation 2: Cone blow operation</a></p>
+  <p style="text-align: left"><a href="#Operation_3_Hex_head_operation">Operation 3: Hex Head operation</a></p>
+  <p style="text-align: left"><a href="#Operation_4_Die_Stress_Operation">Operation 4: Die stress Operation</a></p>
+  <p style="text-align: left"> </p>
+  <h2 class="h2_Lab1"><a id="Operation_1_Extrude_operation"></a>Extrude operation</h2>
+  <h3 class="h3_operation1"><a id="1_1_Creating_a_New_problem"></a>Creating a New problem</h3>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="../../../assets/icons/pre_icons/windows_start.jpg"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear, as shown in <a href="#Fig_2DCFL1_1_QT4_GUI_Main_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_1_QT4_GUI_Main_window"></a><img height="435" src="../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">QT4 GUI Main window</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="../../../assets/icons/pre_icons/arrow_front.jpg"/><strong> New Problem</strong> or by clicking the New Problem <img src="../../../assets/icons/pre_icons/mo_new_problem_icon.jpg"/>  icon. The Problem Setup window will appear as shown in <a href="#Fig_2DCFL1_2_New_Problem_page"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>2.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong></strong><strong>Bolt</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not
+    turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="../../../assets/icons/pre_icons/mo_ok_button.jpg" width="73"/> button to open a new Problem using
+    the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_2_New_Problem_page"></a><img height="419" src="../../../assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem page</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use &quot;<strong>Bolt</strong>&quot;
+    as the project name. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button.jpg"/> to continue to open the operation.</p>
+  <h3 class="h3_operation1">Add operations</h3>
+  <p>In this lab, we are showing how to setup all 3 operations in batch mode. Add three 2D Forming express operations from Operation list in Explorer. Operation can be add by clicking on <img src="../../../assets/icons/pre_icons/mo_add_operation_icon.jpg"/> button next to 2D Forming express operation or user can also add the operation by dragging and dropping the operation into Operation Editor region.</p>
+  <h3 class="h3_operation1">Change operation name:</h3>
+  <p>Change the Operation name to &quot;<strong>Extrude</strong>&quot; by double click on Forming field in Operation editor as shown in <a href="#Fig_2DCFL1_3_Editing_Operation_name"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>3.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_3_Editing_Operation_name"></a><img height="229" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0001.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Editing Operation name</p>
+  <p> </p>
+  <h3 class="h3_operation1">Define Process settings</h3>
+  <p>In Process page, select <strong>Process type</strong> as <strong>Cold Forming</strong>, select <strong>Geometry </strong><strong>type </strong>as <strong>2D Axisymmetric</strong>.</p>
+  <p>The shape complexity and simulation accuracy slider bars influence the mesh settings and number of time steps used in the simulation. This, in turn, influences the run time and level of detail available in the simulation.</p>
+  <p>For this simulation, we will use the default Moderate complexity and Moderate accuracy, set the slider bars as shown below <a href="#Fig_2DCFL1_4_Process_page"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>4.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_4_Process_page"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0002.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process page</p>
+  <p> </p>
+  <h3 class="h3_operation1"> Adding Objects</h3>
+  <p>In this operation we should have <strong>1 workpiece + 3 dies</strong> as shown in <a href="#Fig_2DCFL1_5_Number_of_Objects_selection_page"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>5.</a>, click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_5_Number_of_Objects_selection_page"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0003.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Number of Objects selection page</p>
+  <h3 class="h3_operation1">Workpiece Definition</h3>
+  <p>Use default <strong>Workpiece </strong>object name and <strong>Default </strong> object temperature, click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p class="Note_text">Note: there is an “Import Object” button on the “Object” page. This is for importing complete object data from another DEFORM file, which is not what we want to do at this time.</p>
+  <h3 class="h3_operation1">Create geometry</h3>
+  <p>On the Geometry page, click on  <img height="20" src="../../../assets/icons/pre_icons/mo_define_primitive_label.jpg" width="82"/>. Define a <strong>C</strong><strong>ylinder </strong>that has a <strong>radius </strong>of <strong>0.135”</strong> and
+    a <strong>height </strong>of<strong> 1.29” </strong>as shown in <a href="#Fig_2DCFL1_6_Defining_the_Geometry"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>6 .</a> Click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> button. The geometry of a cutoff with radius 0.135” should be displayed on the screen.</p>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/>and then in the pop up window click on <img height="24" src="../../../assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg" width="95"/> to see if the geometry is OK. A
+    message appears in the status window displaying that the geometry is legal. Click <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to Check and Correct Geometry popup window and Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to go to the Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_6_Defining_the_Geometry"></a><img height="425" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining the Geometry</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_7_Geometry_page"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0005.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Geometry page</p>
+  <p> </p>
+  <h3 class="h3_operation1">Workpiece Mesh</h3>
+  <p>The settings that we set in the <a href="../../operation_templates/34_forming_express/34_1_2d_forming_express_setup.htm#Shape_Complexity_and_Accuracy">Objects Shape Complexity</a> determined the number of elements and the number of time steps that were
+    to be used in the simulation.</p>
+  <p> </p>
+  <p>For this lab to run quickly, go ahead and change the number of elements to 1000 by selecting user defined radio button and click <img src="../../../assets/icons/pre_icons/mo_generate_mesh.jpg"/>. A mesh with approximately 1000 elements should be displayed
+    on the Workpiece in the Display window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_8_Mesh_page"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0006.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh page</p>
+  <p> </p>
+  <h3 class="h3_operation1">Workpiece Material</h3>
+  <p>In Material window, load the material <strong>AISI-1010,COLD[70F(20C)</strong> from DEFORM Material library, from <strong>Steel </strong>category using <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material data from
+    library) option. This can be done as shown in <a href="#Fig_2DCFL1_9_Material_Library_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>9.</a> by clicking <img src="../../../assets/icons/pre_icons/mo_load_button.jpg"/> button. Material can also be load from Materials list in Explorer. Then click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Top Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_9_Material_Library_window"></a><img height="525" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0007.jpg" width="708"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material Library window</p>
+  <p> </p>
+  <h3 class="h3_operation1">Top Die Definition</h3>
+  <p>In Top Die page, change the name of the top die to <strong>Punch</strong>, Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <h3 class="h3_operation1">Import Punch geometry:</h3>
+  <p>Import <strong>bolt-punch1.IGS</strong> file using Load Geometry from Library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button as shown in <a href="#Fig_2DCFL1_10_Importing_Punch_geometry"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>10.</a>,
+    then check the geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/>option. Click on  <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_10_Importing_Punch_geometry"></a><img height="425" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0009.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing Punch geometry</p>
+  <p> </p>
+  <h3 class="h3_operation1">Assign Movement for Punch</h3>
+  <p>Under the movement options select <strong>S</strong><strong><strong>p</strong>eed </strong>option. Be sure movement is in the <strong>–Y </strong>direction, Enter a speed of <strong>10</strong>in/sec as shown in <a href="#Fig_2DCFL1_11_Punch_movement_page"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>11.</a>    Click on  <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button..</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_11_Punch_movement_page"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0010.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Punch movement page</p>
+  <h3 class="h3_operation1">Bottom Die Definition</h3>
+  <p>In Bottom Die page, change the name of the Bottom die to <strong>Die</strong>, Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button.</p>
+  <h3 class="h3_operation1">Import Die Geometry</h3>
+  <p>Click on Load Geometry from Library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button, import <strong>bolt-die1.IGS</strong> file. Then check the geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> option. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button.</p>
+  <h3 class="h3_operation1">Ejector</h3>
+  <p>In object 4 page, change the name of the object 4 to <strong>Ejector</strong>. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button.</p>
+  <h3 class="h3_operation1">Import Ejector Geometry</h3>
+  <p>Click on Load Geometry from Library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button, import <strong>bolt-ejector1.IGS</strong> file. Then check the geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> option. Click on  <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button.</p>
+  <h3 class="h3_operation1">Objects Positioning</h3>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_positioning_objects_button.jpg"/> button object positioning page will open, Select <strong>Interference positioning</strong> and make the <strong>Positioning object</strong> the <strong>Workpiece </strong>and
+    the <strong>Reference</strong> the <strong>Die</strong>. An approach <strong>direction </strong>of<strong> –Y</strong> should be used. Click on <img height="21" src="../../../assets/icons/pre_icons/mo_apply_button.jpg" width="52"/>. The workpiece
+    got positioned downward until it came into contact with the die. Zoom in on the lower right corner of the workpiece you will see that the Interference value of 0.0001 was a little too large for these geometries, and too much overlap resulted between
+    the objects.  Add five more zeros to the Interference to make it 0.000000001 and then click on <img src="../../../assets/icons/pre_icons/mo_apply_button.jpg"/>. You should see that the workpiece is now positioned in the die with the correct amount
+    of overlap. Position the <strong>Punch</strong> to contact the <strong>Workpiece</strong>. Again, use an approach direction of <strong>–Y</strong>. Click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/> to close Positioning object
+    and click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button. </p>
+  <p> </p>
+  <h3 class="h3_operation1">Define contact conditions</h3>
+  <p>In the Contact section of the tree, by default the System defined default friction coefficient of 0.08 will be assigned, which corresponds to cold forming using carbide dies. By selecting User defined radio button user can also define other friction
+    values if needed by using pull-down menu (see <a href="#Fig_2DCFL1_12_Contact_relation_definition_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>12.</a>).  DEFORM automatically determine an appropriate
+    contact tolerance for this model. Click on <img src="../../../assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg"/>. You should see contact displayed between the Workpiece and the other objects it is touching. In this lab we will use default
+    &quot;<strong>System-Defined</strong>&quot; type, click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_12_Contact_relation_definition_window"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0011.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact relation definition window</p>
+  <p> </p>
+  <h3 class="h3_operation1">Assign primary die stroke</h3>
+  <p>The primary die stroke is an estimate of the distance the punch will travel during forming.</p>
+  <p>For this problem, we will extrude a distance of <strong>0.80</strong>”, so enter this amount in the Total primary die travel field and check the Exact amount check box as shown in <a href="#Fig_2DCFL1_13_Primary_die_travel_definition_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>13.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_13_Primary_die_travel_definition_window"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0012.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Primary die travel definition window</p>
+  <h3 class="h3_operation1">Assign stop controls</h3>
+  <p>We want to stop the simulation when the punch has moved 0.80”. Click Stopping Controls in the tree and check the <strong>Max </strong><strong>die stroke </strong>option. Enter the value <strong>0.80</strong>” in the field as shown in <a href="#Fig_2DCFL1_14_Stopping_controls_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>14.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_14_Stopping_controls_window"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0013.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping controls window</p>
+  <h3 class="h3_operation1">Review simulation controls</h3>
+  <p>The number of simulation steps and the step increment are established by the Object Shape Complexity slider bar settings. If you want to change the default values, you can do by selecting user type radio button and define step definition. We will accept
+    the default values for this lab. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button.</p>
+  <h3 class="h3_operation1">Generate Database</h3>
+  <p>In Generate DB page. Click the <img src="../../../assets/icons/pre_icons/mo_check_data_button.jpg"/> button to have the program check to see if anything was missed in the problem setup. During the checking process:</p>
+  <p>Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).</p>
+  <p> </p>
+  <p>Click on<img src="../../../assets/icons/pre_icons/mo_generate_database.jpg"/> button to generate the database. When the program is done writing the database, click on <img src="../../../assets/icons/pre_icons/mo_next_opr_button.jpg"/> button to go
+    to Next operation.</p>
+  <h2><a id="Operation_2_Cone_blow_Operation"></a>Cone blow Operation</h2>
+  <p>In this operation, we are importing new tools by changing Dies geometry.</p>
+  <h3 class="h3_operation2">Change operation name:</h3>
+  <p>Change the Operation name to &quot;<strong>Cone Blow</strong>&quot; of Operation 2 in Operation editor as shown in <a href="#Fig_2DCFL1_15_Changing_operation_name_in_Operation_Editor"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>15.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_15_Changing_operation_name_in_Operation_Editor"></a><img height="276" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0014.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Changing operation name in Operation Editor</p>
+  <h3 class="h3_operation2">Define Process settings for Cone blow operation</h3>
+  <p>Leave the <strong>Complexity </strong>as <strong>Simple </strong>and change the <strong>Accuracy </strong>to <strong>Fast </strong>as shown in <a href="#Fig_2DCFL_1_16_Process_page"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>16.</a>    Click on <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;" width="73"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL_1_16_Process_page"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0015.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process page</p>
+  <h3 class="h3_operation2">Adding objects</h3>
+  <p>This operation doesn&#39;t need any new object, so we won&#39;t change the setting of 1 workpiece + 3 dies, click on <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;" width="73"/> until Top die page.</p>
+  <h3 class="h3_operation2">Punch Definition</h3>
+  <p>In Object page, select <strong>Define </strong>object type radio button as shown in <a href="#Fig_2DCFL1_17_Punch_definition_page"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>17.</a>, click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_17_Punch_definition_page"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0016.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Punch definition page</p>
+  <p> </p>
+  <h3 class="h3_operation2">Import Punch geometry</h3>
+  <p>Click on Load Geometry from Library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button, import <strong>bolt-punch2.IGS</strong> file. Then check the geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/> option. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button.</p>
+  <h3 class="h3_operation2">Define Punch movement </h3>
+  <p>Use the previous operation top die movement data, click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button. </p>
+  <h3 class="h3_operation2">Die Definition</h3>
+  <p>In Object page, select <strong>Define </strong>object type radio button, click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button.</p>
+  <h3 class="h3_operation2">Import Die geometry</h3>
+  <p>Click on Load Geometry from Library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> button, Import<strong> bolt-die2.IGS</strong> file. Then check the geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/>option. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;"/> button until Scheduled positioning page.</p>
+  <h3 class="h3_operation2">Scheduled positioning</h3>
+  <p>Using Interference positioning method we are positioning the Workpiece to the Die (-Y approach direction) and then the Punch to the Workpiece. In Scheduled positioning page, Click on <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button
+    and select <img src="../../../assets/icons/pre_icons/mo_interference_radio_button.jpg"/> radio button. Change the <strong>Positioning </strong><strong>Object </strong>to the <strong>Workpiece </strong>and the <strong>Reference </strong>to the <strong>Die</strong>.
+    Change the Approach Direction to<strong> -Y</strong> and then click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Similarly add interference scheduled positioning for <strong>Punch </strong>and <strong>Workpiece </strong>(-Y
+    Approach direction) as shown in <a href="#Fig_2DCFL1_18_Scheduled_positioning_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>18.</a> Then click on <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;" width="73"/> until Primary die stroke page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_18_Scheduled_positioning_window"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0017.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Scheduled positioning window</p>
+  <p> </p>
+  <h3 class="h3_operation2">Primary die stroke</h3>
+  <p>We need to set the approximate value the punch will move during this operation. The dies are around 0.2” apart at the end of this operation, so define the value as <strong>0.2</strong>” as shown in <a href="#Fig_2DCFL1_19_Primary_die_stroke"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>19.</a>    Click on <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" style="cursor: nesw-resize;" width="73"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_19_Primary_die_stroke"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0018.jpg"/></p>
+  <p> </p>
+  <p class="Fig_numb">Primary die stroke</p>
+  <p> </p>
+  <h3 class="h3_operation2">Set stopping criteria</h3>
+  <p>We want to form the part until the punch and die are within 0.008” of one another. In the <a href="../../pre_processor/9_simulation_controls/9_3_stopping_controls.htm#9.3.8._Stopping_distance_(MDSOBJ)">Stopping Controls</a> screen, place a check mark
+    next to <strong>Distance between objects</strong> to activate this option. With the mouse, click a point on the bottom of the punch and then click a point on the top of the Die. An arrow between these two points should get displayed on the screen.
+    Set the value for this distance to <strong>0.008</strong>” in the <strong>Y</strong> direction as shown in <a href="#Fig_2DCFL1_20_Stopping_controls_page"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>20.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_20_Stopping_controls_page"></a><img height="425" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0019.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping controls page</p>
+  <p> </p>
+  <h3 class="h3_operation2">Review simulation controls</h3>
+  <p>The number of simulation steps and the step increment are established by the Object Shape Complexity slider bar settings. If you want to change the default values, you can do by selecting user type radio button and define step definition. We will accept
+    the default values for this lab, click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <h3 class="h3_operation2">Generate Database</h3>
+  <p>See the Status in Generate DB page, if we see Input error, check the data missing and complete it, for this lab sequence expect &quot;<span>DB generation is not required for this operation. It will occur at run time.</span>&quot; message. Click on <img src="../../../assets/icons/pre_icons/mo_next_opr_button.jpg"/> button to go to Next operation.</p>
+  <p> </p>
+  <h2><a id="Operation_3_Hex_head_operation"></a>Hex head operation</h2>
+  <h3 class="h3_operation3">Change operation name</h3>
+  <p>Change the Operation name to &quot;<strong>Hex Head</strong>&quot; of Operation 3 in Operation editor.</p>
+  <h3 class="h3_operation3">Process Settings Definition</h3>
+  <p>Change the <strong>Complexity </strong>to the tick mark between “<strong>Simple</strong>” and “<strong>Moderate</strong>” and increase the <strong>Accuracy </strong>to “<strong>Moderate</strong>” as shown in <a href="#Fig_2DCFL1_21_Process_page"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>21.</a>    Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> next until Top die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_21_Process_page"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0020.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Process page</p>
+  <h3 class="h3_operation3">Punch Definition</h3>
+  <p>In Object page, Select <strong>Define </strong>object type radio button as shown in <a href="#Fig_2DCFL1_22_Top_Die_general_definition_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>22.</a>, click on  <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_22_Top_Die_general_definition_window"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0021.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Top Die general definition window</p>
+  <p> </p>
+  <h3 class="h3_operation3">Import Punch geometry</h3>
+  <p>Click on Load Geometry from Library <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg" style="cursor: nesw-resize;"/> button, import <strong>bolt-punch3.IGS</strong> file. Then check the geometry using <img src="../../../assets/icons/pre_icons/mo_check_label.jpg"/>option. Click on  <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> button.</p>
+  <h3 class="h3_operation3">Define Punch movement</h3>
+  <p>Use the previous operation top die movement data, click on <img height="22" src="../../../assets/icons/pre_icons/mo_next_button.jpg" width="73"/> until Scheduled positioning page.</p>
+  <h3 class="h3_operation3">Scheduled positioning</h3>
+  <p>Click on <img src="../../../assets/icons/pre_icons/mo_add_icon2.jpg"/> button and select <img src="../../../assets/icons/pre_icons/mo_interference_radio_button.jpg"/> radio button. Change the Positioning Object to the <strong>Punch</strong> and the
+    Reference to the <strong>Workpiece </strong>and <strong>-Y </strong>approach direction as shown in <a href="#Fig_2DCFL1_23_Scheduled_Positioning_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>23.</a>,
+    then click on <img src="../../../assets/icons/pre_icons/mo_ok_button2.jpg"/>. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Primary die stroke page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_23_Scheduled_Positioning_window"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0022.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Scheduled Positioning window</p>
+  <p> </p>
+  <h3 class="h3_operation3">Primary die travel Definition</h3>
+  <p>In Primary die travel page, define primary die travel value as <strong>0.143&quot; </strong>as shown in <a href="#Fig_2DCFL1_24_Primary_die_travel_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>24.</a> Click
+    on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_24_Primary_die_travel_window"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0023.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Primary die travel window</p>
+  <p> </p>
+  <h3 class="h3_operation3">Set stopping criteria</h3>
+  <p>We want to stop the simulation when the punch and die are within 0.010” of one another. In the Stopping Controls screen, check the <strong>Distance between objects</strong> check box option and then click points on the bottom of the punch and on the
+    top of the die. Set the value for this distance to <strong>0.010</strong>” in the Y direction as shown in <a href="#Fig_2DCFL1_25_Stopping_Controls_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>25.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_25_Stopping_Controls_window"></a><img height="423" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0024.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping Controls window</p>
+  <p> </p>
+  <h3 class="h3_operation3" style="text-align: justify;">Review simulation controls</h3>
+  <p>The number of simulation steps and the step increment are established by the Object Shape Complexity slider bar settings. We will accept the default values for this lab. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <h3 class="h3_operation3">Generate Database</h3>
+  <p>See the Status in Generate DB page, if we see Input error, check the data missing and complete it, for this lab sequence expect &quot;<span>DB generation is not required for this operation. It will occur at run time.</span>&quot; message. Save the project
+    and click on <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> mode to run the simulation.</p>
+  <h3 class="h3_operation3">Running simulation</h3>
+  <p>Click on <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> label under the simulation tab (see <a href="#Fig_2DCFL1_26_Simulation_Options"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>26.</a>),
+    as we click on the Run option, Run Simulation dialog will open as shown in see <a href="#Fig_2DCFL1_27_Run_Simulation_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>27.</a>, Use the default <strong>Continue Run</strong>    option to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.  As we click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button simulation starts.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_26_Simulation_Options"></a><img height="28" src="../../../assets/images/labs/basic_labs/2d_labs/lab_03_spike_isothermal/2d_mobl3_image0032.jpg" style="cursor: nesw-resize;" width="546"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation Options</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_27_Run_Simulation_window"></a><img height="302" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0034.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Run Simulation window</p>
+  <p> </p>
+  <p>The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as the <img src="../../../assets/icons/simulator_icons/mo_auto_update_option.jpg"/> option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.</p>
+  <p> </p>
+  <p> The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.</p>
+  <p> </p>
+  <p>When the simulation is finished without any issues, check the messages in LOG file, when all operation completes we will see messages in LOG file:&quot;MULTIPLE OPERATION COMPLETED &quot;. (See <a href="#Fig_2DCFL1_28_Log_file_messages"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>28.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_28_Log_file_messages"></a><img height="500" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0025.jpg" width="390"/></p>
+  <p> </p>
+  <p class="Fig_numb">Log file messages</p>
+  <p> </p>
+  <h3 class="h3_operation3">Post process the results</h3>
+  <p>After the simulation is completed, Switch to <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab.</p>
+  <p> </p>
+  <p>Did the head completely fill?  Look at contact to better visualize any unfill.</p>
+  <p> </p>
+  <p>Is the load in this operation greater than the load required in the previous operations?</p>
+  <p>Plot the load - stroke graph for each operation to compare the load in each operation.</p>
+  <p> </p>
+  <h3 class="h3_operation3">State variables</h3>
+  <p>From the <a href="../../post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm">State variables</a> list, click the Effective strain icon to plot the amount of strain that went into the workpiece.
+    To change the plot settings, you can click on the <img src="../../../assets/icons/post_icons/mo_state_variable_icon.jpg"/> Set up icon. In this screen, you can display different kinds of contours (line, shaded or solid) as well as change the variable
+    range that is shown on the contour bar (See <a href="#Fig_2DCFL1_29_Strain_Effective_state_variable_plot"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>29.</a>). Using the Settings option, the range of the contour
+    bar can be user-defined. Feel free to experiment with the display of the different state variables and plot options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_29_Strain_Effective_state_variable_plot"></a><img height="425" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0026.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Strain Effective state variable plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_30_Stress_Effective_state_variable_plot"></a><img height="424" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0027.jpg" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Stress Effective state variable plot</p>
+  <p> </p>
+  <h2> <a id="Operation_4_Die_Stress_Operation"></a>Die Stress Operation</h2>
+  <h3 class="h3_operation4"> Add Die stress operation</h3>
+  <p>After completion of Post processing, switch to <img height="22" src="../../../assets/icons/pre_icons/mo_pre_mode_button.jpg" width="161"/>  mode.</p>
+  <p>Add Die stress 2D operation from Explorer operation list, open added Die stress operation by double click on operation in operation list.</p>
+  <h3 class="h3_operation4">Select objects</h3>
+  <p>We are currently interested only in the stress analysis of the punch in the hex head operation. So, delete Die (object3) and Ejector (object4) from the list by clicking delete button <img src="../../../assets/icons/pre_icons/mo_delete_object_button.jpg"/> . Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button. (see <a href="#Fig_2DCFL1_31_Die_stress_objects_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>31.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_31_Die_stress_objects_window"></a><img src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0028.jpg"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Die stress objects window</p>
+  <p> </p>
+  <p>By default workpiece object type will be Read from DB, this object will be there up to DB generation, while generating DB it will be removed. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> button.</p>
+  <h3 class="h3_operation4">Top Die Definition</h3>
+  <p>By default Die (Elastic) radio button will be selected use the object type as Die, then click on  <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Mesh page.</p>
+  <h3 class="h3_operation4">Top die mesh page</h3>
+  <p>Define number of elements as 2500 as shown in <a href="#Fig_2DCFL1_32_Mesh_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>32.</a> and Generate mesh, then click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_32_Mesh_window"></a><img height="405" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0029.jpg" width="500"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Mesh window</p>
+  <h3 class="h3_operation4">Assign  material for Top die</h3>
+  <p>Import a die material from the material library. Click the <img src="../../../assets/icons/pre_icons/mo_load_from_library_icon.jpg"/> (Load material from library) button and select the <strong>Die_material </strong>category, then <strong>AISI-H-13 </strong>and
+    click on <img src="../../../assets/icons/pre_icons/mo_load_button.jpg"/> button. Choose <strong>AISI-H-13</strong> from the list. Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Boundary condition page.</p>
+  <h3 class="h3_operation4">Assign Boundary condition for Top Die</h3>
+  <p>Next we need to apply boundary conditions to the punch so that it does not fly off into space when the forming loads are applied to it.</p>
+  <p>By default for an axisymmetric product all nodes in x direction at centerline are fixed if not make sure that the direction of the boundary condition is set to X and then click the By edge  <img src="../../../assets/icons/pre_icons/mo_bcc_edge_icon.jpg"/> button in the pop up window. Using this setting, we can add BCC to all nodes/elements on an edge. Pick a point on the centerline of the punch, and you should see that all of the centerline nodes are fixed along X direction.  </p>
+  <p> </p>
+  <p>Now set the boundary condition direction to Y, select a point on the top surface of the punch to fix all those nodes along Y direction (see <a href="#Fig_2DCFL1_33_Assigned_Velocity_Boundary_condition"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>33.</a>).
+    Then click <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> to Force interpolation page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_33_Assigned_Velocity_Boundary_condition"></a><img height="424" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0031.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned Velocity Boundary condition</p>
+  <h3 class="h3_operation4">Force interpolation</h3>
+  <p>Once the mesh is generated, the forming loads from the workpiece need to be interpolated onto the punch. Click on <img src="../../../assets/icons/pre_icons/mo_interpolate_force_button.jpg"/>. Once the forces are interpolated, in below window message
+    will be display of comparing the forces from the workpiece to the new forces on the punch as shown in <a href="#Fig_2DCFL1_34_Force_interpolation_window"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>34.</a>    These forces should be relatively close to one another (typically within about 5%). Click on <img src="../../../assets/icons/pre_icons/mo_next_button.jpg"/> until Generate DB.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_34_Force_interpolation_window"></a><img height="423" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0030.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Force interpolation window</p>
+  <p> </p>
+  <h3 class="h3_operation4">Generate DB</h3>
+  <p>Check the data and generate the DB. After generating DB switch to <img src="../../../assets/icons/pre_icons/mo_simulation_mode_button.jpg"/> mode to run the simulation.</p>
+  <h3 class="h3_operation4">Running simulation</h3>
+  <p>Click on <img src="../../../assets/icons/simulator_icons/mo_run_label_button.jpg"/> label under the simulation tab, as we click on the Run option, Run Simulation dialog will open. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>”
+    option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button to run the simulation.  As we click on <img height="23" src="../../../assets/icons/simulator_icons/mo_run_job_button.jpg" width="75"/> button simulation starts.</p>
+  <p> </p>
+  <p>After simulation complete, switch to <img src="../../../assets/icons/pre_icons/mo_post_mode_button.jpg"/> tab.</p>
+  <h3 class="h3_operation4">Post processor</h3>
+  <p>The main variables to look at for a die stress simulation are the <strong>Effective stress</strong> and the <strong>Maximum principal stress</strong>.</p>
+  <p> </p>
+  <p>The effective stress is used to see whether any location in the die underwent plastic deformation. If any area of the die has an effective stress close to or exceeding the yield stress of the die material, that region is at risk of plastically deforming.
+    (See <a href="#Fig_2DCFL1_35_Stress-Effective_plot"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>35</a>)</p>
+  <p> </p>
+  <p>The maximum principal stress is used to see which regions of the die are in a state of compression and which are in a state of tension. Maximum principal stress is extremely important in determining whether a die will experience any cracking due to
+    fatigue. To display the maximum principal stress, click the state variable <img src="../../../assets/icons/post_icons/mo_state_variable_icon.jpg"/> button and then select <strong>Stress – Max Principal</strong> from the list. (See <a href="#Fig_2DCFL1_36_Max._Principal_stress_plot"><span data-keyref="Labs_Forming_Express_lab_2D_Cold_Forming_Lab1">Fig. 2DCFL1.</span>36.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_35_Stress-Effective_plot"></a><img height="424" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0032.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stress-Effective plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DCFL1_36_Max._Principal_stress_plot"></a><img height="424" src="../../../assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0033.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Max. Principal stress plot</p>
+  <p> </p>
+
+</body></html>

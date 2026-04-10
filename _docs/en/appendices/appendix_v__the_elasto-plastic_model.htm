@@ -1,0 +1,233 @@
+---
+lang: en
+title: "Appendix V: The elasto-plastic model"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix V: The elasto-plastic model</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix V: The elasto-plastic model</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_v.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_VI__Part_is_deforming_but_strain_does_not_accumulate.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_IV_Determining_R_coefficientss.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix V: The elasto-plastic model">
+        <span>Appendix V: The elasto-plastic model</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix V: The elasto-plastic model</h1>
+  <p><a href="#AV_1_Material_Properties">AV.1. Material Properties</a></p>
+  <p><a href="#AV_2_Object_data">AV.2. Object data</a></p>
+  <p><a href="#AV_3_Solution_procedure">AV.3. Solution procedure</a></p>
+  <p><a href="#AV_4_Strain_Definition">AV.4. Strain Definition</a></p>
+  <p><a href="#AV_5_Advice_on_Predicting_Springback">AV.5. Advice on Predicting Springback</a></p>
+  <p><a href="#AV_6_Note_on_Convergence_issues_with_Elasto-Plastic_material_models">AV.6. Note on Convergence issues with Elasto-Plastic material models</a></p>
+  <p><a href="#AV_7_DEFORM_convention_rule_for_material_interpolation">AV.7. DEFORM convention rule for material interpolation</a></p>
+  <p><a href="#AV_8_Comments_on_Flow_curve_definition_for_Rate-dependent_material">AV.8. Comments on “Flow curve definition for Rate-dependent material”</a></p>
+  <p> </p>
+  <p>In general, the elasto-plastic material model should be run in a very similar manner as the rigid-plastic material model. Some differences are discussed in the following section.</p>
+  <p> </p>
+  <h2><a id="AV_1_Material_Properties"></a>Material Properties</h2>
+  <p>In addition to the flow stress data, the material is also required to have <a href="../pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data.htm#Young&#39;s_modulus">Young&#39;s modulus (YOUNG)</a> and <a href="../pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data.htm#Poisson&#39;s_ratio">Poisson&#39;s ratio (POISON)</a>.
+    If thermal expansion and contraction is to be considered, the thermal expansion coefficient must also be present.  Note: elastic and elasto-plastic materials in DEFORM deal with thermal expansion differently (see <a href="../pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data.htm#Thermal_expansion">Thermal expansion (EXPAND)</a>    for more details).</p>
+  <p> </p>
+  <p>In the elasto-plastic model, the flow stress at zero strain represents the yield stress for the material.  As the accumulated effective plastic strain increases, the yield stress increases.  The flow stress data must have a reasonable description for
+    the initial yield stress particularly in the case of low deformation simulations such as heat treatment. This is where the elastic part of the stress-strain curve intersects with the plastic part of the curve. If the flow stress data is only defined
+    for high strain values, DEFORM will extrapolate the yield stress and this value may not be close to the actual yield stress.  Thus, valid results are unlikely and convergence difficulties are possible. Thus, having some flow stress data at low effective
+    plastic strain values may aid convergence. (See <a href="#Fig_AV_1_Extrapolation_of_flow_stress_data_to_determine_the_initial_yield_stress"><span data-keyref="Appendix_V_The_elasto_plastic_model">Fig. AV.</span>1</a> for an example of extrapolation
+    of the initial yield stress).</p>
+  <p> </p>
+  <p>In order to provide guidance to users who are not familiar with modeling elasto-plastic materials, we offer the following suggestions.</p>
+  <p> </p>
+  <p>1.  When using the function form (<a href="../pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_2_power_law.htm">Power law</a>):</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 550px; border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img height="231" src="../../assets/equations/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/eq_10_1_1_2.jpg" width="214"/></td>
+        <td>
+          <p class="Eqn_number"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>it is accurate for &#39;y&#39; to be equal to the initial yield stress.  If y = 0, the initial yield stress will be poorly represented.</p>
+  <p> </p>
+  <p>2.   When using a table form, the program will extrapolate/interpolate the flow stress and use that as the initial yield stress. If extrapolation is expected, be sure that the slope of the flow stress in the small strain region is &quot;reasonable&quot;,
+    i.e. extrapolated value should be the same as the initial yield stress. Some modifications may be needed in the small strain region, like adding one more point to correct the slope. These modifications should be made even if the flow stress is retrieved
+    from the DEFORM material database.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AV_1_Extrapolation_of_flow_stress_data_to_determine_the_initial_yield_stress"></a><img height="300" src="../../assets/images/appendices/appendix_v_the_elasto-plastic_model/image0001.jpg" width="475"/></p>
+  <p> </p>
+  <p class="Fig_numb">Extrapolation of flow stress data to determine the initial yield stress</p>
+  <p> </p>
+  <h2><a id="AV_2_Object_data"></a>Object data</h2>
+  <ul class="Disc">
+    <li>
+      <p>Set the EP initial guess under Objects/Properties/<a href="../pre_processor/16_object_properties/16_1_deformation_properties.htm#16_1_1_Creep_calculation">Deformation</a> to Previous step solution.</p>
+    </li>
+    <li>
+      <p>If there is a change in operation, e.g. moving the part from one station to another, initialize the velocity for the part under Objects/<a href="../pre_processor/17_object_data_initialization/17_1_node_data_window.htm">Nodes Data</a>/<a href="../pre_processor/17_object_data_initialization/17_2_element_data_window.htm#17_2_3_Deformation_Tab">Deformation</a>.
+         This will improve the initial guess of the velocity solution.</p>
+    </li>
+    <li>
+      <p>If moving the part from one set-up to another, allow the part to relax its stresses by placing a few springback steps between operations.</p>
+    </li>
+  </ul>
+  <h2><a id="AV_3_Solution_procedure"></a>Solution procedure</h2>
+  <ul class="Disc">
+    <li>
+      <p>Always use Newton-Raphson iteration method or BFGS iteration method. The user can select the different methods under Simulation Controls/Iteration. It is useful to try switch iteration methods when either one fails to converge.</p>
+    </li>
+    <li>
+      <p>The force error norm can be increased two orders of magnitude larger than the velocity error norm. This is suggested only when the solution fails to converge due to non-stationary force error norm behavior. The value can be changed under Simulation
+        Controls/Iteration (Convergence Error Limit)</p>
+    </li>
+    <li>
+      <p>It is recommended to reduce the value after convergence has been achieved.</p>
+    </li>
+    <li>
+      <p>Elasto-plastic convergence is very sensitive on time-step size. By selecting a time step size too large (size depends on the simulation), convergence may be very difficult. By reducing time-step, convergence in many cases may be improved.</p>
+    </li>
+  </ul>
+  <h2><a id="AV_4_Strain_Definition"></a>Strain Definition</h2>
+  <p>The calculated strain components are of the &quot;plastic&quot; strain and the &quot;effective strain&quot; is the effective plastic strain.</p>
+  <h2><a id="AV_5_Advice_on_Predicting_Springback"></a>Advice on Predicting Springback</h2>
+  <p>To calculate the residual stress or springback during unloading, one of two methods may be used.</p>
+  <p>If the amount of springback or residual stress is the chief concern, remove the dies,  put enough constraint on the workpiece to prevent rigid body motion. run a one step simulation.</p>
+  <p>If the user wishes to observe the material response during the unloading, then reverse the direction of the primary die. run multiple small steps.</p>
+  <p> </p>
+  <h2><a id="AV_6_Note_on_Convergence_issues_with_Elasto-Plastic_material_models"></a>Note on Convergence issues with Elasto-Plastic material models</h2>
+  <p><strong>Background</strong>: It has been a common and convenient approach for the users to use the material data from an existing model or from library data. As long as material data covers the range experienced by material point for a given simulation
+    the model behavior is generally smooth. But once this material point crosses the defined data range, it is important to note that the flow stress data extrapolation plays a role in the accuracy of the model results. This becomes even more critical
+    for elasto-plastic models when we need to depend on these extrapolated data to compute material yielding. This note summarizes couple of important points in this regard.</p>
+  <p>As the example shows in the Appendix, Log interpolation may lead numerical difficulties for some material data. In order to get more stable results, new convention rule is introduced in V6.1.</p>
+  <p> </p>
+  <h2><a id="AV_7_DEFORM_convention_rule_for_material_interpolation"></a>DEFORM convention rule for material interpolation</h2>
+  <p>Convention: See <a href="#Fig_AV_2_Convention_rule_for_flow_stress_definition"><span data-keyref="Appendix_V_The_elasto_plastic_model">Fig. AV.</span>2.</a></p>
+  <ol class="Decimal">
+    <li>
+      <p>If the current plastic strain is smaller than the 1st data point user defined, then “Linear interpolation” will be used.   </p>
+    </li>
+    <li>
+      <p>If the current plastic strain rate is smaller than the 1st data point user defined, then “Linear interpolation” will be used.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AV_2_Convention_rule_for_flow_stress_definition"></a><img height="250" src="../../assets/images/appendices/appendix_v_the_elasto-plastic_model/image0002.jpg" width="472"/></p>
+  <p> </p>
+  <p class="Fig_numb">Convention rule for flow stress definition</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>:</p>
+  <p class="Note_text">If the user doesn’t want to use the convention rule, the user should specify zero strain  and zero strain rate curves.</p>
+  <p> </p>
+  <h2><a id="AV_8_Comments_on_Flow_curve_definition_for_Rate-dependent_material"></a>Comments on “Flow curve definition for Rate-dependent material”</h2>
+  <p>Typical convergence issues related elasto-plastic objects are related to material data and “material instability”. It may lead to the failure in “material routine convergence” and can potentially give wrong stress predictions. Here the flow curve definition
+    for Rate-dependent material will be discussed briefly.</p>
+  <ol class="Decimal">
+    <li>
+      <p>Material AISI-1010, Cold (Log interpolation): The general shape of curve looks like “Hardening material”. Two curves at different strain rates ( = 1 , 100) defined. (See <a href="#Fig_AV_3_Flow_curves_for"><span data-keyref="Appendix_V_The_elasto_plastic_model">Fig. AV.</span>3.</a>)</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AV_3_Flow_curves_for"></a><img height="375" src="../../assets/images/appendices/appendix_v_the_elasto-plastic_model/image0003.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Flow curves for “AISI-1010,Cold”</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;" value="2">
+      <p>Special care is needed in using LOG interpolation</p>
+    </li>
+  </ol>
+  <p style="margin-left: 20px">User can choose one of interpolation methods, either “Log” or “Linear”. When user choose “Log (default)”, the interpolated curve at the small strain rate (= 0 ~ 1) is shown in <a href="#Fig_AV_4_Log_interpolation_at_the_small_strain_rate"><span data-keyref="Appendix_V_The_elasto_plastic_model">Fig. AV.</span>4.</a>    The curve at the zero strain rate now has softening behavior.</p>
+  <p style="margin-left: 20px">(“Linear interpolation results” is still hardening behavior as shown in <a href="#Fig_AV_5_Linear_interpolation__at_the_small_strain_rate"><span data-keyref="Appendix_V_The_elasto_plastic_model">Fig. AV.</span>5.</a>)</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_AV_4_Log_interpolation_at_the_small_strain_rate"></a><img height="374" src="../../assets/images/appendices/appendix_v_the_elasto-plastic_model/image0004.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Log interpolation at the small strain rate(= 0 ~ 1)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AV_5_Linear_interpolation__at_the_small_strain_rate" height="0" width="0"></a><img height="375" src="../../assets/images/appendices/appendix_v_the_elasto-plastic_model/image0005.jpg" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Linear interpolation  at the small strain rate(= 0 ~ 1)</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../pre_processor/10_material_data/10_material_data.htm">Material Properties</a></p>
+  <p><a href="../pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models.htm">Flow Stress</a></p>
+  <p><a href="../pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data.htm">Elastic data</a></p>
+  <p><a href="../pre_processor/16_object_properties/16_object_properties.htm">Object Properties</a></p>
+  <p><a href="../pre_processor/9_simulation_controls/9_simulation_controls.htm">Simulation Controls</a><br/>
+  </p>
+
+</body></html>
