@@ -1,0 +1,446 @@
+---
+lang: sk
+title: "2D DOE Lab1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.8.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D DOE Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D DOE Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/doe_labs/2d_doe_labs/2d_doe_lab1.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Extrusion_Labs/Extrusion_Labs_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Labs/DOE_Labs/DOE_Labs_Main_Pg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="2D DOE Lab1">
+        <span>2D DOE Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>2D DOE Lab1</h1>
+  <p>In this lab we import the Multi Stand Drawing setup keyfile from 2D labs and then continue with the nominal project simulation and DOE setup.</p>
+  <p> </p>
+  <p><a href="#1_1_Nominal_Project_setup_and_simulation">1.1. Nominal Project setup and simulation</a></p>
+  <p><a href="#1_2_Check_and_define_the_Nominal_Project">1.2. Check and define the Nominal Project</a></p>
+  <p><a href="#1_3_Add_DOE_Project">1.3. Add DOE Project</a></p>
+  <p><a href="#1_4_Add_die_geometry_variation_as_DOE_variable">1.4. Add die geometry variation as DOE variable</a></p>
+  <p><a href="#1_5_Add_Friction_coefficient_as_DOE_variable">1.5. Add Friction coefficient as DOE variable</a></p>
+  <p><a href="#1_6_Check_DOE_Variables_table">1.6. Check DOE Variables table</a></p>
+  <p><a href="#1_7_DOE_Samples_definition">1.7. DOE Samples definition</a></p>
+  <p><a href="#1_8_Define_DOE_Output_operation">1.8. Define DOE Output operation</a></p>
+  <p style="margin-left: 20px"><a href="#1_8_1_Select_DOE_Operation_and_object_to_Study">1.8.1. Select DOE Operation and object to Study</a></p>
+  <p style="margin-left: 20px"><a href="#1_8_2_Define_Output_variables">1.8.2. Define Output variables</a></p>
+  <p><a href="#1_9_Simulate_DOE_project">1.9. Simulate DOE project</a></p>
+  <p><a href="#1_10_Review_the_DOE_results">1.10. Review the DOE results</a></p>
+  <p style="margin-left: 20px"><a href="#1_10_1_Check_Operation_min_max_(all_steps)_variables">1.10.1. Check Operation min/max (all steps) variables</a></p>
+  <p style="margin-left: 20px"><a href="#1_10_2_Check_Summary_min_max_(last_step)_variables">1.10.2. Check Summary min/max (last step) variables</a></p>
+  <p style="margin-left: 20px"><a href="#1_10_3_Check_Location_specific_(One_step)_variables">1.10.3. Check Location specific (One step) variable</a>s</p>
+  <p> </p>
+  <h2><a id="1_1_Nominal_Project_setup_and_simulation"></a>Nominal Project setup and simulation</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/><strong> New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/>  icon. The Problem Setup window will appear as shown in <a href="#Fig_DOEL1_1_New_Problem_page"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>1.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot; radio button and unit
+    system as &quot;<strong>English</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong>DoeMultiStandDraw</strong> &quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>”
+    check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_1_New_Problem_page"></a> <img height="527" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">  New Problem page</p>
+  <p> <br/> Integrated Manufacturing Process will open, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In New Project popup define Problem Name as &#39;<strong>DoeMultiStandDraw</strong>&#39;,
+    select First Operation as 2D Forming and select English unit system as shown in <a href="#Fig_DOEL1_2_New_Project_creation_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>2.</a> , click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> to add project.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_2_New_Project_creation_window"></a><img src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0002.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Project creation window</p>
+  <p><br/>
+    <br/> Click on <img src="{{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}"/> (Import DB/Keyfile) icon and import <strong>MultiStandDraw.key</strong> file from installation path 2D/LABS folder as shown in <a href="#Fig_DOEL1_3_Importing_Nominal_project_setup_keyfile"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>3.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_3_Importing_Nominal_project_setup_keyfile"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing Nominal project setup keyfile</p>
+  <p><br/> After importing the keyfile MO will display all objects as shown in <a href="#Fig_DOEL1_4_MO_project_layout_after_importing_the_setup_keyfile"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>4.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_4_MO_project_layout_after_importing_the_setup_keyfile"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO project layout after importing the setup keyfile</p>
+  <h2><a id="1_2_Check_and_define_the_Nominal_Project"></a>Check and define the Nominal Project</h2>
+  <p>Imported keyfile is an Multi stand drawing setup having 2 stands, each stand dies are named as pass1 Die and Pass2 Die. Workpiece is pulled in these dies to perform the drawing process, this is accomplished by applying velocity for Workpiece.<br/>
+    <br/> Select the Workpiece Boundary Conditions from operation tree to observe the workpiece velocity Boundary Conditions defined at the front end to pull the workpiece through the dies and fixed velocity at the centerline as shown in <a href="#Fig_DOEL1_5_Workpiece_front_end_velocity_boundary_condition"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_5_Workpiece_front_end_velocity_boundary_condition"></a><img height="373" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0005.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">Workpiece front end velocity boundary condition</p>
+  <p> </p>
+  <p>Similarly select the X Fixed velocity BCC and observe the centerline fixed velocity as shown in <a href="#Fig_DOEL1_6_Workpiece_centerline_velocity_boundary_condition"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>6.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_6_Workpiece_centerline_velocity_boundary_condition"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0006.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece centerline velocity boundary condition</p>
+  <p><br/> As we vary the Pass1 Die diameter in DOE project, Workpiece has to position with respect to varied die geometry diameter by interference in –Y direction during DOE simulations. So we have to schedule workpiece position with respect to die.<br/>
+    <br/> Click on Scheduled position in operation tree to define the scheduled positioning of workpiece with respect to Pass1 Die. Click on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> (Add) button to add the scheduled positioning
+    definition (See <a href="#Fig_DOEL1_7_Scheduled_positioning_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>7.</a>) and interference position the Workpiece with respect to Pass1 Die in –Y direction a shown in <a href="#Fig_DOEL_1_8_Interference_positioning_Workpiece_with_respect_to_Pass1_Die"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>8.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_7_Scheduled_positioning_window"></a><img height="350" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0007.jpg' | relative_url }}" width="418"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scheduled positioning window</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_DOEL_1_8_Interference_positioning_Workpiece_with_respect_to_Pass1_Die"></a><img height="350" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0008.jpg' | relative_url }}" width="409"/></p>
+  <p> </p>
+  <p class="Fig_numb">Interference positioning Workpiece with respect to Pass1 Die</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the Scheduled positioning definition. Select Contact in operation tree to observe the Inter-object relationship between Dies and Workpiece and its friction coefficient
+    value. (See <a href="#Fig_DOEL1_9_Inter-object_relationship_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>9.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_9_Inter-object_relationship_window"></a><img height="350" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0009.jpg' | relative_url }}" style="cursor: nesw-resize;" width="414"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-object relationship window</p>
+  <p> </p>
+  <p>Select the Generate Database in operation tree, when we visit Generate Database we will get &quot;<strong>Apply scheduled Positioning</strong> &quot; popup due to scheduled positioning data, click &quot;<strong>Yes</strong>&quot; in popup  and generate
+    Database. (See <a href="#Fig_DOEL1_10_Generate_database_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>10.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_10_Generate_database_window"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate database window</p>
+  <p><br/> Click on <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> MO Mode button to submit to simulate. Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the
+    Run Options dialog as shown in <a href="#Fig_DOEL1_11_Run_simulation_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>11.</a> Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>”option
+    and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_11_Run_simulation_window"></a><img height="290" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0011.jpg' | relative_url }}" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run simulation window</p>
+  <p><br/> After completing the simulation click on <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> MO mode button to play the steps and check the nominal simulation as shown in <a href="#Fig_DOEL1_12_DOE_nominal_project_post_mode"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>12.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_12_DOE_nominal_project_post_mode"></a><img height="373" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0012.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE nominal project post mode</p>
+  <h2><a id="1_3_Add_DOE_Project"></a>Add DOE Project</h2>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}"/> MO mode button to add the DOE Study. Click on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> (Add) button at top left corner of graphics window
+    and select Add DOE Study option as shown in <a href="#Fig_DOEL1_13_Adding_DOE_Study_Project"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>13.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_13_Adding_DOE_Study_Project"></a><img height="379" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0013.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding DOE Study Project</p>
+  <p> </p>
+  <p>DOE project will be added along with the DOE output operation needed to study the DOE results as shown in <a href="#Fig_DOEL1_14_Added_DOE_Study_Project"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>14.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_14_Added_DOE_Study_Project"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added DOE Study Project</p>
+  <h2><a id="1_4_Add_die_geometry_variation_as_DOE_variable"></a>Add die geometry variation as DOE variable</h2>
+  <p>Select the Forming operation from Operation Editor to add DOE variables. To vary the first stand die diameter select Pass1 Die Geometry from operation tree and add geometry as DOE variable by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/>  (Add DOE Variable) button as shown in <a href="#Fig_DOEL1_15_Adding_geometry_as_DOE_variable"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>15.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_15_Adding_geometry_as_DOE_variable"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0015.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding geometry as DOE variable</p>
+  <p> </p>
+  <p>Name the DOE variable as “Dia” and select the number of samples as 2. User can add the Description about the DOE variable definition, in this lab as we varying internal dia from 0.2 to 0.24 add the description as “<strong>Internal</strong><strong> dia is varied from 0.2183 to 0.2 for lower bound and 0.24 for upper bound.</strong>”
+    as shown in <a href="#Fig_DOEL1_16_DOE_variable_definition_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>16.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_16_DOE_variable_definition_window"></a><img height="345" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0016.jpg' | relative_url }}" width="413"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE variable definition window</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_edit_geometry_button.jpg' | relative_url }}"/> to define lower and upper bound geometry. In 2D geometry editor confirm that the DOE type is <strong>Lower</strong>. (See <a href="#Fig_DOEL1_17_2D DOE geometry editor window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>17.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_17_2D DOE geometry editor window"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D DOE geometry editor window</p>
+  <p><br/> Click on <strong>Geometry </strong>tab to observe the internal flat region dia 0.2183 in X column of the table. Select the innermost dia point and select the <img src="{{ '/assets/icons/pre_icons/mo_move.jpg' | relative_url }}"/>  (Move) icon and move the
+    point by (-0.0183,0) as shown in <a href="#Fig_DOEL1_18_Moving_the_internal_dia_points_for_lower_bound_geometry"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>18.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_18_Moving_the_internal_dia_points_for_lower_bound_geometry"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0018.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Moving the internal dia points for lower bound geometry</p>
+  <p> </p>
+  <p>Similarly move other end of the flat dia point 0.0183 in towards centerline as shown in <a href="#Fig_DOEL1_19_Moving_2nd_dia_flat_point"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>19.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_19_Moving_2nd_dia_flat_point"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0019.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Moving 2nd dia flat point</p>
+  <p> </p>
+  <p>In order to maintain the same entry and exit angle of the die, move the top and bottom taper edge end points for the same amount towards centerline. Finally the lower bound geometry and geometry table looks as shown in <a href="#Fig_DOEL1_20_Lower bound geometry"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>20.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_20_Lower bound geometry"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0020.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Lower bound geometry</p>
+  <p><br/> Select objects tab to define the upper bound of DOE geometry variable and select the <strong>Upper </strong>for DOE type as shown in <a href="#Fig_DOEL1_21_Upper_bound_geometry_variable_selection"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>21.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_21_Upper_bound_geometry_variable_selection"></a><img height="345" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0021.jpg' | relative_url }}" width="474"/></p>
+  <p> </p>
+  <p class="Fig_numb">Upper bound geometry variable selection</p>
+  <p> </p>
+  <p>Select back the geometry tab and move the internal flat dia points by 0.0217 away from centerline, so the dia changes from 0.2183 to 0.24 as shown in <a href="#Fig_DOEL_1_22_Moving_Upper_bound_internal_flat_dia_points"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL_1_22_Moving_Upper_bound_internal_flat_dia_points"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0022.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Moving Upper bound internal flat dia points</p>
+  <p><br/> Similar to the flat edge end points move the top and bottom taper edge end points for the same amount away from centerline in order to maintain the same entry and exit angle of the die. Finally the upper bound geometry and geometry table looks
+    as shown in <a href="#Fig_DOEL1_23_Upper_bound_final_geometry_points"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>23.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_23_Upper_bound_final_geometry_points"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0023.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Upper bound final geometry points</p>
+  <p> </p>
+  <p>Click on objects tab and drag the morph sliding bar to observe the transition of the geometry variation from lower to upper bound as shown in <a href="#Fig_DOEL1_24_Morphed_geometry_between_defined_geometry_variations"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>24.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_24_Morphed_geometry_between_defined_geometry_variations"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0024.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Morphed geometry between defined geometry variations</p>
+  <p><br/> Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close 2D Geometry Editor and again click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the Geometry DOE variable definition for Pass1 die.
+    Observe the green color fill around the  <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> (edit geometry) button (See <a href="#Fig_DOEL1_25_Geometry_window_after_DOE_variable_definition"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>25.</a>)
+    indicating the DOE variable defined successfully. If the definition having any errors then red color fill can be observed around the DOE variables field.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_25_Geometry_window_after_DOE_variable_definition"></a><img height="390" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0025.jpg' | relative_url }}" width="444"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry window after DOE variable definition</p>
+  <h2><a id="1_5_Add_Friction_coefficient_as_DOE_variable"></a>Add Friction coefficient as DOE variable</h2>
+  <p>Select the <strong>Contact </strong>in operation tree to define the Pass2 die and workpiece friction coefficient as second DOE variable. (See <a href="#Fig_DOEL1_26_Inter_object_definition_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>26.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_26_Inter_object_definition_window"></a><img height="415" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0026.jpg' | relative_url }}" width="472"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Inter object definition window</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> for Pass2 Die and Workpiece contact relation (See <a href="#Fig_DOEL1_26_Inter_object_definition_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>26.</a>). Right
+    click on the constant Friction field and add as DOE variable as shown in <a href="#Fig_DOEL1_27_Inter_object_relations_edit_window_deformation_tab"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>27.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_27_Inter_object_relations_edit_window_deformation_tab"></a><img height="415" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0027.jpg' | relative_url }}" width="472"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter object relations edit window deformation tab</p>
+  <p><br/> DOE variable definition window will open (See <a href="#Fig_DOEL1_28_DOE_variable_Friction_coefficient_definition_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>28.</a>). Name the DOE variable as &quot;<strong>Friction</strong>&quot;,
+    number of samples as 2, define upper value as 0.084 and lower value as 0.076 as shown in <a href="#Fig_DOEL1_28_DOE_variable_Friction_coefficient_definition_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>28.</a> For this variable we add
+    the description as &quot;<strong>Friction coefficient varied 5 percentage above and below the nominal value.</strong>&quot;.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_28_DOE_variable_Friction_coefficient_definition_window"></a><img src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0028.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE variable Friction coefficient definition window</p>
+  <p> </p>
+  <p>Confirm the DOE variable definition not having any error by green color fill around the friction coefficient value field as shown in <a href="#Fig_DOEL1_29_Inter_object_edit_window_deformation_tab_after_DOE_variable_definition"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>29.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_29_Inter_object_edit_window_deformation_tab_after_DOE_variable_definition"></a><img height="415" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0029.jpg' | relative_url }}" width="472"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Inter object edit window deformation tab after DOE variable definition</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close Edit Inter-Object definition window.</p>
+  <h2><a id="1_6_Check_DOE_Variables_table"></a>Check DOE Variables table</h2>
+  <p>Select the DOE Variables table to observe the defined DOE variables list (See <a href="#Fig_DOEL1_30_DOE_variables_list_in_DOE_table"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>30.</a>). User can edit the DOE variable definition easily from
+    the DOE Variables table for constant values by double click on the values. Function values can be edited by clicking on the single Edit button below the Upper value column.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_30_DOE_variables_list_in_DOE_table"></a><img height="173" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0030.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE variables list in DOE variables window</p>
+  <h2><a id="1_7_DOE_Samples_definition"></a>DOE Samples definition</h2>
+  <p>Select the DOE Sampling tab and select sampling method as <strong>Full Factorial</strong> and observe the total number of simulation text next to it as shown in <a href="#Fig_DOEL1_31_DOE_Sampling_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>31.</a>    In this lab as the number of samples for both the DOE variables are 2, total number of DOE Runs/Simulations becomes 4 (2x2).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_31_DOE_Sampling_window"></a><img height="215" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0031.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE Sampling window</p>
+  <h2><a id="1_8_Define_DOE_Output_operation"></a>Define DOE Output operation</h2>
+  <h3><a id="1_8_1_Select_DOE_Operation_and_object_to_Study"></a>Select DOE Operation and object to Study</h3>
+  <p>Select DOE output operation from operation editor and select the forming operation check box in operation selection window (See <a href="#Fig_DOEL1_32_Operation Selection window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>32.</a>). If the Nominal
+    project is having more than one operation and DOE variables are defined more than one operation then user can select the both the operations to study. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define the Output types.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_32_Operation Selection window"></a><img height="415" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0032.jpg' | relative_url }}" width="472"/></p>
+  <p> </p>
+  <p class="Fig_numb">Operation Selection window</p>
+  <h3><a id="1_8_2_Define_Output_variables"></a>Define Output variables</h3>
+  <p>Check the Operation min/max value, Local min/max value and SV on all nodes/elements (Last step of selected operation) output types (see <a href="#Fig_DOEL1_33_DOE_Output_selection_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>33.</a>). Click
+    <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define the Region of Interest.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_33_DOE_Output_selection_window"></a><img height="396" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0033.jpg' | relative_url }}" width="450"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE Output selection window</p>
+  <p><br/> Click on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> (Add) button to add region and click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> (See <a href="#Fig_DOEL1_34_Region_of_interest_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>34.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_34_Region_of_interest_window"></a><img height="396" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0034.jpg' | relative_url }}" width="450"/></p>
+  <p> </p>
+  <p class="Fig_numb">Region of interest window</p>
+  <p> </p>
+  <p>Create the <strong>hollow </strong><strong>cylinder</strong> primitive of <strong>Radius </strong>1.1 and <strong>Height </strong>1.5 (See <a href="#Fig_DOEL1_35_Region_of_interest_geometry_creation"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>35.</a>.). Click
+    <img height="20" src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}" width="67"/> to close the geometry definition. Click on <strong>P</strong><strong><strong>osi</strong>tioning </strong>and define <strong>Offset</strong> as (-0.1, -1) as
+    shown in <a href="#Fig_DOEL1_36_Geometry_warning_popup"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>36</a>. and then click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_35_Region_of_interest_geometry_creation"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0035.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Region of interest geometry creation</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_36_Geometry_warning_popup"></a><img height="350" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0036.jpg' | relative_url }}" width="428"/></p>
+  <p> </p>
+  <p class="Fig_numb">Positioning of Region of Interest </p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Operation Min/Max (All steps in operation) and add <strong>Effective Stress</strong> and <strong>Effective Strain</strong> state variables as shown in <a href="#Fig_DOEL1_37_Operation_Min_Max_output_variables_definition_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>37.</a>    Minimum value as component, select <strong>Max </strong>in Min/max and <strong>workpiece </strong>as Object and click <strong><img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/></strong>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_37_Operation_Min_Max_output_variables_definition_window"></a><img height="550" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0037.jpg' | relative_url }}" width="450"/></p>
+  <p> </p>
+  <p class="Fig_numb">Operation Min/Max output variables definition window</p>
+  <p><br/> Click <img src="{{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}"/> twice to add <strong>Minimum Effective Stress</strong> and <strong>Strain </strong>at last step of the operation as summary variables and <strong>Workpiece </strong>as
+    Object  as shown in <a href="2d_doe_lab1.htm#Fig_DOEL1_38_Summary_Min/Max_variables_definition_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>38.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_38_Summary_Min/Max_variables_definition_window"></a><img height="550" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0038.jpg' | relative_url }}" width="452"/></p>
+  <p> </p>
+  <p class="Fig_numb">Summary Min/Max variables definition window</p>
+  <p><br/> Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and click <img src="{{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}"/> button thrice to define 3 Location specific state variables. Add <strong>Effective Strain</strong>,
+    <strong>Effective Stress</strong> and <strong>Effective Strain rate</strong> state variables and select the Common Mesh Region as <strong>REGION001 </strong>at the bottom of the window as shown in <a href="#Fig_DOEL1_39_Location_specific_all_nodes_variables_definition_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>39.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_39_Location_specific_all_nodes_variables_definition_window"></a><img height="550" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0039.jpg' | relative_url }}" width="452"/></p>
+  <p> </p>
+  <p class="Fig_numb">Location specific (all nodes) variables definition window</p>
+  <p><br/> Selecting the defined Region of Interest region as Common Mesh Region system adds the Mesh window next to this. So click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>  and click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> button to generate mesh for the region as shown in <a href="#Fig_DOEL1_40_Region of interest region mesh generation window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>40.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_40_Region of interest region mesh generation window"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0040.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Region of interest region mesh generation window</p>
+  <p><br/> As we are not defining any Variable and Fill constraints click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}" width="22"/> (Save project) icon. If user want to limit any state variable value user can define variable
+    constraints or if user need to filter the underfill and lap deflects user can check fill constrains.</p>
+  <p> </p>
+  <p>Select <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> MO mode button to submit DOE project to simulate.</p>
+  <h2><a id="1_9_Simulate_DOE_project"></a>Simulate DOE project</h2>
+  <p>Click on <img src="{{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}"/> button to submit to simulate Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> for Run DOE/OPT pop-up (See <a href="#Fig_DOEL1_41_DOE_simulations_Run_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>41.</a>)
+    and select the simulation server in the available Sim Server list. Click on <img src="{{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}"/> button (See <a href="#Fig_DOEL1_42_DOE_simulations_Run_window"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>42.</a>)
+    to start DOE samples DB generation and simulations. System generates the database for all runs and then start simulating from DOE <strong>Run 1</strong> to <strong>Run N</strong> (last Run) in queue. If user selected more than one <strong>Simultaneous simulations</strong>    then selected number of simulations will run simultaneously.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_41_DOE_simulations_Run_window"></a><img src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0041.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE simulations Run window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_42_DOE_simulations_Run_window"></a><img height="600" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0042.jpg' | relative_url }}" width="563"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE simulations Run window</p>
+  <p><br/> Observe the Simulation Jobs tab to monitor the DOE running jobs status as shown in <a href="#Fig_DOEL1_43_DOE_runs_Simulation_jobs_status"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>43.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_43_DOE_runs_Simulation_jobs_status"></a><img height="175" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0043.jpg' | relative_url }}" width="423"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE runs Simulation jobs status</p>
+  <p><br/> Select the DOE Log file to observe the DOE running jobs more details as shown in <a href="#Fig_DOEL_1_44_DOE_jobs_Log_details"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>44.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL_1_44_DOE_jobs_Log_details"></a><img height="550" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0044.jpg' | relative_url }}" width="455"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE jobs Log details</p>
+  <p><br/> From DEFORM Main GUI explorer window user can observe the file structure for the DOE projects as shown in <a href="#Fig_DOEL1_45_DOE_Project_file_structure"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>45.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_45_DOE_Project_file_structure"></a><img height="175" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0045.jpg' | relative_url }}" width="311"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE Project file structure</p>
+  <p> </p>
+  <p>Confirm the DOE runs simulation by &#39;Simulation is done&quot; message in DOE Log tab then click on  <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/>  MO mode button to open the DOE post.</p>
+  <p> </p>
+  <h2><a id="1_10_Review_the_DOE_results"></a>Review the DOE results</h2>
+  <p>In MO Post click on   button to open the DOE SQL Database file (SDB) in DOE post as MO Post do not give the DOE results statistical analysis features. DOE Post will open in other window as shown in <a href="#Fig_DOEL1_46_DOE_Post"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>46.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_46_DOE_Post"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0046.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE Post</p>
+  <p><br/>  Table view will be displaying in the graphics window. We can select respective check boxes in the property window area which to be displayed in the table view (DOE Input and DOE Output).</p>
+  <h3 class="h3_1_10_"><a id="1_10_1_Check_Operation_min_max_(all_steps)_variables"></a>Check Operation min/max (all steps) variables</h3>
+  <p>Select the Operation Min/Max variable in output tree and click on <img src="{{ '/assets/icons/post_icons/doe_post_table_view.jpg' | relative_url }}"/> table view. All DOE runs global minimum values are zero, so no need to plot other curves.</p>
+  <p>In table view for Diameter DOE geometry variable Dia 0 indicates lower bound geometry and 1 indicates upper bound geometry, as we are taken only 2 samples there is no geometry variation between lower and upper bound. In such case it display fraction
+    value, if it is more than 0.5 it indicates between nominal and upper bound.</p>
+  <p> </p>
+  <h3 class="h3_1_10_"><a id="1_10_2_Check_Summary_min_max_(last_step)_variables"></a>Check Summary min/max (last step) variables</h3>
+  <p>Select Summary Effective Strain and click on <img src="{{ '/assets/icons/post_icons/doe_post_response surface_button.jpg' | relative_url }}"/>  (3D response surface plot) icon to observe the 3d representation of this response for input DOE variables. (See <a href="#Fig_DOEL1_47_Minimum_Effective_Strain_summary_response_surface"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>47.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_47_Minimum_Effective_Strain_summary_response_surface"></a><img height="373" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0047.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Minimum Effective Strain summary response surface</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/post_icons/doe_post_response_contour_button.jpg' | relative_url }}"/> (2d contour response surface) to view the response of selected output variables on 2d plane as shown in <a href="#Fig_DOEL1_48_2D_contour_response_surface_for_Minimum_Effective_stress"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>48.</a>    From tool menu bar select <img src="{{ '/assets/icons/post_icons/doe_post_change_layout_icon.jpg' | relative_url }}"/> Change layout button and select “Grid4_1” to divide graphics area equally for all 4 windows as shown in the <a href="#Fig_DOEL1_48_2D_contour_response_surface_for_Minimum_Effective_stress"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>48.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_48_2D_contour_response_surface_for_Minimum_Effective_stress"></a><img height="371" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0048.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D contour response surface for Minimum Effective stress</p>
+  <p> </p>
+  <p>Also, try-out the tornado, sensitivity, scatter and histogram plots to analyze the Minimum Effective stress output variable. (See <a href="#Fig_DOEL1_49_DOE_variables_sensitivity_plots_for_Minimum_effective_stress_summary_variable"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>49.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_49_DOE_variables_sensitivity_plots_for_Minimum_effective_stress_summary_variable"></a><img height="496" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0049.jpg' | relative_url }}" width="740"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE variables sensitivity plots for Minimum effective stress summary variable</p>
+  <p><br/>
+    <strong>Tornado chart </strong>gives relative magnitude and direction of influence of DOE variables selected output variable. In the <a href="#Fig_DOEL1_49_DOE_variables_sensitivity_plots_for_Minimum_effective_stress_summary_variable"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>49.</a>    tornado chart indicating Diameter is having more influence compared to Friction on Minimum effective stress at last step and both are inversely affecting.</p>
+  <p> </p>
+  <p><strong>Sensitivity plot</strong> show the effect of each DOE study input variable to the selected output variable as slope. For Minimum effective stress both input variations are inversely affecting.</p>
+  <p> </p>
+  <p><strong>Scatter plot </strong>show correlation between DOE study input variable and selected output variable by linear regression. In the above <a href="#Fig_DOEL1_49_DOE_variables_sensitivity_plots_for_Minimum_effective_stress_summary_variable"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>49.</a>    we can observe the linear regression equation along with the sampling points.</p>
+  <p> </p>
+  <p><strong>Histogram plot</strong> shows the frequency of the DOE runs output variables within small ranges. So it&#39;s an Number of DOE runs Vs Selected output variable bar graph.</p>
+  <p> </p>
+  <h3 class="h3_1_10_"><a id="1_10_3_Check_Location_specific_(One_step)_variables"></a>Check Location specific (One step) variables</h3>
+  <p>Select the location specific Effective strain value in the DOE Output tree. As explained in the Summary variables check plot the 3d and 2d response surfaces and observe the output variable response for the selected input as shown in <a href="#Fig_DOEL1_50_3D_and_2D_Response_surface_plot_for_location_specific_Effective_strain"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>50.</a>    For location specific output variable it will plot the state variable information only for the defined region of interest when we are in the common mesh tab as shown in <a href="#Fig_DOEL1_50_3D_and_2D_Response_surface_plot_for_location_specific_Effective_strain"><span data-keyref="2D_DOE_Lab_1">Fig. DOEL1.</span>50.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_DOEL1_50_3D_and_2D_Response_surface_plot_for_location_specific_Effective_strain"></a><img height="372" src="{{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0050.jpg' | relative_url }}" style="cursor: nwse-resize;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D and 2D Response surface plot for location specific Effective strain</p>
+  <p> </p>
+  <p>For more details on these post analysis features refer the chapter <a href="../../../doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor.htm">54. DOE Post Processor</a>.</p>
+  <p> <br/>
+    <strong>Related Topics:</strong></p>
+  <p><strong></strong><a href="../../../doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup.htm">52.1. DOE and DOE Output Operation Setup</a></p>
+  <p><a href="../../../doe_and_optimization/52_doe_study/52_2_doe_simulation_running_and_monitoring.htm">52.2. DOE Simulation Running and Monitoring</a></p>
+  <p><a href="../../../doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor.htm">54.1. DOE Post Processor</a></p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

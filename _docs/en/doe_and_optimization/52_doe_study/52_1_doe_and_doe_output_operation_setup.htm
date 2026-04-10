@@ -1,0 +1,773 @@
+---
+lang: en
+title: "52.1. DOE and DOE Output Operation Setup"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>52.1. DOE and DOE Output Operation Setup</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>52.1. DOE and DOE Output Operation Setup</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup.css"/>
+<meta name="brsnext" value="Documentation_content/DOE_and_Optimization/52_DOE_Study/52_2_DOE_Simulation_Running_and_Monitoring.htm"/><meta name="brsprev" value="Documentation_content/DOE_and_Optimization/52_DOE_Study/51_Introduction_to_DOE.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="52.1. DOE and DOE Output Operation Setup">
+        <span>52.1. DOE and DOE Output Operation Setup</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>52.1. DOE and DOE Output Operation Setup</h1>
+  <p><a href="#52_1_1_Adding_DOE_Study">52.1.1. Adding DOE Study</a></p>
+  <p><a href="#52_1_2_Defining_DOE_Variables">52.1.2. Defining DOE Variables</a></p>
+  <p><a href="#52_1_3_Failed_DOE_variable_definition">52.1.3. Failed DOE variable definition</a></p>
+  <p><a href="#52_1_4_Deleting_DOE_variable">52.1.4. Deleting DOE variable</a></p>
+  <p><a href="#52_1_5_DOE_Table">52.1.5. DOE Table</a></p>
+  <p><a href="#52_1_6_DOE_Sampling">52.1.6. DOE Sampling</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_6_1_Latin_Hypercube_Sampling">52.1.6.1 Latin Hypercube Sampling</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_6_2_Full_Factorial_Sampling">52.1.6.2. Full Factorial Sampling</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_6_3_Taguchi_Fractional_Factorial_Sampling">52.1.6.3. Taguchi (Fractional Factorial) Sampling</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_6_4_User_defined_Sampling">52.1.6.4. User defined Sampling</a></p>
+  <p><a href="#52_1_7_Defining_Case_variables">52.1.7. Defining Case variables</a></p>
+  <p><a href="#52_1_8_Deleting_Case_variable">52.1.8. Deleting Case variable</a></p>
+  <p><a href="#52_1_9_Case_variable_table">52.1.9. Case variable table</a></p>
+  <p><a href="#82_1_10_Case_definition_table">52.1.10. Case definition table</a></p>
+  <p><a href="#52_1_11_Defining_DOE_output_operation">52.1.11. Defining DOE output operation</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_11_1_Operation_selection">52.1.11.1. Operation selection</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_11_2_Define_Outputs">52.1.11.2. Define Outputs</a></p>
+  <p style="margin-left: 40px"><a href="#Defining_Region_of_Interest">Defining Region of Interest</a></p>
+  <p style="margin-left: 40px"><a href="#Probe">Probe</a></p>
+  <p style="margin-left: 40px"><a href="#Operation_min_max_value">Operation min/max value</a></p>
+  <p style="margin-left: 40px"><a href="#Local_min_max_Value_Summary_min_max_One_step">Local min/max Value (Summary min/max (One step))</a></p>
+  <p style="margin-left: 40px"><a href="#State_variable_in_regions_State_Variable_minmax_One_step">State variable in regions (State Variable min/max (One step))</a></p>
+  <p style="margin-left: 40px"><a href="#Summary_plot_all_steps_from_selected_operation">Summary plot (all steps from selected operation)</a></p>
+  <p style="margin-left: 40px"><a href="52_1_doe_and_doe_output_operation_setup.htm#SV_on_all_nodes/elements_Location_specific_One_step">SV on all nodes/elements (Location specific (One step))</a></p>
+  <p style="margin-left: 40px"><a href="#Probe_output">Probe output</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_11_3_Define_Variable_constraints">52.1.11.3. Define Variable constraints</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_11_4_Define_Fill_constraints">52.1.11.4. Define Fill constraints</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_11_5_Global_Min_Max_(All_steps)">52.1.11.5. Global Min/Max (All steps)</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_11_6_Evaluation">52.1.11.6. Evaluation</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_11_7_Database_Management">52.1.11.7. Database Management</a></p>
+  <p style="margin-left: 20px"><a href="#52_1_11_8_Data_Extract">52.1.11.8. Data Extract</a></p>
+  <p> </p>
+  <h2><a id="52_1_1_Adding_DOE_Study"></a>Adding DOE Study</h2>
+  <p>User must have nominal setup to which DOE Study can be added. DOE Study can be added either before completion of nominal simulation or without completion of nominal simulation from V12 while in previous versions DOE Study can be added only after completion
+    of the nominal simulation. User can add DOE operation using Add DOE Study option from <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> (Add new study) button as shown in <a href="#Fig_52_1_1_Adding_DOE_Study_Project"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_1_Adding_DOE_Study_Project"></a><img height="376" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Adding DOE Study Project</p>
+  <p><br/> After adding the DOE study, DOE study project gets added next to the nominal project tab. In DOE Study tab operation editor, we can observe nominal setup along with DOE output operation. In DOE output operation we can add state variables for each
+    operation whose output can be observed in DOE post as shown in <a href="#Fig_52_1_2_DOE_Project_with_DOE_output_operation"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_2_DOE_Project_with_DOE_output_operation"></a><img height="376" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0002.jpg' | relative_url }}" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> DOE Project with DOE output operation</p>
+  <h2><a id="52_1_2_Defining_DOE_Variables"></a>Defining DOE Variables</h2>
+  <p>The material properties, object data, inter-object data and process variables can be added as DOE variables from property editor window. In Property editor window, if a variable field has green ribbon around the fields (See <a href="#Fig_52_1_3_Add_DOE_variable_by_right_click_on_green_ribbon_of_DOE_variable_field"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>3</a>)
+    then that variable can be added as DOE or Case variable. Constants, functions and geometry data definition types can also be added as DOE variables. The DOE variable can be continuous or discrete.</p>
+  <p><strong>Continuous Input Variable</strong> : Continuous variables can be added as normal DOE variable by defining the range of study variable’s fluctuation/uncertainty as upper and lower bound values along with number of samples required within the
+    range. Example object temperature etc.<br/>
+    <strong>Discrete Input Variable : </strong>Variables which are not continuous can be defined as discrete DOE variables by defining number of samples and sample values. </p>
+  <p><br/> Steps to define DOE Variable:<br/> The steps to define the DOE variables are as follows,</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Before adding the DOE variable user needs to select the operation for which DOE variable needs to be defined. (See <a href="#Fig_52_1_2_DOE_Project_with_DOE_output_operation"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>2</a>)</p>
+    </li>
+    <li>
+      <p>Identify the variables to add as DOE variables, fields which are having green ribbon around them in property editor window can only be selected. Right click in green ribbon region and select Add DOE variable option as shown in <a href="#Fig_52_1_3_Add_DOE_variable_by_right_click_on_green_ribbon_of_DOE_variable_field"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>3.</a></p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_3_Add_DOE_variable_by_right_click_on_green_ribbon_of_DOE_variable_field"></a><img height="376" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Add DOE variable by right click on green ribbon of DOE variable field</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2;" value="3">
+      <p>In DOE variable definition window, if DOE variable is continuous then define study variable range as upper and lower bound values as shown in <a href="#Fig_52_1_4_Continuous_DOE_variable_definition_window_for_constant_value_data_"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>4.</a>        else if data is not continuous, define the discrete samples by checking the Discrete checkbox and selecting number of samples to input as shown in <a href="#Fig_52_1_5_Discrete_DOE_variable_definition_window_for_constant_value_data"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>5.</a>        The default number of samples are three, user can increase the number of samples as required.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_4_Continuous_DOE_variable_definition_window_for_constant_value_data_"></a><img src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0004.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Continuous DOE variable definition window for constant value data  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_5_Discrete_DOE_variable_definition_window_for_constant_value_data"></a><img height="210" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0005.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Discrete DOE variable definition window for constant value data</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 3;" value="4">
+      <p>Enter description for the DOE variable if necessary, as shown in <a href="#Fig_52_1_4_Continuous_DOE_variable_definition_window_for_constant_value_data_"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>4.</a>        Some useful note about the selection and variation defined can be entered here. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/>  to close the definition.</p>
+    </li>
+    <li style="" value="4">
+      <p>Confirm the DOE variable definition by observing the green fill around the variable field after definition. The field filled with green color indicates that it has been added as DOE variable. Right click in the green colored area will display the
+        defined upper and lower bound values (See <a href="#Fig_52_1_6_Continuous_DOE_variable_definition_indicators"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>6.</a> and <a href="#Fig_52_1_7_Discrete_DOE_variable_definition_indicators"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>7.</a>).</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_6_Continuous_DOE_variable_definition_indicators"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0006.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Continuous DOE variable definition indicators</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_7_Discrete_DOE_variable_definition_indicators"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0007.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Discrete DOE variable definition indicators</p>
+  <p> </p>
+  <p>In operation editor green color DOE text can be observed on operations top right end indicating operations with DOE variables are defined as shown in <a href="#Fig_52_1_6_Continuous_DOE_variable_definition_indicators"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>6.</a>    and <a href="#Fig_52_1_7_Discrete_DOE_variable_definition_indicators"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>7.</a> DOE variable name can be edited from “DOE Variables” tab.</p>
+  <p><br/> The examples mentioned below demonstrates adding different input data types as DOE variable.</p>
+  <p><br/>
+    <strong><a id="Edit_function_Discrete_doe_variable_example"></a>Example1</strong>: Material property like flow stress, which is function of strain, strain rate and temperature can be added as DOE variable by offsetting or scaling the function curve.
+    Files required to exercise this example are available at installation path 2D\LABS\BEND_2D, open the BEND_2D.moprj file from <img src="{{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}"/>, simulate the Nominal run add DOE study
+    and follow instructions as mentioned below.<br/> First add the DOE variable by navigating to material page and using right click option on Flow stress <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> (Define) button as shown in
+    <a href="#Fig_52_1_8_Add_function_data_as_DOE_variable"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>8.</a>
+  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_8_Add_function_data_as_DOE_variable"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0008.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Add function data as DOE variable</p>
+  <p><br/> In DOE definition window, add description about definition and click on <img src="{{ '/assets/icons/pre_icons/mo_define_function.._button.jpg' | relative_url }}"/>  button to define continuous DOE definition upper and lower bound values as shown in <a href="#Fig_52_1_9_Continuous_DOE_variable_definition_window_for_function_value_data_Flow_stress"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>9</a>    or if you need to experiment with specific flow stress data of different materials, select discrete DOE definition by checking “Discrete” checkbox and select as many samples as needed to input as shown in <a href="#Fig_52_1_10_Discrete_DOE_variable_definition_window_for_function_value_data_Flow_stress"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>10.</a>    For Discrete samples definition, click on the <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> button under edit column to define flow stress curves. We will use continuous DOE variable for this example.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_9_Continuous_DOE_variable_definition_window_for_function_value_data_Flow_stress"></a><img src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0009.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Continuous DOE variable definition window for function value data Flow stress</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_10_Discrete_DOE_variable_definition_window_for_function_value_data_Flow_stress"></a><img src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0010.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Discrete DOE variable definition window for function value data Flow stress</p>
+  <p> </p>
+  <p>Function definition window will open with nominal values when we click on <img src="{{ '/assets/icons/pre_icons/mo_define_function.._button.jpg' | relative_url }}"/>  button for Continuous DOE or <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> button
+    for discrete DOE definition as shown in <a href="#Fig_52_1_11_Nominal_function_data_curves_of_Flow_Stress_for_continuous_DOE"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>11.</a> For function data of continuous
+    DOE variable definition, user can select definition type such as Nominal, Upper or Lower from DOE field pull down menu. User can only change the Upper and Lower bound curves using scale, offset options or by editing values or by dragging the curve
+    or point.<br/> For function data of discrete DOE variable, user can define the sample value using scale, offset options or by editing values or importing the flow stress curves DAT file as shown in <a href="#Fig_52_1_12_Nominal_function_data_curves_of_Flow_Stress_for_Discrete_DOE"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>12.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_11_Nominal_function_data_curves_of_Flow_Stress_for_continuous_DOE"></a><img height="348" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0011.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Nominal function data curves of Flow Stress for continuous DOE </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_12_Nominal_function_data_curves_of_Flow_Stress_for_Discrete_DOE"></a><img height="348" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0012.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Nominal function data curves of Flow Stress for Discrete DOE</p>
+  <p><br/> For continuous DOE definition, select the DOE type as Upper to define the upper bound values by using scale option. In this example, we will define it by scaling the function data. Select “Scale” radio button and enter 1.1 to scale up nominal
+    stress curves by 0.1 Ksi. Click on “Set” to scale the values. See <a href="#Fig_52_1_13_Upper_bound_scaled_up_function_curves_for_continuous_DOE"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>13.</a> for scaled
+    upper bound curves.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_13_Upper_bound_scaled_up_function_curves_for_continuous_DOE"></a><img height="348" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0013.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Upper bound scaled up function curves for continuous DOE</p>
+  <p><br/> For continuous DOE definition, select the DOE type as Lower to define the lower bound values by using scale option. Select “Scale” radio button and enter 0.9 to scale down nominal stress curves by 0.1 Ksi. Click on “Set” to scale the values. See
+    <a href="#Fig_52_1_14_Lower_bound_scaled_down_function_curves_for_continuous_DOE"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>14.</a> for scaled down lower bound curves.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_14_Lower_bound_scaled_down_function_curves_for_continuous_DOE"></a><img height="348" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0014.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Lower bound scaled down function curves for continuous DOE</p>
+  <p><br/> Confirm the definition by observing the green fill in define button and green color DOE text in operation editor on operation right top corner. Right click in the green colored area and confirm the definition of upper and lower bound values. (See
+    <a href="#Fig_52_1_15_DOE_variable_right_click_options"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>15.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_15_DOE_variable_right_click_options"></a><img height="338" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0015.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">DOE variable right click options</p>
+  <p><br/>
+    <strong><a id="Defining_DOE_variables-_Example2"></a>Example2</strong>: Material property like flow stress, which is function of strain, strain rate and temperature can be added as DOE variable by scaling the function curve or defining the different
+    values for each curve. Files required to exercise this example are available at installation path 2D\LABS\BEND_2D, open the BEND_2D.moprj file from <img src="{{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}"/>  simulate the Nominal
+    run add DOE study and follow instructions as mentioned below.</p>
+  <p><br/> First add the DOE variable by navigating to material page and using right click option on Flow stress <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/>  (Define) button as shown in <a href="#Fig_52_1_8_Add_function_data_as_DOE_variable"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>8.</a>    In DOE definition window, add description about definition and click on <img height="20" src="{{ '/assets/icons/pre_icons/mo_define_function.._button.jpg' | relative_url }}" width="111"/> button to define continuous DOE definition’s upper and lower bound values
+    as shown in <a href="#Fig_52_1_9_Continuous_DOE_variable_definition_window_for_function_value_data_Flow_stress"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span> 9.</a></p>
+  <p><br/> Function definition window will open with nominal values when we click on <img height="20" src="{{ '/assets/icons/pre_icons/mo_define_function.._button.jpg' | relative_url }}" width="111"/>  button for Continuous DOE as shown in <a href="#Fig_52_1_16_Nominal_function_data_curves_of_Flow_Stress_for_continuous_DOE"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>16.</a>    For function data of continuous DOE variable definition, user can select definition type such as Nominal, Upper or Lower from DOE field pull down menu. User can only change the Upper and Lower bound curves using different options like scale, offset
+    options, editing values within table, dragging the curve or point. We can assign variables to All data, Selected curve or Selected point as shown in the <a href="#Fig_52_1_16_Nominal_function_data_curves_of_Flow_Stress_for_continuous_DOE"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>16.</a>    For this example, we will use selected curve option to define two different variables for Strain rate curve of 0.2 and 0.5</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_16_Nominal_function_data_curves_of_Flow_Stress_for_continuous_DOE"></a><img height="348" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0016.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Nominal function data curves of Flow Stress for continuous DOE</p>
+  <p><br/> We can define the variables individually for the selected curve or selected points. We will select the “Selected curves” radio button for this example. We can now observe that the variable pull down menu will be activated, click on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button to add a new variable. We can click on <img src="{{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}"/>  button to edit the variable name and its samples (See <a href="#Fig_52_1_17_Adding_the_DOE_Variable_data"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>17.</a>).
+    We can use <img src="{{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }}"/> button to delete the selected variable. We will define the variable name as “Flow stress 2”.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_17_Adding_the_DOE_Variable_data"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding the DOE Variable data</p>
+  <p><br/> Select any cell under the 0.2 strain rate column and right click on the cell as shown in <a href="#Fig_52_1_18_Assigning_the_Flow_stress_DOE_Variable_to_the_selected_curve"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>18.</a>    Using the “Assign to variable” option select “Flow stress”. Similarly select any cell under 0.5 strain rate column and right click on the cell as shown in <a href="#Fig_52_1_19_Assigning_the_Flow_stress_2_DOE_Variable_to_the_selected_curve"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>19.</a>    Using the “Assign to variable” option select “Flow stress 2”. We can use the “Remove from DOE variable” from the right click options to delete the assigned variable.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_18_Assigning_the_Flow_stress_DOE_Variable_to_the_selected_curve"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0018.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning the “Flow stress” DOE Variable to the selected curve</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_19_Assigning_the_Flow_stress_2_DOE_Variable_to_the_selected_curve"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0019.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning the “Flow stress 2” DOE Variable to the selected curve</p>
+  <p class="Note_text"><br/>
+    <strong>Note:</strong> If we want to assign the variable for any one point, we must select the “Selected points” radio buttons in the DOE. The variable will be assigned for the selected point as shown in the <a href="#Fig_52_1_20_Variable_is_assigned_for_the_selected_point"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>20.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_20_Variable_is_assigned_for_the_selected_point"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0020.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Variable is assigned for the selected point</p>
+  <p> </p>
+  <p>After adding the variable, we will define the Upper and Lower DOE values for the curves by dragging the selected curve using the mouse pointer. Select the Upper option for DOE, using the mouse pointer select the 0.2 and 0.5 curves and drag the curves
+    upwards to define the Upper DOE (See <a href="#Fig_52_1_21_Defining_the_upper_DOE_by_dragging_the_0.2_and_0.5_strain_rate_curves"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>21.</a>). Similarly define the Lower
+    DOE by dragging the 0.2 and 0.5 curves downwards (See <a href="#Fig_52_1_22_Defining_the_lower_DOE_by_dragging_the_0.2_and_0.5_strain_rate_curves"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>22.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_21_Defining_the_upper_DOE_by_dragging_the_0.2_and_0.5_strain_rate_curves"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0021.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining the upper DOE by dragging the 0.2 and 0.5 strain rate curves</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_22_Defining_the_lower_DOE_by_dragging_the_0.2_and_0.5_strain_rate_curves"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0022.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining the lower DOE by dragging the 0.2 and 0.5 strain rate curves</p>
+  <p> </p>
+  <p>Confirm the definition by observing the green fill in define button and green color DOE text in operation editor on operation right top corner. Right click in the green colored area and confirm the definition of upper and lower bound values. (See
+    <a href="#Fig_52_1_15_DOE_variable_right_click_options"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>15.</a>). If we see the DOE sampling tab, we will be having the two different flow stress DOE variables.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_23_DOE_Sampling_page_with_different_flow_stress_variables_data_of_same_material"></a><img height="306" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0023.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">DOE Sampling page with different flow stress variables data of same material</p>
+  <p><br/>
+    <strong>Example3:</strong> Object geometry can be added as normal DOE variable using 2d geometry editor or using discrete DOE definition by directly importing different geometry designs. Continuous DOE definition is done by varying the nominal geometry
+    values to define the upper and lower bound geometries. Files required to exercise this example are available at installation path 2D\LABS\BEND_2D. Open the BEND_2D.moprj file from<img src="{{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}"/>then simulate the Nominal run and add DOE study. Follow below description to complete DOE definition. <br/>
+    <br/> To add the punch geometry as DOE variable, navigate to geometry page of punch in Forming operation and click on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/>  button next to variable field as shown in <a href="#Fig_52_1_24_Geometry_variation_adding_as_DOE_variable"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>24.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_24_Geometry_variation_adding_as_DOE_variable"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0024.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry variation adding as DOE variable</p>
+  <p> </p>
+  <p>Add description and click on <img src="{{ '/assets/icons/pre_icons/mo_edit_geometry_button.jpg' | relative_url }}"/> button (See <a href="#Fig_52_1_25_Geometry_DOE_variable_definition_window_for_normal_definition"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>25.)</a>    to define continuous DOE definition by defining upper and lower bound geometry profiles and system will morph the geometry samples between these bounds.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_25_Geometry_DOE_variable_definition_window_for_normal_definition"></a><img height="401" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0025.jpg' | relative_url }}" width="550"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Geometry DOE variable definition window for normal definition</p>
+  <p><br/> The edit geometry window will open with default selection of DOE geometry lower limit and morph method as XYR as shown in <a href="#Fig_52_1_26_Geometry_DOE_variable_edit_window_for_normal_definition"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>26.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_26_Geometry_DOE_variable_edit_window_for_normal_definition"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0026.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry DOE variable edit window for normal definition</p>
+  <p><br/> Select offset icon and zoom in to the punch bottom surface and select the tapered bottom edge that needs to be offset by into the nominal geometry then enter -0.005in as shown in <a href="#Fig_52_1_27_Lower_edge_of_the_punch_is_selected_to_offset_in_by_0.005"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>27.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_27_Lower_edge_of_the_punch_is_selected_to_offset_in_by_0.005"></a><img height="257" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0027.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Lower edge of the punch is selected to offset in by 0.005</p>
+  <p><br/> Click on geometry tab to see the coordinates, as the bottom left curve radius is not smooth at the right end change its radius (in geometry table 3rd point) to 0.85 from 1.18 as shown in <a href="#Fig_52_1_28_Lower_bound_Geometry"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_28_Lower_bound_Geometry"></a><img height="253" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0028.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Lower bound Geometry</p>
+  <p><br/> Click on objects tab and select the “Upper” under DOE type to define the upper bound geometry as shown in <a href="#Fig_52_1_29_Selecting_the_upper_bound_geometry_to_edit"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>29.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_29_Selecting_the_upper_bound_geometry_to_edit"></a><img height="401" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0029.jpg' | relative_url }}" width="550"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting the upper bound geometry to edit</p>
+  <p><br/> Select the same bottom lower edge and offset by 0.005 out of the nominal geometry as shown in <a href="#Fig_52_1_30_Upper_edge_of_the_punch_is_selected_to_offset_out_by_0.005"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>30.</a>    and<a href="#Fig_52_1_31_Upper_bound_Geometry">  <span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>31.</a> Click on geometry tab to see the co-ordinates variation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_30_Upper_edge_of_the_punch_is_selected_to_offset_out_by_0.005"></a><img height="256" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0030.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Upper edge of the punch is selected to offset out by 0.005</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_31_Upper_bound_Geometry"></a><img height="270" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0031.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Upper bound Geometry</p>
+  <p><br/> Click on objects tab and use the morph sliding bar to confirm the geometry variation between upper and lower bound is smooth as shown in <a href="#Fig_52_1_32_Morph_geometry_between_lower_and_nominal_range_values"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>32.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_32_Morph_geometry_between_lower_and_nominal_range_values"></a><img height="276" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0032.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Morph geometry between lower and nominal range values</p>
+  <p><br/> When user wants to use the multiple geometry designs instead of using morphing method or in cases where morphing is difficult/unreliable discrete DOE definition can be used. Discrete DOE definition is done by directly importing geometry file like
+    IGS or DXF or GEO (See <a href="#Fig_52_1_33_Geometry_variable_discrete_DOE_definition_for_Geometry_files"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>33.</a>) or even from KEY or DB file (by selecting the
+    step and object for KEY and DB file, See <a href="#Fig_52_1_34_Geometry_variable_discrete_DOE_definition_for_KEY_and_DB"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>34.</a> for number of samples. User needs
+    to click on <img src="{{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}"/> button under browse column next to the sample to import the respective sample geometry file.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_33_Geometry_variable_discrete_DOE_definition_for_Geometry_files"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0033.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry variable discrete DOE definition for Geometry files</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_34_Geometry_variable_discrete_DOE_definition_for_KEY_and_DB"></a><img height="388" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0034.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry variable discrete DOE definition for KEY and DB</p>
+  <p><br/> Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the definition and confirm the definition by observing the green fill around the variable field and green color DOE text in operation editor on operation right top
+    corner. Right click in the green colored area and confirm the definition of upper and lower bound values (See <a href="#Fig_52_1_35_Geometry_DOE_variable_definition_confirmation_for_2nd_operation"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>35.</a>).
+    If discrete method is used, then make sure all samples are indicated as “Defined”.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_35_Geometry_DOE_variable_definition_confirmation_for_2nd_operation"></a><img height="281" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0035.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Geometry DOE variable definition confirmation for 2nd operation</p>
+  <h2><a id="52_1_3_Failed_DOE_variable_definition"></a>Failed DOE variable definition</h2>
+  <p>In continuous DOE variable definition if upper or lower or both range values are not defined or in discrete DOE definition any discrete samples are not defined then such DOE variable will be highlighted with red color fill around the field or button
+    as shown in <a href="#Fig_52_1_36_Failed_DOE_variable_definition"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>36.</a> Then by right clicking on the field, missing data can be defined.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_36_Failed_DOE_variable_definition"></a><img height="255" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0036.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Failed DOE variable definition</p>
+  <p> </p>
+  <h2><a id="52_1_4_Deleting_DOE_variable"></a>Deleting DOE variable</h2>
+  <p>Defined DOE variables will be highlighted by green color shading around DOE variables field (See <a href="#Fig_52_1_37_Delete_DOE_variable_definition_from_property_editor"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>37.</a>),
+    right click on the defined DOE variable field gives an option to delete the added DOE variable. User can also delete the added DOE variables from DOE table using <img src="{{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }}"/> button or using
+    right mouse button menu option on variables listed in study variable column. (See <a href="#Fig_52_1_38_Delete_DOE_variable_definition_from_DOE_table"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>38.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_37_Delete_DOE_variable_definition_from_property_editor"></a><img height="255" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0037.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Delete DOE variable definition from property editor</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_38_Delete_DOE_variable_definition_from_DOE_table"></a><img height="221" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0038.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Delete DOE variable definition from DOE table</p>
+  <p> </p>
+  <h2><a id="52_1_5_DOE_Table"></a>DOE Table</h2>
+  <p>DOE table tabulates the details of DOE variables defined for each operation as shown in <a href="#Fig_52_1_39_DOE_table_with_added_DOE_study_variables_details"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>39.</a>    DOE table includes the details of Operation Name, Study variable (Defined DOE variable) Name, Number of samples, Lower, Upper and Nominal values, Keyword and object or material to which it belongs. User can edit the defined Study variable name, #
+    of samples, constant Lower and Upper bound values for continuous DOE definitions by double clicking on that cell. User can click on <img src="{{ '/assets/icons/pre_icons/mo_edit_function..._button.jpg' | relative_url }}"/> in table to edit function data of continuous
+    DOE definition which will open the function DOE definition window. To edit the geometry user can click on <img src="{{ '/assets/icons/pre_icons/mo_edit_geometry_button.jpg' | relative_url }}"/>  in DOE table, which will open 2D geometry editor or 3D geo tool.<br/>    For Discrete DOE definition only DOE variable name can be edited directly in table. For constant and function type discrete DOE variable, user must click on <img src="{{ '/assets/icons/pre_icons/mo_discrete_edit_button.jpg' | relative_url }}"/> in table in the
+    respective variable row then discrete DOE definition window will be opened to edit the values.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_39_DOE_table_with_added_DOE_study_variables_details"></a><img height="430" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0039.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE table with added DOE study variables details</p>
+  <p><br/>
+    <strong>DOE table terminology:</strong></p>
+  <p><strong>Operation Name</strong>: Operation in which DOE Study variable is added.</p>
+  <p><strong>Study Variable</strong>: Name of the Study variable added for DOE study, by default this name is defined by system based on variable selection and can be renamed by the user.</p>
+  <p><strong># of Samples</strong>: Number of study variable samples to prepare total DOE samplings to study. The number of samples will affect the sampling and the number of simulation studies to be carried over.</p>
+  <p><strong>Lower</strong>: Lower bound value of the study variable in case of continuous DOE variables (for Continuous DOE definition).</p>
+  <p><strong>Upper</strong>: Upper bound value of the study variable in case of continuous DOE variables (for Continuous DOE definition).</p>
+  <p><strong>Nominal</strong>: Nominal value of the study variable in case of continuous DOE variables (for Continuous DOE definition), the values of DOE variables defined in nominal project are considered as nominal values.</p>
+  <p><strong>Keyword</strong>: Keyword which define the added study variable.</p>
+  <p><strong>Object/ Material</strong>: It displays the object name to which study variable belongs to or it displays the material name if it belongs to any material properties. In case of process data like heat transfer time system does not display any
+    name.</p>
+  <p><strong>Delete Study variable</strong> <img src="{{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }}"/> : User can select added study variable and delete it using this button. </p>
+  <p><strong>E</strong><strong><strong>xport </strong>DOE Table</strong>  <img src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}"/>: The DOE study variables definition can be saved to an XML file using this option.</p>
+  <p><strong>Export DOE table to library</strong>  <img src="{{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}"/> : This saves the DOE study variables definition to a XML file in user data library. In windows system with user name &quot;user1&quot;
+    the default library path will be &quot;C:\Users\user1\Documents\userDataLib\DOE&quot;.</p>
+  <p><strong>Import DOE Table</strong> <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> : Saved DOE study variable definitions XML file can be imported to redefine the same.</p>
+  <p><strong>Import DOE Table from library</strong> <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/>: Saved DOE study variable definitions XML file can be imported from user library to redefine the same.</p>
+  <p><strong>Sort by</strong>: Sort by is used to sort the DOE table display content by operation or by study variables definition order.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_40_DOE_table_details_sorted_by_study_variable_number"></a><img height="202" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0040.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE table details sorted by study variable number</p>
+  <p><br/>
+    <strong>Link To</strong>: DOE Variables can be linked to each other from the right click menu of the selected variable as shown in the <a href="#Fig_52_1_41_Linking_the_two_different_DOE_Variables"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>41.</a>    If DOE variables behavior is similar, then those DOE variables can be linked so that they vary similarly and number of DOE variables for sampling can be reduced. When two variables are linked, in effect they act as single variable and variables for
+    DOE sampling are reduced.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_41_Linking_the_two_different_DOE_Variables"></a><img height="462" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0041.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb"> Linking the two different DOE Variables</p>
+  <p> </p>
+  <h2><a id="52_1_6_DOE_Sampling"></a>DOE Sampling</h2>
+  <p>DOE sampling tab is used to select total number of DOE studies to be simulated based on statistical sampling methods or user defined number of samples. Using DOE samplings user can control the number of simulations and sample value. The sampling methods
+    available to distribute different study variables across DOE studies are Latin Hypercube, Full factorial, Taguchi and User-defined (See <a href="#Fig_52_1_42_DOE_sampling_methods"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>42.</a>).
+    The DOE Study variables columns position can be changed by using the right click options on the columns (See <a href="#Fig_52_1_43_Moving_the_position_of_the_selected_variable_in_the_DOE_Sampling_table"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>43.</a>)
+    to the required position in DOE sampling tab.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_42_DOE_sampling_methods"></a><img height="201" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0042.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">DOE sampling methods</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_43_Moving_the_position_of_the_selected_variable_in_the_DOE_Sampling_table"></a><img height="161" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0043.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Moving the position of the selected variable in the DOE Sampling table</p>
+  <p> </p>
+  <p>The four DOE sampling methods are,</p>
+  <ol class="Decimal">
+    <li>
+      <p><a href="#52_1_6_1_Latin_Hypercube_Sampling">Latin Hypercube</a></p>
+    </li>
+    <li>
+      <p><a href="#52_1_6_2_Full_Factorial_Sampling">Full factorial</a></p>
+    </li>
+    <li>
+      <p><a href="#52_1_6_3_Taguchi_Fractional_Factorial_Sampling">Taguchi (Fractional Factorial)</a></p>
+    </li>
+    <li>
+      <p><a href="#52_1_6_4_User_defined_Sampling">User defined</a></p>
+    </li>
+  </ol>
+  <h3><a id="52_1_6_1_Latin_Hypercube_Sampling"></a>Latin Hypercube Sampling</h3>
+  <p>Latin hypercube sampling (LHS) is a statistical method for generating a sample of reasonable collections of parameter values from a multidimensional distribution.</p>
+  <p>In the context of statistical sampling, a square grid containing sample positions is a Latin square, if (and only if) there is only one sample in each row and each column. A Latin hypercube is the generalization of this concept to an arbitrary number
+    of dimensions, whereby each sample is the only one in each axis-aligned hyperplane containing it. <a href="#Fig_52_1_44_Latin_Hypercube_samples"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>44.</a> shows the
+    Latin hypercube as the sampling method with 10 Number of DOE samples or simulations. User need to enter the number of simulations required then system automatically updates each sample study variable values accordingly.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_44_Latin_Hypercube_samples"></a><img height="415" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0044.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Latin Hypercube samples</p>
+  <h3><a id="52_1_6_2_Full_Factorial_Sampling"></a>Full Factorial Sampling</h3>
+  <p>A full factorial design contains all possible combinations of a set of DOE Study variables. This is the most fool proof design approach, but it is also the most time costly in experimental resources. In full factorial designs, you perform an experimental
+    run at every combination of the factor levels (Study variable samples). The sample size is the product of the numbers of levels of the factors. For example, a DOE  with a combination of two sample study variable, a three sample study variable and
+    a four sample study variable has 2 x 3 x 4 = 24 DOE runs or DOE studies.</p>
+  <p>From <a href="#Fig_52_1_39_DOE_table_with_added_DOE_study_variables_details"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>39.</a>, all the three variables are having three samples then the total DOE runs are 27
+    as shown in <a href="#Fig_52_1_45_Full_factorial_samples"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>45.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_45_Full_factorial_samples"></a><img height="248" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0045.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Full factorial samples</p>
+  <h3><a id="52_1_6_3_Taguchi_Fractional_Factorial_Sampling"></a>Taguchi (Fractional Factorial) Sampling</h3>
+  <p>A Taguchi (fractional factorial) design contains a set of sampling matrices that test every pair of parameters rather than every possible combination. It uses fractional factorial sampling to minimize the number of experiments (runs). Lowest number
+    of sampling levels will be placed in the first columns then followed by a higher number of sampling levels. The variables with expected linear response will be placed in the first columns (See below <a href="#Fig_52_1_46_Taguchi_sampling_options"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>46.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_46_Taguchi_sampling_options"></a><img height="233" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0046.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Taguchi sampling options</p>
+  <p> </p>
+  <p>User can allow the system to choose the samples based on Taguchi method automatically using system option.</p>
+  <p>User can also use lookup option to select the level from the available options in pull down menu. The options in pull down menu are provided by system based on the number of samples and study variables.</p>
+  <p>Example of System and Lookup matrix sampling are shown in <a href="#Fig_52_1_47_DOE_sampling_table_for_Taguchi_sampling_method"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>47.</a> for DOE sampling table.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_47_DOE_sampling_table_for_Taguchi_sampling_method"></a><img height="885" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0047.jpg' | relative_url }}" width="650"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">DOE sampling table for Taguchi sampling method</p>
+  <p> </p>
+  <h3><a id="52_1_6_4_User_defined_Sampling"></a>User defined Sampling</h3>
+  <p>As the name indicates user need to enter the number of simulations or DOE samples and sample values must be entered for each DOE.</p>
+  <h2><a id="52_1_7_Defining_Case_variables"></a>Defining Case variables</h2>
+  <p>The case variable can be defined for all the fields having green ribbon around them (See <a href="#Fig_52_1_48_Add_function_data_as_Case_variable"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>48.</a>). Constants,
+    functions and geometry data definition types can be added as case variables. The case variables can only be discrete. Once a case variable is defined then user can observe that the field will be filled with blue color.</p>
+  <p>Defining a case variable is similar to discrete DOE variable definition hence please refer Discrete Input variable to know about defining case variable definition. Below example demonstrates the case variable definition.</p>
+  <p> </p>
+  <p><strong>Example 1: </strong>Movement function data can be added as case variable. Files required to exercise this example are available at installation path 2D\LABS\BEND_2D. Open the BEND_2D.moprj file from <img src="{{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}"/> then simulate the Nominal run add DOE study. Follow instructions as mentioned below to define case variable. First add the case variable by navigating to Forming operation movement page and using right click option on <img src="{{ '/assets/icons/pre_icons/mo_doe_defined_function...button.jpg' | relative_url }}"/> button as shown in <a href="#Fig_52_1_43_Moving_the_position_of_the_selected_variable_in_the_DOE_Sampling_table"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>43.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_48_Add_function_data_as_Case_variable"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0048.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Add function data as Case variable</p>
+  <p><br/> When we click on “Add case variable “option we will get the Define DOE Variable window and we can observe that only discrete type input can be defined. Click on the <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> button for
+    the first sample as shown in the <a href="#Fig_52_1_49_Case_variable_definition_window_for_function_type_movement_data"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>49.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_49_Case_variable_definition_window_for_function_type_movement_data"></a><img src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0049.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Case variable definition window for function type movement data</p>
+  <p> </p>
+  <p>When we click on edit button for the sample one, we will get the function definition window as shown in the <a href="#Fig_52_1_50_Nominal_function_data"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>50.</a> Using
+    the Scale option enter the value 1.1 and click on set button to scale the values. See the <a href="#Fig_52_1_51_Scaled_up_function_curves_for_case_variable"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>51.</a>    for scaled values. Define sample 2 and 3 using similar method with scaling factors 0.9 and 1.15 respectively. Confirm the definition by observing the Blue fill in “Define function” button. Right click in the blue coloured area and confirm the definition
+    of sample data.</p>
+  <p> </p>
+  <p style="text-align: center"> <a id="Fig_52_1_50_Nominal_function_data"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0050.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Nominal function data</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_51_Scaled_up_function_curves_for_case_variable"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0051.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scaled up function curves for case variable</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_52_After_defining_the_data_for_all_the_samples"></a><img height="335" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0052.jpg' | relative_url }}" width="400"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">After defining the data for all the samples</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_53_Right_click_options_after_defining_the_case_variable"></a><img height="335" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0053.jpg' | relative_url }}" width="400"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Right click options after defining the case variable</p>
+  <h2><a id="52_1_8_Deleting_Case_variable"></a>Deleting Case variable</h2>
+  <p>Defined case variables will be highlighted by blue color shading around variables field (See <a href="#Fig_52_1_54_Deleting_the_Case_variable"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>54.</a>), right click
+    on the defined variable field gives an option to delete the added case variable. User can also delete the added case variables from “Case variables” table using <img src="{{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }}"/> button or right
+    mouse button menu option on variables listed in study variable column (See <a href="#Fig_52_1_55_Deleting_the_case_variable_from_case_variable_table"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>55.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_54_Deleting_the_Case_variable"></a><img height="335" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0054.jpg' | relative_url }}" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deleting the Case variable</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_55_Deleting_the_case_variable_from_case_variable_table"></a><img height="168" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0055.jpg' | relative_url }}" style="text-align: center" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deleting the case variable from case variable table</p>
+  <h2><a id="52_1_9_Case_variable_table"></a>Case variable table</h2>
+  <p>Case variable table tabulates the details of case variables defined for each operation as shown in <a href="#Fig_52_1_56_Case_variable_table"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>56.</a> Case variable
+    table includes the details of Operation Name, Study variable (defined case variable) Name, Number of samples, Lower, Upper and Nominal values, Keyword and object or material to which it belongs. User can edit the defined Study variable name and number
+    of samples. For case variable definition only Study variable name can be edited directly in table while case variable values can be edited using <img src="{{ '/assets/icons/pre_icons/mo_discrete_edit_button.jpg' | relative_url }}"/> in table in the respective variable
+    row.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_56_Case_variable_table"></a><img height="143" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0056.jpg' | relative_url }}" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Case variable table</p>
+  <h2><a id="82_1_10_Case_definition_table"></a>Case definition table</h2>
+  <p>User can either use full factorial or user defined methods as sampling methods for case variables. (See <a href="#Fig_52_1_57_Case_definition_table"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>57.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_57_Case_definition_table"></a><img height="146" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0057.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Case definition table</p>
+  <p><br/> The two sampling methods are<br/> 1. <a href="#52_1_6_2_Full_Factorial_Sampling">Full factorial</a><br/> 2. <a href="#52_1_6_4_User_defined_Sampling">User defined</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_58_Full_factorial_samples"></a><img height="249" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0058.jpg' | relative_url }}" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Full factorial samples</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_59_User_defined_samples"></a><img height="316" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0059.jpg' | relative_url }}" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">User defined samples</p>
+  <p> </p>
+  <h2><a id="52_1_11_Defining_DOE_output_operation"></a>Defining DOE output operation</h2>
+  <p>The DOE output operation objective is to pre-define required state variables that need to be studied to automatically post-process multiple databases. User can also add Region of Interest, Probes, variable constraints, Fill constraints and Evaluation
+    criteria along with state variables for automatic post-processing. Memory size for DOE study can be manged using “Database Management” options from DOE output operation since DOE study involves multiple simulations and may require large memory space.</p>
+  <p><br/> DOE Study generates an SDB file at the end of DOE study for all the DOE outputs defined in the DOE output operation. User can modify the DOE output data even after completing the DOE study either from DOE output operation in DOE study or in DOE
+    post and extract the data.</p>
+  <p> </p>
+  <h3 class="h3_52_1_11_"><a id="52_1_11_1_Operation_selection"></a>Operation selection</h3>
+  <p>Select the DOE output operation after defining DOE variables from operation editor to define variables and other settings for post-processing DOE studies as shown in <a href="#Fig_52_1_60_DOE_output_for_single_operation"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>60.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_60_DOE_output_for_single_operation"></a><img height="188" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0060.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE output for single operation</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_61_DOE_output_for_multi_operations"></a><img height="233" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0061.jpg' | relative_url }}" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE output for multi operations</p>
+  <p><br/> Operation selection page displays all the operations that are defined in the nominal setup and user can select any one operation (See <a href="#Fig_52_1_60_DOE_output_for_single_operation"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>60.</a>)
+    or multiple operations (See <a href="#Fig_52_1_61_DOE_output_for_multi_operations"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>61.</a>) by selecting the respective check box and click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define the outputs for the selected operations. </p>
+  <h3 class="h3_52_1_11_"><a id="52_1_11_2_Define_Outputs"></a>Define Outputs</h3>
+  <p>Once operations for which we are going to define DOE outputs are selected then they are listed in the tree as shown in <a href="#Fig_52_1_61_DOE_output_for_multi_operations"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>61.</a>    User can select the operation to defien the outputs, then user can observe output types in property editor window and user need to check the output types for that operation, the selected outputs are added to tree as shown in <a href="#Fig_52_1_62_DOE_outputs_selection_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>62.</a>    The output types available are Single output, Transient output, Common mesh output (location dependent) and Special output types as shown in <a href="#Fig_52_1_62_DOE_outputs_selection_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>62.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_62_DOE_outputs_selection_window"></a><img height="432" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0062.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE outputs selection window</p>
+  <p><br/>
+    <strong><a id="Defining_Region_of_Interest"></a>Defining Region of Interest:</strong><br/> A Region of Interest (ROI) is a region of an object that could be smaller or larger than the entire object. It is used to limit the study to what happens inside
+    the final shape of the part (i.e., machined shape or ship shape). It can be used to study an area to include or exclude forming feature/defect (end effects, under-fill or fold) and to determine success or failure for the process. (See <a href="#Fig_52_1_63_Under-fill_and_unwanted_area_example"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>63.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_63_Under-fill_and_unwanted_area_example"></a><img height="403" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0063.jpg' | relative_url }}" width="675"/></p>
+  <p> </p>
+  <p class="Fig_numb">Under-fill and unwanted area example</p>
+  <p><br/> Common mesh is one way of defining the ROI. In common mesh all the results of individual DOE&#39;s are interpolated onto a common mesh for the purpose of comparison and response surface generation. (See <a href="#Fig_52_1_64_Common_mesh_concept"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>64.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_64_Common_mesh_concept"></a><img height="346" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0064.jpg' | relative_url }}" width="450"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Common mesh concept</p>
+  <p><br/> To define the ROI region geometry first click on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> (Add ROI) button (See <a href="#Fig_52_1_65_ROI_definition_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>65.</a>)
+    then click on <img src="{{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}"/>  to create ROI geometry using geometry editor.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_65_ROI_definition_window"></a><img height="367" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0065.jpg' | relative_url }}" style="text-align: center;" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb">ROI definition window</p>
+  <p><br/> Create the ROI geometry using geometry editor as shown in <a href="#Fig_52_1_66_Creating_ROI_using_geometry_editor"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>66.</a></p>
+  <p style="text-align: center"><a id="Fig_52_1_66_Creating_ROI_using_geometry_editor"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0066.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Creating ROI using geometry editor</p>
+  <p><br/> Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the ROI geometry definition. Make sure that geometry orientation is inside the geometry by checking the Show geometry inside mark check box and observing the geometry
+    inside shade mark.</p>
+  <p> </p>
+  <p><strong><a id="Probe"></a>Probe:</strong><br/> Probe can be used to obtain the co-ordinate data of the point on the object nearest to the probe position, this option would be helpful to validate the geometry of the object. Multiple probes with different
+    probe types and orientation can be defined.<br/> To add a probe and define its data like shape, orientation and position, click on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button in the Probe page (See<a href="#Fig_52_1_67_Probe_definition_window">  <span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>67.</a>),</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Select Probe Shape from <strong>Type </strong>pull down menu,</p>
+    </li>
+    <li>
+      <p>Define the Probe size in <strong>Size </strong>field.</p>
+    </li>
+    <li>
+      <p>Define the orientation of the probe in <strong>Approach Direction</strong> field,</p>
+    </li>
+    <li>
+      <p>Define <strong>Start position</strong> Coordinate of the Probe and</p>
+    </li>
+    <li>
+      <p>Click next to <strong>probe output</strong> page to define the outputs.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_67_Probe_definition_window"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0067.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Probe definition window</p>
+  <p><br/>
+    <strong><a id="Operation_min_max_value"></a>Operation min/max value:</strong></p>
+  <p><strong></strong>Selected state variable minimum / maximum value is plotted across all steps and all simulations of the selected operation for the selected object.</p>
+  <p>To select the state variable first click on <img src="{{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}"/> button to add rows and double click on each cell under Variable row to select state variable and double click on the cell in the same row under
+    components to select the maximum or minimum or other directional components and Min/Max to select options like Min. of all steps, Max. of all steps, (Absolute)Min., (Absolute)Max., Diff (Max and Min difference), Average and Standard Deviation based
+    on requirement. In <a href="52_1_doe_and_doe_output_operation_setup.htm#Fig_52_1_68_Operation_Min/Max_state_variable_for_all_steps_selection_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>68.</a> Max.
+    value out of minimum Temperature values of all steps and Max. value out of maximum Effective strain values of all steps for workpiece and Punch Y-Load Absolute Max. values are added as output variables across all steps of the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_68_Operation_Min/Max_state_variable_for_all_steps_selection_window"></a><img height="551" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0068.jpg' | relative_url }}" width="475"/></p>
+  <p> </p>
+  <p class="Fig_numb">Operation Min/Max state variable for all step’s selection window</p>
+  <p><br/>
+    <strong><a id="Local_min_max_Value_Summary_min_max_One_step"></a>Local min/max Value (Summary min/max (One step)):</strong></p>
+  <p><strong></strong>Selected state variable output’s minimum / maximum value is plotted at last step of selected operation for the selected object.</p>
+  <p>To select the state variable first click on <img src="{{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}"/>  button to add rows and double click on each cell under variable row to select state variable and double click on the cell in the same row
+    under components to select the maximum or minimum or directional components based on requirement. In <a href="#Fig_52_1_69_Summary_Min_Max_state_variable_for_one_step_selection_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>69.</a>    Maximum Effective strain and Effective stress state variables for workpiece object and Punch Y-Load variables are added as Local min/max output of the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_69_Summary_Min_Max_state_variable_for_one_step_selection_window"></a><img height="553" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0069.jpg' | relative_url }}" width="475"/></p>
+  <p> </p>
+  <p class="Fig_numb">Summary Min/Max state variable for one step selection window</p>
+  <p><br/>
+    <strong><a id="State_variable_in_regions_State_Variable_minmax_One_step"></a>State variable in regions (State Variable min/max (One step)):</strong></p>
+  <p>Selected state variable component output’s min/max and other computed value is plotted at last step of selected operation for the selected object’s whole object or region of interest or probe.</p>
+  <p>To select the state variable first click on <img src="{{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}"/> button to add rows and double click on each cell under Variable row to select state variable and double click on the cells in the same row
+    to select component, Min/Max, Object and Region/Probe under respective columns. For State variable output type, components will be the variable components like Directional values or Effective or Principal, Mean etc. Min/Max will give options like
+    Min., Max., (Absolute)Min., (Absolute)Max., Diff (Max and Min difference), Average and Standard Deviation. In <a href="52_1_doe_and_doe_output_operation_setup.htm#Fig_51_1_70_State_variable_Min/Max_within_a_region_for_one_step_selection_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>70.</a>    Maximum Effective stress of whole workpiece object, Maximum Effective strain within the region defined and Maximum Damage based on probe are added.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_51_1_70_State_variable_Min/Max_within_a_region_for_one_step_selection_window"></a><img height="552" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0070.jpg' | relative_url }}" width="475"/></p>
+  <p> </p>
+  <p class="Fig_numb">State variable Min/Max within a region for one step selection window</p>
+  <p><br/>
+    <strong><a id="Summary_plot_all_steps_from_selected_operation"></a>Summary plot (all steps from selected operation):</strong></p>
+  <p>The selected state variables summary throughout all the steps of the selected operation is plotted.</p>
+  <p>Add state variables using <img src="{{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}"/> button and select X-axis component, state variable, components and object. In <a href="#Fig_52_1_71_Summary_plot_selection_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>71.</a>    we have select the Maximum effective strain with respect to time for workpiece, Minimum temperature with respect to time for workpiece and Y-Load with respect to stroke for punch.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_71_Summary_plot_selection_window"></a><img height="552" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0071.jpg' | relative_url }}" width="475"/></p>
+  <p> </p>
+  <p class="Fig_numb">Summary plot selection window</p>
+  <p><br/>
+    <strong><a id="SV_on_all_nodes/elements_Location_specific_One_step"></a>SV on all nodes/elements (Location specific (One step)):</strong></p>
+  <p><strong></strong>Selected state variable component value is plotted for the last step of selected operation for all nodes of the selected object using whole object or region of interest. As of now user can define the location specific output only for
+    one operation.</p>
+  <p>Add state variables using <img src="{{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}"/> button and select state variable, its components like Effective or Principal, Mean etc. Select the object and select common mesh region across which the state
+    variables must be plotted, we can observe a Mesh branch in process tree under “Location specific” to define the mesh for the region. In <a href="#Fig_52_1_72_Local_specific_state_variable_selection_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>72.</a>    Temperature and Maximum effective Strain in ROI are selected as location specific outputs. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define the mesh for the ROI and click on<img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> button to generate mesh with default settings (See <a href="#Fig_52_1_73_ROI_mesh_generation_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>73.</a>). For advanced mesh options, click on <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> icon to switch to expert mode. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_72_Local_specific_state_variable_selection_window"></a><img height="552" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0072.jpg' | relative_url }}" width="475"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Local specific state variable selection window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_73_ROI_mesh_generation_window"></a><img height="332" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0073.jpg' | relative_url }}" width="480"/></p>
+  <p> </p>
+  <p class="Fig_numb">ROI mesh generation window</p>
+  <p><br/>
+    <strong><a id="Probe_output"></a>Probe output:</strong></p>
+  <p><strong></strong>Probe output can be used to obtain the co-ordinate data of the point on the object nearest to the probe position, this option would be helpful to validate the geometry of the object. Multiple probes with different probe types and orientation
+    can be defined (See <a href="#Fig_52_1_74_Probe_output_selection_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>74.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_74_Probe_output_selection_window"></a><img height="552" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0074.jpg' | relative_url }}" style="cursor: nesw-resize;" width="475"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Probe output selection window</p>
+  <h3 class="h3_52_1_11_"><a id="52_1_11_3_Define_Variable_constraints"></a>Define Variable constraints</h3>
+  <p>Variables Constraints can define constraints by selecting the respective variables from the left side of the window and clicking on the <img src="{{ '/assets/icons/pre_icons/mo_add_doe_variable_constraint_button.jpg' | relative_url }}"/> button to add constraint
+    and constraint value as shown in  <a href="#Fig_52_1_75_Variable_constraints_definition_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>75.</a>. The constraint can be Less than, Greater than or Min-Max
+    difference Less than depending on the variable. Constraints can be applied to object or any Region available in pull down menu. Constraints can be removed by selecting the added constraint from right side window list and clicking on the <img src="{{ '/assets/icons/pre_icons/mo_delete_doe_variable_constraint_button.jpg' | relative_url }}"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_75_Variable_constraints_definition_window"></a><img height="372" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0075.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Variable constraints definition window</p>
+  <h3 class="h3_52_1_11_"><a id="52_1_11_4_Define_Fill_constraints"></a>Define Fill constraints</h3>
+  <p>In Fill constraints window user can check the fill constraints like Complete Fill, Under fill volume ratio, Minimum die distance and No Fold constraint.</p>
+  <p><strong>Complete Fill</strong>: Complete Fill constraint will check the die fill, user can also select the interested region to check the die fill using ROI.</p>
+  <p><strong>Underfill volume ratio:</strong> Run cases can be constrained as pass/fail based on underfill volume ratio compared with specified percentage value.</p>
+  <p><strong>Minimum die distance:</strong> Run cases can also be constrained as pass/fail based on surface nodes distance and comparing with specified value.</p>
+  <p><strong>No folds:</strong> No folds option is used to check the run without fold in selected object or region and constrained as fail if there is a fold.</p>
+  <p>These constraints checks are tabulated as Pass/Fail in DOE post table for easy analysis (See <a href="#Fig_52_1_76_Fill_constraints_definition_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>76.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_76_Fill_constraints_definition_window"></a><img height="329" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0076.jpg' | relative_url }}" width="475"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Fill constraints definition window</p>
+  <p> </p>
+  <h3 class="h3_52_1_11_"><a id="52_1_11_5_Global_Min_Max_(All_steps)"></a>Global Min/Max (All steps)</h3>
+  <p>Selected state variable minimum / maximum value is plotted across all steps of all operations for the selected object.</p>
+  <p>To select the state variable first click on <img src="{{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}"/> button to add rows and double click on each cell under Variable row to select state variable and double click on the cell in the same row under
+    components to select the maximum or minimum or other directional components and MIn/Max to select options like Min., Max., (Absolute)Min., (Absolute)Max., Diff (Max and Min difference), Average and Standard Deviation based on requirement. In <a href="#Fig_52_1_77_Global_Min_Max_state_variable_for_all_steps_selection_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>77.</a>    Max. value out of minimum Temperature values of all steps and Max. value out of maximum Effective strain values of all steps for workpiece and Punch Y-Load Absolute Max. values are added as global min/max outputs.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_77_Global_Min_Max_state_variable_for_all_steps_selection_window"></a><img height="552" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0077.jpg' | relative_url }}" width="475"/></p>
+  <p> </p>
+  <p class="Fig_numb">Global Min/Max state variable for all steps selection window</p>
+  <p> </p>
+  <h3 class="h3_52_1_11_"><a id="52_1_11_6_Evaluation"></a>Evaluation</h3>
+  <p>This evaluation is used to evaluate the DOE sample output throughout the simulation based on specified criteria and constraint it as pass if it meets the evaluation criteria or as fail if it does not meet the specified criteria. The Evaluation criteria
+    can be defined in as,</p>
+  <ol class="Decimal">
+    <li>
+      <p><a href="#Single">Single</a></p>
+    </li>
+    <li>
+      <p><a href="#Weighted_Sum">Weighted sum</a></p>
+    </li>
+    <li>
+      <p><a href="#Equation">Equation</a></p>
+    </li>
+  </ol>
+  <p><br/>
+    <strong><a id="Single"></a>Single</strong><br/> Using the single type evaluation, we can define evaluation only for one state variable. (See <a href="#Fig_52_1_78_Evaluation_window_for_single_type"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>78.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_78_Evaluation_window_for_single_type"></a><img height="432" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0078.jpg' | relative_url }}" width="450"/></p>
+  <p> </p>
+  <p class="Fig_numb">Evaluation window for single type</p>
+  <p><br/>
+    <strong><a id="Weighted_Sum"></a>Weighted Sum</strong><br/> Using the Weighted sum type evaluation, we can define multiple variables by selecting the respective check box and defining the reference value and scale value. The priority of the multi
+    state variables will be depending on the weight value defined. (See <a href="#Fig_52_1_79_Evaluation_window_for_Weighted_Sum_type"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>79.</a>) </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_79_Evaluation_window_for_Weighted_Sum_type"></a><img height="432" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0079.jpg' | relative_url }}" width="450"/></p>
+  <p> </p>
+  <p class="Fig_numb">Evaluation window for Weighted Sum type</p>
+  <p><br/>
+    <strong><a id="Equation"></a>Equation</strong><br/> Using the Equation type evaluation, the evaluation criteria is defined as equation from the defined output state variables. We can use the function pull down menu to select the operator. (See
+    <a href="#Fig_52_1_80_Evaluation_window_for_Equation_type"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>80.</a>) </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_80_Evaluation_window_for_Equation_type"></a><img height="432" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0080.jpg' | relative_url }}" width="450"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Evaluation window for Equation type</p>
+  <p> </p>
+  <h3 class="h3_52_1_11_"><a id="52_1_11_7_Database_Management"></a>Database Management</h3>
+  <p>DOE / Optimization study involves multiple simulations and requires large amount of storage space. User can manage the size of these projects using options available in Database output page. In Database output page, user can select the steps that can
+    be stored in DB by selecting suitable option. If DOE/ Optimization study is already completed and still the user would like to control the storage space then user can select the suitable option in Database output page and Click on Purge button.  (See
+    <a href="#Fig_52_1_81_Database_Management_window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>81.</a>).</p>
+  <p><strong>Save Only Last Step in Database</strong>: Using this option we can save only Last step data in database.</p>
+  <p><strong>Save First/Last Step in Database</strong>: Using this option we can save only First and Last step data in database.</p>
+  <p><strong>Save First/Last Step of Each operation in Database</strong>: Using this option we can save First and Last step data of Each operation data in database.</p>
+  <p><strong>Save First/Last Step and Remesh steps in Database</strong>: Using this option we can save First step and Last step and Remesh steps data in database.</p>
+  <p><strong>Save All Step in Database</strong>: Using this option we can save data of All Steps in database.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_81_Database_Management_window"></a><img height="329" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0081.jpg' | relative_url }}" width="475"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Database Management window</p>
+  <p> </p>
+  <h3 class="h3_52_1_11_"><a id="52_1_11_8_Data_Extract"></a>Data Extract</h3>
+  <p>The data extract is used to extract the state variable output data for the project whose DOE Simulation is already completed. Using this option, we can extract the newly defined DOE output data using the <img src="{{ '/assets/icons/pre_icons/mo_doe_extract_button.jpg' | relative_url }}"/> button without re-running the DOE study (See <a href="#Fig_52_1_82_Data_Extract_Window"><span data-keyref="Chapter_52_1_DOE_and_DOE_Output_Operation_Setup">Fig. 52.1.</span>82.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_1_82_Data_Extract_Window"></a><img height="329" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0082.jpg' | relative_url }}" width="475"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Data Extract Window</p>
+
+</body></html>

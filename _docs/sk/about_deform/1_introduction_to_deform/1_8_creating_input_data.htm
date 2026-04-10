@@ -1,0 +1,131 @@
+---
+lang: sk
+title: "1.8. Creating Input data"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1.1.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>1.8. Creating Input data</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>1.8. Creating Input data</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/about_deform/1_introduction_to_deform/1.8. creating input data.css"/>
+<meta name="brsnext" value="Documentation_content/About_DEFORM/1_Introduction_to_DEFORM/1_9_Units.htm"/><meta name="brsprev" value="Documentation_content/About_DEFORM/1_Introduction_to_DEFORM/1_7_Geometry_Representation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="1.8. Creating Input data">
+        <span>1.8. Creating Input data</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>1.8. Creating Input data</h1>
+  <p>There are several ways to enter data into the DEFORM <a href="../../pre_processor/7_introduction_to_pre-processor.htm">Pre-Processor</a>. Depending on the requirements of a particular problem, a combination of the following methods will frequently be
+    used.</p>
+  <p> </p>
+  <p><strong>Manual input</strong></p>
+  <p>The <a href="../../pre_processor/7_introduction_to_pre-processor.htm">pre-processor</a> menus contain input fields for nearly every possible data input in DEFORM. The user can enter, view, or edit any of these values. Discussions of each field are contained
+    in the reference section of this manual.</p>
+  <p> </p>
+  <p><strong>Keyword file input</strong></p>
+  <p>Most of the data fields in the DEFORM pre-processor correspond directly to a DEFORM keyword. Individual keywords describe very specific information about a particular object characteristic, <a href="../../pre_processor/9_simulation_controls/9_simulation_controls.htm">simulation control</a>,
+    <a href="../../pre_processor/10_material_data/10_material_data.htm">material characteristic</a>, or <a href="../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm">inter object</a> relationship. Keyword data can be
+    saved in a keyword (.KEY) file. A keyword file is a human readable (ASCII) representation of DEFORM simulation data.</p>
+  <p> </p>
+  <p>The typical format of a keyword is:  </p>
+  <p>[Keyword name] [Keyword parameters] [Default data]</p>
+  <p>[Data]</p>
+  <p>[Data]...</p>
+  <p> </p>
+  <p>A keyword file may contain a complete simulation data set, or it may contain only one or a few specific keywords.</p>
+  <p> </p>
+  <p><strong>Assembling keyword files</strong></p>
+  <p>When a keyword file is read into the pre-processor, only the specific data fields listed in that keyword are changed; the remainder is unchanged. Thus, it is possible to assemble a complete set of problem data by loading one keyword file that contains
+    only data for one object, another keyword file that contains material data, etc.</p>
+  <p> </p>
+  <p>To save specific elements of a keyword file, it is necessary to save the entire file, then use a text editor such as Notepad, VI, Emacs, or equivalent to delete unwanted information. The keyword file load and save features on the main pre-processor
+    menu load or save an entire data set. To load partial keyword files, use Import or Import keyword option from the <a href="../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#8.1.1._File_Menu"><span style="color:#0000ff;">File menu</span>.</a></p>
+  <p> </p>
+  <p><strong>Other file inputs</strong></p>
+  <p>Various data types, particularly part<a href="../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm"> geometries</a> and <a href="../../pre_processor/10_material_data/10_material_data.htm">material data</a> can be read from appropriate
+    format files.</p>
+  <p> </p>
+  <p><strong>Modifying problem data</strong></p>
+  <p>Solution or input step data from any stored step in a database file can be read into the pre-processor, modified, and either appended to an existing database, or written to a new database file.</p>
+  <p> </p>
+  <p><strong>Viewing specific problem data</strong></p>
+  <p>Most problem data stored in the database file is accessible in the <a href="../../post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor.htm">post-processor</a>. However, certain specific information such as<a href="../../pre_processor/14_boundary_conditions/14_boundary_conditions.htm"> boundary conditions</a>    or <a href="../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm">inter-object contact</a> conditions is displayed differently in the <a href="../../pre_processor/7_introduction_to_pre-processor.htm">pre-processor</a>.
+    When debugging a problem which is not running properly, it is sometimes useful to use the pre processor data display to view this information.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../pre_processor/7_introduction_to_pre-processor.htm">Pre-Processor</a></p>
+  <p><a href="../../keyword_documentation/deform_keywords_list.htm">Keyword Documentation</a></p>
+  <p><a href="../../pre_processor/21_database_generation/21_database_generation.htm">Database Generation</a></p>
+  <p><a href="../../post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor.htm">Post-processor</a></p>
+  <p> </p>
+
+</body></html>

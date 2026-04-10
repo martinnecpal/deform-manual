@@ -1,0 +1,592 @@
+---
+lang: en
+title: "TPLOGY (2D)"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.19.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>TPLOGY (2D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>TPLOGY (2D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/t/t_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/T/TRANS.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/T/TNOW.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="TPLOGY (2D)">
+        <span>TPLOGY (2D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>TPLOGY</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Object data - 2D)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 08-08-2013</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">Dataset ID (=99)</p>
+  <p class="P_10_Bold">    [Topology data set id ]</p>
+  <p class="P_10_Bold">* Geometry Topology Data: Vertex,Edge,Loop,Face   [Header information ]</p>
+  <p class="P_10_Bold">NumVertex, NumEdge, NumLoop, NumFace</p>
+  <p class="P_10_Bold">* Vertex Data</p>
+  <p class="P_10_Bold">nCurrVertexID, nNumEdgeUses, dPtCoord[0], dPtCoord[1]</p>
+  <p class="P_10_Bold">nCurrEdgeUseID (Repeat for as many of nCurrEdgeUseID)</p>
+  <p class="P_10_Bold">(Repeat the above for every VERTEX)</p>
+  <p class="P_10_Bold">* Edge Data</p>
+  <p class="P_10_Bold">nCurrEdgeID, nNumLoopUses, nStartVertID, nEndVertID</p>
+  <p class="P_10_Bold">nCurrLoopUseID (Repeat as many of nNumLoopUses)</p>
+  <p class="P_10_Bold">(Repeat the above for every EDGE)</p>
+  <p class="P_10_Bold">* Loop Data</p>
+  <p class="P_10_Bold">nCurrLoopID, nNumEdges, nNumFaceUses</p>
+  <p class="P_10_Bold">nCurrEdgeID (Repeat as many of nNumEdges)</p>
+  <p class="P_10_Bold">nCurrFaceUseID</p>
+  <p class="P_10_Bold">(Repeat the above for every LOOP)</p>
+  <p class="P_10_Bold">* Face Data</p>
+  <p class="P_10_Bold">nCurrFaceID, nNumLoops, nCurrMatID</p>
+  <p class="P_10_Bold">nCurrLoopID</p>
+  <p class="P_10_Bold">(Repeat the above for every FACE)</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Dataset ID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Indicator for Topology data</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">99 (Fixed)</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">NumVertex      </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of vertex</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">NumEdge</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of edges</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">NumLoop</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of loops</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">NumFaces</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of faces    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td colspan="3" style="padding-left: 4px">
+          <p class="P_10_Bold">(Vertex Data)</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nCurrVertexID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Current vertex no.</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nNumEdgeUses</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of connected edges</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">dPtCoord[0],</p>
+          <p class="P_10_Bold">dPtCoord[1]</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">X,Y coordinates</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr class="rh-cursor-row" style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nCurrEdgeUseID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Edge number(s) that uses the current vertex</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">(Repeat as many of nNumEdgeUses)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td colspan="3" style="padding-left: 4px">
+          <p class="P_10_Bold">(Edge Data)</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nCurrEdgeID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Current edge no.</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nNumLoopUses</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of connected loops</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nStartVertID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Starting vertex number</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nEndVertID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Ending vertex number</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nCurrLoopUseID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Loop number(s) that uses the current edge</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">(Repeat as many of nNumLoopUses)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td colspan="3" style="padding-left: 4px">
+          <p class="P_10_Bold">(Loop Data)</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nCurrLoopID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Current loop no.</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nNumEdges</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of edges belongs to the current loop</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nNumFaceUses</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of faces connected to the current loop</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nCurrEdgeID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Edge number(s) that uses the current loop</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">(Repeat as many of nNumEdges)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nCurrFaceUseID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Face number that uses the current loop</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td colspan="3" style="padding-left: 4px">
+          <p class="P_10_Bold">(Face Data)</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nCurrFaceID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Current face no.</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nNumLoops</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Number of loops belongs to the current face</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nCurrMatID    </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Material group number for the current face</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">nCurrLoopID</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Loop number(s) that belongs to the current face</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">(Repeat as many of nNumLoops)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">TPLOGY describes how geometrical subsets are connected to represent 2D geometry. It uses vertex, edge, loop and face concepts to build topology data for 2D mesh generation. When geometry boundary(ries) is(are) given in Pre-processor, user is
+            first required to define loop(s) and then region(s) for building a complete topology data. Once topology information is ready, user can assign the different materials in the each region. Mesh generation program can generate mesh systems with
+            different material group id numbers in the different regions.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">For a given object and when geometry is saved in a keyword file or is exported as a geometry file (*.GEO), geometry as well as the constructed topology data are written together. If the geometry is loaded back to pre-processor, the imported
+            topology data is used to recover the topology settings in a pre-processor.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">REMARKS</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Data for keyword TPLOGY is fully automatically generated from pre-processor.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">For a given object and when geometry is saved in a keyword file or is exported into geometry file format (*.GEO), the constructed topology data is written together. When the data file is loaded back to pre-processor, topology data will be recovered.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">EXAMPLE OF TPLOGY</p>
+          <p class="P_10">                &lt;E1&gt;</p>
+          <p class="P_10">          ++++++++++++++</p>
+          <p class="P_10">          + [F1][L1]   +</p>
+          <p class="P_10">          +            +</p>
+          <p class="P_10">          +     &lt;E2&gt;   +</p>
+          <p class="P_10">+++++++++ * ++++++++++ * +++++++++</p>
+          <p class="P_10">+        (P2)         (P1)       +</p>
+          <p class="P_10">+                                +</p>
+          <p class="P_10">+ [F2][L2]      &lt;E3&gt;             +</p>
+          <p class="P_10">++++++++++++++++++++++++++++++++++</p>
+          <p class="P_10">2 vertex: [P1][P2]</p>
+          <p class="P_10">3 edges:  [E1][E2][E3]</p>
+          <p class="P_10">2 loops:  [L1][L2]</p>
+          <p class="P_10">2 faces:  [F1][F2] with material group ids. #1 and #2</p>
+          <p class="P_10"> </p>
+          <p class="P_10"> </p>
+          <p class="P_10">TPLOGY</p>
+          <p class="P_10">99                </p>
+          <p class="P_10">* Geometry Topology Data: Vertex, Edge, Loop, Face    </p>
+          <p class="P_10">2   3   2   2</p>
+          <p class="P_10">* Vertex Data</p>
+          <p class="P_10">       1   3   7.0000000E+000  5.0000000E+000</p>
+          <p class="P_10">       1</p>
+          <p class="P_10">       2</p>
+          <p class="P_10">       3</p>
+          <p class="P_10">       2   3   3.0000000E+000  5.0000000E+000      </p>
+          <p class="P_10">       1</p>
+          <p class="P_10">       2</p>
+          <p class="P_10">       3</p>
+          <p class="P_10">* Edge Data</p>
+          <p class="P_10">       1   1     1       2     </p>
+          <p class="P_10">       1</p>
+          <p class="P_10">       2   2     2       1</p>
+          <p class="P_10">       1</p>
+          <p class="P_10">       2</p>
+          <p class="P_10">       3   1     2       1</p>
+          <p class="P_10">       2</p>
+          <p class="P_10">* Loop Data</p>
+          <p class="P_10">       1   2    1  </p>
+          <p class="P_10">       1</p>
+          <p class="P_10">       2</p>
+          <p class="P_10">       1</p>
+          <p class="P_10">       2   2    1  </p>
+          <p class="P_10">       2   </p>
+          <p class="P_10">       3</p>
+          <p class="P_10">       2</p>
+          <p class="P_10">* Face Data</p>
+          <p class="P_10">       1   1    1   </p>
+          <p class="P_10">       1</p>
+          <p class="P_10">       2   1    2</p>
+          <p class="P_10">       2  </p>
+          <p class="P_10"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10"><a href="../../pre_processor/12_geometry_modelling">Geometry</a>: Topology</p>
+          <p class="P_10">Keywords: <a href="../d/diegeo.htm">DIEGEO (2D)</a>, <a href="../d/diegeo_3d.htm">DIEGEO (3D)</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

@@ -1,0 +1,135 @@
+---
+lang: en
+title: "23.5. Setting up MPICH"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "5.1.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>23.5. Setting up MPICH</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>23.5. Setting up MPICH</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/simulator/23_deform_simulator/23_5_setting_up_mpich.css"/>
+<meta name="brsnext" value="Documentation_content/Simulator/23_DEFORM_Simulator/23_6_Running_Shared_folder_Simulations.htm"/><meta name="brsprev" value="Documentation_content/Simulator/23_DEFORM_Simulator/23_4_Process_Monitor.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="23.5. Setting up MPICH">
+        <span>23.5. Setting up MPICH</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>23.5. Registering  MPICH (applicable to v11.1.1 and below versions)</h1>
+  <h2>Registering  64 bit 3D FEM engine in PC</h2>
+  <p>As part of DEFORM v*_* (where *_* is the version number of the DEFORM) installation, user will be prompted with an option to install &#39;MPICH2 64bit&#39;. On 64 bit machines this installation is required to run 64 bit 3D FEM engine. This part of the
+    installation also requires the following post installation procedures to ensure 64 bit run time environment,</p>
+  <p>From DEFORM v11.0 the following MPICH2 64bit setup requirements are completely handled during the system installation itself. The following steps can also be used to trouble shoot MPICH2 related issues if any that come up at a later stage for any other
+    reason.</p>
+  <ol class="Decimal">
+    <li>
+      <p>Open command window as administrator and change the directory to MPICH2 folder <em>&#39;cd c:\Program Files\MPICH2\bin&#39;</em> and execute two commands one by one ‘s<em>mpd.exe -install&#39;, &#39;smpd.exe -restart&#39;</em>.</p>
+    </li>
+    <li>
+      <p>Open command window as administrator and change the directory to MPICH2 folder &#39;<em>cd c:\Program Files\MPICH2\bin&#39; </em>and execute <em>&#39;mpiexec.exe -register&#39;</em> with user name and password.</p>
+    </li>
+    <li>
+      <p>For SimulationServer services, user needs to go to the system services, select the running &#39;<em>DeformSimServer</em>&#39; and select &#39;Properties&#39; with a right mouse click and set user account name and password for the user from the &#39;Log
+        On&#39; tab.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <h2>Running 64 bit 3D FEM engine in Linux/PC</h2>
+  <ul class="Disc">
+    <li>
+      <p>From the 3D / 2D3D GUI select the problem and go to Run options and select the 64 bit option. Click on Start to start the 64 bit simulation.</p>
+    </li>
+    <li>
+      <p>Flag file &#39;64bit.DAT&#39; is required in the problem folder to start 64 bit FEM run from GUI Main. This &#39;64bit.DAT&#39; file will be created automatically as we select the 64 bit option from the Run options. Without this flag file, regular
+        32 bit FEM code takes preference.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong></p>
+  <ol class="Decimal">
+    <li>
+      <p class="Note_text">This 64 bit version can handle large models that require main memory in excess of 2 GB.</p>
+    </li>
+    <li>
+      <p class="Note_text">64 bit support is only for the 3D FEM engine.</p>
+    </li>
+    <li>
+      <p class="Note_text">While building FEM engine with user routines, please use the OS identifier as centos_linux64.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="23_1_start_stop_and_resume_simulations.htm">23.1. Start, Stop and Resume Simulation</a></p>
+  <p><a href="23_2_interactive_and_batch_mode.htm">23.2. Interactive and batch modes using Run option</a></p>
+  <p><a href="23_3_simulation_graphics.htm">23.3. Simulation Graphics</a></p>
+  <p><a href="23_4_process_monitor.htm">23.4. Process Monitor</a></p>
+
+</body></html>

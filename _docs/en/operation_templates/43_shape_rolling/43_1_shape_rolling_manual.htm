@@ -1,0 +1,953 @@
+---
+lang: en
+title: "43.1. Shape Rolling Manual"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.15.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>43.1. Shape Rolling Manual</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>43.1. Shape Rolling Manual</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/43_shape_rolling/43_1_shape_rolling.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/44_2D_to_3D_Converter/44_Introduction_to_2D_to_3D_Converter.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/43_Shape_Rolling/43_Introduction_to_Shape_Rolling.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="43.1. Shape Rolling Manual">
+        <span>43.1. Shape Rolling Manual</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>43.1. Shape Rolling Manual</h1>
+  <p><a href="#43_1_1_How to add the Shape Rolling operation">43.1.1. How to add the Shape Rolling operation</a></p>
+  <p><a href="#43_1_2_Shape_rolling_operation_in_Operation_Editor">43.1.2. Shape rolling operation in Operation Editor</a></p>
+  <p><a href="#43_1_3_Rolling_Group_Level">43.1.3. Rolling Group Level</a></p>
+  <p><a href="#43_1_3_1_Process" style="margin-left: 40px">43.1.3.1. Process</a></p>
+  <p><a href="#43_1_3_2_Workpiece_Page" style="margin-left: 40px">43.1.3.2. Workpiece Page</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Geometry_2D">Geometry 2D</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Mesh_2D">Mesh 2D</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Material_page">Material page</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#BCC_Page_(Rolling_Group)">BCC Page (Rolling Group)</a></p>
+    </li>
+  </ul>
+  <p><a href="#43_1_3_3_Groove_List_page" style="margin-left: 40px">43.1.3.3. Groove List page</a></p>
+  <p><a href="#43_1_3_4_Pass_Table" style="margin-left: 40px">43.1.3.4. Pass Table</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#First_HT">First HT</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Multi_Pass_Setup">Multi Pass Setup</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Rollset_Type">Rollset Type</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Defining_Roll_Groove_Geometry_in_Pass_Table">Defining Roll Groove Geometry in Pass Table</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Roll_Speed">Roll Speed</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Roll_Gap">Roll Gap</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Rotation_(deg)">Rotation (deg)</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Reverse_rolling_(For_Lagrangian_rolling_type)">Reverse rolling (For Lagrangian rolling type)</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Show_all_rolls_(For_asymmetric_rolling)">Show all rolls (For asymmetric rolling)</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Running_2.5D_Simulation">Running 2.5D Simulation</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Stand_Table">Stand Table</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Stand_Settings">Stand Settings</a></p>
+    </li>
+  </ul>
+  <p><a href="#Fig_43_1_30_Roll_Stand_Settings_Page" style="margin-left: 40px">43.1.3.5. 3D Setup Page</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#3D_roll_geometry_settings">3D Roll geometry settings</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#3D_roll_mesh_settings">3D Roll mesh settings</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#3D_Workpiece_settings">3D Workpiece settings</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#3D_setup_page_for_ALE_Rolling_type">3D setup page for ALE Rolling type</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#3D_Setup_page_for_Lagrangian_Rolling_type">3D Setup page for Lagrangian Rolling type</a></p>
+    </li>
+  </ul>
+  <p style="margin-left: 40px"><a href="#43_1_3_6_Simulation_Controls">43.1.3.6. Simulation Controls</a></p>
+  <p style="margin-left: 40px"><a href="#43_1_3_7_Generate_DB">43.1.3.7. Generate DB</a></p>
+  <p><a href="#43_1_4_Shape_Rolling_Pass_Level">43.1.4. Shape Rolling Pass Level</a></p>
+  <p style="margin-left: 40px"><a href="#43_1_4_1_Stand_Table">43.1.4.1. Stand Table</a></p>
+  <p style="margin-left: 40px"><a href="#43_1_4_2_Roll_Stand_Page">43.1.4.2. Roll Stand Page</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Roll_Geometry_page">Roll Geometry Page</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Roll_Mesh_Page">Roll Mesh Page</a></p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Roll_Movement_page">Roll Movement page</a></p>
+    </li>
+  </ul>
+  <p><span style="margin-left:40px;"></span><a href="43_1_shape_rolling_manual.htm#43_1_4_3_Table/Guide_geometry_page">43.1.4.3. Table/Guide geometry page</a></p>
+  <p style="margin-left: 40px"><a href="#43_1_4_4_Workpiece_Object_page">43.1.4.4. Workpiece Object page</a></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><a href="#Workpiece_Mesh_">Workpiece Mesh</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Workpiece_BCC">Workpiece BCC</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Workpiece_Movement">Workpiece Movement</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Workpiece_Initialize">Workpiece Initialize</a> </p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><a href="#Workpiece_Built-in_Flownet_">Workpiece Built-in Flownet</a> </p>
+    </li>
+  </ul>
+  <p style="margin-left: 40px"><a href="#43_1_4_5_Positioning">43.1.4.5. Positioning</a> </p>
+  <p style="margin-left: 40px"><a href="#43_1_4_6_Scheduled_Positioning">43.1.4.6. Scheduled Positioning</a> </p>
+  <p style="margin-left: 40px"><a href="#43_1_4_7_Contact">43.1.4.7. Contact</a></p>
+  <p style="margin-left: 40px"><a href="#43_1_4_8_Simulation_Controls">43.1.4.8. Simulation Controls</a></p>
+  <p style="margin-left: 40px"><a href="#43_1_4_9_Generate_DB">43.1.4.9. Generate DB</a></p>
+  <p> </p>
+  <h2><a id="43_1_1_How to add the Shape Rolling operation"></a>How to add the Shape Rolling operation</h2>
+  <p>Shape rolling operation can be setup in Integrated Manufacturing Process environment that can be accessed from “GUI Main”. Create a new problem by either selecting File <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> New Problem or by
+    clicking the <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. Select “3D Shape Rolling” radio button under problem type and unit system as shown in <a href="#Fig_43_1_Adding_Shape_Rolling_Operation_from_GUI_Main"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>1.</a>.
+    Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> button. Integrated Manufacturing Process wizard will open, we can see that 3D Shape rolling operation is added in Operation editor.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_Adding_Shape_Rolling_Operation_from_GUI_Main"></a><img height="375" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Shape Rolling Operation from GUI Main</p>
+  <p> </p>
+  <p>We can also add shape rolling operation into Integrated Manufacturing Process environment from the New Project pop-up when a new problem is opened in Integrated Manufacturing Process environment as shown in <a href="#Fig_43_1_2_Assign_Project_name_and_First_Operation_selection_in_New_Project_window"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>2.</a>    Using “Copy Existing project” option, we can import previous saved projects as new project from the New Project pop-up.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_2_Assign_Project_name_and_First_Operation_selection_in_New_Project_window"></a><img height="386" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assign Project name and select First Operation in New Project window</p>
+  <p><br/> We can also add Shape Rolling operation to operation editor from explorer tab in Integrated Manufacturing Process environment, by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button next to “Shape Rolling”
+    operation (as shown in <a href="#Fig_43_1_3_Adding_operation_from_Explorer_Operation_list"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>3.</a>) or by drag and drop “Shape Rolling” operation into operation editor window. As the
+    “Shape Rolling” operation is added into operation editor <a href="#43_1_3_1_Process">Process</a> selection page will be opened in property settings modification window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_3_Adding_operation_from_Explorer_Operation_list"></a><img height="386" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Shape Rolling operation from Explorer Operation list</p>
+  <h2><a id="43_1_2_Shape_rolling_operation_in_Operation_Editor"></a>Shape rolling operation in Operation Editor</h2>
+  <p>Shape Rolling Operation is set in two different stages, “Rolling Group” level and “Rolling Pass” level. In “Rolling Group” stage, we will be defining the operation at top level with objects 2D cross-section (both Workpiece and Grooves) and Pass information.
+    User can generate 3D objects with this information and then define Simulation controls. If there is no specific change to be modelled at pass level, user can start the simulation with this data. The simulation controls and other process definition
+    defined at Rolling Group is common to all passes. At Rolling Pass stage user can make specific changes to each pass such as add and remove tables/Guides, add and remove Stations, define remeshing conditions and so on.<br/> After adding the Shape rolling
+    operation in Operation Editor, we will observe the Orange ribbon around the Rolling pass operation (as shown in <a href="#Fig_43_1_4_Rolling_Group_Level_is_selected"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>4.</a>) which
+    means we are at Rolling Group stage. When we select the Rolling pass Operation than the Rolling Group orange ribbon turns to blue and the selected Rolling Pass will be highlighted with Orange border as shown in <a href="#Fig_43_1_5_Rolling_Pass_Operation_selected"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_4_Rolling_Group_Level_is_selected"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0004.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rolling Group Level is selected</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_5_Rolling_Pass_Operation_selected"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0005.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rolling Pass Operation selected</p>
+  <h2><strong><a id="43_1_3_Rolling_Group_Level"></a>Rolling Group Level</strong></h2>
+  <h3><a id="43_1_3_1_Process"></a>Process</h3>
+  <p>In Process page user will be specifying the process settings and select the type of Rolling simulation to be performed.<br/>
+    <strong>Rolling type</strong>: The rolling template has two different rolling types. One is steady state ALE rolling and other is Lagrangian (incremental) rolling. <br/>
+    <strong>Lagrangian Rolling Type:</strong> In Lagrangian rolling type, initial workpiece shape is modelled same as actual workpiece and during simulation the workpiece is displaced (deformed) incrementally in all directions based on the output of incremental
+    equations and state variable values are updated. It takes longer period for completion of the simulation since simulation must be continued until the workpiece passes through the last roll set to visualize the output of rolling process, also displacement
+    is calculated in all directions and updated.  </p>
+  <p><strong>ALE Rolling Type</strong>: In ALE (Augmented Lagrangian Eulerian) Rolling type, initial workpiece is modelled approximately closer to the output shape (2.5D simulations are used for better approximation) and workpiece is displaced only in Y
+    and Z directions but not in rolling direction and state variable values are updated. ALE Simulations can be stopped when steady state is reached based on ALE Stopping criteria, steps required to achieve steady-state depends on how close we can model
+    initial workpiece conditions to steady-state condition. ALE Simulations usually take less time for simulation and will be helpful to visualize rolling process output quickly.<br/>
+    <strong>Thermal Calculations</strong>: In thermal calculations page (see <a href="#Fig_43_1_6_Process_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>6.</a>) options are available to select the object types on which thermal
+    calculations need to be performed. User has options to select Calculations in workpiece alone or even in rolls in case of non-isothermal or at constant temperature in case of isothermal models. User can select Calculations in workpiece alone or even
+    in rolls in case of hot rolling process setup. In case of cold rolling process user can select constant temperature or Calculation in workpiece alone to study the temperature change in workpiece.<br/>
+    <strong>Symmetry: </strong>In symmetry tab (see <a href="#Fig_43_1_6_Process_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>6.</a>), we have options to select full model or half symmetry or Quarter symmetry depending on the
+    geometry symmetry to be modelled in the setup.<br/>
+    <strong>Friction coefficient</strong>: We can define the friction coefficient value between rolls and workpiece. This friction co-efficient value is applied between all rolls and workpiece for all the passes, user can modify this value at Rolling
+    Pass level if required (See  <a href="#Fig_43_1_6_Process_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>6.</a>). </p>
+  <p><strong>Heat transfer Coefficient</strong>: We can define the heat transfer coefficient value which will be applied for all the passes from process page(See  <a href="#Fig_43_1_6_Process_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>6.)</a>.</p>
+  <p><strong>Default environment settings</strong>: We can define the Environment temperature and Convection coefficient values for both Rolling and Heat transfer simulations in Process page which are then applied to all the Rolling Pass and Heat transfer
+    operations respectively (See <a href="#Fig_43_1_6_Process_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>6.</a>). We can also customize this environment settings for each pass from Pass table page (See <a href="#Fig_43_1_6_Process_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>6.</a>)</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_6_Process_page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0006.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Process settings definition</p>
+  <p> </p>
+  <h3><a id="43_1_3_2_Workpiece_Page"></a>Workpiece Page</h3>
+  <p>We can define the temperature and object type of a workpiece in this page as shown in the <a href="#Fig_43_1_7_Workpiece_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>7.</a> Plastic object type is selected by default, if user
+    is interested to consider the effect of elastic properties then Elasto-plastic object type can be used. User can import objects from other databases or key files using <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> options or save the object data using <img src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}"/>  options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_7_Workpiece_page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0007.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Workpiece object definition page</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <h4><a id="Geometry_2D"></a>Geometry 2D</h4>
+    </li>
+  </ul>
+  <p>The sectional geometry of the stock can be imported from a file using <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> options or can be created from the
+    <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> (primitives). Modifications to the imported or created geometry can be made using <img src="{{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}"/> option. The geometry can
+    be saved using <img src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}"/>  options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_8_Geometry_page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0008.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_9_Geometry_primitive_page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0009.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry primitive page</p>
+  <ul class="Disc">
+    <li>
+      <h4><a id="Mesh_2D"></a>Mesh 2D</h4>
+    </li>
+  </ul>
+  <p>We can generate the 2D Cross Section mesh by defining the number of elements in guided mode. Advanced options to control 2D mesh generation can be accessed using expert mode <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> toggle
+    button from tool bar. For more information please refer to <a href="../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm">13.1. 2D Mesh Genearation</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_10_Guided_mode_mesh_page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0010.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Guided mode mesh settings</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_11_Expert_mode_mesh_page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0011.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Expert mode mesh settings</p>
+  <ul class="Disc">
+    <li>
+      <h4><a id="Material_page"></a>Material page</h4>
+    </li>
+  </ul>
+  <p>In material page, all the materials added to material list are displayed (As shown in <a href="#Fig_43_1_12_Material_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>12.</a>). User can select the required material to assign it
+    to respective object. If the desired material is not available in the list, then the user can load the material in object material page using Import Material data from a file <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> or
+    Using Load form Library option <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/>. User can also create new material if the material is not available in DEFORM library using <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/>. User can delete the material from list using <img src="{{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}"/> or edit the material data using <img src="{{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}"/>. Modified / newly defined
+    Material can be saved using <img src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}"/>  options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_12_Material_page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0012.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material page</p>
+  <ul class="Disc">
+    <li>
+      <h4><a id="BCC_Page_(Rolling_Group)"></a>BCC Page (Rolling Group)</h4>
+    </li>
+  </ul>
+  <p>In Boundary conditions page, user can assign various boundary constraints to an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. Commonly used boundary conditions are heat exchange
+    with the environment for simulations involving heat transfer, prescribed velocity for enforcing symmetry and Contact between objects in the model. <a href="#Fig_43_1_13_BCC_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>13.</a> shows
+    various BCC that can be assigned to an object at Rolling Group stage.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_13_BCC_page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0013.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">BCC page</p>
+  <h3><a id="43_1_3_3_Groove_List_page" height="0" width="0"></a>Groove List page</h3>
+  <p>In groove list page, user can create or load the rolls groove cross-sections that are used in the operation. We can add a groove by clicking on the <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button. After adding a groove, we need
+    to select the respective groove and define the groove geometry by using the <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> or <img src="{{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}"/> button. Several pre-defined
+    roll designs are available for user to select else user has an option to create rolls from primitives. We can also define the Rotation centre and axis of the grooves as shown in the <a href="#Fig_43_1_14_Groove_List_Page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>14.</a>    Using the <img src="{{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}"/> button we can save the Groove list to a file and using <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon2.jpg' | relative_url }}"/> button we can import the Groove list.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_14_Groove_List_Page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0014.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Groove List Page</p>
+  <p><br/>
+    <strong>Defining the Groove geometry using Define Primitive</strong></p>
+  <p><strong></strong>When we click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> label, Roll groove primitives window will be opened as shown in the <a href="#Fig_43_15_Roll_Groove_Primitive_Page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>15.</a>    We can select any one of the groove shapes, define its parameter and then click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> to create the groove geometry.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_15_Roll_Groove_Primitive_Page"></a><img height="450" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0015.jpg' | relative_url }}" width="570"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Roll Groove Primitive window</p>
+  <h3><a id="43_1_3_4_Pass_Table"></a>Pass Table</h3>
+  <p>In pass table, user can define number of passes and stands in each pass along with the pass setting as shown in  <a href="#Fig_43_1_16_Pass_Table_Page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>16.</a> In this pass table, user
+    can define the Rollset type, select Roll Grooves to be used, Roll speed (rpm), Roll Gap (mm), workpiece Rotation (deg) before entering the pass, Roll temperature, Transfer time to the next pass after completion of the current pass and Customize environment
+    check box to modify the environment settings if they are different from the default values defined in the Process page or using Environment button in the Pass table page.</p>
+  <h4><strong><a id="First_HT"></a>First HT</strong></h4>
+  <p>This is used to simulate a heat transfer operation only for the workpiece before the Pass 1 operation. User can activate First HT Operation to simulate transfer time from the furnace to Pass1. For all other passes user can use “Transfer Time” in pass
+    table to specify the time between end of current selected pass and next pass.</p>
+  <h4><strong><a id="Multi_Pass_Setup"></a>Multi Pass Setup</strong></h4>
+  <p><strong></strong> We can define multiple passes in rolling operation by clicking one <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button in pass table. If user wants to delete any pass, select the respective pass and click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}" width="22"/> button. We can also observe the operation editor that as we increase / decrease the passes, the shape rolling pass tiles are added / deleted respectively. From V14.0,
+    when we click on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button it will add the new pass by copying the previous pass table data.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_16_Pass_Table_Page"></a><img height="500" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0016.jpg' | relative_url }}" width="441"/></p>
+  <p> </p>
+  <p class="Fig_numb">Pass Table Page</p>
+  <h4><strong><a id="Rollset_Type"></a>Rollset Type</strong></h4>
+  <p>Depending on the arrangement of rolls at the roll stand user can select the Rollset type from pull down menu as shown in <a href="#Fig_43_1_17_Assigning_Rollset_type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>17.</a> Depending
+    on the Rollset type selected, the rolls are positioned automatically by the system. User must define number of rolls and their position in case of arbitrary Rollset type.  </p>
+  <h4><strong><a id="Arbitrary_Rolls"></a>Arbitrary Rolls</strong></h4>
+  <p>Arbitrary rolls are used for the problems in which the rolls are placed in specific way to meet special requirements. These rolls can be placed at any arbitrary position in space to which any value can be assigned as per the problem requirement. Basic
+    steps followed in setting up the arbitrary roll design.</p>
+  <ol class="Decimal">
+    <li>
+      <p>Define groove geometry in Groove list page (as shown in <a href="#Fig_43_1_14_Groove_List_Page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>14.</a>).</p>
+    </li>
+    <li>
+      <p>In Pass table page select <strong>Arbitrary </strong>option as Rollset type in a Pass, select the Pass and click on <img src="{{ '/assets/icons/pre_icons/mo_stand_table_button.jpg' | relative_url }}"/> (as shown in <a href="#Fig_43_1_18_Selecting_Arbitrary_rollset_type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>18.</a>).</p>
+    </li>
+    <li>
+      <p>Select the Stand 1 and click on <img src="{{ '/assets/icons/pre_icons/mo_stand_settings.._button.jpg' | relative_url }}"/> button. In stand settings define Number of rolls. Define the Angle with neighbouring roll and select groove geometry for all the rolls from
+        the list. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button (as shown in <a href="#Fig_43_1_19_Defining_Stand_Settings"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>19.</a>).</p>
+    </li>
+    <li>
+      <p>Define the Roll Gap and Roll Speed in the stand table and click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button (as shown in <a href="#Fig_43_1_20_Defining_Stand_Details"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>20.</a>).</p>
+    </li>
+    <li>
+      <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 3D setup page and generate the 3D geometry and observe (as shown in <a href="#Fig_43_1_21_Arbitrary_roll_set_(Four_rolls)"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>21.</a>).</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_17_Assigning_Rollset_type"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0017.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Assigning Rollset type</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_18_Selecting_Arbitrary_rollset_type"></a><img height="372" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0018.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting Arbitrary rollset type</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_19_Defining_Stand_Settings"></a><img height="331" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0019.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Stand Settings</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_20_Defining_Stand_Details"></a><img height="400" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0020.jpg' | relative_url }}" width="475"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Stand Details</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_21_Arbitrary_roll_set_(Four_rolls)"></a><img height="372" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0021.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Arbitrary roll set (Four rolls)</p>
+  <h4><br/>
+    <a id="Defining_Roll_Groove_Geometry_in_Pass_Table"></a>Defining Roll Groove Geometry in Pass Table</h4>
+  <p>Several pre-defined roll designs are available for user to select else user has an option to create rolls from primitives in “Groove list” page. User can select the groove from the pull-down menu in “Top roll”/ “Bottom roll” row. Both Top and Bottom
+    roll are visible in the Pass Table/Stand Table when the rolls are asymmetric. User can activate Asymmetric rolling by checking the check box next to “Show all Rolls”.  When roll geometry is not created from the available primitives, it is important
+    to pay attention to the cross section, the roll center, roll axis and roll diameter data.</p>
+  <h4><strong><a id="Roll_Speed"></a>Roll Speed</strong></h4>
+  <p>User can define the roll speed in “Roll Speed” row. This roll speed is applied to all rolls, if user wants to have differential rolling speed then it can be defined in movement page of the respective object at Pass stage. </p>
+  <h4><br/>
+    <strong><a id="Roll_Gap"></a>Roll Gap</strong></h4>
+  <p>“Roll gap” is the distance used to position rolls using bounding box. This is the distance between Top and Bottom rolls as shown in the <a href="#Fig_43_1_22_Roll_Gap_definition"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_22_Roll_Gap_definition"></a><img height="366" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0022.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll Gap definition</p>
+  <p><br/> For User-defined Rollset type the rolls must be positioned manually instead of the automatic positioning (using bounding box method) as shown in the <a href="#Fig_43_1_23_Roll_Gap_definition_for_User_defined_rollset"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>23.</a>    It will be useful when roll geometry is already positioned appropriately.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_23_Roll_Gap_definition_for_User_defined_rollset"></a><img height="368" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0023.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll Gap definition for User defined rollset</p>
+  <p> </p>
+  <h4><strong><a id="Rotation_(deg)"></a>Rotation (deg)</strong></h4>
+  <p>The user can define the rotation of the workpiece before the simulation of the pass is started. The workpiece will rotate by the amount specified in Rotation (deg) before it is positioned with rolls. This option is not available at the first pass, quarter
+    symmetry Lagrangian model and for Half symmetry model. For Full model, user is allowed to enter the angle and it is available for both ALE and Lagrangain rolling types as shown in the  <a href="#Fig_43_1_24_Rotation_between_passes_for_Full_Model"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>24..</a>    For quarter symmetry ALE model, we are allowed to rotate only by 90 deg by turning on the check box as shown in the <a href="#Fig_43_1_25_Rotation_between_passes_for_quarter_Model"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>25.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_24_Rotation_between_passes_for_Full_Model"></a><img height="337" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0024.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rotation between passes for Full Model</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_25_Rotation_between_passes_for_quarter_Model"></a><img height="335" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0025.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Rotation between passes for quarter Model</p>
+  <p> </p>
+  <p><strong><a id="Reverse_rolling_(For_Lagrangian_rolling_type)"></a>Reverse rolling (For Lagrangian rolling type)</strong><br/> For Lagrangian type rolling simulation, by default the workpiece is assigned movement to move in +X axis direction, but when
+    we turn ON the Reverse rolling check box, the workpiece movement is reversed with respect to the previous pass so that we can have to and fro motion for the workpiece as shown in the <a href="#Fig_43_1_26_Reverse_rolling_option_for_Lagrangian_type_rolling_simulation"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>26.</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_26_Reverse_rolling_option_for_Lagrangian_type_rolling_simulation"></a><img height="500" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0072.jpg' | relative_url }}" width="441"/></p>
+  <p> </p>
+  <p class="Fig_numb">Reverse rolling option for Lagrangian type rolling simulation.</p>
+  <p> </p>
+  <h4><strong><a id="Show_all_rolls_(For_asymmetric_rolling)"></a>Show all rolls (For asymmetric rolling)</strong></h4>
+  <p>This check box is checked when we want to setup an asymmetric rolling. When this check box is activated, user can define different grooves for Top roll and Bottom roll as shown in the <a href="#Fig_43_1_27_Defining_asymmetric_rolling"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>27.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_27_Defining_asymmetric_rolling"></a><img height="500" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0026.jpg' | relative_url }}" width="441"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Defining asymmetric rolling</p>
+  <p><br/>
+    <strong><a id="Running_2.5D_Simulation"></a>Running 2.5D Simulation</strong><br/> This simulation is mostly used for the ALE Rolling Type to generate initial workpiece shape. 2.5D Simulation will provide information about approximate deformation levels
+    in workpiece at the end of rolling. To use the 2.5D simulation user can define Number of sections along the contact between the Rolls and workpiece and click on <img height="26" src="{{ '/assets/icons/pre_icons/mo_2_5_d_simulation_run_button.jpg' | relative_url }}" width="29"/>  button (by default From start option is selected in the combo box). When we click on <img height="26" src="{{ '/assets/icons/pre_icons/mo_2_5_d_simulation_run_button.jpg' | relative_url }}" width="29"/>  button, 2.5D simulation will start to simulate
+    and message file is updated as the simulation progress. If we want to stop the 2.5D simulation, we can click on <img src="{{ '/assets/icons/simulator_icons/mo_stop_icon.jpg' | relative_url }}"/> button and after completion of simulation, click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}" style="cursor: nesw-resize;"/> to close and view the results. </p>
+  <p>From v14.0, user can rerun the 2.5 D simulation or continue from the simulation selected from the combo box. After completion of the 2.5D simulation, the combo box contains all the simulations that 2.5D database contains and user can select one of them
+    to continue from (See <a href="#Fig_43_1_28_2.5_D_Simulation_message_file"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>28.</a>).</p>
+  <p><br/> The <strong>Roll Forming</strong> check box is Useful for thin sections or sheet forming, where bending is more dominant than deformation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_28_2.5_D_Simulation_message_file"></a><img height="425" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0027.jpg' | relative_url }}" width="444"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation message file during 2.5D simulation</p>
+  <p> </p>
+  <p>To view the 2.5 D simulation results, click on <img src="{{ '/assets/icons/pre_icons/mo_show_results_button.jpg' | relative_url }}"/> button. We will observe the Rolling pass Result table as shown in <a href="#Fig_43_1_29_2.5_D_simulation_result_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>29.</a>    We can also plot state variable using state variable pull down menu and selecting respective state variable. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the Results page. The user can open the 2.5D simulation results
+    in the Post Processor by clicking on the <img src="{{ '/assets/icons/pre_icons/mo_open_in_post_label.jpg' | relative_url }}" style="cursor: nesw-resize;"/> button. We can observe that every cross-section result is stored in each step sequentially and for each pass
+    there is a separate operation. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_29_2.5_D_simulation_result_page"></a><img height="372" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0028.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Simulation results of 2.5D Simulation</p>
+  <h4><br/>
+    <a id="Stand_Table"></a>Stand Table <img src="{{ '/assets/icons/pre_icons/mo_stand_table_button.jpg' | relative_url }}"/></h4>
+  <p>A pass can have a single stand or multiple stands. If a pass is having multiple stands than user can select the respective pass and then click on the <img src="{{ '/assets/icons/pre_icons/mo_stand_table_button.jpg' | relative_url }}"/> button to open the Stand table
+    window of the respective pass. In stand table user can add stands or remove stands using <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> and <img src="{{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}"/> buttons. Distance between
+    the current stand and previous stand is specified in “X position”. User can select the respective stand column and click on the <img src="{{ '/assets/icons/pre_icons/mo_stand_settings.._button.jpg' | relative_url }}"/> button. We can run the 2.5D Simulation for
+    Multi stands in stand table like in Pass table (See <a href="#Fig_43_1_30_Multi_Stand_Table_Page_for_Pass_1"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>30.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_30_Multi_Stand_Table_Page_for_Pass_1"></a><img height="366" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0029.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Multi Stand Table Page for Pass 1</p>
+  <h4><br/>
+    <a id="Stand_Settings"></a>Stand Settings <img src="{{ '/assets/icons/pre_icons/mo_stand_settings.._button.jpg' | relative_url }}"/></h4>
+  <p>In Stand settings, user can select the Groove design of the rolls and define its speed. In case of arbitrary and user-define rolls, we can define the roll angle with the neighbouring roll. It also shows the Symmetry data of the rolls as shown in the
+    <a href="#Fig_43_1_31_Roll_Stand_Settings_Page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>31</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_31_Roll_Stand_Settings_Page"></a><img height="375" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0030.jpg' | relative_url }}" width="516"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Roll Stand Settings Page</p>
+  <p> </p>
+  <h3><a id="43_1_3_5_3D_Setup_Page"></a>3D Setup Page</h3>
+  <p>User can define settings to convert 2D- Cross section into 3D geometry in this page. These settings are different for Lagrangian and ALE Rolling types.</p>
+  <h4><strong><a id="3D_setup_page_for_ALE_Rolling_type"></a>3D setup page for ALE Rolling type</strong></h4>
+  <p>3D setup page for ALE Rolling is as shown in <a href="#Fig_43_1_32_ALE_Rolling_Type_3D_Setup_Page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>32.</a> User can click on <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/> button next to 3D rolls geometry, 3D rolls mesh and 3D Workpiece mesh to modify the respective settings. 3D settings for rolls geometry are as shown in the <a href="#Fig_43_1_33_3D_Roll_Geometry_page_for_ALE_Rolling_type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>33.</a>    3D rolls mesh options as shown in the <a href="#Fig_43_1_34_3D_Rolls_Mesh_generation_page_for_ALE_Rolling_Type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>34.</a> 3D workpiece mesh options as shown in the <a href="#Fig_43_1_35_3D_Workpiece_Mesh_generation_page_for_ALE_Rolling_Type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>35.</a></p>
+  <p>After defining the settings for both 3D Workpiece and 3D Rolls, user can click on <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button_2.jpg' | relative_url }}"/> button in the 3D setup page to generate 3D geometries and mesh, setup looks like as shown in
+    the <a href="#Fig_43_1_39_3D_setup_for_ALE_Rolling_type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>39.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_32_ALE_Rolling_Type_3D_Setup_Page"></a><img height="278" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0031.jpg' | relative_url }}" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb"> ALE Rolling Type 3D Setup Page</p>
+  <h4><strong><a id="3D_roll_geometry_settings"></a>3D roll geometry settings <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/></strong></h4>
+  <p style="text-align: center"><a id="Fig_43_1_33_3D_Roll_Geometry_page_for_ALE_Rolling_type"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0032.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Roll Geometry page for ALE Rolling type</p>
+  <p> </p>
+  <ul>
+    <li>
+      <p><strong>Number of Layers:</strong>  User can define number of layers along the rotation of the 2D cross-section.</p>
+    </li>
+    <li>
+      <p><strong>Size ratio:</strong>  If user is having a finer geometry then the size ratio between maximum size to minimum size in the Finer geometry region can be defined here.</p>
+    </li>
+    <li>
+      <p><strong>Uniform Geometry option:</strong> When user uses this radio button, the 3D geometry will be generated with uniform layer thickness along the rotation of the 2D cross-section.</p>
+    </li>
+    <li>
+      <p><strong>Finer Geometry from: </strong> If user would like to have finer geometry at the contact region to increase the accuracy of the calculations, then user can specify the start and end angle of the finer geometry. </p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong><a id="3D_roll_mesh_settings"></a>3D roll mesh settings <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/></strong></p>
+  <p>This option will be available only after selecting the Workpiece and rolls (non-isothermal) option from the process page. In roll mesh settings page, user can define the number of elements for 2D Cross section mesh, 3D mesh parameters and material for
+    rolls. These settings are applied for all rolls. User can modify these settings from respective pass.</p>
+  <p style="text-align: center"><a id="Fig_43_1_34_3D_Rolls_Mesh_generation_page_for_ALE_Rolling_Type"></a><img height="450" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0073.jpg' | relative_url }}" width="556"/></p>
+  <p class="Fig_numb">3D Rolls Mesh generation page for ALE Rolling Type</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Cross section</strong>:  User can define the target number of elements for 2D cross section mesh.</p>
+    </li>
+    <li>
+      <p><strong>Uniform mesh generation</strong>: When user uses this radio button, the 3D mesh will be generated with uniform layer thickness along the rotation of the 2D cross-section.</p>
+    </li>
+    <li>
+      <p><strong>Finer mesh from</strong>:  If user would like to have finer mesh at the contact region to increase the accuracy of the calculations, then user can specify the start and end angle of the finer mesh.</p>
+    </li>
+    <li>
+      <p><strong>Material </strong><strong>for </strong><strong>rolls</strong>:  We can assign the material for rolls by importing material data from a file or library.</p>
+    </li>
+  </ul>
+  <h4><a id="3D_Workpiece_settings"></a>3D Workpiece settings <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/></h4>
+  <p>In workpiece settings page user can define the Workpiece length, meshing method and mesh settings to be used while generating 3D shape.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_35_3D_Workpiece_Mesh_generation_page_for_ALE_Rolling_Type"></a><img height="345" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0033.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Workpiece Mesh generation page for ALE Rolling Type</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Workpiece length: </strong> User can choose “System” defined length or select “User” and define custom size as require.</p>
+    </li>
+    <li>
+      <p><strong>Meshing method:</strong>  They are 3 methods available for meshing in ALE type of rolling,</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><strong>Boolean: </strong>The workpiece shape is created and meshed by performing boolean operation at the contact of roll and workpiece.</p>
+    </li>
+    <li>
+      <p><strong>2.5D Results:</strong> The workpiece shape at the contact of roll and workpiece is created and meshed based on the 2.5 D results.</p>
+    </li>
+    <li>
+      <p><strong>Thin Section:</strong> This option is used when thin sheets are simulated. The workpiece shape is created and meshed similar to Boolean operation, but more layers are added along the thickness.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p><strong>3D Mesh density control</strong></p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><strong>Number of Layers: </strong>Number of layers to be used along the rolling direction to generate workpiece mesh is defined here.</p>
+    </li>
+    <li>
+      <p><strong>Size Ratio:</strong> When finer mesh is used closer to the contact zone for accurate results then size ratio will be used to determine the layers thickness. It is the ratio between the maximum layer thickness and minimum layer thickness.</p>
+    </li>
+    <li>
+      <p><strong>Uniform Thickness of layers: </strong>If user would like to create a workpiece with constant layer thickness along the rolling direction then user can select this option. Mesh generated with “<strong>Uniform</strong><strong> Thickness of layers</strong>”
+        will look like as shown in the <a href="#Fig_43_1_36_Mesh_generation_using_uniform_thickness_of_layers_option"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>36.</a></p>
+    </li>
+    <li>
+      <p><strong>Finer mesh from:</strong> Finer mesh from is used to define the start and end point of the finer mesh. It is defined between 0 to 1, 0 is the start of the workpiece and 1 is end of the workpiece. Workpiece mesh generated with “Finer mesh
+        from” looks like as shown in the<a href="#Fig_43_1_37_Mesh_generation_using_finer_mesh_from_option"> <span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>37.</a></p>
+    </li>
+    <li>
+      <p><strong>Finer mesh zones: </strong>Using this Option, the user can define the different zones with different number of layers in each zone. Starting position is the absolute distance from which mesh zones are created, by default it is exit end of
+        workpiece. Workpiece mesh generated with “Finer mesh zones” looks like as shown in the <a href="#Fig_43_1_38_Mesh_generation_using_finer_mesh_zones_option"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>38.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_36_Mesh_generation_using_uniform_thickness_of_layers_option"></a><img height="372" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0034.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh generation using &quot;Uniform thickness of layers&quot; option</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_37_Mesh_generation_using_finer_mesh_from_option"></a><img height="372" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0035.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Mesh generation using &quot;Finer mesh from&quot; option</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_38_Mesh_generation_using_finer_mesh_zones_option"></a><img height="372" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0036.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Mesh generation using &quot;Finer mesh zones&quot; option</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_39_3D_setup_for_ALE_Rolling_type"></a><img height="372" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0037.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D setup for ALE Rolling type</p>
+  <p> </p>
+  <h4><a id="3D_Setup_page_for_Lagrangian_Rolling_type"></a>3D Setup page for Lagrangian Rolling type</h4>
+  <p>3D setup page for a Lagrangian Rolling type is as shown in <a href="#Fig_43_1_40_Lagrangian_Rolling_Type_3D_Setup_Page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>40.</a> In addition to the 3D Roll and 3D Workpiece settings,
+    we have Pusher settings, Auto position and Prevent twisting. After defining the 3D Workpiece, 3D Rolls and Pusher settings, click on <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button_2.jpg' | relative_url }}"/> button in the 3D setup page to generate
+    3D geometries and mesh, setup looks like as shown in the <a href="#Fig_43_1_44_3D_setup_for_Lagrangian_Rolling_type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>44.</a> </p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>3D Roll settings <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/>:</strong>  The settings are similar to ALE 3D Roll settings, except that we do not have options to create finer geometry as shown in the <a href="#Fig_43_1_41_3D_Roll_Geometry_page_for_Lagrangian_Rolling_type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>41.</a> </p>
+    </li>
+    <li>
+      <p><strong>3D Roll mesh settings</strong> <strong><img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/></strong> :  The settings are similar to ALE 3D Roll mesh settings, except that we do not have options to create finer mesh as
+        shown in the  <a href="#Fig_43_1_42_3D_Roll_mesh_page_for_Lagrangian_type_Rolling"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>42.</a> </p>
+    </li>
+    <li>
+      <p><strong>3D Workpiece settings</strong> <strong><img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/></strong>: We can use the Tetrahedral or Brick mesh type to generate mesh for the workpiece in Lagrangian rolling type as shown
+        in the <a href="#Fig_43_1_43_3D_Workpiece_Mesh_generation_page_for_Lagrangian_Rolling_Type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>43.</a></p>
+    </li>
+    <li>
+      <p><strong>Pusher:</strong> User may use pusher to push the workpiece towards the rolls with some speed to complete the shape rolling simulation. “None” can be selected if user does not want to use pusher. If user wants to use pusher then pusher can
+        be defined as,</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><strong>Object: </strong>When this option is selected a separate rigid Pusher object is created with default velocity calculated based on the Roll speed. The object dimensions and mesh can be modified at Pass stage Pusher object settings.</p>
+    </li>
+    <li>
+      <p><strong>BCC: </strong>When this option is selected, it eliminates artificial distortion at the end of the workpiece resulting from contact with pusher. This will be activated through pusher boundary condition on the workpiece and assign the movement
+        controls to workpiece. The velocity is calculated based on the Roll speed and can be modified by changing the workpiece velocity in Movement page at “Pass Stage”</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p><strong>Prevent twisting:</strong> If user does not want to model workpiece twisting during rolling then user can check this check box to prevent twisting. This check box when checked, it prevents the rotation of workpiece in Lagrangian rolling
+        so that it stays fixed to the x-axis through the rolling process. This will automatically assign the No Rotation Boundary condition for the workpiece when we select the “Prevent twisting” check box.</p>
+    </li>
+    <li>
+      <p><strong>Auto Position <img height="21" src="{{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }}" width="75"/>:</strong> The user can position all the generated objects automatically by clicking on <strong><img height="21" src="{{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }}" width="75"/></strong>        button. The workpiece will be interference positioned with the first roll set top roll in in rolling direction and Pusher is positioned at rear end of the workpiece by interference position with workpiece in rolling direction.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_40_Lagrangian_Rolling_Type_3D_Setup_Page"></a><img height="216" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0038.jpg' | relative_url }}" width="650"/></p>
+  <p> </p>
+  <p class="Fig_numb">Lagrangian Rolling Type 3D Setup Page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_41_3D_Roll_Geometry_page_for_Lagrangian_Rolling_type"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0039.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Roll Geometry page for Lagrangian type Rolling </p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_42_3D_Roll_mesh_page_for_Lagrangian_type_Rolling"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0074.jpg' | relative_url }}" style="cursor: nesw-resize;"/></p>
+  <p class="Fig_numb" style="text-align: center;">3D Roll mesh page for Lagrangian type Rolling </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_43_3D_Workpiece_Mesh_generation_page_for_Lagrangian_Rolling_Type"></a><img height="414" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0040.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Workpiece Mesh generation page for Lagrangian type Rolling</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_44_3D_setup_for_Lagrangian_Rolling_type"></a><img height="372" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0041.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D setup for Lagrangian type Rolling</p>
+  <h3><a id="43_1_3_6_Simulation_Controls"></a>Simulation Controls</h3>
+  <p>Simulation control settings can be defined at the Rolling Group level and apply those settings to all passes using <img src="{{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}"/>. User can make changes to these settings for any specific
+    pass at Pass level Simulation Controls, advanced settings are accessible using expert mode at Pass level. Simulation control settings for ALE and Lagrangian rolling types is shown in <a href="#Fig_43_1_45_Simulation_Controls_for_GUIDED_Mode"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>45.</a>    “Global step controls” are similar for both ALE and Lagrangian, while the stopping criteria settings are different.</p>
+  <h4>Global step controls</h4>
+  <p><strong>Number of steps: </strong>Number of steps to be simulated during each Pass and HT can be defined at Rolling group level which will applied to all passes and HT operations of that Rolling group. If the simulation stops due to stopping criteria
+    before completion of defined steps then next operation starting step will be continuation from previous operation.</p>
+  <p><strong>Step increment: </strong> The step increment (STPINC) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved
+    in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.</p>
+  <p><strong>Time per Step: </strong>If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.</p>
+  <p><strong>Stroke per Step:</strong> If stroke per step is specified, the primary die will move the specified amount in each time step. The total movement of the primary die will be the displacement per step multiplied by the total number of steps.</p>
+  <p><strong>User: </strong>It will allow the users to specify their own step size. User should provide an appropriate step size to meet their stopping condition based on their number of steps.</p>
+  <p><strong>System:</strong> It will automatically calculate the step size to meet their stopping condition based on their number of steps.</p>
+  <h4>Stopping criteria </h4>
+  <p><strong>ALE Stopping criteria: </strong>ALE simulation can be automatically stopped once the steady state is reached with respect to diminishing gradients of the state variables and the geometry corrections reaching the exit section.  This stopping
+    criterion can be activated by turning on “Check ALE steady-state convergence” check box and defining the ALE Steady-State convergence settings.</p>
+  <p><strong>Volume rate stopping criterion</strong>: Simulation will be stopped when volume rate ratio between entry and exit is within the stopping criteria.<br/>
+    <strong>ALE with volume rate control</strong>: When ALE with volume rate control is turned on, then simulation will try to use Volume rate constancy between exit and entry and try to minimize the difference between volume rate at entry and exit to
+    improve the accuracy of the solution.<br/>
+    <strong>ALE with rigid transfer</strong>: When ALE with rigid transfer is turned on, then system will identify the rigid zones and deformation zones similar to RSE and nodes within rigid zone will not be updated which will decrease the time to reach
+    convergence in general.<br/>
+    <strong>Lagrangian stopping criteria:</strong> Lagrangian rolling simulations can be automatically stopped once the billet passes through the last roll set center or at any plane along the roll pass direction as user desires. The stopping plane can
+    be defined in “Stopping criteria” by specifying the co-ordinate on the stopping plane and direction will be rolling direction by default, which is set automatically, see <a href="#Fig_43_1_45_Simulation_Controls_for_GUIDED_Mode"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>45.</a>      After all nodes of workpiece cross this defined point (imaginary plane) the simulation stops for that pass. These settings can be defined independently for each pass at Pass level, roll pass direction +X or -X can be selected based on rolls movement
+    as shown in <a href="#Fig_43_1_45_Simulation_Controls_for_GUIDED_Mode"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>45.</a></p>
+  <p><strong>Solver</strong>: We can apply the solver settings for all passes of the rolling group as shown in <a href="#Fig_43_1_45_Simulation_Controls_for_GUIDED_Mode"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>45.</a>  By default,
+    “MUMPS” solver for ALE type rolling simulation and “Conjugate gradient” solver for Lagrangian type rolling simulation is selected.<br/>
+    <strong>Iteration method</strong>: User can select the iteration method as shown in <a href="#Fig_43_1_45_Simulation_Controls_for_GUIDED_Mode"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>45.</a> either Direct iteration or Newton-Raphson,
+    which will be applied for all the passes of the rolling group.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_45_Simulation_Controls_for_GUIDED_Mode"></a><img height="358" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0042.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Controls for GUIDED Mode</p>
+  <p> </p>
+  <p><strong>Apply to all passes:</strong> If user wants to overwrite the independent simulation controls with global simulation controls or apply changes in the global simulation controls to all passes then user can use Apply to all passes, as shown in
+    <a href="#Fig_43_1_45_Simulation_Controls_for_GUIDED_Mode"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>45.</a> which will overwrite the simulation controls of all passes with global simulation controls. User can also define
+    step controls and stopping criteria for each pass independently as shown in <a href="#Fig_43_1_46_Simulation_controls_in_GUIDED_Mode_(Operation_level)"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>46.</a> The settings defined
+    at pass level will have precedence over global simulation controls.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_46_Simulation_controls_in_GUIDED_Mode_(Operation_level)"></a><img height="300" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0043.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls in GUIDED Mode (Operation level)</p>
+  <h3><a id="43_1_3_7_Generate_DB"></a>Generate DB</h3>
+  <p>In Generate DB page, we can observe the Operation Simulation setup summary as shown in <a href="#Fig_43_1_47_Generate_DB_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>47.</a></p>
+  <p><strong>Check Data </strong><img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/>: It checks the Data. If Data is correct, we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before
+    generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.</p>
+  <p><strong>Generate Database</strong> <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/>: By clicking on this button, it generates the Database for the setup. When user generates DB at Rolling Group level then the database is generated
+    from the start of the rolling operation. (See <a href="#Fig_43_1_47_Generate_DB_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>47.</a> )</p>
+  <p><strong>Append Key file :</strong> Any information that is not defined in the template but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values
+    can be defined as .key file and store in specified path. When necessary only values in .key file can be changed and simulation can be resubmitted to study the effect of the change in parameters.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_47_Generate_DB_page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0044.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate DB page</p>
+  <p> </p>
+  <h2><a id="43_1_4_Shape_Rolling_Pass_Level"></a>Shape Rolling Pass Level</h2>
+  <p>After completion of the global level data definition a Rolling Group level, user can select a Pass from the operation editor to make changes to the respective pass. As the user select the pass Stand table page is opened in Property editor space. User
+    can add tables, add/ remove stands at pass level stand table, this stand table is also accessible from Pass table (see <a href="#Fig_43_1_48_Rolling_Pass_level_operation_tree"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>48.</a>).
+    Remesh criteria and advanced settings using expert mode are accessible only at pass level. Operation tree at Roll Pass level for Lagrangian rolling and ALE rolling looks like as shown in <a href="#Fig_43_1_48_Rolling_Pass_level_operation_tree"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>48.</a></p>
+  <p>In ALE and Lagrangian Rolling pass user can define or modify following data for respective objects,<br/>
+    <strong>Workpiece:</strong> Object type (Plastic/ Elasto-plastic type is preferred for shape rolling), Geometry, Mesh settings, Material, Boundary conditions, movement controls, initialize state variable values (temperature, strain… etc) and Built-in-flownet.</p>
+  <p><strong>Rolls:</strong> Object type (Rigid/ Elastic type is preferred for shape rolling), Geometry, Mesh settings, Material, Boundary conditions and movement controls.</p>
+  <p><strong>Pusher </strong>(Lagrangian Rolling type): Object type (Rigid type is preferred for shape rolling), Geometry, Mesh settings, Material, Boundary conditions and movement controls.</p>
+  <p><strong>Table/ Guide</strong> (Lagrangian Rolling type): Object type (Rigid type is preferred for shape rolling), Geometry, Mesh settings, Material and Boundary conditions.</p>
+  <p>Apart from the above data user can perform schedule positioning between passes, modify inter-object data and simulation controls.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_48_Rolling_Pass_level_operation_tree"></a><img height="421" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0045.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rolling Pass level operation tree</p>
+  <p> </p>
+  <h3 class="Heading3_43_1_4_"><a id="43_1_4_1_Stand_Table"></a>Stand Table</h3>
+  <p>As the user opens Pass level for a Pass, “Stand Table” page is opened. User can add multiple stands if a pass is having more than one stand (see <a href="#Fig_43_1_49__Stand_table_page_(Operation_level)"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>49.</a>),
+    data for each stand can be defined using <img src="{{ '/assets/icons/pre_icons/mo_stand_settings.._button.jpg' | relative_url }}"/> button  (for more details on “Stand Settings” refer <a href="#Stand_Settings">Stand</a><a href="#Stand_Settings"> </a><a href="#Stand_Settings">Settings</a> from
+    <a href="#43_1_3_Rolling_Group_Level">Rolling Group level</a>). Defining Roll set type, Rolls groove geometry, Roll speed and Roll gap in “Stand Table” is similar to Pass table.  <br/> In Stand Table user have options to select whether to use table/guide
+    in respective stand (see <a href="#Fig_43_1_49__Stand_table_page_(Operation_level)"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>49.</a>), a stand can have “Table Front” (at exit end) and “Table Back” (at entry end) or only one
+    of them. User can select any stand and Table (see <a href="#Fig_43_1_50_Defining_table_geometry_from_the_Stand_table_page_(Operation_level)"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>50.</a>) to define its data using <img src="{{ '/assets/icons/pre_icons/mo_define_button2.jpg' | relative_url }}"/> button at the top of stand table as shown in the <a href="#Fig_43_1_50_Defining_table_geometry_from_the_Stand_table_page_(Operation_level)"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>50.</a>,
+    for more details on Table definition refer Table geometry.  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_49__Stand_table_page_(Operation_level)"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0046.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stand table page (Operation level)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_50_Defining_table_geometry_from_the_Stand_table_page_(Operation_level)"></a><img height="435" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0047.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining table geometry from the Stand table page (Operation level)</p>
+  <p> </p>
+  <h3 class="Heading3_43_1_4_"><a id="43_1_4_2_Roll_Stand_Page"></a>Roll Stand Page</h3>
+  <p>In this page it shows the Rolls data for the respective selected stand as shown in the <a href="#Fig_43_1_51_Roll_stand_1_page_(Operation_level)"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>51.</a>, refer <a href="#Stand_Settings">Stand settings</a> from
+    <a href="#43_1_3_Rolling_Group_Level">Roll Group level</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_51_Roll_stand_1_page_(Operation_level)"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0048.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll stand 1 page (Operation level)</p>
+  <h4><a id="Roll_Geometry_page"></a>Roll Geometry page</h4>
+  <p>In this page user can define or change the geometry settings which is generated in the 3D Setup page. The user is provided with both guided mode and expert mode geometry settings (as shown in <a href="#Fig_43_1_52_Roll_geometry_page_in_GUIDED_Mode__(Operation_level)"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>52.</a>    and <a href="#Fig_43_1_53_Roll_Geometry_page_in_EXPERT_Mode__(Operation_level)"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>53.</a>). For advanced geometry setting which are available in expert mode please refer to 3D geometry
+    setting.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_52_Roll_geometry_page_in_GUIDED_Mode__(Operation_level)"></a><img height="375" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0049.jpg' | relative_url }}" width="477"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll geometry page in GUIDED Mode  (Operation level)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_53_Roll_Geometry_page_in_EXPERT_Mode__(Operation_level)"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0050.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll Geometry page in EXPERT Mode  (Operation level)</p>
+  <h4> </h4>
+  <h4><a id="Roll_Mesh_Page"></a>Roll Mesh Page</h4>
+  <p>In operation level we can generate the rolls mesh. When we visit the roll mesh page by default the Brick mesh type is select as shown in the <a href="#Fig_43_1_54_Roll_Mesh_page_(Operation_level)"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>54.</a>    For more information please go through the <a href="../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm">13.2. 3D Tet Mesh Generation</a> and <a href="../../pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation.htm">13.3. 3D Brick Mesh Generation</a>.
+    Lagrangian Rolling type can be set up using both Brick and Tetrahedral mesh while ALE rolling type can be set only using Brick mesh.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_54_Roll_Mesh_page_(Operation_level)"></a><img height="480" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0051.jpg' | relative_url }}" width="439"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Roll Mesh page (Operation level)</p>
+  <h4><a id="Roll_Movement_page"></a>Roll Movement page</h4>
+  <p>The Roll Movement can be defined in both Guided Mode and Expert Mode. Using guided mode user can define Roll movement as Angular velocity or Torque. The movement can be constant, function of time and function of angle as shown in <a href="#Fig_43_1_55_Roll_Movement_Controls_in_GUIDED_Mode"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>55.</a><br/>    A roll can be a spring loaded, in such case user can turn on Spring loaded check box and define Stiffness (can be constant or Function of displacement), Pre-load, Current displacement and Maximum Displacement as shown in <a href="#Fig_43_1_56_Defining_Spring_loaded_movement_data_in_GUIDED_Mode"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>56.</a><br/>    If user wants to define any advanced movement controls, then it can be done using Expert mode settings as shown in <a href="#Fig_43_1_57_Roll_Movement_Controls_in_EXPERT_Mode"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>57.</a>    for more details on these settings please refer <a href="../../pre_processor/15_movement_controls_definition/15_movement_controls_settings.htm">15. Movement Controls Settings</a>. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_55_Roll_Movement_Controls_in_GUIDED_Mode"></a><img height="375" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0052.jpg' | relative_url }}" width="470"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Roll Movement Controls in GUIDED Mode</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_56_Defining_Spring_loaded_movement_data_in_GUIDED_Mode"></a><img height="375" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0053.jpg' | relative_url }}" width="513"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Spring loaded movement data in GUIDED Mode</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_57_Roll_Movement_Controls_in_EXPERT_Mode"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0054.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll Movement Controls in EXPERT Mode</p>
+  <p> </p>
+  <h3 class="Heading3_43_1_4_"><a id="43_1_4_3_Table/Guide_geometry_page"></a>Table/Guide geometry page</h3>
+  <p>User can use primitives to define the Table/ Guide geometry using <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> button. When user clicks on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> button,
+    Table/Guide primitive definition window will be opened as shown in <a href="#Fig_43_1_58_Table_Geometry_Primitive"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>58.</a></p>
+  <p><br/> The user can define the Table/Guide parameters click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> to generate table/guide. User can define Guide instead of table by turning on “Define table as guide for asymmetric shape
+    rolling” check box as shown in <a href="#Fig_43_1_59_Guide_Geometry_Primitive"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>59.</a><br/>
+    <strong>Origin point:</strong> It is Left bottom corner co-ordinate of the Table2D cross-section in case of table (see <a href="#Fig_43_1_58_Table_Geometry_Primitive"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>58.</a>) and
+    inner Left Corner Radius center point in case of Guide (see <a href="#Fig_43_1_59_Guide_Geometry_Primitive"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>59.</a>).</p>
+  <p><strong>Table/ Guide Parameters:</strong> Width (W), Height (H) and Length of the Table / Guide can be defined here.</p>
+  <p><strong>Guide Thickness (T): </strong>Thickness of the guide can be specified here.</p>
+  <p><strong>Guide Corner Radius (if any): </strong>Guide corner radius can be specified here.</p>
+  <p><strong>Positioning/ Pass Line:</strong> Table can be aligned with the roll by defining “Pass line (PL)” value after turning on “Align to the top of bottom roll for strip rolling” check box, see <a href="#Fig_43_1_58_Table_Geometry_Primitive"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>58.</a>    The table will be moved down from the bottom roll top surface by the amount of Pass line value and then interference positioned in +X direction (for back table) / -X direction (for front table).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_58_Table_Geometry_Primitive"></a><img height="500" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0055.jpg' | relative_url }}" width="510"/></p>
+  <p> </p>
+  <p class="Fig_numb">Table Geometry Primitive definition</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_59_Guide_Geometry_Primitive"></a><img height="475" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0056.jpg' | relative_url }}" width="398"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Guide Geometry Primitive definition</p>
+  <p> </p>
+  <h3 class="Heading3_43_1_4_"><a id="43_1_4_4_Workpiece_Object_page"></a>Workpiece Object page</h3>
+  <p>The user can define the Object name, Temperature and object type (As shown in <a href="#Fig_43_1_60_Workpiece_object_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>60.</a>). <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic">Plastic object type</a>    is selected by default, if user is interested to consider the effect of elastic properties then <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic">Elasto-plastic</a> object
+    type can be used. </p>
+  <p>For Lagrangian rolling type we can import the 3D Workpiece object using the <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> options at the first pass.
+    If the Workpiece object is imported from a file then the mesh settings will be as shown in  <a href="#Fig_43_1_61_Workpiece_general_mesh_for_imported_object_or_geometry"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>61.</a> which
+    is similar to the Forming operation mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_60_Workpiece_object_page"></a><img height="260" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0057.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece object page</p>
+  <h4><a id="Workpiece_Mesh_"></a>Workpiece Mesh </h4>
+  <p>The mesh settings of workpiece are similar to that of mesh settings in <a href="#43_1_3_5_3D_Setup_Page">3D setup page</a> of Workpiece mesh generation at Rolling Group level, for details on the mesh settings refer 3D setup page. For Lagrangian setup
+    if we import the Workpiece object or geometry, then we will get the general mesh page to generate the 3D workpiece mesh as shown in <a href="#Fig_43_1_61_Workpiece_general_mesh_for_imported_object_or_geometry"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>61.</a>    For more information on this Mesh page, please go through the <a href="../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm">13.2. 3D Tet Mesh Generation</a> and <a href="../../pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation.htm">13.3. 3D Brick Mesh Generation</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_61_Workpiece_general_mesh_for_imported_object_or_geometry"></a><img height="354" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0077.jpg' | relative_url }}" width="570"/></p>
+  <p class="Fig_numb" style="text-align: center;">Workpiece general mesh for imported object or geometry.</p>
+  <p> </p>
+  <p><br/>
+    <strong>Force remeshing between Passes in ALE Rolling Type</strong></p>
+  <p>From second Pass onwards, user can turn on “Force remeshing” check box in Workpiece mesh page and define the number of elements under “Meshing between passes” to generate new mesh before the start of the Pass simulation, see <a href="#Fig_43_1_62_ALE_Workpiece_mesh_page_for_second_pass"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>62.</a><br/>
+    <strong>Entry cross section mesh from last operation:</strong><br/> The “Cross section at exit” or “Cross section at last roll contact” from last operation can be used as an entry 2D cross section for the current pass and generating 3D ALE mesh for
+    subsequent rolling.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_62_ALE_Workpiece_mesh_page_for_second_pass"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0058.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">ALE Workpiece mesh page for second pass</p>
+  <p><br/>
+    <strong>Remeshing between Passes in Lagrangian Rolling type</strong></p>
+  <p>In Lagrangian rolling type user can perform some additional actions apart from Force remeshing as shown in <a href="#Fig_43_1_63_Lagrangian_Workpiece_mesh_page_for_second_pass"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>63.</a></p>
+  <p><strong>Force Remeshing: </strong>When this checkbox is turned on, then a new mesh will be generated with the specified number of elements before the pass simulation is started. For brick mesh, we will define the targeted 2D cross section mesh elements
+    and for tetrahedral mesh, we will define the targeted elements for 3D workpiece mesh.</p>
+  <p><strong>Axial Subdivision:</strong> By turning on this checkbox, the layer thickness in the new mesh along the rolling direction can be controlled using Axial subdivision value either by absolute length or aspect ratio.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_63_Lagrangian_Workpiece_mesh_page_for_second_pass"></a><img height="259" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0059.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Lagrangian Workpiece mesh page for second pass</p>
+  <p><br/>
+    <strong>Schedule to align workpiece to X- axis:</strong>  If the workpiece axis moves away from the X- axis then the workpiece axis will be aligned with X-axis.</p>
+  <p> </p>
+  <p><strong><a id="Boolean_between_passes"></a>Boolean between passes</strong></p>
+  <p>From second pass onwards, user can perform boolean operation to remove the extra material and control the regions of interest and the model size across multiple passes in a typical transient rolling process. In Lagrangian operation, as the stock or
+    workpiece moves from one pass to another, its length increases. Mesh system used in the initial passes may soon become less effective to handle contact conditions in the subsequent passes due to the element stretching in the deforming region. Finer
+    mesh from the start of the passes could be computationally more expensive. By using this Boolean operation, the user can select an area of interest in the rolling direction and periodically delete the workpiece that is stretched beyond this domain
+    during rolling process. For example, if the end effects are not required to be modelled, user can trim the end regions after a set number of passes while maintaining good contact and material flow description with a model size that is computationally
+    efficient. This can be done using the different options available as given below ( <a href="#Fig_43_1_64_Boolean_Between_Passes_Option"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>64.</a>).<br/> S1 and S2 can be defined between
+    0 to 1, S1 represents front end while S2 represents rear end, 0 being the front end and 1 representing rear end. When S1 is “0”, the front-end mesh will be kept and when S2 is “1”, the rear end mesh will be kept.<br/> For brick mesh type, new mesh
+    will be generated based on the selection in Option tab,<br/> 0 – Keep the original mesh between S1 and S2<br/> 1 – Project the nodes at front end and rear end to a plane<br/> 2 – Smooth the axial location to sample the nodes.<br/> 3 – Specify axial
+    locations to sample the nodes.</p>
+  <p style="text-align: center"><a id="Fig_43_1_64_Boolean_Between_Passes_Option"></a><img height="604" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0060.jpg' | relative_url }}" width="650"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Boolean Between Passes Option for birck mesh</p>
+  <p> From v14, Boolean operation between the passes can be added even for the workpiece with Tet mesh ( <a href="#Fig_43_1_65_Boolean_Between_Passes_Option_for_tetrahedral_mesh"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>65.</a>)..</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_65_Boolean_Between_Passes_Option_for_tetrahedral_mesh"></a><img height="340" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0076.jpg' | relative_url }}" width="550"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Boolean Between Passes Option for tetrahedral mesh</p>
+  <h4><a id="Workpiece_BCC"></a>Workpiece BCC </h4>
+  <p><strong>For ALE Rolling Type</strong><br/> The user can define the Symmetry, Deformation, Thermal and Diffusion BCC data depending on the process requirement. Beginning surface (entry end) and Free surface (exit end) must be defined for ALE Rolling
+    type. By default, the Beginning surface and Free surface BCC data is assigned under deformation for ALE models see <a href="#Fig_43_1_66_Beginning_surface_BCC_for_ALE_Rolling_type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>66.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_66_Beginning_surface_BCC_for_ALE_Rolling_type"></a><img height="360" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0061.jpg' | relative_url }}" style="cursor: nwse-resize;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Beginning surface BCC for ALE Rolling type</p>
+  <p> </p>
+  <p><strong>For Lagrangian Rolling Type</strong><br/> The user can define the Symmetry, Deformation, Thermal and Diffusion BCC data depending on the process requirement.  For Lagrangian rolling type we have “Pusher” and “No rotation” options available under
+    the Deformation -&gt; Rolling as shown in <a href="#Fig_43_1_67_Rolling_type_BCC_for_Lagrangian_Rolling_type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span> 67.</a></p>
+  <p><strong>No Rotation BCC: </strong>This BCC is assigned when we select the Prevent twisting check box in the <a href="#43_1_3_5_3D_Setup_Page">3D Setup Page</a> as shown in the <a href="#Fig_43_1_68_No_Rotation_type_Rolling_BCC"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>68.</a>    It prevents the rotation of workpiece in Lagrangian rolling so that it stays fixed to the x-axis through the rolling process.</p>
+  <p><strong>Pusher BCC: </strong> This BCC is assigned when we define Pusher as BCC in <a href="#43_1_3_5_3D_Setup_Page">3D Setup Page</a> as shown in the <a href="#Fig_43_1_69_Pusher_type_Rolling_BCC"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>69.</a>    Workpiece must have movement controls defined when this BCC is assigned. In Lagrangian rolling type the velocity is automatically calculated based on Rolls speed and assigned to workpiece, user can modify this value if required. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_67_Rolling_type_BCC_for_Lagrangian_Rolling_type"></a><img height="372" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0062.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rolling type BCC for Lagrangian Rolling type</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_68_No_Rotation_type_Rolling_BCC"></a><img height="360" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0063.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">No Rotation type Rolling BCC</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_69_Pusher_type_Rolling_BCC"></a><img height="360" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0064.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Pusher type Rolling BCC</p>
+  <h4><a id="Workpiece_Movement"></a>Workpiece Movement </h4>
+  <p>In Lagrangian rolling type workpiece will have movement defined automatically if pusher is defined as BCC and user can modify this value based on Rolls speed and user can modify this value in movement page if required as shown in <a href="#Fig_43_1_70_Workpiece_movement_page_for_pusher_BCC_type"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>70.</a>    No movement control definition is required for ALE rolling type.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_70_Workpiece_movement_page_for_pusher_BCC_type"></a><img height="525" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0065.jpg' | relative_url }}" width="476"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece movement page for pusher BCC type</p>
+  <h4><a id="Workpiece_Initialize"></a>Workpiece Initialize </h4>
+  <p>In Initialize window, few state variables that are commonly used such as temperature, strain, stress, damage, velocity, displacement, density and microstructure grain size and particle size are made available for initialization. In multiple pass rolling
+    operation if user wants to initialize the temperature, strain or grain size then user can use this initialization page.<br/> User can initialize the values for these state variables by defining in the field next to it and clicking on <img src="{{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}"/> button. <a href="#Fig_43_1_71_Initialize_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>71.</a> shows various state variables that are available in Initialize window. Depending on the type of state variable, user can also
+    initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer  <a href="../../pre_processor/17_object_data_initialization/17_1_node_data_window.htm">17.1. Node Data Window</a> and
+    <a href="../../pre_processor/17_object_data_initialization/17_2_element_data_window.htm">17.2. Element Data Window</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_71_Initialize_page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0066.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Initialize page</p>
+  <h4><a id="Workpiece_Built-in_Flownet_"></a>Workpiece Built-in Flownet </h4>
+  <p>Multiple pass rolling setups normally generate DBs with large number of steps hence plotting a Flownet will take lot of time. User can overcome this issue by using Built-in-Flownet. When user uses Built-in-Flownet, the Flownet is calculated as the problem
+    is simulated. For more information please refer <a href="../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet">Built in Flownet.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_72_Built-in_Flownet_page"></a><img src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0067.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Built-in Flownet page</p>
+  <h3 class="Heading3_43_1_4_"><a id="43_1_4_5_Positioning"></a>Positioning </h3>
+  <p>When we click on Auto position <img src="{{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }}"/> button in 3D setup page/ Automatic Position <img src="{{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}"/> button in positioning
+    page, all rolls, workpiece and pusher objects are positioned automatically. If user wants to modify any of these objects position, then user can use Position objects button in Positioning page. Various positioning options are available to position
+    the objects as shown in <a href="#Fig_43_1_73_Object_Positioning_options"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>73</a>., for more information on these options please refer <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm">19. Object positioning.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_73_Object_Positioning_options"></a><img height="297" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0068.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object Positioning options</p>
+  <h3 class="Heading3_43_1_4_"><a id="43_1_4_6_Scheduled_Positioning"></a>Scheduled Positioning </h3>
+  <p>When user is not sure about the location of an object as in case of Read from DB objects, scheduled positioning will help to position the objects accurately. Schedule positioning allows the user to define the positioning for objects in Integrated Manufacturing
+    Process setup for successive operations for which DB is not generated so that the objects are positioned before generation of DB while running simulation in Batch mode.</p>
+  <p>In Shape Rolling the schedule positioning is automatically defined by the system for 2nd Rolling Pass operation when we click on <img src="{{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }}"/> button in 3D Setup page as shown in the <a href="#Fig_43_1_74_Scheduled_positioning_page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>74.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_74_Scheduled_positioning_page"></a><img height="350" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0069.jpg' | relative_url }}" width="439"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scheduled positioning page</p>
+  <h3 class="Heading3_43_1_4_"><a id="43_1_4_7_Contact"></a>Contact</h3>
+  <p>The user can define the contact between the Workpiece and other roll objects by defining the inter object relations as shown in <a href="#Fig_43_1_75_Contact_Page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>75.</a> Global frictional
+    value defined in Process page is automatically assigned and user can customize this value in Pass level contact page. User must define friction and Interface heat transfer co-efficient for non-isothermal rolling processes and friction value for isothermal
+    rolling process.</p>
+  <p><strong>System: </strong>By selecting this radio button, system assigns default inter-object relationships. Also, user can add the lubricants if necessary, by selecting Add New from pull down menu and clicking on <img src="{{ '/assets/icons/pre_icons/mo_edit_button_2.jpg' | relative_url }}"/> button or user can load the required lubricants from the library for the simulation.</p>
+  <p><strong>User:</strong> By default, user radio button will be selected for shape rolling operation. User can add relationships by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}"/> button as shown in <a href="#Fig_43_1_75_Contact_Page"><span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>75.</a>    User can modify the value of each relation by selecting it and clicking on <img src="{{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}"/> button. User can use <img src="{{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}"/> to assign same
+    values to all relations. User can click on to calculate contact tolerance. User can click on <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}"/> to generate contact relation. User can turn on check box next to contact relation
+    to define sticking contact. For more information please refer, <a href="../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm">20.Inter-Object Relations</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_75_Contact_Page"></a><img height="450" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0070.jpg' | relative_url }}" width="444"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact Page</p>
+  <h3 class="Heading3_43_1_4_"><a id="43_1_4_8_Simulation_Controls"></a>Simulation Controls</h3>
+  <p>The simulation controls settings at Pass level are similar to that of Rolling Group level, refer <a href="#43_1_3_6_Simulation_Controls">Simulation control in Rolling group</a>. Simulation controls defined at Rolling Group level are applied to pass
+    level automatically when <img src="{{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}"/> button is clicked, user can modify these settings for each pass. In each pass level if user want to use the advanced simulation controls select
+    the expert mode as shown in<a href="#Fig_43_1_76_Simulation_Controls_in_Expert_Mode_(Operation_level)">  <span data-keyref="Chapter_43_1_3D Shape Rolling">Fig. 43.1.</span>76.</a> For advanced simulation controls refer to <a href="../../pre_processor/9_simulation_controls/9_simulation_controls.htm">9. Simulation controls.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_43_1_76_Simulation_Controls_in_Expert_Mode_(Operation_level)"></a><img height="419" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0071.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Controls in Expert Mode (Operation level)</p>
+  <h3 class="Heading3_43_1_4_"><a id="43_1_4_9_Generate_DB"></a>Generate DB</h3>
+  <p>User can generate DB at pass level if it is a First pass or if previous passes simulation is completed in case of multi-pass rolling.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="43_introduction_to_shape_rolling.htm">43. Introduction to Shape Rolling operation</a></p>
+  <p> </p>
+
+</body></html>

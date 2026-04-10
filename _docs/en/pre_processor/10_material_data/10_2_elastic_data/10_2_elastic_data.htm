@@ -1,0 +1,156 @@
+---
+lang: en
+title: "10.2. Elastic Data"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "4.4.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>10.2. Elastic Data</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>10.2. Elastic Data</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/10_Material_Data/10_2_Elastic_Data/10_2_5_Hyperelastic.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/10_Material_Data/10_1_Plastic_Data/10_1_5_Hardening_rule/10_1_5_Hardening_rule.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="10.2. Elastic Data">
+        <span>10.2. Elastic Data</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>10.2. <a id="Elastic_Data"></a>Elastic Data</h1>
+  <p><a href="#Young&#39;s_modulus">10.2.1. Young&#39;s modulus</a></p>
+  <p><a href="#Poisson&#39;s_ratio">10.2.2. Poisson&#39;s ratio</a> </p>
+  <p><a href="#Thermal_expansion">10.2.3. Thermal expansion</a> </p>
+  <p><a href="#Material_Reference_Temperature">10.2.4. Material Reference Temperature</a> </p>
+  <p><a href="10_2_5_hyperelastic.htm">10.2.5. Hyperelastic</a> </p>
+  <p> </p>
+  <p>Elastic data is required for the deformation analysis of elastic and elasto-plastic materials. The three variables used to describe the properties for elastic deformation are Young&#39;s modulus, Poisson&#39;s Ratio, Thermal expansion and Hyperelastic
+    as shown in <a href="#Fig._10.2.1._Elastic_material_data_window"><span data-keyref="Chapter_10_2_Elastic Data">Fig. 10.2.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._10.2.1._Elastic_material_data_window"></a><img src="{{ '/assets/images/pre-processor/10_material_data/10_2_elastic_data/10_2_image001.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Elastic material data window</p>
+  <p class="Note_text"><br/>
+    <br/> Note:
+    <br/> To activate the reference temperature option, the thermal expansion coefficient must be made a function of temperature.</p>
+  <h2><a id="Young&#39;s_modulus"></a>Young&#39;s modulus </h2>
+  <p>Young&#39;s Modulus (<a href="../../../keyword_documentation/y/young.htm">YOUNG</a>) is used for elastic materials and elasto -plastic materials below the yield point. It can be defined as a constant or as a function of temperature, density (for powder
+    metals), dominant atom content (for example, carbon content) or a function of temperature and atom content.</p>
+  <h2><a id="Poisson&#39;s_ratio"></a>Poisson&#39;s ratio</h2>
+  <p>Poisson&#39;s ratio (<a href="../../../keyword_documentation/p/poison.htm">POISON</a>) is the ratio between axial and transverse strains. It is required for elastic and elasto-plastic materials. It can be defined as a constant or as a function of temperature,
+    density (for powder metals), dominant atom content (for example, carbon content), or a function of temperature and atom content.</p>
+  <h2><a id="Thermal_expansion"></a>Thermal expansion</h2>
+  <p>The coefficient of thermal expansion (<a href="../../../keyword_documentation/e/expand.htm">EXPAND</a>) defines volumetric strain due to changes in temperature. It can be defined as a constant or as a function of temperature.<br/> For elastic bodies
+    temperature change is defined as the difference between nodal temperatures and the specified reference temperature (<a href="../../../keyword_documentation/r/reftmp.htm">REFTMP</a>):    </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img height="135" src="{{ '/assets/equations/pre_processor/10_material_data/10_2_elastic_data/eq_10_2_3_1.jpg' | relative_url }}" width="261"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> <br/> For elasto-plastic bodies the thermal expansion input in the pre-processor is the average value of thermal expansion and the FEM calculates the instantaneous (tangential) value from the average value.</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_2_elastic_data/eq_10_2_3_2.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>  <br/> Experimental data for thermal expansion and conversion tools are available.<br/> The user interface now allows either direct entry of the tangent thermal expansion coefficient as a function of temperature, or user can also import instantaneous
+    values if available from the experimental data. (See <a href="#Fig._10.2.2._Data_conversion_facilities_for_thermal_expansion_function_data"><span data-keyref="Chapter_10_2_Elastic Data">Fig. 10.2.</span>2.</a>) When importing the instantaneous values,
+    user needs to indicate if the recordings are based on heating or cooling tests and the reference temperature. This instantaneous thermal expansion data can be converted to average data. (Also called secant, which is the data requirement from the model
+    perspective). At any point user can see either native data as imported or converted data or both. This data can also be imported and exported as text files. This table data can also be cut and pasted from and to Excel (on PC systems) data table.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="427" src="{{ '/assets/images/pre-processor/10_material_data/10_2_elastic_data/10_2_3_image001.jpg' | relative_url }}" style="cursor: nwse-resize;" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._10.2.2._Data_conversion_facilities_for_thermal_expansion_function_data"></a> Data conversion facilities for thermal expansion function data</p>
+  <p> </p>
+  <h2><a id="Material_Reference_Temperature"></a>Material Reference Temperature</h2>
+  <p>Reference temperature (<a href="../../../keyword_documentation/r/reftmp.htm">REFTMP</a>) is valid only for the Elastic and Elasto plastic objects thermal expansion calculation, this value is used as the reference temperature for thermal expansion calculation.
+    For Elasto-Plastic models or objects, (starting from DEFORM v11) reference temperature defined in material data dialog is always used. For Elastic models or objects, if the thermal expansion is constant object reference temperature will be used (refer
+    Object properties reference Temperature). For Elastic models or objects, if the thermal expansion is a function of temperature reference temperature defined in material data dialog will be used.</p>
+  <p> </p>
+  <p><a href="10_2_5_hyperelastic.htm">10.2.5. Hyperelastic</a> </p>
+
+</body></html>

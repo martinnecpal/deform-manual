@@ -1,0 +1,293 @@
+---
+lang: sk
+title: "57.6. DEFORM Data Analytics Data Modeling"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "12.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>57.6. DEFORM Data Analytics Data Modeling</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>57.6. DEFORM Data Analytics Data Modeling</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/57_data_analytics/57_6_deform_data_analytics_data_modeling.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendices_List.htm"/><meta name="brsprev" value="Documentation_content/57_Data_Analytics/57_5_DEFORM_Data_Analytics_Expressions.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="57.6. DEFORM Data Analytics Data Modeling">
+        <span>57.6. DEFORM Data Analytics Data Modeling</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>57.6. DEFORM Data Analytics Data Modeling</h1>
+  <p><a href="#57_6_1_Data_modeling_overview">57.6.1. Data modeling overview</a></p>
+  <p><a href="#57_6_2_Linear_model">57.6.2. Linear model</a> </p>
+  <p><a href="#57_6_3_Quadratic_model">57.6.3. Quadratic model</a>    </p>
+  <p><a href="#57_6_4_Cubic_model">57.6.4. Cubic model</a>    </p>
+  <p><a href="#57_6_5_Gaussian_model">57.6.5. Gaussian model</a>  </p>
+  <p><a href="#57_6_6_Neural_network_model">57.6.6. Neural network model</a>    </p>
+  <p><a href="#57_6_7_Deep_neural_network_model">57.6.7. Deep neural network model</a></p>
+  <p><a href="#57_6_8_Equation_fit_model">57.6.8. Equation fit model</a>    </p>
+  <p><a href="#57_6_9_Piecewise_Linear_model">57.6.9. Piecewise Linear model</a>  </p>
+  <p><a href="#57_6_10_Validating_a_model">57.6.10. Validating a model</a> </p>
+  <p><a href="#57_6_11_Expressions_are_used_to_calculate_new_values_from_a_trained_model">57.6.11. Expressions are used to calculate new values from a trained model</a></p>
+  <p> </p>
+  <p> </p>
+  <h2><a id="57_6_1_Data_modeling_overview"></a>Data modeling overview</h2>
+  <p>Models establish relationships between columns of data in a data table. Models are defined (trained) by providing a model type and training data. The Training data consists of one or more inputs and one output from other columns in the data table. Once
+    a model has been trained, it can be used to calculate (predict) output values for new input values. <a href="#Fig_57_6_1_Training_a_model"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>1.</a> and <a href="#Fig_57_6_2_Making_predictions_from_a_trained_model"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>2.</a>    illustrate this process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_1_Training_a_model"></a><img height="251" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Training a model</p>
+  <p style="text-align: center"><a id="Fig_57_6_2_Making_predictions_from_a_trained_model"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0002.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Making predictions from a trained model</p>
+  <p><br/> DEFORM Data Analytics supports the following model types:</p>
+  <p><strong>Linear</strong>: Fits a straight line/plane to the data</p>
+  <p><strong>Quadratic</strong>: Fits a 2nd order polynomial to the data</p>
+  <p><strong>Cubic</strong>: Fits a 3rd order polynomial to the data</p>
+  <p><strong>Gaussian</strong>: Fits the data to a gaussian process</p>
+  <p><strong>Neural Network</strong>: Uses a neural network to fit the data</p>
+  <p><strong>Deep Neural Network (DNN):</strong> Uses a neural network to fit the data</p>
+  <p><strong>Equation </strong><strong>Fit</strong>: Fits the data to a used provided equation</p>
+  <p><strong>Piecewise </strong><strong>Linear</strong>: Connects the dots (data points) with straight lines</p>
+  <p> </p>
+  <p>The model type and input/output columns are selected from the property page for the model column as shown in <a href="#Fig_57_6_3_Making_predictions_from_a_trained_model"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>3.</a> The
+    list on this property page contains the other columns in the data table. The 3 columns in this list  labeled I (input), O (output), and N (not used) are for selecting the input and output columns to be used to train the data. The type menu selects
+    the model type. Once the inputs, the output and the model type are selected, the train button can be clicked to train the model. Once the model is trained, the cells under this column will be filled with values computed by the model for the input
+    columns.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_3_Making_predictions_from_a_trained_model"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0003.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Making predictions from a trained model</p>
+  <p><br/> Model training works best if the inputs are independent. Many of the training algorithms rely on matrix inversion and dependent variables can result in matrices that cannot be inverted. So, the training will likely fail or the results may not
+    be the best. If a pair of inputs are dependent, try using only one of them. See scatter plot <a href="57_4_deform_data_analytics_plotting_data.htm#57_4_2_Scatter_plot">section 57.4.2</a> for a discussion of dependent and independent variables.</p>
+  <h2><a id="57_6_2_Linear_model"></a>Linear model</h2>
+  <p>Linear models use a simple line equation (for 1 input).</p>
+  <p><br/>
+    <em>y = Ax+B</em></p>
+  <p><br/> Additional inputs add additional terms to the equation.</p>
+  <p><br/> i.e. 3 inputs:  <em>y = Ax<span style="font-size:10pt;"><span style="vertical-align:sub;">1</span></span>+Bx<span style="font-size:10pt;"><span style="vertical-align:sub;">2</span></span>+Cx<span style="font-size:10pt;"><span style="vertical-align:sub;">3</span></span>+D</em></p>
+  <p><br/> Use a linear model when the data appears to follow a line</p>
+  <p><br/> Linear models can be useful approximations when there are very few data points. Only 2 points are needed to define a line. The minimum number of points for a solution is 1+number of inputs</p>
+  <p><br/> The linear model is not guaranteed to pass through all data points</p>
+  <p> </p>
+  <h2><a id="57_6_3_Quadratic_model"></a>Quadratic model</h2>
+  <p>Quadratic models use a 2nd order polynomial equation (for 1 input).</p>
+  <p><br/>
+    <em>y = Ax<span style="vertical-align:super;font-size:10pt">2</span>+Bx+C</em></p>
+  <p><br/> Additional inputs add additional terms to the equation.</p>
+  <p><br/> Use a linear model when the data appears to follow a parabola.</p>
+  <p><br/> Quadratic models can be useful approximations when there are very few data points. Only 3 points are needed to define a parabola. The minimum number of points for a solution is 1+2*number of inputs.</p>
+  <p><br/> The quadratic model is not guaranteed to pass through all data points.</p>
+  <h2><a id="57_6_4_Cubic_model"></a>Cubic model</h2>
+  <p>Cubic models use a 3rd order polynomial equation (for 1 input).</p>
+  <p><br/>
+    <em>y = Ax<span style="vertical-align:super;font-size:10pt">3</span>+Bx<span style="font-size:10pt;vertical-align:super">2</span>+Cx+D</em></p>
+  <p><br/> Additional inputs add additional terms to the equation.</p>
+  <p><br/> Use a cubic model when the data appears to follow a more of an ~ shape.</p>
+  <p><br/> The minimum number of points for a solution is 1+4*number of inputs</p>
+  <p><br/> The cubic model is not guaranteed to pass through all data points</p>
+  <p> </p>
+  <h2><a id="57_6_5_Gaussian_model"></a>Gaussian model</h2>
+  <p>Gaussian models do not use a simple equation. It is more of a statistical algorithm with parameters.</p>
+  <p><br/> Gaussian models can be used for any shape of the data.</p>
+  <p><br/> Gaussian models can be useful approximations when there are a small number of data points.</p>
+  <p><br/> The minimum number of points for a solution is 2*number of inputs. For a good approximation, 10*number of inputs is recommended</p>
+  <p><br/> Training of the gaussian model will fail if duplicate input points are contained in the data (this causes a divide by 0 in the algorithm since distances between inputs are used in the training of this model).</p>
+  <p><br/> The gaussian model is guaranteed to pass through all data points.</p>
+  <p> </p>
+  <h2><a id="57_6_6_Neural_network_model"></a>Neural network model</h2>
+  <p>Neural network models do not use a simple equation.  It is more of an algorithm with parameters. A neural network is a computing model whose layered structure resembles the networked structure of neurons in the brain. In general a neural network consists
+    of 3 or more layers of nodes.  All nodes are connected to all nodes of the previous layer. This neural network mode has only 3 layers; an input layer, an output, layer and 1 hidden layer (see <a href="#Fig_57_6_4_Diagram_of_a_neural_network_model"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>4.</a>).</p>
+  <p><br/> Neural network models can be used for any shape of the data.</p>
+  <p><br/> Neural network models work best when there are large amounts of data.</p>
+  <p><br/> Training time for a neural network model can be long.</p>
+  <p><br/> The neural network model is not guaranteed to pass through all data points.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_4_Diagram_of_a_neural_network_model"></a><img height="306" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Diagram of a neural network model</p>
+  <p> </p>
+  <h2><a id="57_6_7_Deep_neural_network_model"></a>Deep neural network model</h2>
+  <p>Deep neural network (DNN) models do not use a simple equation. It is more of an algorithm with parameters. A neural network is a computing model whose layered structure resembles the networked structure of neurons in the brain. This neural network model
+    allows for a user specified number of hidden layers in addition to the input and output layers. The number of nodes on the hidden layers can also be specified. Thus, the network can become deep as shown in <a href="#Fig_57_6_5_Diagram_of_a_deep_neural_network_model"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>5.</a></p>
+  <p><br/> Deep neural network models can be used for any shape of the data.</p>
+  <p><br/> Deep neural network models work best when there are large amounts of data.</p>
+  <p><br/> Training time for a deep neural network model can be long.</p>
+  <p><br/> The deep neural network model is not guaranteed to pass through all data points.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_5_Diagram_of_a_deep_neural_network_model"></a><img height="357" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0005.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Diagram of a deep neural network model</p>
+  <p><br/> In <span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>6., a list of models structures for DNN can be seen in User parameters section. There are four system-defined models, and 6 custom models that users can define
+    number of nodes and layers. By clicking on “Custom” in the “Layers and Nodes” display, custom number of nodes and layers can be defined in the “Data” section. Clicking on apply will finalize the combination and show the custom model in the “Layers
+    and Nodes” display. In the “Advanced” tab shown in Figure 2, users can further control in depth model parameters of deep neural network. There are four controllable factors which are number of iterations and training, error functions and error criteria.
+    Number of iterations determines how many times the model is going to propagate towards the minima. Default value is set to 100. Setting this value too low would not give an accurate result, whereas setting it too high may take excessive time with
+    very little or no improvement of the model. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_6_Deep_neural_network_model_user_interface"></a><img height="500" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0006.jpg' | relative_url }}" width="609"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deep neural network model user interface</p>
+  <p> </p>
+  <p><br/> After model parameters are defined, “Train” button in the left bottom corner of the interface can be clicked to initiate the training process. A progress bar will be shown in <a href="#Fig_57_6_7_Deep_neural_network_progress"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>7.</a>    to display the training process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_7_Deep_neural_network_progress"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0007.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deep neural network progress</p>
+  <p> </p>
+  <p>After the training is finished, selected models should display the error representing the accuracy of the model. By clicking on those models, evaluated values are shown in the “Define model” column to compare the values with the reference training data
+    (see <a href="#Fig_57_6_8_Deep_neural_network_completed_training"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>8.</a>). </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_8_Deep_neural_network_completed_training"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0008.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Deep neural network completed training</p>
+  <p> </p>
+  <h2><a id="57_6_8_Equation_fit_model"></a>Equation fit model</h2>
+  <p>Equation fit models use a user provided equation. The training of this model involves determining the parameters of the equation that best fir the data. The solution is not guaranteed to be unique.</p>
+  <p><br/> Parameters of the equation are computed using a simplex search optimization algorithm. Using different search ranges could give different values for the parameters.</p>
+  <p><br/> Equation fit models can be used for any shape that’s appropriate for the given equation.</p>
+  <p><br/> The amount of data needed to solve the equation depends on the number of parameters in the equation. Generally count on needing at least 2 data points per parameter. More is better.</p>
+  <p><br/> The equation fit model is not guaranteed to pass through all data points.</p>
+  <p><br/>
+    <a href="#Fig_57_6_9_Equation_fit_model_user_interface"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>9</a> shows the user interface for training an equation fit model. After selecting the inputs, the output
+    and entering the equation, clicking the parse button will fill the parameters list with the equation parameters. When entering the equation, use the input column (variable) names as variables for the equation. Recursive equations are not supported,
+    so the output column name should not be used in the equation. Any text that is not an input column name or an math symbol/function, will be considered a parameter.</p>
+  <p><br/> The parameters that best fit the data are determined by a searching algorithm. Errors are computed at the end of each search step. The search ends when the error falls below a threshold.  Since this is a search algorithm, a search range needs
+    to be specified. Although, the default search range is +/- infinity, this is actually just a very big number. The smaller the search range, the better chance the algorithm has of converging on a correct solution. Once the search ranges are entered,
+    the model is ready for training.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_9_Equation_fit_model_user_interface"></a><img height="550" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0009.jpg' | relative_url }}" width="355"/></p>
+  <p> </p>
+  <p class="Fig_numb">Equation fit model user interface</p>
+  <p> </p>
+  <h2><a id="57_6_9_Piecewise_Linear_model"></a>Piecewise Linear model</h2>
+  <p>Piecewise linear connects each data point with a straight line. This can be useful for doing linear interpolations between data points.</p>
+  <p><br/> Piecewise linear models can be used for any shape of the data.</p>
+  <p><br/> A minimum of 2 data points is needed for a solution.</p>
+  <p><br/> The piecewise linear model is guaranteed to pass through all data points.</p>
+  <p> </p>
+  <p><a href="#Fig_57_6_10_Examples_of_models_with_noisy_data"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>10.</a> and <a href="#Fig_57_6_11_Example_of_piecewise_linear_model_with_noisy_data"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>11.</a>    show how some of these models represent some noisy data. Note that the Gaussian and piecewise linear models tend to over fit the data.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_10_Examples_of_models_with_noisy_data"></a><img height="498" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Examples of models with noisy data</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_11_Example_of_piecewise_linear_model_with_noisy_data"></a><img height="400" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0011.jpg' | relative_url }}" width="534"/></p>
+  <p> </p>
+  <p class="Fig_numb">Example of piecewise linear model with noisy data</p>
+  <p> </p>
+  <h2><a id="57_6_10_Validating_a_model"></a>Validating a model</h2>
+  <p>Once a model is trained, the model column in the data table is filled with values computed by the model using the trained model. These values can be used to determine how well the model fits the data. If the model perfectly models the data, the values
+    in this column will exactly match the data in the column designated as output for training. Using real world data, it is unlikely that the data will match exactly (unless using one of the model types that pass through all data points such as gaussian
+    and piecewise linear models). So, a simple comparison of the values can determine how well the model fits the data. <a href="#Fig_57_6_12_Bar_plot_comparing_training_output_values_with_predicted_output_values"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>12.</a>    shows a bar graph with the output and model columns. <a href="#Fig_57_6_13_Scatter_plot_plotting_training_output_values_against_predicted_output_values"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>13.</a>    shows using a scatter plot to visualize the fit. In this plot, the x axis is the output column and the y axis is the model column. For a perfect fit, this would result in a 45 degree line. How close the points are to a 45 degree line indicates how
+    well the model fits the data.</p>
+  <p><br/> If a large amount of data is available, training could be performed using a subset of the data (i.e. 90% of the data). The remaining data could be copied to new columns and used to predict. The results of the prediction could be compared with
+    the output values from the original data.</p>
+  <p><br/> To get a quantitative value for the goodness of the fit, statistics of the fit are printed in the message area at the completion of training. The message area at the completion of training contains something like the following:</p>
+  <p><br/> Temperature=-7.19e-06*Altitude^2+0.042*Altitude+0.767478
+  </p>
+  <p>Temperature:</p>
+  <p>Maximum Error = 0.514677</p>
+  <p>Average Error = 0.054183 Error Variance = 0.00371164</p>
+  <p>Average Absolute Error = 0.054183</p>
+  <p>RMS Error = 0.0815318</p>
+  <p>Correlation = 0.996908 R^2 = 0.993783</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_12_Bar_plot_comparing_training_output_values_with_predicted_output_values"></a><img height="350" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0012.jpg' | relative_url }}" width="350"/></p>
+  <p class="Fig_numb"> Bar plot comparing training output values with predicted output values</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_13_Scatter_plot_plotting_training_output_values_against_predicted_output_values"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0013.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Scatter plot plotting training output values against predicted output values</p>
+  <p> </p>
+  <p>An expression can also be used to compute difference (error) between the model column and the output column. Any comparison function could be used (i.e. simple subtraction, absolute value of difference, RMS error, etc.). Column statistics for this column
+    could then provide average, minimum, maximum, etc. values for the errors. <a href="#Fig_57_6_14_Line_plot_plotting_error_values_along_with_original_training_data"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>14.</a>    shows an absolute value of difference plotted against the original output value. This gives an visual representation of the magnitude of the errors relative to the data values.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_14_Line_plot_plotting_error_values_along_with_original_training_data"></a><img src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0014.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Line plot plotting error values along with original (training) data</p>
+  <p> </p>
+  <h2><a id="57_6_11_Expressions_are_used_to_calculate_new_values_from_a_trained_model"></a>Expressions are used to calculate new values from a trained model</h2>
+  <p>After a model has been trained, enter the inputs for which the output values are not known into new columns. Create another new column for the expression (set the usage to expression). The model/Expressions menu can be used to select the model to use.
+    Add the new inputs inside the parenthesis for the model in the expression. Click apply. The cells of this column will be filled with the computed values. <a href="#Fig_57_6_15_Choosing_the_model_for_the_expression"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>15.</a>    – <a href="#Fig_57_6_17_Evaluating_the_expression"><span data-keyref="Chapter_57_6_DEFORM_Data_Analytics_Data_Modeling">Fig. 57.6.</span>17.</a> show this procedure.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_15_Choosing_the_model_for_the_expression"></a><img height="479" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0015.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Choosing the model for the expression</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_16_Choosing_new_inputs_for_the_expression"></a><img height="499" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0016.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">Choosing new inputs for the expression</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_6_17_Evaluating_the_expression"></a><img height="480" src="{{ '/assets/images/data_analytics/57_6_deform_data_analytics_data_modeling/57_6_image0017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Evaluating the expression</p>
+  <p> </p>
+
+</body></html>

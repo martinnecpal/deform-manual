@@ -1,0 +1,639 @@
+---
+lang: sk
+title: "Sheet Forming in DEFORM 3D"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.16.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Sheet Forming in DEFORM 3D</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Sheet Forming in DEFORM 3D</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_3_cup_drawing_labs/sheet_forming_in_deform_3d.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_Sheet_Forming/2D_Cup_Drawing_Lab.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_Sheet_Forming/55_3_Cup_Drawing_Lab_Mian_Pg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Sheet Forming in DEFORM 3D">
+        <span>Sheet Forming in DEFORM 3D</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Sheet Forming in DEFORM 3D</h1>
+  <p><a href="#1_Theory - Anisotropy">1. Theory - Anisotropy</a></p>
+  <p><a href="#2_Theory_–_Assumed_Strain_Formulation">2. Theory - Assumed Strain Formulation</a></p>
+  <p><a href="#3_Simulation Principles">3. Simulation Principles</a></p>
+  <p><a href="#4_Example_Square cup drawing process">4. Example: Square cup drawing process</a></p>
+  <p><a href="#5_Example_Cylindrical cup drawing process">5. Example: Cylindrical cup drawing process</a></p>
+  <p> </p>
+  <p>Due to advantages in modeling thin structures, the membrane or shell element formulations are very popular in the simulation of sheet forming processes. Although shell elements represent the stress variation through their thickness effectively, they
+    generally require special treatments for the drilling degree of freedom and the transverse shear locking to preserve the Kirchhoff or Reissner-Mindlin hypotheses. Thus, the shell formulation requires more complicated and sophisticated procedures than
+    solid element formulations. Moreover, shell elements do not have the continuity of the thickness over the neighborhood elements.  A comprehensive comparison of solid and shell elements can be found in the reference (Wriggers et. al. [1]). In the reference,
+    the authors showed the possibility of the application of solid elements for thin shell as well as thick shell problems.</p>
+  <p> </p>
+  <p>A brief coverage of the theory of anisotropy and assumed strain formulation will be presented in the following sections. After this, specific information will be provided on how to simulate accurate sheet forming applications within DEFORM-3D.</p>
+  <p> </p>
+  <h2><a id="1_Theory - Anisotropy"></a>Theory - Anisotropy</h2>
+  <p>The associated flow rule with Hill&#39;48 anisotropic yield criterion (Hill [2]) is used for consideration of initial texture property of sheet metal. The flow potential for orthotropy which conserves three symmetry planes are written in terms of the
+    stress <img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/sigma.jpg' | relative_url }}"/>as,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td><img height="35" src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq1.jpg' | relative_url }}" style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);" width="127"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Where</p>
+  <p> </p>
+  <p>with</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 50px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255); height: 100px;">
+        <td><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq2.jpg' | relative_url }}"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-left: 20px">Where</p>
+  <p style="margin-left: 20px"><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/sigma_transpose.jpg' | relative_url }}"/></p>
+  <p style="margin-left: 20px"><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/beta_11.jpg' | relative_url }}"/></p>
+  <p style="margin-left: 20px"><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/beta_22.jpg' | relative_url }}"/></p>
+  <p style="margin-left: 20px"><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/beta_33.jpg' | relative_url }}"/></p>
+  <p style="margin-left: 20px"><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/2beta_12.jpg' | relative_url }}"/></p>
+  <p style="margin-left: 20px"><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/2beta_13.jpg' | relative_url }}"/></p>
+  <p style="margin-left: 20px"><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/2beta_23.jpg' | relative_url }}"/></p>
+  <p style="margin-left: 20px">Therefore, six independent parameters  need to be defined to characterize the anisotropic hardening state.</p>
+  <p style="margin-left: 20px"><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/sigma_o.jpg' | relative_url }}"/> is an equivalent stress representing the current yield surface size.</p>
+  <p> </p>
+  <p>The coefficients in P can be related to the R-values (Valliappan et al. [3]). By setting (this means the principal anisotropic axis coincides the reference axis),</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr class="rh-cursor-row" style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/beta_11_1.jpg' | relative_url }}"/>;</p>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq3.jpg' | relative_url }}"/></p>
+          <p> </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>The remaining parameters, <img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/beta_55.jpg' | relative_url }}"/>,<img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/beta_66.jpg' | relative_url }}"/>    can not be determined by the uniaxial tensile test. Generally the corresponding stresses have little effect on sheet metal forming processes, the parameters are assumed to be equal to <img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/beta_44.jpg' | relative_url }}"/>. It should be noted that von-Mises isotropic yield criterion is recovered when three R-values, R<span style="vertical-align:sub;font-family:Arial;font-size:8pt">0</span>, R<span style="vertical-align:sub;font-family:Arial;font-size:8pt">45</span> R
+    <span style="vertical-align:sub;font-family:Arial;font-size:8pt">90 </span>are set to be 1. Numerical implementation of Hill’48 yield criterion is outlined below.</p>
+  <p>The additive decomposition of strain-rate into elastic and plastic parts is employed together with the normality rule,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq4_1.jpg' | relative_url }}"/></p>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq4_2.jpg' | relative_url }}"/></p>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq4_3.jpg' | relative_url }}"/></p>
+          <p> </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>where the superscripts <strong>e</strong> and <strong>p</strong> represent the elastic and plastic parts, respectively. <strong>C</strong> is the elasticity tensor, <img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/lamda_.jpg' | relative_url }}"/> is the plastic strain-rate multiplier and <strong>a</strong> is the flow vector defined by,</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr class="rh-cursor-row" style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq_5.jpg' | relative_url }}"/></p>
+          <p> </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>From Equations (4) and (5) with the consistency condition (6), the plastic strain-rate multiplier can be expressed as below:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr class="rh-cursor-row" style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img height="30" src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq6.jpg' | relative_url }}" width="143"/></p>
+          <p> </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr class="rh-cursor-row" style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq7.jpg' | relative_url }}"/></p>
+          <p> </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-left: 20px">Where</p>
+  <p style="margin-left: 20px"> <img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/aiso.jpg' | relative_url }}"/></p>
+  <p>Finally, the rate form of the constitutive equation can be written as,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr class="rh-cursor-row" style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img height="44" src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq8.jpg' | relative_url }}" width="201"/></p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>It should be noted that the element stiffness matrix is directly related to the tangent modulus <img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/cep.jpg' | relative_url }}"/>evaluated at each integration point, which governs
+    the convergence rate of the global iterative scheme. Thus the consistent tangent modulus is essential to keep the quadratic rate of convergence in the Newton-Raphson scheme (Simo and Taylor [4], Crisfield [5]).</p>
+  <h2><a id="2_Theory_–_Assumed_Strain_Formulation"></a>Theory – Assumed Strain Formulation</h2>
+  <p>A locking-free element is essential for the robustness of the finite element method. Several versions of the reduced integration method using hourglass control techniques have made remarkable progress on this issue (Belytschko and Bachrach [6]; Hughes
+    [7]; Belytschko et al. [8]). Li[9] and Jetteur[10] proposed a strain field modification to avoid numerical instability. This paper was based on the method proposed by Li [9]. The essential equations for the strain field description can be written
+    as follows.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq9.jpg' | relative_url }}"/></p>
+          <p>Where</p>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/e_o.jpg' | relative_url }}"/> and <img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/e_h.jpg' | relative_url }}"/> are Constants  the non-constant
+            terms of the displacement gradient respectively</p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>The non-constant terms can cause undesirable locking, volumetric locking or hourglassing. To avoid these undesirable effects, the modified normal strain part, Equation (11), is assumed to be the same as Equation (12) in Equation (10).</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr class="rh-cursor-row" style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq10.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>     </p>
+  <p>Where</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr class="rh-cursor-row" style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq11.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr class="rh-cursor-row" style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq12.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr class="rh-cursor-row" style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq13.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>     </p>
+  <p>Here, the repeated index is used to denote the summation.</p>
+  <p> </p>
+  <p>Possible shear locking in thin-structure analysis can be resolved on the element level by adopting the assumed transverse shear strain field (Sze and Yao [11]; Kinkel et al. [12]). The transverse shear strains are interpolated from the values evaluated
+    at the mid-points of the element edges as below.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 20px">
+    <colgroup>
+      <col style="width: 550px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr class="rh-cursor-row" style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq14_1.jpg' | relative_url }}"/></p>
+          <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/eq14_2.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h2><a id="3_Simulation Principles"></a>Simulation Principles</h2>
+  <p>When modeling a sheet forming process in DEFORM-3D, the following setup is recommended:</p>
+  <ul class="Disc">
+    <li>
+      <p>Brick mesh the workpiece with the “Sheet application” setting activated. Limited automatic brick remeshing is possible with such a setup.</p>
+    </li>
+    <li>
+      <p>Brick mesh the object with 3-4 layers of brick elements through the thickness.</p>
+    </li>
+    <li>
+      <p>Define the workpiece as an elasto-plastic (EP) object. The object may be defined as plastic if springback effects are not significant.</p>
+    </li>
+    <li>
+      <p>If the EP brick meshed workpiece only has 1-2 layers of brick elements through the thickness, then use the “Assumed strain (brick mesh)” EP formulation. See the “<a href="../../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#Assumed_strain_Brick_Mesh">Assumed</a>
+        <a href="../../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#Assumed_strain_Brick_Mesh"> strain (Brick mesh)</a>” description in the “General Object Data Definition” section of the manual for more information.</p>
+    </li>
+    <li>
+      <p>Turn on “Adaptive contact penetration control” in the “Simulation controls &gt; Step increment” menu.</p>
+    </li>
+    <li>
+      <p>Set the “Node contact update” setting, for each contact pair, to “Do not update”.</p>
+    </li>
+    <li>
+      <p>Use hybrid friction to allow both sliding and sticking contact.</p>
+    </li>
+    <li>
+      <p>Consider if anisotropy should be added for better material behavior representation.</p>
+    </li>
+  </ul>
+  <h2><a id="4_Example_Square cup drawing process"></a>Example: Square cup drawing process</h2>
+  <p>As an example case, consider a square cup drawing process (See <a href="#Fig_SF_1_Square cup drawing process"><span data-keyref="Application-Sheet_Forming -Sheet_Forming_in_DEFORM ">Fig. SF.</span>1</a>). The blank is made of an aluminum alloy with
+    the following properties:</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Young’s Modulus:  70 GPa</p>
+    </li>
+    <li>
+      <p>Poisson’s ratio:  0.3</p>
+    </li>
+    <li>
+      <p><img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/sigma_bar.jpg' | relative_url }}"/></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>The thickness of the blank is 0.81 mm and the area of the blank is 150 mm<span style="vertical-align:super;font-size:8pt">2</span> x 150 mm<span style="vertical-align:super;font-size:8pt">2</span>.  The blank holder force is 19.6 kN, the punch stroke
+    is 40 mm and the coefficient friction is 0.162. The deformation of the drawing process can be seen in <a href="#Fig_SF2_Square_cup_object__before_deformation_and_after_deformation"><span data-keyref="Application-Sheet_Forming -Sheet_Forming_in_DEFORM ">Fig. SF.</span>2</a>    and <a href="#Fig_SF_3_Deformed shape in square cup drawing"><span data-keyref="Application-Sheet_Forming -Sheet_Forming_in_DEFORM ">Fig. SF.</span>3.</a> This simulation correlates well to experimental results as can be seen in <a href="#Table_1_Draw-in distance">Table 1.</a>.
+    The deformed shape at 40mm punch stroke is shown in <a href=""><span data-keyref="Application-Sheet_Forming -Sheet_Forming_in_DEFORM ">Fig. SF.</span>3</a> and the amount of draw-in along the rolling (DX), transverse
+    (DY), and diagonal (DD) directions is compared with the average values of the measurements in <a href="#Table_1_Draw-in distance">Table 1.</a> Since an isotropic yield criterion was used for this simulation, the predicted draw-in along two directions,
+    DX and DY are almost identical in the simulation. Numerical results are well correlated with the measurement results.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_SF_1_Square cup drawing process"></a><img height="300" src="{{ '/assets/images/applications/55_3_sheet_forming/sheet_forming_in_deform_3d/image0001.jpg' | relative_url }}" style="cursor: nesw-resize;" width="257"/></p>
+  <p> </p>
+  <p class="Fig_numb">Square cup drawing process</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_SF2_Square_cup_object__before_deformation_and_after_deformation"></a><img src="{{ '/assets/images/applications/55_3_sheet_forming/sheet_forming_in_deform_3d/image0002.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Square cup object (a) before deformation and (b) after deformation</p>
+  <p style="text-align: center"><a id="Fig_SF_3_Deformed shape in square cup drawing"></a><img src="{{ '/assets/images/applications/55_3_sheet_forming/sheet_forming_in_deform_3d/image0003.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Deformed shape in square cup drawing (aluminum alloy sheet, at 40 mm punch stroke)</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 450px;margin-left:auto;margin-right: auto">
+    <colgroup>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"><strong>Measured point</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Measured</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Simulation</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><a id="Table_1_Draw-in distance"></a>15* (DX,DY)</p>
+        </td>
+        <td>
+          <p style="text-align: center">5.3 mm</p>
+        </td>
+        <td>
+          <p style="text-align: center">5.5 mm</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">15*(DD)</p>
+        </td>
+        <td>
+          <p style="text-align: center">3.3 mm</p>
+        </td>
+        <td>
+          <p style="text-align: center">3.3 mm</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">40**(DX,DY)</p>
+        </td>
+        <td>
+          <p style="text-align: center">28.5 mm</p>
+        </td>
+        <td>
+          <p style="text-align: center">26.9 mm</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">40**(DD)</p>
+        </td>
+        <td>
+          <p style="text-align: center">15.0 mm</p>
+        </td>
+        <td>
+          <p style="text-align: center">15.5 mm</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Table_numb">Draw-in distance. Note: * and ** denotes 15mm , 40mm punch stroke respectively</p>
+  <p> </p>
+  <h2><a id="5_Example_Cylindrical cup drawing process"></a>Example: Cylindrical cup drawing process</h2>
+  <p>This benchmark problem was proposed for NUMISHEET’99 (Benchmark B1-part 2), designed to explore the anisotropic aspects of sheet metal forming processes, both from experiments and numerical simulations [13]. Part I, which is omitted in this paper, refers
+    to a deep drawn cylindrical cup with a hemispherical punch free of any localized necking or split according to the actual individual forming-limit curve. Part 2 is simulated under given a constant blank holder condition.</p>
+  <p>The typical parameters for this simulation are summarized below:</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Blank thickness: 1.0 mm</p>
+    </li>
+    <li>
+      <p>Drawing ratio: 2.0</p>
+    </li>
+    <li>
+      <p>Constant BHF: 80 kN</p>
+    </li>
+    <li>
+      <p>Drawing depth : 85 mm</p>
+    </li>
+    <li>
+      <p>Material : DDQ (mild steel)</p>
+    </li>
+    <li>
+      <p>R-values:  <img src="{{ '/assets/equations/applications/55_sheet_forming/sheet_forming_in_deform_3d/r_values.jpg' | relative_url }}"/></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>The NUMISHEET’99 committee supplied tool geometries and material data for DDQ(mild steel). The FE model for this benchmark is shown in <a href="#Fig_SF4_FE model for cylindrical cup drawing"><span data-keyref="Application-Sheet_Forming -Sheet_Forming_in_DEFORM ">Fig. SF.</span>4.</a>    The workpiece is an elasto-plastic material with the planar anisotropic yield criterion (Hill’48). The earing shapes can be obtained from planar anisotropic yield criterion and the corresponding punch travel and punch force are compared in <a href="#Fig_SF_5_Punch force vs. stroke curve"><span data-keyref="Application-Sheet_Forming -Sheet_Forming_in_DEFORM ">Fig. SF.</span>5.</a>    The amount of draw-in along the rolling (DX), transverse (DY), and diagonal (DD) directions are compared with the measurements in <a href="#Table_2_">Table 2.</a> The measured data is average values of three participations (B1E-02, B1E-03 and B1E-04)
+    in NUMESHEET’99 benchmark test.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_SF4_FE model for cylindrical cup drawing"></a><img src="{{ '/assets/images/applications/55_3_sheet_forming/sheet_forming_in_deform_3d/image0004.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">FE model for cylindrical cup drawing</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_SF_5_Punch force vs. stroke curve"></a><img src="{{ '/assets/images/applications/55_3_sheet_forming/sheet_forming_in_deform_3d/image0005.jpg' | relative_url }}"/><img src="{{ '/assets/images/applications/55_3_sheet_forming/sheet_forming_in_deform_3d/image0006.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Punch force vs. stroke curve</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 450px;margin-left:auto;margin-right: auto">
+    <colgroup>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"><strong>Measured point</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Measured</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Simulation</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><a id="Table_2_"></a>DX</p>
+        </td>
+        <td>
+          <p style="text-align: center">29.0 mm</p>
+        </td>
+        <td>
+          <p style="text-align: center">27.0 mm</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">DD</p>
+        </td>
+        <td>
+          <p style="text-align: center">32.0 mm</p>
+        </td>
+        <td>
+          <p style="text-align: center">35.0 mm</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">DY</p>
+        </td>
+        <td>
+          <p style="text-align: center">27.5 mm</p>
+        </td>
+        <td>
+          <p style="text-align: center">25.0 mm</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Table_numb">Draw-in distance</p>
+  <p> </p>
+  <p>References:</p>
+  <p> </p>
+  <p>[1] Wriggers, P.,Eberlein, R., and REESE, S., 1996, A comparison of three-dimensional continuum and shell elements for finite plasticity, Int. J. Solids Str., 33(20-22), pp.3309-3326</p>
+  <p> </p>
+  <p>[2] Hill, R., 1950, The Mathematical Theory of Plasticity, Oxford Univ. Press, London, Chapter 12</p>
+  <p> </p>
+  <p>[3] Valliappan, S., Boonlaulohr, P., and Lee, I. K., 1976, Non-linear analysis for anisotropic materiala, Int J Num Meth Eng. 10, 597-606.</p>
+  <p> </p>
+  <p>[4] Simo, J.C. and Taylor, R.L., 1985, Consistent tangent operators for rate independent elasto-plasticity, Comp. Meth. Appl. Mech. Eng., 48, pp. 101-118</p>
+  <p> </p>
+  <p>[5] Crisfield,M.A., 1987, Consistent schemes for plasticity computation with the Newton-Raphson method, Computational plasticity, part I, pp. 133-159</p>
+  <p> </p>
+  <p>[6] Belytschko, T. and Bachrach. W.E., 1986, Efficient implementation of quadrilaterals with high coarse-mesh accuracy, Comp. Meth. Appl. Mech. Eng., 54, pp. 279-301</p>
+  <p> </p>
+  <p>[7] Hughes, T.J.R., 1980, Genralization of selective integration procedures to anisotropic and nonlinear media, Int. J. Num. Meth. Eng., 15, pp. 1413-1418</p>
+  <p> </p>
+  <p>[8] Belytschko, T., Ong. J.S., Liu, W.K. and Kennedy, J.M., 1984, Hourglass control in linear and nonlinear problems, Comp. Meth. Appl. Mech. Eng., 43, pp. 251-276</p>
+  <p> </p>
+  <p>[9] Kaiping Li, 1995, Contribution to the finite element simulation of three-dimensional sheet metal forming, Ph.D thesis, MSM, Universite de Liege, Belgique</p>
+  <p> </p>
+  <p>[10] Jetteur, P., 1991, A mixed finite element for the analysis of large inelastic strains, Int. J. Num. Meth. Eng., 13, pp. 229-239</p>
+  <p> </p>
+  <p>[11] Sze, KY, and Yao, LQ, 2000, A hybrid stress ANS solid-shell element and its generalization for smart structure modeling. Part I-solid-shell element formulation, International Journal for Numerical Methods in Engineering, 48, pp. 545-564</p>
+  <p> </p>
+  <p>[12] Kinkel, S, Gruttmann, F, Wagner, W, 1999, A continuum based three-dimensional shell element for laminated structures, Computers and Structures, 71, pp. 43-62  </p>
+  <p> </p>
+  <p>[13] Gelin, J. C. and Picart, P., 1999, Proceedings of NUMISHEET’99 - The 4th international conference and workshop on numerical simulation of 3D sheet forming processes, France, September 13-17.</p>
+  <p> </p>
+  <p>Related Topics:</p>
+  <p><a href="../../../pre_processor/10_material_data/10_material_data.htm">Material Properties</a></p>
+  <p> </p>
+
+</body></html>

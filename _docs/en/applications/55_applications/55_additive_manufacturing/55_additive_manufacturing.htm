@@ -1,0 +1,373 @@
+---
+lang: en
+title: "55 Additive Manufacturing Lab"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>55 Additive Manufacturing Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>55 Additive Manufacturing Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_1_additive_manufacturing.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_1_Arc_Welding.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/54_Applications.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="55 Additive Manufacturing Lab">
+        <span>55 Additive Manufacturing Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Additive Manufacturing Lab</h1>
+  <p>In this lab we will demonstrate how to setup Additive manufacturing process with layer scan model.</p>
+  <p><br/>
+    <a href="55_additive_manufacturing.htm#Fig_AML1_QT4_GUI_Main_window#1_1_Creating_a_New_Problem">1.1. Creating a New Problem </a> </p>
+  <p><a href="55_additive_manufacturing.htm#Fig_AML1_QT4_GUI_Main_window#1_2_Adding_Forming_Operation">1.2. Adding Forming Operation</a></p>
+  <p><a href="55_additive_manufacturing.htm#Fig_AML1_QT4_GUI_Main_window#1_3_Simulation_Controls">1.3. Simulation Controls</a></p>
+  <p><a href="#1_4_Defining_Additive_Manufacturing_process_conditions">1.4. Defining Additive Manufacturing process conditions</a></p>
+  <p><a href="#1_5_Objects">1.5. Objects</a></p>
+  <p><a href="#1_6_Workpiece">1.6. Workpiece</a></p>
+  <p><a href="#1_7_Base_plate">1.7. Base plate</a></p>
+  <p><a href="#1_8_Positioning_page">1.8. Positioning objects</a></p>
+  <p><a href="#1_9_Contact">1.9. Contact</a></p>
+  <p><a href="#1_10_Stopping_controls">1.10. Stopping controls</a></p>
+  <p><a href="#1_11_Step_controls">1.11. Step controls</a></p>
+  <p><a href="#1_12_Generate_Database">1.12. Generate Database</a></p>
+  <p><a href="#1_13_Preparing_Dat_files_for_simulation_of_Additive_Manufacturing">1.13. Preparing Dat files for simulation of Additive Manufacturing</a></p>
+  <p><a href="#1_14_Running_Simulation">1.14. Running Simulation</a></p>
+  <p><a href="#1_15_Post_Processing">1.15. Post Processing</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_a_New_Problem"></a>Creating a New Problem  </h2>
+  <p>On a Windows machine, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select
+    <strong>DEFORM GUI Main</strong> v1x.x from the menu. The DEFORM GUI Main window will appear, as shown in <a href="#Fig_AML1_QT4_GUI_Main_window"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_QT4_GUI_Main_window"></a><img height="438" src="{{ '/assets/images/applications/55_2_arc_welding/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">QT4 GUI Main window</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> <strong>New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_AML1_2_New_Problem_page"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>2.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>SI</strong>&quot; radio button in unit field. Define Problem Name as &quot;<strong>AM_CANTI </strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>”
+    check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_2_New_Problem_page"></a><img height="419" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem page</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use &quot;<strong>AM_CANTI </strong>&quot;
+    as the project name. 3D Forming operation can also be added in &quot;New Project&quot; dialog by selecting &quot;[3D] Forming&quot; in First operation list and by checking First operation check box. In this lab we will add 3D Forming operation from
+    Explorer operation list, so do not check &quot;First operation&quot; check box in &quot;New Project&quot; dialog. Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to continue to open the operation.</p>
+  <h2><a id="1_2_Adding_Forming_Operation"></a>Adding Forming Operation</h2>
+  <p>Add 3D Forming operation from the Explorer Operations list. Add the operation by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button available next to [3D] Forming or can also be added by drag and drop into
+    the Operation editor (See <a href="#Fig_AML1_3_Adding_3D_Forming_operation_from_Explorer"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>3.</a>). When we add the Forming operation, process settings window will open by
+    default.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_3_Adding_3D_Forming_operation_from_Explorer"></a><img height="423" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding 3D Forming operation from Explorer</p>
+  <h2><a id="1_3_Simulation_Controls"></a>Simulation Controls</h2>
+  <p>Check &quot;<strong>Deformation</strong>&quot; and &quot;<strong>Heat </strong><strong>Transfer</strong>&quot; <strong>Mode </strong>check box as shown in <a href="#Fig_AML1_4_Simulation_Controls_(Guided_mode)"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>4.</a>, </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_4_Simulation_Controls_(Guided_mode)"></a><img height="400" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0004.jpg' | relative_url }}" width="386"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Controls (Guided mode)</p>
+  <p> </p>
+  <h2><a id="1_4_Defining_Additive_Manufacturing_process_conditions"></a>Defining Additive Manufacturing process conditions</h2>
+  <p>Additive Manufacturing process conditions can be defined in Advanced Process conditions <img height="23" src="{{ '/assets/icons/pre_icons/mo_advanced_process_conditions.jpg' | relative_url }}" width="23"/> from Simulation controls in expert mode.  In this lab,
+    we will use powder bed, layer by layer scanning with voxel mesh. Same model can be used for line scanning with voxel mesh. In Simulation controls page, switch to Expert mode using <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/>. Select Advanced Process conditions <img height="23" src="{{ '/assets/icons/pre_icons/mo_advanced_process_conditions.jpg' | relative_url }}" width="23"/>, under<strong> Additive Manufacturing</strong> tab, enter the following data:</p>
+  <p>Select <strong>Process </strong><strong>type </strong>as &quot;<strong>Powder </strong><strong>Bed</strong>&quot;,</p>
+  <p><strong>Activation </strong><strong>size </strong>as <strong>1</strong>, (Activation size is the radius from heat source center, valid only if heat source trajectory is defined, ) for more information refer<a href=""> <span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>5.</a></p>
+  <p><strong>Initial </strong><strong>density </strong>as <strong>1.0,</strong></p>
+  <p><strong>Initial </strong><strong>temperature </strong>as <strong>1000</strong>° C.</p>
+  <p><strong>Deposit </strong><strong>size </strong>as  <strong>x</strong>= <strong>0.2</strong>, <strong>y </strong>= <strong>0</strong> and <strong>z</strong> = <strong>0.05</strong>. (unit is mm, x -&gt; deposition width, z -&gt; deposition thickness
+    and y -&gt; not use )</p>
+  <p>Turn on <strong>Use </strong><strong>voxel </strong><strong>mesh </strong><strong>check </strong><strong>box </strong>and define voxel mesh size as  <strong>x</strong> = <strong>10</strong>, <strong>y</strong> = <strong>88 </strong>and <strong>z</strong>    = <strong>60</strong>. (where x, y and z are revolution (number of elements)), for more information refer <a href="#Fig_AML1_6_Workpiece_Checking_popup"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>6.</a></p>
+  <p>Define Number of layers as 10, Current layer as 1, Start layer as 1 and End layer as 10 as shown in the <a href="#Fig_AML1_7_Process_Condition_-_Simulation_controls"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>7.</a>    Then click on <img height="22" src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" width="73"/> until ‘Objects’ page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_5_Activation_size" height="0" width="0"></a><img height="450" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0021.jpg' | relative_url }}" width="680"/></p>
+  <p> </p>
+  <p class="Fig_numb">Activation size</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_6_Voxel_mesh" height="0" width="0"></a><img height="450" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0022.jpg' | relative_url }}" width="664"/></p>
+  <p> </p>
+  <p class="Fig_numb">Voxel mesh</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_7_Process_Condition_-_Simulation_controls"></a><img height="450" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0023.jpg' | relative_url }}" width="469"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process Condition - Simulation controls</p>
+  <h2><a id="1_5_Objects"></a>Objects</h2>
+  <p>From the list, keep only two objects and delete the other object. Click <img height="22" src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" width="73"/> to Workpiece page.</p>
+  <h2><a id="1_6_Workpiece"></a>Workpiece</h2>
+  <p>In Workpiece object window select object type as &quot;<strong>Elasto-Plastic</strong>&quot;, change the Workpiece name to &quot;<strong>Canti</strong>&quot; and keep the temperature as <strong>20</strong>°C as shown in the <a href="#Fig_AML1_8_Workpiece_Object_definition"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>8.</a>    Select &quot;<strong>Mixed (Tet mesh)</strong>&quot; as element type for Elasto-plastic from drop - down menu. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_8_Workpiece_Object_definition"></a><img height="350" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0005.jpg' | relative_url }}" width="373"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Object definition</p>
+  <h3>Workpiece Geometry</h3>
+  <p>In Geometry page, using <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> button import &quot;<strong>AM_LAB_Canti.geo</strong>&quot; from installation path &quot;<strong>/3D/LABS/</strong>&quot; folder. After importing any geometry,
+    use <img src="{{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}"/> action label to check the Geometry. A perfect geometry should display message as shown in <a href="#Fig_AML1_9_Workpiece_Checking_popup"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>9.</a> Click
+    <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to close Check popup and Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_9_Workpiece_Checking_popup" height="0" width="0"></a><img height="437" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0006.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Checking popup</p>
+  <h3>Workpiece Mesh</h3>
+  <p>We will generate initial mesh with default Target number of Elements <strong>32000 </strong>with <strong>Relative </strong>mesh type and <strong>size</strong> <strong>ratio </strong>of <strong>2</strong> (See <a href="#Fig_AML1_10_Generated_mesh_for_Workpiece"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>10.</a>).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> and click <img src="{{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}"/> for Default Boundary condition popup. Click on <img src="{{ '/assets/icons/pre_icons/mo_boolean_icon.jpg' | relative_url }}"/> to generate layered Mesh.  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_10_Generated_mesh_for_Workpiece"></a><img height="436" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0007.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generated mesh for Workpiece</p>
+  <h3>Generating layered mesh</h3>
+  <p>Select <strong>Boolean </strong>type as <strong>Slice </strong><strong>layers</strong>, define Number of layers as <strong>10</strong>, <strong>Normal </strong><strong>direction </strong><strong>as </strong>(<strong>0,0,1</strong>) and <strong>Minimum </strong><strong>element </strong><strong>size </strong>as
+    <strong>0.3 </strong>with <strong>size </strong><strong>ratio </strong>as <strong>1</strong> for new mesh after slicing and click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> button. Then meshed object will be sliced and
+    a new mesh will be generated with defined mesh settings, after generation is completed click on <img src="{{ '/assets/icons/pre_icons/mo_plot_icon.jpg' | relative_url }}"/> icon to view the sliced layers and click  <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/>  button to close the Boolean operation page (See <a href="#Fig_AML1_11_Generated_layered_mesh"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>11.</a>).  Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_11_Generated_layered_mesh" height="0" width="0"></a><img height="423" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0008.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generated layered mesh</p>
+  <h3>Assign Material</h3>
+  <p>In Material Window, click on <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> to load material data from Library and load &#39;<strong>I</strong><strong>N718_machining-AMTC</strong>&#39; material from &#39;<strong>Superalloy</strong>&#39;
+    category by clicking <img src="{{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}"/> button. Select the added material from window to assign it to the workpiece as shown in <a href="#Fig_AML1_12_Assign_Material_for_Workpiece"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>12.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Boundary condition page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_12_Assign_Material_for_Workpiece" height="0" width="0"></a><img src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0009.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assign Material for Workpiece</p>
+  <h3>Workpiece Boundary condition</h3>
+  <p>We will use the Default <strong>Environment </strong><strong>Temperature </strong>of <strong>20</strong>°C. To assign Heat Change with Environment BCC, select Heat Exchange with Environment, select the entire object surface by clicking on <img src="{{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}"/> from the picking dialog, then click on  <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/>  to finish the assignment (See <a href="#Fig_AML1_13_Boundary_condition_definition_for_workpiece"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>13</a>.).
+    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Top die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_13_Boundary_condition_definition_for_workpiece" height="0" width="0"></a><img height="433" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Boundary condition definition for workpiece</p>
+  <h2><a id="1_7_Base_plate" height="0" width="0"></a>Base plate</h2>
+  <p>In Top die definition window change the object name to <strong>&quot;Base Plate</strong>&quot;, change object temperature to <strong>50</strong>°C and keep the object type as &quot;<strong>Rigid</strong>&quot; as shown in<a href="#Fig_AML1_14_Base_plate_object_definition"> <span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>14.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry  page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_14_Base_plate_object_definition"></a><img height="450" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0011.jpg' | relative_url }}" width="529"/></p>
+  <p> </p>
+  <p class="Fig_numb">Base plate object definition</p>
+  <h3 class="h3_6_1">Base Plate Geometry</h3>
+  <p>Using <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> create a <strong>Box </strong>Geometry with <strong>Width </strong>(W) <strong>80mm</strong>, <strong>Length </strong>(L) <strong>80mm </strong>and <strong>Height </strong>(H)
+    <strong>20mm </strong>as shown in <a href="#Fig_AML1_15_Base_plate_geometry_page"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>15.</a> Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button
+    to close Primitive page and click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_15_Base_plate_geometry_page" height="0" width="0"></a><img height="424" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0012.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Base plate geometry page</p>
+  <h3 class="h3_6_1">Base  plate  Mesh</h3>
+  <p>Generate <strong>Tetrahedral </strong>mesh for the Base Plate with default target number of elements (<strong>32000</strong>) with <strong>Relative </strong>mesh <strong>type </strong>of <strong>size </strong><strong>ratio</strong> <strong>2</strong>,
+    click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> (See <a href="#Fig_AML1_16_Mesh_generation_for_Base_Plate"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>16.</a>). After mesh generation
+    is completed, click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Material page.</p>
+  <p style="text-align: center"><a id="Fig_AML1_16_Mesh_generation_for_Base_Plate"></a><img height="424" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0013.jpg' | relative_url }}" style="cursor: nwse-resize;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh generation for Base Plate</p>
+  <h3 class="h3_6_1">Assign Material for Base plate</h3>
+  <p>In Material Window, click on <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> to Load material data from Library and load &#39;<strong>DIN-C15[70-2200F(20-1200C)]</strong>&#39; material from &#39;<strong>Steel</strong>&#39;
+    category by clicking  <img src="{{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}"/> button. Select the added material from window to assign it to the Base plate as shown in <a href="#Fig_AML1_17_Assigned_material_for_Base_plate"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>17.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Boundary condition page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_17_Assigned_material_for_Base_plate"></a><img height="450" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0014.jpg' | relative_url }}" width="524"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned material for Base plate</p>
+  <h3 class="h3_6_1">Base plate Boundary Condition</h3>
+  <p>By default, Heat exchange with environment BCC will be assigned to the Base Plate for whole surface, if not defined click on <img src="{{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}"/> from the picking dialog to pick all surfaces and then
+    click on <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/> to finish the assignment. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Positioning page.</p>
+  <h2><a id="1_8_Positioning_page"></a>Positioning page</h2>
+  <p>In the <strong>positioning </strong>page, click the <img src="{{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}"/> icon, select &quot;<strong>Interference</strong>&quot; as the positioning method select &quot;<strong>Base Plate</strong>&quot;
+    as <strong>Positioning </strong><strong>object</strong> and &quot;<strong>Canti</strong>&quot; as the <strong>Reference </strong>select <strong>+Z</strong> <strong>Axis </strong>as the approach direction and click on  <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> and then <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the positioning dialog,  click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Contact page.</p>
+  <h2><a id="1_9_Contact"></a>Contact</h2>
+  <p>Select &#39;<strong>User</strong>&#39; type contact and click on <img src="{{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}"/> button. It will add the relationship between the Base plate and Canti.</p>
+  <p>Highlight the <strong>Base plate - Canti </strong>relationship and click the <img height="21" src="{{ '/assets/icons/pre_icons/mo_edit..._2_button.jpg' | relative_url }}" width="51"/> button to modify the contact conditions, enter <strong>Shear </strong><strong>friction </strong>as
+    <strong>1</strong> and <strong>Heat </strong><strong>transfer </strong><strong>Coefficient </strong>as <strong>0.5 </strong>and close the dialog. Turn on <strong>Sticking </strong><strong>condition </strong><strong>Check </strong><strong>box</strong>,
+     click on<img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/>  button to calculate default tolerance value and click <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}"/> to generate contact. Click &quot; <strong>Yes </strong>&quot;
+    For Sticking condition Pop-up, generated contact is as shown in the <a href="#Fig_AML1_18_Inter-Object_data_definition_window"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>18.</a> Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Stopping controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_18_Inter-Object_data_definition_window"></a><img height="434" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0015.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-Object data definition window</p>
+  <h2><a id="1_10_Stopping_controls"></a>Stopping controls</h2>
+  <p>In stopping controls page, we are in Expert mode if not click <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> button to switch to Expert mode. Define &#39;<strong>Process duration</strong>&#39; as <strong>200 </strong>sec (See
+    <a href="#Fig_AML1_19_Stopping_controls_-_Expert_mode"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>19.</a>). Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Step page.</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_AML1_19_Stopping_controls_-_Expert_mode"></a><img height="390" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0016.jpg' | relative_url }}" width="457"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping controls - Expert mode</p>
+  <h2><a id="1_11_Step_controls"></a>Step controls</h2>
+  <p>In Step controls, click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_main_setting.jpg' | relative_url }}" width="21"/> and check &#39;<strong>Deformation</strong>&#39; and &#39;<strong>Heat </strong><strong>transfer</strong>&#39; check box are checked
+    and &#39;<strong>Lagrangian </strong><strong>incremental</strong>&#39; option is selected as shown in the <a href="#Fig_AML1_20_Main_settings_-_Simulation_controls"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>20.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_20_Main_settings_-_Simulation_controls"></a><img height="450" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0017.jpg' | relative_url }}" width="421"/></p>
+  <p> </p>
+  <p class="Fig_numb">Main settings - Simulation controls</p>
+  <p> </p>
+  <p>Select <img height="25" src="{{ '/assets/icons/pre_icons/mo_simulation_step.jpg' | relative_url }}" width="25"/>, define <strong>Number </strong><strong>of </strong><strong>Simulation </strong><strong>steps </strong>as <strong>250 </strong>and <strong>Step </strong><strong>Increment </strong><strong>to </strong><strong>save </strong>as
+    <strong>10</strong> as shown in <a href="#Fig_AML1_21_Simulation_Steps_-_Simulation_controls"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>21.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_21_Simulation_Steps_-_Simulation_controls"></a><img height="380" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0018.jpg' | relative_url }}" width="462"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Steps - Simulation controls</p>
+  <p> </p>
+  <p>Select <img height="25" src="{{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }}" width="25"/>, select <strong>Time </strong>as <strong>Solution </strong><strong>step </strong>definition type and define <strong>constant </strong><strong>time </strong><strong>increment </strong>of
+    <strong>1</strong> sec as shown in <a href="#Fig_AML1_22_Step_Increment_-_Simulation_controls"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_22_Step_Increment_-_Simulation_controls"></a><img height="390" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0019.jpg' | relative_url }}" width="475"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step Increment - Simulation controls</p>
+  <p> </p>
+  <p>Select <img height="25" src="{{ '/assets/icons/pre_icons/mo_solver_settings.jpg' | relative_url }}" width="25"/>, In <strong>Deformation </strong>tab select &quot;<strong>Newton-Raphson</strong>&quot; as Iteration method and &quot;<strong>MUMPS</strong>&quot;
+    as the solver as shown in the <a href="#Fig_AML1_23_Solver_settings_-_Simulation_controls"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>23.</a> Under <strong>Temperature </strong>tab select &quot;<strong>MUMPS</strong>&quot;
+    solver. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Generate DB page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_23_Solver_settings_-_Simulation_controls"></a><img height="400" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0020.jpg' | relative_url }}" width="487"/></p>
+  <p> </p>
+  <p class="Fig_numb">Solver settings - Simulation controls</p>
+  <p> </p>
+  <h2><a id="1_12_Generate_Database"></a>Generate Database</h2>
+  <p>In &#39;<strong>Generate DB</strong>&#39; page, click <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/> to see if anything was missed in the setup and then click on the <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/>  button to generate the database. Observe the message in Message tab informing database generation status.</p>
+  <p> </p>
+  <h2><a id="1_13_Preparing_Dat_files_for_simulation_of_Additive_Manufacturing"></a>Preparing Dat files for simulation of Additive Manufacturing</h2>
+  <p>We will see dat file content for Layer-by-Layer scanning and Line scanning methods. We can simulate the additive manufacturing process using one of the dat files. For this lab, we will consider heat source scanning at a speed of 750 mm/sec. From <strong>File <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Folder option </strong>use
+    open working folder. Explorer will open showing the current project folder and we can observe the generated database file. We need to create dat file and place within this folder, the dat file should always be placed in the folder containing the database
+    to be simulated. For more information related to <a href="../../../appendices/appendix_xvii_data_files.htm#DEF_ADDMPARM_DAT">DEF_ADDMPARM.DAT</a> file, refer section <a href="../../../appendices/appendix_xvii_data_files.htm"> Appendix XVII: Data Files</a>.</p>
+  <h3 class="h3_13_1">Dat file for Layer-by-Layer scanning</h3>
+  <p>Create a file named <strong>DEF_ADDMPARM.DAT</strong> to activate <strong>Layer </strong><strong>scan </strong>model. Define the below data in the <strong>DEF_ADDMPARM</strong><strong>.</strong><strong>DAT </strong>file. </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 300px;margin-left: 12pt">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong style="padding-left: 12pt">2</strong></p>
+          <p><strong style="padding-left: 12pt"></strong><strong>750.0    0.0    0.0</strong></p>
+          <p><strong style="padding-left: 12pt"></strong><strong></strong><strong>0</strong></p>
+          <p><strong style="padding-left: 12pt"></strong><strong>0.0    0.0   0.0</strong></p>
+          <p><strong style="padding-left: 12pt">0.0</strong></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>1st Line:        2 -&gt; For Layer-by-Layer scan activation.</p>
+  <p>2nd Line:       750.0 -&gt; Deposit speed 750mm/sec.</p>
+  <p>3rd Line:    0 -&gt; We will use Initial Temperature defined in Simulation Control (1,000°C).</p>
+  <p>4th Line:      0,0,0 -&gt; Since we are using Initial Temperature in line 3, Initial Power input (Power, Efficiency, Laser speed) need not be defined.</p>
+  <p>5th Line:        0 -&gt; There is no resting time between layers.</p>
+  <h3 class="h3_13_1">Dat File for Line scanning</h3>
+  <p>For <strong>Linescan </strong>type, user can define the below data in<strong> DEF_ADDMPARM.DAT</strong> file.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 300px;margin-left: 12pt">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong style="padding-left: 12pt">4</strong></p>
+          <p><strong style="padding-left: 12pt"></strong><strong>750.0    0.0    0.0</strong></p>
+          <p><strong style="padding-left: 12pt"></strong><strong></strong><strong>0</strong></p>
+          <p><strong style="padding-left: 12pt"></strong><strong>0.0    0.0   0.0</strong></p>
+          <p><strong style="padding-left: 12pt">0.0</strong></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> 1st Line:         4 -&gt; For Line scan activation</p>
+  <p>2nd Line:        750.0 -&gt; Deposit speed 750mm/sec.</p>
+  <p>3rd Line:     0 -&gt; We will use Initial Temperature defined in Simulation Control (1,000°C).</p>
+  <p>4th Line:         0,0,0 -&gt; Since we are using Initial Temperature in line 3, Initial Power input (Power, Efficiency, Laser speed) need not be defined.</p>
+  <p>5th Line:         0 -&gt; There is no resting time between layers.</p>
+  <h2><a id="1_14_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}" width="146"/>  button above the operation tree. Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog as shown in <a href="#Fig_AML1_24_Run_Simulation_Window"><span data-keyref="Application- Additive_manufacturing_Lab1">Fig. AML1.</span>24.</a> Use the default <strong>Continue Run</strong> option to select
+    “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AML1_24_Run_Simulation_Window"></a><img height="293" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0028.jpg' | relative_url }}" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation Window</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked.</p>
+  <h2><a id="1_15_Post_Processing"></a>Post Processing</h2>
+  <p>When the simulation is completed, review the results by switching to Post mode using the <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> button above the Simulation tool bar.</p>
+  <p> </p>
+  <p>Play through the steps of the simulation and look how the Canti part formed layer by layer in additive manufacturing process.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="444" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0025.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Partially formed Canti part after 40 steps</p>
+  <p> </p>
+  <p style="text-align: center"><img height="444" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0026.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Partially formed Canti part after 100 steps  </p>
+  <p> </p>
+  <p style="text-align: center"><img height="444" src="{{ '/assets/images/applications/55_additive_manufacturing_labs/image0027.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Completely formed Canti part after 200 steps</p>
+  <p> </p>
+
+</body></html>

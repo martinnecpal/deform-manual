@@ -1,0 +1,133 @@
+---
+lang: sk
+title: "Appendix VI: Part is deforming but strain does not accumulate"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix VI: Part is deforming but strain does not accumulate</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix VI: Part is deforming but strain does not accumulate</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_vi.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_VII__Checking_the_Forming_loads_of_a_simulation.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_V__The_elasto-plastic_model.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix VI: Part is deforming but strain does not accumulate">
+        <span>Appendix VI: Part is deforming but strain does not accumulate</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix VI: Part is deforming, but strain does not accumulate</h1>
+  <p>There is a relatively common situation in DEFORM in which a part deforms, but effective strain remains identically zero, and other variables, such as stress, behave strangely.</p>
+  <p>The problem is common when the strain rate is very small, and is related to a value known as “limiting strain rate”</p>
+  <p> </p>
+  <p><strong><em>What is limiting strain rate?</em></strong></p>
+  <p>The rigid-plastic formulation in DEFORM is based on stresses developed in an element due to deformation.  In the rigid-plastic model, if an element is not plastically deforming, the stress in the element is ambiguous.  However, for good convergence,
+    a consistent stress is required.</p>
+  <p>To improve convergence, DEFORM uses a value known as Limiting Strain Rate (<a href="../keyword_documentation/l/lmtstr.htm">LMTSTR</a>) to identify rigid, or nearly rigid regions of the part and to calculate flow stress in regions with near zero deformation
+    rates.. Generally, the relationship between flow stress and strain rate is non-linear, as defined by the flow stress law.  At values below the limiting strain rate, the flow stress-strain rate relationship is assumed to be linear between 0 and <img src="{{ '/assets/images/appendices/appendix_vi_part_is_deforming/sigma_epsalon_l.jpg' | relative_url }}"/> where <img src="{{ '/assets/images/appendices/appendix_vi_part_is_deforming/sigma_epsalon_l.jpg' | relative_url }}"/> is the flow stress at the limiting strain rate.</p>
+  <p>Elements whose strain rate is below the limiting strain rate are considered to be “rigid” for the purposes of the calculation. They do not accumulate strain, and the reported effective stress may be quite low.</p>
+  <p> </p>
+  <p><strong><em>How is limiting strain rate calculated?</em></strong></p>
+  <p>Limiting strain rate is maintained as a fixed ratio of the “Average Strain Rate”.The ratio is defined in the preprocessor <a href="../pre_processor/16_object_properties/16_object_properties.htm">Object Properties</a> and is normally 100:1. At strain
+    rates below <a href="../keyword_documentation/l/lmtstr.htm">LMTSTR</a>, the flow stress is calculated based on a linear fit from 0,0 to the flow stress at <a href="../keyword_documentation/l/lmtstr.htm">LMTSTR</a>.</p>
+  <p>At each deformation time step, the average strain rate of all deforming elements is calculated, then the limiting strain rate is recalculated from this updated value.</p>
+  <p>Strain and damage are not incremented for elements with a strain rate below <a href="../keyword_documentation/l/lmtstr.htm">LMTSTR</a></p>
+  <p> </p>
+  <p><strong>Why does this cause a problem?</strong></p>
+  <p>If the strain rate of every element in the simulation is less than the limiting strain rate, the average strain rate will never be recalculated and the limiting strain rate will also never be recalculated. This is necessary for simulations with rigid
+    body movement, such as may occur in the early stages when a part is settling in a tool.  However, it causes problems when deformation is slow enough that elements deform, but remain below the limiting value. It is possible to see quite large deformations
+    in a part while the part displays no strain.</p>
+  <p> </p>
+  <p><strong>How is this problem resolved?</strong></p>
+  <p>For simulations where the deformation rate will be slow, the average and limiting strain rate must be redefined before the start of the simulation. The values are set under the Properties dialog for each plastic object. Average strain rate can be estimated
+    from V/L, where V is the tool velocity, and L is the characteristic deforming length of the part.   </p>
+  <p>Limiting strain rate should generally be defined as 1/100 of average strain rate.</p>
+  <p>The exception is simulations where the rigid portion of the workpiece will see a high sustained stress below the yield stresses.  Examples include machining simulations and free extrusions. In these cases, the rigid region may tend to “creep” under
+    sustained stress. A limiting strain rate 5 orders of magnitude smaller than the average strain rate should be used in these cases.</p>
+  <p> </p>
+  <p><em><strong>Average strain rate calculation for different conditions:</strong></em></p>
+  <p><a href="../keyword_documentation/l/lmtstr.htm">LMTSTR</a> is maintained as a constant ratio to the average strain rate <a href="../keyword_documentation/a/avgstr.htm">AVGSTR</a>. After each solution step, <a href="../keyword_documentation/a/avgstr.htm">AVGSTR</a>    is recalculated as the non-weighted average of all deforming elements. <a href="../keyword_documentation/l/lmtstr.htm">LMTSTR</a> is then recalculated based on the ratio initially defined in the preprocessor.</p>
+  <p> </p>
+  <p>For typical simulations, a 2 order of magnitude ratio between AVGSTR &amp; LMTSTR is appropriate (i.e. AVGSTR = 1, LMTSTR = 0.01)</p>
+  <p> </p>
+  <p>For simulations with extremely low strain rates, the average and limiting strain rates should be calculated based on AVGSTR = V/h where V is the characteristic forming velocity (i.e. die or punch speed) and h is the characteristic workpiece height.
+    LMTSTR = 0.01* AVGSTR.</p>
+  <p> </p>
+  <p>For simulations involving a large constant stress on non-deforming regions of a workpiece, the rigid zone may “drift” slightly, causing small but potentially significant errors. For these types of simulations, a 5 order of magnitude ratio (i.e. AVGSTR
+    = 1, LMTSTR = 1e-5) Typical cases include FREE EXTRUSION and MACHINING.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AVI_1_Comparison_between_Flow_stress_and_Limiting_Strain_Rate"></a><img height="500" src="{{ '/assets/images/appendices/appendix_vi_part_is_deforming/image0001.jpg' | relative_url }}" width="667"/></p>
+  <p> </p>
+  <p class="Fig_numb">Comparison between Flow stress and Limiting Strain Rate</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../pre_processor/16_object_properties/16_object_properties.htm">Object Properties</a></p>
+
+</body></html>

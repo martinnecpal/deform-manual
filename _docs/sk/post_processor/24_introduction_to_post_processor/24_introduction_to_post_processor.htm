@@ -1,0 +1,161 @@
+---
+lang: sk
+title: "24. Introduction to Post Processor"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "6.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>24. Introduction to Post Processor</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>24. Introduction to Post Processor</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/post_processor/24_introduction_to_post_processor.css"/>
+<meta name="brsnext" value="Documentation_content/Post_Processor/25_Post_Processor_Layout/25_Post_Processor_Layout.htm"/><meta name="brsprev" value="Documentation_content/Post_Processor/Post_Processor_MainPg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="24. Introduction to Post Processor">
+        <span>24. Introduction to Post Processor</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>24. Introduction to Post Processor</h1>
+  <p>The DEFORM Post-Processor is used to review the simulation results. This is an integrated post processor provide with new user friendly GUI with the most of the existing post-processing functions and new features.</p>
+  <p>DEFORM Post-Processor provides an environment with new features for the user to generate 3D PDF reports of simulation results,<a href="../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_11_coupon_data_extraction.htm"> coupon data extraction</a>,
+    interpret results across database using <a href="../26_post_processing_tools_and_controls/26_1_file_operations_in_post_processor.htm#26_1_1_Working_with_DB_in_PIP_mode">PIP</a>, plot results in region of interest, <a href="../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_10_ca_model_setup.htm">CA microstructure modelling</a>    and post processing <a href="../28_report_generation/28_report_generation.htm">report generation</a> (.pdf and .ppt file formats) with pre defined user settings.</p>
+  <p>Post-Processor with a variety of features and graphics allows engineers to check the model results and present them in a way to understand the model results in an efficient manner. This section gives brief details of the system and the available features.</p>
+  <p>With every release the system is being enhanced to meet the industry requirement and specific user demands.</p>
+  <p>Information which is available from the post-processor includes:</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Deformed geometry, including tool movements and deformed mesh at each saved step.</p>
+    </li>
+    <li>
+      <p><a href="../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm#Display_options">Contour plots</a>: Line and shaded contours display the distribution of any state variables, including stress, strain, temperature,
+        damage and others.</p>
+    </li>
+    <li>
+      <p><a href="../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm#Display_options">Vector plots</a>: Displacement and velocity vectors indicate magnitude and direction of displacement or velocity for every node
+        at each step throughout the process.</p>
+    </li>
+    <li>
+      <p>Graphs of key variables such as press loads, volumes, temperature, atom content, hardness and point tracked state variables.</p>
+    </li>
+    <li>
+      <p><a href="../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_9_point_tracking.htm">Point tracking</a> to show how material moves and plots graphs of state variables behavior at these points.</p>
+    </li>
+    <li>
+      <p><a href="../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_12_flownet_tracking.htm">Flow net</a> showing material flow patterns on a uniform grid. Generally a very good predictor of grain flow patterns in the finished part.</p>
+    </li>
+    <li>
+      <p>A <a href="../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm">histogram</a> plot of any state variable can be made to view the distribution of any given state variable throughout a body.</p>
+    </li>
+    <li>
+      <p><a href="../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup.htm">3D View Mode</a> can be used to visualize 2D  in 3D either by revolving or extruding.</p>
+    </li>
+    <li>
+      <p>Interactive Slicing of 3D object to  understand internal features and state variable distribution.</p>
+    </li>
+    <li>
+      <p><a href="../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_11_coupon_data_extraction.htm">Coupon data extraction</a> for cut-up evaluation of critical locations for microstructure and mechanical property response.</p>
+    </li>
+    <li>
+      <p>Results can be plot in region of interest by defining an arbitrary shape, used to get min/max state variable values from specific part of an object.</p>
+    </li>
+    <li>
+      <p>Interactive post processing results can be brought to the reports (.pdf and .ppt) files with pre defined user settings.</p>
+    </li>
+    <li>
+      <p>Cellular Automata (CA) models are synchronous algorithms that describe the discrete spatial and temporal evolution of complex systems by applying local (or mesoscopic, mid-range) deterministic or probabilistic transformation rules to lattice cells
+        with local connectivity to predict grain size.</p>
+    </li>
+    <li>
+      <p><a href="../26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor.htm#Multi_Viewports">Multi viewports</a>, <a href="../26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor.htm#Fig_26_2_3_DB_comparison">Database comparison</a>,
+        Link/Sync options for Multiple window display are newly added and these options can be used for viewing multiple DB’s  at a time in NG post.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>State variables, geometry and image data can also be extracted in a number of neutral formats for use with other programs.</p>
+  <p> </p>
+  <h2>Opening DB for Post-processing</h2>
+  <p>When the problem folder contains the database then the <img height="22" src="{{ '/assets/icons/pre_icons/2d_3d_post_label.jpg' | relative_url }}" width="92"/> option will be shown in GUI main. To open the simulated database in Post processor from GUI Main, we need
+    to click on<img height="22" src="{{ '/assets/icons/pre_icons/2d_3d_post_label.jpg' | relative_url }}" width="92"/>under Post-Processor or by clicking on <img height="21px" src="{{ '/assets/icons/pre_icons/2d_3d_post_icon.jpg' | relative_url }}" width="21px"/> in tool bar list
+    as shown in <a href="#Fig_24_1_Opening_Post-processor_from_GUI_main"><span data-keyref="Chapter_24_Introduction_to_Post_Processor">Fig. 24.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_24_1_Opening_Post-processor_from_GUI_main"></a><img height="414" src="{{ '/assets/images/post_processor/24_introduction_to_post_processor/image001.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Opening Post-processor from GUI main</p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../25_post_processor_layout/25_post_processor_layout.htm">25. Post Processor Layout</a></p>
+  <p><a href="../26_post_processing_tools_and_controls/26_post_processor_features.htm">26. Post Processor Features</a></p>
+  <p><a href="../28_report_generation/28_report_generation.htm">28. Report Generation</a></p>
+  <p> </p>
+
+</body></html>

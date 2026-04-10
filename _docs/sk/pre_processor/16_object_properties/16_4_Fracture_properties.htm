@@ -1,0 +1,69 @@
+---
+lang: sk
+title: "16.4. Fracture Properties"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>16.4. Fracture Properties</title>
+  <meta name="topic-status" content="Draft" />
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/Pre_Processor/16_Object_Properties/16_4_Fracture_Properties.css" />
+</head>
+<body>
+  <h1>16.4. Fracture properties</h1>
+  <p> </p>
+  <p><a href="#16_4_1_Fracture_step_(FRCSTP)">16.4.1. Fracture step (FRCSTP)</a></p>
+  <p><a href="#16_4_2_Fracture_elements_(FRCNEL)">16.4.2. Fracture elements (FRCNEL)</a></p>
+  <p><a href="#16_4_3_Fracture_element_deletion_(FRCNEL)">16.4.3. Fracture element deletion (FRCNEL)</a></p>
+  <p><a href="#16_4_4-Fracture_element_deactivation">16.4.4 Fracture element deactivation</a></p>
+  <p><br/> Ductile fracture of a deforming workpiece can be modelled in DEFORM. If the fracture function is turned on, material separation will be modelled for any elements which exceed a critical damage value specified in the Material Properties <img src="../../../assets/Icons/Pre_icons/arrow_front.jpg"
+    />Miscellaneous<img src="../../../assets/Icons/Pre_icons/arrow_front.jpg" /><a href="../10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models.htm">Fracture</a> tab. This feature is useful for modelling shearing and blanking, machining,
+    fracture of deformable installation fasteners (pop rivets) and other applications.</p>
+  <p><strong>[2D]: </strong><strong>Fracture elements deletion</strong> is modelled by deleting any elements which exceed the critical damage value.</p>
+  <p>Therefore, an extremely fine mesh should be used in any region where fracture is expected to limit volume loss. The FEM simulation is temporarily stopped to perform element deletion. The stopping may be triggered by a given fracture steps (see <a href="#Fig_16_4_1_2D_Fracture_Object_properties_window"><span data-keyref="Chapter_16_4_Fracture_Properties">Fig. 16.4.</span>1.)</a>    or whenever the damage value in a specified number of elements exceeds the critical value.</p>
+  <p><strong>Fracture element deactivation</strong> is a new method to study crack propagation. It will deactivate an element instead of deleting it when its damage reaches the critical value of its material (See <a href="#Fig_16_4_2_3D_Fracture_Object_properties_window"><span data-keyref="Chapter_16_4_Fracture_Properties">Fig. 16.4.</span>2.)</a>.</p>
+  <p> </p>
+  <p><strong>[3D]</strong>: To activate fracture elements deletion type, user needs select<strong> Fracture element deletion</strong> type from Fracture pulldown (<a href="../../Keyword_Documentation/F/FRCNEL.htm">FRCNEL</a>) field (see <a href="#Fig_16_4_1_2D_Fracture_Object_properties_window"><span data-keyref="Chapter_16_4_Fracture_Properties">Fig. 16.4.</span>1.)</a> This
+    will initiate element deletion for elements with fracture value more than critical value defined in material fracture/damage models during remeshing procedures. Damage model and critical damage factor defined in the material data are important data
+    needed to activate this feature. For an overview of fracture, please refer <a href="../../Applications/55_Applications/55_Fracture/3D_Fracture.htm"><span style="color:#0000ff;">3D Fracture</span>.</a> </p>
+  <p><strong>Fracture element deactivation</strong> is a new method to study crack propagation. It will deactivate an element instead of deleting it when its damage reaches the critical value of its material (See <a href="#Fig_16_4_2_3D_Fracture_Object_properties_window"><span data-keyref="Chapter_16_4_Fracture_Properties">Fig. 16.4.</span>2.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_16_4_1_2D_Fracture_Object_properties_window"></a><img height="428" src="../../../assets/Images/Pre-Processor/16_Object_Properties/16_4_Fracture_Properties/16_4_Image001.jpg" width="750" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Fracture Element deletion type</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_16_4_2_3D_Fracture_Object_properties_window"></a><img height="463" src="../../../assets/Images/Pre-Processor/16_Object_Properties/16_4_Fracture_Properties/16_4_Image002.jpg" width="750" /></p>
+  <p> </p>
+  <p class="Fig_numb">Fracture element deactivation type</p>
+  <p> </p>
+  <h2><a id="16_4_1_Fracture_step_(FRCSTP)"></a>Fracture step (<a href="../../Keyword_Documentation/F/FRCSTP.htm">FRCSTP</a>) [2D]</h2>
+  <p>The step (<strong><a href="../../Keyword_Documentation/F/FRCSTP.htm">FRCSTP</a>)</strong> interval at which the simulation should be stopped to perform element deletion. If no elements are above the critical damage value, none will be deleted.</p>
+  <p> </p>
+  <h2><a id="16_4_2_Fracture_elements_(FRCNEL)"></a>Fracture elements deletion (<a href="../../Keyword_Documentation/F/FRCNEL.htm">FRCNEL</a>) [2D]</h2>
+  <p>The number of elements that must be above the critical damage value for the simulation to be stopped to perform element deletion.  A typical value is around 4.</p>
+  <p> </p>
+  <h2><a id="16_4_3_Fracture_element_deletion_(FRCNEL)"></a>Fracture element deletion (<a href="../../Keyword_Documentation/F/FRCNEL.htm">FRCNEL</a>) [3D]</h2>
+  <p>This option will initiate element deletion for elements with fracture value more than critical value defined in material fracture/damage models during remeshing procedures.</p>
+  <p>Generally, fracture element deletion will be used for crack propagation study in DEFORM system. Due to the difficulty in brick remeshing, fracture element deletion currently does not support 3D brick mesh. </p>
+  <h2><a id="16_4_4-Fracture_element_deactivation"></a>Fracture element deactivation [2D, 3D]</h2>
+  <p>Fracture element deactivation is a new method to study crack propagation. It will deactivate an element instead of deleting it when its damage reaches the critical value of its material. It allows simulation to continue without remeshing or with less
+    remeshing in forming processes. Fracture element deactivation can support 3D brick mesh, 3D tetrahedral mesh and 2D mesh to predict crack onset &amp; propagation.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="16_object_properties.htm">16. Object properties</a></p>
+  <p><a href="16_1_deformation_properties.htm">16.1. Deformation properties</a></p>
+  <p><a href="16_2_thermal_properties.htm">16.2. Thermal properties</a></p>
+  <p><a href="16_3_Reference.htm">16.3. Reference</a></p>
+  <p><a href="16_5_hardness_properties.htm">16.5. Hardness Properties</a></p>
+  <p><a href="16_6_heating_properties.htm">16.6. Heating Properties</a></p>
+  <p><a href="16_7_symmetry_properties.htm">16.7. Symmetry Properties</a></p>
+  <p><a href="16_8_body_force.htm">16.8. Body Force</a></p>
+  <p><a href="16_9_rse.htm">16.9. RSE</a></p>
+  <p><a href="16_10_user.htm">16.10. User</a></p>
+  <p><a href="../10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models.htm">Material Fracture/damage models</a></p>
+  <p><a href="../../Applications/55_Applications/55_Fracture/3D_Fracture.htm">Applications - 3D Fracture</a> </p>
+</body>
+</html>

@@ -1,0 +1,865 @@
+---
+lang: en
+title: "8. Pre-Processor Layout"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>8. Pre-Processor Layout</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>8. Pre-Processor Layout</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/8. pre-processor layout.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/9_Simulation_Controls/9_Simulation_Controls.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/7_Introduction_to_Pre-Processor.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="8. Pre-Processor Layout">
+        <span>8. Pre-Processor Layout</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>8. Pre-Processor Layout</h1>
+  <p><a href="#8.1._Graphic_Utilities_Window">8.1. Graphic Utilities Window</a></p>
+  <p><a href="#8.1.1._File_Menu" style="margin-left: 40px">8.1.1. File Menu</a></p>
+  <p><a href="#8.1.2._Viewport_Menu" style="margin-left: 40px">8.1.2. Viewport Menu</a></p>
+  <p><a href="#8.1.3._Display_menu" style="margin-left: 40px">8.1.3. Display menu</a></p>
+  <p><a href="#8.1.4._Mouse_Menu" style="margin-left: 40px">8.1.4. Mouse Menu</a></p>
+  <p><a href="#8.1.5._Tool_Menu_" style="margin-left: 40px">8.1.5. Tool Menu</a> </p>
+  <p><a href="#8.1.6._Options_Menu" style="margin-left: 40px">8.1.6. Options Menu</a></p>
+  <p><a href="#Help" style="margin-left: 40px">8.1.7. Help</a></p>
+  <p><a href="#8.2._Operation_Tree">8.2. Operation Tree</a></p>
+  <p><a href="#8.2.1._Operation_Tree_Tool_bar_options" style="margin-left: 40px">8.2.1.Operation Tree Tool bar options</a> </p>
+  <p><a href="#8.2.2._Object_Tree_Right_Mouse_button_(RMB)_options" style="margin-left: 40px">8.2.2.Object Tree Right Mouse button (RMB) options</a></p>
+  <p><a href="#8.2.3.._Right_Mouse_Button_Display_Options" style="margin-left: 40px">8.2.3. Right Mouse Button Display Options</a></p>
+  <p><a href="#8.3._Input_options">8.3. Input options</a></p>
+  <p> </p>
+  <p>The Pre-processor  window can be accessed from <strong>New Problem</strong> <strong>window </strong>using &quot;2D/3D Pre” link for new problem and for already existing problem the Pre-processor  window can be accessed from DEFORM GUI Main using &quot;2D/3D
+    pre” link in the Deform GUI Main window. The below<a href="#Fig._8.1._Pre-Processor_Layout"> <span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>1.</a> shows the schematic view of Pre-processor  layout.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="391" src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image001.jpg' | relative_url }}" style="cursor: nesw-resize;" width="750"/></p>
+  <p class="Fig_numb" style="text-align: center"><a id="Fig._8.1._Pre-Processor_Layout"></a>Pre-Processor Layout</p>
+  <h2><a id="8.1._Graphic_Utilities_Window"></a>Graphic Utilities Window</h2>
+  <p>The graphics utilities window provides view manipulation and other utility functions for the object window. Features include zoom and pan, measurement utilities, viewport controls, printing and Rendering type utilities as seen in <a href="#Fig._8.1._Pre-Processor_Layout"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>1.</a> </p>
+  <h3><a id="8.1.1._File_Menu"></a>File Menu</h3>
+  <p>The below <a href="#Fig._8.2._File_Menu_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>2.</a> shows the File menu options,</p>
+  <p style="text-align: center"><a id="Fig._8.2._File_Menu_options"></a><img height="380" src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image002.jpg' | relative_url }}" width="270"/></p>
+  <p class="Fig_numb">File Menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>New (Ctrl+N) <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/></strong> : Using this File Menu option we can create New problem. (See <a href="#Fig._8.3._New_Problem_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>3.</a>)</li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.3._New_Problem_window"></a><img src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image003.jpg' | relative_url }}"/> </p>
+  <p class="Fig_numb">New Problem window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Open (Ctrl+O)</strong> <img src="{{ '/assets/icons/pre_icons/mo_open_icon.jpg' | relative_url }}"/> : Using this File Menu option .DB or .KEY file can be imported.</li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Save (Ctrl+S)</strong> <img src="{{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}"/> : Saves the problem setup in .key file format. This can also be accessed from File Tools menu.</li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Import ...  (Ctrl+D)</strong> <img src="{{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}"/>  : Existing Database file or .DB file can be imported from the selected folder. This can also be accessed from File Tools menu.</li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Import Keyword (Ctrl+K)</strong>: Saved Keyword file or .KEY file can be imported from the selected folder. This can also be accessed from File Tools menu.</li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Export:</strong> Using this file menu option we can save the problem setup in  .Key format in the selected directory with user specified name.</li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Folder options</strong>: Using Folder option Open working folder user can open the working directory in windows explorer.</li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Archive</strong>: This function is used to get a complete project down to a size to fit on archive media (like a DVD) for backup or distribution.</li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Image setup (Ctrl+M)</strong>: It is used to setup the current display window or the work space to the required pixel size and capture images to required location in required format.</li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Capture image (Ctrl+I)</strong><img src="{{ '/assets/icons/pre_icons/mo_capture_screen_image_to_file_icon.jpg' | relative_url }}"/>: This writes the current screen image to a file using the specified image format. This can also access from File Tools menu.</li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Capture Image to clipboard (Ctrl+Shift+I)</strong><img src="{{ '/assets/icons/pre_icons/mo_capture_screen_to_clip_board_icon.jpg' | relative_url }}"/>: This writes the current screen image to the clipboard. This can also be accessed from File Tools menu.</li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Recent Projects</strong>: Using this file menu option we can open recently opened projects.</li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Close (Ctrl+W) </strong>: Closes the current working project but does not quit from the Pre-processor. </li>
+    <li style="font-family: Arial;font-size: 12pt;color: #000000;text-align: justify;line-height: 1.5"><strong>Quit (Ctrl+Q)</strong> : The Quit is used to exit from Pre-processor. </li>
+  </ul>
+  <h3><a id="8.1.2._Viewport_Menu"></a>Viewport Menu</h3>
+  <p style="text-align: justify">The below <a href="#Fig._8.4._Viewport_Menu_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>4.</a> shows the Viewport menu options using these options or icons in tool bar user can refresh or fit the view, switch to Iso or
+    any directional view, set the upward axis, save and load the viewports and viewport lighting settings can be varied.</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig._8.4._Viewport_Menu_options"></a><img src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image004.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Viewport Menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Refresh"></a><strong>Refresh (F5)</strong><strong> <img src="{{ '/assets/icons/pre_icons/mo_refresh_icon.jpg' | relative_url }}"/> : </strong>The refresh icon redraws the screen, removing any measurement marks, and updating any changes made to the color
+        pallet.</p>
+    </li>
+    <li>
+      <p><a id="View_Fit"></a><strong>Fit <strong>View </strong>(F3)</strong><strong> <img src="{{ '/assets/icons/pre_icons/mo_view_fit_icon.jpg' | relative_url }}"/> : </strong><strong></strong>Fits all displayed objects or graphs inside the current viewport.</p>
+    </li>
+    <li>
+      <p><a id="View_back_"></a><strong>View back (F4)</strong> <img src="{{ '/assets/icons/pre_icons/mo_view_back_icon.jpg' | relative_url }}"/> : Resets objects to the previously viewed display position.</p>
+    </li>
+    <li>
+      <p><strong><a id="Screen_upward"></a>Screen upward</strong> : <strong></strong>[3D]: This option shows the isometric view in 3D, such that the selected axis will be pointing in the upward direction. For example, if the user selects positive Z-axis
+        from the screen upward option as shown in <a href="#Fig._8.5._Screen_upward_viewport_menu_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>5</a>. and then select isometric view option, Z-axis will be pointing upwards in
+        the isometric view. This is not applicable for 2D mode.</p>
+    </li>
+  </ul>
+  <p style="text-align: center"><br/>
+    <a id="Fig._8.5._Screen_upward_viewport_menu_options"></a><img src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image005.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Screen upward viewport menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong></strong><strong>Viewport Menu</strong><strong> <img height="22" src="{{ '/assets/icons/pre_icons/mo_plus_x_view_icon.jpg' | relative_url }}" width="25"/>,<strong><img height="22" src="{{ '/assets/icons/pre_icons/mo_minus_x_view_icon.jpg' | relative_url }}" width="25"/>,<img src="{{ '/assets/icons/pre_icons/mo_plus_y_view_icon.jpg' | relative_url }}"/>,<img src="{{ '/assets/icons/pre_icons/mo_minus_y_view_icon.jpg' | relative_url }}"/>,<img src="{{ '/assets/icons/pre_icons/mo_plus_z_icon.jpg' | relative_url }}"/>,<img src="{{ '/assets/icons/pre_icons/mo_minus_z_icon.jpg' | relative_url }}"/> : </strong></strong>The
+        below <a href="#Fig._8.6._Different_view_selection_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>6.</a> shows the Viewport menu options using these options or icons in tool bar user can refresh or fit the view, switch
+        to Iso or any directional view, set the upward axis, save and load the viewports and viewport lighting settings can be varied. </p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.6._Different_view_selection_options"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image011.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center">Different view selection options</p>
+  <p style="text-align: center;"> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Load_and_Save_viewport"></a><strong>Load and Save viewport : </strong>The user can move or change the views of the geometries by using display tools such as pan, dynamic zoom and box zoom in the display window. These views can be saved using
+        save option provided under viewport tab as shown in <a href="#Fig._8.7._Save_view_port_Menu_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>7.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.7._Save_view_port_Menu_options"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image013.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Save view port Menu options</p>
+  <p> </p>
+  <p>If the view is saved as a local viewport, this view gets saved for the current working project only and can be viewed using load option as shown in <a href="#Fig._8.8._Load_view_port_Menu_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>8.</a>    If the view is saved as a global viewport the set views becomes the default views for any project, for global viewports to get activated for the projects, the user has to exit from current project. The user can copy global viewports as a local viewports
+    under load option and local viewports to global viewports under save option.</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig._8.8._Load_view_port_Menu_options"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image012.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Load view port Menu options</p>
+  <ul class="Disc">
+    <li>
+      <p><strong><a id="Lighting"></a>Lighting </strong>: This allows the user to change the brightness and color of the graphics window lighting, can also add more light switches and control its positions as shown in <a href="#Fig._8.9._Lighting_General_properties_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>9.</a>        , <a href="#Fig._8.10._Lighting_Settings_properties_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>10.</a> and <a href="#Fig._8.11._Light_Advanced_Properties_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>11.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.9._Lighting_General_properties_window"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image014.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Lighting General properties window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.10._Lighting_Settings_properties_window"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image015.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Lighting Settings properties window</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig._8.11._Light_Advanced_Properties_window"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image016.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Light Advanced Properties window</p>
+  <p> </p>
+  <p><span style="color:#0000ff;"> <strong><span style="color:#000000;"><a id="Set_Lighting_Property"></a>Set Lighting Property</span></strong>
+    </span>
+  </p>
+  <p>Positions of light is indicated by dot as shown in <a href="#Fig._8.12._Positioning_of_Lighting"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>12.</a></p>
+  <p style="text-align: center"><img height="423" src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image006.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._8.12._Positioning_of_Lighting"></a>Positioning of Lighting</p>
+  <p> </p>
+  <p>For the light settings, we assume the objects are located at (0, 0, 0) and the observer is located at (0, 500, 0). We have four lights,<br/> Light1: (-400 ~ -200, 0, 500) (left-top light, from left to right adjustable)<br/> Light2: ( 200 ~ 400, 0 ,
+    500) (right-top light, from left to right adjustable)<br/> Light3: ( 0,  200 ~ 400, 500) (front light, from near to far adjustable)<br/> Light4: (0, 0, 0) (ambient color defined by Red, Blue, Green combinations)<br/> 3D, such that the selected axis
+    will be pointing in the upward direction. For example, if the user selects positive Z-axis from the screen upward option as shown in <a href="#Fig._8.12._Positioning_of_Lighting"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>12.</a>    and then select isometric view option, Z-axis will be pointing upwards in the isometric view. This is not applicable for 2D mode.</p>
+  <h3><a id="8.1.3._Display_menu"></a>Display menu</h3>
+  <p><a href="#Fig._8.13._Display_Menu_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>13.</a> shows the display menu options using these options or icons in the tool bar user can select the different objects display rendering types
+    like shading, wireframe, shading and wireframe, feature line (surface patch) and adding feature line to any other rendering types. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.13._Display_Menu_options"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image017.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Display Menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Shading (F6)</strong>  <img src="{{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}"/> : Smoothly shades the objects within viewport.</p>
+    </li>
+    <li>
+      <p><strong>Wireframe (F7) </strong> <img src="{{ '/assets/icons/pre_icons/mo_wirefrane_mode_icon.jpg' | relative_url }}"/> : Displays mesh of the object within viewport.</p>
+    </li>
+    <li>
+      <p><strong>Shading and Wireframe (F8)</strong>  <img src="{{ '/assets/icons/pre_icons/mo_shade_wireframe_icon.jpg' | relative_url }}"/> : Smoothly shades and display mesh of objects within viewport.</p>
+    </li>
+    <li>
+      <p><strong>Feature line or Surface patch</strong> <img src="{{ '/assets/icons/pre_icons/mo_feature_line_mode_icon.jpg' | relative_url }}"/>  : Displays the surface edges of the object. For 3D mode refer feature angle to vary the surface patches display.</p>
+    </li>
+    <li>
+      <p><strong>Add feature line</strong>  <img src="{{ '/assets/icons/pre_icons/mo_add_feature_line_icon.jpg' | relative_url }}"/> : This feature will combine surface edges with other display modes options. For 3D mode refer feature angle to vary the surface patches
+        display. </p>
+    </li>
+  </ul>
+  <p> </p>
+  <h3><a id="8.1.4._Mouse_Menu"></a>Mouse Menu</h3>
+  <p><a href="#Fig._8.14._Mouse_menu_options"> <span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>14.</a> shows the Mouse menu options using these options or icons in the tool bar user can select different mouse modes to measure the objects
+    linear distance and change or move the objects view in graphics window like panning, rotate (only for 3D), zoom and magnify.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.14._Mouse_menu_options"></a><img height="238" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image018.jpg' | relative_url }}" width="135"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Mouse menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Measurement  </strong><img src="{{ '/assets/icons/pre_icons/mo_measure_tool_icon.jpg' | relative_url }}"/> :  This tool allows the user to measure any distance between two points by clicking consecutively on both points. The measurement can be plot in
+        either X or Y or XY direction, in 3D Z direction will come into picture, using the available CAD style option  which displays the measured values in the selected direction. To access the CAD style option user need to right mouse click in the display
+        window when user is in the measurement mode (See <a href="#Fig._8.15._Right_mouse_button_measurement_style_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>15</a>.). The measurement marks are not erased until the viewport
+        is refreshed and as such are also convenient for marking arbitrary reference points on the screen, which will maintain their location through view changes.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p class="Fig_name" style="text-align: center"><img height="115" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image019.jpg' | relative_url }}" style="text-align: center;" width="350"/><img height="96" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image020.jpg' | relative_url }}" style="text-align: center;" width="350"/><br/>            (a)                                                                                         (b)
+  </p>
+  <p class="Fig_numb"><a id="Fig._8.15._Right_mouse_button_measurement_style_options"></a>Right mouse button measurement style options; (a) For 3D (b) For 2D</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Select  : </strong>The select button is a general pointing utility. It performs several functions which vary with context. It can be used to select a node or an element, to select BCC, stopping controls points on objects and many similar
+        functions. From Right mouse click option menu in graphics window user can change the selected nodes display to point or polygon as shown in <a href="#Fig._8.16._Selected_node_display_RMB_option_on_graphics_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>16.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.16._Selected_node_display_RMB_option_on_graphics_window"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image021.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Selected node display RMB option on graphics window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Pan (Shift+LMB)</strong>  <img src="{{ '/assets/icons/pre_icons/mo_pan_icon.jpg' | relative_url }}"/> : Pan adjusts the region filling the active viewport without changing the size of the displayed object.</p>
+    </li>
+    <li>
+      <p><strong>Rotate (Ctrl+LMB)</strong> <img src="{{ '/assets/icons/pre_icons/mo_rotate_icon.jpg' | relative_url }}"/>  : This will allow the mouse pointer to rotate the geometries in the required direction. This can also done by holding the Ctrl key and clicking
+        the left mouse button in the active viewport and rolling the mouse backward or forward to rotate the objects.</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><strong>Rotate X</strong> <img src="{{ '/assets/icons/pre_icons/mo_rotate_x_icon.jpg' | relative_url }}"/>  : This will allow the mouse pointer to rotate the object along X-direction.</p>
+    </li>
+    <li>
+      <p><strong>Rotate Y</strong> <img src="{{ '/assets/icons/pre_icons/mo_rotate_y_icon.jpg' | relative_url }}"/>   : This will allow the mouse pointer to rotate the object along Y-direction.</p>
+    </li>
+    <li>
+      <p><strong>Rotate Z</strong> <img src="{{ '/assets/icons/pre_icons/mo_rotate_z_icon.jpg' | relative_url }}"/>  : This will allow the mouse pointer to rotate the object along Z-direction. This option is not available for 2D systems. Even though the user can see this
+        icon while 2D problem setup, if user clicks on it, it will give a notice &quot;This feature is not available in 2D view&quot;.</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p><strong>Dynamic zoom (Alt+LMB)</strong> <img src="{{ '/assets/icons/pre_icons/mo_zoom_icon.jpg' | relative_url }}"/> : The dynamic zoom dynamically changes the size of the region of the object which fills the active view port. The view size can be changed by
+        holding Alt key and clicking left mouse button in the active view port and rolling the mouse backward or forward to increase or decrease the size of the object in the display window.</p>
+    </li>
+    <li>
+      <p><strong>Box Zoom (Ctrl+Alt+LMB) </strong><img src="{{ '/assets/icons/pre_icons/mo_box_zoom_icon.jpg' | relative_url }}"/>  : The Box zoom or magnify function allows close up inspection of a small region of the currently display object or graph. The zoom region
+        is selected by holding Ctrl + Alt key and clicking the left mouse button, while dragging the mouse to enclose the selected region with the displayed box. When the mouse button is released the selected region will fill the display window. </p>
+    </li>
+  </ul>
+  <h3> <a id="8.1.5._Tool_Menu_"></a>Tool Menu </h3>
+  <p><a href="#Fig._8.17.__Tool_menu_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>17.</a> shows the tool menu options, using these options or icons in the tool bar user can access the tools like object nodes and elements data
+    window and Image capturing tools and its settings.</p>
+  <p style="text-align: center"><br/>
+    <br/>
+    <a id="Fig._8.17.__Tool_menu_options"></a><img src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image007.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">  Tool menu options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Object Nodes</strong>  <img src="{{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}"/>  : The object node data window displays all available information about object nodes. All information can be modified and many of the variables can
+        be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to<span style="color:#0000ff;"> section <a href="../17_object_data_initialization/17_1_node_data_window.htm">17.1 Node Data</a>.</span></p>
+    </li>
+    <li>
+      <p><strong>Object Elements</strong> <img src="{{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}"/>  : The element data window displays all available information about object elements. All information can be modified and many of the variables
+        can be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to <span style="color:#0000ff;">section <a href="../17_object_data_initialization/17_2_element_data_window.htm">17.2 Element Data</a>.</span></p>
+    </li>
+    <li>
+      <p><span style="color:#0000ff;"></span><strong>Boolean </strong><img src="{{ '/assets/icons/pre_icons/mo_boolean_icon.jpg' | relative_url }}"/>  : This capability allows the user to subtract volume from the mesh of an object from the geometry of another object or
+        Boolean with respect to a plane (option available only for 3D). For more information please refer to <span style="color:#0000ff;">section <a href="../18_object_manipulation_tools/18_1_boolean.htm">18.1 Boolean</a>.</span></p>
+    </li>
+    <li>
+      <p><span style="color:#0000ff;"></span><strong>Data Interpolation</strong> <img src="{{ '/assets/icons/pre_icons/mo_data_interpolation_icon.jpg' | relative_url }}"/> : While doing the manual remeshing in the preprocessor, user can transfer data from another object
+        from a different database using this dialog. Once the database is selected user can select the object, and step number from where the data needs to be interpolated. For more information please refer to <span style="color:#0000ff;">section <a href="../17_object_data_initialization/17_3_data_interpolation_window.htm">17.3. Data Interpolation</a>.</span></p>
+    </li>
+    <li>
+      <p><span style="color:#0000ff;"></span> <strong>Convert 2D to 3D</strong> <img src="{{ '/assets/icons/pre_icons/convert_2d_to_3d_icon.jpg' | relative_url }}"/> : Convert 2D to 3D model will convert the 2D axisymmetric/torsion model by revolving about the centerline
+        and 2D plane strain/plane stress model by extruding in the third direction. For more information please refer to section <a href="../22_convert_2d_to_3d/22_convert_2d_to_3d.htm">22. <span style="color:#0000ff;">Convert 2D to 3D.</span></a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <h3><a id="8.1.6._Options_Menu"></a>Options Menu</h3>
+  <p><a href="#Fig._8.18._Options_menu_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>18.</a> shows the Options menu options, using these options user can set the DEFORM working environment different settings.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.18._Options_menu_options"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image023.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Options menu options</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p><strong><a id="Environment"></a>Environment</strong></p>
+    </li>
+  </ol>
+  <p>The user can adjust the DEFORM working environment using environment option. Here the user can make changes in display and graphical settings and can save the settings as for his convenience. Setting will update from next session onwards.</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Region:</li>
+  </ul>
+  <p>The user can select the preferred language under Language option and set to English or SI units under Unit option as a Default unit system for a new problem. The user can select the standards for materials under Material Library to be used as a default
+    for importing materials in the problem. (See <a href="#Fig._8.19._Region_options_under_Environment_Settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>19.</a> )</p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image024.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._8.19._Region_options_under_Environment_Settings_window"></a>Region options under Environment Settings window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">User Type:</li>
+  </ul>
+  <p>User Type option under Environment Settings window appears as shown in <a href="#Fig._8.20._User_type_options_under_Environment_Settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>20.</a> Depending on the user type the
+    default conditions and pop-up windows are activated.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.20._User_type_options_under_Environment_Settings_window"></a><img height="358" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image025.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">User type options under Environment Settings window</p>
+  <p> </p>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Novice</strong>: If the user is new to DEFORM then this option is preferred.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Intermediate</strong>: This option is for an user who is bit familiar to DEFORM environment. For example, if we select quit option in the GUI, a pop up appears with a message &quot; Do you want to quit&quot;, the user can click &quot;Yes&quot;
+      to exit from GUI.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Advanced</strong>: This option is for an user who is well aware of DEFORM, he can eliminate few pop-ups. For example, if we select quit option in the GUI, Deform will close without a popup warning message.</li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">User Directory:</li>
+  </ul>
+  <p>User Directory option under Environment Settings window appears as shown in <a href="#Fig._8.21._User_directory_options_under_Environment_Settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>21.</a> The user can browse for
+    the required location to set it as the working directory under Problem, this directory will be used as a default location to store the generated DB&#39;s, key files and working files related to DEFORM. The path under Library root will be used as a
+    default path to store the user data generated in DEFORM. The path under Geometry import will be used as the default path to access the geometries, which can be a problem directory itself. If it is a different location it has to be mentioned under
+    geometry import path separately for 2D and 3D. The temporary files generated while running deform are in the specified path under Temporary Directory.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image026.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._8.21._User_directory_options_under_Environment_Settings_window"></a>User directory options under Environment Settings window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">System Directory:</li>
+  </ul>
+  <p>System Directory option under Environment Settings window appears as shown in <a href="#Fig._8.22._System_directories_options_under_Environment_settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>22.</a> Only Advanced user
+    type selection (as mentioned in user type section) activates this tab access to user. Using this option user can change the DEFORM material, press and equipment library path under respective fields, this directory will be used as a default location
+    for the material, press and equipment library in DEFORM. By default these are pointed to the DEFORM library available in the installation location, user can change to user library paths, this path will be called when import material, movement or insert
+    geometries are selected from DEFORM GUI.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image048.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._8.22._System_directories_options_under_Environment_settings_window"></a>System directories options under Environment settings window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold"> Simulation Option: </li>
+  </ul>
+  <p>In DEFORM - V12, default settings to run a Simulation can be set using options under Simulation Option tab in Environment settings. Simulation Options window appears as shown in <a href="#Fig._8.23._Simulation_Options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>23.</a> By
+    turning on the Keep Message Files DEFORM saves simulation messages without overwriting even after remesh. User can turn on Parallel meshing and set it as default for all simulations, user can apply the parallel meshing either to Solid or to both Solid+Surface.
+    User can turn on No automatic remeshing as default setting for simulations so that simulation can skip the automatic remesh due to non-convergence. The default settings can be changed for each simulation from Run options dialog.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image027.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> <a id="Fig._8.23._Simulation_Options"></a>Simulation Options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Multiple Processor:</li>
+  </ul>
+  <p>Multiple processor option under Environment Settings window appears as shown in <a href="#Fig._8.24._Multiple_Processor"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>24.</a> The user can activate the table just by checking next to
+    the Use multiple processor option as shown in the <a href="#Fig._8.24._Multiple_Processor"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>24.</a>  The user can specify the computers used to solve the problem as well as the number
+    of processors used on each computer. It is very important that the user enters the correct network name of the computer for the simulation to run. It also provides information about the memory shared between the processors.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="371" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image028.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._8.24._Multiple_Processor"></a>Multiple Processor</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Process:</li>
+  </ul>
+  <p>Process option under Environment Settings window appears as shown in <a href="#Fig._8.25._Process_options_under_Environment_Settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>25.</a> User can set the default simulation
+    modes like Deformation, Heat transfer Transformation .etc and control the auto assignment of primary die.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image029.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._8.25._Process_options_under_Environment_Settings_window"></a>Process options under Environment Settings window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Output Control:</li>
+  </ul>
+  <p>The user can set default output type as either Elemental or Elemental+Node for Strain, Stress and Damage variables as shown in <a href="#Fig._8.26._Output_Controls_options_under_Environment_Settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>26.</a></p>
+  <p style="text-align: center"><img height="328" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image030.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._8.26._Output_Controls_options_under_Environment_Settings_window"></a>Output Controls options under Environment Settings window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Email:</li>
+  </ul>
+  <p>Email option under Environment Settings window appears as shown in <a href="#Fig_8_27_Email_options_under_Environment_Settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>27.</a> This function allows DEFORM to send an email
+    notification at the start of the simulation and with last 25 lines from the Message file and Log file at end of the simulation. Emails are sent via SMTP using StartTLS (or no security). For more information refer <a href="../../simulator/23_deform_simulator/23_7_email_the_results.htm">23.7. Email notification of the simulation</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_8_27_Email_options_under_Environment_Settings_window"></a><img height="328" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image031.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Email options under Environment Settings window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Memory:</li>
+  </ul>
+  <p>The user can set the required memory size depending upon the usage as shown in <a href="#Fig._8.28._Memory_options_under_Environment_Settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>28.</a> For most part, the default
+    values of these settings can cover wide range of model requirements. For very large size models (with respect to total number of elements and nodes) depending up on the operating system these settings may need to be increased to handle some run time
+    procedures such as remeshing.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image032.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._8.28._Memory_options_under_Environment_Settings_window"></a> Memory options under Environment Settings window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Icon/Font:</li>
+  </ul>
+  <p>The user can change the icon and font size depending on the requirement as shown in the <a href="8_pre-processor_layout.htm#Fig._8.29._Icon/Font_options_under_Environment_Settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>29.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image033.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._8.29._Icon/Font_options_under_Environment_Settings_window"></a>Icon/Font options under Environment Settings window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Job Protection:</li>
+  </ul>
+  <p>The user can protect Running job from being terminated by setting password as shown in <a href="#Fig._8.30._Job_protection_options_under_Environment_Settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>30.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image034.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._8.30._Job_protection_options_under_Environment_Settings_window"></a>Job protection options under Environment Settings window</p>
+  <p><br/> In Linux system select the enable protection radio button then enter the password in the password field and click on save button to save the password (see  <a href="#Fig._8.30._Job_protection_options_under_Environment_Settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>30.</a>).<br/>
+    <br/> In windows system select the continue button then use password in setup job password popup window and click OK as shown in <a href="#Fig._8.31._Running_Job_protection_in_windows_password_set_up_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>31.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.31._Running_Job_protection_in_windows_password_set_up_window"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image035.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Running Job protection in windows password set up window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Report: </li>
+  </ul>
+  <p>From V12 Auto report generation options are provided under Report option in Environment Settings window, the auto report generation settings appears as shown in <a href="#Fig._8.32._Report_options_under_Environment_Settings_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>32.</a> User
+    can set the default Auto Report option as per the requirement for Nominal run, DOE runs and OPT runs by turning on the check box. Depending on the settings DEFORM generates the report automatically at the end of simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="358" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image036.jpg' | relative_url }}" style="cursor: nesw-resize;" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> <a id="Fig._8.32._Report_options_under_Environment_Settings_window"></a>Report options under Environment Settings window</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;font-family: Arial;font-size: 12pt;font-weight: bold" value="2"><strong></strong>Preferences <strong><strong><a id="Preferences"></a></strong></strong>
+    </li>
+  </ol>
+  <p>Provides viewing and object type information of the geometries. In this option, the user can modify the display of the objects in the graphic display window.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">General:</li>
+  </ul>
+  <p>Show object selection mark allows the user to highlight the selected object in the graphical display window of the Pre processor or the Post processor as shown in <a href="#Fig_.8.33._General_options_under_Preferences_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>33.</a>    The user can select either of the option as shown in  <a href="#Fig_.8.33._General_options_under_Preferences_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>33.</a> encoding the colors for the objects in pre and post processor
+    depending on the requirement. The user can view back portion of the die geometry from the front view of the object by checking next to the Show back face for dies under Die geometry option.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image037.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig_.8.33._General_options_under_Preferences_window"></a>General options under Preferences window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Entity color:</li>
+  </ul>
+  <p>The user can set colors for different entities as shown in the <a href="#Fig._8.34._Entity_color_option_under_Preferences_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>34.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image038.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._8.34._Entity_color_option_under_Preferences_window"></a>Entity color option under Preferences window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold">Color Bar:</li>
+  </ul>
+  <p>The user can select the type of color bar depending on the requirement as shown in <a href="#Fig._8.35._Color_bar_options_under_Preferences_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>35.</a> If Print friendly is selected,
+    than the Deform adjusts the display to obtain a better image when printed.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image039.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._8.35._Color_bar_options_under_Preferences_window"></a>Color bar options under Preferences window</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5;font-weight: bold"> Object color:</li>
+  </ul>
+  <p>The user can set the color directly for the objects under Object color in Preference as shown in <a href="#Fig._8.36._Object_color_option_under_Preference_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>36.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image040.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._8.36._Object_color_option_under_Preference_window"></a>Object color option under Preference window</p>
+  <p> </p>
+  <h3><a id="Help"></a>Help</h3>
+  <p>The below <a href="#Fig._8.37._Help_menu_option"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>37.</a> shows the Help menu options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.37._Help_menu_option"></a><img src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image008.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Help menu option</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Deform manual </strong>(F1) : This option opens the DEFORM manual through the default web browser. Short cut key for Help document is F1.</p>
+    </li>
+    <li>
+      <p><strong>What&#39;s this?  </strong>(Shift+F1) : This icon helps in determining the functions of the other icons in the display utilities window. This can be done by clicking the icon and placing it on the icon or field about which the user requires
+        information and then click. ‘Shift+F1’ keys on the Keyboard can be used to activate this function.</p>
+    </li>
+    <li>
+      <p><strong>About SFTC : </strong>Provides SFTC contact information in a window.</p>
+    </li>
+    <li>
+      <p><strong>About DEFORM Next-Gen Pre : </strong> Provides brief information about DEFORM product in a window. For more details on the release note refer the chapter <a href="../../about_deform/1_introduction_to_deform/1_11_release_notes.htm">1.11. Release Notes.</a></p>
+    </li>
+  </ul>
+  <h2><a id="8.2._Operation_Tree"></a>Operation Tree</h2>
+  <p>The purpose of this tree is to provide the user with a systematic list of required data for a given simulation. The data in the list is edited in the setting modification window. The data that is being edited is controlled by the current active position
+    within the operation tree. The structure of the program will progress directly down this list by clicking next in Property Editor region. Alternatively, if any data needs to be modified, clicking on given item in the list will allow that item to be
+    edited in the property editor region.</p>
+  <p>Operation tree (See <a href="#Fig._8.38_Operation_Tree"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>38.</a>) contains list of required data like geometry, mesh, boundary conditions, movement controls of an object, process type and
+    simulation controls etc.<br/> The tool bar below the object tree is used to switch on or off the object, geometry, mesh and contacts display.</p>
+  <p style="text-align: center"><a id="Fig._8.38_Operation_Tree"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image031.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb"> Operation Tree</p>
+  <p> </p>
+  <h3 class="h3_8_2_1"><a id="8.2.1._Operation_Tree_Tool_bar_options"></a><strong>Operation Tree Tool bar options </strong></h3>
+  <p> </p>
+  <p><strong>[2D][3D]:</strong></p>
+  <p><strong>Show Object <img src="{{ '/assets/icons/pre_icons/mo_show_obj_icon.jpg' | relative_url }}"/>:</strong> Turns on/off the selected object from object tree.</p>
+  <p><strong>Show Mesh <img src="{{ '/assets/icons/pre_icons/mo_show_mesh_icon.jpg' | relative_url }}"/>:</strong> Shows or hides mesh of  the selected object from object tree.</p>
+  <p><strong>Show Geometry <img height="22" src="{{ '/assets/icons/pre_icons/mo_show_geo_icon.jpg' | relative_url }}" width="23"/>:</strong> Shows or hides geometry of  the selected object geometry from the object tree.</p>
+  <p><strong>Show Contact Nodes<strong><img src="{{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}"/></strong>: </strong>Turns on the contact display for the selected object from object tree with all other all object. (See <a href="#Fig._8.40._Multi_object_mode_when_plastic_workpiece_object_get_selected"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>40.</a>)</p>
+  <p><br/>
+    <strong>[3D]:</strong></p>
+  <p> <strong>Make Transparent <img src="{{ '/assets/icons/pre_icons/mo_transparent.jpg' | relative_url }}"/>:</strong> Turns on/off  transparency of the selected object from the object tree.</p>
+  <p> <strong>Show Backface <img height="22" src="{{ '/assets/icons/pre_icons/mo_show_backfac_icon.jpg' | relative_url }}" width="23"/>:</strong> Turns on/off the back surface of the object selected object from the object tree, it will be more useful when the object are
+    made transparent. (See <a href="#Fig._8.39._Plastic_object_mesh_in_shaded_rendering_type"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>39.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.39._Plastic_object_mesh_in_shaded_rendering_type"></a><img height="281" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image032.jpg' | relative_url }}" width="180"/>  <img height="279" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image033.jpg' | relative_url }}" width="191"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Plastic object mesh in shaded rendering type; (a) With Back face off (b) With Back face on</p>
+  <p> </p>
+  <p>Object Display Modes [2D,3D]: DEFORM has 3 different object display modes as shown in <a href="#Fig._8.40._Multi_object_mode_when_plastic_workpiece_object_get_selected"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>40.</a><br/>  Single
+    Object mode <img src="{{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}"/>: Only the selected object from object tree is displayed. All other objects are hidden.<br/>  Multi Object mode <img src="{{ '/assets/icons/pre_icons/mo_show_multi_obj_icon.jpg' | relative_url }}"/>: All objects are displayed in graphics window. The selected object from object tree is displayed in solid color and all other objects are transparent in 3d mode. (See <a href="#Fig._8.40._Multi_object_mode_when_plastic_workpiece_object_get_selected"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>40.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.40._Multi_object_mode_when_plastic_workpiece_object_get_selected"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image034.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Multi object mode when plastic workpiece object get selected</p>
+  <p> <br/>
+    <strong>User-defined Object mode<img src="{{ '/assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }}"/></strong>: User can toggle the object&#39;s Display, Geometry, Mesh, Transparency (only for 3D), Slice plane (only for 3D) modes independently.
+    This can be done by checking and unchecking respective check boxes as shown in <a href="#Fig._8.41._User_defined_Object_Mode_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>41.</a></p>
+  <p style="text-align: center"><a id="Fig._8.41._User_defined_Object_Mode_window"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image035.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">User defined Object Mode window</p>
+  <p> <br/> Following are the settings we must select based on the objects display requirements,</p>
+  <p><strong>Apply Display options</strong><img src="{{ '/assets/icons/pre_icons/mo_apply_display_option.jpg' | relative_url }}"/>: Applies the selected display option for the objects.</p>
+  <p><strong>Visible</strong><img src="{{ '/assets/icons/pre_icons/mo_visible.jpg' | relative_url }}"/>: Turns on/off the selected object display.</p>
+  <p><strong>Mesh</strong><img src="{{ '/assets/icons/pre_icons/mo_mesh_icon.jpg' | relative_url }}"/>: Shows or hides display of the selected object mesh.</p>
+  <p><strong>Geometry</strong><img src="{{ '/assets/icons/pre_icons/mo_geometry _icon.jpg' | relative_url }}"/>: Shows or hides display of the selected object geometry.</p>
+  <p><strong>Transparency<img src="{{ '/assets/icons/pre_icons/mo_transparent.jpg' | relative_url }}"/></strong>: Turns on/off  transparency of the selected object.</p>
+  <p><strong>Slice</strong><img src="{{ '/assets/icons/pre_icons/mo_slice.jpg' | relative_url }}"/>: Turns on/off  sliced plane for the selected sliced object.</p>
+  <p> </p>
+  <h3 class="h3_8_2_1"> <a id="8.2.2._Object_Tree_Right_Mouse_button_(RMB)_options"></a><strong>Object Tree Right Mouse button (RMB) options</strong></h3>
+  <p>By using the RMB on Object or its Geometry branches in object tree user will get few options to export the geometry or control the object display.<br/>
+    <br/> By RMB click on the Object any particular object branch (<img src="{{ '/assets/icons/pre_icons/mo_plastic_workpiece_branch.jpg' | relative_url }}"/>) user can export the geometry, turn on the contact nodes display, make the 3d objects transparent and turn
+    on the 3d objects back face display as shown in <a href="#Fig._8.42._Operation_tree_Object_RMB_options;"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>42.</a> below. Geometry inside mark for 2d and Geometry normal vectors for 3d
+    display can be activated by RMB option on <img src="{{ '/assets/icons/pre_icons/mo_geometry_branch.jpg' | relative_url }}"/>  (Geometry branch) as shown in <a href="#Fig._8.43._Operation_tree_Geometry_RMB_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>43.</a> For
+    more details on Enable contact nodes and Show back face options refer <a href="#Operation_Tree_Tool_bar_options">operation tree tool bar options.</a> </p>
+  <p class="Fig_name" style="text-align: center"><img height="221" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image036.jpg' | relative_url }}" width="300"/>  <img height="330" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image037.jpg' | relative_url }}" width="300"/> </p>
+  <p class="Fig_name" style="margin-left: 8px"><br/> (a)                                                                                     (b)</p>
+  <p class="Fig_name"> </p>
+  <p class="Fig_numb"><a id="Fig._8.42._Operation_tree_Object_RMB_options;"></a>Operation tree Object RMB options; (a) For 2D (b) For 3D</p>
+  <p> </p>
+  <p style="text-align: center"><img height="132" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image038.jpg' | relative_url }}" width="300"/>  <img height="152" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image039.jpg' | relative_url }}" width="300"/></p>
+  <p class="Fig_name">(a)                                                                                     (b)</p>
+  <p class="Fig_numb"><a id="Fig._8.43._Operation_tree_Geometry_RMB_options"></a>Operation tree Geometry RMB options; (a) For 2D (b) For 3D</p>
+  <h3 class="h3_8_2_1"> <a id="8.2.3.._Right_Mouse_Button_Display_Options"></a>Right Mouse Button Display Options</h3>
+  <p>[2D, 3D]: Right mouse click in display window of pre processor a menu option appears as shown in <a href="#Fig._8.44._Right_mouse_button_display_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>44.</a> This option provides a
+    short cut for graphic utilities, object control bar, display modification settings in pre processor. Depending upon the window the RMB options will change.        </p>
+  <p class="Fig_name"><a id="Fig._8.44._Right_mouse_button_display_options"></a><img height="481" src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image009.jpg' | relative_url }}" width="170"/>  <img height="509" src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image010.jpg' | relative_url }}" width="170"/></p>
+  <p class="Fig_name">       <br/> (a)                                                            (b)</p>
+  <p class="Fig_numb"> Right mouse button display options; (a) For 2D (b) For 3D</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>DB Info [2D, 3D] : </strong>Display the Database name in display window.</p>
+    </li>
+    <li>
+      <p><strong>Title [2D, 3D] : </strong>Display the Step number name in display window.</p>
+    </li>
+    <li>
+      <p><strong>Show Ruler [2D, 3D] : </strong>Using this user can turn on/off the ruler display in the display window.</p>
+    </li>
+    <li>
+      <p><strong>Show Dimensions [2D, 3D] : </strong>Display the maximum dimensions of the object in X and Y directions in 2D and in X, Y and Z directions in 3D.</p>
+    </li>
+    <li>
+      <p> <strong>Show Center line [ 2D] : </strong>Using this user can turn on/off the Center line display in the display window.</p>
+    </li>
+    <li>
+      <p><strong> Show Origin Axis [ 3D] : </strong>Using this user can turn on/off the origin axis display in the display window. </p>
+    </li>
+    <li>
+      <p><strong>Show Current Object mark [2D, 3D] : </strong>This shows the mark at the top and bottom plane four corners of the 3D object and top and bottom plane two corners of the 2D object in multiple and user object modes indicating that object is
+        the current selected object in the object tree, so for that object user can define the data from the data definition window and also help while positioning the objects by showing these marks for the selected positioning object.</p>
+    </li>
+    <li>
+      <p> <strong>Show view Axis [ 2D, 3D] : </strong>Using this user can turn on/off the view axis display in the display window.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>For <strong>Refresh</strong>, <strong>View fit</strong>, <strong>View back</strong>, <strong>Load </strong>and <strong>Save view port</strong> options refer the above section <a href="#Viewport_Menu">Viewport menu bar options</a>.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Auto fit:</strong>This option is used to automatically fit the view of the object (s) as per the selection. (See <a href="#Fig._8.45._Auto_fit_option"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>45.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.45._Auto_fit_option"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image046.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Auto fit option</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Object display mode: </strong>Using this user can control the object display in graphics window, there are three types of object display modes, those are single, multi and user defined object display modes (See <a href="#Fig._8.46._Object_display_mode"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>46.</a>).
+        Refer to Object display mode explanation under <a href="#Operation_Tree">Operation Tree</a> for more details.</p>
+    </li>
+    <li>
+      <p> </p>
+    </li>
+  </ul>
+  <p style="text-align: center"><a id="Fig._8.46._Object_display_mode"></a><img height="71" src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image011.jpg' | relative_url }}" width="290"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Object display mode</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Contact display : </strong>Using this user can turn on/off the inter-object contact nodes display. (See <a href="8_pre-processor_layout.htm#Fig._8.47._Contact_display_turn_on/off_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>47.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.47._Contact_display_turn_on/off_options"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image052.jpg' | relative_url }}" style="cursor: nesw-resize;"/></p>
+  <p class="Fig_numb">Contact display turn on/off options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p> <strong>Calculate contact area : </strong>Using this user can get the contact area data. </p>
+    </li>
+    <li>
+      <p><strong>Measurement style : </strong>Using this tool user can measure the distance between two points in the linear (X,Y or Z direction) and angular directions (XYZ direction) in CAD style. (See <a href="#Fig._8.48._Right_mouse_button_measurement_style_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>48.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: left"> <img height="82" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image054.jpg' | relative_url }}" width="300"/>  <img height="99" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image053.jpg' | relative_url }}" width="300"/></p>
+  <p class="Fig_name"> <br/> (a)                                                                (b)</p>
+  <p class="Fig_numb"><a id="Fig._8.48._Right_mouse_button_measurement_style_options"></a>Right mouse button measurement style options; (a) For 2D (b) For 3D</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Measurement options : </strong>Measure option available are clear all, clear last, Change text color, change Line color and Background color options as show in <a href="#Fig._8.49._Right_mouse_button_measurement_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>48.</a> </p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image055.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb"><a id="Fig._8.49._Right_mouse_button_measurement_options"></a>Right mouse button measurement options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Picking Sensitivity : </strong>Using this user can select the sensitivity of picking the nodes and elements of the object and points on the object or anywhere in the display window. There are five levels of sensitivities Super fine, Fine,
+        Normal, Coarse and Rough. If user wants to pick precisely then Fine picking is preferred otherwise default Normal picking is enough. If the user wants to select the nodes or elements near the picking point on the object then Coarse picking is
+        preferred.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image056.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb"><a id="Fig._8.50._Picking_Sensitivity_option"></a>Picking Sensitivity option</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Background Theme : </strong>Using this option user can select the different background themes available like Navy blue, White, Black and Gray for the graphics window as shown in <a href="#Fig._8.51._Right_mouse_button_background_themes_options"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>51.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image057.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb"><a id="Fig._8.51._Right_mouse_button_background_themes_options"></a>Right mouse button background themes options</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Display Options: </strong>Using this option (See<a href="#Fig._8.52_"> <span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>52.</a>) user can select the point or polygon type display of the selected contact node. Also can select
+        point size under Point size list.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image058.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._8.52_Right_mouse_button_selected_nodes_display_options"></a>Right mouse button selected nodes display options</p>
+  <p> </p>
+  <p> </p>
+  <p>After turning on the contact display user can select point or polygon type display option, 2d example with point and polygon contact node display is shown in <a href="#Fig._8.53._2D_Point_and_polygon_contact_nodes_display_example"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>53.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image059.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._8.53._2D_Point_and_polygon_contact_nodes_display_example"></a> 2D Point and polygon contact nodes display example</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong><a id="Change_feature_angle"></a>Change feature angle [3D] : </strong>User can use this option to change the range of selection when selecting the elements/nodes/polygons for adding BCC or editing geometry etc using surface patch method.
+        It displays the surface patch by treating surfaces within the feature angle as the one surface. A curved surface with smaller feature angle means fewer surface polygons will be picked at a time. Selecting the option Change feature angle pops up
+        the feature angle changing window as shown in <a href="#Fig._8.54_RMB_3D_feature_angle_entry_window"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>54.</a> Also see the <a href="#Fig._8.55._Surface_path_display_with_different_feature_angle"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>55.</a>        for the surface patch display for the die geometry with different feature angle.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.54_RMB_3D_feature_angle_entry_window"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image031.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">RMB 3D feature angle entry window</p>
+  <p class="Fig_name"> </p>
+  <p class="Fig_name"><img height="306" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image033.jpg' | relative_url }}" width="300"/><img height="305" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image032.jpg' | relative_url }}" width="300"/><br/>  (a)                                                                                     (b)</p>
+  <p class="Fig_numb"><a id="Fig._8.55._Surface_path_display_with_different_feature_angle"></a>Surface path display with different feature angle; (a) For angle 10 (b) For angle 20</p>
+  <p> </p>
+  <h2><a id="8.3._Input_options"></a>Input options</h2>
+  <p>Under Operation tree following options are available to setup problem:</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Geometry type [2D]</strong> : This option is available only for 2D where user can select Geometry type as shown in <a href="#Fig._8.56._Geometry_type_page"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>56.</a> Even in
+        Expert mode Simulation controls page we have these geometry type options.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.56._Geometry_type_page"></a><img src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image012.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Geometry type page</p>
+  <p> </p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Simulation Controls [2D,3D] : </strong>Options defined under Simulation Controls, control the numerical behaviour of the solution. Please refer to <a href="../9_simulation_controls/9_simulation_controls.htm">9. Simulation Controls</a>.</p>
+    </li>
+    <li>
+      <p><strong>Material list [2D,3D] : </strong>For a simulation to achieve a high level of accuracy it is important to understand the material properties required to specify a material used in DEFORM. Please refer to Chapter <a href="../10_material_data/10_material_data.htm">10. Material Properties</a>.</p>
+    </li>
+    <li>
+      <p><strong>Object [2D,3D]</strong>: In Object page we will define the number of objects required for the problem setup.</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>General Definition [2D,3D]</strong>: To define Object Name, Object Temperature and Object types for the object. Please refer to Chapter <a href="../11_general_object_data_definition/11_general_object_data_definition.htm">11. General Object Data Definition</a></li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Geometry Data [2D,3D]</strong>: To define the geometry data for the object by importing the geometry or by creating geometry using primitive options. Please refer to Chapter <a href="../12_geometry_modelling/12_geometry_modelling.htm">12. Geometry Modelling</a>.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Mesh Data [2D,3D]</strong>:  option to generate mesh for the object geometry using mesh options. Please refer to Chapter <a href="../13_mesh_generation/13_mesh_generation.htm">13. Mesh Generation</a>.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Material assignment [2D,3D]</strong>: option to assign material for the object by selecting the material in Material list. </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Boundary Conditions [2D,3D]</strong>: option used to assign boundary condition for the object. Please refer to Chapter <a href="../14_boundary_conditions/14_boundary_conditions.htm">14. Boundary Conditions</a>.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Movement controls [2D,3D]</strong>: option used to define movement for the object. Please refer to Chapter <a href="../15_movement_controls_definition/15_movement_controls_settings.htm">15. Movement Controls Settings</a>.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Properties [2D,3D] </strong>: option to define object properties for the object. Please refer to Chapter <a href="../16_object_properties/16_object_properties.htm">16. Object Properties</a>.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Initialize [2D,3D] </strong>: option to initialize the state variable for the object. Please refer to Chapter <a href="../17_object_data_initialization/17_object_data_initialize.htm">17. Object Data Initialize.</a>  </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Built In Flownet [3D] </strong>: option used to generate Built in Flownet for deformable object. </li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Positioning [2D,3D] </strong>: Once the object is defined, a variety of positioning features are available to place the objects in the correct position before the process is modelled. It can also be accessed from Pre Tools Menu. Please refer
+        to Chapter <a href="../19_object_positioning/19_object_positioning.htm">19. Object positioning</a>.</p>
+    </li>
+    <li>
+      <p><strong>Contact [2D,3D]</strong> : The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. Please refer to Chapter <a href="../20_inter-object_data_definition/20_inter-object_data_definition.htm">20. Inter-Object Definition</a>.</p>
+    </li>
+    <li>
+      <p><strong>Stopping Controls [2D,3D]</strong>: In Guided mode Stopping controls page, it is having Deformation and Thermal Stopping criteria options as shown in below <a href="#Fig._8.57._Stopping_controls_page"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>57.</a>        In Expert mode will have <a href="../9_simulation_controls/9_3_stopping_controls.htm">Simulation controls</a> options.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.57._Stopping_controls_page"></a><img src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image013.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Stopping controls page</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Step [2D,3D]</strong>: In guided mode step page, it has solution step definition for defining the Die displacement, Time and Temperature, Number of steps with step increment, starting step number and the selection of the Primary die as shown
+        in below <a href="#Fig._8.58._Step_page"><span data-keyref="Chapter 8_Pre-processor_layout">Fig. 8.</span>58.</a> In expert mode step page will have all the simulation controls options.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._8.58._Step_page"></a><img height="465" src="{{ '/assets/images/pre-processor/8_pre_processor_layout/8_image014.jpg' | relative_url }}" width="490"/></p>
+  <p class="Fig_numb">Step page</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong></strong><strong>Generate DB</strong> [2D,3D]<strong> : </strong>The simulation data set entered into the pre-processor can be written as a new database or appended to an existing database file. Please refer to Chapter <a href="../21_database_generation/21_database_generation.htm">21. Database Generation</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><br/>
+    <strong>Related Topics:</strong></p>
+  <p><a href="../9_simulation_controls/9_simulation_controls.htm">9. Simulation Controls</a></p>
+  <p><a href="../10_material_data/10_material_data.htm">10. Material Properties</a></p>
+  <p><a href="../11_general_object_data_definition/11_general_object_data_definition.htm">11. General Object Data Definition</a></p>
+  <p><a href="../12_geometry_modelling/12_geometry_modelling.htm">12. Geometry Modelling</a></p>
+  <p><a href="../13_mesh_generation/13_mesh_generation.htm">13. Mesh Generation</a></p>
+  <p><a href="../14_boundary_conditions/14_boundary_conditions.htm">14. Boundary Conditions</a></p>
+  <p><a href="../15_movement_controls_definition/15_movement_controls_settings.htm">15. Movement Controls Settings</a></p>
+  <p><a href="../16_object_properties/16_object_properties.htm">16. Object Properties</a></p>
+  <p><a href="../17_object_data_initialization/17_object_data_initialize.htm">17. Object Data Initialize</a></p>
+  <p><a href="../18_object_manipulation_tools/18_object_manipulation_tools.htm">18. Advanced Object Data Definition</a></p>
+  <p><a href="../19_object_positioning/19_object_positioning.htm">19. Object positioning</a></p>
+  <p><a href="../20_inter-object_data_definition/20_inter-object_data_definition.htm">20. Inter-Object Definition</a></p>
+  <p><a href="../21_database_generation/21_database_generation.htm">21. Database Generation</a></p>
+  <p><a href="../22_convert_2d_to_3d/22_convert_2d_to_3d.htm">22. Convert 2D to 3D</a></p>
+  <p><a href="../../simulator/23_deform_simulator/23_introduction_to_deform_simulator.htm">23. Simulatior</a></p>
+  <p><a href="../../post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor.htm">24. Post Processor</a></p>
+  <p><a href="../../user_routines/56_user_routines_in_deform/56_user_routines_in_deform.htm">56. User Routines</a></p>
+  <p><a href="../../starting_up_deform/3_license_manager/license_manager_mainpg.htm">3. License Manager</a></p>
+  <p><a href="../../appendices/appendices_list.htm">Appendices</a></p>
+  <p><a href="../../keyword_documentation/deform_keywords_list.htm">Keyword Documentation</a></p>
+  <p><br/>
+    <strong>Operations:</strong><br/>
+    <a href="../../integrated_manufacturing_process_setup/integrated_manufacturing_process_mainpg.htm">Integrated Manufacturing Process (MO)</a></p>
+  <p><a href="../../operation_templates/33_forming/33_introduction_to_forming.htm">Forming operation Manual</a></p>
+  <p><a href="../../operation_templates/43_shape_rolling/43_introduction_to_shape_rolling.htm">Shape Rolling Manual</a></p>
+  <p><a href="../../operation_templates/42_ring_rolling/42_introduction_to_ring_rolling.htm">Ring Rolling Manual</a></p>
+  <p><a href="../../operation_templates/31_extrusion/31_introduction_to_extrusion.htm">Extrusion Template Manual</a></p>
+  <p><a href="../../operation_templates/39_cutting/39_introduction_to_cutting.htm">Machining Template Manual</a></p>
+  <p><a href="../../inverse_heat/51_introduction_to_inverse_heat.htm">Inverse Heat Transfer Manual</a></p>
+  <p><a href="../../operation_templates/50_3d_geo_tool/50_introduction_to_3d_geo_tool.htm">3D Geo Tool</a></p>
+
+</body></html>

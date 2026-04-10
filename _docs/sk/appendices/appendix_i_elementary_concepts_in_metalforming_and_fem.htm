@@ -1,0 +1,332 @@
+---
+lang: sk
+title: "Appendix I : Elementary Concepts in Metalforming and Finite Element  Analysis"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix I : Elementary Concepts in Metalforming and Finite Element  Analysis</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix I : Elementary Concepts in Metalforming and Finite Element  Analysis</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_i.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_II_Launching_the_Simulation_Engine_from_a_Command_Prompt.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendices_List.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix I : Elementary Concepts in Metalforming and Finite Element  Analysis">
+        <span>Appendix I : Elementary Concepts in Metalforming and Finite Element  Analysis</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix I : Elementary Concepts in Metal forming and Finite Element  Analysis</h1>
+  <p><br/>
+    <a href="#AI_1_Definition_of_stress,_strain_and_strain_rate">AI.1. Definition of stress, strain and strain rate</a></p>
+  <p><a href="#AI_2_Introduction_to_FEM_theory">AI.2. Introduction to FEM theory</a></p>
+  <p><a href="#AI_3_Modeling_Material_Behavior_in_FEM">AI.3. Modeling Material Behavior in FEM</a></p>
+  <p> </p>
+  <h2><a id="AI_1_Definition_of_stress,_strain_and_strain_rate"></a>Definition of stress, strain and strain rate</h2>
+  <p><strong>Stress </strong>is the measure of force applied per unit area. This variable is of importance in forming, in that material deform (change shape) different amounts depending on how much stress they are under. There are several definitions of
+    stress.</p>
+  <p> </p>
+  <p><strong>Engineering Stres</strong><strong>s</strong> - The engineering stress is defined as force per unit area measured on the original undeformed shape.</p>
+  <p> </p>
+  <p><strong>True Stress</strong> - The true stress is defined as the ratio of the applied force to the instantaneous cross-sectional area. These two definitions are shown in <a href="#Fig_AI_1_Demonstration_of_concept_of_stress"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>1</a>    as a comparison.  In general, the true stress is more interesting for an engineer in analyzing a forming process. True stress will indicate plastic yielding and other issues with better accuracy than engineering stress.</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_AI_1_Demonstration_of_concept_of_stress"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0001.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Demonstration of concept of stress</p>
+  <p> </p>
+  <p><strong>Strain </strong>is a measure of the total accumulated deformation a region of material has undergone.</p>
+  <p> </p>
+  <p>Mathematically, the two definitions of this are seen as follows:</p>
+  <p> </p>
+  <p><strong>Engineering Strain</strong> = (Change in Length) / (Original Length)</p>
+  <p> </p>
+  <p><strong>True Strain</strong> = Sum of incremental strains = ln ( (final length) / (initial length))</p>
+  <p> </p>
+  <p>In <a href="#Fig_AI_2_Demonstration_of_concept_of_strain"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>2.</a>, the calculated strains for both an upset and a tensile test are shown. Note that the Engineering strain gives rather round
+    numbers for doubling or halving the length of a test specimen. The advantage of true strain is that it is a more accurate measure of the actual length change in the material and is used to determine stress in DEFORM.</p>
+  <p> </p>
+  <p><strong>Strain rate</strong> is a measure of the instantaneous rate of deformation a region of material is experiencing. This quantity measures a rate of change of the strain at a point of a material per unit time.</p>
+  <p style="text-align: center"><a id="Fig_AI_2_Demonstration_of_concept_of_strain"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0002.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Demonstration of concept of strain</p>
+  <p> </p>
+  <p>In <a href="#Fig_AI_3_Engineering_stress_and_strain_for_a_compression_test"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>3.</a>, the engineering stress and strain are shown as closed form expressions for a compression test. Note
+    that both of these quantities fail to account for the increase in area of the test specimen due to barrelling.</p>
+  <p style="text-align: center"><a id="Fig_AI_3_Engineering_stress_and_strain_for_a_compression_test"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0003.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Engineering stress and strain for a compression test</p>
+  <p> </p>
+  <p>In <a href="#Fig_AI_4_Stress_and_strain_defined_for_tension_test"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>4.</a>, the true stress and strain are shown as closed form expressions for a tension test. Note that both of these expressions
+    account for the change in the cross-sectional area of the specimen during the test (assuming incompressible material). This gives a better measure of the actual state of stress and strain the material is under.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_4_Stress_and_strain_defined_for_tension_test"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0004.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stress and strain defined for tension test</p>
+  <p> </p>
+  <p>All materials have a characteristic stress-strain curve that determines how the material behaves structurally. For most isotropic metals, this behavior is of the general shape as seen in <a href="#Fig_AI_5_Stress-strain_curve"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>5.</a>    Note that the top and bottom curves are the engineering stress-strain curves for a material and the middle curve is the true stress-strain curves for a given material. The true stress-strain curve is the same for either tension or compression, but
+    they are not the same in terms of engineering stress-strain.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_5_Stress-strain_curve"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0005.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Stress-strain curve</p>
+  <p> </p>
+  <p>For simplification, the stress-strain curve is divided into two regions. The steeply sloped region at very low strain values is known as the elastic region. In the elastic region, since strain is very low, when the material is unloaded and the forces
+    removed, the material returns to its original shape. In <a href="#Fig_AI_6_Diagram_of_elastic_deformation"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>6.</a>, an object is deformed in uniaxial tension. The change in length is
+    shown and the corresponding position on the stress-strain curve is shown. In this case, the deformation is completely elastic. After the tensile forces are removed, the material returns to the original shape.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_6_Diagram_of_elastic_deformation"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0006.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Diagram of elastic deformation</p>
+  <p> </p>
+  <p>The second region of a stress-strain curve is known as the plastic region. This region comprises strains just above the elastic range and appear on the curve as the less steeply sloped region. In this region, the material does not recover any of the
+    deformation that occurs. The only recovery that occurs is the accumulated elastic strain. In <a href="#Fig_AI_7_Diagram_of_plastic_deformation"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>7.</a>, a specimen under tension deforms
+    first elastically and then plastically. The loading curve in <a href="#Fig_AI_7_Diagram_of_plastic_deformation"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>7.</a> first follows the elastic loading curve and then follows the plastic
+    curve.  When the material is unloaded and the forces are removed from the specimen, the material follows the elastic curve down. When the material is completely unloaded, the deformation left over is the permanent deformation of the body.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_7_Diagram_of_plastic_deformation"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0007.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Diagram of plastic deformation</p>
+  <p> </p>
+  <p>In DEFORM, the stress and strain used in the stress-strain curves are known as the effective stress and effective strain. The equations for these values are as seen below in <a href="#Fig_AI_8_Equations_for_effective_stress_and_strain"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>8.</a></p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_8_Equations_for_effective_stress_and_strain"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0008.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Equations for effective stress and strain</p>
+  <p> </p>
+  <p>In DEFORM, the concept of flow stress is used. The idea of flow stress is important in case of incremental plasticity. As a material is deformed plastically, the amount of stress required to incur an incremental amount of deformation is given by the
+    flow stress curve (which corresponds to the plastic region of the true stress-true strain curve).  In <a href="#Fig_AI_9_Introduction_to_flow_stress_concept"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>9.</a>, the concept is shown
+    visually.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_9_Introduction_to_flow_stress_concept"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0009.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Introduction to flow stress concept</p>
+  <p> </p>
+  <p>Flow stress is strongly dependent on several state variables, among these are accumulated strain, instantaneous strain rate and current temperature. As seen in <a href="#Fig_AI_10_Variation_of_flow_stress_with_strain_rate_and_temperature"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>10.</a>,
+    the flow stress curves can vary strongly with these state variables. So, it is important to account for these variables to accurately determine the behavior of the material.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_10_Variation_of_flow_stress_with_strain_rate_and_temperature"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0010.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Variation of flow stress with strain rate and temperature</p>
+  <p> </p>
+  <p>In the case where elastic deformation can be neglected, as in the case of bulk metal forming, the Levy-Mises flow rule can be used to relate the stress tensor to the strain rate tensor. This flow rule is shown in <a href="#Fig_AI_11_Levy-Mises_flow_rule"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>11.</a>    The coefficient, l, is a function of state variables and the material. This relation allows one to express stress in terms of rate of deformation.</p>
+  <p style="text-align: center"><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0011.jpg' | relative_url }}"/><a id="Fig_AI_11_Levy-Mises_flow_rule"></a></p>
+  <p class="Fig_numb">Levy-Mises flow rule</p>
+  <p> </p>
+  <p> In calculating metal flow, the minimum work rate principle is a cornerstone for accurate calculation. This principle is defined below:</p>
+  <p> </p>
+  <p><strong>Minimum Work Rate Principle</strong>: The velocity distribution which predicts the lowest work rate is the best approximation of the actual velocity distribution.</p>
+  <p> </p>
+  <p>This principle states that the material should always flow in the path of least resistance. This is shown in <a href="#Fig_AI_12_Minimum_work_rate_principle"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>12.</a> where there are three
+    different upset cases and the amount of friction between the workpiece and the tool determines the flow pattern of the material. In case of no friction, there is no resistance for the material from flowing straight out uniformly.  In case of high
+    friction, there is much resistance from flowing outward, so a barreling behavior is observed.</p>
+  <p style="text-align: center"><a id="Fig_AI_12_Minimum_work_rate_principle"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0012.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Minimum work rate principle</p>
+  <p> </p>
+  <p>Note for each case, the actual velocity is the one which incurs the lowest work rate for the workpiece.</p>
+  <p> </p>
+  <p>This minimum work rate principle can be expressed mathematically as the following functional form seen in <a href="#Fig_AI_13_Functional_equation_for_minimum_work_rate_principle"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>13.</a>    The top equation is simply a balance of the body forces (1st term) versus the surface tractions (2nd term). The manner in which this equation is solved for the velocities, is seen in the 2nd equation. The velocities are solved by solving for when
+    the variation in the functional is stationary.  Note that there is an extra term that maintains incompressibility in the solution. This is done by integrating the volumetric strain rate and multiplying by a large constant. Since the total solution
+    should be zero, the solution will tend to maintain a low volumetric strain rate to keep this integral value low.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_13_Functional_equation_for_minimum_work_rate_principle"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0013.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Functional equation for minimum work rate principle</p>
+  <p> </p>
+  <p>In order to obtain a closed form solution for complex shapes, we need to resort to mathematical tricks such as FEM. The introductory theory for this is discussed in the following section.</p>
+  <p> </p>
+  <h2><a id="AI_2_Introduction_to_FEM_theory"></a>Introduction to FEM theory</h2>
+  <p>The principle of FEM theory is divide and conquer. First, one must divide the problem into small little subproblems that are easy to formulate and after the entire problem has been divided and formulated, they must all be carefully combined and then
+    solved. The manner in which a problem is divided is through a process called meshing. In <a href="#Fig_AI_14_2D_mesh_of_upset_test"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>14.</a>, an axisymmetric body is being upset between
+    two flat dies. There is a grid that has been superimposed on the figure of the workpiece. This grid is the mesh that represents the body being deformed. Each rectangle represents a portion of material, in this case each rectangle corresponds to a
+    ring, for which the equation in <a href="#Fig_AI_13_Functional_equation_for_minimum_work_rate_principle"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>13.</a> can be easily solved. Each rectangle is called an element and the intersection
+    of any grid lines is called a node. An element corresponds to a region of material and a node corresponds to a discrete point in space.</p>
+  <p> </p>
+  <p>The solution for the equations in <a href="#Fig_AI_13_Functional_equation_for_minimum_work_rate_principle"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>13.</a> are the velocity at each node, which are shown as vector arrows to the
+    right side of <a href="#Fig_AI_14_2D_mesh_of_upset_test"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>14.</a> In additions to the bottom equation of <a href="#Fig_AI_13_Functional_equation_for_minimum_work_rate_principle"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>13.</a>,
+    there are boundary conditions that should be specified in order to provide a unique solution to the problem.  In this problem, the velocity of the top set of nodes is determined by the downward speed of the die as well as the friction model between
+    the workpiece and the die. The boundary conditions on the left side of the die is specified as a centerline condition meaning that the nodes are not allowed to move either right or left. The bottom nodes also have a symmetry condition meaning that
+    they are not allowed to move up or down. These three boundary conditions allow the mesh to behave as the actual part.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_14_2D_mesh_of_upset_test"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0014.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">2D mesh of upset test</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong>This mesh is extremely coarse for the sake of clarity.</p>
+  <p> </p>
+  <p>When the velocity at node points have been determined, their coordinates need to be updated. The manner in which we update the nodal coordinates is by integrating the velocity over the time step of the current step. In <a href="#Fig_AI_15_Updating_nodal_coordinates_after_a_completed_calculation"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>15.</a>,
+    the nodal positions are shown as updated from the previous stage. A simple principle of nodes are clear from this figure:</p>
+  <p> </p>
+  <p>If the nodal velocities change direction or magnitude over very small time periods, a small time step size is required to correctly predict this behavior.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_15_Updating_nodal_coordinates_after_a_completed_calculation"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0015.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Updating nodal coordinates after a completed calculation</p>
+  <p> </p>
+  <p>The problem that now must be addressed is how to solve the equation in <a href="#Fig_AI_13_Functional_equation_for_minimum_work_rate_principle"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>13.</a> over a discrete set of points since
+    the nodal values define the velocities only at discrete locations. The way in which to solve this problem is to define shape functions over the elements as a manner of providing a velocity field that satisfies the compatibility requirement (continuous
+    over the entire body). <a href="#Fig_AI_16_Description_of_a_shape_function"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>16.</a> shows a general equation for a shape function whose purpose is to define the velocity profile over
+    an element based on the nodal velocities. A one-dimensional case is shown in <a href="#Fig_AI_16_Description_of_a_shape_function"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>16.</a> as a simple linear function. The advantage of
+    an equation of this form is that compatibility is maintained when the same nodes for any shared element edge, define the velocity over that edge.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_16_Description_of_a_shape_function"></a><img height="345" src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0016.jpg' | relative_url }}" width="288"/></p>
+  <p> </p>
+  <p class="Fig_numb">Description of a shape function</p>
+  <p> </p>
+  <p><a href="#Fig_AI_17_Description_of_shape_function"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>17</a> also shows the case of a two-dimensional element.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AI_17_Description_of_shape_function"></a><img height="310" src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0017.jpg' | relative_url }}" width="310"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Description of shape function</p>
+  <p> </p>
+  <p>After all the equations for the elements have been written out, they must be combined into a single set of simultaneous equations. This process is shown in <a href="#Fig_AI_18_Construction_of_a_stiffness_matrix_to_solve_for_velocities"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>18.</a>    At the end, using a <a href="../pre_processor/9_simulation_controls/9_5_solver_settings.htm#9.5.1._Deformation_solver_(SOLMTD)">Newton-Raphson</a> iteration method, the updated velocity can be solved for by solving a simultaneous set of equations.
+    Once this velocity update is solved for, it is applied to the current velocity and velocity update is solved again.</p>
+  <p style="text-align: center"><a id="Fig_AI_18_Construction_of_a_stiffness_matrix_to_solve_for_velocities"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0018.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Construction of a stiffness matrix to solve for velocities</p>
+  <p> </p>
+  <p>The general FEM solution process is given below:</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Input Geometry &amp; Processing Conditions.</p>
+    </li>
+    <li>
+      <p>Generate Initial Guess of Velocity Field  single step.</p>
+    </li>
+    <li>
+      <p>Calculate Element Behavior Based on Velocity Field &amp; other variables (strain, temp, etc).</p>
+    </li>
+    <li>
+      <p>Calculate Force boundary conditions based on Velocity Field.</p>
+    </li>
+    <li>
+      <p>Assemble and solve the matrix equation.</p>
+    </li>
+    <li>
+      <p>Calculate the error.</p>
+    </li>
+    <li>
+      <p>If error is too large, apply correction to velocity field and go to step 3. Otherwise, continue to step 8.</p>
+    </li>
+    <li>
+      <p>Update Geometry.</p>
+    </li>
+    <li>
+      <p>Calculate temperature change for this step.</p>
+    </li>
+    <li>
+      <p>Calculate new press velocity if necessary.</p>
+    </li>
+    <li>
+      <p>If stopping criteria has been reached, END. Otherwise, go to step 3 and repeat the process.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <h2><a id="AI_3_Modeling_Material_Behavior_in_FEM"></a>Modeling Material Behavior in FEM</h2>
+  <p><br/>
+    <strong>Material Definition</strong>:</p>
+  <p>Flow stress in DEFORM is defined as a function of strain, strain rate and temperature.</p>
+  <p>In general DEFORM <a href="../pre_processor/10_material_data/10_material_data.htm">material data</a> represents a single history. Separate data sets represent different histories,</p>
+  <ul class="Disc">
+    <li>
+      <p>as received</p>
+    </li>
+    <li>
+      <p>annealed</p>
+    </li>
+    <li>
+      <p>spheroidized</p>
+    </li>
+    <li>
+      <p>grain size</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Finite Element Method Single Element Behavior:</strong></p>
+  <p><a href="../pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models.htm">Flow stress</a> data gives force and energy required to deform the element. Equivalent calculations on other elements, and friction behavior
+    give external forces. (See <a href="#Fig_AI_19_Single_element_behavior"><span data-keyref="Appendix_I_Elementary_Concept">Fig. AI.</span>19.</a>)</p>
+  <p style="text-align: center"><a id="Fig_AI_19_Single_element_behavior"></a><img src="{{ '/assets/images/appendices/appendix_1_elementary_concept/image0019.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Single element behavior</p>
+  <p> </p>
+  <p>This concludes short summary of the FEM process in metalforming. For more information on FEM theory, please consider reading the following list of references:</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Kobayashi, S., Oh, S.I. and Altan T.  <span style="font-style:italic;">Metalforming and the Finite-Element Method.  Oxford University Press. 1989.</span></p>
+    </li>
+    <li>
+      <p>Przemieniecki, J.S.  <span style="font-style:italic;">Theory of Matrix Structural Analysis.  Dover Publications.  1968.</span></p>
+    </li>
+    <li>
+      <p> Zienkiewicz, O.C. and Taylor, R.L.  <span style="font-style:italic;">The Finite Element Method. McGraw-Hill.  1989.</span></p>
+    </li>
+  </ol>
+  <p> </p>
+  <p> </p>
+
+</body></html>

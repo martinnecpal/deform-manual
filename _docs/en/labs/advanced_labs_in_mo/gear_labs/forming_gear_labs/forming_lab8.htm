@@ -1,0 +1,133 @@
+---
+lang: en
+title: "Forming Lab 8"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "15.3.2.2.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 8</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 8</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_Lab9.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_lab7.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Forming Lab 8">
+        <span>Forming Lab 8</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 8. Hammer Forging</h1>
+  <h3 class="h3_8_">Creating New Problem</h3>
+  <p>Create a new project called <strong>Gear_Hammer</strong>. Check First <strong>operation </strong><strong>check </strong>box and set it to <strong>[2D] Multi Blow Forging</strong>. The Unit system should be <strong>English</strong>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L8_1_New_Problem_Window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab8_image0001.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab8">New Problem Window</p>
+  <h3 class="h3_8_">Process</h3>
+  <p>On the Process page, set the <strong>Energy </strong>to <strong>150 </strong>Klb-in. This is the maximum hammer energy. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Blow Table.</p>
+  <h3 class="h3_8_">Blow Table</h3>
+  <p>For the <strong>Hit </strong><strong>1</strong>, set % <strong>Blow </strong>to <strong>50 </strong>and the <strong>Efficiency </strong>to<strong> 0.7</strong>.</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong> The “No. Hits” field updates the table immediately. It is easy to accidently overwrite previously defined hits if you try typing in the number manually. For this reason, it is recommended to use the up/down arrows to adjust number
+    of hits for this operation.</p>
+  <p> </p>
+  <p>Increase the No. Hits to 2 using the up arrow. Set the <strong>% </strong><strong>Blow </strong><strong>energy </strong>to <strong>100</strong>, then change the <strong>No</strong>. <strong>Hits </strong><strong>to </strong><strong>10 </strong>by clicking
+    the up arrow. This blow table contains a light first blow then nine full energy blows (See <a href="#Fig_L8_2_Blow_Table_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab8">Fig. L8.</span></a>2.). Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry Type.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L8_2_Blow_Table_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab8_image0002.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab8">Blow Table window</p>
+  <p> </p>
+  <p>At this point, we will import a previously set-up model from a different project. Go to <strong>File <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> </strong><strong>Import </strong>and open <strong>Gear_LargerBillet</strong>.<strong>DB</strong>.
+    Select the <strong>first </strong>(negative) <strong>step </strong><strong>of </strong><strong>Operation </strong><strong>2</strong>. It should be around step 101 (See <a href="#Fig_L8_3_Step_selection_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab8">Fig. L8.</span>3.</a>).
+    Click <strong>No </strong>for Global/Local Time popup asking &quot;Do you want to use new time definition?&quot; for Global time. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Top die movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L8_3_Step_selection_window"></a><img height="450" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab8_image0003.jpg' | relative_url }}" width="375"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab8">Step selection window</p>
+  <h3 class="h3_8_">Top Die  Movement</h3>
+  <p>The <strong>movement </strong>in the dialog should be defined as <strong>Hammer </strong>with an <strong>Energy </strong>of <strong>150 </strong>Klb-in.</p>
+  <p>Click the Mass calculator <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> icon.  Enter a <strong>mass </strong>of <strong>1000 </strong>pounds. The system will convert the mass to DEFORM consistent units. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Generate DB page. </p>
+  <h3 class="h3_8_">Generating DB</h3>
+  <p>Go to Generate DB page and generate the database. Click on the MO <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h3 class="h3_8_">Run and monitor a simulation</h3>
+  <p>Click on the <img height="15" src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}" style="cursor: nwse-resize;" width="26"/> action label to open the Run Options dialog. Use the default <strong>Continue </strong><strong>Run </strong>option
+    to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}"/> button to run
+    the simulation.</p>
+  <h3 class="h3_8_">Review the results</h3>
+  <p>When the simulation is completed, click the MO <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> Mode button to review results.</p>
+  <p> </p>
+  <p><strong>Graph</strong></p>
+  <p>Play the steps and note that the dies do not fill and the simulation stops after all the blows have been run.</p>
+  <p style="text-align: center"><a id="Fig_L8_4_Last_of_last_blow_operation_step"></a><img height="528" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab8_image0004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab8">Last of last blow operation step</p>
+
+</body></html>

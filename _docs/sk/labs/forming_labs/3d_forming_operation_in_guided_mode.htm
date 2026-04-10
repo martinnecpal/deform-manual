@@ -1,0 +1,377 @@
+---
+lang: sk
+title: "3D Forming Operation in Guided mode Lab"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.11.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Forming Operation in Guided mode Lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Forming Operation in Guided mode Lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/forming_labs/3d_forming_operation_in_guided_mode.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Forming_Labs/3D_Forming_Operation_in_Expert_mode.htm"/><meta name="brsprev" value="Documentation_content/Labs/Forming_Labs/2D_Forming_Opn_in_Expert_mode_Lab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Forming Operation in Guided mode Lab">
+        <span>3D Forming Operation in Guided mode Lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3D Forming Operation in Guided mode</h1>
+  <p>This lab will demonstrate how to setup a typical Forming operation of workpiece after Furnace heating in multiple operation (MO) guided mode. Forming Operation is an open environment where user can setup any Deformation, Heat transfer, Diffusion and
+    Heat treatment problem but for new user guided mode will guide with simple and basic features for Simulation controls, Mesh Generation, Stopping and Step controls. For detailed study user can go for advanced features using expert mode once become
+    familiar with the DEFORM.</p>
+  <p> </p>
+  <p>During this lab we will attempt to highlight various guided mode features of the system that user can go with for initial studies.</p>
+  <p> </p>
+  <p><a href="#1_1_Creating_New_Problem_and_Adding_Operations">1.1.  Creating New Problem and Adding Operations</a></p>
+  <p><a href="#1_2_Operation1:_Heat_Transfer_Heating_Setup">1.2.  Operation1: Heat Transfer Heating Setup</a></p>
+  <p><a href="#1_3_Operation_2_Steering_Link_Forming">1.3.  Operation2: Forming</a> </p>
+  <p><a href="#1_4_Running_Simulation">1.4.  Running Simulation</a></p>
+  <p><a href="#1_5_Post_Processing">1.5.  Post Processing</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_New_Problem_and_Adding_Operations"></a>Creating New Problem and Adding Operations</h2>
+  <h3>Creating New Problem</h3>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_1_New_Problem_popup"></a><img height="417" src="{{ '/assets/images/applications/55_2_arc_welding/image0002.jpg' | relative_url }}" style="cursor: nwse-resize;" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem popup</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/><strong> New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/>  icon. The Problem Setup window will appear. Select &quot;<strong>Integrated Manufacturing Process</strong>&quot; radio button and unit system as &quot;<strong>SI</strong>&quot; radio button in unit field as shown in <a href=""><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>1.</a> Define
+    Problem Name as &quot;<strong>3D_Forming_Operation_in_Guided_Mode</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New
+    Project dialog in MO UI). Then click on  <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p>Multiple operation wizard will open, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we use ‘<strong>3D_Forming_Operation_in_Guided_Mode</strong>’
+    as the project name. Click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> to continue to open the operation. MO wizard will open (see <a href="#Fig_3DFGL1_2_MO_Wizard_New_Project_Opening_Window"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>2.</a>),
+    Select the <strong>first operation</strong> as <strong>3D</strong> <strong>Heat</strong> <strong>transfer</strong> operation and <strong>check the checkbox</strong> to add Heat transfer operation as first operation. Click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_2_MO_Wizard_New_Project_Opening_Window"></a><img height="434" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO Wizard New Project Opening Window</p>
+  <h3>Adding Forming operation</h3>
+  <p>MO wizard will opens new project with one 3d Heat transfer operation. Add <strong>one</strong> <strong>Forming</strong> <strong>operation</strong> for &quot;Steering Link&quot; by clicking <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button as shown in <a href="#Fig_3DFGL1_3_Adding_Forming_Operation"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>3.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_3_Adding_Forming_Operation"></a><img height="435" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Forming Operation</p>
+  <p> </p>
+  <h2><a id="1_2_Operation1:_Heat_Transfer_Heating_Setup"></a>Operation1: Heat Transfer Heating Setup</h2>
+  <p>For first heat transfer operation change the operation name as &quot;<strong>Air Transfer</strong>&quot; by double clicking on Operation name in Operation Editor window as shown in <a href="#Fig_3DFGL1_4_Name_the_first_operation_as_Air_Transfer"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>4.</a>    and press Enter in Keyboard.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_4_Name_the_first_operation_as_Air_Transfer"></a><img height="226" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0004.jpg' | relative_url }}" width="351"/></p>
+  <p> </p>
+  <p class="Fig_numb">Name the first operation as Air Transfer</p>
+  <p> </p>
+  <h3 class="h3_1_2_">Selecting Heat Transfer Type</h3>
+  <p>Select &quot;<strong>Transfer through air</strong>&quot; heat transfer type for Air Transfer operation as shown in <a href="#Fig_3DFGL1_3_Adding_Forming_Operation"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>3.</a>    This will set the default heat transfer settings for heating operation. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <h3 class="h3_1_2_">Set Process Conditions</h3>
+  <p>Define Transfer time as 4 sec at <strong>20</strong>°C environment temperature and default convection coefficient as shown in <a href="#Fig_3DFGL1_5_Process_Condition_settings_for_air_transfer"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>5.</a>    and click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_5_Process_Condition_settings_for_air_transfer"></a><img height="330" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0005.jpg' | relative_url }}" width="395"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process Condition settings for air transfer</p>
+  <p> </p>
+  <h3 class="h3_1_2_">Select Simulation Controls for air transfer</h3>
+  <p>Keep only Heat Transfer mode checked as only heat transfer is modeling as shown in <a href="#Fig_3DFGL1_6_Simulation_Controls_settings_for_air_transfer_in_guided_mode"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>6.</a>    User can use Simulation controls expert mode (<img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/>) for advanced features. As in this lab we are not using any such features click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_6_Simulation_Controls_settings_for_air_transfer_in_guided_mode"></a><img height="320" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0006.jpg' | relative_url }}" width="392"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Controls settings for air transfer in guided mode</p>
+  <p> </p>
+  <h3 class="h3_1_2_">Import material for workpiece</h3>
+  <p>In Material window, load the material &#39;<strong>DIN-41Cr4[1450-2200F(800-1200)]</strong>&#39; from DEFORM Material library, from <strong>Steel</strong> category using <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> (Load
+    material data from library) option. This can be done as shown in <a href="#Fig_3DFGL1_7_Importing_Workpiece_material_from_DEFORM_library"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>7.</a> by clicking on
+    <img src="{{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}"/> button. Material can also be load from Materials list in Explorer. Then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> for Material and Object window, as only
+    Workpiece heat transfer in air is our interest in air transfer operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_7_Importing_Workpiece_material_from_DEFORM_library"></a><img height="429" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0007.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing Workpiece material from DEFORM library</p>
+  <h3 class="h3_1_2_">Define Workpiece</h3>
+  <p>In Workpiece object window keep the object type as ‘<strong>Plastic</strong>’ and specify workpiece temperature as <strong>1300</strong>°C (see <a href="#Fig_3DFGL1_8_Workpiece_Object_definition"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>8.</a>).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue and import the workpiece geometry.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_8_Workpiece_Object_definition"></a><img height="320" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0008.jpg' | relative_url }}" width="392"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Object definition</p>
+  <h3 class="h3_1_2_">Create Workpiece Geometry</h3>
+  <p>In Geometry page, using <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> (Load Geometry from Library) button import ‘<strong>ids_link_billet.stl</strong>&#39; from installation path /3D/LABS/ as shown in <a href="#Fig_3DFGL1_9_Importing_geometry_for_workpiece"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>9.</a>    Primitive geometry creation option also available at this stage to create the geometry.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_9_Importing_geometry_for_workpiece"></a><img height="433" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0009.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing geometry for workpiece</p>
+  <p> </p>
+  <p>After importing any geometry click on <img src="{{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}"/> button to check the geometry, geometry checking window will appear which gives a summary of the object’s geometry (see <a href="#Fig_3DFGL1_10_Checking_the_imported_3d_geometry"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>10.</a>).
+    For an object that has a closed volume, there should be 1 surface, 0 free edges, and 0 invalid entities. Objects that are imported as surfaces and not solids will have a free edge but should still only have 1 surface.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_10_Checking_the_imported_3d_geometry"></a><img height="437" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Checking the imported 3d geometry</p>
+  <p> </p>
+  <h3 class="h3_1_2_">Generate Workpiece Mesh</h3>
+  <p>Generate the mesh using 32000 elements (see <a href="#Fig_3DFGL1_11_Mesh_generation_for_workpiece"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>11.</a>). Complete range of meshing options are also available
+    in expert mode (<img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/>), if user needs to have more control on the mesh generated. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_11_Mesh_generation_for_workpiece"></a><img height="436" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0011.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh generation for workpiece</p>
+  <h3 class="h3_1_2_">Assign Workpiece Material</h3>
+  <p>To assign material for workpiece select the material ‘<strong>DIN</strong><strong>-41Cr4[1450-2200F(800-1200)]</strong>’ from material window. This can be done as shown in <a href="#Fig_3DFGL1_12_Assigning_material_for_workpiece"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>12.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_12_Assigning_material_for_workpiece"></a><img src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0012.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning material for workpiece</p>
+  <p> </p>
+  <h3 class="h3_1_2_">Defining workpiece Boundary Conditions</h3>
+  <p>In BCC page, check the default assigned Heat exchange with Environment BCC to the entire outer surface of the Billet, but in this lab we are modeled half of the steering link. So to enforce symmetry, we need to define a symmetry plane boundary condition
+    to the +X end of the part and heat exchange with the environment boundary condition to all surfaces except the +x end of the part.</p>
+  <p> </p>
+  <p>Add the <strong>Symmetry</strong> <strong>BCC</strong> to the <strong>+X</strong> end plane of the part by  selecting the plane using selection options on left side BCC tool bar and clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/> (Add BCC) button, after adding select symmetry plane vectors appears under Symmetry Planar as shown in <a href="#Fig_3DFGL1_13_Symmetry_boundary_condition_definition_for_workpiece"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>13</a>.
+    to ensure the correct definition of BCC.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_13_Symmetry_boundary_condition_definition_for_workpiece"></a><img height="436" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0013.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Symmetry boundary condition definition for workpiece</p>
+  <p> </p>
+  <p>Delete the automatically defined heat exchange with environment BCC by selecting the Defined branch under Heat exchange with environment and clicking on <img src="{{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}"/> (Delete BCC) button. Then
+    for heat exchange with environment bcc select the entire object part except symmetry plane using selection options on left side BCC tool bar and clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/> (Add BCC) button. Select
+    the Defined branch to confirm the BCC definition as shown in <a href="#Fig_3DFGL1_14_Boundary_condition_definition_for_workpiece"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>14.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_14_Boundary_condition_definition_for_workpiece"></a><img height="437" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Boundary condition definition for workpiece</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Step controls window as there is no object positioning and thermal stopping controls definition is required.</p>
+  <h3 class="h3_1_2_">Define Step Controls</h3>
+  <p>Set the <strong>number of simulation steps</strong> as <strong>50</strong> at <strong>0.1</strong> sec each and <strong>saving every</strong> <strong>5</strong> steps (see <a href="#Fig_3DHFL1_15_Simulation_controls_settings_for_air_transfer"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>15.</a>).
+    Advanced Simulation controls settings are available in expert mode (<img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/>). Click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to proceed to the database generation
+    stage.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DHFL1_15_Simulation_controls_settings_for_air_transfer"></a><img height="320" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0015.jpg' | relative_url }}" width="355"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls settings for air transfer</p>
+  <p> </p>
+  <h3 class="h3_1_2_">Generate Database</h3>
+  <p>In the database generation stage user can check the data required for the analysis and proceed to generate the database (see <a href="#Fig_3DFGL1_16_Database_generation_window_for_first_operation"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>16.</a>).
+    First operation of any multiple operations, user is required to generate the database. For all the subsequent operations we only need to setup the process data and simulation controls. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}"/> to proceed to the next operation ‘Cone Forming&quot;.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_16_Database_generation_window_for_first_operation"></a><img src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0016.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Database generation window for first operation</p>
+  <p> </p>
+  <h2><a id="1_3_Operation_2_Steering_Link_Forming"></a>Operation 2: Steering Link Forming</h2>
+  <p>The Forming operation runs till distance between dies reaches 400.8 mm. As workpiece is coming from air transfer operation with its thermal history, make workpiece as read from DB object and add other two objects for Top and Bottom Die to setup the
+    steering link forming operation.</p>
+  <p> </p>
+  <p>Name the operation as &#39;<strong>Steering Link</strong>&#39; by double clicking on Operation name in Operation Editor and press Enter from Keyboard to close.</p>
+  <h3 class="h3_1_3_">Select Simulation Controls settings for forming</h3>
+  <p>In simulation controls check both Deformation and Heat transfer simulation modes as shown in <a href="#Fig_3DFGL1_17_Simulation_control_settings_for_forming"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>17.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until objects window to add objects as we are not simulating the die&#39;s thermal calculations and need not to define any material for dies.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_17_Simulation_control_settings_for_forming"></a><img height="350" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0017.jpg' | relative_url }}" width="389"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation control settings for forming</p>
+  <h3 class="h3_1_3_">Add die objects</h3>
+  <p>In Object window add number of objects as 3 as shown in <a href="#Fig_3DFGL1_18_Adding_objects_for_forming"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>18.</a>, as we will be bringing in all two dies at 90°C
+    for the forming operation. We can now see the object tree is expanded to include the dies, details for which will be now be defined. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_18_Adding_objects_for_forming"></a><img height="350" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0018.jpg' | relative_url }}" width="389"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding objects for forming</p>
+  <h3 class="h3_1_3_">Define Workpiece</h3>
+  <p>In workpiece definition window select the object type as &quot;<strong>Read from DB</strong>&quot; as shown in <a href="#Fig_3DFGL1_19_Workpiece_definition_window_in_forming"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>19.</a>    Click on Top Die in operation tree to define the Dies.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_19_Workpiece_definition_window_in_forming"></a><img src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0019.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece definition window in forming</p>
+  <h3 class="h3_1_3_">Define Top Die</h3>
+  <p>In Top die definition window accept the object type as <strong>rigid</strong> and specify initial temperature as <strong>90</strong>°C as shown in <a href="#Fig_3DFGL1_20_Top_die_definition_window_in_forming"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>20.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_20_Top_die_definition_window_in_forming"></a><img src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0020.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die definition window in forming</p>
+  <h3 class="h3_1_3_">Import Top Die geometry</h3>
+  <p>In Top die Geometry window, click on <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> (Load Geometry from Library) button and import ‘<strong>Ids_link_top</strong><strong>.stl</strong>&#39; from DEFORM geometry library path
+    /3D/LABS/ (see <a href="#Fig_3DFGL1_21_Importing_the_multiple_boundary_geometry_for_top_die"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>21.</a>). Check the imported geometry as explained for <a href="#Fig_3DFGL1_10_Checking_the_imported_3d_geometry">workpiece geometry earlier</a>.
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until top die movement window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_21_Importing_the_multiple_boundary_geometry_for_top_die"></a><img height="437" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0021.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing the multiple boundary geometry for top die</p>
+  <h3 class="h3_1_3_">Assigning movement controls for top die</h3>
+  <p>In top die movement controls define the <strong>hydraulic</strong> <strong>press</strong> with hydraulic <strong>speed</strong> as <strong>function of time </strong>(local time) in <strong>-Z </strong>direction as shown in <a href="#Fig_3DFGL1_22_Hydraulic_movement_definition_for_top_die"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_22_Hydraulic_movement_definition_for_top_die"></a><img height="500" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0022.jpg' | relative_url }}" width="429"/></p>
+  <p> </p>
+  <p class="Fig_numb">Hydraulic movement definition for top die</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_define_function..._button2.jpg' | relative_url }}"/> button next to speed and define such that from 0 to 2.04 sec press runs with speed is 10 mm/sec and from 2.0401 to 4 sec press runs with 8 mm/sec as shown in
+    <a href="#Fig_3DFGL1_23_Hydraulic_speed_defined_as_function_of_local_time"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>23.</a> By default in multiple operations for function of time definitions local time will be considered so in this function time 0 till 4 seconds referring to
+       forming operation. Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to close the definition and click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Bottom die definition window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_23_Hydraulic_speed_defined_as_function_of_local_time"></a><img height="428" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0023.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Hydraulic speed defined as function of local time</p>
+  <h3 class="h3_1_3_">Define Bottom Die</h3>
+  <p>In Bottom die definition window accept the object type as <strong>rigid</strong> and specify initial temperature as <strong>90</strong>°C as shown in <a href="#Fig_3DFGL1_24_Bottom_die_definition_window"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>24.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_24_Bottom_die_definition_window"></a><img height="320" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0024.jpg' | relative_url }}" width="383"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bottom die definition window</p>
+  <h3 class="h3_1_3_">Import Bottom die geometry</h3>
+  <p>In Bottom die Geometry window, click on <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> (Load Geometry from Library) button and import ‘<strong>ids_link_bottom.stl</strong>&#39; from DEFORM geometry library path /3D/LABS/
+    (see <a href="#Fig_3DFGL1_25_Importing_the_multiple_boundary_geometry_for_bottom_die"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>25.</a>). Check the imported geometry as explained for workpiece geometry
+    earlier. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until scheduled positioning window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_25_Importing_the_multiple_boundary_geometry_for_bottom_die"></a><img height="435" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0025.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing the multiple boundary geometry for bottom die</p>
+  <h3 class="h3_1_3_">Define Scheduled positioning</h3>
+  <p>The dies by default are in correct position, to make sure they positioned properly define the scheduled position to top and bottom die with respect to workpiece by interference method in -Z and + Z direction respectively as shown in <a href="#Fig_3DFGL1_26_Scheduled_positioning_for_top_and_bottom_dies"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>26.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_26_Scheduled_positioning_for_top_and_bottom_dies"></a><img height="426" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0026.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scheduled positioning for top and bottom dies</p>
+  <p> </p>
+  <h3 class="h3_1_3_">Defining Inter-Object relations</h3>
+  <p>Select <strong>user type</strong> contact and click on <img src="{{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}"/> button (see <a href="#Fig_3DFGL1_29_Inter-Object_relationship_definition_for_forming"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>29.</a>).
+    It will add the relationship between the Billet, Top Die and Bottom Die. As the Dies are Rigid and Billet is plastic, Top and Bottom Dies are considered as Master and Billet as Slave.</p>
+  <p>Highlight the <strong>Top </strong><strong>Die – Workpiece</strong> relationship and click the <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> button to modify the contact conditions. In the friction tab (see <a href="#Fig_3DFGL1_27_Inter-object_friction_coefficient_definition_for_hot_forging"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>27.</a>)
+    there is a pull-down menu that allows the user to choose the appropriate friction conditions of common forming processes.</p>
+  <p>Since this is hot forming simulation and the dies are steel, use the pull down menu and select<strong> Hot forming </strong>from the list. A friction value of <strong>0</strong><strong><strong>.</strong>3</strong> will automatically be selected.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_27_Inter-object_friction_coefficient_definition_for_hot_forging"></a><img height="500" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0027.jpg' | relative_url }}" width="511"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-object friction coefficient definition for hot forging</p>
+  <p> </p>
+  <p>In <strong>thermal tab</strong> select the <strong>Forming</strong> type pull down option, it will add the default heat transfer coefficient value <strong>5 </strong>for forming as shown in <a href="#Fig_3DFGL1_28_Inter-object_heat_transfer_coefficient_definition_for_forming"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_28_Inter-object_heat_transfer_coefficient_definition_for_forming"></a><img height="450" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0028.jpg' | relative_url }}" width="460"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-object heat transfer coefficient definition for forming</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to go back to Inter-Object window, since the friction conditions and inter-object heat transfer are the same for all the object pairs, the <img src="{{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}"/> button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction factor of 0.3 and heat transfer coefficient of 5 defined as shown in <a href="#Fig_3DFGL1_29_Inter-Object_relationship_definition_for_forming"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>29.</a>    Since the contact will initialize and generate while generating database, turn On &quot;Initialize&quot; and &quot;Generate&quot; check boxes. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_29_Inter-Object_relationship_definition_for_forming"></a><img src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0029.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter-Object relationship definition for forming</p>
+  <h3 class="h3_1_3_">Define Stopping controls</h3>
+  <p>In stopping control window check the <strong>Distance between dies </strong>stopping control and define distance value as <strong>11.0</strong> mm. Then from display window pick the point on big end, top and bottom die cavity centers and select the
+    direction as<strong> Z</strong> as shown in <a href="#Fig_3DFGL1_30_Distance_between_dies_stopping_control_for_forming"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>30.</a> After picking points on dies distance
+    between dies can be observed, in this case its around 51.8. For advanced stopping options are refer Expert mode (<img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/>), as we are not using in this lab click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_30_Distance_between_dies_stopping_control_for_forming"></a><img height="386" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0030.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Distance between dies stopping control for forming</p>
+  <h3 class="h3_1_3_">Define Step controls</h3>
+  <p>In step controls window define <strong>number of steps</strong> as <strong>500</strong>, at <strong>0.2</strong> mm per step of <strong>die</strong> <strong>movement</strong>, <strong>step</strong> <strong>increment</strong> <strong>to </strong><strong>save</strong>    as <strong>10</strong> for the primary die (which is object number 2 in this simulation) as shown in <a href="#Fig_3DFGL1_31_Step_controls_settings_for_forming"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>31.</a>    Advanced step controls and simulation controls features are available in Expert mode (<img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_31_Step_controls_settings_for_forming"></a><img height="420" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0031.jpg' | relative_url }}" width="451"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step controls settings for forming</p>
+  <p> </p>
+  <p>As database for cone forming operation will generate during simulation, so this completes the multiple forming operation setup in MO - Guided mode. To simulate the problem click on  <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/>  button above the object tree (see <a href="#Fig_3DFGL1_33_Simulation_mode_displaying_the_forming_running_status"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>33.</a>).</p>
+  <h2><a id="1_4_Running_Simulation"></a>Running Simulation</h2>
+  <p>Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DFGL1_32_Run_Simulation_popup_window"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>32</a>. Use
+    the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_32_Run_Simulation_popup_window"></a><img height="292" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0032.jpg' | relative_url }}" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation popup window</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Graphics, Simulation Message and Simulation Log tab by making sure that the <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked. (See
+    <a href="#Fig_3DFGL1_33_Simulation_mode_displaying_the_forming_running_status"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>33.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_33_Simulation_mode_displaying_the_forming_running_status"></a><img height="433" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0033.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation mode displaying the forming running status</p>
+  <p> </p>
+  <p>After completion of the all operations in Simulation log file it gives the log message as &quot;MULTIPLE OPERATION COMPLETED.&quot;, then switch to Post tab by clicking on <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> to view
+    the simulation results.</p>
+  <h2><a id="1_5_Post_Processing"></a>Post Processing</h2>
+  <p>In post processor, Step list below the graphic area indicates step numbers available from the different operations simulated. A set of state variables available from the ‘Post’ menu can be used to review the model response. Please note that for the
+    first operation only the thermal data for the workpiece is available. And the deformation results can be seen for the Steering link forming operation (see <a href="#Fig_3DFGL1_34_Strain-Effective_variable_contour_at_workpiece_cone_shape"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>34.</a>).
+    Use the <img src="{{ '/assets/icons/pre_icons/mo_box_zoom_icon.jpg' | relative_url }}"/> (zoom by window) icon to zoom the cone portion of the workpiece as shown in <a href="#Fig_3DFGL1_34_Strain-Effective_variable_contour_at_workpiece_cone_shape"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>34.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_34_Strain-Effective_variable_contour_at_workpiece_cone_shape"></a><img height="437" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0034.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Strain-Effective variable contour at workpiece cone shape</p>
+  <p> </p>
+  <p>Some important state variables can be selected directly from ‘Post Tools’ window and the rest can be accessed through State Variable dialog by clicking on <img src="{{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}"/> icon.</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}"/> Graph (Load-Stroke) and plot Time (sec) vs Load (klb) and also plot Time (sec) Vs Speed (in/sec) for top die. Observe for speed change after 20.4 mm deformation from 10
+    in/sec to 8 in/sec as shown in <a href="#Fig_3DFGL1_35_Time_vs_Load_and_Time_vs_Speed_plots_for_primary_die"><span data-keyref="Labs-Forming_Labs_3D_Forming_lab_in_Guided_mode">Fig. 3DFGL1.</span>35.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFGL1_35_Time_vs_Load_and_Time_vs_Speed_plots_for_primary_die"></a><img height="400" src="{{ '/assets/images/labs/forming_labs/3d_forming_opn_in_guided_mode/image0035.jpg' | relative_url }}" width="347"/></p>
+  <p> </p>
+  <p class="Fig_numb">Time vs Load and Time vs Speed plots for primary die (Top die)</p>
+  <p> </p>
+
+</body></html>

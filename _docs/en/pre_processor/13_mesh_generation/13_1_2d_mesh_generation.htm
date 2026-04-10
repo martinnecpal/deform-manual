@@ -1,0 +1,472 @@
+---
+lang: en
+title: "13.1. 2D Mesh Generation"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.7.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>13.1. 2D Mesh Generation</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>13.1. 2D Mesh Generation</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/13_mesh_generation/13_1_2d mesh generation.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/13_Mesh_Generation/13_2_3D_Tet_Mesh_Generation.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/13_Mesh_Generation/13_Mesh_Generation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="13.1. 2D Mesh Generation">
+        <span>13.1. 2D Mesh Generation</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>13.1. <a id="13.1_2D_Mesh_Generation"></a>2D Mesh Generation</h1>
+  <p><br/>
+    <a href="#13.1.1._Guided_Mode_Mesh_generation">13.1.1. Guided Mode Mesh generation</a></p>
+  <p><a href="#13.1.2._Expert_Mode_Mesh_generation">13.1.2. Expert Mode Mesh generation</a></p>
+  <p><a href="#13.1.3._Mesh_generation_tools_in_Expert_mode">13.1.3. Mesh generation tools in Expert mode</a></p>
+  <ul>
+    <li>
+      <p><a href="#Import_Mesh" style="margin-left: 40px">Import Mesh</a> </p>
+    </li>
+    <li>
+      <p><a href="#Save_Mesh" style="margin-left: 40px">Save Mesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Check_Mesh" style="margin-left: 40px">Check Mesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Area_and_Volume" style="margin-left: 40px">Area and Volume</a></p>
+    </li>
+    <li>
+      <p><a href="#Delete_Mesh" style="margin-left: 40px">Delete Mesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Show_mesh" style="margin-left: 40px">Show mesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Manual_Remesh" style="margin-left: 40px">Manual Remesh</a></p>
+    </li>
+    <li>
+      <p><a href="#Default_Setting" style="margin-left: 40px">Default Setting</a></p>
+    </li>
+  </ul>
+  <p><a href="#13.1.4._General_Settings">13.1.4. General Settings</a></p>
+  <p><a href="#13.1.5._Mesh_weighting_factors">13.1.5. Mesh weighting factors</a> </p>
+  <p><a href="#13.1.6._Mesh_density_windows">13.1.6. Mesh density windows</a></p>
+  <p><a href="#13.1.7._Coating">13.1.7. Coating</a></p>
+  <p><a href="#13.1.8._Remeshing_criteria">13.1.8. Remeshing criteria</a></p>
+  <p><a href="#Fig._13.1.9._Mesh_density_windows_for_2D">13.1.9. Advanced Settings</a></p>
+  <p><a href="#13.1.10._User-Defined_Mesh">13.1.10. User-Defined Mesh</a></p>
+  <p> </p>
+  <h2><a id="13.1.1._Guided_Mode_Mesh_generation"></a>Guided Mode Mesh generation</h2>
+  <p>Below <a href="#Fig._131.1._Mesh_settings_window_in_Guided_mode"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>1.</a> shows the Mesh generation options in Guided mode (<img height="21" src="{{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}" width="25"/>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._131.1._Mesh_settings_window_in_Guided_mode"></a><img src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image001.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh settings window in Guided mode</p>
+  <p> </p>
+  <p><strong><a id="Number_of_Elements"></a>Number of Elements: </strong><strong></strong>The number of elements to be generated for an object can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation.</p>
+  <p> </p>
+  <p><strong><a id="Generate_Mesh"></a>Generate Mesh</strong> <img height="17" src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}" width="93"/> : The mesh can be generated by clicking Generate Mesh.</p>
+  <p> </p>
+  <p><strong>Delete Mesh</strong> <img height="21" src="{{ '/assets/icons/pre_icons/mo_delete_button.jpg' | relative_url }}" width="73"/> : This feature deletes the generated mesh.</p>
+  <p> </p>
+  <h2><a id="13.1.2._Expert_Mode_Mesh_generation"></a>Expert Mode Mesh generation</h2>
+  <p>In order to control the mesh parameters like size, shape, density,type of element, etc..., user has to switch to expert mode <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}" style="cursor: nesw-resize;"/> for more advanced mesh options.
+    Below <a href="#Fig._13.1.2._Expert_mode_mesh_settings_window"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>2.</a> shows the mesh options available from Expert mode. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.1.2._Expert_mode_mesh_settings_window"></a><img src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image002.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Expert mode mesh settings window</p>
+  <p> </p>
+  <h2><a id="13.1.3._Mesh_generation_tools_in_Expert_mode"></a>Mesh generation tools in Expert mode</h2>
+  <p><strong><a id="Import_Mesh"></a>Import Mesh</strong> <img src="{{ '/assets/icons/pre_icons/mo_import_mesh_button.jpg' | relative_url }}"/> :  A mesh can be imported into the pre-processor from a keyword file, database file or any supported mesh formats (.DB, .Key
+    file and . ANS).</p>
+  <p> </p>
+  <p><strong><a id="Save_Mesh"></a>Save Mesh</strong> <img src="{{ '/assets/icons/pre_icons/mo_save_mesh_button.jpg' | relative_url }}"/> : This feature saves the current generated mesh into a file.</p>
+  <p> </p>
+  <p><strong><a id="Check_Mesh"></a>Check Mesh</strong> <img src="{{ '/assets/icons/pre_icons/mo_check_mesh_button.jpg' | relative_url }}"/> : The mesh can be examined for problems using the Check Mesh function. A perfect mesh will give the popup as shown in the <a href="#Fig._13.1.3._Check_mesh_popup_window"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>3.</a>,
+     when user clicks on<img src="{{ '/assets/icons/pre_icons/mo_check_mesh_button.jpg' | relative_url }}"/> option.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.1.3._Check_mesh_popup_window"></a><img src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image003.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Check mesh popup window</p>
+  <p> </p>
+  <p><strong><a id="Area_and_Volume"></a>Area and Volume</strong> <img src="{{ '/assets/icons/pre_icons/mo_area_volume.jpg' | relative_url }}"/> : This feature gives information of the meshed area and volume of the object. (See <a href="#Fig._13.1.4._Mesh_Area_and_Volume_popup_window"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>4.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.1.4._Mesh_Area_and_Volume_popup_window"></a><img src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image004.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Mesh Area and Volume popup window</p>
+  <p> </p>
+  <p><strong><a id="Delete_Mesh"></a>Delete Mesh</strong> <img src="{{ '/assets/icons/pre_icons/mo_delete_mesh_button.jpg' | relative_url }}"/> : Deletes the mesh generated for the object.</p>
+  <p><br/>
+    <strong><a id="Show_mesh"></a>Show mesh </strong><img src="{{ '/assets/icons/pre_icons/mo_show_mesh_button.jpg' | relative_url }}"/> : When user clicks on show mesh it shows the generated mesh in display window. Show mesh button toggles between display of mesh
+    and geometry of the object.</p>
+  <p> </p>
+  <p><strong><a id="Manual_Remesh"></a>Manual Remesh</strong> <img src="{{ '/assets/icons/pre_icons/mo_manual_remesh_button.jpg' | relative_url }}"/> : If a simulation is continued from a previously running simulation, the recommended button to click is Manual Remesh.
+    This automatically performs border extraction and will prompt the user for boundary condition interpolation. </p>
+  <p> </p>
+  <p>During the course of a DEFORM simulation, extensive deformation of plastic or porous objects may cause elements in those object meshes to become so distorted that the mesh is no longer usable (negative Jacobian). If this condition occurs, the simulation
+    will abort and an error message will be written to the ProblemID.MSG file. To continue a simulation after a mesh has become unusable, the object must be remeshed. Remeshing is the process of replacing a distorted mesh with a new undistorted mesh and
+    interpolating the field variables (strain, velocity, damage, and temperature etc.) from the old mesh to the new mesh.</p>
+  <p> </p>
+  <p>In most cases, remeshing and interpolation occurs automatically without user intervention.</p>
+  <p>It is also possible to manually regenerate a mesh on an object and interpolate the data from the old mesh. The procedure to perform a manual remeshing is as follows:</p>
+  <p> </p>
+  <p><strong>Procedure</strong></p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Open the pre-processor.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select the step from the database where remeshing is to be performed and load this in the pre-processor. If the object does not remesh at the last step, it may be necessary to remesh at an earlier step. </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select the object to be remeshed.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select the Manual Remeshing option in the Objects window.</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-size: 12pt;font-family: Arial">If the part geometry is to be modified (such as trimming flash or punching out a web, it may be done at this point using the geometry editor).</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Adjust mesh windows or other mesh parameters as necessary.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Generate a new mesh.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Interpolate data from the old mesh to the new mesh by clicking on the OK button.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Interpolate boundary conditions from the old mesh to the new mesh unless:</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Dies are being changed at the same time the part is being remeshed</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">The mesh visibly distorts on remeshing.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">A negative Jacobian error occurs immediately when the problem is restarted.</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Generate a database and start simulation.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p>If the mesh visibly distorts after remeshing or if you are changing dies at the same time, regenerate the mesh and interpolate data but not boundary conditions. If boundary conditions are not interpolated, it is necessary to recreate all velocity, heat
+    transfer, inter-object, or other boundary conditions. If there are no changes to the geometry (such as trimming the part) then just click on the <img src="{{ '/assets/icons/pre_icons/mo_manual_remesh_button.jpg' | relative_url }}"/>, this extracts the border and
+    shows the mesh generation dialog. After meshing when exiting, interpolation of state variables and boundary conditions is carried out.</p>
+  <p> </p>
+  <p><strong><a id="Default_Setting"></a>Default Setting</strong> <img src="{{ '/assets/icons/pre_icons/mo_default_settings_button.jpg' | relative_url }}"/>: When user clicks on Default settings tab all the settings will be changed to default values, by default Mesh window
+    will be in greyed out mode as no mesh windows are defined. If user wants to activate mesh window, user has to change the weighting factor for mesh density by increasing the sliding bar value to 1.</p>
+  <h2><a id="13.1.4._General_Settings"></a>General Settings</h2>
+  <p>The Mesh Generation window (See <a href="#Fig._13.1.2._Expert_mode_mesh_settings_window"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>2.</a>) allows the user to generate a mesh for the current object. Mesh density can be controlled
+    either by system based on settings or User can assign the element size directly.</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>System set-up method</strong> uses a system of weights and assigned windows to control the size of elements during the initial mesh generation and subsequent automatic remeshings.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>User-Defined</strong> allows the user to specify certain areas on the object to have higher element densities relative to other areas of the object during the initial mesh generation only (this density specification is not referenced during
+      automatic remeshing).</li>
+  </ul>
+  <p>Mesh density refers to the size of elements that will be generated within an object boundary. The mesh density is primarily based on the specified total number of elements and &quot;Point&quot; or &quot;Parameter&quot; mesh density controls. The sample
+    grid resolution and the critical point tolerances also affect the mesh density, but to a lesser extent than the other parameters.</p>
+  <p> </p>
+  <p>Mesh density is defined by the number of nodes per unit length, generally along the edge of the object. The mesh density values specify a mesh density ratio between two regions in the object. They do not refer to an absolute number of nodes. So, at
+    least two different density regions must be specified.</p>
+  <p> </p>
+  <p>A higher mesh density (more elements per unit area/volume) offers increased accuracy and resolution of geometry and field variables such as strain, temperature, and damage. However, in general, the time required for the computer to solve the problem
+    increases as number of nodes increases. Thus, it is desirable to have a large number of small elements (high density) in regions where large gradients in strain, temperature, or damage values are present. Conversely, to conserve computation resources,
+    it is desirable to have a small number of relatively large elements in regions where very little deformation occurs, or where the gradients are very small.</p>
+  <p>Other issues related to mesh generation:</p>
+  <ul class="Disc">
+    <li style="text-align: justify;line-height: 1.5;font-size: 12pt;font-family: Arial">Too coarse a mesh around corners may cause mesh degradation and remeshing problems.</li>
+    <li style="text-align: justify;line-height: 1.5;font-size: 12pt;font-family: Arial">Too coarse a mesh in regions with localized surface effects (i.e. high damage along a surface) may cause peak values to decline due to interpolation errors during remeshing.</li>
+  </ul>
+  <p> </p>
+  <p><strong>System setup: </strong></p>
+  <ul class="Disc">
+    <li><strong></strong><strong style="font-family: Arial;font-size: 12pt">Number of elements (MGNELM)</strong> </li>
+  </ul>
+  <p>The number of mesh elements  represents the approximate number of elements that will be generated by the system.  The Automatic Mesh Generator (AMG) takes the value for <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> and generates a mesh
+    that will contain approximately the same number of elements.</p>
+  <p>The error between the number of specified elements and the number of generated elements is typically about ten per-cent. When the mesh is generated, the specified total number of elements is used in conjunction with the &quot;Point&quot; and &quot;Parameter&quot;
+    controls to determine the mesh density.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt"><strong>Number of thickness elements (MGTELM)</strong> </li>
+  </ul>
+  <p>The max thickness ratio is one of several ways to control the mesh density during automatic mesh generation (AMG). The number of elements in thickness direction represents the approximate number of elements that will be generated by the system across
+    the thickness direction of any region of the part. The Automatic Mesh Generator (AMG) takes the value for <a href="../../keyword_documentation/m/mgtelm.htm">MGTELM</a> and generates a mesh that will have that number of elements across the thinnest
+    portion. For instance, if <a href="../../keyword_documentation/m/mgtelm.htm">MGTELM</a> is set to 4, the AMG will try to have 4 elements across the thickness of the geometry.</p>
+  <p>The thickness direction of an object is perpendicular to a branched centre line axis for each region of the part.  The total number of elements to be generated in a mesh is controlled by the value of number of elements in keyword <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a>    .  If the value of thickness elements results in a mesh that contains more than the value specified in <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> elements, the value of <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a>    would be scaled down so that the mesh contains approximately <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> elements. If the value of <a href="../../keyword_documentation/m/mgtelm.htm">MGTELM</a> results in a mesh that contains fewer
+    than <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> elements, the remaining elements will be distributed to other user specified mesh density controls (curvature, strain, strain rate, and temperature).</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt"><strong>Element size ratio (MGSIZR) </strong></li>
+  </ul>
+  <p>The maximum size ratio between elements is one of several ways to control the mesh density during automatic mesh generation (AMG) by specifying the ratio of node densities.</p>
+  <p>For a value of 3 for <a href="../../keyword_documentation/m/mgsizr.htm">MGSIZR</a>, the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then Size
+    Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt"><strong>Relative type mesh</strong></li>
+  </ul>
+  <p>Using the relative type mesh setting, the user specifies the number of elements to be generated with thickness elements and elements size ratio. (See <a href="#Fig._13.1.5.Absolute_mesh_type_option"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>5.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><img height="421" src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image005.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._13.1.5.Absolute_mesh_type_option"></a>Absolute mesh type option</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;font-weight: bold">Absolute type mesh  </li>
+  </ul>
+  <p>Using the absolute type mesh setting, the user specifies the size of the elements, and the system determines the total number of elements that are required based on the size of the element specified, size ratio, thickness of element and geometry. As
+    part complexity increases, the number of elements tends to increase. (See <a href="#Fig._13.1.6._Absolute_mesh_type_option"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>6.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><img height="424" src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image006.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;"><a id="Fig._13.1.6._Absolute_mesh_type_option"></a>Absolute mesh type option</p>
+  <p style="text-align: center;"> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Mapped Mesh Generation</strong></p>
+    </li>
+  </ul>
+  <p>Mapped meshing can be used at the initial stages of forming process. As the geometry of the workpiece takes a complex shape during forming, mesh is subjected to several remeshings and mapped meshing may not be able to survive such changes to geometry
+    and remeshing may fail. Mapped mesh generation can been seen in the <a href="#Fig._13.1.7.Mapped_mesh_type_option"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>7.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="424" src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image007.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;"><a id="Fig._13.1.7.Mapped_mesh_type_option"></a>Mapped mesh type option</p>
+  <p style="text-align: center;"> </p>
+  <ul class="Disc">
+    <li style="text-align: justify;font-family: Arial;font-size: 12pt;line-height: 1.5"><strong>Consideration for contact with master objects</strong></li>
+  </ul>
+  <p style="text-align: justify; font-family: Arial; font-size: 12pt; line-height: 1.5;"> </p>
+  <h2><a id="13.1.5._Mesh_weighting_factors"></a>Mesh weighting factors </h2>
+  <p>The weighting factors or parameters (system defined mesh density) for boundary curvature, temperature, Strain and strain rate specify relative mesh density weights to be assigned to the associated parameter. (See <a href="#Fig._13.1.8._Mesh_weighting_factors_window_for_2D"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>8.</a>)</p>
+  <p>Temperature, strain, and strain rate densities are assigned based on gradients in these parameters, not absolute parameter values. That is, a region with a rapid temperature change in a particular direction will receive more elements than a region with
+    a uniform high temperature.</p>
+  <p>The values from all the mesh density keywords are combined during the mesh generation process to create a mesh density distribution within the geometric boundary.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image008.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"> <a id="Fig._13.1.8._Mesh_weighting_factors_window_for_2D"></a>Mesh weighting factors window for 2D</p>
+  <p> </p>
+  <ul class="Disc">
+    <li><strong style="font-family: Arial;font-size: 12pt">Boundary curvature based weighting factor (MGWCUV) </strong></li>
+  </ul>
+  <p>The Boundary Curvature weighting will apply a higher mesh density to curves on the objects boundary. If <a href="../../keyword_documentation/m/mgwcuv.htm">MGWCUV</a> is greater than 0, the boundary area with curves will receive a higher mesh density
+    in that area. If <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> is set to 0, this weighting criterion is ignored.</p>
+  <p>The values from all the mesh density keywords are combined during the mesh generation process to create a mesh density distribution within the geometric boundary.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li><strong style="font-family: Arial;font-size: 12pt">Strain base weighting factor (MGWSTN)</strong></li>
+  </ul>
+  <p>To keep a fine mesh in areas of high strain this (<a href="../../keyword_documentation/m/mgwstn.htm">MGWSTN</a>) weighting factor can be adjusted. From v12, Use Gradient option added for Strain base weighting factor</p>
+  <p> </p>
+  <ul class="Disc">
+    <li><strong style="font-family: Arial;font-size: 12pt">Strain rate based weighting factor (MGWSTR)</strong></li>
+  </ul>
+  <p>If there are areas on the deforming object which see high strain rates (<a href="../../keyword_documentation/m/mgwstr.htm">MGWSTR</a>) and localized deformation then using this weighting factor will put a fine mesh in areas where there is a high strain
+    rate gradient. From v12, Use Gradient option added for Strain rate base weighting factor</p>
+  <p>  </p>
+  <ul class="Disc">
+    <li><strong style="font-family: Arial;font-size: 12pt">Temperature based weighting factor (MGWTMP) </strong></li>
+  </ul>
+  <p>This weighting factor (<a href="../../keyword_documentation/m/mgwtmp.htm">MGWTMP</a>) can be used to specify fine elements in areas of high temperature gradients.</p>
+  <p>  </p>
+  <ul class="Disc">
+    <li><strong style="font-family: Arial;font-size: 12pt">Mesh Density Windows weighting factor (MGWUSR) </strong></li>
+  </ul>
+  <p>The user defined windows weighting factor is used in conjunction with Mesh Density Windows (<a href="../../keyword_documentation/m/mgwusr.htm">MGWUSR</a>). User-defined distribution weighting will apply a higher mesh density to areas with a specified
+    density window. If this parameter is set to 0, the mesh windows are ignored during automatic remeshing.</p>
+  <p class="Note_text"> </p>
+  <p class="Note_text">Note:</p>
+  <p class="Note_text">When an object is deformed, the user-defined mesh window will move according to the velocity component assigned to that window. This window will carry the mesh density weight with it throughout the simulation.</p>
+  <p style="text-align: center;"> </p>
+  <h2><a id="13.1.6._Mesh_density_windows"></a>Mesh density windows</h2>
+  <p>The Mesh density window (See <a href="#Fig._13.1.9._Mesh_density_windows_for_2D"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>9.</a>) concept is similar to a user defined mesh density. The mesh density specified for a given
+    window is applied to any geometry point (node or STL vertex) inside the window. However, the mesh density window is used during remeshing as well as initial mesh generation, whereas user defined mesh densities are used only during initial generation.
+    It can also be assigned a velocity, or follow another object&#39;s movement and it can be defined in an area where the workpiece has not yet been deformed through.</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><img height="424" src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image009.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><a id="Fig._13.1.9._Mesh_density_windows_for_2D"></a>Mesh density windows for 2D</p>
+  <p> </p>
+  <p>The mesh density window specifies an area in space which will move with and object during deformation. This area has a mesh density definition applied to it and will cause the area to be meshed with an appropriate mesh density. (See <a href="#Fig._13.1.9._Mesh_density_windows_for_2D"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>9.</a>)</p>
+  <p> </p>
+  <p>The important facts that should be noted:</p>
+  <p>The mesh density window must intersect the object&#39;s boundary.</p>
+  <p> </p>
+  <p><strong>Defining mesh density windows</strong>: Mesh density window can be defined using the below mentioned steps,</p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select a window number under the mesh density window header. </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Add Points, click <img src="{{ '/assets/icons/pre_icons/mo_2d_add_point_button.jpg' | relative_url }}"/> button to add points. Create a window by defining 3 or more points in the desired area by selecting <img src="{{ '/assets/icons/pre_icons/mo_2d_polygon_window_icon.jpg' | relative_url }}"/> .</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Once a window is defined, its relative mesh density or element size is entered in the box under the Parameters header.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">A velocity for the mesh window can also be defined in the x and/or y direction.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">These values are also found under the Parameters header.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Be sure to set the weight of user-defined areas to a non-zero value under weighting factors.</li>
+  </ul>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p><strong>Window Definition [2D]</strong>: Using these options different 2d mesh windows can be created and modified as explained below,</p>
+  <p><strong>Polygon</strong><img src="{{ '/assets/icons/pre_icons/mo_2d_polygon_window_icon.jpg' | relative_url }}"/> , <strong>Rectangle </strong><img src="{{ '/assets/icons/pre_icons/mo_2d_rectangle_window_icon.jpg' | relative_url }}"/> and <strong>Circle </strong><img src="{{ '/assets/icons/pre_icons/mo_2d_circle_window_icon.jpg' | relative_url }}"/> options are available for user to define Mesh window.</p>
+  <p><strong>Add </strong><strong>a </strong><strong>point </strong><img src="{{ '/assets/icons/pre_icons/mo_2d_add_point_button.jpg' | relative_url }}"/> : Using this option user can add points to define a mesh window.</p>
+  <p><strong>Delete </strong><strong>a </strong><strong>point </strong><img src="{{ '/assets/icons/pre_icons/mo_2d_delete_point_button.jpg' | relative_url }}"/> : Using this option user can delete points of defined mesh window.</p>
+  <p><strong>Relocate </strong><strong>point </strong><img src="{{ '/assets/icons/pre_icons/mo_2d_relocate_point_button.jpg' | relative_url }}"/> : Using this option user can relocate points of a defined mesh window.</p>
+  <p><strong>Modify </strong><img src="{{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}"/> : Using this option user can modify the previously defined mesh window.</p>
+  <p><strong>Duplicate </strong><img src="{{ '/assets/icons/pre_icons/mo_duplicate_window_button.jpg' | relative_url }}"/>: Using this option user can duplicate the existing window and can relocate the points of the duplicated window.</p>
+  <p> </p>
+  <p>Mesh density windows have the following data associated with them:</p>
+  <p> </p>
+  <p><strong>Points </strong></p>
+  <p>The Points represents the total number of points that make up the mesh density window.</p>
+  <p> </p>
+  <p><strong>Density </strong></p>
+  <p>The Density is the desired density value for a given window.</p>
+  <p>How to select mesh density: Determine the finest mesh density required based on anticipated curvature, die corners, defect size, etc. For example, for a .125 radius, we would like to have elements slightly smaller than this (maybe .100&quot;). This
+    would correspond to an absolute mesh density of 10 (1 / 0.100). Now determine the global density by taking 1/3 of this value, so enter 3 in the global density field in the Mesh Density Windows window.</p>
+  <p> </p>
+  <p><strong>Velocity</strong></p>
+  <p>The Velocity is the velocity of the window. This allows the window to move with the dies. The velocity can be in the X direction, the Y direction or a combination of the two.</p>
+  <p>Mesh density window movement: A constant velocity can be assigned to the mesh density window. This is useful in situations where a higher density needs to be defined around a moving object, such as a punch. The window should be given the same velocity
+    and direction as the punch. In cases where punch velocity is not known, such as a hammer forging, or a load-controlled press, the best estimate of a constant velocity should be made.</p>
+  <p> </p>
+  <p class="Note_text">Note:</p>
+  <p class="Note_text">If a velocity is assigned to a window, it should be repositioned as necessary before a second or third operation is performed.</p>
+  <p> </p>
+  <h2> <a id="13.1.7._Coating"></a>Coating</h2>
+  <p>The user can add coating layers using this option and generate mesh for the same. For added coating material user can assign material. (See <a href="#Fig.13.1.10._Coating_Mesh_window"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>10.</a>)
+    For further information on the usage of coating windows please refer to <span style="color:#0000ff;"><a href="../../appendices/appendix_xi__near_surface_mesh_functions.htm">Appendix XI</a>.</span></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig.13.1.10._Coating_Mesh_window"></a><img src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image010.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Coating Mesh window</p>
+  <p> </p>
+  <h2><a id="13.1.8._Remeshing_criteria"></a>Remeshing criteria</h2>
+  <p>Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See <a href="#Fig._13.1.11._Remeshing_Criteria_window"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>11.</a>)
+    contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they
+    are Interference Depth (<a href="../../keyword_documentation/r/rmdpth.htm">RMDPTH</a>),Max. Time Increment (<a href="../../keyword_documentation/r/rmtime.htm">RMTIME</a>), Max. Step Increment (<a href="../../keyword_documentation/r/rmstep.htm">RMSTEP</a>)
+    and Max. Stroke Increment (<a href="../../keyword_documentation/r/rmstrk.htm">RMSTRK</a>). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed. During
+    the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image011.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._13.1.11._Remeshing_Criteria_window"></a>Remeshing Criteria window</p>
+  <p> </p>
+  <p><strong></strong></p>
+  <p><strong>Maximum interference depth (RMDPTH)</strong><br/> The maximum Interference Depth (<a href="../../keyword_documentation/r/rmdpth.htm">RMDPTH</a>) is used to start a remeshing procedure. If any portion of a master object penetrates a slave object
+    beyond the depth specified under <a href="../../keyword_documentation/r/rmdpth.htm">RMDPTH</a>, remeshing will be triggered.</p>
+  <p>The interference depth controls the initiation of a remeshing procedure based on the depth of interference between a slave object and a master object. The depth of interference is the depth an element edge of the slave object crosses the surface of
+    a master object. The object to be remeshed must be a slave object.</p>
+  <p>The interference depth parameter should be used with extremely sharp corners where the corner radius is nearly the same size as the adjacent element edge length. The remesh depth should be set to roughly half of the element edge length. Too large an
+    interference depth may cause excess volume loss. Too small a value may cause too many remeshings, leading to slow run times and excessive interpolation error.</p>
+  <p>If mesh penetration is occurring, the first course of action should be to use mesh density controls to place a smaller mesh in the offending region. If problems are still occurring, then interference depth can be used.</p>
+  <p><strong>Maximum stroke increment (RMSTRK) </strong><br/> Anytime the maximum stroke increment (<a href="../../keyword_documentation/r/rmstrk.htm">RMSTRK</a>) is exceeded by the stroke increment of the primary die since the last remeshing step, a new
+    remeshing step will be initiated.</p>
+  <p>  </p>
+  <p><strong>Maximum time increment (RMTIME)</strong><br/> Anytime the Maximum Time Increment (<a href="../../keyword_documentation/r/rmtime.htm">RMTIME</a>) (Value of Elapsed Time) has elapsed since the last remeshing step, a new remeshing step will be
+    initiated. The keyword <a href="../../keyword_documentation/r/rmtime.htm">RMTIME</a>controls the initiation of a remeshing procedure based on the process time measured from the last remeshing. It is the value of process time allowed to elapse between
+    remeshings of an object. For a value of 10 for <a href="../../keyword_documentation/r/rmtime.htm">RMTIME</a>, the object will be remeshed at least every 10 seconds. This is helpful when the simulation stops prematurely because of a negative jacobian
+    error. Before the mesh becomes unusable, the object can be remeshed. The elapsed process time between remeshings will not be used to determine when the object is remeshed.</p>
+  <p> </p>
+  <p><strong>Maximum step increment (RMSTEP) </strong><br/> Anytime the Maximum Step Increment (Number of Steps) has occurred since the last remeshing step, a new remeshing step will be initiated. The keyword <a href="../../keyword_documentation/r/rmstep.htm">RMSTEP</a>controls
+    the initiation of a remeshing procedure based on the number of simulation steps measured from the last remeshing. It is the value of simulation steps allowed to elapse between remeshings of the object. For a value of 15 for <a href="../../keyword_documentation/r/rmstep.htm">RMSTEP</a>,
+    the object will be remeshed at least every 15 steps. This is helpful when the simulation stops prematurely because of a negative jacobian error. Before the mesh becomes unusable, the object can be remeshed.</p>
+  <p> </p>
+  <p><strong>Purpose of Criteria</strong> </p>
+  <p>When a sharp edge on a tool or die impinges on the workpiece, the sharp edge may deeply penetrate an element edge. If this depth is severe, the elements may get stretched out and remeshing may become difficult.  Before this depth is achieved, remeshing
+    with place nodes about the edge and allow the simulation to continue unhampered.</p>
+  <p><strong></strong></p>
+  <p> </p>
+  <h2> <a id="13.1.9._Advanced_Settings"></a>Advanced Settings</h2>
+  <p>Below <a href="#Fig._13.1.12._Advanced_mesh_settings_window"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>12.</a> shows the Advanced Settings window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.1.12._Advanced_mesh_settings_window"></a><img src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image012.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced mesh settings window</p>
+  <p> </p>
+  <p><strong>Grid resolution </strong>(<strong>MGGRID</strong>)</p>
+  <p>When an object is meshed in 2D, a sampling grid is required to discretize density of the mesh throughout the starting geometry. Grid resolution (<a href="../../keyword_documentation/m/mggrid.htm">MGGRID</a>) specifies the spacing of the sampling grids
+    that are used to sample mesh densities. Increasing the value of X division or Y division will result in sharper gradients between areas of differing mesh density.  In the case of blanking, where a very high mesh gradient is required over a narrow
+    region, these values may need to increase to capture high changes in mesh gradient over short distances.</p>
+  <p> </p>
+  <p><strong>Node addition parameters</strong> (<strong>MGERR</strong>)<br/> The node addition parameters (<a href="../../keyword_documentation/m/mgerr.htm">MGERR</a>) specify the maximum distance and angle error permitted between the object boundary and
+    its associated grid element side.  The distance and angle tolerances are used to capture critical boundary geometry that might otherwise be lost when the mesh is generated.  If an object is required to capture very small features, the maximum distance
+    can be decreased or if a node needs to be placed on a shallow angle, the angle error can be decreased as well.  Rarely will the user ever have to change these values. For parts that are very small, a value of 0.01% of the object’s bounding box is
+    a good starting number that can be used for <a href="../../keyword_documentation/m/mgerr.htm">MGERR</a> for better handling of mesh resolution.</p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <h2> <a id="13.1.10._User-Defined_Mesh"></a>User-Defined Mesh</h2>
+  <p>User-Defined Mesh Settings allows the user to specify certain areas on the object to have higher element densities relative to other areas of the object during the initial surface mesh generation only (this density specification is not referenced during
+    automatic remeshing).</p>
+  <p> </p>
+  <p>When a user defined mesh density is selected, the density values are set through the Display Window. By selecting a user defined mesh density, the relative mesh density definition button becomes active. After clicking this button the user will see the
+    Display Window through which the mesh densities can be set. The density value is used to specify a weight to be given to an area. Note that the actual number only has meaning in relation to another density point. For example, a point with a weighting
+    of 4 will have a mesh that is two times as dense as a point with a weighting of 2. One can also choose between setting the density values as boundary or interior points. If a mistake is made, Delete will delete the current point (shown in red) and
+    Delete All will delete all density values set. (See <a href="#Fig._13.1.13._User_Defined_Window_for_2D"><span data-keyref="Chapter_13_1_ 2D Mesh Generation">Fig. 13.1.</span>13.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._13.1.13._User_Defined_Window_for_2D"></a><img height="534" src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image013.jpg' | relative_url }}" width="479"/></p>
+  <p> </p>
+  <p class="Fig_numb">User Defined Window for 2D</p>
+  <p> </p>
+  <p><strong>Boundary density </strong><br/> The boundary density specification is used to place a density value on the boundary of an object. Enter the desired density in the Density box in the Display window. Now select the Add Points button and click
+    on the object&#39;s boundary. A green point should now appear with the density value shown next to it. To delete a value, select the Delete Points button and click on the point you wish to delete.</p>
+  <p> </p>
+  <p><strong>Internal density </strong><br/> The internal density specification is used to set a density value for the mesh inside the object&#39;s boundary. Just click on the interior density specification button and enter the desired density value. Now
+    click on the Add Points button and click within the object to place the density values. A yellow point should appear with the density value next to it. To delete the interior densities click on the Delete Points button and select the points you wish
+    to delete.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="13_mesh_generation.htm">13. Mesh Generation</a></p>
+  <p><a href="13_2_3d_tet_mesh_generation.htm">13.2. 3D Tet Mesh Generation</a></p>
+  <p><a href="13_3_3d_brick_mesh_generation.htm">13.3. 3D Brick Mesh Generation</a></p>
+
+</body></html>

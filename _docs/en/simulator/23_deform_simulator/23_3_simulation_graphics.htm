@@ -1,0 +1,137 @@
+---
+lang: en
+title: "23.3. Simulation Graphics"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "5.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>23.3. Simulation Graphics</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>23.3. Simulation Graphics</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/simulator/23_deform_simulator/23_3_simulation_graphics.css"/>
+<meta name="brsnext" value="Documentation_content/Simulator/23_DEFORM_Simulator/23_4_Process_Monitor.htm"/><meta name="brsprev" value="Documentation_content/Simulator/23_DEFORM_Simulator/23_2_Interactive_and_batch_mode.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="23.3. Simulation Graphics">
+        <span>23.3. Simulation Graphics</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>23.3. Simulation Graphics</h1>
+  <p>While the simulation is running, the second most recent saved step can be viewed (See <a href="#Fig_23_3_1_Simulation_graphics_window"><span data-keyref="Chapter_23_3_Simulation_Graphics">Fig. 23.3.</span>1.</a>).  Many different variables can be viewed
+    such as plastic strain, plastic strain rate, temperature and many more under Monitor tab. Simulation Graphics <img src="{{ '/assets/icons/simulator_icons/mo_simulation_graphics_icon.jpg' | relative_url }}"/> can be opened from GUI main by clicking on <img src="{{ '/assets/icons/simulator_icons/mo_simulation_graphics_icon.jpg' | relative_url }}"/> icon, under Simulator <img src="{{ '/assets/icons/simulator_icons/gui_simulation_graphics_button.jpg' | relative_url }}"/> option or under Preview tab <img src="{{ '/assets/icons/simulator_icons/open_simulation_graphics_label.jpg' | relative_url }}"/> option (see <a href="#Fig_23_3_2_Simulation_Graphics_under_Preview_tab"><span data-keyref="Chapter_23_3_Simulation_Graphics">Fig. 23.3.</span>2.</a>)</p>
+  <p> </p>
+  <p>In Simlation Graphics under Step view tab (next to Monitor tab), user can do post processing for the saved steps in database using available post tool under Step view tab as shown in <a href="#Fig_23_3_3_Step_view_tab_in_Simulation_Graphics"><span data-keyref="Chapter_23_3_Simulation_Graphics">Fig. 23.3.</span>3.</a></p>
+  <p>Even user can see the Message file under Simulation Message tab and Log file under Simulation Log tab. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_23_3_1_Simulation_graphics_window"></a><img height="437" src="{{ '/assets/images/simulator/23_deform_simulator/23_3_simulation_graphics/image001.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation graphics window</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_23_3_2_Simulation_Graphics_under_Preview_tab"></a><img height="436" src="{{ '/assets/images/simulator/23_deform_simulator/23_3_simulation_graphics/image002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Graphics under Preview tab</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_23_3_3_Step_view_tab_in_Simulation_Graphics"></a><img height="422" src="{{ '/assets/images/simulator/23_deform_simulator/23_3_simulation_graphics/image003.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Step view tab in Simulation Graphics</p>
+  <p> </p>
+  <p>There are also four additional ways in which to monitor a simulation those are,</p>
+  <ul class="Disc">
+    <li>
+      <p>Use the Process Monitor to determine the current step number.</p>
+    </li>
+    <li>
+      <p>Read the message file to determine the current step number and iteration information.</p>
+    </li>
+    <li>
+      <p>Open the simulation in the Post-Processor. During a simulation the database file is renamed to FOR003 and is renamed back to the original database file name upon remeshing and stopping/completion.</p>
+    </li>
+    <li>
+      <p>Depending up on the frequency of the steps saved in the database, it is recommended to opt for saved steps display rather than the current step.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>For more information related to state variable plot Refer chapter 4.5.2. State Variables and for Graphical options Refer <a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout.htm">6.2. Integrated Manufacturing Process Simulation layout</a> and
+    4.2. Graphical Display.</p>
+  <p> </p>
+  <p><strong>Object mode</strong>: Option used to select objects and object display mode in simulation graphics display. (See <a href="#Fig_23_3_4_Object_mode_window"><span data-keyref="Chapter_23_3_Simulation_Graphics">Fig. 23.3.</span>4.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_23_3_4_Object_mode_window"></a><img src="{{ '/assets/images/simulator/23_deform_simulator/23_3_simulation_graphics/image004.jpg' | relative_url }}" style="text-align: center;"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object mode window</p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="23_4_process_monitor.htm">Process Monitor</a></p>
+  <p><a href="../../post_processor/post_processor_mainpg.htm">Pre-Processor</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout.htm">Integrated Manufacturing Process (MO)</a></p>
+  <p><a href="../../post_processor/post_processor_mainpg.htm">Post-Processor</a></p>
+
+</body></html>

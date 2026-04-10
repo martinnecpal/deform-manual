@@ -1,0 +1,613 @@
+---
+lang: sk
+title: "26.6.12. Flownet Tracking"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.2.1.0_12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>26.6.12. Flownet Tracking</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>26.6.12. Flownet Tracking</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking.css"/>
+<meta name="brsnext" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_6_Post_Processing_tools/26_6_13_Set_User_Defined_Variable_Tracking.htm"/><meta name="brsprev" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_6_Post_Processing_tools/26_6_11_Coupon_Data_Extraction.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="26.6.12. Flownet Tracking">
+        <span>26.6.12. Flownet Tracking</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>26.6.12. Flownet Tracking</h1>
+  <ul class="Disc">
+    <li>
+      <p><a href="#2D_Flownet">2D Flownet</a></p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><span style="margin-left:40px;"><a href="#Rectangular_Grid_2D">Rectangular Grid</a></span></p>
+    </li>
+    <li>
+      <p><span style="margin-left:40px;"><a href="#Polygon_Pattern_2D">Polygon Pattern</a></span></p>
+    </li>
+    <li>
+      <p><span style="margin-left:40px;"><a href="#Offset_Pattern_2D">Offset Pattern</a></span></p>
+    </li>
+    <li>
+      <p><a href="#User_Defined_Flownet" style="margin-left: 40px">User Defined Flownet</a><strong></strong></p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p><a href="#3D_Flownet">3D Flownet</a></p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p><span style="margin-left:40px;"><a href="#Cubic_pattern_[3D]">Cubic Pattern</a></span></p>
+    </li>
+    <li>
+      <p><span style="margin-left:40px;"><a href="#Grid_Pattern_[3D]">Grid Pattern</a></span></p>
+    </li>
+    <li>
+      <p><span style="margin-left:40px;"><a href="#Polygon_pattern_[3D]">Polygon Pattern</a></span></p>
+    </li>
+    <li>
+      <p><span style="margin-left:40px;"><a href="#2D_Offset_[3D]">2D Offset</a></span></p>
+    </li>
+    <li>
+      <p><span style="margin-left:40px;"><a href="#Offset__[3D]">Offset</a></span> </p>
+    </li>
+    <li>
+      <p>         <a href="#Surface_grid_pattern_[3D]">Surface grid pattern</a></p>
+    </li>
+    <li>
+      <p>        <a href="#User_Defined_Flownet">User Defined Flownet</a></p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p><a href="#Flowline_tracking">Flowline tracking</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>[2D, 3D]</strong>: The flownet is a post-processing tool that allows the user to place some form (2D or 3D) of a grid onto the object and let the simulation track the deformation of the grid throughout the deformation. As the mesh deforms, so
+    does the pattern, however, unlike the FEM mesh, the pattern remains intact throughout the remeshings. Thus, the flownet is much like physically etching a pattern on a cross section of a workpiece .This is an excellent way in which to visualize any
+    potential irregularities in the grain structure or to view potential surface defects such as folds. It should be noted that flownet patterns can be generated only for deforming objects. The start step list will contain all of the steps in the display
+    window currently loaded by default.</p>
+  <p> </p>
+  <p><a id="2D_Flownet"></a><strong>2D Flownet</strong>:</p>
+  <p>A flow net region is defined in the graphics window. It can be selected within an object’s border or boundary. In order to define a region, user must add at least three points within the object’s border. Afterwards respective pattern settings must be
+    selected and preview the pattern. Once the pattern has been defined, select generate pattern in the pattern generation \ tracking window.</p>
+  <p><strong>Types of grid patterns available in 2D</strong> :</p>
+  <p><a href="#Rectangular_Grid_2D">Grid</a>, <a href="#Polygon_Pattern_2D">Polygon</a>, <a href="#Offset_Pattern_2D">Offset</a> and User defined are the grid pattern types available in 2D.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong><a id="Rectangular_Grid_2D"></a>Rectangular Grid [2D]</strong></p>
+    </li>
+  </ul>
+  <p style="margin-left:40px;"><span>The rectangular grid option will generate a grid composed of perpendicular lines within the desired region. Rectangular patterns are typically used when the material texture is of interest. This pattern is very similar to the grain flow which would be seen if a cross section of the part were etched. If a rectangular pattern is selected, you must specify the grid origin, orientation angle, and line spacing in X and Y.</span></p>
+  <p> </p>
+  <p style="margin-left:40px;"><strong>Steps to define Grid Pattern:</strong></p>
+  <ol class="Decimal">
+    <li style="margin-left: 40px;">
+      <p>Select the type of grid pattern to be used (See <a href="#Fig_26_6_12_1_Flownet_pattern_generation"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>1.</a>). The Rectangular grid is chosen. Define required number of Boundary
+        points by clicking on workpiece and then Next is clicked. Also user can click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> without defining boundary points. By default system will consider workpiece boundary as boundary
+        points.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_1_Flownet_pattern_generation"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image001.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Flownet pattern generation</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1; margin-left: 40px;">
+      <p>At this time, the density of the grid needs to be specified.  In the case of the grid, the number of grid can be set for a regularly spaced grid. By selecting preview the grid can be seen before calculating for all steps. After a desired grid is
+        obtained, click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>. (See <a href="#Fig_26_6_12_2_Flownet_Grid_definition_Window"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>2.</a>)</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="margin-left:40px;">The grid definition can be controlled by the following parameters:</p>
+  <p style="margin-left:40px;"><strong>Grid Data</strong>:</p>
+  <p style="margin-left:40px;"><strong>Number of Grids</strong>: user can define number of grids in X and Y axis respectively.</p>
+  <p style="margin-left:40px;"><strong>Spacing</strong>:This is the distance (DX and DY) between each grid point in the X and Y directions.</p>
+  <p style="margin-left:40px;"><strong>Number of Sections</strong>: user can define number of sections to be displayed in 3D view.</p>
+  <p style="margin-left:40px;"><strong>Rotation Angle</strong>: This will determine the angle at which the grid will be drawn in degrees.</p>
+  <p style="margin-left:40px;"><strong>Shift</strong> : This is the origin of  grid.</p>
+  <p> </p>
+  <p style="margin-left:40px;"><strong>Advanced Options</strong>:</p>
+  <p style="margin-left:40px;"><strong>Boundary</strong>: To include only boundary of the grid.</p>
+  <p style="margin-left:40px;"><strong>Parallel to X line</strong>: To include X-lines of the grid.</p>
+  <p style="margin-left:40px;"><strong>Parallel to Y line</strong>: To include Y-lines of the grid.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_2_Flownet_Grid_definition_Window"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image002.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Flownet Grid definition Window</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2; margin-left: 40px;">
+      <p>At this time, advanced options are available such as saving either the beginning or end pattern (See <a href="#Fig_26_6_12_3_Advanced_flownet_settings_window"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>3.</a>). This
+        is useful if a flownet from a different database is to be output to. Click <img src="{{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}"/>when finished and the flownet will be calculated. (See <a href="#Fig_26_6_12_4__Example_of_2D_grid_flownet"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>4.</a>)
+          </p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_3_Advanced_flownet_settings_window"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image003.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced flownet settings window</p>
+  <p> </p>
+  <p style="margin-left:40px;">A pattern can be tracked backwards by selecting a later step in the database as the starting step, then selecting an earlier step as the ending step.</p>
+  <p> </p>
+  <p><a id="Fig_26_6_12_4__Example_of_2D_grid_flownet"></a><img height="437" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Example of 2D grid flownet</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Polygon_Pattern_2D"></a><strong>Polygon Patte</strong><strong>rn [2D]: </strong></p>
+    </li>
+  </ul>
+  <p style="margin-left:40px;">The generation of polygon pattern is as shown below. The user can also generate concentric circle flownet for tracing material flow using circular shape. The circular grid can generate a field of circles of a given radius and distance apart within the
+    desired region. Circular patterns are typically used to monitor directional orientation of flow. If a polygon pattern is selected user must specify the grid origin, Diameter, center to center distance between polygons, number of segments in the polygons,
+    and whether clipped circles should be included.</p>
+  <p> </p>
+  <p style="margin-left:40px;"><strong>Steps to define polygon pattern:</strong></p>
+  <ol class="Decimal">
+    <li style="margin-left: 40px;">
+      <p>Select polygon type of grid pattern (See <a href="#Fig_26_6_12_5_Polygon_region_definition"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>5.</a>). Define required number of Boundary points by clicking on workpiece and
+        then Next is clicked. Also user can click next without defining boundary points. By default system will consider workpiece boundary as boundary points.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_5_Polygon_region_definition"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image005.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Polygon region definition</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="margin-left: 40px; counter-reset: item1 1;" value="2">
+      <p>At this time, the density of the grid needs to be specified. In the case of the grid, the number of grid can be set for a regularly spaced grid. By selecting preview the grid can be seen before calculating for all steps. After a desired grid is
+        obtained, click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" style="cursor: nwse-resize;"/>. (See <a href="#Fig_26_6_12_6_Polygon_grid_definition"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>6.</a>)</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="margin-left:40px;">The grid definition can be controlled by the following parameters: <strong> </strong></p>
+  <p style="margin-left:40px;"><strong>Grid Amount:</strong></p>
+  <ul class="Disc">
+    <li style="margin-left: 40px;">
+      <p><strong>Number of Grids in X dir</strong>: By selecting  this radio button user can define no. of grids to be placed in X- direction.</p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><strong>Center to center distance</strong>: Specifies the vertical and horizontal distance between each center of neighboring polygons.</p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><strong>Number of Sections</strong>: It displays the defined number of sections, when user view in 3D mode.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="margin-left:40px;"><strong>Diameter</strong>: Specifies the size of each polygon.</p>
+  <p style="margin-left:40px;"><strong>Type</strong>: User can select required type of polygon patterns (circle, triangle, pentagon, diamond,hexagon etc..) to visualize the results.</p>
+  <p style="margin-left:40px;"><strong>Show Clipped</strong>: Includes any partial polygons that were clipped by the region’s boundaries. (default is yes)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_6_Polygon_grid_definition"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image006.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Polygon grid definition</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="margin-left: 40px; counter-reset: item1 2;" value="3">
+      <p>At this time, advanced options are available such as saving either the beginning or end pattern (See <a href="#Fig_26_6_12_3_Advanced_flownet_settings_window"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>3.</a>). This
+        is useful if a flownet from a different database is to be output to. Click <img src="{{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}"/> when finished and the flownet will be calculated. (See <a href="#Fig_26_6_12_7_Example_of_2D_polygon_flownet"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>7.</a>)</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><img height="565" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image007.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig_26_6_12_7_Example_of_2D_polygon_flownet"></a>Example of 2D polygon flownet</p>
+  <p> </p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong><a id="Offset_Pattern_2D"></a>Offset Pattern [2D]</strong></p>
+    </li>
+  </ul>
+  <p style="margin-left:40px;"><span>The offset  will draw an identical surface at a specified distance within the objects border. The border offset pattern is typically used to capture tendencies toward lap formations. If a border offset is selected you must specify the distance the border is offset.</span></p>
+  <p> </p>
+  <p style="margin-left:40px;"><strong>Steps to define Offset pattern:</strong></p>
+  <ol class="Decimal">
+    <li style="margin-left: 40px;">
+      <p>Select Offset type of grid pattern (See <a href="#Fig_26_6_12_8_2D_Offset_for_2D_problem"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>8.</a>). Define required number of Boundary points by clicking on workpiece and then
+        <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" style="cursor: nwse-resize;"/> is clicked. Also user can click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" style="cursor: nwse-resize;"/> without defining
+        boundary points. By default system will consider workpiece boundary as boundary points.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_8_2D_Offset_for_2D_problem"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image008.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">2D Offset for 2D problem</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="margin-left: 40px; counter-reset: item1 1;" value="2">
+      <p>The offset curve is controlled through the following parameter.</p>
+    </li>
+  </ol>
+  <p style="margin-left:40px;"><strong>Offset Distance</strong>: The offset distance is a positive value specifying how far inside the region the identical border should be positioned.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_9_2D_Offset_boundary_definition"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image009.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D Offset boundary definition</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="margin-left: 40px; counter-reset: item1 2;" value="3">
+      <p>At this time, advanced options are available such as saving either the beginning or end pattern (See <a href="#Fig_26_6_12_3_Advanced_flownet_settings_window"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>3.</a> This is
+        useful if a flownet is to be output to a different database. Click <img height="16" src="{{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}" width="73"/> when finished and the flownet will be calculated. (See <a href="#Fig_26_6_12_10_Example_of_2D_offset_grid_pattern"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>10.</a>)</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_10_Example_of_2D_offset_grid_pattern"></a><img height="565" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Example of 2D offset grid pattern</p>
+  <p> </p>
+  <p> </p>
+  <p><a id="3D_Flownet"></a><strong>3D Flownet:</strong></p>
+  <p>In 3D flownet user need to define the 3d region boundary by 2d planes or 2d planar boundary based on the type of the flow-net in the graphics window. These boundaries must be within an object&#39;s border. Afterwards respective pattern settings must
+    be selected and preview the pattern. Once the pattern has been defined, just select generate pattern in the pattern generation \ tracking window.</p>
+  <p> </p>
+  <p><strong>Different types of Grid Patterns available in 3D</strong>:</p>
+  <p>Cubic, Grid, Polygon, 2D Offset, Offset, Surface net and User defined are available in 3D.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Cubic_pattern_[3D]"></a><strong>Cubic pattern [3D]</strong></p>
+    </li>
+  </ul>
+  <p style="margin-left:40px;"><span>The generation of cubic grid pattern is as shown below. First the grid region has to be defined as shown in <a href="#Fig_26_6_12_11_Region_definition_for_cubic_grid_pattern"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>11.</a>
+    and then the grid definition has to be defined as shown in <a href="#Fig_26_6_12_12__Grid_definition_for_cubic_grid_pattern"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>12.</a> and finally the cubic grid will be generated
+    as shown in <a href="#Fig_26_6_12_13_Example_of_Cubic_grid_pattern"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>13.</a></span>
+  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_11_Region_definition_for_cubic_grid_pattern"></a><img height="242" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image011.jpg' | relative_url }}" width="325"/> <img height="242" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image012.jpg' | relative_url }}" width="325"/></p>
+  <p> </p>
+  <p class="Fig_numb">Region definition for cubic grid pattern</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_12__Grid_definition_for_cubic_grid_pattern"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image013.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Grid definition for cubic grid pattern</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_13_Example_of_Cubic_grid_pattern"></a><img height="423" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image014.jpg' | relative_url }}" style="cursor: nwse-resize;" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Example of Cubic grid pattern</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong><a id="Grid_Pattern_[3D]"></a>Grid Pattern [3D]</strong></p>
+    </li>
+  </ul>
+  <ol class="Decimal">
+    <li style="margin-left: 40px;">
+      <p>Select the <strong>grid </strong>type to be used (See <a href="#Fig_26_6_12_14_Flownet_pattern_generation"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>14.</a>). Either 2D or 3D grids can be used. The 2D grids are less
+        time-consuming for the same grid size since less information is required in two-dimensions. For this example, the grid selection is chosen and <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> is clicked.</p>
+    </li>
+  </ol>
+  <p style="text-align: center"><a id="Fig_26_6_12_14_Flownet_pattern_generation"></a><img height="354" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image015.jpg' | relative_url }}" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb">Flownet pattern generation</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="margin-left: 40px; counter-reset: item1 1;" value="2">
+      <p>For the 2D grid, a plane has to be defined by using a slicing plane. The plane selection method is similar to the method used by the slicing dialog (See <a href="#Fig_26_6_12_15_Flownet_pattern_generation"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>15.</a>).
+         After specifying a plane to be used, click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="margin-left: 40px; counter-reset: item1 2;" value="3">
+      <p>At this time, the density of the grid needs to be specified.  In the case of the grid, the number of grid can be set for a regularly spaced grid.  By selecting preview the grid can be seen before calculating for all steps.  After a desired grid
+        is obtained, click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>. (See <a href="#Fig_26_6_12_15_Flownet_pattern_generation"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>15.</a>)</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="margin-left:40px;">The grid definition can be controlled by the following parameters:</p>
+  <p style="margin-left:40px;">Grid Data:</p>
+  <p style="margin-left:40px;"><strong>Number of Grids:</strong> user can define number of grids in X and Y axis respectively.</p>
+  <p style="margin-left:40px;"><strong>Spacing:</strong>This is the distance (DX and DY) between each grid point in the X and Y directions.</p>
+  <p style="margin-left:40px;"><strong>Rotation Angle:</strong> This will determine the angle at which the grid will be drawn in degrees.</p>
+  <ul class="Circle">
+    <li style="margin-left: 40px;">
+      <p><strong>Shift</strong> : This is the origin of grid.</p>
+    </li>
+  </ul>
+  <p style="margin-left:40px;"><strong>Advanced Options:</strong></p>
+  <ul class="Circle">
+    <li style="margin-left: 40px;">
+      <p><strong>Boundary</strong>: To include only the Boundary points.</p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><strong>Parallel to X line</strong>: To include X-lines of the grid.</p>
+    </li>
+    <li style="margin-left: 40px;">
+      <p><strong>Parallel to Y line</strong>: To include Y-lines of the grid.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"> <a id="Fig_26_6_12_15_Flownet_pattern_generation"></a><img height="288" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image016.jpg' | relative_url }}" width="325"/> <img height="288" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image017.jpg' | relative_url }}" width="325"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Flownet pattern generation</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="margin-left: 40px; counter-reset: item1 3;" value="4">
+      <p>4. At this time, advanced options are available such as saving either the beginning or end pattern (See <a href="#Fig_26_6_12_3_Advanced_flownet_settings_window"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>3.</a>). This
+        is useful if a flownet from a different database is to be output to. Click <img src="{{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}"/> when finished and the flownet will be calculated. (See <a href="#Fig_26_6_12_16_Example_of_grid_flownet_3D_Grid_Pattern"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>16.</a>).
+         </p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_16_Example_of_grid_flownet_3D_Grid_Pattern"></a><img height="573" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image018.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Example of grid flownet 3D Grid Pattern</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_17__Example_of_grid_flownet__Generation_of_vertical_Grid"></a><img height="437" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image019.jpg' | relative_url }}" style="cursor: nesw-resize;" width="750"/></p>
+  <p class="Fig_numb"> Example of grid flownet  Generation of vertical Grid</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Polygon_pattern_[3D]"></a><strong>Polygon pattern [3D]</strong></p>
+    </li>
+  </ul>
+  <p style="margin-left:4.px;"><span>The generation of polygon grid pattern is as shown below. First the grid region has to be defined as shown in <span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>18 and then the grid definition has to be defined as shown in
+    <span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>19 and finally the polygon grid will be generated as shown in <span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>20. </span>
+  </p>
+  <p> </p>
+  <p style="text-align: center"><img height="280" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image020.jpg' | relative_url }}" width="325"/> <img height="280" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image021.jpg' | relative_url }}" width="325"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig_26_6_12_18_Polygon_region_definition"></a>Polygon region definition</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_19_Polygon_grid_definition"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image022.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Polygon grid definition</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_20_Example_of_3D_polygon_flownet"></a><img height="580" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image023.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Example of 3D polygon flownet</p>
+  <p> </p>
+  <p style="margin-left:40px;"><strong>Concentric circles</strong>: An example showing the generation of concentric circles flownet is shown in <a href="#Fig_26_6_12_21_Generation_of_concentric_circle_flownet_pattern"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>21.</a></p>
+  <p style="margin-left:40px;"><strong>No. of circles</strong>: user can define the no. of circles in this field.</p>
+  <p style="margin-left:40px;"><strong>Maximum radius</strong>: user can define the maximum radius of circle.</p>
+  <p style="margin-left:40px;"><strong>Center position</strong>: user can pick or enter one point to define center position.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_21_Generation_of_concentric_circle_flownet_pattern"></a><img height="352" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image024.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Generation of concentric circle flownet pattern</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="2D_Offset_[3D]"></a><strong>2D Offset [3D]</strong></p>
+    </li>
+  </ul>
+  <p style="margin-left: 40px">The generation of 2D offset pattern is as shown below. First the region has to be defined as shown in <a href="#Fig_26_6_12_22_Region_definition_of_2D_Offset_for_3D_problem"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>22.</a>    and then the boundary definition has to be defined as shown in <a href="#Fig_26_6_12_23_Boundary_definition_of_2D_Offset_for_3D_problem"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>23.</a> and finally the boundary will
+    be generated as shown in <a href="#Fig_26_6_12_24_2D_offset_boundary_pattern_for_3D_problem"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>24.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_22_Region_definition_of_2D_Offset_for_3D_problem"></a><img height="280" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image025.jpg' | relative_url }}" width="325"/> <img height="280" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image026.jpg' | relative_url }}" width="325"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Region definition of 2D Offset for 3D problem</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_23_Boundary_definition_of_2D_Offset_for_3D_problem"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image027.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Boundary definition of 2D Offset for 3D problem</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_24_2D_offset_boundary_pattern_for_3D_problem"></a><img height="580" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image028.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D offset boundary pattern for 3D problem</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Offset__[3D]"></a><strong>Offset  [3D]</strong></p>
+    </li>
+  </ul>
+  <p style="margin-left: 40px">The offset will draw an identical surface at a specified distance within the objects border. The border offset pattern is typically used to capture tendencies toward lap formations. If a border offset is selected you must specify the distance the border
+    is offset. The offset curve is controlled through offset distance. The offset distance is a positive value specifying how far inside the region the identical border should be positioned. A rough value of one fourth of the lap distance can be used
+    to define the offset distance. The generation of offset pattern is as shown below.</p>
+  <p style="margin-left: 40px"> </p>
+  <p style="margin-left: 40px">First the region has to be defined as shown in <a href="#Fig_26_6_12_25_Offset_boundary_region_definition"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>25.</a> and then the boundary definition has to be defined as shown in
+    <a href="#Fig_26_6_12_26_Offset_boundary_definition"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>26.</a> and finally the boundary will be generated as shown in <a href="#Fig_26_6_12_27_Example_showing_Offset_boundary_Pattern"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>27.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_25_Offset_boundary_region_definition"></a><img height="280" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image029.jpg' | relative_url }}" width="325"/> <img height="280" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image030.jpg' | relative_url }}" width="325"/></p>
+  <p> </p>
+  <p class="Fig_numb">Offset boundary region definition</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_26_Offset_boundary_definition"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image031.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Offset boundary definition</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_27_Example_showing_Offset_boundary_Pattern"></a><img height="580" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image032.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">Example showing Offset boundary Pattern</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Surface_grid_pattern_[3D]"></a><strong>Surface grid pattern [3D]</strong></p>
+    </li>
+  </ul>
+  <p style="margin-left: 40px">In this option the surface net has been divided in to two options one is parallel and circular. Surface net mode selection is as shown in <a href="#Fig_26_6_12_28_Surface_net_mode_selection_window"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>28.</a>    The grid definition pattern for parallel and circular is as shown below in <a href="#Fig_26_6_12_29_Grid_definition_for_parallel_and_Circular_net"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>29.,</a> <a href="#Fig_26_6_12_30_Examples_of_parallel_grid_pattern_for_Surface_net"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>30.</a>    and <a href="#Fig_26_6_12_31_Examples_of_Surface_net_circular_grid_pattern"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>31.</a> for the linear and circular grid pattern examples.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_28_Surface_net_mode_selection_window"></a><img height="352" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image033.jpg' | relative_url }}" width="400"/> </p>
+  <p> </p>
+  <p class="Fig_numb">Surface net mode selection window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_29_Grid_definition_for_parallel_and_Circular_net"></a><img height="286" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image036.jpg' | relative_url }}" width="325"/> <img height="286" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image038.jpg' | relative_url }}" width="325"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Grid definition for parallel and Circular net</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_30_Examples_of_parallel_grid_pattern_for_Surface_net"></a><img height="422" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image037.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Examples of parallel grid pattern for Surface net</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_31_Examples_of_Surface_net_circular_grid_pattern"></a><img height="422" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image039.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Examples of Surface net circular grid pattern</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong></strong><a id="User_Defined_Flownet"></a><strong>User Defined Fl</strong><strong>ownet [2D, 3D]</strong></p>
+    </li>
+  </ul>
+  <p style="margin-left: 40px">If you wish to create your own initial pattern or use a previously generated pattern, you may do so by reading in a flow pattern file. A pattern file consists of a list of point coordinates and a list of connectivity sets. The points are points of intersection
+    within the flownet. The type of grid is determined by the connectivity list. This list determines each curve separately as the number of points in a sequential pattern. If the starting and ending point indices are the same, the curve is closed. </p>
+  <p style="margin-left: 40px">The user defined pattern must be read by a pattern file. The pattern generated can be saved to this file by setting the save option to yes. If the pattern is being saved, the file name must be specified in the pattern File text box.</p>
+  <p style="margin-left: 40px"> </p>
+  <p style="margin-left: 40px">The material point data format is: </p>
+  <p style="margin-left: 40px">Numpt</p>
+  <p style="margin-left: 40px"> 1                 X(1)          Y(1)</p>
+  <p style="margin-left: 40px"> .                     .                .</p>
+  <p style="margin-left: 40px"> .                     .                .</p>
+  <p style="margin-left: 40px">Numpt    X(Numpt)   Y(Numpt)</p>
+  <p style="margin-left: 40px">NumCv</p>
+  <p style="margin-left: 40px">1                 CvSz(1)              pt(1)            pt(CvSz(1))</p>
+  <p style="margin-left: 40px"> .                     .                          .                     .</p>
+  <p style="margin-left: 40px"> .                     .                          .                     .</p>
+  <p style="margin-left: 40px">NumCv      CvSz(NumCv) pt(NumCv)  pt(CvSz(NumCv))</p>
+  <p style="margin-left: 40px"> </p>
+  <p style="margin-left: 40px">Where</p>
+  <p style="margin-left: 40px"><strong>Numpt</strong>: Number of material points  </p>
+  <p style="margin-left: 40px"><strong>Y(i)</strong>: Y coordinate of ith material point</p>
+  <p style="margin-left: 40px"><strong>NumCv</strong>: Number of curve</p>
+  <p style="margin-left: 40px"><strong>CvSz(i)</strong>:  Number of points in ith curve</p>
+  <p style="margin-left: 40px"><strong>pt</strong>: Point index of curve (refers to indices in first list)</p>
+  <p style="margin-left: 40px"> </p>
+  <p style="margin-left: 40px"><strong>Example Case</strong><br/> Taking a round billet from the SPIKE.KEY file in the DATA directory and placing a 3x3 rectangular grid on it, will yield an initial flownet that resembles <a href="#Fig_26_6_12_32_The_result_of_placing_a_3x3_flownet_on_a_round_object"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>32.</a>    This flownet is stored as the file seen in <a href="#Fig_26_6_12_33_Sample_pattern_file_corresponding_to_example_case"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>33.</a>  As seen in <a href="#Fig_26_6_12_32_The_result_of_placing_a_3x3_flownet_on_a_round_object"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>32.</a>,
+    the grid points are first stored and the connectivity is stored in the 2nd section. The grid points are seen in as labeled in <a href="#Fig_26_6_12_32_The_result_of_placing_a_3x3_flownet_on_a_round_object"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>32.</a>    and the connectivity curves are labeled as <a href="#Fig_26_6_12_33_Sample_pattern_file_corresponding_to_example_case"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>33.</a></p>
+  <p style="text-align: center"><a id="Fig_26_6_12_32_The_result_of_placing_a_3x3_flownet_on_a_round_object"></a><img height="303" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image040.jpg' | relative_url }}" width="426"/></p>
+  <p> </p>
+  <p class="Fig_numb">The result of placing a 3x3 flownet on a round object; (a) The points are labelled (b) The curves are labelled</p>
+  <p style="text-align: center"><a id="Fig_26_6_12_33_Sample_pattern_file_corresponding_to_example_case"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image041.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Sample pattern file corresponding to example case. Compare the point connectivity to the figure above</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_34_Merging_of_different_flownet_patterns"></a><img height="438" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image042.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Merging of different flownet patterns</p>
+  <p> </p>
+  <p>User can also generate combined (or complicated) patterns like circular-grid, circular-cube and so on. This type of combined grid patterns can be obtained by using Flownet<img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/>User defined options
+    and is as show as in <a href="#Fig_26_6_12_35_howing_how_to_generate_combined_grid_pattern"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>35.</a>, <a href="#Fig_26_6_12_36_Shows_the_complicated_flownet_pattern"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>36.</a>    and <a href="#Fig_26_6_12_37_Circular_grid_pattern_on_the_top_of_work_piece"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>37.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_35_howing_how_to_generate_combined_grid_pattern"></a><img height="500" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image043.jpg' | relative_url }}" width="545"/></p>
+  <p class="Fig_numb">Showing how to generate combined grid pattern</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_36_Shows_the_complicated_flownet_pattern"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image044.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Shows the complicated flownet pattern</p>
+  <p> </p>
+  <p>The circular grid pattern on the top of the work piece is created by using Flownet <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/>Polygon option and the generated circular grid is as shown below in the <a href="#Fig_26_6_12_37_Circular_grid_pattern_on_the_top_of_work_piece"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>37.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_37_Circular_grid_pattern_on_the_top_of_work_piece"></a><img height="479" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image045.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Circular grid pattern on the top of work piece</p>
+  <p> </p>
+  <p> </p>
+  <p><strong><a id="Flowline_tracking"></a>Flowline tracking</strong>:</p>
+  <p>Flowlines tracking is developed to show metal flow in ALE simulations in Flownet window (See <a href="#Fig_26_6-12_38_Flownet_Tracking_window"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>38.</a>). This option is applicable
+    for 2D ALE study, 3D ALE Shape Rolling and 3D ALE Extrusion simulations.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6-12_38_Flownet_Tracking_window"></a><img height="389" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image046.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb"> Flownet Tracking window</p>
+  <p> </p>
+  <p style="text-align: center"><img height="415" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image047.jpg' | relative_url }}" width="707"/></p>
+  <p class="Fig_numb">Flownet Tracking options</p>
+  <p> </p>
+  <p>Select Boundary Points: In case of 2D object, Sampling points can be manually picked along workpiece object boundary (see <a href="#Fig_26_6_12_40_Manually_picked_points_for_Flowline_tracking_for_2D"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>40</a>.)
+    or user can use start and end points of the edge on boundary using Define sampling point option (See <a href="#Fig_26_6_12_41_Selecting_points_using_Start_and_End_point_in_Point_selection_window_for_2D"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>41.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_40_Manually_picked_points_for_Flowline_tracking_for_2D"></a><img height="388" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image048.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Manually picked points for Flowline tracking for 2D</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_41_Selecting_points_using_Start_and_End_point_in_Point_selection_window_for_2D"></a><img height="389" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image049.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting points using Start and End point in Point selection window for 2D</p>
+  <p> </p>
+  <p>In case of 3D object, Sampling points can be manually picked from workpiece object or Sampling points can be defined as rectangular grid with different shapes such as circles, polygons or points on beginning surface using Define sampling point option
+    (See <a href="#Fig_26_6_12_42_Selecting_points_on_3D_object_with_different__selection_options"><span data-keyref="Chapter_26_6_12_Flownet_Tracking">Fig. 26.6.12.</span>42</a>.).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_12_42_Selecting_points_on_3D_object_with_different__selection_options"></a><img height="129" src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image050.jpg' | relative_url }}" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting points on 3D object with different  selection options</p>
+  <p> </p>
+  <p><strong>Selected point Table</strong>: In Table we can observe the selected points for Flowline Tracking.</p>
+  <p><strong>Display type Control</strong>: using this option we can control the thickness of Flowline. Line thickness can be varied by dragging the pointer on the Sliding bar between 1 and 100.</p>
+  <p><strong>Animation Control</strong>: We can play the animation of material flow using Animate option and also we can control the animation speed by dragging pointer on Animation Speed sliding bar from slow to fast.</p>
+  <p><strong>Auto Update</strong>: Auto update checkbox when turned on flow lines are generated for each selected step automatically. If Auto update is turned off then for each selected step user should use Generate Flowline button to generate flowlines.</p>
+  <p><strong>State Variable graph type:</strong> Under State Variable user has options whether to use time or Distance (Start to End surface) as X axis while plotting State variable graph.</p>
+  <p><strong>Generate Flowline</strong>: After defining the required options to generate flowline user can click on this button to generate flowlines.</p>
+  <p><strong>Save the points to a file</strong> <img src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}"/> : We can save the defined points for Flowline tracking using this option for future reference.</p>
+  <p><strong>Load Points From a file</strong> <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>: The points defined can be loaded from a file using this option.</p>
+  <p><strong>Deleted selected point </strong> : Using this option user can delete unwanted points from the table by selecting respective row in the table.</p>
+  <p><strong>Delete all Points</strong> <img src="{{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}"/>: Using this option user can delete all the points from the table at once.</p>
+  <p><strong>Show/Hide Points</strong> : Using this option we can Show/Hide of Point and Point number in display using &quot; P &quot; and &quot; T &quot; button respectively.</p>
+  <p> </p>
+
+</body></html>

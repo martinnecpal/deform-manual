@@ -1,0 +1,431 @@
+---
+lang: sk
+title: "Lagrangian Extrusion Lab1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.9.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lagrangian Extrusion Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Lagrangian Extrusion Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/extrusion_labs/lagrangian_extrusion_lab1.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Extrusion_Labs/Steady_State_Extrusion_Lab1.htm"/><meta name="brsprev" value="Documentation_content/Labs/Extrusion_Labs/ALE_Extrusion_Lab1.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Lagrangian Extrusion Lab1">
+        <span>Lagrangian Extrusion Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lagrangian Extrusion Lab1</h1>
+  <p>In this Lab we are setting up a operation of Lagrangian extrusion.</p>
+  <p>The application of this lab will extrude 5 small cylinder parts from a large cylinder billet. The model of the workpiece is shown as <a href="#Fig_LAGEXL1_1_Model_of_the_Workpiece"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>1.</a>    The diameter of D0 is 140 mm. The diameter of D1 is 26 mm. The diameters of D2 and D4 are 27 mm. The diameters of D3 and D5 are 28 mm. Due to the model with symmetry, we will use a quarter model for simulation in this lab.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_1_Model_of_the_Workpiece"></a><img height="343" src="{{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0001.jpg' | relative_url }}" width="720"/></p>
+  <p> </p>
+  <p class="Fig_numb">Model of the Workpiece</p>
+  <p> </p>
+  <p><a href="#1_1_Creating_a_New_Problem">1.1. Creating a New Problem</a> </p>
+  <p><a href="#1_2_Adding_Operation">1.2. Add Operation</a></p>
+  <p><a href="#1_3_Simulation_setup">1.3. Simulation Setup</a></p>
+  <p><a href="#1_4_Material_List">1.4. Material list</a></p>
+  <p><a href="#1_5_Dies">1.5. Dies</a></p>
+  <p><a href="#1_6_Ram">1.6. Ram</a></p>
+  <p><a href="#1_7_Container">1.7. Container</a></p>
+  <p><a href="#1_8_Die">1.8. Die</a></p>
+  <p><a href="#1_9_Workpiece">1.9. Workpiece</a></p>
+  <p><a href="#1_10_Controls">1.10. Controls</a> </p>
+  <p><a href="#1_11_Contact">1.11. Contact</a></p>
+  <p><a href="#1_12_Step_Controls">1.12. Step Controls</a></p>
+  <p><a href="#1_13_Generate_DB">1.13. Generate DB</a></p>
+  <p><a href="#1_14_Running_Simulation">1.14. Running Simulation</a></p>
+  <p><a href="#1_15_Post_Processing">1.15. Post Processing</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_a_New_Problem"></a>Creating a New Problem  </h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear as shown below <a href="#Fig_LAGEXL1_2_DEFORM_GUI_Main_window"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_2_DEFORM_GUI_Main_window"></a><img height="435" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DEFORM GUI Main window</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/><strong> New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/>  icon. The Problem Setup window will appear as shown in <a href="#Fig_LAGEXL1_3_New_Problem_page"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>3.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>SI</strong>&quot; radio button in unit field. Define Problem Name as &quot;<strong></strong><strong><strong>3D_Lagrangian_EX_Lab1 </strong></strong>&quot; and make sure the “<strong>Show option dialog</strong>”
+    check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_3_New_Problem_page"></a><img height="417" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0003.jpg' | relative_url }}" style="cursor: nwse-resize;" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem page</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use  &quot;<strong>3D_Lagrangian_EX_Lab1 </strong>&quot;
+    as the project name. Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to continue to open the operation.</p>
+  <h2><a id="1_2_Adding_Operation"></a>Adding Operation</h2>
+  <p>Add <strong>3D Extrusion operation</strong> from the Explorer Operations list. Add the operation by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button available next to 3D Extrusion or user can also add by drag
+    and drop into the Operation Editor (see <a href="#Fig_LAGEXL1_4_Adding_Extrusion_operation"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>4.</a>). When we add the 3D Extrusion operation, process settings Window
+    will open by default.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_4_Adding_Extrusion_operation"></a><img height="372" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Extrusion operation</p>
+  <h2><a id="1_3_Simulation_setup"></a>Simulation setup</h2>
+  <p>In the Simulation Setup dialog, choose<strong> Lagrangian Extrusion (Incremental)</strong> radio button in Simulation Method. Set Thermal Calculation as <strong>Workpiece Only (Non – Isothermal) </strong>and Die Model Type as <strong>With symmetry condition</strong>.
+    Simulation setup settings is shown in <a href="#Fig_LAGEXL1_5_Simulation_setup_settings"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>5.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Material list page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_5_Simulation_setup_settings"></a><img height="410" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0005.jpg' | relative_url }}" width="407"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation setup settings</p>
+  <h2><a id="1_4_Material_List"></a>Material List</h2>
+  <p>In the Material dialog, click Load material data from library <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/>. Load the material &#39;<strong>ALUMINUM-6061[70-1000F(20-550C)]</strong>&#39; from <strong>Aluminum </strong>category,
+    as shown in <a href="#Fig_LAGEXL1_6_Material_list"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>6.</a>, and then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Dies page.</p>
+  <p> </p>
+  <p style="text-align: center">.<a id="Fig_LAGEXL1_6_Material_list"></a><img height="320" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0006.jpg' | relative_url }}" width="380"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material list</p>
+  <h2><a id="1_5_Dies"></a>Dies</h2>
+  <p>By Default, 2 dies will be added in operation, in this lab we need 3 dies. So, click on  <img height="21" src="{{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}" width="21"/>  button to make Number of Dies as 3 (see <a href="#Fig_LAGEXL1_7_Added_Dies"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>7.</a>).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Top Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_7_Added_Dies"></a><img height="315" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0007.jpg' | relative_url }}" width="374"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added Dies</p>
+  <h2><a id="1_6_Ram"></a>Ram</h2>
+  <p>Change the name of the Top Die object to <strong>Ram</strong>. Set the die <strong>temperature </strong>to <strong>400</strong>°C and keep the object type to <strong>Rigid</strong>. Then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry page.</p>
+  <h3>Ram Geometry</h3>
+  <p>Click on Import geometry from library <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> and load <strong>Ram_Geo.stl </strong>from 3D/LABS folder, then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>. In Symmetry dialog, define <strong>Planar Symmetry </strong>for the Ram on Symmetry planes as shown in (see <a href="#Fig_LAGEXL1_8_Ram_Geometry"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>8.</a>). Click
+    on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>  to Movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_8_Ram_Geometry"></a><img height="372" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0008.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Ram Geometry</p>
+  <h3>Ram Movement</h3>
+  <p>In the Movement dialog, define the <strong>Speed </strong>as <strong>4 </strong>mm/sec as shown in <a href="#Fig_LAGEXL1_9_Ram_Movement_page">Fig. LAGEXL1.9.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>  to Bottom Die
+    page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_9_Ram_Movement_page"></a><img height="330" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0009.jpg' | relative_url }}" width="392"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Ram Movement page</p>
+  <h2><a id="1_7_Container"></a>Container</h2>
+  <p>Change the name of the Bottom die to <strong>Container</strong>. Set the die <strong>temperature </strong>to <strong>350</strong>°C and keep the object type to <strong>Rigid</strong>. Then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry page.</p>
+  <h3 class="h3_1_7_">Container Geometry</h3>
+  <p>Click Import geometry from library <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> and load <strong>Container_Geo.stl </strong>file from 3D/LABS folder, then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>. In Symmetry dialog, define <strong>Planar Symmetry</strong> for the Container on Symmetry planes as shown in <a href="#Fig_LAGEXL1_10_Container Geometry"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>10.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>  to Movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_10_Container Geometry"></a><img height="372" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Container Geometry</p>
+  <h3 class="h3_1_7_">Container Movement</h3>
+  <p>In the Movement dialog, leave the <strong>Speed </strong>as <strong>0</strong> mm/sec. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Object 4 page.</p>
+  <h2><a id="1_8_Die"></a>Die</h2>
+  <p>Change the name of the Object 4 to <strong>Die</strong>. Set the die <strong>temperature </strong>to <strong>350</strong>°C and keep the object type to <strong>Rigid</strong>. Then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry page.</p>
+  <h3 class="h3_1_8_">Die Geometry</h3>
+  <p>Click on Import geometry from library <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> and load <strong>Die_Geo.stl</strong> file from 3D/LABS folder, then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>. In Symmetry dialog, define <strong>Planar Symmetry</strong> for the Die on Symmetry planes as shown in <a href="#Fig_LAGEXL1_11_Die_Geometry"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>11.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_11_Die_Geometry"></a><img height="372" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0011.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Die Geometry</p>
+  <h3 class="h3_1_8_">Die Movement</h3>
+  <p>In the Movement dialog, leave the <strong>Speed </strong>as <strong>0</strong> mm/sec. Go to Workpiece page by clicking <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <h2><a id="1_9_Workpiece"></a>Workpiece</h2>
+  <p>Keep the default name of the workpiece object as <strong>Workpiece</strong>. Set the workpiece temperature to <strong>400</strong>°C and keep the object type to <strong>Plastic</strong>. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry page.</p>
+  <h3 class="h3_1_9_">Workpiece geometry</h3>
+  <p>The workpiece is a symmetrical cylinder, which can be easily created in DEFORM. Click  on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/>, select <strong>Cylinder </strong>and define a <strong>Height </strong>(H) as <strong>178 </strong>mm
+    and a <strong>Diameter </strong><strong>(2R)</strong> as <strong>138</strong> mm. Define <strong>Start </strong><strong>angle </strong>as <strong>0</strong>, <strong>Revolve </strong><strong>Angle </strong>as <strong>90</strong>, <strong>Sections</strong>    as <strong>90</strong>. Click  and <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/>. In Symmetry dialog, define <strong>Planar Symmetry</strong> for the workpiece on Symmetry planes as shown in (see <a href="#Fig_LAGEXL1_12_Workpiece_Geometry"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>12.</a>).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Mesh generation type page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_12_Workpiece_Geometry"></a><img height="371" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0012.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Geometry</p>
+  <h3 class="h3_1_9_">Workpiece Mesh</h3>
+  <p>Generally, there are 2 rules for the mesh density setting for extrusion simulation. Firstly, there should be at least three elements throughout the thickness of the thinnest profile. At the same time, the mesh closed to the bearing zones should be finer
+    than other places.</p>
+  <p>In the Mesh Generation Type page, two options are provided for meshing. One is Mesh Extruding Utility and the other is Regular Meshing. Choose <strong>Regular Meshing</strong> for Lagrangian extrusion. Then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Regular meshing page.</p>
+  <p> </p>
+  <p>In <strong>General </strong>dialog, select &#39;<strong>Absolute</strong>&#39; Type, set <strong>Size </strong><strong>ratio </strong>as &#39;<strong>3</strong>&#39; and <strong>Minimum</strong> <strong>element </strong><strong>size </strong>as &#39;<strong>2</strong>    mm&#39; as shown in <a href="#Fig_LAGEXL1_13_General_Mesh_page"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>13.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_13_General_Mesh_page"></a><img height="375" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0013.jpg' | relative_url }}" width="372"/></p>
+  <p> </p>
+  <p class="Fig_numb">General Mesh page</p>
+  <p> </p>
+  <p>In <strong>Weighting </strong><strong>Factors </strong>dialog, set the factor of <strong>Mesh</strong> <strong>windows </strong>as &#39;<strong>1.0</strong>&#39; and <strong>other </strong><strong>factors </strong>as &#39;<strong>0.0</strong>&#39; as
+    shown in <a href="#Fig_LAGEXL1_14_Workpiece Mesh -Weighting Factor page"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>14.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_14_Workpiece Mesh -Weighting Factor page"></a><img height="375" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0014.jpg' | relative_url }}" width="372"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Mesh -Weighting Factor page</p>
+  <p> </p>
+  <p>In Mesh Windows dialog, click Import Mesh Windows from a file <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> and open <strong>UL_Workpiece_Mesh_Window.key</strong> from <strong>3D/LABS</strong> folder.</p>
+  <p>Instead of importing the mesh windows, you can also create the mesh windows step by step.</p>
+  <ol class="Decimal">
+    <li>
+      <p>On the Mesh Window tab, if there is any mesh window, click <img src="{{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }}"/> to delete all the existed mesh windows firstly.</p>
+    </li>
+    <li>
+      <p>On the Mesh Window tab, continuously click <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> to create 4 mesh windows.</p>
+    </li>
+    <li>
+      <p>For each of these windows, click its name to highlight this window, then click cylinder window shape in the upper left <strong>Window Definition dialog</strong>, click on the screen in the workpiece to drop a cylinder mesh window into the <strong>Display window.</strong></p>
+    </li>
+    <li>
+      <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}"/> to edit the dimension of each window. Edit the dimension of mesh Window 1, define Top Center as (0,0,10) and Bottom Center as (0,0,-20), define Radius as 80. Edit the
+        dimension of mesh Window 2, define Top Center as (0,0,-19) and Bottom Center as (0,0,-250), define Radius as 150. Edit the dimension of mesh Window 3, define Top Center as (0,0,35) and Bottom Center as (0,0,9), define Radius as 90. Edit the dimension
+        of mesh Window 4, define Top Center as (0,0,200) and Bottom Center as (0,0,34), define Radius as 100. Click  <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> after each edit.</p>
+    </li>
+    <li>
+      <p>Set the element size of mesh Window 1 with &#39;2 mm&#39;, the element size of mesh Window 2 with &#39;3 mm&#39;, the element size of mesh Window 3 with &#39;4 mm&#39;, and the element size of mesh Window 4 with &#39;6 mm&#39;.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p>In Lagrangian extrusion, the mesh windows will be used for the initial mesh generation and the remeshing during simulation. So, we must consider the material flow range during simulation and define correct mesh windows.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0015.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p>After defining the mesh windows, click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/>. Click <img src="{{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}"/> in <strong>Default Boundary Conditions</strong> message dialog.</p>
+  <p>The mesh generation of the workpiece is shown in <a href="#Fig_LAGEXL1_15_Workpiece_Mesh_Windows_page"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>15.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_15_Workpiece_Mesh_Windows_page"></a><img height="425" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0015_1.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Mesh Windows page</p>
+  <p> </p>
+  <h3 class="h3_1_9_">Workpiece Material</h3>
+  <p>Assign <strong>ALUMINUM-6061[70-1000F(20-550C)]</strong> as the material for Workpiece, click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Boundary condition page.</p>
+  <h3 class="h3_1_9_">Workpiece Boundary condition</h3>
+  <p>The system automatically assigned the symmetry plane BCC to the workpiece after mesh generation (see <a href="#Fig_LAGEXL1_16_Symmetry_BCC_of_Workpiece"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>16.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_16_Symmetry_BCC_of_Workpiece"></a><img height="424" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0016.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Symmetry BCC of Workpiece</p>
+  <p> </p>
+  <p>The system automatically assigned Heat Exchange with Environment BCC to the workpiece after mesh generation. The result is shown in <a href="#Fig_LAGEXL1_17_Thermal_BCC_of_the_workpiece"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>17.</a>    Click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until to Property page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_17_Thermal_BCC_of_the_workpiece"></a><img height="423" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Thermal BCC of the workpiece</p>
+  <h3 class="h3_1_9_">Workpiece Target volume</h3>
+  <p>In the <strong>Property </strong>page, check Active in <strong>FEM + meshing</strong>, click <img src="{{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}"/> to set Volume as the initial volume of the workpiece (see <a href="#Fig_LAGEXL1_18_Target_volume_setting_of_the_workpiece"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>18.</a>).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until to Control page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_18_Target_volume_setting_of_the_workpiece"></a><img height="410" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0018.jpg' | relative_url }}" width="493"/></p>
+  <p> </p>
+  <p class="Fig_numb">Target volume setting of the workpiece</p>
+  <h2><a id="1_10_Controls"></a>Controls</h2>
+  <p>In the Control page. we can use <img height="21" src="{{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}" width="118"/> to adjust the positions of objects.</p>
+  <p> </p>
+  <p>All the die components were imported from the .stl files. The container and the die were in the correct locations. The ram is away from the workpiece. Since the workpiece was generated as a primitive within DEFORM, we need to move the ram down to touch
+    the workpiece.</p>
+  <p>Click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}" width="118"/> and specify Interference positioning. Select the Ram as the Positioning object and the Workpiece as the Reference. Verify that the Approach
+    direction is <strong>–Z</strong>. Click <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> and then <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/>. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Contact page.</p>
+  <h2><a id="1_11_Contact"></a>Contact</h2>
+  <p>In the Contact page, click on <img src="{{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}"/> to create all the relationships of the workpiece with other objects. Then, let&#39;s edit the parameters setting for contact relationships
+    of the workpiece.</p>
+  <ul class="Disc">
+    <li>
+      <p>Select the <strong>Ram – Workpiece</strong> relationship and click <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/>. Define contact separation as &#39;<strong>Separable</strong>&#39;, <strong>Shear </strong>friction as &#39;<strong>1.0</strong>&#39;
+        and  heat transfer coefficient as &#39;<strong>11.0</strong>&#39;.</p>
+    </li>
+    <li>
+      <p>Select the <strong>Container – Workpiece</strong> relationship and click <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/>. Define contact separation as &#39;<strong>Separable</strong>&#39;, <strong>Shear </strong>friction as &#39;<strong>1.0</strong>&#39;
+        and heat transfer coefficient as &#39;<strong>11.0</strong>&#39;.</p>
+    </li>
+    <li>
+      <p>Select the <strong>Die – Workpiece</strong> relationship and click <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/>. Define contact separation as &#39;<strong>Separable</strong>&#39;, <strong>Shear </strong>friction as&#39; <strong>0.4</strong>&#39;
+        and heat transfer coefficient as &#39;<strong>11.0</strong>&#39;.</p>
+    </li>
+  </ul>
+  <p>Click the  <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> to determine an intelligent contact tolerance. Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}"/> to generate contact for all the relationships.</p>
+  <p> </p>
+  <p>The contacts of the workpiece with other objects is shown in <a href="#Fig_LAGEXL_19_Contacts_of_the_Workpiece"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>19.</a> We can see contacts of the workpiece with the
+    ram and the die. Currently there is no contact of the workpiece with the container because there is a gap between the two objects. The workpiece will expand to contact the container during the simulation. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until to Step Control page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL_19_Contacts_of_the_Workpiece"></a><img height="426" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0019.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contacts of the Workpiece</p>
+  <h2><a id="1_12_Step_Controls"></a>Step Controls</h2>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> to switch to expert mode in the top menu bar for step control.</p>
+  <h3 class="h3_1_12_">Simulation steps</h3>
+  <p>In<strong> Simulation step</strong> dialog, set <strong>Number of simulation steps</strong> as <strong>400 </strong>and <strong>Step increment to save </strong>as <strong>20</strong>. Set <strong>Primary Die</strong> as &#39; <strong>2 -Ram</strong>&#39;
+    (see <a href="#Fig_3DLAGEXL1_20_Simulation_step_setup"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>20.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLAGEXL1_20_Simulation_step_setup"></a><img src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0020.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation step setup</p>
+  <h3 class="h3_1_12_">Step increment</h3>
+  <p>In Lagrangian extrusion simulation, if there is a gap between the billet and the container, the first deformation stage is compressing the billet to fill the gap, the second deformation stage is extruding process.</p>
+  <p>For extrusion simulation, the general rule to set up step increment is that we do not want the material to flow more than 1/3 of their element size in any step.</p>
+  <p>In order to set up step increment correctly, we should learn about some basic extrusion parameters of the application.</p>
+  <p>In this example, for the quarter model, the entry area is 3846.50 mm<span style="vertical-align:super;font-size:8pt">2</span>, the exit area is 726.52 mm<span style="vertical-align:super;font-size:8pt">2</span>. So, the extrusion ratio is 5.29.</p>
+  <p>If we use a billet with diameter of 138 mm and height with 178 mm in Lagrangian simulation, for the quarter model, the billet area is 3737.39 mm<span style="vertical-align:super;font-size:8pt">2</span>. The volume gap between the billet and the container
+    is 19421.58 mm<span style="vertical-align:super;font-size:8pt">3</span> ((3846.50-3737.39)*178). The height for the billet to fill the volume gap is 5.20 mm (19421.58/3737.39). If the movement velocity of the ram is 4 mm/s, then the time to fill the
+    volume gap is 1.30 s.</p>
+  <p>Based on above understanding, we can set different step increments in different deformation stages. In the gap filling stage, the minimum element size is 2 mm, the movement velocity of the ram is 4 mm/s, so the appropriate time/step of the ram would
+    be 0.17 sec/step. In the extruding stage, the minimum element size is 2 mm, the movement velocity of the extrudate is 21.16 mm/s, so the appropriate time/step of the ram would be 0.03 sec/step.</p>
+  <p> </p>
+  <p>In the <strong>Step increment</strong> dialog, set <strong>Solution step definition</strong> as <strong>Time</strong>. Set <strong>Step increment control</strong> to <strong>f(stroke)</strong> and click <img height="21" src="{{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}" width="74"/>. Set the function as shown in <a href="#Fig_LAGEXL1_21_Step_definition"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>21.</a> and then click <img src="{{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}"/> and <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 250px;margin-left: auto;margin-right: auto">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"><strong>Stroke</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Step definition</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.17</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">5.2</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.17</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">5.21</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.03</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">200</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.03</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_21_Step_definition"></a><img height="160" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0021.jpg' | relative_url }}" width="720"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Step definition</p>
+  <p> </p>
+  <p>By the way, if the gap is very small, we can also use a constant step increment with the appropriate time/step of the extruding stage for the whole deformation process.</p>
+  <h3 class="h3_1_12_">Stop criteria</h3>
+  <p>In the <strong>Stopping criteria</strong> dialog, define <strong>Primary </strong><strong>die </strong><strong>displacement </strong>Z as <strong>28 </strong>mm as show in <a href="#Fig_3DLAGEXL1_22_Stopping_control"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DLAGEXL1_22_Stopping_control"></a><img src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0022.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Stopping control</p>
+  <h3 class="h3_1_12_">Double constraints settings</h3>
+  <p>In order to ensure that no velocity leaks occur in the die and allow the correct outlet velocity to be calculated, it&#39;s better to set double constraints on edges for extrusion.</p>
+  <p>In the Control files dialog, check <strong>Double constraints on edges</strong>, set <strong>Angle </strong><strong>range </strong><strong>from </strong><strong>75 </strong>deg to <strong>105 </strong>deg, also check <strong>Include convex</strong>    edges (see <a href="#Fig_LAGEXL1_23_Double_constraints_setting"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>23.</a>). Click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Generate
+    DB.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_23_Double_constraints_setting"></a><img src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0023.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Double constraints setting</p>
+  <h2><a id="1_13_Generate_DB"></a>Generate DB</h2>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/> to see if anything was missed in the setup and then click on the  <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/>  button to generate the database. Observe
+    the message in Message tab informing database generation status.</p>
+  <h2><a id="1_14_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated switch to the Simulation mode by clicking on <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> button above the operation tree. Click on the <img height="15" src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}" style="cursor: nwse-resize;" width="26"/> action label to open the Run Options dialog as shown in <a href="#Fig_LAGEXL1_24_Run_Simulation_Window"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>24</a>. Use the
+    default <strong>Continue </strong><strong>Run </strong>option to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}"/> button to run the simulation.</p>
+  <p>To define MPI settings, click on <img src="{{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}"/> button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend
+    on your 3D MPI license).</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_24_Run_Simulation_Window"></a><img src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0024.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Run Simulation Window</p>
+  <p> </p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, make sure that the <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked. User can view the Extrusion process
+    from simulation graphics as the simulation proceeds to the specified Step definition.</p>
+  <h2><a id="1_15_Post_Processing"></a>Post Processing</h2>
+  <p>From the message file, we can see that &#39;PROGRAM STOPPED!&#39; and &#39;THE Z STROKE 28.0000000 HAS REACHED THE SPECIFIED LIMIT 28.0000000&#39; after step 215.</p>
+  <p>When the simulation is completed, review the results by switching to Post mode using the <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> button above the Simulation tool bar.</p>
+  <p> </p>
+  <p>Play through the steps of the simulation and look how the workpiece flows in extrudate region in Lagrangian extrusion operation. From the simulation results, we can see that surround profiles (D2 &amp; D3) are bending toward the central profile (D1)
+    during the extrusion process.</p>
+  <p>Plots of the Effective strain and Temperature of the workpiece at last step are given in <a href="#Fig_LAFEXL1_25_Effective_strain_distribution_of_the_workpiece_at_last_step"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>25.</a>    and <a href="#Fig_LAGEXL1_26_Temperature_distribution_of_the_workpiece_at_last_step"><span data-keyref="Labs_Extrusion_labs_Lagrangian_Extrusion_lab1">Fig. LAGEXL1.</span>26.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAFEXL1_25_Effective_strain_distribution_of_the_workpiece_at_last_step"></a><img height="422" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0025.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Effective strain distribution of the workpiece at last step</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_LAGEXL1_26_Temperature_distribution_of_the_workpiece_at_last_step"></a><img height="423" src="{{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0026.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature distribution of the workpiece at last step</p>
+  <p> </p>
+
+</body></html>

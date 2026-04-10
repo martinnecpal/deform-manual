@@ -1,0 +1,252 @@
+---
+lang: en
+title: "57.4. DEFORM Data Analytics Plotting Data"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "12.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>57.4. DEFORM Data Analytics Plotting Data</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>57.4. DEFORM Data Analytics Plotting Data</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/57_data_analytics/57_4_deform_data_analytics_plotting_data.css"/>
+<meta name="brsnext" value="Documentation_content/57_Data_Analytics/57_5_DEFORM_Data_Analytics_Expressions.htm"/><meta name="brsprev" value="Documentation_content/57_Data_Analytics/57_3_DEFORM_Data_Analytics_Data_Import_and_Export.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="57.4. DEFORM Data Analytics Plotting Data">
+        <span>57.4. DEFORM Data Analytics Plotting Data</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>57.4. DEFORM Data Analytics Plotting Data</h1>
+  <p><a href="#57_4_1_Plotting_overview">57.4.1. Plotting overview</a>    </p>
+  <p><a href="#57_4_2_Scatter_plot">57.4.2. Scatter plot</a>      </p>
+  <p><a href="#57_4_3_Line_Plot">57.4.3. Line plot</a></p>
+  <p><a href="#57_4_4_Bar_plot">57.4.4. Bar plot</a>      </p>
+  <p><a href="#57_4_5_Histogram_plot">57.4.5. Histogram plot</a></p>
+  <p><a href="#57_4_6_Tornado_plot">57.4.6. Tornado plot</a>    </p>
+  <p><a href="#57_4_7_Sensitivity_plot">57.4.7. Sensitivity plot</a>      </p>
+  <p><a href="#57_4_8_3d_response_surface_plot">57.4.8. 3d response surface plot</a>    </p>
+  <p><a href="#57_4_9_Contour_response_surface_plot">57.4.9. Contour response surface plot</a>    </p>
+  <p> </p>
+  <h2><a id="57_4_1_Plotting_overview"></a>Plotting overview</h2>
+  <p>Plots can be used to visualize data and determine if a relationship exists between columns of data in a data table. Plots can also be used to visually compare data, and check if a trained model correctly models the data. Multiple pots can be shown in
+    the work area at the same time.</p>
+  <p>DEFORM Data Analytics offers the following several plot types. These include scatter plot, line plot, bar plot, tornado plot, sensitivity plot, histogram plot and 3d and contour response surface plots.</p>
+  <p>All plots can be saved to image files in the Portable Network Graphics (PNG) format. There are options for specifying the image size as shown in <a href="#Fig_57_4_1_Plot image export options"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_1_Plot image export options"></a><img src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0001.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Plot image export options</p>
+  <p> </p>
+  <h2><a id="57_4_2_Scatter_plot"></a>Scatter plot <img height="18" src="{{ '/assets/icons/post_icons/doe_post_scatter_plot_button.jpg' | relative_url }}" width="21"/>  </h2>
+  <p>Scatter plots show pairs of data as points on a 2d graph. This can be useful for visually determining if a pair of data is dependent or independent. Independent data will display as a random cloud of points. Dependent data will closely follow a line
+    or curve. Real world data is rarely 100% dependent. There is usually noise or measurement uncertainty in the data. So, dependent/independent is not binary, there is a continuum between to two. <a href="#Fig_57_4_2_Data_Dependence"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>2.</a>    show this.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_2_Data_Dependence"></a><img height="272" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0002.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Data Dependence</p>
+  <p><br/> Visually inspecting data on a scatter plot can also provide clues as to that the relationship between pairs of data is (i.e., linear, exponential, quadratic, etc). ( See <a href="#Fig_57_4_3_Examples_of_data_relationships"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>3.</a>)</p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_57_4_3_Examples_of_data_relationships"></a><img src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0003.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Examples of data relationships</p>
+  <p><br/> The data to be plotted and several plot options are available in the properties area when the plot is the active window. Data is selected in the data tab of the plot properties. The first column of the Y-Axis list specifies the column to plot
+    on the Y-axis. The second column specifies the column to determine the point locations on the X-axis. The label for the X-axis is specified in the X-Axis label field. The name of an existing column can be used (from the drop down menu) or any text
+    can be typed in for the label. <a href="#Fig_57_4_5_Comparing_data_in_a_scatter_plot"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>4.</a> shows plotting a single pair of columns. <a href="#Fig_57_4_5_Comparing_data_in_a_scatter_plot"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>5.</a>    shows plotting 2 pairs of columns.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_4_Selecting_data_for_scatter_plot"></a><img src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0004.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting data for scatter plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_5_Comparing_data_in_a_scatter_plot"></a><img src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0005.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Comparing data in a scatter plot</p>
+  <p> </p>
+  <p><br/> The data on a scatter plot can be plotted on a linear scale or logarithmic scale as shown in <a href="#Fig_57_4_6_Plotting_with_a_logarithmic_scale"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>6.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_6_Plotting_with_a_logarithmic_scale"></a><img height="550" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0009.jpg' | relative_url }}" width="605"/></p>
+  <p> </p>
+  <p class="Fig_numb">Plotting with a logarithmic scale</p>
+  <p><br/> A line of best fit can also be shown on a scatter plot as shown in <a href="#Fig_57_4_7_Line of best fit option"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>7.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_7_Line of best fit option"></a><img height="450" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0010.jpg' | relative_url }}" width="450"/></p>
+  <p class="Fig_numb">Line of best fit option</p>
+  <p> </p>
+  <p>DEFORM Data Analytics offers several display options for scatter plots. These include point color, point shape, point size, line (of best fit) color, line style, and line thickness as shown in <a href="#Fig_57_4_9_Display_options"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>9.</a>).
+    To set these options, select a Y-axis variable from the Y-axis drop down menu. Any display options changes will be applied to the display that data (see <a href="#Fig_57_4_8_Selecting_column_data_for_display_change"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>8.</a>).
+    <a href="#Fig_57_4_10_Data_from_multiple_column_with_different_display_options"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>10.</a> shows data from multiple columns displayed with different display options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_8_Selecting_column_data_for_display_change"></a><img src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0011.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Selecting column data for display change<br/>    </p>
+  <p style="text-align: center"><a id="Fig_57_4_9_Display_options"></a><img height="353" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0012.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Display options</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_57_4_10_Data_from_multiple_column_with_different_display_options"></a><img src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0013.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Data from multiple column with different display options</p>
+  <p><br/> If a column of data has error ranges defined, these can be shown in the scatter plot as error bars as shown in <a href="#Fig_57_4_11_Option to display error bars"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>11.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_11_Option to display error bars"></a><img height="237" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Option to display error bars</p>
+  <h2><a id="57_4_3_Line_Plot"></a>Line Plot <img src="{{ '/assets/icons/post_icons/data_analytics_curve_plot_button.jpg' | relative_url }}"/></h2>
+  <p>Line are similar to scatter plots except the points are connected by line segments. Column selection and display options are the same as for the scatter plot (<a href="#Fig_57_4_2_Data_Dependence">section 57.4.2</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_12_Selecting_data_for_line_plot"></a><img height="353" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0012.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Selecting data for line plot</p>
+  <p><br/> Once a model has been trained, a line plot can be used to visually determine how well a model fits the training data. If the output column used to train the model has error ranges, error bars can be shown. The line will be drawn from the trained
+    mode. And points will show the positions of the training data. To display this, select a model in the project tree (see <a href="#Fig_57_4_13_Selecting_model_for_line_plot"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>13.</a>),
+    the click on the line plot icon. <a href="#Fig_57_4_14_Validating_a_model_with_a_line_plot"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>14.</a> shows line plots for a model with 1 input and a model with 3
+    inputs.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_13_Selecting_model_for_line_plot"></a><img src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0013.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting model for line plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_14_Validating_a_model_with_a_line_plot"></a><img height="237" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Validating a model with a line plot</p>
+  <p> </p>
+  <h2><a id="57_4_4_Bar_plot"></a>Bar plot <img height="25" src="{{ '/assets/icons/post_icons/data_analytics_bar_chart_button.jpg' | relative_url }}" width="28"/></h2>
+  <p> A bar plot shows the values of each cell in a column as a bar. The length of the bar represents the value of the of a variable. The X-axis is the row number from the data table. Multiple columns can be selected for display. The bars will be shown next
+    to each other in different colors to facilitate visually comparing the data. <a href="#Fig_57_4_15_Bar_plot"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>15.</a> shows a bar plot with 2 columns selected.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_15_Bar_plot"></a><img height="400" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0015.jpg' | relative_url }}" width="406"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bar plot</p>
+  <h2><a id="57_4_5_Histogram_plot"></a>Histogram plot <img height="21" src="{{ '/assets/icons/post_icons/doe_post_histogram_button.jpg' | relative_url }}" width="21"/></h2>
+  <p>Histogram plots show how often values of a variable occur within a range of values. These ranges are called bins. This plot only shows the histogram for a single column at a time. A histogram can be used as an approximation of the probability that a
+    variable will take a value in a certain range. A bin with a high count indicates that the probability that a random value of the variable is more likely to fall within that bin that into a bin with a low count. The x-axis of a histogram represents
+    the values of the variable (cells in the column). The y-axis represents the count of those values in each bin.The x-axis covers the range of the data in the column. The histogram properties provide selection of the column and the number of bins. As
+    the number of bins increases the size of the range of each bin decreases. <a href="#Fig_57_4_16_Histogram_plot"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>16</a> shows a histogram plot.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_16_Histogram_plot"></a><img height="350" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0016.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Histogram plot</p>
+  <h2><a id="57_4_6_Tornado_plot"></a>Tornado plot <img height="22" src="{{ '/assets/icons/post_icons/doe_post_tornado_chart.jpg' | relative_url }}" width="18"/>  </h2>
+  <p>A tornado plot shows the relative strengths of dependency (by computing the correlation coefficient) of columns of data to another column of data. The length of the bar shows the strength of the dependency. Longer bars indicate a stronger dependency. Bars
+    to the left of the center line indicate an inverse dependency (as one variable increases in value, the other decreases). The bars of this plot are ordered from strongest dependency to weakest dependency.  <span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>17 shows
+    a basic tornado plot. <span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>18 shows a tornado plot with direct and inverse dependencies. The output column indicates the column that the input columns will be compared
+    with. This is usually the column that will be used as the output for training a model. This can be useful for determining which inputs have the most effect on the output. Weak inputs can usually be excluded from the model.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_17__Tornado_plot"></a><img height="347" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Tornado plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_18_Tornado plot with a mix of direct and inverse dependencies"></a><img height="350" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0018.jpg' | relative_url }}" width="350"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tornado plot with a mix of direct and inverse dependencies</p>
+  <h2><a id="57_4_7_Sensitivity_plot"></a>Sensitivity plot <img height="21" src="{{ '/assets/icons/post_icons/doe_post_sensitivity_plot_button.jpg' | relative_url }}" width="19"/> </h2>
+  <p>The sensitivity plot is essentially the same as the tornado plot. Instead of representing the strength of the dependency as bars, the sensitivity represents them as slopes of lines. The steeper the slope, the stronger the dependency.  Negative slopes
+    indicate an inverse dependency. <a href="#Fig_57_4_19__Sensitivity_plot"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>19.</a> shows a sensitivity plot.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_19__Sensitivity_plot"></a><img height="339" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0019.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Sensitivity plot</p>
+  <h2><a id="57_4_8_3d_response_surface_plot"></a>3d response surface plot <img src="{{ '/assets/icons/post_icons/doe_post_response surface_button.jpg' | relative_url }}"/> </h2>
+  <p>The 3d response surface shows the shape of the surface generated from a trained model of 2 or more inputs. It also shows the positions of the training data so it can be used to visually see how well a model fits the training data. The display types
+    in the tool bar ( <img src="{{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}"/><img src="{{ '/assets/icons/pre_icons/mo_wirefrane_mode_icon.jpg' | relative_url }}"/><img src="{{ '/assets/icons/pre_icons/mo_shade_wireframe_icon.jpg' | relative_url }}"/>) change the display of
+    the response surface. <a href="#Fig_57_4_20_3d_response_surface_plot"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>20.</a> shows a 3d response surface plot.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_20_3d_response_surface_plot"></a><img src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0020.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">3d response surface plot</p>
+  <p> </p>
+  <p>If the model was trained with more than 2 inputs, the X-Axis and Y-Axis drop down menus can be used to select which inputs are used for the axis. Also, the Other input tab will contain sliders which can be used to vary the values of other variables
+    to observe their effect on the response surface (see <a href="#Fig_57_4_21_3d_response_surface_plot_with_more_than_2_inputs"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>21.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_21_3d_response_surface_plot_with_more_than_2_inputs"></a><img height="450" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0021.jpg' | relative_url }}" width="686"/></p>
+  <p> </p>
+  <p class="Fig_numb">3d response surface plot with more than 2 inputs</p>
+  <p> </p>
+  <p>If the output column used for training a model includes error ranges, error bars can be shown on the response surface as shown in <a href="#Fig_57_4_22_Error_bars_on_a_3d_response_surface_plot"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_22_Error_bars_on_a_3d_response_surface_plot"></a><img height="355" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0022.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Error bars on a 3d response surface plot</p>
+  <p><br/> Multiple response surfaces can be shown in a single plot. This can be used to compare the response surfaces of different models or, as shown in <a href="#Fig_57_4_23_Comparing_response_surfaces"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>23.</a>,
+    compare models trained by dropping different input columns with weak dependencies.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_23_Comparing_response_surfaces"></a><img height="317" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0023.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Comparing response surfaces</p>
+  <h2><a id="57_4_9_Contour_response_surface_plot"></a>Contour response surface plot <img src="{{ '/assets/icons/post_icons/doe_post_response_contour_button.jpg' | relative_url }}"/>  </h2>
+  <p>The 3d response surface shows the shape of the surface generated from a trained model of 2 or more inputs as a contour plot. Only one response surface can be displayed at a time in this plot. Other than that, many of the options for this plot are the
+    same as the 3d response surface plot (<a href="#57_4_8_3d_response_surface_plot">section 57.4.8</a>). <a href="#Fig_57_4_24_Contour_response_surface"><span data-keyref="Chapter_57_4_DEFORM_Data_Analytics_Plotting_Data">Fig. 57.4.</span>24.</a> shows
+    a contour response surface plot.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_4_24_Contour_response_surface"></a><img height="340" src="{{ '/assets/images/data_analytics/57_4_deform_data_analytics_plotting_data/57_4_image0024.jpg' | relative_url }}" width="720"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contour response surface</p>
+
+</body></html>

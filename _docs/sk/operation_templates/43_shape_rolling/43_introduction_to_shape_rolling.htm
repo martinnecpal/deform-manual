@@ -1,0 +1,114 @@
+---
+lang: sk
+title: "43. Introduction to Shape Rolling"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>43. Introduction to Shape Rolling</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>43. Introduction to Shape Rolling</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/43_Shape_Rolling/43_1_Shape_Rolling_Manual.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/42_Ring_Rolling/42_1_Ring_Rolling.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="43. Introduction to Shape Rolling">
+        <span>43. Introduction to Shape Rolling</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>43. Introduction to Shape Rolling</h1>
+  <p>Shape Rolling Operation template setup is designed for guiding user to setup different types of Rolling processes. A typical Shape Rolling setup consists of Workpiece, Rolls (Top roll and Bottom roll), Pusher Object and Table (see <a href="#Fig_43_2_Lagrangian_Rolling_type_setup"><span data-keyref="Chapter_43_Introduction_to_Shape_Rolling">Fig. 43.</span>2.</a>)
+    Using this template user model Shape rolling operation as,</p>
+  <ol class="Decimal">
+    <li>
+      <p>Lagrangian rolling type</p>
+    </li>
+    <li>
+      <p>Steady-State ALE type</p>
+    </li>
+  </ol>
+  <p>Shape rolling process can be set up as combination of passes and stands along with heat transfer operations in between passes. User is provided with Pass table and Stand table to define the process data in a simple tabular format as shown in <a href="#Fig_43_1_Defining_multi_passes_in_the_pass_table"><span data-keyref="Chapter_43_Introduction_to_Shape_Rolling">Fig. 43.</span>1.</a></p>
+  <p style="text-align: center"><a id="Fig_43_1_Defining_multi_passes_in_the_pass_table"></a><img height="388" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining multi passes in the pass table</p>
+  <p> </p>
+  <p>Shape rolling process can be set up using 2D cross-sections of workpiece and roll, this 2D setup can be used to simulate 2.5D simulation process. Typical cross- sections of rolls are provided as primitives to define roll grooves. The 2D setup can be
+    converted into 3D using the 3D conversion options available in template. User can make necessary modifications for 3D setup at pass level and define the data like pusher object, mesh settings, remesh criteria, strain initialization, boolean between
+    passes,..etc. Typical rolling setups for Lagrangian and ALE rolling are as mentioned below, </p>
+  <p style="text-align: center"><img height="350" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/image0002.jpg' | relative_url }}" width="428"/></p>
+  <p class="Fig_numb"><a id="Fig_43_2_Lagrangian_Rolling_type_setup"></a>Lagrangian Rolling type setup</p>
+  <p> </p>
+  <p style="text-align: center"><img height="300" src="{{ '/assets/images/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/image0003.jpg' | relative_url }}" width="145"/></p>
+  <p class="Fig_numb"> Steady-State ALE Rolling type setup</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="43_1_shape_rolling_manual.htm">43.1. Shape Rolling Manual</a></p>
+
+</body></html>

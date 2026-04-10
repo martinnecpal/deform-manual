@@ -1,0 +1,453 @@
+---
+lang: sk
+title: "10.6.1 Avrami Model"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "4.4.5.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>10.6.1 Avrami Model</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>10.6.1 Avrami Model</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/10_Material_Data/10_6_Grain_Data/10_6_Grain_Data.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="10.6.1 Avrami Model">
+        <span>10.6.1 Avrami Model</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>10.6.1. Avrami Model</h1>
+  <ul class="Disc">
+    <li>
+      <p><a href="#Dynamic_Recrystallization">Dynamic Recrystallization</a> </p>
+    </li>
+    <li>
+      <p><a href="#Static_Recrystallization">Static Recrystallization</a> </p>
+    </li>
+    <li>
+      <p><a href="#Meta-dynamic_Recrystallization">Meta-dynamic Recrystallization</a> </p>
+    </li>
+    <li>
+      <p><a href="#Grain_Growth">Grain Growth</a> </p>
+    </li>
+    <li>
+      <p><a href="#NOMENCLATURE">NOMENCLATURE</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>The Avrami equation describes how solids transform from one phase (state of matter) to another at constant temperature. It can specifically describe the kinetics of crystallization. (See <a href="#Fig._10.6.1.1._Avrami_Grain_Material_model_window"><span data-keyref="Chapter_10_6_1_ Avrami Model">Fig. 10.6.1.</span>1.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._10.6.1.1._Avrami_Grain_Material_model_window"></a><img src="{{ '/assets/images/pre-processor/10_material_data/10_6_grain_data/10_6_image002.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Avrami Grain Material model window</p>
+  <p> </p>
+  <p><strong>Definitions:</strong><br/>
+    <strong>Dynamic recrystallization:</strong> occurring during deformation and when the strain exceeds critical strain. The driving force is removal of dislocations.<br/>
+    <br/>
+    <strong>Static recrystallization: </strong>occurring after deformation and when strain is less than critical strain. The driving force is removal of dislocations. The recrystallization begins in a nuclei-free environment.<br/>
+    <br/>
+    <strong>Meta-dynamic recrystallization: </strong>occurring after deformation and when strain is greater than critical strain. The driving force is removal of dislocations. Because the strain has exceeded critical strain, recrystallization nuclei have
+    formed in the material, so the recrystallization behaviors are different from without nuclei (static recrystallization).</p>
+  <p><br/>
+    <strong>Grain Growth: </strong>occurring before recrystallization begins or after recrystallization is completed. The driving force is the reduction of grain boundary energy.</p>
+  <p> </p>
+  <p><strong>Strain retaining coefficient</strong>: The strain retaining coefficient is only used when: </p>
+  <ol>
+    <li>
+      <p style="margin-left:">The current step has deformation. </p>
+    </li>
+    <li>
+      <p>The previous step has no deformation,  i.e, at the beginning step when the operation changes from heat transfer to deformation. </p>
+    </li>
+  </ol>
+  <p> </p>
+  <p>The equation is as following: </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 750px;border-width: 1px;border-style: none;border-color: rgb(255, 255, 255);margin-left: 40px;color: #FFFFFF">
+    <colgroup>
+      <col style="width: 650px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody style="background-color: #FFFFFF">
+      <tr>
+        <td><img height="2461" src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_17.jpg' | relative_url }}" style="background-color: rgb(255, 255, 255);" width="57217"/></td>
+        <td style="background-color: #FFFFFF">
+          <p> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>   </p>
+  <p><a id="Dynamic_Recrystallization"></a><strong>Dynamic Recrystallization</strong></p>
+  <p>The dynamic recrystallization is a function of strain, strain rate, temperature, and initial grain size, which change in time. It is very difficult to model dynamic recrystallization concurrently during forming. Instead, the dynamic recrystallization
+    is computed in the step immediately after the deformation stops. Average temperatures, strain rate of the deformation period is used as inputs of the equations.</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt"><strong>Activation Criteria</strong></li>
+  </ol>
+  <p>The onset of DRX usually occurs at a critical strain <img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_c.jpg' | relative_url }}"/> .   </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_1.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> <br/> Where <img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_p.jpg' | relative_url }}"/>  denotes the peak strain corresponding to the flow stress maximum:    </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_2.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p><span style="font-family: Arial; font-size: 12pt; text-align: justify;">Refer </span><a href="#NOMENCLATURE" style="font-family: Arial; font-size: 12pt; text-align: justify;">Nomenclature</a><span style="font-family: Arial; font-size: 12pt; text-align: justify;"> mentioned below for terms explanation.</span></p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;font-family: Arial;font-size: 12pt" value="2"><strong>Kinetics</strong></li>
+  </ol>
+  <p>The Avrami equation is use to describe the relation between the dynamically recrystallized fraction  <img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/x.jpg' | relative_url }}"/>  and the effective strain.    </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img height="43" src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_3.jpg' | relative_url }}" width="241"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><a id="EQ_10.6.1.3." height="5" width="5"></a><br/>  Where <img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_0_5.jpg' | relative_url }}"/>  denotes the strain for 50% recrystallization: </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_4.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>   <br/>  Refer <a href="#NOMENCLATURE">Nomenclature</a> mentioned below for terms explanation.</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2;font-family: Arial;font-size: 12pt" value="3"><strong>Grain Size</strong></li>
+  </ol>
+  <p>The recrystallized grain size is expressed as a function of initial grain size, strain, strain rate, and temperature,     </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 600px; color: rgb(0, 0, 0); border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img height="30" src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_5.jpg' | relative_url }}" width="491"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>  <br/> Refer <a href="#NOMENCLATURE">Nomenclature</a> mentioned below for terms explanation.</p>
+  <p> </p>
+  <p> <a id="Static_Recrystallization"></a><strong>Static Recrystallization</strong></p>
+  <p>When deformation stops, the strain rate and critical strain are used to determine whether static or meta-dynamic recrystallization should be activated. The static and meta-dynamic recrystallization is terminated when this element starts to deform again.</p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt"><strong>Activation Criteria</strong></li>
+  </ol>
+  <p>When strain rate is less than<img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_dot_ss.jpg' | relative_url }}"/>, static recrystallization occurs after deformation. </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_6.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>  <br/>  Refer <a href="#NOMENCLATURE">Nomenclature</a> mentioned below for terms explanation.</p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 1;font-size: 12pt;font-family: Arial" value="2"><strong>Kinetics</strong></li>
+  </ol>
+  <p>The model for recrystallization kinetics is based on the modified Avrami equation.      </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_7.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Where <img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/t_0_5.jpg' | relative_url }}"/> is an empirical kinetics is based on the modified Avrami equation.  </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_8.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Refer <a href="#NOMENCLATURE">Nomenclature</a> mentioned below for terms explanation.</p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2;font-size: 12pt;font-family: Arial" value="3"><strong>Grain Size</strong></li>
+  </ol>
+  <p>The recrystallized grain size is expressed as a function of initial grain size, strain, strain rate, and temperature, </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 600px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_9.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Refer <a href="#NOMENCLATURE">Nomenclature</a> mentioned below for terms explanation.</p>
+  <p> </p>
+  <p><a id="Meta-dynamic_Recrystallization"></a><strong>Meta-dynamic Recrystallization</strong></p>
+  <p>Meta-dynamic recrystallization is similar to static recrystallization but with different activation criteria and material constants.</p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt"><strong>Activation Criteria</strong></li>
+  </ol>
+  <p>When strain rate is greater than <img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_dot_ss.jpg' | relative_url }}"/> (See <a href="#EQ_10.6.1.3.">EQ(10.6.1.3.)</a>), meta-dynamic recrystallization occurs
+    after deformation.</p>
+  <ol class="Decimal">
+    <li style="font-size: 12pt; font-family: Arial; counter-reset: item1 1;" value="2"><strong>Kinetics</strong></li>
+  </ol>
+  <p>The model for recrystallization kinetics is based on the modified Avrami equation. </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_10.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>       <br/> Where <img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/t_0_5.jpg' | relative_url }}"/> is an empirical time constant for 50% recrystallization: </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_11.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>         <br/> Refer <a href="#NOMENCLATURE">Nomenclature</a> mentioned below for terms explanation.</p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2;font-family: Arial;font-size: 12pt" value="3"><strong>Grain Size</strong></li>
+  </ol>
+  <p>The recrystallized grain size is expressed as a function of initial grain size, strain, strain rate, and temperature,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 500px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img height="22" src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_12.jpg' | relative_url }}" width="492"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>           <br/>  Refer <a href="#NOMENCLATURE">Nomenclature</a> mentioned below for terms explanation.</p>
+  <p> </p>
+  <p><a id="Grain_Growth"></a><strong>Grain Growth</strong></p>
+  <p>Grain growth takes place before recrystallization start or after recrystallization finishes.<br/> The kinetics is described by equation: <br/>    </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_13.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> <br/> Refer <a href="#NOMENCLATURE">Nomenclature</a> mentioned below for other terms explanation.<br/>
+    <br/>
+    <strong>Retained Strain and Grain Size</strong><br/> When there are multiple deformation processes, strain may be reduced during the inter pass period due to recovery.<br/>
+    <br/> The following equation is used to compute the retained strain at the beginning of the subsequent deformation. </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_14.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>         <br/> Refer <a href="#NOMENCLATURE">Nomenclature</a> mentioned below for terms explanation.<br/>
+    <br/>
+    <strong>Temperature Limit</strong><br/> The temperature limit is the lower bound of all grain evolution mechanisms. Below this temperature, no grain evolution occurs.<br/>
+    <br/>
+    <strong>Average Grain Size  </strong><br/> The mixture law was employed to calculate the recrystallized grain size for uncompleted recrystallization, </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_15.jpg' | relative_url }}"/></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> In addition, if at the beginning of deformation total <img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/xrex.jpg' | relative_url }}"/>  is 1.0, the program will re-initialize (e.g. <img src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/xrex.jpg' | relative_url }}"/> = 0) in order to compute a new round of recrystallization.<br/> Refer <a href="#NOMENCLATURE">Nomenclature</a> mentioned below for terms explanation.<br/>
+    <br/>
+    <strong>Model Dependency on Temperature and Strain Rate</strong><br/> DEFORM allows different constants and coefficients for the equations at different temperatures or strain rates. The data are linearly interpolated.<br/>
+    <strong> <br/>
+<a id="NOMENCLATURE"></a></strong><strong>NOMENCLATURE</strong></p>
+  <p> </p>
+  <p style="text-align: left"><a id="NOMENCLATURE"></a><img height="505" src="{{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_16.jpg' | relative_url }}" style="text-align: center;" width="365"/></p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

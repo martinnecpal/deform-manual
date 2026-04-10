@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/lang-switcher.css' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  {% include lang-switcher.html %}
+
+  <div class="site-layout">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar" aria-label="Documentation navigation">
+      <div class="sidebar-header">
+        <a href="{{ '/' | relative_url }}" class="logo-link">
+          <img src="{{ '/template/sftc_suggest_deform/deform_logo.png' | relative_url }}"
+               alt="{{ site.title }}" class="site-logo">
+        </a>
+        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation">&#9776;</button>
+      </div>
+
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search…" aria-label="Search documentation">
+        <ul id="search-results" class="search-results" hidden></ul>
+      </div>
+
+      <div class="toc-holder">
+        {% assign lang = page.lang | default: 'en' %}
+        {% if lang == 'sk' %}
+          {% include sidebar.html nav=site.data.nav_sk %}
+        {% else %}
+          {% include sidebar.html nav=site.data.nav_en %}
+        {% endif %}
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main-wrap">
+      <header class="topbar">
+        <button class="sidebar-toggle mobile-only" id="sidebarToggleMobile" aria-label="Toggle navigation">&#9776;</button>
+        <span class="topbar-title">{{ site.title }}</span>
+      </header>
+
+      <main class="content" id="main-content">
+        {{ content }}
+      </main>
+
+      <footer class="site-footer">
+        <p>DEFORM V14.0.2 Documentation</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="{{ '/assets/js/sidebar.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+</body>
+</html>

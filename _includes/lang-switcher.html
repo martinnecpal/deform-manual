@@ -1,0 +1,9 @@
+{% assign lang = page.lang | default: 'en' %}
+<div class="lang-switcher">
+  <a href="{{ '/' | relative_url }}"{% if lang == 'en' %} class="active"{% endif %}>
+    <span class="flag">🇬🇧</span> EN
+  </a>
+  <a href="{{ '/sk/' | relative_url }}"{% if lang == 'sk' %} class="active"{% endif %}>
+    <span class="flag">🇸🇰</span> SK
+  </a>
+</div>

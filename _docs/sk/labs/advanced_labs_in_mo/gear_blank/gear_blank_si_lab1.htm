@@ -1,0 +1,665 @@
+---
+lang: sk
+title: "Gear Blank SI Lab 1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.3.1.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gear Blank SI Lab 1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gear Blank SI Lab 1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/advanced_labs_in_mo/gear_blank/gear_blank_si.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Blank/Gear_Blank_SI_Lab2.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Blank/Gear_Blank_SI.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Gear Blank SI Lab 1">
+        <span>Gear Blank SI Lab 1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 1. 2D upset operation</h1>
+  <h3>Create a new problem</h3>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> </strong><strong>New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. The Problem Setup window will appear as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_1_New_Problem_setup_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>1.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and Unit system as &quot;<strong>SI</strong>&quot; using radio button. Define Problem Name as &quot;<strong>Gear</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>”
+    check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_1_New_Problem_setup_window"></a><img height="419" src="{{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem setup window</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, At this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘<strong><strong><strong>Gear</strong>    </strong>
+    </strong>’ as the project name and confirm that First operation check box is unchecked as we will add operation later and use the default (home) directory as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_2_MO_New_Project_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>2.</a> Click
+    on <img height="21" src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}" width="73"/> to continue to open new project. This lab will be referenced in future labs so it is important to use the name above.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_2_MO_New_Project_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0002.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO New Project window</p>
+  <h3>Open Preprocessor</h3>
+  <p>Add the 2D Forming operation as first operation from Explorer tab as shown in  <a href="gear_blank_si_lab1.htm#Fig_L1_3_Adding_2D_Forming_operation_from_operation_explorer"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>3.</a></p>
+  <p style="text-align: center"><a id="Fig_L1_3_Adding_2D_Forming_operation_from_operation_explorer"></a><img height="374" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding 2D Forming operation from operation explorer</p>
+  <p> </p>
+  <p>Change the default operation title to &quot;<strong>upset</strong>&quot; from Forming by selecting the title in the operation editor  as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_4_Renaming_operation_title_to_upset"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>4.</a>    and press Enter keyboard button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_4_Renaming_operation_title_to_upset"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0004.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Renaming operation title to upset</p>
+  <h3>Select Geometry type and  Simulation Modes</h3>
+  <p>Confirm the geometry type selected is <strong>Axi-symmetric</strong> in Geometry type page, then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p>In this lab we will be showing how to setup simple Isothermal problem, so in Simulation controls page, <strong>uncheck </strong>the <strong>Heat </strong><strong>transfer </strong><strong>mode </strong>check box (see <a href="gear_blank_si_lab1.htm#Fig_L1_5_Simulation_control_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>5</a>.).
+    then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_5_Simulation_control_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0005.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation control window</p>
+  <p> </p>
+  <p>Select the <strong>Material List</strong> in operation tree to load the material from library.</p>
+  <h3>Add material from Library</h3>
+  <p>Click the <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> (Load material from library) button as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_6_Loading_material_from_library"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>6.</a>    Select the <strong>Steel_at_Extended_Temperatures</strong> category, then <strong>AISI-8620[1550-2200F(850 -1200C)]</strong> and click the <img src="{{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_6_Loading_material_from_library"></a><img height="469" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0006.jpg' | relative_url }}" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb">Loading material from library</p>
+  <p> </p>
+  <p>Material is loaded to material list, click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> for Material list window. Click  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> for Material properties windows as we
+    use the default properties in database for this lab.</p>
+  <h3>Set number of Objects</h3>
+  <p>The forging operation to be simulated requires a workpiece and a top and bottom die. If there aren&#39;t already three objects, add the three objects by clicking the insert object button <img src="{{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}"/>. Object window looks as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_7_Objects_window_to_Add_or_Delete_the_objects"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>7.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_7_Objects_window_to_Add_or_Delete_the_objects"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0007.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objects window to Add or Delete the objects</p>
+  <p> </p>
+  <p>Before we proceed further, go to <strong>Options </strong>→ <strong>Preferences </strong>menu option and ensure that <strong>Y- axis is up</strong> is the preferred upward axis. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> button.</p>
+  <p> </p>
+  <p><strong>Graphic Display Icons</strong></p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;margin-left:20px">
+    <colgroup>
+      <col style="width: 10%;"/>
+      <col style="width: 30%;"/>
+      <col style="width: 65%;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><u><strong>Icon</strong></u></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><u><strong>Function</strong></u></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><u><strong>Description</strong></u></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="text-align: left">
+          <p style="text-align: left;margin-left: 4px">View shaded objects</p>
+        </td>
+        <td style="text-align: left">
+          <p style="text-align: left;margin-left: 4px">Displays all objects shaded without a mesh</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_wirefrane_mode_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">View mesh only</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Displays all objects unshaded with a mesh</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_shade_wireframe_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">View shaded mesh</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Displays all objects shaded with a mesh</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_feature_line_mode_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">View surface patch</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Only the feature lines of the objects are shown</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_refresh_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Refresh</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Refreshes the DISPLAY window and clears previous measuring lines</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_fit_all_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Fit view</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Fits all objects into the DISPLAY window</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_capture_screen_image_to_file_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Capture image</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Captures the DISPLAY window and saves it to a file</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_capture_screen_to_clip_board_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Capture image to clipboard</p>
+        </td>
+        <td style="text-align: center">
+          <p style="margin-left: 4px">Captures DISPLAY window and saves in memory clipboard</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h3>Define Workpiece general object data</h3>
+  <p>Accept the default object name <strong>Workpiece</strong>. Assign the temperature as <strong>1232.22</strong>°C and confirm the object type selected is <strong>plastic </strong>(see <a href="gear_blank_si_lab1.htm#Fig_L1_8_Workpiece_object_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>8.</a>).
+    Click  on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_8_Workpiece_object_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0008.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece object window</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note</strong>:</p>
+  <p class="Note_text">The Import Object button on the General tab is for importing data from a different DEFORM problem keyword or database.  In most setups, you will use the “Import Geometry” option on the next tab.</p>
+  <p> </p>
+  <h3>Create workpiece geometry from primitive</h3>
+  <p>Click on the <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> button to create a geometry within DEFORM. Select cylinder type. The workpiece diameter is 127.00mm, so you will define a width of half the diameter or 63.5mm. The
+    length is 207.01mm, with corner radii of 2.54mm. Enter a <strong>radius </strong>of <strong>63.5</strong>, a <strong>Height </strong>of <strong>207.01</strong>, <strong>R1 </strong>&amp; <strong>R2 </strong>of <strong>2.54</strong> (see <a href="gear_blank_si_lab1.htm#Fig_L1_9_2D_axi-symmetric_geometry_primitive_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>9.</a>).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button and then observe the geometry in graphics window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_9_2D_axi-symmetric_geometry_primitive_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0009.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">2D axi-symmetric geometry primitive window</p>
+  <p> </p>
+  <p><em><strong>Display Manipulation</strong></em></p>
+  <p>Functions that manipulate the DISPLAY window (such as Pan, Zoom, Magnify, and Rotate) can be activated using icons at the top of the Pre-processor window. These functions also have easy keyboard/mouse combination hotkeys that allow you to quickly perform
+    these functions.  Once you have read about these functions, feel free to use them to manipulate the view of the Billet in the DISPLAY window.</p>
+  <p> </p>
+  <p><em><strong>Display Icons</strong></em></p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;margin-left:20px">
+    <colgroup>
+      <col style="width: 5%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 70%;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="margin-left: 4px"><u><strong>Icon</strong></u></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center"><u><strong>Function</strong></u></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center"><u><strong>Description</strong></u></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_pan_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Pan</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">The objects in the DISPLAY window can be dynamically panned up, down, left, or right by moving the mouse while holding the left mouse button.</p>
+          <p style="margin-left: 4px">(Shortcut:  Shift + Left Mouse Button)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_zoom_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Zoom</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">The DISPLAY window can be dynamically zoomed in or out by holding the left mouse button and moving the mouse up or down.</p>
+          <p> (Shortcut:  Alt + Left Mouse Button)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_box_zoom_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Magnify</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">A portion of the DISPLAY window can to be magnified by clicking and holding the left mouse button at one corner of the zoom box and dragging the cursor to create a window encompassing the zoom area.</p>
+          <p style="margin-left: 4px">(Shortcut:  Ctrl + Alt + Left Mouse Button)</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p><strong>Point Selection</strong></p>
+  <p>Point coordinates and distances between points can be obtained from the current display.</p>
+  <p> </p>
+  <p><em><strong>Point Selection Icons</strong></em></p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;margin-left:20px">
+    <colgroup>
+      <col style="width: 5%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 70%;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="margin-left: 4px"><u><strong>Icon</strong></u></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center"><u><strong>Function</strong></u></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px;text-align: center"><u><strong>Description</strong></u></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_measure_tool_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Measure</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Distances between any two points can be measured by clicking the first point and then   clicking the second point. The measuring line will remain on the screen until the Refresh     button is clicked.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center"><img src="{{ '/assets/icons/pre_icons/mo_select_icon.jpg' | relative_url }}"/></p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">Select</p>
+        </td>
+        <td>
+          <p style="margin-left: 4px">This is the default display mode and is used to select and get information about nodes and element faces.  This is also the mode to be used when measuring.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> button to generate workpiece mesh.</p>
+  <h3>Generate Mesh for workpiece</h3>
+  <p>The default Target number of elements is <strong>1000</strong>. Accept the default number of elements and click the <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> button to generate the mesh for workpiece as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_10_Mesh_generation_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>10.</a> Click
+    on <img height="22" src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" width="73"/> button to assign material for workpiece.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_10_Mesh_generation_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0010.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh generation window</p>
+  <h3>Assign Material to Workpiece</h3>
+  <p>Click on the <strong>AISI-8620[1550-2200F(850 -1200C)]</strong> in the material window to assign the material to the workpiece as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_11_Object_Material_Assigning_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>11.</a> Click
+    on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> button to assign the workpiece boundary conditions.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_11_Object_Material_Assigning_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0011.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object Material Assigning window</p>
+  <p> </p>
+  <h3>Assign Workpiece boundary condition</h3>
+  <p>By default Velocity constraint <strong>Vx=0</strong> boundary conditions assigned along the centerline as the Geometry type selection is Axi-symmetric. Confirm that the velocity is set to zero and the X direction is selected by selecting the line “X,
+    Fixed” that appears in the Boundary Conditions tree and observing the graphics window (see <a href="gear_blank_si_lab1.htm#Fig_L1_12_Workpiece_Boundary_Conditions_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>12.</a>).</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_L1_12_Workpiece_Boundary_Conditions_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0012.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Boundary Conditions window</p>
+  <p> </p>
+  <p>If this line is not present, boundary conditions have not been added. In such case use the edge tool <img height="21" src="{{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}" width="21"/> and then click on any node on the center line of the workpiece
+    to select all the nodes on that edge, then click on <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/>  button to apply the settings.</p>
+  <p> </p>
+  <p>Click on<strong> Top die</strong> in operation tree as there is no Movement, Property and Initialize settings to vary for workpiece object.</p>
+  <h3>Defining Top die general object data</h3>
+  <p>Keep the Top die default temperature as <strong>20</strong>°C and confirm the object type selected is <strong>rigid </strong>and selected as Primary die as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_13_Top_die_object_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>13.</a> Click
+    on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> button to define the top die geometry.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_13_Top_die_object_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0013.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die object window</p>
+  <h3>Import and edit the Top die geometry</h3>
+  <p>Import the top die geometry from an igs file. Click the <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> (Load geometry from library) button and  open (import) the file “<strong>Flat_dies_SI</strong><strong>.</strong><strong>igs</strong>”.
+    This can also be imported using <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> (Load geometry from a file) button by browsing the geometry file path. The geometry for billet is located in DEFORM installation folder  \2D\Labs
+    directory.</p>
+  <p>Because there is more than one geometry in this file, you will need to select <img src="{{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}"/> for popup informing this to open geometry automatically for editing the geometry. (See <a href="gear_blank_si_lab1.htm#Fig_L1_14_Top_die_Geometry_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>14.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_14_Top_die_Geometry_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0014.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Top die Geometry window</p>
+  <p> </p>
+  <p>Geometry editor will be opened, select the <img src="{{ '/assets/icons/pre_icons/mo_xyr_button.jpg' | relative_url }}"/> button above the geometry table to activate all geometry editing tool bar options. Use <img src="{{ '/assets/icons/pre_icons/mo_area select.jpg' | relative_url }}"/> (Area select) icon, draw a box around the lower geometry to select it and press <strong>Delete </strong>keyboard button to keep only upper geometry (see <a href="gear_blank_si_lab1.htm#Fig_L1_15_Boundary_selection_from_Geometry_editor_for_top_die"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>15.</a>).
+    Selected geometry can also be deleted by selecting the boundary to delete using <img src="{{ '/assets/icons/pre_icons/mo_delete_selected.jpg' | relative_url }}"/> (Select deleted) icon.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_15_Boundary_selection_from_Geometry_editor_for_top_die"></a><img height="374" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0015.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Boundary selection from Geometry editor for top die</p>
+  <p> </p>
+  <p>It is necessary to visually check the geometry orientation on the part. Click on the <img src="{{ '/assets/icons/pre_icons/mo_show_inside.jpg' | relative_url }}"/> (Show inside) icon from top geometry tool bar to show the geometry orientation as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>16.</a>    Also select <img src="{{ '/assets/icons/pre_icons/mo_show_vertex_numbers_icon.jpg' | relative_url }}"/> (Show vertex numbers) icon to observe the direction of geometry boundary creation using numbering order of the geometry vertices, clockwise direction of creation
+    will have the geometry orientation inside. The shading / arrows of geometry orientation should be towards inside of the part. If it is towards outside, use the <img src="{{ '/assets/icons/pre_icons/mo_reverse_direction.jpg' | relative_url }}"/> (Reverse direction)
+    icon and click on the geometry boundary to be reversed as shown in  <a href="gear_blank_si_lab1.htm#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>16.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the geometry editing.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation"></a><img height="212" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0016.jpg' | relative_url }}" width="720"/></p>
+  <p> </p>
+  <p class="Fig_numb">Reversing the direction of the geometry orientation</p>
+  <p> </p>
+  <p>Click on the <img src="{{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}"/> button to open the Check and Correct Geometry menu. Change the <strong>Geometry open/close/auto</strong> type to Open and click the <img height="28" src="{{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}" style="cursor: nesw-resize;" width="111"/> button. You should receive a message that the geometry is legal as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_17_Check_and_correct_geometry_window_for_top_die_geometry"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>17.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> in poup and click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to exit the menu.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_17_Check_and_correct_geometry_window_for_top_die_geometry"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0017.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Check and correct geometry window for top die geometry</p>
+  <p> </p>
+  <p>The geometry checking tool should be used on every 2D geometry you bring into DEFORM, even if the geometry looks legal.</p>
+  <p>Click on <strong>Movement </strong>under Top die in operation tree as this is an isothermal simulation there is no need to generate mesh or assign material to top die.</p>
+  <h3>Assigning movement controls to top die</h3>
+  <p>The default mode is constant <strong>speed</strong>. Input a value of <strong>76.2</strong> mm/sec for the Constant value and confirm that the Direction is <strong>-Y </strong>as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_18_Top_die_movement_controls_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>18.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_18_Top_die_movement_controls_window"></a><img height="400" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0018.jpg' | relative_url }}" width="397"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Top die movement controls window</p>
+  <p> </p>
+  <p>Click on the <strong>Bottom die</strong> in operation tree as there is no changes to do in top die property window.</p>
+  <h3>Defining Bottom die general object data</h3>
+  <p>Keep the Bottom die default temperature <strong>20</strong>°C and confirm its object type is <strong>rigid</strong>. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> button to define the bottom die geometry.</p>
+  <h3>Creating bottom die geometry from geometry editor</h3>
+  <p>Click on the <img src="{{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}"/> button to define the bottom die geometry from geometry editor. Make sure XYR format is selected in geometry table. To define the geometry, enter the geometry points in table
+    form as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_19_Bottom_die_geometry_table_with_geometry"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>19.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_19_Bottom_die_geometry_table_with_geometry"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0019.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Bottom die geometry table with geometry</p>
+  <p> </p>
+  <p>These points will trace out the geometry in a counter clockwise fashion to ensure that the geometry orientation is on the inside of the geometry as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_20_Bottom_die_geometry_orientation"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>20.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_20_Bottom_die_geometry_orientation"></a><img height="500" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0020.jpg' | relative_url }}" width="352"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bottom die geometry orientation</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the geometry definition and click on <strong>Positioning </strong>in the operation tree to open the objects positioning window.</p>
+  <h3>Confirm position and generate contact</h3>
+  <p><strong>Confirm position</strong></p>
+  <p>The geometries should be in the correct position. Confirm that the workpiece is positioned on top of the bottom die and that the top die is positioned against the workpiece as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_21_Correct_objects_positioning"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>21.</a>    Further positioning is not required for this operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_21_Correct_objects_positioning"></a><img height="290" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0021.jpg' | relative_url }}" width="176"/></p>
+  <p> </p>
+  <p class="Fig_numb">Correct objects positioning</p>
+  <p> </p>
+  <p>Click on the <strong>Contact </strong>in operation tree to open the Inter-Object window, as there is no need of Scheduled positioning for this operation.</p>
+  <p> </p>
+  <p class="Note_text">Note: Scheduled positioning is explained in <a href="gear_blank_si_lab1.htm#Lab3_Sequential_3D_forge_operation">lab3</a>.</p>
+  <p> </p>
+  <p><strong>Inter-Object Relationships: Assign Friction; Generate contact</strong></p>
+  <p>DEFORM will automatically create default Master-Slave relationships using <img src="{{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}"/> button  create three relationships as shown in <a href="gear_blank_si_lab1.htm#Fig_l1_22_Inter_object_window_and_Objects_with_inter-object_contacts_display"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>22.</a> DEFORM
+    will create three relationships. Two where each tool is the master and the workpiece is the slave. The third relationship will be a (Workpiece – Workpiece) relationship. This relationship will allow self contact of the workpiece if a fold develops.</p>
+  <p> </p>
+  <p>Click on the <img height="21" src="{{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}" width="56"/> button for one of the relationships. Under the Friction <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Value box, use the Constant
+    drop down menu to select <strong>Hot </strong><strong>forging </strong><strong>(lubricated)</strong><strong> 0.3</strong>. If you have experience that suggests that a different friction value would give better results for your process, you can enter
+    that value directly in this field. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to exit the menu. Click on <img src="{{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}"/> to apply the friction value to the two
+    other relationships.</p>
+  <p> </p>
+  <p>Next, assign contact. Initial contact conditions provide a starting condition for the finite element solver. After the solver calculation starts, contact is automatically updated.</p>
+  <p> </p>
+  <p>The <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> (Tolerance) button calculates tolerances for contact generation. Click the <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/>  (Tolerance) button followed
+    by the <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}"/>  button (at bottom of the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See <a href="gear_blank_si_lab1.htm#Fig_l1_22_Inter_object_window_and_Objects_with_inter-object_contacts_display"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>22.</a>    for how the Inter object window looks and contact generation is displayed in graphics window. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to set primary die stroke stopping controls.</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_l1_22_Inter_object_window_and_Objects_with_inter-object_contacts_display"></a><img height="341" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0022.jpg' | relative_url }}" width="600"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inter object window and Objects with inter-object contacts display</p>
+  <h3>Set Primary die stroke</h3>
+  <p>Input stopping criteria that will stop the simulation when the tool has moved 158.75 mm. Input <strong>158.75</strong> into the <strong>Max die stroke</strong> (Y direction) field as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_23_Primary_die_displacement_Max_die_stroke_stopping_controls"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>23.</a> Click
+    on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue with assigning Step controls.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_23_Primary_die_displacement_Max_die_stroke_stopping_controls"></a><img height="320" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0023.jpg' | relative_url }}" width="454"/></p>
+  <p> </p>
+  <p class="Fig_numb">Primary die displacement (Max die stroke) stopping controls</p>
+  <h3>Assign simulation controls</h3>
+  <p>Select the <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> (Switch to expert mode) icon (from header tool bar) to access advanced simulation controls settings because remesh criteria should be defined for this simulation.</p>
+  <p> </p>
+  <p>Observe the simulation title updated to &quot;<strong>upset</strong>&quot; as renamed in operation editor in <strong>Main </strong>tab. Go to the <strong>Simulation Steps</strong> tab.</p>
+  <p> </p>
+  <p>DEFORM uses a two-step process to establish the total punch movement distance:</p>
+  <p> </p>
+  <p>On the <strong>Simulation Steps</strong> tab, the number of steps and save interval is defined. On the <strong>Step Increment</strong> tab, the time or tool movement per time step is defined. If no other stopping controls are defined, total simulation
+    length will be approximately the <strong>step increment</strong> * <strong>number of steps</strong>.</p>
+  <p> </p>
+  <p>For this operation, the tool needs to move 158.75mm to produce the desired shape. For a simple upset like this, 75 steps should be sufficient. Change the <strong>Number of Simulation Steps</strong> to <strong>75</strong>. Change the<strong> Step Increment to Save</strong>    to <strong>5</strong> as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_24_Advanced_Step_controls_Simulations_steps_tab"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>24.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_24_Advanced_Step_controls_Simulations_steps_tab"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0024.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced Step controls Simulations steps tab</p>
+  <p> </p>
+  <p>Next, go to<strong> Step Increment</strong>. The die displacement value is the total distance you want the tool to travel (158.75mm) divided by the number of steps (75). Use the With <strong>Die Displacement</strong> option to define a die displacement
+    of <strong>2.1166 mm</strong> (158.75 / 75) as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_25_Advanced_Step_controls_Step_increment_tab"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>25.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_25_Advanced_Step_controls_Step_increment_tab"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0025.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced Step controls Step increment tab</p>
+  <p> </p>
+  <p>On the <strong>Stop </strong>tab, optional specific stopping control can be specified, which can be based on:</p>
+  <p><span style="margin-left:4px;">- forming load on object 2 (the punch or moving die)</span></p>
+  <p><span style="margin-left:4px;">- total movement of object 2</span></p>
+  <p><span style="margin-left:4px;">- reac</span>hing a critical distance or measurement between points on two different tools.</p>
+  <p> </p>
+  <p>Stopping controls reflect the<strong> Primary die displacement</strong> (Y direction) field <strong>158.75</strong> mm defined in stopping controls window earlier in guided mode.</p>
+  <p> </p>
+  <p>Go to the <strong>Remesh </strong><strong>Criteria </strong>Tab. The Interference Depth value should be half of a small element edge length. Measure the length of one of the smaller elements, divide by 2 and place the value in the interference depth
+    field (see <a href="gear_blank_si_lab1.htm#Fig_L1_26_Advanced_Step_controls_Remesh_criteria_tab"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>26.</a>). You should get a number around 0.5 mm. A remesh will
+    be triggered if one of the tools is able to penetrate into the workpiece by a distance of <strong>0.5 </strong>mm.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_26_Advanced_Step_controls_Remesh_criteria_tab"></a><img height="320" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0026.jpg' | relative_url }}" width="454"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced Step controls Remesh criteria tab</p>
+  <p> </p>
+  <p>Now click on <strong>Movement </strong>under <strong>Top </strong>die in operation tree to check the top die movement preview because step and movement definition must be defined before previewing movement.</p>
+  <h3>Confirm Movement</h3>
+  <p>Click on the <img src="{{ '/assets/icons/pre_icons/mo_preview_icon.jpg' | relative_url }}"/> (Preview object movement) button in the lower right hand corner of the screen (see <a href="gear_blank_si_lab1.htm#Fig_L1_18_Top_die_movement_controls_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>18.</a>).
+    Click on the <img height="24" src="{{ '/assets/icons/pre_icons/mo_movement_play_button.jpg' | relative_url }}" width="42"/> (play) button (see <a href="gear_blank_si_lab1.htm#Fig_L1_27_Top_die_movement_preview_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>27.</a>)
+    and watch the top die move through the workpiece. This tool will confirm that your tool is moving in the correct direction and that you have enough steps to complete the stroke.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_27_Top_die_movement_preview_window"></a><img height="320" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0027.jpg' | relative_url }}" width="383"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top die movement preview window</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to exit the menu and click on <strong>Generate DB</strong> in the operation tree to go for DB generation.</p>
+  <h3>Data checking and database generation</h3>
+  <p>Click on the <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/> button as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_28_DB_generation_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>28.</a>    The data checking system will confirm that all of the data is appropriate for running a simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_28_DB_generation_window"></a><img height="325" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0028.jpg' | relative_url }}" width="389"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">DB generation window</p>
+  <p> </p>
+  <p>Red marks indicate missing or incorrect data that will prevent a simulation from running. It is necessary to correct the error before the database can be generated.</p>
+  <p> </p>
+  <p>Yellow marks indicate data which may be suspect and should be reviewed. These should be investigated carefully, as they might result in system instability or erroneous (incorrect) results.</p>
+  <p> </p>
+  <p>Review the data checking information. If there are no yellow or red marks, click the <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> button.</p>
+  <p>You should look for the words: <strong>Database has been generated</strong>. When you see this you can be confident that your inputs have been saved to the database and you are now ready to run the simulation.</p>
+  <p> </p>
+  <p>Click on the MO <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h3>Run and monitor a simulation</h3>
+  <p>Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option
+    and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_29_Running_the_simulation_from_MO_simulation_mode"></a><img height="374" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0029.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Running the simulation from MO simulation mode</p>
+  <p> </p>
+  <p>Simulation status update in simulation jobs, simulation and log messages can be observed from other tabs.</p>
+  <p> </p>
+  <p>The graphics region will display Simulation graphics. In Simulation graphics you can observe the progress of a simulation as it is running, by default it updates the last saved step. To update the current step user has to select pulldown button next
+    to Update button and select &quot;Current step&quot;.</p>
+  <p> </p>
+  <p>It is good practice to watch the first few steps of a simulation in simulation graphics mode to confirm that the tool movements and workpiece deformation are proceeding as expected.</p>
+  <p> </p>
+  <p>Limited view controls are available in the simulation graphics view. In addition, the following zoom controls are available:</p>
+  <p style="margin-left: 8px">- <strong>ctrl </strong>– <strong>left </strong><strong>mouse </strong>: window zoom</p>
+  <p style="margin-left: 8px">- <strong>alt </strong>– <strong>left </strong><strong>mouse </strong>: dynamic zoom</p>
+  <p style="margin-left: 8px">- <strong>shift </strong>– <strong>left </strong><strong>mouse </strong>: pan</p>
+  <p>User can also change the Hot keys under <strong>Options <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Preferences <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Hot Key.</strong></p>
+  <p>These functions can be used to better view details of the workpiece as the simulation is running.  When the simulation is completed, the image in the Simulation Graphics viewer will disappear. The message file (default view in main window) and log file
+    will indicate that the simulation has been completed on the last line.</p>
+  <p>When the simulation is completed, click the <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> Mode button to review results.</p>
+  <h3>Review results in Post Mode</h3>
+  <p>The graphics window displays the results of the calculation.</p>
+  <p> </p>
+  <p>The saved steps are listed in a step browser at the bottom of the graphics window as shown in <a href="gear_blank_si_lab1.htm#Fig_L1_30_Step_browser_for_upset_operation"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>30.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_30_Step_browser_for_upset_operation"></a><img height="146" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0030.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step browser for upset operation</p>
+  <p> </p>
+  <p>The play controls can be used to:</p>
+  <p><img height="20" src="{{ '/assets/icons/pre_icons/mo_preview_play_button.jpg' | relative_url }}" width="21"/> <strong>Play forward</strong>: Displays the steps one by one until the last step is displayed from the current selected step.</p>
+  <p><img height="21" src="{{ '/assets/icons/pre_icons/mo_preview_stop_button.jpg' | relative_url }}" width="23"/> <strong>Stop </strong>: Stops the playing (forward or backward) of steps.</p>
+  <p><strong><img src="{{ '/assets/icons/pre_icons/mo_preview_one step_forward_button.jpg' | relative_url }}"/> Single step forward</strong>: Move to the next saved step in the step list.</p>
+  <p><img src="{{ '/assets/icons/pre_icons/mo_preview_last_step_button.jpg' | relative_url }}"/> <strong>Jump to the end</strong>: Fast forward to the last saved step in the step list.</p>
+  <p><img src="{{ '/assets/icons/pre_icons/mo_preview_play_back_button.jpg' | relative_url }}"/> <strong>Play backward</strong>: Displays the steps one by one in reverse order until the first step is displayed from the current selected step.</p>
+  <p><img src="{{ '/assets/icons/pre_icons/mo_preview_one_step_back_button.jpg' | relative_url }}"/> <strong>Single step backward</strong>: Rewind the step list back to one saved step.</p>
+  <p><strong><img src="{{ '/assets/icons/pre_icons/mo_preview_last_step_button.jpg' | relative_url }}"/> Jump to the beginning</strong>: Rewind the step list back to the first saved step.</p>
+  <p> </p>
+  <p>Play through the simulation.</p>
+  <p><em><strong>Load – stroke plot</strong></em></p>
+  <p>Click the <img src="{{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}"/> (load-stroke) icon in the post tools. Plot the<strong> Y load</strong> vs. <strong>Stroke </strong>for the top die by selecting <img src="{{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}"/> button. The graph displays load at any point through the simulation (see <a href="gear_blank_si_lab1.htm#Fig_L1_31_Velocity_vector_plot_with_Load_stroke_graph_for_top_die"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>31</a>.).
+    The vertical step tracer bar indicates the current step. Clicking at any point on the load stroke plot (or any graph in DEFORM) will display the results at that step. The graph may be hidden or removed by right clicking on the graph item at the bottom
+    of the tree.</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to exit from Load stroke window to plot the state variables.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_31_Velocity_vector_plot_with_Load_stroke_graph_for_top_die"></a><img height="377" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0031.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Velocity vector plot with Load stroke graph for top die</p>
+  <p> </p>
+  <p><strong>State variable plots</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Velocity plot</strong></p>
+    </li>
+  </ul>
+  <p>Select step <strong>75 </strong>(or any other intermediate step on the step selection bar). Click the <img src="{{ '/assets/icons/post_icons/mo_vel_sv_icon.jpg' | relative_url }}"/> (Total Velocity)  state variable icon in the Post tools State Variables  short
+    cuts. Click the <img src="{{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}"/> icon to open the state variable properties dialog. Select the <strong>Vector </strong><strong>Plot </strong>display type and click  <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> button to apply the changes. The instantaneous velocities are displayed as vectors at the selected time step. Colors are included to highlight the magnitude of the velocity. (See  <span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>31.)</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Effective strain plot</strong></p>
+    </li>
+  </ul>
+  <p>Select <strong>Strain </strong><strong>Effective</strong><strong> </strong>from state variable dialog <img src="{{ '/assets/icons/post_icons/mo_deformation_icon.jpg' | relative_url }}"/> (Deformation) variables list. This represents the amount of deformation during
+    the simulated process. In cold forming, this is related to work hardening.</p>
+  <p> </p>
+  <p>Play through the simulation and watch how strain evolves as the part forms. The state variable scales to the maximum value anywhere in the simulation.</p>
+  <p> </p>
+  <p>Select <strong>Local </strong>scaling and click <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/>. Play through the simulation. At each step, the state variables rescale to the maximum value at that step.</p>
+  <p> </p>
+  <p>Select <strong>Solid </strong><strong>display </strong>and click <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/>. The contour borders become sharp edges (see <a href="gear_blank_si_lab1.htm#Fig_L1_32_Effective_strain_state_variable_contour_at_local,_global_scale"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab1">Fig. L1.</span>32.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L1_32_Effective_strain_state_variable_contour_at_local,_global_scale"></a><img height="221" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0032.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Effective strain state variable contour at local, global scale</p>
+  <p> </p>
+  <p>When you are finished viewing results, click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to exit from State variable window. The scale and plot type can also be changed from right click options on contour bar.</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}"/> MO mode button to switch to Pre mode to continue with the Next lab.</p>
+
+</body></html>

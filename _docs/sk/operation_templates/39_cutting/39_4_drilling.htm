@@ -1,0 +1,335 @@
+---
+lang: sk
+title: "39.4. 3D Drilling"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.11.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>39.4. 3D Drilling</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>39.4. 3D Drilling</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/39_cutting/39_4_3d_drilling.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/39_Cutting/Setting_up_3D_Machining_Models.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/39_Cutting/39_3_3D_Milling.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="39.4. 3D Drilling">
+        <span>39.4. 3D Drilling</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>39.4. Drilling</h1>
+  <p><a href="#39_4_1_System_Summary">39.4.1. System Summary</a></p>
+  <p><a href="#39_4_2_Adding_Drilling_Operation">39.4.2. Adding Drilling Operation</a></p>
+  <p><a href="#39_4_3_Process_page">39.4.3. Process</a> </p>
+  <p><a href="#39_4_4_Material_List">39.4.4. Material List</a></p>
+  <p><a href="#39_4_5_Tool">39.4.5. Tool</a> </p>
+  <p style="margin-left: 40px"><a href="#39_4_5_1_Insert_Geometry">39.4.5.1. Insert Geometry</a> </p>
+  <p style="margin-left: 40px"><a href="#39_4_5_2_Coating_Material">39.4.5.2. Coating Material</a> </p>
+  <p style="margin-left: 40px"><a href="#39-4_5_3_Tool_material_">39.4.5.3. Tool material</a> </p>
+  <p style="margin-left: 40px"><a href="#39_4_5_4_Tool_Mesh">39.4.5.4. Tool Mesh</a></p>
+  <p style="margin-left: 40px"><a href="#39_4_5_5_Tool_BCC">39.4.5.5. Tool BCC</a></p>
+  <p><a href="#39_4_6_Workpiece_">39.4.6. Workpiece</a> </p>
+  <p style="margin-left: 40px"><a href="#39_4_6_1_Workpiece_Geometry">39.4.6.1. Workpiece Geometry</a> </p>
+  <p style="margin-left: 40px"><a href="#39_4_6_2_Workpiece_Material_Selection">39.4.6.2. Workpiece Material Selection</a></p>
+  <p style="margin-left: 40px"><a href="#39_4_6_3_Workpiece_Mesh_Generation">39.4.6.3. Workpiece Mesh Generation</a></p>
+  <p style="margin-left: 40px"><a href="#39_4_6_4_Workpiece_BCC">39.4.6.4. Workpiece BCC</a></p>
+  <p><a href="#39_4_7_Control">39.4.7. Control</a></p>
+  <p><a href="#39_4_8_Tool_Wear">39.4.8. Tool Wear</a></p>
+  <p><a href="#39_4_8_9_Contact">39.4.9. Contact</a></p>
+  <p><a href="#39_4_10_Step_Control">39.4.10. Step Control</a></p>
+  <p><a href="#39_4_11_Generate_DB">39.4.11. Generate DB</a></p>
+  <h2><a id="39_4_1_System_Summary"></a>System Summary</h2>
+  <p>Due to the number of revolutions of a drill necessary to establish characteristic behavior, drilling simulations in DEFORM are time consuming. Therefore, every effort should be made to optimize problem size. User can optimize the drilling simulation
+    set up with considerations including keeping the workpiece as small as possible while capturing geometry (both in diameter and thickness), using the largest element which can adequately capture chip geometry, and possibly pre-shaping the workpiece
+    to eliminate the necessity to simulate the transient point penetration before the drill reaches full depth. System provides options to model pre-shape workpiece considering the drill tip geometry.</p>
+  <h2><a id="39_4_2_Adding_Drilling_Operation"></a>Adding Drilling Operation</h2>
+  <p>To set up Drilling process user need to add the 3D cutting template and select “<strong>Drilling</strong>” option in the “Process” page as shown in <a href="#Fig_39_4_1_Drilling_type_process_page"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>1.</a>    For more details on how to add problem please refer <a href="39_2_3d_turning.htm#39_2_1_How_to_add_3D_Cutting_Operation">39.2.1. How to add 3D Cutting Operation</a>.</p>
+  <p> </p>
+  <h2><a id="39_4_3_Process_page"></a>Process page</h2>
+  <p>The process parameters to setup Drilling process are as shown in <a href="#Fig_39_4_1_Drilling_type_process_page"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>1.</a></p>
+  <p><strong>Environment Heat Transfer:</strong> Environment temperature and convection co-efficient are defined under this tab, for more information on defining these parameters refer <a href="39_2_3d_turning.htm#39_2_4_Process_page">39.2.4. Turning Process</a>.</p>
+  <p><strong>Cutting speed (v):</strong> It is defined as the speed at which the tool moves. The cutting speed can be defined as mm/sec or m/min in SI and in/sec or ft/min in English units.</p>
+  <p><strong>Rotation speed:</strong> It defines the rotational speed of tool. The rotation speed can be defined in rpm and radians/sec.</p>
+  <p><strong>Feed rate (f) :</strong> It is defined as the distance the tool travels during one revolution of the workpiece. This can be defined as mm/rev or mm/sec in SI and in/rev or in/sec in English units.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_1_Drilling_type_process_page"></a><img src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0001.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Drilling type process page</p>
+  <h2><a id="39_4_4_Material_List"></a>Material List </h2>
+  <p>In this Material List page, user can load a material from the library or keyword or database file using the <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> options as shown in <a href="#Fig_39_4_2_Assigning_the_Material_to_Material_list"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>2.</a> The materials loaded here can be assigned to the objects from their respective material page. User
+    can also add a new material using <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button and define its properties. User can use <img src="{{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}"/> button to delete the loaded material.
+    User can also save the material using <img src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}"/> options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_2_Assigning_the_Material_to_Material_list"></a><img height="372" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning the Material to Material list</p>
+  <h2><a id="39_4_5_Tool"></a>Tool </h2>
+  <p>In this Tool page, the user can define the temperature of the tool object. We can import the tool object using the <img src="{{ '/assets/icons/pre_icons/mo_import_object_button.jpg' | relative_url }}"/> button. If user wants to calculate the thermal data for tool
+    object, select the “<strong>Calculate tool temperature</strong>” check box and we can observe that mesh options for tool are enabled so that we can mesh the tool to calculate temperature distribution. (See <a href="#Fig_38_4_3_Tool_Page"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>3.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_38_4_3_Tool_Page"></a><img height="325" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0003.jpg' | relative_url }}" width="449"/></p>
+  <p class="Fig_numb">Tool Page</p>
+  <h3><a id="39_4_5_1_Insert_Geometry"></a>Insert Geometry </h3>
+  <p>In this Insert Geometry page (see <a href="#Fig_39_4_4_Insert_Geometry_Page"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>4.</a>), the user can define the tool geometry using the <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/>. The user can also import the geometry using the Import geometry  <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> options. User can use “Advanced”
+    option to define the number of flutes on drill bit tool (see <a href="#Fig_39_4_6_Advanced_options_for_Drill_bit_geometry"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>6.</a>), which is used in feed calculations. </p>
+  <p style="text-align: center"><a id="Fig_39_4_4_Insert_Geometry_Page"></a><img height="325" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0004.jpg' | relative_url }}" width="471"/></p>
+  <p> </p>
+  <p class="Fig_numb">Insert Geometry Page</p>
+  <p><br/>
+    <strong>Defining Tool Geometry using Define Primitive option:</strong></p>
+  <p>Define Primitive will lead to the ‘Drillbit Primitive menu’ as shown in <a href="#Fig_39_4_5_Drill_bit_primitive_page"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>5.</a> After defining the geometry parameters of the drill bit user can
+    click on <img src="{{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}"/> button to create drill bit geometry. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_5_Drill_bit_primitive_page"></a><img height="372" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0005.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Drill bit primitive page</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_39_4_6_Advanced_options_for_Drill_bit_geometry"></a><img height="375" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0006.jpg' | relative_url }}" width="541"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced options for Drill bit geometry</p>
+  <h3><a id="39_4_5_2_Coating_Material"></a>Coating Material </h3>
+  <p>User can apply coating to tool insert by defining coating layer and its thickness in “<strong>Coating Material</strong>” page. User can define the coating layer material and its thickness by clicking on <img height="21" src="{{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}" width="21"/>  button as shown in the <a href="#Fig_39_4_7_Coating_Material_Page"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>7.</a> If user wants to delete any layer, then user must select the respective layer and click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_delete_icon.jpg' | relative_url }}" width="21"/> button.</p>
+  <p><br/>
+    <strong>Extract Coating Info</strong>: After Generating the coating, we can extract the coating info using this button.</p>
+  <p><strong>Delete Coating</strong>: We can also delete the Costing layers using this button. </p>
+  <p>Using the “<strong>Preserve state variables and boundary conditions</strong>” check box the user can create the coating layer without losing the state variable and boundary conditions data of the tool.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_7_Coating_Material_Page"></a><img src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0007.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Coating Material Page</p>
+  <h3><a id="39-4_5_3_Tool_material_"></a>Tool material </h3>
+  <p>In material page, all the materials added to material list are displayed as shown in <a href="#Fig_39_4_8_Assigning_the_Tool_Material"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>8.</a> User can select the required material to assign
+    it to respective object. If the desired material is not available in the list, then the user can load the material in object material page using “Import material” data from a File <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> or using “Load form Library” option <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/>. User can also create new material if the material is not available in DEFORM library using <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/>. User can delete the material from list using <img src="{{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}"/> or edit the material data using <img height="21" src="{{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}" width="56"/>. Modified /
+    newly defined material can be saved using <img src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}"/>. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_8_Assigning_the_Tool_Material"></a><img src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0008.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Assigning the Tool Material</p>
+  <h3><a id="39_4_5_4_Tool_Mesh"></a>Tool Mesh </h3>
+  <p>User can generate mesh for the tool by defining relative or absolute mesh size data as shown in the <a href="#Fig_39_4_9_Tool_Mesh_Generation_using_relative_mesh_size"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>9.</a> &amp; <a href="#Fig_39_4_10_Tool_Mesh_Generation_using_absolute_mesh_size"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>10.</a>    It also provides the preview of the mesh when we click on “Preview Mesh” option. Cutting edge information being part of the insert data, the wizard automatically applies finer mesh near the cutting zone. See <a href="#Fig_39_4_9_Tool_Mesh_Generation_using_relative_mesh_size"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>9.</a>    to view meshed drill bit.</p>
+  <p><br/>
+    <strong>Relative Mesh Method:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Target number of elements:</strong> The number of elements to be generated for an object can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Size Ratio: </strong>It is the size ratio between the largest element edge length to smallest element edge length.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_9_Tool_Mesh_Generation_using_relative_mesh_size"></a><img height="372" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0009.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Tool Mesh Generation using relative mesh size</p>
+  <p><br/>
+    <strong>Absolute Mesh Method :</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Minimum element size: </strong>Feed rate automatically calculates the minimum element size of the mesh to be generated which calculates the Number of elements value automatically as shown in the <a href="#Fig_39_4_10_Tool_Mesh_Generation_using_absolute_mesh_size"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>10.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_10_Tool_Mesh_Generation_using_absolute_mesh_size"></a><img height="325" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0010.jpg' | relative_url }}" width="471"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Tool Mesh Generation using absolute mesh size</p>
+  <h3><a id="39_4_5_5_Tool_BCC"></a>Tool BCC </h3>
+  <p>In this BCC Page, the user can define the Thermal BCC like “Heat Exchange with Environment” and “Temperature”. The default BCCs are assigned automatically after generating the mesh as shown in the <a href="#Fig_39_4_11_Default_Heat_exchange_BCC"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>11.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_11_Default_Heat_exchange_BCC"></a><img height="372" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0011.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Default Heat exchange BCC</p>
+  <h2><a id="39_4_6_Workpiece_"></a>Workpiece </h2>
+  <p>In this Workpiece page, the user can define the object type and set its initial temperature. Plastic object type is selected by default as shown in <a href="#Fig_39_4_12_Workpiece_Page"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>12.</a>,
+    if user is interested to consider the effect of elastic properties then Elasto-plastic object type can be used. We can also import the object data using the <img src="{{ '/assets/icons/pre_icons/mo_import_object_button.jpg' | relative_url }}"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_12_Workpiece_Page"></a><img height="325" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0012.jpg' | relative_url }}" width="449"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Workpiece Page</p>
+  <h3 class="h3_39_3_6_"><a id="39_4_6_1_Workpiece_Geometry"></a>Workpiece Geometry </h3>
+  <p>In this Workpiece Geometry page, the user can define the workpiece geometry using the <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/>. The user can also import the geometry using the Import geometry <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/>, option.</p>
+  <h4><br/> Defining Workpiece Geometry using Define Primitive option</h4>
+  <p>“Define Primitive” will open ‘Workpiece Geo Primitive’ menu as shown in <a href="#Fig_39_4_13_Create_from_drill_tip_shape_workpiece_geometry"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>13.</a>  Template provides options to create Cylindrical
+    work piece or pre-shaped workpiece based on drill tip geometry. <a href="#Fig_39_4_13_Create_from_drill_tip_shape_workpiece_geometry"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>13.</a> and <a href="#Fig_39_4_14_Cylinder_workpiece_geometry"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>14.</a>    shows geometry parameters to create workpiece from drill tip shape and cylindrical workpiece.</p>
+  <p> </p>
+  <p><a id="Fig_39_4_13_Create_from_drill_tip_shape_workpiece_geometry"></a><img height="372" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0013.jpg' | relative_url }}" style="text-align: center;" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Create from drill tip shape workpiece geometry</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_14_Cylinder_workpiece_geometry"></a><img height="372" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Cylinder workpiece geometry</p>
+  <h3 class="h3_39_3_6_"><a id="39_4_6_2_Workpiece_Material_Selection"></a>Workpiece Material Selection</h3>
+  <p>In material page, all the materials added to material list are displayed as shown in <a href="#Fig_39_4_15__Assigning_the_material_for_the_workpiece"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>15.</a> User can select the required material
+    to assign it to respective object. If the desired material is not available in the list, then the user can load the material in object material page using “Import Material” data from a File <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> or using “Load form Library” option <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/>. User can also create new material if the material is not available in DEFORM library using  <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/>. User can delete the material from list using <img src="{{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}"/> or edit the material data using <img height="21" src="{{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}" width="56"/>. Modified /
+    newly defined material can be saved using <img src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}"/>, <img src="{{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}"/> .</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_15__Assigning_the_material_for_the_workpiece"></a><img height="296" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0015.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Assigning the material for the workpiece</p>
+  <p> </p>
+  <h3 class="h3_39_3_6_"><a id="39_4_6_3_Workpiece_Mesh_Generation"></a>Workpiece Mesh Generation</h3>
+  <p>The User can generate the mesh by defining relative or absolute mesh size data as shown in the <a href="#Fig_39_4_16_Workpiece_mesh_generation_using_relative_mesh_size"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>16.</a> &amp; <a href="#Fig_39_4_17_Workpiece_mesh_generation_using_absolute_mesh_size"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>17.</a>    It also provides the preview of the mesh when we click on <img src="{{ '/assets/icons/pre_icons/mo_preview_mesh_button.jpg' | relative_url }}"/> option.</p>
+  <p> </p>
+  <p><strong>Relative Mesh Method:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Target number of elements</strong>: The number of elements to be generated for an object can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation.</p>
+    </li>
+    <li>
+      <p><strong>Size Ratio</strong>: It is the size ratio between the largest element edge length to smallest element edge length. Meshed pre-shaped workpiece based on drill tip looks like as shown in <a href="#Fig_39_4_16_Workpiece_mesh_generation_using_relative_mesh_size"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>16.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_16_Workpiece_mesh_generation_using_relative_mesh_size"></a><img height="325" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0016.jpg' | relative_url }}" width="471"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece mesh generation using relative mesh size</p>
+  <p><br/>
+    <strong>Absolute Mesh Method:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Define size by percentage of feed:</strong> The percentage of feed will automatically calculate the minimum element size of the mesh.</p>
+    </li>
+    <li>
+      <p><strong>Minimum element size:</strong> It sets the minimum element size of the mesh to be generated which is calculated from the percentage of feed value.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_17_Workpiece_mesh_generation_using_absolute_mesh_size"></a><img height="372" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece mesh generation using absolute mesh size</p>
+  <p> </p>
+  <h3 class="h3_39_3_6_"><a id="39_4_6_4_Workpiece_BCC"></a>Workpiece BCC </h3>
+  <p>In this BCC Page, the user can define the Deformation and Thermal BCC (like Velocity, Heat Exchange with Environment and Temperature). The BCC data will be automatically assigned by default after generating the mesh as shown in the <a href="#Fig_39_4_18_Velocity_BCC_data_for_cylinder_geometry"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>18.</a>    and <a href="#Fig_39_4_19_Heat_Exchange_BCC_for_Create_from_drill_tip_shape_geometry"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>19.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_18_Velocity_BCC_data_for_cylinder_geometry"></a><img height="372" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0018.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Velocity BCC data for cylinder geometry</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_19_Heat_Exchange_BCC_for_Create_from_drill_tip_shape_geometry"></a><img height="372" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0019.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Heat Exchange BCC for Create from drill tip shape geometry</p>
+  <h2><a id="39_4_7_Control"></a>Control</h2>
+  <p>Using “Position objects” the tool can be positioned based on the feed rate and workpiece location. Various positioning options are available to position the objects as shown in <a href="#Fig_39_4_20_Object_positioning_options"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>20.</a>,
+    for more information on these options please refer <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm">19. Object Positioning</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_20_Object_positioning_options"></a><img height="267" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0020.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object positioning options</p>
+  <h2><a id="39_4_8_Tool_Wear"></a>Tool Wear</h2>
+  <p>User can turn on tool wear calculation using “<strong>Define model to calculate tool wear</strong>” check box. After turning on check box user can select the tool wear model and define its parameters as shown in the <a href="#Fig_39_4_21_Tool_Wear_page"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>21.</a>,
+    for more information on these options please refer <a href="../../pre_processor/20_inter-object_data_definition/20_4_tool_wear.htm">20.4. Tool Wear.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_21_Tool_Wear_page"></a><img height="325" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0021.jpg' | relative_url }}" width="430"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Tool Wear page</p>
+  <h2><a id="39_4_8_9_Contact"></a>Contact</h2>
+  <p>User radio button will be selected and relations also will be defined by default for 3D Cutting operation as shown in <a href="#Fig_39_4_22_Contact_page"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>22..</a> User can modify the value of
+    each relation by selecting it and clicking on <img height="21" src="{{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}" width="56"/>  button. User can click on <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/>  button to calculate
+    contact tolerance. User can click on <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}"/> to generate contact relation. User can turn on check box next to contact relation to define sticking contact.<br/> For more information please
+    refer <a href="../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm">20. Inter-Object Relations</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_22_Contact_page"></a><img height="350" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0022.jpg' | relative_url }}" width="463"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Contact page</p>
+  <h2><a id="39_4_10_Step_Control"></a>Step Control</h2>
+  <p>The user can define the step controls data using the Guided mode (<img src="{{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}"/>) as shown in the <a href="#Fig_39_4_23_Step_controls_page_in_Guided_Mode"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>23.</a>    The user can define the number of steps, step increment and step increment control. The Drill depth is available, so the simulation stops after reaching the defined depth.If user wants to use the advanced simulation controls than we can switch to
+    the Expert mode (<img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/>) as shown in the <a href="#Fig_39_4_24_Step_controls_page_in_Expert_Mode"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>24.</a> For more information
+    and description about options in Simulation controls please refer <a href="../../pre_processor/9_simulation_controls/9_simulation_controls.htm">9.Simulation Controls</a>. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_23_Step_controls_page_in_Guided_Mode"></a><img height="325" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0023.jpg' | relative_url }}" width="449"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step controls page in Guided Mode</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_24_Step_controls_page_in_Expert_Mode"></a><img height="500" src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0024.jpg' | relative_url }}" width="461"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Step controls page in Expert Mode</p>
+  <p> </p>
+  <h2><a id="39_4_11_Generate_DB"></a>Generate DB</h2>
+  <p><strong>Check Data</strong> <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/>:  It checks the Data. If Data is correct, we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before
+    generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.<br/>
+    <br/>
+    <strong>Generate Database </strong><img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/>: By clicking on this button, it generates the Database for the setup (See <a href="#Fig_39_4_25_Generate_DB_page"><span data-keyref="Chapter_39_4_Drilling">Fig. 39.4.</span>25.</a>).<br/>
+    <br/>
+    <strong>Append Key file : </strong>Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values
+    can be defined as .key file and only .key file can be changed, and simulation can be resubmitted.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_39_4_25_Generate_DB_page"></a><img src="{{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0025.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate DB page</p>
+  <p><br/>
+    <strong>Related Topics:</strong></p>
+  <p><a href="39_introduction_to_cutting.htm">39 Introduction to Cutting</a></p>
+  <p><a href="39_1_2d_cutting.htm">39.1. 2D Cutting</a></p>
+  <p><a href="39_2_3d_turning.htm">39.2. 3D Turning</a></p>
+  <p><a href="39_3_3d_milling.htm">39.3. 3D Milling</a></p>
+
+</body></html>

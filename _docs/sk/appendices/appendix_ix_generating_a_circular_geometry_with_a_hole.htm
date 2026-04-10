@@ -1,0 +1,140 @@
+---
+lang: sk
+title: "Appendix IX: Generating a Circular Geometry With a Hole"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix IX: Generating a Circular Geometry With a Hole</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appendix IX: Generating a Circular Geometry With a Hole</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/appendices/appendix_ix.css"/>
+<meta name="brsnext" value="Documentation_content/Appendices/Appendix_X_Meshing_an_object_with_multiple_material_group.htm"/><meta name="brsprev" value="Documentation_content/Appendices/Appendix_VIII_Preventing_leakage_of_nodes.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Appendix IX: Generating a Circular Geometry With a Hole">
+        <span>Appendix IX: Generating a Circular Geometry With a Hole</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Appendix IX: Generating a Circular Geometry With a Hole</h1>
+  <p><em>*From QT3 interface</em></p>
+  <p>This case involves the two features of generating a circular geometry and adding an internal hole. To create a circular geometry, go to the geometry window of the desired object.</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li>
+      <p>Click the Edit tab and select the Line-Arc format radio button as seen in <a href="#Fig_AIX_1_Setting_the_geometry_type_to_Line-Arc"><span data-keyref="Appendix_IX_Generating_a_Circular_Geometry_with_a_hole">Fig. AIX.</span>1.</a></p>
+    </li>
+    <li>
+      <p>Set the type to Arc.</p>
+    </li>
+    <li>
+      <p>The first point X1, Y1 is the start of the arc. The second point X2, Y2 is the center of the arc. The angle is the amount of sweep of the arc. Input the following values: (1,0) for X1, Y1; (0,0) for X2, Y2; and 360 for the angle.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AIX_1_Setting_the_geometry_type_to_Line-Arc"></a><img height="420" src="{{ '/assets/images/appendices/appendix_ix_generating_a_circular_geometry_with_a_hole/image0001.jpg' | relative_url }}" width="508"/></p>
+  <p> </p>
+  <p class="Fig_numb">Setting the geometry type to Line-Arc</p>
+  <p> </p>
+  <p style="margin-left: 40px">This will yield the result seen in <a href="#Fig_AIX_2_Generating_a_circular_geometry"><span data-keyref="Appendix_IX_Generating_a_Circular_Geometry_with_a_hole">Fig. AIX.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AIX_2_Generating_a_circular_geometry"></a><img height="300" src="{{ '/assets/images/appendices/appendix_ix_generating_a_circular_geometry_with_a_hole/image0002.jpg' | relative_url }}" width="303"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generating a circular geometry</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 3;" value="4">
+      <p>Increment the boundary number in the geometry window and select the second boundary (See <a href="#Fig_AIX_3_Incriminating_the_boundary_number_and_selecting_the_second_boundary"><span data-keyref="Appendix_IX_Generating_a_Circular_Geometry_with_a_hole">Fig. AIX.</span>3.</a>).</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AIX_3_Incriminating_the_boundary_number_and_selecting_the_second_boundary"></a><img height="400" src="{{ '/assets/images/appendices/appendix_ix_generating_a_circular_geometry_with_a_hole/image0003.jpg' | relative_url }}" width="484"/></p>
+  <p> </p>
+  <p class="Fig_numb">Incriminating the boundary number and selecting the second boundary</p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 4;" value="5">
+      <p>Set the geometry type to Arc and set the curve as follows (0.5,0) for the first point; (0,0) for the second point; and –360 as the angle.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 40px">At this point a mesh can be generated which will have a hole in the middle (See <a href="#Fig_AIX_4_A_circular_result_with_a_hole"><span data-keyref="Appendix_IX_Generating_a_Circular_Geometry_with_a_hole">Fig. AIX.</span>4.</a>).</p>
+  <p> </p>
+  <p class="Note_text"><span style="font-style:italic;"><strong>Note</strong>:</span></p>
+  <p class="Note_text"><span style="font-style:italic;">The exterior boundary was counter-clockwise while the interior boundary was clockwise.</span></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_AIX_4_A_circular_result_with_a_hole"></a><img height="300" src="{{ '/assets/images/appendices/appendix_ix_generating_a_circular_geometry_with_a_hole/image0004.jpg' | relative_url }}" width="305"/></p>
+  <p> </p>
+  <p class="Fig_numb">A circular result with a hole</p>
+  <p> </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../pre_processor/12_geometry_modelling/12_geometry_modelling.htm">12. Geometry Modelling</a></p>
+
+</body></html>

@@ -1,0 +1,213 @@
+---
+lang: en
+title: "57.1. DEFORM Data Analytics User Interface Overview"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "12.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>57.1. DEFORM Data Analytics User Interface Overview</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>57.1. DEFORM Data Analytics User Interface Overview</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/57_data_analytics/57_1_data_analytics.css"/>
+<meta name="brsnext" value="Documentation_content/57_Data_Analytics/57_2_DEFORM_Data_Analytics_Data_Table.htm"/><meta name="brsprev" value="Documentation_content/57_Data_Analytics/57_Introduction_to_Data_Analytics.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="57.1. DEFORM Data Analytics User Interface Overview">
+        <span>57.1. DEFORM Data Analytics User Interface Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>57.1. Data Analytics</h1>
+  <p><a href="#57_1_1_Opening_DEFORM_Data_analytics">57.1.1. How to open DEFORM Data analytics wizard</a></p>
+  <p><a href="#57_1_2_Layout">57.1.2. Layout</a></p>
+  <p><a href="#57_1_3_Tool_bar">57.1.3. Tool bar</a> </p>
+  <p><a href="#57_1_4_Work_area">57.1.4. Work area</a></p>
+  <p><a href="#57_1_5_Project_tree">57.1.5. Project tree</a></p>
+  <p><a href="#57_1_6_Property_editor">57.1.6. Property editor</a></p>
+  <p><a href="#57_1_7_General_workflow">57.1.7. General workflow</a></p>
+  <h2><a id="57_1_1_Opening_DEFORM_Data_analytics"></a>Opening DEFORM Data analytics </h2>
+  <p>Data analytics can be accessed from the DEFORM/v13.x folder by opening the “DEF_GUI_DA_64.EXE”. DEFORM Data analytics wizard will be opened, Clicking on <img src="{{ '/assets/icons/post_icons/mo_new_file_button.jpg' | relative_url }}"/> button will create a new DEFORM
+     Data analytics project as shown in the <a href="57_1_data_analytics.htm#Fig_57_1_1_Creating_a_new_data_analytic_project"><span data-keyref="Chapter_57_1_Data_Analyitics">Fig. 57.1.</span>1.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_1_1_Creating_a_new_data_analytic_project"></a><img height="372" src="{{ '/assets/images/data_analytics/57_1_data_analytics/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Creating a new data analytic project</p>
+  <p> </p>
+  <h2><a id="57_1_2_Layout"></a>Layout</h2>
+  <p>DEFORM Data Analytics is divided into the following areas as shown in the<a href=""> <span data-keyref="Chapter_57_1_Data_Analyitics">Fig. 57.1.</span>2.</a></p>
+  <p><br/>
+    <strong>Work area</strong>:  The work area is where tabular data is displayed and edited.  Plots are also displayed in this area.</p>
+  <p><strong>Project Tree</strong>:  Unlike many DEFORM project trees, which guide users through a setup process, the DEFORM Data Analytics project tree provides an outline of the data. It lists each data table and for each table it lists the data, model
+    and expression columns.</p>
+  <p><strong>Property Editor</strong>: The property editor allows the user to set properties of table columns and plots.</p>
+  <p><strong>Message area</strong>:  The Message are displays system information or errors related to the setup. The message area also shows the equation of a model (if appropriate) and statistics about the goodness of the fit. The text in the message area
+    can be copied and pasted into a text editor.</p>
+  <p><strong>Tool bar</strong>:  The toolbar provides various icon buttons for file saving and loading, and plotting data. For more information refer <a href="#57_1_2_1_Tool_bar_options">57.1.2.1. Tool bar options.</a></p>
+  <p style="text-align: center"><a id="Fig_57_1_2_Data_analytics_layout"></a><img height="374" src="{{ '/assets/images/data_analytics/57_1_data_analytics/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Data analytics layout</p>
+  <p> </p>
+  <h2><a id="57_1_3_Tool_bar"></a>Tool bar </h2>
+  <p><strong>New File</strong> <img src="{{ '/assets/icons/pre_icons/mo_new_file_button.jpg' | relative_url }}"/>: The “New file” button is used to create the new DEFORM Data Analytics project.</p>
+  <p><strong>Open <img src="{{ '/assets/icons/pre_icons/mo_open_icon.jpg' | relative_url }}"/></strong>: The open button is used to open an existing DEFORM Data Analytics project.</p>
+  <p><strong>Save</strong> <img height="21" src="{{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}" width="22"/> : The save is used to store modifications made to the open DEFORM Data Analytics project.</p>
+  <p><strong>Action file import <img src="{{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}"/></strong> :  Imports data from a file into the selected data table.</p>
+  <p><strong>Import from multiple DB’s</strong> <img src="{{ '/assets/icons/pre_icons/mo_import_multiple_dbs_icon.jpg' | relative_url }}"/>: Imports data from multiple DEFORM simulation databases into the selected data table.</p>
+  <p> </p>
+  <p><strong>3d Response surface plot</strong> (<img src="{{ '/assets/icons/post_icons/doe_post_response surface_button.jpg' | relative_url }}"/> ): he 3d Response Surface Plot is only available when a trained model or evaluated expression column is selected. The model/expression
+    also must have at least 2 inputs. This plot shows a 3d surface representing the output as a function of 2 of the inputs. The inputs can be selected from the properties area.  The surface is created from the model. Dots show the location of the original
+    data (used to train a model). These can be used to see how well the surface fits the data.  <a href="#Fig_57_1_3_Response_surface_plots"><span data-keyref="Chapter_57_1_Data_Analyitics">Fig. 57.1.</span>3.</a> shows an example of this plot.</p>
+  <p> </p>
+  <p><strong>Contour Response surface plot</strong> (<img height="22" src="{{ '/assets/icons/post_icons/doe_post_response_contour_button.jpg' | relative_url }}" width="25"/>): The contour Response Surface Plot is only available when a trained model or evaluated expression
+    column is selected. The model/expression also must have at least 2 inputs. This plot shows a contour plot representing the output as a function of 2 of the inputs. The inputs can be selected from the properties area.  <a href="#Fig_57_1_3_Response_surface_plots"><span data-keyref="Chapter_57_1_Data_Analyitics">Fig. 57.1.</span>3.</a>    shows an example of this plot.</p>
+  <p> </p>
+  <p><strong>Line Plot</strong> (<img src="{{ '/assets/icons/post_icons/data_analytics_curve_plot_button.jpg' | relative_url }}"/>): The line plot plots one column of data against another. The data points as well as lines connecting the points are displayed. Multiple pairs
+    of data can be plotted for comparison. The line plot can also be used to plot response surfaces where the model has only one input (this is actually a response curve).</p>
+  <p> </p>
+  <p><strong>Scatter Plot</strong> (<img height="15" src="{{ '/assets/icons/post_icons/doe_post_scatter_plot_button.jpg' | relative_url }}" width="17"/>): The scatter plot plots one column of data against another without conntecting lines.  A line of best fit can optionally
+    be displayed.</p>
+  <p><br/>
+    <strong>Bar Plot</strong> (<img src="{{ '/assets/icons/post_icons/data_analytics_bar_chart_button.jpg' | relative_url }}"/>): The bar plot shows the value of each data point of a column as a bar.  Multiple columns can be selected to compare values.</p>
+  <p><br/>
+    <strong>Tornado Plot</strong> (<img src="{{ '/assets/icons/post_icons/doe_post_tornado_chart.jpg' | relative_url }}"/> ): The tornado chart compares all columns to a selected column. The length of each bar shows a measure of the correlation between the data in each
+    column to the selected column. The bars are ordered from highly correlated (at the top) to uncorrelated (at the bottom).</p>
+  <p><br/>
+    <strong>Sensitivity Plo</strong>t (<img src="{{ '/assets/icons/post_icons/doe_post_sensitivity_plot_button.jpg' | relative_url }}"/>): The sensitivity plot also compares all columns to a selected column.  The correlation is shown as a slope of a line.</p>
+  <p><br/>
+    <strong>Histogram Plot</strong> (<img src="{{ '/assets/icons/post_icons/doe_post_histogram_button.jpg' | relative_url }}"/>): The histogram plot shows a count of values for one column of data in user specified ranges of values. This can provide a visual look at the
+    probability of a variable being within a certain range.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_1_3_Response_surface_plots"></a><img height="429" src="{{ '/assets/images/data_analytics/57_1_data_analytics/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Response surface plots</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_1_4_Visualization_plots"></a><img height="476" src="{{ '/assets/images/data_analytics/57_1_data_analytics/image0004.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">Visualization plots</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_1_5_Analysis_plots"></a><img height="444" src="{{ '/assets/images/data_analytics/57_1_data_analytics/image0005.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Analysis plots</p>
+  <h2><a id="57_1_4_Work_area" height="0" width="0"></a>Work area</h2>
+  <p>The work area displays data tables and plots as shown in <a href="#Fig_57_1_6__Multiple_windows_opened_in_work_area"><span data-keyref="Chapter_57_1_Data_Analyitics">Fig. 57.1.</span>6.</a> When the work area contains multiple windows, the active window
+    is outlined in orange. The properties area will show the properties page for the active window. The active window is changed by clicking in a window.</p>
+  <p><br/> When multiple windows are shown in the work area, they can be arranged by selecting a layout from the <img src="{{ '/assets/icons/post_icons/data_analytics_multi_view_icon.jpg' | relative_url }}"/> icon on the tool bar. Each layout has a main screen (usually the
+    largest area or the upper right).</p>
+  <p><br/> Each window has a context menu (accessed by right mouse click). The items in the menu are:</p>
+  <p><br/>
+    <strong>Show title bar</strong>:  When selected, each window in the work area will have a title bar.  This menu item will change to Hide title bar.</p>
+  <p><br/> The title bar will contain a title and 2 icons.</p>
+  <p><br/>
+    <img src="{{ '/assets/icons/post_icons/data_analytics_relocate_window_icon.jpg' | relative_url }}"/> :  Clicking this icon will remove the window from the work area and allow it to be moved freely on the screen. To return a window to the work area, simply drag the
+    window over the work area. An area will open that the window can be dropped into.</p>
+  <p><br/>
+    <img src="{{ '/assets/icons/post_icons/data_analytics_close_window_icon.jpg' | relative_url }}"/> :  Clicking this icon will close the window.</p>
+  <p><br/>
+    <strong>Move to main screen</strong>:  Moves the window to the main screen.</p>
+  <p><br/>
+    <strong>Close view</strong>:  Closes the window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_1_6__Multiple_windows_opened_in_work_area"></a><img height="373" src="{{ '/assets/images/data_analytics/57_1_data_analytics/image0006.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Multiple windows opened in work area</p>
+  <h2><a id="57_1_5_Project_tree"></a>Project tree</h2>
+  <p>The project tree is divided into 2 parts as shown in <a href="#Fig_57_1_7_Project_tree"><span data-keyref="Chapter_57_1_Data_Analyitics">Fig. 57.1.</span>7.</a></p>
+  <p><br/>
+    <strong>Resources </strong>is a folder for storing and organizing reference material and data. This material can contain data tables, images, and links to external files.  Folders can be added to help organize this data.</p>
+  <p><br/>
+    <strong>Tables</strong> are used to analyze and model data. Each table entry in the tree shows the columns of data organized by “usage”. Different types of data usages are Data, Models and Expressions.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_57_1_7_Project_tree"></a><img height="455" src="{{ '/assets/images/data_analytics/57_1_data_analytics/image0007.jpg' | relative_url }}" width="550"/></p>
+  <p> </p>
+  <p class="Fig_numb">Project tree</p>
+  <p> </p>
+  <h2><a id="57_1_6_Property_editor"></a>Property editor</h2>
+  <p>The property editor is used to specify model controls, expression controls and descriptions that can be added at several tree levels to describe the project, table, etc. or to simply save additional information. The properties area will show the properties
+    page for the active window.</p>
+  <h2><a id="57_1_7_General_workflow"></a>General workflow</h2>
+  <p>Most DEFORM Data Analytics projects will follow the workflow outlined below. DEFORM Data Analytics does not require these step be performed in this order. (although some data needs to be entered before it can be analyzed or modeled).  Some steps may
+    be slipped altogether. A user may wish to enter some data, model it, then enter more data, etc. This is allowed.</p>
+  <p><br/>
+    <strong>Data Entry / Data Collection</strong>: Data is entered into a data table either by typing values directly into the table cells, or copying data from another file or another data table and pasting it into the table, or importing data from a
+    file.</p>
+  <p> </p>
+  <p><strong>Data Organization</strong>: The data used can be organized based on the data usage into different folders and files. User can organize the data by adding folders and files and importing data into them in Resources section. Data within a data
+    table can be copied/pasted from one column to another. Missing data can be filled in. Outliers can be marked for exclusion from modeling.</p>
+  <p> </p>
+  <p><strong>Data Analysis</strong>: Data within a data table can be visualized using various plots. The visualization may plots help a user to understand the behavior of various data defined and build model.</p>
+  <p> </p>
+  <p><strong>Data Modeling</strong>: Models can be defined to define input/output relationships between columns of data. Expressions can be created to transform data (i.e. units change, scale change or coordinate system change) or combine data.</p>
+  <p> </p>
+  <p><strong>Model Validation</strong>: After training the model, error statistics of the model can be viewed. Plots can be used to visualize the output of the model.</p>
+  <p> </p>
+  <p><strong>Prediction</strong>: Using the new model user can predict the output for new input values.</p>
+  <p> </p>
+
+</body></html>

@@ -1,0 +1,966 @@
+---
+lang: en
+title: "2D Induction Heating Lab 1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.7.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Induction Heating Lab 1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Induction Heating Lab 1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_induction_heating/2d_induction_heating_lab1.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_4_Induction_Heating/2D_Induction_Heating_Lab2.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_4_Induction_Heating/Setting_up_Induction_heating_in_DEFORM.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="2D Induction Heating Lab 1">
+        <span>2D Induction Heating Lab 1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>2D Induction Heating Lab 1</h1>
+  <p>Induction Heating Surface of 30mm Radius Bar: </p>
+  <p>This Induction Heating lab will show the proper way to set up an induction heating of a bar with a copper coil(s). The lab will allow the user to add the necessary material properties to conduct the electro-magnetic portion of the calculations.</p>
+  <p> </p>
+  <p><a href="#1_1_Creating_a_New_Problem">1.1. Creating a New Problem</a></p>
+  <p><a href="#1_2_Adding_Operation">1.2. Adding Operation</a></p>
+  <p><a href="#1_3_Selecting_Geometry_Type">1.3. Selecting Geometry Type</a></p>
+  <p><a href="#1_4_Simulation_Controls">1.4. Simulation Controls</a></p>
+  <p><a href="#1_5_Material_list">1.5. Material list</a></p>
+  <p><a href="#1_6_Adding_Objects">1.6. Adding Objects</a></p>
+  <p><a href="#1_7_Workpiece">1.7. Workpiece</a></p>
+  <p><a href="#1_8_Bottom_Coil">1.8. Bottom Coil</a></p>
+  <p><a href="#1_9_Lower_Middle_Coil">1.9. Lower Middle Coil</a></p>
+  <p><a href="#1_10_Middle_Coil">1.10. Middle Coil</a></p>
+  <p><a href="#1_11_Upper_Middle_Coil">1.11. Upper Middle Coil</a>    </p>
+  <p><a href="#1_12_Top_Coil">1.12. Top Coil</a></p>
+  <p><a href="#1_13_Air">1.13. Air</a></p>
+  <p><a href="#1_14_Contact">1.14. Contact</a></p>
+  <p><a href="#1_15_Stopping_controls">1.15. Stopping controls</a></p>
+  <p><a href="#1_16_Generate_DB">1.16. Generate DB</a></p>
+  <p><a href="#1_17_Running_Simulation">1.17. Running Simulation</a></p>
+  <p><a href="#1_18_Post Processing">1.18. Post Processing</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_a_New_Problem"></a>Creating a New Problem</h2>
+  <p>On a Windows machine, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear, as shown in <a href="#Fig_2DINDL1_1_DEFORM_GUI_Main_window"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_1_DEFORM_GUI_Main_window"></a><img height="438" src="{{ '/assets/images/applications/55_2_arc_welding/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">DEFORM GUI Main window</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File </strong><img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> <strong>New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_2DINDL1_2_New_Problem_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>2.</a>  Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and unit system as &quot;<strong>SI</strong>&quot; radio button in unit field. Define Problem Name as &quot; <strong>IH_Lab_2DFEM1a</strong>&quot; and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do
+    not turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new Problem
+    using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_2_New_Problem_page"></a><img height="417" src="{{ '/assets/images/applications/55_2_arc_welding/image0002.jpg' | relative_url }}" width="745"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem page</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use &quot;<strong>IH_Lab_2DFEM1a</strong>&quot;
+    as the project name. Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to continue to open the operation.</p>
+  <h2><a id="1_2_Adding_Operation"></a>Adding Operation</h2>
+  <p>Add <strong>2D </strong><strong>Forming </strong>operation from the Explorer Operations list. Add the operation by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button available next to 2D Forming Operation or
+    user can also add by drag and drop into the Operation Editor. When we add the 2D Forming operation, process settings window will open by default (see <a href="#Fig_2D_INDL1_3_Adding_2D_Forming_operation"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>3.</a>).</p>
+  <p style="text-align: center"><a id="Fig_2D_INDL1_3_Adding_2D_Forming_operation"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding 2D Forming operation</p>
+  <h2><a id="1_3_Selecting_Geometry_Type"></a>Selecting Geometry Type</h2>
+  <p>In this lab we will be using Axisymmetric geometries, so select <strong>2D </strong><strong>Axisymmetric </strong>radio button from geometry type page (see <a href="#Fig_2DINDL1_4_Geometry_type_selection"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>4.</a>),
+    then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> .</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_4_Geometry_type_selection"></a><img src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0004.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry type selection</p>
+  <h2><a id="1_4_Simulation_Controls"></a>Simulation Controls</h2>
+  <p>Switch to Expert mode by clicking on <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> icon, Enter Operation name as &quot; <strong>Initial Heat Up</strong>&quot; and be sure that <strong>Heat </strong><strong>transfer</strong>,
+    <strong>Transformation </strong>and <strong>Heating </strong>are checked with the <strong>Enthalpy</strong> type for <strong>Solidification </strong>and <strong>Induction </strong>as <strong>Heating </strong>method selected from drop boxes as shown
+    in <a href="#Fig_2DINDL1_5_Simulation_controls_-_Main_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_5_Simulation_controls_-_Main_page"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0005.jpg' | relative_url }}" width="545"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls - Main page</p>
+  <p> </p>
+  <p>Click on <strong>Simulation </strong>Steps <img height="25" src="{{ '/assets/icons/pre_icons/mo_simulation_step.jpg' | relative_url }}" width="25"/> , enter the <strong>Number </strong><strong>of </strong><strong>simulation </strong><strong>steps </strong>as <strong>1000 </strong>and
+    keep <strong>Step </strong><strong>increment </strong><strong>to </strong><strong>save </strong>as <strong>10 </strong>as shown in <a href="#Fig_2DINDL1_6_Simulation_controls_-_Main_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>6.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_6_Simulation_controls_-_Main_page"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0006.jpg' | relative_url }}" width="545"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls -Simulation steps page</p>
+  <p> </p>
+  <p>Click on <strong>Step </strong><strong>increment <img height="25" src="{{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }}" width="25"/></strong>, under the <strong>General </strong>tab, select the Solution step definition as <strong>Temperature </strong>and
+    define Initial time step as <strong>0.1</strong> sec, Max temperature change as <strong>5</strong>°C, Min time step as <strong>0.0001 </strong>sec and Max Time Step as <strong>0.25 </strong>sec as shown in <a href="#Fig_2DINDL1_7_Simulation_controls_-_Step_increment_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>7.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_7_Simulation_controls_-_Step_increment_page"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0007.jpg' | relative_url }}" width="545"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls - Step increment page</p>
+  <p> </p>
+  <p>Click on <strong>Stopping </strong><strong>criteria <img height="25" src="{{ '/assets/icons/pre_icons/mo_stopping_criteria.jpg' | relative_url }}" width="25"/> </strong>and enter <strong>Process</strong> <strong>duration </strong>as <strong>10 </strong>sec as shown
+    in <a href="#Fig_2DINDL_8_Simulation_controls_-_Stopping_criteria_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>8.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL_8_Simulation_controls_-_Stopping_criteria_page"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0008.jpg' | relative_url }}" width="545"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls - Stopping criteria page</p>
+  <p> </p>
+  <p>Click on <strong>Advanced</strong> options, under <strong>Frequency </strong>tab for <strong>Maxwell </strong><strong>equation </strong>solving select <strong>User- defined </strong>using drop-down list and define every <strong>10 </strong>step(s) as
+    shown in <a href="#Fig_2DINDL1_9_Simulation_controls_-_Advanced_option_Frequency_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>9.</a>, this is done so that electro-magnetic calculations are done for every 10
+    steps instead of each step. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Material Page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_9_Simulation_controls_-_Advanced_option_Frequency_page"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0009.jpg' | relative_url }}" width="545"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls - Advanced option Frequency page</p>
+  <h2><a id="1_5_Material_list"></a>Material list</h2>
+  <p>In Material list Window, click on <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> to Load material data from Library and select the category <strong>Steel </strong>and load material “<strong>JIS-S45C (Heat Treatment)</strong>”.
+    The material you added will show up as <strong>S45C-JAPAN</strong> with 3 phases beneath it. Create 2 new materials Click on  (<img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/>) and by double clicking the names change to <strong>Coil </strong>and
+    <strong>Air </strong>respectively (see <a href="#Fig_2DINDL1_10_Material_list"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>10.</a>). Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to
+    Austenite material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_10_Material_list"></a><img height="410" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0010.jpg' | relative_url }}" width="545"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material list</p>
+  <p> </p>
+  <p>In <strong>Austenite</strong> page, click on <strong>Elec./Mag.</strong> tab and define the <strong>Electrical </strong><strong>resistivity </strong>as <strong>1</strong>, <strong>Relative magnetic permeability</strong> as <strong>1</strong> and <strong>Relative </strong><strong>electrical </strong><strong>permitivity </strong>as
+    <strong>0</strong> as shown in <a href="#Fig_2DINDL1_11_Austenite-_Electro-magnetic_material_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>11.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Pearlite material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_11_Austenite-_Electro-magnetic_material_page"></a><img height="420" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0011.jpg' | relative_url }}" width="558"/></p>
+  <p> </p>
+  <p class="Fig_numb">Austenite- Electro-magnetic material page</p>
+  <p> </p>
+  <p>In <strong>Pearlite </strong>page, click on <strong>Elec./Mag.</strong> tab and select <strong>Electrical</strong> <strong>resistivity </strong>as <strong>Function of Temperature </strong>and define the below table and click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}"/> button.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 450px;margin-left: auto;margin-right: auto">
+    <colgroup>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"> </p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Temperature</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Resistivity</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1</p>
+        </td>
+        <td>
+          <p style="text-align: center">-100</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.000159</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">2</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.000159</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">3</p>
+        </td>
+        <td>
+          <p style="text-align: center">50</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.00019</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">4</p>
+        </td>
+        <td>
+          <p style="text-align: center">100</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.00022</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">5</p>
+        </td>
+        <td>
+          <p style="text-align: center">200</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.000296</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">6</p>
+        </td>
+        <td>
+          <p style="text-align: center">300</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.000395</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">7</p>
+        </td>
+        <td>
+          <p style="text-align: center">400</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.000495</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">8</p>
+        </td>
+        <td>
+          <p style="text-align: center">500</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.00063</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">9</p>
+        </td>
+        <td>
+          <p style="text-align: center">600</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.000766</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">10</p>
+        </td>
+        <td>
+          <p style="text-align: center">650</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.000849</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">11</p>
+        </td>
+        <td>
+          <p style="text-align: center">700</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.000932</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">12</p>
+        </td>
+        <td>
+          <p style="text-align: center">725</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.000975</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">13</p>
+        </td>
+        <td>
+          <p style="text-align: center">750</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.00102</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">14</p>
+        </td>
+        <td>
+          <p style="text-align: center">800</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.0011</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">15</p>
+        </td>
+        <td>
+          <p style="text-align: center">1300</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.00125</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Electrical resistivity plot should like as shown in <a href="#Fig_2DINDL1_12_Electrical_resistivity_plot"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>12.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_12_Electrical_resistivity_plot"></a><img height="550" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0012.jpg' | relative_url }}" width="458"/></p>
+  <p> </p>
+  <p class="Fig_numb">Electrical resistivity plot</p>
+  <p> </p>
+  <p>For <strong>Relative </strong><strong>magnetic </strong><strong>permeability </strong>select <strong>Function of Temperature</strong> and define the below table and click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}" width="74"/> button.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 450px;margin-left: auto;margin-right: auto">
+    <colgroup>
+      <col style="width: 125px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 175px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"> </p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Temperature</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Magnetic</strong> <strong>permeability</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1</p>
+        </td>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">30</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">2</p>
+        </td>
+        <td style="text-align: center">500</td>
+        <td style="text-align: center">30</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">3</p>
+        </td>
+        <td style="text-align: center">575</td>
+        <td style="text-align: center">29</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">4</p>
+        </td>
+        <td style="text-align: center">600</td>
+        <td style="text-align: center">26</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">5</p>
+        </td>
+        <td style="text-align: center">625</td>
+        <td style="text-align: center">23</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">6</p>
+        </td>
+        <td style="text-align: center">650</td>
+        <td style="text-align: center">19</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">7</p>
+        </td>
+        <td style="text-align: center">675</td>
+        <td style="text-align: center">13</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">8</p>
+        </td>
+        <td style="text-align: center">725</td>
+        <td style="text-align: center">3</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">9</p>
+        </td>
+        <td style="text-align: center">750</td>
+        <td style="text-align: center">1</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">10</p>
+        </td>
+        <td style="text-align: center">1300</td>
+        <td style="text-align: center">1</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p><strong>Relative</strong> <strong>magnetic </strong><strong>permeability </strong>plot should like as shown in <a href="#Fig_2DINDL1_13_Relative_magnetic_permeability"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>13.</a>    We will define <strong>0</strong> for <strong>Relative </strong><strong>electrical </strong><strong>permittivity</strong>. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Coil material page.</p>
+  <p> </p>
+  <p style="text-align: center">.<a id="Fig_2DINDL1_13_Relative_magnetic_permeability"></a><img align="" height="550" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0013.jpg' | relative_url }}" width="460"/></p>
+  <p> </p>
+  <p class="Fig_numb">Relative magnetic permeability</p>
+  <p> </p>
+  <p>In <strong>Coil </strong>page, click on <strong>Thermal</strong> tab and for <strong>Thermal </strong><strong>conductivity</strong> select <strong>Function of Temperature</strong> and define the below table and click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}" width="74"/> button. Thermal conductivity plot should like as shown in <a href="#Fig_2DINDL1_14_Thermal_conductivity_plot"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>14.</a></p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 450px;margin-left: auto;margin-right: auto">
+    <colgroup>
+      <col style="width: 120px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 180px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"> </p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Temperature</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Thermal </strong><strong>conductivity</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1</p>
+        </td>
+        <td style="text-align: center">-123</td>
+        <td style="text-align: center">368</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">2</p>
+        </td>
+        <td style="text-align: center">-23</td>
+        <td style="text-align: center">347</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">3</p>
+        </td>
+        <td style="text-align: center">27</td>
+        <td style="text-align: center">341</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">4</p>
+        </td>
+        <td style="text-align: center">327</td>
+        <td style="text-align: center">329</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">5</p>
+        </td>
+        <td style="text-align: center">527</td>
+        <td style="text-align: center">319</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">6</p>
+        </td>
+        <td style="text-align: center">727</td>
+        <td style="text-align: center">307</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">7</p>
+        </td>
+        <td style="text-align: center">927</td>
+        <td style="text-align: center">294</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_14_Thermal_conductivity_plot"></a><img height="550" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0014.jpg' | relative_url }}" width="454"/></p>
+  <p class="Fig_numb">Thermal conductivity plot</p>
+  <p> </p>
+  <p>Under <strong>Thermal </strong><strong>Conductivity </strong>select <strong>Vol. Heat cap</strong> radio button and select <strong>Function of Temperature</strong>, define the below table and click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}"/> button. Heat capacity plot should like as shown in <a href="#Fig_2DINDL1_15_Heat_capacity_plot"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>15.</a> Define <strong>Mass </strong><strong>density </strong>as <strong>7.85839E-09</strong>.</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 450px;margin-left: auto;margin-right: auto">
+    <colgroup>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"> </p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Temperature</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Heat capacity</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1</p>
+        </td>
+        <td style="text-align: center">-123</td>
+        <td style="text-align: center">2.895</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">2</p>
+        </td>
+        <td style="text-align: center">-23</td>
+        <td style="text-align: center">3.365</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">3</p>
+        </td>
+        <td style="text-align: center">27</td>
+        <td style="text-align: center">3.428</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">4</p>
+        </td>
+        <td style="text-align: center">327</td>
+        <td style="text-align: center">3.732</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">5</p>
+        </td>
+        <td style="text-align: center">527</td>
+        <td style="text-align: center">3.88</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">6</p>
+        </td>
+        <td style="text-align: center">727</td>
+        <td style="text-align: center">4.046</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">7</p>
+        </td>
+        <td style="text-align: center">927</td>
+        <td style="text-align: center">4.162</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_15_Heat_capacity_plot"></a><img height="550" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0015.jpg' | relative_url }}" width="457"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat capacity plot</p>
+  <p> </p>
+  <p>Click on <strong>Elec./Mag.</strong> tab, define <strong>Electrical </strong><strong>Resistivity </strong>as <strong>1e-05</strong>, <strong>Relative </strong><strong>Permeability </strong>as <strong>1</strong> and <strong>Relative </strong><strong>Permittivity </strong>as
+    <strong>0</strong> as shown in <a href="#Fig_2DINDL1_16_Coil_Electro_magnetic_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>16.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to
+    <strong>Air </strong>material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_16_Coil_Electro_magnetic_page"></a><img height="420" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0016.jpg' | relative_url }}" width="558"/></p>
+  <p> </p>
+  <p class="Fig_numb">Coil Electro - magnetic page</p>
+  <p> </p>
+  <p>In <strong>Air </strong>page, click on <strong>Thermal </strong>tab and define <strong>Thermal </strong><strong>conductivity </strong>as <strong>0.0257</strong>, <strong>Heat </strong><strong>capacity </strong>as <strong>0.001210758 </strong>and <strong>Mass </strong><strong>density </strong>as
+    <strong>1.275e-12</strong>. Thermal properties should like as shown in <a href="#Fig_2DINDL1_17_Air_Thermal_properties_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>17.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_17_Air_Thermal_properties_page"></a><img height="420" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0017.jpg' | relative_url }}" width="558"/></p>
+  <p> </p>
+  <p class="Fig_numb">Air Thermal properties page</p>
+  <p> </p>
+  <p>Click on <strong>Elec./Mag</strong>. tab, define <strong>Electrical </strong><strong>Resistivity </strong>as <strong>1e20</strong>, <strong>Relative </strong><strong>Permeability </strong>as <strong>1</strong> and <strong>Relative </strong><strong>Permittivity </strong>as
+    <strong>0</strong> as shown in <a href="#Fig_2DINDL1_18__Air_Electro_-_magnetic_material_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>18.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Object page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_18__Air_Electro_-_magnetic_material_page"></a><img height="420" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0018.jpg' | relative_url }}" width="558"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Air Electro - magnetic material page</p>
+  <h2> <a id="1_6_Adding_Objects"></a>Adding Objects</h2>
+  <p>For this lab we need <strong>7 </strong><strong>objects</strong> in this lab, by default 3 objects will be added in list so, we need to add another 4 objects to the list. Add another 4 objects by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}"/> button (see <a href="#Fig_2DINL1_19_Objects_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>19.</a>). Click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Workpiece page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINL1_19_Objects_page"></a><img height="420" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0019.jpg' | relative_url }}" width="558"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objects page</p>
+  <h2><a id="1_7_Workpiece" height="16" width="16"></a>Workpiece</h2>
+  <p>Keep the default Workpiece Object name as Workpiece, object type as <strong>Plastic </strong>and object temperature as <strong>20</strong>°C. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry page (see <a href="#Fig_2DINDL1_20_Workpiece_General_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>20.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_20_Workpiece_General_page"></a><img src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0020.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece General page</p>
+  <h3>Workpiece Geometry</h3>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/>, select <strong>Cylinder </strong>and define <b>Radius</b> as <strong>30</strong>, <strong>Height  </strong>as <strong>150 </strong>as shown in <a href="#Fig_2DINDL1_21_Workpiece_Geometry_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>21.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button to accept all the changes, and go back to the Geometry definition, click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Material page
+    to assign material.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_21_Workpiece_Geometry_page"></a><img height="373" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0021.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Geometry page</p>
+  <h3>Workpiece Material</h3>
+  <p>Select &quot;<strong>S45C-JAPAN</strong>&quot; from the list to assign material for Workpiece as shown in <a href="#Fig_2DINDL1_22_Workpiece_material_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>22.</a> Click
+    on <img src="{{ '/assets/icons/pre_icons/mo_back_button.jpg' | relative_url }}"/> to generate mesh for workpiece.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_22_Workpiece_material_page"></a><img src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0022.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"> Workpiece material page</p>
+  <h3>Workpiece Mesh</h3>
+  <ul class="Disc">
+    <li>
+      <p>For this problem, we will be heating workpiece to achieve austenitization temperature for a depth of about 3mm from the surface. This should produce a case depth of about 3mm upon proper cooling. For now, we are only looking at the heating parameters.</p>
+    </li>
+    <li>
+      <p>Let’s define the <strong>Target number of elements</strong> as <strong>1500</strong>.</p>
+    </li>
+    <li>
+      <p>To get a uniform mapped mesh, we have a geometry height to width ratio of 150/30 or 5/1. If you take 1500 and divide by 5, you get 300. If you take the square root of 300, you get about 17; define <strong>Thickness </strong><strong>elements</strong>        as <strong>17</strong>. This should give you a relatively square mesh of 1500 elements. Define the <strong>Size </strong><strong>ratio </strong>as <strong>12</strong>. Make sure the <strong>Mapped mesh</strong> generation box is checked.</p>
+    </li>
+    <li>
+      <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> .</p>
+    </li>
+    <li>
+      <p>Coating mesh should be slightly deeper than estimated skin depth, remember that estimated skin depth is determined by:</p>
+    </li>
+  </ul>
+  <p>Remembering that estimated skin depth is determined by:</p>
+  <p><img src="{{ '/assets/equations/applications/55_induction_heating/eq_2dind_lab1.jpg' | relative_url }}" style="margin-left: 20px;"/></p>
+  <ul class="Disc">
+    <li>
+      <p>Coating mesh should be slightly deeper than estimated skin depth</p>
+    </li>
+    <li>
+      <p>Using a resistivity of about 0.0011 approaching the Curie point and a constant relative permeability of 3 approaching the Curie point and a frequency of 6,000Hz we get a skin depth of about .4mm.</p>
+    </li>
+    <li>
+      <p>3-6 mesh layers in the coating mesh is recommended to cover 0.5mm thickness, so we will put 4 layers with coating mesh. To get a good mesh to handle the 0.5mm on the outer surface we will generate a graded mesh with thinner elements near the surface
+        with at least 4 elements within 0.5mm.</p>
+    </li>
+  </ul>
+  <p>To get a good mesh to handle the 0.5mm on the outside, we will put a coating mesh with at least 4 elements in the outside 0.5mm of surface this will be a graded mesh with thinner elements near the surface.</p>
+  <p>Click on the <strong>Coating </strong>tab.</p>
+  <p>Click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}" width="21"/> button 4 times and put in a thickness of <strong>70 </strong>to the outer coating layer. All dimensions for the coating are in microns. Verify that the
+    <strong>1-S45C-JAPAN</strong> is selected as material for coating.</p>
+  <p>Add additional coating thicknesses of <strong>100</strong>, <strong>150</strong> and <strong>180 </strong>microns for the successive layers to generate graded mesh and verify that the <strong>1-S45C-JAPAN</strong> is selected as material for all layers.</p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/>  and click on <img src="{{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}"/> in &quot;Do you want to generate coating mesh&quot; popup. Generated mesh is as shown in
+    <a href="#Fig_2DINDL1_23_Workpiece_mesh"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>23.</a>  You can zoom in to verify that the coating mesh is generated properly. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_23_Workpiece_mesh"></a><img height="374" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0023.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece mesh</p>
+  <h3>Initialize Volume Fraction</h3>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}"/> to access to the element dialog to initialize the volume fraction. On the item list window click ‘<strong>Microstructure</strong>’ <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> ‘<strong>Phase</strong>’. Then choose ‘<strong>Pearlite</strong>’ and click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}" width="21"/>  to ‘Initialize Element Data’. Type <strong>1</strong>, then click on
+    <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/>, then close the window. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Boundary condition page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_24_Workpiece_Element_page"></a><img height="371" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0024.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Element page</p>
+  <h3>Boundary Conditions</h3>
+  <p>It can be seen that ‘<strong>Heat</strong><strong> Exchange with </strong><strong>Environment</strong>’ BCC has been already defined on the entire object surface (which does not include the centerline since these nodes are inside the object) when mesh
+    was generated (see <a href="#Fig_2DINDL1_25_Workpiece_Boundary_condition"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>25.</a>). If not assigned, then select Heat Exchange with Environment and select Top edge, right
+    side edge and bottom edge on workpiece and click on <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/>. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> Top die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_25_Workpiece_Boundary_condition"></a><img height="371" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0025.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Boundary condition</p>
+  <h2><a id="1_8_Bottom_Coil"></a>Bottom Coil</h2>
+  <p>Change the Object name of Top Die to <strong>Bottom </strong><strong>Coil</strong>, keep default object type as <strong>Rigid</strong> and object temperature as <strong>20</strong>°C. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry page.</p>
+  <h3 class="h3_1_8_">Bottom Coil Geometry</h3>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/>, select <strong>Hollow </strong><strong>Cylinder </strong>and define the <strong>Inner </strong><strong>radius </strong>as <strong>38 , </strong><strong>Outer </strong><strong>radius </strong>as
+    <strong>46 </strong>and <strong>Height </strong>as <strong>30 </strong>as shown in <a href="#Fig_2DINDL1_26_Bottom_Coil_geometry"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>26.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button to close the Geometry primitive dialog. Click on <img src="{{ '/assets/icons/pre_icons/mo_object_positioning_icon.jpg' | relative_url }}"/> icon below object tree, using <strong>Offset </strong>positioning and move the Bottom Coil object in -Y direction
+    by <strong>-16</strong> mm as shown in <a href="#Fig_2DINDL1_27_Positioning_Bottom_coil_geometry"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>27</a>. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>  to Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_26_Bottom_Coil_geometry"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0026.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bottom Coil geometry</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_27_Positioning_Bottom_coil_geometry"></a><img height="270" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0039.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Positioning Bottom coil geometry</p>
+  <h3 class="h3_1_8_">Bottom Coil mesh</h3>
+  <p>Leave the <strong>Thickness </strong><strong>elements </strong>as <strong>4</strong>. For 4 elements through the thickness the number of elements in the Y direction is 4*30/8=15. The Number of elements is then 4*15=60. Enter <strong>60</strong> for
+    <strong>Target number of elements</strong>. This should give relatively square elements. Make sure <strong>Mapped mesh generation</strong> is turned on, then click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/>. Generated
+    mesh for Bottom coil is as shown in <a href="#Fig_2DINDL1_28_Bottom_Coil_Mesh_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>28.</a>, click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to
+    Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_28_Bottom_Coil_Mesh_page"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0027.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bottom Coil Mesh page</p>
+  <h3 class="h3_1_8_">Bottom Coil Material</h3>
+  <p>Select &quot; <strong>Coil</strong>&quot; from the list to assign material for Bottom Coil (see <a href="#Fig_2DINDL1_29_Bottom_Coil_Material_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>29.</a>). Click  on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Boundary condition page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_29_Bottom_Coil_Material_page"></a><img height="420" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0028.jpg' | relative_url }}" width="558"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bottom Coil Material page</p>
+  <h3 class="h3_1_8_">Bottom Coil Boundary condition</h3>
+  <p>Check that entire object surface is selected for heat exchange with environment, click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Properties page.</p>
+  <h3 class="h3_1_8_">Bottom Coil Properties</h3>
+  <p>In Bottom Coil properties page click on <strong>Heating</strong> tab, select <strong>Current </strong><strong>frequency </strong>type as <strong>Single</strong>, define <strong>Current </strong><strong>Frequency</strong> of <strong>6000 </strong><strong>Hz </strong>and
+    a <strong>Current </strong><strong>density </strong>of <strong>18</strong> <strong>A/mm<span style="font-size:8pt;vertical-align:super">2</span> </strong>as shown in <a href="#Fig_2DINDL1_30_Bottom_Coil_Properties_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>30.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Bottom Die page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_30_Bottom_Coil_Properties_page"></a><img src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0029.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Bottom Coil Properties page</p>
+  <h2><a id="1_9_Lower_Middle_Coil"></a>Lower Middle Coil</h2>
+  <p>Change the object name of Bottom Die to <strong>Lower </strong><strong>Middle </strong><strong>Coil</strong>, keep default object type as <strong>Rigid </strong>and object temperature as <strong>20</strong>°C. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry page.</p>
+  <h3 class="h3_1_9_">Lower Middle Coil Geometry</h3>
+  <p>Click on <img height="20" src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}" width="80"/>. Select <strong>Hollow </strong><strong>Cylinder</strong>, define the <strong>Inner </strong><strong>radius </strong>as <strong>38 , </strong><strong>Outer </strong><strong>radius </strong>as
+    <strong>46 </strong>and <strong>Height </strong>as <strong>30 </strong>as shown in <a href="#Fig_2DINDL1_31_Lower_Middle_Coil_Geometry_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>31.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> button to close the Geometry primitive dialog. Click on <img src="{{ '/assets/icons/pre_icons/mo_object_positioning_icon.jpg' | relative_url }}"/> icon below object tree and using <strong>Offset </strong>positioning move the Lower Middle Coil object in <strong>Y</strong>    direction by <strong>22 </strong>mm, similar to <a href="#Fig_2DINDL1_27_Positioning_Bottom_coil_geometry"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>27</a>. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_31_Lower_Middle_Coil_Geometry_page"></a><img height="373" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0030.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Lower Middle Coil Geometry page</p>
+  <h3 class="h3_1_9_">Lower Middle Coil mesh</h3>
+  <p>In Lower Middle Coil mesh page, define<strong> Thickness elements</strong> as <strong>4</strong>, <strong>Target number of elements</strong> as <strong>60 </strong>and turn on <strong>Mapped mesh</strong> <strong>generation </strong>check box, then
+    click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/>. Generated mesh for Lower Middle Coil is same as Bottom coil, click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Material page.</p>
+  <h3 class="h3_1_9_">Lower Middle Coil Material</h3>
+  <p>Select &quot;<strong>Coil</strong>&quot; from the list to assign material for Lower Middle Coil. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Boundary condition page.</p>
+  <h3 class="h3_1_9_">Lower Middle Coil Boundary condition</h3>
+  <p>Check that entire object surface is selected for heat exchange with environment, click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Properties page.</p>
+  <h3 class="h3_1_9_">Lower Middle Coil Properties</h3>
+  <p>In Lower Middle Coil properties page click on <strong>Heating </strong>tab, select <strong>Current </strong><strong>frequency </strong>type as <strong>Single</strong>, define <strong>Current </strong><strong>Frequency </strong>of <strong>6000 </strong><strong>Hz </strong>and
+    <strong>Current </strong><strong>density </strong>of <strong>18 </strong><strong>A/mm<span style="vertical-align:super;font-size:8pt">2</span> </strong>as shown in <a href="#Fig_2DINDL1_30_Bottom_Coil_Properties_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>30.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Object 4 page.</p>
+  <h2><a id="1_10_Middle_Coil"></a>Middle Coil</h2>
+  <p>Change the object name of Object 4 to <strong>Middle </strong><strong>Coil</strong>, keep default object type as <strong>Rigid </strong>and object temperature as <strong>20</strong>°C. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry page.</p>
+  <h3 class="h3_1_10_">Middle Coil Geometry</h3>
+  <p>Click on <img height="20" src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}" width="80"/>. Select <strong>Hollow </strong><strong>Cylinder</strong>, define the <strong>Inner </strong><strong>radius </strong>as <strong>38, </strong><strong>Outer </strong><strong>radius </strong>as
+    <strong>46 </strong>and <strong>Height </strong>as <strong>30 </strong><strong></strong>as shown in   <a href="#Fig_2DINDL1_32_Middle_Coil_Geometry_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>32.</a> Click
+    on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}" style="cursor: nwse-resize;"/>  button close the Geometry primitive dialog. Click on <img src="{{ '/assets/icons/pre_icons/mo_object_positioning_icon.jpg' | relative_url }}"/> icon below object
+    tree, using <strong>Offset </strong>positioning move the Middle Coil object in <strong>Y </strong>direction by <strong>60</strong>, similar to  <a href="#Fig_2DINDL1_27_Positioning_Bottom_coil_geometry"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>27</a>.
+    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" style="cursor: nwse-resize;"/> to Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_32_Middle_Coil_Geometry_page"></a><img height="373" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0031.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Middle Coil Geometry page</p>
+  <h3 class="h3_1_10_">Middle Coil mesh</h3>
+  <p>In Middle Coil mesh page, define <strong>Thickness </strong><strong>elements </strong>as <strong>4</strong>, <strong>Target number of elements </strong>as <strong>60 </strong>and turn on <strong>Mapped </strong><strong>mesh </strong><strong>generation </strong>check
+    box, then click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/>. Generated mesh for Middle Coil looks same as Bottom coil, click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Material page.</p>
+  <h3 class="h3_1_10_">Middle Coil Material</h3>
+  <p>Select &quot;<strong>Coil</strong>&quot; from the list to assign material for Middle Coil. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Boundary condition page.</p>
+  <h3 class="h3_1_10_">Middle Coil Boundary condition</h3>
+  <p>Check that entire object surface is selected for heat exchange with environment, click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Properties page.</p>
+  <h3 class="h3_1_10_">Middle Coil Properties</h3>
+  <p>In Middle Coil properties page click on <strong>Heating</strong> tab, select <strong>Current </strong><strong>frequency </strong>type as <strong>Single</strong>, define <strong>Current </strong><strong>Frequency </strong>of <strong>6000</strong> <strong>Hz </strong>and
+    <strong>Current </strong><strong>density </strong>of <strong>18 </strong>A/mm<span style="vertical-align:super;font-size:8pt">2</span> as shown in <a href="#Fig_2DINDL1_30_Bottom_Coil_Properties_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>30.</a>     Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Object 5 page.</p>
+  <h2><a id="1_11_Upper_Middle_Coil"></a>Upper Middle Coil</h2>
+  <p>Change the object name of Object 5 to <strong>Upper </strong><strong>Middle </strong><strong>Coil</strong>, keep default object type as <strong>Rigid </strong>and object temperature as <strong>20</strong>°C. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry page.</p>
+  <h3 class="h3_1_11_">Upper Middle Coil Geometry</h3>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}" style="cursor: nesw-resize;"/>. Select <strong>Hollow </strong><strong>Cylinder</strong>, define thedefine the <strong>Inner </strong><strong>radius </strong>as <strong>38 , </strong><strong>Outer </strong><strong>radius </strong>as
+    <strong>46 </strong>and <strong>Height </strong>as <strong>30 </strong><strong></strong>as shown in <a href="#Fig_2DINDL1_33_Upper_Middle_Coil_Geometry_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>33.</a> Click
+    on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}" style="cursor: nwse-resize;"/> button to close the Geometry primitive dialog. Click on <img src="{{ '/assets/icons/pre_icons/mo_object_positioning_icon.jpg' | relative_url }}"/> from below object
+    tree and using <strong>Offset </strong>positioning move the Upper Middle Coil object in <strong>Y </strong>direction by <strong>98</strong>, similar to  <a href="#Fig_2DINDL1_27_Positioning_Bottom_coil_geometry"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>27</a>.
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_33_Upper_Middle_Coil_Geometry_page" height="16" width="16"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0032.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Upper Middle Coil Geometry page</p>
+  <h3 class="h3_1_11_">Upper Middle Coil mesh</h3>
+  <p>In Upper Middle Coil mesh page, define <strong>Thickness </strong><strong>elements </strong>as <strong>4</strong>, <strong>Target number of elements</strong> as <strong>60 </strong>and turn on <strong>Mapped</strong> <strong>mesh </strong><strong>generation </strong>check
+    box, then click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/>. Generated mesh for Upper Middle Coil looks same as Bottom coil, click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" style="cursor: nesw-resize;"/> to Material page.</p>
+  <h3 class="h3_1_11_">Upper Middle Coil Material</h3>
+  <p>Select &quot;<strong>Coil</strong>&quot; from the list to assign material for Upper Middle Coil. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Boundary condition page.</p>
+  <h3 class="h3_1_11_">Upper Middle Coil Boundary condition</h3>
+  <p>Check that entire object surface is selected for heat exchange with environment, click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Properties page.</p>
+  <h3 class="h3_1_11_">Upper Middle Coil Properties</h3>
+  <p>In Upper Middle Coil properties page click on <strong>Heating </strong>tab, select <strong>Current frequency</strong> type as <strong>Single</strong>, define <strong>Current </strong><strong>Frequency </strong>of <strong>6000 </strong><strong>Hz </strong>and
+    <strong>Current </strong><strong>density </strong>of <strong>18</strong> A/mm<span style="vertical-align:super;font-size:8pt">2</span> as shown in <a href="#Fig_2DINDL1_30_Bottom_Coil_Properties_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>30.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Object 6 page.</p>
+  <h2><a id="1_12_Top_Coil"></a>Top Coil</h2>
+  <p>Change the object name of Object 6 to <strong>Top Coil</strong>, keep default object type as <strong>Rigid </strong>and object temperature as <strong>20</strong>°C. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry
+    page.</p>
+  <h3 class="h3_1_12_">Top Coil Geometry</h3>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/>, Select <strong>Hollow </strong><strong>Cylinder</strong>, define the <strong></strong>define the <strong>Inner </strong><strong>radius </strong>as <strong>38 , </strong><strong>Outer </strong><strong>radius </strong>as
+    <strong>46 </strong>and <strong>Height </strong>as <strong>30 </strong>as shown in  <a href="#Fig_2DINDL1_34_Top_Coil_Geometry_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>34.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button to close the Geometry primitive dialog. Click on <img src="{{ '/assets/icons/pre_icons/mo_object_positioning_icon.jpg' | relative_url }}"/>  from below object tree, using <strong>Offset </strong>positioning move the Top Coil object in<strong> Y</strong>    direction by <strong>136</strong>, similar to  <a href="#Fig_2DINDL1_27_Positioning_Bottom_coil_geometry"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>27</a>.  Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" style="cursor: nwse-resize;"/> to Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_34_Top_Coil_Geometry_page"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0033.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Top Coil Geometry page</p>
+  <h3 class="h3_1_12_">Top Coil mesh</h3>
+  <p>In Top Coil mesh page, define <strong>Thickness </strong><strong>elements </strong>as <strong>4</strong>, <strong>Target </strong><strong>number </strong><strong>of </strong><strong>elements </strong>as <strong>60 </strong>and turn on <strong>Mapped mesh generation</strong>    check box, then click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/>. Generated mesh for Top Coil looks same as Bottom coil, click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Material page.</p>
+  <h3 class="h3_1_12_">Top Coil Material</h3>
+  <p>Select &quot;<strong>Coil</strong>&quot; from the list to assign material for Top Coil. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Boundary condition page.</p>
+  <h3 class="h3_1_12_">Top Coil Boundary condition</h3>
+  <p>Check that entire object surface is selected for heat exchange with environment, click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until properties page.</p>
+  <h3 class="h3_1_12_">Top Coil Properties</h3>
+  <p>In Top Coil Properties page click on <strong>Heating </strong>tab, select <strong>Current </strong><strong>frequency </strong>type as <strong>Single</strong>, define <strong>Current</strong> <strong>Frequency </strong>of <strong>6000 </strong><strong>Hz </strong>and
+    <strong>Current </strong><strong>density </strong>of <strong>18 </strong><strong>A/mm<span style="vertical-align:super;font-size:8pt">2</span></strong> as shown in <a href="#Fig_2DINDL1_30_Bottom_Coil_Properties_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>30.</a>    Click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Object 7 page.</p>
+  <h2><a id="1_13_Air"></a>Air</h2>
+  <p>Change the object name of object 7 to <strong>Air</strong>, keep default object type as <strong>Rigid </strong>and object temperature as 20°C. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry page.</p>
+  <h3 class="h3_1_13_">Air Geometry</h3>
+  <p>The surrounding air should be at least as ½ as thick as the minimum dimension of the whole model. In this case that would be about 75mm. Click the <strong>Construct by Subtraction </strong>button and then <strong>select all objects in the popup</strong>    as shown in <a href="#Fig_2DINDL1_35_Air_Geometry_-_Construct_by_Subtraction_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>35.</a> The starting point will be <strong>X, Y</strong> at <strong>0</strong>,<strong>-75</strong>    and <strong>width (W) </strong>of <strong>125 </strong>and <strong>height (H)</strong> of <strong>300 </strong>and Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>. Created geometry is as shown in <a href="#Fig_2DINDL1_35_Air_Geometry_-_Construct_by_Subtraction_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>35.</a>,
+    then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_35_Air_Geometry_-_Construct_by_Subtraction_page"></a><img height="373" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0034.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Air Geometry - Construct by Subtraction page</p>
+  <h3 class="h3_1_13_"> Air Mesh</h3>
+  <ul class="Disc">
+    <li>
+      <p>The <strong>Target number of elements</strong> should be <strong>3000 </strong>and <strong>Thickness</strong> <strong>elements </strong>should be <strong>8 </strong>and <strong>Size ratio</strong> should be <strong>12</strong>.</p>
+    </li>
+    <li>
+      <p>Click <strong>Weighting </strong><strong>Factor </strong>tab and set <strong>Boundary </strong><strong>Curvature </strong>roughly to <strong>0.3</strong> and <strong>Mesh </strong><strong>windows </strong>to <strong>1</strong> everything else should
+        be <strong>0</strong> (see <a href="#Fig_2DINDL1_36_Air_Mesh_-_Weighting_factor_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>36.</a>).</p>
+    </li>
+    <li>
+      <p>Click <strong>Mesh </strong><strong>Windows</strong>, add <strong>3</strong> <strong>windows </strong>and define <strong>Relative </strong><strong>element</strong> <strong>size </strong>as<strong> 0.1</strong> for <strong>first </strong><strong>window</strong>,<strong>0.3</strong>        for <strong>second </strong><strong>window </strong>and <strong>1.0</strong> for <strong>third </strong><strong>window</strong>. This should look roughly as shown in <a href="#Fig_2DINDL1_37_Air_Mesh_-_Mesh_windows_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>37.</a>        but it does not have to look exactly like this.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_36_Air_Mesh_-_Weighting_factor_page"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0035.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Air Mesh - Weighting factor page</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p>Mesh windows use the lowest number window first and go out from there. They can overlap which is best for multiple windows, so the system does not have large discontinuities between sizes.</p>
+    </li>
+    <li>
+      <p>Once the mesh windows look the way you want them, go ahead and Generate mesh by clicking on<img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> . Generated mesh is as shown in <a href="#Fig_2DINDL1_37_Air_Mesh_-_Mesh_windows_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>37.</a>,
+        click  on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>  Material page.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_37_Air_Mesh_-_Mesh_windows_page" height="16" width="16"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0036.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Air Mesh - Mesh windows page</p>
+  <h3 class="h3_1_13_">Air Material</h3>
+  <p>Select &quot;<strong>Air</strong>&quot; from the list to assign material for Air. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Boundary condition page.</p>
+  <h3 class="h3_1_13_">Air Boundary Condition</h3>
+  <p>Check that entire object surface is selected for heat exchange with environment, click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Contact page.</p>
+  <h2><a id="1_14_Contact"></a>Contact</h2>
+  <p>The next step will be to generate contact between the various objects, where the air is master to the workpiece and the coils(s) are master to the air. So, click on  button 6 times to add six relations.</p>
+  <ul>
+    <li>
+      <p>In first relation, select <strong>Air </strong>as Master and <strong>Workpiece </strong>as Slave, then click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}" width="25"/>. Define <strong>heat </strong><strong>transfer </strong><strong>coefficient </strong>as
+        <strong>0.3</strong> (in the Thermal tab) and click <img height="21" src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}" width="73"/> .</p>
+    </li>
+    <li>
+      <p>In Second relation, select <strong>Bottom Coil</strong> as Master and <strong>Air </strong>as Slave, then click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}" width="25"/>. Define <strong>heat transfer coefficient</strong>        as <strong>0.3</strong> (in the Thermal tab) and click <img height="21" src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}" width="73"/>.</p>
+    </li>
+    <li>
+      <p>In third relation, select <strong>Lower </strong><strong>Middle </strong><strong>Coil </strong>as Master and <strong>Air </strong>as Slave, then click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}" width="25"/>.
+        Define <strong>heat transfer coefficient</strong> as <strong>0.3</strong> (in the Thermal tab) and click <img height="21" src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}" width="73"/>.</p>
+    </li>
+    <li>
+      <p>In forth relation, select <strong>Middle </strong><strong>Coil</strong> as Master and <strong>Air </strong>as Slave, then click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}" width="25"/>. Define <strong>heat transfer coefficient</strong>        as <strong>0.3</strong> (in the Thermal tab) and click <img height="21" src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}" width="73"/>.</p>
+    </li>
+    <li>
+      <p>In fifth relation, select <strong>Upper </strong><strong>Middle </strong><strong>Coil </strong>as Master and <strong>Air </strong>as Slave, then click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}" width="25"/>.
+        Define <strong>heat transfer coefficient</strong> as <strong>0.3</strong> (in the Thermal tab) and click <img height="21" src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}" width="73"/>.</p>
+    </li>
+    <li>
+      <p>In sixth relation, select Master as <strong>Top </strong><strong>Coil </strong>as Master and <strong>Air </strong>as Slave, then click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}" width="25"/>. Define <strong>heat transfer coefficient</strong>        as <strong>0.3</strong> (in the Thermal tab) and click <img height="21" src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}" width="73"/>.</p>
+    </li>
+  </ul>
+  <p>Click  <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}"/> to generate contact for all the relationships, generated contacts between objects is as shown in <a href="#Fig_2DINDL1_38_Contact_page"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>38.</a>    Click on  <img height="22" src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" width="73"/> to Stopping controls.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_38_Contact_page" height="16" width="16"></a><img height="361" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0037.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact page</p>
+  <h2><a id="1_15_Stopping_controls"></a>Stopping controls</h2>
+  <p>Click on <strong>Thermal </strong>tab under Stopping controls page, select &quot;<strong>Workpiece</strong>&quot; object with stopping method as &quot;<strong>Any Node</strong>&quot; and define <strong>Temperature range</strong> as <strong>Min </strong><strong>0</strong>    and <strong>Max</strong> <strong>1200</strong>. Select &quot; S<strong>top when temperature is outside range</strong>&quot; radio button as shown in <a href="#Fig_2DINDL1_39_Stopping_controls_-_Thermal_tab"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>39.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Generate DB page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_39_Stopping_controls_-_Thermal_tab" height="16" width="16"></a><img src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0038.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping controls - Thermal tab</p>
+  <h2><a id="1_16_Generate_DB"></a>Generate DB</h2>
+  <p>In &#39;Generate DB&#39; page, click <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/> to see if anything was missed in the setup and then click on the <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> button
+    to generate the database. Observe the message in Message tab informing database generation status.</p>
+  <h2><a id="1_17_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img height="21" src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}" width="146"/>  button above the operation tree. Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog as shown in <a href="#Fig_2DINDL1_40_Run_Simulation_Window"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>40.</a> Use the default <strong>Continue Run</strong> option
+    to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_40_Run_Simulation_Window"></a><img height="292" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0041.jpg' | relative_url }}" width="725"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Run Simulation Window</p>
+  <p> </p>
+  <p>When the problem is running, you can check the Simulation message window and verify that the TOTAL AMOUNT POWER LOSS: is a positive number. This is a sign that the problem is at least set up for generating some heat transfer.</p>
+  <p>Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked. User can view the Induction
+    heating process as the simulation proceeds to the specified Step definition from Simulation graphics.</p>
+  <h2><a id="1_18_Post Processing"></a>Post Processing</h2>
+  <p>When the simulation is completed, review the results by switching to Post mode using the  <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> button above the Simulation tool bar.</p>
+  <p>Go to last step of simulation and Plot <strong>temperature </strong>state variable and observe the temperature distribution on the ends is shallower than the middle as shown in <a href="#Fig_2DINDL1_41_Temperature_distribution_at_the_last_step"><span data-keyref="Application- 2D_Induction_Heating_Lab1">Fig. 2DINDL1.</span>41.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DINDL1_41_Temperature_distribution_at_the_last_step"></a><img height="372" src="{{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab1/image0040.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature distribution at the last step</p>
+  <p> </p>
+
+</body></html>

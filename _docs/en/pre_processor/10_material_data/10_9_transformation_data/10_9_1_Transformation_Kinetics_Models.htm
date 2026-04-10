@@ -1,0 +1,646 @@
+---
+lang: en
+title: "10.9.1. Transformation Kinetics Models"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>10.9.1. Transformation Kinetics Models</title>
+  <meta name="topic-status" content="Draft" />
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models.css" />
+</head>
+<body>
+  <h1>10.9.1. <a id="Transformation_Kinetics_Models"></a>Transformation Kinetics Models</h1>
+  <ul class="Disc">
+    <li>
+      <p><a href="#Diffusion_type_TTT_table_form_(Temp,_Stress,_Atom)">Diffusion type TTT table form (Temp, Stress, Atom)</a> </p>
+    </li>
+    <li>
+      <p><a href="#Martensitic_type_(Tms,_Tms50_Table_form)">Martensitic type (Tms, Tms50 Table form)</a> </p>
+    </li>
+    <li>
+      <p><a href="#Diffusion_type_(function)">Diffusion type (function)</a> </p>
+    </li>
+    <li>
+      <p><a href="#Diffusion_type_(function_and_table)">Diffusion type (function and table)</a> </p>
+    </li>
+    <li>
+      <p><a href="#Martensitic_type_(function)">Martensitic type (function)</a> </p>
+    </li>
+    <li>
+      <p><a href="#Diffusion_type_(simplified)">Diffusion type (simplified)</a> </p>
+    </li>
+    <li>
+      <p><a href="#MEDC">MEDC</a> </p>
+    </li>
+    <li>
+      <p><a href="#Secondary_alpha_lath">Secondary alpha lath</a> </p>
+    </li>
+    <li>
+      <p><a href="#Secondary_alpha_lath_-_Based_on_critical_cooling_rate">Secondary alpha lath - Based on critical cooling rate</a> </p>
+    </li>
+    <li>
+      <p><a href="#Ti-beta_to_grain_boundary_alpha">Ti-beta to grain boundary alpha</a> </p>
+    </li>
+    <li>
+      <p><a href="#Ti-beta_to_side_plate_alpha">Ti-beta to side plate alpha</a> </p>
+    </li>
+    <li>
+      <p><a href="10_9_1_Transformation_Kinetics_Models.htm#Solid/Liquid_phase_transformation">Solid/Liquid phase transformation</a> </p>
+    </li>
+    <li>
+      <p><a href="#Diffusion(Solubility_curve)">Diffusion(Solubility curve)</a> </p>
+    </li>
+    <li>
+      <p><a href="#Ni_gamma_prime_precipitation_model">Ni gamma prime precipitation model</a> </p>
+    </li>
+    <li>
+      <p><a href="#Ni_gamma_prime_dissolution_model">Ni gamma prime dissolution model</a> </p>
+    </li>
+    <li>
+      <p><a href="#User_routine">User routine</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>Below are the Transformation Kinetics Models available in DEFORM (See <a href="#Fig._10.9.1.1.Transformation_Kinetics_models"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>1.</a>),</p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Diffusion type TTT table form (Temp, Stress, Atom) </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Martensitic type (Tms, Tms50 Table form) </li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Diffusion type (function)</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Diffusion type (function and table)</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Martensitic type (function)</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Diffusion type (simplified)</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">MEDC</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Secondary alpha lath</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Secondary alpha lath - Based on critical cooling rate</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Ti-beta to grain boundary alpha</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Ti-beta to side plate alpha</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Solid/Liquid phase transformation</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Diffusion(Solubility curve)</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Ni gamma prime precipitation mode</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Ni gamma prime dissolution model</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">User routine</li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._10.9.1.1.Transformation_Kinetics_models"></a><img src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image001.jpg" /></p>
+  <p> </p>
+  <p class="Fig_numb">Transformation Kinetics models</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Diffusion_type_TTT_table_form_(Temp,_Stress,_Atom)"></a><strong>Diffusion type TTT table form (Temp, Stress, Atom)</strong></p>
+    </li>
+  </ul>
+  <p>This type defines a TTT diagram (See <a href="#Fig._10.9.1.2._Log_(Time)_function_definition_window_for_Diffusion_TTT_kinetics_model"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>2.</a> and <a href="#Fig._10.9.1.3._Example_TTT_curve"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>3</a>)
+    whose independent variables are average element temperature, effective stress and dominant atom content. In the case of steel, dominant atom content is the weight percentage of carbon in the metal at each element. Using tabular data, DEFORM is trying
+    to solve an Avrami equation, which has the form, </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_1.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p style="text-align: center"> <img height="344" src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image002.jpg" width="750" /></p>
+  <p class="Fig_numb"><a id="Fig._10.9.1.2._Log_(Time)_function_definition_window_for_Diffusion_TTT_kinetics_model"></a>Log (Time) function definition window for Diffusion TTT kinetics model</p>
+  <p> </p>
+  <p>In terms of TTT data, two curves are required in order to solve for k and n. If only one curve is input to DEFORM, the user must provide the Avrami number.</p>
+  <p style="text-align: center"><a id="Fig._10.9.1.3._Example_TTT_curve"></a><img src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image003.jpg" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Example TTT curve</p>
+  <p> </p>
+  <p><a href="#Fig._10.9.1.3._Example_TTT_curve"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>3</a> shows an example of TTT diagram in DEFORM. In the case above, two curves are used to define the percent transformed
+    for a given dominant  atom content. Each curve has a value at which an amount of transformation is defined. The curve to the left has been defined in which starting percentage of the transformation from Austenite to Bainite. The curve to the right
+    has been defined in which ending percentage of the Austenite to Bainite transformation.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Martensitic_type_(Tms,_Tms50_Table_form)"></a><strong>Martensitic type (Tms, Tms50 Table form)</strong></p>
+    </li>
+  </ul>
+  <p>The transformation start and 50 % level temperature are inputted as a table format by depending on carbon content and stress levels.<br/> This kinetics is based on Koistinen-Marburger Equation [1]. And a more generalized form is employed in DEFORM as
+    the following equation [2]:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img height="122" src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_2.jpg" width="298" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> [1] D.P. Koistinen, R.E. Marburger, Acta Metall, 7 (1959), pp. 59-60<br/> [2] S. M. C. van Bohemen, J. Sietsma, Mater. Sci. Technol., 30(2014), pp. 1024-1033<br/>
+    <br/> For Martensitic type function definition window see below <a href="#Fig._10.9.1.4._Martensitic_start_and_50%_temperature_table_form_transformation_kinetic_function_definition_window"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>4.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="362" src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image004.jpg" width="750" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._10.9.1.4._Martensitic_start_and_50%_temperature_table_form_transformation_kinetic_function_definition_window"></a>Martensitic start and 50% temperature table form transformation kinetic function definition window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p> <a id="Diffusion_type_(function)"></a><strong>Diffusion type (function)</strong></p>
+    </li>
+  </ul>
+  <p>Volume fraction is represented by the Avrami equation as follows:</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_3.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> Where
+    <br/>
+    <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/ft_T.jpg" />,  <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/fs_m.jpg"
+    /> and <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Fc_c.jpg" /> are the functions of temperature (<img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/T.JPG"
+    />), Mean stress (<img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Sigma_m.jpg" />) and Carbon content (<img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/C.JPG"
+    /> ) respectively.</p>
+  <p> <br/> The power <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/small_n.jpg" /> depends on the kinds of the transformation and <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/ft_T.jpg"
+    /> can be expressed by the following simplified formula, </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_4.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p><img height="19" src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Fs_sigma_m.jpg" width="48" /> in addition, <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Fc_c.jpg"
+    /> describes the stress and carbon content dependency of transformation, respectively as follows:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_5.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_6.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> The coefficients <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/As.jpg" /> is specified according to the stress dependency of TTT curves,  <img height="16"
+      src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ac1.jpg" width="26" /> and   <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ac2.jpg"
+    /> are determined by carbon content dependency.<br/>
+    <br/> For diffusion function type model definition window see below <a href="#Fig._10.9.1.5._Diffusion_kinetic_transformation_model_definition_window"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._10.9.1.5._Diffusion_kinetic_transformation_model_definition_window"></a><img src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image005.jpg" /></p>
+  <p class="Fig_numb">Diffusion kinetic transformation model definition window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Diffusion_type_(function_and_table)"></a><strong>Diffusion type (function and table)</strong></p>
+    </li>
+  </ul>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_7.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Along with the equation EQ(2.4.3) table is used in this diffusion type as shown in <a href="#Fig._10.9.1.6._Diffusion_function_and_table_kinetics_model_definition_window"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>6.</a></p>
+  <p style="text-align: center"><br/>
+    <a id="Fig._10.9.1.6._Diffusion_function_and_table_kinetics_model_definition_window"></a><img height="321" src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image006.jpg"
+      width="750" /></p>
+  <p> </p>
+  <p class="Fig_numb">Diffusion function and table kinetics model definition window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Martensitic_type_(function)"></a><strong>Martensitic type (function)</strong></p>
+    </li>
+  </ul>
+  <p>The volume fraction of diffusionless-type (martensite) transformation depended on temperature, stress and carbon content is introduced by modifying the Magee&#39;s equation as follows:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_8.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> When the martensite transformation start temperatures under carburized conditions and applied stress are given, <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi2_by_phi1.jpg"
+    /> ,  <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi31_by_Phi1.jpg" />  and <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi32_byPhi1.jpg"
+    /> can be determined, <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi1.jpg" />  and <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi4.jpg"
+    /> are identified, if temperatures for martensite-start TMS and for 50% martensite TM50 at <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/zeta_m.jpg" />  = 0  and
+    <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/zeta_m.jpg" /> = 0.5  are provided respectively.<br/>
+    <br/> For martensitic model definition window see below <a href="#Fig._10.9.1.7._Martensitic_transformation_kinetics_model_definition_window"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>7.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._10.9.1.7._Martensitic_transformation_kinetics_model_definition_window"></a><img src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image007.jpg" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Martensitic transformation kinetics model definition window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Diffusion_type_(simplified)"></a><strong>Diffusion type (simplified)</strong></p>
+    </li>
+  </ul>
+  <p>A simplified Diffusion function is defined by a function of the following form:</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_9.jpg" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> This formula is a good first approximation for a diffusion-based transformation.<br/> The coefficients can be obtained using dilatation-temperature diagrams.<br/> See the below <a href="#Fig._10.9.1.8._Diffusion_simplified_kinetic_transformation_kinetics_model_definition_window"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>8.</a>    for Diffusion simplified function definition window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._10.9.1.8._Diffusion_simplified_kinetic_transformation_kinetics_model_definition_window"></a><img src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image008.jpg"
+    /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Diffusion simplified kinetic transformation kinetics model definition window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="MEDC"></a><strong>MEDC</strong></p>
+    </li>
+  </ul>
+  <p>MEDC model is developed by AFRL in the United States to predict the microstructure evolution during continuous cooling of wrought alpha/beta titanium alloys in the two-phase field.  The growth of the primary (globular) alpha during cooling is modelled
+    using an exact solution of the diffusion equation:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img height="104" src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_10.JPG" width="413" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> The particle radius is converted to volume fraction using the following expression:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_11.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/>
+    <br/> The intrinsic diffusion coefficients of alloying elements in beta titanium can be expressed by,</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_12.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> The parameter <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Lamda.jpg" />  in Equation 1 is related to the supersaturation ( <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/OMEGA_s.jpg"
+    /> ) by the following expression:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_13.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> In each calculation step, the supersaturation ( <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/OMEGA_s.jpg" /> ) is determined as,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_14.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Here, <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cm.jpg" /> ,<img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ci.jpg"
+    />  and <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cp.jpg" /> represent the compositions of the matrix far from the matrix-particle interface, the matrix at
+    the matrix-particle interface, and the particle at the matrix- particle interface respectively. For a diffusion-controlled reaction, <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ci.jpg"
+    /> and <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cp.jpg" /> correspond to the equilibrium matrix and particle compositions respectively and they were obtained
+    from the phase diagram. <img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cm.jpg" /> considers the effect of soft impingement on the “far-field” matrix composition,
+    and is calculated by the usual approximation derived from a mass balance:</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_15.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>   <br/> The input parameters of MEDC model include the beta approach curves (showing the volume fraction of beta as a function of temperature), the equilibrium chemical compositions of alpha and beta phases, and diffusivity as a function of temperature,
+    solution temperature / initial volume fraction of alpha phase, initial alpha particle radius, and cooling rates.  The initial volume fraction of primary alpha (<img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/fao.jpg"
+    />) is automatically computed based on the provided beta approach curve in terms of the solution temperature (the starting temperature of the cooling process). The initial particle size (<img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Rao.jpg"
+    />) is determined by user, generally based on the experimental data.  The evolution of primary alpha volume fraction and the size are computed based on the local cooling rate during DEFORM heat transfer simulation.<br/> If secondary alpha lath thickening
+    model is defined, MEDC model is automatically coupled with secondary alpha growth model. The growth of primary alpha is terminated by the starting growth of secondary alpha.<br/>
+    <br/> For MEDC model definition window see below <a href="#Fig._10.9.1.9._MEDC_kinetic_transformation_model_definition_windows"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>9.</a></p>
+  <p> </p>
+  <p style="text-align: center"><img height="336" src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image009.jpg" width="750" /></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._10.9.1.9._MEDC_kinetic_transformation_model_definition_windows"></a>MEDC kinetic transformation model definition windows</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Secondary_alpha_lath"></a><strong>Secondary alpha lath</strong></p>
+    </li>
+  </ul>
+  <p>A fast acting model is developed to predict the thickening kinetics of secondary alpha lath. Considering the soft impingement between the adjacent advancing laths, the thickening kinetics of a secondary alpha in a colony structure can be expressed as:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 650px; border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);margin-left: 40px">
+    <colgroup>
+      <col style="width: 550px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_16.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> The alpha equilibrium disolving temperature is assumed to be 980°C.</p>
+  <p>The CCT curve to describe the secondary alpha starting temperatures under various cooling rates is fitted by a fifth order polynomial equation:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_17.JPG" /></td>
+        <td>
+          <p> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>      <br/> See the below <a href="#Fig._10.9.1.10._Secondary_alpha_lath_general_kinetic_transformation_model_definition_window"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>10.</a> for Secondary alpha lath general
+    model definition window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._10.9.1.10._Secondary_alpha_lath_general_kinetic_transformation_model_definition_window"></a><img height="600" src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image010.jpg"
+      width="604" /></p>
+  <p> </p>
+  <p class="Fig_numb">Secondary alpha lath general kinetic transformation model definition window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Secondary_alpha_lath_-_Based_on_critical_cooling_rate"></a><strong>Secondary alpha lath - Based on critical cooling rate</strong></p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Ti-beta_to_grain_boundary_alpha"></a><strong>Ti-beta to grain boundary alpha</strong></p>
+    </li>
+  </ul>
+  <p>A fast acting model is developed to predict the thickening kinetics of grain boundary alpha in Ti-6Al-4V. It is assumed that a layer of grain boundary alpha of negligible thickness develops right after the temperature drops below the beta transus. During
+    further cooling or isothermal holding, grain boundary alpha continues to grow until the sideplate alpha starts to develop. Therefore, this type of transformation is generally coupled with Type 12 (Ti-beta to sideplate alpha). The thickening kinetics
+    of grain boundary can be described as,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_18.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>  <br/> The CCT curves to describe the grain boundary alpha starting temperature ( <img height="15" src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tu.jpg" width="20" />)
+    and sideplate starting temperature (<img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tl.jpg" /> ) under various cooling rates are fitted by a fifth order polynomial
+    equation as follows:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 450px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_19.JPG" /></td>
+        <td>
+          <p> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> See the below <a href="#Fig._10.9.1.11._Ti-beta_to_grain_boundary_alpha_kinetic_transformation_model_definition_window"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>11.</a> for Ti-beta to grain boundary
+    alpha model definition window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._10.9.1.11._Ti-beta_to_grain_boundary_alpha_kinetic_transformation_model_definition_window"></a><img height="600" src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image011.jpg"
+      width="483" /></p>
+  <p> </p>
+  <p class="Fig_numb"> Ti-beta to grain boundary alpha kinetic transformation model definition window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Ti-beta_to_side_plate_alpha"></a><strong>Ti-beta to side plate alpha</strong></p>
+    </li>
+  </ul>
+  <p>A fast acting model is developed to predict the thickening kinetics of side plate alpha in Ti-6Al-4V. It is assumed that the sideplate alpha starts to develop when the growth of grain boundary alpha stops. Therefore, this type of transformation is coupled
+    with Type 11 (Ti-beta to grain boundary alpha). Considering the soft impingement between the adjacent advancing plates, the thickening kinetics of a can be described as,</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 550px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_20.JPG" /></td>
+        <td>
+          <p class="EQ_numb"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>      </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 650px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 550px;" />
+      <col style="width: 100px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_21.jpg" /></td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> The two CCT curves describing the starting temperature of grain boundary alpha (<img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tu.jpg" />) and that of side
+    plate (<img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tl.jpg" />) under various cooling rates are fitted by a fifth order polynomial equation as follows:</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 40px">
+    <colgroup>
+      <col style="width: 500px;" />
+      <col style="width: 50px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><img src="../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_19.JPG" /></td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>See the below <a href="#Fig._10.9.1.12._Ti-beta_to_side_plate_alpha_kinetic_transformation_model_definition_window"><span data-keyref="Chapter_10_9_1_Transformation Kinematic Models">Fig. 10.9.1.</span>12.</a> for Ti-beta to side plate alpha model definition
+    window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._10.9.1.12._Ti-beta_to_side_plate_alpha_kinetic_transformation_model_definition_window"></a><img src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image012.jpg"
+    /></p>
+  <p> </p>
+  <p class="Fig_numb">Ti-beta to side plate alpha kinetic transformation model definition window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Solid/Liquid_phase_transformation"></a><strong>Solid/Liquid phase transformation</strong></p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Diffusion(Solubility_curve)"></a><strong>Diffusion(Solubility curve)</strong></p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Ni_gamma_prime_precipitation_model"></a><strong>Ni gamma prime precipitation model</strong></p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="Ni_gamma_prime_dissolution_model"></a><strong>Ni gamma prime dissolution model</strong></p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><a id="User_routine"></a><strong>User routine</strong></p>
+    </li>
+  </ul>
+  <p>This model is set to required user routine number. Please refer Chapter 56. <a href="../../../User_Routines/User_routine_MainPg.htm">USER ROUTINE</a> for further details.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../../Operation_Templates/33_Forming/33_1_2D_Forming_Setup.htm#Fig_33_1_5_Add_material_from_Material_List_window">Assigning Material to Object in Pre-Processor</a></p>
+  <p><a href="../../../About_DEFORM/1_Introduction_to_DEFORM/1_9_Units.htm">Deform Units</a></p>
+  <p><a href="../../../Labs/Heat_Treatment_Labs/2D_HT_Lab5_Material_Input.htm">Material Editing in MO Lab</a></p>
+  <p><a href="../../../Labs/Material_Suite_labs/Material_Parameters_Fitting_labs/TTT_Calculation_Lab.htm">TTT Calculation  Lab</a></p>
+  <p><a href="../10_6_Grain_Data/10_6_Grain_Data.htm">Material- Grain Models</a></p>
+  <p><a href="../10_12_Miscellaneous_Data/10_12_1_Fracture_Models.htm">Material-Fracture models</a></p>
+  <p><a href="../../../Labs/Heat_Treatment_Labs/Heat_Treatment_Labs_Main_Pg.htm">Heat Treatment Labs</a></p>
+  <p> </p>
+</body>
+</html>

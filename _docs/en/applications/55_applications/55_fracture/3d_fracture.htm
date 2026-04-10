@@ -1,0 +1,135 @@
+---
+lang: en
+title: "3D Fracture"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.5.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Fracture</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Fracture</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_fracture/3d_fracture.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_Fracture/3D_Fracture_Element_deactivation_lab.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_Fracture/2D_Fracture_Element_deactivation_Lab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Fracture">
+        <span>3D Fracture</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3D Fracture</h1>
+  <h2>Fracture with Element Deletion and Damage Softening</h2>
+  <p>To implement fracture, only a few settings are required. The first setting that is required is the critical damage value for Fracture. This is specified within the material properties window <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> Advanced tab (See <a href="#Fig_3DFRCL1_1_The_advanced_material_window"><span data-keyref="Applications-3D_Fracture">Fig. 3DFRCL1.</span>1.</a>). Within this window the damage criteria can be specified. By clicking the <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> button next to the criteria, a critical value can be input to the system (See <a href="#Fig_3DFRCL1_2_The_critical_value_for_fracture"><span data-keyref="Applications-3D_Fracture">Fig. 3DFRCL1.</span>2.</a>). The critical value to use is very dependent
+    on the material being used, the processing methods to produce the material, deformation history, etc. The recommended way in which to use the critical value is to either determine the absolute critical value for fracture based on a known process or
+    to reduce the damage value of a given simulated process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL1_1_The_advanced_material_window"></a><img height="375" src="{{ '/assets/images/applications/55_fracture/3d_fracture/image0001.jpg' | relative_url }}" width="490"/></p>
+  <p> </p>
+  <p class="Fig_numb">The advanced material window</p>
+  <p> </p>
+  <p>To implement only a critical damage value will enable damage softening.  Damage softening is a method by which the flow stress of an element above this critical value will by reduced to a very low value. The advantage of this approach above element
+    deletion is that the topology of part is maintained and is simple thus producing a good-looking result. To enable element deletion proceed to the Object Properties and select the Fracture element deletion option under Fracture Properties. (See
+    <a href="#Fig_3DFRCL1_3_Fracture_settings_window"><span data-keyref="Applications-3D_Fracture">Fig. 3DFRCL1.</span>3.</a>)</p>
+  <p> </p>
+  <p><strong>Comparison of two methods:</strong></p>
+  <p>The two methods for simulating fracture are compared in the following example. The example case is a gear piercing as seen in <a href="#Fig_3DFRCL1_4_Gear_piercing_case_that_is_a_good_candidate_for_fracture_study"><span data-keyref="Applications-3D_Fracture">Fig. 3DFRCL1.</span>4.</a>,
+    <a href="#Fig_3FRCL1_5_Beginning_and_near_ending_step_of_gear_piercing_with_element_deletion"><span data-keyref="Applications-3D_Fracture">Fig. 3DFRCL1.</span>5.</a>, <a href="#Fig_3DFRCL1_6_Beginning_and_near_ending_step_of_gear_piercing_with_damage_softening"><span data-keyref="Applications-3D_Fracture">Fig. 3DFRCL1.</span>6</a>    and <a href="#Fig_3DFRCL1_7_Side-by-side_comparison_of_piercing_operations_with_element_deletion_and_damage_softening"><span data-keyref="Applications-3D_Fracture">Fig. 3DFRCL1.</span>7.</a> show the results of using both damage softening and element
+    deletion.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL1_2_The_critical_value_for_fracture"></a><img height="406" src="{{ '/assets/images/applications/55_fracture/3d_fracture/image0002.jpg' | relative_url }}" width="500"/></p>
+  <p> </p>
+  <p class="Fig_numb">The critical value for fracture</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL1_3_Fracture_settings_window"></a><img height="350" src="{{ '/assets/images/applications/55_fracture/3d_fracture/image0003.jpg' | relative_url }}" width="473"/></p>
+  <p> </p>
+  <p class="Fig_numb">Fracture settings window</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL1_4_Gear_piercing_case_that_is_a_good_candidate_for_fracture_study"></a><img height="269" src="{{ '/assets/images/applications/55_fracture/3d_fracture/image0004.jpg' | relative_url }}" width="600"/></p>
+  <p> </p>
+  <p class="Fig_numb">Gear piercing case that is a good candidate for fracture study</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3FRCL1_5_Beginning_and_near_ending_step_of_gear_piercing_with_element_deletion"></a><img src="{{ '/assets/images/applications/55_fracture/3d_fracture/image0005.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Beginning and near ending step of gear piercing with element deletion</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL1_6_Beginning_and_near_ending_step_of_gear_piercing_with_damage_softening"></a><img src="{{ '/assets/images/applications/55_fracture/3d_fracture/image0006.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Beginning and near ending step of gear piercing with damage softening</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL1_7_Side-by-side_comparison_of_piercing_operations_with_element_deletion_and_damage_softening"></a><img src="{{ '/assets/images/applications/55_fracture/3d_fracture/image0007.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Side-by-side comparison of piercing operations with element deletion and damage softening</p>
+  <p> </p>
+
+</body></html>

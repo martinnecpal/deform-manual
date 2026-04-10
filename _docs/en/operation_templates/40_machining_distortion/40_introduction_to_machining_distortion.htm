@@ -1,0 +1,114 @@
+---
+lang: en
+title: "40. Introduction to Machining Distortion"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>40. Introduction to Machining Distortion</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>40. Introduction to Machining Distortion</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/40_machining_distortion/40_introduction_to_machining_distortion.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/40_Machining_Distortion/40_1_2D_Machining_Distortion.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/39_Cutting/Setting_up_3D_Machining_Models.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="40. Introduction to Machining Distortion">
+        <span>40. Introduction to Machining Distortion</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>40. Introduction to Machining Distortion</h1>
+  <p>Machining distortion operation can set up the model data and simulate a machining pass on a component with deformation and residual stress history. Machining Distortion will model and simulate machining operation with fixtures and elastic spring back
+    after the fixtures are removed.</p>
+  <p> </p>
+  <p>The Machining distortion Operations can be used to prepare the data required for the simulation. To use this operation, user needs the result from a DEFORM simulation model that includes residual stress in the part. Typical models include elasto-plastic
+    deformation process or heat treat process model. Apart from this object input data, machining distortion process model requires details on the fixtures, their location and details on machining pass.</p>
+  <p> </p>
+  <p>The order of operations in which we will be modeling is as follows:</p>
+  <ol class="Decimal">
+    <li>
+      <p>Machine the part.</p>
+    </li>
+    <li>
+      <p>Allow the part to spring back with tools to constrain.</p>
+    </li>
+    <li>
+      <p>Allow part to spring back free from tools.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p>All of these operations can be accomplished in the Machining distortion Operation. Of these stages,</p>
+  <p>only the data related to machining is defined in the template, while the system procedures automatically compute the subsequent spring back stage on removing the fixtures. Post processor will allow the user to view the results (stress state and spring
+    back/distortions) after machining and fixture removal. This process can be repeated for the subsequent passes, which may also include object flipping and fixture repositioning prior to machining.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="40_1_2d_machining_distortion.htm">40.1. 2D Machining Distortion</a> </p>
+  <p><a href="40_2_3d_machining_distortion.htm">40.2. 3D Machining Distortion</a></p>
+
+</body></html>

@@ -1,0 +1,112 @@
+---
+lang: sk
+title: "26.6.6. Summary"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.2.1.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>26.6.6. Summary</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>26.6.6. Summary</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_6_summary.css"/>
+<meta name="brsnext" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_6_Post_Processing_tools/26_6_7_Load_Stroke.htm"/><meta name="brsprev" value="Documentation_content/Post_Processor/26_Post_Processing_tools_and_controls/26_6_Post_Processing_tools/26_6_5_Region_of_Interest.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="26.6.6. Summary">
+        <span>26.6.6. Summary</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>26.6.6. Summary</h1>
+  <p>[2D, 3D]: In simulation summary window, the step can be selected from the step list and then the object can be selected using the pull down arrow button in the object field. After changing the object, if the step changes object does not change. Certain
+    characteristic data, such as press loads, primary die velocities and maximum and minimum values of state variables are stored for every simulation step, whether data is stored for every step or not in the DB. This summary data vs time graphs for all
+    the saved steps can be viewed in the graphics window by selecting the state variable in the list and clicking on  button at the bottom of the window. (See <a href="#Fig_26_6_6_1_State_variables_summary_window"><span data-keyref="Chapter_26_6_6_Summary">Fig. 26.6.6.</span>1.</a>    and <a href="26_6_2_object_elements.htm#Fig_26_6_2_2_Object_Elements_window_for_3D"><span data-keyref="Chapter_26_6_6_Summary">Fig. 26.6.6.</span>2.</a>).</p>
+  <p> </p>
+  <p><a id="Fig_26_6_6_1_State_variables_summary_window"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_6_summary/image001.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">State variables summary window</p>
+  <p> </p>
+  <p>Clicking on a point on the graph will load the nearest saved step from the database into display as shown in  <a href="26_6_2_object_elements.htm#Fig_26_6_2_2_Object_Elements_window_for_3D"><span data-keyref="Chapter_26_6_6_Summary">Fig. 26.6.6.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_26_6_6_2_Temperature_state_variable_summary_graph"></a><img src="{{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_6_summary/image002.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Temperature state variable summary graph</p>
+  <p> </p>
+  <p>The step list in summary window can be used to select the step. When Load Step check box is checked and step is selected from step list, then the selected step will be loaded into the graphics window and state variable values at that step into summary
+    window. It also displays the simulation information like simulation number, step number, time, primary die stroke, mesh number (changes when there is a remesh), fold occurrence, dimension of the operation and version number.</p>
+  <p>State variables are grouped under different categories which are, <img src="{{ '/assets/icons/post_icons/mo_analysis_icon.jpg' | relative_url }}"/> (General), <img src="{{ '/assets/icons/post_icons/mo_deformation_icon.jpg' | relative_url }}"/> (Deformation), <img src="{{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}"/> (Thermal),  <img src="{{ '/assets/icons/post_icons/mo_heating_sv_icon.jpg' | relative_url }}"/>(Heating), <img src="{{ '/assets/icons/post_icons/mo_prop_sv_icon.jpg' | relative_url }}"/> (Heat treat) and <img src="{{ '/assets/icons/post_icons/mo_user_sv_icon.jpg' | relative_url }}"/>(User) and these can be accessed using icons as sown in <a href="26_6_2_object_elements.htm#Fig_26_6_2_2_Object_Elements_window_for_3D"><span data-keyref="Chapter_26_6_6_Summary">Fig. 26.6.6.</span>2.</a></p>
+  <p>Using <img src="{{ '/assets/icons/post_icons/mo_show_all_sv_button.jpg' | relative_url }}"/>  (Show all) icon all the state variable groups can be displayed. <img src="{{ '/assets/icons/post_icons/mo_clear_sv_icon.jpg' | relative_url }}"/>(Clear) icon is used to clear all
+    the state variables groups selection.</p>
+  <p>By double clicking on the state variable value in the summary window user can copy the Min and Max value at that step, user can also export the summary graph data plotted on the graphics window using right click option Export graph data. Graph properties
+    like, titles and its font, values range, number of decimals and display style and legend on/off can also be changed using right click option Set graph properties.</p>
+  <p> </p>
+  <p>For 3D problem if there is any fold it can be located by using the Locate fold button at the bottom of the window, it will turn on the fold display automatically in the graphics window for the selected object.</p>
+  <p> </p>
+
+</body></html>

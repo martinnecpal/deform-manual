@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Jekyll: Serve (dev)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "bundle",
+      "runtimeArgs": [
+        "exec", "jekyll", "serve",
+        "--config", "_config.yml,_config_dev.yml"
+      ],
+      "noDebug": true,
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Jekyll: Serve (GitHub Pages)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "bundle",
+      "runtimeArgs": [
+        "exec", "jekyll", "serve"
+      ],
+      "noDebug": true,
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

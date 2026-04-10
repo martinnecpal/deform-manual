@@ -1,0 +1,177 @@
+---
+lang: en
+title: "9.4. Remesh Criteria"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>9.4. Remesh Criteria</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>9.4. Remesh Criteria</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/9_simulation_controls/9_4_remesh_criteria.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/9_Simulation_Controls/9_5_Solver_Settings.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/9_Simulation_Controls/9_3_Stopping_Controls.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="9.4. Remesh Criteria">
+        <span>9.4. Remesh Criteria</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>9.4. Remesh Criteria <img height="25" src="{{ '/assets/icons/pre_icons/mo_remeshing_criteria.jpg' | relative_url }}" width="25"/></h1>
+  <p><a href="#9.4.1._Maximum_interference_depth_(RMDPTH)">9.4.1. Maximum interference depth (RMDPTH)</a></p>
+  <p><a href="#9.4.2._Maximum_stroke_increment_(RMSTRK)">9.4.2. Maximum stroke increment (RMSTRK)</a></p>
+  <p><a href="#9.4.3._Maximum_time_increment_(RMTIME)">9.4.3. Maximum time increment (RMTIME)</a></p>
+  <p><a href="#9.4.4._Maximum_step_increment_(RMSTEP)">9.4.4. Maximum step increment (RMSTEP)</a></p>
+  <p><a href="#9.4.5._Penetration_Distance_(absolute)">9.4.5. Penetration Distance (absolute)</a></p>
+  <p><a href="#9.4.6._Penetration_Distance_(relative)">9.4.6. Penetration Distance (relative)</a></p>
+  <p><a href="#9.4.7._Additional_remeshing_criteria">9.4.7. Additional remeshing criteria</a> </p>
+  <p><a href="#9.4.8._Remeshing_Method">9.4.8. Remeshing Method</a></p>
+  <p> </p>
+  <p><strong>[2D, 3D]</strong>: Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window ( <a href="#Fig._9.4.1._Remeshing_Criteria_Window"><span data-keyref="Chapter_9_4_Remesh_Criteria">Fig. 9.4.</span>1.</a>    )contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers.There are four keywords that control the initiation of a remeshing procedure (<a href="../../keyword_documentation/r/rmdpth.htm">RMDPTH</a>,
+    <a href="../../keyword_documentation/r/rmtime.htm">RMTIME</a>, <a href="../../keyword_documentation/r/rmstep.htm">RMSTEP</a> and <a href="../../keyword_documentation/r/rmstrk.htm">RMSTRK</a>) for an object. When the remeshing criteria of any of these
+    keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed. During the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old
+    mesh is interpolated onto the new mesh and the simulation continues.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_4_remesh_criteria/9_4_image001.jpg' | relative_url }}"/></p>
+  <p class="Fig_name">(a)</p>
+  <p class="Fig_name"> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_4_remesh_criteria/9_4_image002.jpg' | relative_url }}"/></p>
+  <p class="Fig_name">(b)</p>
+  <p class="Fig_numb"><a id="Fig._9.4.1._Remeshing_Criteria_Window"></a>Remeshing Criteria Window; (a) For 2D, (b) For 3D</p>
+  <p> </p>
+  <h2><a id="9.4.1._Maximum_interference_depth_(RMDPTH)"></a>Maximum interference depth (RMDPTH) [2D, 3D]</h2>
+  <p>The maximum Interference Depth (<a href="../../keyword_documentation/r/rmdpth.htm">RMDPTH</a>) is used to start a remeshing procedure. If any portion of a master object penetrates a slave object beyond the depth specified under RMDPTH, remeshing will
+    be triggered.  </p>
+  <h2><a id="9.4.2._Maximum_stroke_increment_(RMSTRK)"></a>Maximum stroke increment (RMSTRK) [2D, 3D]</h2>
+  <p>Anytime the maximum stroke increment (<a href="../../keyword_documentation/r/rmstrk.htm">RMSTRK</a>) is exceeded by the stroke increment of the primary die since the last remeshing step, a new remeshing step will be initiated.  </p>
+  <h2><a id="9.4.3._Maximum_time_increment_(RMTIME)"></a>Maximum time increment (RMTIME) [2D, 3D]</h2>
+  <p>Anytime the Maximum Time Increment (<a href="../../keyword_documentation/r/rmtime.htm">RMTIME</a>) (Value of Elapsed Time) has elapsed since the last remeshing step, a new remeshing step will be initiated. </p>
+  <h2><a id="9.4.4._Maximum_step_increment_(RMSTEP)"></a>Maximum step increment (RMSTEP) [2D, 3D]</h2>
+  <p>Anytime the Maximum Step Increment (Number of Steps) has occurred since the last remeshing step, a new remeshing step will be initiated.</p>
+  <p> </p>
+  <p><strong>Purpose of Criteria [2D, 3D]</strong></p>
+  <p>When a sharp edge on a tool or die impinges on the workpiece, the sharp edge may deeply penetrate an element edge. If this depth is severe, the elements may get stretched out and remeshing may become difficult. Before this depth is achieved, remeshing
+    with place nodes about the edge and allow the simulation to continue unhampered.</p>
+  <h2><a id="9.4.5._Penetration_Distance_(absolute)"></a>Penetration Distance (absolute) [3D]:</h2>
+  <p>If a positive number (in the unit of length) is entered, the program will conduct a check on each surface edge that has a contact node on each end. The distance from the middle of the edge to the die surface is calculated. If the maximum penetration
+    depth exceeds the specified limit, remeshing will be triggered.</p>
+  <h2><a id="9.4.6._Penetration_Distance_(relative)"></a>Penetration Distance (relative) [3D]:</h2>
+  <p>If a negative number (a fraction) is entered, the program will conduct a check on each surface edge that has a contact node on each end. The distance from the middle of the edge to the die surface is calculated and divided by the original length of
+    the edge. If the ratio exceeds the magnitude of the specified value, remeshing will be triggered.</p>
+  <p> </p>
+  <p><strong>Default Value [3D]:</strong></p>
+  <p>The pre-processor now has a default value 0.7 with a relative setting.</p>
+  <h2><a id="9.4.7._Additional_remeshing_criteria"></a>Additional remeshing criteria [3D]</h2>
+  <ul class="Disc">
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt"><strong>Stretch limit</strong>: Stretch of an edge is calculated as “(Current Length-Original Length)/Original Length”. If this value exceeds the specified limit, then remeshing is performed.</li>
+  </ul>
+  <p style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt"> </p>
+  <ul class="Disc">
+    <li style="text-align: justify;line-height: 1.5;font-family: Arial;font-size: 12pt"><strong>Shrinking limit</strong>: Shrink of an edge is calculated as “(Current Length-Original Length)/Original Length”. If this value exceeds the specified limit, then remeshing is performed.</li>
+  </ul>
+  <h2> <a id="9.4.8._Remeshing_Method"></a>Remeshing Method [3D]</h2>
+  <p><strong><a id="Global_and_Local_Remeshing_Options_[3D]"></a>Global and Local Remeshing Options [3D]</strong></p>
+  <p>For DEFORM-3D, mesh generation has been enhanced with local meshing functionality.</p>
+  <p>Default settings point to existing global remeshing procedures, where in every element of the old mesh gets replaced with new mesh element, followed by interpolation.</p>
+  <p>New Local meshing functionality allows several options to control the element size and quality. Local remeshing also has options to keep the meshing truly local, to minimize the interpolation related errors .(See <a href="#Fig._9.4.3._Local_Remeshing_criteria_window"><span data-keyref="Chapter_9_4_Remesh_Criteria">Fig. 9.4.</span>3</a>.) In
+    the current version, all the local meshing related settings are stored in the local files, not in the database.</p>
+  <p>This means when the user copies the database file from one folder to another, local remesh settings will not be carried over unless all the files are copied to the working folder.</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig._9.4.2._Global_Remeshing_criteria_window"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_4_remesh_criteria/9_4_image003.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb" style="text-align: center;">Global Remeshing criteria window</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig._9.4.3._Local_Remeshing_criteria_window"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_4_remesh_criteria/9_4_image004.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Local Remeshing criteria window</p>
+  <p> </p>
+  <p><strong>Internal Elements:</strong></p>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>S</strong><strong>ize control</strong>:</li>
+  </ul>
+  <ul class="Circle">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Average of Neighbors</strong>: The size of the element is decided based on the average size of the surrounding elements of distorted mesh.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Scaling Factor</strong>: The size of the element will be  scaled based on the scaling factor mentioned for each layer inward.</li>
+  </ul>
+  <ul class="Disc">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Skip Elements with Good shape</strong>:The elements which are of good shape will be skipped from remeshing.</li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="9_1_simulation_type_settings.htm">9.1. Simulation type Settings</a> </p>
+  <p><a href="9_2_defining_step.htm">9.2. Defining Step</a> </p>
+  <p><a href="9_3_stopping_controls.htm">9.3. Stopping Controls</a> </p>
+  <p><a href="9_5_solver_settings.htm">9.5. Solver Settings</a> </p>
+  <p><a href="9_6_process_conditions.htm">9.6. Process Conditions</a> </p>
+  <p><a href="9_7_advanced_options.htm">9.7. Advanced Options</a> </p>
+  <p><a href="9_8_control_files.htm">9.8. Control Files</a> </p>
+  <p><a href="9_9_thermomechanical_variables.htm">9.9. Thermomechanical variables</a> </p>
+  <p><a href="../13_mesh_generation/13_mesh_generation.htm">13. Mesh Data Definition</a></p>
+
+</body></html>

@@ -1,0 +1,143 @@
+---
+lang: en
+title: "Forming Lab 2"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "15.3.2.2.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 2</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 2</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_Lab3.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_Lab1.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Forming Lab 2">
+        <span>Forming Lab 2</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 2. Rerun Sequence with a Larger Billet</h1>
+  <p>Click the New <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon in the top left corner of the interface.  Click <img src="{{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}"/> to close the current project and save
+    any changes.</p>
+  <p> </p>
+  <p>Set the Project Name to <strong>Gear_LargerBillet</strong>. Use the Copy existing project option and browse to find PROBLEM <strong>2DGear\2DGear.moproj</strong> (See <span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab1">Fig. L1.</span>1.)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_1_New_MO_project_windo"></a><img height="330" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab2_image0001.jpg' | relative_url }}" width="453"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab2">New MO project window</p>
+  <p> </p>
+  <p>Click  <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/>. The system will copy all the information from the original project into the new <strong>Gear_LargerBillet </strong>folder.</p>
+  <p> </p>
+  <p class="Note_text">Note: Copying a project using the user interface automatically renames several files and folders in the project. It is much cleaner than copying/pasting the problem folder.</p>
+  <h3 class="h3_2_">Change the Billet size</h3>
+  <p>Click on the Upset tile in the Operation Editor to select the 1st operation in the project. The Preprocessor will open for this operation (See <a href="#Fig_L2_2_Upset_operation_selection"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab2">Fig. L2.</span>2.</a>).
+    Click   <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Workpiece Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_2_Upset_operation_selection"></a><img height="389" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab2_image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab2">Upset operation selection</p>
+  <p> </p>
+  <h3 class="h3_2_">Creating new geometry for Workpiece</h3>
+  <p>Change the workpiece dimensions to 2.5 in radius, 8.267 in height, with 0.1 in corners. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> and <img src="{{ '/assets/icons/pre_icons/mo_no_button.jpg' | relative_url }}"/> in Delete mesh
+    popup to delete mesh popup to delete mesh (See <a href="#Fig_L2_3_Delete_mesh_popup"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab2">Fig. L2.</span>3.</a>). Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Workpiece mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_3_Delete_mesh_popup"></a><img height="386" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab2_image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab2">Delete mesh popup</p>
+  <h3 class="h3_2_">Generate mesh for new geometry of workpiece</h3>
+  <p>Set the target number of elements as <strong>2000 </strong>and click the  <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> button to generate the mesh for workpiece. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until positioning page.</p>
+  <h3 class="h3_2_"> Positioning</h3>
+  <p>Use <img src="{{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}"/> to position the tools to the workpiece. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Contact page.</p>
+  <h3 class="h3_2_">Generating contact</h3>
+  <p>Generate contact using the <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}"/> button. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Stopping controls page.</p>
+  <h3 class="h3_2_">Stopping controls</h3>
+  <p>In Stopping controls, change the Primary die displacement stopping control from 6 in. to <strong>6.5</strong> in. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Step controls page.</p>
+  <h3 class="h3_2_">Step controls</h3>
+  <p>Go to Step and change the <strong>Number </strong>of <strong>simulation </strong>steps to <strong>1000</strong>. Setting the steps high like this guarantees that the simulation will not run out of steps and will instead stop due to the defined stopping
+    criteria. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Generate DB page</p>
+  <h3 class="h3_2_">Generate DB</h3>
+  <p>Generate the database by clicking on <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/>.</p>
+  <p>Click on the MO <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h3 class="h3_2_">Run and monitor a simulation</h3>
+  <p>Because there is no change required in settings for the 2nd operation, we can generate the database and run the simulation.</p>
+  <p> </p>
+  <p>Click the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> button and then uncheck submit job to the simulation queue. Unchecking this option will make the job run on the local computer. Use the default <strong>Start from last negative step</strong>    option. Click the <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> button to start the simulation.</p>
+  <p> </p>
+  <p>When the upset operation is completed, DEFORM will automatically import the new tools and start the 2nd operation.</p>
+  <h3 class="h3_2_">Review the results</h3>
+  <p>When the simulation is completed, click the MO <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> Mode button to review results.</p>
+  <p>Play through all steps. Note that the part completely fill out the die cavity.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L2_4_Workpiece_shape_at_last_step_of_second_operation"></a><img height="389" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab2_image0004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab2">Workpiece shape at last step of second operation</p>
+  <p> </p>
+
+</body></html>

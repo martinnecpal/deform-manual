@@ -1,0 +1,355 @@
+---
+lang: en
+title: "3D Press Model lab"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.12.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Press Model lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Press Model lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_press_model/3d_press_model_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_Radiation_Analysis_Lab/Radiation_Analysis_Labs_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_Press_Model/55_Press_Model_Main_Pg.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Press Model lab">
+        <span>3D Press Model lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Setting up 3D Press model lab using 3D connecting rod example</h1>
+  <p>In this lab, we will demonstrate how to setup 3D press model option with <strong>3D Connecting Rod </strong>example keyfile.</p>
+  <p> </p>
+  <p><a href="#1_1_Introduction">1.1. Introduction</a></p>
+  <p><a href="#1_2_Creating_a_New_problem">1.2. Creating a New problem</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_1_Adding_3D_Forming_operation">1.2.1. Adding 3D Forming operation</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_2_Import_3D_Connecting_Rod_example_keyfile">1.2.2. Import 3D Connecting Rod example keyfile</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_3_Defining_Simulation_controls_and_Press_model_data">1.2.3. Defining Simulation controls and Press model data</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_4_Defining_Simulation_controls_and_Press_model_data">1.2.4. Assign Top die movement</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_5_Generating_Database">1.2.5. Generating Database</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_6_Running_simulation">1.2.6. Running simulation</a></p>
+  <p style="margin-left: 20px"><a href="#1_2_7_Post_Processing">1.2.7.  Post Processing</a></p>
+  <p> </p>
+  <h2><a id="1_1_Introduction"></a>Introduction</h2>
+  <p>In forming processes, the forming force will cause relative translation and eccentric load will cause relative rotation between the ram and the press table. This kind of press deformation will have impact on the workpiece dimensions/geometry.</p>
+  <p>In DEFORM system, there are two ways to predict the press deformation. Firstly, simulation with meshed “elastic press machine” is available but it is computationally expensive. On the other side, using a press model with elasticity to represent the
+    elastic behavior of the whole press is an efficient way for forming process simulation. </p>
+  <p>For a press model, except the die kinematic movement, 6 additional DOF for the press will be defined to represent its 3 translations in X, Y, Z directions and 3 rotations about X, Y, Z axes. User can activate or deactivate any of the 6 additional DOF.
+    Stiffness coefficient of the activated DOF should be defined. Reference press center of the press should be defined.</p>
+  <p>Press model can be defined on any die which will have contacts with a deformation object during the forming process. Otherwise, the press model will have no elastic deformation.</p>
+  <h2><a id="1_2_Creating_a_New_problem"></a>Creating a New problem</h2>
+  <p>On a Windows machine, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button, select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File <img height="12" src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}" width="29"/>  </strong><strong>New Problem</strong> or by clicking the New Problem  <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_3DPML1_1_Problem_type_selection_window"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>1.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and &quot;<strong>SI</strong>&quot; radio button in Unit field. Define Problem Name as &quot;<strong></strong><strong>3D_Press_Model</strong><strong></strong>&quot; and make sure the “<strong>Show option dialog</strong>” check box is
+    turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new problem using
+    the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_1_Problem_type_selection_window"></a><img height="527" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem type selection window</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog as shown in <a href="#Fig_3DPML1_2_Adding_3D_Forming_Operation_from_MO_Wizard_from_new_Project_window"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>2.</a>, at
+    this point, user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. We will use &quot;<strong>3D_Press_Model</strong>” as the project name in this session. 3D Forming
+    operation can also be added in &quot;New Project&quot; dialog (see <a href="#Fig_3DPML1_2_Adding_3D_Forming_Operation_from_MO_Wizard_from_new_Project_window"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>2.</a>), but we will
+    add the 3D Forming operation in this lab from the operations list in the Explorer, so do not check the &quot;First operation&quot; check box in the &quot;New Project&quot; dialogue. Click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> to continue to open the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_2_Adding_3D_Forming_Operation_from_MO_Wizard_from_new_Project_window"></a><img height="435" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding 3D Forming Operation from MO Wizard from new Project window</p>
+  <p> </p>
+  <h3> <a id="1_2_1_Adding_3D_Forming_operation"></a>Adding 3D Forming operation</h3>
+  <p>Add one 3D Forming operation from the Explorer Operations list. Operation can be added by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button adjacent to 3D Forming in Explorer or user can also add by drag and
+    drop into the Operation Editor (See <a href="#Fig_3DPML1_3_Adding_3D_Forming_Operation_from_explorer"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>3.</a>). As we add operation, Process page will be opened in the properties
+    area.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_3_Adding_3D_Forming_Operation_from_explorer"></a><img height="425" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding 3D Forming Operation from explorer</p>
+  <p> </p>
+  <h3><a id="1_2_2_Import_3D_Connecting_Rod_example_keyfile"></a>Import 3D Connecting Rod example keyfile</h3>
+  <p>Import “<strong>3D_ConnectingRod</strong><strong>.</strong><strong>KEY</strong>” file from DEFORM Installation 3D\3D_Examples\SI\Forging directory using <strong>File </strong><img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/><strong>Import</strong><strong> </strong><strong>Keyfile</strong>”option.
+    Model setup is imported 3D Connecting Rod keyfile is as shown in <a href="#Fig_3DPML1_4_Imported_3D_Connecting_Rod_example"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>4.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_4_Imported_3D_Connecting_Rod_example"></a><img height="436" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Imported 3D Connecting Rod example</p>
+  <p> </p>
+  <h3><a id="1_2_3_Defining_Simulation_controls_and_Press_model_data"></a>Defining Simulation controls and Press model data</h3>
+  <p>In Simulation controls page, switch to expert mode by clicking on <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> button. Under <strong>Simulation steps</strong><img height="24" src="{{ '/assets/icons/pre_icons/mo_simulation_step.jpg' | relative_url }}" width="24"/> tab, define <strong>Number of steps</strong> as <strong>500 </strong>and <strong>Step increment</strong> <strong>to save</strong> as <strong>100 </strong>steps as shown in <a href="#Fig_3DPML1_5_Simulation_steps_page"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>5.</a></p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_5_Simulation_steps_page"></a><img src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0005.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation steps page</p>
+  <p> </p>
+  <p>Click on <strong>Step increment to Save</strong> <img height="21" src="{{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }}" width="21"/> tab , select “<strong>Time</strong>” radio button as “<strong>Solution</strong><strong> step definition</strong>”
+    and define <strong>S</strong><strong>tep increment control </strong>as constant <strong>0.001 </strong>sec/step as shown in <a href="#Fig_3DPML1_6_Step_increment_controls_page"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>6.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_6_Step_increment_controls_page"></a><img src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0006.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step increment controls page</p>
+  <p><br/> Click on <strong>Stopping controls <img height="21" src="{{ '/assets/icons/pre_icons/mo_stopping_criteria.jpg' | relative_url }}" width="21"/> </strong>tab, define <strong>Primary die displacement </strong>as “<strong>48.5 mm</strong>” as shown in <a href="#Fig_3DPML1_7_Stopping_controls_page"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>7.</a>    Click on <strong>Die distance</strong> tab and click on <img src="{{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}"/> button to initialize the pre-defined die distance stopping criteria.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_7_Stopping_controls_page"></a><img src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0007.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping controls page</p>
+  <p> </p>
+  <p>Click on “<strong>Solver</strong><strong> settings</strong>” <img height="21" src="{{ '/assets/icons/pre_icons/mo_solver_settings.jpg' | relative_url }}" width="21"/> tab, select “<strong>MUMPS</strong>” solver under <strong>Deformation </strong>sub tab as shown
+    in <a href="#Fig_3DPML1_8_Solver_settings_–_Deformation_solver_page"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>8.</a> </p>
+  <p class="Note_text">Note: Sparse solver (MUMPS or SPOOLS) should be used for Press model simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_8_Solver_settings_–_Deformation_solver_page"></a><img src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0008.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Solver settings – Deformation solver page</p>
+  <p> </p>
+  <p>Click on <strong>Press model </strong><img height="21" src="{{ '/assets/icons/pre_icons/mo_press_model_button.jpg' | relative_url }}" width="20"/>, select Press Model “<strong>On</strong>“ radio button, with default “<strong>Press</strong><strong> model # 1</strong>”
+    as Press model name. Define the Reference press center as (<strong>93.094</strong>, <strong>152.895</strong>, <strong>-40.5</strong>) by considering reference point to be on the bottom die bottom surface center as shown in <a href="#Fig_3DPML1_9_Press_Model_page"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>9.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_9_Press_Model_page"></a><img height="437" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0009.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Press Model page</p>
+  <p><br/> Under <strong>Translation </strong>tab, check the “<strong>Translation</strong><strong> Z”</strong> check box, then select <strong>S</strong><strong>tiffness </strong>as “<strong>f(displacement)</strong>” and click on <img src="{{ '/assets/icons/pre_icons/mo_define_function.._button.jpg' | relative_url }}"/> button. In function window, enter the below data as shown in table as shown in <a href="#Fig_3DPML1_10_Translation_Z_–_Stiffness_Function_of_Displacement_function_window_"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>10.</a></p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 400px;margin-right: auto;margin-left: auto">
+    <colgroup>
+      <col style="width:50.00%"/>
+      <col style="width:50.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"><strong>Displacement</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Force</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0.5</p>
+        </td>
+        <td>
+          <p style="text-align: center">10000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1.5</p>
+        </td>
+        <td>
+          <p style="text-align: center">5140000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">2.5</p>
+        </td>
+        <td>
+          <p style="text-align: center">10280000</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_10_Translation_Z_–_Stiffness_Function_of_Displacement_function_window_"></a><img height="399" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Translation Z – Stiffness Function of Displacement function window </p>
+  <p><br/> Under <strong>Rotation </strong>tab, check the “<strong>Rotation</strong><strong> X”</strong> check box, then select <strong>Stiffness </strong>as “<strong>f(angle)</strong>” and click on <img src="{{ '/assets/icons/pre_icons/mo_define_function.._button.jpg' | relative_url }}"/> button. In function window, enter the below data as shown in below table as shown in <a href="#Fig_3DPML1_11_Rotation_X_–_Stiffness_Function_of_Displacement_function_window_"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>11.</a> </p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 400px;margin-right: auto;margin-left: auto">
+    <colgroup>
+      <col style="width:50.00%"/>
+      <col style="width:50.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"><strong>Angle</strong></p>
+        </td>
+        <td style="text-align: center">
+          <p style="text-align: center"><strong>Torque</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0.001</p>
+        </td>
+        <td>
+          <p style="text-align: center">10000000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0.002</p>
+        </td>
+        <td>
+          <p style="text-align: center">442000000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0.004</p>
+        </td>
+        <td>
+          <p style="text-align: center">1326000000</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_11_Rotation_X_–_Stiffness_Function_of_Displacement_function_window_"></a><img height="424" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0011.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rotation X – Stiffness Function of Angle function window </p>
+  <p> </p>
+  <h3><a id="1_2_4_Defining_Simulation_controls_and_Press_model_data"></a>Assign Top die movement</h3>
+  <p>In operation tree, click on<strong> Top die Movement</strong>, modify the Top die movement to <strong>121.25</strong> mm /sec and under Press model pull down menu select “<strong>Press</strong><strong> model # 1</strong>” as shown in <a href="#Fig_3DPML1_12_Top_Die_Movement_page"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>12.</a>    Press model displacement window can be opened by clicking on <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> button, in this lab we are not defining initial displacement and  Rotation value as shown in <a href="#Fig_3DPML1_13_Press_model_displacement_window"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>13.</a>    So, click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> button with default “0” values. After completion of simulation, at the last we can observe the press displacement data in “Press displacement” window.  Then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> button until DB Generation page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_12_Top_Die_Movement_page"></a><img height="426" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0012.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Top Die Movement page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_13_Press_model_displacement_window"></a><img src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0013.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Press model displacement window</p>
+  <p> </p>
+  <h3><a id="1_2_5_Generating_Database"></a>Generating Database</h3>
+  <p>In operation tree, select “<strong>Generate DB</strong>”, then click on <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/> button to have the program check to see if anything was missed in the problem setup. During the checking
+    process, messages in the red colour signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> button to generate the database as shown in <a href="#Fig_3DPML1_14_Generating_Database"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>14.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_14_Generating_Database"></a><img height="425" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0014.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">Generating Database</p>
+  <h3><a id="1_2_6_Running_simulation"></a>Running simulation</h3>
+  <p>Once the database has been generated switch to the Simulation mode by clicking on <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> button above the operation tree. Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DPML1_15_Run_Options_Popup"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>15.</a> Use the default <strong>Continue </strong><strong>Run </strong>option
+    to select “<strong>Continue</strong><strong> from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>radio button.</p>
+  <p>To define MPI settings, click on <img src="{{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}"/> button, then define “<strong>MPI</strong><strong> 3D</strong>” as <strong>2</strong> (or any number depending on your 3D MPI license) as shown
+    in <a href="#Fig_3DPML1_15_Run_Options_Popup"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>15.</a> and then click on <img src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_15_Run_Options_Popup"></a><img height="650" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0015.jpg' | relative_url }}" width="612"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Options Popup</p>
+  <p><br/> The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. If <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.</p>
+  <p>The Message file provides information about which simulation step the simulation is currently on and information dealing with how well the simulation is running as shown in <a href="#Fig_3DPML1_16_Simulation_mode"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>16.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_16_Simulation_mode"></a><img height="424" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0016.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation mode</p>
+  <h3><a id="1_2_7_Post_Processing"></a> Post Processing</h3>
+  <p>After the simulation has completed, click on <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> tab, MO post processor will open. Play the animation and observe the die movement (see <a href="#Fig_3DPML1_17_MO_Post_mode_after_simulation_is_completed"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>17.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_17_MO_Post_mode_after_simulation_is_completed"></a><img height="427" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0017.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">MO Post mode after simulation is completed</p>
+  <p> </p>
+  <p>We can plot Press model output using Load stroke Graph and using Summary Deformation State variable output.</p>
+  <p>Click on <strong>Graph </strong><img src="{{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}"/>, select Top die and plot press force-z /press torque -x to see the press loading history. Plotted <strong>Press force</strong><strong> Z</strong>    and Press <strong>torque X</strong> is as shown in <a href="3d_press_model_lab.htm#Fig_3DPML1_18_Load_stroke_-_Stroke_v/s_Press_force_Z_plot"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>18.</a> and <a href="3d_press_model_lab.htm#Fig_3DPML1_19_Load_stroke_-_Stroke_v/s_Press_torque_X_plot"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>19.</a>     </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_18_Load_stroke_-_Stroke_v/s_Press_force_Z_plot"></a><img height="423" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0018.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Load stroke - Stroke v/s Press force Z plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_19_Load_stroke_-_Stroke_v/s_Press_torque_X_plot"></a><img height="424" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0019.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Load stroke - Stroke v/s Press torque X plot</p>
+  <p><br/> Plot Press displacement -Z / Press rotated angle -x curves to see the press deformation history. Plotted <strong>Press displacement </strong><strong>Z</strong> and Press <strong>rotated angle X</strong> is as shown in <a href="3d_press_model_lab.htm#Fig_3DPML1_20_Load_stroke_–_Stroke_v/s_Press_displacement_Z_plot"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>20.</a>    and <a href="3d_press_model_lab.htm#Fig_3DPML1_21_Load_stroke_–_Stroke_v/s_Press_rotated_angle_X"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>21.</a>  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_20_Load_stroke_–_Stroke_v/s_Press_displacement_Z_plot"></a><img height="426" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0020.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Load stroke – Stroke v/s Press displacement Z plot</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_21_Load_stroke_–_Stroke_v/s_Press_rotated_angle_X"></a><img height="427" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0021.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Load stroke – Stroke v/s Press rotated angle X</p>
+  <p> </p>
+  <p>Plot Press speed curves plot as shown in <a href="3d_press_model_lab.htm#Fig_3DPML1_22_Load_stroke_–_Stroke_v/s_Press_translation_speed_Z"><span data-keyref="Applications-3D_Press_Model_lab1">Fig. 3DPML1.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DPML1_22_Load_stroke_–_Stroke_v/s_Press_translation_speed_Z"></a><img height="424" src="{{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0022.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Load stroke – Stroke v/s Press translation speed Z</p>
+  <p> </p>
+
+</body></html>

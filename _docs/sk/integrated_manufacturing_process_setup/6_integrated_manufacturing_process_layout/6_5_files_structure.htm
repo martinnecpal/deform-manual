@@ -1,0 +1,233 @@
+---
+lang: sk
+title: "6.5. File Structure"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "3.1.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.5. File Structure</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.5. File Structure</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure.css"/>
+<meta name="brsnext" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_6_Operations_Management/6_6_Operations_Management.htm"/><meta name="brsprev" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_4_Main_Menu.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="6.5. File Structure">
+        <span>6.5. File Structure</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>6.5. File structure</h1>
+  <p><a href="#6.5.1._Normal_Integrated_Manufacturing_process_(MO)_Project_Structure">6.5.1. Normal Integrated Manufacturing process (MO) Project Structure</a><br/>
+    <a href="#6.5.2._DOE_Project_File_structure">6.5.2. DOE Project File structure</a><br/>
+    <a href="#6.5.3._Die_Stress_Project_File_Structure">6.5.3. Die Stress Project File Structure</a><br/>
+    <a href="#6.5.4._Report_Generation">6.5.4. Report Generation</a><br/>
+    <a href="#6.5.5._Integrated_Manufacturing_process_(MO)_Wizard_and_Operation_specific_Files">6.5.5. Integrated Manufacturing process (MO) Wizard and Operation specific Files</a><br/>
+    <a href="#6.5.6._Operation_Specific_Important_Files">6.5.6. Operation Specific Important Files</a></p>
+  <p> </p>
+  <p>The primary data storage structure is the database (DB) file. The database file stores a complete set of simulation data, including object data, simulation controls, material data, and inter-object relations, both from the original input, and from selected solution
+    steps. More information on Basic File structure of DEFORM refer chapter <a href="../../about_deform/1_introduction_to_deform/1_10_basic_file_system.htm">1.10. Basic File system.</a></p>
+  <p><br/>
+    <strong>Database (DB) files:</strong></p>
+  <p>The database file contains the complete simulation data set for input data and each saved simulation step. The information is stored in a compressed, machine readable format, and is accessible only through the DEFORM pre- and post-processors. As the simulation
+    runs, data for each step is written to the end of the database file. If the step being written is specified as a step to be saved, information for the next step will be appended after the current data step. If the step is not specified to be saved,
+    and a solution is found for the next step, the data for the current step will be overwritten by the data for the next step.</p>
+  <p><br/>
+    <strong>Keyword (KEY) files:</strong></p>
+  <p>Keyword files contain specific problem definition data which is read by the pre-processor and used to create an input database file. A keyword file may contain a complete problem definition, or it may contain only specific information about, for example, a
+    specific object or material. The information is stored in ASCII format, and can be read and edited with any text editor, such as Notepad, VI, or Emacs. A keyword reference is available which describes the data format for each keyword.</p>
+  <p><br/> In Integrated Manufacturing process (MO) Projects along with DB file one of the important file called Multiple Simulation template (MST) file. MST file is created to support the concept of setting up multiple operation once by saving all the operations
+    data separately in different keyword files and reading all these files along with project and supporting files respectively to append/generate data base necessary for each operation simulation.</p>
+  <h2><a id="6.5.1._Normal_Integrated_Manufacturing_process_(MO)_Project_Structure"></a>Normal Integrated Manufacturing process (MO) Project Structure</h2>
+  <p>Integrated Manufacturing process (MO) project name is used as problem ID, under the main project folder directly DB, MST and other common supporting files will gets created. Other sub folders like Operations, Objects, Materials, Equipments and Lubricants
+    folder will create inside the project folder as shown in <a href="#Fig._6.5.1._Normal_Integrated_Manufacturing_process_(MO)_project_structure"><span data-keyref="Chapter 6_5_ File structure">Fig. 6.5.</span>1.</a></p>
+  <p style="text-align: center"><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_5_file_structure/6_5_image001.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb"><a id="Fig._6.5.1._Normal_Integrated_Manufacturing_process_(MO)_project_structure"></a>Normal Integrated Manufacturing process (MO) project structure</p>
+  <p> </p>
+  <p>Operation folder contains the different Task folders for each operations naming as the order of the operation in sequence like Task00001, Task00002, ….. Task0000n where n is the maximum number of the operations added. These Task folders contain Inter-object, Mesh
+    settings, Simulation controls and Thermal stopping controls keyword files and wizard specific files if any. Objects, Material and Lubricants folders contains the keyword file for each operations, materials and lubricants added in the MO project.<br/>    Equipment folder contains the equipment keyword files for each operation objects even the read from DB object type will have the separate Equipment keyword file. So that user can change movement controls data for the read from DB objects and this data
+    gets saved in and retrieved back from equipment folder.</p>
+  <p>In DOE, Optimization and Die stress  MO projects the respective additional folders will create and all data files related those studies get saved in those files.</p>
+  <p> </p>
+  <h2><a id="6.5.2._DOE_Project_File_structure"></a>DOE Project File structure</h2>
+  <p>Adding DOE study for MO project will create DoeStudies folder, under that DOE study projects individual folders will create with name as DoeStudy1, DoeStudy2,..etc as user can add more than one DOE study projects. Doestudy data stored in three important folders
+    those are Control, Output and Solutions. Control folder contains the Regions of interest regions Keyword file. DOE results will be automatically prepared and saved in Output folder SDB file. SDB file is mandatory to DOE post to study DOE results and
+    user can open the DOE post from Main GUI only after selecting the SDB. (See <a href="#Fig._6.5.2._DOE_Project_structure"><span data-keyref="Chapter 6_5_ File structure">Fig. 6.5.</span>2.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><img height="571" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_5_file_structure/6_5_image002.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb"><a id="Fig._6.5.2._DOE_Project_structure"></a>DOE Project structure</p>
+  <p> </p>
+  <h2><a id="6.5.3._Die_Stress_Project_File_Structure"></a>Die Stress Project File Structure</h2>
+  <p>In Die Stress Study Project similar to the DOE project DieStress folder created under Main project and this folder contains all data related to Die Stress study. Also the Die stress operation Task folder creates under Operations folder in which Die Stress
+    wizard file DieStress.wzd will create. (See <a href="#Fig_6_5_3_Die_Stress_project_file_structure"><span data-keyref="Chapter 6_5_ File structure">Fig. 6.5.</span>3.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_6_5_3_Die_Stress_project_file_structure"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_5_file_structure/6_5_image003.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Die Stress project file structure</p>
+  <p> </p>
+  <h2><a id="6.5.4._Report_Generation"></a>Report Generation</h2>
+  <p>Adding Report Generation for MO project will create the Post Report Generation session DS file in project main folder directly. After simulating the report get saved in a DEF_REPORT file created under the Project folder, which contains the folder with Problem_ID
+    containing reports in PDF and PPT formats. Also images used in the report are stored separately in Images folder at same level. (See <a href="#Fig_6_5_4_Report_generation_file_structure_example"><span data-keyref="Chapter 6_5_ File structure">Fig. 6.5.</span>4.</a>    )</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_6_5_4_Report_generation_file_structure_example"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_5_file_structure/6_5_image004.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Report generation file structure example</p>
+  <h2><a id="6.5.5._Integrated_Manufacturing_process_(MO)_Wizard_and_Operation_specific_Files"></a>Integrated Manufacturing process (MO) Wizard and Operation specific Files</h2>
+  <p>Different MO Wizards like Cogging, Heat treatment, Die Stress and Machining Distortion will create respective wizard files under those operation Task folders. These wizard files contain the wizard specific data and used during the DB generation for
+    that wizard operation. MO wizard files are tabulated as shown in <a href="#Table_6.5.1._MO_wizard_Files">Table 6.5.1.</a></p>
+  <p style="text-align: center"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;font-family: Arial;font-size: 12pt;text-align: left;width: 550px;margin-left: auto;margin-right: auto">
+    <colgroup>
+      <col style="width: 81px;"/>
+      <col style="width: 230px;"/>
+      <col style="width: 240px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="padding-left: 5px"><strong>Sl. No.</strong></td>
+        <td style="padding-left: 5px"><strong>MO Wizard/Operation</strong></td>
+        <td style="padding-left: 5px;"><strong>Wizard File</strong></td>
+      </tr>
+      <tr>
+        <td style="padding-left: 5px">1</td>
+        <td style="padding-left: 5px">Cogging</td>
+        <td style="padding-left: 5px;">Cogging.MDT</td>
+      </tr>
+      <tr>
+        <td style="padding-left: 5px">2</td>
+        <td style="padding-left: 5px">Heat Treatment</td>
+        <td style="padding-left: 5px;">HeatTreatWizard.HTWZ</td>
+      </tr>
+      <tr>
+        <td style="padding-left: 5px">3</td>
+        <td style="padding-left: 5px">Die Stress</td>
+        <td style="padding-left: 5px;">DieStress.Wzd</td>
+      </tr>
+      <tr>
+        <td style="padding-left: 5px">4</td>
+        <td style="padding-left: 5px">Machining Distortion</td>
+        <td style="padding-left: 5px;">MachDistortion.MDWZ</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="text-align: center"><a id="Table_6.5.1._MO_wizard_Files"></a></p>
+  <p class="Table_number">MO wizard Files</p>
+  <h2><a id="6.5.6._Operation_Specific_Important_Files"></a>Operation Specific Important Files</h2>
+  <p>In MO for operators like 2D to 3D convertor, Boolean and Cycle and Report generation will save these operators data in the respective operation task0000n folders. These will be called during the DB generation and simulation of the respective operations. MO
+    Operation specific files are as shown in below <a href="6_5_files_structure.htm#Table_6.5.2._MO_Operation/Operator_specific_files">Table 6.5.2.</a></p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;font-family:Arial;font-size:12pt">
+    <colgroup>
+      <col style="width: 8%;"/>
+      <col style="width: 23%;"/>
+      <col style="width: 15%;"/>
+      <col style="width:25.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="padding-left: 5px"><strong>Sl. NO.</strong></td>
+        <td style="padding-left: 5px"><strong>MO Operations Specific files</strong></td>
+        <td style="padding-left: 5px"><strong>Operation/Operator specific files</strong></td>
+        <td style="padding-left: 5px"><strong>File Path</strong></td>
+      </tr>
+      <tr>
+        <td style="padding-left: 5px">1</td>
+        <td style="padding-left: 5px">Report Generation</td>
+        <td style="padding-left: 5px">&lt;PROBLEM_ID&gt;.DS</td>
+        <td style="padding-left: 5px">Under Project main folder directly</td>
+      </tr>
+      <tr>
+        <td style="padding-left: 5px">2</td>
+        <td style="padding-left: 5px">2D to 3D Convertor</td>
+        <td style="padding-left: 5px">M23_INPUT.KEY and M23_OUTPUT.KEY</td>
+        <td style="padding-left: 5px">Under Operation Task0000n folder</td>
+      </tr>
+      <tr>
+        <td style="padding-left: 5px">3</td>
+        <td style="padding-left: 5px">Boolean</td>
+        <td style="padding-left: 5px">Boolean.BWZ</td>
+        <td style="padding-left: 5px">Under Operation Task0000n folder</td>
+      </tr>
+      <tr>
+        <td style="padding-left: 5px">4</td>
+        <td style="padding-left: 5px">Cycle</td>
+        <td style="padding-left: 5px">Cycle.CWZ</td>
+        <td style="padding-left: 5px">Under Operation Task0000n folder</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><a id="Table_6.5.2._MO_Operation/Operator_specific_files"></a></p>
+  <p class="Table_number">MO Operation/Operator specific files</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../about_deform/1_introduction_to_deform/1_10_basic_file_system.htm">1.10. Basic File system.</a></p>
+  <p><a href="../../appendices/appendix_xvii_data_files.htm">Appendix XVII: Data Files</a></p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

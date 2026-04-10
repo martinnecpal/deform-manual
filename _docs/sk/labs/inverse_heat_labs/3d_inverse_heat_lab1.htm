@@ -1,0 +1,310 @@
+---
+lang: sk
+title: "3D Inverse Heat Lab1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.15.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Inverse Heat Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Inverse Heat Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/inverse_heat_labs/3d_inverse_heat_lab1.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Machining_Distortion_Labs/Machining_Distortion_Labs_Main_PG.htm"/><meta name="brsprev" value="Documentation_content/Labs/Inverse_Heat_Labs/2D_Inverse_Heat_Lab2.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Inverse Heat Lab1">
+        <span>3D Inverse Heat Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>3D Inverse Heat Lab1</h1>
+  <p><strong>Problem Summary</strong></p>
+  <p>This lab will demonstrate how to use the Inverse Heat Transfer Wizard to determine heat transfer coefficients between workpiece and media during a heat transfer process. Temperature measurement data is needed.  Heat transfer coefficients can be function
+    of temperature or time. Multiple zones of heat-transfer coefficients are assigned to the workpiece</p>
+  <p> </p>
+  <p><a href="#1_1_Starting_a_new_problem">1.1.  Starting a new problem</a></p>
+  <p><a href="#1_2_Mode_selection_page">1.2.  Mode selection page</a></p>
+  <p><a href="#1_3_Setting_Process_Conditions">1.3.  Setting Process Conditions</a></p>
+  <p><a href="#1_4_Defining_Material">1.4.  Defining Material</a></p>
+  <p><a href="#1_5_Defining_Workpiece_Object">1.5.  Defining Workpiece Object</a></p>
+  <p><a href="#1_6_Import_geometry">1.6.  Import geometry</a></p>
+  <p><a href="#1_7_Generate_mesh">1.7.  Generate mesh</a></p>
+  <p><a href="#1_8_Assigning_Material">1.8.  Assigning Material</a></p>
+  <p><a href="#1_9_BCC_Definition">1.9.  BCC Definition</a></p>
+  <p><a href="#1_10_Temperature_Measurement_Points">1.10. Temperature Measurement Points</a></p>
+  <p><a href="#1_11_Defining_Time_Zones">1.11.  Defining Time Zones</a></p>
+  <p><a href="#1_12_Defining_Heat_Transfer_Zones">1.12.  Defining Heat Transfer Zones</a></p>
+  <p><a href="#1_13_Defining_Step_controls">1.13.  Defining Step controls</a></p>
+  <p><a href="#1_14_Optimization_control">1.14.  Optimization control</a></p>
+  <p><a href="#1_15_Database_Generation">1.15.  Database Generation</a></p>
+  <p><a href="#1_16_Optimization">1.16.  Optimization</a></p>
+  <p><a href="#1_17_Optimization_results">1.17.  Optimization results</a></p>
+  <p> </p>
+  <h2><a id="1_1_Starting_a_new_problem"></a>Starting a new problem</h2>
+  <p>Start a new Inverse Heat Transfer Wizard problem with problem ID <strong>BAR_INVHEAT</strong>.  You can do so by clicking the <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> button and choose “<strong>3D Inverse </strong><strong>Heat</strong>”
+    Problem type along with “<strong>English</strong>” for &quot;Unit System&quot; (see <a href="#Fig_3DINVL1_1_Problem_Setup_window"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>1.</a>).  You can select the directory
+    for the project under Location filed and then click <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to open Inverse Heat wizard.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_1_Problem_Setup_window"></a><img height="419" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem Setup window</p>
+  <p> </p>
+  <h2><a id="1_2_Mode_selection_page"></a>Mode selection page</h2>
+  <p>As the 3D Inverse Heat wizard opens, you should see a window as shown in <a href="../machining_labs/3d_cutting_lab2.htm#Fig_3DTL2_2_Process_page"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>2.</a> If user is
+    interested in calculating transformations or atom content due to diffusion then user can turn on respective check boxes under “Sim Mode” tab. In this lab we will not turn on any check box as we will be calculating only heat transfer co-efficients.
+    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_2_Initialization_Window"></a><img height="320" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0002.jpg' | relative_url }}" width="377"/></p>
+  <p> </p>
+  <p class="Fig_numb">Initialization Window</p>
+  <h2><a id="1_3_Setting_Process_Conditions"></a>Setting Process Conditions</h2>
+  <p>User can set the environment conditions in this page. If the process involves Quenching and heat transfer, then respective check boxes can be turned on to define the environment conditions. Our process involves only heat transfer and the environmental
+    temperature is constant. Hence, turn off “Quench”, turn on “<strong>Transfer</strong>” and define environment temperature as <strong>150F </strong>(See <a href="#Fig_3DINVL1_3_Setting_up_Process_conditions"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>3.</a>).
+    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_3_Setting_up_Process_conditions"></a><img height="320" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0003.jpg' | relative_url }}" width="377"/></p>
+  <p> </p>
+  <p class="Fig_numb">Setting up Process conditions</p>
+  <h2><a id="1_4_Defining_Material"></a>Defining Material</h2>
+  <p>In page “<strong>Material</strong><strong> </strong><strong>list</strong>”, choose  and in the material library, choose &quot;<strong>Steel</strong>&quot; category and load “<strong>AISI</strong><strong>-1015[70-2000F(20-1100C)]</strong>&quot; as shown
+    in <a href="#Fig_3DINVL1_4_Loading_Material_data_from_library"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>4.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until “Workpiece”
+    page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_4_Loading_Material_data_from_library"></a><img height="388" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Loading Material data from library</p>
+  <h2><a id="1_5_Defining_Workpiece_Object"></a>Defining Workpiece Object</h2>
+  <p>In workpiece page, define “Object Temp.” as <strong>1575F </strong>as shown in <a href="#Fig_3DINVL1_5_Workpiece_Object_Definition"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>5.</a> Make sure the object type
+    is Plastic and Primary Die check box is checked. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_5_Workpiece_Object_Definition"></a><img height="330" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0005.jpg' | relative_url }}" width="395"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Object Definition</p>
+  <h2><a id="1_6_Import_geometry"></a>Import geometry</h2>
+  <p>In “Geometry” page, click on <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> icon and import geometry file “<strong>BAR_INVHEAT.STL</strong>” from ‘/3d/LABS’ directory as shown in <a href="#Fig_3DINVL1_6_Geometry_page"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>6.</a> Click
+    Setup brick mesh to open the <img src="{{ '/assets/icons/pre_icons/mo_setup_brick_mesh_label.jpg' | relative_url }}"/> dialog. Select <strong>Extrude </strong>radio button and pick Workpiece surface on the <strong>+Z</strong> direction as Start surface and the
+    surface in -Z direction as End surface, see <a href="#Fig_3DINVL1_7_Assigned_Setup_brick_mesh"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>7.</a> Click the <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> button to close the “Setup brick mesh” dialog, then click on <img src="{{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}"/> to open the ‘Symmetry’ dialog. In Symmetry dialog, select Planar surface and then pick Workpiece surfaces in
+    <strong>+X</strong> and <strong>-Y</strong> direction as planar symmetry faces. To mark each plane, select the face and then click <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/>, see <a href="#Fig_3DINVL1_8_Assigned_symmetry_plane_data"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>8.</a>    Click the <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to close the “Symmetry” dialog, then click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to generate mesh.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_6_Geometry_page"></a><img height="400" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0006.jpg' | relative_url }}" width="390"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_7_Assigned_Setup_brick_mesh" height="151047" width="151145"></a><img height="363" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0008.jpg' | relative_url }}" width="748"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Setup Brick mesh page</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_8_Assigned_symmetry_plane_data"></a><img height="508" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0007.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigned symmetry plane data</p>
+  <h2><a id="1_7_Generate_mesh"></a>Generate mesh</h2>
+  <p>While user is in “Mesh” page, expert mode can be used to access the advanced mesh options. Click on n <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> icon in tool bar to change to expert mode and select <strong>Brick </strong><strong>mesh </strong>radio
+    button. From Brick mesh options, select <strong>Finer mesh area</strong> radio button and click on <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/>  button three times to add three finer mesh areas (0 - 0.59, 0.59 - 4.41, 4.41 - 5) and
+    define no of layers as ‘7’ for all three finer mesh areas,  see <a href="#Fig_3DINVL1_9_Generating_mesh"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>9.</a>  <br/> Select <strong>2D cross section</strong> tab,
+    define <strong>target number of elements</strong> as ‘<strong>110</strong>’, <strong>Thickness elements</strong> as ‘<strong>4</strong>’, <strong>size </strong><strong>ratio </strong>as ‘<strong>10</strong>’ and turn on <strong>Mapped mesh </strong>checkbox.
+    Click on weighting factors tab and define mesh windows as ‘<strong>1</strong>’ . Click on <strong>mesh windows </strong>tab and add a mesh window over the 2D mesh, select window 1 and define values by clicking on <img src="{{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}"/> button as shown in <a href="#Fig_3DINVL1_9_Generating_mesh"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>9.</a> Define Relative element size as ‘<strong>100</strong>’ and select <strong>Workpiece </strong>as
+    follow object. Click on <img height="17" src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}" style="cursor: nesw-resize;" width="93"/> button to generate brick mesh. Click on <img height="22" src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" style="cursor: nesw-resize;" width="73"/> to assign Material.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="367" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0009.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"><img height="400" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0010.jpg' | relative_url }}" width="390"/></p>
+  <p style="text-align: center"><img height="400" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0028.jpg' | relative_url }}" width="390"/></p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig_3DINVL1_9_Generating_mesh"></a>Generating mesh</p>
+  <h2><a id="1_8_Assigning_Material"></a>Assigning Material</h2>
+  <p>Select material “<strong>AISI</strong><strong>-1015[70-2000F(20-1100C)]</strong>” from the material list to assign to workpiece as shown in <a href="#Fig_3DINVL1_10_Assigning_Material"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>10.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to BCC page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_10_Assigning_Material" height="0" width="0"></a><img height="400" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0011.jpg' | relative_url }}" width="390"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning Material</p>
+  <h2><a id="1_9_BCC_Definition"></a>BCC Definition</h2>
+  <p>By default “Heat Exchange with Environment” should have been assigned to the non-symmetry faces of the object (see <a href="#Fig_3DINVL1_11_Heat_Exchange_BCC_assigned_for_Workpiece"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>11.</a>).
+    Double check whether Heat Exchange with Environment BCC was applied. Manually apply the BCC to the non-symmetry faces if not already assigned. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" style="cursor: nesw-resize;"/> until
+    Temperature Measurement Points page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_11_Heat_Exchange_BCC_assigned_for_Workpiece"></a><img height="471" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0012.jpg' | relative_url }}" width="500"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat Exchange BCC assigned for Workpiece</p>
+  <h2><a id="1_10_Temperature_Measurement_Points"></a>Temperature Measurement Points</h2>
+  <p>In “Temperature Measurement Points” page, click <img src="{{ '/assets/icons/pre_icons/mo_add_row_button.jpg' | relative_url }}"/> button three times and input coordinates (1.249, 4.5, 4.5), (1.249, 0, 0.5), and (1.249, -4.9, 2.5) in the table for point 1, 2, and
+    3, respectively as shown in <a href="#Fig_3DINVL1_12_Temperature_measurement_Points_page"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>12.</a> </p>
+  <p> </p>
+  <p>Thermal history data for each point can be defined by clicking on the <img height="25" src="{{ '/assets/icons/pre_icons/mo_inverse_heat_define_button.jpg' | relative_url }}" width="80"/> button in the last column of the table. Click on <img height="25" src="{{ '/assets/icons/pre_icons/mo_inverse_heat_define_button.jpg' | relative_url }}" width="80"/> and load “BAR_INVHEAT_Thermal_History_1.dat” file for point 1 from the /Labs folder and click  <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> button (see <a href="#Fig_3DINVL1_13_Thermal_History_Data_window_for_Point_1"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>13.</a>). Similarly
+    load BAR_INVHEAT_Thermal_History_2.dat and BAR_INVHEAT_Thermal_History_3.dat for point 2 and 3 respectively. <img height="25" src="{{ '/assets/icons/pre_icons/mo_inverse_heat_define_button.jpg' | relative_url }}" width="80"/> button in the last column of the table
+    will change into <img height="25" src="{{ '/assets/icons/pre_icons/mo_inverse_heat_edit_button.jpg' | relative_url }}" width="71"/> after you had defined the Thermal History Data for the point. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong> If user want to define temperature measurement points for all the three points at a time, we can use <img height="20" src="{{ '/assets/icons/pre_icons/mo_import_file_icon2.jpg' | relative_url }}" width="21"/> button in Temperature Measurement
+    Points page to load &quot;BAR_INVHEAT_Thermal_History.DAT&quot; from /Labs folder, all three points data is loaded into the wizard.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_12_Temperature_measurement_Points_page"></a><img height="465" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0013.jpg' | relative_url }}" width="500"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature measurement Points page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_13_Thermal_History_Data_window_for_Point_1" height="0" width="0"></a><img height="354" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Thermal History Data window for Point 1</p>
+  <h2><a id="1_11_Defining_Time_Zones"></a>Defining Time Zones</h2>
+  <p>In the time zones page, user can define time zones for Quenching and Transfer. Since in this lab we had opted to simulate only Transfer, only Transfer time zone definition is available. We would like to simulate the process for 506 sec as the last point
+    of temperature measurement available from thermal history is at 506 sec. So enter Start time as 0sec and End time as 506 sec. Thermal History graph of all the points within the specified time can be seen in display area, see <a href="#Fig_3DINVL1_14_Transfer_Time_Definition_in_Time_Zone_Page"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>14.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_14_Transfer_Time_Definition_in_Time_Zone_Page" height="0" width="0"></a><img height="388" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0015.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Transfer Time Definition in Time Zone Page</p>
+  <p> </p>
+  <h2><a id="1_12_Defining_Heat_Transfer_Zones"></a>Defining Heat Transfer Zones</h2>
+  <p>In “Heat Transfer Zones” page”, click <img height="22" src="{{ '/assets/icons/pre_icons/mo_add_htc_zone_button.jpg' | relative_url }}" style="cursor: nwse-resize;" width="74"/> twice to create two zones. To define each heat transfer zone, first select the appropriate
+    row in the table and then pick surfaces on the object. (You may need to use <img src="{{ '/assets/icons/pre_icons/mo_bcc_surface_patch_icon.jpg' | relative_url }}"/> in the picking options in the lower tool bar in order to achieve ideal picking results.) Select
+    Zone #1 in the table and pick the faces normal to the -X, +Y and +Z directions to assign them to Zone #1(see <a href="#Fig_3DINVL1_15_Defining_Heat_transfer_Zone_1"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>15.</a>).
+    Select Zone #2 in the table and pick the face normal to the -Z direction to assign it to Zone #2 (see <a href="#Fig_3DINVL1_16_Defining_Heat_transfer_Zone_2"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>16.</a>).</p>
+  <p> </p>
+  <p class="Note_text"><span style="font-style:italic;"><strong>Note </strong>that the two symmetric planes are not included in any heat transfer zone.</span></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_15_Defining_Heat_transfer_Zone_1" height="0" width="0"></a><img height="372" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0016.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Heat transfer Zone #1</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_16_Defining_Heat_transfer_Zone_2"></a><img height="518" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Heat transfer Zone #2</p>
+  <p> </p>
+  <p>After defining Heat transfer zone, click on <img src="{{ '/assets/icons/pre_icons/mo_iniitialize_htc_button.jpg' | relative_url }}" style="cursor: nwse-resize;"/> button to define control points and limits, make sure HTC function is based on temperature. System adds
+    control points by default, we will delete them for this lab and use six manually defined points. Click on the <img src="{{ '/assets/icons/pre_icons/mo_delete_all_button2.jpg' | relative_url }}" style="cursor: nesw-resize;"/> button to clear the table. Enter the
+    following six values: 100, 400, 700, 1000, 1300, and 1600 as shown in <a href="#Fig_3DINVL1_17_Defining_Heat_Transfer_Coeffecient_Function_Definition"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>17.</a> Make
+    sure interpolation method is Linear and initial guess, lower and upper bounds are fine. Click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> button and then click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the Initializing Window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_17_Defining_Heat_Transfer_Coeffecient_Function_Definition" height="0" width="0"></a><img height="423" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0018.jpg' | relative_url }}" width="450"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Heat Transfer Coeffecient Function Definition</p>
+  <p> </p>
+  <p>Control points and limits settings can be set for each zone separately using the <img src="{{ '/assets/icons/pre_icons/mo_inverse_heat_define_button.jpg' | relative_url }}"/> button next to Zone in “Heat Transfer Zones” page, see <a href="#Fig_3DINVL1_15_Defining_Heat_transfer_Zone_1"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>15.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until “Step” page.        </p>
+  <h2><a id="1_13_Defining_Step_controls"></a>Defining Step controls</h2>
+  <p>In “Step” page, keep “Temperature change per step” set as <strong>1.8F</strong> and leave other values to defaults as shown in <a href="#Fig_3DINVL1_18_Defining_Step_controls"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>18.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_18_Defining_Step_controls" height="0" width="0"></a><img height="400" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0019.jpg' | relative_url }}" width="390"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Step controls</p>
+  <h2><a id="1_14_Optimization_control"></a>Optimization control</h2>
+  <p>In “Optimization Control” page, as shown in <a href="#Fig_3DINVL1_19_Optimization_control_Window"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>19.</a> make sure BFGS check box is in unchecked status. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_19_Optimization_control_Window"></a><img src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0020.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Optimization control Window</p>
+  <h2><a id="1_15_Database_Generation"></a>Database Generation</h2>
+  <p>In DB Generation page, click on <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/> to verify the set up for errors and warnings, you should see a message “Data Valid!” if there are no errors. Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> to generate Database.</p>
+  <h2><a id="1_16_Optimization"></a>Optimization</h2>
+  <p>After Database is generated, switch to <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> tab above the object tree and click on <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> button to start the
+    optimization, see <a href="#Fig_3DINVL1_20_Running_Optimization"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>20.</a> You can see a message “MULTIPLE OPERATION COMPLETED.” at the end of Simulation Log file after
+    optimization is completed.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_20_Running_Optimization"></a><img height="210" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0021.jpg' | relative_url }}" width="388"/></p>
+  <p> </p>
+  <p class="Fig_numb">Running Optimization</p>
+  <p> </p>
+  <h2><a id="1_17_Optimization_results"></a>Optimization results</h2>
+  <p>To view optimization results, click on <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> tab next to <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> tab. In “Post Tools” page under “Tools” you can see
+    two icons (see <a href="#Fig_3DINVL1_21_Post_Tools_to_view_Optimization_Results"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>21.</a>),</p>
+  <p><img src="{{ '/assets/icons/pre_icons/mo_inverse_heat_optimal_htc.jpg' | relative_url }}"/>  <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> To view Optimized HTC values.</p>
+  <p> </p>
+  <p><img src="{{ '/assets/icons/pre_icons/mo_inverse_heat_local_objective_button.jpg' | relative_url }}"/>  <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> To view simulated temperature values at Temperature Measurement Points.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_21_Post_Tools_to_view_Optimization_Results" height="0" width="0"></a><img height="350" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0022.jpg' | relative_url }}" width="357"/></p>
+  <p> </p>
+  <p class="Fig_numb">Post Tools to view Optimization Results</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_inverse_heat_optimal_htc.jpg' | relative_url }}"/> to view optimized HTC values for each zone, a Heat Transfer Zone window will open as shown in <a href="#Fig_3DINVL1_22_Heat_Transfer_Zones_Window_in_Post_Tab"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>22.</a>    Select each zone and click on view to observe the optimized HTC values, see <a href="#Fig_3DINVL1_23_Optimized_HTC_values_for_Zone_1"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>23.</a>  shows Zone #1 optimized
+    HTC values.</p>
+  <p> </p>
+  <p><img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/>  can be used to view objective value history, see <a href="#Fig_3DINVL1_24_Objective_Value_History"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>24.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_22_Heat_Transfer_Zones_Window_in_Post_Tab"></a><img src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0023.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat Transfer Zones Window in Post Tab.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_23_Optimized_HTC_values_for_Zone_1"></a><img height="486" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0024.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Optimized HTC values for Zone #1.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_24_Objective_Value_History"></a><img height="376" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0025.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objective Value History</p>
+  <p> </p>
+  <p>The local objective optimization result can be viewed using <img src="{{ '/assets/icons/pre_icons/mo_inverse_heat_local_objective_button.jpg' | relative_url }}"/>, it gives the comparison between the experimental temperature and the simulated temperature values when
+    the optimized heat transfer coefficient values are used. These values can be saved if necessary using <img src="{{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}"/> button (see <a href="#Fig_3DINVL1_25_Temperature_Measurement_Points_in_Post"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>25.</a>).
+    User can select a point (see <a href="#Fig_3DINVL1_25_Temperature_Measurement_Points_in_Post"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>25.</a>) and click on <img src="{{ '/assets/icons/pre_icons/mo_inverse_heat_view_thermal_icon.jpg' | relative_url }}"/> to plot the comparison between the experimental temperature and the simulated temperature values or <img src="{{ '/assets/icons/pre_icons/mo_inverse_heat_view_all_button.jpg' | relative_url }}"/> to plot for all values, <a href="#Fig_3DINVL1_26_Local_Objective_Optimization_Result_for_Point_1"><span data-keyref="Labs_Inverse_Heat_Labs-3D_Inverse_ Heat_lab1">Fig. 3DINVL1.</span>26.</a>    shows the comparison between the experimental temperature and the simulated temperature values for Point 1.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_25_Temperature_Measurement_Points_in_Post" height="1301929" width="1303632"></a><img height="340" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0026.jpg' | relative_url }}" width="400"/></p>
+  <p> </p>
+  <p class="Fig_numb">Temperature Measurement Points in Post</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DINVL1_26_Local_Objective_Optimization_Result_for_Point_1"></a><img height="370" src="{{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0027.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Local Objective Optimization Result for Point 1</p>
+  <p> </p>
+
+</body></html>

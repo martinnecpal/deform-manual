@@ -1,0 +1,269 @@
+---
+lang: en
+title: "Forming Express Lab4"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "15.3.2.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Express Lab4</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Express Lab4</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Express_Gear_Labs/Forming_Express_Lab5.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Express_Gear_Labs/Forming_Express_Lab3.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Forming Express Lab4">
+        <span>Forming Express Lab4</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 4.Symmetry</h1>
+  <h3 class="h3_4_">Creating a New Problem</h3>
+  <p>To investigate 3D symmetry in DEFORM, open the new project with <strong>FE_Gear_3D_Thermal_Sym</strong> name and with <strong>English </strong>unit.</p>
+  <p> </p>
+  <p>This project is the same as the previous <strong>FE_Gear_3D_Thermal</strong> (<a href="forming_express_lab3.htm">Lab 3</a>), with the exception that only 45° of the workpiece is modeled.  For this 45° sector of the part to deform the same as the full
+    part, symmetry boundary conditions must be used. This lab will go over the differences when setting up a simulation with symmetry.</p>
+  <h3 class="h3_4_">Add Operations</h3>
+  <p> Add three operations from the Explorer:</p>
+  <ul class="Disc">
+    <li>
+      <p> [3D] Heat Transfer Express</p>
+    </li>
+    <li>
+      <p> [3D] Heat Transfer Express and</p>
+    </li>
+    <li>
+      <p> [3D] Forming Express</p>
+    </li>
+  </ul>
+  <p>Double-click on the title of the first operation and change it to <strong>Air Transfer</strong>. Change the second operation title to<strong> Rest on Die</strong>. Leave the third Forming title as it is.</p>
+  <p> </p>
+  <p>Right-click the <strong>Workpiece </strong>and <strong>Pass object to All operations</strong>. Similarly, right-click on the <strong>Top Die</strong> and <strong>Bottom Die</strong> and use <strong>Pass object to Next operation</strong> for both the
+    objects.</p>
+  <h3 class="h3_4_">Define Air Transfer</h3>
+  <p>Click on the <strong>Air Transfer</strong> operation. In this lab, we will use <strong>Symmetry</strong>. Verify that the heating type is set to <strong>Transfer</strong>. Leave the <strong>Accuracy </strong>and <strong>Complexity </strong>sliders at
+    <strong>Moderate</strong>. (See <a href="#Fig_L4_1_Process_Window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab4">Fig. L4.</span>1.</a>). In Objects page keep the <strong>1 Workpiece only </strong>option and click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Workpiece page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L4_1_Process_Window"></a><img height="350" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab4_image0001.jpg' | relative_url }}" width="406"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab4">Process Window</p>
+  <h4 class="h4_4_3_">Define the workpiece General Data</h4>
+  <p>Leave the workpiece temperature at 2250°F. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to geometry page.</p>
+  <h4 class="h4_4_3_">Create Workpiece geometry from Primitive</h4>
+  <p>Define the geometry as a primitive <strong>cylinder </strong>with a <strong>diameter </strong>of <strong>5</strong> in, <strong>height </strong>of <strong>8.1 </strong>in, <strong>Revolve </strong><strong>angle </strong>as <strong>45</strong> degree
+    and <strong>corner </strong><strong>radius </strong>of <strong>0.2 </strong>in. Click  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to assign symmetry. (See <a href="#Fig_L4_2_Workpiece_Geometry_Primitive_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab4">Fig. L4.</span>2.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L4_2_Workpiece_Geometry_Primitive_window"></a><img height="364" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab4_image0002.jpg' | relative_url }}" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab4">Workpiece Geometry Primitive window</p>
+  <p> </p>
+  <h4 class="h4_4_3_">Assigning symmetry for Workpiece</h4>
+  <p>Each of the two cut surfaces was added as a Symmetry plane by picking them with the mouse and then clicking <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/>. Click each of the entries under Planar Symmetry and observe the surfaces
+    get highlighted (See <span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab4">Fig. L4.</span>3).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L4_3_Workpiece_Symmetry_window"></a><img height="380" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab4_image0003.jpg' | relative_url }}" width="660"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab4">Workpiece Symmetry window</p>
+  <p> </p>
+  <h4 class="h4_4_3_">Generating mesh for Workpiece</h4>
+  <p>Select <strong>User </strong><strong>defined </strong>radio button and define <strong>Target number of elements </strong>as <strong>10000 </strong>and Generate a mesh.</p>
+  <h4 class="h4_4_3_">Assign Material for Workpiece</h4>
+  <p>Click the <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> (Load material from library) button. Select the <strong>Steel_at_Extended_Temperatures</strong> category, then <strong>AISI-8620[1550-2200F(850 -1200C)]</strong>    and click the <img src="{{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}"/> button. Click on the <strong>AISI-8620[1550-2200F(850 -1200C)] </strong>in the material window to assign the material to the workpiece. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>  to BCC page.</p>
+  <h4 class="h4_4_3_">Workpiece BCC</h4>
+  <p>Confirm that symmetry boundary conditions are defined on the symmetry planes, and that heat exchange with the environment is Defined on all faces except the symmetry planes. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to
+    Heat Condition page.</p>
+  <h4 class="h4_4_3_">Assign Heat Condition</h4>
+  <p>Set the <strong>Transfer </strong><strong>time </strong>as <strong>5</strong> sec, accept the default Environment temperature and Convection coefficient (See <a href="forming_express_lab3.htm#Fig_L3_6_Heat_condition_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab3">Fig. L3.</span>6.</a>).
+    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Simulation controls page.</p>
+  <h4 class="h4_4_3_">Simulation controls</h4>
+  <p>Use default System defined simulation controls, so no changes are needed, Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to generate DB.</p>
+  <h4 class="h4_4_3_">Generate Database</h4>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/>, If there are no errors and warnings in message tab, go ahead and click <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/>.</p>
+  <p>Now click on <img src="{{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}"/> to move to Next operation.</p>
+  <h3 class="h3_4_">Rest on Die operation</h3>
+  <p>For the 2nd operation, the heat transfer type will be<strong> Rest on die</strong>. This simulates the heat lost from the workpiece to the tool from the time it is placed on the bottom die until the press is stroked. For this operation, the workpiece
+    should be contacting the bottom die, but the top die should be positioned some distance away from the workpiece.</p>
+  <p> </p>
+  <p class="Note_text">Note: the Dwell on die is intended for heat transfer after forging, and uses higher heat transfer coefficients corresponding to more complete die contact.</p>
+  <h4 class="h4_4_4_">Define Temperature Calculation</h4>
+  <p>Use the <strong>Calculate temperature in workpiece only</strong> option. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Objects page.</p>
+  <h4 class="h4_4_4_">Define Number of Objects</h4>
+  <p>Keep <strong>1 Workpiece + 2 dies</strong> option. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Workpiece page.</p>
+  <h4 class="h4_4_4_">Define Workpiece for Heat Resting</h4>
+  <p>All workpiece data will be read from the first operation results in the database. Skip over the workpiece and move to the Top Die.</p>
+  <h4 class="h4_4_4_">Top die General page</h4>
+  <p>Verify that the Top Die temperature is <strong>300</strong>°F. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Top die geometry page.</p>
+  <h4 class="h4_4_4_">Import Top die geometry</h4>
+  <p>Import the top die geometry STL file “<strong>gear top die.</strong><strong>STL</strong>” using the <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> (Import geometry from a file) button by browsing the geometry file path in
+    installation folder V*_* \Tutorials directory. The die comes in oriented along a different axis than the workpiece. We will address that in a later step.</p>
+  <p> </p>
+  <p>We will use a die distance stopping control when we run the forming simulation, but since the tools are defined in the current operation, reference points must also be defined now. Click on <img src="{{ '/assets/icons/pre_icons/mo_define_reference_point_button.jpg' | relative_url }}"/> and pick a point on the flash land (See <a href="forming_express_lab3.htm#Fig_L3_7_Top_die_with_the_selected_reference_point"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab3">Fig. L3.</span>7.</a>) to select the reference point on
+    the top die. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define bottom die.</p>
+  <h4 class="h4_4_4_">Bottom die general page</h4>
+  <p>Verify that the Bottom Die temperature is <strong>300</strong>°F. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Bottom die geometry page.</p>
+  <h4 class="h4_4_4_">Import Bottom die geometry</h4>
+  <p>Import the bottom die geometry STL file “<strong>gear bottom die.</strong><strong>STL</strong>” using the <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/> (Import geometry from a file) button by browsing the geometry file
+    path in installation folder V*_* \Tutorials directory. The die comes in oriented along a different axis than the workpiece. We will address that in a later step.</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_define_reference_point_button.jpg' | relative_url }}"/> and pick a point on the flash gutter (See <a href="forming_express_lab3.htm#Fig_L3_8_Bottom_die_with_the_selected_reference_point"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab3">Fig. L3.</span>8.</a>)
+    to select the reference point on the bottom die. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define positioning.</p>
+  <p> </p>
+  <h4 class="h4_4_4_">Define Positioning for Heat Resting</h4>
+  <p>At this point, the workpiece is oriented along the Z axis, and the tools are oriented along the Y axis as shown in <a href="forming_express_lab3.htm#Fig_L3_9_Orientation_of_does_and_Workpiece"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab3">Fig. L3.</span>9.</a></p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}"/> button. First, rotate the dies to be oriented along the Z axis. Set Method to <strong>Rotational</strong>. Set the following:</p>
+  <p>Positioning object : <strong>Top Die</strong>.</p>
+  <p>Axis :                         X</p>
+  <p>Rotation center :      User-defined (0,0,0)</p>
+  <p>Angle :                      90 deg.</p>
+  <p>We want to rotate both dies together, so go to the <strong>Coupled </strong>tab, and check <strong>Bottom </strong><strong>Die</strong>. This will couple any positioning that is done (See <a href="forming_express_lab3.htm#Fig_L3_10_Positioning_Top_die_with_Coupled_Bottom_object"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab3">Fig. L3.</span>10.)</a>.
+    Click <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> to rotate the tools to be aligned with the workpiece.</p>
+  <p> </p>
+  <p>Now the tools and workpiece are all aligned along the Z axis, but the tools are too close together as shown in <a href="forming_express_lab3.htm#Fig_L3_11_Objects_after_rotation_position"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab3">Fig. L3.</span>11.</a>    The next step is to move the Top Die into an &quot;up&quot; position away from the workpiece.</p>
+  <p> </p>
+  <p>Uncheck the coupled positioning, then position the<strong> </strong>Top <strong>Die </strong>using <strong>Offset </strong>by <strong>12 </strong>in. in the Z direction.</p>
+  <p> </p>
+  <p>Finally, we need to make sure that the Bottom Die is contacting properly with the Workpiece. Since the Workpiece will be read from the database at this operation, we can&#39;t use regular positioning. However, we can use scheduled positioning that will
+    be completed when the project is running. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close Object positioning dialog and click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Scheduled
+    positioning page.</p>
+  <h4 class="h4_4_4_">Define Scheduled positioning for Heat Resting</h4>
+  <p>Use <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> to add a scheduled positioning operation, and <strong>Interference </strong>position the <strong>Bottom </strong><strong>Die </strong>in the<strong> Z</strong> direction with the
+    <strong>Workpiece</strong>.</p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> and the scheduled positioning page should show this scheduled operation (See <a href="forming_express_lab3.htm#Fig_L3_13_Scheduled_positioning_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab3">Fig. L3.</span>13.</a>).
+    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Contact.</p>
+  <h4 class="h4_4_4_">Define contact settings for Heat Resting</h4>
+  <p>In Contact, use the default <strong>System-defined</strong> coefficients and tolerance settings. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define Heat Condition.</p>
+  <h4 class="h4_4_4_">Define Heating condition for Heat Resting</h4>
+  <p>The <strong>Resting </strong><strong>time </strong>will be <strong>4</strong> seconds. Accept the default temperature and convection coefficient. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to simulation controls page.</p>
+  <h4 class="h4_4_4_">Define simulation controls for  Heat Resting</h4>
+  <p>Use the <strong>User </strong>define step definition and define the <strong>time per step</strong> as <strong>0.1 </strong>sec, <strong>Number of steps</strong> as <strong>40 </strong>and <strong>step increment to save</strong> as <strong>5</strong>.
+    With these settings, 10 steps will be used per second, which is appropriate for a heat transfer simulation involving contact conditions. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to generate the DB.</p>
+  <h4 class="h4_4_4_">DB generation for Heat Resting</h4>
+  <p>Data checking will be executed. You will see a message saying, &quot;Status: DB generation is not required for this operation. It will occur at run time.&quot; The database will be generated automatically after the first operation is completed.</p>
+  <h3 class="h3_4_">Forming Operation</h3>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}"/> or just click on the Forming tile in the Operation Editor to set up the forming operation.</p>
+  <p>All objects will be read from the database at the end of the previous Rest on Die operation, so we only need to set:</p>
+  <ul class="Disc">
+    <li>
+      <p>Movement controls</p>
+    </li>
+    <li>
+      <p>Positioning</p>
+    </li>
+    <li>
+      <p>Inter-object relationships</p>
+    </li>
+    <li>
+      <p>Simulation and stopping controls</p>
+    </li>
+  </ul>
+  <h4 class="h4_4_5_">Assign Top die movement</h4>
+  <p>Click on <strong>Top Die Movement</strong> page in Operation tree and set the <strong>Speed </strong>to a constant value of <strong>3</strong> in/sec in the <strong>-Z </strong>direction. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Scheduled Positioning page.</p>
+  <h4 class="h4_4_5_">Scheduled Positioning</h4>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button and define <strong>Interference </strong>position between the <strong>Top Die</strong> to the Workpiece in the <strong>-Z </strong>direction. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Contact page.</p>
+  <h4 class="h4_4_5_">Inter-Object relation</h4>
+  <p>The default <strong>system-defined</strong> settings for hot forging will be used, so no changes are needed.</p>
+  <h4 class="h4_4_5_">Set Primary Die Stroke Controls</h4>
+  <p>In Primary die stroke page, we need to set the total die movement to something appropriate for this forming operation. The height of the billet is 8.1 in. This is a good approximate value to use. Set the <strong>Total primary die stroke</strong> to
+    <strong>8.1</strong> in. (See <a href="forming_express_lab3.htm#Fig_L3_14_Primary_die_stroke_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab3">Fig. L3.</span>14.</a>) Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Stopping controls page.</p>
+  <h4 class="h4_4_5_">Assign Stopping controls</h4>
+  <p>Check the <strong>Distance between objects </strong>stopping criteria to <strong>0.25</strong> in, using the <strong>Top Die </strong>and <strong>Bottom </strong><strong>Die </strong>as the reference objects and <strong>Z </strong>as the direction.
+    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define Simulation controls (See <a href="forming_express_lab3.htm#Fig_L3_15_Distance_between_objects_stopping_control"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab3">Fig. L3.</span>15.</a>).</p>
+  <h4 class="h4_4_5_">Define simulation control for Forming</h4>
+  <p>Use the <strong>system </strong>define step definition type, which will use the 1.2 times the primary die stroke value as total displacement and divide it by default <strong>number of steps</strong> <strong>100</strong>, so in this case that is, (1.2
+    x 8.1)/100  = 0.0972 in/step and save every <strong>10 </strong>steps in database. (See <a href="forming_express_lab3.htm#Fig_L3_16_Forming_operation_Simulation_controls_settings"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab3">Fig. L3.</span>16.</a>)</p>
+  <p><br/> As informed in resting operation, Data checking will be executed and shows if there are any errors otherwise, says database will generate during run time. Save the project.</p>
+  <p> </p>
+  <p>Click on the MO <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h3 class="h3_4_">Run and monitor a simulation</h3>
+  <p>3D simulations can be made to run faster by taking advantage of multiple processors or multiple cores on one processor. If your computer processors has 4 cores, then Click the <img src="{{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}"/> label.</p>
+  <p>set the Simulation Mode to <strong>Interactive </strong>and select <strong>Continue </strong><strong>Run</strong><br/> specify the MPI 3D as <strong>4. </strong> (See <a href="forming_express_lab3.htm#Fig_L3_17_Run_option_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab3">Fig. L3.</span>17.</a>)</p>
+  <p>Then click on <img src="{{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}"/> button and then <img src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p>As the simulation is running, click the Temperature <img src="{{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}"/> button to view temperatures in the graphics window. It is helpful to use <strong>Multi object mode</strong> <img src="{{ '/assets/icons/pre_icons/mo_show_multi_obj_icon.jpg' | relative_url }}"/>  to make the dies transparent.  </p>
+  <p> </p>
+  <p>Once the simulation is completed, click the MO <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> mode button to review results.</p>
+  <h3 class="h3_4_">Review results in Post Mode</h3>
+  <p>Click the 3D Mirroring <img src="{{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }}"/> icon. Confirm that the Add option is selected, and click on a <strong>symmetry </strong><strong>plane </strong>of the object. A mirrored symmetry object
+    will be added. Keep clicking on the symmetry plane until the full object is created. If you make a mistake, the Delete option can be used to delete the added section (See <a href="#Fig_L4_4_3D_Mirroring_window_in_MO_post"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab4">Fig. L4.</span>4.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L4_4_3D_Mirroring_window_in_MO_post"></a><img height="388" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab4_image0004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab4">3D Mirroring window in MO post</p>
+  <p> </p>
+  <p>Play through the steps of the simulation. Compare results to the full model. The results should be essentially the same.</p>
+  <p class="Note_text">Note:  When plotting the load vs. stroke curve, the load displayed is only for this 45° section. The Graph <img src="{{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}"/> dialog has a Scale option that allows you to multiply the load by
+    8 to get the load to form the full part. (See <a href="#Fig_L4_5_Load_Stroke_graph_with_scale"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_FE_Lab4">Fig. L4.</span>5.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L4_5_Load_Stroke_graph_with_scale"></a><img height="378" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab4_image0005.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab4">Load Stroke graph with scale</p>
+  <p> </p>
+
+</body></html>

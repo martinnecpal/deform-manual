@@ -1,0 +1,165 @@
+---
+lang: en
+title: "23.1. Start Stop and Resume Simulations"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "5.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>23.1. Start Stop and Resume Simulations</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>23.1. Start Stop and Resume Simulations</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations.css"/>
+<meta name="brsnext" value="Documentation_content/Simulator/23_DEFORM_Simulator/23_2_Interactive_and_batch_mode.htm"/><meta name="brsprev" value="Documentation_content/Simulator/23_DEFORM_Simulator/23_Introduction_to_DEFORM_Simulator.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="23.1. Start Stop and Resume Simulations">
+        <span>23.1. Start Stop and Resume Simulations</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>23.1. Start Stop and Resume Simulations</h1>
+  <p>The simulation is started by clicking the <img src="{{ '/assets/icons/simulator_icons/gui_run_button.jpg' | relative_url }}"/> or <img src="{{ '/assets/icons/simulator_icons/mo_run_icon.jpg' | relative_url }}"/> (See <a href="#Fig_23_1_1_Main_window_of_DEFORM_GUI_Main_While_running_a_model"><span data-keyref="Chapter_23_1_Start_Stop_and_Resume_Simulations">Fig. 23.1.</span>1.</a>).
+    This initiates a series of operations to run the simulation and generate new meshes as necessary (See <a href="#Fig_23_1_1_Main_window_of_DEFORM_GUI_Main_While_running_a_model"><span data-keyref="Chapter_23_1_Start_Stop_and_Resume_Simulations">Fig. 23.1.</span>1.</a>).</p>
+  <p>Run-time information will be written to the ProblemId.MSG and ProblemId.LOG files.</p>
+  <ul class="Disc">
+    <li>
+      <p>Execution information, including convergence information for each step and simulation error messages, can be found in the .MSG file.</p>
+    </li>
+    <li>
+      <p>Information on simulation and remeshing, execution times, fatal errors and type of FEM job running  (32-bit or 64-bit simulation) in case of 3D job can be found in the .LOG file or in the command window where DEFORM was executed from.</p>
+    </li>
+    <li>
+      <p>By clicking on <img src="{{ '/assets/icons/simulator_icons/open_simulation_graphics_label.jpg' | relative_url }}"/> link under Preview tab, user can view the Simulation graphics under preview tab.</p>
+    </li>
+    <li>
+      <p>Memo option allows user to enter and save any notes related to the current simulation.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_23_1_1_Main_window_of_DEFORM_GUI_Main_While_running_a_model"></a><img height="422" src="{{ '/assets/images/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/image001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Main window of DEFORM GUI Main (While running a model)</p>
+  <p> </p>
+  <p>In <a href="#Fig_23_1_1_Main_window_of_DEFORM_GUI_Main_While_running_a_model"><span data-keyref="Chapter_23_1_Start_Stop_and_Resume_Simulations">Fig. 23.1.</span>1.</a>:</p>
+  <p><strong>1- Run</strong> option used to run the job.</p>
+  <p><strong>2- Stop </strong>option used to Stop the running job.</p>
+  <p><strong>3- Continue</strong> option used to continue the resumed job.</p>
+  <p> </p>
+  <p>A simulation is stopped by clicking the <img height="20" src="{{ '/assets/icons/simulator_icons/gui_stop_button.jpg' | relative_url }}" width="58"/> or  <img src="{{ '/assets/icons/simulator_icons/mo_stop_icon.jpg' | relative_url }}" style="cursor: nesw-resize;"/> in the header
+    (See <a href="#Fig_23_1_1_Main_window_of_DEFORM_GUI_Main_While_running_a_model"><span data-keyref="Chapter_23_1_Start_Stop_and_Resume_Simulations">Fig. 23.1.</span>1.</a>). Simulation may also be stopped using the &quot;Kill&quot; or &quot;Stop&quot;
+    buttons from the process monitor (See <a href="#Fig_23_1_2_Killing_job_from_Process_monitor_window"><span data-keyref="Chapter_23_1_Start_Stop_and_Resume_Simulations">Fig. 23.1.</span>2.</a>). The simulation will be stopped after the current step
+    is completed for Stop simulation option. For Kill Simulation option simulation stops at the current iteration trial.</p>
+  <p> </p>
+  <p><strong>Killing a simulation process</strong></p>
+  <p>Another way to stop simulation is killing &quot;DEFORM_RUNNING_JOB_STATUS.TXT&quot; in GUI main. Since the Stop command will only stop a simulation after the current step is completed, substantial time may be required for the simulation to stop. To
+    kill a simulation immediately, the process DEF_SIM.EXE must be killed directly from the operating system.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_23_1_2_Killing_job_from_Process_monitor_window"></a><img height="259" src="{{ '/assets/images/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/image002.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb"><strong>Killing job from Process monitor window</strong></p>
+  <p> </p>
+  <p>A simulation is continued or resumed from where we stopped by clicking the <img src="{{ '/assets/icons/simulator_icons/gui_continue_button.jpg' | relative_url }}"/>  button (See <a href="#Fig_23_1_1_Main_window_of_DEFORM_GUI_Main_While_running_a_model"><span data-keyref="Chapter_23_1_Start_Stop_and_Resume_Simulations">Fig. 23.1.</span>1.</a>)
+    in the right side Simulator palette or <img src="{{ '/assets/icons/simulator_icons/mo_continue_icon.jpg' | relative_url }}"/> in the header.</p>
+  <p> </p>
+  <p><strong>Multiple Processor Simulation</strong></p>
+  <p>Processers per Job allows the user to define the multiple processor settings used to solve the problem as well as the number of processors used on each computer. Now correct name of the computer will be displayed in Computer name field. (See. <a href="#Fig_23_1_3_Multiple_Processor_Set_Up_window"><span data-keyref="Chapter_23_1_Start_Stop_and_Resume_Simulations">Fig. 23.1.</span>3.</a>)</p>
+  <p>After selecting the FEM and Machine types click on Start to start the simulation.</p>
+  <p><strong>Partially parallel FEM option</strong> runs only the solver part of the simulation in parallel mode, while the other operations like model stiffness matrix, remeshing and interpolation are run in single cpu on the primary host machine. In PC
+    environment this results in the execution of one DEF_SIM.EXE on each of the processors requested.</p>
+  <p><strong>Fully parallel FEM </strong>handles the full model in be run in parallel, including the model stiffness matrix, remeshing and  interpolation apart from the solution phase. In PC environment fully parallel run results in the execution of one
+    DEF_SIM.EXE on each of the processors requested. With respect to the total simulation time, larger model sizes typically gain from this multiprocessing setup.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_23_1_3_Multiple_Processor_Set_Up_window"></a><img src="{{ '/assets/images/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/image003.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Multiple Processor Set Up window</p>
+  <p> </p>
+  <p class="Note_text">Note:</p>
+  <ol class="Decimal">
+    <li class="Note_text">
+      <p>Once these options are selected the system saves the information in local files (DEF_MPIenv.DAT and DEF_MPI_p4penv.DAT). FEM looks for these files to start parallel runs.</p>
+    </li>
+    <li class="Note_text">
+      <p class="Note_text">From the present release, Task Manager will only display multiple MPI instances of DEF_SIM.EXE, instead of  DEF_SIM.EXE, DEF_SIM_P4P.EXE or DEF_SIM_P4P.EXE depending on the MPI setting.</p>
+    </li>
+    <li class="Note_text">
+      <p class="Note_text">Unless Mpich are installed with earlier versions it is now mandatory to install 32 bit  Mpich1 v1.2.1 for 32bit machines and additional 64 bit Mpich2 v1.2.1 for  64 bit machines.</p>
+    </li>
+  </ol>
+  <p class="Note_text"> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="23_introduction_to_deform_simulator.htm">23. Introduction to Simulator</a></p>
+  <p><a href="23_2_interactive_and_batch_mode.htm">23.2. Interactive and batch modes using Run option</a></p>
+  <p><a href="23_3_simulation_graphics.htm">23.3. Simulation Graphics</a></p>
+  <p><a href="23_4_process_monitor.htm">23.4. Process Monitor</a></p>
+  <p><a href="23_5_setting_up_mpich.htm">23.5. Setting up MPICH</a></p>
+  <p><a href="23_6_running_shared_folder_simulations.htm">23.6. Running Shared folder Simulations</a></p>
+  <p><a href="23_8_trouble_shooting_simulation_running.htm">23.7. Trouble Shooting Simulation Running</a></p>
+  <p><a href="../../post_processor/post_processor_mainpg.htm">Post Processor</a></p>
+
+</body></html>

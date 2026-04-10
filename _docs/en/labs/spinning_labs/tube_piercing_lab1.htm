@@ -1,0 +1,402 @@
+---
+lang: en
+title: "Tube Piercing Lab1"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.24.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Tube Piercing Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Tube Piercing Lab1</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/spinning_labs/tube_piercing_lab1.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Tool_life_study_lab/Tool_life_study_Lab_Main_pg.htm"/><meta name="brsprev" value="Documentation_content/Labs/Spinning_Labs/Spinning_Lab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Tube Piercing Lab1">
+        <span>Tube Piercing Lab1</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Tube Piercing Lab1</h1>
+  <p><a href="#1_1_Creating_a_new_problem">1.1.  Creating a new problem</a></p>
+  <p><a href="#1_2_Process_page">1.2.  Process page</a></p>
+  <p><a href="#1_3_Simulation_setup">1.3.  Simulation setup</a></p>
+  <p><a href="#1_4_Object_page">1.4.  Object page</a></p>
+  <p><a href="#1_5_Workpiece">1.5.  Workpiece</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_1_Workpiece_2D_Cross-section_page">1.5.1. Workpiece 2D Cross-section page</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_2_3D_Geometry_page">1.5.2. 3D Geometry page</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_3_Workpiece_Mesh_page">1.5.3. Workpiece Mesh page</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_4_Material_page">1.5.4. Material page</a></p>
+  <p style="margin-left: 20px"><a href="#1_5_5_Workpiece_boundary_conditions">1.5.5. Workpiece boundary conditions</a></p>
+  <p><a href="#1_6_Mandrel_page">1.6.  Mandrel page</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_1_Importing_Mandrel_2D_Geometry_-_Cross_section">1.6.1. Importing Mandrel 2D Geometry - Cross section</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_2_Generate_Mandrel_3D_Geometry">1.6.2. Generate Mandrel 3D Geometry</a></p>
+  <p><a href="#1_7_Roll_1_page">1.7. Roll 1 page</a></p>
+  <p style="margin-left: 20px"><a href="#1_7_1_Importing_roll_2D_cross_section_page">1.7.1. Importing roll 2D cross section page</a></p>
+  <p style="margin-left: 20px"><a href="#1_7_2_Generate_Mandrel_3D_Geometry">1.7.2. Generate Mandrel 3D Geometry</a></p>
+  <p style="margin-left: 20px"><a href="#1_7_3_Roll_1_Orientation_page">1.7.3. Roll 1 Orientation page</a></p>
+  <p><a href="#1_8_Pusher_page">1.8. Pusher page</a></p>
+  <p style="margin-left: 20px"><a href="#1_8_1_Pusher_3D_geometry_page">1.8.1. Pusher 3D geometry page</a></p>
+  <p style="margin-left: 20px"><a href="#1_8_2_Pusher_movement_page">1.8.2. Pusher movement page</a></p>
+  <p><a href="#1_9_Shoe_1_page">1.9. Shoe 1 page</a></p>
+  <p style="margin-left: 20px"><a href="#1_9_1_Shoe_1_3D_geometry_page">1.9.1. Shoe 1 3D geometry page</a></p>
+  <p><a href="#1_10_Controls_page">1.10. Controls page</a></p>
+  <p><a href="#1_11_Contact_page">1.11. Contact page</a></p>
+  <p><a href="#1_12_Stopping_controls_page">1.12. Stopping controls page</a></p>
+  <p><a href="#1_13_Simulation_controls_page">1.13. Simulation controls page</a></p>
+  <p><a href="#1_14_Generate_Database">1.14. Generate Database</a></p>
+  <p><a href="#1_15_Running_Simulation">1.15. Running Simulation</a></p>
+  <p><a href="#1_16_Post_processing">1.16. Post processing</a></p>
+  <p> </p>
+  <p>In this Lab we will be setting up simple tube piercing process with ALE model and Implicit solver.</p>
+  <h2><a id="1_1_Creating_a_new_problem"></a>Creating a new problem</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File</strong> <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/><strong> New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. <span style="font-size: 12pt;">The Problem Setup window will appear as shown in <a href="#Fig_3DTPL1_1_New_Problem_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>1.</a> Select &quot;<strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and units system as &quot;<strong>SI</strong>&quot; using radio button in unit field. Define Problem Name as &quot;<strong>TubePiercingLab1</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn
+    on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new Problem using
+    the Deform Integrated Manufacturing Process.</span>
+  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_1_New_Problem_page"></a><img height="417" src="{{ '/assets/images/applications/55_2_arc_welding/image0002.jpg' | relative_url }}" style="cursor: nwse-resize;" width="745"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">New Problem page</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘<strong>TubePiercingLab1</strong>’
+    as the project name. 3D Spinning operation can also be added in &quot;New Project&quot; dialog or from Explorer. To add 3D Spinning from “New Project” dialog, select 3D Spinning from the operations list and check &quot;<strong>First operation</strong>&quot;
+    check box. Click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" style="cursor: nwse-resize;" width="73"/> to continue to open the operation.</p>
+  <p> </p>
+  <p>If 3D Spinning operation is not added from “New Project” then the operation can be added from the Explorer Operations list. Add the operation by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button available next
+    to 3D Spinning or user can also add by drag and drop into the Operation Editor (see <a href="#Fig_3DTPL1_2_Screen_upward_direction_popup"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>2.</a>). The tube piercing process is modelled
+    with axis along Y axis hence if the current Screen upward direction is &quot;Z&quot; direction then a pop-up appears suggesting changing the Screen upward direction to “+Y”. In the lab we will use “+Y” axis as Screen upward direction hence click on
+    &quot;YES-Change&quot; in &quot;Change screen upward axis&quot; popup. Now the process settings window will open by default as shown in <a href="#Fig_3DTPL1_3_Opened_3D_Spinning_operation"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>3.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_2_Screen_upward_direction_popup"></a><img height="384" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Screen upward direction popup</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_3_Opened_3D_Spinning_operation"></a><img height="378" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Opened 3D Spinning operation</p>
+  <h2><a id="1_2_Process_page"></a>Process page</h2>
+  <p>In Process page select &quot;<strong>Tube piercing</strong>&quot; and define Mandrel <strong>Rotational speed</strong> as <strong>-300 </strong><strong>rpm </strong>as shown in <a href="#Fig_3DTPL1_4_Process_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>4.</a>    This speed is also applied to both tail stock and head stock if used. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Simulation setup page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_4_Process_page"></a><img height="350" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0004.jpg' | relative_url }}" width="391"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process page</p>
+  <p> </p>
+  <h2><a id="1_3_Simulation_setup"></a>Simulation setup</h2>
+  <p>In Simulation setup, by default solution method selected is &quot;<strong>ALE</strong>&quot; and solver type is &quot;<strong>Implicit</strong>&quot; which are only options currently available. Since, we are not interested in temperature profile we
+    will select &quot;<strong>Constant temperature (isothermal)</strong>&quot; type Thermal calculation and select <strong>symmetry </strong><strong>type </strong>for 3D model and set symmetric number as <strong>2 </strong>which means half symmetry (See
+    <a href="#Fig_3DTPL1_5_Simulation_setup_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>5.</a>). Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Objects page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_5_Simulation_setup_page"></a><img src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0005.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation setup page</p>
+  <h2><a id="1_4_Object_page"></a>Object page</h2>
+  <p>In this Tube piercing lab, we will use Workpiece, Mandrel, Pusher, one Roll and 2 support shoes. In Objects list, by default Workpiece and Mandrel check box will be checked and disabled as these objects are mandatory for this process. Select the <strong>Pusher </strong>check
+    box as we will be using it. Select “<strong>1 Roll + 2 Support shoes</strong>” option under Rolls and Discs since we will be using support shoes to guide workpiece movement, see <a href="#Fig_3DTPL1_6_Objects_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>6.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Workpiece page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_6_Objects_page"></a><img height="350" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0006.jpg' | relative_url }}" width="390"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objects page</p>
+  <h2><a id="1_5_Workpiece"></a>Workpiece</h2>
+  <p>In the Workpiece page, keep the object name as <strong>Workpiece</strong>, define <strong>object </strong><strong>temperature </strong>as <strong>1250</strong><strong>°C</strong> and object type as <strong>Plastic </strong>as shown in <a href="#Fig_3DTPL1_7_Workpiece_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>7.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 2D Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_7_Workpiece_page"></a><img src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0007.jpg' | relative_url }}" style="cursor: nwse-resize;"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece page</p>
+  <h3><a id="1_5_1_Workpiece_2D_Cross-section_page"></a>Workpiece 2D Cross-section page</h3>
+  <p>We will be using the specialized primitive geometry option as shown in <a href="#Fig_3DTPL1_8_Workpiece_geometry_primitive_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>8.</a> to create workpiece geometry. Click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> button and define <strong>Radius(R) </strong>as <strong>100 </strong>and <strong>Length(L)</strong> as <strong>900 </strong>in geometry primitive page. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button to create geometry
+    and close the geometry primitive page (See <a href="#Fig_3DTPL1_8_Workpiece_geometry_primitive_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>8.</a>). Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 3D Geometry page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_8_Workpiece_geometry_primitive_page"></a><img height="381" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0008.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece geometry primitive page</p>
+  <h3><a id="1_5_2_3D_Geometry_page"></a>3D Geometry page</h3>
+  <p>In 3D Geometry page, define <strong>Numbers of revolved sections </strong><strong>as </strong><strong>100</strong> and by default the revolve angle will be 180 as we had selected symmetry number as 2. Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}"/> button to generate 3D geometry.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_9_Generate_3D_geometry"></a><img height="378" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0009.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Generate 3D geometry</p>
+  <p><br/> Tube piercing uses brick mesh hence we need to define brick mesh related settings at geometry level in 3D geometry page. <img src="{{ '/assets/icons/pre_icons/mo_setup_brick_mesh_label.jpg' | relative_url }}"/> link is enabled after 3D geometry is generated.
+    Click on this link to go to setup brick mesh page and select <strong>Revolve </strong>radio button. In revolve we need to select <strong>Partial Revolve</strong> radio button since the objects is symmetry object and then add Start Surface and End
+    Surface as shown in the <a href="#Fig_3DTPL1_10_Setup_brick_mesh_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>10.</a> Click on Wizard button <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> to calculate
+    the revolve axis, reference axis, start angle and revolve angle based on selected surfaces. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to accept the setting and then click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_10_Setup_brick_mesh_page"></a><img height="380" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Setup brick mesh page</p>
+  <h3><a id="1_5_3_Workpiece_Mesh_page"></a>Workpiece Mesh page</h3>
+  <p>“Brick mesh” is selected by default as mesh type, define Cross-section mesh <strong>T</strong><strong><strong>arg</strong>et number of elements</strong> as <strong>300</strong>. Define 3D meshing parameters <strong>Number of revolved sections as 40.</strong> We
+    will define finer mesh along the contact region with <strong>Angle 15°</strong> and <strong>Size ratio 4</strong>. Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}"/> button to generate 3D mesh. 3D mesh is generated
+    with 14640 elements and 17958 nodes as shown in <a href="#Fig_3DTPL1_11_Workpiece_mesh_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>11.</a> Click on <img height="22" src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" width="73"/> to material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_11_Workpiece_mesh_page"></a><img height="382" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0011.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece mesh page</p>
+  <h3><a id="1_5_4_Material_page"></a>Material page</h3>
+  <p>In Material page, click on <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> (import material data from library) icon and load the material <strong>AISI 52100[70-2200F(20-1200C)]</strong> from material library as shown in
+    <a href="#Fig_3DTPL1_12_Assigning_the_workpiece_material"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>12.</a>
+  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_12_Assigning_the_workpiece_material"></a><img src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0012.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning the workpiece material</p>
+  <h3><a id="1_5_5_Workpiece_boundary_conditions"></a>Workpiece boundary conditions</h3>
+  <p>In Boundary conditions page, verify default BCC generated for rotational symmetry during mesh generation. Check slave and master nodes, rotational axis and rotational angle, nothing need to be set in this page as all data is obtained by default based
+    on previous settings from geometry and mesh hence click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Mandrel page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_13_Workpiece_boundary_conditions_page"></a><img height="380" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0013.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece boundary conditions page</p>
+  <h2><a id="1_6_Mandrel_page"></a>Mandrel page</h2>
+  <p>In the Mandrel General page, keep the default values for name as <strong>Mandrel </strong>and temperature as <strong>20</strong>°C. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry 2D cross-section page.</p>
+  <h3 class="h3_1_6_"><a id="1_6_1_Importing_Mandrel_2D_Geometry_-_Cross_section"></a>Importing Mandrel 2D Geometry - Cross section</h3>
+  <p>Import 2D geometry “<strong>Mandrel_2D.geo</strong>” from &quot;3D/Labs/Spinning&quot; folder. Click on <img src="{{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}"/> and then click on Check and correct geometry in the pop-up to verify the geometry.
+    The geometry will be corrected for its orientation, click ok in the message pop-up window and then <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button to close the geometry verification window. Click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 3D Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_14_Importing_mandrel_2D_Cross_section"></a><img height="380" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing mandrel 2D Cross section</p>
+  <p> </p>
+  <h3 class="h3_1_6_"><a id="1_6_2_Generate_Mandrel_3D_Geometry"></a>Generate Mandrel 3D Geometry</h3>
+  <p>Using default value of <strong>100 </strong>as &quot;<strong>Number of revolved sections</strong>&quot; generate 3D geometry by clicking on <img src="{{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}"/> option (See <a href="#Fig_3DTPL1_15_Mandrel_3D_geometry_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>15.</a>).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Roll 1 page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_15_Mandrel_3D_geometry_page"></a><img height="379" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0015.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mandrel 3D geometry page</p>
+  <h2><a id="1_7_Roll_1_page"></a>Roll 1 page</h2>
+  <p>In the Roll 1 General page, keep the default values for name as <strong>Roll </strong><strong>1</strong> and temperature as <strong>20°C</strong>. Click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Geometry 2D cross-section
+    page.</p>
+  <h3 class="h3_1_7_"><a id="1_7_1_Importing_roll_2D_cross_section_page"></a>Importing roll 2D cross section page</h3>
+  <p>Import 2D geometry “<strong>Roll 1_2D.geo</strong>” from the &quot;<strong>3D/Labs/Spinning</strong>&quot; folder. Click on <img src="{{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}"/> and then click on <img height="25" src="{{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}" width="99"/> in the pop-up to verify the geometry. The geometry will be corrected for its orientation, click ok in the message pop-up window and then <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button to close the geometry verification
+    window. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>  to 3D Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_16_Importing_roll_1_2D_Cross_section"></a><img height="379" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0016.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Importing roll 1 2D Cross section</p>
+  <h3 class="h3_1_7_"><a id="1_7_2_Generate_Mandrel_3D_Geometry"></a>Generate Mandrel 3D Geometry</h3>
+  <p>Using default value of <strong>100 </strong>as &quot;<strong>Number of revolved sections</strong>&quot; generate 3D geometry by clicking on <img src="{{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}"/> option (See <a href="#Fig_3DTPL1_17_Roll_1_3D_geometry_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>17.</a>).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Roll 1 orientation page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_17_Roll_1_3D_geometry_page"></a><img height="378" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll 1 3D geometry page</p>
+  <h3 class="h3_1_7_"><a id="1_7_3_Roll_1_Orientation_page"></a>Roll 1 Orientation page</h3>
+  <p>In Orientation page, set <strong>Roller Axis Angle</strong> <img src="{{ '/assets/equations/pre_processor/10_material_data/degree_icon.jpg' | relative_url }}"/>  to <strong>6</strong> <strong>deg </strong>and <strong>Roller Axis Angle</strong> <img src="{{ '/assets/equations/pre_processor/10_material_data/alpha_icon.jpg' | relative_url }}"/> to <strong>0 </strong><strong>deg </strong>as shown in the <a href="#Fig_3DTPL1_18_Roll_1_orientation_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>18.</a> The roller rotational axis and direction is shown in display area
+    as shown in the <a href="#Fig_3DTPL1_19_Roll_1_orientation_axis"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>19.</a> Positioning based on these two angles will not be applied in this orientation page but will be applied during
+    “Automatic Positioning” in “Positioning” page. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>  to pusher page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_18_Roll_1_orientation_page"></a><img height="500" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0018.jpg' | relative_url }}" width="461"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll 1 orientation page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_19_Roll_1_orientation_axis"></a><img height="400" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0019.jpg' | relative_url }}" width="464"/></p>
+  <p> </p>
+  <p class="Fig_numb">Roll 1 orientation axis</p>
+  <h2><a id="1_8_Pusher_page"></a>Pusher page</h2>
+  <p>In the Pusher General page keep the default values for name as <strong>Pusher </strong>and temperature as <strong>20</strong>°C. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 3D Geometry page.</p>
+  <h3 class="h3_1_8_"><a id="1_8_1_Pusher_3D_geometry_page"></a>Pusher 3D geometry page</h3>
+  <p>When entering the pusher 3D Geometry page, the pusher is generated automatically based on the workpiece geometry. The <strong>Width </strong>is set as <strong>240 </strong>mm which is calculated based on the existing workpiece size. If required, user
+    can modify the width value and click on <img src="{{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}"/> button. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to pusher movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_20_Pusher_3D_geometry_page"></a><img height="380" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0020.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Pusher 3D geometry page</p>
+  <h3 class="h3_1_8_"><a id="1_8_2_Pusher_movement_page"></a>Pusher movement page</h3>
+  <p>In this setup select movement type as <strong>Speed</strong>. Select <strong>Function of time </strong>from drop box to define the speed as function of time as shown in the <a href="#Fig_3DTPL1_21_Pusher_movement_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>21.</a>    Define the speed movement control as shown in the <a href="#Fig_3DTPL1_22_Function_of_time_definition"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>22.</a> and click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}"/> then click <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> button. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Shoe 1 page.</p>
+  <p><br/> For constant speed, wizard button <img height="21" src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}" width="22"/> can be used to estimate the recommended speed for pusher. Speed is estimated based on roll rotational velocity and orientation
+    angles. The value we get here can be used as a reference, however, in the tube piercing process we usually set the speed as function of time so that the pusher is stopped after the bar(workpiece) is fully engaged with plug(mandrel) and before it hits
+    into roll.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_21_Pusher_movement_page"></a><img src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0021.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Pusher movement page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_22_Function_of_time_definition"></a><img height="375" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0022.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Function of time definition</p>
+  <h2><a id="1_9_Shoe_1_page"></a>Shoe 1 page</h2>
+  <p>In the Shoe 1 general page, keep the default values for name as <strong>Shoe</strong> 1 and temperature as <strong>20°C</strong>. Only one shoe object is shown in the object tree, in Tube Piercing process the left and right shoes are considered to be
+    having same geometry. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 3D Geometry page.</p>
+  <h3 class="h3_1_9_"><a id="1_9_1_Shoe_1_3D_geometry_page"></a>Shoe 1 3D geometry page</h3>
+  <p>In 3D geometry page we have specialized 2D cross-section primitive to define shoe geometry from which 3D geometry is generated by extruding. Define <strong>Radius as 102mm</strong>, <strong>Height as 120mm</strong>, <strong>Width as 50mm</strong>, <strong>Extrusion length as 500</strong>    and <strong>Distance to origin as 101.9</strong> and then click on <img src="{{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}"/> button (See <a href="#Fig_3DTPL1_23_Shoe_1_3D_geometry_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>23.</a>).
+    Both left and right shoes are generated after clicking on the <img src="{{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}"/>button. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_23_Shoe_1_3D_geometry_page"></a><img height="379" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0023.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Shoe 1 3D geometry page</p>
+  <h2><a id="1_10_Controls_page"></a>Controls page</h2>
+  <p>In Controls page, click on <strong>Automatic Positioning</strong> link as shown in the <a href="#Fig_3DTPL1_23_Shoe_1_3D_geometry_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>24.</a> In Auto positioning page, define <strong>H</strong>    to <strong>90 mm </strong>and <strong>D </strong>to <strong>60 mm</strong> and click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> button as shown in the <a href="#Fig_3DTPL1_25_Auto_positioning_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>25.</a>    Following actions are executed during automatic positioning,</p>
+  <ul class="Disc">
+    <li>
+      <p>Roll</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p>Rotational positioning based on two orientation angles</p>
+    </li>
+    <li>
+      <p>Offset positioning uses parameter H along the y direction</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p>Mandrel</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p>Offset positioning uses parameter D along the x direction</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p>Workpiece</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p>Interference positioning with roll</p>
+    </li>
+  </ul>
+  <ul class="Disc">
+    <li>
+      <p>Pusher</p>
+    </li>
+  </ul>
+  <ul class="Circle">
+    <li>
+      <p>Interference positioning with workpiece</p>
+    </li>
+  </ul>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the auto positioning page and Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to contact page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_24_Controls_page"></a><img height="376" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0024.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Controls page</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_25_Auto_positioning_page"></a><img height="379" src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0025.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Auto positioning page</p>
+  <h2><a id="1_11_Contact_page"></a>Contact page</h2>
+  <p>In Contact page, select &quot;<strong>User</strong>&quot; type and then click on <img src="{{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}"/> button, we will observe default relations being added in table. Now define <strong>Shear </strong>friction
+    value for each relation as shown in the <a href="#Fig_3DTPL1_26_Contact_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>26.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/>  button to calculate
+    default contact tolerance value and generate contact by clicking on <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}"/> button. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Stopping controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_26_Contact_page"></a><img src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0026.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact page</p>
+  <h2><a id="1_12_Stopping_controls_page"></a>Stopping controls page</h2>
+  <p>Define <strong>Process </strong><strong>Duration </strong>as <strong>2.7 </strong>sec as shown in <a href="#Fig_3DTPL1_27_Stopping_controls_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>27.</a> Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Simulation controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_27_Stopping_controls_page"></a><img src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0027.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Stopping controls page</p>
+  <p> </p>
+  <h2><a id="1_13_Simulation_controls_page"></a>Simulation controls page</h2>
+  <p>Enter <strong>Number of steps</strong> as <strong>20000</strong>, <strong>Step </strong><strong>increment </strong><strong>to </strong><strong>save </strong><strong>as </strong><strong>100 </strong>and <strong>Time per step as 0.0005 </strong>sec in
+    Simulation controls page as shown in <a href="#Fig_3DTPL1_28_Simulation_controls_page"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>28.</a> Click  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Generate DB
+    page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_28_Simulation_controls_page"></a><img src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0028.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls page</p>
+  <h2><a id="1_14_Generate_Database"></a>Generate Database</h2>
+  <p>In Generate DB page, click on the <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> button to generate the database. Observe the messages in Message tab informing database generation status or if they are any errors.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_29_Generate_DB_Page"></a><img src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0029.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Generate DB Page</p>
+  <p> </p>
+  <h2><a id="1_15_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated, switch to the Simulation mode by selecting the <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> button above the object tree. Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog as shown in  <a href="#Fig_3DTPL1_30_Run_Simulation_Window"><span data-keyref="Labs_3D_Tube_Piercing_Lab1">Fig. 3DTPL1.</span>30.</a> Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option
+    and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DTPL1_30_Run_Simulation_Window"></a><img src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0030.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Run Simulation Window</p>
+  <p> <br/> Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, make sure that the <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked. User can view the Tube piercing
+    process as the simulation proceeds to the specified stopping criteria from Simulation graphics.</p>
+  <h2><a id="1_16_Post_processing"></a>Post processing</h2>
+  <p>When the simulation is completed, review the results by switching to Post mode using the <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> button above the Simulation tool bar.</p>
+  <p>Play through the steps of the simulation and look how the Workpiece part is formed during Tube piercing process.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/labs/spinning_labs/tube_piercing_lab/image0031.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Tube piercing post processor output</p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

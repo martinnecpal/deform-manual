@@ -1,0 +1,208 @@
+---
+lang: sk
+title: "3D Fracture Element deactivation lab"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.5.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Fracture Element deactivation lab</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>3D Fracture Element deactivation lab</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_fracture/3d_fracture_element_deactivation_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_Friction_Stir_Welding/55_Friction_Stir_Welding_Main_Pg.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_Fracture/3D_Fracture.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="3D Fracture Element deactivation lab">
+        <span>3D Fracture Element deactivation lab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Setting up 3D Fracture Element deactivation lab</h1>
+  <p><a href="#2_1_Introduction">2.1. Introduction</a></p>
+  <p><a href="#2_2_Creating_a_New_problem">2.2. Creating a New problem</a></p>
+  <p style="margin-left: 20px"><a href="#2_2_1_Adding_3D_Forming_operation">2.2.1. Adding 3D Forming operation</a></p>
+  <p style="margin-left: 20px"><a href="#2_2_2_Import_Sheet_Blanking_keyfile">2.2.2. Import Sheet Blanking keyfile</a></p>
+  <p style="margin-left: 20px"><a href="#2_2_3_Modifying_the_material_properties">2.2.3. Modifying the material properties</a></p>
+  <p style="margin-left: 20px"><a href="#2_2_4_Selecting_Fracture_type">2.2.4. Selecting Fracture type</a></p>
+  <p style="margin-left: 20px"><a href="#2_2_5_Generating_Database">2.2.5. Generating Database</a></p>
+  <p style="margin-left: 20px"><a href="#2_2_6_Running_simulation">2.2.6. Running simulation</a></p>
+  <p style="margin-left: 20px"><a href="#2_2_7_Post_Processing">2.2.7. Post Processing</a></p>
+  <p> </p>
+  <h2><a id="2_1_Introduction"></a>Introduction</h2>
+  <p>Generally, fracture element deletion will be used for crack propagation study in DEFORM system. Due to the difficulty in brick remeshing, fracture element deletion currently does not support 3D brick mesh. </p>
+  <p>Fracture element deactivation is a new method to study crack propagation. It will deactivate an element instead of deleting it when its damage reaches the critical value of its material. It allows simulation to continue without remeshing or with less
+    remeshing in forming processes. So, fracture element deactivation can support 3D brick mesh, 3D tetrahedral mesh and 2D mesh to predict crack onset &amp;  propagation. In this lab, we will demonstrate how to setup 3D Brick mesh model with Fracture
+    element deactivation method..</p>
+  <p> </p>
+  <h2><a id="2_2_Creating_a_New_problem" height="0" width="0"></a>Creating a New problem</h2>
+  <p>On a Windows machine, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button, select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select <strong>DEFORM GUI Main</strong>    v1x.x from the menu. The DEFORM GUI Main window will appear.</p>
+  <p>Create a new problem either by selecting <strong>File <img height="12" src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}" width="29"/>  </strong><strong>New Problem</strong> or by clicking the New Problem  <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_3DFRCL2_1_Problem_type_selection_window"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>1.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and &quot;<strong>SI</strong>&quot; radio button in Unit field. Define Problem Name as &quot;<strong>3</strong><strong>D_Fracture_Element_deactivation</strong>&quot; and make sure the “<strong>Show option dialog</strong>” check box is
+    turned on. Then click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"> <a id="Fig_3DFRCL2_1_Problem_type_selection_window"></a><img height="523" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0001.jpg' | relative_url }}" width="743"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem type selection window</p>
+  <p><br/> Multiple operation wizard will open with the New Project dialog as shown in <a href="#Fig_3DFRCL2_2_Project_definition_in_New_Project_window_from_MO"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>2.</a>,
+    at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session, we will use &quot;<strong>3</strong><strong><strong>D</strong>_Fracture_Element_deactivation”</strong>
+    as the project name. 3D Forming operation can also be added in &quot;New Project&quot; dialog (see <a href="#Fig_3DFRCL2_2_Project_definition_in_New_Project_window_from_MO"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>2.</a>),
+    but we will add 3D Forming operation in this lab from operations list in Explorer, so do not check &quot;First operation&quot; check box in &quot;New Project&quot; dialog. Click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> to continue to open the operation. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_2_Project_definition_in_New_Project_window_from_MO"></a><img height="439" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Project definition in New Project window from MO</p>
+  <p> </p>
+  <h3> <a id="2_2_1_Adding_3D_Forming_operation"></a>Adding 3D Forming operation</h3>
+  <p>Add one 3D Forming operation from the Explorer Operations list. Operation can be added by clicking on <img height="20" src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}" width="19"/>  button adjacent to <strong>3D Forming</strong> in
+    Explorer or user can also add by drag and drop into the Operation Editor (See <a href="#Fig_3DFRCL2_3_Adding_3D_Forming_Operation_from_explorer"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>3.</a>). As we add
+    operation, Process page will be opened in the properties area.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_3_Adding_3D_Forming_Operation_from_explorer"></a><img height="437" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Adding 3D Forming Operation from explorer.</p>
+  <h3><a id="2_2_2_Import_Sheet_Blanking_keyfile"></a>Import Sheet Blanking keyfile</h3>
+  <p>Import “<strong>3D_SheetBlanking_Brick.KEY</strong>” file from DEFORM Installation <strong>3D\LABS</strong> folder using <strong>File </strong><img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> “<strong>Import Keyword</strong>” option.
+    Model setup is imported 3D Sheet blanking example keyfile is as shown in <a href="#Fig_3DFRCL2_4_3D_Sheet_blanking_example"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>4.</a> </p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_4_3D_Sheet_blanking_example"></a><img height="424" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0004.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">3D Sheet blanking example</p>
+  <p> </p>
+  <h3><a id="2_2_3_Modifying_the_material_properties"></a>Modifying the material properties</h3>
+  <p>In operation tree, select <strong>CuZn15 </strong>under material list to display the material properties. From material properties, select the <strong>Miscellaneous </strong>properties tab. We can observe that Normalized C&amp;L is selected as Fracture
+    model, click on <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> and observe the critical value defined. Critical value defined is <strong>0.4</strong> as shown in <a href="#Fig_3DFRCL2_5_Critical_value_of_Damage_to_initiate_fracture"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>5.</a>    We can define the softening percentage of flow stress when Damage SV of an element reaches the material’s fracture model’s critical value. Define the <strong>Soften to</strong> as constant value <strong>100 </strong>as shown in the <a href="#Fig_3DFRCL2_6_Defining_softening_of_flow_stress"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>6.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_5_Critical_value_of_Damage_to_initiate_fracture"></a><img height="363" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0005.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Critical value of Damage to initiate fracture</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_6_Defining_softening_of_flow_stress"></a><img height="450" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0006.jpg' | relative_url }}" width="416"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining softening % of flow stress</p>
+  <p> </p>
+  <h3><a id="2_2_4_Selecting_Fracture_type"></a>Selecting Fracture type</h3>
+  <p>To select “Fracture element deactivation” type, go to Workpiece Object Properties page. Under <strong>Fracture </strong>tab, select “<strong>Fracture element deactivation</strong>” type from Fracture pulldown menu as shown in <a href="#Fig_3DRCL2_7_Selecting_Fracture_type"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>7.</a> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DRCL2_7_Selecting_Fracture_type"></a><img height="428" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0007.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Selecting Fracture type</p>
+  <h3><a id="2_2_5_Generating_Database"></a>Generating Database</h3>
+  <p>In operation tree, select “<strong>Generate DB</strong>”, then click on <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/> button to have the program check to see if anything was missed in the problem setup. During the checking
+    process, messages in the red colour signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> button to generate the database as shown in <a href="#Fig_3DFRCL2_8_Generating_Database"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>8.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_8_Generating_Database"></a><img height="426" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0008.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generating Database</p>
+  <p> </p>
+  <h3><a id="2_2_6_Running_simulation"></a>Running simulation</h3>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> button above the operation tree. Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog as shown in <a href="#Fig_3DFRCL2_9_Run_Options_Popup"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>9.</a> Use the default <strong>Continue </strong><strong>Run </strong>option
+    to select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive</strong> radio button.</p>
+  <p>To define MPI settings, click on <img src="{{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}"/> button, Run Options window will expand and displays options to define MPI settings for simulation. We will define “MPI 3D” as 4 (or any number
+    depending on your 3D MPI license) as shown in  <a href="#Fig_3DFRCL2_9_Run_Options_Popup"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>9.</a> Then click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_9_Run_Options_Popup"></a><img height="580" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0009.jpg' | relative_url }}" width="546"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Options Popup</p>
+  <p><br/> The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. If <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.</p>
+  <p>The Message file provides information about which simulation step the simulation is currently on and information dealing with how well the simulation is running as shown in <a href="#Fig_3DFRCL2_10_Simulation_mode"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>10.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_10_Simulation_mode"></a><img height="390" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation mode</p>
+  <h3><a id="2_2_7_Post_Processing"></a>Post Processing</h3>
+  <p>After the simulation is completed, click on <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> tab to visit MO post processor. Play the animation to see the crack onset &amp; propagation from mesh, see <a href="#Fig_3DFRCL2_10_Simulation_mode"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>11.</a></p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_11_Onset_and_Propagation_of_crack"></a><img height="285" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0011.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Onset and Propagation of crack</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_12_MO_Post_mode_after_simulation_is_completed"></a><img height="426" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0012.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO Post mode after simulation is completed</p>
+  <p> </p>
+  <p>By default, only active elements of the model will be displayed. To view all the elements of the model, right click in Display area <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> select “<strong>Sub-model</strong>” from RMB popup menu <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> select “<strong>Show all elements</strong>” option ( <a href="#Fig_3DFRCL2_12_MO_Post_mode_after_simulation_is_completed"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>12.</a>)
+    to see all elements of workpiece as shown in <a href="#Fig_3DFRCL2_13_Sub_model_options_workpiece_display"><span data-keyref="Applications-3D_Fracture">Fig. 3DFRCL1.</span>13.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_13_Sub_model_options_workpiece_display"></a><img height="177" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0013.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Sub model options workpiece display</p>
+  <p> </p>
+  <p> </p>
+  <p>Click on State variable <img src="{{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}"/> icon, select <strong>All </strong>button and Under Additive manufacturing menu plot “<strong>Element density</strong>” variable. We can observe that
+    the element density is 0 for deactivated elements and element density of other elements is 1. Display will be more clear using ‘Elemental’ display type, so select “<strong>Elemental</strong>” display type as shown in <a href="#Fig_3DFRCL2_14_Element_density_state_variable_plot_with_Elemental_display"><span data-keyref="Applications-3D_Fracture_Element_deactivation">Fig.3DFRCL2.</span>14.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_3DFRCL2_14_Element_density_state_variable_plot_with_Elemental_display"></a><img height="424" src="{{ '/assets/images/applications/55_fracture/3d_fracture_element_deactivation_lab/image0014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Element density state variable plot with Elemental display</p>
+  <p> </p>
+
+</body></html>

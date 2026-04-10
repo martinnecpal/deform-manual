@@ -1,0 +1,348 @@
+---
+lang: en
+title: "45.1. Boolean Operator"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.17.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>45.1. Boolean Operator</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>45.1. Boolean Operator</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/45_boolean_operation/45_1_boolean_operation.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/46_Copy_Mirroring/44_Introduction_to_Copy_Mirroring.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/45_Boolean_Operation/43_Introduction_to_Boolean_Operation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="45.1. Boolean Operator">
+        <span>45.1. Boolean Operator</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>45.1. Boolean Operator</h1>
+  <p><a href="#45_1_1_Defining_2D_Boolean_Operator">45.1.1. Defining 2D Boolean Operator</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_1_1_Add_2D_Boolean_operation">45.1.1.1. Add 2D Boolean operation</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_1_2_Pass_objects_for_subsequent_operations_across_boolean_operator">45.1.1.2. Pass objects for subsequent operations across boolean operator</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_1_3_Add_objects">45.1.1.3. Add objects</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_1_4_Define_Boolean_object">45.1.1.4. Define Boolean object</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_1_5_Define_Cutter_object">45.1.1.5. Define Cutter object</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_1_6_Define_Cutter_geometry">45.1.1.6. Define Cutter geometry</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_1_7_Position_cutter">45.1.1.7. Position cutter</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_1_8_Preview_Boolean">45.1.1.8. Preview Boolean</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_1_9_Generate_Database">45.1.1.9. Generate Database</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_1_10_Continue_with_subsequent_operation">45.1.1.10. Continue with subsequent operation</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_1_11_Post_processing_2D_Boolean_results">45.1.1.11. Post processing 2D Boolean results</a></p>
+  <p><a href="#45_1_2_Defining_3D_Boolean_operator">45.1.2. Defining 3D Boolean operator</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_2_1_Add_Objects">45.1.2.1. Add Objects</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_2_2_Defining_Boolean_object">45.1.2.2. Defining Boolean object</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_2_3_Define_Cutter_object">45.1.2.3. Define Cutter object</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_2_4_Define_Cutter_geometry">45.1.2.4. Define Cutter geometry</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_2_5_Position_cutter">45.1.2.5. Position cutter</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_2_6_Preview_Boolean">45.1.2.6. Preview Boolean</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_2_7_Generate_Database">45.1.2.7. Generate Database</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_2_8_Post_processing_the_3D_boolean_results">45.1.2.8. Post processing the 3D boolean results</a></p>
+  <p style="margin-left: 40px"><a href="#45_1_2_9_Continuing_the_further_operations">45.1.2.9. Continuing the further operations</a></p>
+  <p> </p>
+  <h2><a id="45_1_1_Defining_2D_Boolean_Operator"></a>Defining 2D Boolean Operator</h2>
+  <p>Boolean operation normally added as subsequent operation in multiple operations to boolean the unwanted material from the object. 2D Boolean is explained in this manual for extrusion example, so that total extrusion divided into 3 stages and after 1st
+    and 2nd stage outside the interested area of extruded material is booleaned to reduce the computational time of simulation.</p>
+  <p>Before going to the add the Boolean operation first open the Integrated Manufacturing Process in SI units <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> add 2D Forming operation <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> import the 2D SI Extrusion example <strong>EXTR1_SI.KEY</strong> in guided mode as shown in <a href="#Fig_45_1_1_Import and setup 2d extrusion example"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>1.</a> <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> select Step branch from operation tree and set number of steps to 300 <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and generate DB.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_1_Import and setup 2d extrusion example"></a><img height="423" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Import and setup 2d extrusion example</p>
+  <h3><a id="45_1_1_1_Add_2D_Boolean_operation"></a>Add 2D Boolean operation</h3>
+  <p>After the 2D operation setup database generation add 2D Boolean operator from MO explorer Simulation operator group as shown in <a href="#Fig_45_1_2_Add_2d_Boolean_operation"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_2_Add_2d_Boolean_operation"></a><img height="424" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Add 2d Boolean operation</p>
+  <p> </p>
+  <p>Add another 2D forming operation after 2d Boolean operation as shown in <a href="#Fig_45_1_3_Add_forming_operation_after_Boolean_operation"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>3.</a> to continue the further extrusion taking
+    less simulation computational time.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_3_Add_forming_operation_after_Boolean_operation"></a><img height="425" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Add forming operation after Boolean operation</p>
+  <p> </p>
+  <h3><a id="45_1_1_2_Pass_objects_for_subsequent_operations_across_boolean_operator"></a>Pass objects for subsequent operations across Boolean operator</h3>
+  <p>Pass first operation workpiece object to all operations as shown in <a href="#Fig_45_1_4_Passing_workpiece_object_to_all_operations"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>4.</a>, similarly pass remaining objects to all operations.
+    If user is continuing the operations after Boolean with previous objects other than first object then those objects must be passed to Boolean operation before adding objects in Boolean operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_4_Passing_workpiece_object_to_all_operations"></a><img height="423" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Passing workpiece object to all operations</p>
+  <p> </p>
+  <p>After passing all objects in operation editor user can observe the link established for all the three objects across the operations as shown in <a href="#Fig_45_1_5_Open_Boolean_operation"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>5.</a>    Select the boolean operation in operation editor to open boolean operation as shown in <a href="#Fig_45_1_5_Open_Boolean_operation"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_5_Open_Boolean_operation"></a><img height="424" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0005.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Open Boolean operation</p>
+  <h3> <a id="45_1_1_3_Add_objects"></a>Add objects</h3>
+  <p>System automatically selects the workpiece or first object as boolean object as shown in <a href="#Fig_45_1_5_Open_Boolean_operation"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>5.</a> For Cutter new object can be added by selecting
+    the Add new object option (See <a href="#Fig_45_1_5_Open_Boolean_operation"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>5.</a>) and clicking <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to the object window
+    as shown in <a href="#Fig_45_1_6_A_new_object_added_for_Cutter_object_in_operation_tree"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>6.</a> Any object from previous operation can also be selected as cutter object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_6_A_new_object_added_for_Cutter_object_in_operation_tree"></a><img height="424" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0006.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> A new object added for Cutter object in operation tree</p>
+  <h3><a id="45_1_1_4_Define_Boolean_object"></a>Define Boolean object</h3>
+  <p>In Object window (See <a href="#Fig_45_1_6_A_new_object_added_for_Cutter_object_in_operation_tree"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>6.</a> ) no need to change any settings, it gives the details about the object type.
+    For boolean object only Deformation boundary conditions constrains (BCC) and initialize state variable windows will be available, user can change the BCC in schedule before Boolean by checking “Redefine BCC” check box (See <a href="#Fig_45_1_7_Schedule_BCC_definition_window_for_boolean_object"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>7.</a>).
+    For more details on different BCC definition and its definition refer <a href="../../pre_processor/14_boundary_conditions/14_boundary_conditions.htm">14. Boundary Conditions</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_7_Schedule_BCC_definition_window_for_boolean_object"></a><img src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0007.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Schedule BCC definition window for boolean object</p>
+  <p> </p>
+  <p>Similarly state variables can be initialized before Boolean by checking the respective available check boxes as shown in <a href="#Fig_45_1_8_Schedule_state_variables_initialize_window_for_Boolean_object"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>8.</a>    For more details on state variables initialization refer <a href="../../pre_processor/17_object_data_initialization/17_object_data_initialize.htm">17. Object Data Initialize</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_8_Schedule_state_variables_initialize_window_for_Boolean_object"></a><img src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0008.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Schedule state variables initialize window for Boolean object</p>
+  <p> </p>
+  <p>In this example no need to change or select any option for Boolean object (workpiece) so select Cutter object to continue setup.</p>
+  <h3><a id="45_1_1_5_Define_Cutter_object"></a>Define Cutter object</h3>
+  <p>Cutter object can be named and imported from DEFORM previous project DB or Keyword files using Import object from a file <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>  and Load object from library <img height="23" src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}" width="24"/> options as shown in <a href="#Fig_45_1_9_Cutter_object_window"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>9.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_9_Cutter_object_window"></a><img src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0009.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Cutter object window</p>
+  <h3><a id="45_1_1_6_Define_Cutter_geometry"></a>Define Cutter geometry</h3>
+  <p>Simple Cutter geometry can be created from the geometry primitives or 2D geometry editor options as shown in <a href="#FIg_45_1_10_Cutter_geometry_definition_window"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>10.</a> Even the
+    2D geometries can be imported from GEO, IGS and DXF formats. Based on the geometry type of previous operation respective geometry primitives will be available in boolean operation. As cutter object does not need the mesh Extract border from mesh option
+    will not activate.</p>
+  <p>For more details about the geometry available option refer <a href="../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm">12.1. 2D Geometry Data Defining</a> and <a href="../../pre_processor/12_geometry_modelling/12_2_2d_geometry_editing.htm">12.2. 2D Geometry Data Editing</a>. In
+    this example we will create 2D geometry using <img src="{{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}"/> option as shown in <a href="#Fig_45_1_11_Cutter_geometry_creating_from_Edit_option"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>11.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_45_1_10_Cutter_geometry_definition_window"></a><img src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0010.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Cutter geometry definition window</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_11_Cutter_geometry_creating_from_Edit_option"></a><img height="425" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0011.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Cutter geometry creating from Edit option</p>
+  <h3><a id="45_1_1_7_Position_cutter"></a>Position cutter</h3>
+  <p>Cutter can be positioned in exact location by using the positioning options, this can be accessed from  <img height="21" src="{{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}" width="118"/> button as shown in <a href="#Fig_45_1_12_Object_positioning_window"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>12.</a></p>
+  <p style="text-align: center"><a id="Fig_45_1_12_Object_positioning_window"></a><img height="288" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0012.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object positioning window</p>
+  <h3><a id="45_1_1_8_Preview_Boolean"></a>Preview Boolean</h3>
+  <p>Preview Boolean window is provided for future development when this operation supports interactive mode setup to visualize how the booleaned object looks like. This button will be deactivated for the read from DB object type. As this operation currently
+    supports only batch mode, so only Read from DB object will become boolean object hence preview boolean will be deactivated in this mode (See <a href="#Fig_45_1_13_Preview_Boolean_window"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>13.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_13_Preview_Boolean_window"></a><img src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0013.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Preview Boolean window</p>
+  <h3><a id="45_1_1_9_Generate_Database"></a>Generate Database</h3>
+  <p>User has to generate the database in case if previous operation is simulated, if not database will generate while running after completion of previous operation automatically.(See <a href="#Fig_45_1_14_Database_generation_window"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>14.</a>)</p>
+  <p> </p>
+  <p><strong>Generate Database : </strong>By clicking on this <img height="17" src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}" width="120"/>  button, it generates the Database for the setup.</p>
+  <p><strong>Append Key file: </strong>Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can
+    be defined as .key file and only .key file can be changed and simulation can be resubmitted.</p>
+  <p>User can observe the cutter object placed in the extrusion direction so that after first extrusion operation certain out of interest extruded workpiece portion from tip will be booleaned.</p>
+  <p style="text-align: center"><a id="Fig_45_1_14_Database_generation_window"></a><img height="437" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Database generation window</p>
+  <h3><a id="45_1_1_10_Continue_with_subsequent_operation"></a>Continue with subsequent operation</h3>
+  <p>After Boolean subsequent operations can be added and continue the setup. In this example further extrusion operation can be setup by opening the third operation and adding default inter-object relations and selecting the total number of steps to 100
+    and defining the step increment, that is 0.1905mm stroke increment (See <a href="#Fig_45_1_15_Continue_with_subsequent_operation_after_Boolean"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>15.</a>).</p>
+  <p style="text-align: center"><a id="Fig_45_1_15_Continue_with_subsequent_operation_after_Boolean"></a><img height="423" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0015.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Continue with subsequent operation after Boolean</p>
+  <p> </p>
+  <p>After this setup to repeat the similar cycle of Booleaning the uninterested area and continuing the extrusion to reduce the computational time user can add the Cycle operation. To add the cycle select Boolean and second forming operation and using right
+    mouse button option select Add cycles as shown in <a href="#Fig_45_1_16_Cycling_boolean_and_forming_operation"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>16.</a> Select the number of cycles as 2, so boolean operation repeats
+    twice after the first and second extrusion operations.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_16_Cycling_boolean_and_forming_operation"></a><img height="650" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0016.jpg' | relative_url }}" width="698"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Cycling boolean and forming operation</p>
+  <h3><a id="45_1_1_11_Post_processing_2D_Boolean_results"></a>Post processing 2D Boolean results</h3>
+  <p>After completion of simulation to preform post processing switch to MO post mode by selecting the<img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/>  button as shown in <a href="#Fig_45_1_17_Material_flow_at_boolean_previous_operation_last_step"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>17.</a></p>
+  <p style="text-align: center"><a id="Fig_45_1_17_Material_flow_at_boolean_previous_operation_last_step"></a><img height="422" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Material flow at boolean previous operation last step</p>
+  <p> </p>
+  <p>Select the last step of the operation previous to boolean and then select the boolean operation step from step browser as shown in <a href="#Fig_45_1_17_Material_flow_at_boolean_previous_operation_last_step"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>17.</a>    and <a href="#Fig_45_1_18_Workpiece_object_after_boolean"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>18.</a></p>
+  <p style="text-align: center"><a id="Fig_45_1_18_Workpiece_object_after_boolean" height="15" width="104"></a><img height="424" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0018.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece object after boolean</p>
+  <h2><a id="45_1_2_Defining_3D_Boolean_operator"></a>Defining 3D Boolean operator</h2>
+  <p>3D Boolean is explained in this manual for closed die T-shape forging case which is already simulated, now we need to remove the flash material.</p>
+  <p>We are adding 3D Boolean operator from explorer as shown in <a href="#Fig_45_1_19_Add_3D_boolean_operation_after_previous_operation_simulation"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>19.</a> and follow as mentioned below.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_19_Add_3D_boolean_operation_after_previous_operation_simulation"></a><img height="423" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0019.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Add 3D boolean operation after previous operation simulation</p>
+  <h3 class="h3_45_1_2_"><a id="45_1_2_1_Add_Objects"></a>Add Objects</h3>
+  <p>Select the boolean operation in operation editor to open boolean operation, system automatically selects the workpiece or first object of previous operation as boolean object and Add New object option for cutter as shown in <a href="#Fig_45_1_20_Adding_objects_to_boolean_objects"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>20.</a></p>
+  <p style="text-align: center"><a id="Fig_45_1_20_Adding_objects_to_boolean_objects"></a><img height="424" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0020.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding objects to boolean objects</p>
+  <p> </p>
+  <p>Clicking <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to the object window will add these objects to operation tree as shown in <a href="#Fig_45_1_21_A_new_object_added_for_Cutter_object_in_operation_tree"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>21.</a>    Any object from previous operation passed to the boolean operation can also be selected as cutter object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_21_A_new_object_added_for_Cutter_object_in_operation_tree"></a><img height="423" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0021.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">A new object added for Cutter object in operation tree</p>
+  <p> </p>
+  <h3 class="h3_45_1_2_"> <a id="45_1_2_2_Defining_Boolean_object"></a>Defining Boolean object</h3>
+  <p>In Object window (See <a href="#Fig_45_1_21_A_new_object_added_for_Cutter_object_in_operation_tree"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>21.</a>) no need to change any settings, it gives the details about the object type.
+    For boolean object only Symmetry and Deformation boundary conditions constrains (BCC) and initialize state variable windows will be available, user can change the Advanced BCC in schedule before Boolean by checking “Redefine BCC” check box (See
+    <a href="#Fig_45_1_22_Schedule_BCC_definition_window_for_boolean_object"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>22</a>.). For more details on different BCC definition and its definition refer <a href="../../pre_processor/14_boundary_conditions/14_boundary_conditions.htm">14. Boundary Conditions</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_22_Schedule_BCC_definition_window_for_boolean_object"></a><img src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0022.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Schedule BCC definition window for boolean object</p>
+  <p> </p>
+  <p>Similarly state variables can be initialized before Boolean by checking the respective available check boxes as shown in <a href="#Fig_45_1_23_Schedule_Initialize_window_for_boolean_object"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>23.</a>    For more details on state variables initialization refer <a href="../../pre_processor/17_object_data_initialization/17_object_data_initialize.htm">17. Object Data Initialize</a>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_23_Schedule_Initialize_window_for_boolean_object"></a><img src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0023.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Schedule Initialize window for boolean object</p>
+  <p> </p>
+  <p>In this example no need to change or select any option for Boolean object (workpiece) so select Cutter object to continue setup. </p>
+  <h3 class="h3_45_1_2_"><a id="45_1_2_3_Define_Cutter_object"></a>Define Cutter object</h3>
+  <p>Cutter object can be named and imported from DEFORM previous project DB or Keyword files using Import object from a file <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>  and Load object from library <img height="23" src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}" width="24"/> options as shown in <a href="#Fig_45_1_24_Cutter_object_window"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>24.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_24_Cutter_object_window"></a><img src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0024.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Cutter object window</p>
+  <h3 class="h3_45_1_2_"><a id="45_1_2_4_Define_Cutter_geometry"></a>Define Cutter geometry</h3>
+  <p>Simple Cutter geometry can be created from the geometry primitives or 3D geometry editor options as shown in <a href="#Fig_45_1_25_Cutter_geometry_definition_window"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>25.</a> Even the
+    3D geometries can be imported from GEO, STL, PDA, NAS and UNV formats. For more details about the geometry available option refer <a href="../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm">12.3. 3D Geometry Data Defining </a> In
+    this example we will import the 3D geometry for cutter object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_25_Cutter_geometry_definition_window"></a><img src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0025.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Cutter geometry definition window</p>
+  <h3 class="h3_45_1_2_"><a id="45_1_2_5_Position_cutter"></a>Position cutter</h3>
+  <p>Cutter can be positioned in exact location by using the positioning options, this can be accessed from <img src="{{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}"/> button as shown in <a href="#Fig_45_1_26_Cutter_object_Positioning_window"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>26.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_26_Cutter_object_Positioning_window"></a><img height="424" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0026.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Cutter object Positioning window</p>
+  <h3 class="h3_45_1_2_"><a id="45_1_2_6_Preview_Boolean"></a>Preview Boolean</h3>
+  <p>For 3D object, we have two type Boolean method, Geometry based (new method) and Solid mesh based (old method).<strong> </strong>For 3D Object Boolean preview button will be active, when we click on <img src="{{ '/assets/icons/pre_icons/mo_preview_boolean_button.jpg' | relative_url }}"/> we can observe the preview of boolean workpiece as shown in <a href="#Fig_45_1_27_Geometry_based_method_Boolean_preview"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>27.</a> and <a href="#Fig_45_1_28_Solid_mesh_method_Boolean_preview"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>28.</a></p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Geometry based (new method)</strong>: Using Geometry based option if we do Boolean operation, it will Perform Boolean and then Local Remeshing as per the defined input. This will generate smooth mesh as shown in <a href="#Fig_45_1_27_Geometry_based_method_Boolean_preview"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>27.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><a id="Fig_45_1_27_Geometry_based_method_Boolean_preview"></a><img height="424" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0028.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry based method Boolean preview</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Solid mesh based (old method)</strong> : Using Solid mesh based if we do Boolean operation, it will perform boolean and then generate only Solid mesh, please refer <a href="#Fig_45_1_28_Solid_mesh_method_Boolean_preview"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>28.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_28_Solid_mesh_method_Boolean_preview"></a><img height="423" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0027.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Solid mesh method Boolean preview</p>
+  <p> </p>
+  <p>For more information related to Boolean option refer <a href="../../pre_processor/18_object_manipulation_tools/18_1_boolean.htm">18.1. Boolean</a>. </p>
+  <h3 class="h3_45_1_2_"><a id="45_1_2_7_Generate_Database"></a>Generate Database</h3>
+  <p>User has to generate the database in case if previous operation is simulated (see <a href="#Fig_45_1_29_Database_generation_window_if_previous_operation_is_simulated"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>29.</a>), if not
+    database will generate while running after completion of previous operation automatically. In this example as the previous operation is simulated <img height="18" src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}" width="127"/> button
+    is activated, so click on <img height="18" src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}" width="127"/> button to generate the database.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_29_Database_generation_window_if_previous_operation_is_simulated"></a><img height="425" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0029.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Database generation window if previous operation is simulated</p>
+  <p> </p>
+  <p><strong>Generate Database </strong><img height="18" src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}" width="127"/> : By clicking on <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> button, it generates the Database
+    for the setup.</p>
+  <p><strong>Append Key file: </strong>Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can
+    be defined as .key file and only .key file can be changed and simulation can be resubmitted.</p>
+  <h3 class="h3_45_1_2_"><a id="45_1_2_8_Post_processing_the_3D_boolean_results"></a>Post processing the 3D boolean results</h3>
+  <p>User has to simulate the DB to perform the boolean operation and then switch to MO post mode by selecting the  <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> button as shown in <a href="#Fig_45_1_30_Material_flow_at_boolean_previous_operation_last_step"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>30.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_30_Material_flow_at_boolean_previous_operation_last_step"></a><img height="423" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0030.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material flow at boolean previous operation last step</p>
+  <p> </p>
+  <p>Select the last step of the operation previous to boolean and then select the boolean operation step from step browser as shown in <a href="#Fig_45_1_30_Material_flow_at_boolean_previous_operation_last_step"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>30.</a>    and <a href="#Fig_45_1_31_Workpiece_object_after_boolean"><span data-keyref="Chapter_45_1_Boolean_Operator">Fig. 45.1.</span>31.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_45_1_31_Workpiece_object_after_boolean"></a><img height="423" src="{{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0031.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Workpiece object after boolean</p>
+  <h3 class="h3_45_1_2_"><a id="45_1_2_9_Continuing_the_further_operations"></a>Continuing the further operations</h3>
+  <p>User can continue the further operations by adding respective operation from MO pre mode, user will get the booleaned object and other objects which are passed from operation previous to boolean operation (user need to pass object needed after boolean
+    operation into boolean operation setup as explained in 2D boolean operator section <a href="#45_1_1_2_Pass_objects_for_subsequent_operations_across_boolean_operator">45.1.1.2. Pass objects for subsequent operations across boolean operator</a>).</p>
+  <p> </p>
+  <p><strong></strong></p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../pre_processor/18_object_manipulation_tools/18_1_boolean.htm">18.1. Boolean</a></p>
+  <p><a href="43_introduction_to_boolean_operation.htm">45. Introduction to Boolean Operation</a></p>
+
+</body></html>

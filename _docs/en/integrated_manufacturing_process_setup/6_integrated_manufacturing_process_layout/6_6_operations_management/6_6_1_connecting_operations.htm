@@ -1,0 +1,164 @@
+---
+lang: en
+title: "6.6.1. Connecting Operations"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "3.1.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.6.1. Connecting Operations</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>6.6.1. Connecting Operations</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_1_connecting_operations.css"/>
+<meta name="brsnext" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_6_Operations_Management/6_6_2_Read_from_DB_concept.htm"/><meta name="brsprev" value="Documentation_content/Integrated_Manufacturing_Process_Setup/6_Integrated_Manufacturing_Process_layout/6_6_Operations_Management/6_6_Operations_Management.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="6.6.1. Connecting Operations">
+        <span>6.6.1. Connecting Operations</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>6.6.1. Connecting Operations and passing objects</h1>
+  <ul class="Disc">
+    <li>
+      <p><a href="#Connecting_Operations">Connecting Operations</a></p>
+    </li>
+    <li>
+      <p><a href="#Passing_objects">Passing objects</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong><a id="6.6.1.1.Connecting_Operations"></a>Connecting Operations</strong></p>
+    </li>
+  </ul>
+  <p>When user adds operations from explorer, they are automatically connected by connectors in the operation editor. Not all operations can be connected, 2D operations can only be connected to 2D operations and 2D to 3D convertor operator. Similarly 3D
+    operations can only be connect to 3D operations. A few operations can connect to both 2D and 3D operations like Report generation, Die Stress study, DOE study and Optimization study operations. All these connections are differentiated by different
+    type of connections as shown in below <a href="#Fig._6.6.1.1._Different_types_of_Operation_connections"><span data-keyref="Chapter_6_6_1_Connecting_operations">Fig. 6.6.1.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.6.1.1._Different_types_of_Operation_connections"></a><img height="500" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_1_connecting_operations/6_6_1_image001.jpg' | relative_url }}" width="649"/></p>
+  <p class="Fig_numb">Different types of Operation connections</p>
+  <p><br/> Simulation operators cannot be added as these operators are used to perform operations like boolean and cycling over the previous operation.</p>
+  <p><br/> If the operations are not added in required sequence then operations can be reordered by dragging and dropping them at required position in the operation editor as shown in <a href="#Fig._6.6.1.2._Reordering_the_single_operation_in_operation_editor"><span data-keyref="Chapter_6_6_1_Connecting_operations">Fig. 6.6.1.</span>2.</a>    and <a href="#Fig._6.6.1.3._Reordering_the_two_selected_operations_in_operation_editor"><span data-keyref="Chapter_6_6_1_Connecting_operations">Fig. 6.6.1.</span>3.</a></p>
+  <p style="text-align: center"><a id="Fig._6.6.1.2._Reordering_the_single_operation_in_operation_editor"></a><img height="400" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_1_connecting_operations/6_6_1_image002.jpg' | relative_url }}" width="351"/></p>
+  <p class="Fig_numb">Reordering the single operation in operation editor</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.6.1.3._Reordering_the_two_selected_operations_in_operation_editor"></a><img height="500" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_1_connecting_operations/6_6_1_image003.jpg' | relative_url }}" width="538"/></p>
+  <p class="Fig_numb">Reordering the two selected operations in operation editor</p>
+  <p><br/> User needs to setup the operations sequentially as displayed in the operation editor by using operation tree or property editor. Orange outline around the operation indicates active operation and operation tree reflects contents of the active
+    operation. Blue outline also indicates selected operations for bulk moves or deletes as shown in <a href="#Fig._6.6.1.4._Operations_selection"><span data-keyref="Chapter_6_6_1_Connecting_operations">Fig. 6.6.1.</span>4.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._6.6.1.4._Operations_selection"></a><img height="500" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_1_connecting_operations/6_6_1_image004.jpg' | relative_url }}" width="578"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Operations selection</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong><a id="Passing_objects"></a>Passing objects</strong></p>
+    </li>
+  </ul>
+  <p>In operation editor, options are provided to transfer required object data across operations. By right clicking on the object in any particular operation will give the options to pass the object to the next operation or  to pass the object to all operations
+    as shown in <a href="#Fig._6.6.1.5.a_Pass_object_to_next_operation_option;_(a)_Before_passing"><span data-keyref="Chapter_6_6_1_Connecting_operations">Fig. 6.6.1.</span>1.5a</a>. Object can only be passed to next operation or to all operations but
+    cannot be passed to other operations randomly. User can notice an extra link between the passed objects across operations whenever the object is passed.</p>
+  <p> </p>
+  <p><strong>Pass Object To Next Operation: </strong>Using this option object data can be transferred to the next operation. (See <a href="#Fig._6.6.1.5._Pass_object_to_next_operation_option"><span data-keyref="Chapter_6_6_1_Connecting_operations">Fig. 6.6.1.</span>5.</a>)</p>
+  <p style="text-align: center"> <a id="Fig._6.6.1.5.a_Pass_object_to_next_operation_option;_(a)_Before_passing"></a><img height="500" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image025.jpg' | relative_url }}" width="412"/></p>
+  <p class="Fig_name"><br/> (a)
+  </p>
+  <p class="Fig_name"> </p>
+  <p class="Fig_name" style="text-align: center"><img height="230" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image026.jpg' | relative_url }}" width="526"/><br/> (b)
+  </p>
+  <p> </p>
+  <p class="Fig_numb"><a id="Fig._6.6.1.5._Pass_object_to_next_operation_option"></a>Pass object to next operation option; (a) Before passing and (b) After passing</p>
+  <p><br/>
+    <strong>Pass Object To All Operations:</strong> Using this option object data can be transferred to all operations. (See <a href="#Fig._6.6.1.6.__Pass_object_to_all_operation_option"><span data-keyref="Chapter_6_6_1_Connecting_operations">Fig. 6.6.1.</span>6.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><img height="500" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image027.jpg' | relative_url }}" width="484"/> </p>
+  <p class="Fig_name">(a)</p>
+  <p class="Fig_name" style="text-align: center;"><img height="230" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image028.jpg' | relative_url }}" width="510"/><br/> (b)
+  </p>
+  <p class="Fig_numb"><a id="Fig._6.6.1.6.__Pass_object_to_all_operation_option"></a> Pass object to all operation option; (a) Before passing and (b) After passing</p>
+  <p><br/> In few operations total number of objects is limited like in Heat transfer express operations for Heating and transfer heating type, where only one object is allowed, hence user has to take a note of these factors while passing the objects across
+    operations. </p>
+  <p> </p>
+  <p>If user needs to perform boolean operation after forming operation and then continue with other forming operations using same old dies then even the die objects which are not necessary in boolean operation must also be passed to boolean operation first, because
+    as these dies required for the next forming operation. So after passing the required die objects to boolean operation and selecting the boolean operation will add one cutter object, then user can pass the die objects billet to the next forming operation
+    to use after Boolean operation.</p>
+  <p><br/> In extrusion we can use add cycles to increase the computational efficiency by removing the material outside the area of interest in each cycle as an example for this situation as shown in <a href="#Fig._6.6.1.7._Passing_objects_across_boolean_operation"><span data-keyref="Chapter_6_6_1_Connecting_operations">Fig. 6.6.1.</span>7.</a></p>
+  <p style="text-align: center"><a id="Fig._6.6.1.7._Passing_objects_across_boolean_operation"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_6_operations_management/6_6_5_adding_cycles/6_6_5_image005.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Passing objects across boolean operation</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../6_1_integrated_manufacturing_process_preprocessor_layout.htm">6.1. Integrated Manufacturing Porcess (MO) Pre-processor Layout</a></p>
+  <p><a href="6_6_2_read_from_db_concept.htm">6.6.2. Read from DB concept</a></p>
+  <p><a href="6_6_3_editing_operations.htm">6.6.3. Editing Operations</a></p>
+  <p><a href="6_6_4_upgrading_operations.htm">6.6.4. Upgrading Operations</a></p>
+  <p><a href="6_6_5_adding_cycles.htm">6.6.5. Adding Cycles</a></p>
+
+</body></html>

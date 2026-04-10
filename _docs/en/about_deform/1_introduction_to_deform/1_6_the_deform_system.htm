@@ -1,0 +1,151 @@
+---
+lang: en
+title: "1.6. The DEFORM System"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1.1.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>1.6. The DEFORM System</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>1.6. The DEFORM System</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/about_deform/1_introduction_to_deform/1.6. the deform system.css"/>
+<meta name="brsnext" value="Documentation_content/About_DEFORM/1_Introduction_to_DEFORM/1_7_Geometry_Representation.htm"/><meta name="brsprev" value="Documentation_content/About_DEFORM/1_Introduction_to_DEFORM/1_5_Before_you_Begin.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="1.6. The DEFORM System">
+        <span>1.6. The DEFORM System</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>1.6. The DEFORM System</h1>
+  <p><a href="#1.6.1._Pre-processing">1.6.1. Pre-processing</a></p>
+  <p><a href="#1.6.2._Running_the_simulation">1.6.2. Running the Simulation</a></p>
+  <p><a href="#1.6.3._Post-processor">1.6.3. Post-processing</a></p>
+  <p> </p>
+  <p>The DEFORM system consists of three major components:</p>
+  <h2><a id="1.6.1._Pre-processing"></a>Pre-processing</h2>
+  <p>A pre-processor for creating, assembling, or modifying the data required to analyze the simulation, and for generating the required database file. The DEFORM <a href="../../pre_processor/pre-processor_mainpg.htm">pre-processor</a> uses a graphical user
+    interface to assemble the data required to run the simulation. Input data includes,</p>
+  <p> </p>
+  <p><strong>Object description</strong></p>
+  <p><a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm">Object description</a> includes all data associated with an object, including <a href="../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm">geometry</a>,
+    <a href="../../pre_processor/13_mesh_generation/13_mesh_generation.htm">mesh</a>, temperature, <a href="../../pre_processor/10_material_data/10_material_data.htm">material</a>, etc.</p>
+  <p> </p>
+  <p><strong>Material data</strong></p>
+  <p><a href="../../pre_processor/10_material_data/10_material_data.htm">Material</a><a href="../../pre_processor/10_material_data/10_material_data.htm"> data</a> includes data describing the behavior of the material under the conditions which it will reasonably
+    experience during deformation.</p>
+  <p> </p>
+  <p><strong>Inter object conditions</strong></p>
+  <p><a href="../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm">Inter object</a> conditions describes how the objects interact with each other, including contact, friction, and heat transfer between objects.</p>
+  <p> </p>
+  <p><strong>Simulation controls</strong></p>
+  <p><a href="../../pre_processor/9_simulation_controls/9_simulation_controls.htm">Simulation controls</a> includes instructions on the methods DEFORM should use to solve the problem, including the conditions of the processing environment, what physical
+    processes should be modelled, how many discrete time steps should be used to model the process, etc.</p>
+  <p> </p>
+  <p><strong>Inter material data</strong></p>
+  <p><a href="../../pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data.htm">Inter material</a> data describes the physical process of one phase of a material transforming into other phases of the same material in a heat treatment
+    process. For example, the transformation of austenite into pearlite, bainite, and martensite.</p>
+  <p> </p>
+  <p><strong>Integrated Manufacturing Process (MO)</strong></p>
+  <p>DEFORM <a href="../../integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm.htm">Integrated Manufacturing Process (MO)</a><strong> </strong>provides a user-friendly interface to construct many successive operations at
+    the initial setup and simulate them sequentially without user interaction. MO environment facilitates the user to transfer objects across operations and connect different operations for transferring data.</p>
+  <h2><a id="1.6.2._Running_the_simulation"></a>Running the simulation</h2>
+  <p>A simulation engine for performing the numerical calculations required to analyze the process, and writing the results to the database file. The simulation engine reads the database file, performs the actual solution calculation, and appends the appropriate
+    solution data to the database file. The simulation engine also works seamlessly with the Automatic Mesh Generation (AMG) system to generate a new FEM mesh on the workpiece whenever necessary. While the simulation engine is running, it writes status
+    information, including any error messages, to the message (.MSG) and log (.LOG) files.</p>
+  <p> </p>
+  <p><strong>Simulation engine</strong></p>
+  <p>The simulation engine is the program which actually performs the numerical calculations to solve the problem. The simulation engine reads input data from the database, then writes the solution data back out to the database. As it runs, it creates two
+    user readable files which track its progress.</p>
+  <p> </p>
+  <p><strong>Log (LOG) files</strong></p>
+  <p>Log files are created when a simulation is running. They contain general information on starting and ending times, remeshings (if any), may contain error messages if the simulation stops unexpectedly and type of FEM job running (32-bit or 64-bit simulation)
+    in case of 3D jobs.</p>
+  <p> </p>
+  <p><strong>Message (MSG) files</strong></p>
+  <p>Message files are also created when a simulation is running. They contain detailed information about the behavior of the simulation, and may contain information regarding why a simulation has stopped.</p>
+  <h2><strong><a id="1.6.3._Post-processor"></a>Post-processor</strong></h2>
+  <p> A post-processor for reading the database file from the simulation engine and displaying the results graphically and for extracting numerical data. The postprocessor is used to view simulation data after the simulation has been run. The postprocessor
+    features a graphical user interface to view geometry, field data such as strain, temperature, stress and other simulation data such as die loads. The postprocessor can also be used to extract graphic or numerical data for use in other applications. Post
+    processor is also used to view and extract data from the simulation results in the database file. It provides an environment for the user to generate 3D PDF reports of simulation results, interpret results across database using PIP, plot results in
+    region of interest, Coupons Data extraction to evaluate the microstructure and Mechanical property of a particular cut part along with the general post processing features.</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="../../pre_processor/7_introduction_to_pre-processor.htm">Pre-Processor</a></p>
+  <p><a href="../../post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor.htm">Post-Processor</a></p>
+  <p><a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm">Object Description</a></p>
+  <p><a href="../../pre_processor/10_material_data/10_material_data.htm">Material Data</a></p>
+  <p><a href="../../pre_processor/14_boundary_conditions/14_boundary_conditions.htm">Boundary Conditions</a></p>
+  <p><a href="../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm">Inter-Object Data</a></p>
+  <p><a href="../../pre_processor/9_simulation_controls/9_simulation_controls.htm">Simulation Controls</a></p>
+  <p><a href="../../simulator/23_deform_simulator/23_introduction_to_deform_simulator.htm">Simulator</a></p>
+  <p><a href="../../labs/basic_labs/2d_labs/lab_25_stub_shaft_labs.htm">2D Stub Shaft Labs</a></p>
+  <p><a href="../../labs/basic_labs/3d_labs/lab05_stub_shaft_labs.htm">3D Stub Shaft Labs</a></p>
+
+</body></html>

@@ -1,0 +1,332 @@
+---
+lang: en
+title: "Ring Rolling Lab3"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.21.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Ring Rolling Lab3</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Ring Rolling Lab3</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/ring_rolling_labs/ring_rolling_lab3.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Ring_Rolling_Labs/Ring_Rolling_Lab4.htm"/><meta name="brsprev" value="Documentation_content/Labs/Ring_Rolling_Labs/Ring_Rolling_Lab2.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Ring Rolling Lab3">
+        <span>Ring Rolling Lab3</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Ring Rolling Lab3</h1>
+  <p>In this lab we will be setting up simple Isothermal Ring Rolling operation.</p>
+  <p><br/>
+    <a href="#3_1_Creating_a_New_Problem">3.1. Creating a New Problem</a></p>
+  <p><a href="#3_2_Process_Page">3.2. Process Page</a></p>
+  <p><a href="#3_3_Simulation_Setup">3.3. Simulation Setup</a></p>
+  <p><a href="#3_4_Object_selection">3.4.Object selection</a></p>
+  <p><a href="#3_5_Defining_Workpiece_-_Ring">3.5. Defining Workpiece - Ring</a> </p>
+  <p style="margin-left: 20px"><a href="#3_5_1_Defining_Workpiece_-_Ring_object">3.5.1. Defining Workpiece - Ring object</a></p>
+  <p style="margin-left: 20px"><a href="#3_5_2_Defining_Workpiece_-_Ring_2D_cross-section">3.5.2. Defining Workpiece - Ring 2D cross-section</a></p>
+  <p style="margin-left: 20px"><a href="#3_5_3_Defining_Workpiece_-_Ring_2D_Mesh">3.5.3. Defining Workpiece - Ring 2D Mesh</a></p>
+  <p style="margin-left: 20px"><a href="#3_5_3_Generating_3D_Geometry_for_Workpiece_-_Ring">3.5.4. Generating 3D Geometry for Workpiece - Ring</a></p>
+  <p style="margin-left: 20px"><a href="#3_5_5_Generating_3D_Mesh_for_Workpiece_-_Ring">3.5.5. Generating 3D Mesh for Workpiece - Ring</a></p>
+  <p style="margin-left: 20px"><a href="#3_5_6_Assign_Workpiece-Ring_Material">3.5.6. Assign Workpiece-Ring Material</a></p>
+  <p><a href="#3_6_Defining_Driving_Roll">3.6. Defining Driving Roll</a></p>
+  <p style="margin-left: 20px"><a href="#3_6_1_Defining_Driving_Roll_Object_">3.6.1. Defining Driving Roll Object</a> </p>
+  <p style="margin-left: 20px"><a href="#3_6_2_Driving_roll_2D_cross-section_Page">3.6.2. Driving roll 2D cross-section Page</a></p>
+  <p style="margin-left: 20px"><a href="#3_6_3_Driving_Roll_3D_Geometry_Page">3.6.3. Driving Roll 3D Geometry Page</a></p>
+  <p style="margin-left: 20px"><a href="#3_6_4_Driving_Roll_orientation">3.6.4. Driving Roll orientation</a></p>
+  <p style="margin-left: 20px"><a href="#3_6_5_Driving_roll_movement">3.6.5. Driving roll movement</a></p>
+  <p><a href="#3_7_Defining_Pressure_Roll">3.7. Defining Pressure Roll</a></p>
+  <p style="margin-left: 20px"><a href="#3_7_1_Defining_Pressure_Roll_Object_">3.7.1. Defining Pressure Roll Object</a> </p>
+  <p style="margin-left: 20px"><a href="#3_7_2_Pressure_roll_2D_cross-section_Page">3.7.2. Pressure roll 2D cross-section Page</a></p>
+  <p style="margin-left: 20px"><a href="#3_7_3_Pressure_Roll_3D_Geometry_Page">3.7.3. Pressure Roll 3D Geometry Page</a></p>
+  <p style="margin-left: 20px"><a href="#3_7_4_Pressure_Roll_orientation">3.7.4. Pressure Roll orientation</a></p>
+  <p style="margin-left: 20px"><a href="#3_7_5_Pressure_roll_movement">3.7.5. Pressure roll movement</a></p>
+  <p><a href="#3_8_Contact_Page">3.8. Contact Page</a></p>
+  <p><a href="#3_9_Stopping_Controls">3.9. Stopping Controls</a></p>
+  <p><a href="#3_10_Step_and_Remeshing_controls_Page">3.10. Step and Remeshing controls Page</a></p>
+  <p><a href="#3_11_Generate_Database">3.11. Generate Database</a></p>
+  <p><a href="#3_12_Running_Simulation">3.12. Running Simulation</a></p>
+  <p><a href="#3_13_Post_Processing">3.13. Post Processing</a></p>
+  <p> </p>
+  <p> </p>
+  <h2><a id="3_1_Creating_a_New_Problem"></a>Creating a New Problem</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> </strong><strong>New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_RRL3_1_New_Problem_page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>1.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and Unit system as &quot;<strong>English</strong>&quot; using radio button. Define Problem Name as &quot;<strong>RING_ROLL_LAB3</strong>&quot; and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>”
+    check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_1_New_Problem_page"></a><img height="484" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">New Problem page</p>
+  <p> </p>
+  <p>Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session, we will use ‘<strong>RING_ROLLING_LAB3</strong>’
+    as the project name. 3D Ring Rolling operation can be added in &quot;New Project&quot; dialog buy turning on First operation check band selecting Ring Rolling operation from the drop down menu (see <a href="#Fig_RRL3_2_Adding_Ring_rolling_operation_from_New_Project"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>2.</a>)
+    In this lab, we will add Ring rolling operation from Explorer operation list, so do not check &quot;First operation&quot; check box in &quot;New Project&quot; dialog. Click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> to continue to add the operation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_2_Adding_Ring_rolling_operation_from_New_Project"></a><img height="517" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Ring rolling operation from New Project </p>
+  <p><br/> Add 3D Ring Rolling operation from the Explorer Operations list. Add the operation by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button available next to <strong>3D Ring Rolling</strong> or user can also
+    add by drag and drop into the Operation Editor. When we add the Ring Rolling operation, Process settings page will be opened by default (See <a href="#Fig_RRL3_3_Adding_Ring_rolling_operation_from_Explorer"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>3.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_3_Adding_Ring_rolling_operation_from_Explorer"></a><img height="511" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p>    </p>
+  <p class="Fig_numb">Adding Ring rolling operation from Explorer</p>
+  <h2><a id="3_2_Process_Page"></a>Process Page</h2>
+  <p>Ring rolling operation template can be used to setup Ring Rolling and Railroad wheel rolling, In Process page, by default <strong>&quot;Ring rolling (default)</strong> &quot; radio button will be selected (See <a href="#Fig_RRL3_4_Process_page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>4</a>.),
+    we will retail this selection and click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Simulation setup page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_4_Process_page"></a><img height="320" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0004.jpg' | relative_url }}" width="383"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process page</p>
+  <h2><a id="3_3_Simulation_Setup"></a>Simulation Setup</h2>
+  <p>Select &quot;<strong>Whole</strong>&quot; 3D model type radio button and keep default Thermal calculation type as &quot;<strong>C</strong><strong><strong>o</strong>nstant temperature (isothermal)</strong>&quot; in Simulation setup page as shown in
+    <a href="#Fig_RRL3_5_Simulation_setup_page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>5.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Objects page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_5_Simulation_setup_page"></a><img height="325" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0005.jpg' | relative_url }}" width="389"/></p>
+  <p>                </p>
+  <p class="Fig_numb">Simulation setup page</p>
+  <h2><a id="3_4_Object_selection"></a>Object selection</h2>
+  <p>In “<strong>Objects</strong>” page, we will use the current default objects as shown in <a href="#Fig_RRL3_6_Objects_list_for_Whole_model_type"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>6.</a>, minimum 3 objects are
+    required to setup ring rolling process, they are Workpiece (Ring), Pressure roll (mandrel) and Driving roll. We will not using any axial roll in this lab. Click on  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>  to Workpiece - Ring
+    page to define Ring object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_6_Objects_list_for_Whole_model_type"></a><img height="320" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0006.jpg' | relative_url }}" width="383"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objects list for Whole model type</p>
+  <h2><a id="3_5_Defining_Workpiece_-_Ring"></a>Defining Workpiece - Ring </h2>
+  <h3><a id="3_5_1_Defining_Workpiece_-_Ring_object"></a>Defining Workpiece - Ring object</h3>
+  <p>In Workpiece - Ring page define the Object temperature as <strong>70</strong>°F as shown in <a href="#Fig_RRL3_7_Workpiece_-_Ring_Object_page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>7.</a>, click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 2D Cross-section page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_7_Workpiece_-_Ring_Object_page"></a><img src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0007.jpg' | relative_url }}" style="cursor: nwse-resize;"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece - Ring Object page</p>
+  <h3><a id="3_5_2_Defining_Workpiece_-_Ring_2D_cross-section"></a>Defining Workpiece - Ring 2D cross-section</h3>
+  <p>In Workpiece 2D cross-section page, click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> and select<strong> H</strong><strong><strong>ollo</strong>w</strong> <strong>cylinder </strong>primitive, define the <strong>Outer radius </strong>as
+    “<strong>8</strong>”, <strong>Inner radius</strong> as &quot;6 &quot;, <strong>H</strong><strong>eight </strong>as “<strong>2</strong>” and <strong>Corners </strong><strong>radius</strong> as<strong> </strong><strong>0.25</strong> at all corners as
+    shown in <a href="#Fig_RRL3_8_Workpiece – Ring 2D cross-section geometry definition"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>8.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close
+    the Geometry primitive page and click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 2D Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_8_Workpiece – Ring 2D cross-section geometry definition"></a><img height="330" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0008.jpg' | relative_url }}" width="395"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece – Ring 2D cross-section geometry definition</p>
+  <h3><a id="3_5_3_Defining_Workpiece_-_Ring_2D_Mesh"></a>Defining Workpiece - Ring 2D Mesh</h3>
+  <p>In 2D mesh settings, define Target number of Elements as <strong>100</strong>, click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> button and observe the generated mesh in display window (See <a href="#Fig_RRL3_9_Workpiece-Ring_2D_Mesh_generation"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>9</a>.).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 3D Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_9_Workpiece-Ring_2D_Mesh_generation"></a><img height="529" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0009.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece-Ring 2D Mesh generation</p>
+  <h3><a id="3_5_3_Generating_3D_Geometry_for_Workpiece_-_Ring"></a>Generating 3D Geometry for Workpiece - Ring</h3>
+  <p>In 3D Geometry page, click on &quot;<strong>Revolve from 2D</strong>&quot; option, use the default values in Revolve from 2D page as shown in <a href="#Fig_RRL3_10_Workpiece-Ring_3D_Geometry_settings"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>10.</a>,
+    and click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 3D Mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_10_Workpiece-Ring_3D_Geometry_settings"></a><img height="419" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece-Ring 3D Geometry settings</p>
+  <h3><a id="3_5_5_Generating_3D_Mesh_for_Workpiece_-_Ring"></a>Generating 3D Mesh for Workpiece - Ring</h3>
+  <p>In 3D Mesh page, select <strong>Revolve with constant cross-section</strong> radio button and with default value of <strong>120 </strong>for &quot;<strong>Number of Revolving sections</strong>&quot;, generate 3D mesh by clicking on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/>. Observe the generated 3D Mesh for workpiece as shown in <a href="#Fig_RRL3_11_Workpiece-Ring_3D_Mesh_settings"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>11.</a> If Ring is of non-uniform shape then user can
+    import the geometry and select Revolve to fit 3D shape to generate non-uniform 3D Ring Mesh. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Material page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_11_Workpiece-Ring_3D_Mesh_settings"></a><img src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0011.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece-Ring 3D Mesh settings</p>
+  <h3><a id="3_5_6_Assign_Workpiece-Ring_Material"></a>Assign Workpiece-Ring Material</h3>
+  <p>In Material page, Click on <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/>(Load material from library) icon and load the steel group material &quot;<strong>AISI-1035,COLD[70-400F(20-200C)]</strong>&quot; from material library
+    window. Assign the &quot;<strong>AISI-1035,COLD[70-400F(20-200C)]</strong>&quot; material for Workpiece as shown in <a href="#Fig_RRL3_12__Workpiece-Ring_material_Page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>12.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Workpiece BCC page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_12__Workpiece-Ring_material_Page"></a><img height="514" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0012.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Workpiece-Ring material Page</p>
+  <h2><a id="3_6_Defining_Driving_Roll"></a>Defining Driving Roll</h2>
+  <h3 class="h3_3_6_"><a id="3_6_1_Defining_Driving_Roll_Object_"></a>Defining Driving Roll Object </h3>
+  <p>Keep the name as “<strong>Driving Roll</strong>&quot; and temperature as<strong> 68°F</strong> unchanged as shown in  <a href="#Fig_RRL3_13_Driving_Roll_object_Page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>13.</a> and
+    just click  <img height="22" src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" style="cursor: nesw-resize;" width="73"/> to go to the 2D cross-section geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_13_Driving_Roll_object_Page"></a><img src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0013.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Driving Roll object Page</p>
+  <h3 class="h3_3_6_"><a id="3_6_2_Driving_roll_2D_cross-section_Page"></a>Driving roll 2D cross-section Page</h3>
+  <p>In Driving Roll 2D cross-section page, click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> and select <strong>H</strong><strong><strong>o</strong>llow cylinder </strong>primitive, define the <strong>Outer radius</strong>    as &quot;<strong>19</strong>&quot;, <strong>Inner radius</strong> as  “<strong>14</strong>&quot;<strong> and </strong> <strong>height </strong>as “<strong>10</strong>”  as shown in <a href="#Fig_RRL3_14_Defining_Driving_roll_2D_cross_section"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>14.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the Geometry primitive page and click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 3D Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_14_Defining_Driving_roll_2D_cross_section"></a><img height="511" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Driving roll 2D cross section</p>
+  <h3 class="h3_3_6_"><a id="3_6_3_Driving_Roll_3D_Geometry_Page"></a>Driving Roll 3D Geometry Page</h3>
+  <p>In 3D Geometry page, click on &quot;<strong>Revolve from 2D</strong>&quot; option as shown in <a href="#Fig_RRl3_16_Defining_Driving_Roll_Orientation"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>15.</a>, use the default
+    value of <strong>100 </strong>as &quot;<strong>Number of layers in hoop direction</strong>&quot; in Revolve from 2D page as shown in <a href="#Fig_RRl3_16_Defining_Driving_Roll_Orientation"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>15.</a>.
+    and click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to generate 3D geometry as shown in <a href="#Fig_RRl3_16_Defining_Driving_Roll_Orientation"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>15.</a>.
+    and close. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Orientation page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_15_Driving_roll_3D_Geometry_settings"></a><img height="389" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0015.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Driving roll 3D Geometry settings</p>
+  <h3 class="h3_3_6_"><a id="3_6_4_Driving_Roll_orientation"></a>Driving Roll orientation</h3>
+  <p>In Driving Roll orientation page, select &quot;<strong>Set relative distance between object center</strong>&quot; option and define &quot; <strong>Vertical distance (d)</strong>&quot; as <strong>4 </strong>in with &quot;<strong>Current object center&#39;s relative location </strong>&quot;
+    as &quot;<strong>-Z </strong>&quot;, click on <img src="{{ '/assets/icons/pre_icons/mo_apply_orientation_button.jpg' | relative_url }}"/> to move the Driving Roll by <strong>2.25 </strong>in along the <strong>Z</strong> axis with respect to Ring object center (See
+    <a href="#Fig_RRl3_16_Defining_Driving_Roll_Orientation"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>16.</a>). Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRl3_16_Defining_Driving_Roll_Orientation"></a><img height="523" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0016.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Defining Driving Roll Orientation</p>
+  <h3 class="h3_3_6_"><a id="3_6_5_Driving_roll_movement"></a>Driving roll movement</h3>
+  <p>Select <strong>Angular velocity</strong> in rotation movement controls for the driving roll and define a constant value<strong> 2</strong> rad/sec. Notice a green rotation arrow showing rotational direction in the display window (See <a href="#Fig_RRl3_17_Driving_Roll_Movement_definition"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>17.</a>).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Object page of Pressure roll.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRl3_17_Driving_Roll_Movement_definition"></a><img height="517" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Driving Roll Movement definition</p>
+  <h2><a id="3_7_Defining_Pressure_Roll"></a>Defining Pressure Roll</h2>
+  <h3 class="h3_3_7_"><a id="3_7_1_Defining_Pressure_Roll_Object_"></a>Defining Pressure Roll Object </h3>
+  <p>Keep the name of &quot;<strong>Pressure </strong><strong>Roll</strong>&quot; and temperature as <strong>68°F</strong> as shown in <a href="#Fig_RRL3_18_Pressure_Roll_object_page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>18.</a>    and click  <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to go to the 2D cross-section page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_18_Pressure_Roll_object_page"></a><img src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0018.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Pressure Roll object page</p>
+  <p> </p>
+  <h3 class="h3_3_7_"><a id="3_7_2_Pressure_roll_2D_cross-section_Page"></a>Pressure roll 2D cross-section Page</h3>
+  <p>In Pressure roll 2D cross-section page, click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> and select <strong>cylinder </strong>primitive define the <strong>R</strong><strong><strong>a</strong>dius </strong>and <strong>Height </strong>as
+    <strong>2</strong>” and <strong>10</strong>”  respectively as shown in <a href="#Fig_RRL3_19_Defining_Pressure_Roll_2D_Cross-section_Geometry"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>19.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the Geometry primitive page and click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 3D Geometry page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_19_Defining_Pressure_Roll_2D_Cross-section_Geometry"></a><img height="379" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0019.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Defining Pressure Roll 2D Cross-section Geometry</p>
+  <p> </p>
+  <h3 class="h3_3_7_"><a id="3_7_3_Pressure_Roll_3D_Geometry_Page"></a>Pressure Roll 3D Geometry Page</h3>
+  <p>In 3D Geometry page, click on &quot;<strong>Revolve from 2D</strong>&quot; option as shown in <a href="#Fig_RRL3_20_Pressure_Roll_3D_geometry_settings"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>20.</a>, use the default
+    value of <strong>100 </strong>for &quot;<strong>Number of layers in hoop direction</strong>&quot; in Revolve from 2D page in as shown in <a href="#Fig_RRL3_20_Pressure_Roll_3D_geometry_settings"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>20.</a>    and click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to generate 3D geometry for Pressure Roll as shown in <a href="#Fig_RRL3_20_Pressure_Roll_3D_geometry_settings"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>20.</a>    and close. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Orientation page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_20_Pressure_Roll_3D_geometry_settings"></a><img height="387" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0020.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">Pressure Roll 3D geometry settings</p>
+  <p> </p>
+  <h3 class="h3_3_7_"><a id="3_7_4_Pressure_Roll_orientation"></a>Pressure Roll orientation</h3>
+  <p>Select &quot;<strong>Set relative distance between object centers</strong>&quot; option and define &quot; <strong>Vertical distance (d)</strong>&quot; as <strong>4.5</strong>in with &quot;<strong>Current object center&#39;s relative location</strong>    &quot; as &quot;<strong>-Z</strong>&quot;, click on <img src="{{ '/assets/icons/pre_icons/mo_apply_orientation_button.jpg' | relative_url }}"/> to move the Pressure Roll down along <strong>Z</strong> axis by <strong>4.5</strong> in (See <a href="#Fig_RRL3_21_Pressure_Roll_Orientation_settings"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>21.</a>)
+    in Pressure Roll Orientation page. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Movement page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_21_Pressure_Roll_Orientation_settings"></a><img src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0021.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Pressure Roll Orientation settings</p>
+  <h3 class="h3_3_7_"><a id="3_7_5_Pressure_roll_movement"></a>Pressure roll movement</h3>
+  <p>We will define Pressure Roll movement <strong>Speed </strong>as &quot;<strong>Constant</strong>&quot; as “<strong>0.01 </strong>in/sec” while keeping <strong>Torque</strong> at “<strong>0</strong>” as shown in <a href="#Fig_RRL3_22_Pressure_Roll_movement_page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>22.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Contact page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_22_Pressure_Roll_movement_page"></a><img src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0022.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Pressure Roll movement page</p>
+  <h2><a id="3_8_Contact_Page"></a>Contact Page</h2>
+  <p>In Contact page, we will use the default shear friction value of <strong>0.7</strong> as shown in <a href="#Fig_RRL3_23_Contact_page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>23.</a> and click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}" width="72"/> to generate contacts between driving roll and the workpiece as well as between pressure roll and the workpiece (See <a href="#Fig_RRL3_23_Contact_page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>23.</a>).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Stopping controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_23_Contact_page"></a><img src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0023.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Contact page    </p>
+  <h2><a id="3_9_Stopping_Controls"></a>Stopping Controls</h2>
+  <p>Define <strong>process </strong><strong>duration </strong>as <strong>10 </strong>sec as shown in <a href="#Fig_RRL3_24_Stopping_control_page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>24.</a> Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Step and remeshing control page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_24_Stopping_control_page"></a><img height="360" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0024.jpg' | relative_url }}" width="375"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping control page</p>
+  <h2><a id="3_10_Step_and_Remeshing_controls_Page"></a>Step and Remeshing controls Page</h2>
+  <p>Keep default <strong>Number </strong><strong>of</strong> <strong>steps </strong>of <strong>10000</strong>, set <strong>Rotation </strong><strong>increment </strong><strong>to</strong> <strong>save </strong>as <strong>90 </strong>and <strong>Max </strong><strong>allowed </strong><strong>time </strong><strong>step </strong>as
+    <strong>0.01</strong>. Keep default &quot;<strong>Remeshing control</strong>” as “<strong>5</strong> revolutions(s)” as shown in <a href="#Fig_RRL3_25_Step_and_remeshing_control_page"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>25.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Generate DB.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_25_Step_and_remeshing_control_page"></a><img height="350" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0025.jpg' | relative_url }}" width="396"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Step and remeshing control page</p>
+  <h2><a id="3_11_Generate_Database"></a>Generate Database</h2>
+  <p>In Generate DB page, click on the <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> button to generate the database. Observe the message in Message tab informing database generation status.</p>
+  <h2><a id="3_12_Running_Simulation"></a>Running Simulation</h2>
+  <p>Once the database has been generated, switch to the Simulation mode by selecting the <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> button above the object tree. Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog as shown in  <a href="#Fig_RRL3_26_Run Simulation Window"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>26.</a> Use the default <strong>Continue Run</strong> option to
+    select “<strong>Continue from the last step</strong>” (from step -1) option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_26_Run Simulation Window"></a><img height="319" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0026.jpg' | relative_url }}" width="727"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation Window</p>
+  <p><br/> Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked. User can view the Ring Rolling
+    process as the simulation proceeds to the specified stopping criteria from Simulation graphics.</p>
+  <h2><a id="3_13_Post_Processing"></a>Post Processing</h2>
+  <p>When the simulation is completed with ‘normal stop’, review the results by switching to Post mode using the <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> button above the Simulation tool bar.<br/> Play through the steps of the
+    simulation and look how the workpiece-Ring is formed.<br/>
+    <br/> Click on <img src="{{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}"/> Single object mode by selecting workpiece-Ring and plot Effective Stress of the workpiece-Ring. When we play through the steps, we can observe the increase in
+    strain value. The Effective Stress distribution at the step 163 of the simulation should look like as shown in <a href="#Fig_RRL3_27_Showing_effective_stress_"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>27.</a> The
+    dimension of the ring at the last step is as shown in <a href="#Fig_RRL3_28_Dimensions of Ring at end of simulation"><span data-keyref="Labs_Ring_Rolling_Labs-Ring_Rolling_Lab3">Fig. RRL3.</span>28.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_27_Showing_effective_stress_"></a><img height="513" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0027.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Showing effective stress </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_RRL3_28_Dimensions of Ring at end of simulation"></a><img height="400" src="{{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab3/image0028.jpg' | relative_url }}" width="393"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Dimensions of Ring at end of simulation</p>
+  <p> </p>
+
+</body></html>

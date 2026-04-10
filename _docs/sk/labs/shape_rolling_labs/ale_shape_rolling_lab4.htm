@@ -1,0 +1,364 @@
+---
+lang: sk
+title: "ALE Shape Rolling Lab4"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "15.22.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>ALE Shape Rolling Lab4 </title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>ALE Shape Rolling Lab4 </title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/labs/shape_rolling_labs/ale_shape_rolling_lab4.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Shape_Rolling_labs/Shape_Rolling_Lab1.htm"/><meta name="brsprev" value="Documentation_content/Labs/Shape_Rolling_labs/ALE_Shape_Rolling_Lab3.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="ALE Shape Rolling Lab4 ">
+        <span>ALE Shape Rolling Lab4 </span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>ALE Shape Rolling Lab4 (with Multi-stand and using 2.5 D Mesh)</h1>
+  <p>In this lab we will be setting up simple ALE multi-stand rolling operation using Shape Rolling template available in Integrated Manufacturing Process template.</p>
+  <p> </p>
+  <p><a href="#4_1_Creating_a_New_problem">4.1. Creating a New problem</a></p>
+  <p><a href="#4_2_Adding_Shape_Rolling_operation">4.2. Adding Shape Rolling operation</a></p>
+  <p><a href="#4_3_Set_process_Conditions">4.3. Set process conditions</a></p>
+  <p><a href="#4_4_Defining_Workpiece">4.4. Defining Workpiece</a></p>
+  <p><a href="#4_4_1_Defining_Workpiece_object"><span style="margin-left:20px;">4.4.1. Defining Workpiece object</span></a></p>
+  <p style="margin-left: 20px"><a href="#4_4_2_Creating_Workpiece_Geometry">4.4.2. Creating Workpiece Geometry</a></p>
+  <p style="margin-left: 20px"><a href="#4_4_3_Generating_Workpiece_mesh">4.4.3. Generating Workpiece mesh</a></p>
+  <p style="margin-left: 20px"><a href="#4_4_4_Assigning_Workpiece_material">4.4.4. Assigning Workpiece material</a></p>
+  <p style="margin-left: 20px"><a href="#4_4_5_Defining_Workpiece_boundary_conditions">4.4.5. Defining Workpiece boundary conditions</a></p>
+  <p><a href="#4_5_Defining_Grooves">4.5. Defining Grooves</a></p>
+  <p style="margin-left: 20px"><a href="#4_5_1_Defining_Groove_for_Roll_geometry">4.5.1. Defining Groove for Roll geometry</a></p>
+  <p><a href="#4_6_Defining_Multi_stands_in_first_pass">4.6. Defining Multi stands in first pass</a></p>
+  <p><a href="#4_6_1_Running_2_5_D_simulation"><span style="margin-left:20px;">4.6.1. Running 2.5D Simulation</span></a></p>
+  <p><a href="#4_7_Generating_3D_Setup">4.7. Generating 3D Setup</a></p>
+  <p style="margin-left: 20px"><a href="#4_7_1_3D_Rolls_geometry_settings">4.7.1. 3D Rolls geometry settings</a></p>
+  <p style="margin-left: 20px"><a href="#4_7_2_3D_Rolls_mesh_settings">4.7.2. 3D Rolls mesh settings</a></p>
+  <p style="margin-left: 20px"><a href="#4_7_3_3D_Workpiece_setup_using_2_5D_meshing_method">4.7.3. 3D Workpiece setup using 2.5D meshing method</a></p>
+  <p><a href="#4_8_Modifying_Rolling_pass_operation">4.8. Modifying Rolling pass operation</a></p>
+  <p style="margin-left: 20px"><a href="#4_8_1_Modify_the_Heat_Exchange_with_Environment_BCC_for_Rolls">4.8.1. Modify the Heat Exchange with Environment BCC for Rolls</a></p>
+  <p style="margin-left: 20px"><a href="#4_8_2_Defining_Contact_Relations">4.8.2. Defining Contact Relations</a></p>
+  <p style="margin-left: 20px"><a href="#4_8_3_Defining_Simulation_Controls">4.8.3. Defining Simulation Controls</a></p>
+  <p style="margin-left: 20px"><a href="#4_8_4_Generating_Database">4.8.4. Generating Database</a></p>
+  <p><a href="#4_9_Running_Simulation">4.9. Running Simulation</a></p>
+  <p><a href="#4_10_Post_Processing">4.10. Post Processing</a></p>
+  <p> </p>
+  <h2><a id="4_1_Creating_a_New_problem"></a>Creating a New problem</h2>
+  <p>On a <strong>Windows machine</strong>, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button, select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>)
+    and select <strong>DEFORM GUI Main</strong> vxx.xx from the menu. The DEFORM GUI Main window will appear.</p>
+  <p> </p>
+  <p>Create a new problem either by selecting <strong>File <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> </strong><strong>New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_ALEL4_1_Problem_type_selection_window"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>1.</a> Select &quot; <strong>Integrated Manufacturing Process</strong>&quot;
+    radio button and Unit system as &quot;<strong>SI</strong>&quot; using radio button. Define Problem Name as &quot;<strong>SHR_ALE_LAB4</strong>&quot; and make sure the “<strong>Show option dialog</strong>” check box is turned on (if we do not turn
+    on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open the new Problem using the
+    Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_1_Problem_type_selection_window"></a><img height="484" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem type selection window</p>
+  <p><br/> Multiple operation wizard will open with the New Project dialog as shown in <a href="#Fig_ALEL4_2_Adding_Shape_Rolling_Operation_from_MO_Wizard_from_new_Project_window"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>2.</a>, at
+    this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session, we will use ‘<strong>SHR_ALE_LAB4</strong>’ as the project name. 3D Shape Rolling
+    operation can also be added in &quot;New Project&quot; dialog (see <a href="#Fig_ALEL4_2_Adding_Shape_Rolling_Operation_from_MO_Wizard_from_new_Project_window"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>2.</a>),
+    but we will add Shape rolling operation from operations list in Explorer in this lab, so do not check &quot;First operation&quot; check box in the &quot;New Project&quot; dialog. Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> to continue to open the operation.</p>
+  <p> </p>
+  <h2><a id="4_2_Adding_Shape_Rolling_operation"></a>Adding Shape Rolling operation</h2>
+  <p>Add one Shape Rolling operation from the Explorer Operations list. Operation can be added by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button adjacent to Shape Rolling in Explorer or user can also add by drag
+    and drop into the Operation Editor (See <a href="#Fig_ALEL4_3_Adding_Shape_Rolling_Operation_from_explorer"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>3.</a>). As we add operation, Process page will be opened
+    in the properties area.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_2_Adding_Shape_Rolling_Operation_from_MO_Wizard_from_new_Project_window"></a><img height="372" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Shape Rolling Operation in MO Wizard from new Project window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_3_Adding_Shape_Rolling_Operation_from_explorer"></a><img height="372" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Shape Rolling Operation from explorer.</p>
+  <h2><a id="4_3_Set_process_Conditions"></a>Set process conditions</h2>
+  <p>In Process page, select the rolling type as &quot;<strong>Steady-State </strong><strong>ALE</strong>” and symmetry type as “<strong>Quarter</strong>”, we will be setting up quarter symmetry object. As we are interested in temperature gradient in rolls,
+    select the &quot;<strong>Workpiece and rolls (non-isothermal)</strong>&quot; option.</p>
+  <p> </p>
+  <p>Change the interface <strong>Friction</strong> <strong>coefficient </strong>to <strong>0.5</strong> and interface <strong>Heat </strong><strong>transfer </strong><strong>coefficient </strong>to <strong>5 </strong>(these are global values applicable
+    to all stands and passes) as shown in <a href="#Fig_ALEL3_4_Defining_rolling_process_conditions_in_Process_page"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>4.</a>, we will further update the friction conditions
+    in inter-object relations during 3D setup.  Click <img height="22" src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" width="73"/> to WP_CrossSection page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL3_4_Defining_rolling_process_conditions_in_Process_page"></a><img height="340" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0004.jpg' | relative_url }}" width="462"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining rolling process conditions in Process page.</p>
+  <p> </p>
+  <h2><a id="4_4_Defining_Workpiece"></a>Defining Workpiece</h2>
+  <h3><a id="4_4_1_Defining_Workpiece_object"></a>Defining Workpiece object</h3>
+  <p>In <strong>WP_CrossSection </strong>window, keep the object type as ‘<strong>Plastic</strong>’ and specify workpiece temperature as <strong>100°</strong>C (See <a href="#Fig_ALEL4_5_Workpiece_Object_Definition"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>5.</a>).
+    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_5_Workpiece_Object_Definition"></a><img height="340" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0005.jpg' | relative_url }}" width="462"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece Object Definition.</p>
+  <h3><a id="4_4_2_Creating_Workpiece_Geometry"></a>Creating Workpiece Geometry</h3>
+  <p>Since we are setting up a quarter symmetry model, we need to create a 1/4th hollow cylinder geometry for workpiece. To do so, select Define Primitive in Geometry page, select hollow cylinder from primitive geometry window and define the parameters for
+    Centre Point as (0, 0), Radius R1 as <strong>30 </strong>mm and Radius R2 as <strong>50 </strong>mm as shown in <a href="#Fig_ALEL4_6_Define_Primitive"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>6.</a> Click
+    <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Mesh.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_6_Define_Primitive"></a><img height="330" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0006.jpg' | relative_url }}" width="435"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Define Primitive</p>
+  <h3><a id="4_4_3_Generating_Workpiece_mesh"></a>Generating Workpiece mesh</h3>
+  <p>Generate the workpiece mesh with target number of elements as <strong>100 </strong>and keep other options to their default settings (See <a href="#Fig_ALEL4_7_Workpiece_mesh_generation"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>7.</a>).
+    If required, expert mode is accessible when we click on <img src="{{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}"/> button, to access more settings to control 2D mesh. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_7_Workpiece_mesh_generation"></a><img height="340" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0007.jpg' | relative_url }}" width="407"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece mesh generation</p>
+  <h3><a id="4_4_4_Assigning_Workpiece_material"></a>Assigning Workpiece material</h3>
+  <p>To assign material for workpiece, select the steel category material ‘<strong>AISI</strong><strong>-1055</strong>’ from material library and assign to workpiece. This can be done as shown in <a href="#Fig_ALEL3_8_Assigning_material_for_Workpiece"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>8.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to BCC page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL3_8_Assigning_material_for_Workpiece"></a><img height="372" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0008.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Assigning material for Workpiece.</p>
+  <h3><a id="4_4_5_Defining_Workpiece_boundary_conditions"></a>Defining Workpiece boundary conditions</h3>
+  <p>During the mesh generation the velocity BCC along the symmetry edges are assigned to workpiece as shown in <a href="#Fig_ALEL4_9_Workpiece_boundary_conditions_page"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>9.</a>    since we had symmetry type as quarter in Process page. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Groove list page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_9_Workpiece_boundary_conditions_page"></a><img height="372" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0009.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece boundary conditions page.</p>
+  <h2><a id="4_5_Defining_Grooves"></a>Defining Grooves</h2>
+  <p>In Groove List page, we can define rolls 2D cross-section by clicking on the <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button. Click <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> once to add one groove (See <a href="#Fig_ALEL4_10_Groove_list_page"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>10.</a>),
+    we will be using same groove at all roll stands.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_10_Groove_list_page"></a><img height="430" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0010.jpg' | relative_url }}" width="487"/></p>
+  <p> </p>
+  <p class="Fig_numb">Groove list page.</p>
+  <h3 class="h3_4_5_"><a id="4_5_1_Defining_Groove_for_Roll_geometry"></a>Defining Groove for Roll geometry</h3>
+  <p>Select the First groove and click on <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/> to select the groove from one of the existing Roll groove primitives.</p>
+  <p>Roll Groove Primitive page will be opened, select <strong>Flat</strong> rolls. Define 2D Cross-section geometry of roll grooves with width (W) as 200, radius (r1) as 10 and Roll Radius (RR) as 100 as shown in the <a href="#Fig_ALEL4_11_Groove_Geometry_defining"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>11.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the Roll Groove Primitive page. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Pass page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_11_Groove_Geometry_defining"></a><img height="440" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0011.jpg' | relative_url }}" width="452"/></p>
+  <p> </p>
+  <p class="Fig_numb">Defining Groove Geometry.</p>
+  <p> </p>
+  <h2><a id="4_6_Defining_Multi_stands_in_first_pass"></a>Defining Multi stands in first pass</h2>
+  <p>In pass table, select the Pass 1 and click on stand table button as shown in the <a href="#Fig_ALEL4_12_Pass_Table"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>12.</a></p>
+  <p>In stand table, add 4 stands using the <img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button. At all four stands, keep</p>
+  <ul class="Disc">
+    <li>
+      <p>Rollset type as vertical for all 4 stands. </p>
+    </li>
+    <li>
+      <p>Select Groove1 as groove geometry for Top roll at all four stands.</p>
+    </li>
+    <li>
+      <p>Define Roll speed (rpm) as <strong>55rpm</strong>. </p>
+    </li>
+    <li>
+      <p>Set Roll temperature as <strong>40C </strong>at all four stands. </p>
+    </li>
+  </ul>
+  <p>Define Roll gap (mm) as <strong>88mm</strong>, <strong>86mm</strong>, <strong>84mm </strong>and <strong>82mm </strong>for 1<span style="vertical-align:super;font-size:8pt">st</span>, 2<span style="font-size:8pt;vertical-align:super">nd</span>,3
+    <span style="vertical-align:super;font-size:8pt">rd</span> and 4<span style="vertical-align:super;font-size:8pt">th</span> stands and X position as 0, 200, 400 and 600 for 1<span style="vertical-align:super;font-size:8pt">st</span>, 2<span style="font-size:8pt;vertical-align:super">nd</span>,3
+      <span style="vertical-align:super;font-size:8pt">rd</span> and 4<span style="vertical-align:super;font-size:8pt">th</span> stands respectively as shown in the <a href="#Fig_ALEL4_13_Multi-stand_settings_defined_in_Stand_Table_for_first_pass"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>13.</a>        Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close Stand table settings page and return to Pass table. Leave other settings in Pass table as default and click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to 3D setup page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_12_Pass_Table"></a><img height="440" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0012.jpg' | relative_url }}" width="452"/></p>
+  <p> </p>
+  <p class="Fig_numb">Pass Table.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_13_Multi-stand_settings_defined_in_Stand_Table_for_first_pass"></a><img height="450" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0013.jpg' | relative_url }}" width="491"/></p>
+  <p> </p>
+  <p class="Fig_numb">Multi-stand settings defined in Stand Table for first pass.</p>
+  <p> </p>
+  <h3 class="h3_4_6_"><a id="4_6_1_Running_2_5_D_simulation"></a>Running 2.5 D simulation</h3>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_2_5_d_simulation_run_button.jpg' | relative_url }}"/> button, 2.5D simulation will start to simulate and message file is updated as the simulation progress (see <a href="#Fig_ALEL4_14_2_5_D_Simulation_message_file"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>14.</a>).
+    After completion of simulation click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_14_2_5_D_Simulation_message_file"></a><img height="450" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0014.jpg' | relative_url }}" width="491"/></p>
+  <p> </p>
+  <p class="Fig_numb"> 2.5 D Simulation message file.</p>
+  <p> </p>
+  <p>To view the 2.5 D simulation results, click on <img src="{{ '/assets/icons/pre_icons/mo_show_results_button.jpg' | relative_url }}"/> button. We will observe the Result table as shown in <a href="#Fig_ALEL4_15_2_5_D_simulation_result_page"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>15.</a>     We can also plot state variables using State variable pull down menu available below the results table and selecting respective state variable. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the Results page. User
+    can review results in NG Post using <img src="{{ '/assets/icons/pre_icons/mo_open_in_post_label.jpg' | relative_url }}"/> link below the results table. Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to setup 3D objects for workpiece and
+    Rolls.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_15_2_5_D_simulation_result_page"></a><img height="378" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0015.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">2.5 D simulation result page</p>
+  <p> </p>
+  <h2><a id="4_7_Generating_3D_Setup"></a>Generating 3D Setup</h2>
+  <p>After defining the multi stands by specifying the X position and as we enter the 3D setup page, we will get a Workpiece Length pop-up informing us to define the workpiece length more than the distance between first and last roll (600) as shown in the
+    <a href="#Fig_ALEL4_16_Workpiece_length_pop-up_from_3D_setup_page"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>16.</a> We will use this information when setting up the Workpiece length in 3D Workpiece settings,
+    click <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" style="cursor: nesw-resize;" width="73"/> button for now to close the pop-up. In 3D setup page, we have options to set geometry and mesh settings for Workpiece and 3D Rolls.
+    <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/> button adjacent to the respective objects can be used to modify the settings, see <a href="#Fig_ALEL4_17_3D_Setup_page"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>17.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_16_Workpiece_length_pop-up_from_3D_setup_page"></a><img height="107" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0014.jpg' | relative_url }}" width="450"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Workpiece length pop-up from 3D setup page. </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_17_3D_Setup_page"></a><img height="330" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0015.jpg' | relative_url }}" width="444"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Setup page.</p>
+  <h3 class="h3_4_7_"><a id="4_7_1_3D_Rolls_geometry_settings"></a>3D Rolls geometry settings</h3>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/> button of 3D Rolls geometry, 3D roll geometry window will be opened with settings for 3D roll geometry. Define <strong>number of layers </strong>for rolls as <strong>108 </strong>and
+    select the &#39;Finer geometry from&#39; option to generate fine polygons closer to contact region with workpiece, we will set 300° as start and 360° as end angle for finer geometry region as shown in <a href="#Fig_ALEL4_18_3D_Roll_Geometry_settings_page"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>18.</a>    Click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}" width="52"/>  button to generate rolls with new settings. Click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button to close the 3D roll geometry
+    window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_18_3D_Roll_Geometry_settings_page"></a><img height="450" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0016.jpg' | relative_url }}" width="491"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Roll Geometry settings page.</p>
+  <h3 class="h3_4_7_"><a id="4_7_2_3D_Rolls_mesh_settings"></a>3D Rolls mesh settings</h3>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/> button of 3D Rolls mesh, 3D roll mesh window will be opened with settings for 3D roll mesh. Define Number of revolved sections for rolls as 72 and select the &#39;Finer
+    mesh from&#39; option to generate fine polygons closer to contact region with workpiece, we will set 330° as start and 360° as end angle for finer mesh region. To assign material for Rolls, load the die material ‘AISI-D3’ from material library and
+    select that material in the pull down menu as shown in <a href="#Fig_ALEL4_19_3D_Roll_mesh_settings_page"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>19.</a> Click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}" width="52"/> button to generate rolls mesh and click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> button to close the 3D roll mesh window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_19_3D_Roll_mesh_settings_page"></a><img height="390" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0031.jpg' | relative_url }}" width="477"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">3D Roll mesh settings page<br/>
+  </p>
+  <h3 class="h3_4_7_"><a id="4_7_3_3D_Workpiece_setup_using_2_5D_meshing_method"></a>3D Workpiece setup using 2.5D meshing method</h3>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}"/> button of 3D Workpiece, Mesh window with 3D Workpiece mesh settings will be opened. Select user radio button for Workpiece Length and define the length as 1000mm. Select
+    Meshing method as <strong>2</strong><strong><strong>.5</strong>D </strong><strong>Results</strong>, define <strong>Number of Layers</strong> as <strong>120</strong>. We will select the &#39;Finer geometry from&#39; option to generate fine polygons
+    closer to contact region with rolls. We will set the finer mesh region from 0.33 to 0.67 (0 as start and 1 as end of workpiece length) as shown in the <a href="#Fig_ALEL4_20_3D_Workpiece_mesh_settings_page"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>20.</a>    Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}"/> to generate 3D Workpiece mesh. Click <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/> to close the Mesh window of Workpiece. Click on Generate all
+    button to generate 3D Rolls and Workpiece for all stands. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to continue.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_20_3D_Workpiece_mesh_settings_page"></a><img height="372" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0019.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">3D Workpiece mesh settings page.</p>
+  <p><br/> Now save the project and select the Rolling Pass operation in operation editor by clicking on the operation tile to modify settings of pass.</p>
+  <h2><a id="4_8_Modifying_Rolling_pass_operation"></a>Modifying Rolling pass operation</h2>
+  <p style="text-align: center"><a id="Fig_ALEL4_21_Rolling_pass_operation"></a><img height="372" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0020.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Rolling pass operation.</p>
+  <p> </p>
+  <p>As you select the Rolling Pass operation, stand table page will appear as shown in <a href="#Fig_ALEL4_21_Rolling_pass_operation"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>21.</a>, it shows all 4-stand data.
+    As we had already defined these settings, click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until RollStand1 Top Roll BCC page.</p>
+  <h3 class="h3_4_8_"><a id="4_8_1_Modify_the_Heat_Exchange_with_Environment_BCC_for_Rolls" height="0" width="0"></a>Modify the Heat Exchange with Environment BCC for Rolls</h3>
+  <p>During mesh generation, a heat exchange with the environment BCC was assigned to the entire roll.  The heat exchange with environment BCC must be adjusted to account for the half-symmetric roll geometry.  Select the <strong>Defined </strong>branch under
+    Heat Exchange with Environment and then click the <img src="{{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}"/> button from the BCC menu to remove the existing boundary condition. Select all the boundary nodes on the roll except the nodes
+    on the symmetric surface of the roll using the picking tools provided along the left side of the screen. Click the <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/> button from the BCC menu, to add the new boundary condition as shown
+    in the <a href="#Fig_ALEL4_22_Modified_Heat_Exchange_with_Environment_BCC_for_Roll"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>22.</a> Click on <img height="22" src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" width="73"/> until Top Roll BCC page of RollStand2.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_22_Modified_Heat_Exchange_with_Environment_BCC_for_Roll"></a><img height="379" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0023.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Modified Heat Exchange with Environment BCC for Roll.</p>
+  <p> </p>
+  <p>Similarly, update the BCC for stand 2, stand 3 and stand 4 rolls. Once the rolls in all stands are updated, click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Contact page.</p>
+  <h3 class="h3_4_8_"><a id="4_8_2_Defining_Contact_Relations"></a>Defining Contact Relations</h3>
+  <p>In the Contact page, master-slave relations will be automatically added between rolls and Workpiece. Select the first relation, define the <strong>Coulomb</strong> friction as <strong>0.5</strong> and <strong>Interface</strong> <strong>heat transfer coefficient </strong>as
+    <strong>5</strong> (See <a href="#Fig_ALEL3_23_Contact_generation"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>23.</a>) using <img src="{{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}"/> button. Using
+    <img src="{{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}"/> button, we will apply same frictional conditions between all stands Top Rolls and Workpiece. Click the <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> to
+    determine an intelligent contact tolerance and click on the <img height="21" src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}" width="72"/> button to generate contacts between objects. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Simulation controls page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL3_23_Contact_generation" height="16" width="16"></a><img height="372" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0024.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Contact generation.</p>
+  <h3 class="h3_4_8_"><a id="4_8_3_Defining_Simulation_Controls"></a>Defining Simulation Controls</h3>
+  <p>In simulation controls page, set <strong>Number of steps</strong> as <strong>5000</strong> for this simulation with a <strong>step increment to save</strong> as <strong>25 </strong>and <strong>Time per step</strong> as <strong>0.001</strong> sec. From
+    DEFORM v12, ALE steady state convergence stopping criteria option has been added in Step controls, user can define ALE steady state Stopping criteria for ALE rolling operation. We will use default values in the lab as shown in <a href="#Fig_ALEL4_24_Simulation_controls"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>24.</a>,
+    click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to generate database.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_24_Simulation_controls"></a><img height="300" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0022.jpg' | relative_url }}" width="408"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls settings.</p>
+  <h3 class="h3_4_8_"><a id="4_8_4_Generating_Database"></a>Generating Database</h3>
+  <p>In the database generation page, user can check the data required for the analysis and proceed to generate the database (See <a href="#Fig_ALEL4_25_Database_Generation"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>25.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_25_Database_Generation"></a><img height="340" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab3/image0023.jpg' | relative_url }}" width="442"/></p>
+  <p> </p>
+  <p class="Fig_numb">Database Generation.</p>
+  <h2><a id="4_9_Running_Simulation" height="0" width="0"></a>Running Simulation</h2>
+  <p>Once the database has been generated, switch to the Simulation mode by clicking on <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> button above the operation tree. Click on the <img height="15" src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}" style="cursor: nwse-resize;" width="26"/> action label to open the Run Options dialog as shown in <a href="#Fig_ALEL4_26_Run_Simulation_Popup"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>26.</a> Use the default
+    <strong>Continue </strong><strong>Run </strong>option, select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}"/> button to run the simulation.</p>
+  <p>Click on <img src="{{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}"/> button to define MPI settings, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend
+    on your 3D MPI license).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_26_Run_Simulation_Popup" height="16" width="16"></a><img height="282" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0027.jpg' | relative_url }}" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run Simulation Popup.</p>
+  <p><br/> Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, make sure that the <img src="{{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}"/> option is checked. User can view the rolling process
+    from simulation graphics as the simulation proceeds.<br/>
+    <br/> Simulation will stop after reaching steady state with a below message in Message file.<br/> &quot;
+    <br/>     PROGRAM STOPPED!<br/> CURRENT ROLLING PASS HAS REACHED STEADY-STATE CONDITIONS &quot;.</p>
+  <h2><a id="4_10_Post_Processing"></a>Post Processing</h2>
+  <p>After the simulation has completed, click on <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> tab, MO post processor will opened as shown in <a href="#Fig_ALEL4_27_MO_Post_mode_after_simulation_is_completed"><span data-keyref="Labs_Shape_Rolling_labs_ALE_Shape_Rolling_Lab4">Fig. ALEL4.</span>27.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_ALEL4_27_MO_Post_mode_after_simulation_is_completed" height="16" width="16"></a><img height="374" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0028.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">MO Post mode after simulation is completed.</p>
+  <p> </p>
+  <p>Go to last step, plot Effective strain and Effective stress state variables and observe the state variable distribution.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="300" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0029.jpg' | relative_url }}" width="463"/></p>
+  <p> </p>
+  <p class="Fig_numb">Effective strain distribution at steady-state.</p>
+  <p> </p>
+  <p style="text-align: center"><img height="294" src="{{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab4/image0030.jpg' | relative_url }}" width="439"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb">Effective stress distribution at steady-state.</p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

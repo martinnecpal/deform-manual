@@ -1,0 +1,167 @@
+---
+lang: sk
+title: "Gear Blank EN Lab 8"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.3.1.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gear Blank EN Lab 8</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gear Blank EN Lab 8</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/advanced_labs_in_mo/gear_blank/gear_blank_en.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Blank/Gear_Blank_EN_Lab9.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Blank/Gear_Blank_EN_Lab7.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Gear Blank EN Lab 8">
+        <span>Gear Blank EN Lab 8</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 8 Screw Press</h1>
+  <h3 class="h3_8_">Duplicate Project</h3>
+  <p>Start DEFORM and create a new project named <strong>Gear_s</strong>.</p>
+  <p> </p>
+  <p>Add <strong>3D Forming operation</strong> and click on <img src="{{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}"/> (Import database) in the File menu. Open the “<strong>Gear</strong><strong>.</strong><strong>DB</strong>” file. Select the first
+    step of the third (Forge) operation and click <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/>.</p>
+  <h3 class="h3_8_">Define simulation Controls</h3>
+  <p>In this lab we show how to setup Screw press controls for a non-isothermal simulation with heat transfer calculations for both workpiece and dies. So in  <strong>Simulation controls</strong>  check <strong>Heat </strong><strong>Transfer </strong><strong>checkbox </strong>status
+    if not turned on, turn on the Heat Transfer checkbox.</p>
+  <h3 class="h3_8_">Define Boundary condition for Workpiece</h3>
+  <p>Click on <strong>Workpiece </strong><strong>Boundary </strong><strong>condition </strong>branch and define Heat exchange with environment boundary condition for entire object using <img src="{{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}"/> (Select all) icon, if system not assigned automatically.</p>
+  <h3 class="h3_8_">Define Heat transfer with Top die</h3>
+  <p>Click on <strong>Top </strong><strong>die </strong>branch in operation tree and set temperature to <strong>300</strong>°F.</p>
+  <p>We&#39;ll mesh both tools in order to simulate the temperature of the die. Click on <strong>Mesh </strong>branch in operation tree and set <strong>20000 </strong>elements. Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and click the <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> (Load material from library) button and select the <strong>Die_material </strong>category,
+    then <strong>AISI-H-13</strong>. Assign the loaded material by selecting it in material list.</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and define <strong>Heat exchange with environment</strong> boundary condition for entire object except top surface as shown in <a href="#Fig_L8_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab8">Fig. L8.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L8_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces"></a><img height="200" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0001.jpg' | relative_url }}" width="454"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab8">Top die Heat exchange with environment boundary condition surfaces</p>
+  <h3 class="h3_8_">Define Screw Press</h3>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to change the movement controls for Top die. Select <strong>Screw </strong>press from the top row of radio buttons. Enter:</p>
+  <p>- <strong>Energy</strong>: <strong>1850 </strong>klb.-in.</p>
+  <p>- <strong>Efficiency</strong>: .<strong>80 </strong>(80%)</p>
+  <p>- <strong>Moment of inertia</strong>: <strong>77.5</strong> klb.-in.-sec.^2</p>
+  <p>- <strong>Lead screw pitch</strong>: <strong>15</strong> in./ rev. (See <a href="#Fig_L8_2_Screw_press_movement_definition_for_top_die"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab8">Fig. L8.</span>2.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L8_2_Screw_press_movement_definition_for_top_die"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab8_image0002.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab8">Screw press movement definition for top die</p>
+  <h3 class="h3_8_">Define Heat transfer with Bottom die</h3>
+  <p>Similar to Top die Heat transfer definition define Bottom die initial Temperature to <strong>300°</strong>F and Mesh of <strong>50000 </strong>Elements. (See <a href="gear_blank_en_lab6.htm#6_4_Define_Heat_transfer_with_Top_die">Section 6.4 Define Heat transfer with Top die</a>)</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" style="cursor: nesw-resize;"/> and select <strong>AISI-H-13</strong> from material list to assign material. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define the Heat exchange with environment boundary condition and select all surfaces except bottom surface as shown in <a href="#Fig_L8_3_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab8">Fig. L8.</span>3.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L8_3_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces"></a><img height="210" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0003.jpg' | relative_url }}" width="500"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab8">Bottom die Heat exchange with environment boundary condition surfaces</p>
+  <p> </p>
+  <p>Click on <strong>Contact </strong>in operation tree to define inter-object relation ship.</p>
+  <h3 class="h3_8_">Define Inter-object relation ship</h3>
+  <p>Click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}" width="56"/> for any relation and add <strong>heat </strong><strong>transfer</strong> <strong>coefficient </strong>of <strong>0.004</strong>. Click on <img src="{{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}" style="cursor: nwse-resize;"/>  to add for other relationships. Click the <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> (Tolerance) button followed by the <img src="{{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}"/> button (at bottom of the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See <a href="#Fig_L8_4_Top_and_bottom_die_contact_with_workpiece"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_EN_Lab8">Fig. L8.</span>4.</a>    for how the Inter object window looks and contact generation display in graphics window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L8_4_Top_and_bottom_die_contact_with_workpiece"></a><img height="200" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0004.jpg' | relative_url }}" width="529"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab8">Top and bottom die contact with workpiece</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to define stopping controls.</p>
+  <h3 class="h3_8_">Define Stopping and Simulation Step controls</h3>
+  <p>Keep the Distance between die stopping controls imported from DB.</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and keep the step controls definition imported from DB.</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to check and generate DB.</p>
+  <h3 class="h3_8_">Generate Database and Run the simulation</h3>
+  <p>Check and Generate database and click on the <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> Mode button (above the operation tree) to start the simulation.</p>
+  <p> </p>
+  <p>Run simulation, after completing running click on <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> Mode button to review results.</p>
+  <h3 class="h3_8_">Review Results</h3>
+  <p>In MO postprocessor, go to the <img src="{{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}"/> plot, and plot the Top die velocity (<strong>Y speed</strong>) vs. <strong>Stroke </strong>for the second operation.</p>
+  <p>Plot the Y Load vs. Time and energy vs. stroke.</p>
+  <p>Turn on die contact and note the slight unfill as the press runs out of energy.</p>
+  <p> </p>
+  <hr/>
+  <p>Optional exercise – time permitting</p>
+  <p> </p>
+  <p style="margin-left: 20px">- Compare the maximum load with the simulation using a constant speed approximation.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px">- Compare the process time with the simulation using a constant speed approximation.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px">- Rerun the <strong>Gear </strong>problem with meshed tooling and by Turning on <strong>Heat transfer</strong> check box option. Use the same inputs for the die mesh, material and temperature. Compare the temperature on the center surface of the bottom
+    die between a constant speed approximation and this case using a screw press model.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px">- Export graph data and import into Excel or another program. You can right click on any graph and select Export graph data to create a text file output.</p>
+  <p style="margin-left: 20px"> </p>
+  <hr/>
+  <p> </p>
+
+</body></html>

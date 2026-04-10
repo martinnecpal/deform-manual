@@ -1,0 +1,434 @@
+---
+lang: sk
+title: "2D Turbulent Flow Lab"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Turbulent Flow Lab </title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>2D Turbulent Flow Lab </title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/applications/55_applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab.css"/>
+<meta name="brsnext" value="Documentation_content/Applications/55_Applications/55_1_Modelling_of_CFD_Labs/3D_Laminar_Flow_Lab.htm"/><meta name="brsprev" value="Documentation_content/Applications/55_Applications/55_1_Modelling_of_CFD_Labs/2D_Rayleigh-Benard_convection_Lab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="2D Turbulent Flow Lab ">
+        <span>2D Turbulent Flow Lab </span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>2D Turbulent Flow Lab <strong>– flow over a backward-facing step</strong></h1>
+  <p>Flow over a backward-facing step (BFS) is a common phenomenon in practical engineering, such as the internal flows in diffusers, turbines, combustors, or pipes, and external flows over aircrafts, around buildings, or over stepped channels. These flows
+    are characterized by flow separation and reattachment induced by sharp expansion of the configuration. </p>
+  <p>This lab will demonstrate how to setup a 2D turbulence flow simulation using the backstep example. </p>
+  <p> </p>
+  <p><a href="#1_1_Creating_a_New_problem">1.1. Creating a New Problem</a></p>
+  <p><a href="#1_2_Adding_2D_Forming_operation">1.2.  Adding Operation</a></p>
+  <p><a href="#1_3_Geometry_type">1.3. Geometry Type</a></p>
+  <p><a href="#1_4_Simulation_controls">1.4. Simulation Controls</a></p>
+  <p><a href="#1_5_Material_List">1.5. Material List</a></p>
+  <p><a href="#1_6_Define_object">1.6. Define object</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_1_BFS_step_object">1.6.1. BFS step object</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_2_BFS_step_object_geometry">1.6.2.  BFS step object geometry</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_3_BFS_step_object_mesh">1.6.3.  BFS step object mesh</a></p>
+  <p style="margin-left: 20px"><a href="#1_6_4_Initialize_CFD_state_variables">1.6.4.  Initialize CFD state variables</a></p>
+  <p><a href="#1_7_Boundary_Conditions">1.7. Boundary Conditions</a></p>
+  <p><a href="#1_8_Step_Controls">1.8. Step Controls</a></p>
+  <p><a href="#1_9_Generate_Database">1.9. Generate Database</a></p>
+  <p><a href="#1_10_Run_Simulation">1.10. Run Simulation</a></p>
+  <p><a href="#1_11_Post-Processing">1.11. Post-Processing</a></p>
+  <p> </p>
+  <h2><a id="1_1_Creating_a_New_problem"></a>Creating a New problem</h2>
+  <p>On a Windows machine, go to the <img src="{{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}"/> button select DEFORM-v1x.xxx (.xxx indicates version number E.g. <span data-keyref="Current_DEFORM_vesrion_number in Labs">v14.0.2</span>) and select DEFORM
+    GUI Main v1x.x. from the menu. The <strong>DEFORM GUI Main</strong> window will appear.</p>
+  <p>Create a new problem either by selecting <strong>File <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> </strong><strong>New Problem</strong> or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. The Problem Setup window will appear as shown in <a href="#Fig_2DTFL1_1_Problem_type_selection_window"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>1.</a> Select &quot; Integrated Manufacturing Process&quot; radio button and
+    units system as &quot;<strong>SI</strong>&quot; radio button in units field. Define Problem Name as &quot;<strong></strong><b><span lang="EN-US" style="font-size:12.0pt"><span style="font-family:&quot;Arial&quot;,sans-serif">2D_TurblentFlow_BFS_Lab_SI</span></span><span lang="EN-US" style="font-size:12.0pt"><span style="font-family:&quot;Arial&quot;,sans-serif"></span></span></b><strong></strong>&quot;
+    and make sure the “Show option dialog” check box is turned on (if we do not turn on the “<strong>Show option dialog</strong>” check box, then we will not get the New Project dialog in MO UI). Then click on  <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> button to open a new Problem using the Deform Integrated Manufacturing Process.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL1_1_Problem_type_selection_window"></a><img height="527" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Problem type selection window</p>
+  <p> </p>
+  <p>Multiple operation wizard will open, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session, we will  use ‘<strong>2D_TurblentFlow_BFS_Lab_SI</strong><strong></strong>’
+    as the project name. Click on <img height="23" src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}" width="73"/> to continue to open the operation.</p>
+  <h2><a id="1_2_Adding_2D_Forming_operation"></a>Adding 2D Forming operation</h2>
+  <p>Add one 2D Forming operation from the Explorer Operations list. Operation can be added by clicking on 2D Forming operation <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button or user can also add by drag and drop into the
+    Operation Editor (See <a href="#Fig_2DTFL_2_Adding_2D_Forming_Operation"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>2.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_2_Adding_2D_Forming_Operation"></a><img height="378" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding 2D Forming Operation</p>
+  <h2><a id="1_3_Geometry_type"></a>Geometry type</h2>
+  <p>Choose ‘<strong>2D Plane strain</strong>’ in ‘<strong>Geometry </strong><strong>type</strong>’ selection page and then click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.                       </p>
+  <p style="text-align: center"> </p>
+  <h2><a id="1_4_Simulation_controls"></a>Simulation controls</h2>
+  <p>‘CFD’ option is available in ‘Simulation controls’ page since version 14, check ‘<strong>CFD flow</strong>’ and ‘<strong>Heat </strong><strong>transfer</strong>’ (required for CFD flow simulation) checkboxes. Uncheck ‘<strong>Deformation</strong>’ checkbox.
+    Change operation name to “<strong>BFS </strong><strong>flow</strong>” as shown in <a href="#Fig_2DTFL_3_Simulation_controls_window_main_settings"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>3.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_3_Simulation_controls_window_main_settings"></a><img src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0003.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls window, main settings </p>
+  <p> </p>
+  <p>Click <img height="24" src="{{ '/assets/icons/pre_icons/mo_solver_settings.jpg' | relative_url }}" width="24"/>, choose “<strong>MUMPS</strong>” as solver for “<strong>Temperature</strong>” as shown in <a href="#Fig_2DTFL_4_Simulation_control_window_solver_settings"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>4.</a>,
+    CFD will use the same solver.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_4_Simulation_control_window_solver_settings"></a><img src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0004.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Simulation control window, solver settings</p>
+  <p> </p>
+  <p>Then click <img height="24" src="{{ '/assets/icons/pre_icons/mo_process_conditions.jpg' | relative_url }}" width="24"/>, switch to “<strong>CFD</strong>” tab and check the “<strong>Turbulence</strong>” check box to enable the turbulent flow model. Select <strong>K-Epsilon</strong>    as turbulant model as shown in <a href="#Fig_2DTFL_5_Simulation_control_window_process_conditions"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>5.</a>, then click <img height="22" src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" width="73"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_5_Simulation_control_window_process_conditions"></a><img src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0005.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation control window, process conditions</p>
+  <h2><a id="1_5_Material_List"></a>Material list</h2>
+  <p>Next, add a new material, name as “<strong>Ideal</strong>”, and define the material data as listed in <a href="#Table_1_Ideal_material">table 1</a>.</p>
+  <p style="text-align: center"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 500px;margin-left:auto;margin-right:auto">
+    <colgroup>
+      <col style="width: 200px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td colspan="2" rowspan="1">
+          <p style="text-align: center"><strong>Name</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Value</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: left;margin-left: 12px"><a id="Table_1_Ideal_material"></a>Mass density</p>
+        </td>
+        <td>
+          <p style="text-align: left;margin-left: 12px">tonne/mm<span style="vertical-align:super;font-size:8pt">3</span></p>
+        </td>
+        <td>
+          <p style="text-align: left;margin-left: 12px">1.0e-12</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: left;margin-left: 12px">Thermal Conductivity</p>
+        </td>
+        <td>
+          <p style="text-align: left;margin-left: 12px">N/sec/C</p>
+        </td>
+        <td>
+          <p style="text-align: left;margin-left: 12px">0.001</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: left;margin-left: 12px">Mass specific heat</p>
+        </td>
+        <td>
+          <p style="text-align: left;margin-left: 12px">N-mm/tonne-C</p>
+        </td>
+        <td>
+          <p style="text-align: left;margin-left: 12px">0.001</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: left;margin-left: 12px">Viscosity</p>
+        </td>
+        <td>
+          <p style="text-align: left;margin-left: 12px">tonne/mm-sec</p>
+        </td>
+        <td>
+          <p style="text-align: left;margin-left: 12px">1.0e-10</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="Table_numb"><strong>Ideal material</strong></p>
+  <p> </p>
+  <p>‘Elastic’ properties of the material are not required to be defined for the Nitrogen gas for this lab, but still need to set Young’s modulus and Poisson’s ratio to 1 as shown in <a href="#Fig_2DTFL_6_Material_window_elastic"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>6.</a>    and <a href="#Fig_2DTFL_7_Material_window,_thermal"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>7.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_6_Material_window_elastic"></a><img src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0006.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Material window, elastic</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_7_Material_window,_thermal"></a><img src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0007.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material window, thermal</p>
+  <p><br/> Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Object page.</p>
+  <h2><a id="1_6_Define_object"></a>Define object</h2>
+  <p>In this lab, we need only fluid object. By default, ‘Workpiece’, ‘Top Die’ and ‘Bottom Die’ are added to the operation. Remove ‘Top Die’ and ‘Bottom Die’, so only one object is remained. Rename it to ‘BFS step’ as shown in <a href="#Fig_2DTFL_8_Object_list_window"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>8.</a>, then
+    click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_8_Object_list_window"></a><img src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0008.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Object list page</p>
+  <p> </p>
+  <h3><a id="1_6_1_BFS_step_object" height="16" width="16"></a>BFS step object</h3>
+  <p>Choose ‘<strong>Environment - Fluid(CFD)</strong>’ as object type with Object temperature as 20°C as shown in <a href="#Fig_2DTFL_9_Object_list_window"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>9.</a> Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> go to the ‘Geometry’ page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_9_Object_list_window"></a><img src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0009.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Object list window</p>
+  <p> </p>
+  <h3><a id="1_6_2_BFS_step_object_geometry"></a>BFS step object geometry</h3>
+  <p>Click on ‘<strong>Edit</strong>’ And add points in XYR format as shown in <a href="#Fig_2DTFL_10_Geometry_editor_window"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>10.</a> to generate the back step fluid object geometry, then click
+    on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/>.</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 300px;margin-left: auto;margin-right: auto">
+    <colgroup>
+      <col style="width: 100px;"/>
+      <col style="width: 100px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"><strong>X</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Y</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>R</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">1000</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">10000</p>
+        </td>
+        <td>
+          <p style="text-align: center">1000</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">10000</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">20000</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">20000</p>
+        </td>
+        <td>
+          <p style="text-align: center">2000</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">2000</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">1000</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_10_Geometry_editor_window"></a><img height="377" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb"> Geometry editor window</p>
+  <p> </p>
+  <h3><a id="1_6_3_BFS_step_object_mesh"></a>BFS step object mesh</h3>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to generate mesh for the fluid object. In Mesh page-&gt;General tab, type in ‘<strong>10000</strong>’ in ‘Target number of elements’, leave other fields vaues to their default
+    values. Click Next and assign the Ideal material. Click Back to Mesh page.<br/> Then click on <img src="{{ '/assets/icons/pre_icons/mo_coating_tab.jpg' | relative_url }}"/>, add three coating layers, 10000,10000,20000 respectively and click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> . While mesh is being generated, a ‘Generate Coating Mesh’ pop-up window will appear, click on ‘Yes’ to allow the generation of the coating mesh.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_11_Mesh_generation_window"></a><img height="379" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0011.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh generation window</p>
+  <p> </p>
+  <h3><a id="1_6_4_Initialize_CFD_state_variables"></a>Initialize CFD state variables</h3>
+  <p>Now click on <img src="{{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}"/> to show the Node data dialog to initialize the CFD state variables. From the list in the Node data dialog, click on ‘CFD flow’, see <a href="#Fig_2DTFL_12_Nodal_Dialog_Initialization_of_CFD_state_variables"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>12.</a>    We need to define ‘Kinetic energy’ so, click on <img src="{{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}"/> to show the ‘Initialize Node Data’ dialog as shown in <a href="#Fig_2DTFL_12_Nodal_Dialog_Initialization_of_CFD_state_variables"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>12.</a>    and then type in 4570 as value, click on <img src="{{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}"/> button and close the Node data dialog.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_12_Nodal_Dialog_Initialization_of_CFD_state_variables"></a><img height="300" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0012.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Nodal Dialog – Initialization of CFD state variables</p>
+  <p> </p>
+  <p>Next set ‘Dissipation rate’ to 100 by following the same procedure used for Kinetic energy.</p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> up to the ‘Boundary conditions’ page.</p>
+  <h2><a id="1_7_Boundary_Conditions"></a>Boundary Conditions</h2>
+  <p>Default thermal exchange with environment bcc if defined can be removed. Current operation only needs flow related bcc to be defined as shown in <a href="#Fig_2DTFL_13_Boundary_conditions"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>13.</a></p>
+  <p style="text-align: center"><a id="Fig_2DTFL_13_Boundary_conditions"></a><img height="219" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0013.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Boundary conditions (unit m)</p>
+  <p> </p>
+  <p><strong>Inlet BCC </strong><br/> Inlet flow velocity is assumed as u = 6000(y/1000-1)(2-y/1000) mm/s, in this Lab. <br/> To do so, click on ‘Boundary conditions’ <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/>‘Deformation’, pick all
+    points on along the left edge and set their ‘Y’ velocity to zero as shown in <a href="#Fig_2DTFL_14_Inlet_BCC_Y"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>14.</a> Next, pick one by one point along the left edge as shown in <a href="#Fig_2DTFL_15_Inlet_BCC_X"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>15.</a>,
+    and set its X velocity, which is defined as the function of the point’s Y position, following the definition described above.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_14_Inlet_BCC_Y"></a><img height="378" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0014.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Inlet BCC Y</p>
+  <p style="text-align: center"><a id="Fig_2DTFL_15_Inlet_BCC_X"></a><img height="378" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0015.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Inlet BCC X</p>
+  <p> </p>
+  <p>After defining the velocity for the left edge, inlet velocity definition will also be shown on ‘Fluid flow’ <img src="{{ '/assets/icons/pre_icons/mo_inlet_outlet_bcc.jpg' | relative_url }}"/>. ‘X’ ‘Y’ box should be checked, for any selected item, make sure ‘Turbulent
+    BCC’ is checked, ‘Kinetic energy’ should already be set to 4570, and 100 for ‘Dissipation rate’. The Inlet BCC definition can be seen in <a href="#Fig_2DTFL_16_Inlet_BCC"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>16.</a></p>
+  <p class="Note_text">* More convenient method is to utilize keyword file and excel. First, select the inlet points and define inlet velocity as a constant value under <img src="{{ '/assets/icons/pre_icons/mo_inlet_outlet_bcc.jpg' | relative_url }}"/>, then export the keyword file.
+    Next, copy the lines under keyword ‘URZ’ to a excel file and format text to column. Refer to the first column, the nodal number, to find out the x,y coordinate in ‘Nodal’  <img src="{{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}"/>  dialog.
+    In excel file, use MS office’s formula in the second column to calculate the velocity based on the function defined above. They copy the updated lines back to the keyword file and import it to the system.  </p>
+  <p class="Note_text"> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_16_Inlet_BCC"></a><img height="379" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0016.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Inlet BCC</p>
+  <p><strong>Wall BCC </strong><br/> Next, click on <img src="{{ '/assets/icons/pre_icons/mo_wall_bcc.jpg' | relative_url }}"/>, check ‘Noslip wall’, then pick the top and bottom surface as shown in <a href="#Fig_2DTFL_17_Noslip_wall_BCC"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>17.</a>    and click on <img src="{{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}"/> to assign the wall bcc.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_2DTFL_17_Noslip_wall_BCC"></a><img height="377" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0017.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">Noslip wall BCC</p>
+  <p> </p>
+  <h2><a id="1_8_Step_Controls"></a>Step Controls</h2>
+  <p>Go to step definition, using the ‘Guide’ mode (click on <img src="{{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}"/>), type 400 into ‘Number of steps’ field, set 10 as ‘Step increment’ and 0.1 sec. the time per step.</p>
+  <p style="text-align: center"><a id="Fig_2DTFL_18_Step_Controls_Guide_Mode"></a><img height="337" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0018.jpg' | relative_url }}" width="500"/></p>
+  <p> </p>
+  <p class="Fig_numb">Step Controls (Guide Mode)</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to ‘Generate DB’ page. </p>
+  <h2><a id="1_9_Generate_Database"></a>Generate Database</h2>
+  <p>In &#39;Generate DB&#39; page, click on  <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> to generate the database.</p>
+  <h2><a id="1_10_Run_Simulation"></a>Run Simulation</h2>
+  <p>Click on the menu &#39;<strong>Simulation</strong>&#39; <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> &#39;<strong>Run </strong><strong>simulation</strong>&#39;, a pop-up window will show up, leave the default setting since the database
+    has been already generated, then click on &#39;<strong>OK</strong>&#39; button to start the simulation. </p>
+  <p class="Note_text"><br/> Note: Currently CFD simulations cannot be simulated using multiple processors, hence please use Number of processors as 1 when submitting the problem to run.</p>
+  <p> </p>
+  <h2><a id="1_11_Post-Processing"></a>Post-Processing</h2>
+  <p>Wait until the simulation has been finished, then open the DB file in the Next generation Post-Processor.</p>
+  <p>Click on the <img src="{{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}"/> State variables icon and select <img src="{{ '/assets/icons/post_icons/mo_deformation_icon.jpg' | relative_url }}"/> (Deformation) icon, plot Velocity and Normal Pressure
+    under the state variable list.<br/> Click on <img height="30" src="{{ '/assets/icons/post_icons/mo_cfdflow_sv_icon.jpg' | relative_url }}" width="35"/> (CFD Flow) icon, plot Kinetic energy and Dissipation rate variables of CFD as shown in the <a href="#Fig_2DTFL_21_Kinetic_energy_profile"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>21.</a>    and <a href="#Fig_2DTFL_22_Dissipation_rate"><span data-keyref="2D_Turbulent_Flow_lab">Fig. 2DTFL.</span>22.</a></p>
+  <p><br/>
+    <strong>Velocity Profiles</strong></p>
+  <p style="text-align: center"><a id="Fig_2DTFL_19_Velocity_profile"></a><img height="365" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0019.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">Velocity profile </p>
+  <p><br/>
+    <strong>Pressure</strong></p>
+  <p style="text-align: center"><a id="Fig_2DTFL_20_Nodal_pressure"></a><img height="364" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0020.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Nodal pressure</p>
+  <p><br/>
+    <strong>Kinetic Energy</strong></p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_2DTFL_21_Kinetic_energy_profile"></a><img height="366" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0021.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">Kinetic energy profile </p>
+  <p style="text-align: left"><br/>
+    <strong>Dissipation Rate</strong></p>
+  <p style="text-align: center"><br/>
+    <a id="Fig_2DTFL_22_Dissipation_rate"></a><img height="364" src="{{ '/assets/images/applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/image0022.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">Dissipation rate</p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

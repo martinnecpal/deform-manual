@@ -1,0 +1,325 @@
+---
+lang: sk
+title: "DTPMAX (2D)"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.4.0_27";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>DTPMAX (2D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>DTPMAX (2D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/d/d_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/D/DTPMAX_3D.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/D/DTMAX.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="DTPMAX (2D)">
+        <span>DTPMAX (2D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>DTPMAX</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Simulation control - 2D)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"> </p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 30-07-2014</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">DTPMAX MaxTempInc, t_TempMin, t_TempMax, t_DefMin, t_DefMax</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">MaxTempInc</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Maximum increment in temperature per step</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">t_TempMin</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Minimum time step for temperature-based stepping</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">t_TempMax</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Maximum time step for temperature-based stepping</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">t_DefMin</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Minimum time step for deformation-based stepping</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">t_DefMax</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Maximum time step for deformation-based stepping</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">DTPMAX specifies the time stepping control (1) based on the maximum temperature increment per time step or (2) based on solution convergence rate (2D only).</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="P_10_Bold">REMARKS on Temperature-based Time Step Control</p>
+  <p class="P_10">MaxTempInc specifies the maximum temperature increment per time step in heat transfer calculation. The time step calculated by MaxTempInc will control the time step for deformation when STPDEF = 3.</p>
+  <p class="P_10"> </p>
+  <p class="P_10">If MaxTempInc = 0.0 then this option is ignored.</p>
+  <p class="P_10"> </p>
+  <p class="P_10">If MaxTempInc ≠ 0.0 and STPDEF ≠ 3 then MaxTempInc controls when a solution will substep. If the temperature change over a time step Δt is greater than MaxTempInc, the simulation will substep. The substepping time (<img src="{{ '/assets/equations/keyword_documentation/d/t_dtpmax.jpg' | relative_url }}"/>) will be determined by the equation:</p>
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;margin-left: 12px;border-width: 1px;border-style: none;border-color: #FFFFFF">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img src="{{ '/assets/equations/keyword_documentation/d/dtpmax_eq_1.jpg' | relative_url }}" style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <p class="P_10">The simulation will continue to substep until the original time step Δt has been reached. The substeps <img src="{{ '/assets/equations/keyword_documentation/d/t_dtpmax.jpg' | relative_url }}"/> are bounded by the minimum time step value <img src="{{ '/assets/equations/keyword_documentation/d/tmin.jpg' | relative_url }}"/> and the time step Δt, or</p>
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: rgb(255, 255, 255);margin-left: 12px">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td><img height="21" src="{{ '/assets/equations/keyword_documentation/d/dtpmax_eq_2.jpg' | relative_url }}" width="154"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10">        </p>
+  <p class="P_10">If MaxTempInc ≠ 0.0 and STPDEF = 3 (Temperature) then the time steps will be defined solely through temperature changes in the objects. The first time step (Δt) will be defined by DSMAX/DTMAX. Thereafter, each subsequent time step will be defined by
+    the equation:</p>
+  <p class="P_10"> </p>
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 12px">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 0px">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img height="119" src="{{ '/assets/equations/keyword_documentation/d/dtpmax_eq_3.jpg' | relative_url }}" style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);" width="435"/></td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <p class="P_10">The new time step  <img src="{{ '/assets/equations/keyword_documentation/d/t_dtpmax.jpg' | relative_url }}"/> is bounded by the minimum time step <img src="{{ '/assets/equations/keyword_documentation/d/tmin.jpg' | relative_url }}"/> and the maximum time step <img src="{{ '/assets/equations/keyword_documentation/d/tmax.jpg' | relative_url }}"/>, or</p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: rgb(255, 255, 255);margin-left: 12px">
+    <colgroup>
+      <col style="width: 400px;"/>
+      <col style="width: 150px;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img height="26" src="{{ '/assets/equations/keyword_documentation/d/dtpmax_eq_4.jpg' | relative_url }}" style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);" width="168"/></td>
+        <td>
+          <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">REMARKS on Deformation-based Time Step Control</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">If a non-zero value is assigned to the maximum time step t_DefMin and the minimum time step t_DefMin, a new step size will be determined at each step, depending on the solution convergence rate. When the solution convergence rate is good, the
+            time step size will be increased. But, when the solution convergence rate is poor, the time step size will be reduced.</p>
+          <p class="P_10"> </p>
+          <p class="P_10">The maximum/minimum time steps are the largest and smallest time step allowable when determining the time step size. When this step control is defined, it has higher priority than Temperature change per step control. </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10"><a href="../../pre_processor/9_simulation_controls/9_2_defining_step.htm">Step Definition</a></p>
+          <p class="P_10">Keyword: <a href="../s/stpdef.htm">STPDEF</a>, <a href="dtmax.htm">DTMAX</a>, <a href="dsmax.htm">DSMAX</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

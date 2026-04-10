@@ -1,0 +1,173 @@
+---
+lang: sk
+title: "Forming Lab 10"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "15.3.2.2.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 10</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 10</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_Lab11.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_Lab9.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Forming Lab 10">
+        <span>Forming Lab 10</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 10. Die stress</h1>
+  <h3 class="h3_10_">Open Project</h3>
+  <p> Open the Project <strong>Gear_LargerBillet</strong>.</p>
+  <h3 class="h3_10_">Add Die stress study</h3>
+  <p>In this lab we will preform Die stress operation for the dies using Die stress study operation, So click on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button available at Top Left corner of the graphics window and
+    select Die stress study in list (See <a href="#Fig_L10_1_Adding_Die_stress_study_from_list"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab10">Fig. L10.</span>1.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L10_1_Adding_Die_stress_study_from_list"></a><img height="175" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab10_image0001.jpg' | relative_url }}" width="184"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab10">Adding Die stress study from list</p>
+  <h3 class="h3_10_">Step selection</h3>
+  <p>Select the last step in step list (See <a href="#Fig_L10_2_Step_selection_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab10">Fig. L10.</span>2.</a>), then click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until top die general page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L10_2_Step_selection_window"></a><img height="390" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab10_image0002.jpg' | relative_url }}" width="387"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab10">Step selection window</p>
+  <h3 class="h3_10_">Define Top die data</h3>
+  <p>Verify the Top die temperature is <strong>300</strong>°F. By default, the object type of rigid objects from the loaded step will be changed to elastic. Keep the object type as elastic for the Top Die object. From v13.1.1, two new options have been introduced
+    in the object page to position the dies in future steps for Multiple steps die stress analysis, we need not use these options for single step die stress analysis, hence, keep the Need positioning check box turned off. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab10_image0009.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab10" style="text-align: center;">Top Die page</p>
+  <h4 class="h4_10_4_">Generate Top die mesh</h4>
+  <p>Set the target number of elements to <strong>1000 </strong>and generate mesh. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Material page.</p>
+  <h4 class="h4_10_4_">Assign Top die Material</h4>
+  <p>In Material window, load <strong>AISI-H-13</strong> material from material library and assign it to Top Die, Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to BCC page.</p>
+  <h4 class="h4_10_4_">Assign BCC for Top die</h4>
+  <p>In BCC page, check the default assigned Deformation BCC  for Left side of the Top die in X-Direction, then Apply <strong>Vy = 0</strong> Velocity boundary condition on the Top surface of the Top Die (See <a href="#Fig_L10_4_Top_die_BCC_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab10">Fig. L10.</span>4.</a>).
+    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Force interpolation page.</p>
+  <p style="text-align: center"><a id="Fig_L10_4_Top_die_BCC_window"></a><img height="526" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab10_image0004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab10">Top die BCC window</p>
+  <h4 class="h4_10_4_">Interpolate Force for top die   </h4>
+  <p>In Force interpolation page, click on <img src="{{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}"/> action label to interpolate forces as shown in <a href="#Fig_L10_5_Top_die_Force_interpolation_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab10">Fig. L10.</span>5.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Bottom Die page.</p>
+  <p style="text-align: center"><a id="Fig_L10_5_Top_die_Force_interpolation_window"></a><img height="529" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab10_image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab10">Top die Force interpolation window</p>
+  <h3 class="h3_10_">Bottom die data</h3>
+  <p>Verify the Bottom die temperature is <strong>300</strong>°F. We will keep the object type as Elastic for the Bottom Die and turn off Need positioning check box. Click <img height="22" src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}" width="73"/> until mesh page.</p>
+  <p> </p>
+  <p style="text-align: center"><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab10_image0010.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab10" style="text-align: center;">Bottom Die page</p>
+  <p style="text-align: center"> </p>
+  <h4 class="h4_10_5_">Generate Bottom die mesh</h4>
+  <p>Set the target number of elements to <strong>1000 </strong>and generate mesh. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until Material page.</p>
+  <h4 class="h4_10_5_">Assign Bottom die Material</h4>
+  <p>In Material window, select  <strong>AISI-H-13</strong> material from material page and Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to BCC page.</p>
+  <h4 class="h4_10_5_">Assign BCC for Bottom die</h4>
+  <p>In BCC page, check the default assigned Deformation BCC  for Left side of the Bottom die in <strong>X-Direction</strong>, then Apply<strong> Vy = 0</strong> Velocity boundary condition on the Bottom surface of the bottom die (See <a href="#Fig_L10_7_Bottom_die_BCC_page"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab10">Fig. L10.</span>7.</a>).
+    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> to Force interpolation page.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L10_7_Bottom_die_BCC_page"></a><img height="528" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab10_image0006.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab10">Bottom die BCC page</p>
+  <h4 class="h4_10_5_">Interpolate Force for Bottom die  </h4>
+  <p> In Force interpolation page, click on <img src="{{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}"/> action label to interpolate forces as shown in <a href="#Fig_L10_8_Bottom_die_Force_interpolation_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab10">Fig. L10.</span>8.</a></p>
+  <p style="text-align: center"><a id="Fig_L10_8_Bottom_die_Force_interpolation_window"></a><img height="529" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab10_image0005.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab10">Bottom die Force interpolation window</p>
+  <h3 class="h3_10_">Generate DB</h3>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/> action label to check the problem. Generate a database by clicking <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> action label.</p>
+  <p> </p>
+  <p>Save the project and click on the MO <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h3 class="h3_10_">Run and monitor a simulation</h3>
+  <p>Click on the <img height="15" src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}" style="cursor: nwse-resize;" width="26"/> action label to open the Run Options dialog. Use the default <strong>Continue </strong><strong>Run </strong>option
+    to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}"/> button to run
+    the simulation.</p>
+  <h3 class="h3_10_">Review the results</h3>
+  <p>When the simulation is completed, click the MO <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> Mode button to review results.</p>
+  <p> </p>
+  <p>In the Post-processor, click on the positive step in the step list.</p>
+  <p>Plot <strong>Effective </strong><strong>stress </strong>state variable (See <a href="#Fig_L10_9_Effective_stress_State_variable_Plot"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab10">Fig. L10.</span>9.</a>) .  </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L10_9_Effective_stress_State_variable_Plot"></a><img height="527" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab10_image0007.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab10">Effective stress State variable Plot</p>
+  <p> </p>
+  <p>Go to the Set up <img src="{{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}"/> dialog, and display Max principal stress (See <a href="#Fig_L10_10_Max_Principal_Stress_state_variable_plot"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab10">Fig. L10.</span>10.</a>)
+    and other stress components.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L10_10_Max_Principal_Stress_state_variable_plot"></a><img height="527" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab10_image0008.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab10">Max Principal Stress state variable plot</p>
+  <p>Switch to <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> mode and add another Die stress study to add Shrink Fit. Click <a href="forming_lab11.htm">Lab 11. Die stres with a press fit.</a> to continue Shrink fit lab.</p>
+
+</body></html>

@@ -1,0 +1,193 @@
+---
+lang: en
+title: "52.2. DOE Simulation Running and Monitoring"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>52.2. DOE Simulation Running and Monitoring</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>52.2. DOE Simulation Running and Monitoring</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/doe_and_optimization/52_doe_study/52_2_doe_simulation_running_and_monitoring.css"/>
+<meta name="brsnext" value="Documentation_content/DOE_and_Optimization/53_Optimization_Study/53_Introduction_to_Optimization.htm"/><meta name="brsprev" value="Documentation_content/DOE_and_Optimization/52_DOE_Study/52_1_DOE_and_DOE_Output_Operation_Setup.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="52.2. DOE Simulation Running and Monitoring">
+        <span>52.2. DOE Simulation Running and Monitoring</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>52.2. DOE Simulation Running and Monitoring</h1>
+  <p>DOE jobs are submitted to run in batch mode using <img height="18" src="{{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}" width="76"/> button,button, run options are as shown in  <a href="#Fig_52_2_1_DOE_Run_options_window"><span data-keyref="Chapter_52_2_DOE Simulation Running and Monitoring">Fig. 52.2.</span>1.</a>    Simulations can be run either on &quot;Single simulation server&quot; or &quot;Multiple simulation servers&quot; using &quot;Run Simulation on&quot; options. For Single simulation server user needs to select any one available simulation server while
+    for Multiple simulation servers user can select multiple no. of available simulation servers from the list in the table. Enter the number of Simultaneous jobs to be simulated (must be less than the simulation server Max jobs) and number of Processors
+    to be utilized per job (for 3D only) based on the licenses available for running,  then click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}" width="88"/> to run jobs in queue. To set selected simulation
+    server Max jobs and Processors per job click on  <img height="26" src="{{ '/assets/icons/simulator_icons/mo_server_settings_button.jpg' | relative_url }}" width="90"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_2_1_DOE_Run_options_window"></a><img height="463" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_2_doe_simulation_running_and_monitoring/image001.jpg' | relative_url }}" style="cursor: nwse-resize;" width="725"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">DOE Run options window</p>
+  <p> </p>
+  <p><strong>Run Simulation on:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Single Simulation Server:</strong></p>
+    </li>
+  </ul>
+  <p>User can run multiple DB&#39;s or Run cases by submitting in queue in any one of the available simulation servers listed using single simulation server as shown in <a href="#Fig_52_2_2_Run_options_window_for_DOE_job_using_single_sim_server"><span data-keyref="Chapter_52_2_DOE Simulation Running and Monitoring">Fig. 52.2.</span>2.</a> User
+    can select the number of simultaneous jobs to run up to available number of licenses based on the requirement.</p>
+  <p style="text-align: center"><a id="Fig_52_2_2_Run_options_window_for_DOE_job_using_single_sim_server"></a><img src="{{ '/assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image007.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run options window for DOE job using single sim server</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Multiple Simulation Servers:</strong></p>
+    </li>
+  </ul>
+  <p>From version 11.1 user can run the batch queue jobs using the remote machine simulation servers, using the simulation server other than the local will provide opportunity to use multiple simulation servers at a time to simulate the DOE/OPT multiple
+    run cases or DB&#39;s. It reduces the load on the local sim servers and also by using the multiple machine sim servers we can reduce the time required to complete the DOE/OPT project.</p>
+  <p>To use a particular available simulation sever, user needs to check the checkbox next to that sim server from the list in the table. User can change the simulation severs settings like processors per job and MPI shared. In addition to this user can
+    also set Max. Jobs per simulation server for DOE and OPT simulations. (See <a href="#Fig_52_2_3_Run_options_window_for_DOE_job_using_multi_sim_server"><span data-keyref="Chapter_52_2_DOE Simulation Running and Monitoring">Fig. 52.2.</span>3.</a> )</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_2_3_Run_options_window_for_DOE_job_using_multi_sim_server"></a><img height="686" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image009.jpg' | relative_url }}" width="700"/></p>
+  <p> </p>
+  <p class="Fig_numb">Run options window for DOE job using multi sim server</p>
+  <p> </p>
+  <p>For DOE and OPT simulations in both single and multi simulation server mode, selected simulation servers settings can be edited by selecting the particular simulation server and clicking on <img src="{{ '/assets/icons/simulator_icons/mo_server_settings_button.jpg' | relative_url }}" style="cursor: nwse-resize;"/> button.</p>
+  <p>For more details on &quot;Run simulation on&quot; run option refer Chapter <a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout.htm#Fig._6.2.3._Run_Simulation_options">6.2.3. Section Run_Simulation_option</a>.</p>
+  <p> </p>
+  <p><strong>Simulation Run types: </strong>For DOE/OPT projects user can start the simulation from the first operation or if DOE/OPT variables added only from the intermediate operations then user can continue only from those intermediate operations. Even
+    if DOE/OPT simulation stops abnormally then user can restart the simulation from incomplete run where it stopped or from the intermediate operation of the incomplete run.</p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Initial Run</strong>: This initial run will provide two options those are,</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><strong>Start from the beginning</strong>: This will start the simulation from the first operation starting step. User can also use this option to restart the simulation from the beginning in case of incomplete DOE run due to some license or network
+        issues.</p>
+    </li>
+    <li>
+      <p><strong>Start from the Selected Simulation</strong>: This will start the simulation from any of the intermediate operation&#39;s simulations by selecting that particular operation and its simulation. If user added DOE study only in the intermediate
+        operation then using this option will reduce the total time required to complete DOE study.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Continue Run</strong>: This continue run will provide two options those are,</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Circle">
+    <li>
+      <p><strong>Continue incomplete DOE study</strong>: This will continue the incomplete DOE study runs simulations from the last available negative step and complete the DOE/OPT project.</p>
+    </li>
+    <li>
+      <p><strong>Restart DOE from the selected Simulation</strong>: This will continue the incomplete DOE study run from any of the intermediate operation&#39;s simulations by selecting that particular operation and its simulation.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p>Continue does not need to run successfully simulated DOE run cases again to complete the incomplete DOE project.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_2_4_Simulation_Run_types_for_DOE_OPT_projects"></a><img height="331" src="{{ '/assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image010.jpg' | relative_url }}" width="600"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation Run types for DOE/OPT projects</p>
+  <p> </p>
+  <p>During running, system generates database for all the DOE samples within folder Run with suffix of number increasing up to number of samples along with necessary supporting files under DoeStudies/DoeStudy1/Solutions Problem directory, then it starts
+    simulation for each DB starting with Run1 in batch as shown in <a href="#Fig_52_2_5_DOE_Problem_directory_structure"><span data-keyref="Chapter_52_2_DOE Simulation Running and Monitoring">Fig. 52.2.</span>5.</a> DOEStudy1 directory is the directory
+    which contains details used for that DOE Study.</p>
+  <p style="text-align: center"><a id="Fig_52_2_5_DOE_Problem_directory_structure"></a><img height="550" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_2_doe_simulation_running_and_monitoring/image003.jpg' | relative_url }}" width="166"/></p>
+  <p> </p>
+  <p class="Fig_numb">DOE Problem directory structure</p>
+  <p> </p>
+  <p>The Simulation jobs tab and DOE Log tabs can be used to monitor the DOE runs a shown in <a href="#Fig_52_2_6_DOE_Simulation_jobs_status"><span data-keyref="Chapter_52_2_DOE Simulation Running and Monitoring">Fig. 52.2.</span>6.</a> Also Process monitor
+    will give more details about the DOE jobs in queue as shown in <a href="#Fig_52_2_7_Process_Monitor_for_DOE_batch_jobs_running"><span data-keyref="Chapter_52_2_DOE Simulation Running and Monitoring">Fig. 52.2.</span>7.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_2_6_DOE_Simulation_jobs_status"></a><img height="464" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_2_doe_simulation_running_and_monitoring/image002.jpg' | relative_url }}" width="725"/></p>
+  <p class="Fig_numb">DOE Simulation jobs status</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_52_2_7_Process_Monitor_for_DOE_batch_jobs_running"></a><img height="423" src="{{ '/assets/images/doe_and_optimization/52_doe_study/52_2_doe_simulation_running_and_monitoring/image004.jpg' | relative_url }}" width="725"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process Monitor for DOE batch jobs running</p>
+  <p> </p>
+  <p>Running, Pending and Finished DOE jobs that are submitted in queue will be listed in Simulation jobs tab or Process monitor.</p>
+  <p> </p>
+  <p>After all simulations are completed, DOE results will be prepared automatically by extracting the necessary data from run cases and will be saved as SDB file in DOEStudy1/Output directory. These DOE results can be post-processed using DOE post. User
+    can select the <img height="20" src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}" width="151"/>  MO mode button and then select the <img height="16" src="{{ '/assets/icons/pre_icons/mo_doe_post_button.jpg' | relative_url }}" width="55"/> to access DOE post
+    or can also access from DEFORM Main GUI Post Processor link .</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="51_introduction_to_doe.htm">52. Introduction to DOE</a></p>
+  <p><a href="52_1_doe_and_doe_output_operation_setup.htm">52.1. DOE and DOE Output Operation Setup</a></p>
+  <p><a href="../54_doe_post_processor/54_1_doe_post_processor.htm">54.1. DOE Post Processor</a></p>
+
+</body></html>

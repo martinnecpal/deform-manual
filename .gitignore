@@ -6,3 +6,16 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby
+vendor/
+Gemfile.lock
+
+# Local dev config override
+_config_dev.yml

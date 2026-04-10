@@ -1,0 +1,284 @@
+---
+lang: sk
+title: "Gear Blank SI Lab 12"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "15.3.1.0_26";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gear Blank SI Lab 12</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gear Blank SI Lab 12</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/labs/advanced_labs_in_mo/gear_blank/gear_blank_si.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Gear_Labs.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Blank/Gear_Blank_SI_Lab11.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Gear Blank SI Lab 12">
+        <span>Gear Blank SI Lab 12</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab12. Die Stress analysis - Hot Forging</h1>
+  <p>The objective of this lab is to run a die stress analysis. When the stress analysis is being done on only one tool, a one step simulation is sufficient to get accurate stresses. When the stress analysis is being done on die assemblies where there is
+    interaction between the tools, more than one step is typically needed for the die stack to come to a state of equilibrium under the applied load.</p>
+  <p> </p>
+  <p>In a typical die stress simulation, the workpiece is removed and the forces exerted onto the dies by the workpiece are interpolated onto the tools. </p>
+  <p> </p>
+  <p>Open Previously simulated Gear.moproj file in DEFORM MO by clicking on <img src="{{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}"/>. MO pre- processor will open.</p>
+  <h3 class="h3_12_"><a id="12_1_Add_Die_stress_Study"></a>Add Die stress Study</h3>
+  <p>At top Left corner of the Display window, Left mouse click on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button and select Add Die stress Study operation as shown in <a href="gear_blank_si_lab12.htm#Fig_L12_1_Adding_Die_stress_Study"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>1.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_1_Adding_Die_stress_Study"></a><img height="372" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0001.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb_Lab12">Adding Die stress Study</p>
+  <p> </p>
+  <p>To perform Die stress operation,select last step in Step selection page as shown in <a href="gear_blank_si_lab12.htm#Fig_L12_2_Step_selection_for_Die_stress_study"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>2.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_2_Step_selection_for_Die_stress_study"></a><img height="372" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Step selection for Die stress study</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> for objects page as no additional objects required.</p>
+  <h3 class="h3_12_">Define Top Die general data</h3>
+  <p>Assign Top Die Temperature as <strong>148.89°</strong>C. By default, object type of rigid objects from the loaded step will be changed to elastic. Keep the object type as elastic for the Punch object. From v13.1.1, two new options have been introduced
+    in the object page to position the dies in future steps for Multiple steps die stress analysis, we need not use these options for single step die stress analysis, hence, keep the Need positioning check box turned off as shown in <a href="gear_blank_si_lab12.htm#Fig_L12_3_Top_Die_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>3.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_3_Top_Die_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0003.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab12">Top Die window</p>
+  <p> </p>
+  <h3 class="h3_12_">Generate Top die Mesh</h3>
+  <p>In Mesh page, Enter target number of mesh elements as <strong>40000</strong>, then click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> button as shown in <a href="gear_blank_si_lab12.htm#Fig_L12_4_Mesh_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>4.</a>    to generate mesh.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_4_Mesh_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0004.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Mesh window</p>
+  <h3 class="h3_12_">Interpolate Forces for Top die</h3>
+  <p>In Force interpolation page, click on <img src="{{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}"/> action label to interpolate forces as shown in <a href="gear_blank_si_lab12.htm#Fig_L12_5_Force_interpolation_of_Top_Die"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>5.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_5_Force_interpolation_of_Top_Die"></a><img height="270" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0005.jpg' | relative_url }}" width="740"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Force interpolation of Top Die</p>
+  <h3 class="h3_12_">Assign Material for Top die</h3>
+  <p>In material window, assign <strong>AISI-H-13</strong> material from material library and Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <h3 class="h3_12_">Assign Boundary Conditions for Top die</h3>
+  <p>Assign <strong>Vx=Vy=Vz=0</strong> Velocity boundary condition on the top surface of the Top Die. This boundary condition prevents the die from flying off when the forces are applied. (See <a href="gear_blank_si_lab12.htm#Fig_L12_6_Boundary_Conditions_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>6.</a>)</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_L12_6_Boundary_Conditions_window"></a><img height="320" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0006.jpg' | relative_url }}" width="740"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Boundary Conditions window</p>
+  <p> </p>
+  <p>Select <strong>Bottom die</strong> from operation tree to define Bottom die object and its properties as there is no more variables to be initialized for Top die.</p>
+  <h3 class="h3_12_">Define Bottom Die general data</h3>
+  <p>Assign Temperature of Bottom Die as <strong>148.89</strong>°C. We will keep the object type as Elastic for the Bottom Die and turn off Need positioning check box as shown in <a href="gear_blank_si_lab12.htm#Fig_L12_7_Bottom_Die_Window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>7.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_7_Bottom_Die_Window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0007.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Bottom Die Window</p>
+  <p> </p>
+  <h3 class="h3_12_">Generate Bottom Die Mesh</h3>
+  <p>In Mesh page, Enter target number of mesh elements as <strong>50000</strong>, then click on <img src="{{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}"/> button as shown in <a href="gear_blank_si_lab12.htm#Fig_L12_8_Mesh_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>8.</a> to
+    generare mesh.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_8_Mesh_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0008.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Mesh window</p>
+  <h3 class="h3_12_">Interpolate Forces for Bottom die</h3>
+  <p>In Force interpolation page, click on <img src="{{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}"/> action label to interpolate forces as shown in <a href="gear_blank_si_lab12.htm#Fig_L12_9_Force_Interpolation_Window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>9.</a>    Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_9_Force_Interpolation_Window"></a><img height="279" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0009.jpg' | relative_url }}" width="740"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Force Interpolation Window</p>
+  <h3 class="h3_12_">Assign Material for Bottom die</h3>
+  <p>In material window, select  <strong>AISI-H-13</strong> material and assign it to the bottom die and Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/>.</p>
+  <h3 class="h3_12_">Assign Boundary Conditions for Bottom die</h3>
+  <p>Assign Vx=Vy=Vz=0 Velocity boundary condition on the Bottom surface of the Bottom Die. (See <a href="gear_blank_si_lab12.htm#Fig_L12_10_Assigning_BCC_for_Bottom_Die"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>10.</a>)</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_L12_10_Assigning_BCC_for_Bottom_Die"></a><img height="315" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Assigning BCC for Bottom Die</p>
+  <p> </p>
+  <p>Click on <strong>Simulation Controls</strong> branch in operation tree, as we need not to initialize variables and the setup does not require positioning or contact generation.</p>
+  <h3 class="h3_12_">Define Simulation Controls</h3>
+  <p>Set <strong>Number of Simulation Steps</strong> to <strong>1</strong> and the <strong>Step </strong><strong>Increment </strong><strong>to </strong><strong>Save </strong>to <strong>1</strong>. Set the<strong> Max. elapsed process time per step</strong>    as <strong>1</strong> sec. (See <a href="gear_blank_si_lab12.htm#Fig_L12_11_Simulation_Controls_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>11.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_11_Simulation_Controls_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0011.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab12">Simulation Controls window</p>
+  <h3 class="h3_12_">Generate Database and Run a Simulation</h3>
+  <p>By selecting the File menu <strong>Export </strong>option, Save a keyword file for the problem as &quot;<strong>Diestress</strong>&quot;.</p>
+  <p> </p>
+  <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/> action label and check for any issues in setup. Generate a database by clicking <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}" style="cursor: nwse-resize;"/> action label.</p>
+  <p>Once the database has been generated switch to the Simulation mode by selecting the <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> button above the object tree. Click on the <img src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}"/> action label to open the Run Options dialog. Use the default <strong>Continue Run</strong> option to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>and click on <img height="23" src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}" width="75"/> button to run the simulation.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Flg_L12_12_Run_Simulation_popup_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0012.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Run Simulation popup window</p>
+  <p> </p>
+  <p>After completing simulation click on <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> MO Mode button to review results.</p>
+  <h3 class="h3_12_">Review Results</h3>
+  <p>Using the <img src="{{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}"/> (State Variables) option, plot Effective stress and Max Principal stress, two of the most important variables in die stress simulations. (See <a href="gear_blank_si_lab12.htm#Flg_L12_13_Stress_Effective_contour_plot"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>13.</a>    and <a href="gear_blank_si_lab12.htm#Fig_L12_14_Stress_Max_principal_contour_plot"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>14.</a>)</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Flg_L12_13_Stress_Effective_contour_plot"></a><img height="326" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0013.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Stress Effective contour plot; (a) For Top Die (b) For Bottom Die</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_L12_14_Stress_Max_principal_contour_plot"></a><img height="325" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0014.jpg' | relative_url }}" style="cursor: nesw-resize;" width="750"/></p>
+  <p> </p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Stress Max principal contour plot; (a) For Top Die (b) For Bottom Die</p>
+  <p> </p>
+  <hr/>
+  <h3 class="h3_12_">Optional exercise – add a shrink ring to the bottom die</h3>
+  <p> </p>
+  <p style="margin-left: 20px">- Open Project “Gear” in DEFORM MO from DEFORM GUI Main. </p>
+  <p style="margin-left: 20px">- Add 2nd Die stress study and add Die Stress operation as shown in <a href="gear_blank_si_lab12.htm#12_1_Add_Die_stress_Study">Lab 12: 12.1 Add Die Stress Study.</a></p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px">- Keep the selected last step, click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and add an additional object from objects window (see <a href="gear_blank_si_lab12.htm#Fig_L12_15_Added_additional_object"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>15.</a>).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_15_Added_additional_object"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0015.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Added additional object</p>
+  <p> </p>
+  <p style="margin-left: 20px">- Continue Top and Bottom die setup as per <a href="gear_blank_si_lab12.htm#Lab12_Die_Stress_analysis_-_Hot_Forging">Lab 12</a> until section 12.11.</p>
+  <p style="margin-left: 20px"><strong>Define Case general data</strong></p>
+  <p style="margin-left: 20px">- Rename additional Object 3 to case and confirm the object temperature is set to <strong>20</strong>°C. We will select object type as <strong>elastic</strong> and turn off Need positioning check box.</p>
+  <p style="margin-left: 20px"> </p>
+  <p style="margin-left: 20px;text-align: center"><a id="Fig_L12_16_Case_object_general_page"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0022.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb_Lab12" style="margin-left: 20px; text-align: center;">Case object page</p>
+  <p style="margin-left: 20px"> </p>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and import geometry “<strong>gear_die_case_SI.STL</strong>” from library.</p>
+    </li>
+    <li style="margin-left: 20px;">
+      <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and generate mesh with <strong>50,000</strong> elements.</p>
+    </li>
+    <li style="margin-left: 20px;">
+      <p>Force interpolation is not required. Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and assign <strong>AISI-H-13</strong> material.</p>
+    </li>
+    <li style="margin-left: 20px;">
+      <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and assign <strong>Vy=0</strong> to bottom face as shown in <a href="#Fig_L12_17_Fix_the_bottom_face_velocity_in_Y_direction"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>17.</a></p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_17_Fix_the_bottom_face_velocity_in_Y_direction"></a><img height="290" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0016.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Fix the bottom face velocity in Y direction</p>
+  <p> </p>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>Apply a<strong> 0.508</strong>’’ interference (per side) Shrink Fit to ID in Y direction</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="margin-left: 20px">- vector is in the Y direction as shown in <a href="#Fig_L12_18_Shrink_fit_to_the_internal_dia_of_the_shrink_ring_perpendicular_to_the_axis_Y_direction"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>18.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_18_Shrink_fit_to_the_internal_dia_of_the_shrink_ring_perpendicular_to_the_axis_Y_direction"></a><img height="290" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Shrink fit to the internal dia of the shrink ring perpendicular to the axis Y direction</p>
+  <p> </p>
+  <p>When you perform a shrink fit, DEFORM will ask if you would like the nodes of the case to be offset by the same amount as the shrink fit tolerance (see <a href="#Fig_L12_19_Move_object_nodal_coordinates_popup_for_Shrink_BCC"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>19.</a>).
+    Most of the time, as it is in this lab, you will position your tooling to make contact and then apply the shrink fit. In this case you want to answer no. This will prevent the nodes from being displaced. If you import your tooling geometry in such
+    a way that the interference is shown by a overlap between the die and case then clicking yes is the correct option and will displace the nodes of the case so contact can be defined.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_19_Move_object_nodal_coordinates_popup_for_Shrink_BCC"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0018.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Move object nodal coordinates popup for Shrink BCC</p>
+  <p> </p>
+  <p style="margin-left: 20px">- No variable initialization is required and objects are correctly positioned, so click on <strong>Contact </strong>branch in operation tree to generate contact between bottom die and shrink ring.</p>
+  <ul class="Disc">
+    <li style="margin-left: 20px;">
+      <p>Click on <span></span><img src="{{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}"/> button, select Maser as Case object and Slave as Bottom Die object. Define friction value as 0.08. </p>
+    </li>
+    <li style="margin-left: 20px;">
+      <p>Click on <img src="{{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}"/> to generate contact. (See <a href="#Fig_L12_20_Inter-object_relations_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>20.</a>)</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_20_Inter-object_relations_window"></a><img src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0019.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab12">Inter-object relations window</p>
+  <p> </p>
+  <p>- Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and Change the number of simulation steps to 5 steps and save every 5.</p>
+  <p> </p>
+  <p>- Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> and write database.</p>
+  <p> </p>
+  <p>- Click on <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}" style="cursor: nesw-resize;"/> mode button and run simulation.</p>
+  <p> </p>
+  <p>- After simulation click on  to enter the postprocessor and compare the stress values at the stress concentration on the bottom die between load cases with the ring and without a shrink ring (Lab 12 results) as shown in <a href="#Flg_L12_21__Bottom_die_effective_stress_with_and_without_Shrink_ring"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>21.</a>    and <a href="#Fig_L12_22_Bottom_die_maximum_principal_stress_with_and_without_Shrink_ring"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Blank_Gear_Blank_SI_Lab12">Fig. L12.</span>22.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Flg_L12_21__Bottom_die_effective_stress_with_and_without_Shrink_ring"></a><img height="347" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0020.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12"> Bottom die effective stress with and without Shrink ring</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L12_22_Bottom_die_maximum_principal_stress_with_and_without_Shrink_ring"></a><img height="353" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab12_image0021.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab12">Bottom die maximum principal stress with and without Shrink ring</p>
+
+</body></html>

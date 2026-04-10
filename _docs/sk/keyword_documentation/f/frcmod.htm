@@ -1,0 +1,329 @@
+---
+lang: sk
+title: "FRCMOD (2D3D)"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "14.6.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>FRCMOD (2D3D)</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>FRCMOD (2D3D)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/keyword_documentation/f/f_keyword_doc.css"/>
+<meta name="brsnext" value="Documentation_content/Keyword_Documentation/F/FRCMTH.htm"/><meta name="brsprev" value="Documentation_content/Keyword_Documentation/F/FRCFAI.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="FRCMOD (2D3D)">
+        <span>FRCMOD (2D3D)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <p class="P_10"> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width: 70%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <h1>FRCMOD</h1>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">(Inter Material data)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold"><u>Update History:</u></p>
+          <p class="P_10">Definition has been extended in v11</p>
+        </td>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Last updated on : 06-08-2013</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="P_10"> </p>
+  <hr/>
+  <p class="P_10_Bold">FRCMOD  Material, FracType, CrtValue, Var1, Var2, Var3, FracSoft</p>
+  <p class="P_10_Bold">(for Microvoid)</p>
+  <p class="P_10_Bold">FRCMOD  Material, FracType(=11), CrtValue, Ndata(=9), Var2, Var3, FracSoft</p>
+  <p class="P_10_Bold">F1, F2, Sigma, Sn, NStar, r0, n, F3, F4</p>
+  <p class="P_10_Bold">(for Void closure)</p>
+  <p class="P_10_Bold">FRCMOD  Material, FracType(=12), CrtValue, Ndata, Var2, Var3, FracSoft(=100)</p>
+  <p class="P_10_Bold">VoidIndenx(1), VoidVolRatio(1)</p>
+  <p class="P_10_Bold">::</p>
+  <p class="P_10_Bold">VoidIndex(Ndata), VoidVolRatio(Ndata)</p>
+  <p class="P_10_Bold">(for Forming limit diagram)</p>
+  <p class="P_10_Bold">FRCMOD  Material, FracType(=17), CrtValue, Ndata, Var2, Var3, FracSoft</p>
+  <p class="P_10_Bold">MinorStrain(1), MajorStrain(1)</p>
+  <p class="P_10_Bold">::</p>
+  <p class="P_10_Bold">MinorStrain (Ndata), MajorStrain (Ndata)</p>
+  <hr/>
+  <p class="P_10">  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:2px;border-style:none;border-color:#000000">
+    <colgroup>
+      <col style="width: 20%;"/>
+      <col style="width: 55%;"/>
+      <col style="width: 25%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">OPERAND</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DESCRIPTION</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">DEFAULT</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">Material</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Material number</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">None</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">FracType</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Fracture model type</p>
+          <p class="P_10">= <strong>0  </strong>Normalized Cockcroft &amp; Latham</p>
+          <p class="P_10">= <strong>1  </strong>Cockcroft &amp; Latham</p>
+          <p class="P_10">= <strong>2  </strong>McClintock (Var1 = n)</p>
+          <p class="P_10">= <strong>3  </strong>Freudenthal</p>
+          <p class="P_10">= <strong>4  </strong>Rice &amp; Tracy (Var1 = alpha)</p>
+          <p class="P_10">= <strong>5  </strong>Oyane (Var1 = alpha0)</p>
+          <p class="P_10">= <strong>6  </strong>Ayada</p>
+          <p class="P_10">= <strong>7  </strong>Osakada (Var1 = a, Var2 = b)</p>
+          <p class="P_10">= <strong>8  </strong>Brozzo</p>
+          <p class="P_10">= <strong>9  </strong>Zhoa &amp; Huhn</p>
+          <p class="P_10">= <strong>10  </strong>Maximum effective stress / ultimate tensile strength</p>
+          <p class="P_10">= <strong>11  </strong>Microvoid (GUI is not available) (new in v11)</p>
+          <p class="P_10">= <strong>12  </strong>Viod closure (new in v11)</p>
+          <p class="P_10">= <strong>15  </strong>Oyane model with a negative term (Var1 = alpha0)</p>
+          <p class="P_10">= <strong>16  </strong>Ayada model with a negative term</p>
+          <p class="P_10">= <strong>17 </strong> Forming limit diagram (FLD) (new in v11)</p>
+          <p class="P_10">= -<strong>N</strong>  User routine (N)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">CrtValue</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Critical Fracture value</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">var1</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Parameter for specific equation</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">var2</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Parameter for specific equation</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">var3</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Parameter for specific equation</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="padding-left: 4px">
+          <p class="P_10_Bold">FracSoft</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">Flow stress softening percentage (%)</p>
+        </td>
+        <td style="padding-left: 4px">
+          <p class="P_10">0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+      <tr style="height: 1px;border-width: 1px;border-style: none;border-color: #000000">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">DEFINITION</p>
+        </td>
+      </tr>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">FRCMOD specifies the damage model that one wishes to use for element deletion, separation or splitting. There are 16 different models to choose from. It is also possible to write a user subroutine which can be used for the damage model. The
+            var1, var2 and var3 are constants for some of the equations. To find out which variables correspond to which constants and the order, see the models in the Pre-Processor.  The order of the constants will be identical.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;height:1px;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 1px;">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold" style="border-width: 1px;border-style: none;border-color: #FFFFFF">REMARKS</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10">Microvoid damage model computes 4 damage values per element; thus the DAMAGE keyword stores four damage values per element. They are the number of voids, average size of voids, volume fraction of coalescence, and total porosity (a function of
+            the 3 variables). These are evolved every step as a function of 9 parameters in the Microvoid damage model kinetics.</p>
+          <p class="P_10">Void Closure model estimates “healing factor”, which is a void ratio defined by dividing current void volume by initial void volume. The percent flow stress softening becomes 100% since it is a healing model rather than a fracture model. The
+            internal void closing evaluation index (Q) is computed in FEM simulation using the following definition. (where 0.0 &lt; Q &lt; 1.0)</p>
+          <p class="P_10"> </p>
+          <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse;width: 550px;border-width: 1px;border-style: none;border-color: #FFFFFF;margin-left: 12px">
+            <colgroup>
+              <col style="width: 400px;"/>
+              <col style="width: 150px;"/>
+            </colgroup>
+            <tbody style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+              <tr style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+                <td style="border-width: 1px;border-style: none;border-color: #FFFFFF"><img height="64" src="{{ '/assets/equations/keyword_documentation/f/frcmod_eq_1.jpg' | relative_url }}" style="border-width: 1px; border-style: none; border-color: rgb(255, 255, 255);" width="297"/></td>
+                <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+                  <p class="EQ_numb" style="text-align: center;border-width: 1px;border-style: none;border-color: #FFFFFF"> </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="P_10"> </p>
+          <p class="P_10">User needs to provide constitutive behavior of “healing factor vs. Q” in a form of function data by experimental results.</p>
+          <p class="P_10"> </p>
+          <p class="P_10" style="text-align: center"><img src="{{ '/assets/images/keyword_documentation/f/frcmod_image001.jpg' | relative_url }}"/></p>
+          <p class="Fig_name">Fig.1.  Void area ratio of experimental results Vs Q value graph</p>
+          <p class="P_10"> </p>
+          <p class="P_10">Ref: Kakimoto et. al., Journal of Materials Processing Technology, 2010, Fig. 12</p>
+          <p class="P_10">Forming limit diagram (FLD) model is introduced as a failure indicator in sheet metal forming simulations. The damage factor is defined as a major strain ratio (=current major strain / limit major strain) for a given major and minor strain condition.
+            The forming limit diagram (i.e., a minor strain vs.  major strain diagram) should be provided by users.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;width:100%;border-width:1px;border-style:none;border-color:#FFFFFF">
+    <colgroup>
+      <col style="width:100.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10_Bold">RELATED TOPICS</p>
+        </td>
+      </tr>
+      <tr style="padding-left: 4px">
+        <td style="border-width: 1px;border-style: none;border-color: #FFFFFF">
+          <p class="P_10"><a href="../../pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress">Flow stress</a>, <a href="../../pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models.htm">Fracture</a></p>
+          <p class="P_10">Keywords: <a href="../d/damage.htm">DAMAGE (2D)</a>, <a href="../d/damage_3d.htm">DAMAGE (3D)</a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+
+</body></html>

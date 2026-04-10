@@ -1,0 +1,292 @@
+---
+lang: sk
+title: "Forming Lab 7"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "15.3.2.2.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 7</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Forming Lab 7</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs.css"/>
+<meta name="brsnext" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_Lab8.htm"/><meta name="brsprev" value="Documentation_content/Labs/Advanced_Labs_in_MO/Gear_Labs/Forming_Gear_Labs/Forming_Lab6.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Forming Lab 7">
+        <span>Forming Lab 7</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Lab 7.  Hydraulic Press</h1>
+  <p>There are two ways to model hydraulic press behavior:</p>
+  <ol class="Decimal">
+    <li>
+      <p>Assume press maintains constant speed until it hits maximum load, then dwells at maximum load (two-step method).</p>
+    </li>
+    <li>
+      <p>Assume press slows gradually as it approaches maximum load (power envelope method).</p>
+    </li>
+  </ol>
+  <p>The two-step method is easier to set up and is useful for force-controlled simulations other than hydraulic presses. The power envelope method is more representative of actual hydraulic press behavior.</p>
+  <h3 class="h3_7_">Two-step method</h3>
+  <h4 class="h4_7_1_">Create a new Problem</h4>
+  <p>Create a new project called <strong>Gear_Hydraulic_Dwell</strong>, and copy the existing project <strong>Gear_LargerBillet</strong>. Be sure the <strong>Copy database file </strong>option is checked. Click on the 2<span style="vertical-align:super;font-size:8pt">nd</span>    operation and go to <strong>Top </strong><strong>Die </strong>Movement page.</p>
+  <h4 class="h4_7_1_">Assign Top die movement</h4>
+  <p>Set the movement to <strong>Hydraulic </strong>press and set the <strong>Speed </strong>to a constant <strong>2</strong> i<strong>n/sec </strong>(See <a href="#Fig_L7_1_Top_die_movement_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab7">Fig. L7.</span>1.</a>)
+    . Click the <strong>Dwell </strong>controls tab. We will set the maximum press load, the time the press will be held at that load, the number of time steps to dwell, and the stall velocity, after which the press will stop.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L7_1_Top_die_movement_window"></a><img height="425" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab7_image0001.jpg' | relative_url }}" width="344"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab7">Top die movement window</p>
+  <p> </p>
+  <p>Once the press hits the maximum press load (4000 klb.), we will dwell for 3 seconds. A good rule of thumb is 100 steps per second of dwelling, so we will use 300 steps.</p>
+  <p> </p>
+  <p>Set the <strong>Max. load</strong> to <strong>4000 </strong>klb, <strong>Min. </strong><strong>velocity </strong>to 0<strong>.005</strong> in/sec, <strong>Total </strong><strong>dwell </strong><strong>time </strong>to <strong>3</strong> seconds and
+    the <strong>No. of steps</strong> to <strong>300</strong>. (See <a href="#Fig_L7_2_Hydraulic_press_Dwell_tab_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab7">Fig. L7.</span>2.</a>)</p>
+  <p>Note that the <strong>Current </strong><strong>dwell </strong><strong>time </strong>should always start at <strong>0</strong>. The time will be updated by the system once the dwell load is reached.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L7_2_Hydraulic_press_Dwell_tab_window"></a><img height="478" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab7_image0002.jpg' | relative_url }}" width="387"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab7">Hydraulic press Dwell tab window</p>
+  <p> </p>
+  <h4 class="h4_7_1_">Generating DB</h4>
+  <p>Go to <strong>Generate </strong><strong>DB </strong>page and generate the database. Click on the MO <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h4 class="h4_7_1_">Run and monitor a simulation</h4>
+  <p>Click on the <img height="15" src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}" style="cursor: nwse-resize;" width="26"/> action label to open the Run Options dialog. Use the default <strong>Continue </strong><strong>Run </strong>option
+    to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}"/> button to run
+    the simulation.</p>
+  <h4 class="h4_7_1_">Review the results</h4>
+  <p>When the simulation is completed, click the MO <img src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}"/> Mode button to review results.</p>
+  <h4 class="h4_7_1_">Graph</h4>
+  <p>In the Post-processor, use the Graph <img src="{{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}"/> tool to plot Y Speed vs. Time. (See   <a href="#Fig_L7_3_Y-Speed_vs_time_graph_plot_with_contact"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab7">Fig. L7.</span>3.</a>)</p>
+  <p><em>Note that the press holds 2 in/sec and then slows down dramatically during the three second dwell.</em></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L7_3_Y-Speed_vs_time_graph_plot_with_contact"></a><img height="527" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab7_image0003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab7">Y-Speed vs time graph plot with contact</p>
+  <p> </p>
+  <p>Plot <strong>Y Load</strong> vs <strong>Time</strong>. Note that the press load hits a maximum of <strong>4000 </strong>klb and then holds this load constant during the dwell. (See <a href="#Fig_L7_4_Y-Load_vs_Time_graph_plot_with_contact"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab7">Fig. L7.</span>4.</a>)</p>
+  <p>Use the Contact nodes <img src="{{ '/assets/icons/post_icons/mo_show_cotact_icon.jpg' | relative_url }}"/> icon to display contact with the dies. View how much contact increases during the dwell phase. This is often the difference between filling and not filling
+    the die in a hydraulic press forging.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L7_4_Y-Load_vs_Time_graph_plot_with_contact"></a><img height="529" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab7_image0004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab7">Y-Load vs Time graph plot with contact</p>
+  <h3 class="h3_7_">Power Envelope method</h3>
+  <h4 class="h4_7_2_">Creating a  New Problem</h4>
+  <p>Create a new project called <strong>Gear_Hydraulic_PowerLimit </strong>and copy the existing project <strong>Gear_LargerBillet</strong>. Be sure the <strong>Copy database file</strong> option is <strong>checked</strong>. Click on the<strong> 2<span style="vertical-align:super;font-size:8pt">nd</span> operation </strong>and
+    go to <strong>Top </strong><strong>Die </strong>Movement.</p>
+  <h4 class="h4_7_2_">Top die movement</h4>
+  <p>Set the movement to <strong>Hydraulic </strong><strong>press</strong>, set the Speed to a <strong>constant </strong><strong>2 </strong>in/sec. and <strong>check </strong>the <strong>Power </strong><strong>Limit </strong>option as shown in <a href="#Fig_L7_5_Top_die_movement_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab7">Fig. L7.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L7_5_Top_die_movement_window"></a><img height="400" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab7_image0005.jpg' | relative_url }}" width="397"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab7">Top die movement window</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}"/> and define the below values into the Power Limit table. This curve defines the maximum speed that the press can maintain at a given forging load (See <a href="#Fig_L7_6_Power_limit_window"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab7">Fig. L7.</span>6.</a>).</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 450px; margin-left: auto; margin-right: auto;">
+    <colgroup>
+      <col style="width:50.00%"/>
+      <col style="width:50.00%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p style="text-align: center"><strong>Force</strong></p>
+        </td>
+        <td>
+          <p style="text-align: center"><strong>Speed</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+        <td>
+          <p style="text-align: center">3</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">500</p>
+        </td>
+        <td>
+          <p style="text-align: center">3</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1000</p>
+        </td>
+        <td>
+          <p style="text-align: center">2.875</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">1500</p>
+        </td>
+        <td>
+          <p style="text-align: center">2.625</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">2000</p>
+        </td>
+        <td>
+          <p style="text-align: center">2.375</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">2500</p>
+        </td>
+        <td>
+          <p style="text-align: center">2</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">3000</p>
+        </td>
+        <td>
+          <p style="text-align: center">1.4</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">3500</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.75</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">4000</p>
+        </td>
+        <td>
+          <p style="text-align: center">0.01</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">4500</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">5000</p>
+        </td>
+        <td>
+          <p style="text-align: center">0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L7_6_Power_limit_window"></a><img height="500" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab7_image0006.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb_Lab7">Power limit window</p>
+  <p> </p>
+  <p>Click <img src="{{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}"/> until  Stopping controls.</p>
+  <h4 class="h4_7_2_">Stopping controls</h4>
+  <p>Set the <strong>Max </strong><strong>load </strong>of primary die to <strong>4000 </strong>klb (Y). Go to the <strong>Die </strong><strong>distance </strong><strong>tab </strong>and Initialize <img src="{{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}"/> to deactivate. Click  <img src="{{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}"/> to the popup asking if you want to use these settings.</p>
+  <h4 class="h4_7_2_">Generating DB</h4>
+  <p>Go to Generate DB page and generate the database. Click on the MO <img src="{{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}"/> Mode button (above the operation tree) to start the simulation.</p>
+  <h4 class="h4_7_2_">Run and monitor a simulation</h4>
+  <p>Click on the <img height="15" src="{{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}" style="cursor: nwse-resize;" width="26"/> action label to open the Run Options dialog. Use the default <strong>Continue </strong><strong>Run </strong>option
+    to select “<strong>Continue from the last step</strong>” option and then select the Simulation mode as <strong>Interactive </strong>radio button. Click on <img src="{{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}"/> button to run
+    the simulation.</p>
+  <h4 class="h4_7_2_">Review the results</h4>
+  <p>When the simulation is completed, click the MO <img height="20" src="{{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}" width="151"/> Mode button to review results.</p>
+  <h4 class="h4_7_2_">Graph</h4>
+  <p>In the Post-processor, use the Graph <img src="{{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}"/> tool to plot <strong>Y-Speed</strong> vs. <strong>Time</strong>. Note that the press holds 2 in/sec and then slows down dramatically during
+    the three second dwell.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_L7_7_Y-Speed_vs_Time_plot"></a><img height="527" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab7_image0007.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab7">Y-Speed vs Time plot</p>
+  <p> </p>
+  <p>In the Post-processor, plot <strong>Y Speed</strong> vs. <strong>Time</strong>.</p>
+  <p>Note that the press holds 2 in/sec until nearly the end of the simulation, then begins slowing down dramatically as shown in <a href="#Fig_L7_7_Y-Speed_vs_Time_plot"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab7">Fig. L7.</span>7.</a></p>
+  <p> </p>
+  <p>Plot <strong>Y- Load </strong>vs <strong>Time</strong>. Note that the press load hits a maximum of 4000 klb.(See <a href="#Fig_L7_8_Y-load_vs_Time_graph_plot"><span data-keyref="Labs_Advanced_Labs_in_MO_Gear_Labs_Forming_Lab7">Fig. L7.</span>8.</a>)</p>
+  <p style="text-align: center"><a id="Fig_L7_8_Y-load_vs_Time_graph_plot"></a><img height="527" src="{{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab7_image0008.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb_Lab7">Y-load vs Time graph plot</p>
+  <p> </p>
+
+</body></html>

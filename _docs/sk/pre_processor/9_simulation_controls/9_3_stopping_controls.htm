@@ -1,0 +1,281 @@
+---
+lang: sk
+title: "9.3. Stopping Controls"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>9.3. Stopping Controls</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>9.3. Stopping Controls</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/pre_processor/9_simulation_controls/9_3_stopping_controls.css"/>
+<meta name="brsnext" value="Documentation_content/Pre_Processor/9_Simulation_Controls/9_4_Remesh_Criteria.htm"/><meta name="brsprev" value="Documentation_content/Pre_Processor/9_Simulation_Controls/9_2_Defining_Step.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="9.3. Stopping Controls">
+        <span>9.3. Stopping Controls</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>9.3. Stopping Controls <img height="25" src="{{ '/assets/icons/pre_icons/mo_stopping_criteria.jpg' | relative_url }}" width="25"/></h1>
+  <p><a href="#9.3.1._Process_Duration_(TMAX)">9.3.1. Process Duration (TMAX)  [2D, 3D]</a></p>
+  <p><a href="#9.3.2._Primary_Die_Displacement_(SMAX)">9.3.2. Primary Die Displacement (SMAX)</a></p>
+  <p><a href="#9.3.3._Minimum_velocity_of_Primary_Die_(VMIN)">9.3.3. Minimum velocity of Primary Die (VMIN)</a> </p>
+  <p><a href="#9.3.4._Maximum_load_of_Primary_Die_(LMAX)">9.3.4. Maximum load of Primary Die (LMAX)</a> </p>
+  <p><a href="#9.3.5._Maximum_strain_in_any_Element_(EMAX)">9.3.5. Maximum strain in any Element (EMAX)</a> </p>
+  <p><a href="#9_3_6_Ring_diameter_measurement">9.3.6. Ring diameter measurement</a></p>
+  <p><a href="#9_3_6_Maximum_outer_diameter_ODMAX">9.3.7. Max outer diameter (ODMAX)</a></p>
+  <p><a href="#9_3_7_Min_inner_diameter">9.3.8. Min inner diameter (IDMIN)</a></p>
+  <p><a href="#9.3.8._Contact_area_ratio">9.3.9. Contact area ratio</a> </p>
+  <p><a href="#9.3.9._Stop_simulation_when_Folding">9.3.10. Stop simulation when Folding</a> </p>
+  <p><a href="#9_3_10_Stopping_Window">9.3.11. Stopping Window</a> </p>
+  <p><a href="#9.3.11._Die_distance_MDSOBJ">9.3.12. Die distance</a> </p>
+  <p><a href="#9.3.12._Stopping_Plane_(REFPOS)">9.3.13. Stopping Plane (REFPOS)</a> </p>
+  <p><a href="#9.3.13._Temperature_stopping_control">9.3.14. Temperature stopping control</a> </p>
+  <p><a href="#9.3.14._ALE_Steady_state_(ALECON)">9.3.15. ALE Steady state (ALECON)</a></p>
+  <p> </p>
+  <p>The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on the maximum number of time steps simulated the maximum accumulated elemental strain, the maximum process time, or maximum
+    stroke, minimum velocity, or maximum load of the primary object. A simulation will be stopped when the condition of any of the stopping parameters are met. If a zero value is assigned to any of the termination parameters other than number of steps
+    (<a href="../../keyword_documentation/n/nstep.htm">NSTEP</a>), the parameter will not be used. If no other stopping parameters are specified, the simulation will run until it has utilized all of the specified steps. (See <a href="#Fig._9.3.1._Process_parameters_for_stopping_a_simulation"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>1.</a> and
+    <a href="#Fig_9_3_2_3D_stopping_controls_in_Guided_mode"> <span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>2.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._9.3.1._Process_parameters_for_stopping_a_simulation"></a><img height="500" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image001.jpg' | relative_url }}" width="511"/></p>
+  <p class="Fig_numb">3D Process parameters for stopping a simulation</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_9_3_2_3D_stopping_controls_in_Guided_mode"></a><img height="400" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image007.jpg' | relative_url }}" style="text-align: center;" width="479"/></p>
+  <p class="Fig_numb" style="text-align: center;">3D stopping controls in Guided mode</p>
+  <p> </p>
+  <h2><a id="9.3.1._Process_Duration_(TMAX)"></a>Process Duration (TMAX) [2D, 3D]</h2>
+  <p>Terminates the simulation when the global process time (<a href="../../keyword_documentation/t/tmax.htm">TMAX</a>) reaches the value specified.</p>
+  <h2><a id="9.3.2._Primary_Die_Displacement_(SMAX)"></a>Primary Die Displacement (SMAX) [2D, 3D]</h2>
+  <p>Terminates the simulation when the total displacement (<a href="../../keyword_documentation/s/smax.htm">SMAX</a>) of the primary die reaches the specified value. The stroke value for the object is specified in the Object Movement tab.</p>
+  <h2><a id="9.3.3._Minimum_velocity_of_Primary_Die_(VMIN)"></a>Minimum velocity of Primary Die (VMIN) [2D, 3D]</h2>
+  <p>Terminates the simulation when the X or Y or Z component of the primary die velocity reaches the respective X or Y or Z values of the <a href="../../keyword_documentation/v/vmin.htm">VMIN</a>.</p>
+  <p>This parameter is typically used when the primary object movement is under load control, or when the power limit (<a href="../../keyword_documentation/s/spdlmt.htm">SPDLMT</a>) parameter is enforced for a hydraulic press.</p>
+  <h2><a id="9.3.4._Maximum_load_of_Primary_Die_(LMAX)"></a>Maximum load of Primary Die (LMAX) [2D, 3D]</h2>
+  <p>Terminates the simulation when the X or Y or Z load component of the primary die reaches the respective X or Y or Z value of <a href="../../keyword_documentation/l/lmax.htm">LMAX</a>. Typically used when the movement control of the primary object is
+    velocity or user specified.</p>
+  <h2><a id="9.3.5._Maximum_strain_in_any_Element_(EMAX)"></a>Maximum strain in any Element (EMAX) [2D, 3D]</h2>
+  <p>This (<a href="../../keyword_documentation/e/emax.htm">EMAX</a>) option terminates a simulation when the accumulated strain of any element reaches the specified value.</p>
+  <h2><a id="9_3_6_Ring_diameter_measurement"></a>Ring diameter measurement [3D]</h2>
+  <p>This option will be available only for the Ring rolling simulation type. When we turn on the Ring diameter measurement check box, we can select either “OD” or “ID” option to use the ring outer diameter or inner diameter as the stopping control. In Z
+    input field, we can define the measurement location along the Z axis at which the diameter needs to be measured for the stopping control.</p>
+  <p>When we select “OD” option, we can observe the Max outer diameter option to define the outer diameter of the ring as the stopping control during simulation. Similarly, when we select “ID” option, we can observe the Min inner diameter option to define
+    the inner diameter of the ring as the stopping control during simulation, see <a href="#Fing_9_3_3_Ring_diameter_measurement_option_for_ring_rolling_operation"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>3.</a>. User needs to
+    select the “&gt;” from the drop-down menu to define the stopping control diameter value.</p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fing_9_3_3_Ring_diameter_measurement_option_for_ring_rolling_operation"></a><img height="364" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image011.jpg' | relative_url }}" width="750"/></p>
+  <p class="Fig_numb">Ring diameter measurement option for ring rolling operation</p>
+  <p> </p>
+  <h2><a id="9_3_6_Maximum_outer_diameter_ODMAX"></a>Maximum outer diameter (ODMAX) [2D,3D]</h2>
+  <p>This option terminates a simulation when the outer diameter of the workpiece exceeds the defined maximum outer diameter value. In 2D, this option is available only for Axisymmetric geometry type. </p>
+  <p>Option:</p>
+  <ul class="Disc">
+    <li>
+      <p>“<strong>off</strong>”: when &quot;off&quot; option is selected, during simulation Maximum outer diameter stopping control will not been calculated.</p>
+    </li>
+    <li>
+      <p>“<strong>&lt; </strong>“:  when “ &lt; &quot; option is selected, simulation will be terminated when the outer diameter of the workpiece is less than Max outer diameter value.</p>
+    </li>
+    <li>
+      <p>“<strong>&gt;</strong>” :  when  &quot; &gt; &quot; option is selected, simulation will be terminated when the outer diameter of the workpiece is more than Max outer diameter value.</p>
+    </li>
+  </ul>
+  <h2><a id="9_3_7_Min_inner_diameter"></a>Min inner diameter (IDMIN)[2D3D]: </h2>
+  <p>This option terminates a simulation when the inner diameter of the workpiece exceeds the defined minimum inner diameter value. In 2D, this option is available only for Axisymmetric geometry type. </p>
+  <p>Option:</p>
+  <ul class="Disc">
+    <li>
+      <p>“ <strong>off</strong> “ : When &quot;off&quot; option is selected, during simulation Minimum inner diameter stopping control will not been calculated.</p>
+    </li>
+    <li>
+      <p>“ <strong>&lt;</strong> ” : When  &quot; &lt; &quot; option is selected, simulation will be terminated when the inner diameter of the workpiece is less than Min inner diameter value.</p>
+    </li>
+    <li>
+      <p>“ <strong>&gt;</strong> “ : When  &quot; &gt; &quot; option is selected, simulation will be terminated when the inner diameter of the workpiece is more than Min inner diameter value.</p>
+    </li>
+  </ul>
+  <h2><a id="9.3.8._Contact_area_ratio"></a>Contact area ratio [2D,3D]</h2>
+  <p>This option terminates a simulation when the contact area ratio exceeds the defined Contact area ratio value.<br/> The contact area ratio ranges from 0-1, where 0 indicates no contact and 1 indicates complete contact. The centre line in 2D and symmetry
+    planes in 3D are excluded from the contact area ratio calculations.</p>
+  <h2><a id="9.3.9._Stop_simulation_when_Folding"></a>Stop simulation when Folding [2D, 3D] </h2>
+  <p>This option terminates a simulation when the fold is detected in the defoming object mesh.</p>
+  <h2><a id="9_3_10_Stopping_Window"></a>Stopping Window [2D, 3D]:</h2>
+  <p>User can use a Stopping Window option to specify the location over the workpiece to check the die fill/contact ratio or fold. &quot;Contact area ratio&quot; and &quot;Fold&quot; options are available under “Stop when” pulldown list. (See<a href="#Fig_9_3_3_Stopping_plane_window"> <span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>4.</a>).</p>
+  <p> </p>
+  <p>When &quot;Contact area ratio&quot; is selected, if the workpiece surface area inside the window region reaches the defined contact ratio criteria then FEM simulation will stop.<br/>
+    <br/> When Fold is selected, if fold is detected on the workpiece surface inside the window region then FEM simulation will stop.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_9_3_3_Stopping_plane_window"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image009.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Stopping plane window</p>
+  <h2><a id="9.3.11._Die_distance_MDSOBJ"></a>Die Distance [2D, 3D]</h2>
+  <p>Terminates a simulation when the distance between reference points (<a href="../../keyword_documentation/m/mdsobj.htm">MDSOBJ</a>) on two objects reaches the specified distance. Stopping distance must be used in conjunction with the reference point
+    (<a href="../../keyword_documentation/r/refpos.htm">REFPOS</a>) definition Die Distance window. </p>
+  <p>From V12.0.2, for the reference objects if the reference points is defined (in Object Properties) we can observe the <img src="{{ '/assets/icons/pre_icons/mo_dis_bw_dies_check_mark_icon.jpg' | relative_url }}"/>  status and for the Reference object if reference object
+    is not defined then we can observe the  <img src="{{ '/assets/icons/pre_icons/mo_dis_bw_dies_question_mark_icon.jpg' | relative_url }}"/> status in Die-Distance tab as shown in <a href="#Fpg._9.3.4.a_Stopping_distance_based_on_die_distance"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>5.</a></p>
+  <p>For read from DB reference object (in successive operation), if the reference points is defined, then we can observe the <img src="{{ '/assets/icons/pre_icons/mo_dis_bw_dies_read_from_db_check_mark_icon.jpg' | relative_url }}"/> status and for the Reference object
+    if reference object is not defined then we can observe the <img src="{{ '/assets/icons/pre_icons/mo_dis_bw_dies_read_from_db_question_mark_icon.jpg' | relative_url }}"/> status in Die-Distance tab as shown in <a href="#Fig_9_3_5_Die-_Distance_Stopping_Controls_Expert_mode_window_for_read_from_DB_object"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>6.</a></p>
+  <p> </p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fpg._9.3.4.a_Stopping_distance_based_on_die_distance"></a><img height="450" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image002.jpg' | relative_url }}" width="460"/></p>
+  <p class="Fig_name" style="text-align: center">(a)</p>
+  <p class="Fig_name" style="text-align: center"><br/>
+    <img height="450" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image003.jpg' | relative_url }}" width="460"/></p>
+  <p class="Fig_name"><a id="Fig._9.3.4.b_Stopping_distance_based_on_die_distance"></a>(b)</p>
+  <p class="Fig_numb">Stopping distance based on die distance; (a) Defining the first reference point (b) Defining the second reference point</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_9_3_5_Die-_Distance_Stopping_Controls_Expert_mode_window_for_read_from_DB_object"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image008.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Die- Distance Stopping Controls Expert mode window for read from DB object.</p>
+  <p> </p>
+  <p>Defining a stopping distance,</p>
+  <ol class="Decimal">
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select which object is to be used for Reference 1.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select either node or co-ordinate for Reference 1 object and then pick the appropriate point on reference 1 object as shown in <a href="#Fpg._9.3.4.a_Stopping_distance_based_on_die_distance"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>5..(a)</a>.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select which object is to be used for Reference 2.</li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Select either node or co-ordinate for Reference 2 object and then pick the appropriate point on reference 2 object as shown in <a href="#Fig._9.3.4.b_Stopping_distance_based_on_die_distance"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>5.(b).</a></li>
+    <li style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5">Set the distance method and the distance at which to stop the simulation.</li>
+  </ol>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"> </p>
+  <p style="font-family: Arial;font-size: 12pt;text-align: justify;line-height: 1.5"><strong>Check only after energy consumed </strong>: This option is newly added in v12.1.1, check only after energy consumed option will get activates only for energy based movement type (Hammer and Screw press movement). When user turned on the &quot;Check
+    only after energy consumed&quot; check box, during simulation Die distance stopping criteria will be calculated only when energy is fully consumed instead end of each step.</p>
+  <h2> <a id="9.3.12._Stopping_Plane_(REFPOS)"></a>Stopping Plane (REFPOS) [2D, 3D]</h2>
+  <p>Typically used in the models like transient rolling process, user can define a plane in space, and have the simulation terminate once the work piece completely crosses this plane. (See <a href="#Fig._9.3.6._Stopping_distance_based_on_stopping_plane"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>7.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._9.3.6._Stopping_distance_based_on_stopping_plane"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image004.jpg' | relative_url }}"/></p>
+  <p class="Fig_numb">Stopping distance based on stopping plane</p>
+  <p> </p>
+  <p>From v13.0, we can define the Reference plane data separately for each deformable object. </p>
+  <p><br/> To define the Reference plane stopping controls, first select the reference object from pulldown list and check the Defined check box and then define the Origin value (to define the location of the plane) and Vector data (to define the normal
+    for the plane).<br/> We must define the Vector value w.r.t the reference object movement direction.<br/> User can also click on the object in display region to select deformable object and its origin data. </p>
+  <p> </p>
+  <p>When the reference object whole region crosses the defined plane during simulation, then the simulation terminates with below message.<br/> &quot;  PROGRAM STOPPED!<br/>  Stopping plane: All nodes of Object     1 has exited the die/roll.&quot;  </p>
+  <p> </p>
+  <p><em><strong>Note</strong>: Only Plastic and Elasto-plastic objects will be listed under Object list for Stopping plane stopping controls.</em></p>
+  <p><br/>
+    <strong>For example: </strong></p>
+  <p><strong></strong><br/> In 2D rolling operation, </p>
+  <ol class="Decimal">
+    <li>
+      <p>Define the Stopping Plane data by selecting &quot;Workpiece&quot; object in list and by checking &quot;Defined&quot; check box.</p>
+    </li>
+    <li>
+      <p>Then define the origin as 0, 0, to define the location of the plane. </p>
+    </li>
+    <li>
+      <p>Now, define the Vector as &quot;-1&quot; in X field (to define the normal w.r.t stopping plane) as shown in below  <a href="#Fig_9_3_7_Defining_2D_Stopping_Plane_in_rolling_operation"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>8.</a>. </p>
+    </li>
+  </ol>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_9_3_7_Defining_2D_Stopping_Plane_in_rolling_operation"></a><img height="426" src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image010.jpg' | relative_url }}" width="750"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb" style="text-align: center;">Defining 2D Stopping Plane in rolling operation </p>
+  <h2><a id="9.3.13._Temperature_stopping_control"></a>Temperature stopping control [2D, 3D]</h2>
+  <p>This thermal stopping control used to control the temperature of objects in the process. User can define min and max temperature as a stopping control in the objects level (see <a href="#Fig._9.3.8._Stopping_control_based_on_thermal"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>9.</a>).
+    This can be accessed from Object data definition window Object Properties- Thermal tab.  </p>
+  <p> </p>
+  <p><strong>Object </strong></p>
+  <p>Reference object for thermal stopping controls will be selected under Object list.</p>
+  <p> </p>
+  <p><strong>Stopping Method</strong><br/>
+    <strong>None</strong>: Applies no thermal stopping controls</p>
+  <p><strong>Any Node</strong>: Simulation stops when any node in the billet reaches the specified value.</p>
+  <p><strong>All Nodes</strong>: Simulation stops when all the nodes in the billet reach the specified value.</p>
+  <p><strong>Selected Node</strong>:Simulation stops when specified node in the billet reaches the specified value.</p>
+  <p><strong>Average All Nodes</strong>: Simulation stops when average temperature of all the nodes in the billet reaches the specified value.</p>
+  <p><strong>Average surface Temp +Max. Temp</strong>: Simulation stops when average temperature of all the nodes</p>
+  <p>on the surface of billet + Maximum temperature in the billet reaches the specified value.</p>
+  <p> <br/>
+    <strong>Temperature Range</strong><br/> Apart from single value a range of temperature also can be used to stop the simulation.</p>
+  <p><strong>Stop when temperature is outside range</strong>: Simulation stops when the temperature value is outside the specified range.</p>
+  <p><strong>S</strong><strong>top when temperature is inside range</strong>: Simulation stops when the temperature value is inside the specified range.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._9.3.8._Stopping_control_based_on_thermal"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image005.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Stopping control based on thermal</p>
+  <h2><a id="9.3.14._ALE_Steady_state_(ALECON)"></a>ALE Steady state (ALECON) [3D]</h2>
+  <p>From DEFORM V12, user can define ALE steady state (<a href="../../keyword_documentation/a/alecon.htm">ALECON</a>) stopping criteria for ALE rolling operation in Stopping controls - ALE Steady state stopping control tab. (See <a href="#Fig._9.3.9._ALE_Steady_state_stopping_criteria"><span data-keyref="Chapter_9_3_Stopping_controls">Fig. 9.3.</span>10.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig._9.3.9._ALE_Steady_state_stopping_criteria"></a><img src="{{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image006.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">ALE Steady state stopping criteria</p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="9_1_simulation_type_settings.htm">9.1. Simulation type Settings</a> <br/>
+    <a href="9_2_defining_step.htm">9.2. Defining Step</a> <br/>
+    <a href="9_4_remesh_criteria.htm">9.4. Remesh Criteria</a> <br/>
+    <a href="9_5_solver_settings.htm">9.5. Solver Settings</a> <br/>
+    <a href="9_6_process_conditions.htm">9.6. Process Conditions</a> <br/>
+    <a href="9_7_advanced_options.htm">9.7. Advanced Options</a> <br/>
+    <a href="9_8_control_files.htm">9.8. Control Files</a> <br/>
+    <a href="9_9_thermomechanical_variables.htm">9.9. Thermomechanical variables</a> </p>
+
+</body></html>

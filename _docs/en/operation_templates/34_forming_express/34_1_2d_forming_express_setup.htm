@@ -1,0 +1,986 @@
+---
+lang: en
+title: "34.1. 2D Forming Express Setup"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.6.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/sftc_suggest_deform/topicheader.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>34.1. 2D Forming Express Setup</title>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>34.1. 2D Forming Express Setup</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/operation_templates/34_forming_express/34_1_2d_forming_express_setup.css"/>
+<meta name="brsnext" value="Documentation_content/Operation_Templates/34_Forming_Express/34_2_3D_Forming_Express_Setup.htm"/><meta name="brsprev" value="Documentation_content/Operation_Templates/34_Forming_Express/34_Introduction_to_Forming_Express.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="34.1. 2D Forming Express Setup">
+        <span>34.1. 2D Forming Express Setup</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>34.1. 2D Forming Express Setup</h1>
+  <p><a href="#34_1_1_How_to_add_Forming_Express_operation">34.1.1. How to add 2D Forming Express operation</a></p>
+  <p><a href="#34_1_2_Process_settings_definition">34.1.2. Process settings definition</a></p>
+  <p><a href="#34_1_3_Temperature_Calculation_settings">34.1.3. Temperature Calculation settings</a></p>
+  <p><a href="#34_1_4_Select_objects">34.1.4. Select objects</a></p>
+  <p><a href="#34_1_5_Object_Basic_definition">34.1.5. Object Basic definition</a></p>
+  <p><a href="#34_1_6_Object_geometry_definition">34.1.6. Object geometry definition</a></p>
+  <p><a href="#34_1_7_Object_Mesh_Definition">34.1.7. Object Mesh Definition</a></p>
+  <p><a href="#34_1_8_Material">34.1.8. Material</a></p>
+  <p><a href="#34_1_9_Boundary_Conditions">34.1.9. Boundary Conditions</a></p>
+  <p><a href="#34_1_10_Movement_Controls">34.1.10. Movement Controls</a></p>
+  <p><a href="#34_1_11_Positioning">34.1.11. Positioning</a></p>
+  <p><a href="#34_1_12_Scheduled_Positioning">34.1.12. Scheduled Positioning</a></p>
+  <p><a href="#34_1_13_Inter-Object_relations">34.1.13. Inter-Object relations</a></p>
+  <p><a href="#34_1_14_Defining_Primary_Die_Stroke_or_Total_Process_Time">34.1.14. Defining Primary Die Stroke or Total Process Time</a></p>
+  <p><a href="#34_1_15_Stopping_controls">34.1.15. Stopping controls</a></p>
+  <p><a href="#34_1_16_Simulation_controls">34.1.16. Simulation controls</a></p>
+  <p><a href="#34_1_17_Generate DB">34.1.17. Generate DB</a></p>
+  <h2><a id="34_1_1_How_to_add_Forming_Express_operation"></a>How to add 2D Forming Express operation</h2>
+  <p><strong>Forming Express operation is accessible by two ways</strong>,</p>
+  <ol class="Decimal">
+    <li>
+      <p>Forming express independent operation.</p>
+    </li>
+    <li>
+      <p>Forming express MO Wizard Operation.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p><strong>For adding Forming express independent operation</strong></p>
+  <p>Create a new problem by selecting File <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/>   New Problem or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}"/> icon. The Problem Setup window will
+    appear as shown in See <a href="#Fig_34_1_1_Adding_Independent_2D_Forming_Express_operation"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>1.</a> Select the 2D Forming Express radio button. Then Define Problem Name, select
+    Units system radio button in units field in New Problem popup and click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> button for opening a new Problem using the Forming Express wizard.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_1_Adding_Independent_2D_Forming_Express_operation"></a><img height="375" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image001.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Adding Independent 2D Forming Express operation.</p>
+  <p><br/> Then 2D Forming Express operation will open as shown in the <a href="#Fig_34_1_2_Independent_Forming_Express_wizard"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>2.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_2_Independent_Forming_Express_wizard"></a><img height="371" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image002.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Independent Forming Express wizard</p>
+  <p> </p>
+  <p>Here you can add or delete express operations and Simulation operators. Heat transfer express operations has been explained in <span style="color:#0000ff;">section <a href="../36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations.htm">36.1 Introduction to Heat Transfer Express</a></span>.</p>
+  <p>2D to 3D converter operation has been explained in section <span style="color:#0000ff;"><a href="../44_2d_to_3d_converter/44_1_2d_to_3d_converter.htm">44.1. 2D to 3D Convertor</a>.</span></p>
+  <p><span style="color:#000000;">Boolean operations</span> has been explained in section <span style="color:#0000ff;"><a href="../45_boolean_operation/45_1_boolean_operation.htm">45.1. Boolean Operator</a> </span></p>
+  <p><span style="color:#000000;">Copy/Mirroring operation </span>has been explained in section <a href="../46_copy_mirroring/46_1_copy_mirroring.htm">46.1. Copy Mirroring</a></p>
+  <p> </p>
+  <p style="counter-reset: item1 1;"><strong>For Adding Forming Express operation in Integrated Manufacturing Process (MO).</strong></p>
+  <p>Create a new problem either by selecting File <img src="{{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}"/> New Problem or by clicking the New Problem <img src="{{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}" style="cursor: nesw-resize;"/> icon.
+    The Problem Setup window will appear as shown in <a href="#Fig_34_1_3_Opening__MO_wizard"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>3.</a>  Select &quot; Integrated Manufacturing Process&quot; radio button and units
+    system radio button in units field. Define Problem Name  and click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}"/> button to open a new Problem using the Deform Integrated Manufacturing Process (MO).</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_3_Opening__MO_wizard"></a><img height="375" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image003.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Opening  MO wizard</p>
+  <p> </p>
+  <p>MO wizard will open, Forming Express Operation can be added in MO wizard from explorer tab by clicking on <img src="{{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}"/> button next to 2D Forming Express. Also, user can add by drag and drop
+    into the Operation Editor as shown in <a href="#Fig_34_1_4__Added_2D_Forming_Express_operation_into_operation_editor"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>4.</a> Forming express operation can also be added after
+    the Heat transfer operations interactive or in batch/scheduled mode.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_4__Added_2D_Forming_Express_operation_into_operation_editor"></a><img height="371" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image004.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Added 2D Forming Express operation into operation editor</p>
+  <p> </p>
+  <h2><a id="34_1_2_Process_settings_definition"></a>Process settings definition</h2>
+  <p>In Process window simulation modes such as Geometry Type, Process Type and Shape Complexity and Accuracy has to set for the forming express operation as shown in <a href="#Fig_34_1_5_Process_settings_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>5.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_5_Process_settings_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image005.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Process settings window</p>
+  <p> </p>
+  <p><strong>Geometry Type</strong></p>
+  <p>In Forming express only two geometry models can be setup, those are Axisymmetric and Plane Strain.</p>
+  <p>The Axisymmetric models as a cross-section with respect to the central axis. Therefore, the model requires the deforming geometry to be axially symmetric and in the first quadrant and fourth quadrant (i.e. X &gt; 0). In addition, the system assumes
+    that the flow in every radial plane is identical. (See  <a href="../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model"><span data-keyref="Chapter_9_1_Simulation_type_settings">Fig. 9.1.</span>2.</a>)</p>
+  <p>The Plane-strain assumes that the geometry to have an unit depth with both front and back faces constrained. The simulation assumes that the objects will behave identically in any given cross-section across the width and height of the object. (See
+    <a href="../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model"><span data-keyref="Chapter_9_1_Simulation_type_settings">Fig. 9.1.</span>2.</a>)</p>
+  <p>Other Geometry types Plane-stress and Torsion are available only in 2D Forming operation, for details Refer <a href="../33_forming/33_1_2d_forming_setup.htm">2D Forming Setup</a>.</p>
+  <p> </p>
+  <p><strong>Process Type</strong></p>
+  <p>Three Process types Cold forming, Warm forming and Hot forging are available in Forming express. In Cold forming operation Heat transfer mode will be off, so no temperature calculation happens during simulation. In Warm and Hot forging types Heat transfer
+    mode will be on and Temperature calculation window will activate. Temperature Calculation (See <a href="#Fig_34_1_5_Process_settings_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>5.</a>) window gives options to
+    select Isothermal  and Non Isothermal setup.</p>
+  <p> </p>
+  <p><strong><a id="Shape_Complexity_and_Accuracy"></a>Shape Complexity and Accuracy</strong></p>
+  <p>The shape complexity and simulation accuracy slider bars (See <a href="#Fig_34_1_5_Process_settings_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>5.</a>) influence the mesh settings and number of time steps used
+    in the simulation. This in turn influences the run time and level of detail available in the simulation.</p>
+  <p><strong>Shape Complexity:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Simple</strong>: The geometry of the objects are simple in nature. They require minimum number of elements, are easier to solve and takes less time.</p>
+    </li>
+    <li>
+      <p><strong>Moderate</strong>: The geometry of the objects are moderate (not too complex) in nature.</p>
+    </li>
+    <li>
+      <p><strong>Complex</strong>: The geometry of the objects are complex in nature.</p>
+    </li>
+  </ul>
+  <p><br/>
+    <strong>Shape Accuracy:</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Fast</strong>: Useful for fast evaluation of a process. In exchange for faster run times, there is a higher risk of missing important details.</p>
+    </li>
+    <li>
+      <p><strong>Moderate</strong>: The simulation uses settings which attempt to balance calculation time and accuracy.</p>
+    </li>
+    <li>
+      <p><strong>Accurate</strong>: Very detailed analysis of the process is done, which will generally capture minute details. Calculation time and storage requirements are more.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h2><a id="34_1_3_Temperature_Calculation_settings"></a>Temperature Calculation settings</h2>
+  <p>Temperature Calculation (See <a href="#Fig_34_1_6_Temperature_Calculation_type_settings_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>6.</a>) window gives options to select Isothermal and Non Isothermal setup. Isothermal
+    to keep the temperature constant and Non isothermal to calculate temperature in only workpiece or workpiece and dies.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_6_Temperature_Calculation_type_settings_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image006.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Temperature Calculation type settings window</p>
+  <p> </p>
+  <p><strong>Isothermal</strong>: Simulation is treated as constant temperature. Changes in temperature due to deformation, heating or heat exchange with environment are ignored. Appropriate for processes where change in temperature do not significantly
+    influence simulation results. Examples include: most cold forming processes and hot forming processes where the effect of temperature change is neglected for convenience. In this setup dies neither have mesh nor temperature calculation.<br/>
+    <strong>Non-isothermal</strong>: A process in which the temperature of system is not constant. Adding temperature calculations will improve material flow predictions and load predictions, particularly in processes where there are substantial changes
+    in temperature. Calculating temperature in tools further improves workpiece temperature calculation, because evolving tool temperature influences heat loss from the workpiece.</p>
+  <h2><a id="34_1_4_Select_objects"></a>Select objects</h2>
+  <p>User can select the number of objects that is required to perform the operation from this window depending on the process set up (See <a href="#Fig_34_1_7_Objects_selection_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>7.</a>).
+    User has to note that we can have only one plastic object in a simulation. A maximum of 100 dies can be added.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_7_Objects_selection_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image007.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Objects selection window</p>
+  <p> </p>
+  <h2><a id="34_1_5_Object_Basic_definition"></a>Object Basic definition</h2>
+  <p>Object basic definition includes object name, type and temperature. In addition to this object state variable values can be initialized by using Advanced button and object data like geometry, mesh, boundary conditions and material can be imported from
+    DEFORM .DB /.Key file. (See <a href="#Fig_34_1_8_Workpiece_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>8.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_8_Workpiece_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image008.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Workpiece window</p>
+  <p><br/>
+    <strong>Object </strong><strong>Name</strong>: User can define the name for all the objects available in the operation.</p>
+  <p> </p>
+  <p><strong>Object </strong><strong>Type</strong>: The object type (<a href="../../keyword_documentation/o/objtyp.htm">OBJTYP</a>) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only
+    two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are explained in chapter 11. General Object Data Definition,
+    for details refer  <a href="../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type">11.4. Object Type</a>.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Plastic</strong>: Plastic objects are modeled as rigid-plastic or rigid-viscoplastic materials depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold
+        strain rate, referred to as the limiting strain rate (<a href="../../keyword_documentation/l/lmtstr.htm">LMTSTR</a>). The material deforms plastically beyond the limiting strain rate. The plastic material behavior of the object is specified with
+        a material flow stress function or flow stress data (<a href="../../keyword_documentation/f/fstres.htm">FSTRES</a>). In Forming Express operation workpiece is automatically assigned to Plastic object type.</p>
+    </li>
+    <li>
+      <p><strong>Rigid</strong>: Rigid objects are modeled as non-deformable materials. In the deformation analysis, the object geometry is represented by a geometric profile (<a href="../../keyword_documentation/d/diegeo.htm">DIEGEO</a>). Deformation solution
+        data available for rigid objects include object stroke, load, and velocity. The geometric profile is used for all deformation analysis and the mesh for the rigid object is used for all thermal, transformation and diffusion calculations. In Forming Express,
+        dies or tools  are automatically assigned to Rigid as they are non-deformable objects.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong></p>
+  <p class="Note_text">Should note that object type is predefined by object number in Forming Express.</p>
+  <p class="Note_text">There is an Import Object button on the Object page. This is for importing complete object data from another DEFORM file.</p>
+  <p> </p>
+  <p><strong>Object Temperature</strong>: User can define the object temperature in the Temperature field of the respective object window as shown in <a href="#Fig_34_1_8_Workpiece_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>8.</a></p>
+  <p><br/>
+    <strong>Advanced Object Settings</strong>: The advanced setting Initialization options (See <a href="#Fig_34_1_9_Advanced_object_settings"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>9.</a>) will be useful when user
+    import the object from previously run project or problem or when forming express operation is added after few other operations and if there is need to initialize few important state variables.</p>
+  <p><br/> The user can initialize temperature, strain, velocity, damage and displacement that has taken place in the deformable object using the advanced setting options. (See <a href="#Fig_34_1_9_Advanced_object_settings"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>9.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_9_Advanced_object_settings"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image009.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced object settings</p>
+  <p> </p>
+  <p>More variables can be initialized in Forming operation, for detail refer <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm">19. Object Positioning</a>.</p>
+  <p><br/> The average strain rate (<a href="../../keyword_documentation/a/avgstr.htm">AVGSTR</a>) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation.</p>
+  <p> </p>
+  <p>The limiting strain rate (<a href="../../keyword_documentation/l/lmtstr.htm">LMTSTR</a>) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material.</p>
+  <p><br/>
+    <img src="{{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}"/> : Using this user can rest back the initialized state variables value.</p>
+  <p><br/> For more Deformation object properties options available in Forming operation refer <a href="../../pre_processor/16_object_properties/16_1_deformation_properties.htm">16.1. Deformation Properties.</a></p>
+  <p> </p>
+  <h2><a id="34_1_6_Object_geometry_definition"></a>Object geometry definition</h2>
+  <p>Geometry window is used to create the geometry of an object as shown in <a href="#Fig_34_1_10_Geometry_definition_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>10.</a> Before creating geometry only Define Primitive
+    and Edit Geometry options are available but after creating geometry Check, Scale and Reverse geometry options will activate and after generating mesh Extract from mesh option will activate.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_10_Geometry_definition_window"></a><img height="259" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image010.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry definition window</p>
+  <p> </p>
+  <p><strong>Define primitive  <img src="{{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}"/></strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>For Axisymmetric Type: </strong>There are five primitive shapes in geometry primitive page that can be used to generate geometries as shown in <a href="#Fig_34_1_11_Geometry_primitive_window_for_Axisymmetric_geometry_type"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>11.</a>        In each case, the user has to scale appropriately to the problem by defining the dimensions.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_34_1_11_Geometry_primitive_window_for_Axisymmetric_geometry_type"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image011.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry primitive window for Axisymmetric geometry type</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>For Plane strain Type: </strong>There are three primitive shapes in geometry primitive page that can be used to generate geometries as shown in <a href="#Fig_34_1_12_Geometry_primitive_window_for_Plane_strain_geometry_type"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>12.</a>        In each case, the user has to scale appropriately to the problem by defining the dimensions.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_34_1_12_Geometry_primitive_window_for_Plane_strain_geometry_type"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image012.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Geometry primitive window for Plane strain geometry type</p>
+  <p> </p>
+  <p><strong>Check  <img height="19" src="{{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}" width="38"/></strong></p>
+  <p>Once the geometry of the object is created, <img src="{{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}"/> button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the <strong><img height="19" src="{{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}" width="38"/></strong> button. Check
+    and correct Geometry window appears as shown in below <a href="#Fig_34_1_13_Check_and_correct_Geometry_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>13.</a> The Geometry gets corrected, if they are any errors,
+    when we click on <img height="21" src="{{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}" width="83"/>  button. A message saying, &quot;Geometry is legal&quot; will appear once the geometry is corrected or does not have any errors
+    and then click on <img src="{{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}"/>. For more information please refer <a href="../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry">Check Geometry</a> in Chapter
+    <a href="../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm">12.1. 2D Geometry Data Defining</a>.</p>
+  <p> </p>
+  <p style="text-align: center">  <a id="Fig_34_1_13_Check_and_correct_Geometry_window"></a><img height="487" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image013.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Check and correct Geometry window</p>
+  <p> </p>
+  <p><strong>Scale <img src="{{ '/assets/icons/pre_icons/mo_scale_label.jpg' | relative_url }}"/>  </strong></p>
+  <p>Geometry can be scaled in forming operation to accommodate thermal expansion by specifying the scaling factor. (See <a href="#Fig_34_1_14_cale_Geo_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>14.</a>) The scaling
+    factor can be calculated by temperature differential and temperature dependent material data. The scaled geometry can be saved into different Geometry saving formats.</p>
+  <p>  </p>
+  <p style="text-align: center"><a id="Fig_34_1_14_cale_Geo_window"></a><img height="265" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image014.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scale Geo window</p>
+  <p> </p>
+  <p><strong>Reverse <img src="{{ '/assets/icons/pre_icons/mo_reverse_label.jpg' | relative_url }}"/>  </strong></p>
+  <p>This feature reverses the orientation of the geometry. Orientation of the 2D geometry must be always inside for single loop geometry, for multiple loop geometry the loop which share between the two regions can have the orientation on either side but
+    topology must be defined.</p>
+  <p> </p>
+  <p><strong>Extract from mesh  <strong><img src="{{ '/assets/icons/pre_icons/mo_extract_from_mesh.jpg' | relative_url }}" style="cursor: nwse-resize;"/></strong></strong>
+  </p>
+  <p>This feature extracts the geometry data from the current database meshed object for all object types except the rigid object.</p>
+  <p> </p>
+  <p><strong>Edit  <img src="{{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}"/></strong></p>
+  <p>The Geometry editing option is used to create geometry for an object or edit the existing geometry. Imported geometry can be modified in Edit Geometry window. In Geometry page click on <img src="{{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}"/> label
+    and observe the options available to create and modify the geometry as shown in <a href="#Fig_34_1_15_Edit_Geometry_Window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>15.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_15_Edit_Geometry_Window"></a><img height="468" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image015.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Edit Geometry Window</p>
+  <p> </p>
+  <p>Geometry can be created by using the create loop tool or by entering the geometry coordinates in Geometry editor table at right side bottom of the window as shown in <span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span><a href="#Fig_34_1_15_Edit_Geometry_Window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>15.</a>    either in XYR or Line-Arc mode. For more details on 2D geometry editor refer the chapter <a href="../../pre_processor/12_geometry_modelling/12_2_2d_geometry_editing.htm">12.2. 2D Geometry Data Editing</a>.</p>
+  <p> </p>
+  <p><strong>Other Geometry options</strong></p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Show Geometry inside mark</strong>: Checking this option enables the Geometry orientation display.</p>
+    </li>
+    <li>
+      <p><strong>Define reference point</strong>: User can select the geometry reference point by clicking on this button from display window. This reference point is required to define the distance between objects stopping controls stopping controls.</p>
+    </li>
+    <li>
+      <p><strong>Import Geometry from a file</strong> <img src="{{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}"/>  : Using this option user can import the  geometry from a file.</p>
+    </li>
+    <li>
+      <p><strong>Load Geometry from Library</strong> <img src="{{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}"/> : Using this option user can imports geometry from Library.</p>
+    </li>
+    <li>
+      <p><strong>Save the Geometry to a file</strong> <img src="{{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}"/>: It saves the Geometry to a file.</p>
+    </li>
+    <li>
+      <p><strong>Save Geometry to Library</strong> <img src="{{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}"/>: Using this option user can save geometry to the library.</p>
+    </li>
+    <li>
+      <p><strong>Delete Geometry</strong> <img src="{{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}"/> : Using this option user can delete the geometry.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <h2><a id="34_1_7_Object_Mesh_Definition"></a>Object Mesh Definition</h2>
+  <p>The Mesh Generation window allows the user to generate a mesh for the current object. Below <a href="#Fig_34_1_16__Mesh_settings_window_in_System_mode"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>16.</a> shows the Mesh
+    generation window in system mode. In this mode system automatically sets the number of mesh elements based on the shape complexity and accuracy setting selection in process window.</p>
+  <p> </p>
+  <p><strong>System Mode</strong>: Using <strong>Generate Mesh</strong> user has to generate mesh for objects and after generating the mesh <strong>Delete </strong>Mesh button will get activate, useful to delete the current mesh of the object.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_16__Mesh_settings_window_in_System_mode"></a><img height="469" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image016.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Mesh settings window in System mode</p>
+  <p> </p>
+  <p><strong>User Defined Mode</strong>: For user defined mesh mode option see <a href="#Fig_34_1_17_User_defined_mode_mesh_settings"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>17.</a>, in this mode user can vary number of
+    elements by adjusting the slider bar and use advanced options to change the Size ratio, Thickness elements, Weighting factor and Remesh criteria.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_17_User_defined_mode_mesh_settings"></a><img height="244" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image017.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">User defined mode mesh settings</p>
+  <p> </p>
+  <p><strong>Number of elements (MGNELM)</strong></p>
+  <p>The number of mesh elements  represents the approximate number of elements that will be generated by the system. The Automatic Mesh Generator (AMG) takes the value for <span><a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> </span>and generates
+    a mesh that will contain approximately the same number of elements.</p>
+  <p> </p>
+  <p>The error between the number of specified elements and the number of generated elements is typically about ten per-cent. When the mesh is generated, the specified total number of elements is used in conjunction with the &quot;Point&quot; and &quot;Parameter&quot;
+    controls to determine the mesh density.</p>
+  <p> </p>
+  <p><strong>Advanced Mesh Options</strong></p>
+  <p><strong>General Settings</strong></p>
+  <p>In addition to the Number of elements user can select Thickness elements and Size ratio values to get desired mesh.</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Number of thickness elements (MGTELM) : </strong>The max thickness ratio is one of several ways to control the mesh density during automatic mesh generation (AMG). The number of elements in thickness direction represents the approximate
+        number of elements that will be generated by the system across the thickness direction of any region of the part. The Automatic Mesh Generator (AMG) takes the value for <a href="../../keyword_documentation/m/mgtelm.htm">MGTELM</a> and generates
+        a mesh that will have that number of elements across the thinnest portion. For instance, if <a href="../../keyword_documentation/m/mgtelm.htm">MGTELM</a> is set to 4, the AMG will try to have 4 elements across the thickness of the geometry.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="margin-left:40px;"><span>The thickness direction of an object is perpendicular to a branched centre line axis for each region of the part.  The total number of elements to be generated in a mesh is controlled by the value of number of elements in keyword <span><a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> </span>.
+     If the value of thickness elements results in a mesh that contains more than the value specified in <span><a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> </span>elements, the value of <a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a>    would be scaled down so that the mesh contains approximately <span><a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> </span>elements. If the value of <span><a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> </span>results in
+    a mesh that contains fewer than <span><a href="../../keyword_documentation/m/mgnelm.htm">MGNELM</a> </span>elements, the remaining elements will be distributed to other user specified mesh density controls (curvature, strain, strain rate, and temperature).</span>
+  </p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Element size ratio (MGSIZR) : </strong>The maximum size ratio between elements is one of several ways to control the mesh density during automatic mesh generation (AMG) by specifying the ratio of node densities.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p style="margin-left:40px;">For a value of 3 for <a href="../../keyword_documentation/m/mgsizr.htm">MGSIZR</a>, the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then Size
+    Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.</p>
+  <p> </p>
+  <p><strong>Weighing Factors</strong></p>
+  <p>The weighting factors or parameters (system defined mesh density) for boundary curvature, temperature, strain and strain rate specify relative mesh density weights to be assigned to the associated parameter.(See  <a href="#FIg_34_1_18_Weighting_factors_settings_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>18.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="FIg_34_1_18_Weighting_factors_settings_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image018.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Weighting factors settings window</p>
+  <p> </p>
+  <p>Temperature, strain, and strain rate densities are assigned based on gradients in these parameters, not absolute parameter values. That is, a region with a rapid temperature change in a particular direction will receive more elements than a region with
+    a uniform high temperature.</p>
+  <p> </p>
+  <p>The values from all the mesh density keywords are combined during the mesh generation process to create a mesh density distribution within the geometric boundary.</p>
+  <p> </p>
+  <p>Forming operation contains other weighting factor that is, Mesh Density window options using this user can define specific area in space which will move with other objects during deformation with an appropriate mesh density, please refer chapter
+    <a href="../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.5._Mesh_weighting_factors">13.1.5. Mesh Weighting factors.</a>
+  </p>
+  <p> </p>
+  <p><strong>Remeshing criteria</strong></p>
+  <p>Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See <a href="#Fig_34_1_19_Remeshing_Criteria_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>19.</a>)
+    contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they
+    are Interference Depth (<a href="../../keyword_documentation/r/rmdpth.htm">RMDPTH</a>),Max. Time Increment (<a href="../../keyword_documentation/r/rmtime.htm">RMTIME</a>), Max. Step Increment (<a href="../../keyword_documentation/r/rmstep.htm">RMSTEP</a>)
+    and Max. Stroke Increment (<a href="../../keyword_documentation/r/rmstrk.htm">RMSTRK</a>). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed. During
+    the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues. For more information on Remesh Criteria, please
+    refer <a href="../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.8._Remeshing_criteria">13.1.8. Remeshing criteria.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_19_Remeshing_Criteria_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image019.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Remeshing Criteria window</p>
+  <p> </p>
+  <p><strong>Advanced Settings</strong></p>
+  <p>Below <a href="#Fig_34_1_20_Advanced_mesh_settings_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>20.</a> shows the Advanced Settings window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_20_Advanced_mesh_settings_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image020.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced mesh settings window</p>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Grid resolution (<a href="../../keyword_documentation/m/mggrid.htm">MGGRID</a>) : </strong>When an object is meshed in 2D, a sampling grid is required to discretize density of the mesh throughout the starting geometry. Grid resolution (
+        <a href="../../keyword_documentation/m/mggrid.htm">MGGRID</a>) specifies the spacing of the sampling grids that are used to sample mesh densities. Increasing the value of X division or Y division will result in sharper gradients between areas of
+        differing mesh density.  In the case of blanking, where a very high mesh gradient is required over a narrow region, these values may need to increase to capture high changes in mesh gradient over short distances.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li>
+      <p><strong>Node addition parameters (<a href="../../keyword_documentation/m/mgerr.htm">MGERR</a>) : </strong>The node addition parameters (<a href="../../keyword_documentation/m/mgerr.htm">MGERR</a>) specify the maximum distance and angle error permitted
+        between the object boundary and its associated grid element side.  The distance and angle tolerances are used to capture critical boundary geometry that might otherwise be lost when the mesh is generated.  If an object is required to capture very
+        small features, the maximum distance can be decreased or if a node needs to be placed on a shallow angle, the angle error can be decreased as well.  Rarely will the user ever have to change these values. For parts that are very small, a value
+        of 0.01% of the object’s bounding box is a good starting number that can be used for <a href="../../keyword_documentation/m/mgerr.htm">MGERR</a>for better handling of mesh resolution.</p>
+    </li>
+  </ul>
+  <p> </p>
+  <p><strong>Check Mesh  <img src="{{ '/assets/icons/pre_icons/mo_check_mesh_button.jpg' | relative_url }}"/></strong></p>
+  <p>The mesh can be examined for problems using the Check Mesh function. A perfect mesh will give the popup as shown in the <a href="#Fig_34_1_21_Check_mesh_popup_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>21.</a>, when
+    user clicks on check mesh option.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_21_Check_mesh_popup_window"></a><img src="{{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image003.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Check mesh popup window</p>
+  <p> </p>
+  <p><strong>Delete Mesh </strong><img src="{{ '/assets/icons/pre_icons/mo_delete_mesh_button.jpg' | relative_url }}"/>  <br/> Deletes the mesh generated for the object.</p>
+  <p> </p>
+  <p><strong>Show mesh </strong> <img src="{{ '/assets/icons/pre_icons/mo_show_mesh_button.jpg' | relative_url }}"/></p>
+  <p>When user clicks on show mesh it shows the generated mesh in display window. Show mesh button toggles between display of mesh and geometry of the object.</p>
+  <p> </p>
+  <p><strong>Default Setting <img src="{{ '/assets/icons/pre_icons/mo_default_settings_button.jpg' | relative_url }}"/></strong></p>
+  <p>When user clicks on Default settings tab all the settings will be changed to default values, by default Mesh window will be in greyed out mode as no mesh windows are defined. If user wants to activate mesh window, user has to change the weighting factor
+    for mesh density by increasing the sliding bar value to 1.</p>
+  <p> </p>
+  <p>Coating mesh and User Mesh Density Window options are not available in Forming express operation unlike in Forming operation, for these options refer <a href="../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.7._Coating">13.1.7. Coating Mesh</a>    and <a href="../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.6._Mesh_density_windows"> 13.1.6. Mesh Density windows</a> respectively.</p>
+  <p> </p>
+  <h2><a id="34_1_8_Material"></a>Material</h2>
+  <p>Below <a href="#Fig_34_1_22_Material_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>22.</a> shows the material window. User can add or import material from a keyword file or load  from DEFORM material library.</p>
+  <p><br/> After loading system automatically assign the loaded material to an object. User can also edit Plastic and Thermal properties, those are Flow stress, Thermal Conductivity, Heat Capacity, Mass Density and Emissivity using <img src="{{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}"/> button.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_22_Material_window"></a><img height="477" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image021.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material window</p>
+  <p> </p>
+  <p>Once after adding material click on <img src="{{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}"/> button, material window will open as shown in <a href="#Fig_24_1_23_Material_editing_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>23.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_24_1_23_Material_editing_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image022.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Material editing window</p>
+  <p> </p>
+  <p>The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. In chapter <a href="../../pre_processor/10_material_data/10_material_data.htm">10. Material Data</a>    user can get access to all material properties for more information refer <a href="../../pre_processor/10_material_data/10_material_data.htm">10. Material Data</a>.</p>
+  <p> </p>
+  <h2><a id="34_1_9_Boundary_Conditions"></a>Boundary Conditions</h2>
+  <p>In Forming express Boundary conditions window, user can assign only Deformation velocity and Thermal Heat exchange with Environment and Temperature boundary constraints for an object. Boundary conditions specify how the boundary of an object interacts
+    with other objects and with the environment. The most commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer, prescribed velocity for enforcing symmetry in the model. <a href="#Fig_34_1_24_Symmetry_boundary_condition_assigned_for_workpiece"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>24.</a>    shows various BCC that can be assigned to an object.</p>
+  <p><br/> By default velocity along the centerline of the workpiece object will be fixed in axisymmetric geometry type as shown in<span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span> <a href="#Fig_34_1_24_Symmetry_boundary_condition_assigned_for_workpiece"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>24.</a>    . and also heat exchange with environment will be assigned to all surfaces except the symmetric surface for warm and hot forging process as shown in <a href="#Fig_34_1_25_Heat_exchange_with_environment_boundary_condition_assigned_for_workpiece"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>25.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_24_Symmetry_boundary_condition_assigned_for_workpiece"></a><img height="371" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image023.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Symmetry boundary condition assigned for workpiece</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_25_Heat_exchange_with_environment_boundary_condition_assigned_for_workpiece"></a><img height="371" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image024.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Heat exchange with environment boundary condition assigned for workpiece</p>
+  <p> </p>
+  <p>The BCC’s are categorized as <a href="../../pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions.htm">Deformation</a>,<a href="../../pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions.htm">Thermal</a>, <a href="../../pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions.htm">Diffusion</a>    and <a href="../../pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions.htm">Heating</a>. For more information about these BCC&#39;s please refer <a href="../../pre_processor/14_boundary_conditions">14. Boundary Conditions.</a></p>
+  <p> </p>
+  <h2><a id="34_1_10_Movement_Controls"></a>Movement Controls</h2>
+  <p>Movement controls can be applied to rigid objects and boundary nodes of meshed objects. The surface defined by these nodes can be thought of as a &quot;rigid surface&quot;. During the simulation, the constrained nodes will move synchronously in the
+    speed and direction defined by the movement controls. Only translational movement type is available in Forming express out of three types of Movement types available in 2D Environment (Forming operation) those are Translation, Rotation and Torsion.</p>
+  <p> </p>
+  <p><strong>Translational Movement:</strong></p>
+  <p>During the simulation the constrained nodes will move synchronously in the speed and direction defined by the movement controls. (See <a href="#Fig_34_1_26_Translational_Movement_controls_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>26.</a>)</p>
+  <p><br/> In Forming express only six types of Movement controls are available in Translation Movement type, those are <a href="../../pre_processor/15_movement_controls_definition/15_1_speed.htm">Speed</a>, <a href="../../pre_processor/15_movement_controls_definition/15_2_force.htm">Load</a>,
+    <a href="../../pre_processor/15_movement_controls_definition/15_3_hammer.htm">Hammer</a>, <a href="../../pre_processor/15_movement_controls_definition/15_4_screw_press.htm">Screw press</a>, <a href="../../pre_processor/15_movement_controls_definition/15_5_mechanical_press.htm">Mechanical press</a>,
+    <a href="../../pre_processor/15_movement_controls_definition/15_6_hydraulic_press.htm">Hydraulic press</a>. Forming operation contains <a href="../../pre_processor/15_movement_controls_definition/15_7_sliding_die.htm">Sliding Die</a> and <a href="../../pre_processor/15_movement_controls_definition/15_8_path.htm">Path</a>    translational movement controls in addition to the forming express and also contains rotational and Torsional movement types, for more information refer <a href="../../pre_processor/15_movement_controls_definition/15_movement_controls_settings.htm">15. Movement Controls.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_26_Translational_Movement_controls_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image025.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Translational Movement controls window</p>
+  <p> </p>
+  <p>The lower portion of the movement controls window (See <a href="#Fig_34_1_26_Translational_Movement_controls_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>26.</a>) allows the user to import movement specifications
+    from other keyword or database files and to load press information from the library, save the movement controls to a file or movement library, observe the preview and delete the defined the movement definition. User can also load the movement from
+    press library using explorer as shown in <a href="#Fig_34_1_26_Translational_Movement_controls_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>26.</a></p>
+  <p> </p>
+  <p><strong>Speed: </strong>This is the default movement control. This specifies the speed and direction of a tool as shown in <a href="#Fig_34_1_26_Translational_Movement_controls_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>26.</a></p>
+  <p> </p>
+  <p><strong>Load/Force Control: </strong>For force control, the speed of the object is constrained such that the specified load is maintained. When the object is rigid, the load is the resultant load applied by a non-rigid object due to the relative motion
+    of the two objects. User need to specify the Load magnitude and direction as shown in <a href="#Fig_34_1_27_Load_Movement_controls_settings"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>27.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_27_Load_Movement_controls_settings"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image026.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Load Movement controls settings</p>
+  <p> </p>
+  <p><strong>Mechanical Press</strong>: The Mechanical Press type replicates the cyclic motion of a mechanical press (See <a href="#Fig_34_1_28_Mechanical_movement_control_settings"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>28.</a>).
+    The &quot;Mechanical Press&quot; option simulates the motion of objects driven by a mechanical press. In Forming express only Mechanical Crank press control is available in addition to this knuckle press control will be available in Forming operation,
+    for knuckle press information refer <a href="../../pre_processor/15_movement_controls_definition/15_5_mechanical_press.htm#15_5_2_Knuckle_or_Wedge_Press">15.5.2. Knuckle Press.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_28_Mechanical_movement_control_settings"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image027.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Mechanical movement control settings</p>
+  <p> </p>
+  <p>If user defines the movement type for Primary Die as Mechanical Press then the movement control definitions for all other objects will be deleted and also user cannot define movement controls for other objects.</p>
+  <p><br/> The parameters required to specify the movement of a mechanical press are:</p>
+  <p> </p>
+  <p><strong>Total stroke</strong>:  The total stroke for the mechanical press represents the total travel of the die from its top position to its lowest position. The unit in English units is inch and in SI units is mm.</p>
+  <p> </p>
+  <p><strong>Forming Stroke</strong>: is the distance the primary die travels from operation start to bottom dead center.</p>
+  <p> </p>
+  <p><strong>Current Stroke</strong>: is a vector which shows the current distance travelled by the top die and it’s direction along the movement axis.</p>
+  <p> </p>
+  <p><strong>Strokes per second</strong>:  The Strokes per seconds represents the frequency of the press blows. This is a measure of blows per second or cycles per second.</p>
+  <p> </p>
+  <p><strong>Direction</strong>:  Direction is used to designate a direction in which the object&#39;s stroke will be applied.</p>
+  <p> </p>
+  <p><strong>Connecting-Rod Len</strong>gth:  As seen in Fig 2.8.19, the connecting rod length can have an influence on the speed of the ram.  If the length of the connecting rod is known, it can be input as a field.  If it is not known, it can left as zero
+    and its contribution to the ram speed will not be considered.</p>
+  <p> </p>
+  <p><strong>Forming Stroke option</strong> : Now Forming Stroke data can be defined in two ways:</p>
+  <p> </p>
+  <p><strong>Exact forming stroke</strong>: If the exact forming stroke option is chosen, forming stroke = primary die stroke value.</p>
+  <p> </p>
+  <p><strong>Distance between dies</strong> : If the distance between dies option is chosen, forging stroke = (current distance between defined points) – (stopping distance between defined points)</p>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 750px; text-align: center; font-family: Arial; font-size: 12pt;">
+    <colgroup>
+      <col style="width: 200px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 125px;"/>
+      <col style="width: 175px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td colspan="1" rowspan="2" style="font-family: Arial;font-size:12pt">Editable ?</td>
+        <td colspan="1" rowspan="2" style="font-family: Arial;font-size:12pt">First operation</td>
+        <td colspan="2" rowspan="1" style="font-family: Arial;font-size:12pt">Next operation</td>
+        <td colspan="1" rowspan="2" style="font-family: Arial;font-size:12pt">Step Editor</td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial;font-size:12pt">Top die defined</td>
+        <td style="font-family: Arial;font-size:12pt;text-align: center">Top die is Read form DB</td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial;font-size:12pt">Type</td>
+        <td style="font-family: Arial;font-size:12pt">Yes</td>
+        <td style="font-family: Arial;font-size:12pt">Yes</td>
+        <td style="font-family: Arial;font-size:12pt">Yes</td>
+        <td style="font-family: Arial;font-size:12pt">No</td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial;font-size:12pt">Direction</td>
+        <td style="font-family: Arial;font-size:12pt">Yes</td>
+        <td style="font-family: Arial;font-size:12pt">Yes</td>
+        <td style="font-family: Arial;font-size:12pt">Yes</td>
+        <td style="font-family: Arial;font-size:12pt">No</td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial;font-size:12pt">Total stroke, stroke/sec, stiffness, and connecting rod length</td>
+        <td style="font-family: Arial;font-size:12pt">Yes</td>
+        <td style="font-family: Arial;font-size:12pt">Yes</td>
+        <td style="font-family: Arial;font-size:12pt">Yes</td>
+        <td style="font-family: Arial;font-size:12pt">No</td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial;font-size:12pt">Forming stroke option</td>
+        <td style="font-family: Arial;font-size:12pt">Yes</td>
+        <td style="font-family: Arial;font-size:12pt">Yes</td>
+        <td style="font-family: Arial;font-size: 12pt">No*</td>
+        <td style="font-family: Arial;font-size: 12pt">No</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>*If the top die is read from DB then the forming stroke option, forming stroke, and current stroke are hidden.</p>
+  <p> </p>
+  <p>When total stroke is changed the current stroke will be recalculated to maintain the forming stroke value.</p>
+  <p> </p>
+  <p>When importing a project from an older version the system will default to the exact forming stroke method. If a project with distance between dies stopping criteria is imported the system will switch to distance between dies method.</p>
+  <p> </p>
+  <p><strong>Hammer Press : </strong>Hammer forging operation is controlled by energy. During a working stroke, the deformation proceeds until the total kinetic energy is dissipated by plastic deformation of the material and by elastic deformation of ram
+    and anvil when the die and ram faces contact each other.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_29_Hammer_movement_control_settings"></a><img height="468" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image029.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Hammer movement control settings</p>
+  <p> </p>
+  <p>During hammer forging operation, only a portion of the kinetic energy of ram is used for the plastic deformation of work piece. The rest of the energy is lost through anvil and machine frame. These values can be set in the movement controls window.</p>
+  <p><br/> There are basically two types of hammer. The first is an <a href="../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer">anvil type hammer</a> and the other <a href="../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer">counter blow hammer</a>.
+    The formulations and assumptions used for the two types of hammer forging operations refer <a href="../../pre_processor/15_movement_controls_definition/15_3_hammer.htm">15.3. Hammer Energy.</a></p>
+  <p> </p>
+  <p>In an Anvil type hammer, the workpiece, together with the lower die set, is placed on an anvil which is stationary. In a simple gravity drop hammer, the ram is accelerated by gravity and accumulates energy.</p>
+  <p> </p>
+  <p> A counterblow hammer can be specified for movement by selecting the Counter blow hammer checkbox as seen in <a href="#Fig_34_1_29_Hammer_movement_control_settings"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>29.</a> After
+    this, the other moving hammer object can be specified as well as the mass of the other moving hammer. The mass of the objects do not have to be equal but the total energy is split between the two hammer dies.</p>
+  <p> </p>
+  <p>Use blow table: Checking this option user can define the multiple hammer blows as shown in <a href="#Fig_34_1_30__Multiple_hammer_blow_settings_table"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>30.</a> In this window
+    user has to select the number of hits and blow efficiency for each hit. Along with the blows user can select the reheating temperature after each blow, enter the dwell time and flip the workpiece in 2D. So dwell and transfer after each blow can be
+    designed. The strain can also be initialized with reheat by checking the check box, this initializes the accumulated strain after the dwell with initializing to reheat temperature for workpiece.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_30__Multiple_hammer_blow_settings_table"></a><img height="253" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image031.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Multiple hammer blow settings table</p>
+  <p> </p>
+  <p>For more details about Hammer press control refer <a href="../../pre_processor/15_movement_controls_definition/15_3_hammer.htm">15.3. Hammer Energy.</a></p>
+  <p> </p>
+  <p><strong>Hydraulic press: </strong>In Forming Express operation hydraulic press model (See <a href="#Fig_34_1_31_Hydraulic_press_movement_control_settings"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>31.</a>) have only Speed
+    control. Forming operation contains the average strain rate control in addition to speed control, for its information refer <a href="../../pre_processor/15_movement_controls_definition/15_6_hydraulic_press.htm">15.6. Hydraulic Press.</a>. In addition to
+    speed user can enter Power limit, Dwell time and Number of steps for Dwell.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_31_Hydraulic_press_movement_control_settings"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image028.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Hydraulic press movement control settings</p>
+  <p> </p>
+  <p class="Note_text"><strong>Note:</strong></p>
+  <p class="Note_text">To activate maximum speed control, the power limit must be defined.</p>
+  <p> </p>
+  <p>For more details about Hydraulic press control refer to section <a href="../../pre_processor/15_movement_controls_definition/15_6_hydraulic_press.htm">15.6. Hydraulic Press.</a></p>
+  <p> </p>
+  <p><strong>Screw Press</strong></p>
+  <p>The unique characteristic of a screw press (See <a href="#Fig_34_1_32_Screw_press_movement_control_settings"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>32</a>.) is the method of driving it. A motor drives a flywheel which
+    is either directly connected or can be connected to a screw spindle.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_32_Screw_press_movement_control_settings"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image030.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Screw press movement control settings</p>
+  <p> </p>
+  <p>The data required to run a screw press driven tool are:</p>
+  <p><strong>Energy:</strong> The Blow Energy is a measure of the total energy that the flywheel will contain when the desired speed has been reached and prior to engaging the clutch. The units for blow energy in English units are klb-in and in SI units
+    are N-mm.</p>
+  <p><br/>
+    <strong>Blow Efficiency: </strong>The Blow Efficiency represents the fraction of the total energy that will be converted to deformation energy. The rest of the energy is absorbed through the clutch mechanism, friction and the machine frame. There
+    are no units for this quantity. In Forming express only constant value we can use but in forming operation user can also define function of force, for its more information refer <a href="../../pre_processor/15_movement_controls_definition/15_4_screw_press.htm">15.4. Screw Press.</a></p>
+  <p><br/>
+    <strong>Moment of Inertia: </strong>The Moment of Inertia is the moment of inertia of the flywheel. The English units of inertia are klb*in*s2 and the SI units are N-mm*s2. The mass moment of inertia for a circular disc with the Z-axis perpendicular
+    to the center is I = 2 ET /ω2 where ET is the total energy of the flywheel, and ω is the angular<br/> velocity in radians per second.</p>
+  <p><br/>
+    <strong>Ram Displacement or Lead screw pitch:</strong> The Ram Displacement specifies the distance per revolution of the flywheel that the screw will advance. This helps in determining the linear velocity of the ram. The English units for Ram Displacement
+    are inch/revolution, while the SI units are mm/revolution. If only the pitch angle and diameter of the spindle is known, the Ram Displacement can be calculated using πdsin(θt) where d is the diameter of spindle and θt is the pitch angle of the spindle.</p>
+  <p><br/>
+    <strong>Use blow table:</strong> Checking this option user can define the multiple blows as shown in <a href="#Fig_34_1_33_Screw_Press_multiple_blow_settings_table"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>33.</a>    In this window user has to select the number of hits and blow efficiency for each hit. Along with the blows user can select the reheating after each blow, enter the dwell time and flip the workpiece in 2D. So reheating, transfer<br/> and dwell after
+    each blow can be designed.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_33_Screw_Press_multiple_blow_settings_table"></a><img height="251" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image032.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Screw Press multiple blow settings table</p>
+  <p> </p>
+  <p>For more details about Screw press refer <a href="../../pre_processor/15_movement_controls_definition/15_4_screw_press.htm">15.4. Screw Press.</a></p>
+  <p> </p>
+  <h2><a id="34_1_11_Positioning"></a>Positioning</h2>
+  <p>Below <a href="#Fig_34_1_34_Object_positioning_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>34.</a> shows the positioning window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_34_Object_positioning_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image033.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object positioning window</p>
+  <p> </p>
+  <p><strong>Automatic Positioning</strong>  <img src="{{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}"/></p>
+  <p>By clicking on this button, system automatically Positions the Objects with respect to the top die movement direction, this option works best for simple setup with three objects work piece, top die and bottom die.</p>
+  <p> </p>
+  <p>When mechanical press is used as movement control type for primary die then auto-positioning<br/> is done in 2 steps:</p>
+  <ol class="Decimal">
+    <li>
+      <p>Interference position bottom die to workpiece while coupled with top die without updating stroke</p>
+    </li>
+    <li>
+      <p>Interference position top die to workpiece while updating stroke.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <p>System will always update stroke with positioning for the object that has mechanical press defined (top die). Update stroke check box should be hidden in express operations.</p>
+  <p> </p>
+  <p><strong>Positioning Objects  <img src="{{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}"/></strong></p>
+  <p>By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning">Drag</a>,
+    <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning">Offset</a>, <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning">Interference</a>, <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning">Flip</a>    and <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning">Rotational</a> as shown in <a href="#Fig_34_1_35_Object_positioning_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>35.</a>    For more information about these options, please refer <a href="../../pre_processor/19_object_positioning/19_object_positioning.htm">19.Object Positioning.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_35_Object_positioning_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image034.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Object positioning window</p>
+  <p> </p>
+  <h2><a id="34_1_12_Scheduled_Positioning"></a>Scheduled Positioning</h2>
+  <p>When user is not sure about the location of an object as in case of Read From DB objects, scheduled positioning will help to position the objects accurately.</p>
+  <p>Schedule positioning allows the user to define the positioning for objects in MO setup for successive operations for which DB is not generated so that the objects will position before generation of DB while running simulation in Batch mode. (See
+    <a href="#Fig_34_1_36_Scheduled_Positioning_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>36</a>.)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_36_Scheduled_Positioning_window"></a><img height="489" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image035.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Scheduled Positioning window</p>
+  <p> </p>
+  <h2><a id="34_1_13_Inter-Object_relations"></a>Inter-Object relations</h2>
+  <p>The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined. In
+    Forming express system automatically define the relation between the workpiece and dies and self contact for workpiece then generate contact when user click on  <img src="{{ '/assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg' | relative_url }}"/> as shown
+    in <a href="#Fig_34_1_37_Contact_generation_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>37.</a> Generated contacts message will display in the message tab below the graphics window.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_37_Contact_generation_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image036.jpg' | relative_url }}"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Contact generation window</p>
+  <p> </p>
+  <p>User can select the Shear or Coulomb friction type and define the friction coefficient. The lubricant used on the tooling plays a large role in the amount of friction that exists between the tooling and workpiece. The friction in turn affects the metal flow
+    at contact surfaces.</p>
+  <p><br/> Typical values are provided for shear friction as shown below,</p>
+  <p>(0.08) for cold forming (carbide dies) processes</p>
+  <p>(0.12) for cold forming (Steel dies) processes<br/> (0.25) for warm forming processes<br/> ( 0.3) for lubricated hot forging processes<br/> (0.7) for un lubricated (dry) hot forging processes<br/> (0.4) for Aluminium forming processes</p>
+  <p> </p>
+  <p>Conduction heat transfer coefficient value can be defined by user and also typical values are provided by system those are,<br/> (1 N/sec/mm/C or 0.0003 Btu/sec/in^2/F) for Free Resting<br/> (1 N/sec/mm/C or 0.0003 Btu/sec/in^2/F) for Dwelling<br/>    (11 N/sec/mm/C or 0.004 Btu/sec/in^2/F) for Forming</p>
+  <p> </p>
+  <h2><a id="34_1_14_Defining_Primary_Die_Stroke_or_Total_Process_Time"></a>Defining Primary Die Stroke or Total Process Time</h2>
+  <p>Primary die stroke (See <a href="#Fig_34_1_38_Total_primary_die_stroke_definition_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>38.</a>) decides the total amount of die travel during an operation. It is an estimate
+    of the total die stroke in an operation. It is used to establish time stepping values.<br/> Unless the &quot;exact amount&quot; box is checked, the approximate target tool movement will be roughly 125% of the specified value.<br/> Using the mouse
+    pointer user can define the Primary Die-stroke value by selecting the two points on the objects.</p>
+  <p style="text-align: center"><a id="Fig_34_1_38_Total_primary_die_stroke_definition_window"></a><img height="439" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image038.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Total primary die stroke definition window</p>
+  <p> </p>
+  <p>When user uses Load as movement controls then Total Process Time window comes instead of Primary die stroke, this time is used to estimate the stepping values.</p>
+  <p> </p>
+  <p><strong>Primary Die stroke for Mechanical Press [Exact Forming stroke method]:</strong></p>
+  <p> </p>
+  <p>For mechanical press, a valid range will be shown. (0 ~ ‘Total Stroke’)  (See <a href="#Fig_34_1_39_Primary_die_stroke_option_with_Exact_Forming_stroke_method_in_First_operation_"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>39.</a>)</p>
+  <p>If the Total primary die travel is 0 or outside of the valid range, then the input is illegal and the range will be displayed in red color.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_39_Primary_die_stroke_option_with_Exact_Forming_stroke_method_in_First_operation_"></a><img height="323" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image039.jpg' | relative_url }}" width="350"/> <img height="323" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image040.jpg' | relative_url }}" width="350"/></p>
+  <p class="Fig_name" style="text-align: center;">(a) In First Operation                          (b)  In Next Operation   </p>
+  <p>    </p>
+  <p class="Fig_numb">Primary die stroke option with Exact Forming stroke method  </p>
+  <p> </p>
+  <p>There are 3 ways to define exact forming stroke:</p>
+  <ol class="Decimal">
+    <li>
+      <p>User can enter exact forming stroke for Total primary die travel.</p>
+    </li>
+    <li>
+      <p>User can press <strong>Top dead center position</strong> <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> tool or check Top dead center position in next operation if the current position of the die is at Top dead center.  When user
+        presses / checks the Top dead center position <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> tool, Exact amount will become unchecked in next operations. Forming stroke is set equal to total stroke. Automatic positioning is
+        performed or scheduled. In the first operation, primary die travel will update with the correct forming stroke. In next operations forming stroke will update after scheduled positioning is performed.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 750px;">
+    <colgroup>
+      <col style="width: 175px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 175px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td colspan="1" rowspan="2" style="text-align: center;font-family: Arial;font-size: 12pt"> </td>
+        <td colspan="1" rowspan="2" style="text-align: center;font-family: Arial;font-size: 12pt">First Operation</td>
+        <td colspan="2" rowspan="1" style="text-align: center;font-family: Arial;font-size: 12pt">Next operation</td>
+        <td colspan="1" rowspan="2" style="text-align: center;font-family: Arial;font-size: 12pt">Step Editor</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">Top Die is defined</td>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">Top die is Read from DB</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt"><strong>Total Primary die travel</strong></td>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">Displays Calculated Forming stroke</td>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">Approximate die travel which will be used to calculate DSMAX</td>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">N/A</td>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">N/A</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p style="margin-left:40px;"><span>If a <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> button is used in the first operation, deactivate <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> buttons for both Top Dead Center and Bottom Dead Center until user revisits page. In  next operation,  if a wizard check box is selected the system will<br/>
+delete any prior scheduled positioning for objects 2 and 3.</span></p>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="counter-reset: item1 2;" value="3">
+      <p>User can presses the <strong>Bottom dead center</strong> <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> tool or check Bottom dead center position in next operation if the current position of the die is at Bottom dead center.
+        When user presses / checks the Top dead center position <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/>  tool, Exact amount will become unchecked in next operations. Forming stroke is set equal to 0. Automatic positioning is
+        performed or scheduled. First operation will update primary die travel value with correct forming stroke. In Next operation will calculate correct forming stroke after scheduled positioning is performed.</p>
+    </li>
+  </ol>
+  <p> </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 750px;">
+    <colgroup>
+      <col style="width: 175px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 175px;"/>
+      <col style="width: 150px;"/>
+      <col style="width: 100px;"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td colspan="1" rowspan="2" style="text-align: center;font-family: Arial;font-size: 12pt"> </td>
+        <td colspan="1" rowspan="2" style="text-align: center;font-family: Arial;font-size: 12pt">First Operation</td>
+        <td colspan="2" rowspan="1" style="text-align: center;font-family: Arial;font-size: 12pt">Next operation</td>
+        <td colspan="1" rowspan="2" style="text-align: center;font-family: Arial;font-size: 12pt">Step Editor</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">Top Die is defined</td>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">Top die is Read from DB</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt"><strong>Total Primary die travel</strong></td>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">Displays Calculated Forming stroke</td>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">Approximate die travel which will be used to calculate DSMAX</td>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">N/A</td>
+        <td style="text-align: center;font-family: Arial;font-size: 12pt">N/A</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>If either of both Top dead center and Bottom dead center <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> button is used in the first operation, both Top dead center and Bottom dead center  <img src="{{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}"/> buttons are deactivated until user revisits page.  </p>
+  <p> </p>
+  <p><strong>In Next operations:</strong></p>
+  <p>If a check box either for Top dead center and Bottom dead center is selected, the system will delete scheduled positioning for objects 2 and 3.<br/> If the BDC check box is checked,  an error message that there is no interference positioning scheduled
+    for the top die will be displayed.<br/> If the BDC check box is unchecked, an warning message that there is no interference positioning scheduled for the top die will be displayed.</p>
+  <p> </p>
+  <p><strong>Primary Die stroke for Mechanical Press [ Distance between dies method]:</strong></p>
+  <p> </p>
+  <p style="text-align: center">   <a id="Fig_34_1_40_Primary_die_stroke_option_with_Distance_between_dies_method_in_First_Operation"></a><img height="323" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image041.jpg' | relative_url }}" style="cursor: nwse-resize;" width="350"/> <img height="323" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image042.jpg' | relative_url }}" width="350"/></p>
+  <p class="Fig_name">(a) In First Operation  (b)  In Next Operation   </p>
+  <p class="Fig_numb">Primary die stroke option with Distance between dies method in First Operation</p>
+  <p> </p>
+  <p>When user uses Distance between Dies method as forming stroke type then,</p>
+  <p style="margin-left: 40px">In the first operation <strong>Total primary die</strong> travel will be deactivated and defined by the system .</p>
+  <p style="margin-left: 40px">In Next operations the <strong>Exact amount</strong> check box will be unchecked and deactivated. </p>
+  <p style="margin-left: 40px">In Next operations <strong>Total primary die travel</strong> will be used to calculate system defined step size only.</p>
+  <p style="margin-left: 40px"> </p>
+  <p>Precise stopping controls may be set at the next step.</p>
+  <h2><a id="34_1_15_Stopping_controls"></a>Stopping controls</h2>
+  <p>The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on maximum number of time steps simulated or maximum stroke or maximum load on the primary die or contact ratio with respect
+    to total surface area or distance between the dies. A simulation will be stopped when the condition of any of the stopping parameters are met. (See <a href="#Fig_34_1_41_Stopping_controls_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>41.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_41_Stopping_controls_window" height="0" width="0"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image043.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Stopping controls window</p>
+  <p> </p>
+  <p><strong>Max Die Stroke</strong>: Terminates a simulation when the total displacement (SMAX) of the primary die reaches<br/> the specified value.</p>
+  <p> </p>
+  <p><strong>Max Load:</strong> Terminates a simulation when the X or Y load component of the primary die reaches the X or Y value of LMAX. Typically used when the movement control of the primary object is velocity or user specified.</p>
+  <p> </p>
+  <p><strong>Contact area ratio: </strong>Contact area ration is the ratio of area which is in contact with the dies to the total surface area of the billet. If this ratio crosses beyond the specified value the simulation stops.</p>
+  <p> </p>
+  <p><strong>Distance between Objects:</strong> Terminates a simulation when the distance between reference points (MDSOBJ) on two objects reaches the specified distance. Using the mouse pointer user has to select two points on the objects to mention the
+    distance. If user already defined the reference point for the dies as indicated in Geometry section Other Geometry options then selecting the objects for Object1 and Object2 will highlight the distance in the display. Finally user need to mention
+    the distance value for which simulation to be stopped as shown in <a href="#Fig_34_1_42_Distance_between_objects_stopping_controls_definition"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>42.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_42_Distance_between_objects_stopping_controls_definition"></a><img height="437" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image044.jpg' | relative_url }}" width="750"/></p>
+  <p> </p>
+  <p class="Fig_numb">Distance between objects stopping controls definition</p>
+  <p> </p>
+  <p>For Mechanical Press Movement, Max die stroke is always checked, deactivated, and be equal to total stroke (See <a href="#Fig_34_1_43_Primary_die_stroke_option_with_Exact_Forming_stroke_method"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>43.</a>).</p>
+  <p> </p>
+  <p style="text-align: center">    <a id="Fig_34_1_43_Primary_die_stroke_option_with_Exact_Forming_stroke_method"></a><img height="300" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image045.jpg' | relative_url }}" style="cursor: nesw-resize;" width="325"/> <a id="Fig_34_1_43_b__For_Distance_between_dies_Mechanical_press_option"></a><img height="300" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image046.jpg' | relative_url }}" width="325"/></p>
+  <p class="Fig_name">(a) For Exact Forming Stroke Mechanical press option              (b)   For Distance between dies Mechanical press option</p>
+  <p class="Fig_name"> </p>
+  <p class="Fig_numb">Primary die stroke option with Exact Forming stroke method </p>
+  <p> </p>
+  <p>If <strong>Exact forming stroke</strong> was chosen, distance between objects will be unchecked and the deactivated (<a href="#Fig_34_1_43_Primary_die_stroke_option_with_Exact_Forming_stroke_method"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>43 (a).</a>).</p>
+  <p><br/> If <strong>Distance between dies</strong> was chosen, distance between objects will be checked and deactivated (<a href="#Fig_34_1_43_b__For_Distance_between_dies_Mechanical_press_option"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>43.(b).</a>)</p>
+  <p><br/> If <strong>Distance between dies</strong> was chosen, the user must define distance between objects and reference points ( <a href="#Fig_34_1_43_b__For_Distance_between_dies_Mechanical_press_option"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>43.(b).</a>).</p>
+  <p><br/> For more information about stopping controls refer <a href="../../pre_processor/9_simulation_controls/9_3_stopping_controls.htm#9.3.10._Temperature_stopping_control">9.3.10. Temperature stopping contorls</a> </p>
+  <p> </p>
+  <h2><a id="34_1_16_Simulation_controls"></a>Simulation controls</h2>
+  <p>The DEFORM system solves time dependent non-linear problems by generating a series of FEM solutions at discrete time increments. At each time increment, the velocities, temperatures and other key variables of each node in the finite element mesh are determined
+    based on boundary conditions, thermo mechanical properties of the work piece materials and possibly solutions at previous steps. Other state variables are derived from these key values and updated for each time increment. The length of this time step
+    and number of steps simulated are determined based on the information specified in the step controls menu. <a href="#Fig_34_1_44_Simulation_controls_window_in_system_mode"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>44.</a>    Shows simulation control options.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_44_Simulation_controls_window_in_system_mode"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image047.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls window in system mode</p>
+  <p> </p>
+  <p>User needs to specify the starting step number, the total number of steps, step increment to save and step definition (die displacement or time increment). In Forming express only constant die displacement and constant time increment can be used as
+    step definition. For all  movement controls except Load both die displacement and time increment are available as step definition types, for load movement controls only time increment is allowed.</p>
+  <p> </p>
+  <p><strong>System type Step Increment constant die displacement:</strong></p>
+  <p>Now, for Mechanical press in forming express step size will be calculated from [(Total primary die travel) / (number of steps)]x1.2 regardless of whether exact amount is checked or not.<br/> For non-mechanical press operations in forming express step
+    size will be calculated as [(Total primary die travel) / (number of steps)], if exact amount is checked (See <a href="#Fig_34_1_45_Simulation_controls_window_in_user_mode"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>45.</a>).<br/>    For non-mechanical press operations in forming express step size will be calculated as [(Total primary die travel) / (number of steps)]x1.2, if exact amount is not checked.</p>
+  <p> </p>
+  <p><strong>User type Step Increment constant die displacement</strong>: It will allow the users to specify their own step size. User should provide an appropriate step size to meet their stopping condition based on their number of steps.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_45_Simulation_controls_window_in_user_mode"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image048.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Simulation controls window in user mode</p>
+  <p> </p>
+  <p><strong>Number of simulation steps (NSTEP)</strong><br/> The number of simulation steps parameter defines the number of steps to run from the starting step number. The simulation will stop after this number of simulation steps have run, unless stopping
+    control is triggered to stop the simulation or if the simulation runs into a problem. For example, if the starting step number is -35 (<a href="../../keyword_documentation/n/nstart.htm">NSTART</a>) and 30 steps (<a href="../../keyword_documentation/n/nstep.htm">NSTEP</a>)
+    are specified, the simulation will stop after the 65th step, unless another stopping control is triggered first.</p>
+  <p> </p>
+  <p><strong>Step increment to save (STPINC)</strong></p>
+  <p>The step increment (<a href="../../keyword_documentation/s/stpinc.htm">STPINC</a>) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily
+    need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.</p>
+  <p> </p>
+  <p><strong>Step increment control (<a href="../../keyword_documentation/d/dsmax.htm">DSMAX</a>/<a href="../../keyword_documentation/d/dtmax.htm">DTMAX</a>)</strong></p>
+  <p>Solution step size can be controlled by time step or by displacement of the primary die. If stroke per step is specified, the primary die will move the specified amount in each time step. The total movement of the primary die will be the displacement per
+    step multiplied by the total number of steps. If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.</p>
+  <p> </p>
+  <p>Stroke per step is frequently more intuitive. However, time per step must be specified for any problem in which there is no die movement (such as heat transfer), or for any problem where force control is used.</p>
+  <p> </p>
+  <p>In Forming operations enhanced definition of step increment control available to include both the time and stroke dependent step functions. This means, step size (both time per step and stroke per step) can now be defined as a function of time or stroke.
+    This functionality enables finer resolution of saved model information, where it is desired. (typically towards the end of the stroke, where steep changes of die load and cavity filling or flash formation can take place) for more information refer
+    <a href="../../pre_processor/9_simulation_controls/9_2_defining_step.htm">9.2. Defining step.</a></p>
+  <p> </p>
+  <p><strong>Advanced Simulation controls</strong></p>
+  <p>Advanced Simulation controls provide options to select the Deformation solvers, this is accessed by  <img src="{{ '/assets/icons/pre_icons/mo_advanced_button.jpg' | relative_url }}"/> button. For 2D Forming express only Skyline, MUMPS and Spools Deformation Solvers
+    are available (See <a href="#Fig_34_1_46_Advanced_simulation_controls_settings"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>46.</a>). By default MUMPS solver will be selected.</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_46_Advanced_simulation_controls_settings"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image049.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Advanced simulation controls settings</p>
+  <p> </p>
+  <p>Forming operation gives more simulation controls options in expert mode, for these options details refer <a href="../../pre_processor/9_simulation_controls/9_simulation_controls.htm">9. Simulation Controls.</a></p>
+  <p> </p>
+  <h2><a id="34_1_17_Generate DB"></a>Generate DB</h2>
+  <p><strong>Check Data </strong> <img src="{{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}"/></p>
+  <p>It checks the Data. If Data is correct we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow
+    the DB to be generated.</p>
+  <p> </p>
+  <p><strong>Generate Database</strong> <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/></p>
+  <p>By clicking on <img src="{{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}"/> button database gets generate for the setup.(See <a href="#Fig_34_1_47_Generate_DB_window"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>47.</a>)</p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_47_Generate_DB_window"></a><img src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image050.jpg' | relative_url }}"/></p>
+  <p> </p>
+  <p class="Fig_numb">Generate DB window</p>
+  <p> </p>
+  <p>If user need any of the advanced options which are not available in Forming express then such options can be accessed without loosing the defined data in forming express operation by promoting to forming operation. This option is available in the Right mouse
+    button menu option in operation editor as shown in <a href="#Fig_34_1_48_Promoting_forming_express_to_forming_operation_right_menu_option"><span data-keyref="Chapter_34_1_2D Forming Express Setup">Fig. 34.1.</span>48.</a> For more details about this
+    upgrading the operation refer to <a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations.htm">6.6.4. Upgrading Operations.</a></p>
+  <p> </p>
+  <p style="text-align: center"><a id="Fig_34_1_48_Promoting_forming_express_to_forming_operation_right_menu_option"></a><img height="433" src="{{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image051.jpg' | relative_url }}" width="350"/></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Promoting forming express to forming operation right menu option</p>
+  <p> </p>
+  <p>After generating database user has to select the MO Simulation mode tab to submit the problem for simulation, for more information about MO Simulation mode refer <a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout.htm">6.2. MO Simulation layout</a>.
+    Once the Simulation completed message tab indicates it by giving the proper message then from MO Post mode user can review the results, for more information about MO Post mode refer<a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout.htm"> 6.3. MO Post layout.</a></p>
+  <p> </p>
+  <p><strong>Related Topics:</strong></p>
+  <p><a href="34_2_3d_forming_express_setup.htm">34.2. 3D Forming Express Setup</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations.htm#Fig._6.6.4.4._Forming_express_operation_after_promoting_it_to_forming_operation">Promote Forming Express to Forming operation</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout.htm">6.2. MO Simulation layout</a></p>
+  <p><a href="../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout.htm">6.3. MO Post layout</a></p>
+  <p><a href="../33_forming/33_1_2d_forming_setup.htm">33.1. 2D Forming Setup</a></p>
+  <p><a href="../33_forming/33_2_3d_forming_setup.htm">33.2. 3D Forming Setup</a></p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

@@ -1,0 +1,52 @@
+---
+lang: en
+title: "10.8. Elec_Mag Data"
+---
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>10.8. Elec_Mag Data</title>
+  <meta name="topic-status" content="Draft" />
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/Pre_Processor/10_Material_Data/10_8_Elec_Mag_Data/10_8_Elec_Mag_Data.css" />
+</head>
+<body>
+  <h1>10.8. Electrical and Magnetic Data</h1>
+  <p>Electrical and magnetic properties (See <a href="#Fig._10.8.1._Electric_and_Magnetic_material_data_window"><span data-keyref="Chapter_10_8_ Electomagnetic Data">Fig. 10.8.</span>1.</a>) are input here if electrical or electromagnetic behaviors are to
+    be modeled in an object.</p>
+  <p style="text-align: center"> </p>
+  <p style="text-align: center"><a id="Fig._10.8.1._Electric_and_Magnetic_material_data_window"></a><img src="../../../../assets/Images/Pre-Processor/10_Material_Data/10_8_Elec_Mag_Data/10_8_Image001.jpg" /></p>
+  <p style="text-align: center"> </p>
+  <p class="Fig_numb">Electric and Magnetic material data window</p>
+  <p> </p>
+  <h2>Electrical resistivity (ELRST)</h2>
+  <p>Electrical resistance is the measure for how a given material opposes (resists) electrical current flow over an applied voltage difference. Electrical resistivity (<a href="../../../Keyword_Documentation/E/ELRST.htm">ELRST</a>) is the amount of electrical
+    resistance per unit length for a given material. The value can be a constant or a function of temperature, a function of atom content, or a function of temperature and atom content.</p>
+  <p> </p>
+  <p>Electrical resistivity data is required when modeling current flow in resistance heating, spot welding, electrical upsetting, induction heating/hardening and electro-magnetic forming.</p>
+  <h2>Relative magnetic permeability (PMEAB)</h2>
+  <p>Relative magnetic permeability (<a href="../../../Keyword_Documentation/P/PMEAB.htm">PMEAB</a>) is the measure for how a given material increases or decreases the density of magnetic flux lines in a volume as compared to that of a vacuum. It can be
+    calculated by dividing the permeability of the object by the permeability of a vacuum. The dimensionless ratio should be the same in the English and SI unit systems. The value can be a constant or a function of temperature, a function of density,
+    or a function of temperature and magnetic field intensity.</p>
+  <p> </p>
+  <p>Relative magnetic permeability data is required when modeling magnetic fields in induction heating/hardening and electro-magnetic forming.</p>
+  <p> </p>
+  <p>Relative magnetic permeability of many metals has been shown to be a function of temperature and magnetic field intensity. Materials are often described by their initial and/or maximum relative magnetic permeability values. The relative magnetic permeability
+    of a magnetic material (low carbon steel, alloy steel, etc.) falls to 1 at the metal’s Curie point, which is the temperature where the metal loses its magnetization. Nonmagnetic materials (copper, aluminum, etc.) and magnetic materials above the Curie
+    point will have a relative magnetic permeability around 1. Relative magnetic permeability typically decreases toward 1 as magnetic field intensity increases.</p>
+  <p> </p>
+  <p>The permeability of a vacuum (<a href="../../../Keyword_Documentation/E/ENVMPR.htm">ENVMPR</a>) is defined in the Simulation Controls &gt; Process Conditions menu.  The typical value is provided below for reference.</p>
+  <p>    1.26 x 10<span style="vertical-align:super;font-size:12px">-9</span> H/mm (SI)<br/>     3.20 x 10<span style="font-size:12px;vertical-align:super">-8</span> H/in (English)</p>
+  <p> </p>
+  <h2>Relative electric permittivity (PMITT)</h2>
+  <p>Relative electric permittivity (<a href="../../../Keyword_Documentation/P/PMITT.htm">PMITT</a>) is the electrical polarizability of a material compared to that of a vacuum. It can be calculated by dividing the permittivity of the object by the permittivity
+    of a vacuum. The dimensionless ratio should be the same in the English and SI unit systems. The value can be a constant, a function of temperature, or a function of density. A value of 0 (ignored) or 1 (identical to a vacuum) is typically recommended.</p>
+  <p> </p>
+  <p>Relative electric permittivity is available but seldom used.</p>
+  <p> </p>
+  <p>The permittivity of a vacuum (<a href="../../../Keyword_Documentation/E/ENVMPT.htm">ENVMPT</a>) is defined in the Simulation Controls &gt; Process Conditions menu.  The typical value is provided below for reference.</p>
+  <p>    8.85 x 10<span style="vertical-align:super;font-size:12px">-15</span> F/mm (SI)    <br/>     2.25 x 10<span style="vertical-align:super;font-size:12px">-13</span> F/in (English)</p>
+</body>
+</html>

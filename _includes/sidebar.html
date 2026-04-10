@@ -1,0 +1,28 @@
+{% assign nav = include.nav %}
+<ul class="nav-list">
+  {% for item in nav %}
+    {% assign has_children = false %}
+    {% if item.children and item.children.size > 0 %}
+      {% assign has_children = true %}
+    {% endif %}
+    {% assign is_active = false %}
+    {% if page.url == item.url %}
+      {% assign is_active = true %}
+    {% endif %}
+    <li class="nav-item{% if has_children %} has-children{% endif %}{% if is_active %} active{% endif %}">
+      {% if has_children %}
+        <button class="nav-toggle" aria-expanded="{% if is_active %}true{% else %}false{% endif %}" aria-label="Toggle {{ item.name }}">
+          <span class="toggle-icon"></span>
+        </button>
+      {% endif %}
+      <a href="{{ item.url | relative_url }}" class="nav-link{% if is_active %} current{% endif %}">
+        {{ item.name }}
+      </a>
+      {% if has_children %}
+        <ul class="nav-children{% if is_active %} open{% endif %}">
+          {% include sidebar.html nav=item.children %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
