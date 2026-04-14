@@ -1,7 +1,7 @@
 title: DEFORM V14.0.2 Manual
 description: Documentation for DEFORM V14.0.2 metal-forming simulation software.
-baseurl: "/HTML-DEFORM-manual"   # GitHub Pages repo path — adjust if repo name differs
-url: "https://martinnecp.github.io"
+baseurl: "/deform-manual"   # GitHub Pages repo path — adjust if repo name differs
+url: "https://martinnecpal.github.io"
 
 # Collections
 collections:
