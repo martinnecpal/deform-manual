@@ -1,0 +1,96 @@
+---
+lang: sk
+title: "26.5. Post-Processing Options"
+---
+
+# 26.5. Post-Processing Options
+
+26.5.1. Environment
+
+26.5.2. Preference
+
+26.5.3. Display Properties
+
+26.5.4. Set Viewport Property
+
+26.5.5. Color Bar
+
+26.5.6. Unit Conversion
+
+Under Option Menu we are having Environment, Preference, Display Properties, Set Viewport property, Color bar and Unit conversion options as shown in Fig. 26.5.1.
+
+![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image001.jpg' | relative_url }})
+
+Post-Processor Options menu
+
+## **Environment**
+
+The user can adjust the DEFORM working environment using environment option. Here the user can make changes in display and graphical settings and can save the settings as for his convenience. Setting will update from next session onwards. For more information related to Environment refer Chapter [8\. Pre-Processor Layout](/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/) section [Environment](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Environment).
+
+## Preference
+
+Provides viewing and object type information of the geometries. In this option, the user can modify the display of the objects in the graphic display window. For more information related to Environment refer Chapter [8\. Pre-Processor Layout](/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/) section [Preference](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Preferences).
+
+## Display Properties ![]({{ '/assets/icons/post_icons/mo_display_properties_icon.jpg' | relative_url }})
+
+This option allows the user to set the display of DB info and Title with or combination of database name, Database path, Database folder, operation name, simulation and Title. Here user can set the Font size and color of the title and DB info (See Fig. 26.5.2.).
+
+  
+![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image002.jpg' | relative_url }})
+
+Display properties
+
+## Set Viewport Property ![]({{ '/assets/icons/post_icons/mo_set_viewport_properties_icon.jpg' | relative_url }})
+
+**[2D, 3D]** : The user can set the all the four viewports display area in the display window using the available options. These options will only be applied to the current or selected Viewport in the Display Window.
+
+For Multi Viewports options are available in the graphical utilities and are also available from the Viewport Menu Multi options. For more information related to the multiple viewports refer the chapter [26.1. Viewports and Windows menu](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/) section [Multiple viewport control](26_2_handeling_viewports_and_windows_iin_post_processor.htm#Multi_Viewports).
+
+**[2D]** : User can set the X and Y axis Minimum and Maximum limits of the viewport for all the four viewports from the translation tab by selecting the pull down button in the top of the window. After selecting the viewport in the display window user has to select the viewport property dialog to select which of the four viewport settings to be applied. (See Fig. 26.5.3.)
+
+![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image003.jpg' | relative_url }})
+
+Viewport Translation properties window
+
+  
+**[3D]** : In addition to the two directional viewport limits selection from the Translation tab user can select the third direction view from the Rotation tab using the axis and the rotation angle. (See Fig. 26.5.4.)
+
+  
+![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image004.jpg' | relative_url }})
+
+Viewport Rotation properties window
+
+**Quaternions Setup** :
+
+**Initialize** : It initializes the defined quaternion setup.
+
+**Assign** : User can assign the quaternion setup by selecting axis and defining angle.
+
+**Add** : Defined quaternions setup can be incriminated to the viewport.
+
+**Quaternions** : It provides a convenient mathematical notation for representing orientations and rotations of the objects in 3D space. Using Quaternion setup user can easily input meaningful quaternions
+
+## Color Bar ![]({{ '/assets/icons/post_icons/mo_color_bar_icon.jpg' | relative_url }})
+
+The user can create new color bars by adding, deleting or modifying colors. User can change the color by selecting the color bar and using Change Color button to select new color, after selecting new color click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) in select color window. Color bars can be moved up and down using buttons. New colors can be added using button and colors can be deleted using button (see Fig. 26.5.5.).
+
+![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image005.jpg' | relative_url }})
+
+Color bar
+
+## Unit Conversion ![]({{ '/assets/icons/post_icons/mo_unit_conversion_icon.jpg' | relative_url }})
+
+This allows the user to convert the default unit system of the variables to other standard unit system or to the user defined conversion factor for post processing.
+
+  
+Basically three options available those are Default (unit system used to setup the problem), From Current to other standard unit system or to User. The two standard unit systems available in deform are SI and English. (See Fig. 26.5.6.)
+
+![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image006.jpg' | relative_url }})
+
+Unit Conversion
+
+**Related Topics:**
+
+[8\. Pre-Processor Layout](/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/)
+
+[26.2. Viewports and Windows menu](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/)

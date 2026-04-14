@@ -1,0 +1,32 @@
+---
+lang: sk
+title: "1.10. Basic File System"
+---
+
+# 1.10. Basic File System
+
+The primary data storage structure is the database file. The database file stores a complete set of simulation data, including object data, simulation controls, material data, and inter-object relations, both from the original input, and from selected solution steps. The sequence of information storage in a database file is shown in Fig. 1.10.1. The pre-processor uses an ASCII format file called the keyword file to create inputs.
+
+![]({{ '/assets/images/about_deform/1_10_basic_file_system/1_10_image001.jpg' | relative_url }})
+
+DEFORM Database structure
+
+Each DEFORM problem has an associated problem ID and should be created in its own folder or directory. For every problem, the DEFORM system creates four types of files that are generally accessible to users:
+
+**Database (DB) files**
+
+The database file contains the complete simulation data set for input data and each saved simulation step. The information is stored in a compressed, machine readable format, and is accessible only through the DEFORM [pre-procesor](/docs/sk/pre_processor/7_introduction_to_pre-processor/) and [post-processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/). As the simulation runs, data for each step is written to the end of the database file. If the step being written is specified as a step to be saved, information for the next step will be appended after the current data step. If the step is not specified to be saved, and a solution is found for the next step, the data for the current step will be overwritten by the data for the next step.
+
+**Keyword (KEY) files**
+
+Keyword files contain specific problem definition data which is read by the pre-processor and used to create an input database file. A keyword file may contain a complete problem definition, or it may contain only specific information about, for example, a specific object or material. The information is stored in ASCII format, and can be read and edited with any text editor, such as Notepad, VI, or Emacs. A keyword reference is available which describes the data format for each keyword.
+
+**Related Topics:**
+
+[Creating Input data](/docs/sk/about_deform/1_introduction_to_deform/1_8_creating_input_data/)
+
+[File structure](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure/)
+
+[Database Generation](/docs/sk/pre_processor/21_database_generation/21_database_generation/)
+
+[Keyword Documentation](/docs/sk/keyword_documentation/deform_keywords_list/)

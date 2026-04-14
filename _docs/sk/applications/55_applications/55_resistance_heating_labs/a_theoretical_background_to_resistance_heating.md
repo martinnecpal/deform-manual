@@ -1,0 +1,61 @@
+---
+lang: sk
+title: "A Theoretical Background to Resistance Heating"
+---
+
+# A Theoretical Background to Resistance Heating Concepts Implemented in DEFORM
+
+**Basic field equations for resistance heating used in DEFORM:**
+
+When a workpiece is heated by electric resistance method, it is important to predict the electric current density distributions within the workpiece and the contacting objects. The analysis of electric current density can be considered as a general boundary value problem as follows.
+
+![]({{ '/assets/images/applications/55_resistance_heating_labs/theortical_background_to_resistance_heating/image0001.jpg' | relative_url }})
+
+Schematic view of two objects in contact with voltage and current-flux prescribed boundary conditions
+
+As shown in Fig. RH.1., one object has a configuration ![]({{ '/assets/equations/applications/55_resistance_heating/bi.jpg' | relative_url }}) that occupies volume ![]({{ '/assets/equations/applications/55_resistance_heating/vi.jpg' | relative_url }}) bounded by closed surface ![]({{ '/assets/equations/applications/55_resistance_heating/si.jpg' | relative_url }}). Another object has a configuration ![]({{ '/assets/equations/applications/55_resistance_heating/bii.jpg' | relative_url }}) that occupies volume ![]({{ '/assets/equations/applications/55_resistance_heating/vii.jpg' | relative_url }}) bounded by closed surface ![]({{ '/assets/equations/applications/55_resistance_heating/sii.jpg' | relative_url }}). Boundaries of each of these objects are divided into three regions depending upon the imposed boundary conditions. These regions are designated by ![]({{ '/assets/equations/applications/55_resistance_heating/sv.jpg' | relative_url }}), ![]({{ '/assets/equations/applications/55_resistance_heating/sq.jpg' | relative_url }}) and ![]({{ '/assets/equations/applications/55_resistance_heating/sc.jpg' | relative_url }}); voltage is prescribed on ![]({{ '/assets/equations/applications/55_resistance_heating/sv.jpg' | relative_url }}), electric current flux(#) is prescribed on ![]({{ '/assets/equations/applications/55_resistance_heating/sq.jpg' | relative_url }}) and ![]({{ '/assets/equations/applications/55_resistance_heating/sc.jpg' | relative_url }}) is the contact surface between the two objects.
+
+When voltage or current is prescribed, the electric current density through the bodies ![]({{ '/assets/equations/applications/55_resistance_heating/vi.jpg' | relative_url }}) and ![]({{ '/assets/equations/applications/55_resistance_heating/vii.jpg' | relative_url }}) can be found. The transient effect due to the natural inductance and capacitance is assumed to be very small and is neglected in the current discussion. In general, the electric resistivity of a material is expressed by a function of temperature, while the electrical interface resistivity at the contact interface is expressed as a function of temperature and contact pressure.
+
+**Formulations:**
+
+The governing equations for the problem described above can be obtained by considering Kirchoff’s law and Ohm’s law:
+
+**Kirchoff’s law:**
+
+![]({{ '/assets/equations/applications/55_resistance_heating/eq1.jpg' | relative_url }}) |   
+---|---  
+  
+**Ohm’s law:**
+
+![]({{ '/assets/equations/applications/55_resistance_heating/eq2.jpg' | relative_url }}) |   
+---|---  
+  
+Assuming that the resistivity is isotropic, substitution of equation (EQ.2) in (EQ.1), yields Laplace equation (or potential equation) as,
+
+  
+
+![]({{ '/assets/equations/applications/55_resistance_heating/eq3.jpg' | relative_url }}) |   
+---|---  
+  
+Boundary conditions are:
+
+![]({{ '/assets/equations/applications/55_resistance_heating/eq4.jpg' | relative_url }}) |   
+---|---  
+  
+![]({{ '/assets/equations/applications/55_resistance_heating/eq5.jpg' | relative_url }}) |   
+---|---  
+  
+![]({{ '/assets/equations/applications/55_resistance_heating/eq6.jpg' | relative_url }}) |   
+---|---  
+  
+The solution of equation (EQ.3) with equations (EQ.4), (EQ.5) and (EQ.6) provides the voltage distribution and electric current density can be obtained by equation (EQ.2). A weak form of equation (EQ.3), that is used to obtain the final equation follows the finite element discretization and is derived by applying a variational principle. Using the divergence theorem and imposing the boundary conditions ![]({{ '/assets/equations/applications/55_resistance_heating/v.jpg' | relative_url }}) = ![]({{ '/assets/equations/applications/55_resistance_heating/v0.jpg' | relative_url }}) on ![]({{ '/assets/equations/applications/55_resistance_heating/sv.jpg' | relative_url }}), it becomes
+
+![]({{ '/assets/equations/applications/55_resistance_heating/eq7.jpg' | relative_url }}) |   
+---|---  
+  
+Conventional finite element discretization procedures are then followed to solve equation (EQ.7) for nodal voltage values. Once the voltage at a node is found, the current density within an element can be obtained by applying equation (EQ.2). The power generated by electric resistance is computed as a product of material resistance and current density at a material point. The power generated at the interface is computed based on the voltage difference across the interface and the interface resistance. Integrated value of this power is converted to heat, which is accounted in the heat balance equations as an additional heat source.
+
+**Note** :
+
+The material resistivity ‘a’ used in equation ‘7’ has typical values of 0.0004 ohm-mm for Titanium, 0.00009 ohm-mm for Iron and 0.000016 ohm-mm for Silver. (all at room temperature).

@@ -1,0 +1,8 @@
+---
+lang: en
+title: "Rivet Installation Labs Main pg"
+---
+
+# Rivet Installation Labs 
+
+[2D Rivet Lab](/docs/en/applications/55_applications/55_rivet_installation/2d_rivet_lab/)
