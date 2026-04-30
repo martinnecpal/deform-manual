@@ -1,166 +1,166 @@
 - name: DEFORM V14.0.2
   url: /docs/sk/deform-integrated-2d-3d/
-- name: About DEFORM
+- name: O DEFORMe
   url: /docs/sk/about_deform/about_deform/
   children:
-    - name: 1. Introduction to DEFORM
+    - name: 1. Úvod do DEFROMu
       url: /docs/sk/about_deform/1_introduction_to_deform/1_introduction_to_deform/
       children:
-        - name: 1.1. Overview of DEFORM
+        - name: 1.1. Prehľad DEFORMu
           url: /docs/sk/about_deform/1_introduction_to_deform/1_1_overview_of_deform/
-        - name: 1.2. Deform Family products
+        - name: 1.2. Rodina produktov DEFORMu
           url: /docs/sk/about_deform/1_introduction_to_deform/1_2_deform_family_products/
-        - name: 1.3. Capabilities
+        - name: 1.3. Možnosti
           url: /docs/sk/about_deform/1_introduction_to_deform/1_3_capabilities/
-        - name: 1.4. Analyzing Manufacturing Process with DEFORM
+        - name: 1.4. Analýza výrobných procesov s DEFORM
           url: /docs/sk/about_deform/1_introduction_to_deform/1_4_analyzing_manufacturing_process_with_deform/
-        - name: 1.5. Before you Begin
+        - name: 1.5. Pred tým než začneš
           url: /docs/sk/about_deform/1_introduction_to_deform/1_5_before_you_begin/
-        - name: 1.6. The Deform System
+        - name: 1.6. Deform Systém
           url: /docs/sk/about_deform/1_introduction_to_deform/1_6_the_deform_system/
-        - name: 1.7. Geometry Representation
+        - name: 1.7. Reprezenácia geometrie
           url: /docs/sk/about_deform/1_introduction_to_deform/1_7_geometry_representation/
-        - name: 1.8. Creating Input data
+        - name: 1.8. Príprava vstupných dát
           url: /docs/sk/about_deform/1_introduction_to_deform/1_8_creating_input_data/
-        - name: 1.9. Units
+        - name: 1.9. Jednotky
           url: /docs/sk/about_deform/1_introduction_to_deform/1_9_units/
-        - name: 1.10. Basic File System
+        - name: 1.10. Základné súbory systému
           url: /docs/sk/about_deform/1_introduction_to_deform/1_10_basic_file_system/
-        - name: 1.11. Release Notes
+        - name: 1.11. Poznámky k vydaniu
           url: /docs/sk/about_deform/1_introduction_to_deform/1_11_release_notes/
-- name: Starting up DEFORM
+- name: Spustenie programu DEFORM
   url: /docs/sk/starting_up_deform/starting_up_deform/
   children:
-    - name: 2. DEFORM Installation
+    - name: 2. DEFORM Inštalácia
       url: /docs/sk/starting_up_deform/2_deform_installation/2_deform_installation/
       children:
-        - name: 2.1. Installation of DEFORM V14.0.2. in Windows
+        - name: 2.1. Inštalácia DEFORM V14.0.2. vo Windows
           url: /docs/sk/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_2_in_windows/
-        - name: 2.2. Installation of DEFORM V14.0.2. in Unix or Linux
+        - name: 2.2. Inštalácia DEFORM V14.0.2. v Unix alebo Linux
           url: /docs/sk/starting_up_deform/2_deform_installation/2_2_installation_of_deform_v12_0_2_in_unix_or_linux/
-    - name: 3. License Manager
+    - name: 3. Manager licencií
       url: /docs/sk/starting_up_deform/3_license_manager/license_manager_mainpg/
       children:
-        - name: 3. Introduction to License Manager
+        - name: 3. Úvod do Managera licencií
           url: /docs/sk/starting_up_deform/3_license_manager/3_introduction_to_license_manager/
-        - name: 3.1. Deform License Setup
+        - name: 3.1. Nastavenie licencií DEFORM
           url: /docs/sk/starting_up_deform/3_license_manager/3_1_deform_license_setup/
-        - name: 3.2. License Monitoring
+        - name: 3.2. Monitorovanie licencií
           url: /docs/sk/starting_up_deform/3_license_manager/3_2_license_monitoring/
-        - name: 3.3. Services Monitoring
+        - name: 3.3. Monitorovanie procesov
           url: /docs/sk/starting_up_deform/3_license_manager/3_3_services_monitoring/
-        - name: 3.4. Trouble Shooting License Issues
+        - name: 3.4. Riešenie problémov s licenciou
           url: /docs/sk/starting_up_deform/3_license_manager/3_4_trouble_shooting_license_issues/
-    - name: 4. GUI Main
+    - name: 4. GUI Hlavné okno Grafického Uživatelského Rozhrania
       url: /docs/sk/starting_up_deform/4_gui_main/gui_main_mainpg/
       children:
-        - name: 4. Introduction to GUI Main
+        - name: 4. Úvod do hlavného okna GUI
           url: /docs/sk/starting_up_deform/4_gui_main/4_introduction_to_gui_main/
-        - name: 4.1. GUI Main layout
+        - name: 4.1. Rozloženie hlavného okna GUI
           url: /docs/sk/starting_up_deform/4_gui_main/4_1_gui_main_layout/
-- name: Integrated Manufacturing Process Setup
+- name: Nastavenie integrovaného výrobného procesu
   url: /docs/sk/integrated_manufacturing_process_setup/integrated_manufacturing_process_mainpg/
   children:
-    - name: 5. Introduction to Integrated Manufacturing Process
+    - name: 5. Úvod do integrovaného výrobného procesu
       url: /docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/
-    - name: 6. Integrated Manufacturing Process Layout
+    - name: 6. Rozloženie rozhrania integrovaného výrobného procesu
       url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/
       children:
-        - name: 6.1. Integrated Manufacturing Process Pre-processor layout
+        - name: 6.1. Rozloženie Pre-processoru integrovaného výrobného procesu
           url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/
-        - name: 6.2. Integrated Manufacturing Process Simulation layout
+        - name: 6.2. Rozloženie rozhrania simulácie integrovaného výrobného procesu
           url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/
-        - name: 6.3. Integrated Manufacturing Process Post-processor layout
+        - name: 6.3. Rozloženie Post-processoru integrovaného výrobného procesu
           url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/
-        - name: 6.4. Main Menu
+        - name: 6.4. Hlavné Menu
           url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu/
-        - name: 6.5. File Structure
+        - name: 6.5. Štruktúra súborového systému
           url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure/
-        - name: 6.6. Operations Management
+        - name: 6.6. Manažment operácií
           url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_operations_management/
           children:
-            - name: 6.6.1. Connecting Operations
+            - name: 6.6.1. Pripojené Operácie
               url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_1_connecting_operations/
-            - name: 6.6.2. Read from DB concept
+            - name: 6.6.2. Čítanie konceptu z databáze
               url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_2_read_from_db_concept/
-            - name: 6.6.3. Editing Operations
+            - name: 6.6.3. Úprava Operácií
               url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_3_editing_operations/
-            - name: 6.6.4. Upgrading Operations
+            - name: 6.6.4. Aktualizácia Operácií
               url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations/
-            - name: 6.6.5. Adding Cycles
+            - name: 6.6.5. Pridávanie Cyklov
               url: /docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_5_adding_cycles/
 - name: Pre Processor
   url: /docs/sk/pre_processor/pre-processor_mainpg/
   children:
-    - name: 7. Introduction to Pre-Processor
+    - name: 7. Úvod do Pre-Processoru
       url: /docs/sk/pre_processor/7_introduction_to_pre-processor/
-    - name: 8. Pre Processor Layout
+    - name: 8. Rozloženie Pre-Processoru
       url: /docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/
-    - name: 9. Simulation Controls
+    - name: 9. Ovládanie simulácie
       url: /docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/
       children:
-        - name: 9.1. Simulation type Settings
+        - name: 9.1. Nastavenie typu simulácie
           url: /docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/
-        - name: 9.2. Defining Step
+        - name: 9.2. Definovanie kroku
           url: /docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/
-        - name: 9.3. Stopping Controls
+        - name: 9.3. Ovládanie zastavenia simlácie
           url: /docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/
-        - name: 9.4. Remesh Criteria
+        - name: 9.4. Krytéria presieťovania
           url: /docs/sk/pre_processor/9_simulation_controls/9_4_remesh_criteria/
-        - name: 9.5. Solver Settings
+        - name: 9.5. Nastavenie riešiča
           url: /docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/
-        - name: 9.6. Process Conditions
+        - name: 9.6. Podmienky procesu
           url: /docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/
-        - name: 9.7. Advanced Options
+        - name: 9.7. Pokročilé nastavenia
           url: /docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/
-        - name: 9.8. Control Files
+        - name: 9.8. Kontrolné súbory
           url: /docs/sk/pre_processor/9_simulation_controls/9_8_control_files/
-        - name: 9.9. Thermomechanical variables
+        - name: 9.9. Termomechanické veličiny
           url: /docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/
-        - name: 9.10. Output controls
+        - name: 9.10. Ovládacie prvky výstupu
           url: /docs/sk/pre_processor/9_simulation_controls/9_10_output_controls/
-    - name: 10. Material Data
+    - name: 10. Materiálové dáta
       url: /docs/sk/pre_processor/10_material_data/10_material_data/
       children:
-        - name: 10.1. Plastic Data
+        - name: 10.1. Plasticke vlastnosti
           url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/
           children:
-            - name: 10.1.1. FlowStress
+            - name: 10.1.1. Krivky spevnenia
               url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/
               children:
-                - name: 10.1.1.1. Tabular data format
+                - name: 10.1.1.1. Tabulkový formát dát
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_1_tabular_data_format/
                 - name: 10.1.1.2. Power Law
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_2_power_law/
-                - name: 10.1.1.3. Flow stress for aluminum alloys (Type 1)
+                - name: 10.1.1.3. Kryvky spevnenia pre hliníkové zliatky (Typ 1)
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_3_flow_stress_for_aluminum_alloys_type_1/
-                - name: 10.1.1.4. Flow stress for aluminum alloys (Type 2)
+                - name: 10.1.1.4. Kryvky spevnenia pre hliníkové zliatky (Typ 2)
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_4_flow_stress_for_aluminum_alloys_type_2/
-                - name: 10.1.1.5. Linear hardening
+                - name: 10.1.1.5. Lineárne spevnenie
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_5_linear_hardening/
-                - name: 10.1.1.6. Tabular_data_format_2
+                - name: 10.1.1.6. Tablulkový formát dát 2
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_6_tabular_data_format_2/
-                - name: 10.1.1.7. Generalized Johnson and Cook model
+                - name: 10.1.1.7. Všeobecný Johnson & Cook model
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_7_generalized_johnson_and_cook_model/
                 - name: 10.1.1.8. Zerilli-Armstrong model
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_8_zerilli-armstrong_model/
                 - name: 10.1.1.9. Norton-Hoff Law model
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_9_norton-hoff_law_model/
-                - name: 10.1.1.10. Microstructure Flow stress model based on dislocation density and burgers vector
+                - name: 10.1.1.10. Model tokového napätia mikrostruktúry založený na hustote dislokácií a Burgersovom vektore
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_10_microstructure_dislocation_density_and_burgers_vector/
-                - name: 10.1.1.11. Texture based flow stress model f(strn,strnrt,O,T)
+                - name: 10.1.1.11. Model tokového napätia založený na textúre f(strn,strnrt,O,T)
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_11_texture_based_flow_stress_model_fstrnstrnrtot/
-                - name: 10.1.1.12. User defined Tabular data
+                - name: 10.1.1.12. Užívetelsky definované tabulkové dáta
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_12_user_defined_tabular_data/
-                - name: 10.1.1.13. User defined Tabular data (log)
+                - name: 10.1.1.13. Užívetelsky definované tabulkové dáta (log)
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_13_user_defined_tabular_data_log/
-                - name: 10.1.1.14. Bird-Mukharjee-Dorn equation
+                - name: 10.1.1.14. Bird-Mukharjee-Dorn rovnica
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_14_bird-mukharjee-dorn_equation/
-                - name: 10.1.1.15.User defined flow stress routine
+                - name: 10.1.1.15. Užívateľsky definovaná rutina tokového napätia
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_15_user_defined_flow_stress_routine/
-                - name: 10.1.1.16. Flow stress database
+                - name: 10.1.1.16. Databáza tokového napätia
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_16_flow_stress_database/
-                - name: 10.1.1.17. Material model data conversion utilities
+                - name: 10.1.1.17. Pomocné nástroje pre konverziu dát modelu materiálu
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_17_material_model_data_conversion_utilities/
             - name: 10.1.2. Creep
               url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_creep_models/
@@ -173,17 +173,17 @@
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_3_baily-norton_s_model/
                 - name: "10.1.2.4. Soderburg's model"
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_4_soderburg_s_model/
-                - name: 10.1.2.5. Tabular data (strain)
+                - name: 10.1.2.5. Tabulkové dáta (strain)
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_5_tabular_data/
-                - name: 10.1.2.6. Tabular data  type2 (time)
+                - name: 10.1.2.6. Tabulkové dáta (čas)
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_6_tabular_data_2_(time)/
-                - name: 10.1.2.7. Tabular (Linear)
+                - name: 10.1.2.7. Tabulkové dáta (lineárne)
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_7_tabular_(linear)/
-                - name: 10.1.2.8. Tabular (Log)
+                - name: 10.1.2.8. Tabulkové dáta (Log)
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_8_tabular_(log)/
                 - name: 10.1.2.9. Exponential law
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_9_exponential_law/
-                - name: 10.1.2.10. User Routines
+                - name: 10.1.2.10. Užívateľské rutiny
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_10_user_routines/
             - name: 10.1.3. Yield Models
               url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_yield_models/
@@ -198,159 +198,159 @@
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_4_lankford_coefficient_(r_value)/
                 - name: 10.1.3.5. Hill’s Quadratic (polycrystalline plasticity model)
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_5_hill’s_quadratic_(polycrystalline_plasticity_model)/
-                - name: "10.1.3.6. User's routine"
+                - name: "10.1.3.6. Užívateľská rutina"
                   url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_6_user_s_routine/
-            - name: 10.1.5. Hardening rule models
+            - name: 10.1.5. Modle pravidla zpevnenia 
               url: /docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_5_hardening_rule/10_1_5_hardening_rule/
-        - name: 10.2. Elastic Data
+        - name: 10.2. Elastické vlastnosti
           url: /docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/
           children:
-            - name: 10.2.5. Hyperelastic
+            - name: 10.2.5. Hyperelastické vlastnosti
               url: /docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_5_hyperelastic/
-        - name: 10.3. Thermal Data
+        - name: 10.3. Teplené Dáta
           url: /docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/
-        - name: 10.4. Diffusion Data
+        - name: 10.4. Difúzne Dáta
           url: /docs/sk/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/
-        - name: 10.6. Grain Data
+        - name: 10.6. Dáta pre kryštály
           url: /docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/
           children:
             - name: 10.6.1 Avrami Model
               url: /docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_1_avrami_model/
-        - name: 10.7. Hardness Data
+        - name: 10.7. Dáta o tuhosti
           url: /docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/
-        - name: 10.8. Elec_Mag Data
+        - name: 10.8. Elec_Mag Dáta
           url: /docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/
-        - name: 10.9. Transformation Data
+        - name: 10.9. Transformačné Dáta
           url: /docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/
           children:
-            - name: 10.9.1. Transformation Kinetics Models
+            - name: 10.9.1. Transformačné Kineticke Modely
               url: /docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_1_transformation_kinetics_models/
-        - name: 10.12. Miscellaneous Data
+        - name: 10.12. Rôzne údaje
           url: /docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/
           children:
-            - name: 10.12.1. Fracture Models
+            - name: 10.12.1. Model narušenia materiálu 
               url: /docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/
-    - name: 11. General Object  Data Definition
+    - name: 11. Všeobecný objekt  Definícia údajov
       url: /docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/
-    - name: 12. Geometry Modelling
+    - name: 12. Modelovanie geometrie
       url: /docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/
       children:
-        - name: 12.1. 2D Geometry Data Defining 
+        - name: 12.1. Definovanie údajov 2D geometrie 
           url: /docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/
-        - name: 12.2. 2D Geometry Data Editing
+        - name: 12.2. Definovanie údajov 2D geometrie
           url: /docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/
-        - name: 12.3. 3D Geometry Data Defining 
+        - name: 12.3. Definovanie údajov 3D geometrie
           url: /docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/
-        - name: 12.4. 3D Geometry data Editing (GEO TOOL)
+        - name: 12.4. Definovanie údajov 2D geometrie (GEO TOOL)
           url: /docs/sk/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_editing_geo_tooll/
-    - name: 13. Mesh Generation
+    - name: 13. Generovanie siete
       url: /docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/
       children:
-        - name: 13.1. 2D Mesh Generation
+        - name: 13.1. Generovanie 2D siete
           url: /docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/
-        - name: 13.2. 3D Tet Mesh Generation
+        - name: 13.2. Generovanie 3D tetrahedralnej siete
           url: /docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/
-        - name: 13.3. 3D Brick Mesh Generation
+        - name: 13.3. Generovanie 3D štvorcovej siete
           url: /docs/sk/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/
-    - name: 14. Boundary Conditions
+    - name: 14. Okrajové podmienky
       url: /docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/
       children:
-        - name: 14.1. Symmetry Boundary Conditions
+        - name: 14.1. Symetrické Okrajové Podmienky
           url: /docs/sk/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/
-        - name: 14.2. Deformation Boundary Conditions
+        - name: 14.2. Deformačné Okrajové Podmienky
           url: /docs/sk/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/
-        - name: 14.3. Thermal Boundary Conditions
+        - name: 14.3. Tepelné Okrajové Podmienky
           url: /docs/sk/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/
-        - name: 14.4.  Diffusion Boundary Conditions
+        - name: 14.4.  Diffúzne Okrajové Podmienky
           url: /docs/sk/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/
-        - name: 14.5. Heating Boundary Conditions
+        - name: 14.5. Okrajové Podmienky ohrievanie
           url: /docs/sk/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/
-    - name: 15. Movement Controls Definition
+    - name: 15. Definovanie pohybu
       url: /docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/
       children:
-        - name: 15.1. Speed
+        - name: 15.1. Rýchlosť
           url: /docs/sk/pre_processor/15_movement_controls_definition/15_1_speed/
-        - name: 15. 2. Force
+        - name: 15. 2. Sila
           url: /docs/sk/pre_processor/15_movement_controls_definition/15_2_force/
-        - name: 15.3. Hammer
+        - name: 15.3. Kladivový lis
           url: /docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/
-        - name: 15.4. Screw press
+        - name: 15.4. Skrutkový lis
           url: /docs/sk/pre_processor/15_movement_controls_definition/15_4_screw_press/
-        - name: 15.5. Mechanical press
+        - name: 15.5. Mechanický lis
           url: /docs/sk/pre_processor/15_movement_controls_definition/15_5_mechanical_press/
-        - name: 15.6. Hydraulic press
+        - name: 15.6. Hydraulický lis
           url: /docs/sk/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/
-        - name: 15.7. Sliding Die
+        - name: 15.7. Posuvná matrica
           url: /docs/sk/pre_processor/15_movement_controls_definition/15_7_sliding_die/
-        - name: 15.8. Path
+        - name: 15.8. Cesta
           url: /docs/sk/pre_processor/15_movement_controls_definition/15_8_path/
-        - name: 15.9. Rotational Movement
+        - name: 15.9. Rotačný pohyb
           url: /docs/sk/pre_processor/15_movement_controls_definition/15_9_rotational_movement/
-        - name: 15.10. Torsional movement
+        - name: 15.10. Priamy pohyb
           url: /docs/sk/pre_processor/15_movement_controls_definition/15_10_torsional_movement/
-        - name: 15.11. Friction Welding movement
+        - name: 15.11. Pohyb pri frickčnom zvare
           url: /docs/sk/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/
-    - name: 16 Object Properties
+    - name: 16 Object Vlastnosti
       url: /docs/sk/pre_processor/16_object_properties/16_object_properties/
       children:
-        - name: 16.1. Deformation_Properties
+        - name: 16.1. Deformačné Vlastnosti
           url: /docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/
-        - name: 16.2. Thermal Properties
+        - name: 16.2. Teplotné Vlastnosti
           url: /docs/sk/pre_processor/16_object_properties/16_2_thermal_properties/
-        - name: 16.3. Reference
+        - name: 16.3. Referencie
           url: /docs/sk/pre_processor/16_object_properties/16_3_reference/
-        - name: 16.4. Fracture Properties
+        - name: 16.4. Zlomové Vlastnosti
           url: /docs/sk/pre_processor/16_object_properties/16_4_fracture_properties/
-        - name: 16.5. Hardness estimation type
+        - name: 16.5. Typ odhadu tvrdosti
           url: /docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/
-        - name: 16.6. Heating Properties
+        - name: 16.6. Vlastnosti ohrievania
           url: /docs/sk/pre_processor/16_object_properties/16_6_heating_properties/
-        - name: 16.7. Symmetry Properties
+        - name: 16.7. Symetrické Vlastnosti
           url: /docs/sk/pre_processor/16_object_properties/16_7_symmetry_properties/
-        - name: 16.8. Body Force
+        - name: 16.8. Sila na objekt
           url: /docs/sk/pre_processor/16_object_properties/16_8_body_force/
         - name: 16.9. RSE
           url: /docs/sk/pre_processor/16_object_properties/16_9_rse/
-        - name: 16.10. Partial Domain 
+        - name: 16.10. Čiastočná Doména
           url: /docs/sk/pre_processor/16_object_properties/16_11_partial_domain/
-        - name: 16.11. User
+        - name: 16.11. Užívateľsky definované vlastnosti
           url: /docs/sk/pre_processor/16_object_properties/16_10_user/
-    - name: 17. Object Data Initialization
+    - name: 17. Inicializácia Objektových Dát
       url: /docs/sk/pre_processor/17_object_data_initialization/17_object_data_initialize/
       children:
-        - name: 17.1. Node Data Window
+        - name: 17.1. Okno uzlových dát
           url: /docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/
-        - name: 17.2. Element Data Window
+        - name: 17.2. Okno dát elementov
           url: /docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/
-        - name: 17.3. Data interploation window
+        - name: 17.3. Okno interpolácie dát
           url: /docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/
-    - name: 18. Object Manipulation Tools
+    - name: 18. Nástroje pre manipuláciu s objektami
       url: /docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/
       children:
-        - name: 18.1. Boolean
+        - name: 18.1. Booleovský
           url: /docs/sk/pre_processor/18_object_manipulation_tools/18_1_boolean/
-        - name: 18.2. Slicing
+        - name: 18.2. Rezanie
           url: /docs/sk/pre_processor/18_object_manipulation_tools/18_2_slicing/
-        - name: 18.3. Mirror Merge
+        - name: 18.3. Zrkadlové zlučovanie
           url: /docs/sk/pre_processor/18_object_manipulation_tools/18_3_mirror_merge/
-    - name: 19. Object Positioning
+    - name: 19. Pozicionovanie objektov
       url: /docs/sk/pre_processor/19_object_positioning/19_object_positioning/
-    - name: 20. Inter-object Data Definition
+    - name: 20. Definícia údajov medzi objektmi
       url: /docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/
       children:
-        - name: 20.1. Friction and Contact criteria
+        - name: 20.1. Trenie a kontaktné kritériá
           url: /docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/
-        - name: 20.2. Interface Thermal Data
+        - name: 20.2. Interferenčné tepelné dáta
           url: /docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/
-        - name: 20.3. Interface Resisitivity
+        - name: 20.3. Odpor na rozhraní
           url: /docs/sk/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/
-        - name: 20.4. Tool Wear
+        - name: 20.4. Opotrebenie nástroja
           url: /docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/
-        - name: 20.5. Rigid Contact
+        - name: 20.5. Tuhý kontakt
           url: /docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/
-    - name: 21. Database Generation
+    - name: 21. Generovanie databáze
       url: /docs/sk/pre_processor/21_database_generation/21_database_generation/
-    - name: 22. Convert 2D to 3D
+    - name: 22. Convertovanie 2D geometrie na 3D
       url: /docs/sk/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/
 - name: Simulator
   url: /docs/sk/simulator/simulator_mainpg/
@@ -358,507 +358,507 @@
     - name: 23. DEFORM Simulator
       url: /docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/
       children:
-        - name: 23.1. Start Stop and Resume Simulations
+        - name: 23.1. Štart, Stop a obnovenie simulácie 
           url: /docs/sk/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/
-        - name: 23.2. Interactive and batch mode
+        - name: 23.2. Interaktívny a batch režim
           url: /docs/sk/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/
-        - name: 23.3. Simulation Graphics
+        - name: 23.3. Grafické zobrazenie simulácie
           url: /docs/sk/simulator/23_deform_simulator/23_3_simulation_graphics/
-        - name: 23.4. Process Monitor
+        - name: 23.4. Monitorovanie procesu simulácie
           url: /docs/sk/simulator/23_deform_simulator/23_4_process_monitor/
-        - name: 23.5. Setting up MPICH
+        - name: 23.5. Nastavenie MPICH
           url: /docs/sk/simulator/23_deform_simulator/23_5_setting_up_mpich/
-        - name: 23.6. Running Shared folder Simulations
+        - name: 23.6. Spúšťanie simulácií v zdieľanom priečinku
           url: /docs/sk/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/
-        - name: 23.7. Email notification of the simulation
+        - name: 23.7. Emailové upozornenie na výsledky simulácie
           url: /docs/sk/simulator/23_deform_simulator/23_7_email_the_results/
-        - name: 23.8. Trouble Shooting Simulation Running
+        - name: 23.8. Riešenie problémov pri spúšťaní simulácie
           url: /docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/
 - name: Post-Processor
   url: /docs/sk/post_processor/post_processor_mainpg/
   children:
-    - name: 24. Introduction to Post Processor
+    - name: 24. Úvod do Post Processora
       url: /docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/
-    - name: 25. Post Processor Layout
+    - name: 25. Layout Post Processora
       url: /docs/sk/post_processor/25_post_processor_layout/25_post_processor_layout/
-    - name: 26. Post Processing tools and controls
+    - name: 26. Nástroje a ovládacie prvky Post Processora
       url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/
       children:
-        - name: 26.1. File operations in Post-processor
+        - name: 26.1. Operácie s súbormi v Post-processore
           url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_1_file_operations_in_post_processor/
-        - name: 26.2. Handling Viewport and Windows in Post-Processor
+        - name: 26.2. Spracovanie pohľadov a okien v Post-Processor
           url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/
-        - name: 26.3. Object Display Controls
+        - name: 26.3. Ovládacie prvky zobrazenia objektov
           url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_3_object_display_controls/
-        - name: 26.4. Simulation Step Display Controls
+        - name: 26.4. Ovládacie prvky zobrazenia krokov simulácie
           url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_4_simulation_step_display_controls/
-        - name: 26.5. Post-Processing Options
+        - name: 26.5. Možnosti post-spracovania
           url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/
-        - name: 26.6. Post Processing tools
+        - name: 26.6. Nástroje post-spracovania
           url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/
           children:
-            - name: 26.6.1. Object Node
+            - name: 26.6.1. Objekt uzol
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_1_object_node/
-            - name: 26.6.2. Object Elements
+            - name: 26.6.2. Objekt elementy
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_2_object_elements/
-            - name: 26.6.3. State Variables
+            - name: 26.6.3. Zobrazenie stavových veličín
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/
-            - name: 26.6.4. SV Value Table 
+            - name: 26.6.4. SV Tabulka hodnot
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_4_sv_value_table/
-            - name: 26.6.5. Region of Interest
+            - name: 26.6.5. Region záujmu
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_5_region_of_interest/
             - name: 26.6.6. Summary
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_summary/
-            - name: 26.6.7. Load Stroke
+            - name: 26.6.7. Zobrazenie zaťažeňia
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_7_load_stroke/
-            - name: 26.6.8. State variables between 2 points
+            - name: 26.6.8. Zobrazenie stavových veličín mezi 2 bodmi
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/
-            - name: 26.6.9. Point tracking
+            - name: 26.6.9. Sledovanie veličín v bode
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_9_point_tracking/
-            - name: 26.6.10. CA Model setup
+            - name: 26.6.10. CA Model nastavenie
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_10_ca_model_setup/
-            - name: 26.6.11. Coupon Data Extraction
+            - name: 26.6.11. Extrakcia údajov z kupónov
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_11_coupon_data_extraction/
-            - name: 26.6.12. Flownet Tracking
+            - name: 26.6.12. Sledovneie siete ktorá prúdi
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/
-            - name: 26.6.13. Set User Defined Variable Tracking
+            - name: 26.6.13. Nastavenie používateľsky definovaných premenných pre sledovanie 
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_13_set_user_defined_variable_tracking/
-            - name: 26.6.14. Volume Tracking
+            - name: 26.6.14. Sledovanie objemu
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_14_volume_tracking/
-            - name: 26.6.15. Mirror Symmetry
+            - name: 26.6.15. Zrkadlová symetria
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_15_mirror_symmetry/
-            - name: 26.6.16. Interactive slicing
+            - name: 26.6.16. Interaktívne rezanie
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/
-            - name: 26.6.17. Data Extraction
+            - name: 26.6.17. Extrakcia údajov
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_17_data_extraction/
-            - name: 26.6.18. CCT Curve
+            - name: 26.6.18. CCT Krivka
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_18_cct_curve/
-            - name: 26.6.19. Animation setup
+            - name: 26.6.19. Nastavenie animace
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_19_animation_setup/
-            - name: 26.6.20 3D Viewer and Setup
+            - name: 26.6.20 3D Nastavenie zobrazenia
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup/
-            - name: 26.6.21. Text and Image Annotation
+            - name: 26.6.21. Anotácia textu a obrázkov
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_21_text_and_image_annotation/
-            - name: 26.6.22. Superimpose
+            - name: 26.6.22. Prekrývanie
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_22_superimpose/
-            - name: 26.6.23. Presentation Editor and Presentation Player
+            - name: 26.6.23. Editor prezentácie a prehrávač prezentácie
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_23_presentation_editor/
-            - name: 26.6.24. Forming Limit Diagram
+            - name: 26.6.24. Diagram limitu tvárnitelnosti
               url: /docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_24_forming_limit_diagram/
-    - name: 27. Introduction to Report Generation
+    - name: 27. Úvod do generovania reprtov a prezentácií
       url: /docs/sk/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/
-    - name: 28. Report Generation
+    - name: 28. Generovanie prezentácií
       url: /docs/sk/post_processor/28_report_generation/28_report_generation/
       children:
-        - name: 28.1. Editing Chapters
+        - name: 28.1. Editovanie kapitol
           url: /docs/sk/post_processor/28_report_generation/28_1_editing_chapters/
-- name: Operation Templates
+- name: Template operácií
   url: /docs/sk/operation_templates/operation_templates_mainpg/
   children:
     - name: 29. Cogging
       url: /docs/sk/operation_templates/29_cogging/29_introduction_to_cogging/
       children:
-        - name: 29.1. Cogging Setup
+        - name: 29.1. Cogging natavenie
           url: /docs/sk/operation_templates/29_cogging/29_1_cogging_setup/
-        - name: 29.2. Swaging Setup
+        - name: 29.2. Nastavenie lisovania
           url: /docs/sk/operation_templates/29_cogging/29_2_swaging_setup/
-    - name: 30. Die Stress
+    - name: 30. Die Napätie
       url: /docs/sk/operation_templates/30_die_stress/30_introduction_to_die_stress/
       children:
-        - name: 2D Die Stress Analysis Theory
+        - name: Teória analýzy napätia na nástroji v 2D
           url: /docs/sk/operation_templates/30_die_stress/2d_die_stress_analysis_theory/
-        - name: 3D Die Stress Analysis Theory
+        - name: Teória analýzy napätia na nástroji v 3D
           url: /docs/sk/operation_templates/30_die_stress/3d_die_stress_analysis_theory/
-        - name: 30.1. 2D Die stress setup
+        - name: 30.1. 2D Nastavenie napätia na nástroji
           url: /docs/sk/operation_templates/30_die_stress/30_1_2d_die_stress_setup/
-        - name: 30.2. 3D Die stress setup
+        - name: 30.2. 3D Nastavenie napätia na nástroji
           url: /docs/sk/operation_templates/30_die_stress/30_2_3d_die_stress_setup/
-    - name: 31. Extrusion
+    - name: 31. Extrudovanie
       url: /docs/sk/operation_templates/31_extrusion/31_introduction_to_extrusion/
       children:
-        - name: 31.1. 3D Extrusion
+        - name: 31.1. 3D Extrudovanie
           url: /docs/sk/operation_templates/31_extrusion/31_1_3d_extrusion/
-    - name: 32. Multi Blow Forging
+    - name: 32. Viacnásobné kovanie
       url: /docs/sk/operation_templates/32_multi_blow_forging/32_introduction_to_multi_blow_forging/
       children:
-        - name: 32.1. 2D Multi Blow Forging setup
+        - name: 32.1. 2D nastavenie Viacnásobného kovania
           url: /docs/sk/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/
-        - name: 32.2. 3D Multi Blow Forging setup
+        - name: 32.2. 3D nastavenie Viacnásobného kovania
           url: /docs/sk/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/
-    - name: 33. Forming
+    - name: 33. Tvárnenie
       url: /docs/sk/operation_templates/33_forming/33_introduction_to_forming/
       children:
-        - name: 33.1. 2D Forming Setup
+        - name: 33.1. 2D nastavenie Tvárnenia
           url: /docs/sk/operation_templates/33_forming/33_1_2d_forming_setup/
-        - name: 33.2. 3D Forming Setup
+        - name: 33.2. 3D nastavenie Tvárnenia
           url: /docs/sk/operation_templates/33_forming/33_2_3d_forming_setup/
-    - name: 34. Forming Express
+    - name: 34. Tvárnenie Express
       url: /docs/sk/operation_templates/34_forming_express/34_introduction_to_forming_express/
       children:
-        - name: 34.1. 2D Forming Express Setup
+        - name: 34.1. 2D nastavenie expresného Tvárnenia
           url: /docs/sk/operation_templates/34_forming_express/34_1_2d_forming_express_setup/
-        - name: 34.2. 3D Forming Express Setup
+        - name: 34.2. 3D nastavenie expresného Tvárnenia
           url: /docs/sk/operation_templates/34_forming_express/34_2_3d_forming_express_setup/
-    - name: 35. Heat Transfer
+    - name: 35. Prestup tepla
       url: /docs/sk/operation_templates/35_heat_transfer/35_introduction_to_heat_transfer_operations/
       children:
-        - name: 35.1. 2D Heat Transfer Operation
+        - name: 35.1. 2D operácie prestupu tepla
           url: /docs/sk/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/
-        - name: 35.2. 3D Heat Transfer Operation
+        - name: 35.2. 3D operácie prestupu tepla
           url: /docs/sk/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/
-    - name: 36. Heat Transfer Express
+    - name: 36. Expresný prestup tepla
       url: /docs/sk/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/
       children:
-        - name: 36.1. 2D Heat Transfer Express
+        - name: 36.1. 2D Expresný prestup tepla
           url: /docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/
-        - name: 36.2. 3D Heat Transfer Express
+        - name: 36.2. 3D Expresný prestup tepla
           url: /docs/sk/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/
-    - name: 37. Heat Treatment
+    - name: 37. Popuštanie
       url: /docs/sk/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/
       children:
-        - name: 37.1. 2D Heat Treatment Wizard
+        - name: 37.1. Sprievodca 2D popúšťaním
           url: /docs/sk/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/
-        - name: 37.2. 3D Heat Treatment Wizard
+        - name: 37.2. Sprievodca 3D popúšťaním
           url: /docs/sk/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/
-    - name: 38. Furnace Heating
+    - name: 38. Ohrev v peci
       url: /docs/sk/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/
-    - name: 39. Cutting
+    - name: 39. Obrábanie (Rezanie)
       url: /docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/
       children:
-        - name: 39.1. 2D Cutting
+        - name: 39.1. 2D Obrábanie(Rezanie)
           url: /docs/sk/operation_templates/39_cutting/39_1_2d_cutting/
-        - name: 39.2. 3D Turning
+        - name: 39.2. 3D Sústruženie
           url: /docs/sk/operation_templates/39_cutting/39_2_3d_turning/
-        - name: 39.3. 3D Milling
+        - name: 39.3. 3D Frezovanie
           url: /docs/sk/operation_templates/39_cutting/39_3_3d_milling/
-        - name: 39.4. 3D Drilling
+        - name: 39.4. 3D Vŕtanie
           url: /docs/sk/operation_templates/39_cutting/39_4_drilling/
-        - name: Setting up 3D Machining Models 
+        - name: Nastavennie 3D modelov pre obrábanie (rezanie)
           url: /docs/sk/operation_templates/39_cutting/setting_up_3d_machining_models/
-    - name: 40. Machining Distortion
+    - name: 40. Deformácia po obrobení
       url: /docs/sk/operation_templates/40_machining_distortion/40_introduction_to_machining_distortion/
       children:
-        - name: 40.1. 2D Machining Distortion
+        - name: 40.1. 2D Deformácia po obrobení
           url: /docs/sk/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/
-        - name: 40.2. 3D Machining Distortion
+        - name: 40.2. 3D Deformácia po obrobení
           url: /docs/sk/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/
-    - name: 41. Report Generation
+    - name: 41. Genrovanie reportov a perzentácií
       url: /docs/sk/operation_templates/41_report_generation/41_introduction_to_report_generation/
       children:
-        - name: 41.1. Report Generation
+        - name: 41.1. Genrovanie reportov
           url: /docs/sk/operation_templates/41_report_generation/41_1_report_generation/
-    - name: 42. Ring Rolling
+    - name: 42. Válcovanie obručí
       url: /docs/sk/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/
       children:
-        - name: 42.1. Ring Rolling
+        - name: 42.1. Válcovanie obručí
           url: /docs/sk/operation_templates/42_ring_rolling/42_1_ring_rolling/
-    - name: 43. Shape Rolling
+    - name: 43. Valcovanie tvarov
       url: /docs/sk/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/
       children:
-        - name: 43.1. Shape Rolling Manual
+        - name: 43.1. Manuálne Valcovanie tvarov
           url: /docs/sk/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/
-    - name: 44. 2D to 3D Converter
+    - name: 44. Z 2D do 3D konverzia
       url: /docs/sk/operation_templates/44_2d_to_3d_converter/44_introduction_to_2d_to_3d_converter/
       children:
-        - name: 44.1. 2D to 3D Converter
+        - name: 44.1. 2D do 3D konverzia
           url: /docs/sk/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/
-    - name: 45. Boolean Operation
+    - name: 45. Booleanske operácie
       url: /docs/sk/operation_templates/45_boolean_operation/43_introduction_to_boolean_operation/
       children:
-        - name: 45.1. Boolean Operator
+        - name: 45.1. Booleanske operácie
           url: /docs/sk/operation_templates/45_boolean_operation/45_1_boolean_operation/
-    - name: 46_Copy_Mirroring
+    - name: 46 Kopírovanie a zrkadlenie
       url: /docs/sk/operation_templates/46_copy_mirroring/44_introduction_to_copy_mirroring/
       children:
-        - name: 46.1. Copy Mirroring
+        - name: 46.1. Kopírovanie a zrkadlenie
           url: /docs/sk/operation_templates/46_copy_mirroring/46_1_copy_mirroring/
-    - name: 47. Add Cycle
+    - name: 47. Pridať cyklus
       url: /docs/sk/operation_templates/47_add_cycle/47_introduction_to_add_cycle/
-    - name: 48. Spinning
+    - name: 48. Otočenie (Spinning)
       url: /docs/sk/operation_templates/48_spinning/48_introduction_to_spinning/
       children:
-        - name: 48.1. Spinning
+        - name: 48.1. Otočenie (Spinning) manuálne
           url: /docs/sk/operation_templates/48_spinning/48_1_spinning_manual/
-        - name: 48.2. Flow Forming
+        - name: 48.2. Tvárnenie za tepla
           url: /docs/sk/operation_templates/48_spinning/48_2_flow_forming/
-    - name: 49. Die Stress Study
+    - name: 49. Štúdia napätia na nástroji
       url: /docs/sk/operation_templates/49_die_stress_study/49_introduction_to_die_stress_study/
       children:
-        - name: 49.1. 2D Die Stress Study
+        - name: 49.1. 2D Štúdia napätia na nástroji
           url: /docs/sk/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/
-        - name: 49.2. 3D Die Stress Study
+        - name: 49.2. 3D Štúdia napätia na nástroji
           url: /docs/sk/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/
-    - name: 50. 3D Geometry Tool
+    - name: 50. 3D Geometria nástroja
       url: /docs/sk/operation_templates/50_3d_geo_tool/50_introduction_to_3d_geo_tool/
       children:
-        - name: 50.1. 3D Geo Tool
+        - name: 50.1. 3D Geometria nástroja
           url: /docs/sk/operation_templates/50_3d_geo_tool/50_1_3d_geo_tool/
-- name: Inverse Heat Wizard
+- name: Sprievodca Spätným ohrievaním
   url: /docs/sk/inverse_heat/inverse_heat_main_pg/
   children:
-    - name: 51 Introduction to Inverse Heat
+    - name: 51 Úvod do spätného ohrievania
       url: /docs/sk/inverse_heat/51_introduction_to_inverse_heat/
-    - name: 51.1. 2D Inverse Heat Manual
+    - name: 51.1. 2D Spätné ohrievanie
       url: /docs/sk/inverse_heat/51_1_2d_inverse_heat_manual/
-    - name: 51.2. 3D Inverse Heat Manual
+    - name: 51.2. 3D Spätné ohrievanie
       url: /docs/sk/inverse_heat/51_2_3d_inverse_heat_manual/
-- name: DOE and Optimization
+- name: Desig Of Experiment (DOE) a optimalizácia Optimization
   url: /docs/sk/doe_and_optimization/doe_and_optimization_mainpg/
   children:
-    - name: 52. DOE Study
+    - name: 52. DOE Štúdia
       url: /docs/sk/doe_and_optimization/52_doe_study/51_introduction_to_doe/
       children:
-        - name: 52.1. DOE and DOE Output Operation Setup
+        - name: 52.1. DOE a výstupné nastavenie operácií
           url: /docs/sk/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/
-        - name: 52.2. DOE Simulation Running and Monitoring
+        - name: 52.2. DOE Spustenie a monitorovanie simulácie
           url: /docs/sk/doe_and_optimization/52_doe_study/52_2_doe_simulation_running_and_monitoring/
-    - name: 53. Optimization Study
+    - name: 53. Optimalizácia štúdie
       url: /docs/sk/doe_and_optimization/53_optimization_study/53_introduction_to_optimization/
       children:
-        - name: 53.1. Optimization Setup
+        - name: 53.1. Optimalizácia Nastavenie
           url: /docs/sk/doe_and_optimization/53_optimization_study/53_1_optimization_setup/
-        - name: 53.2. Optimization Simulation Running and Monitoring
+        - name: 53.2. Optimalizácia Simulácia Spustenie a Monitorovanie
           url: /docs/sk/doe_and_optimization/53_optimization_study/53_2_optimization_simulation_running_and_monitoring/
     - name: 54. DOE Post-Processor
       url: /docs/sk/doe_and_optimization/54_doe_post_processor/54_introduction_to_doe_post/
       children:
         - name: 54.1. DOE Post Processor
           url: /docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/
-- name: Applications
+- name: Aplikácie
   url: /docs/sk/applications/55_applications/54_applications/
   children:
-    - name: Additive Manufacturing Lab
+    - name: Aditývny výrobný Lab
       url: /docs/sk/applications/55_applications/55_additive_manufacturing/55_additive_manufacturing/
-    - name: Arc Welding
+    - name: Oblúkové zváranie
       url: /docs/sk/applications/55_applications/55_1_arc_welding/
-    - name: 2D Cartridge case drawing lab
+    - name: 2D pretlačovanie lab
       url: /docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/
-    - name: Modelling of CFD Labs
+    - name: Modelovani CFD Labs
       url: /docs/sk/applications/55_applications/55_1_modelling_of_cfd_labs/55_1_modelling_of_cfd_labs_main_pg/
       children:
-        - name: 2D Laminar Flow Lab 
+        - name: 2D Laminárne prúdenie Lab 
           url: /docs/sk/applications/55_applications/55_1_modelling_of_cfd_labs/2d_laminar_flow_lab/
-        - name: 2D Rayleigh-Benard convection Lab
+        - name: 2D Rayleighova-Benardova konvekcia Lab
           url: /docs/sk/applications/55_applications/55_1_modelling_of_cfd_labs/2d_rayleigh-benard_convection_lab/
-        - name: 2D Turbulent Flow Lab 
+        - name: 2D Turbulentné prúdenie Lab 
           url: /docs/sk/applications/55_applications/55_1_modelling_of_cfd_labs/2d_turbulent_flow_lab/
-        - name: 3D Laminar Flow Lab
+        - name: 3D Laminárne prúdenie Lab
           url: /docs/sk/applications/55_applications/55_1_modelling_of_cfd_labs/3d_laminar_flow_lab/
-        - name: 3D Rayleigh-Benard convection Lab
+        - name: 3D Rayleighova-Benardova konvekcia Lab
           url: /docs/sk/applications/55_applications/55_1_modelling_of_cfd_labs/3d_rayleigh_benard_convection_lab/
-        - name: 3D Gas Quenching Lab 
+        - name: 3D Gas Kalenie Lab 
           url: /docs/sk/applications/55_applications/55_1_modelling_of_cfd_labs/3d_gas_quenching_lab/
     - name: Creep
       url: /docs/sk/applications/55_applications/55_creep/55_creep_main_pg/
       children:
         - name: 2D Creep
           url: /docs/sk/applications/55_applications/55_creep/2d_creep/
-    - name: Deformation Texture lab
+    - name: Deformácia textúry lab
       url: /docs/sk/applications/55_applications/55_deformation_texture_lab/deformation_texture_lab/
     - name: Diffusion Bonding Lab
       url: /docs/sk/applications/55_applications/55_diffusion_bonding/55_diffusion_bonding_main_pg/
       children:
-        - name: Diffusion Bonding Lab
+        - name: Difúzne zváranie Lab
           url: /docs/sk/applications/55_applications/55_diffusion_bonding/diffusion_bonding_lab/
-    - name: Electro Magnetic Forming
+    - name: Elektro magnetické tvárnenie
       url: /docs/sk/applications/55_applications/55_electro_magenetic_forming/55_electro_magnetic_forming_main_pg/
       children:
-        - name: Electro-Magnetic Forming Lab1
+        - name: Eletro magnetické tvárnenie Lab1
           url: /docs/sk/applications/55_applications/55_electro_magenetic_forming/54_4_electro-magnetic_forming/
-    - name: Fracture
+    - name: Porušenie
       url: /docs/sk/applications/55_applications/55_fracture/55_fracture_main_pg/
       children:
-        - name: 2D Fracture
+        - name: 2D Porušenie
           url: /docs/sk/applications/55_applications/55_fracture/2d_fracture/
-        - name: 2D Fracture Element deactivation Lab
+        - name: 2D Porušenie Element deaktivácia Lab
           url: /docs/sk/applications/55_applications/55_fracture/2d_fracture_element_deactivation_lab/
-        - name: 3D Fracture
+        - name: 3D Porušenie
           url: /docs/sk/applications/55_applications/55_fracture/3d_fracture/
-        - name: 3D Fracture Element deactivation Lab
+        - name: 3D Porušenie Element deaktivácia Lab
           url: /docs/sk/applications/55_applications/55_fracture/3d_fracture_element_deactivation_lab/
-    - name: Friction Stir Welding
+    - name: Zváranie trením s miešaním
       url: /docs/sk/applications/55_applications/55_friction_stir_welding/55_friction_stir_welding_main_pg/
       children:
-        - name: Friction Stir Welding Lab
+        - name: Zváranie trením s miešaním Lab
           url: /docs/sk/applications/55_applications/55_friction_stir_welding/55_friction_stir_welding/
-    - name: Induction Heating
+    - name: Indukčný ohrev
       url: /docs/sk/applications/55_applications/55_4_induction_heating/55_4_induction_heating_labs_main_pg/
       children:
-        - name: Setting up Induction heating in DEFORM
+        - name: Nastavenie indukčného ohrevu v DEFORMe
           url: /docs/sk/applications/55_applications/55_4_induction_heating/setting_up_induction_heating_in_deform/
-        - name: 2D Induction Heating Lab 1
+        - name: 2D Indukčný ohrev Lab 1
           url: /docs/sk/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab1/
-        - name: 2D Induction Heating Lab2
+        - name: 2D Indukčný ohrev Lab 2
           url: /docs/sk/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab2/
-        - name: 3D Induction Heating Lab1
+        - name: 3D Indukčný ohrev Lab 1
           url: /docs/sk/applications/55_applications/55_4_induction_heating/3d_induction_heating_lab1/
-        - name: 3D Induction Heating Lab2
+        - name: 3D Indukčný ohrev Lab2
           url: /docs/sk/applications/55_applications/55_4_induction_heating/3d_induction_heating_lab2/
-        - name: 3D Induction Heating Lab3
+        - name: 3D Indukčný ohrev Lab3
           url: /docs/sk/applications/55_applications/55_4_induction_heating/3d_induction_heating_lab3/
-    - name: Inertia Welding
+    - name: Inertné zváranie
       url: /docs/sk/applications/55_applications/55_inertia_welding/55_inertia_welding_main_pg/
       children:
-        - name: 2D Inertia Welding
+        - name: 2D Inertné zváranie
           url: /docs/sk/applications/55_applications/55_inertia_welding/2d_inertia_welding/
-    - name: Material Removal
+    - name: Odoberanie materiálu
       url: /docs/sk/applications/55_applications/55_material_removal/55_material_removal_main_pg/
       children:
-        - name: 2D Boolean Trimming Lab
+        - name: 2D Booleovské operácie Lab
           url: /docs/sk/applications/55_applications/55_material_removal/2d_boolean_trimming_lab/
-    - name: Multipass spinning with Quick Evaluation solver lab
+    - name: Viacnásobné točenie s riešiteľom rýchleho výpočtu lab
       url: /docs/sk/applications/55_applications/55_mulitpass_spinning_with_qe_solver/multipass_spinning_with_qe_lab/
-    - name: Nitiriding Labs
+    - name: Nitridovanie Labs
       url: /docs/sk/applications/55_applications/55_nitriding_labs/55_nitriding_labs_main_pg/
       children:
-        - name: 2D Nitriding Lab
+        - name: 2D Nitridovanie Lab
           url: /docs/sk/applications/55_applications/55_nitriding_labs/2d_nitriding_labs/
-        - name: 2D Nitrocarburizing Lab1
+        - name: 2D Nitrouhlíkovanie Lab1
           url: /docs/sk/applications/55_applications/55_nitriding_labs/2d_nitrocarburizing_lab1/
-        - name: 3D Nitriding Lab
+        - name: 3D Nitridovanie Lab
           url: /docs/sk/applications/55_applications/55_nitriding_labs/3d_nitriding_lab/
-        - name: 3D Nitrocarburizing Lab1
+        - name: 3D Nitrouhlíkovanie Lab1
           url: /docs/sk/applications/55_applications/55_nitriding_labs/3d_nitrocarburizing_lab1/
-    - name: Orbital Forming
+    - name: Orbitálne tvárnenie
       url: /docs/sk/applications/55_applications/55_orbital_movement/55_orbital_forming_main_pg/
       children:
-        - name: 3D Orbital Movement
+        - name: 3D obitálne posúvanie 
           url: /docs/sk/applications/55_applications/55_orbital_movement/3d_orbital_movement/
-    - name: Press Model
+    - name: Model pretlačovania
       url: /docs/sk/applications/55_applications/55_press_model/55_press_model_main_pg/
       children:
-        - name: 3D Press Model Lab
+        - name: 3D Model Pretlačovania Lab
           url: /docs/sk/applications/55_applications/55_press_model/3d_press_model_lab/
-    - name: Radiation Analysis Lab
+    - name: Analýza žiarenia Lab
       url: /docs/sk/applications/55_applications/55_radiation_analysis_lab/radiation_analysis_labs_main_pg/
       children:
-        - name: 2D Radiation Analysis Lab
+        - name: 2D Analýza žiarenia Lab
           url: /docs/sk/applications/55_applications/55_radiation_analysis_lab/2d_radiation_analysis_lab/
-    - name: Resistance Heating Labs
+    - name: Odporové zohrievanie Labs
       url: /docs/sk/applications/55_applications/55_resistance_heating_labs/resistance_heating_labs_main_pg/
       children:
-        - name: A Theoretical Background to Resistance Heating
+        - name: Teoretický základ pre odporové zohrievanie
           url: /docs/sk/applications/55_applications/55_resistance_heating_labs/a_theoretical_background_to_resistance_heating/
-        - name: 2D Resistance Heating Lab1
+        - name: 2D Odporové zohrievanie Lab1
           url: /docs/sk/applications/55_applications/55_resistance_heating_labs/2d_resistance_heating_lab1/
-    - name: Rivet Installation
+    - name: Inštalácia kotúčov
       url: /docs/sk/applications/55_applications/55_rivet_installation/rivet_installation_labs_main_pg/
       children:
-        - name: 2D Rivet Lab
+        - name: 2D nit Lab
           url: /docs/sk/applications/55_applications/55_rivet_installation/2d_rivet_lab/
-    - name: Sheet Forming
+    - name: Tvárnenie plechu
       url: /docs/sk/applications/55_applications/55_sheet_forming/55_3_cup_drawing_lab_mian_pg/
       children:
-        - name: Sheet Forming in DEFORM 3D
+        - name: Tvárnenie plechov v DEFORM 3D
           url: /docs/sk/applications/55_applications/55_sheet_forming/sheet_forming_in_deform_3d/
-        - name: 2D Cup Drawing Lab
+        - name: 2D ťahanie nádoby Lab
           url: /docs/sk/applications/55_applications/55_sheet_forming/2d_cup_drawing_lab/
-        - name: 3D Cup Drawing Lab
+        - name: 3D ťahanie nádoby Lab
           url: /docs/sk/applications/55_applications/55_sheet_forming/3d_cup_drawing_lab/
-    - name: Stress Relaxation
+    - name: Relaxácia napätí
       url: /docs/sk/applications/55_applications/55_stress_relaxation/55_stress_relaxation_main_pg/
       children:
-        - name: Stress Relaxation Lab
+        - name: Relaxácia napätí Lab
           url: /docs/sk/applications/55_applications/55_stress_relaxation/stress_relaxation_lab/
-    - name: Thermal Cycling
+    - name: Tepelne cykly
       url: /docs/sk/applications/55_applications/55_thermal_cycling/55_thermal_cycling_main_pg/
       children:
-        - name: 2D Thermal Cycling
+        - name: 2D Tepelne cykly
           url: /docs/sk/applications/55_applications/55_thermal_cycling/2d_thermal_cycling/
-    - name: Thermal Distortion
+    - name: Teplotne deformácie
       url: /docs/sk/applications/55_applications/55_thermal_distortion/thermal_distorsion_main_pg/
       children:
-        - name: Thermal Distortion Lab
+        - name: Teplotne deformácie Lab
           url: /docs/sk/applications/55_applications/55_thermal_distortion/thermal_distortion_lab/
-    - name: Tool Wear Labs
+    - name: Opotrebnie nástroja Labs
       url: /docs/sk/applications/55_applications/55_tool_wear_labs/55_tool_wear_labs_main_pg/
       children:
-        - name: 2D Tool Wear Lab in MO
+        - name: 2D Opotrebnie nástroja Lab in MO
           url: /docs/sk/applications/55_applications/55_tool_wear_labs/2d_tool_wear_lab_in_mo/
-        - name: 3D Tool Wear Lab
+        - name: 3D Opotrebnie nástroja Lab
           url: /docs/sk/applications/55_applications/55_tool_wear_labs/3d_tool_wear_lab/
-    - name: Tube Flaring
+    - name: Rozťahovanie trubiek
       url: /docs/sk/applications/55_applications/55_tube_flaring/tube_piercing_main_pg/
       children:
-        - name: Tube Flaring Lab
+        - name: Rozťahovanie trubiek Lab
           url: /docs/sk/applications/55_applications/55_tube_flaring/tube_flaring_lab/
-- name: User Routines
+- name: Uživateľské rutiny
   url: /docs/sk/user_routines/user_routine_mainpg/
   children:
-    - name: 56. User Routines in DEFORM
+    - name: 56. Uživateľské rutiny v DEFORMe
       url: /docs/sk/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/
       children:
-        - name: 56. 1. Introduction to User Routines
+        - name: 56. 1. Úvod do užívateľských rutín
           url: /docs/sk/user_routines/56_user_routines_in_deform/56_1_introduction_to_user_routines/
-        - name: 56.2. 2D User Defined FEM Routines
+        - name: 56.2. 2D Užívateľsky definované FEM rutiny
           url: /docs/sk/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/
-        - name: 56.3. 3D User Defined FEM Routines
+        - name: 56.3. 3D Užívateľsky definované FEM rutiny
           url: /docs/sk/user_routines/56_user_routines_in_deform/56_3_3d_user_defined_fem_routines/
-        - name: 56.4. User-Defined Post-Processing Routines
+        - name: 56.4. Užívateľsky definované rutiny pre post-processing
           url: /docs/sk/user_routines/56_user_routines_in_deform/56_4_user-defined_post-processing_routines/
-- name: Data Analytics
+- name: Analýza dát
   url: /docs/sk/57_data_analytics/data_analytics_main_pg/
   children:
-    - name: 57. Introduction to DEFORM Data Analytics
+    - name: 57. Úvod do DEFORM Analýzy dát
       url: /docs/sk/57_data_analytics/57_introduction_to_data_analytics/
-    - name: 57.1. DEFORM Data Analytics User Interface Overview
+    - name: 57.1. DEFORM Analýza dát užívatelský interface
       url: /docs/sk/57_data_analytics/57_1_data_analytics/
-    - name: 57.2. DEFORM Data Analytics Data Table
+    - name: 57.2. DEFORM Analýza dát Dátové tabulky
       url: /docs/sk/57_data_analytics/57_2_deform_data_analytics_data_table/
-    - name: 57.3. DEFORM Data Analytics Data Import and Export
+    - name: 57.3. DEFORM Analýza dát Import a export dát
       url: /docs/sk/57_data_analytics/57_3_deform_data_analytics_data_import_and_export/
-    - name: 57.4. DEFORM Data Analytics Plotting Data
+    - name: 57.4. DEFORM Analýza dát Vykresľovanie dát
       url: /docs/sk/57_data_analytics/57_4_deform_data_analytics_plotting_data/
-    - name: 57.5. DEFORM Data Analytics Expressions
+    - name: 57.5. DEFORM Analýza dát Výrazy
       url: /docs/sk/57_data_analytics/57_5_deform_data_analytics_expressions/
-    - name: 57.6. DEFORM Data Analytics Data Modeling
+    - name: 57.6. DEFORM Analýza dát Modelovanie dát
       url: /docs/sk/57_data_analytics/57_6_deform_data_analytics_data_modelin/
-- name: Appendices
+- name: Prílohy
   url: /docs/sk/appendices/appendices_list/
   children:
-    - name: "Appendix I : Elementary Concepts in Metal forming and Finite Element  Analysis"
+    - name: "Appendix I : Základné pojmy v oblasti tvárnenia kovov a analýzy mtódy konečných prvkov"
       url: /docs/sk/appendices/appendix_i_elementary_concepts_in_metalforming_and_fem/
-    - name: "Appendix II : Launching the Simulation Engine from a Command Prompt"
+    - name: "Appendix II : Spustenie simulačného modulu z príkazového riadku"
       url: /docs/sk/appendices/appendix_ii_launching_the_simulation_engine_from_a_command_prompt/
-    - name: "Appendix III: Running DEFORM in text mode"
+    - name: "Appendix III: Spustenie DEFORMu v textovom režime"
       url: /docs/sk/appendices/appendix_iii_running_deform_in_text_mode/
-    - name: "Appendix IV: Determining 'R' coefficients for anisotropy models"
+    - name: "Appendix IV: Určenie koeficientov „R“ pre anizotropné modely"
       url: /docs/sk/appendices/appendix_iv_determining_r_coefficientss/
-    - name: "Appendix V: The elasto-plastic model"
+    - name: "Appendix V: Elasto-Plastický model"
       url: /docs/sk/appendices/appendix_v__the_elasto-plastic_model/
-    - name: "Appendix VI: Part is deforming but strain does not accumulate"
+    - name: "Appendix VI: Objekt sa deformuje, ale napätie sa nehromadí"
       url: /docs/sk/appendices/appendix_vi__part_is_deforming_but_strain_does_not_accumulate/
-    - name: "Appendix VII: Checking the Forming loads of a simulation"
+    - name: "Appendix VII: Kontrola zaťažení pri deformácii v simulácii"
       url: /docs/sk/appendices/appendix_vii__checking_the_forming_loads_of_a_simulation/
-    - name: "Appendix VIII: Preventing leakage of nodes in sectioned simulations"
+    - name: "Appendix VIII: Predchádzanie úniku uzlov v simuláciách s rozdelenými úsekmi"
       url: /docs/sk/appendices/appendix_viii_preventing_leakage_of_nodes/
-    - name: "Appendix IX: Generating a Circular Geometry With a Hole"
+    - name: "Appendix IX:Vytvorenie kruhovej geometrie s otvorom"
       url: /docs/sk/appendices/appendix_ix_generating_a_circular_geometry_with_a_hole/
-    - name: "Appendix X: Meshing an object with multiple material group"
+    - name: "Appendix X: Vytvorenie sietí na objekte s viacerými skupinami materiálov"
       url: /docs/sk/appendices/appendix_x_meshing_an_object_with_multiple_material_group/
-    - name: "Appendix XI: Near surface mesh functions"
+    - name: "Appendix XI: Funkicie povrchovej siete"
       url: /docs/sk/appendices/appendix_xi__near_surface_mesh_functions/
-    - name: "Appendix XII: Modelling of Spring Loaded Die Using Force Controlled Objects"
+    - name: "Appendix XII: Modelovanie pružinového lisovacieho nástroja s použitím objektu riadeného silou"
       url: /docs/sk/appendices/appendix_xii__modelling_of_spring_loaded_die/
-    - name: "Appendix XIII: Fine Points on Using Force Controlled Dies"
+    - name: "Appendix XIII: Dôležité aspekty používania lisovacích nástrojov s reguláciou sily"
       url: /docs/sk/appendices/appendix_xiii_fine_points_on_using_force_controlled_dies/
-    - name: "Appendix XIV: Rotating Workpiece Simulations"
+    - name: "Appendix XIV: Simulácie otáčania obrobku"
       url: /docs/sk/appendices/appendix_xiv_rotating_workpiece_simulations/
-    - name: "Appendix XV: The Double Concave Corner Constraint"
+    - name: "Appendix XV: Obmedzenie dvojitého konkávneho rohu"
       url: /docs/sk/appendices/appendix_xv_the_double_concave_corner_constraint/
-    - name: "Appendix XVI: Adding Gas Trap Calculation to a Simulation "
+    - name: "Appendix XVI: Pridanie výpočtu plynového lapača do simulácie "
       url: /docs/sk/appendices/appendix_xvi_adding_gas_trap_calculation_to_a_simulation/
-    - name: Appendix XVII Data Files
+    - name: "Appendix XVII: Dátové súbory"
       url: /docs/sk/appendices/appendix_xvii_data_files/
-    - name: Appendix XVIII How to use Explicit Solver
+    - name: "Appendix XVIII: Ako používať Explicitný Solver"
       url: /docs/sk/appendices/appendix_xviii_how_to_use_explicit_solver/
-    - name: Appendix XIX Settings for CG solver for 3D simulation
+    - name: "Appendix XIX: Nastavenia pre CG solver pre 3D simulácie"
       url: /docs/sk/appendices/appendix_xix_settings_for_cg_solver_for_3d_simulation/
-    - name: "Appendix XX: Coupled Die stress Analysis"
+    - name: "Appendix XX: Analýza napätia lisovacieho nástroja"
       url: /docs/sk/operation_templates/30_die_stress/coupled_die_stress_analysis/
-    - name: "Appendix XXI: How to setup Intel Fortran Compiler"
+    - name: "Appendix XXI: Ako nakonfigurovať kompilátor Intel Fortran"
       url: /docs/sk/appendices/appendix_xxi_fem_user_routine_support/
-- name: Keyword Documentation
+- name: Dokumentácia kľúčových slov
   url: /docs/sk/keyword_documentation/deform_keywords_list/
   children:
     - name: Action Keywords
@@ -1679,324 +1679,324 @@
           url: /docs/sk/keyword_documentation/z/zmfi/
         - name: ZSTR (2D)
           url: /docs/sk/keyword_documentation/z/zstr/
-- name: Technical Notes
+- name: Technocké poznámky
   url: /docs/sk/technical_notes/technical_notes_main_pg/
 - name: Labs
   url: /docs/sk/labs/labs_main_pg/
   children:
-    - name: Quick Reference
+    - name: Rýchle referencie
       url: /docs/sk/labs/quick_reference/quick_reference/
       children:
-        - name: Cold Forming
+        - name: Tvárnenie za studena
           url: /docs/sk/labs/quick_reference/cold_forming/
-        - name: Hot Forming
+        - name: Tvárnenie za tepla
           url: /docs/sk/labs/quick_reference/hot_forming/
-    - name: Add Cycles Labs
+    - name: Pridať Cycles Labs
       url: /docs/sk/labs/add_cycles_labs/add_cylces_labs/
       children:
-        - name: Add Cycles for 2D Operation
+        - name: Pridať Cycles for 2D Operation
           url: /docs/sk/labs/add_cycles_labs/add_cycles_for_2d_operation/
-        - name: Add Cycles for 3D Operations
+        - name: Pridať Cycles for 3D Operations
           url: /docs/sk/labs/add_cycles_labs/add_cycles_for_3d_operations/
-    - name: Advanced Labs in MO
+    - name: Pokročilé Labs in MO
       url: /docs/sk/labs/advanced_labs_in_mo/advanced_labs_in_mo_main_pg/
       children:
-        - name: Gear Blank
+        - name: Polotovar ozubeného kolesa
           url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_labs/
           children:
-            - name: Gear Blank (EN)
+            - name: Polotovar ozubeného kolesa (EN)
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/
-            - name: Gear Blank EN Lab 1
+            - name: Polotovar ozubeného kolesa (EN) Lab 1
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/
-            - name: Gear Blank EN Lab 2
+            - name: Polotovar ozubeného kolesa (EN) Lab 2
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab2/
-            - name: Gear Blank EN Lab 3
+            - name: Polotovar ozubeného kolesa (EN) Lab 3
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab3/
-            - name: Gear Blank EN Lab 4
+            - name: Polotovar ozubeného kolesa (EN) Lab 4
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab4/
-            - name: Gear Blank EN Lab 5
+            - name: Polotovar ozubeného kolesa (EN) Lab 5
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab5/
-            - name: Gear Blank EN Lab 6
+            - name: Polotovar ozubeného kolesa (EN) Lab 6
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab6/
-            - name: Gear Blank EN Lab 7
+            - name: Polotovar ozubeného kolesa (EN) Lab 7
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab7/
-            - name: Gear Blank EN Lab 8
+            - name: Polotovar ozubeného kolesa (EN) Lab 8
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab8/
-            - name: Gear Blank EN Lab 9
+            - name: Polotovar ozubeného kolesa (EN) Lab 9
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab9/
-            - name: Gear Blank EN Lab 10
+            - name: Polotovar ozubeného kolesa (EN) Lab 10
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab10/
-            - name: Gear Blank EN Lab 11
+            - name: Polotovar ozubeného kolesa (EN) Lab 11
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab11/
-            - name: Gear Blank EN Lab 12
+            - name: Polotovar ozubeného kolesa (EN) Lab 12
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab12/
-            - name: Gear Blank (SI)
+            - name: Polotovar ozubeného kolesa (SI)
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/
-            - name: Gear Blank SI Lab 1
+            - name: Polotovar ozubeného kolesa (SI) Lab 1
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/
-            - name: Gear Blank SI Lab 2
+            - name: Polotovar ozubeného kolesa (SI) Lab 2
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab2/
-            - name: Gear Blank SI Lab 3
+            - name: Polotovar ozubeného kolesa (SI) Lab 3
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab3/
-            - name: Gear Blank SI Lab 4
+            - name: Polotovar ozubeného kolesa (SI) Lab 4
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/
-            - name: Gear Blank SI Lab 5
+            - name: Polotovar ozubeného kolesa (SI) Lab 5
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab5/
-            - name: Gear Blank SI Lab 6
+            - name: Polotovar ozubeného kolesa (SI) Lab 6
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab6/
-            - name: Gear Blank SI Lab 7
+            - name: Polotovar ozubeného kolesa (SI) Lab 7
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/
-            - name: Gear Blank SI Lab 8
-              url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab/
-            - name: Gear Blank SI Lab 9
+            - name: Polotovar ozubeného kolesa (SI) Lab 8
+              url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab8/
+            - name: Polotovar ozubeného kolesa (SI) Lab 9
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab9/
-            - name: Gear Blank SI Lab 10
+            - name: Polotovar ozubeného kolesa (SI) Lab 10
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab10/
-            - name: Gear Blank SI Lab 11
+            - name: Polotovar ozubeného kolesa (SI) Lab 11
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab11/
-            - name: Gear Blank SI Lab 12
+            - name: Polotovar ozubeného kolesa (SI) Lab 12
               url: /docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab12/
-        - name: Gear_Labs
+        - name: Polotovar ozubeného kolesa (EN)
           url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/gear_labs/
           children:
-            - name: Forming Express Gear Labs
+            - name: Rýchle tvárnenie ozubených kolies Labs
               url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_gear_labs/
               children:
-                - name: Forming Express Lab1
+                - name: Rýchle tvárnenie Lab1
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab1/
-                - name: Forming Express Lab2
+                - name: Rýchle tvárnenie Lab2
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab2/
-                - name: Forming Express Lab3
+                - name: Rýchle tvárnenie Lab3
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/
-                - name: Forming Express Lab4
+                - name: Rýchle tvárnenie Lab4
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab4/
-                - name: Forming Express Lab5
+                - name: Rýchle tvárnenie Lab5
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab5/
-                - name: Forming Express Lab6
+                - name: Rýchle tvárnenie Lab6
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab6/
-                - name: Forming Express Lab7
+                - name: Rýchle tvárnenie Lab7
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab7/
-                - name: Forming Express Lab8
+                - name: Rýchle tvárnenie Lab8
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab8/
-                - name: Forming Express Lab9
+                - name: Rýchle tvárnenie Lab9
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab9/
-                - name: Forming Express Lab10
+                - name: Rýchle tvárnenie Lab10
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab10/
-                - name: Forming Express Lab11
+                - name: Rýchle tvárnenie Lab11
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab11/
-            - name: Forming Gear Labs
+            - name: Tvárnenie kolesa Labs
               url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_gear_labs/
               children:
-                - name: Forming Lab 1
+                - name: Tvárnenie Lab 1
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab1/
-                - name: Forming Lab 2
+                - name: Tvárnenie Lab 2
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab2/
-                - name: Forming Lab 3
+                - name: Tvárnenie Lab 3
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab3/
-                - name: Forming Lab 4
+                - name: Tvárnenie Lab 4
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab4/
-                - name: Forming Lab 5
+                - name: Tvárnenie Lab 5
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab5/
-                - name: Forming Lab 6
+                - name: Tvárnenie Lab 6
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab6/
-                - name: Forming Lab 7
+                - name: Tvárnenie Lab 7
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab7/
-                - name: Forming Lab 8
+                - name: Tvárnenie Lab 8
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab8/
-                - name: Forming Lab 9
+                - name: Tvárnenie Lab 9
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab9/
-                - name: Forming Lab 10
+                - name: Tvárnenie Lab 10
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab10/
-                - name: Forming Lab 11
+                - name: Tvárnenie Lab 11
                   url: /docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab11/
-    - name: Basic Labs
+    - name: Základné Labs
       url: /docs/sk/labs/basic_labs/basic_labs_main_pg/
       children:
         - name: 2D Labs
           url: /docs/sk/labs/basic_labs/2d_labs/2d_labs/
           children:
-            - name: Lab 01 Geometry Manipulation and Uniform mesh
+            - name: Lab 01 Manipulácia s geometriou a uniformná sieť
               url: /docs/sk/labs/basic_labs/2d_labs/lab_01_geometry_manipulation_and_uniform_mesh/
-            - name: Lab 02 Geometry Correction
+            - name: Lab 02 Korekcia geometrie
               url: /docs/sk/labs/basic_labs/2d_labs/lab_02_geometry_correction/
-            - name: Lab 03 Spike Isothermal
+            - name: Lab 03 Spike Izotermický
               url: /docs/sk/labs/basic_labs/2d_labs/lab_03_spike_isothermal/
-            - name: Lab 04 Heat Transfer
+            - name: Lab 04 Prestup tepla
               url: /docs/sk/labs/basic_labs/2d_labs/lab_04_heat_transfer/
-            - name: Lab 05 Spike Non-Isothermal
+            - name: Lab 05 Spike Ne-Izotermický
               url: /docs/sk/labs/basic_labs/2d_labs/lab_05_spike_non-isothermal/
-            - name: Lab 06 Die Stress
+            - name: Lab 06 Napätie v zápustke
               url: /docs/sk/labs/basic_labs/2d_labs/lab_06_die_stress/
-            - name: Lab 07 Mechanical Press
+            - name: Lab 07 Mechanický lis
               url: /docs/sk/labs/basic_labs/2d_labs/lab_07_mechanical_press/
-            - name: Lab 08 Hammer Press
+            - name: Lab 08 Kladivový lis
               url: /docs/sk/labs/basic_labs/2d_labs/lab_08_hammer_press/
-            - name: Lab 09 Hammer Multiple Operation
+            - name: Lab 09 Kladivový lis -Viacnásobné operácie
               url: /docs/sk/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/
-            - name: Lab 10 Hydraulic press
+            - name: Lab 10 Hydraulický lis
               url: /docs/sk/labs/basic_labs/2d_labs/lab_10_hydraulic_press/
-            - name: Lab 11 Screw press
+            - name: Lab 11 Skrutkový lis
               url: /docs/sk/labs/basic_labs/2d_labs/lab_11_screw_press/
-            - name: Lab 12 Die Stress with Holder
+            - name: Lab 12 Napätie v zápustke s držiakom
               url: /docs/sk/labs/basic_labs/2d_labs/lab_12_die_stress_with_holder/
-            - name: Lab 13 Die Stress with Shrink Fit
+            - name: Lab 13 Napätie v zápustke s natiahnutím
               url: /docs/sk/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/
-            - name: Lab 14 Sliding die lab - Die Sleeve
+            - name: Lab 14 Laboratórium posuvných matíc – puzdro matice
               url: /docs/sk/labs/basic_labs/2d_labs/lab_14_sliding_die_lab__die_sleeve/
-            - name: Lab 15 Sliding die lab - Punch Sleeve
+            - name: Lab 15 Laboratórium posuvných matíc – puzdro na razník
               url: /docs/sk/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/
-            - name: Lab 25 Stub Shaft Labs
+            - name: Lab 25 Hriadeľ s čapom Lab
               url: /docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/
-            - name: Lab 16 Forming of a Roller Bearing race using a Porous material
+            - name: Lab 16 Vytváranie dráhy valivého ložiska s použitím porézneho materiálu
               url: /docs/sk/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing_race/
         - name: 3D Labs
           url: /docs/sk/labs/basic_labs/3d_labs/3d_labs/
           children:
-            - name: Lab01 Block Forging
+            - name: Lab01 Tvárnenie bloku
               url: /docs/sk/labs/basic_labs/3d_labs/lab01_block_forging/
-            - name: Lab02 Square Ring
+            - name: Lab02 Štvorcovitý pristenec
               url: /docs/sk/labs/basic_labs/3d_labs/lab02_square_ring/
-            - name: Lab03 Spike Forging
+            - name: Lab03 Spike Tvárnenie
               url: /docs/sk/labs/basic_labs/3d_labs/lab03_spike_forging/
-            - name: Lab04 Steering Link
+            - name: Lab04 Tiahlo riadenia
               url: /docs/sk/labs/basic_labs/3d_labs/lab04_steering_link/
-            - name: Lab05 Stub Shaft Labs
+            - name: Lab05 Hriadeľ s čapom Lab
               url: /docs/sk/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/
-            - name: Lab06 Hot Forming Labs
+            - name: Lab06 Tvárnenie za tepla lab
               url: /docs/sk/labs/basic_labs/3d_labs/lab06_hot_forming_labs/
-            - name: Lab07 Gear Carrier Lab
+            - name: Lab07 Držiak prevodovky Lab
               url: /docs/sk/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/
-    - name: Boolean Operation Labs
+    - name: Boolovská operácia Labs
       url: /docs/sk/labs/boolean_operation_labs/boolean_operation_labs_main_pg/
       children:
-        - name: 2D Boolean Operation Lab
+        - name: 2D Boolovská operáciaLab
           url: /docs/sk/labs/boolean_operation_labs/2d_boolean_operation_lab/
-    - name: Cogging Labs
+    - name: Ozubenie Labs
       url: /docs/sk/labs/cogging_labs/cogging_labs_main_pg/
       children:
-        - name: Cogging Lab1
+        - name: Ozubenie Lab1
           url: /docs/sk/labs/cogging_labs/cogging_lab1/
-        - name: Swaging Lab1
+        - name: Lisovanie Lab1
           url: /docs/sk/labs/cogging_labs/swaging_lab1/
-    - name: Die Stess Study Labs
+    - name: Študium napätia v zápustke Labs
       url: /docs/sk/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/
       children:
-        - name: 2D Die Stress Study with Single step
+        - name: 2D Študium napätia v zápustke s jedným krokom
           url: /docs/sk/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/
-        - name: 2D Die Stress Study with Multiple Steps
+        - name: 2D Študium napätia v zápustke s viacerými krokmi
           url: /docs/sk/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/
-        - name: 3D Die stress Study with Single step Lab1
+        - name: 3D Študium napätia v zápustke s jedným krokom Lab1
           url: /docs/sk/labs/die_stess_study_labs/3d_die_stress_study_lab1/
-        - name: 3D Die stress study with Shrink Fit Lab
+        - name: 3D Študium napätia v zápustke s natiahnutím Lab
           url: /docs/sk/labs/die_stess_study_labs/3d_die_stress_study_lab2/
-        - name: 3D Die Stress study with Multiple steps
+        - name: 3D Študium napätia v zápustke s viacerými krokmi
           url: /docs/sk/labs/die_stess_study_labs/3d_die_stress_study_across_multiple_operations/
-    - name: DOE Labs
+    - name: DOE Dizajn experimentu Labs
       url: /docs/sk/labs/doe_labs/doe_labs_main_pg/
       children:
-        - name: 2D DOE Lab1
+        - name: 2D Dizajn experimentu DOE Lab1
           url: /docs/sk/labs/doe_labs/2d_doe_lab/2d_doe_lab1/
-    - name: Extrusion Labs
+    - name: Tvárnenie tlačním extruzia Labs
       url: /docs/sk/labs/extrusion_labs/extrusion_labs_main_pg/
       children:
-        - name: ALE Extrusion Lab1
+        - name: ALE extruzia Lab1
           url: /docs/sk/labs/extrusion_labs/ale_extrusion_lab1/
-        - name: Lagrangian Extrusion Lab1
+        - name: Lagrangian extruzia Lab1
           url: /docs/sk/labs/extrusion_labs/lagrangian_extrusion_lab1/
-        - name: Steady State Extrusion Lab1
+        - name: Steady State extruzia Lab1
           url: /docs/sk/labs/extrusion_labs/steady_state_extrusion_lab1/
-    - name: Forming Express Labs
+    - name: Rýchle tvárnenie Labs
       url: /docs/sk/labs/forming_express_labs/forming_express_labs_main_pg/
       children:
-        - name: 2D Cold Forming Lab1
+        - name: 2D Tvárnenie za studena Lab1
           url: /docs/sk/labs/forming_express_labs/2d_cold_forming_lab1/
-        - name: 2D Gear-Mech Press Lab
+        - name: 2D Mechanický skrutkovicivý lis Lab
           url: /docs/sk/labs/forming_express_labs/2d_gear-mech_press_lab/
-        - name: 3D Cold Forming Lab
+        - name: 3D Tvárnenie za studena Lab
           url: /docs/sk/labs/forming_express_labs/3d_cold_forming_lab/
-        - name: 3D Gear-Mech Press Lab
+        - name: 3DMechanický skrutkovicivý lis Lab
           url: /docs/sk/labs/forming_express_labs/3d_gear_mech_press_lab/
-        - name: 3D Hot Forming Lab
+        - name: 3D Tvárnenie za tepla Lab
           url: /docs/sk/labs/forming_express_labs/3d_hot_forming_lab/
-        - name: 3D Tee Non Isothermal Forging Lab
+        - name: 3D Neizotermálne tvárnenie ozubenia Lab
           url: /docs/sk/labs/forming_express_labs/tee_non_isothermal_forging_lab/
-    - name: Forming Labs
+    - name: Tvárnenie Labs
       url: /docs/sk/labs/forming_labs/forming_labs_main_pg/
       children:
-        - name: 2D Forming Operation in Guided Mode Lab
+        - name: 2D Tvárnenie v riadenom režime Lab
           url: /docs/sk/labs/forming_labs/2d_forming_operation_lab_in_guided_mode/
-        - name: 2D Forming Operation in Expert mode Lab
+        - name: 2D Tvárnenie v expertnom režime Lab
           url: /docs/sk/labs/forming_labs/2d_forming_opn_in_expert_mode_lab/
-        - name: 3D Forming Operation in Guided mode Lab
+        - name: 3D Tvárnenie v riadenom režime Lab
           url: /docs/sk/labs/forming_labs/3d_forming_operation_in_guided_mode/
-        - name: 3D Forming Operation in Expert mode Lab
+        - name: 3D Tvárnenie v expertnom režime Lab
           url: /docs/sk/labs/forming_labs/3d_forming_operation_in_expert_mode/
-    - name: Furnace Heating Labs
+    - name: Ohrievanie v peci Labs
       url: /docs/sk/labs/furnace_heating_labs/furnace_heating__labs_main_pg/
       children:
-        - name: 3D Heat Treatment Furnace Lab
+        - name: 3D Pec na teplené spracovanie Lab
           url: /docs/sk/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/
-    - name: Heat Transfer Operation Labs
+    - name: Operácie prestupu tepla Labs
       url: /docs/sk/labs/heat_transfer_operation_labs/heat_transfer_operation_labs_main_pg/
       children:
-        - name: 2D Heat Transfer Operations Lab 
+        - name: 2D Operácie prestupu tepla Lab 
           url: /docs/sk/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/
-        - name: 3D Heat Transfer operation Lab
+        - name: 3D Operácie prestupu tepla Lab
           url: /docs/sk/labs/heat_transfer_operation_labs/3d_heat_transfer_operation_lab/
-    - name: Heat Treatment Labs
+    - name: Tepelné spracovanie Labs
       url: /docs/sk/labs/heat_treatment_labs/heat_treatment_labs_main_pg/
       children:
-        - name: 2D HT Lab 1 Heating
+        - name: 2D Tepelné spracovanie Lab 1 Heating
           url: /docs/sk/labs/heat_treatment_labs/2d_ht_lab1_heating/
-        - name: 2D HT Lab 2 Carburization
+        - name: 2D Tepelné spracovanie Lab 2 Carburization
           url: /docs/sk/labs/heat_treatment_labs/2d_ht_lab2_carburization/
-        - name: 2D HT Lab 3 Diffusion
+        - name: 2D Tepelné spracovanie Lab 3 Diffusion
           url: /docs/sk/labs/heat_treatment_labs/2d_ht_lab_3_diffusion/
-        - name: 2D HT Lab 4 Quenching 
+        - name: 2D Tepelné spracovanie Lab 4 Quenching
           url: /docs/sk/labs/heat_treatment_labs/2d_ht_lab4_quenching/
-        - name: 2D HT Lab 5 Material Input
+        - name: 2D Tepelné spracovanie Lab 5 Material Input
           url: /docs/sk/labs/heat_treatment_labs/2d_ht_lab5_material_input/
-        - name: 2D HT Lab 6 Grain Modeling
+        - name: 2D Tepelné spracovanie Lab 6 Grain Modeling
           url: /docs/sk/labs/heat_treatment_labs/2d_ht_lab6_grain_modeling/
-        - name: 2D Heat Treatment Wizard Lab1
+        - name: 2D Tepelné spracovanie Wizard Lab1
           url: /docs/sk/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/
-        - name: 2D Heat Treatment Wizard Lab2
+        - name: 2D Tepelné spracovanie Wizard Lab2
           url: /docs/sk/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab2/
-        - name: 3D Heat Treatment Wizard Lab
+        - name: 3D Tepelné spracovanie Wizard Lab
           url: /docs/sk/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/
-    - name: Inverse Heat Labs
+    - name: Inverzne teplo Labs
       url: /docs/sk/labs/inverse_heat_labs/inverse_heat_labs_main_pg/
       children:
-        - name: 2D Inverse Heat Lab1
+        - name: 2D Inverzne teplo Lab1
           url: /docs/sk/labs/inverse_heat_labs/2d_inverse_heat_lab1/
-        - name: 2D Inverse Heat Lab2
+        - name: 2D Inverzne teplo Lab2
           url: /docs/sk/labs/inverse_heat_labs/2d_inverse_heat_lab2/
-        - name: 3D Inverse Heat Lab1
+        - name: 3D Inverzne teplo Lab1
           url: /docs/sk/labs/inverse_heat_labs/3d_inverse_heat_lab1/
     - name: Machining Distortion Labs
       url: /docs/sk/labs/machining_distortion_labs/machining_distortion_labs_main_pg/
       children:
-        - name: 2D Machining Distortion Lab1
+        - name: 2D Deformácia pri obrábaní Lab1
           url: /docs/sk/labs/machining_distortion_labs/2d_machining_distortion_lab1/
-        - name: 3D Machining Distortion Lab1
+        - name: 3D Deformácia pri obrábaní Lab1
           url: /docs/sk/labs/machining_distortion_labs/3d_machining_distortion_lab1/
-    - name: Machining Labs
+    - name: Obrábanie Labs
       url: /docs/sk/labs/machining_labs/machining_labs_main_pg/
       children:
-        - name: 2D Cutting Lab
+        - name: 2D Rezanie Lab
           url: /docs/sk/labs/machining_labs/2d_cutting_lab/
-        - name: 2D Steady State Machining Lab
+        - name: 2D Steady State obrábanie Lab
           url: /docs/sk/labs/machining_labs/2d_steady_state_machining_lab/
-        - name: 3D Cutting Lab1
+        - name: 3D Rezanie Lab1
           url: /docs/sk/labs/machining_labs/3d_cutting_lab1/
-        - name: 3D Cutting Lab2
+        - name: 3D Rezanie Lab2
           url: /docs/sk/labs/machining_labs/3d_cutting_lab2/
-        - name: 3D Drilling Lab
+        - name: 3D Vŕtanie Lab
           url: /docs/sk/labs/machining_labs/3d_drilling_lab/
-    - name: Material Suite Labs
+    - name: Súbor materiálov Labs
       url: /docs/sk/labs/material_suite_labs/material_suite_labs/
       children:
-        - name: Deformation Texture Model Lab
+        - name: Model deformácie textúry Lab
           url: /docs/sk/labs/material_suite_labs/deformation_texture_model_lab/
         - name: Material Suite Labs for Cellular Automata (CA) model
           url: /docs/sk/labs/material_suite_labs/material_suite_labs_for_ca_model/
@@ -2008,10 +2008,10 @@
           url: /docs/sk/labs/material_suite_labs/rve_lab2/
         - name: SIESTA Lab
           url: /docs/sk/labs/material_suite_labs/siesta_lab/
-        - name: Material_Parameters_Fitting_labs
+        - name: Určovanie materiálových parametrov Lab
           url: /docs/sk/labs/material_suite_labs/material_parameters_fitting_labs/material_parameters_fitting_labs_main_pg/
           children:
-            - name: Flow Stress Fitting Lab
+            - name: Určovanie kriviek pretvárnýh odporov Lab
               url: /docs/sk/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/
             - name: JMAK Parameters Fitting Lab
               url: /docs/sk/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/
@@ -2020,59 +2020,59 @@
     - name: Multiple Blow Forging Labs
       url: /docs/sk/labs/multiple_blow_forging_labs/multiple_blow_forging_labs_main_pg/
       children:
-        - name: 2D Multi Blow Forging Lab1
+        - name: 2D Viacnásobné kovanie Lab1
           url: /docs/sk/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/
-        - name: 3D Multi Blow Forging Lab1
+        - name: 3D Viacnásobné kovanie Lab1
           url: /docs/sk/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/
-    - name: Report Generation Lab
+    - name: Generovanie správ Lab
       url: /docs/sk/labs/report_generation_lab/report_generation_lab_main_pg/
       children:
-        - name: Report Generation Lab in MO
+        - name: Generovanie správ Lab in MO
           url: /docs/sk/labs/report_generation_lab/report_generation_lab_in_mo/
-    - name: Ring Rolling Labs
+    - name: Valcoavnie obručí Labs
       url: /docs/sk/labs/ring_rolling_labs/ring_rolling_labs_main_pg/
       children:
-        - name: Ring Rolling Lab1
+        - name: Valcoavnie obručí Lab1
           url: /docs/sk/labs/ring_rolling_labs/ring_rolling_lab1/
-        - name: Ring Rolling Lab2
+        - name: Valcoavnie obručí Lab2
           url: /docs/sk/labs/ring_rolling_labs/ring_rolling_lab2/
-        - name: Ring Rolling Lab3
+        - name: Valcoavnie obručí Lab3
           url: /docs/sk/labs/ring_rolling_labs/ring_rolling_lab3/
-        - name: Ring Rolling Lab4
+        - name: Valcoavnie obručí Lab4
           url: /docs/sk/labs/ring_rolling_labs/ring_rolling_lab4/
-    - name: Shape Rolling Labs
+    - name: Valcovanie tvarov Labs
       url: /docs/sk/labs/shape_rolling_labs/shape_rolling_labs_main_pg/
       children:
-        - name: ALE Shape Rolling Lab1
+        - name: ALE Valcovanie tvarov Lab1
           url: /docs/sk/labs/shape_rolling_labs/ale_shape_rolling_lab1/
-        - name: ALE Shape Rolling Lab2
+        - name: ALE Valcovanie tvarov Lab2
           url: /docs/sk/labs/shape_rolling_labs/ale_shape_rolling_lab2/
-        - name: ALE Shape Rolling Lab3 
+        - name: ALE Valcovanie tvarov Lab3 
           url: /docs/sk/labs/shape_rolling_labs/ale_shape_rolling_lab3/
-        - name: ALE Shape Rolling Lab4 
+        - name: ALE Valcovanie tvarov Lab4 
           url: /docs/sk/labs/shape_rolling_labs/ale_shape_rolling_lab4/
-        - name: Shape Rolling Lab1
+        - name: Valcovanie tvarov Lab1
           url: /docs/sk/labs/shape_rolling_labs/shape_rolling_lab1/
-        - name: Shape Rolling Lab2
+        - name: Valcovanie tvarov Lab2
           url: /docs/sk/labs/shape_rolling_labs/shape_rolling_lab2/
-        - name: Shape Rolling Lab3
+        - name: Valcovanie tvarov Lab3
           url: /docs/sk/labs/shape_rolling_labs/shape_rolling_lab3/
-    - name: Shot Peening Lab
+    - name: Kuličkovanie Lab
       url: /docs/sk/labs/shot_peening_labs/shot_peening_lab_mainpg/
       children:
-        - name: Shot Peening Lab1
+        - name: Kuličkovanie Lab1
           url: /docs/sk/labs/shot_peening_labs/shot_peening_lab1/
-    - name: Spinning Labs
+    - name: Rotovanie Labs
       url: /docs/sk/labs/spinning_labs/spinning_labs_main_pg/
       children:
-        - name: Flow Forming Lab
+        - name: Tvárnenie prúdením Lab
           url: /docs/sk/labs/spinning_labs/flow_forming_lab/
-        - name: Spinning Lab
+        - name: Rotovanie Lab
           url: /docs/sk/labs/spinning_labs/spinning_lab/
-        - name: Tube Piercing Lab1
+        - name: Rúra Piercing Lab1
           url: /docs/sk/labs/spinning_labs/tube_piercing_lab1/
-    - name: Tool Life Study
+    - name: Štúdiom životnosti nástroja Lab
       url: /docs/sk/labs/tool_life_study_lab/tool_life_study_lab_main_pg/
       children:
-        - name: Tool Life Study Lab1
+        - name: Štúdiom životnosti nástroja Lab1
           url: /docs/sk/labs/tool_life_study_lab/tool_life_study_lab1/
