@@ -1,107 +1,107 @@
 ---
 lang: sk
-title: "1.9. Units"
+title: "1.9. Jednotky"
 ---
 
-# 1.9. Units
+# 1.9. Jednotky
 
-DEFORM data may be supplied in any unit system, as long as all variables are consistent (i.e. length, force, time and temperature measurements are in the same units, and all derived units - such as velocity - are derived from the same base units). This task can be simplified by using either the British or SI system for the default unit system (See below table 1.9.1.).
+Údaje DEFORM sa môžu poskytovať v ľubovoľnej sústave jednotiek, pokiaľ sú všetky premenné konzistentné (t. j. merania dĺžky, sily, času a teploty sú v rovnakých jednotkách a všetky odvodené jednotky - napríklad rýchlosť - sú odvodené z rovnakých základných jednotiek). Túto úlohu možno zjednodušiť použitím britskej sústavy alebo sústavy SI pre predvolenú sústavu jednotiek (pozri nasledujúcu tabuľku 1.9.1.).
 
-**Variables** | **SI** | **Eng** | **Conversion Factor  
-(SI ****→****Eng)**  
----|---|---|---  
-**Area** | **mm^2** | **in^2** | 0.001550003  
-**Body force/ weight density (![]({{ '/assets/icons/pre_icons/rho_symbol.jpg' | relative_url }}) *g)** | **N/mm^3** | **klbf/in^3** | 3.684  
-**Bulk modulus** | **MPa** | **ksi** | 0.145037681  
-**Centrifugal force (![]({{ '/assets/icons/pre_icons/rho_symbol.jpg' | relative_url }}) *Ω^2 )** | **N/mm^4** | **klbf/in^4** | 93.5725  
-**Coating thickness** | **microns** | **microns** | ****  
-**Convection coefficient** | **N/sec/mm/°C** | **Btu/sec/in^2/°F** | 0.000339789  
-**Current density** | **A/mm^2** | **A/in^2** | 645.16  
-**Diffusion coefficient** | **mm^2/second** | **in^2/second** | 0.001550003  
-**Distance / length** | **mm** | **in** | 0.039370079  
-**Electric field intensity** | **V/mm** | **V/in** | 25.4  
-**Electric power 1** | **W** | **W** |   
-**Electrical permittivity** | **farad/mm** | **farad/in** |   
-**Electrical resistivity (material)** | **ohm·mm** | **ohm**·** in** | 0.039370079  
-**Electrical interface resistivity** | **ohm·mm^2** | **ohm·in^2** | 0.001550003   
-**Magnetic field intensity** | **A/mm** | **A/in** |   
-**Magnetic permeability** | **H/mm** | **H/in** |   
-**Relative magnetic permeability** | **magnetic permeability / magnetic permeability of a vacuum** |   
-**Relative electrical permittivity** | **electrical permittivity / electrical permittivity of a vacuum** |   
-**Force** | **N** | **klbf** | 0.000224809  
-**Frequency** | **Hz** | **Hz** |   
-**Grain size** | **micron** | **micron** |   
-**Heat capacity** | **N/mm^2/°C** | **Btu/in^3/°F** | 0.008628872  
-**Heat energy** | **N·mm** | **Btu** | 9.47867E-07  
-**Heat flux rate** | **N/mm/sec** | **Btu/in^2/sec** | 1635.3  
-**Interface heat transfer coefficient** | **N/sec/mm/°C** | **Btu/sec/in^2/°F** | 0.000339789  
-**Mass** | **N**·** s^2/mm** | **klbf·s^2/in** | 0.005710148562313  
-**Mass density (![]({{ '/assets/icons/pre_icons/rho_symbol.jpg' | relative_url }}))** | **tonne/mm^3** | **klbf·s^2/in^4** | 93.5725  
-**Mass specific heat** | **N**·** mm/tonne·°C ** | **Btu**·** in/klbf**·** s^2**·°** F ** | 9.2216E-5  
-**Mechanical energy** | **N·mm** | **klbf·in** | 8.84956E-06  
-**Pressure; stress; Young's modulus** | **MPa** | **Ksi** | 0.145037681  
-**Relative density** | **material density / fully-dense material density** | 1  
-**Strain** | **mm/mm** | **in/in** | 1  
-**Strain rate** | **(mm/mm)/sec** | **(in/in)/sec** | 1  
-**Temperature** | **°C** | **°F** | (°C * 1.8) + 32  
-**Thermal conductivity** | **N/sec/°C** | **Btu/sec/in/°F** | 1.33754E-05  
-**Thermal expansion coefficient** | **1/°C** | **1/**°** F** | 0.555556  
-**Time** | **sec** | **sec** | 1  
-**Torque** | **N·mm** | **klb·in** | 8.85075E-06  
-**Universal gas constant** | **J/(mol·K)** | **J/(mol·°F)** | 0.555556  
-**Velocity** | **mm/sec** | **in/sec** | 0.039370079  
-**Voltage** | **V** | **V** | ****  
-**Volume** | **mm^3** | **in^3** | 6.1024E-05  
+**Premenné** | **SI** | **Eng** | **Konverzný faktor
+(SI ****→****Eng)**
+---|---|---|---
+**Plocha** | **mm^2** | **in^2** | 0,001550003
+**Hustota sily telesa/hmotnosť (![]({{ '/assets/icons/pre_icons/rho_symbol.jpg' | relative_url }}) *g)** | **N/mm^3** | **klbf/in^3** | 3,684
+**Modul pevnosti** | **MPa** | **ksi** | 0,145037681
+**Ostredivá sila (![]({{ '/assets/icons/pre_icons/rho_symbol.jpg' | relative_url }}) *Ω^2 )** | **N/mm^4** | **klbf/in^4** | 93,5725
+**Hrubosť povlaku** | **mikróny** | **mikróny** | ****
+**Koeficient konvekcie** | **N/sec/mm/°C** | **Btu/sec/in^2/°F** | 0,000339789
+**Hustota prúdu** | **A/mm^2** | **A/in^2** | 645,16
+**Koeficient difúzie** | **mm^2/sekundu** | **in^2/sekundu** | 0,001550003
+**Vzdialenosť / dĺžka** | **mm** | **in** | 0,039370079
+**Intenzita elektrického poľa** | **V/mm** | **V/in** | 25,4
+**Elektrický výkon 1** | **W** | **W** |
+**Elektrická permitivita** | **farad/mm** | **farad/in** |
+**Elektrický odpor (materiálu)** | **ohm-mm** | **ohm**-** in** | 0,039370079
+**Elektrický odpor rozhrania** | **ohm-mm^2** | **ohm-in^2** | 0,001550003
+**Intenzita magnetického poľa** | **A/mm** | **A/in** |
+**Magnetická permeabilita** | **H/mm** | **H/in** |
+**Relatívna magnetická permeabilita** | **magnetická permeabilita / magnetická permeabilita vákua** |
+**Relatívna elektrická permitivita** | **elektrická permitivita / elektrická permitivita vákua** |
+**Sila** | **N** | **klbf** | 0.000224809
+**Frekvencia** | **Hz** | **Hz** |
+**Veľkosť zrna** | **mikróny** | **mikróny** |
+**Tepelná kapacita** | **N/mm^2/°C** | **Btu/in^3/°F** | 0,008628872
+**tepelná energia** | **N-mm** | **Btu** | 9,47867E-07
+**Rýchlosť tepelného toku** | **N/mm/sek** | **Btu/in^2/sek** | 1635,3
+**Koeficient prestupu tepla na rozhraní** | **N/sec/mm/°C** | **Btu/sec/in^2/°F** | 0,000339789
+**Hmotnosť** | **N**-** s^2/mm** | **klbf-s^2/in** | 0,005710148562313
+**Hustota hmotnosti (![]({{ '/assets/icons/pre_icons/rho_symbol.jpg' | relative_url }}))** | **ton/mm^3** | **klbf-s^2/in^4** | 93,5725
+**Masové merné teplo** | **N**-** mm/tonu-°C ** | **Btu**-** in/klbf**-** s^2**-°** F ** | 9,2216E-5
+**Mechanická energia** | **N-mm** | **klbf-in** | 8,84956E-06
+**Tlak; napätie; Youngov modul** | **MPa** | **Ksi** | 0,145037681
+**Relatívna hustota** | **hustota materiálu / hustota úplne hustého materiálu** | 1
+**Dĺžka ťahu** | **mm/mm** | **in/in** | 1
+**Rýchlosť ťahu** | **(mm/mm)/sekundu** | **(in/in)/sekundu** | 1
+**Teplota** | **°C** | **°F** | (°C * 1,8) + 32
+**Tepelná vodivosť** | **N/sec/°C** | **Btu/sec/in/°F** | 1,33754E-05
+**Koeficient tepelnej rozťažnosti** | **1/°C** | **1/**°** F** | 0,555556
+**čas** | **sek** | **sek** | 1
+**krútiaci moment** | **N-mm** | **klb-in** | 8,85075E-06
+**Univerzálna plynová konštanta** | **J/(mol-K)** | **J/(mol-°F)** | 0,555556
+**Rýchlosť** | **mm/sec** | **in/sec** | 0,039370079
+**Napätie** | **V** | **V** | ****
+**Objem** | **mm^3** | **in^3** | 6,1024E-05
   
-DEFORM unit system
+Systém jednotiek DEFORM
 
-It is important to select the unit system at the beginning of the simulation. Once numerical values have been entered in the pre-processor, the numerical value will remain unchanged even if the unit system designation is changed.
+Na začiatku simulácie je dôležité vybrať jednotkový systém. Po zadaní číselných hodnôt v predprocesore zostane číselná hodnota nezmenená, aj keď sa zmení označenie jednotkovej sústavy.
 
-The Post-Processor has been equipped with a feature for unit conversion for database viewing (See [Fig. 26.5.6.](../../post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options.htm#Fig_26_4_6_Unit_Conversion) ). The user has four options for unit conversion. If the conversion factor selected is Default, then the units are picked up automatically depending on whether the database is English or SI. Since there is no conversion necessary, all the conversion factors are set to 1.0 in this column. For the cases of converting English to SI or converting SI to English, the conversion factors and units are picked up from the dialog and the values are converted and displayed in the post-processor. The fourth option gives the user the option of viewing the data from the database in units that are not English or SI. The user is free to enter the conversion factors and the units corresponding to the conversion factors.
+Postprocesor bol vybavený funkciou na konverziu jednotiek pre zobrazenie databázy (pozri [Fig. 26.5.6.](../../post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options.htm#Fig_26_4_6_Unit_Conversion) ). Používateľ má k dispozícii štyri možnosti prepočtu jednotiek. Ak je zvolený konverzný faktor Default (Predvolené), potom sa jednotky vyberú automaticky v závislosti od toho, či je databáza anglická alebo SI. Keďže nie je potrebný žiadny prevod, všetky konverzné faktory sú v tomto stĺpci nastavené na 1,0. V prípadoch konverzie z angličtiny na SI alebo konverzie zo SI na angličtinu sa konverzné faktory a jednotky vyberú z dialógového okna a hodnoty sa prepočítajú a zobrazia v postprocesore. Štvrtá možnosť dáva používateľovi možnosť zobraziť údaje z databázy v jednotkách, ktoré nie sú anglické alebo SI. Používateľ môže voľne zadať konverzné faktory a jednotky zodpovedajúce konverzným faktorom.
 
-There is no user type unit conversion for temperature, since the temperature conversion is not a simple multiplication.
+Pre teplotu neexistuje žiadny používateľský typ prevodu jednotiek, pretože prevod teploty nie je jednoduchým násobením.
 
-Unit consistency must be maintained when dealing with density. The table below outlines the various units that coincide with different density definitions.
+Pri práci s hustotou sa musí zachovať jednotnosť jednotiek. V nasledujúcej tabuľke sú uvedené rôzne jednotky, ktoré sa zhodujú s rôznymi definíciami hustoty.
 
-| **UNIT1** | **UNIT2** | **UNIT3** | **UNIT4**  
----|---|---|---|---  
-**Length** | m | mm | m | in  
-**Force** | N | N | kN | Klbf  
-**Mass** | kg | kg | tonne | (klbf)(s^2)/ in  
-**Stress** | Pa | MPa | kPa | (ksi)  
-**Density** | kg/m^3 | tonne/mm^3 | tonne/m^3 | (klbf)(s^2)/ in^4  
-**Energy** | J | mJ | kJ | (in)(klbf)  
+| **JEDNOTKA1** | **JEDNOTKA2** | **JEDNOTKA3** | **JEDNOTKA4**
+---|---|---|---|---
+**Dĺžka** | m | mm | m | in
+**Sila** | N | kN | Klbf
+**Mass** | kg | kg | tona | (klbf)(s^2)/ in
+**Napätie** | Pa | MPa | kPa | (ksi)
+**Hustota** | kg/m^3 | tona/mm^3 | tona/m^3 | (klbf)(s^2)/ in^4
+**Energia** | J | mJ | kJ | (in)(klbf)
   
-Important constants to setup Induction heating simulation:
+Dôležité konštanty na nastavenie simulácie indukčného ohrevu:
 
-**Magnetic Permeability of air / vacuum**
+**Magnetická priepustnosť vzduchu / vákua**
 
-4 ![]({{ '/assets/images/about_deform/1_9_units/pi_symbol.jpg' | relative_url }})E-7 (1.26E-6 ) Henry/m
+4 ![]({{ '/assets/images/about_deform/1_9_units/pi_symbol.jpg' | relative_url }})E-7 (1,26E-6 ) Henry/m
 
-1.26E-9 Henry/mm
+1,26E-9 Henry/mm
 
-3.19E-8 Henry/inch
+3,19E-8 Henryho/inch
 
-**Permittivity of air / vacuum**
+**Prepustnosť vzduchu / vákua**
 
-1E-9 /(36 ![]({{ '/assets/images/about_deform/1_9_units/pi_symbol.jpg' | relative_url }})) (8.85E-12 ) Farad/m
+1E-9 /(36 ![]({{ '/assets/images/about_deform/1_9_units/pi_symbol.jpg' | relative_url }})) (8,85E-12 ) Farad/m
 
-8.85E-15 Farad/mm
+8,85E-15 Farad/mm
 
-2.25E-13 Farad/inch
+2,25E-13 Farad/palec
 
-Important constants unit in Grain boundary mobility and microstructure:
+Dôležité konštanty jednotky v mobilite hraníc zrna a mikroštruktúry:
 
-**Coefficient of grain boundary mobility(M0)** micron^2/Joule 
+**Koeficient pohyblivosti na hranici zrna (M0)** mikrón^2/Joule
 
-**Activation Energy (Q)** Joule   
-**Energy** Joule
+**Aktivačná energia (Q)** Joule
+**Energia** Joule
 
-**Interface energy** Joule 
+**Energia rozhrania** Joule
 
-****1** Electric power** is given in Watts (N·m/s) for convenience relative to industry standard units. It deviates from the standard DEFORM unit system (N·mm/sec).
+****1** Elektrický výkon** sa uvádza vo wattoch (N-m/s) kvôli pohodliu v porovnaní s priemyselnými štandardnými jednotkami. Odchyľuje sa od štandardného systému jednotiek DEFORM (N-mm/s).
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [Unit System Selection Pre-Processor](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.3._Units)
 

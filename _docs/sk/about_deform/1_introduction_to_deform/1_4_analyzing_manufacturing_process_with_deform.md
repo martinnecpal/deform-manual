@@ -1,40 +1,40 @@
 ---
 lang: sk
-title: "1.4. Analyzing Manufacturing Process with DEFORM"
+title: "1.4. Analýza výrobného procesu pomocou programu DEFORM"
 ---
 
-# 1.4. Analyzing Manufacturing Process with DEFORM
+# 1.4. Analýza výrobného procesu pomocou DEFORM
 
-DEFORM can be used to analyze most thermo-mechanical forming processes, and many heat treatment processes. The general approach is to define the geometry and materials of the initial workpiece in DEFORM, and then sequentially simulate each process that is to be applied to the workpiece.
+DEFORM možno použiť na analýzu väčšiny tepelno-mechanických procesov tvárnenia a mnohých procesov tepelného spracovania. Všeobecný prístup spočíva v definovaní geometrie a materiálov počiatočného obrobku v programe DEFORM a potom v postupnej simulácii každého procesu, ktorý sa má na obrobok aplikovať.
 
-The recommended sequence for designing a manufacturing process using DEFORM is:
+Odporúčaná postupnosť pri navrhovaní výrobného procesu pomocou programu DEFORM je:
 
-  * Define your proposed process.
+  * Definujte navrhovaný postup.
 
-  * Final forged part geometry
-  * Material
-  * Tool progressions
-  * Starting workpiece/billet geometry
-  * Processing temperatures, reheats, etc.
+  * Konečná geometria kovaného dielu
+  * Materiál
+  * Progresie nástrojov
+  * Počiatočná geometria obrobku/sukna
+  * Teploty spracovania, ohrievania atď.
 
-  1. Gather required data.
+  1. Zhromaždenie požadovaných údajov.
 
-  * Material data
+  * Údaje o materiáli
 
-  * Processing condition data.
-  * Using the DEFORM pre-processor, input the problem definition for the first operation.
-  * Using the DEFORM MO Interface input the problem definition to construct successive operations initially and simulate all operations in sequence without user interaction. Fig. 1.4.1. explains process flow in MO environment.
-  * Submit the data for simulation.
-  * Using the DEFORM post-processor, review the results.
-  * Using Next gen post processor, review the results and generate Report for desired state variables/ graphs.
-  * Repeat the pre-process-simulate-review sequence for each operation in the process.
-  * If the results are unacceptable, use your engineering experience and judgment to modify the process and repeat the simulation sequence.
+  * Spracovanie údajov o stave.
+  * Pomocou predprocesora DEFORM zadajte definíciu problému pre prvú operáciu.
+  * Pomocou rozhrania DEFORM MO Interface zadajte definíciu problému, aby ste na začiatku vytvorili postupné operácie a simulovali všetky operácie za sebou bez interakcie používateľa. Obr. 1.4.1. vysvetľuje priebeh procesu v prostredí MO.
+  * Odoslanie údajov na simuláciu.
+  * Pomocou postprocesora DEFORM skontrolujte výsledky.
+  * Pomocou postprocesora Next gen skontrolujte výsledky a vytvorte správu pre požadované stavové premenné/grafy.
+  * Opakujte postupnosť pred spracovaním - simulácia - preskúmanie pre každú operáciu v procese.
+  * Ak sú výsledky neprijateľné, použite svoje inžinierske skúsenosti a úsudok na úpravu procesu a zopakujte postupnosť simulácie.
 
 ![]({{ '/assets/images/about_deform/1_4_analyzing_manufacturing_process_with_deform/1_4_image001.jpg' | relative_url }})
 
-Process Flow in MO ENVIRONMENT
+Priebeh procesov v MO ENVIRONMENT
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [PRE-PROCESSOR](/docs/sk/pre_processor/7_introduction_to_pre-processor/)
 

@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "3. Introduction to License Manager"
+title: "3. Úvod do Správcu licencií"
 ---
 
-# 3\. Introduction to License Manager
+# 3\. Úvod do Správcu licencií
 
 [3.1. Deform License Setup](/docs/sk/starting_up_deform/3_license_manager/3_1_deform_license_setup/)
 

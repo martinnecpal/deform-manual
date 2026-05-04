@@ -1,6 +1,6 @@
 ---
 lang: sk
-title: "License Manager Mainpg"
+title: "Správca licencií Mainpg"
 ---
 
 [3\. Introduction to License Manager](/docs/sk/starting_up_deform/3_license_manager/3_introduction_to_license_manager/)

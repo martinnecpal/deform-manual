@@ -1,13 +1,13 @@
 ---
 lang: sk
-title: "1.5. Before you Begin"
+title: "1.5. Skôr ako začnete"
 ---
 
-# 1.5. Before you Begin
+# 1.5. Predtým, ako začnete
 
-****Before you begin work on your DEFORM simulation, spend some time planning the simulation. Consider the type of information you hope to gain from the analysis. Are temperatures important? What about die fill? Press loads? Material deformation patterns? Ductile fracture of the part? Die failure? Buckling? Can the part be modelled as a two dimensional part, or is a three dimensional simulation necessary? Having a definite goal will help you design a simulation which will provide the information most vital to understanding your manufacturing process.
+****Predtým, ako začnete pracovať na simulácii DEFORM, venujte nejaký čas plánovaniu simulácie. Zvážte typ informácií, ktoré chcete z analýzy získať. Sú dôležité teploty? Čo plnenie matrice? Zaťaženie lisu? Vzory deformácie materiálu? Tvarové porušenie súčiastky? Zlyhanie formy? Vybočenie? Môže byť diel modelovaný ako dvojrozmerný diel, alebo je potrebná trojrozmerná simulácia? Ak máte stanovený cieľ, pomôže vám to navrhnúť simuláciu, ktorá poskytne informácie, ktoré sú najdôležitejšie pre pochopenie vášho výrobného procesu.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [PRE-PROCESSOR](/docs/sk/pre_processor/7_introduction_to_pre-processor/)
 

@@ -1,23 +1,23 @@
 ---
 lang: sk
-title: "4. Introduction to GUI Main"
+title: "4. Úvod do grafického rozhrania Main"
 ---
 
-# 4\. Introduction to GUI Main
+# 4\. Úvod do GUI Main
 
-The GUI Main can be launched from the Windows start menu by selecting the “DEFORM v12.0.1/DEFORM GUI Main v12.0.1” as shown in the Fig. 4.1.
+GUI Main možno spustiť z ponuky Štart systému Windows výberom položky "DEFORM v12.0.1/DEFORM GUI Main v12.0.1", ako je znázornené na obr. 4.1.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_introduction_to_gui_main/image001.jpg' | relative_url }})
 
-Launching GUI Main from Start Menu
+Spustenie hlavného grafického rozhrania z ponuky Štart
 
   
-The GUI Main is used to access the different modules of DEFORM that are available depending the license. Using the GUI Main user can create a New problem, access already simulated problem and view the information of the project file or database (Summary, Message file and Preview). From GUI Main user can submit problem for simulation, perform Post-Processing, monitor running simulations or edit the setup using modules available under Pre-Processor. The GUI Main Look like as shown in the Fig. 4.2.
+GUI Main sa používa na prístup k rôznym modulom programu DEFORM, ktoré sú k dispozícii v závislosti od licencie. Pomocou GUI Main (Hlavné grafické rozhranie) môže používateľ vytvoriť nový problém, získať prístup k už simulovanému problému a zobraziť informácie o súbore projektu alebo databáze (súhrn, súbor správ a náhľad). Z GUI Main môže používateľ odoslať problém na simuláciu, vykonať Post-Processing (následné spracovanie), monitorovať prebiehajúce simulácie alebo upravovať nastavenie pomocou modulov dostupných v časti Pre-Processor (predbežné spracovanie). GUI Main vyzerá tak, ako je znázornené na obr. 4.2.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_introduction_to_gui_main/image002.jpg' | relative_url }})
 
-GUI Main 
+Hlavné grafické rozhranie
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [4.1. GUI Main Layout](/docs/sk/starting_up_deform/4_gui_main/4_1_gui_main_layout/)

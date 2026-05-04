@@ -1,63 +1,63 @@
 ---
 lang: sk
-title: "2.2. Installation of DEFORM V14.0.2. in Unix or Linux"
+title: "2.2. Inštalácia DEFORM V14.0.2. v systéme Unix alebo Linux"
 ---
 
-# 2.2. Installation of DEFORM V14.0.2 in Unix or Linux
+# 2.2. Inštalácia DEFORM V14.0.2 v systéme Unix alebo Linux
 
 ****
 
-2.2.1. Introduction
+2.2.1. Úvod
 
-2.2.2. Installation Requirements
+2.2.2. Požiadavky na inštaláciu
 
-2.2.3. The Security Key Device
+2.2.3. Zariadenie bezpečnostného kľúča
 
-2.2.4. Obtaining DEFORM Software
+2.2.4. Získanie softvéru DEFORM
 
-2.2.5. Installation Notes
+2.2.5. Poznámky k inštalácii
 
-2.2.6. LZMA / XZ Utilities installation
+2.2.6. Inštalácia LZMA / XZ Utilities
 
-2.2.7. Python Installation
+2.2.7. Inštalácia Pythonu
 
-2.2.8. Sentinel Key Driver Installation
+2.2.8. Inštalácia ovládača kľúča Sentinel
 
-2.2.9. License Manager Installation
+2.2.9. Inštalácia správcu licencií
 
-2.2.10. DEFORM Installation
+2.2.10. Inštalácia DEFORM
 
-2.2.11. Additional Installation
+2.2.11. Dodatočná inštalácia
 
-2.2.12. Setup a user account
+2.2.12. Nastavenie používateľského účtu
 
-2.2.13. DEFORM Setup
+2.2.13. Nastavenie DEFORM
 
-2.2.14. System Execution
+2.2.14. Vykonávanie systému
 
-2.2.15. Questions / Problems
+2.2.15. Otázky / problémy
 
-2.2.16. CPU Types
+2.2.16. Typy CPU
 
-## INTRODUCTION
+## ÚVOD
 
-The following steps are to be executed in order to install DEFORM v14.0.2. (Subsequent service packs also follow a similar sequence, but install in a different folder). These steps include: 
+Na inštaláciu programu DEFORM v14.0.2 je potrebné vykonať nasledujúce kroky. (Aj nasledujúce servisné balíky postupujú podobne, ale inštalujú sa do iného priečinka). Tieto kroky zahŕňajú:
 
-  * Meeting the minimum system requirements. 
+  * Splnenie minimálnych systémových požiadaviek.
 
-  * Installing the DEFORM v14.0.2 program files. 
+  * Inštalácia programových súborov DEFORM v14.0.2.
 
-  * License Manager (Installing the Security Key Driver v7.6.3). 
+  * Správca licencií (inštalácia ovládača bezpečnostného kľúča v7.6.3).
 
-  * v14.0.2 files 
+  * súbory v14.0.2
 
-  * Support Codes (lzma/xz utils, tar, MPICH2 v1.3.1 64-bit, Python, openSCAD, and TeX Live) 
+  * Podpora kódov (lzma/xz utils, tar, MPICH2 v1.3.1 64-bit, Python, openSCAD a TeX Live)
 
-  * Troubleshooting, should you run into problems. 
+  * Riešenie problémov, ak sa vyskytnú.
 
-## INSTALLATION REQUIREMENTS
+## POŽIADAVKY NA INŠTALÁCIU
 
-  * Operating system:
+  * Operačný systém:
 
   * CentOS (Red Hat Enterprise Linux) 6.10+ Linux (x86_64)
 
@@ -65,73 +65,73 @@ The following steps are to be executed in order to install DEFORM v14.0.2. (Subs
 
   * Red Hat Enterprise Linux (RHEL) 8.8+ (x86_64)
 
-    * Red Hat 8 support is currently in beta
+    * Podpora Red Hat 8 je v súčasnosti v beta verzii
 
-  * Suggested RAM: 16+ GB
+  * Navrhovaná pamäť RAM: 16+ GB
 
-  * Hard drive space required for installation: ~8 GB 
+  * Miesto na pevnom disku potrebné na inštaláciu: ~8 GB
 
-  * Supporting Software:
+  * Podporný softvér:
 
-  * LZMA/XZ Utils
+  * Nástroje LZMA/XZ
 
   * GNU Tar
 
-## The Security Key Device
+## Zariadenie bezpečnostného kľúča
 
-The Security Key allows the DEFORM v14.0.2 system to be highly portable while still allowing only one system to be operable as a license server with a valid password at any time. The actual software can be installed on as many computers as you like, but each DEFORM system will only be operable with the Security Key attached or is configured as a client connected to a valid DEFORM license server. The Security Key is a USB key. Plug the Security USB hardware Key into the USB port.
+Bezpečnostný kľúč umožňuje, aby bol systém DEFORM v14.0.2 vysoko prenosný a zároveň aby bol ako licenčný server s platným heslom kedykoľvek použiteľný len jeden systém. Skutočný softvér môžete nainštalovať na ľubovoľný počet počítačov, ale každý systém DEFORM bude funkčný len s pripojeným bezpečnostným kľúčom alebo bude nakonfigurovaný ako klient pripojený k platnému licenčnému serveru DEFORM. Bezpečnostný kľúč je kľúč USB. Hardvérový bezpečnostný kľúč USB zapojte do portu USB.
 
-**CAUTION** :
+**UPOZORNENIE** :
 
-The Security Key keeps track of the date on your PC. Make sure the date is correct before initially running DEFORM v14.0.2. Changing the date backwards or forwards may make the DEFORM v14.0.2 system inoperable.
+Bezpečnostný kľúč sleduje dátum v počítači. Pred prvým spustením programu DEFORM v14.0.2 sa uistite, že je dátum správny. Zmena dátumu dozadu alebo dopredu môže spôsobiť nefunkčnosť systému DEFORM v14.0.2.
 
-## Obtaining DEFORM Software
+## Získanie softvéru DEFORM
 
-The DEFORM v14.0.2 pack is available for download from the DEFORM User Area website at <https://support.deform.com>.
+Balík DEFORM v14.0.2 je k dispozícii na stiahnutie na webovej stránke DEFORM User Area na adrese <https://support.deform.com>.
 
-The DEFORM password file (DEFORM.PWD) is available for download from the DEFORM User Area website at <https://support.deform.com>. or by contacting Ms. Engelbrecht at [mengelbrecht@deform.com](http://mengelbrecht@deform.com).
+Súbor s heslom DEFORM (DEFORM.PWD) je k dispozícii na stiahnutie na webovej stránke používateľskej oblasti DEFORM na adrese <https://support.deform.com>. alebo kontaktujte pani Engelbrechtovú na telefónnom čísle [mengelbrecht@deform.com](http://mengelbrecht@deform.com).
 
-The Sentinel hardware key driver is available for download from <https://www.deform.com/redirects/sentinel.html>. Driver v7.6.2 installer is also available for download from the DEFORM User Area website at <https://support.deform.com>. 
+Ovládač hardvérového kľúča Sentinel je k dispozícii na prevzatie na adrese <https://www.deform.com/redirects/sentinel.html>. Inštalačný program ovládača v7.6.2 je k dispozícii na stiahnutie aj z webovej lokality DEFORM User Area na adrese <https://support.deform.com>.
 
-## Installation Notes
+## Poznámky k inštalácii
 
-  1. In order to install DEFORM v14.0.2 you need to have root access on the system where you want to install the software. Instructions requiring root access are denoted by beginning with [root].
+  1. Aby ste mohli nainštalovať DEFORM v14.0.2, musíte mať v systéme, do ktorého chcete softvér nainštalovať, prístup root. Pokyny vyžadujúce prístup root sú označené začiatkom [root].
 
-  2. The user’s system must have the supporting software required to install the DEFORM software.
+  2. Systém používateľa musí mať podporný softvér potrebný na inštaláciu softvéru DEFORM.
 
-  3. The examples shown assume installation on CentOS Linux unless otherwise specified. 
+  3. Ak nie je uvedené inak, uvedené príklady predpokladajú inštaláciu v systéme CentOS Linux.
 
-## LZMA / XZ Utilities installation 
+## Inštalácia LZMA / XZ Utilities
 
-DEFORM on Linux is distributed as a GNU tar file compressed with LZMA. The installation files must be uncompressed using an LZMA decompression tool; the resulting file must then be unpacked using GNU tar. Direct login as root is required to carry out installation.
+DEFORM je v systéme Linux distribuovaný ako súbor GNU tar komprimovaný pomocou LZMA. Inštalačné súbory sa musia rozkomprimovať pomocou dekompresného nástroja LZMA; výsledný súbor sa potom musí rozbaliť pomocou GNU tar. Na vykonanie inštalácie je potrebné priame prihlásenie ako root.
 
   
-Check to see if LZMA/XZ is already installed on your system by issuing the following command:  
-On CentOS 7 and Red Hat (RHEL)8:
+Skontrolujte, či je LZMA/XZ vo vašom systéme už nainštalovaný, a to zadaním nasledujúceho príkazu:  
+V systémoch CentOS 7 a Red Hat (RHEL)8:
 
 xz --version
 
-On CentOS 6:
+V systéme CentOS 6:
 
 lzma --version
 
-If XZ is installed, the response will be similar to:
+Ak je nainštalovaný systém XZ, odpoveď bude podobná:
 
 xz (XZ Utils) 5.5.2
 
 liblzma 5.2.2
 
-If LZMA is installed, the response will be similar to:
+Ak je nainštalovaný LZMA, odpoveď bude podobná:
 
-LZMA command line tool 4.32.7
+Nástroj príkazového riadka LZMA 4.32.7
 
 LZMA SDK 4.43
 
-If you receive an error with the above command, but you know that LZMA/XZ is installed on your system, modify the system path to include the path to the LZMA/XZ binaries. If LZMA/XZ is installed, running the ‘which  lzma’ or ‘which xz’ command will return the path.
+Ak sa vám pri vyššie uvedenom príkaze zobrazí chyba, ale viete, že LZMA/XZ je vo vašom systéme nainštalovaný, upravte systémovú cestu tak, aby obsahovala cestu k binárnym súborom LZMA/XZ. Ak je LZMA/XZ nainštalovaný, spustenie príkazu 'which lzma' alebo 'which xz' vráti cestu.
 
-If the LZMA/XZ Utilities are not installed on your system, the easiest way to install LZMA/XZ is through the system’s package manager.
+Ak v systéme nie sú nainštalované nástroje LZMA/XZ, najjednoduchší spôsob inštalácie LZMA/XZ je prostredníctvom správcu balíkov systému.
 
-CentOS 7 and Red Hat (RHEL)8:
+CentOS 7 a Red Hat (RHEL)8:
 
 yum install xz
 
@@ -139,44 +139,44 @@ CentOS 6:
 
 yum install lzma
 
-LZMA is also available in the DEFORM User Area for manual installation. Download the appropriate rpms for your system to a writable directory. Both the lzma-4* and lzma-libs-4* rpms are required. Obtaining the files from the User Area is the easiest method. Precompiled rpm files for CentOS (Red Hat Enterprise Linux Compatible) Linux are available at <https://tukaani.org/lzma>.
+LZMA je k dispozícii aj v používateľskej oblasti DEFORM na manuálnu inštaláciu. Stiahnite si príslušné rpms pre váš systém do adresára, do ktorého je možné zapisovať. Vyžadujú sa rpm lzma-4* aj lzma-libs-4*. Najjednoduchšou metódou je získanie súborov z oblasti pre používateľov. Predkompilované súbory rpm pre systém CentOS (Red Hat Enterprise Linux Compatible) Linux sú k dispozícii na adrese <https://tukaani.org/lzma>.
 
-Once the rpms are in a writable directory, the lzma-libs-4* rpm needs to be installed first. Some Linux variants (more recent versions of Centos Linux) allow the files to be installed by double clicking on them in the File Browser. If this method is available, a root password will be requested and then the file will be installed. Make sure to install both of the lzma files.
+Keď sú rpm v adresári, do ktorého je možné zapisovať, je potrebné najprv nainštalovať rpm lzma-libs-4*. Niektoré varianty systému Linux (novšie verzie systému Centos Linux) umožňujú inštaláciu súborov dvojitým kliknutím na ne v prehliadači súborov. Ak je táto metóda k dispozícii, vyžiada sa heslo roota a potom sa súbor nainštaluje. Uistite sa, že ste nainštalovali oba súbory lzma.
 
-Alternatively, the files can be installed with the following command (issued as root) from the directory containing the files:
+Súbory môžete nainštalovať aj pomocou nasledujúceho príkazu (vydaného ako root) z adresára, ktorý obsahuje tieto súbory:
 
-rpm –Uvh lzma-4.32.7-1.el4.rf.x86_64.rpm lzma-libs-4.32.7-1.el4.rf.x86_64.rpm
+rpm -Uvh lzma-4.32.7-1.el4.rf.x86_64.rpm lzma-libs-4.32.7-1.el4.rf.x86_64.rpm
 
-## Python Installation 
+## Inštalácia Pythonu
 
-  1. Starting with DEFORM v13.1, Python only needs to be installed if using Web-based Service Control or Email notifications. 
+  1. Počnúc verziou DEFORM v13.1 je potrebné nainštalovať Python len v prípade, že používate webové ovládanie služieb alebo e-mailové oznámenia.
 
-  2. [root] On some versions of Linux, the included version of Python may be too old for the DEFORM Services utility to run. If a newer version isn’t available through a repository *yum, zipper), follow these instructions for updating to Python 2.7. 
+  2. [root] V niektorých verziách Linuxu môže byť dodaná verzia Pythonu príliš stará na to, aby sa dal nástroj DEFORM Services spustiť. Ak novšia verzia nie je dostupná prostredníctvom repozitára *yum, zipper), postupujte podľa týchto pokynov na aktualizáciu na Python 2.7.
 
-wget http://www.python.org/ftp/python/2.7.2/Python-2.7.2.tgz 
+wget http://www.python.org/ftp/python/2.7.2/Python-2.7.2.tgz
 
 tar -xzvf Python-2.7.2.tgz
 
-cd Python-2.7.2 
+cd Python-2.7.2
 
-./configure 
+./configure
 
-make install 
+vykonať inštaláciu
 
-If there are any problems installing Python, gcc might need to be installed first. On CentOS, type _yum install gcc_ . 
+Ak sa vyskytnú problémy s inštaláciou Pythonu, možno bude potrebné najprv nainštalovať gcc. V systéme CentOS zadajte _yum install gcc_ .
 
-## Sentinel Key Driver Installation
+## Inštalácia ovládača kľúča Sentinel
 
-  1. The 7.6.2 driver zip (sentinel_protection_installer_7.6.2_linux.zip) is available in   
-the installed License Manager at /usr/local/SFTC/LicenseManager/UTILS/. See section 2.2.9. for details on installing the License Manager.
+  1. Ovládač 7.6.2 vo formáte zip (sentinel_protection_installer_7.6.2_linux.zip) je k dispozícii v
+nainštalovaného správcu licencií v adresári /usr/local/SFTC/LicenseManager/UTILS/. Podrobnosti o inštalácii správcu licencií nájdete v časti 2.2.9.
 
-  2. Copy the compressed Sentinel key driver archive file to a writeable directory on the system on which you wish to install it.
+  2. Skopírujte komprimovaný archívny súbor ovládača kľúča Sentinel do adresára, do ktorého je možné zapisovať, v systéme, v ktorom ho chcete nainštalovať.
 
-  3. [root] Run the following commands to install the driver.
+  3. [root] Spustite nasledujúce príkazy na inštaláciu ovládača.
 
 cd /path_to_zip
 
-unzip sentinel_protection_installer_7.6.2_linux.zip
+Rozbaliť sentinel_protection_installer_7.6.2_linux.zip
 
 cd sentinel_protection_installer_7.6.2
 
@@ -184,256 +184,256 @@ chmod +x protection_install.sh
 
 ./protection_install.sh
 
-  1. Insert the USB key into the computer. In the case of using a cluster, insert the key into the Master node.
+  1. Vložte kľúč USB do počítača. V prípade použitia klastra vložte kľúč do hlavného uzla.
 
-  2. [root] Start the driver daemon.
+  2. [root] Spustite démona ovládača.
 
 cd /opt/safenet_sentinel/common_files/sentinel_usb_daemon
 
 ./load_daemon.sh start
 
-./load_daemon.sh support
+./load_daemon.sh podpora
 
-  1. [root] Repeating ./load_daemon.sh start a second time should indicate that the daemon is already running. Any subsequent system restart will initiate this service enabling the DEFORM License Manager to communicate with the hardware key and the password file.
+  1. [root] Druhé opakovanie príkazu ./load_daemon.sh start by malo znamenať, že démon už beží. Každé ďalšie reštartovanie systému spustí túto službu, čím umožní správcovi licencií DEFORM komunikovať s hardvérovým kľúčom a súborom hesiel.
 
-  2. Using some versions of this driver (like v7.4 and greater), requires the user to manually maintain compatibility with previous releases for restart/reboot sequence of the machine. (‘./load_daemon.sh support’ is required to be executed manually on each system restart).
+  2. Používanie niektorých verzií tohto ovládača (napríklad v7.4 a vyšších) vyžaduje, aby používateľ manuálne zachoval kompatibilitu s predchádzajúcimi verziami pre reštart/reštart počítača. ('./load_daemon.sh support' sa musí vykonať ručne pri každom reštarte systému).
 
-  3. DEFORM requires the v7.1 driver or later. With driver v7.1, the default location of the daemon startup script is /opt/sentinel/sud/usb.
+  3. DEFORM vyžaduje ovládač v7.1 alebo novší. S ovládačom v7.1 je predvolené umiestnenie spúšťacieho skriptu démona /opt/sentinel/sud/usb.
 
-## License Manager Installation
+## Inštalácia správcu licencií
 
-The DEFORM License Manager can be run on the same Linux machine that DEFORM is installed on or any other supported Linux machine or PC on the network.
+Správca licencií DEFORM môže byť spustený na tom istom počítači so systémom Linux, na ktorom je nainštalovaný DEFORM, alebo na akomkoľvek inom podporovanom počítači so systémom Linux alebo počítači v sieti.
 
-  1. If an earlier version of DEFORM or the License Server is installed, run the following command to stop the existing DEFORM services.
+  1. Ak je nainštalovaná staršia verzia programu DEFORM alebo licenčného servera, spustite nasledujúci príkaz na zastavenie existujúcich služieb DEFORM.
 
 _/etc/init.d/deformscd cleanstop_
 
-  1. Copy the compressed License Manager archive file to a writeable directory on the system on which you wish to install it.
+  1. Skopírujte komprimovaný archívny súbor Správcu licencií do adresára, do ktorého je možné zapisovať, v systéme, v ktorom ho chcete nainštalovať.
 
-  2. Decompress the tar.lzma file.
+  2. Dekomprimujte súbor tar.lzma.
 
-  1. On CentOS 6 use unlzma.
+  1. V systéme CentOS 6 použite unlzma.
 
 unlzma DEFORM_LicenseManager_v14_0_2_CentOS_v6.x_x86_64.tar.lzma
 
-  1. On CentOS 7 use unxz.
+  1. V systéme CentOS 7 použite unxz.
 
 unxz DEFORM_LicenseManager_v14_0_2_CentOS_v7.x_x86_64.tar.lzma
 
-  1. [root] Create the installation directory for DEFORM.
+  1. [root] Vytvorte inštalačný adresár pre DEFORM.
 
 mkdir /usr/local/SFTC
 
-  1. [root] Change into the installation directory.
+  1. [root] Prejdite do inštalačného adresára.
 
 cd /usr/local/SFTC
 
-  1. [root] Untar the uncompressed installation file.
+  1. [root] Rozbalte rozbalený inštalačný súbor.
 
-tar –xvf /path_to_file/DEFORM_LicenseManager_v14_0_2_CentOS_v6.x_x86_64.tar
+tar -xvf /path_to_file/DEFORM_LicenseManager_v14_0_2_CentOS_v6.x_x86_64.tar
 
-  1. [root] Required System Libraries. Depending on the how the operating system was installed, some 64-bit systems may be missing some required 32-bit system libraries required by DEFORM. Run the commands below to install the most likely missing libraries. This requires access to a valid software repository.  
-_cd /usr/local/SFTC/LicenseManager/UTILS  
+  1. [root] Požadované systémové knižnice. V závislosti od spôsobu inštalácie operačného systému môžu niektorým 64-bitovým systémom chýbať niektoré požadované 32-bitové systémové knižnice, ktoré DEFORM vyžaduje. Spustite nižšie uvedené príkazy na inštaláciu najpravdepodobnejších chýbajúcich knižníc. To si vyžaduje prístup k platnému softvérovému úložisku.  
+_cd /usr/local/SFTC/LicenseManager/UTILS
 ./DEF_INSTALL_LIBS.sh _
 
-  2. [root] Run the following script to set up the DEFORM services. This will set up deformlmd, deformbqd, and deformscd which are required to start the services for license manager, batch queue server, and services control.
+  2. [root] Spustite nasledujúci skript na nastavenie služieb DEFORM. Tým sa nastavia služby deformlmd, deformbqd a deformcd, ktoré sú potrebné na spustenie služieb pre správcu licencií, servera dávkovej fronty a riadenia služieb.
 
 cd /usr/local/SFTC/LicenseManager/UTILS
 
 ./DEF_INSTALL_SERVERS.sh
 
-  1. [root] If the License Manager is installed in the default location (/usr/local/SFTC) this step can be skipped.
+  1. [root] Ak je Správca licencií nainštalovaný v predvolenom umiestnení (/usr/local/SFTC), tento krok môžete preskočiť.
 
-The deform* scripts in /etc/init.d need to contain the correct paths. Please edit each deform* file and update the paths contained to point to the installation location used.
+Skripty deform* v /etc/init.d musia obsahovať správne cesty. Upravte každý súbor deform* a aktualizujte v ňom obsiahnuté cesty tak, aby ukazovali na použité umiestnenie inštalácie.
 
-  1. The Services Control cannot be run as root. The script at /etc/init.d/deformscd assumes that a non-root user named “deform” exists. If there isn’t a non-root user named “deform” adjust the line below to reference an existing, non-root user.
+  1. Kontrola služieb sa nedá spustiť ako root. Skript v /etc/init.d/deformscd predpokladá, že existuje používateľ s menom "deform", ktorý nie je root. Ak neexistuje používateľ bez roota s menom "deform", upravte nasledujúci riadok tak, aby odkazoval na existujúceho používateľa bez roota.
 
 export DEFORM_SIM_USER=deform
 
-The Services Control needs to be started before running DEFORM Setup. Do not launch the service using “service deformscd start”; this will cause problems with report generation. Instead launch it as shown below.
+Pred spustením programu DEFORM Setup je potrebné spustiť program Services Control. Nespúšťajte službu pomocou príkazu "service deformscd start"; spôsobí to problémy s generovaním zostáv. Namiesto toho ju spustite podľa nasledujúceho postupu.
 
   
 _/etc/init.d/deformscd start_
 
-  1. [root] If the DEFORM.PWD has not been downloaded yet, please see section 2.2.4. Obtaining DEFORM Software now. Copy DEFORM.PWD to the directory where the DEFORM License  Manager has been installed. The default installation location is /usr/local/SFTC/LicenseManager. Make sure that this file has read permissions enabled for all users (the chmod command can be used).
+  1. [root] Ak DEFORM.PWD ešte nebol stiahnutý, pozrite si časť 2.2.4. Získanie softvéru DEFORM teraz. Skopírujte súbor DEFORM.PWD do adresára, v ktorom bol nainštalovaný program DEFORM License Manager. Predvolené umiestnenie inštalácie je /usr/local/SFTC/LicenseManager. Uistite sa, že tento súbor má povolené práva na čítanie pre všetkých používateľov (môžete použiť príkaz chmod).
 
 cd /usr/local/SFTC/LicenseManager
 
-cp /path_to_file/DEFORM.PWD 
+cp /path_to_file/DEFORM.PWD
 
 chmod +r DEFORM.PWD
 
   
-NOTE: On a system reboot, the license manager, batch queue, and services control services should get started automatically, and any user login should be able to use these services.
+POZNÁMKA: Pri reštarte systému by sa mali automaticky spustiť služby správcu licencií, dávkového frontu a riadenia služieb a každý prihlásený používateľ by mal mať možnosť tieto služby používať.
 
-NOTE: Running the License Manager requires that the Sentinel key driver has been installed. After the driver has been installed (following the steps listed above), the License Manager will be started automatically after a reboot in most Linux systems.
+POZNÁMKA: Spustenie Správcu licencií vyžaduje, aby bol nainštalovaný ovládač kľúča Sentinel. Po nainštalovaní ovládača (podľa vyššie uvedených krokov) sa Správca licencií spustí automaticky po reštarte vo väčšine systémov Linux.
 
-NOTE: If a user wants to restart the DEFORM License Manager without rebooting the machine (e.g. if a new DEFORM.PWD file needs to be installed) they can log in as root and run the following commands.
+POZNÁMKA: Ak chce používateľ reštartovať správcu licencií DEFORM bez reštartovania počítača (napr. ak je potrebné nainštalovať nový súbor DEFORM.PWD), môže sa prihlásiť ako root a spustiť nasledujúce príkazy.
 
   
-/etc/init.d/deformlmd restart
+/etc/init.d/deformlmd reštart
 
-/etc/init.d/deformbqd restart
+/etc/init.d/deformbqd reštart
 
-  1. [root] Start the DEFORM services.
+  1. [root] Spustite služby DEFORM.
 
- _/etc/init.d/deformbqd start  
-/etc/init.d/deformlmd start  
+ _/etc/init.d/deformbqd start
+/etc/init.d/deformlmd start
 /etc/init.d/deformscd start_
 
-  1. If DEFORM is going to be installed on this same computer proceed to the next section, 2.2.10. DEFORM Installation. Otherwise skip to section 2.2.11. Additional Installation. 
+  1. Ak sa má DEFORM nainštalovať na ten istý počítač, prejdite na nasledujúcu časť 2.2.10. Inštalácia programu DEFORM. V opačnom prípade prejdite na časť 2.2.11. Dodatočná inštalácia.
 
-## DEFORM Installation
+## DEFORM Inštalácia
 
-  1. If an earlier version of DEFORM or the License Server is installed, run the following command to stop the existing DEFORM services.  
+  1. Ak je nainštalovaná staršia verzia programu DEFORM alebo licenčného servera, spustite nasledujúci príkaz na zastavenie existujúcich služieb DEFORM.  
 _/etc/init.d/deformscd cleanstop_
 
-  2. Copy the compressed License Manager archive file to a writeable directory on the system on which you wish to install it.
+  2. Skopírujte komprimovaný archívny súbor Správcu licencií do adresára, do ktorého je možné zapisovať, v systéme, v ktorom ho chcete nainštalovať.
 
-  3. Decompress the tar.lzma file.
+  3. Dekomprimujte súbor tar.lzma.
 
-  1. On CentOS 6 use unlzma.
+  1. V systéme CentOS 6 použite unlzma.
 
 unlzma DEFORM _v14_0_2_CentOS_v6.x_x86_64.tar.lzma
 
-  1. On CentOS 7 use unxz.
+  1. V systéme CentOS 7 použite unxz.
 
 unxz DEFORM_ v14_0_2_CentOS_v7.x_x86_64.tar.lzma
 
-  1. [root] Create the installation directory for DEFORM.
+  1. [root] Vytvorte inštalačný adresár pre DEFORM.
 
 mkdir /usr/local/SFTC
 
-  1. [root] Change into the installation directory.
+  1. [root] Prejdite do inštalačného adresára.
 
 cd /usr/local/SFTC
 
-  1. [root] Untar the uncompressed installation file
+  1. [root] Rozbalte rozbalený inštalačný súbor
 
-tar –xvf /path_to_file/DEFORM _v14_0_2_CentOS_v6.x_x86_64.tar
+tar -xvf /path_to_file/DEFORM _v14_0_2_CentOS_v6.x_x86_64.tar
 
-  1. [root] **Required System Libraries**. Depending on the how the operating system was installed, some 64-bit systems may be missing some required 32-bit system libraries required by DEFORM. Run the commands below to install the most likely missing libraries. This requires access to a valid software repository.
+  1. [root] **Potrebné systémové knižnice**. V závislosti od spôsobu inštalácie operačného systému môžu niektorým 64-bitovým systémom chýbať niektoré požadované 32-bitové systémové knižnice, ktoré DEFORM vyžaduje. Spustite nižšie uvedené príkazy na inštaláciu najpravdepodobnejších chýbajúcich knižníc. To si vyžaduje prístup k platnému softvérovému úložisku.
 
-cd /usr/local/SFTC/DEFORM/v14.0.2/UTILS  
-./DEF_INSTALL_LIBS.sh  
+cd /usr/local/SFTC/DEFORM/v14.0.2/UTILS
+./DEF_INSTALL_LIBS.sh
 
-  1. [root] Run the following script to set up the DEFORM services. This will set up deformlmd, deformbqd, and deformscd which are required to start the services for license manager, batch queue server, and services control.
+  1. [root] Spustite nasledujúci skript na nastavenie služieb DEFORM. Tým sa nastavia služby deformlmd, deformbqd a deformcd, ktoré sú potrebné na spustenie služieb pre správcu licencií, servera dávkovej fronty a riadenia služieb.
 
-_cd /usr/local/SFTC/DEFORM/v14.0.2/UTILS  
+_cd /usr/local/SFTC/DEFORM/v14.0.2/UTILS
 ./DEF_INSTALL_SERVERS.sh _
 
 __
 
-  2. [root] If the License Manager is installed in the default location (/usr/local/SFTC) this step can be skipped. 
+  2. [root] Ak je Správca licencií nainštalovaný v predvolenom umiestnení (/usr/local/SFTC), tento krok môžete preskočiť.
 
-The deform* scripts in /etc/init.d need to contain the correct paths. Please edit each deform* file and update the paths contained to point to the installation location used.
+Skripty deform* v /etc/init.d musia obsahovať správne cesty. Upravte každý súbor deform* a aktualizujte v ňom obsiahnuté cesty tak, aby ukazovali na použité umiestnenie inštalácie.
 
-  1. [root] The Services Control cannot be run as root. The script at /etc/init.d/deformscd assumes that a non-root user named “deform” exists. If there isn’t a non-root user named “deform” adjust the line below to reference an existing, non-root user.
+  1. [root] Kontrola služieb sa nedá spustiť ako root. Skript v /etc/init.d/deformscd predpokladá, že existuje používateľ s menom "deform", ktorý nie je root. Ak neexistuje používateľ bez roota s menom "deform", upravte nasledujúci riadok tak, aby odkazoval na existujúceho používateľa bez roota.
 
 export DEFORM_SIM_USER=deform
 
-The Services Control needs to be started before running DEFORM Setup. Do not launch the service using “service deformscd start”; this will cause problems with report generation. Instead launch it as shown below.
+Pred spustením programu DEFORM Setup je potrebné spustiť program Services Control. Nespúšťajte službu pomocou príkazu "service deformscd start"; spôsobí to problémy s generovaním zostáv. Namiesto toho ju spustite podľa nasledujúceho postupu.
 
 /etc/init.d/deformscd start
 
-  1. [root] **Report Generation Libraries**. Starting with DEFORM v12.0.1 report generation requires the Latex PDF library. Run the commands below to install the Latex libraries.
+  1. [root] **Knižnice na generovanie správ**. Od verzie DEFORM v12.0.1 vyžaduje generovanie zostáv knižnicu Latex PDF. Spustite nižšie uvedené príkazy na inštaláciu knižníc Latex.
 
 cd /usr/local/SFTC/DEFORM/v14.0.2/UTILS
 
 ./DEF_INSTALL_LATEX.sh
 
-  1. **3D Machining**. Starting with DEFORM v11.1, the 3D machining module is enhanced to include creation of drill bit geometry, which requires the following additional steps.
+  1. **3D obrábanie**. Počnúc verziou DEFORM v11.1 je modul 3D obrábania rozšírený o vytváranie geometrie vrtákov, čo si vyžaduje nasledujúce dodatočné kroky.
 
-  1. Copy the openscad-2014.03.x86-32.tar.gz file from
+  1. Skopírujte súbor openscad-2014.03.x86-32.tar.gz zo stránky
 
-/usr/local/SFTC/DEFORM/v14.0.2/UTILS folder to a writeable folder
+/usr/local/SFTC/DEFORM/v14.0.2/UTILS do priečinka, do ktorého je možné zapisovať
 
-  1. unzip this using tar command "_tar -xzvf openscad-2014.03.x86-32.tar.gz_ "
+  1. rozbaľte to pomocou príkazu tar "_tar -xzvf openscad-2014.03.x86-32.tar.gz_ "
 
-  2. Go to the resulting folder "_cd openscad-2014.03_ "
+  2. Prejdite do výsledného priečinka "_cd openscad-2014.03_ "
 
-  3. [root] Install the package "_./install.sh_ ".
+  3. [root] Nainštalujte balík "_./install.sh_ ".
 
-  1. [root] **64-bit FEM Engine installation**. Starting with DEFORM v10.2 support for 64-bit 3D FEM engine has been extended to Linux. On these 64-bit operating systems, the 64-bit 3D FEM support includes user routine support as well. From GUI Main, in the Run Options dialog, user can now select to run the model in 32-bit mode or 64-bit mode. Related instructions on the user routine compilation in 64-bit mode are available in the system documentation (please refer to Chapter [56.3. 3D User Defined FEM Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_3_3d_user_defined_fem_routines/) system documentation). Starting with DEFORM v10.2.1 for 64-bit MPI support, the mpich1 library has been updated to mpich2 for 64-bit MPI support (no change for 32-bit MPI support which still uses mpich1). Starting with DEFORM v11.1 the mpich2 library was updated.
+  1. [root] **64-bitová inštalácia FEM Engine**. Počnúc verziou DEFORM v10.2 bola podpora 64-bitového 3D FEM enginu rozšírená na Linux. V týchto 64-bitových operačných systémoch zahŕňa podpora 64-bitového 3D FEM aj podporu používateľských rutín. V GUI Main (Hlavné grafické rozhranie) v dialógovom okne Run Options (Možnosti spustenia) si teraz používateľ môže vybrať, či chce model spustiť v 32-bitovom alebo 64-bitovom režime. Súvisiace pokyny týkajúce sa kompilácie používateľských rutín v 64-bitovom režime sú k dispozícii v systémovej dokumentácii (pozrite si kapitolu Systémová dokumentácia [56.3. 3D User Defined FEM Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_3_3d_user_defined_fem_routines/)). Počnúc verziou DEFORM v10.2.1 pre 64-bitovú podporu MPI bola knižnica mpich1 aktualizovaná na mpich2 pre 64-bitovú podporu MPI (žiadna zmena pre 32-bitovú podporu MPI, ktorá stále používa mpich1). Od verzie DEFORM v11.1 bola aktualizovaná knižnica mpich2.
 
-Run the following commands to install mpich2 for 64-bit DEFORM.
+Spustite nasledujúce príkazy na inštaláciu mpich2 pre 64-bitový DEFORM.
 
 _cd /usr/local_
 
 _tar -xvf /usr/local/SFTC/DEFORM/v14.0.2/UTILS/mpich2-1.3.1.tar_
 
-In user .cshrc file, add these 2 environment variables.
+Do súboru používateľa .cshrc pridajte tieto 2 premenné prostredia.
 
 _setenv DEFORM_MPI MPICH2_
 
 _setenv MPI_ROOT /usr/local/mpich2-1.3.1_
 
-NOTE: The MPI_ROOT definition is only needed if the mpich2 installation is not made in the /usr/local path.
+POZNÁMKA: Definícia MPI_ROOT je potrebná len vtedy, ak inštalácia mpich2 nie je vykonaná v ceste /usr/local.
 
-NOTE: Starting with DEFORM v11.1 64-bit support has been also extended to 2D FEM, but has no MPI support.
+POZNÁMKA: Počnúc verziou DEFORM v11.1 bola podpora 64-bitov rozšírená aj na 2D FEM, ale nemá podporu MPI.
 
-  1. [root] **64-bit FEM Engine setup**. Starting with DEFORM v13.1.1, there is a new option to choose the FEM Engine. For Centos 7, the Intel® Fortran compiler has been added, and is installed by default. SFTC recommends using this option unless the Absoft Fortran compiler is being used or DEFORM is installed on a computer using a legacy (non-modern) CPU. For Centos 6, the Intel Fortran option is not available, so the Absoft Modern Engine is installed by default. SFTC recommends the modern Absoft Fortran compiler option unless DEFORM is installed on a computer using a legacy (non-modern) CPU. Please be aware that the Intel Fortran option is compatible with both Intel Core and AMD Ryzen CPUs. Note that starting with DEFORM v14.0.2, the Absoft Legact engine is no longer available.
+  1. [root] **64-bitové nastavenie FEM Engine**. Od verzie DEFORM v13.1.1 je k dispozícii nová možnosť výberu FEM Engine. Pre systém Centos 7 bol pridaný kompilátor Intel® Fortran, ktorý je predvolene nainštalovaný. SFTC odporúča používať túto možnosť, pokiaľ sa nepoužíva kompilátor Absoft Fortran alebo ak sa DEFORM neinštaluje na počítači so starším (nemoderným) procesorom. V prípade systému Centos 6 nie je možnosť Intel Fortran k dispozícii, preto je predvolene nainštalovaný moderný kompilátor Absoft. SFTC odporúča použiť modernú možnosť kompilátora Absoft Fortran, pokiaľ nie je DEFORM nainštalovaný na počítači, ktorý používa starší (nemoderný) procesor. Upozorňujeme, že možnosť Intel Fortran je kompatibilná s procesormi Intel Core aj AMD Ryzen. Upozorňujeme, že od verzie DEFORM v14.0.2 už nie je k dispozícii engine Absoft Legact.
 
-a. In order to change the FEM engine, run the commands below and follow the prompts.
+a. Ak chcete zmeniť motor FEM, spustite nižšie uvedené príkazy a postupujte podľa pokynov.
 
 cd /usr/local/SFTC/DEFORM/v14.0.2/UTILS
 
 ./DEF_SETUP_FEM.sh
 
-##  Additional Installation
+## Dodatočná inštalácia
 
-  1. **Permissions**. For simulations being run by a user other than the defined simulation server user, the following minimum permission requirements must be met.
+  1. **Povolenia**. V prípade simulácií, ktoré spúšťa iný používateľ ako definovaný používateľ simulačného servera, musia byť splnené nasledujúce minimálne požiadavky na oprávnenia.
 
-  1. The DEFORM user and Simulation Server users must be in each other’s primary groups.
+  1. Používateľ DEFORM a používatelia simulačného servera musia byť vo vzájomných primárnych skupinách.
 
-  2. The DEFORM user and Simulation Server user must have a umask that allows for full permissions for user and group. i.e. umask 007
+  2. Používateľ DEFORM a používateľ simulačného servera musia mať umask, ktorý umožňuje úplné oprávnenia pre používateľa a skupinu, t. j. umask 007
 
-  3. The DEFORM user’s home directory must be group readable.
+  3. Domovský adresár používateľa DEFORM musí byť čitateľný skupinou.
 
-  4. Run _/usr/local/SFTC/DEFORM/v14.0.2/UTILS/DEF_CHECK_CONFIG.sh_ from a problem directory to check for these and any other related permission issues. Please have your systems administrator check the output of this check before contacting SFTC Support. Note that some errors may appear depending on when this step is run (for example, if a user account hasn’t been setup yet).
+  4. Spustite _/usr/local/SFTC/DEFORM/v14.0.2/UTILS/DEF_CHECK_CONFIG.sh_ z problémového adresára, aby ste skontrolovali tieto a akékoľvek iné súvisiace problémy s oprávneniami. Pred kontaktovaním podpory SFTC požiadajte správcu systému, aby skontroloval výstup tejto kontroly. Upozorňujeme, že niektoré chyby sa môžu objaviť v závislosti od toho, kedy sa tento krok spustí (napríklad ak ešte nebolo nastavené používateľské konto).
 
-  1. Set the root environment to contain DEF_CFG_DIR by adding the following to root’s shell configuration file (_~/.cshrc_) file:
+  1. Nastavte prostredie root tak, aby obsahovalo DEF_CFG_DIR pridaním nasledujúceho príkazu do konfiguračného súboru shell (_~/.cshrc_):
 
 _setenv DEF_CFG_DIR '/usr/local/SFTC/DEFORM/Configuration'_
 
   
-NOTE: This will also need to be defined in the user’s environment as well as explained in section. 2.2.12. Setup a user account.
+POZNÁMKA: Toto bude potrebné definovať aj v prostredí používateľa, ako je vysvetlené v časti. 2.2.12. Nastavenie používateľského konta.
 
-  1. **User defined post functionality** **in 64-bit mode**. In order to use user defined post functionality in 64-bit mode.
+  1. **Funkcia príspevku definovaného užívateľom** **v 64-bitovom režime**. Ak chcete používať funkciu príspevku definovaného používateľom v 64-bitovom režime.
 
-  1. The system must have Absoft v11.0 (64-bit) compiler installed on the machine.
+  1. V systéme musí byť nainštalovaný kompilátor Absoft v11.0 (64-bitový).
 
-  2. The user shell configuration file (~/.cshrc) needs to have the following line.
+  2. Konfiguračný súbor používateľského shellu (~/.cshrc) musí obsahovať nasledujúci riadok.
 
 setenv LD_LIBRARY_PATH /opt/absoft11.0/shlib64
 
   
-If the above haven’t been setup you may encounter the following error when loading a 64-bit .SL file to activate user defined post functionality.  
-"libaf77math.so: cannot open shared object file : No such file or directory."
+Ak vyššie uvedené nastavenia neboli vykonané, pri načítaní 64-bitového súboru .SL na aktiváciu funkcie používateľom definovaného príspevku sa môže vyskytnúť nasledujúca chyba.  
+"libaf77math.so: nemožno otvoriť súbor zdieľaného objektu : No such file or directory."
 
-  1. [root] The Services Control cannot be run as root. The script at /etc/init.d/deformscd assumes that a non-root user named “deform” exists. If there isn’t a non-root user named “deform” adjust the line below to reference an existing, non-root user.
+  1. [root] Kontrola služieb sa nedá spustiť ako root. Skript v /etc/init.d/deformscd predpokladá, že existuje používateľ s menom "deform", ktorý nie je root. Ak neexistuje používateľ bez roota s menom "deform", upravte nasledujúci riadok tak, aby odkazoval na existujúceho používateľa bez roota.
 
 export DEFORM_SIM_USER=deform
 
-The Services Control needs to be started before running DEFORM Setup. Do not launch the  
-service using “service deformscd start”; this will cause problems with report generation. Instead launch it as shown below.
+Pred spustením programu DEFORM Setup je potrebné spustiť program Services Control. Nespúšťajte
+službu pomocou príkazu "service deformscd start"; spôsobí to problémy s generovaním hlásení. Namiesto toho ju spustite, ako je uvedené nižšie.
 
 /etc/init.d/deformscd start
 
-## Setup a user account
+## Nastavenie používateľského konta
 
-Some Linux distributions don’t have csh, but instead have tcsh, such as RHEL 8. In this case using tcsh is fine; just replace .cshrc below with .tcshrc.
+Niektoré distribúcie Linuxu nemajú csh, ale namiesto toho majú tcsh, ako napríklad RHEL 8. V takom prípade je použitie tcsh v poriadku; stačí nahradiť .cshrc nižšie uvedeným .tcshrc.
 
-Make sure the default login shell is "C" shell (csh). Users can determine their default login shell by using
-
-  
-cat /etc/passwd | grep ‘user name’
+Uistite sa, že predvolený prihlasovací shell je shell "C" (csh). Používatelia môžu určiť svoj predvolený prihlasovací shell pomocou
 
   
-and observing the last segment of the system response. If csh is not the default login shell, the chsh command can be used to change this. To check the format of this command, type ‘man chsh’. We will assume the DEFORM user name is "user1" and the login directory is "/home/user1".
+cat /etc/passwd | grep 'meno používateľa'
 
   
-Log into the user account and edit the “C” shell login command file, ".cshrc", to include the following command lines (based on typical installation location):
+a pozorovanie posledného segmentu odozvy systému. Ak csh nie je predvolený prihlasovací shell, môžete to zmeniť pomocou príkazu chsh. Ak chcete zistiť formát tohto príkazu, zadajte príkaz 'man chsh'. Budeme predpokladať, že meno používateľa DEFORM je "user1" a prihlasovací adresár je "/home/user1".
+
+  
+Prihláste sa do používateľského konta a upravte súbor príkazov na prihlásenie do shellu "C", ".cshrc", tak, aby obsahoval nasledujúce príkazové riadky (podľa typického umiestnenia inštalácie):
 
   
 setenv DEF_CFG_DIR '/usr/local/SFTC/DEFORM/Configuration'
@@ -448,122 +448,122 @@ setenv DEFORM_MPI MPICH2
 
 setenv MPI_ROOT /usr/local/mpich2-1.3.1
 
-source $DEFORM23_DIR/CONFIG.COM
+zdroj $DEFORM23_DIR/CONFIG.COM
 
-umask 007
-
-  
-The first four command lines define the global symbols "DEF_CFG_DIR", “DEFORM23_DIR”, “DEFORM_DIR”, and “DEFORM3_DIR” to be the DEFORM product and license configuration locations. Lines five and six set up 64-bit DEFORM mpich2. The “source” line executes the DEFORM configuration file "CONFIG.COM" to set all the symbols needed (alias) to run the DEFORM system. For the symbols set in the configuration file CONFIG.COM, user should not override these symbols or define them any differently than the original text.
+maska 007
 
   
-**Note** : The settings should be active for all shells, not just interactive shells.
+Prvé štyri riadky príkazu definujú globálne symboly "DEF_CFG_DIR", "DEFORM23_DIR", "DEFORM_DIR" a "DEFORM3_DIR" ako umiestnenie konfigurácie produktu DEFORM a licencie. Na piatom a šiestom riadku sa nastavuje 64-bitový DEFORM mpich2. Riadok "source" spustí konfiguračný súbor DEFORM "CONFIG.COM", aby sa nastavili všetky symboly potrebné (alias) na spustenie systému DEFORM. V prípade symbolov nastavených v konfiguračnom súbore CONFIG.COM by používateľ nemal tieto symboly prepisovať alebo definovať inak ako v pôvodnom texte.
 
   
-User may log out of the system at this time. The next time you log into the system, the above command lines will be executed automatically.
+**Poznámka** : Nastavenia by mali byť aktívne pre všetky shelly, nielen pre interaktívne shelly.
 
   
-If you decide to stay in the system at this time, you need to execute ".cshrc" manually since its contents have changed. To do that, enter ‘source .cshrc’.
+Používateľ sa môže v tomto okamihu odhlásiť zo systému. Pri ďalšom prihlásení do systému sa automaticky vykonajú vyššie uvedené príkazové riadky.
 
   
-Run the following commands to verify the environment variables are set correctly.
+Ak sa v tomto čase rozhodnete zostať v systéme, musíte súbor ".cshrc" spustiť ručne, pretože jeho obsah sa zmenil. Ak to chcete urobiť, zadajte "source .cshrc".
 
-_echo $DEFORM_DIR_ (should result in 2d installation path)
+  
+Spustením nasledujúcich príkazov overte, či sú premenné prostredia správne nastavené.
 
-_echo $DEFORM3_DIR_ (should result in 3d installation path)
+_echo $DEFORM_DIR_ (výsledkom by mala byť inštalačná cesta 2d)
 
-_echo $DEFORM23_DIR_ (should result in integrated system installation path)
+_echo $DEFORM3_DIR_ (výsledkom by mala byť 3d inštalačná cesta)
 
-_echo $DEF_CFG_DIR_ (should result license configuration folder path) 
+_echo $DEFORM23_DIR_ (výsledkom by mala byť cesta k inštalácii integrovaného systému)
 
-## DEFORM Setup
+_echo $DEF_CFG_DIR_ (výsledkom by mala byť cesta ku konfiguračnému priečinku licencie)
 
-The Services Control needs to be started before running DEFORM Setup. Do not launch the service using “service deformscd start”; this will cause problems with report generation. Instead launch it as shown below.
+## DEFORM Nastavenie
+
+Pred spustením programu DEFORM Setup je potrebné spustiť program Services Control. Nespúšťajte službu pomocou príkazu "service deformscd start"; spôsobí to problémy s generovaním zostáv. Namiesto toho ju spustite podľa nasledujúceho postupu.
 
 _/etc/init.d/deformscd start_
 
-Execute the setup program to indicate the installation path, and the server details for License Manager and Batch Queue servers.  
-(based on the default installation path, change to the v14.0.2 folder and execute the setup)
+Spustite inštalačný program, v ktorom uvediete cestu inštalácie a údaje o serveri pre servery Správca licencií a Dávkové fronty.  
+(na základe predvolenej inštalačnej cesty prejdite na priečinok v14.0.2 a spustite inštaláciu)
 
 _cd /usr/local/SFTC/DEFORM/v14.0.2_
 
 _./DEFORMSetup.EXE_
 
-(Appropriate X server settings are required to be set when this action is carried out from a remote machine) 
+(Pri vykonávaní tejto akcie zo vzdialeného počítača je potrebné nastaviť príslušné nastavenia servera X)
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_2_installation_of_deform_v12_0_1_in_linux/2_2_image001.jpg' | relative_url }})
 
-DEFORM Setup Window
+Okno nastavenia DEFORM
 
-Once the DEFORMSetup dialog opens, the following basic information needs to be provided:
+Po otvorení dialógového okna DEFORMSetup je potrebné zadať nasledujúce základné informácie:
 
-  * Machine name or IP address of where the license manager is running as identified in the network. 
+  * Názov stroja alebo IP adresa miesta, kde je správca licencií spustený, ako je identifikované v sieti.
 
-  * License Manager Server Port to be defined as 34445. Please note that this number cannot be changed.
+  * Port servera správcu licencií má byť definovaný ako 34445. Upozorňujeme, že toto číslo nie je možné zmeniť.
 
-  * When you click on ‘Synchronize’ it should return a positive running status on the License Manager. If not, check the required components such as the Sentinel key driver daemon status, hardware key, running status on License Manager daemon, and the password file. 
+  * Po kliknutí na "Synchronizovať" by sa mal v Správcovi licencií vrátiť pozitívny stav. Ak sa tak nestane, skontrolujte požadované komponenty, ako je stav démona ovládača kľúča Sentinel, hardvérový kľúč, stav behu démona správcu licencií a súbor s heslom.
 
-  * Once synchronization is successful, whether the license server is running on the local computer or a remote computer, click the ‘Save’ button to save the settings.
+  * Po úspešnej synchronizácii, bez ohľadu na to, či je licenčný server spustený na miestnom alebo vzdialenom počítači, kliknite na tlačidlo "Uložiť", aby ste uložili nastavenia.
 
-  * Simulation server set up also needs the machine name hosting the service and the port number. In the event of multiple simulation server definitions, it is recommended to first read/synchronize the existing information from the license manager server, correct or add the information and save to the license manager server. Again, this information is only needed if Batch Queue is licensed. Please note that batch queue and simulation server setup is mandatory for running DOE and OPT jobs. Simulation servers can be started in the Simulation Server tab.
+  * Nastavenie simulačného servera vyžaduje aj názov stroja, na ktorom je služba umiestnená, a číslo portu. V prípade viacerých definícií simulačného servera sa odporúča najprv načítať/synchronizovať existujúce informácie zo servera správcu licencií, opraviť alebo doplniť informácie a uložiť na server správcu licencií. Opäť platí, že tieto informácie sú potrebné len v prípade, ak je licencovaná dávková fronta. Upozorňujeme, že nastavenie dávkového frontu a simulačného servera je povinné na spustenie úloh DOE a OPT. Simulačné servery môžete spustiť na karte Simulation Server (Simulačný server).
 
-  * Please note that when any information is changed and saved in DEFORMSetup, the services could be interrupted while using the same server.
+  * Upozorňujeme, že pri zmene akýchkoľvek informácií a ich uložení v nástroji DEFORMSetup môže dôjsť k prerušeniu služieb pri používaní toho istého servera.
 
-  * Configure the system firewall such that the ports used for DEFORM services (34444 and 34445 (License manager), 34446 (Batch Queue server), 34447 (Simulation server), and 34448 (DEFORM Services, with TCP) are accessible.
+  * Nakonfigurujte systémový firewall tak, aby boli prístupné porty používané pre služby DEFORM (34444 a 34445 (správca licencií), 34446 (server dávkovej fronty), 34447 (simulačný server) a 34448 (služby DEFORM, s TCP).
 
-  * System ports for 34449+ need to be accessible as well. The number of ports that need to be opened in the range is dependent on the number of simultaneous DOE/OPT jobs that may run at any given time. 
+  * Systémové porty pre 34449+ musia byť tiež prístupné. Počet portov, ktoré je potrebné otvoriť v danom rozsahu, závisí od počtu súbežných úloh DOE/OPT, ktoré môžu byť spustené v danom čase.
 
-The DEFORM Services tab allows for managing of DEFORM services and is new since v11.2.
+Karta Služby DEFORM umožňuje správu služieb DEFORM a je nová od verzie 11.2.
 
-You have two options:
+Máte dve možnosti:
 
-  1. Manage the DEFORM Service running on your local computer.
-  2. Manage the DEFORM Services running on all computers.
+  1. Spravujte službu DEFORM spustenú v miestnom počítači.
+  2. Spravujte služby DEFORM spustené vo všetkých počítačoch.
 
-The first option is available for every DEFORM user. The second option is only available to the “authorized users” or users who know the “pass code” created by an authorized user.
+Prvá možnosť je k dispozícii pre každého používateľa programu DEFORM. Druhá možnosť je dostupná len pre "oprávnených používateľov" alebo používateľov, ktorí poznajú "prístupový kód" vytvorený oprávneným používateľom.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_2_installation_of_deform_v12_0_1_in_linux/2_2_image002.jpg' | relative_url }})
 
-To set up a user to be an authorized user, you’ll need root access on the computer running the License Manager. In the License Manager folder (usually at
+Ak chcete nastaviť používateľa ako autorizovaného používateľa, budete potrebovať prístup root v počítači, v ktorom je spustený Správca licencií. V priečinku License Manager (zvyčajne na adrese
 
-_/usr/local/SFTC/LicenseManager_) create or edit the file “authorized_users.txt”. In this file will be a list of users that are authorized users. The format of the list is: 
+_/usr/local/SFTC/LicenseManager_) vytvorte alebo upravte súbor "authorized_users.txt". V tomto súbore bude zoznam používateľov, ktorí sú autorizovanými používateľmi. Formát zoznamu je:
 
-_user_name1@computer_name1_
+_názov_užívateľa1@názov_počítača1_
 
-_user_name2@computer_name2_
+_názov_užívateľa2@názov_počítača2_
 
-An authorized user has full control of the DEFORM services.
+Autorizovaný používateľ má úplnú kontrolu nad službami DEFORM.
 
-  * Access the DEFORM Services of all DEFORM computers.
-  * Set or change the DEFORM Services pass code.
-  * Update the DEFORM license password file (DEFORM.PWD).
+  * Prístup k službám DEFORM všetkých počítačov DEFORM.
+  * Nastavenie alebo zmena prístupového kódu služby DEFORM.
+  * Aktualizujte súbor s licenčným heslom DEFORM (DEFORM.PWD).
 
-The DEFORM Service pass code allows for access to DEFORM Services on all DEFORM computers from:
+Prístupový kód služby DEFORM umožňuje prístup k službám DEFORM na všetkých počítačoch DEFORM od:
 
-  * Any DEFORM computer (other than the authorized computer)
-  * Any computer with a web browser (no need to install DEFORM)
+  * Akýkoľvek počítač DEFORM (iný ako autorizovaný počítač)
+  * Akýkoľvek počítač s webovým prehliadačom (nie je potrebné inštalovať DEFORM)
 
-Only an authorized DEFORM user can create or change the pass code.
+Prístupový kód môže vytvoriť alebo zmeniť iba oprávnený používateľ DEFORM.
 
-The DEFORM Services tab allows for starting and stopping of DEFORM services on server and DEFORM computers as well as updating the service applications on DEFORM computers. If any of the services are stopped, click the corresponding start button to start the service.
+Karta Služby DEFORM umožňuje spúšťať a zastavovať služby DEFORM na serveri a počítačoch DEFORM, ako aj aktualizovať aplikácie služieb na počítačoch DEFORM. Ak je niektorá zo služieb zastavená, kliknutím na príslušné tlačidlo spustenia službu spustíte.
 
-## System Execution
+## Vykonávanie systému
 
-The following procedure may be used to run the DEFORM system:
+Na spustenie systému DEFORM sa môže použiť nasledujúci postup:
 
-  1. Log into the DEFORM user account from an X-terminal
+  1. Prihláste sa do používateľského konta DEFORM z terminálu X
 
-  2. Run the following commands to invoke the DEFORM system.
+  2. Spustite nasledujúce príkazy na vyvolanie systému DEFORM.
 
-DEF_GUI |  Main interface for DEFORM  
----|---  
-mo |  Integrated Manufacturing Process (MO)  
-mo64 |  64-bit Integrated Manufacturing Process (MO)  
+DEF_GUI | Hlavné rozhranie pre DEFORM
+---|---
+mo | Integrovaný výrobný proces (MO)
+mo64 | 64-bitový integrovaný výrobný proces (MO)
   
-  1. A complete list of commands can be found by typing alias. 
+  1. Úplný zoznam príkazov nájdete po zadaní príkazu alias.
 
-## QUESTIONS / PROBLEMS
+## OTÁZKY / PROBLÉMY
 
-If you have any questions, comments, or problems installing DEFORM V14.0.2, contact:
+Ak máte akékoľvek otázky, pripomienky alebo problémy s inštaláciou DEFORM V14.0.2, kontaktujte:
 
 **Scientific Forming Technologies Corporation**
 
@@ -571,55 +571,55 @@ If you have any questions, comments, or problems installing DEFORM V14.0.2, cont
 
 **Columbus, OH 43235 USA**
 
-**Phone: (614) 451-8330**
+**Telefón: (614) 451-8330**
 
 **E-mail:[support@deform.com](mailto:support@deform.com)**
 
-**Or**
+**alebo**
 
-**Visit our website at<http://www.deform.com>**
+**Navštívte našu webovú stránku na adrese<http://www.deform.com>**
 
-## CPU Types
+## Typy CPU
 
-Here are some resources for determining the generation of your Intel CPU.
+Tu nájdete niekoľko zdrojov na určenie generácie vášho procesora Intel.
 
   
-To determine the user CPU, type
+Ak chcete určiť používateľský procesor, zadajte
 
-cat /proc/cpuinfo | grep "model name"
+cat /proc/cpuinfo | grep "názov modelu"
 
-This Intel site gives an overview of how to determine the generation of your Core-based CPU by comparing it to the detected CPU, as shown above.
+Na tejto webovej lokalite spoločnosti Intel nájdete prehľad o tom, ako určiť generáciu vášho procesora založeného na jadre porovnaním so zisteným procesorom, ako je uvedené vyššie.
 
 <https://www.intel.com/content/www/us/en/processors/processor-numbers.html>
 
   
-If you were unable to determine your Intel CPU generation from the above link, please try the following.
+Ak sa vám nepodarilo určiť generáciu procesora Intel z vyššie uvedeného odkazu, skúste nasledovné.
 
-  1. Click on one of the following links (depending on CPU type) and search for your CPU.
+  1. Kliknite na jeden z nasledujúcich odkazov (v závislosti od typu procesora) a vyhľadajte svoj procesor.
 
-For Intel Xeon CPUs:  
+Pre procesory Intel Xeon:  
 <https://en.wikipedia.org/wiki/List_of_Intel_Xeon_microprocessors>
 
-For Intel Core i7 CPUs:
+Pre procesory Intel Core i7:
 
 <https://en.wikipedia.org/wiki/List_of_Intel_Core_i7_microprocessors>
 
-For other Intel Core CPUs, look at the “See also” section at the bottom of the Intel Core i7 CPUs page.
+Ďalšie procesory Intel Core nájdete v časti "Pozri tiež" na konci stránky o procesoroch Intel Core i7.
 
   
-For example, if the instructions above display the detected CPU as:
+Ak sa napríklad podľa vyššie uvedených pokynov zobrazí zistený procesor ako:
 
-model name : Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz
+názov modelu : Intel(R) Core(TM) i7-6700 CPU @ 3,40GHz
 
-Then search for “6700”.
+Potom vyhľadajte položku "6700".
 
-There will be a link that will take you to Intel’s website with more information.
+Zobrazí sa prepojenie, ktoré vás presmeruje na webovú lokalitu spoločnosti Intel s ďalšími informáciami.
 
-  1. Click that link.
+  1. Kliknite na tento odkaz.
 
-  2. On the Intel page, the architecture can be found by looking at the code name “Products formerly _______”.
+  2. Na stránke spoločnosti Intel možno architektúru nájsť pri pohľade na kódové označenie "Products formerly _______".
 
-  3. Now you that you know the architecture, you can determine if it is older or newer than Haswell by clicking the following link and searching for the architecture.
+  3. Teraz, keď poznáte architektúru, môžete zistiť, či je staršia alebo novšia ako Haswell, kliknutím na nasledujúci odkaz a vyhľadaním architektúry.
 
 <https://en.wikipedia.org/wiki/List_of_Intel_CPU_microarchitectures>
 

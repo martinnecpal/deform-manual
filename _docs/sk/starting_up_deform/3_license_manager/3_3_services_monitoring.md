@@ -1,32 +1,32 @@
 ---
 lang: sk
-title: "3.3. Services Monitoring"
+title: "3.3. Monitorovanie služieb"
 ---
 
-# 3.3. Monitoring Services
+# 3.3. Monitorovacie služby
 
-In DEFORM system, we are having 3 services for license and queuing the simulations. These are DeformLicenseServer, DeformSimServer and DeformBatchQueue server.
+V systéme DEFORM máme 3 služby na licencovanie a radenie simulácií. Sú to DeformLicenseServer, DeformSimServer a DeformBatchQueue server.
 
-License server controls all the DEFORM license dependent products and options based on the license password provided by SFTC. This includes 2D or 3D module, different DEFORM wizards, number of simulations, queueing the simulations and multiple processor  
-simulations. 
+Licenčný server riadi všetky produkty a možnosti závislé od licencie DEFORM na základe licenčného hesla poskytnutého SFTC. Patrí sem 2D alebo 3D modul, rôzni sprievodcovia DEFORM, počet simulácií, radenie simulácií do frontu a viacero procesorov.
+simulácie.
 
-Batch queue server is used to submit the batch of jobs in queue. User can submit one or more jobs to run in queue based on the licenses available and number of simultaneous simulations allowed from simulation server. When queueing the jobs, Simulation server must be running in the machine where jobs need to be run.
+Dávkový frontový server sa používa na odosielanie dávok úloh vo fronte. Používateľ môže odoslať jednu alebo viac úloh na spustenie vo fronte na základe dostupných licencií a počtu simultánnych simulácií povolených zo simulačného servera. Pri zaraďovaní úloh do frontu musí byť simulačný server spustený v počítači, v ktorom sa majú úlohy spustiť.
 
-**Start, Stop and Restart the services:**
+**Spustenie, zastavenie a reštartovanie služieb:**
 
-User can Start and Stop the services from Task manager, but running the services from Windows Administrative tools Service will provide more options like Run as any of the User or Run as System. User needs to open the Services as administrator.
+Používateľ môže spustiť a zastaviť služby zo Správcu úloh, ale spustenie služieb z nástrojov na správu systému Windows Služba poskytne viac možností, napríklad Spustiť ako niektorý z používateľov alebo Spustiť ako systém. Používateľ musí otvoriť služby ako správca.
 
   
-**Checking Services Status:**
+**Kontrola stavu služieb:**
 
-Services status can be checked from the Task Manager Processes tab in Windows-XP by observing the server executable files status, in case of Windows7, Windows 8 and Windows 10 machine the status can be checked from the Services tab.  
-This can also be checked from the Windows Administrative tools Services by observing its status.
+Stav služieb možno skontrolovať na karte Procesy Správcu úloh v systéme Windows-XP sledovaním stavu spustiteľných súborov servera, v prípade počítača so systémami Windows7, Windows 8 a Windows 10 možno stav skontrolovať na karte Služby.  
+Túto skutočnosť možno skontrolovať aj v nástrojoch Windows pre správu Services (Služby) sledovaním ich stavu.
 
-Restarting the system will automatically start all 3 DEFORM services, in sever machine running the batch queue service and simulation service in client machine where jobs need to be run is must to submit the jobs in queue. So user must check these services status before submitting the jobs in queue. This can also be checked from DEFORM Main GUI Run options dialog Check Server option.
+Reštartovaním systému sa automaticky spustia všetky 3 služby DEFORM, v počítači Sever sa spustí služba dávkového frontu a služba simulácie v klientskom počítači, v ktorom je potrebné spustiť úlohy, je potrebné odoslať úlohy do frontu. Používateľ teda musí skontrolovať stav týchto služieb pred odoslaním úloh do frontu. Toto je možné skontrolovať aj v dialógovom okne Možnosti spustenia hlavného grafického rozhrania DEFORM Kontrola servera.
 
-In case of any license related issues, user can observe the License Log file for any specific error messages for the services start or stop.
+V prípade akýchkoľvek problémov súvisiacich s licenciou môže používateľ sledovať súbor protokolu licencie, či neobsahuje konkrétne chybové hlásenia pre spustenie alebo zastavenie služieb.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [3.1. DEFORM License Setup](/docs/sk/starting_up_deform/3_license_manager/3_1_deform_license_setup/)
 

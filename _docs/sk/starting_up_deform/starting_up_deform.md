@@ -1,6 +1,6 @@
 ---
 lang: sk
-title: "Starting up DEFORM"
+title: "Spustenie programu DEFORM"
 ---
 
 [2\. DEFORM Installation](/docs/sk/starting_up_deform/2_deform_installation/2_deform_installation/)

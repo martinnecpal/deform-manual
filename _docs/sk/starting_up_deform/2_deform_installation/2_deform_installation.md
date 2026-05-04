@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "2. DEFORM Installation"
+title: "2. Inštalácia DEFORM"
 ---
 
-# 2\. DEFORM installation Procedure
+# 2\. Postup inštalácie DEFORM
 
 [2.1. Installation of DEFORM V14.0.2. in Windows](/docs/sk/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_2_in_windows/)
 

@@ -1,768 +1,768 @@
 ---
 lang: sk
-title: "1.11. Release Notes"
+title: "1.11. Poznámky k vydaniu"
 ---
 
-# 1.11. Release Notes - v14.0.2 
+# 1.11. Poznámky k verzii - v14.0.2
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/deform.gif' | relative_url }})
 
-**DEFORM****®****v14.0 SP2 (PC & Linux) **
+**DEFORM****®****v14.0 SP2 (PC a Linux) **
 
-**Release Notes**
+**Poznámky k vydaniu**
 
-****December 20 th**********,** 2024** **
+****20. decembra**********,** 2024** **
 
-_**Acknowledgements**_
+_**Poďakovanie**_
 
-Translation for international version has been performed by:
+Preklad pre medzinárodnú verziu vykonali:
 
-  1. Yamanaka Engineering Co., Ltd. (Japanese version)
-  2. TESIS Corp. (Russian version)
-  3. Solution Lab (Korean version)
-  4. Consultores CPM (Spanish version)
-  5. PERA GLOBAL (Chinese (Simplified) version)
-  6. ECOTRE (Italian version)
+  1. Yamanaka Engineering Co., Ltd. (japonská verzia)
+  2. TESIS Corp. (ruská verzia)
+  3. Laboratórium riešení (kórejská verzia)
+  4. Consultores CPM (španielska verzia)
+  5. PERA GLOBAL (čínska (zjednodušená) verzia)
+  6. ECOTRE (talianska verzia)
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/sftc_with_address.jpg' | relative_url }})
 
-Release Notes for the DEFORM v14.0.2 (v14.0 SP2) release
+Poznámky k verzii DEFORM v14.0.2 (v14.0 SP2)
 
-The key highlights of the new and improved features in V14.0 SP2
+Najdôležitejšie nové a vylepšené funkcie vo verzii V14.0 SP2
 
-Selected New Developments in DEFORM V14.0 SP2
+Vybrané novinky v DEFORM V14.0 SP2
 
-The following are important issues resolved in v14.0 SP1
+V verzii 14.0 SP1 boli vyriešené tieto dôležité problémy
 
-Highlights of New and Enhanced Features in v14.0
+Najdôležitejšie nové a vylepšené funkcie vo verzii 14.0
 
-Selected New Developments in DEFORM v14.0
+Vybrané novinky v DEFORM v14.0
 
-Important GUI related and functional improvements in DEFORM v14.0
+Dôležité vylepšenia grafického rozhrania a funkcií v DEFORM v14.0
 
-Important FEM developments/improvements in DEFORM v14.0
+Dôležité zmeny/vylepšenia MKP v DEFORM v14.0
 
-Important FEM related bug fixes in DEFORM v14.0
+Dôležité opravy chýb súvisiacich s MKP v DEFORM v14.0
 
-Important AMG improvements in DEFORM v14.0
+Dôležité vylepšenia AMG v DEFORM v14.0
 
-Important AMG related bug fixes in DEFORM v14.0
+Dôležité opravy chýb súvisiacich s AMG v DEFORM v14.0
 
-Material library update in DEFORM v14.0
+Aktualizácia knižnice materiálov v DEFORM v14.0
 
-List of document updates in DEFORM v14.0 SP2
+Zoznam aktualizácií dokumentov v DEFORM v14.0 SP2
 
-List of document updates in DEFORM v14.0
+Zoznam aktualizácií dokumentov v DEFORM v14.0
 
-List of New and Extended Keywords in DEFORM v14.0 and V14.0 SP2
+Zoznam nových a rozšírených kľúčových slov v DEFORM v14.0 a V14.0 SP2
 
-Comments & Questions
+Komentáre a otázky
 
-_**Release Notes for the DEFORM v14.0.2 (v14.0 SP2) release**_
+_**Poznámky k vydaniu DEFORM v14.0.2 (v14.0 SP2)**_
 
-SFTC provides up-to-date release notes for the DEFORM system v14.0 SP2. This article contains information about recent important change, bug fixes, and updates to existing features. 
+SFTC poskytuje aktuálne poznámky k vydaniu systému DEFORM v14.0 SP2. Tento článok obsahuje informácie o posledných dôležitých zmenách, opravách chýb a aktualizáciách existujúcich funkcií.
 
-DEFORM V14.0 SP2 supports both Windows and Linux operating systems. The supported Linux distributions include CentOS 6, CentOS 7, and RHEL 8.
+DEFORM V14.0 SP2 podporuje operačné systémy Windows aj Linux. Medzi podporované distribúcie Linuxu patria CentOS 6, CentOS 7 a RHEL 8.
 
-  * **DEFORM V14.0 SP2 Enhancements** : DEFORM V14.0 SP2 introduces system enhancements based on customer requests and addresses bug fixes identified from feedback on versions V14.0 and V14.0 SP1.
+  * **DEFORM V14.0 SP2 Vylepšenia** : DEFORM V14.0 SP2 zavádza vylepšenia systému na základe požiadaviek zákazníkov a rieši opravy chýb zistené na základe spätnej väzby k verziám V14.0 a V14.0 SP1.
 
-  * **DEFORM V14.0 SP2 Package** : The DEFORM V14.0 SP2 package includes License Manager (LM) V14.0 SP2 and DEFORM Service Control (SC) V14.0 SP2.
+  * Balík **DEFORM V14.0 SP2** : Balík DEFORM V14.0 SP2 obsahuje License Manager (LM) V14.0 SP2 a DEFORM Service Control (SC) V14.0 SP2.
 
-  * **DEFORM V14.0 Password Requirement:** This version of DEFORM requires a V14.0 password to operate. DEFORM V14.0 SP2 will not work with a DEFORM V13.1 password. Please contact SFTC to obtain the V14.0 password file. 
+  * **DEFORM V14.0 Požiadavka na heslo:** Táto verzia programu DEFORM vyžaduje na prevádzku heslo V14.0. DEFORM V14.0 SP2 nebude fungovať s heslom DEFORM V13.1. Pre získanie súboru s heslom V14.0 kontaktujte SFTC.
 
-  * **Upgrading to DEFORM V14.0 SP2** : If you are currently using DEFORM V14.0 SP1 (or any older version such as V14.0 or V13.1 SP1) and upgrading to V14.0 SP2, you do not need to uninstall the earlier versions of DEFORM. However, it is mandatory to uninstall the previous version of License Manager and install License Manager V14.0 SP2.
+  * **Aktualizácia na DEFORM V14.0 SP2** : Ak v súčasnosti používate DEFORM V14.0 SP1 (alebo akúkoľvek staršiu verziu, napríklad V14.0 alebo V13.1 SP1) a aktualizujete na V14.0 SP2, nemusíte odinštalovať predchádzajúce verzie DEFORM. Je však povinné odinštalovať predchádzajúcu verziu Správcu licencií a nainštalovať Správcu licencií V14.0 SP2.
 
-_**The key highlights of the new and improved features in V14.0 SP2**_
+_**Kľúčové prvky nových a vylepšených funkcií vo verzii V14.0 SP2**_
 
   
-The highlights of the DEFORM V14.0 SP2 system were presented at the Fall 2024 DEFORM User Group Meeting. For a detailed description, please refer to the materials from that event. 
+Na jesennom stretnutí skupiny používateľov DEFORM 2024 boli predstavené hlavné prvky systému DEFORM V14.0 SP2. Podrobný opis nájdete v materiáloch z tohto podujatia.
 
-  * **The ALE Linear Friction Welding (LFW)** model, presented at the Fall 2024 DEFORM Users Group Meeting, has been officially introduced in V14.0 SP2. This model significantly reduces computational costs in 3D ALE linear friction welding simulations.
+  * **Model ALE Linear Friction Welding (LFW)**, predstavený na jesennom stretnutí skupiny používateľov DEFORM 2024, bol oficiálne uvedený vo verzii V14.0 SP2. Tento model výrazne znižuje výpočtové náklady pri 3D simuláciách lineárneho trecieho zvárania ALE.
 
-  * **Tube Piercing Enhancements** : Added a new shoe geometry primitive, stopping plane functionality, and movement control support for the mandrel and shoes.
+  * **Vylepšenia na prepichnutie trubice** : Pridané nové primitívum geometrie obuvi, funkcia zastavovacej roviny a podpora riadenia pohybu pre tŕň a obuv.
 
-  * **Cogging Enhancements** : Added support for importing and exporting pass table data in CSV file format.
+  * **Vylepšenia v súvislosti so zachádzaním** : Pridaná podpora pre import a export údajov tabuľky priechodov vo formáte CSV.
 
-  * **Measurement Tool Enhancements** : Added features for movable and editable labels, as well as options to edit or delete measurements via the context menu.
+  * **Vylepšenia meracích nástrojov** : Pridané funkcie pre pohyblivé a upraviteľné štítky, ako aj možnosti úpravy alebo odstránenia meraní prostredníctvom kontextového menu.
 
-  * **Enhanced Visibility** : Improved dimension display functionality in the "Show Dimensions" feature.
+  * **Zvýšená viditeľnosť** : Vylepšená funkcia zobrazovania rozmerov vo funkcii "Zobraziť rozmery".
 
-  * **Under-fill Display Enhancements** : Improved display for oil/gas trap simulation.
+  * **Vylepšenia zobrazenia pod výplňou** : Vylepšené zobrazenie pre simuláciu lapača oleja/plynu.
 
-  * **Report Generation Enhancements** : Added a new export option for metal flow.
+  * **Vylepšenie generovania správ** : Pridaná nová možnosť exportu pre tok kovov.
 
-  * **Color Bar Display Enhancement** :**** Optimized default font size for better readability on high-resolution monitors. Also improved the color bar context menu for easier title, font size, and color adjustments.
+  * **Vylepšenie zobrazenia farebného pruhu** :**** Optimalizovaná predvolená veľkosť písma pre lepšiu čitateľnosť na monitoroch s vysokým rozlíšením. Vylepšená aj kontextová ponuka farebného pruhu pre jednoduchšie nastavenie názvu, veľkosti písma a farby.
 
-  * **Support for DEFORM 3D Objects in MS PowerPoint** : Developed an export function for 3D models (geometry, mesh, SV). DEFORM objects can now be imported into PowerPoint 365 or PowerPoint 2024.
+  * **Podpora 3D objektov DEFORM v aplikácii MS PowerPoint** : Vyvinutá funkcia exportu pre 3D modely (geometria, sieť, SV). Objekty DEFORM je teraz možné importovať do aplikácie PowerPoint 365 alebo PowerPoint 2024.
 
-  * **Load-Stroke Summation Plot in Post-processor** : A new "Plot Type" option has been added to the Graph (Load-Stroke) window, enabling the plot of the summation of selected objects.
+  * **Sumárny graf záťaže v postprocesore** : Do okna Grafu (Load-Stroke) bola pridaná nová možnosť "Plot Type", ktorá umožňuje vykresliť súčet vybraných objektov.
 
-  * **Load-Stroke Superimpose Plot in Post-processor** : A Superimpose tool has been introduced to compare different databases. When used with the Summation plot in the load-stroke tool, it allows for graphing multiple projects on the same chart.
+  * **Načítanie - ťah Superimpose Plot v postprocesore** : Bol zavedený nástroj Superimpose na porovnávanie rôznych databáz. Pri použití s grafom Summation Plot (Súčet) v nástroji Load-Stroke (ťah zaťaženia) umožňuje vykresliť grafy viacerých projektov na tom istom grafe.
 
-  * **Equations Output Enhancements** : Improved through multiple bug fixes.
+  * **Vylepšenie výstupu rovníc** : Vylepšené prostredníctvom viacerých opráv chýb.
 
-  * **Customization of Windows Start Menu for DEFORM Shortcuts** : A new "Start Menu" tab has been added to the DEFORM Setup, allowing users to select which applications are displayed in the Start menu.
+  * **Prispôsobenie ponuky Štart systému Windows pre skratky DEFORM** : Do nastavenia DEFORM bola pridaná nová karta "Ponuka Štart", ktorá umožňuje používateľom vybrať, ktoré aplikácie sa zobrazia v ponuke Štart.
 
-  * **License Expire Warning** : Warning information is now available in DEFORM Setup, DEFORM License Monitor, and the GUI Main as the license expiration approaches.
+  * **Výstraha o uplynutí platnosti licencie** : V DEFORM Setup, DEFORM License Monitor a GUI Main sú teraz k dispozícii varovné informácie o blížiacom sa konci platnosti licencie.
 
-  * **DEFORM Installer Localization** : Starting from V14 SP2, the installer is fully translatable, and the selected language will carry over for use in DEFORM.
+  * **DEFORM Lokalizácia inštalačného programu** : Od verzie V14 SP2 je inštalačný program plne preložiteľný a zvolený jazyk sa prenesie na použitie v programe DEFORM.
 
-  * **Multiple Ram Hydraulic Press** : A min stopping speed option has been added to the modeling of multiple ram hydraulic presses.
+  * **Viacnásobný hydraulický lis** : Do modelovania hydraulických lisov s viacerými baranmi bola pridaná možnosť min. rýchlosti zastavenia.
 
-  * **DEFORM API update** : The API now supports saving multiple geometry formats from the last step of the database using the "Save multiple geometry formats for last step.py" file.
+  * **Aktualizácia API DEFORM** : API teraz podporuje ukladanie viacerých formátov geometrie z posledného kroku databázy pomocou súboru "Save multiple geometry formats for last step.py".
 
-  * **Beta Version of V14.1 Meshing Program (AMG)** : The beta version of the V14.1 meshing program (AMG) serves as a backup mesher in the V14.0 SP2 release. The 3D backup mesher enhances surface curvature mesh weighting control, resulting in improved fine mesh resolution around surface edges and fillets.
+  * **Beta verzia programu na vytváranie sietí V14.1 (AMG)** : Beta verzia programu na sieťovanie V14.1 (AMG) slúži ako záložný sieťovač vo vydaní V14.0 SP2. Záložný mesher 3D vylepšuje riadenie váhovania krivosti siete povrchu, čo vedie k zlepšeniu rozlíšenia jemnej siete okolo okrajov povrchu a filetov.
 
-  * **Optimize the performance of the DEF_SIM_64.EXE** (FEM simulation engine) on **Intel 12th Generation** **and Later CPUs** : Create a file named **D******EF_** PRIORITY.DAT** in the problem folder. On the first line of the file, specify the desired priority level: enter "**1** " for **Above Normal** or "**2** " for **High**. This adjustment enhances simulation performance on Intel 12th Generation and later CPUs with hybrid architectures by ensuring the DEF_SIM_64.EXE gets allocated to performance cores for optimal performance. 
+  * **Optimalizujte výkon DEF_SIM_64.EXE** (simulačný motor FEM) na **Intel 12. generácii** **a novších procesoroch** : Vytvorte súbor s názvom **D******EF_** PRIORITY.DAT** v priečinku s problémami. V prvom riadku súboru zadajte požadovanú úroveň priority: zadajte "**1** " pre **Above Normal** (Nad normálom**) alebo "**2** " pre **High** (Vysoká**). Táto úprava zvyšuje výkon simulácie na procesoroch Intel 12. generácie a novších s hybridnou architektúrou tým, že zabezpečuje, aby sa DEF_SIM_64.EXE pridelil výkonným jadrám na dosiahnutie optimálneho výkonu.
 
-__Linux platform specific enhancements__
+__Vylepšenia špecifické pre platformu Linux__
 
-  * Provide backup meshing support during paralleling remeshing on Linux. 
+  * Zabezpečenie podpory záložného sieťovania počas paralelného remeshingu v systéme Linux.
 
-  * The stability of the meshing program and procedures has been improved on Linux.
+  * Stabilita programu a procedúr na vytváranie sietí sa zlepšila v systéme Linux.
 
-  * Fixed a bug in flowline tracking for multi-pass shape rolling on Linux.
+  * Opravená chyba v sledovaní prietokovej čiary pri viacpriechodovom valcovaní tvaru v systéme Linux.
 
-  * Preview/Open Editor now supports for the lower case files of “.log” or “.msg” in GUI Main on Linux.
+  * Preview/Open Editor teraz podporuje súbory s malými písmenami ".log" alebo ".msg" v GUI Main na Linuxe.
 
-_**Selected New Developments in DEFORM V14.0 SP2**_
+_**Vybrané novinky v DEFORM V14.0 SP2**_
 
-Some of the highlights of V14.0 SP2 DEFORM system were presented in the **Fall 2024 DEFORM User Group meeting**. The selected V14.0 SP2 enhancements include:
+Niektoré z hlavných noviniek systému DEFORM V14.0 SP2 boli predstavené na **jesennom stretnutí skupiny používateľov DEFORM 2024**. Medzi vybrané vylepšenia verzie V14.0 SP2 patria:
 
-  * **Linear friction welding (LFW) model** have been developed & introduced. 
+  * Bol vyvinutý a zavedený model **Lineárneho zvárania trením (LFW)**.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image021.jpg' | relative_url }})
 
-Added ALE linear friction welding as a new simulation type in the Simulation Controls dialog.
+V dialógovom okne Simulation Controls (Ovládacie prvky simulácie) bol pridaný nový typ simulácie ALE lineárne zváranie trením.
 
-  * **Load-stroke graph in POST** now includes new plot type options, enabling users to be able to plot the summation of forces in the graph.
+  * **Graf priebehu zaťaženia v POST** teraz obsahuje nové možnosti typu grafu, ktoré umožňujú používateľom vykresliť súčet síl v grafe.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image022.jpg' | relative_url }})
 
   
-New plot type options of “Individual plots only”, “Summation plot only”, and “Summation and individual plots”.
+Nové možnosti typov plôch "Iba individuálne plôšky", "Iba sumárna plôška" a "Sumárna a individuálna plôška".
 
-  * **Tube piercing enhancements** : Added new geometry primitive for the shoe object, stopping plane support, movement control for mandrel and shoes.
+  * **Vylepšenia piercingu v rúrke** : Pridané nové geometrické primitívum pre objekt topánky, podpora roviny zastavenia, ovládanie pohybu pre tŕň a topánky.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image023.jpg' | relative_url }})
 
   
-New geometry primitive (Extrude, Revolve) for shoe object in tube piercing setup.
+Nový geometrický primitív (Extrude, Revolve) pre objekt topánky v nastavení prepichovania rúrky.
 
-  * **Multiple-ram hydraulic press:** Added a new stopping criterion with minimum speed, “Minimum stopping speed” option has been added. 
+  * **Viacramenný hydraulický lis:** Pridané nové kritérium zastavenia s minimálnou rýchlosťou, pridaná možnosť "Minimálna rýchlosť zastavenia".
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image025.jpg' | relative_url }})
 
   
-New option of “Min. stopping speed” in Multi-ram press in Simulation Controls.
+Nová možnosť "Min. rýchlosť zastavenia" pri viacramennom lisovaní v Simulation Controls.
 
-  * **Enhanced underfill display** : When the gas trap is activated via DEF_GAS.DAT, the underfill region becomes larger due to the gas trap in closed die forging. To improve the underfill display, a new color definition for the gas-trapped under-fill region has been introduced. The default color for the gas-trapped region is sky blue.
+  * **Vylepšené zobrazenie pod výplňou** : Keď sa prostredníctvom súboru DEF_GAS.DAT aktivuje lapač plynov, oblasť podplnenia sa zväčší vďaka lapačom plynov pri kovaní v uzavretej zápustke. Na zlepšenie zobrazenia podplnenia bola zavedená nová definícia farby pre oblasť podplnenia zachyteného plynom. Predvolená farba pre oblasť so zachyteným plynom je nebesky modrá.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image026.jpg' | relative_url }})
 
   
-Underfill gas trap region (UNDERFILL_GAS_TRAP_REGION) is added in Preference dialog.
+V dialógovom okne Predvoľby je pridaná oblasť záchytného plynového zariadenia (UNDERFILL_GAS_TRAP_REGION).
 
-  * **New 3D Object/Model Data Export Function** to MS PowerPoint: A new export function for 3D object/model data to MS PowerPoint (365 or 2024) has been developed and is available under the File menu.
+  * **Nová funkcia exportu dát 3D objektov/modelov** do programu MS PowerPoint: Bola vyvinutá nová funkcia exportu údajov 3D objektov/modelov do programu MS PowerPoint (365 alebo 2024), ktorá je k dispozícii v ponuke Súbor.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image027.jpg' | relative_url }})  
-New export options of “Polygon (.ply)” and “Graphics library transmission format (.glb)” in Export file type
+Nové možnosti exportu "Polygón (.ply)" a "Prenosový formát grafickej knižnice (.glb)" v type exportného súboru
 
-  * **License Expiration Warning** : A license expiration warning has been implemented in DEFORM License Monitor and DEFORM Setup dialogs. In GUI Main V14 SP2, an alert will appear at launch when the license is set to expire in less than four weeks.
+  * **Upozornenie na vypršanie platnosti licencie** : V dialógových oknách DEFORM License Monitor a DEFORM Setup bolo implementované upozornenie na vypršanie platnosti licencie. V GUI Main V14 SP2 sa pri spustení zobrazí upozornenie, keď je nastavené, že platnosť licencie vyprší za menej ako štyri týždne.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image028.jpg' | relative_url }})
 
-DEFORM license message from GUI Main
+Správa o licencii DEFORM z GUI Main
 
   
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image029.jpg' | relative_url }})
 
-License expiration warning in DEFORM License monitor (left) and in DEFORM Setup (right).
+Upozornenie na vypršanie platnosti licencie v DEFORM License monitor (vľavo) a v DEFORM Setup (vpravo).
 
-  * **Start Menu Tab in DEFORM Setup:** In DEFORM V14 SP2, a Start Menu tab has been added to DEFORM Setup. Users can now add or remove DEFORM shortcuts from the Windows Start menu and select which applications are displayed.
+  * **Karta Štart menu v programe DEFORM Setup:** V programe DEFORM V14 SP2 bola do programu DEFORM Setup pridaná karta Štart menu. Používatelia teraz môžu pridať alebo odstrániť zástupcov DEFORM z ponuky Štart systému Windows a vybrať, ktoré aplikácie sa zobrazia.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image030.jpg' | relative_url }})
 
-Selecting or deselecting applications in DEFORM Setup.
+Výber alebo zrušenie výberu aplikácií v programe DEFORM Setup.
 
-  * **DEFORM installer localization**. The V14 SP2 installer is fully translatable by our distributors and the selected language will carry over for use in DEFORM system.
+  * **DEFORM lokalizácia inštalačného programu**. Inštalačný program V14 SP2 je plne preložiteľný našimi distribútormi a zvolený jazyk sa prenesie na použitie v systéme DEFORM.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image031.jpg' | relative_url }})
 
-Language selection during the installation in DEFORM installer (shown with Japanese).
+Výber jazyka počas inštalácie v inštalačnom programe DEFORM (zobrazené s japončinou).
 
-_**The following are important issues resolved in v14.0 SP1:**_
+_**V verzii 14.0 SP1 sú vyriešené tieto dôležité problémy:**_
 
-  * Resolved **a critical backward compatibility issue** reported in v14.0, where the "Read from DB" object type, when used in a subsequent operation within a multiple operation (MO) setup, might cause an error under certain conditions in the MO environment (Integrated Manufacturing Process model setup). _It is necessary to upgrade to v14.0 SP1 immediately to avoid this potential backward compatibility issue._
+  * Vyriešený **kritický problém spätnej kompatibility** hlásený vo verzii 14.0, kde typ objektu "Čítanie z DB", ak sa použije v následnej operácii v rámci nastavenia viacerých operácií (MO), môže za určitých podmienok v prostredí MO (nastavenie modelu integrovaného výrobného procesu) spôsobiť chybu. _Je potrebné okamžite aktualizovať na verziu 14.0 SP1, aby ste sa vyhli tomuto možnému problému so spätnou kompatibilitou._
 
-  * Resolved **an issue in v14.0 related to the object tree refresh/update** that occurred when switching between different object types.
+  * Vyriešený **problém vo verzii 14.0 súvisiaci s obnovou/aktualizáciou stromu objektov**, ktorý sa vyskytoval pri prepínaní medzi rôznymi typmi objektov.
 
-  * Resolved **an issue in v14.0 related to non-English character support**. When the UTF-8 (Unicode Transformation Format - 8-bit) character encoding standard was not enabled in the Windows OS settings, the handling of folder and file names containing non-English characters encountered issues in the DEFORM system v14.0. 
+  * Vyriešený **problém vo verzii 14.0 týkajúci sa podpory neanglických znakov**. Keď v nastaveniach operačného systému Windows nebol povolený štandard kódovania znakov UTF-8 (Unicode Transformation Format - 8-bit), pri spracovaní názvov priečinkov a súborov obsahujúcich neanglické znaky sa v systéme DEFORM v14.0 vyskytli problémy.
 
-  * Along with the fix mentioned above, we have **significantly improved non-English character support** in various areas, including project names, object names, simulation titles, operation names, and more. 
+  * Spolu s vyššie uvedenou opravou sme **výrazne zlepšili podporu neanglických znakov** v rôznych oblastiach vrátane názvov projektov, názvov objektov, názvov simulácií, názvov operácií a ďalších.
 
-  * Resolved an issue where object name changed to “Object 1” from “Workpiece” when object type was changed from “Read from DB” to “Plastic” in the second operation. 
+  * Vyriešený problém, keď sa názov objektu zmenil na "Objekt 1" z "Obrobok", keď sa typ objektu zmenil z "Čítať z DB" na "Plast" v druhej operácii.
 
-  * Resolved an issue where the "**Copy Material Properties** " function failed to copy certain Electrical/Magnetic material properties to another material. 
+  * Vyriešený problém, keď funkcia "**Kopírovať vlastnosti materiálu** " nedokázala skopírovať určité elektrické/magnetické vlastnosti materiálu do iného materiálu.
 
-  * An issue where the generation of PDF reports failed, when DEFORM was running in Japanese language mode, was fixed by updating to the latest version of the **MiKTeX** package.
+  * Aktualizáciou na najnovšiu verziu balíka **MiKTeX** bol odstránený problém, pri ktorom zlyhávalo generovanie správ vo formáte PDF, keď bol DEFORM spustený v japonskom jazykovom režime.
 
-  * Resolved a crash issue that occurred while using the **Mirror Merge function**.
+  * Vyriešený problém s pádom, ku ktorému dochádzalo pri používaní funkcie **Zrkadlové zlúčenie**.
 
-  * Resolved an issue where the **Reference Temperature** for the Environment Fluid (CFD) object type was lost. 
+  * Vyriešený problém, pri ktorom sa stratila **referenčná teplota** pre typ objektu Environment Fluid (CFD).
 
-  * DEFORM system v14.0 SP1 includes a Microsoft Visual Studio 2019 project file (**DEF_SIM_64_USR_Intel.vfproj**) for compiling FEM user routines using the Intel Fortran compiler. 
+  * Systém DEFORM v14.0 SP1 obsahuje projektový súbor Microsoft Visual Studio 2019 (**DEF_SIM_64_USR_Intel.vfproj**) na kompiláciu používateľských rutín FEM pomocou kompilátora Intel Fortran.
 
-  * The Intel® Fortran Compiler Classic (ifort) is now deprecated and will be discontinued in October 2024. Intel recommends that customers transition to the **Intel® Fortran Compiler (ifx)** for continued support on Windows and Linux. 
+  * Intel® Fortran Compiler Classic (ifort) je už zastaraný a jeho používanie bude ukončené v októbri 2024. Spoločnosť Intel odporúča zákazníkom, aby pre pokračujúcu podporu v systémoch Windows a Linux prešli na **Intel® Fortran Compiler (ifx)**.
 
-  * Thus, DEFORM v14.0 SP1 includes two new batch files: “**build-FEM-USR-PC-64bit-intel-compiler-ifx.bat** ” and “**Intel_ifx_build_all_dll_command.bat** ” for both 2D and 3D, respectively.
+  * DEFORM v14.0 SP1 obsahuje dva nové dávkové súbory: "**build-FEM-USR-PC-64bit-intel-compiler-ifx.bat** " a "**Intel_ifx_build_all_dll_command** " pre 2D aj 3D.
 
-  * **We appreciate the feedback** from v14.0 users that helped us address these issues above
+  * **Ceníme si spätnú väzbu** od používateľov verzie 14.0, ktorá nám pomohla vyriešiť tieto problémy
 
 **_Highlights of New and Enhanced Features in v14.0_**
 
-_Majority of the highlights of v14.0 SP2 DEFORM system were presented in the Spring 2024 DEFORM User Group meeting and the Fall 2023 DEFORM User Group meetings._
+_Väčšina hlavných bodov systému DEFORM v14.0 SP2 bola predstavená na stretnutí skupiny používateľov DEFORM na jar 2024 a na stretnutí skupiny používateľov DEFORM na jeseň 2023._
 
-  * **Partial domain solver** which was introduced in the Spring 2023 DEFORM Users Group meeting has been tested/validated and now officially available in v14.0/v14.0 SP1. It will help to r**educe a computational** cost in incremental/rotary forming process simulations like spinning, flow forming, and orbital forming.
+  * **Čiastočný doménový riešiteľ**, ktorý bol predstavený na stretnutí skupiny používateľov DEFORM na jar 2023, bol otestovaný/overený a teraz je oficiálne k dispozícii vo verzii 14.0/v14.0 SP1. Pomôže r**edukovať výpočtové** náklady pri simuláciách prírastkových/rotačných procesov tvárnenia, ako je napríklad odstreďovanie, prietokové tvárnenie a orbitálne tvárnenie.
 
-  * **CFD solver** is available with GUI implementation for **gas quenching simulation** in v14.0/v14.0 SP1. CFD flow simulation can generate the heat transfer coefficient (HTC) profile and then quenching/distortion simulation can be conducted using the calculated HTC. 3D Lab document for gas quenching is available in v14.0 official release.
+  * **CFD riešiteľ** je k dispozícii s grafickým používateľským rozhraním pre simuláciu **hasenia plynu** vo verzii 14.0/v14.0 SP1. Simulácia prúdenia CFD môže generovať profil koeficientu prestupu tepla (HTC) a potom sa môže vykonať simulácia kalenia/deformácie pomocou vypočítaného HTC. Dokument 3D Lab pre kalenie plynom je k dispozícii v oficiálnom vydaní verzie v14.0.
 
-  * **Induction heating model** now can model B-H curve and hysteresis loss. New state variables (magnetic field intensity H, magnetic flux density, B) have been added to better present induction heating simulation results. 
+  * **Model indukčného ohrevu** teraz dokáže modelovať B-H krivku a hysteréznu stratu. Boli pridané nové stavové premenné (intenzita magnetického poľa H, hustota magnetického toku, B), ktoré lepšie prezentujú výsledky simulácie indukčného ohrevu.
 
-  * New constitutive models of**Elasto-plastic porous** model, **General Neo-Hookean** model (Hyperelastic) have been added.
+  * Boli pridané nové konštitutívne modely **Elasto-plastický pórovitý** model, **Všeobecný Neo-Hookeanov** model (hyperelastický).
 
-  * New yield criteria of **Barlat Anisotropy 1991** has been introduced. 
+  * Boli zavedené nové kritériá výťažnosti **Barlat Anisotropy 1991**.
 
-  * New hardening model of **Yoshida Uemori** has been introduced. 
+  * Bol zavedený nový model spevnenia **Yoshida Uemori**.
 
-  * **Hydraulic press movement enhancement.** Multiple ram press movement model has been newly developed and introduced.
+  * **Vylepšenie hydraulického pohybu lisu.** Model pohybu lisu s viacerými baranmi bol novo vyvinutý a zavedený.
 
-  * **3 rd rotation movement **option is add in 3D.
+  * **3. rotácia pohybu **možnosť je pridaná v 3D.
 
-  * **Ring rolling model enhancement**. It now can support user-selected ring diameter location for stopping and movement control usage. Advanced movement control option like a PID control has been added. 
+  * **Vylepšenie modelu valcovania krúžkov**. Teraz môže podporovať umiestnenie priemeru krúžku zvoleného používateľom na zastavenie a použitie kontroly pohybu. Bola pridaná možnosť pokročilého riadenia pohybu, ako napríklad PID regulácia.
 
-  * **Shape rolling model enhancement**. It now can support Tet mesh (with Boolean and Force remesh options). Various user-enhancement requests were implemented for easier setup of multi-pass shape rolling process. 
+  * **Vylepšenie modelu valcovania tvaru**. Teraz môže podporovať Tet mesh (s možnosťami Boolean a Force remesh). Boli implementované rôzne požiadavky používateľov na vylepšenie pre jednoduchšie nastavenie viacprechodového procesu valcovania tvaru.
 
-  * **2D adaptive contact bcc** has been developed in 2D FEM. It can be helpful in forging simulation with multiple deforming dies.
+  * **2D adaptívny kontakt bcc** bol vyvinutý v 2D FEM. Môže byť užitočná pri simulácii kovania s viacerými deformujúcimi sa zápustkami.
 
-  * **Mechanism-based dynamic recrystallization** of Aluminum alloys has been developed.
+  * Bola vyvinutá dynamická rekryštalizácia** hliníkových zliatin založená na mechanizme.
 
-  * **Precipitation hardening model** (based on classical nucleation and growth theories) has been developed.
+  * Bol vyvinutý **model precipitačného tvrdnutia** (založený na klasických teóriách nukleácie a rastu).
 
-  * **Crystal plasticity for texture model** has been developed.
+  * Bola vyvinutá **Plastickosť kryštálov pre model textúry**.
 
-  * For easier handling of many inter-object relations, **Examine tool** for inter-object relations and **Explode view** have been developed. 
+  * Na jednoduchšie spracovanie mnohých medziobjektových vzťahov bol vyvinutý nástroj **Examine Tool** pre medziobjektové vzťahy a **Explode view**.
 
-  * **Thermal (Proximity) contact** has been introduced for accurate temperature prediction in sheet forming applications with thermal calculation.
+  * **Termický (bezkontaktný) kontakt** bol zavedený na presné predpovedanie teploty v aplikáciách tvárnenia plechov pomocou tepelného výpočtu.
 
-  * Many new user-friendly enhancements have been made in **Process Monitor, DEFORM Setup, License Monitoring** tool. 
+  * V nástroji **Process Monitor, DEFORM Setup, License Monitoring** bolo vykonaných mnoho nových užívateľsky prívetivých vylepšení.
 
-_**Selected New Developments in DEFORM v14.0**_
+_**Vybrané novinky v DEFORM v14.0**_
 
-Some of the highlights of v14.0 DEFORM system were presented in the **Fall 2023 DEFORM** **User Group meeting** and in the S**pring 2024 DEFORM User Group meeting**. The selected v14.0 enhancements include:
+Niektoré z hlavných bodov systému DEFORM v14.0 boli predstavené na **jesennom stretnutí skupiny používateľov DEFORM** v roku 2023 a na S**jarnom stretnutí skupiny používateľov DEFORM v roku 2024**. Medzi vybrané vylepšenia verzie v14.0 patria:
 
-  * **Multi-Ram hydraulic press model** have been developed in order to support various punch movement schedules.
+  * **Model hydraulického lisu s viacerými ramenami** bol vyvinutý s cieľom podporovať rôzne plány pohybu razníka.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image001.jpg' | relative_url }})
 
-Multiple-ram hydraulic press interface in Simulation control and Movement pages.
+Rozhranie hydraulického lisu s viacerými ramenami na stránkach Simulation control and Movement.
 
-  * **Induction heating** now can model **B-H curve** , relationship between the magnetic field strength (H) and the magnetic flux density (B), and **hysteresis** **loss** with new state variables (magnetic field intensity H, magnetic flux density, B) display support.
+  * **Indukčný ohrev** teraz dokáže modelovať **Krivku B-H** , vzťah medzi intenzitou magnetického poľa (H) a hustotou magnetického toku (B), a **hysterézu** **straty** s podporou zobrazovania nových stavových premenných (intenzita magnetického poľa H, hustota magnetického toku, B).
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image002.jpg' | relative_url }})  
   
-“Define BH curve” and “Define Hysteresis loss” options in Material page (left), Electrical field intensity, Current density, Magnetic field intensity, and Magnetic flux intensity in SV page in Post-processor (right). 
+Možnosti "Definovať BH krivku" a "Definovať hysteréznu stratu" na stránke Materiál (vľavo), Intenzita elektrického poľa, Hustota prúdu, Intenzita magnetického poľa a Intenzita magnetického toku na stránke SV v Postprocesore (vpravo).
 
-  * **Ring rolling model enhancement.** User-specified ring diameter (inner or outer) location for stopping control is implemented. Axial roll movement as a function of ring diameter is implemented. Also, mandrel movement can be defined as PID control, a ring growth speed as a function of ring diameter. 
+  * **Vylepšenie modelu odvaľovania krúžkov.** Implementované je umiestnenie krúžkov (vnútorných alebo vonkajších) zadané používateľom na kontrolu zastavenia. Je implementovaný axiálny valivý pohyb ako funkcia priemeru krúžku. Taktiež je možné definovať pohyb tŕňa ako PID riadenie, rýchlosť rastu prstenca ako funkciu priemeru prstenca.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image003.jpg' | relative_url }})  
   
-Ring diameter measurement options (outer, inner, position) (left), and the associated stopping control (center).   
-Ring diameter measurement option in stopping criteria page of Simulation Controls page for ring rolling simulation type (right).
+Možnosti merania priemeru krúžku (vonkajší, vnútorný, poloha) (vľavo) a súvisiace ovládanie zastavenia (uprostred).   
+Možnosť merania priemeru krúžku na stránke kritérií zastavenia na stránke Simulation Controls pre typ simulácie valcovania krúžku (vpravo).
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image004.jpg' | relative_url }})
 
   
-PID control, growing speed of the ring as a function of ring diameter, for Mandrel movement (left), and Z-dir. movement of Axial roll as a function of ring diameter (right).
+PID regulácia, rastúca rýchlosť prstenca ako funkcia priemeru prstenca, pre pohyb tŕňa (vľavo) a Z-obvodový pohyb axiálneho valca ako funkcia priemeru prstenca (vpravo).
 
-  * **Multiple enhancements** have been made in **Shape rolling** in order to provide a streamlined mutli-pass rolling process setup in more convenient way. User can choose a starting pass no. of 2.5D multipass rolling simulation, and environment setting can be customized for each pass. For Lagrangian rolling, Tet mesh is now supported and workpiece object can be imported.
+  * **Vykonalo sa viacero vylepšení** v **Valcovaní tvaru** s cieľom poskytnúť zjednodušené nastavenie procesu valcovania s viacerými priechodmi pohodlnejším spôsobom. Používateľ si môže zvoliť počiatočný počet priechodov 2,5D viacpriechodovej simulácie valcovania a nastavenie prostredia je možné prispôsobiť pre každý priechod. Pre Lagrangeovo valcovanie je teraz podporovaná sieť Tet a je možné importovať objekt obrobku.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image005.jpg' | relative_url }})
 
   
-Process page with default contact settings and default environment settings.  
+Stránka procesu s predvolenými nastaveniami kontaktov a predvolenými nastaveniami prostredia.  
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image006.jpg' | relative_url }})
 
   
-Pass table shown for Lagrangian rolling (left) and for ALE rolling (right).
+Tabuľka priechodov zobrazená pre Lagrangeovo valcovanie (vľavo) a pre ALE valcovanie (vpravo).
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image007.jpg' | relative_url }})
 
   
-Environment settings for selected pass (directly accessible from Pass table).  
+Nastavenia prostredia pre vybraný priechod (prístupné priamo z tabuľky priechodov).  
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image008.jpg' | relative_url }})
 
   
-3D Setup page in ALE (left) and 3D Roll mesh page for non-isothermal rolling (right).  
+Stránka 3D nastavenia v programe ALE (vľavo) a stránka 3D Roll mesh pre neizotermické valenie (vpravo).  
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image009.jpg' | relative_url }})
 
   
-3D Workpiece mesh page for Lagrangian rolling (left) and ALE rolling (right)
+3D stránka siete obrobku pre Lagrangeovo valcovanie (vľavo) a ALE valcovanie (vpravo)
 
-  * **CFD solver** has been developed for fluid flow simulation and its GUI integration into DEFORM system now allows **gas quenching simulation**. CFD flow simulation can generate the heat transfer coefficient (HTC) profile and then quenching/distortion simulation can be conducted using the calculated HTC.
+  * **CFD riešiteľ** bol vyvinutý na simuláciu prúdenia kvapalín a jeho integrácia do grafického rozhrania systému DEFORM teraz umožňuje simuláciu **hasenia plynu**. Simulácia prúdenia CFD môže generovať profil koeficientu prestupu tepla (HTC) a potom sa môže vykonať simulácia kalenia/deformácie pomocou vypočítaného HTC.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image010.jpg' | relative_url }})
 
   
-New CFD flow solver option and frequency control at Simulation Controls dialog.
+Nová možnosť riešenia prúdenia CFD a kontrola frekvencie v dialógovom okne Simulation Controls.
 
-  * **Partial domain solver** has been developed for incremental rotary forming processes like spinning, flow forming, and orbital forming in order to reduce a computational cost.
+  * **Riešiteľ s čiastočnou doménou** bol vyvinutý pre inkrementálne rotačné tvárnenie, ako je pradenie, prietokové tvárnenie a orbitálne tvárnenie, s cieľom znížiť výpočtové náklady.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image011.jpg' | relative_url }})
 
   
-Partial domain solver with an optional quick evaluation (left, Simulation Controls page) with Preview function of partial domain and Inactive domain window (right, Property page).
+Riešiteľ čiastkovej domény s voliteľným rýchlym vyhodnotením (vľavo, stránka Simulation Controls) s funkciou Preview čiastkovej domény a oknom Inactive domain (vpravo, stránka Property).
 
-  * **Here are the other selected enhancements available in Pre-processor.**
+  * **Tu sú ďalšie vybrané vylepšenia dostupné v Pre-procesore.**
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image012.jpg' | relative_url }})
 
   
-Re-designed object page with available object types and element types (left) and Secondary control in Simulation controls page (right).
+Prepracovaná stránka objektu s dostupnými typmi objektov a typmi prvkov (vľavo) a sekundárnym ovládacím prvkom na stránke Simulation controls (vpravo).
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image013.jpg' | relative_url }})
 
   
-Processing map, EP porous, Barlat Yield 1991 yield model, Yoshida-Uemori hardening model in Material dialog (left) and Instability calculation for processing map in Property page (right).
+Mapa spracovania, EP pórovitý, Barlat Yield 1991 model výťažnosti, Yoshida-Uemori model tvrdnutia v dialógovom okne Materiál (vľavo) a výpočet nestability pre mapu spracovania na stránke Vlastnosti (vpravo).
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image014.jpg' | relative_url }})
 
   
-Mechanism-based recrystallization model (Grain modeling, CDRX) (left), and Poisson’s ratio and Thermal expansion as a function of temperature and density (right), and General Neo-Hookean hyperelasticity model (right) in Material page. 
+Model rekryštalizácie založený na mechanizme (modelovanie zrna, CDRX) (vľavo) a Poissonov pomer a tepelná rozťažnosť ako funkcia teploty a hustoty (vpravo) a všeobecný Neo-Hookeov model hyperelasticity (vpravo) na stránke Materiál.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image015.jpg' | relative_url }})
 
   
-New output control page (left), and nodal heat output options (deformation, friction) (right). 
+Nová stránka na ovládanie výstupu (vľavo) a možnosti výstupu tepla z uzlov (deformácia, trenie) (vpravo).
 
-  * **DEFORM License Monitor** now displays “Product licensed”, “Solver licensed”, and “Solvers in use”.
+  * **DEFORM License Monitor** teraz zobrazuje "Product licensed", "Solver licensed" a "Solvers in use".
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image016.jpg' | relative_url }})
 
-**DEFORM Process Monitor** comes with useful filtering functions for monitoring job status.
+**DEFORM Process Monitor** obsahuje užitočné funkcie filtrovania na monitorovanie stavu úloh.
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image017.jpg' | relative_url }})
 
-**DEFORM Setup** now displays the connected DEFORM License server version number and the “DEFORM version number”, “Product licensed”, and “Solver licensed” in password file. It comes with the improved simulation server page. GeoCAD server status is now monitored.  
+**DEFORM Setup** teraz zobrazuje číslo verzie pripojeného licenčného servera DEFORM a "Číslo verzie DEFORM", "Licencovaný produkt" a "Licencovaný riešiteľ" v súbore hesiel. Dodáva sa s vylepšenou stránkou simulačného servera. Teraz sa sleduje stav servera GeoCAD.  
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image018.jpg' | relative_url }})
 
 ![]({{ '/assets/images/about_deform/1_11_release_notes/fig_1_11_image019.jpg' | relative_url }})
 
-_**Important GUI related and functional improvements in DEFORM v14.0**_
+_**Dôležité vylepšenia grafického rozhrania a funkcií v DEFORM v14.0**_
 
   * **GUI Main**
 
-    * Improved stability & performance
+    * Vylepšená stabilita a výkon
 
   * **Pre-Processor**
 
-    * **(Simulation Controls)**
+    * **(Simulačné ovládacie prvky)**
 
-      * Partial domain solver
+      * Riešiteľ čiastočnej domény
 
-      * Max load stopping criterion 
+      * Kritérium zastavenia maximálneho zaťaženia
 
-      * Secondary control for step saving
+      * Sekundárne ovládanie pre krokové šetrenie
 
-      * Ring diameter stopping criterion
+      * Kritérium zastavenia priemeru krúžku
 
-    * **(Material)**
+    * **(Materiál)**
 
-      * Voce hardening 
+      * Tvrdnutie hlasu
 
-      * Flow stress =f(strain,density,temp)
+      * Prietokové napätie =f(deformácia,hustota,teplota)
 
       * Barlat Yield 1991
 
-      * Yoshida-Uemori hardening
+      * Vytvrdzovanie Yoshida-Uemori
 
-      * Mechanism-based recrystallized model (grain) 
+      * Rekryštalizovaný model založený na mechanizme (zrno)
 
-      * Processing map
+      * Mapa spracovania
 
-      * General Neo-Hookean (Hyper-elasticity)
+      * Všeobecná Neo-Hookean (Hyper-elasticita)
 
-    * **(Geometry)**
+    * **(Geometria)**
 
-      * Refine Tool
+      * Nástroj na spresnenie
 
-      * Construction by subtraction
+      * Konštrukcia odčítaním
 
     * **(Mesh)**
 
-      * 2D local remesh for brick mesh
+      * 2D lokálna remesh pre tehlovú sieť
 
-      * Improved GUI behavior for brick meshing
+      * Vylepšené správanie grafického rozhrania pre sieťovanie tehál
 
-    * **(Boundary condition)**
+    * **(hraničná podmienka)**
 
-      * Shrink-fit for bolt assembly
+      * Zmršťovacie spojenie pre montáž skrutiek
 
-      * Symmetry bcc for 2D induction heating
+      * Symetria bcc pre 2D indukčný ohrev
 
-      * Fluid flow bcc: Inlet/outlet, and wall
+      * Prietok kvapaliny bcc: vstup/výstup a stena
 
-    * **(Movement)**
+    * **(Pohyb)**
 
-      * Multi-ram movement in Hydraulic press
+      * Pohyb viacerých rámov v hydraulickom lise
 
-      * PID control for movement (ring rolling)
+      * PID regulácia pohybu (krúžkovanie)
 
-      * 3rd Rotation (3D)
+      * 3. rotácia (3D)
 
-    * **(Inter-object)**
+    * **(Inter-objekt)**
 
-      * Exploded view
+      * Pohľad po výbuchu
 
-      * Examine tool
+      * Preskúmajte nástroj
 
-      * 2D adaptive contact
+      * 2D adaptívny kontakt
 
-      * Thermal contact, HTC = f(gab)+f(pressure)
+      * Tepelný kontakt, HTC = f(gab)+f(tlak)
 
-  * **Post-Processor**
+  * **Postprocesor**
 
-    * Enhanced load-stroke curve for multiple operation
+    * Vylepšená krivka zaťaženia a zdvihu pre viacnásobnú prevádzku
 
-    * Flowline tracking for multi-pass ALE rolling
+    * Sledovanie prietokovej línie pre viacprechodové valcovanie ALE
 
-    * Flowline tracking for CFD model
+    * Sledovanie prietokovej línie pre model CFD
 
-    * Enhanced point tracking for ALE multi-pass rolling (with workpiece rotation) 
+    * Vylepšené sledovanie bodu pre viacpriechodové valcovanie ALE (s rotáciou obrobku)
 
-    * Load-stroke curve, Summary graph enhancements (for ring rolling) 
+    * Krivka zaťaženia a zdvihu, vylepšenia súhrnného grafu (pre valcovanie krúžkov)
 
-    * Nodal heat state variables: deformation heat, frictional heat
+    * Uzlové tepelné stavové veličiny: deformačné teplo, trecie teplo
 
-    * CFD state variables: calculated heat transfer coefficient, calculated heat flux 
+    * Stavové premenné CFD: vypočítaný koeficient prestupu tepla, vypočítaný tepelný tok
 
-    * Induction heating state variables: Electrical field intensity (E), Current density (I), Magnetic field intensity (H), Magnetic flux intensity (B)
+    * Stavové premenné indukčného ohrevu: Intenzita elektrického poľa (E), hustota prúdu (I), intenzita magnetického poľa (H), intenzita magnetického toku (B)
 
-  * **Shape Rolling**
+  * **Tvarové valcovanie**
 
-    * Tet mesh support in Lagrangian rolling.
+    * Podpora siete Tet v Lagrangeovom valcovaní.
 
-    * Workpiece import for Lagrangian rolling.
+    * Import obrobkov pre Lagrangeovo valcovanie.
 
-    * Continue run for 2.5D from a certain pass. 
+    * Pokračujte v behu na 2,5D od určitého priechodu.
 
-    * Customize environment setting to each pass
+    * Prispôsobenie nastavenia prostredia každému priechodu
 
-    * Reverse rolling in Pass table.
+    * Obrátené hádzanie v tabuľke Pass.
 
-    * Workpiece rotation (LAG) in Pass table.
+    * Otáčanie obrobku (LAG) v priechodnom stole.
 
-    * 3D roll mesh/material assignment for multipass.
+    * Priradenie 3D rolovacej siete/materiálu pre viacnásobný prechod.
 
   * **Ring Rolling**
 
-    * User-define ring diameter stop control.
+    * Užívateľsky definované ovládanie dorazu priemeru krúžku.
 
-    * Mandrel movement (PID control), ring growing speed as a function of diameter.
+    * Pohyb tŕňa (PID regulácia), rýchlosť rastu krúžku v závislosti od priemeru.
 
-    * Axial roll movement (Path), z-stroke as a function of diameter.
+    * Axiálny valivý pohyb (Path), z-zdvih ako funkcia priemeru.
 
   * **Spinning**
 
-    * Solver type and object type selection control for tube piercing and spinning/flow forming setup.
+    * Ovládanie výberu typu riešiteľa a typu objektu pre nastavenie prepichovania rúr a spriadania/formovania toku.
 
-  * **Cogging**
+  * **Zabezpečenie**
 
-    * Boolean between passes support with tet mesh workpiece. 
+    * Boolean medzi priechodmi podpora s obrobkom tet mesh.
 
-  * **Tool Life Study**
+  * **Štúdia životnosti náradia**
 
-    * Improved tool life prediction.
+    * Vylepšená predikcia životnosti nástroja.
 
-  * **Data Analytics**
+  * **Analýza údajov**
 
-    * Graph plot (scatter, line, response surface) improvement.
+    * Zlepšenie grafu (rozptyl, čiara, plocha odozvy).
 
-  * **DOE/OPT Study**
+  * **DOE/OPT štúdia**
 
-    * SNR (Signal-to-noise ratio) curve support.
+    * Podpora krivky SNR (odstup signálu od šumu).
 
-  * **License Enhancement**
+  * **Vylepšenie licencie**
 
-    * Improved stability of license modules/services.
+    * Vylepšená stabilita licenčných modulov/služieb.
 
-    * DEFORM Setup (License server version, License information, improved GUI layout on Simulation server page, GeoCAD server status)
+    * DEFORM Setup (verzia licenčného servera, informácie o licencii, vylepšené grafické rozhranie na stránke Simulačný server, stav servera GeoCAD)
 
-    * License Monitor (Product licensed, Solver Licensed, Solvers in Use)
+    * Sledovanie licencií (licencovaný produkt, licencovaný riešiteľ, používané riešitele)
 
-    * Process Monitor (improved visibility with display item on/off control, filtering)
+    * Monitor procesov (zlepšená viditeľnosť s ovládaním zapnutia/vypnutia zobrazovaných položiek, filtrovanie)
 
-  * **System General**
+  * **Všeobecné informácie o systéme**
 
-    * Language translation has been improved in DEFORM system.
-
-  
-_**Important FEM developments/improvements in DEFORM v14.0**_
-
-  1. (2D) The adaptive contact BCC has been implemented in 2D FEM. This option can be used between multiple deforming dies to prevent unexpected node leaking.
-
-  2. (2D) The default Maxwell equation solving frequency for 2D induction heating simulations has been changed from 20 to 1. Now by default 2D FEM will calculate Maxwell equation every step.
-
-  3. (3D) For Intel CPU equipped with Performance cores(P-cores) and efficiency cores(E-cores) architecture, DEFORM 3D FEM can now always utilize the P-cores with the control file DEF_PCORECTL.DAT in the working directory to maximize the computation speed.
-
-  4. (3D) Crystal plasticity for texture model has been implemented in 3D FEM.
-
-  5. (3D) 3D Elasto-plasitc Tet elements with mixed formulation has been improved. With enhanced strain formulation, 3D mini Tet elements simulation now has better convergence behavior and more accurate stress calculation results.
-
-  6. (3D) Inward flow displacement state variable display has been added for 3D Ring Rolling simulation.
-
-  7. (3D) 3rd Rotation for die movement control has been implemented in 3D FEM.
-
-  8. (3D) For the current Tet element porous model, the volumetric strain is calculated based on the pressure interpolation, which sometimes leads to inaccurate results. New option to calculate volumetric strain based on velocity fields has been implemented to improve solution accuracy. This option can be activated by using DAT file DEF_PVSTR.DAT.
-
-  9. (3D) In DEFORM v13.1, SPRLOOP.DAT is introduced for 3D FEM to prevent the sliding die spring from looping beyond a set number of times. In DEFORM v14 this function will be activated by default with the maximum loop number set to 2.
-
-  10. (2D&3D) The robustness of FEM engine compiled by Intel Fortran Compiler has been improved.
-
-  11. (2D&3D) The general Neo-Hookean hyperelastic model has been implemented for both 2D and 3D FEM
-
-  12. (2D&3D) Grain modeling of "Continuous Dynamic Recrystallization (CDRX)" and "Geometric Dynamic Recrystallization (GDRX)" has been implemented for aluminum alloys in both 2D and 3D FEM in DEFORM v14. 
-
-  13. (2D&3D) Precipitation and strength modeling for aluminum alloy has been implemented in both 2D and 3D FEM in DEFORM v14.
-
-  14. (2D&3D) Elasto-plastic porous material model has been implemented for both 2D and 3D, and user can now set up this new model through the DEFORM v14 GUI.
-
-  15. (2D&3D) State variable updating for fracture elements have been improved for both 2D and 3D during element deactivation. In previous versions, damage value would continue to increase for already deactivated elements, and introduce the error to elements nearby through interpolation if remeshing happens.
-
-  16. (2D&3D) New Hardening rule of Yoshida-Uemori model has been implemented in both 2D and 3D FEM.
-
-  17. (2D&3D) In DEFORM v14, heat transfer coefficient can now be defined as function of pressure and gap, and function of temperature for Non-isothermal simulation in both 2D and 3D FEM. Thermal contact tolerance is now available in both 2D and 3D.
-
-  18. (2D&3D) The die load stopping criteria has been improved in both 2D and 3D FEM. When the primary die load is close to the specified maximum die load, contact time sub-stepping will be turned on automatically, and the simulation will utilize the updated time step size to stop at the exact die load value.
-
-  19. (2D&3D) For gas/lube trapping simulation, user can now use DEF_GAS_PAIR.DAT to select the trapping definition between different objects. This function is available in DEFORM 3D FEM since v13.1, and available in DEFORM 2D FEM since v14.
-
-**_Important FEM related bug fixes in DEFORM v14.0_**
-
-  1. (2D) Fixed a bug in 2D FEM for non-isothermal axisymmetric simulation type regarding the thermal calculation from relative rotation. In previous versions, if user defines relative rotation in the Inter-object thermal data page, this input value may lost during simulation. 
-
-  2. (2D) Fixed a bug in 2D FEM that may cause 2D MPI job to hang or stop unexpected on a new machine when DEFORM v13.1.1 is installed.
-
-  3. (2D) Fixed a bug in 2D data interpolation for sticking contact BCC. In previous versions, the sticking contact BCC may not be completely interpolated during remeshing.
-
-  4. (2D) Fixed a bug in 2D FEM that may cause 2D MPI simulation hanging when job is finished.
-
-  5. (2D) Fixed a bug in 2D FEM that may cause incorrect emissivity calculation in mixture materials.
-
-  6. (2D) Fixed a bug in 2D fracture element deletion for state variable interpolation. In previous versions, if user select integration point output, the state variable interpolation may not be correct after element deletion.
-
-  7. (3D) Fixed a bug in 3D FEM where the nodal coordinate update due to contact cannot be activated by using the “Do not update” option in the inter-object data page for ALE shape roll simulation.
-
-  8. (3D) Fixed a bug in 3D data interpolation for multiple material group information. In previous versions, ALE simulation with multiple material group may lose material group info after remeshing.
-
-  9. (3D) Fixed a bug in 3D Ring Rolling simulation with JMAK grain modeling that may cause incorrect fractional value for grain data output “evolution mode” and previous step deformation.” 
-
-  10. (2D&3D) Fixed a bug in DEFORM 2D&3D FEM regarding reference point update for the hammer die movement type. In previous versions, the reference point update on the counterblow of a hammer die was not consistent if press stretch was present.
-
-  11. (2D&3D) Fixed a bug in DEFORM 2D&3D FEM regarding contact ratio stopping criteria. In previous versions if the user specifies 1 as contact ratio stopping criteria, the simulation may not stop even if workpiece reaches full contact due to too tight error tolerance.
-
-  12. (2D&3D) Fixed a bug in die distance stopping criteria. In previous versions, nodal coordinate update due to contact generation may lead to the object reference point pass the stopping plane unexpectedly, and cause the simulation fail to stop.
-
-_**Important AMG improvements in DEFORM v14.0**_
-
-  1. (2D) 2D mesher has been improved to handle multiple boundary and material group problems. In current version, 2D mesher can now handle geometry with more than 100 geometry loops.
-
-  2. (2D) 2D mapped mesh generation with specified density distribution has been improved. This function can be activated with DAT file MAP.DST in the working directory. For more information on how to use this function please contact SFTC.
-
-  3. (3D) In DEFORM v14, brick mesh 2D cross section local remeshing based on window definition has been implemented. This new function works for both the revolved and extruded type of brick mesh.
-
-  4. (3D) In DEFORM v14, brick mesh for sheet application can now support mesh window density definition. 
-
-_**Important AMG related bug fixes in DEFORM v14.0**_
-
-  1. (2D) Fixed a bug in 2D remeshing procedure border extraction. In previous version, when master and slave objects have very similar mesh configuration, border extraction results may be incorrect.
-
-  2. (2D) Fixed a bug in 2D remeshing procedure that the 2D local remeshing based on window and merge overlapping mesh function may not work if the remeshing workpiece is not object#1.
-
-  3. (3D) Fixed a bug in 3D brick remeshing that may cause problem for object with revolved type geometry and solid center. In previous version, if the 2D cross section has little change, there may be a problem during brick remeshing.
-
-  4. (3D) Fixed a bug in 3D Tet remeshing with rotational symmetry BCC. In previous version, if remeshing object has rotational symmetry BCC, geometry feature may get lost during remeshing if fold presents.
-
-  5. (3D) Fixed a bug in 3D extruded type brick mesh generation with only 1 layer of elements. In previous version, initial brick mesh generation may fail if all the brick mesh nodes have symmetry BCC.
+    * V systéme DEFORM bol vylepšený preklad jazykov.
 
   
-_**Material library update in DEFORM v14.0**_
+_**Dôležité zmeny/vylepšenia v DEFORM v14.0**_
 
-  1. Fixed the BetaMaterials - Waspaloy(Grain) inaccurate temperature definition in the function data of peak strain and dynamic recrystallization(kinetics and grain size).
+  1. (2D) Adaptívny kontakt BCC bol implementovaný v 2D FEM. Túto možnosť možno použiť medzi viacerými deformujúcimi sa matricami, aby sa zabránilo neočakávanému úniku uzlov.
 
-  2. Fixed missing phase transformation data for JIS-SNC815(HeatTreatment) in English unit material keyword under Steel folder.
+  2. (2D) Predvolená frekvencia riešenia Maxwellovej rovnice pre 2D simulácie indukčného ohrevu bola zmenená z 20 na 1. Teraz bude 2D MKP štandardne počítať Maxwellovu rovnicu v každom kroku.
 
-  3. Fixed missing diffusion data for 12Cr_Martensitic_Stainless_Steel in English unit material keyword under Stainless_steel folder.
+  3. (3D) V prípade procesorov Intel vybavených architektúrou výkonných jadier (P-cores) a efektívnych jadier (E-cores) môže teraz DEFORM 3D FEM vždy využívať jadrá P s riadiacim súborom DEF_PCORECTL.DAT v pracovnom adresári, aby sa maximalizovala rýchlosť výpočtov.
 
-  4. Updated the flow stress source data reference for some of the Aluminum material keywords
+  4. (3D) Plastickosť kryštálov pre model textúry bola implementovaná v 3D FEM.
 
-  5. Fixed incorrect German Standard Material name for Aluminum 6061 related keywords.
+  5. (3D) 3D Elasto-plasitc Tet prvky so zmiešanou formuláciou boli vylepšené. Vďaka vylepšenej formulácii deformácií má teraz 3D simulácia mini Tet prvkov lepšie konvergenčné správanie a presnejšie výsledky výpočtu napätia.
 
-  6. The material flow stress of superalloy INCONEL-718-11[1700-2050F(925-1120C)] has been modified to consider flow softening.
+  6. (3D) Pre 3D simuláciu valcovania prstenca bolo pridané zobrazenie stavovej premennej posunu vnútorného toku.
 
-_**List of document updates in DEFORM v14.0 SP2**_
+  7. (3D) 3. Rotácia pre riadenie pohybu matrice bola implementovaná v 3D FEM.
 
-The following are the major document updates in v14.0 SP2.
+  8. (3D) V prípade súčasného pórovitého modelu Tet element sa objemová deformácia počíta na základe interpolácie tlaku, čo niekedy vedie k nepresným výsledkom. Na zlepšenie presnosti riešenia bola implementovaná nová možnosť výpočtu objemovej deformácie na základe rýchlostných polí. Túto možnosť možno aktivovať pomocou súboru DAT DEF_PVSTR.DAT.
 
-**Category** |  **Location** |  **Description**  
----|---|---  
-Pre-processor |  20\. Inter-object data definition |  Added Examination and Explode view  
-Lab |  (New) Shape rolling Lab3 |  Lagrangian rolling setup with Tet element  
-Porous lab |  Forming of roller bearing race using a porous material  
-Applications |  Deformation texture lab |  Modified w.r.t. setup procedure  
-(New) Cartridge case drawing lab |  2D Cartridge case drawing lab  
-Technical Notes |  Technical notes available in DEFORM User Area |  Added technical notes with links for PDF and ZIP file.  
+  9. (3D) V DEFORM v13.1 je pre 3D FEM zavedený SPRLOOP.DAT, ktorý zabraňuje tomu, aby sa posuvná pružina matrice zacykla viac ako stanovený počet krát. V DEFORM v14 bude táto funkcia predvolene aktivovaná s maximálnym počtom slučiek nastaveným na 2.
+
+  10. (2D&3D) Zlepšila sa robustnosť motora MKP kompilovaného kompilátorom Intel Fortran Compiler.
+
+  11. (2D&3D) Všeobecný Neo-Hookeov hyperelastický model bol implementovaný pre 2D aj 3D FEM
+
+  12. (2D&3D) Modelovanie zrna "kontinuálnej dynamickej rekryštalizácie (CDRX)" a "geometrickej dynamickej rekryštalizácie (GDRX)" bolo implementované pre hliníkové zliatiny v 2D aj 3D MKP v DEFORM v14.
+
+  13. (2D&3D) Modelovanie zrážania a pevnosti hliníkovej zliatiny bolo implementované v 2D aj 3D MKP v DEFORM v14.
+
+  14. (2D&3D) Elasto-plastický model porézneho materiálu bol implementovaný pre 2D aj 3D a používateľ môže teraz nastaviť tento nový model prostredníctvom grafického rozhrania DEFORM v14.
+
+  15. (2D&3D) Aktualizácia stavových premenných pre lomové prvky bola vylepšená pre 2D aj 3D počas deaktivácie prvkov. V predchádzajúcich verziách sa hodnota poškodenia naďalej zvyšovala pre už deaktivované prvky a vnášala chybu do prvkov v okolí prostredníctvom interpolácie, ak došlo k remeshingu.
+
+  16. (2D&3D) Nové pravidlo tvrdenia modelu Yoshida-Uemori bolo implementované v 2D aj 3D MKP.
+
+  17. (2D&3D) V DEFORM v14 je teraz možné definovať koeficient prestupu tepla ako funkciu tlaku a medzery a funkciu teploty pre neizotermickú simuláciu v 2D aj 3D MKP. Tolerancia tepelného kontaktu je teraz k dispozícii v 2D aj 3D.
+
+  18. (2D&3D) Kritériá zastavenia zaťaženia matrice boli vylepšené v 2D aj 3D MKP. Keď sa primárne zaťaženie výlisku blíži k zadanému maximálnemu zaťaženiu výlisku, automaticky sa zapne čiastkové krokovanie času kontaktu a simulácia využije aktualizovanú veľkosť časového kroku na zastavenie pri presnej hodnote zaťaženia výlisku.
+
+  19. (2D&3D) Pri simulácii zachytávania plynu/maziva môže teraz používateľ použiť súbor DEF_GAS_PAIR.DAT na výber definície zachytávania medzi rôznymi objektmi. Táto funkcia je k dispozícii v programe DEFORM 3D FEM od verzie 13.1 a v programe DEFORM 2D FEM od verzie 14.
+
+**_Dôležité opravy chýb súvisiacich s konečným modelom v DEFORM v14.0_**
+
+  1. (2D) Opravená chyba v 2D FEM pre neizotermický osovo symetrický typ simulácie týkajúca sa tepelného výpočtu z relatívneho natočenia. V predchádzajúcich verziách, ak používateľ definoval relatívne natočenie na stránke Inter-object thermal data (Tepelné údaje medzi objektmi), táto vstupná hodnota sa mohla počas simulácie stratiť.
+
+  2. (2D) Opravená chyba v 2D FEM, ktorá môže spôsobiť, že 2D MPI úloha sa na novom počítači po inštalácii DEFORM v13.1.1 neočakávane zastaví alebo zavesí.
+
+  3. (2D) Opravená chyba v interpolácii 2D údajov pre prilepenie kontaktu BCC. V predchádzajúcich verziách sa pri remeshovaní nemusel úplne interpolovať prilepený kontakt BCC.
+
+  4. (2D) Opravená chyba v 2D FEM, ktorá mohla spôsobiť zavesenie 2D MPI simulácie po dokončení úlohy.
+
+  5. (2D) Opravená chyba v 2D FEM, ktorá mohla spôsobiť nesprávny výpočet emisivity v zmesových materiáloch.
+
+  6. (2D) Opravená chyba pri odstraňovaní 2D lomových prvkov pre interpoláciu stavových premenných. V predchádzajúcich verziách, ak používateľ vybral výstup integračného bodu, interpolácia stavovej premennej nemusela byť po vymazaní prvku správna.
+
+  7. (3D) Opravená chyba v 3D FEM, keď sa aktualizácia uzlových súradníc v dôsledku kontaktu nedala aktivovať pomocou možnosti "Neaktualizovať" na stránke s údajmi medzi objektmi pre simuláciu valcovania tvaru ALE.
+
+  8. (3D) Opravená chyba v interpolácii 3D údajov pre informácie o viacerých skupinách materiálov. V predchádzajúcich verziách sa pri simulácii ALE s viacerými materiálovými skupinami mohlo stať, že po remeshovaní sa informácie o materiálovej skupine stratili.
+
+  9. (3D) Opravená chyba v simulácii 3D Ring Rolling s modelovaním zŕn JMAK, ktorá mohla spôsobiť nesprávnu zlomkovú hodnotu pre výstupné údaje o zrnách "režim vývoja" a predchádzajúci krok deformácie."
+
+  10. (2D&3D) Opravená chyba v DEFORM 2D&3D FEM týkajúca sa aktualizácie referenčného bodu pre typ pohybu kladiva. V predchádzajúcich verziách nebola aktualizácia referenčného bodu pri protipohybe kladivovej matrice konzistentná, ak bolo prítomné roztiahnutie lisu.
+
+  11. (2D&3D) Opravená chyba v DEFORM 2D&3D FEM týkajúca sa kritérií zastavenia kontaktného pomeru. V predchádzajúcich verziách, ak používateľ zadal 1 ako kritérium zastavenia pomeru kontaktov, simulácia sa nemusela zastaviť, aj keď obrobok dosiahol úplný kontakt z dôvodu príliš malej tolerancie chyby.
+
+  12. (2D&3D) Opravená chyba v kritériách zastavenia vzdialenosti. V predchádzajúcich verziách mohla aktualizácia uzlových súradníc v dôsledku generovania kontaktov viesť k tomu, že referenčný bod objektu neočakávane prešiel rovinou zastavenia a spôsobil, že simulácia sa nezastavila.
+
+_**Dôležité vylepšenia AMG v DEFORM v14.0**_
+
+  1. (2D) 2D mesher bol vylepšený tak, aby zvládal problémy s viacnásobnými hranicami a skupinami materiálov. V aktuálnej verzii dokáže 2D mesher teraz spracovať geometriu s viac ako 100 geometrickými slučkami.
+
+  2. (2D) Vylepšilo sa generovanie 2D mapovanej siete s určeným rozložením hustoty. Túto funkciu možno aktivovať pomocou súboru DAT MAP.DST v pracovnom adresári. Ďalšie informácie o používaní tejto funkcie získate od SFTC.
+
+  3. (3D) V DEFORM v14 bolo implementované lokálne remeshing 2D prierezu na základe definície okna. Táto nová funkcia funguje pre obtočený aj vytlačený typ tehlovej siete.
+
+  4. (3D) V aplikácii DEFORM v14 môže teraz tehlová sieť pre aplikáciu plechov podporovať definíciu hustoty okennej siete.
+
+_**Dôležité opravy chýb súvisiacich s AMG v DEFORM v14.0**_
+
+  1. (2D) Opravená chyba v extrakcii hraníc pri postupe 2D remeshingu. V predchádzajúcej verzii, keď mali hlavné a vedľajšie objekty veľmi podobnú konfiguráciu siete, výsledky extrakcie hraníc mohli byť nesprávne.
+
+  2. (2D) Opravená chyba v postupe 2D remeshingu, že 2D lokálny remeshing založený na funkcii okna a zlúčenia prekrývajúcej sa siete nemusí fungovať, ak remeshingový obrobok nie je objektom č. 1.
+
+  3. (3D) Opravená chyba v 3D remeshingu tehál, ktorá mohla spôsobiť problém pri objekte s geometriou typu revolved a pevným stredom. V predchádzajúcej verzii, ak sa 2D prierez málo zmenil, mohol nastať problém pri remeshovaní tehly.
+
+  4. (3D) Opravená chyba v 3D Tet remeshingu s rotačnou symetriou BCC. V predchádzajúcej verzii, ak má objekt remeshingu rotačnú symetriu BCC, mohla sa geometrická funkcia počas remeshingu stratiť, ak sa vyskytne záhyb.
+
+  5. (3D) Opravená chyba pri generovaní 3D extrudovanej siete s iba 1 vrstvou prvkov. V predchádzajúcej verzii mohlo počiatočné generovanie tehlovej siete zlyhať, ak všetky uzly tehlovej siete mali symetriu BCC.
+
   
-_**List of document updates in DEFORM v14.0**_
+_**Aktualizácia knižnice materiálov v DEFORM v14.0**_
 
-The following are the major document updates in v14.0.
+  1. Opravená nepresná definícia teploty v BetaMaterials - Waspaloy(Grain) v údajoch funkcie vrcholovej deformácie a dynamickej rekryštalizácie (kinetika a veľkosť zrna).
 
-**Category** |  **Location** |  **Description**  
----|---|---  
-Pre-processor |  9.5 Simulation controls |  Partial domain solver setting  
-16.10 Object Properties |  Partial domain   
-Simulator |  23.4 DEFORM Simulator |  Process Monitor  
-Operation Templates |  29.1 Cogging manual |  Die positioning method  
-43.1 Shape rolling |  v14.0 enhancements  
-42.1 Ring rolling |  v14.0 enhancements  
-Applications |  (New) 2D CFD lab |  2D Turbulent flow  
-(New) 3D CFD lab |  3D Gas quenching  
-(New) Multipass spinning lab |  Quick Evaluation method  
-(New) CP-FEM Lab |  Crystal plasticity for texture prediction  
+  2. Opravené chýbajúce údaje o fázovej transformácii pre JIS-SNC815 (HeatTreatment) v anglickej jednotke materiálového kľúčového slova v zložke Steel.
+
+  3. Opravené chýbajúce difúzne údaje pre 12Cr_Martensitic_Stainless_Steel v anglickom jednotkovom kľúčovom slove material v priečinku Stainless_steel.
+
+  4. Aktualizácia odkazu na zdrojové údaje o napätí pri prúdení pre niektoré kľúčové slová hliníkového materiálu
+
+  5. Opravený nesprávny názov nemeckého štandardného materiálu pre kľúčové slová týkajúce sa hliníka 6061.
+
+  6. Napätie pri prúdení materiálu superzliatiny INCONEL-718-11[1700-2050F(925-1120C)] bolo upravené tak, aby zohľadňovalo zmäkčenie pri prúdení.
+
+_**Zoznam aktualizácií dokumentov v DEFORM v14.0 SP2**_
+
+Nasledujú hlavné aktualizácie dokumentov vo verzii 14.0 SP2.
+
+**Kategória** | **Lokalita** | **Popis**
+---|---|---
+Preprocesor | 20\. Definícia medziobjektových údajov | Pridané zobrazenie Examination a Explode
+Lab | (New) Shape rolling Lab3 | Lagrangeovo valcovanie s prvkom Tet
+Porézne laboratórium | Tvarovanie obežných dráh valčekových ložísk pomocou porézneho materiálu
+Aplikácie | Laboratórium deformačných textúr | Modifikovaný postup nastavenia
+(Nové) Laboratórium kreslenia nábojníc | 2D Laboratórium kreslenia nábojníc
+Technické poznámky | Technické poznámky sú k dispozícii v používateľskej oblasti DEFORM | Pridané technické poznámky s odkazmi na súbory PDF a ZIP.  
   
-_**List of New and Extended Keywords in DEFORM v14.0 and V14.0 SP2**_
+_**Zoznam aktualizácií dokumentov v DEFORM v14.0**_
 
-**No** |  **Keyword** |  **Category** |  **Ver.** |  **Description**  
----|---|---|---|---  
-1 |  OBJTYP (Extended) |  Object  |  v14.0 |  Induction heating - Air Environment (type 11)  
-2 |  PMEAB  
-(Extended)  |  Material  |  v14.0 |  Added Magnetic permeability types (=5,11,14,15)  
-3 |  BHCURB (New) |  Material  |  v14.0  |  BH curve (magnetic flux intensity vs flux density)  
-4 |  HYSIS   
-(New)  |  Material  |  v14.0  |  Hysteresis curve (hysteresis loss)  
-5 |  SOLMTD (Extended) |  Sim. Ctrl. |  v14.0 |  Partial domain solver (type 10)  
-6 |  WPAXIS (Extended) |  Object  |  v14.0 |  Partial domain solver settings (WPAXIS, type 11)  
-7 |  MRMPRS (New,3D) |  Object  |  v14.0 |  Multi-ram (hydraulic) press model  
-8 |  TRANS (Extended) |  Sim. Ctrl. |  v14.0 |  CFD: Simulation control (type 7)  
-9 |  ENVMOD  
-(Extended)  |  Sim. Ctrl. |  v14.0 |  CFD: Environment temperature (type 1, f(time))  
-10 |  OBJTYP  
-(Extended)  |  Object  |  v14.0 |  CFD: Fluid (type 10)  
-11 |  FRQNCY (Extended) |  Sim. Ctrl. |  v14.0 |  CFD: Calculation frequency (type 7)  
-12 |  DFLMAX (New) |  Sim. Ctrl. |  v14.0 |  CFD: Step control  
-13 |  WPAXIS  
-(Extended)  |  Object  |  v14.0 |  CFD: Buoyance-driven flow (WPAXIS, type 5, gravity)  
-14 |  BCCFLO  
-(New)  |  Object  |  v14.0 |  CFD: Turbulent constraint type (type 1, BCCFNC) (type 2, FLVAR)  
-15 |  FLVAR  
-(New)  |  Object  |  v14.0 |  CFD: Turbulent SV (Kinetic energy, Dissipation rate) at nodes  
-16 |  BCCFFN  
-(New)  |  Object |  v14.0 |  CFD: Turbulent flow constraint function definition  
-17 |  ECCDEF  
-(Extended)  |  Object  |  v14.0 |  CFD: Flow bcc, wall definition (type 20)  
-18 |  ECPRES  
-(Extended)  |  Object  |  v14.0 |  CFD: Flow bcc, for various wall types  
-19 |  ECHCFN  
-(New)  |  Object  |  v14.0 |  CFD: Calculated heat transfer coef. boundary condition function  
-20 |  ECFLFN  
-(New)  |  Object  |  v14.0 |  CFD: Calculated heat flux boundary condition function  
-21 |  ECCHTC  
-(New)  |  Object  |  v14.0 |  CFD: Calculated heat transfer coef. (on faces)  
-22 |  ECCFLB  
-(New)  |  Object |  v14.0 |  CFD: Calculated heat flux (on faces)  
-23 |  PMCONS  
-(Extended)  |  Material  |  v14.0 |  EP Porous : Extension of Porous model  
-24 |  PMYLD  
-(New)  |  Material  |  v14.0 |  EP Porous : Yield  
-25 |  PMCRP  
-(New)  |  Material  |  v14.0 |  EP Porous : Creep  
-26 |  FSTRES  
-(Extended)  |  Material |  v14.0 |  EP Porous: Flow stress = f(strain, density, temp (type 17)  
-27 |  YOUNG  
-(Extended)  |  Material  |  v14.0 |  EP Porous : Young’s Modulus = f(density, and so on)  
-28 |  EXPAND  
-(Extended)  |  Material |  v14.0 |  EP Porous : Thermal extension = f(density, and so on)  
-29 |  POISON  
-(Extended)  |  Material  |  v14.0 |  EP Porous : Poisson’s ratio = f(density, and so on)  
-30 |  HYPREL  
-(Extended)  |  Material  |  v14.0 |  Hyperelasticity: General Neo-Hookean (type 3)  
-31 |  GENGEO (New) |  Action |  v14.0 |  DEFORM-API  
-32 |  HDNRUL  
-(Extended)  |  Material  |  v14.0 |  Yoshi-Uemori hardening model  
-33 |  YLDS  
-(Extended)  |  Material  |  v14.0 |  1st back stress for Yoshida-Uemori  
-34 |  YLDS2  
-(New)  |  Material  |  v14.0 |  2nd back stress for Yoshida-Uemori  
-35 |  ANISO  
-(Extended)  |  Material  |  v14.0  |  Barlat Yield 1991 (type 7)  
-36 |  PRCMAP  
-(New)  |  Material  |  v14.0 |  Processing Map: map data in material property  
-37 |  PMPOBJ  
-(New)  |  Object |  v14.0 |  Processing Map: calculation options  
-38 |  EFFMAP  
-(New)  |  Object |  v14.0 |  Processing Map: power efficiency and instability at elements  
-39 |  GRAIN  
-(Extended)  |  Material |  v14.0 |  Grain model (CDRX)  
-40 |  GRNDAT  
-(Extended)  |  Material |  v14.0 |  Grain model (CDRX) (type 6)  
-41 |  SIZEMD  
-(Extended)  |  Object |  v14.0  |  Grain model (CDRX)  
-42 |  SIZESH  
-(Extended)  |  Object  |  v14.0 |  Grain model (CDRX)  
-43 |  TTTD  
-(Extended)  |  Inter-material |  v14.0 |  Precipitate hardening (type 18)  
-44 |  HDNPHA  
-(Extended)  |  Material  |  v14.0 |  Precipitate hardening  
-45 |  HDNEST  
-(Extended)  |  Material |  v14.0 |  Hardness : precipitate (type 4)  
-46 |  TXTURE  
-(Extended)  |  Material |  v14.0 |  CP FEM (texture information)  
-47 |  CPCTRL  
-(New)  |  Sim. Ctrl. |  v14.0 |  CP FEM (simulation control data)  
-48 |  TXTCPV  
-(New)  |  Object |  v14.0 |  CP FEM (internal state variables)  
-49 |  TXTODF  
-(Extended)  |  Object  |  v14.0  |  CP FEM (Orientation distribution function)  
-50 |  LMAX  
-(Extended)  |  Sim. Ctrl. |  v14.0 |  Max. load stopping criterion with tolerance  
-51 |  STPINC  
-(Extended)  |  Sim. Ctrl. |  v14.0 |  Secondary DB step saving control  
-52 |  RNGDIA  
-(New)  |  Object |  v14.0 |  Ring rolling, ring diameter definition (OD, or ID with position)  
-53 |  MOVCTL  
-(Extended)  |  Object |  v14.0 |  Ring rolling, PID movement control (type 12)  
-54 |  ANGMO3  
-(New)  |  Object |  v14.0 |  3rd Rotation movement (3D)  
-55 |  CNTRA3  
-(New)  |  Object |  v14.0 |  3rd Rotation movement (3D)  
-56 |  FSTRES  
-(Extended)  |  Material  |  v14.0 |  Added flow stress (type 16) for Voce hardening model  
-57 |  IHTCOF  
-(New)  |  Inter-object |  v14.0 |  Thermal/Proximity contact, HTC = f(gap)+f(pressure)  
-58 |  SEPRES (2D)  
-(Extended)  |  Inter-object |  v14.0 |  2D adaptive contact bcc  
-59 |  WPAXIS  
-(Extended)  |  Object |  v14.0 |  WPAXIS (type 10) for object transformation (shape rolling)  
-60 |  CPYCNT  
-(New)  |  Action |  v14.0 |  Copy contact (inter-object) data  
-61 |  NDHOUT  
-(New)  |  Sim. Ctrl. |  v14.0 |  Nodal heat output option  
-62 |  NDHOUT  
-(Extend)  |  Sim. Ctrl. |  v14.0.2 |  Linear friction welding(type 14)  
+Nasledujú hlavné aktualizácie dokumentov vo verzii 14.0.
+
+**Kategória** | **Lokalita** | **Popis**
+---|---|---
+Pre-procesor | 9.5 Simulation controls | Nastavenie čiastočného doménového riešiteľa
+16.10 Vlastnosti objektu | Čiastočná doména
+Simulátor | 23.4 Simulátor DEFORM | Monitor procesov
+Prevádzkové šablóny | 29.1 Manuál pre ozubené kolesá | Metóda polohovania výliskov
+43.1 Rolovanie tvarov | vylepšenia verzie 14.0
+42.1 Rolovanie krúžkov | vylepšenia verzie 14.0
+Aplikácie | (Nové) 2D CFD laboratórium | 2D turbulentné prúdenie
+(Nové) 3D CFD laboratórium | 3D Gas quenching
+(New) Multipass spinning lab | Metóda rýchleho hodnotenia
+(Nové) CP-FEM Lab | Plastickosť kryštálov na predpovedanie textúry
   
-_**Comments& Questions**_  
-The user may feel free to contact SFTC (support@deform.com) for any feedback or concern about this product at any time.
+_**Zoznam nových a rozšírených kľúčových slov v DEFORM v14.0 a V14.0 SP2**_
+
+**Nie** | **Kľúčové slovo** | **Kategória** | **Ver.** | **Popis**
+---|---|---|---|---
+1 | OBJTYP (rozšírený) | Objekt | v14.0 | Indukčné vykurovanie - Vzduchové prostredie (typ 11)
+2 | PMEAB
+(Rozšírené) | Materiál | v14.0 | Pridané typy magnetickej permeability (=5,11,14,15)
+3 | BHCURB (New) | Material | v14.0 | BH krivka (intenzita magnetického toku v závislosti od hustoty toku)
+4 | HYSIS
+(Nový) | Materiál | v14.0 | Hysterézna krivka (hysterézna strata)
+5 | SOLMTD (Extended) | Sim. Ctrl. | v14.0 | Riešiteľ pre čiastočnú doménu (typ 10)
+6 | WPAXIS (Extended) | Objekt | v14.0 | Nastavenia čiastočného doménového riešiteľa (WPAXIS, typ 11)
+7 | MRMPRS (Nový,3D) | Objekt | v14.0 | Model lisu s viacerými ramenami (hydraulický)
+8 | TRANS (Extended) | Sim. Ctrl. | v14.0 | CFD: Simulation control (typ 7)
+9 | ENVMOD
+(Rozšírené) | Sim. Ctrl. | v14.0 | CFD: Teplota prostredia (typ 1, f(time))
+10 | OBJTYP
+(Rozšírené) | Objekt | v14.0 | CFD: Fluid (typ 10)
+11 | FRQNCY (Extended) | Sim. Ctrl. | v14.0 | CFD: Frekvencia výpočtu (typ 7)
+12 | DFLMAX (New) | Sim. Ctrl. | v14.0 | CFD: Krokové riadenie
+13 | WPAXIS
+(Rozšírené) | Objekt | v14.0 | CFD: Prúdenie riadené vztlakom (WPAXIS, typ 5, gravitácia)
+14 | BCCFLO
+(Nový) | Objekt | v14.0 | CFD: Typ turbulentného obmedzenia (typ 1, BCCFNC) (typ 2, FLVAR)
+15 | FLVAR
+(Nový) | Objekt | v14.0 | CFD: Turbulentná SV (Kinetická energia, Rýchlosť rozptylu) v uzloch
+16 | BCCFFN
+(Nové) | Objekt | v14.0 | CFD: Definícia funkcie obmedzenia turbulentného prúdenia
+17 | ECCDEF
+(Rozšírené) | Objekt | v14.0 | CFD: Tok bcc, definícia steny (typ 20)
+18 | ECPRES
+(Rozšírené) | Objekt | v14.0 | CFD: Flow bcc, pre rôzne typy stien
+19 | ECHCFN
+(Nové) | Objekt | v14.0 | CFD: Funkcia okrajovej podmienky pre výpočet súčiniteľa prestupu tepla
+20 | ECFLFN
+(Nové) | Objekt | v14.0 | CFD: Funkcia okrajovej podmienky pre výpočet tepelného toku
+21 | ECCHTC
+(Nový) | Objekt | v14.0 | CFD: Vypočítaný koeficient prestupu tepla. (na plochách)
+22 | ECCFLB
+(Nové) | Objekt | v14.0 | CFD: Vypočítaný tepelný tok (na plochách)
+23 | PMCONS
+(Rozšírené) | Materiál | v14.0 | EP Porézny: Rozšírenie porézneho modelu
+24 | PMYLD
+(Nový) | Materiál | v14.0 | EP Porézny : Výnos
+25 | PMCRP
+(Nový) | Materiál | v14.0 | EP Porézne: Plazivosť
+26 | FSTRES
+(Rozšírené) | Materiál | v14.0 | EP Porézne: Napätie pri prúdení = f(deformácia, hustota, teplota (typ 17)
+27 | YOUNG
+(Rozšírené) | Materiál | v14.0 | EP Pórovitý: Youngov modul = f(hustota a pod.)
+28 | ROZŠÍRIŤ
+(Rozšírené) | Materiál | v14.0 | EP Pórovitý : Tepelné rozšírenie = f(hustota a pod.)
+29 | POISON
+(Rozšírené) | Materiál | v14.0 | EP Pórovitý: Poissonov pomer = f(hustota a pod.)
+30 | HYPREL
+(Rozšírené) | Materiál | v14.0 | Hyperelasticita: (typ 3)
+31 | GENGEO (Nový) | Akcia | v14.0 | DEFORM-API
+32 | HDNRUL
+(Rozšírené) | Materiál | v14.0 | Model vytvrdzovania Yoshi-Uemori
+33 | YLDS
+(Rozšírené) | Materiál | v14.0 | 1. zadné napätie pre Yoshida-Uemori
+34 | YLDS2
+(Nový) | Materiál | v14.0 | Druhé zadné napätie pre Yoshida-Uemori
+35 | ANISO
+(Rozšírené) | Materiál | v14.0 | Barlat Yield 1991 (typ 7)
+36 | PRCMAP
+(Nové) | Materiál | v14.0 | Spracovanie mapy: mapové údaje vo vlastnostiach materiálu
+37 | PMPOBJ
+(Nový) | Objekt | v14.0 | Mapa spracovania: možnosti výpočtu
+38 | EFFMAP
+(Nové) | Objekt | v14.0 | Mapa spracovania: energetická účinnosť a nestabilita pri prvkoch
+39 | GRAIN
+(Rozšírené) | Materiál | v14.0 | Model zrna (CDRX)
+40 | GRNDAT
+(Rozšírené) | Materiál | v14.0 | Model zrna (CDRX) (typ 6)
+41 | SIZEMD
+(Rozšírené) | Objekt | v14.0 | Model zrna (CDRX)
+42 | SIZESH
+(Rozšírené) | Objekt | v14.0 | Model zrna (CDRX)
+43 | TTTD
+(Rozšírené) | Inter-materiál | v14.0 | Zrážkové tvrdnutie (typ 18)
+44 | HDNPHA
+(Rozšírené) | Materiál | v14.0 | Zrážkové tvrdnutie
+45 | HDNEST
+(Rozšírené) | Materiál | v14.0 | Tvrdosť: zrazenina (typ 4)
+46 | TXTURE
+(Rozšírené) | Materiál | v14.0 | CP FEM (informácie o textúre)
+47 | CPCTRL
+(Nové) | Sim. Ctrl. | v14.0 | CP FEM (riadiace údaje simulácie)
+48 | TXTCPV
+(Nový) | Objekt | v14.0 | CP FEM (interné stavové premenné)
+49 | TXTODF
+(Rozšírené) | Objekt | v14.0 | CP FEM (funkcia rozdelenia orientácie)
+50 | LMAX
+(Rozšírené) | Sim. Ctrl. | v14.0 | Kritérium zastavenia maximálneho zaťaženia s toleranciou
+51 | STPINC
+(Rozšírené) | Sim. Ctrl. | v14.0 | Sekundárne ovládanie ukladania krokov DB
+52 | RNGDIA
+(Nové) | Objekt | v14.0 | Valcovanie krúžku, definícia priemeru krúžku (OD alebo ID s polohou)
+53 | MOVCTL
+(Rozšírené) | Objekt | v14.0 | Krúžkové valenie, PID riadenie pohybu (typ 12)
+54 | ANGMO3
+(Nový) | Objekt | v14.0 | 3. rotačný pohyb (3D)
+55 | CNTRA3
+(Nový) | Objekt | v14.0 | 3. rotačný pohyb (3D)
+56 | FSTRES
+(Rozšírené) | Materiál | v14.0 | Pridané napätie pri prúdení (typ 16) pre model tvrdnutia Voce
+57 | IHTCOF
+(Nový) | Medziobjektový kontakt | v14.0 | Tepelný/bezprostredný kontakt, HTC = f(medzera)+f(tlak)
+58 | SEPRES (2D)
+(Rozšírené) | Inter-objekt | v14.0 | 2D adaptívny kontaktný bcc
+59 | WPAXIS
+(Rozšírené) | Objekt | v14.0 | WPAXIS (typ 10) pre transformáciu objektu (valcovanie tvaru)
+60 | CPYCNT
+(Nové) | Akcia | v14.0 | Kopírovanie údajov o kontaktoch (medzi objektmi)
+61 | NDHOUT
+(Nové) | Sim. Ctrl. | v14.0 | Možnosť uzlového tepelného výkonu
+62 | NDHOUT
+(Rozšíriť) | Sim. Ctrl. | v14.0.2 | Lineárne zváranie trením(typ 14)
+  
+_**Komentáre a otázky**_
+Používateľ sa môže kedykoľvek obrátiť na SFTC (support@deform.com) s akoukoľvek spätnou väzbou alebo obavami týkajúcimi sa tohto výrobku.

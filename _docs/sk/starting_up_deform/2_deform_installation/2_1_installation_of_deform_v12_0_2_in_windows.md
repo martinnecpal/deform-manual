@@ -1,336 +1,336 @@
 ---
 lang: sk
-title: "2.1. Installation of DEFORM V14.0.2. in Windows"
+title: "2.1. Inštalácia DEFORM V14.0.2. v systéme Windows"
 ---
 
-# 2.1. Installation of DEFORM V14.0.2 in Windows
+# 2.1. Inštalácia DEFORM V14.0.2 v systéme Windows
 
-2.1.1. INTRODUCTION
+2.1.1. ÚVOD
 
-2.1.2. INSTALLATION REQUIREMENTS
+2.1.2. POŽIADAVKY NA INŠTALÁCIU
 
-2.1.3. INSTALLING THE SECURITY KEY DEVICE
+2.1.3. INŠTALÁCIA ZARIADENIA S BEZPEČNOSTNÝM KĽÚČOM
 
-2.1.4. INSTALLING DEFORM v14.0.2 IN WINDOWS
+2.1.4. INŠTALÁCIA DEFORM v14.0.2 V SYSTÉME WINDOWS
 
-2.1.5. UPDATING THE DEFORM LICENSE PASSWORD FILE
+2.1.5. AKTUALIZÁCIA SÚBORU S LICENČNÝM HESLOM DEFORMÁCIE
 
-2.1.6. QUESTIONS / PROBLEMS
+2.1.6. OTÁZKY / PROBLÉMY
 
-2.1.7. COMMAND LINE INSTALLER OPTIONS
+2.1.7. MOŽNOSTI INŠTALAČNÉHO PRÍKAZOVÉHO RIADKU
 
-2.1.8. WINDOWS START MENU
+2.1.8. PONUKA ŠTART SYSTÉMU WINDOWS
 
-## INTRODUCTION
+## ÚVOD
 
-The following steps are to be executed in order to install DEFORM v14.0.2 (Subsequent service packs also follow a similar sequence, but install in a different folder and create new short cuts accordingly).   
-These steps include:
+Nasledujúce kroky je potrebné vykonať, aby ste nainštalovali DEFORM v14.0.2 (nasledujúce servisné balíky tiež postupujú podobne, ale inštalujú sa do iného priečinka a vytvárajú nové skratky).   
+Tieto kroky zahŕňajú:
 
-  * Meeting the minimum system requirements.
+  * Splnenie minimálnych systémových požiadaviek.
 
-  * Installing the DEFORM v14.0.2 program files.
+  * Inštalácia programových súborov DEFORM v14.0.2.
 
-  * License Manager (Installing the Security Key Driver v7.6.9).
+  * Správca licencií (inštalácia ovládača bezpečnostného kľúča v7.6.9).
 
-  * Support Codes ( MPICH2 v1.2 64-bit and MiKTeX v21.4)
+  * Podpora kódov ( MPICH2 v1.2 64-bit a MiKTeX v21.4)
 
-  * v14.0.2 files
+  * súbory v14.0.2
 
-  * Troubleshooting, should you run into problems.
+  * Riešenie problémov, ak sa vyskytnú.
 
-Installing DEFORM is started by running **DEFORM_System_Installer_v14.0.2.exe.**  
-Running this installer will give the user the option to choose which parts of DEFORM to install.See section 2.1.4. for more details.
+Inštalácia programu DEFORM sa spustí spustením **DEFORM_System_Installer_v14.0.2.exe.**
+Po spustení tohto inštalačného programu bude mať používateľ možnosť vybrať si, ktoré časti programu DEFORM sa majú nainštalovať.Viac informácií nájdete v časti 2.1.4.
 
-**DEFORM_License_Manager_Installer_v14.0.2.exe** installs the DEFORM License Manager and Batch Queue.  
-**DEFORM_Core_Installer_v14.0.2.exe** installs the DEFORM system.  
-**DEFORM_Service_Control_Installer_v14.0.2.exe** installs the DEFORM Service Control. This is new from v11.2 and allows for managing DEFORM services via the DEFORM Services tab of the DEFORM Setup application.
+**DEFORM_License_Manager_Installer_v14.0.2.exe** nainštaluje správcu licencií DEFORM a dávkovú frontu.  
+**DEFORM_Core_Installer_v14.0.2.exe** nainštaluje systém DEFORM.  
+**DEFORM_Service_Control_Installer_v14.0.2.exe** nainštaluje program DEFORM Service Control. Je to novinka od verzie 11.2 a umožňuje spravovať služby DEFORM prostredníctvom karty Služby DEFORM v aplikácii DEFORM Setup.
 
-Unless told otherwise by SFTC support, installation of any part of DEFORM should be handled by running **DEFORM_System_Installer_v14.0.2.exe**.
+Ak vám podpora SFTC neoznámi inak, inštalácia akejkoľvek časti DEFORM by sa mala vykonať spustením nástroja **DEFORM_System_Installer_v14.0.2.exe**.
 
-## INSTALLATION REQUIREMENTS
+## POŽIADAVKY NA INŠTALÁCIU
 
-  * Operating system: Windows 10, and 11 (64-Bit only) (Server Versions are not supported.)
+  * Operačný systém: (Serverové verzie nie sú podporované.)
 
-  * Suggested RAM: 16+GB
+  * Navrhovaná pamäť RAM: 16+ GB
 
-  * Hard drive space required for installation: ~12GB.
+  * Miesto na pevnom disku potrebné na inštaláciu: ~ 12 GB.
 
-## INSTALLING THE SECURITY KEY DEVICE
+## INŠTALÁCIA ZARIADENIA S BEZPEČNOSTNÝM KĽÚČOM
 
-The Security Key allows the DEFORM v14.0.2 system to be highly portable while still allowing only one system to be operable as a license server with a valid password at any time. The actual software can be installed on as many computers as you like, but each DEFORM system will only be operable with the Security Key attached or is configured as a client connected to a valid DEFORM license server. The Security Key is a USB key. Plug the Security USB hardware Key into the USB port. 
-
-  
-**CAUTION** :  
-The Security Key keeps track of the date on your PC. Make sure the date is correct before initially running DEFORM v14.0.2. Changing the date backwards or forwards may make the DEFORM v14.0.2 system inoperable.
+Bezpečnostný kľúč umožňuje, aby bol systém DEFORM v14.0.2 vysoko prenosný a zároveň aby bol ako licenčný server s platným heslom kedykoľvek použiteľný len jeden systém. Skutočný softvér môžete nainštalovať na ľubovoľný počet počítačov, ale každý systém DEFORM bude funkčný len s pripojeným bezpečnostným kľúčom alebo bude nakonfigurovaný ako klient pripojený k platnému licenčnému serveru DEFORM. Bezpečnostný kľúč je kľúč USB. Hardvérový bezpečnostný kľúč USB zapojte do portu USB.
 
   
-When uninstalling an earlier version of DEFORM v14.0.2. (alpha or beta versions) then the sentinel security hardware key must be unplugged during uninstallation and plugged back in after uninstallation. 
-
-## INSTALLING DEFORM v14.0.2 IN WINDOWS
-
-The DEFORM v14.0.2 installer is available for download from the DEFORM User Area website (<https://support.deform.com>). All supporting (required and optional) code is included in subfolders.
+**UPOZORNENIE** :  
+Bezpečnostný kľúč sleduje dátum v počítači. Pred prvým spustením programu DEFORM v14.0.2 sa uistite, že je dátum správny. Zmena dátumu dozadu alebo dopredu môže spôsobiť nefunkčnosť systému DEFORM v14.0.2.
 
   
-**Before Installation:**
+Pri odinštalovaní staršej verzie programu DEFORM v14.0.2. (alfa alebo beta verzie) musí byť hardvérový kľúč Sentinel Security počas odinštalovania odpojený a po odinštalovaní opäť pripojený.
 
-  1. ****Uninstall the previous version of the License Manager and the Sentinel key drivers (If user is uninstalling an earlier version of DEFORM v14.0.2 (alpha or beta) detach the hardware key while uninstalling the sentinel key driver and plug it back in after uninstallation.
+## INŠTALÁCIA DEFORM v14.0.2 V SYSTÉME WINDOWS
 
-  2. Before beginning to install DEFORM v14.0.2 in Windows, it is necessary for the user to be logged in as an Administrator.
+Inštalačný program DEFORM v14.0.2 je k dispozícii na stiahnutie z webovej stránky DEFORM User Area (<https://support.deform.com>). Všetok podporný (povinný a voliteľný) kód je zahrnutý v podpriečinkoch.
 
-  3. Antivirus programs should be temporarily disabled during installation. They can cause substantial delays and/or installation problems.
+  
+**Pred inštaláciou:**
 
-**Procedure:**
+  1. ****Odinštalujte predchádzajúcu verziu Správcu licencií a ovládačov kľúča Sentinel (Ak používateľ odinštaluje staršiu verziu DEFORM v14.0.2 (alfa alebo beta), odpojte hardvérový kľúč počas odinštalovania ovládača kľúča Sentinel a po odinštalovaní ho opäť pripojte.
+
+  2. Pred začatím inštalácie DEFORM v14.0.2 v systéme Windows je potrebné, aby bol používateľ prihlásený ako správca.
+
+  3. Antivírusové programy by mali byť počas inštalácie dočasne vypnuté. Môžu spôsobiť značné oneskorenie a/alebo problémy s inštaláciou.
+
+**Postup:**
 
 ****
 
-  1. Start up Windows (Log in as the Administrator or with Administrator privileges).
+  1. Spustite systém Windows (prihláste sa ako správca alebo s oprávneniami správcu).
 
-  2. Extract the contents of the downloaded zip file into a suitable location with a minimum of 3.5 GB of free space.
+  2. Obsah stiahnutého súboru zip rozbaľte na vhodné miesto s minimálne 3,5 GB voľného miesta.
 
-  3. Open an Explorer window, go to the extracted folder and double-click the **DEFORM_System_Installer_v14.0.2.exe** file.
+  3. Otvorte okno Prieskumníka, prejdite do rozbaleného priečinka a dvakrát kliknite na súbor **DEFORM_System_Installer_v14.0.2.exe**.
 
-  4. Select the setup language like English, Japanese, Italian, Deutsch, etc. and click **OK** as shown in Fig. 2.1.1.
+  4. Vyberte jazyk nastavenia, napríklad angličtinu, japončinu, taliančinu, nemčinu atď., a kliknite na **OK**, ako je znázornené na obr. 2.1.1.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0001.jpg' | relative_url }})
 
-DEFORM Setup language selection window
+DEFORM Okno výberu jazyka nastavenia
 
-  1. The Deform System installer v14.0.2 setup welcome window comes up as shown in Fig. 2.1.2. Click the **Next** button. 
+  1. Zobrazí sa uvítacie okno inštalátora Deform System v14.0.2, ako je znázornené na obr. 2.1.2. Kliknite na tlačidlo **Ďalej**.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0002.jpg' | relative_url }})
 
-Deform system installer welcome window 
+Uvítacie okno inštalátora deformovaného systému
 
-  1. Accept the DEFORM License (See Fig. 2.1.3.)
+  1. Prijmite licenciu DEFORM (pozri obr. 2.1.3.)
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0003.jpg' | relative_url }})
 
-DEFORM License Agreement window
+Okno licenčnej zmluvy DEFORM
 
-  1. If the default DEFORM Setup installation location needs to be changed then browse to the location and click the **Next** button. (See Fig. 2.1.4.)
+  1. Ak je potrebné zmeniť predvolené umiestnenie inštalácie programu DEFORM Setup, vyhľadajte ho a kliknite na tlačidlo **Ďalej**. (Pozri obr. 2.1.4.)
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0004.jpg' | relative_url }})
 
-DEFORM installation location selection window 
+Okno výberu miesta inštalácie DEFORM
 
-If any other DEFORM versions are present in the same path then a "Folder Exists" popup asks whether to install to the same folder or not, so click the **Yes** button. (See Fig. 2.1.5.) 
+Ak sa v rovnakej ceste nachádzajú aj iné verzie programu DEFORM, zobrazí sa vyskakovacie okno "Priečinok existuje" s otázkou, či sa má nainštalovať do rovnakého priečinka, alebo nie, preto kliknite na tlačidlo **Ano**. (Pozri obr. 2.1.5.)
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0005.jpg' | relative_url }})
 
-Folder Exists popup 
+Vyskakovacie okno Existujúci priečinok
 
-  1. Select the features of the DEFORM system installer you wish to install from the list in the Select Components window as shown in Fig. 2.1.6. At the top of the window a menu box can be used to choose between different types of installations, including Client only and Server only. This choice will update the components selected for installation. (See Fig. 2.1.7.) Click the **Next** button to continue.
+  1. Vyberte funkcie inštalačného programu systému DEFORM, ktoré chcete nainštalovať, zo zoznamu v okne Vybrať komponenty, ako je znázornené na obr. 2.1.6. V hornej časti okna je možné pomocou ponuky vybrať medzi rôznymi typmi inštalácií, vrátane Client only (Len klient) a Server only (Len server). Touto voľbou sa aktualizujú komponenty vybrané na inštaláciu. (Pozri obr. 2.1.7.) Kliknutím na tlačidlo **Ďalej** pokračujte.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0006.jpg' | relative_url }})
 
-DEFORM select components window
+DEFORM vyberte komponenty
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0007.jpg' | relative_url }})
 
-DEFORM select components window combo box
+DEFORM vyberte komponenty okna combo box
 
-For the initial setup all options should be selected to install the entire DEFORM v14.0.2 system and supporting code. Check the sections that match your license and the appropriate shortcuts will be created in the Windows start menu. The License Manager is a required component of the install pack and if a previous License Manager version is already installed then uninstall before installing the new license manager. If the license manager version is the same then there is no need to install. The Support Code option will launch the installers for MPICH, MiKTeX, and the Microsoft C++ redistributables, though these can be individually (de)selected.
+Pri počiatočnom nastavení by sa mali vybrať všetky možnosti, aby sa nainštaloval celý systém DEFORM v14.0.2 a podporný kód. Označte časti, ktoré zodpovedajú vašej licencii, a v ponuke Štart systému Windows sa vytvoria príslušní zástupcovia. Správca licencií je povinnou súčasťou inštalačného balíka a ak je už nainštalovaná predchádzajúca verzia správcu licencií, odinštalujte ju pred inštaláciou nového správcu licencií. Ak je verzia správcu licencií rovnaká, potom nie je potrebné inštalovať. Možnosť Support Code (Podporný kód) spustí inštalačné programy pre MPICH, MiKTeX a redistribuovateľné súbory Microsoft C++, ktoré však možno (de)vybrať jednotlivo.
 
-Starting with DEFORM v11.2, the DEFORM Service Control allows for the starting and stopping of DEFORM services on the server and also allows for updating the services programs on DEFORM client computers. Therefore, it is required to install it on all the computers where the DEFORM system is installed regardless of versions.
+Počnúc verziou DEFORM v11.2 umožňuje riadenie služieb DEFORM spúšťanie a zastavovanie služieb DEFORM na serveri a tiež aktualizáciu programov služieb na klientských počítačoch DEFORM. Preto je potrebné nainštalovať ho na všetky počítače, na ktorých je nainštalovaný systém DEFORM bez ohľadu na verzie.
 
-Starting with DEFORM v12.0, the MiKTeX installer is included as a part of the Support Code.MiKTeX is used with report generation.  
-Starting with DEFORM v13.0, the 32-bit MPICH installer has been removed.  
-Starting with DEFORM v13.0, the Microsoft C++ 2015 64-bit Redistributable is part of the Support Code.  
-Starting with DEFORM v13.1.1, the Microsoft C++ 2008 32-bit and 64-bit Redistributables have been update to v9.0.3.30729.6161.  
-Starting with DEFORM v13.1.1, Python 3.12.2 is an optional installation.  
-Python is used by the (currently beta) DEFORM API system. The DEFORM API allows users to access DEFORM functionality from Python scripts.  
-Python is also needed for the optional Web-based Service Control. Web-based Service Control allows for access to DEFORM services (as seen in the “DEFORM Services” tab of DEFORM Setup) from a web browser
+Počnúc verziou DEFORM v12.0 je inštalačný program MiKTeX súčasťou podporného kódu.MiKTeX sa používa pri generovaní zostáv.  
+Počnúc verziou DEFORM v13.0 bol odstránený 32-bitový inštalačný program MPICH.  
+Počnúc verziou DEFORM v13.0 je Redistributable Microsoft C++ 2015 64-bit súčasťou podporného kódu.  
+Počnúc verziou DEFORM v13.1.1 boli 32-bitové a 64-bitové redistribučné súbory Microsoft C++ 2008 aktualizované na verziu 9.0.3.30729.6161.  
+Počnúc verziou DEFORM v13.1.1 je Python 3.12.2 voliteľnou inštaláciou.  
+Python sa používa v (v súčasnosti beta verzii) systému DEFORM API. Rozhranie DEFORM API umožňuje používateľom prístup k funkciám DEFORM zo skriptov Python.  
+Python je potrebný aj pre voliteľné webové riadenie služieb. Webové ovládanie služieb umožňuje prístup k službám DEFORM (ako je vidieť na karte "Služby DEFORM" v nástroji DEFORM Setup) z webového prehliadača.
 
-Starting with DEFORM v14.0.1, the MiKTeX installer has been updated to 24.1. 
+Počnúc verziou DEFORM v14.0.1 bol inštalátor MiKTeXu aktualizovaný na verziu 24.1.
 
-Click the **Next** button after selecting the products that match your license.
+Po výbere produktov, ktoré zodpovedajú vašej licencii, kliknite na tlačidlo **Dalšie**.
 
-_**DEFORM v14.0.2 and License Manager v14.0.2 Installation Options**_
+_**DEFORM v14.0.2 a Správca licencií v14.0.2 Možnosti inštalácie**_
 
-  1. Select the “Configure Windows Firewall” checkbox to allow the DEFORM programs and the License and batch queue services access through the Windows firewall as shown in Fig. 2.1.8. and then click the **Next** button.
+  1. Začiarknite políčko "Konfigurovať bránu firewall systému Windows", aby ste povolili prístup programom DEFORM a službám License a batch queue cez bránu firewall systému Windows, ako je znázornené na obr. 2.1.8., a potom kliknite na tlačidlo **Next**.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0008.jpg' | relative_url }})
 
-DEFORM Windows Firewall configuration window
+DEFORM Okno konfigurácie brány Windows Firewall
 
-_**DEFORM License Manager v14.0.2 Installation Options**_
+_** Možnosti inštalácie aplikácie DEFORM License Manager v14.0.2**_
 
-  2. If the License Manager v14.0.2 component is selected, the DEFORM installer will present options relating to the License Manager. If the machine is a license server system (where the hardware key is plugged in), the DEFORM license password file supplied by SFTC must be selected. Browse to the password file to select it. Otherwise don't select a password file. Click the **Next** button to continue. (See Fig. 2.1.9.)
+  2. Ak je vybraná súčasť License Manager v14.0.2, inštalačný program DEFORM zobrazí možnosti týkajúce sa License Manager. Ak je počítač systémom licenčného servera (kde je zapojený hardvérový kľúč), musí sa vybrať súbor s licenčným heslom DEFORM, ktorý dodáva spoločnosť SFTC. Vyhľadajte súbor s heslom a vyberte ho. V opačnom prípade súbor s heslom nevyberajte. Kliknutím na tlačidlo **Ďalej** pokračujte v práci. (Pozri obr. 2.1.9.)
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0009.jpg' | relative_url }})
 
-DEFORM License Manager Password browsing window
+DEFORM Prehľadávanie okna Správca licencií Heslo
 
-  1. Select the “Install Batch Queue Server” checkbox, which is required for queuing simulations as shown in Fig. 2.1.10. and then click the **Next** button.
+  1. Začiarknite políčko "Install Batch Queue Server" (Inštalovať server dávkových front), ktoré je potrebné pre simulácie frontu, ako je znázornené na obr. 2.1.10., a potom kliknite na tlačidlo **Next** (Ďalej).
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0010.jpg' | relative_url }})
 
-DEFORM License Manager additional task selection window 
+Dodatočné okno výberu úlohy DEFORM License Manager
 
-_**DEFORM v14.0.2 Installation Options**_
+_**DEFORM v14.0.2 Možnosti inštalácie**_
 
-  1. If the DEFORM v14.0.2 component is selected, the DEFORM installer will present options relating to DEFORM. Starting with DEFORM v13.1, there is a new option to choose the FEM Engine. SFTC recommends using the Intel® Fortran option unless the Absoft Fortran compiler is being used or DEFORM is installed on a computer using a legacy (non-modern) CPU. Please be aware that the Intel Fortran option is compatible with both Intel Core and AMD Ryzen CPUs. Make your FEM engine selection as shown in Fig. 2.1.11. and click the **Next** button. Note that starting with DEFORM v14.0.2, the Absoft Legacy FEM engine is no longer available. 
+  1. Ak je vybraná zložka DEFORM v14.0.2, inštalačný program DEFORM zobrazí možnosti týkajúce sa DEFORM. Od verzie DEFORM v13.1 je k dispozícii nová možnosť výberu motora konečných prvkov. SFTC odporúča použiť možnosť Intel® Fortran, pokiaľ sa nepoužíva kompilátor Absoft Fortran alebo ak sa DEFORM neinštaluje na počítač so starším (nemoderným) procesorom. Upozorňujeme, že možnosť Intel Fortran je kompatibilná s procesormi Intel Core aj AMD Ryzen. Urobte výber motora FEM podľa obrázka 2.1.11. a kliknite na tlačidlo **Next** (Ďalej). Upozorňujeme, že od verzie DEFORM v14.0.2 už nie je k dispozícii motor Absoft Legacy FEM.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0011.jpg' | relative_url }})
 
-DEFORM Setup FEM Engine window 
+Okno DEFORM Setup FEM Engine
 
-  1. Confirm the DEFORM Setup settings and click the **Install** button to install the DEFORM files. Otherwise click the **Back** button to change any settings. (See Fig. 2.1.12.)
+  1. Potvrďte nastavenia DEFORM Setup a kliknutím na tlačidlo **Install** nainštalujte súbory DEFORM. V opačnom prípade kliknite na tlačidlo **Zadné**, ak chcete zmeniť akékoľvek nastavenia. (Pozri obr. 2.1.12.)
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0012.jpg' | relative_url }})
 
-DEFORM Setup settings confirmation window
+Okno potvrdenia nastavení DEFORM Setup
 
-  1. DEFORM setup will proceed to install all the components selected and take several minutes for installation as shown in Fig. 2.1.13.
+  1. Nastavenie DEFORM bude pokračovať v inštalácii všetkých vybraných komponentov a inštalácia bude trvať niekoľko minút, ako je znázornené na obr. 2.1.13.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0013.jpg' | relative_url }})
 
-DEFORM System installing status window 
+DEFORM Stavové okno inštalácie systému
 
-Note that the MiKTeX installer will be displayed, but no interaction is required as shown in Fig. 2.1.14.
+Všimnite si, že sa zobrazí inštalačný program MiKTeX, ale nie je potrebná žiadna interakcia, ako je znázornené na obr. 2.1.14.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0014.jpg' | relative_url }})
 
-MiKTeX installer status window 
+Stavové okno inštalačného programu MiKTeX
 
-  1. Under certain conditions, namely if the Sentinel Key Driver installer is selected, DEFORM will require the computer to be restarted prior to running DEFORM Setup. If the window shown in Fig. 2.1.15. is shown, DEFORM Setup will run at Windows login the next time Windows is rebooted. Click the **Next** button to continue setup as shown in Fig. 2.1.15.
+  1. Za určitých podmienok, konkrétne ak je vybraný inštalačný program Sentinel Key Driver, DEFORM bude vyžadovať reštartovanie počítača pred spustením programu DEFORM Setup. Ak je zobrazené okno na obr. 2.1.15., DEFORM Setup sa spustí pri prihlásení do systému Windows pri ďalšom reštarte systému Windows. Kliknutím na tlačidlo **Next** (Ďalej)** pokračujte v nastavovaní, ako je znázornené na obr. 2.1.15.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0015.jpg' | relative_url }})
 
-DEFORM requires reboot window
+DEFORM vyžaduje reštartovanie okna
 
-  1. Click the **Finish** button to end the installation as shown in Fig. 2.1.16.
+  1. Kliknutím na tlačidlo **Ukončiť** ukončite inštaláciu, ako je znázornené na obr. 2.1.16.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0016.jpg' | relative_url }})
 
-DEFORM System Installer setup completion window 
+Okno dokončenia inštalácie DEFORM System Installer
 
-  1. If the DEFORM installer recommends restarting the computer, select the “Yes, restart the computer now” radio button and click the **Finish** button to restart the computer as shown in Fig. 2.1.17.
+  1. Ak inštalačný program DEFORM odporúča reštartovanie počítača, vyberte prepínač "Áno, reštartujte počítač teraz" a kliknutím na tlačidlo **Ukončiť** reštartujte počítač, ako je znázornené na obr. 2.1.17.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0017.jpg' | relative_url }})
 
-DEFORM System Installer setup restart window 
+Okno opätovného spustenia inštalátora systému DEFORM
 
-Upon completion of the installation, DEC_SC.EXE, found at "<Installation path>\DEFORM\Configuration\DEF_SC.EXE", will launch.  
-This DEFORM service utility program (DEC_SC.EXE) will be run as a "service" on Windows PCs.  
-This service communicates with the License Server and, in the DEFORM Setup program, the user can monitor the status of the Simulation Server (SS), Simulation Client (SC), and Web-based Simulation Monitoring server (RS) on any DEFORM computer. As discussed in the next section, the DEFORM Services tab can be used to update them as needed.
+Po dokončení inštalácie sa spustí DEC_SC.EXE, ktorý sa nachádza na adrese "<Inštalačná cesta>\DEFORM\Konfigurácia\DEF_SC.EXE".  
+Tento obslužný program DEFORM (DEC_SC.EXE) sa spustí ako "služba" na počítačoch so systémom Windows.  
+Táto služba komunikuje s licenčným serverom a v programe DEFORM Setup môže používateľ sledovať stav simulačného servera (SS), simulačného klienta (SC) a webového servera na monitorovanie simulácie (RS) na ktoromkoľvek počítači DEFORM. Ako sa uvádza v nasledujúcej časti, na ich aktualizáciu podľa potreby možno použiť kartu Služby DEFORM.
 
-  1. The DEFORM Setup application will launch next. Here you can configure the license server location and save those changes.
+  1. Následne sa spustí aplikácia DEFORM Setup. Tu môžete nakonfigurovať umiestnenie licenčného servera a tieto zmeny uložiť.
 
-If the license server is running on a remote machine, select the "On Remote License Server" radio button and enter the remote server machine name or IP address. Click the **Synchronize** button. If the license server is running on the remote machine the user will get a license server running status as shown in Fig. 2.1.18. Otherwise an error popup indicating "Can not connect to license server" is shown.
+Ak licenčný server beží na vzdialenom počítači, vyberte prepínač "Na vzdialenom licenčnom serveri" a zadajte názov počítača vzdialeného servera alebo IP adresu. Kliknite na tlačidlo **Synchronizovať**. Ak je licenčný server spustený na vzdialenom stroji, používateľovi sa zobrazí stav spusteného licenčného servera, ako je znázornené na obr. 2.1.18. V opačnom prípade sa zobrazí vyskakovacie okno s chybovým hlásením "Can not connect to license server" (Nemožno sa pripojiť k licenčnému serveru).
 
-If the license server is running on this local machine then select the "On Local Computer" radio button and click the **Synchronize** button.
+Ak je licenčný server spustený na tomto lokálnom počítači, vyberte prepínač "Na lokálnom počítači" a kliknite na tlačidlo **Synchronizovať**.
 
-Once synchronization is successful, whether the license server is running on the local computer or a remote computer, click the **Save** button to save the settings. (See Fig. 2.1.18.) 
+Po úspešnej synchronizácii, bez ohľadu na to, či je licenčný server spustený na miestnom alebo vzdialenom počítači, kliknite na tlačidlo **Uložiť**, aby ste uložili nastavenia. (Pozri obr. 2.1.18.)
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0018.jpg' | relative_url }})
 
-DEFORM Setup License Server window 
+Okno DEFORM Setup License Server
 
   
-After the synchronize button is clicked, if the current computer hasn’t been set up as a Simulation Server for the current version and path, DEFORM Setup will offer to add it as one (Fig. 2.1.19.)
+Po kliknutí na tlačidlo synchronizácie, ak aktuálny počítač nebol nastavený ako simulačný server pre aktuálnu verziu a cestu, program DEFORM Setup ponúkne jeho pridanie (obr. 2.1.19.)
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0019.jpg' | relative_url }})
 
-DEFORM Setup Simulation Server window
+Okno DEFORM Setup Simulation Server
 
-If the Yes button is clicked to add the Simulation Server, DEFORM Setup will not automatically save the change to the License Server, but will prompt to save the changes. (See Fig. 2.1.20.) Verify the change is correct in the Simulation Server tab before saving the settings.
+Ak kliknutím na tlačidlo Áno pridáte simulačný server, program DEFORM Setup automaticky neuloží zmenu licenčného servera, ale vyzve na uloženie zmien. (Pozri obr. 2.1.20.) Pred uložením nastavení skontrolujte, či je zmena správna na karte Simulation Server (Simulačný server).
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0020.jpg' | relative_url }})
 
-DEFORM Setup reminder to save
+DEFORM Pripomienka nastavenia na uloženie
 
-The Simulation Server tab allows for managing computers connected to the License Server. As shown in Fig. 2.1.21., the top area of the tab shows the defined Simulation Servers. If the local computer isn’t defined as a Simulation Server, click the "Add Simulation Server" button to define it.  
-When adding a Simulation Server, by default the local computer will be defined, and some values will be set automatically. These defaults include the processor type, the number of processors, the maximum number of jobs, and the latest version will be set to the current path.  
-When the License Manager is on the same computer that DEFORM Setup is being run on, as many Simulation Servers as required can be defined. However if the License Manager is on a different computer, only the local Simulation Server can be defined and edited.
+Karta Simulačný server umožňuje spravovať počítače pripojené k licenčnému serveru. Ako je znázornené na obr. 2.1.21., v hornej časti karty sú zobrazené definované Simulačné servery. Ak miestny počítač nie je definovaný ako Simulation Server (Simulačný server), kliknite na tlačidlo "Add Simulation Server" (Pridať simulačný server), aby ste ho definovali.  
+Pri pridávaní simulačného servera sa predvolene definuje miestny počítač a niektoré hodnoty sa nastavia automaticky. Tieto predvolené hodnoty zahŕňajú typ procesora, počet procesorov, maximálny počet úloh a najnovšia verzia bude nastavená na aktuálnu cestu.  
+Ak je Správca licencií na tom istom počítači, na ktorom sa spúšťa program DEFORM Setup, je možné definovať toľko simulačných serverov, koľko je potrebné. Ak sa však Správca licencií nachádza na inom počítači, je možné definovať a upravovať iba miestny simulačný server.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0021.jpg' | relative_url }})
 
-DEFORM Setup Simulation Server window
+Okno DEFORM Setup Simulation Server
 
-The **Versions** column shows a list of all versions defined for a given Simulation Server.  
-The **Maximum** Jobs option allows setting the number of jobs in the queue that can be run simultaneously on the respective simulation server.  
-The lower area shows details about the currently selected Simulation Server. (See  Fig. 2.1.22.)  
-In the **Versions** tab, the disk location for multiple versions can be defined. Only one path per version is allowed.  
-If the Processor Type is defined as a **Cluster** , the Clusters tab will be enabled and details about the cluster nodes can be defined.  
-After making changes to the Simulation Server tab, click the Save button to save the settings.  
-_**Note** : ___Install_ path information for each version is required to be defined for the Batch queue to work properly._
+V stĺpci **Verzie** sa zobrazuje zoznam všetkých verzií definovaných pre daný simulačný server.  
+Možnosť **Maximum** Jobs umožňuje nastaviť počet úloh vo fronte, ktoré môžu byť spustené súčasne na príslušnom simulačnom serveri.  
+V dolnej časti sa zobrazujú podrobnosti o aktuálne vybranom simulačnom serveri. (Pozri obr. 2.1.22.)
+Na karte **Verzie** môžete definovať umiestnenie na disku pre viacero verzií. Pre každú verziu je povolená len jedna cesta.  
+Ak je typ procesora definovaný ako **Cluster** , karta Clusters (Klastre) bude povolená a bude možné definovať podrobnosti o uzloch klastra.  
+Po vykonaní zmien na karte Simulačný server kliknite na tlačidlo Uložiť, čím uložíte nastavenia.  
+_**Poznámka** : ___Informácie o inštalačnej ceste pre každú verziu je potrebné definovať, aby dávkový front fungoval správne._
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0022.jpg' | relative_url }})
 
-DEFORM Setup Simulation Server window
+Okno DEFORM Setup Simulation Server
 
-Running jobs on remote computers can be performed by using the Shared Folders tab. (See Fig. 2.1.23.)  
-For more detailed information refer to Chapter [23.6. Running Shared folder Simulations.](/docs/sk/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/)
+Spúšťanie úloh na vzdialených počítačoch možno vykonávať pomocou karty Zdieľané priečinky. (Pozri obr. 2.1.23.)
+Podrobnejšie informácie nájdete v kapitole [23.6. Running Shared folder Simulations.](/docs/sk/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/)
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0023.jpg' | relative_url }})
 
-DEFORM Setup Shared Folders window
+DEFORM Nastavenie zdieľaných priečinkov
 
-The DEFORM Services tab allows for managing of DEFORM services as shown in Fig. 2.1.24. You have   
-two options:
+Karta Služby DEFORM umožňuje spravovať služby DEFORM, ako je znázornené na obr. 2.1.24. K dispozícii máte
+dve možnosti:
 
-  1. Open DEFORM Services for local DEFORM computer.
+  1. Otvorte služby DEFORM pre miestny počítač DEFORM.
 
-  2. Open DEFORM Services for all DEFORM computers.
+  2. Otvorte služby DEFORM pre všetky počítače DEFORM.
 
-The first option is available for all DEFORM users, while the second option is only available to “authorized users”, or users who knows the “pass code” created by the authorized users.  
-The “authorized users” and “pass code” are introduced to avoid misuse of the new capabilities provided by the DEFORM services tab. For more information, please follow the instructions provided in the DEFORM Setup user interface.
+Prvá možnosť je dostupná pre všetkých používateľov DEFORM, zatiaľ čo druhá možnosť je dostupná len pre "oprávnených používateľov" alebo používateľov, ktorí poznajú "prístupový kód" vytvorený oprávnenými používateľmi.  
+"Oprávnení používatelia" a "prístupový kód" sa zaviedli s cieľom zabrániť zneužitiu nových možností, ktoré poskytuje karta služieb DEFORM. Ďalšie informácie získate podľa pokynov uvedených v používateľskom rozhraní DEFORM Setup.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0024.jpg' | relative_url }})
 
-DEFORM Setup DEFORM Services window
+Okno DEFORM Setup DEFORM Services
 
-The DEFORM Services tab allows for starting and stopping DEFORM services on the license server computer and DEFORM computers as well as updating the service applications on DEFORM computers. If any of the services are stopped, click the corresponding start button to start the service as shown in Fig. 2.1.25.
+Karta Služby DEFORM umožňuje spúšťať a zastavovať služby DEFORM na počítači licenčného servera a počítačoch DEFORM, ako aj aktualizovať aplikácie služieb na počítačoch DEFORM. Ak je niektorá zo služieb zastavená, kliknutím na príslušné tlačidlo spustenia spustite službu, ako je znázornené na obr. 2.1.25.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0025.jpg' | relative_url }})
 
-DEFORM Setup DEFORM Services window
+Okno DEFORM Setup DEFORM Services
 
-When all the DEFORM services are marked as “running”, click the Close button as shown in Fig. 2.1.26.   
-The Simulation Client and Simulation Server services should be running on DEFORM computers.   
-The Web-based Simulation Monitoring and GeoCAD Server are optional.
+Keď sú všetky služby DEFORM označené ako "spustené", kliknite na tlačidlo Zatvoriť, ako je znázornené na obr. 2.1.26.   
+Služby Simulation Client a Simulation Server by mali byť spustené na počítačoch DEFORM.   
+Webové monitorovanie simulácie a server GeoCAD sú voliteľné.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0026.jpg' | relative_url }})
 
-DEFORM Setup DEFORM Services window
+Okno DEFORM Setup DEFORM Services
 
-## UPDATING THE DEFORM LICENSE PASSWORD FILE
+## AKTUALIZÁCIA SÚBORU S LICENČNÝM HESLOM DEFORMÁCIE
 
-To update the DEFORM license file using DEFORM Setup, switch to the DEFORM Services tab. Click on the “update license password file” button next to the server name as shown in Fig. 2.1.27.
+Ak chcete aktualizovať licenčný súbor DEFORM pomocou programu DEFORM Setup, prepnite na kartu Služby DEFORM. Kliknite na tlačidlo "aktualizovať súbor s licenčným heslom" vedľa názvu servera, ako je znázornené na obr. 2.1.27.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0027.jpg' | relative_url }})
 
-DEFORM Setup update license password file button
+Tlačidlo DEFORM Nastavenie aktualizácie súboru s licenčným heslom
 
-On the Update DEFORM license password file page, click the folder icon and browse to the password file. Then click the “**Update password file”** button as shown in Fig. 2.1.28.
+Na stránke Aktualizovať súbor hesla licencie DEFORM kliknite na ikonu priečinka a prejdite na súbor hesla. Potom kliknite na tlačidlo "**Aktualizovať súbor hesla "**, ako je znázornené na obrázku 2.1.28.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0028.jpg' | relative_url }})
 
-DEFORM Setup select password file
+DEFORM Nastavenie vyberte súbor s heslom
 
-Click to stop the License Server and click yes in the warning prompt, as shown in Fig. 2.1.29.
+Kliknutím zastavte licenčný server a kliknite na áno vo výstražnom hlásení, ako je znázornené na obr. 2.1.29.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0029.jpg' | relative_url }})
 
-DEFORM Setup stop the License Server
+DEFORM Setup zastaví licenčný server
 
-Next, start any stopped Server service as shown in Fig. 2.1.30.
+Potom spustite všetky zastavené služby servera, ako je znázornené na obrázku 2.1.30.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0030.jpg' | relative_url }})
 
-DEFORM Setup start Server services
+DEFORM Nastavenie spustenia služieb servera
 
   
-Next, start any stopped Client service as shown in Fig. 2.1.31.
+Potom spustite všetky zastavené služby klienta, ako je znázornené na obrázku 2.1.31.
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0031.jpg' | relative_url }})
 
-DEFORM Setup start Client services
+DEFORM Spustenie nastavenia Služby klienta
 
-## QUESTIONS / PROBLEMS
+## OTÁZKY / PROBLÉMY
 
-If you have any questions, comments, or problems installing DEFORM v14.0.2, contact:
+Ak máte akékoľvek otázky, pripomienky alebo problémy s inštaláciou DEFORM v14.0.2, kontaktujte:
 
 **Scientific Forming Technologies Corporation**
 
@@ -338,221 +338,221 @@ If you have any questions, comments, or problems installing DEFORM v14.0.2, cont
 
 **Columbus, OH 43235 USA**
 
-**Phone: (614) 451-8330**
+**Telefón: (614) 451-8330**
 
 **E-mail: support@deform.com**
 
-**Or**
+**alebo**
 
-**Visit our website at**
+**Navštívte našu webovú stránku na adrese**
 
 **[http://www.deform.com](http://www.deform.com)**
 
-## COMMAND LINE INSTALLER OPTIONS
+## MOŽNOSTI PRÍKAZOVÉHO RIADKU INŠTALÁTORA
 
-Starting in v12.1, the DEFORM System installer allows for command line parameters to be passed to it. This is useful for system administrators in order to do automated installations. For automated installations, all options are optional except /CPUType; either modern or legacy must be specified.
+Od verzie 12.1 umožňuje inštalačný program systému DEFORM odovzdávať parametre príkazového riadka. To je užitočné pre správcov systému na vykonávanie automatizovaných inštalácií. Pri automatizovaných inštaláciách sú všetky možnosti voliteľné okrem /CPUType; musí byť zadaný buď moderný, alebo starší typ.
 
-**/LANG** =language
+**/LANG** =jazyk
 
-This option specifies the language the installer will use. When a valid /LANG parameter is used, the Select Language dialog will be suppressed. This affects the **Select Setup Language** dialog, as shown in Fig. 2.1.1.
+Táto možnosť určuje jazyk, ktorý bude inštalačný program používať. Ak sa použije platný parameter /LANG, dialógové okno Výber jazyka sa potlačí. To ovplyvňuje dialógové okno **Vyberte jazyk inštalácie**, ako je znázornené na obr. 2.1.1.
 
-Valid options:  
-english, french, german, japanese, russian, spanish, italian, korean, chinesesimplified, chinesetraditional
-
-  
-**/DIR** ="path to install DEFORM to"
-
-This option specifies the location to install DEFORM. This affects path in the Select Destination Location window, as shown in Fig. 2.1.4.
-
-Default option: The default installation location is C:\Program Files\SFTC.
+Platné možnosti:  
+angličtina, francúzština, nemčina, japončina, ruština, španielčina, taliančina, kórejčina, čínština zjednodušená, čínština tradičná
 
   
-/ **COMPONENTS** ="comma separated list of component names"
+**/DIR** ="cesta, do ktorej sa má DEFORM nainštalovať"
 
-This option specifies which components of DEFORM will be installed. Using this command line parameter causes Setup to automatically select a custom type, meaning all components will be unselected except the one’s passed to this parameter. This affects selected components in the **Select Components** window, as shown in Fig. 2.1.6.
+Táto možnosť určuje miesto, kam sa má nainštalovať DEFORM. Ovplyvňuje cestu v okne Select Destination Location (Vybrať cieľové umiestnenie), ako je znázornené na obr. 2.1.4.
 
-Valid options:
+Predvolená možnosť: Predvolené umiestnenie inštalácie je C:\Program Files\SFTC.
+
+  
+/ **COMPONENTS** ="zoznam názvov komponentov oddelených čiarkou"
+
+Táto možnosť určuje, ktoré súčasti programu DEFORM budú nainštalované. Použitie tohto parametra príkazového riadka spôsobí, že program Setup automaticky vyberie vlastný typ, čo znamená, že všetky komponenty okrem tých, ktoré sú odovzdané tomuto parametru, nebudú vybrané. To ovplyvňuje vybrané komponenty v okne **Výber komponentov**, ako je znázornené na obr. 2.1.6.
+
+Platné možnosti:
 
   * LicenseManager
 
-  * Installs the DEFORM License Manager but not the Sentinel Key Driver.
+  * Nainštaluje správcu licencií DEFORM, ale nie ovládač kľúča Sentinel.
 
   * *LicenseManager
 
-  * Installs the DEFORM License Manager and the Sentinel Key Driver. Note the asterisk before LicenseManager.
+  * Inštaluje správcu licencií DEFORM a ovládač kľúča Sentinel. Všimnite si hviezdičku pred LicenseManager.
 
   * LicenseManager\Sentinel
 
-  * Installs the Sentinel Key Driver and the DEFORM License Manager.
+  * Inštaluje ovládač kľúča Sentinel a správcu licencií DEFORM.
 
   * *SupportCode
 
-  * Installs all the support code. Note the asterisk before SupportCode.
+  * Nainštaluje všetky podporné kódy. Všimnite si hviezdičku pred SupportCode.
 
   * SupportCode\MPICH64
 
-  * Installs the 64-bit MPICH.
+  * Nainštaluje 64-bitový MPICH.
 
   * SupportCode\MiKTeX
 
-  * Installs MiKTeX.
+  * Nainštaluje MiKTeX.
 
   * SupportCode\vc32
 
-  * Installs the 32-bit Microsoft C++ 2008 redistributable.
+  * Nainštaluje 32-bitový redistributable Microsoft C++ 2008.
 
   * SupportCode\vc64
 
-  * Installs the 64-bit Microsoft C++ 2008 redistributable.
+  * Nainštaluje 64-bitový redistributable Microsoft C++ 2008.
 
   * SupportCode\vc2015x64
 
-  * Installs the 64-bit Microsoft C++ 2015 redistributable
+  * Inštaluje 64-bitový redistributable Microsoft C++ 2015
 
-  * OptionalCodeP\Python
+  * VoliteľnýKódP\Python
 
-  * Installs Python. (Only required for DEFORM API and Web-based Service Control)
+  * Inštaluje Python. (Vyžaduje sa len pre DEFORM API a webové riadenie služieb)
 
   * DEFORMComponent
 
-  * Installs the DEFORM system.
+  * Inštaluje systém DEFORM.
 
   * ServiceControl
 
-  * Installs the DEFORM Service Control.
+  * Nainštaluje ovládací prvok služby DEFORM.
 
-Default option: The default option is to install all components except any optional components.
+Predvolená možnosť: Predvolená možnosť je nainštalovať všetky komponenty okrem voliteľných komponentov.
 
-/**PasswordFile** ="path to DEFORM.PWD file"
+/**PasswordFile** ="cesta k súboru DEFORM.PWD"
 
-This option specifies the location of the DEFORM password file. If the License Manager isn’t being installed, this is ignored. This affects the path in the **DEFORM Password** window, as shown in Fig. 2.1.9.
+Táto možnosť určuje umiestnenie súboru s heslom DEFORM. Ak sa správca licencií neinštaluje, táto možnosť sa ignoruje. Ovplyvňuje to cestu v okne **DEFORM Password** (Heslo DEFORM**), ako je znázornené na obr. 2.1.9.
 
-Default option: no password file specified.
+Predvolená možnosť: nie je zadaný žiadny súbor s heslom.
 
-/**BatchQueue** =batch queue option
+/**BatchQueue** =možnosť dávkovej fronty
 
-This option specifies whether the Batch Queue Server should be installed or not. This affects the Install **Batch Queue Server** option in the **DEFORM License Manager** window, as shown in Fig. 2.1.10.
+Táto možnosť určuje, či sa má nainštalovať server dávkových front alebo nie. Ovplyvňuje to možnosť Inštalovať **Batch Queue Server** v okne **DEFORM License Manager**, ako je znázornené na obr. 2.1.10.
 
-Valid options:
+Platné možnosti:
 
-yes, no
+áno, nie
 
-Default option: yes
+Predvolená možnosť: áno
 
   
-/ **Firewall** =firewall option
+/ **Firewall** = možnosť firewall
 
-This option specifies whether to allow DEFORM programs access through the Windows firewall.
+Táto možnosť určuje, či sa má programom DEFORM povoliť prístup cez bránu firewall systému Windows.
 
-This affects the **Configure Windows Firewall** option in the Windows Firewall window, as shown in  Fig. 2.1.8.
+To ovplyvňuje možnosť **Konfigurovať bránu firewall systému Windows** v okne Brána firewall systému Windows, ako je znázornené na obr. 2.1.8.
 
-Valid options:
+Platné možnosti:
 
-yes, no
+áno, nie
 
-Default option: yes
+Predvolená možnosť: áno
 
 /**FEMType** =FEM Fortran type option
 
-New option starting with DEFORM v13.1. This replaces the CPUType option
+Nová možnosť od verzie DEFORM v13.1. Nahrádza možnosť CPUType
 
-This option specifies whether the Intel Fortran or Absoft Fortran FEM engine should be installed. This affects the **Intel Fortran (Default)** and **Absoft Fortran** options in the **FEM Engine** window, as shown in Fig. 2.1.11.  
-Valid options:  
+Táto možnosť určuje, či sa má nainštalovať motor Intel Fortran alebo Absoft Fortran FEM. To ovplyvňuje možnosti **Intel Fortran (Default)** a **Absoft Fortran** v okne **FEM Engine**, ako je znázornené na obr. 2.1.11.
+Platné možnosti:  
 intel, absoft
 
-Default option: intel
+Predvolená možnosť: intel
 
   
-/ **SILENT**
+/ **TICHÝ**
 
-Instructs the installer to run in silent mode. When Setup is silent the wizard window is not displayed but the installation progress window is.
+Prikazuje inštalačnému programu, aby sa spustil v tichom režime. Keď je inštalácia v tichom režime, okno sprievodcu sa nezobrazí, ale zobrazí sa okno priebehu inštalácie.
 
-There are no options for this parameter.
+Pre tento parameter neexistujú žiadne možnosti.
 
-**/DEFORMSetup** =DEFORM Setup option
+**/DEFORMSetup** =Možnosť nastavenia DEFORM
 
-New option starting with DEFORM v13.0.1.
+Nová možnosť od verzie DEFORM v13.0.1.
 
-This option instructs the installer to launch DEFORM Setup to configure the license server.
+Táto možnosť prikazuje inštalačnému programu spustiť program DEFORM Setup na konfiguráciu licenčného servera.
 
-Valid options:
+Platné možnosti:
 
-yes, no
+áno, nie
 
-Default option: yes
+Predvolená možnosť: áno
 
   
-**/ConfigurationFile** ="path to DEFORM_NLM_CONF file"
+**/ConfigurationFile** ="cesta k súboru DEFORM_NLM_CONF"
 
-New option starting with DEFORM v13.0.1.
+Nová možnosť od verzie DEFORM v13.0.1.
 
-This option specifies the location of the License Server configuration file to use. This file is created by DEFORM Setup and is located in the Configuration folder, so run DEFORM Setup on at least one computer first and use it for additional installations.
+Táto možnosť určuje umiestnenie konfiguračného súboru licenčného servera, ktorý sa má použiť. Tento súbor je vytvorený programom DEFORM Setup a nachádza sa v priečinku Configuration (Konfigurácia), preto najskôr spustite program DEFORM Setup aspoň na jednom počítači a použite ho pri ďalších inštaláciách.
 
-This is useful for using the same configuration file on multiple computers and works well when setting the DEFORMSetup option to no.  
-If an existing DEFORM_NLM_CONF file exists in the Configuration folder, it will be overwritten.
+Je to užitočné pri používaní rovnakého konfiguračného súboru na viacerých počítačoch a funguje to aj pri nastavení možnosti DEFORMSetup na nie.  
+Ak v priečinku Configuration existuje existujúci súbor DEFORM_NLM_CONF, prepíše sa.
 
-If installing the License Manager (either stand alone or as part of a node locked license) either DEFORM_NLM_CONF or DEFORM_NLM_CONF_SERVER can be used as the source file. In this case the file will also be copied to both the Configuration folder (as DEFORM_NLM_CONF) and the License Manager folder (as DEFORM_NLM_CONF_LMSERVER).
+Ak inštalujete Správcu licencií (samostatne alebo ako súčasť licencie uzamknutej uzlom), ako zdrojový súbor môžete použiť DEFORM_NLM_CONF alebo DEFORM_NLM_CONF_SERVER. V tomto prípade sa súbor skopíruje aj do priečinka Configuration (ako DEFORM_NLM_CONF) aj do priečinka License Manager (ako DEFORM_NLM_CONF_LMSERVER).
 
-This overrides the LicenseServerName option.
+Táto možnosť je nadradená možnosti LicenseServerName.
 
-Default option: no License Server configuration file specified.
+Predvolená možnosť: nie je zadaný žiadny konfiguračný súbor licenčného servera.
 
-**/****LicenseServerName** =”License Server name”
+**/****LicenseServerName** ="Názov licenčného servera"
 
-New option starting with DEFORM v13.0.1.
+Nová možnosť od verzie DEFORM v13.0.1.
 
-This option specifies the server name as shown in Fig. 2.1.18.
+Táto možnosť určuje názov servera, ako je znázornené na obr. 2.1.18.
 
-This is useful for using the same configuration file on multiple computers and works well when setting the DEFORMSetup option to no.
+Je to užitočné pri používaní rovnakého konfiguračného súboru na viacerých počítačoch a funguje to aj pri nastavení možnosti DEFORMSetup na nie.
 
-If an existing DEFORM_NLM_CONF file exists in the Configuration folder it will be overwritten.
+Ak v priečinku Configuration existuje existujúci súbor DEFORM_NLM_CONF, prepíše sa.
 
-This is ignored if the ConfigurationFile option is set.
+Toto sa ignoruje, ak je nastavená možnosť ConfigurationFile.
 
-Default option: no Server name specified
+Predvolená možnosť: nie je zadaný názov servera
 
-**Examples**
+**Príklady**
 
-Install Node Locked  
+Inštalácia uzla uzamknutá
 DEFORM_System_Installer_v14.0.2.exe /LANG=english /SILENT
 
-Install Client Installation  
-DEFORM_System_Installer_v14.0.2.exe /LANG=english /COMPONENTS="*SupportCode,DEFORMComponent,ServiceControl" /SILENT
+Inštalácia Inštalácia klienta
+DEFORM_System_Installer_v14.0.2.exe /LANG=angličtina /COMPONENTS="*SupportCode,DEFORMComponent,ServiceControl" /SILENT
 
-Install Server Installation with Password file
+Inštalácia servera Inštalácia so súborom hesla
 
-DEFORM_System_Installer_v14.0.2.exe /LANG=english /COMPONENTS="*LicenseManager, SupportCode\vc32,ServiceControl" /PasswordFile="C:\DEFORM.PWD" /SILENT
+DEFORM_System_Installer_v14.0.2.exe /LANG=angličtina /COMPONENTS="*LicenseManager, SupportCode\vc32,ServiceControl" /PasswordFile="C:\DEFORM.PWD" /SILENT
 
 ****
 
-**Deprecated Options**
+**Odstránené možnosti**
 
-**legacy in /FEMType**  
-This option has been deprecated starting with DEFORM v14.0.2. The legacy Absoft FEM engine has been retired.
+**zápis v /FEMType**
+Táto možnosť bola zrušená od verzie DEFORM v14.0.2. Starší motor Absoft FEM bol vyradený.
 
-**ReleaseNotes in /COMPONENTS**  
-This option has been deprecated starting with DEFORM v14.0.
+**Poznámky k vydaniu v /COMPONENTS**
+Táto možnosť bola zrušená od verzie DEFORM v14.0.
 
-**/NodeLocked**  
-This option has been deprecated starting with DEFORM v14.0.
+**/NodeLocked**
+Táto možnosť bola zrušená od verzie DEFORM v14.0.
 
-**/CAD**  
-This option has been deprecated starting with DEFORM v14.0. The GeoCAD Server option has been moved to DEFORM Setup.
+**/CAD**
+Táto možnosť bola zrušená od verzie DEFORM v14.0. Možnosť GeoCAD Server bola presunutá do nastavenia DEFORM.
 
-**/CPUType**  
-This option has been deprecated starting with DEFORM v13.1. The FEMType option supersedes this.
+**/CPUType**
+Táto možnosť bola zrušená od verzie DEFORM v13.1. Nahradila ju možnosť FEMType.
 
-## WINDOWS START MENU
+## PONUKA ŠTART SYSTÉMU WINDOWS
 
-Starting with DEFORM v14.0.2, DEFORM Setup allows for selecting which DEFORM shortcuts appear in the Windows Start menu as shown in Fig. 2.1.32. The installer will include a selection of applications in the Start menu. To change these, applications can be selected in the New **start****menu** column. Clicking the **Update start menu** button will update the Start menu with the selected applications. The **Select all** and **Deselect****all** buttons are used to select and deselect all the optional applications, respectively. The **Refresh** button updates the Current start menu column, which shows the applications that are currently in the Start menu.
+Počnúc verziou DEFORM v14.0.2 umožňuje DEFORM Setup vybrať, ktoré skratky DEFORM sa zobrazia v ponuke Štart systému Windows, ako je znázornené na obr. 2.1.32. Inštalačný program zahrnie výber aplikácií do ponuky Štart. Ak ich chcete zmeniť, aplikácie môžete vybrať v stĺpci Nová **ponuka Štart****menu**. Kliknutím na tlačidlo **Aktualizovať ponuku Štart** sa ponuka Štart aktualizuje o vybrané aplikácie. Tlačidlá **Vybrať všetko** a **Zrušiť výber****all** slúžia na výber, resp. zrušenie výberu všetkých voliteľných aplikácií. Tlačidlo **Obnoviť** aktualizuje stĺpec Aktuálna ponuka Štart, v ktorom sa zobrazujú aplikácie, ktoré sú aktuálne v ponuke Štart.
 
-_Note that the Start menu tab won’t be displayed if DEFORM Setup is launched from the**DEFORM Setup for License Manager** Start menu item._
+_Poznamenajte, že karta ponuky Štart sa nezobrazí, ak je program DEFORM Setup spustený z položky ponuky Štart**DEFORM Setup for License Manager**._
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0032.jpg' | relative_url }})
 
-DEFORM Setup Start menu tab
+DEFORM Setup Karta ponuky Štart
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [3\. License Manager](/docs/sk/starting_up_deform/3_license_manager/3_introduction_to_license_manager/)
 

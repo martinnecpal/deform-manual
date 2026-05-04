@@ -1,67 +1,67 @@
 ---
 lang: sk
-title: "1.6. The DEFORM System"
+title: "1.6. Systém DEFORM"
 ---
 
-# 1.6. The DEFORM System
+# 1.6. Systém DEFORM
 
-1.6.1. Pre-processing
+1.6.1. Predbežné spracovanie
 
-1.6.2. Running the Simulation
+1.6.2. Spustenie simulácie
 
-1.6.3. Post-processing
+1.6.3. Následné spracovanie
 
-The DEFORM system consists of three major components:
+Systém DEFORM pozostáva z troch hlavných komponentov:
 
-## Pre-processing
+## Predbežné spracovanie
 
-A pre-processor for creating, assembling, or modifying the data required to analyze the simulation, and for generating the required database file. The DEFORM [pre-processor](/docs/sk/pre_processor/pre-processor_mainpg/) uses a graphical user interface to assemble the data required to run the simulation. Input data includes,
+Preprocesor na vytváranie, zostavovanie alebo úpravu údajov potrebných na analýzu simulácie a na generovanie požadovaného databázového súboru. DEFORM [pre-processor](/docs/sk/pre_processor/pre-processor_mainpg/) používa grafické používateľské rozhranie na zostavenie údajov potrebných na spustenie simulácie. Vstupné údaje zahŕňajú,
 
-**Object description**
+**Opis objektu**
 
-[Object description](/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/) includes all data associated with an object, including [geometry](/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/), [mesh](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/), temperature, [material](/docs/sk/pre_processor/10_material_data/10_material_data/), etc.
+[Object description](/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/) zahŕňa všetky údaje súvisiace s objektom vrátane [geometry](/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/), [mesh](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/), teploty, [material](/docs/sk/pre_processor/10_material_data/10_material_data/) atď.
 
-**Material data**
+**Dáta o materiáli**
 
-[Material](/docs/sk/pre_processor/10_material_data/10_material_data/)[ data](/docs/sk/pre_processor/10_material_data/10_material_data/) includes data describing the behavior of the material under the conditions which it will reasonably experience during deformation.
+[Material](/docs/sk/pre_processor/10_material_data/10_material_data/)[ data](/docs/sk/pre_processor/10_material_data/10_material_data/) obsahuje údaje opisujúce správanie sa materiálu za podmienok, ktoré sa v ňom počas deformácie primerane vyskytnú.
 
-**Inter object conditions**
+**Vnútorné podmienky objektu**
 
-[Inter object](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) conditions describes how the objects interact with each other, including contact, friction, and heat transfer between objects.
+[Inter object](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) podmienky popisujú, ako na seba objekty vzájomne pôsobia, vrátane kontaktu, trenia a prenosu tepla medzi objektmi.
 
-**Simulation controls**
+**Simulačné ovládacie prvky**
 
-[Simulation controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/) includes instructions on the methods DEFORM should use to solve the problem, including the conditions of the processing environment, what physical processes should be modelled, how many discrete time steps should be used to model the process, etc.
+[Simulation controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/) obsahuje inštrukcie o metódach, ktoré má DEFORM použiť na riešenie problému, vrátane podmienok prostredia spracovania, aké fyzikálne procesy sa majú modelovať, koľko diskrétnych časových krokov sa má použiť na modelovanie procesu atď.
 
-**Inter material data**
+**Interné údaje o materiáli**
 
-[Inter material](/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/) data describes the physical process of one phase of a material transforming into other phases of the same material in a heat treatment process. For example, the transformation of austenite into pearlite, bainite, and martensite.
+Údaje [Inter material](/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/) opisujú fyzikálny proces premeny jednej fázy materiálu na iné fázy toho istého materiálu v procese tepelného spracovania. Napríklad premena austenitu na perlit, bainit a martenzit.
 
-**Integrated Manufacturing Process (MO)**
+**Integrovaný výrobný proces (MO)**
 
-DEFORM [Integrated Manufacturing Process (MO)](/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/)**** provides a user-friendly interface to construct many successive operations at the initial setup and simulate them sequentially without user interaction. MO environment facilitates the user to transfer objects across operations and connect different operations for transferring data.
+DEFORM [Integrated Manufacturing Process (MO)](/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/)**** poskytuje používateľsky prívetivé rozhranie na zostavenie mnohých po sebe nasledujúcich operácií pri počiatočnom nastavení a ich postupnú simuláciu bez interakcie používateľa. Prostredie MO uľahčuje používateľovi prenášať objekty medzi operáciami a spájať rôzne operácie na prenos údajov.
 
-## Running the simulation
+## Spustenie simulácie
 
-A simulation engine for performing the numerical calculations required to analyze the process, and writing the results to the database file. The simulation engine reads the database file, performs the actual solution calculation, and appends the appropriate solution data to the database file. The simulation engine also works seamlessly with the Automatic Mesh Generation (AMG) system to generate a new FEM mesh on the workpiece whenever necessary. While the simulation engine is running, it writes status information, including any error messages, to the message (.MSG) and log (.LOG) files.
+Simulačný mechanizmus na vykonávanie numerických výpočtov potrebných na analýzu procesu a zápis výsledkov do databázového súboru. Simulačný mechanizmus načíta databázový súbor, vykoná aktuálny výpočet riešenia a pripojí príslušné údaje o riešení do databázového súboru. Simulačný motor tiež bezproblémovo spolupracuje so systémom automatického generovania siete (AMG), ktorý v prípade potreby generuje novú sieť MKP na obrobku. Počas behu simulačného motora sa do súborov správ (.MSG) a protokolov (.LOG) zapisujú informácie o stave vrátane prípadných chybových hlásení.
 
-**Simulation engine**
+**Simulačný motor**
 
-The simulation engine is the program which actually performs the numerical calculations to solve the problem. The simulation engine reads input data from the database, then writes the solution data back out to the database. As it runs, it creates two user readable files which track its progress.
+Simulačný motor je program, ktorý skutočne vykonáva numerické výpočty na riešenie problému. Simulačný mechanizmus číta vstupné údaje z databázy a potom zapisuje údaje o riešení späť do databázy. Počas svojho behu vytvára dva užívateľsky čitateľné súbory, ktoré sledujú jeho priebeh.
 
-**Log (LOG) files**
+**Záznamové súbory (LOG)**
 
-Log files are created when a simulation is running. They contain general information on starting and ending times, remeshings (if any), may contain error messages if the simulation stops unexpectedly and type of FEM job running (32-bit or 64-bit simulation) in case of 3D jobs.
+Pri spustení simulácie sa vytvárajú súbory denníka. Obsahujú všeobecné informácie o časoch začiatku a konca, prípadných remeshingoch, môžu obsahovať chybové hlásenia, ak sa simulácia neočakávane zastaví, a typ spustenej úlohy MKP (32-bitová alebo 64-bitová simulácia) v prípade 3D úloh.
 
-**Message (MSG) files**
+**Súbory správ (MSG)**
 
-Message files are also created when a simulation is running. They contain detailed information about the behavior of the simulation, and may contain information regarding why a simulation has stopped.
+Súbory správ sa vytvárajú aj počas simulácie. Obsahujú podrobné informácie o správaní simulácie a môžu obsahovať informácie o dôvodoch zastavenia simulácie.
 
-## **Post-processor**
+## **Postprocesor**
 
-A post-processor for reading the database file from the simulation engine and displaying the results graphically and for extracting numerical data. The postprocessor is used to view simulation data after the simulation has been run. The postprocessor features a graphical user interface to view geometry, field data such as strain, temperature, stress and other simulation data such as die loads. The postprocessor can also be used to extract graphic or numerical data for use in other applications. Post processor is also used to view and extract data from the simulation results in the database file. It provides an environment for the user to generate 3D PDF reports of simulation results, interpret results across database using PIP, plot results in region of interest, Coupons Data extraction to evaluate the microstructure and Mechanical property of a particular cut part along with the general post processing features.
+Postprocesor na čítanie databázového súboru zo simulačného stroja a grafické zobrazenie výsledkov a na extrakciu numerických údajov. Postprocesor sa používa na zobrazenie simulačných údajov po spustení simulácie. Postprocesor obsahuje grafické používateľské rozhranie na zobrazenie geometrie, údajov o poli, ako je deformácia, teplota, napätie, a ďalších simulačných údajov, ako je zaťaženie matrice. Postprocesor možno použiť aj na extrakciu grafických alebo číselných údajov na použitie v iných aplikáciách. Postprocesor sa používa aj na zobrazenie a extrakciu údajov z výsledkov simulácie v databázovom súbore. Poskytuje používateľovi prostredie na vytváranie 3D PDF správ o výsledkoch simulácie, interpretáciu výsledkov v databáze pomocou PIP, vykresľovanie výsledkov v oblasti záujmu, extrakciu údajov kupónov na vyhodnotenie mikroštruktúry a mechanických vlastností konkrétneho výrezu spolu so všeobecnými funkciami postprocesora.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [Pre-Processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/)
 

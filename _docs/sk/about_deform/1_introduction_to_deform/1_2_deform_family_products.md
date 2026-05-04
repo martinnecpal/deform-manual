@@ -1,128 +1,128 @@
 ---
 lang: sk
-title: "1.2. DEFORM Family products"
+title: "1.2. Produkty rodiny DEFORM"
 ---
 
-# 1.2. Deform Family of products
+# 1.2. Deformovať rodinu produktov
 
-1.2.1. BASE PRODUCTS
+1.2.1. ZÁKLADNÉ PRODUKTY
 
-1.2.2. EXPRESS MODULES
+1.2.2. EXPRESNÉ MODULY
 
-1.2.3. ADD-ON MODULES
+1.2.3. DODATOČNÉ MODULY
 
-DEFORM Products can be classified as base products, Express Modules and Add-On Modules. Base products come along with Supporting Modules which helps user in problem setup and interpretation of results. Below table shows various DEFORM Products available,
+Produkty DEFORM možno klasifikovať ako základné produkty, expresné moduly a doplnkové moduly. Základné produkty sa dodávajú spolu s podpornými modulmi, ktoré pomáhajú používateľovi pri nastavovaní problémov a interpretácii výsledkov. V nasledujúcej tabuľke sú uvedené rôzne dostupné produkty DEFORM,
 
-**BASE MODEL** |  **EXPRESS MODULES** |  **ADD-ON MODULES**  
----|---|---  
-PRE-PROCESSOR |  FORMING EXPRESS - 2D |  COGGING  
-POST PROCESSOR |  FORMING EXPRESS - 3D |  DATA ANALYTICS  
-INTEGRATED MANUFACTURING PROCESS (MO) |  DIE STRESS |  DOE / OPTIMIZATION  
-DIE STRESS |  |  EXTRUSION  
-MACHINING DISTORTION |  |  HEAT TREATMENT  
-|  |  HT FURNACE  
-|  |  INVERSE HT  
-|  |  MACHINING  
-|  |  MATERIAL SUITE  
-|  |  RING ROLLING  
-|  |  SHAPE ROLLING  
-|  |  SPINNING  
-|  |  SHOT PEENING  
+**ZÁKLADNÝ MODEL** | **EXPRESNÉ MODULY** | **DOPLNKOVÉ MODULY**
+---|---|---
+PRE-PROCESSOR | FORMING EXPRESS - 2D | COGGING
+POSTPROCESOR | FORMING EXPRESS - 3D | ANALÝZA DÁT
+INTEGROVANÝ VÝROBNÝ PROCES (MO) | NAMÁHANIE MATRICE | DOE / OPTIMALIZÁCIA
+NAPÄTIE V ZÁPUSTKE | | VYTLÁČANIE
+DEFORMÁCIE PRI OBRÁBANÍ | | TEPELNÉ SPRACOVANIE
+| HT FURNACE
+| INVERSE HT
+| MACHINING
+| | SADA MATERIÁLOV
+| VALCOVANIE KRÚŽKOV
+| VALCOVANIE TVARU
+| SPINNING
+| KULIČKOVANIE
   
-## BASE PRODUCTS
+## ZÁKLADNÉ PRODUKTY
 
 ****
 
 **DEFORM Pre-Processor**
 
-DEFORM [Pre-Processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/) is an integrated product of 2D and 3D Products, it is capable of Modelling both 2D and 3D models and it allows to convert 2D Model to 3D model.
+DEFORM [Pre-Processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/) je integrovaný produkt 2D a 3D produktov, dokáže modelovať 2D aj 3D modely a umožňuje konvertovať 2D model na 3D model.
 
-**2D:** Capable of modelling plane strain or plane stress or axisymmetric or torsion parts with a simple 2 dimensional model. A full function package containing the latest innovations in Finite Element Modelling, equally well suited for production or research environments.
+**2D:** Dokáže modelovať rovinné deformácie alebo rovinné napätia alebo osovo symetrické alebo torzné časti pomocou jednoduchého dvojrozmerného modelu. Plnofunkčný balík obsahujúci najnovšie inovácie v oblasti modelovania metódou konečných prvkov, ktorý je rovnako vhodný pre výrobné alebo výskumné prostredie.
 
-**3D:** Capable of modelling complex three dimensional material flow patterns. Ideal for parts which cannot be simplified to a two dimensional model.
+**3D:** Dokáže modelovať komplexné trojrozmerné vzory toku materiálu. Ideálne pre diely, ktoré nemožno zjednodušiť na dvojrozmerný model.
 
 **DIE STRESS**
 
-[Die stress](/docs/sk/operation_templates/30_die_stress/30_introduction_to_die_stress/) module allows the user to construct tooling stress simulations with ease. (2D, 3D)
+Modul [Die stress](/docs/sk/operation_templates/30_die_stress/30_introduction_to_die_stress/) umožňuje používateľovi jednoducho vytvárať simulácie namáhania nástrojov. (2D, 3D)
 
-**integrated Manufacturing Process (MO)**
+**integrovaný výrobný proces (MO)**
 
-[Integrated Manufacturing Process ](/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/)(MO) provides an user-friendly interface to construct many successive operations at the initial setup and simulate them sequentially without user interaction. (2D, 3D). Fig. 1.2.1. shows schematic representation of MO environment.
+[Integrated Manufacturing Process ](/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/)(MO) poskytuje používateľsky prívetivé rozhranie na zostavenie mnohých po sebe nasledujúcich operácií pri počiatočnom nastavení a ich postupnú simuláciu bez interakcie používateľa. (2D, 3D). Na obr. 1.2.1. je schematicky znázornené prostredie MO.
 
 ![]({{ '/assets/images/about_deform/1_2_deform_family_products/1_2_image001.jpg' | relative_url }})
 
-Structure of MO ENVIRONMENT
+Štruktúra MO ENVIRONMENT
 
-**MACHINING DISTORTION**
+**SKRESLENIE PRI OBRÁBANÍ**
 
-[Machining Distortion](/docs/sk/operation_templates/40_machining_distortion/40_introduction_to_machining_distortion/) module allows modelling of part deflection resulting from machining passes on a part with deformation history. (2D, 3D)
+Modul [Machining Distortion](/docs/sk/operation_templates/40_machining_distortion/40_introduction_to_machining_distortion/) umožňuje modelovanie priehybu súčiastky v dôsledku priechodov obrábania na súčiastke s históriou deformácií. (2D, 3D)
 
   
-**Post-Processor**
+**Postprocesor**
 
-[Post-Processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/) provides an environment for the user to generate 3D PDF reports of simulation results, coupon data extraction, interpret results across database using PIP, plot results in region of interest along with the general post processing features.
+[Post-Processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/) poskytuje používateľovi prostredie na generovanie 3D PDF správ o výsledkoch simulácie, extrakciu údajov o kupónoch, interpretáciu výsledkov v databáze pomocou PIP, vykreslenie výsledkov v oblasti záujmu spolu so všeobecnými funkciami následného spracovania.
 
-## EXPRESS MODULES
+## EXPRESNÉ MODULY
 
-[Forming Express](/docs/sk/operation_templates/34_forming_express/34_introduction_to_forming_express/) modules is used to setup various 2D and 3D forming operations in a quick wizard mode in DEFORM-MO environment.
+Moduly [Forming Express](/docs/sk/operation_templates/34_forming_express/34_introduction_to_forming_express/) sa používajú na nastavenie rôznych 2D a 3D tvárniacich operácií v režime rýchleho sprievodcu v prostredí DEFORM-MO.
 
-**Forming Express-2D:** Capable of modelling-two dimensional axisymmetric or plane strain problems. Suitable for small to mid-sized shops starting in Finite Element Modelling.
+**Forming Express-2D:** Dokáže modelovať dvojrozmerné osovo symetrické alebo rovinné deformačné problémy. Vhodný pre malé a stredne veľké dielne, ktoré začínajú s modelovaním metódou konečných prvkov.
 
-**Forming Express-3D:** Capable of modelling complex three-dimensional cold, warm and hot forging processes in a customized environment.
+**Forming Express-3D:** Dokáže modelovať komplexné trojrozmerné procesy kovania za studena, za tepla a za tepla v prispôsobenom prostredí.
 
-## ADD-ON MODULES
+## PRÍDAVNÉ MODULY
 
 **COGGING**
 
-[Cogging](/docs/sk/operation_templates/29_cogging/29_introduction_to_cogging/) wizard allows user to setup a series of Cogging/GFM operations on the billet representing a set of thermo-mechanical processing cycles to the final shape, size and metallurgical properties. (3D)
+Sprievodca [Cogging](/docs/sk/operation_templates/29_cogging/29_introduction_to_cogging/) umožňuje používateľovi nastaviť sériu operácií Cogging/GFM na polotovare, ktoré predstavujú súbor cyklov tepelno-mechanického spracovania na konečný tvar, veľkosť a metalurgické vlastnosti. (3D)
 
 **DOE**
 
-[DOE](/docs/sk/doe_and_optimization/52_doe_study/51_introduction_to_doe/) is capable to do sensitivity analysis to address variabilities / uncertainties in processing conditions, material data and boundary conditions in a specified range and sampling. A specially designed DOE Post will help user to interpret the DOE simulations output. (2D, 3D)
+[DOE](/docs/sk/doe_and_optimization/52_doe_study/51_introduction_to_doe/) dokáže vykonať analýzu citlivosti na riešenie variability/neistôt v podmienkach spracovania, údajov o materiáloch a okrajových podmienok v určenom rozsahu a pri odbere vzoriek. Špeciálne navrhnutý príspevok DOE Post pomôže používateľovi interpretovať výstupy simulácií DOE. (2D, 3D)
 
 **EXTRUSION**
 
-[Extrusion](/docs/sk/operation_templates/31_extrusion/31_introduction_to_extrusion/) interface allows the user to construct Extrusion process models to run ALE, Steady state and Lagrangian procedures. (3D)
+Rozhranie [Extrusion](/docs/sk/operation_templates/31_extrusion/31_introduction_to_extrusion/) umožňuje používateľovi zostaviť modely vytlačovacích procesov na spustenie postupov ALE, ustáleného stavu a Lagrangea. (3D)
 
 **HT FURNACE**
 
-[HT Furnace](/docs/sk/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/) module provides a customized environment to user to define Furnace conditions and simulate temperature distribution in billets when stacked in a particular pattern within Furnace. (3D)
+Modul [HT Furnace](/docs/sk/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/) poskytuje používateľovi prispôsobené prostredie na definovanie podmienok pece a simuláciu rozloženia teploty v polotovaroch pri ich ukladaní v určitom usporiadaní v rámci pece. (3D)
 
   
-**HEAT TREATMENT**
+**TEPELNÁ ÚPRAVA**
 
-[Heat Treatment](/docs/sk/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/) module allows the user to construct many successive heat treatment simulations with minimal effort. (2D, 3D). It is available as an add-on to DEFORM-2D and 3D. In addition to the deformation modelling capabilities, DEFORM-HT can model the effects of heat treating, including hardness, volume fraction of metallic structure, distortion, residual stress, and carbon content.
+Modul [Heat Treatment](/docs/sk/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/) umožňuje používateľovi vytvoriť mnoho po sebe nasledujúcich simulácií tepelného spracovania s minimálnym úsilím. (2D, 3D). Je k dispozícii ako doplnok k programom DEFORM-2D a 3D. Okrem možností modelovania deformácií dokáže DEFORM-HT modelovať účinky tepelného spracovania vrátane tvrdosti, objemového podielu kovovej štruktúry, deformácie, zvyškového napätia a obsahu uhlíka.
 
-**INVERSE HEAT TRANSFER**
+**INVERZNÝ PRENOS TEPLA**
 
-[Inverse heat transfer](/docs/sk/inverse_heat/51_introduction_to_inverse_heat/) wizard allows the user to determine the heat transfer coefficient at the boundary of an object by using actual thermocouple data coupled with iterative simulation results. (2D, 3D)
+Sprievodca [Inverse heat transfer](/docs/sk/inverse_heat/51_introduction_to_inverse_heat/) umožňuje používateľovi určiť koeficient prestupu tepla na hranici objektu pomocou skutočných údajov z termočlánkov v kombinácii s výsledkami iteratívnej simulácie. (2D, 3D)
 
 **MACHINING**
 
-[Machining](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/) wizard allows the user to perform two and three-dimensional metal cutting simulations for turning, boring, milling and drilling operations. (2D, 3D)
+Sprievodca [Machining](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/) umožňuje používateľovi vykonávať dvojrozmerné a trojrozmerné simulácie rezania kovov pri sústružení, vyvrtávaní, frézovaní a vŕtaní. (2D, 3D)
 
-**MATERIAL SUITE**
+**SÚBOR MATERIÁLOV**
 
-[Material Suite](/docs/sk/52_material_suite/52_introduction_to_material_suite/) is an Integrated Computational material model which bridges process, micro structure, mechanical properties and performance. Also facilitate to develop constants from physical experimental data or virtual micro structure experiments.
+[Material Suite](/docs/sk/52_material_suite/52_introduction_to_material_suite/) je integrovaný výpočtový model materiálu, ktorý spája proces, mikroštruktúru, mechanické vlastnosti a výkon. Uľahčuje aj vývoj konštánt z fyzikálnych experimentálnych údajov alebo virtuálnych experimentov s mikroštruktúrou.
 
-**OPTIMIZATION**
+**OPTIMALIZÁCIA**
 
-[OPTIMIZATION](/docs/sk/doe_and_optimization/53_optimization_study/53_introduction_to_optimization/) Module determines the suitable process conditions based on the objective function (Temperature, Die Geometry, Material, etc.) set initially. DOE Post module is designed specifically to help the user to interpret the optimization output and select the process conditions. (2D, 3D)
+Modul [OPTIMIZATION](/docs/sk/doe_and_optimization/53_optimization_study/53_introduction_to_optimization/) určuje vhodné podmienky procesu na základe pôvodne nastavenej účelovej funkcie (teplota, geometria formy, materiál atď.). Modul DOE Post je špeciálne navrhnutý tak, aby pomohol používateľovi interpretovať výstup optimalizácie a vybrať procesné podmienky. (2D, 3D)
 
-**RING ROLLING**
+**KRÚŽENIE**
 
-[Ring rolling](/docs/sk/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/) module allows user to interactively generate the various components of the ring rolling process, and define process conditions.
+Modul [Ring rolling](/docs/sk/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/) umožňuje používateľovi interaktívne generovať rôzne komponenty procesu valcovania krúžkov a definovať podmienky procesu.
 
-**SHAPE ROLLING**
+**TVAROVÉ VALCOVANIE**
 
-[Shape rolling](/docs/sk/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/) interface allows the user to construct shape rolling models of Isothermal and Non-Isothermal with multi-pass/ multi-stands to run Lagrangian and ALE procedures. (3D)
+Rozhranie [Shape rolling](/docs/sk/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/) umožňuje používateľovi konštruovať modely valcovania tvaru izotermických a neizotermických modelov s viacerými priechodmi a stojanmi na vykonávanie Lagrangeových a ALE postupov. (3D)
 
   
-**SPINNING:**
+**ŠPINKOVANIE:**
 
-[Spinning](/docs/sk/operation_templates/48_spinning/48_introduction_to_spinning/) interface allows the user to construct Flow forming and Spinning operations to run ALE and Lagrangian procedures (3D)
+Rozhranie [Spinning](/docs/sk/operation_templates/48_spinning/48_introduction_to_spinning/) umožňuje používateľovi vytvárať operácie Flow forming a Spinning na spustenie ALE a Lagrangeových postupov (3D)
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [PRE-PROCESSOR](/docs/sk/pre_processor/7_introduction_to_pre-processor/)
 

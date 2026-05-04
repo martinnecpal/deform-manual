@@ -1,84 +1,84 @@
 ---
 lang: sk
-title: "3.4. Trouble Shooting License Issues"
+title: "3.4. Riešenie problémov s licenciami"
 ---
 
-# 3.4. Trouble Shooting License Issues
+# 3.4. Riešenie problémov s licenciami
 
-3.4.1. Identifying License Server v12.1 Problem
+3.4.1. Identifikácia problému licenčného servera v12.1
 
-3.4.2. Solving License Server v12.1 Problem: Specific Topic Issues
+3.4.2. Riešenie problému licenčného servera v12.1: špecifické problémy témy
 
-3.4.3. Miscellaneous Service Related Notes
+3.4.3. Rôzne poznámky týkajúce sa služieb
 
-## Identifying License Server v12.1 Problem
+## Identifikácia problému licenčného servera v12.1
 
-**Step 1**
+**Krok 1**
 
-Check whether the License Server is running by opening the “services” tab in Task Manager. If DeformLicenseserver appears as a running service, then it is running.
+Skontrolujte, či je licenčný server spustený, otvorením karty "služby" v Správcovi úloh. Ak sa DeformLicenseserver zobrazí ako spustená služba, potom je spustený.
 
-  * If it is running, go to Step 2 (A) explained below.
+  * Ak je spustený, prejdite na krok 2 (A) vysvetlený nižšie.
 
-  * If it is not running, go to Step 2 (B) explained below.
+  * Ak nie je spustený, prejdite na krok 2 (B) vysvetlený nižšie.
 
   
-**Step 2**
+**Krok 2**
 
-(A) This is likely a password or hardware key problem. There are three ways to check:
+(A) Pravdepodobne ide o problém s heslom alebo hardvérovým kľúčom. Existujú tri spôsoby kontroly:
 
-  * View the most recent log file [usually in C:\Program Files\SFTC\License Manager\log\<year>\\].
+  * Zobrazte najnovší súbor protokolu [zvyčajne v C:\Program Files\SFTC\License Manager\log\<year>\].
 
-  * Run the diagnostics tool from INSIDE the License Manager folder [usually located at C:\Program Files\SFTC\License Manager\Defdiag.exe], and click the Get Information… button. The resulting .dgf file will help support team to diagnose the issue.
+  * Spustite diagnostický nástroj v priečinku Správca licencií [zvyčajne sa nachádza na adrese C:\Program Files\SFTC\Správca licencií\Defdiag.exe] a kliknite na tlačidlo Získať informácie... Výsledný súbor .dgf pomôže tímu podpory diagnostikovať problém.
 
-  * If in DEFORM Setup, clicking the ![]({{ '/assets/icons/pre_icons/mo_syncronize_button.jpg' | relative_url }}) button results in “license server is terminated”: hardware key problem.
+  * Ak sa v programe DEFORM Setup po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_syncronize_button.jpg' | relative_url }}) zobrazí správa "licenčný server je ukončený": problém s hardvérovým kľúčom.
 
-If log file is used to check for errors:
+Ak sa na kontrolu chýb používa súbor denníka:
 
-  * If the log file indicates the hardware key is invalid: hardware key problem. Please send the .dgf file to [support@deform.com](mailto:support@deform.com)
+  * Ak súbor protokolu uvádza, že hardvérový kľúč je neplatný: Hardvérový kľúč problém. Prosím, pošlite súbor .dgf na adresu [support@deform.com](mailto:support@deform.com)
 
-  * If the log file says “no password” or “no available password”: password problem. Please contact [support@deform.com](mailto:support@deform.com). Please note that if you have received a new password file to replace an expired password file, it is important to restart the License Manager Service or reboot the License Manager Server machine.
+  * Ak je v súbore denníka uvedené "žiadne heslo" alebo "žiadne dostupné heslo": problém s heslom. Kontaktujte [support@deform.com](mailto:support@deform.com). Upozorňujeme, že ak ste dostali nový súbor s heslom, ktorý nahradil súbor s heslom, ktorého platnosť vypršala, je dôležité reštartovať službu License Manager Service alebo reštartovať počítač License Manager Server.
 
-(B) An old license server is running, register service problem or installation problem:
+(B) Je spustený starý licenčný server, problém s registračnou službou alebo problém s inštaláciou:
 
-If the log file [usually in C:\Program Files\SFTC\License Manager\log\<year>\\] says “old license server (v2.1) may be running”, problem identified: old license server is running.
+Ak je v log súbore [zvyčajne v C:\Program Files\SFTC\License Manager\log\<year>\] napísané "môže byť spustený starý licenčný server (v2.1)", problém je identifikovaný: starý licenčný server je spustený.
 
-  * Please open DEFORMSetup and visit Services tab. In Services tab click on “Open DEFORM Service for local DEFORM computer”. We should be seeing an error mark as shown in [Fig. 3.1.21.](3_1_deform_license_setup.htm#Fig._3.1.21._Updating_Simulation_services_files_in_DEFORM_Services_window)(a). The error mark ![]({{ '/assets/icons/pre_icons/error_status_icon.jpg' | relative_url }}) indicates that Local DEFORM computer is not using the same version of the License Manger as that of the DEFORM License server system hence click on ![]({{ '/assets/icons/pre_icons/mo_deform_setup_update_icon.jpg' | relative_url }}) icon to update the Local DEFORM Computer services. Once the services are updated, we can notice ![]({{ '/assets/icons/pre_icons/mo_deform_setup_valid_sucess_icon.jpg' | relative_url }}) icon next to the Local DEFORM Computer. DEFORMsetup can be closed and DEFORM GUI can be launched from Start ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Programs.
+  * Otvorte DEFORMSetup a navštívte kartu Služby. V záložke Services (Služby) kliknite na "Open DEFORM Service for local DEFORM computer" (Otvoriť službu DEFORM pre miestny počítač DEFORM). Mala by sa nám zobraziť značka chyby, ako je znázornené na obrázku [Fig. 3.1.21.](3_1_deform_license_setup.htm#Fig._3.1.21._Updating_Simulation_services_files_in_DEFORM_Services_window)(a). Chybová značka ![]({{ '/assets/icons/pre_icons/error_status_icon.jpg' | relative_url }}) znamená, že lokálny počítač DEFORM nepoužíva rovnakú verziu License Manger ako systém licenčného servera DEFORM, preto kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_deform_setup_update_icon.jpg' | relative_url }}) a aktualizujte služby lokálneho počítača DEFORM. Po aktualizácii služieb si môžeme všimnúť ikonu ![]({{ '/assets/icons/pre_icons/mo_deform_setup_valid_sucess_icon.jpg' | relative_url }}) vedľa lokálneho počítača DEFORM. Program DEFORMsetup možno zatvoriť a grafické používateľské rozhranie DEFORM možno spustiť z ponuky Štart ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Programs.
 
-If problem is still not identified, please contact [support@deform.com](mailto:support@deform.com).
+Ak problém stále nie je identifikovaný, kontaktujte [support@deform.com](mailto:support@deform.com).
 
-## Solving License Server v12.1 Problem: Specific Topic Issues
+## Riešenie problému licenčného servera v12.1: špecifické problémy témy
 
-### Password problem
+### Problém s heslom
 
-Copy the correct v*_* (where *_* is the version number of the DEFORM) DEFORM.PWD to the license server directory (C:\Program Files\SFTC\License Manager). A reboot or service restart is required to load/activate the new password file.
+Skopírujte správny súbor v*_* (kde *_* je číslo verzie programu DEFORM) DEFORM.PWD do adresára licenčného servera (C:\Program Files\SFTC\Licence Manager). Na načítanie/aktiváciu nového súboru hesla je potrebný reštart alebo reštart služby.
 
-### Hardware key problem check list
+### Kontrolný zoznam problémov s hardvérovým kľúčom
 
-  * It is important to uninstall Sentinel driver versions 7.5 or older. Please remove the hardware key, uninstall the old driver(s) and install the new driver.
-  * Check whether the user installed Sentinel driver version 7.6.3 (being an option in the installation process). If not, please install the new driver.
-  * Check whether the USB port is inactive. Switch the USB key to another USB port and try to restart the service and server.
-  * If an error message of “Failed to add Sentinel64.cat file” occurs while installing the Sentinel driver on Windows 7, and you are using a USB hardware key, this error can be safely ignored.
+  * Je dôležité odinštalovať ovládač Sentinel verzie 7.5 alebo staršie. Odstráňte hardvérový kľúč, odinštalujte starý ovládač (ovládače) a nainštalujte nový ovládač.
+  * Skontrolujte, či používateľ nainštaloval ovládač Sentinel verzie 7.6.3 (je to možnosť v procese inštalácie). Ak nie, nainštalujte nový ovládač.
+  * Skontrolujte, či je port USB neaktívny. Prepnite kľúč USB na iný port USB a skúste reštartovať službu a server.
+  * Ak sa pri inštalácii ovládača Sentinel v systéme Windows 7 objaví chybové hlásenie "Nepodarilo sa pridať súbor Sentinel64.cat" a používate hardvérový kľúč USB, túto chybu môžete bezpečne ignorovať.
 
-### Old license is running
+### Stará licencia je spustená
 
-User needs to uninstall the old license server (v2.1) or disable it.
+Používateľ musí odinštalovať starý licenčný server (v2.1) alebo ho vypnúť.
 
-### Service startup problem
+### Problém so spustením služby
 
-This may happen occasionally, particularly if the user swaps the USB key between computers. Following methods can be used to start the DeformLicenseServer service when it shows up in the Windows service list and is also stopped. 
+K tomu môže občas dôjsť, najmä ak používateľ vymieňa kľúč USB medzi počítačmi. Nasledujúce metódy možno použiť na spustenie služby DeformLicenseServer, keď sa objaví v zozname služieb systému Windows a je tiež zastavená.
 
-  * Reboot the License Server computer.
+  * Reštartujte počítač s licenčným serverom.
 
-  * Open the Services management console (not Task Manager) and manually start the service.
+  * Otvorte konzolu na správu služieb (nie Správcu úloh) a spustite službu ručne.
 
-  * Open DEFORMSetup and visit services tab, if license server is on local system then select “Open DEFORM Service for local DEFORM computer” else select “Open DEFORM Service for all DEFORM computers” and enter pass code. Click on![]({{ '/assets/icons/pre_icons/run_action_icon.jpg' | relative_url }}) button next to License Server under “Actions” column to start the service.
+  * Otvorte DEFORMSetup a navštívte záložku služby, ak je licenčný server na lokálnom systéme, vyberte "Open DEFORM Service for local DEFORM computer" (Otvoriť službu DEFORM pre lokálny počítač DEFORM), inak vyberte "Open DEFORM Service for all DEFORM computers" (Otvoriť službu DEFORM pre všetky počítače DEFORM) a zadajte prístupový kód. Kliknutím na tlačidlo![]({{ '/assets/icons/pre_icons/run_action_icon.jpg' | relative_url }}) vedľa licenčného servera v stĺpci "Actions" (Akcie) spustite službu.
 
-## Miscellaneous Service Related Notes
+## Rôzne poznámky týkajúce sa služieb
 
-**Notes on Services in Windows Vista and later**  
-Elevated administrator permission via Windows User Access Control [UAC] is required to register, start or unregister service. This is needed even if the user already has administrative privileges on the computer. Service management can be performed in the Services management console or by using “Run as administrator” with DEFORM service start menu shortcuts.
+**Poznámky k službám v systéme Windows Vista a novších**
+Na registráciu, spustenie alebo zrušenie registrácie služby sa vyžaduje zvýšené oprávnenie správcu prostredníctvom systému Windows User Access Control [UAC]. Je to potrebné aj v prípade, že používateľ už má v počítači administrátorské oprávnenia. Správu služby možno vykonať v konzole na správu služieb alebo pomocou funkcie "Spustiť ako správca" so zástupcami ponuky DEFORM Service Start (Štart).
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [3.1. DEFORM License Setup](/docs/sk/starting_up_deform/3_license_manager/3_1_deform_license_setup/)
 

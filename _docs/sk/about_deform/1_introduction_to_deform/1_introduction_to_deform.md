@@ -1,25 +1,25 @@
 ---
 lang: sk
-title: "1. Introduction_to_DEFORM"
+title: "1. Úvod_do_DEFORM"
 ---
 
-# 1\. Introduction to DEFORM
+# 1\. Úvod do DEFORM
 
-DEFORM is a Finite Element Method (FEM) based process simulation system designed to analyze various forming and heat treatment processes used by metal forming and related industries. By simulating manufacturing processes on a computer, this advanced tool allows designers and engineers to:
+DEFORM je systém simulácie procesov založený na metóde konečných prvkov (MKP), ktorý je určený na analýzu rôznych procesov tvárnenia a tepelného spracovania používaných v kovospracujúcom a príbuznom priemysle. Tento pokročilý nástroj umožňuje konštruktérom a inžinierom simulovať výrobné procesy na počítači:
 
-  * Reduce the need for costly shop floor trials and redesign of tooling and processes.
+  * Zníženie potreby nákladných skúšok v dielni a prepracovania nástrojov a procesov.
 
-  * Improve tool and die design to reduce production and material costs.
+  * Zlepšenie konštrukcie nástrojov a lisovacích foriem s cieľom znížiť výrobné a materiálové náklady.
 
-  * Shorten lead time in bringing a new product to market.
+  * Skrátenie času potrebného na uvedenie nového výrobku na trh.
 
-  * Superior product microstructure and strength.
+  * Vynikajúca mikroštruktúra a pevnosť výrobku.
 
-  * Improved process control and quality.
+  * Zlepšenie kontroly a kvality procesov.
 
-Unlike general purpose FEM codes, DEFORM is tailored for deformation modelling. A user friendly graphical user interface provides easy data preparation and analysis so engineers can focus on forming, not on learning a cumbersome computer system. A key component of this is a fully automatic, optimized remeshing system tailored for large deformation problems.
+Na rozdiel od kódov MKP na všeobecné účely je DEFORM prispôsobený na modelovanie deformácií. Používateľsky prívetivé grafické používateľské rozhranie umožňuje jednoduchú prípravu údajov a analýzu, takže inžinieri sa môžu sústrediť na tvárnenie, a nie na učenie sa ťažkopádneho počítačového systému. Kľúčovou zložkou je plne automatický, optimalizovaný systém remeshingu prispôsobený na riešenie veľkých deformačných problémov.
 
-DEFORM also includes advanced capabilities for predicting ductile fracture, micro structural evolution, machining distortion & chip morphology. Extensive user subroutines allow advanced researchers to incorporate their own constitutive, fracture and micro structural models, press specifications & non-metallic materials.
+DEFORM zahŕňa aj pokročilé možnosti predpovedania tvárneho lomu, vývoja mikroštruktúry, deformácie pri obrábaní a morfológie triesky. Rozsiahle užívateľské podprogramy umožňujú pokročilým výskumníkom zahrnúť vlastné konštitutívne, lomové a mikroštrukturálne modely, špecifikácie lisov a nekovové materiály.
 
 [1.1. Overview of DEFORM](/docs/sk/about_deform/1_introduction_to_deform/1_1_overview_of_deform/)
 

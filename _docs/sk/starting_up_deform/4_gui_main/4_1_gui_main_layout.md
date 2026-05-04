@@ -1,677 +1,677 @@
 ---
 lang: sk
-title: "4.1. GUI Main layout"
+title: "4.1. Hlavné rozloženie grafického rozhrania"
 ---
 
-# 4.1. GUI Main Layout
+# 4.1. Hlavné rozloženie grafického rozhrania
 
-4.1.1. Integrated GUI Interface (GUI Main)
+4.1.1. Integrované grafické rozhranie (GUI Main)
 
-  * Pre-Processor
+  * Pre-Procesor
 
-  * Simulator
+  * Simulátor
 
-  * Post-processor
+  * Postprocesor
 
-4.1.2. Problem directory
+4.1.2. Adresár problémov
 
-  * Explore Tab
+  * Preskúmať kartu
 
-  * Queued Tab
+  * Karta Čakanie v rade
 
-  * Recent tab
+  * Karta Nedávne
 
-4.1.3 Problem Files Section
+4.1.3 Sekcia problémových súborov
 
-  * Problem Files tab
+  * Karta Problémové súbory
 
-  * All Files tab
+  * Karta Všetky súbory
 
-  * Right mouse button click menu for Problem Files
+  * Ponuka kliknutia pravým tlačidlom myši pre problémové súbory
 
-4.1.4. Menu Bar
+4.1.4. Panel s ponukami
 
-  * File Menu
+  * Ponuka súborov
 
-  * Edit
+  * Upraviť
 
-  * View Menu
+  * Zobraziť ponuku
 
-  * Pre-Processor Menu
+  * Ponuka predbežného spracovania
 
-  * Simulation Menu
+  * Ponuka simulácie
 
-  * Post Processor Menu
+  * Ponuka postprocesora
 
-  * Tool Menu
+  * Ponuka nástrojov
 
-  * Options
+  * Možnosti
 
-  * Layout
+  * Rozloženie
 
-  * Help
+  * Pomoc
 
-4.1.5. Preview
+4.1.5. Náhľad
 
-4.1.6. Message
+4.1.6. Správa
 
-4.1.7. Log
+4.1.7. Záznam
 
-4.1.8. Summary
+4.1.8. Súhrn
 
 4.1.9. Memo
 
-## Integrated GUI Interface (GUI Main)
+## Integrované grafické rozhranie (GUI Main)
 
-Integrated GUI Interface (GUI Main) in the DEFORM system guides the user by providing the links to various components of DEFORM under Pre-Processor, Simulator and Post-processor. In classic mode layout the GUI main has multiple sections such as Problem Directory, Problem Files, Preview and File information display (Keyfile, log, message, summary, memo and any text based file) and links under Pre-Processor, Simulator and Post-Processor categories as shown in Fig. 4.1.1. GUI Main is very intuitive, and user can use Layout options to customize the GUI Main display.
+Integrované grafické rozhranie (GUI Main) v systéme DEFORM vedie používateľa tým, že poskytuje odkazy na rôzne komponenty DEFORM v rámci Pre-Processor, Simulator a Post-processor. V klasickom režime rozloženia má GUI main viacero sekcií, ako napríklad Adresár problémov, Súbory problémov, Náhľad a Zobrazenie informácií o súboroch (súbor s kľúčmi, protokol, správa, zhrnutie, poznámka a akýkoľvek textový súbor) a odkazy v kategóriách Pre-Processor (predspracovateľ), Simulator (simulátor) a Post-Processor (postprocesor), ako je znázornené na obr. 4.1.1. GUI Main (Hlavné grafické rozhranie) je veľmi intuitívne a používateľ môže použiť možnosti Layout (Rozloženie) na prispôsobenie zobrazenia GUI Main (Hlavné grafické rozhranie).
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image001.jpg' | relative_url }})
 
-DEFORM GUI Main
+GUI DEFORM Main
 
-###    
-Pre-Processor
+###
+Pre-Procesor
 
-A pre-processor for creating, assembling or modifying the data required to analyse the simulation and for generating the required database file. The DEFORM pre-processor uses a graphical user interface to assemble the data required to run the simulation. Input data includes Object description, Material Data, Inter-objects relations, simulation controls, Inter material Data etc. to setup a problem. Under Pre-Processor, links are provided which can be used to edit the existing setup or create a new setup.
+Predprocesor na vytváranie, zostavovanie alebo úpravu údajov potrebných na analýzu simulácie a na generovanie požadovaného databázového súboru. Predprocesor DEFORM používa grafické používateľské rozhranie na zostavenie údajov potrebných na spustenie simulácie. Vstupné údaje zahŕňajú opis objektu, údaje o materiáli, vzťahy medzi objektmi, ovládacie prvky simulácie, údaje o materiáli atď. na nastavenie problému. V časti Pre-Processor (Predbežný procesor) sa nachádzajú odkazy, ktoré možno použiť na úpravu existujúceho nastavenia alebo vytvorenie nového nastavenia.
 
-Pre-Processor displays links based on the selection of the File under “Problem Files” tab. For Example, 
+Pre-Processor zobrazuje odkazy na základe výberu súboru na karte "Problémové súbory". Napríklad,
 
-  * If a “.moproj” file consisting of Extrusion is selected then link to Extrusion Wizard is displayed
+  * Ak je vybraný súbor ".moproj" pozostávajúci z Extrusion, zobrazí sa odkaz na Sprievodcu extrudovaním
 
-  * If a DB file is selected, then links to Integrated Manufacturing Process and NG Pre are displayed
+  * Ak je vybraný súbor DB, zobrazia sa odkazy na Integrovaný výrobný proces a NG Pre
 
-  * If a keyfile is selected, then links to NG Pre and Text editor are displayed
+  * Ak je vybraný súbor s kľúčom, zobrazia sa odkazy na NG Pre a Textový editor
 
-  * If an empty folder is selected, then links are displayed for creating a New Problem and New Folder.
+  * Ak je vybraný prázdny priečinok, zobrazia sa odkazy na vytvorenie Nového problému a Nového priečinka.
 
-###    
-Simulator
+###
+Simulátor
 
-A simulation engine for performing the numerical calculations required to analyse the process and writing the results to the database file. The simulation engine reads the database file, performs the actual solution calculation, and appends the appropriate solution data to the database file. The simulation engine also works seamlessly with the Automatic Mesh Generation (AMG) system to generate a new FEM mesh on the workpiece whenever necessary. While the simulation engine is running, it writes status information, including any error messages, to the message (.MSG) and log (.LOG) files. 
+Simulačný mechanizmus na vykonávanie numerických výpočtov potrebných na analýzu procesu a zápis výsledkov do databázového súboru. Simulačný mechanizmus načíta databázový súbor, vykoná aktuálny výpočet riešenia a pripojí príslušné údaje o riešení do databázového súboru. Simulačný motor tiež bezproblémovo spolupracuje so systémom automatického generovania siete (AMG), ktorý v prípade potreby generuje novú sieť MKP na obrobku. Počas behu simulačného motora sa do súborov správ (.MSG) a protokolov (.LOG) zapisujú informácie o stave vrátane prípadných chybových hlásení.
 
-Under simulator we have,  
-**Run** : This option is used to start the simulation immediately.   
-**Run options** : This option is used to define simulation environment such as MPICH, Simulation server and its settings, message file saving, Initial run or continuing the previous run..etc. Refer for [simulator](/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/) for more information  
-**Add to Queue** : User can select the problem and click on this label to ass the problem to Queue on the selected Simulation Server  
-Continue: This option is used to continue the problem that is stopped prematurely.  
-**Process Monitor** : Process monitor is used to know the current status of various problems to submitted for simulation on this system or by this system, Refer for [simulator](/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/) more information.  
-**Simulation Graphics** : This option can be used to launch independent “DEFORM Viewer” to monitor the current problems that are simulating.
+Pod simulátorom máme,
+**Prevádzka** : Táto možnosť sa používa na okamžité spustenie simulácie.   
+**Možnosti spustenia** : Táto možnosť sa používa na definovanie simulačného prostredia, ako je MPICH, simulačný server a jeho nastavenia, ukladanie súborov správ, počiatočný beh alebo pokračovanie predchádzajúceho behu atď. Ďalšie informácie nájdete v časti [simulator](/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/)
+**Pridať do fronty** : Používateľ môže vybrať problém a kliknutím na tento štítok zaradiť problém do fronty na vybranom simulačnom serveri.
+Pokračujte: Táto možnosť sa používa na pokračovanie v probléme, ktorý bol predčasne zastavený.  
+**Monitor procesov** : Monitor procesov sa používa na zistenie aktuálneho stavu rôznych problémov, ktoré sa majú predložiť na simuláciu v tomto systéme alebo týmto systémom, Viac informácií nájdete v časti [simulator](/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/).  
+**Simulačná grafika** : Túto možnosť možno použiť na spustenie nezávislého prehliadača "DEFORM Viewer" na monitorovanie aktuálnych problémov, ktoré sa simulujú.
 
-###   
-Post-processor
+###
+Postprocesor
 
-A post-processor for reading the database file from the simulation engine and displaying the results graphically and for extracting numerical data. The postprocessor is used to view simulation data after the simulation has been run. The post-processor features a graphical user interface to view geometry, field data such as strain, temperature, and stress, and other simulation data such as die loads. The postprocessor can also be used to extract graphic or numerical data for use in other applications.
+Postprocesor na čítanie databázového súboru zo simulačného stroja a grafické zobrazenie výsledkov a na extrakciu numerických údajov. Postprocesor sa používa na zobrazenie simulačných údajov po spustení simulácie. Postprocesor obsahuje grafické používateľské rozhranie na zobrazenie geometrie, údajov o poli, ako je deformácia, teplota a napätie, a ďalších simulačných údajov, ako je zaťaženie matrice. Postprocesor možno použiť aj na extrakciu grafických alebo číselných údajov na použitie v iných aplikáciách.
 
-Under Post-Processor, user can find links to Next Gen Post-Processor, DEFORM Viewer and Material Suite. If the Problem folder consists of DOE/ Optimization study, then link to DOE Post-Processor is displayed.
+V časti Post-Processor nájdete odkazy na Next Gen Post-Processor, DEFORM Viewer a Material Suite. Ak priečinok Problem (Problém) pozostáva zo štúdie DOE/ Optimization (Optimalizácia), zobrazí sa prepojenie na DOE Post-Processor (Postprocesor DOE).
 
-## Problem directory
+## Adresár problémov
 
-Problem Directory section has Explorer, Queued and Recent tabs as shown in Fig. 4.1.2.  
-![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) **Browse** : Using Browse option user can mount the selected folder as problem folder under Explorer tab. Also, user can add multiple problem folder under Explorer tab.
+Sekcia Adresár problémov obsahuje karty Prieskumník, Čakanie a Posledné, ako je znázornené na obr. 4.1.2.  
+![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) **Prehľadávať** : Pomocou možnosti Browse (Prehľadávať) môže používateľ pripojiť vybraný priečinok ako problémový priečinok na karte Explorer (Prieskumník). Používateľ môže tiež pridať viac problémových priečinkov na karte Prieskumník.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image002.jpg' | relative_url }})
 
-Explore Tab
+Preskúmať kartu
 
-###   
+###
   
-Explore Tab
+Preskúmať kartu
 
-Explore tab as shown in Fig. 4.1.2. shows the list of folders under the selected directory.   
-**Mount Folder** : User can mount any folder as “Problem Folder”, to do so user can click on “Browse folder” button and in the “Browse” dialog turn on “Mount as problem folder” check box. The mounted folder can be unmount using RMB on mounted folder and selecting “Unmount problem folder” option (See Fig. 4.1.3.).
+Na karte Preskúmať, ako je znázornené na obr. 4.1.2, sa zobrazí zoznam priečinkov vo vybranom adresári.   
+**Montáž priečinka** : Používateľ môže pripojiť ľubovoľný priečinok ako "problémový priečinok", aby tak urobil, môže kliknúť na tlačidlo "Prehľadávať priečinok" a v dialógovom okne "Prehľadávať" zaškrtnúť políčko "Pripojiť ako problémový priečinok". Namontovaný priečinok možno odmontovať pomocou RMB na namontovanom priečinku a výberom možnosti "Unmount problem folder" (Odmontujte problémový priečinok) (pozri obr. 4.1.3.).
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image003.jpg' | relative_url }})
 
-Right mouse button click menu for Mounted Problem folder
+Ponuka kliknutia pravým tlačidlom myši pre priečinok Mounted Problem
 
-**Set as browse location** : User can select any folder and set it as browse location using RMB on folder and selecting “Set as browse location” option.  
-**Show in Explorer** : User can select “Show in Explorer” from RMB on a folder to view the folder and its contents in windows explorer.  
-**Copy** : User can use this option to copy the folder and paste it in any folder in explorer tab.   
-**Duplicate** : User can use this option to from RMB on a folder to duplicate the folder, folder is duplicated with new name at the same location as that of the source directory.   
-**Delete**![]({{ '/assets/icons/pre_icons/mo_delete_folder_icon.jpg' | relative_url }}) : User can delete the folder from the system using this option from RMB options on a folder.  
-**Rename(F2)** : Folder name can be renamed using this option from RMB options or F2 key on a folder.  
-**Database archive** : “Database Archive” dialog can be launched to archive projects in the selected folder, for more information on “Database Archive” please refer [Database Archive](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu.htm#Database_Archive) in**** Chapter 6.4. Main Menu   
-**Clean up Files** : This option from RMB options is used to clean up temporary files created by DEFORM during setting up a problem or simulation  
-**Clean up running status** : If a simulation is stopped or killed by user and running status is remained then this RMB option can be used to clean up the running status.  
-**Move Project** : We can move project folder from one directory to another directory by drag and drop as shown in Fig. 4.1.4.
+**Nastaviť ako umiestnenie na prehliadanie** : Používateľ môže vybrať ľubovoľný priečinok a nastaviť ho ako umiestnenie na prehliadanie pomocou RMB na priečinku a výberom možnosti "Nastaviť ako umiestnenie na prehliadanie".  
+**Zobraziť v Prieskumníkovi** : Používateľ môže vybrať "Zobraziť v Prieskumníkovi" z RMB na priečinku, aby sa priečinok a jeho obsah zobrazil v Prieskumníkovi okien.  
+**Kópia** : Používateľ môže pomocou tejto možnosti skopírovať priečinok a vložiť ho do ľubovoľného priečinka na karte Prieskumník.   
+**Duplikát** : Používateľ môže použiť túto možnosť z RMB na priečinok, aby ho duplikoval, priečinok sa duplikuje s novým názvom na rovnakom mieste ako zdrojový adresár.   
+**Delete**![]({{ '/assets/icons/pre_icons/mo_delete_folder_icon.jpg' | relative_url }}) : Používateľ môže odstrániť priečinok zo systému pomocou tejto možnosti z možností RMB na priečinku.  
+**Názov(F2)** : Názov priečinka možno premenovať pomocou tejto možnosti z možností RMB alebo klávesom F2 na priečinku.  
+**Archív databázy** : Dialógové okno "Archív databázy" možno spustiť na archiváciu projektov vo vybranom priečinku, viac informácií o "Archíve databázy" nájdete v [Database Archive](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu.htm#Database_Archive) in**** kapitola 6.4. Hlavná ponuka
+**Upratovanie súborov** : Táto možnosť z možností RMB sa používa na vyčistenie dočasných súborov vytvorených programom DEFORM počas nastavovania problému alebo simulácie.
+**Vyčistiť stav chodu** : Ak je simulácia zastavená alebo ukončená používateľom a zostane zachovaný stav behu, potom je možné použiť túto možnosť RMB na vyčistenie stavu behu.  
+**Projekt sťahovania** : Priečinok projektu môžeme presunúť z jedného adresára do iného adresára pretiahnutím, ako je znázornené na obr. 4.1.4.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image004.jpg' | relative_url }})
 
-Moving project by drag and drop
+Presúvanie projektu pomocou funkcie ťahaj a pusť
 
-###   
-Queued Tab
+###
+Karta Čakanie vo fronte
 
-Queued tab as shown in Fig. 4.1.5. shows the list of Jobs are added to queue to simulate from that system along with the status of queued jobs.
+Na karte Queued, ako je znázornené na obr. 4.1.5, sa zobrazuje zoznam úloh pridaných do frontu na simuláciu z daného systému spolu so stavom úloh zaradených do frontu.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image005.jpg' | relative_url }})
 
-Queued Tab
+Karta Čakanie vo fronte
 
-###   
-Recent tab
+###
+Karta Nedávne
 
-Recent tab as shown in Fig. 4.1.6. shows the list of recently opened database directories.
+Na karte Recent (Posledné), ako je znázornené na obr. 4.1.6, sa zobrazuje zoznam naposledy otvorených adresárov databázy.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image006.jpg' | relative_url }})
 
-Recent Tab
+Nedávna karta
 
-## Problem Files Section
+## Sekcia problémových súborov
 
-Problem files section has “Problem Files” and “All Files” tabs. “Problem Files” tab displays the files that can be used to link the DEFORM modules in the selected folder and “All Files” displays all the files and folders under selected folder.
+V časti Problémové súbory sú karty "Problémové súbory" a "Všetky súbory". Na karte "Problémové súbory" sa zobrazujú súbory, ktoré možno použiť na prepojenie modulov DEFORM vo vybranom priečinku, a na karte "Všetky súbory" sa zobrazujú všetky súbory a priečinky vo vybranom priečinku.
 
-###   
-Problem Files tab
+###
+Karta Problémové súbory
 
-Problem Files tab as shown in Fig. 4.1.7. shows the .DB, .KEY and Project files.
+Na karte Problémové súbory, ako je znázornené na obr. 4.1.7, sú zobrazené súbory .DB, .KEY a Project.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image007.jpg' | relative_url }})
 
-Problem Files Tab
+Karta Problémové súbory
 
-### All Files tab
+### Karta Všetky súbory
 
-All Files tab as shown in Fig. 4.1.8. shows the all files and folders available inside the project folder. Under “All Files” tab user is provided with Filter option to filter files based on the file extension for easier viewing, see Fig. 4.1.9. .
+Na karte All Files (Všetky súbory), ako je znázornené na obr. 4.1.8, sú zobrazené všetky súbory a priečinky dostupné v priečinku projektu. V záložke "Všetky súbory" má používateľ k dispozícii možnosť Filter (Filtrovanie) na filtrovanie súborov na základe prípony súboru pre jednoduchšie zobrazenie, pozri obr. 4.1.9. .
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image008.jpg' | relative_url }})
 
-All Files Tab
+Karta Všetky súbory
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image009.jpg' | relative_url }})
 
-Filter files option under All File tab
+Možnosť filtrovania súborov na karte Všetky súbory
 
-###   
+###
   
-Right mouse button click menu for Problem Files
+Ponuka kliknutia pravým tlačidlom myši pre problémové súbory
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image010.jpg' | relative_url }})
 
-Right mouse button click menu for Problem Files
+Ponuka kliknutia pravým tlačidlom myši pre problémové súbory
 
-**Duplicate** : Using the Duplicate option we can make a duplicate copy of a file or folder with new name in the source folder.  
-**Delete**![]({{ '/assets/icons/pre_icons/mo_delete_folder_icon.jpg' | relative_url }}) : User can delete the folder or file from the system using this option from RMB options on a folder.  
-**Rename(F2)** : Folder or file name can be renamed using this option from RMB options or F2 key on a folder.  
-**Edit with Edito****r** : This option is applicable only for keyfile. Using this option user can open the file in text editor to view the file content or edit.
+**Duplikát** : Pomocou možnosti Duplikovať môžeme vytvoriť duplicitnú kópiu súboru alebo priečinka s novým názvom v zdrojovom priečinku.  
+**Delete**![]({{ '/assets/icons/pre_icons/mo_delete_folder_icon.jpg' | relative_url }}) : Používateľ môže odstrániť priečinok alebo súbor zo systému pomocou tejto možnosti z možností RMB na priečinku.  
+**Názov(F2)** : Názov priečinka alebo súboru možno premenovať pomocou tejto možnosti z možností RMB alebo klávesom F2 na priečinku.  
+**Upraviť pomocou Edito****r** : Táto možnosť sa vzťahuje len na súbor s kľúčom. Pomocou tejto možnosti môže používateľ otvoriť súbor v textovom editore a zobraziť jeho obsah alebo ho upraviť.
 
-## Menu Bar
+## Panel ponuky
 
-Several options are provided under different menus in GUI Main to access project folders, navigated between folders and links to various modules. All menu options are made available using ![]({{ '/assets/icons/pre_icons/mo_menu_bar_icon.jpg' | relative_url }}) icon available in GUI Main, see Fig. 4.1.11.
+V rôznych ponukách grafického rozhrania Main je k dispozícii niekoľko možností na prístup k priečinkom projektu, navigáciu medzi priečinkami a odkazy na rôzne moduly. Všetky možnosti menu sú sprístupnené pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_menu_bar_icon.jpg' | relative_url }}) dostupnej v GUI Main, pozri obr. 4.1.11.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image011.jpg' | relative_url }})
 
-Menu popup
+Vyskakovacie menu
 
-### File Menu
+### Menu súborov
 
-The below Fig. 4.1.12. shows the options under File menu in GUI Main.
+Na nasledujúcom obr. 4.1.12. sú zobrazené možnosti v ponuke File (Súbor) v hlavnom grafickom rozhraní.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image012.jpg' | relative_url }})
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image013.jpg' | relative_url }})
 
-File menu Options
+Možnosti ponuky Súbor
 
   
   
-**New Problem![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) : **User can create a new problem by either selecting **![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }})** New Problem. New Problem creation option is available from file menu, tool bar, from links under Folder and RMB options on an empty folder.  
-When user clicks on New problem, the New Problem window will appear as shown in Fig. 4.1.13.). 
+**Nový problém![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) : **Užívateľ môže vytvoriť nový problém buď výberom **![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }})** Nový problém. Možnosť vytvorenia New Problem (Nový problém) je dostupná z ponuky súborov, z panela nástrojov, z odkazov v rámci možností Folder (Priečinok) a RMB na prázdnom priečinku.  
+Keď používateľ klikne na New problem (Nový problém), zobrazí sa okno New Problem (Nový problém), ako je znázornené na obr. 4.1.13).
 
-**Create New** : User can use “Create New” to start new problem setup using one of the modules of DEFORM. New Problem dialog shows the lists of modules available in DEFORM when user selects “Create New” option, then user can select wizard like 2D3D Pre / Integrated Manufacturing Proc. or any Template and unit system for the new problem. User can specify the problem location on system in Location field and define problem name in Name field and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
+**Vytvoriť nový** : Používateľ môže použiť "Create New" (Vytvoriť nový) na začatie nového nastavenia problému pomocou jedného z modulov DEFORM. Dialógové okno New Problem (Nový problém) zobrazí zoznamy modulov dostupných v programe DEFORM, keď používateľ vyberie možnosť "Create New" (Vytvoriť nový), potom môže vybrať sprievodcu, ako napríklad 2D3D Pre / Integrated Manufacturing Proc. (2D3D Pre / Integrovaný výrobný postup) alebo akúkoľvek šablónu a systém jednotiek pre nový problém. Používateľ môže určiť umiestnenie problému v systéme v poli Location (Umiestnenie) a definovať názov problému v poli Name (Názov) a kliknúť na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image014.jpg' | relative_url }})
 
-New problem - Create New category
+Nový problém - Vytvoriť novú kategóriu
 
-**Import Template** : User can start new problem setup with saved User Defined Templates (see Fig. 4.1.14.). Location of the templates can be browsed and required template can be selected. User can specify the problem location on system in Location field and define problem name in Name field and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). New project will be opened along with the data from user defined template.
+**Import šablóny** : Používateľ môže začať nové nastavenie problému pomocou uložených Šablón definovaných používateľom (pozri obr. 4.1.14.). Umiestnenie šablón možno prehliadať a požadovanú šablónu možno vybrať. Používateľ môže v poli Location (Umiestnenie) určiť umiestnenie problému v systéme a v poli Name (Názov) definovať názov problému a kliknúť na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). Otvorí sa nový projekt spolu s údajmi zo šablóny definovanej používateľom.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image015.jpg' | relative_url }})
 
-New problem - Import Template category
+Nový problém - kategória Import šablóny
 
-**Import Example** : User can start new problem by copying the data from one of the Example keyfile to the Project folder (see Fig. 4.1.15.). If user check the Open Pre-processor check box and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), then selected example will be copied to the project folder and will be opened in 2D/3D Pre-Processor.
+**Príklad importu** : Používateľ môže začať nový problém skopírovaním údajov z jedného z kľúčových súborov Príklad do priečinka Projekt (pozri obr. 4.1.15.). Ak používateľ začiarkne políčko Open Pre-processor (Otvoriť preprocesor) a klikne na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), potom sa vybraný príklad skopíruje do priečinka projektu a otvorí sa v 2D/3D preprocesore.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image016.jpg' | relative_url }})
 
-New problem - Import Example category
+Nový problém - Importovať kategóriu Príklad
 
   
-**New Folder** ![]({{ '/assets/icons/pre_icons/mo_new_folder_icon.jpg' | relative_url }}): Using this option user can create New Sub Folder in the selected folder.  
-**Quit (Ctrl +Q)** ![]({{ '/assets/icons/pre_icons/mo_quit_icon.jpg' | relative_url }}): The quit option is used to exit from DEFORM GUI Main.
+**Nový priečinok** ![]({{ '/assets/icons/pre_icons/mo_new_folder_icon.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ vytvoriť nový podpriečinok vo vybranom priečinku.  
+**Ukončenie (Ctrl +Q)** ![]({{ '/assets/icons/pre_icons/mo_quit_icon.jpg' | relative_url }}): Možnosť ukončenia sa používa na ukončenie hlavného grafického rozhrania DEFORM.
 
-### Edit
+### Upraviť
 
-The below Fig. 4.1.16. shows the Edit menu options in GUI.
+Na nasledujúcom obr. 4.1.16. sú zobrazené možnosti ponuky Edit v grafickom používateľskom rozhraní.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image017.jpg' | relative_url }})
 
-Edit menu option
+Možnosť Upraviť menu
 
-**Copy![]({{ '/assets/icons/pre_icons/mo_copy_file_icon.jpg' | relative_url }})** : Using this option user can copy the selected project.  
-**Paste![]({{ '/assets/icons/pre_icons/mo_paste_file_icon.jpg' | relative_url }})** : Using this option user can paste the copied project inside the selected Problem Folder.
+**Copy![]({{ '/assets/icons/pre_icons/mo_copy_file_icon.jpg' | relative_url }})** : Pomocou tejto možnosti môže používateľ skopírovať vybraný projekt.  
+**Vložiť![]({{ '/assets/icons/pre_icons/mo_paste_file_icon.jpg' | relative_url }})** : Pomocou tejto možnosti môže používateľ skopírovaný projekt vložiť do vybraného problémového priečinka.
 
-###   
-View Menu
+###
+Zobraziť menu
 
-The below Fig. 4.1.17. shows the View menu options in GUI.
+Na nasledujúcom obrázku 4.1.17. sú zobrazené možnosti ponuky View (Zobraziť) v grafickom používateľskom rozhraní.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image018.jpg' | relative_url }})
 
-View menu option
+Možnosť Zobraziť ponuku
 
   
   
-**Tool bar:** User can control the display of the tool bars by checking and unchecking under Tool bar as shown in Fig. 4.1.18.
+**Pás s nástrojmi:** Používateľ môže ovládať zobrazenie panelov s nástrojmi začiarknutím a zrušením začiarknutia v časti Panel s nástrojmi, ako je znázornené na obr. 4.1.18.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image019.jpg' | relative_url }})
 
-Tool bar option
+Možnosť panela nástrojov
 
-**Standard** : The user will be provided with some standard option (New problem, Browse folder, Back, Forward, ...etc) under the menu bar. The icons on tool bar are updated based on the folder selected and the project type within it.  
-**Layout** : The user will be provided with Toggle buttons to control the display of various sections in GUI Main or change layouts as shown in Fig. 4.1.19. Various options in Layout tool bar are,
+**Standard** : Používateľovi sa na paneli s ponukami zobrazia niektoré štandardné možnosti (Nový problém, Prehľadávať priečinok, Späť, Dopredu, ...atď.). Ikony na paneli nástrojov sa aktualizujú na základe vybraného priečinka a typu projektu v ňom.  
+**Rozloženie** : Používateľ bude mať k dispozícii prepínacie tlačidlá na ovládanie zobrazenia rôznych sekcií v GUI Main alebo na zmenu rozloženia, ako je znázornené na obr. 4.1.19. Na paneli nástrojov Layout (Rozloženie) sa nachádzajú rôzne možnosti,
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image020.jpg' | relative_url }})
 
-Layout options
+Možnosti rozloženia
 
-**Toggle Folders![]({{ '/assets/icons/pre_icons/mo_toggle_folder_button.jpg' | relative_url }})** : This button is used to Show/Hide the Primary Directory in display.  
-**Toggle Files** ![]({{ '/assets/icons/pre_icons/mo_toggle_file_icon.jpg' | relative_url }}): This button is used to Show/Hide the Files window to display.  
-**Toggle Properties** ![]({{ '/assets/icons/pre_icons/mo_toggle_properties_icon.jpg' | relative_url }}) : This button is used to activate the Properties window to display.  
-**Toggle Actions** ![]({{ '/assets/icons/pre_icons/mo_toggle_action_icon.jpg' | relative_url }}): This button is used to activate the Actions window to display.  
-**No split** ![]({{ '/assets/icons/pre_icons/mo_no_split_icon.jpg' | relative_url }}): This button is used not to split the Preview and message tabs.  
-**Left right split** ![]({{ '/assets/icons/pre_icons/mo_left_right_split_icon.jpg' | relative_url }}): This button is used to split the Preview and message tabs left and right.  
-**Up down split** ![]({{ '/assets/icons/pre_icons/mo_up_down_icon.jpg' | relative_url }}): This button is used to split the Preview and message tabs up and down.  
-**Layout Preferences** ![]({{ '/assets/icons/pre_icons/mo_layout_preferences_icon.jpg' | relative_url }}): This button is used to open the layout preferences window.
+**Prepínač priečinkov![]({{ '/assets/icons/pre_icons/mo_toggle_folder_button.jpg' | relative_url }})** : Toto tlačidlo sa používa na zobrazenie/skrytie primárneho adresára na displeji.  
+**Prepínač súborov** ![]({{ '/assets/icons/pre_icons/mo_toggle_file_icon.jpg' | relative_url }}): Toto tlačidlo sa používa na zobrazenie/skrytie okna súborov.  
+**Prepínač Vlastnosti** ![]({{ '/assets/icons/pre_icons/mo_toggle_properties_icon.jpg' | relative_url }}) : Toto tlačidlo sa používa na aktiváciu zobrazenia okna Vlastnosti.  
+**Prepínač Akcie** ![]({{ '/assets/icons/pre_icons/mo_toggle_action_icon.jpg' | relative_url }}): Toto tlačidlo sa používa na aktiváciu zobrazenia okna Akcie.  
+**Nie rozdeliť** ![]({{ '/assets/icons/pre_icons/mo_no_split_icon.jpg' | relative_url }}): Toto tlačidlo sa nepoužíva na rozdelenie kariet Náhľad a Správa.  
+**Delenie vľavo vpravo** ![]({{ '/assets/icons/pre_icons/mo_left_right_split_icon.jpg' | relative_url }}): Toto tlačidlo sa používa na rozdelenie kariet Náhľad a Správa vľavo a vpravo.  
+**Rozdelenie nahor a nadol** ![]({{ '/assets/icons/pre_icons/mo_up_down_icon.jpg' | relative_url }}): Toto tlačidlo sa používa na rozdelenie kariet Náhľad a Správa nahor a nadol.  
+**Predvoľby rozloženia** ![]({{ '/assets/icons/pre_icons/mo_layout_preferences_icon.jpg' | relative_url }}): Toto tlačidlo slúži na otvorenie okna predvolieb rozloženia.
 
-**Status Bar** : The user can hide and show status bar by unchecking and checking this option under view menu bar.  
-**Home![]({{ '/assets/icons/pre_icons/mo_home_icon.jpg' | relative_url }})** : Using this option user can go to Home directory as indicated in Environment settings.  
-**Back****(Ctrl +B)![]({{ '/assets/icons/pre_icons/mo_back_icon.jpg' | relative_url }})** : This option is used to navigate back to previously selected path under Explorer tab.  
-**Forward (Ctrl +F)** ![]({{ '/assets/icons/pre_icons/mo_forward_icon.jpg' | relative_url }}): This option is used to navigate to problem path under Explorer tab before “Back” option is used.   
-**Up (Ctrl +U)** ![]({{ '/assets/icons/pre_icons/mo_up_arrow_iocn.jpg' | relative_url }}): This option is used to navigate to one level above the current selected directory under Explorer tab.  
-**Refresh (F5)** : This option is used to Refresh the GUI Main.   
-**Scan Subdirectory** ![]({{ '/assets/icons/pre_icons/mo_scan_subdirectory_button.jpg' | relative_url }}): This option is used to display the image files of every problem under the current selected problem directory. User can open the respective problem folder by double click on the image file.
+**Stavový riadok** : Používateľ môže skryť a zobraziť stavový riadok zrušením začiarknutia a začiarknutím tejto možnosti v ponuke zobrazenia.  
+**Domov![]({{ '/assets/icons/pre_icons/mo_home_icon.jpg' | relative_url }})** : Pomocou tejto možnosti môže používateľ prejsť do adresára Home, ako je uvedené v nastaveniach prostredia.  
+**Back****(Ctrl +B)![]({{ '/assets/icons/pre_icons/mo_back_icon.jpg' | relative_url }})** : Táto možnosť sa používa na navigáciu späť na predtým zvolenú cestu na karte Prieskumník.  
+**Prechod dopredu (Ctrl +F)** ![]({{ '/assets/icons/pre_icons/mo_forward_icon.jpg' | relative_url }}): Táto možnosť sa používa na prechod na problémovú cestu na karte Prieskumník pred použitím možnosti "Späť".   
+**Nahor (Ctrl +U)** ![]({{ '/assets/icons/pre_icons/mo_up_arrow_iocn.jpg' | relative_url }}): Táto možnosť sa používa na prechod na jednu úroveň nad aktuálne vybraný adresár na karte Prieskumník.  
+**Obnoviť (F5)** : Táto možnosť sa používa na obnovenie hlavného grafického rozhrania.   
+**Scan Subdirectory** ![]({{ '/assets/icons/pre_icons/mo_scan_subdirectory_button.jpg' | relative_url }}): Táto možnosť sa používa na zobrazenie obrazových súborov každého problému v aktuálne vybranom adresári problému. Používateľ môže otvoriť príslušný priečinok s problémami dvojitým kliknutím na súbor s obrázkom.
 
-**Rescan problems** option is available when we right click on the image file zone which is used to again scan the respective problem directory and refresh the list of problems as shown in Fig. 4.1.20.
+Po kliknutí pravým tlačidlom myši na zónu obrazového súboru je k dispozícii možnosť **Preskenovať problémy**, ktorá sa používa na opätovné skenovanie príslušného adresára s problémami a obnovenie zoznamu problémov, ako je znázornené na obr. 4.1.20.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image021.jpg' | relative_url }})
 
-Rescanning the problems
+Preskúmanie problémov
 
-### Pre-Processor Menu
+### Ponuka predbežného procesora
 
-The below Fig. 4.1.21. shows the Pre-Processor menu options which are available at both menu bar and in the toggle actions window under Pre-Processor. The options displayed under “Pre-Processor” depends upon the selected folder and project type within it. For ex., if a forming express project is selected then user is provided with Forming express operation, Integrated Manufacturing Proc. and 2D/3D Pre options. 
+Na nasledujúcom obrázku 4.1.21. sú zobrazené možnosti ponuky Pre-Processor, ktoré sú k dispozícii na paneli ponúk aj v okne prepínacích akcií v časti Pre-Processor. Možnosti zobrazené v časti "Pre-Processor" závisia od vybraného priečinka a typu projektu v ňom. Ak je napríklad vybraný projekt Forming express (Tvarovanie expres), potom sa používateľovi zobrazia možnosti Forming express operation (Tvarovanie expres), Integrated Manufacturing Proc. (Integrované výrobné postupy) a 2D/3D Pre.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image022.jpg' | relative_url }})
 
-Pre-Processor menu option
+Možnosť ponuky Pre-Processor
 
-###   
-Simulation Menu
+###
+Ponuka simulácie
 
-The below Fig. 4.1.22. shows the simulation menu options which are available at both menu bar and in the toggle actions window under Simulator. Depending upon the selected project folder or empty folder simulator options will be updated.
+Na nasledujúcom obr. 4.1.22. sú zobrazené možnosti ponuky simulácie, ktoré sú k dispozícii na paneli ponúk aj v okne prepínania akcií v časti Simulátor. V závislosti od vybraného priečinka projektu alebo prázdneho priečinka sa aktualizujú možnosti simulátora.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image023.jpg' | relative_url }})
 
-Simulator menu option
+Možnosť ponuky Simulátor
 
-**Run** ![]({{ '/assets/icons/simulator_icons/mo_run_icon.jpg' | relative_url }}): This option is used to run the job   
-**Run (options)** ![]({{ '/assets/icons/simulator_icons/run_option_icon.jpg' | relative_url }}): This option is used to open Run option popup for more detailed settings to simulate the selected project.  
-**Add to Queue** ![]({{ '/assets/icons/simulator_icons/mo_add_to_queue_icon.jpg' | relative_url }}): It is used to add the selected jobs to queue for simulation.  
-**Stop**![]({{ '/assets/icons/simulator_icons/mo_stop_icon.jpg' | relative_url }}) : This option is used to Stop the selected job that is simulating.  
-**Continue** ![]({{ '/assets/icons/simulator_icons/mo_continue_icon.jpg' | relative_url }}): This option is used to continue the job that was stopped prematurely.  
-**Process Monitor**![]({{ '/assets/icons/simulator_icons/mo_process_monitor_icon.jpg' | relative_url }}) : The process monitor displays the status of all simulations running on the CPU.  
-**Simulation Graphics** ![]({{ '/assets/icons/simulator_icons/mo_simulation_graphics_icon.jpg' | relative_url }}): This option is used to monitor the simulating problem.
+**Run** ![]({{ '/assets/icons/simulator_icons/mo_run_icon.jpg' | relative_url }}): Táto možnosť sa používa na spustenie úlohy
+**Run (options)** ![]({{ '/assets/icons/simulator_icons/run_option_icon.jpg' | relative_url }}): Táto možnosť sa používa na otvorenie vyskakovacieho okna Run option (Spustiť) pre podrobnejšie nastavenia simulácie vybraného projektu.  
+**Pridať do frontu** ![]({{ '/assets/icons/simulator_icons/mo_add_to_queue_icon.jpg' | relative_url }}): Používa sa na pridanie vybraných úloh do frontu na simuláciu.  
+**Stop**![]({{ '/assets/icons/simulator_icons/mo_stop_icon.jpg' | relative_url }}) : Táto možnosť sa používa na zastavenie vybranej úlohy, ktorá sa simuluje.  
+**Pokračovať** ![]({{ '/assets/icons/simulator_icons/mo_continue_icon.jpg' | relative_url }}): Táto možnosť sa používa na pokračovanie úlohy, ktorá bola predčasne zastavená.  
+**Monitor procesov**![]({{ '/assets/icons/simulator_icons/mo_process_monitor_icon.jpg' | relative_url }}) : Monitor procesov zobrazuje stav všetkých simulácií spustených na CPU.  
+**Simulačná grafika** ![]({{ '/assets/icons/simulator_icons/mo_simulation_graphics_icon.jpg' | relative_url }}): Táto možnosť sa používa na monitorovanie problému simulácie.
 
-For more information about these options, please refer [Chapter 23. DEFORM Simulator](/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/).
+Ďalšie informácie o týchto možnostiach nájdete v časti [Chapter 23. DEFORM Simulator](/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/).
 
-###   
-Post Processor Menu
+###
+Ponuka postprocesora
 
-The below Fig. 4.1.23. shows the Post Processor menu options which are available at both menu bar and in the toggle actions window under Post Processor depending upon the selected project folder and the project within it. If the selected folder has DOE or Optimization project within it then DOE Post module will be made available.
+Na nasledujúcom obrázku 4.1.23. sú zobrazené možnosti ponuky Post Processor, ktoré sú k dispozícii na paneli ponúk aj v okne prepínania akcií v časti Post Processor v závislosti od vybraného priečinka projektu a projektu v ňom. Ak vybraný priečinok obsahuje projekt DOE alebo Optimization (Optimalizácia) v rámci neho, sprístupní sa modul DOE Post Processor (Postavenie DOE).
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image024.jpg' | relative_url }})
 
-Post Processor menu option
+Možnosť ponuky Post Processor
 
   
-**2D/3D post:** This option is used to open Next gen Post, for more information refer [Post-Poocessor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/).  
-**DOE Post** : This option is used to open DOE Post, for more information refer [DOE Post processor](/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/).  
-**DEFORM Viewer** : This option is used to open Deform Viewer, for more information refer DEFORM Viewer.  
-**Material Suite:** This option is used to open Material Suite, for more information refer Material Suite.
+**2D/3D post:** Táto možnosť sa používa na otvorenie Next gen Post, viac informácií nájdete v [Post-Poocessor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/).  
+**DOE Post** : Táto možnosť sa používa na otvorenie DOE Post, viac informácií nájdete v [DOE Post processor](/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/).  
+**DEFORM Viewer** : Táto možnosť sa používa na otvorenie prehliadača deformácií, viac informácií nájdete v časti DEFORM Viewer.  
+**Súbor materiálov:** Táto možnosť sa používa na otvorenie súboru materiálov, viac informácií nájdete v časti Súbor materiálov.
 
-###   
-Tool Menu
+###
+Ponuka nástrojov
 
-The below Fig. 4.1.24. shows the options under Tools menu in GUI Main.
+Na nasledujúcom obr. 4.1.24. sú zobrazené možnosti v ponuke Tools (Nástroje) v hlavnom grafickom rozhraní.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image025.jpg' | relative_url }})
 
-Tool menu option
+Možnosť ponuky nástrojov
 
   
-**Database Manager![]({{ '/assets/icons/pre_icons/mo_database_manager_icon.jpg' | relative_url }})**  
-Database Manager helps the user to manage the size of the database. In DB manager we can perform Purge, Merge and Convert operation.
+**Správca databázy![]({{ '/assets/icons/pre_icons/mo_database_manager_icon.jpg' | relative_url }})**
+Database Manager pomáha používateľovi spravovať veľkosť databázy. V správcovi DB môžeme vykonávať operácie Purge (vyčistiť), Merge (zlúčiť) a Convert (konvertovať).
 
-**Purge** : Purge can be used to reduce the size of the DB by removing irrelevant saved steps. To purge the database, user must select the required steps from the step list of the selected database![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Click on Purge tab![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Enter the location and name to save the purged database in “ To ” ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) and then click on “ Save Selected Steps ” as shown in Fig. 4.1.25.
+**Purge** : Vyčistenie možno použiť na zmenšenie veľkosti DB odstránením nerelevantných uložených krokov. Ak chcete databázu prečistiť, používateľ musí vybrať požadované kroky zo zoznamu krokov vybranej databázy![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Kliknite na záložku Purge (Prečistiť)![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Do políčka " To " ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) zadajte umiestnenie a názov, kam chcete prečistenú databázu uložiť, a potom kliknite na " Save Selected Steps (Uložiť vybrané kroky) ", ako je znázornené na obr. 4.1.25.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image026.jpg' | relative_url }})
 
-Purge Database window
+Okno Vyčistiť databázu
 
-**Merge** : Option used to merge the two databases into one database. For merging database, select .DB files to be merged in “Database 1” and “Database 2” field ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Enter the new location and name for the new DB file in “To” field ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) and then click on “Start Merging” as show in Fig. 4.1.26.
+**Zlúčenie** : Možnosť slúži na zlúčenie dvoch databáz do jednej databázy. Na zlúčenie databázy vyberte súbory .DB, ktoré sa majú zlúčiť, v poli "Database 1" (Databáza 1) a "Database 2" (Databáza 2) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Do poľa "To" (Do) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) zadajte nové umiestnenie a názov nového súboru DB a potom kliknite na tlačidlo "Start Merging" (Spustiť zlúčenie), ako je znázornené na obr. 4.1.26.
 
-Note:  
-For merging, the database should have same mesh number and step number should be continues.
+Poznámka:
+Na zlúčenie by mala mať databáza rovnaké číslo oka a číslo kroku by malo pokračovať.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image027.jpg' | relative_url }})
 
-Merge Database window
+Okno Zlúčenie databázy
 
-**Convert** : This option is used to convert the older version database to newer version. To convert select the older version database ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Enter the new location and name for the new DB file in “To” field ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})and then click on “Start Converting” button in converting tab as shown in Fig. 4.1.27.
+**Konvertovať** : Táto možnosť sa používa na prevod staršej verzie databázy na novšiu verziu. Ak chcete konvertovať, vyberte staršiu verziu databázy ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Do poľa "To" (Do) zadajte nové umiestnenie a názov nového súboru DB ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})a potom kliknite na tlačidlo "Start Converting" (Spustiť konverziu) na karte konvertovania, ako je znázornené na obr. 4.1.27.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image028.jpg' | relative_url }})
 
-Convert window
+Previesť okno
 
-**Database Archive**  
-This function is used to get a completed project down to a size to fit on archive media (like a DVD) for backup or distribution, See Fig. 4.1.28. This option is also available in from RMB menu of a folder. User can set “Destination” and “Options” and click on “Archive” to start archiving.  
-In “Destination” tab user can enter the location on system in “Location” field and archive name in “Archive Name” field.
+**Archív databázy**
+Táto funkcia sa používa na zmenšenie dokončeného projektu na veľkosť, ktorá sa zmestí na archívne médium (napríklad DVD) na zálohovanie alebo distribúciu, pozri obr. 4.1.28. Táto možnosť je k dispozícii aj v ponuke RMB priečinka. Používateľ môže nastaviť "Destination (Cieľ)" a "Options (Možnosti)" a kliknutím na "Archive (Archivovať)" spustiť archiváciu.  
+V záložke "Cieľ" môže používateľ zadať umiestnenie v systéme do poľa "Umiestnenie" a názov archívu do poľa "Názov archívu".
 
-This option is used to Archive Project files, project databases and DOE/OPT databases by selecting respective checkboxes. 
+Táto možnosť sa používa na archiváciu projektových súborov, projektových databáz a databáz DOE/OPT zaškrtnutím príslušných políčok.
 
-**No Purge** : User can archive database without purging the database using this option.
+**No Purge** : Pomocou tejto možnosti môže používateľ archivovať databázu bez čistenia databázy.
 
-**Save first/last steps** : User can archive database by purging database and retaining only first and last steps of the database.
+**Uložiť prvý/posledný krok** : Používateľ môže archivovať databázu vyčistením databázy a zachovaním len prvého a posledného kroku databázy.
 
-**Save Operation start/end steps** : User can archive database by purging database and retaining only start and end step of the Operation.
+**Uloženie krokov začiatku/konca operácie** : Používateľ môže archivovať databázu vyčistením databázy a zachovaním iba počiatočného a koncového kroku operácie.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image029.jpg' | relative_url }})
 
-Database Archive
+Archív databázy
 
   
-**Clean up Files![]({{ '/assets/icons/pre_icons/mo_clean_up_files_icon.jpg' | relative_url }})**
+**Upratovanie súborov![]({{ '/assets/icons/pre_icons/mo_clean_up_files_icon.jpg' | relative_url }})**
 
-It is used to remove the temporary files in the problem directory which was created while running simulation.
+Používa sa na odstránenie dočasných súborov v problémovom adresári, ktoré boli vytvorené počas simulácie.
 
-**Clean up Running status![]({{ '/assets/icons/pre_icons/mo_clean_up_running_status_icon.jpg' | relative_url }})**  
-It is used to remove the running status files in the problem directory if the running status file retained.
+**Čistenie stavu behu![]({{ '/assets/icons/pre_icons/mo_clean_up_running_status_icon.jpg' | relative_url }})**
+Používa sa na odstránenie súborov so stavom behu v adresári s problémami, ak sa súbor so stavom behu zachoval.
 
-### Options
+### Možnosti
 
-The user can adjust the DEFORM working environment using environment option. Here the user can make changes in display and graphical settings and can save the settings as for his convenience.(See Fig. 4.1.29.)
+Používateľ môže nastaviť pracovné prostredie DEFORM pomocou možnosti prostredia. Tu môže používateľ vykonať zmeny v zobrazovaní a grafických nastaveniach a môže si ich uložiť podľa svojho pohodlia (pozri obr. 4.1.29).
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image030.jpg' | relative_url }})
 
-Options menu
+Ponuka možností
 
-**Environment** : The user can adjust the DEFORM working environment using environment option. Here the user can make changes in display and graphical settings and can save the settings as for his convenience. Setting will update from next session onwards.  
+**Prostredie** : Používateľ môže nastaviť pracovné prostredie DEFORM pomocou možnosti prostredia. Tu môže používateľ vykonať zmeny v zobrazovaní a grafických nastaveniach a môže si tieto nastavenia uložiť podľa svojho pohodlia. Nastavenia sa budú aktualizovať od nasledujúcej relácie.  
 ****
 
-  * Region:
+  * Región:
 
-The user can select the preferred language under Language option and set to English or SI units under Unit option as a Default unit system for a new problem. The user can select the standards for materials under Material Library to be used as a default for importing materials in the problem. (See Fig. 4.1.30.).
+Používateľ môže vybrať preferovaný jazyk v položke Language (Jazyk) a nastaviť anglický jazyk alebo jednotky SI v položke Unit (Jednotka) ako predvolený systém jednotiek pre nový problém. Používateľ môže vybrať normy pre materiály v položke Material Library (Knižnica materiálov), ktoré sa majú použiť ako predvolené pre import materiálov v probléme. (Pozri obr. 4.1.30.).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image024.jpg' | relative_url }})
 
-Region options under Environment Settings window
+Možnosti regiónu v okne Nastavenia prostredia
 
-  * User Type:
+  * Typ používateľa:
 
-User Type option under Environment Settings window appears as shown in Fig. 4.1.31. Depending on the user type the default conditions and pop-up windows are activated. 
+V okne Nastavenia prostredia sa zobrazí možnosť Typ používateľa, ako je znázornené na obr. 4.1.31. V závislosti od typu používateľa sa aktivujú predvolené podmienky a vyskakovacie okná.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image025.jpg' | relative_url }})
 
-User type options under Environment Settings window
+Možnosti typu používateľa v okne Nastavenia prostredia
 
-  * **Novice** : If the user is new to DEFORM then this option is preferred.
-  * I**ntermediate** : This option is for an user who is bit familiar to DEFORM environment. For example, if we select quit option in the GUI, a pop up appears with a message " Do you want to quit", the user can click "Yes" to exit from GUI. 
-  * **Advanced:** This option is for an user who is well aware of DEFORM, he can eliminate few pop-ups. For example, if we select quit option in the GUI, Deform will close without a popup warning message.
+  * **Novice** : Ak je používateľ v programe DEFORM nový, uprednostňuje sa táto možnosť.
+  * I** stredne pokročilý** : Táto možnosť je určená pre používateľa, ktorý je trochu oboznámený s prostredím DEFORM. Ak napríklad v grafickom používateľskom rozhraní vyberieme možnosť quit (ukončiť), zobrazí sa vyskakovacie okno so správou " Do you want to quit (Chcete ukončiť)" (Chcete ukončiť), používateľ môže kliknúť na tlačidlo "Yes (Áno)" (Ukončiť), aby opustil grafické používateľské rozhranie.
+  * **Pokročilé:** Táto možnosť je určená pre používateľa, ktorý dobre pozná DEFORM, môže odstrániť niekoľko vyskakovacích okien. Ak napríklad v grafickom používateľskom rozhraní vyberieme možnosť quit (Ukončiť), program DEFORM sa zatvorí bez vyskakovacieho varovného hlásenia.
 
-  * User Directory:
+  * Adresár používateľov:
 
-User Directory option under Environment Settings window appears as shown in Fig. 4.1.32. The user can browse for the required location to set it as the working directory under Problem, this directory will be used as a default location to store the generated DB's, key files and working files related to DEFORM. The path under Library root will be used as a default path to store the user data generated in DEFORM.The path under Geometry import will be used as the default path to access the geometries, which can be a problem directory itself. If it is a different location it has to be mentioned under geometry import path separately for 2D and 3D. The temporary files generated while running deform are in the specified path under Temporary Directory.
+V okne Nastavenia prostredia sa zobrazí možnosť Adresár používateľov, ako je znázornené na obr. 4.1.32. Používateľ môže vyhľadať požadované umiestnenie a nastaviť ho ako pracovný adresár v časti Problem (Problém), tento adresár sa bude používať ako predvolené umiestnenie na ukladanie vygenerovaných DB, kľúčových súborov a pracovných súborov súvisiacich s DEFORM. Cesta v položke Library root (Knižničný koreň) sa použije ako predvolená cesta na uloženie používateľských údajov vygenerovaných v programe DEFORM. cesta v položke Geometry import (Import geometrie) sa použije ako predvolená cesta na prístup ku geometriám, čo môže byť samotný adresár Problem (Problém). Ak ide o iné umiestnenie, musí byť uvedené pod cestou importu geometrie samostatne pre 2D a 3D. Dočasné súbory vytvorené pri spustení deformácie sa nachádzajú v uvedenej ceste v položke Temporary Directory (Dočasný adresár).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image026.jpg' | relative_url }})
 
-User directory options under Environment Settings window
+Možnosti používateľského adresára v okne Nastavenia prostredia
 
-  * System Directory:
+  * Systémový adresár:
 
-System Directory option under Environment Settings window appears as shown in Fig. 4.1.33. Only Advanced user type selection (as mentioned in user type section) activates this tab access to user. Using this option user can change the DEFORM material, press and equipment library path under respective fields, this directory will be used as a default location for the material, press and equipment library in DEFORM. By default these are pointed to the DEFORM library available in the installation location, user can changed to user library paths, this path will be called when import material, movement or insert geometries are selected from DEFORM GUI.
+V okne Nastavenia prostredia sa zobrazí možnosť Systémový adresár, ako je znázornené na obr. 4.1.33. Prístup k tejto karte používateľovi aktivuje iba výber Advanced user type (ako je uvedené v časti User type). Pomocou tejto možnosti môže používateľ zmeniť cestu ku knižnici materiálov, lisov a zariadení DEFORM v príslušných poliach, tento adresár sa bude používať ako predvolené umiestnenie pre knižnicu materiálov, lisov a zariadení v programe DEFORM. V predvolenom nastavení sú tieto adresáre nasmerované na knižnicu DEFORM dostupnú v mieste inštalácie, používateľ ich môže zmeniť na používateľské cesty ku knižniciam, táto cesta bude vyvolaná pri výbere importu materiálu, pohybu alebo vloženia geometrie z grafického rozhrania DEFORM.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image048.jpg' | relative_url }})
 
-System directories options under Environment settings window
+Možnosti systémových adresárov v okne Nastavenia prostredia
 
-  * Simulation Option: 
+  * Možnosť simulácie:
 
-In DEFORM - V12, default settings to run a Simulation can be set using options under Simulation Option tab in Environment settings. Simulation Options window appears as shown in Fig. 4.1.34. By turning on the Keep Message Files DEFORM saves simulation messages without overwriting even after remesh. User can turn on Parallel meshing and set it as default for all simulations, user can apply the parallel meshing either to Solid or to both Solid+Surface. User can turn on No automatic remeshing as default setting for simulations so that simulation can skip the automatic remesh due to non-convergence. The default settings can be changed for each simulation from Run options dialog.
+V programe DEFORM - V12 možno predvolené nastavenia na spustenie simulácie nastaviť pomocou možností na karte Simulation Option v nastaveniach prostredia. Zobrazí sa okno Simulation Options (Možnosti simulácie), ako je znázornené na obr. 4.1.34. Zapnutím možnosti Keep Message Files (Uchovávať súbory správ) DEFORM ukladá simulačné správy bez prepisovania aj po opätovnom premietnutí. Používateľ môže zapnúť Parallel meshing (Paralelné sieťovanie) a nastaviť ho ako predvolené pre všetky simulácie, používateľ môže aplikovať paralelné sieťovanie buď na Solid (Teleso), alebo na obidva Solid+Surface (Teleso+Povrch). Používateľ môže zapnúť No automatic remeshing (Žiadne automatické remeshovanie) ako predvolené nastavenie pre simulácie, aby simulácia mohla preskočiť automatické remeshovanie z dôvodu nekonvergencie. Predvolené nastavenia možno zmeniť pre každú simuláciu v dialógovom okne Run options (Možnosti spustenia).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image027.jpg' | relative_url }})
 
-Simulation Options
+Možnosti simulácie
 
-  * Multiple Processor:
+  * Viacnásobný procesor:
 
-Multiple processor option under Environment Settings window appears as shown in Fig. 4.1.35. The user can activate the table just by checking next to the Use multiple processor option as shown in the Fig. 4.1.35. The user can specify the computers used to solve the problem as well as the number of processors used on each computer. It is very important that the user enters the correct network name of the computer for the simulation to run. It also provides information about the memory shared between the processors.
+V okne Nastavenia prostredia sa zobrazí možnosť Viacero procesorov, ako je znázornené na obr. 4.1.35. Používateľ môže aktivovať tabuľku len zaškrtnutím vedľa možnosti Použiť viacero procesorov, ako je znázornené na obr. 4.1.35. Používateľ môže určiť počítače použité na riešenie problému, ako aj počet procesorov použitých na každom počítači. Pre spustenie simulácie je veľmi dôležité, aby používateľ zadal správny sieťový názov počítača. Poskytuje aj informácie o pamäti zdieľanej medzi procesormi.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image028.jpg' | relative_url }})
 
-Multiple Processor
+Viacnásobný procesor
 
-  * Process:
+  * Proces:
 
-Process option under Environment Settings window appears as shown in Fig. 4.1.36. User can set the default simulation modes like Deformation, Heat transfer Transformation..etc and control the auto assignment of primary die.
+V okne Nastavenia prostredia sa zobrazí možnosť Proces, ako je znázornené na obr. 4.1.36. Používateľ môže nastaviť predvolené režimy simulácie, ako je Deformácia, Transformácia prenosu tepla... atď. a ovládať automatické priradenie primárnej matrice.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image029.jpg' | relative_url }})
 
-Process options under Environment Settings window
+Možnosti procesu v okne Nastavenia prostredia
 
-  * Output Control:
+  * Ovládanie výstupu:
 
-The user can set default output type as either Elemental or Elemental+Node for Strain, Stress and Damage variables as shown in Fig. 4.1.37.
+Používateľ môže nastaviť predvolený typ výstupu ako Elemental alebo Elemental+Node pre premenné Strain, Stress a Damage, ako je znázornené na obr. 4.1.37.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image030.jpg' | relative_url }})
 
-Output Controls options under Environment Settings window
+Možnosti Output Controls v okne Nastavenia prostredia
 
-  * Email
+  * E-mail
 
-Email option under Environment Settings window appears as shown in Fig. 4.1.38. This function allows DEFORM to send an email notification at the start of the simulation and with last 25 lines from the Message file and Log file at end of the simulation. Emails are sent via SMTP using StartTLS (or no security). For more information refer [23.7. Email notification of the simulation](/docs/sk/simulator/23_deform_simulator/23_7_email_the_results/).
+V okne Nastavenia prostredia sa zobrazí možnosť E-mail, ako je znázornené na obr. 4.1.38. Táto funkcia umožňuje programu DEFORM odoslať e-mailové oznámenie na začiatku simulácie a s poslednými 25 riadkami zo súboru správ a súboru protokolu na konci simulácie. E-maily sa odosielajú prostredníctvom protokolu SMTP s použitím protokolu StartTLS (alebo bez zabezpečenia). Ďalšie informácie nájdete v časti [23.7. Email notification of the simulation](/docs/sk/simulator/23_deform_simulator/23_7_email_the_results/).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image031.jpg' | relative_url }})
 
-Email options under Environment Settings window
+Možnosti e-mailu v okne Nastavenia prostredia
 
-  * Memory:
+  * Pamäť:
 
-The user can set the required memory size depending upon the usage as shown in Fig. 4.1.39. For most part, the default values of these settings can cover wide range of model requirements. For very large size models (with respect to total number of elements and nodes) depending up on the operating system these settings may need to be increased to handle some run time procedures such as remeshing.
+Používateľ môže nastaviť požadovanú veľkosť pamäte v závislosti od použitia, ako je znázornené na obr. 4.1.39. Z väčšej časti môžu predvolené hodnoty týchto nastavení pokryť široký rozsah požiadaviek modelu. V prípade veľmi veľkých modelov (vzhľadom na celkový počet prvkov a uzlov) môže byť potrebné tieto nastavenia zvýšiť v závislosti od operačného systému, aby sa zvládli niektoré postupy počas behu, ako je napríklad remeshing.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image032.jpg' | relative_url }})
 
-Memory options under Environment Settings window
+Možnosti pamäte v okne Nastavenia prostredia
 
-  * Icon/Font:
+  * Ikona/šablóna:
 
-The user can change the icon and font size depending on the requirement as shown in the [Fig. 4.1.40.](4_1_gui_main_layout.htm#Fig_4_1_40_Icon/Font_options_under_Environment_Settings_window)
+Používateľ môže zmeniť ikonu a veľkosť písma v závislosti od požiadavky, ako je znázornené v [Fig. 4.1.40.](4_1_gui_main_layout.htm#Fig_4_1_40_Icon/Font_options_under_Environment_Settings_window)
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image033.jpg' | relative_url }})
 
-Icon/Font options under Environment Settings window
+Možnosti ikony/písma v okne Nastavenia prostredia
 
-  * Job Protection:
+  * Ochrana pracovných miest:
 
-The user can protect Running job from being terminated by setting password as shown in Fig. 4.1.41.
+Používateľ môže chrániť úlohu Running pred ukončením nastavením hesla, ako je znázornené na obr. 4.1.41.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image034.jpg' | relative_url }})
 
-Job protection options under Environment Settings window
+Možnosti ochrany práce v okne Nastavenia prostredia
 
   
-In Linux system select the enable protection radio button then enter the password in the password field and click on save button to save the password (see Fig. 4.1.41.).
+V systéme Linux vyberte prepínač Povoliť ochranu, potom zadajte heslo do poľa Heslo a kliknite na tlačidlo Uložiť, aby sa heslo uložilo (pozri obr. 4.1.41.).
 
-In windows system select the continue button then use password in setup job password popup window and click as shown in Fig. 4.1.42.
+V systéme Windows vyberte tlačidlo Pokračovať, potom použite heslo vo vyskakovacom okne nastavenia hesla úlohy a kliknite naň, ako je znázornené na obr. 4.1.42.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image035.jpg' | relative_url }})
 
-Running Job protection in windows password set up window
+Spustenie ochrany úloh v okne nastavenia hesla systému Windows
 
-  * Report: 
+  * Správa:
 
-From V12 Auto report generation options are provided under Report option in Environment Settings window, the auto report generation settings appears as shown in Fig. 4.1.43. User can set the default Auto Report option as per the requirement for Normal run, DOE runs and OPT runs by turning on the check box. Depending on the settings DEFORM generates the report automatically at the end of simulation.
+Z V12 Možnosti automatického generovania hlásení sú k dispozícii v položke Report (Hlásenie) v okne Environment Settings (Nastavenia prostredia), zobrazia sa nastavenia automatického generovania hlásení, ako je znázornené na obr. 4.1.43. Používateľ môže nastaviť predvolenú možnosť Auto Report (Automatické vytváranie správ) podľa požiadaviek pre Normal run (Normálny beh), DOE run (Beh DOE) a OPT run (Beh OPT) zapnutím zaškrtávacieho políčka. V závislosti od nastavení DEFORM automaticky vygeneruje správu na konci simulácie.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image036.jpg' | relative_url }})
 
-Report options under Environment Settings window
+Možnosti hlásenia v okne Nastavenia prostredia
 
-### Layout
+### Rozloženie
 
-User can change the GUI layout using Layout scheme option.(See Fig. 4.1.44.)
+Používateľ môže zmeniť rozloženie grafického rozhrania pomocou možnosti Layout scheme (pozri obr. 4.1.44).
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image031.jpg' | relative_url }})
 
-Layout Preference page
+Stránka s predvoľbami rozloženia
 
-**Classic**
+**Klasický**
 
-****This layout is like DEFORM v11.X version GUI Main layout (See Fig. 4.1.1.).
+****Toto rozloženie je ako hlavné rozloženie GUI verzie DEFORM v11.X (pozri obr. 4.1.1.).
 
   
 **Express**
 
-****Express layout is as shown in Fig. 4.1.45. This layout is a simplified layout. User can open Multiple tabs in Express layout to monitor different projects using "Browse in New tab" option from RMB options on a folder as shown in Fig. 4.1.46. New Tab window added as shown in Fig. 4.1.47.
+Rozloženie ****Express je znázornené na obr. 4.1.45. Toto rozloženie je zjednodušené rozloženie. Používateľ môže v rozložení Express otvoriť viacero kariet na sledovanie rôznych projektov pomocou možnosti "Browse in New tab" (Prechádzať v novej karte) z možností RMB na priečinku, ako je znázornené na obr. 4.1.46. Pridané okno Nová karta, ako je znázornené na obr. 4.1.47.
 
-**Properties** : This window shows the data of the problem folder which is selected in the explorer tab. We can also create the MEMO file in the project folder from this properties window as shown in the Fig. 4.1.48.
+**Vlastnosti** : V tomto okne sa zobrazujú údaje problémového priečinka, ktorý je vybraný na karte Prieskumník. Z tohto okna vlastností môžeme tiež vytvoriť súbor MEMO v priečinku projektu, ako je znázornené na obr. 4.1.48.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image032.jpg' | relative_url }})
 
-Express Layout
+Expresné rozloženie
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image033.jpg' | relative_url }})
 
-Selecting Browse in New Tab in Right click menu
+Výber možnosti Prehľadávať na novej karte v ponuke pravého tlačidla myši
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image034.jpg' | relative_url }})
 
-Multiple tab opened in Express layout GUI Main
+Otvorenie viacerých kariet v grafickom rozhraní Express layout Main
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image035.jpg' | relative_url }})
 
-Properties Window
+Okno s vlastnosťami
 
-**Custom Layout**
+**Vlastné rozloženie**
 
-****Using the Custom layout option user can create own GUI Main layout. Options available for customizing the layout are shown in Fig. 4.1.49. After customizing the layout user can click on Apply for GUI layout to apply custom layout. Customization options are,
+****Pomocou možnosti Vlastné rozloženie si používateľ môže vytvoriť vlastné hlavné rozloženie grafického rozhrania. Možnosti dostupné na prispôsobenie rozvrhnutia sú znázornené na obr. 4.1.49. Po prispôsobení rozloženia môže používateľ kliknúť na Apply for GUI layout (Použiť pre rozloženie GUI), aby použil vlastné rozloženie. Možnosti prispôsobenia sú nasledovné,
 
-**Folders** : Under folders tab user can select or hide Folder properties and folder panel display if only a single problem folder is browsed as show in Fig. 4.1.49.
+**Složky** : V záložke priečinky môže používateľ vybrať alebo skryť zobrazenie vlastností priečinka a panela priečinkov, ak sa prezerá len jeden problémový priečinok, ako je znázornené na obr. 4.1.49.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image036.jpg' | relative_url }})
 
-Custom layout - Folders page
+Vlastné rozloženie - stránka priečinkov
 
-**Files** : Under Files tab user can select or hide the files list and we can also choose file filter type as shown in Fig. 4.1.50.
+**Súbory** : V záložke Súbory môže používateľ vybrať alebo skryť zoznam súborov a môžeme tiež vybrať typ filtra súborov, ako je znázornené na obr. 4.1.50.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image037.jpg' | relative_url }})
 
-Custom layout - Files page
+Vlastné rozloženie - stránka Súbory
 
-**Main View** : User can customize the display of graphics, log and message files. (See Fig. 4.1.51.)
+**Hlavný pohľad** : Používateľ si môže prispôsobiť zobrazenie grafických, protokolových a správových súborov. (Pozri obr. 4.1.51.)
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image038.jpg' | relative_url }})
 
-Custom layout - Main View page
+Vlastné rozloženie - stránka Hlavné zobrazenie
 
-**Actions** : Under Actions tab user can choose to show the action links panels only or action toolbar only or both. (See Fig. 4.1.52.)
+**Akcie** : Na karte Akcie si používateľ môže vybrať, či chce zobraziť len panely s odkazmi na akcie alebo len panel s nástrojmi akcií, prípadne oboje. (Pozri obr. 4.1.52.)
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image039.jpg' | relative_url }})
 
-Custom layout - Action page
+Vlastné rozloženie - stránka Akcia
 
   
-**Tabs** : User can customize the tabbed display using options available in “Tabs”.
+**Tabuľky** : Používateľ si môže prispôsobiť zobrazenie kariet pomocou možností dostupných v časti "Tabs".
 
-**Enable multiple tabbed windows** : User can access different folders in different tab to monitor each project independently
+**Povolenie viacerých okien s kartami** : Používateľ môže pristupovať k rôznym priečinkom v rôznych záložkách a sledovať každý projekt samostatne
 
-**Restore the tabs on program start** : Restores the multiple tabs on the start of the GUI Main program.
+**Obnovenie kariet pri spustení programu** : Obnoví viacero kariet pri spustení hlavného programu GUI.
 
-**Show tabs on bottom** : The tabs will be shown at the bottom. (See Fig. 4.1.53.)
+**Zobraziť karty v dolnej časti** : Karty sa zobrazia v spodnej časti. (Pozri obr. 4.1.53.)
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image040.jpg' | relative_url }})
 
-Custom layout - Tabs page
+Vlastné rozloženie - stránka s kartami
 
-###   
-Help
+###
+Pomoc
 
-The below Fig. 4.1.54. shows the Help menu options in GUI.
+Na nasledujúcom obrázku 4.1.54. sú zobrazené možnosti ponuky Pomocník v grafickom používateľskom rozhraní.
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image041.jpg' | relative_url }})
 
-Help menu option
+Možnosť ponuky Pomocník
 
   
-**DEFORM Manual**
+**DEFORM manuál**
 
-****Launches DEFORM Manual displays the DEFORM manual through web browser.
+****Spustí príručku DEFORM Manual zobrazí príručku DEFORM prostredníctvom webového prehliadača.
 
-**About SFTC**
+**O SFTC**
 
-It displays information about SFTC in a window.
+V okne sa zobrazia informácie o SFTC.
 
-**About**
+**O**
 
-It displays information about DEFORM-2D/3D(GUI) in a window.  
+Zobrazuje informácie o DEFORM-2D/3D(GUI) v okne.  
   
-**About FEM Engine:**
+**O motore FEM:**
 
-It displays information about FEM engine in a window.  
+V okne sa zobrazia informácie o motore FEM.  
   
-**License Information:**
+**Informácie o licencii:**
 
-It displays the information about license file, license expiry date and Machine ID in a window. 
+V okne sa zobrazia informácie o licenčnom súbore, dátume vypršania platnosti licencie a ID stroja.
 
-## Preview
+## Náhľad
 
-Under Preview tab user can observe the snapshot of the display from the last access of the problem. User is also provided with a link to open simulation graphics in Preview tab while simulation is running (See Fig. 4.1.55.). Depending on the project type and R status of the database “Preview” tab keeps on updating. If the project type is DOE or Optimization, then DOE cases and snapshot from DOE post is shown. If DOE or Optimization simulation then the preview tab is updated with DOE variable table as shown in Fig. 4.1.56. for each run completed, user can click on the run to view respective run folder in Problem folder.
+Na karte Preview (Náhľad) môže používateľ sledovať snímku displeja z posledného prístupu k problému. Používateľ má k dispozícii aj odkaz na otvorenie grafiky simulácie v záložke Preview (Náhľad) počas bežiacej simulácie (pozri obr. 4.1.55.). V závislosti od typu projektu a stavu R databázy sa karta "Preview" (Náhľad) neustále aktualizuje. Ak je typ projektu DOE alebo Optimization (Optimalizácia), zobrazujú sa prípady DOE a snímka z príspevku DOE. Ak ide o simuláciu DOE alebo Optimization (Optimalizácia), potom sa karta náhľadu aktualizuje s tabuľkou premenných DOE, ako je znázornené na obr. 4.1.56. Pre každý ukončený beh môže používateľ kliknúť na beh a zobraziť príslušný priečinok behu v priečinku Problem (Problém).
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image042.jpg' | relative_url }})
 
-Preview tab
+Karta Náhľad
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image043.jpg' | relative_url }})
 
-DOE Study Preview tab
+Karta Náhľad štúdie DOE
 
-## Message
+## Správa
 
-Under Message tab user can observe the Messages of FEM calculation of the problem. Message file is continuously updated as the simulation runs with information about FEM calculations and relevant information depending on the problem type. (See Fig. 4.1.57.)
+V záložke Message (Správa) môže používateľ sledovať správy o výpočte problému metódou konečných prvkov. Súbor správ sa priebežne aktualizuje počas simulácie s informáciami o výpočtoch MKP a príslušnými informáciami v závislosti od typu problému. (Pozri obr. 4.1.57.)
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image044.jpg' | relative_url }})
 
-Message tab
+Karta Správa
 
 ## Log
 
-Under Log tab user can observe the log file information. Log file displays information about start of the problem, time taken for simulation, remeshing information and multiple operation status. If the problem type is of DOE or Optimization, then DOE Log file is displayed which will display the information about the spawning of databases, DOE running and extraction status.(See Fig. 4.1.58.)
+Na karte Protokol môže používateľ sledovať informácie o súbore protokolu. V súbore denníka sa zobrazujú informácie o začiatku problému, čase potrebnom na simuláciu, informácie o remeselnom spracovaní a stave viacerých operácií. Ak je typ problému DOE alebo Optimization (Optimalizácia), zobrazí sa súbor DOE Log file (Súbor denníka DOE), v ktorom sa zobrazia informácie o spawnovaní databáz, behu DOE a stave extrakcie (pozri obr. 4.1.58).
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image045.jpg' | relative_url }})
 
-Log tab
+Karta Denník
 
-## Summary
+## Zhrnutie
 
-Under Summary tab user can observe the Problem summary. This file will be created when we open the Database in NG post. (See Fig. 4.1.59.)
+Na karte Súhrn môže používateľ sledovať súhrn problémov. Tento súbor sa vytvorí, keď otvoríme databázu v príspevku NG. (Pozri obr. 4.1.59.)
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image046.jpg' | relative_url }})
 
-Summary tab
+Karta Súhrn
 
 ## Memo
 
-Under Memo tab user can add note. (See Fig. 4.1.60.)
+Na karte Memo môže používateľ pridať poznámku. (Pozri obr. 4.1.60.)
 
 ![]({{ '/assets/images/starting_up_deform/4_gui_main/4_1_gui_main_layout/image047.jpg' | relative_url }})
 
-Memo tab
+Karta Memo

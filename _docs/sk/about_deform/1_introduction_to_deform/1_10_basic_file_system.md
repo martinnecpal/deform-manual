@@ -1,27 +1,27 @@
 ---
 lang: sk
-title: "1.10. Basic File System"
+title: "1.10. Základný súborový systém"
 ---
 
-# 1.10. Basic File System
+# 1.10. Základný súborový systém
 
-The primary data storage structure is the database file. The database file stores a complete set of simulation data, including object data, simulation controls, material data, and inter-object relations, both from the original input, and from selected solution steps. The sequence of information storage in a database file is shown in Fig. 1.10.1. The pre-processor uses an ASCII format file called the keyword file to create inputs.
+Primárnou štruktúrou na ukladanie údajov je databázový súbor. V databázovom súbore je uložený kompletný súbor simulačných údajov vrátane údajov o objektoch, ovládacích prvkov simulácie, údajov o materiáloch a medziobjektových vzťahov, a to z pôvodného vstupu aj z vybraných krokov riešenia. Postupnosť ukladania informácií v databázovom súbore je znázornená na obr. 1.10.1. Preprocesor používa na vytvorenie vstupov súbor vo formáte ASCII nazývaný súbor s kľúčovými slovami.
 
 ![]({{ '/assets/images/about_deform/1_10_basic_file_system/1_10_image001.jpg' | relative_url }})
 
-DEFORM Database structure
+DEFORM Štruktúra databázy
 
-Each DEFORM problem has an associated problem ID and should be created in its own folder or directory. For every problem, the DEFORM system creates four types of files that are generally accessible to users:
+Každý problém DEFORM má pridelené ID problému a mal by byť vytvorený vo vlastnom priečinku alebo adresári. Pre každý problém systém DEFORM vytvára štyri typy súborov, ktoré sú všeobecne prístupné používateľom:
 
-**Database (DB) files**
+**Súbory databázy (DB)**
 
-The database file contains the complete simulation data set for input data and each saved simulation step. The information is stored in a compressed, machine readable format, and is accessible only through the DEFORM [pre-procesor](/docs/sk/pre_processor/7_introduction_to_pre-processor/) and [post-processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/). As the simulation runs, data for each step is written to the end of the database file. If the step being written is specified as a step to be saved, information for the next step will be appended after the current data step. If the step is not specified to be saved, and a solution is found for the next step, the data for the current step will be overwritten by the data for the next step.
+Databázový súbor obsahuje kompletný súbor simulačných údajov pre vstupné údaje a každý uložený krok simulácie. Informácie sú uložené v komprimovanom, strojovo čitateľnom formáte a sú prístupné len prostredníctvom DEFORM [pre-procesor](/docs/sk/pre_processor/7_introduction_to_pre-processor/) a [post-processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/). Počas simulácie sa údaje pre každý krok zapisujú na koniec databázového súboru. Ak je zapisovaný krok špecifikovaný ako krok, ktorý sa má uložiť, informácie pre ďalší krok sa pridajú za aktuálny krok s údajmi. Ak krok nie je špecifikovaný na uloženie a nájde sa riešenie pre nasledujúci krok, údaje pre aktuálny krok sa prepíšu údajmi pre nasledujúci krok.
 
-**Keyword (KEY) files**
+**Súbory s kľúčovými slovami (KEY)**
 
-Keyword files contain specific problem definition data which is read by the pre-processor and used to create an input database file. A keyword file may contain a complete problem definition, or it may contain only specific information about, for example, a specific object or material. The information is stored in ASCII format, and can be read and edited with any text editor, such as Notepad, VI, or Emacs. A keyword reference is available which describes the data format for each keyword.
+Súbory s kľúčovými slovami obsahujú špecifické údaje o definícii problému, ktoré sa načítajú v predprocesore a použijú sa na vytvorenie vstupného databázového súboru. Súbor kľúčových slov môže obsahovať úplnú definíciu problému alebo môže obsahovať len špecifické informácie, napríklad o konkrétnom objekte alebo materiáli. Informácie sú uložené vo formáte ASCII a možno ich čítať a upravovať pomocou ľubovoľného textového editora, napríklad Notepad, VI alebo Emacs. K dispozícii je odkaz na kľúčové slová, ktorý opisuje formát údajov pre každé kľúčové slovo.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [Creating Input data](/docs/sk/about_deform/1_introduction_to_deform/1_8_creating_input_data/)
 

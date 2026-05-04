@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "About DEFORM"
+title: "O spoločnosti DEFORM"
 ---
 
-# About DEFORM
+# O DEFORM
 
 [1\. Introduction to DEFORM](/docs/sk/about_deform/1_introduction_to_deform/1_introduction_to_deform/)
 

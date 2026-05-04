@@ -1,49 +1,49 @@
 ---
 lang: sk
-title: "1.8. Creating Input data"
+title: "1.8. Vytvorenie vstupných údajov"
 ---
 
-# 1.8. Creating Input data
+# 1.8. Vytvorenie vstupných údajov
 
-There are several ways to enter data into the DEFORM [Pre-Processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/). Depending on the requirements of a particular problem, a combination of the following methods will frequently be used.
+Údaje do DEFORM [Pre-Processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/) môžete zadávať niekoľkými spôsobmi. V závislosti od požiadaviek konkrétneho problému sa často používa kombinácia nasledujúcich metód.
 
-**Manual input**
+**Ručný vstup**
 
-The [pre-processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/) menus contain input fields for nearly every possible data input in DEFORM. The user can enter, view, or edit any of these values. Discussions of each field are contained in the reference section of this manual.
+Ponuky [pre-processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/) obsahujú vstupné polia pre takmer všetky možné vstupné údaje v programe DEFORM. Používateľ môže zadať, zobraziť alebo upraviť ktorúkoľvek z týchto hodnôt. Diskusie ku každému poľu sú obsiahnuté v referenčnej časti tejto príručky.
 
-**Keyword file input**
+**Vstupný súbor s kľúčovými slovami**
 
-Most of the data fields in the DEFORM pre-processor correspond directly to a DEFORM keyword. Individual keywords describe very specific information about a particular object characteristic, [simulation control](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/), [material characteristic](/docs/sk/pre_processor/10_material_data/10_material_data/), or [inter object](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) relationship. Keyword data can be saved in a keyword (.KEY) file. A keyword file is a human readable (ASCII) representation of DEFORM simulation data.
+Väčšina dátových polí v preprocesore DEFORM zodpovedá priamo kľúčovému slovu DEFORM. Jednotlivé kľúčové slová opisujú veľmi špecifické informácie o konkrétnej charakteristike objektu, vzťahu [simulation control](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/), [material characteristic](/docs/sk/pre_processor/10_material_data/10_material_data/) alebo [inter object](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/). Údaje o kľúčových slovách možno uložiť do súboru kľúčových slov (.KEY). Súbor kľúčových slov je ľudsky čitateľná (ASCII) reprezentácia údajov simulácie DEFORM.
 
-The typical format of a keyword is: 
+Typický formát kľúčového slova je:
 
-[Keyword name] [Keyword parameters] [Default data]
+[Názov kľúčového slova] [Parametre kľúčového slova] [Predvolené údaje]
 
-[Data]
+[Údaje]
 
-[Data]...
+[Údaje]...
 
-A keyword file may contain a complete simulation data set, or it may contain only one or a few specific keywords.
+Súbor s kľúčovými slovami môže obsahovať kompletný súbor simulačných údajov alebo môže obsahovať len jedno alebo niekoľko konkrétnych kľúčových slov.
 
-**Assembling keyword files**
+**Skladanie súborov s kľúčovými slovami**
 
-When a keyword file is read into the pre-processor, only the specific data fields listed in that keyword are changed; the remainder is unchanged. Thus, it is possible to assemble a complete set of problem data by loading one keyword file that contains only data for one object, another keyword file that contains material data, etc.
+Keď sa súbor s kľúčovým slovom načíta do preprocesora, zmenia sa len konkrétne dátové polia uvedené v danom kľúčovom slove; ostatné údaje sa nezmenia. Takto je možné zostaviť kompletný súbor údajov o probléme načítaním jedného súboru s kľúčovými slovami, ktorý obsahuje len údaje o jednom objekte, ďalšieho súboru s kľúčovými slovami, ktorý obsahuje údaje o materiáloch atď.
 
-To save specific elements of a keyword file, it is necessary to save the entire file, then use a text editor such as Notepad, VI, Emacs, or equivalent to delete unwanted information. The keyword file load and save features on the main pre-processor menu load or save an entire data set. To load partial keyword files, use Import or Import keyword option from the [File menu.](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#8.1.1._File_Menu)
+Ak chcete uložiť konkrétne prvky súboru s kľúčovými slovami, je potrebné uložiť celý súbor a potom pomocou textového editora, ako je Notepad, VI, Emacs alebo iný ekvivalent, odstrániť nežiaduce informácie. Funkcie načítania a uloženia súboru kľúčových slov v hlavnej ponuke preprocesora načítajú alebo uložia celý súbor údajov. Ak chcete načítať čiastočné súbory kľúčových slov, použite možnosť Import alebo Importovať kľúčové slová z [File menu.](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#8.1.1._File_Menu)
 
-**Other file inputs**
+**Ďalšie vstupy súborov**
 
-Various data types, particularly part[ geometries](/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) and [material data](/docs/sk/pre_processor/10_material_data/10_material_data/) can be read from appropriate format files.
+Rôzne typy údajov, najmä part[ geometries](/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) a [material data](/docs/sk/pre_processor/10_material_data/10_material_data/), možno čítať z príslušných formátových súborov.
 
-**Modifying problem data**
+**Modifikácia údajov o probléme**
 
-Solution or input step data from any stored step in a database file can be read into the pre-processor, modified, and either appended to an existing database, or written to a new database file.
+Údaje o riešení alebo vstupných krokoch z ľubovoľného kroku uloženého v databázovom súbore možno načítať do preprocesora, upraviť ich a buď pripojiť k existujúcej databáze, alebo zapísať do nového databázového súboru.
 
-**Viewing specific problem data**
+**Zobrazenie konkrétnych údajov o problémoch**
 
-Most problem data stored in the database file is accessible in the [post-processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/). However, certain specific information such as[ boundary conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/) or [inter-object contact](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) conditions is displayed differently in the [pre-processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/). When debugging a problem which is not running properly, it is sometimes useful to use the pre processor data display to view this information.
+Väčšina problémových údajov uložených v databázovom súbore je prístupná v [post-processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/). Určité špecifické informácie, ako napríklad stavy[ boundary conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/) alebo [inter-object contact](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/), sa však v [pre-processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/) zobrazujú odlišne. Pri ladení problému, ktorý neprebieha správne, je niekedy užitočné použiť zobrazenie údajov pred procesorom na zobrazenie týchto informácií.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [Pre-Processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/)
 

@@ -1,378 +1,378 @@
 ---
 lang: sk
-title: "3.1. Deform License Setup"
+title: "3.1. Nastavenie licencie Deform"
 ---
 
-# 3.1. DEFORM License Setup
+# 3.1. Nastavenie licencie DEFORM
 
-For DEFORM-Integrated 2D3D Version, a new DEFORM license manager has been implemented. We refer this new license manager as License Manager Server, which means this server can reside in a central location in a network serving license to a number of client machines. Batch Queue is running on the same machine as the license manager, and feeds jobs to a simulation server (which can be on a faster computer with sufficient resources to handle FEM jobs). The setup details required is briefly explained in this section. In a simple configuration all the servers can be on the same computer.
+Pre verziu DEFORM-Integrated 2D3D bol implementovaný nový správca licencií DEFORM. Tento nový správca licencií sa označuje ako server správcu licencií, čo znamená, že tento server sa môže nachádzať na centrálnom mieste v sieti a poskytovať licencie viacerým klientským počítačom. Dávková fronta beží na tom istom počítači ako správca licencií a posiela úlohy na simulačný server (ktorý môže byť na rýchlejšom počítači s dostatočnými zdrojmi na spracovanie úloh FEM). Potrebné podrobnosti nastavenia sú stručne vysvetlené v tejto časti. V jednoduchej konfigurácii môžu byť všetky servery na tom istom počítači.
 
-3.1.1. Computer configuration requirements
+3.1.1. Požiadavky na konfiguráciu počítača
 
-3.1.2. Computer Locations in DEFORM Setup
+3.1.2. Umiestnenie počítačov v nastavení DEFORM
 
-3.1.3. How to setup the new license configuration
+3.1.3. Ako nastaviť novú konfiguráciu licencie
 
-## Computer configuration requirements
+## Požiadavky na konfiguráciu počítača
 
-**Simulation server:** A central computer – presumably high performance – for running FEM calculations.
+**Simulačný server:** Centrálny počítač - pravdepodobne vysoko výkonný - na vykonávanie výpočtov MKP.
 
-**License server** : A central computer – not necessarily high powered – for managing licenses.
+**Licenčný server** : Centrálny počítač - nie nevyhnutne výkonný - na správu licencií.
 
-**Batch queue server** : A central computer for managing run sequence of jobs. The Batch, License and Simulation servers may all run on the same machine or simulation server can be runned on different machine.
+**Server s frontom dávok** : Centrálny počítač na správu postupnosti úloh. Dávkové, licenčné a simulačné servery môžu byť spustené na tom istom počítači alebo simulačný server môže byť spustený na inom počítači.
 
-**Pre / Post client(s)** – Computer at which users will pre and post process simulations. Pre and post processor programs are executed on this computer.
+**Pre / Post klient(y)** - Počítač, na ktorom budú používatelia pred a po spracovaní simulácií. Na tomto počítači sa vykonávajú programy pred a po spracovaní.
 
-## Computer Locations in DEFORM Setup
+## Umiestnenie počítača v nastavení DEFORM
 
-**Run DEFORM Setup**
+**Spustenie nastavenia DEFORM**
 
-In the “Simulation Server” tab user must add the simulation server system on which jobs which are submitted in batch mode would be running. The simulation server system can be local system or any remote high performance system, user can add simulation server by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button, see Fig. 3.1.13. If it is a multi-processor or multi-core machine, specify the number of processors (cores) available and licensed in DEFORM (Processor number) and the maximum number of jobs that user would like to run simultaneously on that articular system based on the performance of the system (default is 1) button. If it is a multi-processor or multi-core machine, specify the number of processors (cores) available and licensed in DEFORM (Processor number) and the maximum number of jobs (default is 1).
+Na karte Simulačný server musí používateľ pridať systém simulačného servera, na ktorom sa budú spúšťať úlohy odoslané v dávkovom režime. Systém simulačného servera môže byť lokálny systém alebo akýkoľvek vzdialený vysokovýkonný systém, používateľ môže pridať simulačný server kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}), pozri obr. 3.1.13. Ak ide o viacprocesorový alebo viacjadrový stroj, zadajte počet dostupných a licencovaných procesorov (jadier) v DEFORM (Číslo procesora) a maximálny počet úloh, ktoré by používateľ chcel spustiť súčasne na tomto kĺbovom systéme na základe výkonu systému (predvolené nastavenie je 1) tlačidlo. Ak ide o viacprocesorový alebo viacjadrový stroj, zadajte počet procesorov (jadier) dostupných a licencovaných v DEFORM (Číslo procesora) a maximálny počet úloh (predvolená hodnota je 1).
 
-**Compared to the previous versions, here are the important changes:**
+**V porovnaní s predchádzajúcimi verziami sú tu uvedené dôležité zmeny:**
 
-**Location of the License Manager folder where password file (DEFORM.PWD) needs to be located**
+**Umiestnenie priečinka správcu licencií, v ktorom sa má nachádzať súbor s heslom (DEFORM.PWD)**
 
-  * Old versions (up to 2DV91 or 3DV61) C:\Program Files\DEFORM License Manager 3.1
-  * Current release C:\Program Files\SFTC\License Manager
+  * Staré verzie (do 2DV91 alebo 3DV61) C:\Program Files\DEFORM License Manager 3.1
+  * Aktuálne vydanie C:\Program Files\SFTC\Licence Manager
 
-**Location of the Simulation server and MPICH registration executable**
+**Umiestnenie simulačného servera a spustiteľného súboru registrácie MPICH**
 
-  * Old versions up to 2DV91 or 3DV61 C:\Program Files\DEFORM License Manager 2.1 and till v10.2.1 in C:\Program Files\SFTC\License Manager
-  * Current release C:\Program Files\SFTC\DEFORM\Configuration
+  * Staré verzie do 2DV91 alebo 3DV61 C:\Program Files\DEFORM License Manager 2.1 a do v10.2.1 v C:\Program Files\SFTC\Licence Manager
+  * Aktuálne vydanie C:\Program Files\SFTC\DEFORM\Konfigurácia
 
-After the Sentinel protection driver installation, License Manager installation will start and user will be prompted for the password file. Installer copies the password file to an appropriate location and with a hardware key in place, License Manager server program will validate the password and hardware key combination. During this process, it is important to first uninstall the earlier copy of the programs with the same version number.
+Po inštalácii ovládača ochrany Sentinel sa spustí inštalácia správcu licencií a používateľ bude vyzvaný na zadanie súboru s heslom. Inštalátor skopíruje súbor s heslom na príslušné miesto a s hardvérovým kľúčom na mieste program servera License Manager overí kombináciu hesla a hardvérového kľúča. Počas tohto procesu je dôležité najprv odinštalovať predchádzajúcu kópiu programov s rovnakým číslom verzie.
 
-**Simulation Server Setup:**
+**Nastavenie simulačného servera:**
 
-(installing these services is a part of the default installation process and the details indicated here are only standby options, if the given system has any issues/restrictions with handling the services)
+(inštalácia týchto služieb je súčasťou predvoleného procesu inštalácie a tu uvedené údaje sú len záložné možnosti, ak má daný systém nejaké problémy/obmedzenia s obsluhou služieb)
 
-As administrator, run the file “InstallBatchQueueServer.bat” on the batch queue server computer. (using default installation path, typical location of this batch file is C:\Program Files\SFTC\License Manager\\)
+Ako správca spustite súbor "InstallBatchQueueServer.bat" v počítači so serverom dávkovej fronty. (pri použití predvolenej inštalačnej cesty je typické umiestnenie tohto dávkového súboru C:\Program Files\SFTC\License Manager\\)
 
-From v14.0, “InstallBatchQueueServer.bat” is considered as legacy script, instead “InstallServers.bat” is used to add License Server and the Batch Queue Server services.
+Od verzie 14.0 sa skript "InstallBatchQueueServer.bat" považuje za starší, namiesto toho sa na pridanie služieb Licenčný server a Dávkový server fronty používa skript "InstallServers.bat".
 
-While executing the script, user can observe below messages indicating the usage of the file:
+Počas vykonávania skriptu môže používateľ pozorovať nasledujúce hlásenia označujúce použitie súboru:
 
-_“Usage:_
+_"Použitie:_
 
-"InstallServers.bat Y" - Set up the License Server and the Batch Queue Server.
+"InstallServers.bat Y" - Nastavte licenčný server a server dávkovej fronty.
 
-"InstallServers.bat N" - Set up the License Server only.
+"InstallServers.bat N" - Nastavte iba licenčný server.
 
-"InstallServers.bat" - Display prompt for whether the Batch Queue Server should be set up or not.
+"InstallServers.bat" - Zobrazí výzvu, či sa má nastaviť server dávkovej fronty alebo nie.
 
-This will install the DEFORM License Server service.
+Tým sa nainštaluje služba licenčného servera DEFORM.
 
-Do you want to install the Batch Queue Server service also? (Yes, No, Quit) [Y,N,Q]?
+Chcete nainštalovať aj službu Batch Queue Server? (Áno, Nie, Ukončiť) [Y,N,Q]?
 
-If we enter “Y”, then it will install both License Server and the Batch Queue Server, if we enter “N”, only License server will be installed and if we enter “Quit”, it will quit the script execution part.
+Ak zadáme "Y", nainštaluje sa licenčný server aj server dávkovej fronty, ak zadáme "N", nainštaluje sa len licenčný server a ak zadáme "Quit", ukončí sa časť vykonávania skriptu.
 
-From v11.2, the Windows service "DeformSimServer" is not required.
+Od verzie 11.2 sa služba systému Windows "DeformSimServer" nevyžaduje.
 
-  1. We do not need to install the "DeformSimServer" Windows service.
-  2. If "DeformSimServer" Windows service is already installed, we do not need to run it. It is **NORMAL** to see "DeformSimServer" Windows service is **stopped**.
+  1. Službu Windows "DeformSimServer" nemusíme inštalovať.
+  2. Ak je služba Windows "DeformSimServer" už nainštalovaná, nemusíme ju spúšťať. Je **normálne**, ak je služba systému Windows "DeformSimServer" **zastavená**.
 
-DEFORM users should use DEFORMSetup (in the "DEFORM Services" tab) to check the status of the DEFORM Simulation Server and other DEFORM services.
+Používatelia programu DEFORM by mali použiť DEFORMSetup (v záložke "Služby DEFORM") na kontrolu stavu simulačného servera DEFORM a ostatných služieb DEFORM.
 
-**How to run older versions using the new license manager**
+**Ako spustiť staršie verzie pomocou nového správcu licencií**
 
-**Below 2D V9.1 and 3D V6.1**
+**Podľa 2D V9.1 a 3D V6.1**
 
-Run DLConfig.exe from C:\Program Files (x86)\DEFORM License Manager 2.1 (in 64bit machines) and C:\Program Files\DEFORM License Manager 2.1 (in 32 bit machines) and indicate the new server machine name and 34445 as the port number.
+Spustite DLConfig.exe z C:\Program Files (x86)\DEFORM License Manager 2.1 (v 64-bitových počítačoch) a C:\Program Files\DEFORM License Manager 2.1 (v 32-bitových počítačoch) a zadajte názov nového servera a číslo portu 34445.
 
-**Above Deform 10.X and Below Deform v11.1**
+**Nad verziou Deform 10.X a pod verziou Deform v11.1**
 
-Install Deform Service Control Program from the Deform Installation program. Run DeformSetup program from C:\Program Files\SFTC\DEFORM\V10.X. Add simulation server system in Simulation Server tab. Select Versions option from the Simulation server tree and add version. Select version added and change it to the old version by selecting old version number from pull down menu and its installation location. After completing it, click on Deform Services tab and select “Open DEFORM service for Local Computer”. Click on update button to update the files in Configuration folder using update button next to the Simulation Server system under Deform Computer. Now system is ready to run older versions of the DEFORM.
+Nainštalujte program Deform Service Control z inštalačného programu Deform. Spustite program DeformSetup z C:\Program Files\SFTC\DEFORM\V10.X. V záložke Simulation Server pridajte systém simulačného servera. Vyberte možnosť Versions (Verzie) zo stromu Simulačný server a pridajte verziu. Vyberte pridanú verziu a zmeňte ju na starú verziu výberom čísla starej verzie z rozbaľovacej ponuky a jej umiestnenia inštalácie. Po dokončení kliknite na kartu Deform Services (Deformovacie služby) a vyberte položku Open DEFORM service for Local Computer (Otvoriť službu DEFORM pre lokálny počítač). Kliknutím na tlačidlo Update (Aktualizovať) aktualizujte súbory v priečinku Configuration (Konfigurácia) pomocou tlačidla Update (Aktualizovať) vedľa systému Simulation Server (Simulačný server) v časti Deform Computer (Počítač Deform). Teraz je systém pripravený na spustenie starších verzií programu DEFORM.
 
-## How to setup the new license configuration
+## Ako nastaviť novú konfiguráciu licencie
 
   
-**Step 1**
+**Krok 1**
 
-Since we are installing License manager in server machine, start DEFORM system Installation and continue till the select components page and choose "Server installation" from pulldown menu as shown in Fig. 3.1.1. Hence DEFORM Installer will install the support codes (Python and Sentinel protection driver) then start the License Manager installation.
+Keďže správcu licencií inštalujeme do serverového počítača, spustite inštaláciu systému DEFORM a pokračujte až na stránku s výberom komponentov a z rozbaľovacej ponuky vyberte možnosť "Inštalácia servera", ako je znázornené na obr. 3.1.1. Inštalátor DEFORM teda nainštaluje podporné kódy (Python a ovládač ochrany Sentinel) a potom spustí inštaláciu správcu licencií.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image023.jpg' | relative_url }})
 
-Deform Choose components window (not a required step for official v11.0.2 release)
+Deformovať okno Vybrať komponenty (nie je povinný krok pre oficiálnu verziu v11.0.2)
 
-If old version License Manager is not uninstalled then installer recommends to uninstall the old license manager before installing new license manager as shown in Fig. 3.1.2.
+Ak stará verzia správcu licencií nie je odinštalovaná, inštalátor odporúča odinštalovať starého správcu licencií pred inštaláciou nového správcu licencií, ako je znázornené na obr. 3.1.2.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image022.jpg' | relative_url }})
 
-License manager installation warning (not a required step for official v11.0.2 release)
+Upozornenie na inštaláciu správcu licencií (nie je povinným krokom pre oficiálnu verziu v11.0.2)
 
-Turn on Configure windows firewall. Windows firewall needs to be configured to allow License and Batch queue service through windows firewall as shown in Fig. 3.1.3. and then click **Next**.
+Zapnite možnosť Konfigurácia brány firewall systému Windows. Brána firewall systému Windows musí byť nakonfigurovaná tak, aby povolila službu License and Batch queue cez bránu firewall systému Windows, ako je znázornené na obr. 3.1.3., a potom kliknite na tlačidlo **Next**.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image025.jpg' | relative_url }})
 
-Windows Firewall configure page
+Konfigurácia stránky brány Windows Firewall
 
-During the DEFORM License Manager installation the system prompts the user for the DEFORM password (see Fig. 3.1.4), user can browse the location of the DEFORM.PWD file using Browse button. When the user clicks the Next button, the password is copied to the License Manager Folder from the browsed location. Automatic start of the DeformLicenseServer is a part of the installation.
+Počas inštalácie programu DEFORM License Manager systém vyzve používateľa na zadanie hesla DEFORM (pozri obr. 3.1.4), používateľ môže vyhľadať umiestnenie súboru DEFORM.PWD pomocou tlačidla Browse. Keď používateľ klikne na tlačidlo Next (Ďalej), heslo sa skopíruje do priečinka License Manager (Správca licencií) z vyhľadaného umiestnenia. Súčasťou inštalácie je automatické spustenie servera DeformLicenseServer.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image024.jpg' | relative_url }})
 
-DEFORM password input window
+DEFORM okno na zadávanie hesla
 
-_**Note:**_
+_**Poznámka:**_
 
-_If the user does not have the password at the time of installation, then password must be manually pasted into the License Manager folder and has to run the license manager batch file to activate the DeformLicenseServer Service._
+_Ak používateľ nemá heslo v čase inštalácie, musí heslo ručne vložiť do priečinka Správca licencií a musí spustiť dávkový súbor správcu licencií, aby aktivoval službu DeformLicenseServer._
 
-Turn on Install Batch Queue server. Batch queue is required for queueing the simulations as shown in Fig. 3.1.5. and then click **Next**.
+Zapnite server Inštalácia dávkovej fronty. Dávkový front je potrebný na zoraďovanie simulácií do frontu, ako je znázornené na obr. 3.1.5., a potom kliknite na tlačidlo **Ďalej**.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image028.jpg' | relative_url }})
 
-DEFORM License Manager additional task selection window
+Dodatočné okno výberu úlohy DEFORM License Manager
 
-Review the License Manager setup selections and click **Install** to start installation. Otherwise go back to change the settings. (See Fig. 3.1.6.)
+Skontrolujte výbery nastavení aplikácie License Manager a kliknutím na tlačidlo **Install** spustite inštaláciu. V opačnom prípade sa vráťte späť a zmeňte nastavenia. (Pozri obr. 3.1.6.)
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image026.jpg' | relative_url }})
 
-DEFORM License Manager installation confirmation window
+Okno potvrdenia inštalácie programu DEFORM License Manager
 
-If the given system has any issues/restrictions with handling the DeformLicenseServer service then as administrator, run the file “InstallServer.bat” on the license server computer (available in installation path, typical location of this batch file is C:\Program Files\SFTC\License Manager) using the command prompt as shown in Fig. 3.1.7. Enter “N” as an option to install only Deform License server.
+Ak má daný systém nejaké problémy/obmedzenia s obsluhou služby DeformLicenseServer, potom ako správca spustite súbor "InstallServer.bat" na počítači s licenčným serverom (dostupný v inštalačnej ceste, typické umiestnenie tohto dávkového súboru je C:\Program Files\SFTC\License Manager) pomocou príkazového riadku, ako je znázornené na obr. 3.1.7. Ako možnosť zadajte "N", ak chcete nainštalovať iba licenčný server Deform License Server.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image001.jpg' | relative_url }})
 
-Registering and run the license manager server using the batch file
+Registrácia a spustenie servera správcu licencií pomocou dávkového súboru
 
-If the given system has any issues/restrictions with handling the DeformBatchQueue service then as administrator run the file “InstallServer.bat” with “Y” option on the license server computer (available in default installation path, typical location of this batch file is C:\Program Files\SFTC\License Manager) using the command prompt as shown in Fig. 3.1.8.
+Ak má daný systém nejaké problémy/obmedzenia s obsluhou služby DeformBatchQueue, potom ako správca spustite súbor "InstallServer.bat" s voľbou "Y" na počítači licenčného servera (dostupný v predvolenej inštalačnej ceste, typické umiestnenie tohto dávkového súboru je C:\Program Files\SFTC\License Manager) pomocou príkazového riadku, ako je znázornené na obr. 3.1.8.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image002.jpg' | relative_url }})
 
-Registering and running the license manager and batch queue servers using the batch file with “Y” option
+Registrácia a spustenie správcu licencií a serverov dávkového frontu pomocou dávkového súboru s možnosťou "Y"
 
-**Step 2:**
+**Krok 2:**
 
-For any subsequent changes user can open DEFORMSetup dialog (See Fig. 3.1.9.), to indicate the name of the server computer name and port number (34445). Click on ![]({{ '/assets/icons/pre_icons/mo_syncronize_button.jpg' | relative_url }}) to make sure that Success is returned which is an indication of the fact that now a valid combination of License key, password file have been identified by the setup program. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to popup message, this activates other subsequent data tabs (Simulation and Shared folder) and save the settings using ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) button. (See Fig. 3.1.10.). Once user clicks on the save button Deform Services tab will be activated, for subsequent opening of DEFORMSetup dialog Deform Services tab remains activated.
+Pri akýchkoľvek následných zmenách môže používateľ otvoriť dialógové okno DEFORMSetup (pozri obr. 3.1.9.), kde uvedie názov servera, názov počítača a číslo portu (34445). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_syncronize_button.jpg' | relative_url }}), aby ste sa uistili, že sa vráti správa Success (Úspech), čo je údaj o tom, že teraz bola nastavovacím programom identifikovaná platná kombinácia License key (Licenčný kľúč), password file (Súbor hesiel). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) na vyskakovacie hlásenie, čím sa aktivujú ďalšie následné karty údajov (Simulation (Simulácia) a Shared folder (Zdieľaný priečinok)) a uložte nastavenia pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}). (Pozri obr. 3.1.10.). Po kliknutí používateľa na tlačidlo Save (Uložiť) sa aktivuje karta Deform Services (Deformačné služby), pre následné otvorenie dialógového okna DEFORMSetup zostane karta Deform Services (Deformačné služby) aktivovaná.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image003.jpg' | relative_url }})
 
-DEFORM Setup start menu shortcut
+Zástupca ponuky Štart DEFORM Setup
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image004.jpg' | relative_url }})
 
-Mandatory input fields to activate the license configuration
+Povinné vstupné polia na aktiváciu konfigurácie licencie
 
-After the synchronize button is clicked, if the current computer hasn’t been set up as a Simulation Server with the current version and path then DEFORM Setup will offer to add it as one. (See Fig. 3.1.11.) 
+Po kliknutí na tlačidlo synchronizovať, ak aktuálny počítač nebol nastavený ako simulačný server s aktuálnou verziou a cestou, program DEFORM Setup ponúkne jeho pridanie. (Pozri obr. 3.1.11.)
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image009.jpg' | relative_url }})
 
-DEFORM Setup License Server window
+Okno DEFORM Setup License Server
 
-If the **Yes** button is clicked to add the Simulation Server, DEFORM Setup will not automatically save the change to the License Server, but will prompt to save the changes. (See Fig. 3.1.12.) Verify the change is correct in the Simulation Server tab before saving the settings. 
+Ak kliknutím na tlačidlo **Ano** pridáte simulačný server, program DEFORM Setup automaticky neuloží zmenu licenčného servera, ale vyzve na uloženie zmien. (Pozri obr. 3.1.12.) Pred uložením nastavení skontrolujte, či je zmena správna na karte Simulation Server (Simulačný server).
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image029.jpg' | relative_url }})
 
-DEFORM Setup reminder to save
+DEFORM Pripomienka nastavenia na uloženie
 
-**Step 3:**
+**Krok 3:**
 
-The Simulation Server tab allows the users to manage the simulation servers connected to the License Server. As shown in Fig. 3.1.13., the top area of the tab shows the defined Simulation Servers. If the local computer isn’t defined as a Simulation Server, click the "Add Simulation Server" button to define it. 
+Karta Simulačný server umožňuje používateľom spravovať simulačné servery pripojené k licenčnému serveru. Ako je znázornené na obr. 3.1.13., v hornej oblasti karty sú zobrazené definované simulačné servery. Ak miestny počítač nie je definovaný ako simulačný server, kliknite na tlačidlo "Pridať simulačný server", aby ste ho definovali.
 
-When a Simulation Server is added, by default the local computer name will be captured and added along with some default values for the processor type, number of processors, the maximum number of jobs, and the latest version available in the local system will be set to the current path automatically. 
+Pri pridávaní simulačného servera sa v predvolenom nastavení zachytí a pridá názov miestneho počítača spolu s niektorými predvolenými hodnotami pre typ procesora, počet procesorov, maximálny počet úloh a najnovšia verzia dostupná v miestnom systéme sa automaticky nastaví na aktuálnu cestu.
 
-When the License Manager server is on the same computer as that of DEFORM Setup is being run on, as many Simulation Servers as required can be defined. However, if the License Manager server is on a different computer, then only the local Simulation Server can be defined and edited. 
+Ak je server Správcu licencií na tom istom počítači, na ktorom sa spúšťa program DEFORM Setup, je možné definovať toľko simulačných serverov, koľko je potrebné. Ak sa však server License Manager nachádza na inom počítači, je možné definovať a upravovať iba miestny simulačný server.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image007.jpg' | relative_url }})
 
-DEFORM Setup Simulation Server window 
+Okno DEFORM Setup Simulation Server
 
-Within the Simulations tab,
+Na karte Simulácie,
 
-  * ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button can be used to add a simulation server.
+  * Tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) možno použiť na pridanie simulačného servera.
 
-  * ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) button can be used to delete the local simulation server.
+  * Tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) možno použiť na odstránenie lokálneho simulačného servera.
 
-  * Address shows the name of the computer connected to the current License manger on which the simulation server is running.
+  * Adresa zobrazuje názov počítača pripojeného k aktuálnemu správcovi licencií, na ktorom je spustený simulačný server.
 
-  * Versions column shows a list of all versions defined for a given Simulation Server. 
+  * Stĺpec Verzie zobrazuje zoznam všetkých verzií definovaných pre daný simulačný server.
 
-  * Maximum Jobs option allows setting the number of jobs in the queue that can be run simultaneously on the respective simulation server. 
+  * Možnosť Maximum Jobs umožňuje nastaviť počet úloh vo fronte, ktoré môžu byť spustené súčasne na príslušnom simulačnom serveri.
 
-  * Maximum number of processors that can be used, should be same or less than the licensed. 
+  * Maximálny počet procesorov, ktoré možno použiť, by mal byť rovnaký alebo menší ako licencovaný.
 
-  * TCP Port on which license server is running.
+  * Port TCP, na ktorom je spustený licenčný server.
 
-  * DEFORM versions currently installed on the respective systems.
+  * Verzie DEFORM aktuálne nainštalované v príslušných systémoch.
 
-The lower area shows details about the currently selected Simulation Server. (See Fig. 3.1.14.) In the Versions tab, the disk location for multiple versions can be added using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button or delete using ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) button, only one path per version is allowed. 
+V dolnej časti sa zobrazujú podrobnosti o aktuálne vybranom simulačnom serveri. (Pozri obr. 3.1.14.) Na karte Verzie je možné pridať umiestnenie disku pre viacero verzií pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) alebo odstrániť pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}), pričom pre jednu verziu je povolená len jedna cesta.
 
-If the Processor Type is defined as a Cluster, the Clusters tab will be enabled and details about the cluster nodes can be defined. After making changes to the Simulation Server tab, click the Save button to save the settings. 
+Ak je typ procesora definovaný ako Klaster, karta Klastery sa aktivuje a je možné definovať podrobnosti o uzloch klastra. Po vykonaní zmien na karte Simulation Server (Simulačný server) kliknite na tlačidlo Save (Uložiť), čím uložíte nastavenia.
 
-In Windows, user can specify Multiple versions (V12.1, V12.0, V11.3, v11.2, v11.1,v11.0 and v10) installation locations for each simulation server if user would like to use older versions (See Fig. 3.1.14.). Different versions can be added by user using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button, select the version number from the pull down menu and then specify the installation path information for each version which will be used to run the jobs from the respective version when submitted in Batch Queue. But in Linux/UNIX, user can only specify one version.
+V systéme Windows môže používateľ určiť umiestnenie inštalácie viacerých verzií (V12.1, V12.0, V11.3, v11.2, v11.1,v11.0 a v10) pre každý simulačný server, ak chce používateľ používať staršie verzie (pozri obr. 3.1.14.). Rôzne verzie môže používateľ pridať pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}), vybrať číslo verzie z rozbaľovacej ponuky a potom zadať informácie o inštalačnej ceste pre každú verziu, ktorá sa použije na spustenie úloh z príslušnej verzie pri odoslaní v dávkovej fronte. V systéme Linux/UNIX však môže používateľ zadať len jednu verziu.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image006.jpg' | relative_url }})
 
-DEFORM Setup Simulation Server window
+Okno DEFORM Setup Simulation Server
 
-User should make sure that the Simulation Server service is Running, if it is not running then user can visit DEFORM Services tab and run the local Simulation server by clicking on [Start] button available next to the Simulation server under Deform Computers list. The simulation servers that can be used to run a selected job are listed in Run options dialog as shown in Fig. 3.1.15.
+Používateľ by sa mal uistiť, že služba Simulation Server je spustená, ak nie je spustená, môže navštíviť kartu DEFORM Services a spustiť miestny simulačný server kliknutím na tlačidlo [Start], ktoré je k dispozícii vedľa simulačného servera v zozname Deform Computers. Simulačné servery, ktoré možno použiť na spustenie vybranej úlohy, sú uvedené v dialógovom okne Možnosti spustenia, ako je znázornené na obr. 3.1.15.
 
-**Note** : Install path information for each version is required to be defined so that the DBs of different versions queued using Batch queue can simulate using respective version.
+**Poznámka** : Informácie o inštalačnej ceste pre každú verziu je potrebné definovať tak, aby DB rôznych verzií zaradené do frontu pomocou Dávkového frontu mohli simulovať používanie príslušnej verzie.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image008.jpg' | relative_url }})
 
-Run Options window
+Okno Možnosti spustenia
 
-**Step 4:**
+**Krok 4:**
 
-Go to the “Shared Folders” tab. Each shared folder is represented by a tree identifying its shared names on each machine where it is accessible (See Fig. 3.1.16.).
+Prejdite na kartu Zdieľané priečinky. Každý zdieľaný priečinok je reprezentovaný stromom, ktorý identifikuje jeho zdieľané názvy na každom počítači, kde je prístupný (pozri obr. 3.1.16.).
 
-Click the “New Dir” button (See 1 in Fig. 3.1.16.), and specify the computer name and local path where the shared folder is physically located. For example, the shared folder is C:\Deform\Problem on a computer called “FastServer”. Give “Fast Server” as the computer name, and “C:\Deform\Problem” as the path. Please check your typing. There is currently no automatic checking to ensure that a specified path actually exists.
+Kliknite na tlačidlo "New Dir" (pozri 1 na obr. 3.1.16.) a zadajte názov počítača a miestnu cestu, kde sa zdieľaný priečinok fyzicky nachádza. Napríklad zdieľaný priečinok je C:\Deform\Problem na počítači s názvom "FastServer". Ako názov počítača uveďte "Fast Server" a ako cestu "C:\Deform\Problem". Skontrolujte, či ste písali. V súčasnosti neexistuje žiadna automatická kontrola, ktorá by zabezpečila, že zadaná cesta skutočne existuje.
 
-Now click on the “Add share point” button (See 2 Fig. 3.1.16.). Specify the client computer name and the path name on that computer. Suppose that the path is defined on computer “Client1” as the mapped network drive “Z:”. Then specify other client (See 3 in Fig. 3.1.16. . )computer name as “Client2” and folder name as “Q:” Be sure to include the colon (:).
+Teraz kliknite na tlačidlo "Pridať zdieľaný bod" (pozri 2 Obr. 3.1.16.). Zadajte názov klientského počítača a názov cesty v tomto počítači. Predpokladajme, že cesta je definovaná na počítači "Klient1" ako mapovaná sieťová jednotka "Z:". Potom zadajte názov iného klientskeho (Pozri 3 na obr. 3.1.16. . )počítača ako "Client2" a názov priečinka ako "Q:" Nezabudnite uviesť dvojbodku (:).
 
-Now click “Save” (See 4 in Fig. 3.1.16.). This information is all stored on the client and license server machine.
+Teraz kliknite na tlačidlo "Uložiť" (pozri 4 na obr. 3.1.16). Všetky tieto informácie sú uložené v počítači klienta a licenčného servera.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image027.jpg' | relative_url }})
 
-Shared folders information in DEFORM setup window
+Informácie o zdieľaných priečinkoch v okne nastavenia DEFORM
 
-**DEFORM Services:**
+**Služby DEFORM:**
 
-Deform Services control program is installed along with new installation or can be installed independently from the DEFORM_Service_Control_vx.x.exe installation file if user would like to communicate with new License manager. User can notice a tab Deform Services added in DEFORMSetup program after the installation of Deform Services control program. DEFORM service utility program (DEC_SC.EXE) will be running as a "service" on Windows PC. Deform Service control program communicates with License Manager and can be used to monitor following services,
+Ovládací program Deform Services sa inštaluje spolu s novou inštaláciou alebo sa môže nainštalovať nezávisle od inštalačného súboru DEFORM_Service_Control_vx.x.exe, ak chce používateľ komunikovať s novým správcom licencií. Používateľ si môže všimnúť kartu Deform Services pridanú v programe DEFORMSetup po inštalácii riadiaceho programu Deform Services. Servisný obslužný program DEFORM (DEC_SC.EXE) bude na počítači so systémom Windows spustený ako "služba". Riadiaci program Deform Service komunikuje so správcom licencií a možno ho použiť na monitorovanie nasledujúcich služieb,
 
-For Server Computer
+Pre serverový počítač
 
-License Server
+Licenčný server
 
-Batch Queue Server
+Dávkový server frontu
 
-Web-based Service Control (Not available in Linux)
+Webové riadenie služieb (nie je k dispozícii v systéme Linux)
 
-For Client Computer
+Pre klientsky počítač
 
-Simulation Client
+Simulačný klient
 
-Simulation Server
+Simulačný server
 
-Web-based Simulation Monitoring (Not available in Linux)
+Webové monitorovanie simulácie (nie je k dispozícii v systéme Linux)
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image016.jpg' | relative_url }})
 
-DEFORM Services in DEFORM Setup window
+Služby DEFORM v okne Nastavenie DEFORM
 
-In DEFORM Services tab we have two options to access the computers with DEFORM services (See Fig. 3.1.17. ). User can view the services in a separate window by clicking on **Open in new window button**.
+Na karte Služby DEFORM máme dve možnosti prístupu k počítačom so službami DEFORM (pozri obr. 3.1.17. ). Používateľ môže služby zobraziť v samostatnom okne kliknutím na tlačidlo **Otvoriť v novom okne**.
 
-**Open DEFORM Service for local DEFORM computer** : Using this option we can monitor and control the services on Local computer only. If the local computer is a server computer then we can see both DEFORM server Computer and DEFORM Computer list (See Fig. 3.1.18.) but in Client machine we can see only DEFORM Computer list (See Fig. 3.1.19.)
+**Otvorenie služby DEFORM pre miestny počítač DEFORM** : Pomocou tejto možnosti môžeme monitorovať a ovládať služby len na lokálnom počítači. Ak je miestny počítač počítačom servera, potom môžeme vidieť zoznam servera DEFORM aj zoznam počítačov DEFORM (pozri obr. 3.1.18.), ale v klientskom počítači môžeme vidieť len zoznam počítačov DEFORM (pozri obr. 3.1.19.).
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image011.jpg' | relative_url }})
 
-DEFORM Service for local DEFORM computer window in Server computer
+Služba DEFORM pre miestne okno počítača DEFORM v počítači Server
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image012.jpg' | relative_url }})
 
-DEFORM Service for local DEFORM computer window in client computer
+Služba DEFORM pre miestne okno počítača DEFORM v klientskom počítači
 
-**Open DEFORM Service for all DEFORM computers** : Using this option user will be able to view all the clients that are connected to the server to which the local system is connected along with the server system. User must have passcode or user must be an authorized user in order to monitor and control the services of other computers other than the local computer. Services can be started using ![]({{ '/assets/icons/pre_icons/run_action_icon.jpg' | relative_url }}) and stop using ![]({{ '/assets/icons/pre_icons/stop_action_icon.jpg' | relative_url }}) button available next to service, See Fig. 3.1.20. From v14, information of all the computers connected to the License Server will not be synched by default to improve the DEFROM Setup performance, only local computer and server computer information will be synched. Use ![]({{ '/assets/icons/pre_icons/mo_deformsetup_sync_button.jpg' | relative_url }}) button to sync the respective computer information and to sync all computers use ![]({{ '/assets/icons/pre_icons/mo_deformsetup_sync_all_computers_button.jpg' | relative_url }}). (See Fig. 3.1.21.)
+**Otvorenie služby DEFORM pre všetky počítače DEFORM** : Pomocou tejto možnosti bude môcť používateľ zobraziť všetkých klientov, ktorí sú pripojení k serveru, ku ktorému je miestny systém pripojený spolu so systémom servera. Používateľ musí mať prístupový kód alebo musí byť oprávneným používateľom, aby mohol sledovať a ovládať služby iných počítačov ako miestneho počítača. Služby možno spustiť pomocou tlačidla ![]({{ '/assets/icons/pre_icons/run_action_icon.jpg' | relative_url }}) a zastaviť pomocou tlačidla ![]({{ '/assets/icons/pre_icons/stop_action_icon.jpg' | relative_url }}), ktoré je k dispozícii vedľa služby, pozri obr. 3.1.20. Od verzie 14 sa informácie všetkých počítačov pripojených k licenčnému serveru nebudú štandardne synchronizovať, aby sa zlepšil výkon DEFROM Setup, synchronizovať sa budú len informácie o miestnom počítači a počítači servera. Na synchronizáciu informácií príslušného počítača použite tlačidlo ![]({{ '/assets/icons/pre_icons/mo_deformsetup_sync_button.jpg' | relative_url }}) a na synchronizáciu všetkých počítačov použite tlačidlo ![]({{ '/assets/icons/pre_icons/mo_deformsetup_sync_all_computers_button.jpg' | relative_url }}). (Pozri obr. 3.1.21.)
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image013.jpg' | relative_url }})
 
-DEFORM Service for all DEFORM computers
+DEFORM Service pre všetky počítače DEFORM
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image030.jpg' | relative_url }})
 
-DEFORM Service for all DEFORM computers after sync
+DEFORM Service pre všetky počítače DEFORM po synchronizácii
 
-**Passcode :** An authorized DEFORM user (See) can create a passcode or change (See Fig. 3.1.22.). With Passcode,
+**Pasový kód :** Autorizovaný používateľ DEFORM (pozri) môže vytvoriť alebo zmeniť prístupový kód (pozri obr. 3.1.22.). Pomocou prístupového kódu,
 
-  * User can start and stop the services of the Server computer. (User must have passcode if user would like to stop the services of the Server computer in PC while in Linux you require passcode for both starting and stopping of the services of the Server computer)
-  * View Services of any DEFORM computer (other than the authorized computer)
-  * View Services of any computer with a web browser (no need to install DEFORM)
-  * Update Password file for server computer
-  * Update outdated services on any DEFORM Computer
+  * Používateľ môže spúšťať a zastavovať služby počítača Server. (Používateľ musí mať prístupový kód, ak chce zastaviť služby serverového počítača v PC, zatiaľ čo v Linuxe potrebujete prístupový kód na spustenie aj zastavenie služieb serverového počítača)
+  * Zobrazenie služieb akéhokoľvek počítača DEFORM (iného ako autorizovaného počítača)
+  * Zobrazenie služieb akéhokoľvek počítača s webovým prehliadačom (nie je potrebné inštalovať DEFORM)
+  * Aktualizácia súboru hesiel pre serverový počítač
+  * Aktualizácia zastaraných služieb v ktoromkoľvek počítači DEFORM
 
-**Note:** A passcode must be shared only among those users who would be controlling the services of all DEFORM Computers as they start and stop any service.
+**Poznámka:** Prístupový kód musí byť zdieľaný len medzi tými používateľmi, ktorí budú ovládať služby všetkých počítačov DEFORM pri spúšťaní a zastavovaní akejkoľvek služby.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image014.jpg' | relative_url }})
 
-Creating Passcode in DEFORM Services windows by Authorized user
+Vytvorenie prístupového kódu v oknách DEFORM Services autorizovaným používateľom
 
-**Authorized DEFORM user:**
+**Oprávnený používateľ DEFORM:**
 
-For a DEFORM user, if your user name and computer name is listed in a text file called**authorized_users.txt** then you are called an authorized DEFORM user.
+Ak je vaše používateľské meno a názov počítača uvedené v textovom súbore s názvom**authorized_users.txt**, potom sa používateľ DEFORM nazýva autorizovaný používateľ DEFORM.
 
-As an authorized DEFORM user, you have full control of the DEFORM services. You can:
+Ako autorizovaný používateľ DEFORM máte plnú kontrolu nad službami DEFORM. Môžete:
 
-  1. Access the DEFORM Services to all DEFORM computers.
-  2. Set or change the DEFORM Services passcode
-  3. Update the DEFORM license password file (DEFORM.PWD)
+  1. Prístup k službám DEFORM na všetkých počítačoch DEFORM.
+  2. Nastavenie alebo zmena prístupového kódu služby DEFORM
+  3. Aktualizujte súbor s licenčným heslom DEFORM (DEFORM.PWD)
 
-The authorized_users.txt is located at DEFORM license folder on the DEFORM server machine.
+Súbor authorized_users.txt sa nachádza v licenčnom priečinku DEFORM na počítači servera DEFORM.
 
-It has the following format:
+Má tento formát:
 
-  * user_name1@computer_name1
-  * user_name2@computer_name2
+  * meno_používateľa1@názov_počítača1
+  * meno_používateľa2@názov_počítača2
 
-If the**authorized_users.txt** file does not exist, you can create one with a text editor
+Ak súbor**authorized_users.txt** neexistuje, môžete ho vytvoriť pomocou textového editora
 
-Please follow the above format to configure the authorized DEFORM users. Following guidelines can be used while creating authorized users,
+Pri konfigurácii autorizovaných používateľov DEFORM postupujte podľa vyššie uvedeného formátu. Pri vytváraní autorizovaných používateľov môžete použiť nasledujúce pokyny,
 
-  * Please use real user name and computer name in your system
-  * Please only list the users who manage the DEFORM system as authorized DEFORM users
-  * If you do not have the privilege to edit the authorized_users.txt file, please ask your IT admin for help.
+  * Použite skutočné meno používateľa a názov počítača v systéme
+  * Uveďte len používateľov, ktorí spravujú systém DEFORM ako oprávnení používatelia DEFORM
+  * Ak nemáte oprávnenie upravovať súbor authorized_users.txt, požiadajte o pomoc správcu IT.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image015.jpg' | relative_url }})
 
-a. Authorized user DEFORM Services Main window.
+a. Hlavné okno autorizovaného používateľa DEFORM Services.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image016.jpg' | relative_url }})
 
-b. Non Authorized user DEFORM Services main window
+b. Hlavné okno služby DEFORM pre neautorizovaných používateľov
 
-Showing Authorized user and Non Authorized user DEFORM Services Main window
+Zobrazenie hlavného okna služieb DEFORM pre autorizovaného používateľa a neautorizovaného používateľa
 
-**Updating Simulation services modules:**
+**Aktualizácia modulov simulačných služieb:**
 
-After installing DEFORM Services, if we are observing ![]({{ '/assets/icons/pre_icons/error_status_icon.jpg' | relative_url }}) status then it could be due to the Simulation services files not available or available files are outdated, then we need to update the files by using update button available next to the DEFORM computer which is displaying the error. User requires Passcode to update the services. When we click on ![]({{ '/assets/icons/pre_icons/mo_deform_setup_update_icon.jpg' | relative_url }}) Update button then Simulation Server (SS), Simulation Client (SC), and Web-based Simulation Monitoring server (RS) files are copied to Configuration folder and we can see the message as
+Ak po inštalácii služieb DEFORM pozorujeme stav ![]({{ '/assets/icons/pre_icons/error_status_icon.jpg' | relative_url }}), môže to byť spôsobené tým, že súbory simulačných služieb nie sú k dispozícii alebo dostupné súbory sú zastarané, potom musíme aktualizovať súbory pomocou tlačidla aktualizácie, ktoré je k dispozícii vedľa počítača DEFORM, ktorý zobrazuje chybu. Používateľ potrebuje na aktualizáciu služieb prístupový kód. Keď klikneme na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_deform_setup_update_icon.jpg' | relative_url }}) Update (Aktualizovať), potom sa súbory Simulation Server (SS), Simulation Client (SC) a Web-based Simulation Monitoring server (RS) skopírujú do zložky Configuration (Konfigurácia) a môžeme vidieť správu
 
-“Updating sim_modules on TESTING1 ...
+"Aktualizácia sim_modules na TESTING1 ...
 
-SUCCESS”, TESTING1 is the computer which was showing an error (See Fig. 3.1.24.). 
+SUCCESS", TESTING1 je počítač, ktorý vykazoval chybu (pozri obr. 3.1.24.).
 
-After successfully updating the Simulation services we can start the services by clicking on ![]({{ '/assets/icons/pre_icons/run_action_icon.jpg' | relative_url }}) button. If the DEFORM system is other than local then we need to enter Username and password of the System else we need not. The services will be run under the Username which is entered while starting the service. In case of local system is Windows, the service will be started automatically under the current active logged username when we click on ![]({{ '/assets/icons/pre_icons/run_action_icon.jpg' | relative_url }}) button (See Fig. 3.1.26.), while local system is Linux Username (default username from deformscd file will be displayed) and password must be entered to start the service.
+Po úspešnej aktualizácii simulačných služieb môžeme služby spustiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/run_action_icon.jpg' | relative_url }}). Ak je systém DEFORM iný ako lokálny, musíme zadať meno používateľa a heslo systému, inak nemusíme. Služby sa spustia pod používateľským menom, ktoré je zadané pri spúšťaní služby. V prípade, že lokálny systém je Windows, služba sa spustí automaticky pod aktuálnym aktívnym prihláseným používateľským menom, keď klikneme na tlačidlo ![]({{ '/assets/icons/pre_icons/run_action_icon.jpg' | relative_url }}) (pozri obr. 3.1.26.), zatiaľ čo lokálny systém je Linux Používateľské meno (zobrazí sa predvolené používateľské meno zo súboru deformscd) a heslo je potrebné zadať na spustenie služby.
 
-Before updating Simulation services files, we need to Stop the services that are running and then need to update the files.
+Pred aktualizáciou súborov služieb Simulation musíme zastaviť spustené služby a potom aktualizovať súbory.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image017.jpg' | relative_url }})
 
-a. When Simulation services are outdated or not available
+a. Ak sú simulačné služby zastarané alebo nie sú k dispozícii
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image018.jpg' | relative_url }})
 
-b. After updating Simulation services
+b. Po aktualizácii simulačných služieb
 
-Updating Simulation services files in DEFORM Services window
+Aktualizácia súborov simulačných služieb v okne DEFORM Services
 
-**Different status of Simulation server**
+**Rôzny stav simulačného servera**
 
-\-- | Simulation server not added in Simulation server tab  
----|---  
-STOPPED | Simulation server added but not running  
-outdated | Simulation server added previously but disconnected now  
-RUNNING | Simulation server added and running  
+\-- | Simulačný server nie je pridaný na karte Simulačný server
+---|---
+STOPPED | Simulačný server je pridaný, ale nie je spustený
+zastarané | Simulačný server bol pridaný skôr, ale teraz je odpojený
+RUNNING | Simulačný server pridaný a spustený
   
-**Update License Password file:**
+**Aktualizácia súboru s licenčným heslom:**
 
-Using Update License Password file button authorized user can update the password file when he receives new license password file (See Fig. 3.1.25.). You must restart the License Server after updating password file.
+Pomocou tlačidla Aktualizovať súbor s licenčným heslom môže oprávnený používateľ aktualizovať súbor s heslom, keď dostane nový súbor s licenčným heslom (pozri obr. 3.1.25.). Po aktualizácii súboru s heslom je potrebné reštartovať licenčný server.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image019.jpg' | relative_url }})
 
-Updating License password file from DEFORM Services
+Aktualizácia súboru hesla licencie zo služby DEFORM Services
 
-**Controlling Services on Server Computer**
+**Ovládanie služieb v serverovom počítači**
 
-We require pass code to stop the services License server, Batch queue server and Web-Based Service Control on server computer in Windows while in Linux we require passcode even to start these services. If we stop the License server service even Batch queue Server service will also be stopped along with all Simulation Server and Simulation Client services on all DEFORM systems connected to that server, see Fig. 3.1.26.
+V systéme Windows potrebujeme prístupový kód na zastavenie služieb Licenčný server, Server dávkovej fronty a Webové riadenie služieb na serverovom počítači, zatiaľ čo v systéme Linux potrebujeme prístupový kód aj na spustenie týchto služieb. Ak zastavíme službu Licenčný server, zastaví sa aj služba Dávkový frontový server spolu so všetkými službami Simulačný server a Simulačný klient na všetkých systémoch DEFORM pripojených k tomuto serveru, pozri obr. 3.1.26.
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image021.jpg' | relative_url }})
 
-Prompting to enter Passcode to stop the Batch queue Server Service
+Výzva na zadanie prístupového kódu na zastavenie služby servera Dávkový front
 
 ![]({{ '/assets/images/starting_up_deform/3_license_manager/3_1_deform_license_setup/3_1_image020.jpg' | relative_url }})
 
-Prompting to enter user name and Password to Start the other user services
+Výzva na zadanie mena používateľa a hesla na spustenie ďalších používateľských služieb
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [3.2. License Monitoring](/docs/sk/starting_up_deform/3_license_manager/3_2_license_monitoring/)
 
