@@ -1,39 +1,39 @@
 ---
 lang: sk
-title: "15.4. Screw press"
+title: "15.4. Skrutkovací lis"
 ---
 
-# 15.4. Screw press
+# 15.4. Skrutkovací lis
 
-**[2D, 3D]:** The unique characteristic of a screw press is the method of driving it. A motor drives a flywheel which is either directly connected or can be connected to a screw spindle. The screw spindle transmits the rotation through the threads, which have pitch angles usually between 13 and 17 degrees, to a linear movement of the main ram. On contact with the work piece, the complete kinetic energy of the flywheel and the ram is transformed into useful work (work on the work piece) and losses (elastic deformation work in the work piece and the frame of the structure and friction). The elastic deformation work results in a reaction force in all the press parts lying in the force transmission path.
+**[2D, 3D]:** Jedinečnou vlastnosťou skrutkového lisu je spôsob jeho pohonu. Motor poháňa zotrvačník, ktorý je buď priamo pripojený, alebo môže byť pripojený k vretenu skrutky. Skrutkové vreteno prenáša rotáciu cez závity, ktoré majú uhol stúpania zvyčajne medzi 13 a 17 stupňami, na lineárny pohyb hlavného barana. Pri kontakte s obrobkom sa celá kinetická energia zotrvačníka a barana transformuje na užitočnú prácu (práca na obrobku) a straty (práca pri pružnej deformácii v obrobku a v ráme konštrukcie a trenie). Výsledkom pružnej deformačnej práce je reakčná sila vo všetkých častiach lisu ležiacich v dráhe prenosu sily.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_4_screw_press/15_4_image001.jpg' | relative_url }})
 
-2D Screw Press movement controls window
+2D okno ovládania pohybu skrutky
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_4_screw_press/15_4_image002.jpg' | relative_url }})
 
-3D Screw Press movement controls window
+Okno ovládania pohybu 3D skrutkovacieho lisu
 
-The Screw press energy method will mimic the movement of a screw type press on the selected die. In a screw press a flywheel is taken to a given speed and a clutch is engaged. Once the clutch is engaged, the screw press begins to draw energy to drive the screw from the flywheel. Once the flywheel energy is expended the stroke is over and the movement will stop. Screw controlled movement can only be specified for rigid objects or deforming objects with a movement boundary condition applied. Motion of which is controlled by screw press parameters can only be applied in the +X, +Y, +Z, -X, -Y or -Z directions (X, Y, -X, or -Y directions in case of DEFORM-2D).
+Metóda energie skrutkového lisu napodobní pohyb skrutkového lisu na vybranej matrici. Pri skrutkovom lise sa zotrvačník uvedie do danej rýchlosti a zapne sa spojka. Po zapnutí spojky začne skrutkový lis čerpať energiu na pohon skrutky zo zotrvačníka. Po vyčerpaní energie zotrvačníka sa zdvih skončí a pohyb sa zastaví. Pohyb riadený skrutkou sa môže špecifikovať len pre tuhé objekty alebo deformujúce sa objekty s aplikovanou okrajovou podmienkou pohybu. Pohyb, ktorý je riadený parametrami lisovania skrutiek, možno aplikovať len v smeroch +X, +Y, +Z, -X, -Y alebo -Z (v prípade DEFORM-2D v smeroch X, Y, -X alebo -Y).
 
-For Screw press movement settings see Fig. 15.4.1. and Fig. 15.4.2.
+Nastavenie pohybu lisu na skrutky nájdete na obr. 15.4.1 a obr. 15.4.2.
 
-The data required to run a screw press driven tool are:
+Údaje potrebné na spustenie nástroja poháňaného skrutkovým lisom sú:
 
-  * **Energy** : The Blow Energy is a measure of the total energy that the flywheel will contain when the desired speed has been reached and prior to engaging the clutch. The units for blow energy in English units are klb-in and in SI units are N-mm. 
+  * **Energia** : Blow Energy je miera celkovej energie, ktorú bude zotrvačník obsahovať po dosiahnutí požadovaných otáčok a pred zopnutím spojky. Jednotky pre blow energy v anglických jednotkách sú klb-in a v jednotkách SI sú N-mm.
 
-  * **Blow Efficiency** : The Blow Efficiency represents the fraction of the total energy that will be converted to deformation energy. The rest of the energy is absorbed through the clutch mechanism, friction, and the machine frame. There are no units for this quantity. 
+  * **Účinnosť fúkania** : Účinnosť fúkania predstavuje podiel celkovej energie, ktorá sa premení na deformačnú energiu. Zvyšok energie sa absorbuje prostredníctvom spojkového mechanizmu, trenia a rámu stroja. Pre túto veličinu nie sú stanovené žiadne jednotky.
 
-  * **Moment of Inertia** : The Moment of Inertia is the moment of inertia of the flywheel. The English units of inertia are klb*in*s2 and the SI units are N-mm*s2. The mass moment of inertia for a circular disc with the Z-axis perpendicular to the center is I = 2 ET /ω2 where ET is the total energy of the flywheel, and ω is the angular velocity in radians per second.
+  * **Moment zotrvačnosti** : Moment zotrvačnosti je moment zotrvačnosti zotrvačníka. Anglické jednotky zotrvačnosti sú klb*in*s2 a jednotky SI sú N-mm*s2. Hmotnostný moment zotrvačnosti pre kruhový disk s osou Z kolmou na stred je I = 2 ET /ω2 , kde ET je celková energia zotrvačníka a ω je uhlová rýchlosť v radiánoch za sekundu.
 
-  * **Ram Displacement or Lead screw pitch** : The Ram Displacement specifies the distance per revolution of the flywheel that the screw will advance. This helps in determining the linear velocity of the ram. The English units for Ram Displacement are inch/revolution, while the SI units are mm/revolution. If only the pitch angle and diameter of the spindle is known, the Ram Displacement can be calculated using πdsin(θt) where d is the diameter of spindle and θt is the pitch angle of the spindle.
+  * **Posunutie ramena alebo rozstup olovenej skrutky** : Posunutie barana udáva vzdialenosť, ktorú skrutka prejde za jednu otáčku zotrvačníka. Pomáha pri určovaní lineárnej rýchlosti barana. Anglické jednotky pre Ram Displacement sú inch/otáčku, zatiaľ čo jednotky SI sú mm/otáčku. Ak je známy len uhol stúpania a priemer vretena, posunutie ramena možno vypočítať pomocou πdsin(θt), kde d je priemer vretena a θt je uhol stúpania vretena.
 
-Note:
+Poznámka:
 
-Multiple pass can be setup for Hammer, Screw press and rolling operations using the tools menu option provided in the menu bar of pre-processor window.
+Viacnásobný priechod možno nastaviť pre operácie kladiva, skrutkovacieho lisu a valcovania pomocou možnosti ponuky nástrojov v paneli ponúk okna predprocesora.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 

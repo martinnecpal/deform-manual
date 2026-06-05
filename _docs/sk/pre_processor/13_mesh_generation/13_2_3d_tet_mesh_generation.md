@@ -1,396 +1,396 @@
 ---
 lang: sk
-title: "13.2. 3D Tet Mesh Generation"
+title: "13.2. Generovanie 3D Tet Mesh"
 ---
 
-# 13.2. 3D Tet Mesh Generation
+# 13.2. Generovanie 3D Tet Mesh
 
-13.2.1. Guided Mode 3D Mesh Generation  
-13.2.2. Expert Mode 3D Mesh Generation
+13.2.1. Generovanie 3D siete v riadenom režime
+13.2.2. Generovanie 3D siete v expertnom režime
 
-13.2.3. 3D Mesh generation tools in Expert mode
+13.2.3. Nástroje na generovanie 3D sietí v režime Expert
 
   * Import Mesh
 
-  * Save Mesh
+  * Uložiť sieť
 
-  * Check Mesh
+  * Skontrolujte sieťovinu
 
-  * Area and Volume
+  * Plocha a objem
 
-  * Delete Mesh
+  * Odstrániť sieť
 
-  * Surface mesh
+  * Povrchová sieť
 
-  * Solid mesh
+  * Pevná sieť
 
-  * Manual Remesh
+  * Manuálne odstraňovanie nečistôt
 
-  * Show 3D
+  * Zobraziť 3D
 
-  * Show 2D Cross section
+  * Zobraziť 2D prierez
 
-  * Default Setting
+  * Predvolené nastavenie
 
-13.2.4. General Settings for Tetrahehdral (Tet) mesh
+13.2.4. Všeobecné nastavenia pre sieť Tetrahehdral (Tet)
 
-13.2.5. Mesh weighting factors
+13.2.5. Váhové faktory siete
 
-13.2.6. Mesh density windows
+13.2.6. Okná hustoty siete
 
-13.2.7. Coating Mesh
+13.2.7. Povlaková sieť
 
-13.2.8. Remeshing criteria
+13.2.8. Kritériá na opravu
 
-13.2.9. Built in Flownet
+13.2.9. Zabudované vo Flownete
 
-## Guided Mode 3D Mesh Generation
+## Generovanie 3D siete v riadenom režime
 
-The below Fig. 13.2.1. shows the mesh generation options in guided mode (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})). In guided mode mesh page we can generate only Tetrahedral mesh type.
+Na nasledujúcom obr. 13.2.1. sú zobrazené možnosti generovania siete v režime s riadením (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})). Na stránke siete v riadenom režime môžeme generovať len tetraedrický typ siete.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image001.jpg' | relative_url }})
 
-Guided Mode 3D Mesh window
+Okno 3D Mesh s riadeným režimom
 
-**Number of Elements :** The number of elements to be generated for an object can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation.
+**Počet prvkov :** Počet prvkov, ktoré sa majú vygenerovať pre objekt, možno určiť jednoduchým nastavením posuvníka a výberom vhodnej hodnoty pre aktuálnu simuláciu.
 
-**Preview![]({{ '/assets/icons/pre_icons/mo_mesh_preview_button.jpg' | relative_url }}) :**This feature allows the user to preview the surface mesh of the object.
+**Preview![]({{ '/assets/icons/pre_icons/mo_mesh_preview_button.jpg' | relative_url }}) :**Táto funkcia umožňuje používateľovi zobraziť náhľad povrchovej siete objektu.
 
-******Generate Mesh![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) : **Once the user is satisfied with the preview of surface mesh, the mesh can be generated on an object by clicking Generate Mesh.
+******Generovanie siete![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) : **Keď je používateľ spokojný s náhľadom povrchovej siete, sieť možno vygenerovať na objekte kliknutím na tlačidlo Generate Mesh (Generovať sieť).
 
-**Delete**![]({{ '/assets/icons/pre_icons/mo_delete_button.jpg' | relative_url }}) : This feature deletes the generated mesh.
+**Delete**![]({{ '/assets/icons/pre_icons/mo_delete_button.jpg' | relative_url }}) : Táto funkcia odstráni vytvorenú sieť.
 
-In order to control the mesh parameters like size, shape, density, type of elements, etc..., user has to switch to expert mode ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) for more advanced mesh options. Below Fig. 13.2.2. shows the mesh options available from Expert mode.
+Na ovládanie parametrov siete, ako je veľkosť, tvar, hustota, typ prvkov atď..., musí používateľ prepnúť do expertného režimu ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) pre pokročilejšie možnosti siete. Na nasledujúcom obr. 13.2.2. sú zobrazené možnosti siete dostupné z expertného režimu.
 
-## Expert Mode 3D Mesh Generation 
+## Generovanie 3D siete v režime Expert
 
-The below Fig. 13.2.2. shows the mesh generation options in Expert mode.
+Na nasledujúcom Obr. 13.2.2. sú zobrazené možnosti generovania siete v režime Expert.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image002.jpg' | relative_url }})
 
-Expert Mode 3D Mesh window 
+Okno 3D Mesh v režime Expert
 
-## 3D Mesh generation tools in Expert mode
+## Nástroje na generovanie 3D sietí v režime Expert
 
-**Import Mesh** ![]({{ '/assets/icons/pre_icons/mo_import_mesh_button.jpg' | relative_url }}) : A mesh can be imported into the MO wizard from a keyword file, database file or any supported mesh formats (PDA or universal file).
+**Importovanie siete** ![]({{ '/assets/icons/pre_icons/mo_import_mesh_button.jpg' | relative_url }}) : Sieť možno do sprievodcu MO importovať zo súboru s kľúčovými slovami, databázového súboru alebo z ľubovoľného podporovaného formátu siete (PDA alebo univerzálny súbor).
 
-**Save Mesh** ![]({{ '/assets/icons/pre_icons/mo_save_mesh_button.jpg' | relative_url }}) : This feature saves the current generated mesh into a file.
+**Uloženie siete** ![]({{ '/assets/icons/pre_icons/mo_save_mesh_button.jpg' | relative_url }}) : Táto funkcia uloží aktuálne vytvorenú sieť do súboru.
 
-**Check Mesh** ![]({{ '/assets/icons/pre_icons/mo_check_mesh_button.jpg' | relative_url }}) : The mesh can be examined for problems using the Check Mesh function. A perfect mesh will give the popup as shown in the Fig. 13.2.3., when user clicks on check mesh option.
+**Check Mesh** ![]({{ '/assets/icons/pre_icons/mo_check_mesh_button.jpg' | relative_url }}) : Pomocou funkcie Check Mesh (Skontrolovať sieť) možno skontrolovať, či nie sú v sieti problémy. Pri dokonalej sieti sa zobrazí vyskakovacie okno, ako je znázornené na obr. 13.2.3., keď používateľ klikne na možnosť check mesh (skontrolovať sieť).
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image004.jpg' | relative_url }})
 
-Check Mesh popup window
+Kontrola vyskakovacieho okna Mesh
 
-**Area and Volume** ![]({{ '/assets/icons/pre_icons/mo_area_volume.jpg' | relative_url }}) : This feature gives information of the meshed area and volume of the object. (See Fig. 13.2.4. )
+**Plocha a objem** ![]({{ '/assets/icons/pre_icons/mo_area_volume.jpg' | relative_url }}) : Táto funkcia poskytuje informácie o ploche oka a objeme objektu. (Pozri obr. 13.2.4. )
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image005.jpg' | relative_url }})
 
-Mesh Area and Volume popup window
+Vyskakovacie okno Plocha a objem siete
 
-**Generate Mesh** ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) : The mesh can be generated by clicking Generate Mesh.
+**Generovať sieť** ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) : Sieť môžete vygenerovať kliknutím na tlačidlo Generovať sieť.
 
-**Delete Mesh** ![]({{ '/assets/icons/pre_icons/mo_delete_mesh_button.jpg' | relative_url }}) : This feature deletes the generated mesh. Once, user clicks on ![]({{ '/assets/icons/pre_icons/mo_delete_mesh_button.jpg' | relative_url }}) button, popup appears as shown in ( Fig. 13.2.5.). By clicking on ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) button, mesh can be deleted.
+**Odstrániť sieť** ![]({{ '/assets/icons/pre_icons/mo_delete_mesh_button.jpg' | relative_url }}) : Táto funkcia odstráni vytvorenú sieť. Keď používateľ klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_mesh_button.jpg' | relative_url }}), zobrazí sa vyskakovacie okno, ako je znázornené na ( obr. 13.2.5.). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) je možné sieť vymazať.
 
   
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image003.jpg' | relative_url }})
 
-Delete mesh popup window
+Odstránenie vyskakovacieho okna siete
 
-**Surface mesh**![]({{ '/assets/icons/pre_icons/mo_surface_mesh_button.jpg' | relative_url }}) : When all of the Mesh parameters have been set, a surface mesh can be generated by clicking on the ![]({{ '/assets/icons/pre_icons/mo_surface_mesh_button.jpg' | relative_url }}) button. When a new mesh is generated for an object that currently has a mesh, the old mesh will be deleted and replaced with the new mesh. If there is a failure in the generation of the surface mesh, please refer to the [Trouble shooting](/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/) section.
+**Povrchová sieť**![]({{ '/assets/icons/pre_icons/mo_surface_mesh_button.jpg' | relative_url }}) : Po nastavení všetkých parametrov siete je možné kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_surface_mesh_button.jpg' | relative_url }}) vytvoriť povrchovú sieť. Keď sa vygeneruje nová sieť pre objekt, ktorý má v súčasnosti sieť, stará sieť sa vymaže a nahradí sa novou sieťou. Ak dôjde k zlyhaniu pri generovaní povrchovej siete, pozrite si časť [Trouble shooting](/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/).
 
-**Solid mesh** ![]({{ '/assets/icons/pre_icons/mo_solid_mesh_button.jpg' | relative_url }}) : After the surface mesh is generated, the user should inspect the mesh before generating the solid mesh. Pay particular attention to adequate mesh density in regions with complex geometry. After an acceptable surface mesh has been generated the solid mesh may be generated by clicking the Generate Solid Mesh button. If a surface mesh is imported as the geometry, the user may forgo the surface mesh generation and directly place a solid mesh on the surface mesh. If the solid mesh generation fails, please refer to the [Trouble shooting](/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/) section.
+**Tvrdá sieť** ![]({{ '/assets/icons/pre_icons/mo_solid_mesh_button.jpg' | relative_url }}) : Po vygenerovaní povrchovej siete by mal používateľ skontrolovať sieť pred generovaním pevnej siete. Venujte osobitnú pozornosť primeranej hustote siete v oblastiach so zložitou geometriou. Po vygenerovaní prijateľnej povrchovej siete sa môže vygenerovať pevná sieť kliknutím na tlačidlo Generate Solid Mesh (Generovať pevnú sieť). Ak je povrchová sieť importovaná ako geometria, používateľ môže upustiť od generovania povrchovej siete a priamo umiestniť pevnú sieť na povrchovú sieť. Ak generovanie pevnej siete zlyhá, pozrite si časť [Trouble shooting](/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/).
 
-**Manual Remesh** ![]({{ '/assets/icons/pre_icons/mo_manual_remesh_button.jpg' | relative_url }}) : If a simulation is continued from a previously running simulation, the recommended button to click is Manual Remesh. This automatically performs border extraction and will prompt the user for boundary condition interpolation.
+**Ručné prepracovanie** ![]({{ '/assets/icons/pre_icons/mo_manual_remesh_button.jpg' | relative_url }}) : Ak simulácia pokračuje z predtým spustenej simulácie, odporúčané tlačidlo, na ktoré treba kliknúť, je Ručné prepracovanie. Tým sa automaticky vykoná extrakcia hraníc a používateľ bude vyzvaný na interpoláciu okrajových podmienok.
 
-During the course of a DEFORM simulation, extensive deformation of plastic or porous objects may cause elements in those object meshes to become so distorted that the mesh is no longer usable (negative Jacobian). If this condition occurs, the simulation will abort and an error message will be written to the ProblemID.MSG file. To continue a simulation after a mesh has become unusable, the object must be remeshed. Remeshing is the process of replacing a distorted mesh with a new undistorted mesh and interpolating the field variables (strain, velocity, damage, and temperature etc.) from the old mesh to the new mesh.
+V priebehu simulácie DEFORM môže rozsiahla deformácia plastických alebo pórovitých objektov spôsobiť, že prvky v sieťach týchto objektov budú natoľko deformované, že sieť už nebude použiteľná (záporný Jakobsonov koeficient). Ak nastane tento stav, simulácia sa preruší a do súboru ProblemID.MSG sa zapíše chybové hlásenie. Ak chcete pokračovať v simulácii po tom, ako sa sieť stala nepoužiteľnou, objekt sa musí znovu vyrezať. Remeshing je proces nahradenia deformovanej siete novou nedeformovanou sieťou a interpolácie premenných poľa (deformácia, rýchlosť, poškodenie a teplota atď.) zo starej siete do novej siete.
 
-In the case of a hexahedral (brick) mesh, 3D cannot currently create a brick mesh so if a remesh is required for a Elasto-plastic brick mesh, the user needs to remesh outside of DEFORM and interpolate the state variables and re-apply the boundary conditions to the new mesh.
+V prípade šesťstennej (tehlovej) siete 3D v súčasnosti nedokáže vytvoriť tehlovú sieť, takže ak sa vyžaduje opätovné vytvorenie siete pre elastoplastickú tehlovú sieť, používateľ musí vytvoriť novú sieť mimo programu DEFORM a interpolovať stavové premenné a znovu aplikovať okrajové podmienky na novú sieť.
 
-In most cases, remeshing and interpolation occurs automatically without user intervention.
+Vo väčšine prípadov prebieha remeshing a interpolácia automaticky bez zásahu používateľa.
 
-It is also possible to manually regenerate a mesh on an object and interpolate the data from the old mesh. The procedure to perform a manual remeshing is as follows:
+Sieť na objekte je možné regenerovať aj ručne a interpolovať údaje zo starej siete. Postup na vykonanie manuálneho remeshingu je nasledujúci:
 
-**Procedure:**
+**Postup:**
 
-  * Open the pre-processor.
+  * Otvorte predprocesor.
 
-  * Select the step from the database where remeshing is to be performed and load this in the pre-processor. If the object will not remesh at the last step, it may be necessary to remesh at an earlier step.
+  * Vyberte krok z databázy, v ktorom sa má vykonať remeshing, a načítajte ho do preprocesora. Ak sa objekt nebude remeshovať v poslednom kroku, môže byť potrebné remeshovať v skoršom kroku.
 
-  * Select the object to be remeshed.
-  * Select the Manual Remeshing option in the Objects window.
+  * Vyberte objekt, ktorý chcete opraviť.
+  * V okne Objekty vyberte možnosť Manual Remeshing (Ručné premazávanie).
 
-  * If the part geometry is to be modified (such as trimming flash or punching out a web, it may be done at this point using the geometry editor).
+  * Ak je potrebné upraviť geometriu dielu (napríklad orezanie blesku alebo vyrazenie pásu, možno to urobiť v tomto bode pomocou editora geometrie).
 
-  * Adjust mesh windows or other mesh parameters as necessary.
-  * Generate a new surface mesh.
-  * Generate a new solid mesh.
-  * Interpolate data from the old mesh to the new mesh by clicking on the OK button.
-  * Interpolate boundary conditions from the old mesh to the new mesh unless:
+  * Podľa potreby upravte okná siete alebo iné parametre siete.
+  * Vygenerujte novú sieť povrchu.
+  * Vygenerujte novú pevnú sieť.
+  * Interpolujte údaje zo starej siete do novej siete kliknutím na tlačidlo OK.
+  * Interpolujte okrajové podmienky zo starej siete do novej siete, pokiaľ:
 
-  * Dies are being changed at the same time the part is being remeshed
-  * The mesh visibly distorts on remeshing.
-  * A negative Jacobian error occurs immediately when the problem is restarted.
+  * Súčasne s výmenou dielu sa vymieňajú aj lisovacie nástroje
+  * Sieť sa pri remeshovaní viditeľne deformuje.
+  * Pri opätovnom spustení problému sa okamžite vyskytne záporná chyba Jakobiánu.
 
-  * Generate a database and start simulation.
+  * Vygenerujte databázu a spustite simuláciu.
 
-If the mesh visibly distorts after remeshing or if you are changing dies at the same time, regenerate the mesh and interpolate data but not boundary conditions. If boundary conditions are not interpolated, it is necessary to recreate all velocity, heat transfer, inter-object, or other boundary conditions. If there are no changes to the geometry (such as trimming the part) then just click on , this extracts the border and shows the mesh generation dialog. After meshing when exiting, interpolation of state variables and boundary conditions is carried out.
+Ak sa sieť po remeshovaní viditeľne deformuje alebo ak súčasne meníte matrice, regenerujte sieť a interpolujte údaje, ale nie okrajové podmienky. Ak okrajové podmienky nie sú interpolované, je potrebné znovu vytvoriť všetky okrajové podmienky rýchlosti, prenosu tepla, medzi objektmi alebo iné okrajové podmienky. Ak nedošlo k žiadnym zmenám geometrie (napríklad orezanie súčiastky), potom stačí kliknúť na , čím sa vyťaží ohraničenie a zobrazí sa dialógové okno generovania siete. Po vytvorení siete sa pri výstupe vykoná interpolácia stavových premenných a okrajových podmienok.
 
-**Default Setting** ![]({{ '/assets/icons/pre_icons/mo_default_settings_button.jpg' | relative_url }}) : When user clicks on Default settings tab all the settings will be changed to default values, by default Mesh window will be in greyed out mode as no mesh windows are defined. If user wants to activate mesh window, user has to change the weighting factor for mesh density by increasing the sliding bar value to 1.
+**Východiskové nastavenie** ![]({{ '/assets/icons/pre_icons/mo_default_settings_button.jpg' | relative_url }}) : Keď používateľ klikne na záložku Default settings (Východiskové nastavenia), všetky nastavenia sa zmenia na východiskové hodnoty, v predvolenom nastavení bude okno Mesh (Sieť) v sivom režime, pretože nie sú definované žiadne okná mesh. Ak chce používateľ aktivovať okno mesh, musí zmeniť váhový faktor pre hustotu mesh zvýšením hodnoty posuvníka na 1.
 
-**Show 3D**
+**Zobraziť 3D**
 
-By selecting this option user can see the 3D object in Display window. This option is more useful for the brick mesh option.
+Výberom tejto možnosti môže používateľ zobraziť 3D objekt v okne Display. Táto možnosť je užitočnejšia pre možnosť brick mesh.
 
-**Show 2D Cross section**
+**Zobraziť 2D prierez**
 
-By selecting this option user can see the 2D cross section object in Display window. This option is more useful for the brick mesh option.
+Výberom tejto možnosti môže používateľ zobraziť objekt 2D prierezu v okne Zobrazenie. Táto možnosť je užitočnejšia pre možnosť brick mesh (tehlová sieť).
 
-**Mesh Type** : 
+**Typ siete** :
 
-  * **Tetrahedral mesh** : Using this option user can generate tetrahedral (tet) mesh with existing mesh settings for the object. By default in DEFORM tetraherdal mesh will be selected.
+  * **Tetraedrická sieť** : Pomocou tejto možnosti môže používateľ vygenerovať tetraedrickú (tet) sieť s existujúcimi nastaveniami siete pre objekt. V predvolenom nastavení v DEFORM sa vyberie tetraherdická sieť.
 
-  * **Brick mesh :** Using this option user can generate brick mesh with existing mesh settings for the object. For brick mesh options refer chapter 13.3. Brick Mesh Generation 
+  * **Brick mesh :** Pomocou tejto možnosti môže používateľ vygenerovať brick mesh s existujúcimi nastaveniami mesh pre objekt. Možnosti brick mesh nájdete v kapitole 13.3. Generovanie tehlovej siete
 
-## **General Settings for Tetrahehdral (Tet) mesh**
+## **Všeobecné nastavenia pre sieť Tetrahehdral (Tet)**
 
-Within DEFORM, there are two different types of mesh that can be generated for 3D objects.
+V rámci programu DEFORM možno pre 3D objekty generovať dva rôzne typy sietí.
 
-  * **Relative Mesh**
+  * **Relatívna sieť**
 
-Using the relative mesh setting, the user specifies the number of solid elements to be generated. No matter how complex the shape of the part gets, the number of elements will remain essentially constant. ( Fig. 13.2.6.)
+Pomocou nastavenia relatívnej siete používateľ určí počet pevných prvkov, ktoré sa majú vygenerovať. Bez ohľadu na to, aký zložitý tvar bude mať diel, počet prvkov zostane v podstate konštantný. ( Obr. 13.2.6.)
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image006.jpg' | relative_url }})
 
-Relative mesh window options
+Možnosti okna relatívnej siete
 
-  * **Absolute Mesh**
+  * **Absolútna sieť**
 
-Using the absolute mesh setting, the user specifies the size of the elements, and the system determines the total number of elements that are required based on the size of the element specified and geometry. As part complexity increases, the number of elements tends to increase. ( Fig. 13.2.7.)
+Pomocou nastavenia absolútnej siete používateľ zadá veľkosť prvkov a systém určí celkový počet potrebných prvkov na základe veľkosti zadaného prvku a geometrie. S rastúcou zložitosťou súčiastky má počet prvkov tendenciu rásť. ( Obr. 13.2.7.)
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image007.jpg' | relative_url }})
 
-Absolute mesh window options
+Možnosti okna s absolútnou sieťou
 
-  * **Surface elements**
+  * **Povrchové prvky**
 
-The number of surface elements (MGNELS) represents the approximate number of surface elements that will be generated by the mesh generator. The Automatic Mesh Generator (AMG) takes the value for MGNELS and generates a mesh that will contain approximately the same number of elements. This value is ignored if mesh windows are used with absolute mesh density definition.
+Počet povrchových prvkov (MGNELS) predstavuje približný počet povrchových prvkov, ktoré vygeneruje generátor siete. Automatický generátor siete (AMG) prevezme hodnotu MGNELS a vygeneruje sieť, ktorá bude obsahovať približne rovnaký počet prvkov. Táto hodnota sa ignoruje, ak sa používajú okná siete s definíciou absolútnej hustoty siete.
 
-  * **Element size ratio**([MGSIZR](/docs/sk/keyword_documentation/m/mgsizr/))
+  * **Pomer veľkosti prvku**([MGSIZR](/docs/sk/keyword_documentation/m/mgsizr/))
 
-The maximum size ratio between elements is one of several ways to control the mesh density during automatic mesh generation (AMG) by specifying the ratio of node densities.
+Pomer maximálnej veľkosti medzi prvkami je jedným z viacerých spôsobov riadenia hustoty siete počas automatického generovania siete (AMG) určením pomeru hustoty uzlov.
 
   
-For a value of 3 for [MGSIZR](/docs/sk/keyword_documentation/m/mgsizr/), the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then Size Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.
+Pri hodnote 3 pre [MGSIZR](/docs/sk/keyword_documentation/m/mgsizr/) bude najväčšia hrana prvku na objekte približne 3-krát väčšia ako najmenšia hrana prvku na tom istom objekte. Ak sa požadujú rovnako veľké prvky, potom je pomer veľkosti = 1. Ak je Size Ratio = 0, pomer veľkosti prvkov nebude faktorom pri rozdelení hustoty siete.
 
-  * **Finer internal mesh**
+  * **Vnútorná jemnejšia sieť**
 
-This feature defines fine internal mesh for the object when meshing. This feature is active for DEFORM-3D.A check box has been added to allow the user to create a finer internal mesh. This feature can be used when the user would like to see more solid elements throughout the thickness of the part. Note that the total number of elements may be significantly increased when this option is used. A comparison of with and without finer internal mesh is seen in Fig. 13.2.8..
+Táto funkcia definuje jemnú vnútornú sieť pre objekt pri sieťovaní. Táto funkcia je aktívna pre DEFORM-3D.Bolo pridané zaškrtávacie políčko, ktoré umožňuje používateľovi vytvoriť jemnejšiu vnútornú sieť. Túto funkciu možno použiť, keď chce používateľ vidieť viac pevných prvkov v celej hrúbke súčiastky. Upozorňujeme, že pri použití tejto možnosti sa môže výrazne zvýšiť celkový počet prvkov. Porovnanie s jemnejšou vnútornou sieťou a bez nej je vidieť na obr. 13.2.8..
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image008.jpg' | relative_url }})
 
-Comparison of mesh with 10000 elements specified at generation; (a) Internal mesh without finer internal mesh (b) Internal mesh with finer internal mesh
+Porovnanie siete s 10000 prvkami zadanými pri generovaní; a) vnútorná sieť bez jemnejšej vnútornej siete b) vnútorná sieť s jemnejšou vnútornou sieťou
 
-## Mesh weighting factors
+## Váhové faktory siete
 
-The weighting factors or parameters (system defined mesh density) for boundary curvature, temperature, strain and strain rate specify relative mesh density weights to be assigned to the associated parameter. (See Fig. 13.2.9.)
+Váhové faktory alebo parametre (systémovo definovaná hustota siete) pre hraničné zakrivenie, teplotu, deformáciu a mieru deformácie určujú relatívne váhy hustoty siete, ktoré sa majú priradiť príslušnému parametru. (Pozri obr. 13.2.9.)
 
-Temperature, strain, and strain rate densities are assigned based on gradients in these parameters, not absolute parameter values. That is, a region with a rapid temperature change in a particular direction will receive more elements that a region with a uniform high temperature.
+Hustoty teploty, deformácie a rýchlosti deformácie sú priradené na základe gradientov týchto parametrov, nie na základe absolútnych hodnôt parametrov. To znamená, že oblasť s rýchlou zmenou teploty v určitom smere dostane viac prvkov ako oblasť s rovnomerne vysokou teplotou.
 
-The values from all the mesh density keywords are combined during the mesh generation process to create a mesh density distribution within the geometric boundary.
+Hodnoty zo všetkých kľúčových slov hustoty siete sa počas procesu generovania siete kombinujú, aby sa vytvorilo rozloženie hustoty siete v rámci geometrickej hranice.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image009.jpg' | relative_url }})
 
-3D Mesh Weighting Factors window
+Okno 3D Mesh Weighting Factors
 
-  * **Surface curvature based weighting factor** (MGWCUV) 
+  * **Váhový faktor založený na zakrivení povrchu** (MGWCUV)
 
-The surface curvature weighting ([MGWCUV](/docs/sk/keyword_documentation/m/mgwcuv/)) will apply a higher mesh density to regions where the geometry edge lengths are smaller. The purpose of this is to apply a finer mesh in regions where smaller facets are used to give a finer mesh in the region of small features. If [MGWCUV](/docs/sk/keyword_documentation/m/mgwcuv/) is greater than 0, the boundary area with curves will receive a higher mesh density in that area. If [MGWCUV](/docs/sk/keyword_documentation/m/mgwcuv/) is set to 0, this weighting criterion is ignored.
+Váha zakrivenia povrchu ([MGWCUV](/docs/sk/keyword_documentation/m/mgwcuv/)) použije vyššiu hustotu siete v oblastiach, kde sú dĺžky hrán geometrie menšie. Účelom je použiť jemnejšiu sieť v oblastiach, kde sa používajú menšie hrany, aby sa v oblasti malých prvkov vytvorila jemnejšia sieť. Ak je hodnota [MGWCUV](/docs/sk/keyword_documentation/m/mgwcuv/) väčšia ako 0, hraničná oblasť s krivkami dostane v tejto oblasti vyššiu hustotu siete. Ak je hodnota [MGWCUV](/docs/sk/keyword_documentation/m/mgwcuv/) nastavená na 0, toto váhové kritérium sa ignoruje.
 
-  * **Temperature based weighting factor** (MGWTMP)
+  * **Váhový faktor založený na teplote** (MGWTMP)
 
-This ([MGWTMP](/docs/sk/keyword_documentation/m/mgwtmp/)) weighting factor can be used to specify fine elements in areas of high temperature gradients.
+Tento váhový faktor ([MGWTMP](/docs/sk/keyword_documentation/m/mgwtmp/)) sa môže použiť na určenie jemných prvkov v oblastiach s vysokým teplotným gradientom.
 
-  * **Strain base weighting factor** (MGWSTN)
+  * **Vážiaci faktor základne napätia** (MGWSTN)
 
-To keep a fine mesh in areas of high strain this ([MGWSTN](/docs/sk/keyword_documentation/m/mgwstn/)) weighting factor can be adjusted.
+Na zachovanie jemnej siete v oblastiach s vysokým napätím možno tento váhový faktor ([MGWSTN](/docs/sk/keyword_documentation/m/mgwstn/)) upraviť.
 
-  * **Strain rate based weighting factor**(MGWSTR) 
+  * **Váhový faktor založený na rýchlosti ťahu** (MGWSTR)
 
-If there are areas on the deforming object which see high strain rates and localized deformation then using ([MGWSTR](/docs/sk/keyword_documentation/m/mgwstr/)) weighting factor will put a fine mesh in areas where there is a high strain rate gradient
+Ak sa na deformujúcom sa objekte nachádzajú oblasti s vysokou rýchlosťou deformácie a lokalizovanou deformáciou, potom sa použitím váhového faktora ([MGWSTR](/docs/sk/keyword_documentation/m/mgwstr/)) vytvorí jemná sieť v oblastiach s vysokým gradientom rýchlosti deformácie.
 
-  * **Mesh Density Windows weighting factor** (MGWUSR)
+  * **Váhový faktor sieťových okien** (MGWUSR)
 
-The user defined windows weighting factor ([MGWUSR](/docs/sk/keyword_documentation/m/mgwusr/)) is used in conjunction with Mesh Density Windows. User-defined distribution weighting will apply a higher mesh density to areas with a specified density window. If this parameter is set to 0, the mesh windows are ignored during automatic remeshing.
+Váhový faktor okien definovaný používateľom ([MGWUSR](/docs/sk/keyword_documentation/m/mgwusr/)) sa používa v spojení s oknami Mesh Density. Užívateľom definované váhové rozdelenie použije vyššiu hustotu siete na oblasti so zadaným oknom hustoty. Ak je tento parameter nastavený na 0, okná siete sa počas automatického remeshovania ignorujú.
 
-  * **Additional weight weighting factor**
+  * **Dodatočný váhový koeficient**
 
-Note:
+Poznámka:
 
-When an object is deformed, the user-defined mesh window will move according to the velocity component assigned to that window. This window will carry the mesh density weight with it throughout the simulation.
+Keď sa objekt deformuje, okno siete definované používateľom sa bude pohybovať podľa zložky rýchlosti priradenej tomuto oknu. Toto okno bude so sebou počas celej simulácie niesť váhu hustoty siete.
 
-## Mesh density windows for Tet mesh
+## Okná hustoty siete pre sieť Tet
 
-The Mesh density window (See Fig. 13.2.10.) concept is similar to a user defined mesh density. The mesh density specified for a given window is applied to any geometry point (node or STL vertex) inside the window. However, the mesh density window is used during remeshing as well as initial mesh generation, whereas user defined mesh densities are used only during initial generation. It can also be assigned a velocity, or follow another object's movement and it can be defined in an area where the workpiece has not yet been deformed through.
+Koncepcia okna Hustota siete (pozri obr. 13.2.10.) je podobná koncepcii hustoty siete definovanej používateľom. Hustota siete zadaná pre dané okno sa aplikuje na akýkoľvek geometrický bod (uzol alebo vrchol STL) vo vnútri okna. Okno hustoty siete sa však používa počas remeshingu aj počiatočného generovania siete, zatiaľ čo hustoty siete definované používateľom sa používajú len počas počiatočného generovania. Môže jej byť tiež priradená rýchlosť alebo môže sledovať pohyb iného objektu a môže byť definovaná v oblasti, cez ktorú ešte nebol obrobok deformovaný.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image012.jpg' | relative_url }})
 
-3D Mesh Density window
+Okno 3D Mesh Density
 
-Mesh density is defined by the number of surface nodes per unit length. The mesh density values may specify a mesh density ratio between two regions in the object or an absolute element edge length in a region on a surface. In the case of a relative mesh density between one or more regions, the unspecified areas will be given the global value. In the case of absolute mesh density, the unspecified regions will also take on the global value. In the case of absolute mesh density specification, the user should be careful what value of density is used.
+Hustota siete je definovaná počtom povrchových uzlov na jednotku dĺžky. Hodnoty hustoty siete môžu špecifikovať pomer hustoty siete medzi dvoma oblasťami v objekte alebo absolútnu dĺžku hrany prvku v oblasti na povrchu. V prípade relatívnej hustoty siete medzi jednou alebo viacerými oblasťami sa nezadaným oblastiam priradí globálna hodnota. V prípade absolútnej hustoty siete nezadané oblasti tiež nadobudnú globálnu hodnotu. V prípade špecifikácie absolútnej hustoty siete by si mal používateľ dať pozor na to, akú hodnotu hustoty použije.
 
-The user can also import any user defined geometry (in GEO format) as a mesh density window (See Fig. 13.2.11.) for more precise mesh density control on the certain areas on the object during initial mesh generation (See Fig. 13.2.12.) as well as remeshing.
+Používateľ môže tiež importovať ľubovoľnú používateľom definovanú geometriu (vo formáte GEO) ako okno hustoty siete (pozri obr. 13.2.11.) na presnejšiu kontrolu hustoty siete na určitých oblastiach na objekte počas počiatočného generovania siete (pozri obr. 13.2.12.), ako aj remeshingu.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image011.jpg' | relative_url }})
 
-Specification of Mesh Window using Geometry
+Špecifikácia okna siete pomocou geometrie
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image010.jpg' | relative_url }})
 
-Mesh generated using geometry defined mesh surface
+Sieť vytvorená pomocou geometricky definovaného povrchu siete
 
-**Defining mesh density windows** : Mesh density window can be defined using the below mentioned steps,
+**Definovanie okien hustoty siete** : Okno hustoty siete je možné definovať pomocou nižšie uvedených krokov,
 
-  1. Select a window number under the mesh density window header. Up to 20 different windows can be defined. Apart from the basic mesh window types available, user can also define any arbitrary shaped mesh density window which can be any valid 3D GEO file generated from DEFORM system.
+  1. Vyberte číslo okna v záhlaví okna hustoty oka. Môžete definovať až 20 rôznych okien. Okrem základných dostupných typov okien siete môže používateľ definovať aj ľubovoľný tvar okna hustoty siete, ktorým môže byť akýkoľvek platný 3D GEO súbor vygenerovaný zo systému DEFORM.
 
-  * Click on the Add bounding point button and click on the part to create a mesh density window.
-  * Drag window to adjust the size and location of the mesh density window.
-  * Once a window is defined, its density is entered in the box under the Parameters header.
+  * Kliknite na tlačidlo Add bounding point (Pridať ohraničujúci bod) a kliknite na časť, aby sa vytvorilo okno hustoty siete.
+  * Ťahaním okna upravte veľkosť a umiestnenie okna hustoty oka.
+  * Po definovaní okna sa jeho hustota zadá do poľa v záhlaví Parametre.
 
-  1. A velocity for the mesh window can also be defined in the x and/or y direction. These values are also found under the Parameters header.
-  2. If the window needs to be rotated, the user can use rotation buttons in the display box.
-  3. After the window is applied in the position that the user desires, pressing the Show button in the display box will highlight the surface nodes that are encapsulated by the mesh window. The Hide button will de-highlight the nodes contained by the mesh density window.
+  1. Rýchlosť pre okno siete možno definovať aj v smere x a/alebo y. Tieto hodnoty sa tiež nachádzajú v záhlaví Parameters (Parametre).
+  2. Ak je potrebné okno otočiť, používateľ môže použiť tlačidlá na otáčanie v okne zobrazenia.
+  3. Po aplikácii okna v polohe, ktorú si používateľ želá, sa stlačením tlačidla Zobraziť v okne zobrazenia zvýraznia uzly povrchu, ktoré sú uzavreté oknom siete. Stlačením tlačidla Hide (Skryť) sa zruší zvýraznenie uzlov, ktoré sú obsiahnuté oknom hustoty siete.
 
-**Window Definition** : Using these options different 3d mesh windows can be created and modified as explained below,
+**Definícia okna** : Pomocou týchto možností je možné vytvoriť a upraviť rôzne okná 3D siete, ako je vysvetlené nižšie,
 
-  * **Box![]({{ '/assets/icons/pre_icons/mo_box_window_icon.jpg' | relative_url }})** , **Cylinder![]({{ '/assets/icons/pre_icons/mo_cylinder_window_icon.jpg' | relative_url }})** , **Ring![]({{ '/assets/icons/pre_icons/mo_hollow_cylinder_icon.jpg' | relative_url }}) **and **Polygon![]({{ '/assets/icons/pre_icons/mo_polygon_window_icon.jpg' | relative_url }}) **window options are used to define mesh window. 
-  * **Resize, Move and Rotate window** : user can resize the window using Size control point option, user can move the window using axis arrow option and user can rotate the window using Rotational axis option.
+  * Na definovanie okna siete sa používajú možnosti **Box![]({{ '/assets/icons/pre_icons/mo_box_window_icon.jpg' | relative_url }})** , **Cylinder![]({{ '/assets/icons/pre_icons/mo_cylinder_window_icon.jpg' | relative_url }})** , **Ring![]({{ '/assets/icons/pre_icons/mo_hollow_cylinder_icon.jpg' | relative_url }}) **a **Polygon![]({{ '/assets/icons/pre_icons/mo_polygon_window_icon.jpg' | relative_url }}) **.
+  * **Zmenšenie veľkosti, presun a otočenie okna** : používateľ môže zmeniť veľkosť okna pomocou možnosti Veľkosť riadiaceho bodu, používateľ môže presunúť okno pomocou možnosti Osová šípka a používateľ môže otočiť okno pomocou možnosti Osová rotácia.
 
-  * **Axis arrow** : using this option user can move the window in selected axis direction along global axis. User need to select the axis arrow of which direction to be moved and then drag the axis arrow, window will interactively changes its position when we drag the axis arrow.
+  * **Šípka osi** : pomocou tejto možnosti môže používateľ posúvať okno v smere vybranej osi pozdĺž globálnej osi. Používateľ musí vybrať šípku osi, ktorej smerom sa má pohybovať, a potom potiahnuť šípku osi, okno interaktívne zmení svoju polohu, keď potiahneme šípku osi.
 
-  * **Rotational arrow** : using this option user can rotate the window in selected axis direction along global axis. User need to select the axis of which direction to be moved and then rotate the rotational arrow, window will interactively rotate as we rotate the rotational arrow.
+  * **Rotačná šípka** : pomocou tejto možnosti môže používateľ otáčať okno v smere zvolenej osi pozdĺž globálnej osi. Používateľ musí vybrať os, ktorej smerom sa má pohybovať, a potom otáčať rotačnou šípkou, okno sa bude interaktívne otáčať, keď budeme otáčať rotačnou šípkou.
 
-  * **Size control point** : window size can be controlled using size control points based on the window local co-ordinate system. User can observe sizing option based on the type of window. User can drag the size control points to interactively change the size along the axis in the direction of dragging.
+  * **Ovládací bod veľkosti** : veľkosť okna možno ovládať pomocou ovládacích bodov veľkosti na základe miestneho súradnicového systému okna. Používateľ môže pozorovať možnosť nastavenia veľkosti na základe typu okna. Používateľ môže ťahaním riadiacich bodov veľkosti interaktívne meniť veľkosť pozdĺž osi v smere ťahania.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image015.jpg' | relative_url }})
 
-  * **Modify**![]({{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}) : using this option user can modify the previously defined window definition. 
-  * **Duplicate window**![]({{ '/assets/icons/pre_icons/mo_duplicate_window_button.jpg' | relative_url }}) : using this option user can duplicate the existing window and can change the position or the size of the duplicated window.
-  * **Preview**![]({{ '/assets/icons/pre_icons/mo_preview_icon.jpg' | relative_url }}) : using this option user can see the preview of mesh window on the object. 
+  * **Modify**![]({{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}) : pomocou tejto možnosti môže používateľ upraviť predtým definované okno.
+  * **Duplikovať okno**![]({{ '/assets/icons/pre_icons/mo_duplicate_window_button.jpg' | relative_url }}) : pomocou tejto možnosti môže používateľ duplikovať existujúce okno a môže zmeniť polohu alebo veľkosť duplikovaného okna.
+  * **Preview**![]({{ '/assets/icons/pre_icons/mo_preview_icon.jpg' | relative_url }}) : pomocou tejto možnosti môže používateľ zobraziť náhľad okna siete na objekte.
 
-**Points** : The Points represents the total number of points that make up the mesh density window.
+**Body** : Body predstavujú celkový počet bodov, ktoré tvoria okno hustoty siete.
 
-**Density** : The Density is the desired density value for a given window.
+**Hustota** : Hustota je požadovaná hodnota hustoty pre dané okno.
 
-**Velocity** : The Velocity is the velocity of the window. This allows the window to move with the dies. In cases where punch velocity is not known, such as a hammer forging, or a load controlled press, the best estimate of a constant velocity should be made.
+**Veľkosť** : Velocity je rýchlosť okna. Umožňuje, aby sa okno pohybovalo spolu s matricami. V prípadoch, keď nie je známa rýchlosť razníka, ako napríklad pri kovaní kladivom alebo pri lisovaní s riadeným zaťažením, by sa mal urobiť najlepší odhad konštantnej rýchlosti.
 
-**Local remeshing window:**
+**Miestne okno na opätovné nastavenie: **
 
-Note:
+Poznámka:
 
-If a velocity is assigned to a window, it should be repositioned as necessary before a second or third operation is performed.
+Ak je oknu priradená rýchlosť, pred vykonaním druhej alebo tretej operácie by sa mala podľa potreby zmeniť jeho poloha.
 
-**Important considerations in mesh density window definition:**
+**Dôležité aspekty pri definovaní okna hustoty siete:**
 
-  * There needs to be only one mesh density window. The global density values will used for any region that is not inside a window.
-  * Be aware of large mesh density ratios. A 5:1 density ratio is large, and a 10:1 ratio is extreme. Extremely large density ratios may lead to problems in mesh generation including much longer times taken to generate mesh.
-  * Absolute mesh density is a powerful tool, in that it allows specific resolution to be defined in various areas of a part. Consider a feature .5'' thick. To maintain 3 elements across the thickness of the feature, specify an absolute mesh density of 6 elements/inch in that region. As more material enters this region, the total number of elements will be increased as necessary to maintain the desired resolution.
-  * If absolute density is used, the user must be careful of the values that are specified since there is no specified upper bound on the number of elements.
+  * Musí existovať len jedno okno hustoty oka. Globálne hodnoty hustoty sa použijú pre každú oblasť, ktorá nie je vnútri okna.
+  * Dávajte pozor na veľké pomery hustoty oka. Pomer hustoty 5:1 je veľký a pomer 10:1 je extrémny. Extrémne veľké pomery hustoty môžu viesť k problémom pri generovaní siete vrátane oveľa dlhšieho času potrebného na generovanie siete.
+  * Absolútna hustota siete je mocný nástroj, pretože umožňuje definovať špecifické rozlíšenie v rôznych oblastiach súčiastky. Zoberme si prvok s hrúbkou 0,5''. Ak chcete zachovať 3 prvky v celej hrúbke prvku, zadajte v tejto oblasti absolútnu hustotu siete 6 prvkov/palec. Keď sa do tejto oblasti dostane viac materiálu, celkový počet prvkov sa zvýši podľa potreby, aby sa zachovalo požadované rozlíšenie.
+  * Ak sa použije absolútna hustota, používateľ musí byť opatrný pri zadávaní hodnôt, pretože nie je stanovená horná hranica počtu prvkov.
 
-## Coating Mesh
+## Povlak Mesh
 
-The user can add coating layers using this option and generate mesh for the same. Coating mesh is a thin layer of elements along the object boundary with specific characteristics. For added coating layers user can assign material. (See Fig. 13.2.13.) For further information on the usage of coating mesh please refer to [Appendix XI](/docs/sk/appendices/appendix_xi__near_surface_mesh_functions/).
+Používateľ môže pomocou tejto možnosti pridať vrstvy povlaku a vygenerovať pre ne sieť. Povlaková sieť je tenká vrstva prvkov pozdĺž hranice objektu so špecifickými vlastnosťami. Pre pridané povlakové vrstvy môže používateľ priradiť materiál. (Pozri obr. 13.2.13.) Ďalšie informácie o používaní povlakovej siete nájdete v dokumente [Appendix XI](/docs/sk/appendices/appendix_xi__near_surface_mesh_functions/).
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image013.jpg' | relative_url }})
 
-Coating mesh window
+Okno z náterovej sieťoviny
 
-**Preserve state varaible and boundary conditions** : 
+**Zachovať premenlivý stav a okrajové podmienky** :
 
-## Remeshing criteria
+## Kritériá na opravu
 
-Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See Fig. 13.2.14. ) contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they are Interference Depth (RMDPTH), Max. Time Increment (RMTIME), Max. Step Increment (RMSTEP) and Max. Stroke Increment (RMSTRK). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed. During the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.
+Kritériá remeshingu (Autoremesh) sú najvhodnejším spôsobom, ako zvládnuť remeshing objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Remeshing Criteria (Kritériá opätovného remeshovania) (pozri obr. 13.2.14. ) obsahuje skupinu parametrov, ktoré riadia, kedy a ako často sa bude sieť na objekte s okom regenerovať na základe priradenia určitých spúšťačov. Existujú štyri kľúčové slová, ktoré riadia spustenie postupu remeshingu pre objekt, sú to Hĺbka zásahu (RMDPTH), Max. Time Increment (RMTIME), Max. Step Increment (RMSTEP) a Max. Stroke Increment (RMSTRK). Keď sa splnia kritériá remeshovania podľa niektorého z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (záporný jakobián), objekt sa remeshuje. Ak objekt počas simulácie splní niektoré z kritérií remeshingu, vygeneruje sa nová sieť, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image014.jpg' | relative_url }})
 
-Remeshing Criteria settings window
+Okno nastavenia kritérií na opravu
 
-For details about Maximum interference depth (RMDPTH), Maximum stroke increment (RMSTRK), Maximum time increment (RMTIME), Maximum step increment (RMSTEP) and Purpose of Criteria please refer [13.1.8. Remeshing criteria](13_1_2d_mesh_generation.htm#13.1.8._Remeshing_criteria)
+Podrobnosti o maximálnej hĺbke zásahu (RMDPTH), maximálnom prírastku zdvihu (RMSTRK), maximálnom prírastku času (RMTIME), maximálnom prírastku kroku (RMSTEP) a účele kritérií nájdete v časti [13.1.8. Remeshing criteria](13_1_2d_mesh_generation.htm#13.1.8._Remeshing_criteria)
 
-**Penetration Distance**(**Absolute**) : If a positive number (in the unit of length) is entered, the program will conduct a check on each surface edge that has a contact node on each end. The distance from the middle of the edge to the die surface is calculated. If the maximum penetration depth exceeds the specified limit, remeshing will be triggered.
+**Vzdialenosť prieniku** (**absolútna**) : Ak je zadané kladné číslo (v jednotke dĺžky), program vykoná kontrolu na každej hrane povrchu, ktorá má na každom konci kontaktný uzol. Vypočíta sa vzdialenosť od stredu hrany k povrchu matrice. Ak maximálna hĺbka prieniku prekročí zadanú hranicu, spustí sa opätovné meranie.
 
-**Penetration Distance** (**Relative**) : If a negative number (a fraction) is entered, the program will conduct a check on each surface edge that has a contact node on each end. The distance from the middle of the edge to the die surface is calculated and divided by the original length of the edge. If the ratio exceeds the magnitude of the specified value, remeshing will be triggered.
+**Vzdialenosť prieniku** (**relatívna**) : Ak je zadané záporné číslo (zlomok), program vykoná kontrolu na každej hrane povrchu, ktorá má na každom konci kontaktný uzol. Vypočíta sa vzdialenosť od stredu hrany k povrchu matrice a vydelí sa pôvodnou dĺžkou hrany. Ak tento pomer prekročí veľkosť zadanej hodnoty, spustí sa opätovné obťahovanie.
 
-**Default Value :** The pre-processor now has a default value 0.7 with a relative setting.
+**Východisková hodnota :** Preprocesor má teraz východiskovú hodnotu 0,7 s relatívnym nastavením.
 
-**Global and Local Remeshing Options:**
+**Možnosti globálneho a lokálneho odstránenia:**
 
-For DEFORM-3D, mesh generation has been enhanced with local meshing functionality.  
-Default settings point to existing global remeshing procedures, where in every element of the old mesh gets replaced with new mesh element, followed by interpolation.   
-In the current version, all the local meshing related settings are stored in the local files, not in the database.
+Pre DEFORM-3D bolo generovanie sietí rozšírené o funkciu lokálneho sieťovania.  
+Predvolené nastavenia poukazujú na existujúce globálne postupy remeshingu, pri ktorých sa každý prvok starej siete nahradí novým prvkom siete, po ktorom nasleduje interpolácia.   
+V aktuálnej verzii sú všetky lokálne nastavenia súvisiace so sieťovaním uložené v lokálnych súboroch, nie v databáze.
 
-This means when the user copies the database file from one folder to another, local remesh settings will not be carried over unless all the files are copied to the working folder.
+To znamená, že keď používateľ skopíruje súbor databázy z jedného priečinka do druhého, miestne nastavenia remesh sa neprenesú, pokiaľ sa všetky súbory neskopírujú do pracovného priečinka.
 
-**Local surface:** Using this local remeshing method, we can remesh only bad element mesh on the surface as per defined level of nodes. Local surface mesh type is faster than solid mesh type. 
+**Lokálny povrch:** Pomocou tejto metódy lokálneho remeshovania môžeme remeshovať iba zlú sieť prvkov na povrchu podľa definovanej úrovne uzlov. Lokálny typ siete povrchu je rýchlejší ako typ siete plného telesa.
 
-**Local Solid:** In local solid meshing functionality allows several options to control the element size and quality. Local remeshing also has options to keep the meshing truly local, to minimize the interpolation related errors.
+**Lokálne teleso:** Funkcia lokálneho vytvárania siete telesa umožňuje niekoľko možností kontroly veľkosti a kvality prvkov. Lokálne remeshing má tiež možnosti, aby sieťovanie bolo skutočne lokálne, aby sa minimalizovali chyby súvisiace s interpoláciou.
 
   
-**Internal Elements**
+**Vnútorné prvky**
 
-  * **Size control**
+  * **Kontrola veľkosti**
 
-  * **Average of Neighbors** : The size of the element is decided based on the average sizeof the surrounding elements of distorted mesh.
-  * **Scaling Factor** : The size of the element will be scaled based on the scaling factor mentioned for each layer inward.
-  * **Skip Elements with Good shape** : The elements which are of good shape will be skipped from remeshing.
-  * **Skip good Surface Element** : The elements which are good on surface will be skipped from remeshing.
+  * **Priemer susedov** : O veľkosti prvku sa rozhoduje na základe priemernej veľkosti okolitých prvkov deformovanej siete.
+  * **Škálovací faktor** : Veľkosť prvku bude zmenšená na základe menovacieho faktora uvedeného pre každú vrstvu smerom dovnútra.
+  * **Prvky s dobrým tvarom** : Prvky, ktoré majú dobrý tvar, budú z remeshingu vynechané.
+  * **Preskočte dobrý povrchový prvok** : Prvky, ktoré sú dobré na povrchu, budú vynechané z remeshingu.
 
-## **Built In Flownet**
+## **Vstavaný vo Flownete**
 
-In a DB with large number of steps, plotting a Flownet will take lot of time, user can overcome this issue by using Built in Flownet. When user uses Built in Flownet, the Flownet is plotted as the problem is simulated.
+V DB s veľkým počtom krokov bude vykresľovanie Flownetu trvať dlho, používateľ môže tento problém prekonať použitím vstavaného Flownetu. Keď používateľ použije vstavaný Flownet, Flownet sa vykresľuje počas simulácie problému.
 
-**Procedure to setup Built in Flownet:**
+**Postup nastavenia vstavaného systému Flownet:**
 
-1\. For Workpiece object after geometry and mesh generation select Built-in Flownet page. (See Fig. 13.2.15.)
+1\. Pre objekt obrobku po vygenerovaní geometrie a siete vyberte stránku Built-in Flownet. (Pozri obr. 13.2.15.)
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image016.jpg' | relative_url }})
 
-Built in Flownet window for workpiece
+Zabudované okno Flownet pre obrobok
 
-2\. Create built-in flownet using the available options "Generate by Offset" or "Define Primitive" and after creating flownet it can be scaled or positioned using "Scale" and "Positioning" options.
+2\. Vytvorte vstavaný flownet pomocou dostupných možností "Generate by Offset" alebo "Define Primitive" a po vytvorení flownetu ho môžete škálovať alebo polohovať pomocou možností "Scale" a "Positioning".
 
   
-Generate by Offset option will popup asking to enter the offset amount to offset the mesh to generate built-in flownet, click OK and accept the generate flownet. If generated offset distance is not OK then again select "Generate by Offest" and enter new offset amount and accept as shown in Fig. 13.2.16.
+Zobrazí sa možnosť Generate by Offset (Generovať podľa posunu), ktorá požaduje zadanie veľkosti posunu, ktorým sa má sieť posunúť, aby sa vygeneroval vstavaný flownet, kliknite na tlačidlo OK a prijmite generovanie flownetu. Ak vygenerovaná vzdialenosť posunu nie je v poriadku, potom opäť vyberte možnosť "Generate by Offest" (Generovať podľa posunu) a zadajte novú veľkosť posunu a akceptujte, ako je znázornené na obr. 13.2.16.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image017.jpg' | relative_url }})
 
-Built in Flownet generation by offset option
+Integrovaná možnosť generovania Flownetu pomocou posunu
 
-Primitive geometry option can also be used to use primitive geometries as built-in flownet after creating primitives positioning will be required to locate or scaling may be required to vary the size of the created primitive to use as built in flownet as shown in Fig. 13.2.17.
+Možnosť Primitive geometry (Primitívna geometria) možno použiť aj na použitie primitívnej geometrie ako zabudovaného flownetu Po vytvorení primitív bude potrebné polohovanie na lokalizáciu alebo môže byť potrebné škálovanie na zmenu veľkosti vytvoreného primitívu, aby sa mohol použiť ako zabudovaný flownet, ako je znázornené na obr. 13.2.17.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image018.jpg' | relative_url }})
 
-Built in Flownet generation by define primitive option
+Zabudované generovanie siete Flownet pomocou možnosti definovať primitívne
 
-3\. Once generating built-in flownet use the slicing option and slice the object to better visualize the generated built-in flownet as shown in Fig. 13.2.18. User can also observe only built in flownet by checking "Show built-in flownet only" checkbox. 
+3\. Po vygenerovaní vstavaného flownetu použite možnosť slicing a nakrájajte objekt na plátky, aby ste lepšie vizualizovali vygenerovaný vstavaný flownet, ako je znázornené na obr. 13.2.18. Používateľ môže tiež pozorovať len vstavaný flownet zaškrtnutím políčka "Show built-in flownet only" (Zobraziť len vstavaný flownet).
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image019.jpg' | relative_url }})
 
-Built in Flownet with sliced object
+Zabudovaná aplikácia Flownet s nakrájaným objektom
 
-For built-in flownet remesh options provided to undergo built-in flownet remeshing or to remesh the built-in flownet for every few simulation step increments.
-
-  
-Other options to save the generated built-in flownet, import the geometry file for built-in flownet and delete built-in flownet options are also provided.
+Pre zabudovaný flownet remesh sú k dispozícii možnosti, ktoré umožňujú vykonať remeshovanie zabudovaného flownetu alebo remeshovať zabudovaný flownet každých niekoľko krokov simulácie.
 
   
-**Import Built in Flownet** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}): It imports the Built in Flownet
+K dispozícii sú aj ďalšie možnosti na uloženie vygenerovaného vstavaného flownetu, import súboru geometrie pre vstavaný flownet a možnosti na odstránenie vstavaného flownetu.
 
-**Save the Built in Flownet to the Geometry File** ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) : It saves the Built in Flownet to geometry file (Only GEO format).
+  
+**Import zabudovaného systému Flownet** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}): Importuje zabudovaný systém Flownet
 
-**Remove the Built in Flownet**![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}) : It removes the built in Flownet
+**Uloženie zabudovaného Flownetu do súboru s geometriou** ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) : Uloží zabudovaný Flownet do súboru s geometriou (iba vo formáte GEO).
 
-**Related topics:**
+**Odstránenie vstavaného systému Flownet**![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}) : Odstráni vstavaný systém Flownet
+
+**Súvisiace témy:**
 
 [13\. Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/)
 

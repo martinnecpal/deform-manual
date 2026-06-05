@@ -1,67 +1,67 @@
 ---
 lang: sk
-title: "17. Object Data Initialize"
+title: "17. Inicializácia údajov objektu"
 ---
 
-# 17\. Object Data Initialize
+# 17\. Inicializácia údajov objektu
 
-17.1. Major State Variables Tab
+17.1. Karta Hlavné premenné stavu
 
-17.2. Use Node State Variables Tab
+17.2. Použitie karty Premenné stavu uzla
 
-17.3. Use Element State Variables Tab
+17.3. Použitie karty Premenné stavu prvku
 
-17.4. Microstructure State Variables Tab
+17.4. Karta Premenné stavu mikroštruktúry
 
-17.5. Other State variables Tab
+17.5. Ostatné štátne premenné Tab
 
-User can initialize the object data using initialize page, nodal data window, elemental data window or interpolate data of an object from a DB using data interpolation. In Initialize window, few state variables that are commonly used such as temperature, strain, stress, damage, velocity, displacement, density, user node variable, user element variable and microstructure grain size and particle size are made available for initialization. User can also initialize the Average strain rate and Limiting strain rate value under "Other" tab. in "Initialize" page
+Používateľ môže inicializovať údaje objektu pomocou inicializačnej stránky, okna uzlových údajov, okna prvkových údajov alebo interpolovať údaje objektu z DB pomocou interpolácie údajov. V okne inicializácie je na inicializáciu k dispozícii niekoľko stavových premenných, ktoré sa bežne používajú, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie, hustota, používateľská uzlová premenná, používateľská prvková premenná a veľkosť zrna mikroštruktúry a veľkosť častíc. Používateľ môže inicializovať aj hodnotu priemernej rýchlosti deformácie a hraničnej rýchlosti deformácie v záložke "Other" (Iné) na stránke "Initialize" (Inicializovať).
 
-User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. The value is initialized for entire object. Fig. 17.1. shows the various state variables that are available in Initialize window. For state variable like velocity and displacement, provided input fields as many as dimensions, user needs to define the directional values of the variables in respective fields and then clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button will calculate the total velocity and displacement.
+Používateľ môže inicializovať hodnoty týchto stavových premenných definovaním v poli vedľa a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Hodnota sa inicializuje pre celý objekt. Na obr. 17.1. sú znázornené rôzne stavové premenné, ktoré sú k dispozícii v okne Inicializovať. Pre stavové premenné, ako je rýchlosť a posunutie, poskytnuté vstupné polia toľko, koľko je rozmerov, používateľ musí definovať smerové hodnoty premenných v príslušných poliach a potom kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) sa vypočíta celková rýchlosť a posunutie.
 
-If the state variables are not available in the object initialize page or if user would like to use picking options to selectively apply state variable to a part of an object then user can user Node and Element data windows, for more information on how to initialize state variables in Node and Element windows please refer [Object node Data](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [Object element Data](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Ak stavové premenné nie sú k dispozícii na stránke inicializácie objektu alebo ak chce používateľ použiť možnosti výberu na selektívne použitie stavovej premennej na časť objektu, potom môže používateľ použiť dátové okná Uzol a Prvok, viac informácií o tom, ako inicializovať stavové premenné v oknách Uzol a Prvok, nájdete v [Object node Data](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [Object element Data](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/).
 
-## **Major State Variables Tab**
+## **Tabuľka s hlavnými premennými stavu**
 
-Under **Major** tab user can initialize Temperature, Strain, Stress, Damage, Displacement and Density state variable.(See Fig. 17.1.)
+V záložke **Major** môže používateľ inicializovať stavové premenné teplota, deformácia, napätie, poškodenie, posunutie a hustota (pozri obr. 17.1).
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_image001.jpg' | relative_url }})
 
-2D Object Initialize Major window
+2D objekt Inicializácia okna Major
 
-## **Use Node State Variables Tab**
+## **Použiť kartu Premenné stavu uzla**
 
-Under **User node** tab, user defined Node variables will be shown under user Node field. User can initialize the user defined node variables values. (See Fig. 17.2.)
+V záložke **Užívateľský uzol** sa v poli užívateľského uzla zobrazia premenné uzla definované používateľom. Používateľ môže inicializovať hodnoty premenných uzla definovaných používateľom. (Pozri obr. 17.2.)
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_image002.jpg' | relative_url }})
 
-Object initialize User node window
+Objekt inicializuje okno uzla User
 
-## **Use Element State Variables Tab**
+## **Použiť kartu Premenné stavu prvku**
 
-Under **User Element** tab, user defined element variables will be shown under user Element field. User can initialize the user defined element variables values. (See Fig. 17.3.)
+V záložke **Užívateľský prvok** sa v poli užívateľského prvku zobrazia premenné prvku definované používateľom. Používateľ môže inicializovať hodnoty premenných prvkov definovaných používateľom. (Pozri obr. 17.3.)
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_image003.jpg' | relative_url }})
 
-Object initialize User node window
+Objekt inicializuje okno uzla User
 
-## **Microstructure State Variables Tab**
+## **Premenné stavu mikroštruktúry na karte**
 
-Under **Microstructure** tab, user can initialize the Grain size and particle size variable values. (See Fig. 17.4.)
+Na karte **Mikroštruktúra** môže používateľ inicializovať hodnoty premenných Grain size (veľkosť zrna) a Particle size (veľkosť častíc). (Pozri obr. 17.4.)
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_image004.jpg' | relative_url }})
 
-Object initialize Microstructure window
+Inicializácia objektu Okno mikroštruktúry
 
-## **Other State variables Tab**
+## **Ostatné premenné štátu Tab**
 
-Under **O****ther** tab, user can initialize the Average strain rate and Limiting strain rate value.(see Fig. 17.5.)
+V záložke **O****ther** môže používateľ inicializovať hodnotu Priemerná miera deformácie a Obmedzujúca miera deformácie (pozri obr. 17.5).
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_image005.jpg' | relative_url }})
 
-Object initialize Other window
+Inicializácia objektu Iné okno
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [17.1. Node Data Window](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/)
 

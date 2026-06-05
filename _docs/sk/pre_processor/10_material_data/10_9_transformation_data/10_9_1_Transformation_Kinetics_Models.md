@@ -1,306 +1,306 @@
 ---
 lang: sk
-title: "10.9.1. Transformation Kinetics Models"
+title: "10.9.1. Modely kinetiky transformácie"
 ---
 
-# 10.9.1. Transformation Kinetics Models
+# 10.9.1. Modely kinetiky transformácie
 
-  * Diffusion type TTT table form (Temp, Stress, Atom)
+  * Difúzia typu TTT tabuľka (Temp, Stress, Atom)
 
-  * Martensitic type (Tms, Tms50 Table form)
+  * Martenzitický typ (Tms, Tms50 Tabuľková forma)
 
-  * Diffusion type (function)
+  * Typ difúzie (funkcia)
 
-  * Diffusion type (function and table)
+  * Typ difúzie (funkcia a tabuľka)
 
-  * Martensitic type (function)
+  * Martenzitický typ (funkcia)
 
-  * Diffusion type (simplified)
+  * Typ difúzie (zjednodušený)
 
   * MEDC
 
-  * Secondary alpha lath
+  * Sekundárna alfa lišta
 
-  * Secondary alpha lath - Based on critical cooling rate
+  * Sekundárna alfa lišta - na základe kritickej rýchlosti chladenia
 
-  * Ti-beta to grain boundary alpha
+  * Ti-beta na hranici zrna alfa
 
-  * Ti-beta to side plate alpha
+  * Ti-beta na bočnú dosku alfa
 
   * [Solid/Liquid phase transformation](10_9_1_Transformation_Kinetics_Models.htm#Solid/Liquid_phase_transformation)
 
-  * Diffusion(Solubility curve)
+  * Difúzia (krivka rozpustnosti)
 
-  * Ni gamma prime precipitation model
+  * Ni gama primárny model zrážok
 
-  * Ni gamma prime dissolution model
+  * Model rozpúšťania Ni gama prime
 
-  * User routine
+  * Používateľská rutina
 
-Below are the Transformation Kinetics Models available in DEFORM (See Fig. 10.9.1.1.),
+Nižšie sú uvedené modely transformačnej kinetiky dostupné v programe DEFORM (pozri obr. 10.9.1.1.),
 
-  1. Diffusion type TTT table form (Temp, Stress, Atom) 
-  2. Martensitic type (Tms, Tms50 Table form) 
-  3. Diffusion type (function)
-  4. Diffusion type (function and table)
-  5. Martensitic type (function)
-  6. Diffusion type (simplified)
+  1. Difúzny typ tabuľky TTT (Temp, Stress, Atom)
+  2. Martenzitický typ (Tms, Tms50 Tabuľková forma)
+  3. Typ difúzie (funkcia)
+  4. Typ difúzie (funkcia a tabuľka)
+  5. Martenzitický typ (funkcia)
+  6. Typ difúzie (zjednodušený)
   7. MEDC
-  8. Secondary alpha lath
-  9. Secondary alpha lath - Based on critical cooling rate
-  10. Ti-beta to grain boundary alpha
-  11. Ti-beta to side plate alpha
-  12. Solid/Liquid phase transformation
-  13. Diffusion(Solubility curve)
-  14. Ni gamma prime precipitation mode
-  15. Ni gamma prime dissolution model
-  16. User routine
+  8. Sekundárna alfa lišta
+  9. Sekundárna alfa lišta - na základe kritickej rýchlosti chladenia
+  10. Ti-beta na hranici zrna alfa
+  11. Ti-beta na bočnú dosku alfa
+  12. Fázová transformácia tuhá/tekutá látka
+  13. Difúzia (krivka rozpustnosti)
+  14. Režim zrážania Ni gama prime
+  15. Model rozpúšťania Ni gama prime
+  16. Používateľská rutina
 
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image001.jpg)
 
-Transformation Kinetics models
+Modely kinetiky transformácie
 
-  * **Diffusion type TTT table form (Temp, Stress, Atom)**
+  * **Tabuľka TTT typu difúzie (Temp, Stress, Atom)**
 
-This type defines a TTT diagram (See Fig. 10.9.1.2. and Fig. 10.9.1.3) whose independent variables are average element temperature, effective stress and dominant atom content. In the case of steel, dominant atom content is the weight percentage of carbon in the metal at each element. Using tabular data, DEFORM is trying to solve an Avrami equation, which has the form, 
+Tento typ definuje diagram TTT (pozri obr. 10.9.1.2 a obr. 10.9.1.3), ktorého nezávislými premennými sú priemerná teplota prvku, efektívne napätie a obsah dominantného atómu. V prípade ocele je dominantný obsah atómov hmotnostným percentom uhlíka v kove pri každom prvku. Pomocou tabuľkových údajov sa DEFORM snaží vyriešiť Avramiho rovnicu, ktorá má tvar,
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_1.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_1.JPG) |
+---|---
   
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image002.jpg)
 
-Log (Time) function definition window for Diffusion TTT kinetics model
+Okno definície funkcie Log (Time) pre model difúznej kinetiky TTT
 
-In terms of TTT data, two curves are required in order to solve for k and n. If only one curve is input to DEFORM, the user must provide the Avrami number.
+Pokiaľ ide o údaje TTT, na vyriešenie k a n sú potrebné dve krivky. Ak sa do programu DEFORM zadá len jedna krivka, používateľ musí zadať Avramiho číslo.
 
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image003.jpg)
 
-Example TTT curve
+Príklad krivky TTT
 
-Fig. 10.9.1.3 shows an example of TTT diagram in DEFORM. In the case above, two curves are used to define the percent transformed for a given dominant atom content. Each curve has a value at which an amount of transformation is defined. The curve to the left has been defined in which starting percentage of the transformation from Austenite to Bainite. The curve to the right has been defined in which ending percentage of the Austenite to Bainite transformation.
+Na obr. 10.9.1.3 je uvedený príklad TTT diagramu v programe DEFORM. V uvedenom prípade sa na definovanie percenta transformácie pre daný obsah dominantného atómu používajú dve krivky. Každá krivka má hodnotu, pri ktorej je definované množstvo transformácie. Na krivke vľavo bolo definované počiatočné percento premeny z austenitu na bainit. Krivka vpravo je definovaná ako konečné percento premeny austenitu na bainit.
 
-  * **Martensitic type (Tms, Tms50 Table form)**
+  * **Martenzitický typ (Tms, Tms50 Tabuľková forma)**
 
-The transformation start and 50 % level temperature are inputted as a table format by depending on carbon content and stress levels.  
-This kinetics is based on Koistinen-Marburger Equation [1]. And a more generalized form is employed in DEFORM as the following equation [2]:
+Počiatočná teplota transformácie a teplota 50 % úrovne sa zadávajú vo forme tabuľky v závislosti od obsahu uhlíka a úrovne napätia.  
+Táto kinetika je založená na Koistinenovej-Marburgerovej rovnici [1]. V systéme DEFORM sa používa všeobecnejšia forma rovnice [2]:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_2.jpg) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_2.jpg) |
+---|---
   
   
-[1] D.P. Koistinen, R.E. Marburger, Acta Metall, 7 (1959), pp. 59-60  
-[2] S. M. C. van Bohemen, J. Sietsma, Mater. Sci. Technol., 30(2014), pp. 1024-1033  
+[1] D.P. Koistinen, R.E. Marburger, Acta Metall, 7 (1959), s. 59-60
+[2] S. M. C. van Bohemen, J. Sietsma, Mater. Sci. Technol., 30(2014), s. 1024-1033
   
-For Martensitic type function definition window see below Fig. 10.9.1.4.
+Okno pre definíciu funkcie martenzitického typu pozri nižšie na obr. 10.9.1.4.
 
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image004.jpg)
 
-Martensitic start and 50% temperature table form transformation kinetic function definition window
+Tabuľka martenzitického začiatku a 50 % teploty tvorí okno definície kinetickej funkcie transformácie
 
-  * **Diffusion type (function)**
+  * **Typ difúzie (funkcia)**
 
-Volume fraction is represented by the Avrami equation as follows:
+Objemový podiel sa vyjadruje Avramiho rovnicou takto:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_3.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_3.JPG) |
+---|---
   
   
-Where   
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/ft_T.jpg), ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/fs_m.jpg) and ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Fc_c.jpg) are the functions of temperature (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/T.JPG)), Mean stress (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Sigma_m.jpg)) and Carbon content (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/C.JPG) ) respectively.
+Kde
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/ft_T.jpg), ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/fs_m.jpg) a ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Fc_c.jpg) sú funkcie teploty (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/T.JPG)), stredného napätia (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Sigma_m.jpg)) a obsahu uhlíka (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/C.JPG) ).
 
   
-The power ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/small_n.jpg) depends on the kinds of the transformation and ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/ft_T.jpg) can be expressed by the following simplified formula, 
+Výkon ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/small_n.jpg) závisí od druhov transformácie a ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/ft_T.jpg) možno vyjadriť nasledujúcim zjednodušeným vzorcom,
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_4.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_4.JPG) |
+---|---
   
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Fs_sigma_m.jpg) in addition, ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Fc_c.jpg) describes the stress and carbon content dependency of transformation, respectively as follows:
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Fs_sigma_m.jpg) okrem toho ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Fc_c.jpg) opisuje závislosť transformácie od napätia a obsahu uhlíka, resp:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_5.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_5.JPG) |
+---|---
   
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_6.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_6.JPG) |
+---|---
   
   
-The coefficients ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/As.jpg) is specified according to the stress dependency of TTT curves, ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ac1.jpg) and ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ac2.jpg) are determined by carbon content dependency.  
+Koeficienty ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/As.jpg) sú určené podľa závislosti napätia od kriviek TTT, ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ac1.jpg) a ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ac2.jpg) sú určené podľa závislosti od obsahu uhlíka.  
   
-For diffusion function type model definition window see below Fig. 10.9.1.5.
+Okno definície modelu typu difúznej funkcie nájdete na obr. 10.9.1.5.
 
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image005.jpg)
 
-Diffusion kinetic transformation model definition window
+Okno definície modelu difúznej kinetickej transformácie
 
-  * **Diffusion type (function and table)**
+  * **Typ difúzie (funkcia a tabuľka)**
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_7.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_7.JPG) |
+---|---
   
-Along with the equation EQ(2.4.3) table is used in this diffusion type as shown in Fig. 10.9.1.6.
+Spolu s rovnicou EQ(2.4.3) sa v tomto type difúzie používa tabuľka, ako je znázornené na obr. 10.9.1.6.
 
   
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image006.jpg)
 
-Diffusion function and table kinetics model definition window
+Okno definície modelu difúznej funkcie a tabuľkovej kinetiky
 
-  * **Martensitic type (function)**
+  * **Martenzitický typ (funkcia)**
 
-The volume fraction of diffusionless-type (martensite) transformation depended on temperature, stress and carbon content is introduced by modifying the Magee's equation as follows:
+Objemový podiel bezdifúznej (martenzitovej) premeny v závislosti od teploty, napätia a obsahu uhlíka sa zavádza úpravou Mageeho rovnice takto:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_8.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_8.JPG) |
+---|---
   
   
-When the martensite transformation start temperatures under carburized conditions and applied stress are given, ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi2_by_phi1.jpg) , ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi31_by_Phi1.jpg) and ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi32_byPhi1.jpg) can be determined, ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi1.jpg) and ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi4.jpg) are identified, if temperatures for martensite-start TMS and for 50% martensite TM50 at ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/zeta_m.jpg) = 0 and ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/zeta_m.jpg) = 0.5 are provided respectively.  
+Ak sú dané teploty začiatku martenzitovej premeny za podmienok nauhličovania a aplikovaného napätia, možno určiť ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi2_by_phi1.jpg) , ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi31_by_Phi1.jpg) a ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi32_byPhi1.jpg), ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi1.jpg) a ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Phi4.jpg), ak sú uvedené teploty pre začiatok martenzitu TMS a pre 50 % martenzitu TM50 pri ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/zeta_m.jpg) = 0 a ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/zeta_m.jpg) = 0,5.  
   
-For martensitic model definition window see below Fig. 10.9.1.7.
+Okno definície martenzitického modelu nájdete na obr. 10.9.1.7.
 
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image007.jpg)
 
-Martensitic transformation kinetics model definition window
+Okno definície modelu kinetiky martenzitickej transformácie
 
-  * **Diffusion type (simplified)**
+  * **Difúzny typ (zjednodušený)**
 
-A simplified Diffusion function is defined by a function of the following form:
+Zjednodušená difúzna funkcia je definovaná funkciou nasledujúceho tvaru:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_9.jpg) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_9.jpg) |
+---|---
   
   
-This formula is a good first approximation for a diffusion-based transformation.  
-The coefficients can be obtained using dilatation-temperature diagrams.  
-See the below Fig. 10.9.1.8. for Diffusion simplified function definition window.
+Tento vzorec je dobrou prvou aproximáciou pre transformáciu založenú na difúzii.  
+Koeficienty možno získať pomocou dilatačno-teplotných diagramov.  
+Pozri nasledujúci obrázok 10.9.1.8. pre okno zjednodušenej definície funkcie Difúzia.
 
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image008.jpg)
 
-Diffusion simplified kinetic transformation kinetics model definition window
+Difúzia zjednodušená kinetická transformácia okno definície modelu kinetiky
 
   * **MEDC**
 
-MEDC model is developed by AFRL in the United States to predict the microstructure evolution during continuous cooling of wrought alpha/beta titanium alloys in the two-phase field. The growth of the primary (globular) alpha during cooling is modelled using an exact solution of the diffusion equation:
+Model MEDC vyvinula AFRL v Spojených štátoch na predpovedanie vývoja mikroštruktúry počas kontinuálneho chladenia tvárnených alfa/beta titánových zliatin v dvojfázovom poli. Rast primárnej (guľovitej) alfa štruktúry počas chladnutia sa modeluje pomocou presného riešenia difúznej rovnice:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_10.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_10.JPG) |
+---|---
   
   
-The particle radius is converted to volume fraction using the following expression:
+Polomer častíc sa prepočíta na objemový podiel pomocou nasledujúceho výrazu:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_11.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_11.JPG) |
+---|---
   
   
   
-The intrinsic diffusion coefficients of alloying elements in beta titanium can be expressed by,
+Vlastné koeficienty difúzie legujúcich prvkov v beta-titáne možno vyjadriť takto,
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_12.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_12.JPG) |
+---|---
   
   
-The parameter ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Lamda.jpg) in Equation 1 is related to the supersaturation ( ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/OMEGA_s.jpg) ) by the following expression:
+Parameter ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Lamda.jpg) v rovnici 1 súvisí s presýtením ( ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/OMEGA_s.jpg) ) pomocou nasledujúceho výrazu:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_13.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_13.JPG) |
+---|---
   
   
-In each calculation step, the supersaturation ( ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/OMEGA_s.jpg) ) is determined as,
+V každom kroku výpočtu sa presýtenie ( ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/OMEGA_s.jpg) ) určí ako,
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_14.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_14.JPG) |
+---|---
   
-Here, ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cm.jpg) ,![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ci.jpg) and ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cp.jpg) represent the compositions of the matrix far from the matrix-particle interface, the matrix at the matrix-particle interface, and the particle at the matrix- particle interface respectively. For a diffusion-controlled reaction, ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ci.jpg) and ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cp.jpg) correspond to the equilibrium matrix and particle compositions respectively and they were obtained from the phase diagram. ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cm.jpg) considers the effect of soft impingement on the “far-field” matrix composition, and is calculated by the usual approximation derived from a mass balance:
+Tu ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cm.jpg) , ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ci.jpg) a ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cp.jpg) predstavujú zloženie matrice vzdialenej od rozhrania matrica - častica, matrice na rozhraní matrica - častica a častice na rozhraní matrica - častica. V prípade reakcie riadenej difúziou zodpovedajú ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Ci.jpg) a ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cp.jpg) rovnovážnemu zloženiu matrice, resp. častice a boli získané z fázového diagramu. ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Cm.jpg) zohľadňuje vplyv mäkkého nárazu na zloženie matrice vo "vzdialenom poli" a počíta sa pomocou obvyklej aproximácie odvodenej z hmotnostnej bilancie:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_15.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_15.JPG) |
+---|---
   
   
-The input parameters of MEDC model include the beta approach curves (showing the volume fraction of beta as a function of temperature), the equilibrium chemical compositions of alpha and beta phases, and diffusivity as a function of temperature, solution temperature / initial volume fraction of alpha phase, initial alpha particle radius, and cooling rates. The initial volume fraction of primary alpha (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/fao.jpg)) is automatically computed based on the provided beta approach curve in terms of the solution temperature (the starting temperature of the cooling process). The initial particle size (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Rao.jpg)) is determined by user, generally based on the experimental data. The evolution of primary alpha volume fraction and the size are computed based on the local cooling rate during DEFORM heat transfer simulation.  
-If secondary alpha lath thickening model is defined, MEDC model is automatically coupled with secondary alpha growth model. The growth of primary alpha is terminated by the starting growth of secondary alpha.  
+Vstupné parametre modelu MEDC zahŕňajú krivky beta prístupu (zobrazujúce objemový podiel beta v závislosti od teploty), rovnovážne chemické zloženie fáz alfa a beta a difúznosť v závislosti od teploty, teplotu roztoku / počiatočný objemový podiel fázy alfa, počiatočný polomer častíc alfa a rýchlosť chladenia. Počiatočný objemový zlomok primárnej alfa (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/fao.jpg)) sa automaticky vypočíta na základe poskytnutej krivky prístupu beta v zmysle teploty roztoku (počiatočná teplota procesu chladenia). Počiatočnú veľkosť častíc (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Rao.jpg)) určuje používateľ, spravidla na základe experimentálnych údajov. Vývoj primárneho objemového zlomku alfa a veľkosti sa vypočíta na základe lokálnej rýchlosti chladenia počas simulácie prenosu tepla DEFORM.  
+Ak je definovaný model zahusťovania sekundárnej alfa lamely, model MEDC sa automaticky spojí s modelom rastu sekundárnej alfa lamely. Rast primárneho alfa je ukončený začiatkom rastu sekundárneho alfa.  
   
-For MEDC model definition window see below Fig. 10.9.1.9.
+Okno definície modelu MEDC nájdete na obr. 10.9.1.9.
 
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image009.jpg)
 
-MEDC kinetic transformation model definition windows
+Okná definície modelu kinetickej transformácie MEDC
 
-  * **Secondary alpha lath**
+  * **Sekundárna alfa latka**
 
-A fast acting model is developed to predict the thickening kinetics of secondary alpha lath. Considering the soft impingement between the adjacent advancing laths, the thickening kinetics of a secondary alpha in a colony structure can be expressed as:
+Na predpovedanie kinetiky zahusťovania sekundárnej alfa-lamely je vyvinutý rýchlo pôsobiaci model. Pri zohľadnení mäkkého nárazu medzi susednými postupujúcimi lamelami možno kinetiku zahusťovania sekundárnej alfy v štruktúre kolónie vyjadriť ako:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_16.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_16.JPG) |
+---|---
   
   
-The alpha equilibrium disolving temperature is assumed to be 980°C.
+Predpokladá sa, že teplota alfa rovnovážneho rozpúšťania je 980 °C.
 
-The CCT curve to describe the secondary alpha starting temperatures under various cooling rates is fitted by a fifth order polynomial equation:
+Krivka CCT na opis počiatočných teplôt sekundárneho alfa pri rôznych rýchlostiach chladenia je prispôsobená polynomickej rovnici piateho rádu:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_17.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_17.JPG) |
+---|---
   
   
-See the below Fig. 10.9.1.10. for Secondary alpha lath general model definition window.
+Na nasledujúcom obr. 10.9.1.10. je zobrazené okno definície všeobecného modelu sekundárnej lišty alfa.
 
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image010.jpg)
 
-Secondary alpha lath general kinetic transformation model definition window
+Okno definície modelu všeobecnej kinetickej transformácie sekundárnej alfa latky
 
-  * **Secondary alpha lath - Based on critical cooling rate**
+  * **Sekundárna alfa lišta - na základe kritickej rýchlosti chladenia**
 
-  * **Ti-beta to grain boundary alpha**
+  * **Ti-beta na hranici zrna alfa**
 
-A fast acting model is developed to predict the thickening kinetics of grain boundary alpha in Ti-6Al-4V. It is assumed that a layer of grain boundary alpha of negligible thickness develops right after the temperature drops below the beta transus. During further cooling or isothermal holding, grain boundary alpha continues to grow until the sideplate alpha starts to develop. Therefore, this type of transformation is generally coupled with Type 12 (Ti-beta to sideplate alpha). The thickening kinetics of grain boundary can be described as,
+Na predpovedanie kinetiky zhrubnutia hranice zrna alfa v Ti-6Al-4V bol vyvinutý rýchlo pôsobiaci model. Predpokladá sa, že vrstva hranice zŕn alfa so zanedbateľnou hrúbkou sa vytvorí hneď po poklese teploty pod transus beta. Počas ďalšieho ochladzovania alebo izotermického udržiavania alfa na hranici zŕn pokračuje v raste, až kým sa nezačne vyvíjať alfa na bočnej doske. Preto sa tento typ transformácie vo všeobecnosti spája s typom 12 (prechod Ti-beta na bočnú dosku alfa). Kinetiku zhrubnutia hranice zŕn možno opísať takto,
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_18.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_18.JPG) |
+---|---
   
   
-The CCT curves to describe the grain boundary alpha starting temperature ( ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tu.jpg)) and sideplate starting temperature (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tl.jpg) ) under various cooling rates are fitted by a fifth order polynomial equation as follows:
+Krivky CCT na opis počiatočnej teploty alfa na hranici zrna ( ![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tu.jpg) ) a počiatočnej teploty bočnej dosky (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tl.jpg) ) pri rôznych rýchlostiach chladenia sú prispôsobené polynomickej rovnici piateho rádu takto:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_19.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_19.JPG) |
+---|---
   
   
-See the below Fig. 10.9.1.11. for Ti-beta to grain boundary alpha model definition window.
+Pozrite si nasledujúci obrázok 10.9.1.11. pre okno definície modelu Ti-beta na hranici zrna alfa.
 
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image011.jpg)
 
-Ti-beta to grain boundary alpha kinetic transformation model definition window
+Okno definície modelu kinetickej transformácie Ti-beta na hranicu zrna alfa
 
-  * **Ti-beta to side plate alpha**
+  * **Ti-beta na bočnú dosku alfa**
 
-A fast acting model is developed to predict the thickening kinetics of side plate alpha in Ti-6Al-4V. It is assumed that the sideplate alpha starts to develop when the growth of grain boundary alpha stops. Therefore, this type of transformation is coupled with Type 11 (Ti-beta to grain boundary alpha). Considering the soft impingement between the adjacent advancing plates, the thickening kinetics of a can be described as,
+Na predpovedanie kinetiky zhrubnutia bočnej dosky alfa v Ti-6Al-4V je vyvinutý rýchlo pôsobiaci model. Predpokladá sa, že bočná doska alfa sa začne vyvíjať, keď sa zastaví rast alfa na hranici zŕn. Preto je tento typ transformácie spojený s typom 11 (Ti-beta na hranicu zŕn alfa). Vzhľadom na mäkké narážanie medzi susednými postupujúcimi doskami možno kinetiku zhrubnutia a opísať nasledovne,
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_20.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_20.JPG) |
+---|---
   
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_21.jpg) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_21.jpg) |
+---|---
   
   
-The two CCT curves describing the starting temperature of grain boundary alpha (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tu.jpg)) and that of side plate (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tl.jpg)) under various cooling rates are fitted by a fifth order polynomial equation as follows:
+Dve krivky CCT opisujúce počiatočnú teplotu hranice zrna alfa (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tu.jpg)) a bočnej dosky (![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/Tl.jpg)) pri rôznych rýchlostiach chladenia sú prispôsobené polynomickej rovnici piateho rádu takto:
 
-![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_19.JPG) |   
----|---  
+![](../../../../assets/Equations/Pre_Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/EQ_10_9_1_19.JPG) |
+---|---
   
-See the below Fig. 10.9.1.12. for Ti-beta to side plate alpha model definition window.
+Pozrite si nasledujúci obrázok 10.9.1.12. pre okno definície modelu Ti-beta na bočnú dosku alfa.
 
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_9_Transformation_Data/10_9_1_Transformation_Kinematic_Models/10_9_1_Image012.jpg)
 
-Ti-beta to side plate alpha kinetic transformation model definition window
+Okno definície modelu kinetickej transformácie Ti-beta na bočnú dosku alfa
 
-  * **Solid/Liquid phase transformation**
+  * **Transformácia tuhej a kvapalnej fázy**
 
-  * **Diffusion(Solubility curve)**
+  * **Difúzia (krivka rozpustnosti)**
 
-  * **Ni gamma prime precipitation model**
+  * **Ni gama model primárnych zrážok**
 
-  * **Ni gamma prime dissolution model**
+  * **Model rozpúšťania Ni gama prime**
 
-  * **User routine**
+  * **Používateľská rutina**
 
-This model is set to required user routine number. Please refer Chapter 56. [USER ROUTINE](/docs/sk/User_Routines/User_routine_MainPg/) for further details.
+Tento model je nastavený na požadované číslo používateľskej rutiny. Pozrite si kapitolu 56. [USER ROUTINE](/docs/sk/User_Routines/User_routine_MainPg/), kde nájdete ďalšie podrobnosti.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [Assigning Material to Object in Pre-Processor](../../../Operation_Templates/33_Forming/33_1_2D_Forming_Setup.htm#Fig_33_1_5_Add_material_from_Material_List_window)
 

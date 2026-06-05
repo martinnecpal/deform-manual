@@ -1,201 +1,201 @@
 ---
 lang: sk
-title: "10.6.1 Avrami Model"
+title: "10.6.1 Avramiho model"
 ---
 
-# 10.6.1. Avrami Model
+# 10.6.1. Avramiho model
 
-  * Dynamic Recrystallization
+  * Dynamická rekryštalizácia
 
-  * Static Recrystallization
+  * Statická rekryštalizácia
 
-  * Meta-dynamic Recrystallization
+  * Meta-dynamická rekryštalizácia
 
-  * Grain Growth
+  * Rast obilia
 
-  * NOMENCLATURE
+  * NOMENKLATÚRA
 
-The Avrami equation describes how solids transform from one phase (state of matter) to another at constant temperature. It can specifically describe the kinetics of crystallization. (See Fig. 10.6.1.1.)
+Avramiho rovnica opisuje, ako sa pevné látky menia z jednej fázy (stavu hmoty) na druhú pri konštantnej teplote. Môže konkrétne opísať kinetiku kryštalizácie. (Pozri obr. 10.6.1.1.)
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_6_grain_data/10_6_image002.jpg' | relative_url }})
 
-Avrami Grain Material model window
+Okno modelu Avrami Grain Material
 
-**Definitions:**  
-**Dynamic recrystallization:** occurring during deformation and when the strain exceeds critical strain. The driving force is removal of dislocations.  
+**Definície:**
+**Dynamická rekryštalizácia:** prebiehajúca počas deformácie a pri prekročení kritickej deformácie. Hnacou silou je odstránenie dislokácií.  
   
-**Static recrystallization:** occurring after deformation and when strain is less than critical strain. The driving force is removal of dislocations. The recrystallization begins in a nuclei-free environment.  
+**Statická rekryštalizácia:** nastáva po deformácii a keď je deformácia menšia ako kritická deformácia. Hnacou silou je odstránenie dislokácií. Rekryštalizácia začína v prostredí bez jadier.  
   
-**Meta-dynamic recrystallization:** occurring after deformation and when strain is greater than critical strain. The driving force is removal of dislocations. Because the strain has exceeded critical strain, recrystallization nuclei have formed in the material, so the recrystallization behaviors are different from without nuclei (static recrystallization).
+**Meta-dynamická rekryštalizácia:** nastáva po deformácii a pri deformácii väčšej ako kritická deformácia. Hnacou silou je odstránenie dislokácií. Keďže deformácia prekročila kritickú deformáciu, v materiáli sa vytvorili rekryštalizačné jadrá, takže správanie pri rekryštalizácii je odlišné od správania bez jadier (statická rekryštalizácia).
 
   
-**Grain Growth:** occurring before recrystallization begins or after recrystallization is completed. The driving force is the reduction of grain boundary energy.
+**Rast zrna:** vyskytujúci sa pred začiatkom rekryštalizácie alebo po ukončení rekryštalizácie. Hnacou silou je zníženie energie na hranici zŕn.
 
-**Strain retaining coefficient** : The strain retaining coefficient is only used when: 
+**Koeficient zachovania ťahu** : Koeficient zachovania deformácie sa používa len vtedy, keď:
 
-  1. The current step has deformation. 
+  1. Aktuálny krok má deformáciu.
 
-  2. The previous step has no deformation, i.e, at the beginning step when the operation changes from heat transfer to deformation. 
+  2. V predchádzajúcom kroku nedochádza k deformácii, t. j. na začiatku kroku, keď sa operácia mení z prenosu tepla na deformáciu.
 
-The equation is as following: 
+Rovnica je nasledovná:
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_17.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_17.jpg' | relative_url }}) |
+---|---
   
-**Dynamic Recrystallization**
+**Dynamická rekryštalizácia**
 
-The dynamic recrystallization is a function of strain, strain rate, temperature, and initial grain size, which change in time. It is very difficult to model dynamic recrystallization concurrently during forming. Instead, the dynamic recrystallization is computed in the step immediately after the deformation stops. Average temperatures, strain rate of the deformation period is used as inputs of the equations.
+Dynamická rekryštalizácia je funkciou deformácie, rýchlosti deformácie, teploty a počiatočnej veľkosti zŕn, ktoré sa menia v čase. Je veľmi ťažké modelovať dynamickú rekryštalizáciu súčasne počas tvárnenia. Namiesto toho sa dynamická rekryštalizácia vypočíta v kroku bezprostredne po ukončení deformácie. Ako vstupy do rovníc sa používajú priemerné teploty a rýchlosť deformácie počas obdobia deformácie.
 
-  1. **Activation Criteria**
+  1. **Aktivizačné kritériá**
 
-The onset of DRX usually occurs at a critical strain ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_c.jpg' | relative_url }}) . 
+K nástupu DRX zvyčajne dochádza pri kritickej deformácii ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_c.jpg' | relative_url }}) .
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_1.jpg' | relative_url }}) |   
----|---  
-  
-  
-Where ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_p.jpg' | relative_url }}) denotes the peak strain corresponding to the flow stress maximum: 
-
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_2.jpg' | relative_url }}) |   
----|---  
-  
-Refer Nomenclature mentioned below for terms explanation.
-
-  1. **Kinetics**
-
-The Avrami equation is use to describe the relation between the dynamically recrystallized fraction ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/x.jpg' | relative_url }}) and the effective strain. 
-
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_3.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_1.jpg' | relative_url }}) |
+---|---
   
   
-Where ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_0_5.jpg' | relative_url }}) denotes the strain for 50% recrystallization: 
+Kde ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_p.jpg' | relative_url }}) označuje vrcholovú deformáciu zodpovedajúcu maximu napätia pri prúdení:
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_4.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_2.jpg' | relative_url }}) |
+---|---
+  
+Vysvetlenie pojmov nájdete v nižšie uvedenej nomenklatúre.
+
+  1. **Kinetika**
+
+Na opis vzťahu medzi dynamicky rekryštalizovanou frakciou ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/x.jpg' | relative_url }}) a efektívnou deformáciou sa používa Avramiho rovnica.
+
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_3.jpg' | relative_url }}) |
+---|---
   
   
-Refer Nomenclature mentioned below for terms explanation.
+Kde ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_0_5.jpg' | relative_url }}) označuje deformáciu pre 50 % rekryštalizáciu:
 
-  1. **Grain Size**
-
-The recrystallized grain size is expressed as a function of initial grain size, strain, strain rate, and temperature, 
-
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_5.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_4.jpg' | relative_url }}) |
+---|---
   
   
-Refer Nomenclature mentioned below for terms explanation.
+Vysvetlenie pojmov nájdete v nižšie uvedenej nomenklatúre.
 
-**Static Recrystallization**
+  1. **Veľkosť zrna**
 
-When deformation stops, the strain rate and critical strain are used to determine whether static or meta-dynamic recrystallization should be activated. The static and meta-dynamic recrystallization is terminated when this element starts to deform again.
+Veľkosť rekryštalizovaného zrna je vyjadrená ako funkcia počiatočnej veľkosti zrna, deformácie, rýchlosti deformácie a teploty,
 
-  1. **Activation Criteria**
-
-When strain rate is less than![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_dot_ss.jpg' | relative_url }}), static recrystallization occurs after deformation. 
-
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_6.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_5.jpg' | relative_url }}) |
+---|---
   
   
-Refer Nomenclature mentioned below for terms explanation.
+Vysvetlenie pojmov nájdete v nižšie uvedenej nomenklatúre.
 
-  1. **Kinetics**
+**Statická rekryštalizácia**
 
-The model for recrystallization kinetics is based on the modified Avrami equation. 
+Keď sa deformácia zastaví, rýchlosť deformácie a kritická deformácia sa použijú na určenie, či sa má aktivovať statická alebo metadynamická rekryštalizácia. Statická a metadynamická rekryštalizácia sa ukončí, keď sa tento prvok začne opäť deformovať.
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_7.jpg' | relative_url }}) |   
----|---  
-  
-Where ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/t_0_5.jpg' | relative_url }}) is an empirical kinetics is based on the modified Avrami equation. 
+  1. **Aktivizačné kritériá**
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_8.jpg' | relative_url }}) |   
----|---  
-  
-Refer Nomenclature mentioned below for terms explanation.
+Ak je rýchlosť deformácie menšia ako![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_dot_ss.jpg' | relative_url }}), po deformácii nastáva statická rekryštalizácia.
 
-  1. **Grain Size**
-
-The recrystallized grain size is expressed as a function of initial grain size, strain, strain rate, and temperature, 
-
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_9.jpg' | relative_url }}) |   
----|---  
-  
-Refer Nomenclature mentioned below for terms explanation.
-
-**Meta-dynamic Recrystallization**
-
-Meta-dynamic recrystallization is similar to static recrystallization but with different activation criteria and material constants.
-
-  1. **Activation Criteria**
-
-When strain rate is greater than ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_dot_ss.jpg' | relative_url }}) (See EQ(10.6.1.3.)), meta-dynamic recrystallization occurs after deformation.
-
-  1. **Kinetics**
-
-The model for recrystallization kinetics is based on the modified Avrami equation. 
-
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_10.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_6.jpg' | relative_url }}) |
+---|---
   
   
-Where ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/t_0_5.jpg' | relative_url }}) is an empirical time constant for 50% recrystallization: 
+Vysvetlenie pojmov nájdete v nižšie uvedenej nomenklatúre.
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_11.jpg' | relative_url }}) |   
----|---  
-  
-  
-Refer Nomenclature mentioned below for terms explanation.
+  1. **Kinetika**
 
-  1. **Grain Size**
+Model rekryštalizačnej kinetiky je založený na modifikovanej Avramiho rovnici.
 
-The recrystallized grain size is expressed as a function of initial grain size, strain, strain rate, and temperature,
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_7.jpg' | relative_url }}) |
+---|---
+  
+Kde ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/t_0_5.jpg' | relative_url }}) je empirická kinetika založená na modifikovanej Avramiho rovnici.
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_12.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_8.jpg' | relative_url }}) |
+---|---
   
-  
-Refer Nomenclature mentioned below for terms explanation.
+Vysvetlenie pojmov nájdete v nižšie uvedenej nomenklatúre.
 
-**Grain Growth**
+  1. **Veľkosť zrna**
 
-Grain growth takes place before recrystallization start or after recrystallization finishes.  
-The kinetics is described by equation:   
+Veľkosť rekryštalizovaného zrna je vyjadrená ako funkcia počiatočnej veľkosti zrna, deformácie, rýchlosti deformácie a teploty,
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_13.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_9.jpg' | relative_url }}) |
+---|---
   
-  
-Refer Nomenclature mentioned below for other terms explanation.  
-  
-**Retained Strain and Grain Size**  
-When there are multiple deformation processes, strain may be reduced during the inter pass period due to recovery.  
-  
-The following equation is used to compute the retained strain at the beginning of the subsequent deformation. 
+Vysvetlenie pojmov nájdete v nižšie uvedenej nomenklatúre.
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_14.jpg' | relative_url }}) |   
----|---  
-  
-  
-Refer Nomenclature mentioned below for terms explanation.  
-  
-**Temperature Limit**  
-The temperature limit is the lower bound of all grain evolution mechanisms. Below this temperature, no grain evolution occurs.  
-  
-**Average Grain Size**  
-The mixture law was employed to calculate the recrystallized grain size for uncompleted recrystallization, 
+**Meta-dynamická rekryštalizácia**
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_15.jpg' | relative_url }}) |   
----|---  
+Meta-dynamická rekryštalizácia je podobná statickej rekryštalizácii, ale s odlišnými aktivačnými kritériami a materiálovými konštantami.
+
+  1. **Aktivizačné kritériá**
+
+Ak je rýchlosť deformácie väčšia ako ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/epsalon_dot_ss.jpg' | relative_url }}) (pozri EQ(10.6.1.3.)), po deformácii dochádza k metadynamickej rekryštalizácii.
+
+  1. **Kinetika**
+
+Model rekryštalizačnej kinetiky je založený na modifikovanej Avramiho rovnici.
+
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_10.jpg' | relative_url }}) |
+---|---
   
   
-In addition, if at the beginning of deformation total ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/xrex.jpg' | relative_url }}) is 1.0, the program will re-initialize (e.g. ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/xrex.jpg' | relative_url }}) = 0) in order to compute a new round of recrystallization.  
-Refer Nomenclature mentioned below for terms explanation.  
+Kde ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/t_0_5.jpg' | relative_url }}) je empirická časová konštanta pre 50% rekryštalizáciu:
+
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_11.jpg' | relative_url }}) |
+---|---
   
-**Model Dependency on Temperature and Strain Rate**  
-DEFORM allows different constants and coefficients for the equations at different temperatures or strain rates. The data are linearly interpolated.  
-**  
+  
+Vysvetlenie pojmov nájdete v nižšie uvedenej nomenklatúre.
+
+  1. **Veľkosť zrna**
+
+Veľkosť rekryštalizovaného zrna je vyjadrená ako funkcia počiatočnej veľkosti zrna, deformácie, rýchlosti deformácie a teploty,
+
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_12.jpg' | relative_url }}) |
+---|---
+  
+  
+Vysvetlenie pojmov nájdete v nižšie uvedenej nomenklatúre.
+
+**Rast zrna**
+
+Rast zŕn prebieha pred začiatkom rekryštalizácie alebo po jej skončení.  
+Kinetika je opísaná rovnicou:
+
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_13.jpg' | relative_url }}) |
+---|---
+  
+  
+Vysvetlenie ďalších pojmov nájdete v nižšie uvedenej nomenklatúre.  
+  
+**Zachovaný kmeň a veľkosť zrna**
+Pri viacnásobných deformačných procesoch sa môže deformácia počas obdobia medzi priechodmi znížiť v dôsledku obnovy.  
+  
+Na výpočet zachovanej deformácie na začiatku následnej deformácie sa používa nasledujúca rovnica.
+
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_14.jpg' | relative_url }}) |
+---|---
+  
+  
+Vysvetlenie pojmov nájdete v nižšie uvedenej nomenklatúre.  
+  
+**Temperatúrny limit**
+Teplotný limit je dolnou hranicou všetkých mechanizmov vývoja zrna. Pod touto teplotou nedochádza k žiadnemu vývoju zrna.  
+  
+**Priemerná veľkosť zrna**
+Na výpočet veľkosti rekryštalizovaného zrna pri neukončenej rekryštalizácii sa použil zákon zmesi,
+
+![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_15.jpg' | relative_url }}) |
+---|---
+  
+  
+Okrem toho, ak je na začiatku deformácie celková hodnota ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/xrex.jpg' | relative_url }}) 1,0, program sa znovu inicializuje (napr. ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/xrex.jpg' | relative_url }}) = 0), aby sa vypočítalo nové kolo rekryštalizácie.  
+Vysvetlenie pojmov nájdete v nižšie uvedenej nomenklatúre.  
+  
+**Závislosť modelu od teploty a rýchlosti deformácie**
+DEFORM umožňuje rôzne konštanty a koeficienty pre rovnice pri rôznych teplotách alebo rýchlostiach deformácie. Údaje sú lineárne interpolované.  
+**
 ****NOMENCLATURE**
 
 ![]({{ '/assets/equations/pre_processor/10_material_data/10_6_grain_data/10_6_1_avarami_model/eq_10_6_1_16.jpg' | relative_url }})

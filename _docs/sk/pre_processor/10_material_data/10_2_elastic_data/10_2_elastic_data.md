@@ -1,63 +1,63 @@
 ---
 lang: sk
-title: "10.2. Elastic Data"
+title: "10.2. Elastické údaje"
 ---
 
-# 10.2. Elastic Data
+# 10.2. Elastické údaje
 
-10.2.1. Young's modulus
+10.2.1. Youngov modul
 
-10.2.2. Poisson's ratio
+10.2.2. Poissonov pomer
 
-10.2.3. Thermal expansion
+10.2.3. Tepelná rozťažnosť
 
-10.2.4. Material Reference Temperature
+10.2.4. Referenčná teplota materiálu
 
 [10.2.5. Hyperelastic](/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_5_hyperelastic/)
 
-Elastic data is required for the deformation analysis of elastic and elasto-plastic materials. The three variables used to describe the properties for elastic deformation are Young's modulus, Poisson's Ratio, Thermal expansion and Hyperelastic as shown in Fig. 10.2.1.
+Na analýzu deformácie elastických a elastoplastických materiálov sú potrebné elastické údaje. Na opis vlastností pre elastickú deformáciu sa používajú tri premenné: Youngov modul, Poissonov pomer, tepelná rozťažnosť a hyperelastickosť, ako je znázornené na obr. 10.2.1.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_2_elastic_data/10_2_image001.jpg' | relative_url }})
 
-Elastic material data window
+Okno s údajmi o elastickom materiáli
 
   
   
-Note:   
-To activate the reference temperature option, the thermal expansion coefficient must be made a function of temperature.
+Poznámka:
+Ak chcete aktivovať možnosť referenčnej teploty, musí byť koeficient tepelnej rozťažnosti funkciou teploty.
 
-## Young's modulus 
+## Youngov modul
 
-Young's Modulus ([YOUNG](/docs/sk/keyword_documentation/y/young/)) is used for elastic materials and elasto -plastic materials below the yield point. It can be defined as a constant or as a function of temperature, density (for powder metals), dominant atom content (for example, carbon content) or a function of temperature and atom content.
+Youngov modul ([YOUNG](/docs/sk/keyword_documentation/y/young/)) sa používa pre elastické materiály a elastoplastické materiály pod hranicou klzu. Môže byť definovaný ako konštanta alebo ako funkcia teploty, hustoty (pre práškové kovy), dominantného obsahu atómov (napríklad obsahu uhlíka) alebo ako funkcia teploty a obsahu atómov.
 
-## Poisson's ratio
+## Poissonov pomer
 
-Poisson's ratio ([POISON](/docs/sk/keyword_documentation/p/poison/)) is the ratio between axial and transverse strains. It is required for elastic and elasto-plastic materials. It can be defined as a constant or as a function of temperature, density (for powder metals), dominant atom content (for example, carbon content), or a function of temperature and atom content.
+Poissonov pomer ([POISON](/docs/sk/keyword_documentation/p/poison/)) je pomer medzi osovými a priečnymi deformáciami. Vyžaduje sa pre pružné a elasto-plastické materiály. Môže byť definovaný ako konštanta alebo ako funkcia teploty, hustoty (v prípade práškových kovov), dominantného obsahu atómov (napríklad obsahu uhlíka) alebo ako funkcia teploty a obsahu atómov.
 
-## Thermal expansion
+## Tepelná rozťažnosť
 
-The coefficient of thermal expansion ([EXPAND](/docs/sk/keyword_documentation/e/expand/)) defines volumetric strain due to changes in temperature. It can be defined as a constant or as a function of temperature.  
-For elastic bodies temperature change is defined as the difference between nodal temperatures and the specified reference temperature ([REFTMP](/docs/sk/keyword_documentation/r/reftmp/)): 
+Koeficient tepelnej rozťažnosti ([EXPAND](/docs/sk/keyword_documentation/e/expand/)) definuje objemovú deformáciu spôsobenú zmenami teploty. Môže byť definovaný ako konštanta alebo ako funkcia teploty.  
+Pre pružné telesá je zmena teploty definovaná ako rozdiel medzi uzlovými teplotami a zadanou referenčnou teplotou ([REFTMP](/docs/sk/keyword_documentation/r/reftmp/)):
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_2_elastic_data/eq_10_2_3_1.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_2_elastic_data/eq_10_2_3_1.jpg' | relative_url }}) |
+---|---
   
   
-For elasto-plastic bodies the thermal expansion input in the pre-processor is the average value of thermal expansion and the FEM calculates the instantaneous (tangential) value from the average value.
+V prípade elasto-plastických telies je vstupom tepelnej rozťažnosti v predprocesore priemerná hodnota tepelnej rozťažnosti a MKP vypočíta okamžitú (tangenciálnu) hodnotu z priemernej hodnoty.
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_2_elastic_data/eq_10_2_3_2.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_2_elastic_data/eq_10_2_3_2.jpg' | relative_url }}) |
+---|---
   
   
-Experimental data for thermal expansion and conversion tools are available.  
-The user interface now allows either direct entry of the tangent thermal expansion coefficient as a function of temperature, or user can also import instantaneous values if available from the experimental data. (See Fig. 10.2.2.) When importing the instantaneous values, user needs to indicate if the recordings are based on heating or cooling tests and the reference temperature. This instantaneous thermal expansion data can be converted to average data. (Also called secant, which is the data requirement from the model perspective). At any point user can see either native data as imported or converted data or both. This data can also be imported and exported as text files. This table data can also be cut and pasted from and to Excel (on PC systems) data table.
+K dispozícii sú experimentálne údaje o tepelnej rozťažnosti a konverzné nástroje.  
+Používateľské rozhranie teraz umožňuje buď priame zadanie koeficientu tepelnej rozťažnosti tangensu ako funkcie teploty, alebo môže používateľ importovať aj okamžité hodnoty, ak sú k dispozícii z experimentálnych údajov. (Pozri obr. 10.2.2.) Pri importovaní okamžitých hodnôt musí používateľ uviesť, či sú záznamy založené na skúškach ohrevu alebo chladenia, a referenčnú teplotu. Tieto okamžité údaje o tepelnej rozťažnosti možno previesť na priemerné údaje. (Nazýva sa aj sekantný, čo je požiadavka na údaje z hľadiska modelu). V každom okamihu môže používateľ vidieť buď pôvodné údaje ako importované, alebo konvertované údaje, alebo oboje. Tieto údaje možno tiež importovať a exportovať ako textové súbory. Tieto tabuľkové údaje možno tiež vystrihnúť a vložiť z a do tabuľky údajov programu Excel (v systémoch PC).
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_2_elastic_data/10_2_3_image001.jpg' | relative_url }})
 
-Data conversion facilities for thermal expansion function data
+Zariadenia na konverziu údajov pre údaje o funkcii tepelnej rozťažnosti
 
-## Material Reference Temperature
+## Referenčná teplota materiálu
 
-Reference temperature ([REFTMP](/docs/sk/keyword_documentation/r/reftmp/)) is valid only for the Elastic and Elasto plastic objects thermal expansion calculation, this value is used as the reference temperature for thermal expansion calculation. For Elasto-Plastic models or objects, (starting from DEFORM v11) reference temperature defined in material data dialog is always used. For Elastic models or objects, if the thermal expansion is constant object reference temperature will be used (refer Object properties reference Temperature). For Elastic models or objects, if the thermal expansion is a function of temperature reference temperature defined in material data dialog will be used.
+Referenčná teplota ([REFTMP](/docs/sk/keyword_documentation/r/reftmp/)) platí len pre výpočet tepelnej rozťažnosti plastových objektov Elastic a Elasto, táto hodnota sa používa ako referenčná teplota pre výpočet tepelnej rozťažnosti. Pre modely alebo objekty Elasto-Plastic sa (počnúc verziou DEFORM v11) vždy používa referenčná teplota definovaná v dialógovom okne s údajmi o materiáli. Pre elastické modely alebo objekty, ak je tepelná rozťažnosť objektu konštantná, použije sa referenčná teplota objektu (pozri Referenčná teplota vlastností objektu). Pre elastické modely alebo objekty, ak je tepelná rozťažnosť funkciou teploty, použije sa referenčná teplota definovaná v dialógovom okne s údajmi o materiáli.
 
 [10.2.5. Hyperelastic](/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_5_hyperelastic/)

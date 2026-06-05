@@ -1,106 +1,106 @@
 ---
 lang: sk
-title: "9.4. Remesh Criteria"
+title: "9.4. Kritériá pre generovanie novej siete"
 ---
 
-# 9.4. Remesh Criteria ![]({{ '/assets/icons/pre_icons/mo_remeshing_criteria.jpg' | relative_url }})
+# 9.4. Kritériá pre výpočet novej siete ![]({{ '/assets/icons/pre_icons/mo_remeshing_criteria.jpg' | relative_url }})
 
-9.4.1. Maximum interference depth (RMDPTH)
+9.4.1. Maximálna hĺbka interferencie (RMDPTH)
 
-9.4.2. Maximum stroke increment (RMSTRK)
+9.4.2. Maximálny prírastok zdvihu (RMSTRK)
 
-9.4.3. Maximum time increment (RMTIME)
+9.4.3. Maximálny časový krok (RMTIME)
 
-9.4.4. Maximum step increment (RMSTEP)
+9.4.4. Maximálny krok (RMSTEP)
 
-9.4.5. Penetration Distance (absolute)
+9.4.5. Vzdialenosť prenikania (absolútna)
 
-9.4.6. Penetration Distance (relative)
+9.4.6. Vzdialenosť prenikania (relatívna)
 
-9.4.7. Additional remeshing criteria
+9.4.7. Ďalšie kritériá pre tvorbu novej siete
 
-9.4.8. Remeshing Method
+9.4.8. Metóda prepočítania siete
 
-**[2D, 3D]** : Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window ( Fig. 9.4.1. )contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers.There are four keywords that control the initiation of a remeshing procedure ([RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/), [RMTIME](/docs/sk/keyword_documentation/r/rmtime/), [RMSTEP](/docs/sk/keyword_documentation/r/rmstep/) and [RMSTRK](/docs/sk/keyword_documentation/r/rmstrk/)) for an object. When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed. During the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.
+**[2D, 3D]** : Kritériá pregenerovania siete (Autoremesh) predstavujú najpohodlnejší spôsob, ako riešiť pregenerovanie siete objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Kritériá pre vytváranie novej siete (obr. 9.4.1.) obsahuje skupinu parametrov, ktoré riadia, kedy a ako často sa sieť na objektu so sieťou regeneruje na základe priradenia určitých spúšťačov.Existujú štyri kľúčové slová, ktoré riadia spustenie postupu premenovania ([RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/), [RMTIME](/docs/sk/keyword_documentation/r/rmtime/), [RMSTEP](/docs/sk/keyword_documentation/r/rmstep/) a [RMSTRK](/docs/sk/keyword_documentation/r/rmstrk/)) pre objekt. Keď sú splnené kritériá pregenerovania siete pre ktorékoľvek z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (negatívna Jacobova matica), objekt bude pregenerovaný. Ak objekt počas simulácie spĺňa niektoré z kritérií pre vytváranie novej siete, vygeneruje sa nová sieť, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_4_remesh_criteria/9_4_image001.jpg' | relative_url }})
 
-(a)
+a)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_4_remesh_criteria/9_4_image002.jpg' | relative_url }})
 
-(b)
+b)
 
-Remeshing Criteria Window; (a) For 2D, (b) For 3D
+Okno kritérií pre výpočet novej siete; (a) pre 2D, (b) pre 3D
 
-## Maximum interference depth (RMDPTH) [2D, 3D]
+## Maximálna hĺbka interferencie (RMDPTH) [2D, 3D]
 
-The maximum Interference Depth ([RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/)) is used to start a remeshing procedure. If any portion of a master object penetrates a slave object beyond the depth specified under RMDPTH, remeshing will be triggered. 
+Hodnota maximálnej hĺbky zasahovania ([RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/)) slúži na spustenie procesu prepočítania sietí. Ak akákoľvek časť hlavného objektu zasahuje do podriadeného objektu hlbšie, ako je hĺbka špecifikovaná v parametri RMDPTH, spustí sa prepočítanie sietí. 
 
-## Maximum stroke increment (RMSTRK) [2D, 3D]
+## Maximálny prírastok zdvihu (RMSTRK) [2D, 3D]
 
-Anytime the maximum stroke increment ([RMSTRK](/docs/sk/keyword_documentation/r/rmstrk/)) is exceeded by the stroke increment of the primary die since the last remeshing step, a new remeshing step will be initiated. 
+Vždy, keď prírastok zdvihu primárnej formy od posledného kroku vytvárania siete prekročí maximálny prírastok zdvihu ([RMSTRK](/docs/sk/keyword_documentation/r/rmstrk/)), spustí sa nový krok vytvárania siete. 
 
-## Maximum time increment (RMTIME) [2D, 3D]
+## Maximálny časový krok (RMTIME) [2D, 3D]
 
-Anytime the Maximum Time Increment ([RMTIME](/docs/sk/keyword_documentation/r/rmtime/)) (Value of Elapsed Time) has elapsed since the last remeshing step, a new remeshing step will be initiated. 
+Vždy, keď uplynie maximálny časový interval ([RMTIME](/docs/sk/keyword_documentation/r/rmtime/)) (hodnota uplynutého času) od posledného kroku vytvárania novej siete, spustí sa nový krok vytvárania novej siete. 
 
-## Maximum step increment (RMSTEP) [2D, 3D]
+## Maximálny krok (RMSTEP) [2D, 3D]
 
-Anytime the Maximum Step Increment (Number of Steps) has occurred since the last remeshing step, a new remeshing step will be initiated.
+Vždy, keď od posledného kroku prepočítania siete dôjde k dosiahnutiu maximálneho prírastku krokov (počet krokov), spustí sa nový krok prepočítania siete.
 
-**Purpose of Criteria [2D, 3D]**
+**Účel kritérií [2D, 3D]**
 
-When a sharp edge on a tool or die impinges on the workpiece, the sharp edge may deeply penetrate an element edge. If this depth is severe, the elements may get stretched out and remeshing may become difficult. Before this depth is achieved, remeshing with place nodes about the edge and allow the simulation to continue unhampered.
+Keď ostrá hrana nástroja alebo formy narazí na obrobok, môže hlboko vniknúť do okraja prvku. Ak je táto hĺbka príliš veľká, prvky sa môžu natiahnuť a opätovné vytvorenie siete môže byť sťažené. Ešte pred dosiahnutím tejto hĺbky je potrebné opätovne vytvoriť sieť umiestnením uzlov okolo okraja, čím sa simulácia môže bez problémov pokračovať.
 
-## Penetration Distance (absolute) [3D]:
+## Vzdialenosť prenikania (absolútna) [3D]:
 
-If a positive number (in the unit of length) is entered, the program will conduct a check on each surface edge that has a contact node on each end. The distance from the middle of the edge to the die surface is calculated. If the maximum penetration depth exceeds the specified limit, remeshing will be triggered.
+Ak zadáte kladné číslo (v jednotkách dĺžky), program skontroluje každý okraj povrchu, ktorý má na oboch koncoch kontaktný uzol. Vypočíta sa vzdialenosť od stredu okraja k povrchu formy. Ak maximálna hĺbka vniknutia prekročí stanovený limit, spustí sa prepočítanie siete.
 
-## Penetration Distance (relative) [3D]:
+## Vzdialenosť prenikania (relatívna) [3D]:
 
-If a negative number (a fraction) is entered, the program will conduct a check on each surface edge that has a contact node on each end. The distance from the middle of the edge to the die surface is calculated and divided by the original length of the edge. If the ratio exceeds the magnitude of the specified value, remeshing will be triggered.
+Ak sa zadá záporné číslo (zlomok), program vykoná kontrolu každého okraja povrchu, ktorý má na oboch koncoch kontaktný uzol. Vypočíta sa vzdialenosť od stredu okraja k povrchu formy a vydelí sa pôvodnou dĺžkou okraja. Ak tento pomer prekročí veľkosť zadaného čísla, spustí sa prepočítanie siete.
 
-**Default Value [3D]:**
+**Predvolená hodnota [3D]:**
 
-The pre-processor now has a default value 0.7 with a relative setting.
+Predspracovateľ má teraz predvolenú hodnotu 0,7 s relatívnym nastavením.
 
-## Additional remeshing criteria [3D]
+## Ďalšie kritériá pre generovanie novej siete [3D]
 
-  * **Stretch limit** : Stretch of an edge is calculated as “(Current Length-Original Length)/Original Length”. If this value exceeds the specified limit, then remeshing is performed.
+  * **Limit rozťahovania**: Rozťahovanie hrany sa vypočíta ako „(aktuálna dĺžka – pôvodná dĺžka) / pôvodná dĺžka“. Ak táto hodnota prekročí stanovený limit, vykoná sa prepočet siete.
 
-  * **Shrinking limit** : Shrink of an edge is calculated as “(Current Length-Original Length)/Original Length”. If this value exceeds the specified limit, then remeshing is performed.
+  * **Limit zmenšenia**: Zmenšenie hrany sa vypočíta ako „(aktuálna dĺžka – pôvodná dĺžka)/pôvodná dĺžka“. Ak táto hodnota prekročí stanovený limit, vykoná sa prepočet siete.
 
-##  Remeshing Method [3D]
+##  Metóda prepočítania siete [3D]
 
-**Global and Local Remeshing Options [3D]**
+**Možnosti globálneho a lokálneho prekreslenia sietí [3D]**
 
-For DEFORM-3D, mesh generation has been enhanced with local meshing functionality.
+V programe DEFORM-3D bola tvorba sietí vylepšená o funkciu lokálneho vytvárania sietí.
 
-Default settings point to existing global remeshing procedures, where in every element of the old mesh gets replaced with new mesh element, followed by interpolation.
+Predvolené nastavenia smerujú k existujúcim postupom globálneho prečlenenia, pri ktorých sa každý prvok starej siete nahradí novým prvkom siete, na čo nadväzuje interpolácia.
 
-New Local meshing functionality allows several options to control the element size and quality. Local remeshing also has options to keep the meshing truly local, to minimize the interpolation related errors .(See Fig. 9.4.3.) In the current version, all the local meshing related settings are stored in the local files, not in the database.
+Nová funkcia lokálneho vytvárania sietí ponúka viacero možností na nastavenie veľkosti a kvality prvkov. Lokálne premeshovanie má tiež možnosti, ako zachovať skutočne lokálny charakter sietovania, aby sa minimalizovali chyby súvisiace s interpoláciou. (Pozri obr. 9.4.3.) V aktuálnej verzii sú všetky nastavenia súvisiace s lokálnym sietovaním uložené v lokálnych súboroch, nie v databáze.
 
-This means when the user copies the database file from one folder to another, local remesh settings will not be carried over unless all the files are copied to the working folder.
+To znamená, že ak používateľ skopíruje súbor databázy z jedného priečinka do druhého, lokálne nastavenia pre výpočet sietí sa neprenesú, pokiaľ sa do pracovného priečinka nezkopírujú všetky súbory.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_4_remesh_criteria/9_4_image003.jpg' | relative_url }})
 
-Global Remeshing criteria window
+Okno s kritériami globálneho prekreslenia siete
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_4_remesh_criteria/9_4_image004.jpg' | relative_url }})
 
-Local Remeshing criteria window
+Okno s kritériami pre lokálne prepočítanie sietí
 
-**Internal Elements:**
+**Vnútorné prvky:**
 
-  * **S****ize control** :
+  * **Nastavenie veľkosti** :
 
-  * **Average of Neighbors** : The size of the element is decided based on the average size of the surrounding elements of distorted mesh.
-  * **Scaling Factor** : The size of the element will be scaled based on the scaling factor mentioned for each layer inward.
+  * **Priemer susedných prvkov**: Veľkosť prvku sa určuje na základe priemernej veľkosti okolitých prvkov deformovanej siete.
+  * **Mierka**: Veľkosť prvku sa bude zmenšovať podľa mierky uvedenej pre každú vrstvu smerom dovnútra.
 
-  * **Skip Elements with Good shape** :The elements which are of good shape will be skipped from remeshing.
+  * **Preskočiť prvky s dobrým tvarom**: Prvky s dobrým tvarom nebudú pri opätovnom vytváraní siete zohľadnené.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)
 

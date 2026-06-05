@@ -1,22 +1,22 @@
 ---
 lang: sk
-title: "12. Geometry Modelling"
+title: "12. Geometrické modelovanie"
 ---
 
-# 12\. Geometry Modelling
+# 12\. Geometrické modelovanie
 
-In DEFORM the object geometry plays two roles. 
+Geometria objektu má v programe DEFORM dve úlohy.
 
-  * For deformable objects, the imported or created geometry is used to generate a mesh. Once a database is generated and the pre-processor is exited, the object geometry will be defined by the surface of the FEM mesh, and the original surface is no longer stored.
-  * For rigid objects, the imported or created geometry defines the surface of the tool. If a mesh is generated for heat transfer, the original geometry definition is still used for the rigid surface definition. The original geometry can be displayed in the object/geometry window.
+  * V prípade deformovateľných objektov sa importovaná alebo vytvorená geometria používa na generovanie siete. Po vytvorení databázy a ukončení preprocesora sa geometria objektu definuje povrchom siete FEM a pôvodný povrch sa už neukladá.
+  * V prípade pevných objektov definuje importovaná alebo vytvorená geometria povrch nástroja. Ak sa pre prenos tepla vytvára sieť, na definíciu tuhého povrchu sa stále používa pôvodná definícia geometrie. Pôvodná geometria sa môže zobraziť v okne objektu/geometrie.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_Image001.jpg) ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_Image002.jpg)
 
 (a) (b)
 
-Geometry Page; (a) For 2D and (b) For 3D
+Geometrická stránka; (a) pre 2D a (b) pre 3D
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [12.1. 2D Geometry data Defining](/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/)
 

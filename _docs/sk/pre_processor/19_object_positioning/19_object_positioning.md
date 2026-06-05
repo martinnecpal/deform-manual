@@ -1,211 +1,211 @@
 ---
 lang: sk
-title: "19. Object Positioning"
+title: "19. Umiestnenie objektu"
 ---
 
-# 19\. Object Positioning
+# 19\. Umiestnenie objektu
 
-19.1. Drag Positioning
+19.1. Polohovanie ťahaním
 
-19.2. Offset Positioning
+19.2. Umiestnenie s posunom
 
-19.3. Interference positioning
+19.3. Umiestnenie rušenia
 
-19.4. Rotational positioning
+19.4. Rotačné polohovanie
 
-19.5. Drop positioning
+19.5. Umiestnenie kvapky
 
-19.6 Flip positioning
+19.6 Umiestnenie flipu
 
-19.7. Coupled positioning
+19.7. Spájané polohovanie
 
-Object positioning dialog can be accessed by clicking on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button in Positioning page. (See Fig. 19.1. and Fig. 19.2.)
+Dialógové okno polohovania objektu je prístupné kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) na stránke Polohovanie. (Pozri obr. 19.1. a obr. 19.2.)
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image001.jpg' | relative_url }})
 
-2D Object positioning window
+Okno na polohovanie 2D objektov
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image002.jpg' | relative_url }})
 
-3D Object positioning window
+Okno na polohovanie 3D objektov
 
-Once the object is defined, a variety of positioning features are available to place the objects in the correct position before the process is modelled. The object can be dragged using mouse, can be dropped in to the die cavity, moved by a specific offset distance, positioned with interference or positioned with rotational movement. A set of components can also be selected and positioned together using coupled positioning.
+Po definovaní objektu sú k dispozícii rôzne polohovacie funkcie na umiestnenie objektov do správnej polohy pred modelovaním procesu. Objekt možno pretiahnuť pomocou myši, možno ho vpustiť do dutiny matrice, posunúť o určitú vzdialenosť posunu, umiestniť pomocou interferencie alebo umiestniť pomocou rotačného pohybu. Súbor komponentov možno tiež vybrať a umiestniť spoločne pomocou spojeného polohovania.
 
-**Update Current Stroke** : When user checks this check box, "positioning object" current stroke value will update w.r.t. positioned distance.
+**Aktualizovať aktuálny ťah** : Keď používateľ začiarkne toto políčko, aktuálna hodnota ťahu "polohovacieho objektu" sa aktualizuje v závislosti od polohovanej vzdialenosti.
 
-**Update Windows Following positioning object** : When user checks this check box, defined windows (mesh window or Env. windows) will position with respect to the object positioning methods like Drag, Interference, etc. which are described in below sections 19.1 to 19.7.
+**Aktualizácia systému Windows Nasledujúci objekt polohovania** : Keď používateľ zaškrtne toto políčko, definované okná (okná siete alebo okná prostredia) sa budú polohovať s ohľadom na metódy polohovania objektov, ako sú Drag, Interference atď., ktoré sú popísané v nasledujúcich častiach 19.1 až 19.7.
 
-**Reset![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}) **: using this option user can reset the objects to its initial position. 
+**Reset![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}) **: pomocou tejto možnosti môže používateľ resetovať objekty do ich pôvodnej polohy.
 
-## Drag Positioning
+## Polohovanie ťahaním
 
-**[2D, 3D]:** Objects can be dragged or dynamically rotated using drag option in a certain direction using the mouse. Drag the mouse in the required direction so that we can place as per we required. If you select Translation motion the object will translate based on your dragging direction. If you select Rotation motion the object will rotate based on dragging of your mouse. (See Fig. 19.3., Fig. 19.4. and Fig. 19.5.)
+**[2D, 3D]:** Objekty možno pomocou myši ťahať alebo dynamicky otáčať v určitom smere pomocou možnosti ťahania. Ťahanie myšou v požadovanom smere, aby sme mohli umiestniť podľa našich požiadaviek. Ak vyberiete možnosť Pohyb prekladu, objekt sa preloží na základe smeru ťahania. Ak vyberiete možnosť Rotation motion, objekt sa bude otáčať na základe ťahania myšou (pozri obr. 19.3., obr. 19.4. a obr. 19.5.).
 
-**Mouse driven positioning**
+**Polohovanie riadené myšou**
 
-Mouse driven positioning is used to move or rotate the object by allowing the user to select a vector along which to drag or spin any specified object along or about that vector.
+Polohovanie riadené myšou sa používa na pohyb alebo otáčanie objektu tak, že používateľ môže vybrať vektor, pozdĺž ktorého môže ťahať alebo otáčať ľubovoľný určený objekt pozdĺž tohto vektora alebo okolo neho.
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image003.jpg' | relative_url }})
 
-Drag Positioning window for 2D
+Okno na polohovanie ťahaním pre 2D
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image004.jpg' | relative_url }})
 
-Drag Positioning window for 3D
+Okno na polohovanie ťahaním pre 3D
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image005.jpg' | relative_url }})
 
-Example showing usage of drag positioning
+Príklad použitia polohovania ťahaním
 
-## Offset Positioning
+## Posunutie polohy
 
-**[2D, 3D]:** Offset positioning is used to move the object to position by a given displacement in the chosen direction. The object to be positioned should be highlighted in the Positioning object list table. The displacement in the X, Y, and Z (for 3D) coordinates should be entered in the appropriate fields. ( Fig. 19.6. and Fig. 19.7.)
+**[2D, 3D]:** Polohovanie s posunom sa používa na posunutie objektu na pozíciu o daný posun vo zvolenom smere. Objekt, ktorý sa má polohovať, by mal byť zvýraznený v tabuľke Zoznam polohovacích objektov. Posunutie v súradniciach X, Y a Z (pre 3D) by sa malo zadať do príslušných polí. ( Obr. 19.6. a obr. 19.7.)
 
-**Distance Vector****:** using********Distance Vector** **option user need to define the displacement in the X, Y, and Z (for 3D) coordinates should be entered in the appropriate fields.
+**Vektor vzdialenosti****:** pomocou********Vektor vzdialenosti** **možnosť používateľ musí definovať posunutie v súradniciach X, Y a Z (pre 3D) by sa mala zadať do príslušných polí.
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image006.jpg' | relative_url }})
 
-Distance vector - Offset Positioning window for 2D
+Vektor vzdialenosti - okno na určovanie polohy s posunom pre 2D
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image007.jpg' | relative_url }})
 
-Distance vector - Offset Positioning window for 3D
+Vektor vzdialenosti - okno na určovanie polohy s posunom pre 3D
 
-**Two points:** using Two point option user can offset by enter the From and To fields values. Even by mouse click on the boundary points user can define the From and To fields values. (See Fig. 19.8., Fig. 19.9. and Fig. 19.10.).
+**Dva body:** pomocou možnosti Dva body môže používateľ vykonať posun zadaním hodnôt polí Od a Do. Aj kliknutím myšou na hraničné body môže používateľ definovať hodnoty polí Od a Do. (Pozri obr. 19.8., obr. 19.9. a obr. 19.10.).
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image008.jpg' | relative_url }})
 
-Two points - Offset Positioning window for 2D
+Dva body - okno na určovanie polohy s posunom pre 2D
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image009.jpg' | relative_url }})
 
-Two points - Offset Positioning window for 3D
+Dva body - okno na určovanie polohy s posunom pre 3D
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image010.jpg' | relative_url }})
 
-Example showing usage of offset positioning using two point method
+Príklad zobrazujúci použitie posunutého polohovania pomocou dvojbodovej metódy
 
-**Centroid of Two objects type Offset Positioning :** The user can offset using the centroid to align positioning object. (See Fig. 19.11.)
+**Centroid dvoch objektov typu Offset Positioning :** Používateľ môže pomocou centroidu zarovnať polohovanie objektu. (Pozri obr. 19.11.)
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image011.jpg' | relative_url }})
 
-Offset Centroid Positioning example
+Príklad posunutého centroidného polohovania
 
-## Interference positioning
+## Umiestnenie rušenia
 
-**[2D, 3D]** : Interference positioning moves the object for a given set of "positioning" and "reference" relationship between two objects, the distance between two objects is calculated both from the positioning and reference objects then, the smaller value of this distance is used as an offset value for positioning (See Fig. 19.12., Fig. 19.13. and Fig. 19.14.). During the positioning process, the object being positioned is first moved a large distance away from the reference object, then moved back towards the reference object in the indicated direction, until first contact is made.
+**[2D, 3D]** : Interferenčné polohovanie posúva objekt pre daný súbor "polohového" a "referenčného" vzťahu medzi dvoma objektmi, vzdialenosť medzi dvoma objektmi sa vypočíta z polohových aj referenčných objektov a potom sa menšia hodnota tejto vzdialenosti použije ako hodnota posunu pre polohovanie (pozri obr. 19.12., obr. 19.13. a obr. 19.14.). Počas procesu polohovania sa polohovaný objekt najprv posunie o veľkú vzdialenosť od referenčného objektu, potom sa posunie späť k referenčnému objektu v naznačenom smere, až kým nedôjde k prvému kontaktu.
 
-For a non-rigid object (plastic, elastic, porous, Elasto-plastic) if the mesh is not existing, object geometry is used for interference positioning.
+V prípade netuhého objektu (plastického, pružného, pórovitého, elastoplastického), ak sieť neexistuje, sa na polohovanie interferencie použije geometria objektu.
 
-**Common Question: What is a reasonable value of Interference?**
+**Častá otázka: Aká je primeraná hodnota interferencie?**
 
-**Answer** : Interference should be adjusted such that when inter-object boundary conditions are generated, a reasonable number of nodes are in contact with tools. Contact nodes should be generated wherever the object should reasonably be touching the tools.
+**Odpoveď** : Interferencia by mala byť nastavená tak, aby pri generovaní medzipredmetových okrajových podmienok bol primeraný počet uzlov v kontakte s nástrojmi. Kontaktné uzly by sa mali generovať všade tam, kde by sa mal objekt primerane dotýkať nástrojov.
 
-This may require increasing or decreasing both the interference value and the contact node generation tolerance.
+To si môže vyžadovať zvýšenie alebo zníženie hodnoty interferencie aj tolerancie generovania kontaktných uzlov.
 
-**Do not move object outside bounding box of reference object before positioning** : option for interference positioning is available for DEFORM-2D pre-processor (from v10.2.1), this positioning option is implemented for machining distortion case with undercut surface where interference positioning didn’t work correctly.
+**Pred polohovaním neposúvať objekt mimo ohraničenia referenčného objektu** : možnosť interferenčného polohovania je k dispozícii pre preprocesor DEFORM-2D (od verzie 10.2.1), táto možnosť polohovania je implementovaná pre prípad deformácie pri obrábaní s podrezaným povrchom, kde interferenčné polohovanie nefungovalo správne.
 
-It positions the object by interference with respect to the innermost (Internal boundary) boundary of the reference object in the specified direction.
+Umiestňuje objekt interferenciou vzhľadom na najvnútornejšiu (vnútornú hranicu) hranicu referenčného objektu v zadanom smere.
 
-**For example** : In 2d Plane strain for Hollow cylinder or prism top section with internal pressure applying by any object then that object to position against the internal surface we need to use positioning by bounding box.
+**Napríklad** : V 2d rovinnej deformácii pre hornú časť dutého valca alebo hranola s vnútorným tlakom pôsobiacim na ľubovoľný objekt, potom tento objekt na umiestnenie voči vnútornému povrchu musíme použiť polohovanie pomocou ohraničujúceho poľa.
 
-**For example** : in 3d ring rolling setup, to position the Mandrel with respect to or against workpiece ring inner circle surface then we need to use positioning by bounding box.
+**Napr.** : pri nastavovaní valcovania krúžku v 3d, ak chceme umiestniť tŕň vzhľadom na vnútorný kruhový povrch obrobku alebo voči nemu, musíme použiť polohovanie pomocou ohraničujúceho poľa.
 
-**Follow Movement Direction** : When user checks this check box object will position with respect to the movement defined direction.
+**Sledovanie smeru pohybu** : Keď používateľ začiarkne toto políčko, objekt sa umiestni vzhľadom na definovaný smer pohybu.
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image012.jpg' | relative_url }})
 
-Interference Positioning window for 2D
+Okno na určovanie polohy pre 2D
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image013.jpg' | relative_url }})
 
-Interference Positioning window for 3D
+Interferenčné polohovacie okno pre 3D
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image014.jpg' | relative_url }})
 
-Example showing usage interference positioning
+Príklad zobrazujúci polohovanie rušenia pri používaní
 
-From DEFORM V12.0.2, "First encountered" object positioning option provided in interference object positioning (See Fig. 19.15.). This option allows the user to position the object in such a way that the positioning object will come and position automatically with the object which is going to encounter first along its moving path.
+Od verzie DEFORM V12.0.2 je v polohovaní rušivých objektov k dispozícii možnosť "Prvé stretnutie" (pozri obr. 19.15). Táto možnosť umožňuje používateľovi polohovať objekt tak, že polohovací objekt príde a polohuje sa automaticky s objektom, ktorý sa na svojej pohybovej dráhe stretne ako prvý.
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image026.jpg' | relative_url }})
 
-First encoutered Reference option 
+Prvá podporovaná referenčná možnosť
 
-## Rotational positioning
+## Rotačné polohovanie
 
-**[2D, 3D]:** Rotation positioning allows the user to rotate any object about a specified axis. The axis of rotation is specified from a point and a direction vector. The specified rotation angle is positive for a right hand rotation about the axis.
+**[2D, 3D]:** Rotačné polohovanie umožňuje používateľovi otáčať ľubovoľný objekt okolo určenej osi. Os otáčania sa zadáva z bodu a smerového vektora. Zadaný uhol rotácie je kladný pre pravotočivú rotáciu okolo osi.
 
-In rotational positioning, positioning object can have its own object center as rotation center. Angle (degree) is measured in counter-clock wise direction. (See Fig. 19.16. to Fig. 19.20.)
+Pri rotačnom polohovaní môže mať polohovací objekt svoj vlastný stred objektu ako stred otáčania. Uhol (stupeň) sa meria v protichodnom smere. (Pozri obr. 19.16. až obr. 19.20.)
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image015.jpg' | relative_url }})
 
-Rotational Positioning window for 2D
+Rotačné polohovacie okno pre 2D
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image016.jpg' | relative_url }})
 
-Rotational Positioning window for 3D
+Rotačné polohovacie okno pre 3D
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image017.jpg' | relative_url }})
 
-2D Example showing usage of rotation positioning
+2D Príklad zobrazujúci použitie polohovania rotácie
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image018.jpg' | relative_url }})
 
-3D Example 1 showing usage of rotation positioning
+3D Príklad 1 zobrazujúci použitie polohovania rotácie
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image019.jpg' | relative_url }})
 
-3D Example 2 showing usage of rotation positioning
+3D Príklad 2 zobrazujúci použitie polohovania rotácie
 
-## Drop positioning
+## Umiestnenie kvapky
 
-**[3D]:** Drop positioning is used to move an object towards another object by interference or by gravity (See Fig. 19.21. and Fig. 19.22.).
+**[3D]:** Polohovanie kvapky sa používa na posunutie objektu smerom k inému objektu rušivým vplyvom alebo vplyvom gravitácie (pozri obr. 19.21. a obr. 19.22.).
 
-  * **Allow Rotation only about:** User can limit the direction of rotation by dropping the object by checking the check box and the direction mentioned.
+  * **Povolenie rotácie len o:** Používateľ môže obmedziť smer rotácie pustením objektu zaškrtnutím políčka a uvedeného smeru.
 
-  * **Don't allow rotation:** If user don't want to define rotation before dropping an object, by checking this check box user can do drop positioning.
+  * **Nepovoliť otáčanie:** Ak používateľ nechce definovať otáčanie pred upustením objektu, začiarknutím tohto políčka môže vykonať polohovanie pri upustení.
 
-  * **Save Movie File:** By checking this check box user can save the animation of Drop positioning.
+  * **Uložiť filmový súbor:** Začiarknutím tohto políčka môže používateľ uložiť animáciu polohovania kvapky.
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image020.jpg' | relative_url }})
 
-3D Drop Positioning window
+Okno 3D Drop Positioning
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image021.jpg' | relative_url }})
 
-Example showing usage of Drop positioning
+Príklad použitia polohovania Drop
 
-  * **Gravity activated** : In the case of gravity activated, the positioned object should be the meshed object. The direction should be the direction that gravity would drive it to fall on the other object. The object can move in 6 degrees of freedom (3 directions of translation and 3 axes of rotation) without any given constraint. Constraint in rotational direction can be added if only one rotational degree of freedom is required. If only one rotational direction is required, the Allow rotation only about box should be selected and the vector about which to rotate should be specified.
+  * **Gravitačná aktivácia** : V prípade aktivácie gravitácie by umiestnený objekt mal byť objektom s okami. Smer by mal byť smer, ktorým by ho gravitácia hnala k pádu na iný objekt. Objekt sa môže pohybovať v 6 stupňoch voľnosti (3 smery translácie a 3 osi rotácie) bez akéhokoľvek daného obmedzenia. Obmedzenie v smere otáčania možno pridať, ak sa vyžaduje len jeden stupeň voľnosti otáčania. Ak sa vyžaduje len jeden smer otáčania, treba vybrať možnosť Allow rotation only about box (Povoliť otáčanie len okolo poľa) a určiť vektor, okolo ktorého sa má otáčať.
 
-  * **Gravity not activated** : In the case where gravity is not activated, this behaves exactly like the interference positioning method.
+  * **Gravitácia nie je aktivovaná** : V prípade, že gravitácia nie je aktivovaná, správa sa presne ako metóda interferenčného polohovania.
 
-## Flip positioning
+## Flipové polohovanie
 
-**[2D]** : Flip allows the user to mirror an object about the selected-axis or any line parallel to the selected-axis as shown in Fig. 19.23. and Fig. 19.24.
+**[2D]** : Prevrátenie umožňuje používateľovi zrkadliť objekt okolo vybranej osi alebo ľubovoľnej čiary rovnobežnej s vybranou osou, ako je znázornené na obr. 19.23 a obr. 19.24.
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image022.jpg' | relative_url }})
 
-2D Flip Positioning window
+2D okno Flip Positioning
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image023.jpg' | relative_url }})
 
-Example showing usage of flip positioning
+Príklad použitia polohovania flipu
 
-## Coupled positioning
+## Spájané polohovanie
 
-**[2D, 3D]** : This allows several objects to move on the same positioning action (See Fig. 19.25. and Fig. 19.26.). By checking objects in the couple positioning dialog, the objects will be positioned by the exact same amount as the positioned object.
+**[2D, 3D]** : Umožňuje pohyb viacerých objektov pri rovnakej polohovacej akcii (pozri obr. 19.25. a obr. 19.26.). Zaškrtnutím objektov v dialógovom okne polohovania dvojice sa objekty polohujú presne o rovnakú hodnotu ako polohovaný objekt.
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image024.jpg' | relative_url }})
 
-Coupled Positioning window
+Spájané okno polohovania
 
 ![]({{ '/assets/images/pre-processor/19_object_positioning/19_image025.jpg' | relative_url }})
 
-Example showing usage of couple positioning with Drag positioning option
+Príklad zobrazujúci použitie polohovania páru s možnosťou Drag positioning
 
 ****
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [2D-Primitive geometries](../12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Define_Primitives)
 

@@ -1,25 +1,25 @@
 ---
 lang: sk
-title: "16.8. Body Force"
+title: "16.8. Sila tela"
 ---
 
-# 16.8. Body Force
+# 16.8. Sila tela
 
-The influence of gravity can be considered in the solution by activating the gravity body force option. The body force and direction of gravity are specified through the inputs shown in Fig. 16.8.1 and Fig. 16.8.2.
+Vplyv gravitácie možno v riešení zohľadniť aktivovaním možnosti gravitačná sila telesa. Sila telesa a smer gravitácie sa zadávajú prostredníctvom vstupov zobrazených na obr. 16.8.1 a obr. 16.8.2.
 
-The centrifugal force acting on a rotating body will be considered when the centrifugal force check box is activated.
+Odstredivá sila pôsobiaca na rotujúce teleso sa zohľadní, keď je aktivované políčko Odstredivá sila.
 
-When running simulations involving a body force, the user must define mass density (Section [10.3.4. Mass density](../10_Material_Data/10_3_Thermal_Data/10_3_Thermal_Data.htm#Mass_Density) )and apply boundary condition constraints. The boundary conditions must sufficiently prevent the part from gross rigid body motion. The free distortion boundary condition feature (Section [14.2.1. Velocity BCC - Free distorsion BCC](../14_Boundary_Conditions/14_2_deformation_boundary_conditions.htm#Free_Distortion_BCC) ) is designed to assist the user in this task, when necessary.
+Pri vykonávaní simulácií zahŕňajúcich silu telesa musí používateľ definovať hustotu hmotnosti (časť [10.3.4. Mass density](../10_Material_Data/10_3_Thermal_Data/10_3_Thermal_Data.htm#Mass_Density) )a použiť obmedzenia okrajových podmienok. Okrajové podmienky musia dostatočne zabrániť hrubému pohybu tuhého telesa dielu. Funkcia okrajovej podmienky voľnej deformácie (časť [14.2.1. Velocity BCC - Free distorsion BCC](../14_Boundary_Conditions/14_2_deformation_boundary_conditions.htm#Free_Distortion_BCC) ) je navrhnutá tak, aby v prípade potreby pomáhala používateľovi pri tejto úlohe.
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_8_Body_Force/16_8_Image001.jpg)
 
-2D Body Force Object properties window
+Okno vlastností objektu 2D Body Force
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_8_Body_Force/16_8_Image002.jpg)
 
-3D Body Force Object properties window
+Okno vlastností objektu 3D Body Force
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
 

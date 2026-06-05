@@ -1,54 +1,54 @@
 ---
 lang: sk
-title: "10.7. Hardness Data"
+title: "10.7. Údaje o tvrdosti"
 ---
 
-# 10.7. Hardness Data
+# 10.7. Údaje o tvrdosti
 
-10.7.1. Hardness of each phase (HDNPHA)
+10.7.1. Tvrdosť jednotlivých fáz (HDNPHA)
 
-10.7.2. Jominy curve (JOMINY)
+10.7.2. Jominyho krivka (JOMINY)
 
-10.7.3. Cooling time (HDNTIM)
+10.7.3. Čas chladenia (HDNTIM)
 
-There are two methods by which the hardness of a object can be determined after a cooling operation. The screen where this data is set is shown in Fig. 10.7.1. he first method is by specifying the hardness of each phase (HDNPHA) in a mixture and DEFORM will use the mixture law to determine the hardness of each element. The second method is to use experimental results from the Jominy curve and cooling time vs distance to determine the hardness during cooling. Initial Hardness and cooling type of the object can be added from Object Element window. The method of calculating the hardness can be specified for each object in the Object Properties - Hardness., Both the Jominy Curve and Cooling Time material data inputs are required when “Use Jominy curves” or “Only cooling time” option is selected under [Object properties – Hardness](/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/) tab.
+Existujú dve metódy, ktorými možno určiť tvrdosť predmetu po ochladení. Obrazovka, na ktorej sa tieto údaje nastavujú, je znázornená na obr. 10.7.1. Prvá metóda spočíva v zadaní tvrdosti každej fázy (HDNPHA) v zmesi a DEFORM použije zákon zmesi na určenie tvrdosti každého prvku. Druhou metódou je použitie experimentálnych výsledkov z Jominyho krivky a závislosti času chladenia od vzdialenosti na určenie tvrdosti počas chladenia. Počiatočnú tvrdosť a typ chladenia objektu možno pridať z okna Object Element (Prvok objektu). Metódu výpočtu tvrdosti je možné určiť pre každý objekt v okne Object Properties (Vlastnosti objektu) - Hardness (Tvrdosť), Keď je v záložke [Object properties – Hardness](/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/) zvolená možnosť "Use Jominy curves (Použiť Jominyho krivky)" alebo "Only cooling time (Iba čas chladenia)", vyžadujú sa vstupy údajov o materiáli Jominyho krivka aj čas chladenia.
 
   
-Any hardness unit may be used in DEFORM if it is used in conjunction with coefficients that were calibrated to the specific hardness unit. For example, if coefficients were determined based on an experimental HRC data, then the HRC hardness unit must be used in DEFORM simulation that uses those coefficients.  
-Brinell and Vickers hardness values can be converted to units of MPa by multiplying the hardness values by the metric standard gravity value (9.80665 m/s^2). If units of KSI are desired, then perform an additional conversion from MPa to KSI.
+V programe DEFORM možno použiť akúkoľvek jednotku tvrdosti, ak sa použije v spojení s koeficientmi, ktoré boli kalibrované na konkrétnu jednotku tvrdosti. Napríklad ak boli koeficienty určené na základe experimentálnych údajov HRC, potom sa v simulácii DEFORM, ktorá používa tieto koeficienty, musí použiť jednotka tvrdosti HRC.  
+Hodnoty tvrdosti podľa Brinella a Vickersa možno previesť na jednotky MPa vynásobením hodnôt tvrdosti metrickou štandardnou hodnotou tiaže (9,80665 m/s^2). Ak sú požadované jednotky KSI, vykonajte ďalší prevod z MPa na KSI.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_7_hardness_data/10_7_image001.jpg' | relative_url }})
 
-Hardness material data window
+Okno s údajmi o tvrdosti materiálu
 
-## Hardness of each phase (HDNPHA)
+## Tvrdosť každej fázy (HDNPHA)
 
-The hardness of each phase (material group) can be specified. The hardness of each phase ([HDNPHA](/docs/sk/keyword_documentation/h/hdnpha/)) can be defined as constant or as function of atom content or Temperature or Density or Temperature and Atom. The hardness of the object will be calculated based on the volume fraction of each phase in the element and on the hardness of each phase. 
+Tvrdosť každej fázy (skupiny materiálov) je možné špecifikovať. Tvrdosť každej fázy ([HDNPHA](/docs/sk/keyword_documentation/h/hdnpha/)) možno definovať ako konštantu alebo ako funkciu obsahu atómov alebo teploty alebo hustoty alebo teploty a atómov. Tvrdosť objektu sa vypočíta na základe objemového podielu každej fázy v prvku a na základe tvrdosti každej fázy.
 
   
-From v14.0., hardness can be estimated using Solid solution with precipitate model as shown in Fig. 10.7.2.
+Z verzie 14.0. možno tvrdosť odhadnúť pomocou modelu pevného roztoku so zrazeninami, ako je znázornené na obr. 10.7.2.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_7_hardness_data/10_7_image002.jpg' | relative_url }})
 
-Solid solution with precipitate option 
+Pevný roztok s možnosťou zrážania
 
-## Jominy curve (JOMINY)
+## Krivka Jominy (JOMINY)
 
-The hardness vs. distance for the Jominy test specimen must be specified here as shown in Fig. 10.7.3. The jominy curve is a determination of the hardness in the Jominy specimen at a specific distance from the cool end. Therefore, the Jominy curve is useful in determining the hardenability of a material as a function of the distance from the water-cooled end. 
+Tu sa musí uviesť závislosť tvrdosti od vzdialenosti pre Jominyho skúšobnú vzorku, ako je znázornené na obr. 10.7.3. Jominyho krivka je určenie tvrdosti v Jominyho vzorke v určitej vzdialenosti od chladného konca. Jominyho krivka je preto užitočná pri určovaní tvrdosti materiálu v závislosti od vzdialenosti od vodou chladeného konca.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_7_hardness_data/10_7_image003.jpg' | relative_url }})
 
-Jominy curve function page 
+Stránka s funkciou krivky Jominy
 
-## Cooling time (HDNTIM)
+## Čas chladenia (HDNTIM)
 
-Using Jominy distance vs. Cooling time option, define the cooling time vs. distance for the Jominy test specimen as shown in Fig. 10.7.4. Using the Jominy curve ([JOMINY](/docs/sk/keyword_documentation/j/jominy/)) data and the colling time ([HDNTIM](/docs/sk/keyword_documentation/h/hdntim/)) data, DEFORM will estimate the hardness of the object during cooling. 
+Pomocou možnosti Jominyho vzdialenosť vs. čas chladenia definujte čas chladenia v závislosti od vzdialenosti pre Jominyho skúšobnú vzorku, ako je znázornené na obr. 10.7.4. Pomocou údajov o Jominyho krivke ([JOMINY](/docs/sk/keyword_documentation/j/jominy/)) a údajov o čase chladnutia ([HDNTIM](/docs/sk/keyword_documentation/h/hdntim/)) DEFORM odhadne tvrdosť objektu počas chladnutia.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_7_hardness_data/10_7_image004.jpg' | relative_url }})
 
-Jominy distance vs. Cooling time
+Vzdialenosť Jominy vs. čas chladenia
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [16.5. Hardness Properties](/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/)
 

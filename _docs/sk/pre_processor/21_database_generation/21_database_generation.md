@@ -1,44 +1,44 @@
 ---
 lang: sk
-title: "21. Database Generation"
+title: "21. Vytvorenie databázy"
 ---
 
-# 21\. Database Generation
+# 21. Vytvorenie databázy
 
-**[2D, 3D]:** The simulation data set entered into the pre-processor can be written as a new database or appended to an existing database file. The information will be written as a negative step, indicating that it was written from the pre-processor and not the simulation engine. In an existing database, any steps higher than the current step will be overwritten at this time. The simulation database will be checked as it is written.
+**[2D, 3D]:** Sada simulačných údajov zadaná do predspracovateľa môže byť uložená ako nová databáza alebo pridaná na koniec existujúceho databázového súboru. Informácie budú uložené ako záporný krok, čo znamená, že boli uložené z predspracovateľa, a nie zo simulačného modulu. V existujúcej databáze budú v tomto momente prepísané všetky kroky vyššie ako aktuálny krok. Simulačná databáza bude kontrolovaná počas zapisovania.
 
-When the Status is "Ready to generate DB", we can generate the DB file. If the Status is "Input error", then we can observe the Error message in Message file related to Setup (in problem setup what data is missing or not correct). 
+Keď je stav „Pripravené na vytvorenie databázy“, môžeme vytvoriť súbor databázy. Ak je stav „Chyba zadávania“, môžeme si v súbore správ prečítať chybovú správu týkajúcu sa nastavenia (v ktorom nastavení chýbajú údaje alebo sú nesprávne). 
 
-From v12.0.2, In Generate DB file, we can observe the Operation Simulation setup summary as shown in Fig. 21.1.. 
+Od verzie 12.0.2 sa v okne „Generate DB file“ (Vytvoriť súbor DB) zobrazuje prehľad nastavení simulácie prevádzky, ako je znázornené na obr. 21.1. 
 
-The simulation database will be checked when either the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) or ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) buttons are clicked as shown in Fig. 21.1.
+Databáza simulácie sa skontroluje po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) alebo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), ako je znázornené na obr. 21.1.
 
 ![]({{ '/assets/images/pre-processor/21_database_generation/image001.jpg' | relative_url }})
 
-Database Generation window
+Okno na vytvorenie databázy
 
-**Data errors**
+**Chyby v údajoch**
 
-Errors are serious problems with the data set that will prevent the simulation from running. These errors are marked with red flags in data checking and must be resolved before the database can be written.
+Chyby sú závažné problémy v súbore údajov, ktoré bránia spusteniu simulácie. Tieto chyby sú pri kontrole údajov označené červenými vlajočkami a je potrebné ich odstrániť, aby bolo možné údaje zapísať do databázy.
 
-**Data warnings**
+**Upozornenia týkajúce sa údajov**
 
-Warnings are conditions which may cause undesirable solution behavior but will not prevent the simulation from running. Warnings are marked with yellow flags. If warnings exist, each one should be carefully checked and the source identified.
+Upozornenia sú stavy, ktoré môžu spôsobiť nežiaduce správanie riešenia, ale nezabránia spusteniu simulácie. Upozornenia sú označené žltými vlajočkami. Ak sa vyskytnú upozornenia, každé z nich by sa malo dôkladne skontrolovať a mal by sa zistiť ich zdroj.
 
-Some warnings represent unusual, but valid, data situations. If this is the case, they can be ignored and the simulation can be run.
+Niektoré varovania poukazujú na nezvyčajné, avšak platné situácie v údajoch. V takom prípade ich možno ignorovať a simuláciu spustiť.
 
-**The Benefits of Integrated DB**  
-In the integrated DB we can store the 2D and 3D simulation and streamlined animation. There is No DB version compatibility issue any more. Fig. 21.2. demonstrating integrated DB structure.
+**Výhody integrovanej databázy**  
+V integrovanej databáze môžeme ukladať 2D a 3D simulácie a optimalizované animácie. Problémy s kompatibilitou verzií databázy už neexistujú. Obr. 21.2 znázorňuje štruktúru integrovanej databázy.
 
 ![]({{ '/assets/images/pre-processor/21_database_generation/image002.jpg' | relative_url }})
 
-Database Step Selection window
+Okno výberu kroku v databáze
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [DEFORM Basic file system](/docs/sk/about_deform/1_introduction_to_deform/1_10_basic_file_system/)
 
-[Primary Die selection from simulation control](../9_simulation_controls/9_2_defining_step.htm#Primary_die_\(PDIE\))
+([Primary Die selection from simulation control](../9_simulation_controls/9_2_defining_step.htm#Primary_die_\(PDIE\))
 
 [Primary Die selection from Object general definition window](../11_general_object_data_definition/11_general_object_data_definition.htm#11.5._Primary_Die)
 
@@ -46,7 +46,7 @@ Database Step Selection window
 
 [Max. Interference depth for remesh settings](../13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.8._Remeshing_criteria)
 
-[Volume compensation selection from Object properties window](../16_object_properties/16_1_deformation_properties.htm#16_1_3_Target_Volume_\(TRGVOL\))
+([Volume compensation selection from Object properties window](../16_object_properties/16_1_deformation_properties.htm#16_1_3_Target_Volume_\(TRGVOL\))
 
 [Inter-Object data definition window](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
 

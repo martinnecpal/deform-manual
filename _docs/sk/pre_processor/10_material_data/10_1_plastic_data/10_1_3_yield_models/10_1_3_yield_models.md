@@ -1,15 +1,15 @@
 ---
 lang: sk
-title: "10.1.3. Yield Models"
+title: "10.1.3. Modely výnosov"
 ---
 
-# 10.1.3. Yield Models
+# 10.1.3. Výnosové modely
 
-This functionality supports anisotropy. There are three different types of yield functions ([ANISO](/docs/sk/keyword_documentation/a/aniso/)) available as shown in Fig. 10.1.3.1.
+Táto funkcia podporuje anizotropiu. K dispozícii sú tri rôzne typy výnosových funkcií ([ANISO](/docs/sk/keyword_documentation/a/aniso/)), ako je znázornené na obr. 10.1.3.1.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_image001.jpg' | relative_url }})
 
-Defining Yield material Data
+Definovanie údajov o materiáli výnosu
 
 [10.1.3.1. Von Mises](/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_1_von_mises/)
 

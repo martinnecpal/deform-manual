@@ -1,57 +1,57 @@
 ---
 lang: sk
-title: "18.2. Slicing"
+title: "18.2. Krájanie"
 ---
 
-# 18.2. Slicing ![]({{ '/assets/icons/pre_icons/mo_slice.jpg' | relative_url }})
+# 18.2. Krájanie ![]({{ '/assets/icons/pre_icons/mo_slice.jpg' | relative_url }})
 
-This utility enables the users to slice an 3D object and save the 2D cross section, either as geometry or as a keyword file including the state variable data from the slicing plane, (See Fig. 18.2.1.)
+Tento nástroj umožňuje používateľom rozrezať 3D objekt a uložiť 2D prierez buď ako geometriu, alebo ako súbor s kľúčovým slovom vrátane údajov o stavových premenných z roviny rezu, (pozri obr. 18.2.1.)
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_2_slicing/18_2_image001.jpg' | relative_url }})
 
-Slicing Window
+Okno na krájanie
 
-**Mode:**
+**Režim:**
 
-**Point + Normal** : Input a point and normal to determine a slicing plane. The normal direction indicates the side of the plane that will be cut away.
+**Bod + Normálne** : Zadajte bod a normálu na určenie roviny rezu. Smer normály označuje stranu roviny, ktorá bude odrezaná.
 
-**3 points** : Input three points to determine the slicing plane.
+**3 body** : Zadajte tri body na určenie roviny rezu.
 
-**Point+Axis+Angle** : Input point, Axis and Angle to determine the slicing plane.
+**Bod+os+uhol** : Zadajte bod, Os a Uhol na určenie roviny rezu.
 
-**Add![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) **: using this option user can add a slicing plane.
+**Add![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) **: pomocou tejto možnosti môže používateľ pridať rovinu rezu.
 
-**Delete![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) **: using this option user can delete defined slicing plane
+**Delete![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) **: pomocou tejto možnosti môže používateľ odstrániť definovanú rovinu rezania
 
-**Cutter![]({{ '/assets/icons/pre_icons/mo_cutter_icon.jpg' | relative_url }}) **: using this option user can slice the object.
+**Cutter![]({{ '/assets/icons/pre_icons/mo_cutter_icon.jpg' | relative_url }}) **: pomocou tejto voľby môže používateľ nakrájať objekt na plátky.
 
-**Preview![]({{ '/assets/icons/pre_icons/mo_preview_icon.jpg' | relative_url }}) **: using this user can show/hide the slicing plane.
+**Preview![]({{ '/assets/icons/pre_icons/mo_preview_icon.jpg' | relative_url }}) **: pomocou tejto funkcie môže používateľ zobraziť/skryť rovinu rezu.
 
-**SV max plot** ![]({{ '/assets/icons/pre_icons/mo_sv_max_point_button.jpg' | relative_url }}) : to slice through the point which has the maximum value of the state variable.
+**SV max plot** ![]({{ '/assets/icons/pre_icons/mo_sv_max_point_button.jpg' | relative_url }}) : na prerezanie bodu, ktorý má maximálnu hodnotu stavovej premennej.
 
-**SV min plo** t ![]({{ '/assets/icons/pre_icons/mo_sv_min_point_button.jpg' | relative_url }}): to slice through the point which has the minimum value of the state variable.
+**SV min plo** t ![]({{ '/assets/icons/pre_icons/mo_sv_min_point_button.jpg' | relative_url }}): preťať bod, ktorý má minimálnu hodnotu stavovej premennej.
 
-**Duplicate**![]({{ '/assets/icons/pre_icons/mo_duplicate_button.jpg' | relative_url }}) : Make a set of slicing planes parallel to the selected plane.
+**Duplikovať**![]({{ '/assets/icons/pre_icons/mo_duplicate_button.jpg' | relative_url }}) : Vytvorte sadu rovín rezu rovnobežných s vybranou rovinou.
 
-**Reverse** : Check to reverse the normal of the selected slicing plane
+**Opätný chod** : Začiarknite, ak chcete obrátiť normálu vybranej roviny rezu
 
-**Save![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) **: using this option user can Save 2D slice geometry and/or state variable. 2D Geometry can be saved in .IGS, DXF or in .KEY format.
+**Save![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) **: pomocou tejto možnosti môže používateľ uložiť geometriu 2D rezu a/alebo stavovú premennú. 2D geometriu možno uložiť vo formáte .IGS, DXF alebo vo formáte .KEY.
 
-**Save Slicing planes** ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}): Using this option user can save the Slicing plane data to a file in .dss file format.
+**Ukladanie rovín rezania** ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ uložiť údaje roviny rezania do súboru vo formáte .dss.
 
-**Load Slicing Planes![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) : **Using this option user can import the saved Slicing plane file.
+**Záťažové roviny na krájanie![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) : **Pomocou tejto možnosti môže používateľ importovať uložený súbor Slicing plane.
 
-**Slicing plane display options:**
+**Možnosti zobrazenia roviny rezania:**
 
-**Curve** : In display it shows only the curve of the object while slicing an object.
+**Krivka** : Na displeji zobrazuje iba krivku objektu pri krájaní objektu.
 
-**Plane** : In display it shows only the plane of the object while slicing an object.
+**Letadlo** : Na displeji zobrazuje iba rovinu objektu pri krájaní objektu.
 
-**Curve +Plane** : In display it shows both curve and of the object while slicing an object.
+**Krivka +rovina** : Na displeji zobrazuje krivku aj objekt pri rezaní objektu.
 
-**Slice All Objects**![]({{ '/assets/icons/pre_icons/mo_slice_all_objects_button.jpg' | relative_url }}) : slice all the shown objects using the selected plane.
+**Slice All Objects**![]({{ '/assets/icons/pre_icons/mo_slice_all_objects_button.jpg' | relative_url }}) : nakrájajte všetky zobrazené objekty pomocou vybranej roviny.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [18\. Object Manipulation Tools](/docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/)
 

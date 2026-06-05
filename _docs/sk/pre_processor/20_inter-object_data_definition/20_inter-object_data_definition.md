@@ -1,180 +1,180 @@
 ---
 lang: sk
-title: "20. Inter-Object Data Definition"
+title: "20. Definícia údajov medzi objektmi"
 ---
 
-# 20\. Inter-Object Data Definition (Contact)
+# 20. Definícia údajov medzi objektmi (Kontakt)
 
-20.1. Contact relation
+20.1. Kontaktný vzťah
 
-20.2. Inter - Object Relation Tools
+20.2. Nástroje pre vzťahy medzi objektmi
 
-Inter Object data definition page is as shown in Fig. 20.1.
+Stránka s definíciou dát medzi objektmi je znázornená na obr. 20.1.
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_image001.jpg' | relative_url }})
 
-(a) 2D Page
+(a) 2D stránka
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_image004.jpg' | relative_url }})
 
-(b) 3D page
+b) 3D stránka
 
-Inter Object Data Definition window
+Okno definície dát medzi objektmi
 
-The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. The relations table shows the current inter object relations that have been defined. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined. This includes an object having a relationship to itself if self-contact occurs. It is very important to define these relationships correctly for a simulation to model a forming process accurately. The critical variables to be defined between contacting objects are:
+Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty v simulácii vzájomne interagujú. Tabuľka vzťahov zobrazuje aktuálne definované vzťahy medzi objektmi. Všetky objekty, ktoré môžu prísť do kontaktu v priebehu simulácie, musia mať definovaný kontaktný vzťah. To zahŕňa aj objekt, ktorý má vzťah sám so sebou, ak dochádza k vlastnému kontaktu. Je veľmi dôležité správne definovať tieto vzťahy, aby simulácia mohla presne modelovať proces formovania. Kľúčové premenné, ktoré je potrebné definovať medzi kontaktujúcimi sa objektmi, sú:
 
   * [Friction factor](20_1_friction_and_contact_criteria.htm#20_1_1_Friction_\(FRCFAC\))
 
   * [Interface heat transfer coefficient](20_2_interface_thermal_data.htm#20_2_1_Interface_heat_transfer_coefficient_\(IHTCOF\))
 
-  * Contact relation
+  * Kontaktný vzťah
 
   * [Separation criterion](20_1_friction_and_contact_criteria.htm#20_1_4_Separation_Type)
 
-Also covered in the inter object controls is generation of inter-object boundary conditions.
+Súčasťou riadenia interakcií medzi objektmi je aj generovanie okrajových podmienok medzi objektmi.
 
-Inter-Object relations define what objects can contact each other, and how contacted objects will behave while in contact. Contact relations, Inter-Object boundary conditions, Friction and Heat transfer relations are set here for each object pair (See Fig. 20.1.). Simply speaking, the procedure for defining Inter-Object relations is done in the following steps.
+Vzťahy medzi objektmi určujú, ktoré objekty môžu navzájom prichádzať do kontaktu a ako sa kontaktované objekty budú správať počas kontaktu. Pre každú dvojicu objektov sa tu nastavujú vzťahy kontaktu, okrajové podmienky medzi objektmi, trenie a prenos tepla (pozri obr. 20.1.). Zjednodušene povedané, postup definovania vzťahov medzi objektmi prebieha v nasledujúcich krokoch.
 
-  * Define the master-slave combination – In the case of a single deforming object, the deforming object should be the slave object always. In the case of multiple deforming bodies, the object with the finer mesh at the interface of the two objects should be the slave object.
+  * Určenie kombinácie hlavného a podriadeného objektu – Ak ide o jediný deformovaný objekt, tento objekt by mal byť vždy podriadeným objektom. Ak ide o viacero deformovaných telies, podriadeným objektom by mal byť ten objekt, ktorý má na rozhraní oboch objektov jemnejšiu sieť.
 
-  * Define the parameter for the given master-slave pair – This can be done by clicking the Edit button and setting the appropriate parameters . (See Fig. 20.2. and Fig. 20.3.)
+  * Nastavte parametre pre danú dvojicu master-slave – to môžete urobiť kliknutím na tlačidlo Upraviť a nastavením príslušných parametrov. (Pozri obr. 20.2 a obr. 20.3.)
 
-  * Generate the contact for all the objects – First click the ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}) icon and then click the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button to generate contact. If contact is not generated where expected check following:
+  * Vytvorenie kontaktu pre všetky objekty – Najskôr kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}) a potom na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}), čím sa vytvorí kontakt. Ak sa kontakt nevytvoril tam, kde ste očakávali, skontrolujte nasledujúce:
 
-  * The orientation of geometry of the rigid objects. Make sure that the geometry is shaded on the inside of the rigid objects.
+  * Orientácia geometrie tuhých objektov. Uistite sa, že geometria je vnútorná strana tuhých objektov vyplnená.
 
-  * The mesh in the region of contact. If the mesh is coarse, there may be no nodes in proximity to gain contact.
+  * Rozloženie sietí v oblasti kontaktu. Ak je rozloženie sietí hrubé, v blízkosti miesta kontaktu sa nemusia nachádzať žiadne uzly.
 
-  * Make sure that the parts are actually within proximity of each other.
+  * Uistite sa, že sú tieto časti skutočne v tesnej blízkosti.
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_image002.jpg' | relative_url }})
 
-Inter object constant Shear Friction options for 2D
+Možnosti nastavenia konštanty šmykového trenia medzi objektmi v 2D
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_image003.jpg' | relative_url }})
 
-Inter object constant Shear Friction options for 3D
+Možnosti nastavenia konštanty šmykového trenia medzi objektmi v 3D
 
-## **Contact relation (CNTACT)**
+## **Kontaktný vzťah (CNTACT)**
 
-**[2D, 3D]:** The contact relation ([CNTACT](/docs/sk/keyword_documentation/c/cntact/)) parameter is used to set the Master/Slave relationship between workpiece, dies, and deformable bodies. The Slave object should be the object with the finer mesh. In the case of two objects consisting of the same material, either can be the slave although the object expected to elastically deform the most should be defined as the slave. Setting a ``No Contact'' relation causes the objects to be invisible to each other and allows them to pass through each other uninhibited.
+**[2D, 3D]:** Parameter vzťahu kontaktu ([CNTACT](/docs/sk/keyword_documentation/c/cntact/)) slúži na nastavenie vzťahu „hlavný/podriadený“ medzi obrobkom, formami a deformovateľnými telami. Podriadeným objektom by mal byť objekt s jemnejšou sieťou. V prípade dvoch objektov zložených z rovnakého materiálu môže byť podriadeným objektom ktorýkoľvek z nich, hoci objekt, u ktorého sa očakáva najväčšia elastická deformácia, by mal byť definovaný ako podriadený. Nastavenie vzťahu „Bez kontaktu“ spôsobí, že objekty budú pre seba navzájom neviditeľné a umožní im voľne sa navzájom prechádzať.
 
-CNTACT should be specified for every pair of deformable objects that may contact each other during the simulation.
+Pre každú dvojicu deformovateľných objektov, ktoré sa môžu počas simulácie dotýkať, je potrebné určiť vlastnosť CNTACT.
 
-**Note** :
+**Poznámka** :
 
-When a node from one deformable object contacts the surface of another deformable object, a relationship between the two objects must be established to keep the objects from penetrating each other. This relationship is referred to as a master-slave or slave-master relationship. When two objects are contacting each other, the contact nodes move with the master surface as long as the two objects are in contact. The slave nodes are considered to be in contact with the master object as long as the nodal forces indicate a compressive state. When a slave node develops a tensile force, the node is considered to have separated from the master object.
+Keď sa uzol jedného deformovateľného objektu dotkne povrchu iného deformovateľného objektu, je potrebné medzi týmito dvoma objektmi vytvoriť vzťah, aby sa zabránilo ich vzájomnému prenikaniu. Tento vzťah sa označuje ako vzťah „master-slave“ alebo „slave-master“. Keď sa dva objekty dotýkajú, kontaktné uzly sa pohybujú spolu s hlavným povrchom, pokiaľ sú oba objekty v kontakte. Podriadené uzly sa považujú za uzly v kontakte s hlavným objektom, pokiaľ uzlové sily indikujú tlakový stav. Keď v podriadenom uzle vznikne ťahová sila, uzol sa považuje za oddelený od hlavného objektu.
 
-## Inter - Object Relation Tools 
+## Nástroje pre vzťahy medzi objektmi 
 
-**Add Default Relations![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) **[2D, 3D]: By clicking on this option default contact relations will be added to Contact relation list.
+**Pridať predvolené vzťahy ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) **[2D, 3D]: Kliknutím na túto možnosť sa do zoznamu vzťahov kontaktov pridajú predvolené vzťahy kontaktov.
 
-**Add relationship**![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) [2D, 3D]: By clicking on this option new contact relationship will be added to list
+**Pridať vzťah**![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) [2D, 3D]: Kliknutím na túto možnosť sa do zoznamu pridá nový vzťah medzi kontaktmi
 
-**Delete**relationship****![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) [2D, 3D]: By clicking on this option selected contact relationship will be deleted from list.
+**Odstrániť**vzťah****![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) [2D, 3D]: Kliknutím na túto možnosť sa vybraný vzťah medzi kontaktmi odstráni zo zoznamu.
 
-**Picking![]({{ '/assets/icons/pre_icons/mo_mouse_icon.jpg' | relative_url }}) [2D, 3D]: **By clicking on this option user can pick object to be a master or slave object.
+**Picking![]({{ '/assets/icons/pre_icons/mo_mouse_icon.jpg' | relative_url }}) [2D, 3D]: **Kliknutím na túto možnosť môže používateľ vybrať objekt, ktorý bude hlavným alebo podriadeným objektom.
 
 ****
 
-**Apply to All** ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) [2D, 3D]: By clicking on this button selected relation conditions like Friction and Interface Heat will be applied to all the defined objects relations.
+**Použiť na všetky** ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) [2D, 3D]: Kliknutím na toto tlačidlo sa vybrané podmienky vzťahov, ako sú trenie a výmena tepla na rozhraní, uplatnia na všetky definované vzťahy medzi objektmi.
 
-**Swap**![]({{ '/assets/icons/pre_icons/mo_contact_swap_icon.jpg' | relative_url }}) [2D, 3D]: By clicking on this button It will exchange the master and Slave object. Master will become Slave and Slave will become Master.
+**Vymeniť**![]({{ '/assets/icons/pre_icons/mo_contact_swap_icon.jpg' | relative_url }}) [2D, 3D]: Kliknutím na toto tlačidlo sa vymenia pozície hlavného a podriadeného objektu. Hlavný objekt sa stane podriadeným a podriadený objekt sa stane hlavným.
 
-**Generate** ![]({{ '/assets/icons/pre_icons/mo_generate_button.jpg' | relative_url }}) [2D,3D]: By clicking on this option contact is generated only for the selected object relation.
+**Vytvoriť** ![]({{ '/assets/icons/pre_icons/mo_generate_button.jpg' | relative_url }}) [2D, 3D]: Kliknutím na túto možnosť sa vytvorí kontakt len pre vybraný objektový vzťah.
 
-**Sticking Condition** [2D, 3D]: Sticking boundary conditions prevent sliding or separation between the selected object pair.
+**Podmienka priľnavosti** [2D, 3D]: Podmienky priľnavosti zabraňujú posuvu alebo oddeleniu medzi vybranou dvojicou objektov.
 
-**Edit![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) **[2D, 3D]: By clicking on edit button user can define the friction and Interface Heat relations. 
+**Edit![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) **[2D, 3D]: Kliknutím na tlačidlo „Edit“ môže používateľ nastaviť koeficienty trenia a prenosu tepla cez rozhranie. 
 
-**Generate All** ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) [2D, 3D]: By clicking on this option contact is generated for all the defined object relations.
+**Vytvoriť všetko** ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) [2D, 3D]: Kliknutím na túto voľbu sa vytvoria kontakty pre všetky definované vzťahy medzi objektmi.
 
-**Initialize![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}) **[2D, 3D]: By clicking on this option user can initialize the defined contacts.
+**Initialize![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}) **[2D, 3D]: Kliknutím na túto voľbu môže používateľ inicializovať definované kontakty.
 
-**Restore Mesh**![]({{ '/assets/icons/pre_icons/mo_restore_mesh_button.jpg' | relative_url }}) [2D, 3D]: Restore the mesh that was present prior to entering the Inter-object dialog
+**Obnoviť sieť**![]({{ '/assets/icons/pre_icons/mo_restore_mesh_button.jpg' | relative_url }}) [2D, 3D]: Obnoví sieť, ktorá existovala pred otvorením dialógového okna Inter-object
 
   
-**Tolerance**![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) [2D, 3D]: By clicking on this button system uses default tolerance value for contact generation. User can also define the required tolerance value for contact generation in tolerance tab.
+**Tolerancia**![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) [2D, 3D]: Kliknutím na toto tlačidlo systém použije predvolenú hodnotu tolerancie na vytvorenie kontaktov. Používateľ môže požadovanú hodnotu tolerancie na vytvorenie kontaktov nastaviť aj na karte „Tolerancia“.
 
-**Examine** ![]({{ '/assets/icons/pre_icons/mo_examine_button.jpg' | relative_url }}) [3D]: From V14.0, user can use the Examine option to review the contacts defined in the inter-object relations page and observe the objects in exploded view. By clicking on this button, a window will be opened as shown in the Fig. 20.4. In this page, we can observe the contact relation of each object defined in the contact table. When the contact relations are not defined in the table, then the Examine page will look like as shown in Fig. 20.5..
+**Preskúmať** ![]({{ '/assets/icons/pre_icons/mo_examine_button.jpg' | relative_url }}) [3D]: Od verzie V14.0 môže používateľ využiť možnosť Preskúmať na kontrolu kontaktov definovaných na stránke vzťahov medzi objektmi a na zobrazenie objektov v rozloženom pohľade. Kliknutím na toto tlačidlo sa otvorí okno, ako je znázornené na obr. 20.4. Na tejto stránke môžeme pozorovať kontaktné vzťahy každého objektu definovaného v tabuľke kontaktov. Ak nie sú kontaktné vzťahy definované v tabuľke, stránka Preskúmať bude vyzerať tak, ako je znázornené na obr. 20.5.
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_image005.jpg' | relative_url }})
 
-Inter-Object Relationship Examine page
+Stránka na preskúmanie vzťahov medzi objektmi
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_image006.jpg' | relative_url }})
 
-Examine page without any relationship defined
+Skontrolujte stránku, na ktorej nie je definovaný žiadny vzťah
 
-In Examination page, defined contact relation status is assigned with one of the ![]({{ '/assets/icons/pre_icons/mo_good_object_color.jpg' | relative_url }}) (Green), ![]({{ '/assets/icons/pre_icons/mo_candidate_object_color.jpg' | relative_url }}) (Candidate), ![]({{ '/assets/icons/pre_icons/mo_warning_object_color.jpg' | relative_url }}) (Warning) and ![]({{ '/assets/icons/pre_icons/mo_floating_object_color.jpg' | relative_url }})(Floating) colors.
+Na stránke „Skúšky“ je definovaný stav vzťahu s kontaktom označený jednou z farieb: ![]({{ '/assets/icons/pre_icons/mo_good_object_color.jpg' | relative_url }}) (zelená), ![]({{ '/assets/icons/pre_icons/mo_candidate_object_color.jpg' | relative_url }}) (kandidát), ![]({{ '/assets/icons/pre_icons/mo_warning_object_color.jpg' | relative_url }}) (varovanie) a ![]({{ '/assets/icons/pre_icons/mo_floating_object_color.jpg' | relative_url }}) (neistý).
 
-  * “![]({{ '/assets/icons/pre_icons/mo_good_object_color.jpg' | relative_url }})” (Good) indicates that contact has been defined with all the objects that it is in contact with in the objects used in the inter-object relations table (see Fig. 20.4.). 
+  * „![]({{ '/assets/icons/pre_icons/mo_good_object_color.jpg' | relative_url }})“ (Dobré) znamená, že bol definovaný vzťah so všetkými objektmi, s ktorými je v kontakte, a to v rámci objektov použitých v tabuľke medziobjektových vzťahov (pozri obr. 20.4.). 
 
-  * “![]({{ '/assets/icons/pre_icons/mo_candidate_object_color.jpg' | relative_url }})” (Candidate) indicates that the object is in contact or may come in contact with one of the objects defined in the inter-object relations table but contact relation is not defined with the respective object (see Fig. 20.6.) . User then can add relationship with the respective object if required using right click on the sub object having Candidate color, we will get ![]({{ '/assets/icons/pre_icons/mo_add_relationship_button.jpg' | relative_url }}) button to add relationship. 
+  * „![]({{ '/assets/icons/pre_icons/mo_candidate_object_color.jpg' | relative_url }})“ (Kandidát) označuje, že objekt je v kontakte alebo môže prísť do kontaktu s niektorým z objektov definovaných v tabuľke vzťahov medzi objektmi, avšak vzťah kontaktu s príslušným objektom nie je definovaný (pozri obr. 20.6). Používateľ môže v prípade potreby pridať vzťah s príslušným objektom kliknutím pravým tlačidlom myši na podobjekt s farbou Kandidát, čím sa zobrazí tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_relationship_button.jpg' | relative_url }}) na pridanie vzťahu. 
 
-  * “![]({{ '/assets/icons/pre_icons/mo_warning_object_color.jpg' | relative_url }})” (Warning) indicates warning to the user that the defined relationship may not be correct as objects are not in contact. When we right click on the sub object having Warning color, we will get ![]({{ '/assets/icons/pre_icons/mo_remove_relationship_button.jpg' | relative_url }}) button to remove the relationship. 
+  * „![]({{ '/assets/icons/pre_icons/mo_warning_object_color.jpg' | relative_url }})“ (Upozornenie) upozorňuje používateľa, že definovaný vzťah nemusí byť správny, keďže objekty sa nedotýkajú. Ak klikneme pravým tlačidlom myši na podobjekt označený farbou upozornenia, zobrazí sa tlačidlo ![]({{ '/assets/icons/pre_icons/mo_remove_relationship_button.jpg' | relative_url }}), ktorým môžeme tento vzťah odstrániť. 
 
-  * “![]({{ '/assets/icons/pre_icons/mo_floating_object_color.jpg' | relative_url }})” (Floating) it indicates that object is a floating object as the object does not have contact relation with any object but is there in the object tree. User can add relationship in the inter-object table and then use Examine.
+  * „![]({{ '/assets/icons/pre_icons/mo_floating_object_color.jpg' | relative_url }})“ (voľný) – označuje, že objekt je voľný, pretože nemá žiadny vzťah s iným objektom, ale nachádza sa v strome objektov. Používateľ môže pridať vzťah v tabuľke medzi objektmi a potom použiť funkciu Preskúmať.
 
   
-In below example, we are trying to add relationship between Billet(object[1]) and Bottom Die(object[3]) from Examine page.
+V nasledujúcom príklade sa snažíme pridať vzťah medzi položkami „Billet“ (objekt [1]) a „Bottom Die“ (objekt [3]) na stránke „Examine“.
 
-  * Right click on Bottom Die(object[3]) object under Billet(object[1]) object list.
+  * Kliknite pravým tlačidlom na objekt „Bottom Die“ (object[3]) v zozname objektov pod objektom „Billet“ (object[1]).
 
-  * Then click on ![]({{ '/assets/icons/pre_icons/mo_add_relationship_button.jpg' | relative_url }}) button.
+  * Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_relationship_button.jpg' | relative_url }}).
 
-  * In “Add Relationship “popup, we are having “Yes ”, “NO” and “Cancel” buttons. If we click on “**Yes** “button, then a new relation will be added to the inter-object relation table with Object 3 as Master and Object 1 as Slave. If we click on “**No** “ button, then a new relation will be added to the inter-object relation table with Object 3 as Slave and Object 1 as Master. If we click on “**Cancel** ” button, then it will not add any relationship to the table. (See Fig. 20.6.)
+  * V kontextovom okne „Pridať vzťah“ sa nachádzajú tlačidlá „Áno“, „Nie“ a „Zrušiť“. Ak klikneme na tlačidlo „**Áno**“, do tabuľky vzťahov medzi objektmi sa pridá nový vzťah s objektom 3 ako hlavným a objektom 1 ako podriadeným. Ak klikneme na tlačidlo „**Nie**“, do tabuľky vzťahov medzi objektmi sa pridá nový vzťah s objektom 3 ako podriadeným a objektom 1 ako nadradeným. Ak klikneme na tlačidlo „**Zrušiť**“, do tabuľky sa nepridá žiadny vzťah. (Pozri obr. 20.6.)
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_image007.jpg' | relative_url }})
 
-Adding relationship option from Examination page 
+Pridanie možnosti vzťahu na stránke „Vyšetrenie“ 
 
-In the example below, we defined contact relation between “Top die support” (Object[4]) as Master and “Billet” (Object[1]) as Slave. In examine page under Billet object list, we are observing Top die support object with “![]({{ '/assets/icons/pre_icons/mo_warning_object_color.jpg' | relative_url }})” indicator as the objects are not in contact and may not come in contact. Now we will try to delete the relationship from the Examination page.
+V nasledujúcom príklade sme definovali kontaktný vzťah medzi „Podperou hornej matrice“ (Objekt[4]) ako hlavným objektom a „Sochárom“ (Objekt[1]) ako podriadeným objektom. Na stránke „Examine“ v zozname objektov „Billet“ pozorujeme objekt „Top die support“ s indikátorom „![]({{ '/assets/icons/pre_icons/mo_warning_object_color.jpg' | relative_url }})“, čo znamená, že objekty nie sú v kontakte a nemôžu prísť do kontaktu. Teraz sa pokúsime odstrániť tento vzťah zo stránky „Examination“.
 
-  * Right click on the sub object “Top die support” under Billet object list.
+  * Kliknite pravým tlačidlom myši na podobjekt „Top die support“ v zozname objektov polotovaru.
 
-  * Then click on “![]({{ '/assets/icons/pre_icons/mo_remove_relationship_button.jpg' | relative_url }})” button.
+  * Potom kliknite na tlačidlo „![]({{ '/assets/icons/pre_icons/mo_remove_relationship_button.jpg' | relative_url }})“.
 
-  * Click on “Yes” button in Remove Relationship popup.
+  * V okienku „Odstrániť vzťah“ kliknite na tlačidlo „Áno“.
 
-  * Now the “Top die support” – “Billet” relationship is removed from the inter-object relations list. (See Fig. 20.7.)
+  * Vzťah medzi objektmi „Podpera hornej matrice“ a „Polotovar“ bol odstránený zo zoznamu vzťahov medzi objektmi. (Pozri obr. 20.7.)
 
-  * If we click on “No” button in Remove Relationship popup then there will not be any change to the inter-object relationship table. 
+  * Ak v okne „Odstrániť vzťah“ klikneme na tlačidlo „Nie“, v tabuľke vzťahov medzi objektmi nedôjde k žiadnej zmene. 
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_image008.jpg' | relative_url }})
 
-Deleting relationship option from Examination page
+Odstránenie možnosti vzťahu zo stránky „Examination“
 
-**Explode view control [3D]** : Using this option we can observe the explode view of the objects that are currently displayed in the display region by dragging the sliding bar below the “Explode view control” and also swap the Master-slave relationship between the objects. As you drag the pointer over the sliding bar the objects will move far from each other in the exploding direction. By turning on ![]({{ '/assets/icons/pre_icons/mo_contact_arrow_button.jpg' | relative_url }}) button, we can observe the arrow button on the objects in the direction of its slave objects with which it has contact relation. By clicking on the arrow button in the display area, we can swipe the inter - object relationship.
+**Ovládací prvok rozloženého pohľadu [3D]**: Pomocou tejto možnosti môžeme zobraziť rozložený pohľad na objekty, ktoré sú momentálne zobrazené v zobrazovacej oblasti, a to posúvaním posuvníka pod ovládacím prvkom „Rozložený pohľad“, a tiež môžeme zmeniť vzťah hlavný-podriadený medzi objektmi. Keď potiahnete kurzor po posuvníku, objekty sa od seba vzdialia v smere rozloženia. Zapnutím tlačidla ![]({{ '/assets/icons/pre_icons/mo_contact_arrow_button.jpg' | relative_url }}) môžeme pozorovať šípku na objektoch v smere ich podriadených objektov, s ktorými majú kontaktný vzťah. Kliknutím na šípku v zobrazovacej oblasti môžeme zmeniť vzťah medzi objektmi.
 
-In the below example. we are observing explode view of 3D Spike example with arrow display. When we click on ![]({{ '/assets/icons/pre_icons/mo_contact_arrow_button.jpg' | relative_url }}) button, we can observe that the red arrows are displaying at the Top die and Bottom Die and the arrow directions are towards Billet object. Now click on the arrow of the Top die, we will be getting “Swap inter-Object Relationship” popup, click on “**Yes** button” as shown in Fig. 20.8.  
+V nasledujúcom príklade vidíme rozložený pohľad na 3D model „Spike“ so zobrazenými šípkami. Po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_contact_arrow_button.jpg' | relative_url }}) môžeme vidieť, že sa na hornej a spodnej matrici zobrazujú červené šípky, ktorých smer vedie k objektu „Billet“. Teraz kliknite na šípku hornej matrice, zobrazí sa okienko „Swap inter-Object Relationship“ (Vymeniť vzťah medzi objektmi), kliknite na tlačidlo „**Yes**“ (Áno), ako je znázornené na obr. 20.8.  
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_image009.jpg' | relative_url }})
 
-Clicking on Top die arrow button
+Kliknutím na šípku v hornej časti
 
   
-When we click on “**Yes** ” button in popup, then the arrow direction has been changed towards Top die from the Billet and in the relationship table “Top Die (Master) – Billet (slave)” relation has been swapped to “Billet (Master) – Top Die (slave)” as shown in Fig. 20.9.
+Keď v kontextovom okne klikneme na tlačidlo „**Áno**“, smer šípky sa zmení z polotovaru smerom k hornej matrici a v tabuľke vzťahov sa vzťah „Horná matrica (Master) – Polotovar (slave)“ sa vzťah zmenil na „Polotovar (Master) – Horná matrica (slave)“, ako je znázornené na obr. 20.9.
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_image010.png' | relative_url }})
 
-Inter object relation after swapping using arrow button.  
+Vzťah medzi objektmi po prepnutí pomocou šípky.  
 
-**In Inter - Object data definition windows we have:**
+**V oknách definície údajov medzi objektmi máme:**
 
-  * **Deformation Tab** : Under Deformation tab allows the user to define Friction value, Contact criteria and Seperation criteria data. For more information related to Deformation tab option, refer [20.1. Friction and Contact criteria](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/).
+  * **Karta Deformácia**: Na karte Deformácia môže používateľ nastaviť hodnoty trenia, kritériá kontaktu a kritériá oddelenia. Ďalšie informácie týkajúce sa možností na karte Deformácia nájdete v dokumente [20.1. Friction and Contact criteria](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/).
 
-  * **Thermal Tab** : Under Thermal tab allows the user to define Heat Transfer Coefficient and Contact criteria (only for 2D) data. For more information please refer [20.2. Interface Thermal Data.](/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/)
+  * **Karta „Thermal“**: Na karte „Thermal“ môže používateľ nastaviť údaje týkajúce sa koeficientu prenosu tepla a kritérií kontaktu (len pre 2D). Ďalšie informácie nájdete v [20.2. Interface Thermal Data.](/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/)
 
-  * **Heating Tab** : Under Heating tab allows the user to define Interface Resisitivity data. For more information please refer [20.3. Interface Resisitivity.](/docs/sk/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/)
+  * **Karta „Kúrenie“**: Na karte „Kúrenie“ môže používateľ zadať údaje o mernom odpore rozhrania. Ďalšie informácie nájdete v dokumente [20.3. Interface Resisitivity.](/docs/sk/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/)
 
-  * **Friction Window Tab** : Under Friction Window tab allows the user to specify different friction coefficient values for different contact regions of the same object pair. For more information please refer [20.1. Friction and Contact criteria](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/).
+  * **Karta „Friction Window“**: Karta „Friction Window“ umožňuje používateľovi nastaviť rôzne hodnoty koeficientu trenia pre rôzne kontaktné oblasti v rámci jednej dvojice objektov. Ďalšie informácie nájdete v dokumente [20.1. Friction and Contact criteria](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/).
 
-  * **Tool wear****Tab** : Under Tool wear tab user can define the model for tool wear calculation of an object which is in contact with other object. For more information please refer [20.4. Tool Wear.](/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/)
+  * **Karta Opotrebenie nástroja******: Na karte Opotrebenie nástroja môže používateľ definovať model pre výpočet opotrebenia nástroja pri kontakte s iným objektom. Ďalšie informácie nájdete v [20.4. Tool Wear.](/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/)
 
-  * **Rigid Contact Tab** : Under Rigid contact tab user can define the reference points for Rigid dies to prevent penetration when they come in contact with each other. For more information please refer [20.5. Rigid Contact.](/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/)
+  * **Karta „Rigid Contact“**: Na karte „Rigid Contact“ môže používateľ definovať referenčné body pre tuhé výsekové formy, aby sa zabránilo ich vzájomnému preniknutiu pri kontakte. Ďalšie informácie nájdete v dokumente [20.5. Rigid Contact.](/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/)
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [20.1. Friction and Contact criteria](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/)
 
@@ -186,7 +186,7 @@ Inter object relation after swapping using arrow button.
 
 [20.5. Rigid Contact](/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/)
 
-[Simulation modes selection](../9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\))
+([Simulation modes selection](../9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\))
 
 [Environment process conditions settings](/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/)
 

@@ -1,47 +1,47 @@
 ---
 lang: sk
-title: "16.6. Heating Properties"
+title: "16.6. Vykurovacie vlastnosti"
 ---
 
-# 16.6. Heating Properties
+# 16.6. Vykurovacie vlastnosti
 
-16.6.1. Current frequency
+16.6.1. Aktuálna frekvencia
 
-16.6.2. Volume Charge
+16.6.2. Objemový poplatok
 
-16.6.3. Data Definition
+16.6.3. Definícia údajov
 
-[**2D, 3D**]: When Induction heating computations are required, the same needs to be first turned on in the simulation controls before defining the associated object values like current frequency (See Fig. 16.6.1. and Fig. 16.6.2.). CG solver is also an option for solving induction heating models, and is capable of solving models with reasonable size.
+[**2D, 3D**]: Ak sa vyžadujú výpočty indukčného ohrevu, je potrebné ho najprv zapnúť v ovládacích prvkoch simulácie a až potom definovať súvisiace hodnoty objektu, ako je napríklad frekvencia prúdu (pozri obr. 16.6.1 a obr. 16.6.2). Riešiteľ CG je tiež možnosťou riešenia modelov indukčného ohrevu a je schopný riešiť modely s primeranou veľkosťou.
 
-See [Fig. 9.1.3.](../9_Simulation_Controls/9_1_Simulation_type_Settings.htm#Fig._9.1.3. Simulation Controls window - Heating) for selecting the Induction heating simulation mode. For Electrical and Magnetic material properties refer section [10.8. Electromagnetic data](/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/).
+Výber režimu simulácie indukčného ohrevu nájdete v časti [Fig. 9.1.3.](../9_Simulation_Controls/9_1_Simulation_type_Settings.htm#Fig._9.1.3. Simulation Controls window - Heating). Elektrické a magnetické vlastnosti materiálu nájdete v časti [10.8. Electromagnetic data](/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/).
 
-DEFORM FEM engine can now handle induction heating models with dual frequency input data for current frequency in both 2D & 3D.
+Motor DEFORM FEM teraz dokáže spracovať modely indukčného ohrevu s dvojfrekvenčnými vstupnými údajmi pre aktuálnu frekvenciu v 2D a 3D.
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_6_Heating_Properties/16_6_Image001.jpg)
 
-Induction Heating Object properties window for Single frequency settings
+Okno vlastností objektu indukčného ohrevu pre nastavenie jednej frekvencie
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_6_Heating_Properties/16_6_Image002.jpg)
 
-Induction Heating Object properties window for Dual frequency settings
+Okno vlastností indukčného ohrevu pre nastavenie dvojitej frekvencie
 
-## Current frequency [2D, 3D]
+## Aktuálna frekvencia [2D, 3D]
 
-Specifies the frequency of current for heating object. It can be a constant value or a function of time.
+Určuje frekvenciu prúdu pre vykurovanie objektu. Môže to byť konštantná hodnota alebo funkcia času.
 
-## Volume Charge [2D, 3D]
+## Objemový náboj [2D, 3D]
 
-Volume charge can be in three modes:
+Objemové nabíjanie môže prebiehať v troch režimoch:
 
-  * **Current Density** : It is a measure of the density of electrical current. It is defined as a vector whose magnitude is the electric current per cross-sectional area. Current density unit is Amp/mm2 or Amp/inch2 in 2d axi-symmetry model and 3d model. In 2d plane model case, coil cross section will be edge line, and thickness is unit length, so current density unit will be Amp/mm or Amp/inch.
-  * **Input power** : The electrical power taken by a power tool from the energy source.
-  * **Voltage drop** : It is the reduction in voltage in an electrical circuit between the source and load.
+  * **Hustota prúdu** : Je to miera hustoty elektrického prúdu. Je definovaná ako vektor, ktorého veľkosť je elektrický prúd na plochu prierezu. Jednotkou prúdovej hustoty je Amp/mm2 alebo Amp/inch2 v 2d axi-symetrickom modeli a 3d modeli. V prípade 2d rovinného modelu bude prierezom cievky hranová čiara a hrúbka je jednotkou dĺžky, takže jednotkou prúdovej hustoty bude Amp/mm alebo Amp/inch.
+  * **Vstupný výkon** : Elektrický výkon, ktorý elektrický nástroj odoberá zo zdroja energie.
+  * **Pokles napätia** : Je to zníženie napätia v elektrickom obvode medzi zdrojom a záťažou.
 
-## Data Definition [2D, 3D]
+## Definícia údajov [2D, 3D]
 
-Data definition can be a constant or function of time for a volume charge of Input power, Current Density and Voltage Drop type.
+Definícia údajov môže byť konštantná alebo funkcia času pre objemový náboj typu Vstupný výkon, Hustota prúdu a Úbytok napätia.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
 

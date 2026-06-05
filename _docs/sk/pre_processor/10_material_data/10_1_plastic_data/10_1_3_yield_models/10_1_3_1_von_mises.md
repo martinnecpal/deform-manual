@@ -5,7 +5,7 @@ title: "10.1.3.1. Von Mises"
 
 # 10.1.3.1. Von Mises
 
-This is the default setting. This specifies an isotropic material model. Flow occurs if the effective (Von Mises) stress equals the flow stress.
+Toto je predvolené nastavenie. Toto nastavenie určuje izotropný materiálový model. K prúdeniu dochádza, ak sa efektívne (Von Misesovo) napätie rovná napätiu pri prúdení.
 
 [10.1.3.2. Hill’s quadratic (FGHLMN)](10_1_3_2_hill’s_quadratic_\(fghlmn\).htm)
 

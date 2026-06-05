@@ -1,17 +1,17 @@
 ---
 lang: sk
-title: "16.10. Partial Domain"
+title: "16.10. Čiastočná doména"
 ---
 
-# 16.10. Partial Domain
+# 16.10. Čiastočná doména
 
-User can define the inactive domain over the workpiece using the window definition options. This inactive domain will be excluded from the calculations even if it is within the active domain angle. Inactive domain can be defined from the Property page of the Workpiece. When we select Partial domain solver, we can see “Partial domain” tab instead of “RSE” tab in Property page. InPartial domain solver tab, we can add the Inactive domain window to the table by using “![](../../../assets/Icons/Pre_icons/MO_Add_Icon2.jpg)” button. We can define inactive domain window using Cylinder window option. Using ![](../../../assets/Icons/Pre_icons/MO_Preview_for_active_domain_button.JPG), user can preview the active domain, Fig. 16.10.1. shows the active domain with excluded region from within the active domain angle based on the inactive domain window definition.  
+Používateľ môže definovať neaktívnu oblasť nad obrobkom pomocou možností definície okna. Táto neaktívna oblasť bude z výpočtov vylúčená, aj keď sa nachádza v rámci uhla aktívnej oblasti. Neaktívnu doménu možno definovať na stránke Vlastnosti obrobku. Keď vyberieme riešiteľa čiastočnej domény, na stránke Vlastnosti sa namiesto záložky "RSE" zobrazí záložka "Čiastočná doména". V záložkePartial domain solver (Riešiteľ čiastkovej domény) môžeme pridať okno Inactive domain (Neaktívna doména) do tabuľky pomocou tlačidla "![](../../../assets/Icons/Pre_icons/MO_Add_Icon2.jpg)". Okno neaktívnej domény môžeme definovať pomocou možnosti Cylinder window (Okno valca). Pomocou ![](../../../assets/Icons/Pre_icons/MO_Preview_for_active_domain_button.JPG) si môže používateľ zobraziť náhľad aktívnej domény, Obr. 16.10.1. zobrazuje aktívnu doménu s vylúčenou oblasťou z uhla aktívnej domény na základe definície okna neaktívnej domény.  
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_11_Partial_Domain/16_11_Image0001.jpg)
 
-Preview of active domain after adding the inactive domain window
+Náhľad aktívnej domény po pridaní okna neaktívnej domény
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
 

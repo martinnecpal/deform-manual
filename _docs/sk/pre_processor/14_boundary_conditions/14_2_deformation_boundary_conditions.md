@@ -1,102 +1,102 @@
 ---
 lang: sk
-title: "14.2. Deformation Boundary Conditions"
+title: "14.2. Hraničné podmienky deformácie"
 ---
 
-# 14.2. Deformation Boundary Conditions
+# 14.2. Deformačné hraničné podmienky
 
-14.2.1. Velocity BCC
+14.2.1. Rýchlosť BCC
 
-  * Free Distortion BCC
+  * Bezplatné skreslenie BCC
 
-14.2.2. Pressure BCC
+14.2.2. Tlak BCC
 
-14.2.3. Force BCC
+14.2.3. Vynútiť BCC
 
-14.2.4. Movement BCC
+14.2.4. Pohyb BCC
 
-14.2.5. Shrink fit BCC
+14.2.5. Zmenšenie BCC
 
-14.2.6. Contact BCC
+14.2.6. Kontakt na spoločnosť BCC
 
-14.2.7. Beginning surface BCC
+14.2.7. Začiatok povrchu BCC
 
-14.2.8. Free surface BCC
+14.2.8. Voľný povrch BCC
 
 14.2.9. Rolling BCC
 
-14.2.10. Advanced deformation BCC
+14.2.10. Pokročilá deformácia BCC
 
-## Velocity BCC [2D, 3D]
+## Rýchlosť BCC [2D, 3D]
 
-[2D]: Velocity of each node can be specified independently in the X and Y directions. Velocity boundary conditions are normally set to zero for symmetry conditions, but may also be set to a specified non-zero value for processes such as drawing in which a workpiece is pulled through a die. (See Fig. 14.2.1.)
+[2D]: Rýchlosť každého uzla možno určiť nezávisle v smeroch X a Y. Okrajové podmienky rýchlosti sú zvyčajne nastavené na nulu pre podmienky symetrie, ale môžu byť nastavené aj na zadanú nenulovú hodnotu pre procesy, ako je napríklad ťahanie, pri ktorom sa obrobok ťahá cez matricu. (Pozri obr. 14.2.1.)
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image001.jpg)
 
-2D velocity BCC window
+2D okno rýchlosti BCC
 
-[3D]: Velocity of each node can be specified independently in the X, Y, and Z directions. Velocity boundary conditions are normally set to zero for symmetry conditions (Symmetry BCC [3D]), but may also be set to a specified non-zero value for processes such as drawing in which a workpiece is pulled through a die.
+[3D]: Rýchlosť každého uzla možno určiť nezávisle v smeroch X, Y a Z. Okrajové podmienky rýchlosti sú zvyčajne nastavené na nulu pre podmienky symetrie (Symmetry BCC [3D]), ale môžu byť nastavené aj na zadanú nenulovú hodnotu pre procesy, ako je kreslenie, pri ktorom sa obrobok ťahá cez matricu.
 
-Even, we can define Velocity BCC using All direction option for both 2D and 3D, with this option user can assign BCC for all directions at a time.
+Dokonca môžeme definovať rýchlosť BCC pomocou možnosti Všetky smery pre 2D aj 3D, pomocou tejto možnosti môže používateľ priradiť BCC pre všetky smery naraz.
 
-Note:
+Poznámka:
 
-If parallel symmetry planes are to be defined, velocity boundary conditions can only be used on one plane. A rigid surface should be defined on the other.
+Ak sa majú definovať rovnobežné roviny symetrie, okrajové podmienky rýchlosti sa môžu použiť len v jednej rovine. Na druhej rovine by mala byť definovaná pevná plocha.
 
-**Free Distortion BCC****[3D]**
+**Voľné skreslenie BCC****[3D]**
 
-The free distortion window can be accessed from the velocity BCC window. (See Fig. 14.2.2.) Free distortion boundary condition is applied where there is a possibility of maximum distortion taking place.
+Okno voľného skreslenia je prístupné z okna rýchlosti BCC. (Pozri obr. 14.2.2.) Okrajová podmienka voľného skreslenia sa aplikuje tam, kde existuje možnosť vzniku maximálneho skreslenia.
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image002.jpg)
 
-Free Distortion BCC window
+Okno BCC s voľným skreslením
 
-**Procedure for applying free distortion boundary condition:**
+**Postup pri použití okrajovej podmienky voľného skreslenia:**
 
-  1. Fix one node in X, Y, Z direction respectively. This removes the three-degree of freedom in translation. 
-  2. Find a point at the same X and Z value but different Y – fix this in Z direction – X-rotation. 
-  3. Find a point at the same Y and X value but different Z – fix this in X direction – Y rotation. 
-  4. Find a point at the same Z and Y value but different X – fix this in Y direction – Z rotation (See Fig. 14.2.3.)
+  1. Upevnite jeden uzol v smere X, Y a Z. Tým sa odstránia tri stupne voľnosti pri translácii.
+  2. Nájdite bod s rovnakou hodnotou X a Z, ale s rôznou hodnotou Y - zafixujte ho v smere Z - rotácia X.
+  3. Nájdite bod s rovnakou hodnotou Y a X, ale s inou hodnotou Z - zafixujte ho v smere X - otočenie Y.
+  4. Nájdite bod s rovnakou hodnotou Z a Y, ale s inou hodnotou X - zafixujte ho v smere Y - otočenie Z (pozri obr. 14.2.3.)
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image003.jpg)
 
-Fixing of nodes in X, Y and Z direction
+Upevnenie uzlov v smere X, Y a Z
 
-A typical example showing how to define free distortion BCC:
+Typický príklad, ktorý ukazuje, ako definovať voľné skreslenie BCC:
 
-  1. User picks a node to fix in X, Y, Z directions as shown in Fig. 14.2.4.
+  1. Používateľ vyberie uzol, ktorý sa má zafixovať v smeroch X, Y, Z, ako je znázornené na obr. 14.2.4.
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image004.jpg)
 
-Selection of node to be fixed in XYZ direction
+Výber uzla, ktorý sa má upevniť v smere XYZ
 
-  1. System suggests a node to fix in Z direction. The suggested node has minimum angle to Y axis and is furthest from the XYZ fixed node. (See Fig. 14.2.5.)
+  1. Systém navrhne uzol na fixáciu v smere Z. Navrhnutý uzol má minimálny uhol k osi Y a je najvzdialenejší od pevného uzla XYZ. (Pozri obr. 14.2.5.)
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image005.jpg)
 
-Selection of node to be fixed in Z direction
+Výber uzla, ktorý sa má upevniť v smere Z
 
-  1. System suggests a node to fix in X direction. The suggested node has minimum angle to Z axis and is furthest from the XYZ fixed node. (See Fig. 14.2.6.)
+  1. Systém navrhne uzol na fixáciu v smere X. Navrhnutý uzol má minimálny uhol k osi Z a je najvzdialenejší od pevného uzla XYZ. (Pozri obr. 14.2.6.)
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image006.jpg)
 
-Selection of node to be fixed in X direction
+Výber uzla, ktorý sa má upevniť v smere X
 
-  1. System suggests a node to fix in Y direction. The suggested node has minimum angle to X axis and is furthest from the XYZ fixed node. User input can also be used while fixing the X, Y, Z nodes. (See Fig. 14.2.7.)
+  1. Systém navrhne uzol na fixáciu v smere Y. Navrhnutý uzol má minimálny uhol k osi X a je najvzdialenejší od pevného uzla XYZ. Pri fixácii uzlov X, Y, Z sa môže použiť aj vstup používateľa. (Pozri obr. 14.2.7.)
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image007.jpg)
 
-Selection of node to be fixed in Y direction
+Výber uzla, ktorý sa má zafixovať v smere Y
 
-The defined free distortion BCC is as shown in Fig. 14.2.8.,
+Definované voľné skreslenie BCC je znázornené na obr. 14.2.8,
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image008.jpg)
 
-Defined free distortion BCC
+Definované voľné skreslenie BCC
 
-## Pressure BCC [2D, 3D]
+## Tlak BCC [2D, 3D]
 
-**[2D]** : The pressure boundary conditions specifies a uniform, or linearly varying, force per unit area on the element faces connecting the specified edges. Two values for the normal pressure are required, the first value is the beginning value of pressure from the beginning point where pressure is set, the second value is the value at the end of where the pressure is specified. The pressure is linearly interpolated between the start and the end. The keywords for pressure are [ECCDEF](/docs/sk/Keyword_Documentation/E/ECCDEF/) and [ECPRES](/docs/sk/Keyword_Documentation/E/ECPRES/). User can define Pressure window as shown in Fig. 14.2.9.
+**[2D]** : Tlakové okrajové podmienky určujú rovnomernú alebo lineárne sa meniacu silu na jednotku plochy na plochách prvkov spájajúcich zadané hrany. Požadujú sa dve hodnoty normálového tlaku, prvá hodnota je počiatočná hodnota tlaku z počiatočného bodu, kde je tlak zadaný, druhá hodnota je hodnota na konci miesta, kde je tlak zadaný. Tlak sa lineárne interpoluje medzi začiatkom a koncom. Kľúčové slová pre tlak sú [ECCDEF](/docs/sk/Keyword_Documentation/E/ECCDEF/) a [ECPRES](/docs/sk/Keyword_Documentation/E/ECPRES/). Používateľ môže definovať okno Pressure (Tlak), ako je znázornené na obr. 14.2.9.
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image009.jpg)
 
@@ -106,97 +106,97 @@ Defined free distortion BCC
 
 (b)
 
-2D pressure window definition; (a) For 2D (b) pressure window
+2D definícia tlakového okna; a) pre 2D b) tlakové okno
 
-**[3D]** : The pressure boundary conditions specifies a uniform, or linearly varying, force per unit area on the element faces connecting the specified nodes. For more information about how to define free distortion BCC please refer Free Distortion BCC [ 3D].
+**[3D]** : Tlakové okrajové podmienky určujú rovnomernú alebo lineárne sa meniacu silu na jednotku plochy na plochách prvkov spájajúcich zadané uzly. Ďalšie informácie o tom, ako definovať BCC s voľnou deformáciou, nájdete v časti BCC s voľnou deformáciou [ 3D].
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image011.jpg)
 
-3D pressure window definition
+Definícia 3D tlakového okna
 
 ## Force BCC [2D, 3D]
 
-Force boundary conditions specify the force applied on each node. The force is specified in default units. For die stress analysis, the force that the die exerted on the workpiece can be reversed and interpolated onto the dies by using the interpolation function.
+Silové okrajové podmienky určujú silu pôsobiacu na každý uzol. Sila je zadaná v predvolených jednotkách. Pri analýze namáhania matrice možno silu, ktorou matrica pôsobí na obrobok, obrátiť a interpolovať na matrice pomocou interpolačnej funkcie.
 
-**Steps to Define Force interpolation:**
+**Kroky na definovanie interpolácie sily:**
 
-  1. Click on ![](../../../assets/Icons/Pre_icons/MO_Interpolate_button.jpg) Button, a window will pops up as shown in Fig. 14.2.11.
+  1. Kliknutím na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Interpolate_button.jpg) sa zobrazí okno podľa obr. 14.2.11.
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image012.jpg)
 
-Database interpolation widow
+Interpolácia databázy Widow
 
-  1. Click on ![](../../../assets/Icons/Pre_icons/MO_Browse_button.jpg) select step from the loaded DB at which interpolation of forces needs to be carried over. (See Fig. 14.2.12.)
+  1. Kliknutím na ![](../../../assets/Icons/Pre_icons/MO_Browse_button.jpg) vyberte krok z načítanej DB, pri ktorom sa má vykonať interpolácia síl. (Pozri obr. 14.2.12.)
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image013.jpg)
 
-Database interpolation widow showing step number selection
+Interpolácia databázy Widow zobrazujúca výber čísla kroku
 
-  1. Select workpiece object from the popup window. System will define tolerance automatically required for interpolation if the tolerance field has 0.00 value. User can specify required tolerance value in error tolerance tab as shown in Fig. 14.2.13. Click on ![](../../../assets/Icons/Pre_icons/MO_Interpolate_button2.jpg).
+  1. Vo vyskakovacom okne vyberte objekt obrobku. Systém automaticky definuje toleranciu potrebnú na interpoláciu, ak má pole tolerancie hodnotu 0,00. Používateľ môže požadovanú hodnotu tolerancie zadať na karte Tolerancia chyby, ako je znázornené na obr. 14.2.13. Kliknite na ![](../../../assets/Icons/Pre_icons/MO_Interpolate_button2.jpg).
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image014.jpg)
 
-Database Interpolation window showing Defining object number and Error tolerance
+Okno Interpolácia databázy zobrazujúce Definovanie čísla objektu a tolerancie chyby
 
-  1. Click ![](../../../assets/Icons/Pre_icons/MO_OK_button.jpg) when Force interpolation tolerance window will pop up. (See Fig. 14.2.14)
+  1. Kliknite na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_OK_button.jpg), keď sa zobrazí okno Vynútiť toleranciu interpolácie. (Pozri obr. 14.2.14)
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image015.jpg)
 
-Force Interpolation window 
+Okno Interpolácia sily
 
-The interpolated forces will be displayed under force tab as shown in Fig. 14.2.15.
+Interpolované sily sa zobrazia na karte sily, ako je znázornené na obr. 14.2.15.
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image016.jpg)
 
-Force interpolation of 2D Top die 
+Interpolácia sily 2D hornej kocky
 
-## Movement BCC [2D, 3D]
+## Pohyb BCC [2D, 3D]
 
-The movement of specific nodes on an object can be specified. If the movement boundary condition is specified, object movement controls must also be specified. 
+Pohyb konkrétnych uzlov na objekte je možné špecifikovať. Ak je zadaná okrajová podmienka pohybu, musia byť zadané aj ovládacie prvky pohybu objektu.
 
-## Shrink fit BCC [2D, 3D]
+## Zmenšiť fit BCC [2D, 3D]
 
-A specified displacement can be specified in any direction for each node. This is frequently used for specifying shrink fit conditions between a die insert and a shrink ring.
+Pre každý uzol možno určiť posun v ľubovoľnom smere. To sa často používa na špecifikáciu podmienok zmršťovania medzi lisovacou vložkou a zmršťovacím krúžkom.
 
-Shrink Fit BCC in 3D used for die stress analysis, This can be defined by following steps,
+Shrink Fit BCC v 3D sa používa na analýzu napätia v zápustke, To možno definovať nasledujúcimi krokmi,
 
-  * Entering the interference value. 
-  * Selecting the Direction (Direction perpendicular to the inner surface of the shrink ring or outer surface of the Die insert)
-  * Selecting the inner surface of the shrink ring or outer surface of the Die insert (surface which is contact with the die)
+  * Zadanie hodnoty rušenia.
+  * Výber smeru (smer kolmý na vnútorný povrch zmršťovacieho krúžku alebo vonkajší povrch lisovacej vložky)
+  * Výber vnútorného povrchu zmršťovacieho krúžku alebo vonkajšieho povrchu lisovacej vložky (povrch, ktorý je v kontakte s lisovacou vložkou)
 
-If shrink fit is applied to the inner object, the value should be negative and If shrink fit is applied to the outer object then the value should be positive.
+Ak sa na vnútorný objekt aplikuje zmrštenie, hodnota by mala byť záporná a ak sa na vonkajší objekt aplikuje zmrštenie, hodnota by mala byť kladná.
 
-For more information on shrink fit, Please refer [2D Die Stress Analysis Theory](/docs/sk/Operation_Templates/30_Die_Stress/2D_Die_Stress_Analysis_Theory/).
+Ďalšie informácie o zmršťovaní nájdete v časti [2D Die Stress Analysis Theory](/docs/sk/Operation_Templates/30_Die_Stress/2D_Die_Stress_Analysis_Theory/).
 
-## Contact BCC [2D, 3D]
+## Kontakt BCC [2D, 3D]
 
-The Contact boundary condition displays inter-object boundary contact conditions on a given object. The user should gain some experience with DEFORM before using this option. The contact conditions are stored in three components to represent the fact that there are three degrees of freedom for any given node.
+Kontaktná okrajová podmienka zobrazuje medzipredmetové okrajové kontaktné podmienky na danom objekte. Pred použitím tejto možnosti by mal používateľ získať určité skúsenosti s programom DEFORM. Kontaktné podmienky sú uložené v troch zložkách, aby reprezentovali skutočnosť, že pre každý daný uzol existujú tri stupne voľnosti.
 
-Contact boundary conditions are applied to nodes of a slave object, and specify contact between those nodes and the surface of a master object (See Fig. 14.2.1.). If a node is specified to be in contact with a particular object, it will be placed on the surface of that object. If this requires changing the position of that node, it will be changed as necessary. Contact boundary conditions are generated under the Inter-object Contact relation ([CNTACT](/docs/sk/Keyword_Documentation/C/CNTACT/)) section.
+Kontaktné okrajové podmienky sa aplikujú na uzly podriadeného objektu a určujú kontakt medzi týmito uzlami a povrchom nadradeného objektu (pozri obr. 14.2.1.). Ak je zadaný uzol, ktorý má byť v kontakte s konkrétnym objektom, bude umiestnený na povrchu tohto objektu. Ak si to vyžaduje zmenu polohy tohto uzla, zmení sa podľa potreby. Kontaktné okrajové podmienky sa generujú v rámci sekcie Inter-object Contact relation ([CNTACT](/docs/sk/Keyword_Documentation/C/CNTACT/)).
 
-Contact boundary conditions can be displayed for a given object using the Objects, Boundary Conditions, Advanced Deformation BCC's icon.
+Kontaktné okrajové podmienky možno pre daný objekt zobraziť pomocou ikony Objects, Boundary Conditions, Advanced Deformation BCC's.
 
-## Beginning surface BCC [3D]
+## Začiatok povrchu BCC [3D]
 
-In Extrusion process this specifies the beginning surface of the workpiece.
+V procese vytláčania určuje počiatočný povrch obrobku.
 
-## Free Surface BCC [3D]
+## Voľný povrch BCC [3D]
 
-In Extrusion process this specifies the end surface of the workpiece.
+V procese vytláčania určuje koncový povrch obrobku.
 
 ## Rolling BCC [3D]
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image017.jpg)
 
-Rolling Boundary condition window 
+Rolling Okno hraničných podmienok
 
-**Text to be added**
+**Text sa doplní**
 
-## Advanced deformation BCC [2D, 3D]
+## Pokročilá deformácia BCC [2D, 3D]
 
-The Advanced boundary condition displays inter-object boundary contact conditions on a given object. This is the same information displayed in the Inter-Object BCC's window. There is no physical significance to the X or Y components of contact. Rather, the ``directions'' are dictated by numerical convenience. Contact conditions are first assigned to the Y direction. If that position is occupied by another value, conditions are assigned in the X direction. For more information please refer section [Nodal data- Deform BCC](../17_Object_Data_Initialization/17_1_Node_Data_Window.htm#Deform_BCC) ([BCCDEF](/docs/sk/Keyword_Documentation/B/BCCDEF/)).
+Rozšírená okrajová podmienka zobrazuje podmienky medziobjektového kontaktu na danom objekte. Ide o rovnaké informácie, ktoré sa zobrazujú v okne Inter-Object BCC's. Zložky kontaktu X alebo Y nemajú žiadny fyzikálny význam. Smery sú skôr diktované numerickou pohodlnosťou. Podmienky kontaktu sa najprv priradia k smeru Y. Ak je táto pozícia obsadená inou hodnotou, podmienky sa priradia v smere X. Ďalšie informácie nájdete v časti [Nodal data- Deform BCC](../17_Object_Data_Initialization/17_1_Node_Data_Window.htm#Deform_BCC) ([BCCDEF](/docs/sk/Keyword_Documentation/B/BCCDEF/)).
 
-Depending upon the BCC usr_bcc.f fortan file, user has to enter User Routine number. Please refer to [Chapter 56. User Routines](/docs/sk/User_Routines/56_User_Routines_in_DEFORM/56_User_Routines_in_DEFORM/) for a description of how to implement user defined BCC routines. (See Fig. 14.2.17.)
+V závislosti od súboru BCC usr_bcc.f fortan musí používateľ zadať číslo User Routine. Popis implementácie používateľsky definovaných rutín BCC nájdete v časti [Chapter 56. User Routines](/docs/sk/User_Routines/56_User_Routines_in_DEFORM/56_User_Routines_in_DEFORM/). (Pozri obr. 14.2.17.)
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_2_Deformation_Boundary_Conditions/14_2_Image018.jpg)
 
@@ -206,9 +206,9 @@ Depending upon the BCC usr_bcc.f fortan file, user has to enter User Routine num
 
 (b)
 
-Advanced Deformation object boundary condition window; (a) For 2D (b) For 3D
+Okno s okrajovými podmienkami objektu Advanced Deformation; (a) pre 2D (b) pre 3D
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
 

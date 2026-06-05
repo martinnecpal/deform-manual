@@ -1,105 +1,105 @@
 ---
 lang: sk
-title: "15.8. Path"
+title: "15.8. Cesta"
 ---
 
-# 15.8. Path
+# 15.8. Cesta
 
-15.8.1. Local and Global Co-ordinates
+15.8.1. Miestne a globálne súradnice
 
-15.8.2. Align Rotation center to object center
+15.8.2. Zarovnanie stredu rotácie na stred objektu
 
-15.8.3. Synchronize with the defined path data
+15.8.3. Synchronizácia s definovanými údajmi o ceste
 
-**[2D, 3D]** : Path movement can be defined in one of two ways, as a Function of time or as a Profile+feed rate. 
+**[2D, 3D]** : Pohyb po dráhe možno definovať jedným z dvoch spôsobov, ako funkciu času alebo ako profil + rýchlosť podávania.
 
-When position is a function of time, movement is linearly interpolated between each of the defined positions. 
+Ak je poloha funkciou času, pohyb sa lineárne interpoluje medzi jednotlivými definovanými polohami.
 
-When position is a function of feed rate, each specified feed rate [FeedRate(i)] defines how fast the object moves from the associated position [Position(i)] to the next position [Position(i+1)]. The feed rate of the last data pair will automatically be set to zero, since it has no practical purpose.
+Ak je poloha funkciou rýchlosti posuvu, každá zadaná rýchlosť posuvu [FeedRate(i)] definuje, ako rýchlo sa objekt presunie z príslušnej polohy [Position(i)] do nasledujúcej polohy [Position(i+1)]. Rýchlosť posuvu posledného páru údajov sa automaticky nastaví na nulu, pretože nemá praktický význam.
 
-G-Code programs typically define paths using position as a function of feed rate. It should be noted that the feed rate and position relationship is slightly different than that used in DEFORM. In G-Code, each specified feed rate [FeedRate(i)] defines how fast the object moves to the associated position [Position(i)] from the previous position [Position(i-1)]. 
+Programy G-Code zvyčajne definujú dráhy pomocou polohy ako funkcie rýchlosti posuvu. Je potrebné poznamenať, že vzťah medzi rýchlosťou posuvu a polohou je mierne odlišný od vzťahu používaného v programe DEFORM. V G-Code každá zadaná rýchlosť posuvu [FeedRate(i)] definuje, ako rýchlo sa objekt posunie do príslušnej polohy [Position(i)] z predchádzajúcej polohy [Position(i-1)].
 
-The difference in feed rate formats must be accounted for when importing G-Code paths for use as DEFORM paths. Conversion may be accomplished by shifting the feed rates one position forward in the path table. In other words, each feed rate (i) must be shifted to the previous position data pair (i-1).
+Rozdiel vo formátoch posuvu sa musí zohľadniť pri importovaní dráh G-kódu na použitie ako dráhy DEFORM. Konverziu možno vykonať posunutím rýchlosti posuvu o jednu pozíciu dopredu v tabuľke dráh. Inými slovami, každá rýchlosť posuvu (i) sa musí posunúť na predchádzajúcu dvojicu údajov o pozícii (i-1).
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image001.jpg' | relative_url }})
 
-Movement along a path and along a path with alignment
+Pohyb po ceste a po ceste so zarovnaním
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image002.jpg' | relative_url }})
 
-Directionality of axis and velocity vectors with respect a reference point on the object
+Smerovosť vektorov osi a rýchlosti vzhľadom na referenčný bod na objekte
 
-As a first step to define path movement data user enters the path movement control dialog. (See Fig. 15.8.3. and Fig. 15.8.4.)
+V prvom kroku definovania údajov o pohybe cesty používateľ vstúpi do dialógového okna kontroly pohybu cesty. (Pozri obr. 15.8.3. a obr. 15.8.4.)
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image003.jpg' | relative_url }})
 
-2D User interface to enter path movement definition
+2D používateľské rozhranie na zadanie definície pohybu cesty
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image004.jpg' | relative_url }})
 
-3D User interface to enter path movement definition
+3D používateľské rozhranie na zadanie definície pohybu cesty
 
-**[2D]** : 2D Path movement can be defined by X and Y positions, regardless of the function type utilized.
+**[2D]** : 2D Pohyb po ceste môže byť definovaný pomocou pozícií X a Y bez ohľadu na typ použitej funkcie.
 
-## Local and Global Co-ordinates [3D]
+## Lokálne a globálne súradnice [3D]
 
-In**Global co-ordinates** used when object to be moved in the X, Y and Z directions by defining position values along these three directions as function of time or function of feed rate.
+V**Globálne súradnice** sa používajú, keď sa má objekt pohybovať v smeroch X, Y a Z definovaním hodnôt polohy pozdĺž týchto troch smerov ako funkcie času alebo funkcie rýchlosti posuvu.
 
-If translational movement of a rotating roller is limited on the plane Its movement can be described on this plane in a **local coordinate** system. When the local plane can be defined using two vectors (U,V), the movement on its local plane can be easily defined. The following figure (See Fig. 15.8.5.) illustrates this in a flow forming application where the rollers are moving radially and axially only on a plane passing through the center of the roller and the axis of the work piece.
+Ak je translačný pohyb rotujúceho valca obmedzený na rovinu, jeho pohyb možno v tejto rovine opísať v **lokálnom súradnicovom** systéme. Ak možno lokálnu rovinu definovať pomocou dvoch vektorov (U,V), pohyb v jej lokálnej rovine možno ľahko definovať. Nasledujúci obrázok (Pozri obr. 15.8.5.) to znázorňuje v aplikácii prietokového tvárnenia, kde sa valce pohybujú radiálne a axiálne len v rovine prechádzajúcej stredom valca a osou obrobku.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image005.jpg' | relative_url }})
 
-Basic concepts of a local plane with illustration
+Základné pojmy miestnej roviny s ilustráciou
 
-The data for the local plane needs to be defined, concepts for which are illustrated in Fig. 15.8.6.
+Je potrebné definovať údaje pre miestnu rovinu, ktorej pojmy sú znázornené na obr. 15.8.6.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image006.jpg' | relative_url }})
 
-Data needed to define a local plane
+Údaje potrebné na definovanie miestnej roviny
 
-As illustrated in Fig. 15.8.7., this function data can represents a complex movement which in a simple form can be time and position data on a local plane with a specific orientation in space.
+Ako je znázornené na obr. 15.8.7., tieto funkčné údaje môžu predstavovať komplexný pohyb, ktorý v jednoduchej forme môže byť časovým a polohovým údajom na lokálnej rovine s konkrétnou orientáciou v priestore.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image007.jpg' | relative_url }})
 
-Function data table in local plane
+Tabuľka funkčných údajov v miestnej rovine
 
-## Align Rotation center to object center [2D, 3D]
+## Zarovnanie stredu rotácie na stred objektu [2D, 3D]
 
-When alignment is involved object rotation center (square marker in Fig. 15.8.8.) and the geometry center (circle marker in Fig. 15.8.8.) needs to be aligned for the movement to follow the path with proper orientation from time to time. User can specify object center as the reference point. (shown as axis center under the Rotation tab in Movement GUI, See Fig. 15.8.12. and Fig. 15.8.13.
+Pri zarovnávaní je potrebné zarovnať stred otáčania objektu (štvorcová značka na obr. 15.8.8.) a stred geometrie (kruhová značka na obr. 15.8.8.), aby pohyb z času na čas sledoval dráhu so správnou orientáciou. Používateľ môže určiť stred objektu ako referenčný bod. (zobrazený ako stred osi na karte Rotácia v grafickom rozhraní pohybu, pozri obr. 15.8.12. a obr. 15.8.13.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image008.jpg' | relative_url }})
 
-Basics of alignment and rotation, with respect to the geometry center
+Základy zarovnania a otáčania vzhľadom na geometrický stred
 
-## Synchronize with the defined path data [2D, 3D]
+## Synchronizácia s definovanými údajmi o ceste [2D, 3D]
 
-After the user specify the reference point, assign the movement by synchronizing it with the defined function data. Since "Synchronization" means an update of the object data based on the time-dependent path movement data in "time" and "space" domains. For synchronization, the current simulation time is used as a reference time. Once this synchronization is done object position can change (with a system message as indicated in Fig. 15.8.9.) based on the current process time (See Fig. 15.8.10.) and the function data type (See Fig. 15.8.11.) defined for this path movement. Also go through the Fig. 15.8.14. for the path movement depicted on the local plane.
+Po zadaní referenčného bodu používateľom priraďte pohyb synchronizáciou s definovanými údajmi funkcie. Keďže "synchronizácia" znamená aktualizáciu údajov o objekte na základe údajov o pohybe v závislosti od času v doménach "čas" a "priestor". Na synchronizáciu sa ako referenčný čas používa aktuálny čas simulácie. Po vykonaní tejto synchronizácie sa poloha objektu môže zmeniť (pomocou systémovej správy, ako je uvedené na obr. 15.8.9.) na základe aktuálneho času procesu (pozri obr. 15.8.10.) a typu údajov funkcie (pozri obr. 15.8.11.) definovaných pre tento pohyb po ceste. Prejdite tiež Obr. 15.8.14. pre pohyb cesty zobrazený na lokálnej rovine.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image009.jpg' | relative_url }})
 
-System messages when synchronization is attempted with reference point
+Systémové správy pri pokuse o synchronizáciu s referenčným bodom
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image010.jpg' | relative_url }})
 
-Current time
+Aktuálny čas
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image011.jpg' | relative_url }})
 
-Plot type
+Typ pozemku
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image012.jpg' | relative_url }})
 
-Finding geometry center
+Vyhľadanie geometrického stredu
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image013.jpg' | relative_url }})
 
-Options to align rotation and geometry center once computed
+Možnosti zarovnania otáčania a stredu geometrie po výpočte
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_8_path/15_8_image005.jpg' | relative_url }})
 
-Positioning concepts when path function data is defined
+Koncepty polohovania pri definovaní údajov o funkcii cesty
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 

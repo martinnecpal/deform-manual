@@ -1,6 +1,6 @@
 ---
 lang: sk
-title: "10.10. Coarsening Data"
+title: "10.10. Údaje o zhrubnutí"
 ---
 
-# 10.10. Coarsening Data
+# 10.10. Hrubovanie údajov

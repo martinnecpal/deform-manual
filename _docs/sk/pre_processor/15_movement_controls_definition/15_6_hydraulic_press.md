@@ -1,65 +1,65 @@
 ---
 lang: sk
-title: "15.6. Hydraulic press"
+title: "15.6. Hydraulický lis"
 ---
 
-# 15.6. Hydraulic press
+# 15.6. Hydraulický lis
 
-15.6.1. Speed  
-15.6.2. Average strain rate  
-15.6.3. Dwell Controls   
-15.6.4. Elastic Losses
+15.6.1. Rýchlosť
+15.6.2. Priemerná miera deformácie
+15.6.3. Ovládacie prvky Dwell
+15.6.4. Elastické straty
 
-**[2D, 3D]:** To use the hydraulic press model the user can control one of two manners.
+**[2D, 3D]:** Používanie modelu hydraulického lisu môže používateľ ovládať jedným z dvoch spôsobov.
 
-## Speed [2D, 3D]
+## Rýchlosť [2D, 3D]
 
-The speed of the press may be defined in one of the following ways (See Fig. 15.6.1. and Fig. 15.6.2.).
+Rýchlosť lisu možno definovať jedným z nasledujúcich spôsobov (pozri obr. 15.6.1 a obr. 15.6.2).
 
-  * Constant
+  * Konštanta
 
-  * Function of time
+  * Funkcia času
 
-  * Function of stroke of the primary object
+  * Funkcia zdvihu primárneho objektu
 
-A power limit curve characterizing the hydraulic press may also be entered as a function of load. See Example [2D Basic lab 10 Hydraulic press.](/docs/sk/labs/basic_labs/2d_labs/lab_10_hydraulic_press/)
+Ako funkciu zaťaženia možno zadať aj krivku medzného výkonu charakterizujúcu hydraulický lis. Pozri príklad [2D Basic lab 10 Hydraulic press.](/docs/sk/labs/basic_labs/2d_labs/lab_10_hydraulic_press/)
 
-Note:
+Poznámka:
 
-To activate maximum speed control, the power limit must be defined.
+Ak chcete aktivovať reguláciu maximálnych otáčok, je potrebné definovať limit výkonu.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_6_hydraulic_press/15_6_image001.jpg' | relative_url }})
 
-2D Hydraulic press speed movement controls settings
+2D Nastavenia ovládania rýchlosti pohybu hydraulického lisu
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_6_hydraulic_press/15_6_image002.jpg' | relative_url }})
 
-3D Hydraulic press speed movement controls settings
+3D Hydraulické nastavenie ovládania rýchlosti pohybu lisu
 
-## Average strain rate [2D, 3D]
+## Priemerná miera deformácie [2D, 3D]
 
   
-The average strain rate control can also used to define the press speed (See Fig. 15.6.3.). Note that the initial billet height needs to be provided and should be a reasonably accurate measurement.
+Regulácia priemernej rýchlosti deformácie sa môže použiť aj na definovanie rýchlosti lisovania (pozri obr. 15.6.3.). Všimnite si, že je potrebné zadať počiatočnú výšku polotovaru a malo by ísť o pomerne presné meranie.
 
-**Allowed maximum strain rate** : This setting can be defined in addition to the controls mentioned above. This will prevent the speed from exceeding a condition where the maximum strain rate in the part would exceed the defined maximum strain rate.
+**Povolená maximálna miera deformácie** : Toto nastavenie je možné definovať ako doplnok k vyššie uvedeným ovládacím prvkom. Tým sa zabráni prekročeniu rýchlosti v stave, keď by maximálna miera deformácie v diele prekročila definovanú maximálnu mieru deformácie.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_6_hydraulic_press/15_6_image003.jpg' | relative_url }})
 
-Hydraulic press Average strain rate movement controls settings
+Hydraulický lis Nastavenie kontroly priemernej rýchlosti pohybu
 
-## Dwell Controls [2D, 3D]
+## Ovládacie prvky Dwell [2D, 3D]
 
-In hydraulic press, we can stop the simulation based on the load or a minimum velocity stopping criteria. Also we can define Dwell time in Hydraulic press, when stopping criteria reaches Dwell calculation will starts till the defined Total dwell time. Dwell controls options is as shown in  Fig. 15.6. 4.
+V hydraulickom lise môžeme simuláciu zastaviť na základe zaťaženia alebo kritéria zastavenia minimálnej rýchlosti. V hydraulickom lise môžeme definovať aj čas zastavenia, keď sa dosiahne kritérium zastavenia Výpočet sa spustí až do definovaného celkového času zastavenia. Možnosti ovládania Dwell sú znázornené na obr. 15.6. 4.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_6_hydraulic_press/15_6_image004.jpg' | relative_url }})
 
-Hydraulic Press Dwell Controls
+Hydraulické ovládacie prvky pre zdržanie lisu
 
-## Elastic Losses
+## Elastické straty
 
-The stiffness of a press or a hammer can be defined in this dialog. In the case of a press there can be stretch based on the forging load and the final distance of the press will be less by the amount of the stretch. In the case of a hammer, the compliance accounts for elastic loss of energy.
+V tomto dialógovom okne možno definovať tuhosť lisu alebo kladiva. V prípade lisu môže dôjsť k roztiahnutiu na základe zaťaženia kovania a konečná vzdialenosť lisu bude menšia o veľkosť roztiahnutia. V prípade kladiva poddajnosť zohľadňuje pružnú stratu energie.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 

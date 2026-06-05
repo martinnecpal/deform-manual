@@ -1,264 +1,264 @@
 ---
 lang: sk
-title: "17.1. Node Data Window"
+title: "17.1. Okno s údajmi o uzle"
 ---
 
-# 17.1. Node Data Window ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }})
+# 17.1. Okno s údajmi o uzle ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }})
 
-17.1.1. Features of the display window include in Node Data window
+17.1.1. Funkcie zobrazovacieho okna v okne Node Data zahŕňajú
 
-17.1.2. Nodal Data initializing
+17.1.2. Inicializácia uzlových údajov
 
-17.1.3. Deformation Tab
+17.1.3. Karta Deformácia
 
-  * General Tab
+  * Karta Všeobecné
 
-  * Displacement
+  * Premiestnenie
 
-  * Velocity
+  * Rýchlosť
 
-  * Force
+  * Sila
 
-  * Pressure
+  * Tlak
 
-  * Deform BCC
+  * Deformácia BCC
 
-  * Function BCC
+  * Funkcia BCC
 
-  * Strain(Nodal)
+  * Kmeň (uzol)
 
-  * Damage(Nodal)
+  * Poškodenie(Nodal)
 
-  * Stress(Nodal) Tab
+  * Stres(Nodal) Tab
 
-17.1.4. Thermal Tab
+17.1.4. Tepelná karta
 
-  * Node Temperature
+  * Teplota uzla
 
-  * Heat
+  * Teplo
 
-  * Heat flux
+  * Tepelný tok
 
-  * Thermal BCC
+  * Tepelné BCC
 
-  * Boundary condition function
+  * Funkcia hraničných podmienok
 
-  * Diffusion bonding
+  * Difúzna väzba
 
-17.1.5. Diffusion Tab
+17.1.5. Karta Difúzia
 
-  * Atom Percentage
+  * Percentuálny podiel atómov
 
-  * Diffusion Flux
+  * Difúzny tok
 
-  * Diffusion BCC
+  * Difúzia BCC
 
-17.1.6. Electric Heating Tab
+17.1.6. Karta Elektrické vykurovanie
 
-  * Electric field intensity
+  * Intenzita elektrického poľa
 
-  * Resistance BCC
+  * Odolnosť BCC
 
-  * Current Flux
+  * Prúdový tok
 
-17.1.7. User Tab
+17.1.7. Karta Používateľ
 
-17.1.8. Thermomechanical variable Tab
+17.1.8. Termomechanická premenná Tab
 
-17.1.9. Additive Manufacturing Tab
+17.1.9. Karta Aditívna výroba
 
-[**2D,3D**]: The node data window displays all available information about nodes. All information can be modified and many of the variables can be plotted as shown in Fig. 17.1.1. and Fig. 17.1.2.
+[**2D,3D**]: Okno s údajmi o uzloch zobrazuje všetky dostupné informácie o uzloch. Všetky informácie možno upravovať a mnohé z premenných možno vykresliť, ako je znázornené na obr. 17.1.1. a obr. 17.1.2.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image001.jpg' | relative_url }})
 
-2D Node Deformation - General data window
+2D deformácia uzlov - okno všeobecných údajov
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image002.jpg' | relative_url }})
 
-3D Node Deformation - General data window
+Deformácia 3D uzla - okno všeobecných údajov
 
-## Features of the display window include in Node Data window
+## Funkcie zobrazovacieho okna sú zahrnuté v okne Node Data
 
-**Node Number** : The number of the node for which information is being displayed. A node may be selected either by keying in the value or by using the select icon and mouse-picking a node.
+**Číslo uzla** : Číslo uzla, pre ktorý sa zobrazujú informácie. Uzol možno vybrať buď zadaním hodnoty kľúčom, alebo použitím ikony výberu a kliknutím myšou na uzol.
 
-**Highlight Node** : To highlight the selected Node in graphic display. 
+**Zvýraznenie uzla** : Zvýraznenie vybraného uzla na grafickom displeji.
 
-**Initialize values** :![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) icon initializes the specified variable value on nodes in the object for,
+**Inicializácia hodnôt** :![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) ikona inicializuje zadanú hodnotu premennej v uzloch objektu pre,
 
-  * a particular node 
-  * range of nodes 
-  * Picking the nodes using pick tools (See Fig. 17.1.3. and Fig. 17.1.4.)
-  * interpolation method
+  * konkrétny uzol
+  * rozsah uzlov
+  * Výber uzlov pomocou nástrojov na výber (pozri obr. 17.1.3 a obr. 17.1.4)
+  * metóda interpolácie
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image003.jpg' | relative_url }})
 
-Picking tools for selecting Node for 2D
+Nástroje na výber uzla pre 2D
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image004.jpg' | relative_url }})
 
-Picking tools for selecting Node for 3D
+Nástroje na výber uzla pre 3D
 
-**Plot variable** :
+**Premenná na grafe** :
 
-![]({{ '/assets/icons/pre_icons/mo_preview_icon.jpg' | relative_url }}) Plots selected node state variable in shaded contour.
+![]({{ '/assets/icons/pre_icons/mo_preview_icon.jpg' | relative_url }}) Vykreslí stavovú premennú vybraného uzla v tieňovanom obryse.
 
-![]({{ '/assets/icons/pre_icons/mo_plot_vector_icon.jpg' | relative_url }}) Plots selected node state variable Vector plot.
+![]({{ '/assets/icons/pre_icons/mo_plot_vector_icon.jpg' | relative_url }}) Vykreslí stavovú premennú vybraného uzla Vektorový graf.
 
-Plot type can be changed by right mouse click option on contour bar in display window.
+Typ grafu možno zmeniť kliknutím pravým tlačidlom myši na obrysový pruh v okne zobrazenia.
 
-**Node Coordinate** :
+**Súradnica uzla** :
 
-The coordinates of the node are displayed next to the node number. The values can be modified to slightly adjust the position of nodes where boundary conditions were not properly enforced. This should be done with EXTREME caution. For features such as boundary extraction and mesh generation, the database must be saved, and the newly saved step read into the pre-processor before the adjusted coordinates can be used.
+Súradnice uzla sa zobrazia vedľa čísla uzla. Hodnoty možno upraviť, aby sa mierne upravila poloha uzlov, v ktorých neboli správne uplatnené okrajové podmienky. Toto by sa malo robiť s VYŠŠOU opatrnosťou. V prípade funkcií, ako je extrakcia hraníc a generovanie siete, sa musí databáza uložiť a novo uložený krok načítať do predprocesora predtým, ako sa môžu použiť upravené súradnice.
 
-## Nodal Data initializing
+## Inicializácia uzlových údajov
 
-We can initialize the data using two methods, Assign and Interpolation methods.
+Dáta môžeme inicializovať pomocou dvoch metód, metódy Priradenie a Interpolácia.
 
-We have another two options:
+Máme ďalšie dve možnosti:
 
-**Range** : Using Range option user can define the Start node number and End node number and the variable value. After defining the parameters when user clicks on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) button the data will be initialize to the selected nodes.
+**Rozsah** : Pomocou možnosti Rozsah môže používateľ definovať číslo počiatočného uzla a číslo koncového uzla a hodnotu premennej. Po definovaní parametrov, keď používateľ klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}), údaje sa inicializujú na vybrané uzly.
 
-**Picking** : Using picking option user can select the nodes to initialize the value. 
+**Vyberanie** : Pomocou možnosti výberu môže používateľ vybrať uzly na inicializáciu hodnoty.
 
-Related to picking options refer 14. Boundary Condition [Picking options for 2D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_2D) and [Picking options for 3D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_3D).
+V súvislosti s možnosťami výberu pozri 14. Hraničné podmienky [Picking options for 2D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_2D) a [Picking options for 3D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_3D).
 
-**Assign method** : ****
+**Priradenie metódy** : ****
 
-**Interpolation method:**
+**Interpolačná metóda:**
 
-## Deformation Tab [2D, 3D]
+## Deformačná karta [2D, 3D]
 
-**General Tab**
+**Všeobecná karta**
 
-  * **Displacement (DRZ) :** Displacement ([DRZ](/docs/sk/keyword_documentation/d/drz/)) stores the displacement of each node since the last remeshing. For elastic objects, a displacement may be specified for interference fits. The elastic recover of the object will cause the appropriate stress values to be developed.
+  * **Posun (DRZ) :** Posun ([DRZ](/docs/sk/keyword_documentation/d/drz/)) uchováva posun každého uzla od posledného remesingu. V prípade pružných objektov sa môže určiť posunutie pre interferenčné uloženia. Pružné zotavenie objektu spôsobí, že sa vyvinú príslušné hodnoty napätia.
 
-  * **Velocity (URZ) :**[URZ](/docs/sk/keyword_documentation/u/urz/) is the velocity components of each node.
+  * **Rýchlosť (URZ) :**[URZ](/docs/sk/keyword_documentation/u/urz/) sú zložky rýchlosti každého uzla.
 
-  * **Force (FRZ) :**[FRZ](/docs/sk/keyword_documentation/f/frz/) specifies the value of the constant nodal force at individual nodes.
+  * **Sila (FRZ) :**[FRZ](/docs/sk/keyword_documentation/f/frz/) určuje hodnotu konštantnej uzlovej sily v jednotlivých uzloch.
 
-  * **Pressure (PRZ) :**[PRZ](/docs/sk/keyword_documentation/p/prz/) maintains a specified normal pressure or shear traction across the face of the elements lying between the selected boundary nodes.
+  * **Tlak (PRZ) :**[PRZ](/docs/sk/keyword_documentation/p/prz/) udržiava zadaný normálový tlak alebo šmykovú ťahovú silu na povrchu prvkov ležiacich medzi vybranými hraničnými uzlami.
 
-  * **Deform BCC (BCCDEF) :**[BCCDEF](/docs/sk/keyword_documentation/b/bccdef/) specifies the deformation boundary condition in X and Y directions.
+  * **Deformácia BCC (BCCDEF) :**[BCCDEF](/docs/sk/keyword_documentation/b/bccdef/) určuje okrajovú podmienku deformácie v smeroch X a Y.
 
-The code values are:
+Hodnoty kódu sú:
 
-**0** Node force specified
+**0** Zadaná sila uzla
 
-**1** X, Y, or Z component of node velocity constrained, corresponding to the X, Y or Z component of [BCCDEF](/docs/sk/keyword_documentation/b/bccdef/)
+**1** X, Y alebo Z zložka rýchlosti uzla obmedzená, zodpovedajúca X, Y alebo Z zložke [BCCDEF](/docs/sk/keyword_documentation/b/bccdef/)
 
-**2** Constrained node tractions specified by PRZ
+**2** Obmedzené ťahy uzlov určené PRZ
 
-**3** Node movement control defined
+**3** Definované riadenie pohybu uzlov
 
-**-n** Node is in contact with object number N.
+**-n** Uzol je v kontakte s objektom číslo N.
 
-**Note** : There is no significance to the X, Y, or Z component of contact. Contact values are stored in the first free component, starting with Z, then Y, then X.
+**Poznámka** : Súčiastka kontaktu X, Y alebo Z nemá žiadny význam. Hodnoty kontaktov sa ukladajú do prvej voľnej zložky, začínajúc Z, potom Y, potom X.
 
-  * **Function BCC (BCCDFN)** : [BCCDFN](/docs/sk/keyword_documentation/b/bccdfn/) specifies if the value of a deformation boundary constraint (nodal velocity, force, or traction) associated with a particular node is to be specified as a constant or as a set of time/nodal value data.
+  * **Funkcia BCC (BCCDFN)** : [BCCDFN](/docs/sk/keyword_documentation/b/bccdfn/) určuje, či sa má hodnota deformačného hraničného obmedzenia (uzlovej rýchlosti, sily alebo trakcie) spojená s konkrétnym uzlom špecifikovať ako konštanta alebo ako súbor údajov o časovej/uzlovej hodnote.
 
-  * **Strain(Nodal)** : Strain (nodal) specifies the value of the Strain at individual nodes.
+  * **Náťah(uzol)** : Strain (nodal) určuje hodnotu Strain v jednotlivých uzloch.
 
-  * **Damage(Nodal)** : Strain (nodal) specifies the value of the Strain at individual nodes.
+  * **Poškodenie(uzol)** : Deformácia (nodálna) udáva hodnotu Deformácie v jednotlivých uzloch.
 
-**Note** :
+**Poznámka** :
 
-To activate Strain(Nodal), Damage(Nodal) and Stress (nodal) data, we have to activate Damage Element+Node output radio button, Strain Element+Node output radio button and Stress Element+Node output radio button under Simulation control [Advanced output](../9_simulation_controls/9_7_advanced_options.htm#9.7.4._Output_Control) tab.
+Ak chceme aktivovať údaje o deformácii (uzol), poškodení (uzol) a napätí (uzol), musíme aktivovať rádiové tlačidlo Damage Element+Node output, rádiové tlačidlo Strain Element+Node output a rádiové tlačidlo Stress Element+Node output na karte Simulation control [Advanced output](../9_simulation_controls/9_7_advanced_options.htm#9.7.4._Output_Control).
 
   
-******Stress(Nodal) Tab**  
-Stress stores the stress for each node since the last remeshing. The stress values can be initialized here for a particular node or set of nodes. Values for X/R, Y/Z, Z/Theta, XY/RZ are entered by clicking on initialize button to calculate Max.principal stress and Min.principal stress for a particular node. This is more useful once the simulation as completed, so that principal stress can be checked for each node either by selecting the node number or just clicking on a particular node of the object as shown in Fig. 17.1.5. and Fig. 17.1.6.
+******Stress(Nodal) Tab**
+Stres uchováva napätie pre každý uzol od posledného remeshingu. Hodnoty napätia sa tu môžu inicializovať pre konkrétny uzol alebo sadu uzlov. Hodnoty pre X/R, Y/Z, Z/Theta, XY/RZ sa zadávajú kliknutím na tlačidlo inicializovať, aby sa vypočítalo Max. hlavné napätie a Min. hlavné napätie pre konkrétny uzol. Toto je užitočnejšie po dokončení simulácie, takže hlavné napätie možno skontrolovať pre každý uzol buď výberom čísla uzla, alebo len kliknutím na konkrétny uzol objektu, ako je znázornené na obr. 17.1.5. a obr. 17.1.6.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image005.jpg' | relative_url }})
 
-Nodal Deformation Stress data window for 2D 
+Okno s údajmi o uzlovej deformácii a napätí pre 2D
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image006.jpg' | relative_url }})
 
-Nodal Deformation Stress data window for 3D 
+Okno s údajmi o uzlovej deformácii a napätí pre 3D
 
-## Thermal Tab
+## Tepelná karta
 
-**[2D, 3D]** : All the nodal thermal data of the model can be examined, defined or initialized from this dialog. (See Fig. 17.1.7.)
+**[2D, 3D]** : V tomto dialógovom okne je možné preskúmať, definovať alebo inicializovať všetky tepelné údaje uzlov modelu. (Pozri obr. 17.1.7.)
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image007.jpg' | relative_url }})
 
-2D Nodal Thermal data window
+2D okno s uzlovými tepelnými údajmi
 
-  * **Node Temperature (NDTMP) :**[NDTMP](/docs/sk/keyword_documentation/n/ndtmp/) specifies the nodal temperature to be applied to individual nodes.
+  * **Teplota uzla (NDTMP) :**[NDTMP](/docs/sk/keyword_documentation/n/ndtmp/) určuje teplotu uzla, ktorá sa má aplikovať na jednotlivé uzly.
 
-  * **Heat (NDHEAT) :**[NDHEAT](/docs/sk/keyword_documentation/n/ndheat/) specifies the nodal heat to be applied to individual nodes.
+  * **Heat (NDHEAT) :**[NDHEAT](/docs/sk/keyword_documentation/n/ndheat/) určuje uzlové teplo, ktoré sa má aplikovať na jednotlivé uzly.
 
-  * **Heat flux (NDFLUX) :**[NDFLUX](/docs/sk/keyword_documentation/n/ndflux/) specifies the distributed nodal heat flux to be applied to individual nodes. The heat flux constraint will be applied to the element faces lying between the selected boundary nodes.
+  * **Tepelný tok (NDFLUX) :**[NDFLUX](/docs/sk/keyword_documentation/n/ndflux/) určuje distribuovaný uzlový tepelný tok, ktorý sa má aplikovať na jednotlivé uzly. Obmedzenie tepelného toku sa uplatní na plochy prvku ležiace medzi vybranými hraničnými uzlami.
 
-  * **Thermal BCC (BCCTMP) :**[BCCTMP](/docs/sk/keyword_documentation/b/bcctmp/) specifies the heat transfer boundary constraint code for individual nodes.
+  * **Termický BCC (BCCTMP) :**[BCCTMP](/docs/sk/keyword_documentation/b/bcctmp/) určuje kód obmedzenia hranice prestupu tepla pre jednotlivé uzly.
 
-  1. Constant nodal temperature is specified
-  2. Heat transfer with environment boundary condition
-  3. Specified nodal heat flux
+  1. Zadaná je konštantná uzlová teplota
+  2. Prenos tepla s okrajovou podmienkou prostredia
+  3. Špecifikovaný uzlový tepelný tok
 
-  * **Boundary condition function (BCCTFN) :** [BCCFNC](/docs/sk/keyword_documentation/b/bccfnc/) is used to specify time/nodal value pairs for nodal boundary constraints. Types of nodal boundary constraints that can be specified as time/nodal value pairs include velocity, force, traction, temperature, heat, and distributed heat flux. [BCCFNC](/docs/sk/keyword_documentation/b/bccfnc/) can only be used when a node's boundary constraint function type, [BCCDFN](/docs/sk/keyword_documentation/b/bccdfn/) or [BCCTFN](/docs/sk/keyword_documentation/b/bcctfn/), has been specified as a time/nodal value type.
+  * **Funkcia hraničných podmienok (BCCTFN) :** [BCCFNC](/docs/sk/keyword_documentation/b/bccfnc/) sa používa na zadanie dvojíc časových/uzlových hodnôt pre uzlové hraničné obmedzenia. Typy uzlových okrajových obmedzení, ktoré možno špecifikovať ako dvojice čas/uzolová hodnota, zahŕňajú rýchlosť, silu, trakciu, teplotu, teplo a distribuovaný tepelný tok. [BCCFNC](/docs/sk/keyword_documentation/b/bccfnc/) možno použiť len vtedy, keď bol typ funkcie hraničného obmedzenia uzla, [BCCDFN](/docs/sk/keyword_documentation/b/bccdfn/) alebo [BCCTFN](/docs/sk/keyword_documentation/b/bcctfn/), špecifikovaný ako typ časová/uzlová hodnota.
 
-  * **Diffusion bonding :**
+  * **Difúzna väzba :**
 
-## Diffusion Tab
+## Difúzna karta
 
-**[2D, 3D]** For all the model with diffusion turned in the simulation controls, the nodal diffusion data for the object can be examined, defined or initialized in this dialog. (See Fig. 17.1.8. and Fig. 17.1.9.)
+**[2D, 3D]** Pre všetky modely so zapnutou difúziou v ovládacích prvkoch simulácie možno v tomto dialógovom okne preskúmať, definovať alebo inicializovať uzlové difúzne údaje pre objekt. (Pozri obr. 17.1.8. a obr. 17.1.9.)
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image008.jpg' | relative_url }})
 
-Nodal Diffusion data window for 2D 
+Okno s údajmi o uzlovej difúzii pre 2D
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image009.jpg' | relative_url }})
 
-Nodal Diffusion data window for 2D 
+Okno s údajmi o uzlovej difúzii pre 2D
 
-  * **Atom Percentage (DATOM) :**[DATOM](/docs/sk/keyword_documentation/d/datom/) specifies atom content at a node.
+  * **Podiel atómov (DATOM) :**[DATOM](/docs/sk/keyword_documentation/d/datom/) určuje obsah atómov v uzle.
 
-  * **Diffusion Flux (CRBFLX)** : [CRBFLX](/docs/sk/keyword_documentation/c/crbflx/) specifies "carbon flux" or atom flux for the surface of a workpiece.
+  * **Difúzny tok (CRBFLX)** : [CRBFLX](/docs/sk/keyword_documentation/c/crbflx/) určuje "uhlíkový tok" alebo atómový tok pre povrch obrobku.
 
-  * **Diffusion BCC (BCCCRB)** : [BCCCRB](/docs/sk/keyword_documentation/b/bcccrb/) specifies the atom transfer boundary constraint code for individual nodes.
+  * **Difúzia BCC (BCCCRB)** : [BCCCRB](/docs/sk/keyword_documentation/b/bcccrb/) určuje kód obmedzenia hranice prenosu atómov pre jednotlivé uzly.
 
-## Electric Heating Tab
+## Elektrická vykurovacia karta
 
-**[2D, 3D]** Electric Heating Nodal data dialog is as shown in Fig. 17.1.10.
+**[2D, 3D]** Dialógové okno Elektrický ohrev Uzlové údaje je zobrazené na obr. 17.1.10.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image010.jpg' | relative_url }})
 
-Nodal Electric Heating data window
+Dátové okno elektrického vykurovania Nodal
 
-  * **Electric field intensity** **(VOTAGE)** : Electric field intensity ([VOTAGE](/docs/sk/keyword_documentation/v/votage/)) specifies amount of voltage supplied to heat the object.
+  * **Intenzita elektrického poľa** **(VOTAGE)** : Intenzita elektrického poľa ([VOTAGE](/docs/sk/keyword_documentation/v/votage/)) udáva veľkosť napätia dodávaného na ohrev objektu.
 
-  * **Resistance BCC** **(BCCRHT)** : Resistance BCC ([BCCRHT](/docs/sk/keyword_documentation/b/bccrht/)) specifies if the value of a resistance boundary constraint (nodal velocity, force, or traction) associated with a particular node is to be specified as a constant or as a set of time/nodal value data.
+  * **Odolnosť BCC** **(BCCRHT)** : Resistance BCC ([BCCRHT](/docs/sk/keyword_documentation/b/bccrht/)) určuje, či sa má hodnota hraničného obmedzenia odporu (uzlovej rýchlosti, sily alebo trakcie) spojená s konkrétnym uzlom špecifikovať ako konštanta alebo ako súbor údajov o časovej/uzlovej hodnote.
 
-  * **Current Flux (RHTFLX)** :**** Rate of flow of current ([RHTFLX](/docs/sk/keyword_documentation/r/rhtflx/)) supplied to heat the object.
+  * **Prúdový tok (RHTFLX)** :**** Rýchlosť toku prúdu ([RHTFLX](/docs/sk/keyword_documentation/r/rhtflx/)) dodávaného na ohrev objektu.
 
-## User Tab
+## Karta používateľa
 
-**[2D,3D]** The data for User node variables ([USRNOD](/docs/sk/keyword_documentation/u/usrnod/)) can be initialized, defined or examined here.
+**[2D,3D]** Tu sa môžu inicializovať, definovať alebo skúmať údaje pre premenné uzla User ([USRNOD](/docs/sk/keyword_documentation/u/usrnod/)).
 
-User node variable values can be defined using FORTRAN subroutines. Refer to a [Chapter 56 section USRUPD subroutines](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_3_User_defined_node_and_element_value_\(USRUPD\)). Each node value may accept both a name and a value (See Fig. 17.1.11.). Also, an infinite number of variables may be defined. A minimum of 2 user node variables will be defined by default, however, the user may increase this to as large number as wished. User needs to be cautious that a large number of variables defined can lead to a large database file.
+Hodnoty premenných užívateľských uzlov možno definovať pomocou podprogramov jazyka FORTRAN. Pozri [Chapter 56 section USRUPD subroutines](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_3_User_defined_node_and_element_value_\(USRUPD\)). Každá hodnota uzla môže akceptovať názov aj hodnotu (pozri obr. 17.1.11.). Taktiež je možné definovať nekonečný počet premenných. Štandardne sa definujú minimálne 2 používateľské premenné uzla, používateľ ich však môže zvýšiť na ľubovoľne veľký počet. Používateľ musí byť opatrný, že veľký počet definovaných premenných môže viesť k veľkému databázovému súboru.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image011.jpg' | relative_url }})
 
-User Nodal variables data window
+Okno s údajmi o uzlových premenných používateľa
 
-## Thermomechanical variable Tab
+## Termomechanická premenná Tab
 
-**[2D, 3D]** Under Simulation controls - [Thermomechanical](/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/) variable page, added variables related to Nodal data will be listed under Thermomechanical variable ( [NRECID](/docs/sk/keyword_documentation/n/nrecid/)) tab in Node data window as shown in Fig. 17.1.12. Thermomechanical variable value can be initialized or examined here. 
+**[2D, 3D]** V časti Simulation controls - [Thermomechanical](/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/) variable page (Ovládacie prvky simulácie - stránka s premennými [Thermomechanical](/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)) sa pridané premenné týkajúce sa uzlových údajov uvedú v záložke Thermomechanical variable (Termomechanická premenná) ( [NRECID](/docs/sk/keyword_documentation/n/nrecid/)) v okne Node data (Údaje uzla), ako je znázornené na obr. 17.1.12. Hodnota termomechanickej premennej sa tu môže inicializovať alebo preskúmať.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image012.jpg' | relative_url }})
 
-Nodal Thermomechanical variables data window
+Okno s údajmi o uzlových termomechanických premenných
 
-## Additive Manufacturing Tab
+## Karta aditívnej výroby
 
-**[3D]** Under Additive manufacturing ([NODDEN](/docs/sk/keyword_documentation/n/nodden/)) tab user can define the node density value of the object used for Additive manufacturing process. (See Fig. 17.1.13.) 
+**[3D]** V záložke Aditívna výroba ([NODDEN](/docs/sk/keyword_documentation/n/nodden/)) môže používateľ definovať hodnotu hustoty uzlov objektu použitého pre proces aditívnej výroby. (Pozri obr. 17.1.13.)
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image013.jpg' | relative_url }})
 
-3D Nodal Additive Manufacturing variables data window
+3D Nodal okno s údajmi o premenných aditívnej výroby
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [17\. Object Data Initialize](/docs/sk/pre_processor/17_object_data_initialization/17_object_data_initialize/)
 

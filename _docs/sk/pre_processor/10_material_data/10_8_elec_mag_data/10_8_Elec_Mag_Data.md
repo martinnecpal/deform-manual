@@ -1,42 +1,42 @@
 ---
 lang: sk
-title: "10.8. Elec_Mag Data"
+title: "10.8. Údaje Elec_Mag"
 ---
 
-# 10.8. Electrical and Magnetic Data
+# 10.8. Elektrické a magnetické údaje
 
-Electrical and magnetic properties (See Fig. 10.8.1.) are input here if electrical or electromagnetic behaviors are to be modeled in an object.
+Elektrické a magnetické vlastnosti (pozri obr. 10.8.1.) sa tu zadávajú, ak sa má modelovať elektrické alebo elektromagnetické správanie objektu.
 
 ![](../../../../assets/Images/Pre-Processor/10_Material_Data/10_8_Elec_Mag_Data/10_8_Image001.jpg)
 
-Electric and Magnetic material data window
+Okno s údajmi o elektrickom a magnetickom materiáli
 
-## Electrical resistivity (ELRST)
+## Elektrický odpor (ELRST)
 
-Electrical resistance is the measure for how a given material opposes (resists) electrical current flow over an applied voltage difference. Electrical resistivity ([ELRST](/docs/sk/Keyword_Documentation/E/ELRST/)) is the amount of electrical resistance per unit length for a given material. The value can be a constant or a function of temperature, a function of atom content, or a function of temperature and atom content.
+Elektrický odpor je miera toho, ako sa daný materiál bráni (odoláva) toku elektrického prúdu pri aplikovanom rozdiele napätí. Elektrický odpor ([ELRST](/docs/sk/Keyword_Documentation/E/ELRST/)) je veľkosť elektrického odporu na jednotku dĺžky daného materiálu. Hodnota môže byť konštantná alebo funkcia teploty, funkcia obsahu atómov alebo funkcia teploty a obsahu atómov.
 
-Electrical resistivity data is required when modeling current flow in resistance heating, spot welding, electrical upsetting, induction heating/hardening and electro-magnetic forming.
+Údaje o elektrickom odpore sú potrebné pri modelovaní toku prúdu pri odporovom ohreve, bodovom zváraní, elektrickom rozrušovaní, indukčnom ohreve/tuhnutí a elektromagnetickom tvárnení.
 
-## Relative magnetic permeability (PMEAB)
+## Relatívna magnetická permeabilita (PMEAB)
 
-Relative magnetic permeability ([PMEAB](/docs/sk/Keyword_Documentation/P/PMEAB/)) is the measure for how a given material increases or decreases the density of magnetic flux lines in a volume as compared to that of a vacuum. It can be calculated by dividing the permeability of the object by the permeability of a vacuum. The dimensionless ratio should be the same in the English and SI unit systems. The value can be a constant or a function of temperature, a function of density, or a function of temperature and magnetic field intensity.
+Relatívna magnetická permeabilita ([PMEAB](/docs/sk/Keyword_Documentation/P/PMEAB/)) je miera toho, ako daný materiál zvyšuje alebo znižuje hustotu magnetických tokov v objeme v porovnaní s vákuom. Možno ju vypočítať vydelením permeability objektu permeabilitou vákua. Bezrozmerný pomer by mal byť rovnaký v anglickej a SI sústave jednotiek. Hodnota môže byť konštantná alebo funkcia teploty, funkcia hustoty alebo funkcia teploty a intenzity magnetického poľa.
 
-Relative magnetic permeability data is required when modeling magnetic fields in induction heating/hardening and electro-magnetic forming.
+Údaje o relatívnej magnetickej permeabilite sú potrebné pri modelovaní magnetických polí pri indukčnom ohreve/tvrdnutí a elektromagnetickom tvárnení.
 
-Relative magnetic permeability of many metals has been shown to be a function of temperature and magnetic field intensity. Materials are often described by their initial and/or maximum relative magnetic permeability values. The relative magnetic permeability of a magnetic material (low carbon steel, alloy steel, etc.) falls to 1 at the metal’s Curie point, which is the temperature where the metal loses its magnetization. Nonmagnetic materials (copper, aluminum, etc.) and magnetic materials above the Curie point will have a relative magnetic permeability around 1. Relative magnetic permeability typically decreases toward 1 as magnetic field intensity increases.
+Relatívna magnetická permeabilita mnohých kovov je funkciou teploty a intenzity magnetického poľa. Materiály sa často opisujú pomocou ich počiatočných a/alebo maximálnych hodnôt relatívnej magnetickej permeability. Relatívna magnetická permeabilita magnetického materiálu (nízkouhlíková oceľ, legovaná oceľ atď.) klesá na 1 pri Curieho bode kovu, čo je teplota, pri ktorej kov stráca magnetizáciu. Nemagnetické materiály (meď, hliník atď.) a magnetické materiály nad Curieho bodom budú mať relatívnu magnetickú permeabilitu okolo 1. Relatívna magnetická permeabilita zvyčajne klesá smerom k 1 s rastúcou intenzitou magnetického poľa.
 
-The permeability of a vacuum ([ENVMPR](/docs/sk/Keyword_Documentation/E/ENVMPR/)) is defined in the Simulation Controls > Process Conditions menu. The typical value is provided below for reference.
+Priepustnosť vákua ([ENVMPR](/docs/sk/Keyword_Documentation/E/ENVMPR/)) sa definuje v ponuke Simulation Controls (Simulačné ovládacie prvky) > Process Conditions (Podmienky procesu). Typická hodnota je uvedená nižšie na porovnanie.
 
-1.26 x 10-9 H/mm (SI)  
-3.20 x 10-8 H/in (English)
+1,26 x 10-9 H/mm (SI)
+3,20 x 10-8 H/in (anglicky)
 
-## Relative electric permittivity (PMITT)
+## Relatívna elektrická permitivita (PMITT)
 
-Relative electric permittivity ([PMITT](/docs/sk/Keyword_Documentation/P/PMITT/)) is the electrical polarizability of a material compared to that of a vacuum. It can be calculated by dividing the permittivity of the object by the permittivity of a vacuum. The dimensionless ratio should be the same in the English and SI unit systems. The value can be a constant, a function of temperature, or a function of density. A value of 0 (ignored) or 1 (identical to a vacuum) is typically recommended.
+Relatívna elektrická permitivita ([PMITT](/docs/sk/Keyword_Documentation/P/PMITT/)) je elektrická polarizovateľnosť materiálu v porovnaní s polarizovateľnosťou vákua. Možno ju vypočítať vydelením permitivity objektu permitivitou vákua. Bezrozmerný pomer by mal byť rovnaký v anglickej a SI sústave jednotiek. Hodnota môže byť konštantná, funkcia teploty alebo funkcia hustoty. Zvyčajne sa odporúča hodnota 0 (ignoruje sa) alebo 1 (totožná s vákuom).
 
-Relative electric permittivity is available but seldom used.
+Relatívna elektrická permitivita je k dispozícii, ale používa sa len zriedka.
 
-The permittivity of a vacuum ([ENVMPT](/docs/sk/Keyword_Documentation/E/ENVMPT/)) is defined in the Simulation Controls > Process Conditions menu. The typical value is provided below for reference.
+Priepustnosť vákua ([ENVMPT](/docs/sk/Keyword_Documentation/E/ENVMPT/)) je definovaná v ponuke Simulation Controls (Simulačné ovládacie prvky) > Process Conditions (Podmienky procesu). Typická hodnota je uvedená nižšie na porovnanie.
 
-8.85 x 10-15 F/mm (SI)   
-2.25 x 10-13 F/in (English)
+8,85 x 10-15 F/mm (SI)
+2,25 x 10-13 F/in (anglicky)

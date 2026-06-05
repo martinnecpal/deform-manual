@@ -1,62 +1,62 @@
 ---
 lang: sk
-title: "20.4. Tool Wear"
+title: "20.4. Opotrebenie nástrojov"
 ---
 
-# 20.4. Tool Wear
+# 20.4. Opotrebenie nástrojov
 
-20.4.1. Archard's model
+20.4.1. Archardov model
 
-20.4.2. Usui's model
+20.4.2. Usuiho model
 
-**[2D, 3D]** : Tool wear can be calculated for tools which are in contact with other objects using wear models under Tool wear tab. There are two predefined models for predicting wear: Archard’s model and Usui’s model. In addition to Archard's and Usui's models, user routine functionality has been also provided, where in user can evaluate any other model, using the basic model data like, sliding velocity, interface pressure and interface temperature. (See Fig. 20.4.1.).
+**[2D, 3D]** : Opotrebenie nástrojov, ktoré prichádzajú do styku s inými objektmi, je možné vypočítať pomocou modelov opotrebenia v záložke „Opotrebenie nástrojov“. Na predpovedanie opotrebenia sú k dispozícii dva preddefinované modely: Archardov model a Usuiho model. Okrem modelov Archarda a Usuiho je k dispozícii aj funkcia užívateľskej rutiny, v ktorej môže užívateľ vyhodnotiť akýkoľvek iný model pomocou základných údajov modelu, ako sú rýchlosť kĺzania, tlak na rozhraní a teplota na rozhraní. (Pozri obr. 20.4.1.).
 
-Wear models can be defined for each pair of objects that come into contact during the process, they are defined under Inter-Object Data. Wear rates are computed for the master object in a relation, and that object must have a mesh (therefore heat transfer calculations must be activated under Simulation Controls).****
+Pre každý pár objektov, ktoré sa počas procesu dotýkajú, je možné definovať modely opotrebenia; tieto sa nastavujú v časti „Inter-Object Data“. Miera opotrebenia sa vypočítava pre hlavný objekt vo vzťahu, pričom tento objekt musí mať sieť (preto musia byť v časti „Simulation Controls“ aktivované výpočty prenosu tepla).****
 
-Typically, the coefficients used for these models should come from a series of calibration experiments. In lieu of calibrated data, standard values can be used to obtain relative wear rates for similar processes. Proper technique for the modelling of coatings and surface treatments (such as nitriding) is still a topic of very active research. Therefore, comparison of the effects of different surface treatments is difficult without additional data. Contact DEFORM support at [support@deform.com](mailto:support@deform.com) for assistance in finding the latest research in this area. Nonetheless, the following guidelines can be offered:
+Koeficienty používané v týchto modeloch by mali zvyčajne pochádzať zo série kalibračných experimentov. Ak nie sú k dispozícii kalibrované údaje, na stanovenie relatívnych rýchlostí opotrebenia pri podobných procesoch možno použiť štandardné hodnoty. Správna technika modelovania povlakov a povrchových úprav (napríklad nitridácie) je stále predmetom veľmi aktívneho výskumu. Preto je porovnanie účinkov rôznych povrchových úprav bez dodatočných údajov náročné. Kontaktujte podporu DEFORM na adrese [support@deform.com](mailto:support@deform.com), ak potrebujete pomoc pri hľadaní najnovších výskumov v tejto oblasti. Napriek tomu je možné ponúknuť nasledujúce usmernenia:
 
-To use tool wear, the following conditions must be met:
+Na použitie opotrebenia nástroja musia byť splnené nasledujúce podmienky:
 
-  * Thermal calculations must be turned on.
+  * Musia byť zapnuté tepelné výpočty.
 
-  * The tool should be meshed.
+  * Nástroj by mal byť pokrytý sieťou.
 
-  * The tool should have a hardness value defined under Elements Data![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }})![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Hardness.
+  * Nástroj by mal mať hodnotu tvrdosti definovanú v položke Elements Data![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }})![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Hardness.
 
-  * The tool wear model should be turned on for the respective relation in the inter-object dialog and non-zero values should be placed for the tool wear model coefficients.
+  * V dialógovom okne pre vzťahy medzi objektmi je potrebné zapnúť model opotrebenia nástroja a pre koeficienty tohto modelu nastaviť hodnoty odlišné od nuly.
 
-_**Note:**_
+_**Poznámka:**_
 
-_From DEFORM v11.0 the material hardness data must be specified at the material level._
+_Od verzie DEFORM v11.0 je potrebné údaje o tvrdosti materiálu zadávať na úrovni materiálu._
 
-_This means hardness can be defined as a constant or a function of temperature._
+_To znamená, že tvrdosť možno definovať ako konštantu alebo ako funkciu teploty._
 
-The user can evaluate the total (integrated) wear depth up to a specified step for the process as well as the incremental wear depth for the time interval of the last step in the Post Processor. Additionally, the user can obtain the sliding velocities, contact pressure and interface temperatures at the contacting die surface in the Post Processor.
+V postprocesore môže používateľ vypočítať celkovú (integrálnu) hĺbku opotrebenia až po stanovený krok procesu, ako aj prírastkovú hĺbku opotrebenia za časový interval posledného kroku. Okrem toho môže používateľ v postprocesore získať údaje o rýchlostiach kĺzania, kontaktnom tlaku a teplotách na rozhraní na kontaktnej ploche matrice.
 
-This means for a given model for which deformation data has been computed, user can evaluate different tool wear models, without having to re-run the simulation. All the tool wear variables are stored for both the master and slave meshed objects.
+To znamená, že pre daný model, pre ktorý boli vypočítané údaje o deformácii, môže používateľ vyhodnotiť rôzne modely opotrebenia nástroja bez toho, aby musel simuláciu spúšťať nanovo. Všetky premenné opotrebenia nástroja sú uložené tak pre hlavný objekt, ako aj pre podriadené objekty so sieťou.
 
-**Update worn geometry:** User can turn on this check box to update the die geometry and mesh for meshed dies based on tool wear calculation. The geometry will be smoothened and updated with smoothing factor 5.
+**Aktualizácia geometrie opotrebovania:** Používateľ môže zaškrtnúť toto políčko, aby sa geometria a sieťová štruktúra sieťovaných foriem aktualizovali na základe výpočtu opotrebovania nástroja. Geometria sa vyhladí a aktualizuje s vyhladzovacím faktorom 5.
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_4_tool_wear/image001.jpg' | relative_url }})
 
-Inter object Tool wear window
+Okno opotrebenia nástrojov medzi objektmi
 
-## Archard's model 
+## Archardov model 
 
-Archard proposed a basic wear models based on the adhesion wear between the friction pairs. This model is generally better suited for discrete processes such as cold or hot forging. In these cases, abrasive wear is the dominant wear mode.
+Archard navrhol základné modely opotrebenia založené na adhéznom opotrebení medzi trenými pármi. Tento model sa vo všeobecnosti lepšie hodí pre diskrétne procesy, ako je studené alebo tepelné kovanie. V týchto prípadoch prevláda abrazívne opotrebenie.
 
 ![]({{ '/assets/equations/pre_processor/20_inter-object_data_definition/eq_20_4_1.jpg' | relative_url }}) |   
 ---|---  
   
-In the Archard wear equation, exponents a,b and c are dimensionless. If they are assumed to be 1 and K is assumed to be dimensionless, then hardenss [H] needs to be in units of MPa or KSI (depending on unit system).
+V Archardovej rovnici opotrebenia sú exponenty a, b a c bezrozmerné. Ak sa predpokladá, že ich hodnota je 1 a že K je bezrozmerné, potom musí byť tvrdosť [H] vyjadrená v jednotkách MPa alebo KSI (v závislosti od jednotkového systému).
 
-Brinell and Vickers hardness values can be converted to units of MPa by multiplying the hardness values by the metric standard gravity value (9.80665 m/s^2). If units of KSI are desired, then perform an additional conversion from MPa to KSI.
+Hodnoty tvrdosti podľa Brinella a Vickersa možno previesť na jednotky MPa vynásobením týchto hodnôt hodnotou metrickej štandardnej gravitačnej konštanty (9,80665 m/s²). Ak potrebujete jednotky KSI, vykonajte dodatočný prevod z MPa na KSI.
 
-Any hardness unit may be used in DEFORM, if it is used in conjunction with the coefficients that were calibrated to the specific hardness unit. For example, if coefficients were determined based on experimental HRC data, then the HRC hardness unit must be used in the DEFORM simulation that uses those coefficients.
+V programe DEFORM je možné použiť ľubovoľnú jednotku tvrdosti, ak sa používa v spojení s koeficientmi, ktoré boli kalibrované pre danú jednotku tvrdosti. Ak boli napríklad koeficienty stanovené na základe experimentálnych údajov v jednotkách HRC, v simulácii programu DEFORM, ktorá tieto koeficienty využíva, sa musí použiť jednotka tvrdosti HRC.
 
-There is a specific inter-relationship between the hardness unit and the K coefficient unit. The units of the K coefficient will depend on the hardness units that were utilized during coefficient calibration. The hardness and K coefficient units must provide a final wear rate in terms of Length/Time.
+Medzi jednotkou tvrdosti a jednotkou koeficientu K existuje špecifický vzájomný vzťah. Jednotky koeficientu K závisia od jednotiek tvrdosti, ktoré sa použili pri kalibrácii koeficientu. Jednotky tvrdosti a koeficientu K musia vyjadrovať konečnú rýchlosť opotrebenia vo vzťahu dĺžka/čas.
 
-For **Archard’s** **model** , the following coefficients will give reasonable results for common tool steels:
+V prípade **Archardovho** **modelu** poskytnú nasledujúce koeficienty primerané výsledky pre bežné nástrojové ocele:
 
 **a = 1**
 
@@ -66,27 +66,27 @@ For **Archard’s** **model** , the following coefficients will give reasonable 
 
 **K = 1e-02 ~ 1e-03**
 
-If the K=1e-02 ~ 1e-03 value is used, then hardness values should be entered using the Rockwell C hardness scale. 
+Ak sa použije hodnota K = 1e-02 ~ 1e-03, hodnoty tvrdosti by sa mali zadávať podľa Rockwellovej stupnice tvrdosti typu C. 
 
-It should be noted that these values are for qualitative comparison of similar processes only and will not give quantitative estimates of actual tool life.
+Je potrebné poznamenať, že tieto hodnoty slúžia výlučne na kvalitatívne porovnanie podobných procesov a neposkytujú kvantitatívne odhady skutočnej životnosti nástroja.
 
-## Usui's model
+## Usuiho model
 
-This model is generally better for continuous processes such as metal cutting, where diffusion is a major contributor to wear.
+Tento model sa vo všeobecnosti lepšie hodí pre kontinuálne procesy, ako je rezanie kovov, kde difúzia významne prispieva k opotrebeniu.
 
 ![]({{ '/assets/equations/pre_processor/20_inter-object_data_definition/eq_20_4_2.jpg' | relative_url }}) |   
 ---|---  
   
   
-For **Usui’s model** , typical values for machining processes are,
+Pre **Usuiho model** sú typické hodnoty pre obrábacie procesy nasledovné:
 
-**A = 1.0E-5** (or interface sliding velocity * interface pressure) -1
+**A = 1,0E-5** (alebo rýchlosť kĺzania na rozhraní * tlak na rozhraní) – 1
 
-**B = 1000** (order of magnitude of absolute interface temperature)
+**B = 1000** (rádu veľkosti absolútnej teploty na rozhraní)
 
-It should be noted that these values are for qualitative comparison of similar processes only, and will not give quantitative estimates of actual tool life.
+Je potrebné poznamenať, že tieto hodnoty slúžia iba na kvalitatívne porovnanie podobných procesov a neposkytujú kvantitatívne odhady skutočnej životnosti nástroja.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [20\. Inter-Object Data Definition](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/)
 

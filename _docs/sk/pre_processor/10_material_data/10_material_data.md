@@ -1,99 +1,99 @@
 ---
 lang: sk
-title: "10. Material Data"
+title: "10. Údaje o materiáloch"
 ---
 
-# 10\. Material Data
+# 10\. Údaje o materiáli
 
-The material properties window can be accessed by clicking the material list (See Fig. 10.1.).
+Okno s vlastnosťami materiálu je prístupné po kliknutí na zoznam materiálov (pozri obr. 10.1.).
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_material_data/10_image001.jpg' | relative_url }})
 
-Material list page in Operation tree
+Stránka so zoznamom materiálov v operačnom strome
 
-The material properties dialog is shown in Fig. 10.2. In order for a simulation to achieve a high level of accuracy it is important to have an understanding of the material properties required to specify a material used in DEFORM. The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. This section describes the material data that may be specified for a DEFORM simulation.
+Dialógové okno vlastností materiálu je znázornené na obr. 10.2. Aby simulácia dosiahla vysokú úroveň presnosti, je dôležité mať prehľad o vlastnostiach materiálu potrebných na špecifikáciu materiálu použitého v programe DEFORM. Požadované vlastnosti závisia od fyzikálnych javov, ktoré sa v programe DEFORM simulujú. Vlastnosti materiálu, ktoré musí používateľ špecifikovať, sú funkciou typov materiálov, ktoré používateľ využíva v simulácii. V tejto časti sú opísané údaje o materiáli, ktoré možno špecifikovať pre simuláciu v programe DEFORM.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_material_data/10_image002.jpg' | relative_url }})
 
-Material Properties page
+Stránka Vlastnosti materiálu
 
-**The different data sets are:**
+**Rôzne súbory údajov sú:**
 
   * [Plastic Data Definition](/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/)
   * [Elastic Data Definition](/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/)
   * [Thermal Data Definition](/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/)
   * [Diffusion Data Definition](/docs/sk/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/)
-  * Dislocation Data Definition
+  * Definícia údajov o dislokácii
   * [Grain Data Definition](/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/)
   * [Hardness Data Definition](/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/)
   * [Elec/ Mag Data Definition](/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/)
   * [Transformation Definition](/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/)
-  * Coarsening Data Definition
-  * Texture Data Definition
+  * Hrubšie definovanie údajov
+  * Definícia údajov o textúre
   * [Miscellaneous Data Definition](/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/)
 
-This chapter discusses the manner in which to define each data set, and for which type of simulation each of these is required.
+V tejto kapitole je opísaný spôsob definovania jednotlivých súborov údajov a typ simulácie, pre ktorú je každý z nich potrebný.
 
-The DEFORM material library contains several hundred data sets. Nearly all materials contain Plastic (flow stress), elastic and thermal data. Depending on the intended application, the material data may also include microstructure related data.
+Knižnica materiálov DEFORM obsahuje niekoľko stoviek súborov údajov. Takmer všetky materiály obsahujú plastické (napätie pri prúdení), elastické a tepelné údaje. V závislosti od zamýšľanej aplikácie môžu materiálové údaje obsahovať aj údaje týkajúce sa mikroštruktúry.
 
-The user should confirm that the material selected from the library is appropriate for the process they intend to model.
+Používateľ by mal potvrdiť, že materiál vybraný z knižnice je vhodný pre proces, ktorý má v úmysle modelovať.
 
-**Phases and mixtures (MSTMTR) [MIC]**  
-Material groups can be classified into two categories, Regular and Mixture. “Regular” materials are appropriate for modeling most metal processing operations, including most forming, cutting, or stress analysis problems. “Mixture” materials ([MSTMTR](/docs/sk/keyword_documentation/m/mstmtr/)) are used when a phase transformation is to be modeled in the simulation. The transforming material is modeled as a “mixture” of its constituent phases. For example, carbon steel might be modeled as a mixture of Austenite, Pearlite, Bainite, and Martensite. If a mixture material is defined, transformation rules should be defined which govern the transformation of one phase into another.
+**Fázy a zmesi (MSTMTR) [MIC]**
+Skupiny materiálov možno rozdeliť do dvoch kategórií: bežné a zmiešané. "Bežné" materiály sú vhodné na modelovanie väčšiny operácií spracovania kovov vrátane väčšiny problémov tvárnenia, rezania alebo analýzy napätia. "Zmesové" materiály ([MSTMTR](/docs/sk/keyword_documentation/m/mstmtr/)) sa používajú, ak sa má pri simulácii modelovať fázová premena. Transformujúci sa materiál sa modeluje ako "zmes" svojich zložiek - fáz. Napríklad uhlíková oceľ sa môže modelovať ako zmes austenitu, perlitu, bainitu a martenzitu. Ak je definovaný materiál zmesi, mali by sa definovať transformačné pravidlá, ktorými sa riadi transformácia jednej fázy na druhú.
 
-**Multiphase:** To add multiple Phases we need check the Mixture material check as shown in Below Fig. 10.3. Using ![]({{ '/assets/icons/pre_icons/mo_add_phase_button.jpg' | relative_url }}) option we can add new phases and using ![]({{ '/assets/icons/pre_icons/mo_remove_phase_button.jpg' | relative_url }}) option we can remove the added phases to the material.
+**Viacfázové:** Ak chceme pridať viac fáz, musíme zaškrtnúť políčko Mixture material check (Kontrola materiálu zmesi), ako je znázornené na nasledujúcom obrázku 10.3. Pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_add_phase_button.jpg' | relative_url }}) môžeme pridať nové fázy a pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_remove_phase_button.jpg' | relative_url }}) môžeme pridané fázy z materiálu odstrániť.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_material_data/10_image005.jpg' | relative_url }})
 
-Adding Phase for Mixture material
+Pridanie fázy pre materiál zmesi
 
-**Create a New Material** ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }})**** is used to define new material, after selecting this button new material adds into the Material list. By left mouse button double click in material list material name can be renamed and its properties must be defined in the respective tabs (Described in the further sections like Plastic data, Elastic data, etc.).
+**Vytvoriť nový materiál** ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }})**** slúži na definovanie nového materiálu, po výbere tohto tlačidla sa nový materiál pridá do zoznamu materiálov. Dvojklikom ľavého tlačidla myši v zozname materiálov je možné názov materiálu premenovať a jeho vlastnosti je potrebné definovať v príslušných záložkách (popísané v ďalších častiach ako Plastic data (Plastické údaje), Elastic data (Pružné údaje) atď.
 
-**Delete Current Materia****l**![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }})** **will delete the current material selected in the material list.
+**Delete Current Materia****l**![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }})** **vymaže aktuálny materiál vybraný v zozname materiálov.
 
-**Import Material from a file** ****![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})**** is used to import the material data from the DB or Key file into the problem setup.
+**Import materiálu zo súboru** ****![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})**** sa používa na import údajov o materiáli z DB alebo súboru s kľúčom do problémového nastavenia.
 
-**Load Material from library** **![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})** using this user can load material from DEFORM material database. (See Fig. 10.4.) Based upon the application user can select cold forming, hot forming, Heat treatment and Machining operations check boxes. Also other filters like material standard, unit system and user/system library will make the selection of material easier.
+**Načítať materiál z knižnice** **![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})** Pomocou tejto funkcie môže používateľ načítať materiál z databázy materiálov DEFORM. (Pozri obr. 10.4.) Na základe aplikácie môže používateľ vybrať zaškrtávacie políčka Tvarovanie za studena, Tvarovanie za tepla, Tepelné spracovanie a Obrábacie operácie. Výber materiálu uľahčia aj ďalšie filtre, ako je norma materiálu, systém jednotiek a knižnica používateľa/systému.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_material_data/10_image003.jpg' | relative_url }})
 
-Load material from library window
+Načítanie materiálu z okna knižnice
 
-**Save Material data to a file**![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }})****is used to save the material data from DEFORM problem setup in key file format. This material data can be used by importing back into the other problem setups.
+**Uloženie údajov o materiáli do súboru**![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }})****slúži na uloženie údajov o materiáli z nastavenia problému DEFORM vo formáte kľúčového súboru. Tieto údaje o materiáli možno použiť pri spätnom importe do iných nastavení problému.
 
-**S****ave Material data to library![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }})** is used save the user defined material into the deform user library. While saving in the user needs to save under the some category and can also give the application based filters and the comments (see Fig. 10.5.).
+**S****ave Material data to library![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }})** sa používa na uloženie používateľom definovaného materiálu do používateľskej knižnice deformácií. Pri ukladaní do používateľ musí uložiť pod niektorú kategóriu a môže tiež uviesť filtre založené na aplikácii a komentáre (pozri obr. 10.5.).
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_material_data/10_image004.jpg' | relative_url }})
 
-Save Material in User Material library window
+Uloženie materiálu v okne Knižnica používateľských materiálov
 
-**Copy Properties** ![]({{ '/assets/icons/pre_icons/mo_copy_properties.jpg' | relative_url }}) is used to copy the regular material properties like plastic, elastic, thermal etc. from one material to other while creating/defining the material data. (See Fig. 10.6.) In this dialog source and destination for copying the properties and which properties to be copied must be selected.
+**Kopírovanie vlastností** ![]({{ '/assets/icons/pre_icons/mo_copy_properties.jpg' | relative_url }}) sa používa na kopírovanie bežných materiálových vlastností, ako sú plastické, elastické, tepelné atď., z jedného materiálu do druhého pri vytváraní/definovaní materiálových údajov. (Pozri obr. 10.6.) V tomto dialógovom okne sa musí vybrať zdroj a cieľ kopírovania vlastností a ktoré vlastnosti sa majú kopírovať.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_material_data/10_image006.jpg' | relative_url }})
 
-Copy properties window
+Kopírovanie okna vlastností
 
-**Convert Units** ![]({{ '/assets/icons/pre_icons/mo_convert_units_button.jpg' | relative_url }}) is used to convert the current selected material from material list from SI to English or English to SI or user can use any other multiplication factor. (See Fig. 10.7.) Selecting the ![]({{ '/assets/icons/pre_icons/mo_si_to_english_button.jpg' | relative_url }}) button will display the multiplication factors for converting from SI to English, similarly for ![]({{ '/assets/icons/pre_icons/mo_english_to_si_button.jpg' | relative_url }}), selecting the ![]({{ '/assets/icons/pre_icons/mo_convert_button.jpg' | relative_url }}) button will convert and close the conversion window. This conversion table can be saved using ![]({{ '/assets/icons/pre_icons/mo_save.._button.jpg' | relative_url }}) button and can also edited by using wordpad/notepad and loaded back **UNITCONV.DAT** file using button.
+**Konvertovať jednotky** ![]({{ '/assets/icons/pre_icons/mo_convert_units_button.jpg' | relative_url }}) sa používa na konverziu aktuálne vybraného materiálu zo zoznamu materiálov zo SI na angličtinu alebo z angličtiny na SI alebo používateľ môže použiť akýkoľvek iný násobiaci faktor. (Pozri obr. 10.7.) Výberom tlačidla ![]({{ '/assets/icons/pre_icons/mo_si_to_english_button.jpg' | relative_url }}) sa zobrazia násobiace koeficienty pre prevod zo SI na angličtinu, podobne pre ![]({{ '/assets/icons/pre_icons/mo_english_to_si_button.jpg' | relative_url }}), výberom tlačidla ![]({{ '/assets/icons/pre_icons/mo_convert_button.jpg' | relative_url }}) sa vykoná prevod a zatvorí sa okno prevodu. Túto konverznú tabuľku možno uložiť pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_save.._button.jpg' | relative_url }}) a možno ju tiež upraviť pomocou wordpadu/notepadu a načítať späť súbor **UNITCONV.DAT** pomocou tlačidla.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_material_data/10_image007.jpg' | relative_url }})
 
-Material Unit converter window
+Okno konvertora materiálových jednotiek
 
-**Material Assigning for object**
+**Priradenie materiálu pre objekt**
 
-Below Fig. 10.8. shows the material window. User can assign required material from the list or can import and save from file or library. User can also add new material, even edit and delete the material in list from object material window. 
+Na nasledujúcom obr. 10.8 je zobrazené okno materiálu. Používateľ môže priradiť požadovaný materiál zo zoznamu alebo ho môže importovať a uložiť zo súboru alebo knižnice. Používateľ môže tiež pridať nový materiál, dokonca môže upravovať a odstraňovať materiál v zozname z okna materiálu objektu.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_material_data/10_image008.jpg' | relative_url }})
 
-Material window
+Okno materiálu
 
-Once after adding material click on ![]({{ '/assets/icons/pre_icons/mo_edit_material_button.jpg' | relative_url }}) button, material window will open as shown in Fig. 10.9.
+Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_material_button.jpg' | relative_url }}), otvorí sa okno materiálu, ako je znázornené na obr. 10.9.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_material_data/10_image009.jpg' | relative_url }})
 
-Edit material window
+Okno Úprava materiálu
 
-Related Topics:
+Súvisiace témy:
 
 [10.1. Plastic Data Definition](/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/)
 
@@ -103,7 +103,7 @@ Related Topics:
 
 [10.4. Diffusion Data Definition](/docs/sk/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/)
 
-10.5. Dislocation Data Definition
+10.5. Definícia údajov o dislokácii
 
 [10.6. Grain Data Definition](/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/)
 
@@ -113,8 +113,8 @@ Related Topics:
 
 [10.9 Transformation Data Definition](/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/)
 
-10.10. Coarsening Data Definition
+10.10. Definícia hrubých údajov
 
-10.11. Texture Data Definition
+10.11. Definícia údajov o textúre
 
 [10.12. Miscellaneous Data Definition](/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/)

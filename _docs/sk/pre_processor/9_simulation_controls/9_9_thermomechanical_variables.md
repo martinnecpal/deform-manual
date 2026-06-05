@@ -1,30 +1,30 @@
 ---
 lang: sk
-title: "9.9. Thermomechanical variables"
+title: "9.9. Termomechanické veličiny"
 ---
 
-# 9.9. Thermomechanical variables ![]({{ '/assets/icons/pre_icons/mo_thermomeschanical_variables.jpg' | relative_url }})
+# 9.9. Termomechanické veličiny ![]({{ '/assets/icons/pre_icons/mo_thermomeschanical_variables.jpg' | relative_url }})
 
-Using Thermomechanical variables ( Fig. 9.9.1.) option user can calculate the time contours, heating or cooling rate. User can also define multiple sets of time-temperature variables.
+Pomocou možnosti „Termomechanické premenné“ (obr. 9.9.1.) môže používateľ vypočítať časové krivky, rýchlosť ohrevu alebo ochladzovania. Používateľ môže tiež definovať viacero súborov časovo-teplotných premenných.
 
-Following are list of variables:
+Nižšie je uvedený zoznam premenných:
 
-  * Time between two temperatures
-  * Reciprocal of Cooling/heating rate between two temperature
-  * Time to reach a temperature (heating)
-  * Time to reach a temperature (cooling)
-  * Time from a temperature to end (heating)
-  * Time from a temperature to end (cooling)
-  * Exceedance Curve number
-  * Strain above a temperature
-  * Strain below a temperature
-  * Strain above a strain rate
+  * Časový interval medzi dvoma teplotami
+  * Vzájomný pomer rýchlosti ochladzovania/ohrievania medzi dvoma teplotami
+  * Čas potrebný na dosiahnutie teploty (ohrev)
+  * Doba potrebná na dosiahnutie teploty (chladenie)
+  * Čas od dosiahnutia teploty do ukončenia (ohrev)
+  * Čas od dosiahnutia teploty do ukončenia (chladenie)
+  * Číslo krivky prekročenia
+  * Kysnutie pri teplote nad
+  * Kvasenie pri teplote nižšej ako
+  * Deformácia pri rýchlosti deformácie
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_9_thermomechanical_variables/9_9_image001.jpg' | relative_url }})
 
-Thermomechanical variables window
+Okno s termomechanickými premennými
 
-Related Topics:
+Súvisiace témy:
 
 [9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
 [9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   

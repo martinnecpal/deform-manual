@@ -1,112 +1,112 @@
 ---
 lang: sk
-title: "13.3. 3D Brick Mesh Generation"
+title: "13.3. Generovanie 3D siete z tehál"
 ---
 
-# 13.3. 3D Brick Mesh Generation
+# 13.3. Generovanie 3D siete z tehál
 
-13.3.1. General Settings for Brick mesh  
-13.3.2. 2D Cross section for Brick mesh  
-13.3.3. Mesh Weighing Factors  
-13.3.4. Mesh Density Window for Brick mesh  
-13.3.5. Coating Mesh  
-13.3.6. Remeshing Criteria  
-13.3.7. Advanced Settings
+13.3.1. Všeobecné nastavenia pre Brick mesh
+13.3.2. 2D prierez pre tehlovú sieť
+13.3.3. Faktory váženia siete
+13.3.4. Okno hustoty siete pre tehlovú sieť
+13.3.5. Povlaková sieť
+13.3.6. Kritériá na opravu
+13.3.7. Rozšírené nastavenia
 
-The below Fig. 13.3.1. shows the Brick mesh generation options in Expert mode.
+Na nasledujúcom Obr. 13.3.1. sú zobrazené možnosti generovania siete Brick v režime Expert.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image001.jpg' | relative_url }})
 
-Expert mode Brick mesh generation
+Expertný režim Generovanie siete Brick
 
-## General Settings for Brick mesh
+## Všeobecné nastavenia pre Brick mesh
 
-**Uniform Thickness of Layers** : When this option is selected, a mesh with layers of uniform thickness is generated based on the number of layers defined. 
+**Jednotná hrúbka vrstiev** : Keď je táto možnosť vybratá, na základe počtu definovaných vrstiev sa vytvorí sieť s rovnomernou hrúbkou vrstiev.
 
-**Finer mesh Areas** :User can define the finer mesh areas by defining number of layers required within specified area as shown in Fig. 13.3.2.
+**Oblasti s jemnejšou sieťou** :Používateľ môže definovať oblasti s jemnejšou sieťou definovaním počtu vrstiev požadovaných v rámci určenej oblasti, ako je znázornené na obr. 13.3.2.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image003.jpg' | relative_url }})
 
-Finer Mesh Areas Definition
+Definícia oblastí s jemnejšou sieťou
 
-The density of mesh layers can be controlled by using Fine Mesh areas option. User can control the number of mesh layers within area by selecting the start point and end point of the area. Fig. 13.3.3. shows the object with variable mesh density.
+Hustotu vrstiev siete môžete ovládať pomocou možnosti Fine Mesh areas. Používateľ môže kontrolovať počet vrstiev siete v rámci oblasti výberom počiatočného a koncového bodu oblasti. Na obr. 13.3.3. je znázornený objekt s premenlivou hustotou siete.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image002.jpg' | relative_url }})
 
-Example showing Finer Mesh Areas definition
+Príklad zobrazujúci definíciu oblastí s jemnejšou sieťou
 
-**Sheet application:**
+**Aplikácia listu:**
 
-Sheet application option activates projection-based remeshing for sheet-shaped objects that have been constructed with brick elements. The setting only applies to an object that was initially generated as 2D mesh and then extruded into 3D mesh.
+Možnosť aplikácie listu aktivuje remeshing založený na projekcii pre objekty v tvare listu, ktoré boli skonštruované pomocou tehlových prvkov. Nastavenie sa vzťahuje len na objekt, ktorý bol pôvodne vytvorený ako 2D sieť a potom vytlačený do 3D siete.
 
-When sheet application option is deactivated (default), the object is meshed with tet elements during any subsequent remeshing.
+Ak je možnosť aplikácie listu deaktivovaná (predvolené nastavenie), objekt sa pri každom následnom remeshovaní sieťuje pomocou tetových prvkov.
 
-With the setting activated, brick remeshing will be attempted using projection techniques. The remesher will fall back to tet elements if the deformed shape significantly deviates from a sheet shape, since such a condition may cause the sheet brick remesher to fail. (See Fig. 13.3.4.)
+Ak je toto nastavenie aktivované, pokúsi sa o remeselnú úpravu tehál pomocou projekčných techník. Omietanie sa vráti k tetovým prvkom, ak sa deformovaný tvar výrazne odchyľuje od tvaru plechu, pretože takýto stav môže spôsobiť zlyhanie omietania tehál z plechu. (Pozri obr. 13.3.4.)
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image009.jpg' | relative_url }})
 
-Sheet application option selelcted 
+Vybraná možnosť aplikácie hárkov
 
-## 2D Cross section for Brick mesh
+## 2D prierez pre sieť Brick
 
-In order to generate a brick mesh a 2D cross-section is defined which is meshed and either extruded or revolved with specified number of layers depending on the 3D geometry requirement.
+Na vytvorenie tehlovej siete sa definuje 2D prierez, ktorý sa v závislosti od požiadavky na 3D geometriu buď vytlačí, alebo sa otáča s určeným počtom vrstiev.
 
-**Mapped Mesh Generation** : Mapped meshing can be used at the initial stages of forming process. As the geometry of the workpiece takes a complex shape during forming, mesh is subjected to several remeshings and mapped meshing may not be able to survive such changes to geometry and remeshing may fail. Mapped mesh generation can been seen in the Fig. 13.3.5.
+**Generovanie mapovej siete** : Mapované siete možno použiť v počiatočných fázach procesu tvárnenia. Keďže geometria obrobku nadobúda počas tvárnenia zložitý tvar, sieť je vystavená niekoľkým zmenám sieťovania a mapované sieťovanie nemusí byť schopné prežiť takéto zmeny geometrie a zmena sieťovania môže zlyhať. Generovanie mapovanej siete je vidieť na obr. 13.3.5.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image004.jpg' | relative_url }})
 
-Mapped Mesh Generation for 2D Cross-section
+Generovanie mapovanej siete pre 2D prierez
 
-**Use coarse internal mesh:** User can generate coarse mesh inside region as shown in Fig. 13.3.6.
+**Použiť hrubú vnútornú sieť:** Používateľ môže vytvoriť hrubú sieť vo vnútri oblasti, ako je znázornené na obr. 13.3.6.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image005.jpg' | relative_url }})
 
-Coarse internal mesh generation for 2D Cross-section
+Generovanie hrubej vnútornej siete pre 2D prierez
 
-## Mesh Weighing Factors
+## Váhové faktory siete
 
-The weighting factors or parameters (system defined mesh density) for boundary curvature, temperature, strain and strain rate specify relative mesh density weights to be assigned to the associated parameter. For more information Refer [13.2.5. Mesh weighting factors.](13_2_3d_tet_mesh_generation.htm#13.2.5._Mesh_weighting_factors)
+Váhové faktory alebo parametre (systémovo definovaná hustota siete) pre hraničné zakrivenie, teplotu, deformáciu a mieru deformácie určujú relatívne váhy hustoty siete, ktoré sa majú priradiť príslušnému parametru. Ďalšie informácie nájdete v časti [13.2.5. Mesh weighting factors.](13_2_3d_tet_mesh_generation.htm#13.2.5._Mesh_weighting_factors)
 
-## **Mesh Density Window for Brick mesh**
+## **Okienko hustoty siete pre sieť Brick**
 
-The Mesh density window (See Fig. 13.3.7.) concept is similar to a user defined mesh density. The mesh density specified for a given window is applied to any geometry point (node or STL vertex) inside the window. However, the mesh density window is used during remeshing as well as initial mesh generation, whereas user defined mesh densities are used only during initial generation. It can also be assigned a velocity, or follow another object's movement and it can be defined in an area where the workpiece has not yet been deformed through.
+Koncept okna Hustota siete (pozri obr. 13.3.7.) je podobný konceptu hustoty siete definovanej používateľom. Hustota siete zadaná pre dané okno sa aplikuje na akýkoľvek geometrický bod (uzol alebo vrchol STL) vo vnútri okna. Okno hustoty siete sa však používa počas opätovného sieťovania aj počiatočného generovania siete, zatiaľ čo hustoty siete definované používateľom sa používajú len počas počiatočného generovania. Môže jej byť tiež priradená rýchlosť alebo môže sledovať pohyb iného objektu a môže byť definovaná v oblasti, cez ktorú ešte nebol obrobok deformovaný.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image006.jpg' | relative_url }})
 
-Mesh density windows for 2D
+Okná hustoty siete pre 2D
 
-## Coating Mesh
+## Povlak Mesh
 
-The user can add coating layers using this option and generate mesh for the same. Coating mesh is a thin layer of elements along the object boundary with specific characteristics. For added coating layers user can assign material. For further information on the usage of coating mesh please refer to [Appendix XI](/docs/sk/appendices/appendix_xi__near_surface_mesh_functions/).
+Používateľ môže pomocou tejto možnosti pridať vrstvy povlaku a vygenerovať pre ne sieť. Povlaková sieť je tenká vrstva prvkov pozdĺž hranice objektu so špecifickými vlastnosťami. Pre pridané povlakové vrstvy môže používateľ priradiť materiál. Ďalšie informácie o používaní povlakovej siete nájdete v dokumente [Appendix XI](/docs/sk/appendices/appendix_xi__near_surface_mesh_functions/).
 
-## Remeshing Criteria
+## Kritériá odstraňovania
 
-Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See Fig. 13.3.8.) contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they are Interference Depth ([RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/)),Max. Time Increment ([RMTIME](/docs/sk/keyword_documentation/r/rmtime/)), Max. Step Increment ([RMSTEP](/docs/sk/keyword_documentation/r/rmstep/)) and Max. Stroke Increment ([RMSTRK](/docs/sk/keyword_documentation/r/rmstrk/)). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed. During the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.
+Kritériá remeshingu (Autoremesh) sú najvhodnejším spôsobom, ako zvládnuť remeshing objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Remeshing Criteria (Kritériá opätovného remeshovania) (pozri obr. 13.3.8.) obsahuje skupinu parametrov, ktoré riadia, kedy a ako často sa bude sieť na objekte s okom regenerovať na základe priradenia určitých spúšťačov. Existujú štyri kľúčové slová, ktoré riadia spustenie postupu remeshingu pre objekt, sú to Hĺbka zásahu ([RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/)),Max. Time Increment ([RMTIME](/docs/sk/keyword_documentation/r/rmtime/)), Max. Step Increment ([RMSTEP](/docs/sk/keyword_documentation/r/rmstep/)) a Max. Prírastok zdvihu ([RMSTRK](/docs/sk/keyword_documentation/r/rmstrk/)). Keď sa splnia kritériá remeshovania podľa niektorého z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (záporný jakobián), objekt sa remeshuje. Ak objekt počas simulácie splní niektoré z kritérií remeshingu, vygeneruje sa nová sieť, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image007.jpg' | relative_url }})
 
-Remesh criteria option for Brick mesh
+Možnosť kritérií Remesh pre sieť Brick
 
   
-For details about Maximum interference depth (RMDPTH), Maximum stroke increment (RMSTRK), Maximum time increment (RMTIME), Maximum step increment (RMSTEP) and Purpose of Criteria please refer [13.2.8. Remeshing criteria.](13_2_3d_tet_mesh_generation.htm#13.2.8._Remeshing_criteria)
+Podrobnosti o maximálnej hĺbke zásahu (RMDPTH), maximálnom prírastku zdvihu (RMSTRK), maximálnom prírastku času (RMTIME), maximálnom prírastku kroku (RMSTEP) a účele kritérií nájdete v časti [13.2.8. Remeshing criteria.](13_2_3d_tet_mesh_generation.htm#13.2.8._Remeshing_criteria)
 
-## Advanced Settings
+## Rozšírené nastavenia
 
   
-Below Fig. 13.3.9. shows the Advanced Settings window for 3D Brick mesh.
+Na nasledujúcom Obr. 13.3.9. je zobrazené okno Advanced Settings (Rozšírené nastavenia) pre 3D Brick mesh.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image008.jpg' | relative_url }})
 
-Advanced settings window for Brick mesh 
+Okno pokročilých nastavení pre sieť Brick
 
-**Grid resolution**(**MGGRID**)
+**Rozlíšenie siete**(**MGGRID**)
 
-When an object is meshed in 2D, a sampling grid is required to discretize density of the mesh throughout the starting geometry. Grid resolution ([MGGRID](/docs/sk/keyword_documentation/m/mggrid/)) specifies the spacing of the sampling grids that are used to sample mesh densities. Increasing the value of X division or Y division will result in sharper gradients between areas of differing mesh density. In the case of blanking, where a very high mesh gradient is required over a narrow region, these values may need to increase to capture high changes in mesh gradient over short distances.
+Keď je objekt vynesený do 2D siete, na diskretizáciu hustoty siete v celej východiskovej geometrii je potrebná vzorkovacia sieť. Rozlíšenie mriežky ([MGGRID](/docs/sk/keyword_documentation/m/mggrid/)) určuje rozstupy vzorkovacích mriežok, ktoré sa používajú na vzorkovanie hustoty siete. Zvýšenie hodnoty delenia X alebo delenia Y bude mať za následok ostrejšie gradienty medzi oblasťami s rôznou hustotou siete. V prípade zaslepenia, keď sa vyžaduje veľmi vysoký gradient siete v úzkej oblasti, môže byť potrebné tieto hodnoty zvýšiť, aby sa zachytili veľké zmeny gradientu siete na krátkych vzdialenostiach.
 
-**Node addition parameters** (**MGERR**)  
-The node addition parameters ([MGERR](/docs/sk/keyword_documentation/m/mgerr/)) specify the maximum distance and angle error permitted between the object boundary and its associated grid element side. The distance and angle tolerances are used to capture critical boundary geometry that might otherwise be lost when the mesh is generated. If an object is required to capture very small features, the maximum distance can be decreased or if a node needs to be placed on a shallow angle, the angle error can be decreased as well. Rarely will the user ever have to change these values. For parts that are very small, a value of 0.01% of the object’s bounding box is a good starting number that can be used for [MGERR](/docs/sk/keyword_documentation/m/mgerr/) for better handling of mesh resolution.
+**Parametre pridávania uzlov** (**MGERR**)
+Parametre pridávania uzlov ([MGERR](/docs/sk/keyword_documentation/m/mgerr/)) určujú maximálnu povolenú chybu vzdialenosti a uhla medzi hranicou objektu a jeho pridruženou stranou prvku mriežky. Tolerancie vzdialenosti a uhla sa používajú na zachytenie kritickej geometrie hraníc, ktorá by sa inak mohla stratiť pri generovaní siete. Ak sa vyžaduje, aby objekt zachytil veľmi malé prvky, maximálna vzdialenosť sa môže znížiť, alebo ak je potrebné umiestniť uzol na malom uhle, môže sa znížiť aj chyba uhla. Len zriedkakedy bude musieť používateľ tieto hodnoty meniť. V prípade dielov, ktoré sú veľmi malé, je hodnota 0,01 % ohraničenia objektu dobrým východiskovým číslom, ktoré možno použiť pre [MGERR](/docs/sk/keyword_documentation/m/mgerr/) na lepšiu manipuláciu s rozlíšením siete.
 
-Related Topics:
+Súvisiace témy:
 
 [13\. Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/)
 

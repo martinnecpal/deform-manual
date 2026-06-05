@@ -1,35 +1,35 @@
 ---
 lang: sk
-title: "9.8. Control Files"
+title: "9.8. Kontrolné súbory"
 ---
 
-# 9.8. Control files ![]({{ '/assets/icons/pre_icons/mo_control_files.jpg' | relative_url }})
+# 9.8. Kontrolné súbory ![]({{ '/assets/icons/pre_icons/mo_control_files.jpg' | relative_url }})
 
-9.8.1. Category 1
+9.8.1. Kategória 1
 
-  * Double corner constraints
+  * Dvojité rožné obmedzenia
 
-  * Solver switch control
+  * Ovládanie prepínača riešiteľa
 
-**[3D]** : There are many different specialized features within DEFORM - Preprocessor that are controlled through data files. The purpose for this type of implementation is that these functions are used in only a few rare instances and if they find popular use, they can be incorporated into DEFORM keywords. When these data files are used, the functionality is available if the data file is located in the same directory as the current problem running. Since they are not contained within neither in database nor the keyword files, the control file has to be moved with the database or the keyword to run the problem with the same functionality if a different directory or computer is used to run a simulation. When one of these control files are used, a warning is automatically posted in the message file heading letting the user know that one of these files exists. 
+**[3D]** : V rámci programu DEFORM – Preprocessor existuje mnoho rôznych špecializovaných funkcií, ktoré sa ovládajú prostredníctvom dátových súborov. Účelom tohto typu implementácie je, že tieto funkcie sa používajú len vo veľmi zriedkavých prípadoch a ak sa stanú populárnymi, môžu byť začlenené do kľúčových slov programu DEFORM. Pri použití týchto dátových súborov je funkcia dostupná, ak sa dátový súbor nachádza v tom istom adresári ako aktuálny spustený problém. Keďže nie sú obsiahnuté ani v databáze, ani v súboroch kľúčových slov, kontrolný súbor sa musí presunúť spolu s databázou alebo kľúčovým slovom, aby sa problém spustil s rovnakou funkčnosťou, ak sa na spustenie simulácie používa iný adresár alebo počítač. Pri použití jedného z týchto riadiacich súborov sa automaticky zobrazí varovanie v hlavičke súboru správ, ktoré informuje používateľa o existencii jedného z týchto súborov. 
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_8_control_files/9_8_image001.jpg' | relative_url }})
 
-Control files category1 settings
+Nastavenia súborov kategórie 1
 
-From version 6.0, these data files can be specified through the graphical interface in the Control File window. (See Fig. 9.8.1.)
+Od verzie 6.0 je možné tieto dátové súbory špecifikovať prostredníctvom grafického rozhrania v okne „Control File“ (Pozri obr. 9.8.1.)
 
-## Category 1
+## Kategória 1
 
-**Double corner constraints**
+**Obmedzenia dvoch rohov**
 
-This defines two angles where if a node is contacting a die corner an angle between these values, the node will be given a double contact condition. This is further explained in the [Appendix XV: The Double Concave Corner Constraint.](/docs/sk/appendices/appendix_xv_the_double_concave_corner_constraint/)
+Týmto sa definujú dva uhly, pri ktorých, ak sa uzol dotýka rohu čipu v uhle medzi týmito hodnotami, bude pre tento uzol nastavená podmienka dvojitého kontaktu. Bližšie vysvetlenie nájdete v [Appendix XV: The Double Concave Corner Constraint.](/docs/sk/appendices/appendix_xv_the_double_concave_corner_constraint/)
 
-**Solver switch control**
+**Ovládanie prepínača riešiteľa**
 
-This defines a number of elements where the switch to sparse solver is blocked. The purpose of this is to prevent the sparse solver from being activated in cases where the problem is too large.
+Týmto sa definuje niekoľko prípadov, v ktorých je prechod na riešiteľ riedkych matíc blokovaný. Cieľom je zabrániť aktivácii riešiteľa riedkych matíc v prípadoch, keď je úloha príliš rozsiahla.
 
-Related Topics:
+Súvisiace témy:
 
 [9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
 [9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   

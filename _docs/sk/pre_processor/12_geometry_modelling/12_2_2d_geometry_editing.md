@@ -1,264 +1,264 @@
 ---
 lang: sk
-title: "12.2. 2D Geometry Data Editing"
+title: "12.2. Úprava údajov 2D geometrie"
 ---
 
-# 12.2. 2D Geometry Data Editing
+# 12.2. Úprava údajov 2D geometrie
 
-12.2.1. 2D Geometry Edit Tools
+12.2.1. Nástroje na úpravu 2D geometrie
 
-12.2.2. Display or View Modification options
+12.2.2. Zobrazenie alebo zobrazenie možností úprav
 
-12.2.3. 2D Geometry Editor Property options
+12.2.3. Možnosti vlastností 2D editora geometrie
 
-12.2.4. Importing Multiple Boundary Geometries
+12.2.4. Importovanie viacerých hraničných geometrií
 
-12.2.5. Defining and Editing Multiple Boundary Geometries
+12.2.5. Definovanie a úprava viacerých hraničných geometrií
 
-The 2D Geometry editor is used to create geometry for an object or to edit the existing geometry. Imported geometry can be modified in Edit Geometry window. This option can be accessed from Geometry page clicking on ![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) label as shown in Fig. 12.2.1.
+Editor 2D geometrie sa používa na vytvorenie geometrie objektu alebo na úpravu existujúcej geometrie. Importovanú geometriu možno upraviť v okne Upraviť geometriu. Táto možnosť je prístupná zo stránky Geometria kliknutím na štítok ![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg), ako je znázornené na obr. 12.2.1.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image001.jpg)
 
-2D Geometry Editor option
+Možnosť 2D Geometry Editor
 
-Observe the options available to create and modify the geometry as shown in below Fig. 12.2.2.
+Pozrite si dostupné možnosti na vytvorenie a úpravu geometrie, ako je znázornené na nasledujúcom obr. 12.2.2.
 
   
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image002.jpg)
 
-Edit Geometry Window
+Okno na úpravu geometrie
 
-## 2D Geometry Edit Tools
+## Nástroje na úpravu 2D geometrie
 
-Various options available for editing 2D geometry are explained below,
+Nižšie sú vysvetlené rôzne možnosti úprav 2D geometrie,
 
-**Select**![](../../../assets/Icons/Pre_icons/MO_Click_Select.jpg) :**** Select Tool is used to select the vertex or Edge of the geometry. Using this vertex or edge can be positioned by drag and drop.
+**Výber**![](../../../assets/Icons/Pre_icons/MO_Click_Select.jpg) :**** Nástroj Výber sa používa na výber vrcholu alebo hrany geometrie. Pomocou tohto vertexu alebo hrany je možné polohovať ich ťahaním a púšťaním.
 
-**Area select** ![](../../../assets/Icons/Pre_icons/MO_Area select.jpg) : Area Select tool is used to select the geometry more than one entity within a box.
+**Výber oblasti** ![](../../../assets/Icons/Pre_icons/MO_Area select.jpg) : Nástroj Výber oblasti sa používa na výber geometrie viac ako jednej entity v rámci poľa.
 
-**Create Loop** ![](../../../assets/Icons/Pre_icons/MO_Create_loop.jpg) : Create Loop tool is used to create the geometry loop by creating points and connecting them. Simple geometry as shown in Fig is created by using create loop in 7 steps as shown in Fig. 12.2. 3.
+**Vytvorenie slučky** ![](../../../assets/Icons/Pre_icons/MO_Create_loop.jpg) : Nástroj Create Loop (Vytvoriť slučku) sa používa na vytvorenie geometrickej slučky vytvorením bodov a ich spojením. Jednoduchá geometria, ako je znázornená na obr, sa vytvorí pomocou funkcie create loop v 7 krokoch, ako je znázornené na obr. 12.2. 3.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image003.jpg)
 
-Simple closed loop with geometry coordinates table
+Jednoduchá uzavretá slučka s tabuľkou geometrických súradníc
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image004.jpg)
 
-Steps to create the simple geometry using create loop tool
+Kroky na vytvorenie jednoduchej geometrie pomocou nástroja Create Loop
 
-If user not able to figure it out the vertex coordinate with the help of grid lines or grid points (See Fig. 12.2.4.) then geometry points coordinates can be directly entered or changed from the geometry table at right bottom side in geometry tab (See Fig. 12.2.4.). Grid lines can be adjusted to the required dimension by entering the distance between greed lines/points in the field next to grid lines selection.
+Ak používateľ nie je schopný zistiť súradnice vrcholov pomocou mriežkových čiar alebo mriežkových bodov (pozri obr. 12.2.4.), potom súradnice geometrických bodov môže priamo zadať alebo zmeniť z geometrickej tabuľky v pravej dolnej časti v záložke geometria (pozri obr. 12.2.4.). Línie mriežky možno upraviť na požadovaný rozmer zadaním vzdialenosti medzi chamtivými líniami/bodmi do poľa vedľa výberu línií mriežky.
 
-**Add Point to Loop** ![](../../../assets/Icons/Pre_icons/MO_Add_points_to_loop.jpg) : Add Point Loop tool is used to add the new points to an existing loop. After adding check and ensure the added points coordinates in geometry tab. If the points coordinates are not accurate then user has to correct by double clicking on respective cell in geometry tab. Typical example of adding points before introducing the fillet is as shown in Fig. 12.2.5.
+**Pridanie bodu do slučky** ![](../../../assets/Icons/Pre_icons/MO_Add_points_to_loop.jpg) : Nástroj na pridanie bodu do slučky sa používa na pridanie nových bodov do existujúcej slučky. Po pridaní skontrolujte a zaistite súradnice pridaných bodov na karte geometrie. Ak sú súradnice bodov nepresné, používateľ ich musí opraviť dvojitým kliknutím na príslušnú bunku na karte geometrie. Typický príklad pridávania bodov pred zavedením kružnice je uvedený na obr. 12.2.5.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image005.jpg)
 
-Adding points to an existing loop
+Pridanie bodov do existujúcej slučky
 
-**Delete Point** ![](../../../assets/Icons/Pre_icons/MO_Delete point.jpg) : Delete Point tool is used to delete the point in the loop. For simple example as shown in the Fig. 12.2.6.
+**Odstránenie bodu** ![](../../../assets/Icons/Pre_icons/MO_Delete point.jpg) : Nástroj na odstránenie bodu sa používa na odstránenie bodu v slučke. Pre jednoduchý príklad, ako je znázornené na obr. 12.2.6.
 
   
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image006.jpg)
 
-Deleting the point from the loop
+Odstránenie bodu zo slučky
 
-**Round corner**![](../../../assets/Icons/Pre_icons/MO_Round_corner.jpg) : Round Corner tool is used to create fillet at selected point. When user selects the corner system shows a field to enter the radius as shown in Fig. 12.2.7.
+**Krúhly roh**![](../../../assets/Icons/Pre_icons/MO_Round_corner.jpg) : Nástroj Okrúhly roh sa používa na vytvorenie filetovania vo vybranom bode. Keď používateľ vyberie roh, systém zobrazí pole na zadanie polomeru, ako je znázornené na obr. 12.2.7.
 
   
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image007.jpg)
 
-Round corner creation for the geometry
+Vytvorenie okrúhleho rohu pre geometriu
 
-**Set Angle** ![](../../../assets/Icons/Pre_icons/MO_Set_angle.jpg) : Set Angle tool is used to change the angle of edge. When user select the edge (Step-1) system display the edge current angle, by clicking on the displaying angle for the Edge will display the Angle field in blue color on display window (Step-2) then change the current angle (Step-3) and press ENTER button to apply as shown in Fig. 12.2.8.
+**Nastavenie uhla** ![](../../../assets/Icons/Pre_icons/MO_Set_angle.jpg) : Nástroj Nastavenie uhla sa používa na zmenu uhla hrany. Keď používateľ vyberie hranu (Krok-1), systém zobrazí aktuálny uhol hrany, kliknutím na zobrazenie uhla pre hranu sa v okne zobrazenia zobrazí pole Uhol modrou farbou (Krok-2), potom zmeňte aktuálny uhol (Krok-3) a stlačením tlačidla ENTER použite, ako je znázornené na obr. 12.2.8.
 
   
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image008.jpg)
 
-Example to Set angle for an edge
+Príklad nastavenia uhla pre hranu
 
-**Move**![](../../../assets/Icons/Pre_icons/MO_Move.jpg) : Move tool is used to re position the point by dragging it to other location. To move any edge or area first user need to select the edge/area (Step-1), then by selecting Move tool clicking on selected edge/area will display the X,Y coordinates field in blue color on display window (Step-2). The required moving distance along X and Y direction to be entered (Step-3) and press ENTER keyboard button to apply as shown in Fig. 12.2.9.
+**Presun**![](../../../assets/Icons/Pre_icons/MO_Move.jpg) : Nástroj Presun sa používa na zmenu polohy bodu jeho pretiahnutím na iné miesto. Ak chcete presunúť akúkoľvek hranu alebo oblasť, používateľ musí najprv vybrať hranu/oblasť (krok 1), potom výberom nástroja Move (Presun) kliknutím na vybranú hranu/oblasť sa v okne zobrazenia zobrazí pole súradníc X,Y modrou farbou (krok 2). Je potrebné zadať požadovanú vzdialenosť presunu v smere X a Y (Krok-3) a stlačiť tlačidlo klávesnice ENTER, aby sa použil postup zobrazený na obr. 12.2.9.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image009.jpg)
 
-Example to move edge or area
+Príklad na presun okraja alebo oblasti
 
-**Move to centerline** ![](../../../assets/Icons/Pre_icons/MO_Move_to_centerline.jpg) : Using this tool user can move the loop's nearest and equidistant points to center line as shown in Fig. 12.2.10. User simply needs to select the Move to centerline tool as shown in Fig. 12.2.10.
+**Presun na stredovú čiaru** ![](../../../assets/Icons/Pre_icons/MO_Move_to_centerline.jpg) : Pomocou tohto nástroja môže používateľ presunúť najbližšie a rovnako vzdialené body slučky na stredovú čiaru, ako je znázornené na obr. 12.2.10. Používateľ jednoducho musí vybrať nástroj Presun na os, ako je znázornené na obr. 12.2.10.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image010.jpg)
 
-Example to Move the loop to centerline
+Príklad na presunutie slučky na os
 
-**Offset** ![](../../../assets/Icons/Pre_icons/MO_Offset.jpg) : Offset tool is used to resize the geometry loop. User can decrease or increase the size by entering positive or negative offset distance respectively as shown in Fig. 12.2.11.
+**Offset** ![](../../../assets/Icons/Pre_icons/MO_Offset.jpg) : Nástroj Offset sa používa na zmenu veľkosti geometrickej slučky. Používateľ môže zmenšiť alebo zväčšiť veľkosť zadaním kladnej, resp. zápornej vzdialenosti posunu, ako je znázornené na obr. 12.2.11.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image011.jpg)
 
-Example to offset the loop
+Príklad na vyrovnanie slučky
 
-**Make First point** ![](../../../assets/Icons/Pre_icons/MO_Make_first_point.jpg) : Make First Point tool is used to make the selected point as first point in a loop, this will be used for closed loop, we cannot select an arc mid point as first point as shown in Fig. 12.2.12.
+**Urobiť prvý bod** ![](../../../assets/Icons/Pre_icons/MO_Make_first_point.jpg) : Nástroj Urobiť prvý bod sa používa na vytvorenie vybraného bodu ako prvého bodu v slučke, použije sa pre uzavretú slučku, ako prvý bod nemôžeme vybrať stredový bod oblúka, ako je znázornené na obr. 12.2.12.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image012.jpg)
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image013.jpg)
 
-Example to show make first point
+Príklad na vyjadrenie prvého bodu
 
-**Reverse direction** ![](../../../assets/Icons/Pre_icons/MO_Reverse_direction.jpg) : Reverse direction is used to reverse the direction of loop to change the orientation of the geometry. The geometry should be created in Counter clockwise, if the geometry is created in clockwise, using this option we can change the direction of loop (see Fig. 12.2.13.).
+**Opatočný smer** ![](../../../assets/Icons/Pre_icons/MO_Reverse_direction.jpg) : Opatočný smer sa používa na zmenu smeru slučky, aby sa zmenila orientácia geometrie. Geometria by mala byť vytvorená v protismere hodinových ručičiek, ak je geometria vytvorená v smere hodinových ručičiek, pomocou tejto možnosti môžeme zmeniť smer slučky (pozri obr. 12.2.13.).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image015.jpg)
 
-Example to show Reverse Direction
+Príklad na zobrazenie opačného smeru
 
-**Close loop**![](../../../assets/Icons/Pre_icons/MO_Close_loop.jpg) : Closed loop tool is used to close the open loop as shown in Fig. 12.2.14.
+**Zatvorenie slučky**![](../../../assets/Icons/Pre_icons/MO_Close_loop.jpg) : Nástroj na uzavretie slučky sa používa na uzavretie otvorenej slučky, ako je znázornené na obr. 12.2.14.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image014.jpg)
 
-Example to show close loop
+Príklad na zobrazenie uzavretej slučky
 
-**Split loop**![](../../../assets/Icons/Pre_icons/MO_Split_loop.jpg) : Split loop tool is used to split the loop at selected point (see Fig. 12.2.15.).
+**Rozdeliť slučku**![](../../../assets/Icons/Pre_icons/MO_Split_loop.jpg) : Nástroj Rozdeliť slučku sa používa na rozdelenie slučky vo vybranom bode (pozri obr. 12.2.15.).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image016.jpg)
 
-Example to show slip loop
+Príklad na znázornenie skĺznej slučky
 
-**Sub loop**![](../../../assets/Icons/Pre_icons/MO_Sub_loop.jpg) : Sub loop tool is used to select a inner loop as sub loop in case of multi loops topology, by selecting this we can assign the material for a multiple loop geometry (See Fig. 12.2.16.).
+**Sub loop**![](../../../assets/Icons/Pre_icons/MO_Sub_loop.jpg) : Nástroj Sub loop sa používa na výber vnútornej slučky ako sub loop v prípade topológie viacerých slučiek, výberom tohto nástroja môžeme priradiť materiál pre geometriu viacerých slučiek (pozri obr. 12.2.16.).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image017.jpg)
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image018.jpg)
 
-Example to show sub loop
+Príklad na zobrazenie čiastkovej slučky
 
-**Join loops** ![](../../../assets/Icons/Pre_icons/MO_Join_loop.jpg) : join loops option is used to merge the 2 loops by selecting the loops to be joined, the end point of first loop will be joined to first point of the second loop (see Fig. 12.2.17.).
+**Spojenie slučiek** ![](../../../assets/Icons/Pre_icons/MO_Join_loop.jpg) : možnosť spojiť slučky sa používa na spojenie 2 slučiek výberom slučiek, ktoré sa majú spojiť, koncový bod prvej slučky sa spojí s prvým bodom druhej slučky (pozri obr. 12.2.17.).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image019.jpg)
 
-Example to show join loops
+Príklad na zobrazenie slučkových slučiek
 
-**Join all loops** ![](../../../assets/Icons/Pre_icons/MO_Join_all_loops.jpg) : Join all loops tool is used to merge all loops. Example for Join all loops is as shown in Fig. 12.2.18.
+**Spojenie všetkých slučiek** ![](../../../assets/Icons/Pre_icons/MO_Join_all_loops.jpg) : Nástroj na spojenie všetkých slučiek sa používa na spojenie všetkých slučiek. Príklad pre Join all loops je uvedený na obr. 12.2.18.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image020.jpg)
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image021.jpg)
 
-Example to show join all loops
+Príklad na zobrazenie spojenia všetkých slučiek
 
-**Delete selected** ![](../../../assets/Icons/Pre_icons/MO_Delete_selected.jpg) : Delete selected is used to delete the selected loops or edges.
+**Odstrániť vybrané** ![](../../../assets/Icons/Pre_icons/MO_Delete_selected.jpg) : Odstrániť vybrané slúži na odstránenie vybraných slučiek alebo hrán.
 
-**Delete unselected** ![](../../../assets/Icons/Pre_icons/MO_Delete_Unselected.jpg) : Delete unselected is used to delete the unselected loops edges.
+**Odstrániť nevyznačené** ![](../../../assets/Icons/Pre_icons/MO_Delete_Unselected.jpg) : Odstrániť nevyznačené sa používa na odstránenie nevyznačených hrán slučiek.
 
-## Display or View Modification options
+## Možnosti zobrazenia alebo zobrazenia úprav
 
-**Show Vertex** ![](../../../assets/Icons/Pre_icons/MO_Show_vertex.jpg) : is used to display the vertexes of the geometry.
+**Zobraziť vrchol** ![](../../../assets/Icons/Pre_icons/MO_Show_vertex.jpg) : slúži na zobrazenie vrcholov geometrie.
 
-**Show Vertex numbers** ![](../../../assets/Icons/Pre_icons/Mo_Show_Vertex_numbers_icon.jpg) : is used to display the vertexes number of the geometry.
+**Zobraziť čísla vrcholov** ![](../../../assets/Icons/Pre_icons/Mo_Show_Vertex_numbers_icon.jpg) : slúži na zobrazenie čísla vrcholov geometrie.
 
-**Show Inside**![](../../../assets/Icons/Pre_icons/MO_Show_inside.jpg) : is used to show the orientation of the geometry.
+**Zobraziť vnútro**![](../../../assets/Icons/Pre_icons/MO_Show_inside.jpg) : slúži na zobrazenie orientácie geometrie.
 
-**Show Edge direction** ![](../../../assets/Icons/Pre_icons/MO_Show_Edge_direction.jpg) : is used to plot the direction of loop created.
+**Zobraziť smer hrany** ![](../../../assets/Icons/Pre_icons/MO_Show_Edge_direction.jpg) : slúži na vykreslenie smeru vytvorenej slučky.
 
-**Show Material** ![](../../../assets/Icons/Pre_icons/MO_Material_icon.jpg) : is used to load and assign the material to the geometry region.
+**Zobraziť materiál** ![](../../../assets/Icons/Pre_icons/MO_Material_icon.jpg) : slúži na načítanie a priradenie materiálu k oblasti geometrie.
 
-**Grid Lines** : It shows the Grid Lines in Horizontal and Vertical direction in Display window. (See Fig. 12.2.19.)
+**Sieťové línie** : Zobrazuje mriežkové čiary v horizontálnom a vertikálnom smere v okne zobrazenia. (Pozri obr. 12.2.19.)
 
-**Grid Points** : It shows the Grid Points in Horizontal and Vertical direction in Display window.(See Fig. 12.2.19.)
+**Sieťové body** : Zobrazuje body mriežky v horizontálnom a vertikálnom smere v okne zobrazenia (pozri obr. 12.2.19).
 
-**Grid None** : When this option is selected, the Grid points and Grid Lines in Horizontal and Vertical direction are not displayed in Display window. (See Fig. 12.2.19.)
+**Mriežka žiadna** : Keď je táto možnosť vybratá, body mriežky a línie mriežky v horizontálnom a vertikálnom smere sa v okne Zobrazenie nezobrazujú. (Pozri obr. 12.2.19.)
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image022.jpg)
 
-Grid Definition Window
+Okno definície mriežky
 
-**Show Axis**![](../../../assets/Icons/Pre_icons/MO_Show_Axis.jpg) : Shows the Axis in the Display window
+**Zobraziť os**![](../../../assets/Icons/Pre_icons/MO_Show_Axis.jpg) : Zobrazí os v okne displeja
 
-**Show Centerline**![](../../../assets/Icons/Pre_icons/MO_Show_centreline.jpg) :Shows the centerline in the Display window
+**Zobraziť stredovú čiaru**![](../../../assets/Icons/Pre_icons/MO_Show_centreline.jpg) :Zobrazí stredovú čiaru v okne displeja
 
-**Fit All** ![](../../../assets/Icons/Pre_icons/MO_Fit_All_icon.jpg) : Fits all displayed entities into the current viewport.
+**Vmestiť všetko** ![](../../../assets/Icons/Pre_icons/MO_Fit_All_icon.jpg) : Vmestí všetky zobrazené entity do aktuálneho zobrazovacieho priestoru.
 
-**Box Zoom** ![](../../../assets/Icons/Pre_icons/Mo_Box_Zoom_Icon.jpg) : The zoom window function allows close up inspection of a small region of the currently defined entities. The zoom region is selected by holding Ctrl + Alt key and clicking the left mouse button, while dragging the mouse to enclose the selected region with the displayed box. When the mouse button is released the selected region will fill the display window.
+**Zväčšenie okna** ![](../../../assets/Icons/Pre_icons/Mo_Box_Zoom_Icon.jpg) : Funkcia zväčšenia okna umožňuje detailnú kontrolu malej oblasti aktuálne definovaných entít. Oblasť priblíženia sa vyberie podržaním klávesov Ctrl + Alt a kliknutím ľavého tlačidla myši, pričom potiahnutím myši sa vybraná oblasť uzavrie zobrazeným rámčekom. Po uvoľnení tlačidla myši vybraná oblasť vyplní zobrazovacie okno.
 
-**Zoom** ![](../../../assets/Icons/Pre_icons/MO_Zoom_icon.jpg) : The zoom dynamically changes the size of the region of the object which fills the active view port. The view size can be changed by holding Alt key and clicking left mouse button in the active view port and rolling the mouse backward or forward to increase or decrease the size of the object in the display window.
+**Zoom** ![](../../../assets/Icons/Pre_icons/MO_Zoom_icon.jpg) : Priblíženie dynamicky mení veľkosť oblasti objektu, ktorá vypĺňa aktívny port zobrazenia. Veľkosť zobrazenia možno zmeniť podržaním klávesu Alt a kliknutím ľavého tlačidla myši v aktívnom porte zobrazenia a posunutím myši dozadu alebo dopredu, čím sa zväčší alebo zmenší veľkosť objektu v okne zobrazenia.
 
-**Paning**![](../../../assets/Icons/Pre_icons/MO_Pan_icon.jpg) : Pan adjusts the region filling the active viewport without changing the size of the displayed object.
+**Paning**![](../../../assets/Icons/Pre_icons/MO_Pan_icon.jpg) : Pan upravuje oblasť vypĺňajúcu aktívne zobrazovacie pole bez zmeny veľkosti zobrazeného objektu.
 
-**Save**![](../../../assets/Icons/Pre_icons/MO_Save_icon.jpg) :Saves the problem setup in .key file format. This can also be accessed from File Tools menu.
+**Uložiť**![](../../../assets/Icons/Pre_icons/MO_Save_icon.jpg) :Uloží problémové nastavenie vo formáte súboru .key. Túto funkciu možno tiež otvoriť z ponuky File Tools (Nástroje súboru).
 
-## 2D Geometry Editor Property options
+## Možnosti vlastností editora 2D geometrie
 
-**Geometry tab :** Under Geometry tab, we can enter or modify the geometry entities. Geometry entities can be entered in two methods, in Line-Arc method and XYR methods.
+**Záložka Geometria :** V záložke Geometria môžeme zadávať alebo upravovať geometrické entity. Geometrické entity možno zadávať dvoma spôsobmi, metódou Line-Arc a metódou XYR.
 
-**XYR Method** : The **XYR** format ([DIEGEO](/docs/sk/Keyword_Documentation/D/DIEGEO/)) consists of defining an X coordinate, a Y coordinate and a radius for every point of the geometry defining an object. An arc with the specified radius is drawn connecting the lines that would have intersected at the point defined by the X and Y coordinate. (See Fig. 12.2.20.)
+**Metóda XYR** : Formát **XYR** ([DIEGEO](/docs/sk/Keyword_Documentation/D/DIEGEO/)) pozostáva z definovania súradnice X, súradnice Y a polomeru pre každý bod geometrie definujúci objekt. Nakreslí sa oblúk so zadaným polomerom spájajúci čiary, ktoré by sa pretínali v bode definovanom súradnicou X a Y. (Pozri obr. 12.2.20.)
 
   
-The XYR Table appears directly in the Geometry window. This table allows specifying and/or editing an object's geometry through a number of points in the XYR format. X and Y are the x- and y-coordinates of the point and R is the radius of the point (if it is to define a curved line).
+Tabuľka XYR sa zobrazí priamo v okne Geometria. Táto tabuľka umožňuje špecifikovať a/alebo upravovať geometriu objektu prostredníctvom množstva bodov vo formáte XYR. X a Y sú súradnice x a y bodu a R je polomer bodu (ak má definovať zakrivenú čiaru).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image023.jpg)
 
-2D Geometry Editor with XYR Geo type
+2D editor geometrie s typom XYR Geo
 
-**Line-Arc Method :** Line-Arc format ([DIEGEO](/docs/sk/Keyword_Documentation/D/DIEGEO/)) is similar to XYR format in that it can define arcs, but it is more entity oriented. The XYR format defines the connecting points and the connection type, but the Line-Arc format defines the lines and arcs that make up the object, not the connections. The primary reason that the Line-Arc format is used is because IGES files are formatted in the Line-Arc scheme. (See Fig. 12.2.21.)
+**Metóda líniového oblúka :** Formát líniového oblúka ([DIEGEO](/docs/sk/Keyword_Documentation/D/DIEGEO/)) je podobný formátu XYR v tom, že môže definovať oblúky, ale je viac orientovaný na entity. Formát XYR definuje spojovacie body a typ spojenia, ale formát Line-Arc definuje čiary a oblúky, ktoré tvoria objekt, nie spojenia. Hlavným dôvodom, prečo sa používa formát Line-Arc, je skutočnosť, že súbory IGES sú formátované v schéme Line-Arc. (Pozri obr. 12.2.21.)
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image024.jpg)
 
-2D Geometry Editor with Line-Arc Geo type
+2D editor geometrie s typom Geo Line-Arc
 
-**Add Loop** ![](../../../assets/Icons/Pre_icons/MO_Add_Loop_button.jpg) : By clicking on this button adds the new loop, this option is required to define topology for multi-boundary objects.(See Fig. 12.2.22.)
+**Pridanie slučky** ![](../../../assets/Icons/Pre_icons/MO_Add_Loop_button.jpg) : Kliknutím na toto tlačidlo sa pridá nová slučka, táto možnosť je potrebná na definovanie topológie pre viachraničné objekty (pozri obr. 12.2.22).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image025.jpg)
 
-Example to show Add loop
+Príklad na zobrazenie Add loop
 
-**Delete Loop** ![](../../../assets/Icons/Pre_icons/MO_Delete_Loop_button.jpg) : By clicking on this button it deletes the existing loop (see Fig. 12.2.23.).
+**Delete Loop** ![](../../../assets/Icons/Pre_icons/MO_Delete_Loop_button.jpg) : Kliknutím na toto tlačidlo sa odstráni existujúca slučka (pozri obr. 12.2.23.).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image026.jpg)
 
-Example to show Delete Loop
+Príklad na znázornenie slučky Delete Loop
 
-**Add Vertex**![](../../../assets/Icons/Pre_icons/MO_Add_Vertex_button.jpg) : By clicking on this button adds the new vertex to the loop.(See Fig. 12.2.24.)
+**Pridanie vrcholu**![](../../../assets/Icons/Pre_icons/MO_Add_Vertex_button.jpg) : Kliknutím na toto tlačidlo sa pridá nový vrchol do slučky (pozri obr. 12.2.24).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image027.jpg)
 
-Example to show Add vertex to loop
+Príklad na ukážku Pridanie vrcholu do slučky
 
-**Delete Vertex** ![](../../../assets/Icons/Pre_icons/MO_Delete_Vertex_button.jpg): By clicking on this button it deletes the existing vertex in the loop. (See Fig. 12.2.25.)
+**Delete Vertex** ![](../../../assets/Icons/Pre_icons/MO_Delete_Vertex_button.jpg): Kliknutím na toto tlačidlo sa odstráni existujúci vrchol v slučke. (Pozri obr. 12.2.25.)
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image028.jpg)
 
-Example to show delete vertex in a loop
+Príklad na zobrazenie vymazania vrcholu v slučke
 
-**Assign to![](../../../assets/Icons/Pre_icons/MO_Assign_to_pull_down_button.jpg) :**
+**Priradiť k![](../../../assets/Icons/Pre_icons/MO_Assign_to_pull_down_button.jpg) :**
 
-When multiple boundary geometries (Multiple loops) are available, user can assign each loop geometry to other Objects as shown in Fig. 12.2.26.
+Ak je k dispozícii viacero hraničných geometrií (viacero slučiek), používateľ môže priradiť každú geometriu slučky k iným objektom, ako je znázornené na obr. 12.2.26.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image029.jpg)
 
-Example to show Assign To option
+Príklad na zobrazenie možnosti Priradiť k
 
-**Objects Tab** : Under Objects tab, we can select the object in list to hide the selected object geometry in graphical display window, when they are more than one objects geometries are displayed. (See Fig. 12.2.27.) 
+Karta **Objekty** : V záložke Objekty môžeme vybrať objekt v zozname, aby sa geometria vybraného objektu skryla v okne grafického zobrazenia, ak je zobrazených viac ako jeden objekt. (Pozri obr. 12.2.27.)
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image030.jpg)
 
-2D Geometry Editor objects window
+Okno objektov 2D editora geometrie
 
-**Loops Tab** : Under Loops tab, we can load and assign the material for the selected loops. Also we can see the display of assigned material to the corresponding loop details.(See Fig. 12.2.28.)
+Karta **Opáčky** : Na karte Loops môžeme načítať a priradiť materiál pre vybrané slučky. Taktiež môžeme vidieť zobrazenie priradeného materiálu k príslušnej slučke (pozri obr. 12.2.28).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image031.jpg)
 
-2D Geometry Editor materials window
+Okno materiálov 2D editora geometrie
 
-## Importing Multiple Boundary Geometries
+## Importovanie viacerých hraničných geometrií
 
-In MO, user can import multiple boundary geometries as shown in Fig. 12.2.29.
+V MO môže používateľ importovať viacero hraničných geometrií, ako je znázornené na obr. 12.2.29.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image032.jpg)
 
-Example to show multiple boundary geometries
+Príklad na zobrazenie viacerých hraničných geometrií
 
-## Defining and Editing Multiple Boundary Geometries
+## Definovanie a úprava viacerých hraničných geometrií
 
-User can create multiple boundary geometries. Fig. 12.2.30. shows the multiple boundary geometries defining and editing the defined geometry.
+Používateľ môže vytvoriť viacero hraničných geometrií. Na obr. 12.2.30. je znázornené definovanie viacerých hraničných geometrií a úprava definovanej geometrie.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image033.jpg)![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_2_2D_Geometry_Editing/12_2_Image034.jpg)
 
-Example to show editing and defining multiple boundary geometries
+Príklad na ukážku úpravy a definovania viacerých hraničných geometrií
 
 [12\. Geometry Modelling](/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/)
 

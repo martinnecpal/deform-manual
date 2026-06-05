@@ -1,23 +1,23 @@
 ---
 lang: sk
-title: "16.3. Reference"
+title: "16.3. Odkaz"
 ---
 
-# 16.3. Reference properties
+# 16.3. Referenčné vlastnosti
 
-Reference properties ([REFPOS](/docs/sk/Keyword_Documentation/R/REFPOS/)) option mainly used in distance between object stopping controls. User can select the reference points by selecting coordinate options or by selecting Node option (only for meshed object) (See Fig. 16.3.1. and Fig. 16.3.2.)
+Možnosť referenčných vlastností ([REFPOS](/docs/sk/Keyword_Documentation/R/REFPOS/)) sa používa najmä pri vzdialenosti medzi ovládacími prvkami zastavenia objektu. Používateľ môže vybrať referenčné body výberom súradnicových možností alebo výberom možnosti Uzol (len pre sieťovaný objekt) (pozri obr. 16.3.1. a obr. 16.3.2.).
 
-**For example** : Define one reference point for top die and one reference point for bottom die, now if we select distance between object stopping control and select top die and bottom die as distance between stopping control objects, it will automatically calculate the distance between top die reference point and bottom die reference point.
+**Napríklad** : Definujte jeden referenčný bod pre hornú kocku a jeden referenčný bod pre dolnú kocku, ak teraz vyberieme vzdialenosť medzi objektmi kontroly zastavenia a vyberieme hornú kocku a dolnú kocku ako vzdialenosť medzi objektmi kontroly zastavenia, automaticky sa vypočíta vzdialenosť medzi referenčným bodom hornej kocky a referenčným bodom dolnej kocky.
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_3_Reference/16_3_Image001.jpg)
 
-2D Reference Object properties window with Coordinate type Reference option
+Okno vlastností 2D referenčného objektu s možnosťou Referenčný typ súradníc
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_3_Reference/16_3_Image002.jpg)
 
-3D Reference Object properties window with Node type Reference option
+3D okno vlastností referenčného objektu s možnosťou Referenčný typ uzla
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
 

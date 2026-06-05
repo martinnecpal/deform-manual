@@ -3,4 +3,4 @@ lang: sk
 title: "10.5. Dislocation_Data"
 ---
 
-# 10.5. Dislocation Density Model
+# 10.5. Model hustoty dislokácie

@@ -1,232 +1,232 @@
 ---
 lang: sk
-title: "9.6. Process Conditions"
+title: "9.6. Prevádzkové podmienky"
 ---
 
-# 9.6. Process Conditions ![]({{ '/assets/icons/pre_icons/mo_process_conditions.jpg' | relative_url }})
+# 9.6. Prevádzkové podmienky ![]({{ '/assets/icons/pre_icons/mo_process_conditions.jpg' | relative_url }})
 
-9.6.1. Heat Transfer
+9.6.1. Prenos tepla
 
-  * Environment temperature (ENVTMP)
+  * Teplota okolia (ENVTMP)
 
-  * Convection coefficient (CNVCOF)
+  * Konvekčný koeficient (CNVCOF)
 
-  * View Factor Calculation
+  * Výpočet koeficientu výhľadu
 
-  * Turn on diffusion-bonding calculation
+  * Zapnúť výpočet difúzneho spájania
 
-9.6.2. Diffusion
+9.6.2. Difúzia
 
-  * Environment atom content (ENVATM)
+  * Obsah atómov v prostredí (ENVATM)
 
-  * Reaction rate coefficient (ACVCOF)
+  * Koeficient rýchlosti reakcie (ACVCOF)
 
   * Atom (ATOMID)
 
-9.6.3. Induction
+9.6.3. Indukcia
 
-  * Magnetic permeability (ENVMPR)
+  * Magnetická permeabilita (ENVMPR)
 
-  * Magnetic permittivity (ENVMPT)
+  * Magnetická permitivita (ENVMPT)
 
-  * Source Energy Ratio (EHRATE)
+  * Pomerný pomer zdrojovej energie (EHRATE)
 
-  * Activate overlapped air mesh check box
+  * Zaškrtnite políčko „Prekrývajúca sa vzdušná sieťovina“
 
-  * Define Induction Heating Windows
+  * Definovať okná pre indukčné ohrev
 
-  * Use reduce 3D BEM matrix
+  * Použiť redukovanú 3D BEM maticu
 
-9.6.4. Constants 
+9.6.4. Konštanty 
 
-  * Interface penalty constant (PENINF)
+  * Konštanta penalizácie rozhrania (PENINF)
 
-  * Mechanical to heat conversion (UNTE2H)
+  * Premena mechanickej energie na tepelnú (UNTE2H)
 
-  * Time integration factor (TINTGF)
+  * Faktor časovej integrácie (TINTGF)
 
-  * Boltzmann constant (BLZMAN)
+  * Boltzmannova konštanta (BLZMAN)
 
-  * Friction heat reduction factor (UNTE2H)
+  * Faktor zníženia tepla vznikajúceho trením (UNTE2H)
 
-  * Thermal conductivity smoothing factor (TCONSF)
+  * Faktor vyhladenia tepelnej vodivosti (TCONSF)
 
-9.6.5. Additive Manufacturing
+9.6.5. Aditívna výroba
 
-9.6.6. Heat Source
+9.6.6. Zdroj tepla
 
-The processing conditions menu contains information about the process environment and constants related to general solution behavior.
+Ponuka „Podmienky spracovania“ obsahuje informácie o prostredí spracovania a konštantách súvisiacich so všeobecným správaním riešenia.
 
-## Heat Transfer [2D, 3D]
+## Prenos tepla [2D, 3D]
 
-Heat transfer process conditions definitions have effect on process only by checking Heat transfer check box in Simulation controls Main tab and defining the respective Environment BCC. (See Fig. 9.6.1.) 
+Definície podmienok procesu prenosu tepla majú vplyv na proces iba vtedy, ak je zaškrtnuté políčko „Prenos tepla“ na karte „Hlavné“ v okne „Ovládacie prvky simulácie“ a ak sú definované príslušné BCC prostredia. (Pozri obr. 9.6.1.) 
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image001.jpg' | relative_url }})
 
-(a)
+a)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image002.jpg' | relative_url }})
 
-(b)
+b)
 
-Heat transfer processing conditions; (a) For 2D (b) For 3D
+Podmienky spracovania s využitím prenosu tepla; (a) pre 2D (b) pre 3D
 
-  * **Environment temperature (ENVTMP)**
+  * **Teplota okolia (ENVTMP)**
 
-Environment temperature ([ENVTMP](/docs/sk/keyword_documentation/e/envtmp/)) is used in radiation and convection heat transfer calculations and represents the temperature of the area in which the modelled process is taking place. The environment temperature may be specified as a constant or as a function of time. Heat transfer to this temperature is considered to occur from any nodes not in contact with another object. (Unless heat exchange windows are used).
+Teplota okolia ([ENVTMP](/docs/sk/keyword_documentation/e/envtmp/)) sa používa pri výpočtoch prenosu tepla sálaním a konvekciou a predstavuje teplotu priestoru, v ktorom prebieha modelovaný proces. Teplotu okolia je možné zadať ako konštantu alebo ako funkciu času. Predpokladá sa, že k prenosu tepla na túto teplotu dochádza z akýchkoľvek uzlov, ktoré nie sú v kontakte s iným objektom. (Pokiaľ sa nepoužívajú okná na výmenu tepla).
 
-  * **Convection coefficient (CNVCOF)**
+  * **Koeficient konvekcie (CNVCOF)**
 
-The convection coefficient ([CNVCOF](/docs/sk/keyword_documentation/c/cnvcof/)) is required for convection heat transfer calculations. The convection coefficient may be specified as a constant or as a function of temperature.
+Koeficient konvekcie ([CNVCOF](/docs/sk/keyword_documentation/c/cnvcof/)) je potrebný na výpočty konvekčného prenosu tepla. Koeficient konvekcie možno zadať ako konštantu alebo ako funkciu teploty.
 
-  * **View Factor Calculation**
+  * **Výpočet koeficientu výhľadu**
 
-Radiation will be calculated in the simulation when we check the "View factor calculation" check box option and also we can select the object/s for view factor calculation (object selection option available only for 3D as shown in Fig. 9.6.2.).
+Žiarenie sa v simulácii vypočíta, ak zaškrtneme políčko „Vypočítať koeficient zviditeľnenia“, pričom môžeme vybrať aj objekty, pre ktoré sa má koeficient zviditeľnenia vypočítať (možnosť výberu objektov je k dispozícii len v 3D režime, ako je znázornené na obr. 9.6.2.).
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image003.jpg' | relative_url }})
 
-Select object window for view factor calculation (in 3D)
+Vyberte okno objektu na výpočet koeficientu zobrazenia (v 3D)
 
-### Turn on diffusion-bonding calculation
+### Zapnúť výpočet difúzneho spájania
 
-DIffusion bonding will we be calculated in the simulation when we check the "Turn on diffusion-bonding calculation "
+Bude sa v simulácii počítať difúzne spájanie, ak zaškrtneme políčko „Zapnúť výpočet difúzneho spájania“?
 
-## Diffusion [2D, 3D]
+## Difúzia [2D, 3D]
 
-Diffusion process conditions definitions have effect on process only by checking Diffusion check box in Simulation controls Main tab and defining the respective Environment BCC. (See Fig. 9.6.3.)
-
-![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image004.jpg' | relative_url }})
-
-Diffusion processing conditions
-
-  * **Environment atom content (ENVATM)**
-
-The percentage atom content ([ENVATM](/docs/sk/keyword_documentation/e/envatm/)) of the dominant atom (usually carbon) in the environment for diffusion calculations.
-
-  * **Reaction rate coefficient (ACVCOF)**
-
-The surface reaction rate ([ACVCOF](/docs/sk/keyword_documentation/a/acvcof/)) with the atmospheric atom content for diffusion calculations.  
-  
-From DEFORM-v12 onwards user can define multiple types of atoms for Diffusion by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button as show in Fig. 9.6.4.
-
-  
-Note: Current limitation is maximum 2 different types of atoms to be used.
+Nastavenia podmienok difúzneho procesu majú vplyv na priebeh procesu iba vtedy, ak je zaškrtnuté políčko „Difúzia“ na karte „Hlavné“ v okne „Ovládacie prvky simulácie“ a ak je definovaný príslušný BCC prostredia. (Pozri obr. 9.6.3.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image004.jpg' | relative_url }})
 
-New Diffusion Process condition 
+Podmienky difúzneho spracovania
+
+  * **Obsah atómov v prostredí (ENVATM)**
+
+Percentuálny podiel atómov ([ENVATM](/docs/sk/keyword_documentation/e/envatm/)) dominantného atómu (zvyčajne uhlíka) v prostredí pre výpočty difúzie.
+
+  * **Koeficient rýchlosti reakcie (ACVCOF)**
+
+Rýchlosť povrchovej reakcie ([ACVCOF](/docs/sk/keyword_documentation/a/acvcof/)) s obsahom atómov v atmosfére pre výpočty difúzie.  
+  
+Od verzie DEFORM-v12 môže používateľ definovať viacero typov atómov pre difúziu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}), ako je znázornené na obr. 9.6.4.
+
+  
+Poznámka: V súčasnosti je možné použiť maximálne 2 rôzne typy atómov.
+
+![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image004.jpg' | relative_url }})
+
+Nová podmienka difúzneho procesu 
 
   * **Atom ([ATOMID](/docs/sk/keyword_documentation/a/atomid/))**
 
-In the Atom field user can modify the name of each type of atom and can activate/deactivate the diffusion by turning on/turning off the check box.  
-When we add 2 different types of Atom in Diffusion table, we can observe that the new field f(temperature, atom1, atom2) is added under Reaction rate coefficient as shown in Fig. 9.6.5.
+V poli „Atóm“ môže používateľ zmeniť názov každého typu atómu a aktivovať alebo deaktivovať difúziu zaškrtnutím alebo odškrtnutím príslušného políčka.  
+Keď do tabuľky difúzie pridáme dva rôzne typy atómov, môžeme vidieť, že pod položkou „Koeficient rýchlosti reakcie“ sa objaví nové pole f(teplota, atóm1, atóm2), ako je znázornené na obr. 9.6.5.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image005.jpg' | relative_url }})
 
-Reaction rate coefficient options
+Možnosti koeficientov rýchlosti reakcie
 
-Also in Material properties, under Thermal conductivity and Heat Capacity type list we can observe that a new field f(Temperature, Aom1, Atom2) will be added.  
-Even in Material properties Diffusion page we can observe multiple atoms defined in Simulation controls Diffusion page are shown under Atom list so that properties for each atom can be defined independently as shown in Fig. 9.6.6.
+V časti „Vlastnosti materiálu“ v zozname typov „Tepelná vodivosť“ a „Tepelná kapacita“ môžeme vidieť, že bude pridané nové pole f(Teplota, Aom1, Atom2).  
+Aj na stránke „Vlastnosti materiálu – Difúzia“ môžeme vidieť, že viaceré atómy definované na stránke „Ovládacie prvky simulácie – Difúzia“ sa zobrazujú v zozname atómov, takže vlastnosti každého atómu je možné definovať nezávisle, ako je znázornené na obr. 9.6.6.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image006.jpg' | relative_url }})
 
-Material Properties Diffusion page
+Stránka „Difúzia materiálových vlastností“
 
-Even in BCC page (see Fig. 9.6.7.), for all Diffusion BCC options we can observe both types of atoms defined in Simulation controls Diffusion page are available and we can define BCC for each Atom type separately.
+Aj na stránke BCC (pozri obr. 9.6.7.) môžeme pri všetkých možnostiach difúzie BCC vidieť, že sú k dispozícii oba typy atómov definované na stránke Difúzia v nastaveniach simulácie, a môžeme nastaviť BCC pre každý typ atómu samostatne.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image007.jpg' | relative_url }})
 
-BCC page Multiple Atom option in Diffusion with Environment page
+Stránka BCC – možnosť „Multiple Atom“ na stránke „Diffusion with Environment“
 
-## Induction [2D, 3D]
+## Indukcia [2D, 3D]
 
-The Induction tab (See Fig. 9.6.8.) is activated by checking the Heating check box in Simulation controls > Main tab.
+Kartu „Indukcia“ (pozri obr. 9.6.8.) aktivujete zaškrtnutím políčka „Kúrenie“ v časti „Ovládacie prvky simulácie“ > karta „Hlavná“.
 
-(a)
+a)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image009.jpg' | relative_url }})
 
-(b)
+b)
 
-Induction processing constants ; (a) For 2D (b) For 3D.
+Konštanty indukčného spracovania; (a) pre 2D, (b) pre 3D.
 
-  * **Magnetic permeability (ENVMPR)**
+  * **Magnetická permeabilita (ENVMPR)**
 
-Permeability ([ENVMPR](/docs/sk/keyword_documentation/e/envmpr/)) is the property of a material that is equal to the magnetic flux density B established within the material by a magnetizing field divided by the magnetic field strength H of the magnetizing field.
+Permeabilita ([ENVMPR](/docs/sk/keyword_documentation/e/envmpr/)) je vlastnosť materiálu, ktorá sa rovná hustote magnetického toku B vytvoreného v materiáli magnetizujúcim poľom, vydelená intenzitou magnetického poľa H tohto magnetizujúceho poľa.
 
-The permeability of a vacuum (ENVMPR) is defined in the Simulation Controls > Process Conditions menu. The typical value is provided below for reference.
+Priepustnosť vákua (ENVMPR) sa nastavuje v ponuke „Simulation Controls > Process Conditions“. Pre orientačné účely uvádzame nižšie typickú hodnotu.
 
-1.26 x 10-9 H/mm (SI)  
-3.20 x 10-8 H/in (English)
+1,26 × 10⁻⁹ H/mm (SI)  
+3,20 × 10⁻⁸ H/palec (anglický systém)
 
-  * **Magnetic permittivity (ENVMPT)**
+  * **Magnetická permitivita (ENVMPT)**
 
-Permittivity ([ENVMPT](/docs/sk/keyword_documentation/e/envmpt/)) is a quantity that describes how a magnetic field affects and is affected by a dielectric medium. It is determined by the ability of a material to polarize in response to the field and thereby reduce the total electric field inside the material. Thus, permittivity relates to a material's ability to transmit (or "permit") a magnetic field.
+Permitivita ([ENVMPT](/docs/sk/keyword_documentation/e/envmpt/)) je veličina, ktorá opisuje, ako magnetické pole pôsobí na dielektrické prostredie a ako je ním ovplyvňované. Určuje ju schopnosť materiálu polarizovať sa v reakcii na pole a tým znížiť celkové elektrické pole vo vnútri materiálu. Permitivita sa teda týka schopnosti materiálu prenášať (alebo „povoľovať“) magnetické pole.
 
-The permittivity of a vacuum (ENVMPT) is defined in the Simulation Controls > Process Conditions menu. The typical value is provided below for reference.
+Dieliča elektrickej priepustnosti vákua (ENVMPT) sa nastavuje v ponuke „Simulation Controls > Process Conditions“. Pre orientačné účely uvádzame nižšie typickú hodnotu.
 
-8.85 x 10-15 F/mm (SI)   
-2.25 x 10-13 F/in (English)
+8,85 × 10⁻¹⁵ F/mm (SI)   
+2,25 × 10⁻¹³ F/palec (anglický systém)
 
-  * **Source Energy Ratio (EHRATE)**
+  * **Pomer zdrojovej energie (EHRATE)**
 
-"Source Energy Ratio" ([EHRATE](/docs/sk/keyword_documentation/e/ehrate/)) is a conversion ratio from electric energy to heat.  
-If "0" or "1000" is specified, it means 100% electric energy is converted to heat. If "500" is specified, it means 50% conversion.
+„Koeficient premeny energie“ ([EHRATE](/docs/sk/keyword_documentation/e/ehrate/)) je koeficient premeny elektrickej energie na teplo.  
+Ak je zadaná hodnota „0“ alebo „1000“, znamená to, že 100 % elektrickej energie sa premieňa na teplo. Ak je zadaná hodnota „500“, znamená to 50 % účinnosť.
 
-  * **Activate overlapped air mesh check box [2D]**
+  * **Zaškrtnite políčko „Prekrývajúca sa vzdušná sieťovina“ [2D]**
 
-  * **Define Induction Heating Windows [3D]**
+  * **Definovanie okien pre indukčné ohrev [3D]**
 
-  * **Use reduce 3D BEM matrix [3D]**
+  * **Použiť redukovanú 3D BEM maticu [3D]**
 
-## Constants [2D, 3D]
+## Konštanty [2D, 3D]
 
-For process conditions constants settings see Fig. 9.6.9.
+Nastavenia konštánt procesných podmienok nájdete na obr. 9.6.9.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image010.jpg' | relative_url }})
 
-(a)
+a)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image011.jpg' | relative_url }})
 
-(b)
+b)
 
-Advanced process constants ; (a) For 2D (b) For 3D.
+Pokročilé procesné konštanty; (a) pre 2D, (b) pre 3D.
 
-  * **Interface penalty constant (PENINF)**
+  * **Konštanta penalizácie rozhrania (PENINF)**
 
-A large positive number used to penalize the penetration velocity ([PENINF](/docs/sk/keyword_documentation/p/peninf/)) of a node through a master surface. The default value is adequate for most simulations. It should be at least two to three orders higher than the volume penalty constant ([PENVOL](/docs/sk/keyword_documentation/p/penvol/)).  
-For objects of very small size (e.g. fasteners), it is recommended to reduce this number an order of magnitude or two to improve convergence. This will only aid convergence if the sparse solver is used. This constant can be edited only in Advanced user mode.
+Veľké kladné číslo, ktoré sa používa na penalizáciu rýchlosti prenikania ([PENINF](/docs/sk/keyword_documentation/p/peninf/)) uzla cez hlavnú plochu. Predvolená hodnota je pre väčšinu simulácií postačujúca. Mala by byť aspoň o dva až tri rády vyššia ako konštanta objemovej penalizácie ([PENVOL](/docs/sk/keyword_documentation/p/penvol/)).  
+V prípade veľmi malých objektov (napr. spojovacích prvkov) sa odporúča znížiť tento počet o jeden alebo dva rády, aby sa zlepšila konvergencia. K zlepšeniu konvergencie to prispeje len v prípade, ak sa používa riešiteľ pre riedke matice. Túto konštantu je možné upravovať len v režime pre pokročilých používateľov.
 
-  * **Mechanical to heat conversion (UNTE2H)**
+  * **Premena mechanickej energie na tepelnú (UNTE2H)**
 
-A constant coefficient to relate units of heat energy (E.g. BTU) to mechanical energy (E.g. klb-in). Appropriate constant values are automatically set for English and SI Units. This constant can be edited only in Advanced user mode. ([UNTE2H](/docs/sk/keyword_documentation/u/unte2h/))
+Konštanta slúžiaca na prepojenie jednotiek tepelnej energie (napr. BTU) s jednotkami mechanickej energie (napr. klb-in). Pre anglické a jednotky SI sa automaticky nastavia príslušné hodnoty konštanty. Túto konštantu je možné upravovať iba v režime pre pokročilých používateľov. ([UNTE2H](/docs/sk/keyword_documentation/u/unte2h/))
 
-  * **Time integration factor (TINTGF)**
+  * **Faktor časovej integrácie (TINTGF)**
 
-The time integration factor ([TINTGF](/docs/sk/keyword_documentation/t/tintgf/)) is the forward integration coefficient for temperature integration over time. Its value should be between 0.0 and 1.0. The value of 0.75 is adequate for most simulations. This constant can be edited only in Advanced user mode.
+Faktor časovej integrácie ([TINTGF](/docs/sk/keyword_documentation/t/tintgf/)) je koeficient doprednej integrácie pre integráciu teploty v čase. Jeho hodnota by sa mala pohybovať v rozmedzí od 0,0 do 1,0. Pre väčšinu simulácií je vhodná hodnota 0,75. Túto konštantu je možné upravovať iba v režime pre pokročilých používateľov.
 
-  * **Boltzmann constant (BLZMAN)**
+  * **Boltzmannova konštanta (BLZMAN)**
 
-The Boltzmann constant ([BLZMN](/docs/sk/keyword_documentation/b/blzman/)) is required for radiation heat transfer calculations. Default values for English and SI are set automatically. In radiation heat calculations the nodal temperature will be automatically converted to absolute temperature (Rankin, Kelvin) based on the selected English or SI units. This constant can be edited only in Advanced user mode.
+Boltzmannova konštanta ([BLZMN](/docs/sk/keyword_documentation/b/blzman/)) je potrebná na výpočty prenosu tepla žiarením. Predvolené hodnoty pre anglické a SI jednotky sa nastavujú automaticky. Pri výpočtoch tepelného vyžarovania sa teplota uzla automaticky prepočíta na absolútnu teplotu (Rankin, Kelvin) na základe zvolených anglických alebo SI jednotiek. Túto konštantu je možné upravovať iba v režime Pokročilý používateľ.
 
-  * **Friction heat reduction factor (UNTE2H)**
+  * **Koeficient zníženia tepla vznikajúceho trením (UNTE2H)**
 
-  * **Thermal conductivity smoothing factor (TCONSF) [3D]**
+  * **Faktor vyhladenia tepelnej vodivosti (TCONSF) [3D]**
 
-## Additive Manufacturing [3D]
+## Aditívna výroba [3D]
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image012.jpg' | relative_url }})
 
-Additive manufacturing process conditions
+Podmienky procesu aditívnej výroby
 
-## Heat Source [3D]
+## Zdroj tepla [3D]
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_6_process_conditions/9_6_image013.jpg' | relative_url }})
 
-Heat source process conditions
+Prevádzkové podmienky zdroja tepla
 
-Related Topics:
+Súvisiace témy:
 
 [9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
 [9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   

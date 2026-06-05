@@ -1,62 +1,62 @@
 ---
 lang: sk
-title: "10.4. Diffusion Data"
+title: "10.4. Difúzne údaje"
 ---
 
-# 10.4. Diffusion Data
+# 10.4. Difúzne údaje
 
-10.4.1. Diffusion coefficient (DIFCOE)
+10.4.1. Difúzny koeficient (DIFCOE)
 
-  * Method 1
+  * Metóda 1
 
-  * Method 2
+  * Metóda 2
 
-  * Method 3
+  * Metóda 3
 
-  * Method 4
+  * Metóda 4
 
-  * Method 5
+  * Metóda 5
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_4_diffusion_data/10_3_image001.jpg' | relative_url }})
 
-Diffusion material properties window
+Okno vlastností difúzneho materiálu
 
-DEFORM allows the user to model the diffusion of the dominant atom (at this point carbon) in an object. (See Fig. 10.4.1.) The user only needs to specify the diffusion coefficient for the diffusion. For the simulation of carburizing process, normally performed before quenching,  
-The Laplace equation is used for the diffusion model:
+DEFORM umožňuje používateľovi modelovať difúziu dominantného atómu (v tomto bode uhlíka) v objekte. (Pozri obr. 10.4.1.) Používateľ musí zadať iba koeficient difúzie pre difúziu. Na simuláciu procesu nauhličovania, ktorý sa zvyčajne vykonáva pred kalením,
+Pre difúzny model sa používa Laplaceova rovnica:
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_4_diffusion_data/eq_10_4_1.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_4_diffusion_data/eq_10_4_1.jpg' | relative_url }}) |
+---|---
   
-Note:  
-Brick elements tend to produce nicer looking results than the tetrahedral elements since the mean diffusion distance is normally much smaller than the average element edge length. This will tend to make the tetrahedral results look somewhat patchy due to their generally uneven edge length.(link to be created to Brick mesh MO)
+Poznámka:
+Tehlové prvky majú tendenciu poskytovať krajšie výsledky ako štvorstenné prvky, pretože priemerná difúzna vzdialenosť je zvyčajne oveľa menšia ako priemerná dĺžka hrany prvku. To spôsobí, že výsledky tetraedrických prvkov vyzerajú trochu nejednotne kvôli ich všeobecne nerovnomernej dĺžke hrán (odkaz na vytvorenie MO siete Brick).
 
-## **Diffusion coefficient (DIFCOE)**
+## **Difúzny koeficient (DIFCOE)**
 
-The diffusion coefficient ([DIFCOE](/docs/sk/keyword_documentation/d/difcoe/)) can be defined by the following methods:
+Difúzny koeficient ([DIFCOE](/docs/sk/keyword_documentation/d/difcoe/)) možno definovať nasledujúcimi metódami:
 
-  * **Method 1**
+  * **Metóda 1**
 
-********Constant value for diffusion coefficient.
+********Konštantná hodnota koeficientu difúzie.
 
-  * **Method 2**
+  * **Metóda 2**
 
-****Diffusion coefficient is a function of atom content and temperature (Matrix format).
+****Difúzny koeficient je funkciou obsahu atómov a teploty (maticový formát).
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_4_diffusion_data/eq_10_4_2.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_4_diffusion_data/eq_10_4_2.jpg' | relative_url }}) |
+---|---
   
-  * **Method 3**
+  * **Metóda 3**
 
-Diffusion coefficient is a function of temperature and atom content (Tabular format).
+Difúzny koeficient je funkciou teploty a obsahu atómov (tabuľkový formát).
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_4_diffusion_data/eq_10_4_3.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_4_diffusion_data/eq_10_4_3.jpg' | relative_url }}) |
+---|---
   
-  * **Method 4**
+  * **Metóda 4**
 
-Diffusion coefficient is a function of temperature and atom content (Tabular format).
+Difúzny koeficient je funkciou teploty a obsahu atómov (tabuľkový formát).
 
-![]({{ '/assets/equations/pre_processor/10_material_data/10_4_diffusion_data/eq_10_4_4.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/10_material_data/10_4_diffusion_data/eq_10_4_4.jpg' | relative_url }}) |
+---|---
   
-  * **Method 5**
+  * **Metóda 5**

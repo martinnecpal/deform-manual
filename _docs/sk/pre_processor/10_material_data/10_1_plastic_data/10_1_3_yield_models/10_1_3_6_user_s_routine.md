@@ -1,15 +1,15 @@
 ---
 lang: sk
-title: "10.13.6. User&#39;s routine"
+title: "10.13.6. Používateľská rutina"
 ---
 
-# 10.1.3.6. User's routine
+# 10.1.3.6. Používateľská rutina
 
-Depending upon the material model usr_yield.f fortan file, user has to enter User Routine number as shown in Fig. 10.1.3.6.1. Please refer to [Chapter 56. User Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/) for a description of how to implement user defined yield function type routines.
+V závislosti od súboru materiálového modelu usr_yield.f fortan musí používateľ zadať číslo User Routine, ako je znázornené na obr. 10.1.3.6.1. Opis implementácie rutín typu funkcie yield definovaných používateľom nájdete v dokumente [Chapter 56. User Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/).
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_6_user_s_routine/10_1_3_6_image001.jpg' | relative_url }})
 
-Yield Function User Routine Window
+Okno používateľskej rutiny funkcie výnosu
 
 [10.1.3.1. Von Mises](/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_1_von_mises/)
 

@@ -1,8 +1,8 @@
 ---
 lang: sk
-title: "10.1.5. Hardening rule models"
+title: "10.1.5. Modely pravidiel tvrdosti"
 ---
 
-# 10.1.5. Hardening rule
+# 10.1.5. Pravidlo o sprísnení
 
-Currently, two models for hardening ([HDNRUL](/docs/sk/keyword_documentation/h/hdnrul/)) are supported, kinematic and isotropic. For an isotropic model, as a material yields and plastically deforms, the yield surface expands uniformly or isotropically. Thus, the yield strain in all directions is the same. However, for a kinematic model, the yield surface shifts as the material yields. The kinematic hardening model is required if the Bauschinger effect is to be modeled. This is valid only for the elasto-plastic objects under small deformation.
+V súčasnosti sú podporované dva modely tvrdenia ([HDNRUL](/docs/sk/keyword_documentation/h/hdnrul/)), kinematický a izotropný. Pri izotropnom modeli sa pri poddajnosti a plastickej deformácii materiálu plocha klzu rovnomerne alebo izotropne rozširuje. Medza klzu je teda vo všetkých smeroch rovnaká. Pri kinematickom modeli sa však povrch klzu pri poddajnosti materiálu posúva. Ak sa má modelovať Bauschingerov efekt, vyžaduje sa kinematický model spevňovania. To platí len pre elasto-plastické objekty pri malej deformácii.

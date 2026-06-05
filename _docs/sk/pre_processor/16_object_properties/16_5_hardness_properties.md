@@ -1,68 +1,68 @@
 ---
 lang: sk
-title: "16.5. Hardness estimation type"
+title: "16.5. Typ odhadu tvrdosti"
 ---
 
-# 16.5. Hardness Estimation type
+# 16.5. Typ odhadu tvrdosti
 
-[2D, 3D]: Material hardness predictions can be based on: (See Fig. 16.5.1. to Fig. 16.5.5.)
+[2D, 3D]: (Pozri obr. 16.5.1 až obr. 16.5.5.)
 
-  * Volume fraction of various phases
-  * Jominy curve data
-  * Cooling time
-  * Solid solution with precipitation
+  * Objemový podiel rôznych fáz
+  * Údaje o krivke Jominy
+  * Čas chladenia
+  * Pevný roztok so zrážaním
 
-Hardness data for a material can be defined in the Material Properties of the respective object material and will be estimated based on the estimation type selected under Properties of the respective object, Fig. 16.5.1. shows estimation type options available under Hardness in Object Properties. A description of the hardness prediction method is given there. For more information on defining Hardness in Material Properties, please refer section [10.7. Hardness data.](/docs/sk/pre_processor/10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data/)
+Údaje o tvrdosti materiálu možno definovať vo Vlastnostiach materiálu príslušného materiálu objektu a budú sa odhadovať na základe typu odhadu zvoleného v časti Vlastnosti príslušného objektu, Obr. 16.5.1. zobrazuje možnosti typu odhadu dostupné v časti Tvrdosť vo Vlastnostiach objektu. Je tam uvedený popis metódy predpovedania tvrdosti. Ďalšie informácie o definovaní tvrdosti v časti Vlastnosti materiálu nájdete v časti [10.7. Hardness data.](/docs/sk/pre_processor/10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data/)
 
   
-**Referenced Start temperature, End temperature** : Upper and lower temperature values for Jominy or cooling time hardness prediction curves. 
+**Referenčná počiatočná teplota, koncová teplota** : Horné a dolné hodnoty teploty pre Jominyho alebo krivky predpovede tvrdosti v čase chladnutia.
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image001.jpg)
 
-Hardness estimation type in Object properties window
+Typ odhadu tvrdosti v okne Vlastnosti objektu
 
-  1. "**Use volume fractions** ": Hardness is computed based on the individual phases (Mixture rule) evolving during the quench process at the respective element using the hardness data defined in material properties of the respective phase.
+  1. "**Použite objemové podiely** ": Tvrdosť sa vypočíta na základe jednotlivých fáz (pravidlo zmesi), ktoré sa vyvíjajú počas procesu kalenia v príslušnom prvku, s použitím údajov o tvrdosti definovaných vo vlastnostiach materiálu príslušnej fázy.
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image003.jpg)
 
-Use jominy curves type Hardness estimation
+Použitie kriviek typu jominy Odhad tvrdosti
 
-  1. "**Use jominy curves** ": Referenced Start temperature and End temperature needs to be defined for hardness estimation using Jominy curves which will be used to activate cooling range. Time spent by a material point in the temperature range + the Jominy data provided under material properties will be used for the hardness computations, see Fig. 16.5.3. Time spent by a material point in this temperature range and rate of temperature range is the basis for cooling time and rate computations. 
+  1. "**Používajte krivky jominy** ": Na odhad tvrdosti pomocou Jominyho kriviek, ktoré sa použijú na aktiváciu rozsahu chladenia, je potrebné definovať referenčnú počiatočnú teplotu a koncovú teplotu. Čas strávený bodom materiálu v teplotnom rozsahu + Jominyho údaje uvedené v časti vlastnosti materiálu sa použijú na výpočet tvrdosti, pozri obr. 16.5.3. Čas strávený bodom materiálu v tomto teplotnom rozsahu a rýchlosť teplotného rozsahu je základom pre výpočty času a rýchlosti chladnutia.
 
-  1. When the temperature is higher than the referenced high temperature, the hardness flag is set to -2.
-  2. When the temperature reaches (equal to or less than) the referenced high temperature, the "Hardness" flag is set to -3, and this instantaneous time is recorded in the "cooling time". This flag and cooling time is set only one time and will be kept for the subsequent steps until the temperature reaches the referenced low temperature, see Fig. 16.5.4.
-  3. When the material point is inside the Reference temperature range, cooling time only indicates the time stamp of a material point entering in this temperature range, see Fig. 16.5.4.
-  4. When the material point completely cools below the cooling the correct value of hardness is updated, see Fig. 16.5.4.
+  1. Ak je teplota vyššia ako referenčná vysoká teplota, príznak tvrdosti sa nastaví na -2.
+  2. Keď teplota dosiahne (rovnú alebo nižšiu) referenčnú vysokú teplotu, príznak "Tvrdosť" sa nastaví na -3 a tento okamžitý čas sa zaznamená do "času chladnutia". Tento príznak a čas ochladzovania sa nastaví len raz a zachová sa pre nasledujúce kroky, kým teplota nedosiahne referenčnú nízku teplotu, pozri obr. 16.5.4.
+  3. Ak sa materiálový bod nachádza v referenčnom teplotnom rozsahu, čas chladnutia udáva len časovú značku vstupu materiálového bodu do tohto teplotného rozsahu, pozri obr. 16.5.4.
+  4. Keď sa bod materiálu úplne ochladí pod ochladením, aktualizuje sa správna hodnota tvrdosti, pozri obr. 16.5.4.
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image002.jpg)
 
-Use jominy curve type Hardness estimation
+Použitie odhadu tvrdosti typu jominyho krivky
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image006.jpg)
 
-Simulation results with Use jominy curve type Hardness estimation
+Výsledky simulácie s použitím jominyho krivky typu Odhad tvrdosti
 
-  1. "**Only cooling time** ": Referenced Start temperature and End temperature is used to activate cooling range. Time spent by a material point in this temperature range + the Jominy data provided is the basis for cooling time, see Fig. 16.5.5.. No hardness is computed.
+  1. "**Pouhý čas chladenia** ": Referenčná počiatočná teplota a koncová teplota sa používa na aktiváciu rozsahu chladenia. Čas, ktorý strávil bod materiálu v tomto teplotnom rozsahu + poskytnuté údaje Jominy, je základom pre čas chladenia, pozri obr. 16.5.5.. Nevypočítava sa žiadna tvrdosť.
 
-In the element data dialogue,
+V dialógu údajov o prvku,
 
-  1. When the temperature is higher than the referenced high temperature, the hardness flag is set to -2.
-  2. When the temperature reaches (equal to or less than) the referenced high temperature, the "Hardness" flag is set to -3, and this instantaneous time is recorded in the "cooling time". This flag and cooling time is set only one time and will be kept for the subsequent steps until the temperature reaches the referenced low temperature.
-  3. When the temperature reaches (equal to or less than) the referenced low temperature, the "Hardness" flag is set to -4, the elapse time from reaching the referenced high temperature to reaching the low referenced temperature is recorded in the "Cooling time". This flag and cooling time is set only one time, and will be kept in the subsequent steps. In each simulation step, it is divided into 10 sub-steps, so that the time to reach the referenced temperature can be more accurately determined.
+  1. Ak je teplota vyššia ako referenčná vysoká teplota, príznak tvrdosti sa nastaví na -2.
+  2. Keď teplota dosiahne (rovnú alebo nižšiu) referenčnú vysokú teplotu, príznak "Tvrdosť" sa nastaví na -3 a tento okamžitý čas sa zaznamená do "času chladnutia". Tento príznak a čas ochladzovania sa nastaví len raz a zachová sa pre nasledujúce kroky, kým teplota nedosiahne referenčnú nízku teplotu.
+  3. Keď teplota dosiahne (rovnakú alebo nižšiu) referenčnú nízku teplotu, príznak "Tvrdosť" sa nastaví na -4, čas, ktorý uplynul od dosiahnutia referenčnej vysokej teploty po dosiahnutie referenčnej nízkej teploty, sa zaznamená do "Času chladenia". Tento príznak a čas chladenia sa nastaví len raz a v ďalších krokoch sa zachová. V každom kroku simulácie sa rozdelí na 10 čiastkových krokov, aby sa čas do dosiahnutia referenčnej teploty dal určiť presnejšie.
 
-In summary, for the cooling process, when the "Hardness" flag is -3, the "cooling time" means the time to reach the referenced high temperature; when the "Hardness" flag is -4, the "cooling time" means the time interval from the referenced high temperature to the referenced low temperature.
-
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image003.jpg)
-
-Only cooling time type Hardness estimation
-
-  1. For "**Solid solution with precipitate** ” option, hardness is computed based on the precipitation model, see Fig. 16.5.6..
+Ak je príznak "Tvrdosť" -3, "čas chladenia" znamená čas do dosiahnutia referenčnej vysokej teploty; ak je príznak "Tvrdosť" -4, "čas chladenia" znamená časový interval od referenčnej vysokej teploty po referenčnú nízku teplotu.
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image003.jpg)
 
-Solid solution with precipitate type Hardness estimation
+Odhad tvrdosti len podľa času chladenia
 
-**Related Topics:**
+  1. Pri možnosti "**Tvrdý roztok so zrazeninami** " sa tvrdosť vypočíta na základe modelu zrážania, pozri obr. 16.5.6..
+
+![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image003.jpg)
+
+Pevný roztok s typom zrazeniny Odhad tvrdosti
+
+**Súvisiace témy:**
 
 [16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
 

@@ -1,45 +1,45 @@
 ---
 lang: sk
-title: "16.2. Thermal Properties"
+title: "16.2. Tepelné vlastnosti"
 ---
 
-# 16.2. Thermal Properties
+# 16.2. Tepelné vlastnosti
 
-16.2.1. Reference temperature (REFTMP)
+16.2.1. Referenčná teplota (REFTMP)
 
-16.2.2. Truncation temperature (TMPLMT)
+16.2.2. Teplota skrátenia (TMPLMT)
 
-16.2.3. Stopping temperature (OTPRNG)
+16.2.3. Teplota zastavenia (OTPRNG)
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_2_Thermal_properties/16_2_Image001.jpg)
 
-2D Thermal Object properties window
+2D okno vlastností tepelného objektu
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_2_Thermal_properties/16_2_Image002.jpg)
 
-3D Thermal Object properties window
+Okno vlastností 3D tepelného objektu
 
-## Reference temperature (REFTMP) [2D, 3D]
+## Referenčná teplota (REFTMP) [2D, 3D]
 
   
-For elastic objects, the reference temperature ([REFTMP)](/docs/sk/Keyword_Documentation/R/REFTMP/) is the temperature on which thermal expansion calculations are based. The thermal strains are given by: (See Fig. 16.2.1. and Fig. 16.2.2.)
+V prípade pružných objektov je referenčná teplota ([REFTMP)](/docs/sk/Keyword_Documentation/R/REFTMP/) teplota, na ktorej sú založené výpočty tepelnej rozťažnosti. Tepelné deformácie sú dané: (Pozri obr. 16.2.1. a obr. 16.2.2.)
 
-![](../../../assets/Equations/Pre_Processor/16_Object_Properties/EQ_16_2_1.jpg) |   
----|---  
+![](../../../assets/Equations/Pre_Processor/16_Object_Properties/EQ_16_2_1.jpg) |
+---|---
   
-For Elasto-plastic objects, instantaneous coefficient of thermal expansion is used.
+Pre elasto-plastické objekty sa používa okamžitý koeficient tepelnej rozťažnosti.
 
-Coefficient of thermal expansion is set in the Material Properties Elastic menu, also refer section [10.2.4. Material Reference temperature](../10_Material_Data/10_2_Elastic_Data/10_2_Elastic_Data.htm#Material_Reference_Temperature) for difference between the material and object reference temperatures.
+Koeficient tepelnej rozťažnosti sa nastavuje v ponuke Material Properties Elastic, pozri tiež časť [10.2.4. Material Reference temperature](../10_Material_Data/10_2_Elastic_Data/10_2_Elastic_Data.htm#Material_Reference_Temperature) pre rozdiel medzi referenčnými teplotami materiálu a objektu.
 
-## Truncation temperature (TMPLMT) [2D, 3D]
+## Teplota skrátenia (TMPLMT) [2D, 3D]
 
-The Truncation Temperature ([TMPLMT](/docs/sk/Keyword_Documentation/T/TMPLMT/)) is the maximum nodal temperature allowed at any point in the object. If the calculated temperature exceeds this value, it will be reduced to this value.
+Teplota skrátenia ([TMPLMT](/docs/sk/Keyword_Documentation/T/TMPLMT/)) je maximálna prípustná teplota uzla v ktoromkoľvek bode objektu. Ak vypočítaná teplota prekročí túto hodnotu, zníži sa na túto hodnotu.
 
-## Stopping temperature (OTPRNG) [2D, 3D]
+## Teplota zastavenia (OTPRNG) [2D, 3D]
 
-The stopping temperature ([OTPRNG](/docs/sk/Keyword_Documentation/O/OTPRNG/)) sets an upper and lower temperature limit which, if exceeded, will stop the simulation. The user has the option of enforcing this limit if any single node exceeds the temperature, only if all nodes exceed the temperature or based on temperature at a specific node. For more information related to Stopping temperature range option, refer [9.3.10. Temperature stopping control](../9_Simulation_Controls/9_3_Stopping_Controls.htm#9.3.10._Temperature_stopping_control)
+Teplota zastavenia ([OTPRNG](/docs/sk/Keyword_Documentation/O/OTPRNG/)) nastavuje horný a dolný teplotný limit, ktorého prekročenie zastaví simuláciu. Používateľ má možnosť vynútiť tento limit, ak niektorý jednotlivý uzol prekročí teplotu, len ak všetky uzly prekročia teplotu alebo na základe teploty v konkrétnom uzle. Ďalšie informácie týkajúce sa možnosti zastavenia rozsahu teploty nájdete v časti [9.3.10. Temperature stopping control](../9_Simulation_Controls/9_3_Stopping_Controls.htm#9.3.10._Temperature_stopping_control)
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
 

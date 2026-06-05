@@ -1,29 +1,29 @@
 ---
 lang: sk
-title: "15.2. Force"
+title: "15.2. Sila"
 ---
 
 # 15.2. Force
 
-**[2D, 3D]** : For force (load) control (See Fig. 15.2.1. and Fig. 15.2.2.), the speed of the object is constrained such that the specified load on the object is maintained. The force may be defined in one of the following ways.
+**[2D, 3D]** : Pri riadení sily (záťaže) (pozri obr. 15.2.1 a obr. 15.2.2) sa rýchlosť objektu obmedzuje tak, aby sa udržiavalo určené zaťaženie objektu. Sila môže byť definovaná jedným z nasledujúcich spôsobov.
 
-  * Constant
+  * Konštanta
 
-  * Function of stroke of the primary object
+  * Funkcia zdvihu primárneho objektu
 
-  * Function of time
+  * Funkcia času
 
-When the object is rigid, the load is the resultant load applied by all non-rigid objects that contact it. When the object is elastic, plastic, or porous, the load is the sum of the nodal loads of all nodes with movement boundary condition codes defined. This boundary condition adds a degree of freedom to the system of equations to be solved during the simulation. Arbitrary application of this condition can create difficulty in obtaining a converged solution.
+Ak je objekt tuhý, zaťaženie je výsledné zaťaženie pôsobiace na všetky netuhé objekty, ktoré sa ho dotýkajú. Ak je objekt pružný, plastický alebo pórovitý, zaťaženie je súčtom uzlových zaťažení všetkých uzlov s definovanými kódmi okrajových podmienok pohybu. Táto okrajová podmienka pridáva stupeň voľnosti do sústavy rovníc, ktoré sa majú riešiť počas simulácie. Ľubovoľné použitie tejto podmienky môže spôsobiť ťažkosti pri získavaní konvergentného riešenia.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_2_force/15_2_image001.jpg' | relative_url }})
 
-2D Force movement controls window
+2D okno ovládania pohybu sily
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_2_force/15_2_image002.jpg' | relative_url }})
 
-3D Force movement controls window
+3D okno ovládania pohybu sily
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 

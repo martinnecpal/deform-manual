@@ -1,6 +1,6 @@
 ---
 lang: sk
-title: "Pre-Processor Main Pg.htm"
+title: "Hlavná stránka predspracovateľa.htm"
 ---
 
 [7\. Introduction to Pre-Processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/)
@@ -31,7 +31,7 @@ title: "Pre-Processor Main Pg.htm"
 
 [10.4. Diffusion Data Definition](/docs/sk/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/)
 
-10.5. Dislocation Data Definition
+10.5. Definícia údajov o dislokácii
 
 [10.6. Grain Data Definition](/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/)
 
@@ -41,9 +41,9 @@ title: "Pre-Processor Main Pg.htm"
 
 [10.9 Transformation Data Definition](/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/)
 
-10.10. Coarsening Data Definition
+10.10. Definícia údajov o zrnitosti
 
-10.11. Texture Data Definition
+10.11. Definícia údajov o textúrach
 
 [10.12. Miscellaneous Data Definition](/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/)
 

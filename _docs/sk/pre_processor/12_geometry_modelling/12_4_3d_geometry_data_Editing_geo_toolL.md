@@ -1,32 +1,32 @@
 ---
 lang: sk
-title: "12.4. 3D Geometry data Editing (GEO TOOL)"
+title: "12.4. Úprava údajov 3D geometrie (GEO TOOL)"
 ---
 
-# 12.4. 3D Geometry data Editing (GEO TOOL)
+# 12.4. Úprava údajov 3D geometrie (GEO TOOL)
 
-3D Geometry tool (GEO TOOL) is used to edit the existing 3D geometry. When we import 3D geometry or when we create geometry using primitive option, then ![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) link is enabled in 3D Geometry page. When we click on ![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) link (see Fig. 12.4.1.), 3D Geometry Tool will be opened in new window as shown in Fig. 12.4.2. For information related to options of 3D Geometry Tool, please refer [50.1. 3D Geo Tool](/docs/sk/Operation_Templates/50_3D_GEO_Tool/50_1_3D_Geo_Tool/). After completion of the editing the 3D geometry user can close the 3D Geometry Tool window and the edited geometry is automatically updated in Pre-processor GUI if user saves the geometry while closing the window. 
+Nástroj 3D geometria (GEO TOOL) sa používa na úpravu existujúcej 3D geometrie. Keď importujeme 3D geometriu alebo keď vytvárame geometriu pomocou možnosti primitive, potom je na stránke 3D geometrie povolené prepojenie ![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg). Keď klikneme na odkaz ![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) (pozri obr. 12.4.1.), nástroj 3D Geometria sa otvorí v novom okne, ako je znázornené na obr. 12.4.2. Informácie týkajúce sa možností nástroja 3D Geometry Tool nájdete v časti [50.1. 3D Geo Tool](/docs/sk/Operation_Templates/50_3D_GEO_Tool/50_1_3D_Geo_Tool/). Po dokončení úprav 3D geometrie môže používateľ zatvoriť okno 3D Geometry Tool (Nástroj 3D geometrie) a upravená geometria sa automaticky aktualizuje v grafickom používateľskom rozhraní Pre-processor, ak používateľ uloží geometriu počas zatvárania okna.
 
   
-Fig. 12.4.3. shows the pop-up message box while closing the 3D Geometry tool window, click on ![](../../../assets/Icons/Pre_icons/MO_Yes_button.jpg) to save the modified geometry or click ![](../../../assets/Icons/Pre_icons/MO_Close_button.jpg) button to retain original geometry. After saving changes and closing the 3D Geometry tool window, an object selection popup appears as shown in below Fig. 12.4.4. to select the object having edited geometry. User can select the correct object and then click on ![](../../../assets/Icons/Pre_icons/MO_OK_button.jpg) to update geometry with modified geometry.
+Na obr. 12.4.3. je zobrazené vyskakovacie okno s hlásením pri zatváraní okna nástroja 3D Geometria, kliknutím na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Yes_button.jpg) uložíte upravenú geometriu alebo kliknutím na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Close_button.jpg) zachováte pôvodnú geometriu. Po uložení zmien a zatvorení okna nástroja 3D Geometria sa zobrazí vyskakovacie okno výberu objektu, ako je znázornené na nasledujúcom obr. 12.4.4., aby ste mohli vybrať objekt, ktorý má upravenú geometriu. Používateľ môže vybrať správny objekt a potom kliknúť na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_OK_button.jpg) na aktualizáciu geometrie s upravenou geometriou.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_4_3D_Geometry_data_Editing_GEO_TOOL/Image0001.jpg)
 
-3D Geometry page
+Stránka 3D geometrie
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_4_3D_Geometry_data_Editing_GEO_TOOL/Image0002.jpg)
 
-3D GEO TOOL page
+Stránka 3D GEO TOOL
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_4_3D_Geometry_data_Editing_GEO_TOOL/Image0003.jpg)
 
-Save Changes popup while closing 3D GEO TOOL
+Vyskakovacie okno Uložiť zmeny pri zatváraní nástroja 3D GEO TOOL
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_4_3D_Geometry_data_Editing_GEO_TOOL/Image0004.jpg)
 
-Loading modified geometry
+Načítanie upravenej geometrie
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [50\. Introduction to 3D GEO TOOL](/docs/sk/Operation_Templates/50_3D_GEO_Tool/50_Introduction_to_3D_GEO_Tool/)
 

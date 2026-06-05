@@ -1,261 +1,261 @@
 ---
 lang: sk
-title: "12.3. 3D Geometry Data Defining"
+title: "12.3. Definovanie údajov 3D geometrie"
 ---
 
-# 12.3. 3D Geometry Data Definition
+# 12.3. Definícia údajov 3D geometrie
 
-12.3.1. Geometry rules for 3D
+12.3.1. Pravidlá geometrie pre 3D
 
-12.3.2. 3D Geometry Tools
+12.3.2. Nástroje 3D geometrie
 
-12.3.3. 2D Geometry data Importing and Saving
+12.3.3. Import a ukladanie 2D geometrických údajov
 
-12.3.4. Settings
+12.3.4. Nastavenia
 
-3D Geometry window is used to define the geometry of an object as shown in Fig. 12.3.1. Only define primitive, CAD interface, Edit and Preform field will be in active mode rest other options will be in grayed when no geometry is defined. Once after creating geometry all the options will be activated.
+Okno 3D geometria sa používa na definovanie geometrie objektu, ako je znázornené na obr. 12.3.1. V aktívnom režime budú iba polia Definovať primitívum, CAD rozhranie, Upraviť a Predtvarovať, ostatné možnosti budú v sivej farbe, keď nie je definovaná žiadna geometria. Po vytvorení geometrie sa aktivujú všetky možnosti.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image001.jpg)
 
-3D Geometry window
+Okno 3D geometrie
 
-## Geometry rules for 3D
+## Pravidlá geometrie pre 3D
 
-There are several conventions that must be followed when defining object surfaces in DEFORM.
+Pri definovaní povrchov objektov v programe DEFORM je potrebné dodržiavať niekoľko konvencií.
 
-**Orientation of Surface****Normals :** ****In DEFORM the surface normals of the closed geometries should point outwards from the geometry. This is how DEFORM defines the exterior of an object. In the case of a surface that isn't closed, the surface normals should point toward the deformable objects and great care should be taken that no nodes see the back of the object. In the case where a rigid plane is used to constrain a workpiece, it is recommended to make the plane sufficiently large such that the nodes cannot see around the plane. In the Geometry window, the direction of the surface normals can be viewed by clicking on the surface normal button in the lower left part of the screen. Failure to follow this convention may cause any of the following problems:
+**Orientácia normál povrchu****Normály :** ****In DEFORM normály povrchu uzavretých geometrií by mali smerovať von z geometrie. Takto DEFORM definuje vonkajšiu stranu objektu. V prípade povrchu, ktorý nie je uzavretý, by normály povrchu mali smerovať k deformovateľným objektom a treba dávať veľký pozor na to, aby žiadny uzol nevidel zadnú stranu objektu. V prípade, že sa na obmedzenie obrobku používa tuhá rovina, odporúča sa, aby bola rovina dostatočne veľká, aby uzly nevideli okolo roviny. V okne Geometry (Geometria) možno smer normál povrchu zobraziť kliknutím na tlačidlo Normály povrchu v ľavej dolnej časti obrazovky. Nedodržanie tejto konvencie môže spôsobiť niektorý z nasledujúcich problémov:
 
-  * Object won't [mesh](/docs/sk/pre_processor/13_Mesh_Generation/13_Mesh_Generation/)
-  * Mesh distorts when[ boundary conditions](/docs/sk/pre_processor/14_Boundary_Conditions/14_boundary_conditions/) are applied
-  * [Object positioning](/docs/sk/pre_processor/19_Object_Positioning/19_Object_Positioning/) error using interference positioning
+  * Objekt nebude [mesh](/docs/sk/pre_processor/13_Mesh_Generation/13_Mesh_Generation/)
+  * Sieť sa skreslí, keď sa použije[ boundary conditions](/docs/sk/pre_processor/14_Boundary_Conditions/14_boundary_conditions/)
+  * Chyba [Object positioning](/docs/sk/pre_processor/19_Object_Positioning/19_Object_Positioning/) pri použití interferenčného polohovania
 
-**Surface Patches :** In DEFORM a surface patch is defined by a section of a surface that is separated from other portions of the same surface by a 30 degree or greater bend in the surface. For example, a cube would have six surface patches due to the edges between each side having a 90 degree bend in the surface. In order to view the surface patches in DEFORM the user may click on the surface patches button in the geometry window at the lower left section of the screen. Any bend in the surface greater than 30 degrees will appear as a thick red line. The benefit of this feature is that folds in the surface will appear as red slivers in the middle of the geometry. This provides a method for finding where folds may exist.
+**Povrchové škvrny :** V programe DEFORM je povrchová škvrna definovaná časťou povrchu, ktorá je oddelená od ostatných častí toho istého povrchu ohybom povrchu o 30 stupňov alebo viac. Napríklad kocka bude mať šesť povrchových políčok, pretože hrany medzi jednotlivými stranami majú 90-stupňový ohyb povrchu. Na zobrazenie povrchových políčok v programe DEFORM môže používateľ kliknúť na tlačidlo povrchových políčok v okne geometrie v ľavej dolnej časti obrazovky. Každý ohyb povrchu väčší ako 30 stupňov sa zobrazí ako hrubá červená čiara. Výhodou tejto funkcie je, že záhyby na povrchu sa zobrazia ako červené plôšky v strede geometrie. To poskytuje metódu na zistenie, kde sa môžu vyskytovať záhyby.
 
-**Border Extraction** : Border extraction is the process of identifying the deformed part surface geometry from the surface of the finite element mesh. Geometric reasoning is used to identify critical features such as edges, corners, and symmetry planes which should be maintained during remeshing.  
-Border extraction can fail for the following reasons:
+**Výber z hraníc** : Extrakcia hraníc je proces identifikácie geometrie povrchu deformovanej časti z povrchu siete konečných prvkov. Geometrické uvažovanie sa používa na identifikáciu kritických prvkov, ako sú hrany, rohy a roviny symetrie, ktoré by sa mali zachovať počas remeshingu.  
+Extrakcia hraníc môže zlyhať z týchto dôvodov:
 
-  * **Folds or crossed elements** [3D]
+  * **Zložené alebo prekrížené prvky** [3D]
 
-If a closed forming lap develops in the process, the surface geometry will be ill-defined. If an excessively large time step is used without [polygon length sub stepping](../9_Simulation_Controls/9_2_Defining_Step.htm#Polygon_length_sub_step_\(DPLEN\)), element faces can become crossed, also causing an ill-defined surface. Both of these cases can frequently be identified using the surface patches display in the geometry window.If a legitimate forming lap is developing, the process should be redesigned to eliminate the lap. If the lap is in a region where it is acceptable, it may be necessary to use a CAD system to edit the geometry, then remesh the part and interpolate data.If element faces are crossed, it is generally necessary to revert to the last good step in the database. The situation can be avoided by using a smaller time step, using [polygon length sub stepping](../9_Simulation_Controls/9_2_Defining_Step.htm#Polygon_length_sub_step_\(DPLEN\)), using smaller elements around tight corners, and force remeshing on a fixed step or stroke interval (under remeshing criteria).
+Ak sa v procese vytvorí uzavretý tvárniaci okraj, geometria povrchu bude zle definovaná. Ak sa použije príliš veľký časový krok bez [polygon length sub stepping](../9_Simulation_Controls/9_2_Defining_Step.htm#Polygon_length_sub_step_\(DPLEN\)), plochy prvkov sa môžu skrížiť, čo tiež spôsobí zle definovaný povrch. Oba tieto prípady sa dajú často identifikovať pomocou zobrazenia povrchových políčok v okne geometrie. ak vzniká legitímny tvarovací okraj, proces by sa mal prepracovať tak, aby sa okraj odstránil. Ak sa preliačina nachádza v oblasti, kde je prijateľná, môže byť potrebné použiť systém CAD na úpravu geometrie, potom znovu zosieťovať diel a interpolovať údaje. ak sa plochy prvkov krížia, je vo všeobecnosti potrebné vrátiť sa k poslednému dobrému kroku v databáze. Tejto situácii možno predísť použitím menšieho časového kroku, použitím [polygon length sub stepping](../9_Simulation_Controls/9_2_Defining_Step.htm#Polygon_length_sub_step_\(DPLEN\)), použitím menších prvkov v tesných rohoch a vynúteným remeshovaním na pevnom kroku alebo intervale zdvihu (podľa kritérií remeshovania).
 
-**Parallel symmetry planes** : When using symmetry, the user should not specify parallel fixed velocity boundary conditions. (for a comprehensive discussion on symmetry planes, refer to the [Appendix VIII](/docs/sk/Appendices/Appendix_VIII_Preventing_leakage_of_nodes/) on the use of symmetry planes in 3D) In the case where two parallel symmetry planes are necessary, the user can specify one fixed velocity boundary condition and one rigid plane with no friction and a non-separable contact condition (To see how to implement this, please refer to the [Appendix VIII](/docs/sk/Appendices/Appendix_VIII_Preventing_leakage_of_nodes/) on the use of symmetry planes in 3D). If two fixed velocity boundary conditions are set parallel to one another, border extraction will surely fail, causing any remeshing to fail.
+**Rovnobežné roviny symetrie** : Pri použití symetrie by používateľ nemal zadávať paralelné okrajové podmienky pevnej rýchlosti. (komplexnú diskusiu o rovinách symetrie nájdete v dokumente [Appendix VIII](/docs/sk/Appendices/Appendix_VIII_Preventing_leakage_of_nodes/) o používaní rovín symetrie v 3D) V prípade, že sú potrebné dve paralelné roviny symetrie, používateľ môže zadať jednu pevnú okrajovú podmienku rýchlosti a jednu pevnú rovinu bez trenia a nerozdeliteľnú kontaktnú podmienku (informácie o tom, ako to realizovať, nájdete v dokumente [Appendix VIII](/docs/sk/Appendices/Appendix_VIII_Preventing_leakage_of_nodes/) o používaní rovín symetrie v 3D). Ak sú dve pevné okrajové podmienky rýchlosti nastavené rovnobežne vedľa seba, extrakcia hraníc určite zlyhá, čo spôsobí, že akékoľvek remeselnícke spracovanie zlyhá.
 
-If the symmetry plane is not sufficiently large to cover the entire area where symmetry needs to be defined, it is possible that nodes may move around the plane of symmetry and this will also cause border extraction to fail. Since rigid planes, when used to define symmetry planes, need not have relations to any objects other than the workpiece, they may be arbitrarily large. For display reasons, the user is not recommended to make the rigid planes unreasonably large.
+Ak rovina symetrie nie je dostatočne veľká, aby pokryla celú oblasť, v ktorej je potrebné definovať symetriu, je možné, že uzly sa môžu pohybovať okolo roviny symetrie, čo tiež spôsobí zlyhanie extrakcie hraníc. Keďže tuhé roviny, keď sa používajú na definovanie rovín symetrie, nemusia mať vzťah k žiadnym iným objektom ako k obrobku, môžu byť ľubovoľne veľké. Z dôvodov zobrazenia sa používateľovi neodporúča, aby rigidné roviny boli neprimerane veľké.
 
-## 3D Geometry Tools
+## Nástroje 3D geometrie
 
-**Define Primitive** ![](../../../assets/Icons/Pre_icons/MO_Define_Primitive_label.jpg) : We have three different types of Geometry primitives such as Box, Cylinder and Hollow Cylinder as shown in Fig. 12.3.2. Extrude and Revolve can be used to convert 2D cross-section to 3D.
+**Define Primitive** ![](../../../assets/Icons/Pre_icons/MO_Define_Primitive_label.jpg) : Máme tri rôzne typy geometrických primitív, ako sú Box, Cylinder a Hollow Cylinder, ako je znázornené na obr. 12.3.2. Extrude a Revolve možno použiť na prevod 2D prierezu na 3D.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image002.jpg)
 
-Geometry primitive window
+Primitívne okno geometrie
 
-**CAD Interface** ![](../../../assets/Icons/Pre_icons/MO_CAD_Interface_Label.jpg) : Using this option user can import CAD geometry file directly for Soildworks directly.
+**Rozhranie CAD** ![](../../../assets/Icons/Pre_icons/MO_CAD_Interface_Label.jpg) : Pomocou tejto možnosti môže používateľ priamo importovať súbor geometrie CAD pre Soildworks.
 
-**Preform**![](../../../assets/Icons/Pre_icons/MO_Preform_label.jpg) :
+**Vykonajte**![](../../../assets/Icons/Pre_icons/MO_Preform_label.jpg) :
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image020.jpg)
 
-3D Preform window
+3D okno preformy
 
-**Edit**![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) : Using Edit option we can modify the existing geometry in 3D GEO TOOL wizard. Refer Chapter [12.4. 3D Geometry Editing.](/docs/sk/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_Editing_geo_toolL/)
+**Upraviť**![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) : Pomocou možnosti Upraviť môžeme upraviť existujúcu geometriu v sprievodcovi 3D GEO TOOL. Pozrite si kapitolu [12.4. 3D Geometry Editing.](/docs/sk/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_Editing_geo_toolL/)
 
-**Extract Border** ![](../../../assets/Icons/Pre_icons/MO_Extract_border_button.jpg) : This feature extracts the geometry data from the current database meshed object for all object types except the rigid object.
+**Extraktovať hranicu** ![](../../../assets/Icons/Pre_icons/MO_Extract_border_button.jpg) : Táto funkcia extrahuje údaje o geometrii z aktuálneho sieťovaného objektu databázy pre všetky typy objektov okrem tuhého objektu.
 
-**Extract from Mesh** ![](../../../assets/Icons/Pre_icons/MO_Extract_From_mesh.jpg) : This feature extracts geometry from the 3D object mesh.
+**Extraktovanie z mriežky** ![](../../../assets/Icons/Pre_icons/MO_Extract_From_mesh.jpg) : Táto funkcia extrahuje geometriu z 3D siete objektu.
 
-**Check**![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg) : Always check geometry. DEFORM has a checking algorithm that checks for number of invalid edges, invalid orientation, polygons with small area and number of surfaces. Every type of error cannot be detected.
+**Kontrola**![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg) : Vždy skontrolujte geometriu. DEFORM má kontrolný algoritmus, ktorý kontroluje počet neplatných hrán, neplatnú orientáciu, polygóny s malou plochou a počet povrchov. Každý typ chyby nie je možné odhaliť.
 
-Using this Check Geometry option opens the Geometry Checking Results window which gives a summary of the object’s geometry (See Fig. 12.3.4.). For an object that has a closed volume, there should be 1 surface, 0 free edges and 0 invalid entities (as circled below in Fig. 12.3.4.). Objects that are imported as surfaces and not solids will have a free edge but should still only have 1 surface.
+Použitím tejto možnosti Kontrola geometrie sa otvorí okno Výsledky kontroly geometrie, v ktorom sa zobrazí súhrn geometrie objektu (pozri obr. 12.3.4.). Pre objekt, ktorý má uzavretý objem, by mal existovať 1 povrch, 0 voľných hrán a 0 neplatných entít (ako je zakrúžkované nižšie na obr. 12.3.4.). Objekty, ktoré sú importované ako povrchy a nie telesá, budú mať voľné hrany, ale stále by mali mať len 1 povrch.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image004.jpg)
 
-Geometry Checking Results
+Výsledky kontroly geometrie
 
-**GEOMETRY ERROR** | **RECOMMENDED CORRECTION**  
----|---  
-Poly with invalid orientation |  Either fix the STL file in the solid modelling package or Find the problematic poly in the Preprocessor and fix the STL file manually.  
-Poly with small area |  Increase the error tolerance slightly  
-Poly with invalid edge |  Fix the geometry in the solid modelling package  
+**GEOMETRICKÁ CHYBA** | **ODPORÚČANÁ OPRAVA**
+---|---
+Poly s nesprávnou orientáciou | Buď opravte súbor STL v balíku na modelovanie telies alebo vyhľadajte problematický poly v Preprocesore a súbor STL opravte ručne.  
+Poly s malou plochou | Mierne zvýšte toleranciu chyby
+Poly s neplatnou hranou | Oprava geometrie v balíku na modelovanie telies
   
-Corrective measures to be taken for DEFORM 3D geometry
+Nápravné opatrenia, ktoré sa majú prijať pre geometriu DEFORM 3D
 
   
-Note: Correct orientation of the surface normals is NOT checked in geometry checking if all the normals are pointed in a consistent direction. 
+Poznámka: Správna orientácia normál povrchu sa pri kontrole geometrie NEKONTROLUJE, ak všetky normály smerujú rovnakým smerom.
 
-**Fix**![](../../../assets/Icons/Pre_icons/MO_Fix_label.jpg) : This feature will handle geometric problems where there are either multiple surfaces or open (holes) regions by deleting any extra surfaces and filling holes. For minor or localized problems, this works well. For more troublesome file such as this one, the repair may not produce a desirable result.(See Fig. 12.3.5.)
+**Oprava**![](../../../assets/Icons/Pre_icons/MO_Fix_label.jpg) : Táto funkcia rieši geometrické problémy, pri ktorých existuje buď viacero povrchov, alebo otvorené oblasti (diery), a to odstránením všetkých ďalších povrchov a vyplnením dier. V prípade menších alebo lokalizovaných problémov to funguje dobre. V prípade problematickejších súborov, ako je tento, nemusí oprava priniesť želaný výsledok (pozri obr. 12.3.5).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image005.jpg)
 
-Fixing Geometry of crankshaft Die
+Upevňovacia geometria kľukového hriadeľa
 
-**Scale**![](../../../assets/Icons/Pre_icons/MO_Scale_label.jpg) :Geometry can be scaled in forming operation to accommodate thermal expansion by specifying the scaling factor. (See Fig. 12.3.6.) The scaling factor can be calculated by temperature differential and temperature dependent material data. The scaled geometry can be saved into different Geometry saving formats.
+**Škála**![](../../../assets/Icons/Pre_icons/MO_Scale_label.jpg) :Geometriu možno pri tvárnení zmenšiť, aby sa prispôsobila tepelnej rozťažnosti, zadaním faktora mierky. (Pozri obr. 12.3.6.) Faktor škálovania možno vypočítať na základe teplotného rozdielu a údajov o materiáli závislých od teploty. Škálovanú geometriu možno uložiť do rôznych formátov na ukladanie geometrie.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image001.jpg)
 
-Scale Geometry window
+Okno Geometria mierky
 
-**Reverse**![](../../../assets/Icons/Pre_icons/MO_Reverse_label.jpg) : This feature reverses the surface/ normal of the geometry. Always surface/ Normal of the geometry should be outwards.
+**Reverzný**![](../../../assets/Icons/Pre_icons/MO_Reverse_label.jpg) : Táto funkcia obráti povrch/normálu geometrie. Povrch/normál geometrie by mal byť vždy smerom von.
 
-**Find axis** ![](../../../assets/Icons/Pre_icons/MO_Find_Axis_label.jpg) : This feature determines the axis of the geometry automatically based on the geometry definition and displays it.
+**Vyhľadanie osi** ![](../../../assets/Icons/Pre_icons/MO_Find_Axis_label.jpg) : Táto funkcia automaticky určí os geometrie na základe definície geometrie a zobrazí ju.
 
-**Setup Brick Mesh** ![](../../../assets/Icons/Pre_icons/MO_Setup_brick_mesh_label.jpg) : In order to define Brick mesh, user has to define start surface and End surface for created geometry as shown in Fig. 12.3.7. Brick mesh is used for the geometries of regular or identical cross-section.
+**Nastavenie siete Brick** ![](../../../assets/Icons/Pre_icons/MO_Setup_brick_mesh_label.jpg) : Na definovanie siete Brick musí používateľ definovať počiatočný povrch a koncový povrch pre vytvorenú geometriu, ako je znázornené na obr. 12.3.7. Brick mesh sa používa pre geometrie s pravidelným alebo rovnakým prierezom.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image007.jpg)
 
-Setup Brick Mesh window for Extrusion
+Nastavenie okna Brick Mesh pre vytláčanie
 
-Brick mesh can be generated by selecting Extrude or Revolve options based on the geometry. If user selects Extrude radio button the brick mesh will be extruded with respect to start and end point as shown in Fig. 12.3.8.
+Tehlovú sieť možno vytvoriť výberom možností Extrude alebo Revolve na základe geometrie. Ak používateľ vyberie prepínač Extrude (Vytlačiť), tehlová sieť sa vytlačí vzhľadom na počiatočný a koncový bod, ako je znázornené na obr. 12.3.8.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image008.jpg)
 
-Brick mesh of Extruded object
+Tehlová sieť z vytlačeného objektu
 
-If user selects Revolve radio button the brick mesh will be revolved in Z direction as shown in Fig. 12.3.9. and Fig. 12.3.1.10.
+Ak používateľ vyberie prepínač Revolve, sieť tehál sa bude otáčať v smere Z, ako je znázornené na obr. 12.3.9 a obr. 12.3.1.10.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image009.jpg)
 
-Setup brick mesh window for revolving
+Nastavenie okna z tehlovej siete pre otáčanie
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image010.jpg)
 
-Brick mesh of Revolving object
+Tehlová sieť otáčajúceho sa objektu
 
-**Symmetry Planes** ![](../../../assets/Icons/Pre_icons/MO_Symmetry_Planes_label.jpg): Both planar symmetry and rotational symmetry can be defined. In the case of planar symmetry, the simulation will have extra information that allows it to prevent material from flashing around it. In the case of rotational symmetry, meshing will automatically place the proper boundary conditions on the faces. This is meant as a uniform place to apply symmetry boundary conditions for all objects.
+**Roviny symetrie** ![](../../../assets/Icons/Pre_icons/MO_Symmetry_Planes_label.jpg): Možno definovať rovinnú aj rotačnú symetriu. V prípade rovinnej symetrie bude mať simulácia dodatočné informácie, ktoré jej umožnia zabrániť tomu, aby sa okolo nej materiál blysol. V prípade rotačnej symetrie sieťovanie automaticky umiestni na plochy správne okrajové podmienky. To je myslené ako jednotné miesto na uplatnenie okrajových podmienok symetrie pre všetky objekty.
 
-  * **Specifying Planar Symmetry** : To specify planar symmetry, select the symmetry plane on the geometry, then click on ![](../../../assets/Icons/Pre_icons/MO_Add_Icon2.jpg). The planar symmetry condition will be added to the list of currently specified symmetry. (See Fig. 12.3.11.) When symmetry plane is defined, during mesh generation a pop up appears with a message as shown in Fig. 12.3.12., requesting the user whether to create a default boundary condition, the user can select "No" option, if user would not like to use default BCC assigned by system based on symmetry conditions defined.
+  * **Určenie rovinnej symetrie** : Ak chcete zadať rovinnú symetriu, vyberte rovinu symetrie na geometrii a potom kliknite na ![](../../../assets/Icons/Pre_icons/MO_Add_Icon2.jpg). Podmienka rovinnej symetrie sa pridá do zoznamu aktuálne zadaných symetrií. (Pozri obr. 12.3.11.) Keď je definovaná rovina symetrie, počas generovania siete sa zobrazí vyskakovacie okno so správou, ako je znázornené na obr. 12.3.12., s požiadavkou, či sa má vytvoriť predvolená okrajová podmienka, používateľ môže vybrať možnosť "No" (Nie), ak nechce použiť predvolenú BCC pridelenú systémom na základe definovaných podmienok symetrie.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image011.jpg)
 
-Assigning symmetry surfaces
+Priradenie symetrických plôch
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image012.jpg)
 
-Default Boundary Conditions popup window
+Predvolené okná Okrajové podmienky
 
-Note: Symmetry Popup message appears only when we setup a problem in Expert mode.
+Poznámka: Správa Symmetry Popup sa zobrazí len vtedy, keď nastavíme problém v režime Expert.
 
-  * **Specifying Rotational Symmetry** : To specify rotational symmetry, specify the point and vector of the rotational axis as well as the degree of symmetry available as shown in Fig. 12.3.13. After this, click on the starting plane and end plane of the geometry in the direction of rotation so that rotational symmetry to be applied. The symmetry condition will be added to the list of currently specified symmetry. For more information about rotational symmetry option refer to [16.7. ](/docs/sk/pre_processor/16_Object_Properties/16_7_symmetry_properties/)[Rotational Symmetry](/docs/sk/pre_processor/16_Object_Properties/16_7_symmetry_properties/).
+  * **Určenie rotačnej symetrie** : Ak chcete špecifikovať rotačnú symetriu, zadajte bod a vektor osi otáčania, ako aj dostupný stupeň symetrie, ako je znázornené na obr. 12.3.13. Potom kliknite na počiatočnú rovinu a koncovú rovinu geometrie v smere otáčania, aby sa uplatnila rotačná symetria. Podmienka symetrie sa pridá do zoznamu aktuálne zadaných symetrií. Ďalšie informácie o možnosti rotačnej symetrie nájdete v časti [16.7. ](/docs/sk/pre_processor/16_Object_Properties/16_7_symmetry_properties/)[Rotational Symmetry](/docs/sk/pre_processor/16_Object_Properties/16_7_symmetry_properties/).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image013.jpg)
 
-Rotational symmetry window
+Okno rotačnej symetrie
 
-**Examine**![](../../../assets/Icons/Pre_icons/MO_Examine_label.jpg) : This feature helps to examine the 3D geometry points and polygons. The geometry point’s co-ordinates can also be edited by using points co-ordinates fields and apply button after changing these co-ordinates. The current selection of the point and polygon display is highlighted by sphere or cube shapes using the check boxes at the bottom of the window.(See Fig. 12.3.14.)
+**Examine**![](../../../assets/Icons/Pre_icons/MO_Examine_label.jpg) : Táto funkcia pomáha preskúmať body a polygóny 3D geometrie. Súradnice geometrického bodu možno upravovať aj pomocou polí súradníc bodov a tlačidla použiť po zmene týchto súradníc. Aktuálny výber zobrazenia bodov a polygónov je zvýraznený tvarmi gule alebo kocky pomocou zaškrtávacích polí v spodnej časti okna (pozri obr. 12.3.14).
 
-From DEFORM V12, using ![](../../../assets/Icons/Pre_icons/MO_Tolerance_icon.jpg) ("Detect zones") next to Surface field option we can calculate the number of zones exist in Geometry and for each zone we can assign different material or Layer ID using Assignment option. This option helps the user to model multi-layered composites, voids, inclusions,additive manufacturing,..etc.
+V programe DEFORM V12 môžeme pomocou ![](../../../assets/Icons/Pre_icons/MO_Tolerance_icon.jpg) ("Detekcia zón") vedľa možnosti Pole povrchu vypočítať počet zón existujúcich v geometrii a každej zóne môžeme priradiť iný materiál alebo ID vrstvy pomocou možnosti Priradenie. Táto možnosť pomáha používateľovi modelovať viacvrstvové kompozity, dutiny, inklúzie,aditívnu výrobu,...atď.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image006.jpg)
 
-Geometry settings of Examine window
+Nastavenia geometrie okna Examine
 
-**2D to 3D conversion** ![](../../../assets/Icons/Pre_icons/MO_2D_to_3D_conversion.jpg) : User can define 2D cross section geometry which can be used to generate 3D geometry by checking Use Cross Section check box.
+**Konverzia z 2D do 3D** ![](../../../assets/Icons/Pre_icons/MO_2D_to_3D_conversion.jpg) : Používateľ môže definovať geometriu 2D prierezu, ktorú možno použiť na generovanie 3D geometrie začiarknutím políčka Use Cross Section (Použiť prierez).
 
-**Define Primitive** ![](../../../assets/Icons/Pre_icons/MO_Define_Primitive_label.jpg) : We have three different types of Geometry primitives such as Bar, Cylinder and Hollow Cylinder as shown in  Fig. 12.3.15. This geometry window appears for plane strain type of geometry.
+**Define Primitive** ![](../../../assets/Icons/Pre_icons/MO_Define_Primitive_label.jpg) : Máme tri rôzne typy geometrických primitív, ako sú Bar, Cylinder a Hollow Cylinder, ako je znázornené na obr. 12.3.15. Toto okno geometrie sa zobrazí pre rovinný typ geometrie deformačného typu.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image005.JPG)
 
-2D Geometry primitive window for plane strain and plane stress Axisymmetric
+Primitívne okno 2D geometrie pre rovinnú deformáciu a rovinné napätie
 
-The geometry window appears for Axisymmetric type of geometry is shown in Fig. 12.3.16.
+Okno geometrie sa zobrazí pre osovo súmerný typ geometrie, ako je znázornené na obr. 12.3.16.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image004.JPG)
 
-2D Geometry primitive window for Axisymmetric and Torsion
+Primitívne okno 2D geometrie pre osovú symetriu a torziu
 
-**Check**![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg) : Once the geometry of the object is created, ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg) button a popup appears as shown in below Fig. 12.3.17. The Geometry gets corrected, if they are any errors when we click on ![](../../../assets/Icons/Pre_icons/MO_Check_and_Correct_geo_button.jpg) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![](../../../assets/Icons/Pre_icons/MO_OK_button2.jpg). For more information please refer [Check Geometry](12_1_2d_geometry_data_defining.htm#Check_Geometry)
+**Kontrola**![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg) : Po vytvorení geometrie objektu sa aktivuje tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg). Je potrebné skontrolovať orientáciu geometrie. To možno vykonať kliknutím na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg) Zobrazí sa vyskakovacie okno, ako je znázornené na nasledujúcom obr. 12.3.17. Geometria sa opraví, ak sú v nej nejaké chyby, keď klikneme na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Check_and_Correct_geo_button.jpg). Správa "Geometry is legal" (Geometria je legálna) sa zobrazí, keď je geometria opravená alebo nemá žiadne chyby, a potom klikneme na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_OK_button2.jpg). Ďalšie informácie nájdete v časti [Check Geometry](12_1_2d_geometry_data_defining.htm#Check_Geometry)
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image014.jpg)
 
-Check Geometry popup window
+Vyskakovacie okno Kontrola geometrie
 
-**Edit**![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) : The Geometry editing option is used to create geometry for an object or edit the existing geometry. Imported geometry can be modified in Edit Geometry window.
+**Edit**![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) : Možnosť úpravy geometrie sa používa na vytvorenie geometrie pre objekt alebo na úpravu existujúcej geometrie. Importovanú geometriu možno upraviť v okne Edit Geometry (Úprava geometrie).
 
-For more information on 2D edit geometry, please refer [12.2. 2D Geometry Data Editing](/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+Ďalšie informácie o 2D geometrii úprav nájdete v časti [12.2. 2D Geometry Data Editing](/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
 
-**Show geometry inside mark** : Checking this option enables the Geometry orientation display.
+**Zobraziť geometriu vnútri značky** : Začiarknutím tejto možnosti sa zapne zobrazenie orientácie geometrie.
 
-**Settings**![](../../../assets/Icons/Pre_icons/MO_Settings..._button.jpg) : After creation of 2D geometry using these settings user can create 3D geometry from 2D geometry.
+**Nastavenia**![](../../../assets/Icons/Pre_icons/MO_Settings..._button.jpg) : Po vytvorení 2D geometrie pomocou týchto nastavení môže používateľ vytvoriť 3D geometriu z 2D geometrie.
 
-**Extrude** : The user can import the 2d cross-section or use defined 2D cross-section of the geometry and extrude it in the desired direction. This can also be done while importing the 2d cross-section files from the DB or key file.(See Fig. 12.3.18.)
+**Extrude** : Používateľ môže importovať 2d prierez alebo použiť definovaný 2D prierez geometrie a vytlačiť ho v požadovanom smere. Toto je možné vykonať aj počas importu súborov 2d prierezov z DB alebo kľúčového súboru (pozri obr. 12.3.18).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image015.jpg)
 
-2d cross-section window settings for extrusion
+Nastavenia okna 2d prierezu pre vytláčanie
 
-**Revolve** : The user can import the 2d cross-section of the geometry and revolve the geometry based upon the symmetry to get a 3d cross-section. (See Fig. 12.3.19.)
+**Revolve** : Používateľ môže importovať 2d prierez geometrie a na základe symetrie ho otočiť, aby získal 3d prierez. (Pozri obr. 12.3.19.)
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image016.jpg)
 
-2D cross-section window settings for Revolving
+Nastavenia okna 2D prierezu pre Revolving
 
-**Generate 3D** ![](../../../assets/Icons/Pre_icons/MO_Generate_3D_button.jpg): By clicking on this button or inside Settings page ![](../../../assets/Icons/Pre_icons/MO_Generate_3D__label.jpg) button, created 2D geometry can be extruded or revolved to 3D geometry.
+**Generovať 3D** ![](../../../assets/Icons/Pre_icons/MO_Generate_3D_button.jpg): Kliknutím na toto tlačidlo alebo na stránke Nastavenia na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Generate_3D__label.jpg) možno vytvorenú 2D geometriu extrudovať alebo otočiť na 3D geometriu.
 
-**Show Geometry Normal Vectors** : This feature shows the geometry surface normal vectors. If the geometry is a closed volume, the correct orientation is defined when the surface normals are pointing out of the object. When the geometry is not a closed volume but is just a surface, the correct orientation is defined when the normals are pointing towards the workpiece.(See Fig. 12.3.20)
+**Zobraziť normálové vektory geometrie** : Táto funkcia zobrazuje normálové vektory povrchu geometrie. Ak je geometria uzavretý objem, správna orientácia je definovaná vtedy, keď normály povrchu smerujú von z objektu. Ak geometria nie je uzavretý objem, ale je to len povrch, správna orientácia je definovaná, keď normály smerujú k obrobku (pozri obr. 12.3.20).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image017.jpg)
 
-Show Geometry Normal Vectors
+Zobraziť normálové vektory geometrie
 
-**Transparent** : By checking this check box it will turn on the transparency of the object. (See Fig. 12.3.21.)
+**Transparentný** : Zaškrtnutím tohto políčka sa zapne priehľadnosť objektu. (Pozri obr. 12.3.21.)
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image018.jpg)
 
-Transparent check box option
+Možnosť priehľadného zaškrtávacieho políčka
 
-**Delete Geometry**![](../../../assets/Icons/Pre_icons/MO_clear_icon.jpg) : It deletes the created geometry.
+**Odstrániť geometriu**![](../../../assets/Icons/Pre_icons/MO_clear_icon.jpg) : Odstráni vytvorenú geometriu.
 
-## 3D Geometry data Importing and Saving
+## Import a ukladanie údajov 3D geometrie
 
-**Import Geometry :** Geometry can be imported from a file ![](../../../assets/Icons/Pre_icons/MO_Import_file_icon.jpg) or Load geometry from library ![](../../../assets/Icons/Pre_icons/MO_Load_from_Library_icon.jpg) options, a DEFORM native graphics file (AMGGEO), keyword file, database file or created using the geometry editor. When importing STL files or PATRAN files, use the mouse to select the object you wish to import. Click on any line segment in the object. Any segments connected to this object will also be selected and highlighted.
+**Import geometrie :** Geometriu možno importovať zo súboru ![](../../../assets/Icons/Pre_icons/MO_Import_file_icon.jpg) alebo Načítať geometriu z knižnice ![](../../../assets/Icons/Pre_icons/MO_Load_from_Library_icon.jpg), z natívneho grafického súboru DEFORM (AMGGEO), zo súboru s kľúčovými slovami, z databázového súboru alebo vytvoriť pomocou editora geometrie. Pri importovaní súborov STL alebo súborov PATRAN vyberte pomocou myši objekt, ktorý chcete importovať. Kliknite na ľubovoľnú úsečku v objekte. Všetky segmenty pripojené k tomuto objektu budú tiež vybrané a zvýraznené.
 
-Geometry formats :
+Geometrické formáty :
 
-  * STL format input (DIEGEO)
-  * AMGGEO format input
-  * PATRAN format input
-  * IDEAS format input
-  * NASTRAN format input
-  * 2D IGES format input
+  * Vstup formátu STL (DIEGEO)
+  * Vstup formátu AMGGEO
+  * Vstupný formát PATRAN
+  * Vstupný formát IDEAS
+  * Vstupný formát NASTRAN
+  * 2D vstup vo formáte IGES
 
-**STL format input (DIEGEO)**
+**Vstup formátu STL (DIEGEO)**
 
-The STL format ([DIEGEO](/docs/sk/Keyword_Documentation/D/DIEGEO/)) represents a surface by a series of three sided facets. This format may be created from almost all commercial solid modelling packages from a either a solid model or a surface model. For very simple shapes, such as a cube, very few facets may be used to provide an excellent representation of the shape. In the case of an extrusion die where the facets are used to model a curved surface, many facets may be required in order to give the object a smooth representation or to render small details in a geometry. An economy of the number of facets used to represent a geometry is recommended in order to minimize the size of the database file. As more facets are used, the size of each step in the database file will increase. The increase in the time for the contact calculations is negligible with the increase of the number of facets in the die geometries.
+Formát STL ([DIEGEO](/docs/sk/Keyword_Documentation/D/DIEGEO/)) reprezentuje povrch sériou trojstranných faziet. Tento formát možno vytvoriť takmer vo všetkých komerčných balíkoch na modelovanie telies z modelu telesa alebo z modelu povrchu. V prípade veľmi jednoduchých tvarov, ako je napríklad kocka, sa môže použiť len veľmi málo faziet, ktoré poskytujú vynikajúcu reprezentáciu tvaru. V prípade lisovacej formy, kde sa fazety používajú na modelovanie zakriveného povrchu, môže byť potrebných veľa faziet, aby sa objektu poskytla hladká reprezentácia alebo aby sa vykreslili malé detaily geometrie. Odporúča sa šetriť počtom faziet použitých na reprezentáciu geometrie, aby sa minimalizovala veľkosť databázového súboru. Keď sa použije viac faziet, veľkosť každého kroku v databázovom súbore sa zvýši. Nárast času na výpočet kontaktov je zanedbateľný s nárastom počtu faziet v geometriách matríc.
 
-Upon inputting an STL file into the Pre-processor, the user is immediately prompted for a error tolerance value. This value is the snapping distance between the points in the STL file. Since the facets are not dependent on each other, the points in which adjacent facets share may not be represented exactly the same way in an STL file. Since they were meant to be the same point, the Preprocessor assumes some error tolerance where the points are merged into representing the same point. The default value of 1e-005 is usually a good starting value. If there are small cracks in the die geometry, they may closed by increasing the error tolerance value and hoping that the cracks are snapped closed. This is not a very controlled manner in which to close any cracks and should be used with extreme caution. After using this method, the geometry should be carefully checked to ensure that no holes are introduced or important features are lost.
+Po vložení súboru STL do nástroja Pre-processor sa používateľovi okamžite zobrazí výzva na zadanie hodnoty tolerancie chyby. Táto hodnota predstavuje vzdialenosť prichytenia medzi bodmi v súbore STL. Keďže fazety nie sú na sebe závislé, body, ktoré majú susedné fazety spoločné, nemusia byť v súbore STL reprezentované presne rovnakým spôsobom. Keďže mali byť tým istým bodom, preprocesor predpokladá určitú toleranciu chyby, pri ktorej sú body zlúčené do reprezentácie toho istého bodu. Predvolená hodnota 1e-005 je zvyčajne dobrá východisková hodnota. Ak sú v geometrii matrice malé trhliny, môžu sa uzavrieť zvýšením hodnoty tolerancie chyby a dúfaním, že sa trhliny uzavrú. Toto nie je veľmi kontrolovaný spôsob, ktorým sa dajú uzavrieť akékoľvek trhliny, a mal by sa používať s mimoriadnou opatrnosťou. Po použití tejto metódy by sa mala geometria starostlivo skontrolovať, aby sa zabezpečilo, že sa do nej nedostanú žiadne diery alebo sa nestratia dôležité prvky.
 
-The file format for STL files may be either ASCII or binary format. DEFORM can both read and write ASCII and binary versions of the STL file. The facets are all defined independently of each other, so the danger of there being folds, holes, overlapping facets, or invalid facet orientations is possible. After reading an STL file, it is strongly recommended to check the geometry to make sure that there are no folds, holes or other problems. If there are geometry problems in a deforming body, problems may occur upon meshing the object. If there are geometry problems in a rigid die, problems may occur during the simulation where nodes get trapped and severely compromise the integrity of the deforming body. This can be very problematic since problems in die geometries may not occur until well into a simulation. The manner in which to best determine if a die geometry is well defined or not is to try to apply a mesh to it. If a mesh can be generated on geometry, then it is a well defined geometry, however, if the meshing fails, then it is possible that there is a problem with the geometry definition.
+Formát súborov STL môže byť ASCII alebo binárny formát. DEFORM dokáže čítať aj zapisovať ASCII aj binárne verzie STL súborov. Všetky fazety sú definované nezávisle od seba, takže hrozí nebezpečenstvo, že sa vyskytnú záhyby, diery, prekrývajúce sa fazety alebo neplatná orientácia faziet. Po načítaní súboru STL sa dôrazne odporúča skontrolovať geometriu, aby ste sa uistili, že sa v nej nenachádzajú žiadne záhyby, diery alebo iné problémy. Ak sa v deformujúcom sa telese vyskytnú problémy s geometriou, pri vytváraní siete objektu sa môžu vyskytnúť problémy. Ak sú problémy s geometriou v tuhej matrici, môžu sa vyskytnúť problémy počas simulácie, keď sa uzly zachytia a vážne narušia integritu deformujúceho sa telesa. To môže byť veľmi problematické, pretože problémy v geometrii výlisku sa môžu objaviť až v priebehu simulácie. Spôsob, ako najlepšie určiť, či je geometria výlisku dobre definovaná alebo nie, je pokúsiť sa na ňu aplikovať sieť. Ak je možné na geometrii vygenerovať sieť, potom ide o dobre definovanú geometriu, ak však sieťovanie zlyhá, je možné, že je problém s definíciou geometrie.
 
-**AMGGEO format input**
+**Vstup vo formáte AMGGEO**
 
-The AMGGEO format is a DEFORM internal format for handling geometries. This format can specify a surface as a set of connecting triangles or quadrilaterals. If quadrilaterals are used, degenerate elements (i.e. triangles) are not permitted. The patch normals must be out of the element. That is, the points should be numbered counter clockwise when viewed from the outside of the object. The file can be created and edited using a text editor such as vi, emacs, or Notepad.
+Formát AMGGEO je interný formát DEFORM na spracovanie geometrie. Tento formát môže špecifikovať povrch ako súbor spojovacích trojuholníkov alebo štvoruholníkov. Ak sa používajú štvoruholníky, degenerované prvky (t. j. trojuholníky) nie sú povolené. Normály políčka musia byť mimo prvku. To znamená, že body by mali byť číslované proti smeru hodinových ručičiek pri pohľade zvonku objektu. Súbor je možné vytvoriť a upraviť pomocou textového editora, ako je vi, emacs alebo Notepad.
 
-The file format is  
-NUMBER OF VERTEX POINTS
+Formát súboru je
+POČET VRCHOLOVÝCH BODOV
 
 1 X1 Y1 Z1
 
-2 X2 Y2 Z2 
+2 X2 Y2 Z2
 
-...... N 
+...... N
 
 XN YN ZN
 
-NUMBER OF
+POČET
 
-SURFACE PATCHES
+POVRCHOVÉ ZÁPLATY
 
-1 first patch connectivity 1 2 3 (1/4)
+1 prvé prepojenie záplat 1 2 3 (1/4)
 
-2 second patch connectivity 1 2 3 (1/4) 
+2 Druhé prepojenie záplat 1 2 3 (1/4)
 
 ......
 
-N Nth patch connectivity 1 2 3 (1/4)
+N N-tá spojitosť záplat 1 2 3 (1/4)
 
-where (1/4) in the connectivity indicates that point 1 is repeated in the 4th position in a triangular patch. All 4 points are used for a quadrilateral patch.
+kde (1/4) v spojitosti znamená, že bod 1 sa opakuje na 4. pozícii v trojuholníkovom políčku. Pri štvoruholníkovej záplate sa používajú všetky 4 body.
 
-A 1'' by 1'' square patch in the xy plane with normal pointing along the z axis would be defined as follows:
+Štvorcová škvrna s rozmermi 1'' x 1'' v rovine xy s normálou smerujúcou pozdĺž osi z by bola definovaná takto:
 
 4
 
@@ -271,7 +271,7 @@ A 1'' by 1'' square patch in the xy plane with normal pointing along the z axis 
 
 1 1 2 3 4
 
-The square would be defined using two triangles as follows:
+Štvorec by sa definoval pomocou dvoch trojuholníkov takto:
 
 4
 
@@ -290,50 +290,50 @@ The square would be defined using two triangles as follows:
 2 1 3 4 1
 
   
-**PATRAN format input [3D]**
+**Vstupný formát PATRAN [3D]**
 
-The PATRAN neutral file format is an output format from PATRAN. This format specifies a either a surface mesh or a solid mesh which can be used to either represent a geometry. Upon loading a PATRAN neutral file, the user is first prompted whether the neutral file is either a surface mesh or a solid mesh. After the user provides the information on whether the file is a surface or a solid mesh, the user is prompted to provide a conversion factor. This is merely a scaling variable and the user is recommended to just use the default value of 1.
+Neutrálny formát súboru PATRAN je výstupný formát systému PATRAN. Tento formát špecifikuje buď povrchovú sieť, alebo sieť telesa, ktorá sa môže použiť na reprezentáciu geometrie. Po načítaní neutrálneho súboru PATRAN sa používateľovi najprv zobrazí výzva, či je neutrálny súbor buď povrchová sieť, alebo plná sieť. Po tom, ako používateľ poskytne informáciu o tom, či je súbor povrchová alebo plná sieť, je vyzvaný, aby zadal konverzný faktor. Ide len o škálovaciu premennú a používateľovi sa odporúča použiť len predvolenú hodnotu 1.
 
-DEFORM®-3D imports .PDA and .PAT 3d geometry files formats.
+DEFORM®-3D importuje geometrické súbory vo formátoch .PDA a .PAT 3d.
 
-**IDEAS format input [3D]**
+**Vstup formátu IDEAS [3D]**
 
-The IDEAS neutral file format is an output format from IDEAS. This format specifies a surface mesh which can be used to either represent a geometry in DEFORM or as a basis for a solid mesh. Upon loading an IDEAS universal file, the user is first prompted to provide a conversion factor. This is merely a scaling variable and the user is recommended to just use the default value of 1.
+Neutrálny formát súboru IDEAS je výstupný formát systému IDEAS. Tento formát špecifikuje povrchovú sieť, ktorá sa môže použiť buď na reprezentáciu geometrie v programe DEFORM, alebo ako základ pre pevnú sieť. Po načítaní univerzálneho súboru IDEAS sa používateľ najprv vyzve, aby zadal konverzný faktor. Ide len o škálovaciu premennú a používateľovi sa odporúča použiť len predvolenú hodnotu 1.
 
-**NASTRAN format input [3D]**
+**Vstup vo formáte NASTRAN [3D]**
 
-****DEFORM- 3D imports the NAS 3D geometry format. While importing scaling can be done by using the scaling factor in the options gemetry tab.
+****DEFORM- 3D importuje formát 3D geometrie NAS. Pri importe je možné škálovanie vykonať pomocou faktora škálovania v záložke Možnosti gemetrie.
 
-**2D IGES format input [3D]**  
-3D geometry can also be created by extruding 2D IGS geometry file, using Import Geometry option by specifying extrision length and direction. Fig. 12.3.22. shows the 2d IGES geometry extrusion settings window which pops up while importing geometry using the import geometry option.
+**2D Vstup vo formáte IGES [3D]**
+3D geometriu možno vytvoriť aj extrudovaním 2D súboru geometrie IGS pomocou možnosti Import Geometry zadaním dĺžky a smeru extrudovania. Na obr. 12.3.22. je zobrazené okno s nastaveniami extrudovania 2d IGES geometrie, ktoré sa zobrazí počas importu geometrie pomocou možnosti Import geometrie.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image003.jpg)
 
-Extrude Direction and Length window for 2D IGES import in 3D mode
+Okno Extrude Direction and Length pre 2D import IGES v 3D režime
 
-**Assign the file name to the object name while loading geometry :** When user checks this option while loading or importing geometry file, it assigns the geometry file name to the Object name.
+**Priradenie názvu súboru k názvu objektu pri načítaní geometrie :** Keď používateľ zaškrtne túto možnosť pri načítaní alebo importovaní súboru geometrie, priradí názov súboru geometrie k názvu objektu.
 
-**Save Geometry** : Saves geometry to a file ![](../../../assets/Icons/Pre_icons/MO_Save_to_a_file_icon.jpg) or to library ![](../../../assets/Icons/Pre_icons/MO_Save_to_Library_icon.jpg). We can save geometry in STL, PATRAN, UNV and DEFORM native GEO format for 3D.
+**Uložiť geometriu** : Uloží geometriu do súboru ![](../../../assets/Icons/Pre_icons/MO_Save_to_a_file_icon.jpg) alebo do knižnice ![](../../../assets/Icons/Pre_icons/MO_Save_to_Library_icon.jpg). Geometriu môžeme uložiť vo formátoch STL, PATRAN, UNV a DEFORM natívneho formátu GEO pre 3D.
 
-## Settings ![](../../../assets/Icons/Pre_icons/MO_Settings_icon.jpg)
+## Nastavenia ![](../../../assets/Icons/Pre_icons/MO_Settings_icon.jpg)
 
 **2D Import** :
 
-**Tolerance:** Sets the tolerance level for joining two boundary points which are close together when an object is imported in IGS and DXF geometry formats, before transferring the data into DEFORM are defined here. (See Fig. 12.3.23.)
+**Tolerancia:** Tu sa definuje úroveň tolerancie pre spojenie dvoch hraničných bodov, ktoré sú blízko seba pri importe objektu vo formátoch geometrie IGS a DXF, pred prenosom údajov do programu DEFORM. (Pozri obr. 12.3.23.)
 
-**No. of discretization points:**
+**Počet bodov diskretizácie:**
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image019.jpg)
 
-3D Geometry Tolerance settings window
+Okno nastavení tolerancie 3D geometrie
 
-**3D Import** :
+**3D import** :
 
-**Tolerance:** level for joining two boundary points which close together when an object is imported from STL geometry formats and before transferring the data into DEFORM are defined here. (See Fig. 12.3.23.)
+**Tolerancia:** tu sa definuje úroveň pre spojenie dvoch hraničných bodov, ktoré sú blízko seba pri importe objektu z formátov geometrie STL a pred prenosom údajov do DEFORM. (Pozri obr. 12.3.23.)
 
-**Scaling Factor:** It will scale the 3D geometry while loading imported geometry. Required scaling factor must be specified before importing the geometry in order to scale the importing geometry. By default the value will be 1 means no scaling, for 0.5 it scales down to half of its original geometry and for 2 it doubles its original geometry. (See  Fig. 12.3.23.)
+**Faktor škálovania:** Pri načítaní importovanej geometrie sa nastaví mierka 3D geometrie. Požadovaný faktor mierky musí byť zadaný pred importom geometrie, aby sa importovaná geometria zmenšila. V predvolenom nastavení bude hodnota 1 znamenať žiadne škálovanie, pre 0,5 sa škáluje na polovicu pôvodnej geometrie a pre 2 sa zdvojnásobí pôvodná geometria. (Pozri obr. 12.3.23.)
 
-Related Topics:
+Súvisiace témy:
 
 [12\. Geometry Modelling](/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/)
 

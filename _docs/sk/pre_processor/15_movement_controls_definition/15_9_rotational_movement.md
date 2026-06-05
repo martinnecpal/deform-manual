@@ -1,52 +1,52 @@
 ---
 lang: sk
-title: "15.9. Rotational Movement"
+title: "15.9. Rotačný pohyb"
 ---
 
-# 15.9. Rotational Movement
+# 15.9. Rotačný pohyb
 
-15.9.1. Torque
+15.9.1. Krútiaci moment
 
-15.9.2. Angular velocity
+15.9.2. Uhlová rýchlosť
 
   
-**[2D, 3D]** : Rotational movement is defined by an angular velocity about a fixed center of rotation. This movement type causes only rotation. Unless otherwise specified, translation is constrained. The rotational speed is controlled through the Controlling Method option and the point at which the object is rotated about is set through the Center of Rotational Movement. See Fig. 15.9.1., Fig. 15.9.2. and Fig. 15.9.3. for 2d and 3d model rotational movement settings.
+**[2D, 3D]** : Rotačný pohyb je definovaný uhlovou rýchlosťou okolo pevného stredu otáčania. Tento typ pohybu spôsobuje iba rotáciu. Ak nie je uvedené inak, translácia je obmedzená. Rotačná rýchlosť sa riadi prostredníctvom možnosti Controlling Method (Spôsob riadenia) a bod, okolo ktorého sa objekt otáča, sa nastavuje prostredníctvom možnosti Center of Rotational Movement (Stred rotačného pohybu). Nastavenia rotačného pohybu 2d a 3d modelu nájdete na obr. 15.9.1., obr. 15.9.2. a obr. 15.9.3.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_9_rotational_movement/15_9_image001.jpg' | relative_url }})
 
-Rotation movement controls window settings for 2D Torque
+Nastavenia okna ovládania pohybu otáčania pre 2D Torque
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_9_rotational_movement/15_9_image002.jpg' | relative_url }})
 
-Rotation movement controls window settings for 2D Angular velocity
+Ovládacie prvky pohybu otáčania Nastavenia okna pre 2D uhlovú rýchlosť
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_9_rotational_movement/15_9_image003.jpg' | relative_url }})
 
-Rotation movement controls window settings for 3D Torque and Angular velocity
+Nastavenia okna pre ovládanie rotačného pohybu pre 3D krútiaci moment a uhlovú rýchlosť
 
-Rotational Motion can be applied to simulate rolling or any type of movement where an object will rotate about a fixed axis. Rotational Motion can only be applied to Rigid objects. Rigid objects can have both [Rotational](15_movement_controls_settings.htm#15.1.2._Rotational_movement) and [Translational](15_movement_controls_settings.htm#15.1.1._Translation_movement) movement simultaneously.
+Rotačný pohyb možno použiť na simuláciu valenia alebo akéhokoľvek typu pohybu, pri ktorom sa objekt otáča okolo pevnej osi. Rotational Motion možno použiť len na tuhé objekty. Rigidné objekty môžu mať súčasne pohyb [Rotational](15_movement_controls_settings.htm#15.1.2._Rotational_movement) aj [Translational](15_movement_controls_settings.htm#15.1.1._Translation_movement).
 
-**Controlling Method**
+**Kontrolná metóda**
 
-The objects rotation can be controlled by an Angular Velocity or a Torque. Select the required control and enter the value for the rotation just below.
+Otáčanie objektov možno ovládať uhlovou rýchlosťou alebo krútiacim momentom. Vyberte požadované ovládanie a zadajte hodnotu pre otáčanie hneď pod ním.
 
 ## **Torque**
 
-The Torque movement type will apply a rotational motion about the defined axis at a specified torque. The torque can be specified as a constant or as a function of time or angle.
+Typ pohybu Torque vykoná rotačný pohyb okolo definovanej osi so zadaným krútiacim momentom. Krútiaci moment môže byť zadaný ako konštanta alebo ako funkcia času alebo uhla.
 
-## **Angular Velocity**
+## **Angulárna rýchlosť**
 
-Angular Velocity will apply rotational motion about the defined axis at a specified angular velocity in radians per second. The angular velocity can be specified as a constant or as a function of time or angle. Along with axis data, options are available to compute the center and axis from the geometry.
+Uhlová rýchlosť použije rotačný pohyb okolo definovanej osi pri zadanej uhlovej rýchlosti v radiánoch za sekundu. Uhlová rýchlosť môže byť zadaná ako konštanta alebo ako funkcia času alebo uhla. Spolu s údajmi o osi sú k dispozícii možnosti na výpočet stredu a osi z geometrie.
 
-Note:
+Poznámka:
 
-Idle rolls can be defined by specifying torque control with a very low torque value.
+Voľnobežné valce možno definovať zadaním riadenia krútiaceho momentu s veľmi nízkou hodnotou krútiaceho momentu.
 
-**Axis of Rotation** : is specified by a vector originating at the point center and through the point direction. Rotation direction is defined by the right hand rule. That is, positive rotation is clockwise as viewed from the center point looking towards the direction point.
+**Osa otáčania** : je určená vektorom vychádzajúcim zo stredu bodu a prechádzajúcim smerom bodu. Smer rotácie je definovaný pravidlom pravej ruky. To znamená, že kladná rotácia je v smere hodinových ručičiek pri pohľade zo stredu bodu smerom k bodu smeru.
 
-**Current Angle** : current position of the object.
+**Aktuálny uhol** : aktuálna poloha objektu.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 

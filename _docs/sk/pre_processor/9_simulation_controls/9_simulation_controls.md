@@ -1,23 +1,23 @@
 ---
 lang: sk
-title: "9. Simulation Controls"
+title: "9. Ovládacie prvky simulácie"
 ---
 
-# 9\. Simulation Controls
+# 9\. Ovládacie prvky simulácie
 
-In Simulation Controls we can control the numerical behaviour of the solution. Main settings details with specifying the simulation title, unit system, geometry type, etc. Step and stopping controls are used to specify the time step, the total number of steps and the criteria used to terminate the simulation. Processing conditions like the environment temperature, convection coefficient can be specified under Processing conditions. Certain advanced features are explained in the Advanced controls section.
+V časti Ovládacie prvky simulácie môžeme riadiť numerické správanie riešenia. Hlavné nastavenia zahŕňajú zadanie názvu simulácie, sústavy jednotiek, typu geometrie atď. Ovládacie prvky pre kroky a ukončenie slúžia na zadanie časového kroku, celkového počtu krokov a kritérií na ukončenie simulácie. Podmienky spracovania, ako je teplota prostredia alebo koeficient konvekcie, je možné špecifikovať v časti Podmienky spracovania. Niektoré pokročilé funkcie sú vysvetlené v časti Pokročilé ovládacie prvky.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_simulation_controls/9_image001.jpg' | relative_url }})
 
-(a)
+a)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_simulation_controls/9_image002.jpg' | relative_url }})
 
-(b)
+b)
 
-Simulation controls Main window;(a) For 2D and (b) For 3D 
+Ovládacie prvky simulácie v hlavnom okne; (a) pre 2D a (b) pre 3D 
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)
 

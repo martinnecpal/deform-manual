@@ -1,78 +1,78 @@
 ---
 lang: sk
-title: "9.10. Output controls"
+title: "9.10. Ovládacie prvky výstupu"
 ---
 
-# 9.10. Output Controls ![]({{ '/assets/icons/pre_icons/mo_output_controls.jpg' | relative_url }})
+# 9.10. Ovládacie prvky výstupu ![]({{ '/assets/icons/pre_icons/mo_output_controls.jpg' | relative_url }})
 
-9.10.1. Elemental/Nodal [2D, 3D]
+9.10.1. Elementárne/uzlové [2D, 3D]
 
-9.10.2. Strain [2D, 3D]
+9.10.2. Deformácia [2D, 3D]
 
-9.10.3. Nodal heat [2D, 3D]
+9.10.3. Teplo v uzloch [2D, 3D]
 
-## Elemental/Nodal [2D, 3D]
+## Elementárne/uzlové [2D, 3D]
 
-The output control that is available to the user is intended to improve the state variable representation in the analysis domain and minimize the interpolation error involved in the remeshing procedures. Such representation can also better maintain the local gradients of the state variables compared to the existing the element based representation. In the current version, the user can choose to represent damage, strain and stress state as Element+Nodal data. This means in addition to the currently available element data, the user can store these variables as nodal variables. From v11 onwards, the state variables can also be calculated at integration points.
+Ovládanie výstupu, ktoré má používateľ k dispozícii, slúži na zlepšenie reprezentácie stavových premenných v oblasti analýzy a na minimalizáciu chyby interpolácie pri postupoch vytvárania novej siete. Takáto reprezentácia dokáže v porovnaní so súčasnou reprezentáciou založenou na prvkoch lepšie zachovať lokálne gradienty stavových premenných. V aktuálnej verzii si môže používateľ zvoliť reprezentáciu poškodenia, deformácie a napätia ako prvkové + uzlové údaje. To znamená, že okrem aktuálne dostupných prvkových údajov môže používateľ ukladať tieto premenné ako uzlové premenné. Od verzie v11 je možné stavové premenné vypočítať aj v integračných bodoch.
 
-From V14.0, the Output Control tab has been removed from Advanced options and made available as separate tab as shown in Fig. 9.10.1. In addition to the existing Stress, Strain and Damage state variables, Heat generated at the nodal level can be calculated.  
+Od verzie V14.0 bola karta „Output Control“ (Ovládanie výstupu) odstránená z časti „Advanced options“ (Pokročilé nastavenia) a je k dispozícii ako samostatná karta, ako je znázornené na obr. 9.10.1. Okrem existujúcich premenných stavu, ako sú napätie, deformácia a poškodenie, je možné vypočítať aj teplo vygenerované na úrovni uzla.  
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image001.jpg' | relative_url }})
 
-Elemental/Nodal output selection page
+Stránka výberu výstupu Elemental/Nodal
 
-## Strain [2D, 3D]
+## Deformácia [2D, 3D]
 
-The wide selection of strain components that can be stored by the user depends upon the analysis and object type. These options for a typical elasto-plastic object enable user to store plastic, elastic and total strains. For non-isothermal models with elasto-plastic objects, additionally thermal volumetric strains can also be stored for each stored step of the simulation. When transformation is turned on, the strain components that are produced due to phase transformation can be stored as well. 
+Široký výber zložiek deformácie, ktoré môže používateľ zaznamenať, závisí od typu analýzy a objektu. Tieto možnosti pre typický elastoplastický objekt umožňujú používateľovi zaznamenať plastické, elastické a celkové deformácie. V prípade neizotermických modelov s elastoplastickými objektmi je možné pre každý uložený krok simulácie uložiť aj tepelné objemové deformácie. Ak je zapnutá transformácia, je možné uložiť aj zložky deformácie, ktoré vznikajú v dôsledku fázovej transformácie. 
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image002.jpg' | relative_url }})
 
-Strain output options
+Možnosti výstupu napätia
 
-Once set in the Pre-Processor, each of these strain components (STNOUT) as shown in Fig. 9.10.3. are available in post processing for point tracking, contour plots and other normal display options (See Fig. 9.10.4.). 
+Po nastavení v predspracovateľovi sú všetky tieto zložky deformácie (STNOUT), ako je znázornené na obr. 9.10.3, k dispozícii v post-spracovaní na sledovanie bodov, kontúrové grafy a ďalšie bežné možnosti zobrazenia (pozri obr. 9.10.4). 
 
-These additional nodal and element variables can be accessed from the corresponding nodal and element dialogs as shown in Fig. 9.10.5.
+K týmto dodatočným uzlovým a prvkovým premenným je možné pristupovať z príslušných dialógových okien pre uzly a prvky, ako je znázornené na obr. 9.10.5.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image003.jpg' | relative_url }})
 
-Setting the additional strain components and element + node data
+Nastavenie dodatočných zložiek napätia a údajov o prvkoch a uzloch
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image004.jpg' | relative_url }})
 
-State variable list for additional strain components and Elemental+Node data
+Zoznam stavových premenných pre dodatočné zložky deformácie a údaje o prvkoch a uzloch
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image005.jpg' | relative_url }})
 
-Enhanced node and element dialogs including additional nodal variables and strain components.
+Vylepšené dialógové okná uzlov a prvkov vrátane ďalších uzlových premenných a zložiek deformácie.
 
-## Nodal heat[2D, 3D]
+## Teplo v uzloch [2D, 3D]
 
-From v14.0, Nodal heat option added under Simulation controls. 
+Od verzie 14.0 bola v časti Ovládacie prvky simulácie pridaná možnosť „Nodálne teplo“. 
 
-Nodal heat output can be created either as time integrated or for the current step. These options are available to the user when Heat transfer mode check box is turned on in Main settings page. 
+Výkon uzlového tepla je možné vypočítať buď ako časovo integrovaný, alebo pre aktuálny krok. Tieto možnosti má používateľ k dispozícii, ak je na stránke Hlavné nastavenia zaškrtnuté políčko Režim prenosu tepla. 
 
-By default, Time integrated nodal heat output is activated and cannot be deactivated.
+Funkcia „Integrovaný uzlový tepelný výkon v čase“ je štandardne zapnutá a nie je možné ju vypnúť.
 
-Nodal heat output due to various factors during forming at a particular step can be captured as Normalized nodal heat components. Currently, we can plot nodal heat output due to Deformation and Friction along with the Total output.
+Tepelný výkon v uzle spôsobený rôznymi faktormi počas formovania v konkrétnom kroku je možné vyjadriť ako normalizované zložky tepelného výkonu v uzle. V súčasnosti môžeme znázorniť tepelný výkon v uzle spôsobený deformáciou a trením spolu s celkovým výkonom.
 
-  * **Total** : When we turn on Total check box, during simulation Total nodal heat at the current step will be calculated and saved in database.
+  * **Súčet**: Ak zaškrtnete políčko „Súčet“, počas simulácie sa vypočíta celkové teplo v uzle v aktuálnom kroku a uloží sa do databázy.
 
-  * **Deformation** : When we turn on the Deformation check box, during simulation nodal heat generated due to deformation at the current step will be calculated and saved in database.
+  * **Deformácia**: Ak zaškrtnete políčko „Deformácia“, počas simulácie sa vypočíta teplo v uzloch vzniknuté v dôsledku deformácie v aktuálnom kroku a uloží sa do databázy.
 
-  * **Friction** : When we turn on Friction check box, during simulation nodal heat generated due to friction at the current step will be calculated and saved in the database.
+  * **Trenie**: Ak zaškrtnete políčko „Trenie“, počas simulácie sa vypočíta teplo v uzloch vzniknuté v dôsledku trenia v aktuálnom kroku a uloží sa do databázy.
 
-According to the selection of Normalized nodal heat components in Pre, under State variable- Thermal tab (see Fig. 9.10.6.), we can observe the selected Normalized nodal heat components outputs (See Fig. 9.10.7).
+Na základe výberu normalizovaných uzlových tepelných zložiek v programe Pre na karte „State variable – Thermal“ (pozri obr. 9.10.6) môžeme vidieť výstupy vybraných normalizovaných uzlových tepelných zložiek (pozri obr. 9.10.7).
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image006.jpg' | relative_url }})
 
-Nodal heat output selection page
+Stránka na výber tepelného výkonu uzlov
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_10_output_controls/9_10_image007.jpg' | relative_url }})
 
-Normalized nodal heat components options.
+Možnosti normalizovaných teplotných zložiek uzlov.
 
   
-**Related Topics:**
+**Súvisiace témy:**
 
 [9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
 [9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   

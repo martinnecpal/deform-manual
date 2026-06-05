@@ -1,32 +1,32 @@
 ---
 lang: sk
-title: "14.3. Thermal Boundary Conditions"
+title: "14.3. Tepelné okrajové podmienky"
 ---
 
-# 14.3. Thermal Boundary Conditions
+# 14.3. Tepelné hraničné podmienky
 
-14.3.1. Heat exchange with the environment BCC   
-14.3.2. Temperature BCC  
-14.3.3. Heat flux BCC  
-14.3.4. Nodal heat BCC  
-14.3.5. Advanced Thermal BCC
+14.3.1. Výmena tepla s okolím BCC
+14.3.2. Teplota BCC
+14.3.3. Tepelný tok BCC
+14.3.4. Uzlové teplo BCC
+14.3.5. Pokročilý tepelný BCC
 
-## Heat exchange with the environment BCC [2D,3D]
+## Výmena tepla s prostredím BCC [2D,3D]
 
-This boundary condition [ECCTMP](/docs/sk/Keyword_Documentation/E/ECCTMP/) specifies that heat exchange between element faces bounded by these nodes and their environment should occur. The contact boundary condition determines whether exchange will occur to the ambient atmosphere or to a contacting object.
+Táto okrajová podmienka [ECCTMP](/docs/sk/Keyword_Documentation/E/ECCTMP/) určuje, že by malo dochádzať k výmene tepla medzi plochami prvkov ohraničenými týmito uzlami a ich okolím. Kontaktná okrajová podmienka určuje, či dôjde k výmene s okolitou atmosférou alebo s kontaktným objektom.
 
-Default heat exchange with the environment occurs to the ambient environment as described above. However, heat exchange windows may be specified using the heat exchange windows icon. Heat exchange for nodes within these windows is controlled by the parameters set for each window.
+Štandardná výmena tepla s okolím prebieha s okolitým prostredím, ako je opísané vyššie. Okná výmeny tepla však možno zadať pomocou ikony okien výmeny tepla. Výmena tepla pre uzly v rámci týchto okien sa riadi parametrami nastavenými pre každé okno.
 
-**Heat Exchange windows**
+**Výmena okien**
 
-This function allows the user to define heat exchange conditions for local areas on a body by use of three dimensional window. To use heat exchange windows, perform the following actions:
+Táto funkcia umožňuje používateľovi definovať podmienky výmeny tepla pre lokálne oblasti na telese pomocou trojrozmerného okna. Ak chcete použiť okná výmeny tepla, vykonajte nasledujúce činnosti:
 
-  1. Go to the Boundary Conditions window.
-  2. Select the Thermal tab.
-  3. Select the Heat exchange windows button.
-  4. Note the tools in the top left corner of the display window changes and the new heat exchange window that comes up.
-  5. At this point, heat exchange windows can be defined using the tools in the top left corner of the display window. Each window has its own local environmental temperature, convection coefficient, Heat flux and emissivity. See Fig. 14.3.1. of heat exchange window. 
-  6. You can define up to 20 independent windows by the method. If two regions share the same space, the lower number window wins.
+  1. Prejdite do okna Okrajové podmienky.
+  2. Vyberte kartu Thermal (Teplota).
+  3. Vyberte tlačidlo Okná výmeny tepla.
+  4. Všimnite si, že nástroje v ľavom hornom rohu okna displeja sa zmenia a objaví sa nové okno výmeny tepla.
+  5. V tomto okne je možné definovať okná výmeny tepla pomocou nástrojov v ľavom hornom rohu zobrazovacieho okna. Každé okno má vlastnú lokálnu teplotu prostredia, koeficient konvekcie, tepelný tok a emisivitu. Pozri obr. 14.3.1. okna výmeny tepla.
+  6. Touto metódou môžete definovať až 20 nezávislých okien. Ak dve oblasti zdieľajú rovnaký priestor, vyhráva okno s nižším číslom.
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_3_Thermal_Boundary_Conditions/14_3_Image003.jpg)
 
@@ -36,29 +36,29 @@ This function allows the user to define heat exchange conditions for local areas
 
 (b)
 
-Heat exchange with Environment window; (a) For 2D and (b) For 3D
+Výmena tepla s oknom prostredia; (a) pre 2D a (b) pre 3D
 
-## Temperature BCC [2D, 3D]
+## Teplota BCC [2D, 3D]
 
-Specifies a fixed temperature at the given nodes.
+Určuje pevnú teplotu v daných uzloch.
 
-##  Heat flux BCC [2D, 3D]
+## Tepelný tok BCC [2D, 3D]
 
-This ([ECHFLX](/docs/sk/Keyword_Documentation/E/ECHFLX/)) Specifies an energy flux per unit area over the face of the element bounded by the nodes. Units are energy/time/area.
+Toto ([ECHFLX](/docs/sk/Keyword_Documentation/E/ECHFLX/)) Určuje tok energie na jednotku plochy na ploche prvku ohraničenej uzlami. Jednotky sú energia/čas/plocha.
 
-## Nodal heat BCC [2D, 3D]
+## Uzlové teplo BCC [2D, 3D]
 
-Specifies a heat source at the given nodes. Units are energy/time.
+Určuje zdroj tepla v daných uzloch. Jednotky sú energia/čas.
 
-## Advanced Thermal BCC [2D, 3D]
+## Pokročilé tepelné BCC [2D, 3D]
 
-The purpose of this boundary condition definition is to allow the user to have the flexibility to specify all the various types of heat boundary conditions on the same edge. The user can specify either a user-subroutine number or a local heat transfer definition. (See Fig. 14.3.2.) If the user wants to specify a user routine, the User Routine Number should be specified. The User Routine number specified will correspond to the subroutine the boundary condition will correspond to. Refer to User Routines for more information on how to use these user-defined boundary conditions. If the routine number is left zero, the user may then define a local defined boundary condition where the environmental temperature, the convection coefficient, the emissivity and the heat flux needs to be specified the edge. All four of these variables may be defined as either constants or functions. To apply a local user defined boundary condition, set the variables you want, set the local defined number to a unique value, and apply this to a set of element edges. The new keywords for local edge definition are [ECCDEF](/docs/sk/Keyword_Documentation/E/ECCDEF/), [ECTMFN](/docs/sk/Keyword_Documentation/E/ECTMFN/) and [LOCTMP](/docs/sk/Keyword_Documentation/L/LOCTMP/).
+Účelom tejto definície okrajových podmienok je umožniť používateľovi flexibilne špecifikovať všetky rôzne typy okrajových podmienok tepla na tej istej hrane. Používateľ môže zadať buď číslo používateľského podprogramu, alebo lokálnu definíciu prenosu tepla. (Pozri obr. 14.3.2.) Ak chce používateľ špecifikovať používateľskú rutinu, je potrebné zadať číslo používateľskej rutiny. Zadané číslo užívateľskej rutiny bude zodpovedať podrutine, ktorej bude zodpovedať okrajová podmienka. Ďalšie informácie o používaní týchto používateľských okrajových podmienok nájdete v časti User Routines (Používateľské rutiny). Ak číslo rutiny zostane nulové, používateľ potom môže definovať lokálne definovanú okrajovú podmienku, kde je potrebné určiť teplotu prostredia, koeficient konvekcie, emisivitu a tepelný tok okraj. Všetky tieto štyri premenné môžu byť definované ako konštanty alebo funkcie. Ak chcete použiť lokálnu okrajovú podmienku definovanú používateľom, nastavte požadované premenné, nastavte lokálne definované číslo na jedinečnú hodnotu a použite ju na sadu hrán prvkov. Nové kľúčové slová pre lokálne definovanie hrán sú [ECCDEF](/docs/sk/Keyword_Documentation/E/ECCDEF/), [ECTMFN](/docs/sk/Keyword_Documentation/E/ECTMFN/) a [LOCTMP](/docs/sk/Keyword_Documentation/L/LOCTMP/).
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_3_Thermal_Boundary_Conditions/14_3_Image002.jpg)
 
-Advanced Thermal object boundary condition window
+Pokročilé okno okrajovej podmienky tepelného objektu
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
 

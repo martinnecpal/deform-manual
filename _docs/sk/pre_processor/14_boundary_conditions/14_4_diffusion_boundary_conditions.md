@@ -1,45 +1,45 @@
 ---
 lang: sk
-title: "14.4. Diffusion Boundary Conditions"
+title: "14.4. Difúzne okrajové podmienky"
 ---
 
-# 14.4. Diffusion Boundary Conditions
+# 14.4. Difúzne okrajové podmienky
 
-14.4.1. Diffusion with the environment BCC
+14.4.1. Difúzia s prostredím BCC
 
-14.4.2. Atom content BCC
+14.4.2. Obsah atómu BCC
 
-14.4.3. Atom flux BCC
+14.4.3. Atómový tok BCC
 
-14.4.4. Advanced Diffusion BCC
+14.4.4. Pokročilá difúzia BCC
 
-## Diffusion with the environment BCC [2D/3D]
+## Difúzia s prostredím BCC [2D/3D]
 
-Specifies diffusion of the dominant atom through the boundary elements bordered by the indicated nodes. Environment dominant atom content ([ECCATM](/docs/sk/Keyword_Documentation/E/ECCATM/)) and surface reaction rate are specified under the Simulation Controls, Processing Conditions menu. Environment content and reaction rate for various regions of the part may be modified by using diffusion windows.
+Určuje difúziu dominantného atómu cez hraničné prvky ohraničené uvedenými uzlami. Obsah dominantného atómu prostredia ([ECCATM](/docs/sk/Keyword_Documentation/E/ECCATM/)) a rýchlosť povrchovej reakcie sa špecifikujú v ponuke Simulation Controls (Ovládanie simulácie), Processing Conditions (Podmienky spracovania). Obsah prostredia a rýchlosť reakcie pre rôzne oblasti súčiastky možno upraviť pomocou difúznych okien.
 
-## Fixed atom content BCC [2D/3D]
+## Pevný obsah atómov BCC [2D/3D]
 
-Specifies a fixed dominant atom content at the given nodes.
+Určuje pevný dominantný obsah atómov v daných uzloch.
 
-## Atom flux BCC [2D/3D]
+## Atomový tok BCC [2D/3D]
 
-Specifies a fixed dominant atom flux rate over the elements bordered by the indicated edges. Atom flux may be defined as a constant or as a function. The keywords for this are [ECCATM](/docs/sk/Keyword_Documentation/E/ECCATM/) and [ECAFLX](/docs/sk/Keyword_Documentation/E/ECAFLX/).
+Určuje pevnú rýchlosť toku dominantného atómu cez prvky ohraničené uvedenými hranami. Tok atómov môže byť definovaný ako konštanta alebo ako funkcia. Kľúčové slová pre túto funkciu sú [ECCATM](/docs/sk/Keyword_Documentation/E/ECCATM/) a [ECAFLX](/docs/sk/Keyword_Documentation/E/ECAFLX/).
 
-## Advanced Diffusion BCC [2D/3D]
+## Pokročilá difúzia BCC [2D/3D]
 
-The purpose of this boundary condition definition is to allow the user to have the flexibility to specify all the various types of diffusion boundary conditions on the same edge. The user can specify either a user-subroutine number or a local diffusion definition. (See Fig. 14.4.1.) If the user wants to specify a user routine, the User Routine Number should be specified. The User Routine number specified will correspond to the subroutine the boundary condition will correspond to. Refer to User Routines for more information on how to use these user-defined boundary conditions. If the routine number is left zero, the user may then define a local defined boundary condition where the environmental atom content, the reaction rate coefficient, and the atom flux needs to be specified the edge. All three of these variables may be defined as either constants or functions. To apply a local user defined boundary condition, set the variables you want, set the local defined number to a unique value, and apply this to a set of element edges. The keywords for this are [ECCATM](/docs/sk/Keyword_Documentation/E/ECCATM/) ,[ECAFLX](/docs/sk/Keyword_Documentation/E/ECAFLX/)and [LOCATM](/docs/sk/Keyword_Documentation/L/LOCATM/).
+Účelom tejto definície okrajových podmienok je umožniť používateľovi flexibilne špecifikovať všetky rôzne typy difúznych okrajových podmienok na tej istej hrane. Používateľ môže zadať buď číslo používateľského podprogramu, alebo lokálnu definíciu difúzie. (Pozri obr. 14.4.1.) Ak chce používateľ zadať používateľskú rutinu, je potrebné zadať číslo používateľskej rutiny. Zadané číslo užívateľskej rutiny bude zodpovedať podrutine, ktorej bude zodpovedať okrajová podmienka. Ďalšie informácie o používaní týchto používateľských okrajových podmienok nájdete v časti User Routines (Používateľské rutiny). Ak číslo rutiny zostane nulové, používateľ potom môže definovať lokálne definovanú okrajovú podmienku, kde je potrebné určiť obsah atómov prostredia, koeficient reakčnej rýchlosti a tok atómov hrany. Všetky tieto tri premenné môžu byť definované ako konštanty alebo funkcie. Ak chcete použiť lokálnu hraničnú podmienku definovanú používateľom, nastavte požadované premenné, nastavte lokálne definované číslo na jedinečnú hodnotu a použite ju na sadu hrán prvkov. Kľúčové slová na tento účel sú [ECCATM](/docs/sk/Keyword_Documentation/E/ECCATM/) , [ECAFLX](/docs/sk/Keyword_Documentation/E/ECAFLX/)a [LOCATM](/docs/sk/Keyword_Documentation/L/LOCATM/).
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_4__Diffusion_Boundary_Conditions/14_4_Image001.jpg)
 
-Advanced Diffusion object boundary condition window
+Pokročilé okno okrajovej podmienky objektu Difúzia
 
-From V12, we can define Diffusion BCC options for each Atom type separately, we can observe both types of atoms defined in Simulation controls [Diffusion](../9_Simulation_Controls/9_6_Process_Conditions.htm#9.6.2._Diffusion_) page. (See Fig. 14.4.2.)
+Vo V12 môžeme definovať možnosti Diffusion BCC pre každý typ atómu zvlášť, oba typy atómov môžeme pozorovať na stránke Simulation controls [Diffusion](../9_Simulation_Controls/9_6_Process_Conditions.htm#9.6.2._Diffusion_). (Pozri obr. 14.4.2.)
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_4__Diffusion_Boundary_Conditions/14_4_Image002.jpg)
 
-Selecting different atom type from pull down menu list
+Výber iného typu atómu z rozbaľovacieho zoznamu
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
 

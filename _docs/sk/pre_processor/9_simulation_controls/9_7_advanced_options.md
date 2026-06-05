@@ -1,196 +1,196 @@
 ---
 lang: sk
-title: "9.7. Advanced Options"
+title: "9.7. Pokročilé nastavenia"
 ---
 
-# 9.7. Advanced Options ![]({{ '/assets/icons/pre_icons/mo_advanced_options.jpg' | relative_url }})
+# 9.7. Pokročilé nastavenia ![]({{ '/assets/icons/pre_icons/mo_advanced_options.jpg' | relative_url }})
 
-9.7.1. Variables
+9.7.1. Premenné
 
   * [Current Global Time/Current Local Time (TNOW)](9_7_advanced_options.htm#Current_Global_Time/Current_Local_Time_\(TNOW\))
 
-  * Primary Workpiece (PDIE)
+  * Primárny obrobok (PDIE)
 
-  * Use original additive rule for transformation kinetics (TRANS)
+  * Použiť pravidlo pôvodnej adície pre kinetiku transformácie (TRANS)
 
-9.7.2.Error Tolerances
+9.7.2. Tolerancia chýb
 
-  * Contact release method (CNTERR)
+  * Spôsob uvoľnenia kontaktu (CNTERR)
 
-  * Geometry error (GEOERR)
+  * Geometrická chyba (GEOERR)
 
-9.7.3. User defined variables (USRDEF)
+9.7.3. Premenné definované používateľom (USRDEF)
 
-9.7.4. Contact
+9.7.4. Kontakt
 
-  * Penalty
+  * Trest
 
-  * Conforming Coupling
+  * Prispôsobivá spojka
 
-  * Augmented Lagrangian
+  * Rozšírený Lagrangeov funkcionál
 
-  * Multiple deforming Method (MULDEF)
+  * Metóda viacnásobnej deformácie (MULDEF)
 
-Fully coupled
+Plne prepojené
 
-Loosely coupled 
+Voľne prepojené 
 
-No geometry update
+Geometria nebola aktualizovaná
 
-  * Deformation calculation
+  * Výpočet deformácie
 
-  * Thermal calculation
+  * Tepelný výpočet
 
-9.7.5. Frequency
+9.7.5. Frekvencia
 
-9.7.6. Nodal Oscillations (OSCTRL)
+9.7.6. Kmitanie uzlov (OSCTRL)
 
-  * Corner oscillations
+  * Kútové kmitania
 
   * [Repeated touching / separating](9_7_advanced_options.htm#Repeated_touching_/_separating)
 
-9.7.7. Object Copy
+9.7.7. Kopírovanie objektu
 
-For Simulation control Advanced variables settings see Fig. 9.7.1.
+Nastavenia pokročilých premenných pre riadenie simulácie nájdete na obr. 9.7.1.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image001.jpg' | relative_url }})
 
-Advanced variables window
+Okno pokročilých premenných
 
-## Variables [2D, 3D]
+## Premenné [2D, 3D]
 
-### **Current Global Time/Current Local Time (TNOW)**
+### **Aktuálny svetový čas/aktuálny miestny čas (TNOW)**
 
-This ([TNOW](/docs/sk/keyword_documentation/t/tnow/)) specifies the values of global process time and the local process time. (See Fig. 9.7.1. ). The global time is the time since the beginning of the problem, and should never be reset. Local time is a parameter that can be reset by the user. The global time should not be reset during a simulation as the post-processor uses this time for many post processing operations. Below the local and global time definitions is a selector box that determines which time is to be used for time dependent functions such as movement controls. The default is global time, however, the time dependent functions can also be made a function of local time.
+Tento parameter ([TNOW](/docs/sk/keyword_documentation/t/tnow/)) určuje hodnoty globálneho a lokálneho času procesu. (Pozri obr. 9.7.1.) Globálny čas predstavuje čas od začiatku riešenia úlohy a nemal by sa nikdy vynulovať. Lokálny čas je parameter, ktorý môže používateľ vynulovať. Globálny čas by sa nemal počas simulácie vynulovať, pretože postprocesor tento čas používa pre mnohé operácie postprocesingu. Pod definíciami lokálneho a globálneho času sa nachádza výberové pole, ktoré určuje, ktorý čas sa má použiť pre funkcie závislé od času, ako sú napríklad ovládacie prvky pohybu. Predvoleným nastavením je globálny čas, avšak funkcie závislé od času môžu byť nastavené aj na lokálny čas.
 
-### **Primary Workpiece (PDIE)**
+### **Hlavný obrobok (PDIE)**
 
-This ([PDIE](/docs/sk/keyword_documentation/p/pdie/)) parameter allows the user to specify the workpiece as an object that must not possess rigid body motion. (See Fig. 9.7.1. ) If the body does not deform, the simulation will stop. One purpose of this function is to prevent a rolling simulation from continuing past the rolled length of material.
+Tento parameter ([PDIE](/docs/sk/keyword_documentation/p/pdie/)) umožňuje používateľovi určiť obrobok ako objekt, ktorý sa nesmie pohybovať ako tuhé teleso. (Pozri obr. 9.7.1.) Ak sa teleso nedeformuje, simulácia sa zastaví. Jedným z účelov tejto funkcie je zabrániť tomu, aby simulácia valcovania pokračovala za valcovanú dĺžku materiálu.
 
-### **Use original additive rule for transformation kinetics (TRANS)**
+### **Použiť pravidlo pôvodnej aditívnosti pre kinetiku transformácie (TRANS)**
 
-We have improved the transformation kinetics ([TRANS](/docs/sk/keyword_documentation/t/trans/)) rule from version 6.0. With the new version, multiple transformations can occur at the same time and temperature for a given material. If the user does not want to use this new rule and wants to use the previous one, checking this box will allow this. (See Fig. 9.7.1.)
+Vylepšili sme pravidlo pre kinetiku transformácie ([TRANS](/docs/sk/keyword_documentation/t/trans/)) z verzie 6.0. V novej verzii môže pri danom materiáli dochádzať k viacerým transformáciám súčasne a pri rovnakej teplote. Ak používateľ nechce používať toto nové pravidlo a chce používať predchádzajúce, zaškrtnutím tohto políčka to môže urobiť. (Pozri obr. 9.7.1.)
 
-##  Error Tolerances [2D, 3D]
+##  Tolerancie chýb [2D, 3D]
 
-  * **Contact release method (CNTERR) [2D] :**
+  * **Spôsob uvoľnenia pri kontakte (CNTERR) [2D]:**
 
-In certain cases, the present contact algorithm does not release nodes that are touching a master surface within the time step. This option [CNTERR](/docs/sk/keyword_documentation/c/cnterr/) allows the contact condition for a slave node to be released if it moves away from the master boundary by a prescribed distance. This value can be used as an alternative to the sliding error ([SLDERR](/docs/sk/keyword_documentation/s/slderr/)). (See Fig. 9.7.2.)
+V niektorých prípadoch súčasný algoritmus detekcie kontaktu neuvoľní uzly, ktoré sa počas časového kroku dotýkajú hlavnej plochy. Táto voľba [CNTERR](/docs/sk/keyword_documentation/c/cnterr/) umožňuje uvoľniť kontaktnú podmienku pre podriadený uzol, ak sa vzdiali od hlavnej hranice o predpísanú vzdialenosť. Táto hodnota sa môže použiť ako alternatíva k chybe posuvu ([SLDERR](/docs/sk/keyword_documentation/s/slderr/)). (Pozri obr. 9.7.2.)
 
-  * **Geometry error (GEOERR) [2D, 3D]**
+  * **Chyba geometrie (GEOERR) [2D, 3D]**
 
-This [GEOERR](/docs/sk/keyword_documentation/g/geoerr/) value is an estimate of the error between discretized objects. The default value for this is sufficient for most of the general applications. (See Fig. 9.7.2.)
+Hodnota [GEOERR](/docs/sk/keyword_documentation/g/geoerr/) predstavuje odhad chyby medzi diskretizovanými objektmi. Predvolená hodnota je pre väčšinu bežných aplikácií postačujúca. (Pozri obr. 9.7.2.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image002.jpg' | relative_url }})
 
-Advanced Error tolerances window
+Okno „Pokročilé nastavenia tolerancie chýb“
 
-##  User defined variables (USRDEF) [2D, 3D]
+##  Používateľom definované premenné (USRDEF) [2D, 3D]
 
-User defined variables ([USRDEF](/docs/sk/keyword_documentation/u/usrdef/)) are 80 character string variables which are passed to user defined subroutines. Refer to the Chapter [56\. User Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/) for more information on how to use these variables. (See Fig. 9.7.3.)
+Premenné definované používateľom ([USRDEF](/docs/sk/keyword_documentation/u/usrdef/)) sú reťazcové premenné s dĺžkou 80 znakov, ktoré sa odovzdávajú do podprogramov definovaných používateľom. Ďalšie informácie o používaní týchto premenných nájdete v kapitole [56\. User Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/). (Pozri obr. 9.7.3.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image003.jpg' | relative_url }})
 
-User defined values
+Hodnoty definované používateľom
 
-## Contact [3D]
+## Kontakt [3D]
 
-From DEFORM-V12 Contact tab has been added under Advanced page, Contact method ( [CNTMTH](/docs/sk/keyword_documentation/c/cntmth/)) which was available for 3D object in Inter - object relations page has been moved to this page. Now we have 3 types of Contact methods:
+V DEFORM-V12 bola na stránke „Pokročilé“ pridaná záložka „Kontakt“ a položka „Spôsob kontaktu“ ([CNTMTH](/docs/sk/keyword_documentation/c/cntmth/)), ktorá bola doteraz k dispozícii pre 3D objekty na stránke „Vzťahy medzi objektmi“, bola presunutá na túto stránku. Teraz máme k dispozícii 3 typy spôsobov kontaktu:
 
-  * Penalty
-  * Conforming coupling
-  * Augmented Lagrangian 
+  * Trest
+  * Prispôsobivá spojka
+  * Rozšírený Lagrangeov funkcionál 
 
-  * **Penalty**
+  * **Trest**
 
-Penalty method ( Fig. 9.7.4.) is the main approach for handling contact for all the deforming objects to handle die contact. However, for rigid plastic models with multiple deforming objects in contact or self-contact conformal coupling is also available.
+Metóda penalizácie (obr. 9.7.4.) je hlavným prístupom k spracovaniu kontaktu pre všetky deformovateľné objekty pri riešení kontaktu s lisovacou formou. Pre tuhé plastové modely s viacerými deformovateľnými objektmi v kontakte alebo v samokontakte je však k dispozícii aj konformné prepojenie.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image004.jpg' | relative_url }})
 
-Penalty - Contact method
+Trest – spôsob kontaktu
 
-  * **Conforming Coupling**
+  * **Zhodná spojka**
 
-Conforming coupling essentially handles contact by first generating contact elements automatically across the contacting mesh systems. For models involving rotational symmetry conforming coupling is used by default.
+Konformné prepojenie v podstate rieši kontakt tak, že najskôr automaticky vytvorí kontaktné prvky medzi systémami kontaktných sietí. Pri modeloch s rotačnou symetriou sa konformné prepojenie používa štandardne.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image005.jpg' | relative_url }})
 
-Conforming Coupling - Contact method
+Zhodná spojka – kontaktná metóda
 
-  * **Augmented Lagrangian**
+  * **Rozšírený Lagrangeov funkcionál**
 
-New Augmented Lagrangian contact (ALC) method has been introduced from v12 for faster computation for models involving multiple deforming objects like coupled die stress (Elastic Dies – Rigid Plastic workpiece, Elastic Dies – Elasto-Plastic Workpiece). ALC method is not sensitive to penalty number and performs well with iterative CG solver. ALC method can be used with both Newton - Raphson and Direct methods but models involving elasto-pastic object requires Newton - Raphson method. ALC works better with CG solver and for Large models involving multiple deforming objects or elastic dies.
+Od verzie v12 bola zavedená nová metóda rozšíreného Lagrangeovho kontaktu (ALC), ktorá umožňuje rýchlejšie výpočty pre modely zahŕňajúce viacero deformujúcich sa objektov, ako sú napríklad kombinované napätia v lisovacích formách (pružné lisovacie formy – tuhý plastický obrobok, pružné lisovacie formy – elastoplastický obrobok). Metóda ALC nie je citlivá na penalizačné číslo a funguje dobre s iteratívnym riešiteľom CG. Metóda ALC sa dá použiť s metódami Newton-Raphson aj Direct, ale modely zahŕňajúce elasto-plastické objekty vyžadujú metódu Newton-Raphson. ALC funguje lepšie s riešiteľom CG a pre veľké modely zahŕňajúce viacero deformujúcich sa objektov alebo elastické formy.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image006.jpg' | relative_url }})
 
-Augmented Lagrangian - Contact method
+Rozšírený Lagrangeov funkcionál – kontaktná metóda
 
-  * **Multiple deforming Method ([MULDEF](/docs/sk/keyword_documentation/m/muldef/))**
+  * **Metóda viacerých deformácií ([MULDEF](/docs/sk/keyword_documentation/m/muldef/))**
 
-In Older versions to simulate Coupled die stress analysis we need to create DEF_LCDSTS.DAT file, now these options can be defined in GUI itself from DEFORM-V12 as shown in Fig. 9.7.7.
+V starších verziách bolo na simuláciu analýzy napätia v prepojených čipoch potrebné vytvoriť súbor DEF_LCDSTS.DAT; v programe DEFORM-V12 je teraz možné tieto nastavenia definovať priamo v grafickom rozhraní, ako je znázornené na obr. 9.7.7.
 
-  * Fully coupled
-  * Loosely coupled 
-  * No geometry update
+  * Plne prepojené
+  * Voľne prepojené 
+  * Žiadna aktualizácia geometrie
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image007.jpg' | relative_url }})![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image007.jpg' | relative_url }})
 
-Multiple Deforming methods
+Rôzne metódy deformácie
 
-  * **Fully coupled :** Fully coupled means the deflection of the tool is reflected in the deformation of the workpiece at the current step. In general, Fully coupled is the most accurate, and most computationally expensive. No geometry update option is the least computationally expensive, and offers the most simplification of the process.
+  * **Plne prepojené:** Plné prepojenie znamená, že deformácia nástroja sa premieta do deformácie obrobku v aktuálnom kroku. Vo všeobecnosti je plné prepojenie najpresnejšie, ale zároveň najnáročnejšie na výpočtový výkon. Možnosť bez aktualizácie geometrie je najmenej náročná na výpočtový výkon a ponúka najväčšie zjednodušenie procesu.
 
-  * **Loosely coupled** : When this option is selected the stresses are calculated in the tool, but the updated die geometry will not be reflected in workpiece deformation until the next step. Loosely coupled is more numerically efficient than Fully coupled but may cause some inconsistencies in workpiece surface position (and therefore workpiece volume) if the change in the die shape is substantial.
+  * **Voľné prepojenie**: Ak je táto možnosť zvolená, napätia sa vypočítajú v nástroji, avšak aktualizovaná geometria formy sa v deformácii obrobku prejaví až v nasledujúcom kroku. Voľné prepojenie je numericky efektívnejšie ako úplné prepojenie, ale môže spôsobiť určité nezrovnalosti v polohe povrchu obrobku (a tým aj v objeme obrobku), ak je zmena tvaru formy podstatná.
 
-  * **No geometry update :** In No geometry update only stress is calculated in the die, but the die geometry is never updated. If the user interest is only tool stress, No geometry update option is generally adequate. If tool deflection is important then Fully coupled or Loosely coupled should be selected.
+  * **Bez aktualizácie geometrie:** Pri voľbe „Bez aktualizácie geometrie“ sa v matrici počíta iba napätie, geometria matrice sa však nikdy neaktualizuje. Ak sa používateľ zaujíma iba o napätie v nástroji, voľba „Bez aktualizácie geometrie“ je spravidla postačujúca. Ak je dôležité vychýlenie nástroja, je potrebné zvoliť voľbu „Plne prepojené“ alebo „Voľne prepojené“.
 
-  * **Deformation calculation**
+  * **Výpočet deformácie**
 
-User can define the interval of steps for calculating Deformation on tool by using user-defined option. By default, Auto step will be selected, so Deformation calculations are done at every step.
+Používateľ môže pomocou možnosti „Užívateľsky definované“ nastaviť interval krokov pre výpočet deformácie nástroja. Predvolene je zvolená možnosť „Automatický krok“, takže výpočty deformácie sa vykonávajú pri každom kroku.
 
-  * **Thermal calculation**
+  * **Tepelný výpočet**
 
-User can define the interval of steps for Thermal calculations on tool by using user-defined option. By default, Auto step will be selected, so thermal calculations are done at every step.
+Používateľ môže pomocou možnosti „Užívateľsky definované“ nastaviť interval krokov pre tepelné výpočty nástroja. Predvolene je zvolená možnosť „Automatický krok“, takže tepelné výpočty sa vykonávajú pri každom kroku.
 
-## Frequency [2D,3D]
+## Frekvencia [2D, 3D]
 
-Under Frequency (see Fig. 9.7.8.), user can define calcuation control value for Explicit solver, Maxwell equation solving, viewfactor calculation and Yield surface calculation.
+V časti „Frekvencia“ (pozri obr. 9.7.8.) môže používateľ nastaviť riadiacu hodnotu pre výpočet v rámci explicitného riešiteľa, riešenie Maxwellových rovníc, výpočet koeficientu priepustnosti a výpočet povrchu výnosu.
 
-Even for ALE steady state simulation, user can define Strain update method and Temperature update method.
+Aj pri simulácii ustáleného stavu metódou ALE môže používateľ definovať spôsob aktualizácie deformácie a spôsob aktualizácie teploty.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image008.jpg' | relative_url }})
 
-3D Frequency Window
+3D frekvenčné okno
 
-## Nodal Oscillations [2D]
+## Kmitanie uzlov [2D]
 
   
-For Simulation control Advanced Nodal oscillations ([OSCTRL](/docs/sk/keyword_documentation/o/osctrl/)) settings see Fig. 9.7.9.
+Nastavenia simulácie riadenia pokročilých uzlových kmitov ([OSCTRL](/docs/sk/keyword_documentation/o/osctrl/)) sú uvedené na obr. 9.7.9.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image009.jpg' | relative_url }})
 
-2D Nodal Oscillations Window
+Okno 2D uzlových kmitov
 
-  * **Corner oscillations**
+  * **Kmitanie v rohoch**
 
-Corner oscillation controls are used to control oscillation of a node between adjacent line segments of a surface. If the number of oscillations exceeds the limit, the node will be locked for a fixed number of sub steps.
+Ovládacie prvky pre osciláciu v rohu slúžia na riadenie oscilácie uzla medzi susednými úsečkami povrchu. Ak počet oscilácií prekročí limit, uzol sa na určitý počet čiastkových krokov zablokuje.
 
-  * **Repeated touching / separating**
+  * **Opakované spájanie a oddeľovanie**
 
-When slave nodes touch and separate from a master surface, after two oscillations the nodes are made to touch for the sub step. The touching/separating control can be used to make the node separate from the surface for the sub step after a specified number of oscillations.
+Keď sa podriadené uzly dotknú hlavnej plochy a od nej oddelia, po dvoch osciláciách sa uzly opäť dotknú na účely vykonania čiastkového kroku. Funkciu riadenia dotyku/oddelenia možno použiť na to, aby sa uzol oddelil od plochy na účely vykonania čiastkového kroku po zadanom počte oscilácií.
 
-## Object Copy [3D]
+## Kopírovanie objektu [3D]
 
-To replace the DEF_VIEWSYM.DAT file Object copy ([OBJCPY](/docs/sk/keyword_documentation/o/objcpy/)) option has been developed under Simulation controls (See Fig. 9.7.10.). User can select the object arranged type (By Translating or By Mirroring) 
+Na nahradenie súboru DEF_VIEWSYM.DAT bola v rámci ovládacích prvkov simulácie vytvorená možnosť „Kópia objektu“ ([OBJCPY](/docs/sk/keyword_documentation/o/objcpy/)) (pozri obr. 9.7.10.). Používateľ si môže vybrať spôsob usporiadania objektu (posunutím alebo zrkadlením). 
 
-**By Translating:** In Translatinn method user need to define the Distance vector value to copy object.
+**Pri preklade:** V metóde Translatinn musí používateľ určiť hodnotu vektora vzdialenosti, aby sa objekt skopíroval.
 
-**By Mirroring:** In Mirroring method user need to define the Reference Point and Vector value respectively.
+**Metódou zrkadlenia:** Pri metóde zrkadlenia musí používateľ definovať referenčný bod a hodnotu vektora.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image010.jpg' | relative_url }})
 
-Object copy window
+Okno kopírovania objektu
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
 [9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   

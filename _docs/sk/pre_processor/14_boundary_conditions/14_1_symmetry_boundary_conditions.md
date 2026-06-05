@@ -1,29 +1,29 @@
 ---
 lang: sk
-title: "14.1. Symmetry Boundary Conditions"
+title: "14.1. Hraničné podmienky symetrie"
 ---
 
-# 14.1. Symmetry Boundary Conditions [only for 3D]
+# 14.1. Hraničné podmienky symetrie [len pre 3D]
 
-To specify **Symmetry plane** , select the symmetry plane on the object, then click on ![](../../../assets/Icons/Pre_icons/MO_Add_BCC_button.jpg) button as shown in Fig. 14.1.1.
+Ak chcete zadať **rovinu symetrie** , vyberte rovinu symetrie na objekte a potom kliknite na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Add_BCC_button.jpg), ako je znázornené na obr. 14.1.1.
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_1_Symmetry_Boundary_Conditions/14_1_Image001.jpg)
 
-Symmetry plane BCC for quarter symmetry model
+Rovina symetrie BCC pre model so štvrtinovou symetriou
 
-To specify **Rotational symmetry plane** , select the Rotational symmetry plane on the object and define the Rotational axis and Rotational angle as shown in Fig. 14.1.2\. and click on ![](../../../assets/Icons/Pre_icons/MO_Add_BCC_button.jpg) button. Slave/master list added under Rotational symmetry, now select another rotational symmetry plnae and click on ![](../../../assets/Icons/Pre_icons/MO_Add_BCC_button.jpg) button. Added Roational symmetry plane BCC is as shown in Fig. 14.1.3\. 
+Ak chcete zadať **rovinu rotačnej symetrie** , vyberte rovinu rotačnej symetrie na objekte a definujte os rotácie a uhol rotácie, ako je znázornené na obr. 14.1.2\. a kliknite na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Add_BCC_button.jpg). Zoznam podriadených/nadriadených pribudol v časti Rotačná symetria, teraz vyberte ďalšiu rovinu rotačnej symetrie a kliknite na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Add_BCC_button.jpg). Pridaná rovina rotačnej symetrie BCC je zobrazená na obr. 14.1.3\.
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_1_Symmetry_Boundary_Conditions/14_1_Image002.jpg)
 
-Rotational symmetry plane BCC for quarter symmetry model
+Rovina rotačnej symetrie BCC pre model so štvrtinovou symetriou
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_1_Symmetry_Boundary_Conditions/14_1_Image003.jpg)
 
-Rotational symmetry plane BCC assigned for quarter symmetry model
+Rovina rotačnej symetrie BCC priradená pre model so štvrtinovou symetriou
 
-User can also able to define planar symmetry and rotation symmetry surfaces from Geometry symmetry surfaces. For more information on symmetry surfaces please refer section 1[2.3.2. 3D Geometry Tools - Symmetry Planes](../12_Geometry_Modelling/12_3_3d_geometry_data_defining.htm#Symmetry_Planes) options.
+Používateľ môže tiež definovať rovinné symetrické a rotačné symetrické plochy z geometrických symetrických plôch. Ďalšie informácie o symetrických plochách nájdete v časti 1[2.3.2. 3D Geometry Tools - Symmetry Planes](../12_Geometry_Modelling/12_3_3d_geometry_data_defining.htm#Symmetry_Planes) Možnosti.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
 

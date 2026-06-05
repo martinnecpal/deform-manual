@@ -1,170 +1,170 @@
 ---
 lang: sk
-title: "9.2. Defining Step"
+title: "9.2. Definovanie kroku"
 ---
 
-# 9.2. Defining Step
+# 9.2. Definovanie kroku
 
-9.2.1. imulation Steps
+9.2.1. Kroky simulácie
 
-  * Starting step number (NSTART)
+  * Počiatočné číslo kroku (NSTART)
 
-  * Number of simulation steps (NSTEP)
+  * Počet simulačných krokov (NSTEP)
 
-  * Step increment to save (STPINC)
+  * Krok pri ukladaní (STPINC)
 
-  * Primary die (PDIE)
+  * Primárny čip (PDIE)
 
-9.2.2. Step Increment
+9.2.2. Krok
 
   * [Step increment control (DSMAX/DTMAX)](9_2_defining_step.htm#Step_increment_control_\(DSMAX/DTMAX\))
 
-  * Step definition (STPDEF)
+  * Definícia kroku (STPDEF)
 
-  * Selecting time step and number of steps
+  * Výber časového kroku a počtu krokov
 
-  * Sub-stepping Controls
+  * Ovládacie prvky pre nastavenie krokov
 
-  * Advanced Step Controls
+  * Pokročilé ovládacie prvky krokov
 
-## Simulation Steps ![]({{ '/assets/icons/pre_icons/mo_simulation_step.jpg' | relative_url }})
+## Kroky simulácie ![]({{ '/assets/icons/pre_icons/mo_simulation_step.jpg' | relative_url }})
 
-The DEFORM system solves time dependent non-linear problems by generating a series of FEM solutions at discrete time increments. At each time increment, the velocities, temperatures, and other key variables of each node in the finite element mesh are determined based on boundary conditions, thermo mechanical properties of the work piece materials and possibly solutions at previous steps. Other state variables are derived from these key values, and updated for each time increment. The length of this time step, and number of steps simulated, are determined based on the information specified in the step controls menu as shown in Fig. 9.2.1.
+Systém DEFORM rieši časovo závislé nelineárne úlohy generovaním série riešení metódou konečných prvkov (FEM) v diskrétnych časových krokoch. V každom časovom kroku sa rýchlosti, teploty a ďalšie kľúčové premenné každého uzla v sieti konečných prvkov určujú na základe okrajových podmienok, termomechanických vlastností materiálov obrobku a prípadne riešení z predchádzajúcich krokov. Ostatné stavové premenné sa odvodzujú z týchto kľúčových hodnôt a aktualizujú sa pri každom časovom kroku. Dĺžka tohto časového kroku a počet simulovaných krokov sa určujú na základe informácií špecifikovaných v ponuke ovládacích prvkov krokov, ako je znázornené na obr. 9.2.1.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_2_defining_step/9_2_image001.jpg' | relative_url }})
 
-Simulation steps
+Kroky simulácie
 
-**Starting step number (NSTART)****[2D, 3D]**
+**Počiatočné číslo kroku (NSTART)****[2D, 3D]**
 
-If a new database is written, the specified step number ([NSTART](/docs/sk/keyword_documentation/n/nstep/)) will be the first step in the database. If data is written to an existing database, the pre-processor data will be appended to this database in proper numerical order, and any steps after the one specified will be overwritten.  
-The negative (-n) flag on the step number indicates that the step was written to the database by the pre-processor (either by manual generation of a database step or by an automatic remesh), not by the simulation engine.
+Ak sa zapisuje do novej databázy, zadané číslo kroku ([NSTART](/docs/sk/keyword_documentation/n/nstep/)) bude prvým krokom v tejto databáze. Ak sa údaje zapisujú do existujúcej databázy, údaje z predspracovania sa do nej pripíšu v správnom číselnom poradí a všetky kroky nasledujúce po zadanom kroku sa prepíšu.  
+Znak mínus (-n) pri čísle kroku znamená, že tento krok do databázy zapísal predspracovateľ (buď ručným vytvorením databázového kroku, alebo automatickým prečlenením siete), a nie simulačný modul.
 
-Note:   
-All pre-processor generated steps should have a negative step number.
+Poznámka:   
+Všetky kroky vygenerované predspracovateľom by mali mať záporné číslo kroku.
 
-**Number of simulation steps (NSTEP)** **[2D, 3D]**
+**Počet simulačných krokov (NSTEP)** **[2D, 3D]**
 
-The number of simulation steps parameter defines the number of steps to run from the starting step number. The simulation will stop after this number of simulation steps have run, unless stopping control is triggered to stop the simulation or if the simulation runs into a problem. For example, if the starting step number is -35 ([NSTART](/docs/sk/keyword_documentation/n/nstep/)), and 30 steps ([NSTEP](/docs/sk/keyword_documentation/n/nstart/)) are specified, the simulation will stop after the 65th step, unless another stopping control is triggered first.
+Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú spustiť od počiatočného čísla kroku. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí príkaz na zastavenie simulácie alebo ak simulácia nenarazí na problém. Napríklad, ak je počiatočné číslo kroku -35 ([NSTART](/docs/sk/keyword_documentation/n/nstep/)) a je špecifikovaných 30 krokov ([NSTEP](/docs/sk/keyword_documentation/n/nstart/)), simulácia sa zastaví po 65. kroku, pokiaľ sa najskôr nespustí iná kontrola zastavenia.
 
-**Step increment to save (STPINC) [2D, 3D]**
+**Krok pri ukladaní (STPINC) [2D, 3D]**
 
-The step increment ([STPINC](/docs/sk/keyword_documentation/s/stpinc/)) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
+Krok prírastku ([STPINC](/docs/sk/keyword_documentation/s/stpinc/)), ktorý sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nemusí sa nutne uložiť do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať viac úložného priestoru.
 
-**Primary die (PDIE) [2D, 3D]**
+**Primárny čip (PDIE) [2D, 3D]**
 
-The primary die ([PDIE](/docs/sk/keyword_documentation/p/pdie/)) is the object for which many stopping and stepping criteria are defined. For example, stopping distance based on primary die stroke. When the stroke of the object defined as the primary die reaches the value for primary die displacement, the simulation will be stopped whether or not more steps were specified. The Step By Stroke feature determines step size based on the movement of the primary die.  
-The primary die is usually assigned to the object most closely controlled by the forging machinery. For example, the die attached to the ram of a mechanical press would be designated as the primary object.
+Primárny lis ([PDIE](/docs/sk/keyword_documentation/p/pdie/)) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad brzdná vzdialenosť založená na zdvihu primárneho lisu. Keď zdvih objektu definovaného ako primárny lis dosiahne hodnotu posunu primárneho lisu, simulácia sa zastaví bez ohľadu na to, či boli špecifikované ďalšie kroky. Funkcia Step By Stroke určuje veľkosť kroku na základe pohybu primárneho lisovacieho nástroja.  
+Hlavná forma sa zvyčajne priraďuje k objektu, ktorý je najviac pod kontrolou kováčskeho stroja. Napríklad forma pripevnená k piestu mechanického lisu by bola označená ako hlavný objekt.
 
-**Secondary step controls (STPINC) [2D,3D]**  
-The secondary step controls option allows the step saving increment to be changed for a portion of the simulation. This option is useful when users want to save either more or less steps for a portion of simulation. Once the selected stopping controls value reaches the defined Secondary step controls value, then the Secondary step increment value will be considered to save the steps to the database.  
-We can use this option with “Time”, “Primary die displacement”, “Primary die load”, “Contact area ratio” and “Min die distance” stopping controls.   
-When we click on ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) button, it will estimate the final 10 % of the process as the selected stopping criterion. ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) button will be active only when the respective stopping controls data is defined.
+**Ovládacie prvky sekundárneho kroku (STPINC) [2D, 3D]**  
+Možnosť „Sekundárne nastavenia krokov“ umožňuje zmeniť veľkosť kroku pri ukladaní pre určitú časť simulácie. Táto možnosť je užitočná v prípade, ak používatelia chcú pre určitú časť simulácie ukladať buď viac, alebo menej krokov. Akonáhle zvolená hodnota nastavenia zastavenia dosiahne definovanú hodnotu „Sekundárne nastavenia krokov“, bude sa pri ukladaní krokov do databázy zohľadňovať hodnota „Sekundárneho kroku“.  
+Túto možnosť môžeme použiť v spojení s regulačnými prvkami „Čas“, „Posun primárnej matrice“, „Zaťaženie primárnej matrice“, „Pomer kontaktnej plochy“ a „Minimálna vzdialenosť matríc“.   
+Po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) sa na základe zvoleného kritéria ukončenia odhadne posledných 10 % procesu. Tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) bude aktívne len vtedy, ak sú definované príslušné údaje o kritériách ukončenia.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_2_defining_step/9_2_image006.jpg' | relative_url }})
 
-Secondary step controls option
+Možnosť nastavenia sekundárneho kroku
 
-## Step Increment ![]({{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }})
+## Krok prírastku ![]({{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }})
 
-For Step increment settings options see Fig. 9.2.3.
+Možnosti nastavenia kroku nájdete na obr. 9.2.3.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_2_defining_step/9_2_image002.jpg' | relative_url }})
 
-(a)
+a)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_2_defining_step/9_2_image003.jpg' | relative_url }})  
-(b) 
+b) 
 
-Step Controls; (a) For 2D (b) For 3D
+Ovládacie prvky krokov; (a) pre 2D (b) pre 3D
 
-**Step increment control (DSMAX/DTMAX)** **[2D, 3D]**
+**Ovládanie krokovania (DSMAX/DTMAX)** **[2D, 3D]**
 
-User can define (the maximum allowable) time step size as a function of “stroke” ([DSMAX](/docs/sk/keyword_documentation/d/dsmax/)) or “time” ([DTMAX](/docs/sk/keyword_documentation/d/dtmax/)).  
-Solution step size can be controlled by time step or by displacement of the primary die. If stroke per step is specified, the primary die will move the specified amount in each time step. The total movement of the primary die will be the displacement per step multiplied by the total number of steps. If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.  
-From 3DV61, the definition of step increment control has been enhanced to include both the time and stroke dependent step functions. This means, step size (both time per step and stroke per step) can now be defined as a function of time or stroke. This functionality enables finer resolution of saved model information, where it is desired. (typically towards the end of the stroke, where steep changes of die load and cavity filling or flash formation can take place).  
-Stroke per step is frequently more intuitive. However, time per step must be specified for any problem in which there is no die movement (such as heat transfer) or for any problem where force control is used. 
+Používateľ môže definovať (maximálnu povolenú) veľkosť časového kroku ako funkciu „zdvihu“ ([DSMAX](/docs/sk/keyword_documentation/d/dsmax/)) alebo „času“ ([DTMAX](/docs/sk/keyword_documentation/d/dtmax/)).  
+Veľkosť kroku riešenia je možné riadiť časovým krokom alebo posunom primárneho lisovacieho nástroja. Ak je zadaný zdvih na krok, primárny lisovací nástroj sa v každom časovom kroku posunie o zadanú vzdialenosť. Celkový pohyb primárneho lisovacieho nástroja bude predstavovať posun na krok vynásobený celkovým počtom krokov. Ak je špecifikovaný čas na krok, použije sa časový interval na krok. Posun lisovacieho nástroja na krok bude predstavovať časový krok vynásobený rýchlosťou lisovacieho nástroja.  
+Od verzie 3DV61 bola definícia riadenia krokového prírastku vylepšená tak, aby zahŕňala krokové funkcie závislé od času aj od zdvihu. To znamená, že veľkosť kroku (či už ide o čas na krok alebo zdvih na krok) je teraz možné definovať ako funkciu času alebo zdvihu. Táto funkcia umožňuje v prípade potreby dosiahnuť jemnejšie rozlíšenie uložených informácií o modeli. (typicky smerom ku koncu zdvihu, kde môžu nastať prudké zmeny zaťaženia formy a plnenia dutiny alebo tvorby otrepu).  
+Počet zdvihov na krok je často intuitívnejší. Čas na krok je však potrebné určiť pri každej úlohe, v ktorej nedochádza k pohybu lisovacej formy (napríklad pri prenose tepla), alebo pri každej úlohe, kde sa využíva regulácia sily. 
 
-**Step definition (STPDEF) [2D, 3D]**
+**Definícia kroku (STPDEF) [2D, 3D]**
 
-There are three modes ([STPDEF](/docs/sk/keyword_documentation/s/stpdef/)) for defining steps,
+Na definovanie krokov sú k dispozícii tri režimy ([STPDEF](/docs/sk/keyword_documentation/s/stpdef/)),
 
-  * **User** In user defined steps mode, the steps correspond to the [NSTEP](/docs/sk/keyword_documentation/n/nstep/) value. This is the default which does not have to be changed in almost all cases.
-  * **System** In the system defined steps mode each sub step is saved to the database and is treated as a step. This option is primarily used for debugging purposes.
-  * **Temperature** In temperature based sub stepping, the [DTPMAX](/docs/sk/keyword_documentation/d/dtpmax/) settings control the time stepping. The purpose for these controls is to specify the time stepping of a simulation that is driven by thermal-induced deformation.
+  * **Používateľ** V režime krokov definovaných používateľom zodpovedajú kroky hodnote [NSTEP](/docs/sk/keyword_documentation/n/nstep/). Ide o predvolené nastavenie, ktoré vo väčšine prípadov nie je potrebné meniť.
+  * **Systém** V režime definovaných krokov systému sa každý čiastkový krok uloží do databázy a považuje sa za samostatný krok. Táto možnosť sa používa predovšetkým na účely ladenia.
+  * **Teplota** Pri krokovaní založenom na teplote sa časové krokovanie riadi nastaveniami [DTPMAX](/docs/sk/keyword_documentation/d/dtpmax/). Účelom týchto nastavení je určiť časové krokovanie simulácie, ktorá je riadená deformáciou vyvolanou teplotou.
 
-**Selecting time step and number of steps [2D, 3D]**
+**Výber časového kroku a počtu krokov [2D, 3D]**
 
-Proper time step selection is important. Too large a time step can cause inaccuracy in the solution, rapid mesh distortion or convergence problems. Too small a time step can lead to unnecessarily long solution times. The following section provides some guidelines for selecting time steps. The maximum displacement for any node should not exceed about 1/3 the length of its element edge length in one step. For flow around a tight corner, flash forming, or similar highly localized deformations, time steps may need to be defined to give a node movement of as small as 1/10 or the element edge length. Thus, for a finer mesh, smaller steps are required than for a coarser mesh. This prevents the mesh from becoming overly distorted in a single time step.  
+Správny výber časového kroku je dôležitý. Príliš veľký časový krok môže spôsobiť nepresnosť riešenia, rýchle deformácie siete alebo problémy s konvergenciou. Príliš malý časový krok môže viesť k zbytočne dlhým časom výpočtu. Nasledujúca časť obsahuje niekoľko odporúčaní pre výber časových krokov. Maximálny posun pre akýkoľvek uzol by nemal prekročiť približne 1/3 dĺžky hrany prvku v jednom kroku. V prípade prúdenia okolo ostrého rohu, formovania výstupkov alebo podobných vysoko lokalizovaných deformácií môže byť potrebné definovať časové kroky tak, aby pohyb uzla bol čo najmenší, napríklad 1/10 dĺžky hrany prvku. Pre jemnejšiu sieť sú teda potrebné menšie kroky ako pre hrubšiu sieť. Tým sa zabráni nadmernému skresleniu siete v jednom časovom kroku.  
   
-The time step can be determined by the following method:
+Časový krok možno určiť nasledujúcou metódou:
 
-  * Using the measurement tool, measure one of the smaller elements in the deforming object (this must be done after a mesh has been generated)
-  * Estimate the maximum velocity of any region of the workpiece (for most problems, this will be the die velocity. For extrusion problems it will be the die velocity times the extrusion ratio) If some steps have already been run, display object velocity clcik on ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}) (Node data) (use the ![]({{ '/assets/icons/pre_icons/mo_plot_icon.jpg' | relative_url }}) icon to display a velocity vector plot and maximum and minimum values).
-  * Divide the result of 1 by the result of 2, and take about 1/3 of this value as the time step. This is a rough estimate, so extreme accuracy is not critical.
-  * The number of steps is given by,
+  * Pomocou meracieho nástroja zmerajte jeden z menších prvkov deformovaného objektu (toto je potrebné urobiť až po vytvorení siete)
+  * Odhadnite maximálnu rýchlosť v ľubovoľnej oblasti obrobku (v prípade väčšiny úloh to bude rýchlosť matrice. Pri úlohách s extrudovaním to bude rýchlosť matrice vynásobená pomerom extrudovania). Ak už boli vykonané niektoré kroky, zobrazte rýchlosť objektu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}) (Dáta uzla) (použite ikonu ![]({{ '/assets/icons/pre_icons/mo_plot_icon.jpg' | relative_url }}) na zobrazenie grafu vektora rýchlosti a maximálnych a minimálnych hodnôt).
+  * Výsledok z bodu 1 vydelíme výsledkom z bodu 2 a ako časový krok použijeme približne 1/3 tejto hodnoty. Ide o hrubý odhad, takže extrémna presnosť nie je rozhodujúca.
+  * Počet krokov je daný vzťahom:
 
-Refer also to the Polygon Length Sub-Step feature under Advanced Step Controls If there is insufficient information available to calculate the total number of steps, three alternatives are available:
+Pozrite si tiež funkciu „Dĺžka podkroku polygónu“ v časti „Pokročilé nastavenia krokov“. Ak nie je k dispozícii dostatok informácií na výpočet celkového počtu krokov, máte na výber tri možnosti:
 
-  * A general guideline of 1% to 3% height reduction per step can be used.
-  * Specify an arbitrarily large number of steps, and use an alternative stopping control, such as time or total die stroke.
-  * Make a good estimate of the number of steps required for the given step size, then specify about 120% of this value. Allow the simulation to overshoot the target, then use a step near, but not at the end as a final solution.
+  * Ako všeobecné pravidlo možno použiť zníženie výšky o 1 % až 3 % na jeden schod.
+  * Zadajte ľubovoľne veľký počet krokov a použite alternatívny kritérium na ukončenie, napríklad čas alebo celkový počet zdvihov matrice.
+  * Odhadnite počet krokov potrebných pre danú veľkosť kroku a potom zadajte približne 120 % tejto hodnoty. Nechajte simuláciu prekročiť cieľovú hodnotu a ako konečné riešenie použite hodnotu blízko konca, ale nie priamo na konci.
 
-**Sub-stepping Controls**
+**Ovládacie prvky pre nastavenie krokov**
 
-  * **Strain per step (DEMAX) [2D, 3D]:**
+  * **Deformácia na krok (DEMAX) [2D, 3D]:**
 
-The maximum element strain increment limits the amount of strain that can accumulate in any individual element during one time step. If a non-zero value is assigned to [DEMAX](/docs/sk/keyword_documentation/d/demax/), a new sub step will be initiated when the strain increment in any element reaches the value of [DEMAX](/docs/sk/keyword_documentation/d/demax/).
+Maximálny prírastok deformácie prvku obmedzuje veľkosť deformácie, ktorá sa môže nahromadiť v ktoromkoľvek jednotlivom prvku počas jedného časového kroku. Ak sa pre premennú [DEMAX](/docs/sk/keyword_documentation/d/demax/) priradí hodnota odlišná od nuly, spustí sa nový podkrok v okamihu, keď prírastok deformácie v ktoromkoľvek prvku dosiahne hodnotu [DEMAX](/docs/sk/keyword_documentation/d/demax/).
 
-  * **Contact Time (DTSUB) [2D, 3D]**
+  * **Doba kontaktu (DTSUB) [2D, 3D]**
 
-After either DSMAX or DTMAX is prescribed, the deformation simulation may be broken into smaller sub steps, depending on the assigned value of [DTSUB](/docs/sk/keyword_documentation/d/dtsub/).  
+Po zadaní parametra DSMAX alebo DTMAX sa simulácia deformácie môže rozdeliť na menšie čiastkové kroky v závislosti od nastavenia parametra [DTSUB](/docs/sk/keyword_documentation/d/dtsub/).  
   
-**[2D]** : For a default [DTSUB](/docs/sk/keyword_documentation/d/dtsub/)= 0.0, the system will enable contact sub-stepping.  
-For [DTSUB](/docs/sk/keyword_documentation/d/dtsub/)= 1.0, no sub-stepping will be done.  
+**[2D]** : Pri predvolenom nastavení [DTSUB](/docs/sk/keyword_documentation/d/dtsub/)= 0,0 systém aktivuje subkrokovanie kontaktov.  
+Ak je hodnota [DTSUB](/docs/sk/keyword_documentation/d/dtsub/)= 1,0, nedôjde k žiadnemu subkrokovaniu.  
   
-**[3D]** : Contact time controls whether or not sub stepping is performed when nodes contact a master surface. By default ([DTSUB](/docs/sk/keyword_documentation/d/dtsub/)= 1), if a node contacts a master surface a fraction of the way through a time step, the time step is subdivided, and that step is run again at the fraction of the time increment. This will place the node on the surface at the end of the time step. For 3D problems with a large number of nodes contacting master surfaces, this can cause huge increases in execution time.  
+**[3D]** : Parameter „Contact time“ určuje, či sa pri kontakte uzlov s hlavnou plochou vykoná čiastkové rozdelenie kroku. V predvolenom nastavení ([DTSUB](/docs/sk/keyword_documentation/d/dtsub/)= 1), ak sa uzol dotkne hlavnej plochy v priebehu časového kroku, časový krok sa rozdelí a tento krok sa spustí znovu v priebehu časti časového prírastku. Tým sa uzol umiestni na plochu na konci časového kroku. Pri 3D úlohách s veľkým počtom uzlov, ktoré sa dotýkajú hlavných plôch, to môže spôsobiť výrazné predĺženie času spracovania.  
   
-If [DTSUB](/docs/sk/keyword_documentation/d/dtsub/)is set to 1, contact time sub stepping is disabled. Nodes will be allowed to penetrate the master surface, but then will be artificially moved back to surface at the end of the time step. This will allow significantly faster execution time. However, if the defined time step is too large, some volume loss and mesh distortion may occur.  
-In general, it is recommended that [DTSUB](/docs/sk/keyword_documentation/d/dtsub/)be set to 1 and that the time step guidelines described above be followed carefully. Use of polygon length sub stepping, [DPLEN](/docs/sk/keyword_documentation/d/dplen/), will also control volume loss and mesh distortion, without severe execution time increase.
+Ak je pre [DTSUB](/docs/sk/keyword_documentation/d/dtsub/) nastavená hodnota 1, je deaktivované subkrokovanie kontaktného času. Uzly budú môcť preniknúť cez hlavnú plochu, na konci časového kroku sa však umelo vrátia späť na plochu. Tým sa výrazne skráti čas spracovania. Ak je však definovaný časový krok príliš veľký, môže dôjsť k určitej strate objemu a deformácii siete.  
+Všeobecne sa odporúča nastaviť parameter XLPHX0 na hodnotu 1 a dôsledne dodržiavať vyššie uvedené odporúčania týkajúce sa časového kroku. Použitie podkrokovania dĺžky polygónov (XLPHX1) tiež pomáha obmedziť stratu objemu a deformáciu siete bez výrazného predĺženia času výpočtu.
 
-  * **Polygon length sub step (DPLEN) [3D]**
+  * **Dĺžka podkroku mnohouholníka (DPLEN) [3D]**
 
-Polygon length sub stepping ([DPLEN](/docs/sk/keyword_documentation/d/dplen/))places an upper limit on the absolute distance a surface node can move in a given time step.  
+Funkcia obmedzenia dĺžky kroku pri posúvaní hrany ([DPLEN](/docs/sk/keyword_documentation/d/dplen/)) stanovuje hornú hranicu absolútnej vzdialenosti, o ktorú sa môže uzol povrchu posunúť v danom časovom kroku.  
 
 ![]({{ '/assets/equations/pre_processor/9_simulation_controls/9_2_defining_step/eq_9_2_2.jpg' | relative_url }}) |   
 ---|---  
   
   
-Legal values of [DPLEN](/docs/sk/keyword_documentation/d/dplen/) are from 0 to 1. A value of 0 will disable sub stepping. Recommended values are 0.2 to 0.5, with 0.2 being more conservative, and hence slower, and 0.49 being more aggressive, and faster, but less accurate. Values larger than 0.5 can be used, but may allow unacceptable mesh degeneration.
+Povolené hodnoty pre [DPLEN](/docs/sk/keyword_documentation/d/dplen/) sú v rozmedzí od 0 do 1. Hodnota 0 deaktivuje subkrokovanie. Odporúčané hodnoty sú 0,2 až 0,5, pričom hodnota 0,2 je konzervatívnejšia, a teda spomaľuje výpočet, a hodnota 0,49 je agresívnejšia, rýchlejšia, ale menej presná. Hodnoty väčšie ako 0,5 je možné použiť, ale môžu spôsobiť neprijateľnú degeneráciu siete.
 
-  * **Adaptive contact penetration control check box**
+  * **Zaškrtávacie políčko „Adaptívne riadenie hĺbky vtlačenia“**
 
-This option implicit contact controls for EP and plastic models. From v12.0 instead of placing **DEF_CNT.DAT** file inside working directory in GUI option has been implemented.
+Táto voľba implicitne ovláda počty kontaktov pre modely EP a plastové modely. Od verzie 12.0 bola namiesto umiestňovania súboru **DEF_CNT.DAT** do pracovného adresára implementovaná voľba v grafickom rozhraní.
 
-**Advanced Step Controls**
+**Pokročilé ovládacie prvky krokov**
 
-This menu gives more options for special simulations where precision control of time step size is required (See Fig. 9.2.4.).
+Toto menu ponúka ďalšie možnosti pre špeciálne simulácie, pri ktorých je potrebné presné nastavenie veľkosti časového kroku (pozri obr. 9.2.4.).
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_2_defining_step/9_2_image004.jpg' | relative_url }})
 
-(a)
+a)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_2_defining_step/9_2_image005.jpg' | relative_url }})
 
-(b)
+b)
 
-Advanced stepping menu; (a) For 2D (b) For 3D
+Rozšírené krokové menu; (a) pre 2D (b) pre 3D
 
-  * **Temperature change per step (DTPMAX) [2D, 3****D]:** The maximum temperature change increment limits the amount that the temperature of any node can change during one time step. If a non-zero value is assigned, a new sub step will be initiated when the temperature change at any node reaches the value of [DTPMAX](/docs/sk/keyword_documentation/d/dtpmax/). The maximum/minimum time step are the largest and smallest time step allowable with the temperature based sub-stepping.
+  * **Zmena teploty na jeden krok (DTPMAX) [2D, 3****D]:** Maximálny prírastok zmeny teploty obmedzuje rozsah, o ktorý sa môže teplota ktoréhokoľvek uzla zmeniť počas jedného časového kroku. Ak je priradená hodnota odlišná od nuly, spustí sa nový podkrok, keď zmena teploty v ktoromkoľvek uzle dosiahne hodnotu [DTPMAX](/docs/sk/keyword_documentation/d/dtpmax/). Maximálny/minimálny časový krok je najväčší a najmenší časový krok povolený pri podkrokoch založených na teplote.
 
-  * **Deformation time per step (DTPMAX) [2D]:** If a non-zero value is assigned to Min. time step and Max. time step in Deformation-based stepping control group box, a new step size will be determined at each step, depending on the solution convergence rate. When the solution convergence rate is good, the time step size will be increased. But, when the solution convergence rate is poor, the time step size will be reduced. The minimum/maximum time steps are the largest and smallest time step allowable when determining the time step size. When this step control is defined, it has higher priority than Temperature change per step control.
+  * **Doba deformácie na krok (DTPMAX) [2D]:** Ak sú v skupine „Riadenie krokov na základe deformácie“ pre polia „Min. časový krok“ a „Max. časový krok“ nastavené hodnoty odlišné od nuly, pri každom kroku sa určí nová veľkosť kroku v závislosti od rýchlosti konvergencie riešenia. Ak je rýchlosť konvergencie riešenia dobrá, veľkosť časového kroku sa zvýši. Ak je však rýchlosť konvergencie riešenia slabá, veľkosť časového kroku sa zníži. Minimálne/maximálne časové kroky sú najväčší a najmenší časový krok povolený pri určovaní veľkosti časového kroku. Ak je definované toto riadenie krokov, má vyššiu prioritu ako riadenie zmeny teploty na krok.
 
-  * **Maximum Sliding Error [2D] :** This stepping control is not generally recommended. Please contact SFTC at [support@deform.com](mailto:support@deform.com) for more information.
+  * **Maximálna chyba posuvu [2D]:** Toto nastavenie krokovania sa vo všeobecnosti neodporúča. Pre viac informácií kontaktujte SFTC na čísle [support@deform.com](mailto:support@deform.com).
 
-  * **Volume change per step (DVMAX) [2D] :** During a deformation time step, elements typically experience a change in volume ([DVMAX](/docs/sk/keyword_documentation/d/dvmax/)). Over time, this volume change generally results in volume loss. The volume loss generally increases with increasing step sizes and increasing total height reduction ![]({{ '/assets/equations/pre_processor/9_simulation_controls/9_2_defining_step/dh_h.jpg' | relative_url }}) where ![]({{ '/assets/equations/pre_processor/9_simulation_controls/9_2_defining_step/dh.jpg' | relative_url }}) refers to a height reduction per step and ![]({{ '/assets/equations/pre_processor/9_simulation_controls/9_2_defining_step/h.jpg' | relative_url }}) refers to the height of an object. For problems where volume loss is significant, the volume loss also can be controlled by specifying the maximum amount of volume change that an individual element or an object can experience during a time step. If a non-zero value is assigned, a new sub step will be initiated when the ratio of the volume change to the original volume of any element exceeds the specified value.
+  * **Zmena objemu na jeden krok (DVMAX) [2D]:** Počas časového kroku deformácie dochádza u prvkov zvyčajne k zmene objemu ([DVMAX](/docs/sk/keyword_documentation/d/dvmax/)). V priebehu času táto zmena objemu zvyčajne vedie k strate objemu. Strata objemu sa zvyčajne zvyšuje s rastúcou veľkosťou krokov a rastúcim celkovým znížením výšky ![]({{ '/assets/equations/pre_processor/9_simulation_controls/9_2_defining_step/dh_h.jpg' | relative_url }}), kde ![]({{ '/assets/equations/pre_processor/9_simulation_controls/9_2_defining_step/dh.jpg' | relative_url }}) označuje zníženie výšky na jeden krok a ![]({{ '/assets/equations/pre_processor/9_simulation_controls/9_2_defining_step/h.jpg' | relative_url }}) označuje výšku objektu. Pri úlohách, kde je strata objemu významná, je možné stratu objemu regulovať aj stanovením maximálnej hodnoty zmeny objemu, ktorú môže jednotlivý prvok alebo objekt zaznamenať počas časového kroku. Ak je priradená hodnota odlišná od nuly, spustí sa nový podkrok, keď pomer zmeny objemu k pôvodnému objemu akéhokoľvek prvku prekročí stanovenú hodnotu.
 
-Related Topics:
+Súvisiace témy:
 
 [9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
 [9.3. Stopping Controls](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/)   

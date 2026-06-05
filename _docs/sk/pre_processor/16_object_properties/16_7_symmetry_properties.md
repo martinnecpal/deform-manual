@@ -1,23 +1,23 @@
 ---
 lang: sk
-title: "16.7. Symmetry Properties"
+title: "16.7. Vlastnosti symetrie"
 ---
 
-# 16.7. Symmetry Properties
+# 16.7. Vlastnosti symetrie
 
-**[3D]** : This boundary condition allows the user to match the velocity of the nodes of any surface of a body to the nodes of any other surface on the same body. The purpose of this is to model the more general case where rotational motion occurs during the forming of a part such as in the case of the forging of a helical gear. The manner in which to setup a rotational symmetry problem is to go to the Object, Properties window for the object and select the Symmetry tab then set the following values: (See Fig. 16.7.1.).
+**[3D]** : Táto okrajová podmienka umožňuje používateľovi prispôsobiť rýchlosť uzlov ľubovoľného povrchu telesa uzlom ľubovoľného iného povrchu toho istého telesa. Účelom je modelovať všeobecnejší prípad, keď počas tvárnenia súčiastky dochádza k rotačnému pohybu, ako napríklad v prípade kovania šikmého ozubeného kolesa. Spôsob, akým sa nastavuje problém rotačnej symetrie, je prejsť do okna Objekt, Vlastnosti objektu a vybrať záložku Symetria a potom nastaviť nasledujúce hodnoty: (Pozri obr. 16.7.1.).
 
-  * **Angle** : The angle of the part simulated in units of degrees. For example, 180 means that only half the part is simulated and 90 means one quarter of the part is simulated.
-  * **Centre** : A point on the centreline about which the deformation occurs. The format is in global (x, y, z) coordinates.
-  * **Axis** : The vector through which the centreline is parallel to. The format is in (x, y, z) coordinates. For example, if the user wants to specify a vector parallel to the z axis, the value of (0, 0, 1) should be typed in.
+  * **Úhol** : Uhol simulovanej časti v jednotkách stupňov. Napríklad 180 znamená, že sa simuluje len polovica časti a 90 znamená, že sa simuluje štvrtina časti.
+  * **Centrum** : Bod na osi, okolo ktorého dochádza k deformácii. Formát je v globálnych súradniciach (x, y, z).
+  * **Os** : Vektor, s ktorým je os rovnobežná. Formát je v súradniciach (x, y, z). Ak chce napríklad používateľ zadať vektor rovnobežný s osou z, treba zadať hodnotu (0, 0, 1).
 
-The second item the user needs to specify is the surfaces which have the rotational symmetry relationship to one another. The manner in which this is done is to place contact boundary conditions on face which obeys the right-hand rule. The boundary condition can be applied under the Objects, boundary conditions window using the advanced boundary conditions. The user needs to select the face which obeys the right-hand rule and apply self-contact conditions. This will allow the simulation engine to know which faces the rotational symmetry condition applies to.
+Druhou položkou, ktorú musí používateľ zadať, sú plochy, ktoré majú navzájom vzťah rotačnej symetrie. Spôsob, akým sa to robí, je umiestnenie kontaktných okrajových podmienok na plochu, ktorá sa riadi pravidlom pravej ruky. Okrajovú podmienku možno aplikovať v okne Objekty, okrajové podmienky pomocou rozšírených okrajových podmienok. Používateľ musí vybrať plochu, ktorá sa riadi pravidlom pravej ruky, a aplikovať na ňu podmienky vlastného kontaktu. To umožní simulačnému motoru zistiť, na ktoré plochy sa vzťahuje podmienka rotačnej symetrie.
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_7_Symmetry_Properties/16_7_Image001.jpg)
 
-Rotational Symmetry Object properties window
+Okno vlastností objektu rotačnej symetrie
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
 

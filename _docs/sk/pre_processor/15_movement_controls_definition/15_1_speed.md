@@ -1,39 +1,39 @@
 ---
 lang: sk
-title: "15.1. Speed"
+title: "15.1. Rýchlosť"
 ---
 
-# 15.1. Speed
+# 15.1. Rýchlosť
 
-**[2D, 3D]:** This is the default movement control (See Fig. 15.1.1.and Fig. 15.1.2.), which specifies the speed and direction of a object. The speed may be defined in one way of hte following ways.
+**[2D, 3D]:** Toto je predvolené ovládanie pohybu (pozri obr. 15.1.1 a obr. 15.1.2), ktoré určuje rýchlosť a smer pohybu objektu. Rýchlosť môže byť definovaná jedným z nasledujúcich spôsobov.
 
-  * Constant
+  * Konštanta
 
-  * Function of stroke of the primary object
+  * Funkcia zdvihu primárneho objektu
 
-  * Function of time
+  * Funkcia času
 
-  * Function of force (load) on the object
+  * Funkcia sily (zaťaženia) na objekt
 
-  * Proportional to the speed of another object
+  * Úmerná rýchlosti iného objektu
 
-  * Sinusoidal function
+  * Sínusová funkcia
 
-When an object is rigid, the entire object will move at the assigned speed. When the object is elastic, plastic, or porous, each node with a movement boundary condition assigned will maintain the assigned speed. Note that movement boundary conditions should never be assigned for all surface nodes. In general, no more than 1/2 to 2/3 of the boundary nodes on an object should have movement boundary conditions.
+Ak je objekt tuhý, celý objekt sa bude pohybovať priradenou rýchlosťou. Keď je objekt pružný, plastický alebo pórovitý, každý uzol s priradenou okrajovou podmienkou pohybu bude udržiavať priradenú rýchlosť. Všimnite si, že okrajové podmienky pohybu by nikdy nemali byť priradené pre všetky uzly povrchu. Vo všeobecnosti platí, že nie viac ako 1/2 až 2/3 okrajových uzlov na objekte by mali mať pridelené okrajové podmienky pohybu.
 
-Symmetry planes are defined with V=0 boundary conditions perpendicular to the applied surface. Due to limitations of border extraction during remeshing, parallel symmetry planes should be defined using at least one rigid symmetry surface, instead of V=0 boundary conditions on both sides of the object.
+Roviny symetrie sú definované s okrajovými podmienkami V=0 kolmo na aplikovaný povrch. Kvôli obmedzeniam pri extrakcii hraníc počas remeshingu by sa mali definovať rovnobežné roviny symetrie pomocou aspoň jednej tuhej plochy symetrie namiesto okrajových podmienok V=0 na oboch stranách objektu.
 
-Current Force field is added for all movement types and user can observe the current force at different steps. 
+Pole Aktuálna sila je pridané pre všetky typy pohybu a používateľ môže sledovať aktuálnu silu v rôznych krokoch.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_1_speed/15_1_image001.jpg' | relative_url }})
 
-2D Speed movement contros window
+2D okno kontroly pohybu rýchlosti
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_1_speed/15_1_image002.jpg' | relative_url }})
 
-3D Speed movement contros window
+Okno 3D Speed movement contros
 
-Related Topics:
+Súvisiace témy:
 
 [15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 

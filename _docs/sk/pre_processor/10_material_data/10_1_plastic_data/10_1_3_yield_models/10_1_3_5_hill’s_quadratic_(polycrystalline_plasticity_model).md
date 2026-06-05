@@ -1,17 +1,17 @@
 ---
 lang: sk
-title: "10.1.3.5. Hill’s Quadratic (polycrystalline plasticity model)"
+title: "10.1.3.5. Hillov kvadratický model (polykryštalický model plasticity)"
 ---
 
-# 10.1.3.5. Hill’s Quadratic (Polycrystalline plasticity model)
+# 10.1.3.5. Hillov kvadratický model (model polykryštalickej plasticity)
 
-For Hill’s quadratic (Polycrystal plasticity) anisotropy yield function model (See below Fig. 10.1.3.5.1.), texture information (crystal type, texture type) should be defined in Material dialog. At each material point of an object, orientation distribution functions (ODFs) will be evaluated based on the meshed rodrigues space.
+Pre model Hillovej kvadratickej (polykryštalickej plasticity) anizotropnej funkcie klzu (pozri nižšie Obr. 10.1.3.5.1.) je potrebné v dialógovom okne Materiál definovať informácie o textúre (typ kryštálu, typ textúry). V každom materiálovom bode objektu sa vyhodnotia orientačné distribučné funkcie (ODF) na základe sieťovaného rodriguesovho priestoru.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_5_hill’s_quadratic_\(polycrystalline\)/10_1_3_5_image001.jpg.jpg' | relative_url }})
 
-Hills quadratic (Polycrystalline plasticity model)
+Kvadratický kopec (model polykryštalickej plasticity)
 
-TXTODF specifies ODFs at each material point of an object. If the material has multiple phases, TXTODF lists the ODFs phase by phase, depending on the definition of phase sequence of the material. For single phase material, when Rodrigues space is employed to represent texture, number of ODFs is equal to the independent nodes of meshed Rodrigues space. For multiple-phase material, number of ODFs is equal to the summation of independent nodes of meshed Rodrigues space of all phases.
+TXTODF špecifikuje ODF v každom hmotnom bode objektu. Ak má materiál viacero fáz, TXTODF uvádza ODF po jednotlivých fázach v závislosti od definície postupnosti fáz materiálu. V prípade jednofázového materiálu, keď sa na reprezentáciu textúry používa Rodriguesov priestor, sa počet ODF rovná nezávislým uzlom sieťovaného Rodriguesovho priestoru. V prípade viacfázového materiálu sa počet ODF rovná súčtu nezávislých uzlov sieťovaného Rodriguesovho priestoru všetkých fáz.
 
 [10.1.3.1. Von Mises](/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_1_von_mises/)
 

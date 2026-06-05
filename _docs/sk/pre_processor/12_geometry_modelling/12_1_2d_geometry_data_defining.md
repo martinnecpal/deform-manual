@@ -1,149 +1,149 @@
 ---
 lang: sk
-title: "12.1. 2D Geometry Data Defining"
+title: "12.1. Definovanie 2D geometrických údajov"
 ---
 
-# 12.1. Defining 2D Geometry Data
+# 12.1. Definovanie 2D geometrických údajov
 
-12.1.1. Geometry Rules for 2D
+12.1.1. Pravidlá geometrie pre 2D
 
-12.1.2. 2D Geometry Tools
+12.1.2. Nástroje 2D geometrie
 
-12.1.3. 2D Geometry data Importing and Saving
+12.1.3. Import a ukladanie 2D geometrických údajov
 
-12.1.4 Settings
+12.1.4 Nastavenia
 
-2D Geometry page is as shown in below Fig. 12.1.1.
+Stránka 2D geometrie je znázornená na nasledujúcom obrázku 12.1.1.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image003.jpg)
 
-2D Geometry page
+2D geometria stránka
 
-## Geometry Rules for 2D
+## Pravidlá geometrie pre 2D
 
-**Orientation**  
-The endpoints of line segments are defined numerically. For all die definitions, all objects should be numbered such that the die block is on the left, and open air (contact zone) on the right as you move along the points in the order. Failure to follow this orientation may cause any of the following problems:
+**Orientácia**
+Koncové body úsečiek sú definované číselne. Pri všetkých definíciách výsekov by mali byť všetky objekty očíslované tak, aby sa blok výsekov nachádzal vľavo a voľný priestor (kontaktná zóna) vpravo, keď sa pohybujete po bodoch v poradí. Nedodržanie tejto orientácie môže spôsobiť niektorý z nasledujúcich problémov:
 
-  * Object won't mesh.
-  * Mesh distorts when boundary conditions are applied.
-  * Object positioning error using interference positioning.
+  * Objekt sa nespojí.
+  * Sieť sa pri použití okrajových podmienok deformuje.
+  * Chyba polohovania objektu pomocou interferenčného polohovania.
 
-**Direction**
+**Smerovanie**
 
-Objects must be defined counter clockwise (CCW). The orientation direction may be checked using the point numbering button in the geometry editing window.
+Objekty musia byť definované proti smeru hodinových ručičiek (CCW). Smer orientácie možno skontrolovať pomocou tlačidla číslovania bodov v okne na úpravu geometrie.
 
-If the current connectivity is clockwise (either after drawing or after importing), it can be reversed. The geometry reverse function reverses the current connectivity of the object by clicking the Reverse button.
+Ak je aktuálne pripojenie v smere hodinových ručičiek (po nakreslení alebo po importovaní), je možné ho obrátiť. Funkcia obrátenej geometrie obráti aktuálnu konektivitu objektu kliknutím na tlačidlo Obrátiť.
 
-**Edges**  
-The die starting and stopping point must be away from the contact zone, unless points are on the axis of symmetry. Tooling which crosses the centerline should do so at 90 degrees: other angles may lead to non-convergence. In case of a pointed punch, a very short line segment should be added at the center.
+**Hranice**
+Počiatočný a koncový bod výseku musí byť mimo kontaktnej zóny, pokiaľ sa body nenachádzajú na osi symetrie. Nástroje, ktoré pretínajú os, by tak mali robiť pod uhlom 90 stupňov: iné uhly môžu viesť k nekonvergencii. V prípade špicatého razidla by sa mala v strede pridať veľmi krátka úsečka.
 
-**Blended fillets**
+**Zmiešané filé**
 
-The connectivity between blended fillets is ill-defined in IGES format. To avoid problems, it is helpful to define a very short line segments between arcs. Blended fillets can cause DEFORM-2D to continuously give an incorrect geometry message, even once the geometry has been checked and corrected. To correct this, simply add an extremely small line segment between the two fillets.
+Spojitosť medzi zmiešanými filamentmi je vo formáte IGES zle definovaná. Aby ste sa vyhli problémom, je užitočné definovať veľmi krátke úsečky medzi oblúkmi. Zmiešané filé môžu spôsobiť, že DEFORM-2D bude neustále vydávať hlásenie o nesprávnej geometrii, a to aj po kontrole a oprave geometrie. Ak to chcete opraviť, jednoducho pridajte medzi dva filé extrémne malú úsečku.
 
-**End points**
+**Koncové body**
 
-The radius of the first and last points must be zero.
+Polomer prvého a posledného bodu musí byť nulový.
 
-**Clearance fits**
+**Výpoveď vyhovuje**
 
-Tooling with close clearance fits should be drawn to overlap slightly. Failure to overlap tooling may allow nodes to slip between the punch and the die, and cause problems when the mesh regenerates. A "negative jacobian" error in the message file will result.
+Nástroje s tesnou vôľou by sa mali ťahať tak, aby sa mierne prekrývali. Ak sa nástroje neprekrývajú, môže dôjsť k prekĺznutiu uzlov medzi razníkom a matricou a k problémom pri regenerácii oka. Výsledkom bude chyba "záporný jacobian" v súbore správ.
 
-## 2D Geometry Tools
+## Nástroje 2D geometrie
 
-**Define Primitives** ![](../../../assets/Icons/Pre_icons/MO_Define_Primitive_label.jpg): There are now five primitive shapes in general geometry page that can be used to generate geometries as seen in Fig. 12.1.2. and Fig. 12.1.3. In each case, the user has to scale appropriately to the problem by defining the dimensions.
+**Definovanie primitív** ![](../../../assets/Icons/Pre_icons/MO_Define_Primitive_label.jpg): Na stránke všeobecnej geometrie je teraz k dispozícii päť primitívnych tvarov, ktoré možno použiť na generovanie geometrie, ako je vidieť na obr. 12.1.2 a obr. 12.1.3. V každom prípade musí používateľ definovaním rozmerov vhodne prispôsobiť mierku problému.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image004.JPG)
 
-2D Axisymmetric and Torsion Geo Primitive options
+Možnosti 2D osovo symetrických a torzných geoprimitívov
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image005.JPG)
 
-2D Plane strain and Stress Geo Primitive options
+2D rovinná deformácia a napätie Geo Primitívne možnosti
 
-**Scale Geometry**![](../../../assets/Icons/Pre_icons/MO_Scale_label.jpg) **:** Geometry can be scaled in Preprocessor specifying the scaling factor. (See Fig. 12.1.4.) The scaling factor can be calculated by temperature differential and temperature dependent material data and scaled geometry can be saved in the Geometry saving formats.
+**Škálovanie geometrie**![](../../../assets/Icons/Pre_icons/MO_Scale_label.jpg) **:** Geometriu možno škálovať v Preprocesore zadaním faktora škálovania. (Pozri obr. 12.1.4.) Faktor škálovania možno vypočítať podľa teplotného rozdielu a údajov o materiáli závislých od teploty a škálovanú geometriu možno uložiť vo formátoch na ukladanie geometrie.
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image001.jpg)
 
-Geometry scaling options
+Možnosti škálovania geometrie
 
-**CAD Interface** ![](../../../assets/Icons/Pre_icons/MO_CAD_Interface_Label.jpg)**:** Using this option user can import CAD geometry file directly for Soildworks directly.
+**Rozhranie CAD** ![](../../../assets/Icons/Pre_icons/MO_CAD_Interface_Label.jpg)**:** Pomocou tejto možnosti môže používateľ importovať súbor CAD s geometriou priamo pre Soildworks.
 
-**Construct by Subtract**![](../../../assets/Icons/Pre_icons/MO_Construct_by_substraction_button.jpg) **:** This option is used to create geometry by subtracting geometry of other objects that are already present. Here the starting point, width and height of the object geometry from which other geometries to be subtracted must be specified as shown in Fig. (See Fig. 12.1.5.)
+**Konštrukcia odčítaním**![](../../../assets/Icons/Pre_icons/MO_Construct_by_substraction_button.jpg) **:** Táto možnosť sa používa na vytvorenie geometrie odčítaním geometrie iných už prítomných objektov. Tu je potrebné zadať počiatočný bod, šírku a výšku geometrie objektu, od ktorej sa majú ostatné geometrie odčítať, ako je znázornené na obrázku (pozri obr. 12.1.5).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image006.jpg)
 
-Construct by Subtract window
+Konštrukcia pomocou okna Odčítať
 
-**Check Geometry** ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg)
+**Kontrola geometrie** ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg)
 
-Once the geometry of the object is created, Check GEO button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg)button a popup appears as shown in below Fig. 12.1.6. The Geometry gets corrected when we click on check & correct geometry button.
+Po vytvorení geometrie objektu sa aktivuje tlačidlo Check GEO. Je potrebné skontrolovať orientáciu geometrie. To možno vykonať kliknutím na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg)objaví sa vyskakovacie okno, ako je znázornené na nasledujúcom obr. 12.1.6. Geometria sa opraví, keď klikneme na tlačidlo check & correct geometry (Skontrolovať a opraviť geometriu).
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image002.JPG)
 
-Check Geometry options window in 2D mode
+Kontrola okna možností geometrie v režime 2D
 
-Below are a few common geometric errors in DEFORM 2D and how they are corrected by DEFORM.
+Nižšie je uvedených niekoľko bežných geometrických chýb v programe DEFORM 2D a spôsob ich opravy v programe DEFORM.
 
-**GEOMETRY ERROR** | **RECOMMENDED CORRECTION**  
----|---  
-Duplicate points |  Remove the duplicate point  
-Adjacent points are collinear |  Remove the collinear point (s)  
-Corner radius is so large that at least one of the tangent points lies outside the tangent line defined by the adjacent points  |  Reduce the corner radius so that both tangent points lie within the tangent line segments  
-Arc interference at adjacent points: opposite arc orientations |  Adjust the radii of the points so that the common tangent point lies on the line connecting the points  
-Arc interference at adjacent points: same arc orientation  |  Adjust the radii so that the common tangent point becomes the intersection point of the two arcs projected on the common tangent line  
-Line entity with zero length |  Remove entity  
-Arc entity with zero radius |  Remove entity  
-Adjacent entities cross  |  Modify entities so that the intersection point becomes the ending point of one entity and the starting point of the other entity  
-Unconnected adjacent entities |  Add a line segment to connect the entities  
+**GEOMETRICKÁ CHYBA** | **ODPORÚČANÁ OPRAVA**
+---|---
+Duplicitné body | Odstránenie duplicitného bodu
+Susedné body sú kolineárne | Odstrániť kolineárny bod (y)
+Polomer rohu je taký veľký, že aspoň jeden zo styčných bodov leží mimo dotyčnice definovanej susednými bodmi | Znížte polomer rohu tak, aby oba styčné body ležali v úsečkách dotyčnice
+Interferencia oblúkov v susedných bodoch: opačné orientácie oblúkov | Upravte polomery bodov tak, aby spoločný dotykový bod ležal na priamke spájajúcej body
+Interferencia oblúkov v susedných bodoch: rovnaká orientácia oblúka | Upravte polomery tak, aby sa spoločný dotykový bod stal priesečníkom dvoch oblúkov premietnutých na spoločnú dotykovú čiaru
+Riadková entita s nulovou dĺžkou | Odstrániť entitu
+Oblúková entita s nulovým polomerom | Odstrániť entitu
+Susediace entity sa pretínajú | Upravte entity tak, aby sa priesečník stal koncovým bodom jednej entity a počiatočným bodom druhej entity
+Nespojené susediace entity | Pridanie úsečky na prepojenie entít
   
-Corrective measures to be taken for DEFORM 2D geometry
+Nápravné opatrenia, ktoré sa majú prijať pre geometriu DEFORM 2D
 
-**System Defects:** when user checks geometry if there is any misorientation it gets corrected whether it is closed or open Geometry.
+**Závady systému:** keď používateľ kontroluje geometriu, ak je nejaká nesprávna orientácia, opraví sa bez ohľadu na to, či ide o uzavretú alebo otvorenú geometriu.
 
-**Closed:** It checks the orientation of geometry and closes the geometry. If user creates an open geometry, it get closes by joining start and end points by selecting closed geometry.
+**Zatvorené:** Kontroluje orientáciu geometrie a uzatvára geometriu. Ak používateľ vytvorí otvorenú geometriu, uzavrie ju spojením počiatočných a koncových bodov výberom uzavretej geometrie.
 
-**Open Geometry:** If user creates an open geometry, it checks the orientation and keeps the geometry in open.
+**Otvorená geometria:** Ak používateľ vytvorí otvorenú geometriu, skontroluje sa orientácia a geometria zostane otvorená.
 
-**Remove collinear points:** When user check remove collinear points check box it removes the collinear points present in the geometry.
+**Odstrániť kolineárne body:** Keď používateľ začiarkne políčko Odstrániť kolineárne body, odstránia sa kolineárne body prítomné v geometrii.
 
-**Reverse**![](../../../assets/Icons/Pre_icons/MO_Reverse_label.jpg) : This feature reverses the orientation of the geometry. Orientation of the 2D geometry must be always inside for single loop geometry, for multiple loop geometry the loop which share between the two regions can have the orientation on either side, but topology must be defined.
+**Reverse**![](../../../assets/Icons/Pre_icons/MO_Reverse_label.jpg) : Táto funkcia mení orientáciu geometrie. Orientácia 2D geometrie musí byť v prípade geometrie s jednou slučkou vždy vnútri, v prípade geometrie s viacerými slučkami môže mať slučka, ktorá sa delí o dve oblasti, orientáciu na oboch stranách, ale musí byť definovaná topológia.
 
-**Edit**![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) : This feature helps to edit boundary of the 2D object. The Geometry editing window is used to create, modify or view the geometry of a given object. The window appears upon selecting the ![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) in the Geometry window. Refer [Chapter 12.2. 2D Geometry Editing.](/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+**Edit**![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) : Táto funkcia pomáha upravovať hranice 2D objektu. Okno na úpravu geometrie sa používa na vytvorenie, úpravu alebo zobrazenie geometrie daného objektu. Okno sa zobrazí po výbere ![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) v okne Geometria. Pozri [Chapter 12.2. 2D Geometry Editing.](/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
 
-**Extract Border**![](../../../assets/Icons/Pre_icons/MO_Extract_border_button.jpg) : This feature extracts the geometry data from the current database for all object types except the rigid object.
+**Extraktovať hranicu**![](../../../assets/Icons/Pre_icons/MO_Extract_border_button.jpg) : Táto funkcia extrahuje geometrické údaje z aktuálnej databázy pre všetky typy objektov okrem tuhého objektu.
 
-**Extract from Mesh**![](../../../assets/Icons/Pre_icons/MO_Extract_From_mesh.jpg) : This feature extracts geometry from the mesh.
+**Extract from Mesh**![](../../../assets/Icons/Pre_icons/MO_Extract_From_mesh.jpg) : Táto funkcia extrahuje geometriu zo siete.
 
-**Show geometry inside mark** : Checking this option enables the Geometry orientation display.
+**Zobraziť geometriu vnútri značky** : Začiarknutím tejto možnosti sa zapne zobrazenie orientácie geometrie.
 
-**Delete geometry :** Using Delete ![](../../../assets/Icons/Pre_icons/MO_clear_icon.jpg) option the object geometry gets deleted.
+**Odstránenie geometrie :** Pomocou možnosti Odstrániť ![](../../../assets/Icons/Pre_icons/MO_clear_icon.jpg) sa odstráni geometria objektu.
 
-## 2D Geometry data Loading and Saving 
+## Načítanie a ukladanie údajov 2D geometrie
 
-**Importing Geometry :** Geometry can be imported from a file ![](../../../assets/Icons/Pre_icons/MO_Import_file_icon.jpg) or Load geometry from library ![](../../../assets/Icons/Pre_icons/MO_Load_from_Library_icon.jpg) options, a DEFORM native graphics file (AMGGEO), keyword file, database file or created using the geometry editor. When importing IGES files or dxf files, use the mouse to select the object you wish to import. Click on any line segment in the object. Any segments connected to this object will also be selected and highlighted.
+**Importovanie geometrie :** Geometriu možno importovať zo súboru ![](../../../assets/Icons/Pre_icons/MO_Import_file_icon.jpg) alebo Načítať geometriu z knižnice ![](../../../assets/Icons/Pre_icons/MO_Load_from_Library_icon.jpg), z natívneho grafického súboru DEFORM (AMGGEO), zo súboru s kľúčovými slovami, z databázového súboru alebo vytvoriť pomocou editora geometrie. Pri importovaní súborov IGES alebo dxf vyberte pomocou myši objekt, ktorý chcete importovať. Kliknite na ľubovoľnú úsečku v objekte. Všetky segmenty pripojené k tomuto objektu budú tiež vybrané a zvýraznené.
 
-**AMGGEO format input [2D]**
+**Vstup vo formáte AMGGEO [2D]**
 
-The AMGGEO format is the mesh generators internal format for handling geometries. This format can specify geometry as a set of connect points, the XYR format, the line-arc format, and as a set of boundary nodes.
+Formát AMGGEO je interný formát generátora sietí na spracovanie geometrií. Tento formát môže špecifikovať geometriu ako súbor spojovacích bodov, formát XYR, formát oblúkových čiar a ako súbor hraničných uzlov.
 
-Note:
+Poznámka:
 
-It is necessary to use the mouse to select the object to be imported even if there is only a single object in the drawing file.
+Na výber objektu, ktorý sa má importovať, je potrebné použiť myš, aj keď je v súbore výkresu len jeden objekt.
 
-**Assign the file name to the object name while loading geometry** : When user checks this option while loading or importing geometry file, it assigns the geometry file name to the Object name.
+**Priradenie názvu súboru k názvu objektu pri načítaní geometrie** : Keď používateľ začiarkne túto možnosť pri načítaní alebo importovaní súboru geometrie, priradí názov súboru geometrie k názvu objektu.
 
-**Save geometry :** Saves geometry to a file ![](../../../assets/Icons/Pre_icons/MO_Save_to_a_file_icon.jpg) or to library uisng ![](../../../assets/Icons/Pre_icons/MO_Save_to_Library_icon.jpg). Saves geometry in IGES, DXF and DEFORM native GEO format for 2D.
+**Uloženie geometrie :** Uloží geometriu do súboru ![](../../../assets/Icons/Pre_icons/MO_Save_to_a_file_icon.jpg) alebo do knižnice ![](../../../assets/Icons/Pre_icons/MO_Save_to_Library_icon.jpg). Ukladá geometriu vo formátoch IGES, DXF a DEFORM natívneho formátu GEO pre 2D.
 
-## Settings ![](../../../assets/Icons/Pre_icons/MO_Settings_icon.jpg)
+## Nastavenia ![](../../../assets/Icons/Pre_icons/MO_Settings_icon.jpg)
 
 ![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image007.jpg)
 
-2D Geometry Settings Window
+Okno nastavení 2D geometrie
 
-**Tolerance:** Sets the tolerance level for joining two boundary points which are close together when an object is imported in IGS and DXF geometry formats, and before transferring the data into DEFORM are defined here. ( Fig. 12.1.7.)
+**Tolerancia:** Tu sa nastavuje úroveň tolerancie pre spojenie dvoch hraničných bodov, ktoré sú blízko seba pri importe objektu vo formátoch geometrie IGS a DXF a pred prenosom údajov do programu DEFORM. ( Obr. 12.1.7.)
 
-**No. of discretization points:**
+**Počet bodov diskretizácie:**
 
 [12\. Geometry Modelling](/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/)
 

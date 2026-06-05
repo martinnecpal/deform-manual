@@ -1,34 +1,34 @@
 ---
 lang: sk
-title: "15.7. Sliding Die"
+title: "15.7. Posuvná matrica"
 ---
 
-# 15.7. Sliding Die
+# 15.7. Posuvná matrica
 
-[2D, 3D]: Defining sliding movement can be done in the movement controls window as seen in Fig. 15.7.1. and Fig. 15.7.2. To use spring-loaded dies, the object should be rigid and should not have any other movement specified.
+[2D, 3D]: Definovanie posuvného pohybu je možné vykonať v okne ovládania pohybu, ako je vidieť na obr. 15.7.1 a obr. 15.7.2. Ak chcete použiť pružinové matrice, objekt by mal byť tuhý a nemal by mať zadaný žiadny iný pohyb.
 
-The following items should be specified for all spring-loaded die cases:
+Pre všetky pružinové zápustky by sa mali špecifikovať tieto položky:
 
-  * Turn spring-loaded die controls to ON.
+  * Otočte ovládacie prvky pružinového lisu do polohy ON.
 
-  * The movement direction should be specified in the direction that compresses the spring. The spring force will be applied opposite the direction of movement.
+  * Smer pohybu by mal byť zadaný v smere, ktorý stláča pružinu. Sila pružiny bude pôsobiť proti smeru pohybu.
 
-  * **Stiffness** specifies the stiffness in klb/in (English) or N/mm (SI) units. The stiffness can be either a constant or a function of compression amount.
+  * **Tuhosť** udáva tuhosť v jednotkách klb/in (anglicky) alebo N/mm (SI). Tuhosť môže byť buď konštantná, alebo funkcia veľkosti stlačenia.
 
-  * **Preload** specifies the amount of force to overcome before compression occurs in klb (English) or N (SI).
-  * **Maximum displacement** is the distance where the spring eventually bottoms out and which cause the spring to not move anymore in the compression direction.
-  * **Other end of spring** determines whether the spring is fixed to another rigid object or whether the other end is fixed to a position in space. In the case where the object is fixed to a position in space, the compression direction, the current displacement and maximum displacement determine how much the spring is compressed and whether it is bottomed out. In the case where the spring is attached to another object, the distance between the two objects will determine the amount of compression.
-  * **No of Steps before Damping** : **Text to be added**
+  * **Predpätie** udáva veľkosť sily, ktorú je potrebné prekonať pred stlačením, v klb (anglicky) alebo N (SI).
+  * **Maximálny posun** je vzdialenosť, v ktorej sa pružina nakoniec dostane na dno a ktorá spôsobí, že sa pružina už nebude pohybovať v smere stlačenia.
+  * **Druhý koniec pružiny** určuje, či je pružina pripevnená k inému pevnému predmetu alebo či je druhý koniec pripevnený k polohe v priestore. V prípade, že je objekt pevne spojený s polohou v priestore, smer stlačenia, aktuálny posun a maximálny posun určujú, ako veľmi je pružina stlačená a či je na dne. V prípade, že je pružina pripevnená k inému objektu, vzdialenosť medzi týmito dvoma objektmi určuje veľkosť stlačenia.
+  * **Číslo krokov pred tlmením** : **Text, ktorý sa má doplniť**
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_7_sliding_die/15_7_image001.jpg' | relative_url }})
 
-2D Sliding die movement controls window
+2D Posuvné okno na ovládanie pohybu kocky
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_7_sliding_die/15_7_image002.jpg' | relative_url }})
 
-3D Sliding die movement controls window
+3D Posuvné okno na ovládanie pohybu kocky
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 

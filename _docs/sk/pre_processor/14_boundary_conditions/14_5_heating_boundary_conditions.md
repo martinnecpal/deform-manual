@@ -1,66 +1,66 @@
 ---
 lang: sk
-title: "14.5. Heating Boundary Conditions"
+title: "14.5. Hraničné podmienky vykurovania"
 ---
 
-# 14.5. Heating Boundary Conditions
+# 14.5. Hraničné podmienky vykurovania
 
-14.5.1. Resistance Heating [2D, 3D]
+14.5.1. Odporové vykurovanie [2D, 3D]
 
-14.5.2. Induction Heating
+14.5.2. Indukčný ohrev
 
-14.5.3. Induction Heating (BEM)
+14.5.3. Indukčný ohrev (BEM)
 
-## Resistance Heating [2D, 3D]
+## Odporové vykurovanie [2D, 3D]
 
-**Voltage BCC**
+**Napätie BCC**
 
-Specifies a fixed voltage over the nodes or elements bordered by the indicated edges. Units are Volt. This is usually defined for resistance and induction type of problems.
+Určuje pevné napätie nad uzlami alebo prvkami ohraničenými uvedenými hranami. Jednotkami sú volty. Toto sa zvyčajne definuje pre problémy odporového a indukčného typu.
 
-**Current Flux BCC**
+**Aktuálny tok BCC**
 
-Specifies a fixed dominant current flux rate over the elements bordered by the indicated edges. Units are Amp/time.
+Určuje pevnú dominantnú rýchlosť toku prúdu cez prvky ohraničené uvedenými hranami. Jednotky sú Amp/čas.
 
-From V12, PID control option added to Current flux BCC for 2D objects as shown in Fig. 14.5.1. Using this option user can automatically control the Current flux by defining the PID control parameters, target temperature and thermocouple location.
+Od verzie V12 pribudla možnosť PID regulácie do Current flux BCC pre 2D objekty, ako je znázornené na obr. 14.5.1. Pomocou tejto možnosti môže používateľ automaticky riadiť prúdový tok definovaním parametrov PID regulácie, cieľovej teploty a umiestnenia termočlánku.
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image001.jpg)
 
-Current flux PID option [only for 2D]
+Možnosť PID prúdového toku [len pre 2D]
 
-## Induction Heating 
+## Indukčné vykurovanie
 
-**[2D]** : Once Induction Heating check box is checked in simulation controls, Induction heating in properties window and Heating tab in Inter object Relations get activated. For more information please refer [16.6. Heating Properties](/docs/sk/pre_processor/16_Object_Properties/16_6_heating_properties/) and [20.3. Interface Resistivity.](/docs/sk/pre_processor/20_Inter-object_Data_Definition/20_3_Interface_Resisitivity/)
+**[2D]** : Po zaškrtnutí políčka Indukčný ohrev v ovládacích prvkoch simulácie sa aktivuje indukčný ohrev v okne vlastností a záložka Ohrev vo Vzťahoch medzi objektmi. Ďalšie informácie nájdete v dokumentoch [16.6. Heating Properties](/docs/sk/pre_processor/16_Object_Properties/16_6_heating_properties/) a [20.3. Interface Resistivity.](/docs/sk/pre_processor/20_Inter-object_Data_Definition/20_3_Interface_Resisitivity/)
 
-**[3D]** : For 3D coil begin and end surface bcc are available (see Fig. 14.5.2.).
+**[3D]** : Pre 3D cievky sú k dispozícii počiatočné a koncové plochy bcc (pozri obr. 14.5.2.).
 
-**Coil Begin surface [3D]** : Specifies the begin surface of coil.
+**Začiatok cievky [3D]** : Určuje počiatočný povrch cievky.
 
-**Coil End surface [3D]** : Specifies the end surface of coil.
+**Koncový povrch cievky [3D]** : Určuje koncový povrch cievky.
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image004.jpg)
 
-Induction BCC window for 3D
+Indukčné okno BCC pre 3D
 
-## Induction Heating (BEM) 
+## Indukčný ohrev (BEM)
 
-This BCC option is available for Induction BEM process only.
+Táto možnosť BCC je k dispozícii len pre proces Induction BEM.
 
-**Heating Surface[2D, 3D]**  
-Heating Surface BCC specifies the surface of the coil which heats the workpiece and also the workpiece gets heated by the coil.
+**Vykurovací povrch[2D, 3D]**
+Vykurovací povrch BCC určuje povrch cievky, ktorý ohrieva obrobok, a tiež obrobok, ktorý sa ohrieva cievkou.
 
-**Coil Begin surface [3D]**  
-Specifies the begin surface of Coil.
+**Povrch cievky Začiatok [3D]**
+Určuje počiatočný povrch cievky.
 
-**Coil End surface [3D]**  
-Specifies the end surface of Coil. See Fig. 14.5.3. for the induction BEM BCC settings.
+**Koncový povrch cievky [3D]**
+Určuje koncový povrch cievky. Nastavenia indukčného BEM BCC sú uvedené na obr. 14.5.3.
 
 ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image002.jpg) ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image003.jpg)
 
 (a) (b)
 
-Induction (BEM) BCC window: (a) For 2D and (b) For 3D
+Indukčné (BEM) okno BCC: (a) pre 2D a (b) pre 3D
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
 

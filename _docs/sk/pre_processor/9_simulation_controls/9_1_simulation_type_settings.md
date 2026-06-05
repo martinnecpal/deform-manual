@@ -1,122 +1,122 @@
 ---
 lang: sk
-title: "9.1. Simulation type Settings"
+title: "9.1. Nastavenia typu simulácie"
 ---
 
-# 9.1. Simulation type Settings
+# 9.1. Nastavenia typu simulácie
 
-9.1.1. Simulation Information
+9.1.1. Informácie o simulácii
 
-9.1.2. Geometry type
+9.1.2. Typ geometrie
 
-9.1.3. Units
+9.1.3. Jednotky
 
-9.1.4. Type
+9.1.4. Typ
 
-9.1.5. Simulation modes
+9.1.5. Simulačné režimy
 
-Main Settings options are as shown in Fig. 9.1.1. for 2D and 3D.
+Hlavné nastavenia pre 2D a 3D sú zobrazené na obr. 9.1.1.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_simulation_controls/9_image001.jpg' | relative_url }})
 
-(a)
+a)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_simulation_controls/9_image002.jpg' | relative_url }})
 
-(b)
+b)
 
-Main Settings window; (a) For 2D and (b) For 3D
+Okno hlavných nastavení; (a) pre 2D a (b) pre 3D
 
-## Simulation Information
+## Informácie o simulácii
 
-  * **Simulation title (TITLE) [2D, 3D]** : The simulation title ([TITLE](/docs/sk/keyword_documentation/t/title/)) allows you to title the problem (up to 80 characters) for reference purposes.
+  * **Názov simulácie (TITLE) [2D, 3D]** : Pole „Názov simulácie“ ([TITLE](/docs/sk/keyword_documentation/t/title/)) slúži na zadanie názvu úlohy (max. 80 znakov) pre referenčné účely.
 
-  * **Operation name (OPRNAM) [2D, 3D]** : The Operation name (OPRNAM) allows you to title the specific operation (up to 64 characters) for reference purposes.
+  * **Názov operácie (OPRNAM) [2D, 3D]** : Názov operácie (OPRNAM) slúži na označenie konkrétnej operácie (max. 64 znakov) pre účely referencie.
 
-  * **Simulation name (SIMNAM) [2D, 3D]** : The simulation name ([SIMNAM](/docs/sk/keyword_documentation/s/simnam/)) allows you to title the specific operation (up to 64 characters) for reference purposes.
+  * **Názov simulácie (SIMNAM) [2D, 3D]** : Názov simulácie ([SIMNAM](/docs/sk/keyword_documentation/s/simnam/)) slúži na označenie konkrétnej operácie (max. 64 znakov) pre účely referencie.
 
-  * **Oper****ation number (CURSIM) [2D, 3D]** : Allows the specification of a new operation number ([SIMNAM](/docs/sk/keyword_documentation/s/simnam/)) for each operation in the database. If operations numbers are specified, the post-processor displays each operation with its number in the step list.
+  * **Číslo operácie (CURSIM) [2D, 3D]** : Umožňuje zadať nové číslo operácie ([SIMNAM](/docs/sk/keyword_documentation/s/simnam/)) pre každú operáciu v databáze. Ak sú špecifikované čísla operácií, postprocesor zobrazí každú operáciu s jej číslom v zozname krokov.
 
-  * **Simulation number (CURSIM) [2D, 3D]** : Allows the specification of a new simulation number ([SIMNAM](/docs/sk/keyword_documentation/s/simnam/)) for each simulation in the database. If simulation numbers are specified, the post-processor displays each simulation with its number in the step list.
+  * **Číslo simulácie (CURSIM) [2D, 3D]**: Umožňuje zadať nové číslo simulácie ([SIMNAM](/docs/sk/keyword_documentation/s/simnam/)) pre každú simuláciu v databáze. Ak sú čísla simulácií zadané, postprocesor zobrazí každú simuláciu spolu s jej číslom v zozname krokov.
 
-  * **Mesh number (MESHNO) [2D, 3D] :** This variable records the current mesh based on the number of remeshings ([MESHNO](/docs/sk/keyword_documentation/m/meshno/)) that occur between the initial mesh and the current mesh. This variable should not be changed.
+  * **Číslo siete (MESHNO) [2D, 3D] :** Táto premenná zaznamenáva aktuálnu sieť na základe počtu prepočítaní siete ([MESHNO](/docs/sk/keyword_documentation/m/meshno/)), ku ktorým došlo medzi počiatočnou sieťou a aktuálnou sieťou. Túto premennú by sa nemalo meniť.
 
-##  Geometry type (GEOTYP) [2D]
+##  Typ geometrie (GEOTYP) [2D]
 
-In DEFORM seven types of geometry models ([GEOTYP](/docs/sk/keyword_documentation/g/geotyp/)) can be setup currently:
+V programe DEFORM je v súčasnosti možné nastaviť sedem typov geometrických modelov ([GEOTYP](/docs/sk/keyword_documentation/g/geotyp/)):
 
-  * **Axisymmetric** : The Axisymmetric models as a cross-section with respect to the central axis. Therefore, the model requires the deforming geometry to be axially symmetric and in the first quadrant and fourth quadrant (i.e. X > 0). In addition, the system assumes that the flow in every radial plane is identical. (See Fig. 9.1.2.)
+  * **Osovo symetrické**: Osovo symetrické modely sa modelujú ako priečny rez vzhľadom na stredovú os. Preto model vyžaduje, aby deformovaná geometria bola osovo symetrická a nachádzala sa v prvom a štvrtom kvadrante (t. j. X > 0). Okrem toho systém predpokladá, že prúdenie v každej radiálnej rovine je identické. (Pozri obr. 9.1.2.)
 
-  * **Plane strain :** The Plane-strain assumes that the geometry to have an unit depth with both front and back faces constrained. The simulation assumes that the objects will behave identically in any given cross-section across the width and height of the object. (See Fig. 9.1.2.)
+  * **Rovinné deformácie:** Pri rovinných deformáciách sa predpokladá, že geometria má jednotkovú hĺbku a že predná aj zadná plocha sú fixované. Simulácia vychádza z predpokladu, že objekty sa budú správať rovnako v akomkoľvek priereze v smere šírky aj výšky objektu. (Pozri obr. 9.1.2.)
 
-  * **Torsion :** Torsion models are axisymmetric models. The notion of torsion is a manner of characterizing a twist or screw. (See Fig. 9.1.2.). Typical application is in modelling inertia welding, where in one part with torsional movement with an axial force is pressed against a stationary part with computations extending to hoop direction.
+  * **Krútenie:** Modely krútenia sú osovo symetrické modely. Pojem torzie je spôsob charakterizovania skrútenia alebo závitu. (Pozri obr. 9.1.2.). Typickou aplikáciou je modelovanie inercionného zvárania, kde je jedna časť s torzným pohybom a axiálnou silou pritlačená proti nehybnej časti, pričom výpočty sa vzťahujú aj na obvodový smer.
 
-  * **Plane stress** : The Plane stress model assumes unit dimension of z- directional thickness. The simulation assumes that the objects will behave identically in any given cross-section across the width and height of the object. The Plane stress model supports Plastic, Elastic, and Elasto - Plastic Objects. (See Fig. 9.1.2.)
+  * **Rovinné napätie**: Model rovinného napätia predpokladá, že hrúbka v smere z má jednotkové rozmery. Simulácia vychádza z predpokladu, že objekty sa budú správať rovnako v akomkoľvek priereze v smere šírky aj výšky objektu. Model rovinného napätia podporuje plastické, elastické a elasto-plastické objekty. (Pozri obr. 9.1.2.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_1_simulation_type_settings/9_1_image001.jpg' | relative_url }})
 
-Example for types of geometry model
+Príklad typov geometrických modelov
 
-  * **2.5D Friction Welding** : In DEFORM-V12 2.5D Friction welding geometry type option has been added, using this option user can setup 2.5D Linear Friction welding operation.
+  * **2,5D trenie**: V programe DEFORM-V12 bola pridaná voľba typu geometrie pre 2,5D trenie; pomocou tejto voľby môže používateľ nastaviť operáciu 2,5D lineárneho trenia.
 
-  * **2.5D Rolling** : In DEFORM-V12 2.5D Rolling geometry type option has been added, using this option user can setup 2.5D Rolling operation with # of section data.
+  * **2,5D valcovanie**: V programe DEFORM-V12 bola pridaná možnosť typu geometrie „2,5D valcovanie“. Pomocou tejto možnosti môže používateľ nastaviť operáciu 2,5D valcovania s údajmi o počte profilov.
 
-  * **2.5D Roll Forming** : In DEFORM-V12 2.5D Roll Forming geometry type option has been added, using this option user can setup 2.5D Roll Forming operation with # of section data.
+  * **2,5D valcovanie**: V programe DEFORM-V12 bola pridaná možnosť typu geometrie pre 2,5D valcovanie. Pomocou tejto možnosti môže používateľ nastaviť operáciu 2,5D valcovania na základe údajov o prierezoch.
 
-## Units (UNIT) [2D, 3D]
+## Jednotky (UNIT) [2D, 3D]
 
-The DEFORM unit system ([UNIT](/docs/sk/keyword_documentation/u/unit/)) can be defined as English or Metric (SI). (See Fig. 9.1.1.) All information in DEFORM should be expressed in consistent units. The unit system should be selected at the beginning of the problem setup procedure, and should not be changed during a simulation or after an operation. (See [Table 1.9.1](../../about_deform/1_introduction_to_deform/1_9_units.htm#Table_DEFORM_unit_system) for more information of variables units in DEFORM
+Systém jednotiek v programe DEFORM ([UNIT](/docs/sk/keyword_documentation/u/unit/)) je možné nastaviť na anglický alebo metrický (SI). (Pozri obr. 9.1.1.) Všetky informácie v DEFORM by mali byť vyjadrené v jednotných jednotkách. Systém jednotiek by mal byť zvolený na začiatku postupu nastavenia problému a nemal by sa meniť počas simulácie ani po operácii. (Viac informácií o jednotkách premenných v DEFORM nájdete v [Table 1.9.1](../../about_deform/1_introduction_to_deform/1_9_units.htm#Table_DEFORM_unit_system))
 
-##  Type (STYPE)
+##  Typ (STYPE)
 
-The different types of simulations ([STYPE](/docs/sk/keyword_documentation/s/stype/)) that can be run are:
+Medzi rôzne typy simulácií ([STYPE](/docs/sk/keyword_documentation/s/stype/)), ktoré je možné spustiť, patria:
 
-  * **Lagrangian Incremental [2D, 3D**]: To be used for all the conventional [forming](/docs/sk/operation_templates/33_forming/33_introduction_to_forming/),[ heat transfer](/docs/sk/operation_templates/35_heat_transfer/35_introduction_to_heat_transfer_operations/) and [heat-treat](/docs/sk/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/) applications (See Fig. 9.1.1.). Transient phase of the processes like rolling, [machining](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/), [extrusion](/docs/sk/operation_templates/31_extrusion/31_introduction_to_extrusion/), drawing, [cogging](/docs/sk/operation_templates/29_cogging/29_introduction_to_cogging/) etc. also can be modelled in this general framework.
+  * **Lagrangeov inkrementálny prístup [2D, 3D**]: Určený pre všetky bežné aplikácie [forming](/docs/sk/operation_templates/33_forming/33_introduction_to_forming/), [ heat transfer](/docs/sk/operation_templates/35_heat_transfer/35_introduction_to_heat_transfer_operations/) a [heat-treat](/docs/sk/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/) (pozri obr. 9.1.1.). V tomto všeobecnom rámci je možné modelovať aj prechodnú fázu procesov, ako je valcovanie, [machining](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/), [extrusion](/docs/sk/operation_templates/31_extrusion/31_introduction_to_extrusion/), ťahanie, [cogging](/docs/sk/operation_templates/29_cogging/29_introduction_to_cogging/) atď.
 
-  * **ALE Rolling [3D]** : ALE model for rolling process can be generated using the ‘[Shape](/docs/sk/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/)[ Rolling template](/docs/sk/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/)’ (See Fig. 9.1.1b.). When the model is generated using this template, automatically generates the necessary boundary conditions for the entry surface for the billet (indicated in the interface as the Beginning surface, nodes are assigned [BCCDEF](/docs/sk/keyword_documentation/b/bccdef/)=4), and the exit surface (indicated in the interface as Free surface, nodes are assigned [BCCDEF](/docs/sk/keyword_documentation/b/bccdef/)=5). Template automatically sets the analysis type as ‘ALE Rolling’. When the rolling model is setup using the regular pre-processor, user needs to set this analysis type and proper boundary conditions to be able to run the ALE model for rolling. From 3DV6.1 this functionality has been also improved with automatic stopping criteria once steady state conditions are detected.
+  * **ALE valcovanie [3D]**: Model ALE pre proces valcovania je možné vytvoriť pomocou šablóny „[Shape](/docs/sk/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/)[ Rolling template](/docs/sk/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/)“ (pozri obr. 9.1.1b.). Pri generovaní modelu pomocou tejto šablóny sa automaticky vygenerujú potrebné okrajové podmienky pre vstupnú plochu sochoru (v rozhraní označenú ako Počiatočná plocha, uzlom je priradené [BCCDEF](/docs/sk/keyword_documentation/b/bccdef/)=4) a výstupnej ploche (v rozhraní označenej ako Voľná plocha, uzlom sú priradené [BCCDEF](/docs/sk/keyword_documentation/b/bccdef/)=5). Šablóna automaticky nastaví typ analýzy na „ALE Rolling“. Pri nastavení modelu valcovania pomocou bežného preprocesora musí používateľ nastaviť tento typ analýzy a správne okrajové podmienky, aby mohol spustiť model ALE pre valcovanie. Od verzie 3DV6.1 bola táto funkcia vylepšená o automatické kritériá zastavenia po detekcii podmienok ustáleného stavu.
 
-  * **Steady-State machining [2D, 3D]** : 2D/3D machining model for turning applications can be generated using the ‘[Machining](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/)[ ](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/) [Template](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/)’ in which the initial model can be set up for Lagrangian Incremental run. (See Fig. 9.1.1.) When sufficient chip has formed the template can be used to generate an additional operation to switch the analysis mode to Steady State. In this stage template can be used to generate the required boundary conditions for the steady state run, which includes defining end surface of the chip (indicated as free surface, with [BCCDEF](/docs/sk/keyword_documentation/b/bccdef/)code set as 5 for those nodes). Template automatically sets the analysis type as ‘Steady-State Machining’. When the machining model is setup using the regular pre-processor, user needs to set this analysis type and proper free surface and thermal boundary conditions to be able to run the Steady State model for machining.
+  * **Obrábanie v ustálenom stave [2D, 3D]** : Model 2D/3D obrábania pre sústruženie je možné vygenerovať pomocou „[Machining](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/)[ ](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/) [Template](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/)“, pričom počiatočný model je možné nastaviť pre Lagrangeov inkrementálny beh. (Pozri obr. 9.1.1.) Keď sa vytvorí dostatočné množstvo triesok, šablónu možno použiť na generovanie dodatočnej operácie na prepnutie režimu analýzy do ustáleného stavu. V tejto fáze sa šablóna môže použiť na generovanie požadovaných okrajových podmienok pre beh v ustálenom stave, čo zahŕňa definovanie koncovej plochy špony (označenej ako voľná plocha, s kódom [BCCDEF](/docs/sk/keyword_documentation/b/bccdef/) nastaveným na 5 pre tieto uzly). Šablóna automaticky nastaví typ analýzy na „Steady-State Machining“. Keď je model obrábania nastavený pomocou bežného preprocesora, používateľ musí nastaviť tento typ analýzy a správne podmienky voľnej hladiny a tepelné okrajové podmienky, aby mohol spustiť model ustáleného stavu pre obrábanie.
 
-  * **Ring Rolling [3D]** : From 3D-V6.1, simulation engine has been enhanced to handle the non isothermal modelling of [ring rolling](/docs/sk/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/) process. (See Fig. 9.1.1b.) This development includes a special ALE technique that does not depend on any expensive computing resources, nor involves very long modelling times. From 3D-v10.0 this special ALE solver has been further improve to take advantage of parallel environments (solver part).
+  * **Válcovanie prstencov [3D]**: Od verzie 3D-V6.1 bol simulačný engine vylepšený tak, aby zvládal neizotermické modelovanie procesu [ring rolling](/docs/sk/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/). (Pozri obr. 9.1.1b.) Tento vývoj zahŕňa špeciálnu techniku ALE, ktorá nie je závislá od žiadnych nákladných výpočtových zdrojov a nevyžaduje veľmi dlhé časy modelovania. Od verzie 3D-v10.0 bol tento špeciálny riešiteľ ALE ďalej vylepšený, aby využíval výhody paralelných prostredí (časť riešiteľa).
 
-  * **Steady-State extrusion [3D]** : If user would like to understand the displacement and other state variables after reaching steady state in Extrusion then user can select this option. This option is available even in [Extrusion](/docs/sk/operation_templates/31_extrusion/31_introduction_to_extrusion/) operation under explorer in DEFORM MO Environment. User can simulate for only 5 to 10 steps depending on the extrusion geometry complexity.
+  * **Extrúzia v ustálenom stave [3D]**: Ak chce používateľ zistiť posun a ďalšie stavové veličiny po dosiahnutí ustáleného stavu pri extrúzii, môže zvoliť túto možnosť. Táto možnosť je k dispozícii aj v rámci operácie [Extrusion](/docs/sk/operation_templates/31_extrusion/31_introduction_to_extrusion/) v prostredí DEFORM MO v sekcii Explorer. Používateľ môže simulovať len 5 až 10 krokov v závislosti od zložitosti geometrie extruzie.
 
-  * **ALE Extrusion [3D]** : If user wishes to setup the ALE Extrusion model in Preprocessor, then he has to select ALE Extrusion radio button as shown in Fig. 9.1.1b. Even ALE Extrusion operation can be setup using Extrusion operation under explorer in DEFORM MO GUI.
+  * **Extrúzia ALE [3D]**: Ak chce používateľ nastaviť model extrúzie ALE v predspracovateľovi, musí vybrať prepínač „Extrúzia ALE“, ako je znázornené na obr. 9.1.1b. Operáciu ALE Extrusion je možné nastaviť aj pomocou operácie Extrusion v prehliadači v grafickom rozhraní DEFORM MO.
 
-  * **ALE stir Welding [3D]** : In DEFORM-V12, if an user wishes to setup the ALE Stir welding model in Preprocessor, then he has to select ALE Stir welding model radio button.
+  * **Zváranie ALE Stir [3D]**: Ak chce používateľ v programe DEFORM-V12 v predspracovateľovi nastaviť model zvárania ALE Stir, musí zaškrtnúť príslušné políčko.
 
-  * **ALE Spinning [3D]** : In DEFORM-V12, if an user wishes to setup the ALE spinning model in Preprocessor, then he has to select ALE Spinning model radio button. ALE [spinning](/docs/sk/operation_templates/48_spinning/48_introduction_to_spinning/) operation can be setup even using 3D Spinning operation available under explorer in DEFORM MO GUI.
+  * **ALE Spinning [3D]**: V programe DEFORM-V12 musí používateľ, ak chce v predspracovateľovi nastaviť model ALE Spinning, vybrať prepínač ALE Spinning. Operáciu ALE [spinning](/docs/sk/operation_templates/48_spinning/48_introduction_to_spinning/) je možné nastaviť aj pomocou operácie 3D Spinning, ktorá je k dispozícii v prehliadači v grafickom rozhraní DEFORM MO.
 
-  * **Electro-magnetic forming****[3D]** : In DEFORM-V12, if an user wishes to setup the Electro-magnetic forming model in Preprocessor, then he has to select Electro-magnetic forming radio button.
+  * **Elektromagnetické tvárnenie****[3D]**: Ak chce používateľ v programe DEFORM-V12 v predspracovateľovi nastaviť model elektromagnetického tvárnenia, musí zaškrtnúť políčko „Elektromagnetické tvárnenie“.
 
-  * **ALE Spinning (express) [3D]** : In DEFORM-v12.1, user can select ALE express solver to accelerate the simulation speed of ALE spinning simulation.  
-When this solver is selected the roll must have hole at the center and Non separable criteria must be defined between Head stock/Tail stock and workpiece.
+  * **ALE Spinning (express) [3D]** : V programe DEFORM-v12.1 si môže používateľ vybrať riešiteľ ALE express, čím urýchli simuláciu ALE spinningu.  
+Ak je zvolený tento riešiteľ, valec musí mať v strede otvor a medzi vretenom a koníkom a obrobkom musia byť definované kritériá neoddelenia.
 
-  * **ALE Tube piercing [3D]:** In DEFORMv12.1.1, if user wishes to setup the Tube piercing model in Preprocessor, then user should select ALE Tube piercing model radio button. ALE Tube piercing operation can be setup even using 3D Spinning operation available under explorer in Deform MO GUI.
+  * **ALE Tube piercing [3D]:** V programe DEFORMv12.1.1, ak chce používateľ v predspracovateľovi nastaviť model pre dierovanie rúr, mal by vybrať prepínač „ALE Tube piercing model“. Operáciu ALE Tube piercing je možné nastaviť aj pomocou operácie 3D Spinning, ktorá je k dispozícii v prehliadači v grafickom rozhraní Deform MO.
 
-## Simulation modes (SMODE, TRANS)
+## Simulačné režimy (SMODE, TRANS)
 
-[2D, 3D]: DEFORM features a group of simulation modes that may be turned on or off individually, or used in various combinations.(See Fig. 9.1.3.) For backward compatibility with old keywords and databases, before version 3.0, the Keyword [SMODE](/docs/sk/keyword_documentation/s/smode/) (old style isothermal, non-isothermal, heat transfer) is read and the Corresponding keyword TRANS mode switches are set in the pre-processor. 
+[2D, 3D]: Program DEFORM ponúka skupinu simulačných režimov, ktoré je možné zapínať alebo vypínať jednotlivo, alebo používať v rôznych kombináciách. (Pozri obr. 9.1.3.) Z dôvodu spätnej kompatibility so starými kľúčovými slovami a databázami pred verziou 3.0 sa načíta kľúčové slovo [SMODE](/docs/sk/keyword_documentation/s/smode/) (starý štýl izotermický, neizotermický, prenos tepla) a v preprocesore sa nastavia príslušné prepínače režimu kľúčového slova TRANS. 
 
-  * **Deformation :** Simulates deformation due to mechanical, thermal, or phase transformation effects. 
+  * **Deformácia:** Simuluje deformáciu spôsobenú mechanickými, tepelnými vplyvmi alebo fázovými premenami. 
 
-  * **Heat transfer :** Simulates thermal effects within the simulation, including heat transfer between objects and the environment, and heat generation due to deformation or phase transformation, where applicable.
+  * **Prenos tepla:** Simuluje tepelné javy v rámci simulácie, vrátane prenosu tepla medzi objektmi a okolím, ako aj tvorby tepla v dôsledku deformácie alebo fázovej premeny, ak je to relevantné.
 
-  * **CFD flow** : User can simulate fluid flow phenomena based on the conservation laws governing fluid motion using this option. For 2D, only Plane strain geometry type will be supported.
+  * **CFD prúdenie**: Pomocou tejto možnosti môže používateľ simulovať javy prúdenia tekutín na základe zákonov zachovania, ktoré riadia pohyb tekutín. V prípade 2D bude podporovaný iba typ geometrie „Rovinné deformácie“.
 
-  * **Transformation** : Simulates transformation between phases due to thermo mechanical and time effects.
+  * **Transformácia**: Simuluje transformáciu medzi fázami v dôsledku termomechanických a časových vplyvov.
 
-  * **Diffusion** : Simulates diffusion of carbon atoms within the material, due to carbon content gradients.
+  * **Difúzia**: Simuluje difúziu atómov uhlíka v materiáli v dôsledku gradientov obsahu uhlíka.
 
-  * **Grain** : Simulates grain size calculation and recrystallization calculations.
+  * **Zrno**: Simuluje výpočet veľkosti zŕn a výpočty rekryštalizácie.
 
-  * **Heating** : Simulates heat generation due to resistance or induction heating. Induction heating, Induction-BEM heating (Boundary Element Method) and Resistance heating (available from DEFORM v11.0) can be used for Simulation of various Heating Processes. 3D FEM engine from DEFORM v11.0 can now handle induction heating models with dual frequency input data for current frequency. For examples of heating cases refer to the DATA folder heating examples.
+  * **Ohrev**: Simuluje tvorbu tepla v dôsledku odporového alebo indukčného ohrevu. Na simuláciu rôznych ohrevných procesov je možné použiť indukčný ohrev, indukčný ohrev metódou BEM (metóda hraničných prvkov) a odporový ohrev (k dispozícii od verzie DEFORM v11.0). 3D FEM engine z DEFORM v11.0 teraz dokáže spracovať modely indukčného ohrevu s dvojfrekvenčnými vstupnými údajmi pre frekvenciu prúdu. Príklady prípadov ohrevu nájdete v priečinku DATA v časti Príklady ohrevu.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_1_simulation_type_settings/9_1_image002.jpg' | relative_url }})
 
-Simulation Controls window - Heating
+Okno Ovládacie prvky simulácie – Kúrenie
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   
 [9.3. Stopping Controls](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/)   

@@ -1,99 +1,99 @@
 ---
 lang: sk
-title: "15.5. Mechanical press"
+title: "15.5. Mechanický lis"
 ---
 
-# 15.5. Mechanical press
+# 15.5. Mechanický lis
 
-15.5.1. Crank Press  
-15.5.2. Knuckle or Wedge Press  
-15.5.3. Secondary Control(s)  
-15.5.4. Elastic Losses
+15.5.1. Stláčanie kľuky
+15.5.2. Kĺbový alebo klinový lis
+15.5.3. Sekundárna(-é) kontrola(-y)
+15.5.4. Elastické straty
 
-## Crank Press [2D, 3D]
+## Stlačenie kľuky [2D, 3D]
 
-The Mechanical Press type replicates the cyclic motion of a mechanical press. The parameters required to simulate the motion are the total displacement of the press (![]({{ '/assets/equations/pre_processor/15_movement_controls/dtot.jpg' | relative_url }})) relative to the current displacement (![]({{ '/assets/equations/pre_processor/15_movement_controls/dcur.jpg' | relative_url }})) and the number of strokes per unit of time ( ![]({{ '/assets/equations/pre_processor/15_movement_controls/s_dash.jpg' | relative_url }})). Using these parameters, DEFORM can compute the die speed at any point of the travel of the die. The movement direction can only be specified in the X, Y, Z, -X, -Y or -Z directions. (See Fig. 15.5.1. and Fig. 15.5.2.)
+Typ Mechanický lis kopíruje cyklický pohyb mechanického lisu. Parametrami potrebnými na simuláciu pohybu sú celkový posun lisu (![]({{ '/assets/equations/pre_processor/15_movement_controls/dtot.jpg' | relative_url }})) vzhľadom na aktuálny posun (![]({{ '/assets/equations/pre_processor/15_movement_controls/dcur.jpg' | relative_url }})) a počet zdvihov za jednotku času ( ![]({{ '/assets/equations/pre_processor/15_movement_controls/s_dash.jpg' | relative_url }})). Pomocou týchto parametrov môže DEFORM vypočítať rýchlosť lisu v ktoromkoľvek bode dráhy lisu. Smer pohybu je možné zadať len v smeroch X, Y, Z, -X, -Y alebo -Z. (Pozri obr. 15.5.1. a obr. 15.5.2.)
 
-The equation to derive the die speed is:
+Rovnica na odvodenie rýchlosti matrice je:
 
-![]({{ '/assets/equations/pre_processor/15_movement_controls/eq_15_5_1.jpg' | relative_url }}) |   
----|---  
+![]({{ '/assets/equations/pre_processor/15_movement_controls/eq_15_5_1.jpg' | relative_url }}) |
+---|---
   
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image001.jpg' | relative_url }})
 
-2D Mechanical crank press movement controls window
+2D Mechanický pohyb kľukového lisu ovláda okno
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image002.jpg' | relative_url }})
 
-3D Mechanical crank press movement controls window
+3D Mechanické ovládanie pohybu kľukového lisu
 
-The parameters required to specify the movement of a mechanical press are:
+Parametre potrebné na špecifikáciu pohybu mechanického lisu sú:
 
-**Total stroke** : The total stroke for the mechanical press represents the total travel of the die from its top position to its lowest position. The unit in English units is inch and in SI units is mm.
+**Celkový zdvih** : Celkový zdvih mechanického lisu predstavuje celkový pohyb matrice z jej hornej polohy do najnižšej polohy. Jednotkou v anglických jednotkách je palec a v jednotkách SI je mm.
 
-**Strokes per second** : The Strokes per seconds represents the frequency of the press blows. This is a measure of blows per second or cycles per second.
+**Údery za sekundu** : Údery za sekundu predstavujú frekvenciu úderov lisu. Ide o mieru úderov za sekundu alebo cyklov za sekundu.
 
-**Forging Stroke** : This value is total remaining distance of the die in the given stroke. This value will depend on the current position of the moving die relative to the stationary die.
+**Kovanie ťahu** : Táto hodnota predstavuje celkovú zostávajúcu vzdialenosť zápustky v danom zdvihu. Táto hodnota bude závisieť od aktuálnej polohy pohyblivej zápustky vzhľadom na nepohyblivú zápustku.
 
-**Direction** : Direction is used to designate a direction in which the object's stroke will be applied.
+**Smerovanie** : Smer sa používa na určenie smeru, v ktorom sa použije ťah objektu.
 
-**Connecting-Rod Length** : As seen in Fig. 15.5.3., the connecting rod length can have an influence on the speed of the ram. If the length of the connecting rod is known, it can be input as a field. If it is not known, it can left as zero and its contribution to the ram speed will not be considered.
+**Dĺžka spojovacej tyče** : Ako je vidieť na obr. 15.5.3, dĺžka ojnice môže mať vplyv na rýchlosť barana. Ak je dĺžka ojnice známa, možno ju zadať ako pole. Ak nie je známa, môže sa ponechať ako nula a jej príspevok k rýchlosti barana sa nebude brať do úvahy.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image003.jpg' | relative_url }})
 
-Sketch of a simple direct crank drive
+Náčrt jednoduchého priameho kľukového pohonu
 
-## Knuckle or Wedge Press [2D, 3D]
+## Stláčanie kĺbov alebo klinov [2D, 3D]
 
   
-In the case of less common presses, there is a capability to model their movement by defining them strictly as a velocity profile ( Fig. 15.5.4. and Fig. 15.5.5.).  
-The velocity profile or **Stroke profile** is defined as an angle (in degrees) versus die stroke or position. As an angle, this has to do with the angle of rotation of a driving motor.
+V prípade menej bežných lisov existuje možnosť modelovať ich pohyb ich striktným definovaním ako rýchlostný profil ( obr. 15.5.4 a obr. 15.5.5).  
+Profil rýchlosti alebo **profil zdvihu** je definovaný ako uhol (v stupňoch) v závislosti od zdvihu alebo polohy matrice. Ako uhol súvisí s uhlom otáčania hnacieho motora.
 
-Stroke Profile must be positive at Top Dead Center and zero at Bottom Dead Center.
+Profil zdvihu musí byť kladný v hornom mŕtvom bode a nulový v dolnom mŕtvom bode.
 
-**Forging Stroke** is the (positive) distance remaining until BDC.
+**Kovací zdvih** je (kladná) vzdialenosť zostávajúca do BDC.
 
-**Cycles/seconds** represents the frequency of the press blows. This is a measure of blows per second or cycles per second.
+**Cykly/sekundy** predstavujú frekvenciu úderov lisu. Ide o mieru úderov za sekundu alebo cyklov za sekundu.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image004.jpg' | relative_url }})
 
-Knuckle press movement controls window 
+Ovládanie okna stlačením kĺbu
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image005.jpg' | relative_url }})
 
-Knuckle press Stroke Profile
+Profil zdvihu kĺbového lisu
 
-**Example Mechanical Press:**
+**Príklad mechanického lisu:**
 
-Consider an example, case where the total displacement for a press (top-dead center to bottom-dead center) as 10 inches.
+Uvažujte príklad, keď je celkový posun pre lis (od horného mŕtveho stredu po dolný mŕtvy stred) 10 palcov.
 
-  * The first piece of information that should be determined is the movement direction of the moving die. In this case, let's consider that the moving die is moving in the Y direction. We can then set the movement direction to Y. 
+  * Prvou informáciou, ktorú treba určiť, je smer pohybu pohyblivej kocky. V tomto prípade uvažujme, že pohybujúca sa kocka sa pohybuje v smere Y. Môžeme teda nastaviť smer pohybu na Y.
 
-  * The second piece of information is the press parameters: the speed and the displacement. These are generally fixed for the press and once determined can be saved in the press library. In this case let's assume these values to be 10 inches of displacement and a speed of 1 cycle per second (1 second to travel from TDC to BDC and back). 
+  * Druhou informáciou sú parametre lisu: rýchlosť a výtlak. Tie sú pre lis spravidla pevne stanovené a po ich určení ich možno uložiť do knižnice lisu. V tomto prípade predpokladajme, že tieto hodnoty sú 10 palcov posunu a rýchlosť 1 cyklus za sekundu (1 sekunda na prejdenie z TDC do BDC a späť).
 
-  * The last piece of information to provide is the current position of the moving die at the beginning of the stroke. This can be done by using the measuring tool to determine the distance in the Y-direction of the moving tool to the BDC of the crank. It is very important that this measurement be done carefully as it will affect the final height of the part and will affect the final load of the process. In this case, if the moving die begins at 9 inches into the stroke, the initial position will be to set the current die stroke to (0, -9). This means that the moving die has moved already 9 inches downward and needs to travel an additional 1 inch downward, which is nothing but the forging stroke.
+  * Poslednou informáciou, ktorú je potrebné poskytnúť, je aktuálna poloha pohyblivej matrice na začiatku zdvihu. To možno vykonať pomocou meracieho nástroja na určenie vzdialenosti v smere Y pohyblivého nástroja od BDC kľuky. Je veľmi dôležité, aby sa toto meranie vykonalo starostlivo, pretože ovplyvní konečnú výšku dielu a bude mať vplyv na konečné zaťaženie procesu. V tomto prípade, ak pohyblivý nástroj začína na 9 palcoch do zdvihu, počiatočná poloha bude nastavenie aktuálneho zdvihu nástroja na (0, -9). To znamená, že pohyblivá matrica sa už posunula o 9 palcov smerom nadol a musí prejsť ďalší 1 palec smerom nadol, čo nie je nič iné ako kovací zdvih.
 
-## Secondary Control(s)
+## Sekundárna kontrola(-y)
 
-The type of control will depend on the type of movement specified. In the case of a mechanical press and screw press (as seen in Fig. 15.5.6. and Fig. 15.5.7.) the only control is based on load. In the case of a hammer, there are no secondary controls since the only manner in which to stop is to run out of energy. In the case of a hydraulic press, it can stop based on the load or a minimum velocity.
+Typ ovládania závisí od typu zadaného pohybu. V prípade mechanického lisu a skrutkového lisu (ako je vidieť na obr. 15.5.6. a obr. 15.5.7.) je jediná regulácia založená na zaťažení. V prípade kladiva neexistuje žiadne sekundárne ovládanie, pretože jediný spôsob, ako zastaviť, je vyčerpanie energie. V prípade hydraulického lisu sa môže zastaviť na základe zaťaženia alebo minimálnej rýchlosti.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image006.jpg' | relative_url }})
 
-2D Secondary controls for object movement
+2D Sekundárne ovládacie prvky pre pohyb objektu
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image007.jpg' | relative_url }})
 
-3D Secondary controls for object movement
+3D Sekundárne ovládacie prvky pre pohyb objektu
 
-## Elastic Losses
+## Elastické straty
 
-The stiffness of a press or a hammer can be defined in this dialog. (See Fig. 15.5.8.) In the case of a press there can be stretch based on the forging load and the final distance of the press will be less by the amount of the stretch. In the case of a hammer, the compliance accounts for elastic loss of energy.
+V tomto dialógovom okne môžete definovať tuhosť lisu alebo kladiva. (Pozri obr. 15.5.8.) V prípade lisu môže dôjsť k roztiahnutiu na základe zaťaženia kovania a konečná vzdialenosť lisu bude menšia o veľkosť roztiahnutia. V prípade kladiva poddajnosť zohľadňuje elastickú stratu energie.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_5_mechanical_press/15_5_image008.jpg' | relative_url }})
 
-Stiffness/Compliance definition for a press or a hammer
+Definícia tuhosti/poddajnosti pre lis alebo kladivo
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 

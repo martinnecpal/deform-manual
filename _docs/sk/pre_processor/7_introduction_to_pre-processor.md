@@ -1,11 +1,11 @@
 ---
 lang: sk
-title: "7. Introduction_to_Pre-Processor"
+title: "7. Úvod do predspracovávania"
 ---
 
-# 7\. Introduction to Pre-Processor
+# 7\. Úvod do predprocesora
 
-A pre-processor for creating, assembling, or modifying the data required to analyze the simulation, and for generating the required database file. The DEFORM preprocessor uses a graphical user interface to assemble the data required to run the simulation. Input data includes Object description, Material Data, Inter-objects relations, simulation controls, Inter material Data etc. to setup a problem.
+Predspracovateľ slúži na vytváranie, zoskupovanie alebo úpravu údajov potrebných na analýzu simulácie a na generovanie požadovaného databázového súboru. Predspracovateľ DEFORM využíva grafické používateľské rozhranie na zoskupovanie údajov potrebných na spustenie simulácie. Vstupné údaje zahŕňajú popis objektu, údaje o materiáloch, vzťahy medzi objektmi, ovládacie prvky simulácie, údaje o vzájomných vzťahoch medzi materiálmi atď. na nastavenie problému.
 
 [8\. Pre-Processor Layout](/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/)
 

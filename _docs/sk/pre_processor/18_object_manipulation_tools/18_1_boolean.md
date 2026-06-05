@@ -3,115 +3,115 @@ lang: sk
 title: "18.1. Boolean"
 ---
 
-# 18.1. Boolean Operation![]({{ '/assets/icons/pre_icons/mo_boolean_icon.jpg' | relative_url }})
+# 18.1. Logická operácia![]({{ '/assets/icons/pre_icons/mo_boolean_icon.jpg' | relative_url }})
 
-18.1.1. Boolean operation for 2D object
+18.1.1. Logická operácia pre 2D objekt
 
-18.1.2. Boolean operation for 3D object
+18.1.2. Logická operácia pre 3D objekt
 
-What to do after Boolean operation
+Čo robiť po vykonaní logickej operácie
 
-**[2D, 3D]** This capability allows the user to subtract volume from the mesh of an object from the geometry of another object or Boolean with respect to a plane (option available only for 3D) or Slice layers (option available only for 3D) 
+**[2D, 3D]** Táto funkcia umožňuje používateľovi odčítať objem zo siete objektu od geometrie iného objektu alebo logického člena vzhľadom na rovinu (možnosť je k dispozícii len pre 3D) alebo vrstvy Slice (možnosť je k dispozícii len pre 3D)
 
-**Definitions:**
+**Definície:**
 
-**Meshed object:** An object with a solid mesh giving the object a volume definition.
+**Objekt s mriežkou:** Objekt s pevnou mriežkou, ktorý definuje objem objektu.
 
-**Geometry object:** An object with a surface definition only.
+**Geometrický objekt:** Objekt s definíciou iba povrchu.
 
-Note that some objects can have both definitions such as a rigid object with thermal calculations turned on. The geometry is used for deformation calculations and the mesh is used for thermal calculations. In the case of a plastic, elastic, porous or elasto-plastic object, the geometry is only used for meshing purposes and is not used for simulation calculations.
+Všimnite si, že niektoré objekty môžu mať obidve definície, napríklad tuhý objekt so zapnutými tepelnými výpočtami. Geometria sa používa na výpočty deformácie a sieť sa používa na tepelné výpočty. V prípade plastického, pružného, porézneho alebo elasto-plastického objektu sa geometria používa len na účely tvorby siete a nepoužíva sa na simulačné výpočty.
 
-The Boolean operation dialog is available on Top Tool bar and the object to be subtracted from should be selected and the Boolean ![]({{ '/assets/icons/pre_icons/mo_boolean_icon.jpg' | relative_url }}) button should be selected.
+Dialógové okno Boolean operation je k dispozícii na hornej lište nástrojov a je potrebné vybrať objekt, od ktorého sa má odčítať, a vybrať tlačidlo Boolean ![]({{ '/assets/icons/pre_icons/mo_boolean_icon.jpg' | relative_url }}).
 
-## Boolean operation for 2D object
+## Logická operácia pre 2D objekt
 
-There is only one way to perform this Boolean calculation fro 2D:
+Existuje len jeden spôsob, ako vykonať tento logický výpočet z 2D:
 
-**Boolean with respect to another object** **:** the user should pick the object to be subtracted. After this please click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) (See Fig. 18.1.1.). In below See Fig. 18.1.2. showing boolean the workpiece with respect to Top object.
+**Boolean vzhľadom na iný objekt** **:** užívateľ by mal vybrať objekt, ktorý sa má odčítať. Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) (pozri obr. 18.1.1.). V nasledujúcej časti Pozri obr. 18.1.2. zobrazujúci boolean obrobku vzhľadom na objekt Top.
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image001.jpg' | relative_url }})
 
-Boolean Workpiece from Top die (Before Boolean)
+Boolean Obrobok z horného dielu (pred Boolean)
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image002.jpg' | relative_url }})
 
-Boolean Workpiece from Top die (After Boolean)
+Boolean Obrobok z horného dielu (po Boolean)
 
-Note: 
+Poznámka:
 
-In some rare cases where the Boolean definition corresponds exactly to the node locations, some nodes can cross the Boolean plane you have defined. In this case, slightly tweaking the position of the plane will solve this (as little as 1e-6 inches or mm).
+V niektorých zriedkavých prípadoch, keď logická definícia presne zodpovedá umiestneniu uzlov, môžu niektoré uzly pretínať vami definovanú logickú rovinu. V takom prípade to vyrieši mierne upravenie polohy roviny (len 1e-6 palcov alebo mm).
 
-## Boolean operation for 3D object
+## Logická operácia pre 3D objekt
 
-To boolean 3D object we have three options:
+Pre boolean 3D objekt máme tri možnosti:
 
-  * **Subtract object** : using this user should pick the object to be subtracted from the current selected object. After selecting the object user can click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) button.
+  * **Odčítanie objektu** : pomocou tejto funkcie by mal používateľ vybrať objekt, ktorý sa má od aktuálne vybraného objektu odčítať. Po výbere objektu môže používateľ kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}).
 
-We have two type of Boolean method in subtract object option:
+V možnosti odčítania objektov máme dva typy logických metód:
 
-  * **Geometry based (new method)** : Using Geometry based option if we do Boolean operation, it will Perform Boolean and then Local Remeshing as per the defined input( See Fig. 18.1.3.). This will generate smooth mesh as shown in Fig. 18.1.5.
+  * **Geometria (nová metóda)** : Pri použití možnosti založenej na geometrii, ak vykonáme logickú operáciu, vykoná sa logická operácia a potom lokálne premeranie podľa definovaného vstupu ( pozri obr. 18.1.3.). Tým sa vytvorí hladká sieť, ako je znázornené na obr. 18.1.5.
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image008.jpg' | relative_url }})
 
-3D Object Geometry based (new method) Boolean operation
+3D Geometria objektu (nová metóda) Booleovská operácia
 
-  * **Solid mesh based (old method)** : Using Solid mesh based if we do Boolean operation (See Fig. 18.1.4.), it will perform boolean and then generate only Solid mesh, please refer Fig. 18.1.5.
+  * **Solid mesh based (stará metóda)** : Pri použití metódy Solid mesh based (založená na Solid mesh), ak vykonáme operáciu Boolean (pozri obr. 18.1.4.), vykoná sa Boolean a potom sa vygeneruje iba Solid mesh, pozri obr. 18.1.5.
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image006.jpg' | relative_url }})
 
-3D operation Solid mesh based (old method) Boolean operation
+3D operácia Pevná sieť (stará metóda) Booleovská operácia
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image007.jpg' | relative_url }})
 
-Generate Mesh after boolean operation with different Subtract object type option
+Generovanie siete po booleovskej operácii s inou možnosťou typu objektu Subtract
 
-  * **Cut with plane** : User can also boolean object by defining just plane even if object is not available using this option, user should pick the Plane and then define a point and a normal to the Boolean plane (see Fig. 18.1.6.). After this click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). (See Fig. 18.1.7.)
+  * **Rozrezanie pomocou roviny** : Používateľ môže tiež boolovský objekt definovať len rovinou, aj keď objekt nie je k dispozícii pomocou tejto možnosti, používateľ by mal vybrať rovinu a potom definovať bod a normálu k boolovskej rovine (pozri obr. 18.1.6.). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). (Pozri obr. 18.1.7.)
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image009.jpg' | relative_url }})
 
-3D Object Cut with plane Boolean operation (Before Boolean)
+Výrez 3D objektu s rovinnou logickou operáciou (Pred logickou operáciou)
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image010.jpg' | relative_url }})
 
-3D Object Cut with plane Boolean operation (After Boolean)
+Výrez 3D objektu s rovinnou logickou operáciou (After Boolean)
 
-  * **Slice layers:** Using Slice layers option we can do multiple slices of an object and after slicing the objects we can generate new mesh for each sliced layer by defining Mesh settings in Output options. This option is useful for additive manufacturing simulations and for objects having multiple materials similar to multi layer composites. Following example demonstrates the slicing of bearing into 6 layers.(See Fig. 18.1.8.)
+  * **Vrstvy plátkov:** Pomocou možnosti vrstvy plátkov môžeme vytvoriť viacero plátkov objektu a po rozrezaní objektov môžeme vygenerovať novú sieť pre každú vrstvu plátkov definovaním nastavení siete vo výstupných možnostiach. Táto možnosť je užitočná pre simulácie aditívnej výroby a pre objekty, ktoré majú viacero materiálov, podobne ako viacvrstvové kompozity. Nasledujúci príklad demonštruje rozrezanie ložiska na 6 vrstiev (pozri obr. 18.1.8).
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image003.jpg' | relative_url }})
 
-Slice layers page
+Stránka s vrstvami plátkov
 
-We are slicing simple Bearing block into 6 layers using Slicing layers option.
+Jednoduchý blok Bearing rozrežeme na 6 vrstiev pomocou možnosti Slicing layers.
 
-  * After generating **Tet Mesh** for Bearing block, open **Boolean** option and select Slice layers. Define Number of layers as 6 and with mesh data click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) button. See Fig. 18.1.9.
+  * Po vygenerovaní **Tet Mesh** pre blok ložiska otvorte možnosť **Boolean** a vyberte možnosť Slice layers. Definujte počet vrstiev ako 6 a s údajmi o sieti kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Pozri obr. 18.1.9.
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image004.jpg' | relative_url }})
 
-Sliced Bearing block using Slice layers option
+Blok ložiska nakrájaný na plátky pomocou možnosti Slice layers
 
-  * Now go back to **Geometry** page, select **Examine** and observe the Number of Surfaces of Bearing Block. (See Fig. 18.1.10.)
+  * Teraz sa vráťte na stránku **Geometria**, vyberte položku **Vyšetrenie** a sledujte počet plôch ložiskového bloku. (Pozri obr. 18.1.10.)
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_1_boolean/18_1_image005.jpg' | relative_url }})
 
-Examine Window
+Preskúmať okno
 
-**What to do after Boolean operation?**
+**Čo robiť po logickej operácii?**
 
-The cut planes will show a poorly structured mesh. This is because many elements were cut. To improve the mesh quality perform the following actions (From DEFORM V12, Geometry based method can be used to generate smoother mesh ):
+V rezaných rovinách sa zobrazí zle štruktúrovaná sieť. Je to preto, že bolo vyrezaných veľa prvkov. Ak chcete zlepšiť kvalitu siete, vykonajte nasledujúce činnosti (Z programu DEFORM V12 možno na generovanie hladšej siete použiť metódu založenú na geometrii ):
 
-  1. Press ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) when the Boolean operation is satisfactory.
+  1. Stlačte tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), keď je logická operácia uspokojivá.
 
-  2. Go to Geometry
+  2. Prejdite na položku Geometria
 
-  3. Extract the mesh (The purpose is to prevent any geometry definition from being used for the meshing)
+  3. Extrahujte sieť (účelom je zabrániť použitiu definície geometrie na vytvorenie siete)
 
-  4. Go to mesh and mesh the object (Do not perform a manual remesh)
+  4. Prejdite na mesh a vytvorte mesh objektu (nevykonávajte manuálne remeshovanie)
 
-  5. Go to [Data Interpolation](/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/) to restore the state variables.
+  5. Prejdite na [Data Interpolation](/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/), aby ste obnovili stavové premenné.
 
-After this, you should have successfully updated your part with the desired volume removed.
+Potom by ste mali úspešne aktualizovať svoju časť s odstráneným požadovaným zväzkom.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [18\. Object Manipulation Tools](/docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/)
 

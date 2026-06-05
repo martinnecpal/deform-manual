@@ -1,61 +1,61 @@
 ---
 lang: sk
-title: "9.5. Solver Settings"
+title: "9.5. Nastavenia riešiteľa"
 ---
 
-# 9\. 5. Solver Settings ![]({{ '/assets/icons/pre_icons/mo_solver_settings.jpg' | relative_url }})
+# 9\. 5. Nastavenia riešiteľa ![]({{ '/assets/icons/pre_icons/mo_solver_settings.jpg' | relative_url }})
 
-9.5.1. Deformation solver (SOLMTD)
+9.5.1. Riešiteľ deformácií (SOLMTD)
 
-Solver
+Riešiteľ
 
-Sparse solver
+Riešiteľ riedkych matíc
 
-Iteration Solver
+Riešiteľ iterácií
 
-Special Solver
+Špeciálny riešiteľ
 
-Explicit Solver
+Explicitný riešiteľ
 
-Iteration methods (ITRMTH)
+Iteračné metódy (ITRMTH)
 
-Direct
+Priamo
 
-Newton-Raphson  
-9.5.2. Temperature solver (SOLMTT)
+Newton-Raphsonova metóda  
+9.5.2. Riešiteľ teplotných rovníc (SOLMTT)
 
-9.5.3. Induction Heating solver (SOLMTI)
+9.5.3. Riešiteľ indukčného ohrevu (SOLMTI)
 
-9.5.4. Advanced
+9.5.4. Pokročilé
 
-Convergence error limits (CVGERR)
+Limity konvergenčnej chyby (CVGERR)
 
-Maximum number of iterations (ITRMXD, ITRMXT)
+Maximálny počet iterácií (ITRMXD, ITRMXT)
 
-Bandwidth optimization (DEFBWD, TMPBWD)
+Optimalizácia šírky pásma (DEFBWD, TMPBWD)
 
-The Solver criteria specify criteria the FEM solver uses to find a solution at each step of the problem simulation. For most problems, the default values should be acceptable. It may be necessary to change the values if non-convergence occurs (See Fig. 9.5.1.)
+Kritériá riešiteľa určujú podmienky, ktoré riešiteľ FEM používa na nájdenie riešenia v každom kroku simulácie úlohy. Pre väčšinu úloh by mali byť predvolené hodnoty postačujúce. V prípade, že nedôjde ku konvergencii, môže byť potrebné tieto hodnoty zmeniť (pozri obr. 9.5.1.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image001.jpg' | relative_url }})
 
-(a)
+a)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image002.jpg' | relative_url }})  
-(b) 
+b) 
 
-Solver settings for the Deformation solver; (a) For 2D (b) For 3D
+Nastavenia riešiteľa pre riešiteľ deformácií; (a) pre 2D (b) pre 3D
 
-## Deformation solver (SOLMTD) [2D, 3D]
+## Riešiteľ deformácií (SOLMTD) [2D, 3D]
 
-**Solver**
+**Riešiteľ**
 
-  * **Sparse solver**
+  * **Riešiteľ riedkych matíc**
 
-The sparse ([SOLMTD](/docs/sk/keyword_documentation/s/solmtd/)) solver takes advantage of the characteristics of the DEFORM matrix equations to solve the equations. It is efficient, especially for large problems.
+Riešiteľ pre riedke matice ([SOLMTD](/docs/sk/keyword_documentation/s/solmtd/)) pri riešení rovníc využíva vlastnosti maticových rovníc DEFORM. Je efektívny, najmä pri riešení rozsiahlych úloh.
 
-  * **SPOOLES and MUMPS [2D, 3D] :**
+  * **SPOOLES a MUMPS [2D, 3D] :**
 
-The SPOOLES and MUMPS sparse matrix solvers are newer and more efficient, especially for larger problems. In the upcoming V12.0, the MUMPS solver with Newton-Raphson iteration method with be the new default for all simulations (plastic, elastoplastic, force-controlled, etc.).In 3D, It must be used on rotationally symmetric models with a brick mesh.
+Riešitelia riedkych matíc SPOOLES a MUMPS sú novšie a efektívnejšie, najmä pri riešení rozsiahlejších úloh. V nadchádzajúcej verzii V12.0 bude riešiteľ MUMPS s iteračnou metódou Newton-Raphson novým predvoleným riešiteľom pre všetky simulácie (plastické, elastoplastické, riadené silou atď.). V 3D sa musí používať na rotačne symetrických modeloch s mriežkou typu brick.
 
   * **MUMPS [3D] :**
 
@@ -63,221 +63,221 @@ The SPOOLES and MUMPS sparse matrix solvers are newer and more efficient, especi
 
   * **Skyline [2D] :**
 
-The skyline solver is a very basic matrix inversion solution. It is the original solver that was used in DEFORM, and is maintained primarily for backward compatibility. It is robust, but not necessarily efficient.
+Algoritmus Skyline je veľmi jednoduchý spôsob riešenia inverzie matíc. Ide o pôvodný algoritmus, ktorý sa používal v programe DEFORM, a je udržiavaný predovšetkým z dôvodu spätnej kompatibility. Je spoľahlivý, ale nie nevyhnutne efektívny.
 
-  * **Iteration Solver**
+  * **Riešiteľ iterácií**
 
-  * **Conjugate Gradient [3D]**
+  * **Konjugovaný gradient [3D]**
 
-The sparse ([SOLMTD](/docs/sk/keyword_documentation/s/solmtd/)) solver is a direct solution that makes use of the sparseness of FEM formulation to improve solution speed. The conjugate-gradient solver tries to solve the FEM problem by iteratively approximating to the solution. 
+Riešiteľ pre riedke matice ([SOLMTD](/docs/sk/keyword_documentation/s/solmtd/)) je metóda priameho riešenia, ktorá využíva riedkosť formulácie FEM na zvýšenie rýchlosti výpočtu. Riešiteľ s konjugovanými gradientmi sa snaží vyriešiť problém FEM prostredníctvom iteratívneho približovania sa k riešeniu. 
 
-In V11.3, the default 3D solver for simulations with plastic objects is Conjugate gradient (CG) with direct iterations. Specifically, the ‘Old and New’ CG solver (Level of fill in = 4, Method of partitioning = 1) is the default with the MUMPS solver being the backup if needed for convergence. Elasto-plastic (EP) simulations cannot use the direct iteration method, so the recommendation for EP is the MUMPS solver with Newton-Raphson iterations.
+Vo verzii 11.3 je predvoleným 3D riešiteľom pre simulácie s plastickými objektmi konjugovaný gradient (CG) s priamymi iteráciami. Konkrétne je predvoleným riešiteľom „starý a nový“ CG (úroveň vyplnenia = 4, metóda rozdelenia = 1), pričom riešiteľ MUMPS slúži ako záloha v prípade potreby konvergencie. Elasto-plastické (EP) simulácie nemôžu používať metódu priamych iterácií, preto sa pre EP odporúča riešiteľ MUMPS s Newton-Raphsonovými iteráciami.
 
   * **GMRES [3D]**
 
-For certain problems, this solver offers tremendous advantages over the sparse solver.  
-The advantages of the iterative solver include:
+Pri riešení určitých úloh ponúka tento riešiteľ oproti riešiteľu pre riedke matice obrovské výhody.  
+Medzi výhody iteratívneho riešiteľa patria:
 
-  * Up to 5:1 improvements in overall solving time, particularly in very large problems 
-  * Ability to handle very large numbers of elements in reasonable time and with reasonable memory demands. (The largest problem to date is 380,000 tetrahedral elements, using 1GB of RAM on a 32bit PC). From 3Dv10.0, FEM engine has been further improved to take advantage of 64bit Linux environments thus being able to handle much larger model size. 
-  * Much smaller memory requirements for smaller problems - makes 3D practical on inexpensive computers or laptops.
-
-  
-**Limitations:**
-
-  * In certain situations, convergence may be slower, or the simulation may not converge, when the sparse solver will converge. This is particularly a problem for simulations with large "rigid body motion" such as occurs when a part is settling into a die, undergoing light deformation, or bending.
+  * Zkrácenie celkového času riešenia až o 5:1, najmä pri veľmi rozsiahlych úlohách 
+  * Schopnosť spracovať veľmi veľký počet prvkov v primeranom čase a s primeranými nárokmi na pamäť. (Najväčší doterajší problém predstavuje 380 000 tetraedrických prvkov, ktoré na 32-bitovom počítači spotrebujú 1 GB pamäte RAM). Od verzie 3Dv10.0 bol FEM engine ďalej vylepšený, aby využíval výhody 64-bitových prostredí Linuxu, čím je schopný spracovať modely oveľa väčších rozmerov. 
+  * Omnoho nižšie nároky na pamäť pri menších úlohách – vďaka čomu je 3D praktické aj na lacných počítačoch alebo notebookoch.
 
   
-When the conjugate-gradient solver cannot successfully converge toward the solution, DEFORM-3D will fall back to the sparse solver. From 3DV61, a new solver GMRES has been added to the available solvers, to take advantage of multiple CPU environments. The GMRES option can only be used in multi CPU mode.
+**Obmedzenia:**
 
-**When to use the iterative solver**
+  * V niektorých situáciách môže byť konvergencia pomalšia alebo simulácia nemusí vôbec konvergovať, hoci riešiteľ pre riedke matice by konvergoval. Ide najmä o problém pri simuláciách s výrazným „pohybom tuhého telesa“, ku ktorému dochádza napríklad vtedy, keď sa súčiastka usadzuje v forme, prechádza miernou deformáciou alebo sa ohýba.
 
-****The solver is generally very good for problems with a lot of contact with the dies. If a workpiece is not well positioned in the dies, or if it will be sliding a bit before it starts deforming, you should start the simulation with the sparse solver. Once there is some substantial deformation in the workpiece, stop the simulation, load the final step into the pre-processor, change to "Conjugate Gradient" and "Direct", and write the database. Fig. 9.5.2 gives the recommended Solver and Iteration methods for 3D model.  
-Keep an eye on the message file for the first few steps. The first step may be a bit slow converging. If the second step is still struggling to converge, or if the simulation stops, you may need to switch back to the sparse solver for a few more steps.  
-In general, simulations in which you might expect convergence problems using the Sparse solver are not well suited for Conjugate Gradient. Most problems, particularly thin parts or flash parts, will do well after the first 20-30 steps, if not sooner.
+  
+Ak sa riešiteľ s konjugovaným gradientom nedokáže úspešne priblížiť k riešeniu, program DEFORM-3D prejde na riešiteľ pre riedke matice. Od verzie 3DV61 bol do ponuky riešiteľov pridaný nový riešiteľ GMRES, ktorý využíva výhody prostredí s viacerými procesormi. Možnosť GMRES je možné použiť iba v režime viacerých procesorov.
+
+**Kedy použiť iteratívny riešiteľ**
+
+****Tento riešiteľ sa vo všeobecnosti veľmi dobre hodí na úlohy s veľkým množstvom kontaktov s formami. Ak nie je obrobok v formách správne umiestnený alebo ak sa bude pred začiatkom deformácie trochu posúvať, mali by ste simuláciu spustiť s riešiteľom pre riedke matice. Akonáhle dôjde k podstatnej deformácii obrobku, zastavte simuláciu, načítajte posledný krok do preprocesora, prejdite na „Conjugate Gradient“ a „Direct“ a zapíšte databázu. Obr. 9.5.2 uvádza odporúčané metódy riešiteľa a iterácie pre 3D model.  
+Pri prvých niekoľkých krokoch sledujte súbor s hláseniami. Konvergencia prvého kroku môže trvať trochu dlhšie. Ak sa druhý krok stále nedokáže zkonvergovať alebo ak sa simulácia zastaví, možno bude potrebné na niekoľko ďalších krokov prejsť späť na riešiteľ pre riedke matice.  
+Všeobecne platí, že simulácie, pri ktorých by sa pri použití riešiteľa typu „Sparse“ mohli vyskytnúť problémy s konvergenciou, nie sú vhodné pre metódu konjugovaných gradientov. Väčšina úloh, najmä v prípade tenkých alebo prebytkových častí, dosiahne uspokojivé výsledky už po prvých 20 až 30 krokoch, ak nie skôr.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image003.jpg' | relative_url }})
 
-Plot of relative time versus elements for different solvers for Elastic Objects
+Graf závislosti času od prvkov pre rôzne riešiče pri elastických objektoch
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image004.jpg' | relative_url }})
 
-Plot of relative memory versus elements for different solvers for Elastic objects
+Graf závislosti pamäte od počtu prvkov pre rôzne riešiče pri elastických objektoch
 
-  * **Special Solver [3D]**
+  * **Špeciálny riešiteľ [3D]**
 
-The Special solver category contains several newly developed options intended to speed up the solving of very large 3D simulations (millions of elements). 
+Kategória „Špeciálne riešiče“ obsahuje niekoľko novo vyvinutých možností, ktorých cieľom je urýchliť riešenie veľmi rozsiahlych 3D simulácií (s miliónmi prvkov). 
 
-  * **Domain Decomposition (DD)**
+  * **Rozklad domén (DD)**
 
-Domain decomposition (DD) splits the workpiece into several small sub-domains that can each be solved separately on different cores. It cannot be used with meshed tools or FEM-based volume compensation. Domain decomposition (DD) is based on MUMPS solver.
+Dekompozícia domén (DD) rozdeľuje obrobok na niekoľko malých čiastkových domén, z ktorých každú je možné riešiť samostatne na rôznych jadrách. Nie je možné ju použiť s nástrojmi s mriežkou ani s kompenzáciou objemu založenou na metóde konečných prvkov (FEM). Dekompozícia domén (DD) je založená na riešiteľovi MUMPS.
 
-Domain decomposition method can be used only for Rigid Plastic object types with tet mesh. 
+Metódu rozkladu domén je možné použiť iba pre typy objektov „Rigid Plastic“ s tetrahedrálnou sieťou. 
 
-Domain decomposition may be faster for very large problems.
+Pri veľmi rozsiahlych úlohách môže byť rozklad na domény rýchlejší.
 
   * **Dual Mesh (DM)**
 
-Dual mesh (DM) simultaneously uses both a fine and coarse mesh on the workpiece, where the solution on the coarse mesh is used as the initial guess for the fine mesh. This can substantially improve the solving speed of the CG solver.
+Metóda dvoch sietí (DM) využíva na obrobku súčasne jemnú aj hrubú sieť, pričom riešenie z hrubej siete slúži ako počiatočný odhad pre jemnú sieť. Týmto spôsobom je možné výrazne zvýšiť rýchlosť výpočtu metódou CG.
 
-"Dual mesh size factor" N will control the coarse mesh size., the number of elements for coarse mesh will be 1/N of original workpiece.
+„Faktor dvojitej veľkosti siete“ N bude určovať veľkosť hrubej siete; počet prvkov v hrubej sieti bude predstavovať 1/N pôvodného obrobku.
 
-8 is default value in Gui-Pre. 5~10 can be possible.
+V programe Gui-Pre je predvolená hodnota 8. Možné sú hodnoty v rozmedzí 5 až 10.
 
   * **DD+DM**
 
-It decomposes the model to spread the solution across processors, Runtime can be improved on large elasto-plastic models. DD+DM is still maturing, but feel free to try it to determine if your application benefits from its techniques.   
-It cannot be used with meshed tools or FEM-based volume compensation.  
-DD+DM is its own unique solver, it is based on elements of the DD and DM solvers.
+Tento prístup rozloží model tak, aby sa riešenie rozdelilo medzi viaceré procesory, čím sa dá skrátiť čas výpočtu pri veľkých elasto-plastických modeloch. Metóda DD+DM sa stále vyvíja, ale pokojne ju vyskúšajte a zistite, či by jej techniky mohli byť prínosom pre vašu aplikáciu.   
+Túto funkciu nie je možné používať s mriežkovanými nástrojmi ani s kompenzáciou objemu založenou na metóde konečných prvkov.  
+DD+DM je samostatný, jedinečný riešiteľ, ktorý vychádza z prvkov riešiteľov DD a DM.
 
-  * **Partial domain Solver** : “**Partial domain solver** ” is available under Special solvers and is currently available only for “Lagrangian incremental” and “ALE spinning” simulation type. This solver simulates localized deformation within the specified active domain. Under Partial domain, user have options to use Quick Evaluation. Quick evaluation can allow moving rotation center along the selected axis. User can define the active domain for the objects to be considered for calculation from the table under Solver controls. Inactive domain over the workpiece can be defined from the Property page of the Workpiece.
+  * **Riešiteľ s čiastočnou oblasťou**: „**Riešiteľ s čiastočnou oblasťou**“ je k dispozícii v sekcii Špeciálne riešitelia a momentálne je dostupný len pre typy simulácií „Lagrangeov inkrementálny“ a „ALE spinning“. Tento riešiteľ simuluje lokalizovanú deformáciu v rámci špecifikovanej aktívnej oblasti. V časti Čiastočná doména má používateľ možnosť použiť Rýchle vyhodnotenie. Rýchle vyhodnotenie umožňuje presunúť stred otáčania pozdĺž vybranej osi. Používateľ môže definovať aktívnu doménu pre objekty, ktoré sa majú zohľadniť pri výpočte, v tabuľke v časti Ovládacie prvky riešiteľa. Neaktívnu doménu nad obrobkom je možné definovať na stránke Vlastnosti obrobku.
 
-    * **Quick evaluation Solver** : Quick evaluation solver solves one step (per revolution) model for incremental rotary forming and is currently available only for ALE Spinning. Quick Evaluation Method with partial domain solver can improve the computational efficiency and is good for the parametric study for initial check of the processing design.
+    * **Rýchly výpočtový modul**: Rýchly výpočtový modul rieši jednokrokový model (na jednu otáčku) pre inkrementálne rotačné tvárnenie a momentálne je k dispozícii len pre technológiu ALE Spinning. Metóda rýchleho výpočtu s modulom pre čiastočnú oblasť môže zvýšiť výpočtovú efektívnosť a je vhodná na parametrické štúdie slúžiace na počiatočnú kontrolu návrhu spracovania.
 
-    * **Quick evaluation with moving rotation center** : We can select this option to update the moving rotation center of the objects in the selected direction from Direction pull down list.
+    * **Rýchle vyhodnotenie s posuvným stredom otáčania**: Túto možnosť môžeme zvoliť, aby sa posuvný stred otáčania objektov aktualizoval podľa smeru vybraného z roletového zoznamu „Smer“.
 
-    * **Active domain total angle** : Using this option we can define the total angle of the active domain within which the calculations are performed. 
+    * **Celkový uhol aktívnej oblasti**: Pomocou tejto možnosti môžeme určiť celkový uhol aktívnej oblasti, v rámci ktorej sa vykonávajú výpočty. 
 
-    * **Rotation axis** : This option is used to define the rotation axis of the object. For the selected rotation axis, we can define Inactive domain from the Property page - Partial domain tab of the Workpiece.
+    * **Osa otáčania**: Táto voľba slúži na definovanie osi otáčania objektu. Pre vybranú os otáčania môžeme na stránke Vlastnosti – v záložke Čiastočná doména obrobku definovať neaktívnu doménu.
 
-    * ![]({{ '/assets/icons/pre_icons/mo_preview_button.jpg' | relative_url }})**Preview** : Using this preview button, we can observe the active domain for the partial domain calculation zone on the workpiece. Active domain will be highlighted in White color in display region as shown in Fig. 9.5.4.
+    * ![]({{ '/assets/icons/pre_icons/mo_preview_button.jpg' | relative_url }})**Náhľad** : Pomocou tohto tlačidla náhľadu môžeme na obrobku sledovať aktívnu oblasť pre zónu výpočtu čiastočnej domény. Aktívna oblasť bude v zobrazenom regióne zvýraznená bielou farbou, ako je znázornené na obr. 9.5.4.
 
-    * **Add**![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) : Using this button, we can add objects to the list for which active domain will be defined, if not added by default. Currently, the objects which are having translation (Speed, Path) movement data will be added to the table by default. 
+    * **Pridať**![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) : Pomocou tohto tlačidla môžeme do zoznamu pridať objekty, pre ktoré sa definuje aktívna doména, ak nie sú pridané automaticky. V súčasnosti sa do tabuľky automaticky pridávajú objekty, ktoré obsahujú údaje o pohybe (rýchlosť, dráha). 
 
-    * **Delete**![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) : Using this button, we can delete the added objects from the list.
+    * **Odstrániť**![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) : Pomocou tohto tlačidla môžeme pridané objekty zo zoznamu odstrániť.
 
-    * **Boundary constraints** :
+    * **Obmedzenia hraníc** :
 
-      1. **Methods** : Under methods pulldown list, we have Bar stiffness or Penalty spring methods that can be applied to the Partial Domain.
+      1. **Metódy**: V roletovom zozname „Metódy“ sú k dispozícii metódy „Tuhosť prúžku“ alebo „Penalty spring“, ktoré je možné použiť na čiastkovú oblasť.
 
-      2. **Scaling****factor** : using this option, we can define the scaling factor value for the boundary constraints.
+      2. **Mierka****:** pomocou tejto možnosti môžeme nastaviť hodnotu mierky pre okrajové obmedzenia.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image010.jpg' | relative_url }})
 
-Partial domain solver options
+Možnosti riešiteľa čiastočných domén
 
-  * **Explicit Solver** [3D]:
+  * **Explicitný riešiteľ** [3D]:
 
-  * **Explicit:**
+  * **Explicitné:**
 
-An explicit solver is now available for 3D simulations. An explicit solver does not require any iterations and the nodal velocities are solved directly. Explicit solvers are typically used to simulate processes which have a very short time duration (such as automobile crashes). The time step in an explicit analysis must be very small - less than the time it takes a sound wave to travel across an element. Implicit simulations, on the other hand, do not have an inherent time step size limit, so implicit time steps are generally several orders of magnitude larger than explicit time steps. If the process being modeled is very short, or the time steps are required to be very small, the explicit solver might be a good fit. Contact DEFORM Technical Support if you would like to try the explicit solver.
+Pre 3D simulácie je teraz k dispozícii explicitný riešiteľ. Explicitný riešiteľ nevyžaduje žiadne iterácie a rýchlosti v uzloch sa počítajú priamo. Explicitné riešitelia sa zvyčajne používajú na simuláciu procesov, ktoré trvajú veľmi krátko (napríklad automobilové nehody). Časový krok v explicitnej analýze musí byť veľmi malý – menší ako čas, ktorý potrebuje zvuková vlna na prekonanie prvku. Implicitné simulácie naopak nemajú žiadne vnútorné obmedzenie veľkosti časového kroku, takže implicitné časové kroky sú zvyčajne o niekoľko rádov väčšie ako explicitné časové kroky. Ak je modelovaný proces veľmi krátky alebo sa vyžadujú veľmi malé časové kroky, explicitný riešiteľ môže byť vhodnou voľbou. Ak chcete vyskúšať explicitný riešiteľ, kontaktujte technickú podporu DEFORM.
 
-**Solver recommendations:**
+**Odporúčania riešiteľa:**
 
-Now that the solvers for 2D and 3D have been described, it would be helpful to have a table detailing the recommended solvers for various model setups.
+Keďže sme už opísali riešiče pre 2D a 3D, bolo by užitočné mať k dispozícii tabuľku s podrobným prehľadom odporúčaných riešičov pre rôzne nastavenia modelov.
 
 **2D**  
 ---  
-**Workpiece Type** | **Tool Type** | **Movement** | **Preferred Solver** | **Alternate solver**  
-All | All | All  | MUMPS/NR | Skyline/NR  
+**Typ obrobku** | **Typ nástroja** | **Pohyb** | **Predvolený riešiteľ** | **Alternatívny riešiteľ**  
+Všetko | Všetko | Všetko  | MUMPS/NR | Skyline/NR  
   
-As the table shows, the MUMPS solver is recommended in all situations. For small problem sizes, all the solvers will have essentially the same speed. As the problem size increases, the MUMPS solver becomes the fastest option.
+Ako vyplýva z tabuľky, vo všetkých prípadoch sa odporúča riešiteľ MUMPS. Pri malých úlohách majú všetky riešitelia v podstate rovnakú rýchlosť. S rastúcou veľkosťou úlohy sa riešiteľ MUMPS stáva najrýchlejšou voľbou.
 
 **3D**  
 ---  
-**Workpiece Type** | **Tool Type** | **Movement** | **Preferred Solver** | **Alternate solver**  
-Plastic (single) | Rigid | Velocity  | CG/ MUMPS backup | MUMPS/NR  
+**Typ obrobku** | **Typ nástroja** | **Pohyb** | **Preferovaný riešiteľ** | **Alternatívny riešiteľ**  
+Plast (jednoduchý) | Tuhý | Rýchlosť | Záloha CG/MUMPS | MUMPS/NR  
 | Dual Mesh1  
-Domain Decomposition2  
-Plastic (single) | Rigid | Force  | MUMPS/NR | Domain Decomposition2  
-Plastic (single) | Rigid  | Hydraulic Press | CG/ MUMPS backup | MUMPS/NR  
+Rozklad domén2  
+Plast (jednoduchý) | Tuhý | Sila | MUMPS/NR | Rozklad domény 2  
+Plast (jednoduchý) | Tuhý  | Hydraulický lis | Podpora CG/MUMPS | MUMPS/NR  
 | Dual Mesh1  
-Plastic (rotational symmetry) | Rigid  | Velocity  | CG/ MUMPS backup | MUMPS/NR3  
-Plastic  | Elastic | Any  | MUMPS/NR | CG will run, but is dramatically slower  
-Multiple Plastic | Any  | Any  | MUMPS/NR | None  
-Elasto-plastic  | Rigid (no mesh) | Velocity  | MUMPS/NR | Combined DM / DD for very large models  
-Elasto-plastic  | Rigid (no mesh) | Force  | Combined DM / DD for very large models  
-Elasto-plastic | None  
-(WP - Mixed formulation tets) | Thermal Load | Combined DM / DD for very large models  
-Elasto-plastic | Elastic/  
-Rigid (w/ mesh) | Velocity  | None  
-Elastic only | Rigid or Elastic | Velocity / None | CG/ MUMPS backup | MUMPS/NR4acceptable but generally slower  
-Elastic only | Rigid or Elastic | Force  | MUMPS/NR4 | None  
-Porous  | Rigid  | Velocity  | CG/ MUMPS backup | MUMPS/NR  
-Porous  | Any combination other than Rigid tool / velocity control | MUMPS/NR | None  
-1 Dual Mesh must use tetrahedral mesh. DM may be faster for very large problems.  
-2 Domain Decomposition cannot have mesh on rigid tools, and FEM-based volume compensation cannot be used. DD may be faster for very large problems.  
-3 Rotationally symmetric models with a brick mesh MUST use the MUMPS solver.  
-4 If convergence is an issue, run with MUMPS/NR and "DEF_ELAON.DAT" in working directory (accepts a "close" solution, with a variation of around 10% in load and stress results).  
+Plastika (rotačná symetria) | Tuhý  | Rýchlosť  | Záloha CG/MUMPS | MUMPS/NR3  
+Plastový  | Pružný | Akýkoľvek  | MUMPS/NR | CG bude fungovať, ale je výrazne pomalší  
+Viac plastov | Akékoľvek  | Akékoľvek  | MUMPS/NR | Žiadne  
+Elastoplastické  | Tuhé (bez siete) | Rýchlosť  | MUMPS/NR | Kombinované DM / DD pre veľmi veľké modely  
+Elastoplastické  | Tuhé (bez siete) | Sila  | Kombinácia DM / DD pre veľmi veľké modely  
+Elastoplastický | Žiadny  
+(WP – Testy zmiešaných zložiek) | Tepelné zaťaženie | Kombinované DM / DD pre veľmi veľké modely  
+Elastoplastický | Elastický/  
+Tvrdý (so sieťovinou) | Rýchlosť | Žiadny  
+Iba elastické | Tuhé alebo elastické | Rýchlosť / Žiadna | Záloha CG/MUMPS | MUMPS/NR4 je prijateľné, ale vo všeobecnosti pomalšie  
+Iba pružné | Tuhé alebo pružné | Sila  | MUMPS/NR4 | Žiadne  
+Porézny  | Tuhý  | Rýchlosť  | Záloha CG/MUMPS | MUMPS/NR  
+Porézny  | Akákoľvek kombinácia okrem nástroja Rigid / riadenia rýchlosti | MUMPS/NR | Žiadne  
+1 Pri metóde Dual Mesh je potrebné použiť tetraedrickú sieť. Metóda DM môže byť rýchlejšia pri riešení veľmi rozsiahlych úloh.  
+2 Pri dekompozícii domén nie je možné použiť sieť na tuhých telesech a nie je možné využiť kompenzáciu objemu založenú na metóde konečných prvkov. Dekompozícia domén môže byť rýchlejšia pri riešení veľmi rozsiahlych úloh.  
+3 Modely s rotačnou symetriou a mriežkou typu „brick“ MUSIA používať riešiteľ MUMPS.  
+4 Ak sa vyskytnú problémy s konvergenciou, spustite program s MUMPS/NR a súborom „DEF_ELAON.DAT“ v pracovnom adresári (akceptuje „blízke“ riešenie s odchýlkou približne 10 % vo výsledkoch zaťaženia a napätia).  
   
-Solver selection in 3D is less straightforward than 2D. Most 3D DEFORM simulations have one Plastic workpiece and velocity-controlled Rigid tools. These simulations should use the CG solver. Elasto-plastic simulations should use the MUMPS solver. The recommended solver for all other scenarios can be found in the above table. 
+Výber riešiteľa v 3D nie je taký jednoznačný ako v 2D. Väčšina 3D simulácií DEFORM zahŕňa jeden plastický obrobok a tuhé nástroje s riadenou rýchlosťou. Pre tieto simulácie by sa mal použiť riešiteľ CG. Pre elasto-plastické simulácie by sa mal použiť riešiteľ MUMPS. Odporúčaný riešiteľ pre všetky ostatné scenáre nájdete v tabuľke vyššie. 
 
-**Iteration methods (ITRMTH)** **[2D, 3D]**
+**Iteračné metódy (ITRMTH)** **[2D, 3D]**
 
-An iteration method ([ITRMTH](/docs/sk/keyword_documentation/i/itrmth/)) is the manner in which the simulation solution is updated (or iterated upon) to try to approach the converged step solution.
+Iteračná metóda ([ITRMTH](/docs/sk/keyword_documentation/i/itrmth/)) je spôsob, akým sa aktualizuje (alebo iteruje) riešenie simulácie s cieľom priblížiť sa k konvergentnému riešeniu daného kroku.
 
-  * **Direct**
+  * **Priamy**
 
-The direct method is more likely to converge than Newton-Raphson, but will generally require more iterations to do so. In the case of Porous materials, the direct method is the only method currently available.
+Priama metóda má väčšiu pravdepodobnosť konvergencie ako Newton-Raphsonova metóda, na dosiahnutie konvergencie však zvyčajne vyžaduje viac iterácií. V prípade poréznych materiálov je priama metóda v súčasnosti jedinou dostupnou metódou.
 
-  * **Newton-Raphson**
+  * **Newton-Raphsonova metóda**
 
-The Newton-Raphson method is recommended for most problems because it generally converges in fewer iterations than the other available methods. However, solutions are more likely to fail to converge with this method than with other methods.
+Metóda Newton-Raphson sa odporúča pre väčšinu úloh, pretože zvyčajne konverguje v menšom počte iterácií ako ostatné dostupné metódy. Je však pravdepodobnejšie, že riešenia pri tejto metóde nebudú konvergovať ako pri iných metódach.
 
-  * **Arc -Length method**
+  * **Metóda dĺžky oblúka**
 
-  * **Disable iterations among elastic objects**
+  * **Zakázať iterácie medzi elastickými objektmi**
 
-## Temperature solver ([SOLMTT](/docs/sk/keyword_documentation/s/solmtt/)) [2D, 3D]
+## Riešiteľ teplotných úloh ([SOLMTT](/docs/sk/keyword_documentation/s/solmtt/)) [2D, 3D]
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image005.jpg' | relative_url }})  
-(a) 
+a) 
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image006.jpg' | relative_url }})  
-(b) 
+b) 
 
-Temperature iteration settings; (a) For 2D (b) For 3D
+Nastavenia iterácie teploty; (a) pre 2D (b) pre 3D
 
-  * **SPOOLS**[2D, 3D]
+  * **Cievky**[2D, 3D]
 
   * **Skyline**[2D, 3D]
 
-While the Sparse solver is efficient for large size models, the skyline solver uses the skyline storage method in conjunction with Gaussian elimination to store temperature matrix data. This method is recommended for most problems.
+Zatiaľ čo riešiteľ typu Sparse je efektívny pri modeloch veľkých rozmerov, riešiteľ typu Skyline využíva metódu ukladania typu Skyline v kombinácii s Gaussovou elimináciou na ukladanie údajov teplotnej matice. Táto metóda sa odporúča pre väčšinu úloh.
 
   * **MUMPS** [2D, 3D]
 
-  * **Conjugate Gradient** [3D]
+  * **Konjugovaný gradient** [3D]
 
-Compared to other type of solvers, Conjugate-Gradient solver requires much less memory and results in faster solutions times for large size models.
+V porovnaní s inými typmi riešiteľov vyžaduje riešiteľ konjugovaných gradientov oveľa menej pamäte a pri rozsiahlych modeloch umožňuje rýchlejšie výpočty.
 
-  * **Explicit [3D]**
+  * **Explicitné [3D]**
 
-## Induction Heating solver ([SOLMTI](/docs/sk/keyword_documentation/s/solmti/)) [3D]
+## Riešiteľ indukčného ohrevu ([SOLMTI](/docs/sk/keyword_documentation/s/solmti/)) [3D]
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image007.jpg' | relative_url }})
 
-Induction Heating solver settings
+Nastavenia riešiteľa indukčného ohrevu
 
-## Advanced
+## Pokročilé
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image009.jpg' | relative_url }})
 
-(a)
+a)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image008.jpg' | relative_url }})  
-(b) 
+b) 
 
-Advanced solver settings; (a) For 2D (b) For 3D
+Pokročilé nastavenia riešiteľa; (a) pre 2D (b) pre 3D
 
-**Convergence error limits (CVGERR) [2D, 3D]**
+**Limity konvergenčnej chyby (CVGERR) [2D, 3D]**
 
-Deformation iteration is assumed to have converged when the velocity and force error limits ([CVGERR](/docs/sk/keyword_documentation/c/cvgerr/)) have been satisfied. This means that the change in both the nodal velocity norm and the nodal force norm is below the value specified as shown in Fig 9.5.7. The error norm values for each iteration step are displayed in the message file. If the message file shows that the force or velocity error norms are getting small, but not dropping below the error limits, the simulation may be continued by increasing the appropriate error limit to the smallest value in the message file. This will decrease the solution accuracy, so the simulation should be allowed to run a few steps, then the values should be reduced again. When doing this, extreme care should be exercised.  
+Iterácia deformácie sa považuje za konvergovalú, ak sú splnené limity chýb rýchlosti a sily ([CVGERR](/docs/sk/keyword_documentation/c/cvgerr/)). To znamená, že zmena normy uzlovej rýchlosti aj normy uzlovej sily je nižšia ako stanovená hodnota, ako je znázornené na obr. 9.5.7. Hodnoty normy chyby pre každý iteračný krok sa zobrazujú v súbore správ. Ak súbor správ ukazuje, že normy chyby sily alebo rýchlosti sa zmenšujú, ale neklesajú pod limity chyby, simulácia sa môže pokračovať zvýšením príslušného limitu chyby na najmenšiu hodnotu v súbore správ. Tým sa zníži presnosť riešenia, preto by sa simulácia mala nechať bežať niekoľko krokov a potom by sa hodnoty mali opäť znížiť. Pri tom je potrebné postupovať s mimoriadnou opatrnosťou.  
   
-For die stress or press load calculations where extremely accurate force or load values are required, the load accuracy may be improved by decreasing the force error limit. This will increase simulation time, but give more accurate results.
+Pri výpočtoch napätia v lisovacej forme alebo zaťaženia lisu, kde sú potrebné mimoriadne presné hodnoty síl alebo zaťaženia, je možné zvýšiť presnosť zaťaženia znížením limitu chyby sily. Tým sa síce predĺži čas simulácie, ale výsledky budú presnejšie.
 
-Note:  
-It should be noted that the accuracy of the flow stress data will have great impact on the accuracy of die stress and press load predictions.
+Poznámka:  
+Je potrebné poznamenať, že presnosť údajov o prietokovom napätí bude mať veľký vplyv na presnosť predpovedí napätia v lisovacej forme a zaťaženia lisu.
 
-**Maximum number of iterations (ITRMXD, ITRMXT)** **[2D, 3D]**
+**Maximálny počet iterácií (ITRMXD, ITRMXT)** **[2D, 3D]**
 
-When Newton-Raphson iteration is being used, the specified number of iterations ([ITRMXD](/docs/sk/keyword_documentation/i/itrmxd/) and [ITRMXT](/docs/sk/keyword_documentation/i/itrmxt/)) will be performed for each iteration segment until the solution has converged. At most, 30 iterations will be performed during a Newton-Raphson segment. If the solution does not converge in the specified number of iterations, and with automatic step size reduction that follows, the simulation will terminate and a message will be written to the DEFORM message file.  
-If direct iteration is specified as the iteration method, the specified number of iterations will be performed. If the solution has not converged, another series of iterations will be performed. If the solution has still not converged, the simulation will terminate, and a message will be written to the DEFORM message file.
+Pri použití Newton-Raphsonovej iterácie sa v každom iteračnom úseku vykoná zadaný počet iterácií ([ITRMXD](/docs/sk/keyword_documentation/i/itrmxd/) a [ITRMXT](/docs/sk/keyword_documentation/i/itrmxt/)), až kým riešenie nedosiahne konvergenciu. Počas segmentu Newton-Raphson sa vykoná maximálne 30 iterácií. Ak riešenie nekonverguje v zadanom počte iterácií a pri následnom automatickom znížení veľkosti kroku, simulácia sa ukončí a do súboru správ DEFORM sa zapíše správa.  
+Ak je ako metóda iterácie špecifikovaná priama iterácia, vykoná sa stanovený počet iterácií. Ak riešenie nedosiahne konvergenciu, vykoná sa ďalšia séria iterácií. Ak riešenie stále nedosiahne konvergenciu, simulácia sa ukončí a do súboru správ DEFORM sa zapíše správa.
 
-**Bandwidth optimization (DEFBWD, TMPBWD)****[2D, 3D]**
+**Optimalizácia šírky pásma (DEFBWD, TMPBWD)****[2D, 3D]**
 
-Bandwidth optimization ([DEFBWD](/docs/sk/keyword_documentation/d/defbwd/) and [TMPBWD](/docs/sk/keyword_documentation/t/tmpbwd/)) improves solution time by optimizing the structure of the matrix equation being solved. It should be used for almost all problems.
+Optimalizácia šírky pásma ([DEFBWD](/docs/sk/keyword_documentation/d/defbwd/) a [TMPBWD](/docs/sk/keyword_documentation/t/tmpbwd/)) skracuje čas riešenia optimalizáciou štruktúry riešenej maticovej rovnice. Malo by sa používať takmer pri všetkých úlohách.
 
-Related Topics:
+Súvisiace témy:
 
 [9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
 [9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   

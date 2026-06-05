@@ -1,17 +1,17 @@
 ---
 lang: sk
-title: "20.3. Interface Resisitivity"
+title: "20.3. Merný odpor rozhrania"
 ---
 
-# 20.3. Interface Resistivity
+# 20.3. Rozhranová merná vodivosť
 
-The interface resistivity coefficient defines the electrical interface resistivity between two objects in contact. This can be specified as a constant or a function of time or interface pressure (See Fig. 20.3.1.). When heating computations are required, the heating mode needs to be first turned on in the simulation controls before defining the associated object values.
+Koeficient rozhrania definuje elektrický odpor rozhrania medzi dvoma objektmi, ktoré sú v kontakte. Je možné ho špecifikovať ako konštantu alebo ako funkciu času či tlaku na rozhraní (pozri obr. 20.3.1.). Ak sú potrebné výpočty ohrevu, je potrebné najskôr v nastaveniach simulácie zapnúť režim ohrevu a až potom definovať príslušné hodnoty objektov.
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_3_interface_resisitivity/image001.jpg' | relative_url }})
 
-Inter object Heating window
+Medziobjektové vykurovacie okno
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [20\. Inter-Object Data Definition](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/)
 

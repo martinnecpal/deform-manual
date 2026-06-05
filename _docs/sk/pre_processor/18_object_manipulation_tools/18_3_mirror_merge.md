@@ -1,27 +1,27 @@
 ---
 lang: sk
-title: "18.3. Mirror Merge"
+title: "18.3. Zlúčenie zrkadiel"
 ---
 
-# 18.3. Mirror Merge ![]({{ '/assets/icons/pre_icons/mo_mirror_merge_icon.jpg' | relative_url }})
+# 18.3. Zrkadlo Zlúčiť ![]({{ '/assets/icons/pre_icons/mo_mirror_merge_icon.jpg' | relative_url }})
 
-**[3D]** Mirror Merge ![]({{ '/assets/icons/pre_icons/mo_mirror_merge_icon.jpg' | relative_url }}) option allows the user to select the object to mirror on the selected plane and then merge the mirrored objects using ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) button See Fig. 18.3.1.
+**[3D]** Zrkadlenie Zlúčenie Možnosť ![]({{ '/assets/icons/pre_icons/mo_mirror_merge_icon.jpg' | relative_url }}) umožňuje používateľovi vybrať objekt na zrkadlenie vo vybranej rovine a potom zlúčiť zrkadlené objekty pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) Pozri obr. 18.3.1.
 
-By checking **Geometry** check box, the mirrored and merged geometry will be save.
+Začiarknutím políčka **Geometria** sa uloží zrkadlená a zlúčená geometria.
 
-By checking **Mesh** check box, the mirrored and merged mesh will be save.
+Začiarknutím políčka **Mesh** sa uloží zrkadlená a zlúčená sieť.
 
-By checking **Geometry** and **Mesh** check box, the mirrored and merged both Geometry and Mesh will be save (see Fig. 18.3.2.).
+Zaškrtnutím políčka **Geometria** a **Sieť** sa uloží zrkadlená a zlúčená geometria aj sieť (pozri obr. 18.3.2).
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_3_mirror_merge/18_3_image002.jpg' | relative_url }})
 
-3D Mirror merge window
+Zlúčenie okien 3D Mirror
 
 ![]({{ '/assets/images/pre-processor/18_object_manipulation_tools/18_3_mirror_merge/18_3_image001.jpg' | relative_url }})
 
-Merging operation for workpiece 
+Operácia spájania obrobkov
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [18\. Object Manipulation Tools](/docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/)
 

@@ -1,42 +1,42 @@
 ---
 lang: sk
-title: "15.10. Torsional movement"
+title: "15.10. Krútiaci pohyb"
 ---
 
-# 15.10. Torsional movement
+# 15.10. Krútiaci pohyb
 
-15.10.1. Angular velocity
+15.10.1. Uhlová rýchlosť
 
-15.10.2. Energy
+15.10.2. Energia
 
-**[2D]** : Torsional movement controls are applicable only in the case of torsional formulations. This movement control option is active for DEFORM-2D only. For these movement settings see Fig. 15.10.1. and Fig. 15.10.2.
+**[2D]** : Kontroly krútiaceho pohybu sa uplatňujú len v prípade krútiacich sa formulácií. Táto možnosť riadenia pohybu je aktívna len pre DEFORM-2D. Nastavenia týchto pohybov nájdete na obr. 15.10.1 a obr. 15.10.2.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_10_torsional_movement/15_10_image001.jpg' | relative_url }})
 
-Torsion movement controls window settings for Angular velocity
+Nastavenia okna pre uhlovú rýchlosť torzného pohybu
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_10_torsional_movement/15_10_image002.jpg' | relative_url }})
 
-Torsion movement controls window settings for Energy
+Torzný pohyb ovláda nastavenia okien pre Energy
 
-**Controlling Method**  
-The objects torsion can be controlled by an Angular Velocity or energy. Select the required control and enter the values.
+**Kontrolná metóda**
+Torziu objektov možno ovládať uhlovou rýchlosťou alebo energiou. Vyberte požadované ovládanie a zadajte hodnoty.
 
-## Angular Velocity
+## Uhlová rýchlosť
 
-Angular Velocity will apply torsional motion about the defined axis at a specified angular velocity in radians per second. The angular velocity can be specified as a constant or as a function of time or angle. (See Fig. 15.10.1.)
+Angular Velocity (Uhlová rýchlosť) použije torzný pohyb okolo definovanej osi so zadanou uhlovou rýchlosťou v radiánoch za sekundu. Uhlová rýchlosť môže byť zadaná ako konštanta alebo ako funkcia času alebo uhla. (Pozri obr. 15.10.1.)
 
-Note:
+Poznámka:
 
-Idle rolls can be defined by specifying torque control with a very low torque value.
+Voľnobežné valce možno definovať zadaním riadenia krútiaceho momentu s veľmi nízkou hodnotou krútiaceho momentu.
 
-## Energy
+## Energia
 
-Torsional motion is based on Energy, Moment of Inertia, and efficiency values as shown in Fig. 15.10.2.
+Krútiaci pohyb je založený na hodnotách energie, momentu zotrvačnosti a účinnosti, ako je znázornené na obr. 15.10.2.
 
-**Current Angle** : current position of the object.
+**Aktuálny uhol** : aktuálna poloha objektu.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 

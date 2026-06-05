@@ -1,29 +1,29 @@
 ---
 lang: sk
-title: "15.11. Friction Welding movement"
+title: "15.11. Pohyb pri zváraní trením"
 ---
 
-# 15.11. Friction Welding movement
+# 15.11. Pohyb pri zváraní trením
 
-15.11.1. Sinusoid type
+15.11.1. Typ sinusoidy
 
-15.11.2. Function form
+15.11.2. Forma funkcie
 
-**[2D] :** Friction Welding movement controls are applicable only in the case of 2.5D Friction welding formulations. This movement control option is available for DEFORM-2D and active when 2.5D Friction welding Geometry type is selected from Simulation Controls only. This movement can be used to define out of plane movement. (See Fig. 15.11.1.)
+**[2D] :** Kontrola pohybu pri trecom zváraní je použiteľná len v prípade 2,5D formulácií trecieho zvárania. Táto možnosť ovládania pohybu je k dispozícii pre DEFORM-2D a je aktívna, keď je v položke Simulation Controls (Ovládanie simulácie) vybraný iba typ 2,5D Friction welding Geometry (Geometria trecieho zvárania). Tento pohyb možno použiť na definovanie pohybu mimo roviny. (Pozri obr. 15.11.1.)
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_11_friction_welding_movement/15_11_image001.jpg' | relative_url }})
 
-2D Friction Welding movement
+2D trecí zvárací pohyb
 
-## Sinusoid type 
+## Typ sinusoidy
 
-Using sinusoid type we can define the sinusoid type speed movement for the primary die.
+Pomocou typu sínusoidy môžeme definovať rýchlostný pohyb typu sínusoida pre primárnu matricu.
 
-## Function form
+## Funkčná forma
 
-Using function form we can define out of plane movement as function of time for the primary die.
+Pomocou tvaru funkcie môžeme definovať pohyb mimo roviny ako funkciu času pre primárnu kocku.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 

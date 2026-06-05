@@ -1,58 +1,58 @@
 ---
 lang: sk
-title: "16.4. Fracture Properties"
+title: "16.4. Vlastnosti lomu"
 ---
 
-# 16.4. Fracture properties
+# 16.4. Lomové vlastnosti
 
-16.4.1. Fracture step (FRCSTP)
+16.4.1. Zlomový krok (FRCSTP)
 
-16.4.2. Fracture elements (FRCNEL)
+16.4.2. Lomové prvky (FRCNEL)
 
-16.4.3. Fracture element deletion (FRCNEL)
+16.4.3. Odstránenie lomového prvku (FRCNEL)
 
-16.4.4 Fracture element deactivation
+16.4.4 Deaktivácia lomového prvku
 
   
-Ductile fracture of a deforming workpiece can be modelled in DEFORM. If the fracture function is turned on, material separation will be modelled for any elements which exceed a critical damage value specified in the Material Properties ![](../../../assets/Icons/Pre_icons/arrow_front.jpg)Miscellaneous![](../../../assets/Icons/Pre_icons/arrow_front.jpg)[Fracture](/docs/sk/pre_processor/10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models/) tab. This feature is useful for modelling shearing and blanking, machining, fracture of deformable installation fasteners (pop rivets) and other applications.
+V programe DEFORM možno modelovať tvárny lom deformujúceho sa obrobku. Ak je zapnutá funkcia lom, oddelenie materiálu sa bude modelovať pre všetky prvky, ktoré prekročia hodnotu kritického poškodenia zadanú na karte Vlastnosti materiálu ![](../../../assets/Icons/Pre_icons/arrow_front.jpg)Rôzne![](../../../assets/Icons/Pre_icons/arrow_front.jpg)[Fracture](/docs/sk/pre_processor/10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models/). Táto funkcia je užitočná pri modelovaní strihania a zaslepovania, obrábania, lomov deformovateľných montážnych spojovacích prvkov (popnitov) a iných aplikácií.
 
-**[2D]:****Fracture elements deletion** is modelled by deleting any elements which exceed the critical damage value.
+**[2D]:****Vymazanie lomových prvkov** sa modeluje vymazaním všetkých prvkov, ktoré prekročia kritickú hodnotu poškodenia.
 
-Therefore, an extremely fine mesh should be used in any region where fracture is expected to limit volume loss. The FEM simulation is temporarily stopped to perform element deletion. The stopping may be triggered by a given fracture steps (see Fig. 16.4.1.) or whenever the damage value in a specified number of elements exceeds the critical value.
+Preto by sa mala v každej oblasti, kde sa očakáva lom, použiť extrémne jemná sieť, aby sa obmedzila strata objemu. Simulácia MKP sa dočasne zastaví, aby sa vykonalo vymazanie prvkov. Zastavenie môže byť spustené danými krokmi lomu (pozri obr. 16.4.1.) alebo vždy, keď hodnota poškodenia v určenom počte prvkov prekročí kritickú hodnotu.
 
-**Fracture element deactivation** is a new method to study crack propagation. It will deactivate an element instead of deleting it when its damage reaches the critical value of its material (See Fig. 16.4.2.).
+**Deaktivácia lomových prvkov** je nová metóda na štúdium šírenia trhlín. Tá deaktivuje prvok namiesto jeho vymazania, keď jeho poškodenie dosiahne kritickú hodnotu jeho materiálu (pozri obr. 16.4.2.).
 
-**[3D]** : To activate fracture elements deletion type, user needs select**Fracture element deletion** type from Fracture pulldown ([FRCNEL](/docs/sk/Keyword_Documentation/F/FRCNEL/)) field (see Fig. 16.4.1.) This will initiate element deletion for elements with fracture value more than critical value defined in material fracture/damage models during remeshing procedures. Damage model and critical damage factor defined in the material data are important data needed to activate this feature. For an overview of fracture, please refer [3D Fracture.](/docs/sk/Applications/55_Applications/55_Fracture/3D_Fracture/)
+**[3D]** : Ak chcete aktivovať typ vymazania lomových prvkov, používateľ musí vybrať typ **Vymazanie lomového prvku** z rozbaľovacieho poľa Lom ([FRCNEL](/docs/sk/Keyword_Documentation/F/FRCNEL/)) (pozri obr. 16.4.1.) Tým sa iniciuje vymazanie prvkov, ktorých hodnota lomu je väčšia ako kritická hodnota definovaná v modeloch lomu/poškodenia materiálu počas postupov remeshingu. Model poškodenia a faktor kritického poškodenia definovaný v údajoch o materiáli sú dôležité údaje potrebné na aktiváciu tejto funkcie. Prehľad lomov nájdete v časti [3D Fracture.](/docs/sk/Applications/55_Applications/55_Fracture/3D_Fracture/)
 
-**Fracture element deactivation** is a new method to study crack propagation. It will deactivate an element instead of deleting it when its damage reaches the critical value of its material (See Fig. 16.4.2.).
+**Deaktivácia lomových prvkov** je nová metóda na štúdium šírenia trhlín. Tá deaktivuje prvok namiesto jeho vymazania, keď jeho poškodenie dosiahne kritickú hodnotu jeho materiálu (pozri obr. 16.4.2.).
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_4_Fracture_Properties/16_4_Image001.jpg)
 
-Fracture Element deletion type
+Typ odstránenia zlomového prvku
 
 ![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_4_Fracture_Properties/16_4_Image002.jpg)
 
-Fracture element deactivation type
+Typ deaktivácie lomového prvku
 
-## Fracture step ([FRCSTP](/docs/sk/Keyword_Documentation/F/FRCSTP/)) [2D]
+## Zlomový krok ([FRCSTP](/docs/sk/Keyword_Documentation/F/FRCSTP/)) [2D]
 
-The step (**[FRCSTP](/docs/sk/Keyword_Documentation/F/FRCSTP/))** interval at which the simulation should be stopped to perform element deletion. If no elements are above the critical damage value, none will be deleted.
+Krok (**[FRCSTP](/docs/sk/Keyword_Documentation/F/FRCSTP/))** interval, v ktorom sa má simulácia zastaviť, aby sa vykonalo vymazanie prvku. Ak žiadny prvok nie je nad kritickou hodnotou poškodenia, žiadny sa nevymaže.
 
-## Fracture elements deletion ([FRCNEL](/docs/sk/Keyword_Documentation/F/FRCNEL/)) [2D]
+## Odstránenie zlomových prvkov ([FRCNEL](/docs/sk/Keyword_Documentation/F/FRCNEL/)) [2D]
 
-The number of elements that must be above the critical damage value for the simulation to be stopped to perform element deletion. A typical value is around 4.
+Počet prvkov, ktoré musia byť nad kritickou hodnotou poškodenia, aby sa simulácia zastavila a vykonalo sa vymazanie prvkov. Typická hodnota je približne 4.
 
-## Fracture element deletion ([FRCNEL](/docs/sk/Keyword_Documentation/F/FRCNEL/)) [3D]
+## Odstránenie zlomového prvku ([FRCNEL](/docs/sk/Keyword_Documentation/F/FRCNEL/)) [3D]
 
-This option will initiate element deletion for elements with fracture value more than critical value defined in material fracture/damage models during remeshing procedures.
+Táto možnosť iniciuje odstránenie prvkov s hodnotou lomu vyššou ako kritická hodnota definovaná v modeloch lomu/poškodenia materiálu počas postupov remeshingu.
 
-Generally, fracture element deletion will be used for crack propagation study in DEFORM system. Due to the difficulty in brick remeshing, fracture element deletion currently does not support 3D brick mesh. 
+Vo všeobecnosti sa na štúdium šírenia trhlín v systéme DEFORM použije vymazanie lomových prvkov. Z dôvodu ťažkostí pri remeshovaní tehál vymazávanie lomových prvkov v súčasnosti nepodporuje 3D tehlovú sieť.
 
-## Fracture element deactivation [2D, 3D]
+## Deaktivácia lomového prvku [2D, 3D]
 
-Fracture element deactivation is a new method to study crack propagation. It will deactivate an element instead of deleting it when its damage reaches the critical value of its material. It allows simulation to continue without remeshing or with less remeshing in forming processes. Fracture element deactivation can support 3D brick mesh, 3D tetrahedral mesh and 2D mesh to predict crack onset & propagation.
+Deaktivácia lomových prvkov je nová metóda na štúdium šírenia trhlín. Pri nej sa prvok deaktivuje namiesto vymazania, keď jeho poškodenie dosiahne kritickú hodnotu jeho materiálu. Umožňuje pokračovať v simulácii bez opätovného oddeľovania alebo s menším oddeľovaním pri procesoch tvárnenia. Deaktivácia lomových prvkov môže podporovať 3D tehlovú sieť, 3D štvorstennú sieť a 2D sieť na predpovedanie vzniku a šírenia trhlín.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
 
