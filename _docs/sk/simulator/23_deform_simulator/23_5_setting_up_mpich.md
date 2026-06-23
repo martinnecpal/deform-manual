@@ -1,42 +1,42 @@
 ---
 lang: sk
-title: "23.5. Setting up MPICH"
+title: "23.5. Nastavenie MPICH"
 ---
 
-# 23.5. Registering MPICH (applicable to v11.1.1 and below versions)
+# 23.5. Registrácia MPICH (platí pre verziu v11.1.1 a staršie verzie)
 
-## Registering 64 bit 3D FEM engine in PC
+## Registrácia 64-bitového 3D FEM enginu v počítači
 
-As part of DEFORM v*_* (where *_* is the version number of the DEFORM) installation, user will be prompted with an option to install 'MPICH2 64bit'. On 64 bit machines this installation is required to run 64 bit 3D FEM engine. This part of the installation also requires the following post installation procedures to ensure 64 bit run time environment,
+V rámci inštalácie DEFORM v*_* (kde *_* je číslo verzie DEFORM) sa používateľovi zobrazí možnosť inštalácie „MPICH2 64bit“. Na 64-bitových počítačoch je táto inštalácia nevyhnutná na spustenie 64-bitového 3D FEM enginu. Táto časť inštalácie si tiež vyžaduje vykonanie nasledujúcich krokov po inštalácii, aby bolo zabezpečené 64-bitové runtime prostredie:
 
-From DEFORM v11.0 the following MPICH2 64bit setup requirements are completely handled during the system installation itself. The following steps can also be used to trouble shoot MPICH2 related issues if any that come up at a later stage for any other reason.
+Od verzie DEFORM v11.0 sa nasledujúce požiadavky na nastavenie 64-bitovej verzie MPICH2 úplne riešia už počas samotnej inštalácie systému. Nasledujúce kroky je možné použiť aj na riešenie prípadných problémov súvisiacich s MPICH2, ak by sa neskôr z akéhokoľvek dôvodu vyskytli.
 
-  1. Open command window as administrator and change the directory to MPICH2 folder _'cd c:\Program Files\MPICH2\bin'_ and execute two commands one by one ‘s _mpd.exe -install', 'smpd.exe -restart'_.
+  1. Otvorte príkazové okno ako správca, prejdite do priečinka MPICH2 pomocou príkazu _'cd c:\Program Files\MPICH2\bin'_ a postupne spustite dva príkazy: _'mpd.exe -install' a 'smpd.exe -restart'_.
 
-  2. Open command window as administrator and change the directory to MPICH2 folder '_cd c:\Program Files\MPICH2\bin'_ and execute _'mpiexec.exe -register'_ with user name and password.
+  2. Otvorte príkazové okno ako správca, prejdite do adresára MPICH2 pomocou príkazu '_cd c:\Program Files\MPICH2\bin'_ a spustite príkaz _'mpiexec.exe -register'_ s uvedením používateľského mena a hesla.
 
-  3. For SimulationServer services, user needs to go to the system services, select the running '_DeformSimServer_ ' and select 'Properties' with a right mouse click and set user account name and password for the user from the 'Log On' tab.
+  3. V prípade služieb SimulationServer musí používateľ prejsť do systémových služieb, vybrať spustenú službu „_DeformSimServer_“, kliknúť pravým tlačidlom myši a zvoliť možnosť „Vlastnosti“ a na karte „Prihlásenie“ nastaviť meno používateľského účtu a heslo pre daného používateľa.
 
-## Running 64 bit 3D FEM engine in Linux/PC
+## Spustenie 64-bitového 3D FEM enginu v systéme Linux na PC
 
-  * From the 3D / 2D3D GUI select the problem and go to Run options and select the 64 bit option. Click on Start to start the 64 bit simulation.
+  * V grafickom rozhraní 3D / 2D3D vyberte úlohu, prejdite do časti „Run options“ a vyberte možnosť „64 bit“. Kliknutím na tlačidlo „Start“ spustíte 64-bitovú simuláciu.
 
-  * Flag file '64bit.DAT' is required in the problem folder to start 64 bit FEM run from GUI Main. This '64bit.DAT' file will be created automatically as we select the 64 bit option from the Run options. Without this flag file, regular 32 bit FEM code takes preference.
+  * Na spustenie 64-bitového behu FEM z hlavného okna grafického rozhrania je potrebný súbor „64bit.DAT“ v zložke s úlohou. Tento súbor „64bit.DAT“ sa vytvorí automaticky po výbere možnosti 64-bitového behu v nastaveniach spustenia. Bez tohto súboru sa uprednostní bežný 32-bitový kód FEM.
 
-**Note:**
+**Poznámka:**
 
-  1. This 64 bit version can handle large models that require main memory in excess of 2 GB.
+  1. Táto 64-bitová verzia dokáže spracovať rozsiahle modely, ktoré vyžadujú viac ako 2 GB hlavnej pamäte.
 
-  2. 64 bit support is only for the 3D FEM engine.
+  2. Podpora 64-bitovej verzie sa vzťahuje iba na 3D FEM engine.
 
-  3. While building FEM engine with user routines, please use the OS identifier as centos_linux64.
+  3. Pri vytváraní modulu FEM s užívateľskými rutinami použite prosím identifikátor operačného systému centos_linux64.
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[23.1. Start, Stop and Resume Simulation](/docs/sk/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/)
+[23.1. Start, Stop and Resume Simulation](/docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/)
 
-[23.2. Interactive and batch modes using Run option](/docs/sk/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/)
+[23.2. Interactive and batch modes using Run option](/docs/en/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/)
 
-[23.3. Simulation Graphics](/docs/sk/simulator/23_deform_simulator/23_3_simulation_graphics/)
+[23.3. Simulation Graphics](/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/)
 
-[23.4. Process Monitor](/docs/sk/simulator/23_deform_simulator/23_4_process_monitor/)
+[23.4. Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/)

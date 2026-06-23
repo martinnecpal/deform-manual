@@ -1,198 +1,198 @@
 ---
 lang: sk
-title: "23.2. Interactive and batch mode"
+title: "23.2. Interaktívny a dávkový režim"
 ---
 
-# 23.2. Interactive and batch mode
+# 23.2. Interaktívny a dávkový režim
 
-23.2.1. Interactive Mode
+23.2.1. Interaktívny režim
 
-23.2.2. Batch Queue Mode
+23.2.2. Režim fronty dávok
 
-23.2.3. Queuing Simulations
+23.2.3. Simulácie čakania v rade
 
-  * Running Batch Queue Server and Simulation Server
+  * Spustenie servera fronty dávok a simulačného servera
 
-  * Computer configuration requirements
+  * Požiadavky na konfiguráciu počítača
 
-  * Simulation Server setup
+  * Nastavenie simulačného servera
 
-23.2.4. Run Options dialog features
+23.2.4. Funkcie dialógového okna „Run Options“
 
-## Interactive Mode
+## Interaktívny režim
 
-If batch of problems to be simulated then after completing the previous simulation using the Run option from Integrated GUI or from Run options dialog ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) can be used for submitting simulations interactively one after the other.
+Ak sa má simulovať séria úloh, po dokončení predchádzajúcej simulácie pomocou možnosti „Run“ v integrovanom grafickom rozhraní alebo v dialógovom okne „Run options“ je možné použiť ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na interaktívne odosielanie simulácií jedna po druhej.
 
-## Batch Queue Mode
+## Režim fronty úloh
 
-Interactive submission of simulations requires user monitoring to start simulation one after the other however user can use ![]({{ '/assets/icons/simulator_icons/gui_add_to_queue.jpg' | relative_url }}) option from GUI or from Run options dialog ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}) to pick automatically each job one after the other or simultaneously based on the simulation server settings.
+Interaktívne odosielanie simulácií si vyžaduje, aby používateľ dohliadal na spúšťanie simulácií jedna po druhej; používateľ však môže využiť voľbu ![]({{ '/assets/icons/simulator_icons/gui_add_to_queue.jpg' | relative_url }}) v grafickom rozhraní alebo v dialógovom okne „Run options“ (![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }})), aby sa jednotlivé úlohy spúšťali automaticky jedna po druhej alebo súčasne, a to v závislosti od nastavení simulačného servera.
 
-The problem running status can be monitored from the Process monitor and also for additional options related to executing of interactive and batch mode simulations refer to chapter [23.4. Process Monitor](/docs/sk/simulator/23_deform_simulator/23_4_process_monitor/).
+Stav behu úlohy je možné sledovať v nástroji Process Monitor; ďalšie možnosti týkajúce sa vykonávania simulácií v interaktívnom a dávkovom režime nájdete v kapitole [23.4. Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/).
 
-From version 11.0 users can submit jobs for simulation using remote machine Simulation servers in batch mode from Run options dialog. (Refer section [6.2. MO Simulation layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)) This will temporarily move the jobs to remote simulation server machine for simulation, after completion of simulation it copies back the project, so it reduces the load on the local machine.
+Od verzie 11.0 môžu používatelia odosielať úlohy na simuláciu pomocou vzdialených simulačných serverov v dávkovom režime z dialógového okna „Run options“ (Možnosti spustenia). (Pozri časť [6.2. MO Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/).) Týmto spôsobom sa úlohy dočasne presunú na vzdialený simulačný server na účely simulácie; po dokončení simulácie sa projekt skopíruje späť, čím sa zníži zaťaženie lokálneho počítača.
 
-## Queuing Simulations
+## Simulácie čakania v rade
 
-**Running Batch Queue Server and Simulation Server**
+**Spustenie servera fronty dávok a simulačného servera**
 
 ****  
-(Please refer to[Chapter 23.6. Running Shared folder Simulations](/docs/sk/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/) on how to setup, simulation servers, batch queue servers and handle mapped drives on a network to run DEFORM simulations)
+(Informácie o nastavení, simulačných serveroch, serveroch fronty dávkových úloh a správe priradených diskov v sieti na spúšťanie simulácií DEFORM nájdete v dokumente [Chapter 23.6. Running Shared folder Simulations](/docs/en/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/))
 
-(Installing this Batch Queue and Simulation server services is a part of the default installation process, and the details indicated here are only standby options, if the given system has any issues/restrictions with handling the services)
+(Inštalácia týchto služieb – Batch Queue a Simulation Server – je súčasťou štandardného inštalačného procesu a informácie uvedené v tomto texte slúžia iba ako alternatívne možnosti v prípade, že daný systém má nejaké problémy alebo obmedzenia pri spracovaní týchto služieb)
 
-If you would like to queue up jobs or run jobs on the other machine, please install simulation server.
+Ak chcete úlohy zaradiť do fronty alebo spustiť na inom počítači, nainštalujte si prosím simulačný server.
 
-The installations are easy, just run the provided batch files (at the DEFORM installation directory):
+Inštalácia je jednoduchá, stačí spustiť priložené dávkové súbory (v inštalačnom adresári DEFORM):
 
-  * InstallBatchQueueServer.bat (example PC path C:\Program Files\SFTC\License Manager\\)
+  * InstallBatchQueueServer.bat (príklad cesty na počítači: C:\Program Files\SFTC\License Manager\\)
 
-  * InstallSimulationServer.bat (example PC path C:\Program Files\SFTC\DEFORM\Configuration\\)
+  * InstallSimulationServer.bat (príklad cesty na počítači: C:\Program Files\SFTC\DEFORM\Configuration\\)
 
-Then these two programs will also be registered as services just like the license manager. They will start automatically.
+Potom sa aj tieto dva programy zaregistrujú ako služby, rovnako ako správca licencií. Spustia sa automaticky.
 
-**Computer configuration requirements**
+**Požiadavky na konfiguráciu počítača**
 
 ****
 
-  * **Si******m** ulation server**: A central computer – presumably high performance – for running FEM calculations.
+  * **Si******m**ulačný server**: Centrálny počítač – pravdepodobne s vysokým výkonom – určený na vykonávanie výpočtov metódou konečných prvkov (FEM).
 
-  * **License server** : A central computer – not necessarily high powered – for managing licenses.
+  * **Licenčný server**: Centrálny počítač – nemusí byť nutne veľmi výkonný – slúžiaci na správu licencií.
 
-  * **Batch queue server** : A central computer for managing run sequence of jobs. The License and Batch servers will run on the same machine and Simulation server must run on machines from where user submits the jobs to queue.
+  * **Server fronty dávkových úloh**: Centrálny počítač na riadenie poradia spúšťania úloh. Licenčný server a server fronty dávkových úloh budú bežať na tom istom počítači, zatiaľ čo simulačný server musí bežať na počítačoch, z ktorých používatelia odosielajú úlohy do fronty.
 
-  * **Pre / Post client(s)** : Computer at which user(s) will pre and post process simulations. Pre and post processor programs are executed on this computer.
+  * **Pre / Post klient(i)** : Počítač, na ktorom budú používatelia vykonávať predspracovanie a následné spracovanie simulácií. Na tomto počítači sa spúšťajú programy na predspracovanie a následné spracovanie.
 
-  * **DB file location** : The database files should be on a shared network drive accessible from the simulation serer and the pre/post client computer. For optimum simulation performance, the DB files should be on a hard drive physically integrated into the simulation server. In other words, forcing the simulation server to access a database across a network will likely cause longer run times.
+  * **Umiestnenie súborov databázy**: Súbory databázy by mali byť umiestnené na zdieľanom sieťovom disku, ku ktorému majú prístup simulačný server aj klientsky počítač používaný pred a po simulácii. Pre optimálny výkon simulácie by mali byť súbory databázy umiestnené na pevnom disku fyzicky integrovanom do simulačného servera. Inými slovami, ak bude simulačný server nútený pristupovať k databáze cez sieť, pravdepodobne to spôsobí predĺženie doby behu simulácie.
 
-**Simulation Server setup**  
-On the “Simulation Server” tab, specify the share name or IP address of the simulation server machine. If it is a multi-processor or multi-core machine, specify the number of processors (cores) available and licensed in DEFORM (Processor number) and the maximum number of jobs (normally 1). The user can use simulation and batch queue server as other than local computer by pointing it in DEFORM setup (See Fig. 23.2.1.).
+**Nastavenie simulačného servera**  
+Na karte „Simulačný server“ zadajte názov zdieľaného priečinka alebo IP adresu počítača, na ktorom beží simulačný server. Ak ide o počítač s viacerými procesormi alebo viacerými jadrami, zadajte počet procesorov (jadier), ktoré sú k dispozícii a licencované v programe DEFORM (Počet procesorov), a maximálny počet úloh (zvyčajne 1). Používateľ môže ako server pre simuláciu a frontu úloh použiť iný počítač ako lokálny, a to jeho nastavením v programe DEFORM (pozri obr. 23.2.1.).
 
 ![]({{ '/assets/images/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/image001.jpg' | relative_url }})
 
-DEFORM setup Simulation Server window
+Nastavenie DEFORM – okno Simulačný server
 
-**Run (Options) settings**  
-After configuration, please use ![]({{ '/assets/icons/simulator_icons/gui_run_options_button.jpg' | relative_url }}) settings from GUI Main to utilize batch queue and simulation server when desired.
+**Nastavenia spustenia (možnosti)**  
+Po konfigurácii prosím použite nastavenia ![]({{ '/assets/icons/simulator_icons/gui_run_options_button.jpg' | relative_url }}) v hlavnom okne grafického rozhrania (GUI), ak chcete využívať frontu dávok a simulačný server.
 
-**How to add jobs in Queue:**
+**Ako pridať úlohy do fronty:**
 
-Pick the DB from GUI Main (from working folder).
+Vyberte databázu v hlavnom okne grafického rozhrania (z pracovného priečinka).
 
-From GUI Main open ![]({{ '/assets/icons/simulator_icons/gui_run_options_button.jpg' | relative_url }}).
+V hlavnom okne grafického rozhrania otvorte ![]({{ '/assets/icons/simulator_icons/gui_run_options_button.jpg' | relative_url }}).
 
-Initial details are normally picked up from the details provided from DEFORMSetup run.
+Počiatočné údaje sa zvyčajne preberajú z údajov získaných pri spustení programu DEFORMSetup.
 
-Check the servers required for batch queue status using Check Server![]({{ '/assets/icons/simulator_icons/mo_check_server_button.jpg' | relative_url }}) button.
+Stav fronty dávkových úloh na príslušných serveroch skontrolujte pomocou tlačidla „Check Server![]({{ '/assets/icons/simulator_icons/mo_check_server_button.jpg' | relative_url }})“.
 
-From this dialog, click on ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}) to add the job1 to Queue.
+V tomto dialógovom okne kliknite na ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}), aby ste úlohu „job1“ pridali do fronty.
 
-Select job2 click on ![]({{ '/assets/icons/simulator_icons/gui_add_to_queue.jpg' | relative_url }}) under Simulator in GUI main, repeat same for remaining jobs 3 and 4 (See Fig. 23.2.2.).
+Vyberte úlohu 2, kliknite na položku ![]({{ '/assets/icons/simulator_icons/gui_add_to_queue.jpg' | relative_url }}) v časti „Simulator“ na hlavnej obrazovke grafického rozhrania a rovnaký postup zopakujte pre zostávajúce úlohy 3 a 4 (pozri obr. 23.2.2.).
 
 ![]({{ '/assets/images/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/image002.jpg' | relative_url }})
 
-Queuing simulations from Run options
+Simulácie čakania v rade z možností spustenia
 
-The jobs added to queue can be seen in Process Monitor window under Running and Pending list.
+Úlohy pridané do fronty je možné vidieť v okne programu Process Monitor v zozname „Running“ a „Pending“.
 
-Once a job is finished, it is removed from the Batch Queue list and the next job waiting will take for running.
+Akonáhle je úloha dokončená, odstráni sa zo zoznamu fronty dávok a spustí sa ďalšia čakajúca úloha.
 
-The user can change the position of the job with the help of "Move UP" ( ![]({{ '/assets/icons/simulator_icons/move_up_button.jpg' | relative_url }}) ) and "Move Down" ( ![]({{ '/assets/icons/simulator_icons/move_down_button.jpg' | relative_url }}) ) buttons and job can be removed from queue using "Terminate or Remove" button ( ![]({{ '/assets/icons/simulator_icons/mo_kill_button.jpg' | relative_url }}) ). (See Fig 23.4.2)
+Používateľ môže zmeniť pozíciu úlohy pomocou tlačidiel „Presunúť nahor“ (![]({{ '/assets/icons/simulator_icons/move_up_button.jpg' | relative_url }})) a „Presunúť nadol“ (![]({{ '/assets/icons/simulator_icons/move_down_button.jpg' | relative_url }})) a úlohu je možné odstrániť z fronty pomocou tlačidla „Ukončiť alebo odstrániť“ (![]({{ '/assets/icons/simulator_icons/mo_kill_button.jpg' | relative_url }})). (Pozri obr. 23.4.2)
 
-## **Run Options dialog features******
+## **Funkcie dialógového okna „Run Options“******
 
-![]({{ '/assets/icons/simulator_icons/run_option_icon.jpg' | relative_url }}) or Simulation menu Run (options) ![]({{ '/assets/icons/simulator_icons/gui_run_options_button.jpg' | relative_url }})will provide more advanced options to run the simulation like interactive or batch mode, running with single and multiple (only for 3D) processors and 32 and 64 bit running.
+![]({{ '/assets/icons/simulator_icons/run_option_icon.jpg' | relative_url }}) alebo ponuka Simulácia > Spustiť (možnosti) ![]({{ '/assets/icons/simulator_icons/gui_run_options_button.jpg' | relative_url }}) ponúka pokročilejšie možnosti spustenia simulácie, ako napríklad interaktívny alebo dávkový režim, spustenie s jedným alebo viacerými (len v 3D) procesormi a 32-bitové alebo 64-bitové spustenie.
 
-  * **Job Type** : This Indicates type of the running jobs like MO (Multiple operations), DOE (Design of Experiments) or OPT (Optimization).
+  * **Typ úlohy**: Uvádza typ spustených úloh, ako napríklad MO (viacnásobné operácie), DOE (návrh experimentov) alebo OPT (optimalizácia).
 
-  * **DB Name/Problem ID** : Displays the current project DB name in case of normal MO operations project. For DOE and OPT it shows the Problem ID as DOE/OPT project name, required DB's to complete DOE/OPT study are generated after submitting the problem to simulate.
+  * **Názov databázy/ID problému**: V prípade projektov s bežnými operáciami MO sa tu zobrazuje názov aktuálnej projektovej databázy. V prípade projektov DOE a OPT sa tu ako názov projektu DOE/OPT zobrazuje ID problému; databázy potrebné na dokončenie štúdie DOE/OPT sa vygenerujú po odoslaní problému na simuláciu.
 
-  * **Submitted By** : It will display the project location machine name.
+  * **Zadala** : Zobrazí sa názov počítača, na ktorom sa projekt nachádza.
 
-  * **Password to Kill Job** : If user used any password to protect simulation in simulation server of DEFORM setup then that password should be entered here before selecting ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) or ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}) buttons to start the simulation.
+  * **Heslo na ukončenie úlohy**: Ak používateľ na simulacom serveri v prostredí DEFORM použil na ochranu simulácie nejaké heslo, je potrebné toto heslo zadať práve tu pred výberom tlačidiel ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) alebo ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}) na spustenie simulácie.
 
-  * **Simultaneous Jobs** : User can indicate number of simulations or Jobs that can be run simultaneously and this number should be equal to or less than the maximum number of jobs specified in DEFORMSetup and also based on the license available. This option is available only for DOE/OPT jobs submission in queue.
+  * **Súbežné úlohy**: Používateľ môže určiť počet simulácií alebo úloh, ktoré sa môžu spúšťať súbežne, pričom tento počet by mal byť rovnaký alebo menší ako maximálny počet úloh špecifikovaný v DEFORMSetup a mal by tiež zodpovedať dostupnej licencii. Táto možnosť je k dispozícii iba pri odosielaní úloh typu DOE/OPT do fronty.
 
-  * **Simulation Mode** : There are two simulation modes those are,
+  * **Simulačný režim**: Existujú dva simulačné režimy, a to:
 
   
-![]({{ '/assets/icons/simulator_icons/mo_interactive_mode_rb.jpg' | relative_url }}) : Using this option, user can run simulations without simulation server by selecting ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button. This option does not require simulation server to be running. (See Fig. 23.2.3.) 
+![]({{ '/assets/icons/simulator_icons/mo_interactive_mode_rb.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ spúšťať simulácie bez simulačného servera kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}). Táto možnosť nevyžaduje, aby bol simulačný server spustený. (Pozri obr. 23.2.3.) 
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image003.jpg' | relative_url }})
 
-Run options window for MO job in interactive simulation mode
+Spustiť okno s voľbami pre úlohu MO v interaktívnom simulačnom režime
 
   
-Interactive simulation mode settings are,
+Nastavenia interaktívneho simulačného režimu sú nasledovné:
 
-**Computer Name:** This will display the name of the Machine
+**Názov počítača:** Tu sa zobrazí názov počítača
 
-**Type** : This will display whether it is a Single or Multi Processor simulation
+**Typ**: Tu sa zobrazí, či ide o simuláciu s jedným alebo viacerými procesormi
 
-**Path on Computer:** This will display the path of the DB and in case of DOE/OPT it indicates the path where DB's would be generated.
+**Cesta v počítači:** Tu sa zobrazí cesta k databáze a v prípade programov DOE/OPT sa tu uvádza cesta, kam sa budú databázy generovať.
 
-**Processors Per Job:** Using this option user can select the number of processors required to be used per job during simulation, currently available only for 3D simulation or job.
+**Počet procesorov na úlohu:** Pomocou tejto možnosti môže používateľ zvoliť počet procesorov, ktoré sa majú použiť na jednu úlohu počas simulácie; táto možnosť je v súčasnosti k dispozícii iba pre 3D simulácie alebo úlohy.
 
-**Shared Memory Size:** It displays Shared Memory allocated on the simulation server system for DEFORM simulation.
+**Veľkosť zdieľanej pamäte:** Zobrazuje veľkosť zdieľanej pamäte alokovanej v systéme simulačného servera pre simuláciu DEFORM.
 
-User can save the settings using ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) button and close the Run options window using ![]({{ '/assets/icons/pre_icons/mo_close_button.jpg' | relative_url }}) button.
+Používateľ môže nastavenia uložiť pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) a okno „Run options“ zatvoriť pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_close_button.jpg' | relative_url }}).
 
-![]({{ '/assets/icons/simulator_icons/mo_batch_mode_rb.jpg' | relative_url }}) : Using this option, user can run simulations only in batch mode (See Fig. 23.2.4.). It is essential to select any one of the available simulation servers listed or first available simulation server to simulate batch queue problems and click on ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}) button to start adding job to the queue. The displayed list contains only simulation servers that are added to the DEFORM Setup.
+![]({{ '/assets/icons/simulator_icons/mo_batch_mode_rb.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ spúšťať simulácie iba v dávkovom režime (pozri obr. 23.2.4.). Na simuláciu problémov s dávkovou frontou je nevyhnutné vybrať niektorý z uvedených dostupných simulačných serverov alebo prvý dostupný simulačný server a kliknúť na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}), čím sa začne pridávanie úlohy do fronty. Zobrazený zoznam obsahuje iba simulačné servery, ktoré sú pridané do nastavení programu DEFORM.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image004.jpg' | relative_url }})
 
-Run options window for MO job in batch simulation mode
+Spustiť okno s voľbami pre úlohu MO v režime dávkovej simulácie
 
   
-In Batch simulation mode selected simulation servers settings can be set by selecting the particular simulation server and clicking on ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}) button. (See Fig. 23.2.5.)
+V režime hromadnej simulácie je možné nastaviť parametre vybraných simulačných serverov tak, že vyberiete konkrétny simulačný server a kliknete na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}). (Pozri obr. 23.2.5.)
 
-![]({{ '/assets/icons/simulator_icons/mo_server_settings_button.jpg' | relative_url }}): Using this button user can set the selected simulation server settings like processors to be utilized per job during simulation and shared memory.
+![]({{ '/assets/icons/simulator_icons/mo_server_settings_button.jpg' | relative_url }}): Pomocou tohto tlačidla môže používateľ nastaviť vybrané parametre simulačného servera, ako napríklad počet procesorov, ktoré sa majú využiť na jednu úlohu počas simulácie, a zdieľanú pamäť.
 
-**Server Name** : This will display the selected simulation server machine name
+**Názov servera**: Zobrazí sa názov vybraného simulačného servera
 
-**Type** : This will display whether it is a Single or Multi Processor simulation
+**Typ**: Tu sa zobrazí, či ide o simuláciu s jedným alebo viacerými procesormi
 
-**Path on Server** : This will display path of the DB if user selected the local machine  
-as simulation server or else will display as "Copied from :<Phisical_DB_existing_Machine_name>"
+**Cesta na serveri**: Tu sa zobrazí cesta k databáze, ak používateľ zvolil lokálny počítač  
+ako simulačný server, inak sa zobrazí ako „Kopírované z: <Phisical_DB_existing_Machine_name>“
 
-**Processors Per Job** : Using this user can select the number of processors to be used  
-per 3D simulation or job.
+**Počet procesorov na úlohu**: Pomocou tejto možnosti môže používateľ zvoliť počet procesorov, ktoré sa majú použiť  
+na jednu 3D simuláciu alebo úlohu.
 
-**Shared Memory Size:** It displays Shared Memory allocated on the simulation server  
-system for DEFORM simulation.
+**Veľkosť zdieľanej pamäte:** Zobrazuje veľkosť zdieľanej pamäte pridelenú na simulačnom serveri  
+systém na simuláciu DEFORM.
 
   
-User can save the settings using ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) button and close the Run options window using ![]({{ '/assets/icons/pre_icons/mo_close_button.jpg' | relative_url }}) button.
+Používateľ môže nastavenia uložiť pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) a okno „Možnosti spustenia“ zatvoriť pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_close_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image005.jpg' | relative_url }})
 
-Batch simulation mode server settings
+Nastavenia servera v režime hromadnej simulácie
 
   
-**Simulation Run types:** For normal multiple operations project in both interactive and batch mode user can run the simulation from the initial step or if it is stopped in between or wanted to restart from the mod we can do so by continue options. (See Fig. 23.2.6.)
+**Typy spustenia simulácie:** V prípade bežného projektu s viacerými operáciami, či už v interaktívnom alebo dávkovom režime, môže používateľ spustiť simuláciu od počiatočného kroku, alebo ak bola simulácia v priebehu zastavená, prípadne ak ju chce používateľ reštartovať z daného bodu, môže tak urobiť pomocou možností pokračovania. (Pozri obr. 23.2.6.)
 
-**Initial Run:** This will start the simulation from the first operation starting step. User can also use this option to restart the simulation from the beginning in case of simulation has stopped in the mid due to some license or network issues.
+**Prvé spustenie:** Týmto sa simulácia spustí od prvého kroku začiatku operácie. Túto možnosť môže používateľ využiť aj na opätovné spustenie simulácie od začiatku v prípade, že sa simulácia v priebehu prerušila kvôli problémom s licenciou alebo sieťou.
 
-**Continue Run:** This continue run will provide two options those are, 
+**Pokračovanie v hre:** Toto pokračovanie v hre ponúka dve možnosti, a to: 
 
-  * **Continue from the last step:** This will continue the simulation from the last available negative step. It is useful when user done some corrections to the setup and tries to restart from any stage of the simulation.
-  * **Restart from the selected Simulation:** This will restart the simulation from any of the intermediate operation's simulations by selecting that particular operation and its simulation.
+  * **Pokračovať od posledného kroku:** Týmto sa simulácia pokračuje od posledného dostupného negatívneho kroku. Je to užitočné v prípade, ak používateľ vykonal nejaké úpravy nastavení a chce simuláciu obnoviť z ľubovoľnej fázy.
+  * **Spustiť simuláciu od vybraného bodu:** Týmto sa simulácia spustí od ktoréhokoľvek bodu v rámci simulácie priebežných operácií – stačí vybrať príslušnú operáciu a jej simuláciu.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image006.jpg' | relative_url }})
 
-Simulation Run types from Run options for normal projects
+Typy simulačných behov z možností spustenia pre bežné projekty
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[23.3 Simulation Graphics](/docs/sk/simulator/23_deform_simulator/23_3_simulation_graphics/)
+[23.3 Simulation Graphics](/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/)
 
-[23.4. Process Monitor](/docs/sk/simulator/23_deform_simulator/23_4_process_monitor/)
+[23.4. Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/)
 
-[23.5. Setting up MPICH](/docs/sk/simulator/23_deform_simulator/23_5_setting_up_mpich/)
+[23.5. Setting up MPICH](/docs/en/simulator/23_deform_simulator/23_5_setting_up_mpich/)
 
-[23.8. Trouble Shooting Simulation Running](/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/)
+[23.8. Trouble Shooting Simulation Running](/docs/en/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/)
 
-[Pre-Processor](/docs/sk/post_processor/post_processor_mainpg/)
+[Pre-Processor](/docs/en/post_processor/post_processor_mainpg/)
 
-[Integrated Manufacturing Process (MO)](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/)
+[Integrated Manufacturing Process (MO)](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/)
 
-[Post -Processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[Post -Processor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
