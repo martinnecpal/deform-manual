@@ -1,118 +1,118 @@
 ---
 lang: sk
-title: "26.1. File operations in Post-processor"
+title: "26.1. Práce so súbormi v postprocesore"
 ---
 
-# 26.1. File operations in Post-processor
+# 26.1. Práce so súbormi v postprocesore
 
-26.1.1. Working with DB in PIP mode
+26.1.1. Práca s databázou v režime PIP
 
-The below Fig. 26.1.1. shows the **File menu** options,
+Na nižšie uvedenom obr. 26.1.1. sú zobrazené možnosti **ponuky Súbor**,
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/image001.jpg' | relative_url }})
 
-File menu option in Post - Processor
+Možnosť v ponuke „Súbor“ v postprocesore
 
-**New**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) (Ctrl +N) : It loads database file, This can also be accessed from File Tools menu
+**Nové** ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) (Ctrl + N): Načíta súbor databázy. Túto funkciu je možné spustiť aj z ponuky Súbor > Nástroje.
 
-**Open**..![]({{ '/assets/icons/pre_icons/mo_open_icon.jpg' | relative_url }}) (Ctrl +O): It loads Database file and saved DEFORM session file, This can also be accessed from File Tools menu
+**Otvoriť**..![]({{ '/assets/icons/pre_icons/mo_open_icon.jpg' | relative_url }}) (Ctrl + O): Načíta databázový súbor a uložený súbor relácie programu DEFORM. K tejto funkcii sa dostanete aj cez ponuku Súbor > Nástroje.
 
-**Save**![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}) (Ctrl +S): It saves the session file, This can also be accessed from File Tools menu
+**Uložiť**![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}) (Ctrl + S): Uloží súbor relácie. Túto funkciu je možné spustiť aj z ponuky Súbor > Nástroje.
 
-**Save as..** : It saves the session file in the selected directory with user specified name.
+**Uložiť ako...** : Uloží súbor relácie do vybraného adresára pod názvom zadaným používateľom.
 
-**Import DB (PIP)**![]({{ '/assets/icons/post_icons/mo_import_database_in_pip_icon.jpg' | relative_url }}) (Ctrl+Shift+D) : Picture in picture feature is helpful to compare two or more databases or within same database at different steps across different state variables. Using this option user can import more than one DB in the same session using (Import database in PIP) icon from header tool bar.
+**Import databázy (PIP)**![]({{ '/assets/icons/post_icons/mo_import_database_in_pip_icon.jpg' | relative_url }}) (Ctrl+Shift+D): Funkcia „obraz v obraze“ je užitočná na porovnávanie dvoch alebo viacerých databáz, alebo na porovnávanie rôznych fáz v rámci jednej databázy pri rôznych hodnotách stavových premenných. Pomocou tejto možnosti môže používateľ importovať viac ako jednu databázu v rámci jednej relácie pomocou ikony (Importovať databázu v PIP) na paneli nástrojov v hlavičke.
 
-For more details refer 
+Ďalšie informácie nájdete 
 
-**Export** : It saves the problem setup in .key file format. 
+**Export**: Uloží nastavenie úlohy vo formáte súboru .key. 
 
-**Folder option** : It open the working directory of the database in windows explorer.
+**Možnosť „Zložka“**: Otvorí pracovný adresár databázy v Průzkumníku Windows.
 
-**Image Setup**(Ctrl + M)**:** It is used to setup the current display window or the work space to the required pixel size and capture images to required location in required format. This can also be accessed from File Tools menu.(See Fig. 26.1.2.)
+**Nastavenie obrázku** (Ctrl + M)**:** Slúži na nastavenie aktuálneho zobrazovacieho okna alebo pracovného priestoru na požadovanú veľkosť v pixeloch a na zachytenie obrázkov do požadovaného umiestnenia v požadovanom formáte. Túto funkciu je možné otvoriť aj z ponuky Súbor > Nástroje. (Pozri obr. 26.1.2.)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/image002.jpg' | relative_url }})
 
-Image Setup popup
+Vyskakovacie okno „Nastavenie obrázku“
 
-**Capture image** ![]({{ '/assets/icons/pre_icons/mo_capture_screen_image_to_file_icon.jpg' | relative_url }}) (Ctrl + I): It writes the current screen image to a file using the specified image format.
+**Zachytiť obraz** ![]({{ '/assets/icons/pre_icons/mo_capture_screen_image_to_file_icon.jpg' | relative_url }}) (Ctrl + I): Uloží aktuálny obraz obrazovky do súboru v zadanom formáte.
 
-**Capture Image to clipboard**![]({{ '/assets/icons/pre_icons/mo_capture_screen_to_clip_board_icon.jpg' | relative_url }}) (Ctrl + Shift+ I): It writes the current screen image to the clipboard. (On PC vista operating system, for some display drivers, this feature works only in 'Windows Vista Basic' mode in the system personalization settings).
+**Uloženie obrázku do schránky**![]({{ '/assets/icons/pre_icons/mo_capture_screen_to_clip_board_icon.jpg' | relative_url }}) (Ctrl + Shift + I): Táto funkcia uloží aktuálny obrázok obrazovky do schránky. (V operačnom systéme Windows Vista na PC táto funkcia pri niektorých ovládačoch grafickej karty funguje iba v režime „Windows Vista Basic“ v nastaveniach personalizácie systému).
 
-**Recent projects** : This option is helpful to open the last ten previously opened Databases.
+**Nedávne projekty**: Táto voľba slúži na otvorenie posledných desiatich predtým otvorených databáz.
 
-**Close**(Ctrl+W) : It closes the current working project but does not quit from the pre processor.
+**Zatvoriť** (Ctrl+W): Zatvorí aktuálny pracovný projekt, ale neukončí prevádzku preprocesora.
 
-**Quit**(Ctrl+Q) : It is used to exit from Post Processor.
+**Ukončiť** (Ctrl+Q): Slúži na ukončenie postprocesora.
 
-For **Viewport menu** and **Windows****menu** options refer chapter [26.2. Viewports and Windows Menu](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/).
+Informácie o možnostiach v **ponuke Viewport** a **ponuke Windows****** nájdete v kapitole [26.2. Viewports and Windows Menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/).
 
-For **Display****menu** and **Mouse****menu** options refer chapter [26.3. Object Display Controls](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_3_object_display_controls/).
+Informácie o možnostiach **Ponuka „Display“**** a **Ponuka „Mouse“**** nájdete v kapitole [26.3. Object Display Controls](/docs/en/post_processor/26_post_processing_tools_and_controls/26_3_object_display_controls/).
 
-For **Steps****menu** options refer chapter[ 26.4. Simulation Step Display Controls](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_4_simulation_step_display_controls/)
+Informácie o možnostiach v **ponuke „Kroky“** nájdete v kapitole [ 26.4. Simulation Step Display Controls](/docs/en/post_processor/26_post_processing_tools_and_controls/26_4_simulation_step_display_controls/)
 
-For **Options****menu** options refer chapter [26.5. PostProcessing Options Menu](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/)
+Informácie o možnostiach v **ponuke „Options“** nájdete v kapitole [26.5. PostProcessing Options Menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/)
 
-For **Tools Menu** options refer chapter [26.6. Post Processing tools](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/)
+Informácie o možnostiach v **ponuke Nástroje** nájdete v kapitole [26.6. Post Processing tools](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/)
 
-For **Sections****menu** and **Report****menu** options refer [27\. Introduction to Report Generation](/docs/sk/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/)
+Informácie o možnostiach v **ponuke „Sekcie“** a **ponuke „Správa“** nájdete v [27\. Introduction to Report Generation](/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/)
 
-For **Dock****Widgets****menu** options refer Chapter [25\. Post Processor Layout](/docs/sk/post_processor/25_post_processor_layout/25_post_processor_layout/) section [25.5. Dock Widget menu](../25_post_processor_layout/25_post_processor_layout.htm#25_5_Dock_Widget_menu)
+Informácie o možnostiach v **Dock****Widgets****menu** nájdete v kapitole [25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/), v časti [25.5. Dock Widget menu](../25_post_processor_layout/25_post_processor_layout.htm#25_5_Dock_Widget_menu)
 
-## Working with DB in PIP mode
+## Práca s databázou v režime PIP
 
-Picture in picture (PIP) feature is helpful to compare two or more data base results or results of same data base at different steps across different state variables. Using this option user can import more than one DB in the same session by ![]({{ '/assets/icons/post_icons/mo_import_database_in_pip_icon.jpg' | relative_url }}) (Import database in PIP) icon from header tool bar as shown in Fig. 26.1.3.
+Funkcia „obraz v obraze“ (PIP) je užitočná na porovnávanie dvoch alebo viacerých výsledkov z databázy alebo výsledkov tej istej databázy v rôznych krokoch pri rôznych stavových premenných. Pomocou tejto možnosti môže používateľ importovať viac ako jednu databázu v tej istej relácii pomocou ikony ![]({{ '/assets/icons/post_icons/mo_import_database_in_pip_icon.jpg' | relative_url }}) (Importovať databázu v PIP) z panela nástrojov v hlavičke, ako je znázornené na obr. 26.1.3.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_1_file_operations_in_post_processor/image003.jpg' | relative_url }})
 
-Import DB in PIP option in tool bar
+Možnosť „Importovať databázu do PIP“ na paneli nástrojov
 
-The imported DB opens in graphics window as a small picture as shown in Fig. 26.1.4., user can maximize, minimize, drag and move this PIP window using control points.
+Importovaná databáza sa otvorí v grafickom okne ako malý obrázok, ako je znázornené na obr. 26.1.4. Používateľ môže toto okno PIP zväčšiť, zmenšiť, pretiahnuť a presunúť pomocou ovládacích bodov.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_1_file_operations_in_post_processor/image004.jpg' | relative_url }})
 
-PIP on graphics window
+PIP v grafickom okne
 
-Selecting the PIP window will display border around the image with dots, keeping the cursor within this border gives pan icon, then user can move the PIP window by drag and drop as shown in Fig. 26.1.6. and PIP window can be maximized or minimized by dragging border dots when it shows arrow icon as shown in Fig. 26.1.5.
+Po výbere okna PIP sa okolo obrázka zobrazí rámček s bodkami; ak kurzor zostane v rámci tohto rámčeka, zobrazí sa ikona posúvania, a používateľ môže okno PIP presúvať ťahaním a púšťaním, ako je znázornené na obr. 26.1.6. Okno PIP je možné maximalizovať alebo minimalizovať ťahaním bodiek na okraji, keď sa zobrazí ikona šípky, ako je znázornené na obr. 26.1.5.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_1_file_operations_in_post_processor/image005.jpg' | relative_url }})
 
-Maximized PIP window with maximize and minimize drag option
+Maximalizované okno PIP s možnosťou ťahania na maximalizáciu a minimalizáciu
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_1_file_operations_in_post_processor/image006.jpg' | relative_url }})
 
-Moved PIP with pan option
+Presunutý PIP s možnosťou posúvania
 
-PIP window can also be maximized or minimized by keeping the cursor within the border and scrolling the mouse scroll button.
+Okno PIP je možné tiež maximalizovať alebo minimalizovať tak, že kurzor ponecháte v rámci okraja a otočíte kolieskom myši.
 
-After selecting the PIP window user can play the steps, plot state variable and graphs and compare the results with the main graphics window DB. (See Fig. 26.1.7. and Fig. 26.1.8.)
+Po výbere okna PIP môže používateľ prehrávať jednotlivé kroky, vykresľovať stavové premenné a grafy a porovnávať výsledky s hlavným grafickým oknom DB. (Pozri obr. 26.1.7. a obr. 26.1.8.)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_1_file_operations_in_post_processor/image007.jpg' | relative_url }})
 
-State variable contour plot in both main and PIP DB at different steps For 3D
+Graf kontúrov stavových premenných v hlavnej aj v PIP databáze v rôznych krokoch pre 3D
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_1_file_operations_in_post_processor/image008.jpg' | relative_url }})
 
-State variable contour plot in both main and PIP DB at different steps For 2D
+Graf obrysov stavových premenných v hlavnej aj v PIP databáze v rôznych krokoch pre 2D
 
-**Order** :
+**Objednávka** :
 
-User can arrange the PIP DB’s for better display using the Order option available from RMB options of PIP. The Order menu has options to move back the selected PIP DB or Bring to Front etc. Options available from Order menu are shown in below Fig. 26.1.9.
+Používateľ môže usporiadať databázy PIP tak, aby sa lepšie zobrazovali, a to pomocou možnosti „Poradie“, ktorá je dostupná v kontextovom menu pravého tlačidla myši (RMB) pri položke PIP. Ponuka „Poradie“ obsahuje možnosti na posunutie vybranej databázy PIP dozadu alebo na jej presunutie do popredia atď. Možnosti dostupné v ponuke „Poradie“ sú znázornené na nižšie uvedenom obr. 26.1.9.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_1_file_operations_in_post_processor/image009.jpg' | relative_url }})
 
-Order option for PIP DB
+Možnosť objednávky pre PIP DB
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[25\. Post Processor Layout](/docs/sk/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
 
-[26.2. Viewports and Windows Menu](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/)
+[26.2. Viewports and Windows Menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/)
 
-[26.3. Object Display Controls](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_3_object_display_controls/)
+[26.3. Object Display Controls](/docs/en/post_processor/26_post_processing_tools_and_controls/26_3_object_display_controls/)
 
-[26.4. Simulation Step Display Controls](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_4_simulation_step_display_controls/)
+[26.4. Simulation Step Display Controls](/docs/en/post_processor/26_post_processing_tools_and_controls/26_4_simulation_step_display_controls/)
 
-[26.5. PostProcessing Options Menu](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/)
+[26.5. PostProcessing Options Menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/)
 
-[26.6. Post Processing tools](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/)
+[26.6. Post Processing tools](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/)

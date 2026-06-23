@@ -1,46 +1,46 @@
 ---
 lang: sk
-title: "27. Introduction to Report Generation"
+title: "27. Úvod do tvorby správ"
 ---
 
-# 27\. Introduction to Report Generation
+# 27\. Úvod do tvorby správ
 
-Report generation feature in MO and Next Gen Post helps user to generate report automatically with contour plots for selected state variables, point tracking, load – stroke graphs, .. etc. The report can be saved in pdf format ( 2D & 3D) or as an ppt file. We can generate the report either as interactive mode or batch mode (See Fig. 27.1.).
+Funkcia generovania správ v programoch MO a Next Gen Post pomáha používateľom automaticky vytvárať správy s kontúrovými grafmi pre vybrané stavové premenné, sledovaním bodov, grafmi zaťaženia a zdvihu atď. Správu je možné uložiť vo formáte PDF (2D a 3D) alebo ako súbor PPT. Správu môžeme vygenerovať buď v interaktívnom režime, alebo v dávkovom režime (pozri obr. 27.1.).
 
 ![]({{ '/assets/images/post_processor/27_introduction_to_report_generation/image001.jpg' | relative_url }})
 
-Report generation setup
+Nastavenie generovania správ
 
-**In Batch post mode** : After completion of setup of all operations, add Report generation operation from Explorer operation list. Complete the report generation setup and run simulation. After completion of simulation of all operations prior to report generation, report generation operation will start to generate report for the selected state variables and graphs.
+**V režime hromadného odosielania**: Po dokončení nastavenia všetkých operácií pridajte operáciu „Generovanie správy“ zo zoznamu operácií v Průzkumníku. Dokončite nastavenie generovania správy a spustite simuláciu. Po dokončení simulácie všetkých operácií, ktoré predchádzajú generovaniu správy, sa spustí operácia „Generovanie správy“, ktorá vygeneruje správu pre vybrané stavové premenné a grafy.
 
-**In Interactive batch mode** : In Next Gen post from Report tab we can generate the report by selecting required state variables and graphs or . DS file can also be used to generate report.
+**V interaktívnom dávkovom režime**: V položke „Next Gen“ na karte „Report“ môžeme vygenerovať správu výberom požadovaných stavových premenných a grafov alebo pomocou súboru .DS. Na vygenerovanie správy je možné použiť aj súbor .DS.
 
-**Section Menu:** User defined custom sections can be added and deleted by using the ![]({{ '/assets/icons/post_icons/mo_add_section_button.jpg' | relative_url }}) (Add new section) and ![]({{ '/assets/icons/post_icons/mo_delete_section_button.jpg' | relative_url }}) (Delete section) under Section tab also using tool bar icons. See Fig. 27.2.
+**Ponuka sekcií:** Vlastné sekcie definované používateľom je možné pridávať a odstraňovať pomocou tlačidiel ![]({{ '/assets/icons/post_icons/mo_add_section_button.jpg' | relative_url }}) (Pridať novú sekciu) a ![]({{ '/assets/icons/post_icons/mo_delete_section_button.jpg' | relative_url }}) (Odstrániť sekciu) na karte „Sekcia“, ako aj pomocou ikon na paneli nástrojov. Pozri obr. 27.2.
 
 ![]({{ '/assets/images/post_processor/27_introduction_to_report_generation/image002.jpg' | relative_url }})
 
-Section Menu
+Ponuka sekcie
 
-**Report Menu:** Below are the options available under Report tab as shown in Fig. 27.3.,
+**Ponuka Správa:** Nižšie sú uvedené možnosti dostupné na karte Správa, ako je znázornené na obr. 27.3.,
 
 ![]({{ '/assets/images/post_processor/27_introduction_to_report_generation/image003.jpg' | relative_url }})
 
-Report Menu
+Ponuka správ
 
-  * **Generate** : This option is used to generate the report for the added chapter under Report tab. Also for the imported loaded report template report can be generated using this option.
+  * **Vytvoriť**: Táto voľba slúži na vytvorenie správy pre pridanú kapitolu na karte Správa. Pomocou tejto voľby je možné vytvoriť správu aj na základe importovanej alebo načítanej šablóny správy.
 
-  * **Generate****Auto****report** : It will generate auto report with generate the report by using the default section of metal flow, state variable plot with Stress-Effective, Strain-Effective and Temperature state variables, Stroke V/S Load Graph and temperature summary plot.
+  * **Vytvoriť****automatickú****správu**: Vytvorí sa automatická správa, ktorá bude obsahovať predvolenú časť týkajúcu sa toku kovu, graf stavových premenných so stavovými premennými „napätie-efektívne“, „deformácia-efektívne“ a „teplota“, graf zdvihu v závislosti od zaťaženia a súhrnný graf teploty.
 
-  * **Open Folder** : It open the working directory in windows explorer.
+  * **Otvoriť priečinok**: Otvorí pracovný priečinok v Průzkumníku Windows.
 
-  * **Load Report template** : Using this option user can import the saved report template (*.ds file).
+  * **Načítať šablónu správy**: Pomocou tejto možnosti môže používateľ načítať uloženú šablónu správy (súbor s príponou *.ds*).
 
-  * **Save Report template** : Using this option user can save the report data to a template (*.ds file).
+  * **Uložiť šablónu správy**: Pomocou tejto možnosti môže používateľ uložiť údaje zo správy do šablóny (súbor s príponou *.ds*).
 
-**MikTex:** From DEFORM v12.0., MikTex software is used to generate Report in DEFORM.
+**MikTeX:** Od verzie DEFORM v12.0 sa na generovanie správ v programe DEFORM používa softvér MikTeX.
 
-In Generate PDF file, now user can observe the Contents of each chapter, Summary summary of each operation and object/s data and each section output. For more information related generated report refer chapter [28\. Report Generation](/docs/sk/post_processor/28_report_generation/28_report_generation/) section [Generating Report](../28_report_generation/28_report_generation.htm#Generating__Report)
+V časti „Vytvoriť súbor PDF“ si používateľ môže teraz prezrieť obsah jednotlivých kapitol, súhrn jednotlivých operácií a údajov o objektoch, ako aj výstupy jednotlivých sekcií. Ďalšie informácie týkajúce sa vygenerovanej správy nájdete v kapitole [28\. Report Generation](/docs/en/post_processor/28_report_generation/28_report_generation/), v sekcii [Generating Report](../28_report_generation/28_report_generation.htm#Generating__Report).
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[28\. Report Generation](/docs/sk/post_processor/28_report_generation/28_report_generation/)
+[28\. Report Generation](/docs/en/post_processor/28_report_generation/28_report_generation/)

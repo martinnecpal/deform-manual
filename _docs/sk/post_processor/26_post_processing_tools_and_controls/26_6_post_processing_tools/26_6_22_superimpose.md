@@ -3,20 +3,20 @@ lang: sk
 title: "26.6.22. SuperImpose"
 ---
 
-# 26.6.22. Superimpose ![]({{ '/assets/icons/post_icons/mo_superimpose_icon.jpg' | relative_url }})
+# 26.6.22. Prekrývanie ![]({{ '/assets/icons/post_icons/mo_superimpose_icon.jpg' | relative_url }})
 
-Superimpose can be used for different database or for same database at different steps.
+Funkciu „Superimpose“ je možné použiť pre rôzne databázy alebo pre tú istú databázu v rôznych krokoch.
 
-Superimpose can be added by selecting ![]({{ '/assets/icons/post_icons/mo_superimpose_icon.jpg' | relative_url }}) icon, then using Mouse Right click option click on object for superimpose and Hold the mouse right click, then move the curser point on other viewport object and release the mouse right click as shown in Fig. 26.6.22.1. In Object tree we can see the added overlay object (s) data. Superimpose can be used for Models, state variable contour, Slicing and Graphs plots (load-stroke, Summary plot, point tracking). Superimpose capability can be used for DB comparison.
+Funkciu prekrývania je možné pridať výberom ikony ![]({{ '/assets/icons/post_icons/mo_superimpose_icon.jpg' | relative_url }}), následným kliknutím pravým tlačidlom myši na objekt, ktorý sa má prekrývať, podržaním pravého tlačidla myši a presunutím kurzora na iný objekt v okne zobrazenia, po čom uvoľníte pravé tlačidlo myši, ako je znázornené na obr. 26.6.22.1. V stromovej štruktúre objektov môžeme vidieť údaje o pridaných prekrývajúcich objektoch. Prekrývanie je možné použiť pre modely, kontúry stavových premenných, rezy a grafy (zaťaženie-posun, súhrnný graf, sledovanie bodov). Funkciu prekrývania je možné využiť na porovnanie databáz.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_22_superimpose/image001.jpg' | relative_url }})
 
-Superimpose option
+Možnosť prekrývania
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_22_superimpose/image002.jpg' | relative_url }})
 
-Superimpose with sliced object
+Prekryť s nakrájaným objektom
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_22_superimpose/image003.jpg' | relative_url }})
 
-Superimpose for Graph
+Prekrývanie pre graf

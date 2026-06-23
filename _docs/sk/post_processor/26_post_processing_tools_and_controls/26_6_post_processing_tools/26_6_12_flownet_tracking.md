@@ -1,325 +1,325 @@
 ---
 lang: sk
-title: "26.6.12. Flownet Tracking"
+title: "26.6.12. Sledovanie Flownet"
 ---
 
-# 26.6.12. Flownet Tracking
+# 26.6.12. Sledovanie Flownet
 
   * 2D Flownet
 
-  * Rectangular Grid
+  * Obdĺžniková mriežka
 
-  * Polygon Pattern
+  * Vzor z mnohouholníkov
 
-  * Offset Pattern
+  * Vzor posunu
 
-  * User Defined Flownet****
+  * Užívateľsky definovaná sieť Flownet****
 
   * 3D Flownet
 
-  * Cubic Pattern
+  * Kockový vzor
 
-  * Grid Pattern
+  * Mriežkový vzor
 
-  * Polygon Pattern
+  * Vzor z mnohouholníkov
 
-  * 2D Offset
+  * 2D posun
 
-  * Offset
+  * Posun
 
-  * Surface grid pattern
+  * Vzor mriežky na povrchu
 
-  * User Defined Flownet
+  * Užívateľsky definovaná sieť Flownet
 
-  * Flowline tracking
+  * Sledovanie potrubia
 
-**[2D, 3D]** : The flownet is a post-processing tool that allows the user to place some form (2D or 3D) of a grid onto the object and let the simulation track the deformation of the grid throughout the deformation. As the mesh deforms, so does the pattern, however, unlike the FEM mesh, the pattern remains intact throughout the remeshings. Thus, the flownet is much like physically etching a pattern on a cross section of a workpiece .This is an excellent way in which to visualize any potential irregularities in the grain structure or to view potential surface defects such as folds. It should be noted that flownet patterns can be generated only for deforming objects. The start step list will contain all of the steps in the display window currently loaded by default.
+**[2D, 3D]** : Flownet je nástroj na následné spracovanie, ktorý používateľovi umožňuje umiestniť na objekt určitú formu (2D alebo 3D) mriežky a nechať simuláciu sledovať deformáciu mriežky počas celého procesu deformácie. Ako sa deformuje sieť, deformuje sa aj vzor, avšak na rozdiel od siete FEM zostáva vzor počas všetkých prepočítaní siete zachovaný. Flownet sa teda veľmi podobá fyzickému vyrytiu vzoru na priečnom reze obrobku.Je to vynikajúci spôsob, ako vizualizovať akékoľvek potenciálne nepravidelnosti v štruktúre zŕn alebo zobraziť potenciálne povrchové vady, ako sú záhyby. Treba poznamenať, že vzory Flownet je možné generovať iba pre deformujúce sa objekty. Zoznam počiatočných krokov bude obsahovať všetky kroky v zobrazenom okne, ktoré sú aktuálne načítané ako predvolené.
 
 **2D Flownet** :
 
-A flow net region is defined in the graphics window. It can be selected within an object’s border or boundary. In order to define a region, user must add at least three points within the object’s border. Afterwards respective pattern settings must be selected and preview the pattern. Once the pattern has been defined, select generate pattern in the pattern generation \ tracking window.
+Oblasť toku siete sa definuje v grafickom okne. Je možné ju vybrať v rámci obrysu alebo hranice objektu. Na definovanie oblasti musí používateľ pridať aspoň tri body v rámci obrysu objektu. Následne je potrebné vybrať príslušné nastavenia vzoru a zobraziť jeho náhľad. Po definovaní vzoru vyberte možnosť „Generovať vzor“ v okne „Generovanie vzoru \ Sledovanie“.
 
-**Types of grid patterns available in 2D** :
+**Druhy mriežkových vzorov dostupných v 2D** :
 
-Grid, Polygon, Offset and User defined are the grid pattern types available in 2D.
+V 2D sú k dispozícii tieto typy mriežkových vzorov: Mriežka, Mnohouholník, Posun a Užívateľsky definovaný.
 
-  * **Rectangular Grid [2D]**
+  * **Obdĺžniková mriežka [2D]**
 
-The rectangular grid option will generate a grid composed of perpendicular lines within the desired region. Rectangular patterns are typically used when the material texture is of interest. This pattern is very similar to the grain flow which would be seen if a cross section of the part were etched. If a rectangular pattern is selected, you must specify the grid origin, orientation angle, and line spacing in X and Y.
+Možnosť „obdĺžniková mriežka“ vytvorí mriežku zloženú z kolmých čiar v rámci požadovanej oblasti. Obdĺžnikové vzory sa zvyčajne používajú v prípadoch, keď je dôležitá textúra materiálu. Tento vzor je veľmi podobný smeru vlákien, ktorý by bol viditeľný, keby bol priečny rez dielom vyrytý. Ak je zvolený obdĺžnikový vzor, je potrebné určiť počiatok mriežky, uhol orientácie a rozstup čiar v osiach X a Y.
 
-**Steps to define Grid Pattern:**
+**Postup pri definovaní mriežkového vzoru:**
 
-  1. Select the type of grid pattern to be used (See Fig. 26.6.12.1.). The Rectangular grid is chosen. Define required number of Boundary points by clicking on workpiece and then Next is clicked. Also user can click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) without defining boundary points. By default system will consider workpiece boundary as boundary points.
+  1. Vyberte typ mriežky, ktorú chcete použiť (pozri obr. 26.6.12.1.). Je zvolená obdĺžniková mriežka. Definujte požadovaný počet ohraničujúcich bodov kliknutím na obrobok a potom kliknite na tlačidlo Ďalej. Používateľ môže tiež kliknúť na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) bez definovania ohraničujúcich bodov. Systém bude štandardne považovať ohraničenie obrobku za ohraničujúce body.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image001.jpg' | relative_url }})
 
-Flownet pattern generation
+Generovanie vzorov v programe Flownet
 
-  1. At this time, the density of the grid needs to be specified. In the case of the grid, the number of grid can be set for a regularly spaced grid. By selecting preview the grid can be seen before calculating for all steps. After a desired grid is obtained, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (See Fig. 26.6.12.2.)
+  1. V tejto fáze je potrebné určiť hustotu mriežky. V prípade mriežky je možné nastaviť počet bodov pre mriežku s pravidelnými rozstupmi. Výberom možnosti „náhľad“ si môžete mriežku prezrieť ešte pred výpočtom všetkých krokov. Po získaní požadovanej mriežky kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (Pozri obr. 26.6.12.2.)
 
-The grid definition can be controlled by the following parameters:
+Definíciu mriežky je možné nastaviť pomocou nasledujúcich parametrov:
 
-**Grid Data** :
+**Údaje o sieti** :
 
-**Number of Grids** : user can define number of grids in X and Y axis respectively.
+**Počet mriežok**: používateľ môže nastaviť počet mriežok na osi X, resp. na osi Y.
 
-**Spacing** :This is the distance (DX and DY) between each grid point in the X and Y directions.
+**Rozstup**: Ide o vzdialenosť (DX a DY) medzi jednotlivými bodmi mriežky v smeroch X a Y.
 
-**Number of Sections** : user can define number of sections to be displayed in 3D view.
+**Počet sekcií**: používateľ môže určiť počet sekcií, ktoré sa majú zobraziť v 3D pohľade.
 
-**Rotation Angle** : This will determine the angle at which the grid will be drawn in degrees.
+**Uhol otočenia**: Táto hodnota určuje uhol, pod ktorým sa mriežka nakreslí, vyjadrený v stupňoch.
 
-**Shift** : This is the origin of grid.
+**Posun**: Ide o počiatok súradnicovej sústavy.
 
-**Advanced Options** :
+**Pokročilé nastavenia** :
 
-**Boundary** : To include only boundary of the grid.
+**Hranica**: Zahrnúť iba hranice mriežky.
 
-**Parallel to X line** : To include X-lines of the grid.
+**Paralelne s čiarou X**: Na zahrnutie čiar X mriežky.
 
-**Parallel to Y line** : To include Y-lines of the grid.
+**Paralelne s líniou Y**: Na zobrazenie línií Y mriežky.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image002.jpg' | relative_url }})
 
-Flownet Grid definition Window
+Okno definície mriežky Flownet
 
-  1. At this time, advanced options are available such as saving either the beginning or end pattern (See Fig. 26.6.12.3.). This is useful if a flownet from a different database is to be output to. Click ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }})when finished and the flownet will be calculated. (See Fig. 26.6.12.4.) 
+  1. V tejto fáze sú k dispozícii pokročilé možnosti, ako napríklad uloženie počiatočného alebo koncového vzoru (pozri obr. 26.6.12.3.). To je užitočné v prípade, ak sa má výstupom stať sieť z inej databázy. Po dokončení kliknite na ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) a letová sieť sa vypočíta. (Pozri obr. 26.6.12.4.) 
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image003.jpg' | relative_url }})
 
-Advanced flownet settings window
+Okno s pokročilými nastaveniami programu Flownet
 
-A pattern can be tracked backwards by selecting a later step in the database as the starting step, then selecting an earlier step as the ending step.
+Vzor je možné sledovať spätne tak, že ako počiatočný krok vyberiete neskorší krok v databáze a ako konečný krok vyberiete skorší krok.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image004.jpg' | relative_url }})
 
-Example of 2D grid flownet
+Príklad 2D mriežkového siete „flownet“
 
-  * **Polygon Patte****rn [2D]:**
+  * **Vzor mnohouholníka [2D]:**
 
-The generation of polygon pattern is as shown below. The user can also generate concentric circle flownet for tracing material flow using circular shape. The circular grid can generate a field of circles of a given radius and distance apart within the desired region. Circular patterns are typically used to monitor directional orientation of flow. If a polygon pattern is selected user must specify the grid origin, Diameter, center to center distance between polygons, number of segments in the polygons, and whether clipped circles should be included.
+Vytvorenie polygónového vzoru prebieha tak, ako je znázornené nižšie. Používateľ môže tiež vytvoriť sieť sústredných kruhov na sledovanie toku materiálu pomocou kruhového tvaru. Kruhová mriežka dokáže vytvoriť sústavu kruhov s daným polomerom a vzájomnou vzdialenosťou v rámci požadovanej oblasti. Kruhové vzory sa zvyčajne používajú na monitorovanie smerovej orientácie toku. Ak je zvolený polygónový vzor, používateľ musí určiť počiatok mriežky, priemer, vzdialenosť medzi stredmi polygónov, počet segmentov v polygónoch a či majú byť zahrnuté orezané kruhy.
 
-**Steps to define polygon pattern:**
+**Postup pri definovaní vzoru mnohouholníka:**
 
-  1. Select polygon type of grid pattern (See Fig. 26.6.12.5.). Define required number of Boundary points by clicking on workpiece and then Next is clicked. Also user can click next without defining boundary points. By default system will consider workpiece boundary as boundary points.
+  1. Vyberte typ mriežky s polygónmi (pozri obr. 26.6.12.5.). Definujte požadovaný počet hraničných bodov kliknutím na obrobok a následným kliknutím na tlačidlo Ďalej. Používateľ môže kliknúť na tlačidlo Ďalej aj bez definovania hraničných bodov. Systém štandardne považuje hranice obrobku za hraničné body.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image005.jpg' | relative_url }})
 
-Polygon region definition
+Definícia oblasti polygónu
 
-  1. At this time, the density of the grid needs to be specified. In the case of the grid, the number of grid can be set for a regularly spaced grid. By selecting preview the grid can be seen before calculating for all steps. After a desired grid is obtained, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (See Fig. 26.6.12.6.)
+  1. V tejto fáze je potrebné určiť hustotu mriežky. V prípade mriežky je možné nastaviť počet bodov pre mriežku s pravidelnými rozstupmi. Výberom možnosti „náhľad“ si môžete mriežku prezrieť ešte pred výpočtom všetkých krokov. Po získaní požadovanej mriežky kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (Pozri obr. 26.6.12.6.)
 
-The grid definition can be controlled by the following parameters: ****
+Definíciu mriežky je možné nastaviť pomocou nasledujúcich parametrov: ****
 
-**Grid Amount:**
+**Výška príspevku:**
 
-  * **Number of Grids in X dir** : By selecting this radio button user can define no. of grids to be placed in X- direction.
+  * **Počet mriežok v smere X**: Výberom tohto prepínača môže používateľ určiť počet mriežok, ktoré sa majú umiestniť v smere X.
 
-  * **Center to center distance** : Specifies the vertical and horizontal distance between each center of neighboring polygons.
+  * **Vzdialenosť od stredu k stredu**: Určuje vertikálnu a horizontálnu vzdialenosť medzi jednotlivými stredu susedných mnohouholníkov.
 
-  * **Number of Sections** : It displays the defined number of sections, when user view in 3D mode.
+  * **Počet sekcií**: Zobrazuje definovaný počet sekcií, keď si používateľ prezerá model v 3D režime.
 
-**Diameter** : Specifies the size of each polygon.
+**Priemer**: Určuje veľkosť každého mnohouholníka.
 
-**Type** : User can select required type of polygon patterns (circle, triangle, pentagon, diamond,hexagon etc..) to visualize the results.
+**Typ**: Používateľ si môže vybrať požadovaný typ polygónových vzorov (kruh, trojuholník, päťuholník, kosoštvorec, šesťuholník atď.) na vizualizáciu výsledkov.
 
-**Show Clipped** : Includes any partial polygons that were clipped by the region’s boundaries. (default is yes)
+**Zobraziť orezané**: Zahrňuje všetky čiastočné polygóny, ktoré boli orezané hranicami oblasti. (predvolené nastavenie je „áno“)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image006.jpg' | relative_url }})
 
-Polygon grid definition
+Definícia polygónovej mriežky
 
-  1. At this time, advanced options are available such as saving either the beginning or end pattern (See Fig. 26.6.12.3.). This is useful if a flownet from a different database is to be output to. Click ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) when finished and the flownet will be calculated. (See Fig. 26.6.12.7.)
+  1. V tejto fáze sú k dispozícii pokročilé možnosti, ako napríklad uloženie počiatočného alebo koncového vzoru (pozri obr. 26.6.12.3.). To je užitočné v prípade, ak sa má výstupom stať sieť z inej databázy. Po dokončení kliknite na ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) a letová sieť sa vypočíta. (Pozri obr. 26.6.12.7.)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image007.jpg' | relative_url }})
 
-Example of 2D polygon flownet
+Príklad 2D polygónovej siete „flownet“
 
-  * **Offset Pattern [2D]**
+  * **Vzor posunu [2D]**
 
-The offset will draw an identical surface at a specified distance within the objects border. The border offset pattern is typically used to capture tendencies toward lap formations. If a border offset is selected you must specify the distance the border is offset.
+Posun nakreslí identickú plochu v určenej vzdialenosti od okraja objektu. Vzor posunu okraja sa zvyčajne používa na zachytenie tendencií k tvorbe prekrývaní. Ak je zvolený posun okraja, je potrebné určiť vzdialenosť, o ktorú sa má okraj posunúť.
 
-**Steps to define Offset pattern:**
+**Postup definovania vzoru posunu:**
 
-  1. Select Offset type of grid pattern (See Fig. 26.6.12.8.). Define required number of Boundary points by clicking on workpiece and then ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) is clicked. Also user can click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) without defining boundary points. By default system will consider workpiece boundary as boundary points.
+  1. Zvoľte typ mriežky „Offset“ (pozri obr. 26.6.12.8.). Definujte požadovaný počet hraničných bodov kliknutím na obrobok a následným kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Používateľ môže tiež kliknúť na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) bez definovania hraničných bodov. Systém štandardne považuje hranice obrobku za hraničné body.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image008.jpg' | relative_url }})
 
-2D Offset for 2D problem
+2D posun pre 2D úlohu
 
-  1. The offset curve is controlled through the following parameter.
+  1. Krivka posunu sa nastavuje pomocou nasledujúceho parametra.
 
-**Offset Distance** : The offset distance is a positive value specifying how far inside the region the identical border should be positioned.
+**Vzdialenosť posunu**: Vzdialenosť posunu je kladná hodnota, ktorá určuje, ako ďaleko dovnútra oblasti by mal byť umiestnený identický okraj.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image009.jpg' | relative_url }})
 
-2D Offset boundary definition
+Definícia hranice pomocou 2D posunu
 
-  1. At this time, advanced options are available such as saving either the beginning or end pattern (See Fig. 26.6.12.3. This is useful if a flownet is to be output to a different database. Click ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) when finished and the flownet will be calculated. (See Fig. 26.6.12.10.)
+  1. V tejto fáze sú k dispozícii pokročilé možnosti, ako napríklad uloženie počiatočného alebo koncového vzoru (pozri obr. 26.6.12.3). Toto je užitočné v prípade, ak sa má letová sieť exportovať do inej databázy. Po dokončení kliknite na ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) a letová sieť sa vypočíta. (Pozri obr. 26.6.12.10.)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image010.jpg' | relative_url }})
 
-Example of 2D offset grid pattern
+Príklad vzoru 2D posunutej mriežky
 
 **3D Flownet:**
 
-In 3D flownet user need to define the 3d region boundary by 2d planes or 2d planar boundary based on the type of the flow-net in the graphics window. These boundaries must be within an object's border. Afterwards respective pattern settings must be selected and preview the pattern. Once the pattern has been defined, just select generate pattern in the pattern generation \ tracking window.
+V programe 3D Flownet musí používateľ v grafickom okne definovať hranice 3D oblasti pomocou 2D rovín alebo 2D rovinných hraníc v závislosti od typu siete toku. Tieto hranice musia ležať v rámci obrysu objektu. Následne je potrebné vybrať príslušné nastavenia vzoru a zobraziť jeho náhľad. Po definovaní vzoru stačí v okne „Generovanie vzoru \ Sledovanie“ vybrať možnosť „Generovať vzor“.
 
-**Different types of Grid Patterns available in 3D** :
+**Rôzne typy mriežkových vzorov dostupné v 3D** :
 
-Cubic, Grid, Polygon, 2D Offset, Offset, Surface net and User defined are available in 3D.
+V 3D sú k dispozícii možnosti „Kocka“, „Mriežka“, „Mnohouholník“, „2D posun“, „Posun“, „Sieť povrchov“ a „Definované používateľom“.
 
-  * **Cubic pattern [3D]**
+  * **Kubický vzor [3D]**
 
-The generation of cubic grid pattern is as shown below. First the grid region has to be defined as shown in Fig. 26.6.12.11. and then the grid definition has to be defined as shown in Fig. 26.6.12.12. and finally the cubic grid will be generated as shown in Fig. 26.6.12.13.
+Vytvorenie kubickej mriežky prebieha nasledovne. Najskôr je potrebné vymedziť oblasť mriežky, ako je znázornené na obr. 26.6.12.11. Potom je potrebné definovať mriežku tak, ako je znázornené na obr. 26.6.12.12. A nakoniec sa vygeneruje kubická mriežka tak, ako je znázornené na obr. 26.6.12.13.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image011.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image012.jpg' | relative_url }})
 
-Region definition for cubic grid pattern
+Definícia oblasti pre kubický mriežkový vzor
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image013.jpg' | relative_url }})
 
-Grid definition for cubic grid pattern
+Definícia mriežky pre kubický mriežkový vzor
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image014.jpg' | relative_url }})
 
-Example of Cubic grid pattern
+Príklad vzoru s kubickou mriežkou
 
-  * **Grid Pattern [3D]**
+  * **Mriežkový vzor [3D]**
 
-  1. Select the **grid** type to be used (See Fig. 26.6.12.14.). Either 2D or 3D grids can be used. The 2D grids are less time-consuming for the same grid size since less information is required in two-dimensions. For this example, the grid selection is chosen and ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) is clicked.
+  1. Vyberte typ **mriežky**, ktorý sa má použiť (pozri obr. 26.6.12.14.). Možno použiť buď 2D, alebo 3D mriežky. 2D mriežky sú pri rovnakej veľkosti mriežky menej časovo náročné, pretože v dvoch rozmeroch sa vyžaduje menej informácií. V tomto príklade sa vyberie mriežka a klikne sa na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image015.jpg' | relative_url }})
 
-Flownet pattern generation
+Generovanie vzorov v programe Flownet
 
-  1. For the 2D grid, a plane has to be defined by using a slicing plane. The plane selection method is similar to the method used by the slicing dialog (See Fig. 26.6.12.15.). After specifying a plane to be used, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+  1. V prípade 2D mriežky je potrebné definovať rovinu pomocou rezacej roviny. Spôsob výberu roviny je podobný postupu používanému v dialógovom okne pre rezanie (pozri obr. 26.6.12.15.). Po určení roviny, ktorú chcete použiť, kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-  1. At this time, the density of the grid needs to be specified. In the case of the grid, the number of grid can be set for a regularly spaced grid. By selecting preview the grid can be seen before calculating for all steps. After a desired grid is obtained, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (See Fig. 26.6.12.15.)
+  1. V tejto fáze je potrebné určiť hustotu mriežky. V prípade mriežky je možné nastaviť počet bodov pre mriežku s pravidelnými rozstupmi. Výberom možnosti „náhľad“ si môžete mriežku prezrieť ešte pred výpočtom všetkých krokov. Po získaní požadovanej mriežky kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (Pozri obr. 26.6.12.15.)
 
-The grid definition can be controlled by the following parameters:
+Definíciu mriežky je možné nastaviť pomocou nasledujúcich parametrov:
 
-Grid Data:
+Údaje o mriežke:
 
-**Number of Grids:** user can define number of grids in X and Y axis respectively.
+**Počet mriežok:** používateľ môže nastaviť počet mriežok na osi X, resp. na osi Y.
 
-**Spacing:** This is the distance (DX and DY) between each grid point in the X and Y directions.
+**Rozstup:** Ide o vzdialenosť (DX a DY) medzi jednotlivými bodmi mriežky v smeroch X a Y.
 
-**Rotation Angle:** This will determine the angle at which the grid will be drawn in degrees.
+**Uhol otočenia:** Táto hodnota určuje uhol, pod ktorým sa mriežka nakreslí, vyjadrený v stupňoch.
 
-  * **Shift** : This is the origin of grid.
+  * **Posun**: Ide o počiatok súradnicovej sústavy.
 
-**Advanced Options:**
+**Pokročilé nastavenia:**
 
-  * **Boundary** : To include only the Boundary points.
+  * **Hranica**: Zahrnúť iba body hranice.
 
-  * **Parallel to X line** : To include X-lines of the grid.
+  * **Paralelne s čiarou X**: Na zahrnutie čiar X mriežky.
 
-  * **Parallel to Y line** : To include Y-lines of the grid.
+  * **Paralelne s čiarou Y**: Na zahrnutie čiar Y mriežky.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image016.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image017.jpg' | relative_url }})
 
-Flownet pattern generation
+Generovanie vzorov v programe Flownet
 
-  1. 4\. At this time, advanced options are available such as saving either the beginning or end pattern (See Fig. 26.6.12.3.). This is useful if a flownet from a different database is to be output to. Click ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) when finished and the flownet will be calculated. (See Fig. 26.6.12.16.). 
+  1. 4\. V tomto momente sú k dispozícii pokročilé možnosti, ako napríklad uloženie počiatočného alebo koncového vzoru (pozri obr. 26.6.12.3.). To je užitočné v prípade, ak sa má výstupná sieť vygenerovať z inej databázy. Po dokončení kliknite na ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) a letová sieť sa vypočíta. (Pozri obr. 26.6.12.16.). 
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image018.jpg' | relative_url }})
 
-Example of grid flownet 3D Grid Pattern
+Príklad mriežky „flownet“ – 3D mriežkový vzor
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image019.jpg' | relative_url }})
 
-Example of grid flownet Generation of vertical Grid
+Príklad mriežky Flownet – Vytvorenie vertikálnej mriežky
 
-  * **Polygon pattern [3D]**
+  * **Vzor z mnohouholníkov [3D]**
 
-The generation of polygon grid pattern is as shown below. First the grid region has to be defined as shown in Fig. 26.6.12.18 and then the grid definition has to be defined as shown in Fig. 26.6.12.19 and finally the polygon grid will be generated as shown in Fig. 26.6.12.20\. 
+Vytvorenie vzoru polygónovej mriežky prebieha tak, ako je znázornené nižšie. Najskôr je potrebné vymedziť oblasť mriežky, ako je znázornené na obr. 26.6.12.18, potom je potrebné definovať mriežku, ako je znázornené na obr. 26.6.12.19, a nakoniec sa vygeneruje polygónová mriežka, ako je znázornené na obr. 26.6.12.20\. 
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image020.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image021.jpg' | relative_url }})
 
-Polygon region definition
+Definícia oblasti polygónu
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image022.jpg' | relative_url }})
 
-Polygon grid definition
+Definícia polygónovej mriežky
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image023.jpg' | relative_url }})
 
-Example of 3D polygon flownet
+Príklad 3D polygónovej siete „flownet“
 
-**Concentric circles** : An example showing the generation of concentric circles flownet is shown in Fig. 26.6.12.21.
+**Sústredené kruhy**: Príklad znázorňujúci vytvorenie sústredených kruhov v programe Flownet je uvedený na obr. 26.6.12.21.
 
-**No. of circles** : user can define the no. of circles in this field.
+**Počet kruhov**: v tomto poli môže používateľ zadať počet kruhov.
 
-**Maximum radius** : user can define the maximum radius of circle.
+**Maximálny polomer**: používateľ môže určiť maximálny polomer kruhu.
 
-**Center position** : user can pick or enter one point to define center position.
+**Poloha stredu**: používateľ môže vybrať alebo zadať jeden bod na určenie polohy stredu.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image024.jpg' | relative_url }})
 
-Generation of concentric circle flownet pattern
+Vytvorenie vzoru z leteckých sietí v podobe sústredných kruhov
 
-  * **2D Offset [3D]**
+  * **2D posun [3D]**
 
-The generation of 2D offset pattern is as shown below. First the region has to be defined as shown in Fig. 26.6.12.22. and then the boundary definition has to be defined as shown in Fig. 26.6.12.23. and finally the boundary will be generated as shown in Fig. 26.6.12.24.
+Vytvorenie 2D posunutého vzoru prebieha tak, ako je znázornené nižšie. Najskôr je potrebné vymedziť oblasť, ako je znázornené na obr. 26.6.12.22, potom je potrebné definovať ohraničenie, ako je znázornené na obr. 26.6.12.23, a nakoniec sa ohraničenie vygeneruje, ako je znázornené na obr. 26.6.12.24.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image025.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image026.jpg' | relative_url }})
 
-Region definition of 2D Offset for 3D problem
+Definícia oblasti 2D posunu pre 3D úlohu
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image027.jpg' | relative_url }})
 
-Boundary definition of 2D Offset for 3D problem
+Definícia ohraničenia 2D posunu pre 3D úlohu
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image028.jpg' | relative_url }})
 
-2D offset boundary pattern for 3D problem
+Vzor 2D posunutých hraníc pre 3D úlohu
 
-  * **Offset [3D]**
+  * **Posun [3D]**
 
-The offset will draw an identical surface at a specified distance within the objects border. The border offset pattern is typically used to capture tendencies toward lap formations. If a border offset is selected you must specify the distance the border is offset. The offset curve is controlled through offset distance. The offset distance is a positive value specifying how far inside the region the identical border should be positioned. A rough value of one fourth of the lap distance can be used to define the offset distance. The generation of offset pattern is as shown below.
+Posun nakreslí identickú plochu v určenej vzdialenosti vnútri ohraničenia objektu. Vzor posunutia ohraničenia sa zvyčajne používa na zachytenie tendencií k tvorbe prekrývaní. Ak je zvolené posunutie ohraničenia, je potrebné určiť vzdialenosť, o ktorú sa ohraničenie posunie. Krivka posunutia sa riadi vzdialenosťou posunutia. Vzdialenosť posunu je kladná hodnota, ktorá určuje, ako ďaleko dovnútra oblasti by mal byť umiestnený identický okraj. Na definovanie vzdialenosti posunu možno použiť približnú hodnotu jednej štvrtiny vzdialenosti prekrývania. Vytvorenie vzoru posunu je znázornené nižšie.
 
-First the region has to be defined as shown in Fig. 26.6.12.25. and then the boundary definition has to be defined as shown in Fig. 26.6.12.26. and finally the boundary will be generated as shown in Fig. 26.6.12.27.
+Najskôr je potrebné vymedziť oblasť tak, ako je znázornené na obr. 26.6.12.25, potom je potrebné definovať hranice tak, ako je znázornené na obr. 26.6.12.26, a nakoniec sa hranica vygeneruje tak, ako je znázornené na obr. 26.6.12.27.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image029.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image030.jpg' | relative_url }})
 
-Offset boundary region definition
+Definícia oblasti s posunutými hranicami
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image031.jpg' | relative_url }})
 
-Offset boundary definition
+Definícia posunutých hraníc
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image032.jpg' | relative_url }})
 
-Example showing Offset boundary Pattern
+Príklad znázorňujúci vzor posunutých hraníc
 
-  * **Surface grid pattern [3D]**
+  * **Vzor mriežky povrchu [3D]**
 
-In this option the surface net has been divided in to two options one is parallel and circular. Surface net mode selection is as shown in Fig. 26.6.12.28. The grid definition pattern for parallel and circular is as shown below in Fig. 26.6.12.29., Fig. 26.6.12.30. and Fig. 26.6.12.31. for the linear and circular grid pattern examples.
+V tejto možnosti bola sieť povrchu rozdelená na dve možnosti: paralelnú a kruhovú. Výber režimu siete povrchu je znázornený na obr. 26.6.12.28. Vzor definície mriežky pre paralelný a kruhový tvar je znázornený nižšie na obr. 26.6.12.29., obr. 26.6.12.30. a obr. 26.6.12.31. pre príklady lineárneho a kruhového vzoru mriežky.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image033.jpg' | relative_url }})
 
-Surface net mode selection window
+Okno na výber režimu povrchovej siete
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image036.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image038.jpg' | relative_url }})
 
-Grid definition for parallel and Circular net
+Definícia mriežky pre paralelnú a kruhovú sieť
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image037.jpg' | relative_url }})
 
-Examples of parallel grid pattern for Surface net
+Príklady vzorov paralelných mriežok pre povrchovú sieť
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image039.jpg' | relative_url }})
 
-Examples of Surface net circular grid pattern
+Príklady vzoru kruhovej mriežky na povrchu
 
-  * ******User Defined Fl****ownet [2D, 3D]**
+  * ******Užívateľsky definovaná sieť Fl****ownet [2D, 3D]**
 
-If you wish to create your own initial pattern or use a previously generated pattern, you may do so by reading in a flow pattern file. A pattern file consists of a list of point coordinates and a list of connectivity sets. The points are points of intersection within the flownet. The type of grid is determined by the connectivity list. This list determines each curve separately as the number of points in a sequential pattern. If the starting and ending point indices are the same, the curve is closed. 
+Ak si chcete vytvoriť vlastný počiatočný vzor alebo použiť už skôr vygenerovaný vzor, môžete tak urobiť načítaním súboru s tokovým vzorom. Súbor so vzorom sa skladá zo zoznamu súradníc bodov a zoznamu súborov prepojení. Body sú bodmi priesečníkov v rámci siete. Typ mriežky je určený zoznamom prepojení. Tento zoznam určuje každú krivku samostatne ako počet bodov v sekvenčnom vzore. Ak sú indexy počiatočného a koncového bodu rovnaké, krivka je uzavretá. 
 
-The user defined pattern must be read by a pattern file. The pattern generated can be saved to this file by setting the save option to yes. If the pattern is being saved, the file name must be specified in the pattern File text box.
+Vzor definovaný používateľom sa musí načítať zo súboru vzorov. Vygenerovaný vzor je možné uložiť do tohto súboru nastavením možnosti uloženia na „yes“. Ak sa vzor ukladá, názov súboru je potrebné zadať do textového poľa „Súbor vzorov“.
 
-The material point data format is: 
+Formát údajov o hmotnostných bodoch je nasledovný: 
 
 Numpt
 
@@ -329,7 +329,7 @@ Numpt
 
 . . .
 
-Numpt X(Numpt) Y(Numpt)
+Numpt X (Numpt) Y (Numpt)
 
 NumCv
 
@@ -339,97 +339,97 @@ NumCv
 
 . . . .
 
-NumCv CvSz(NumCv) pt(NumCv) pt(CvSz(NumCv))
+NumCv CvSz(NumCv) bod(NumCv) bod(CvSz(NumCv))
 
-Where
+Kde
 
-**Numpt** : Number of material points 
+**Numpt** : Počet bodov materiálu 
 
-**Y(i)** : Y coordinate of ith material point
+**Y(i)** : súradnica Y i-teho bodu materiálu
 
-**NumCv** : Number of curve
+**NumCv** : Počet kriviek
 
-**CvSz(i)** : Number of points in ith curve
+**CvSz(i)** : Počet bodov v i-tej krivke
 
-**pt** : Point index of curve (refers to indices in first list)
+**pt** : Index bodu krivky (odkazuje na indexy v prvom zozname)
 
-**Example Case**  
-Taking a round billet from the SPIKE.KEY file in the DATA directory and placing a 3x3 rectangular grid on it, will yield an initial flownet that resembles Fig. 26.6.12.32. This flownet is stored as the file seen in Fig. 26.6.12.33. As seen in Fig. 26.6.12.32., the grid points are first stored and the connectivity is stored in the 2nd section. The grid points are seen in as labeled in Fig. 26.6.12.32. and the connectivity curves are labeled as Fig. 26.6.12.33.
+**Príklad**  
+Ak vezmeme kruhový výrez zo súboru SPIKE.KEY v adresári DATA a umiestnime naň obdĺžnikovú mriežku 3x3, dostaneme počiatočnú letovú sieť, ktorá pripomína obr. 26.6.12.32. Táto letová sieť je uložená ako súbor zobrazený na obr. 26.6.12.33. Ako je vidieť na obr. 26.6.12.32, najskôr sa uložia body mriežky a v druhej časti sa uloží prepojiteľnosť. Body mriežky sú označené tak, ako je to znázornené na obr. 26.6.12.32, a krivky prepojení sú označené podľa obr. 26.6.12.33.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image040.jpg' | relative_url }})
 
-The result of placing a 3x3 flownet on a round object; (a) The points are labelled (b) The curves are labelled
+Výsledok umiestnenia siete typu „flownet“ s rozmermi 3×3 na guľatý predmet; (a) Body sú označené; (b) Krivky sú označené
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image041.jpg' | relative_url }})
 
-Sample pattern file corresponding to example case. Compare the point connectivity to the figure above
+Ukážkový súbor vzoru zodpovedajúci uvedenému príkladu. Porovnajte prepojenie bodov s obrázkom vyššie
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image042.jpg' | relative_url }})
 
-Merging of different flownet patterns
+Zlúčenie rôznych vzorov siete na lietanie
 
-User can also generate combined (or complicated) patterns like circular-grid, circular-cube and so on. This type of combined grid patterns can be obtained by using Flownet![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})User defined options and is as show as in Fig. 26.6.12.35., Fig. 26.6.12.36. and Fig. 26.6.12.37.
+Používateľ môže tiež vytvárať kombinované (alebo zložité) vzory, ako sú kruhová mriežka, kruhová kocka a podobne. Tento typ kombinovaných mriežkových vzorov je možné získať pomocou možností definovaných používateľom v programe Flownet![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) a je znázornený na obr. 26.6.12.35., obr. 26.6.12.36 a obr. 26.6.12.37.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image043.jpg' | relative_url }})
 
-Showing how to generate combined grid pattern
+Ukážka toho, ako vytvoriť kombinovaný mriežkový vzor
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image044.jpg' | relative_url }})
 
-Shows the complicated flownet pattern
+Zobrazuje zložitý vzor siete „flownet“
 
-The circular grid pattern on the top of the work piece is created by using Flownet ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Polygon option and the generated circular grid is as shown below in the Fig. 26.6.12.37.
+Kruhový mriežkový vzor na hornej strane obrobku sa vytvorí pomocou možnosti Flownet ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Polygon a vygenerovaná kruhová mriežka je znázornená nižšie na obr. 26.6.12.37.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image045.jpg' | relative_url }})
 
-Circular grid pattern on the top of work piece
+Kruhový mriežkový vzor na hornej strane obrobku
 
-**Flowline tracking** :
+**Sledovanie potrubia** :
 
-Flowlines tracking is developed to show metal flow in ALE simulations in Flownet window (See Fig. 26.6.12.38.). This option is applicable for 2D ALE study, 3D ALE Shape Rolling and 3D ALE Extrusion simulations.
+Funkcia sledovania tokových čiar bola vyvinutá na zobrazenie toku kovu v simuláciách ALE v okne Flownet (pozri obr. 26.6.12.38.). Táto možnosť je k dispozícii pre 2D štúdie ALE, 3D simulácie valcovania tvarov ALE a 3D simulácie extrudovania ALE.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image046.jpg' | relative_url }})
 
-Flownet Tracking window
+Okno sledovania zásielok Flownet
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image047.jpg' | relative_url }})
 
-Flownet Tracking options
+Možnosti sledovania zásielok v systéme Flownet
 
-Select Boundary Points: In case of 2D object, Sampling points can be manually picked along workpiece object boundary (see Fig. 26.6.12.40.) or user can use start and end points of the edge on boundary using Define sampling point option (See Fig. 26.6.12.41.).
+Výber hraničných bodov: V prípade 2D objektu je možné vzorkovacie body vybrať ručne pozdĺž hranice objektu obrobku (pozri obr. 26.6.12.40.) alebo môže používateľ použiť počiatočný a koncový bod hrany na ohraničení pomocou možnosti Definovať vzorkovací bod (pozri obr. 26.6.12.41.).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image048.jpg' | relative_url }})
 
-Manually picked points for Flowline tracking for 2D
+Ručne vybrané body pre sledovanie krivky v 2D
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image049.jpg' | relative_url }})
 
-Selecting points using Start and End point in Point selection window for 2D
+Výber bodov pomocou počiatočného a koncového bodu v okne „Výber bodov“ pre 2D
 
-In case of 3D object, Sampling points can be manually picked from workpiece object or Sampling points can be defined as rectangular grid with different shapes such as circles, polygons or points on beginning surface using Define sampling point option (See Fig. 26.6.12.42.).
+V prípade 3D objektu je možné body odberu vzoriek vybrať ručne z objektu obrobku alebo ich definovať ako pravouhlú mriežku s rôznymi tvarmi, ako sú kruhy, mnohouholníky alebo body na počiatočnej ploche, pomocou možnosti „Definovať body odberu vzoriek“ (pozri obr. 26.6.12.42.).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/image050.jpg' | relative_url }})
 
-Selecting points on 3D object with different selection options
+Výber bodov na 3D objekte pomocou rôznych možností výberu
 
-**Selected point Table** : In Table we can observe the selected points for Flowline Tracking.
+**Tabuľka vybraných bodov**: V tabuľke môžeme vidieť body vybrané na sledovanie priebehu.
 
-**Display type Control** : using this option we can control the thickness of Flowline. Line thickness can be varied by dragging the pointer on the Sliding bar between 1 and 100.
+**Ovládanie typu zobrazenia**: pomocou tejto možnosti môžeme nastaviť hrúbku čiary Flowline. Hrúbku čiary je možné meniť ťahaním kurzora po posuvníku v rozmedzí od 1 do 100.
 
-**Animation Control** : We can play the animation of material flow using Animate option and also we can control the animation speed by dragging pointer on Animation Speed sliding bar from slow to fast.
+**Ovládanie animácie**: Pomocou možnosti „Animate“ môžeme prehrať animáciu toku materiálu a zároveň môžeme regulovať rýchlosť animácie posúvaním kurzora na posuvníku „Animation Speed“ od pomalej po rýchlu.
 
-**Auto Update** : Auto update checkbox when turned on flow lines are generated for each selected step automatically. If Auto update is turned off then for each selected step user should use Generate Flowline button to generate flowlines.
+**Automatická aktualizácia**: Ak je zaškrtnuté políčko „Automatická aktualizácia“, pre každý vybraný krok sa automaticky vygenerujú tokové čiary. Ak je táto funkcia vypnutá, používateľ musí pre každý vybraný krok použiť tlačidlo „Vygenerovať tokové čiary“, aby sa tokové čiary vygenerovali.
 
-**State Variable graph type:** Under State Variable user has options whether to use time or Distance (Start to End surface) as X axis while plotting State variable graph.
+**Typ grafu stavovej premennej:** V časti „Stavová premenná“ má používateľ pri kreslení grafu stavovej premennej na výber, či ako os X použije čas alebo vzdialenosť (od začiatku po koniec plochy).
 
-**Generate Flowline** : After defining the required options to generate flowline user can click on this button to generate flowlines.
+**Vytvoriť prietokovú čiaru**: Po nastavení požadovaných parametrov na vytvorenie prietokovej čiary môže používateľ kliknúť na toto tlačidlo a prietokové čiary sa vytvoria.
 
-**Save the points to a file** ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) : We can save the defined points for Flowline tracking using this option for future reference.
+**Uloženie bodov do súboru** ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}): Pomocou tejto možnosti môžeme uložiť body definované pre sledovanie Flowline pre budúce použitie.
 
-**Load Points From a file** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}): The points defined can be loaded from a file using this option.
+**Načítať body zo súboru** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}): Pomocou tejto možnosti je možné načítať definované body zo súboru.
 
-**Deleted selected point** : Using this option user can delete unwanted points from the table by selecting respective row in the table.
+**Odstránenie vybraného bodu**: Pomocou tejto možnosti môže používateľ odstrániť nepotrebné body z tabuľky tak, že vyberie príslušný riadok v tabuľke.
 
-**Delete all Points** ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}): Using this option user can delete all the points from the table at once.
+**Odstrániť všetky body** ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ naraz odstrániť všetky body z tabuľky.
 
-**Show/Hide Points** : Using this option we can Show/Hide of Point and Point number in display using " P " and " T " button respectively.
+**Zobraziť/skryť body**: Pomocou tejto možnosti môžeme na displeji zobraziť alebo skryť body a čísla bodov pomocou tlačidiel „P“ a „T“.

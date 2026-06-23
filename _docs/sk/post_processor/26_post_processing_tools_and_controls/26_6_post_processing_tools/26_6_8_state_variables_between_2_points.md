@@ -1,101 +1,101 @@
 ---
 lang: sk
-title: "26.6.8. State variables between 2 points"
+title: "26.6.8. Stavové premenné medzi dvoma bodmi"
 ---
 
-# 26.6.8. State variables between 2 points
+# 26.6.8. Stavové premenné medzi dvoma bodmi
 
-  * Straight Line
+  * Priamka
 
-  * Following Boundary
+  * Podľa hranice
 
-  * Circular pattern
-
-  
-**Straight Line [2D, 3D]:** This feature allows the user to specify two points and to plot a given state variable distribution between those two points. The state variable distribution can be linearly interpolated between the two points of the object. ( Fig. 26.6.8.1. and Fig. 26.6.8.2. and Fig. 26.6.8.3. )
+  * Kruhový vzor
 
   
-**Sampling points** : Using this sliding bar user can control number of sample points.
-
-**Follow Object** : By checking this check box, start and end of sampling points will follow the workpiece.
-
-**Area Distribution** : By checking this check box, area covered by sampling points between start and end points on an object will be calculated.
-
-**Follow Boundary** : By checking this check box, points will follow the object boundary.
-
-**Plot** : By clicking on this ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) button it calculates the state variables and displays the graph.
-
-**Band** : 
-
-**Procedure:**
-
-**Step 1:** Click on the SV distribution button in the Post-Processor.
-
-**Step 2:** Select points to interpolate along a straight line.
-
-**Step 3:** Pick two points on the object to interpolate.
-
-**Step 4:** Click on ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) button.
+**Priamka [2D, 3D]:** Táto funkcia umožňuje používateľovi určiť dva body a vykresliť dané rozloženie stavovej premennej medzi týmito dvoma bodmi. Rozloženie stavovej premennej je možné medzi týmito dvoma bodmi objektu lineárne interpolovať. (Obr. 26.6.8.1., Obr. 26.6.8.2. a Obr. 26.6.8.3.)
 
   
-If no state variable is selected, only points will be shown. After a state variable is picked from the state variable window, clicking on the ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) utton will show a graph of the distribution between the two points.(See Fig. 26.6.8.1. and Fig. 26.6.8.2. and Fig. 26.6.8.3.) 
+**Vzorkovacie body**: Pomocou tohto posuvníka môže používateľ nastaviť počet vzorkovacích bodov.
+
+**Sledovať objekt**: Zaškrtnutím tohto políčka sa začiatok a koniec vzorkovacích bodov budú prispôsobovať obrobku.
+
+**Rozloženie plochy**: Zaškrtnutím tohto políčka sa vypočíta plocha pokrytá vzorkovacími bodmi medzi počiatočným a koncovým bodom na objekte.
+
+**Sledovať obrys**: Zaškrtnutím tohto políčka sa body budú prispôsobovať obrysu objektu.
+
+**Graf**: Kliknutím na toto tlačidlo ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) sa vypočítajú stavové premenné a zobrazí sa graf.
+
+**Kapela** : 
+
+**Postup:**
+
+**Krok 1:** Kliknite na tlačidlo „SV distribution“ v postprocesore.
+
+**Krok 2:** Vyberte body, ktoré chcete interpolovať pozdĺž priamky.
+
+**Krok 3:** Vyberte dva body na objekte, ktoré chcete interpolovať.
+
+**Krok 4:** Kliknite na tlačidlo ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}).
+
+  
+Ak nie je vybraná žiadna stavová premenná, zobrazia sa len body. Po výbere stavovej premennej z okna stavových premenných sa kliknutím na tlačidlo ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) zobrazí graf rozdelenia medzi týmito dvoma bodmi.(Pozri obr. 26.6.8.1., obr. 26.6.8.2. a obr. 26.6.8.3.) 
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/image001.jpg' | relative_url }})
 
-Showing graph for SV distribution between 2 points for a straight line
+Zobrazenie grafu rozdelenia SV medzi dvoma bodmi pre priamku
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/image002.jpg' | relative_url }})
 
-Showing graph for SV distribution between 2 points for a straight line With Out area Distribution
+Zobrazenie grafu rozdelenia SV medzi dvoma bodmi pre priamku bez plošného rozdelenia
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/image003.jpg' | relative_url }})
 
-Showing graph for SV distribution between 2 points for a straight line With area Distribution
+Zobrazenie grafu rozdelenia SV medzi dvoma bodmi pre priamku s plošným rozdelením
 
-**Following Boundary [2D,3D] :** This feature allows the user to specify points along the boundary of an object to plot a given state variable distribution between start and end points. (See Fig. 26.6.8.4. and Fig. 26.6.8.5..)
+**Podľa hranice [2D, 3D]:** Táto funkcia umožňuje používateľovi určiť body pozdĺž hranice objektu, aby sa znázornilo rozloženie danej stavovej premennej medzi počiatočným a koncovým bodom. (Pozri obr. 26.6.8.4. a obr. 26.6.8.5.)
 
   
-**Procedure:**
+**Postup:**
 
-**Step 1** : Click on the SV distribution button in the Post-Processor.
+**Krok 1**: V postprocesore kliknite na tlačidlo „SV distribution“.
 
-**Step 2** : Select points to interpolate and to follow the boundary of the Object.
+**Krok 2**: Vyberte body, ktoré sa majú interpolovať a ktoré majú kopírovať obrys objektu.
 
-**Step 3** : For 2D Pick two points on the object to interpolate.
+**Krok 3**: V prípade 2D vyberte dva body na objekte, medzi ktorými sa má vykonať interpolácia.
 
-For 3D pick start, middle and End points on the object to interpolate
+V prípade 3D výberu označte počiatočný, stredný a koncový bod na objekte, ktorý sa má interpolovať
 
-**Step 4** : Click on ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) button.
+**Krok 4**: Kliknite na tlačidlo ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}).
 
-If no state variable is selected, only points will be shown. After a state variable is picked from the state variable window, clicking on the ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) button will show a graph of the distribution between the two points. (See Fig. 26.6.8.4. and Fig. 26.6.8.5.)
+Ak nie je vybraná žiadna stavová premenná, zobrazia sa iba body. Po výbere stavovej premennej z okna stavových premenných sa kliknutím na tlačidlo ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) zobrazí graf rozdelenia medzi týmito dvoma bodmi. (Pozri obr. 26.6.8.4. a obr. 26.6.8.5.)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/image004.jpg' | relative_url }})
 
-Showing graph for SV distribution between 2 points of following boundary for 2D
+Zobrazenie grafu rozloženia SV medzi dvoma bodmi nasledujúcej hranice pre 2D
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/image005.jpg' | relative_url }})
 
-Showing graph for SV distribution between 2 points of following boundary for 3D
+Zobrazenie grafu rozloženia SV medzi dvoma bodmi nasledujúcej hranice v 3D
 
-**Circular pattern** [3D] : This feature allows the user to define points in circular pattern by specifying point, axis and angle about which a given state variable distribution to be plotted. (See Fig. 26.6.8.6.)
-
-  
-**Procedure:**
-
-Step 1:Click on the SV distribution button in the Post-Processor.
-
-Step 2: Select Circular pattern tab.
-
-Step 3: Pick point on the object to interpolate, define angle and axis direction.
-
-Step 4: Click on the ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) button.
+**Kruhový vzor** [3D]: Táto funkcia umožňuje používateľovi definovať body v kruhovom vzore tak, že určí bod, os a uhol, okolo ktorých sa má vykresliť rozloženie danej stavovej premennej. (Pozri obr. 26.6.8.6.)
 
   
-Clicking on the ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) button will show a graph of the distribution between the two points.(See Fig. 26.6.8.6.)
+**Postup:**
+
+Krok 1: Kliknite na tlačidlo „SV distribution“ v postprocesore.
+
+Krok 2: Vyberte kartu „Kruhový vzor“.
+
+Krok 3: Vyberte bod na objekte, ktorý chcete interpolovať, a určte uhol a smer osi.
+
+Krok 4: Kliknite na tlačidlo ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}).
+
+  
+Kliknutím na tlačidlo ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) sa zobrazí graf rozdelenia medzi týmito dvoma bodmi. (Pozri obr. 26.6.8.6.)
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/image006.jpg' | relative_url }})
 
-Showing graph for State variable distribution between 2 points for boundary circular
+Zobrazenie grafu rozloženia premennej stavu medzi dvoma bodmi pre kruhovú hranicu

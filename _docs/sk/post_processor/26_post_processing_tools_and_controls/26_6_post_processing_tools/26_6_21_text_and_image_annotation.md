@@ -1,55 +1,55 @@
 ---
 lang: sk
-title: "26.6.21. Text and Image Annotation"
+title: "26.6.21. Anotácie textu a obrázkov"
 ---
 
-# 26.6.21. Text and Image Annotation
+# 26.6.21. Anotácie textu a obrázkov
 
-  * Text Annotations
+  * Textové poznámky
 
-  * Image Annotations
+  * Anotácie k obrázkom
 
-**Text Annotations** ![]({{ '/assets/icons/post_icons/mo_text_annotation_icon.jpg' | relative_url }})
+**Textové poznámky** ![]({{ '/assets/icons/post_icons/mo_text_annotation_icon.jpg' | relative_url }})
 
   
-Text annotations are used to define the user titles, notes, descriptions on the graphics window for presentation of results. By default selecting the text annotation will give a text box on graphics window with text "TEXT" , user can edit the text inside the text box using left mouse double click selection and type the required text, even the typed text inside the text box can be edited using left click inside the text box as shown in Fig. 26.6.21.1.
+Textové poznámky slúžia na zadávanie užívateľských nadpisov, poznámok a popisov v grafickom okne na účely prezentácie výsledkov. Pri výbere textovej poznámky sa v grafickom okne štandardne zobrazí textové pole s textom „TEXT“, užívateľ môže text v tomto poli upraviť dvojitým kliknutím ľavým tlačidlom myši a zadaním požadovaného textu; dokonca aj už zadaný text v poli je možné upraviť kliknutím ľavým tlačidlom myši priamo v poli, ako je znázornené na obr. 26.6.21.1.
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_21_text_and_image_annotation/image001.jpg' | relative_url }})
 
-Text annotation editing on graphics window
+Úprava poznámok k textu v grafickom okne
 
-By right clicking on text annotation user can delete or change its properties like font, style, size and color as shown in Fig. 26.6.21.2.
+Kliknutím pravým tlačidlom myši na textovú poznámku môže používateľ túto poznámku odstrániť alebo zmeniť jej vlastnosti, ako sú písmo, štýl, veľkosť a farba, ako je znázornené na obr. 26.6.21.2.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_21_text_and_image_annotation/image002.jpg' | relative_url }})
 
-Text annotation right mouse click options
+Možnosti kontextového menu pri kliknutí pravým tlačidlom myši na text
 
-Annotation text font setting options are as shown in below Fig. 26.6.21.3.
+Možnosti nastavenia písma textu anotácií sú znázornené na nižšie uvedenom obr. 26.6.21.3.
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_21_text_and_image_annotation/image003.jpg' | relative_url }})
 
-Text font settings window
+Okno nastavení písma
 
-Annotation text color change options are as shown in below Fig. 26.6.21.4.
+Možnosti zmeny farby textu poznámok sú znázornené na nižšie uvedenom obr. 26.6.21.4.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_21_text_and_image_annotation/image004.jpg' | relative_url }})
 
-Text color settings window
+Okno nastavení farby textu
 
-**Im****age Annotations** ![]({{ '/assets/icons/post_icons/mo_image_annotation_icon.jpg' | relative_url }})
+**Anotácie obrázkov** ![]({{ '/assets/icons/post_icons/mo_image_annotation_icon.jpg' | relative_url }})
 
-Image annotations are used to import any image into graphics window for presentation like company logo, problem setup thumb nail image, etc. Selecting the imported image will display boundary with snap points. The image can be positioned by drag and drop when pan icon shows on the image and size of the image can be controlled using snap points as shown in Fig. 26.6.21.5.
+Anotácie obrázkov slúžia na import akéhokoľvek obrázku do grafického okna na účely prezentácie, napríklad firemného loga, náhľadu nastavenia úlohy atď. Po výbere importovaného obrázku sa zobrazí ohraničenie s prichytávacími bodmi. Obrázok je možné umiestniť pomocou funkcie drag and drop, keď sa na obrázku zobrazí ikona posúvania, a jeho veľkosť je možné upravovať pomocou zachytávacích bodov, ako je znázornené na obr. 26.6.21.5.
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_21_text_and_image_annotation/image005.jpg' | relative_url }})
 
-Image annotation editing on display window
+Úprava popisov obrázkov v okne zobrazenia
 
-Different image formats like PNG, BMP, JPEG, GIF, TIF can be imported. Image annotation can be deleted using right mouse click options on the image as shown in Fig. 26.6.21.6.
+Je možné importovať rôzne formáty obrázkov, ako napríklad PNG, BMP, JPEG, GIF a TIF. Anotácie k obrázkom je možné odstrániť pomocou možností, ktoré sa zobrazia po kliknutí pravým tlačidlom myši na obrázok, ako je znázornené na obr. 26.6.21.6.
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_21_text_and_image_annotation/image006.jpg' | relative_url }})
 
-Image annotation deleting option
+Možnosť odstránenia poznámok k obrázkom

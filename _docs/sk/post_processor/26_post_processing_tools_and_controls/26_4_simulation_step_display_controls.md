@@ -1,106 +1,106 @@
 ---
 lang: sk
-title: "26.4. Simulation Step Display Controls"
+title: "26.4. Ovládacie prvky na zobrazenie simulačných krokov"
 ---
 
-# 26.4. Simulation Step Display Controls
+# 26.4. Ovládacie prvky na zobrazenie simulačných krokov
 
-26.4.1. Step Menu and Step tools
+26.4.1. Ponuka „Step“ a nástroje „Step“
 
-26.4.2. Steps Selection options
+26.4.2. Možnosti výberu krokov
 
-26.4.3. Step list
+26.4.3. Zoznam krokov
 
-26.4.4. Relative Motion
+26.4.4. Relatívny pohyb
 
-Step browser (See Fig. 26.4.1.) is used to select simulated steps for review, object of selected step objects will display in the graphics window. Step view window has options for selecting different steps & operations and step tools for quick step selection & playing steps. Step view window also displays information like simulation title, operation name, stroke, time, selected step and operation number. (See Fig. 26.4.1.)
+Prehliadač krokov (pozri obr. 26.4.1.) slúži na výber simulovaných krokov na kontrolu; objekt vybraného kroku sa zobrazí v grafickom okne. Okno zobrazenia krokov obsahuje možnosti výberu rôznych krokov a operácií, ako aj nástroje na rýchly výber a prehrávanie krokov. Okno zobrazenia krokov tiež zobrazuje informácie, ako sú názov simulácie, názov operácie, zdvih, čas, vybraný krok a číslo operácie. (Pozri obr. 26.4.1.)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_4_simulation_step_display_controls/image001.jpg' | relative_url }})
 
-Step view window
+Okno zobrazenia krokov
 
-## Step Menu and Step tools 
+## Ponuka „Krok“ a nástroje v ponuke „Krok“ 
 
-The various options available for quick step selection, playing the steps and operations selection are explained below. Even under **Step menu** we are having below options as shown in Fig. 26.4.2.
+Nižšie sú vysvetlené rôzne možnosti rýchleho výberu krokov, ich prehrávania a výberu operácií. Aj v rámci **ponuky Krok** máme k dispozícii nižšie uvedené možnosti, ako je znázornené na obr. 26.4.2.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_4_simulation_step_display_controls/image006.jpg' | relative_url }})
 
-Post processor Step menu
+Ponuka krokov postprocesora
 
-**First step** ![]({{ '/assets/icons/post_icons/mo_first_step_icon.jpg' | relative_url }}) : Rewind the step list back to the first saved step.
+**Prvý krok** ![]({{ '/assets/icons/post_icons/mo_first_step_icon.jpg' | relative_url }}): Vráťte zoznam krokov späť na prvý uložený krok.
 
-**Last step** ![]({{ '/assets/icons/post_icons/mo_last step_icon.jpg' | relative_url }}): Fast forward the step list to the last saved step.
+**Posledný krok** ![]({{ '/assets/icons/post_icons/mo_last step_icon.jpg' | relative_url }}): Preskočiť zoznam krokov na posledný uložený krok.
 
-**One step forward** ![]({{ '/assets/icons/post_icons/mo_next_step_icon.jpg' | relative_url }}) : Move to the next saved step in the step list.
+**O krok vpred** ![]({{ '/assets/icons/post_icons/mo_next_step_icon.jpg' | relative_url }}) : Prejsť na ďalší uložený krok v zozname krokov.
 
-****One step backward** **![]({{ '/assets/icons/post_icons/mo_prevoius_step_icon.jpg' | relative_url }}): Rewind the step list back to one saved step.
+****Jeden krok späť** **![]({{ '/assets/icons/post_icons/mo_prevoius_step_icon.jpg' | relative_url }}): Vráťte zoznam krokov o jeden uložený krok späť.
 
-**Play forward**![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }}) : Displays the steps one by one until the last step is displayed from the current selected step.
+**Prehrávať dopredu**![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }}) : Zobrazuje kroky jeden po druhom, až kým sa od aktuálneho vybraného kroku nezobrazí posledný krok.
 
-**Play backward![]({{ '/assets/icons/post_icons/mo_play_backward_icon.jpg' | relative_url }})** : Displays the steps one by one in reverse order until the first step is displayed from the current selected step.
+**Prehrávať spätne ![]({{ '/assets/icons/post_icons/mo_play_backward_icon.jpg' | relative_url }})** : Zobrazuje kroky jeden po druhom v opačnom poradí, až kým sa od aktuálne vybraného kroku nezobrazí prvý krok.
 
-**Pause**![]({{ '/assets/icons/post_icons/mo_stop_play_backward_icon.jpg' | relative_url }}) : Stops the playing of steps.
+**Pozastaviť**![]({{ '/assets/icons/post_icons/mo_stop_play_backward_icon.jpg' | relative_url }}) : Pozastaví prehrávanie krokov.
 
-**Op******e** ration forward ![]({{ '/assets/icons/post_icons/mo_next_oprn_icon.jpg' | relative_url }})**: Move to the current operation last saved step or next operation first saved step in the step list.
+**Op******e** operácia vpred ![]({{ '/assets/icons/post_icons/mo_next_oprn_icon.jpg' | relative_url }})**: Presun na posledný uložený krok aktuálnej operácie alebo na prvý uložený krok nasledujúcej operácie v zozname krokov.
 
-****Op******e** ration backward ** **![]({{ '/assets/icons/post_icons/mo_prev_oprn_icon.jpg' | relative_url }}): Move to the previous operation last saved step or current operation first saved step in the step list.
+****Op******e** operácia späť ** **![]({{ '/assets/icons/post_icons/mo_prev_oprn_icon.jpg' | relative_url }}): Prejsť na predchádzajúcu operáciu (posledný uložený krok) alebo na aktuálnu operáciu (prvý uložený krok) v zozname krokov.
 
-**Simulation**forward** ![]({{ '/assets/icons/post_icons/mo_next_oprn_icon.jpg' | relative_url }})**: Move to the current simulation last saved step or next simulation first saved step in the step list.
+**Simulácia** dopredu **![]({{ '/assets/icons/post_icons/mo_next_oprn_icon.jpg' | relative_url }})**: Presun na posledný uložený krok aktuálnej simulácie alebo na prvý uložený krok nasledujúcej simulácie v zozname krokov.
 
-****Simulation******backward**** **![]({{ '/assets/icons/post_icons/mo_prev_oprn_icon.jpg' | relative_url }}): Move to the previous simulation last saved step or current simulation first saved step in the step list.
+****Simulácia******späť**** **![]({{ '/assets/icons/post_icons/mo_prev_oprn_icon.jpg' | relative_url }}): Prejsť na predchádzajúci uložený krok predchádzajúcej simulácie alebo na prvý uložený krok aktuálnej simulácie v zozname krokov.
 
-## Steps Selection options
+## Možnosti výberu krokov
 
-User can select the required steps from the stored steps in the DB for display. Different step selection types are available like, outline, brief, auto, all and user (also available in Step list ![]({{ '/assets/icons/post_icons/mo_step_list_icon.jpg' | relative_url }})).
+Používateľ si môže z krokov uložených v databáze vybrať tie, ktoré chce zobraziť. K dispozícii sú rôzne typy výberu krokov, ako napríklad: prehľad, stručný, automatický, všetky a používateľský (dostupné aj v zozname krokov ![]({{ '/assets/icons/post_icons/mo_step_list_icon.jpg' | relative_url }})).
 
-**Auto** : When this option is selected, the steps for display are selected by system automatically.
+**Auto**: Ak je táto možnosť zvolená, systém automaticky vyberie kroky, ktoré sa majú zobraziť.
 
-**First** : When this option is selected, only the first step of all operations is displayed.
+**Prvý**: Ak je táto možnosť zvolená, zobrazí sa len prvý krok všetkých operácií.
 
-**Last** : When this option is selected, only the last step of all operations is displayed.
+**Posledný**: Ak je táto voľba zvolená, zobrazí sa iba posledný krok zo všetkých operácií.
 
-**All** : When this option is selected, all saved steps of the all operations in the step editor are displayed.
+**Všetko**: Ak je táto možnosť zvolená, zobrazia sa všetky uložené kroky všetkých operácií v editore krokov.
 
-**Brief** : When this option is selected, only first, last and one intermediate saved step of the operations in the step editor are displayed.
+**Stručný popis**: Ak je táto možnosť zvolená, v editore krokov sa zobrazujú iba prvý, posledný a jeden medziležiaci uložený krok operácií.
 
-**User****defined** : When this option is selected, steps that are selected for display from the ![]({{ '/assets/icons/post_icons/mo_step_list_icon.jpg' | relative_url }}) (step list) are displayed. Using this user can select the required steps to display.
+**Definované** používateľom: Ak je táto možnosť zvolená, zobrazia sa kroky, ktoré boli vybrané na zobrazenie zo zoznamu krokov ![]({{ '/assets/icons/post_icons/mo_step_list_icon.jpg' | relative_url }}). Pomocou tejto možnosti môže používateľ vybrať kroky, ktoré sa majú zobraziť.
 
-## Step list ![]({{ '/assets/icons/post_icons/mo_step_list_icon.jpg' | relative_url }})
+## Zoznam krokov ![]({{ '/assets/icons/post_icons/mo_step_list_icon.jpg' | relative_url }})
 
-This will provide more detailed information of all saved steps like Simulation number, Mesh number, Time, Stroke of primary die, Dimension, Version number and Fold (for 3D). It also lists the operations sequence on the left side window and provides more step selection options on right side window (see Fig. 26.4.3.). For more information on step selection types and step list options refer section [6.1.6. Step Editor](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm#6.1.6._Step_Editor).
+Týmto spôsobom získate podrobnejšie informácie o všetkých uložených krokoch, ako sú číslo simulácie, číslo siete, čas, zdvih primárnej matrice, rozmery, číslo verzie a ohyb (pre 3D). V ľavom okne sa tiež zobrazuje postup operácií a v pravom okne sú k dispozícii ďalšie možnosti výberu krokov (pozri obr. 26.4.3.). Ďalšie informácie o typoch výberu krokov a možnostiach zoznamu krokov nájdete v časti [6.1.6. Step Editor](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm#6.1.6._Step_Editor).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_4_simulation_step_display_controls/image002.jpg' | relative_url }})
 
-Step List step selection options
+Možnosti výberu krokov v zozname krokov
 
-## Relative Motion [3D] ![]({{ '/assets/icons/post_icons/mo_relative_motion_button.jpg' | relative_url }})
+## Relatívny pohyb [3D] ![]({{ '/assets/icons/post_icons/mo_relative_motion_button.jpg' | relative_url }})
 
-For the benefit of improving numerical errors resulting from positioning, geometry updates, etc., the simulation model sometimes requires users to move / rotate object(s) artificially. The new “relative motion” function allows users to view the simulation result that is identical to the actual processes (See Fig. 26.4.4.). User can select the reference object and the stationary axis along with the movement type. The reference object is an object that is stationary in actual process while for numerical purpose movement is applied. Once the selection is done user can click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button, then the user can observe that all other objects will move relatively with the reference object while reference object stays stationary as per the defined conditions.
+S cieľom znížiť numerické chyby vyplývajúce z polohovania, aktualizácií geometrie atď. si simulačný model niekedy vyžaduje, aby používatelia umelo posúvali alebo otáčali objekty. Nová funkcia „relatívny pohyb“ umožňuje používateľom zobraziť výsledok simulácie, ktorý je identický so skutočnými procesmi (pozri obr. 26.4.4.). Používateľ môže vybrať referenčný objekt a pevnú os spolu s typom pohybu. Referenčný objekt je objekt, ktorý je v skutočnom procese nehybný, avšak na numerické účely sa naň aplikuje pohyb. Po vykonaní výberu môže používateľ kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), na čo môže pozorovať, že všetky ostatné objekty sa budú pohybovať relatívne voči referenčnému objektu, zatiaľ čo referenčný objekt zostane nehybný podľa definovaných podmienok.
 
-**Applications:**
+**Použitie:**
 
 Cogging
 
 Spinning
 
-Flowforming
+Tvarovanie za tepla
 
-Etc.
+atď.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_4_simulation_step_display_controls/image003.jpg' | relative_url }})
 
-Relative motion window
+Okno relatívneho pohybu
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_4_simulation_step_display_controls/image004.jpg' | relative_url }})
 
-Translation type relative motion window
+Okno pre prepočet typu relatívneho pohybu
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_4_simulation_step_display_controls/image005.jpg' | relative_url }})
 
-Rotation type Relative motion window
+Typ otáčania – Okno relatívneho pohybu
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[26\. Post Processor Features](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/)
+[26\. Post Processor Features](/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/)
 
-[26.2. Viewport and Windows menu](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/)
+[26.2. Viewport and Windows menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/)

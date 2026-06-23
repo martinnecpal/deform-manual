@@ -1,28 +1,28 @@
 ---
 lang: sk
-title: "26.6.6. Summary"
+title: "26.6.6. Zhrnutie"
 ---
 
-# 26.6.6. Summary
+# 26.6.6. Zhrnutie
 
-[2D, 3D]: In simulation summary window, the step can be selected from the step list and then the object can be selected using the pull down arrow button in the object field. After changing the object, if the step changes object does not change. Certain characteristic data, such as press loads, primary die velocities and maximum and minimum values of state variables are stored for every simulation step, whether data is stored for every step or not in the DB. This summary data vs time graphs for all the saved steps can be viewed in the graphics window by selecting the state variable in the list and clicking on button at the bottom of the window. (See Fig. 26.6.6.1. and [Fig. 26.6.6.2.](26_6_2_object_elements.htm#Fig_26_6_2_2_Object_Elements_window_for_3D)).
+[2D, 3D]: V okne s prehľadom simulácie je možné vybrať krok zo zoznamu krokov a následne vybrať objekt pomocou tlačidla s rozbaľovacou šípkou v poli objektu. Po zmene objektu sa v prípade, že sa zmení krok, objekt nezmení. Určité charakteristické údaje, ako sú zaťaženia lisu, rýchlosti primárnych foriem a maximálne a minimálne hodnoty stavových premenných, sa ukladajú pre každý simulačný krok, bez ohľadu na to, či sa údaje pre každý krok ukladajú do databázy alebo nie. Tieto grafy súhrnných údajov v závislosti od času pre všetky uložené kroky je možné zobraziť v grafickom okne výberom stavovej premennej zo zoznamu a kliknutím na tlačidlo v spodnej časti okna. (Pozri obr. 26.6.6.1. a [Fig. 26.6.6.2.](26_6_2_object_elements.htm#Fig_26_6_2_2_Object_Elements_window_for_3D)).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_6_summary/image001.jpg' | relative_url }})
 
-State variables summary window
+Okno s prehľadom stavových premenných
 
-Clicking on a point on the graph will load the nearest saved step from the database into display as shown in [Fig. 26.6.6.2.](26_6_2_object_elements.htm#Fig_26_6_2_2_Object_Elements_window_for_3D)
+Kliknutím na bod v grafe sa na obrazovku načíta najbližší uložený krok z databázy, ako je znázornené v [Fig. 26.6.6.2.](26_6_2_object_elements.htm#Fig_26_6_2_2_Object_Elements_window_for_3D)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_6_summary/image002.jpg' | relative_url }})
 
-Temperature state variable summary graph
+Súhrnný graf premenných teplotného stavu
 
-The step list in summary window can be used to select the step. When Load Step check box is checked and step is selected from step list, then the selected step will be loaded into the graphics window and state variable values at that step into summary window. It also displays the simulation information like simulation number, step number, time, primary die stroke, mesh number (changes when there is a remesh), fold occurrence, dimension of the operation and version number.
+Zoznam krokov v okne súhrnu slúži na výber kroku. Ak je zaškrtnuté políčko „Načítať krok“ a krok je vybraný zo zoznamu krokov, vybraný krok sa načíta do grafického okna a hodnoty stavových premenných v danom kroku sa zobrazia v okne súhrnu. Zobrazujú sa tu tiež informácie o simulácii, ako napríklad číslo simulácie, číslo kroku, čas, zdvih primárnej matrice, číslo siete (mení sa v prípade prepočítania siete), výskyt prehybov, rozmer operácie a číslo verzie.
 
-State variables are grouped under different categories which are, ![]({{ '/assets/icons/post_icons/mo_analysis_icon.jpg' | relative_url }}) (General), ![]({{ '/assets/icons/post_icons/mo_deformation_icon.jpg' | relative_url }}) (Deformation), ![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}) (Thermal), ![]({{ '/assets/icons/post_icons/mo_heating_sv_icon.jpg' | relative_url }})(Heating), ![]({{ '/assets/icons/post_icons/mo_prop_sv_icon.jpg' | relative_url }}) (Heat treat) and ![]({{ '/assets/icons/post_icons/mo_user_sv_icon.jpg' | relative_url }})(User) and these can be accessed using icons as sown in [Fig. 26.6.6.2.](26_6_2_object_elements.htm#Fig_26_6_2_2_Object_Elements_window_for_3D)
+Stavové premenné sú zoskupené do rôznych kategórií, a to ![]({{ '/assets/icons/post_icons/mo_analysis_icon.jpg' | relative_url }}) (Všeobecné), ![]({{ '/assets/icons/post_icons/mo_deformation_icon.jpg' | relative_url }}) (Deformácia), ![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}) (Tepelné), ![]({{ '/assets/icons/post_icons/mo_heating_sv_icon.jpg' | relative_url }}) (Ohrev), ![]({{ '/assets/icons/post_icons/mo_prop_sv_icon.jpg' | relative_url }}) (Tepelné spracovanie) a ![]({{ '/assets/icons/post_icons/mo_user_sv_icon.jpg' | relative_url }}) (Používateľ). K týmto premenným je možné pristupovať pomocou ikon, ako je znázornené v [Fig. 26.6.6.2.](26_6_2_object_elements.htm#Fig_26_6_2_2_Object_Elements_window_for_3D)
 
-Using ![]({{ '/assets/icons/post_icons/mo_show_all_sv_button.jpg' | relative_url }}) (Show all) icon all the state variable groups can be displayed. ![]({{ '/assets/icons/post_icons/mo_clear_sv_icon.jpg' | relative_url }})(Clear) icon is used to clear all the state variables groups selection.
+Pomocou ikony ![]({{ '/assets/icons/post_icons/mo_show_all_sv_button.jpg' | relative_url }}) (Zobraziť všetko) je možné zobraziť všetky skupiny stavových premenných. Ikona ![]({{ '/assets/icons/post_icons/mo_clear_sv_icon.jpg' | relative_url }}) (Vymazať) slúži na zrušenie výberu všetkých skupín stavových premenných.
 
-By double clicking on the state variable value in the summary window user can copy the Min and Max value at that step, user can also export the summary graph data plotted on the graphics window using right click option Export graph data. Graph properties like, titles and its font, values range, number of decimals and display style and legend on/off can also be changed using right click option Set graph properties.
+Dvojitým kliknutím na hodnotu stavovej premennej v okne súhrnu môže používateľ skopírovať minimálnu a maximálnu hodnotu v danom kroku; pomocou možnosti „Exportovať údaje grafu“ (prístupnej po kliknutí pravým tlačidlom myši) môže tiež exportovať údaje súhrnného grafu zobrazené v grafickom okne. Vlastnosti grafu, ako sú názvy a ich písmo, rozsah hodnôt, počet desatinných miest, štýl zobrazenia a zapnutie/vypnutie legendy, je možné zmeniť pomocou možnosti „Nastaviť vlastnosti grafu“, ktorá sa zobrazí po kliknutí pravým tlačidlom myši.
 
-For 3D problem if there is any fold it can be located by using the Locate fold button at the bottom of the window, it will turn on the fold display automatically in the graphics window for the selected object.
+V prípade 3D úlohy, ak sa v nej nachádza nejaký ohyb, je možné ho lokalizovať pomocou tlačidla „Locate fold“ v dolnej časti okna; tým sa automaticky zapne zobrazenie ohybu vo grafickom okne pre vybraný objekt.

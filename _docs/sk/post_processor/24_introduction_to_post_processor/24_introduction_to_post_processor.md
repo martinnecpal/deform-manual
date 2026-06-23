@@ -1,62 +1,62 @@
 ---
 lang: sk
-title: "24. Introduction to Post Processor"
+title: "24. Úvod do postprocesora"
 ---
 
-# 24\. Introduction to Post Processor
+# 24\. Úvod do postprocesora
 
-The DEFORM Post-Processor is used to review the simulation results. This is an integrated post processor provide with new user friendly GUI with the most of the existing post-processing functions and new features.
+Postprocesor DEFORM slúži na vyhodnocovanie výsledkov simulácie. Ide o integrovaný postprocesor vybavený novým užívateľsky prívetivým grafickým rozhraním, ktorý ponúka väčšinu existujúcich funkcií na spracovanie výsledkov simulácie, ako aj nové funkcie.
 
-DEFORM Post-Processor provides an environment with new features for the user to generate 3D PDF reports of simulation results,[ coupon data extraction](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_11_coupon_data_extraction/), interpret results across database using [PIP](../26_post_processing_tools_and_controls/26_1_file_operations_in_post_processor.htm#26_1_1_Working_with_DB_in_PIP_mode), plot results in region of interest, [CA microstructure modelling](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_10_ca_model_setup/) and post processing [report generation](/docs/sk/post_processor/28_report_generation/28_report_generation/) (.pdf and .ppt file formats) with pre defined user settings.
+Postprocesor DEFORM poskytuje prostredie s novými funkciami, ktoré používateľovi umožňujú generovať 3D PDF správy s výsledkami simulácií, [ coupon data extraction](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_11_coupon_data_extraction/), interpretovať výsledky v rámci databázy pomocou [PIP](../26_post_processing_tools_and_controls/26_1_file_operations_in_post_processor.htm#26_1_1_Working_with_DB_in_PIP_mode), znázorniť výsledky v oblasti záujmu, [CA microstructure modelling](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_10_ca_model_setup/) a vykonávať následné spracovanie [report generation](/docs/en/post_processor/28_report_generation/28_report_generation/) (formáty súborov .pdf a .ppt) s vopred definovanými užívateľskými nastaveniami.
 
-Post-Processor with a variety of features and graphics allows engineers to check the model results and present them in a way to understand the model results in an efficient manner. This section gives brief details of the system and the available features.
+Postprocesor s celou radou funkcií a grafických prvkov umožňuje inžinierom overovať výsledky modelovania a prezentovať ich spôsobom, ktorý umožňuje efektívne porozumieť týmto výsledkom. V tejto časti sú uvedené stručné informácie o systéme a dostupných funkciách.
 
-With every release the system is being enhanced to meet the industry requirement and specific user demands.
+S každou novou verziou sa systém vylepšuje tak, aby spĺňal požiadavky odvetvia a špecifické požiadavky používateľov.
 
-Information which is available from the post-processor includes:
+Informácie, ktoré sú k dispozícii z postprocesora, zahŕňajú:
 
-  * Deformed geometry, including tool movements and deformed mesh at each saved step.
+  * Deformovaná geometria, vrátane pohybov nástroja a deformovanej siete v každom uloženom kroku.
 
-  * [Contour plots](../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm#Display_options): Line and shaded contours display the distribution of any state variables, including stress, strain, temperature, damage and others.
+  * [Contour plots](../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm#Display_options): Čiarové a tieňované kontúry znázorňujú rozloženie akýchkoľvek stavových veličín, vrátane napätia, deformácie, teploty, poškodenia a ďalších.
 
-  * [Vector plots](../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm#Display_options): Displacement and velocity vectors indicate magnitude and direction of displacement or velocity for every node at each step throughout the process.
+  * [Vector plots](../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm#Display_options): Vektory posunutia a rýchlosti udávajú veľkosť a smer posunutia alebo rýchlosti pre každý uzol v každom kroku počas celého procesu.
 
-  * Graphs of key variables such as press loads, volumes, temperature, atom content, hardness and point tracked state variables.
+  * Grafy kľúčových premenných, ako sú tlakové zaťaženia, objemy, teplota, obsah atómov, tvrdosť a bodovo sledované stavové premenné.
 
-  * [Point tracking](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_9_point_tracking/) to show how material moves and plots graphs of state variables behavior at these points.
+  * [Point tracking](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_9_point_tracking/) na znázornenie pohybu materiálu a vykreslenie grafov správania stavových premenných v týchto bodoch.
 
-  * [Flow net](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/) showing material flow patterns on a uniform grid. Generally a very good predictor of grain flow patterns in the finished part.
+  * [Flow net](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/) znázorňuje vzory toku materiálu na rovnomernej mriežke. Vo všeobecnosti ide o veľmi dobrý prediktor vzorov toku zŕn v hotovom diele.
 
-  * A [histogram](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/) plot of any state variable can be made to view the distribution of any given state variable throughout a body.
+  * Pre akúkoľvek stavovú premennú je možné vytvoriť graf typu [histogram](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/), aby bolo možné zobraziť rozloženie danej stavovej premennej v celom telese.
 
-  * [3D View Mode](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup/) can be used to visualize 2D in 3D either by revolving or extruding.
+  * Funkcia [3D View Mode](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup/) slúži na vizualizáciu 2D objektov v 3D prostredí, a to buď otáčaním, alebo vytláčaním.
 
-  * Interactive Slicing of 3D object to understand internal features and state variable distribution.
+  * Interaktívne rozrezávanie 3D objektu s cieľom pochopiť vnútorné vlastnosti a rozloženie stavových premenných.
 
-  * [Coupon data extraction](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_11_coupon_data_extraction/) for cut-up evaluation of critical locations for microstructure and mechanical property response.
+  * [Coupon data extraction](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_11_coupon_data_extraction/) na vyhodnotenie rezov v kritických miestach z hľadiska mikrostruktúry a reakcie mechanických vlastností.
 
-  * Results can be plot in region of interest by defining an arbitrary shape, used to get min/max state variable values from specific part of an object.
+  * Výsledky je možné znázorniť v oblasti záujmu definovaním ľubovoľného tvaru, čo slúži na získanie minimálnych a maximálnych hodnôt stavových premenných z konkrétnej časti objektu.
 
-  * Interactive post processing results can be brought to the reports (.pdf and .ppt) files with pre defined user settings.
+  * Výsledky interaktívneho následného spracovania je možné preniesť do súborov správ (vo formátoch .pdf a .ppt) s vopred definovanými užívateľskými nastaveniami.
 
-  * Cellular Automata (CA) models are synchronous algorithms that describe the discrete spatial and temporal evolution of complex systems by applying local (or mesoscopic, mid-range) deterministic or probabilistic transformation rules to lattice cells with local connectivity to predict grain size.
+  * Modely bunkových automatov (CA) sú synchronné algoritmy, ktoré opisujú diskrétny priestorový a časový vývoj komplexných systémov prostredníctvom uplatňovania lokálnych (alebo mezoskopických, strednodobých) deterministických alebo pravdepodobnostných transformačných pravidiel na bunky mriežky s lokálnou prepojenosťou s cieľom predpovedať veľkosť zŕn.
 
-  * [Multi viewports](../26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor.htm#Multi_Viewports), [Database comparison](../26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor.htm#Fig_26_2_3_DB_comparison), Link/Sync options for Multiple window display are newly added and these options can be used for viewing multiple DB’s at a time in NG post.
+  * Nové možnosti [Multi viewports](../26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor.htm#Multi_Viewports), [Database comparison](../26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor.htm#Fig_26_2_3_DB_comparison) a „Prepojiť/Synchronizovať“ pre zobrazenie viacerých okien boli pridané a tieto možnosti je možné využiť na súčasné prezeranie viacerých databáz v programe NG Post.
 
-State variables, geometry and image data can also be extracted in a number of neutral formats for use with other programs.
+Stavové premenné, geometrické údaje a obrazové údaje je možné tiež exportovať v rôznych neutrálnych formátoch na použitie v iných programoch.
 
-## Opening DB for Post-processing
+## Otvorenie databázy na účely následného spracovania
 
-When the problem folder contains the database then the ![]({{ '/assets/icons/pre_icons/2d_3d_post_label.jpg' | relative_url }}) option will be shown in GUI main. To open the simulated database in Post processor from GUI Main, we need to click on![]({{ '/assets/icons/pre_icons/2d_3d_post_label.jpg' | relative_url }})under Post-Processor or by clicking on ![]({{ '/assets/icons/pre_icons/2d_3d_post_icon.jpg' | relative_url }}) in tool bar list as shown in Fig. 24.1.
+Ak zložka s problémom obsahuje databázu, v hlavnom okne grafického rozhrania sa zobrazí možnosť ![]({{ '/assets/icons/pre_icons/2d_3d_post_label.jpg' | relative_url }}). Ak chcete otvoriť simulovanú databázu v postprocesore z hlavného okna grafického rozhrania, kliknite na ![]({{ '/assets/icons/pre_icons/2d_3d_post_label.jpg' | relative_url }}) v časti Post-Processor alebo na ![]({{ '/assets/icons/pre_icons/2d_3d_post_icon.jpg' | relative_url }}) v zozname na paneli nástrojov, ako je znázornené na obr. 24.1.
 
 ![]({{ '/assets/images/post_processor/24_introduction_to_post_processor/image001.jpg' | relative_url }})
 
-Opening Post-processor from GUI main
+Spustenie postprocesora z hlavného okna grafického rozhrania
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[25\. Post Processor Layout](/docs/sk/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
 
-[26\. Post Processor Features](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/)
+[26\. Post Processor Features](/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/)
 
-[28\. Report Generation](/docs/sk/post_processor/28_report_generation/28_report_generation/)
+[28\. Report Generation](/docs/en/post_processor/28_report_generation/28_report_generation/)

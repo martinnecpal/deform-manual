@@ -1,96 +1,96 @@
 ---
 lang: sk
-title: "26.5. Post-Processing Options"
+title: "26.5. Možnosti následného spracovania"
 ---
 
-# 26.5. Post-Processing Options
+# 26.5. Možnosti následného spracovania
 
-26.5.1. Environment
+26.5.1. Životné prostredie
 
-26.5.2. Preference
+26.5.2. Preferencia
 
-26.5.3. Display Properties
+26.5.3. Vlastnosti zobrazenia
 
-26.5.4. Set Viewport Property
+26.5.4. Nastavenie vlastnosti zobrazenia
 
-26.5.5. Color Bar
+26.5.5. Farebná lišta
 
-26.5.6. Unit Conversion
+26.5.6. Prepočet jednotiek
 
-Under Option Menu we are having Environment, Preference, Display Properties, Set Viewport property, Color bar and Unit conversion options as shown in Fig. 26.5.1.
+V ponuke „Option Menu“ máme k dispozícii možnosti „Environment“, „Preference“, „Display Properties“, „Set Viewport property“, „Color bar“ a „Unit conversion“, ako je znázornené na obr. 26.5.1.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image001.jpg' | relative_url }})
 
-Post-Processor Options menu
+Ponuka možností postprocesora
 
-## **Environment**
+## **Životné prostredie**
 
-The user can adjust the DEFORM working environment using environment option. Here the user can make changes in display and graphical settings and can save the settings as for his convenience. Setting will update from next session onwards. For more information related to Environment refer Chapter [8\. Pre-Processor Layout](/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/) section [Environment](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Environment).
+Používateľ môže prispôsobiť pracovné prostredie programu DEFORM pomocou možnosti „Prostredie“. Tu môže používateľ vykonávať zmeny v nastaveniach zobrazenia a grafických nastaveniach a môže si tieto nastavenia uložiť podľa vlastných potrieb. Nastavenia sa uplatnia od nasledujúcej relácie. Ďalšie informácie týkajúce sa prostredia nájdete v kapitole [8\. Pre-Processor Layout](/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/), v časti [Environment](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Environment).
 
-## Preference
+## Nastavenia
 
-Provides viewing and object type information of the geometries. In this option, the user can modify the display of the objects in the graphic display window. For more information related to Environment refer Chapter [8\. Pre-Processor Layout](/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/) section [Preference](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Preferences).
+Poskytuje informácie o zobrazení a typoch objektov v geometriách. V tejto možnosti môže používateľ upraviť zobrazenie objektov v grafickom okne. Ďalšie informácie týkajúce sa prostredia nájdete v kapitole [8\. Pre-Processor Layout](/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/), v časti [Preference](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Preferences).
 
-## Display Properties ![]({{ '/assets/icons/post_icons/mo_display_properties_icon.jpg' | relative_url }})
+## Vlastnosti zobrazenia ![]({{ '/assets/icons/post_icons/mo_display_properties_icon.jpg' | relative_url }})
 
-This option allows the user to set the display of DB info and Title with or combination of database name, Database path, Database folder, operation name, simulation and Title. Here user can set the Font size and color of the title and DB info (See Fig. 26.5.2.).
+Táto voľba umožňuje používateľovi nastaviť zobrazenie informácií o databáze a názvu buď samostatne, alebo v kombinácii s názvom databázy, cestou k databáze, priečinkom databázy, názvom operácie, simuláciou a názvom. Tu môže používateľ nastaviť veľkosť a farbu písma pre názov a informácie o databáze (pozri obr. 26.5.2.).
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image002.jpg' | relative_url }})
 
-Display properties
+Vlastnosti zobrazenia
 
-## Set Viewport Property ![]({{ '/assets/icons/post_icons/mo_set_viewport_properties_icon.jpg' | relative_url }})
+## Nastavenie vlastnosti zobrazenia ![]({{ '/assets/icons/post_icons/mo_set_viewport_properties_icon.jpg' | relative_url }})
 
-**[2D, 3D]** : The user can set the all the four viewports display area in the display window using the available options. These options will only be applied to the current or selected Viewport in the Display Window.
+**[2D, 3D]** : Používateľ môže pomocou dostupných možností nastaviť zobrazovaciu oblasť všetkých štyroch zobrazení v okne zobrazenia. Tieto možnosti sa uplatnia iba na aktuálne alebo vybrané zobrazenie v okne zobrazenia.
 
-For Multi Viewports options are available in the graphical utilities and are also available from the Viewport Menu Multi options. For more information related to the multiple viewports refer the chapter [26.1. Viewports and Windows menu](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/) section [Multiple viewport control](26_2_handeling_viewports_and_windows_iin_post_processor.htm#Multi_Viewports).
+Možnosti pre viacero zobrazení sú k dispozícii v grafických nástrojoch a tiež v ponuke „Multi“ v menu zobrazenia. Ďalšie informácie týkajúce sa viacerých zobrazení nájdete v kapitole XLPHX0, v časti XLPHX1.
 
-**[2D]** : User can set the X and Y axis Minimum and Maximum limits of the viewport for all the four viewports from the translation tab by selecting the pull down button in the top of the window. After selecting the viewport in the display window user has to select the viewport property dialog to select which of the four viewport settings to be applied. (See Fig. 26.5.3.)
+**[2D]** : Používateľ môže na karte „Translation“ nastaviť minimálne a maximálne hranice osí X a Y pre všetky štyri zobrazenia kliknutím na roletové menu v hornej časti okna. Po výbere zobrazenia v okne zobrazenia musí používateľ otvoriť dialógové okno vlastností zobrazenia, aby vybral, ktoré zo štyroch nastavení zobrazenia sa má použiť. (Pozri obr. 26.5.3.)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image003.jpg' | relative_url }})
 
-Viewport Translation properties window
+Okno vlastností posunu zobrazenia
 
   
-**[3D]** : In addition to the two directional viewport limits selection from the Translation tab user can select the third direction view from the Rotation tab using the axis and the rotation angle. (See Fig. 26.5.4.)
+**[3D]** : Okrem výberu dvoch smerov obmedzenia zobrazenia na karte „Translation“ môže používateľ na karte „Rotation“ zvoliť tretí smer zobrazenia pomocou osi a uhla otáčania. (Pozri obr. 26.5.4.)
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image004.jpg' | relative_url }})
 
-Viewport Rotation properties window
+Okno vlastností „Rotácia zobrazenia“
 
-**Quaternions Setup** :
+**Nastavenie kvaternionov** :
 
-**Initialize** : It initializes the defined quaternion setup.
+**Inicializovať**: Inicializuje definované nastavenie kvaternionu.
 
-**Assign** : User can assign the quaternion setup by selecting axis and defining angle.
+**Priradiť**: Používateľ môže priradiť nastavenie kvaternionu výberom osi a zadaním uhla.
 
-**Add** : Defined quaternions setup can be incriminated to the viewport.
+**Pridať**: Nastavenie definovaných kvaternionov môže byť priradené k zobrazeniu.
 
-**Quaternions** : It provides a convenient mathematical notation for representing orientations and rotations of the objects in 3D space. Using Quaternion setup user can easily input meaningful quaternions
+**Kvaterniony**: Poskytujú praktický matematický zápis na vyjadrenie orientácie a rotácie objektov v 3D priestore. Pomocou nastavenia kvaternionov môže používateľ ľahko zadávať zmysluplné kvaterniony.
 
-## Color Bar ![]({{ '/assets/icons/post_icons/mo_color_bar_icon.jpg' | relative_url }})
+## Farebná lišta ![]({{ '/assets/icons/post_icons/mo_color_bar_icon.jpg' | relative_url }})
 
-The user can create new color bars by adding, deleting or modifying colors. User can change the color by selecting the color bar and using Change Color button to select new color, after selecting new color click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) in select color window. Color bars can be moved up and down using buttons. New colors can be added using button and colors can be deleted using button (see Fig. 26.5.5.).
+Používateľ môže vytvárať nové farebné pruhy pridávaním, odstraňovaním alebo úpravou farieb. Farbu je možné zmeniť tak, že používateľ vyberie farebný pruh a pomocou tlačidla „Zmeniť farbu“ vyberie novú farbu; po výbere novej farby klikne v okne výberu farieb na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Farebné pruhy je možné posúvať nahor a nadol pomocou tlačidiel. Nové farby je možné pridať pomocou tlačidla a farby je možné odstrániť pomocou tlačidla (pozri obr. 26.5.5.).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image005.jpg' | relative_url }})
 
-Color bar
+Farebný pruh
 
-## Unit Conversion ![]({{ '/assets/icons/post_icons/mo_unit_conversion_icon.jpg' | relative_url }})
+## Prepočet jednotiek ![]({{ '/assets/icons/post_icons/mo_unit_conversion_icon.jpg' | relative_url }})
 
-This allows the user to convert the default unit system of the variables to other standard unit system or to the user defined conversion factor for post processing.
+Toto umožňuje používateľovi previesť predvolený systém jednotiek premenných na iný štandardný systém jednotiek alebo na používateľom definovaný prevodný koeficient na účely následného spracovania.
 
   
-Basically three options available those are Default (unit system used to setup the problem), From Current to other standard unit system or to User. The two standard unit systems available in deform are SI and English. (See Fig. 26.5.6.)
+K dispozícii sú v podstate tri možnosti: „Predvolené“ (systém jednotiek použitý pri nastavení úlohy), „Z aktuálneho do iného štandardného systému jednotiek“ alebo „Užívateľský“. Dva štandardné systémy jednotiek dostupné v programe Deform sú SI a anglický. (Pozri obr. 26.5.6.)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_5_postprocessing_options_menu/image006.jpg' | relative_url }})
 
-Unit Conversion
+Prevádzanie jednotiek
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[8\. Pre-Processor Layout](/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/)
+[8\. Pre-Processor Layout](/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/)
 
-[26.2. Viewports and Windows menu](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/)
+[26.2. Viewports and Windows menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/)

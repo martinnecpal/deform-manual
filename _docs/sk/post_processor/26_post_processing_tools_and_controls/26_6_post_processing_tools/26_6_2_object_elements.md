@@ -1,25 +1,25 @@
 ---
 lang: sk
-title: "26.6.2. Object Elements"
+title: "26.6.2. Prvky objektu"
 ---
 
-# 26.6.2. Object Elements **![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }})**
+# 26.6.2. Prvky objektu **![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }})**
 
-**[2D, 3D]** : The elements window will display information of the elements of the currently selected object. This information includes Nodes of the element, State variables and Boundary conditions. A different element can be selected through the double spin box or by selecting an element graphically in the display window. The information displayed will change as the step number displayed changes in the display window (See Fig. 26.6.2.1. and Fig. 26.6.2.2.). From DEFORM V12, the elemental data can be displayed based on the selected coordinate system selected in State variable page, after changing coordinate system in State variable page, toggle button will be activated and can be used to toggle button between Cartesian coordinate system value and selected new coordinate system value as shown in Fig. 26.6.2.3. and Fig. 26.6.2.4.
+**[2D, 3D]** : V okne prvkov sa zobrazia informácie o prvkoch aktuálne vybraného objektu. Tieto informácie zahŕňajú uzly prvku, stavové premenné a okrajové podmienky. Iný prvok je možné vybrať pomocou dvojitého roletového menu alebo grafickým výberom prvku v zobrazenom okne. Zobrazené informácie sa budú meniť v závislosti od zmeny čísla kroku zobrazeného v okne (pozri obr. 26.6.2.1. a obr. 26.6.2.2.). Od verzie DEFORM V12 je možné zobraziť údaje o prvkoch na základe súradnicového systému vybraného na stránke „Stavové premenné“. Po zmene súradnicového systému na stránke „Stavové premenné“ sa aktivuje prepínač, ktorým je možné prepínať medzi hodnotami v kartézskom súradnicovom systéme a hodnotami vo vybranom novom súradnicovom systéme, ako je znázornené na obr. 26.6.2.3. a obr. 26.6.2.4.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_2_object_elements/image001.jpg' | relative_url }})  
 
-Object Elements window for 2D
+Okno „Prvky objektu“ pre 2D
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_2_object_elements/image002.jpg' | relative_url }})
 
-Object Elements window for 3D
+Okno „Prvky objektu“ pre 3D
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_2_object_elements/image003.jpg' | relative_url }})
 
-Object Element window with new coordinate system for 2D
+Okno „Object Element“ s novým súradnicovým systémom pre 2D
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_2_object_elements/image004.jpg' | relative_url }})
 
-Object Element window with new coordinate system for 3D
+Okno „Object Element“ s novým súradnicovým systémom pre 3D

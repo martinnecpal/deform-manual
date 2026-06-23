@@ -1,118 +1,118 @@
 ---
 lang: sk
-title: "26.6.5. Region of Interest"
+title: "26.6.5. Oblasť záujmu"
 ---
 
-# 26.6.5. Region of Interest
+# 26.6.5. Oblasť záujmu
 
-  * Region of Interest
+  * Oblasť záujmu
 
-  * Back Tracking
+  * Vrátenie sa späť
 
-  * Back Tracking - Example
+  * Vrátenie sa späť – príklad
 
-**Region of Interest**
+**Zaujímavá oblasť**
 
-A Region of Interest (ROI) is an arbitrary shape (2d or 3d) that defines an area which is of interest to the user for reviewing the results.
-
-  
-These regions can be used to get min/max state variable values for a specific region in an object. Contour plots can be clipped to a region of interest.
+Oblasť záujmu (ROI) je ľubovoľný tvar (2D alebo 3D), ktorý vymedzuje oblasť, ktorá je pre používateľa zaujímavá z hľadiska posudzovania výsledkov.
 
   
-Region of interest can be defined by first adding the regions using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add region) button. User has to double click on the added region to edit its name and define its geometry from the geometry tools. (See Fig. 26.6.5.1., Fig. 26.6.5.2. and Fig. 26.6.5.3.)
+Tieto oblasti možno použiť na získanie minimálnych a maximálnych hodnôt stavových premenných pre konkrétnu oblasť v objekte. Kontúrové grafy možno oříznúť tak, aby zachytávali len požadovanú oblasť.
+
+  
+Oblasť záujmu je možné definovať tak, že najskôr pridáte oblasti pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať oblasť). Používateľ musí dvakrát kliknúť na pridanú oblasť, aby mohol upraviť jej názov a definovať jej geometriu pomocou geometrických nástrojov. (Pozri obr. 26.6.5.1., obr. 26.6.5.2. a obr. 26.6.5.3.)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image001.jpg' | relative_url }})
 
-Region of interest definition for 2D 
+Definícia oblasti záujmu pre 2D 
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image002.jpg' | relative_url }})
 
-Region of interest definition for 3D 
+Definícia oblasti záujmu pre 3D 
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image003.jpg' | relative_url }})
 
-3D regions of interest wireframe view
+3D zobrazenie oblastí záujmu v drôtenom zobrazení
 
-Defined geometry can be positioned using positioning option as shown in Fig. 26.6.5.4.
+Definovanú geometriu je možné umiestniť pomocou možnosti polohovania, ako je znázornené na obr. 26.6.5.4.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image004.jpg' | relative_url }})
 
-Region of interest positioning
+Určenie polohy oblasti záujmu
 
-After defining the geometry for the regions of interest, select the regions and click on ![]({{ '/assets/icons/post_icons/mo_generate_region_mesh_button.jpg' | relative_url }}) button to generate mesh for the regions. For 3D model, mesh settings can be varied for each region from the Mesh tab as shown in Fig. 26.6.5.5.
+Po definovaní geometrie sledovaných oblastí vyberte tieto oblasti a kliknutím na tlačidlo ![]({{ '/assets/icons/post_icons/mo_generate_region_mesh_button.jpg' | relative_url }}) vygenerujte sieť pre tieto oblasti. V prípade 3D modelu je možné nastavenia siete pre každú oblasť individuálne upraviť na karte „Mesh“, ako je znázornené na obr. 26.6.5.5.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image005.jpg' | relative_url }})
 
-3D model region of interest mesh settings window
+Okno nastavení siete oblasti záujmu 3D modelu
 
-User can plot the state variable for the object with regions and control visibility of the regions using the object tree options. This displays the contour plot for the specific regions. Examples of contour plots for the 2D Rib web example is shown in Fig. 26.6.5.6. and for 3D gear carrier example is shown in Fig. 26.6.5.7.
+Používateľ môže vykresliť stavovú premennú objektu s oblasťami a pomocou nastavení v stromovej štruktúre objektov ovládať viditeľnosť týchto oblastí. Tým sa zobrazí kontúrový graf pre konkrétne oblasti. Príklady výškových grafov pre 2D príklad rebrového výstuže sú uvedené na obr. 26.6.5.6 a pre 3D príklad nosiča ozubeného kolesa sú uvedené na obr. 26.6.5.7.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image006.jpg' | relative_url }})
 
-2D Rib web example with region of interest effective strain contours
+Príklad 2D rebrového výstuže s kontúrami efektívneho deformácie v oblasti záujmu
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image007.jpg' | relative_url }})
 
-3D Gear carrier example with region of interest effective strain contours
+Príklad 3D nosiča ozubeného kolesa s kontúrami efektívneho deformácie v oblasti záujmu
 
-**Back Tracking**
+**Vrátenie sa späť**
 
-**(2D)** : Back tracking option is now available for 2D objects as region of interest to track the region back in Billet after forming process. We can also plot state variables within the back-tracked ROI shape.
-
-  
-User needs to add ROI and define its geometry after which Back Track option will become active. Now click on Back Track button so that system starts calculating to back track region. Once backtracking is completed user can notice that only the ROI selected for backtracking is displayed (See Fig. 26.6.5.8.).
+**(2D)** : Pre 2D objekty je teraz k dispozícii možnosť spätného sledovania ako oblasti záujmu, ktorá umožňuje sledovať túto oblasť späť v surovom materiáli po procese tvárnenia. Môžeme tiež vykresliť stavové premenné v rámci tvaru oblasti záujmu, ktorá bola spätne sledovaná.
 
   
-Use play Backward button and observe the region back tracking into billet. We can also plot state variable and observe the state variable distribution in Back Track region.
+Používateľ musí pridať oblasť záujmu (ROI) a definovať jej geometriu, na čo sa aktivuje možnosť „Back Track“. Teraz kliknite na tlačidlo „Back Track“, aby systém začal vypočítavať oblasť spätného sledovania. Po dokončení spätného sledovania si používateľ môže všimnúť, že sa zobrazuje iba oblasť záujmu vybraná na spätné sledovanie (pozri obr. 26.6.5.8.).
+
+  
+Použite tlačidlo „Prehrávať späť“ a sledujte, ako sa oblasť vracia späť do počiatočného stavu. Môžeme tiež znázorniť stavovú premennú a sledovať jej rozloženie v oblasti spätného sledovania.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image008.jpg' | relative_url }})
 
-After generating Back Track
+Po vytvorení Back Tracku
 
-**Example:**
+**Príklad:**
 
-  * Import **MO2_Heatup_Rest_Upset_Boolean_EN_new**.DB from installation 2D/LABS folder in NG post and go to Last step (see Fig. 26.6.5.9.),
+  * Naimportujte súbor **MO2_Heatup_Rest_Upset_Boolean_EN_new**.DB z inštalačnej zložky 2D/LABS v programe NG a prejdite na posledný krok (pozri obr. 26.6.5.9.),
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image009.jpg' | relative_url }})
 
-Loaded Database at Last step
+Databáza bola načítaná v poslednom kroku
 
-  * In File Menu select Export option and save the keyfile as " **MachinedShape.KEY** " (See Fig. 26.6.5.10.).
+  * V ponuke Súbor vyberte možnosť Exportovať a uložte súbor s kľúčom pod názvom „**MachinedShape.KEY**“ (pozri obr. 26.6.5.10.).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image010.jpg' | relative_url }})
 
-Saving Object file using Export option
+Uloženie súboru objektu pomocou možnosti Exportovať
 
-  * Now load Step 1628 (End step of Operation 3)
+  * Teraz načítajte krok 1628 (záverečný krok operácie 3)
 
-  * Open Region Of Interest, Click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button to Add a new ROI and Click on ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), Choose “**MachinedShape.KEY** ” file and Select Workpiece object in Object Selection page (See Fig. 26.6.5.11.
+  * Otvorte oblasť záujmu (ROI), kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) na pridanie novej oblasti záujmu a kliknite na ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), vyberte súbor „**MachinedShape.KEY**“ a na stránke výberu objektov vyberte objekt obrobku (pozri obr. 26.6.5.11).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image011.jpg' | relative_url }})
 
-Open saved Keyfile in Region of Interest Page
+Otvorte uložený súbor s kľúčom na stránke „Oblasť záujmu“
 
-  * Click on ![]({{ '/assets/icons/post_icons/mo_generate_region_mesh_button.jpg' | relative_url }}), after generating Mesh then ![]({{ '/assets/icons/post_icons/mo_back_track_button.jpg' | relative_url }}) option is activated and generated region of Mesh is highlighted in Red color (See Fig. 26.6.5.12.)
+  * Kliknite na ![]({{ '/assets/icons/post_icons/mo_generate_region_mesh_button.jpg' | relative_url }}); po vytvorení siete sa aktivuje možnosť ![]({{ '/assets/icons/post_icons/mo_back_track_button.jpg' | relative_url }}) a vytvorená oblasť siete sa zvýrazní červenou farbou (pozri obr. 26.6.5.12.)
 
 .
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image012.jpg' | relative_url }})
 
-After Generating Region of Interest Mesh
+Po vytvorení siete oblasti záujmu
 
-  * Now Click on ![]({{ '/assets/icons/post_icons/mo_back_track_button.jpg' | relative_url }}). After back track calculations are completed, region selected for back tracking will be displayed as shown in Fig. 26.6.5.13.
+  * Teraz kliknite na ![]({{ '/assets/icons/post_icons/mo_back_track_button.jpg' | relative_url }}). Po dokončení výpočtov spätného sledovania sa zobrazí oblasť vybraná na spätné sledovanie, ako je znázornené na obr. 26.6.5.13.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image013.jpg' | relative_url }})
 
-Back tracking option added in Object tree list and its RMB options
+Do zoznamu v stromovej štruktúre objektov a do ponuky pravého tlačidla myši bola pridaná možnosť vrátiť sa späť
 
-  * Now Close ROI and play Backward animation an observe the display Region (See Fig. 26.6.5.14.)
+  * Teraz zatvorte okno ROI, spustite animáciu „Backward“ a sledujte zobrazenú oblasť (pozri obr. 26.6.5.14.)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image014.jpg' | relative_url }})
 
-Back Track Region display
+Zobrazenie regiónu „Back Track“
 
-  * Object display with Back Track Off and Back Track On options (See Fig. 26.6.5.15.)
+  * Zobrazenie objektu s možnosťami „Back Track Off“ a „Back Track On“ (pozri obr. 26.6.5.15.)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_5_region_of_interest/image015.jpg' | relative_url }})
 
-Back Track RMB options in Object Tree
+Možnosti vrátenia sa späť v RMB v stromovej štruktúre objektov

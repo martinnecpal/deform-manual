@@ -1,269 +1,269 @@
 ---
 lang: sk
-title: "25. Post Processor Layout"
+title: "25. Rozloženie postprocesora"
 ---
 
-# 25\. Post-Processor Layout
+# 25\. Rozloženie postprocesora
 
-25.1. Post features settings modifications window
+25.1. Okno na úpravu nastavení funkcií príspevkov
 
-25.2. Object Tree
+25.2. Strom objektov
 
-25.2.1. Operation tree options
+25.2.1. Možnosti operačného stromu
 
-25.2.2. Object Tree Right Mouse button (RMB) options
+25.2.2. Možnosti pravého tlačidla myši (RMB) v strome objektov
 
-25.3. Graphics window
+25.3. Grafické okno
 
-25.4. Report Generation
+25.4. Vytváranie správ
 
-25.5. Dock Widget menu
+25.5. Ponuka widgetu v doku
 
-Post-processor provides an intuitive GUI for the user to view simulation output, interpret results and generate report in various formats such as pdf, ppt…etc. PIP feature of Next Gen Post helps the user to compare simulation output across multiple databases.
+Postprocesor poskytuje používateľovi intuitívne grafické používateľské rozhranie, ktoré mu umožňuje prezerať výstupy simulácie, interpretovať výsledky a generovať správy v rôznych formátoch, ako sú PDF, PPT atď. Funkcia PIP v programe Next Gen Post pomáha používateľovi porovnávať výstupy simulácie z viacerých databáz.
 
-Post-processor GUI layout (See Fig. 25.1.) can be divided into Step View, Object Tree, Post features settings modifications window and graphics window.
+Rozloženie grafického rozhrania postprocesora (pozri obr. 25.1.) možno rozdeliť na zobrazenie krokov, strom objektov, okno na úpravu nastavení postprocesora a grafické okno.
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image001.jpg' | relative_url }})
 
-Post-processor layout
+Rozloženie postprocesora
 
-**Step View Window** provides options to select and play the simulated steps and also to select the operations and display information related to current operation and step.
+**Okno zobrazenia krokov** ponúka možnosti výberu a prehrávania simulovaných krokov, ako aj výber operácií a zobrazenie informácií týkajúcich sa aktuálnej operácie a kroku.
 
-**Graphics window** will display graphical representation of objects. The graphics window can be used for displaying the contour plots, graphs, grain flow, etc.
+**Grafické okno** zobrazuje grafické znázornenie objektov. Grafické okno možno použiť na zobrazenie kontúrových grafov, grafov, toku zŕn atď.
 
-**Post Tools** are used to plot different state variables, point track state variables, study grain flow using flownet, extract data from DB, plot summary graphs, create animation, etc.
+**Nástroje na tvorbu grafov** slúžia na vykresľovanie rôznych stavových premenných, sledovanie bodových dráh stavových premenných, skúmanie toku zŕn pomocou programu Flownet, extrahovanie údajov z databázy, vytváranie súhrnných grafov, tvorbu animácií atď.
 
-**Object Tree** lists the objects and controls their display. Report Tab within object tree window can be used by user for generating report of simulation results.
+**Strom objektov** obsahuje zoznam objektov a riadi ich zobrazenie. Kartu „Správa“ v okne stromu objektov môže používateľ využiť na vytvorenie správy o výsledkoch simulácie.
 
-**Post features** settings modifications window is used to select and modify the post features and its settings for state variables plot, point tracking, flownet, summary graphs, data extraction, load-stroke graphs, symmetry, slicing (only for 3D), region of interest, animation setup, etc.
+Okno na úpravu nastavení **funkcií príspevku** slúži na výber a úpravu funkcií príspevku a ich nastavení pre grafy stavových premenných, sledovanie bodov, Flownet, súhrnné grafy, extrakciu údajov, grafy zaťaženia a posunu, symetriu, rezanie (len pre 3D), oblasť záujmu, nastavenie animácie atď.
 
-## Post features settings modifications window
+## Okno s nastaveniami funkcií príspevku
 
-Post features settings modifications window is a region that displays options and settings for selected features of the post processor as shown in Fig. 25.1. The options and settings can be set and modified in this region.
+Okno úprav nastavení funkcií postprocesora je oblasť, v ktorej sa zobrazujú možnosti a nastavenia pre vybrané funkcie postprocesora, ako je znázornené na obr. 25.1. V tejto oblasti je možné tieto možnosti a nastavenia nastaviť a upravovať.
 
-The options and settings for each feature are explained along with the feature further in section Post Features.
+Možnosti a nastavenia jednotlivých funkcií sú vysvetlené spolu s danou funkciou ďalej v časti Funkcie príspevkov.
 
-## Object Tree
+## Strom objektov
 
-The objects and its display information such as objects visibility, geometry, mesh, transparency, slice plane, point tracking and Flownet information is available in this window as shown in Fig. 25.1.
+V tomto okne sú k dispozícii objekty a informácie o ich zobrazení, ako napríklad viditeľnosť objektov, geometria, sieť, priehľadnosť, rovina rezu, sledovanie bodov a informácie o sieti Flownet, ako je znázornené na obr. 25.1.
 
-User can select the object to be visible for display in graphics window using left mouse click on the particular object in the tree and change its display modes. Point tracking and Flownet can be hidden or deleted using RMB click on the Point tracking/Flownet tracking link in the object tree.
+Používateľ môže vybrať objekt, ktorý sa má zobraziť v grafickom okne, kliknutím ľavým tlačidlom myši na príslušný objekt v stromovej štruktúre a zmeniť jeho režimy zobrazenia. Funkcie „Point tracking“ a „Flownet“ je možné skryť alebo odstrániť kliknutím pravým tlačidlom myši na odkaz „Point tracking“/„Flownet tracking“ v stromovej štruktúre objektov.
 
-### **Operation tree options**
+### **Možnosti operačného stromu**
 
 **[2D][3D]:**
 
-**Show Object![]({{ '/assets/icons/pre_icons/mo_show_obj_icon.jpg' | relative_url }}) :** Turns on/off the selected object from object tree.
+**Zobraziť objekt ![]({{ '/assets/icons/pre_icons/mo_show_obj_icon.jpg' | relative_url }}):** Zapne/vypne vybraný objekt zo stromu objektov.
 
-**Show Mesh![]({{ '/assets/icons/pre_icons/mo_show_mesh_icon.jpg' | relative_url }}) :** Shows or hides mesh of the selected object from object tree.
+**Zobraziť sieť ![]({{ '/assets/icons/pre_icons/mo_show_mesh_icon.jpg' | relative_url }}):** Zobrazí alebo skryje sieť vybraného objektu zo stromu objektov.
 
-**Show Geometry![]({{ '/assets/icons/pre_icons/mo_show_geo_icon.jpg' | relative_url }}) :** Shows or hides geometry of the selected object geometry from the object tree.
+**Zobraziť geometriu ![]({{ '/assets/icons/pre_icons/mo_show_geo_icon.jpg' | relative_url }}) :** Zobrazí alebo skryje geometriu vybraného objektu zo stromu objektov.
 
-**Show Contact Nodes:![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}) **Turns on the contact display for the selected object from object tree with all other all object. (See Fig. 25.1. )
+**Zobraziť kontaktné uzly: ![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}) **Zapne zobrazenie kontaktov pre vybraný objekt zo stromu objektov spolu so všetkými ostatnými objektmi. (Pozri obr. 25.1.)
 
   
 **[3D]:**
 
-**Make Transparent![]({{ '/assets/icons/pre_icons/mo_transparent.jpg' | relative_url }}) :** Turns on/off transparency of the selected object from the object tree.
+**Nastaviť priehľadnosť ![]({{ '/assets/icons/pre_icons/mo_transparent.jpg' | relative_url }}) :** Zapne alebo vypne priehľadnosť vybraného objektu zo stromu objektov.
 
-**Show Backface![]({{ '/assets/icons/pre_icons/mo_show_backfac_icon.jpg' | relative_url }}) :** Turns on/off the back surface of the object selected object from the object tree, it will be more useful when the object are made transparent. (See  Fig. 25.2.)
+**Zobraziť zadnú stranu ![]({{ '/assets/icons/pre_icons/mo_show_backfac_icon.jpg' | relative_url }}):** Zapína/vypína zadnú stranu objektu vybraného v stromovej štruktúre objektov; táto funkcia je užitočná najmä v prípade, ak je objekt nastavený ako priehľadný. (Pozri obr. 25.2.)
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image032.jpg' | relative_url }}) ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image033.jpg' | relative_url }})
 
   
 (a) (b)
 
-Plastic object mesh in shaded rendering type; (a) With Back face on (b) With Back face off
+Sieť plastického objektu v režime tieňovaného vykresľovania; (a) so zapnutým zobrazením zadných plôch (b) s vypnutým zobrazením zadných plôch
 
 **[2D][3D]:**  
-**Object Display Modes:** DEFORM has 3 different object display modes as shown in Fig. 25.1.
+**Režimy zobrazenia objektov:** Program DEFORM ponúka 3 rôzne režimy zobrazenia objektov, ako je znázornené na obr. 25.1.
 
-**Single Object mode![]({{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}) :** Only the selected object from object tree is displayed. All other objects are hidden.
+**Režim jedného objektu ![]({{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}):** Zobrazí sa iba vybraný objekt zo stromu objektov. Všetky ostatné objekty sú skryté.
 
-**Multi Object mode**![]({{ '/assets/icons/pre_icons/mo_show_multi_obj_icon.jpg' | relative_url }}) : All objects are displayed in graphics window. The selected object from object tree is displayed in solid color and all other objects are transparent in 3d mode. (See Fig. 25.3.)
+**Režim viacerých objektov**![]({{ '/assets/icons/pre_icons/mo_show_multi_obj_icon.jpg' | relative_url }}): V grafickom okne sa zobrazujú všetky objekty. Objekt vybraný zo stromu objektov je v 3D režime zobrazený v jednolitej farbe, zatiaľ čo všetky ostatné objekty sú priehľadné. (Pozri obr. 25.3.)
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image034.jpg' | relative_url }})
 
-Multi object mode when plastic workpiece object get selected
+Režim viacerých objektov pri výbere plastového obrobku
 
   
-**User Object mode**![]({{ '/assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }}) : User can toggle the object's Display, Geometry, Mesh, Transparency (only for 3D), Slice plane (only for 3D) modes independently. This can be done by checking and unchecking respective check boxes as shown in Fig. 25.4.
+**Režim objektu používateľa**![]({{ '/assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }}): Používateľ môže nezávisle prepínať medzi režimami Zobrazenie, Geometria, Sieť, Priehľadnosť (len pre 3D) a Rezová rovina (len pre 3D) daného objektu. To je možné vykonať zaškrtnutím alebo odškrtnutím príslušných políčok, ako je znázornené na obr. 25.4.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image035.jpg' | relative_url }})
 
-User defined Object Mode window
+Okno v režime užívateľsky definovaných objektov
 
   
-Following are the settings we have to select based on the objects display requirements,
+Nižšie sú uvedené nastavenia, ktoré musíme zvoliť na základe požiadaviek na zobrazenie objektov,
 
-**Apply Display options**![]({{ '/assets/icons/pre_icons/mo_apply_display_option.jpg' | relative_url }}) : Applies the selected display option for the objects.
+**Použiť možnosti zobrazenia**![]({{ '/assets/icons/pre_icons/mo_apply_display_option.jpg' | relative_url }}) : Použije vybranú možnosť zobrazenia pre objekty.
 
-**Visible**![]({{ '/assets/icons/pre_icons/mo_visible.jpg' | relative_url }}) : Turns on/off the selected object display.
+**Viditeľné**![]({{ '/assets/icons/pre_icons/mo_visible.jpg' | relative_url }}) : Zapne/vypne zobrazenie vybraného objektu.
 
-**Mesh**![]({{ '/assets/icons/pre_icons/mo_mesh_icon.jpg' | relative_url }}) : Shows or hides display of the selected object mesh.
+**Mesh**![]({{ '/assets/icons/pre_icons/mo_mesh_icon.jpg' | relative_url }}) : Zobrazí alebo skryje sieť vybraného objektu.
 
-**Geometry**![]({{ '/assets/icons/pre_icons/mo_geometry _icon.jpg' | relative_url }}) : Shows or hides display of the selected object geometry.
+**Geometria**![]({{ '/assets/icons/pre_icons/mo_geometry _icon.jpg' | relative_url }}) : Zobrazí alebo skryje geometriu vybraného objektu.
 
-**Transparency![]({{ '/assets/icons/pre_icons/mo_transparent.jpg' | relative_url }})** : Turns on/off transparency of the selected object.
+**Transparency![]({{ '/assets/icons/pre_icons/mo_transparent.jpg' | relative_url }})** : Zapne/vypne priehľadnosť vybraného objektu.
 
-**Slice**![]({{ '/assets/icons/pre_icons/mo_slice.jpg' | relative_url }}) : Turns on/off sliced plane for the selected sliced object.
+**Slice**![]({{ '/assets/icons/pre_icons/mo_slice.jpg' | relative_url }}) : Zapne/vypne rovinu rezu pre vybraný objekt, na ktorom sa má vykonať rez.
 
-### **Object Tree Right Mouse button (RMB) options**
+### **Možnosti pravého tlačidla myši (RMB) v strome objektov**
 
-**Problem Data** [2D, 3D]:   
-The Problem Data menu contains the following command as shown in Fig. 25.5. and Fig. 25.6.
+**Údaje k úlohe** [2D, 3D]:   
+Ponuka „Problem Data“ obsahuje nasledujúci príkaz, ako je znázornené na obr. 25.5 a obr. 25.6.
 
 **[2D, 3D]:**
 
-**Select All objects** : When user clicks on this option it turns on all the objects Select column check boxes in Operation tree.
+**Vybrať všetky objekty**: Keď používateľ klikne na túto možnosť, zaškrtnú sa všetky políčka v stĺpci „Vybrať“ v strome operácií.
 
-**Unselect All objects** : When user clicks on this option it turns off all the objects Select column check boxes in Operation tree.
+**Zrušiť výber všetkých objektov**: Keď používateľ klikne na túto možnosť, zruší sa zaškrtnutie všetkých políčok v stĺpci „Výber“ v strome operácií.
 
-**Turn on all objects** : When user clicks on this option it turns on all the objects in display window.
+**Zapnúť všetky objekty**: Keď používateľ klikne na túto možnosť, zapnú sa všetky objekty v okne zobrazenia.
 
-**Turn off all objects** : When user clicks on this option it turns off all the objects in display window.
+**Vypnúť všetky objekty**: Keď používateľ klikne na túto možnosť, vypnú sa všetky objekty v okne zobrazenia.
 
-**Turn on all workpieces (not RIGID)** : Turns on any object which is not rigid. (Turns off all rigid objects)
+**Zapnúť všetky obrobky (okrem RIGID)**: Zapne všetky objekty, ktoré nie sú tuhé. (Vypne všetky tuhé objekty)
 
-**T******ur** n on all dies (RIGID)**: Turns on any object which is rigid. (Turns off all other objects)
+**T******ur** n na všetkých telesách (RIGID)**: Zapne sa na každom objekte, ktorý je tuhý. (Všetky ostatné objekty sa vypnú)
 
-**Turn on contact display for all** : It turns on the contact display of all objects in display window.
+**Zapnúť zobrazenie kontaktov pre všetky**: Táto funkcia zapne zobrazenie kontaktov všetkých objektov v okne zobrazenia.
 
-**Turn off contact display for all** : It turns off the contact display of all objects in display window.
+**Vypnúť zobrazenie kontaktov pre všetky**: Táto funkcia vypne zobrazenie kontaktov všetkých objektov v okne zobrazenia.
 
-**Import Object** : User can import object from key file or Database.
+**Import objektu**: Používateľ môže importovať objekt zo súboru s kľúčmi alebo z databázy.
 
-**Import Geometry** : User can import geometry from key file, database, IGS, STL, DXF formats.
+**Import geometrie**: Používateľ môže importovať geometriu zo súboru kľúčov, databázy alebo vo formátoch IGS, STL a DXF.
 
 **[3D]:**
 
-**Turn on transparency for all** : It makes objects transparent in display window.
+**Zapnúť priehľadnosť pre všetko**: Táto funkcia nastaví objekty v okne zobrazenia ako priehľadné.
 
-**Turn off transparency for all** : It turns off the transparency of objects in display window.
+**Vypnúť priehľadnosť pre všetky**: Táto voľba vypne priehľadnosť objektov v okne zobrazenia.
 
-**Turn on backface for all:** It shows the back surface of the object, it will be more useful when the objects are made transparent.
+**Zapnúť zobrazenie zadnej strany pre všetky objekty:** Zobrazuje zadnú stranu objektu; táto funkcia je užitočnejšia v prípade, ak sú objekty nastavené ako priehľadné.
 
-**Turn off backface for all** : It turns off the Backface of objects.
+**Vypnúť zadnú stranu pre všetky** : Táto voľba vypne zadnú stranu objektov.
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image008.jpg' | relative_url }})
 
-RMB menu options on objects in Operation tree for 2D 
+Možnosti ponuky RMB na objektoch v strome operácií pre 2D 
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image007.jpg' | relative_url }})
 
-RMB menu options on objects in Operation tree for 3D 
+Možnosti ponuky RMB na objektoch v strome operácií pre 3D 
 
-**Object Data [2D, 3D]**  
-The Object Data menu (See Fig. 25.7., Fig. 25.8. and Fig. 25.9.) contains some or all of the following commands, depending on object type:
+**Údaje o objektoch [2D, 3D]**  
+Ponuka „Údaje o objekte“ (pozri obr. 25.7., obr. 25.8. a obr. 25.9.) obsahuje v závislosti od typu objektu niektoré alebo všetky z nasledujúcich príkazov:
 
 **[2D, 3D]:**
 
-**Show Geometry** : It shows the object Geometry
+**Zobraziť geometriu**: Zobrazí geometriu objektu
 
-**Change shade color (Geometry)** : Changes the surface facet fill color.
+**Zmeniť farbu odtieňa (Geometria)**: Zmení farbu výplne povrchovej plochy.
 
-**Change line color (Geometry)** : Changes the color of lines delineating facet edges.
+**Zmeniť farbu čiar (Geometria)**: Zmení farbu čiar ohraničujúcich hrany plôch.
 
-**Export Geometry** : Using this option object geometry data can be saved.
+**Export geometrie**: Pomocou tejto možnosti je možné uložiť údaje o geometrii objektu.
 
-**Show Mesh** : It shows the object Mesh
+**Zobraziť sieť**: Zobrazí sieť objektu
 
-**Change shade color (Mesh)** : Changes the element fill color.
+**Zmeniť farbu odtieňa (Mesh)**: Zmení farbu výplne prvku.
 
-**Change line color (Mesh)** : Changes the color of the lines delineating element edges.
+**Zmeniť farbu čiar (Mesh)**: Zmení farbu čiar ohraničujúcich hrany prvkov.
 
-**Show contact node** : Highlights contact for selected object with any Master object. This is a quick way to display contact. This is a toggle menu selection. Select it once to turn the contact node display on. Select it again to turn the display back off.
+**Zobraziť uzol kontaktu**: Zvýrazní kontakt pre vybraný objekt s ľubovoľným hlavným objektom. Ide o rýchly spôsob zobrazenia kontaktu. Ide o prepínacie menu. Jedným kliknutím zapnete zobrazenie uzla kontaktu. Ďalším kliknutím zobrazenie opäť vypnete.
 
 **[3D]:**
 
-**Show Geometry and Normal Vecto** r: Turns on the geometry with normal vectors display.
+**Zobraziť geometriu a normálové vektory**: Zapne zobrazenie geometrie s normálovými vektormi.
 
-**Use smooth shading (Mesh)** : Renders the mesh shading display to smooth.
+**Použiť plynulé tieňovanie (Mesh)**: Zabezpečí, aby sa tieňovanie siete zobrazovalo plynule.
 
-**Make Transparent** : It makes objects transparent.
+**Zmeniť na priehľadné**: Táto funkcia zmení objekty na priehľadné.
 
-**Change transparency:** Using this option the transparency of the 3D object mesh can be varied.
+**Zmena priehľadnosti:** Pomocou tejto možnosti je možné meniť priehľadnosť siete 3D objektu.
 
-**Show backface** : It shows the back surface of the object.
+**Zobraziť zadnú stranu**: Zobrazí zadnú stranu objektu.
 
-**Movement (only For Primary Die)**
+**Pohyb (len pre primárnu kocku)**
 
-**Show translational movement** : It displays the translational movement direction in the display window.
+**Zobraziť posuvný pohyb** : V okne displeja sa zobrazí smer posuvného pohybu.
 
-**Show rotational movement** : It displays the rotational movement direction in the display window.
+**Zobraziť rotačný pohyb**: V okne displeja sa zobrazí smer rotačného pohybu.
 
-**Load (only For Primary Die)** : It displays the load movement direction in the display window.
+**Zaťaženie (len pre primárny valec)**: V okne displeja sa zobrazuje smer pohybu zaťaženia.
 
-**Diff Step (Increment SV)** : User can plot the State variable value at that particular step using Diff Step option  
-(See Fig. 25.10.). User can plot the difference in the step that is loaded to the current step (See below Fig. 25.11.).
+**Krok diferenciácie (prírastok SV)**: Pomocou možnosti „Krok diferenciácie“ môže používateľ znázorniť hodnotu stavovej premennej v danom kroku  
+(Pozri obr. 25.10.) Používateľ môže znázorniť rozdiel medzi načítaným krokom a aktuálnym krokom (pozri nižšie obr. 25.11.).
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image003.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/25_post_processor_layout/image004.jpg' | relative_url }})
 
 (a) (b)
 
-RMB menu options on selected object in Operation tree (a) for 3D and (b) for 3D
+Možnosti kontextového menu na vybranom objekte v strome operácií (a) pre 3D a (b) pre 3D
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image006.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/25_post_processor_layout/image005.jpg' | relative_url }})
 
 (a) (b)
 
-RMB menu options on Object Mesh in Operation tree (a) for 3D and (b) for 3D
+Možnosti ponuky RMB v položke „Object Mesh“ v stromovej štruktúre operácií (a) pre 3D a (b) pre 3D
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image010.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/25_post_processor_layout/image009.jpg' | relative_url }})
 
 (a) (b)
 
-RMB menu options on Object Geometry in Operation tree (a) for 3D and (b) for 3D
+Možnosti ponuky RMB v položke „Geometria objektu“ v stromovej štruktúre operácií (a) pre 3D a (b) pre 3D
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image011.jpg' | relative_url }})
 
-Plotting Diff step
+Krok vykresľovania rozdielov
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image012.jpg' | relative_url }})
 
-Plotted Interpolated SV option
+Možnosť „Vykreslené interpolované SV“
 
-**Material Data![]({{ '/assets/icons/pre_icons/mo_material_icon.jpg' | relative_url }}) : [2D, 3D]: **The RMB Material Data buttons allows the user to access the material properties window (See Fig. 25.12.). For more information please refer [Chapter 10. Material Data](/docs/sk/pre_processor/10_material_data/10_material_data/)
+**Údaje o materiáli ![]({{ '/assets/icons/pre_icons/mo_material_icon.jpg' | relative_url }}) : [2D, 3D]: **Tlačidlá „Údaje o materiáli“ v paneli RMB umožňujú používateľovi otvoriť okno s vlastnosťami materiálu (pozri obr. 25.12.). Ďalšie informácie nájdete v [Chapter 10. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/)
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image013.jpg' | relative_url }})
 
-RMB menu options on material in Operation tree
+Možnosti ponuky RMB pre materiál v strome operácií
 
-## Graphics window
+## Grafické okno
 
-Graphics window displays the graphical representation of the objects. This will display state variables contours over objects, graphs, histograms, flownet and die fill (contact nodes). (See Fig. 25.1. )
+V grafickom okne sa zobrazuje grafické znázornenie objektov. Zobrazujú sa tu kontúry stavových premenných nad objektmi, grafy, histogramy, sieť prietokov a vyplnenie čipu (kontaktné uzly). (Pozri obr. 25.1.)
 
-Right mouse click on the graphics window will provide few options to display the simulation information, set the viewport, measure dimension and change background theme.(See Fig. 25.13.) For more information about these options refer the [Graphics window RMB options.](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm#Graphics_window_RMB_options)
+Kliknutím pravým tlačidlom myši na grafické okno sa zobrazia niektoré možnosti na zobrazenie informácií o simulácii, nastavenie zobrazenia, meranie rozmerov a zmenu motívu pozadia. (Pozri obr. 25.13.) Ďalšie informácie o týchto možnostiach nájdete v [Graphics window RMB options.](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm#Graphics_window_RMB_options)
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image014.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/25_post_processor_layout/image015.jpg' | relative_url }})
 
 (a) (b)
 
-Right mouse button graphics window options; (a) For 2D (b) For 3D
+Možnosti grafického okna pomocou pravého tlačidla myši; (a) pre 2D, (b) pre 3D
 
-**Show title bar:** It displays the Title bar in display window.
+**Zobraziť titulnú lištu:** Zobrazí titulnú lištu v okne zobrazenia.
 
-## Report Generation
+## Vytváranie správ
 
-Report Generation feature provided can be used to generate report in different formats such as ppt and pdf for selected post-processing features like State variables contour, Point tracking, Flownet, Coupons of data extraction, Regions of interest, Summary graphs, Load-stroke graphs and data extraction.
+Funkcia generovania správ umožňuje vytvárať správy v rôznych formátoch, ako sú ppt a pdf, pre vybrané funkcie následného spracovania, napríklad kontúry stavových premenných, sledovanie bodov, Flownet, výňatky z extrahovaných údajov, oblasti záujmu, súhrnné grafy, grafy zaťaženia a posunu a extrakciu údajov.
 
   
-For more information on report generation setup refer [Chapter 28. Report Generation](/docs/sk/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/).
+Ďalšie informácie o nastavení generovania správ nájdete v [Chapter 28. Report Generation](/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/).
 
-## Dock Widget menu
+## Ponuka widgetu v doku
 
-Using Dock widget menu options, user can turn on/off Step view, Operation tree and Post features settings modifications window. (See Fig. 25.14.)
+Pomocou možností v ponuke widgetu Dock môže používateľ zapnúť alebo vypnúť zobrazenie krokov, strom operácií a okno na úpravu nastavení funkcií Post. (Pozri obr. 25.14.)
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image002.jpg' | relative_url }})
 
-Post processor Dock widget menu 
+Ponuka widgetu Dock pre postprocesor 
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[24\. Introduction to Post-Processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[24\. Introduction to Post-Processor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
 
-[26\. Post Processor Display controls](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/)
+[26\. Post Processor Display controls](/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/)
 
-[27\. Post Processing tools](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/)
+[27\. Post Processing tools](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/)
 
-[28\. Report Generation](/docs/sk/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/)
+[28\. Report Generation](/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/)

@@ -1,155 +1,155 @@
 ---
 lang: sk
-title: "26.6.7. Load Stroke"
+title: "26.6.7. Zdvih zaťaženia"
 ---
 
-# 26.6.7. Load /Stroke ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }})
+# 26.6.7. Zaťaženie / zdvih ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }})
 
-**[2D, 3D]** : The graphs window is used to generate load, speed, torque, angular velocity, energy and volume vs. time (or stroke) plots for the object. (See Fig. 26.6.7.1.) User needs to select the X and Y axis variables, objects from plot objects table and then click on ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) button to plot the graph in graphics window. Single graph can be used to generate plot for Multiple objects for selected variables of X and Y. Clicking on a point in the graph will load the nearest saved step from the database.
+**[2D, 3D]**: Okno grafov slúži na vytváranie grafov závislosti zaťaženia, rýchlosti, krútiaceho momentu, uhlovej rýchlosti, energie a objemu od času (alebo zdvihu) pre daný objekt. (Pozri obr. 26.6.7.1.) Používateľ musí vybrať premenné osí X a Y, objekty z tabuľky objektov grafu a potom kliknúť na tlačidlo ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}), aby sa graf zobrazil v grafickom okne. Jediný graf možno použiť na vytvorenie grafu pre viaceré objekty pre vybrané premenné osí X a Y. Kliknutím na bod v grafe sa načíta najbližší uložený krok z databázy.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image001.jpg' | relative_url }})
 
-Load stroke graph window
+Načítať okno s grafom zdvihu
 
-User can export the graph data plotted in the graphics window using right click option Export graph data. Graph properties like, titles and its font, values range, number of decimals and display style and legend on/off can also be changed using right click option Set graph properties.
+Používateľ môže exportovať údaje grafu zobrazené v grafickom okne pomocou možnosti „Exportovať údaje grafu“, ktorá sa zobrazí po kliknutí pravým tlačidlom myši. Vlastnosti grafu, ako sú názvy a ich písmo, rozsah hodnôt, počet desatinných miest, štýl zobrazenia a zapnutie/vypnutie legendy, je možné zmeniť pomocou možnosti „Nastaviť vlastnosti grafu“, ktorá sa zobrazí po kliknutí pravým tlačidlom myši.
 
-Note:
+Poznámka:
 
-Due to various factors, some volume loss is unavoidable in FEM analysis. However, if volume loss exceeds more than about 1% of total volume, this should be a cause for concern.
+V dôsledku rôznych faktorov je pri analýze metódou konečných prvkov (FEM) určitá strata objemu nevyhnutná. Ak však strata objemu presiahne približne 1 % celkového objemu, malo by to byť dôvodom na obavy.
 
-In the controls tab Scale, Units, Continuous stroke, Cumulative energy and Operations options are available for specific X and Y axis variables selection and number of operations. The uses of these options are explained below,
+Na karte „Ovládacie prvky“ sú k dispozícii možnosti „Mierka“, „Jednotky“, „Plynulý pohyb“, „Kumulatívna energia“ a „Operácie“, ktoré slúžia na výber konkrétnych premenných osí X a Y a na určenie počtu operácií. Účel týchto možností je vysvetlený nižšie,
 
-  * **Scale :** Y-axis values of the graph can be scaled using this option. This option is available only for load and force variables.
+  * **Mierka:** Pomocou tejto možnosti je možné zmeniť mierku hodnôt na osi Y grafu. Táto možnosť je k dispozícii iba pre premenné zaťaženia a sily.
 
-  * **Units :** User can select units from the pull down menu in which the load / force values should be displayed. Units field is activated for load and force variables. In English units DB it gives options to plot load in klb or tons-English or tons-SI, in SI units DB it gives options to plot load in N or tons-English or tons-SI.
+  * **Jednotky:** Používateľ si môže z roletového menu vybrať jednotky, v ktorých sa majú zobrazovať hodnoty zaťaženia a sily. Pole „Jednotky“ je aktívne pre premenné zaťaženia a sily. V databáze anglických jednotiek ponúka možnosti zobrazenia zaťaženia v klb, anglických tonách alebo tonách SI, v databáze jednotiek SI ponúka možnosti zobrazenia zaťaženia v N, anglických tonách alebo tonách SI.
 
-  * **Operations :** This field is activated when user loads multiple operations Database. User can plot graph for respective operations by selecting operation numbers from pull down menu.
+  * **Operácie:** Toto pole sa aktivuje, keď používateľ načíta databázu s viacerými operáciami. Používateľ môže vytvoriť graf pre príslušné operácie výberom čísiel operácií z roletového menu.
 
-  * **Continuous stroke :** It is activated when user plots stroke vs load. If user would like to view graph continuously across multiple operations then this option can be used. When user loads multiple operations DB and continuous stroke check box is turned on, stroke will be continuous throughout all the operations. If user unchecks this check box then stroke is not continuous throughout the operations.
+  * **Plynulý zdvih:** Táto funkcia sa aktivuje, keď používateľ znázorní graf závislosti zdvihu od zaťaženia. Ak si používateľ želá zobraziť graf plynule pre viaceré operácie, môže použiť túto možnosť. Ak používateľ načíta databázu viacerých operácií a je zaškrtnuté políčko „Plynulý zdvih“, zdvih bude plynulý počas všetkých operácií. Ak používateľ toto políčko odškrtne, zdvih nebude počas operácií plynulý.
 
-  * **Cumulative energy :** It is activated when user plots Time vs Energy State variable. This option plots the cumulative energy consumption across all operations. When user loads multiple operations DB and Cumulative Energy check box is turned on, energy plot will be cumulative across all the operations. If user unchecks this check box, then Energy is consumed for each operation is plotted independently.
+  * **Kumulatívna energia:** Táto funkcia sa aktivuje, keď používateľ vykreslí premennú „Čas vs. energetický stav“. Táto voľba vykresľuje kumulatívnu spotrebu energie za všetky operácie. Ak používateľ načíta databázu s viacerými operáciami a je zaškrtnuté políčko „Kumulatívna energia“, graf spotreby energie bude kumulatívny pre všetky operácie. Ak používateľ toto políčko odškrtne, spotreba energie pre každú operáciu sa znázorní samostatne.
 
-  * **Options tab:** provides display options like Turn on/off step tracer, Display absolute value and graph smoothing options (See in Fig. 26.6.7.2.). The uses of these options are explained below,
+  * **Karta „Možnosti“:** ponúka možnosti zobrazenia, ako napríklad zapnutie/vypnutie zobrazenia priebehu krokov, zobrazenie absolútnej hodnoty a možnosti vyhladenia grafu (pozri obr. 26.6.7.2.). Účel týchto možností je vysvetlený nižšie,
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image002.jpg' | relative_url }})
 
-Load-Stroke graph options window
+Okno s nastaveniami grafu zaťaženia a zdvihu
 
-  * **Step tracer :** By checking this check box, step tracer will be displayed in graph window, indicating the values and location in the graph. If user selects any intermediate step, at that particular step it displays the X and Y axis values.
+  * **Zobrazovač krokov:** Zaškrtnutím tohto políčka sa v okne grafu zobrazí zobrazovač krokov, ktorý označuje hodnoty a polohu v grafe. Ak používateľ vyberie akýkoľvek medzistupeň, v danom kroku sa zobrazia hodnoty na osiach X a Y.
 
-  * **Absolute Value :** By checking this check box, graph display shows only in absolute values.
+  * **Absolútna hodnota:** Zaškrtnutím tohto políčka sa v grafe zobrazujú iba absolútne hodnoty.
 
-  * **Smoothing :** Smoothing option is used to smooth the graph by using the first and second order radio buttons and visual effects value. Higher the visual effects smoothing error will increase.
+  * **Vyhladenie:** Možnosť vyhladenia slúži na vyhladenie grafu pomocou prepínačov prvého a druhého rádu a hodnoty vizuálnych efektov. Čím vyššia je hodnota vizuálnych efektov, tým väčšia bude chyba vyhladenia.
 
-  * **Causes of volume loss and their remedies include:** Corner cutting during remeshing: This is characterized by large drops in volume at remeshing steps. If elements around a relatively tight corner are too large, the portion of the element which penetrates the corner will be lost on remeshing. This can be controlled forcing a finer mesh in that region with mesh density windows, and by using the Maximum Interference Depth remesh trigger.
+  * **Medzi príčiny straty objemu a spôsoby ich odstránenia patria:** Zmenšovanie rozmerov pri opätovnom vytváraní siete: Prejavuje sa výrazným poklesom objemu v jednotlivých krokoch opätovného vytvárania siete. Ak sú prvky v okolí relatívne ostrého rohu príliš veľké, časť prvku, ktorá preniká do rohu, sa pri premeshovaní stratí. Tomu je možné zabrániť vynútením jemnejšej siete v danej oblasti pomocou okien hustoty siete a použitím spúšťača premeshovania „Maximálna hĺbka interferencie“.
 
-  * **Excessive hydrostatic stress** or **too small volume penalty constant:** This is characterized by a steep gradient in the volume curve between remeshings. Check that flow stress data is using the correct units. For problems such as high ratio extrusion with extremely high hydrostatic stress, it may be necessary to increase the volume penalty constant by an order of magnitude or two. Increasing the penalty constant may lead to convergence problems, so a balance must be struck.
+  * **Nadmerné hydrostatické napätie** alebo **príliš malá konštanta objemovej penalizácie:** Prejavuje sa strmým sklonom objemovej krivky medzi jednotlivými prepočítaniami siete. Skontrolujte, či údaje o prietokovom napätí používajú správne jednotky. Pri úlohách, ako je extrudovanie s vysokým pomerom a extrémne vysokým hydrostatickým napätím, môže byť potrebné zvýšiť konštantu objemovej penalizácie o jeden alebo dva rády. Zvýšenie konštanty penalizácie môže viesť k problémom s konvergenciou, preto je potrebné nájsť rovnováhu.
 
-  * Volume compensation (Preprocessor Objects Properties) can be used to control volume loss during remeshing.
+  * Kompenzácia objemu (vlastnosti objektov predspracovateľa) sa dá použiť na reguláciu straty objemu počas opätovného vytvárania siete.
 
-  * Polygon sub stepping can be used to limit volume loss during simulation.
+  * Na obmedzenie straty objemu počas simulácie je možné použiť subkrokovanie polygónov.
 
-## Graph Property
+## Vlastnosť grafu
 
-The graph properties option to modify the display of graph is available from the context menu options of the graph as shown in the Fig. 26.6.7.3. This option allows the user to change the graph properties like Title and labels, Range, Legend, Series, Step tracer, Theme, Smoothing, Equation and Grid/Tick as shown in the Fig. 26.6.7.4. With these options, user modify the display of the titles, legend, step tracer and grids, range of the axis values, define equation and so on.
+Možnosť „Vlastnosti grafu“, ktorá slúži na úpravu zobrazenia grafu, je dostupná v kontextovom menu grafu, ako je znázornené na obr. 26.6.7.3. Táto voľba umožňuje používateľovi zmeniť vlastnosti grafu, ako sú Názov a popisy, Rozsah, Legenda, Séria, Značkovač krokov, Téma, Vyhladenie, Rovnica a Mriežka/Značky, ako je znázornené na obr. 26.6.7.4. Pomocou týchto možností môže používateľ upraviť zobrazenie názvov, legendy, krokov a mriežok, rozsah hodnôt osí, definovať rovnicu a podobne.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image003.jpg' | relative_url }})
 
-Right click menu of the graph
+Kontextové menu grafu
 
-### Title and Labels
+### Názov a popisy
 
-In this tab, user can change the name and font size of title and the X/Y axis labels (See Fig. 26.6.7.4.). User can turn on the "Translate title and axis labels" check box to translate the names of Title and axis labels into the language selected in Environment options of DEFORM.
+Na tejto karte môže používateľ zmeniť názov a veľkosť písma nadpisu a popiskov osí X a Y (pozri obr. 26.6.7.4.). Zaškrtnutím políčka „Preložiť nadpis a popisky osí“ môže používateľ preložiť názvy nadpisu a popiskov osí do jazyka vybraného v nastaveniach prostredia programu DEFORM.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image004.jpg' | relative_url }})
 
-Title and Labels tab
+Karta „Názov a štítky“
 
-### Range
+### Rozsah
 
-In this tab, we have multiple options to set the axis range.
+Na tejto karte máme k dispozícii viacero možností na nastavenie rozsahu osí.
 
-  * **System determined:** System determined option is selected by default and when this option is selected the minimum and maximum value of the axis is determined by the system based on the output value of the axis variable. 
+  * **Určuje systém:** Možnosť „Určuje systém“ je predvolene zvolená a ak je táto možnosť zvolená, minimálnu a maximálnu hodnotu osi určí systém na základe výstupnej hodnoty premennej osi. 
 
-  * **Show Origin:** Minimum value of the axis is set to zero and the maximum value of the axis is determined based on the output values of the axis variable.
+  * **Zobraziť počiatok:** Minimálna hodnota osi je nastavená na nulu a maximálna hodnota osi sa určuje na základe výstupných hodnôt premennej osi.
 
-  * **Current Operation:** This option is available only for the X-axis and when selected the minimum value and maximum value of X-axis are set based on the current operation output of the X-axis variable.
+  * **Aktuálna operácia:** Táto možnosť je k dispozícii iba pre os X a pri jej výbere sa minimálna a maximálna hodnota osi X nastavia na základe výstupnej hodnoty premennej osi X pri aktuálnej operácii.
 
-  * **User-defined:** The user can set the maximum and minimum values for the axis.
+  * **Definované používateľom:** Používateľ môže nastaviť maximálne a minimálne hodnoty pre os.
 
-  * **Scientific:** This checkbox can be turned to display the axis values in scientific system.
+  * **Vedecký formát:** Zaškrtnutím tohto políčka sa hodnoty na osiach zobrazia vo vedeckom formáte.
 
-  * **Decimal digits:** User can set number of decimal digits that can be displayed for the variables on the axis.
+  * **Počet desatinných miest:** Používateľ môže nastaviť počet desatinných miest, ktoré sa majú zobrazovať pri premenných na osi.
 
-  * **Scaling Factor:** This option is available only for Y-Axis. User can scale the values of the Y-Axis by defining the scaling factor. When scaling factor is used then if any equation is defined in equation tab is overwritten with the scaling factor function. 
+  * **Mierka:** Táto možnosť je k dispozícii iba pre os Y. Používateľ môže zmeniť mierku hodnôt na osi Y stanovením mierky. Ak sa použije mierka, akákoľvek rovnica definovaná na karte „Rovnica“ sa prepíše funkciou mierky. 
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image005.jpg' | relative_url }})
 
-Range tab
+Karta Rozsah
 
-### Legend
+### Legenda
 
-This option helps the user to Show/Hide the legend display on the graph as shown in the Fig. 26.6.7.6.
+Táto voľba umožňuje používateľovi zobraziť alebo skryť legendu na grafe, ako je znázornené na obr. 26.6.7.6.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image006.jpg' | relative_url }})
 
-Legend tab
+Karta „Legenda“
 
-### Series
+### Séria
 
-When a graph consists of multiple curves then user can change the color, type and thickness of each curve by clicking on the respective cell in the table displayed in this tab. We can also show or hide the curves using respective check box under Visibility column as shown in the Fig. 26.6.7.7.
+Ak graf pozostáva z viacerých kriviek, používateľ môže zmeniť farbu, typ a hrúbku každej krivky kliknutím na príslušnú bunku v tabuľke zobrazenú na tejto karte. Krivky môžeme tiež zobraziť alebo skryť pomocou príslušného začiarkavacieho políčka v stĺpci „Viditeľnosť“, ako je znázornené na obr. 26.6.7.7.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image007.jpg' | relative_url }})
 
-Series tab
+Karta „Séria“
 
-### Step trace
+### Sledovanie krokov
 
-  * **Trace line** : Step tracer line is displayed over the graph indicating the current step position over the graph. 
+  * **Indikačná čiara**: Nad grafom sa zobrazuje indikačná čiara kroku, ktorá označuje aktuálnu pozíciu kroku na grafe. 
 
-  * **On/Off status** : User can show or hide the step tracer by selecting respective radio button as shown in Fig. 26.6.7.8.
+  * **Stav zapnutia/vypnutia**: Používateľ môže zobraziť alebo skryť indikátor krokov výberom príslušného prepínača, ako je znázornené na obr. 26.6.7.8.
 
-  * **Thickness** : Thickness of the step trace line can be set by selecting respective radio button as shown in Fig. 26.6.7.8.
+  * **Hrúbka**: Hrúbku čiary kroku je možné nastaviť výberom príslušného prepínača, ako je znázornené na obr. 26.6.7.8.
 
-  * **Color** : Color of the step tracer line can be changed by clicking on the Color button and selecting the color from the pop-up as shown in the Fig. 26.6.7.8.
+  * **Farba**: Farbu čiary sledovania krokov je možné zmeniť kliknutím na tlačidlo „Farba“ a výberom farby z rozbaľovacieho menu, ako je znázornené na obr. 26.6.7.8.
 
-  * **Callout** : The values of the axis variables are displayed based on the current step selection as callout. User can show or hide the callout by selecting respective radio button of On/Off status under Callout as shown in Fig. 26.6.7.8.
+  * **Popisky**: Hodnoty premenných osí sa zobrazujú ako popisky na základe aktuálneho výberu kroku. Používateľ môže popisky zobraziť alebo skryť výberom príslušného prepínača so stavom Zapnuté/Vypnuté v časti Popisky, ako je znázornené na obr. 26.6.7.8.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image008.jpg' | relative_url }})
 
-Step trace
+Sledovanie krokov
 
-### Theme
+### Téma
 
-In this the user can change the background color of the graph as shown in the Fig. 26.6.7.9. Standard under White background is selected as default theme by system, if user wants to use any other option available under this tab as default theme for all graphs then user can turn on the "Set as default theme" check box after selecting the theme and click on Apply button.
+Tu môže používateľ zmeniť farbu pozadia grafu, ako je znázornené na obr. 26.6.7.9. Systém má ako predvolenú tému nastavenú možnosť „Štandardná na bielom pozadí“. Ak chce používateľ ako predvolenú tému pre všetky grafy použiť akúkoľvek inú možnosť dostupnú na tejto karte, môže po výbere témy zaškrtnúť políčko „Nastaviť ako predvolenú tému“ a kliknúť na tlačidlo „Použiť“.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image009.jpg' | relative_url }})
 
-Theme tab
+Karta „Téma“
 
-### Smoothing
+### Vyhladzovanie
 
-Most of the times the output curves may not be smooth and can be wavy then user can smoothen the curves to First order or Second order by selecting the respective radio button and "Visual effects" value.
+Vo väčšine prípadov výstupné krivky nemusia byť hladké a môžu byť zvlnené; v takom prípade môže používateľ krivky vyhladzovať na prvý alebo druhý rád, a to výberom príslušného prepínača a hodnoty v položke „Vizuálne efekty“.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image010.jpg' | relative_url }})
 
-Smoothing tab
+Karta „Vyhladenie“
 
-### Equation
+### Rovnica
 
-The user can define the equation for the Y-axis by turning on the "Use equation" checkbox. The variables that can be used in equation are available in Variables pull down menu and functions to use in the equation are available under Functions pull down menu as shown in the Fig. 26.6.7.11. The defined function will be overwritten with scaling function if user turns on the Scaling factor in Range tab.
+Používateľ môže definovať rovnicu pre os Y zaškrtnutím políčka „Použiť rovnicu“. Premenné, ktoré je možné použiť v rovnici, sú k dispozícii v roletovom menu „Premenné“ a funkcie, ktoré je možné použiť v rovnici, sú k dispozícii v roletovom menu „Funkcie“, ako je znázornené na obr. 26.6.7.11. Definovaná funkcia bude prepísaná škálovacou funkciou, ak používateľ zaškrtne políčko „Škálovací faktor“ na karte „Rozsah“.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image011.jpg' | relative_url }})
 
-Equation tab
+Karta „Rovnica“
 
-### Grid/Tick
+### Mriežka/Čiarka
 
-**Tick** : The user can set the number of ticks for Major and Minor grids for X and Y axes using respective double spine box under Tick. 
+**Značka**: Používateľ môže nastaviť počet značiek pre hlavnú a vedľajšiu mriežku na osiach X a Y pomocou príslušných polí s dvojitým rámčekom v časti „Tick“. 
 
-**Grid:** User can turn on/off the display of grid lines using respective check boxes under grid tab as shown in the Fig. 26.6.7.12. Thickness and style of grid lines can be set from the options available under pull down menu as shown in the Fig. 26.6.7.12. User can set the color of grid lines using the Color button as shown in the Fig. 26.6.7.12.
+**Mriežka:** Používateľ môže zapnúť alebo vypnúť zobrazenie mriežkových čiar pomocou príslušných začiarkavacích políčok na karte „Mriežka“, ako je znázornené na obr. 26.6.7.12. Hrúbku a štýl mriežkových čiar je možné nastaviť pomocou možností dostupných v roletovom menu, ako je znázornené na obr. 26.6.7.12. Používateľ môže nastaviť farbu mriežkových čiar pomocou tlačidla Farba, ako je znázornené na obr. 26.6.7.12.
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_7_load_stroke/image012.jpg' | relative_url }})
 
-Grid/Tick Tab
+Karta „Mriežka/Označenie“

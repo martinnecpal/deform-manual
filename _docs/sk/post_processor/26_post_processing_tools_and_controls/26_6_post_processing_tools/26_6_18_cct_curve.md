@@ -1,16 +1,16 @@
 ---
 lang: sk
-title: "26.6.18. CCT Curve"
+title: "26.6.18. Krivka CCT"
 ---
 
-# 26.6.18. CCT Curve ![]({{ '/assets/icons/post_icons/mo_cct_curve_icon.jpg' | relative_url }})
+# 26.6.18. Krivka CCT ![]({{ '/assets/icons/post_icons/mo_cct_curve_icon.jpg' | relative_url }})
 
-CCT curves icon can be used to plot the CCT curve for the selected transformation for a database having Phase Transformation output, see Fig. 26.6.18.1. To get an accurate CCT curve it is advised to save all steps into DB. User can select Start Definition of Transformation and End definition of Transformation along with the Data Source.
+Ikona kriviek CCT slúži na vykreslenie krivky CCT pre vybranú transformáciu v databáze s výstupom fázovej transformácie, pozri obr. 26.6.18.1. Na získanie presnej krivky CCT sa odporúča uložiť všetky kroky do databázy. Používateľ môže vybrať začiatok definície transformácie a koniec definície transformácie spolu so zdrojom údajov.
 
-Start /End definition type can be Volume Fraction change per step or Volume Fraction Change per Sec or Chile Phase Volume Fraction.
+Typ definície začiatku/konca môže byť „Zmena objemového podielu na krok“, „Zmena objemového podielu za sekundu“ alebo „Objemový podiel fázy Chile“.
 
-Data Source can be Elements or Points used for Point Tracking, to use option of “Point Tracked points” user must select points and perform point tracking using Point Tracking wizard.
+Zdrojom údajov môžu byť prvky alebo body používané na sledovanie bodov. Ak chce používateľ využiť možnosť „Sledované body“, musí vybrať body a vykonať ich sledovanie pomocou sprievodcu sledovaním bodov.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_18_cct_curve/image001.jpg' | relative_url }})
 
-CCT Curve
+Krivka CCT

@@ -1,50 +1,50 @@
 ---
 lang: sk
-title: "26.6.14. Volume Tracking"
+title: "26.6.14. Sledovanie objemu"
 ---
 
-# 26.6.14. Volume Tracking ![]({{ '/assets/icons/post_icons/mo_volume_tracking_icon.jpg' | relative_url }})
+# 26.6.14. Sledovanie objemu ![]({{ '/assets/icons/post_icons/mo_volume_tracking_icon.jpg' | relative_url }})
 
-Volume tracking method tracks back underfill and flash area from finish part to preform. This information will be used to update preform shape. 
+Metóda sledovania objemu sleduje späť oblasť podplnenia a prebytku materiálu od hotového dielu až po predformu. Tieto informácie sa použijú na aktualizáciu tvaru predformy. 
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_14_volume_tracking/image001.jpg' | relative_url }})
 
-Region of Interest window
+Okno „Zaujímavá oblasť“
 
   
-User can navigate Volume tracking wizard using ![]({{ '/assets/icons/post_icons/mo_flownet_next_button.jpg' | relative_url }}) button or can move to specific page directly by clicking on the respective option.
+Používateľ sa môže v sprievodcovi sledovania objemu pohybovať pomocou tlačidla ![]({{ '/assets/icons/post_icons/mo_flownet_next_button.jpg' | relative_url }}) alebo môže prejsť priamo na konkrétnu stránku kliknutím na príslušnú voľbu.
 
-**ROI** : User can define the ROI window by importing the Geometry from a file. Outside ROI is considered as flash region. For the region inside ROI, underfill area and volume are calculated and tracked back into the initial billet. User must define ROI for volume tracking (See Fig.26.6.14.1.).
+**ROI**: Používateľ môže definovať okno ROI importom geometrie zo súboru. Oblasť mimo ROI sa považuje za oblasť výkovku. Pre oblasť vnútri ROI sa vypočíta plocha a objem podplnenia a tieto údaje sa spätne priradia k pôvodnému polotovaru. Používateľ musí definovať oblasť záujmu (ROI) pre sledovanie objemu (pozri obr. 26.6.14.1.).
 
-**Analyze** : After defining ROI, in Analyze window user can use Analyze button to display underfill and flash regions over the workpiece. In Fig., red indicates Under-fill region and Blue indicates Flash region, we can also observe the Under fill volume and Flash volume along with percentage in Analysis window (See Fig.26.6.14.2.) . 
+**Analýza**: Po definovaní oblasti záujmu (ROI) môže používateľ v okne „Analýza“ pomocou tlačidla „Analýza“ zobraziť oblasti s nedostatočným vyplnením a prebytkom materiálu na obrobku. Na obrázku je červenou farbou označená oblasť s nedostatočným vyplnením a modrou farbou oblasť s prebytkom materiálu; v okne Analýza môžeme tiež pozorovať objem nedostatočného vyplnenia a objem prebytku materiálu spolu s ich percentuálnym podielom (pozri obr. 26.6.14.2). 
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_14_volume_tracking/image002.jpg' | relative_url }})
 
-Volume tracking Analysis window
+Okno analýzy sledovania objemu
 
-**Back Track :** After analyzing user can navigate to Back Track page and click on Back Track button to start calculation of volume tracking back into initial billet. User can use step browser to go to first step where initial billet is available and we can observe the volume of material moved into flash (blue in Fig.26.6.14.3.), Under-fill (red in Fig.26.6.14.3.).
+**Späť:** Po analýze môže používateľ prejsť na stránku „Späť“ a kliknutím na tlačidlo „Späť“ spustiť výpočet objemu spätne až po počiatočný polotovar. Používateľ môže pomocou prehliadača krokov prejsť na prvý krok, kde je k dispozícii počiatočná sochora, a môžeme pozorovať objem materiálu presunutého do prebytku (modrá farba na obr. 26.6.14.3.) a do nedopĺňania (červená farba na obr. 26.6.14.3.).
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_14_volume_tracking/image003.jpg' | relative_url }})
 
-Back Track window
+Okno „Späť“
 
-**Preform** : Once back tracking is completed user can navigate to Preform page to generate preform shape based on the back tracking calculations. User can also define volume tolerance for flash which will be considered while generating preform. User can generate Preform by clicking on Generate button in Preform page. In preform page user also have options to generate preform for full object or Half symmetry object. (see Fig.26.6.14.4.)
+**Predforma**: Po dokončení spätného výpočtu môže používateľ prejsť na stránku „Predforma“, kde na základe výsledkov spätného výpočtu vygeneruje tvar predformy. Používateľ môže tiež definovať objemovú toleranciu pre prebytok materiálu, ktorá sa zohľadní pri generovaní predformy. Predformu môže používateľ vygenerovať kliknutím na tlačidlo Generovať na stránke Predforma. Na stránke Predforma má používateľ tiež možnosť vygenerovať predformu pre celý objekt alebo pre objekt s polovičnou symetriou. (pozri obr. 26.6.14.4.)
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_14_volume_tracking/image004.jpg' | relative_url }})
 
-Volume Tracking Preform Window
+Okno sledovania objemu predliskov
 
-**Output** : In Output window, Generated preform shape can be saved into geometry file using Save Geometry option (See Fig.26.6.14.5.) .
+**Výstup**: V okne „Výstup“ je možné tvar vygenerovanej predformy uložiť do súboru s geometriou pomocou možnosti „Uložiť geometriu“ (pozri obr. 26.6.14.5.).
 
   
-Different resolutions can be selected to fine tune the preform shape. If preform is generated for half symmetry user can use Make full model by mirroring half model option available to mirror the Half model geometry to Full model. After selecting Resolution option or Make full model by mirroring half model option, click on Export to create new preform geometry for selected and save. User can save geometry into file ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) icon or into library ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) icon in Output page.
+Na jemné doladenie tvaru predformy je možné zvoliť rôzne rozlíšenia. Ak je predforma vytvorená s polovičnou symetriou, používateľ môže využiť možnosť „Vytvoriť úplný model zrkadlením polovičného modelu“, ktorá umožňuje zrkadlenie geometrie polovičného modelu do úplného modelu. Po výbere možnosti „Rozlíšenie“ alebo „Vytvoriť úplný model zrkadlením polovičného modelu“ kliknite na tlačidlo „Exportovať“, aby ste vytvorili novú geometriu predformy pre vybraný model a uložili ju. Používateľ môže geometriu uložiť do súboru (ikona ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }})) alebo do knižnice (ikona ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }})) na stránke „Výstup“.
 
   
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_14_volume_tracking/image005.jpg' | relative_url }})
 
-Volume Tracking Output window
+Okno „Sledovanie objemu“

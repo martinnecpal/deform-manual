@@ -1,26 +1,26 @@
 ---
 lang: sk
-title: "26.6.13. Set User Defined Variable Tracking"
+title: "26.6.13. Nastavenie sledovania užívateľsky definovaných premenných"
 ---
 
-# 26.6.13. Set User Defined Variable Tracking ![]({{ '/assets/icons/post_icons/mo_set_user_defined_state_variable_tracking_icon.jpg' | relative_url }})
+# 26.6.13. Nastavenie sledovania užívateľsky definovanej premennej ![]({{ '/assets/icons/post_icons/mo_set_user_defined_state_variable_tracking_icon.jpg' | relative_url }})
 
-This allows the user to post process the user defined post variables defined in the post processor user routines. This is done by selecting the DLL file generated from the user routine, routine number (See Fig. 26.6.3.1.) in User defined variable tracking window and Clicking ![]({{ '/assets/icons/post_icons/mo_flownet_next_button.jpg' | relative_url }}) allows the user to select object and calculation type (See Fig. 26.6.13.2.) Clicking on ![]({{ '/assets/icons/post_icons/mo_flownet_track_data_button.jpg' | relative_url }}) will track the state variables. After tracking the variables, they will be available for display in state variables dialog under User group. (See Fig. 26.6.13.3.)
+To umožňuje používateľovi vykonávať následné spracovanie používateľsky definovaných premenných, ktoré sú definované v používateľských rutínach postprocesora. To sa vykoná výberom súboru DLL vygenerovaného z užívateľskej rutiny, čísla rutiny (pozri obr. 26.6.3.1.) v okne Sledovanie užívateľsky definovaných premenných a kliknutím na ![]({{ '/assets/icons/post_icons/mo_flownet_next_button.jpg' | relative_url }}), čo užívateľovi umožňuje vybrať objekt a typ výpočtu (pozri obr. 26.6.13.2.) Kliknutím na ![]({{ '/assets/icons/post_icons/mo_flownet_track_data_button.jpg' | relative_url }}) sa začnú sledovať stavové premenné. Po sledovaní premenných budú k dispozícii na zobrazenie v dialógovom okne stavových premenných v skupine „User“ (pozri obr. 26.6.13.3.).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_13_set_user_defined_variable_tracking/image001.jpg' | relative_url }})
 
-User defined variables Library properties window
+Okno vlastností knižnice používateľsky definovaných premenných
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_13_set_user_defined_variable_tracking/image002.jpg' | relative_url }})
 
-User defined variables Tracking properties window
+Okno „Vlastnosti sledovania“ pre premenné definované používateľom
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_13_set_user_defined_variable_tracking/image003.jpg' | relative_url }})
 
-User defined post variables accessing from State variables window
+Používateľom definované premenné príspevkov, ku ktorým sa pristupuje z okna „Premenné stavu“
 
-Once tracking the variables for particular DB is completed, it will generate the PDB in the problem directory, so in the next sessions of post processing user can select the existing PDB from the Tracking tab and then directly plot the user variables.  
-The Post processor user routine is available in the standard installation location,  
-C:\Program files\SFTC\DEFORM\v*_*\UserRoutine\PostProcessor\PC_pstusr23.f (where *_* is version number of deform) for PC. For more details on post processor user routines refer the [Chapter 56. User routine.](/docs/sk/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/)
+Po dokončení sledovania premenných pre konkrétnu databázu sa v adresári problému vygeneruje súbor PDB, takže v nasledujúcich fázach následného spracovania môže používateľ na karte „Sledovanie“ vybrať existujúci súbor PDB a následne priamo vykresliť svoje premenné.  
+Užívateľská rutina postprocesora je k dispozícii v štandardnom inštalačnom umiestnení,  
+C:\Program files\SFTC\DEFORM\v*_*\UserRoutine\PostProcessor\PC_pstusr23.f (kde *_* je číslo verzie programu Deform) pre PC. Ďalšie informácie o užívateľských rutinách postprocesora nájdete v [Chapter 56. User routine.](/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/)

@@ -1,225 +1,225 @@
 ---
 lang: sk
-title: "26.6.23. Presentation Editor"
+title: "26.6.23. Editor prezentácií"
 ---
 
-# 26.6.23. Presentation Editor and Presentation Player
+# 26.6.23. Editor prezentácií a prehrávač prezentácií
 
-26.6.23.1. Presentation Editor
+26.6.23.1. Editor prezentácií
 
-26.6.23.1.1.Launching the Presentation Editor from Post
+26.6.23.1.1. Spustenie editora prezentácií z aplikácie Post
 
-26.6.23.1.2. Presentation Editor Main View
+26.6.23.1.2. Hlavné okno editora prezentácií
 
-26.6.23.1.3. Frames tab
+26.6.23.1.3. Karta „Rámy“
 
-26.6.23.1.4. Quick start tab
+26.6.23.1.4. Karta „Rýchly štart“
 
-26.6.23.1.5. Export tab
+26.6.23.1.5. Karta „Export“
 
-26.6.23.2. Presentation Player
+26.6.23.2. Prehrávač prezentácií
 
-26.6.23.2.1. Presentation settings
+26.6.23.2.1. Nastavenia prezentácie
 
-26.6.23.2.2. Presentation play options
+26.6.23.2.2. Možnosti prehrávania prezentácie
 
-## Presentation Editor
+## Editor prezentácií
 
-### Launching the Presentation Editor from Post
+### Spustenie editora prezentácií z príspevku
 
-In QT4 GUI Main, we can open the Presentation Editor using the ![]({{ '/assets/icons/pre_icons/mo_presentation_editor_link.jpg' | relative_url }}) link and Presentation Player using the ![]({{ '/assets/icons/pre_icons/mo_presentation_player_link.jpg' | relative_url }})link.
+V hlavnom okne grafického rozhrania QT4 môžeme otvoriť Editor prezentácií pomocou odkazu ![]({{ '/assets/icons/pre_icons/mo_presentation_editor_link.jpg' | relative_url }}) a Prehrávač prezentácií pomocou odkazu ![]({{ '/assets/icons/pre_icons/mo_presentation_player_link.jpg' | relative_url }}).
 
-After a presentation file (.pre) has been created in NG post, "Edit in Presentation Editor" ![]({{ '/assets/icons/pre_icons/mo_presentation_editor_icon.jpg' | relative_url }}) and “Play in Presentation Player” ![]({{ '/assets/icons/pre_icons/mo_presentation_player_icon.jpg' | relative_url }}) buttons will be enabled. When we click on the ![]({{ '/assets/icons/pre_icons/mo_presentation_editor_icon.jpg' | relative_url }}) button it will launch the Presentation Editor (see Fig. 26.6.23.3..). Clicking on![]({{ '/assets/icons/pre_icons/mo_presentation_player_icon.jpg' | relative_url }}) button will launch the Presentation player (see Fig. 26.6.23.10.) to play the animation that was created. We can also launch the Presentation editor from Windows Start menu by selecting "DEFORM Presentation Editor v*" (see Fig. 26.6.23.2.).
+Po vytvorení prezentačného súboru (.pre) v programe NG Post sa aktivujú tlačidlá „Upraviť v editore prezentácií“ ![]({{ '/assets/icons/pre_icons/mo_presentation_editor_icon.jpg' | relative_url }}) a „Prehrať v prehrávači prezentácií“ ![]({{ '/assets/icons/pre_icons/mo_presentation_player_icon.jpg' | relative_url }}). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_presentation_editor_icon.jpg' | relative_url }}) spustíte Editor prezentácií (pozri obr. 26.6.23.3..). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_presentation_player_icon.jpg' | relative_url }}) spustíte prehrávač prezentácií (pozri obr. 26.6.23.10.), ktorý prehrá vytvorenú animáciu. Editor prezentácií môžeme spustiť aj z ponuky Štart v systéme Windows výberom položky „DEFORM Presentation Editor v*“ (pozri obr. 26.6.23.2.).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0001.jpg' | relative_url }})
 
-Launching Presentation editor from Animation setup page 
+Spustenie editora prezentácií zo stránky Nastavenia animácie 
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0002.jpg' | relative_url }})
 
-Launching Presentation editor Windows Start menu 
+Spustenie editora prezentácií v ponuke Štart systému Windows 
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0003.jpg' | relative_url }})
 
-Presentation Editor UI
+Používateľské rozhranie editora prezentácií
 
-### Presentation Editor Main view
+### Hlavné okno editora prezentácií
 
-The Presentation Editor is used to create and edit presentation files (.pre) and quick start files (.qst). Presentation files contain information for displaying images in an animation. Quick start files contain information about one or more presentation files.  
-The main view allows for adding, removing, and reordering of frames (see Fig. 26.6.23.4.). The top row of buttons includes options for creating, opening, saving and playing presentations.
+Editor prezentácií slúži na vytváranie a úpravy súborov prezentácií (.pre) a súborov rýchleho spustenia (.qst). Súbory prezentácií obsahujú informácie potrebné na zobrazenie obrázkov v animácii. Súbory rýchleho spustenia obsahujú informácie o jednom alebo viacerých súboroch prezentácií.  
+Hlavné okno umožňuje pridávať, odstraňovať a zmeniť poradie snímok (pozri obr. 26.6.23.4.). Horný riadok tlačidiel obsahuje možnosti na vytváranie, otváranie, ukladanie a prehrávanie prezentácií.
 
-**New presentation** (![]({{ '/assets/icons/post_icons/mo_new_file_button.jpg' | relative_url }})): It creates a new presentation or quick start file.
+**Nová prezentácia** (![]({{ '/assets/icons/post_icons/mo_new_file_button.jpg' | relative_url }})): Vytvorí novú prezentáciu alebo súbor rýchleho spustenia.
 
-**Open presentation** ( ![]({{ '/assets/icons/post_icons/mo_import_button.jpg' | relative_url }})): It opens an existing presentation or quick start file.
+**Otvoriť prezentáciu** (![]({{ '/assets/icons/post_icons/mo_import_button.jpg' | relative_url }})): Otvorí existujúcu prezentáciu alebo súbor rýchleho spustenia.
 
-**Import presentation** (![]({{ '/assets/icons/post_icons/mo_import_icon.jpg' | relative_url }}) ): It adds an existing presentation to the open quick start file. If a quick start file isn’t open when a presentation is imported, the Presentation Editor automatically creates a quick start file, which acts as a container for the presentation files.
+**Import prezentácie** (![]({{ '/assets/icons/post_icons/mo_import_icon.jpg' | relative_url }}) ): Pridá existujúcu prezentáciu do otvoreného súboru rýchleho spustenia. Ak pri importe prezentácie nie je otvorený žiadny súbor rýchleho spustenia, Editor prezentácií automaticky vytvorí súbor rýchleho spustenia, ktorý slúži ako kontajner pre súbory prezentácie.
 
-**Recently opened presentations** (![]({{ '/assets/icons/post_icons/presentation_editor_recently opened_icon.jpg' | relative_url }}) ): It displays a list of previously opened files.
+**Nedávno otvorené prezentácie** (![]({{ '/assets/icons/post_icons/presentation_editor_recently opened_icon.jpg' | relative_url }}) ): Zobrazí sa zoznam predtým otvorených súborov.
 
-If a .qst file is loaded, its name will be displayed next to the Quick start file field and active presentation file is displayed in Active presentation file field. In main view, all the presentation files from quick start file and their associated frames will be displayed. Frames can be selected and acted upon using either the context menu or the buttons below main view.
+Ak je načítaný súbor .qst, jeho názov sa zobrazí vedľa poľa „Súbor rýchleho spustenia“ a aktívny prezentačný súbor sa zobrazí v poli „Aktívny prezentačný súbor“. V hlavnom zobrazení sa zobrazia všetky prezentačné súbory zo súboru rýchleho spustenia a s nimi spojené snímky. Snímky je možné vybrať a pracovať s nimi buď pomocou kontextového menu, alebo pomocou tlačidiel pod hlavným zobrazením.
 
-**Save presentation file**(![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }})): It will save the active presentation file along with the settings into a presentation file.
+**Uložiť súbor prezentácie** (![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }})): Týmto sa uloží aktívny súbor prezentácie spolu s nastaveniami do súboru prezentácie.
 
-**Save quick start as**(![]({{ '/assets/icons/post_icons/presentation_editor_save_qst_as_icon.jpg' | relative_url }})): It will save the settings from the quick start tab and the presentation files along with the settings into .qst file.
+**Uložiť rýchly štart ako** (![]({{ '/assets/icons/post_icons/presentation_editor_save_qst_as_icon.jpg' | relative_url }})): Týmto sa uložia nastavenia z karty „Rýchly štart“ a prezentačné súbory spolu s nastaveniami do súboru .qst.
 
-The following buttons can be used to modify the presentation file,
+Na úpravu prezentačného súboru môžete použiť nasledujúce tlačidlá,
 
-![]({{ '/assets/icons/post_icons/presentation_editor_add_icon.jpg' | relative_url }}) \- add new frame to the active animation file. 
+![]({{ '/assets/icons/post_icons/presentation_editor_add_icon.jpg' | relative_url }}) – pridá nový snímok do aktívneho animačného súboru. 
 
-![]({{ '/assets/icons/post_icons/presentation_editor_remove_icon.jpg' | relative_url }}) \- remove selected frames from the active animation file. 
+![]({{ '/assets/icons/post_icons/presentation_editor_remove_icon.jpg' | relative_url }}) – odstráni vybrané snímky z aktívneho animačného súboru. 
 
-![]({{ '/assets/icons/post_icons/presentation_editor_frame_up_icon.jpg' | relative_url }}) \- move selected frames up in an active animation file. 
+![]({{ '/assets/icons/post_icons/presentation_editor_frame_up_icon.jpg' | relative_url }}) – posunie vybrané snímky nahor v aktívnom animačnom súbore. 
 
-![]({{ '/assets/icons/post_icons/presentation_editor_frame_down_icon.jpg' | relative_url }}) \- move selected frames down in an active animation file. 
+![]({{ '/assets/icons/post_icons/presentation_editor_frame_down_icon.jpg' | relative_url }}) – presunie vybrané snímky v aktívnom animačnom súbore nižšie. 
 
-![]({{ '/assets/icons/post_icons/presentation_editor_frame_top_icon.jpg' | relative_url }}) \- move selected frames to the top of an active animation file.
+![]({{ '/assets/icons/post_icons/presentation_editor_frame_top_icon.jpg' | relative_url }}) – presunie vybrané snímky na začiatok aktívneho animačného súboru.
 
-![]({{ '/assets/icons/post_icons/presentation_editor_frame_bottom_icon.jpg' | relative_url }}) \- move selected frames to the bottom of an active animation file. 
+![]({{ '/assets/icons/post_icons/presentation_editor_frame_bottom_icon.jpg' | relative_url }}) – presunie vybrané snímky na koniec aktívneho animačného súboru. 
 
-When editing a Quick Start file, 
+Pri úprave súboru rýchleho spustenia, 
 
-![]({{ '/assets/icons/post_icons/presentation_editor_frame_qst_up_icon.jpg' | relative_url }}) \- presentation files can be moved up. 
+![]({{ '/assets/icons/post_icons/presentation_editor_frame_qst_up_icon.jpg' | relative_url }}) – súbory prezentácie je možné presunúť vyššie. 
 
-![]({{ '/assets/icons/post_icons/presentation_editor_frame_qst_down_icon.jpg' | relative_url }}) \- presentation files can be moved down. 
+![]({{ '/assets/icons/post_icons/presentation_editor_frame_qst_down_icon.jpg' | relative_url }}) – súbory prezentácie je možné presunúť nižšie. 
 
-![]({{ '/assets/icons/post_icons/presentation_editor_total_icon.jpg' | relative_url }}) \- will display the total time of all animations in Quick Start file.
+![]({{ '/assets/icons/post_icons/presentation_editor_total_icon.jpg' | relative_url }}) \- zobrazí celkový čas všetkých animácií v súbore „Quick Start“.
 
-![]({{ '/assets/icons/post_icons/presentation_editor_seconds_button.jpg' | relative_url }}) \- animation time unit can be changed between seconds and milliseconds using the drop-down menu.
+![]({{ '/assets/icons/post_icons/presentation_editor_seconds_button.jpg' | relative_url }}) – jednotku času animácie je možné zmeniť medzi sekundami a milisekundami pomocou roletového menu.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0004.jpg' | relative_url }})
 
-Presentation editor Main page
+Editor prezentácií Hlavná stránka
 
-### Frames tab
+### Karta „Rámy“
 
-The **Frames tab** is used to change the delay of frames (see Fig. 26.6.23.5.). It shows a preview and details of the selected frame.
+Karta **Frames** slúži na zmenu oneskorenia snímok (pozri obr. 26.6.23.5.). Zobrazuje náhľad a podrobnosti o vybranej snímke.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0005.jpg' | relative_url }})
 
-Frames tab
+Karta „Rámy“
 
   
-**Delay calculator**( ![]({{ '/assets/icons/post_icons/presentation_editor_delay_calculator_button.jpg' | relative_url }})): The **Delay calculator** button opens the Delay calculator dialog as shown in Fig. 26.6.23.6. The calculator allows to enter delays in fractions of a seconds. The delay is converted to decimal when leaving the dialog.
+**Kalkulačka oneskorenia** (![]({{ '/assets/icons/post_icons/presentation_editor_delay_calculator_button.jpg' | relative_url }})): Tlačidlo **Kalkulačka oneskorenia** otvorí dialógové okno Kalkulačka oneskorenia, ako je znázornené na obr. 26.6.23.6. Kalkulačka umožňuje zadávať oneskorenia v zlomkoch sekundy. Pri opustení dialógového okna sa oneskorenie prepočíta na desatinné číslo.
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0006.jpg' | relative_url }})
 
-Delay Calculator window
+Okno „Kalkulátor oneskorenia“
 
   
-**Delay wizard** ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) : The **Delay wizard** button opens the Delay wizard dialog as shown in Fig. 26.6.23.7. This wizard allows to adjust the delay before start and delay after end frame as well as the delay for each frame in-between. Adjusting the total play time will dynamically adjust the delay between steps.
+**Sprievodca oneskorením** ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) : Tlačidlo **Sprievodca oneskorením** otvorí dialógové okno Sprievodca oneskorením, ako je znázornené na obr. 26.6.23.7. Tento sprievodca umožňuje nastaviť oneskorenie pred začiatkom a oneskorenie po konci snímky, ako aj oneskorenie pre každú snímku medzi nimi. Nastavením celkovej dĺžky prehrávania sa dynamicky upraví oneskorenie medzi jednotlivými krokmi.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0007.jpg' | relative_url }})
 
-Delay wizard window
+Okno sprievodcu odložením
 
-### Quick start tab
+### Karta „Rýchly štart“
 
-The Quick Start tab has options for editing quick start files as shown in Fig. 26.6.23.8. These options affect how the quick start file will be displayed in the DEFORM Presentation Player. Each presentation file in the quick start file is displayed as a thumbnail. 
+Karta „Rýchly štart“ obsahuje možnosti na úpravu súborov rýchleho štartu, ako je znázornené na obr. 26.6.23.8. Tieto možnosti ovplyvňujú spôsob, akým sa súbor rýchleho štartu zobrazí v prehrávači prezentácií DEFORM. Každý súbor prezentácie v súbore rýchleho štartu sa zobrazuje ako miniatúra. 
 
-  * The **Background color** is the color that fills the screen behind the thumbnails. 
+  * **Farba pozadia** je farba, ktorou je vyplnená obrazovka za náhľadmi. 
 
-  * The **Border color** and border size define the border around each thumbnail. 
+  * **Farba rámčeka** a veľkosť rámčeka určujú vzhľad rámčeka okolo každej miniatúry. 
 
-  * The **Description color** is the color used for the text descriptions below each thumbnail.
+  * **Farba popisu** je farba, ktorá sa používa pre textové popisy pod každou miniatúrou.
 
-  * The **Thumbnail display size** can be defined as either a dynamic size or a specific width in pixels. A dynamic size (small, medium and large) will use an appropriate size regardless of the screen resolution. User can also set custom size.
+  * **Veľkosť náhľadu** je možné nastaviť buď ako dynamickú veľkosť, alebo ako konkrétnu šírku v pixeloch. Pri dynamickej veľkosti (malá, stredná a veľká) sa použije primeraná veľkosť bez ohľadu na rozlíšenie obrazovky. Používateľ si môže nastaviť aj vlastnú veľkosť.
 
-  * The **Presentation looping** option defines how many times the presentation will loop when playing it.
+  * Možnosť **Opakované prehrávanie prezentácie** určuje, koľkokrát sa prezentácia bude pri prehrávaní opakovať.
 
-  * The **Font** options define how the description below the thumbnails will be displayed.
+  * Možnosti **Písmo** určujú, ako sa bude zobrazovať popis pod náhľadmi.
 
-  * The **Presentation file** **settings** include options that are defined for each presentation file. Select an active presentation here to define its settings.
+  * **Nastavenia** **prezentačného súboru** obsahujú možnosti, ktoré sú definované pre každý prezentačný súbor. Tu vyberte aktívnu prezentáciu, aby ste mohli definovať jej nastavenia.
 
-  * The **Description** is the text that shows below each thumbnail.
+  * **Popis** je text, ktorý sa zobrazuje pod každou miniatúrou.
 
-  * The **Presentation thumbnail** is the frame in the presentation that will be used as the thumbnail. User can select any frame from the active presentation or by importing the image to use as its thumbnail.
+  * **Miniatúra prezentácie** je snímka v prezentácii, ktorá sa použije ako miniatúra. Používateľ si môže vybrať ľubovoľnú snímku z aktívnej prezentácie alebo importovať obrázok, ktorý sa použije ako miniatúra.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0008.jpg' | relative_url }})
 
-Quick Start tab
+Karta „Rýchly štart“
 
-### Export tab
+### Karta „Export“
 
-The**Export tab** has similar options to the Export tab in Animation Setup.
+**Karta Export** obsahuje podobné možnosti ako karta Export v okne Nastavenie animácie.
 
-In **Export** tab, user can export the animation as PowerPoint or Video file as shown in Fig. 26.6.23.9.
+Na karte **Export** môže používateľ exportovať animáciu ako súbor PowerPoint alebo video, ako je znázornené na obr. 26.6.23.9.
 
-**Output Directory** : User can select the directory to which the files need to be exported.
+**Výstupný adresár**: Používateľ si môže vybrať adresár, do ktorého sa majú súbory exportovať.
 
-**Video File** : User should turn on Video file check box to export the video file. User can define the video size and format to export. Video formats supported are WMV (Version 9) and MP4 (H.264). The output file name for video file can be set in Output file name field.
+**Videosúbor**: Ak chce používateľ exportovať videosúbor, mal by zaškrtnúť políčko „Videosúbor“. Používateľ môže určiť veľkosť a formát videa, ktoré sa má exportovať. Podporované formáty videa sú WMV (verzia 9) a MP4 (H.264). Názov výstupného súboru pre videosúbor je možné nastaviť v poli „Názov výstupného súboru“.
 
-**MS PowerPoint** : User should turn on PPT file check box to export PowerPoint file. The PowerPoint file can be exported as new or append to existing file. Each frame can be exported as separate slide when Multiple slides option is chosen, or all frames can be exported to a single slide when One slide option is chosen. Template for PowerPoint file can be chosen using ![]({{ '/assets/icons/pre_icons/mo_browse_button.jpg' | relative_url }}) button next to Template field. The output file name for PowerPoint file can be set in Output file name field.
+**MS PowerPoint**: Ak chce používateľ exportovať súbor PowerPoint, mal by zaškrtnúť políčko „PPT“. Súbor PowerPoint je možné exportovať ako nový alebo pridať k existujúcemu súboru. Ak je zvolená možnosť „Viac snímok“, každý snímok sa môže exportovať ako samostatná snímka; ak je zvolená možnosť „Jedna snímka“, všetky snímky sa môžu exportovať do jednej snímky. Šablónu pre súbor PowerPoint je možné vybrať pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_browse_button.jpg' | relative_url }}) vedľa poľa Šablóna. Názov výstupného súboru PowerPoint je možné nastaviť v poli Názov výstupného súboru.
 
-Clicking the ![]({{ '/assets/icons/post_icons/mo_export_button.jpg' | relative_url }}) button will generate the files specified.
+Kliknutím na tlačidlo ![]({{ '/assets/icons/post_icons/mo_export_button.jpg' | relative_url }}) sa vygenerujú uvedené súbory.
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0009.jpg' | relative_url }})
 
-Export tab
+Karta „Export“
 
-## Presentation Player
+## Prehrávač prezentácií
 
-The Presentation Player is used to playback presentation files (.pre) and quick start files (.qst), see Fig. 26.6.23.10.
+Prehliadač prezentácií slúži na prehrávanie súborov prezentácií (.pre) a súborov rýchleho spustenia (.qst), pozri obr. 26.6.23.10.
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0010.jpg' | relative_url }})
 
-Presentation Player
+Prehrávač prezentácií
 
-![]({{ '/assets/icons/post_icons/mo_import_button.jpg' | relative_url }}) \- Open Presentation or quick start files.  
-![]({{ '/assets/icons/post_icons/presentation_editor_recently opened_icon.jpg' | relative_url }}) \- Open from recently opened files.  
-![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }}) \- Loaded presentations and quick start files can be played with “Play presentation”.
+![]({{ '/assets/icons/post_icons/mo_import_button.jpg' | relative_url }}) – Otvorte súbory prezentácie alebo rýchleho spustenia.  
+![]({{ '/assets/icons/post_icons/presentation_editor_recently opened_icon.jpg' | relative_url }}) – Otvoriť z nedávno otvorených súborov.  
+![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }}) – Načítané prezentácie a súbory pre rýchly štart je možné prehrať pomocou funkcie „Prehrať prezentáciu“.
 
-### Presentation settings
+### Nastavenia prezentácie
 
-The Presentation settings button (![]({{ '/assets/icons/post_icons/presentation_editor_settings icon.jpg' | relative_url }})) opens the Presentation settings dialog as shown in Fig. 26.6.23.11.
+Tlačidlo Nastavenia prezentácie (![]({{ '/assets/icons/post_icons/presentation_editor_settings icon.jpg' | relative_url }})) otvorí dialógové okno Nastavenia prezentácie, ako je znázornené na obr. 26.6.23.11.
 
-The **Playback icon size** settings sets the size of the onscreen playback controls. The sizes are dynamic based on the screen resolution.
+Nastavenie **Veľkosť ikon prehrávania** určuje veľkosť ovládacích prvkov prehrávania na obrazovke. Veľkosti sa dynamicky prispôsobujú rozlíšeniu obrazovky.
 
-When a frame in a presentation has a lower resolution than the screen, how it is displayed is in the “**If image is lower resolution than the screen** ” option. For example, if the frame is 640x480 and the screen is 1920x1080, if the “Display image at actual size” option is selected, the frame will be shown at 640x480 in the middle of the screen. If the “Fit image to screen size” option is selected, the frame will be scaled to a horizontal resolution of 1080 pixels; the frame will maintain its original aspect ratio.
+Ak má snímka v prezentácii nižšie rozlíšenie ako obrazovka, spôsob jej zobrazenia sa nastavuje v možnosti „**Ak má obrázok nižšie rozlíšenie ako obrazovka**“. Napríklad, ak má snímka rozmery 640x480 a obrazovka 1920x1080, a ak je zvolená možnosť „Zobraziť obrázok v skutočnej veľkosti“, snímka sa zobrazí v rozmeroch 640x480 uprostred obrazovky. Ak je zvolená možnosť „Prispôsobiť obrázok veľkosti obrazovky“, snímka sa zmení na horizontálne rozlíšenie 1080 pixelov; snímka si zachová pôvodný pomer strán.
 
-The **Playback controls** sets whether the onscreen playback controls should display on the top or bottom of the screen.
+Pomocou nastavenia **Ovládacie prvky prehrávania** sa určuje, či sa ovládacie prvky prehrávania na obrazovke majú zobrazovať v hornej alebo dolnej časti obrazovky.
 
-The **Loop presentation** continuously option allows for overriding the playback settings set in the quick start file.
+Možnosť **Prehrať v slučke** umožňuje prepisovať nastavenia prehrávania uvedené v súbore rýchleho spustenia.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0011.jpg' | relative_url }})
 
-Presentation settings
+Nastavenia prezentácie
 
-### Presentation play options
+### Možnosti prehrávania prezentácie
 
-When displaying a quick start file, a thumbnail for each presentation file will be displayed as shown in Fig. 26.6.23.12. Clicking on a thumbnail will open the presentation file for playback as shown in Fig. 26.6.23.13.  
-**Play all button**( ![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }})) (space key): It will play back all the included presentations in order.  
-**Close quick start button**( ![]({{ '/assets/icons/post_icons/presentation_editor_close_presentation_icon.jpg' | relative_url }})) (escape key): It closes the quick start screen and returns to the main screen.
+Pri zobrazení súboru rýchleho spustenia sa pre každý prezentačný súbor zobrazí miniatúra, ako je znázornené na obr. 26.6.23.12. Kliknutím na miniatúru sa otvorí prezentačný súbor na prehrávanie, ako je znázornené na obr. 26.6.23.13.  
+**Tlačidlo „Prehrať všetko“** (![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }})) (medzerník): Spustí prehrávanie všetkých zahrnutých prezentácií v poradí.  
+**Tlačidlo na zatvorenie obrazovky rýchleho spustenia** (![]({{ '/assets/icons/post_icons/presentation_editor_close_presentation_icon.jpg' | relative_url }})) (klávesa Esc): Zatvorí obrazovku rýchleho spustenia a vráti sa na hlavnú obrazovku.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0012.jpg' | relative_url }})
 
-Player showing quick start file
+Prehrávač zobrazujúci súbor rýchleho spustenia
 
   
-When playing a presentation file, the below icons will be displayed. 
+Pri prehrávaní prezentačného súboru sa zobrazia nižšie uvedené ikony. 
 
-**Play backwards button** (![]({{ '/assets/icons/post_icons/mo_play_backward_icon.jpg' | relative_url }}) ) (shift + space key): It plays the presentation in reverse order.
+**Tlačidlo prehrávania spätne** (![]({{ '/assets/icons/post_icons/mo_play_backward_icon.jpg' | relative_url }}) ) (kláves Shift + medzerník): Prehráva prezentáciu v opačnom poradí.
 
-**Play button** ( ![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }})) (space key): It plays the presentation in order. 
+**Tlačidlo Prehrať** (![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }})) (medzerník): Spustí prehrávanie prezentácie v poradí. 
 
-**Stop button** (![]({{ '/assets/icons/post_icons/mo_stop_button_2.jpg' | relative_url }})) (space key): It stops playback and remains on the current frame. The space key will toggle between playing forward and stopping.
+**Tlačidlo Stop** (![]({{ '/assets/icons/post_icons/mo_stop_button_2.jpg' | relative_url }})) (klávesa medzerník): Zastaví prehrávanie a zostane na aktuálnom snímku. Klávesa medzerník prepína medzi prehrávaním dopredu a zastavením.
 
-**First slide** (![]({{ '/assets/icons/post_icons/mo_first_step_icon.jpg' | relative_url }}) ) (home key): It jumps to the first frame of the presentation.
+**Prvý snímok** (![]({{ '/assets/icons/post_icons/mo_first_step_icon.jpg' | relative_url }}) ) (tlačidlo Domov): Preskočí na prvý snímok prezentácie.
 
-**Last slide buttons** (![]({{ '/assets/icons/post_icons/mo_last step_icon.jpg' | relative_url }}) ) (end key): It jumps to the last frame of the presentation.
+**Tlačidlá na preskočenie na posledný snímok** (![]({{ '/assets/icons/post_icons/mo_last step_icon.jpg' | relative_url }}) ) (klávesa „End“): Preskočí na posledný snímok prezentácie.
 
-**Previous slide** (![]({{ '/assets/icons/post_icons/mo_prev_oprn_icon.jpg' | relative_url }})) (left arrow key): It jumps to the previous slide.
+**Predchádzajúca snímka** (![]({{ '/assets/icons/post_icons/mo_prev_oprn_icon.jpg' | relative_url }})) (šípka doľava): Prejde na predchádzajúcu snímku.
 
-**Next slide buttons**(![]({{ '/assets/icons/post_icons/mo_next_oprn_icon.jpg' | relative_url }}) ) (right arrow key): It jumps to the next slide.
+**Tlačidlá na prechod na ďalšiu snímku** (![]({{ '/assets/icons/post_icons/mo_next_oprn_icon.jpg' | relative_url }})) (šípka doprava): Prejde na ďalšiu snímku.
 
-**Previous presentation** (![]({{ '/assets/icons/post_icons/mo_prevoius_step_icon.jpg' | relative_url }})) (page up key): It will jump to the previous presentation. This button is only active when all presentations are played in a quick start file. 
+**Predchádzajúca prezentácia** (![]({{ '/assets/icons/post_icons/mo_prevoius_step_icon.jpg' | relative_url }})) (klávesa „Page Up“): Prejde na predchádzajúcu prezentáciu. Toto tlačidlo je aktívne len vtedy, ak sa všetky prezentácie prehrávajú v súbore rýchleho spustenia. 
 
-**Next presentation buttons** (![]({{ '/assets/icons/post_icons/mo_next_step_icon.jpg' | relative_url }})) (page down key): It will jump to the next presentation. This button is only active when all presentations are played in a quick start file. 
+**Tlačidlá na prechod na ďalšiu prezentáciu** (![]({{ '/assets/icons/post_icons/mo_next_step_icon.jpg' | relative_url }})) (klávesa Page Down): Prejde na ďalšiu prezentáciu. Toto tlačidlo je aktívne len vtedy, ak sa všetky prezentácie prehrávajú v súbore rýchleho spustenia. 
 
-**Close presentation button** (![]({{ '/assets/icons/post_icons/presentation_editor_close_presentation_icon.jpg' | relative_url }}) ) (escape key): It will close the presentation screen and return to the main screen as shown in Fig. 26.6.23.12. If a presentation is playing when the escape key is hit, the presentation will stop playing.
+**Tlačidlo na zatvorenie prezentácie** (![]({{ '/assets/icons/post_icons/presentation_editor_close_presentation_icon.jpg' | relative_url }}) ) (klávesa Escape): Týmto sa zatvorí obrazovka prezentácie a program sa vráti na hlavnú obrazovku, ako je znázornené na obr. 26.6.23.12. Ak sa v okamihu stlačenia klávesy Escape práve prehráva prezentácia, jej prehrávanie sa zastaví.
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_23_presentation_editor/image0013.jpg' | relative_url }})
 
-Player showing presentation file
+Hráč, ktorý premieta prezentačný súbor
