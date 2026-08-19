@@ -1,856 +1,856 @@
 ---
 lang: sk
-title: "29.1. Cogging Setup"
+title: "29.1. Nastavenie coggingu"
 ---
 
-# 29.1. Cogging Setup
+# 29.1. Nastavenie coggingu
 
-29.1.1. Cogging Terminology
+29.1.1. Terminológia týkajúca sa coggingu
 
-29.1.2. Die Positioning Method
+29.1.2. Metóda polohovania
 
-29.1.3. How to add Cogging operation
+29.1.3. Ako pridať operáciu „Cogging“
 
-29.1.4. Process window
+29.1.4. Okno procesu
 
-29.1.5. Cogging cycle operation
+29.1.5. Prevádzka v cykle s coggingom
 
-29.1.6. Pass Table
+29.1.6. Tabuľka prechodov
 
-29.1.7. Material List
+29.1.7. Zoznam materiálov
 
-29.1.8. Object window
+29.1.8. Okno objektu
 
-29.1.9. Billet
+29.1.9. Polotovar
 
-  * Geometry
+  * Geometria
 
-  * Mesh
+  * Sieťovina
 
-  * Material
+  * Materiál
 
-  * Boundary Conditions
+  * Okrajové podmienky
 
-  * Property
+  * Nehnuteľnosť
 
-29.1.10. Top Die
+29.1.10. Horná matrica
 
-  * Geometry
+  * Geometria
 
-  * Mesh
+  * Sieťovina
 
-  * Material
+  * Materiál
 
-  * Movement controls
+  * Ovládanie pohybu
 
-  * Properties
+  * Vlastnosti
 
-29.1.11. Manipulators
+29.1.11. Manipulátory
 
-  * Left manipulator1
+  * Ľavý manipulátor 1
 
-  * Geometry
+  * Geometria
 
-  * Mesh
+  * Sieťovina
 
-  * Material
+  * Materiál
 
-29.1.12. Positioning
+29.1.12. Polohovanie
 
-29.1.13. Scheduled Positioning
+29.1.13. Plánované umiestnenie
 
-29.1.14. Contact (Inter-Object relations)
+29.1.14. Kontakt (vzťahy medzi objektmi)
 
-29.1.15. Simulation preview
+29.1.15. Náhľad simulácie
 
-29.1.16. Simulation controls
+29.1.16. Ovládacie prvky simulácie
 
-29.1.17. Generate DB
+29.1.17. Vytvorenie databázy
 
-29.1.18. Running Simulation
+29.1.18. Spustenie simulácie
 
-29.1.19. Post Processing
+29.1.19. Následné spracovanie
 
-The cogging operation guides the user to setup the process in simple manner using Passtable, Reheat settings, Primitives and Movement controls. The Pass table helps the user to setup cogging operation in a single action with the movement and rotation of the billet entered, it also accounts for the cooling of the billet between blows and while resting on the bottom die. The pass table helps the user to setup multiple passes easily, by copying settings from one pass to other. The operation can be set using either two dies or four dies as per user requirement.
+Operácia coggingu vedie používateľa k jednoduchému nastaveniu procesu pomocou tabuľky priechodov (Passtable), nastavení opätovného ohrevu, základných prvkov a ovládacích prvkov pohybu. Tabuľka priechodov pomáha používateľovi nastaviť operáciu coggingu jedným krokom na základe zadaného pohybu a otáčania sochory; zohľadňuje tiež chladenie sochory medzi údermi a počas jej odpočinku na spodnej matrici. Tabuľka priechodov pomáha používateľovi ľahko nastaviť viacero priechodov kopírovaním nastavení z jedného priechodu do druhého. Operáciu je možné nastaviť buď s použitím dvoch, alebo štyroch foriem podľa požiadaviek používateľa.
 
-The cogging wizard provides adaptive reheating option for the user to reheat thebillet when the temperature drops below critical temperature, the billet is reheated and forming operation is continued.
+Sprievodca procesom coggingu ponúka používateľovi možnosť adaptívneho opätovného ohrevu, vďaka čomu sa sochor opätovne zahreje, keď teplota klesne pod kritickú hodnotu, a proces tvárnenia pokračuje.
 
-## Cogging Terminology
+## Terminológia týkajúca sa coggingu
 
-**Auto Calculate Bites** : By activating this option, system will automatically calculate the no. of bites to be simulated for the given Billet length and axial feed per bite.
+**Automatický výpočet záberov**: Aktiváciou tejto možnosti systém automaticky vypočíta počet záberov, ktoré sa majú simulovať pre danú dĺžku sochoru a axiálny posuv na jeden záber.
 
-**Number of Bites** : By using this option, user can define required no. of bites for the cogging simulation manually.
+**Počet krokov**: Pomocou tejto možnosti môže používateľ ručne nastaviť požadovaný počet krokov pre simuláciu zubového posunu.
 
-Axial Feed per bite: It is the distance that a die set moves per bite in axial direction (Nominal Bite). 
+Axiálny posuv na jeden záber: Ide o vzdialenosť, o ktorú sa sada matíc posunie v axiálnom smere pri jednom zábere (nominálny záber). 
 
-**E.g.: -** if we define axial feed rate as 10 mm, the die set will travel 10 mm down the length of the billet after each bite.
+**Napr.: -** ak nastavíme axiálnu rýchlosť posuvu na 10 mm, sada matíc sa po každom zábere posunie o 10 mm po dĺžke polotovaru.
 
-**Cross-Section Thickness** : Cross-section thickness is the thickness to be maintained on billet in the direction of primary die movement. It is also used as stopping control and also to position dies initially. Depending on the cross-section thickness and number of steps, displacement per step is automatically calculated by system.
+**Hrúbka prierezu**: Hrúbka prierezu je hrúbka, ktorú je potrebné zachovať na sochore v smere pohybu primárnej matrice. Slúži tiež na riadenie zastavenia a na počiatočné nastavenie polohy matríc. V závislosti od hrúbky prierezu a počtu krokov systém automaticky vypočíta posun na jeden krok.
 
-**E.g.: -** if the work piece thickness is 20 mm and we define cross section thickness as 19 mm, simulation is stopped once after achieving the thickness of 19mm on billet in the primary die direction. If any other movement apart from speed is selected, depending on the type of movement the dies are positioned such a way that thickness of 19mm is achieved by the end of deformation operation.
+**Napr.: -** ak je hrúbka obrobku 20 mm a hrúbku prierezu nastavíme na 19 mm, simulácia sa zastaví hneď po dosiahnutí hrúbky 19 mm na polotovare v smere primárnej matrice. Ak je zvolený akýkoľvek iný pohyb okrem rýchlosti, v závislosti od typu pohybu sa matrice nastavia tak, aby sa na konci deformácie dosiahla hrúbka 19 mm.
 
-**Movement Direction** : It specifies the Die movement direction along workpiece axis (+X or -X).
+**Smer pohybu**: Určuje smer pohybu vŕtačky pozdĺž osi obrobku (+X alebo -X).
 
-**Rotation per Bite (Deg**): By using this option user can set the angle for the billet to rotate after each bite.
+**Otočenie po každom zarytí (°**): Pomocou tejto možnosti môže používateľ nastaviť uhol, o ktorý sa má polotovar otočiť po každom zarytí.
 
-**Rotation per Pass (Deg)** : By using this option user can set the angle for the billet to rotate before each pass.
+**Otočenie na jeden priechod (°)**: Pomocou tejto možnosti môže používateľ nastaviť uhol, o ktorý sa má polotovar otočiť pred každým priechodom.
 
-**Dwell Time before pass** : Using this user can set the time that workpiece rests on the die before the starting of the cogging pass.
+**Doba zdržania pred priechodom**: Pomocou tejto funkcie môže používateľ nastaviť čas, počas ktorého obrobok zostáva na matrici pred začatím priechodu s ozubením.
 
-**Transfer Time Before Pass** : Using this user can set the time lapse from the furnace to the cogging pass table before the starting of the cogging pass.
+**Čas presunu pred prechodom**: Pomocou tejto funkcie môže používateľ nastaviť časový interval medzi výstupom z pece a príchodom na stôl pre coggingový prechod pred začatím coggingového prechodu.
 
-## Die Positioning Method
+## Metóda polohovania matice
 
-  1. **0 -% (Percentage or fraction of billet length between 0 to 1)** : Start or stop position is specified as a fraction of the billet length from the respective billet ends, taking cogging direction into consideration.
+  1. **0 - % (percento alebo zlomok dĺžky sochory v rozmedzí od 0 do 1)**: Počiatočná alebo koncová poloha sa určuje ako zlomok dĺžky sochory od príslušných koncov sochory, pričom sa zohľadňuje smer zubovania.
 
-  2. **1 – ref (Reference points)**: Start or stop position is specified by picking two points on the billet, only the x coordinates are displayed in the table.
+  2. **1 – ref (Referenčné body)**: Počiatočná alebo koncová poloha sa určuje výberom dvoch bodov na polotovare; v tabuľke sa zobrazujú iba súradnice x.
 
-  3. **2 – dst (Absolute distance from billet ends)**: Start or stop position is specified by distance from respective billet ends, taking cogging direction into consideration.
+  3. **2 – dst (Absolútna vzdialenosť od koncov sochory)**: Počiatočná alebo koncová poloha sa určuje na základe vzdialenosti od príslušných koncov sochory, pričom sa zohľadňuje smer zubového posunu.
 
-  4. **3 -ofst (Offset)**: Start position is specified as a relative distance from previous die position.
+  4. **3 -ofst (Offset)**: Počiatočná poloha sa určuje ako relatívna vzdialenosť od predchádzajúcej polohy razidla.
 
-**Die start position** : Die center is the datum point used for initial position for each pass in its movement direction. (See Fig. 29.1.1.). 
+**Počiatočná poloha matrice**: Stred matrice je referenčný bod, ktorý slúži ako počiatočná poloha pre každý priechod v smere jej pohybu. (Pozri obr. 29.1.1.) 
 
-**Die stop position:** This option is enabled only when the option ’Auto-calculate bites’ is checked. Pass ends before the die center reaches the given end position.
+**Konečná poloha matrice:** Táto voľba je aktívna len vtedy, ak je zaškrtnutá voľba „Automatický výpočet záberov“. Prechod sa ukončí skôr, ako stred matrice dosiahne zadanú konečnú polohu.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image054.jpg' | relative_url }})
 
-Die start and Die stop position.
+Počiatočná a koncová poloha.
 
   
-******1.**  _**0% (Percentage or fraction of billet length between 0 to 1)**_ :   
-**Die start position** : Die center is positioned at given distance (specified as a fraction of current billet length) from start of billet in the pass movement direction.(See Fig. 29.1.2.)
+******1.**  _**0 % (percento alebo zlomok dĺžky sochory v rozmedzí od 0 do 1)**_ :   
+**Počiatočná poloha matrice**: Stred matrice je umiestnený v danej vzdialenosti (uvedenej ako zlomok aktuálnej dĺžky sochoru) od začiatku sochoru v smere pohybu pri prechode. (Pozri obr. 29.1.2.)
 
-**Die stop position** : Pass ends when die center reaches given distance (specified as a fraction of current billet length) from end of billet in the opposite direction of the pass movement direction.
+**Poloha zastavenia matrice**: Prechod sa ukončí, keď stred matrice dosiahne stanovenú vzdialenosť (vyjadrenú ako zlomok aktuálnej dĺžky sochoru) od konca sochoru v smere opačnom k smeru pohybu prechodu.
 
-Default values are zeros, which means the die center is positioned at the start end of billet and stops until it reaches the other end.
+Predvolené hodnoty sú nuly, čo znamená, že stred matrice je umiestnený na začiatočnom konci polotovaru a zastaví sa, až keď dosiahne druhý koniec.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image055.jpg' | relative_url }})
 
-(0-%) Percentage or fraction of billet length die positioning method
+(0-%) Metóda polohovania matrice na základe percenta alebo zlomku dĺžky sochory
 
-**2.**_**1 -ref (Reference points)**_ : When this method is selected, picking is enabled and two points on the billet can be picked. 
+**2.**_**1 -ref (Referenčné body)**_ : Ak je zvolená táto metóda, je povolené výberové označovanie a je možné označiť dva body na polotovare. 
 
-Start point should be picked after clicking on the cell ‘Die start position’ in the first pass. (See Fig. 29.1.3.)
+Po kliknutí na bunku „Počiatočná poloha kocky“ v prvom kroku by sa mal vybrať počiatočný bod. (Pozri obr. 29.1.3.)
 
-Stop point should be picked after clicking on the cell ‘Die stop position’ in the first pass. 
+Zastavovací bod by sa mal zvoliť po kliknutí na bunku „Poloha zastavenia matrice“ v prvom cykle. 
 
-Die center is positioned at the start point and the pass ends when it reaches the stop point. The same two reference points are used for all passes. The reference points are tracked on the deforming workpiece.
+Stred formy je umiestnený v počiatočnom bode a priechod končí, keď dosiahne koncový bod. Pre všetky priechody sa používajú tie isté dva referenčné body. Referenčné body sa sledujú na deformovanom obrobku.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image056.jpg' | relative_url }})
 
-(1-ref) Reference point die positioning method
+(1-ref) Metóda polohovania výsekových foriem pomocou referenčného bodu
 
   
-**3.**_**2-dst (Absolute distance method)**_ :   
-**Die start position** : Die center is positioned at a given distance from the start of the billet in the pass movement direction. (See Fig. 29.1.4.)  
-**Die stop position** : Pass ends when the die center reaches the specified distance from the end of the billet in the opposite direction of the pass movement direction. 
+**3.**_**2-dst (metóda absolútnej vzdialenosti)**_ :   
+**Počiatočná poloha matrice**: Stred matrice je umiestnený v určitej vzdialenosti od začiatku polotovaru v smere pohybu pri prechode. (Pozri obr. 29.1.4.)  
+**Poloha zastavenia matrice**: Prechod sa ukončí, keď stred matrice dosiahne stanovenú vzdialenosť od konca polotovaru v smere opačnom k smeru pohybu prechodu. 
 
-Negative values can be used for start and/or end positions.
+Pre počiatočné a/alebo konečné polohy je možné použiť záporné hodnoty.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image057.jpg' | relative_url }})
 
-(2-dst) Absolute distance die positioning method
+(2-dst) Metóda polohovania pomocou kocky na meranie absolútnej vzdialenosti
 
-_****_**4.**_**3-ofst (Offset method)**_ :  
-**Die start position** : Die is moved by the specified distance from its last position. A positive value moves the die in the pass movement direction while a negative value moves it in the opposite direction. (See Fig. 29.1.5.)
+_****_**4.**_**3-ofst (metóda posunu)**_ :  
+**Počiatočná poloha kocky**: Kocka sa posunie o zadanú vzdialenosť od svojej poslednej polohy. Kladná hodnota posunie kocku v smere pohybu ťahu, zatiaľ čo záporná hodnota ju posunie v opačnom smere. (Pozri obr. 29.1.5.)
 
-**Die stop position** : Not applicable, this method cannot be used for stopping method as it is not meaningful.
+**Poloha zastavenia**: Neplatí; túto metódu nie je možné použiť na zastavenie, pretože to nemá zmysel.
 
-Offset method can be used with a zero value for the first pass if user wants to do manual positioning only. In certain processes, like infeed swaging for instance, dies need to be positioned in a certain specific configuration with reference to the billet. In such cases, the offset position method can be used with a zero value for the first pass. No additional die positioning is done by the system.
+Metódu posunu je možné použiť s nulovou hodnotou pre prvý priechod, ak chce používateľ vykonať iba ručné polohovanie. V určitých procesoch, ako je napríklad lisovanie s posunom, je potrebné polohovať lisovacie nástroje v určitej špecifickej konfigurácii vzhľadom na polotovar. V takýchto prípadoch je možné použiť metódu posunu s nulovou hodnotou pre prvý priechod. Systém nevykonáva žiadne ďalšie polohovanie matíc.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image058.jpg' | relative_url }})
 
-(3-ofst) Offset die positioning method
+(3-ofst) Metóda polohovania matice s posunom
 
-  * **Bites to Skip**
+  * **Časti, ktoré môžete preskočiť**
 
-Number of Bites to skip, this option is applicable for Crank press based movement controls only. Using this option user can set Number of bites to be skipped between each bite in the respective pass of the simulation.
+Počet krokov, ktoré sa majú preskočiť – táto voľba platí iba pre ovládanie pohybu založené na kľukovom mechanizme. Pomocou tejto voľby môže používateľ nastaviť počet krokov, ktoré sa majú preskočiť medzi jednotlivými krokmi v príslušnom cykle simulácie.
 
-Below Fig. 29.1.6. shows cogging process with two passes, where in first pass we skipped two bites for every bite and in second pass we do not skip any bites.
+Na obr. 29.1.6. je znázornený proces zubovania s dvoma prechodmi, pričom v prvom prechode sme pri každom zube preskočili dva zuby a v druhom prechode sme žiadne zuby nepreskočili.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image001.jpg' | relative_url }})
 
-Bite skip
+Preskočiť časť „Bite“
 
-## How to add Cogging operation
+## Ako pridať operáciu „Cogging“
 
-Cogging operation is accessible from MO Wizard that can be opened from Main GUI. In MO wizard, Cogging Operation can be added from explorer tab by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to 3D Cogging. Also, user can add the operation by drag and drop into the Operation Editor as shown in Fig. 29.1.7.
+Operáciu coggingu je možné spustiť z čarodejníka MO, ktorý sa otvára z hlavného grafického rozhrania. V čarodejníkovi MO je možné operáciu coggingu pridať na karte „Explorer“ kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky „3D Cogging“. Operáciu môže používateľ pridať aj pomocou funkcie drag and drop do editora operácií, ako je znázornené na obr. 29.1.7.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image002.jpg' | relative_url }})
 
-Added Cogging operation in Operation Explorer
+Do nástroja Operation Explorer bola pridaná operácia „Cogging“
 
-## Process window
+## Okno procesu
 
-Below Fig. 29.1.8. shows the options to set the process conditions, these options are explained below.
+Na obr. 29.1.8. sú zobrazené možnosti nastavenia podmienok procesu; tieto možnosti sú vysvetlené nižšie.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image003.jpg' | relative_url }})
 
-Process window
+Okno procesu
 
-**Process type**
+**Typ procesu**
 
-  * **Cogging** : It is a process of increasing length of billet by decreasing the diameter of billet.
+  * **Cogging**: Ide o proces predĺženia sochoru zmenšením jeho priemeru.
 
-The objective of Cogging is modeling of billet conversion process consisting of multiple bites/passes/re-heats in a single operation with automatic stops and restarts between each step of the process. 
+Cieľom programu Cogging je modelovanie procesu spracovania sochory, ktorý pozostáva z viacerých rezov/prechodov/opätovných ohrevov v rámci jednej operácie s automatickými zastaveniami a opätovnými spusteniami medzi jednotlivými krokmi procesu. 
 
-Cogging wizard is used to generate the master files and the billet, die and manipulator keyword files with necessary information about process, geometry and materials to run a typical cogging simulation.
+Sprievodca Cogging Wizard slúži na generovanie hlavných súborov a súborov s kľúčovými slovami pre sochory, matrice a manipulátory, ktoré obsahujú potrebné informácie o procese, geometrii a materiáloch na spustenie typickej simulácie coggingu.
 
-  * **Swagging** : Modelling of rotary forging processes is known as Swagging.
+  * **Swagging**: Modelovanie procesov rotačného kovania sa nazýva „swagging“.
 
-**Temperature Condition**
+**Teplotné podmienky**
 
-  * **Cold Isothermal:** In this process, we will be able to see only Deformation of Billet.
+  * **Studená izotermická deformácia:** Pri tomto procese budeme môcť pozorovať iba deformáciu sochoru.
 
-**Note** : If we select Cold Isothermal Radio button Heat transfer options would get into greyed out mode.
+**Poznámka**: Ak zvolíme voľbu „Cold Isothermal“, možnosti týkajúce sa prenosu tepla sa zneaktívnia.
 
-  * **Hot - Calculate Temp in Billet Only** : In this process, we are able to calculate temp in billet only. As no thermal calculations are carried over on dies and manipulators, no mesh is generated for them. We will able to perform both Heat Transfer and Deformation operations.
+  * **Horúci – výpočet teploty iba v sochore**: V tomto procese môžeme vypočítať teplotu iba v sochore. Keďže sa na lisovacích formách a manipulátoroch nevykonávajú žiadne tepelné výpočty, pre ne sa nevytvára žiadna sieť. Budeme môcť vykonať operácie prenosu tepla aj deformácie.
 
-  * **Hot - Calculate Temp in Billet and Dies** : In this process, we are able to calculate temp in billet, dies and manipulators. All objects should be meshed as we need to perform thermal calculations on billet, dies and manipulators. We will able to perform both Heat Transfer and Deformation operations.
+  * **Horúci proces – výpočet teploty v sochore a formách**: V rámci tohto procesu vieme vypočítať teplotu v sochore, formách a manipulátoroch. Všetky objekty by mali byť rozdelené na sieť, keďže potrebujeme vykonať tepelné výpočty na sochore, formách a manipulátoroch. Budeme môcť vykonať výpočty prenosu tepla aj deformácie.
 
-**Heat Transfer Per Bite**
+**Prenos tepla na jedno sústo**
 
-It is nothing but, how much time we want to transfer Heat per a particular bite.
+Ide jednoducho o to, koľko tepla chceme preniesť na jedno sústo.
 
-  * **Cycle Time** : Cycle time is the total time lapse between two successive bites. In a typical cogging operation it is the summation of, Bite Deformation + Bite Decompression time + Bite Dwell + Bite heat.
+  * **Doba cyklu**: Doba cyklu je celkový čas, ktorý uplynie medzi dvoma po sebe idúcimi zábermi. Pri typickej operácii s coggingom sa rovná súčtu nasledujúcich zložiek: deformácia pri zábere + čas dekompresie pri zábere + doba zdržania pri zábere + teplo pri zábere.
 
-  * **Decompression Time:** It is the time lapse before dwelling operation is started and after deformation operation is completed. During this time both top dies and bottom dies will be in contact with the Billet.
+  * **Doba dekompresie:** Ide o časový interval medzi ukončením deformácie a začiatkom fázy udržovania. Počas tohto času sú horné aj spodné matrice v kontakte so sochárom.
 
-  * **Dwell Time:** It is the time lapse between decompression time and the commence of next bite. During this operation only bottom die will be in contact with die.
+  * **Doba zdržania:** Ide o časový interval medzi ukončením dekompresie a začiatkom ďalšieho stlačenia. Počas tejto operácie bude s matricou v kontakte iba spodná matrica.
 
-  * **Remaining Cycle Time as HT:** In a case where the forging stroke is reached before the completion of cycle time, the remaining time of cycle is considered as Heat Transfer operation during which both the dies will be in contact. (See Fig. 29.1.9.)
+  * **Zostávajúca dĺžka cyklu ako fáza prenosu tepla:** V prípade, že sa dosiahne zdvih kovania skôr, ako uplynie celá dĺžka cyklu, zostávajúci čas cyklu sa považuje za fázu prenosu tepla, počas ktorej budú obe matrice v kontakte. (Pozri obr. 29.1.9.)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image005.jpg' | relative_url }})
 
-Remaining cycle Time as HT
+Zostávajúci čas cyklu ako HT
 
-  * **Remaining Cycle Time as Dwell** : In a case where the forging stroke is reached before the completion of cycle time, the remaining time of cycle is considered as Dwell during which the top die moves away from the billet. (See Fig. 29.1.10.)
+  * **Zostávajúca dĺžka cyklu ako doba odpočinku**: V prípade, že sa zdvih kovania dosiahne skôr, ako uplynie celá dĺžka cyklu, zostávajúci čas cyklu sa považuje za dobu odpočinku, počas ktorej sa horná matrica vzdiali od polotovaru. (Pozri obr. 29.1.10.)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image004.jpg' | relative_url }})
 
-Remaining Cycle time as Dwell
+Zostávajúca doba cyklu ako doba zdržania
 
-**Object Setup**
+**Nastavenie objektu**
 
-  * **Number of Dies** : Cogging process is carried out either b using 4 dies or 2dies depending on the cross-section and amount of deformation. User can select either 4 Dies or 2 Dies based on the process to be simulated.
+  * **Počet matíc**: Proces zubovania sa vykonáva buď pomocou 4 matíc, alebo 2 matíc, v závislosti od prierezu a rozsahu deformácie. Používateľ si môže vybrať buď 4 matice, alebo 2 matice podľa procesu, ktorý sa má simulovať.
 
-  * **Use different geometry for Top and Bottom dies** : In cogging process if the geometries in a die set are different then by checking this checkbox we will be able to define different types of geometries for Top die and Bottom die.
+  * **Použiť odlišnú geometriu pre hornú a spodnú maticu**: Ak sú v procese zubovania geometrie v sade matíc odlišné, zaškrtnutím tohto políčka budeme môcť definovať odlišné typy geometrií pre hornú a spodnú maticu.
 
-  * **Use Manipulators** : If manipulators are used then user can turn on this check box to activate Manipulator definition and its settings.
+  * **Použitie manipulátorov**: Ak sa používajú manipulátory, používateľ môže zaškrtnúť toto políčko, čím aktivuje definíciu manipulátora a jeho nastavenia.
 
-  * **Use Mandrel** : By checking this checkbox user will be able to use Mandrel for the setup where hollow workpieces are processed. It is used especially for the swagging setup.
+  * **Použiť Mandrel**: Zaškrtnutím tohto políčka bude mať používateľ možnosť použiť Mandrel pri nastavení spracovania dutých obrobkov. Používa sa najmä pri nastavení na vyťahovanie.
 
-  * **Use rotational symmetry** : By checking this checkbox, user will be able to define symmetry on the workpiece, see Fig. 29.1.8. Using symmetry the simulation time can be reduced.
+  * **Použiť rotačnú symetriu**: Zaškrtnutím tohto políčka bude môcť používateľ definovať symetriu na obrobku, pozri obr. 29.1.8. Využitím symetrie je možné skrátiť čas simulácie.
 
-**Use Reheat**
+**Funkcia opätovného ohrevu**
 
-“Use Reheat” checkbox can be turned on to reheat the billet at the end of pass. The billet can be reheated adaptively based on the specified “Triggering Temperature” or can be scheduled between passes by turning on the “Reheat” checkbox in the pass table. Reheating billet can be simulated for “Reheat time” period by turning on “Use heating simulation” checkbox or can be initialized to “Reheat Temperature” by turning off “Use heating simulation” checkbox. (See Fig. 29.1.8.) 
+Zaškrtávacie políčko „Použiť opätovné zahrievanie“ je možné aktivovať na opätovné zahrievanie sochoru na konci priechodu. Sochor je možné opätovne zahrievať adaptívne na základe zadané „Spúšťacej teploty“ alebo ho možno naplánovať medzi priechodmi aktivovaním zaškrtávacieho políčka „Opätovné zahrievanie“ v tabuľke priechodov. Prehrievanie sochoru je možné simulovať počas obdobia „Doba prehrievania“ zaškrtnutím políčka „Použiť simuláciu prehrievania“ alebo ho možno inicializovať na „Teplotu prehrievania“ odškrtnutím políčka „Použiť simuláciu prehrievania“. (Pozri obr. 29.1.8.) 
 
-  * **Reheat Temperature** : It is the temperature to which the billet has to be reheated for the forming process to be started.
+  * **Teplota opätovného zahriatia**: Ide o teplotu, na ktorú sa musí sochársky blok opätovne zahriať, aby bolo možné začať proces tvarovania.
 
-**Use heating simulation**
+**Použite simuláciu vykurovania**
 
-When selected, a heating simulation is added with Reheat temperature as environment temperature for period of “Reheat time” before the selected pass. If “Use Reheat” is checked and “Use heating simulation” is unchecked, then only nodal temperature is initialized to Reheat temperature before the selected pass.
+Ak je táto možnosť zvolená, pridá sa simulácia ohrevu, pričom teplota opätovného ohrevu sa nastaví ako teplota prostredia na dobu „Doba opätovného ohrevu“ pred zvoleným priechodom. Ak je zaškrtnutá možnosť „Použiť opätovný ohrev“ a nezatrhnutá možnosť „Použiť simuláciu ohrevu“, pred zvoleným priechodom sa na teplotu opätovného ohrevu inicializuje iba teplota uzla.
 
-**Use Adaptive heat**
+**Použiť adaptívne kúrenie**
 
-Cogging is very lengthy process during which the billet temperature will drop down below forging temperature at certain point, by checking this adaptive heat checkbox, automatically system reheats the billet to forging temperature specified and continues the cogging process. Adaptive Reheat will takes place between passes only. (See Fig. 29.1.8.)
+Cogging je veľmi zdĺhavý proces, počas ktorého teplota sochoru v určitom momente klesne pod teplotu kovania. Zaškrtnutím tohto políčka „Adaptívne ohrev“ systém automaticky znovu zahreje sochor na zadanú teplotu kovania a pokračuje v procese coggingu. Adaptívne opätovné zahriatie prebieha iba medzi jednotlivými priechodmi. (Pozri obr. 29.1.8.)
 
-  * **Checking Criteria**
+  * **Kritériá kontroly**
 
-  * **All Nodes** : User can select this option when the reheating process is to be triggered when temperature at all nodes in the billet goes below the assigned triggering temperature.
+  * **Všetky uzly**: Používateľ môže zvoliť túto možnosť, ak sa má proces opätovného ohrevu spustiť vtedy, keď teplota vo všetkých uzloch v sochore klesne pod stanovenú spúšťaciu teplotu.
 
-  * **Average of all Nodes** : By selecting this radio button, the reheating process is triggered when average temperature of all nodes in the billet goes below the assigned triggering temperature.
+  * **Priemer všetkých uzlov**: Po výbere tohto prepínača sa spustí proces opätovného ohrevu, keď priemerná teplota všetkých uzlov v sochore klesne pod nastavenú spúšťaciu teplotu.
 
-  * **Any Nod****e** : By selecting this radio button, the reheating process is triggered when any one node temperature goes below the triggering temperature.
+  * **Akýkoľvek uzol****e** : Ak zvolíte toto začiarkavacie políčko, proces opätovného ohrevu sa spustí vtedy, keď teplota ktoréhokoľvek uzla klesne pod spúšťaciu teplotu.
 
-  * **Average Surface Nodes** : By selecting this radio button, the reheating process is triggered when average surface nodes temperature goes below the assigned triggering temperature.
+  * **Priemerná teplota povrchových uzlov**: Ak zvolíte toto začiarkavacie políčko, proces opätovného ohrevu sa spustí vtedy, keď priemerná teplota povrchových uzlov klesne pod nastavenú spúšťaciu teplotu.
 
-  * **Triggering Temperature** : It is the temperature at which the reheating of the billet should be triggered.
+  * **Spúšťacia teplota**: Ide o teplotu, pri ktorej by sa malo spustiť opätovné ohrevovanie sochoru.
 
-**Pass table**
+**Tabuľka priechodov**
 
-New row has been added at the end where user can schedule Reheat for individual passes using check box (See Fig. 29.1.11.). This row will be hidden when no Reheat options are selected or if Adaptive heating has been selected.
+Na konci bol pridaný nový riadok, v ktorom môže používateľ pomocou zaškrtávacieho políčka naplánovať opätovné zahrievanie pre jednotlivé priechody (pozri obr. 29.1.11.). Tento riadok sa skryje, ak nie sú vybrané žiadne možnosti opätovného zahrievania alebo ak je zvolené adaptívne zahrievanie.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image053.jpg' | relative_url }})
 
-Pass table options with Use Reheat option
+Odovzdajte nastavenia stola s voľbou „Použiť opätovné ohrievanie“
 
-## Cogging cycle operation
+## Prevádzka v cykle s cokingom
 
-Cogging process involves several operations. A typical sequence of operations involved in cogging process is explained here. The below Fig. 29.1.12. shows the operations performed on billet before cogging process is started.
+Proces zubovania pozostáva z viacerých operácií. Tu je vysvetlený typický postup operácií, ktoré sú súčasťou procesu zubovania. Na nižšie uvedenom obr. 29.1.12 sú znázornené operácie, ktoré sa vykonávajú na sochore pred začatím procesu zubovania.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image006.jpg' | relative_url }})
 
-Multiple Operation setup
+Nastavenie viacerých operácií
 
-Following are the operations involved in a typical cogging pass that can be setup as sequence in DEFORM using cogging wizard process parameters and pass table window.(See Fig. 29.1.13.)
+Nižšie sú uvedené operácie, ktoré tvoria typický cyklus coggingu a ktoré je možné v programe DEFORM nastaviť ako postup pomocou parametrov procesu v sprievodcovi coggingu a okna s tabuľkou cyklov. (Pozri obr. 29.1.13.)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image007.jpg' | relative_url }})
 
-Operation involved in a typical pass
+Operácie vykonávané pri typickom prelete
 
-Based on the process requirement, user can control the operations to be performed and its settings. Below Fig. 29.1.14. and Fig. 29.1.15. shows difference in operation cycle when decompression time is not used and used.
+Na základe požiadaviek procesu môže používateľ riadiť vykonávané operácie a ich nastavenia. Na obr. 29.1.14 a obr. 29.1.15 je znázornený rozdiel v prevádzkovom cykle v prípade, keď sa čas dekompresie nepoužíva, a v prípade, keď sa používa.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image008.jpg' | relative_url }})
 
-Operation cycle without Decompression Time
+Prevádzkový cyklus bez dekompresného času
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image009.jpg' | relative_url }})
 
-Operation cycle with Decompression Time
+Pracovný cyklus s dobou dekompresie
 
-## Pass Table
+## Tabuľka priechodov
 
-Below Fig. 29.1.16. shows the Pass Table. In this table we will define the information of entire pass for the cogging setup. Various options available in pass table are explained in Cogging Terminology. Pass information is copied from previous pass whenever a new pass is added and necessary information can be edited based on the process requirement. Please refer 29.1.1. cogging Terminology.
+Na obr. 29.1.16 je zobrazená tabuľka priechodov. V tejto tabuľke definujeme informácie o celom priechode pre nastavenie coggingu. Rôzne možnosti dostupné v tabuľke priechodov sú vysvetlené v časti Terminológia coggingu. Informácie o priechode sa pri pridávaní nového priechodu skopírujú z predchádzajúceho priechodu a potrebné údaje je možné upraviť podľa požiadaviek procesu. Pozrite si časť 29.1.1. Terminológia coggingu.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image010.jpg' | relative_url }})
 
-Pass Table Window
+Okno s tabuľkou priechodov
 
-![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) Button: This button is used to increment pass by one.
+Tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}): Toto tlačidlo slúži na zvýšenie hodnoty o jednotku.
 
-![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) Button: This button is used to delete the existing pass.
+Tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}): Toto tlačidlo slúži na vymazanie existujúceho prístupového kódu.
 
-New passes can now be inserted anywhere in the pass table, not just at the end. (see Fig. 29.1.17.) 
+Nové priechody je teraz možné vkladať kdekoľvek do tabuľky priechodov, nielen na jej koniec. (pozri obr. 29.1.17.) 
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image061.jpg' | relative_url }})
 
-Adding new pass between 5 and 6
+Pridanie nového priechodu medzi 5 a 6
 
-![]({{ '/assets/icons/pre_icons/mo_swap_button.jpg' | relative_url }}) : If we click on swap button, the pass parameters are arranged horizontally for display.(see Fig. 29.1.18.)
+![]({{ '/assets/icons/pre_icons/mo_swap_button.jpg' | relative_url }}): Ak klikneme na tlačidlo „swap“, parametre priechodu sa na zobrazenie usporiadajú horizontálne (pozri obr. 29.1.18).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image011.jpg' | relative_url }})
 
-Showing Pass table information in Horizontal Direction
+Zobrazenie informácií z tabuľky Pass v horizontálnom smere
 
-![]({{ '/assets/icons/pre_icons/mo_pass_details_button.jpg' | relative_url }}):User can use this option to enter advanced pass information applicable to all passes, see Fig. 29.1.19.
+![]({{ '/assets/icons/pre_icons/mo_pass_details_button.jpg' | relative_url }}): Používateľ môže túto voľbu využiť na zadanie pokročilých informácií o preukazoch, ktoré sa vzťahujú na všetky preukazy, pozri obr. 29.1.19.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image012.jpg' | relative_url }})
 
-Advanced Pass Information window
+Okno „Pokročilé informácie o preukaze“
 
-**Shift between pairs of dies:**
+**Prechod medzi dvojicami matíc:**
 
-This option is applicable only when 4 dies are used for cogging and the amount of the deformation, i.e. forging stroke, is different for horizontal set of dies and vertical set of dies.
+Táto možnosť sa uplatňuje iba vtedy, ak sa na kovanie používajú 4 matrice a veľkosť deformácie, t. j. zdvih kovania, je odlišná pre horizontálnu sadu matríc a vertikálnu sadu matríc.
 
-As show in Fig. 29.1.20., Shift distance Δ = (b-a)/2
+Ako je znázornené na obr. 29.1.20., posun Δ = (b – a)/2
 
-Where
+Kde
 
-Δ is the Shift between pairs of dies
+Δ je posun medzi dvojicami matíc
 
-a is the Min. Stopping distance between Top and Bottom dies
+a je minimálna brzdná vzdialenosť medzi hornou a spodnou maticou
 
-b is the Min. Stopping distance required between Left and Right dies
+b je minimálna brzdná vzdialenosť potrebná medzi ľavou a pravou maticou
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image013.jpg' | relative_url }})
 
-Shift between the pairs of dies at the end of the bite
+Na konci skusu prejsť medzi dvojicami foriem
 
-If we use the positive value for shift between pairs of dies (Δ) then only the side dies (left and right dies) will shift away from the workpiece by this absolute value at the beginning of the every bite.  
-So that distance between horizontal left and right dies at the end of the bite is more, twice the Δ value than the distance between vertical Top and bottom dies. This means the workpiece deformation along vertical direction is twice the Δ than the horizontal direction.  
-But if we use negative value for shift between pairs of dies (Δ), then Top and Bottom dies will shift away from the workpiece by this absolute value.
+Ak použijeme kladnú hodnotu posunu medzi pármi matíc (Δ), potom sa na začiatku každého záberu od obrobku o túto absolútnu hodnotu posunú iba bočné matice (ľavá a pravá matica).  
+Vzdialenosť medzi horizontálnymi ľavými a pravými maticami na konci záberu je teda väčšia – predstavuje dvojnásobok hodnoty Δ – ako vzdialenosť medzi vertikálnymi hornými a dolnými maticami. To znamená, že deformácia obrobku vo vertikálnom smere je dvojnásobkom hodnoty Δ v porovnaní s horizontálnym smerom.  
+Ak však použijeme zápornú hodnotu posunu medzi dvojicami matíc (Δ), horná a spodná matica sa o túto absolútnu hodnotu posunú ďalej od obrobku.
 
-**Boolean before Pass:** Option to trim the billet between passes as it elongates beyond desired length. (see Fig. 29.1.21.) For more information related to Brick boolean before pass option refer 43.1. Shape Rolling Manual : [Boolean between passes](../43_shape_rolling/43_1_shape_rolling_manual.htm#Boolean_between_passes) section
+**Booleovská operácia pred prechodom:** Možnosť skrátiť polotovar medzi jednotlivými prechodmi, ak sa predĺži nad požadovanú dĺžku. (pozri obr. 29.1.21.) Ďalšie informácie týkajúce sa možnosti „Booleovská operácia pred prechodom“ v systéme Brick nájdete v príručke 43.1. Shape Rolling Manual: časť [Boolean between passes](../43_shape_rolling/43_1_shape_rolling_manual.htm#Boolean_between_passes)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image062.jpg' | relative_url }})
 
-Brick boolean with all options for Start position 0.15 and End position 0.85
+Booleovský blok „Brick“ so všetkými nastaveniami: počiatočná poloha 0,15 a konečná poloha 0,85
 
   
-From v14, Boolean operation between the passes can be added even for the workpiece with Tet mesh.(See Fig. 29.1.22.). 
+Od verzie v14 je možné pridať booleovskú operáciu medzi priechodmi aj v prípade obrobku s Tet-sieťou (pozri obr. 29.1.22.). 
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image063.jpg' | relative_url }})
 
-Tet boolean option with Start position 0.15 and End position 0.85
+Booleovská voľba Tet s počiatočnou polohou 0,15 a koncovou polohou 0,85
 
-## Material List
+## Zoznam materiálov
 
-In order for a simulation to achieve a high level of accuracy, it is important to have an understanding of the material properties required to specify a material used in DEFORM.  
-When setting up a simulation, material properties have to be specified for the objects. In MO Cogging operation, all the materials required for the operation can be loaded at a time and the required material can be selected later as the problem is setup. User can add material by selecting ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) load material data from library as shown in Fig. 29.1.23. User can select required material from the categories and then click on ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button as shown in Fig. 29.1.24.
+Aby simulácia dosiahla vysokú úroveň presnosti, je dôležité poznať vlastnosti materiálu, ktoré sú potrebné na špecifikáciu materiálu použitého v programe DEFORM.  
+Pri nastavovaní simulácie je potrebné pre objekty špecifikovať vlastnosti materiálov. V operácii MO Cogging je možné načítať všetky materiály potrebné pre danú operáciu naraz a požadovaný materiál vybrať neskôr pri nastavovaní úlohy. Používateľ môže pridať materiál výberom možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) „načítať údaje o materiáli z knižnice“, ako je znázornené na obr. 29.1.23. Používateľ môže vybrať požadovaný materiál z kategórií a potom kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}), ako je znázornené na obr. 29.1.24.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image014.jpg' | relative_url }})
 
-Material list window
+Okno so zoznamom materiálov
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image015.jpg' | relative_url }})
 
-Import material from library window
+Importovať materiál z okna knižnice
 
   
-(or) 
+(alebo) 
 
-Another way of adding material is click on the material icon of the explorer tab, a list of materials from library that are divided into different categories will appear as shown in Fig. 29.1.25. Select required material then click on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button. Also, user can add required material by drag and drop into the material window.
+Ďalším spôsobom pridania materiálu je kliknutie na ikonu materiálu na karte prehliadača, čím sa zobrazí zoznam materiálov z knižnice rozdelených do rôznych kategórií, ako je znázornené na obr. 29.1.25. Vyberte požadovaný materiál a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}). Používateľ môže požadovaný materiál pridať aj pomocou funkcie „drag and drop“ (ťahanie a púšťanie) do okna materiálu.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image016.jpg' | relative_url }})
 
-Adding Material from Explorer tab
+Pridávanie materiálu z karty „Explorer“
 
-(or)
+(alebo)
 
-In material list window, by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button, new material can be added. After a dding material click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select respective tab to define required data for the simulation as shown in Fig. 29.1.26.
+V okne so zoznamom materiálov je možné pridať nový materiál kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a vyberte príslušnú kartu, kde zadáte potrebné údaje pre simuláciu, ako je znázornené na obr. 29.1.26.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image017.jpg' | relative_url }})
 
-Add material from Material List window
+Pridať materiál z okna Zoznam materiálov
 
-**Import Material data from a file** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}): It imports the material from a .Key or .DB file.
+**Import údajov o materiáloch zo súboru** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}): Importuje údaje o materiáloch zo súboru s príponou .Key alebo .DB.
 
-**Load Material data from Library** ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) :It imports material from Library.
+**Načítať údaje o materiáloch z knižnice** ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}): Importuje materiály z knižnice.
 
-**Save the Material data to a file**![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) : It saves the material to a file.
+**Uloženie údajov o materiáli do súboru**![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) : Uloží materiál do súboru.
 
-**Save the Material data to Librar****y** ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}): User can save material to the library using this option and can be loaded back as required in future for other simulations.
+**Uloženie údajov o materiáli do knižnice****** ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ uložiť materiál do knižnice a v budúcnosti ho podľa potreby opäť načítať pre ďalšie simulácie.
 
-**Mixture material**
+**Zloženie zmesi**
 
-“Mixture” materials ([MSTMTR](/docs/sk/keyword_documentation/m/mstmtr/)) are used when a phase transformation is to be modeled in the simulation. The transforming material is modeled as a “mixture” of its constituent phases. For example, carbon steel might be modeled as a mixture of Austenite, Pearlite, Bainite, and Martensite. If a mixture material is defined, transformation rules should be defined which govern the transformation of one phase into another.(See Fig. 29.1.27.)
+Materiály typu „zmes“ ([MSTMTR](/docs/en/keyword_documentation/m/mstmtr/)) sa používajú v prípade, že sa v simulácii má modelovať fázová premena. Premenlivý materiál sa modeluje ako „zmes“ fáz, z ktorých sa skladá. Napríklad uhlíková oceľ sa môže modelovať ako zmes austenitu, perlitov, bainitu a martenzitu. Ak je definovaný zmesový materiál, mali by sa definovať pravidlá premeny, ktoré riadia premenu jednej fázy na druhú. (Pozri obr. 29.1.27.)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image018.jpg' | relative_url }})
 
-Adding Mixture material
+Pridanie zmesi materiálov
 
-**Copy Properties**
+**Vlastnosti kópie**
 
-It is used to copy the regular material properties like plastic, elastic, thermal etc. from one material to other while creating/defining the material data as shown in Fig. 29.1.28. In this dialog, source and destination for copying the properties and properties to be copied must be selected.
+Slúži na kopírovanie bežných vlastností materiálov, ako sú plastické, elastické, tepelné atď., z jedného materiálu do druhého pri vytváraní/definovaní údajov o materiáli, ako je znázornené na obr. 29.1.28. V tomto dialógovom okne je potrebné vybrať zdroj a cieľ kopírovania vlastností, ako aj samotné vlastnosti, ktoré sa majú skopírovať.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image019.jpg' | relative_url }})
 
-Copy material properties window
+Okno „Kopírovať vlastnosti materiálu“
 
-**Convert Units![]({{ '/assets/icons/pre_icons/mo_convert_units_button.jpg' | relative_url }})**
+**Previesť jednotky ![]({{ '/assets/icons/pre_icons/mo_convert_units_button.jpg' | relative_url }})**
 
-It is used to convert the unit system of current selected material from material list from SI to English or English to SI or user can use any other multiplication factor as shown in Fig. 29.1.29. Selecting the button will display the respective multiplication factors for converting from ![]({{ '/assets/icons/pre_icons/mo_si_to_english_button.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_english_to_si_button.jpg' | relative_url }}), then selecting the Convert button will convert and close the conversion window. This conversion table can be saved using save button and can also be edited by using wordpad/notepad and loaded back UNITCONV.DAT file using load button.
+Slúži na prevod jednotkového systému aktuálne vybraného materiálu zo zoznamu materiálov zo systému SI na anglický systém alebo z anglického systému na SI; používateľ môže použiť aj akýkoľvek iný násobný koeficient, ako je znázornené na obr. 29.1.29. Kliknutím na toto tlačidlo sa zobrazia príslušné násobné koeficienty pre prevod z ![]({{ '/assets/icons/pre_icons/mo_si_to_english_button.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_english_to_si_button.jpg' | relative_url }}); následným kliknutím na tlačidlo „Previesť“ sa prevod vykoná a okno prevodu sa zatvorí. Túto prevodnú tabuľku je možné uložiť pomocou tlačidla „Uložiť“ a je možné ju tiež upraviť pomocou programu WordPad/Notepad a následne ju opäť načítať do súboru UNITCONV.DAT pomocou tlačidla „Načítať“.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image020.jpg' | relative_url }})
 
-Unit Conversion window
+Okno pre prevod jednotiek
 
-## Object window
+## Okno objektu
 
-Below Fig. 29.1.30. shows the object window information.
+Na obr. 29.1.30. sú zobrazené informácie v okne objektu.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image021.jpg' | relative_url }})
 
-Object window
+Okno objektu
 
-**Axial Sub Division:** Element: Absolute size of the element is specified in the field, if the element size increases beyond the specified value then axial sub-division takes place to maintain the element size.
+**Axiálne rozdelenie:** Prvok: V tomto poli sa zadáva absolútna veľkosť prvku; ak sa veľkosť prvku zvýši nad zadanú hodnotu, dôjde k axiálnemu rozdeleniu s cieľom zachovať veľkosť prvku.
 
-**Aspect ratio** : Aspect ratio: It is the ratio of the minimum edge length to maximum edge length of an element. In cogging, most of the times the billet expands in axial (X) direction as the cross-section is reduced (Z or Y), hence the ratio normally would be element length in X direction to minimum of element length in Y or Z direction.  
-When aspect ratio exceeds the value specified, axial sub-division takes place to maintain the ratio. (See Fig. 29.1.31.)
+**Pomer strán**: Pomer strán: Ide o pomer medzi minimálnou dĺžkou hrany a maximálnou dĺžkou hrany prvku. Pri deformácii sa polotovar väčšinou rozťahuje v axiálnom smere (X), keďže sa zmenšuje prierez (Z alebo Y), preto je tento pomer zvyčajne dĺžka prvku v smere X k minimálnej dĺžke prvku v smere Y alebo Z.  
+Ak pomer strán prekročí stanovenú hodnotu, vykoná sa axiálne rozdelenie s cieľom zachovať tento pomer. (Pozri obr. 29.1.31.)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image022.jpg' | relative_url }})
 
-Axial subdivided workpiece mesh while simulation in progress
+Axiálne rozdelená sieť obrobku počas prebiehajúcej simulácie
 
-**Layers to merge:** Cogging is an ingot conversion process in which the length of the billet is large and the deformation zone at an instant is less compared to length of the billet. Hence, to reduce the simulation time user can indicate the layers that can be treated as one so that same result is reflected across the specified number of layers.
+**Vrstvy na zlúčenie:** Cogging je proces spracovania ingotov, pri ktorom je dĺžka polotovaru veľká a zóna deformácie v danom okamihu je v porovnaní s dĺžkou polotovaru menšia. Na skrátenie času simulácie môže používateľ preto určiť vrstvy, ktoré je možné považovať za jednu celok, aby sa rovnaký výsledok premietol do celého špecifikovaného počtu vrstiev.
 
-**Do billet Straightening**
+**Rovnanie polotovarov**
 
-  * **Between Bites** : During cogging process there is tendency that billet might bend and by selecting this radio button billet can be straightened between Bites.
+  * **Medzi zubami**: Počas procesu zubovania existuje riziko, že sa polotovar môže ohnúť; výberom tohto prepínača je možné polotovar medzi zubami narovnať.
 
-  * **Between Passes:** By selecting this radio button billet can be straightened between passes.
+  * **Medzi priechodmi:** Zaškrtnutím tohto políčka je možné tyč medzi priechodmi narovnať.
 
-## Billet
+## Polotovar
 
-In this window user can define required temperature for the object and select type of the object as shown in Fig. 29.1.32. For billet by default the object type selected is Plastic. User can also import object from other DB’s or Keyfile’s using button and browsing respective file.
+V tomto okne môže používateľ nastaviť požadovanú teplotu pre objekt a vybrať typ objektu, ako je znázornené na obr. 29.1.32. Pre sochársku hlinenú formu je štandardne vybraný typ objektu „Plast“. Používateľ môže tiež importovať objekt z iných databáz alebo súborov kľúčov pomocou tlačidla a vyhľadania príslušného súboru.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image023.jpg' | relative_url }})
 
-Assigning temperature for billet
+Nastavenie teploty sochory
 
-**Geometry**
+**Geometria**
 
-Geometry window is used to define the geometry of an object as shown in Fig. 29.1.33. Only define primitive field will be in active mode rest other options will be in greyed out mode when no geometry is defined. Once after creating geometry all the options will be activated.
+Okno „Geometria“ slúži na definovanie geometrie objektu, ako je znázornené na obr. 29.1.33. Ak nie je definovaná žiadna geometria, aktívne bude iba pole „Definovať primitívy“, ostatné možnosti budú sivé. Po vytvorení geometrie sa aktivujú všetky možnosti.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image024.jpg' | relative_url }})
 
-Geometry Window
+Okno Geometria
 
-**Define Primitive![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }})**
+**Definícia Primitive![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }})**
 
-We have three different types of Geometry primitives for billet, Ring, Octagon and Rectangle as shown in Fig. 29.1.34.
+Máme tri rôzne typy geometrických primitív pre polotovar: kruh, osemuholník a obdĺžnik, ako je znázornené na obr. 29.1.34.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image025.jpg' | relative_url }})
 
-Geometry primitive window
+Okno geometrických primitív
 
-For more information about geometry options, please refer [12.3. 3D Geometry Data Definition](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Ďalšie informácie o možnostiach geometrie nájdete v [12.3. 3D Geometry Data Definition](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
 
-**Mesh**
+**Sieťovina**
 
-**Brick mesh**
+**Cihlová sieťovina**
 
-The below Fig. 29.1.35. shows the mesh generation options for Brick Mesh in guided mode.
+Na nižšie uvedenom obr. 29.1.35 sú zobrazené možnosti generovania siete pre Brick Mesh v režime s návodom.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image026.jpg' | relative_url }})
 
-Brick Mesh options in Guided mode
+Možnosti mriežky tehál v režime s navádzaním
 
-**2D cross section**
+**2D rez**
 
-  * **Elements** : The number of mesh elements represents the approximate number of elements that will be generated on a 2D cross-section of an Object. 
+  * **Prvky**: Počet sieťových prvkov predstavuje približný počet prvkov, ktoré budú vytvorené na 2D priečnom reze objektu. 
 
-  * **Size Ratio** : Size ratio is the ratio of maximum element size to minimum element size on 2D cross-section.
+  * **Pomer veľkostí**: Pomer veľkostí je pomer medzi maximálnou veľkosťou prvku a minimálnou veľkosťou prvku v 2D priečnom reze.
 
-  * **No. of Layers** : It is used to control the thickness of mesh layers in axial direction. User can define the required number of layers for the mesh generation. As number of layers is increased, mesh will be denser and the thickness of the element decreases in axial direction. similarly, if number of layers is decreased then element thickness in axial direction will be increased and will see less number of layers.
+  * **Počet vrstiev**: Slúži na nastavenie hrúbky vrstiev siete v axiálnom smere. Používateľ môže pre generovanie siete definovať požadovaný počet vrstiev. S rastúcim počtom vrstiev bude sieť hustejšia a hrúbka prvku v axiálnom smere sa zmenší. Podobne, ak sa počet vrstiev zníži, hrúbka prvku v axiálnom smere sa zvýši a počet vrstiev sa zníži.
 
-  * **Remeshing (Tet mesh)** : If there is a huge deformation and brick mesh fails to go for remeshing, then system will opt to tetrahedral mesh automatically and generates mesh based on the settings defined.
+  * **Prekreslenie siete (tetraedrická sieť)**: Ak dôjde k výraznej deformácii a sieť typu „brick“ sa nedá prekresliť, systém automaticky zvolí tetraedrickú sieť a vygeneruje ju na základe definovaných nastavení.
 
-  * **Number of Elements** : The number of mesh elements represents the approximate number of elements that will be generated on an Object. The defined number of elements will be taken, when it hits the tetrahedral remeshing.
+  * **Počet prvkov**: Počet prvkov siete predstavuje približný počet prvkov, ktoré sa na objekte vygenerujú. Pri tetraedrickom prepočítaní siete sa použije tento definovaný počet prvkov.
 
-  * **Generate Mesh** : The mesh can be generated by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}).
+  * **Vytvoriť sieť**: Sieť je možné vytvoriť kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}).
 
-**Tetrahedral Mesh**
+**Tetraedrická sieť**
 
-The below Fig. 29.1.36. shows the mesh generation options for Tetrahedral Mesh in guided mode.
+Na nižšie uvedenom obr. 29.1.36 sú zobrazené možnosti generovania siete pre tetraedrickú sieť v režime s asistenciou.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image028.jpg' | relative_url }})
 
-Tet mesh options in Guided mode
+Možnosti siete Tet v režime s vedením
 
-  * **Elements** : The number of mesh elements represents the approximate number of elements that will be generated that will be generated on an Object. 
+  * **Prvky**: Počet sieťových prvkov predstavuje približný počet prvkov, ktoré sa vygenerujú na objekte. 
 
-  * **Min Element Size** : It is the minimum size of the element, while generating mesh it will create the element with respect to the defined minimum element size. Element size will not exceed the defined value.
+  * **Minimálna veľkosť prvku**: Ide o minimálnu veľkosť prvku; pri generovaní siete sa prvok vytvorí tak, aby spĺňal podmienku definovanej minimálnej veľkosti prvku. Veľkosť prvku neprekročí definovanú hodnotu.
 
-  * **Size ratio** : Size ratio is the ratio of maximum element size to minimum element size on an object.
+  * **Pomer veľkostí**: Pomer veľkostí je pomer medzi maximálnou veľkosťou prvku a minimálnou veľkosťou prvku na danom objekte.
 
-  * **Generate Mesh** : The mesh can be generated by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}).
+  * **Vytvoriť sieť**: Sieť je možné vytvoriť kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}).
 
-In order to control the mesh parameters like size, shape, density, type of elements, etc..., user has to switch to expert mode ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) for more advanced mesh options. Below Fig. 29.1.37. shows the mesh options available from Expert mode.
+Na nastavenie parametrov siete, ako sú veľkosť, tvar, hustota, typ prvkov atď., musí používateľ prejsť do expertného režimu ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), kde sú k dispozícii pokročilejšie možnosti vytvárania siete. Na obr. 29.1.37 nižšie sú zobrazené možnosti vytvárania siete dostupné v expertnom režime.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image027.jpg' | relative_url }})
 
-Expert mode Mesh generation window
+Okno na generovanie siete v režime pre pokročilých
 
-For more information about expert mode mesh generation options please refer, [13.2. 3D Tet Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) and [13.3. 3D Brick Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
+Ďalšie informácie o možnostiach generovania sietí v expertnom režime nájdete v dokumentácii k [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) a [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
 
-**Material**
+**Materiál**
 
-Below Fig. 29.1.38. shows the material window. User can assign required material from the list or can import from file or library. User can also add new material. For more information on how to assign material, Please refer chapter [10\. Material Data](/docs/sk/pre_processor/10_material_data/10_material_data/)
+Na obr. 29.1.38. je zobrazené okno s materiálmi. Používateľ môže priradiť požadovaný materiál zo zoznamu alebo ho importovať zo súboru či knižnice. Používateľ môže tiež pridať nový materiál. Ďalšie informácie o tom, ako priradiť materiál, nájdete v kapitole [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image029.jpg' | relative_url }})
 
-Material window
+Okno s materiálmi
 
-Once after adding material click on ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}) button, material window will open as shown in Fig. 29.1.39.
+Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}) – otvorí sa okno s materiálom, ako je znázornené na obr. 29.1.39.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image030.jpg' | relative_url }})
 
-Edit material window
+Okno na úpravu materiálu
 
-The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. For more information, Please refer Material in Forming 3D setup.
+Požadované vlastnosti závisia od fyzikálnych javov, ktoré sa simulujú v programe DEFORM. Vlastnosti materiálu, ktoré musí používateľ zadať, závisia od typov materiálov, ktoré používateľ v simulácii využíva. Ďalšie informácie nájdete v časti „Materiál“ v nastaveniach programu Forming 3D.
 
-**Boundary Conditions**
+**Okrajové podmienky**
 
-In Boundary conditions window, user can assign various boundary constraints for an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. The most commonly used boundary conditions in cogging are heat exchange with the environment for simulations involving heat transfer, prescribed velocity for enforcing symmetry. Fig. 29.1.40. shows various BCC that can be assigned to an object.
+V okne „Okrajové podmienky“ môže používateľ objektu priradiť rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako okraj objektu interaguje s ostatnými objektmi a s prostredím. Najčastejšie používanými okrajovými podmienkami v programe Cogging sú výmena tepla s prostredím pri simuláciách zahŕňajúcich prenos tepla a predpísaná rýchlosť na vynútenie symetrie. Obr. 29.1.40. znázorňuje rôzne okrajové podmienky (BCC), ktoré je možné priradiť k objektu.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image031.jpg' | relative_url }})
 
-Boundary Conditions window
+Okno „Okrajové podmienky“
 
-The BCC’s are categorized as Deformation,Thermal, Diffusion and Heating. For more information about these BCC's please refer [14\. Boundary Conditions.](/docs/sk/pre_processor/10_material_data/10_material_data/)
+BCC sa delia na deformčné, tepelné, difúzne a ohrievacie. Ďalšie informácie o týchto BCC nájdete v dokumente [14\. Boundary Conditions.](/docs/en/pre_processor/10_material_data/10_material_data/).
 
-**Property**
+**Nehnuteľnosť**
 
   
-Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See Fig. 29.1.41.). For more information on these options, Please refer [19\. Object properties.](/docs/sk/pre_processor/10_material_data/10_material_data/)
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 29.1.41.) Ďalšie informácie o týchto možnostiach nájdete v [19\. Object properties.](/docs/en/pre_processor/10_material_data/10_material_data/).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image032.jpg' | relative_url }})
 
-Object property window
+Okno vlastností objektu
 
-## Top Die
+## Horná matrica
 
-In this window, user can define required temperature for the object and select type of the object as shown in Fig. 29.1.42. For Top Die by default the object type selected is Rigid and user can also import object from other DB’s or Keyfile’s using button and browsing respective file.
+V tomto okne môže používateľ nastaviť požadovanú teplotu objektu a vybrať typ objektu, ako je znázornené na obr. 29.1.42. Pre „Top Die“ je štandardne vybraný typ objektu „Rigid“ a používateľ môže tiež importovať objekt z iných databáz alebo súborov kľúčov pomocou tlačidla a vyhľadania príslušného súboru.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image033.jpg' | relative_url }})
 
-Top Die window
+Okienko „Top Die“
 
-**Geometry**
+**Geometria**
 
-Geometry window is used to create the geometry of an object as shown in Fig. 29.1.43. Only define primitive field will be in active mode rest other options will be in greyed out mode when no geometry is created. Once after creating geometry all the options will be active.
+Okno „Geometria“ slúži na vytvorenie geometrie objektu, ako je znázornené na obr. 29.1.43. Ak ešte nebola vytvorená žiadna geometria, aktívne bude iba pole „Definovať primitívy“, ostatné možnosti budú sivé. Po vytvorení geometrie budú všetky možnosti aktívne.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image034.jpg' | relative_url }})
 
-Geometry window
+Okno Geometria
 
-**Define Primitive**
+**Definícia primitívu**
 
-Below Fig. 29.1.44. shows the Geometry primitive of Die.
+Na obr. 29.1.44. je znázornený geometrický primitív „Die“.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image035.jpg' | relative_url }})
 
-Top Die Geometry Primitive window
+Okno „Top Die Geometry Primitive“
 
-For more information about geometry options please refer [12\. 3. 3D Geometry Data Defining](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Ďalšie informácie o možnostiach geometrie nájdete v [12\. 3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
 
-**Mesh**
+**Sieťovina**
 
-Mesh generation options for Dies are similar to that of the billet, for more information on Mesh generation please refer [3.3. 3D Brick Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
+Možnosti vytvárania sietí pre lisovacie formy sú podobné ako v prípade polotovaru; ďalšie informácie o vytváraní sietí nájdete v [3.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
 
-**Material**
+**Materiál**
 
-Assigning material to dies is similar to that of billet. User can assign required material from the list or can import from file or library. User can also add new material. For more information on how to assign material, Please refer chapter [10\. Material Data](/docs/sk/pre_processor/10_material_data/10_material_data/)
+Priradenie materiálu k lisovacím formám prebieha podobne ako v prípade sochorov. Používateľ môže priradiť požadovaný materiál zo zoznamu alebo ho importovať zo súboru či knižnice. Používateľ môže tiež pridať nový materiál. Ďalšie informácie o tom, ako priradiť materiál, nájdete v kapitole [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/).
 
-The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. This section describes the material data that may be specified for a DEFORM simulation. For more information, Please refer Material in Forming 3D setup.
+Vlastnosti materiálov, ktoré musí používateľ špecifikovať, závisia od typov materiálov, ktoré používateľ využíva v simulácii. V tejto časti sú popísané údaje o materiáloch, ktoré je možné špecifikovať pre simuláciu DEFORM. Ďalšie informácie nájdete v časti „Materiál“ v nastaveniach programu Forming 3D.
 
-**Movement controls**
+**Ovládanie pohybu**
 
-Depending on the process requirement and equipment used user can define movement control settings for dies. For a quick Cogging setup, Speed and Mechanical press movement controls will be used as shown in Fig. 29.1.45. If user want to define other movement controls than these, then advanced radio button can be used by clicking ![]({{ '/assets/icons/pre_icons/mo_define_movement_button.jpg' | relative_url }}) button, these options can also be accessed by switching to Expert mode as shown in Fig. 29.1.46. For more information about these movement controls, please refer [10\. Movement Controls Definition.](/docs/sk/operation_templates/29_cogging/29_introduction_to_cogging/)
+V závislosti od požiadaviek procesu a použitého zariadenia môže používateľ definovať nastavenia riadenia pohybu pre lisovacie formy. Na rýchle nastavenie coggingu sa použijú ovládacie prvky rýchlosti a mechanického pohybu lisu, ako je znázornené na obr. 29.1.45. Ak chce používateľ definovať iné ovládacie prvky pohybu ako tieto, môže použiť pokročilé rádio tlačidlo kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_movement_button.jpg' | relative_url }}); k týmto možnostiam sa dá dostať aj prepnutím do režimu Expert, ako je znázornené na obr. 29.1.46. Ďalšie informácie o týchto ovládacích prvkoch pohybu nájdete v [10\. Movement Controls Definition.](/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image036.jpg' | relative_url }})
 
-Guided Mode Movement controls window
+Okno s ovládacími prvkami pohybu v režime s navádzaním
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image037.jpg' | relative_url }})
 
-Expert mode movement controls window
+Okno s ovládacími prvkami pohybu v režime pre pokročilých
 
-**Object Property**
+**Vlastnosť objektu**
 
-_**Die reference Points:**_  
-By checking the “**Define reference point** ” check box, user can specify the reference point for the Cross-section thickness. If the check box is not turned on, then the system places a virtual bounding box over the dies and uses it to measure the Cross-section thickness as illustrated below (See Fig. 29.1.47. and Fig. 29.1.48.).
+_**Referenčné body:**_  
+Zaškrtnutím políčka „**Definovať referenčný bod**“ môže používateľ určiť referenčný bod pre hrúbku priečneho rezu. Ak nie je toto políčko zaškrtnuté, systém umiestni nad matrice virtuálny ohraničujúci obdĺžnik a použije ho na meranie hrúbky prierezu, ako je znázornené nižšie (pozri obr. 29.1.47 a obr. 29.1.48).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image059.jpg' | relative_url }})
 
-Defining reference point (Right) and using system default reference point option (Left)
+Nastavenie referenčného bodu (vpravo) a použitie predvoleného referenčného bodu systému (vľavo)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image060.jpg' | relative_url }})
 
-Defining Reference point for Asymmetric dies
+Určenie referenčného bodu pre asymetrické lisovacie formy
 
-## Manipulators
+## Manipulátory
 
-**Start position wrt billet ends** : Manipulators will be positioned axially at a distanced specified here from the billet end face.
+**Východisková poloha vzhľadom na konce sochoru**: Manipulátory budú umiestnené v axiálnom smere vo vzdialenosti uvedenej v tomto dokumente od čelnej plochy sochoru.
 
-**Use master manipulators :** By checking this checkbox, user will be able to select the required (left or right) manipulators as priority to hold the billet during the simulation.  
-If user selects Left manipulators as master manipulator then whenever Dies reaches assigned hand over distance, only Left manipulator will hold the billet. Similarly if Right manipulator is selected as master manipulator then whenever Dies reaches assigned hand over distances, only Right manipulator will hold the billet
+**Použiť hlavné manipulátory:** Zaškrtnutím tohto políčka bude mať používateľ možnosť vybrať požadované (ľavé alebo pravé) manipulátory ako prioritné na pridržanie polotovaru počas simulácie.  
+Ak používateľ zvolí ľavý manipulátor ako hlavný manipulátor, vždy keď lis dosiahne nastavenú vzdialenosť odovzdania, polotovar bude držať iba ľavý manipulátor. Podobne, ak je ako hlavný manipulátor zvolený pravý manipulátor, vždy keď lis dosiahne nastavenú vzdialenosť odovzdania, polotovar bude držať iba pravý manipulátor.
 
-**Use spring loaded manipulators:** Manipulators can be defined as spring loaded or rigid. Spring loaded manipulators can be defined by turning on this checkbox. The parameters required to control the spring load manipulators are set here (spring stiffness, preload and maximum spring displacement allowed). (See Fig. 29.1.49.)
+**Použitie manipulátorov s pružinovým predpätím:** Manipulátory možno definovať ako manipulátory s pružinovým predpätím alebo ako tuhé. Manipulátory s pružinovým predpätím je možné definovať zaškrtnutím tohto políčka. Tu sa nastavujú parametre potrebné na riadenie manipulátorov s pružinovým predpätím (tuhosť pružiny, predpätie a maximálny povolený posun pružiny). (Pozri obr. 29.1.49.)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image038.jpg' | relative_url }})
 
-Manipulators window
+Okno „Manipulátory“
 
-**Left manipulator1**
+**Ľavý manipulátor 1**
 
-In this window, user can define required temperature for the object and select type of the object as shown in Fig. 29.1.50. For manipulator by default the object type selected is Rigid and user can also import object from other DB’s or Keyfile’s using button and browsing respective file.
+V tomto okne môže používateľ nastaviť požadovanú teplotu objektu a vybrať typ objektu, ako je znázornené na obr. 29.1.50. Pre manipulátor je štandardne vybraný typ objektu „Rigid“ a používateľ môže tiež importovať objekt z iných databáz alebo súborov Keyfile pomocou tlačidla a vyhľadania príslušného súboru.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image039.jpg' | relative_url }})
 
-Left Manipulator1 window
+Vľavo: Okno Manipulátor 1
 
-**Geometry**
+**Geometria**
 
-Geometry window is used to create the geometry of an object as shown in Fig. 29.1.51. Only define primitive field will be in active mode and rest other options will be in greyed out mode. Once after creating geometry all the options would get active.
+Okno „Geometria“ slúži na vytvorenie geometrie objektu, ako je znázornené na obr. 29.1.51. Aktívne bude iba pole „Definovať primitívy“, ostatné možnosti budú sivé. Po vytvorení geometrie sa všetky možnosti aktivujú.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image040.jpg' | relative_url }})
 
-Geometry Window
+Okno Geometria
 
-**Define primitive**
+**Definícia primitívu**
 
-Below Fig. 29.1.52. shows the Geometry primitive of Manipulator available in Cogging wizard.
+Na obrázku 29.1.52 nižšie je znázornená geometrická primitívna súčasť „Manipulátor“, ktorá je k dispozícii v sprievodcovi Cogging.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image043.jpg' | relative_url }})
 
-Manipulator Geometry primitive window
+Okno s geometrickými primitívami manipulátora
 
-**Mesh**
+**Sieťovina**
 
-Mesh generation options for Dies are similar to that of the billet.
+Možnosti vytvárania sietí pre lisovacie formy sú podobné ako v prípade polotovaru.
 
-**Material**
+**Materiál**
 
-Assigning material to dies is similar to that of billet. User can assign required material from the list or can import from file or library. User can also add new material.
+Priradenie materiálu k formám prebieha podobne ako v prípade sochárskych blokov. Používateľ môže vybrať požadovaný materiál zo zoznamu alebo ho importovať zo súboru či knižnice. Používateľ môže tiež pridať nový materiál.
 
-## Positioning
+## Polohovanie
 
-Below Fig. 29.1.53. shows the positioning window.
+Na obrázku 29.1.53 nižšie je zobrazené okno na nastavenie polohy.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image041.jpg' | relative_url }})
 
-Controls window
+Okno ovládacích prvkov
 
-Positioning of dies and manipulators is controlled automatically by system in cogging wizard and user requires these positioning options rarely, whenever dies are imported externally. Positioning top die would be sufficient, as the template automatically replicates the position for other dies. In a fresh setup only Top die is visible for positioning and even though other dies are positioned manually while editing a setup they are not stored, only the top die position is stored and reflected on the other dies. For more information on these positioning options please refer to below sections.
+Polohovanie foriem a manipulátorov je automaticky riadené systémom v sprievodcovi nastavenia a používateľ potrebuje tieto možnosti polohovania len zriedka, a to v prípadoch, keď sú formy importované z externého zdroja. Na polohovanie by stačilo nastaviť polohu hornej matrice, keďže šablóna automaticky zreplikuje túto polohu aj pre ostatné matrice. V novom nastavení je na polohovanie viditeľná len horná matrica a hoci sa ostatné matrice počas úpravy nastavenia polohujú ručne, ich polohy sa neukladajú – ukladá sa len poloha hornej matrice, ktorá sa premietne aj na ostatné matrice. Viac informácií o týchto možnostiach polohovania nájdete v nasledujúcich častiach.
 
-  * **Automatic Positioning![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }})**
+  * **Automatické polohovanie ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }})**
 
-By clicking on this button, system automatically Positions the Objects with respect to the top die movement direction, this option works best for simple setup with three objects work piece, top die and bottom die.
+Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na smer pohybu hornej matrice; táto možnosť sa najlepšie hodí pre jednoduché nastavenie s tromi objektmi: obrobkom, hornou matricou a spodnou matricou.
 
-  * **Positioning Objects![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})**
+  * **Umiestňovanie objektov ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})**
 
-By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as Drag, Offset, Interference, Flip and Rotational as shown in Fig. 29.1.54. For more information about these options, please refer [16.Object Positioning.](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestňovania, ako napríklad ťahanie, posun, kolízia, zrkadlenie a otáčanie, ako je znázornené na obr. 29.1.54. Ďalšie informácie o týchto možnostiach nájdete v [16.Object Positioning.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image042.jpg' | relative_url }})
 
-Object positioning window
+Okno na umiestňovanie objektov
 
-## Scheduled Positioning
+## Plánované polohovanie
 
-Schedule positioning allows the user to define the positioning for objects in MO setup for successive operations for which DB is not generated so that the objects are positioned before generation of DB while running simulation in batch mode. This option is also rarely used in cogging process.
+Funkcia „Schedule positioning“ umožňuje používateľovi definovať umiestnenie objektov v nastavení MO pre nasledujúce operácie, pre ktoré sa nevytvára databáza (DB), tak, aby boli objekty umiestnené ešte pred vytvorením DB počas spustenia simulácie v dávkovom režime. Táto možnosť sa zriedka používa aj v procese coggingu.
 
-## Contact
+## Kontakt
 
-The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. The relations table shows the current inter object relations that have been defined as shown in Fig. 29.1.44\. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined. This includes an object having a relationship to itself, if self-contact occurs as in case of lap. It is very important to define these relationships correctly for a simulation to model a forming process accurately.
+Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty v simulácii vzájomne interagujú. Tabuľka vzťahov zobrazuje aktuálne vzťahy medzi objektmi, ktoré boli definované, ako je znázornené na obr. 29.1.44\. Všetky objekty, ktoré môžu prísť do kontaktu v priebehu simulácie, musia mať definovaný kontaktný vzťah. To zahŕňa aj objekt, ktorý má vzťah sám so sebou, ak dochádza k vlastnému kontaktu, ako je to v prípade prekrývania. Správne definovanie týchto vzťahov je veľmi dôležité, aby simulácia mohla presne modelovať proces tvárnenia.
 
-**System** : By selecting this radio button, system assigns default inter-object relationships. Also user can add the lubricants if necessary by selecting Add New from pull down menu and clicking on "Edit" button or user can load the required lubricants from the library for the simulation.
+**Systém**: Po výbere tohto prepínača systém priradí predvolené vzťahy medzi objektmi. V prípade potreby môže používateľ pridať mazivá výberom možnosti „Pridať nové“ z roletového menu a kliknutím na tlačidlo „Upraviť“, alebo môže na účely simulácie načítať požadované mazivá z knižnice.
 
-By default in Cogging operation **User** option is selected, user**** would like to define his own relations then user radio button should be selected. User can add relationships by clicking on Add button as shown in Fig. 29.1.55.
+V režime Cogging je štandardne zvolená možnosť **User**; ak si používateľ**** želá definovať vlastné vzťahy, mal by zvoliť príslušné rádio tlačidlo. Používateľ môže pridať vzťahy kliknutím na tlačidlo Pridať, ako je znázornené na obr. 29.1.55.
 
   
-Frictional and Heat Transfer Coefficients can be applied even from simulation controls window, 
+Koeficienty trenia a prenosu tepla je možné nastaviť dokonca priamo z okna ovládacích prvkov simulácie, 
 
-For more information please refer, [Inter-Object Relations in Forming 3D setup](../33_forming/33_2_3d_forming_setup.htm#33_2_6_Inter-Object_Relation).
+Ďalšie informácie nájdete v dokumente [Inter-Object Relations in Forming 3D setup](../33_forming/33_2_3d_forming_setup.htm#33_2_6_Inter-Object_Relation).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image044.jpg' | relative_url }})
 
-Inter-Object definition window
+Okno definície medzi objektmi
 
-## Simulation preview
+## Ukážka simulácie
 
-Simulation Preview provides an overview of the operations like deformation, dwelling, reheat..etc. to be executed based on the process definition and pass table as animation. It also gives preview of the setup at each operation. In Simulation preview window, by clicking the ![]({{ '/assets/icons/pre_icons/mo_simulation_preview_play_button.jpg' | relative_url }}) button animation would be played (See Fig. 29.1.56.).
+Náhľad simulácie poskytuje prehľad operácií, ako sú deformácia, výdrž, opätovné zahriatie atď., ktoré sa majú vykonať na základe definície procesu a tabuľky priechodov, a to vo forme animácie. Ponúka tiež náhľad nastavenia pri každej operácii. V okne „Simulation preview“ (Náhľad simulácie) sa kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_preview_play_button.jpg' | relative_url }}) spustí prehrávanie animácie (pozri obr. 29.1.56.).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image045.jpg' | relative_url }})
 
-Simulation preview window
+Okno náhľadu simulácie
 
-## Simulation controls
+## Ovládacie prvky simulácie
 
-The DEFORM system solves time dependent non-linear problems by generating a series of FEM solutions at discrete time increments. At each time increment, the velocities, temperatures, and other key variables of each node in the finite element mesh are determined based on boundary conditions, thermo mechanical properties of the work  
-piece materials and possibly solutions at previous steps. Other state variables are derived from these key values, and updated for each time increment. The length of this time step, and number of steps simulated, are determined based on the information specified in the step controls menu. Fig. 29.1.57. Shows simulation control options in Guided mode of cogging operation, the basic options required for forming operation are provided here while Expert mode provides more detailed options.
+Systém DEFORM rieši časovo závislé nelineárne úlohy generovaním série riešení metódou konečných prvkov (FEM) v diskrétnych časových krokoch. V každom časovom kroku sa na základe okrajových podmienok a termomechanických vlastností materiálu určujú rýchlosti, teploty a ďalšie kľúčové premenné každého uzla v sieti konečných prvkov.  
+materiály dielov a prípadne riešenia z predchádzajúcich krokov. Z týchto kľúčových hodnôt sa odvodzujú ďalšie stavové premenné, ktoré sa aktualizujú pri každom časovom kroku. Dĺžka tohto časového kroku a počet simulovaných krokov sa určujú na základe informácií zadaných v ponuke nastavení krokov. Obr. 29.1.57. Ukazuje možnosti ovládania simulácie v režime Guided pri operácii coggingu; tu sú k dispozícii základné možnosti potrebné pre operáciu tvárnenia, zatiaľ čo režim Expert ponúka podrobnejšie možnosti.
 
-In guided mode user can define simulation controls for deformation operation and heat transfer operations independently. System will generate .MST file accordingly with the information and apply simulation controls respectively for all the operations to be executed. Frictional and Heat Transfer Coefficients can also be defined here.
+V režime s návodom môže používateľ nezávisle definovať parametre simulácie pre operácie deformácie a prenosu tepla. Systém na základe týchto informácií vygeneruje súbor .MST a príslušné parametre simulácie uplatní na všetky operácie, ktoré sa majú vykonať. Tu je možné definovať aj koeficienty trenia a prenosu tepla.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image046.jpg' | relative_url }})
 
-Guided mode Simulation controls window
+Okno ovládacích prvkov simulácie v režime s návodom
 
-**Deformation**
+**Deformácia**
 
-**Number of simulation step****s** (NSTEP)
+**Počet simulačných krokov****** (NSTEP)
 
-The number of simulation steps parameter defines the number of steps to run from the starting step number/previous operation. The simulation will stop after this number of simulation steps have run, unless stopping control is triggered to stop the simulation or if the simulation runs into a problem. This setting can be set independently for deformation and Heat transfer operations.
+Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú spustiť od počiatočného čísla kroku alebo predchádzajúcej operácie. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí príkaz na zastavenie simulácie alebo ak simulácia nenarazí na problém. Toto nastavenie je možné nastaviť samostatne pre operácie deformácie a prenosu tepla.
 
-**Step increment to save**
+**Krok pri ukladaní**
 
-The step increment (STPINC) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space. Since Cogging operation is a lengthy process, user should be careful in defining this value so that the .DB file size can be controlled. This setting can be set independently for deformation and Heat Transfer operations.
+Krok prírastku (STPINC), ktorý sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nemusí sa nutne uložiť do databázy. Uloženie väčšieho počtu krokov zachová viac informácií o procese, čo však bude vyžadovať viac úložného priestoru. Keďže operácia Cogging je zdĺhavý proces, používateľ by mal byť pri definovaní tejto hodnoty opatrný, aby bolo možné kontrolovať veľkosť súboru .DB. Toto nastavenie je možné nastaviť nezávisle pre operácie deformácie a prenosu tepla.
 
-**Friction Coefficient**
+**Koeficient trenia**
 
-The coefficient of friction between Dies and billet and Manipulators and billet is set using this option.
+Pomocou tejto možnosti sa nastavuje koeficient trenia medzi maticami a polotovarom a medzi manipulátormi a polotovarom.
 
-**Step definition** (DSMAX/DTMAX)
+**Definícia kroku** (DSMAX/DTMAX)
 
-Solution step size can be controlled by time step or by displacement of the primary die. If stroke per step is specified, the primary die will move the specified amount in each time step. The total movement of the primary die will be the displacement per step multiplied by the total number of steps. If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity. By default in Cogging operation Top Die is defined as primary die.
+Veľkosť kroku riešenia je možné riadiť časovým krokom alebo posunom primárnej matrice. Ak je špecifikovaný zdvih na krok, primárna matrica sa v každom časovom kroku posunie o zadanú hodnotu. Celkový pohyb primárnej matrice bude rovný posuvu na krok vynásobenému celkovým počtom krokov. Ak je špecifikovaný čas na krok, použije sa časový interval na krok. Posuv matrice na krok bude rovný časovému kroku vynásobenému rýchlosťou matrice. V predvolenom nastavení v režime Cogging je ako primárna matrica definovaná horná matrica.
 
-The definition of step increment control have been enhanced to include both the time and stroke dependent step functions, these options are available under Expert mode. This means, step size (both time per step and stroke per step) can now be defined as a function of time or stroke. This functionality enables finer resolution of saved model information, where it is desired. (typically towards the end of the stroke, where steep changes of die load can take place)
+Definícia riadenia krokového prírastku bola rozšírená tak, aby zahŕňala krokové funkcie závislé od času aj od zdvihu; tieto možnosti sú k dispozícii v režime Expert. To znamená, že veľkosť kroku (či už ide o čas na krok alebo zdvih na krok) je teraz možné definovať ako funkciu času alebo zdvihu. Táto funkcia umožňuje jemnejšie rozlíšenie uložených informácií o modeli tam, kde je to žiaduce. (typicky na konci zdvihu, kde môže dochádzať k prudkým zmenám zaťaženia matrice)
 
-**Heat transfer**
+**Prenos tepla**
 
-HT Coefficient Dies
+Matrice s koeficientom HT
 
-Heat Transfer Co-efficient between dies and billet is specified here which is applicable to all operations.
+Tu je uvedený koeficient prenosu tepla medzi lisovacími maticami a sochou, ktorý platí pre všetky operácie.
 
-**HT Coefficient Manipulators**
+**Manipulátory koeficientu HT**
 
-Heat Transfer Co-efficient between manipulators and billet is specified here which is applicable to all operations.
+Tu je uvedený koeficient prenosu tepla medzi manipulátormi a sochou, ktorý platí pre všetky operácie.
 
 ****
 
-**Reheat step controls:**  
-Reheat operation simulation steps will be controlled based on the Reheat step definition. We can define either Time or Temperature based Reheat step controls.
+**Ovládacie prvky pre fázu opätovného ohrevu:**  
+Kroky simulácie prevádzky s ohrevom budú riadené na základe definície kroku ohrevu. Môžeme definovať riadenie kroku ohrevu buď na základe času, alebo na základe teploty.
 
-For Time based step definition, we need to enter the time for each step.
+Pri definícii krokov na základe času je potrebné zadať čas pre každý krok.
 
-For Temperature based step definition, we need to enter "Initial time step", "Max temp change", Min time step and Max time step" values.
+Pri definícii kroku na základe teploty je potrebné zadať hodnoty „Počiatočný časový krok“, „Maximálna zmena teploty“, „Minimálny časový krok“ a „Maximálny časový krok“.
 
-Defined parameters of "Reheat temperature", "Reheat time" and "Stopping temp" values under Process page will be displayed in respective field.
+Nastavené hodnoty parametrov „Teplota opätovného ohrevu“, „Doba opätovného ohrevu“ a „Teplota zastavenia“ na stránke „Proces“ sa zobrazia v príslušných poliach.
 
-**Solver method**
+**Metóda riešenia**
 
-User has an option to select whether implicit solver to be used or explicit solver.
+Používateľ má možnosť zvoliť si, či sa má použiť implicitný alebo explicitný riešiteľ.
 
-**Implicit:**
+**Implicitné:**
 
-Use RSE: RSE can be activated by turning on this checkbox. For more information on RSE please refer RSE[MO] under [16.Object properties.](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+Použitie RSE: Funkciu RSE je možné aktivovať zaškrtnutím tohto políčka. Ďalšie informácie o RSE nájdete v časti RSE[MO] v dokumente [16.Object properties.](/docs/en/pre_processor/16_object_properties/16_object_properties/).
 
-**Limiting Strain Rate** : The limiting strain rate (LMTSTR) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material.
-
-  
-**Implicit Contact** : Implicit contact method between objects can be activated by turning on this check box.
-
-**Simulation controls in Expert Mode**
+**Medzná rýchlosť deformácie**: Medzná rýchlosť deformácie (LMTSTR) definuje medznú hodnotu efektívnej rýchlosti deformácie, pod ktorou sa plastický alebo porézny materiál považuje za tuhý a správa sa ako materiál s newtonovskými vlastnosťami.
 
   
-Fig. 29.1.58. shows the Simulation Controls in Expert mode. For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+**Implicitný kontakt**: Zaškrtnutím tohto políčka je možné aktivovať metódu implicitného kontaktu medzi objektmi.
+
+**Ovládacie prvky simulácie v režime Expert**
+
+  
+Na obr. 29.1.58 sú zobrazené ovládacie prvky simulácie v režime Expert. Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image047.jpg' | relative_url }})
 
-Expert mode Simulation controls
+Ovládacie prvky simulácie v režime pre pokročilých
 
-## Generate DB
+## Vytvoriť databázu
 
   
-**Check Data![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})**
+**Skontrolujte Data![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})**
 
-It checks the Data. If Data is correct we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.
+Systém skontroluje údaje. Ak sú údaje správne, môžeme vytvoriť databázu. Ak sa však pri kontrole údajov vyskytnú chyby alebo varovania, je potrebné ich opraviť pred vytvorením databázy. Chyby zabránia vytvoreniu databázy, zatiaľ čo varovania vytvorenie databázy neumožnia.
 
-**Generate Database![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**
+**Vytvoriť databázu ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**
 
-By clicking on this button, it will generate the Database of the setup to start the simulation.(See Fig. 29.1.59.)
+Kliknutím na toto tlačidlo sa vygeneruje databáza nastavení potrebná na spustenie simulácie. (Pozri obr. 29.1.59.)
 
-**Append Key file**
+**Pridať súbor s kľúčmi**
 
-Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only .key file can be changed and simulation can be resubmitted.
+Akékoľvek informácie, ktoré nie sú definované v sprievodcovi, ale napriek tomu sa vzťahujú na daný proces, je možné načítať ako súbor s príponou .key. Táto možnosť je užitočná aj v prípadoch, keď je potrebné zmeniť len niekoľko hodnôt – tieto hodnoty je možné definovať v súbore s príponou .key, následne stačí zmeniť len tento súbor a simuláciu je možné odoslať znovu.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image048.jpg' | relative_url }})
 
-Generate DB window
+Okno „Vytvoriť databázu“
 
-## Running Simulation
+## Spustenie simulácie
 
-Once the database has been generated, switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Start the simulation by clicking the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label and selecting run from last negative step option in Run simulation pop-up window.
+Po vytvorení databázy prejdite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií. Simuláciu spustite kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) a výberom možnosti „spustiť od posledného záporného kroku“ v rozbaľovacom okne „Spustiť simuláciu“.
 
   
-Monitor the progress of the simulation by looking at the Simulation graphics window, Simulation Message and Simulation Log tabs, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked (See Fig. 29.1.60.) so that message file and log files are refreshed automatically for monitoring the simulation progress. Simulation graphics tool bar options can be used to plot basic state variables such as temperature, strain and contact for objects while simulating the problem.
+Priebeh simulácie sledujte v okne „Simulation graphics“ a na kartách „Simulation Message“ a „Simulation Log“, pričom sa uistite, že je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) (pozri obr. 29.1.60.), aby sa súbory správ a protokolov automaticky aktualizovali a umožnili tak sledovanie priebehu simulácie. Pomocou možností na paneli nástrojov „Simulačná grafika“ je možné počas simulácie problému vykresľovať základné stavové premenné objektov, ako sú teplota, deformácia a kontakt.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image049.jpg' | relative_url }})
 
-Simulation Mode
+Simulačný režim
 
-For cogging simulation, all simulation information of cogging while running will be written to ProblemID.MST file, ProblemID.MST file helps to run the cogging simulation sequentially each bite deformation and heat transfer operations as individual operations based on the settings in process window and pass table. ProblemID.MST controls the start and stop of each operation. For all operations, start and stop messages are showed in Message file. After the completion of the all operations, in Simulation Log file we will see message as "MULTIPLE OPERATION COMPLETED".
+Pri simulácii coggingu sa všetky simulačné údaje o coggingu počas behu zapíšu do súboru ProblemID.MST. Súbor ProblemID.MST slúži na postupné spúšťanie simulácie coggingu, pričom každá operácia deformácie zubov a prenosu tepla prebieha ako samostatná operácia na základe nastavení v okne procesu a v tabuľke priechodov. Súbor ProblemID.MST riadi spustenie a zastavenie každej operácie. Pre všetky operácie sa správy o spustení a zastavení zobrazujú v súbore správ. Po dokončení všetkých operácií sa v súbore protokolu simulácie zobrazí správa „MULTIPLE OPERATION COMPLETED“ (Viacnásobná operácia dokončená).
 
-## Post Processing
+## Následné spracovanie
 
-When the simulation is complete, user can review the results by switching to Post mode using the ![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }}) button above the Simulation tool bar. (See Fig. 29.1.61.)
+Po dokončení simulácie si môže používateľ prezrieť výsledky tak, že pomocou tlačidla ![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }}) nad panelom nástrojov Simulácia prepne do režimu Post. (Pozri obr. 29.1.61.)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image050.jpg' | relative_url }})
 
-Post processor mode
+Režim postprocesora
 
-Play through the Steps and see the Temperature distribution and Strain distribution by plotting the Temperature and effective strain State variables. (See Fig. 29.1.62.) The temperature change in dies can also be noticed as shown in Fig. 29.1.63.
+Prejdite jednotlivými krokmi a pozrite si rozloženie teploty a rozloženie deformácie pomocou grafického znázornenia stavových premenných teploty a efektívnej deformácie. (Pozri obr. 29.1.62.) Zmenu teploty v maticiach je možné pozorovať aj na obr. 29.1.63.
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image051.jpg' | relative_url }})
 
-Strain Distribution in Billet
+Rozloženie napätia v sochore
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image052.jpg' | relative_url }})
 
-Temperature distribution in Billet and Dies
+Rozloženie teploty v sochách a maticiach
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[Cogging Lab](/docs/sk/labs/cogging_labs/cogging_lab1/)
+[Cogging Lab](/docs/en/labs/cogging_labs/cogging_lab1/)
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
 
-[6.3. Integrated Manufacturing Proces Post - Processor layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Proces Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
 
-[29\. Introduction to Cogging](/docs/sk/operation_templates/29_cogging/29_introduction_to_cogging/)
+[29\. Introduction to Cogging](/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/)

@@ -1,76 +1,76 @@
 ---
 lang: sk
-title: "Setting up 3D Machining Models"
+title: "Nastavenie 3D modelov pre obrábanie"
 ---
 
-# Setting up 3D Machining Models
+# Nastavenie 3D modelov pre obrábanie
 
-Mesh definition is the most critical factor in simulation performance. The goal is to adoptively refine the mesh to maintain small elements in areas where they are necessary to maintain geometry or state variables. At the same time, we wish to keep the total number of elements in the simulation to a minimum.
+Definícia siete je najdôležitejším faktorom ovplyvňujúcim výkonnosť simulácie. Cieľom je prispôsobivo zjemniť sieť tak, aby sa zachovali malé prvky v oblastiach, kde sú potrebné na zachovanie geometrie alebo stavových premenných. Zároveň sa snažíme udržať celkový počet prvkov v simulácii na minimálnej úrovni.
 
-The most significant enhancement of DEFORM is local remeshing – rather than completely regenerating the mesh, as was done in earlier versions of DEFORM, elements are simply split or merged to improve quality and match local element size requirements. Elements which meet local size and quality requirements are not changed.
+Najvýznamnejším vylepšením programu DEFORM je lokálne prekresľovanie siete – namiesto úplného prekreslenia siete, ako tomu bolo v predchádzajúcich verziách programu DEFORM, sa prvky jednoducho rozdeľujú alebo zlučujú s cieľom zlepšiť kvalitu a prispôsobiť sa požiadavkám na veľkosť prvkov v danej oblasti. Prvky, ktoré spĺňajú miestne požiadavky na veľkosť a kvalitu, sa nemenia.
 
-Major advantages of this new feature are that the problem of element deletion due to the chip touching the edge of a workpiece has been nearly (if not completely) eliminated, and the changing shape of sharp curves such as the nose radius feature has been substantially reduced.
+Hlavnými výhodami tejto novej funkcie sú to, že sa takmer (ak nie úplne) podarilo odstrániť problém s vymazaním prvku v dôsledku dotyku čipu s okrajom obrobku a že sa podstatne znížila zmena tvaru ostrých zákrut, ako je napríklad prvok polomeru špičky.
 
-A new interpolation scheme has been implemented which uses a least squares fit of surrounding elements, and reduces state variable smoothing during repeated remeshings. Because mesh element size definition is based on these state variables (particularly strain), mesh generation behavior is also changed.
+Bola implementovaná nová interpolačná schéma, ktorá využíva aproximáciu metódou najmenších štvorcov na základe okolitých prvkov a znižuje vyhladzovanie stavových premenných pri opakovanom prekresľovaní siete. Keďže definícia veľkosti prvkov siete vychádza z týchto stavových premenných (najmä deformácie), zmenilo sa aj správanie generovania siete.
 
-Different approaches to mesh generation are appropriate depending on whether the user’s primary interest is the chip or the workpiece. Both approaches are described below.
+V závislosti od toho, či sa používateľ zameriava predovšetkým na čip alebo na obrobok, sú vhodné rôzne prístupy k vytváraniu siete. Oba prístupy sú opísané nižšie.
 
-_**A) For capturing chip geometry**_
+_**A) Na zachytenie geometrie čipu**_
 
-  * these settings will give good resolution in the chip, but will tend to loose or smooth out temperature, residual stress, and microstructure information in the workpiece.
+  * Tieto nastavenia zabezpečia dobré rozlíšenie v čipe, avšak môžu spôsobiť stratu alebo zjemnenie informácií o teplote, zvyškovom napätí a mikrostruktúre v obrobku.
 
-  * There is no need for mesh windows. In nearly every case, properly defined adaptive meshing will consistently provide a good quality mesh with substantially fewer elements than can be achieved with mesh windows.
+  * Nie je potrebné používať okná pre vytváranie sietí. Takmer vo všetkých prípadoch správne definované adaptívne vytváranie sietí spoľahlivo poskytne kvalitnú sieť s podstatne menším počtom prvkov, ako je možné dosiahnuť pomocou okien pre vytváranie sietí.
 
-  * Use Absolute Element Size. Set the minimum element size to about 1/3 or ¼ of the uncut chip thickness. ¼ will give better results, but run time will be significantly longer. 
+  * Použite absolútnu veľkosť prvku. Nastavte minimálnu veľkosť prvku na približne 1/3 alebo ¼ hrúbky nesrezaného čipu. Hodnota ¼ poskytne lepšie výsledky, avšak doba spracovania bude výrazne dlhšia. 
 
-  * Set the size ratio between 10 and 15.
+  * Nastavte pomer veľkostí v rozmedzí od 10 do 15.
 
-  * Use Local Remeshing: under Mesh![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Remesh Criteria![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Remeshing Method ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) select “Local solid”
+  * Použiť lokálne prečlenenie: v časti Mesh![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Kritériá prečlenenia![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Metóda prečlenenia ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) vyberte možnosť „Lokálny objemový model“
 
-  * Set the mesh weighting factor slider bars to 50% strain, 50% strain rate, all other values = 0.
+  * Nastavte posuvníky váhových koeficientov siete na 50 % deformácie, 50 % rýchlosti deformácie, všetky ostatné hodnoty = 0.
 
-  * The mesh generator normally determines mesh refinement based on the gradient of state variables. In other words, a region where state variables (strain or strain rate) are changing quickly will get relatively fine elements, but regions which have high constant values will get a relatively coarse mesh. For machining we want fine elements in the chip (high constant strain), and in the primary shear zone (high strain rate). To trigger the mesh generator to do this, Under Weighting factor tab, check the Strain distribution - Use Gradient check box and Strain rate distribution - Use Gradient check box.
+  * Generátor siete zvyčajne určuje zjemnenie siete na základe gradientu stavových premenných. Inými slovami, oblasť, v ktorej sa stavové premenné (deformácia alebo rýchlosť deformácie) rýchlo menia, bude mať relatívne jemné prvky, zatiaľ čo oblasti s vysokými konštantnými hodnotami budú mať relatívne hrubú sieť. Pri obrábaní potrebujeme jemné prvky v trieske (vysoká konštantná deformácia) a v primárnej zóne šmyku (vysoká rýchlosť deformácie). Ak chcete generátor siete nastaviť tak, aby to urobil, na karte „Váha“ zaškrtnite políčka „Rozloženie deformácie – Použiť gradient“ a „Rozloženie rýchlosti deformácie – Použiť gradient“.
 
-**Summary** : (these settings will maintain chip geometry, but will tend to loose state variables in the workpiece)
+**Zhrnutie**: (tieto nastavenia zachovajú geometriu čipu, avšak môžu spôsobiť stratu stavových premenných v obrobku)
 
-  * Absolute element size – minimum size 1/3 to ¼ of uncut chip thickness. Size ratio 10 to 15.
+  * Absolútna veľkosť prvku – minimálna veľkosť 1/3 až ¼ hrúbky nerezaného čipu. Pomer veľkostí 10 až 15.
 
-  * Local Solid
+  * Miestna pevná látka
 
-  * Slider bar weighting 50% strain, 50% strain rate
+  * Posuvník s váhou 50 % deformácie, 50 % rýchlosti deformácie
 
-  * Under Weighting factor tab, check the Strain distribution - Use Gradient check box and Strain rate distribution - Use Gradient check box.
+  * Na karte „Váhový faktor“ zaškrtnite políčka „Rozloženie deformácie – Použiť gradient“ a „Rozloženie rýchlosti deformácie – Použiť gradient“.
 
-**B) For capturing workpiece properties**
+**B) Na zaznamenávanie vlastností obrobku**
 
-For simulations where workpiece surface properties (residual stress, microstructure, temperature) are of interest, but chip geometry is not. For these simulations, a mesh window may be helpful to maintain mesh size on the cut surface. Strain based meshing may also be adequate. The user may wish to experiment with both approaches to find which gives better results.
+V prípade simulácií, pri ktorých sú dôležité vlastnosti povrchu obrobku (zvyškové napätie, mikrostruktúra, teplota), ale geometria špánia nie je dôležitá. Pri týchto simuláciách môže byť užitočné použiť okno siete, aby sa zachovala veľkosť ok na reznom povrchu. Vhodné môže byť aj vytváranie siete na základe deformácie. Používateľ môže vyskúšať oba prístupy, aby zistil, ktorý z nich poskytuje lepšie výsledky.
 
-**With mesh windows:**
+**S oknami so sieťkou:**
 
-  * Use absolute element size. Use a size ratio of 1, and set the global element size to be about 5 x larger than the expected surface layer thickness. Windows will be used to refine the mesh in the surface layer.
+  * Použite absolútnu veľkosť prvku. Použite pomer veľkosti 1 a nastavte globálnu veľkosť prvku tak, aby bola približne 5-krát väčšia ako očakávaná hrúbka povrchovej vrstvy. Na spresnenie siete v povrchovej vrstve sa použijú okná.
 
-  * Define a mesh window from slightly in front of the tool edge, and extending backward. Define window movement to follow the cutting tool. The window can extend substantially behind the workpiece, such that it covers more and more of the workpiece surface as the tool advances.
+  * Vymedzte okno s mriežkou tak, aby začínalo tesne pred hrotom nástroja a rozprestieralo sa smerom dozadu. Nastavte pohyb okna tak, aby sledovalo rezací nástroj. Okno sa môže rozprestierať značne za obrobkom, takže s postupom nástroja pokrýva čoraz väčšiu časť povrchu obrobku.
 
-  * Assign element size in window to be roughly 30-70% of the size of the expected surface layer effect. In other words, if the residual stress variations are over a depth of 0.01mm, the minimum element size should be around 0.005mm. Note that there will always be a difficult balance between adequate resolution and acceptable run times.
+  * Veľkosť prvkov v okne nastavte približne na 30–70 % veľkosti očakávaného efektu povrchovej vrstvy. Inými slovami, ak sa zmeny zvyškového napätia vyskytujú v hĺbke 0,01 mm, minimálna veľkosť prvku by mala byť približne 0,005 mm. Uvedomte si, že vždy bude existovať náročná rovnováha medzi primeraným rozlíšením a prijateľnou dĺžkou výpočtu.
 
-  * The size ratio between elements in the window and elements outside the window should not exceed about 5:1. If necessary, nested windows should be used with 5:1 ratio maintained between adjacent windows. The smallest elements (innermost window) should be first in the list of windows.
+  * Pomer veľkostí medzi prvkami vo vnútri okna a prvkami mimo okna by nemal presiahnuť približne 5:1. V prípade potreby by sa mali použiť vnořené okná, pričom medzi susednými oknami by sa mal zachovať pomer 5:1. Najmenšie prvky (najvnútornejšie okno) by mali byť uvedené ako prvé v zozname okien.
 
-  * Slider bars should be weighted either fully to mesh windows, or roughly 80% mesh windows, 20% divided between strain & strain rate.
+  * Posuvné lišty by mali byť nastavené buď tak, aby sa okná úplne zosúladili, alebo približne na 80 % zosúladenia okien, pričom zvyšných 20 % by sa malo rozdeliť medzi deformáciu a rýchlosť deformácie.
 
-  * Local remeshing will do a better job of maintaining state variables. Use Local Remeshing: under Mesh![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Remesh Criteria![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Remeshing Method select “Local Solid”.
+  * Lokálne prečlenenie siete lepšie zachová stavové premenné. Použite lokálne prečlenenie siete: v časti Mesh![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Kritériá prečlenenia siete![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Metóda prečlenenia siete vyberte možnosť „Local Solid“.
 
-**Without mesh windows:**
+**Bez sieťových okien:**
 
-  * Use absolute element size, with the minimum element size 30-70% of the expected surface layer effect thickness.
+  * Použite absolútnu veľkosť prvku, pričom minimálna veľkosť prvku by mala predstavovať 30–70 % očakávanej hrúbky povrchovej vrstvy.
 
-  * Use a size ratio of 10
+  * Použite pomer veľkostí 10
 
-  * Use Local Solid
+  * Použiť miestny pevný materiál
 
-  * The new interpolation scheme will do a good job of maintaining strain in the cut surface of the workpiece, so this can be used as a key meshing parameter. Set slider bars to 80% strain, 20% strain rate.
+  * Nový interpolačný algoritmus dokáže dobre zachovať deformáciu na reznom povrchu obrobku, takže ho možno použiť ako kľúčový parameter vytvárania siete. Nastavte posuvníky na 80 % deformácie a 20 % rýchlosti deformácie.
 
-  * Check the Strain distribution - Use Gradient check box. This will cause the mesh generator to maintain a fine mesh in regions where the strain is high (i.e. the cut surface). The contents of the file are arbitrary.
+  * Zaškrtnite políčko „Skontrolovať rozloženie deformácie – Použiť gradient“. Tým sa zabezpečí, že generátor siete zachová jemnú sieť v oblastiach s vysokou deformáciou (t. j. na reznom povrchu). Obsah súboru je ľubovoľný.
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[Object Mesh Data](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/)
+[Object Mesh Data](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/)

@@ -1,12 +1,12 @@
 ---
 lang: sk
-title: "47. Introdution to Add Cycle"
+title: "47. Úvod do cyklu Add"
 ---
 
-# 47\. Introduction to Add Cycle
+# 47\. Úvod do cyklu sčítania
 
-Add cycles to am operation performs same operations repetitively in cycle. User needs to select the operations to repeat and the number of times to repeat (See Fig. 47.1.). To add cycle to operation, the first operation in cycle must have read from DB object. To analyze the die stress and temperatures after the multiple components manufacturing is an example where user can use the cycles, user can add as number of cycles as components produced. For more information related [Add cycle](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_5_adding_cycles.htm#Add_Cycles) operator.
+Funkcia „Pridať cykly k operácii“ vykonáva rovnaké operácie opakovane v rámci cyklu. Používateľ musí vybrať operácie, ktoré sa majú opakovať, a počet opakovaní (pozri obr. 47.1.). Ak chcete k operácii pridať cyklus, prvá operácia v cykle musí obsahovať čítanie z objektu databázy. Príkladom použitia cyklov je analýza napätia a teplôt formy po výrobe viacerých komponentov; používateľ môže pridať toľko cyklov, koľko komponentov sa vyrába. Ďalšie informácie nájdete v príručke k operátoru [Add cycle](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_5_adding_cycles.htm#Add_Cycles).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image018.jpg' | relative_url }})
 
-Extent to use the add cycles
+Rozsah využitia cyklov pridávania

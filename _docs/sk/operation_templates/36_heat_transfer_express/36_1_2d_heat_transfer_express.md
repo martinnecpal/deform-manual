@@ -5,570 +5,570 @@ title: "36.1. 2D Heat Transfer Express"
 
 # 36.1. 2D Heat Transfer Express
 
-36.1.1. How to add 2D Heat Transfer Express operation
+36.1.1. Ako pridať operáciu „2D Heat Transfer Express“
 
-36.1.2. Process settings definition
+36.1.2. Definícia nastavení procesu
 
-36.1.3. Defining Heating operation
+36.1.3. Nastavenie režimu kúrenia
 
-  * Object Basic definition
+  * Objekt – základná definícia
 
-  * Object geometry definition
+  * Definícia geometrie objektu
 
-  * Object Mesh Definition
+  * Definícia sieťového modelu objektu
 
-  * Material Definition
+  * Definícia materiálu
 
-  * Boundary Condition Definition
+  * Definícia okrajových podmienok
 
-  * Heat Condition Definition
+  * Definícia teplotných podmienok
 
-  * Stopping controls Definition
+  * Definícia ovládacích prvkov na zastavenie
 
-  * Simulation controls Definition
+  * Definícia ovládacích prvkov simulácie
 
-  * Generate Database
+  * Vytvoriť databázu
 
-36.1.4. Defining Transfer Operation
+36.1.4. Definícia prevodovej operácie
 
-  * Selecting Objects
+  * Výber objektov
 
-  * Objects positioning and generating inter object relation
+  * Umiestňovanie objektov a vytváranie vzťahov medzi objektmi
 
-  * Heat condition Definition
+  * Definícia tepelného stavu
 
-36.1.5. Defining Rest on die Operation
+36.1.5. Definovanie operácie „Odpočinok na kocke“
 
-  * Define Thermal Calculations
+  * Definovať tepelné výpočty
 
-  * Selecting objects
+  * Výber objektov
 
-  * Positioning
+  * Polohovanie
 
-  * Schedule Positioning
+  * Plánovanie umiestnenia
 
-  * Inter-object Contact Generation
+  * Generovanie kontaktov medzi objektmi
 
-  * Heat Condition Definition
+  * Definícia teplotných podmienok
 
-36.1.6. Continue Defining the Forming Operations
+36.1.6. Pokračovanie v definovaní tvárniacich operácií
 
-36.1.7. Defining Dwell on die Operation
+36.1.7. Definovanie operácie „Dwell on die“
 
-  * Heat Condition Definition
+  * Definícia teplotných podmienok
 
-## How to add 2D Heat Transfer Express operation
+## Ako pridať operáciu „2D Heat Transfer Express“
 
-Heat Transfer Express operation is accessible from MO Wizard that can be opened from Main GUI. Heat Transfer Express Operation can be added in MO wizard, from explorer tab by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to 2D Heat Transfer Express. Also, user can add by drag and drop into the Operation Editor as shown in Fig. 36.1.1. Heat Transfer express operation can also be added after the Heat transfer operations interactively after the simulation of preceding operations or in batch/scheduled mode.
+Operácia „Heat Transfer Express“ je dostupná cez sprievodcu MO Wizard, ktorý je možné otvoriť z hlavného grafického rozhrania. Operáciu „Heat Transfer Express“ je možné pridať v sprievodcovi MO Wizard na karte „Explorer“ kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky „2D Heat Transfer Express“. Používateľ ju môže pridať aj pomocou funkcie drag and drop do editora operácií, ako je znázornené na obr. 36.1.1. Operáciu Heat Transfer Express je možné pridať aj interaktívne po operáciách prenosu tepla po simulácii predchádzajúcich operácií alebo v dávkovom/naplánovanom režime.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image001.jpg' | relative_url }})
 
-Added 2D Heat Transfer Express operation into operation editor
+Do editora operácií bola pridaná operácia „2D Heat Transfer Express“
 
-## Process settings definition
+## Definícia nastavení procesu
 
-In Process window simulation modes such as Geometry Type, Heating Type and Shape Complexity and Accuracy has to set for the heat transfer operation as shown in Fig. 36.1.1.
+V okne „Process“ je potrebné pre operáciu prenosu tepla nastaviť simulačné režimy, ako sú „Geometry Type“, „Heating Type“, „Shape Complexity“ a „Accuracy“, ako je znázornené na obr. 36.1.1.
 
-**Geometry Type**
+**Typ geometrie**
 
-In Forming express only two geometry models can be setup, those are Axisymmetric and Plane Strain.
+V nástroji Forming je možné nastaviť iba dva geometrické modely, a to „Axisymmetric“ a „Plane Strain“.
 
-The Axisymmetric models as a cross-section with respect to the central axis. Therefore, the model requires the deforming geometry to be axially symmetric and in the first quadrant and fourth quadrant (i.e. X > 0). In addition, the system assumes that the flow in every radial plane is identical. (See [Fig. 9.1.2.](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model))
+Axisymetrické modely predstavujú priečny rez vzhľadom na stredovú os. Model preto vyžaduje, aby deformujúca sa geometria bola osovo symetrická a nachádzala sa v prvom a štvrtom kvadrante (t. j. X > 0). Systém navyše predpokladá, že prúdenie v každej radiálnej rovine je identické. (Pozri [Fig. 9.1.2.](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model))
 
-The Plane-strain assumes that the geometry to have an unit depth with both front and back faces constrained. The simulation assumes that the objects will behave identically in any given cross-section across the width and height of the object. (See [Fig. 9.1.2.](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model))
+Pri rovinnom deformovaní sa predpokladá, že geometria má jednotkovú hĺbku a že predná aj zadná plocha sú fixované. Simulácia vychádza z predpokladu, že objekty sa budú správať rovnako v akomkoľvek priereze naprieč šírkou a výškou objektu. (Pozri [Fig. 9.1.2.](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model))
 
-Other Geometry types Plane-stress and Torsion are available only in 2D Forming operation, For more information about these geometry types please refer [9.1.2. Geometry type (GEOTYP](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])).
+Ďalšie typy geometrie – „Rovinné napätie“ a „Krútenie“ – sú k dispozícii iba v rámci 2D operácie tvárnenia. Ďalšie informácie o týchto typoch geometrie nájdete v [9.1.2. Geometry type (GEOTYP](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\]).
 
   
-**Heating Type**
+**Typ vykurovania**
 
-There are four heating types or heat transfer operations available in both 2D and 3D Heat Transfer Express operation those are (See Fig. 36.1.1.),
+V režime Heat Transfer Express sú v 2D aj 3D k dispozícii štyri typy ohrevu alebo procesov prenosu tepla, a to (pozri obr. 36.1.1.):
 
-  * Heating
+  * Kúrenie
 
-  * Transfer
+  * Prevod
 
-  * Rest on die and
+  * Odpočinok na kocke a
 
-  * Dwell on die
+  * Doba zdržania na čipe
 
-Heating workpiece, heat transfer during transferring workpiece form furnace to press, resting workpiece on die (before forming) and workpiece dwell on die after forming operations can be setup easily by using the respective heating type. For more details about these heating types are described in [36\. Introduction to Heat transfer express operation](/docs/sk/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/), refer Heating Types.
+Ohrievanie obrobku, prenos tepla pri presúvaní obrobku z pece do lisu, odloženie obrobku na formu (pred tvárnením) a zotrvanie obrobku na forme po tvárnení je možné jednoducho nastaviť pomocou príslušného typu ohrevu. Podrobnejšie informácie o týchto typoch ohrevu sú uvedené v dokumente [36\. Introduction to Heat transfer express operation](/docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/), pozri časť „Typy ohrevu“.
 
-For resting and dwelling operation thermal calculation window will activate to give options to select heat transfer with dies and not to calculate heat transfer with dies. These options will be explained further in respective operations explanations.
+V režimoch „Odpočinok“ a „Prevádzka“ sa aktivuje okno pre tepelný výpočet, ktoré ponúka možnosti výberu, či sa má počítať prenos tepla cez matrice, alebo nie. Tieto možnosti budú podrobnejšie vysvetlené v popisoch príslušných režimov.
 
-**Shape Complexity and Accuracy**
+**Zložitosť tvaru a presnosť**
 
-The shape complexity and simulation accuracy slider bars (See Fig. 36.1.1.) influence the mesh settings and number of time steps used in the simulation. This in turn influences the run time and level of detail available in the simulation.
+Posuvníky pre zložitosť tvaru a presnosť simulácie (pozri obr. 36.1.1.) ovplyvňujú nastavenia siete a počet časových krokov použitých v simulácii. To zase ovplyvňuje dĺžku behu a úroveň detailov dostupnú v simulácii.
 
-**Shape Complexity:**
+**Zložitosť tvaru:**
 
-  * **Simple** : The geometry of the objects are simple in nature. They require minimum number of elements, are easier to solve and takes less time.
+  * **Jednoduché**: Geometria objektov je svojou povahou jednoduchá. Vyžadujú si minimálny počet prvkov, ich riešenie je jednoduchšie a trvá kratšie.
 
-  * **Moderate** : The geometry of the objects are moderate (not too complex) in nature.
+  * **Stredná**: Geometria objektov je stredne zložitá (nie príliš zložitá).
 
-  * **Complex** : The geometry of the objects are complex in nature.
+  * **Zložité**: Geometria objektov má zložitý charakter.
 
-**Shape Accuracy:**
+**Presnosť tvaru:**
 
-  * **Fast** : Useful for fast evaluation of a process. In exchange for faster run times, there is a higher risk of missing important details.
+  * **Rýchly**: Vhodný na rýchle vyhodnotenie procesu. Výmenou za rýchlejšie časy spustenia však existuje vyššie riziko, že sa prehliadnu dôležité detaily.
 
-  * **Moderate** : The simulation uses settings which attempt to balance calculation time and accuracy.
+  * **Stredná**: Simulácia používa nastavenia, ktoré sa snažia dosiahnuť rovnováhu medzi výpočtovým časom a presnosťou.
 
-  * **Accurate** : Very detailed analysis of the process is done, which will generally capture minute details. Calculation time and storage requirements are more.
+  * **Presné**: Vykonáva sa veľmi podrobná analýza procesu, ktorá zvyčajne zachytí aj tie najmenšie detaily. Čas potrebný na výpočet a požiadavky na úložný priestor sú vyššie.
 
-## Defining Heating operation
+## Definícia režimu kúrenia
 
-In heating or heat furnace operation, heating of billet in a furnace is modeled. After selecting the process settings system will gives the customized heating operation windows to guide the user to setup this operation. Only one object is allowed for this operation (See Fig. 36.1.2.) and that object will be added automatically. The default process settings will be added suited to heating operation.
+Pri prevádzke v režime ohrevu alebo v režime pece sa modeluje ohrev sochory v peci. Po výbere nastavení procesu systém zobrazí prispôsobené okná pre operáciu ohrevu, ktoré používateľa prevedú nastavením tejto operácie. Pre túto operáciu je povolený len jeden objekt (pozri obr. 36.1.2.) a tento objekt sa pridá automaticky. Pridajú sa predvolené nastavenia procesu vhodné pre operáciu ohrevu.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image002.jpg' | relative_url }})
 
-Heating operation object definition window
+Okno na definovanie objektu vykurovacieho režimu
 
-### Object Basic definition
+### Základná definícia objektu
 
-Object basic definition includes object name, type and temperature. In addition to this object state variable values can be initialized by using Advanced button and object data like geometry, mesh, boundary conditions and material can be imported from DEFORM .DB /.Key file. (See Fig. 36.1.3.)
+Základná definícia objektu zahŕňa názov objektu, typ a teplotu. Okrem toho je možné pomocou tlačidla „Advanced“ inicializovať hodnoty premenných stavu objektu a údaje o objekte, ako sú geometria, sieť, okrajové podmienky a materiál, je možné importovať zo súboru DEFORM .DB /.Key. (Pozri obr. 36.1.3.)
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image003.jpg' | relative_url }})
 
-Workpiece window
+Okno obrobku
 
-**Object Name** : User can define the name for all the objects available in the operation.
+**Názov objektu**: Používateľ môže definovať názov všetkých objektov dostupných v danej operácii.
 
-**Object Type** : The object type (OBJTYP) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are available in Forming operation, for its details refer [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type)
-
-  
-**Plastic** : Plastic objects are modelled as rigid-plastic or rigid-viscoplastic material depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR](/docs/sk/keyword_documentation/l/lmtstr/)). The material deforms plastically beyond the limiting strain rate. The plastic material behaviour of the object is specified with a material flow stress function or flow stress data ([FSTRES](/docs/sk/keyword_documentation/f/fstres/)). In heat transfer express workpiece is automatically assigned to Plastic object type.  
-**Rigid** : Rigid objects are modelled as non-deformable materials. In the deformation analysis, the object is represented by the geometric profile ([DIEGEO](/docs/sk/keyword_documentation/d/diegeo/)). Deformation solution data available for rigid objects include object stroke, load, and velocity. The mesh for the rigid object is used only for thermal, transformation, and diffusion calculations. In heat transfer express dies or tools are automatically assigned to Rigid as they are non-deformable objects.
-
-**Note:**
-
-Should note that object type is predefined by object number in Heat transfer Express operation. For 1st object type will be plastic and for further addition only rigid objects will add.  
-There is an Import Object button on the Object page. This is for importing complete object data from another DEFORM file.
-
-**Object Temperature** : User can define the object temperature in the Temperature field of the respective object window as shown in Fig. 36.1.3.
-
-Advanced Object Settings: The advanced setting Initialization options (See Fig. 36.1.4.) will be useful when user import the object from previously run project or problem or when forming express operation is added after few other operations and if there is need to initialize few important state variables.
+**Typ objektu**: Typ objektu (OBJTYP) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe typu DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. V operácii Forming je k dispozícii viac typov objektov, podrobnosti nájdete v [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
 
   
-The user can initialize temperature, strain, velocity, damage and displacement that has taken place in the deformable object using the advanced setting options. (See Fig. 36.1.4.)
+**Plast**: Plastové objekty sa modelujú ako tuho-plastický alebo tuho-viskoplastický materiál v závislosti od vlastností materiálov. Model predpokladá, že napätie v materiáli lineárne rastie s rýchlosťou deformácie až do prahovej hodnoty rýchlosti deformácie, označovanej ako limitná rýchlosť deformácie ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)). Po prekročení medznej rýchlosti deformácie sa materiál deformuje plasticky. Plastické správanie materiálu objektu sa špecifikuje pomocou funkcie tokového napätia materiálu alebo údajov o tokovom napätí ([FSTRES](/docs/en/keyword_documentation/f/fstres/)). V programe Heat Transfer Express sa obrobok automaticky priradí k typu objektu „Plast“.  
+**Tuhé**: Tuhé objekty sa modelujú ako nedeformovateľné materiály. V analýze deformácie je objekt reprezentovaný geometrickým profilom ([DIEGEO](/docs/en/keyword_documentation/d/diegeo/)). Údaje o riešení deformácie dostupné pre tuhé objekty zahŕňajú zdvih objektu, zaťaženie a rýchlosť. Sieť pre tuhý objekt sa používa iba na výpočty tepelného prenosu, transformácie a difúzie. V programe Heat Transfer Express sú lisovacie formy alebo nástroje automaticky priradené k kategórii „Tuhé“, keďže ide o nedeformovateľné objekty.
+
+**Poznámka:**
+
+Je potrebné poznamenať, že typ objektu je v operácii programu Heat Transfer Express preddefinovaný číslom objektu. Prvý objekt bude z plastu a pri ďalšom pridávaní sa budú pridávať iba tuhé objekty.  
+Na stránke „Objekt“ sa nachádza tlačidlo „Importovať objekt“. Slúži na import kompletných údajov o objekte z iného súboru DEFORM.
+
+**Teplota objektu**: Používateľ môže nastaviť teplotu objektu v poli „Teplota“ v príslušnom okne objektu, ako je znázornené na obr. 36.1.3.
+
+Pokročilé nastavenia objektu: Pokročilé nastavenia v časti „Možnosti inicializácie“ (pozri obr. 36.1.4.) sa zídu v prípade, ak používateľ importuje objekt z predtým spusteného projektu alebo úlohy, alebo ak sa operácia „express“ pridá až po niekoľkých iných operáciách a je potrebné inicializovať niekoľko dôležitých stavových premenných.
+
+  
+Pomocou pokročilých nastavení môže používateľ zadať teplotu, deformáciu, rýchlosť, poškodenie a posun, ku ktorým došlo v deformovateľnom objekte. (Pozri obr. 36.1.4.)
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image004.jpg' | relative_url }})
 
-Advanced object settings
+Pokročilé nastavenia objektov
 
-More variables can be initialized in Forming operation, for detail refer [35\. 2D Heat Transfer](/docs/sk/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/) operation [Initialize](../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize).
+V operácii „Forming“ je možné inicializovať ďalšie premenné; podrobnosti nájdete v operácii [35\. 2D Heat Transfer](/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/) a [Initialize](../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize).
 
-The average strain rate ([AVGSTR](/docs/sk/keyword_documentation/a/avgstr/)) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation.
+Priemerná rýchlosť deformácie ([AVGSTR](/docs/en/keyword_documentation/a/avgstr/)) je charakteristická priemerná hodnota efektívnej rýchlosti deformácie. Na začiatku simulácie by sa mala zadať aproximácia tejto hodnoty.
 
-The limiting strain rate ([LMTSTR](/docs/sk/keyword_documentation/l/lmtstr/)) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material.
+Medzná rýchlosť deformácie ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)) definuje medznú hodnotu efektívnej rýchlosti deformácie, pod ktorou sa plastický alebo porézny materiál považuje za tuhý a správa sa ako materiál s newtonovskými vlastnosťami.
 
-![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}) : Using this user can rest back the initialized state variables value.
+![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}): Pomocou tejto funkcie môže používateľ obnoviť hodnoty premenných v počiatočnom stave.
 
-For more Deformation object properties options available in Forming operation refer [16.1. Deformation Properties.](/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/)
+Ďalšie možnosti vlastností objektu deformácie, ktoré sú k dispozícii v operácii tvarovania, nájdete v [16.1. Deformation Properties.](/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/)
 
-### **Object geometry definition**
+### **Definícia geometrie objektu**
 
-Geometry window is used to create the geometry of an object as shown in Fig. 36.1.5. Before creating geometry only Define Primitive and Edit Geometry options are available but after creating geometry Check, Scale and Reverse geometry options will activate and after generating mesh Extract border option will activate.
+Okno „Geometria“ slúži na vytvorenie geometrie objektu, ako je znázornené na obr. 36.1.5. Pred vytvorením geometrie sú k dispozícii iba možnosti „Definovať primitív“ a „Upraviť geometriu“, avšak po vytvorení geometrie sa aktivujú možnosti „Skontrolovať“, „Zmenšiť“ a „Obrátiť geometriu“ a po vygenerovaní siete sa aktivuje možnosť „Extrahovať okraj“.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image005.jpg' | relative_url }})
 
-Geometry definition window
+Okno s definíciou geometrie
 
-**Define primitive![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }})**
+**Definovať primitív ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }})**
 
-  * **For Axisymmetric Type** : There are five primitive shapes in geometry primitive page that can be used to generate geometries as shown in Fig. 36.1.6. In each case, the user has to scale appropriately to the problem by defining the dimensions.
+  * **Pre osovo symetrický typ**: Na stránke s geometrickými primitívami je k dispozícii päť základných tvarov, ktoré možno použiť na vytvorenie geometrií, ako je znázornené na obr. 36.1.6. V každom prípade musí používateľ prispôsobiť rozmery tak, aby zodpovedali danej úlohe.
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image011.jpg' | relative_url }})
 
-Geometry primitive window for Axisymmetric geometry type
+Okno s geometrickými primitívami pre typ geometrie „Osovo symetrická“
 
-  * **For Plane strain Type** : There are three primitive shapes in geometry primitive page that can be used to generate geometries as shown in Fig. 36.1.7. In each case, the user has to scale appropriately to the problem by defining the dimensions.
+  * **Pre typ rovinného deformovania**: Na stránke geometrických primitív sa nachádzajú tri základné tvary, ktoré možno použiť na vytvorenie geometrií, ako je znázornené na obr. 36.1.7. V každom prípade musí používateľ prispôsobiť rozmery tak, aby zodpovedali danej úlohe.
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image012.jpg' | relative_url }})
 
-Geometry primitive window for Plane strain geometry type
+Okno s geometrickými primitívami pre typ geometrie „Rovinné deformácie“
 
-**Check**![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})
+**Skontrolujte**![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})
 
-Once the geometry of the object is created, ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button. Check and correct Geometry window appears as shown in below Fig. 36.1.8. The Geometry gets corrected, if they are any errors, when we click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) . For more information please refer [12.1. 2D Geometry Data Defining](/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) section [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
+Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Zobrazí sa okno „Skontrolujte a opravte geometriu“, ako je znázornené na obr. 36.1.8 nižšie. Geometria sa opraví, ak obsahuje nejaké chyby, po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image006.jpg' | relative_url }})
 
-Check and correct Geometry window
+Okno „Skontroluj a oprav geometriu“
 
-**Scale**![]({{ '/assets/icons/pre_icons/mo_scale_label.jpg' | relative_url }})
+**Veľkosť**![]({{ '/assets/icons/pre_icons/mo_scale_label.jpg' | relative_url }})
 
-Geometry can be scaled in forming operation to accommodate thermal expansion by specifying the scaling factor. (See Fig. 36.1.9.) The scaling factor can be calculated by temperature differential and temperature dependent material data. The scaled geometry can be saved into different Geometry saving formats.
+Geometriu je možné pri tvárnení zmeniť tak, aby zohľadňovala teplotnú rozťažnosť, a to stanovením zväčšovacieho koeficientu. (Pozri obr. 36.1.9.) Zväčšovací koeficient je možné vypočítať na základe teplotného rozdielu a údajov o materiáli závislých od teploty. Upravenú geometriu je možné uložiť v rôznych formátoch na ukladanie geometrie.
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image014.jpg' | relative_url }})
 
-Scale Geo window
+Okno „Scale Geo“
 
 **Reverse![]({{ '/assets/icons/pre_icons/mo_reverse_label.jpg' | relative_url }})**
 
-This feature reverses the orientation of the geometry. Orientation of the 2D geometry must be always inside for single loop geometry, for multiple loop geometry the loop which share between the two regions can have the orientation on either side but topology must be defined.
+Táto funkcia obráti orientáciu geometrie. Pri geometrii s jedným okruhom musí byť orientácia 2D geometrie vždy smerom dovnútra; pri geometrii s viacerými okruhmi môže mať okruh, ktorý sa nachádza v oboch oblastiach, orientáciu na ktorúkoľvek stranu, avšak topológia musí byť definovaná.
 
-**Extract Border![]({{ '/assets/icons/pre_icons/mo_extract_border_button.jpg' | relative_url }})**
+**Výňatok Border![]({{ '/assets/icons/pre_icons/mo_extract_border_button.jpg' | relative_url }})**
 
-This feature extracts the geometry data from the current database meshed object for all object types except the rigid object.
+Táto funkcia extrahuje geometrické údaje z aktuálneho objektu s mriežkou v databáze pre všetky typy objektov s výnimkou tuhého objektu.
 
 **Edit![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) **
 
-The Geometry editing option is used to create geometry for an object or edit the existing geometry. Imported geometry can be modified in Edit Geometry window. In Geometry page click on ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) label and observe the options available to create and modify the geometry as shown in Fig. 36.1.10.
+Možnosť „Editácia geometrie“ slúži na vytvorenie geometrie objektu alebo na úpravu existujúcej geometrie. Importovanú geometriu je možné upravovať v okne „Editácia geometrie“. Na stránke „Geometria“ kliknite na označenie ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) a prezrite si dostupné možnosti na vytvorenie a úpravu geometrie, ako je znázornené na obr. 36.1.10.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image007.jpg' | relative_url }})
 
-Edit Geometry Window
+Okno „Upraviť geometriu“
 
-Geometry can be created by using the create loop tool or by entering the geometry coordinates in Geometry editor table at right side bottom of the window as shown in Fig. 36.1.10. either in XYR or Line-Arc mode. For more details on 2D geometry editor refer the chapter [12.2. 2D Geometry Data Editing](/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/).
+Geometriu je možné vytvoriť pomocou nástroja na vytváranie slučiek alebo zadaním súradníc geometrie do tabuľky editora geometrie v pravom dolnom rohu okna, ako je znázornené na obr. 36.1.10, a to buď v režime XYR, alebo v režime Čiara-oblouk. Podrobnejšie informácie o 2D editore geometrie nájdete v kapitole [12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/).
 
-**Other Geometry options:**
+**Ďalšie možnosti geometrie:**
 
-**Show geometry inside mark:** Checking this option enables the Geometry orientation display.
+**Zobraziť geometriu vnútri značky:** Zaškrtnutím tejto možnosti sa aktivuje zobrazenie orientácie geometrie.
 
-**Define reference point** : User can select the geometry reference point by clicking on this button from display window. This reference point is required to define the distance between objects stopping controls stopping controls.
+**Určiť referenčný bod**: Používateľ môže vybrať referenčný bod geometrie kliknutím na toto tlačidlo v okne zobrazenia. Tento referenčný bod je potrebný na určenie vzdialenosti medzi objektmi pomocou ovládacích prvkov na zastavenie.
 
-**Import Geometry from a file** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}): It imports the geometry from a file  
-**Load Geometry from Library** ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) :It imports geometry from Library  
-**Save the Geometry to a file** ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) : It saves the Geometry to a file.  
-**Save Geometry to Library** ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) : User can save geometry to the library using this option.  
-**Delete Geometry** ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}): user can delete the geometry.
+**Import geometrie zo súboru** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}): Importuje geometriu zo súboru  
+**Načítať geometriu z knižnice** ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}): Importuje geometriu z knižnice  
+**Uloženie geometrie do súboru** ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) : Uloží geometriu do súboru.  
+**Uložiť geometriu do knižnice** ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ uložiť geometriu do knižnice.  
+**Odstrániť geometriu** ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}): používateľ môže odstrániť geometriu.
 
-### Object Mesh Definition
+### Definícia objektovej siete
 
-The Mesh Generation window allows the user to generate a mesh for the current object. Below Fig. 36.1.11. shows the Mesh generation window in system mode. In this mode system automatically sets the number of mesh elements based on the shape complexity and accuracy setting selection in process window.
+Okno „Vytvorenie siete“ umožňuje používateľovi vytvoriť sieť pre aktuálny objekt. Na obr. 36.1.11. je zobrazené okno „Vytvorenie siete“ v systémovom režime. V tomto režime systém automaticky nastaví počet prvkov siete na základe zložitosti tvaru a výberu nastavenia presnosti v pracovnom okne.
 
-**System****Mode** : Using ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) user has to generate mesh for objects and after generating the mesh **![]({{ '/assets/icons/pre_icons/mo_delete_button.jpg' | relative_url }})** Mesh button will get activate, useful to delete the current mesh of the object.
+**Systém****Režim**: Pri použití ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) musí používateľ vytvoriť sieť pre objekty a po vytvorení siete sa aktivuje tlačidlo **![]({{ '/assets/icons/pre_icons/mo_delete_button.jpg' | relative_url }})** „Mesh“, ktoré slúži na odstránenie aktuálnej siete objektu.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image008.jpg' | relative_url }})
 
-Mesh settings window in System mode
+Okno nastavení siete v režime Systém
 
-**User Defined Mode** : For user defined mesh mode option see Fig. 36.1.12., in this mode user can vary number of elements by adjusting the slider bar and use advanced options to change the Size ratio, Thickness elements, Weighting factor and Remesh criteria.
+**Režim definovaný používateľom**: Možnosť režimu siete definovaného používateľom je znázornená na obr. 36.1.12. V tomto režime môže používateľ meniť počet prvkov pomocou posuvníka a využívať pokročilé možnosti na úpravu pomeru veľkostí, hrúbky prvkov, váhového faktora a kritérií pregenerovania siete.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image009.jpg' | relative_url }})
 
-User defined mode mesh settings
+Nastavenia siete v užívateľsky definovanom režime
 
-**Number of elements (MGNELM)**
+**Počet prvkov (MGNELM)**
 
-The number of mesh elements represents the approximate number of elements that will be generated by the system. The Automatic Mesh Generator (AMG) takes the value for [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) and generates a mesh that will contain approximately the same number of elements.
+Počet prvkov siete predstavuje približný počet prvkov, ktoré systém vygeneruje. Automatický generátor siete (AMG) použije hodnotu pre [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) a vygeneruje sieť, ktorá bude obsahovať približne rovnaký počet prvkov.
 
-The error between the number of specified elements and the number of generated elements is typically about ten per-cent. When the mesh is generated, the specified total number of elements is used in conjunction with the "Point" and "Parameter" controls to determine the mesh density.
+Chyba medzi počtom zadaných prvkov a počtom vygenerovaných prvkov sa zvyčajne pohybuje okolo desiatich percent. Pri generovaní siete sa na určenie hustoty siete používa zadaný celkový počet prvkov v kombinácii s ovládacími prvkami „Bod“ a „Parameter“.
 
-**Advanced Mesh Options**
+**Pokročilé nastavenia siete**
 
-**General Settings**
+**Všeobecné nastavenia**
 
-In addition to the Number of elements user can select Thickness elements and Size ratio values to get desired mesh.
+Okrem počtu prvkov môže používateľ zvoliť aj hrúbku prvkov a hodnoty pomeru veľkostí, aby dosiahol požadovanú sieť.
 
-  * **Number of thickness elements (MGTELM)**
+  * **Počet prvkov hrúbky (MGTELM)**
 
-The max thickness ratio is one of several ways to control the mesh density during automatic mesh generation (AMG). The number of elements in thickness direction represents the approximate number of elements that will be generated by the system across the thickness direction of any region of the part. The Automatic Mesh Generator (AMG) takes the value for [MGTELM](/docs/sk/keyword_documentation/m/mgtelm/) and generates a mesh that will have that number of elements across the thinnest portion. For instance, if [MGTELM](/docs/sk/keyword_documentation/m/mgtelm/) is set to 4, the AMG will try to have 4 elements across the thickness of the geometry.
+Pomer maximálnej hrúbky je jedným z viacerých spôsobov, ako regulovať hustotu siete počas automatického generovania siete (AMG). Počet prvkov v smere hrúbky predstavuje približný počet prvkov, ktoré systém vygeneruje v smere hrúbky v akejkoľvek oblasti dielu. Automatický generátor siete (AMG) použije hodnotu pre [MGTELM](/docs/en/keyword_documentation/m/mgtelm/) a vygeneruje sieť, ktorá bude mať tento počet prvkov v najtenšej časti. Napríklad, ak je [MGTELM](/docs/en/keyword_documentation/m/mgtelm/) nastavené na 4, AMG sa pokúsi vytvoriť 4 prvky v smere hrúbky geometrie.
 
-The thickness direction of an object is perpendicular to a branched centre line axis for each region of the part. The total number of elements to be generated in a mesh is controlled by the value of number of elements in keyword [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) . If the value of thickness elements results in a mesh that contains more than the value specified in [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) elements, the value of [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) would be scaled down so that the mesh contains approximately [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) elements. If the value of [MGTELM](/docs/sk/keyword_documentation/m/mgtelm/) results in a mesh that contains fewer than [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) elements, the remaining elements will be distributed to other user specified mesh density controls (curvature, strain, strain rate, and temperature).
+Smer hrúbky objektu je kolmý na os rozvetvenej stredovej čiary pre každú oblasť dielu. Celkový počet prvkov, ktoré sa majú vygenerovať v sieti, sa riadi hodnotou počtu prvkov v kľúčovom slove [MGNELM](/docs/en/keyword_documentation/m/mgnelm/). Ak hodnota prvkov hrúbky vedie k sieti, ktorá obsahuje viac prvkov, ako je hodnota špecifikovaná v [MGNELM](/docs/en/keyword_documentation/m/mgnelm/), hodnota [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) sa zníži tak, aby sieť obsahovala približne [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) prvkov. Ak hodnota [MGTELM](/docs/en/keyword_documentation/m/mgtelm/) vedie k sieti, ktorá obsahuje menej ako [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) prvkov, zostávajúce prvky budú rozdelené medzi ostatné užívateľom špecifikované parametre hustoty siete (krivost, deformácia, rýchlosť deformácie a teplota).
 
-  * **Element size ratio (MGSIZR)**
+  * **Pomer veľkostí prvkov (MGSIZR)**
 
-The maximum size ratio between elements is one of several ways to control the mesh density during automatic mesh generation (AMG) by specifying the ratio of node densities.
+Maximálny pomer veľkostí medzi prvkami je jedným z viacerých spôsobov, ako regulovať hustotu siete počas automatického vytvárania siete (AMG) prostredníctvom zadania pomeru hustôt uzlov.
 
-For a value of 3 for [MGSIZR](/docs/sk/keyword_documentation/m/mgsizr/), the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then Size Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.
+Pri hodnote 3 pre [MGSIZR](/docs/en/keyword_documentation/m/mgsizr/) bude najväčšia hrana prvku na objekte približne trojnásobkom veľkosti najmenšej hrany prvku na tom istom objekte. Ak sa požadujú prvky rovnakej veľkosti, pomer veľkostí je 1. Ak je pomer veľkostí 0, pomer veľkostí prvkov nebude mať vplyv na rozloženie hustoty siete.
 
-**Weighing Factors**
+**Faktory, ktoré sa zohľadňujú**
 
-The weighting factors or parameters (system defined mesh density) for boundary curvature, temperature, strain and strain rate specify relative mesh density weights to be assigned to the associated parameter. (See Fig. 36.1.13.)
+Váhovacie faktory alebo parametre (systémom definovaná hustota siete) pre zakrivenie hranice, teplotu, deformáciu a rýchlosť deformácie určujú relatívne váhy hustoty siete, ktoré sa majú priradiť k príslušnému parametru. (Pozri obr. 36.1.13.)
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image018.jpg' | relative_url }})
 
-Weighting factors settings window
+Okno nastavení váhových koeficientov
 
-Temperature, strain, and strain rate densities are assigned based on gradients in these parameters, not absolute parameter values. That is, a region with a rapid temperature change in a particular direction will receive more elements than a region with a uniform high temperature.
+Hustoty teploty, deformácie a rýchlosti deformácie sa prideľujú na základe gradientov týchto parametrov, nie na základe ich absolútnych hodnôt. To znamená, že oblasť s rýchlou zmenou teploty v určitom smere bude obsahovať viac prvkov ako oblasť s rovnomernou vysokou teplotou.
 
-The values from all the mesh density keywords are combined during the mesh generation process to create a mesh density distribution within the geometric boundary. 
+Hodnoty zo všetkých kľúčových slov týkajúcich sa hustoty siete sa počas procesu generovania siete kombinujú, čím sa vytvorí rozloženie hustoty siete v rámci geometrických hraníc. 
 
-Forming operation contains other weighting factor that is, Mesh Density window options using this user can define specific area in space which will move with other objects during deformation with an appropriate mesh density, please refer [13.1.5. Mesh Weighting factors.](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.5._Mesh_weighting_factors)
+Operácia tvarovania obsahuje ďalší váhový faktor, a to možnosti v okne „Mesh Density“ (Hustota siete), pomocou ktorých môže používateľ definovať konkrétnu oblasť v priestore, ktorá sa bude počas deformácie pohybovať spolu s ostatnými objektmi s príslušnou hustotou siete. Pozrite si [13.1.5. Mesh Weighting factors.](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.5._Mesh_weighting_factors).
 
-**Remeshing criteria**
+**Kritériá pre generovanie novej siete**
 
-Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation, so for heat transfer operations this is not applicable.
+Kritériá pregenerovania siete (Autoremesh) predstavujú najpohodlnejší spôsob, ako riešiť pregenerovanie siete objektov, ktoré podliehajú veľkej plastickej deformácii, preto sa to v prípade výpočtov prenosu tepla nedá použiť.
 
-**Advanced Settings**
+**Pokročilé nastavenia**
 
-Below Fig. 36.1.14. shows the Advanced Settings window.
+Na obr. 36.1.14. je zobrazené okno „Pokročilé nastavenia“.
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image020.jpg' | relative_url }})
 
-Advanced mesh settings window
+Okno s pokročilými nastaveniami siete
 
-  * **Grid resolution (MGGRID)**
+  * **Rozlíšenie mriežky (MGGRID)**
 
-When an object is meshed in 2D, a sampling grid is required to discretize density of the mesh throughout the starting geometry. Grid resolution (MGGRID) specifies the spacing of the sampling grids that are used to sample mesh densities. Increasing the value of X division or Y division will result in sharper gradients between areas of differing mesh density. In the case of blanking, where a very high mesh gradient is required over a narrow region, these values may need to increase to capture high changes in mesh gradient over short distances.
+Pri vytváraní 2D siete objektu je potrebná vzorkovacia mriežka na diskretizáciu hustoty siete v celej počiatočnej geometrii. Rozlíšenie mriežky (MGGRID) určuje rozstup vzorkovacích mriežok, ktoré sa používajú na vzorkovanie hustôt siete. Zvýšenie hodnoty X division alebo Y division bude mať za následok ostrejšie prechody medzi oblasťami s odlišnou hustotou siete. V prípade vyrezávania, kde je potrebný veľmi vysoký gradient siete v úzkej oblasti, môže byť potrebné tieto hodnoty zvýšiť, aby sa zachytili veľké zmeny gradientu siete na krátkych vzdialenostiach.
 
-  * **Node addition parameters (MGERR)**
+  * **Parametre pridávania uzlov (MGERR)**
 
-The node addition parameters (MGERR) specify the maximum distance and angle error permitted between the object boundary and its associated grid element side. The distance and angle tolerances are used to capture critical boundary geometry that might otherwise be lost when the mesh is generated. If an object is required to capture very small features, the maximum distance can be decreased or if a node needs to be placed on a shallow angle, the angle error can be decreased as well. Rarely will the user ever have to change these values. For parts that are very small, a value of 0.01% of the object’s bounding box is a good starting number that can be used for MGERR for better handling of mesh resolution.
+Parametre pridávania uzlov (MGERR) určujú maximálnu povolenú vzdialenosť a uhlovú chybu medzi hranicou objektu a stranou príslušného prvku mriežky. Tolerancie vzdialenosti a uhla sa používajú na zachytenie kritickej geometrie hraníc, ktorá by inak mohla byť stratená pri generovaní siete. Ak sa od objektu vyžaduje zachytenie veľmi malých detailov, maximálnu vzdialenosť je možné znížiť, alebo ak je potrebné umiestniť uzol pod malým uhlom, je možné znížiť aj uhlovú chybu. Používateľ bude musieť tieto hodnoty meniť len zriedka. Pre veľmi malé diely je hodnota 0,01 % ohraničujúceho obdĺžnika objektu dobrým východiskovým číslom, ktoré možno použiť pre MGERR na lepšie zvládnutie rozlíšenia siete.
 
-**Check Mesh![]({{ '/assets/icons/pre_icons/mo_check_mesh_button.jpg' | relative_url }}) **
+**Skontrolujte Mesh![]({{ '/assets/icons/pre_icons/mo_check_mesh_button.jpg' | relative_url }}) **
 
-The mesh can be examined for problems using the Check Mesh function. A perfect mesh will give the popup as shown in the Fig. 36.1.15., when user clicks on check mesh option. 
+Sieť je možné skontrolovať z hľadiska prípadných problémov pomocou funkcie „Check Mesh“. Ak je sieť bezchybná, po kliknutí na možnosť „Check Mesh“ sa zobrazí okno znázornené na obr. 36.1.15. 
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image003.jpg' | relative_url }})
 
-Check mesh popup window
+Skontrolujte vyskakovacie okno so sieťou
 
-**Delete Mesh** ![]({{ '/assets/icons/pre_icons/mo_delete_mesh_button.jpg' | relative_url }})
+**Odstrániť sieť** ![]({{ '/assets/icons/pre_icons/mo_delete_mesh_button.jpg' | relative_url }})
 
-Deletes the mesh generated for the object.
+Odstráni sieť vytvorenú pre daný objekt.
 
-**Show mesh![]({{ '/assets/icons/pre_icons/mo_show_mesh_button.jpg' | relative_url }}) **
+**Zobraziť sieť ![]({{ '/assets/icons/pre_icons/mo_show_mesh_button.jpg' | relative_url }}) **
 
-When user clicks on show mesh it shows the generated mesh in display window. Show mesh button toggles between display of mesh and geometry of the object.
+Keď používateľ klikne na tlačidlo „Zobraziť sieť“, v okne zobrazenia sa zobrazí vygenerovaná sieť. Tlačidlo „Zobraziť sieť“ prepína medzi zobrazením siete a geometrie objektu.
 
-**Default Setting** ![]({{ '/assets/icons/pre_icons/mo_default_settings_button.jpg' | relative_url }})  
-When user clicks on Default settings tab all the settings will be changed to default values, by default Mesh window will be in greyed out mode as no mesh windows are defined. If user wants to activate mesh window, user has to change the weighting factor for mesh density by increasing the sliding bar value to 1.
+**Predvolené nastavenie** ![]({{ '/assets/icons/pre_icons/mo_default_settings_button.jpg' | relative_url }})  
+Keď používateľ klikne na kartu „Predvolené nastavenia“, všetky nastavenia sa zmenia na predvolené hodnoty. Okno „Mesh“ bude štandardne neaktívne, keďže nie sú definované žiadne okná typu „Mesh“. Ak chce používateľ aktivovať okno „Mesh“, musí zmeniť váhový faktor hustoty siete tak, že posuvník nastaví na hodnotu 1.
 
-More mesh options are available in forming operations and Pre-Processor refer [13.1. 2D Mesh Generation.](/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+Ďalšie možnosti sietí sú k dispozícii v operáciách tvarovania a v predspracovateľovi – pozri [13.1. 2D Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
 
-### Material Definition
+### Definícia materiálu
 
-Below Fig. 36.1.16. shows the material window. User can add or import material from a keyword file or load from DEFORM material library.
+Na obr. 36.1.16. je zobrazené okno s materiálmi. Používateľ môže pridať alebo importovať materiál zo súboru kľúčových slov alebo ho načítať z knižnice materiálov DEFORM.
 
   
-After loading system automatically assign the loaded material to an object. User can also edit the material properties using ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}) button.
+Po načítaní systém automaticky priradí načítaný materiál k objektu. Používateľ môže vlastnosti materiálu upravovať aj pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image010.jpg' | relative_url }})
 
-Material window
+Okno s materiálmi
 
-Once after adding material click on ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}) button, material window will open as shown in Fig. 36.1.17.
+Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}) – otvorí sa okno s materiálom, ako je znázornené na obr. 36.1.17.
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image022.jpg' | relative_url }})
 
-Material editing window
+Okno na úpravu materiálu
 
-The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. In Forming operation user can get access to all material properties for more information refer [10\. Material Data.](/docs/sk/pre_processor/10_material_data/10_material_data/)
+Požadované vlastnosti závisia od fyzikálnych javov simulovaných v programe DEFORM. Vlastnosti materiálu, ktoré musí používateľ zadať, závisia od typov materiálov, ktoré používateľ v simulácii využíva. V operácii „Tvarovanie“ má používateľ prístup ku všetkým vlastnostiam materiálu; ďalšie informácie nájdete v [10\. Material Data.](/docs/en/pre_processor/10_material_data/10_material_data/).
 
-### Boundary Condition Definition
+### Definícia okrajových podmienok
 
-In heat transfer express Boundary conditions window, user can assign only Thermal Heat exchange with Environment and Temperature boundary constraints for an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. The most commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer. Fig. 36.1.18. shows various BCC that can be assigned to an object.
+V okne „Okrajové podmienky“ v programe Heat Transfer Express môže používateľ pre objekt priradiť iba tepelnú výmenu s okolím a teplotné okrajové obmedzenia. Okrajové podmienky určujú, ako hranica objektu interaguje s inými objektmi a s okolím. Najčastejšie používanými okrajovými podmienkami sú tepelná výmena s okolím pri simuláciách zahŕňajúcich prenos tepla. Obr. 36.1.18. znázorňuje rôzne okrajové podmienky (BCC), ktoré je možné priradiť k objektu.
 
-By default heat exchange with environment will be assigned to all surfaces except the symmetric surface (that is centerline) in axisymmetric model and for complete outer surface for plane strain model as shown in Fig. 36.1.18.
+V predvolenom nastavení sa výmena tepla s okolím priradí ku všetkým povrchom s výnimkou symetrického povrchu (t. j. stredovej čiary) v osovo symetrickom modeli a k celému vonkajšiemu povrchu v modeli s rovinným deformovaním, ako je znázornené na obr. 36.1.18.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image011.jpg' | relative_url }})
 
-Symmetry boundary condition assigned for workpiece
+Pre obrobok bola nastavená okrajová podmienka symetrie
 
-Defined BCC can be initialized first by selecting the BCC type in tree and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}) button. Defined particular BCC can also be deleted by selecting on defined branch from the BCC tree and clicking on ![]({{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}) button. Environment temperature can be varied from the Heat condition window. Environment windows are not allowed for heat exchange with environment BCC in heat transfer operation but available in forming operation, for more details refer Thermal under [14.3 Thermal Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/).
+Definované BCC je možné najskôr inicializovať výberom typu BCC v strome a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}). Konkrétne definované BCC je možné tiež odstrániť výberom definovanej vetvy zo stromu BCC a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}). Teplotu okolia je možné meniť v okne „Heat condition“ (Teplotné podmienky). Okná okolia nie sú povolené pre výmenu tepla s BCC okolia v režime prenosu tepla, sú však k dispozícii v režime tvárnenia; ďalšie podrobnosti nájdete v časti „Thermal“ (Tepelné vlastnosti) pod [14.3 Thermal Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/).
 
-More thermal BCC options and other different BCC categories are available in Pre-Processor and Forming Operation such as [Deformation](/docs/sk/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/),[Thermal](/docs/sk/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/sk/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) and [Heating](/docs/sk/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). For more information about these BCC's please refer [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions)
+V predspracovateľovi a pri operácii tvarovania sú k dispozícii ďalšie možnosti tepelného BCC a rôzne kategórie BCC, ako napríklad [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/), [Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) a [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
 
-### Heat Condition Definition
+### Definícia tepelného stavu
 
-Heat conditions like Heating time (Process duration), Environment temperature and Convection coefficient has be defined in this window as shown in Fig. 36.1.19. For all heating types system by default define the heating conditions has to input the process settings data by changing the defaults.
+V tomto okne je potrebné definovať tepelné podmienky, ako sú doba ohrevu (trvanie procesu), teplota okolia a konvekčný koeficient, ako je znázornené na obr. 36.1.19. Pre všetky typy ohrevu systém štandardne definuje podmienky ohrevu; na zmenu týchto predvolených nastavení je potrebné zadať údaje o nastaveniach procesu.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image012.jpg' | relative_url }})
 
-Heat condition settings window
+Okno nastavení teplotných podmienok
 
-### Stopping controls Definition
+### Definícia ovládacích prvkov na zastavenie
 
-Only for heating operation heat transfer operation provides the stopping controls to stop the simulation when all nodes of the workpiece are within the specified degree range from the set point temperature or environment temperature as shown in [Fig. 36.1.20.]() In [Fig. 36.1.20.]() simulation stops if all nodes temperatures are within 1199.5 C to 1200.5 C.
+Iba v režime kúrenia poskytuje funkcia prenosu tepla ovládacie prvky na zastavenie simulácie, keď sa všetky uzly obrobku nachádzajú v stanovenom rozsahu stupňov od nastavenej teploty alebo teploty okolia, ako je znázornené v [Fig. 36.1.20.](). V [Fig. 36.1.20.]() sa simulácia zastaví, ak sú teploty všetkých uzlov v rozmedzí 1199,5 °C až 1200,5 °C.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image013.jpg' | relative_url }})
 
-Heating stopping controls window
+Okno na ovládanie vypnutia kúrenia
 
-### Simulation controls Definition
+### Definícia ovládacích prvkov simulácie
 
-The DEFORM system solves time dependent non-linear problems by generating a series of FEM solutions at discrete time increments. At each time increment, the velocities, temperatures and other key variables of each node in the finite element mesh are determined based on boundary conditions, thermo mechanical properties of the work piece materials and possibly solutions at previous steps. Other state variables are derived from these key values and updated for each time increment. The length of this time step and number of steps simulated are determined based on the information specified in the step controls menu. Fig. 36.1.21. shows simulation control options.
+Systém DEFORM rieši časovo závislé nelineárne úlohy generovaním série riešení metódou konečných prvkov (FEM) v diskrétnych časových krokoch. V každom časovom kroku sa na základe okrajových podmienok, termomechanických vlastností materiálov obrobku a prípadne riešení z predchádzajúcich krokov určujú rýchlosti, teploty a ďalšie kľúčové premenné každého uzla v sieti konečných prvkov. Ostatné stavové premenné sa odvodzujú z týchto kľúčových hodnôt a aktualizujú sa pri každom časovom kroku. Dĺžka tohto časového kroku a počet simulovaných krokov sa určujú na základe informácií zadaných v ponuke nastavení krokov. Obr. 36.1.21. znázorňuje možnosti ovládania simulácie.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image014.jpg' | relative_url }})
 
-Simulation controls window in system definition
+Okno ovládacích prvkov simulácie v definícii systému
 
-User needs to specify the time per step (step definition), total number of steps and step increment to save in user and system step definition. In heat transfer express three types of step definitions are available, those are system, user and auto.
+Používateľ musí určiť čas na jeden krok (definícia kroku), celkový počet krokov a veľkosť kroku, ktoré sa majú uložiť v definícii kroku používateľa a systému. V programe Heat Transfer Express sú k dispozícii tri typy definícií krokov: systémová, používateľská a automatická.
 
-System type (See Fig. 36.1.21. ) step definition auto calculate the step definition based on the heating time defined and accuracy and complexity settings selected. For different accuracy and complexity settings system will vary the object mesh elements and step size by varying number of steps. If user needs to vary the auto calculated step definition then User type allows to change the step definition.
+Typ systému (pozri obr. 36.1.21.) – automatický výpočet definície kroku na základe zadaného času ohrevu a zvolených nastavení presnosti a zložitosti. V závislosti od rôznych nastavení presnosti a zložitosti systém upraví prvky siete objektu a veľkosť kroku zmenou počtu krokov. Ak používateľ potrebuje upraviť automaticky vypočítanú definíciu kroku, možnosť „Ručné zadanie“ umožňuje zmeniť definíciu kroku.
 
-In User type user will get the access to change the step definitions as required as shown in Fig. 36.1.22.
+V rámci typu používateľa bude mať používateľ oprávnenie na úpravu definícií krokov podľa potreby, ako je znázornené na obr. 36.1.22.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image015.jpg' | relative_url }})
 
-User step definition controls
+Ovládacie prvky pre definíciu krokov používateľa
 
-Auto type is temperature based step controls, the ([DTPMAX)](/docs/sk/keyword_documentation/d/dtpmax/) settings control the time stepping. The purpose for these controls is to specify the time stepping of a simulation that is driven by thermal-induced deformation. User has to specify the Initial time step (Time per step), Max. Temperature change per step, Min. time per step and Max. time per step as shown in Fig. 36.1.23.
+Typ „Auto“ predstavuje krokové riadenie založené na teplote; nastavenia ([DTPMAX)](/docs/en/keyword_documentation/d/dtpmax/)) určujú dĺžku časového kroku. Účelom týchto nastavení je určiť dĺžku časového kroku simulácie, ktorá je riadená deformáciou vyvolanou teplotou. Používateľ musí zadať počiatočný časový krok (čas na krok), maximálnu zmenu teploty na krok, minimálny čas na krok a maximálny čas na krok, ako je znázornené na obr. 36.1.23.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image016.jpg' | relative_url }})
 
-Advanced step definition controls
+Pokročilé ovládacie prvky na definovanie krokov
 
-**Temperature change per step**(([DTPMAX](/docs/sk/keyword_documentation/d/dtpmax/))  
-The maximum temperature change increment limits the amount that the temperature of any node can change during one time step. If a non-zero value is assigned, a new sub step will be initiated when the temperature change at any node reaches the value of ([DTPMAX](/docs/sk/keyword_documentation/d/dtpmax/). The maximum/minimum time step are the largest and smallest time step allowable with the temperature based sub-stepping.
+**Zmena teploty na jeden krok**(([DTPMAX](/docs/en/keyword_documentation/d/dtpmax/))  
+Maximálny prírastok zmeny teploty obmedzuje rozsah, o ktorý sa môže teplota ktoréhokoľvek uzla zmeniť počas jedného časového kroku. Ak je priradená hodnota odlišná od nuly, spustí sa nový podkrok, keď zmena teploty v ktoromkoľvek uzle dosiahne hodnotu ([DTPMAX](/docs/en/keyword_documentation/d/dtpmax/). Maximálny/minimálny časový krok predstavuje najväčší a najmenší časový krok povolený pri podkrokovaní založenom na teplote.
 
-### Generate Database
+### Vytvoriť databázu
 
-**Check Data**![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})****
+**Overiť údaje**![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})****
 
-It checks the Data. If Data is correct we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.
+Systém skontroluje údaje. Ak sú údaje správne, môžeme vytvoriť databázu. Ak sa však pri kontrole údajov vyskytnú chyby alebo varovania, je potrebné ich opraviť pred vytvorením databázy. Chyby zabránia vytvoreniu databázy, zatiaľ čo varovania vytvorenie databázy neumožnia.
 
-**Generate Database![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**
+**Vytvoriť databázu ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**
 
-By clicking on this button, it generated the Database for the setup. (See Fig. 36.1.24.)
+Kliknutím na toto tlačidlo sa vytvorila databáza pre nastavenie. (Pozri obr. 36.1.24.)
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image050.jpg' | relative_url }})
 
-Generate Database window
+Okno „Vytvoriť databázu“
 
-## Defining Transfer Operation
+## Definovanie operácie prenosu
 
-Heat Transfer operation is used to setup the air convection operation normally during the transfer of workpiece from furnace to press. User can add this operation after heating operation or start with heated workpiece heat transfer itself as first operation. In Transfer operation user will be guided by setup windows as in Heating operation except heating Stopping controls as shown in Fig. 36.1.25. For basic object definition, geometry, mesh, material and boundary condition details refer Defining Heating operation. In addition to heating operation options user can add more than one object, so it adds object positioning and inter-object definition options. These options are discussed under this section.
+Operácia „Prenos tepla“ sa používa na nastavenie konvekčného prúdenia vzduchu, zvyčajne počas presunu obrobku z pece do lisu. Používateľ môže túto operáciu pridať po operácii ohrevu alebo začať samotným prenosom tepla na ohriaty obrobok ako prvou operáciou. V operácii „Transfer“ bude používateľ vedený nastavovacími oknami rovnako ako v operácii „Heating“, s výnimkou ovládacích prvkov na zastavenie ohrevu, ako je znázornené na obr. 36.1.25. Podrobnosti o základnej definícii objektu, geometrii, sieti, materiáli a okrajových podmienkach nájdete v časti Definovanie operácie ohrevu. Okrem možností operácie ohrevu môže používateľ pridať viac ako jeden objekt, čím sa pridávajú možnosti polohovania objektov a definície vzťahov medzi objektmi. Tieto možnosti sú popísané v tejto časti.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image017.jpg' | relative_url }})
 
-Add Heat transfer operation after furnace heating
+Po ohreve v peci pridať operáciu prenosu tepla
 
-### Selecting Objects
+### Výber objektov
 
-In Heat Transfer operation more than one object is allowed. The user can select the number of objects that is required to perform the operation from this window depending on the process set up (See Fig. 36.1.26.). User has to note that we can have only one plastic object in a simulation. A maximum of 100 dies can be added.
+V operácii „Prenos tepla“ je povolené použiť viac ako jeden objekt. V závislosti od nastavenia procesu si môže používateľ v tomto okne vybrať počet objektov potrebných na vykonanie operácie (pozri obr. 36.1.26.). Používateľ musí mať na pamäti, že v simulácii môže byť len jeden plastový objekt. Je možné pridať maximálne 100 foriem.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image018.jpg' | relative_url }})
 
-Transfer operation object selection settings
+Nastavenia výberu objektov pri operácii presunu
 
-### Objects positioning and generating inter object relation
+### Umiestňovanie objektov a vytváranie vzťahov medzi objektmi
 
-If user selects more than one object then system adds the controls (positioning) and scheduled positioning and contact windows after objects to position the objects and to generate inter object contact if any in the setup. More details about these options refer Defining Rest on die operation section Positioning and Scheduled Positioning.
+Ak používateľ vyberie viac ako jeden objekt, systém za objektmi pridá ovládacie prvky (polohovanie) a okná plánovaného polohovania a kontaktu, aby sa objekty správne umiestnili a aby sa v prípade potreby v nastavení vytvoril kontakt medzi objektmi. Ďalšie podrobnosti o týchto možnostiach nájdete v časti „Definovanie operácie odpočinku na matrici“ v kapitole „Polohovanie a plánované polohovanie“.
 
-### Heat condition Definition
+### Definícia pojmu „tepelné podmienky“
 
-Heat conditions like Transfer time (Process duration), Environment temperature and Convection coefficient has be defined in this window as shown in Fig. 36.1.27. For all heating types system by default define the heating conditions, user has to input the process settings data by changing the defaults.
+V tomto okne je potrebné definovať podmienky ohrevu, ako sú doba prenosu (trvanie procesu), teplota okolia a koeficient konvekcie, ako je znázornené na obr. 36.1.27. Pre všetky typy ohrevu systém štandardne definuje podmienky ohrevu; používateľ musí zadať údaje o nastaveniach procesu zmenou predvolených hodnôt.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image019.jpg' | relative_url }})
 
-Transfer operation heat conditions
+Teplotné podmienky pri prevádzke prenosu
 
-After setting the heat condition user has to define the simulations controls for simulation controls settings details refer Simulation Control Definition.
+Po nastavení teplotných podmienok musí používateľ definovať ovládacie prvky simulácie; podrobnosti o nastavení ovládacích prvkov simulácie nájdete v časti Definícia ovládacích prvkov simulácie.
 
   
-Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation refer Simuation controls Definition and Generate Database section .
+Databáza sa musí vygenerovať v prípade interaktívneho nastavenia alebo ak je operácia prenosu prvou operáciou; v opačnom prípade sa databáza vygeneruje automaticky počas simulácie. Ďalšie informácie o ovládacích prvkoch simulácie a generovaní databázy nájdete v častiach „Definícia ovládacích prvkov simulácie“ a „Generovanie databázy“.
 
-## Defining Rest on die Operation
+## Definícia operácie „Odpočinok na kocke“
 
-Rest on die or Resting operation is used to setup the hot workpiece heat transfer with environment and with die on which it is resting before forming. User can add this operation after heat transfer operation or can start with heated workpiece resting operation itself as first operation. In Resting operation user will be guided by setup windows as in Heating operation except heating Stopping controls as shown in Fig. 36.1.28\. In addition to heating operation options user can add more than one object, so it adds thermal calculation, object positioning and inter-object definition options. These options are discussed under this section.
+Operácia „Odpočinok na forme“ alebo „Odpočinok“ slúži na nastavenie prenosu tepla z horúceho obrobku do okolia a do formy, na ktorej leží pred tvarovaním. Používateľ môže túto operáciu pridať po operácii prenosu tepla alebo môže začať priamo operáciou odpočinku zahriateho obrobku ako prvou operáciou. V operácii odpočinku bude používateľ vedený nastavovacími oknami rovnako ako v operácii ohrevu, s výnimkou ovládacích prvkov na zastavenie ohrevu, ako je znázornené na obr. 36.1.28. Okrem možností operácie ohrevu môže používateľ pridať viac ako jeden objekt, čím sa pridávajú možnosti tepelného výpočtu, polohovania objektov a definície vzťahov medzi objektmi. Tieto možnosti sú rozoberané v tejto časti.
 
-By default system will add two die objects and thermal calculations selection option gets added after process window as shown in Fig. 36.1.28.
+Systém štandardne pridá dva objekty čipov a voľba pre výpočet tepelného správania sa zobrazí za oknom procesu, ako je znázornené na obr. 36.1.28.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image020.jpg' | relative_url }})
 
-Adding Resting operation after heat transfer operation
+Pridanie operácie odpočinku po operácii prenosu tepla
 
-### Define Thermal Calculations
+### Definícia tepelných výpočtov
 
-Temperature Calculation (See Fig. 36.1.29.) window gives Non isothermal options to select calculate temperature only in workpiece or workpiece and dies.
+Okno „Výpočet teploty“ (pozri obr. 36.1.29.) ponúka možnosti v sekcii „Neizotermické“, kde je možné zvoliť výpočet teploty iba v obrobku alebo v obrobku aj v lisovacích formách.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image021.jpg' | relative_url }})
 
-Temperature calculation type selection window
+Okno na výber typu výpočtu teploty
 
-**Non-isothermal** : A process in which the temperature of system is not constant. Adding temperature calculations will improve material flow predictions and load predictions, particularly in processes where there are substantial changes in temperature. Calculating temperature in tools further improves workpiece temperature calculation, because evolving tool temperature influences heat loss from the workpiece.
+**Neizotermický**: Proces, pri ktorom teplota systému nie je konštantná. Zahrnutie výpočtov teploty zlepší predpovede toku materiálu a predpovede zaťaženia, najmä v procesoch, kde dochádza k výrazným zmenám teploty. Výpočet teploty v nástrojoch ďalej zlepšuje výpočet teploty obrobku, pretože zmena teploty nástroja ovplyvňuje únik tepla z obrobku.
 
-### Selecting objects
+### Výber objektov
 
-The user can select the number of objects that is required to perform the operation from this window depending on the process set up (See Fig. 36.1.30.). User has to note that we can have only one plastic object in a simulation. A maximum of 100 dies can be added.
+V tomto okne si môže používateľ v závislosti od nastavenia procesu vybrať počet objektov potrebných na vykonanie operácie (pozri obr. 36.1.30.). Používateľ musí mať na pamäti, že v simulácii môže byť len jeden plastový objekt. Je možné pridať maximálne 100 foriem.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image022.jpg' | relative_url }})
 
-Objects selection window
+Okno na výber objektov
 
-For basic object definition, geometry, mesh, material and boundary condition details refer 36.1.3. Defining Heating operation.
+Podrobnosti o základnej definícii objektu, geometrii, sieti, materiáli a okrajových podmienkach nájdete v kapitole 36.1.3. Definovanie operácie ohrevu.
 
-### Positioning
+### Polohovanie
 
-User has to select position objects button to position the objects as per the setup requirements, if objects are not read from DB as shown in Fig. 36.1.31. For more details about positioning options refer [19.Object Positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/). If objects are read from DB then those objects positioning must be scheduled.
+Ak sa objekty nečítajú z databázy, ako je znázornené na obr. 36.1.31, musí používateľ kliknúť na tlačidlo „Umiestniť objekty“, aby objekty umiestnil podľa požiadaviek nastavenia. Ďalšie informácie o možnostiach umiestňovania nájdete v [19.Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/). Ak sa objekty čítajú z databázy, ich umiestňovanie musí byť naplánované.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image023.jpg' | relative_url }})
 
-Positioning Objects window settings for Read from DB and other object types
+Nastavenia okna „Positioning Objects“ pre typ „Read from DB“ a ďalšie typy objektov
 
-### Schedule Positioning
+### Plánovanie polohy
 
-When user is not sure about the location of an object as in case of Read From DB objects, scheduled positioning will help to position the objects accurately.
+Ak si používateľ nie je istý polohou objektu, ako je to v prípade objektov typu „Read From DB“, naplánované umiestňovanie pomôže objekty presne umiestniť.
 
-Schedule positioning allows the user to define the positioning for objects in MO setup for successive operations for which DB is not generated so that the objects will position before generation of DB while running simulation in Batch mode. (See [Fig. 36.1.32.]())
+Funkcia „Schedule positioning“ umožňuje používateľovi definovať umiestnenie objektov v nastavení MO pre nasledujúce operácie, pre ktoré sa nevytvára databáza (DB), tak, aby sa objekty umiestnili ešte pred vytvorením databázy počas spustenia simulácie v dávkovom režime. (Pozri [Fig. 36.1.32.]())
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image024.jpg' | relative_url }})
 
-Schedule position the objects in successive operations
+V rozvrhu umiestnite objekty do po sebe nasledujúcich operácií
 
-### Inter-object Contact Generation
+### Generovanie kontaktov medzi objektmi
 
-The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined. In Heat transfer express system automatically define the relation between the workpiece and dies and self contact for workpiece then generate contact when user click on as shown in Fig. 36.1.33. Generated contacts message will display in the message tab below the graphics window.
+Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty v simulácii vzájomne interagujú. Všetky objekty, ktoré sa v priebehu simulácie môžu navzájom dotýkať, musia mať definovaný kontaktný vzťah. V systéme Heat Transfer Express sa automaticky definuje vzťah medzi obrobkom a formami a vlastný kontakt pre obrobok, potom sa vygeneruje kontakt, keď používateľ klikne na tlačidlo, ako je znázornené na obr. 36.1.33. Správa o vygenerovaných kontaktoch sa zobrazí na karte Správy pod grafickým oknom.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image025.jpg' | relative_url }})
 
-Inter-object contact generation window settings in batch mode
+Nastavenia okna na generovanie kontaktov medzi objektmi v dávkovom režime
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image026.jpg' | relative_url }})
 
-Inter-object contact generation window settings in interactive mode (or for first operation)
+Nastavenia okna na generovanie kontaktov medzi objektmi v interaktívnom režime (alebo pri prvom spustení)
 
-In case if heat transfer express operation is a successive operation then in batch mode system schedule the defining and generating contacts by initializing previous contacts while running, so generate and initialize contact nodes and restore mesh options not available as shown in Fig. 36.1.34. User can select the tolerance value for contact generation by selecting the User defined radio button.
+V prípade, že expresný výpočet prenosu tepla prebieha postupne, systém v dávkovom režime naplánuje definovanie a generovanie kontaktov tak, že počas behu inicializuje predchádzajúce kontakty; preto nie je možné generovať a inicializovať kontaktné uzly ani obnoviť nastavenia siete, ako je znázornené na obr. 36.1.34. Používateľ môže zvoliť hodnotu tolerancie pre generovanie kontaktov výberom prepínača „Definované používateľom“.
 
   
-Conduction heat transfer coefficient value can be defined by user and also typical values are provided by system those are, (See Fig. 36.1.33.)  
-(1 N/sec/mm/C or 0.0003 Btu/sec/in^2/F) for Free Resting  
-(1 N/sec/mm/C or 0.0003 Btu/sec/in^2/F) for Dwelling  
-(11 N/sec/mm/C or 0.004 Btu/sec/in^2/F) for Forming
+Hodnotu koeficientu prenosu tepla vedením si môže užívateľ nastaviť sám; systém zároveň ponúka aj typické hodnoty, a to (pozri obr. 36.1.33.)  
+(1 N/s/mm/°C alebo 0,0003 Btu/s/in²/°F) pre stav voľného pokoja  
+(1 N/s/mm/°C alebo 0,0003 Btu/s/in²/°F) pre obytné priestory  
+(11 N/s/mm/°C alebo 0,004 Btu/s/in²/°F) pri tvárnení
 
-### Heat Condition Definition
+### Definícia tepelného stavu
 
-Heat conditions like Resting time (Process duration), Environment temperature and Convection coefficient has be defined in this window as shown in Fig. 36.1.35. For all heating types system by default define the heating conditions, user has to input the process settings data by changing the defaults.
+V tomto okne je potrebné definovať tepelné podmienky, ako sú doba odpočinku (trvanie procesu), teplota okolia a konvekčný koeficient, ako je znázornené na obr. 36.1.35. Pre všetky typy ohrevu systém štandardne definuje podmienky ohrevu; používateľ musí zadať údaje o nastaveniach procesu zmenou predvolených hodnôt.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image027.jpg' | relative_url }})
 
-Heat condition settings window
+Okno nastavení teplotných podmienok
 
-After setting the heat condition user has to define the simulations controls for simulation controls settings details refer Simulation Control Definition.
+Po nastavení teplotných podmienok musí používateľ definovať ovládacie prvky simulácie; podrobnosti o nastavení ovládacích prvkov simulácie nájdete v časti Definícia ovládacích prvkov simulácie.
 
   
-Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation refer Simulation_controls_Definition and Generate Database.
+Databáza „Next“ sa musí vygenerovať v prípade interaktívneho nastavenia alebo ak ide o prvú operáciu prenosu; v opačnom prípade sa databáza vygeneruje automaticky počas simulácie. Ďalšie informácie o ovládacích prvkoch simulácie a generovaní databázy nájdete v článkoch „Simulation_controls_Definition“ a „Generate Database“.
 
-## Continue Defining the Forming Operations
+## Pokračovanie v definovaní tvárniacich operácií
 
-After the Heat transfer express operations user can add the forming operations (See Fig. 36.1.36.) and continue with the non-isothermal deformation setup. Heat transfer operations can also be added between the forming operations, especially after forming operation customized Heat Dwelling heating type available for dwelling simulation explained in the next section 36.1.7. Defining dwell on die operation. For more information about forming operations setup refer [33.1. 2D Forming Setup](/docs/sk/operation_templates/33_forming/33_1_2d_forming_setup/) or [34.1. 2D Forming Express Setup](/docs/sk/operation_templates/34_forming_express/34_1_2d_forming_express_setup/).
+Po operáciách rýchleho prenosu tepla môže používateľ pridať operácie tvárnenia (pozri obr. 36.1.36.) a pokračovať v nastavení neizotermickej deformácie. Operácie prenosu tepla je možné pridať aj medzi operácie tvárnenia, najmä po operácii tvárnenia s prispôsobeným typom ohrevu „Heat Dwelling“, ktorý je k dispozícii pre simuláciu zdržania a je vysvetlený v nasledujúcej časti 36.1.7. Definovanie operácie zdržania na matrici. Ďalšie informácie o nastavení operácií tvárnenia nájdete v [33.1. 2D Forming Setup](/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/) alebo [34.1. 2D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/).
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image028.jpg' | relative_url }})
 
-Adding Forming operation after heat transfer express operation
+Pridanie operácie tvarovania po operácii rýchleho prenosu tepla
 
-## Defining Dwell on die Operation
+## Definícia operácie „Dwell on die“
 
   
-Dwell on die or Dwelling operation is used to setup the hot workpiece heat transfer with environment and with die after forming and before die retract back from workpiece. User has to add this operation after forming operations as shown in Fig. 36.1.37.
+Operácia „Dwell on die“ (zotrvanie na forme) alebo „Dwelling“ slúži na nastavenie prenosu tepla z horúceho obrobku do okolia a do formy po tvarovaní a predtým, ako sa forma stiahne z obrobku. Používateľ musí túto operáciu pridať za operácie tvarovania, ako je znázornené na obr. 36.1.37.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image029.jpg' | relative_url }})
 
-Adding Heat transfer express operation after forming operation for dwelling operation setup
+Pridanie operácie „Expresný prenos tepla“ po operácii tvarovania na účely nastavenia režimu vydržiavania
 
-In Dwelling operation user will be guided by setup windows as in Heating operation except heating Stopping controls as shown in Fig. 36.1.38. In addition to heating operation more than one objects are allowed and system automatically pass all the objects from previous operation to this operation. This operation also adds thermal calculation, object positioning and inter-object definition options required to select the thermal calculations for dies, position objects and define and generate the inter-object contact conditions. These additional options other than heating operation options are discussed in 36.1.5. Defining Rest on die Operation.
+V režime „Bývanie“ bude používateľ vedený nastavovacími oknami rovnako ako v režime „Kúrenie“, s výnimkou ovládacích prvkov na zastavenie kúrenia, ako je znázornené na obr. 36.1.38. Na rozdiel od režimu „Kúrenie“ je v tomto režime povolené zadávať viac ako jeden objekt a systém automaticky prenesie všetky objekty z predchádzajúceho režimu do tohto režimu. Tento režim tiež pridáva možnosti tepelného výpočtu, umiestňovania objektov a definovania vzájomných vzťahov medzi objektmi, ktoré sú potrebné na výber tepelných výpočtov pre formy, umiestnenie objektov a definovanie a generovanie podmienok kontaktu medzi objektmi. Tieto dodatočné možnosti, ktoré sa líšia od možností režimu kúrenia, sú popísané v časti 36.1.5. Definovanie režimu „Odpočinok na forme“.
 
-### Heat Condition Definition
+### Definícia tepelného stavu
 
-Heat conditions like Dwell time (Process duration), Environment temperature and Convection coefficient has be defined in this window as shown in Fig. 36.1.38. For all heating types system by default define the heating conditions, user has to input the process settings data by changing the defaults.
+V tomto okne je potrebné definovať podmienky ohrevu, ako sú doba zdržania (trvanie procesu), teplota okolia a koeficient konvekcie, ako je znázornené na obr. 36.1.38. Pre všetky typy ohrevu systém štandardne definuje podmienky ohrevu; používateľ musí zadať údaje o nastaveniach procesu zmenou predvolených hodnôt.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image030.jpg' | relative_url }})
 
-Heat condition settings window
+Okno nastavení teplotných podmienok
 
-After setting the heat condition user has to define the simulations controls for simulation controls settings details refer Simulation Control Definition.
+Po nastavení teplotných podmienok musí používateľ definovať ovládacie prvky simulácie; podrobnosti o nastavení ovládacích prvkov simulácie nájdete v časti Definícia ovládacích prvkov simulácie.
 
   
-Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation refer Simulation_controls_Definition and Generate Database.
+Databáza „Next“ sa musí vygenerovať v prípade interaktívneho nastavenia alebo ak ide o prvú operáciu prenosu; v opačnom prípade sa databáza vygeneruje automaticky počas simulácie. Ďalšie informácie o ovládacích prvkoch simulácie a generovaní databázy nájdete v článkoch „Simulation_controls_Definition“ a „Generate Database“.
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[33.1. 2D Forming Setup](/docs/sk/operation_templates/33_forming/33_1_2d_forming_setup/)
+[33.1. 2D Forming Setup](/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/)
 
-[34.1. 2D Forming Express Setup](/docs/sk/operation_templates/34_forming_express/34_1_2d_forming_express_setup/).
+[34.1. 2D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/).
 
-[36.2.3D Heat Transfer Express Operation](/docs/sk/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/)
+[36.2.3D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/)

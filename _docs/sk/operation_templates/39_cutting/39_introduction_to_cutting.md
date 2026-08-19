@@ -1,48 +1,48 @@
 ---
 lang: sk
-title: "39 Introduction to Cutting"
+title: "39 Úvod do rezania"
 ---
 
-# 39\. Introduction to Cutting
+# 39\. Úvod do rezania
 
-Cutting Operation template setup is designed for guiding user to setup different types of Cutting processes. The template simplifies the cutting process and models it. The template can be used to study tool wear, tool temperature at interface, chip shape and cutting forces. A typical Cutting setup consists of simplified workpiece and Tool. Template also provides options to model steady-state analysis for cutting processes to reduce the computation time. Typical 2D and 3D cutting processes modelled in 2D and 3D are shown in Fig. 39.1., Fig. 39.2. and Fig. 39.3. DEFORM uses “openscad” and “gmsh” tools to generate 3D geometry of the cutting tools and user must make sure it is available in. “C:\Program Files\SFTC\DEFORM\v*.*\Machining\” and at 3D level “C:\Program Files\SFTC\DEFORM\v*.*\3D\ Machining\” and at 2D level “C:\Program Files\SFTC\DEFORM\v*.*\2D\Machining\”, these folders also consists of primitive geometries of the cutting tools. Using this template user can model,
+Nastavenie šablóny rezných operácií je určené na usmerňovanie používateľa pri nastavovaní rôznych typov rezacích procesov. Šablóna zjednodušuje rezací proces a modeluje ho. Šablónu je možné použiť na štúdium opotrebenia nástroja, teploty nástroja v mieste kontaktu, tvaru triesok a rezacích síl. Typické nastavenie rezania pozostáva zo zjednodušeného obrobku a nástroja. Šablóna tiež ponúka možnosti modelovania analýzy ustáleného stavu rezných procesov s cieľom skrátiť výpočtový čas. Typické 2D a 3D rezné procesy modelované v 2D a 3D sú znázornené na obr. 39.1, obr. 39.2 a obr. 39.3. Program DEFORM používa nástroje „openscad“ a „gmsh“ na generovanie 3D geometrie rezných nástrojov a používateľ sa musí uistiť, že sú k dispozícii v adresári „C:\Program Files\SFTC\DEFORM\v*.*\Machining\“ a na 3D úrovni v „C:\Program Files\SFTC\DEFORM\v*.*\3D\ Machining\“ a na 2D úrovni v adresári „C:\Program Files\SFTC\DEFORM\v*.*\2D\Machining\“. Tieto adresáre obsahujú aj základné geometrie rezných nástrojov. Pomocou tejto šablóny môže používateľ modelovať,
 
-**In 2D:**
+**V 2D:**
 
-  1. Transient analysis of cutting process
+  1. Analýza prechodných javov pri procese rezania
 
-  2. Steady-state analysis of cutting process
+  2. Analýza ustáleného stavu procesu rezania
 
-**In 3D:**
+**V 3D:**
 
-  1. Turning
+  1. Sústruženie
 
-  2. Milling
+  2. Frézovanie
 
-  3. Boring
+  3. Nudné
 
-  4. Drilling
+  4. Vŕtanie
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_introduction_to_cutting/image0001.jpg' | relative_url }})
 
-2D Cutting (Transient analysis type)
+2D rezanie (typ prechodovej analýzy)
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_introduction_to_cutting/image0002.jpg' | relative_url }})
 
-2D Cutting (Steady-state analysis type)
+2D rezanie (typ analýzy ustáleného stavu)
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_introduction_to_cutting/image0003.jpg' | relative_url }})
 
-3D Cutting Setup
+Nastavenie 3D rezania
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[Setting up 3D Machining Models ](/docs/sk/operation_templates/39_cutting/setting_up_3d_machining_models/)
+[Setting up 3D Machining Models ](/docs/en/operation_templates/39_cutting/setting_up_3d_machining_models/)
 
-[39.1. 2D Cutting](/docs/sk/operation_templates/39_cutting/39_1_2d_cutting/)
+[39.1. 2D Cutting](/docs/en/operation_templates/39_cutting/39_1_2d_cutting/)
 
-[39.2. 3D Turning](/docs/sk/operation_templates/39_cutting/39_2_3d_turning/)
+[39.2. 3D Turning](/docs/en/operation_templates/39_cutting/39_2_3d_turning/)
 
-[39.3. 3D Milling](/docs/sk/operation_templates/39_cutting/39_3_3d_milling/)
+[39.3. 3D Milling](/docs/en/operation_templates/39_cutting/39_3_3d_milling/)
 
-[39.4. 3D Drilling](/docs/sk/operation_templates/39_cutting/39_4_drilling/)
+[39.4. 3D Drilling](/docs/en/operation_templates/39_cutting/39_4_drilling/)

@@ -1,42 +1,42 @@
 ---
 lang: sk
-title: "49. Introduction to Die Stress Study"
+title: "49. Úvod do štúdia napätia v lisovacích formách"
 ---
 
-# 49\. Introduction to Die Stress Study
+# 49\. Úvod do štúdia napätia vo formách
 
-In metal forming process, high temperature and pressure conditions cause significant die wear and plastic deformation of dies. Stress analysis of dies could identify locations of high stresses which could assist in improving the metal forming process in the future. Die stress process is carried out to check the stress in the dies after the load is applied by the die to the workpiece.
+Pri procese tvárnenia kovov spôsobujú podmienky vysokej teploty a tlaku značné opotrebenie foriem a ich plastickú deformáciu. Analýza napätí vo formách by mohla identifikovať miesta s vysokým napätím, čo by mohlo v budúcnosti prispieť k zlepšeniu procesu tvárnenia kovov. Analýza napätí vo formách sa vykonáva s cieľom skontrolovať napätie vo formách po tom, čo forma pôsobí silou na obrobok.
 
-Die stress operation is a convenient tool to setup a stress analysis of dies after a metal forming process. User can use either Die stress study or Die stress operation alone to carry out the die stress. Die stress study is used, when user would like to perform die stress analysis at any desired step of the forming simulation while die stress operation. 
+Operácia „Die stress“ je praktický nástroj na nastavenie analýzy napätia foriem po procese tvárnenia kovu. Používateľ môže na vykonanie analýzy napätia foriem použiť buď štúdiu „Die stress“, alebo samostatne operáciu „Die stress“. Štúdia „Die stress“ sa používa vtedy, keď chce používateľ počas operácie „Die stress“ vykonať analýzu napätia foriem v ľubovoľnom kroku simulácie tvárnenia. 
 
-We can setup Die Stress Study operation in MO wizard. Following are the steps to setup the Die Stress Study operation in MO wizard.
+Operáciu „Die Stress Study“ môžeme nastaviť v sprievodcovi MO. Nižšie sú uvedené kroky na nastavenie operácie „Die Stress Study“ v sprievodcovi MO.
 
-  * Step selection
+  * Výber kroku
 
-  * Changing the object type to elastic
+  * Zmena typu objektu na „elastic“
 
-  * Generating Mesh
+  * Vytvorenie siete
 
-  * Loading Object material
+  * Načítavanie materiálu objektu
 
-  * Assigning boundary conditions
+  * Určenie okrajových podmienok
 
-  * Initializing the state variable
+  * Inicializácia stavovej premennej
 
-  * Interpolating Forces onto Dies from Forming Simulation
+  * Interpolácia síl pôsobiacich na lisovacie formy na základe simulácie tvárnenia
 
-  * Positioning the objects
+  * Umiestňovanie predmetov
 
-  * Defining the contact relations
+  * Definovanie vzťahov medzi kontaktmi
 
-  * Defining the simulation controls
+  * Nastavenie ovládacích prvkov simulácie
 
-  * Generate Database
+  * Vytvoriť databázu
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[49.1. 2D Die Stress Study](/docs/sk/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/)
+[49.1. 2D Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/)
 
-[49.2. 3D Die Stress Study](/docs/sk/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/)
+[49.2. 3D Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/)
 
-[Die Stress Study Labs](/docs/sk/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
+[Die Stress Study Labs](/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)

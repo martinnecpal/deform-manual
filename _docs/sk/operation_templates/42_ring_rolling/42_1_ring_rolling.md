@@ -1,615 +1,615 @@
 ---
 lang: sk
-title: "42.1. Ring Rolling"
+title: "42.1. Valcovanie prstencov"
 ---
 
-# 42.1. Ring Rolling Operation
+# 42.1. Operácia valcovania prstencov
 
-42.1.1. How to add the Ring Rolling Operation
+42.1.1. Ako pridať operáciu valcovania prsteňov
 
-42.1.2. Process Selection
+42.1.2. Výber procesu
 
-42.1.3. Simulation setup
+42.1.3. Nastavenie simulácie
 
-42.1.4. Material List
+42.1.4. Zoznam materiálov
 
-42.1.5. Object page
+42.1.5. Stránka objektu
 
-  * Objects for Symmetry model type setup
+  * Objekty pre nastavenie typu modelu „Symetria“
 
-42.1.6. Defining Workpiece – Ring Object
+42.1.6. Definovanie obrobku – prstencový objekt
 
-  * Extract cross-section from imported 3D Geometry
+  * Vytvoriť priečny rez z importovanej 3D geometrie
 
-  * Extract cross-section from imported 3D Mesh
+  * Vytvoriť priečny rez z importovanej 3D siete
 
-42.1.7. Defining 2D Cross-section
+42.1.7. Definovanie 2D priečneho rezu
 
-42.1.8. Generating 2D mesh
+42.1.8. Vytvorenie 2D siete
 
-42.1.9. Generating 3D Geometry
+42.1.9. Vytváranie 3D geometrie
 
-  * Revolve Settings
+  * Nastavenia Revolve
 
-  * Importing 3D Geometry
+  * Import 3D geometrie
 
-42.1.10. Generating 3D Mesh
+42.1.10. Vytvorenie 3D siete
 
-42.1.11. Orientation
+42.1.11. Orientácia
 
-42.1.12. Material Page
+42.1.12. Stránka s materiálmi
 
-42.1.13. Workpiece BCC
+42.1.13. Kryštálová mriežka obrobku
 
-41.1.14. Property
+41.1.14. Majetok
 
-42.1.15. Initialize
+42.1.15. Inicializácia
 
-42.1.16. Defining Driving Roll
+42.1.16. Definícia hnacieho valca
 
-  * Defining Driving Roll Orientation
+  * Určenie orientácie hnacieho valca
 
-  * Defining Driving Roll Movement
+  * Definícia pohybu hnacieho valca
 
-42.1.17. Defining Pressure Roll
+42.1.17. Definícia tlakového valca
 
-  * Pressure Roll Orientation
+  * Orientácia tlakového valca
 
-  * Defining Pressure Roll Movement
+  * Definovanie pohybu tlakového valca
 
-42.1.18. Defining Axial Roll
+42.1.18. Definícia axiálneho naklonenia
 
-  * Axial Roll Orientation
+  * Orientácia axiálneho valca
 
-  * Axial Roll Movement Page
+  * Stránka o axiálnom pohybe valca
 
-42.1.19. Axial Roll #2 Page
+42.1.19. Strana č. 2 – Axial Roll
 
-42.1.20. Positioning
+42.1.20. Polohovanie
 
-42.1.21. Scheduled positioning
+42.1.21. Plánované umiestnenie
 
-42.1.22. Contact
+42.1.22. Kontakt
 
-42.1.23. Stopping Controls for Ring Rolling Simulation
+42.1.23. Ovládacie prvky zastavenia pre simuláciu valcovania prstencov
 
-42.1.24. Step and remeshing controls for Ring Rolling
+42.1.24. Ovládacie prvky pre kroky a prepočítavanie siete pri valcovaní prstencov
 
-42.1.25. Simulation controls
+42.1.25. Ovládacie prvky simulácie
 
-  * Stability Control
+  * Kontrola stability
 
-  * Advanced Control
+  * Pokročilé ovládanie
 
-42.1.26. Generate DB
+42.1.26. Vytvorenie databázy
 
-42.1.27. Setting up Ring Rolling Operation in Batch mode
+42.1.27. Nastavenie prevádzky valcovania prstencov v dávkovom režime
 
-  * Workpiece–Ring is Read from DB
+  * Obrobok – prstenec sa načíta z databázy
 
-  * Extract Cross-section for Read from DB object
+  * Vybrať priečny rez pre objekt „Read from DB“
 
-  * Generating the Workpiece 2D Cross-section mesh
+  * Vytvorenie 2D siete priečneho rezu obrobku
 
-  * Generating Workpiece 3D Mesh
+  * Vytvorenie 3D siete obrobku
 
-42.1.28. Running Simulation
+42.1.28. Spustenie simulácie
 
-##  How to add the Ring Rolling Operation
+##  Ako pridať operáciu valcovania prsteňov
 
-Ring Rolling operation can be setup in Integrated Manufacturing Process environment that can be accessed from GUI Main. Create a new problem by either selecting File ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) New Problem or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. Select 3D Ring Rolling radio button under problem type and unit system. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button (see Fig. 42.1.1.). Integrated Manufacturing Process wizard will open, we can see that 3D Ring Rolling operation is added in Operation editor.
+Operáciu valcovania prstencov je možné nastaviť v prostredí integrovaného výrobného procesu, ku ktorému sa dostanete z hlavného okna grafického používateľského rozhrania. Novú úlohu vytvoríte buď výberom položky Súbor ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Nová úloha, alebo kliknutím na ikonu Nová úloha ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). V časti Typ úlohy a Systém jednotiek vyberte prepínač 3D valcovanie prstencov. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) (pozri obr. 42.1.1.). Otvorí sa sprievodca integrovaným výrobným procesom a v editore operácií uvidíte, že operácia 3D valcovanie prsteňov bola pridaná.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image001.jpg' | relative_url }})
 
-Adding Ring Rolling Operation from GUI Main
+Pridanie operácie valcovania prsteňov z hlavného okna grafického rozhrania
 
   
-We can also add Ring rolling operation into Integrated Manufacturing Process environment from the New Project pop-up when a new problem is opened in Integrated Manufacturing Process environment as shown in Fig. 42.1.2. Using “Copy Existing project” option, we can import previous saved projects as new project from the New Project pop-up.
+Operáciu valcovania prstencov môžeme do prostredia Integrovaného výrobného procesu pridať aj z kontextového menu „Nový projekt“, keď sa v tomto prostredí otvorí nový problém, ako je znázornené na obr. 42.1.2. Pomocou možnosti „Kopírovať existujúci projekt“ môžeme z kontextového menu „Nový projekt“ importovať predtým uložené projekty ako nové projekty.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image002.jpg' | relative_url }})
 
-Assign Project name and First Operation selection in New Project window
+V okne „Nový projekt“ zadajte názov projektu a vyberte prvú operáciu
 
-We can also add Ring Rolling operation to operation editor from explorer tab in Integrated Manufacturing Process environment, by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to Ring Rolling operation (see Fig. 42.1.3.) or by drag and drop Ring Rolling operation into operation editor window.   
-As the Ring Rolling operation is added into operation editor process selection page will be opened in property settings modification window.
+Operáciu „Ring Rolling“ môžeme do editora operácií pridať aj z karty „Explorer“ v prostredí integrovaného výrobného procesu, a to kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa operácie „Ring Rolling“ (pozri obr. 42.1.3.) alebo presunutím operácie „Ring Rolling“ do okna editora operácií pomocou funkcie drag and drop.   
+Keď sa operácia „Ring Rolling“ pridá do editora operácií, v okne na úpravu nastavení vlastností sa otvorí stránka výberu procesov.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image003.jpg' | relative_url }})
 
-Adding operation from Explorer Operation list
+Pridanie operácie zo zoznamu operácií v Průzkumníku
 
-Ring Rolling operation can also be added in batch mode as a part of multiple operation setup, for more details on this type of setup refer 42.1.27. Setting up Ring Rolling Operation in Batch mode.
+Operáciu valcovania prstencov je možné pridať aj v dávkovom režime ako súčasť nastavenia viacerých operácií; podrobnejšie informácie o tomto type nastavenia nájdete v bode 42.1.27. Nastavenie operácie valcovania prstencov v dávkovom režime.
 
-## Process Selection
+## Výber procesu
 
-In Process page user will be selecting the type of Rolling simulation to be performed (see Fig. 42.1.4.) by default the Ring Rolling process is select. If the user is interested in the Railroad wheel rolling process than we can select the respective process option as shown in the Fig. 42.1.5.
+Na stránke „Proces“ si používateľ vyberie typ simulácie valcovania, ktorá sa má vykonať (pozri obr. 42.1.4.). Predvolene je vybraný proces valcovania prstencov. Ak má používateľ záujem o proces valcovania železničných kolies, môže vybrať príslušnú možnosť procesu, ako je znázornené na obr. 42.1.5.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image004.jpg' | relative_url }})
 
-Process Page (Ring Rolling)
+Stránka procesu (valcovanie prstencov)
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image005.jpg' | relative_url }})
 
-Process Page (Railroad Wheel Rolling)
+Stránka procesu (valcovanie železničných kolies)
 
-## Simulation setup
+## Nastavenie simulácie
 
-In Simulation setup page user will be specifying the process settings to be used for problem setup.  
-**3D model type:** In 3D model type we have options to select Whole part or symmetry depending on the geometry symmetry to be modelled in the setup.  
-**Thermal calculations:** In thermal calculations tab (see Fig. 42.1.6.) options are available to select the object types on which thermal calculations need to be performed. 
+Na stránke „Nastavenie simulácie“ bude používateľ zadávať nastavenia procesu, ktoré sa majú použiť pri definovaní úlohy.  
+**Typ 3D modelu:** V položke „Typ 3D modelu“ máme na výber možnosti „Celý diel“ alebo „Symetria“ v závislosti od symetrie geometrie, ktorú chceme v nastavení modelovať.  
+**Tepelné výpočty:** Na karte „Tepelné výpočty“ (pozri obr. 42.1.6.) sú k dispozícii možnosti na výber typov objektov, na ktorých sa majú vykonať tepelné výpočty. 
 
-  * **Constant temperature (isothermal)** : When user selects this option then simulation does not perform any thermal calculations. User can use this option when temperature change in process is negligible.
+  * **Konštantná teplota (izotermická)**: Ak používateľ zvolí túto možnosť, simulácia nevykonáva žiadne tepelné výpočty. Túto možnosť môže používateľ využiť v prípade, že zmena teploty v procese je zanedbateľná.
 
-  * **Workpiece only (non-isothermal):** When user selects this option then simulation does thermal calculation only on workpiece, this option is useful in most of the cases where user is interested in temperature change of the workpiece only.
+  * **Iba obrobok (neizotermické):** Ak používateľ zvolí túto možnosť, simulácia vykoná tepelný výpočet iba pre obrobok; táto možnosť je užitočná vo väčšine prípadov, keď používateľa zaujíma iba zmena teploty obrobku.
 
-  * **Workpiece and rolls (non-isothermal):** This option can be used when thermal calculations need to be done for both workpiece and rolls to observe change in temperature of these objects.
+  * **Obrobok a valce (neizotermické):** Túto voľbu je možné použiť v prípade, že je potrebné vykonať tepelné výpočty tak pre obrobok, ako aj pre valce, s cieľom sledovať zmeny teploty týchto objektov.
 
-**Grain modeling:** If user is interested in Grain size output, he can select the Grain modeling check box which activates grain size calculation. Grain modeling is available only for non-isothermal process.
+**Modelovanie zŕn:** Ak má používateľ záujem o výstup týkajúci sa veľkosti zŕn, môže zaškrtnúť políčko „Modelovanie zŕn“, čím sa aktivuje výpočet veľkosti zŕn. Modelovanie zŕn je k dispozícii iba pre neizotermický proces.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image006.jpg' | relative_url }})
 
-Simulation setup Page
+Stránka s nastaveniami simulácie
 
-## Material List
+## Zoznam materiálov
 
-Material page is used to create a new material or load material from database and if necessary, modify its properties by selecting respective material from the operation tree. From Material List page, user can load the material using Import Material data from a File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or Using Load form Library option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (see Fig. 42.1.7.). User can also save the material using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}).
+Stránka „Materiál“ slúži na vytvorenie nového materiálu alebo načítanie materiálu z databázy a v prípade potreby na úpravu jeho vlastností výberom príslušného materiálu zo stromu operácií. Na stránke Zoznam materiálov môže používateľ načítať materiál pomocou možnosti Importovať údaje o materiáli zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Načítať z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (pozri obr. 42.1.7.). Používateľ môže materiál tiež uložiť pomocou ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image007.jpg' | relative_url }})
 
-Material list Page
+Zoznam materiálov – Strana
 
-## Object page
+## Stránka objektu
 
-Object page lists the objects that can be used based on the process type selected in the “Process” page. Objects available for Ring Rolling process (see Fig. 42.1.8.) are,
+Na stránke „Objekty“ je uvedený zoznam objektov, ktoré je možné použiť na základe typu procesu vybraného na stránke „Proces“. Objekty dostupné pre proces valcovania do prstencov (pozri obr. 42.1.8.) sú:
 
-  * Workpiece – Ring, 
+  * Obrobok – prsteň, 
 
-  * Driving Roll 
+  * Hnací valec 
 
-  * Pressure Roll (Mandrel)
+  * Tlakový valec (trn)
 
-  * 2 Axial rolls 
+  * 2 axiálne valce 
 
-By default, workpiece – Ring, Driving Roll and Pressure Roll (Mandrel) are selected and are mandatory for setting up the Ring Rolling Process. If user requires additional objects then respective check boxes can be checked for Axial rolls, Secondary driving roll and Secondary pressure roll. 
+V predvolenom nastavení sú vybrané obrobok – prstenec, hnací valec a tlakový valec (trn), ktoré sú povinné pre nastavenie procesu valcovania prstencov. Ak používateľ potrebuje ďalšie objekty, môže zaškrtnúť príslušné políčka pre axiálne valce, sekundárny hnací valec a sekundárny tlakový valec. 
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image008.jpg' | relative_url }})
 
-Object Page (Ring Rolling)
+Stránka objektu (valcovanie prsteňov)
 
-### Objects for Symmetry model type setup
+### Objekty pre nastavenie typu modelu „Symetria“
 
-For symmetry model we will be modelling only one half of the setup hence the object list is as shown in the Fig. 42.1.9.
+Vzhľadom na symetrický model budeme modelovať iba jednu polovicu usporiadania, preto je zoznam objektov taký, ako je znázornené na obr. 42.1.9.
 
   
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image009.jpg' | relative_url }})
 
-Objects page for symmetry model
+Stránka objektov pre symetrický model
 
-## Defining Workpiece – Ring Object
+## Definícia obrobku – prstencový objekt
 
-We can define the object name, temperature and Axis/Center of a workpiece in this page as shown in the Fig. 42.1.10. User can import objects from other databases or key files using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) options or save the object data using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) options.  
-In case user is importing the 3D object from a file then ![]({{ '/assets/icons/pre_icons/mo_extract_cross_section_label.jpg' | relative_url }}) will be enabled so that user can extract cross-section of the imported object (See Fig. 42.1.11.) and generate 3D Ring with extracted cross-section. ![]({{ '/assets/icons/pre_icons/mo_extract_cross_section_label.jpg' | relative_url }}) is also active when 3D Geometry of the Ring is imported. Axis/Center for the imported object can be calculated using the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) button. 
+Na tejto stránke môžeme definovať názov objektu, teplotu a os/stred obrobku, ako je znázornené na obr. 42.1.10. Používateľ môže importovať objekty z iných databáz alebo kľúčových súborov pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) alebo uložiť údaje o objektoch pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}).  
+V prípade, že používateľ importuje 3D objekt zo súboru, bude funkcia ![]({{ '/assets/icons/pre_icons/mo_extract_cross_section_label.jpg' | relative_url }}) aktivovaná, aby mohol vytvoriť priečny rez importovaného objektu (pozri obr. 42.1.11.) a vygenerovať 3D prstenec s vytvoreným priečnym rezom. Funkcia ![]({{ '/assets/icons/pre_icons/mo_extract_cross_section_label.jpg' | relative_url }}) je aktívna aj pri importe 3D geometrie prstena. Os/stred importovaného objektu je možné vypočítať pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image010.jpg' | relative_url }})
 
-Workpiece-Ring Page
+Stránka „Obrobok – krúžok“
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image011.jpg' | relative_url }})
 
-Extracting cross-section from the 3D Shape
+Extrahovanie priečneho rezu z 3D tvaru
 
-### Extract cross-section from imported 3D Geometry
+### Vytvorenie priečneho rezu z importovanej 3D geometrie
 
-  * **Extract cross-section at degree:** This option is used when user wants to extract the cross-section from imported geometry at specified angle User can enter the angle value and the cross-section at that angle is highlighted on the Ring in the display area, see Fig. 42.1.12.
+  * **Vytvorenie priečneho rezu pod určitým uhlom:** Táto voľba sa používa v prípade, že používateľ chce z importovanej geometrie vytvoriť priečny rez pod zadaným uhlom. Používateľ môže zadať hodnotu uhla a priečny rez pod týmto uhlom sa v zobrazenom priestore na prstenci zvýrazní, pozri obr. 42.1.12.
 
-  * **Extract Cross-section from slices and use their average:** This option is selected for a non-uniform ring when user would like to divide the imported geometry object into specified number of slices and extract cross-section from each slice and use average size as cross-section to generate 3D workpiece. Slices and cross-sections are displayed in display area, see Fig. 42.1.13.
+  * **Extrahovať priečny rez z rezov a použiť ich priemer:** Táto možnosť sa volí v prípade nerovnomerného prstena, keď chce používateľ rozdeliť importovaný geometrický objekt na zadaný počet rezov, z každého rezu extrahovať priečny rez a použiť priemernú veľkosť ako priečny rez na vytvorenie 3D obrobku. Rezy a priečne rezy sa zobrazujú v zobrazovacej oblasti, pozri obr. 42.1.13.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image012.jpg' | relative_url }})
 
-Extracting cross-section at degree
+Výpočet prierezu pri uhle
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image013.jpg' | relative_url }})
 
-Extracting multiple cross-section from slices and use their average
+Extrakcia viacerých priečnych rezov z rezon a použitie ich priemeru
 
 ###   
-Extract cross-section from imported 3D Mesh
+Vytvorenie priečneho rezu z importovanej 3D siete
 
-  * **Extract cross-section at layer no.** : This option is used when user wants to extract the cross-section from specified layer. User can enter the layer number and the respective layer is highlighted on the ring in the display area, see Fig. 42.1.14.
+  * **Extrahovať priečny rez z vrstvy č.** : Táto voľba sa používa v prípade, že používateľ chce extrahovať priečny rez zo špecifikovanej vrstvy. Používateľ môže zadať číslo vrstvy a príslušná vrstva sa na prstenci v zobrazovacej oblasti zvýrazní, pozri obr. 42.1.14.
 
-  * **Extract Cross-section from Layers and use their average** : This option is selected for a non-uniform ring when user would like to extract multiple cross-sections from all layers and use average size as cross-section to generate ring, number of layers available in the imported object is displayed in display area, see Fig. 42.1.15.
+  * **Vytvoriť priečny rez z vrstiev a použiť ich priemernú hodnotu**: Táto voľba sa volí v prípade nerovnomerného prstena, keď chce používateľ extrahovať viacero priečnych rezov zo všetkých vrstiev a použiť priemernú veľkosť ako priečny rez na vytvorenie prstena; počet vrstiev dostupných v importovanom objekte sa zobrazuje v zobrazovacej oblasti, pozri obr. 42.1.15.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image014.jpg' | relative_url }})
 
-Extracting cross-section at layer no.
+Výrez priečneho rezu vo vrstve č.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image015.jpg' | relative_url }})
 
-Extracting multiple cross-section from layers and use their average
+Extrahovanie viacerých prierezov z vrstiev a použitie ich priemeru
 
-  * **Diameter measuring position:**
+  * **Poloha merania priemeru:**
 
-    * **Outer diameter** : This option is used when user wants to stop the Ring Rolling simulation when the outer diameter of the Ring reaches the specified outer value at selected location as shown in Fig. 42.1.16.
+    * **Vonkajší priemer**: Táto voľba sa používa v prípade, že používateľ chce zastaviť simuláciu valcovania prstena v okamihu, keď vonkajší priemer prstena dosiahne zadanú hodnotu na vybranom mieste, ako je znázornené na obr. 42.1.16.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image056.jpg' | relative_url }})
 
-Measured outer diameter of workpiece
+Zmeraný vonkajší priemer obrobku
 
-  * **Inner diameter** : This option is used when user wants to stop the Ring Rolling simulation when the inner diameter of the Ring reaches the specified outer value at selected location as shown in Fig. 42.1.17.
+  * **Vnútorný priemer**: Táto voľba sa používa v prípade, že používateľ chce zastaviť simuláciu valcovania prstena v okamihu, keď vnútorný priemer prstena dosiahne zadanú vonkajšiu hodnotu na vybranom mieste, ako je znázornené na obr. 42.1.17.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image057.jpg' | relative_url }})
 
-Measured inner diameter of workpiece
+Zmeraný vnútorný priemer obrobku
 
-  * **Z position** : Using this field, user can define the diameter measurement start position along the Z-axis of the Workpiece - Ring height as show in Fig. 42.1.18.
+  * **Poloha Z**: Pomocou tohto poľa môže používateľ určiť počiatočnú polohu merania priemeru pozdĺž osi Z obrobku – výška prstena, ako je znázornené na obr. 42.1.18.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image058.jpg' | relative_url }})
 
-Z-position Diameter measuring position
+Poloha Z – poloha merania priemeru
 
-**Note:** if we won’t turn on the Diameter measuring position checkbox, then the diameter definition is Max outer diameter. If we turn on the diameter measuring position checkbox, then the selected diameter is used for Stopping controls as Measured outer diameter of workpiece/Measured inner diameter of workpiece.
+**Poznámka:** Ak nezakrúžkujeme políčko „Poloha merania priemeru“, ako definícia priemeru sa použije „Maximálny vonkajší priemer“. Ak políčko „Poloha merania priemeru“ zakrúžkujeme, pre ovládacie prvky zastavenia sa použije vybraný priemer, a to buď „Nameraný vonkajší priemer obrobku“, alebo „Nameraný vnútorný priemer obrobku“.
 
-## Defining 2D Cross-section
+## Definovanie 2D priečneho rezu
 
-The user can create the geometry using the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) options as shown in the Fig. 42.1.19. The user can also import the 2D geometry using the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option and save the 2D geometry using the ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) options. For more explanation on different options refer [12.1. 2D Geometry Data Defining ](/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) and [12.2. 2D Geometry Data Editing](/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/).
+Používateľ môže vytvoriť geometriu pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}), ako je znázornené na obr. 42.1.19. Používateľ môže tiež importovať 2D geometriu pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a uložiť 2D geometriu pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). Ďalšie vysvetlenia k jednotlivým voľbám nájdete v častiach [12.1. 2D Geometry Data Defining ](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) a [12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image016.jpg' | relative_url }})
 
-2D Cross Section Page
+Stránka s 2D rezom
 
-## Generating 2D mesh
+## Vytvorenie 2D siete
 
-We can generate the 2D Cross Section mesh by defining the number of elements in guided mode as shown in Fig. 42.1.20. Advanced options to control 2D mesh generation can be accessed using expert mode toggle button from tool bar, see Fig. 42.1.22. For more information on advanced options please refer [13.1. 2D Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/).   
-**Use coarse internal mesh** : In Guided Mode user is having this check box to generate coarse internal mesh as shown in Fig. 42.1.21.   
-**Ratio to largest element** : User can control the element size relatively using this setting  
-**Generate Mesh** ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}): Once user defines the mesh settings user can generate 2D Mesh using this button. 
+Sieť 2D priečneho rezu môžeme vytvoriť tak, že v režime s návodom zadáme počet prvkov, ako je znázornené na obr. 42.1.20. K pokročilým nastaveniam na riadenie vytvárania 2D siete sa dostanete pomocou prepínača „expertný režim“ na paneli nástrojov, pozri obr. 42.1.22. Ďalšie informácie o pokročilých možnostiach nájdete v [13.1. 2D Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/).   
+**Použiť hrubú vnútornú sieť**: V režime s návodom má používateľ k dispozícii toto zaškrtávacie políčko na vytvorenie hrubej vnútornej siete, ako je znázornené na obr. 42.1.21.   
+**Pomer k najväčšiemu prvku**: Pomocou tohto nastavenia môže používateľ relatívne ovládať veľkosť prvkov  
+**Vytvoriť sieť** ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}): Po nastavení parametrov siete môže používateľ pomocou tohto tlačidla vytvoriť 2D sieť. 
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image017.jpg' | relative_url }})
 
-2D Mesh Page (Guided Mode)
+Stránka 2D siete (režim s návodom)
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image018.jpg' | relative_url }})
 
-2D Mesh generation using coarse internal mesh (Guided Mode)
+Vytvorenie 2D siete pomocou hrubej vnútornej siete (režim s vedením)
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image019.jpg' | relative_url }})
 
-2D Mesh Page (Expert Mode)
+Stránka 2D siete (režim pre pokročilých)
 
-## Generating 3D Geometry
+## Vytváranie 3D geometrie
 
-User can convert the defined 2D cross section to 3D Geometry by using ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }})option (See Fig. 42.1.23.), settings for converting 2D into 3D by revolving can be defined in Revolve from 2D page as shown in Fig. 42.1.23. and Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to convert. For more information on other options please refer [12.3. 3D Geometry data modelling.](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Používateľ môže pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }}) previesť definovaný 2D priečny rez na 3D geometriu (pozri obr. 42.1.23.), nastavenia pre konverziu 2D na 3D otočením je možné definovať na stránke „Otočiť z 2D“, ako je znázornené na obr. 42.1.23, a na konverziu kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie o ostatných možnostiach nájdete v [12.3. 3D Geometry data modelling.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
 
-### Revolve Settings
+### Nastavenia Revolve
 
-**Digitization** : “Length tolerance fraction”/ “Maximum allowable angle”/ “Minimum allowable angle” can be used to control digitization points on the 2D cross-section.  
-**Number of Layers in hoop direction** : User can define number of layers along the rotation of the 2D cross-section.  
-**Center and Axis** : Center of the Ring object and axis to be used for revolving the 2D cross-section can be defined here.
+**Digitalizácia**: Na riadenie bodov digitalizácie na 2D priečnom reze je možné použiť „podiel tolerancie dĺžky“ / „maximálny prípustný uhol“ / „minimálny prípustný uhol“.  
+**Počet vrstiev v smere obruče**: Používateľ môže určiť počet vrstiev pozdĺž rotácie 2D priečneho rezu.  
+**Stred a os**: Tu je možné definovať stred objektu „Ring“ a os, ktorá sa má použiť na otočenie 2D priečneho rezu.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image020.jpg' | relative_url }})
 
-Workpiece- Ring 3D Geometry page
+Stránka „3D geometria obrobku – prstenec“
 
 ###   
-Importing 3D Geometry
+Import 3D geometrie
 
-If user has loaded a 3D geometry of the workpiece from a file, then ![]({{ '/assets/icons/pre_icons/mo_extract_cross_section_label.jpg' | relative_url }}) option can be used to extract the cross-section from the 3D Geometry and use it to revolve into 3D Geometry.   
-In case of non-uniform ring object, user can import 3D Geometry and visit 3D Mesh page directly to generate 3D Mesh and retain non-uniformity in the workpiece.  
-If user wants to extract cross-section for a non-uniform ring object, then user can go back to Workpiece – object page and use ![]({{ '/assets/icons/pre_icons/mo_extract_cross_section_label.jpg' | relative_url }}) from there to generate workpiece 3D geometry with average cross-section.
+Ak používateľ načítal 3D geometriu obrobku zo súboru, môže použiť voľbu ![]({{ '/assets/icons/pre_icons/mo_extract_cross_section_label.jpg' | relative_url }}) na extrakciu priečneho rezu z 3D geometrie a jeho následné otočenie do 3D geometrie.   
+V prípade nerovnomerného prstencového objektu môže používateľ importovať 3D geometriu a priamo prejsť na stránku 3D siete, kde môže vygenerovať 3D sieť a zachovať nerovnomernosť obrobku.  
+Ak chce používateľ vytvoriť priečny rez pre nerovnomerný prstencový objekt, môže sa vrátiť na stránku „Obrobok – objekt“ a pomocou funkcie ![]({{ '/assets/icons/pre_icons/mo_extract_cross_section_label.jpg' | relative_url }}) z tejto stránky vygenerovať 3D geometriu obrobku s priemerným priečnym rezom.
 
-## Generating 3D Mesh
+## Vytvorenie 3D siete
 
-Once the 2D Cross-section and 3D geometry are define user can generate 3D mesh. The user must define the number of revolving sections along the hoop’s direction to generate 3D mesh, see Fig. 42.1.24. Depending on the geometry of the workpiece user can select the “Revolving method” to generate workpiece 3D Mesh.
+Po definovaní 2D priečneho rezu a 3D geometrie môže používateľ vygenerovať 3D sieť. Na vygenerovanie 3D siete musí používateľ určiť počet otáčajúcich sa rezov v smere obruče, pozri obr. 42.1.24. V závislosti od geometrie obrobku môže používateľ zvoliť „metódu otáčania“ na vytvorenie 3D siete obrobku.
 
-  * **Revolve with constant cross-section dimension:** This option is used to generate the 3D mesh if the workpiece is having uniform cross section. 2D Cross-section must be defined or extracted in case of imported object/geometry. User can view the cross-section using “Show cross-section” checkbox.
+  * **Rotácia s konštantným prierezom:** Táto voľba sa používa na vytvorenie 3D siete v prípade, že obrobok má rovnomerný prierez. V prípade importovaného objektu/geometrie je potrebné definovať alebo extrahovať 2D prierez. Používateľ si môže prierez zobraziť pomocou zaškrtávacieho políčka „Zobraziť prierez“.
 
-  * **Revolve to fit 3D shape:** This option is used to generate the 3D mesh for non-uniform cross section ring. 3D Mesh will be generated using the 3D geometry/mesh imported as shown in Fig. 42.1.25. When this option is used, 2D cross-section is extracted automatically and revolved with varying cross section shape.
+  * **Otočenie tak, aby zodpovedalo 3D tvaru:** Táto voľba sa používa na vytvorenie 3D siete pre prstenec s nerovnomerným prierezom. 3D sieť sa vytvorí na základe importovanej 3D geometrie/siete, ako je znázornené na obr. 42.1.25. Pri použití tejto možnosti sa automaticky extrahuje 2D prierez a otočí sa podľa meniaceho sa tvaru prierezu.
 
-**Revolving Parameters:** “Number of revolving sections” along the hoop’s direction can be defined here.  
-**Generate Mesh:** User need to click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button to generate 3D Mesh based on the settings defined.
+**Parametre otáčania:** Tu je možné nastaviť „počet otáčajúcich sa úsekov“ v smere obruče.  
+**Vytvorenie siete:** Používateľ musí kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), aby sa na základe zadaných nastavení vytvorila 3D sieť.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image021.jpg' | relative_url }})
 
-3D Mesh generation using revolve with constant cross-section dimension
+Vytvorenie 3D siete pomocou operácie „revolve“ s konštantným rozmerom prierezu
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image022.jpg' | relative_url }})
 
-3D Mesh generation using revolve to fit 3D shape
+Vytvorenie 3D siete pomocou funkcie „revolve“ tak, aby sa prispôsobila 3D tvaru
 
-## Orientation
+## Orientácia
 
-If the imported object axis is inclined to +Z axis, then user can align the axis to +Z axis using ![]({{ '/assets/icons/pre_icons/mo_orient_to_+z_button.jpg' | relative_url }}) button. The orientation angle is automatically calculated and displayed as as shown in the Fig. 42.1.26.
+Ak je os importovaného objektu naklonená voči osi +Z, môže ju používateľ vyrovnať s osou +Z pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_orient_to_+z_button.jpg' | relative_url }}). Uhol orientácie sa automaticky vypočíta a zobrazí tak, ako je znázornené na obr. 42.1.26.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image023.jpg' | relative_url }})
 
-Workpiece Orientation page
+Stránka „Orientácia obrobku“
 
-## Material Page
+## Stránka s materiálmi
 
-In material page, all the materials added to material list are displayed (as shown in Fig. 42.1.27.). User can select the required material to assign it to respective object. If the desired material is not available in the list, then the user can load the material in object material page using Import Material data from a File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or Using Load form Library option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). User can also create new material if the material is not available in DEFORM library using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). User can delete the material from list using ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) or edit the material data using ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}). Modified / newly defined Material can be saved using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}).
+Na stránke materiálov sa zobrazujú všetky materiály pridané do zoznamu materiálov (ako je znázornené na obr. 42.1.27.). Používateľ môže vybrať požadovaný materiál a priradiť ho k príslušnému objektu. Ak požadovaný materiál nie je v zozname k dispozícii, môže ho používateľ načítať na stránke materiálov objektu pomocou funkcie Importovať údaje o materiáli zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Načítať z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Ak materiál nie je k dispozícii v knižnici DEFORM, môže používateľ vytvoriť nový materiál pomocou ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Používateľ môže materiál zo zoznamu odstrániť pomocou ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) alebo údaje o materiáli upraviť pomocou ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}). Upravený alebo novo definovaný materiál je možné uložiť pomocou ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image024.jpg' | relative_url }})
 
-Assigning the material to workpiece
+Priradenie materiálu k obrobku
 
-## Workpiece BCC
+## Obrobok BCC
 
-In Boundary conditions page, user can assign various boundary constraints to an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. Commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer, symmetry and velocity as shown in the Fig. 42.1.28. BCCs are automatically defined while generating 3D Mesh based on the Simulation setup in Ring Rolling Template, if user wants to modify this then options available in this page can be used. For more information on these options please refer [14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+Na stránke „Okrajové podmienky“ môže používateľ objektu priradiť rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako okraj objektu interaguje s ostatnými objektmi a s prostredím. Medzi bežne používané okrajové podmienky patrí výmena tepla s prostredím pri simuláciách zahŕňajúcich prenos tepla, symetria a rýchlosť, ako je znázornené na obr. 42.1.28. Hraničné podmienky sa automaticky definujú pri generovaní 3D siete na základe nastavení simulácie v šablóne valcovania prstencov. Ak ich chce používateľ upraviť, môže využiť možnosti dostupné na tejto stránke. Ďalšie informácie o týchto možnostiach nájdete v [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image025.jpg' | relative_url }})
 
-Workpiece BCC
+Obrobok BCC
 
-## Property
+## Nehnuteľnosť
 
-Miscellaneous object parameters, which affect either thermo-mechanical behaviour of the object or numerical solution behaviour are specified in the Object-Properties window. (See Fig. 42.1.29.). Volume compensation is used most in Ring Rolling and can be activated by selecting one of the options under “Target Volume” and calculating current object volume using ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) button. For more information, please refer [16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/).
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 42.1.29.) Objemová kompenzácia sa najčastejšie používa pri valcovaní prstencov a je možné ju aktivovať výberom jednej z možností v časti „Cieľový objem“ a výpočtom aktuálneho objemu objektu pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}). Ďalšie informácie nájdete v [16\. Object properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image026.jpg' | relative_url }})
 
-Property page
+Stránka nehnuteľnosti
 
-## Initialize
+## Inicializácia
 
-In Initialize window, few state variables that are commonly used such as temperature, strain, stress, damage, velocity, displacement, density and microstructure grain size and particle size are made available for initialization. In multiple ring rolling operation if user wants to initialize the temperature, strain or grain size then user can use this initialization page.
+V okne „Initialize“ (Inicializácia) sú k dispozícii na inicializáciu niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posun, hustota, veľkosť zŕn mikrostruktúry a veľkosť častíc. Ak chce používateľ pri valcovaní s viacerými prstencami inicializovať teplotu, deformáciu alebo veľkosť zŕn, môže použiť túto stránku inicializácie.
 
   
-User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 42.1.30. shows various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1 Node data window](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [11.2 Element data window](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 42.1.30. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien uzlov a prvkov. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1 Node data window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [11.2 Element data window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image027.jpg' | relative_url }})
 
-Initialize page
+Načítanie stránky
 
-## Defining Driving Roll
+## Definícia hnacieho valca
 
-Driving roll is a rigid object in Ring Rolling template. The temperature, center and axis can be set in Driving roll object page as shown in Fig. 42.1.31. If the simulation setup type is of non-isothermal and temperature calculations are done even on rolls then Driving Roll must have mesh to calculate temperature of this object. The driving roll geometry definition and mesh definition is similar to the workpiece. For more information on defining geometry and mesh please refer 42.1.6. Defining Workpiece-Ring Object, 42.1.7. Defining 2D Cross-section, 42.1.8. Generating 2D Mesh, 42.1.9. Generating 3D Geometry, 42.1.10. Generating 3D Mesh and 42.1.12. Material Page.
+Hnací valec je tuhý objekt v šablóne „Ring Rolling“. Teplotu, stred a os je možné nastaviť na stránke objektu „Hnací valec“, ako je znázornené na obr. 42.1.31. Ak je typ nastavenia simulácie neizotermický a výpočty teploty sa vykonávajú aj na valcoch, hnací valec musí mať sieť, aby bolo možné vypočítať teplotu tohto objektu. Definícia geometrie hnacieho valca a definícia siete sú podobné ako v prípade obrobku. Ďalšie informácie o definovaní geometrie a siete nájdete v častiach 42.1.6. Definovanie objektu obrobku – prstena, 42.1.7. Definovanie 2D priečneho rezu, 42.1.8. Vytvorenie 2D siete, 42.1.9. Vytvorenie 3D geometrie, 42.1.10. Vytvorenie 3D siete a 42.1.12. Stránka materiálu.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image028.jpg' | relative_url }})
 
-Driving Roll page
+Stránka „Driving Roll“
 
 ###   
-Defining Driving Roll Orientation
+Určenie orientácie hnacieho valca
 
-If the Driving roll that is created or imported is not at right place, then Orientation page under Driving roll object in object tree can be used to position the roll with respect to workpiece along the axis as shown in the Fig. 42.1.33. User can position roll with respect to object center or bottom face. Based on the parameters defined the current object is moved and interference positioned with workpiece, the interference direction depends on the current object type like Driving Roll, Pressure Roll and Axial Roll.  
-**Set relative distance between object center:** This option is used to position the driving roll by defining the vertical distance between the current object center and workpiece center along with direction of measurement using “Current object’s relative location” (+Z or -Z), see Fig. 42.1.33.  
-**Set relative distance between object bottom faces:** This option is used to position the driving roll by defining the vertical distance between the current object bottom face and workpiece bottom face along with direction of measurement using “Current object’s relative location” (+Z or -Z), see Fig. 42.1.38.  
-**Reset** : User can use ![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}) button to go back to the original position before entering the orientation page.
+Ak vytvorený alebo importovaný hnací valec nie je na správnom mieste, je možné použiť stránku „Orientácia“ v rámci objektu „Hnací valec“ v stromovej štruktúre objektov na umiestnenie valca vo vzťahu k obrobku pozdĺž osi, ako je znázornené na obr. 42.1.33. Používateľ môže valec umiestniť vzhľadom na stred objektu alebo na spodnú plochu. Na základe definovaných parametrov sa aktuálny objekt posunie a kolízia sa umiestni voči obrobku; smer kolízie závisí od aktuálneho typu objektu, ako je hnací valec, tlakový valec a axiálny valec.  
+**Nastavenie relatívnej vzdialenosti od stredu objektu:** Táto voľba slúži na umiestnenie hnacieho valca tak, že sa definuje vertikálna vzdialenosť medzi stredom aktuálneho objektu a stredom obrobku spolu so smerom merania pomocou možnosti „Relatívna poloha aktuálneho objektu“ (+Z alebo -Z), pozri obr. 42.1.33.  
+**Nastavenie relatívnej vzdialenosti medzi spodnými plochami objektov:** Táto voľba slúži na umiestnenie hnacieho valca tak, že sa definuje vertikálna vzdialenosť medzi spodnou plochou aktuálneho objektu a spodnou plochou obrobku spolu so smerom merania pomocou „Relatívnej polohy aktuálneho objektu“ (+Z alebo -Z), pozri obr. 42.1.38.  
+**Reset**: Používateľ môže pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}) vrátiť zariadenie do pôvodnej polohy pred otvorením stránky s nastavením orientácie.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image029.jpg' | relative_url }})
 
-Driving Roll before orientation
+Vodiaci valec pred orientáciou
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image030.jpg' | relative_url }})
 
-Driving Roll after orientation
+Vodíci valec po orientácii
 
-### Defining Driving Roll Movement
+### Definícia pohybu hnacieho valca
 
-In Ring Rolling template the Driving Roll can have both translation and rotational movement as shown in Fig. 42.1.34. Movement must be defined using options available in Guided Mode. 
+V šablóne „Ring Rolling“ môže hnací valec vykonávať ako posuvný, tak aj rotačný pohyb, ako je znázornené na obr. 42.1.34. Pohyb je potrebné definovať pomocou možností dostupných v režime „Guided Mode“. 
 
-Translation movement can be defined as speed or Force. Speed or Force can be defined as constant, Function of time or Function of Diameter (Ring External Diameter). The movement direction is fixed in Ring Rolling template and cannot be modified, see Fig. 42.1.34.
+Pohyb pri preklade možno definovať ako rýchlosť alebo silu. Rýchlosť alebo silu možno definovať ako konštantu, funkciu času alebo funkciu priemeru (vonkajší priemer prstena). Smer pohybu je v šablóne na valcovanie prstencov pevne stanovený a nie je možné ho zmeniť, pozri obr. 42.1.34.
 
-Rotational movement can be defined as Angular Velocity or Torque. Angular velocity or Torque can be defined as constant, Function of time or Function of angle (rotation angle), see Fig. 42.1.35.
+Rotačný pohyb možno definovať ako uhlovú rýchlosť alebo krútiaci moment. Uhlovú rýchlosť alebo krútiaci moment možno definovať ako konštantu, funkciu času alebo funkciu uhla (uhla otáčania), pozri obr. 42.1.35.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image031.jpg' | relative_url }})
 
-Translation Movement Controls (For Guided Mode)
+Ovládacie prvky pre posun prekladu (pre režim s navádzaním)
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image032.jpg' | relative_url }})
 
-Rotation Movement Controls (For Guided Mode)
+Ovládacie prvky rotačného pohybu (pre režim s navádzaním)
 
-## Defining Pressure Roll
+## Definícia tlakového valca
 
-Pressure roll is a rigid object in Ring Rolling template. The temperature, center and axis can be set in Pressure roll object page as shown in Fig. 42.1.36. If the simulation setup type is of non-isothermal and temperature calculations are done even on rolls then Pressure Roll must have mesh to calculate temperature of this object. The pressure roll geometry definition and mesh definition are similar to the workpiece. For more information on defining geometry and mesh please refer 42.1.6. Defining Workpiece-Ring Object, 42.1.7. Defining 2D Cross-section, 42.1.8. Generating 2D Mesh, 42.1.9. Generating 3D Geometry, 42.1.10. Generating 3D Mesh and 42.1.12. Material Page.
+Tlakový valec je tuhý objekt v šablóne „Ring Rolling“. Teplotu, stred a os je možné nastaviť na stránke objektu „Tlakový valec“, ako je znázornené na obr. 42.1.36. Ak je typ nastavenia simulácie neizotermický a výpočty teploty sa vykonávajú aj na valcoch, musí mať tlakový valec sieť, aby bolo možné vypočítať teplotu tohto objektu. Definícia geometrie tlakového valca a definícia siete sú podobné ako v prípade obrobku. Ďalšie informácie o definovaní geometrie a siete nájdete v častiach 42.1.6. Definovanie objektu obrobku – prstena, 42.1.7. Definovanie 2D priečneho rezu, 42.1.8. Vytvorenie 2D siete, 42.1.9. Vytvorenie 3D geometrie, 42.1.10. Vytvorenie 3D siete a 42.1.12. Stránka materiálu.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image033.jpg' | relative_url }})
 
-Pressure Roll page
+Stránka o tlakových valcoch
 
 ###   
-Pressure Roll Orientation
+Orientácia tlakového valca
 
-Similar to Driving Roll, Pressure Roll can be positioned with respect to workpiece as shown in the Fig. 42.1.37 & Fig. 42.1.38. For more information on positioning options please refer Driving Roll Orientation.
+Podobne ako hnací valec, aj tlakový valec je možné umiestniť vo vzťahu k obrobku tak, ako je znázornené na obr. 42.1.37 a obr. 42.1.38. Ďalšie informácie o možnostiach umiestnenia nájdete v časti „Orientácia hnacieho valca“.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image034.jpg' | relative_url }})
 
-Pressure Roll before orientation
+Tlakový valec pred orientáciou
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image035.jpg' | relative_url }})
 
-Pressure Roll after orientation
+Tlakový valec po orientácii
 
 ###   
-Defining Pressure Roll Movement
+Definícia pohybu tlakového valca
 
-Similar to a Driving Roll, the Pressure Roll can have both translation and rotational movement as shown in Fig. 42.1.39. Movement must be defined using options available in Guided Mode.
+Podobne ako hnací valec môže aj tlakový valec vykonávať posuvný aj rotačný pohyb, ako je znázornené na obr. 42.1.39. Pohyb je potrebné definovať pomocou možností dostupných v režime s vedením.
 
-Translation movement can be defined as speed, Path or PID. Speed can be defined as constant, Function of time or Function of Diameter. Path can be defined "Stroke(Y) as Function of Time". PID type movement can be used to define the movement based on the ring growth and can be defined as "Ring growing speed as Function of diameter". The direction of movement is fixed in Ring Rolling template and cannot be modified, see Fig. 42.1.39.
+Pohyb prekladu možno definovať ako rýchlosť, dráhu alebo PID. Rýchlosť možno definovať ako konštantnú, ako funkciu času alebo ako funkciu priemeru. Dráhu možno definovať ako „zdvih (Y) ako funkciu času“. Pohyb typu PID sa môže použiť na definovanie pohybu na základe rastu prstena a môže byť definovaný ako „rýchlosť rastu prstena ako funkcia priemeru“. Smer pohybu je v šablóne valcovania prstena pevne stanovený a nemožno ho meniť, pozri obr. 42.1.39.
 
-Rotational movement can be defined as Angular Velocity or Torque. Angular velocity or Torque can be defined as constant, Function of time or Function of angle (rotation angle), see Fig. 42.1.39.
+Rotačný pohyb možno definovať ako uhlovú rýchlosť alebo krútiaci moment. Uhlovú rýchlosť alebo krútiaci moment možno definovať ako konštantu, funkciu času alebo funkciu uhla (uhla otáčania), pozri obr. 42.1.39.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image036.jpg' | relative_url }})
 
-Pressure Roll movement page
+Stránka o pohybe tlakového valca
 
-## Defining Axial Roll
+## Definícia axiálneho naklonenia
 
-Axial roll is a rigid object in Ring Rolling template. The temperature, center and axis can be set in Axial roll object page as shown in Fig. 42.1.40. If the simulation setup type is of non-isothermal and temperature calculations are done even on rolls then Axial Roll must have mesh to calculate temperature of this object. Most commonly the axial rolls geometry can be created using “Cone” primitive available in 2D primitives, see Fig. 42.1.41. The axial roll geometry definition and mesh definition is similar to the workpiece. For more information on defining geometry and mesh please refer 42.1.6. Defining Workpiece-Ring Object, 42.1.7. Defining 2D Cross-section, 42.1.8. Generating 2D Mesh, 42.1.9. Generating 3D Geometry, 42.1.10. Generating 3D Mesh and 42.1.12. Material Page.
+Axiálny valec je tuhý objekt v šablóne „Ring Rolling“. Teplotu, stred a os je možné nastaviť na stránke objektu „Axiálny valec“, ako je znázornené na obr. 42.1.40. Ak je typ nastavenia simulácie neizotermický a výpočty teploty sa vykonávajú aj na valcoch, musí mať axiálny valec sieť, aby bolo možné vypočítať teplotu tohto objektu. Geometriu axiálnych valcov možno najčastejšie vytvoriť pomocou primitívu „Cone“ (kužeľ), ktoré je k dispozícii v 2D primitívoch, pozri obr. 42.1.41. Definícia geometrie axiálneho valca a definícia siete sú podobné ako v prípade obrobku. Ďalšie informácie o definovaní geometrie a siete nájdete v častiach 42.1.6. Definovanie objektu „Obrobok – prstenec“, 42.1.7. Definovanie 2D priečneho rezu, 42.1.8. Vytvorenie 2D siete, 42.1.9. Vytvorenie 3D geometrie, 42.1.10. Vytvorenie 3D siete a 42.1.12. Stránka materiálu.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image037.jpg' | relative_url }})
 
-Axial Roll page
+Stránka „Axial Roll“
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image038.jpg' | relative_url }})
 
-Axial Roll primitive page
+Stránka s primitívom „Axial Roll“
 
-### Axial Roll Orientation
+### Orientácia axiálnej valcovacej osi
 
-In Axial roll Orientation page, the user can define the Axial roll position angle and horizontal distance as shown in Fig. 42.1.42., then click on ![]({{ '/assets/icons/pre_icons/mo_apply_orientation_button.jpg' | relative_url }}). This Orientation page can be used to position the Axial roll along the Ring circumference in hoops direction by specifying angle in Rotation angle filed and along the ring width by specifying the Horizontal distance between the cone end and ring center as shown in Fig. 42.1.43.
+Na stránke „Orientácia axiálneho naklonenia“ môže používateľ definovať uhol polohy axiálneho naklonenia a horizontálnu vzdialenosť, ako je znázornené na obr. 42.1.42., a následne kliknúť na ![]({{ '/assets/icons/pre_icons/mo_apply_orientation_button.jpg' | relative_url }}). Túto stránku „Orientácia“ je možné použiť na umiestnenie axiálneho valca po obvode prstena v smere obručí zadaním uhla v poli „Uhol otáčania“ a pozdĺž šírky prstena zadaním horizontálnej vzdialenosti medzi koncom kužeľa a stredom prstena, ako je znázornené na obr. 42.1.43.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image039.jpg' | relative_url }})
 
-Axial Roll before orientation
+Axiálne valcovanie pred orientáciou
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image040.jpg' | relative_url }})
 
-Axial Roll after orientation
+Axiálne valenie po orientácii
 
-### Axial Roll Movement Page
+### Stránka o axiálnom pohybe valca
 
-Similar to Driving roll movement controls, user can define both Translation movement and Rotational movement to Axial rolls as shown in Fig. 42.1.44.
+Podobne ako pri ovládaní pohybu valcov, môže používateľ pre axiálne valce definovať tak posuvný pohyb, ako aj rotačný pohyb, ako je znázornené na obr. 42.1.44.
 
-Translation movement can be defined as speed, Force or Path. Speed or Force can be defined as constant, Function of time or Function of Diameter, whereas Path can be defined as Function of Time or Function of diameter, see Fig. 42.1.44.
+Pohyb pri preklade možno definovať ako rýchlosť, silu alebo dráhu. Rýchlosť alebo silu možno definovať ako konštantu, funkciu času alebo funkciu priemeru, zatiaľ čo dráhu možno definovať ako funkciu času alebo funkciu priemeru, pozri obr. 42.1.44.
 
-Rotational movement can be defined as Angular Velocity or Torque. Angular velocity or Torque can be defined as constant, Function of time or Function of angle (rotation angle), see Fig. 42.1.44.
+Rotačný pohyb možno definovať ako uhlovú rýchlosť alebo krútiaci moment. Uhlovú rýchlosť alebo krútiaci moment možno definovať ako konštantu, funkciu času alebo funkciu uhla (uhla otáčania), pozri obr. 42.1.44.
 
-  * **Automatic Radial Movement:** Axial rolls can move automatically in the radial direction such that the vertex of axial roll is always located on the center of ring along with the expansion of the ring. In order to activate this function, user need to check “Automatic radial movement w.r.t. the expansion of workpiece” check box.
+  * **Automatický radiálny pohyb:** Axiálne valce sa môžu automaticky pohybovať v radiálnom smere tak, aby sa vrchol axiálneho valca vždy nachádzal v strede prstena v súlade s jeho rozťahovaním. Na aktiváciu tejto funkcie musí používateľ zaškrtnúť políčko „Automatický radiálny pohyb vzhľadom na rozťahovanie obrobku“.
 
-  * **Adaptive Rotational Movement:** If user check the “Adaptive rotational movement control” check box, then axial rolls rotate according to the rotation of ring without any slippage.
+  * **Adaptívny rotačný pohyb:** Ak používateľ zaškrtne políčko „Adaptívne ovládanie rotačného pohybu“, axiálne valce sa budú otáčať v súlade s otáčaním prstena bez akéhokoľvek preklzávania.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image041.jpg' | relative_url }})
 
-Axial Roll Movement Page
+Stránka o axiálnom pohybe valca
 
-## Axial Roll #2 Page
+## Axial Roll č. 2 – Strana
 
-For the second axial roll user can use the “Copy Axial Roll #1” option, so all the data of Axial Roll #1 is copied to Axial Roll # 2 object (See Fig. 42.1.45.) and is positioned automatically in the -Z direction, see Fig. 42.1.46.
+Pre druhý axiálny valec môže používateľ využiť možnosť „Kopírovať axiálny valec č. 1“, čím sa všetky údaje z axiálneho valca č. 1 skopírujú do objektu axiálneho valca č. 2 (pozri obr. 42.1.45.) a automaticky sa umiestni v smere -Z, pozri obr. 42.1.46.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image042.jpg' | relative_url }})
 
-Axial Roll #2 page
+Axial Roll č. 2 – strana
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image043.jpg' | relative_url }})
 
-Copying Axial Roll #1 to Axial Roll #2
+Kopírovanie osového valca č. 1 do osového valca č. 2
 
-## Positioning
+## Polohovanie
 
-When user wants further modification in any of these objects position even after using orientation, then user can use Position objects button in Positioning page. Various positioning options are available to position the objects as shown in Fig. 42.1.47., for more information on these options please refer [19\. Object positioning.](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/)
+Ak chce používateľ aj po nastavení orientácie ďalej upravovať polohu niektorého z týchto objektov, môže použiť tlačidlo „Poloha objektov“ na stránke „Polohovanie“. Na umiestnenie objektov sú k dispozícii rôzne možnosti polohovania, ako je znázornené na obr. 42.1.47. Ďalšie informácie o týchto možnostiach nájdete v [19\. Object positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image044.jpg' | relative_url }})
 
-Object Positioning Controls
+Ovládacie prvky na nastavenie polohy objektu
 
-## Scheduled positioning
+## Plánované umiestnenie
 
-When user is not sure about the location of an object as in case of Read from DB objects, scheduled positioning will help to position the objects accurately. Schedule positioning allows the user to define the positioning for objects in Integrated Manufacturing Process setup for successive operations for which DB is not generated so that the objects are positioned before generation of DB while running simulation in Batch mode (See Fig. 42.1.48.).
+Ak si používateľ nie je istý umiestnením objektu, ako je to v prípade objektov typu „Čítanie z databázy“, naplánované umiestňovanie pomôže objekty presne umiestniť. Plánované umiestňovanie umožňuje používateľovi definovať umiestnenie objektov v nastaveniach integrovaného výrobného procesu pre nasledujúce operácie, pre ktoré sa databáza (DB) nevytvára, tak, aby boli objekty umiestnené pred vytvorením databázy počas spustenia simulácie v dávkovom režime (pozri obr. 42.1.48.).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image045.jpg' | relative_url }})
 
-Scheduled positioning options
+Možnosti plánovaného umiestnenia
 
-## Contact
+## Kontakt
 
-The user can define the contact between the Workpiece and other roll objects by defining the inter object relations as shown in Fig. 42.1.49. User must define friction and Interface heat transfer co-efficient for non-isothermal rolling processes and friction value for isothermal rolling process.  
-**System** : By selecting this radio button, system assigns default inter-object relationships. Also, user can add the lubricants if necessary, by selecting Add New from pull down menu and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button or user can load the required lubricants from the library for the simulation.  
-**User:** By default, user radio button will be selected for Ring Rolling operation. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button as shown in Fig. 42.1.49. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button. User can use ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to assign same values to all relations. User can click on to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation. User can turn on check box next to contact relation to define sticking contact. For more information please refer, [20\. Inter-Object Data Relations.](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+Používateľ môže definovať kontakt medzi obrobkom a ostatnými valcami tak, že stanoví vzťahy medzi objektmi, ako je znázornené na obr. 42.1.49. V prípade neizotermických procesov valcovania musí používateľ definovať koeficient trenia a koeficient prenosu tepla na rozhraní, zatiaľ čo v prípade izotermického procesu valcovania musí definovať hodnotu trenia.  
+**Systém**: Po výbere tohto prepínača systém priradí predvolené vzťahy medzi objektmi. V prípade potreby môže používateľ pridať mazivá tak, že z roletového menu vyberie možnosť „Pridať nové“ a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}), alebo môže na účely simulácie načítať požadované mazivá z knižnice.  
+**Používateľ:** Pri operácii „Ring Rolling“ je štandardne zaškrtnuté tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), ako je znázornené na obr. 42.1.49. Používateľ môže zmeniť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môže používateľ priradiť rovnaké hodnoty všetkým vzťahom. Kliknutím na tlačidlo môže používateľ vypočítať toleranciu kontaktu. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) môže používateľ vygenerovať vzťah kontaktu. Zaškrtnutím políčka vedľa vzťahu kontaktu môže používateľ definovať zotrvačný kontakt. Ďalšie informácie nájdete v časti [20\. Inter-Object Data Relations.](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image046.jpg' | relative_url }})
 
-Contact Page
+Stránka s kontaktnými údajmi
 
-## Stopping Controls for Ring Rolling Simulation
+## Ovládacie prvky na zastavenie simulácie valcovania prsteňov
 
-User can stop the Ring Rolling simulation using the settings available in Stopping controls page, as shown in the Fig. 42.1.50.  
-**Max. outer diameter of workpiece** : This option is displayed based on the diameter definition defined in the workpiece object page, we are not defining stopping control in workpiece object page(refer **Diameter measuring position**), if the explicit diameter measuring position has been defined, the display here will show correspondence information. If diameter measuring position is not defined, we will show max outer diameter of workpiece which is the default diameter definition.
+Používateľ môže simuláciu valcovania prstencov zastaviť pomocou nastavení dostupných na stránke Ovládacie prvky zastavenia, ako je znázornené na obr. 42.1.50.  
+**Max. vonkajší priemer obrobku**: Táto možnosť sa zobrazuje na základe definície priemeru uvedenej na stránke objektu obrobku; na stránke objektu obrobku nedefinujeme riadenie zastavenia (pozri **Poloha merania priemeru**). Ak bola explicitne definovaná poloha merania priemeru, na tomto mieste sa zobrazia príslušné informácie. Ak nie je definovaná poloha merania priemeru, zobrazí sa maximálny vonkajší priemer obrobku, čo je predvolená definícia priemeru.
 
-**Process durati****on:** The simulation stops after completing the defined process duration.  
-**Max. primary die displacement** : User can select one of the rolls as “Primary Die” using pull down menu and define maximum displacement at which simulation should stop. Moving direction for the selected primary die will be displayed. The simulation stops after primary die exceeds the defined displacement.
+**Trvanie procesu****:** Simulácia sa zastaví po uplynutí nastaveného trvania procesu.  
+**Max. posun primárneho valca**: Používateľ môže pomocou roletového menu vybrať jeden z valcov ako „primárny valec“ a nastaviť maximálny posun, pri ktorom sa má simulácia zastaviť. Zobrazí sa smer pohybu vybraného primárneho valca. Simulácia sa zastaví po tom, čo primárny valec prekročí nastavený posun.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image047.jpg' | relative_url }})
 
-Stopping Controls Page
+Stránka ovládacích prvkov zastavenia
 
-## Step and remeshing controls for Ring Rolling
+## Ovládacie prvky pre krokovanie a prepočítavanie siete pri valcovaní prstencov
 
-Ring Rolling simulation can be controlled based on time step and saved based on rotational degree frequency. User can also control the frequency of temperature calculation for non-isothermal simulations and schedule remeshing. Step and remeshing controls are as shown in Fig. 42.1.51.  
-**Number of steps:** Number of steps to be simulated can be defined here. User can define more number of steps and use the stopping criteria to stop the simulation earlier due to stopping.  
-**Rotation increment to save:** When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space. Data from the simulation will be written to DB based on the frequency of Rotational increment defined here.  
-**Max. allowable Time Step:** User need to specify the time step which will be used as the time interval per step for various calculation.   
-**Temperature computation:** The user can set the temperature calculations frequency to same as deformation or at specific rotation angle frequency by using the options under Temperature Computation tab.  
-**Remeshing controls:** User can schedule remesh for workpiece after specified number of revolutions to maintain good workpiece shape in case of complex geometries.
+Simuláciu valcovania prstencov je možné riadiť na základe časového kroku a ukladať na základe frekvencie otáčok. Používateľ môže tiež nastaviť frekvenciu výpočtu teploty pri neizotermických simuláciách a naplánovať premenovanie siete. Ovládacie prvky pre časový krok a premenovanie siete sú znázornené na obr. 42.1.51.  
+**Počet krokov:** Tu je možné zadať počet krokov, ktoré sa majú simulovať. Používateľ môže zadať vyšší počet krokov a pomocou kritérií ukončenia simuláciu predčasne ukončiť.  
+**Veľkosť kroku rotácie na uloženie:** Pri spustení simulácie sa musí vypočítať každý krok, ale nie je nutné ho vždy ukladať do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať väčší úložný priestor. Údaje zo simulácie sa budú zapisovať do databázy na základe frekvencie kroku rotácie, ktorá je tu definovaná.  
+**Maximálny povolený časový krok:** Používateľ musí určiť časový krok, ktorý sa bude používať ako časový interval na jeden krok pri rôznych výpočtoch.   
+**Výpočet teploty:** Používateľ môže pomocou možností na karte „Výpočet teploty“ nastaviť frekvenciu výpočtov teploty tak, aby zodpovedala frekvencii deformácie, alebo aby sa vykonávala pri dosiahnutí určitého uhla otáčania.  
+**Ovládacie prvky pre generovanie novej siete:** Používateľ môže naplánovať generovanie novej siete pre obrobok po uplynutí stanoveného počtu otáčok, aby sa zachoval správny tvar obrobku v prípade zložitých geometrií.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image048.jpg' | relative_url }})
 
-Steps and remeshing controls
+Kroky a ovládacie prvky pre prepočítanie siete
 
-## Simulation controls
+## Ovládacie prvky simulácie
 
-In this page, user can define constraints to stabilize the workpiece while revolving during simulation and few advanced controls as shown in Fig. 42.1.52. and Fig. 42.1.53. The data defined in this page will be written to DEF_RRE.DAT file.
+Na tejto stránke môže používateľ definovať obmedzenia na stabilizáciu obrobku počas jeho otáčania v priebehu simulácie, ako aj niekoľko pokročilých nastavení, ako je znázornené na obr. 42.1.52 a obr. 42.1.53. Údaje definované na tejto stránke sa zapíšu do súboru DEF_RRE.DAT.
 
-### Stability Control
+### Kontrola stability
 
-**Workpiece Center control:** If user notices any stability issues with workpiece/ring during simulation then user can constraint the rotation and translation of the workpiece in the specified directions to maintain the workpiece center as shown in Fig. 42.1.52.  
-**Virtual Table:** User can also add a virtual table at top or bottom by checking respective check box and specifying the distance of virtual table location from top / bottom surface of the workpiece, see Fig. 42.1.52. Current Z co-ordinate value in respective direction is displayed.
+**Riadenie stredu obrobku:** Ak používateľ počas simulácie zistí akékoľvek problémy so stabilitou obrobku/krúžku, môže obmedziť otáčanie a posun obrobku v určených smeroch, aby sa zachoval stred obrobku, ako je znázornené na obr. 42.1.52.  
+**Virtuálny stôl:** Používateľ môže tiež pridať virtuálny stôl v hornej alebo dolnej časti tak, že zaškrtne príslušné políčko a určí vzdialenosť umiestnenia virtuálneho stola od hornej/spodnej plochy obrobku, pozri obr. 42.1.52. Zobrazí sa aktuálna hodnota súradnice Z v príslušnom smere.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image049.jpg' | relative_url }})
 
-Simulation Controls- Stability Controls
+Ovládacie prvky simulácie – Ovládacie prvky stability
 
-### Advanced Control 
+### Pokročilé ovládanie 
 
-**Node Penetration check:** User can define the frequency of steps to verify if nodes from roll are penetrating into workpiece/ring, see Fig. 42.1.53. When the value is defined as 0 or negative, the system does not check for penetration. When the value is defined between 1 and 50, the system checks for penetration at every 50 steps. When the value is defined larger than 50, then the system checks at frequency of defined steps  
-**Contact Search:** User can also specify angle for contact search to improve the Solution speed, see Fig. 42.1.53. The search angle starts from the inlet side between Driving Roll and Pressure Roll (mandrel).  
-**Enforce Ring Rotation:** If the ring object is not rotating properly then user can check “Enforce to rotate workpiece when it does not rotate well at certain steps” to make small corrections to the ring rotation during the ring rolling process, see Fig. 42.1.53.
+**Kontrola prieniku uzlov:** Používateľ môže nastaviť frekvenciu krokov, pri ktorých sa overuje, či uzly zo zoznamu prenikajú do obrobku/krúžku, pozri obr. 42.1.53. Ak je hodnota nastavená na 0 alebo zápornú hodnotu, systém nepreveruje vniknutie. Ak je hodnota nastavená v rozmedzí od 1 do 50, systém preveruje vniknutie každých 50 krokov. Ak je hodnota nastavená na hodnotu väčšiu ako 50, systém vykonáva kontrolu s frekvenciou zodpovedajúcou nastavenému počtu krokov.  
+**Vyhľadávanie kontaktov:** Používateľ môže tiež určiť uhol vyhľadávania kontaktov, čím sa zvýši rýchlosť výpočtu; pozri obr. 42.1.53. Uhol vyhľadávania začína na strane prívodu medzi hnacím valcom a tlakovým valcom (trnom).  
+**Vynútiť otáčanie prstena:** Ak sa prstenec neotáča správne, používateľ môže zaškrtnúť políčko „Vynútiť otáčanie obrobku, ak sa v určitých krokoch neotáča správne“, čím sa počas procesu valcovania prstena vykonajú drobné korekcie jeho otáčania, pozri obr. 42.1.53.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image050.jpg' | relative_url }})
 
-Simulation Controls - Advanced Controls 
+Ovládacie prvky simulácie – Pokročilé ovládacie prvky 
 
-## Generate DB
+## Vytvoriť databázu
 
-Once user is completed with setting up of Ring Rolling Problem then user can use this page to check the data defined and generate database. From v12.0.2, we can observe the Operation Simulation setup summary. (See Fig. 42.1.54.)  
-**Check Data![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) :** It checks the Data. If Data is correct, we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.  
-**Generate Database![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) :** By clicking on this button, it generated the Database for the setup. (See Fig. 42.1.54.)  
-**Append Key file:** Any information that is not defined in the template but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and store in specified path, when only necessary values in .key file can be changed, and simulation can be resubmitted to study the effect of the change in parameters.
+Akonáhle používateľ dokončí nastavenie úlohy valcovania prstencov, môže túto stránku použiť na kontrolu zadaných údajov a vytvorenie databázy. Od verzie v12.0.2 je k dispozícii prehľad nastavení simulácie prevádzky. (Pozri obr. 42.1.54.)  
+**Kontrola Data![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}):** Táto kontrola overuje údaje. Ak sú údaje správne, môžeme vytvoriť databázu. Ak sa však počas kontroly údajov vyskytnú chyby alebo varovania, je potrebné ich opraviť pred vytvorením databázy. Chyby zabránia vytvoreniu databázy, zatiaľ čo varovania vytvorenie databázy neumožnia.  
+**Vytvoriť databázu ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}):** Kliknutím na toto tlačidlo sa vygeneruje databáza pre inštaláciu. (Pozri obr. 42.1.54.)  
+**Pridať súbor .key:** Akékoľvek informácie, ktoré nie sú definované v šablóne, ale stále sa vzťahujú na daný proces, je možné načítať ako súbor .key. Táto možnosť je užitočná aj v prípadoch, keď je potrebné zmeniť len niekoľko hodnôt; tieto hodnoty je možné definovať v súbore .key a uložiť do zadaného umiestnenia. Následne je možné zmeniť len potrebné hodnoty v súbore .key a simuláciu znovu spustiť, aby sa preskúmal vplyv zmeny parametrov.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image051.jpg' | relative_url }})
 
-Generate DB page
+Vytvoriť stránku databázy
 
-## Setting up Ring Rolling Operation in Batch mode
+## Nastavenie prevádzky valcovania prsteňov v dávkovom režime
 
-Ring Rolling operation can be setup in batch mode as part of multiple operations in Integrated Manufacturing environment. User can add Ring Rolling operation in sequence with other operations as shown in Fig. 42.1.55.
+Operáciu valcovania prstencov je možné nastaviť v dávkovom režime ako súčasť viacerých operácií v prostredí integrovanej výroby. Používateľ môže pridať operáciu valcovania prstencov do postupnosti s ostatnými operáciami, ako je znázornené na obr. 42.1.55.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image052.jpg' | relative_url }})
 
-Workpiece- Ring object type is Read from DB
+Typ objektu „Obrobok – krúžok“ sa načítava z databázy
 
-### Workpiece– Ring is Read from DB
+### Obrobok – prstenec sa načíta z databázy
 
-The user is provided with Regenerate ring check box when the object is read from DB as shown in the Fig. 42.1.56. If the user selects the “Regenerate Ring” check box than in operation tree ![]({{ '/assets/icons/pre_icons/mo_extract_cross_section_label.jpg' | relative_url }}), 2D Mesh and 3D Mesh pages are added (see Fig. 42.1.56.) which can be used to Ring shape and mesh. User can set the axis and center. If axis is not set and values are “0” then Z direction will be set as axis and a pop-up “Zero Axis Vector” appears when user leaves object page informing about direction set (0,0,1) as shown in the Fig. 42.1.56.   
-When Ring is “Read from DB” and user clicks ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button in object page then “Extract cross-section” page is opened as shown in Fig. 42.1.56.
+Pri načítaní objektu z databázy sa používateľovi zobrazí začiarkavacie políčko „Regenerovať prstenec“, ako je znázornené na obr. 42.1.56. Ak používateľ zaškrtne políčko „Regenerate Ring“, do stromu operácií ![]({{ '/assets/icons/pre_icons/mo_extract_cross_section_label.jpg' | relative_url }}) sa pridajú stránky 2D Mesh a 3D Mesh (pozri obr. 42.1.56), ktoré možno použiť na vytvorenie tvaru prstena a siete. Používateľ môže nastaviť os a stred. Ak nie je os nastavená a hodnoty sú „0“, ako os sa nastaví smer Z a pri opustení stránky objektu sa zobrazí kontextové okno „Zero Axis Vector“ informujúce o nastavenom smere (0,0,1), ako je znázornené na obr. 42.1.56.   
+Keď je prsteň v stave „Načítané z databázy“ a používateľ klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránke objektu, otvorí sa stránka „Extrahovať priečny rez“, ako je znázornené na obr. 42.1.56.
 
 ###   
-Extract Cross-section for Read from DB object
+Prerez pre načítanie z objektu databázy
 
-The user is provided with Constant cross section and Variable cross sections options to extract the cross section from the Workpiece as shown in the Fig. 42.1.56.   
-**Constant Cross Section:** When constant cross-section is selected then system generates ring with constant cross-section. If the output from previous operations is expected to generate a uniform ring, then user can use “Extract one cross-section” option to generate ring with constant cross-section. If the output from previous operations is expected to generate a non-uniform ring, then user can extract multiple cross-sections from specified number of layers, and use the average size as cross-section using “Extract Cross-section from Layers(*)/slices and use their average”. If the mesh type of the “Read from DB” object is brick mesh, then numbers of layers is decided by the system.  
-**Variable Cross Section:** If the output from previous operations is expected to generate a non-uniform ring and user would like to generate ring with non-unform cross-section then this option can be used. User can define to extract multiple cross-sections and retain them to generate non-uniform ring using “Extract Cross-section from Layers(*)/slices”. If the mesh type of the “Read from DB” object is brick mesh, then numbers of layers is decided by the system.
+Používateľ má k dispozícii možnosti „Konštantný prierez“ a „Premenný prierez“ na vytvorenie prierezu z obrobku, ako je znázornené na obr. 42.1.56.   
+**Konštantný prierez:** Ak je zvolený konštantný prierez, systém vygeneruje prstenec s konštantným prierezom. Ak sa očakáva, že výstup z predchádzajúcich operácií vytvorí rovnomerný prstenec, môže používateľ využiť možnosť „Extrahovať jeden prierez“ na vytvorenie prstenca s konštantným prierezom. Ak sa očakáva, že výsledkom predchádzajúcich operácií bude nerovnomerný prstenec, môže používateľ extrahovať viacero prierezov zo špecifikovaného počtu vrstiev a použiť priemernú veľkosť ako prierez pomocou možnosti „Extrahovať prierez z vrstiev(*)/rezov a použiť ich priemer“. Ak je typ siete objektu „Načítať z databázy“ tehlová sieť, počet vrstiev určí systém.  
+**Premenlivý prierez:** Ak sa predpokladá, že výstup z predchádzajúcich operácií vytvorí nerovnomerný prstenec a používateľ chce vytvoriť prstenec s nerovnomerným prierezom, môže použiť túto možnosť. Používateľ môže pomocou funkcie „Extrahovať prierez z vrstiev(*)/rezov“ definovať extrakciu viacerých prierezov a ich zachovanie na vytvorenie nerovnomerného prstenca. Ak je typ siete objektu „Načítať z databázy“ tehlová sieť, počet vrstiev určí systém.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image053.jpg' | relative_url }})
 
-Extracting the cross section to regenerate the Ring
+Extrakcia priečneho rezu na regeneráciu prstena
 
 ###   
-Generating the Workpiece 2D Cross-section mesh
+Vytvorenie 2D siete priečneho rezu obrobku
 
-Since the cross-section is extracted from the Object which is “Read From DB” it is always necessary to generate a new 2D Mesh when user is regenerating ring shape. User can turn on select “Perform remesh before this operation” check box as shown in the Fig. 42.1.57. and define 2D mesh settings to be used in new mesh generation. For more on mesh settings refer [13.1.2D Mesh Generation.](/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+Keďže prierez sa získava z objektu, ktorý je „načítaný z databázy“, pri regenerácii tvaru prstena je vždy potrebné vygenerovať novú 2D sieť. Používateľ môže zaškrtnúť políčko „Vykonaj remesh pred touto operáciou“, ako je znázornené na obr. 42.1.57, a definovať nastavenia 2D siete, ktoré sa majú použiť pri generovaní novej siete. Viac informácií o nastaveniach siete nájdete v [13.1.2D Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image054.jpg' | relative_url }})
 
-2D Mesh page for the Read from DB Object
+Stránka 2D siete pre objekt „Čítanie z databázy“
 
-###  Generating Workpiece 3D Mesh
+###  Vytvorenie 3D siete obrobku
 
-User need to generate the 3D Mesh for the workpiece if user is regenerating ring shape for a “Read from DB” object. Depending on the type of cross-section selected in the Workpiece object page, see Extract Cross-section for Read from DB object, the revolving method is automatically selected. User can define the number of revolving sections along the hoop’s direction in 3D mesh settings as shown in the Fig. 42.1.58.
+Ak používateľ regeneruje tvar prstena pre objekt typu „Načítať z databázy“, musí pre obrobok vygenerovať 3D sieť. V závislosti od typu prierezu vybraného na stránke objektu „Obrobok“ (pozri časť „Extrahovanie prierezu pre objekt typu Načítať z databázy“) sa automaticky vyberie metóda otáčania. V nastaveniach 3D siete môže používateľ definovať počet rotujúcich úsekov v smere obruče, ako je znázornené na obr. 42.1.58.
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image055.jpg' | relative_url }})
 
-3D Mesh page for the Read from DB Object
+Stránka 3D siete pre objekt „Čítanie z databázy“
 
-## Running Simulation
+## Spustenie simulácie
 
-Once user made all necessary changes to extract cross-section and generate mesh during simulation for workpiece which is “Read from DB” user can save the project and shift to simulation tab by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above operation tree. User can click on ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) label and choose appropriate option from the pop-up to start the simulation.
+Akonáhle používateľ vykoná všetky potrebné zmeny na vytvorenie priečneho rezu a generovanie siete počas simulácie pre obrobok, ktorý je „načítaný z databázy“, môže projekt uložiť a prejsť na kartu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií. Používateľ môže kliknúť na označenie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) a z rozbaľovacieho menu vybrať príslušnú možnosť na spustenie simulácie.

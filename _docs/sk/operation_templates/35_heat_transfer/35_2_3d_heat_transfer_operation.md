@@ -1,284 +1,284 @@
 ---
 lang: sk
-title: "35.2. 3D Heat Transfer Operation"
+title: "35.2. 3D simulácia prenosu tepla"
 ---
 
-# 35.2. 3D Heat Transfer Operation
+# 35.2. 3D simulácia prenosu tepla
 
-35.2.1. How to add Heat Transfer operation
+35.2.1. Ako pridať operáciu prenosu tepla
 
-35.2.2. Heat transfer type
+35.2.2. Typ prenosu tepla
 
-35.2.3. Process condition
+35.2.3. Podmienky procesu
 
-35.2.4. Simulation controls
+35.2.4. Ovládacie prvky simulácie
 
-35.2.5. Material List
+35.2.5. Zoznam materiálov
 
-35.2.6. Add objects
+35.2.6. Pridávanie objektov
 
-35.2.7. Workpiece
+35.2.7. Obrobok
 
-  * Geometry
+  * Geometria
 
-  * Object Mesh
+  * Sieť objektu
 
-  * Object Material
+  * Materiál predmetu
 
-  * Boundary Conditions
+  * Okrajové podmienky
 
-  * Movement Controls
+  * Ovládanie pohybu
 
-  * Property
+  * Nehnuteľnosť
 
-  * Initialize
+  * Inicializovať
 
-35.2.8. Positioning
+35.2.8. Polohovanie
 
-35.2.9. Scheduled Positioning
+35.2.9. Plánované polohovanie
 
-35.2.10. Inter-Object relations
+35.2.10. Vzťahy medzi objektmi
 
-35.2.11. Stopping Controls
+35.2.11. Ovládacie prvky na zastavenie
 
-35.2.12. Step controls
+35.2.12. Ovládacie prvky krokov
 
-35.2.13. Generate DB
+35.2.13. Vytvorenie databázy
 
-## How to add 3D Heat Transfer operation
+## Ako pridať operáciu 3D prenosu tepla
 
-Heat Transfer operation is accessible from MO Wizard that can be opened from Main GUI. Heat Transfer Operation can be added in MO wizard, from explorer tab by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to 3D Heat Transfer. Also, user can add by drag and drop into the Operation Editor as shown in Fig. 35.2.1. Combination of heat transfer operations based on the process can be setup in batch/scheduled mode. 
+Operáciu prenosu tepla je možné otvoriť cez sprievodcu MO, ktorý je dostupný z hlavného grafického rozhrania. Operáciu prenosu tepla je možné pridať v sprievodcovi MO na karte „Explorer“ kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky „3D Heat Transfer“. Užívateľ ju môže pridať aj pomocou funkcie drag and drop do Editoru operácií, ako je znázornené na obr. 35.2.1. Kombináciu operácií prenosu tepla na základe procesu je možné nastaviť v dávkovom alebo plánovanom režime. 
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image001.jpg' | relative_url }})
 
-Added 3D Heat Transfer operation into operation editor
+Do editora operácií bola pridaná operácia „3D prenos tepla“
 
-## Heat transfer type
+## Typ prenosu tepla
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image003.jpg' | relative_url }})
 
-Heat transfer type selection window
+Okno na výber typu prenosu tepla
 
-There are four types of heat transfer operations available (See Fig. 35.2.2.),
+K dispozícii sú štyri typy procesov prenosu tepla (pozri obr. 35.2.2.),
 
-  1. **Heat in Furnace** – Heating workpiece in a furnace
+  1. **Ohrev v peci** – Ohrev obrobku v peci
 
-  2. **Transfer through Air** – Transferring workpiece from furnace to press
+  2. **Preprava vzduchom** – Preprava obrobku z pece do lisu
 
-  3. **Rest on die** – Heat loss while resting on die before the deformation is started
+  3. **Odpočinok na matrici** – Tepelné straty počas odpočinku na matrici pred začatím deformácie
 
-  4. **Dwell on die** – Heat loss while dwelling on die after the deformation is completed
+  4. **Doba zotrvania na matrici** – Tepelné straty počas zotrvania na matrici po dokončení deformácie
 
   
-For more details about these heating types are described in [35\. Introduction to Heat Transfer operation](/docs/sk/operation_templates/35_heat_transfer/35_introduction_to_heat_transfer_operations/), refer Heating Types.
+Ďalšie podrobnosti o týchto typoch vykurovania sú uvedené v [35\. Introduction to Heat Transfer operation](/docs/en/operation_templates/35_heat_transfer/35_introduction_to_heat_transfer_operations/), pozri časť „Typy vykurovania“.
 
-## Process condition
+## Prevádzkové podmienky
 
-Process conditions like Transfer time (Process duration), Environment temperature and Convection coefficient can be defined in this window as shown in Fig. 35.2.3. Depending on the selection of the heat transfer operation, the default process settings for the respective operation can be loaded which can be changed depending on the user requirement.
+V tomto okne je možné definovať procesné podmienky, ako sú doba prenosu (trvanie procesu), teplota okolia a koeficient konvekcie, ako je znázornené na obr. 35.2.3. V závislosti od výberu typu prenosu tepla je možné načítať predvolené nastavenia procesu pre príslušný typ prenosu, ktoré je možné zmeniť podľa požiadaviek používateľa.
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image004.jpg' | relative_url }})
 
-Process condition settings window
+Okno nastavení prevádzkových podmienok
 
-## Simulation controls
+## Ovládacie prvky simulácie
 
-The DEFORM system solves time dependent non-linear problems by generating a series of FEM solutions at discrete time increments. At each time increment, the velocities, temperatures, and other key variables of each node in the finite element mesh are determined based on boundary conditions, thermo mechanical properties of the work piece materials and possibly solutions at previous steps. Other state variables are derived from these key values, and updated for each time increment. The length of this time step, and number of steps simulated, are determined based on the information specified in the step controls menu.
+Systém DEFORM rieši časovo závislé nelineárne úlohy generovaním série riešení metódou konečných prvkov (FEM) v diskrétnych časových krokoch. V každom časovom kroku sa rýchlosti, teploty a ďalšie kľúčové premenné každého uzla v sieti konečných prvkov určujú na základe okrajových podmienok, termomechanických vlastností materiálov obrobku a prípadne riešení z predchádzajúcich krokov. Ostatné stavové premenné sa odvodzujú z týchto kľúčových hodnôt a aktualizujú sa pri každom časovom kroku. Dĺžka tohto časového kroku a počet simulovaných krokov sa určujú na základe informácií zadaných v ponuke nastavení krokov.
 
-In Guided mode simulation controls, user can select Simulation mode type and Output type. Fig. 35.2.5. Shows Guided mode simulation controls. Fig. 35.2.4. Shows Expert mode simulation controls where user can define operation step controls and step definition. The basic options required for setting up heat transfer operation are provided here while Expert mode provides more detailed options.
+V ovládacích prvkoch simulácie v režime s návodom môže používateľ vybrať typ režimu simulácie a typ výstupu. Obr. 35.2.5. znázorňuje ovládacie prvky simulácie v režime s návodom. Obr. 35.2.4. znázorňuje ovládacie prvky simulácie v expertnom režime, kde môže používateľ definovať ovládacie prvky krokov operácie a definíciu krokov. Tu sú k dispozícii základné možnosti potrebné na nastavenie operácie prenosu tepla, pričom expertný režim ponúka podrobnejšie možnosti.
 
   
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image002.jpg' | relative_url }})
 
-Expert mode Simulation controls
+Ovládacie prvky simulácie v režime pre pokročilých
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image005.jpg' | relative_url }})
 
-Guided mode Simulation controls
+Ovládacie prvky simulácie v režime s návodom
 
-## Material List
+## Zoznam materiálov
 
-Materials required for the process can be loaded either from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from DB or Key file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) as shown in Fig. 35.2.6. User can also add new material and define required data from respective tab by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button. For more information on Material data definition please refer [10\. Material Data.](/docs/sk/pre_processor/10_material_data/10_material_data/)
+Materiály potrebné pre tento proces je možné načítať buď z knižnice pomocou ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), alebo z databázy či kľúčového súboru pomocou ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ako je znázornené na obr. 35.2.6. Používateľ môže tiež pridať nový materiál a definovať požadované údaje na príslušnej karte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Ďalšie informácie o definovaní údajov o materiáloch nájdete v [10\. Material Data.](/docs/en/pre_processor/10_material_data/10_material_data/).
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image007.jpg' | relative_url }})
 
-Import Material from Library
+Importovať materiál z knižnice
 
-## Add objects
+## Pridať objekty
 
-User can add required number of objects for the simulation by selecting ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. Fig. 35.2.7. shows three objects added for a simple Heat transfer operation. 
+Používateľ môže pridať požadovaný počet objektov pre simuláciu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Na obr. 35.2.7 sú zobrazené tri objekty pridané pre jednoduchú operáciu prenosu tepla. 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image007.jpg' | relative_url }})
 
-Objects Window
+Okno „Objekty“
 
-## Workpiece
+## Obrobok
 
-In this page user can define required temperature for the object and select type of the object as shown in Fig. 35.2.8. For workpiece by default the object type selected is Plastic and user can also import object from other DB’s or Keyfile’s using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option and browsing respective file. 
+Na tejto stránke môže používateľ nastaviť požadovanú teplotu pre objekt a vybrať typ objektu, ako je znázornené na obr. 35.2.8. Pre obrobok je štandardne vybraný typ objektu „Plast“ a používateľ môže tiež importovať objekt z iných databáz alebo súborov kľúčov pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a vyhľadaním príslušného súboru. 
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image003.jpg' | relative_url }})
 
-Workpiece window
+Okno obrobku
 
-### Geometry
+### Geometria
 
-Geometry window is used to define the geometry of an object as shown in Fig. 35.2.9. Only define primitive field will be in active mode rest other options will be in grayed when no geometry is defined. Once after creating geometry all the options will be activated.
+Okno „Geometria“ slúži na definovanie geometrie objektu, ako je znázornené na obr. 35.2.9. Ak nie je definovaná žiadna geometria, aktívne bude len pole „Definovať len primitívy“, ostatné možnosti budú sivé. Po vytvorení geometrie sa aktivujú všetky možnosti.
 
   
-User can define new geometry using primitives and also can import the geometry from other file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), user can also import geometries in other formats such as .STL,.UNV,.PDA,.GEO and .. Primitives are provided for easy definition of basic geometry shapes. For more information on creating 3D geometries please refer to [12.3. 3D Geometry Data Defining](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Používateľ môže definovať novú geometriu pomocou primitív a tiež môže importovať geometriu z iného súboru pomocou ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo z knižnice pomocou ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}); používateľ môže tiež importovať geometrie v iných formátoch, ako sú .STL, .UNV, .PDA, .GEO a .. Primitívy slúžia na jednoduché definovanie základných geometrických tvarov. Ďalšie informácie o vytváraní 3D geometrií nájdete v [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image004.jpg' | relative_url }})
 
-Geometry window
+Okno Geometria
 
-### Object Mesh
+### Sieť objektu
 
-Mesh Page provides options to mesh the object. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides option to set number of elements only using slider bar to generate mesh. If the object geometry is complex or user would like to control the mesh density over the object, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like weighing factors, Mesh windows and user defined mode to control the mesh density. Meshing options available in expert mode and Guided more are shown in Fig. 35.2.11. and Fig. 35.2.10. For more detail description of these options, please refer [13.2. 3D Tet Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/). 
+Stránka „Mesh“ ponúka možnosti vytvorenia siete pre objekt. Režim „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ umožňuje nastaviť počet prvkov výlučne pomocou posuvníka na vytvorenie siete. Ak je geometria objektu zložitá alebo ak chce používateľ ovládať hustotu siete na celom objekte, musí prejsť do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Odborný režim ponúka rôzne možnosti, ako sú váhové faktory, okná siete a užívateľsky definovaný režim na riadenie hustoty siete. Možnosti vytvárania siete dostupné v odbornom režime a v režime „Guided“ sú zobrazené na obr. 35.2.11 a obr. 35.2.10. Podrobnejší popis týchto možností nájdete v [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/). 
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image005.jpg' | relative_url }})
 
-Guided mode Mesh option
+Režim s navádzaním – možnosť „Mesh“
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image006.jpg' | relative_url }})
 
-Expert mode mesh option
+Možnosť vytvorenia siete v expertnom režime
 
-### Object Material
+### Materiál objektu
 
-In material page, all the materials added to material list are displayed (as shown in Fig. 35.2.12.) and user can select the required material to assign to respective object from material list. Also user can load the material in Object material page using Import Material data from a File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or Using Load form Library option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). 
+Na stránke materiálov sa zobrazujú všetky materiály pridané do zoznamu materiálov (ako je znázornené na obr. 35.2.12.) a používateľ si môže zo zoznamu materiálov vybrať požadovaný materiál, ktorý chce priradiť k príslušnému objektu. Užívateľ môže materiál na stránke Materiál objektu načítať aj pomocou možnosti Importovať údaje o materiáli zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Načítať z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image029.jpg' | relative_url }})
 
-Material selection Window
+Okno výberu materiálu
 
-### Boundary Conditions
+### Okrajové podmienky
 
-In Boundary conditions page, user can assign various boundary constraints for an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. The most commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer. Fig. 35.2.13. shows various BCC that can be assigned to an object in Heat transfer operation.
+Na stránke „Okrajové podmienky“ môže používateľ objektu priradiť rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako okraj objektu interaguje s ostatnými objektmi a s prostredím. Najčastejšie sa pri simuláciách zahŕňajúcich prenos tepla používajú okrajové podmienky týkajúce sa výmeny tepla s prostredím. Obr. 35.2.13. znázorňuje rôzne okrajové podmienky (BCC), ktoré je možné priradiť k objektu v operácii „Prenos tepla“.
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image007.jpg' | relative_url }})
 
-Boundary conditions window
+Okno s okrajovými podmienkami
 
-For more information about these BCC's please refer [14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+Ďalšie informácie o týchto BCC nájdete v dokumente [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
 
-### Movement Controls
+### Ovládanie pohybu
 
-Movement controls are applied to rigid objects when deformation is turned on in simulation control and movement control is not used for Heat transfer operation.  
-For more information about these movement controls please refer [15\. Movement Controls Settings.](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+Ovládanie pohybu sa uplatňuje na tuhé objekty, ak je v nastaveniach simulácie zapnutá deformácia a ak sa ovládanie pohybu nepoužíva pri operácii „Prenos tepla“.  
+Ďalšie informácie o týchto ovládacích prvkoch nájdete v [15\. Movement Controls Settings.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 
 ###   
-Property
+Nehnuteľnosť
 
-Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See Fig. 35.2.14.). For more information, please refer [16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/).
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 35.2.14.) Ďalšie informácie nájdete v [16\. Object properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image008.jpg' | relative_url }})
 
-Object property window
+Okno vlastností objektu
 
-### Initialize
+### Inicializácia
 
-In Initialize window, few state variables that are commonly used such as Temperature, strain, stress, damage, velocity, Displacement, etc.., are made available for initialization. User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 35.2.15. shows the various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows (see Fig. 35.2.16. and Fig. 35.2.17.). For more information on how to initialize state variables in Node and Element windows, please refer [17.1 Node data Window](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [17.2. Element data Window](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+V okne „Initialize“ sú k dispozícii na inicializáciu niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie atď. Používateľ môže inicializovať hodnoty týchto stavových premenných kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 35.2.15. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien „Node“ a „Element“ (pozri obr. 35.2.16. a obr. 35.2.17.). Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1 Node data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [17.2. Element data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image009.jpg' | relative_url }})
 
-Initialize window
+Inicializovať okno
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image010.jpg' | relative_url }})
 
-Node Data window
+Okno „Údaje uzla“
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image011.jpg' | relative_url }})
 
-Element Data window
+Okno „Údaje o prvku“
 
-## Positioning
+## Polohovanie
 
-Below Fig. 35.2.18. shows the positioning window.
+Na obr. 35.2.18. je zobrazené okno na nastavenie polohy.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image037.jpg' | relative_url }})
 
-Positioning window
+Okno na nastavenie polohy
 
-**Automatic Positioning** ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }})
+**Automatické polohovanie** ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }})
 
-By clicking on this button, system automatically Positions the Objects with respect to the top die movement direction, this option works best for simple setup with three objects work piece, top die and bottom die.
+Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na smer pohybu hornej matrice; táto možnosť sa najlepšie hodí pre jednoduché nastavenie s tromi objektmi – obrobkom, hornou matricou a spodnou matricou.
 
-**Positioning Objects**![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
+**Umiestňovanie objektov**![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 35.2.19. For more information about these options, please refer [19\. Object Positioning.](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/)
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 35.2.19. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image038.jpg' | relative_url }})
 
-Object positioning window
+Okno na umiestňovanie objektov
 
-## Scheduled Positioning
+## Plánované polohovanie
 
-When user is not sure about the location of an object, scheduled positioning will help to position the objects accurately.  
-Schedule positioning allows the user to define the positioning for objects in MO setup for successive operations for which DB is not generated so that the objects are positioned before generation of DB while running simulation in Batch mode.
+Ak si používateľ nie je istý umiestnením objektu, naplánované umiestňovanie mu pomôže objekty presne umiestniť.  
+Funkcia plánovania umiestnenia umožňuje používateľovi definovať umiestnenie objektov v nastaveniach MO pre nasledujúce operácie, pre ktoré sa nevytvára databáza (DB), tak, aby boli objekty umiestnené ešte pred vytvorením databázy počas spustenia simulácie v dávkovom režime.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image039.jpg' | relative_url }})
 
-Scheduled Positioning window
+Plánované časové okno na určovanie polohy
 
-## Inter-Object relations
+## Vzťahy medzi objektmi
 
-The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. The relations table shows the current inter object relations that have been defined as shown in Fig. 35.2.21. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined.
+Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty v simulácii vzájomne interagujú. Tabuľka vzťahov zobrazuje aktuálne vzťahy medzi objektmi, ktoré boli definované, ako je znázornené na obr. 35.2.21. Všetky objekty, ktoré sa v priebehu simulácie môžu navzájom dotýkať, musia mať definovaný kontaktný vzťah.
 
-**System** : By selecting this radio button, system assigns default inter-object relationships. User can modify values by clicking on "Edit" button.
+**Systém**: Po výbere tohto prepínača systém priradí predvolené vzťahy medzi objektmi. Používateľ môže hodnoty upraviť kliknutím na tlačidlo „Upraviť“.
 
-**User** : By default, user radio button will be selected for Heat transfer operation. User can add relationships by clicking on Add button as shown in Fig. 35.2.21.
+**Používateľ**: Pri operácii „Prenos tepla“ je štandardne vybrané rádio tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo „Pridať“, ako je znázornené na obr. 35.2.21.
 
-For more information please refer, [20\. Inter-Object Relations.](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations.](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_2_3d_heat_transfer_operation/image012.jpg' | relative_url }})
 
-Inter-Object definition window
+Okno definície medzi objektmi
 
-## Stopping Controls
+## Ovládacie prvky na zastavenie
 
-The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on maximum number of time steps simulated or the maximum process time. A simulation will be stopped when the condition of any of the stopping parameters are met. For more information, please refer [Stopping Controls](../33_forming/33_2_3d_forming_setup.htm#33_2_7_Stopping_Controls) in [3D Forming setup](/docs/sk/operation_templates/33_forming/33_2_3d_forming_setup/).
+Parametre ukončenia určujú čas procesu, po uplynutí ktorého sa simulácia ukončí. Simuláciu je možné ukončiť na základe maximálneho počtu simulovaných časových krokov alebo maximálneho času procesu. Simulácia sa zastaví, keď bude splnená podmienka ktoréhokoľvek z parametrov ukončenia. Ďalšie informácie nájdete v [Stopping Controls](../33_forming/33_2_3d_forming_setup.htm#33_2_7_Stopping_Controls) v [3D Forming setup](/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/).
 
-## Step controls
+## Ovládacie prvky krokov
 
-**Number of simulation steps (NSTEP)**
+**Počet simulačných krokov (NSTEP)**
 
-The number of simulation steps parameter defines the number of steps to run from the starting step number. The simulation will stop after this number of simulation steps have run, unless stopping control is triggered to stop the simulation or if the simulation runs into a problem. For example, if the starting step number is -35 (NSTART), and 30 steps (NSTEP) are specified, the simulation will stop after the 65th step, unless another stopping control is triggered first.
+Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú spustiť od počiatočného čísla kroku. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí riadiaci signál na zastavenie simulácie alebo ak simulácia nenarazí na problém. Napríklad, ak je počiatočné číslo kroku -35 (NSTART) a je špecifikovaných 30 krokov (NSTEP), simulácia sa zastaví po 65. kroku, pokiaľ sa skôr nespustí iný príkaz na zastavenie.
 
-**Step increment to save (STPINC)**
+**Krok pri ukladaní (STPINC)**
 
-The step increment (STPINC) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
+Hodnota krokového prírastku (STPINC), ktorá sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nemusí sa nutne uložiť do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať väčší úložný priestor.
 
   
 ****
 
-**Step increment control (DSMAX/DTMAX)**
+**Ovládanie krokového prírastku (DSMAX/DTMAX)**
 
-Heat transfer operation solution step size can be controlled by time step. The DEFORM system solves time dependent non-linear problems by generating a series of FEM solutions at discrete time increments. At each time increment, the velocities, temperatures and other key variables of each node in the finite element mesh are determined based on boundary conditions, thermo mechanical properties of the work piece materials and possibly solutions at previous steps. Other state variables are derived from these key values and updated for each time increment. The length of this time step and number of steps simulated are determined based on the information specified in the step controls menu. Fig. 35.2.22. shows the Step definition page in guided mode.
+Veľkosť kroku pri riešení úloh prenosu tepla je možné riadiť pomocou časového kroku. Systém DEFORM rieši časovo závislé nelineárne úlohy generovaním série riešení metódou konečných prvkov (FEM) v diskrétnych časových krokoch. V každom časovom kroku sa na základe okrajových podmienok, termomechanických vlastností materiálov obrobku a prípadne riešení z predchádzajúcich krokov určujú rýchlosti, teploty a ďalšie kľúčové premenné každého uzla v sieti konečných prvkov. Ostatné stavové premenné sa odvodzujú z týchto kľúčových hodnôt a aktualizujú sa pri každom časovom kroku. Dĺžka tohto časového kroku a počet simulovaných krokov sa určujú na základe informácií zadaných v ponuke nastavení krokov. Obr. 35.2.22. znázorňuje stránku Definícia kroku v režime s návodom.
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image013.jpg' | relative_url }})
 
-Guided Mode Step Definition window
+Okno „Definícia kroku v režime s návodom“
 
   
-Options defined under Step definition page control the numerical behavior of the solution. Expert mode simulation control Main controls details with specifying the simulation title, unit system, geometry type, etc.
+Možnosti definované na stránke „Definícia kroku“ ovplyvňujú numerické správanie riešenia. Ovládacie prvky simulácie v expertnom režime – hlavné ovládacie prvky umožňujú špecifikovať názov simulácie, systém jednotiek, typ geometrie atď.
 
-[Step](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/) and [stopping controls](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/) are used to specify the time step, the total number of steps and the criteria used to terminate the simulation. [Processing conditions](/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/) like the environment temperature, convection coefficient can be specified here.
+[Step](/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/) a [stopping controls](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/) slúžia na určenie časového kroku, celkového počtu krokov a kritérií na ukončenie simulácie. [Processing conditions](/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/) – tu je možné zadať napríklad teplotu prostredia alebo konvekčný koeficient.
 
-For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
 
-## Generate DB
+## Vytvoriť databázu
 
-**Check Data**![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})****
+**Overiť údaje**![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})****
 
-It checks the Data. If Data is correct we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.
+Systém skontroluje údaje. Ak sú údaje správne, môžeme vytvoriť databázu. Ak sa však pri kontrole údajov vyskytnú chyby alebo varovania, je potrebné ich opraviť pred vytvorením databázy. Chyby zabránia vytvoreniu databázy, zatiaľ čo varovania vytvorenie databázy neumožnia.
 
-**Generate Database![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**
+**Vytvoriť databázu ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**
 
-By clicking on this button, it generated the Database for the setup.(See Fig. 35.2.23.)
+Kliknutím na toto tlačidlo sa vygenerovala databáza pre nastavenie. (Pozri obr. 35.2.23.)
 
-**Append Key file**
+**Pridať súbor s kľúčom**
 
-Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only .key file can be changed and simulation can be resubmitted.
+Akékoľvek informácie, ktoré nie sú definované v sprievodcovi, ale napriek tomu sa vzťahujú na daný proces, je možné načítať ako súbor s príponou .key. Táto možnosť je užitočná aj v prípadoch, keď je potrebné zmeniť len niekoľko hodnôt – tieto hodnoty je možné definovať v súbore s príponou .key, následne stačí zmeniť len tento súbor a simuláciu je možné odoslať znovu.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image048.jpg' | relative_url }})
 
-Generate DB window
+Okno „Vytvoriť databázu“

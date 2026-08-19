@@ -1,38 +1,38 @@
 ---
 lang: sk
-title: "35. Introduction to Heat Transfer Operations"
+title: "35. Úvod do procesov prenosu tepla"
 ---
 
-# 35\. Introduction to Heat Transfer Operations
+# 35\. Úvod do procesov prenosu tepla
 
-Heat Transfer operation will help the user to simulate various heating/cooling operations in forming process which involve temperature change and deformation. The operations are customized to setup only heat transfer process during forming like heating workpiece, transferring workpiece form furnace to press, resting workpiece on die (before forming) and dwelling after forming. Appropriate selection of heat transfer type (heating, transfer, resting or dwelling) will add related settings windows and guide the user to quickly setup the heat transfer operations during hot/warm forging operations.
+Funkcia „Prenos tepla“ pomôže používateľovi simulovať rôzne operácie ohrevu/chladenia v procese tvárnenia, ktoré zahŕňajú zmenu teploty a deformáciu. Tieto operácie sú prispôsobené tak, aby sa počas tvárnenia nastavoval iba proces prenosu tepla, ako je ohrev obrobku, presun obrobku z pece do lisu, odpočinok obrobku na matrici (pred tvárnením) a výdrž po tvárnení. Vhodný výber typu prenosu tepla (ohrev, prenos, odpočinok alebo zotrvanie) pridá príslušné okná nastavení a navedie používateľa k rýchlemu nastaveniu operácií prenosu tepla počas operácií horúceho/teplého kovania.
 
-There are four types of heat transfer operations available in both 2D and 3D,
+V 2D aj 3D sú k dispozícii štyri typy operácií prenosu tepla,
 
-  1. Heat in Furnace
+  1. Zahrievanie v peci
 
-  2. Transfer through Air
+  2. Preprava leteckou dopravou
 
-  3. Rest on die and
+  3. Položte na formu a
 
-  4. Dwell on die
+  4. Zostať na hrane
 
-**Heat in Furnace:** In heating or heat furnace operation, heating of billet in a furnace is modelled. The default process settings will be added suited to heating operation (See [Table. 35.1.](35_introduction_to_heat_transfer_operations.htm#Table_35_1_Default_process_settings_\(heat_condition\)_and_object_temperatures_for_different_heating_types)), changes can be made to the default setting while defining the particular operation.
+**Ohrev v peci:** Pri prevádzke v režime kúrenia alebo ohrevu sa modeluje ohrev sochory v peci. Budú pridané predvolené nastavenia procesu vhodné pre prevádzku ohrevu (pozri [Table. 35.1.](35_introduction_to_heat_transfer_operations.htm#Table_35_1_Default_process_settings_\(heat_condition\)_and_object_temperatures_for_different_heating_types)), pri definovaní konkrétnej operácie je možné vykonať zmeny predvolených nastavení.
 
-**Transfer through Air:** In Transfer through Air operation, heat transfer or heat loss to environment while transferring workpiece/billet to the die is modelled. By default one object, workpiece, will be added to the project tree for this operation. The default process settings for Transfer through Air are as shown in [Table. 35.1.](35_introduction_to_heat_transfer_operations.htm#Table_35_1_Default_process_settings_\(heat_condition\)_and_object_temperatures_for_different_heating_types)
+**Prenos vzduchom:** Pri operácii „Prenos vzduchom“ sa modeluje prenos tepla alebo tepelné straty do okolia počas presunu obrobku/polotovaru do formy. V predvolenom nastavení sa do stromu projektu pre túto operáciu pridá jeden objekt – obrobok. Predvolené nastavenia procesu pre prevod cez vzduch sú uvedené v [Table. 35.1.](35_introduction_to_heat_transfer_operations.htm#Table_35_1_Default_process_settings_\(heat_condition\)_and_object_temperatures_for_different_heating_types)
 
-**Rest on die:** In Rest on die operation, heat transfer or heat loss to environment and die from workpiece/billet while resting on die before the top die makes contact with the workpiece/billet is modelled. By default workpiece, top and bottom die objects will be added to the project tree. Default process settings for Rest on die operation is as shown in [Table. 35.1.](35_introduction_to_heat_transfer_operations.htm#Table_35_1_Default_process_settings_\(heat_condition\)_and_object_temperatures_for_different_heating_types)
+**Odpočinok na forme:** Pri operácii „Odpočinok na forme“ sa modeluje prenos tepla alebo únik tepla do okolia a do formy zo sústruženého dielu/polotovaru počas odpočinku na forme predtým, ako horná forma príde do kontaktu so sústruženým dielom/polotovarom. Predvolene sa do stromu projektu pridajú objekty sústruženého dielu, hornej a spodnej formy. Predvolené nastavenia procesu pre operáciu „Odpočinok na matrici“ sú uvedené v [Table. 35.1.](35_introduction_to_heat_transfer_operations.htm#Table_35_1_Default_process_settings_\(heat_condition\)_and_object_temperatures_for_different_heating_types)
 
-**Dwell on die:** In this operation, heat transfer or heat loss to environment and die from workpiece/billet after deformation (after the dies retract from the workpiece) is modelled. By default workpiece, top and bottom die objects will be added to the project tree. Default process settings for Dwell on Die operation is as shown in [Table. 35.1.](35_introduction_to_heat_transfer_operations.htm#Table_35_1_Default_process_settings_\(heat_condition\)_and_object_temperatures_for_different_heating_types)
+**Dwell on die:** V tejto operácii sa modeluje prenos tepla alebo únik tepla do okolia a do formy z obrobku/polotovaru po deformácii (po tom, čo sa formy stiahnu z obrobku). Štandardne sa do stromu projektu pridajú objekty obrobku, hornej a spodnej formy. Predvolené nastavenia procesu pre operáciu „Dwell on Die“ sú uvedené v [Table. 35.1.](35_introduction_to_heat_transfer_operations.htm#Table_35_1_Default_process_settings_\(heat_condition\)_and_object_temperatures_for_different_heating_types)
 
-**Heating type** |  **Workpiece Temperature** **(C or F)** |  **Dies Temperature** **(C or F)** |  **Process Time** **(sec)** |  **Env ironment Temperature** **(C or F)** |  **Convection coefficient** **(N/sec/mm/C or Btu/sec/in^2/F)**  
+**Typ ohrevu** |  **Teplota obrobku** **(°C alebo °F)** |  **Teplota foriem** **(°C alebo °F)** |  **Doba spracovania** **(s)** |  **Teplota okolia** **(°C alebo °F)** |  **Konvekčný koeficient** **(N/s/mm/°C alebo Btu/s/in²/°F)**  
 ---|---|---|---|---|---  
-Heat in Furnace |  1232 C or 2250 F |  NA |  3600 |  1200 C or 2250 F |  0.02 N/sec/mm/C or 7.7e-6 Btu/sec/in^2/F  
-Transfer through Air |  1232 C or 2250 F | NA |  15 |  20 C or 68 F |  0.02 N/sec/mm/C or 7.7e-6 Btu/sec/in^2/F  
-Resting |  1232 C or 2250 F |  20 C or 68 F |  4 |  20 C or 68 F |  0.02 N/sec/mm/C or  
-7.7e-6 Btu/sec/in^2/F  
-Dwelling |  1232 C or 2250 F |  20 C or 68 F |  4 |  20 C or 68 F |  0.02 N/sec/mm/C or 7.7e-6 Btu/sec/in^2/F  
+Teplo v peci |  1232 °C alebo 2250 °F |  neuvádza sa |  3600 |  1200 °C alebo 2250 °F |  0,02 N/s/mm/°C alebo 7,7e-6 Btu/s/in²/°F  
+Prenos vzduchom |  1232 °C alebo 2250 °F | NA |  15 |  20 °C alebo 68 °F |  0,02 N/s/mm/°C alebo 7,7e-6 Btu/s/in²/°F  
+Odpočinok |  1232 °C alebo 2250 °F |  20 °C alebo 68 °F |  4 |  20 °C alebo 68 °F |  0,02 N/s/mm/°C alebo  
+7,7e-6 Btu/s/in²/F  
+Bývanie |  1232 °C alebo 2250 °F |  20 °C alebo 68 °F |  4 |  20 °C alebo 68 °F |  0,02 N/s/mm/°C alebo 7,7e-6 Btu/s/in²/°F  
   
-Default process settings (heat condition) and object temperatures for different heating types
+Predvolené nastavenia procesu (tepelné podmienky) a teploty objektov pre rôzne typy ohrevu
 
-For more information about the all four heat transfer operations setup refer the [35.1. 2D Heat Transfer Operation]() and [35.2. 3D Heat Transfer Operation]().
+Ďalšie informácie o nastavení všetkých štyroch procesov prenosu tepla nájdete v dokumentoch [35.1. 2D Heat Transfer Operation]() a [35.2. 3D Heat Transfer Operation]().

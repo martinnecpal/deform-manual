@@ -1,226 +1,226 @@
 ---
 lang: sk
-title: "40.2. 3D Machining Distortion"
+title: "40.2. Deformácia pri 3D obrábaní"
 ---
 
-# 40.2. 3D Machining Distortion
+# 40.2. Deformácie pri 3D obrábaní
 
-40.2.1. How to add 3D Machining Distortion operation
+40.2.1. Ako pridať operáciu „3D deformácia pri obrábaní“
 
-40.2.2. Object window
+40.2.2. Okno objektu
 
-40.2.3. Workpiece
+40.2.3. Obrobok
 
-  * General
+  * Všeobecné informácie
 
-  * Boundary Conditions
+  * Okrajové podmienky
 
-  * Initialize
+  * Inicializovať
 
-  * Built in Flownet
+  * Vytvorené v programe Flownet
 
-40.2.4. Fixtures
+40.2.4. Zápasy
 
-  * General
+  * Všeobecné informácie
 
-  * Geometry
+  * Geometria
 
-40.2.5. Pass
+40.2.5. Prejsť
 
-  * General
+  * Všeobecné informácie
 
-  * Geometry
+  * Geometria
 
-40.2.6. Positioning
+40.2.6. Polohovanie
 
-40.2.7. Scheduled Positioning
+40.2.7. Plánované umiestnenie
 
-40.2.8. Contact
+40.2.8. Kontakt
 
-40.2.9. Simulation Preview
+40.2.9. Náhľad simulácie
 
-40.2.10. Simulation controls
+40.2.10. Ovládacie prvky simulácie
 
-40.2.11. Generate DB
+40.2.11. Vytvorenie databázy
 
-## How to add 3D Machining Distortion operation
+## Ako pridať operáciu „3D deformácia pri obrábaní“
 
-3D Machining Distortion operation can be setup in Integrated Manufacturing Process environment that can be accessed from GUI Main. 3D Machining Distortion Operation can be added in MO wizard, from explorer tab by clicking on button next to 3D Machining Distortion. Also, user can add by drag and drop into the Operation Editor as shown in [Fig. 40.2.1.](40_1_2d_machining_distortion.htm#Fig_40_1_1_Adding_2D_Machining_Distortion_Operation_to_operation_editor)
+Operáciu „3D Machining Distortion“ je možné nastaviť v prostredí Integrated Manufacturing Process, ku ktorému sa dostanete z hlavného okna grafického používateľského rozhrania (GUI). Operáciu „3D Machining Distortion“ je možné pridať v sprievodcovi MO na karte „Explorer“ kliknutím na tlačidlo vedľa položky „3D Machining Distortion“. Používateľ ju môže tiež pridať pomocou funkcie drag and drop do editora operácií, ako je znázornené na obrázku [Fig. 40.2.1.](40_1_2d_machining_distortion.htm#Fig_40_1_1_Adding_2D_Machining_Distortion_Operation_to_operation_editor).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image001.jpg' | relative_url }})
 
-Adding 3D Machining Distortion operation to operation Editor
+Pridanie operácie „3D deformácia pri obrábaní“ do editora operácií
 
-## Object window
+## Okno objektu
 
-Along with workpiece, user can add required number of Fixtures and passes for the simulation by defining the Number of Fixtures and Number of Passes in objects page. Fig. 40.2.2. shows four fixtures and one pass added for a simple 3D Machining Distortion operation. Then Click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) to add selected objects to the 3D Machining Distortion operation. (See FIg. Fig. 40.2.2.)
+Okrem obrobku môže používateľ pridať do simulácie požadovaný počet upínacích prípravkov a prechodov tak, že na stránke „Objekty“ zadá „Počet upínacích prípravkov“ a „Počet prechodov“. Obr. 40.2.2. znázorňuje štyri upínacie prípravky a jeden priechod pridané pre jednoduchú operáciu 3D deformácie pri obrábaní. Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}), aby ste vybrané objekty pridali do operácie 3D deformácie pri obrábaní. (Pozri obr. 40.2.2.)
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/image002.jpg' | relative_url }})
 
-Object window
+Okno objektu
 
-## Workpiece
+## Obrobok
 
-### General
+### Všeobecné informácie
 
-In this window user can change the workpiece name. For workpiece in Machining Distortion user has to import the object from other DB’s or Key file’s using ![]({{ '/assets/icons/pre_icons/mo_import_object.._button.jpg' | relative_url }}) button, hence user do not have any other option to define Workpiece (see Fig. 40.2.3.). If user wants to initialize the displacement to the workpiece, then he can turn on the Init displacement check box. 
+V tomto okne môže používateľ zmeniť názov obrobku. V prípade obrobku v module „Machining Distortion“ musí používateľ importovať objekt z iných databáz alebo zo súborov kľúčov pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_import_object.._button.jpg' | relative_url }}), preto nemá žiadnu inú možnosť na definovanie obrobku (pozri obr. 40.2.3.). Ak chce používateľ inicializovať posun obrobku, môže zaškrtnúť políčko Init displacement. 
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/image003.jpg' | relative_url }})
 
-Workpiece window
+Okno obrobku
 
-### Boundary Conditions
+### Okrajové podmienky
 
-In Boundary conditions window, user can assign boundary constraints for an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. Fig. 40.2.4. shows BCC that can be assigned to workpiece in Machining Distortion. Fixing velocity to arrest the workpiece displacement during machining or applying pressure to hold workpiece are most common BCC required for Machining Distortion.
+V okne „Okrajové podmienky“ môže používateľ priradiť objektu okrajové obmedzenia. Okrajové podmienky určujú, ako okraj objektu interaguje s ostatnými objektmi a s prostredím. Obr. 40.2.4. znázorňuje okrajové podmienky, ktoré je možné priradiť k obrobku v rámci deformácie pri obrábaní. Najbežnejšími okrajovými podmienkami požadovanými pre deformáciu pri obrábaní sú stanovenie rýchlosti na zastavenie posunu obrobku počas obrábania alebo pôsobenie tlaku na pridržanie obrobku.
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image003.jpg' | relative_url }})
 
-Boundary conditions window
+Okno s okrajovými podmienkami
 
-### Initialize
+### Inicializácia
 
-In Initialize window, few state variables that are commonly used such as Temperature, strain, stress, damage, velocity, Displacement, etc.., are made available for initialization.
+V okne „Initialize“ sú na inicializáciu k dispozícii niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie atď.
 
-User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 40.2.5. shows the various state variables that are available in Initialize window. For more information related to initialize option refer [17\. Object Data Initialize](/docs/sk/pre_processor/17_object_data_initialization/17_object_data_initialize/). 
+Používateľ môže inicializovať hodnoty týchto stavových premenných kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 40.2.5. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. Ďalšie informácie týkajúce sa možnosti inicializácie nájdete v časti [17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/). 
 
-Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1 Node node Window](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [17.2. Element Data Window](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien „Node“ a „Element“. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v dokumentácii [17.1 Node node Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image004.jpg' | relative_url }})
 
-Initialize Window
+Inicializovať okno
 
-### Built In Flownet
+### Vstavaná sieť Flownet
 
-Using Built in Flownet option user can generate Flownet mesh for the object. When user uses Built in Flownet, the Flownet is plotted as the problem is simulated. For more infromation related to Built in Flownet option refer [13.2.9. Built in Flownet.](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet)
+Pomocou možnosti „Vstavaný Flownet“ môže používateľ vygenerovať sieť Flownet pre daný objekt. Ak používateľ použije možnosť „Vstavaný Flownet“, sieť Flownet sa vykresľuje priebežne počas simulácie úlohy. Ďalšie informácie týkajúce sa možnosti „Vstavaný Flownet“ nájdete v [13.2.9. Built in Flownet.](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image005.jpg' | relative_url }})
 
-Built in Flownet
+Vytvorené v Flownet
 
-## Fixtures
+## Rozpis zápasov
 
-### General
+### Všeobecné informácie
 
-Fixtures that hold workpiece are defined. Fixtures are considered as rigid objects in this operation. In this window user can change the Fixture name (see Fig. 40.2.7.).
+Sú definované upínacie prípravky, ktoré držia obrobok. Upínacie prípravky sa v tejto operácii považujú za tuhé objekty. V tomto okne môže používateľ zmeniť názov upínacieho prípravku (pozri obr. 40.2.7.).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/image006.jpg' | relative_url }})
 
-Fixture window
+Okno s rozpisom zápasov
 
-### Geometry
+### Geometria
 
-User can define the new geometry by using the options from geometry window. Geometry window provides basic options for defining geometry (see Fig. 40.2.8.). Geometry can also be imported using Import geometry from a file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option or using Import from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option. User can also import geometries in other formats such as .key, .DB, .STL, .PDA, .NAS and .UNV. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 3D geometries please refer to [12.3. 3D Geometry Data Defining](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+Používateľ môže definovať novú geometriu pomocou možností v okne geometrie. Okno geometrie ponúka základné možnosti na definovanie geometrie (pozri obr. 40.2.8.). Geometriu je možné importovať aj pomocou možnosti Importovať geometriu zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Importovať z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Používateľ môže tiež importovať geometrie v iných formátoch, ako sú .key, .DB, .STL, .PDA, .NAS a .UNV. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii primitívy. Ďalšie informácie o vytváraní a úprave 3D geometrií nájdete v [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image006.jpg' | relative_url }})
 
-Geometry Window
+Okno Geometria
 
-## Pass
+## Prejsť
 
-### General
+### Všeobecné informácie
 
-From the model point of view, the machining pass information is also a geometry data, which when overlapping with the billet, decides the location and the extent of the material set for removal. Hence this is also a geometry data that can be defined/loaded. In this window user can change the workpiece name (see Fig. 40.2.9.).
+Z hľadiska modelu sú informácie o obrábacom priechode tiež geometrickými údajmi, ktoré pri prekrývaní so surovcom určujú polohu a rozsah materiálu určeného na odstránenie. Ide teda tiež o geometrické údaje, ktoré je možné definovať alebo načítať. V tomto okne môže používateľ zmeniť názov obrobku (pozri obr. 40.2.9.).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/image008.jpg' | relative_url }})
 
-Pass window
+Okno na prechod
 
-### Geometry
+### Geometria
 
-User can define the new geometry by using the options from geometry window. Geometry window provides basic options for defining geometry (see Fig. 40.2.10.). Geometry can also be imported using Import geometry from a file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option or using Import from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option. User can also import geometries in other formats such as .key, .DB, .STL, .PDA, .NAS and .UNV. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 3D geometries please refer to [12.3. 3D Geometry Data Defining](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+Používateľ môže definovať novú geometriu pomocou možností v okne geometrie. Okno geometrie ponúka základné možnosti na definovanie geometrie (pozri obr. 40.2.10.). Geometriu je možné importovať aj pomocou možnosti „Importovať geometriu zo súboru“ (![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})) alebo pomocou možnosti „Importovať z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})). Používateľ môže tiež importovať geometrie v iných formátoch, ako sú .key, .DB, .STL, .PDA, .NAS a .UNV. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii primitívy. Ďalšie informácie o vytváraní a úprave 3D geometrií nájdete v [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image006.jpg' | relative_url }})
 
-Geometry window
+Okno Geometria
 
-## Positioning
+## Polohovanie
 
-Below Fig. 40.2.11. shows the positioning window.
+Na obr. 40.2.11. je zobrazené okno na nastavenie polohy.
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image007.jpg' | relative_url }})
 
-Positioning window
+Okno na nastavenie polohy
 
-**Automatic Positioning**![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) : Auto positioning is used by user to position the rigid objects with workpiece, this option works well for the three objects in forming operation however, user has to review the positioned objects after using the auto positioning in Machining Distortion.
+**Automatické polohovanie**![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}): Funkciu automatického polohovania používa používateľ na umiestnenie tuhých objektov voči obrobku. Táto možnosť sa osvedčuje pri troch objektoch v operácii tvarovania, avšak po použití automatického polohovania v režime „Machining Distortion“ musí používateľ skontrolovať polohu objektov.
 
-**Positioning Objects** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}): By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 40.2.12. For more information about these options, please refer [19\. Object Positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/).
+**Umiestňovanie objektov** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}): Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestňovania, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 40.2.12. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image008.jpg' | relative_url }})
 
-Object positioning window
+Okno na umiestňovanie objektov
 
-## Scheduled Positioning
+## Plánované polohovanie
 
-When user is not sure about the location of an object as in case of Read From DB objects and Machining Distortion operation is added in batch mode, scheduled positioning will help to position the objects accurately.
+Ak si používateľ nie je istý polohou objektu – napríklad v prípade objektov typu „Načítanie z databázy“ a ak je v dávkovom režime pridaná operácia „Obrábacia deformácia“ –, naplánované polohovanie pomôže objekty presne umiestniť.
 
-Schedule positioning allows the user to define the positioning for objects in MO setup for successive operations for which DB is not generated so that the objects are positioned before generation of DB while running simulation in Batch mode (see Fig. 40.2.13.)
+Funkcia „Schedule positioning“ umožňuje používateľovi definovať umiestnenie objektov v nastaveniach MO pre nasledujúce operácie, pre ktoré sa nevytvára databáza (DB), tak, aby boli objekty umiestnené ešte pred vytvorením databázy počas spustenia simulácie v dávkovom režime (pozri obr. 40.2.13.)
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image009.jpg' | relative_url }})
 
-Scheduled positioning window
+Plánované časové okno na umiestnenie
 
-## Contact 
+## Kontakt 
 
-The purpose of inter-object relations is to define how different objects, fixtures and workpiece, in a simulation interact with each other. The relations table shows the current inter object relations that have been defined as shown in Fig. 40.2.14. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined. It is very important to define these relationships correctly for a simulation to model a Machining Distortion process accurately. User should note that no inter-object relationship is needed between pass object and the workpiece.
+Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty – upínacie prostriedky a obrobok – v simulácii vzájomne interagujú. Tabuľka vzťahov zobrazuje aktuálne vzťahy medzi objektmi, ktoré boli definované tak, ako je znázornené na obr. 40.2.14. Všetky objekty, ktoré môžu prísť do kontaktu v priebehu simulácie, musia mať definovaný kontaktný vzťah. Správne definovanie týchto vzťahov je veľmi dôležité, aby simulácia mohla presne modelovať proces deformácie pri obrábaní. Používateľ by mal mať na pamäti, že medzi objektom priechodu a obrobkom nie je potrebný žiadny vzťah medzi objektmi.
 
-**System** : By selecting this radio button, system assigns default inter-object relationships. Also user can add the lubricants if necessary by selecting Add New from pull down menu and clicking on "Edit" button or user can load the required lubricants from the library for the simulation.
+**Systém**: Po výbere tohto prepínača systém priradí predvolené vzťahy medzi objektmi. V prípade potreby môže používateľ pridať mazivá výberom možnosti „Pridať nové“ z roletového menu a kliknutím na tlačidlo „Upraviť“, alebo môže na účely simulácie načítať požadované mazivá z knižnice.
 
-**User** : By default, user radio button will be selected for Machining Distortion operation. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add) button as shown in Fig. 40.2.14.
+**Používateľ**: Pri operácii „Deformácia pri obrábaní“ je štandardne zaškrtnuté políčko „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať), ako je znázornené na obr. 40.2.14.
 
-For more information please refer, [20\. Inter-Object Relations](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image010.jpg' | relative_url }})
 
-Contact window
+Kontaktný formulár
 
-## Simulation Preview
+## Náhľad simulácie
 
-Simulation Preview provides an overview of the operation to be executed based on the process definition and pass. In Simulation preview window, by clicking the ![]({{ '/assets/icons/pre_icons/mo_preview_play_button.jpg' | relative_url }}) button animation would be played and shows the preview of the object with material removed after the pass. (See Fig. 40.2.15.)
+Náhľad simulácie poskytuje prehľad o operácii, ktorá sa má vykonať, na základe definície procesu a priechodu. V okne Náhľad simulácie sa po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_preview_play_button.jpg' | relative_url }}) spustí animácia, ktorá zobrazí náhľad objektu po odstránení materiálu v dôsledku priechodu. (Pozri obr. 40.2.15.)
 
-In 3D, we have two type of Boolean method :
+V 3D máme dva typy booleovských metód:
 
-**Geometry based (new method)** : __In __ Geometry based option, it will Perform Boolean and then Local Remeshing as per the defined input. This will generate smooth mesh as shown in Fig. 40.2.16.)
+**Na základe geometrie (nová metóda)**: __Pri voľbe „Na základe geometrie“ sa najskôr vykoná boolovská operácia a následne lokálne prečlenenie siete podľa zadaných vstupných údajov. Výsledkom bude hladká sieť, ako je znázornené na obr. 40.2.16.)
 
-**Solid mesh based (old method)** : In Solid mesh option, it will perform boolean and then generate only Solid mesh as shown in Fig. 40.2.15.
+**Na základe pevnej siete (starý spôsob)**: Pri voľbe „Pevná sieť“ sa vykoná boolovská operácia a následne sa vygeneruje iba pevná sieť, ako je znázornené na obr. 40.2.15.
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image011.jpg' | relative_url }})
 
-Simulation preview : Solid mesh based method
+Náhľad simulácie: Metóda založená na pevnej sieti
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image012.jpg' | relative_url }})
 
-Simulation preview : Geometry based method 
+Náhľad simulácie: Metóda založená na geometrii 
 
-## Simulation control
+## Riadenie simulácie
 
-**Number of simulation steps** : The number of simulation steps parameter defines the number of steps to run in Pass and Unloading stages from the starting step number. The simulation will stop after this number of simulation steps have run, unless stopping control is triggered to stop the simulation or if the simulation runs into a problem. Machining Distortion simulation is run in 3 stages,
+**Počet simulačných krokov**: Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú vykonať vo fázach „Pass“ a „Unloading“ počnúc počiatočným číslom kroku. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí príkaz na zastavenie simulácie alebo ak simulácia nenarazí na problém. Simulácia deformácie pri obrábaní prebieha v 3 fázach,
 
-Stage 1 – Load, loads the operation data and
+Fáza 1 – Načítanie, načíta prevádzkové údaje a
 
-Stage 2 – Pass, Simulates machining pass
+Fáza 2 – Prechod, simuluje obrábací prechod
 
-Stage 3 – Unload, Removes the fixtures and simulates spring back.
+3. etapa – Vykládka, demontáž upínacích prvkov a simulácia spätného pruženia.
 
-**Step increment to save** : The step increment ([STPINC](/docs/sk/keyword_documentation/s/stpinc/)) to save in the database controls the number of steps that the system will save in the database. Each step must be saved for machining distortion simulation.
+**Počet krokov na uloženie**: Počet krokov na uloženie ([STPINC](/docs/en/keyword_documentation/s/stpinc/)) do databázy určuje, koľko krokov systém uloží do databázy. Každý krok sa musí uložiť na účely simulácie deformácie pri obrábaní.
 
-**Step increment control** : Solution step size is controlled by time step. Maximum elapsed process time per step can be defined as 1 sec for Machining distortion operations. 
+**Riadenie veľkosti kroku**: Veľkosť kroku riešenia sa riadi časovým krokom. Maximálny čas trvania procesu na jeden krok možno pri operáciách s deformáciou pri obrábaní nastaviť na 1 sekundu. 
 
-Fig. 40.2.17. shows the Simulation Controls in Guided mode.
+Na obr. 40.2.17 sú zobrazené ovládacie prvky simulácie v režime s navádzaním.
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image013.jpg' | relative_url }})
 
-Simulation control in Guided mode
+Riadenie simulácie v režime s navádzaním
 
-For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/).
+Ďalšie informácie a popis možností v časti „Ovládacie prvky simulácie“ nájdete v dokumente [9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/).
 
-## Generate DB
+## Vytvoriť databázu
 
-In Generate DB page, we can observe the Operation Simulation setup summary. (See Fig. 40.2.18.)
+Na stránke „Generate DB“ môžeme vidieť súhrn nastavení simulácie operácie. (Pozri obr. 40.2.18.)
 
-**Generate database** ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}): By clicking on this button, it generates the Database for the setup.
+**Vytvoriť databázu** ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}): Kliknutím na toto tlačidlo sa vygeneruje databáza potrebná na inštaláciu.
 
-**Append key file** : Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only .key file can be changed and simulation can be resubmitted.
+**Pridať súbor .key**: Akékoľvek informácie, ktoré nie sú definované v sprievodcovi, ale stále sa vzťahujú na daný proces, je možné načítať ako súbor .key. Táto možnosť je užitočná aj v prípadoch, keď je potrebné zmeniť len niekoľko hodnôt – tieto hodnoty je možné definovať v súbore .key, následne stačí zmeniť len tento súbor a simuláciu je možné odoslať znovu.
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image014.jpg' | relative_url }})
 
-DB generation window
+Okno na generovanie databázy

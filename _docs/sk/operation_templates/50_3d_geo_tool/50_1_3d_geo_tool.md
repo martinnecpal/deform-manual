@@ -3,686 +3,686 @@ lang: sk
 title: "50.1. 3D Geo Tool"
 ---
 
-# 50.1.3D Geometry Tool
+# 50.1.3 Nástroj pre 3D geometriu
 
-50.1.1. Geometry Tool Layout
+50.1.1. Rozloženie nástrojov geometrie
 
-50.1.2. Display window
+50.1.2. Výkladná skriňa
 
-50.1.3. Object tree
+50.1.3. Strom objektov
 
-50.1.3.1. Number of Objects
+50.1.3.1. Počet objektov
 
-50.1.3.2. Visibility
+50.1.3.2. Viditeľnosť
 
-50.1.3.3. Object color
+50.1.3.3. Farba objektu
 
-50.1.3.4. Transparency
+50.1.3.4. Transparentnosť
 
-50.1.4. Graphical Utilities
+50.1.4. Grafické nástroje
 
-50.1.4.1. File Menu
+50.1.4.1. Ponuka „Súbor“
 
-50.1.4.2. Edit Menu
+50.1.4.2. Ponuka „Upraviť“
 
-50.1.4.3. Tool Menu
+50.1.4.3. Ponuka nástrojov
 
-50.1.4.4. Select Menu
+50.1.4.4. Ponuka „Vybrať“
 
-50.1.4.5. Display Menu
+50.1.4.5. Ponuka zobrazenia
 
-50.1.4.6. Viewport
+50.1.4.6. Zobrazovacia oblasť
 
-50.1.4.7. Window menu
+50.1.4.7. Ponuka „Okno“
 
-50.1.4.8. Options menu
+50.1.4.8. Ponuka možností
 
-50.1.4.9. Help menu
+50.1.4.9. Ponuka Pomocník
 
-50.1.5. Property editor
+50.1.5. Editor vlastností
 
-50.1.5.1. Analysis
+50.1.5.1. Analýza
 
-50.1.5.2. Measure
+50.1.5.2. Meranie
 
-50.1.5.3. Slicing
+50.1.5.3. Krájanie
 
-50.1.5.4. Modify
+50.1.5.4. Upraviť
 
-50.1.5.5. Verify
+50.1.5.5. Overiť
 
-50.1.5.6. Morphing
+50.1.5.6. Morfing
 
-## Geometry Tool Layout
+## Rozloženie geometrických nástrojov
 
-Geometry tool layout is divided into Display window, Object tree, Graphical Utilities window and Project editor. (See Fig. 50.1.1.).
+Rozloženie nástrojov geometrie je rozdelené na okno zobrazenia, strom objektov, okno grafických nástrojov a editor projektu. (Pozri obr. 50.1.1.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0001.jpg' | relative_url }})
 
-3D Geo tool Layout
+Rozloženie 3D Geo nástroja
 
-## Display window
+## Výkladná skriňa
 
-The display window is the graphical display for all imported or created geometries. In Display window, we can see the Geometry as the changes made takes effect.
+Okno zobrazenia slúži na grafické zobrazenie všetkých importovaných alebo vytvorených geometrií. V okne zobrazenia môžeme sledovať geometriu v reálnom čase, ako sa v nej prejavujú vykonané zmeny.
 
-## Object tree
+## Strom objektov
 
-In object tree we can see the objects imported or created and their viewing information, such as number of objects, Displaying, color of the objects and Transparency information is available in this window.
+V strome objektov môžeme vidieť importované alebo vytvorené objekty a informácie o ich zobrazení, ako napríklad počet objektov, stav zobrazenia, farbu objektov a informácie o priehľadnosti, ktoré sú k dispozícii v tomto okne.
 
-### Number of Objects
+### Počet objektov
 
-Number of objects (geometry) imported or created can be seen in the object tree as they will be listed out in the Object tree.
+Počet importovaných alebo vytvorených objektov (geometrie) je možné vidieť v stromovej štruktúre objektov, kde budú uvedené v zozname.
 
-###  Visibility
+###  Viditeľnosť
 
-By clicking on the ![]({{ '/assets/icons/pre_icons/mo_visible.jpg' | relative_url }}) icon, user can toggle the visibility of the objects in the display window.
+Kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_visible.jpg' | relative_url }}) môže používateľ zapnúť alebo vypnúť zobrazenie objektov v okne zobrazenia.
 
-### Object color
+### Farba objektu
 
-User can change the object color by using this option. If user clicks on the box under the object color option for the selected object, a color palette dialog will open and user can select the color to be used for selected object.
+Pomocou tejto možnosti môže používateľ zmeniť farbu objektu. Ak používateľ klikne na políčko pod možnosťou „Farba objektu“ pre vybraný objekt, otvorí sa dialógové okno s paletou farieb, v ktorom si môže vybrať farbu, ktorá sa má použiť pre vybraný objekt.
 
-### Transparency
+### Transparentnosť
 
-User can use this option to toggle the transparency display of the selected object. If user clicks on this option, respective object gets transparent.
+Pomocou tejto možnosti môže používateľ zapnúť alebo vypnúť priehľadnosť vybraného objektu. Ak používateľ klikne na túto možnosť, príslušný objekt sa stane priehľadným.
 
-## Graphical Utilities
+## Grafické nástroje
 
-The graphical utilities window provides view manipulation and other utility functions to control the display of the objects in Display window. Features include zoom and pan, Rotate. The graphics utilities window also contains tool bar options for creating geometry and modifying like Geometry Primitive, Translate, Rotate, scale, mirror, Offset, Extrude, Soft move and Boolean and selection options like Pick Shell, Pick Face, Pick Polygon, Pick polygons by box, Pick polygons by cylinder, Pick polygons by window, Pick Polygons by line, Pick Loop, Pick Curve, Pick Slicing Plane, Pick Point and Invent selection.
+Okno grafických nástrojov ponúka funkcie na manipuláciu s pohľadom a ďalšie pomocné funkcie na ovládanie zobrazenia objektov v okne Zobrazenie. Medzi funkcie patrí priblíženie a posun, ako aj otočenie. Okno grafických nástrojov obsahuje aj možnosti na paneli nástrojov na vytváranie geometrie a jej úpravy, ako sú Geometrický primitív, Posun, Otáčanie, Zmenšenie/zväčšenie, Zrkadlenie, Posun, Vytiahnutie, Plynulý posun a Boolovské operácie, ako aj možnosti výberu, ako sú Výber plášťa, Výber plochy, „Vybrať mnohouholník“, „Vybrať mnohouholníky pomocou obdĺžnika“, „Vybrať mnohouholníky pomocou valca“, „Vybrať mnohouholníky pomocou okna“, „Vybrať mnohouholníky pomocou čiary“, „Vybrať slučku“, „Vybrať krivku“, „Vybrať rezovú rovinu“, „Vybrať bod“ a „Výber Inventu“.
 
-### File Menu
+### Ponuka „Súbor“
 
-The below Fig. 50.1.2. Shows the File menu options,
+Na nižšie uvedenom obr. 50.1.2 sú zobrazené možnosti ponuky Súbor,
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0002.jpg' | relative_url }})
 
-File Menu options
+Možnosti ponuky Súbor
 
-  * **New Session![]({{ '/assets/icons/pre_icons/geo_tool_new_session.jpg' | relative_url }})** : It opens the new session for creating and modifying geometries in 3D geometry tool.
+  * **Nová relácia ![]({{ '/assets/icons/pre_icons/geo_tool_new_session.jpg' | relative_url }})**: Otvorí novú reláciu na vytváranie a úpravu geometrií v nástroji pre 3D geometriu.
 
-  * **Open![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) **: It opens 3D geometry of different formats like *.STL, *.GEO, *.PDA, *.UNV, *KEY and *.PBR .
+  * **Open![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) **: Otvára 3D geometriu v rôznych formátoch, ako sú *.STL, *.GEO, *.PDA, *.UNV, *.KEY a *.PBR.
 
-  * **Save![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) **: It saves the geometry in the current session into *.STl file.
+  * **Save![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) **: Uloží geometriu aktuálnej relácie do súboru *.STL.
 
-  * **Save as** : Save as saves geometry in the current session into selected format from the available formats in the selected path.
+  * **Uložiť ako**: Funkcia „Uložiť ako“ uloží geometriu v aktuálnej relácii do vybraného formátu spomedzi dostupných formátov do vybranej cesty.
 
-  * **Save All :** Save all option is used save all geometries in one click.
+  * **Uložiť všetko:** Možnosť „Uložiť všetko“ slúži na uloženie všetkých geometrií jedným kliknutím.
 
-  * **Import :** Using this option user can import the geometries having the formats *.IGS and *.STP .
+  * **Import:** Pomocou tejto možnosti môže používateľ importovať geometrie vo formátoch *.IGS a *.STP.
 
-  * **Export** : Export the geometry in the current session into *.IGS or *.STP .
+  * **Export**: Exportujte geometriu v aktuálnej relácii do formátu *.IGS alebo *.STP.
 
-  * **Close Session** : Close session option is used to close the currently opened session but does not quit the 3D Geo Tool.
+  * **Ukončiť reláciu**: Možnosť „Ukončiť reláciu“ slúži na ukončenie aktuálne otvorenej relácie, neukončuje však aplikáciu 3D Geo Tool.
 
-  * **Exit** : Exit option is used to close the 3D Geo Tool wizard.
+  * **Ukončiť**: Táto voľba slúži na zatvorenie sprievodcu nástrojom 3D Geo Tool.
 
-### Edit Menu
+### Ponuka „Upraviť“
 
-  * **Undo** : This option is used to undo the last action.
+  * **Vrátiť späť**: Táto voľba slúži na vrátenie poslednej akcie späť.
 
-  * **Redo :** This option is used to redo the action that is deleted using undo.
+  * **Zopakovať:** Táto možnosť slúži na zopakovanie akcie, ktorá bola zrušená pomocou funkcie „vrátiť späť“.
 
-### Tool Menu
+### Ponuka nástrojov
 
-  * **Geometry Primitive![]({{ '/assets/icons/pre_icons/geo_tool_geometry_primitive.jpg' | relative_url }}) : **When we click on the Geometry primitive option, Primitive window will open with options to create a new geometry. (See Fig. 50.1.3.) For more information about the Geometry Primitive options please visit the section [12.3.2. 3D Geometry Tool](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#12.3.2._3D_Geometry_Tools) \- [Define Primitive.](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Define_Primitive)
+  * **Geometrické primitívy ![]({{ '/assets/icons/pre_icons/geo_tool_geometry_primitive.jpg' | relative_url }}): **Po kliknutí na možnosť „Geometrické primitívy“ sa otvorí okno „Primitívy“ s možnosťami na vytvorenie novej geometrie. (Pozri obr. 50.1.3.) Ďalšie informácie o možnostiach Geometrický primitív nájdete v časti [12.3.2. 3D Geometry Tool](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#12.3.2._3D_Geometry_Tools) – [Define Primitive.](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Define_Primitive)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0003.jpg' | relative_url }})
 
-Geometry Primitive window
+Okno geometrických primitív
 
-  * **Translate object![]({{ '/assets/icons/pre_icons/geo_tool_translate_icon.jpg' | relative_url }}) **: Translate object option is used to move the objects for quantified distance in X, Y and Z direction. When we click on this option by selecting an object, a pop-up window will appear to define the distance value in the respective direction to move the object in that direction. (See Fig. 50.1.4.).
+  * **Posunúť objekt ![]({{ '/assets/icons/pre_icons/geo_tool_translate_icon.jpg' | relative_url }}) **: Možnosť „Posunúť objekt“ slúži na posunutie objektov o zadanú vzdialenosť v smeroch X, Y a Z. Ak po výbere objektu klikneme na túto možnosť, zobrazí sa vyskakovacie okno, v ktorom môžeme zadať hodnotu vzdialenosti v príslušnom smere, o ktorú sa má objekt v danom smere posunúť. (Pozri obr. 50.1.4.).
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0004.jpg' | relative_url }})
 
-Translate object Dialog
+Dialógové okno „Preložiť objekt“
 
-  * **Rotate object![]({{ '/assets/icons/pre_icons/geo_tool_rotate_icon.jpg' | relative_url }}) :** This option is used to rotate the object in specified direction with specified angle. When we click on this option by selecting an object, a pop-up window will appear to define the direction and Angle. Then if we click on the apply button, objects are rotated in the specified direction. (See Fig. 50.1.5.)
+  * **Otočiť objekt ![]({{ '/assets/icons/pre_icons/geo_tool_rotate_icon.jpg' | relative_url }}) :** Táto voľba slúži na otočenie objektu v zadanom smere o zadaný uhol. Keď klikneme na túto možnosť po výbere objektu, zobrazí sa vyskakovacie okno, v ktorom môžeme určiť smer a uhol. Následne po kliknutí na tlačidlo „Použiť“ sa objekty otočia v zadanom smere. (Pozri obr. 50.1.5.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0005.jpg' | relative_url }})
 
-Rotate Dialog
+Dialógové okno „Otočiť“
 
-  * **Scale object** ![]({{ '/assets/icons/pre_icons/geo_tool_scale_icon.jpg' | relative_url }}) : This option is used to scale the Geometry. Geometry can be scaled in Geo tool by specifying the scaling factor. For 0.5 it scales down to half of original geometry and for 2 it doubles original geometry. (See Fig. 50.1.6.) This scaling can be restricted for specified direction. In Scaling dialog, user can uncheck the direction in which scaling is not required.
+  * **Zmenšiť objekt** ![]({{ '/assets/icons/pre_icons/geo_tool_scale_icon.jpg' | relative_url }}): Táto voľba slúži na zmenšenie geometrie. Geometriu je možné zmenšiť v nástroji Geo zadaním mierky zmenšenia. Pri hodnote 0,5 sa geometria zmenší na polovicu pôvodnej veľkosti a pri hodnote 2 sa zväčší na dvojnásobok pôvodnej veľkosti. (Pozri obr. 50.1.6.) Toto zmenšovanie alebo zväčšovanie je možné obmedziť na určitý smer. V dialógovom okne Zmenšovanie/zväčšovanie môže používateľ zrušiť zaškrtnutie smeru, v ktorom sa zmenšovanie alebo zväčšovanie nevyžaduje.
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0006.jpg' | relative_url }})
 
-Scale Objects dialog
+Dialógové okno „Mierka objektov“
 
-  * **Mirror Object![]({{ '/assets/icons/pre_icons/geo_tool_mirror_icon.jpg' | relative_url }}) : **This option will mirror the objects along the specified axis and won't retain the original objects. (See Fig. 50.1.7.)
+  * **Zrkadlenie objektu ![]({{ '/assets/icons/pre_icons/geo_tool_mirror_icon.jpg' | relative_url }}): **Táto voľba zrkadlí objekty pozdĺž zadaných osí a pôvodné objekty nezachová. (Pozri obr. 50.1.7.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0007.jpg' | relative_url }})
 
-Mirror Objects dialog
+Dialógové okno „Zrkadlové objekty“
 
-  * **Offset![]({{ '/assets/icons/pre_icons/geo_tool_offset_icon.jpg' | relative_url }}) :** This Option is used to Offset a surface to a specified length. Offsetting the surface can be done using following steps,
+  * **Offset![]({{ '/assets/icons/pre_icons/geo_tool_offset_icon.jpg' | relative_url }}) :** Táto voľba slúži na posunutie plochy o zadanú dĺžku. Posunutie plochy je možné vykonať nasledujúcimi krokmi:
 
-  * Select Offset option (Offset dialog will open),
+  * Vyberte možnosť „Offset“ (otvorí sa dialógové okno „Offset“),
 
-  * Enter offset length or target volume.
+  * Zadajte dĺžku posunu alebo cieľový objem.
 
-  * Turn on Keep original part if the modified geometry should be created as new part, original part geometry is left untouched.
+  * Zapnite možnosť „Zachovať pôvodný diel“, ak má byť upravená geometria vytvorená ako nový diel; geometria pôvodného dielu zostane nezmenená.
 
-  * Select a surface to be offset by clicking on it (surface will get highlighted)
+  * Vyberte plochu, ktorú chcete posunúť, kliknutím na ňu (plochu sa zvýrazní)
 
-  * Click on ![]({{ '/assets/icons/pre_icons/apply_button.jpg' | relative_url }}). Surface that we selected is offset to defined length or to target volume. (See Fig. 50.1.8.).
+  * Kliknite na ![]({{ '/assets/icons/pre_icons/apply_button.jpg' | relative_url }}). Vybraná plocha sa posunie o zadanú dĺžku alebo na cieľový objem. (Pozri obr. 50.1.8.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0008.jpg' | relative_url }})
 
-Offsetting the surface
+Vyrovnanie povrchu
 
-  * **Extrude![]({{ '/assets/icons/pre_icons/geo_tool_extrude_icon.jpg' | relative_url }}) : **This Option is used to extrude the surface to defined length. Extruding the surface can be done using following steps,
+  * **Extrude![]({{ '/assets/icons/pre_icons/geo_tool_extrude_icon.jpg' | relative_url }}) : **Táto voľba slúži na vytiahnutie plochy na zadanú dĺžku. Vytiahnutie plochy je možné vykonať nasledujúcimi krokmi:
 
-  * Select Extrude option (Extrude dialog will open),
+  * Vyberte možnosť „Extrude“ (otvorí sa dialógové okno „Extrude“),
 
-  * Enter extrude length or target volume.
+  * Zadajte dĺžku extrudovania alebo cieľový objem.
 
-  * Turn on Keep original part if the modified geometry should be created as new part, original part geometry is left untouched.
+  * Zapnite možnosť „Zachovať pôvodný diel“, ak má byť upravená geometria vytvorená ako nový diel; geometria pôvodného dielu zostane nezmenená.
 
-  * Select a surface to be extruded by clicking on the surface (surface will get highlighted)
+  * Vyberte plochu, ktorú chcete vytiahnuť, kliknutím na ňu (plochu sa zvýrazní)
 
-  * Define direction or select auto so that system automatically identifies the direction based on the selected surface.
+  * Nastavte smer alebo vyberte možnosť „auto“, aby systém automaticky určil smer na základe zvolenej plochy.
 
-  * Click on ![]({{ '/assets/icons/pre_icons/apply_button.jpg' | relative_url }}).Surface that we selected will Extrude to defined length or to target volume. (See Fig. 50.1.9.).
+  * Kliknite na ![]({{ '/assets/icons/pre_icons/apply_button.jpg' | relative_url }}). Vybraná plocha sa vytiahne na zadanú dĺžku alebo na cieľový objem. (Pozri obr. 50.1.9.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0009.jpg' | relative_url }})
 
-Extruding the Surface
+Extrudovanie povrchu
 
-  * **Soft move** ![]({{ '/assets/icons/pre_icons/geo_tool_soft_move_icon.jpg' | relative_url }}): This option is used to modify the surface profile. Soft moving the surface can be done using following steps,
+  * **Jemné posunutie** ![]({{ '/assets/icons/pre_icons/geo_tool_soft_move_icon.jpg' | relative_url }}): Táto voľba slúži na úpravu profilu povrchu. Jemné posunutie povrchu je možné vykonať nasledujúcimi krokmi:
 
-  * Select Soft move option (Soft move dialog will open),
+  * Zvoľte možnosť „Soft move“ (otvorí sa dialógové okno „Soft move“),
 
-  * Select a surface whose profile has to be modified by clicking on the surface (Cylinder will get added, modify the cylinder to select the surface)
+  * Vyberte plochu, ktorej profil sa má upraviť, kliknutím na túto plochu (pridá sa valec; upravte valec tak, aby ste vybrali požadovanú plochu)
 
-  * Select the method of modifying the profile, Around the point or Along the curve
+  * Vyberte spôsob úpravy profilu: „Okolo bodu“ alebo „Pozdĺž krivky“
 
-  * Pull the arrow on the cylinder window to define the Profile shape. (See Fig. 50.1.10.)
+  * Potiahnite šípku na okienku valca, aby ste určili tvar profilu. (Pozri obr. 50.1.10.)
 
-  * Profile curve shape can be defined using the sliding bar.
+  * Tvar krivky profilu je možné nastaviť pomocou posuvného prúžku.
 
-  * Click on ![]({{ '/assets/icons/pre_icons/apply_button.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/ok_button.jpg' | relative_url }}). Surface that we selected will Soft move to defined length. (See Fig. 50.1.11.).
+  * Kliknite na ![]({{ '/assets/icons/pre_icons/apply_button.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/ok_button.jpg' | relative_url }}). Vybraná plocha sa plynulo posunie na zadanú dĺžku. (Pozri obr. 50.1.11.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0010.jpg' | relative_url }})
 
-Creating profile shape for soft move
+Vytvorenie tvaru profilu pre plynulý pohyb
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0011.jpg' | relative_url }})
 
-Soft moving the surface
+Jemné pohybovanie po povrchu
 
-  * **Boolean wizard** ![]({{ '/assets/icons/pre_icons/geo_tool_boolean_icon.jpg' | relative_url }}): Boolean wizard guides the user regarding the options need to be used while performing Boolean operations like subtracting the unwanted region in the geometry using another geometry or joining the two geometries. It can be used to create ALE workpiece.
+  * **Sprievodca boolovskými operáciami** ![]({{ '/assets/icons/pre_icons/geo_tool_boolean_icon.jpg' | relative_url }}): Sprievodca boolovskými operáciami poskytuje používateľovi pokyny týkajúce sa nastavení, ktoré je potrebné použiť pri vykonávaní boolovských operácií, ako je odčítanie nežiaducej oblasti z geometrie pomocou inej geometrie alebo zjednotenie dvoch geometrií. Dá sa použiť na vytvorenie obrobku ALE.
 
-**Step 1 : Start**
+**Krok 1: Začnite**
 
-Start page is the beginning page to perform the Boolean operations. (See Fig. 50.1.12.)
+Úvodná stránka slúži na spustenie boolovských operácií. (Pozri obr. 50.1.12.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0012.jpg' | relative_url }})
 
-Boolean Wizard Start Page
+Úvodná stránka sprievodcu Booleovými operáciami
 
-**Step 2 : Modify objects**
+**Krok 2: Úprava objektov**
 
-In Modify objects page, we can position the objects using offset positioning to avoid the Overwrap surface. (See Fig. 50.1.13.)
+Na stránke „Úprava objektov“ môžeme objekty umiestniť pomocou posunutia, aby sme sa vyhli povrchu „Overwrap“. (Pozri obr. 50.1.13.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0013.jpg' | relative_url }})
 
-Boolean Wizard Modify Page
+Sprievodca booleovskými hodnotami – Úprava stránky
 
-**Step 3 : Boolean Union**
+**Krok 3: Booleovská zjednotenie**
 
-After modifying the objects user can combine two geometries in to one by selecting the Union option in the modify tab. (See Fig. 50.1.14.). Also  refer 50.1.5.2.
+Po úprave objektov môže používateľ zlúčiť dve geometrie do jednej výberom možnosti „Union“ na karte „Modify“. (Pozri obr. 50.1.14.) Pozri tiež 50.1.5.2.
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0014.jpg' | relative_url }})
 
-Boolean Wizard Union page
+Stránka „Boolean Wizard Union“
 
-**Step 4 : Geometry creation**
+**Krok 4: Vytvorenie geometrie**
 
-In geometry Creation page user can create new cylinder geometry by defining the values for Diameter, Height and Position fields. (See Fig. 50.1.15.)
+Na stránke „Vytvorenie geometrie“ môže používateľ vytvoriť novú geometriu valca zadaním hodnôt do polí Priemer, Výška a Poloha. (Pozri obr. 50.1.15.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0015.jpg' | relative_url }})
 
-Boolean wizard Geometry Creation page
+Stránka „Vytvorenie geometrie“ v sprievodcovi Boolean
 
-**Step 5 : Boolean Subtract**
+**Krok 5: Booleovské odčítanie**
 
-In slice page, user can slice the previously Cleaned geometry at required location in desired direction. This slicing creates new geometry from the sliced object, user has an option to retain original geometry (See Fig. 50.1.16.). Also refer Boolean in 50.1.5.2. Measure
+Na stránke „Slice“ môže používateľ rozrezať predtým vyčistenú geometriu na požadovanom mieste v požadovanom smere. Týmto rozrezaním vznikne z rozrezaného objektu nová geometria; používateľ má možnosť zachovať pôvodnú geometriu (pozri obr. 50.1.16.). Pozrite si tiež časť „Boolean“ v bode 50.1.5.2. Meranie
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0016.jpg' | relative_url }})
 
-Boolean Wizard Subtract Page
+Sprievodca boolovskými operáciami – Stránka „Odčítanie“
 
-**Step 6 : Clean up**
+**Krok 6: Upratovanie**
 
-In clean up page, user can fix the previously combined or subtracted geometry by deleting the illegal shells/polygons and this can be done by using the Analysis tab options. (See Fig. 50.1.17.)
+Na stránke „Clean up“ môže používateľ opraviť predtým zlúčenú alebo odpočítanú geometriu odstránením neplatných plášťov/mnohouholníkov, a to pomocou možností na karte „Analysis“. (Pozri obr. 50.1.17.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0017.jpg' | relative_url }})
 
-Boolean Wizard Clean up page
+Stránka „Vyčistenie“ v sprievodcovi Boolean
 
-**Step 7 : Slice**
+**Krok 7: Krájanie**
 
-In slice page, user can slice the previously Cleaned geometry in to required shape and distance with defined direction. This slicing divides the complete geometry in to two separate geometries. (See Fig. 50.1.18.) Also for more information on slicing, please refer 50.1.5.3. Slicing
+Na stránke „Slice“ môže používateľ rozrezať predtým vyčistenú geometriu na požadovaný tvar a vzdialenosť v definovanom smere. Týmto rozrezaním sa celá geometria rozdelí na dve samostatné geometrie. (Pozri obr. 50.1.18.) Ďalšie informácie o rozrezávaní nájdete v časti 50.1.5.3. Rozrezávanie
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0018.jpg' | relative_url }})
 
-Boolean Wizard Slice page
+Stránka „Boolean Wizard Slice“
 
-**Step 8 : Extrude**
+**Krok 8: Extrudovanie**
 
-In extrude page, user can extrude the required surface to defined length and direction. This extends the surface to the defined length. (See Fig. 50.1.19.)
+Na stránke „Extrúzia“ môže používateľ extrudovať požadovanú plochu na definovanú dĺžku a v definovanom smere. Tým sa plocha predĺži na definovanú dĺžku. (Pozri obr. 50.1.19.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0019.jpg' | relative_url }})
 
-Boolean Wizard Extrude page
+Stránka „Extrudovať“ v sprievodcovi Boolean
 
-**Step 9 : Finish**
+**Krok 9: Dokončenie**
 
-After getting the Final geometry shape, user can save the geometry by clicking Finish button in the Finish page. (See Fig. 50.1.20.)
+Po vytvorení konečného geometrického tvaru môže používateľ geometriu uložiť kliknutím na tlačidlo „Dokončiť“ na stránke „Dokončiť“. (Pozri obr. 50.1.20.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0020.jpg' | relative_url }})
 
-Boolean Wizard Finish page
+Stránka „Dokončenie“ sprievodcu Booleovými výrazmi
 
-### Select Menu
+### Vyberte ponuku
 
-  * **Pick Shell**![]({{ '/assets/icons/pre_icons/geo_tool_pick_shell.jpg' | relative_url }}) : This option is used to select the complete shell of the geometry for editing.
+  * **Vybrať plášť**![]({{ '/assets/icons/pre_icons/geo_tool_pick_shell.jpg' | relative_url }}): Táto voľba slúži na výber celého plášťa geometrie na účely úpravy.
 
-  * **Pick Face**![]({{ '/assets/icons/pre_icons/geo_tool_pick_face.jpg' | relative_url }}) : This option is used to select a geometry face for editing.
+  * **Vybrať plochu**![]({{ '/assets/icons/pre_icons/geo_tool_pick_face.jpg' | relative_url }}) : Táto voľba slúži na výber geometrickej plochy na úpravu.
 
-  * **Pick Polygon** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_polygon.jpg' | relative_url }}): This option is used to select a polygon for editing.
+  * **Výber mnohouholníka** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_polygon.jpg' | relative_url }}): Táto voľba slúži na výber mnohouholníka na úpravy.
 
-  * **Pick polygons by box**![]({{ '/assets/icons/pre_icons/geo_tool_pick_polygons_by_box.jpg' | relative_url }}) : This option is used to select the polygons by using box window. Modifying the box length and width picks the polygons which are completely in the box for editing.
+  * **Výber polygónov pomocou obdĺžnika**![]({{ '/assets/icons/pre_icons/geo_tool_pick_polygons_by_box.jpg' | relative_url }}) : Táto voľba slúži na výber polygónov pomocou obdĺžnikového okna. Zmenou dĺžky a šírky obdĺžnika sa vyberú na úpravu tie polygóny, ktoré sa úplne nachádzajú v tomto obdĺžniku.
 
-  * **Pick polygons by cylinder![]({{ '/assets/icons/pre_icons/geo_tool_pick_polygos_by_cylinder.jpg' | relative_url }}) : **This option is used to select the polygons by using cylinder window. Modifying the cylinder diameter and height picks the polygons which are completely in the cylinder for editing.
+  * **Výber polygónov pomocou valca ![]({{ '/assets/icons/pre_icons/geo_tool_pick_polygos_by_cylinder.jpg' | relative_url }}): **Táto voľba slúži na výber polygónov pomocou valcového okna. Zmenou priemeru a výšky valca sa vyberú na úpravu tie polygóny, ktoré sa nachádzajú úplne vo vnútri valca.
 
-  * **Pick polygons by window**![]({{ '/assets/icons/pre_icons/geo_tool_pick_polygons_by_window.jpg' | relative_url }}) : This option is used to select the polygons by using window which is drawn across the polygons.
+  * **Výber polygónov pomocou okna**![]({{ '/assets/icons/pre_icons/geo_tool_pick_polygons_by_window.jpg' | relative_url }}) : Táto voľba slúži na výber polygónov pomocou okna, ktoré sa nakreslí cez polygóny.
 
-  * **Pick Polygons by line** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_polygons_by_line.jpg' | relative_url }}): Using this option user can draw a line across the polygons that are to be picked for editing.
+  * **Výber mnohouholníkov pomocou čiary** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_polygons_by_line.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ nakresliť čiaru cez mnohouholníky, ktoré sa majú vybrať na úpravu.
 
-  * **Pick Loop** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_loop.jpg' | relative_url }}): Using this option is user can select the open loop to fill.
+  * **Výber slučky** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_loop.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ vybrať otvorenú slučku, ktorú chce vyplniť.
 
-  * **Pick Curve** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_curve_by_line.jpg' | relative_url }}): This option is used to select the curves in the geometry.
+  * **Výber krivky** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_curve_by_line.jpg' | relative_url }}): Táto voľba slúži na výber kriviek v geometrii.
 
-  * **Pick Slicing Plane** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_slicing_curve.jpg' | relative_url }}): This option is used to select the defined slicing plane.
+  * **Výber roviny rezu** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_slicing_curve.jpg' | relative_url }}): Táto voľba slúži na výber definovanej roviny rezu.
 
-  * **Pick Point** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_point.jpg' | relative_url }}): Pick Point option is used to select points on the geometry.
+  * **Pick Point** ![]({{ '/assets/icons/pre_icons/geo_tool_pick_point.jpg' | relative_url }}): Funkcia „Pick Point“ slúži na výber bodov na geometrii.
 
-  * **Invert selection** ![]({{ '/assets/icons/pre_icons/geo_tool_invert_selection.jpg' | relative_url }}): This option is used to toggle the selection between selected and unselected regions of the geometry.
+  * **Obrátiť výber** ![]({{ '/assets/icons/pre_icons/geo_tool_invert_selection.jpg' | relative_url }}): Táto voľba slúži na prepínanie výberu medzi vybranými a nevybranými oblasťami geometrie.
 
-### Display Menu
+### Ponuka zobrazenia
 
-Display has options for varying the display mode of the geometry. See Fig. 50.1.21.
+V okne „Display“ sú k dispozícii možnosti na zmenu režimu zobrazenia geometrie. Pozri obr. 50.1.21.
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0021.jpg' | relative_url }})
 
-Display Menu options
+Zobraziť možnosti ponuky
 
-  * **Display Points![]({{ '/assets/icons/pre_icons/geo_tool_display_points.jpg' | relative_url }})** : Shows geometry points on the Display window.
+  * **Zobraziť body ![]({{ '/assets/icons/pre_icons/geo_tool_display_points.jpg' | relative_url }})**: Zobrazí geometrické body v okne Zobrazenie.
 
-  * **Display Shading** ![]({{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}): Smoothly shades the geometry within viewport.
+  * **Stínovanie zobrazenia** ![]({{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}): Plynulo stínuje geometriu v rámci zobrazenia.
 
-  * **Display Wireframe** ![]({{ '/assets/icons/pre_icons/mo_wirefrane_mode_icon.jpg' | relative_url }}): Displays Polygons lines of the geometry within viewport.
+  * **Zobraziť drôtený model** ![]({{ '/assets/icons/pre_icons/mo_wirefrane_mode_icon.jpg' | relative_url }}): Zobrazí línie polygónov geometrie v okne zobrazenia.
 
-  * **Display Shading and Wireframe** ![]({{ '/assets/icons/pre_icons/mo_shade_wireframe_icon.jpg' | relative_url }}): Smoothly shades and displays Geometry along with the polygons lines within the viewport.
+  * **Zobrazenie tieňovania a drôteného modelu** ![]({{ '/assets/icons/pre_icons/mo_shade_wireframe_icon.jpg' | relative_url }}): Plynulo tieňuje a zobrazuje geometriu spolu s líniami polygónov v okne zobrazenia.
 
-  * **Display edges** ![]({{ '/assets/icons/pre_icons/geo_tool_display_edge_icon.jpg' | relative_url }}): Displays the surface edges of the geometry.
+  * **Zobraziť hrany** ![]({{ '/assets/icons/pre_icons/geo_tool_display_edge_icon.jpg' | relative_url }}): Zobrazí povrchové hrany geometrie.
 
-  * **+Edges**![]({{ '/assets/icons/pre_icons/geo_tool_plus_surface patch_icon.jpg' | relative_url }}) : This feature will display surface edges with other display modes options.
+  * **+Hrany**![]({{ '/assets/icons/pre_icons/geo_tool_plus_surface patch_icon.jpg' | relative_url }}) : Táto funkcia zobrazí hrany povrchu spolu s ďalšími možnosťami režimov zobrazenia.
 
-### Viewport
+### Zobrazenie
 
-Fig. 50.1.22. Shows the Viewport menu options. Using this option user can place geometry for better visualization.
+Obr. 50.1.22. Ukazuje možnosti ponuky „Viewport“. Pomocou tejto možnosti môže používateľ umiestniť geometriu tak, aby bola lepšie viditeľná.
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0022.jpg' | relative_url }})
 
-Viewport menu
+Ponuka zobrazenia
 
-  * **Refresh screen** : The Refresh Screen option redraws the screen, removing any measurement marks.
+  * **Obnoviť obrazovku**: Možnosť „Obnoviť obrazovku“ vygeneruje novú obrazovku a odstráni všetky meracie značky.
 
-  * **Fit View** : Fits all displayed geometries inside the current viewport.
+  * **Prispôsobiť zobrazenie**: Prispôsobí všetky zobrazené geometrie tak, aby sa zmestili do aktuálneho zobrazenia.
 
-  * **Previous view** : Resets objects to previously viewed display position.
+  * **Predchádzajúci pohľad**: Vráti objekty do polohy, v akej boli zobrazené predtým.
 
-  * **Multiple****viewports** : Multiple Viewports can be used by user to visualize geometry from different orientations at a time.
+  * **Viacnásobné****zobrazenia**: Používateľ môže využiť viacnásobné zobrazenia na súčasnú vizualizáciu geometrie z rôznych uhlov pohľadu.
 
-  * **Sync multiple****viewports** : When we select the Sync multiple viewports, it will sync the two windows, if we change the properties in one viewport, it is reflected in other viewports.
+  * **Synchronizácia viacerých****zobrazení**: Ak zvolíme možnosť „Synchronizácia viacerých zobrazení“, dôjde k synchronizácii oboch okien; ak zmeníme vlastnosti v jednom zobrazení, táto zmena sa premietne aj do ostatných zobrazení.
 
-  * **Select** : The select button is a general pointing utility. It performs several functions which vary with context. It can be used to report coordinates of an arbitrary point, to select a node or an element, to change the primary viewport, and many similar functions. 
+  * **Vybrať**: Tlačidlo „Vybrať“ slúži na všeobecné označovanie bodov. Plní viacero funkcií, ktoré sa líšia v závislosti od kontextu. Môže sa použiť na nahlásenie súradníc ľubovoľného bodu, na výber uzla alebo prvku, na zmenu hlavného zobrazenia a na mnohé podobné úlohy. 
 
-  * **Pan**(Shift+LMB) : Pan adjusts the region filling the active viewport without changing the size of the displayed object.
+  * **Posun** (Shift+ĽPK): Funkcia „Posun“ upravuje oblasť vyplňujúcu aktívne zobrazenie bez zmeny veľkosti zobrazeného objektu.
 
-  * **Dynamic zoom**(Alt+LMB) : The dynamic zoom dynamically changes the size of the region of the object which fills the active view port. The view size can be changed by holding Alt key and clicking left mouse button in the active view port, and rolling the mouse backward or forward to increase or decrease the size of the object in the display window.
+  * **Dynamické priblíženie** (Alt+ľavé tlačidlo myši): Dynamické priblíženie dynamicky mení veľkosť oblasti objektu, ktorá vyplňuje aktívne zobrazenie. Veľkosť zobrazenia je možné zmeniť podržaním klávesy Alt a kliknutím ľavým tlačidlom myši v aktívnom okne zobrazenia, pričom posúvaním kolieska myši dopredu alebo dozadu zväčšíte alebo zmenšíte veľkosť objektu v okne zobrazenia.
 
-  * **Box Zoom Window** (Ctrl+Alt+LMB) : The zoom window function allows close up inspection of a small region of the currently display object or graph. The zoom region is selected by holding Ctrl + Alt key and clicking the left mouse button, while dragging the mouse to enclose the selected region with the displayed box. When the mouse button is released the selected region will fill the display window.
+  * **Okno zväčšenia** (Ctrl+Alt+ĽMB) : Funkcia okna zväčšenia umožňuje podrobné preskúmanie malej časti aktuálne zobrazeného objektu alebo grafu. Oblasť zväčšenia sa vyberie podržaním klávesov Ctrl + Alt a kliknutím ľavým tlačidlom myši, pričom ťahaním myši ohraničíte vybranú oblasť zobrazeným rámčekom. Po uvoľnení tlačidla myši sa vybraná oblasť vyplní celé zobrazovacie okno.
 
-  * **Rotate**(Ctrl+LMB): This will allow the mouse pointer to rotate the geometries in the required direction.
+  * **Otočiť** (Ctrl+ĽAVÉ TLAČIDLO MYŠI): Táto funkcia umožňuje kurzoru myši otáčať geometrie v požadovanom smere.
 
-  * **Rotate X** : This will allow the mouse pointer to rotate the object along X-direction.
+  * **Otočiť okolo osi X**: Táto funkcia umožňuje kurzoru myši otáčať objekt v smere osi X.
 
-  * **Rotate Y** : This will allow the mouse pointer to rotate the object along Y-direction.
+  * **Otočenie okolo osi Y**: Táto funkcia umožňuje kurzoru myši otáčať objekt v smere osi Y.
 
-  * **Rotate Z** : This will allow the mouse pointer to rotate the object along Z-direction. 
+  * **Otočenie okolo osi Z**: Táto funkcia umožňuje kurzoru myši otáčať objekt v smere osi Z. 
 
-### Window menu
+### Ponuka „Okno“
 
-  * **Cascade** : If we select Cascade type, each and every time Database opens in new window.
+  * **Kaskáda**: Ak zvolíme typ „Kaskáda“, databáza sa vždy otvorí v novom okne.
 
-  * **Tile** : Database will fit into the Display window.
+  * **Dlaždica**: Databáza sa zmestí do okna na zobrazenie.
 
-  * **Tile Horizontally** : Database will show in Horizontal direction in Display window.
+  * **Usporiadať dlaždice vodorovne**: Databáza sa v okne zobrazenia zobrazí vo vodorovnom smere.
 
-### Options menu
+### Ponuka možností
 
-**Environment** : 
+**Životné prostredie** : 
 
-The user can adjust the DEFORM working environment using environment option. Here the user can make changes in display and graphical settings. Defined settings will update from next session onwards.
+Používateľ môže prispôsobiť pracovné prostredie programu DEFORM pomocou možnosti „Prostredie“. Tu môže používateľ vykonávať zmeny v nastaveniach zobrazenia a grafických nastaveniach. Nastavenia sa uplatnia od nasledujúcej relácie.
 
-Region: The user can select the preferred language under Language option and set to English or SI units under Unit option as a Default unit system for a new session. (See Fig. 50.1.23.)
+Región: V položke „Jazyk“ si používateľ môže vybrať preferovaný jazyk a v položke „Jednotky“ nastaviť anglické alebo SI jednotky ako predvolený systém jednotiek pre novú reláciu. (Pozri obr. 50.1.23.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0023.jpg' | relative_url }})
 
-Environment Region tab
+Karta „Životné prostredie – Región“
 
-**Directories** : Directories option under Environment Settings window appears as shown in Fig. 50.1.24. User can browse to the required location to set it as working directory, this directory will be used as a default location to store the geometries unless user specifies different location. The temporary files generated while running Geo tool are stored in the specified path under Temporary file location.
+**Adresáre**: Možnosť „Adresáre“ v okne „Nastavenia prostredia“ sa zobrazuje tak, ako je znázornené na obr. 50.1.24. Používateľ môže vyhľadať požadované umiestnenie a nastaviť ho ako pracovný adresár; tento adresár sa bude používať ako predvolené umiestnenie na ukladanie geometrií, pokiaľ používateľ neurčí iné umiestnenie. Dočasné súbory vytvorené počas spustenia nástroja Geo sa ukladajú do cesty uvedenej v položke Umiestnenie dočasných súborov.
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0024.jpg' | relative_url }})
 
-Environment Directories tab
+Karta „Zoznamy životného prostredia“
 
-**Feature angle** : User can use this option to change the range of selection when selecting the polygons for editing geometry using surface patch method. It displays the surface patch by treating surfaces within the feature angle as the one surface. A curved surface with smaller feature angle means fewer surface polygons will be picked at a time. The feature tab to change the feature angle is as shown in Fig. 50.1.25.
+**Uhol prvku**: Táto voľba umožňuje používateľovi zmeniť rozsah výberu pri výbere mnohouholníkov na úpravu geometrie metódou povrchových úsekov. Zobrazuje povrchový úsek tak, že povrchy v rámci uhla prvku považuje za jeden povrch. Zakrivený povrch s menším uhlom prvku znamená, že sa naraz vyberie menej povrchových mnohouholníkov. Karta na zmenu uhla prvku je znázornená na obr. 50.1.25.
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0025.jpg' | relative_url }})
 
-Environment Feature Tab
+Karta „Funkcie pre životné prostredie“
 
-**Icon/Font** : The user can change the icon and font size depending on the requirement as shown in the [Fig. 50.1.26.](50_1_3d_geo_tool.htm#Fig_50_1_26_Icon/Font_options_under_Environment_Settings_window)
+**Ikona/Písmo**: Používateľ môže podľa potreby zmeniť ikonu a veľkosť písma, ako je znázornené v [Fig. 50.1.26.](50_1_3d_geo_tool.htm#Fig_50_1_26_Icon/Font_options_under_Environment_Settings_window)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0026.jpg' | relative_url }})
 
-Icon/Font options under Environment Settings window
+Možnosti ikon a písma v okne Nastavenia prostredia
 
-### Help menu
+### Ponuka Pomoc
 
-The help menu options are shown in Fig. 50.1.27., these options can be used to open the help manual and view brief information about product.
+Možnosti ponuky Pomoc sú zobrazené na obr. 50.1.27. Tieto možnosti možno použiť na otvorenie príručky a zobrazenie stručných informácií o produkte.
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0027.jpg' | relative_url }})
 
-Help menu options
+Možnosti ponuky Pomocník
 
-**Note** : Help Menu options are not yet functional.
+**Poznámka**: Možnosti v ponuke „Pomoc“ zatiaľ nefungujú.
 
-## Property editor
+## Editor vlastností
 
-Property editor options (such as Analysis, Measure, Slicing, Modifying, Verifying and Morphing) are the crucial options to Analyze and modify the geometries.
+Možnosti v editore vlastností (ako napríklad Analýza, Meranie, Rozdelenie, Úprava, Overovanie a Morfing) sú kľúčové funkcie na analýzu a úpravu geometrií.
 
-### Analysis
+### Analýza
 
-Analysis window shows the details about the geometry imported/created and allows to modifying the geometries using various options.(See Fig. 50.1.28.)
+Okno analýzy zobrazuje podrobnosti o importovanej/vytvorenej geometrii a umožňuje upravovať geometrie pomocou rôznych možností. (Pozri obr. 50.1.28.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0028.jpg' | relative_url }})
 
-Analysis tab options
+Možnosti na karte „Analýza“
 
-**Auto Fix** ![]({{ '/assets/icons/pre_icons/geo_tool_auto_fix.jpg' | relative_url }}) : This option automatically fixes the illegal geometry. This option deletes the illegal shells, free loops, free Edges, Noisy shells, free curves, bad edges and makes the geometry water tight geometry.
+**Automatická oprava** ![]({{ '/assets/icons/pre_icons/geo_tool_auto_fix.jpg' | relative_url }}): Táto voľba automaticky opraví neplatnú geometriu. Táto voľba odstráni neplatné plášte, voľné slučky, voľné hrany, plášte s nepravidelnosťami, voľné krivky, chybné hrany a zabezpečí, aby geometria bola vodotesná.
 
-**Create :** This option is used to create a polygon by selecting the points.
+**Vytvoriť:** Táto voľba slúži na vytvorenie mnohoúhelníka výberom bodov.
 
-**Delete :** This option deletes the selected part of a geometry or entire geometry selected.
+**Odstrániť:** Táto voľba odstráni vybranú časť geometrie alebo celú vybranú geometriu.
 
-**Flip :** This option flips the surface of the geometry selected.
+**Otočiť:** Táto voľba otočí povrch vybranej geometrie.
 
-**Normal :**
+**Normálne:**
 
-  * **Orient Shells Consistently** : This action button will make all the selected geometry polygons continuous by orienting them in one direction. To check this create a primitive cylinder geometry select any polygon > click on Flip > now click on Orient shells consistently, this will make all the polygons which are disoriented to orient consistent with rest of the polygons.(See Fig. 50.1.29.)
+  * **Jednotné orientovanie plášťov**: Toto akčné tlačidlo zabezpečí, že všetky vybrané polygóny geometrie budú súvislé tým, že ich orientuje v jednom smere. Ak si to chcete overiť, vytvorte primitívnu valcovú geometriu, vyberte ľubovoľný mnohouholník > kliknite na „Flip“ > teraz kliknite na „Orient shells consistently“; tým sa všetky mnohouholníky, ktoré sú nesúrodé, zosúladia so zvyškom mnohouholníkov. (Pozri obr. 50.1.29.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0029.jpg' | relative_url }})
 
-Example for Orient Shell consistently option
+Príklad použitia možnosti „Orient Shell consistently“
 
-  * **Auto Fix Orientation:** When user uses auto fix orientation option, system corrects polygons orientation towards counterclockwise and orients them consistently towards counter clockwise direction.(see Fig. 50.1.30.)
+  * **Automatická korekcia orientácie:** Ak používateľ použije možnosť automatickej korekcie orientácie, systém opraví orientáciu polygónov proti smeru hodinových ručičiek a jednotne ich nasmeruje proti smeru hodinových ručičiek (pozri obr. 50.1.30).
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0030.jpg' | relative_url }})
 
-Example for Auto Fix orientation option
+Príklad možnosti „Automatická oprava orientácie“
 
-**Stitch** : This option is used to fill gaps between polygons that are not connected along the surface. When we click on the Stitch button, existing polygons which are not connected along the surface are edited to connect within the stitching tolerance.(See Fig. 50.1.31.)
+**Spojenie**: Táto voľba slúži na vyplnenie medzier medzi polygónmi, ktoré nie sú po povrchu prepojené. Po kliknutí na tlačidlo „Spojenie“ sa existujúce polygóny, ktoré nie sú po povrchu prepojené, upravia tak, aby sa spojili v rámci tolerancie spojenia. (Pozri obr. 50.1.31.)
 
-  * **Estimate Stitching Tolerance** : When we click on the Estimate Stitching Tolerance, it estimates the tolerance value for stitching the polygons in the geometry.
+  * **Odhad tolerancie spájania**: Po kliknutí na položku „Odhad tolerancie spájania“ sa vypočíta hodnota tolerancie pre spájanie mnohouholníkov v geometrii.
 
-  * **Auto Stitch** : When this option is used, system automatically estimates the stitching tolerance and connects the polygons of the entire geometry which are within the Stitching tolerance.
+  * **Automatické spájanie**: Ak sa použije táto voľba, systém automaticky odhadne toleranciu spájania a spojí polygóny celej geometrie, ktoré sa nachádzajú v rámci tolerancie spájania.
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0031.jpg' | relative_url }})
 
-Stitch tab options
+Možnosti záložiek pre stehy
 
-**Fill** : The missing surfaces or polygons in the geometry due to which geometry cannot be closed are considered as holes.(See Fig. 50.1.32.)
+**Vyplnenie**: Chýbajúce plochy alebo mnohouholníky v geometrii, kvôli ktorým nie je možné geometriu uzavrieť, sa považujú za otvory. (Pozri obr. 50.1.32.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0032.jpg' | relative_url }})
 
-Fill tab Options
+Karta „Možnosti“ v okne „Vyplniť“
 
-  * **Fill Holes** : When we click on the Fill holes, new polygons are created to fill missing surfaces or polygons.
+  * **Vyplniť otvory**: Po kliknutí na položku „Vyplniť otvory“ sa vytvoria nové mnohouholníky, ktoré vyplnia chýbajúce plochy alebo mnohouholníky.
 
-  * **Fill all holes** : When we click on the Fill all holes, all holes in the geometry gets filled with new polygons.
+  * **Vyplniť všetky otvory**: Po kliknutí na tlačidlo „Vyplniť všetky otvory“ sa všetky otvory v geometrii vyplnia novými mnohouholníkmi.
 
 .
 
-  * **Connect two Loops** : This option is used to join two distinct loops. Selecting two loops and clicking on connect two loops option will join the loops.
+  * **Spojiť dve slučky**: Táto možnosť slúži na spojenie dvoch rôznych slučiek. Po výbere dvoch slučiek a kliknutí na možnosť „Spojiť dve slučky“ sa slučky spoja.
 
-  * **Auto Fill** : When user uses auto fill option, system automatically identifies the missing surfaces/ polygons in the geometry and fills them with new polygons.
+  * **Automatické vyplnenie**: Keď používateľ využije funkciu automatického vyplnenia, systém automaticky identifikuje chýbajúce plochy/polygóny v geometrii a vyplní ich novými polygónmi.
 
-**Shell** : Under Shell tab, information of each shell regarding status, Number of polygons in the shell, Shell Surface Area and volume will be displayed in the table.(See Fig. 50.1.33.)
+**Plášť**: Na karte „Plášť“ sa v tabuľke zobrazia informácie o každom plášti týkajúce sa stavu, počtu polygónov v plášti, plochy povrchu plášťa a objemu. (Pozri obr. 50.1.33.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0033.jpg' | relative_url }})
 
-Shell tab Options
+Karta „Shell“ – Možnosti
 
-  * **Mark Noisy shells** : When user clicks on Mark Noisy Shells button, system will highlight the noisy shells based on the criteria specified in the Noisy Shell Options.
+  * **Označiť šumové obaly**: Keď používateľ klikne na tlačidlo „Označiť šumové obaly“, systém zvýrazní šumové obaly na základe kritérií uvedených v nastaveniach „Možnosti šumových obalov“.
 
-  * **Noisy shell options:** User can use Noisy Shell Options button to specify the criteria to decide whether the shell is a noisy shell or not.
+  * **Možnosti „Noisy Shell“:** Pomocou tlačidla „Noisy Shell Options“ môže používateľ určiť kritériá, na základe ktorých sa rozhodne, či ide o „noisy shell“, alebo nie.
 
-**Triangle** : 
+**Trojuholník** : 
 
-  * **Tool** : Under Tool tab we have a Check button to check the geometry and identify and display the number of polygons with double surface, number of polygons intersecting, number of polygons attached to bad edge and number of polygons duplicated. Under this tab user can specify the criteria like distance, angle and normal direction to identify the double surface polygons.(See Fig. 50.1.34.)
+  * **Nástroj**: Na karte Nástroj sa nachádza tlačidlo Kontrola, ktoré slúži na kontrolu geometrie a identifikáciu a zobrazenie počtu polygónov s dvojitou plochou, počtu polygónov, ktoré sa pretínajú, počtu polygónov pripojených k chybnej hrane a počtu duplicitných polygónov. Na tejto karte môže používateľ špecifikovať kritériá, ako sú vzdialenosť, uhol a smer normály, na identifikáciu polygónov s dvojitou plochou. (Pozri obr. 50.1.34.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0034.jpg' | relative_url }})
 
-Triangle tab options
+Možnosti trojuholníkových záložiek
 
-**Point** : Point tab is used to create new points or duplicate exiting points of 3D geometry.(See Fig. 50.1.35.)
+**Bod**: Karta „Bod“ slúži na vytváranie nových bodov alebo na duplikovanie existujúcich bodov 3D geometrie. (Pozri obr. 50.1.35.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0035.jpg' | relative_url }})
 
-Point Tab Options
+Možnosti na karte „Bod“
 
-  * **Tool** : Tool options are used to create new points or duplicate exiting points of 3D geometry.
+  * **Nástroj**: Možnosti nástroja slúžia na vytváranie nových bodov alebo duplikovanie existujúcich bodov 3D geometrie.
 
-  * **Property** : Under Property, system displays the point number and co-ordinates of selected point or point to be created.
+  * **Vlastnosti**: V časti „Vlastnosti“ systém zobrazuje číslo bodu a súradnice vybraného bodu alebo bodu, ktorý sa má vytvoriť.
 
-**Geometry** : Under this tab user can specify the criteria like distance, angle and normal direction to identify the double surface polygons.(See Fig. 50.1.36.)
+**Geometria**: Na tejto karte môže používateľ zadať kritériá, ako sú vzdialenosť, uhol a smer normály, na identifikáciu mnohouholníkov s dvojitou plochou. (Pozri obr. 50.1.36.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0036.jpg' | relative_url }})
 
-Geometry tab options
+Možnosti na karte „Geometria“
 
-  * **Double surface** : Check double surface option is used to check the geometry whether it contains more than one surface based on the specified distance and angle to check the double surface, as DEFORM requires the geometry to have single surface.
+  * **Dvojitá plocha**: Možnosť „Kontrola dvojitej plochy“ slúži na overenie, či geometria obsahuje viac ako jednu plochu, a to na základe zadaných hodnôt vzdialenosti a uhla určených na kontrolu dvojitej plochy, keďže program DEFORM vyžaduje, aby geometria mala iba jednu plochu.
 
-  * **Intersecting Triangle** : Check Intersecting Triangle option is used to check the geometry whether it contains any intersecting polygons.
+  * **Prekrývajúce sa trojuholníky**: Možnosť „Prekrývajúce sa trojuholníky“ slúži na kontrolu, či geometria obsahuje nejaké prekrývajúce sa mnohouholníky.
 
-**Advanced** : 
+**Pokročilé** : 
 
-  * **Tool :**
+  * **Nástroj:**
 
-  * **Refine (conformal):** When user clicks on Refine Conformal, system will refine the geometry by reducing the polygon size and thereby increasing the number of polygons.(See Fig. 50.1.37.)
+  * **Spresnenie (konformné):** Keď používateľ klikne na tlačidlo „Spresniť konformne“, systém spresní geometriu zmenšením veľkosti polygónov, čím sa zvýši ich počet. (Pozri obr. 50.1.37.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0037.jpg' | relative_url }})
 
-Advanced Tab options
+Možnosti na karte „Pokročilé“
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0038.jpg' | relative_url }})
 
-Example for Refining the geometry face
+Príklad spresnenia plochy geometrie
 
-  * **Split (not conformal):**
+  * **Rozdelenie (nekonformné):**
 
-  * **Fairing** :
+  * **Kapotáž** :
 
-  * **Select Contact region** : This is typically used in Lagrangian Extrusion cases. In extrusion where material coming out of different pockets will form self contact, to cleanup these sub-contacted polygons and make the continuous material flow by importing the contact BCC keyword conditions.
+  * **Výber kontaktnej oblasti**: Táto voľba sa zvyčajne používa pri lagrangovskom vytláčaní. Pri vytláčaní, kde sa materiál vychádzajúci z rôznych vreciek navzájom dotýka, slúži na vyčistenie týchto polygónov s vnútornými kontaktmi a na zabezpečenie plynulého toku materiálu prostredníctvom importu kontaktných podmienok s kľúčovým slovom BCC.
 
-  * **Connect one shell** :
+  * **Pripojte jednu škrupinu** :
 
-  * **Connect all shells** :
+  * **Prepojte všetky plášte** :
 
-### Measure
+### Miera
 
-**Measuring** : In this section, it shows the measuring type when the distance is measured between point to point or between polygon to polygon along with the vector, Length and Label of the measured distance. (See Fig. 50.1.39.)
+**Meranie**: V tejto časti sa zobrazuje typ merania – či ide o meranie vzdialenosti medzi dvoma bodmi alebo medzi dvoma mnohouholníkmi – spolu s vektorom, dĺžkou a popiskom nameranej vzdialenosti. (Pozri obr. 50.1.39.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0039.jpg' | relative_url }})
 
-Measure Tab options
+Možnosti na karte „Meranie“
 
-**Direction** : Using direction options user can select the direction in which the measurement has to be done between two selected entities.
+**Smer**: Pomocou možností nastavenia smeru môže používateľ zvoliť smer, v ktorom sa má vykonať meranie medzi dvoma vybranými objektmi.
 
-**Filter** : This section helps to measure the distance between points, edges, Triangle and Face, by turning on the respective check boxes user can measure the distance.
+**Filter**: Táto sekcia slúži na meranie vzdialenosti medzi bodmi, hranami, trojuholníkmi a plochami; zaškrtnutím príslušných políčok môže používateľ túto vzdialenosť zmerať.
 
-**Information** : This section provides information regarding the polygon over which the cursor is placed or picked. The information includes polygon number, co-ordinates, area and normal direction.
+**Informácie**: V tejto časti sú uvedené informácie o mnohouholníku, na ktorom sa nachádza kurzor alebo ktorý bol vybraný. Tieto informácie zahŕňajú číslo mnohouholníka, súradnice, plochu a smer normály.
 
-**Delete** : Using Delete button user can delete the last measured distance.
+**Vymazať**: Pomocou tlačidla „Vymazať“ môže používateľ vymazať naposledy zmeranú vzdialenosť.
 
-**Delete All** : Using Delete All button user can delete all the measured distances.
+**Vymazať všetko**: Pomocou tlačidla „Vymazať všetko“ môže používateľ vymazať všetky namerané vzdialenosti.
 
-### Slicing
+### Krájanie
 
-Slicing tab can be used to slice the geometry and view. Geometry can be sliced in any direction by turning on the respective check boxes. Position of the slicing plane can be adjusted using the sliding bar.(See Fig. 50.1.40.)
+Karta „Rezanie“ slúži na rezanie geometrie a pohľadu. Geometriu je možné rezať v ľubovoľnom smere zaškrtnutím príslušných políčok. Polohu roviny rezu je možné nastaviť pomocou posuvníka. (Pozri obr. 50.1.40.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0040.jpg' | relative_url }})
 
-Geometry Slicing
+Geometrické rozkrájanie
 
-**Slicing Objects:** When user clicks on the slicing objects button it creates new object by slicing the exiting object geometry at the specified slicing plane. Original part is retained and holes are filled based on the respective check boxes status.
+**Rozrezávanie objektov:** Keď používateľ klikne na tlačidlo „Rozrezávanie objektov“, vytvorí sa nový objekt rozrezaním geometrie existujúceho objektu v zadej rovine rezu. Pôvodný diel zostane zachovaný a otvory sa vyplnia podľa stavu príslušných začiarkavacích políčok.
 
-**Imprint Objects** : Using imprint option user can imprint the geometry of one object on the other, like using cylinder option to make circular groves after splitting the grooved portion, see Fig. 50.1.41.
+**Vytlačenie objektov**: Pomocou možnosti „Vytlačenie“ môže používateľ vytlačiť geometriu jedného objektu na druhý, napríklad použitím možnosti „valec“ na vytvorenie kruhových drážok po rozdelení drážkovanej časti, pozri obr. 50.1.41.
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0041.jpg' | relative_url }})
 
-Example for using the imprint option to produce projections
+Príklad použitia možnosti „imprint“ na vytvorenie projekcií
 
-### Modify
+### Upraviť
 
-**Trimming** : Trimming options are used to remove the part of the geometry by defining the trimming line. This can be done by following steps,
+**Orezávanie**: Možnosti orezávania slúžia na odstránenie časti geometrie pomocou definovania orezávacej čiary. To je možné vykonať nasledujúcimi krokmi:
 
-  1. Defining the Trimming line on the Geometry. (See Fig. 50.1.42.)
+  1. Vymedzenie orezávacej línie na geometrii. (Pozri obr. 50.1.42.)
 
-  2. User can see the preview of the trimming geometry. (See Fig. 50.1.43.)
+  2. Používateľ môže zobraziť náhľad geometrie oreza. (Pozri obr. 50.1.43.)
 
-  3. Click Trim button to trim the geometry. (See Fig. 50.1.44.)
+  3. Kliknite na tlačidlo „Trim“, aby ste geometriu orezať. (Pozri obr. 50.1.44.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0042.jpg' | relative_url }})
 
-Defining the trimming line
+Určenie orezávacej čiary
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0043.jpg' | relative_url }})
 
-Trimming preview
+Náhľad orezania
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0044.jpg' | relative_url }})
 
-Geometry after Trimming
+Geometria po orezaní
 
-User can keep the original object by turning on the Keep original part check box.
+Používateľ si môže zachovať pôvodný objekt tak, že zaškrtne políčko „Zachovať pôvodnú časť“.
 
-**Boolean :** Boolean options are used to join, Subtract and to take out the common of two geometries.
+**Booleovské operácie:** Booleovské operácie sa používajú na zjednotenie, odčítanie a nájdenie spoločného množiny dvoch geometrických telies.
 
-**Union** : Union option is used to combine two geometries into one. Union can be done using following steps,
+**Zjednotenie**: Funkcia „Zjednotenie“ slúži na zlúčenie dvoch geometrií do jednej. Zjednotenie je možné vykonať nasledujúcimi krokmi:
 
-  1. Create two geometries or import two geometries.
+  1. Vytvorte dve geometrie alebo importujte dve geometrie.
 
-  2. Position the geometries overlapping based on the new geometry requirement.
+  2. Umiestnite geometrie tak, aby sa prekrývali v súlade s novými požiadavkami na geometriu.
 
-  3. Shift to Modify property editor page. (See Fig. 50.1.45.)
+  3. Prejdite na stránku editora vlastností „Modify“. (Pozri obr. 50.1.45.)
 
-  4. Select the union button to combine the two geometries, color shades of the geometries to be combined are shown in Modify page. (See Fig. 50.1.46.)
+  4. Kliknite na tlačidlo „Zjednotiť“, aby ste spojili obe geometrie; farebné odtiene geometrií, ktoré sa majú spojiť, sa zobrazia na stránke „Upraviť“. (Pozri obr. 50.1.46.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0045.jpg' | relative_url }})
 
-Defining two new geometries
+Definovanie dvoch nových geometrií
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0046.jpg' | relative_url }})
 
-Joining the geometries using Union option
+Spojenie geometrických telies pomocou možnosti „Union“
 
-**Subtract :** Subtracting option is used to remove the unwanted area of the Geometry using other object geometry. Subtracting can be done using following steps,
+**Odčítanie:** Funkcia odčítania slúži na odstránenie nežiaducej časti geometrie pomocou geometrie iného objektu. Odčítanie je možné vykonať nasledujúcimi krokmi:
 
-  1. Create two geometries or import two geometries.
+  1. Vytvorte dve geometrie alebo importujte dve geometrie.
 
-  2. Position the geometries to overlap one on another. (See Fig. 50.1.47.)
+  2. Umiestnite geometrické telesa tak, aby sa navzájom prekrývali. (Pozri obr. 50.1.47.)
 
-  3. Shift to Modify property editor page.
+  3. Prejdite na stránku editora vlastností „Modify“.
 
-  4. Select the subtract option to subtract one geometry from another geometry, color shades of the geometry that is subtracted and geometry from which it is subtracted are shown in Modify page (See Fig. 50.1.48.).
+  4. Vyberte možnosť „odpočítať“, aby ste jednu geometriu odpočítali od druhej; farebné odtiene odpočítanej geometrie a geometrie, od ktorej sa odpočítava, sa zobrazia na stránke „Modify“ (pozri obr. 50.1.48.).
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0047.jpg' | relative_url }})
 
-Defining two new geometries for subtracting
+Definovanie dvoch nových geometrií pre odčítanie
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0048.jpg' | relative_url }})
 
-Subtracting geometry
+Geometria odčítania
 
-**Intersect** : This option is used to take out the common part of the two geometries, this can be done by using following steps,
+**Intersect**: Táto voľba slúži na vyberanie spoločnej časti dvoch geometrických telies. To je možné vykonať pomocou nasledujúcich krokov:
 
-  1. Create two geometries or import two geometries.
+  1. Vytvorte dve geometrie alebo importujte dve geometrie.
 
-  2. Position the geometries to overlap one on another.
+  2. Umiestnite geometrické telesa tak, aby sa navzájom prekrývali.
 
-  3. Shift to Modify property editor page. (See Fig. 50.1.49.)
+  3. Prejdite na stránku editora vlastností „Modify“. (Pozri obr. 50.1.49.)
 
-  4. Select the Intersect button option to take out the common part of the two geometries, color shades of the geometries from which common geometry will be taken out are shown in Modify page (See Fig. 50.1.50.).
+  4. Vyberte možnosť tlačidla „Intersect“ (Priesečník), aby ste vytvorili spoločnú časť oboch geometrií; farebné odtiene geometrií, z ktorých sa bude spoločná geometria vytvárať, sú zobrazené na stránke „Modify“ (pozri obr. 50.1.50.).
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0049.jpg' | relative_url }})
 
-Creating two geometries
+Vytvorenie dvoch geometrických útvarov
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0050.jpg' | relative_url }})
 
-Taking out the intersecting part
+Odstránenie prekrývajúcej sa časti
 
-User can keep the original object by turning on the Keep original part check box.
+Používateľ si môže zachovať pôvodný objekt tak, že zaškrtne políčko „Zachovať pôvodnú časť“.
 
-###  Verify
+###  Overiť
 
-**Quality** : In the quality box, user can analyze the Fold in the geometry based on the specified criteria and also delete the Folds. (See Fig. 50.1.51.)
+**Kvalita**: V okne „Kvalita“ môže používateľ analyzovať ohyby v geometrii na základe zadaných kritérií a tiež tieto ohyby odstrániť. (Pozri obr. 50.1.51.)
 
-**Comparison** : Using the comparison;; options, user can compare the two geometries in terms of number of polygons, number of points, Min Length of Polygon, Min Area of Polygon, Number of shells, Number of Noisy shells, Number of Bad edges, Number of Free edges, Volume and Surface Area. (See Fig. 50.1.51.)
+**Porovnanie**: Pomocou možností porovnania môže používateľ porovnať dve geometrie z hľadiska počtu mnohouholníkov, počtu bodov, minimálnej dĺžky mnohouholníka, minimálnej plochy mnohouholníka, počtu plášťov, počtu plášťov s chybami, počtu chybných hrán, počtu voľných hrán, objemu a povrchovej plochy. (Pozri obr. 50.1.51.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0051.jpg' | relative_url }})
 
-Verify tab options
+Overiť možnosti na karte
 
-### Morphing
+### Morfing
 
-Morphing can be used by user to modify the geometry of one object to the other. Morphing is mostly used while setting up optimization problems.(See Fig. 50.1.53.)
+Používateľ môže využiť morfing na zmenu geometrie jedného objektu na geometriu iného objektu. Morfing sa najčastejšie používa pri nastavovaní optimalizačných úloh. (Pozri obr. 50.1.53.)
 
-**Connect pairs:** Two objects are required to perform morphing. One object is considered as source, the geometry of which needs to be transformed and other object is considered as target, the geometry to be achieved. User can select the surface from source to be transformed and corresponding surface on target and pair them.
+**Spojenie párov:** Na vykonanie morfingu sú potrebné dva objekty. Jeden objekt sa považuje za zdrojový, ktorého geometria sa má transformovať, a druhý objekt sa považuje za cieľový, ktorého geometria sa má dosiahnuť. Používateľ môže vybrať povrch na zdrojovom objekte, ktorý sa má transformovať, a zodpovedajúci povrch na cieľovom objekte a spárovať ich.
 
-In connect pairs page, user can add, remove, import and export the connected pairs. (See Fig. 50.1.52.)
+Na stránke „Prepojené páry“ môže používateľ pridávať, odstraňovať, importovať a exportovať prepojené páry. (Pozri obr. 50.1.52.)
 
-User can calculate the results by clicking on the calculate button.
+Používateľ môže vypočítať výsledky kliknutím na tlačidlo „Vypočítať“.
 
-After calculating the results user can see the preview of the morphed geometry.
+Po vypočítaní výsledkov si môže používateľ prezrieť náhľad transformovanej geometrie.
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0052.jpg' | relative_url }})
 
-Connect Pairs window
+Okno „Spojiť páry“
 
-**Preview Morphing Results** : After calculating the results user can see the preview of the various stages of morphing using sliding bar. User can remove the preview of the morphing results using ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}) icon. (See Fig. 50.1.53.)
+**Náhľad výsledkov morfingového spracovania**: Po výpočte výsledkov si používateľ môže pomocou posuvníka prezrieť náhľad jednotlivých fáz morfingového spracovania. Náhľad výsledkov morfingového spracovania môže používateľ skryť pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}). (Pozri obr. 50.1.53.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0053.jpg' | relative_url }})
 
-Preview Morphing Results window
+Okno s náhľadom výsledkov morfingového spracovania
 
-**Save Morphing Results** : User can save the Morphing results by browsing a location and it is saved in *.GEO format. (See Fig. 50.1.54.)
+**Uloženie výsledkov morfingového spracovania**: Používateľ môže výsledky morfingového spracovania uložiť tak, že vyberie umiestnenie, a výsledky sa uložia vo formáte *.GEO. (Pozri obr. 50.1.54.)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0054.jpg' | relative_url }})
 
-Save morphing results window
+Uložiť okno s výsledkami morfingovania

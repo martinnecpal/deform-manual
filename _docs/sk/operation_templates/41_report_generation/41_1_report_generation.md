@@ -1,332 +1,332 @@
 ---
 lang: sk
-title: "41.1. Report Generation"
+title: "41.1. Vytváranie správ"
 ---
 
-# 41.1. Report Generation
+# 41.1. Vytváranie správ
 
-41.1.1. Report
+41.1.1. Správa
 
-Report Hierarchy
+Hierarchia správ
 
-41.1.2. Chapter
+41.1.2. Kapitola
 
-Chapter title
+Názov kapitoly
 
-Operation range selection
+Výber prevádzkového rozsahu
 
-41.1.3. Sections
+41.1.3. Časti
 
-  * Simulation Input summary
+  * Prehľad vstupných údajov pre simuláciu
 
-  * Metal Flow
+  * Prúdenie kovu
 
-  * Summary
+  * Zhrnutie
 
-  * Graph (Load-Stroke)
+  * Graf (zaťaženie – zdvih)
 
-  * State Variable
+  * Premenná stavu
 
-  * Region of Interest
+  * Oblast záujmu
 
-  * Coupons
+  * Kupóny
 
-  * Point Tracking
+  * Sledovanie bodov
 
   * Flownet
 
-  * Post user variables tracking
+  * Sledovanie premenných používateľa príspevku
 
-  * Custom
+  * Na mieru
 
-## Report
+## Správa
 
-In Report, we can add multiple chapters by clicking on ![]({{ '/assets/icons/post_icons/mo_add_report_section_button.jpg' | relative_url }}) button and by double click on chapter name we can modify the chapter name (by default it will show Operation range ) as shown in Fig. 41.1.1.
+V správe môžeme pridať viacero kapitol kliknutím na tlačidlo ![]({{ '/assets/icons/post_icons/mo_add_report_section_button.jpg' | relative_url }}) a dvojitým kliknutím na názov kapitoly môžeme tento názov upraviť (štandardne sa zobrazí „Operation range“), ako je znázornené na obr. 41.1.1.
 
-Using Import report template to a file ![]({{ '/assets/icons/post_icons/mo_import_button.jpg' | relative_url }}) and Import report template to library****![]({{ '/assets/icons/post_icons/mo_import_form_library_button.jpg' | relative_url }}) options we can import saved (.DS) report template and using Export report template to file ![]({{ '/assets/icons/post_icons/mo_export_report_template_button.jpg' | relative_url }}) and Export report template to library ![]({{ '/assets/icons/post_icons/mo_export_template_to_librart_button.jpg' | relative_url }}) options we can save the report template. 
+Pomocou možností „Importovať šablónu správy do súboru“ ![]({{ '/assets/icons/post_icons/mo_import_button.jpg' | relative_url }}) a „Importovať šablónu správy do knižnice“****![]({{ '/assets/icons/post_icons/mo_import_form_library_button.jpg' | relative_url }}) môžeme importovať uloženú šablónu správy (.DS) a pomocou možností Exportovať šablónu správy do súboru ![]({{ '/assets/icons/post_icons/mo_export_report_template_button.jpg' | relative_url }}) a Exportovať šablónu správy do knižnice ![]({{ '/assets/icons/post_icons/mo_export_template_to_librart_button.jpg' | relative_url }}) môžeme šablónu správy uložiť. 
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image001.jpg' | relative_url }})
 
-Adding Chapters to Report list
+Pridávanie kapitol do zoznamu správ
 
-### Report Hierarchy
+### Hierarchia správ
 
-Report is split into Chapters and each Chapter will have Sections and every Section will have selected outputs like graphs, state variable plots etc., see Fig. 41.1.2.
+Správa je rozdelená na kapitoly, pričom každá kapitola obsahuje oddiely a každý oddiel obsahuje vybrané výstupy, ako sú grafy, diagramy stavových premenných atď., pozri obr. 41.1.2.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image002.jpg' | relative_url }})
 
-Report Object tree
+Strom objektov správy
 
-## Chapter
+## Kapitola
 
-Chapter contains Sections with various type of outputs such as point tracking, contour plot of state variables, graphs,.. etc and user can change the Chapter title, select operation range that can be added to report as shown in Fig. 41.1.3.
+Kapitola obsahuje sekcie s rôznymi typmi výstupov, ako je sledovanie bodov, kontúrové znázornenie stavových premenných, grafy atď., a používateľ môže zmeniť názov kapitoly a vybrať rozsah operácií, ktoré sa môžu pridať do správy, ako je znázornené na obr. 41.1.3.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image003.jpg' | relative_url }})
 
-Chapter page
+Stránka kapitoly
 
-### Chapter title
+### Názov kapitoly
 
-In chapter list field we can modify chapter name as required. Fig. 41.1.4. shows the Chapter title options available to define Chapter title.
+V poli so zoznamom kapitol môžeme podľa potreby upraviť názov kapitoly. Obr. 41.1.4. znázorňuje možnosti nastavenia názvu kapitoly, ktoré sú k dispozícii na jeho definovanie.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image006.jpg' | relative_url }})
 
-Chapter Title options
+Možnosti názvov kapitol
 
-### Operation range selection
+### Výber prevádzkového rozsahu
 
-Operation range selection is available within a chapter, which enables operation-by-operation report generation. User can select the operations range for which report needs to be generated. If user wants to generate report for non successive operations then additional chapters needs to be created for respective operations.
+V rámci kapitoly je k dispozícii výber rozsahu operácií, čo umožňuje generovanie správ po jednotlivých operáciách. Používateľ si môže vybrať rozsah operácií, pre ktoré sa má správa vygenerovať. Ak chce používateľ vygenerovať správu pre nepo sebe idúce operácie, je potrebné pre príslušné operácie vytvoriť ďalšie kapitoly.
 
-## Sections
+## Časti
 
-In Sections, select the required post tool check box to be added to report and we can notice that respective tools will be added in Object tree (See Fig. 41.1.3.).
+V časti „Sekcie“ zaškrtnite políčko príslušného nástroja, ktorý chcete pridať do správy, a všimnete si, že príslušné nástroje sa pridajú do stromu objektov (pozri obr. 41.1.3.).
 
-Following tools are available for report generation,
+Na vytváranie správ sú k dispozícii nasledujúce nástroje:
 
-  * Simulation Input summary
+  * Prehľad vstupných údajov pre simuláciu
 
-  * Metal Flow
+  * Prúdenie kovu
 
-  * Summary
+  * Zhrnutie
 
-  * Graph (Load-Stroke)
+  * Graf (zaťaženie – zdvih)
 
-  * State Variable
+  * Premenná stavu
 
-  * Region of Interest
+  * Oblast záujmu
 
-  * Coupons
+  * Kupóny
 
-  * Point Tracking
+  * Sledovanie bodov
 
   * Flownet
 
-  * Post user variables tracking
+  * Sledovanie premenných používateľa príspevku
 
-  * Custom
+  * Na mieru
 
-  * **Simulation input summary**
+  * **Súhrn vstupných údajov simulácie**
 
-By Turning on Simulation input summary check box if we generate report, we can observe the Contents of each chapter, Summary summary of each operation and object/s data and each section output. Fig. 41.1.5. shows sample of report generated for Simulation input summary.
+Ak pri generovaní správy zaškrtneme políčko „Súhrn vstupných údajov simulácie“, môžeme si prezrieť obsah jednotlivých kapitol, súhrn jednotlivých operácií, údaje o objektoch a výstupy jednotlivých sekcií. Obr. 41.1.5. znázorňuje ukážku správy vygenerovanej pre súhrn vstupných údajov simulácie.
 
-From v12.0.2., if user don't want the simulation summary in the report PDF file, then we need to turn off the "Simulation input summary" check box in Chapter page.
+Od verzie 12.0.2, ak používateľ nechce, aby sa v PDF súbore správy nachádzalo zhrnutie simulácie, je potrebné na stránke „Kapitola“ zrušiť zaškrtnutie políčka „Zhrnutie vstupných údajov simulácie“.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image004.jpg' | relative_url }}) ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image005.jpg' | relative_url }})
 
-Simulation summary in PDF Document file
+Súhrn simulácie v súbore PDF
 
   * **Metal Flow**
 
-Metal flow in each operation can be added to report using Metal Flow section. In Metal flow page, we can select Start step, Middle (we can select upto 7 step) and End step as shown in Fig. 41.1.6. Metal flow displays deformation of the object without any state variable contour at the selected steps of operations. 
+Prúdenie kovu v jednotlivých operáciách je možné pridať do správy pomocou sekcie „Prúdenie kovu“. Na stránke „Tok kovu“ môžeme vybrať počiatočný krok, stredný krok (môžeme vybrať až 7 krokov) a konečný krok, ako je znázornené na obr. 41.1.6. Tok kovu zobrazuje deformáciu objektu bez akéhokoľvek obrysu stavovej premennej vo vybraných krokoch operácií. 
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image007.jpg' | relative_url }})
 
-Metal Flow page
+Stránka Metal Flow
 
-Under Controls page, we can select objects to be displayed in Metal Flow, Type of Viewport, Contact type display and PDF layout for Metal Flow output (See Fig. 41.1.7.). Also we can Export Node coordinates and Element connectivity data by checking Export Node coordinates and Element connectivity check box in Controls page. Also we can export the 2D (DXF format) or 3D (STL format) geometry at the last step by checking Geometry check box. Fig. 41.1.8. shows sample of report generated for metal flow.
+Na stránke „Ovládacie prvky“ môžeme vybrať objekty, ktoré sa majú zobraziť v nástroji Metal Flow, typ zobrazenia, spôsob zobrazenia kontaktov a rozloženie PDF pre výstup z nástroja Metal Flow (pozri obr. 41.1.7.). Okrem toho môžeme exportovať súradnice uzlov a údaje o prepojeniach prvkov zaškrtnutím políčok „Exportovať súradnice uzlov“ a „Prepojenia prvkov“ na stránke „Ovládacie prvky“. V poslednom kroku môžeme tiež exportovať 2D (formát DXF) alebo 3D (formát STL) geometriu zaškrtnutím políčka „Geometria“. Obr. 41.1.8. ukazuje ukážku správy vygenerovanej pre program Metal Flow.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image008.jpg' | relative_url }})
 
-Metal Flow Controls page
+Stránka „Regulátory prietoku kovov“
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image009.jpg' | relative_url }})
 
-Generated Report for Metal flow section
+Vygenerovaná správa pre úsek toku kovu
 
-  * **Summary**
+  * **Zhrnutie**
 
-Summary plot of state variable can be added to report using ![]({{ '/assets/icons/post_icons/mo_add_report_output_button.jpg' | relative_url }}) button and selecting the required state variable. We can also export the respective State variable Summary data by checking Export check box. When Export checkbox is turned on the selected Summary output will be saved into Report folder in .CSV format during report generation. (see Fig. 41.1.9.). Then for each selected state variable user need to select objects for which to generate state variable Min/max curves has to been generated in each state variable windows as shown in Fig. 41.1.10. Sample of report generated for Summary is as shown in Fig. 41.1.11.
+Súhrnný graf stavovej premennej je možné pridať do správy pomocou tlačidla ![]({{ '/assets/icons/post_icons/mo_add_report_output_button.jpg' | relative_url }}) a výberom požadovanej stavovej premennej. Príslušné súhrnné údaje o stavových premenných môžeme tiež exportovať zaškrtnutím políčka Export. Ak je políčko Export zaškrtnuté, vybraný súhrnný výstup sa počas generovania správy uloží do priečinka Report vo formáte .CSV. (pozri obr. 41.1.9.). Následne musí používateľ pre každú vybranú stavovú premennú vybrať objekty, pre ktoré sa majú vygenerovať krivky min/max stavovej premennej v okne každej stavovej premennej, ako je znázornené na obr. 41.1.10. Ukážka správy vygenerovanej pre súhrn je znázornená na obr. 41.1.11.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image010.jpg' | relative_url }})
 
-Summary Output
+Súhrnný výstup
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image011.jpg' | relative_url }})
 
-Object selection for respective state variable output
+Výber objektu pre výstup príslušnej stavovej premennej
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image012.jpg' | relative_url }})
 
-Generated Report for Summary section
+Vygenerovaná správa pre časť „Súhrn“
 
-  * **Graph (Load-Stroke)**
+  * **Graf (zaťaženie – zdvih)**
 
-In Graph output page, Multiple x-y plots such as load-stroke, speed-time, stroke-energy, ..etc can be defined, using ![]({{ '/assets/icons/post_icons/mo_add_report_output_button.jpg' | relative_url }}) button as shown in Fig. 41.1.12. We can also export the respective Load - Stroke data by checking Export check box. When Export checkbox is turned on the selected Summary output will be saved into Report folder in .CSV format during report generation. Then for each output type user need to select object for which graph has to be generated in Graph output page, Fig. 41.1.13. Sample of report generated for Graph is as shown in Fig. 41.1.14.
+Na stránke „Graph output“ je možné definovať viaceré grafy x-y, ako napríklad záťaž-zdvih, rýchlosť-čas, zdvih-energia atď., pomocou tlačidla ![]({{ '/assets/icons/post_icons/mo_add_report_output_button.jpg' | relative_url }}), ako je znázornené na obr. 41.1.12. Príslušné údaje o zaťažení a zdvihu je možné exportovať zaškrtnutím políčka „Export“. Ak je políčko „Export“ zaškrtnuté, vybraný súhrnný výstup sa počas generovania správy uloží do priečinka „Report“ vo formáte .CSV. Následne musí používateľ pre každý typ výstupu na stránke „Graph output“ (Výstup grafu) vybrať objekt, pre ktorý sa má graf vygenerovať (obr. 41.1.13). Ukážka správy vygenerovanej pre graf je zobrazená na obr. 41.1.14.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image013.jpg' | relative_url }})
 
-Graph output plot selection
+Výber grafu výstupných údajov
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image014.jpg' | relative_url }})
 
-Object selection for Load Time Graph output
+Výber objektov pre výstup grafu času načítania
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image015.jpg' | relative_url }})
 
-Generated Report for Graph section
+Vygenerovaná správa pre sekciu „Graf“
 
-  * **State Variable**
+  * **Stavová premenná**
 
-State variable contour plot can be added to report from State variable output. Depending on the requirement user can select the Start step, Middle steps (up to 7) and End step in State variable page to be included into report as shown in Fig. 41.1.15., contour plot will be generated for selected steps and added to report.
+Do správy je možné pridať kontúrový graf stavovej premennej z výstupu stavovej premennej. V závislosti od požiadaviek môže používateľ na stránke „Stavové premenné“ vybrať počiatočný krok, stredné kroky (až 7) a konečný krok, ktoré sa majú zahrnúť do správy, ako je znázornené na obr. 41.1.15. Kontúrový graf sa vygeneruje pre vybrané kroky a pridá sa do správy.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image016.jpg' | relative_url }})
 
-State variable step selection page
+Stránka výberu krokov pre stavové premenné
 
-In output page, user can select the State variable for which contour plot needs to be added into report using ![]({{ '/assets/icons/post_icons/mo_add_report_output_button.jpg' | relative_url }}) variables button and we can also export the respective State variable data by checking Export check box as shown in Fig. 41.1.16.
+Na výstupnej stránke môže používateľ pomocou tlačidla „![]({{ '/assets/icons/post_icons/mo_add_report_output_button.jpg' | relative_url }}) premenné“ vybrať premennú stavu, pre ktorú sa má do správy pridať kontúrový graf, a môžeme tiež exportovať príslušné údaje o premennej stavu zaškrtnutím políčka „Export“, ako je znázornené na obr. 41.1.16.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image017.jpg' | relative_url }})
 
-State variable output list
+Zoznam výstupov stavových premenných
 
-For each state variable, user can select the objects for which the contour plot has to be generated into report, viewport, Contour type, Contour range, Color bar type and PDF layout..3D model with contour plot can be included into pdf by turning on Include 3D Model (PDF) check box as shown in Fig. 41.1.17. Now 3D PDF output will be saved under Models folder for each output separately.
+Pre každú stavovú premennú môže používateľ vybrať objekty, pre ktoré sa má v správe vygenerovať kontúrový graf, okno zobrazenia, typ kontúry, rozsah kontúry, typ farebnej stupnice a rozloženie PDF.3D model s kontúrovým grafom je možné zahrnúť do PDF zaškrtnutím políčka „Zahrnúť 3D model (PDF)“, ako je znázornené na obr. 41.1.17. Výstup v 3D PDF formáte sa teraz uloží do priečinka „Modely“, a to pre každý výstup zvlášť.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image018.jpg' | relative_url }})
 
-Object and PDF layout selection for respective output variable window
+Výber objektu a rozloženia PDF pre príslušné okno výstupnej premennej
 
-PDF and PPT generated by report generation is shown below Fig. 41.1.18. to Fig. 41.1.20.
+Súbory PDF a PPT vytvorené v rámci generovania správ sú zobrazené na obr. 41.1.18 až obr. 41.1.20.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image019.jpg' | relative_url }})
 
-Generated PDF of 9 saved step of an operation (PDF layout 9)
+Vygenerovaný súbor PDF obsahujúci 9 uložených krokov operácie (rozloženie PDF 9)
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image020.jpg' | relative_url }})
 
-Generated 3D PDF for Operation 4
+Vygenerovaný 3D PDF súbor pre operáciu 4
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image021.jpg' | relative_url }})
 
-Generated PPT for Stress Effective State variable
+Vygenerovaná prezentácia PPT pre premennú „Stress Effective State“
 
-  * **Region of Interest**
+  * **Zaujímavá oblasť**
 
-Region of Interest (ROI) is an arbitrary shape (2d or 3d) which defines an area from which system gathers information about state variables for selected object and displays Min and Max value for selected state variable.
+Oblasť záujmu (ROI) je ľubovoľný tvar (2D alebo 3D), ktorý vymedzuje oblasť, z ktorej systém zhromažďuje informácie o stavových premenných vybraného objektu a zobrazuje minimálnu a maximálnu hodnotu vybranej stavovej premennej.
 
-In Region of Interest selection page, we can add regions using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. For the added region we can create geometry using primitives or we can import the geometry file using import options. (See Fig. 41.1.21.)
+Na stránke výberu oblasti záujmu môžeme pridávať oblasti pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Pre pridanú oblasť môžeme vytvoriť geometriu pomocou základných tvarov alebo môžeme importovať súbor s geometriou pomocou možností importu. (Pozri obr. 41.1.21.)
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image022.jpg' | relative_url }})
 
-Region of Interest selection page
+Stránka na výber oblasti záujmu
 
-In Outputs page, we can add the required output state variable and under Region column we can select the region across which state variable data needs to be extracted from pull down menu list, see Fig. 41.1.22.
+Na stránke „Výstupy“ môžeme pridať požadovanú premennú stavu výstupu a v stĺpci „Oblasť“ môžeme z roletového menu vybrať oblasť, z ktorej sa majú údaje o premennej stavu extrahovať (pozri obr. 41.1.22).
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image023.jpg' | relative_url }})
 
-Region of Interest output page
+Výstupná stránka „Region of Interest“
 
-Report generated for coupons sections is shown below Fig. 41.1.23.
+Správa vygenerovaná pre sekcie s kupónmi je zobrazená nižšie na obr. 41.1.23.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image024.jpg' | relative_url }})
 
-Generated Region of Interest result
+Výsledok generovania oblasti záujmu
 
-  * **Coupon**
+  * **Kupón**
 
-Qualification of parts require cut-up evaluation of critical locations for microstructure and mechanical property response and industry needs to identify critical areas in the part based on forming and heat treatment modeling results. For those critical areas identified, we need to extract modeling state variables. Coupon capability in DEFORM can be used for this process.
+Kvalifikácia dielov si vyžaduje podrobné vyhodnotenie kritických miest z hľadiska mikrostruktúry a zmien mechanických vlastností, pričom priemysel musí identifikovať kritické oblasti v diele na základe výsledkov modelovania tvárnenia a tepelného spracovania. Pre identifikované kritické oblasti je potrebné extrahovať stavové premenné modelovania. Na tento proces je možné využiť funkciu „Coupon capability“ v programe DEFORM.
 
-In coupon selection page, add the coupon region to extract state variables data in the coupon region (See Fig. 41.1.24.).
+Na stránke výberu kupónu pridajte oblasť kupónu, aby sa mohli extrahovať údaje o premenných stavu v danej oblasti kupónu (pozri obr. 41.1.24.).
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image025.jpg' | relative_url }})
 
-Coupon selection page
+Stránka s výberom kupónov
 
-In Coupon Output page, we can add the required output state variables for which data needs to be extracted. ( See Fig. 41.1.25.)
+Na stránke „Coupon Output“ môžeme pridať požadované premenné výstupného stavu, z ktorých je potrebné extrahovať údaje. (Pozri obr. 41.1.25.)
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image026.jpg' | relative_url }})
 
-Coupon Output state variable selection
+Výber premennej stavu výstupu kupónu
 
-Report generated for coupons sections is shown below Fig. 41.1.26.
+Správa vygenerovaná pre sekcie s kupónmi je zobrazená nižšie na obr. 41.1.26.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image028.jpg' | relative_url }})
 
-Generated Coupon result in PDF
+Výsledok vygenerovaného kupónu vo formáte PDF
 
-  * **Point Tracking**
+  * **Sledovanie bodov**
 
-User can add graphs to understand the behavior of a particular state variable at selected points using point tracking. In Point tracking selection page, select the step, select the points type, which could be Moving or Fixed and select points for point tracking in Define window as shown in Fig. 41.1.27.
+Používateľ môže pridať grafy, aby pochopil správanie konkrétnej stavovej premennej vo vybraných bodoch pomocou sledovania bodov. Na stránke výberu sledovania bodov vyberte krok, typ bodov (môže byť „Pohyblivé“ alebo „Pevné“) a v okne „Definovať“ vyberte body pre sledovanie bodov, ako je znázornené na obr. 41.1.27.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image027.jpg' | relative_url }})
 
-Point tracking selection page
+Stránka na výber sledovania bodov
 
-In Point tracking output page, select the state variable for which a graph needs to be plotted (See Fig. 41.1.28.) and check Export check box if point tracking state variable data need to be exported.
+Na stránke „Výstup sledovania bodov“ vyberte stavovú premennú, pre ktorú sa má vykresliť graf (pozri obr. 41.1.28), a zaškrtnite políčko „Exportovať“, ak je potrebné exportovať údaje o stavovej premennej zo sledovania bodov.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image029.jpg' | relative_url }})
 
-Point tracking output state variable selection
+Výber stavovej premennej výstupu sledovania bodu
 
-For each output state variable page, user can select the objects to be included for point tracking and also can select whether to Plot contour + Graph or Graph plot or Contour only from Display options as shown in Fig. 41.1.29.
+Na každej stránke s výstupnými stavovými premennými si používateľ môže vybrať objekty, ktoré sa majú zahrnúť do sledovania bodov, a tiež si môže v možnostiach zobrazenia vybrať, či sa má zobraziť „Kontúra + graf“, „Graf“ alebo „Iba kontúra“, ako je znázornené na obr. 41.1.29.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image030.jpg' | relative_url }})
 
-Output State variable window
+Okno premennej výstupného stavu
 
-The generated PDF report for Point tracking section is as shown in Fig. 41.1.30.
+Vygenerovaná správa vo formáte PDF pre časť „Sledovanie bodov“ je znázornená na obr. 41.1.30.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image031.jpg' | relative_url }})
 
-Shows sample of the generated PDF report for Point tracking with Contour+ Graph plot 
+Ukazuje ukážku vygenerovanej správy vo formáte PDF pre sledovanie bodov s grafickým znázornením v programe Contour+ 
 
   * **Flownet**
 
-In order to include flow net of an object into report, from Flownet page select the step at which flownet to be added into report, currently Start step or End step or Start and End Step are available and they can be used by turning on respective check box, see Fig. 41.1.31.
+Ak chcete do správy zahrnúť sieť tokov objektu, na stránke „Flownet“ vyberte krok, v ktorom sa má sieť tokov pridať do správy. V súčasnosti sú k dispozícii možnosti „Začiatočný krok“, „Konečný krok“ alebo „Začiatočný a konečný krok“, ktoré je možné použiť zaškrtnutím príslušného políčka (pozri obr. 41.1.31).
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image032.jpg' | relative_url }})
 
-Flownet page
+Stránka Flownet
 
-In Object selection page select object for which Flownet needs to be plotted, select pattern type and configure the pattern parameters as show in Fig. 41.1.32. Sample of Flownet from a generated report is shown in Fig. 41.1.33.
+Na stránke „Výber objektu“ vyberte objekt, pre ktorý sa má vygenerovať graf Flownet, vyberte typ vzoru a nastavte parametre vzoru podľa obr. 41.1.32. Ukážka grafu Flownet z vygenerovanej správy je zobrazená na obr. 41.1.33.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image033.jpg' | relative_url }})
 
-Configuring Flownet pattern
+Nastavenie vzoru Flownet
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image034.jpg' | relative_url }})
 
-Generated PPT file for simple operation
+Vytvorený súbor PPT pre jednoduchú obsluhu
 
-  * **Post user variables tracking**
+  * **Sledovanie premenných používateľa príspevku**
 
-This allows the user to generate the report for the user defined post variables defined in the post processor user routines (See Fig. 41.1.34.). Depending on the requirement user can select the Start step, Middle steps (up to 7) and End step in State variable page to be included into report.
+Toto umožňuje používateľovi vygenerovať správu pre používateľom definované premenné po spracovaní, ktoré sú definované v používateľských rutínach postprocesora (pozri obr. 41.1.34.). V závislosti od požiadaviek si používateľ môže na stránke „Premenné stavu“ vybrať počiatočný krok, stredné kroky (až 7) a konečný krok, ktoré sa majú zahrnúť do správy.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image035.jpg' | relative_url }})
 
-Post user variable page
+Stránka pre používateľské premenné príspevkov
 
-In Library page, select the DLL file generated from the user routine in Library field and select the routine number from routine pull down list. (See Fig. 41.1.35.)
+Na stránke „Knižnica“ vyberte v poli „Knižnica“ súbor DLL vygenerovaný z užívateľskej rutiny a z roletového zoznamu „Rutina“ vyberte číslo rutiny. (Pozri obr. 41.1.35.)
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image036.jpg' | relative_url }})
 
-Library and Routine selection page
+Stránka výberu knižnice a rutiny
 
-In Tracking page, select Tracking variables radio button in Method type if no PDB is available, then select Calculation type as Nodes or Elements type and then click on Track data, Once tracking the variables for particular DB is completed a PDB file will be generated in the problem directory, so in the next sessions of post processing user can select the existing PDB from the Tracking tab and then directly plot the user variables. (See Fig. 41.1.36.)
+Na stránke „Tracking“ vyberte v položke „Method type“ (Typ metódy) voľbu „Tracking variables“ (Sledovanie premenných), ak nie je k dispozícii súbor PDB, potom v položke „Calculation type“ (Typ výpočtu) vyberte typ „Nodes“ (Uzly) alebo „Elements“ (Prvky) a následne kliknite na „Track data“ (Sledovať údaje), Po dokončení sledovania premenných pre konkrétnu databázu sa v adresári problému vygeneruje súbor PDB, takže v nasledujúcich fázach následného spracovania môže používateľ na karte Sledovanie vybrať existujúci súbor PDB a následne priamo vykresliť používateľské premenné. (Pozri obr. 41.1.36.)
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image037.jpg' | relative_url }})
 
-Tracking data page
+Stránka s údajmi o sledovaní
 
-In Output page, add State variables by selecting State variable type as Post user var in pull down list and select state variables in component column and we can also export the respective State variable data by checking Export check box as show in Fig. 41.1.37. For each state variable user can select object, viewport, Contour type, Contour range, PDF layout and Color bar type as shown in Fig. 41.1.38.
+Na stránke „Výstup“ pridajte stavové premenné tak, že v roletovom zozname vyberiete typ stavovej premennej „Post user var“ a v stĺpci „Komponenta“ vyberiete stavové premenné. Príslušné údaje o stavových premenných môžete tiež exportovať zaškrtnutím políčka „Export“, ako je znázornené na obr. 41.1.37. Pre každú stavovú premennú môže používateľ vybrať objekt, zobrazenie, typ kontúry, rozsah kontúry, rozloženie PDF a typ farebnej lišty, ako je znázornené na obr. 41.1.38.
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image038.jpg' | relative_url }})
 
-Output selection page
+Stránka výberu výstupu
 
 ![]({{ '/assets/images/operation_templates/41_report_generation/41_1_report_generation/image039.jpg' | relative_url }})
 
-Objects and Viewport selection page
+Stránka výberu objektov a zobrazenia
 
-  * **Custom**
+  * **Na mieru**
 
-In custom page, we can save the current object display which is display window on custom page will be saved in report.
+Na vlastnej stránke môžeme uložiť aktuálne zobrazenie objektu, pričom zobrazenie v okne na vlastnej stránke sa uloží do správy.
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[41\. Introduction ot Report Generation](/docs/sk/operation_templates/41_report_generation/41_introduction_to_report_generation/)
+[41\. Introduction ot Report Generation](/docs/en/operation_templates/41_report_generation/41_introduction_to_report_generation/)
 
-[28.1. Editing Chapters](/docs/sk/post_processor/28_report_generation/28_1_editing_chapters/)
+[28.1. Editing Chapters](/docs/en/post_processor/28_report_generation/28_1_editing_chapters/)
 
-[28\. Report Generation in Post-Processor](/docs/sk/post_processor/28_report_generation/28_report_generation/)
+[28\. Report Generation in Post-Processor](/docs/en/post_processor/28_report_generation/28_report_generation/)
 
-[Report Generation lab in MO](/docs/sk/labs/report_generation_lab/report_generation_lab_in_mo/)
+[Report Generation lab in MO](/docs/en/labs/report_generation_lab/report_generation_lab_in_mo/)

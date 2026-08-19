@@ -1,426 +1,426 @@
 ---
 lang: sk
-title: "31.1. 3D Extrusion"
+title: "31.1. 3D extrudovanie"
 ---
 
-# 31.1. 3D Extrusion
+# 31.1. 3D extrudovanie
 
-31.1.1. How to add the 3D Extrusion Operation
+31.1.1. Ako pridať operáciu 3D extruzného tvarovania
 
-31.1.2. Simulation setup
+31.1.2. Nastavenie simulácie
 
-31.1.3. Material List page
+31.1.3. Stránka so zoznamom materiálov
 
-31.1.4. Defining Extrusion Dies
+31.1.4. Definovanie extruznej matrice
 
-31.1.5. Die Object Page
+31.1.5. Stránka objektu „Die“
 
-  * Geometry
+  * Geometria
 
-  * Symmetry
+  * Symetria
 
-  * Dies Mesh Page
+  * Stránka so sieťami na lisovacie formy
 
-  * Material Selection
+  * Výber materiálu
 
-  * BCC Page
+  * Stránka BCC
 
-  * Movement
+  * Pohyb
 
-  * Bearing surface
+  * Oporná plocha
 
-  * Bearing Control Points
+  * Kontrolné body ložiska
 
-31.1.6. Defining Extrusion Billet
+31.1.6. Definícia výliskového polotovaru
 
-  * Workpiece Geometry Page
+  * Stránka „Geometria obrobku“
 
-  * Workpiece Mesh Generation Type
+  * Typ generovania siete obrobku
 
-  * Workpiece BCC Page
+  * Stránka BCC pre obrobok
 
-  * Property
+  * Nehnuteľnosť
 
-  * Initialize
+  * Inicializovať
 
   * B.I. Flownet
 
-31.1.7. Controls
+31.1.7. Ovládacie prvky
 
-31.1.8. Contact
+31.1.8. Kontakt
 
-31.1.9. Step Controls
+31.1.9. Ovládacie prvky krokov
 
-31.1.10. Generate DB
+31.1.10. Vytvorenie databázy
 
-## How to add the 3D Extrusion Operation
+## Ako pridať operáciu 3D extruzného vytvorenia
 
-Extrusion operation can be setup in Integrated Manufacturing Process environment that can be accessed from GUI Main. User can create a new problem by either selecting File ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) New Problem or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon, select 3D Extrusion radio button under problem type and unit system and then click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button as shown in Fig. 31.1.1. Integrated Manufacturing Process wizard will open, we can see that 3D Extrusion operation is added in Operation editor.
+Operáciu extrudovania je možné nastaviť v prostredí integrovaného výrobného procesu, ku ktorému sa dostanete z hlavnej obrazovky grafického používateľského rozhrania. Používateľ môže vytvoriť nový problém buď výberom položky Súbor ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Nový problém, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}), výberom prepínača 3D extrudovanie v časti Typ problému a Systém jednotiek a následným kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), ako je znázornené na obr. 31.1.1. Otvorí sa sprievodca integrovaným výrobným procesom a v editore operácií uvidíme, že bola pridaná operácia 3D extrúzia.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image001.jpg' | relative_url }})
 
-Adding Extrusion operation using GUI Main
+Pridanie operácie extrudovania pomocou hlavného okna grafického rozhrania
 
   
-We can also add Extrusion operation into Integrated Manufacturing Process environment from the New Project pop-up when a new problem is opened in Integrated Manufacturing Process environment as shown in Fig. 31.1.2. Using “Copy Existing project” option, we can import previous saved projects as new project from the New Project pop-up.
+Operáciu extrudovania môžeme do prostredia Integrovaného výrobného procesu pridať aj z kontextového menu „Nový projekt“, keď sa v tomto prostredí otvorí nová úloha, ako je znázornené na obr. 31.1.2. Pomocou možnosti „Kopírovať existujúci projekt“ môžeme z kontextového menu „Nový projekt“ importovať predtým uložené projekty ako nové projekty.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image002.jpg' | relative_url }})
 
-Assign Project name and First Operation selection in New Project window
+V okne „Nový projekt“ zadajte názov projektu a vyberte prvú operáciu
 
   
-We can also add Extrusion operation to operation editor from explorer tab in Integrated Manufacturing Process environment, by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to Extrusion operation as shown in Fig. 31.1.3. or by drag and drop Extrusion operation into operation editor window.   
-As the Extrusion operation is added into operation editor Simulation setup selection page will be opened in property settings modification window.
+Operáciu „Extrúzia“ môžeme do editora operácií pridať aj z karty „Explorer“ v prostredí „Integrated Manufacturing Process“ kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa operácie „Extrúzia“, ako je znázornené na obr. 31.1.3., alebo presunutím operácie „Extrúzia“ do okna editora operácií metódou drag-and-drop.   
+Po pridaní operácie „Extrúzia“ do editora operácií sa v okne na úpravu nastavení vlastností otvorí stránka výberu nastavení simulácie.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image003.jpg' | relative_url }})
 
-Adding operation from Explorer Operation list
+Pridanie operácie zo zoznamu operácií v Průzkumníku
 
-## Simulation setup
+## Nastavenie simulácie
 
-### Simulation Method
+### Simulačná metóda
 
-The Extrusion template has three different extrusion types. They are ALE extrusion,Steady state extrusion and Lagrangian extrusion (incremental).   
-**ALE Extrusion:** In ALE (Augmented Lagrangian Eulerian) extrusion type, initial workpiece is modelled approximately closer to the output shape. ALE Simulations can be stopped when steady state is reached based on ALE Stopping criteria, steps required to achieve steady-state depends on how close we can model initial workpiece conditions to steady-state condition. ALE Simulations usually take less time for simulation and will be helpful to visualize extrusion process output quickly. In ALE extrusion, material is allowed to displace perpendicular to the extrusion direction.  
-**Steady state Extrusion:** In Steady-State Extrusion simulation type, we model the setup based on steady-state condition and simulate it for few steps to stabilize the solution. It takes very less time for simulation as we look for stabilized converged solution and can be used to predict the state-variables output. In steady-state extrusion, material is allowed to displace perpendicular to the extrusion direction.  
-**Lagrangian Extrusion:** In Lagrangian extrusion type, initial workpiece shape is modelled same as actual workpiece and during simulation the workpiece is displaced (deformed) incrementally in all directions based on the output of incremental equations and state variable values are updated. It takes longer period for completion of the simulation since simulation must be continued until the workpiece passes through the die to visualize the output of extrusion process, also displacement is calculated in all directions and updated.
+Šablóna „Extrúzia“ obsahuje tri rôzne typy extrúzie. Ide o extrúziu ALE, extrúziu v ustálenom stave a Lagrangeovú extrúziu (inkrementálnu).   
+**Extrúzia ALE:** Pri type extrúzie ALE (Augmented Lagrangian Eulerian) je počiatočný obrobok modelovaný približne tak, aby sa viac približoval konečnému tvaru. Simulácie ALE je možné zastaviť po dosiahnutí ustáleného stavu na základe kritérií zastavenia ALE; počet krokov potrebných na dosiahnutie ustáleného stavu závisí od toho, do akej miery dokážeme modelovať počiatočné podmienky obrobku tak, aby sa priblížili podmienkam ustáleného stavu. Simulácie ALE zvyčajne trvajú kratšie a pomáhajú rýchlo vizualizovať výsledok procesu extrudovania. Pri extrudovaní metódou ALE sa materiál môže posúvať kolmo na smer extrudovania.  
+**Extrúzia v ustálenom stave:** Pri type simulácie „Extrúzia v ustálenom stave“ modelujeme systém na základe podmienok ustáleného stavu a simulujeme ho počas niekoľkých krokov, aby sa riešenie stabilizovalo. Simulácia trvá veľmi krátko, keďže hľadáme stabilizované konvergentné riešenie, a dá sa použiť na predpovedanie výstupných stavových premenných. Pri extrudovaní v ustálenom stave sa materiál môže posúvať kolmo na smer extrudovania.  
+**Lagrangeovská extrúzia:** Pri Lagrangeovskom type extrúzie sa počiatočný tvar obrobku modeluje rovnako ako skutočný obrobok a počas simulácie sa obrobok postupne posúva (deformuje) vo všetkých smeroch na základe výsledkov inkrementálnych rovníc, pričom sa aktualizujú hodnoty stavových premenných. Dokončenie simulácie trvá dlhšie, pretože simulácia musí pokračovať, kým obrobok neprejde cez matricu, aby bolo možné vizualizovať výsledok procesu extrudovania; okrem toho sa výtlak počíta vo všetkých smeroch a aktualizuje.
 
-### Thermal calculation
+### Tepelný výpočet
 
-In thermal calculations tab (see Fig. 31.1.4.) options are available to select the object types on which thermal calculations need to be performed. 
+Na karte „Tepelné výpočty“ (pozri obr. 31.1.4.) sú k dispozícii možnosti na výber typov objektov, na ktorých sa majú vykonať tepelné výpočty. 
 
-  * **Constant temperature (isothermal)** : When user selects this option then simulation does not perform any thermal calculations. User can use this option when temperature change in process is negligible.
+  * **Konštantná teplota (izotermická)**: Ak používateľ zvolí túto možnosť, simulácia nevykonáva žiadne tepelné výpočty. Túto možnosť môže používateľ využiť v prípade, že zmena teploty v procese je zanedbateľná.
 
-  * **Workpiece only (non-isothermal)** : When user selects this option then simulation does thermal calculation only on workpiece, this option is useful in most of the cases where user is interested in temperature change of the workpiece only.
+  * **Iba obrobok (neizotermické)**: Ak používateľ zvolí túto možnosť, simulácia vykoná tepelný výpočet iba pre obrobok; táto možnosť je užitočná vo väčšine prípadov, keď používateľa zaujíma iba zmena teploty obrobku.
 
-  * **Workpiece and dies (non-isothermal)** : This option can be used when thermal calculations need to be done for both workpiece and dies to observe change in temperature of these objects.
+  * **Obrobok a formy (neizotermické)**: Túto možnosť je možné použiť v prípade, že je potrebné vykonať tepelné výpočty tak pre obrobok, ako aj pre formy, s cieľom sledovať zmeny teploty týchto objektov.
 
-### Die model type
+### Typ lisovacej formy
 
-In Die model type we have options to select “Full model” or “With symmetry conditions” depending on the geometry symmetry to be modelled in the setup.
+V položke „Typ modelu“ máme na výber možnosti „Úplný model“ alebo „So symetrickými podmienkami“ v závislosti od symetrie geometrie, ktorú chceme v nastavení modelovať.
 
 ###   
-Acceleration 
+Zrýchlenie 
 
-The Acceleration options are available only for Steady state and ALE extrusion. Acceleration can be used to accelerate the state variable updating which will increase the speed and reduce simulation time in case of ALE and Steady-state simulation methods of extrusion. For the Lagrangian extrusion method the acceleration option is not active as shown in the Fig. 31.1.4., Fig. 31.1.5. shows the effect of state-variable acceleration on simulation time.
+Možnosti zrýchlenia sú k dispozícii iba pre extrudovanie v ustálenom stave a metódou ALE. Zrýchlenie možno použiť na urýchlenie aktualizácie stavových premenných, čo zvýši rýchlosť a skráti čas simulácie v prípade metód extrudovania ALE a v ustálenom stave. Pri Lagrangeovej metóde extruzie nie je možnosť zrýchlenia aktívna, ako je znázornené na obr. 31.1.4. Obr. 31.1.5. znázorňuje vplyv zrýchlenia stavových premenných na čas simulácie.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image004.jpg' | relative_url }})
 
-Simulation setup Page
+Stránka s nastaveniami simulácie
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image005.jpg' | relative_url }})
 
-The effect of acceleration
+Účinok zrýchlenia
 
-## Material List page
+## Stránka so zoznamom materiálov
 
-In material page, user can add materials to list from Load form Library option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})(As shown in Fig. 31.1.6.). If the desired material is not available in the list, then the user can load the material in object material page using Import Material data from a File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}). User can also create new material if the material is not available in DEFORM library using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). User can delete the material from list using ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) or edit the material data using![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}). Modified / newly defined Material can be saved using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). 
+Na stránke materiálov môže používateľ pridať materiály do zoznamu pomocou možnosti „Načítať z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (ako je znázornené na obr. 31.1.6.). Ak požadovaný materiál nie je v zozname k dispozícii, môže ho používateľ načítať na stránke materiálov objektu pomocou funkcie „Importovať údaje o materiáli zo súboru“ ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}). Ak materiál nie je k dispozícii v knižnici DEFORM, môže ho používateľ vytvoriť pomocou ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Používateľ môže materiál zo zoznamu odstrániť pomocou ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) alebo údaje o materiáli upraviť pomocou ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}). Upravený alebo novo definovaný materiál je možné uložiť pomocou ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image006.jpg' | relative_url }})
 
-Material list Page
+Zoznam materiálov – Strana
 
-## Defining Extrusion Dies 
+## Definovanie extruznej matrice 
 
-User can add dies by clicking on the ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}) button next to “Number of dies” field and if user wants to remove the dies then we must click on ![]({{ '/assets/icons/pre_icons/mo_delete_icon.jpg' | relative_url }}) button as shown in the Fig. 31.1.7.
+Používateľ môže pridať matrice kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}) vedľa poľa „Počet matríc“ a ak chce matrice odstrániť, musí kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_icon.jpg' | relative_url }}), ako je znázornené na obr. 31.1.7.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image007.jpg' | relative_url }})
 
-Dies Page
+Stránka s matrikami
 
-## Die Object Page
+## Stránka objektu „Die“
 
-The user can define the Name, object temp. and object type (see Fig. 31.1.8.). The Rigid object type is selected by default, User can import objects from other databases or key files using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) options or save the object data using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}),![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) options. User can observe “**Assign bearing surface** ” check box if the simulation type selected is ALE or Steady-state, user can check this check box for the die that has opening to define and modify the bearing surface. 
+Používateľ môže definovať názov, dočasnú premennú objektu a typ objektu (pozri obr. 31.1.8.). Typ objektu „Rigid“ je predvolene vybraný. Používateľ môže importovať objekty z iných databáz alebo súborov kľúčov pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) alebo uložiť údaje o objektoch pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). Používateľ môže vidieť zaškrtávacie políčko „**Priradiť opornú plochu**“, ak je vybraný typ simulácie ALE alebo Steady-state; toto políčko môže zaškrtnúť pre formu, ktorá má otvor, aby definoval a upravil opornú plochu. 
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image008.jpg' | relative_url }})
 
-Die object Page
+Stránka objektu „Die“
 
 ###   
-Geometry 3D
+3D geometria
 
-We can create the geometry using the "Define primitive" or we can import the geometry from a file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) options. User can save the geometry data using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}),![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) options.. For more information on other Geometry options please refer 3D Geometry. (See Fig. 31.1.9.)
+Geometriu môžeme vytvoriť pomocou funkcie „Definovať primitív“ alebo ju môžeme importovať zo súboru pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Užívateľ môže údaje o geometrii uložiť pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). Ďalšie informácie o ostatných možnostiach geometrie nájdete v časti 3D geometria. (Pozri obr. 31.1.9.)
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image009.jpg' | relative_url }})
 
-Die Geometry Page
+Stránka o geometrii
 
-### Symmetry
+### Symetria
 
-The symmetry page is available only when we select the die model with symmetry condition in the simulation setup page.In this page, we can select the symmetry surface on the dies and workpiece using picking options.After selecting the symmetry surface click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button as shown in the Fig. 31.1.10. If user wants to delete any one defined symmetry surface data, select the respective surface data and click on ![]({{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }}) button. If user wants to delete all the symmetry data click on ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}) button.
+Stránka symetrie je dostupná len vtedy, ak na stránke nastavení simulácie vyberieme model formy so symetrickou podmienkou. Na tejto stránke môžeme pomocou možností výberu určiť symetrickú plochu na formách a obrobku. Po výbere symetrickej plochy kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}), ako je znázornené na obr. 31.1.10. Ak chce používateľ odstrániť údaje o niektorej z definovaných symetrických plôch, vyberie príslušné údaje o ploche a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }}). Ak chce používateľ odstrániť všetky údaje o symetrii, klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image010.jpg' | relative_url }})
 
-Symmetry Page
+Stránka o symetrii
 
-### Dies Mesh Page
+### Stránka so sieťami na lisovacie formy
 
-We can generate the mesh for dies by specifying the number of elements in guided mode as shown in the Fig. 31.1.11. Advanced options to control 3D mesh generation can be accessed using expert mode toggle button from tool bar.   
-For more information on the advanced mesh options from expert mode refer to the3D Mesh Setting. 
+Sieť pre lisovacie formy môžeme vytvoriť tak, že v riadenom režime zadáme počet prvkov, ako je znázornené na obr. 31.1.11. K pokročilým nastaveniam na riadenie vytvárania 3D siete sa dostanete pomocou prepínača „expertný režim“ na paneli nástrojov.   
+Ďalšie informácie o pokročilých možnostiach siete v režime pre pokročilých nájdete v časti Nastavenia 3D siete. 
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image011.jpg' | relative_url }})
 
-Dies Mesh Page
+Stránka so sieťou matíc
 
 ###   
-Material Selection
+Výber materiálu
 
-In material page, all the materials added to material list are displayed (As shown in Fig. 31.1.12.). User can select the required material to assign it to respective object. If the desired material is not available in the list, then the user can load the material in object material page using Import Material data from a File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or Using Load form Library option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) . User can also create new material if the material is not available in DEFORM library using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). User can delete the material from list using ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) or edit the material data using ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}). Modified / newly defined Material can be saved using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) .
+Na stránke materiálov sa zobrazujú všetky materiály pridané do zoznamu materiálov (ako je znázornené na obr. 31.1.12.). Používateľ môže vybrať požadovaný materiál a priradiť ho k príslušnému objektu. Ak požadovaný materiál nie je v zozname k dispozícii, môže ho používateľ načítať na stránke materiálov objektu pomocou funkcie Importovať údaje o materiáli zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Načítať z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Ak materiál nie je k dispozícii v knižnici DEFORM, môže ho používateľ vytvoriť pomocou ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Používateľ môže materiál zo zoznamu odstrániť pomocou ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) alebo údaje o materiáli upraviť pomocou ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}). Upravený alebo novo definovaný materiál je možné uložiť pomocou ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image012.jpg' | relative_url }})
 
-Assigning the material
+Priradenie materiálu
 
 ###   
-BCC Page
+Stránka BCC
 
-In Boundary conditions page, user can assign various boundary constraints to an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. Commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer and symmetry BCC for symmetry model. The Heat Exchange with environment BCC is added by default after mesh is generated as shown in the Fig. 31.1.13.
+Na stránke „Okrajové podmienky“ môže používateľ objektu priradiť rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako okraj objektu interaguje s ostatnými objektmi a s prostredím. Bežne používanými okrajovými podmienkami sú výmena tepla s prostredím pre simulácie zahŕňajúce prenos tepla a symetria BCC pre symetrický model. BCC „Výmena tepla s prostredím“ sa pridáva štandardne po vytvorení siete, ako je znázornené na obr. 31.1.13.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image013.jpg' | relative_url }})
 
-BCC Page
+Stránka BCC
 
 ###   
-Movement
+Pohyb
 
-If the die is ram then user can define the movement for die based on Speed or Force as constant, Function of time or Function of Stroke as shown in the Fig. 31.1.14.
+Ak ide o zdvihovú maticu, používateľ môže definovať jej pohyb na základe rýchlosti alebo sily ako konštanty, ako funkcie času alebo ako funkcie zdvihu, ako je znázornené na obr. 31.1.14.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image014.jpg' | relative_url }})
 
-Die Movement Page
+Stránka hnutia Die
 
 ###   
-Bearing surface page (For ALE and Steady state extrusion)
+Stránka o oporných plochách (pre ALE a extrudovanie v ustálenom stave)
 
-In**Bearing Surface** page, we will define bearing surfaces and add them to the bearing surface list. To define the bearing surface, user can **select** all the patches related to the bearing surface and click ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}) button. A highlighted bearing surface with **ID <1> **will be added to the list when we define the first bearing surface. Then user can go ahead and define other bearing surfaces similarly as shown in Fig. 31.1.15. Each of the bearing surface will be assigned unique ID and highlighted with different colors respectively in the die geometry display.  
-**Show inside** check box is used to see the inside geometry to select the bearing surface.
+Na stránke **Oporná plocha** budeme definovať oporné plochy a pridávať ich do zoznamu oporných plôch. Na definovanie opornej plochy môže používateľ **vybrať** všetky výplne súvisiace s opornou plochou a kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}). Pri definovaní prvej opornej plochy sa do zoznamu pridá zvýraznená oporná plocha s **ID <1>**. Potom môže používateľ pokračovať a definovať ďalšie oporné plochy podobným spôsobom, ako je znázornené na obr. 31.1.15. Každá oporná plocha dostane pridelené jedinečné ID a v zobrazení geometrie lisovacej formy bude zvýraznená inou farbou.  
+Zaškrtávacie políčko **Zobraziť vnútro** slúži na zobrazenie vnútornej geometrie s cieľom vybrať opornú plochu.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image015.jpg' | relative_url }})
 
-Added Bearing surfaces list
+Bol pridaný zoznam ložiskových plôch
 
-### Bearing Control Points (For ALE and Steady state extrusion)
+### Kontrolné body ložiska (pre ALE a extrudovanie v ustálenom stave)
 
-In extrusion, bending, wrap and twist of profiles are mainly caused by the unbalance material flowing. So, we can use bearing length adjustment to reduce the bending of surround profiles by defining the Bearing control points (see Fig. 31.1.16.). After defining the bearing surface user can define bearing control points along the entry edge of the bearing surface. The user can save the bearing control points in a file using ![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}) button and can also import the saved bearing control points from a file using ![]({{ '/assets/icons/pre_icons/mo_open_icon.jpg' | relative_url }}) button. We can see the bearing shape and bearing length for surfaces are changed after defining the control points as shown in the Fig. 31.1.17.
+Pri extrudovaní sú ohyby, skrútenia a zvlnenia profilov spôsobené hlavne nerovnomerným tokom materiálu. Ohyby okrajových profilov je teda možné znížiť nastavením dĺžky opory, a to definovaním kontrolných bodov opory (pozri obr. 31.1.16.). Po definovaní opornej plochy môže používateľ definovať kontrolné body opory pozdĺž vstupnej hrany opornej plochy. Používateľ môže kontrolné body opory uložiť do súboru pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}) a môže tiež importovať uložené kontrolné body opory zo súboru pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_open_icon.jpg' | relative_url }}). Ako je znázornené na obr. 31.1.17, po definovaní kontrolných bodov sa zmení tvar a dĺžka opory pre plochy.
 
   
-User can delete the selected bearing control point using ![]({{ '/assets/icons/pre_icons/mo_delete_current_row_icon.jpg' | relative_url }}) button.   
-User can delete all the control points of a bearing surface using ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}) button.  
-**Show Original Geometry![]({{ '/assets/icons/pre_icons/mo_show_org_geo_button.jpg' | relative_url }})** : Using this option we can see the original die geometry without applying modified bearing length values.  
-**Show modified Geometry** ![]({{ '/assets/icons/pre_icons/mo_show_mod_geo_button.jpg' | relative_url }}): Using this option we can see the modified die geometry after applying modified bearing length values, see Fig. 31.1.18.  
-**Show Bearing Surface** ![]({{ '/assets/icons/pre_icons/mo_show_bearing_surf_button.jpg' | relative_url }}): Using this option we can see only the defined bearing surfaces.
+Používateľ môže vymazať vybraný kontrolný bod ložiska pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_delete_current_row_icon.jpg' | relative_url }}).   
+Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}) môže používateľ odstrániť všetky kontrolné body opornej plochy.  
+**Zobraziť pôvodnú geometriu ![]({{ '/assets/icons/pre_icons/mo_show_org_geo_button.jpg' | relative_url }})**: Pomocou tejto možnosti si môžeme prezrieť pôvodnú geometriu matrice bez uplatnenia upravených hodnôt dĺžky ložiska.  
+**Zobraziť upravenú geometriu** ![]({{ '/assets/icons/pre_icons/mo_show_mod_geo_button.jpg' | relative_url }}): Pomocou tejto možnosti môžeme zobraziť upravenú geometriu matrice po uplatnení upravených hodnôt dĺžky ložiska, pozri obr. 31.1.18.  
+**Zobraziť oporné plochy** ![]({{ '/assets/icons/pre_icons/mo_show_bearing_surf_button.jpg' | relative_url }}): Pomocou tejto možnosti môžeme zobraziť iba definované oporné plochy.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image016.jpg' | relative_url }})
 
-Bearing control points page
+Stránka s kontrolnými bodmi ložísk
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image017.jpg' | relative_url }})
 
-Control points setting of bearing surface
+Nastavenie kontrolných bodov nosnej plochy
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image018.jpg' | relative_url }})
 
-Modified die geometry after bearing length adjustment
+Upravená geometria matrice po nastavení dĺžky ložiska
 
-For more information please refer to the [steady state extrusion lab.](/docs/sk/labs/extrusion_labs/steady_state_extrusion_lab1/)
+Ďalšie informácie nájdete v dokumente [steady state extrusion lab.](/docs/en/labs/extrusion_labs/steady_state_extrusion_lab1/)
 
-## Defining Extrusion Billet
+## Definícia extruzného polotovaru
 
-The user can select the Name and object temp. The object type will be plastic by default as shown in the Fig. 31.1.19.
+Používateľ môže zvoliť názov a dočasný objekt. Typ objektu bude štandardne plast, ako je znázornené na obr. 31.1.19.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image019.jpg' | relative_url }})
 
-Workpiece object page
+Stránka objektu obrobku
 
-### Workpiece Geometry Page
+### Stránka „Geometria obrobku“
 
-The workpiece geometry is created using the "Define primitive" or we can import the geometry using the import options. In case of ALE type simulation setup, workpiece geometry can be created using Boolean label after creating the dies geometry. For more information on other options in “Geometry” page, please refer [12.3. 3D Geometry Data Defining.](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Geometria obrobku sa vytvára pomocou funkcie „Definovať primitív“ alebo ju môžeme importovať pomocou možností importu. V prípade nastavenia simulácie typu ALE je možné geometriu obrobku vytvoriť pomocou booleovského štítku po vytvorení geometrie foriem. Ďalšie informácie o ostatných možnostiach na stránke „Geometria“ nájdete v [12.3. 3D Geometry Data Defining.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image020.jpg' | relative_url }})
 
-Workpiece Geometry page
+Stránka „Geometria obrobku“
 
 ###   
-Workpiece Mesh Generation Type
+Typ generovania siete obrobku
 
-In Extrusion template user can generate regular tetrahedral mesh for workpiece using “Regular meshing” method or special mesh using “Mesh extruding utility”, see Fig. 31.1.21.
+V šablóne „Extrúzia“ môže používateľ vytvoriť pravidelnú tetraedrickú sieť pre obrobok pomocou metódy „Pravidelné vytváranie siete“ alebo špeciálnu sieť pomocou nástroja „Nástroj na extrudovanie siete“ – pozri obr. 31.1.21.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image021.jpg' | relative_url }})
 
-Mesh generation types
+Typy generovania sietí
 
-  * **Workpiece Mesh extruding utility**
+  * **Nástroj na extrudovanie siete obrobku**
 
-Mesh Extruding utility is a special type of meshing used in Extrusion operation to generate mesh within less time. In this meshing method the workpiece is categorised into 3 Regions, 
+Nástroj „Mesh Extruding“ je špeciálny typ vytvárania siete, ktorý sa používa v operácii „Extrusion“ na rýchlejšie vytvorenie siete. Pri tejto metóde vytvárania siete sa obrobok rozdelí do 3 oblastí, 
 
-  * **Container Region** – This region consists of material within container that does not have severe deformation.
+  * **Oblasť kontajnera** – Táto oblasť zahŕňa materiál vnútri kontajnera, ktorý nevykazuje výrazné deformácie.
 
-  * **Deforming Region** \- This is the region closer to die opening where we can observe severe deformation of material takes place. This region covers die opening and partly entry and exit of the material through die opening.
+  * **Deformačná oblasť** \- Ide o oblasť bližšie k otvoru formy, kde dochádza k výraznej deformácii materiálu. Táto oblasť zahŕňa otvor formy a čiastočne aj vstup a výstup materiálu cez tento otvor.
 
-  * **Extrudate Region** – This region covers the material that has already passed through die opening and not much deformation would be occurring.
-
-  
-The zones are automatically identified by the system based on the geometry of the die. However, user can adjust the zones by dragging the respective zone boundaries in the representative image in mesh extruding utility window, see Fig. 31.1.22. or use window control points in display area. User can control the mesh transition using the settings in “Mesh Extruding Utility” window.
+  * **Oblasť extrudátu** – Táto oblasť zahŕňa materiál, ktorý už prešiel otvorom matrice a nedochádza v nej k výraznej deformácii.
 
   
-In this method, tetrahedral mesh is created in the deforming region and then the tetrahedral mesh is extruded into container region and extrudate region, see Fig. 31.1.23. User can create a multiple zones in each region and define size ratio/ number of layers for each zone to control the mesh transition. In deforming region mesh can be generated using,
+Systém automaticky identifikuje zóny na základe geometrie lisovacej formy. Používateľ však môže zóny upraviť ťahaním príslušných hraníc zón na reprezentatívnom obrázku v okne nástroja na vytláčanie siete (pozri obr. 31.1.22) alebo pomocou kontrolných bodov v zobrazovacej oblasti. Prechod siete môže používateľ ovládať pomocou nastavení v okne „Nástroj na vytláčanie siete“.
 
-  * **Relative** : In this method user can define the # of elements to generate the relative mesh and define size ratio in each zone to control the mesh transition.
+  
+Pri tejto metóde sa v deformovanej oblasti vytvorí tetraedrická sieť, ktorá sa následne vytiahne do kontajnerovej oblasti a oblasti extrudátu, pozri obr. 31.1.23. Používateľ môže v každej oblasti vytvoriť viacero zón a pre každú zónu definovať pomer veľkostí/počet vrstiev, čím ovplyvní prechod siete. V oblasti deformácie je možné sieť vygenerovať pomocou,
 
-  * **Absolute** : In this method user can define the Min. element size value and define element size in each zone to control the mesh transition.
+  * **Relatívna**: Pri tejto metóde môže používateľ určiť počet prvkov potrebných na vytvorenie relatívnej siete a definovať pomer veľkostí v jednotlivých zónach, čím ovplyvní prechod medzi sieťami.
 
-**Preview** : When user clicks on “**Preview** ” action then tet mesh is generated for deforming region and displayed.
+  * **Absolútna**: Pri tejto metóde môže používateľ určiť minimálnu hodnotu veľkosti prvku a nastaviť veľkosť prvkov v jednotlivých zónach, čím ovplyvní prechod siete.
 
-**Generate** : User can click on “**Generate** ” action item to generate mesh.
+**Náhľad**: Keď používateľ klikne na akciu „**Náhľad**“, vygeneruje sa tetrahedrálna sieť pre deformovanú oblasť a zobrazí sa.
 
-**Default Setting** ![]({{ '/assets/icons/pre_icons/mo_default_settings_button.jpg' | relative_url }}): When user clicks on this button then zones and its values are set back to the default values.
+**Vytvoriť**: Používateľ môže kliknúť na akčnú položku „**Vytvoriť**“, aby vytvoril sieť.
+
+**Predvolené nastavenie** ![]({{ '/assets/icons/pre_icons/mo_default_settings_button.jpg' | relative_url }}): Keď používateľ klikne na toto tlačidlo, zóny a ich hodnoty sa vrátia na predvolené hodnoty.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image022.jpg' | relative_url }})
 
-Mesh extruding utility page
+Stránka s nástrojom na extrudovanie sietí
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image023.jpg' | relative_url }})
 
-Mesh Generated using the mesh extruding utility options
+Sieť vytvorená pomocou nastavení nástroja na extrudovanie siete
 
-  * **Workpiece Regular meshing**
+  * **Pravidelné zapojenie obrobku**
 
-In the regular mesh setting user can control mesh by defining advanced settings like weighting factors, mesh windows, size ratioand remeshing criteria. User can click on “![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }})” to generate mesh, mesh generated using regular meshing looks like as shown in the Fig. 31.1.24.  
-For more information on mesh settings in regular meshing refer Expert mode mesh settings in [13.2.2. Expert mode 3D mesh generation](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.2._Expert_Mode_3D_Mesh_Generation)
+V nastavení pravidelnej siete môže používateľ ovládať sieť definovaním pokročilých nastavení, ako sú váhové faktory, okná siete, pomer veľkostí a kritériá pregenerovania siete. Používateľ môže kliknúť na „![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }})“ na vygenerovanie siete; sieť vygenerovaná pomocou pravidelného vytvárania sietí vyzerá tak, ako je znázornené na obr. 31.1.24.  
+Ďalšie informácie o nastaveniach siete pri bežnom vytváraní sietí nájdete v časti „Nastavenia siete v expertnom režime“ v [13.2.2. Expert mode 3D mesh generation](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.2._Expert_Mode_3D_Mesh_Generation)
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image024.jpg' | relative_url }})
 
-Regular meshing page
+Stránka s pravidelným sieťovaním
 
 ###   
-Workpiece BCC Page
+Stránka BCC pre obrobok
 
-In Boundary conditions page, user can assign various boundary constraints to an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. The system automatically assigns the symmetry plane BCC to the symmetry model workpiece after mesh generation (see Fig. 31.1.25.).
+Na stránke „Okrajové podmienky“ môže používateľ objektu priradiť rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako okraj objektu interaguje s ostatnými objektmi a s prostredím. Systém po vytvorení siete automaticky priradí obrobku so symetrickým modelom symetrickú rovinu BCC (pozri obr. 31.1.25.).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image025.jpg' | relative_url }})
 
-Symmetry BCC of the Workpiece
+Symetria BCC obrobku
 
-**BCC for ALE and Steady-state extrusion simulation methods**
+**Metódy simulácie BCC pre ALE a extrúziu v ustálenom stave**
 
-In case of ALE and Steady-state simulation methods user must define the Free Surface. Free surface is the surface at exit end of the extrudate. In the Boundary conditions dialog, click Free Surface in the tree,select the bottom surface and then Click ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) to add the Free surface boundary condition (see Fig. 31.1.26.).
+V prípade simulačných metód ALE a ustáleného stavu musí používateľ definovať voľnú hladinu. Voľná hladina je hladina na výstupnom konci extrudátu. V dialógovom okne Hraničné podmienky kliknite v stromovej štruktúre na položku Voľná hladina, vyberte spodnú hladinu a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}), aby ste pridali hraničnú podmienku voľnej hladiny (pozri obr. 31.1.26.).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image026.jpg' | relative_url }})
 
-Free Surface BCC of the Workpiece
+BCC s voľným povrchom obrobku
 
-### Property
+### Nehnuteľnosť
 
-Miscellaneous object parameters, which affect either thermo-mechanical behaviour of the object or numerical solution behaviour are specified in the Object-Properties window. (See Fig. 31.1.27.). Volume compensation in one of the important parameters to be set in Lagrangian type of extrusion simulation, it can be activated by selecting one of the options under “Target Volume” and calculating current object volume using ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) button. For more information about options in “**Property** ” page, please refer [16\. Object properties.](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 31.1.27.) Objemová kompenzácia je jedným z dôležitých parametrov, ktoré je potrebné nastaviť pri simulácii extrudovania typu Lagrange. Je možné ju aktivovať výberom jednej z možností v časti „Cieľový objem“ a výpočtom aktuálneho objemu objektu pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}). Ďalšie informácie o možnostiach na stránke „**Vlastnosti**“ nájdete v [16\. Object properties.](/docs/en/pre_processor/16_object_properties/16_object_properties/)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image036.jpg' | relative_url }})
 
-Property page
+Stránka nehnuteľnosti
 
-### Initialize
+### Inicializácia
 
-In Initialize window, few state variables that are commonly used such as temperature, strain, stress, damage, velocity, displacement, density and microstructure grain size and particle size are made available for initialization.  
-User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 31.1.28. shows various state variables that are available in “Initialize” window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [Object node variables](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [Object element variables](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+V okne „Initialize“ sú na inicializáciu k dispozícii niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie, hustota, veľkosť zŕn mikrostruktúry a veľkosť častíc.  
+Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 31.1.28. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien „Node“ a „Element“. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [Object node variables](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [Object element variables](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image027.jpg' | relative_url }})
 
-Initialize page
+Načítanie stránky
 
 ### B.I. Flownet
 
-In a DB with large number of steps, plotting a Flownet will take lot of time, user can overcome this issue by using Built in Flownet. When user uses Built in Flownet, the Flownet is plotted as the problem is simulated. (See Fig. 31.1.29.)  
-For more information on defining Built in Flownet,please refer [13.2.9. Built in Flownet](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet)
+V databáze s veľkým počtom krokov bude vykreslenie siete Flownet trvať veľmi dlho; používateľ môže tento problém vyriešiť využitím vstavanej siete Flownet. Ak používateľ využije vstavanú sieť Flownet, táto sa vykreslí priebežne počas simulácie problému. (Pozri obr. 31.1.29.)  
+Ďalšie informácie o definovaní v rámci systému Flownet nájdete v dokumente [13.2.9. Built in Flownet](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet)
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image016.jpg' | relative_url }})
 
-Built-in Flownet page
+Vstavaná stránka Flownet
 
-## Controls
+## Ovládacie prvky
 
-User can position the objects using ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. Various positioning options are available to position the objects as shown in Fig. 31.1.30., for more information on these options please refer [19\. Object positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/).
+Používateľ môže umiestňovať objekty pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}). K dispozícii sú rôzne možnosti umiestňovania objektov, ako je znázornené na obr. 31.1.30. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image028.jpg' | relative_url }})
 
-Object Positioning Controls
+Ovládacie prvky na nastavenie polohy objektu
 
-## Contact
+## Kontakt
 
-In extrusion operation template a special contact method has been implemented to generate complete contact over billet in case of ALE and Steady-state simulation methods to reduce the simulation time to achieve steady-state. When the user visits the contact page, we will get the “Full Contact Generation” pop-up as shown in the Fig. 31.1.31. In full contact generation is used, it will automatically calculate the contact tolerance with the neighbouring objects and then generates contact.   
-In case of Lagrangian type of simulation method user can estimate tolerance using ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) and then generate contacts.
+V šablóne extrudovania bola implementovaná špeciálna metóda kontaktu, ktorá v prípade simulačných metód ALE a Steady-state generuje úplný kontakt s polotovarom, čím sa skracuje čas potrebný na dosiahnutie ustáleného stavu. Keď používateľ navštívi stránku kontaktu, zobrazí sa mu vyskakovacie okno „Vytvorenie úplného kontaktu“, ako je znázornené na obr. 31.1.31. Ak sa použije vytvorenie úplného kontaktu, systém automaticky vypočíta toleranciu kontaktu so susednými objektmi a následne vytvorí kontakt.   
+V prípade simulačnej metódy lagrangovského typu môže používateľ odhadnúť toleranciu pomocou ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) a následne vygenerovať kontakty.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image029.jpg' | relative_url }})
 
-Full Contact Generation pop-up
+Vyskakovacie okno „Full Contact Generation“
 
   
-**System** : When this radio button is selected, system assigns default inter-object relationships. Also, user can add the lubricants if necessary, by selecting Add New from pull down menu and clicking on "Edit" button or user can load the required lubricants from the library for the simulation.  
-**User** : By default, user radio button will be selected for Extrusion operation. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button as shown in Fig. 31.1.32. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }})button. User can use ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to assign same values to all relations. User can click on ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation between objects that have contact relations defined. User can turn on check box next to contact relation to define sticking contact.  
-For more information on contact dialog, please refer [20.Inter-Object Relations.](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+**Systém**: Ak je zaškrtnuté toto políčko, systém priradí predvolené vzťahy medzi objektmi. Okrem toho môže používateľ v prípade potreby pridať mazivá tak, že z roletového menu vyberie možnosť „Pridať nové“ a klikne na tlačidlo „Upraviť“, alebo môže na účely simulácie načítať požadované mazivá z knižnice.  
+**Používateľ**: Pri operácii „Extrúzia“ je štandardne vybrané rádio tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), ako je znázornené na obr. 31.1.32. Používateľ môže zmeniť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môže používateľ priradiť rovnaké hodnoty všetkým vzťahom. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) môže používateľ vypočítať toleranciu kontaktu. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) môže používateľ vygenerovať kontaktný vzťah medzi objektmi, pre ktoré sú definované kontaktné vzťahy. Zaškrtnutím políčka vedľa kontaktného vzťahu môže používateľ definovať priliehavý kontakt.  
+Ďalšie informácie o dialógovom okne s kontaktnými údajmi nájdete v [20.Inter-Object Relations.](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image030.jpg' | relative_url }})
 
-Contact Page
+Stránka s kontaktnými údajmi
 
-## Step Controls
+## Ovládacie prvky krokov
 
-In step controls, user can define the number of steps, step increment and Time/Stroke per step to control the simulation steps as shown in the Fig. 31.1.33. Step controls that need to be defined are provided in guided mode while more advanced settings can be defined in Expert mode.
+V ovládacích prvkoch krokov môže používateľ definovať počet krokov, veľkosť kroku a čas/zdvih na krok, čím riadi kroky simulácie, ako je znázornené na obr. 31.1.33. Ovládacie prvky krokov, ktoré je potrebné definovať, sú k dispozícii v režime s návodom, zatiaľ čo pokročilejšie nastavenia je možné definovať v režime Expert.
 
-### GUIDED MODE:
+### REŽIM S VEDENÍM:
 
-Number of steps:**Number of steps to be simulated can be defined here. If the** simulation stops earlier due to stopping criteria then, next operation starting step will be continuation from previous operation.
+Počet krokov:**Tu je možné zadať počet krokov, ktoré sa majú simulovať. Ak sa** simulácia ukončí skôr na základe kritérií ukončenia, nasledujúci krok spúšťajúci operáciu bude pokračovaním predchádzajúcej operácie.
 
-**Step increment** : The step increment ([STPINC](/docs/sk/keyword_documentation/s/stpinc/)) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
+**Počet krokov**: Počet krokov ([STPINC](/docs/en/keyword_documentation/s/stpinc/)), ktoré sa majú uložiť do databázy, určuje, koľko krokov systém v databáze uloží. Pri spustení simulácie sa musí vypočítať každý krok, ale nie je nutné, aby sa všetky kroky uložili do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať väčší úložný priestor.
 
-**Time per Step:** If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.  
-Stroke per Step: If stroke per step is specified, the primary die will move by specified amount in each time step. The total movement of the primary die will be the displacement per step multiplied by the total number of steps.
+**Čas na jeden krok:** Ak je zadaný čas na jeden krok, použije sa časový interval na jeden krok. Posun formy na jeden krok bude rovný časovému kroku vynásobenému rýchlosťou formy.  
+Posun na krok: Ak je nastavený posun na krok, primárny valec sa v každom časovom kroku posunie o zadanú hodnotu. Celkový posun primárneho valca bude rovný posunu na krok vynásobenému celkovým počtom krokov.
 
-**Primary Die:** The primary die ([PDIE](/docs/sk/keyword_documentation/p/pdie/)) is the object for which many stopping and stepping criteria are defined. For example, stopping distance based on primary die stroke. When the stroke of the object defined as the primary die reaches the value of primary die displacement, the simulation will be stopped even though more steps were specified. The Step by Stroke feature determines step size based on the movement of the primary die.
+**Primárny lisovací nástroj:** Primárny lisovací nástroj ([PDIE](/docs/en/keyword_documentation/p/pdie/)) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad vzdialenosť zastavenia založená na zdvihu primárneho lisovacieho nástroja. Keď zdvih objektu definovaného ako primárny lisovací nástroj dosiahne hodnotu posunu primárneho lisovacieho nástroja, simulácia sa zastaví, aj keď bolo špecifikovaných viac krokov. Funkcia „Krok podľa zdvihu“ určuje veľkosť kroku na základe pohybu primárneho lisovacieho nástroja.
 
-The primary die is usually assigned to the object most closely controlled by the machinery. For example, the die attached to the ram of a hydraulic press would be designated as the primary object.
+Primárna forma sa zvyčajne priraďuje k objektu, ktorý je strojom najviac riadený. Napríklad forma pripevnená k piestu hydraulického lisu by bola označená ako primárny objekt.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image031.jpg' | relative_url }})
 
-Step Controls in GUIDED Mode
+Ovládacie prvky krokov v režime GUIDED
 
 ###   
-EXPERT MODE
+REŽIM PRE ODBORNÍKOV
 
-The user can define the step controls data using the expert mode simulation controls as shown in the Fig. 31.1.34. For more information and description about options in expert mode simulation controls, please refer [9\. Simulation Controls.](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+Používateľ môže definovať údaje pre riadenie krokov pomocou ovládacích prvkov simulácie v expertnom režime, ako je znázornené na obr. 31.1.34. Ďalšie informácie a popis možností ovládacích prvkov simulácie v expertnom režime nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image032.jpg' | relative_url }})
 
-Step controls in EXPERT Mode
+Ovládacie prvky krokov v režime EXPERT
 
-## Generate DB
+## Vytvoriť databázu
 
-**Check Data**![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})****
+**Overiť údaje**![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})****
 
-It checks the Data. If Data is correct we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.
+Systém skontroluje údaje. Ak sú údaje správne, môžeme vytvoriť databázu. Ak sa však pri kontrole údajov vyskytnú chyby alebo varovania, je potrebné ich opraviť pred vytvorením databázy. Chyby zabránia vytvoreniu databázy, zatiaľ čo varovania vytvorenie databázy neumožnia.
 
-**Generate Database![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**
+**Vytvoriť databázu ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**
 
-By clicking on this button, it generated the Database for the setup.(See Fig. 31.1.35.)
+Kliknutím na toto tlačidlo sa vygenerovala databáza pre nastavenie. (Pozri obr. 31.1.35.)
 
-**Append Key file**
+**Pridať súbor s kľúčom**
 
-Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only .key file can be changed and simulation can be resubmitted.
+Akékoľvek informácie, ktoré nie sú definované v sprievodcovi, ale stále sa vzťahujú na daný proces, je možné načítať ako súbor s príponou .key. Táto možnosť je užitočná aj v prípadoch, keď je potrebné zmeniť len niekoľko hodnôt – tieto hodnoty je možné definovať v súbore s príponou .key, následne stačí zmeniť len tento súbor a simuláciu je možné odoslať znovu.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image048.jpg' | relative_url }})
 
-Generate DB page
+Vytvoriť stránku databázy
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[9\. Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+[9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
 
-[16\. Object Properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+[16\. Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/)
 
-[19\. Object Positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/)
+[19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
 
-[20\. Inter-Object Data Definition](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[20\. Inter-Object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
 
-[Steady State Extrusion Lab](/docs/sk/labs/extrusion_labs/steady_state_extrusion_lab1/)
+[Steady State Extrusion Lab](/docs/en/labs/extrusion_labs/steady_state_extrusion_lab1/)
 
-[ALE Extrusion Lab](/docs/sk/labs/extrusion_labs/ale_extrusion_lab1/)
+[ALE Extrusion Lab](/docs/en/labs/extrusion_labs/ale_extrusion_lab1/)
 
-[Lagrangian Extrusion Lab](/docs/sk/labs/extrusion_labs/lagrangian_extrusion_lab1/)
+[Lagrangian Extrusion Lab](/docs/en/labs/extrusion_labs/lagrangian_extrusion_lab1/)

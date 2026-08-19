@@ -1,313 +1,313 @@
 ---
 lang: sk
-title: "37.2. 3D Heat Treatment Wizard"
+title: "37.2. Sprievodca 3D tepelným spracovaním"
 ---
 
-# 37.2. 3D Heat Treatment Wizard
+# 37.2. Sprievodca 3D tepelným spracovaním
 
-37.2.1. How to add 3D Heat Treatment Operation
+37.2.1. Ako pridať operáciu 3D tepelného spracovania
 
-37.2.2. Process selection
+37.2.2. Výber procesu
 
-37.2.3. Initialization
+37.2.3. Inicializácia
 
-37.2.4. Material selection
+37.2.4. Výber materiálu
 
-37.2.5. Objects
+37.2.5. Objekty
 
-  * Workpiece /Object General
+  * Obrobok / Objekt – všeobecné informácie
 
-  * Object Geometry
+  * Geometria objektu
 
-  * Object Mesh
+  * Sieť objektu
 
-  * Object Material
+  * Materiál predmetu
 
-  * Object Boundary Condition
+  * Okrajová podmienka objektu
 
-  * Object Properties
+  * Vlastnosti objektu
 
-  * Initialize
+  * Inicializovať
 
-37.2.6. Medium Details
+37.2.6. Podrobnosti o médiu
 
-37.2.7. Schedule
+37.2.7. Harmonogram
 
-37.2.8. Controls
+37.2.8. Ovládacie prvky
 
-37.2.9. Stopping controls
+37.2.9. Ovládacie prvky na zastavenie
 
-37.2.10. Simulation Controls
+37.2.10. Ovládacie prvky simulácie
 
-37.2.11. Generation Database
+37.2.11. Databáza generácií
 
-## How to add 3D Heat Treatment Operation
+## Ako pridať operáciu 3D tepelného spracovania
 
-Heat Treatment operation can be setup in MO environment that can be accessed from GUI Main. Create a new problem by either selecting File ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) New Problem or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. Select " Integrated Manufacturing Process" and unit system. MO window will be opened with New Project popup, In New Project popup Define Project Name, Title and Unit system (File menu selected unit system will be selected by default). Also we can add 3D HT Wizard operation by selecting from First operation pull down list and check the Check box to add operation as Operation1 in new project (as shown in Fig. 37.2.1.). Then click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) in New project window, MO wizard will open and in Operation editor we are seeing 3D Heat Treat wizard added in Operation editor (as shown in Fig. 37.2.2.). Using copy Existing project option we can import previous saved projects as new project. 
+Operáciu tepelného spracovania je možné nastaviť v prostredí MO, do ktorého sa dostanete z hlavného okna grafického rozhrania. Novú úlohu vytvoríte buď výberom položky Súbor ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Nová úloha, alebo kliknutím na ikonu Nová úloha ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Vyberte možnosť „Integrated Manufacturing Process“ a systém jednotiek. Otvorí sa okno MO s vyskakovacím oknom „New Project“. V tomto okne definujte názov projektu, titul a systém jednotiek (štandardne sa vyberie systém jednotiek zvolený v ponuke „File“). Tiež môžeme pridať operáciu 3D HT Wizard výberom z roletového zoznamu Prvá operácia a zaškrtnutím políčka na pridanie operácie ako Operácia 1 do nového projektu (ako je znázornené na obr. 37.2.1.). Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) v okne „Nový projekt“; otvorí sa sprievodca MO a v editore operácií uvidíte, že do editora operácií bol pridaný sprievodca 3D tepelného spracovania (ako je znázornené na obr. 37.2.2.). Pomocou možnosti „Kopírovať existujúci projekt“ môžete importovať predtým uložené projekty ako nový projekt. 
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image001.jpg' | relative_url }})
 
-Assign Project name and First Operation selection in New Project window
+V okne „Nový projekt“ zadajte názov projektu a vyberte prvú operáciu
 
   
-We can also add 3D HT Wizard operation from explorer tab, by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to 3D HT Wizard operation (as shown in Fig. 37.2.2. )or by drag and drop 3D HT Wizard into operation editor window. By default process selection page will be open in property settings modification area.
+Operáciu 3D HT Wizard môžeme pridať aj z karty „Explorer“ kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa operácie 3D HT Wizard (ako je znázornené na obr. 37.2.2.) alebo presunutím operácie 3D HT Wizard do okna editora operácií metódou drag and drop. Štandardne sa v oblasti úpravy nastavení vlastností otvorí stránka výberu procesu.
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image002.jpg' | relative_url }})
 
-Adding operation from Explorer Operation list
+Pridanie operácie zo zoznamu operácií v Průzkumníku
 
-## Process selection
+## Výber procesu
 
-In Process page, user can select the Simulation mode as Phase transformation or Diffusion or Deformation or combination of these. If user is interested only to simulate phase transformations during heat treatment then only phase transformation can be turned on, but if user would like to simulate the effect of phase transformation change on geometry then both phase transformation and deformation should be turned on. If user would like to simulate carbon diffusion process only, then only Diffusion can be turned on but if user would like to simulate the diffusion effect on geometry, then both diffusion and Deformation should be turned on.
-
-  
-In this page user can set controls for the duration of the step (See Fig. 37.2.3.). Step Definition can be either User or Auto. When step definition is defined as user mode, user needs to define time per step along with the step increment to write the step into DB.
+Na stránke „Process“ môže používateľ vybrať režim simulácie: fázovú transformáciu, difúziu, deformáciu alebo ich kombináciu. Ak má používateľ záujem iba o simuláciu fázových transformácií počas tepelného spracovania, môže zapnúť len fázovú transformáciu; ak však chce simulovať vplyv zmien spôsobených fázovou transformáciou na geometriu, mal by zapnúť ako fázovú transformáciu, tak aj deformáciu. Ak chce používateľ simulovať iba proces difúzie uhlíka, môže zapnúť iba difúziu, avšak ak chce simulovať vplyv difúzie na geometriu, mal by zapnúť difúziu aj deformáciu.
 
   
-If step definition is Auto mode, then user needs to mention the maximum change in temperature allowed per step along with the minimum and maximum process time per step, also step increment to write the step into DB.
+Na tejto stránke môže používateľ nastaviť parametre trvania kroku (pozri obr. 37.2.3.). Definícia kroku môže byť buď v režime „User“ (Používateľ), alebo „Auto“ (Automaticky). Ak je definícia kroku nastavená na režim „User“, používateľ musí určiť čas na jeden krok spolu s krokom prírastku, aby sa krok zapísal do databázy.
+
+  
+Ak je definícia kroku nastavená na režim „Auto“, musí používateľ uviesť maximálnu povolenú zmenu teploty na jeden krok spolu s minimálnou a maximálnou dĺžkou trvania procesu na jeden krok, ako aj veľkosť kroku, aby sa daný krok mohol zapísať do databázy.
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image003.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-## Initialization
+## Inicializácia
 
-In Initialization page, user can simulation mode and also can import the Medium details and scheduled data of HT wizard (.HTWZ) of older versions project using Import wizard file option (See Fig. 37.2.4.).
+Na stránke „Inicializácia“ môže používateľ aktivovať simulačný režim a tiež importovať údaje o prostredí a naplánované údaje zo súboru sprievodcu HT (.HTWZ) zo starších verzií projektu pomocou možnosti „Importovať súbor sprievodcu“ (pozri obr. 37.2.4.).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image020.jpg' | relative_url }})
 
-Initialization page
+Úvodná stránka
 
-## Material selection
+## Výber materiálu
 
-Materials required for the process can be loaded either from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from DB or Keyfile using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) as shown in Fig. 37.2.5. User can also add new material and define required data from respective tab by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). For more information on Material data definition please refer [Material data](/docs/sk/pre_processor/10_material_data/10_material_data/).
+Materiály potrebné pre tento proces je možné načítať buď z knižnice pomocou ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), alebo z databázy či súboru kľúčov pomocou ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ako je znázornené na obr. 37.2.5. Používateľ môže tiež pridať nový materiál a definovať požadované údaje na príslušnej karte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Ďalšie informácie o definícii údajov o materiáloch nájdete v [Material data](/docs/en/pre_processor/10_material_data/10_material_data/).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image003.jpg' | relative_url }})
 
-Importing Material from Library
+Import materiálu z knižnice
 
-## Objects
+## Objekty
 
-If user would like to include fixtures and other objects along with the billet then in Objects page, Add the number of Objects required for Heat Treatment operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. By Default one object will be added in operation as shown in Fig. 37.2.6.
+Ak chce používateľ spolu so sochou zahrnúť aj upínacie prípravky a iné objekty, na stránke „Objekty“ pridá počet objektov potrebných pre operáciu tepelného spracovania kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Predvolene sa do operácie pridá jeden objekt, ako je znázornené na obr. 37.2.6.
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image006.jpg' | relative_url }})
 
-Objects window
+Okno „Objekty“
 
-### Workpiece/Object General
+### Všeobecné informácie o obrobku/predmete
 
-In Object general page (See Fig. 37.2.7.), User can select Object type by selecting respective radio button. For more information on object types please refer. By default Object type for workpiece will be set as Plastic. User can initialize the object temperature by setting value in Object Temp. field. User can also import object from other DB’s or Keyfile’s using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option and browsing respective file.
+Na stránke „Všeobecné nastavenia objektu“ (pozri obr. 37.2.7.) môže používateľ vybrať typ objektu kliknutím na príslušné začiarkavacie políčko. Ďalšie informácie o typoch objektov nájdete v príslušnej časti. Predvolený typ objektu pre obrobok je nastavený na „Plast“. Používateľ môže nastaviť počiatočnú teplotu objektu zadaním hodnoty do poľa „Teplota objektu“. Používateľ môže tiež importovať objekt z iných databáz alebo súborov kľúčov pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a vyhľadaním príslušného súboru.
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image004.jpg' | relative_url }})
 
-Object General page
+Stránka „Všeobecné informácie o objekte“
 
-### Object Geometry
+### Geometria objektu
 
-User can define simple geometries using primitive options and geometries can also be imported using Import geometry from file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option (See Fig. 37.2.8.). For more information on various options of the geometry page please refer. [12.3. 3D Geometry Data Defining](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+Používateľ môže definovať jednoduché geometrie pomocou základných možností; geometrie je možné tiež importovať pomocou možnosti „Importovať geometriu zo súboru“ (![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})) alebo z knižnice pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (pozri obr. 37.2.8.). Ďalšie informácie o rôznych možnostiach na stránke geometrie nájdete v časti [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image005.jpg' | relative_url }})
 
-Object Geometry page
+Stránka „Geometria objektu“
 
-### Object Mesh
+### Sieť objektu
 
-In Mesh page, both Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) and Expert ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) mode options will be in Active mode, in guided mode only Number of Elements needs to be defined to generate mesh. User can change the number of mesh elements in guided mode and generate mesh with other default settings as shown in Fig. 37.2.9. More options to control mesh density are available by switching to Expert mode clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) button. Expert mode mesh options is as shown in Fig. 37.2.10. For detail description of these expert mode mesh settings please refer [13.2. 3D Tet Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+Na stránke „Mesh“ budú obe možnosti režimu – „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ aj „Expert ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})“ – v aktívnom režime; v režime „Guided“ stačí na vytvorenie siete definovať iba počet prvkov. V režime „Guided“ môže používateľ zmeniť počet prvkov siete a vygenerovať sieť s ostatnými predvolenými nastaveniami, ako je znázornené na obr. 37.2.9. Ďalšie možnosti na ovládanie hustoty siete sú k dispozícii po prepnutí do režimu „Expert“ kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Možnosti siete v režime Expert sú znázornené na obr. 37.2.10. Podrobný popis týchto nastavení siete v režime Expert nájdete v časti [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image006.jpg' | relative_url }})
 
-Guided mode Mesh option
+Režim s navádzaním – možnosť „Mesh“
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image007.jpg' | relative_url }})
 
-Expert mode mesh option
+Možnosť vytvorenia siete v expertnom režime
 
-### Object Material
+### Materiál objektu
 
-In material page, all the materials added to material list are displayed (as shown in Fig. 37.2.11.) and user can select the required material to assign it to respective object from material list. Also user can load the material in Object material page using Import Material data from a file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or Using Load from Library option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). 
+Na stránke materiálov sa zobrazujú všetky materiály pridané do zoznamu materiálov (ako je znázornené na obr. 37.2.11.) a používateľ si môže zo zoznamu materiálov vybrať požadovaný materiál a priradiť ho k príslušnému objektu. Užívateľ môže materiál na stránke Materiál objektu načítať aj pomocou funkcie Importovať údaje o materiáli zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Načítať z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image008.jpg' | relative_url }})
 
-Material selection Window
+Okno výberu materiálu
 
-### Object Boundary Condition
+### Okrajová podmienka objektu
 
-System will automatically assign thermal and diffusion BCC depending on the process selection and symmetry conditions based on geometry type. User can review theses BCC and can also assign require BCC depending on the process.(see Fig. 37.2.12.)
+Systém automaticky priradí tepelné a difúzne BCC v závislosti od zvoleného procesu a podmienok symetrie na základe typu geometrie. Používateľ si môže tieto BCC skontrolovať a môže tiež priradiť požadované BCC v závislosti od procesu (pozri obr. 37.2.12).
 
-![]({{ '/assets/icons/pre_icons/mo_auto_velocity_bcc_button.jpg' | relative_url }}) option available for user to assign velocity BCC automatically based on the geometry, so that workpiece does not displace erratically during simulation (see Fig. 37.2.13.).
+Možnosť ![]({{ '/assets/icons/pre_icons/mo_auto_velocity_bcc_button.jpg' | relative_url }}) umožňuje používateľovi automaticky priradiť rýchlosť BCC na základe geometrie, aby sa obrobok počas simulácie nepohyboval nepredvídateľne (pozri obr. 37.2.13.).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image009.jpg' | relative_url }})
 
-Assigned Symmetry BCC
+Priradená symetria BCC
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image010.jpg' | relative_url }})
 
-User assigned Velocity BCC
+Používateľom priradené BCC typu „Velocity“
 
-### Object Property
+### Vlastnosť objektu
 
-Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See Fig. 37.2.14.). For more information, Please refer [16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/).
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 37.2.14.) Ďalšie informácie nájdete v [16\. Object properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image011.jpg' | relative_url }})
 
-Object property window
+Okno vlastností objektu
 
-### Initialize
+### Inicializácia
 
-In Initialize page, user has options to initialize Temperature, Strain, Stress, Damage, Velocity, Displacement, Grain Size, Recrystallization Vol Frac. and Density values (See Fig. 37.2.15.).
+Na stránke „Initialize“ má používateľ k dispozícii možnosti na inicializáciu hodnôt teploty, deformácie, napätia, poškodenia, rýchlosti, posunutia, veľkosti zŕn, objemového podielu rekryštalizácie a hustoty (pozri obr. 37.2.15.).
 
   
-Also user can define Average strain rate and Limiting strain rate value for the object. If the object type is plastic then limiting strain rate defines a limiting value of effective strain rate under which the plastic material is considered rigid. The average strain rate is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation. DEFORM automatically maintains the ratio between average strain rate and limiting strain rate. Generally, the value of limiting strain rate should be 0.01. 
+Používateľ môže pre objekt tiež definovať hodnotu priemernej rýchlosti deformácie a limitnej rýchlosti deformácie. Ak ide o plastický objekt, limitná rýchlosť deformácie určuje limitnú hodnotu efektívnej rýchlosti deformácie, pod ktorou sa plastický materiál považuje za tuhý. Priemerná rýchlosť deformácie je charakteristická priemerná hodnota efektívnej rýchlosti deformácie. Na začiatku simulácie by sa mala zadať aproximácia tejto hodnoty. Program DEFORM automaticky udržiava pomer medzi priemernou rýchlosťou deformácie a limitnou rýchlosťou deformácie. Všeobecne by hodnota limitnej rýchlosti deformácie mala byť 0,01. 
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image012.jpg' | relative_url }})
 
-Initialize page
+Načítanie stránky
 
-User should initialize the initial atom percentage for diffusion at nodal level if diffusion process is simulated. For heat treatment user should initialize volume fraction of each phase existing initially at element level and summation of all phases volume fraction should be equal to 1. Nodal values can be accessed by clicking on ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}) icon from tool bar and initialization can be done using ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) icon. Similarly element values can be can be accessed by clicking on ![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) icon from tool bar and initialization can be done using ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) icon. Node data and Element data options are as shown in Fig. 37.2.16. and Fig. 37.2.17.
+Ak sa simuluje difúzny proces, používateľ by mal na úrovni uzlov nastaviť počiatočné percentuálne podiely atómov pre difúziu. V prípade tepelného spracovania by mal používateľ inicializovať objemový podiel každej fázy existujúcej na začiatku na úrovni prvku, pričom súčet objemových podielov všetkých fáz by mal byť rovný 1. Hodnoty uzlov sú dostupné kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}) na paneli nástrojov a inicializáciu je možné vykonať pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Podobne je možné zobraziť hodnoty prvkov kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) na paneli nástrojov a inicializáciu je možné vykonať pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Možnosti pre uzlové a prvkové údaje sú znázornené na obr. 37.2.16 a obr. 37.2.17.
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image013.jpg' | relative_url }})
 
-Nodal data window
+Okno s uzlovými údajmi
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image014.jpg' | relative_url }})
 
-Element data window
+Okno s údajmi o prvkoch
 
-## Medium Details
+## Podrobnosti o médiu
 
-In Medium details page, user can define the media and its Heat transfer coefficients along with the zones associated to that media (See Fig. 37.2.18.)
+Na stránke „Podrobnosti o médiu“ môže používateľ definovať médium a jeho koeficienty prenosu tepla spolu so zónami priradenými k danému médiu (pozri obr. 37.2.18.)
 
 ****
 
-**Media** – Different types of media used in the heat treatment process can be defined here, using ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}) button media can be added and using ![]({{ '/assets/icons/pre_icons/mo_delete_icon.jpg' | relative_url }}) button defined media can be removed. Media can be renamed using ![]({{ '/assets/icons/pre_icons/mo_rename_button.jpg' | relative_url }}) button.  
-**Zones** – Zones are the surfaces of the workpiece that are associated to the Media selected under media tab, by default one zone is defined as Default which cannot be deleted. Each zone can be assigned different Heat transfer co-efficients and these co-efficients can be constant or function of temperature or function of time. For the remaining surfaces where no zone is defined, the conditions defined for Default zone is applied. The Heat Transfer co-efficient values for each zone can be stored using button and can be loaded back using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) button.
+**Médiá** – Tu je možné definovať rôzne typy médií používaných v procese tepelného spracovania; pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}) je možné médiá pridať a pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_delete_icon.jpg' | relative_url }}) je možné definované médiá odstrániť. Médiá je možné premenovať pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_rename_button.jpg' | relative_url }}).  
+**Zóny** – Zóny sú plochy obrobku, ktoré sú priradené k médiám vybraným na karte „Médiá“; štandardne je jedna zóna definovaná ako „Predvolená“, ktorú nie je možné odstrániť. Každá zóna môže mať priradené rôzne koeficienty prenosu tepla, pričom tieto koeficienty môžu byť konštantné, alebo môžu byť funkciou teploty či času. Na ostatné povrchy, pre ktoré nie je definovaná žiadna zóna, sa uplatňujú podmienky definované pre zónu „Predvolená“. Hodnoty koeficientov prenosu tepla pre každú zónu je možné uložiť pomocou tlačidla a opätovne načítať pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}).
 
-**Radiation** – User can turn on the Radiation check box if radiation needs to be activated for the respective media.
+**Žiarenie** – Ak je potrebné pre príslušné médium aktivovať žiarenie, používateľ môže zaškrtnúť políčko „Žiarenie“.
 
-**Diffusion surface reaction coefficient** \- Diffusion surface reaction co-efficient values associated with the media can be defined here when applicable and these values can be constant or function of temperature or function of atom %.****
+**Koeficient difúznej povrchovej reakcie** \- V prípade potreby je možné tu definovať hodnoty koeficientu difúznej povrchovej reakcie súvisiace s médiom; tieto hodnoty môžu byť konštantné, alebo môžu byť funkciou teploty či percentuálneho podielu atómov.****
 
-**Emissivity -** If any particular zone is to be modeled for Radiation then user can turn on Radiation checkbox and define Emssivity value for that zone. Emissivity can be defined as constant or function of temperature or function of time.**  
+**Emisivita –** Ak sa má pre určitú zónu modelovať žiarenie, môže používateľ zaškrtnúť políčko „Žiarenie“ a pre túto zónu definovať hodnotu emisivity. Emisivitu je možné definovať ako konštantu, funkciu teploty alebo funkciu času.**  
 **
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image015.jpg' | relative_url }})
 
-Medium page
+Stredná stránka
 
-## Schedule
+## Rozvrh
 
-In schedule page, user can scheduled the Annealing, Normalizing and Quenching process by defining its process duration, media, Environment temperature and Atom contents as shown in Fig. 37.2.19.
+Na stránke s plánom môže používateľ naplánovať procesy žíhania, normalizácie a kalenia tak, že zadá ich trvanie, použitý materiál, teplotu prostredia a obsah atómov, ako je znázornené na obr. 37.2.19.
 
-  * User can add an operation using ![]({{ '/assets/icons/pre_icons/mo_add_button.jpg' | relative_url }}) button.
+  * Používateľ môže pridať operáciu pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_button.jpg' | relative_url }}).
 
-  * User can delete a defined operation using ![]({{ '/assets/icons/pre_icons/mo_delete_button.jpg' | relative_url }}) button.
+  * Používateľ môže vymazať definovanú operáciu pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_delete_button.jpg' | relative_url }}).
 
-  * User can delete all the operations defined at a time using ![]({{ '/assets/icons/pre_icons/mo_delete_all_button.jpg' | relative_url }}) button.
+  * Používateľ môže pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_delete_all_button.jpg' | relative_url }}) naraz vymazať všetky definované operácie.
 
-  * User can insert an operation between two operations using ![]({{ '/assets/icons/pre_icons/mo_insert_button.jpg' | relative_url }}) button.
+  * Používateľ môže pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_insert_button.jpg' | relative_url }}) vložiť operáciu medzi dve operácie.
 
-  * By clicking ![]({{ '/assets/icons/pre_icons/mo_display_button.jpg' | relative_url }}) button we can see the Thermal schedule graph of Time vs. Temperature for all operations as shown in Fig. 37.2.21.
+  * Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_display_button.jpg' | relative_url }}) sa zobrazí graf teplotného priebehu v závislosti od času pre všetky operácie, ako je znázornené na obr. 37.2.21.
 
-  * User can also define specific environment conditions using advanced option for each operation independently by clicking on ![]({{ '/assets/icons/pre_icons/mo_define.._button.jpg' | relative_url }}) .
+  * Používateľ môže tiež nastaviť konkrétne podmienky prostredia pomocou pokročilej možnosti pre každú operáciu samostatne kliknutím na ![]({{ '/assets/icons/pre_icons/mo_define.._button.jpg' | relative_url }}).
 
   
-**Advanced Options:**
+**Pokročilé nastavenia:**
 
-User can define Environment Temperature and Atom content in Function of time as shown in Fig. 37.2.20.  
-**Use local time for functions** – When user turns on this option, the local time of the operation is considered to apply the function values defined else by default global time is used. Global time is the accumulation of process time of all the operations, while local time will start when the operation starts and end with operation.  
-**Initialize trasf. Incubation** – User can initialize transformation incubation by turning on this check box.  
-**User’s .KEY** – user can indicate the path of .KEY file which can be used along with the existing definition by entering the path in this fields.  
-**Active Transformation** – All the transformation defined in the material file are displayed here and user can turn on the transformations applicable for the operation by turning on the check the boxes next to transformation.  
-User can return to the schedule page by clicking on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button and by clicking on ![]({{ '/assets/icons/pre_icons/mo_cancel_button.jpg' | relative_url }}) button user can come out without applying the changes defined in that session only. 
+Používateľ môže definovať teplotu prostredia a obsah atómov v závislosti od času, ako je znázornené na obr. 37.2.20.  
+**Používať miestny čas pre funkcie** – Ak používateľ zapne túto možnosť, pri výpočte hodnôt funkcií sa zohľadňuje miestny čas operácie; v opačnom prípade sa štandardne používa globálny čas. Globálny čas predstavuje súčet procesného času všetkých operácií, zatiaľ čo miestny čas začína v okamihu spustenia operácie a končí jej ukončením.  
+**Spustiť inkubáciu transformácie** – Používateľ môže spustiť inkubáciu transformácie zaškrtnutím tohto políčka.  
+**.KEY používateľa** – používateľ môže v týchto poliach zadať cestu k súboru .KEY, ktorý je možné použiť spolu s existujúcou definíciou.  
+**Aktívne transformácie** – Tu sa zobrazujú všetky transformácie definované v súbore materiálu a používateľ môže aktivovať transformácie, ktoré sa majú použiť pri danej operácii, zaškrtnutím políčok vedľa príslušných transformácií.  
+Používateľ sa môže vrátiť na stránku s rozvrhom kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_cancel_button.jpg' | relative_url }}) môže opustiť stránku bez uloženia zmien definovaných iba v danej relácii. 
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image016.jpg' | relative_url }})
 
-Schedule page
+Stránka s rozvrhom
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image021.jpg' | relative_url }})
 
-Schedule Advanced options
+Rozvrh – Pokročilé nastavenia
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image017.jpg' | relative_url }})
 
-Schedule Graph
+Graf harmonogramu
 
-## Positioning
+## Polohovanie
 
-User can position the objects using position objects button. Various positioning options are available to position the objects (See Fig. 37.2.22.), for more information on these options please refer [19\. Object Positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/).
+Používateľ môže objekty umiestniť pomocou tlačidla „Umiestniť objekty“. Na umiestnenie objektov sú k dispozícii rôzne možnosti (pozri obr. 37.2.22.); ďalšie informácie o týchto možnostiach nájdete v [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image018.jpg' | relative_url }})
 
-Object Positioning options
+Možnosti umiestnenia objektu
 
-## Stopping controls
+## Ovládacie prvky na zastavenie
 
-Thermal stop controls provides a way that stop the simulation at pre-defined conditions (See Fig. 37.2.23.), like selected temperature for all nodes therefore the heating time can be predicted. They are applied for the object selected from the pull down list of objects.
+Ovládacie prvky tepelného zastavenia umožňujú zastaviť simuláciu pri vopred definovaných podmienkach (pozri obr. 37.2.23.), napríklad pri dosiahnutí zvolenej teploty vo všetkých uzloch, čím je možné odhadnúť dobu ohrevu. Uplatňujú sa na objekt vybraný z roletového zoznamu objektov.
 
-**Stopping Method:**
+**Spôsob zastavenia:**
 
-  * **None** : Applies no thermal stopping controls
+  * **Žiadne** : Neaplikuje žiadne opatrenia na obmedzenie prehriatia
 
-  * **Any Node** : Simulation stops when any node in the billet reaches the specified value.
+  * **Ľubovoľný uzol**: Simulácia sa zastaví, keď ktorýkoľvek uzol v sochore dosiahne zadanú hodnotu.
 
-  * **All Nodes** : Simulation stops when all the nodes in the billet reach the specified value.
+  * **Všetky uzly**: Simulácia sa zastaví, keď všetky uzly v sochárskej surovine dosiahnu zadanú hodnotu.
 
-  * **Selected Node** : Simulation stops when specified node in the billet reaches the specified value.
+  * **Vybraný uzol**: Simulácia sa zastaví, keď zadaný uzol v sochore dosiahne zadanú hodnotu.
 
-  * **Average All Nodes** : Simulation stops when average temperature of all the nodes in the billet reaches the specified value.
+  * **Priemer všetkých uzlov**: Simulácia sa zastaví, keď priemerná teplota všetkých uzlov v sochore dosiahne zadanú hodnotu.
 
-  * **Average surface Temp +Max. Temp** :Simulation stops when average temperature of all the nodes on the surface of billet + Maximum temperature in the billet reaches the specified value.
+  * **Priemerná teplota povrchu + maximálna teplota**: Simulácia sa zastaví, keď priemerná teplota všetkých uzlov na povrchu sochory + maximálna teplota v sochore dosiahne zadanú hodnotu.
 
-**Temperature Range:**
+**Teplotný rozsah:**
 
-Apart from single value a range of temperature also can be used to stop the simulation.
+Okrem jednej hodnoty je možné na zastavenie simulácie použiť aj teplotný rozsah.
 
-  * **Stop when temperature is outside range** :Simulation stops when the temperature value is outside the specified range.
+  * **Zastaviť, ak teplota je mimo rozsahu**: Simulácia sa zastaví, ak hodnota teploty prekročí stanovený rozsah.
 
-  * **Stop when temperature is inside range** : Simulation stops when the temperature value is inside the specified range.
+  * **Zastaviť, keď je teplota v rozsahu** : Simulácia sa zastaví, keď sa hodnota teploty nachádza v zadanom rozsahu.
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image024.jpg' | relative_url }})
 
-Thermal Stopping Controls
+Ovládacie prvky na obmedzenie prehriatia
 
-## Simulation Controls
+## Ovládacie prvky simulácie
 
-In Simulation controls page (See Fig. 37.2.24.), user can define the Step definition in User or Auto type by selecting respect Radio button.
+Na stránke „Ovládacie prvky simulácie“ (pozri obr. 37.2.24.) môže používateľ nastaviť typ kroku na „Používateľský“ alebo „Automatický“ výberom príslušného prepínača.
 
   
-**Auto** – When user selects Auto option, system will automatically control the time step value based on the conditions specified. The conditions used to control time step are,
+**Auto** – Ak používateľ zvolí možnosť „Auto“, systém bude automaticky riadiť hodnotu časového kroku na základe zadaných podmienok. Podmienky používané na riadenie časového kroku sú:
 
-  * **Temp. change per step** – Maximum change in the temperature allowed per step, whenever it exceeds this value time step is reduced and whenever it reduces than this value time step is increased.
+  * **Zmena teploty na jeden krok** – Maximálna povolená zmena teploty na jeden krok; ak táto hodnota prekročí stanovenú hranicu, časový krok sa skráti, a ak je nižšia ako táto hodnota, časový krok sa predĺži.
 
-  * **Min/Max Time per step** – It specifies the range of time step within which system can vary the time step value. Minimum allowed value of time step and Maximum allowed value of time step can be set here.
+  * **Minimálna/maximálna dĺžka časového kroku** – Určuje rozsah časového kroku, v rámci ktorého môže systém meniť hodnotu časového kroku. Tu je možné nastaviť minimálnu povolenú hodnotu časového kroku a maximálnu povolenú hodnotu časového kroku.
 
-  * **Step Increment to Save** – The step increment (STPINC) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
+  * **Počet krokov na uloženie** – Hodnota „počet krokov na uloženie“ (STPINC) určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nie je nutné, aby sa všetky kroky uložili do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať viac úložného priestoru.
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image025.jpg' | relative_url }})
 
-Simulation Controls
+Ovládacie prvky simulácie
 
-## Generation Database
+## Databáza generácií
 
-Once the problem has been completely set up, the last step is to generate a database file. The FEM engine (the part of DEFORM® that calculates the solution) uses a database file to store the finite element solutions for the problem. When you generate a database in the DEFORM MO Pre-processor, all of the information defined in the Pre-processor (such as the material properties, movement controls, object geometries, etc.) is transferred to the database file.
+Po úplnom nastavení úlohy je posledným krokom vytvorenie databázového súboru. Modul FEM (časť programu DEFORM®, ktorá vypočítava riešenie) používa databázový súbor na ukladanie riešení úlohy metódou konečných prvkov. Pri generovaní databázy v preprocesore DEFORM MO sa všetky informácie definované v preprocesore (napríklad vlastnosti materiálov, obmedzenia pohybu, geometrie objektov atď.) prenesú do databázového súboru.
 
-In Generate DB page (See Fig. 37.2.25.). From v12.0.2, we can observe the Operation Simulation setup summary. Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process, messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data). 
+Na stránke „Generate DB“ (pozri obr. 37.2.25). Od verzie 12.0.2 je možné zobraziť súhrn nastavení simulácie prevádzky. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) spustíte kontrolu programu, či v nastavení úlohy niečo nechýba. Počas kontroly červené správy označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáloch). 
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done with writing the database, switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Keď program dokončí zapisovanie databázy, prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
-**Append Key file**
+**Pridať súbor s kľúčom**
 
-Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only .key file can be changed and simulation can be resubmitted.
+Akékoľvek informácie, ktoré nie sú definované v sprievodcovi, ale napriek tomu sa vzťahujú na daný proces, je možné načítať ako súbor s príponou .key. Táto možnosť je užitočná aj v prípadoch, keď je potrebné zmeniť len niekoľko hodnôt – tieto hodnoty je možné definovať v súbore s príponou .key, následne stačí zmeniť len tento súbor a simuláciu je možné odoslať znovu.
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image019.jpg' | relative_url }})
 
-Generate database
+Vytvoriť databázu
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
 
-[6.3. Integrated Manufacturing Proces Post - Processor layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Proces Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
 
-[3D Heat Treatment wizard Lab](/docs/sk/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/)
+[3D Heat Treatment wizard Lab](/docs/en/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/)

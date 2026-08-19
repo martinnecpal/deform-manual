@@ -1,44 +1,44 @@
 ---
 lang: sk
-title: "34 Introduction to Forming Express"
+title: "34 Úvod do programu Forming Express"
 ---
 
-# 34\. Introduction to Forming Express
+# 34\. Úvod do programu Forming Express
 
-Forming is a manufacturing process involving the shaping of metal using localized compressive forces.
+Tvarovanie je výrobný proces, pri ktorom sa kov tvaruje pôsobením bodových tlakových síl.
 
-A forging system comprises all the input variables such as the billet or blank (geometry and material), the tooling (geometry and material), the conditions at the tool/material interface, the mechanics of plastic deformation, the equipment used, the characteristics of the final product and the finally the plant environment where the process is being conducted.
+Systém kovania zahŕňa všetky vstupné premenné, ako sú sochor alebo polotovar (geometria a materiál), nástroje (geometria a materiál), podmienky na rozhraní nástroj/materiál, mechanika plastickej deformácie, použité zariadenia, vlastnosti konečného výrobku a napokon aj prostredie závodu, v ktorom sa proces vykonáva.
 
-Forming Express operation is used to understand the direction of metal flow, the magnitude of deformation and the temperature distribution. In forming express operation, defects such as cracks and folds can be tracked while running simulation.
+Operácia „Forming Express“ slúži na zistenie smeru toku kovu, rozsahu deformácie a rozloženia teploty. V rámci operácie „Forming Express“ je možné počas behu simulácie sledovať vady, ako sú trhliny a záhyby.
 
-The Forming Express Operation is not an open environment as Forming operation, it is customized to setup simple Cold, Warm and Hot forging setups conveniently. So only guided mode is available for Forming Express operation.
+Operácia „Forming Express“ nie je otvoreným prostredím ako operácia „Forming“; je prispôsobená na pohodlné nastavenie jednoduchých konfigurácií tvárnenia za studena, za tepla a za horúca. Pre operáciu „Forming Express“ je preto k dispozícii iba režim s návodom.
 
-Following are the steps to Setup Forming Express operation in MO wizard:
+Nižšie sú uvedené kroky na nastavenie operácie Forming Express v sprievodcovi MO:
 
-  * Select Geometry type
+  * Vyberte typ geometrie
 
-  * Select the Process type Cold, Warm or Hot Forging
+  * Vyberte typ spracovania: studené, teplé alebo horúce kovanie
 
-  * Select Shape Complexity and Accuracy settings
+  * Vyberte nastavenia zložitosti a presnosti tvaru
 
-  * Select Temperature calculation settings
+  * Vyberte nastavenia výpočtu teploty
 
-  * Add Number of Objects
+  * Zadajte počet objektov
 
-  * Create object geometry and Generate Mesh
+  * Vytvoriť geometriu objektu a vygenerovať sieť
 
-  * Assign Material and Boundary conditions
+  * Nastaviť materiálové a okrajové podmienky
 
-  * Define Movement data for Dies
+  * Definovať údaje o pohybe pre matrice
 
-  * Position objects and define contact between Objects
+  * Umiestňovanie objektov a definovanie kontaktu medzi objektmi
 
-  * Define primary die stroke and Stopping controls
+  * Nastavte primárny zdvih matrice a ovládacie prvky zastavenia
 
-  * Define Simulation controls and Generate Database
+  * Definovať ovládacie prvky simulácie a vygenerovať databázu
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[34.1. 2D Forming Express Setup](/docs/sk/operation_templates/34_forming_express/34_1_2d_forming_express_setup/)
+[34.1. 2D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/)
 
-[34.2. 3D Forming Express Setup](/docs/sk/operation_templates/34_forming_express/34_2_3d_forming_express_setup/)
+[34.2. 3D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_2_3d_forming_express_setup/)

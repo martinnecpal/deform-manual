@@ -1,38 +1,38 @@
 ---
 lang: sk
-title: "37. Introduction to Heat Treatment"
+title: "37. Úvod do tepelného spracovania"
 ---
 
-# 37\. Introduction to Heat Treatment 
+# 37\. Úvod do tepelného spracovania 
 
-Heat Treatment is the controlled heating and cooling of metals to alter their physical and mechanical properties without changing the product shape. Heat treatment is sometimes done inadvertently due to manufacturing processes that either heat or cool the metal such as welding or forming.
+Tepelné spracovanie je riadené zahrievanie a ochladzovanie kovov s cieľom zmeniť ich fyzikálne a mechanické vlastnosti bez zmeny tvaru výrobku. Tepelné spracovanie sa niekedy vykonáva neúmyselne v dôsledku výrobných procesov, pri ktorých dochádza k zahrievaniu alebo ochladzovaniu kovu, ako je zváranie alebo tvárnenie.
 
-The Heat Treatment Wizard is a convenient tool to set up complex multiple-operation heat treatment problem.
+Sprievodca tepelným spracovaním je praktický nástroj na nastavenie zložitých úloh tepelných procesov pozostávajúcich z viacerých operácií.
 
-Following are the steps to Setup Heat Treatment operation in MO HT wizard:
+Nižšie sú uvedené kroky na nastavenie operácie tepelného spracovania v sprievodcovi MO HT:
 
-  * Select 2D or 3D Geometry type
+  * Vyberte typ geometrie: 2D alebo 3D
 
-  * Select the process type 
+  * Vyberte typ procesu 
 
-  * Load Object material
+  * Načítať materiál objektu
 
-  * Add Number of Objects
+  * Zadajte počet objektov
 
-  * Create object geometry and Generate Mesh
+  * Vytvoriť geometriu objektu a vygenerovať sieť
 
-  * Assign Material and Boundary conditions
+  * Nastaviť materiálové a okrajové podmienky
 
-  * Initialize object data
+  * Inicializovať údaje objektu
 
-  * Define Medium details and Schedule data
+  * Definovať podrobnosti o médiu a údaje o harmonograme
 
-  * Stopping controls and Simulation control
+  * Ovládacie prvky zastavenia a simulácia riadenia
 
-  * Generate Database
+  * Vytvoriť databázu
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[2D Heat Treatment Wizard manual](/docs/sk/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/)
+[2D Heat Treatment Wizard manual](/docs/en/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/)
 
-[3D Heat Treatment Wizard manual](/docs/sk/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/)
+[3D Heat Treatment Wizard manual](/docs/en/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/)

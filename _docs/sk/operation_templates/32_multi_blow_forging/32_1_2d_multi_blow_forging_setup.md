@@ -1,395 +1,395 @@
 ---
 lang: sk
-title: "32.1. 2D Multi Blow Forging setup"
+title: "32.1. Nastavenie 2D viacnásobného výkovu"
 ---
 
-# 32.1. 2D Multi Blow Forging setup
+# 32.1. Nastavenie 2D viacnásobného výkovu
 
-32.1.1. Process Details
+32.1.1. Podrobnosti o procese
 
-32.1.2. Blow table
+32.1.2. Tabuľka výfukov
 
-32.1.3. Geometry Type
+32.1.3. Typ geometrie
 
-32.1.4. Simulation Controls
+32.1.4. Ovládacie prvky simulácie
 
-32.1.5. Material List
+32.1.5. Zoznam materiálov
 
-32.1.6. Add objects
+32.1.6. Pridávanie objektov
 
-32.1.7. Workpiece
+32.1.7. Obrobok
 
-  * Geometry
+  * Geometria
 
-  * Object Mesh
+  * Sieť objektu
 
-  * Object Material
+  * Materiál predmetu
 
-  * Boundary conditions
+  * Okrajové podmienky
 
-32.1.8. Top Die
+32.1.8. Horná matrica
 
-32.1.9. Bottom Die
+32.1.9. Spodná forma
 
-32.1.10. Positioning
+32.1.10. Polohovanie
 
-32.1.11. Scheduled Positioning
+32.1.11. Plánované umiestnenie
 
-32.1.12. Contact
+32.1.12. Kontakt
 
-32.1.13. Stopping Controls
+32.1.13. Ovládacie prvky na zastavenie
 
-32.1.14. Step controls
+32.1.14. Ovládacie prvky krokov
 
-32.1.15. Generate DB
+32.1.15. Vytvorenie databázy
 
-## Process Details
+## Podrobnosti o procese
 
-In this process page, user can define the Hammer energy and method of energy specification along with the process controls like Reheat and Dwell. User can define Reheat conditions and its controls along with the Dwell conditions. User also has options to specify if object is rotated between blows and also can Initialize strain on Reheat. (See Fig. 32.1.1.)
+Na tejto stránke procesu môže používateľ definovať energiu kladiva a spôsob jej zadávania spolu s riadiacimi parametrami procesu, ako sú opätovné zahrievanie a doba zdržania. Používateľ môže definovať podmienky opätovného zahrievania a ich riadiace parametre spolu s podmienkami doby zdržania. Používateľ má tiež možnosť určiť, či sa objekt medzi údermi otáča, a môže tiež inicializovať deformáciu pri opätovnom zahrievaní. (Pozri obr. 32.1.1.)
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image001.jpg' | relative_url }})
 
-Process window
+Okno procesu
 
-**Press** : User can define Hammer name and energy details. Using Load movement from file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and Load movement from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) user can load the hammer data. 
+**Tlač**: Používateľ môže zadať názov kladiva a údaje o energii. Pomocou funkcií „Načítať pohyb zo súboru“ (![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})) a „Načítať pohyb z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) môže používateľ načítať údaje o kladive. 
 
-**Note** : At this moment press data cannot be loaded from explorer tab equipment library.
+**Poznámka**: V súčasnosti nie je možné načítať údaje o tlači z knižnice zariadení na karte „Explorer“.
 
   
-**Energy specification Method:**
+**Spôsob stanovenia energetickej náročnosti:**
 
-  * **Absolute:** Energy will be consumed with respect to the defined energy value.
+  * **Absolútne:** Spotreba energie sa bude riadiť definovanou hodnotou energie.
 
-  * **Ratio to Max Energy(%)** : Energy will be consumed in terms of percentage value.
+  * **Podiel na maximálnej energii (%)**: Spotreba energie sa bude uvádzať v percentách.
 
   * 
 
-**Dwel** l: Using this user can set the time that workpiece rests on the die before the
+**Dwel** l: Pomocou tejto funkcie môže používateľ nastaviť čas, počas ktorého obrobok zostane na matrici pred
 
   
-**starting of the next Blow**. User can also specify Simulation time step and Heat Transfer Co-efficient to be used during dwell process simulation.
+**spustenie ďalšieho cyklu Blow**. Používateľ môže tiež určiť simulačný časový krok a koeficient prenosu tepla, ktoré sa majú použiť pri simulácii procesu zdržania.
 
-**Workpiece Rotation** : By turning on this option, user can specify rotation for workpiece between blows in specified directions.
+**Otáčanie obrobku**: Zapnutím tejto možnosti môže používateľ nastaviť otáčanie obrobku medzi údermi v zadaných smeroch.
 
-**Use Reheat** : During hammer forging process involving multiple blows, the workpiece temperature drops and may require reheating. User can schedule reheat process between blows by turning on this option.
+**Použiť opätovné zahriatie**: Počas procesu kovania kladivom, ktorý zahŕňa viacero úderov, teplota obrobku klesá a môže byť potrebné ho opätovne zahriať. Zapnutím tejto možnosti môže používateľ naplánovať proces opätovného zahriatia medzi jednotlivými údermi.
 
-**Reheat Temperature** : Reheat Temperature is the temperature to which the workpiece temperature will be raised. If only Reheat Temperature is turned on without Heating Simulations, then the temperature at all nodes of the workpiece is simply initialized to the reheating temperature.
+**Teplota opätovného ohrevu**: Teplota opätovného ohrevu je teplota, na ktorú sa zvýši teplota obrobku. Ak je zapnutá len teplota opätovného ohrevu bez simulácií ohrevu, teplota vo všetkých uzloch obrobku sa jednoducho nastaví na hodnotu teploty opätovného ohrevu.
 
-**Heating Simulations** : When Heating Simulations is turned on, an simulation of workpiece heating is carried on at the specified time between the blows. It includes, heating time, Transfer In time, Transfer Out Time, along with specific simulation time step for heat time and Transfer Time.
+**Simulácie ohrevu**: Ak je funkcia „Simulácie ohrevu“ zapnutá, v zadanom čase medzi údermi prebieha simulácia ohrevu obrobku. Zahŕňa čas ohrevu, čas prenosu dovnútra, čas prenosu von, ako aj konkrétny časový krok simulácie pre čas ohrevu a čas prenosu.
 
-**Adaptive Reheat** : By turning on Adaptive Reheat, system will decide and schedule reheating of the workpiece based on the nodal temperatures of the workpiece and adaptive reheat controls. If it is off, user has to schedule reheating manually. If the nodal temperature of the workpiece drops below the Lower limit, reheating process will be scheduled automatically. During non-deformation simulation, simulation stops if nodal temperature of the workpiece is out of range specified in upper limit and lower limit. Simulation stops during reheating if all the nodes reach the temperature specified in Temperature to stop reheat.
+**Adaptívne opätovné zahrievanie**: Ak je funkcia „Adaptívne opätovné zahrievanie“ zapnutá, systém sám rozhodne o opätovnom zahrievaní obrobku a naplánuje ho na základe teplôt v uzloch obrobku a nastavení adaptívneho opätovného zahrievania. Ak je táto funkcia vypnutá, používateľ musí opätovné zahrievanie naplánovať ručne. Ak teplota uzlov obrobku klesne pod dolnú hranicu, proces opätovného ohrevu sa naplánuje automaticky. Počas simulácie bez deformácie sa simulácia zastaví, ak teplota uzlov obrobku prekročí rozsah stanovený hornou a dolnou hranicou. Simulácia sa zastaví počas opätovného ohrevu, ak všetky uzly dosiahnu teplotu stanovenú v parametri „Teplota na zastavenie opätovného ohrevu“.
 
-**Initialize Strain on Reheat:** Buy turning on this, user can initialize strain in the workpiece after reheating.
+**Inicializácia deformácie po opätovnom zahriatí:** Zapnutím tejto funkcie môže používateľ po opätovnom zahriatí inicializovať deformáciu v obrobku.
 
-**Heating Simulations** : It includes, heating time, heat time per step, Transfer In time, Transfer Out Time, Transfer Time Step.
+**Simulácie ohrevu**: Zahŕňajú dobu ohrevu, dobu ohrevu na jeden krok, čas začiatku prenosu, čas ukončenia prenosu a časový krok prenosu.
 
-## Blow table
+## Tabuľka výdychov
 
-In hammer forging process multiple blows are used and blow table helps the user to define number of blows and schedule work piece rotation, Dwelling and Reheating.
+Pri kovaní kladivom sa používa viacero úderov a tabuľka úderov pomáha používateľovi určiť počet úderov a naplánovať otáčanie obrobku, dobu zdržania a opätovné zahrievanie.
 
-**Energy:** The Blow Energy is a measure of the total energy that the flywheel will contain when the desired speed has been reached and prior to engaging the clutch. The units for blow energy in English units are klb-in and in SI units are N-mm. (See Fig. 32.1.2.)
+**Energia:** Energia pri vypnutí je veličina vyjadrujúca celkovú energiu, ktorú bude zotrvačník obsahovať po dosiahnutí požadovanej rýchlosti a pred zapojením spojky. Jednotky pre energiu pri vypnutí sú v anglickom systéme klb-in a v systéme SI N-mm. (Pozri obr. 32.1.2.)
 
-**No.Hits:** User can specify number of hits/blows required for the process. Once the user enters the hits/blows number, we can see equal number of rows are added to the table with default values. User can control each blow’s efficiency and the energy to be utilized. User can also schedule Reheating and Flip of workpiece after each blow by turning on respective boxes. User can also define different dwell times for different blows if required. An example of blow table is shown in below Fig. 32.1.2.
+**Počet úderov:** Používateľ môže určiť počet úderov potrebných na vykonanie procesu. Po zadaní počtu úderov sa do tabuľky pridá rovnaký počet riadkov s predvolenými hodnotami. Používateľ môže ovládať účinnosť každého úderu a množstvo energie, ktorá sa má využiť. Používateľ môže tiež naplánovať opätovné zahriatie a otočenie obrobku po každom úderu zaškrtnutím príslušných políčok. V prípade potreby môže používateľ tiež definovať rôzne doby zdržania pre jednotlivé údery. Príklad tabuľky úderov je zobrazený na obr. 32.1.2 nižšie.
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image002.jpg' | relative_url }})
 
-Blow Table window
+Okno „Blow Table“
 
-## Geometry Type
+## Typ geometrie
 
-In 2D Multi Blow Forging currently four types of geometry models (GEOTYP) can be setup as shown in Fig. 32.1.3.
+Pri 2D viacnásobnom kovaní je v súčasnosti možné nastaviť štyri typy geometrických modelov (GEOTYP), ako je znázornené na obr. 32.1.3.
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image003.jpg' | relative_url }})
 
-2D Geometry Type window
+Okno „Typ 2D geometrie“
 
-  * Axisymmetric
+  * Osovo symetrický
 
-  * Plane Strain
+  * Rovinné deformácie
 
-  * Torsion
+  * Krútiaci moment
 
-  * Plane stress
+  * Rovinné napätie
 
-For more information about these geometry types please refer [9.1.2 Geometry type](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])[ (GEOTYP)](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\]).
+Ďalšie informácie o týchto typoch geometrie nájdete v [9.1.2 Geometry type](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])[ (GEOTYP)](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\]).
 
-## Simulation Controls
+## Ovládacie prvky simulácie
 
-In Guided mode simulation controls, user can select Simulation mode type and Output type (See Fig. 32.1.4.). The basic options required for forming operation are provided here while Expert mode provides more detailed options. For more information on Export mode simulation options, Please refer [9\. Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+V ovládacích prvkoch simulácie v režime s návodom môže používateľ vybrať typ režimu simulácie a typ výstupu (pozri obr. 32.1.4.). Tu sú k dispozícii základné možnosti potrebné na operáciu tvárnenia, zatiaľ čo režim Expert ponúka podrobnejšie možnosti. Ďalšie informácie o možnostiach simulácie v režime Export nájdete v [9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image004.jpg' | relative_url }})
 
-Guided mode Simulation controls
+Ovládacie prvky simulácie v režime s návodom
 
-## Material List
+## Zoznam materiálov
 
-Materials required for the process can be loaded either from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from DB or Key file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) as shown in Fig. 32.1.5. User can also add new material and define required data from respective tab by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). For more information on Material data definition please refer [10.Material.](/docs/sk/pre_processor/10_material_data/10_material_data/)
+Materiály potrebné pre tento proces je možné načítať buď z knižnice pomocou ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), alebo z databázy či kľúčového súboru pomocou ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ako je znázornené na obr. 32.1.5. Používateľ môže tiež pridať nový materiál a definovať požadované údaje na príslušnej karte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Ďalšie informácie o definícii údajov o materiáloch nájdete v [10.Material.](/docs/en/pre_processor/10_material_data/10_material_data/).
 
   
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image005.jpg' | relative_url }})
 
-Import Material from Library
+Importovať materiál z knižnice
 
-## Add objects
+## Pridať objekty
 
-User can add required number of objects for the simulation by selecting ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. Fig. 32.1.6. shows three objects added for a simple upsetting operation. 
+Používateľ môže pridať požadovaný počet objektov pre simuláciu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Na obr. 32.1.6 sú zobrazené tri objekty pridané pre jednoduchú operáciu zúženia. 
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image006.jpg' | relative_url }})
 
-Objects Window
+Okno „Objekty“
 
-## Workpiece
+## Obrobok
 
-In this page user can define required temperature for the object and select type of the object as shown in Fig. 32.1.7. For workpiece by default the object type selected is Plastic and user can also import object from other DB’s or Keyfile’s using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) button and browsing respective file. 
+Na tejto stránke môže používateľ nastaviť požadovanú teplotu pre objekt a vybrať typ objektu, ako je znázornené na obr. 32.1.7. Pre obrobok je štandardne vybraný typ objektu „Plast“ a používateľ môže tiež importovať objekt z iných databáz alebo súborov kľúčov pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a vyhľadaním príslušného súboru. 
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image007.jpg' | relative_url }})
 
-Workpiece window
+Okno obrobku
 
-**Geometry**
+**Geometria**
 
-User can define new geometry using primitives and also can import the geometry from other file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), user can also import geometries in other formats such as .DXF and .IGES. Primitives are provided for easy definition of basic geometry shapes.(See Fig. 32.1.8.)
+Používateľ môže definovať novú geometriu pomocou základných tvarov a môže tiež importovať geometriu z iného súboru pomocou ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo z knižnice pomocou ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}); používateľ môže tiež importovať geometrie v iných formátoch, ako sú .DXF a .IGES. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii základné tvary. (Pozri obr. 32.1.8.)
 
-For more information on creating and editing 2D geometries please refer [12.1. 2D Geometry Data Defining.](/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/)
+Ďalšie informácie o vytváraní a úpravách 2D geometrií nájdete v [12.1. 2D Geometry Data Defining.](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/)
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image008.jpg' | relative_url }})
 
-Geometry definition window
+Okno s definíciou geometrie
 
-**Object Mesh**
+**Sieť objektu**
 
-Mesh Page provides options to mesh the object. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides option to set number of elements only using slider bar to generate mesh. If the object geometry is complex or user would like to control the mesh density over the object, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like weighing factors, Mesh windows and user defined mode to control the mesh density. Meshing options available in expert mode and Guided more are shown in Fig. 32.1.9. and Fig. 32.1.10.  
-For more detail description of these options, please refer [13.1. 2D Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+Stránka „Mesh“ ponúka možnosti vytvorenia siete pre objekt. Režim „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ umožňuje nastaviť počet prvkov výlučne pomocou posuvníka na vytvorenie siete. Ak je geometria objektu zložitá alebo ak chce používateľ ovládať hustotu siete na celom objekte, musí prejsť do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Odborný režim ponúka rôzne možnosti, ako sú váhové faktory, okná siete a režim definovaný používateľom, ktoré slúžia na riadenie hustoty siete. Možnosti vytvárania siete dostupné v odbornom režime a v režime „Guided“ sú znázornené na obr. 32.1.9 a obr. 32.1.10.  
+Podrobnejší popis týchto možností nájdete v [13.1. 2D Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image009.jpg' | relative_url }})
 
-Guided mode Mesh option
+Režim s navádzaním – možnosť „Mesh“
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image010.jpg' | relative_url }})
 
-Expert mode mesh option
+Možnosť vytvorenia siete v expertnom režime
 
-**Object Material**
+**Materiál objektu**
 
-In material page, all the materials added to material list are displayed (as shown in Fig. 32.1.11.) and user can select the required material to assign to respective object from material list. Also user can load the material in Object material page using Import Material data from a File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or Using Load form Library option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) .
+Na stránke materiálov sa zobrazujú všetky materiály pridané do zoznamu materiálov (ako je znázornené na obr. 32.1.11.) a používateľ si môže zo zoznamu materiálov vybrať požadovaný materiál, ktorý chce priradiť k príslušnému objektu. Používateľ môže materiál na stránke Materiál objektu načítať aj pomocou možnosti Importovať údaje o materiáli zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Načítať z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image011.jpg' | relative_url }})
 
-Material selection Window
+Okno výberu materiálu
 
-**Boundary conditions**
+**Okrajové podmienky**
 
-In Boundary conditions page, user can assign various boundary constraints for an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. The most commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer, prescribed velocity for enforcing symmetry or prescribing movement in problems such as drawing where a part is pulled through a die, shrink fit for modelling shrink rings on tooling, prescribed force for die stress analysis and Contact between objects in the model. Fig. 32.1.12. shows various BCC that can be assigned to an object.
+Na stránke „Okrajové podmienky“ môže používateľ priradiť objektu rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako okraj objektu interaguje s inými objektmi a s prostredím. Najčastejšie používané okrajové podmienky sú výmena tepla s prostredím pri simuláciách zahŕňajúcich prenos tepla, predpísaná rýchlosť na vynútenie symetrie alebo predpísanie pohybu v úlohách, ako je ťahanie dielu cez lisovaciu formu, zúženie pri modelovaní zúžených krúžkov na nástrojoch, predpísaná sila pre analýzu napätia v lisovacej forme a kontakt medzi objektmi v modeli. Obr. 32.1.12. znázorňuje rôzne okrajové podmienky, ktoré je možné priradiť k objektu.
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image011.jpg' | relative_url }})
 
-Boundary conditions window
+Okno s okrajovými podmienkami
 
   
-The BCC’s are categorized as [Deformation](/docs/sk/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/),[Thermal](/docs/sk/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/sk/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) and [Heating](/docs/sk/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). For more information about these BCC's please refer [14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+BCC sú rozdelené do kategórií [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/), [Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) a [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
 
-## Top Die
+## Horná matrica
 
-For Top Die, user can define all the required details like Geometry, mesh, Material and BCC as explained for the workpiece object.But Top die Movement we have to define it separately for top die.
+V prípade hornej formy môže používateľ definovať všetky potrebné údaje, ako sú geometria, sieť, materiál a BCC, tak ako bolo vysvetlené v prípade objektu obrobku. Pohyb hornej formy však musíme definovať osobitne pre hornej formu.
 
-**Top Die movement**
+**Pohyb hornej matrice**
 
-**Hammer Press**
+**Kladivový lis**
 
-Hammer forging operation is controlled by energy. During a working stroke, the deformation proceeds until the total kinetic energy is dissipated by plastic deformation of the material and by elastic deformation of ram and anvil when the die and ram faces contact each other. (See Fig. 32.1.13.)
+Proces kovania kladivom je riadený energiou. Počas pracovného zdvihu prebieha deformácia dovtedy, kým sa celková kinetická energia nevyčerpá prostredníctvom plastickej deformácie materiálu a pružnej deformácie piestu a kovadliny v okamihu, keď sa povrchy matrice a piestu dotknú. (Pozri obr. 32.1.13.)
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image013.jpg' | relative_url }})
 
-Hammer movement control settings
+Nastavenia riadenia pohybu kladiva
 
   
-During hammer forging operation, only a portion of the kinetic energy of ram is used for the plastic deformation of work piece. The rest of the energy is lost through anvil and machine frame. These values can be set in the movement controls window.
+Pri kovaní kladivom sa na plastickú deformáciu obrobku využíva len časť kinetickej energie piestu. Zvyšná energia sa stráca cez kovadlinu a rám stroja. Tieto hodnoty je možné nastaviť v okne ovládania pohybu.
 
-There are basically two types of hammer. The first is an [anvil type hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer) and the other c[ounter blow hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer).
+V zásade existujú dva typy kladív. Prvý je [anvil type hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer) a druhý c[ounter blow hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer).
 
-For the formulations and assumptions used for the two types of hammer forging operations please refer [15.3. Hammer](/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/)
-
-  
-In an **Anvil****type****hammer** , the workpiece, together with the lower die set, is placed on an anvil which is stationary. In a simple gravity drop hammer, the ram is accelerated by gravity and accumulates energy.
+Formulácie a predpoklady použité pre oba typy operácií kovania kladivom nájdete v dokumente [15.3. Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/)
 
   
-A **counterblow hammer** can be specified for movement by selecting the Counter blow hammer check box as seen in Fig. 32.1.13. After this, the other moving hammer object can be specified as well as the mass of the other moving hammer. The mass of the objects do not have to be equal but the total energy is split between the two hammer dies.
+Pri **kladive typu „Anvil“**** sa obrobok spolu so spodnou sadou foriem umiestňuje na nehybné kovadlinu. V prípade jednoduchého gravitačného kladiva sa piest zrýchľuje pôsobením gravitácie a akumuluje energiu.**
 
   
-For more details about Hammer press control refer [15.3. Hammer](/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/).
+**Kladivo s protirazom** je možné nastaviť tak, že zaškrtnete políčko „Kladivo s protirazom“, ako je znázornené na obr. 32.1.13. Následne je možné špecifikovať aj druhý pohybujúci sa objekt kladiva, ako aj hmotnosť tohto druhého pohybujúceho sa kladiva. Hmotnosti objektov nemusia byť rovnaké, celková energia sa však rozdelí medzi obe matrice kladiva.
 
-**Screw Press**
+  
+Ďalšie informácie o riadení kladivového lisu nájdete v dokumente [15.3. Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/).
 
-The unique characteristic of a screw press (See Fig. 32.1.14.) is the method of driving it. A motor drives a flywheel which is either directly connected or can be connected to a screw spindle.
+**Šnekový lis**
+
+Jedinečnou vlastnosťou šnekového lisu (pozri obr. 32.1.14.) je spôsob jeho pohonu. Motor poháňa zotrvačník, ktorý je buď priamo spojený so šnekovým vretenom, alebo sa k nemu môže pripojiť.
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image012.jpg' | relative_url }})
 
-Screw press movement control settings
+Nastavenia riadenia pohybu šnekového lisu
 
   
-**The data required to run a screw press driven tool are:**
+**Údaje potrebné na prevádzku nástroja poháňaného šnekovým lisom sú:**
 
-  * **Energy** : The Blow Energy is a measure of the total energy that the flywheel will contain when the desired speed has been reached and prior to engaging the clutch. The units for blow energy in English units are klb-in and in SI units are N-mm.
+  * **Energia**: Energia rozbehu je veličina vyjadrujúca celkovú energiu, ktorú bude zotrvačník obsahovať po dosiahnutí požadovanej rýchlosti a pred zapojením spojky. Jednotky pre energiu rozbehu sú v anglickom systéme klb-in a v systéme SI N-mm.
 
-  * **Blow Efficiency:** The Blow Efficiency represents the fraction of the total energy that will be converted to deformation energy. The rest of the energy is absorbed through the clutch mechanism, friction and the machine frame. There are no units for this quantity. In Forming express only constant value we can use but in forming operation user can also define function of force, for more information refer [15.4. Screw Press.](/docs/sk/pre_processor/15_movement_controls_definition/15_4_screw_press/)
+  * **Účinnosť vyfukovania:** Účinnosť vyfukovania predstavuje podiel celkovej energie, ktorý sa premení na energiu deformácie. Zvyšná energia sa absorbuje prostredníctvom spojkového mechanizmu, trenia a rámu stroja. Táto veličina nemá žiadne jednotky. V programe Forming Express môžeme použiť iba konštantnú hodnotu, avšak pri formovacích operáciách môže používateľ definovať aj funkciu sily. Ďalšie informácie nájdete v [15.4. Screw Press.](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/).
 
-  * **Moment of Inertia** : The Moment of Inertia is the moment of inertia of the flywheel. The English units of inertia are klb*in*s2 and the SI units are N-mm*s2. The mass moment of inertia for a circular disc with the Z-axis perpendicular to the center is I = 2 ET /ω2 where ET is the total energy of the flywheel, and ω is the angular velocity in radians per second.
+  * **Moment zotrvačnosti**: Moment zotrvačnosti je moment zotrvačnosti zotrvačníka. Jednotky zotrvačnosti v anglickom systéme sú klb·in·s², v systéme SI sú to N·mm·s². Moment zotrvačnosti pre kruhový disk s osou Z kolmou na stred je I = 2 ET /ω², kde ET je celková energia zotrvačníka a ω je uhlová rýchlosť v radiánoch za sekundu.
 
-  * **Ram Displacement or Lead screw pitch** : The Ram Displacement specifies the distance per revolution of the flywheel that the screw will advance. This helps in determining the linear velocity of the ram. The English units for Ram Displacement are inch/revolution, while the SI units are mm/revolution. If only the pitch angle and diameter of the spindle is known, the Ram Displacement can be calculated using πdsin(θt) where d is the diameter of spindle and θt is the pitch angle of the spindle.
+  * **Posun piestu alebo stúpanie vodiacich skrutiek**: Posun piestu udáva vzdialenosť, o ktorú sa skrutka posunie pri jednej otáčke zotrvačníka. To pomáha pri určovaní lineárnej rýchlosti piestu. Jednotkami v anglickom systéme pre posun piestu sú palce na otáčku, zatiaľ čo jednotkami v systéme SI sú milimetre na otáčku. Ak sú známe len uhol stúpania a priemer vretena, posun ramena možno vypočítať pomocou vzorca πdsin(θt), kde d je priemer vretena a θt je uhol stúpania vretena.
 
   
-For more details about Screw press refer refer [15.4. Screw Press.](/docs/sk/pre_processor/15_movement_controls_definition/15_4_screw_press/)
+Ďalšie informácie o šnekovom lise nájdete v katalógu [15.4. Screw Press.](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/)
 
-## Bottom Die
+## Spodná forma
 
-For Bottom Die, user can define all the required details like Geometry, mesh, Material and BCC as explained for the workpiece object.
+V prípade spodnej formy môže používateľ definovať všetky potrebné údaje, ako sú geometria, sieť, materiál a BCC, tak ako bolo vysvetlené v prípade objektu obrobku.
 
-## Positioning
+## Polohovanie
 
-Below Fig. 32.1.15. shows the positioning window. 
+Na obr. 32.1.15. je zobrazené okno na nastavenie polohy. 
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image014.jpg' | relative_url }})
 
-Positioning window
+Okno na nastavenie polohy
 
-**Automatic Positioning![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }})**
+**Automatické polohovanie ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }})**
 
-By clicking on this button, system automatically Positions the Objects with respect to the top die movement direction, this option works best for simple setup with three objects work piece, top die and bottom die.
+Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na smer pohybu hornej matrice; táto možnosť sa najlepšie hodí pre jednoduché nastavenie s tromi objektmi – obrobkom, hornou matricou a spodnou matricou.
 
-**Positioning Objects![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) **
+**Umiestňovanie objektov ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) **
 
-By clicking on this button, user can position the objects in required directions.Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 32.1.16. For more information about these options, please refer [19\. Object Positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/)
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov.K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 32.1.16. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image018.jpg' | relative_url }})
 
-Object positioning window
+Okno na umiestňovanie objektov
 
-## Scheduled Positioning
+## Plánované polohovanie
 
-When user is not sure about the location of an object, scheduled positioning will help to position the objects accurately.
-
-  
-Schedule positioning allows the user to define the positioning for objects in MO setup for successive operations for which DB is not generated so that the objects are positioned before generation of DB while running simulation in Batch mode.
-
-## Contact 
-
-The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined. 
+Ak si používateľ nie je istý umiestnením objektu, naplánované umiestňovanie mu pomôže objekty presne umiestniť.
 
   
-Inter-Object relations define what objects can contact each other, and how contacted objects will behave while in contact. Contact relations, Inter-Object boundary conditions, Friction and Heat transfer relations are set here for each object pair.(See Fig. 32.1.17.) Generated contacts message will display in the message tab below the graphics window.
+Funkcia plánovania umiestnenia umožňuje používateľovi definovať umiestnenie objektov v nastaveniach MO pre nasledujúce operácie, pre ktoré sa nevytvára databáza (DB), tak, aby boli objekty umiestnené ešte pred vytvorením databázy počas spustenia simulácie v dávkovom režime.
+
+## Kontakt 
+
+Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty v simulácii vzájomne interagujú. Všetky objekty, ktoré sa v priebehu simulácie môžu navzájom dotýkať, musia mať definovaný kontaktný vzťah. 
+
+  
+Vzťahy medzi objektmi určujú, ktoré objekty sa môžu navzájom dotýkať a ako sa dotýkajúce sa objekty budú správať počas kontaktu. Pre každú dvojicu objektov sa tu nastavujú vzťahy dotyku, okrajové podmienky medzi objektmi, trenie a prenos tepla. (Pozri obr. 32.1.17.) Vygenerované správy o kontaktoch sa zobrazia na karte Správy pod grafickým oknom.
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image015.jpg' | relative_url }})
 
-Contact generation window
+Okno na generovanie kontaktov
 
   
-User can select the Shear or Coulomb friction type and define the friction coefficient. The lubricant used on the tooling plays a large role in the amount of friction that exists between the tooling and workpiece. The friction in turn affects the metal flow at contact surfaces.
+Používateľ si môže zvoliť typ trenia – šmykové alebo Coulombovo – a určiť koeficient trenia. Mazivo použité na nástroji má veľký vplyv na veľkosť trenia medzi nástrojom a obrobkom. Trenie zase ovplyvňuje tok kovu na kontaktných plochách.
 
-Typical values are provided for shear friction as shown below,
+Pre šmykové trenie sú uvedené typické hodnoty, ako je znázornené nižšie,
 
-(0.08) for cold forming (carbide dies) processes
+(0,08) pre procesy tvárnenia za studena (karbidové matrice)
 
-(0.12) for cold forming (Steel dies) processes
+(0,12) pre procesy tvárnenia za studena (oceľové formy)
 
-(0.25) for warm forming processes
+(0,25) pre procesy tepelného tvárnenia
 
-( 0.3) for lubricated hot forging processes
+(0,3) pre procesy mazaného kovania za tepla
 
-(0.7) for un lubricated (dry) hot forging processes
+(0,7) pre procesy horúceho kovania bez mazania (suché)
 
-(0.4) for Aluminium forming processes
+(0,4) pre procesy tvárnenia hliníka
 
   
-Conduction heat transfer coefficient value can be defined by user and also typical values are provided by system those are,
+Hodnotu koeficientu prenosu tepla vedením si môže užívateľ nastaviť sám; systém zároveň ponúka aj typické hodnoty, a to:
 
-(1 N/sec/mm/C or 0.0003 Btu/sec/in^2/F) for Free Resting
+(1 N/s/mm/°C alebo 0,0003 Btu/s/in²/°F) pre stav voľného pokoja
 
-(1 N/sec/mm/C or 0.0003 Btu/sec/in^2/F) for Dwelling
+(1 N/s/mm/°C alebo 0,0003 Btu/s/in²/°F) pre obytné priestory
 
-(11 N/sec/mm/C or 0.004 Btu/sec/in^2/F) for Forming
+(11 N/s/mm/°C alebo 0,004 Btu/s/in²/°F) pri tvárnení
 
-## Stopping Controls
+## Ovládacie prvky na zastavenie
 
-The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on maximum number of time steps simulated or the maximum accumulated elemental strain or the maximum process time or maximum stroke or minimum velocity or maximum load on the primary object. A simulation will be stopped when the condition of any of the stopping parameters are met. (See Fig. 32.1.18.)
+Parametre ukončenia určujú čas priebehu, po ktorom sa simulácia ukončí. Simuláciu je možné ukončiť na základe maximálneho počtu simulovaných časových krokov, maximálnej kumulovanej elementárnej deformácie, maximálneho času priebehu, maximálneho zdvihu, minimálnej rýchlosti alebo maximálneho zaťaženia primárneho objektu. Simulácia sa zastaví, keď bude splnená podmienka ktoréhokoľvek z týchto parametrov ukončenia. (Pozri obr. 32.1.18.)
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image016.jpg' | relative_url }})
 
-Stopping controls window
+Okno ovládacích prvkov zastavenia
 
   
-For more information, please refer [Stopping Controls in Forming 2D setup.](../33_forming/33_1_2d_forming_setup.htm#33_1_8_Stopping_Controls)
+Ďalšie informácie nájdete v dokumente [Stopping Controls in Forming 2D setup.](../33_forming/33_1_2d_forming_setup.htm#33_1_8_Stopping_Controls)
 
-## Step controls
+## Ovládacie prvky krokov
 
-The DEFORM system solves time dependent non-linear problems by generating a series of FEM solutions at discrete time increments. At each time increment, the velocities, temperatures, and other key variables of each node in the finite element mesh are determined based on boundary conditions, thermo mechanical properties of the workpiece materials and possibly solutions at previous steps. Other state variables are derived from these key values, and updated for each time increment. The length of this time step, and number of steps simulated, are determined based on the information specified in the step controls menu. Fig. 32.1.19. Shows simulation control options in Guided mode, the basic options required for forming operation are provided here while Expert mode provides more detailed options. 
+Systém DEFORM rieši časovo závislé nelineárne úlohy generovaním série riešení metódou konečných prvkov (FEM) v diskrétnych časových krokoch. V každom časovom kroku sa rýchlosti, teploty a ďalšie kľúčové premenné každého uzla v sieti konečných prvkov určujú na základe okrajových podmienok, termomechanických vlastností materiálov obrobku a prípadne riešení z predchádzajúcich krokov. Ostatné stavové premenné sa odvodzujú z týchto kľúčových hodnôt a aktualizujú sa pri každom časovom kroku. Dĺžka tohto časového kroku a počet simulovaných krokov sa určujú na základe informácií zadaných v ponuke nastavení krokov. Obr. 32.1.19. Ukazuje možnosti ovládania simulácie v režime „Guided“ (Vedený); tu sú k dispozícii základné možnosti potrebné pre operáciu tvárnenia, zatiaľ čo režim „Expert“ (Expertný) ponúka podrobnejšie možnosti. 
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image017.jpg' | relative_url }})
 
-Guided mode Step controls window
+Okno ovládacích prvkov krokov v režime s navádzaním
 
   
-**Number of simulation steps (NSTEP)**
+**Počet simulačných krokov (NSTEP)**
 
-The number of simulation steps parameter defines the number of steps to run from the starting step number. The simulation will stop after this number of simulation steps have run, unless stopping control is triggered to stop the simulation or if the simulation runs into a problem. For example, if the starting step number is -35 ([NSTART](/docs/sk/keyword_documentation/n/nstart/)), and 30 steps ([NSTEP](/docs/sk/keyword_documentation/n/nstep/)) are specified, the simulation will stop after the 65th step, unless another stopping control is triggered first. In case of reheating process it could be Temp. to stop reheating.
+Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú spustiť od počiatočného čísla kroku. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí príkaz na zastavenie simulácie alebo ak simulácia nenarazí na problém. Napríklad, ak je počiatočné číslo kroku -35 ([NSTART](/docs/en/keyword_documentation/n/nstart/)) a je špecifikovaných 30 krokov ([NSTEP](/docs/en/keyword_documentation/n/nstep/)), simulácia sa zastaví po 65. kroku, pokiaľ sa skôr nespustí iný príkaz na zastavenie. V prípade procesu opätovného ohrevu to môže byť teplota, pri ktorej sa má opätovný ohrievanie zastaviť.
 
-For more information, please refer [Stopping Controls.](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/)
-
-  
-**Step increment to save (STPINC)**
-
-The step increment ([STPINC](/docs/sk/keyword_documentation/s/stpinc/)) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
+Ďalšie informácie nájdete v dokumente [Stopping Controls.](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/)
 
   
-**Primary die (PDIE)**
+**Krok pri ukladaní (STPINC)**
 
-The primary die ([PDIE](/docs/sk/keyword_documentation/p/pdie/)) is the object for which many stopping and stepping criteria are defined. For example, stopping distance based on primary die stroke. When the stroke of the object defined as the primary die reaches the value for primary die displacement, the simulation will be stopped whether or not more steps were specified. The Step by Stroke feature determines step size based on the movement of the primary die. The primary die is usually assigned to the object most closely controlled by the forging machinery. For example, the die attached to the ram of a mechanical press would be designated as the primary object. The primary die is usually assigned to Top Die in case of Hammer / Screw Press.
-
-**Step increment control ([DSMAX](/docs/sk/keyword_documentation/d/dsmax/)/[DTMAX](/docs/sk/keyword_documentation/d/dtmax/))**
-
-Solution step size can be controlled by time step or by displacement of the primary die. If stroke per step is specified, the primary die will move the specified amount in each time step. The total movement of the primary die will be the displacement per step multiplied by the total number of steps. If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.
-
-The definition of step increment control have been enhanced to include both the time and stroke dependent step functions,these options are available under Expert mode. This means, step size (both time per step and stroke per step) can now be defined as a function of time or stroke. This functionality enables finer resolution of saved model information, where it is desired. (typically towards the end of the stroke, where steep changes of die load and cavity filling or flash formation can take place)
+Krok prírastku ([STPINC](/docs/en/keyword_documentation/s/stpinc/)), ktorý sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nemusí sa nutne uložiť do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať väčší úložný priestor.
 
   
-Stroke per step is frequently more intuitive. However, time per step must be specified for any problem in which there is no die movement (such as heat transfer), or for any problem where force control is used.  
-Fig. 32.1.20. shows the Simulation Controls in Expert mode.
+**Primárny čip (PDIE)**
+
+Primárna matrica ([PDIE](/docs/en/keyword_documentation/p/pdie/)) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad brzdná vzdialenosť založená na zdvihu primárnej matrice. Keď zdvih objektu definovaného ako primárna matrica dosiahne hodnotu posunu primárnej matrice, simulácia sa zastaví bez ohľadu na to, či boli špecifikované ďalšie kroky. Funkcia „Krok podľa zdvihu“ určuje veľkosť kroku na základe pohybu primárnej matrice. Primárna matrica sa zvyčajne priraďuje k objektu, ktorý je najviac riadený kováčskym strojom. Napríklad matrica pripevnená k piestu mechanického lisu by bola označená ako primárny objekt. V prípade kladivového alebo skrutkového lisu sa primárna matrica zvyčajne priraďuje k hornej matrici.
+
+**Ovládanie krokového posunu ([DSMAX](/docs/en/keyword_documentation/d/dsmax/)/[DTMAX](/docs/en/keyword_documentation/d/dtmax/))**
+
+Veľkosť kroku riešenia je možné riadiť časovým krokom alebo posunom primárnej matrice. Ak je špecifikovaný zdvih na krok, primárna matrica sa v každom časovom kroku posunie o zadanú hodnotu. Celkový posun primárnej matrice bude rovný posunu na krok vynásobenému celkovým počtom krokov. Ak je zadaný čas na krok, použije sa časový interval na krok. Posun matrice na krok bude rovný časovému kroku vynásobenému rýchlosťou matrice.
+
+Definícia riadenia krokového prírastku bola rozšírená tak, aby zahŕňala krokové funkcie závislé od času aj od zdvihu; tieto možnosti sú k dispozícii v režime Expert. To znamená, že veľkosť kroku (či už ide o čas na krok alebo zdvih na krok) je teraz možné definovať ako funkciu času alebo zdvihu. Táto funkcia umožňuje v prípade potreby dosiahnuť jemnejšie rozlíšenie uložených informácií o modeli. (typicky na konci zdvihu, kde môžu nastať prudké zmeny zaťaženia formy, plnenia dutiny alebo tvorby prebytku materiálu)
+
+  
+Počet zdvihov na krok je často intuitívnejší. Čas na krok je však potrebné určiť pri každej úlohe, v ktorej nedochádza k pohybu matice (napríklad pri prenose tepla), alebo pri každej úlohe, kde sa používa regulácia sily.  
+Na obr. 32.1.20. sú zobrazené ovládacie prvky simulácie v režime Expert.
 
   
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image018.jpg' | relative_url }})
 
-Expert mode Simulation controls window
+Okno ovládacích prvkov simulácie v režime pre pokročilých
 
-Options defined under Simulation Controls (See Fig. 32.1.20. ) control the numerical behavior of the solution. Main controls details with specifying the simulation title, unit system, geometry type, etc.
+Možnosti definované v časti „Ovládacie prvky simulácie“ (pozri obr. 32.1.20) riadia numerické správanie riešenia. Hlavné ovládacie prvky slúžia na zadanie názvu simulácie, sústavy jednotiek, typu geometrie atď.
 
-Step and stopping controls are used to specify the time step, the total number of steps and the criteria used to terminate the simulation.
+Ovládacie prvky pre kroky a ukončenie slúžia na určenie časového kroku, celkového počtu krokov a kritérií na ukončenie simulácie.
 
-Processing conditions like the environment temperature, convection coefficient can be specified here.
+Tu je možné zadať podmienky spracovania, ako napríklad teplotu okolia a konvekčný koeficient.
 
-For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
 
-## Generate DB
+## Vytvoriť databázu
 
-**Check Data** It checks the Data. If Data is correct we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.
+**Kontrola údajov** Preverí sa správnosť údajov. Ak sú údaje správne, môžeme vytvoriť databázu. Ak sa však pri kontrole údajov vyskytnú chyby alebo varovania, je potrebné ich opraviť pred vytvorením databázy. Chyby zabránia vytvoreniu databázy, zatiaľ čo varovania vytvorenie databázy neumožnia.
 
-**Generate Database**
+**Vytvoriť databázu**
 
-By clicking on this button, it generated the Database for the setup.(See Fig. 32.1.21.)
+Kliknutím na toto tlačidlo sa vygenerovala databáza pre nastavenie. (Pozri obr. 32.1.21.)
 
   
-**Append Key file**
+**Pridať súbor s kľúčom**
 
-Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only.key file can be changed and simulation can be resubmitted.
+Akékoľvek informácie, ktoré nie sú definované v sprievodcovi, ale napriek tomu sa vzťahujú na daný proces, je možné načítať ako súbor s príponou .key. Táto možnosť je užitočná aj v prípadoch, keď je potrebné zmeniť len niekoľko hodnôt – tieto hodnoty je možné definovať v súbore s príponou .key a následne stačí zmeniť len tento súbor a simuláciu je možné odoslať znovu.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image024.jpg' | relative_url }})
 
-Generate DB window
+Okno „Vytvoriť databázu“
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[9\. Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+[9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
 
-[15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[15\. Movement Controls Settings](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 
-[32\. Introduction to Multi Blow Hammer](/docs/sk/operation_templates/32_multi_blow_forging/32_introduction_to_multi_blow_forging/)
+[32\. Introduction to Multi Blow Hammer](/docs/en/operation_templates/32_multi_blow_forging/32_introduction_to_multi_blow_forging/)
 
-[32.2. 3D Multi Blow Forging setup](/docs/sk/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/)
+[32.2. 3D Multi Blow Forging setup](/docs/en/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/)

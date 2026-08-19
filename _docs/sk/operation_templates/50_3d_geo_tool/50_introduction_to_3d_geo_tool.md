@@ -1,12 +1,12 @@
 ---
 lang: sk
-title: "50. Introduction to 3D GEO TOOL"
+title: "50. Úvod do programu 3D GEO TOOL"
 ---
 
-# 50\. Introduction to 3D GEO Tool
+# 50. Úvod do nástroja 3D GEO
 
-3D Geometry tool is used to repair a complicated illegal 3D geometry using different options. The Geometry tool has an ability to repair illegal geometry which contains folds, cracks and illegal polygons. Geometry tool is also having an ability to modify the existing geometry using options like morphing, Offsetting, Extruding and Boolean.
+Nástroj 3D Geometria slúži na opravu zložitej neplatnej 3D geometrie pomocou rôznych možností. Nástroj Geometria dokáže opraviť neplatnú geometriu, ktorá obsahuje záhyby, trhliny a neplatné mnohouholníky. Nástroj Geometria tiež umožňuje upravovať existujúcu geometriu pomocou funkcií, ako sú morfing, posun, extrudovanie a boolovské operácie.
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[50.1. 3D Geo Tool](/docs/sk/operation_templates/50_3d_geo_tool/50_1_3d_geo_tool/)
+[50.1. 3D Geo Tool](/docs/en/operation_templates/50_3d_geo_tool/50_1_3d_geo_tool/)

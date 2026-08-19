@@ -1,125 +1,125 @@
 ---
 lang: sk
-title: "46.1. Copy Mirroring"
+title: "46.1. Zrkadlenie kópií"
 ---
 
-# 46.1. Copy/Mirroring
+# 46.1. Kopírovanie/zrkadlenie
 
-46.1.1. How to add Copy/Mirroring Operation
+46.1.1. Ako pridať operáciu kopírovania/zrkadlenia
 
-[46.1.2. Adding Copy/Mirroring Operation](46_1_copy_mirroring.htm#46_1_2_Adding_Copy/Mirroring_Operation)
+46.1.2. Pridanie operácie kopírovania/zrkadlenia
 
-46.1.3. Objects Page
+46.1.3. Stránka „Objekty“
 
-46.1.4. Object Page
+46.1.4. Stránka objektu
 
-46.1.5. Mirroring Parameters Page
+46.1.5. Stránka parametrov zrkadlenia
 
-46.1.5.1. For Batch mode
+46.1.5.1. Pre režim hromadného spracovania
 
-46.1.5.2. Mirroring/Copying in Interactive mode
+46.1.5.2. Zrkadlenie/kopírovanie v interaktívnom režime
 
-46.1.6. Generate DB
+46.1.6. Vytvorenie databázy
 
-46.1.7. Continue with subsequent operation
+46.1.7. Pokračovať v ďalšej operácii
 
-46.1.8. Post Processing results for Copy/Mirroring Operation
+46.1.8. Výsledky následného spracovania pri operácii kopírovania/zrkadlenia
 
-## How to add Copy/Mirroring Operation
+## Ako pridať operáciu kopírovania/zrkadlenia
 
-Copy/Mirroring operation will be added as subsequent operation to an operation having symmetry models in multiple operations to mirror the symmetry object along the symmetry plane. Copy/Mirroring operation can also be added as first operation and import symmetry objects to continue the multiple operations setup. Copy/ Mirroring operation is explained in this manual using Spike_ForgingBlow1.key file which consists of symmetry setup. The keyword file consists of 90 degree symmetry setup which will be copied to generate 180 degree model.
+Operácia kopírovania/zrkadlenia sa pridá ako nasledujúca operácia k operácii obsahujúcej symetrické modely v rámci viacerých operácií, aby sa symetrický objekt zrkadlil pozdĺž symetrickej roviny. Operáciu kopírovania/zrkadlenia je možné pridať aj ako prvú operáciu a importovať symetrické objekty, aby sa pokračovalo v nastavení viacerých operácií. Operácia Kopírovanie/Zrkadlenie je v tejto príručke vysvetlená na príklade súboru Spike_ForgingBlow1.key, ktorý obsahuje nastavenie symetrie. Tento súbor kľúčových slov obsahuje nastavenie 90-stupňovej symetrie, ktoré sa skopíruje na vytvorenie 180-stupňového modelu.
 
-Before adding the Copy/Mirroring operation we need to set up forming operation using the Sipke_ForgingBlow1.Key file, so we will open the MO wizard in SI units > add 3D forming operation > import the Spike_ForgingBlow1.KEY as shown in Fig. 46.1.1. > Continue till generate DB and run the simulation.
+Pred pridaním operácie kopírovania/zrkadlenia musíme nastaviť operáciu tvárnenia pomocou súboru Sipke_ForgingBlow1.Key, preto otvoríme sprievodcu MO v jednotkách SI > pridáme 3D operáciu tvárnenia > naimportujeme súbor Sipke_ForgingBlow1.Key, ako je znázornené na obr. 46.1.1. > Pokračujte až po vygenerovanie databázy a spustite simuláciu.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0001.jpg' | relative_url }})
 
-Importing the 3D Spike key file
+Import súboru 3D Spike Key
 
-## Adding Copy/Mirroring Operation
+## Pridanie operácie kopírovania/zrkadlenia
 
-After Running the first Forming operation simulation, we can add the Copy/Mirroring operation from explorer’s Simulation operator group as shown in [Fig. 46.1.2.](46_1_copy_mirroring.htm#Fig_46_1_2_Adding_Copy/Mirroring_Operation) Click on Copy/Mirroring operation, we will get the “Setup type” pop-up as shown in Fig. 46.1.3.
+Po spustení prvej simulácie operácie tvarovania môžeme pridať operáciu Kopírovanie/Zrkadlenie zo skupiny operátorov Simulácia v prehliadači, ako je znázornené na obrázku [Fig. 46.1.2.](46_1_copy_mirroring.htm#Fig_46_1_2_Adding_Copy/Mirroring_Operation). Po kliknutí na operáciu Kopírovanie/Zrkadlenie sa zobrazí vyskakovacie okno „Typ nastavenia“, ako je znázornené na obr. 46.1.3.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0002.jpg' | relative_url }})
 
-Adding Copy/Mirroring Operation
+Pridanie operácie kopírovania/zrkadlenia
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0003.jpg' | relative_url }})
 
-Setup type Pop-up
+Typ nastavenia: Vyskakovacie okno
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0004.jpg' | relative_url }})
 
-Copy/Mirroring Operation in Batch Mode
+Operácia kopírovania/zrkadlenia v dávkovom režime
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0005.jpg' | relative_url }})
 
-Copy/Mirroring Operation in Interactive Mode
+Operácia kopírovania/zrkadlenia v interaktívnom režime
 
-## Objects Page
+## Stránka „Objekty“
 
-We can add objects using the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and if we want to delete any object, we need select the respective object and click on ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) button as shown in the Fig. 46.1.6. We can retain the objects which are to be mirrored and delete other objects and user can also add new objects and import data from other keyword/ database or geometry files.
+Objekty môžeme pridávať pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a ak chceme nejaký objekt odstrániť, musíme vybrať príslušný objekt a kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}), ako je znázornené na obr. 46.1.6. Môžeme zachovať objekty, ktoré sa majú zrkadliť, a ostatné objekty odstrániť; používateľ môže tiež pridávať nové objekty a importovať údaje z iných súborov kľúčových slov, databáz alebo geometrických súborov.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0006.jpg' | relative_url }})
 
-Objects Page
+Stránka objektov
 
-## Object Page
+## Stránka objektu
 
-If the user is in batch mode setup than all the objects will be of Read from DB object type except newly added objects. If set up type is “Interactive” then user can change the object type. (See Fig. 46.1.7.)
+Ak je používateľ v nastavení dávkového režimu, všetky objekty budú mať typ „Načítanie z databázy“, s výnimkou novo pridaných objektov. Ak je nastavený typ „Interaktívny“, používateľ môže typ objektu zmeniť. (Pozri obr. 46.1.7.)
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0007.jpg' | relative_url }})
 
-Workpiece Object Page
+Stránka objektu obrobku
 
-## Mirroring Parameters Page
+## Stránka parametrov zrkadlenia
 
-### For Batch mode 
+### Pre režim hromadného spracovania 
 
-The user can add the Mirroring by selecting the ![]({{ '/assets/icons/pre_icons/mo_add_mirroring_radio_option.jpg' | relative_url }}) option in the Edit mode tab of “Mirroring Parameters” and if we want to delete the added mirroring, we need to select the ![]({{ '/assets/icons/pre_icons/mo_delete_mirroring_radio_option.jpg' | relative_url }}) option in the Edit mode tab of “Mirroring Parameters”. The user can also define the tolerance value for the mirroring object as shown in the Fig. 46.1.8. The Mirror plane data will be updated during DB Generation.
+Používateľ môže pridať zrkadlenie výberom možnosti ![]({{ '/assets/icons/pre_icons/mo_add_mirroring_radio_option.jpg' | relative_url }}) na karte „Režim úprav“ v časti „Parametre zrkadlenia“ a ak chceme pridané zrkadlenie odstrániť, musíme vybrať možnosť ![]({{ '/assets/icons/pre_icons/mo_delete_mirroring_radio_option.jpg' | relative_url }}) na karte „Režim úprav“ v časti „Parametre zrkadlenia“. Používateľ môže tiež definovať hodnotu tolerancie pre zrkadlený objekt, ako je znázornené na obr. 46.1.8. Údaje o zrkadlovej rovine sa aktualizujú počas generovania databázy.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0008.jpg' | relative_url }})
 
-Mirroring Parameters Page (For Batch Mode)
+Stránka parametrov zrkadlenia (pre dávkový režim)
 
-### Mirroring/Copying in Interactive mode 
+### Zrkadlenie/kopírovanie v interaktívnom režime 
 
-The user can add the Mirroring by selecting the ![]({{ '/assets/icons/pre_icons/mo_add_mirroring_radio_option.jpg' | relative_url }}) option in the Edit mode tab of “Mirroring Parameters” and if we want to delete the added mirroring, we need to select the ![]({{ '/assets/icons/pre_icons/mo_delete_mirroring_radio_option.jpg' | relative_url }}) option in the Edit mode tab of “Mirroring Parameters”. User can also define the tolerance value for the mirroring object. After selecting the required edit mode and defining the tolerance value, user need to click on ![]({{ '/assets/icons/pre_icons/mo_merge_button.jpg' | relative_url }}) button to generate the object, see Fig. 46.1.9. that shows mirrored object.
+Používateľ môže pridať zrkadlenie výberom možnosti ![]({{ '/assets/icons/pre_icons/mo_add_mirroring_radio_option.jpg' | relative_url }}) na karte „Režim úpravy“ v okne „Parametre zrkadlenia“ a ak chceme pridané zrkadlenie odstrániť, musíme vybrať možnosť ![]({{ '/assets/icons/pre_icons/mo_delete_mirroring_radio_option.jpg' | relative_url }}) na karte „Režim úpravy“ v okne „Parametre zrkadlenia“. Používateľ môže tiež definovať hodnotu tolerancie pre zrkadlený objekt. Po výbere požadovaného režimu úprav a definovaní hodnoty tolerancie musí používateľ kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_merge_button.jpg' | relative_url }}) na vytvorenie objektu, pozri obr. 46.1.9., ktorý zobrazuje zrkadlený objekt.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0009.jpg' | relative_url }})
 
-Mirroring Parameters Page (For Interactive Mode)
+Stránka parametrov zrkadlenia (pre interaktívny režim)
 
-## Generate DB
+## Vytvoriť databázu
 
-If the first operation simulation is completed then during the Copy/Mirroring DB Generation, the Mirrored objects are automatically updated as shown in the Fig. 46.1.10. In case if previous operation is not simulated then it shows the preview with objects without simulation output.
+Ak je simulácia prvej operácie dokončená, počas vytvárania kópie/zrkadlenia databázy sa zrkadlené objekty automaticky aktualizujú, ako je znázornené na obr. 46.1.10. V prípade, že predchádzajúca operácia nebola simulovaná, zobrazí sa náhľad s objektmi bez výsledkov simulácie.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0010.jpg' | relative_url }})
 
-DB Generation
+Vytváranie databázy
 
-## Continue with subsequent operation
+## Pokračovať v ďalšej operácii
 
-After completing the Copy/Mirroring Setup we can add the 3D Forming Operation from Explorer as shown in the Fig. 46.1.11.
+Po dokončení nastavenia kopírovania/zrkadlenia môžeme pridať operáciu 3D tvarovania z Průzkumníka, ako je znázornené na obr. 46.1.11.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0011.jpg' | relative_url }})
 
-Adding 3D Forming Operation after Copy/Mirroring Operation
+Pridanie operácie 3D tvarovania po operácii kopírovania/zrkadlenia
 
   
-Now we can define the 2nd forming operation setup data after mirroring the objects as shown in the [Fig. 46.1.12.](46_1_copy_mirroring.htm#Fig_46_1_12_3D_Forming_Operation_after_Copy/Mirroring_Operation_Batch_Mode) and Fig. 46.1.13.
+Teraz môžeme po zrkadlení objektov, ako je znázornené v [Fig. 46.1.12.](46_1_copy_mirroring.htm#Fig_46_1_12_3D_Forming_Operation_after_Copy/Mirroring_Operation_Batch_Mode) a na obr. 46.1.13, definovať údaje o nastavení druhej formovacej operácie.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0012.jpg' | relative_url }})
 
-3D Forming Operation after Copy/Mirroring Operation (Batch Mode)
+3D tvarovacia operácia po operácii kopírovania/zrkadlenia (dávkový režim)
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0013.jpg' | relative_url }})
 
-3D Forming Operation after Copy/Mirroring Operation (Interactive Mode)
+3D tvarovanie po operácii kopírovania/zrkadlenia (interaktívny režim)
 
-## Post Processing results for Copy/Mirroring Operation
+## Výsledky následného spracovania pri operácii kopírovania/zrkadlenia
 
-From MO Post, user can review the Copy/Mirroring Operation. Selection of the Copy/Mirroring Operation step will load the respective step with mirror object. It will be having only one negative step where Mirroring model is available as shown in Fig. 46.1.14.
+V okne MO Post môže používateľ skontrolovať operáciu kopírovania/zrkadlenia. Výber kroku operácie kopírovania/zrkadlenia načíta príslušný krok so zrkadlovým objektom. Bude obsahovať iba jeden negatívny krok, v ktorom je k dispozícii zrkadlený model, ako je znázornené na obr. 46.1.14.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0014.jpg' | relative_url }})
 
-Copy/Mirroring Operation Post Mode
+Režim zverejňovania operácií kopírovania/zrkadlenia

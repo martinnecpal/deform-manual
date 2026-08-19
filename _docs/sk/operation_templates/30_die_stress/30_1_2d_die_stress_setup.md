@@ -1,269 +1,269 @@
 ---
 lang: sk
-title: "30.1. 2D Die stress setup"
+title: "30.1. Nastavenie napätia v 2D čipe"
 ---
 
-# 30.1. 2D Die stress Manual
+# 30.1. Príručka k 2D napätiu v čipe
 
-30.1.1. How to add Die stress 2D operation
+30.1.1. Ako pridať operáciu „Die stress 2D“
 
-30.1.2. Objects window
+30.1.2. Okno „Objekty“
 
-30.1.3. Object Types
+30.1.3. Typy objektov
 
-30.1.4. Dies
+30.1.4. Matrice
 
-  * General
+  * Všeobecné informácie
 
-  * Geometry
+  * Geometria
 
-  * Object Mesh
+  * Sieť objektu
 
-  * Force Interpolation
+  * Vynútená interpolácia
 
-  * Object Material
+  * Materiál predmetu
 
-  * Object boundary conditions
+  * Okrajové podmienky objektu
 
-  * Shrink fit
+  * Tepelné zúženie
 
-  * Initialize
+  * Inicializovať
 
-30.1.5. Positioning
+30.1.5. Polohovanie
 
-30.1.6. Scheduled Positioning
+30.1.6. Plánované polohovanie
 
-30.1.7. Inter-object relations
+30.1.7. Vzťahy medzi objektmi
 
-30.1.8. Simulation control
+30.1.8. Riadenie simulácie
 
-30.1.9. Generate DB
+30.1.9. Vytvorenie databázy
 
-## How to add Die stress 2D operation
+## Ako pridať 2D operáciu „Die stress“
 
-After the completion of a 2D Forming operation, Die stress 2D Operation can be added in MO wizard from explorer tab by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to Die Stress 2D from Explorer tab or we can add the Die stress operation as scheduled operation along with the Forming operation setup, user can also add operation by dragging and dropping the operation into the Operation Editor as shown in Fig. 30.1.1. If die stress operation is set up as scheduled then DB cannot be generated at the time of setup, DB is generated automatically after the completion of forming operation and die stress analysis operation is carried out. If the Die stress operation is scheduled before completion of the forming simulation then user must define scheduled positioning for the moving dies to define accurate position for force interpolation.
+Po dokončení operácie 2D tvárnenia je možné v sprievodcovi MO na karte Explorer pridať operáciu 2D namáhania formy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky „Die Stress 2D“ na karte Explorer, alebo môžeme operáciu namáhania formy pridať ako naplánovanú operáciu spolu s nastavením operácie tvárnenia. Používateľ môže operáciu pridať aj pretiahnutím a umiestnením do editora operácií, ako je znázornené na obr. 30.1.1. Ak je operácia „Die Stress“ nastavená ako naplánovaná, v čase nastavenia nie je možné vygenerovať databázu (DB); tá sa vygeneruje automaticky po dokončení operácie tvárnenia a vykonaní analýzy napätia v lisovacej forme. Ak je operácia „Die stress“ naplánovaná pred dokončením simulácie tvárnenia, musí používateľ definovať naplánované polohy pohyblivých foriem, aby určil presnú polohu pre interpoláciu síl.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image001.jpg' | relative_url }})
 
-Adding Die stress 2D operation to operation editor
+Pridanie 2D operácie „Die stress“ do editora operácií
 
-## Objects window
+## Okno „Objekty“
 
-User can add required number of additional objects for the simulation by clicking ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. Fig. 30.1.2. shows three objects passed from previous forming operation to die stress operation. User can add necessary fixtures and other components based on the setup.
+Používateľ môže pridať požadovaný počet ďalších objektov pre simuláciu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Obr. 30.1.2. znázorňuje tri objekty, ktoré prešli z predchádzajúcej operácie tvárnenia do operácie namáhania lisovacej formy. Používateľ môže na základe nastavenia pridať potrebné upínacie prvky a ďalšie komponenty.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image002.jpg' | relative_url }})
 
-Objects window
+Okno „Objekty“
 
-## Object Types
+## Typy objektov
 
-**Workpiece** : Workpiece is an plastic object type which is treated as read from DB as the data for it is read from previous operation. User can also import object using Import object option available in Object General Page for new objects added at this operation.
+**Obrobok**: Obrobok je typ plastového objektu, ktorý sa považuje za načítaný z databázy, keďže údaje o ňom sa čítajú z predchádzajúcej operácie. Používateľ môže tiež importovať objekt pomocou možnosti „Importovať objekt“, ktorá je k dispozícii na stránke „Všeobecné nastavenia objektu“ pre nové objekty pridané v tejto operácii.
 
-**Note** : User has option to import object even for workpiece which are actually read form DB hence user is advised not to import objects for workpiece type as these will be deleted at the time of DB generation and will not be considered for analysis.
+**Poznámka**: Používateľ má možnosť importovať objekty aj pre obrobky, ktoré sa v skutočnosti načítajú z databázy; preto sa používateľovi odporúča, aby neimportoval objekty pre tento typ obrobku, keďže tieto budú pri generovaní databázy odstránené a nebudú zohľadnené pri analýze.
 
-**Dies** : The objects that are defined as Dies will be treated as elastic object. These objects will be meshed and forces are interpolated from Workpiece.
+**Formy**: Objekty definované ako formy sa budú považovať za pružné objekty. Tieto objekty budú pokryté sieťou a sily sa budú interpolovať z obrobku.
 
-**Fixture** : The objects that are defined as fixtures will be considered as rigid and no mesh is required for these objects unless heat transfer calculations are required to be carried out.
+**Fixture**: Objekty definované ako „fixtures“ sa budú považovať za tuhé a pre tieto objekty nie je potrebná žiadna sieť, pokiaľ sa nemajú vykonávať výpočty prenosu tepla.
 
-**Workpiece:**
+**Obrobok:**
 
-As we do not need the workpiece for die stress analysis, it will be removed during the DB generation, this object will not appear in the post processor mode. user can neglect the workpiece by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button (See Fig. 30.1.3.).
+Keďže obrobok nepotrebujeme na analýzu napätia v lisovacej forme, bude počas generovania DB odstránený, a tento objekt sa v režime postprocesora nezobrazí. Používateľ môže obrobok vynechať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) (pozri obr. 30.1.3.).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image003.jpg' | relative_url }})
 
-Workpiece Window
+Okno obrobku
 
-## Dies
+## Matrice
 
-**General**  
-In this window user can set temperature for the object and select type of the object as shown in Fig. 30.1.4. For dies by default Object type is selected as Elastic.
+**Všeobecné informácie**  
+V tomto okne môže používateľ nastaviť teplotu objektu a vybrať typ objektu, ako je znázornené na obr. 30.1.4. V prípade foriem je ako predvolený typ objektu nastavený typ „Elastic“.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image004.jpg' | relative_url }})
 
-Top die window
+Okienko hornej matrice
 
-**Geometry**  
-User can define the new geometry or modify the existing geometry by using options from geometry window . Guided mode provides basic options for defining geometry (See [Fig. 30.1.5.]()). If user need other advanced option, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) . Expert mode provides various options like Extract border, construct by subtraction and show geometry inside mark (See Fig. 30.1.6.). Geometry can also be imported using Import geometry from File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option or using Import from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option. user can also import geometries in other formats such as .DXF and .IGES. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 2D geometries please refer to [12.2. 2D Geometry Editing](/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+**Geometria**  
+Používateľ môže definovať novú geometriu alebo upraviť existujúcu geometriu pomocou možností v okne geometrie. Režim s návodom ponúka základné možnosti na definovanie geometrie (pozri [Fig. 30.1.5.]()). Ak používateľ potrebuje ďalšie pokročilé možnosti, musí prejsť do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expertný režim ponúka rôzne možnosti, ako napríklad Extrahovať ohraničenie, konštruovať odčítaním a zobraziť geometriu vnútri značky (pozri obr. 30.1.6.). Geometriu je možné importovať aj pomocou možnosti Importovať geometriu zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Importovať z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Používateľ môže importovať geometrie aj v iných formátoch, ako sú .DXF a .IGES. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii primitívy. Ďalšie informácie o vytváraní a úprave 2D geometrií nájdete v [12.2. 2D Geometry Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image005.jpg' | relative_url }})
 
-Geometry window in Guided mode
+Okno „Geometria“ v režime s návodom
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image006.jpg' | relative_url }})
 
-Geometry Window in Expert mode
+Okno „Geometria“ v režime Expert
 
-**Object Mesh**  
-Mesh Page provides options to mesh the object. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides option to set number of elements using slider bar to generate mesh. If the object geometry is complex or user would like to control the mesh density over the object, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like weighing factors, Mesh windows and user defined mode to control the mesh density. Meshing options available in expert mode and Guided more are shown in Fig. 30.1.7. and Fig. 30.1.8. For more detail description of these options, please refer [13.1. 2D Mesh Generation.](/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+**Sieť objektu**  
+Stránka „Mesh“ ponúka možnosti vytvorenia siete pre objekt. Režim „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ umožňuje nastaviť počet prvkov pomocou posuvníka na vytvorenie siete. Ak je geometria objektu zložitá alebo ak chce používateľ ovládať hustotu siete na celom objekte, musí prejsť do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Odborný režim ponúka rôzne možnosti, ako sú váhové faktory, okná siete a režim definovaný používateľom, ktoré slúžia na riadenie hustoty siete. Možnosti vytvárania siete dostupné v odbornom režime a v režime „Guided“ sú znázornené na obr. 30.1.7 a obr. 30.1.8. Podrobnejší popis týchto možností nájdete v časti [13.1. 2D Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image007.jpg' | relative_url }})
 
-Guided mode mesh options
+Možnosti siete v režime s navádzaním
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image008.jpg' | relative_url }})
 
-Expert mode mesh options
+Možnosti siete v režime pre pokročilých
 
-**Force Interpolation**  
-To interpolate the force from workpiece object (reference object) to the dies user need to turn on the Interpolate force check box and enter the error tolerance value. These interpolated forces will generally not be exactly equal. The Error tolerance controls this to some degree. Putting in a higher tolerance will interpolate the forces from more of the billet’s surface nodes, increasing the forces interpolated to the dies. As long as the forces for the Billet and the Die are pretty close, the interpolation is considered successful.
+**Vynútená interpolácia**  
+Na interpoláciu sily z objektu obrobku (referenčného objektu) na lisovacie formy musí používateľ zaškrtnúť políčko „Interpolovať silu“ a zadať hodnotu tolerancie chyby. Tieto interpolované sily zvyčajne nebudú presne rovnaké. Tolerancia chyby to do určitej miery reguluje. Zadanie vyššej tolerancie spôsobí interpoláciu síl z väčšieho počtu povrchových uzlov polotovaru, čím sa zvýšia sily interpolované na lisovacie formy. Pokiaľ sú sily pre polotovar a lisovaciu formu pomerne blízke, interpolácia sa považuje za úspešnú.
 
-For Interactive mode select ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}), for Batch mode turn on the Interpolate force check box to schedule force interpolation onto Dies automatically before generating DB as shown in Fig. 30.1.9. The interpolated forces can be seen as shown in Fig. 30.1.10.
+V interaktívnom režime vyberte ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}), v dávkovom režime zaškrtnite políčko „Interpolovať sily“, aby sa interpolácia síl na lisovacích formách naplánovala automaticky pred generovaním databázy, ako je znázornené na obr. 30.1.9. Interpolované sily sú zobrazené na obr. 30.1.10.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image009.jpg' | relative_url }})
 
-Force Interpolation window
+Okno „Interpolácia sily“
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image010.jpg' | relative_url }})
 
-Interpolated Forces
+Interpolované sily
 
-**Object Material**  
-In material window, all the materials inherited from the previous operation are displayed (See Fig. 30.1.11.), Also user can load the material required for this operation in Object material window using Import Material data from a File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or Using Load form Library option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) .
+**Materiál objektu**  
+V okne „Materiál“ sa zobrazia všetky materiály zdedené z predchádzajúcej operácie (pozri obr. 30.1.11.). Používateľ môže tiež načítať materiál potrebný pre túto operáciu v okne „Materiál objektu“ pomocou možnosti „Importovať údaje o materiáli zo súboru“ (![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})) alebo pomocou možnosti „Načítať z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image011.jpg' | relative_url }})
 
-Material window
+Okno s materiálmi
 
-**Object boundary conditions**  
-When we interpolate the forces from billet, forces are applied to dies, this makes the dies to displace erratically during simulation. To prevent erratic displacement of dies suitable boundary conditions needs to be assigned. Velocity BCC can be used to arrest the displacement of dies (See Fig. 30.1.12.). Velocity BCC is assigned to top edge of the die is shown in Fig. 30.1.13.
+**Okrajové podmienky objektu**  
+Keď interpolujeme sily pôsobiace zo sochoru, tieto sily pôsobia na matrice, čo spôsobuje, že sa matrice počas simulácie posúvajú nepravidelne. Aby sa zabránilo nepravidelnému posunu matríc, je potrebné priradiť vhodné okrajové podmienky. Na zastavenie posunu matríc možno použiť okrajovú podmienku rýchlosti (pozri obr. 30.1.12.). Priradenie okrajových podmienok rýchlosti na horný okraj matrice je znázornené na obr. 30.1.13.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image012.jpg' | relative_url }})
 
-Boundary conditions window
+Okno s okrajovými podmienkami
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image013.jpg' | relative_url }})
 
-Velocity Boundary conditions assigned in Y direction
+Rýchlostné okrajové podmienky priradené v smere Y
 
-**Shrink fit**  
-Shrink Fit BCC in 2D used for die stress analysis, shrink fit conditions are defined between a die insert and a shrink ring. This can be defined by following steps,
+**Tepelné zmrštenie**  
+Metóda „Shrink Fit BCC“ v 2D sa používa na analýzu napätia v matrici, pričom podmienky tepelného sťahovania sú definované medzi vložkou matrice a sťahovacím krúžkom. Tieto podmienky je možné definovať nasledujúcimi krokmi:
 
-  * Entering the interference value.
+  * Zadanie hodnoty rušenia.
 
-  * Selecting the Direction (Direction perpendicular to the inner surface of the shrink ring or outer surface of the Die insert)
+  * Výber smeru (smer kolmý na vnútornú plochu zmršťovacieho krúžku alebo vonkajšiu plochu vložky matrice)
 
-  * Selecting the inner surface of the shrink ring or outer surface of the Die insert (surface which is contact with the die)
+  * Výber vnútornej plochy zmršťovacieho krúžku alebo vonkajšej plochy vložky matrice (plochy, ktorá prichádza do styku s matricou)
 
-If shrink fit is applied to the inner object, the value should be negative and if shrink fit is applied to the outer object then the value should be positive.
+Ak sa zúženie uplatňuje na vnútorný objekt, hodnota by mala byť záporná, a ak sa zúženie uplatňuje na vonkajší objekt, hodnota by mala byť kladná.
 
-For more information on shrink fit, Please refer [2D Die Stress Analysis - Theory](/docs/sk/operation_templates/30_die_stress/2d_die_stress_analysis_theory/).
+Ďalšie informácie o montáži s tepelne zmrštiteľnou hadicou nájdete v dokumente [2D Die Stress Analysis - Theory](/docs/en/operation_templates/30_die_stress/2d_die_stress_analysis_theory/).
 
-Fig. 30.1.14. & Fig. 30.1.15. shows shrink fit BCC applied to shrink ring.
+Na obr. 30.1.14 a obr. 30.1.15 je znázornené BCC s tepelne zmrštiteľným spojom aplikované na zmrštiteľný krúžok.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image014.jpg' | relative_url }})
 
-Shrink Fit BCC window
+Okno BCC s termoplastickým upevnením
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image016.jpg' | relative_url }})
 
-Shrink Fit Boundary conditions assigned
+Priradené okrajové podmienky pre zúženie
 
-**Initialize**  
-In Initialize window, few state variables that are commonly used such as Temperature, strain, stress, damage, velocity, Displacement, etc.., are made available for initialization.
+**Inicializovať**  
+V okne „Initialize“ sú na inicializáciu k dispozícii niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie atď.
 
-User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 30.1.16. shows the various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows.
+Používateľ môže inicializovať hodnoty týchto stavových premenných kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 30.1.16 znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien „Node“ a „Element“.
 
-For more information on how to initialize state variables in Node and Element windows, please refer [17.1. Node Data Window](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [17.2. Element Data Window](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách Node a Element, nájdete v dokumentácii [17.1. Node Data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image015.jpg' | relative_url }})
 
-Initialize window
+Inicializovať okno
 
-**Fixtures**  
-Fixtures that hold dies can be defined in this operation. Fixtures are considered as rigid objects in this operation. The geometry definition and editing for these objects is similar to that of the dies. The objects require mesh, bcc and material definition when thermal calculations are turned on and these variables can be defined in a similar way to that of the dies.
+**Zápasy**  
+V tejto operácii je možné definovať upínacie prípravky, ktoré držia formy. Upínacie prípravky sa v tejto operácii považujú za tuhé objekty. Definícia a úprava geometrie týchto objektov je podobná ako v prípade foriem. Ak sú zapnuté tepelné výpočty, je potrebné pre tieto objekty definovať sieť, kryštálovú mriežku (BCC) a materiál; tieto premenné je možné definovať podobným spôsobom ako v prípade foriem.
 
-## Positioning
+## Polohovanie
 
-Fig. 30.1.17. shows Controls window, user can position the fixtures and die objects that are added using position objects button. Various positioning options are available to position the objects as shown in Fig. 30.1.18. For more information on these options please refer [19\. Object Positioning.](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/)
+Na obr. 30.1.17 je zobrazené okno „Ovládacie prvky“, v ktorom môže používateľ umiestňovať upínacie prvky a objekty lisovacej formy pridané pomocou tlačidla „Umiestniť objekty“. Na umiestnenie objektov sú k dispozícii rôzne možnosti, ako je znázornené na obr. 30.1.18. Ďalšie informácie o týchto možnostiach nájdete v [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image017.jpg' | relative_url }})
 
-Positioning window
+Okno na nastavenie polohy
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image018.jpg' | relative_url }})
 
-Object positioning window
+Okno na umiestňovanie objektov
 
-## Scheduled Positioning
+## Plánované polohovanie
 
-When user is not sure about the location of an object as in case of Read From DB objects and die stress analysis operation is added in batch mode, scheduled positioning will help to position the objects accurately.
+Ak si používateľ nie je istý polohou objektu – napríklad v prípade objektov typu „Read From DB“ – a operácia analýzy napätia je pridaná v dávkovom režime, naplánované polohovanie pomôže objekty presne umiestniť.
 
-Schedule positioning allows the user to define the positioning for objects in MO setup for successive operations for which DB is not generated so that the objects are positioned before generation of DB while running simulation in Batch mode (See Fig. 30.1.19.)
+Funkcia „Schedule positioning“ umožňuje používateľovi definovať umiestnenie objektov v nastaveniach MO pre nasledujúce operácie, pre ktoré sa nevytvára databáza (DB), tak, aby boli objekty umiestnené ešte pred vytvorením databázy počas spustenia simulácie v dávkovom režime (pozri obr. 30.1.19.)
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image019.jpg' | relative_url }})
 
-Scheduled positioning window
+Plánované časové okno na umiestnenie
 
-## Inter-object relations
+## Vzťahy medzi objektmi
 
-The purpose of inter-object relations is to define how the different objects in a simulation interact with each other.
+Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty v simulácii vzájomne interagujú.
 
-In Contact window, both Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) and Expert ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) mode options will be in Active mode, in guided mode all the possible relations are already present in the list (See Fig. 30.1.20.). User needs to define the type of relation and Friction value for objects that are in contact for the selected relation. While setting up Die stress analysis in batch mode, user can schedule contact generation using Expert ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) mode options.
+V okne „Kontakt“ budú obe možnosti režimu – „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ aj „Expert ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})“ – v aktívnom režime; v režime „Guided“ sú všetky možné vzťahy už uvedené v zozname (pozri obr. 30.1.20.). Používateľ musí pre objekty, ktoré sú v kontakte, definovať typ vzťahu a hodnotu trenia pre vybraný vzťah. Pri nastavovaní analýzy napätia v lisovacej forme v dávkovom režime môže používateľ naplánovať generovanie kontaktov pomocou možností režimu Expert ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}).
 
-In Expert mode, the relations table shows the current inter-object relations that have been defined as shown in Fig. 30.1.21. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined.
+V režime Expert tabuľka vzťahov zobrazuje aktuálne vzťahy medzi objektmi, ktoré boli definované tak, ako je znázornené na obr. 30.1.21. Všetky objekty, ktoré môžu prísť do kontaktu v priebehu simulácie, musia mať definovaný kontaktný vzťah.
 
-**System** : By selecting this radio button, system assigns default inter-object relationships. Also user can add the lubricants if necessary by selecting Add New from pull down menu and clicking on "Edit" button or user can load the required lubricants from the library for the simulation.
+**Systém**: Po výbere tohto prepínača systém priradí predvolené vzťahy medzi objektmi. V prípade potreby môže používateľ pridať mazivá výberom možnosti „Pridať nové“ z roletového menu a kliknutím na tlačidlo „Upraviť“, alebo môže na účely simulácie načítať požadované mazivá z knižnice.
 
-**User** : By default, user radio button will be selected. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button.
+**Používateľ**: V predvolenom nastavení bude zaškrtnuté políčko „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image020.jpg' | relative_url }})
 
-Inter object window in Guided mode
+Okno medzi objektmi v režime s navádzaním
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image021.jpg' | relative_url }})
 
-Inter object window in Expert mode
+Okno medzi objektmi v režime Expert
 
-## Simulation control
+## Riadenie simulácie
 
-**Number of simulation steps**  
-When the stress analysis is being done on only one tool, a one step simulation is sufficient to get accurate stresses. When the stress analysis is being done on die assemblies where there is interaction between the tools, more than one step is typically needed for the die stack to come to a state of equilibrium under the applied load.
+**Počet simulačných krokov**  
+Ak sa analýza napätí vykonáva len na jednom nástroji, na získanie presných hodnôt napätí stačí jednokroková simulácia. Ak sa analýza napätí vykonáva na zostavách foriem, kde dochádza k interakcii medzi nástrojmi, zvyčajne je potrebných viac ako jeden krok, aby sa sústava foriem dostala do rovnovážneho stavu pri pôsobiacom zaťažení.
 
-User can turn on thermal calculation by turning on Heat Transfer mode from Expert mode and defining respective thermal BCC from object BCC options and Heat Transfer coefficient values from inter-object window.
+Používateľ môže aktivovať tepelný výpočet tak, že v expertnom režime zapne režim prenosu tepla a v nastaveniach BCC objektu definuje príslušné tepelné BCC a v okne medzi objektmi nastaví hodnoty koeficientov prenosu tepla.
 
-**Step increment to save**  
-The step increment (STPINC) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. As the steps that will be run for die stress analysis is less, user can store each step.
+**Krok pri ukladaní**  
+Hodnota krokového prírastku (STPINC), ktorá sa ukladá do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nie je nutné ho vždy ukladať do databázy. Keďže počet krokov, ktoré sa vykonajú pri analýze napätia čipu, je nižší, používateľ môže uložiť každý krok.
 
-**Step increment control**  
-Solution step size is controlled by time step. Maximum elapsed process time per step can be defined as 1 sec for Die stress analysis operations.
+**Ovládanie krokového posunu**  
+Veľkosť kroku riešenia je riadená časovým krokom. Maximálny čas trvania procesu na jeden krok možno pre operácie analýzy napätia v matrici nastaviť na 1 sekundu.
 
-Fig. 30.1.22. shows the Simulation Controls in Guided mode.
+Na obr. 30.1.22 sú zobrazené ovládacie prvky simulácie v režime s návodom.
 
-Fig. 30.1.23. shows the Simulation Controls in Expert mode.
+Na obr. 30.1.23 sú zobrazené ovládacie prvky simulácie v režime Expert.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image022.jpg' | relative_url }})
 
-Simulation control in Guided mode
+Riadenie simulácie v režime s navádzaním
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image023.jpg' | relative_url }})
 
-Simulation control in Expert mode
+Ovládanie simulácie v režime Expert
 
-For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+Ďalšie informácie a popis možností v časti „Ovládacie prvky simulácie“ nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
 
-## Generate DB
+## Vytvoriť databázu
 
-**Check data![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})**  
-It checks the Data. If Data is correct we can generate DB. But while checking Data if it gives any errors or warnings then they should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.
+**Skontrolujte údaje ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})**  
+Systém skontroluje údaje. Ak sú údaje správne, môžeme vytvoriť databázu. Ak sa však pri kontrole údajov vyskytnú chyby alebo varovania, je potrebné ich opraviť pred vytvorením databázy. Chyby zabránia vytvoreniu databázy, zatiaľ čo varovania vytvorenie databázy neumožnia.
 
-**Generate database![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**  
-By clicking on this button, it generates the Database for the setup.(See Fig. 30.1.24.)
+**Vytvoriť databázu ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**  
+Kliknutím na toto tlačidlo sa vygeneruje databáza potrebná na nastavenie. (Pozri obr. 30.1.24.)
 
-**Append key file**  
-Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only .key file can be changed and simulation can be resubmitted.
+**Pridať súbor s kľúčmi**  
+Akékoľvek informácie, ktoré nie sú definované v sprievodcovi, ale napriek tomu sa vzťahujú na daný proces, je možné načítať ako súbor s príponou .key. Táto možnosť je užitočná aj v prípadoch, keď je potrebné zmeniť len niekoľko hodnôt – tieto hodnoty je možné definovať v súbore s príponou .key, následne stačí zmeniť len tento súbor a simuláciu je možné odoslať znovu.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image024.jpg' | relative_url }})
 
-DB generation window
+Okno na generovanie databázy
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
 
-[6.3. Integrated Manufacturing Proces Post - Processor layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Proces Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
 
-[2D Die stress study labs](/docs/sk/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
+[2D Die stress study labs](/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
 
-[30\. Introduction to Die Stress](/docs/sk/operation_templates/30_die_stress/30_introduction_to_die_stress/)
+[30\. Introduction to Die Stress](/docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/)

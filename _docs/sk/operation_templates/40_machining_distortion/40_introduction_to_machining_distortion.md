@@ -1,28 +1,28 @@
 ---
 lang: sk
-title: "40. Introduction to Machining Distortion"
+title: "40. Úvod do deformácií pri obrábaní"
 ---
 
-# 40\. Introduction to Machining Distortion
+# 40\. Úvod do deformácií pri obrábaní
 
-Machining distortion operation can set up the model data and simulate a machining pass on a component with deformation and residual stress history. Machining Distortion will model and simulate machining operation with fixtures and elastic spring back after the fixtures are removed.
+Operácia „Deformácia pri obrábaní“ umožňuje nastaviť údaje modelu a simulovať obrábací priechod na súčiastke s históriou deformácií a zvyškových napätí. Funkcia „Deformácia pri obrábaní“ modeluje a simuluje obrábací proces s upínacími prípravkami a elastickým spätným odskokom po ich odstránení.
 
-The Machining distortion Operations can be used to prepare the data required for the simulation. To use this operation, user needs the result from a DEFORM simulation model that includes residual stress in the part. Typical models include elasto-plastic deformation process or heat treat process model. Apart from this object input data, machining distortion process model requires details on the fixtures, their location and details on machining pass.
+Operácie „Deformácia pri obrábaní“ slúžia na prípravu údajov potrebných pre simuláciu. Na použitie tejto operácie potrebuje používateľ výsledok zo simulačného modelu DEFORM, ktorý zahŕňa zvyškové napätie v diele. Typické modely zahŕňajú model procesu elastoplastického deformovania alebo model procesu tepelného spracovania. Okrem týchto vstupných údajov vyžaduje model procesu deformácie pri obrábaní podrobnosti o upínacích prípravkoch, ich umiestnení a podrobnosti o obrábacom cykle.
 
-The order of operations in which we will be modeling is as follows:
+Postup operácií, podľa ktorého budeme modelovať, je nasledovný:
 
-  1. Machine the part.
+  1. Vyrobte diel na stroji.
 
-  2. Allow the part to spring back with tools to constrain.
+  2. Nechajte diel sa vrátiť do pôvodného tvaru a zároveň ho zafixujte pomocou nástrojov.
 
-  3. Allow part to spring back free from tools.
+  3. Nechajte diel voľne vyskočiť z upínacích prostriedkov.
 
-All of these operations can be accomplished in the Machining distortion Operation. Of these stages,
+Všetky tieto operácie je možné vykonať v rámci operácie „Deformácia pri obrábaní“. Z týchto fáz
 
-only the data related to machining is defined in the template, while the system procedures automatically compute the subsequent spring back stage on removing the fixtures. Post processor will allow the user to view the results (stress state and spring back/distortions) after machining and fixture removal. This process can be repeated for the subsequent passes, which may also include object flipping and fixture repositioning prior to machining.
+V šablóne sú definované iba údaje týkajúce sa obrábania, zatiaľ čo systémové postupy automaticky vypočítajú následnú fázu spätného pruženia po odstránení upínacích prípravkov. Postprocesor umožní používateľovi zobraziť výsledky (napäťový stav a spätný posun/deformácie) po obrábaní a odstránení upínacích prípravkov. Tento proces je možné zopakovať pre nasledujúce prechody, ktoré môžu zahŕňať aj otočenie objektu a prepositionovanie upínacích prípravkov pred obrábaním.
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[40.1. 2D Machining Distortion](/docs/sk/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/)
+[40.1. 2D Machining Distortion](/docs/en/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/)
 
-[40.2. 3D Machining Distortion](/docs/sk/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/)
+[40.2. 3D Machining Distortion](/docs/en/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/)

@@ -1,32 +1,32 @@
 ---
 lang: sk
-title: "43. Introduction to Shape Rolling"
+title: "43. Úvod do valcovania profilov"
 ---
 
-# 43\. Introduction to Shape Rolling
+# 43\. Úvod do valcovania profilov
 
-Shape Rolling Operation template setup is designed for guiding user to setup different types of Rolling processes. A typical Shape Rolling setup consists of Workpiece, Rolls (Top roll and Bottom roll), Pusher Object and Table (see Fig. 43.2.) Using this template user model Shape rolling operation as,
+Nastavenie šablóny operácie valcovania tvarov je určené na usmerňovanie používateľa pri nastavovaní rôznych typov procesov valcovania. Typické nastavenie valcovania tvarov pozostáva z obrobku, valcov (horný a spodný valec), posúvača a stola (pozri obr. 43.2). Pomocou tejto šablóny používateľ modeluje operáciu valcovania tvarov ako:
 
-  1. Lagrangian rolling type
+  1. Lagrangeov typ s valením
 
-  2. Steady-State ALE type
+  2. Typ ALE v ustálenom stave
 
-Shape rolling process can be set up as combination of passes and stands along with heat transfer operations in between passes. User is provided with Pass table and Stand table to define the process data in a simple tabular format as shown in Fig. 43.1.
+Proces tvarového valcovania je možné nastaviť ako kombináciu priechodov a stojov spolu s operáciami prenosu tepla medzi jednotlivými priechodmi. Používateľ má k dispozícii tabuľku priechodov a tabuľku stojov, v ktorých môže definovať údaje o procese v jednoduchom tabuľkovom formáte, ako je znázornené na obr. 43.1.
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/image0001.jpg' | relative_url }})
 
-Defining multi passes in the pass table
+Definovanie viacerých priechodov v tabuľke priechodov
 
-Shape rolling process can be set up using 2D cross-sections of workpiece and roll, this 2D setup can be used to simulate 2.5D simulation process. Typical cross- sections of rolls are provided as primitives to define roll grooves. The 2D setup can be converted into 3D using the 3D conversion options available in template. User can make necessary modifications for 3D setup at pass level and define the data like pusher object, mesh settings, remesh criteria, strain initialization, boolean between passes,..etc. Typical rolling setups for Lagrangian and ALE rolling are as mentioned below, 
+Proces tvarového valcovania je možné nastaviť pomocou 2D prierezov obrobku a valca; toto 2D nastavenie možno použiť na simuláciu 2,5D procesu. Typické prierezy valcov sú k dispozícii ako primitívy na definovanie drážok valcov. 2D nastavenie je možné previesť do 3D pomocou možností 3D konverzie dostupných v šablóne. Používateľ môže vykonať potrebné úpravy 3D nastavenia na úrovni priechodu a definovať údaje, ako sú objekt posúvača, nastavenia siete, kritériá pregenerovania siete, inicializácia deformácie, boolovské operácie medzi priechodmi atď. Typické nastavenia valcovania pre Lagrangeovské a ALE valcovanie sú uvedené nižšie: 
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/image0002.jpg' | relative_url }})
 
-Lagrangian Rolling type setup
+Nastavenie typu Lagrangeovho valenia
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/image0003.jpg' | relative_url }})
 
-Steady-State ALE Rolling type setup
+Nastavenie typu ALE s valcovaním v ustálenom stave
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[43.1. Shape Rolling Manual](/docs/sk/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/)
+[43.1. Shape Rolling Manual](/docs/en/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/)

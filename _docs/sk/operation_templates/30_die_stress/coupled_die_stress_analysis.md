@@ -1,65 +1,65 @@
 ---
 lang: sk
-title: "Coupled Die stress Analysis"
+title: "Analýza napätí v spojených čipoch"
 ---
 
-# Appendix XX: How to do coupled die stress analysis for 3D models
+# Príloha XX: Ako vykonať analýzu napätia v spojenej matici pre 3D modely
 
-_*From QT3 interface_
+_*Z rozhrania QT3_
 
-Starting from 3D V10.0+ the system supports a convenient way to carryout Multiple-time stepping (MTS) Die stress analysis. Current structure depends on a local DAT file (DEF_LCDSTS.DAT) to trigger these procedures. In a typical die stress analysis since fine mesh systems are needed on the die objects, models are memory intensive and need long computing time. Procedures developed in DEFORM allow user to specify different time step sizes for plastic workpiece (deformation) and elastic dies (die stress analysis), It helps in CPU cost saving. User can specify loosely coupled die stress analysis on elastic tools only at selected steps, rather than at every step. This gives a reasonable balance of coupled stress with efficient run (computational) times. The factor defines a ratio of multiple-time stepping like,
+Od verzie 3D V10.0+ systém podporuje pohodlný spôsob vykonávania analýzy napätia v lisovacej forme pomocou metódy viacnásobného krokovania (MTS). Súčasná štruktúra využíva lokálny súbor DAT (DEF_LCDSTS.DAT) na spustenie týchto postupov. Pri typickej analýze napätia v lisovacej forme, keďže na objektoch lisovacej formy sú potrebné systémy s jemnou sieťou, sú modely náročné na pamäť a vyžadujú dlhý výpočtový čas. Postupy vyvinuté v programe DEFORM umožňujú používateľovi špecifikovať rôzne veľkosti časových krokov pre plastický obrobok (deformácia) a elastické lisovacie formy (analýza napätia v lisovacej forme), čo pomáha šetriť výpočtový výkon procesora. Používateľ môže špecifikovať voľne prepojenú analýzu napätia v lisovacej forme na pružných nástrojoch len vo vybraných krokoch, a nie v každom kroku. To poskytuje primeranú rovnováhu medzi prepojeným napätím a efektívnymi výpočtovými časmi. Tento faktor definuje pomer viacnásobných časových krokov, napríklad:
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/coupled_die_stress_study/eq001.jpg' | relative_url }})
 
-Currently the following requirements have to be met by the model to be able to use these analysis features.
+V súčasnosti musí model spĺňať nasledujúce požiadavky, aby bolo možné využívať tieto analytické funkcie.
 
-  * The dies should be elastic and use tetrahedral mesh.
+  * Mriežky by mali byť pružné a mali by používať tetraedrickú sieť.
 
-  * The dies should have movement conditions defined in the BCC dialogs.
+  * Pre lisovacie formy by mali byť v dialógových oknách BCC definované podmienky pohybu.
 
-  * The dies movement should be specified in the movement control dialogs.
+  * Pohyb foriem by mal byť špecifikovaný v dialógových oknách na ovládanie pohybu.
 
-There are several options for coupling the interactions of the workpiece and tool. In any way the model stores the results in the same database. Those are,
+Existuje niekoľko možností prepojenia interakcií medzi obrobkom a nástrojom. V každom prípade model ukladá výsledky do tej istej databázy. Ide o:
 
-**Option** |  **Solution Method** |  **Stress Update** |  **Geometry Update**  
+**Možnosť** |  **Spôsob riešenia** |  **Aktualizácia napätia** |  **Aktualizácia geometrie**  
 ---|---|---|---  
-1 |  Fully coupled |  Die and workpiece |  Die and workpiece  
-2 |  One way coupled |  Die and workpiece |  Die and workpiece  
-3 |  One way coupled |  Die and workpiece |  Workpiece only  
+1 |  Plne prepojené |  Forma a obrobok |  Forma a obrobok  
+2 |  Jednosmerné spojenie |  Forma a obrobok |  Forma a obrobok  
+3 |  Jednosmerné spojenie |  Matrica a obrobok |  Iba obrobok  
   
-Coupling workpiece and tool interaction options
+Možnosti interakcie medzi obrobkom a nástrojom pri spojovaní
 
-  1. Fully coupled means the deflection of the tool is reflected in the deformation of the workpiece at the current step. 
+  1. Pojem „plne prepojené“ znamená, že vychýlenie nástroja sa premieta do deformácie obrobku v aktuálnom kroku. 
 
-  2. One way coupling means the stresses are calculated in the tool. If die geometry is updated, it will not be reflected in workpiece shape until the next step. 
+  2. Jednosmerná väzba znamená, že napätia sa počítajú v nástroji. Ak sa geometria matrice aktualizuje, na tvare obrobku sa to prejaví až v nasledujúcom kroku. 
 
-  3. If option 3 is used, stress is calculated in the die, but the die geometry is never updated.
+  3. Ak sa použije možnosť 3, napätie sa vypočíta v matrici, geometria matrice sa však nikdy neaktualizuje.
 
-To activate loosely coupled die stress analysis, use a text editor such as notepad to create a file in the same directory as the database, named **DEF_LCDSTS.DAT.**
+Ak chcete aktivovať analýzu napätia čipu s voľným prepojením, vytvorte pomocou textového editora (napr. Poznámkový blok) súbor s názvom **DEF_LCDSTS.DAT** v tom istom adresári, v ktorom sa nachádza databáza.
 
-**Contents of the DAT file are as follows:**
+**Obsah súboru DAT je nasledovný:**
 
-Line 1: = Coupling option (1, 2 or 3)
+Riadok 1: = Možnosť spojenia (1, 2 alebo 3)
 
-= 1 for fully coupled
+= 1 pre úplné prepojenie
 
-= 2 for one way coupled (die geometry is updated, it will not be reflected in workpiece shape until the next step)
+= 2 pri jednosmernom prepojení (geometria formy je aktualizovaná, na tvare obrobku sa to prejaví až v nasledujúcom kroku)
 
-= 3 for one way coupled (die geometry is never updated)
+= 3 v prípade jednosmerného prepojenia (geometria čipu sa nikdy neaktualizuje)
 
-Line 2: = n, ratio of the time steps for Stress coupling (Δt_elastic_dies/Δt_plastic_workpiece). 
+Riadok 2: = n, pomer časových krokov pre spojenie napätia (Δt_elastic_dies/Δt_plastic_workpiece). 
 
-Line 3: = m, thermal time step ratio for Temperature coupling (Δt_elastic_dies/Δt_plastic_workpiece).
+Riadok 3: = m, pomer tepelných časových krokov pre teplotné prepojenie (Δt_elastic_dies/Δt_plastic_workpiece).
 
-**For example:**
+**Napríklad:**
 
-Line 1 with entry 1, for Option 1 -Fully coupled option.
+Riadok 1 so záznamom 1, pre možnosť 1 – možnosť s úplným prepojením.
 
-n = 5 in Line 2 indicates that the coupled calculations are computed every 5 steps, and every 5th step elastic object sees 5 times the step size compared to plastic workpiece.
+Hodnota n = 5 v riadku 2 znamená, že spriahnuté výpočty sa vykonávajú každých 5 krokov a pri každom piatom kroku sa veľkosť kroku pre elastický objekt nastaví na päťnásobok veľkosti kroku v porovnaní s plastickým obrobkom.
 
-m = 5 in Line 3 indicates time step size used by thermal computations is 5 times that of deformations computations.
+Hodnota m = 5 v riadku 3 znamená, že veľkosť časového kroku použitá pri tepelných výpočtoch je 5-násobkom veľkosti časového kroku použitého pri výpočtoch deformácií.
 
-So a typical DEF_LCDSTS.DAT file for option 1- Fully Coupled distress the text in file might look like,
+Typický súbor DEF_LCDSTS.DAT pre možnosť 1 – Plne prepojený núdzový režim by mohol vyzerať takto:
 
 1
 
@@ -67,28 +67,28 @@ So a typical DEF_LCDSTS.DAT file for option 1- Fully Coupled distress the text i
 
 5
 
-**Selection criteria for Die Stress analysis options:**
+**Kritériá výberu pre možnosti analýzy napätia v matrici:**
 
-**Option 1** \- In general, option 1 is the most accurate, and most computationally expensive. Option 3 is the least computationally expensive, and offers the most simplification of the process.
+**Možnosť 1** – Vo všeobecnosti je možnosť 1 najpresnejšia, ale zároveň najnáročnejšia z hľadiska výpočtového výkonu. Možnosť 3 je z hľadiska výpočtového výkonu najmenej náročná a ponúka najväčšie zjednodušenie procesu.
 
-**Option 2** \- more numerically efficient than option 1, but may cause some inconsistencies in workpiece surface position (and therefore workpiece volume) if the change in the die shape is substantial.
+**Varianta 2** – je z hľadiska výpočtov efektívnejšia ako varianta 1, avšak môže spôsobiť určité nezrovnalosti v polohe povrchu obrobku (a tým aj v objeme obrobku), ak je zmena tvaru formy podstatná.
 
-**Option 3** \- If the only interest is tool stress, option 3 is generally adequate. If tool deflection is important option 1 or 2 should be selected.
+**Možnosť 3** – Ak ide výlučne o namáhanie nástroja, možnosť 3 je spravidla postačujúca. Ak je dôležitá deformácia nástroja, treba zvoliť možnosť 1 alebo 2.
 
-For the Schematic setup as shown below, See Fig. 1, the die stress results are compared for all three options, See Fig. 2.
+V prípade schématického usporiadania znázorneného nižšie (pozri obr. 1) sa porovnávajú výsledky napätia v matrici pre všetky tri varianty (pozri obr. 2).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/coupled_die_stress_study/imaage001.jpg' | relative_url }})
 
-Simple Coupled die-stress problem setup for the bottom die
+Jednoduché nastavenie úlohy o napätí v spojenej matrici pre spodnú matricu
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/coupled_die_stress_study/imaage002.jpg' | relative_url }})
 
-Die-stress result comparison for all three options at the same step
+Porovnanie výsledkov odľahčenia formy pre všetky tri možnosti v tom istom kroku
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[Die Stress Lab](/docs/sk/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
+[Die Stress Lab](/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
 
-[2D Die Stress Analysis - Theory](/docs/sk/operation_templates/30_die_stress/2d_die_stress_analysis_theory/)
+[2D Die Stress Analysis - Theory](/docs/en/operation_templates/30_die_stress/2d_die_stress_analysis_theory/)
 
-[3D Die Stress Analysis](/docs/sk/operation_templates/30_die_stress/3d_die_stress_analysis_theory/)
+[3D Die Stress Analysis](/docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/)

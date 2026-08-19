@@ -1,24 +1,24 @@
 ---
 lang: sk
-title: "31. Introduction to Extrusion"
+title: "31. Úvod do extrudovania"
 ---
 
-# 31\. Introduction to Extrusion
+# 31\. Úvod do extrudovania
 
-**Extrusion** is a process used to create objects of a fixed cross-sectional profile. A material is pushed through a die of the desired cross-section to obtain required object shape. Extrusion operation template guides the user to set up the process and define process parameters with ease. Extrusion template is provided with a special meshing method in “Mesh Extruding Utility” to reduce the time while generating workpiece mesh in ALE Exrrusion. Separate contact algorithm implemented in Extrusion template helps the user to generate complete contact over workpiece with container in ALE Extrusion. In DEFORM Extrusion template three types of simulation methods are available,
+**Extrúzia** je proces používaný na výrobu objektov s pevne stanoveným prierezovým profilom. Materiál sa pretláča cez matricu s požadovaným prierezom, čím sa dosiahne požadovaný tvar objektu. Šablóna operácie extrúzie pomáha používateľovi jednoducho nastaviť proces a definovať jeho parametre. Šablóna extrudovania je vybavená špeciálnou metódou vytvárania siete v nástroji „Mesh Extruding Utility“, ktorá skracuje čas potrebný na generovanie siete obrobku v ALE Extrusion. Samostatný algoritmus kontaktu implementovaný v šablóne extrudovania pomáha používateľovi vytvoriť kompletný kontakt medzi obrobkom a kontajnerom v ALE Extrusion. V šablóne DEFORM Extrusion sú k dispozícii tri typy simulačných metód,
 
-  * ALE Extrusion
+  * Extrúzia ALE
 
-  * Steady-state Extrusion
+  * Extrúzia v ustálenom stave
 
-  * Lagrangian Extrusion
+  * Lagrangeovská extrúzia
 
-The ALE/Steady-state Extrusion simulation helps the user to get quick estimate of the output shape and state variable values. User can define bearing surface and modify the bearing surface geometry or its friction values in ALE/ Steady-state simulations to optimize the bearing surface geometry.
+Simulácia ALE/Extrúzia v ustálenom stave pomáha používateľovi získať rýchly odhad výsledného tvaru a hodnôt stavových premenných. Používateľ môže v simuláciách ALE/Extrúzia v ustálenom stave definovať ložiskovú plochu a upravovať jej geometriu alebo hodnoty trenia s cieľom optimalizovať geometriu ložiskovej plochy.
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_introduction_to_extrusion/image001.jpg' | relative_url }})
 
-Extrusion setup
+Nastavenie extrudovania
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[31.1. 3D Extrusion](/docs/sk/operation_templates/31_extrusion/31_1_3d_extrusion/)
+[31.1. 3D Extrusion](/docs/en/operation_templates/31_extrusion/31_1_3d_extrusion/)

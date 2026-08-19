@@ -1,472 +1,472 @@
 ---
 lang: sk
-title: "33.2. 3D Forming Setup"
+title: "33.2. Nastavenie 3D tvarovania"
 ---
 
-# 33.2. 3D Forming Setup
+# 33.2. Nastavenie 3D tvarovania
 
-33.2.1. Material List
+33.2.1. Zoznam materiálov
 
-33.2.2.Add objects
+33.2.2. Pridávanie objektov
 
-33.2.3. Workpiece
+33.2.3. Obrobok
 
-  * Geometry
+  * Geometria
 
-  * Mesh
+  * Sieťovina
 
-  * Material
+  * Materiál
 
-  * Boundary Conditions
+  * Okrajové podmienky
 
-  * Movement Controls
+  * Ovládanie pohybu
 
-  * Property
+  * Nehnuteľnosť
 
-  * Initialize
+  * Inicializovať
 
-33.2.4. Positioning
+33.2.4. Polohovanie
 
-33.2.5. Scheduled Positioning
+33.2.5. Plánované umiestnenie
 
-33.2.6. Contact
+33.2.6. Kontakt
 
-33.2.7. Stopping Controls
+33.2.7. Ovládacie prvky na zastavenie
 
-33.2.8. Simulation controls
+33.2.8. Ovládacie prvky simulácie
 
-33.2.9. Generate DB
+33.2.9. Vytvorenie databázy
 
-Forming 3D operation can be used to setup complex 3D flow problems those cannot be simulated in 2D environment. Buckling of cylindrical parts is a fully three dimensional process, and must be modelled as such if such behavior is expected. An axisymmetric simulation will not show buckling, even if it will occur in the actual process (See Fig. 33.2.1.).
+Operácia „3D formovanie“ sa dá použiť na nastavenie zložitých 3D prietokových úloh, ktoré nie je možné simulovať v 2D prostredí. Vykĺbenie valcovitých dielov je plne trojrozmerný proces a ak sa takéto správanie očakáva, musí sa modelovať práve ako trojrozmerný proces. Osovo symetrická simulácia nezobrazí vzpruženie, aj keby k nemu došlo v skutočnom procese (pozri obr. 33.2.1.).
 
 ![]({{ '/assets/images/about_deform/1_7_geometry_representation/1_7_image002.jpg' | relative_url }})
 
-Buckling
+Vykĺbenie
 
-## Material List
+## Zoznam materiálov
 
-In order for a simulation to achieve a high level of accuracy, it is important to have an understanding of the material properties required to specify a material used in DEFORM.
+Aby simulácia dosiahla vysokú úroveň presnosti, je dôležité poznať vlastnosti materiálu, ktoré sú potrebné na definovanie materiálu používaného v programe DEFORM.
 
   
-When setting up a simulation, material properties have to be specified for the objects. In MO Forming operation, all the materials required for the operation can be loaded at a time and the required material can be selected later as the problem is setup. User can add material by selecting ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) load material data from library as shown in Fig. 33.2.2. User can select required material from the categories and then click on ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button as shown in Fig. 33.2.3\. 
+Pri nastavovaní simulácie je potrebné pre objekty špecifikovať vlastnosti materiálov. V operácii MO Forming je možné načítať všetky materiály potrebné pre danú operáciu naraz a požadovaný materiál vybrať neskôr pri nastavovaní úlohy. Používateľ môže pridať materiál výberom možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) „načítať údaje o materiáli z knižnice“, ako je znázornené na obr. 33.2.2. Používateľ môže vybrať požadovaný materiál z kategórií a potom kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}), ako je znázornené na obr. 33.2.3. 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image001.jpg' | relative_url }})
 
-Material List window
+Okno „Zoznam materiálov“
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image002.jpg' | relative_url }})
 
-Import material from library window
+Importovať materiál z okna knižnice
 
   
-(or) 
+(alebo) 
 
-Another way of adding material is to click on the material icon of the explorer tab, a list of materials from library that are grouped into different categories will appear as shown in Fig. 33.2.4. Select required material then click on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button. Also, user can add required material by drag and drop into the material window.
+Ďalším spôsobom pridania materiálu je kliknutie na ikonu materiálu na karte prehliadača, čím sa zobrazí zoznam materiálov z knižnice zoradených do rôznych kategórií, ako je znázornené na obr. 33.2.4. Vyberte požadovaný materiál a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}). Používateľ môže požadovaný materiál pridať aj pomocou funkcie „drag and drop“ (ťahanie a púšťanie) do okna materiálu.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image003.jpg' | relative_url }})
 
-Add Material from Explorer material tab
+Pridať materiál z karty „Materiál“ v Průzkumníku
 
-(or)
+(alebo)
 
-In material list window, by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button, new material can be added. After adding material click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select respective tab to define required data for the simulation as shown in Fig. 33.2.5.
+V okne so zoznamom materiálov je možné pridať nový materiál kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Po pridaní materiálu kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a vyberte príslušnú kartu, kde zadáte potrebné údaje pre simuláciu, ako je znázornené na obr. 33.2.5.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image005.jpg' | relative_url }})
 
-Add material from material list window
+Pridať materiál z okna so zoznamom materiálov
 
-**Import Material data from a file** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) : It imports the material from a .Key or .DB file.  
-**Load Material data from Library** ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) :It imports the material from Library.  
-**Save the Material data to a file**![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) : It saves the material to a file.  
-**Save the Material data to Library**![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) : User can save the material to library using this option and can be loaded back as required in future for other simulations.
+**Import údajov o materiáloch zo súboru** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}): Importuje údaje o materiáloch zo súboru s príponou .Key alebo .DB.  
+**Načítať údaje o materiáli z knižnice** ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}): Importuje materiál z knižnice.  
+**Uloženie údajov o materiáli do súboru**![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) : Uloží materiál do súboru.  
+**Uložiť údaje o materiáli do knižnice**![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ uložiť materiál do knižnice a v budúcnosti ho podľa potreby opäť načítať pre ďalšie simulácie.
 
-**Mixture material**
+**Zloženie zmesi**
 
-“Mixture” materials ([MSTMTR](/docs/sk/keyword_documentation/m/mstmtr/)) are used when a phase transformation is to be modeled in the simulation. The transforming material is modeled as a “mixture” of its constituent phases. For example, carbon steel might be modeled as a mixture of Austenite, Pearlite, Bainite, and Martensite. If a mixture material is defined, transformation rules should be defined which govern the transformation of one phase into another.(See Fig. 33.2.6.)
+Materiály typu „zmes“ ([MSTMTR](/docs/en/keyword_documentation/m/mstmtr/)) sa používajú v prípade, že sa v simulácii má modelovať fázová premena. Premenlivý materiál sa modeluje ako „zmes“ fáz, z ktorých sa skladá. Napríklad uhlíková oceľ sa môže modelovať ako zmes austenitu, perlitov, bainitu a martenzitu. Ak je definovaný zmesový materiál, mali by sa definovať pravidlá transformácie, ktoré riadia prechod jednej fázy do druhej. (Pozri obr. 33.2.6.)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image004.jpg' | relative_url }})
 
-Adding Mixture Material
+Pridanie zmesi materiálov
 
-**Copy Properties![]({{ '/assets/icons/pre_icons/mo_copy_properties.jpg' | relative_url }})**
+**Kopírovať vlastnosti ![]({{ '/assets/icons/pre_icons/mo_copy_properties.jpg' | relative_url }})**
 
-It is used to copy the regular material properties like plastic, elastic, thermal etc. from one material to other while creating/defining the material data as shown in Fig. 33.2.7\. In this dialog, source and destination for copying the properties and properties to be copied must be selected.
+Slúži na kopírovanie bežných vlastností materiálov, ako sú plastické, elastické, tepelné atď., z jedného materiálu do druhého pri vytváraní/definovaní údajov o materiáli, ako je znázornené na obr. 33.2.7. V tomto dialógovom okne je potrebné vybrať zdroj a cieľ kopírovania vlastností, ako aj samotné vlastnosti, ktoré sa majú skopírovať.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image005.jpg' | relative_url }})
 
-Copy material properties window
+Okno „Kopírovať vlastnosti materiálu“
 
-**Convert Units![]({{ '/assets/icons/pre_icons/mo_convert_units_button.jpg' | relative_url }})**
+**Previesť jednotky ![]({{ '/assets/icons/pre_icons/mo_convert_units_button.jpg' | relative_url }})**
 
-It is used to convert the unit system of current selected material from material list from SI to English or English to SI or user can use any other multiplication factor as shown in Fig. 33.2.8. Selecting the ![]({{ '/assets/icons/pre_icons/mo_si_to_english_button.jpg' | relative_url }}) or ![]({{ '/assets/icons/pre_icons/mo_english_to_si_button.jpg' | relative_url }}) button will display the respective multiplication factors for converting from ![]({{ '/assets/icons/pre_icons/mo_si_to_english_button.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_english_to_si_button.jpg' | relative_url }}) , then selecting the ![]({{ '/assets/icons/pre_icons/mo_convert_button.jpg' | relative_url }}) button will convert and close the conversion window. This conversion table can be saved using save button and can also be edited by using wordpad/notepad and loaded back UNITCONV.DAT file using load button.
+Slúži na prevod jednotkového systému aktuálne vybraného materiálu zo zoznamu materiálov zo systému SI na anglický systém alebo naopak, prípadne môže používateľ použiť akýkoľvek iný násobný koeficient, ako je znázornené na obr. 33.2.8. Stlačením tlačidla ![]({{ '/assets/icons/pre_icons/mo_si_to_english_button.jpg' | relative_url }}) alebo ![]({{ '/assets/icons/pre_icons/mo_english_to_si_button.jpg' | relative_url }}) sa zobrazia príslušné násobné koeficienty pre prevod z ![]({{ '/assets/icons/pre_icons/mo_si_to_english_button.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_english_to_si_button.jpg' | relative_url }}); stlačením tlačidla ![]({{ '/assets/icons/pre_icons/mo_convert_button.jpg' | relative_url }}) sa vykoná prevod a okno prevodu sa zatvorí. Túto prevodnú tabuľku je možné uložiť pomocou tlačidla „Save“ a je možné ju tiež upraviť pomocou programu WordPad/Notepad a opätovne načítať do súboru UNITCONV.DAT pomocou tlačidla „Load“.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image006.jpg' | relative_url }})
 
-Unit Conversion window
+Okno pre prevod jednotiek
 
-## Add objects
+## Pridať objekty
 
-User can add required number of objects for the simulation by selecting ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. Fig. 33.2.9. shows three objects added for a simple upsetting operation. 
+Používateľ môže pridať požadovaný počet objektov pre simuláciu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Na obr. 33.2.9 sú zobrazené tri objekty pridané pre jednoduchú operáciu zúženia. 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image007.jpg' | relative_url }})
 
-Objects window
+Okno „Objekty“
 
-## Workpiece
+## Obrobok
 
-In this page user can define required temperature for the object and select type of the object as shown in Fig. 33.2.10. For workpiece by default the object type selected is Plastic and user can also import object data from other DB’s or Keyfile’s from user defined library path ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from problem directory path ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and even save the object data to Keyfile in user defined library ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) or in problem directory path ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }})using respective buttons.
+Na tejto stránke môže používateľ nastaviť požadovanú teplotu pre objekt a vybrať typ objektu, ako je znázornené na obr. 33.2.10. Pre obrobok je štandardne vybraný typ objektu „Plast“ a používateľ môže tiež importovať údaje o objekte z iných databázalebo súborov Keyfile z používateľom definovanej knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) alebo z adresára úlohy ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a dokonca môže údaje o objekte uložiť do súboru Keyfile v používateľom definovanej knižnici ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) alebo v adresári úlohy ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) pomocou príslušných tlačidiel.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image008.jpg' | relative_url }})
 
-Workpiece window
+Okno obrobku
 
-### **Geometry**
+### **Geometria**
 
-Geometry window is used to define the geometry of an object as shown in Fig. 33.2.11. Only define primitive field will be in active mode rest other options will be in grayed when no geometry is defined. Once after creating geometry all the options will be activated.
+Okno „Geometria“ slúži na definovanie geometrie objektu, ako je znázornené na obr. 33.2.11. Ak nie je definovaná žiadna geometria, aktívne bude iba pole „Definovať primitívy“, ostatné možnosti budú sivé. Po vytvorení geometrie sa aktivujú všetky možnosti.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image009.jpg' | relative_url }})
 
-Geometry window
+Okno Geometria
 
-**Define Primitive![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) **
+**Definícia Primitive![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) **
 
-We have three different types of Geometry primitives such as Box, Cylinder and Hollow Cylinder as shown in Fig. 33.2.12. Extrude and Revolve can be used to convert 2D cross-section to 3D.
+Máme k dispozícii tri rôzne typy geometrických primitív, ako sú krabica, valec a dutý valec, ako je znázornené na obr. 33.2.12. Pomocou nástrojov „Extrude“ a „Revolve“ je možné previesť 2D prierez na 3D.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image010.jpg' | relative_url }})
 
-Geometry primitive window
+Okno geometrických primitív
 
-**Extract Border** ![]({{ '/assets/icons/pre_icons/mo_extract_border_button.jpg' | relative_url }})
+**Ohraničenie výňatku** ![]({{ '/assets/icons/pre_icons/mo_extract_border_button.jpg' | relative_url }})
 
-This feature extracts the geometry data from the current database meshed object for all object types except the rigid object.
+Táto funkcia extrahuje geometrické údaje z aktuálneho objektu s mriežkou v databáze pre všetky typy objektov s výnimkou tuhého objektu.
 
 **Check![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**
 
-Always check geometry. DEFORM has a checking algorithm that checks for number of invalid edges, invalid orientation, polygons with small area and number of surfaces. Every type of error cannot be detected.
+Vždy skontrolujte geometriu. Program DEFORM disponuje kontrolným algoritmom, ktorý overuje počet neplatných hrán, neplatnú orientáciu, mnohouholníky s malou plochou a počet plôch. Nie je možné odhaliť všetky typy chýb.
 
-Using this Check Geometry option opens the Geometry Checking Results window which gives a summary of the object’s geometry (See Fig. 33.2.13.). For an object that has a closed volume, there should be 1 surface, 0 free edges and 0 invalid entities (as circled below in Fig. 33.2.13.). Objects that are imported as surfaces and not solids will have a free edge but should still only have 1 surface.
+Použitím tejto možnosti „Skontrolovať geometriu“ sa otvorí okno „Výsledky kontroly geometrie“, ktoré obsahuje prehľad geometrie objektu (pozri obr. 33.2.13.). V prípade objektu s uzavretým objemom by mala byť prítomná 1 plocha, 0 voľných hrán a 0 neplatných entít (ako je označené kružnicou nižšie na obr. 33.2.13.). Objekty, ktoré sú importované ako plochy a nie ako telesa, budú mať voľnú hranu, ale aj tak by mali mať len 1 plochu.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image011.jpg' | relative_url }})
 
-Geometry Checking Results
+Výsledky kontroly geometrie
 
 **Scale![]({{ '/assets/icons/pre_icons/mo_scale_label.jpg' | relative_url }})**
 
-Geometry can be scaled in forming operation to accommodate thermal expansion by specifying the scaling factor. (See Fig. 33.2.14.) The scaling factor can be calculated by temperature differential and temperature dependent material data. The scaled geometry can be saved into different Geometry saving formats.
+Geometriu je možné pri tvárnení zmenšiť alebo zväčšiť tak, aby zohľadňovala teplotnú rozťažnosť, a to stanovením mierky. (Pozri obr. 33.2.14.) Mierku je možné vypočítať na základe teplotného rozdielu a údajov o materiáli závislých od teploty. Upravenú geometriu je možné uložiť v rôznych formátoch na ukladanie geometrie.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image012.jpg' | relative_url }})
 
-Scale Geometry window
+Okno „Geometria mierky“
 
 **Reverse![]({{ '/assets/icons/pre_icons/mo_reverse_label.jpg' | relative_url }})**
 
-This feature reverses the surface/ normal of the geometry. Always surface/ Normal of the geometry should be outwards.
+Táto funkcia obráti smer povrchu/normály geometrie. Smer povrchu/normály geometrie by mal byť vždy smerom von.
 
-**Find Axis![]({{ '/assets/icons/pre_icons/mo_find_axis_label.jpg' | relative_url }})**
+**Nájsť Axis![]({{ '/assets/icons/pre_icons/mo_find_axis_label.jpg' | relative_url }})**
 
-This feature determines the axis of the geometry automatically based on the geometry definition and displays it.
+Táto funkcia automaticky určí os geometrie na základe jej definície a zobrazí ju.
 
-**Setup Brick Mesh**
+**Nastavenie siete Brick Mesh**
 
-In order to define Brick mesh, user has to define start surface and End surface for created geometry as shown in Fig. 33.2.15. Brick mesh is used for the geometries of regular or identical cross-section.
+Na definovanie mriežky typu „Brick“ musí používateľ určiť počiatočnú a koncovú plochu vytvorenej geometrie, ako je znázornené na obr. 33.2.15. Mriežka typu „Brick“ sa používa pre geometrie s pravidelným alebo identickým prierezom.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image017.jpg' | relative_url }})
 
-Setup Brick Mesh window for Extrusion
+Nastavenie okna „Brick Mesh“ pre extrudovanie
 
-Brick mesh can be generated by selecting Extrude or Revolve options based on the geometry. If user selects Extrude radio button the brick mesh will be extruded with respect to start and end point as shown in Fig. 33.2.16.
+Sieť tehál je možné vytvoriť výberom možností „Extrude“ (Extrudovať) alebo „Revolve“ (Otočiť) v závislosti od geometrie. Ak používateľ zvolí voľbu „Extrude“, sieť tehál sa extruduje vzhľadom na počiatočný a koncový bod, ako je znázornené na obr. 33.2.16.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image013.jpg' | relative_url }})
 
-Brick mesh of Extruded object
+Tehlová mriežka extrudovaného objektu
 
-If user selects Revolve radio button the brick mesh will be revolved in Z direction as shown in Fig. 33.2.17. and Fig. 33.2.18.
+Ak používateľ vyberie prepínač „Revolve“, sieť tehál sa otočí v smere osi Z, ako je znázornené na obr. 33.2.17 a obr. 33.2.18.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image014.jpg' | relative_url }})
 
-Setup brick mesh window for revolving
+Nastavenie okna s mriežkou pre otáčanie
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image015.jpg' | relative_url }})
 
-Brick mesh of Revolving object
+Tehlová mriežka rotujúceho objektu
 
 **Fix![]({{ '/assets/icons/pre_icons/mo_fix_label.jpg' | relative_url }})**
 
-This feature will handle geometric problems where there are either multiple surfaces or open (holes) regions by deleting any extra surfaces and filling holes. For minor or localized problems, this works well. For more troublesome file such as this one, the repair may not produce a desirable result.(See Fig. 33.2.19.)
+Táto funkcia rieši geometrické problémy, pri ktorých sa vyskytujú buď viaceré plochy, alebo otvorené oblasti (diery), a to odstránením všetkých nadbytočných plôch a vyplnením dier. Pri menších alebo ohraničených problémoch to funguje dobre. Pri zložitejších súboroch, ako je tento, však oprava nemusí priniesť želaný výsledok. (Pozri obr. 33.2.19.)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image016.jpg' | relative_url }})
 
-Fixing Geometry of crankshaft Die
+Určenie geometrie formy na kľukový hriadeľ
 
-**Examine**![]({{ '/assets/icons/pre_icons/mo_examine_label.jpg' | relative_url }})
+**Preskúmať**![]({{ '/assets/icons/pre_icons/mo_examine_label.jpg' | relative_url }})
 
-This feature helps to examine the 3D geometry points and polygons. The geometry point’s co-ordinates can also be edited by using points co-ordinates fields and apply button after changing these co-ordinates. The current selection of the point and polygon display is highlighted by sphere or cube shapes using the check boxes at the bottom of the window.(See Fig. 33.2.20.). From DEFORM V12, using ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) ("Detect zones") next to Surface field option we can calculate the number of zones exist in Geometry and for each zone we can assign different material or Layer ID using Assignment option. This option helps the user to model multi-layered composites, voids, inclusions, additive manufacturing,..etc.
+Táto funkcia slúži na preskúmanie bodov a polygónov 3D geometrie. Súradnice bodov geometrie je možné upravovať pomocou polí pre súradnice bodov a po zmene týchto súradníc stlačením tlačidla „Apply“. Aktuálny výber zobrazenia bodov a polygónov je zvýraznený guľou alebo kockou pomocou začiarkavacích políčok v spodnej časti okna.(Pozri obr. 33.2.20.) Od verzie DEFORM V12 môžeme pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) („Detect zones“) vedľa poľa Surface vypočítať počet zón existujúcich v geometrii a pre každú zónu môžeme pomocou možnosti „Assignment“ priradiť iný materiál alebo ID vrstvy. Táto voľba pomáha používateľovi modelovať viacvrstvové kompozity, dutiny, inklúzie, aditívnu výrobu atď.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image018.jpg' | relative_url }})
 
-Geometry settings of Examine window
+Nastavenia geometrie okna „Examine“
 
-**Symmetry Planes![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }})**
+**Roviny symetrie ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }})**
 
-Both planar symmetry and rotational symmetry can be defined. In the case of planar symmetry, the simulation will have extra information that allows it to prevent material from flashing around it. In the case of rotational symmetry, meshing will automatically place the proper boundary conditions on the faces. This is meant as a uniform place to apply symmetry boundary conditions for all objects.
+Je možné definovať ako rovinnú symetriu, tak aj rotačnú symetriu. V prípade rovinné symetrie bude simulácia obsahovať dodatočné informácie, ktoré jej umožnia zabrániť vytváraniu prebytku materiálu v jej okolí. V prípade rotačnej symetrie sa pri vytváraní siete automaticky nastavia správne okrajové podmienky na plochách. Cieľom je vytvoriť jednotné miesto na aplikovanie symetrických okrajových podmienok pre všetky objekty.
 
-**Specifying Planar Symmetry**
+**Určenie rovinná symetria**
 
-To specify planar symmetry, select the symmetry plane on the geometry, then click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). The planar symmetry condition will be added to the list of currently specified symmetry. (See Fig. 33.2.21.). When symmetry plane is defined, during mesh generation a pop up appears with a message as shown in Fig. 33.2.22., requesting the user whether to create a default boundary condition, the user can select "No" option, if user would not like to use default BCC assigned by system based on symmetry conditions defined.
+Ak chcete určiť rovinnú symetriu, vyberte symetrickú rovinu na geometrii a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Podmienka rovinná symetria sa pridá do zoznamu aktuálne zadaných symetrií. (Pozri obr. 33.2.21.) Po definovaní roviny symetrie sa počas generovania siete zobrazí vyskakovacie okno so správou, ako je znázornené na obr. 33.2.22., v ktorom sa používateľ opýta, či chce vytvoriť predvolenú okrajovú podmienku. Používateľ môže zvoliť možnosť „Nie“, ak nechce použiť predvolenú okrajovú podmienku (BCC) priradenú systémom na základe definovaných podmienok symetrie.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image019.jpg' | relative_url }})
 
-Assigning symmetry surfaces
+Priradenie symetrických plôch
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image020.jpg' | relative_url }})
 
-Default Boundary Conditions popup window
+Vyskakovacie okno „Predvolené okrajové podmienky“
 
-**Note** : Symmetry Popup message appears only when we setup a problem in Expert mode.
+**Poznámka**: Oznamové okno „Symetria“ sa zobrazí len vtedy, keď nastavíme úlohu v režime Expert.
 
-**Specifying Rotational Symmetry**
+**Určenie rotačnej symetrie**
 
-To specify rotational symmetry, specify the point and vector of the rotational axis as well as the degree of symmetry available as shown in Fig. 33.2.23. After this, click on the starting plane and end plane of the geometry in the direction of rotation so that rotational symmetry to be applied. The symmetry condition will be added to the list of currently specified symmetry. For more information about rotational symmetry option refer [Rotational Symmetry.](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Specifying_Rotational_Symmetry)
+Na definovanie rotačnej symetrie zadajte bod a vektor osi otáčania, ako aj stupeň symetrie, ako je znázornené na obr. 33.2.23. Potom kliknite na počiatočnú a koncovú rovinu geometrie v smere otáčania, aby sa uplatnila rotačná symetria. Podmienka symetrie sa pridá do zoznamu aktuálne zadaných symetrií. Ďalšie informácie o možnosti rotačnej symetrie nájdete v [Rotational Symmetry.](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Specifying_Rotational_Symmetry)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image021.jpg' | relative_url }})
 
-Rotational symmetry window
+Okno rotačnej symetrie
 
-**2D to 3D conversion![]({{ '/assets/icons/pre_icons/mo_2d_to_3d_conversion.jpg' | relative_url }})**
+**Premena z 2D na 3D ![]({{ '/assets/icons/pre_icons/mo_2d_to_3d_conversion.jpg' | relative_url }})**
 
-User can define 2D cross section geometry which can be used to generate 3D geometry by checking Use Cross Section check box.
+Používateľ môže definovať geometriu 2D priečneho rezu, ktorú je možné použiť na vytvorenie 3D geometrie zaškrtnutím políčka „Použiť priečny rez“.
 
-**Define Primitive![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }})**
+**Definícia Primitive![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }})**
 
-We have three different types of Geometry primitives such as Bar, Cylinder and Hollow Cylinder as shown in Fig. 33.2.24. This geometry window appears for plane strain type of geometry.
+Máme tri rôzne typy geometrických primitív, ako sú tyč, valec a dutý valec, ako je znázornené na obr. 33.2.24. Toto okno geometrie sa zobrazuje pri geometrii typu rovinného deformovania.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image007.jpg' | relative_url }})
 
-2D Geometry primitive window for plane strain and plane stress 
+Okno s geometrickými primitívami 2D pre rovinné deformácie a rovinné napätia 
 
-The geometry window appears for Axisymmetric type of geometry is shown in Fig. 33.2.25.
+Zobrazí sa okno geometrie pre typ geometrie „Axisymmetric“, ktoré je znázornené na obr. 33.2.25.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image006.jpg' | relative_url }})
 
-2D Geometry primitive window for Axisymmetric and Torsion
+Okno s geometrickými primitívami 2D pre osovo symetrické a torzné modely
 
 **Check![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**
 
-Once the geometry of the object is created, ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button a popup appears as shown in below Fig. 33.2.26. The Geometry gets corrected, if they are any errors when we click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). For more information please refer [12.1. 2D Geometry Data Defining](/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) section [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
+Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), čím sa zobrazí vyskakovacie okno, ako je znázornené na obr. 33.2.26 nižšie. Ak sa vyskytnú nejaké chyby, geometria sa opraví po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image022.jpg' | relative_url }})
 
-Check Geometry popup window
+Vyskakovacie okno „Skontrolovať geometriu“
 
-**Edit**![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }})
+**Upraviť**![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }})
 
-The Geometry editing option is used to create geometry for an object or edit the existing geometry. Imported geometry can be modified in Edit Geometry window. For more information on edit geometry, please refer[ Edit Geometry](33_1_2d_forming_setup.htm#Edit_) in Forming 2D Setup.
+Možnosť „Úprava geometrie“ slúži na vytvorenie geometrie objektu alebo na úpravu existujúcej geometrie. Importovanú geometriu je možné upraviť v okne „Úprava geometrie“. Ďalšie informácie o úprave geometrie nájdete v časti [ Edit Geometry](33_1_2d_forming_setup.htm#Edit_) v nastaveniach Forming 2D.
 
-**Show geometry inside mark**
+**Zobraziť geometriu vnútri značky**
 
-Checking this option enables the Geometry orientation display.
+Zaškrtnutím tejto možnosti sa aktivuje zobrazenie orientácie geometrie.
 
-**Settings![]({{ '/assets/icons/pre_icons/mo_settings_icon.jpg' | relative_url }})**
+**Nastavenia![]({{ '/assets/icons/pre_icons/mo_settings_icon.jpg' | relative_url }})**
 
-After creation of 2D geometry using these settings user can create 3D geometry from 2D geometry.
+Po vytvorení 2D geometrie pomocou týchto nastavení môže používateľ z 2D geometrie vytvoriť 3D geometriu.
 
-**Extrude**
+**Extrudovať**
 
-The user can import the 2d cross-section or use defined 2D cross-section of the geometry and extrude it in the desired direction. This can also be done while importing the 2d cross-section files from the DB or key file.(See Fig. 33.2.27.) 
+Používateľ môže importovať 2D priečny rez alebo použiť definovaný 2D priečny rez geometrie a vytiahnuť ho v požadovanom smere. To je možné urobiť aj pri importe súborov s 2D priečnymi rezmi z databázy alebo kľúčového súboru. (Pozri obr. 33.2.27.) 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image023.jpg' | relative_url }})
 
-2d cross-section window settings for extrusion
+Nastavenia okna 2D priečneho rezu pre extrudovanie
 
 **Revolve**
 
-The user can import the 2d cross-section of the geometry and revolve the geometry based upon the symmetry to get a 3d cross-section. (See Fig. 33.2.28.)
+Používateľ môže načítať 2D priečny rez geometrie a na základe symetrie ju otočiť, čím získa 3D priečny rez. (Pozri obr. 33.2.28.)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image024.jpg' | relative_url }})
 
-2D cross-section window settings for Revolving
+Nastavenia okna 2D rezu pre funkciu „Revolving“
 
-**Generate 3D![]({{ '/assets/icons/pre_icons/mo_generate_3d_button.jpg' | relative_url }})**
+**Vygenerovať 3D![]({{ '/assets/icons/pre_icons/mo_generate_3d_button.jpg' | relative_url }})**
 
-By clicking on this button, created 2D geometry can be extruded or revolved to 3D geometry.
+Kliknutím na toto tlačidlo je možné vytvorenú 2D geometriu vytiahnuť alebo otočiť a vytvoriť tak 3D geometriu.
 
-**Show Geometry Normal Vectors**
+**Zobraziť normálové vektory geometrie**
 
-This feature shows the geometry surface normal vectors. If the geometry is a closed volume, the correct orientation is defined when the surface normals are pointing out of the object. When the geometry is not a closed volume but is just a surface, the correct orientation is defined when the normals are pointing towards the workpiece.(See Fig. 33.2.29.)
+Táto funkcia zobrazuje normálové vektory povrchu geometrie. Ak je geometria uzavretým objemom, správna orientácia je daná vtedy, keď normály povrchu smerujú von z objektu. Ak geometria nie je uzavretým objemom, ale ide len o povrch, správna orientácia je daná vtedy, keď normály smerujú k obrobku.(Pozri obr. 33.2.29.)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image025.jpg' | relative_url }})
 
-Show Geometry Normal Vectors
+Zobraziť normálové vektory geometrie
 
-**Import Geometry from a file** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}): It imports the geometry from a file  
-**Load Geometry from Library** ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) :It imports geometry from Library  
-**Save the Geometry to a file** ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) : It saves the Geometry to a file.  
-**Save Geometry to Library** ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) : User can save geometry to the library using this option.  
-**Delete Geometry** ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}): It deletes the created geometry.
+**Import geometrie zo súboru** ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}): Importuje geometriu zo súboru  
+**Načítať geometriu z knižnice** ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}): Importuje geometriu z knižnice  
+**Uloženie geometrie do súboru** ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) : Uloží geometriu do súboru.  
+**Uložiť geometriu do knižnice** ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ uložiť geometriu do knižnice.  
+**Odstrániť geometriu** ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}): Odstráni vytvorenú geometriu.
 
-**Settings**
+**Nastavenia**
 
-**2D Import**
+**Import 2D**
 
-Tolerance: Sets the tolerance level for joining two boundary points which are close together when an object is imported in IGS and DXF geometry formats, before transferring the data into DEFORM are defined here. (See Fig. 33.2.30.)
+Tolerancia: Tu sa nastavuje úroveň tolerancie pri spájaní dvoch susedných bodov, ktoré sú blízko pri sebe, pri importe objektu v geometrických formátoch IGS a DXF pred prenosom údajov do programu DEFORM. (Pozri obr. 33.2.30.)
 
-**No. of discretization points:**
+**Počet diskretizačných bodov:**
 
-Text to be added.
+Text, ktorý sa má pridať.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image018.jpg' | relative_url }})
 
-2D Geometry Tolerance settings window
+Okno nastavení tolerancií v 2D geometrii
 
-**3D Import**
+**Import 3D**
 
-Tolerance: level for joining two boundary points which close together when an object is imported from STL geometry formats and before transferring the data into DEFORM are defined here. (See Fig. 33.2.30.)
+Tolerancia: Tu sa definuje úroveň spojenia dvoch hraničných bodov, ktoré sa pri importe objektu z geometrických formátov STL a pred prenosom údajov do programu DEFORM nachádzajú blízko seba. (Pozri obr. 33.2.30.)
 
-**Scaling Factor** : It will scale the 3D geometry while loading imported geometry. Required scaling factor must be specified before importing the geometry in order to scale the importing geometry. By default the value will be 1 means no scaling, for 0.5 it scales down to half of its original geometry and for 2 it doubles its original geometry. (See Fig. 33.2.30..) 
+**Mierka**: Táto voľba zmení mierku 3D geometrie pri načítaní importovanej geometrie. Ak chcete zmeniť mierku importovanej geometrie, je potrebné zadať požadovanú mierku ešte pred jej importom. Predvolená hodnota je 1, čo znamená žiadne zmenšenie; pri hodnote 0,5 sa geometria zmenší na polovicu pôvodnej veľkosti a pri hodnote 2 sa zväčší na dvojnásobok pôvodnej veľkosti. (Pozri obr. 33.2.30..) 
 
-### Mesh
+### Sieťovina
 
-The below Fig. 33.2.31. shows the mesh generation options in guided mode. In Guided mode, mesh page user can generate Tetrahedral mesh.
+Na nižšie uvedenom obr. 33.2.31 sú zobrazené možnosti generovania siete v režime s návodom. V režime s návodom môže používateľ na stránke „Sieť“ vygenerovať tetraedrickú sieť.
 
-The number of elements to be generated for an object can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation in Number of Elements field. ![]({{ '/assets/icons/pre_icons/mo_mesh_preview_button.jpg' | relative_url }})option allows the user to preview the surface mesh of the object. Once the user is satisfied with the preview of surface mesh, the mesh can be generated on an object by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). ![]({{ '/assets/icons/pre_icons/mo_delete_button.jpg' | relative_url }}) feature deletes the generated mesh.
+Počet prvkov, ktoré sa majú pre daný objekt vygenerovať, je možné určiť jednoduchým posunutím posuvníka a výberom vhodnej hodnoty pre aktuálnu simuláciu v poli „Počet prvkov“. Funkcia ![]({{ '/assets/icons/pre_icons/mo_mesh_preview_button.jpg' | relative_url }}) umožňuje používateľovi zobraziť náhľad povrchovej siete objektu. Akonáhle je používateľ spokojný s náhľadom povrchovej siete, sieť sa môže na objekte vygenerovať kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Funkcia ![]({{ '/assets/icons/pre_icons/mo_delete_button.jpg' | relative_url }}) vymaže vygenerovanú sieť.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image026.jpg' | relative_url }})
 
-Guided Mode Mesh window options
+Možnosti okna „Mesh“ v režime s navádzaním
 
-In order to control the mesh parameters like size, shape, density, type of elements, etc..., user has to switch to expert mode ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) for more advanced mesh options. Below Fig. 33.2.32. shows the mesh options available from Expert mode. We have Tetrahedral mesh and brick mesh option to generate mesh for object. For more information related to Tetrahedral mesh, refer chapter [13.2. 3D Tet Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+Na nastavenie parametrov siete, ako sú veľkosť, tvar, hustota, typ prvkov atď., musí používateľ prejsť do expertného režimu ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), kde sú k dispozícii pokročilejšie možnosti vytvárania siete. Na obr. 33.2.32. sú zobrazené možnosti siete dostupné v expertnom režime. Na vytvorenie siete pre objekt máme k dispozícii možnosti tetraedrickej siete a tehličkovej siete. Ďalšie informácie týkajúce sa tetraedrickej siete nájdete v kapitole [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image027.jpg' | relative_url }})
 
-Expert Mode Mesh window options
+Možnosti okna „Mesh“ v režime pre pokročilých
 
-The below Fig. 33.2.33. shows the Brick mesh generation options in Expert mode. For more information related to Tetrahedral mesh, refer chapter [13.3. 3D Brick Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
+Na nižšie uvedenom obr. 33.2.33 sú zobrazené možnosti generovania mriežky typu „Brick“ v režime Expert. Ďalšie informácie týkajúce sa tetraedrickej mriežky nájdete v kapitole [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image028.jpg' | relative_url }})
 
-Brick Mesh options in Expert mode
+Možnosti mriežky tehál v režime Expert
 
-###  Material
+###  Materiál
 
-The below Fig. 33.2.34. shows the material window. User can assign required material from the list or can import from file or library. User can also add new material. For more information on how to assign material, Please refer Material List .
+Na nižšie uvedenom obr. 33.2.34. je zobrazené okno s materiálmi. Používateľ môže priradiť požadovaný materiál zo zoznamu alebo ho importovať zo súboru či knižnice. Používateľ môže tiež pridať nový materiál. Ďalšie informácie o tom, ako priradiť materiál, nájdete v časti Zoznam materiálov.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image029.jpg' | relative_url }})
 
-Material Window
+Okno „Materiál“
 
-Once after adding material click on ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}) button, material window will open as shown in [Fig. 10.9.](../../pre_processor/10_material_data/10_material_data.htm#Fig._10.9._Edit_material_window) The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. This section describes the material data that may be specified for a DEFORM simulation.
+Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}); otvorí sa okno s materiálom, ako je znázornené na obrázku [Fig. 10.9.](../../pre_processor/10_material_data/10_material_data.htm#Fig._10.9._Edit_material_window). Požadované vlastnosti závisia od fyzikálnych javov, ktoré sa simulujú v programe DEFORM. Vlastnosti materiálu, ktoré musí používateľ špecifikovať, závisia od typov materiálov, ktoré používateľ využíva v simulácii. V tejto časti sú popísané údaje o materiáloch, ktoré je možné špecifikovať pre simuláciu v programe DEFORM.
 
   
-The different data sets are:
+Jednotlivé súbory údajov sú:
 
-  * [Plastic ](/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/)
-  * [Elastic](/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/)
-  * [Thermal ](/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/)
-  * [Diffusion ](/docs/sk/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/)
-  * [Dislocation ](/docs/sk/pre_processor/10_material_data/10_5_dislocation_data/)
-  * [Grain ](/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/)
-  * [Hardness ](/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/)
-  * [Elec/ Mag ](/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/)
-  * [Transformation](/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/)
-  * [Coarsening](/docs/sk/pre_processor/10_material_data/10_10_coarsening_data/)
-  * [Texture ](/docs/sk/pre_processor/10_material_data/10_11_texture_data/)
-  * [Miscellaneous](/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/)
+  * [Plastic ](/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/)
+  * [Elastic](/docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/)
+  * [Thermal ](/docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/)
+  * [Diffusion ](/docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/)
+  * [Dislocation ](/docs/en/pre_processor/10_material_data/10_5_dislocation_data/)
+  * [Grain ](/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/)
+  * [Hardness ](/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/)
+  * [Elec/ Mag ](/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/)
+  * [Transformation](/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/)
+  * [Coarsening](/docs/en/pre_processor/10_material_data/10_10_coarsening_data/)
+  * [Texture ](/docs/en/pre_processor/10_material_data/10_11_texture_data/)
+  * [Miscellaneous](/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/)
 
-This section discusses the manner in which to define each data set, and for which type of simulation each of these is required.
+V tejto časti sa rozoberá spôsob definovania jednotlivých dátových súborov a uvádza sa, pre aký typ simulácie je ktorý z nich potrebný.
 
-The DEFORM material library contains several hundred data sets. Nearly all materials contain Plastic (flow stress), elastic and thermal data. Depending on the intended application, the material data may also include microstructure related data.
+Knižnica materiálov DEFORM obsahuje niekoľko stoviek súborov údajov. Takmer všetky materiály obsahujú údaje o plastickosti (tečivé napätie), pružnosti a tepelných vlastnostiach. V závislosti od zamýšľaného použitia môžu údaje o materiáloch zahŕňať aj údaje týkajúce sa mikrostruktúry.
 
-The user should confirm that the material selected from the library is appropriate for the process they intend to model. For more information about Material Properties, please refer [10\. Material Data](/docs/sk/pre_processor/10_material_data/10_material_data/).
+Používateľ by mal overiť, či je materiál vybraný z knižnice vhodný pre proces, ktorý chce modelovať. Ďalšie informácie o vlastnostiach materiálov nájdete v dokumente [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/).
 
-### Boundary Conditions
+### Okrajové podmienky
 
-In Boundary conditions page, user can assign various boundary constraints for an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. The most commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer, prescribed velocity for enforcing symmetry or prescribing movement in problems such as drawing where a part is pulled through a die, shrink fit for modelling shrink rings on tooling, prescribed force for die stress analysis and Contact between objects in the model. Fig. 33.2.35. shows various BCC that can be assigned to an object.
+Na stránke „Okrajové podmienky“ môže používateľ priradiť objektu rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako okraj objektu interaguje s inými objektmi a s prostredím. Najčastejšie používané okrajové podmienky sú výmena tepla s prostredím pri simuláciách zahŕňajúcich prenos tepla, predpísaná rýchlosť na vynútenie symetrie alebo predpísanie pohybu v úlohách, ako je ťahanie dielu cez lisovaciu formu, zúženie pri modelovaní zúžených krúžkov na nástrojoch, predpísaná sila pre analýzu napätia v lisovacej forme a kontakt medzi objektmi v modeli. Obr. 33.2.35. znázorňuje rôzne okrajové podmienky, ktoré je možné priradiť k objektu.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image033.jpg' | relative_url }})
 
-Boundary Conditions window
+Okno „Okrajové podmienky“
 
-The BCC's are categorized as [Symmetry](/docs/sk/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/), [Deformation](/docs/sk/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/), [Thermal](/docs/sk/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/sk/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) and [Heating](/docs/sk/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). For more information about these BCC's please refer [14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+BCC sú rozdelené do kategórií [Symmetry](/docs/en/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/), [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/), [Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) a [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
 
-### **Movement Controls**
+### **Ovládanie pohybu**
 
-Movement controls can be applied to rigid objects and boundary nodes of meshed objects. The surface defined by these nodes can be thought of as a "rigid surface". During the simulation, the constrained nodes will move synchronously in the speed and direction defined by the movement controls. Two types of Movement controls are available in 3D Environment.
+Ovládacie prvky pohybu je možné použiť na tuhé objekty a hraničné uzly objektov s sieťou. Povrch vymedzený týmito uzlami možno považovať za „tuhý povrch“. Počas simulácie sa obmedzené uzly budú pohybovať synchronizovane rýchlosťou a smerom definovanými ovládacími prvkami pohybu. V 3D prostredí sú k dispozícii dva typy ovládacích prvkov pohybu.
 
-**Translation Movement**
+**Hnutie za preklad**
 
-Various types of Movement controls that are available in Translation Movement controls are [Speed](/docs/sk/pre_processor/15_movement_controls_definition/15_1_speed/), [Force](/docs/sk/pre_processor/15_movement_controls_definition/15_2_force/), [Hammer](/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/), [Screw press](/docs/sk/pre_processor/15_movement_controls_definition/15_4_screw_press/), [Mechanical press](/docs/sk/pre_processor/15_movement_controls_definition/15_5_mechanical_press/), [Hydraulic press](/docs/sk/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/), [Sliding Die](/docs/sk/pre_processor/15_movement_controls_definition/15_7_sliding_die/) and [Path](/docs/sk/pre_processor/15_movement_controls_definition/15_8_path/) as shown in Fig. 33.2.36. For more information about these movement controls, please refer [15\. Movement controls settings.](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+Medzi rôzne typy ovládacích prvkov pohybu, ktoré sú k dispozícii v rámci ovládacích prvkov pohybu pre preklad, patria [Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/), [Force](/docs/en/pre_processor/15_movement_controls_definition/15_2_force/), [Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/), [Screw press](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/), [Mechanical press](/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/), [Hydraulic press](/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/), [Sliding Die](/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/) a [Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/), ako je znázornené na obr. 33.2.36. Ďalšie informácie o týchto ovládacích prvkoch pohybu nájdete v [15\. Movement controls settings.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image035.jpg' | relative_url }})
 
-Translation Movement Controls window
+Preklad okna „Ovládacie prvky pohybu“
 
-**Rotational Movement**
+**Rotačný pohyb**
 
-Rotational movement is defined by an angular velocity/torque about a fixed center of rotation. Two types of Movement controls that are available in Rotational Movement controls are Torque and Angular Velocity as shown in Fig. 33.2.37. For more information, please refer [15.9. Rotational movement.](/docs/sk/pre_processor/15_movement_controls_definition/15_9_rotational_movement/)
+Rotačný pohyb je definovaný uhlovou rýchlosťou alebo krútiacim momentom okolo pevného stredu otáčania. V rámci ovládacích prvkov pre rotačný pohyb sú k dispozícii dva typy ovládacích prvkov: krútiaci moment a uhlová rýchlosť, ako je znázornené na obr. 33.2.37. Ďalšie informácie nájdete v [15.9. Rotational movement.](/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image034.jpg' | relative_url }})
 
-Rotation Movement Controls window
+Okno Ovládacie prvky rotačného pohybu
 
-For more information about these movement controls please refer [15\. Movement Controls Settings.](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+Ďalšie informácie o týchto ovládacích prvkoch nájdete v [15\. Movement Controls Settings.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
 
-### Property
+### Nehnuteľnosť
 
-Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See Fig. 33.2.38.) For more information, Please refer [16\. Object properties.](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 33.2.38.) Ďalšie informácie nájdete v [16\. Object properties.](/docs/en/pre_processor/16_object_properties/16_object_properties/).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image036.jpg' | relative_url }})
 
-Object property window
+Okno vlastností objektu
 
-### **Initialize**
+### **Inicializácia**
 
-In Initialize window, few state variables that are commonly used such as Temperature, strain, stress, damage, velocity, Displacement, etc.., are made available for initialization. User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 33.2.39. shows the various state variables that are available in Initialize window. For state variable like velocity and displacement, provided input fields as many as dimensions, user needs to define the directional values of the variables in respective fields and then clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button will calculate the total velocity and displacement. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows (See Fig. 33.2.40. and Fig. 33.2.41.), please refer [17.1. Object node variables](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [17.2. Object element variables.](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/)
+V okne „Initialize“ sú k dispozícii na inicializáciu niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie atď. Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 33.2.39. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne Initialize. V prípade stavových premenných, ako sú rýchlosť a posunutie, kde je k dispozícii toľko vstupných polí, koľko je rozmerov, musí používateľ v príslušných poliach zadať smerové hodnoty premenných a následným kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) sa vypočíta celková rýchlosť a posunutie. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z okien s údajmi o uzloch a prvkoch. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“ (pozri obr. 33.2.40. a obr. 33.2.41.), nájdete v [17.1. Object node variables](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [17.2. Object element variables.](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image030.jpg' | relative_url }})
 
-Initialization window
+Okno inicializácie
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image031.jpg' | relative_url }})
 
-Node Data window
+Okno „Údaje uzla“
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image032.jpg' | relative_url }})
 
-Element Data window
+Okno „Údaje o prvku“
 
-## Positioning
+## Polohovanie
 
-Below Fig. 33.2.42. shows the positioning window.
+Na obrázku 33.2.42 nižšie je zobrazené okno na nastavenie polohy.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image037.jpg' | relative_url }})
 
-Positioning window
+Okno na nastavenie polohy
 
-**Automatic Positioning** ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }})
+**Automatické polohovanie** ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }})
 
-By clicking on this button, system automatically Positions the Objects with respect to the top die movement direction, this option works best for simple setup with three objects work piece, top die and bottom die.
+Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na smer pohybu hornej matrice; táto možnosť sa najlepšie hodí pre jednoduché nastavenie s tromi objektmi – obrobkom, hornou matricou a spodnou matricou.
 
-**Positioning Objects** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
+**Umiestňovanie objektov** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 33.2.43. For more information about these options, please refer [19\. Object Positioning.](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/)
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 33.2.43. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image038.jpg' | relative_url }})
 
-Object Positioning Window
+Okno na umiestňovanie objektov
 
-## Scheduled Positioning
+## Plánované polohovanie
 
-When user is not sure about the location of an object as in case of Read From DB objects, scheduled positioning will help to position the objects accurately.
+Ak si používateľ nie je istý polohou objektu, ako je to v prípade objektov typu „Read From DB“, naplánované umiestňovanie pomôže objekty presne umiestniť.
 
-Schedule positioning allows the user to define the positioning for objects in MO setup for successive operations for which DB is not generated so that the objects are positioned before generation of DB while running simulation in Batch mode.(See Fig. 33.2.44.)
+Funkcia „Schedule positioning“ umožňuje používateľovi definovať umiestnenie objektov v nastaveniach MO pre nasledujúce operácie, pre ktoré sa nevytvára databáza (DB), tak, aby boli objekty umiestnené ešte pred vytvorením databázy počas spustenia simulácie v dávkovom režime. (Pozri obr. 33.2.44.)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image039.jpg' | relative_url }})
 
-Scheduled Positioning window
+Plánované časové okno na určovanie polohy
 
-## Contact (Inter-Object Relations)
+## Kontakt (vzťahy medzi objektmi)
 
-The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. The relations table shows the current inter object relations that have been defined. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined. This includes an object having a relationship to itself, if self-contact occurs as in case of lap. It is very important to define these relationships correctly for a simulation to model a forming process accurately. The critical variables to be defined between contacting objects are:
+Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty v simulácii vzájomne interagujú. Tabuľka vzťahov zobrazuje aktuálne definované vzťahy medzi objektmi. Všetky objekty, ktoré môžu prísť do kontaktu v priebehu simulácie, musia mať definovaný kontaktný vzťah. To zahŕňa aj objekt, ktorý má vzťah sám so sebou, ak dochádza k vlastnému kontaktu, ako je to v prípade prekrývania. Správne definovanie týchto vzťahov je veľmi dôležité, aby simulácia presne modelovala proces formovania. Kľúčové premenné, ktoré je potrebné definovať medzi kontaktujúcimi sa objektmi, sú:
 
   * [Friction factor](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_1_Friction_\(FRCFAC\))
 
@@ -476,160 +476,160 @@ The purpose of inter-object relations is to define how the different objects in 
 
   * [Separation criterion](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_4_Separation_Type)
 
-Also covered in the inter object controls is generation of inter-object boundary conditions.
+Súčasťou riadenia interakcií medzi objektmi je aj generovanie okrajových podmienok medzi objektmi.
 
-Inter-Object relations define what objects can contact each other, and how contacted objects will behave while in contact. Contact relations, Inter-Object boundary conditions, Friction and Heat transfer relations are set here for each object pair ( Fig. 33.2.45.). Simply speaking, the procedure for defining Inter-Object relations is done in the following steps.
+Vzťahy medzi objektmi určujú, ktoré objekty sa môžu navzájom dotýkať, a ako sa dotýkajúce sa objekty budú správať počas kontaktu. Pre každú dvojicu objektov sa tu nastavujú vzťahy kontaktu, okrajové podmienky medzi objektmi, vzťahy trenia a prenosu tepla (obr. 33.2.45.). Zjednodušene povedané, postup definovania vzťahov medzi objektmi prebieha v nasledujúcich krokoch.
 
-  * Define the master-slave combination – In the case of a single deforming object, the deforming object should be the slave object always. In the case of multiple deforming bodies, the object with the finer mesh at the interface of the two objects should be the slave object.
+  * Určte kombináciu „master-slave“ – V prípade jediného deformovaného objektu by mal byť deformovaný objekt vždy objektom typu „slave“. V prípade viacerých deformovaných telies by mal byť objektom typu „slave“ ten objekt, ktorý má na rozhraní týchto dvoch objektov jemnejšiu sieť.
 
-  * Define the parameter for the given master-slave pair – This can be done by clicking the Edit button and setting the appropriate parameters . (See [Fig. 20.2.](../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm#Fig_20_2_Inter_object_constant_Shear_Friction_options_for__2D) and [Fig. 20.3.](../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm#Fig_20_3_Inter_object_constant_Shear_Friction_options_for_3D))
+  * Nastavte parametre pre danú dvojicu master-slave – to môžete urobiť kliknutím na tlačidlo „Edit“ a nastavením príslušných parametrov. (Pozri [Fig. 20.2.](../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm#Fig_20_2_Inter_object_constant_Shear_Friction_options_for__2D) a [Fig. 20.3.](../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm#Fig_20_3_Inter_object_constant_Shear_Friction_options_for_3D))
 
-  * Generate the contact for all the objects – First click the ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}) icon and then click the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button to generate contact. If contact is not generated where expected check following:
+  * Vytvorenie kontaktu pre všetky objekty – Najskôr kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}) a potom na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}), čím sa vytvorí kontakt. Ak sa kontakt nevytvoril tak, ako ste očakávali, skontrolujte nasledujúce:
 
-  * The orientation of geometry of the rigid objects. Make sure that the geometry is shaded on the inside of the rigid objects.
+  * Orientácia geometrie tuhých objektov. Uistite sa, že geometria je vnútorná strana tuhých objektov zatienená.
 
-  * The mesh in the region of contact. If the mesh is coarse, there may be no nodes in proximity to gain contact.
+  * Sieť v oblasti kontaktu. Ak je sieť hrubá, v blízkosti miesta kontaktu sa nemusia nachádzať žiadne uzly.
 
-  * Make sure that the parts are actually within proximity of each other.
+  * Uistite sa, že sú tieto časti skutočne v tesnej blízkosti jedna druhej.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image040.jpg' | relative_url }})
 
-Inter-object data definition window
+Okno definície údajov medzi objektmi
 
-In MO, we have two types of Inter-object relation ships. They are **User** and **System**.
+V MO máme dva typy vzťahov medzi objektmi. Sú to **User** a **System**.
 
-**System** : By selecting this radio button (See Fig. 33.2.46..), system assigns default inter-object relationships. Also user can add the lubricants if necessary (See Fig. 33.2.47.). By clicking on Edit button, user can define the required lubricants for the simulation. (See Fig. 33.2.48.)
+**Systém**: Po výbere tohto prepínača (pozri obr. 33.2.46..) systém priradí predvolené vzťahy medzi objektmi. V prípade potreby môže používateľ pridať aj mazivá (pozri obr. 33.2.47.). Kliknutím na tlačidlo Upraviť môže používateľ definovať mazivá potrebné pre simuláciu. (pozri obr. 33.2.48.)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image041.jpg' | relative_url }})
 
-Inter-object window with system selection
+Okno medzi objektmi s výberom systému
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image042.jpg' | relative_url }})
 
-Adding lubricant in Inter-object window
+Pridávanie maziva v okne „Medzi objektmi“
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image043.jpg' | relative_url }})
 
-Adding lubricant from Edit window
+Pridanie maziva z okna „Edit“
 
-**User** : By default, user radio button will be selected for Forming operation. User can add relationships by clicking on Add button as shown in Fig. 33.2.45.
+**Používateľ**: Pri operácii „Forming“ je štandardne vybrané rádio tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo „Pridať“, ako je znázornené na obr. 33.2.45.
 
-By clicking on edit ****![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }})**** button user can define the friction and Interface Heat relations. For more information refer, [20\. Inter-object Data Definition](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+Kliknutím na tlačidlo „Upraviť ****![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }})****“ môže používateľ nastaviť parametre trenia a prenosu tepla medzi fázami. Ďalšie informácie nájdete v časti [20\. Inter-object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
 
-For more information about [Deformation](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/), [Thermal](/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/), [Heating](/docs/sk/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/), [Friction window](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_6_Friction_Window), [Tool wear](/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/) and [Rigid contact](/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/), refer chapter [20\. Inter-object Data Definition](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/). 
+Ďalšie informácie o modeloch [Deformation](/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/), [Thermal](/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/), [Heating](/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/), [Friction window](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_6_Friction_Window), [Tool wear](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/) a [Rigid contact](/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/) nájdete v kapitole [20\. Inter-object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/). 
 
-## Stopping Controls
+## Ovládacie prvky na zastavenie
 
-The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on maximum number of time steps simulated or the maximum accumulated elemental strain or the maximum process time or maximum stroke or minimum velocity or maximum load on the primary object. A simulation will be stopped when the condition of any of the stopping parameters are met.
+Parametre ukončenia určujú čas priebehu, po uplynutí ktorého sa simulácia ukončí. Simuláciu je možné ukončiť na základe maximálneho počtu simulovaných časových krokov, maximálnej kumulovanej elementárnej deformácie, maximálneho času priebehu, maximálneho zdvihu, minimálnej rýchlosti alebo maximálneho zaťaženia primárneho objektu. Simulácia sa zastaví, keď bude splnená podmienka ktoréhokoľvek z týchto parametrov ukončenia.
 
-**Deformation**
+**Deformácia**
 
-The Below Fig. 33.2.49. shows the various types of Deformation Stopping Controls.
+Na nižšie uvedenom obr. 33.2.49 sú znázornené rôzne typy zariadení na zastavenie deformácie.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image044.jpg' | relative_url }})
 
-Deformation Stopping Controls window
+Okno „Ovládacie prvky zastavenia deformácie“
 
-**Max Die Stroke** : Terminates a simulation when the total displacement ([SMAX](/docs/sk/keyword_documentation/s/smax/)) of the primary die reaches the specified value. The stroke value for the object is specified in the Object Movement tab.
+**Maximálny zdvih matrice**: Ukončí simuláciu, keď celkový posun ([SMAX](/docs/en/keyword_documentation/s/smax/)) primárnej matrice dosiahne zadanú hodnotu. Hodnota zdvihu pre daný objekt sa zadáva na karte „Pohyb objektu“.
 
-**Max Load** :Terminates a simulation when the X or Y or Z load component of the primary die reaches the X or Y or Z value of [LMAX](/docs/sk/keyword_documentation/l/lmax/). Typically used when the movement control of the primary object is velocity or user specified.
+**Maximálne zaťaženie**: Ukončí simuláciu, keď zložka zaťaženia v osi X, Y alebo Z primárneho telesa dosiahne hodnotu X, Y alebo Z nastavenú v parametri [LMAX](/docs/en/keyword_documentation/l/lmax/). Zvyčajne sa používa v prípadoch, keď je riadenie pohybu primárneho objektu založené na rýchlosti alebo je určené používateľom.
 
-**Contact area ratio:** Contact area ration is the ratio of area which is in contact with the dies to the total surface area of the billet. If this ratio crosses beyond the specified value the simulation stops.
+**Pomer kontaktnej plochy:** Pomer kontaktnej plochy je pomer plochy, ktorá je v kontakte s lisovacími formami, k celkovej povrchovej ploche polotovaru. Ak tento pomer prekročí stanovenú hodnotu, simulácia sa zastaví.
 
-**Distance between Objects:** Terminates a simulation when the distance between reference points ([MDSOBJ](/docs/sk/keyword_documentation/m/mdsobj/)) on two objects reaches the specified distance.
+**Vzdialenosť medzi objektmi:** Ukončí simuláciu, keď vzdialenosť medzi referenčnými bodmi ([MDSOBJ](/docs/en/keyword_documentation/m/mdsobj/)) na dvoch objektoch dosiahne zadanú hodnotu.
 
-**Thermal**
+**Tepelná**
 
-The Below Fig. 33.2.50. shows the various types of Thermal Stopping Controls.
+Na nižšie uvedenom obr. 33.2.50 sú znázornené rôzne typy tepelných omezovačov.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image045.jpg' | relative_url }})
 
-Thermal Stopping Controls window
+Okno „Ovládacie prvky tepelného zastavenia“
 
-**Stopping Method**
+**Spôsob zastavenia**
 
-**None** : Applies no thermal stopping controls
+**Žiadne**: Neaplikuje žiadne opatrenia na obmedzenie prehriatia
 
-**Any Node:** Simulation stops when any node in the billet reaches the specified value.  
-**All Nodes** : Simulation stops when all the nodes in the billet reach the specified value.
+**Ľubovoľný uzol:** Simulácia sa zastaví, keď ktorýkoľvek uzol v sochore dosiahne zadanú hodnotu.  
+**Všetky uzly**: Simulácia sa zastaví, keď všetky uzly v sochárskej surovici dosiahnu zadanú hodnotu.
 
-**Selected Node** :Simulation stops when specified node in the billet reaches the specified value.  
-**Average All Nodes** : Simulation stops when average temperature of all the nodes in the billet reaches the specified value.  
-**Average surface Temp +Max. Temp** : Simulation stops when average temperature of all the nodes on the surface of billet + Maximum temperature in the billet reaches the specified value.
+**Vybraný uzol**: Simulácia sa zastaví, keď zadaný uzol v sochárskej surovine dosiahne zadanú hodnotu.  
+**Priemer všetkých uzlov**: Simulácia sa zastaví, keď priemerná teplota všetkých uzlov v sochore dosiahne zadanú hodnotu.  
+**Priemerná teplota povrchu + maximálna teplota**: Simulácia sa zastaví, keď priemerná teplota všetkých uzlov na povrchu sochory + maximálna teplota v sochore dosiahnu zadanú hodnotu.
 
-**Temperature Range**
+**Teplotný rozsah**
 
-Apart from single value a range of temperature also can be used to stop the simulation.
+Okrem jednej hodnoty je možné na zastavenie simulácie použiť aj teplotný rozsah.
 
-**Stop when temperature is outside range** : Simulation stops when the temperature value is outside the specified range.
+**Zastaviť, ak teplota je mimo rozsahu**: Simulácia sa zastaví, ak hodnota teploty prekročí stanovený rozsah.
 
-**Stop when temperature is inside range** : Simulation stops when the temperature value is inside the specified range.
+**Zastaviť, keď je teplota v rozsahu**: Simulácia sa zastaví, keď sa hodnota teploty nachádza v zadanom rozsahu.
 
-## Simulation Controls
+## Ovládacie prvky simulácie
 
-In Guided mode simulation controls, user can select Simulation mode type and Output type Fig. 33.2.51. shows Guided mode Step page and Fig. 33.2.52. shows guided mode Simulation controls, where user can defined operation step controls and step definition. The basic options required for forming operation are provided here while Expert mode provides more detailed options.
+V ovládacích prvkoch simulácie v režime s návodom môže používateľ vybrať typ režimu simulácie a typ výstupu. Obr. 33.2.51 znázorňuje stránku „Krok“ v režime s návodom a obr. 33.2.52 znázorňuje ovládacie prvky simulácie v režime s návodom, kde môže používateľ definovať ovládacie prvky operačných krokov a definíciu krokov. Tu sú k dispozícii základné možnosti potrebné na vytvorenie operácie, zatiaľ čo režim Expert ponúka podrobnejšie možnosti.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image046.jpg' | relative_url }})
 
-Guided mode Step
+Režim s návodom – Krok
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image049.jpg' | relative_url }})
 
-Guided mode Simulation controls
+Ovládacie prvky simulácie v režime s návodom
 
-The DEFORM system solves time dependent non-linear problems by generating a series of FEM solutions at discrete time increments. At each time increment, the velocities, temperatures, and other key variables of each node in the finite element mesh are determined based on boundary conditions, thermo mechanical properties of the work piece materials and possibly solutions at previous steps. Other state variables are derived from these key values, and updated for each time increment. The length of this time step, and number of steps simulated, are determined based on the information  
-specified in the step controls menu.
+Systém DEFORM rieši časovo závislé nelineárne úlohy generovaním série riešení metódou konečných prvkov (FEM) v diskrétnych časových krokoch. V každom časovom kroku sa rýchlosti, teploty a ďalšie kľúčové premenné každého uzla v sieti konečných prvkov určujú na základe okrajových podmienok, termomechanických vlastností materiálov obrobku a prípadne riešení z predchádzajúcich krokov. Ostatné stavové premenné sa odvodzujú z týchto kľúčových hodnôt a aktualizujú sa pri každom časovom kroku. Dĺžka tohto časového kroku a počet simulovaných krokov sa určujú na základe informácií  
+uvedené v ponuke ovládacích prvkov krokov.
 
-**Number of simulation steps (NSTEP)**
+**Počet simulačných krokov (NSTEP)**
 
-The number of simulation steps parameter defines the number of steps to run from the starting step number. The simulation will stop after this number of simulation steps have run, unless stopping control is triggered to stop the simulation or if the simulation runs into a problem. For example, if the starting step number is -35 ([NSTART](/docs/sk/keyword_documentation/n/nstart/)), and 30 steps ([NSTEP](/docs/sk/keyword_documentation/n/nstep/)) are specified, the simulation will stop after the 65th step, unless another stopping control is triggered first.
+Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú spustiť od počiatočného čísla kroku. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí príkaz na zastavenie simulácie alebo ak simulácia nenarazí na problém. Napríklad, ak je počiatočné číslo kroku -35 ([NSTART](/docs/en/keyword_documentation/n/nstart/)) a je špecifikovaných 30 krokov ([NSTEP](/docs/en/keyword_documentation/n/nstep/)), simulácia sa zastaví po 65. kroku, pokiaľ sa skôr nespustí iný príkaz na zastavenie.
 
-**Step increment to save (STPINC)**
+**Krok pri ukladaní (STPINC)**
 
-The step increment ([STPINC](/docs/sk/keyword_documentation/s/stpinc/)) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
+Krok prírastku ([STPINC](/docs/en/keyword_documentation/s/stpinc/)), ktorý sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nemusí sa nutne uložiť do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať väčší úložný priestor.
 
-**Primary die (PDIE)**
+**Primárny čip (PDIE)**
 
-The primary die ([PDIE](/docs/sk/keyword_documentation/p/pdie/)) is the object for which many stopping and stepping criteria are defined. For example, stopping distance based on primary die stroke. When the stroke of the object defined as the primary die reaches the value for primary die displacement, the simulation will be stopped whether or not more steps were specified. The Step by Stroke feature determines step size based on the movement of the primary die. The primary die is usually assigned to the object most closely controlled by the forging machinery. For example, the die attached to the ram of a mechanical press would be designated as the primary object.
+Primárna matrica ([PDIE](/docs/en/keyword_documentation/p/pdie/)) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad brzdná vzdialenosť založená na zdvihu primárnej matrice. Keď zdvih objektu definovaného ako primárna matrica dosiahne hodnotu posunu primárnej matrice, simulácia sa zastaví bez ohľadu na to, či boli špecifikované ďalšie kroky. Funkcia „Krok podľa zdvihu“ určuje veľkosť kroku na základe pohybu primárnej matrice. Primárna matrica je zvyčajne priradená k objektu, ktorý je najviac riadený kováčskym strojom. Napríklad matrica pripevnená k piestu mechanického lisu by bola označená ako primárny objekt.
 
-**Step increment control ([DSMAX](/docs/sk/keyword_documentation/d/dsmax/)/[DTMAX](/docs/sk/keyword_documentation/d/dtmax/))**
+**Ovládanie krokového posunu ([DSMAX](/docs/en/keyword_documentation/d/dsmax/)/[DTMAX](/docs/en/keyword_documentation/d/dtmax/))**
 
-Solution step size can be controlled by time step or by displacement of the primary die. If stroke per step is specified, the primary die will move the specified amount in each time step. The total movement of the primary die will be the displacement per step multiplied by the total number of steps. If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.
+Veľkosť kroku riešenia je možné riadiť časovým krokom alebo posunom primárnej matrice. Ak je špecifikovaný zdvih na krok, primárna matrica sa v každom časovom kroku posunie o zadanú hodnotu. Celkový posun primárnej matrice bude rovný posunu na krok vynásobenému celkovým počtom krokov. Ak je špecifikovaný čas na krok, použije sa časový interval na krok. Posun matrice na krok bude rovný časovému kroku vynásobenému rýchlosťou matrice.
 
   
-Even the temperature based step controls ([DTPMAX](/docs/sk/keyword_documentation/d/dtpmax/)) settings control the time stepping. The purpose for these controls is to specify the time stepping of a simulation that is driven by thermal-induced deformation.
+Nastavenia krokových regulátorov založených na teplote ([DTPMAX](/docs/en/keyword_documentation/d/dtpmax/)) tiež ovplyvňujú časový krok. Účelom týchto regulátorov je určiť časový krok simulácie, ktorá je riadená deformáciou vyvolanou teplotou.
 
-The definition of step increment control have been enhanced to include both the time and stroke dependent step functions,these options are available under Expert mode. This means, step size (both time per step and stroke per step) can now be defined as a function of time or stroke. This functionality enables finer resolution of saved model information, where it is desired. (typically towards the end of the stroke, where steep changes of die load and cavity filling or flash formation can take place)
+Definícia riadenia krokového prírastku bola rozšírená tak, aby zahŕňala krokové funkcie závislé od času aj od zdvihu; tieto možnosti sú k dispozícii v režime Expert. To znamená, že veľkosť kroku (či už ide o čas na krok alebo zdvih na krok) je teraz možné definovať ako funkciu času alebo zdvihu. Táto funkcia umožňuje v prípade potreby dosiahnuť jemnejšie rozlíšenie uložených informácií o modeli. (typicky smerom ku koncu zdvihu, kde môžu nastať prudké zmeny zaťaženia formy, plnenia dutiny alebo tvorby prebytku materiálu)
 
-Stroke per step is frequently more intuitive. However, time per step must be specified for any problem in which there is no die movement (such as heat transfer), or for any problem where force control is used. 
+Počet zdvihov na krok je často intuitívnejší. Čas na krok je však potrebné špecifikovať pri každej úlohe, v ktorej nedochádza k pohybu matice (napríklad pri prenose tepla), alebo pri každej úlohe, kde sa používa regulácia sily. 
 
-Fig. 33.2.53. shows the Simulation Controls in Expert mode.
+Na obr. 33.2.53 sú zobrazené ovládacie prvky simulácie v režime Expert.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image047.jpg' | relative_url }})
 
-Expert mode Simulation controls
+Ovládacie prvky simulácie v režime pre pokročilých
 
-Options defined under Simulation Controls (See Fig. 33.2.53.) control the numerical behavior of the solution. Main controls details with specifying the simulation title,unit system, geometry type, etc.
+Možnosti definované v časti „Ovládacie prvky simulácie“ (pozri obr. 33.2.53.) ovplyvňujú numerické správanie riešenia. Hlavné ovládacie prvky slúžia na zadanie názvu simulácie, sústavy jednotiek, typu geometrie atď.
 
-Step and stopping controls are used to specify the time step, the total number of steps and the criteria used to terminate the simulation.  
-Processing conditions like the environment temperature, convection coefficient can be specified here.
+Ovládacie prvky pre kroky a ukončenie slúžia na určenie časového kroku, celkového počtu krokov a kritérií na ukončenie simulácie.  
+Tu je možné zadať podmienky spracovania, ako napríklad teplotu okolia a konvekčný koeficient.
 
-For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
 
-## Generate DB 
+## Vytvoriť databázu 
 
-**Check Data**![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})****
+**Overiť údaje**![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }})****
 
-It checks the Data. If Data is correct we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.
+Systém skontroluje údaje. Ak sú údaje správne, môžeme vytvoriť databázu. Ak sa však pri kontrole údajov vyskytnú chyby alebo varovania, je potrebné ich opraviť pred vytvorením databázy. Chyby zabránia vytvoreniu databázy, zatiaľ čo varovania vytvorenie databázy neumožnia.
 
-**Generate Database![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**
+**Vytvoriť databázu ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})**
 
-By clicking on this button, it generated the Database for the setup.(See Fig. 33.2.54.)
+Kliknutím na toto tlačidlo sa vygenerovala databáza pre nastavenie. (Pozri obr. 33.2.54.)
 
-**Append Key file**
+**Pridať súbor s kľúčom**
 
-Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only .key file can be changed and simulation can be resubmitted.
+Akékoľvek informácie, ktoré nie sú definované v sprievodcovi, ale napriek tomu sa vzťahujú na daný proces, je možné načítať ako súbor s príponou .key. Táto možnosť je užitočná aj v prípadoch, keď je potrebné zmeniť len niekoľko hodnôt – tieto hodnoty je možné definovať v súbore s príponou .key, následne stačí zmeniť len tento súbor a simuláciu je možné spustiť znova.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image048.jpg' | relative_url }})
 
-Generate DB window
+Okno „Vytvoriť databázu“

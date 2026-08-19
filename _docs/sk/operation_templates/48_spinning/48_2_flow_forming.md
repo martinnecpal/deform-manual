@@ -1,386 +1,386 @@
 ---
 lang: sk
-title: "48.2. Flow Forming"
+title: "48.2. Tvarovanie prúdom"
 ---
 
-# 48.2. Flow Forming 
+# 48.2. Tvarovanie prúdom 
 
-48.2.1. How to add the Flow Forming Operation
+48.2.1. Ako pridať operáciu tvarovania prúdom
 
-48.2.2. Process
+48.2.2. Postup
 
-48.2.3. Simulation setup
+48.2.3. Nastavenie simulácie
 
-48.2.4. Objects selection for setup
+48.2.4. Výber objektov pre nastavenie
 
-48.2.5. Workpiece page
+48.2.5. Stránka obrobku
 
-48.2.5.1. Defining Workpiece 2D cross-section
+48.2.5.1. Definovanie 2D priečneho rezu obrobku
 
-48.2.5.2. Workpiece Mesh page
+48.2.5.2. Stránka „Mriežka obrobku“
 
-48.2.5.3. Material Page
+48.2.5.3. Stránka s materiálmi
 
-48.2.5.4. Defining Workpiece BCC
+48.2.5.4. Definovanie BCC obrobku
 
-48.2.6. Defining Mandrel Object
+48.2.6. Definovanie objektu „Mandrel“
 
-48.2.6.1. Defining Mandrel 2D Cross-section
+48.2.6.1. Definovanie 2D priečneho rezu trnu
 
-48.2.6.2. Generating Mandrel 3D Geometry
+48.2.6.2. Vytvorenie 3D geometrie trnu
 
-48.2.6.3. Generating Mandrel Mesh
+48.2.6.3. Vytvorenie siete okolo trnu
 
-48.2.6.4. Defining Mandrel Material
+48.2.6.4. Určenie materiálu tŕňa
 
-48.2.6.5. Generating Mandrel BCC
+48.2.6.5. Vytvorenie BCC s mandrelom
 
-48.2.6.6. Reference point setup for Mandrel
+48.2.6.6. Nastavenie referenčného bodu pre trn
 
-48.2.7. Defining Roll Object
+48.2.7. Definovanie objektu „Roll“
 
-48.2.7.1. Defining Roll Geometry, Mesh, Material and BCC
+48.2.7.1. Definovanie geometrie valca, siete, materiálu a BCC
 
-48.2.7.2. Roll Orientation Page
+48.2.7.2. Stránka s orientáciou zvitku
 
-48.2.8. Pass table
+48.2.8. Tabuľka prechodov
 
-48.2.9. Controls
+48.2.9. Ovládacie prvky
 
-48.2.9.1. Automatic Positioning
+48.2.9.1. Automatické polohovanie
 
-48.2.9.2. Advanced Object Positioning
+48.2.9.2. Pokročilé umiestňovanie objektov
 
-48.2.10. Contact
+48.2.10. Kontakt
 
-48.2.11. Stopping controls
+48.2.11. Ovládacie prvky na zastavenie
 
-48.2.12. Simulation controls
+48.2.12. Ovládacie prvky simulácie
 
-48.2.13. Generate DB
+48.2.13. Vytvorenie databázy
 
-## How to add the Flow Forming Operation
+## Ako pridať operáciu tvarovania tokom
 
-Spinning operation is used to setup the Flow Forming operation. Flow Forming operation can be setup in Integrated Manufacturing Process environment that can be accessed from GUI Main. Create a new problem by either selecting File ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) New Problem or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. Select 3D Spinning radio button under problem type and unit system. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button (As shown in Fig. 48.2.1.). Integrated Manufacturing Process template will open, we can see that 3D Spinning operation is added in Operation editor.
+Operácia odstreďovania sa používa na nastavenie operácie tepelného tvárnenia. Operáciu tepelného tvárnenia je možné nastaviť v prostredí integrovaného výrobného procesu, ku ktorému sa dostanete z hlavného okna grafického používateľského rozhrania. Novú úlohu vytvoríte buď výberom položky Súbor ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Nová úloha, alebo kliknutím na ikonu Nová úloha ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). V časti Typ úlohy a Systém jednotiek vyberte voľbu 3D Spinning. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) (ako je znázornené na obr. 48.2.1.). Otvorí sa šablóna Integrovaného výrobného procesu a v editore operácií uvidíte, že bola pridaná operácia 3D Spinning.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0001.jpg' | relative_url }})
 
-Adding Spinning Operation from GUI Main
+Pridanie operácie točenia z hlavného okna grafického rozhrania
 
   
-We can also setup Flow Forming operation by adding Spinning operation into Integrated Manufacturing Process environment from the New Project pop-up when a new problem is opened in Integrated Manufacturing Process environment as shown in Fig. 48.2.2. Using “Copy Existing project” option, we can import previous saved projects as new project from the New Project pop-up.
+Operáciu tvarovania prúdom môžeme nastaviť aj tak, že do prostredia Integrovaného výrobného procesu pridáme operáciu odstreďovania z kontextového menu Nový projekt pri otvorení novej úlohy v prostredí Integrovaného výrobného procesu, ako je znázornené na obr. 48.2.2. Pomocou možnosti „Kopírovať existujúci projekt“ môžeme z kontextového menu Nový projekt importovať predtým uložené projekty ako nový projekt.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0002.jpg' | relative_url }})
 
-Assign Project name and First Operation selection in New Project window
+V okne „Nový projekt“ zadejte názov projektu a vyberte prvú operáciu
 
   
-We can setup Flow Forming operation by adding Spinning operation to operation editor from explorer tab in Integrated Manufacturing Process environment, by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to Spinning operation (as shown in Fig. 48.2.3.) or by drag and drop Spinning operation into operation editor window. As the Spinning operation is added into operation editor, If the current Screen upward direction is "Z" direction then we will get "Change screen upward axis" popup as shown in Fig. 48.2.3. Click ![]({{ '/assets/icons/pre_icons/mo_yes_change_button.jpg' | relative_url }}) in "Change screen upward axis" popup.
+Operáciu tvarovania tokom môžeme nastaviť pridaním operácie odstreďovania do editora operácií z karty „Explorer“ v prostredí integrovaného výrobného procesu, a to kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa operácie odstreďovania (ako je znázornené na obr. 48.2.3.) alebo presunutím operácie odstreďovania do okna editora operácií pomocou funkcie „drag and drop“. Keď sa operácia „Spinning“ pridá do editora operácií, ak je aktuálny smer nahor obrazovky smer „Z“, zobrazí sa nám vyskakovacie okno „Zmeniť os smeru nahor obrazovky“, ako je znázornené na obr. 48.2.3. V tomto vyskakovacom okne kliknite na ![]({{ '/assets/icons/pre_icons/mo_yes_change_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0003.jpg' | relative_url }})
 
-Adding operation from Explorer Operation list - Screen upward direction popup
+Pridanie operácie zo zoznamu operácií v Průzkumníkovi – vyskakovacie okno smerujúce nahor
 
-Now the Process selection page will be opened in property settings modification window as shown in Fig. 48.2.4.
+Teraz sa v okne na úpravu nastavení vlastností otvorí stránka Výber procesu, ako je znázornené na obr. 48.2.4.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0004.jpg' | relative_url }})
 
-Adding operation from Explorer Operation list
+Pridanie operácie zo zoznamu operácií v Průzkumníkovi
 
-## Process
+## Postup
 
-In the process page select “**Flow****forming** ” operation. We can define the shaft rotational speed (w) in process page as shown in the Fig. 48.2.5.
+Na stránke procesu vyberte operáciu „**Flow****forming**“. Rýchlosť otáčania hriadeľa (w) môžeme nastaviť na stránke procesu, ako je znázornené na obr. 48.2.5.
 
-**Rotation speed (w):** The user can define the speed mandrel which will be applied to tail stock and head stock if used.
+**Rýchlosť otáčania (w):** Používateľ môže nastaviť rýchlosť vretena, ktorá sa bude aplikovať na koníček a vretenovú hlavu, ak sa používajú.
 
-User can setup both “Forward” and “Reverse” type of Flow Forming operations can be set up using the template. Depending on the process type user can select respective operation. 
+Pomocou šablóny môže používateľ nastaviť operácie tvárnenia tokom typu „vpred“ aj „späť“. V závislosti od typu procesu si používateľ môže vybrať príslušnú operáciu. 
 
-**Forward type:** The rolls and the drawn material move in the same axial direction.
+**Typ s predným posuvom:** Valce a ťahaný materiál sa pohybujú v rovnakom axiálnom smere.
 
-**Reverse type:** The rolls and the drawn material move in opposite axial direction.
+**Opačný typ:** Valce a ťahaný materiál sa pohybujú v opačnom axiálnom smere.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0001.jpg' | relative_url }})
 
-Flow Forming Process Page
+Stránka o procese tvarovania prúdom
 
-## Simulation setup
+## Nastavenie simulácie
 
-The user can select the solution method (ALE or Lagrangian), solver (Implicit or Explicit) and thermal calculations as shown in the Fig. 48.2.6.
+Používateľ si môže vybrať metódu riešenia (ALE alebo Lagrangeovu), typ riešiteľa (implicitný alebo explicitný) a tepelné výpočty, ako je znázornené na obr. 48.2.6.
 
-**Thermal Calculations:** In thermal calculations tab (see Fig. 48.2.6.) we have options to select the object types on which thermal calculations need to be performed. User has options to select Calculations in workpiece alone or even in rolls in case of non-isothermal. User may turn off thermal calculations by selecting constant temperature in case of isothermal models.
+**Tepelné výpočty:** Na karte „Tepelné výpočty“ (pozri obr. 48.2.6.) máme k dispozícii možnosti výberu typov objektov, na ktorých sa majú vykonať tepelné výpočty. Používateľ má na výber medzi výpočtami len na obrobku alebo aj na valcoch v prípade neizotermických modelov. V prípade izotermických modelov môže používateľ vypnúť tepelné výpočty výberom konštantnej teploty.
 
-**Target Volume** : When we turned on Active in FEM check box, Target volume for Workpiece with "**Active in FEM** " method will be assigned for Workpiece.
+**Cieľový objem**: Ak zaškrtneme políčko „Aktívne vo FEM“, obrobku sa priradí cieľový objem pre metódu „**Aktívne vo FEM**“.
 
-**Express** :User can select ALE express solver to accelerate the simulation speed of ALE spinning simulation. When this solver is selected the roll must have hole at the center and Non separable criteria must be defined between Head stock/Tail stock and workpiece.
+**Express**: Používateľ môže zvoliť riešiteľ ALE Express na zvýšenie rýchlosti simulácie otáčania metódou ALE. Ak je zvolený tento riešiteľ, valec musí mať v strede otvor a medzi vretenníkom/koníkom a obrobkom musia byť definované kritériá neoddelenia.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0006.jpg' | relative_url }})
 
-Simulation Setup page
+Stránka „Nastavenie simulácie“
 
   
-Flow forming setup behavior based on solution and solver selection is explained in below table,
+Správanie sa zariadenia na tvarovanie prúdom v závislosti od výberu riešenia a riešiteľa je vysvetlené v nasledujúcej tabuľke,
 
-**Object** |  **ALE+Implicit** |  **ALE+ Explicit** |  **Lagrangian + Implicit** |  **Lagrangian + Explicit**  
+**Objekt** |  **ALE + implicitný** |  **ALE + explicitný** |  **Lagrangeov + implicitný** |  **Lagrangeov + explicitný**  
 ---|---|---|---|---  
-**Workpiece Object type** |  Rigid Plastic |  Elasto Plastic |  Rigid Plastic |  Elasto Plastic  
-**Iteration method** |  MUMPS+ Direct iteration |  Explicit + N-R |  MUMPS + Direct Iteration |  Explicit + N-R  
-**Workpiece Mesh** |  Non-uniform mesh in hoop direction (Fine mesh at contact) Uniform mesh preferred for Explicit |  Uniform mesh in hoop direction  
-**Workpiece Movement** |  No movement is assigned to workpiece  
-Mesh is not updated in hoop direction in ALE hence no rotation of object is observed |  Lagrangian simulation shows actual rotation of workpiece. Workpiece movement is achieved by imposing sticking BCC at interface with mandrel and Head stock.  
-**Mandrel/ Tailstock Headstock/ Rolls Object type** |  Rigid  
-**Mandrel/ Tailstock Headstock Movement** |  Only “Rotation 1” type angular motion is defined about the objects center axis  
-**Rolls Movement** |  “Rotation 1” type angular motion or Torque is defined about the objects center axis  
-Translation of rolls (speed, force or path definition type) is can be defined. Rolls do not orbit.  
-**Interface** |  Interface with sticking BCC at interface of “’Workpiece/mandrel” and “Workpiece/ head stock”.  
-|  “Lite contact search” will be used when friction window is detected.  
-Rigid Zone is automatically generated when sticking BCC is detected  |  |  “Lite contact search” will be used when friction window is detected.  
+**Typ obrobku** |  Tvrdý plast |  Elastoplast |  Tvrdý plast |  Elastoplast  
+**Iteračná metóda** |  MUMPS+ Priama iterácia |  Explicitná + N-R |  MUMPS + Priama iterácia |  Explicitná + N-R  
+**Sieť obrobku** |  Nerovnomerná sieť v obvodovom smere (jemná sieť v mieste kontaktu). Pre explicitnú metódu sa uprednostňuje rovnomerná sieť |  Rovnomerná sieť v obvodovom smere  
+**Pohyb obrobku** |  Obrobku nie je priradený žiadny pohyb  
+V metóde ALE sa sieť v smere obruče neaktualizuje, preto sa nepozoruje žiadna rotácia objektu |  Lagrangeovská simulácia ukazuje skutočnú rotáciu obrobku. Pohyb obrobku sa dosahuje zavedením „prilepeného“ BCC na rozhraní s trnom a vretenníkom.  
+**Trn/ koníček, vretenník/ valce, typ objektu** |  Pevný  
+**Pohyb upínacieho trnu / koníka a vretenníka** |  Je definovaný iba uhlový pohyb typu „Rotácia 1“ okolo stredovej osi objektu  
+**Pohyb valcov** |  Uhlový pohyb typu „Rotácia 1“ alebo krútiaci moment je definovaný okolo stredovej osi objektu  
+Je možné definovať posun valcov (typ definície rýchlosti, sily alebo dráhy). Valce nekrúžia.  
+**Rozhranie** |  Rozhranie s upevneným BCC na styčnej ploche medzi „obrobkom/trnom“ a „obrobkom/prednou hlavou“.  
+|  Ak sa zistí okno trenia, použije sa „vyhľadávanie s ľahkým kontaktom“.  
+Pevná zóna sa automaticky vytvorí pri detekcii priľnavosti BCC  |  |  Pri detekcii okna trenia sa použije „zjednodušené vyhľadávanie kontaktov“.  
   
-## Objects Selection for setup
+## Výber objektov pre nastavenie
 
-The user can select the objects to be used in the setup from the available object types as shown in the Fig. 48.2.7. User can select the “Number of rolls” as used in the setup. If the rolls are more than 1 then angle between them in counter-clock direction can be define in the table below “Number of rolls” field as shown in Fig. 48.2.7.
+Používateľ si môže z dostupných typov objektov vybrať objekty, ktoré sa majú použiť v nastavení, ako je znázornené na obr. 48.2.7. Používateľ môže zvoliť „Počet valcov“, ktoré sa majú použiť v nastavení. Ak je valcov viac ako 1, uhol medzi nimi proti smeru hodinových ručičiek je možné definovať v tabuľke pod poľom „Počet valcov“, ako je znázornené na obr. 48.2.7.
 
-Note: User can define maximum of 3 Rolls in “Number of rolls” field.
+Poznámka: V poli „Počet rolí“ môže používateľ zadať maximálne 3 role.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0002.jpg' | relative_url }})
 
-Objects Page (Spinning setup)
+Stránka objektov (Nastavenie otáčania)
 
-## Defining Workpiece
+## Definovanie obrobku
 
-The user can define the Workpiece name, temperature and Object type as shown in the Fig. 48.2.8. Depending on the solver selection in Simulation setup user need to select the object type. Plastic object type for Implicit solver and Elasto-plastic object type for Explicit solve. User can import objects from other databases or key files using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) options or save the object data using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) options.
+Používateľ môže definovať názov obrobku, teplotu a typ objektu, ako je znázornené na obr. 48.2.8. V závislosti od výberu riešiteľa v nastavení simulácie musí používateľ vybrať typ objektu. Pre implicitný riešiteľ sa volí typ objektu „Plastický“ a pre explicitný riešiteľ typ objektu „Elastoplastický“. Používateľ môže importovať objekty z iných databáz alebo súborov kľúčov pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) alebo uložiť údaje o objektoch pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0003.jpg' | relative_url }})
 
-Workpiece object page
+Stránka objektu obrobku
 
-### Defining Workpiece 2D cross-section
+### Definovanie 2D prierezu obrobku
 
-The user can define the 2D Cross section of the workpiece using the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) or ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) option. Center and Axis of the geometry is defined in “2D cross-section info” as shown in the Fig. 48.2.9. User can import 2D Cross-section from other databases or key files using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) options or save the 2D Cross-section data using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) options. 
+Používateľ môže definovať 2D priečny rez obrobku pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) alebo ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}). Stred a os geometrie sa definujú v časti „Informácie o 2D priečnom reze“, ako je znázornené na obr. 48.2.9. Používateľ môže importovať 2D prierez z iných databáz alebo súborov kľúčov pomocou možností ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) alebo uložiť údaje o 2D priereze pomocou možností ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0004.jpg' | relative_url }})
 
-2D Geometry page
+Stránka 2D geometrie
 
-###  Generating Workpiece Mesh
+###  Vytvorenie siete obrobku
 
-Flow forming setup uses brick mesh as initial mesh generation method for both Lagrangian and ALE. If brick mesh generation has any issues in Lagrangian type of simulation, then tetrahedral mesh will be used during remeshing. User can generate the cross-section mesh for defined settings by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_2d_mesh_button.jpg' | relative_url }}) label and 3D mesh with defined settings can be generated by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}), see Fig. 48.2.10.
+Nastavenie formovania tokom využíva tehličkovú sieť ako metódu generovania počiatočnej siete pre simulácie typu Lagrange aj ALE. Ak pri generovaní tehličkovej siete v simulácii typu Lagrange vzniknú akékoľvek problémy, pri opätovnom vytváraní siete sa použije tetraedrová sieť. Používateľ môže vygenerovať sieť priečneho rezu pre definované nastavenia kliknutím na označenie ![]({{ '/assets/icons/pre_icons/mo_generate_2d_mesh_button.jpg' | relative_url }}) a 3D sieť s definovanými nastaveniami možno vygenerovať kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}), pozri obr. 48.2.10.
 
-#### Cross-section mesh
+#### Sieť s priečnym rezom
 
-Number of Elements: User can define number of elements to be used in cross-section mesh here, see Fig. 48.2.10. System generated Cross-section mesh when user clicks on ![]({{ '/assets/icons/pre_icons/mo_generate_2d_mesh_button.jpg' | relative_url }}) label which will be rotated to generate 3D Mesh.
+Počet prvkov: Používateľ tu môže určiť počet prvkov, ktoré sa majú použiť v sieti priečneho rezu, pozri obr. 48.2.10. Systém vygeneruje sieť priečneho rezu po kliknutí na označenie ![]({{ '/assets/icons/pre_icons/mo_generate_2d_mesh_button.jpg' | relative_url }}), ktoré sa otočí s cieľom vygenerovať 3D sieť.
 
-#### 3D meshing parameters
+#### Parametre vytvárania 3D sietí
 
-**Number of Revolved sections:** The user can generate the 3D mesh by defining the number of revolved sections along the hoop direction and click on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}), see Fig. 48.2.10.
+**Počet otočených úsekov:** Používateľ môže vytvoriť 3D sieť definovaním počtu otočených úsekov v obvodovom smere a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}), pozri obr. 48.2.10.
 
-**Uniform thickness of layers in hoop direction:** When this option is used then 3D mesh is generated with layers of uniform thickness along the hoop direction, see Fig. 48.2.10. This option is preferred for “Explicit” type of simulation setup.
+**Rovnomerná hrúbka vrstiev v obvodovom smere:** Ak sa použije táto voľba, vygeneruje sa 3D sieť s vrstvami rovnomernej hrúbky v obvodovom smere, pozri obr. 48.2.10. Táto voľba sa odporúča pre nastavenie simulácie typu „Explicit“.
 
-**Finer mesh in contact region:** User can generate finer mesh at contact region by specifying the angle in the “Angle” field. A fine mesh with the size ratio specified in “Size ratio” field will be generated within specified angle at contact with rolls, see Fig. 48.2.10.
+**Jemnejšia sieť v kontaktnej oblasti:** Používateľ môže vytvoriť jemnejšiu sieť v kontaktnej oblasti zadaním uhla v poli „Uhol“. V rámci zadaného uhla v mieste kontaktu s valcami sa vytvorí jemná sieť s pomerom veľkostí zadaným v poli „Pomer veľkostí“, pozri obr. 48.2.10.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0005.jpg' | relative_url }})
 
-Workpiece Mesh Page
+Stránka so sieťou obrobkov
 
-### Defining Workpiece Material
+### Určenie materiálu obrobku
 
-In material page, user can load the material using Import Material data from a file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or Using Load form Library option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), see Fig. 48.2.11. Once the material is loaded user can select the material to be used for respective object. User can also create new material if the material is not available in DEFORM library using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). User can delete the material from list using ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) or edit the material data using ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}). Modified / newly defined Material can be saved using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). 
+Na stránke materiálu môže používateľ načítať materiál pomocou funkcie „Importovať údaje o materiáli zo súboru“ (![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})) alebo pomocou možnosti „Načítať z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})), pozri obr. 48.2.11. Po načítaní materiálu môže používateľ vybrať materiál, ktorý sa má použiť pre príslušný objekt. Ak materiál nie je k dispozícii v knižnici DEFORM, používateľ môže pomocou ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) vytvoriť nový materiál. Používateľ môže materiál zo zoznamu odstrániť pomocou ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) alebo údaje o materiáli upraviť pomocou ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}). Upravený alebo novo definovaný materiál je možné uložiť pomocou ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0006.jpg' | relative_url }})
 
-Assigning material to workpiece
+Priradenie materiálu k obrobku
 
-### Defining Workpiece BCC
+### Definovanie BCC obrobku
 
-In Boundary conditions page, user can assign various boundary constraints to an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. Commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer and Contact between objects in the model. Depending on the “Process” selection and “Simulation setup”, system generates default BCC for non-isothermal process and with contacting objects. Fig. 48.2.12. shows various BCC that can be assigned to an object. For more information please go through the [14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/). 
+Na stránke „Okrajové podmienky“ môže používateľ objektu priradiť rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako hranica objektu interaguje s ostatnými objektmi a s okolím. Bežne používanými okrajovými podmienkami sú výmena tepla s okolím pri simuláciách zahŕňajúcich prenos tepla a kontakt medzi objektmi v modeli. V závislosti od výberu „Procesu“ a „Nastavenia simulácie“ systém generuje predvolené BCC pre neizotermický proces a pre objekty, ktoré sú v kontakte. Obr. 48.2.12. znázorňuje rôzne BCC, ktoré je možné priradiť k objektu. Ďalšie informácie nájdete v [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/). 
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0007.jpg' | relative_url }})
 
-Workpiece BCC Page
+Stránka BCC pre obrobok
 
-## Defining Mandrel Object
+## Definovanie objektu „Mandrel“
 
-Mandrel is a very important object in Floe forming as the material flows along the Mandrel surface taking the shape of the mandrel. Mandrel can be simple cylinder or may have some profile. Mandrel object type is “Rigid”. In Mandrel object page user can define the Object name and temperature. The user can import object from other databases or key files using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) options or save the object data using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) options. 
+Trn je veľmi dôležitý objekt pri tvárnení dosiek, keďže materiál tečie po povrchu trnu a nadobúda jeho tvar. Trn môže mať tvar jednoduchého valca alebo môže mať určitý profil. Typ objektu trnu je „Tuhý“. Na stránke objektu „Mandrel“ môže používateľ definovať názov objektu a teplotu. Používateľ môže importovať objekt z iných databáz alebo kľúčových súborov pomocou možností ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) alebo uložiť údaje o objekte pomocou možností ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0008.jpg' | relative_url }})
 
-Mandrel Object Page
+Stránka objektu „Mandrel“
 
-### Defining Mandrel 2D Cross-section
+### Definovanie 2D prierezu trnu
 
-2D cross-section for Mandrel can be defined similar to the workpiece 2D Cross-section as explained in 48.2.5.1. Defining Workpiece 2D cross-section. User can define the 2D Cross-section which will be used to generate 3D Geometry.
+2D priečny rez pre upínací trn je možné definovať podobne ako 2D priečny rez obrobku, ako je vysvetlené v bode 48.2.5.1. Definovanie 2D priečneho rezu obrobku. Používateľ môže definovať 2D priečny rez, ktorý sa použije na vytvorenie 3D geometrie.
 
-### Generating Mandrel 3D Geometry 
+### Vytvorenie 3D geometrie trnu 
 
-User need to generate 3D geometry for all objects in Flow forming operation setup. Flow forming/ Spinning operation uses 2D Cross-section to generate 3D by revolving about defined axis and center at Workpiece object page. After defining the digitalization options, Number of revolved sections and Finer geometry in contact region user need to click on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) button to create a 3D geometry as shown in the Fig. 48.2.14.
+Používateľ musí vytvoriť 3D geometriu pre všetky objekty v nastavení operácie tvárnenia tokom. Operácia tvárnenia tokom/odstredivého tvárnenia využíva 2D prierez na vytvorenie 3D geometrie otáčaním okolo definovanej osi a stredu na stránke objektu obrobku. Po definovaní možností digitalizácie, počtu otočených rezov a jemnejšej geometrie v kontaktnej oblasti musí používateľ kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}), aby vytvoril 3D geometriu, ako je znázornené na obr. 48.2.14.
 
-**Digitization:** “Length tolerance fraction”/ “Maximum allowable angle”/ “Minimum allowable angle” can be used to control digitization points on the 2D cross-section for accurate representation of 2D Cross-section, see Fig. 48.2.14.
+**Digitalizácia:** Na riadenie bodov digitalizácie na 2D priečnom reze s cieľom dosiahnuť presné zobrazenie 2D priečneho rezu je možné použiť „frakciu tolerancie dĺžky“ / „maximálny prípustný uhol“ / „minimálny prípustný uhol“; pozri obr. 48.2.14.
 
-**Number of revolved sections:** User can define number of layers in the hoop direction while generating 3D Geometry from 2D cross-section.
+**Počet otočených rezov:** Pri generovaní 3D geometrie z 2D priečneho rezu môže používateľ určiť počet vrstiev v smere obruče.
 
-**Fine Geometry in Contact Region:** User can turn on this check box if user need to generate Finer 3D geometry at contact with workpiece to improve contact calculations. User can define the value of “Angle” at contact and “Size ratio” for finer mesh.
+**Jemnejšia geometria v oblasti kontaktu:** Používateľ môže zaškrtnúť toto políčko, ak potrebuje vygenerovať jemnejšiu 3D geometriu v mieste kontaktu s obrobkom s cieľom zlepšiť výpočty kontaktu. Používateľ môže pre jemnejšiu sieť definovať hodnotu „Uhla“ v mieste kontaktu a „Pomeru veľkostí“.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0009.jpg' | relative_url }})
 
-3D geometry generation page
+Stránka na generovanie 3D geometrie
 
-### Generating Mandrel Mesh
+### Vytvorenie siete okolo trnu
 
-If user wants to perform thermal calculations in a Non-isothermal simulation setup then user can generate mesh for mandrel. Mesh settings and Mesh generating procedure is similar to 48.5.2. Generating Workpiece Mesh.
+Ak chce používateľ vykonať tepelné výpočty v rámci neizotermickej simulácie, môže vytvoriť sieť pre trn. Nastavenia siete a postup jej vytvárania sú podobné ako v bode 48.5.2. Vytváranie siete obrobku.
 
-### Defining Mandrel Material 
+### Určenie materiálu trnu 
 
-User can assign the material from the list on load from Library similar to 48.2.5.3. Defining Workpiece Material.
+Používateľ môže pri načítaní z knižnice priradiť materiál zo zoznamu podobne ako v bode 48.2.5.3. Definovanie materiálu obrobku.
 
-### Generating Mandrel BCC
+### Vytvorenie BCC s mandrelom
 
-Depending on the “Simulation setup” and “Solver” selection system generates BCC automatically. “Heat exchange with Environment” and “Contact” BCC are commonly used BCC, for more information refer [14\. BCC Controls](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+V závislosti od výberu položiek „Nastavenie simulácie“ a „Riešiteľ“ systém automaticky vygeneruje BCC. Medzi bežne používané typy BCC patria „Výmena tepla s okolím“ a „Kontaktné“ BCC; ďalšie informácie nájdete v [14\. BCC Controls](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
 
-### Reference point setup for Mandrel
+### Nastavenie referenčného bodu pre upínací trn
 
-User can define reference point for mandrel and position the mandrel with respect to DEFORM origin along X-axis. The system will display calculated value of D from DEFORM origin using the present position of mandrel as shown in Fig. 48.2.15. “D” is the distance between the Deform Origin and the origin of the Mandrel along X axis and will be used to position the mandrel.
+Používateľ môže definovať referenčný bod pre trn a umiestniť trn vo vzťahu k počiatku DEFORM pozdĺž osi X. Systém zobrazí vypočítanú hodnotu D od počiatku DEFORM na základe aktuálnej polohy trnu, ako je znázornené na obr. 48.2.15. „D“ je vzdialenosť medzi počiatkom Deform a počiatkom trnu pozdĺž osi X a bude sa používať na umiestnenie trnu.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0010.jpg' | relative_url }})
 
-Reference Point Setup Page
+Stránka nastavenia referenčného bodu
 
-## Defining Roll Object
+## Definovanie objektu „Roll“
 
-Each Roll must be defined separately. Rolls are of Rigid Object types and can be meshed if thermal calculations need to be performed in non-isothermal simulation setup. In roll’s object page user can define the Object name and temperature. User can import roll’s object from other databases or key files using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) options or save the object data using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) options.
+Každý valec je potrebné definovať samostatne. Valce patria do typu „Rigid Object“ a je možné na nich vytvoriť sieť, ak je potrebné vykonať tepelné výpočty v neizotermickom simulačnom nastavení. Na stránke objektu valca môže používateľ definovať názov objektu a teplotu. Používateľ môže importovať objekt valca z iných databáz alebo kľúčových súborov pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) alebo uložiť údaje o objekte pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}).
 
-### Defining Roll Geometry, Mesh, Material and BCC
+### Definovanie geometrie valca, siete, materiálu a BCC
 
-Roll geometry, Mesh (in case of non-isothermal setup), Material and BCC can be defined similar to methodology as explained in 48.2.5.1. Defining Workpiece 2D cross-section, 48.2.6.2. Generating Mandrel 3D Geometry, 48.2.5.3. Defining Workpiece Material and 48.2.5.4. Defining Workpiece BCC.
+Geometriu valca, sieť (v prípade neizotermického nastavenia), materiál a BCC je možné definovať podobne ako v metodike opísanej v bode 48.2.5.1. Definovanie 2D priečneho rezu obrobku, 48.2.6.2. Vytvorenie 3D geometrie trnu, 48.2.5.3. Definovanie materiálu obrobku a 48.2.5.4. Definovanie BCC obrobku.
 
-### Roll Orientation Page
+### Stránka s orientáciou rolí
 
-In Flow forming operation rolls require a unique setup approach due to their use of the path movement control. Roll translation will be defined by a path that is applied in a local UV (axial/radial) coordinate system. A single point on the roll, the reference point (datum), will follow this path. The current location of the reference point, and thus the roll, is determined by the path data and the current time. Each roll following a path must have a reference point defined for it. 
+Pri operácii tvarovania tokom si valce vyžadujú špecifický prístup k nastaveniu vzhľadom na to, že využívajú riadenie pohybu podľa dráhy. Posun valca bude definovaný dráhou, ktorá sa aplikuje v lokálnom UV (axiálnom/radiálnom) súradnicovom systéme. Tento pohyb sleduje jeden bod na valci, tzv. referenčný bod (východiskový bod). Aktuálna poloha referenčného bodu, a tým aj valca, je určená údajmi o dráhe a aktuálnym časom. Každý valec, ktorý sleduje dráhu, musí mať definovaný referenčný bod. 
 
-User can select the Roll datum point using the button ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) next to Roll Datum field (See Fig. 48.2.16.) which will provide options of “Rotation center”, “Nose center” and “Corner point” as shown in Fig. 48.2.16. to be used as “Roll Datum point”, based on the selection the datum point co-ordinates are automatically calculated. User can also enter the datum co-ordinates manually. User can define the “Orientation Angle” with respect to X-axis as shown in Fig. 48.2.17. 
+Používateľ môže vybrať referenčný bod náklonu pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) vedľa poľa „Roll Datum“ (pozri obr. 48.2.16), čím sa zobrazia možnosti „Rotation center“, „Stred nosa“ a „Rohový bod“, ako je znázornené na obr. 48.2.16., ktoré sa majú použiť ako „Referenčný bod náklonu“. Na základe výberu sa automaticky vypočítajú súradnice referenčného bodu. Používateľ môže súradnice referenčného bodu zadať aj ručne. Používateľ môže definovať „Uhol orientácie“ vo vzťahu k osi X, ako je znázornené na obr. 48.2.17. 
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0011.jpg' | relative_url }})
 
-Roll Orientation Page – Roll Datum Wizard 
+Stránka orientácie zvitku – Sprievodca nastavením referenčného bodu zvitku 
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0012.jpg' | relative_url }})
 
-Roll Orientation Page – Orientation Angle
+Stránka o orientácii rolí – uhol orientácie
 
-## Pass table
+## Tabuľka priechodov
 
-Flow forming process may involve single pass or multiple passes, user can define the multi pass and multi roll movement data using “Pass Table” as shown in the Fig. 48.2.18. When we click on the button we will get the Roll movement controls as shown in the [Fig. 48.2.19.](48_1_spinning_manual.htm#Fig_48_1_19__Roll_Movement_Controls) The user can define the Translation movement using the [Speed](/docs/sk/pre_processor/15_movement_controls_definition/15_1_speed/) and [Path](/docs/sk/pre_processor/15_movement_controls_definition/15_8_path/) type. For the [Rotation movement](/docs/sk/pre_processor/15_movement_controls_definition/15_9_rotational_movement/) we have Angular velocity and Torque type.
+Proces tvarovania tlakom môže zahŕňať jeden alebo viacero priechodov; používateľ môže definovať údaje o pohybe pri viacerých priechodoch a viacerých valcoch pomocou „Tabuľky priechodov“, ako je znázornené na obr. 48.2.18. Po kliknutí na tlačidlo sa zobrazia ovládacie prvky pohybu valcov, ako je znázornené v [Fig. 48.2.19.](48_1_spinning_manual.htm#Fig_48_1_19__Roll_Movement_Controls). Používateľ môže definovať posuvný pohyb pomocou typov [Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/) a [Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/). Pre typ [Rotation movement](/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/) sú k dispozícii typy uhlová rýchlosť a krútiaci moment.
 
-“Path” type translation movement is commonly used in flow forming process. For more information on how to define “[Path](/docs/sk/pre_processor/15_movement_controls_definition/15_8_path/)” type movement please refer [15\. Movement controls.](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/) After defining the path movement data user can use the ![]({{ '/assets/icons/pre_icons/mo_show_path_movement_info_in_2d_button.jpg' | relative_url }}) to display the path that roller datum is going to trace in 2D as shown in the Fig. 48.2.20.
+Pohyb typu „Path“ sa bežne používa v procese tvarovania tokom. Ďalšie informácie o definovaní pohybu typu „[Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/)“ nájdete v časti [15\. Movement controls.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/). Po definovaní údajov o pohybe dráhy môže používateľ pomocou ![]({{ '/assets/icons/pre_icons/mo_show_path_movement_info_in_2d_button.jpg' | relative_url }}) zobraziť dráhu, ktorú bude referenčný bod valčeka sledovať v 2D, ako je znázornené na obr. 48.2.20.
 
-User can also define other data in pass table as explained below,
+Používateľ môže v tabuľke hesiel definovať aj ďalšie údaje, ako je vysvetlené nižšie,
 
-**Process duration:** We can define the process duration value as the stopping criteria to stop the defined Pass simulation.
+**Trvanie procesu:** Hodnotu trvania procesu môžeme definovať ako kritérium na ukončenie definovanej simulácie Pass.
 
-**Roll Friction:** We can define the friction coefficient value between roll and workpiece. This friction co-efficient value is applied between only roll and workpiece, user can modify this value at contact page if required. 
+**Trenie valca:** Môžeme nastaviť hodnotu koeficientu trenia medzi valcom a obrobkom. Táto hodnota koeficientu trenia sa uplatňuje iba medzi valcom a obrobkom; používateľ ju môže v prípade potreby upraviť na stránke „Kontakt“. 
 
-**Roll Heat transfer coeff.:** We can define the Heat transfer coefficient value between roll and workpiece. This Heat transfer co-efficient value is applied between only roll and workpiece; user can modify this value at contact page if required. 
+**Koeficient prenosu tepla medzi valcom a obrobkom:** Môžeme nastaviť hodnotu koeficientu prenosu tepla medzi valcom a obrobkom. Táto hodnota koeficientu prenosu tepla sa vzťahuje iba na vzťah medzi valcom a obrobkom; používateľ môže túto hodnotu v prípade potreby upraviť na stránke s nastaveniami. 
 
-**Dwell time:** For all passes, we can use “Dwell time” in pass table to specify the time between end of current selected pass and next pass.
+**Doba zdržania:** Pri všetkých priechodoch môžeme v tabuľke priechodov použiť položku „Doba zdržania“ na určenie času medzi koncom aktuálneho vybraného priechodu a nasledujúcim priechodom.
 
-**Dwell temperature:** We can use “Dwell temp.” in pass table to specify the environment temperature during Dwell time.
+**Teplota počas výdrže:** V tabuľke priechodov môžeme použiť položku „Teplota počas výdrže“, aby sme určili teplotu prostredia počas doby výdrže.
 
-**Convection Coeff.** : We can use “Convection Coeff.” in pass table to specify the Convection coeffecient value during Dwell time.
+**Koeficient konvekcie**: Pomocou položky „Koeficient konvekcie“ v tabuľke režimov môžeme určiť hodnotu koeficientu konvekcie počas doby výdrže.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0013.jpg' | relative_url }})
 
-Pass Table Page
+Stránka s prehľadom tabuliek
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0014.jpg' | relative_url }})
 
-Roll Movement Controls
+Ovládacie prvky pohybu valcov
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0015.jpg' | relative_url }})
 
-Path movement info in 2D
+Informácie o pohybe po dráhe v 2D
 
-## Controls (Object Positioning)
+## Ovládacie prvky (umiestňovanie objektov)
 
-Objects positioning can be varied using “Automatic Positioning” and “Advanced Object Positioning” options available in “Controls” page as shown in Fig. 48.2.21.
+Polohu objektov je možné meniť pomocou možností „Automatické umiestňovanie“ a „Pokročilé umiestňovanie objektov“, ktoré sú k dispozícii na stránke „Ovládacie prvky“, ako je znázornené na obr. 48.2.21.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0021.jpg' | relative_url }})
 
-Controls Page
+Stránka ovládacích prvkov
 
-### Automatic Positioning
+### Automatické polohovanie
 
-In Flow Forming the Automatic positioning can be done by defining the respective values as shown in the Fig. 48.2.22.   
-D = Distance between head stock / origin and First roll (X)  
-K = Rolls inclination angle with respect to X-axis   
-A = Distance along X-axis from First roll (X) and other rolls  
-After defining the values, the rolls are positioned as per defined parameter values, see Fig. 48.2.23.
+Pri technológii Flow Forming je možné automatické polohovanie nastaviť zadaním príslušných hodnôt, ako je znázornené na obr. 48.2.22.   
+D = Vzdialenosť medzi vretenníkom / počiatkom a prvým valcom (X)  
+K = uhol sklonu valcov voči osi X   
+A = Vzdialenosť pozdĺž osi X od prvého valca (X) a ostatných valcov  
+Po nastavení hodnôt sa valce nastavia podľa zadaných hodnôt parametrov, pozri obr. 48.2.23.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0016.jpg' | relative_url }})
 
-Automatic Positioning options
+Možnosti automatického polohovania
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0017.jpg' | relative_url }})
 
-Automatic positioning for the Flow forming setup
+Automatické polohovanie pre zariadenie na tvarovanie prúdom
 
-### Advanced Object Positioning
+### Pokročilé umiestňovanie objektov
 
-If user wants to modify any of the objects position, then user can use Advanced object position button in control page. Various positioning options are available to position the objects as shown in Fig. 48.2.24., for more information on these options please refer [19\. Object Positioning.](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/)
+Ak chce používateľ zmeniť polohu niektorého z objektov, môže na ovládacej stránke použiť tlačidlo „Pokročilé nastavenie polohy objektu“. Na umiestnenie objektov sú k dispozícii rôzne možnosti, ako je znázornené na obr. 48.2.24. Ďalšie informácie o týchto možnostiach nájdete v [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0025.jpg' | relative_url }})
 
-Advanced Object Positioning options
+Pokročilé možnosti umiestňovania objektov
 
-## Contact
+## Kontakt
 
-The user can define the contact between the Workpiece and other roll objects by defining the inter object relations. For Flow forming operation, we will use the sticking conditions for Workpiece with Mandrel and Tail stock as shown in Fig. 48.2.25. User must define friction and Interface heat transfer co-efficient for non-isothermal rolling processes and friction value for isothermal rolling process. 
+Používateľ môže definovať kontakt medzi obrobkom a ostatnými valcovými objektmi stanovením vzťahov medzi objektmi. Pri operácii tvarovania tokom použijeme podmienky prilnutia pre obrobok s trnom a koníkom, ako je znázornené na obr. 48.2.25. Používateľ musí pre neizotermické procesy valcovania definovať koeficient trenia a koeficient prenosu tepla na rozhraní a pre izotermický proces valcovania hodnotu trenia. 
 
-**System:** By selecting this radio button, system assigns default inter-object relationships. Also, user can add the lubricants if necessary, by selecting Add New from pull down menu and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button or user can load the required lubricants from the library for the simulation.
+**Systém:** Po výbere tohto prepínača systém priradí predvolené vzťahy medzi objektmi. V prípade potreby môže používateľ pridať mazivá tak, že z roletového menu vyberie možnosť „Pridať nové“ a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}), alebo môže na účely simulácie načítať požadované mazivá z knižnice.
 
-**User:** By default, user radio button will be selected for Flow forming operation. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button as shown in Fig. 48.2.26. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button. User can use ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to assign same values to all relations. User can click on to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation. User can turn on check box next to contact relation to define sticking contact.
+**Používateľ:** Pri operácii tvárnenia tokom je štandardne vybrané rádio tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), ako je znázornené na obr. 48.2.26. Používateľ môže upraviť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môže používateľ priradiť rovnaké hodnoty všetkým vzťahom. Kliknutím na tlačidlo môže používateľ vypočítať toleranciu kontaktu. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) môže používateľ vygenerovať kontaktný vzťah. Zaškrtnutím políčka vedľa kontaktného vzťahu môže používateľ definovať prilepený kontakt.
 
-For more information please refer, [20\. Inter-Object Relations](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
 
-**Note** : User can define Friction windows for rolls and mandrel as shown in Fig. 48.2.26. in ALE type of simulation setup to activate Lite Contact search which will reduce the contact search time.
+**Poznámka**: V nastaveniach simulácie typu ALE môže používateľ definovať okná trenia pre valce a trn, ako je znázornené na obr. 48.2.26., čím aktivuje vyhľadávanie typu „Lite Contact“, ktoré skráti čas potrebný na vyhľadávanie kontaktov.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0018.jpg' | relative_url }})
 
-Contact Page
+Stránka s kontaktnými údajmi
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0019.jpg' | relative_url }})
 
-Defining Friction window
+Okno „Definovanie trenia“
 
-## Stopping controls
+## Ovládacie prvky na zastavenie
 
-The user can define the process duration as the stopping criteria to stop the simulation as shown in the Fig. 48.2.27.
+Používateľ môže ako kritérium ukončenia simulácie nastaviť jej trvanie, ako je znázornené na obr. 48.2.27.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0020.jpg' | relative_url }})
 
-Stopping controls Page
+Stránka s ovládacími prvkami na zastavenie
 
-## Simulation controls
+## Ovládacie prvky simulácie
 
-The user can define the Step controls for simulation as shown in the Fig. 48.2.28.
+Používateľ môže nastaviť ovládacie prvky krokov pre simuláciu tak, ako je znázornené na obr. 48.2.28.
 
-**Number of steps:** Number of steps to be simulated can be defined here. Simulation can stop earlier due to stopping criteria, if heat transfer is defined in pass table then it continues with “Heat Transfer” operation. These “Number of steps” do not include transfer time, by default the transfer time will simulate 100 steps always.
+**Počet krokov:** Tu je možné definovať počet krokov, ktoré sa majú simulovať. Simulácia sa môže ukončiť skôr na základe kritérií ukončenia; ak je v tabuľke priechodov definovaný prenos tepla, simulácia pokračuje operáciou „Prenos tepla“. Tieto „Počet krokov“ nezahŕňajú čas prenosu; štandardne sa čas prenosu simuluje vždy v 100 krokoch.
 
-**Step increment:** The step increment to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
+**Krok:** Hodnota kroku, ktorá sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nie je nutné, aby sa každý z nich uložil do databázy. Uloženie väčšieho počtu krokov zachová viac informácií o procese, čo však bude vyžadovať viac úložného priestoru.
 
-**Time per Step:** If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.
+**Čas na jeden krok:** Ak je zadaný čas na jeden krok, použije sa časový interval na jeden krok. Posun formy na jeden krok bude rovný časovému kroku vynásobenému rýchlosťou formy.
 
-**Stroke per Step:** If stroke per step is specified, the primary die will move the specified amount in each time step. The total movement of the primary die will be the displacement per step multiplied by the total number of steps.
+**Posun na krok:** Ak je špecifikovaný posun na krok, primárna matica sa v každom časovom kroku posunie o zadanú hodnotu. Celkový posun primárnej matice bude rovný posunu na krok vynásobenému celkovým počtom krokov.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0021.jpg' | relative_url }})
 
-Simulation controls Page
+Stránka ovládacích prvkov simulácie
 
-## Generate DB
+## Vytvoriť databázu
 
-**Check Data** ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) : When user clicks on this label system checks the Data. If Data is correct, then we can generate DB. If Data is correct, we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.
+**Kontrola údajov** ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}): Keď používateľ klikne na tento popisok, systém skontroluje údaje. Ak sú údaje správne, môžeme vygenerovať databázu. Ak sú údaje správne, môžeme vygenerovať databázu. Ak sa však pri kontrole údajov vyskytnú chyby alebo varovania, je potrebné ich opraviť pred vytvorením databázy. Chyby zabránia vytvoreniu databázy, zatiaľ čo varovania vytvorenie databázy neumožnia.
 
-**Generate Database** ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}): User can generate database by clicking on this label (See Fig. 48.2.29.).
+**Vytvoriť databázu** ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}): Užívateľ môže vytvoriť databázu kliknutím na tento nápis (pozri obr. 48.2.29.).
 
-**Append Key file:** Any information that is not defined in the template but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and stored in specified path. When necessary only values in .key file can be changed, and simulation can be resubmitted to study the effect of the change in parameters.
+**Pridať súbor .key:** Akékoľvek informácie, ktoré nie sú definované v šablóne, ale stále sa vzťahujú na proces, je možné načítať ako súbor .key. Táto možnosť je užitočná aj v prípadoch, keď je potrebné zmeniť len niekoľko hodnôt; tieto hodnoty je možné definovať v súbore .key a uložiť do zadaného umiestnenia. V prípade potreby je možné zmeniť len hodnoty v súbore .key a simuláciu znovu spustiť, aby sa preskúmal vplyv zmeny parametrov.
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0022.jpg' | relative_url }})
 
-Generate DB page
+Vytvoriť stránku databázy

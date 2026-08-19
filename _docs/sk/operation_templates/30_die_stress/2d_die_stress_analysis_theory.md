@@ -1,230 +1,230 @@
 ---
 lang: sk
-title: "2D Die Stress Analysis Theory"
+title: "Teória analýzy napätí v 2D čipe"
 ---
 
-# 2D Die Stress Analysis Theory
+# Teória analýzy napätí v 2D výtvore
 
-1\. Overview
+1\. Prehľad
 
-2\. Types of analyses
+2\. Druhy analýz
 
-3\. Practical Considerations
+3\. Praktické hľadiská
 
-4\. Die Failure Modes
+4\. Druhy porúch lisovacích foriem
 
-5\. Required Data
+5\. Požadované údaje
 
-6\. Die Stress Setup
+6\. Nastavenie Die Stress
 
-7\. Defining a Press Fit
+7\. Definícia lisovaného spojenia
 
-8\. Quick Summary of Shrink Fit Boundary Condition
+8\. Stručný prehľad okrajovej podmienky s tepelne zmrštiteľným spojom
 
-9\. Important Measurements of Stress
+9\. Dôležité merania napätia
 
-10\. Interpretation of Stress
+10\. Výklad pojmu „stres“
 
-## Overview
+## Prehľad
 
-This section of the manual discusses the theoretical aspects of performing a die stress analysis. A die stress analysis is a computational method for determining the amount and distribution of stress in a tool during a forging (or any case with deformation) simulation. The purpose of a tool stress analysis is to help pinpoint the root cause of tool failure or to identify likely areas of tool failure in a given forging design. This requires a considerable amount of engineering understanding of stress and of how the assembly functions. Understanding stress will assist the user with a reasonable interpretation of the results. Engineering judgment is important in making decisions how to organize a meaningful simulation of the tool response and interpretation of results. Some key considerations in setting up die-stress analyses are:
+Táto časť príručky sa zaoberá teoretickými aspektmi vykonávania analýzy napätia v lisovacej forme. Analýza napätia v lisovacej forme je výpočtová metóda na stanovenie veľkosti a rozloženia napätia v nástroji počas simulácie kovania (alebo akéhokoľvek iného procesu spojeného s deformáciou). Účelom analýzy napätia v nástroji je pomôcť určiť hlavnú príčinu poruchy nástroja alebo identifikovať pravdepodobné miesta poruchy nástroja v danej konštrukcii výkovku. To si vyžaduje značné technické znalosti o napätí a o fungovaní zostavy. Pochopenie napätia pomôže používateľovi pri správnej interpretácii výsledkov. Inžinierske posúdenie je dôležité pri rozhodovaní o tom, ako zorganizovať zmysluplnú simuláciu reakcie nástroja a interpretáciu výsledkov. Niektoré kľúčové hľadiská pri nastavovaní analýz napätia v lisovacej forme sú:
 
-Tools do not function in isolation. The tool objects need to react against other objects in order to deform by the forming stresses. How to define the boundary conditions for tools of interest is a very important concern for the simulation.
+Nástroje nefungujú izolovane. Objekty nástrojov musia pôsobiť na ostatné objekty, aby sa mohli deformovať v dôsledku tvárniacich napätí. Veľmi dôležitou otázkou pri simulácii je, ako definovať okrajové podmienky pre príslušné nástroje.
 
-It is important to consider not only the behavior of the actual forming die or insert, but also the support structure for that tool. In cases where other tools directly interact with a tool, especially if there is some preload on a tool prior to loading, to obtain the correct stress state requires careful analysis of this preloading.
+Je dôležité zohľadniť nielen správanie samotnej tvárnej matrice alebo vložky, ale aj nosnej konštrukcie tohto nástroja. V prípadoch, keď s nástrojom priamo interagujú iné nástroje, najmä ak na nástroj pôsobí pred zaťažením určité predpätie, je na získanie správneho napäťového stavu potrebná dôkladná analýza tohto predpätia.
 
-There are a several different approaches that may be applied in a simulation as well as many different criteria used to interpret the results. This document will explain the various methods for performing die stress as well as clarify which interpretation methods are best suited for particular cases. In Fig. 1 is seen a sample result of a die stress analysis with three objects considered. The output of the simulation is the stress in each body that will give an indication of potential failures.
+Existuje niekoľko rôznych prístupov, ktoré možno použiť pri simulácii, ako aj mnoho rôznych kritérií slúžiacich na interpretáciu výsledkov. V tomto dokumente vysvetlíme rôzne metódy analýzy napätia v lisovacej forme a objasníme, ktoré metódy interpretácie sú najvhodnejšie pre konkrétne prípady. Na obr. 1 je zobrazený príklad výsledku analýzy napätia v lisovacej forme, pri ktorej sa zohľadnili tri objekty. Výstupom simulácie je napätie v každom telese, ktoré poskytuje informácie o potenciálnych poruchách.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/2d_die_stress_analysis_theory/image0001.jpg' | relative_url }})
 
-Die stress analysis showing stresses in insert, case and backing plate
+Analýza napätí znázorňujúca napätia vo vložke, puzdre a opornej doske
 
-## Types of analyses
+## Druhy analýz
 
-There are two general types of analysis (the first being the recommended case for most analyses):
+Existujú dva všeobecné typy analýzy (prvý z nich sa odporúča pre väčšinu analýz):
 
-  1. **Decoupled analysis (one step)** : In this analysis, a deformation simulation is first performed with a deformable workpiece and rigid dies (See Fig. 2). After this first step is performed, a new problem is created and the step of interest from the forming simulation is loaded. The forces from the deforming body are then interpolated on the elastic die. After this, one step of analysis is performed to compute the stresses within the elastic die. The pros for this type of analysis are that it is very simple to setup and is quick to run as well as the ability to experiment with support and/or insert shape without changing the cavity shape. The cons for this is only one instance of time is analyzed per analysis and the compliance of the tools is not considered in the deformation of the workpiece.
+  1. **Oddelená analýza (jeden krok)**: Pri tejto analýze sa najskôr vykoná simulácia deformácie s deformovateľným obrobkom a tuhými formami (pozri obr. 2). Po vykonaní tohto prvého kroku sa vytvorí nová úloha a načíta sa príslušný krok zo simulácie tvárnenia. Sily pôsobiace z deformovateľného telesa sa následne interpolujú na pružnú formu. Potom sa vykoná jeden krok analýzy na výpočet napätí v pružnej forme. Výhodou tohto typu analýzy je, že je veľmi jednoduchá na nastavenie a rýchla na spustenie, ako aj možnosť experimentovať s tvarom opory a/alebo vložky bez zmeny tvaru dutiny. Nevýhodou je, že sa analyzuje len jeden časový okamih na jednu analýzu a pri deformácii obrobku sa nezohľadňuje poddajnosť nástrojov.
 
-**Note:** This analysis is a reasonable approximation as long as the tool deflection is negligible. In most, but not all forming processes, this is a good assumption.
+**Poznámka:** Táto analýza predstavuje primeranú aproximáciu, pokiaľ je deformácia nástroja zanedbateľná. Vo väčšine, hoci nie vo všetkých procesoch tvárnenia, ide o správny predpoklad.
 
-  1. **Coupled analysis (one or more deforming dies while the workpiece is deforming):** In this simulation, the tool of interest is made elastic and given a mesh (See Fig. 3). The entire deformation simulation is run with this die as elastic and stresses of the die are made available for every saved step. There are two drawbacks with running this type of simulation.
+  1. **Spriahnutá analýza (jedna alebo viac deformujúcich sa matíc počas deformácie obrobku):** V tejto simulácii je sledovaný nástroj nastavený ako pružný a je mu priradená sieť (pozri obr. 3). Celá simulácia deformácie prebieha s týmto lisovacím nástrojom ako pružným a napätia v nástroji sú k dispozícii pre každý uložený krok. Existujú dve nevýhody pri vykonávaní tohto typu simulácie.
 
-The run time is substantially longer than the case of the single deforming body.
+Doba behu je podstatne dlhšia ako v prípade jedného deformujúceho sa telesa.
 
-The difficulty in setting up the problem is substantially increased.
+Náročnosť formulácie problému sa podstatne zvyšuje.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/2d_die_stress_analysis_theory/image0002.jpg' | relative_url }})
 
-Sketch of uncoupled die stress analysis
+Náčrt analýzy napätia v neodspájanom čipe
 
-The left image shows that first a deformation analysis is performed and the right image shows that the forces are interpolated onto an elastic die to calculate the stresses on the die.
+Obrázok vľavo ukazuje, že sa najskôr vykoná analýza deformácie, a obrázok vpravo ukazuje, že sily sa interpolujú na pružnú maticu s cieľom vypočítať napätia v matici.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/2d_die_stress_analysis_theory/image0003.jpg' | relative_url }})
 
-Sketch of a coupled analysis of deformable die and workpiece
+Náčrt analýzy vzájomného pôsobenia deformovateľnej matrice a obrobku
 
-##  Practical Considerations
+##  Praktické hľadiská
 
-Additionally, the following options may be considered for this analysis:
+Okrem toho sa pri tejto analýze môžu zvážiť nasledujúce možnosti:
 
-  1. Thermal analysis can be considered either as a coupled or one step analysis.
+  1. Tepelnú analýzu možno považovať buď za spriahnutú analýzu, alebo za jednokrokovú analýzu.
 
-  * In the case of a coupled analysis, this may be important to consider for warm and hot forming simulations since the elastic properties for the tool material may change dramatically at these temperatures. 
+  * V prípade spriahnutej analýzy môže byť dôležité zohľadniť túto skutočnosť pri simuláciách tvárnenia za tepla a za vysokých teplôt, keďže pri týchto teplotách sa môžu výrazne meniť elastické vlastnosti materiálu nástroja. 
 
-  * In the case of a one step analysis, thermal expansion may be considered if necessary. During the deformation solving, the rigid die of interest should have a thermal profile consistent with practice.
+  * V prípade jednokrokového výpočtu je možné v prípade potreby zohľadniť teplotnú rozťažnosť. Pri riešení deformácie by mal príslušný tuhý lisovací nástroj mať teplotný profil zodpovedajúci bežnej praxi.
 
-  1. Forming equipment interaction can be included in either a coupled or one step analysis. 
+  1. Interakciu medzi formovacím zariadením a materiálom je možné zahrnúť buď do analýzy so vzájomným pôsobením, alebo do jednokrokové analýzy. 
 
-  2. Multiple deforming bodies, including multiple shrink fits can be accurately simulated as discrete objects. In the case where the tool of interest has a shrink fit applied to it, it is necessary to consider this effect in order to calculate the correct stresses on the tools.
+  2. Viacero deformujúcich sa telies, vrátane viacerých tesných spojov, je možné presne simulovať ako diskrétne objekty. V prípade, že na príslušný nástroj pôsobí tesný spoj, je potrebné tento efekt zohľadniť, aby bolo možné vypočítať správne napätia pôsobiace na nástroje.
 
-  3. Forging load. The correct forming load is necessary to obtain correct die stress values. In order to be able to predict an accurate forging load, several variables are required to be accurate. Among these are:
+  3. Kováčska sila. Na získanie správnych hodnôt napätia v lisovacej forme je potrebná správna formovacia sila. Aby bolo možné presne odhadnúť kováčsku silu, je potrebné, aby bolo presne stanovených niekoľko premenných. Medzi ne patria:
 
-  * Material flow stress data
+  * Údaje o napätí v prúde materiálu
 
-  * Workpiece history (e.g. Correct temperature, Correct strain distribution)
+  * História obrobku (napr. správna teplota, správne rozloženie deformácie)
 
-  * Die fill (In closed die forgings, load increases considerably as corners fill)
+  * Napĺňanie formy (pri kovaní v uzavretej forme sa zaťaženie výrazne zvyšuje v miere, ako sa vyplňujú rohy)
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/2d_die_stress_analysis_theory/image0004.jpg' | relative_url }})
 
-Mid-stroke die failure with the stress-stroke curve
+Porucha matrice v polovici zdvihu na základe krivky napätia a zdvihu
 
-## Die Failure Modes
+## Spôsoby poruchy matrice
 
-The various modes of die failure are as follows:
+Medzi rôzne spôsoby poruchy matrice patria:
 
-  1. **Catastrophic failure by brittle fracture** \- This usually can be avoided through a simple force/area calculation.
+  1. **Katastrofické zlyhanie v dôsledku krehkého lomu** \- Tomu sa zvyčajne dá predísť pomocou jednoduchého výpočtu pomeru sily k ploche.
 
-  2. **Plastic deformation** \- This can be determined by comparing the stress results of the die stress analysis to the yield stress of the die material.
+  2. **Plastická deformácia** – Túto je možné určiť porovnaním výsledkov analýzy napätí v lisovacej forme s medzou kĺzavosti materiálu formy.
 
-  3. **Low Cycle Fatigue (LCF) failure****by cyclic, thermal and mechanical loading** -This occurs when stresses are below yield for the die material but over many cycles of tensile loading lead to failure in the die. The manner in which to reduce this is to reduce or eliminate the tensile stresses.
+  3. **Porucha spôsobená únavou pri nízkom počte cyklov (LCF)****v dôsledku cyklického, tepelného a mechanického zaťaženia** – K tomu dochádza, keď sú napätia nižšie ako medza tečnosti materiálu matrice, avšak po mnohých cykloch ťahového zaťaženia vedú k poruche matrice. Týmto javom je možné predísť znížením alebo odstránením ťahových napätí.
 
-  4. **Wear** \- The most preferred mode of failure for dies. The estimation of this is outside the scope of die stress analysis. (For more information on this topic, please refer to the [20.4. Inter-object Data Tool wear section](/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/) )
+  4. **Opotrebenie** – Najčastejší spôsob poruchy lisovacích foriem. Odhad tohto javu presahuje rámec analýzy napätí v lisovacích formách. (Ďalšie informácie k tejto téme nájdete v dokumente [20.4. Inter-object Data Tool wear section](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/).)
 
-## Required Data
+## Požadované údaje
 
-The required data to perform a die stress analysis are,
+Údaje potrebné na vykonanie analýzy napätia v lisovacej forme sú:
 
-  1. Die geometry.
+  1. Geometria formy.
 
-  2. Die support and mounting conditions.
+  2. Podmienky upevnenia a montáže formy.
 
-  3. Forces on the surface of the die from the workpiece.
+  3. Sily pôsobiace na povrch formy zo strany obrobku.
 
-**Note** :
+**Poznámka** :
 
-This requires an accurate load in the deformation simulation to accurately predict stress and deflection.
+Na to je potrebné v simulácii deformácie zohľadniť presné zaťaženie, aby bolo možné presne predpovedať napätie a priehyb.
 
-  1. Temperature distribution in the dies (for non-isothermal analysis).
+  1. Rozloženie teploty v lisovacích formách (pre neizotermickú analýzu).
 
-  2. Elastic (and thermal if applicable) die material properties.
+  2. Vlastnosti materiálu formy (prípadne aj tepelné vlastnosti).
 
-  3. Shrink fit.
+  3. Tepelné zúženie.
 
-  4. Any residual stress or other preloads.
+  4. Akékoľvek zvyškové napätie alebo iné predpätia.
 
-## Die Stress Setup
+## Nastavenie Die Stress
 
-  1. Run flow analysis.
+  1. Spustiť analýzu toku.
 
-  2. Identify critical steps in flow simulation.
+  2. Určte kľúčové kroky pri simulácii toku.
 
-  * End of stroke.
+  * Koniec zdvihu.
 
-  * Other step where tools may see non-uniform load.
+  * Ďalší krok, pri ktorom môžu byť nástroje vystavené nerovnomernému zaťaženiu.
 
-  1. Create a new problem for die stress analysis.
+  1. Vytvorte nový problém pre analýzu napätia v liatej súčiastke.
 
-  2. Import critical stress from deformation database.
+  2. Načítajte kritické napätie z databázy deformácií.
 
-  3. Import support tools.
+  3. Nástroje na podporu importu.
 
-  4. Assign velocity boundary conditions to constrain tools.
+  4. Nastavte okrajové podmienky rýchlosti na obmedzenie nástrojov.
 
-  5. Interpolate forces from flow simulation workpiece to tool surfaces.
+  5. Interpolovať sily zo simulácie prúdenia z obrobku na povrchy nástroja.
 
-  6. Define press fits between tools and cases.
+  6. Určte lisované spoje medzi nástrojmi a puzdrami.
 
-  7. Assign tool master-slave relationships.
+  7. Priraďte vzťahy typu „master-slave“ medzi nástrojmi.
 
-  8. Write a database and run the simulation.
+  8. Vytvorte databázu a spustite simuláciu.
 
-## Defining a Press Fit
+## Definícia lisovaného uloženia
 
-A press fit is the case where two tools are fitted together with equilibrium dimensions that slightly overlap. When the two tools are fitted together, there is a significant amount of stress that is developed between the two objects before any forging load is applied. The purpose for this is to maintain a compressive circumferential preload that would control tensile stresses in the hoop direction. This is very important in the case of carbide tools where tool life is reduced significantly in the presence of tensile stresses.
+Tlakové uloženie je situácia, keď sa dva nástroje spájajú s vyrovnávacími rozmermi, ktoré sa mierne prekrývajú. Pri spojení týchto dvoch nástrojov vzniká medzi nimi značné napätie ešte pred pôsobením akéhokoľvek kováčskeho zaťaženia. Účelom tohto postupu je udržať tlakové obvodové predpätie, ktoré by regulovalo ťahové napätia v obvodovom smere. To je veľmi dôležité v prípade karbidových nástrojov, pri ktorých sa v prítomnosti ťahových napätí výrazne skracuje životnosť nástroja.
 
-Press fitting can be modeled using two elastic dies. An elastic object can be simplistically considered as a spring (See Fig. 5). When both objects are pressed together, the lowest amount of energy required to deflect both objects will determine the final stress state. Each die should be drawn to fit exactly coincident with the other die (i.e. no overlap). After this, the press fit should be applied as a “shrink fit” boundary condition on one of the dies. An insert-case combination cross-section is shown in Fig. 6a where the shrink fit is applied to the inner radius of the case. When the simulation starts, the case will apply a force to the insert. These two bodies will both deflect in order to minimize the total distortion energy stored in the two objects (See Fig. 6b). Similarly, this can also be done in terms of the shrink fit applied to the insert. The insert can be having an applied shrink fit to the outer radius (See Fig. 7a). When the simulation is performed, these two bodies will both deflect in order to minimize the total distortion energy stored in the two objects (See Fig. 7b). It is very important to consider a press fit for an accurate die stress analysis since often the press fit has a very significant contribution to the overall stress state of the assembly. It is good to check this with no interpolated forces for further assurance that the amount of press fit being used does not exceed limits for safety running a forging.
+Tlakové lisovanie možno modelovať pomocou dvoch pružných foriem. Pružný objekt možno zjednodušene považovať za pružinu (pozri obr. 5). Keď sa oba objekty stlačia k sebe, konečný stav napätia určí najmenšie množstvo energie potrebné na deformáciu oboch objektov. Každá matrica by mala byť navrhnutá tak, aby presne zodpovedala druhej matrici (t. j. bez prekrývania). Následne by sa lisované spojenie malo aplikovať ako okrajová podmienka „zúženého spojenia“ na jednu z matríc. Prerez kombinácie vložky a puzdra je znázornený na obr. 6a, kde je tepelné zúženie aplikované na vnútorný polomer puzdra. Po spustení simulácie bude puzdro pôsobiť silou na vložku. Oba tieto telesa sa ohnú s cieľom minimalizovať celkovú energiu deformácie uloženú v oboch objektoch (pozri obr. 6b). Podobne je možné postupovať aj v prípade, ak je lisované spojenie aplikované na vložku. Na vložku môže byť aplikované lisované spojenie na vonkajší polomer (pozri obr. 7a). Po spustení simulácie sa obe telesa deformujú s cieľom minimalizovať celkovú energiu deformácie uloženú v týchto dvoch objektoch (pozri obr. 7b). Pre presnú analýzu napätia v matrici je veľmi dôležité zohľadniť lisované uloženie, keďže lisované uloženie má často veľmi významný vplyv na celkový stav napätia v zostave. Je vhodné to skontrolovať bez interpolovaných síl, aby sa ďalej uistilo, že veľkosť použitého lisovaného uloženia neprekračuje limity pre bezpečnú prevádzku kováčskeho procesu.
 
-## Quick Summary of Shrink Fit Boundary Condition
+## Stručný prehľad okrajovej podmienky s tepelne zmrštiteľným spojom
 
-As a quick summary to describe how to apply shrink fit boundary conditions, perform the following actions in order:
+Ako stručný prehľad postupu pri aplikácii okrajových podmienok s tepelne zmrštiteľným spojom vykonajte nasledujúce kroky v uvedenom poradí:
 
-Draw tool surfaces together and position them so that the contacting surfaces coincide perfectly.
+Spojte povrchy nástrojov a umiestnite ich tak, aby sa dotýkajúce sa povrchy dokonale zhodovali.
 
-Assign a shrink fit boundary condition to either the insert or the case. The interference value should be one half of the diameter difference.
+Priraďte okrajovú podmienku s tlakovým uložením buď vložke, alebo puzdru. Hodnota presahu by mala predstavovať polovicu rozdielu priemerov.
 
-Generate contact between the two contacting objects. If contact is not generated with the default contact tolerance, please increase the contact tolerance slightly in order to generate contact.
+Vytvorte kontakt medzi dvoma objektmi, ktoré sa dotýkajú. Ak sa kontakt pri predvolenej tolerancii kontaktu nevytvorí, mierne zvýšte toleranciu kontaktu, aby sa kontakt vytvoril.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/2d_die_stress_analysis_theory/image0005.jpg' | relative_url }})
 
-Consider the insert and case to be 2 springs
+Predpokladajme, že vložka a puzdro tvoria 2 pružiny
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/2d_die_stress_analysis_theory/image0006.jpg' | relative_url }})
 
-(a) Assign a positive displacement to the inside of the case (b) When simulation starts, the system snaps into equilibrium
+(a) Priraďte kladný posun vnútornej časti skrine (b) Po spustení simulácie sa systém dostane do rovnováhy
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/2d_die_stress_analysis_theory/image0007.jpg' | relative_url }})
 
-(a) Assign a positive displacement to the outside of the insert (b) When simulation starts, the system snaps into equilibrium.
+(a) Zadajte kladný posun na vonkajšej strane vložky. (b) Po spustení simulácie sa systém ustáli v rovnovážnom stave.
 
-## Important Measurements of Stress
+## Dôležité merania napätia
 
-Stress is a important concept in mechanical engineering. For a general overview, please refer to the fundamental concepts section in the manual. 
+Napätie je dôležitý pojem v strojárstve. Všeobecný prehľad nájdete v časti venovanej základným pojmom v príručke. 
 
-  1. **Effective Stress (Von Mises)** \- an accepted measurement of initial yielding when this stress exceeds the yield strength of the die material (at temperature).
+  1. **Efektívne napätie (Von Mises)** – uznávaná veličina vyjadrujúca počiatočné tečenie, keď toto napätie prekročí medzu tečenia materiálu matrice (pri danej teplote).
 
-  2. **Maximum Principal Stress** \- in the case of carbide, tensile stresses will certainly result in a premature LCF failure - in hardened die steels, this increases tendency towards LCF failures. This quantity is the maximum possible stress at a single point in some give orientation (See Fig. 8.).
+  2. **Maximálne hlavné napätie** – v prípade karbidu budú ťahové napätia s určitosťou viesť k predčasnému zlyhaniu v dôsledku únavy pri nízkych cykloch (LCF) – v prípade kalených lisovacích ocelí to zvyšuje náchylnosť k zlyhaniam v dôsledku únavy pri nízkych cykloch (LCF). Táto veličina predstavuje maximálne možné napätie v jednom bode v danej orientácii (pozri obr. 8.).
 
-  3. **Stress Components** \- when troubleshooting die problems, the components are very useful in determining root causes and studying design alternatives.
+  3. **Stresové komponenty** – pri riešení problémov s čipmi sú tieto komponenty veľmi užitočné pri určovaní základných príčin a skúmaní alternatívnych riešení.
 
-  4. **Mean Stress** \- this stress state is generally not of critical importance in die stress analysis.
+  4. **Priemerné napätie** – tento stav napätia nemá vo všeobecnosti kritický význam pri analýze napätia v lisovacej forme.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/2d_die_stress_analysis_theory/image0008.jpg' | relative_url }})
 
-Description of Principal Stress
+Popis hlavného napätia
 
-## Interpretation of Stress
+## Výklad pojmu „stres“
 
-**Steels** :
+**Oceľ** :
 
-In the case of steel, if the effective stress exceeds the yield stress at the operating temperature, the tool will yield. Moderate to low yielding can be very detrimental to the forging process since a different part will get produced than the intended one and the tools does not eventually fail altogether. High positive principal stress values may lead to fatigue failures, even if the stress is below the yield stress.
+V prípade ocele, ak efektívne napätie pri prevádzkovej teplote prekročí medzu tečnosti, dôjde k tečnému deformovaniu nástroja. Stredná až nízka medza tečnosti môže mať veľmi nepriaznivý vplyv na proces kovania, pretože sa vyrobí iný diel, ako bol zamýšľaný, a nástroje nakoniec úplne zlyhajú. Vysoké hodnoty kladného hlavného napätia môžu viesť k únavovým poruchám, aj keď je napätie nižšie ako medza tečnosti.
 
-Harder tool steels generally have higher yield strength (See Fig. 9), but a lower tolerance for tensile fatigue loading. Lower hardness tool steels have lower yield strength, but a better tolerance for tensile fatigue.
+Tvrdšie nástrojové ocele majú spravidla vyššiu medzu tečnosti (pozri obr. 9), ale nižšiu odolnosť voči únavovému namáhaniu v ťahu. Nástrojové ocele s nižšou tvrdosťou majú nižšiu medzu tečnosti, ale lepšiu odolnosť voči únavovému namáhaniu v ťahu.
 
-**Carbide:**
+**Karbid:**
 
-Carbide can tolerate an extremely high effective stress, however, it is extremely intolerant of tensile (positive) principal stresses, and will fail easily in fatigue. Higher cobalt content increases fatigue resistance, but decreases wear resistance. Lower cobalt content has better wear characteristics, but is less tolerant of large positive principal stresses.
+Karbid dokáže znášať mimoriadne vysoké efektívne napätie, je však mimoriadne citlivý na ťahové (kladné) hlavné napätia a ľahko podlieha únavovému poškodeniu. Vyšší obsah kobaltu zvyšuje odolnosť proti únave, znižuje však odolnosť proti opotrebeniu. Nižší obsah kobaltu má lepšie vlastnosti z hľadiska opotrebenia, je však menej odolný voči veľkým kladným hlavným napätiam.
 
-**Simplistic rules:**
+**Zjednodušené pravidlá:**
 
-Some very simple rules can often be useful in interpreting die stress results. Here is a short list of some things to keep in mind.
+Pri interpretácii výsledkov analýzy napätia v tvárnici sa často môžu hodiť niektoré veľmi jednoduché pravidlá. Tu je krátky zoznam vecí, na ktoré by ste mali pamätať.
 
-  1. Effective stress in steel should be below the yield stress. This is rather obvious, but it gives a good starting point from which to evaluate a situation where dies are failing or evaluating a prospective assembly.
+  1. Efektívne napätie v oceli by malo byť nižšie ako medza tečnosti. Je to síce celkom zrejmé, ale poskytuje to dobrý východiskový bod pre posúdenie situácie, keď dochádza k poruchám lisovacích foriem, alebo pre posúdenie plánovanej montáže.
 
-  2. Max principal stress in carbide should be negative, or small positive values (10-20ksi or 50-100MPa). Since carbide is made of pressed together ceramic material, the grains tend to pull apart rather easily but the amount of stress these materials can handle in compression is rather astounding. So it is good to design an assembly where the carbide never sees a tensile stress during any time of a forging.
+  2. Maximálne hlavné napätie v karbide by malo byť záporné alebo malo by mať malé kladné hodnoty (10–20 ksi alebo 50–100 MPa). Keďže karbid je vyrobený z lisovaného keramického materiálu, zrná majú tendenciu sa pomerne ľahko od seba oddeľovať, avšak množstvo napätia, ktoré tieto materiály dokážu zvládnuť pri tlakovom namáhaní, je skutočne ohromujúce. Preto je vhodné navrhnúť zostavu tak, aby karbid počas celého procesu kovania nebol nikdy vystavený ťahovému napätiu.
 
-  3. Max principal stress in steels can be larger in steels, but very large values (100ksi or 700MPa) may lead to fatigue failures. One of the first laws of fatigue is that the closer to the yield stress a cyclic operation runs, the lower the number of cycles a process can exist before eventual failure. Even through a process is below the yield stress by a nominal margin, often lifetime improvement may be seen by further reduction in the maximum effective stress seen by the tools.
+  3. Maximálne hlavné napätie v oceliach môže byť vyššie, avšak veľmi vysoké hodnoty (100 ksi alebo 700 MPa) môžu viesť k únavovým poruchám. Jedným z prvých zákonov únavy je, že čím sa cyklická prevádzka približuje k medze tečnosti, tým nižší je počet cyklov, ktoré proces vydrží pred konečným zlyhaním. Aj keď je proces pod medzou tečnosti o nominálnu rezervu, často je možné dosiahnuť predĺženie životnosti ďalším znížením maximálneho efektívneho napätia pôsobiaceho na nástroje.
 
-  4. If a high stress exists, stress components can be used to help identify the root cause of the stress. In an effort to correlate a failure on a shop floor to a die-stress simulation, the components where high stresses are seen can often be correlated to how the failure of the die occurred.
+  4. Ak dochádza k vysokému namáhaniu, zložky namáhania možno využiť na identifikáciu základnej príčiny tohto namáhania. Pri snahe o prepojenie poruchy vo výrobnej hale so simuláciou namáhania formy sa zložky, v ktorých sa vyskytujú vysoké namáhania, často dajú prepojiť so spôsobom, akým došlo k poruche formy.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/2d_die_stress_analysis_theory/image0009.jpg' | relative_url }})
 
-Comparison of idealized elastic stress-strain curves with ductile and brittle material curves
+Porovnanie idealizovaných kriviek napätia a deformácie s krivkami tvárnych a krehkých materiálov
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[Object Boundary Condition](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[Object Boundary Condition](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
 
-[2D Die Stress Study with Multiple Steps](/docs/sk/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/)
+[2D Die Stress Study with Multiple Steps](/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/)
 
-[2D Die Stress Study with Single steps](/docs/sk/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/)
+[2D Die Stress Study with Single steps](/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/)

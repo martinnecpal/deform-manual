@@ -1,292 +1,292 @@
 ---
 lang: sk
-title: "39.4. 3D Drilling"
+title: "39.4. 3D vŕtanie"
 ---
 
-# 39.4. Drilling
+# 39.4. Vŕtanie
 
-39.4.1. System Summary
+39.4.1. Prehľad systému
 
-39.4.2. Adding Drilling Operation
+39.4.2. Pridanie vŕtacej operácie
 
-39.4.3. Process
+39.4.3. Postup
 
-39.4.4. Material List
+39.4.4. Zoznam materiálov
 
-39.4.5. Tool
+39.4.5. Nástroj
 
-39.4.5.1. Insert Geometry
+39.4.5.1. Vložiť geometriu
 
-39.4.5.2. Coating Material
+39.4.5.2. Materiál povlaku
 
-39.4.5.3. Tool material
+39.4.5.3. Materiál nástroja
 
-39.4.5.4. Tool Mesh
+39.4.5.4. Sieť nástroja
 
-39.4.5.5. Tool BCC
+39.4.5.5. Nástroj BCC
 
-39.4.6. Workpiece
+39.4.6. Obrobok
 
-39.4.6.1. Workpiece Geometry
+39.4.6.1. Geometria obrobku
 
-39.4.6.2. Workpiece Material Selection
+39.4.6.2. Výber materiálu obrobku
 
-39.4.6.3. Workpiece Mesh Generation
+39.4.6.3. Vytvorenie siete obrobku
 
-39.4.6.4. Workpiece BCC
+39.4.6.4. Objemová štruktúra obrobku (BCC)
 
-39.4.7. Control
+39.4.7. Kontrola
 
-39.4.8. Tool Wear
+39.4.8. Opotrebenie nástrojov
 
-39.4.9. Contact
+39.4.9. Kontakt
 
-39.4.10. Step Control
+39.4.10. Ovládanie krokov
 
-39.4.11. Generate DB
+39.4.11. Vytvorenie databázy
 
-## System Summary
+## Prehľad systému
 
-Due to the number of revolutions of a drill necessary to establish characteristic behavior, drilling simulations in DEFORM are time consuming. Therefore, every effort should be made to optimize problem size. User can optimize the drilling simulation set up with considerations including keeping the workpiece as small as possible while capturing geometry (both in diameter and thickness), using the largest element which can adequately capture chip geometry, and possibly pre-shaping the workpiece to eliminate the necessity to simulate the transient point penetration before the drill reaches full depth. System provides options to model pre-shape workpiece considering the drill tip geometry.
+Vzhľadom na počet otáčok vrtáka potrebných na stanovenie charakteristického správania sú simulácie vŕtania v programe DEFORM časovo náročné. Preto by sa malo vynaložiť všetko úsilie na optimalizáciu veľkosti úlohy. Používateľ môže optimalizovať nastavenie simulácie vŕtania tak, aby sa obrobok zachoval čo najmenší pri zachovaní geometrie (priemeru aj hrúbky), s použitím najväčšieho prvku, ktorý dokáže adekvátne zachytiť geometriu triesky, a prípadne predtvarovaním obrobku, čím sa eliminuje potreba simulovať prechodný bod vniknutia skôr, ako vrták dosiahne plnú hĺbku. Systém ponúka možnosti modelovania predtvarovaného obrobku s ohľadom na geometriu špičky vrtáka.
 
-## Adding Drilling Operation
+## Pridanie vŕtacieho úkonu
 
-To set up Drilling process user need to add the 3D cutting template and select “**Drilling** ” option in the “Process” page as shown in Fig. 39.4.1. For more details on how to add problem please refer [39.2.1. How to add 3D Cutting Operation](39_2_3d_turning.htm#39_2_1_How_to_add_3D_Cutting_Operation).
+Na nastavenie procesu vŕtania musí používateľ pridať 3D šablónu rezania a na stránke „Proces“ vybrať možnosť „**Vŕtanie**“, ako je znázornené na obr. 39.4.1. Ďalšie informácie o tom, ako pridať úlohu, nájdete v [39.2.1. How to add 3D Cutting Operation](39_2_3d_turning.htm#39_2_1_How_to_add_3D_Cutting_Operation).
 
-## Process page
+## Stránka procesu
 
-The process parameters to setup Drilling process are as shown in Fig. 39.4.1.
+Parametre procesu potrebné na nastavenie procesu vŕtania sú uvedené na obr. 39.4.1.
 
-**Environment Heat Transfer:** Environment temperature and convection co-efficient are defined under this tab, for more information on defining these parameters refer [39.2.4. Turning Process](39_2_3d_turning.htm#39_2_4_Process_page).
+**Prenos tepla v prostredí:** Na tejto karte sa nastavujú teplota prostredia a koeficient konvekcie. Ďalšie informácie o nastavení týchto parametrov nájdete v dokumente [39.2.4. Turning Process](39_2_3d_turning.htm#39_2_4_Process_page).
 
-**Cutting speed (v):** It is defined as the speed at which the tool moves. The cutting speed can be defined as mm/sec or m/min in SI and in/sec or ft/min in English units.
+**Rýchlosť rezania (v):** Je definovaná ako rýchlosť, ktorou sa nástroj pohybuje. Rýchlosť rezania sa môže uvádzať v jednotkách mm/s alebo m/min v systéme SI a v jednotkách in/s alebo ft/min v anglických jednotkách.
 
-**Rotation speed:** It defines the rotational speed of tool. The rotation speed can be defined in rpm and radians/sec.
+**Rýchlosť otáčania:** Určuje rýchlosť otáčania nástroja. Rýchlosť otáčania možno uvádzať v otáčkach za minútu (rpm) alebo v radiánoch za sekundu.
 
-**Feed rate (f) :** It is defined as the distance the tool travels during one revolution of the workpiece. This can be defined as mm/rev or mm/sec in SI and in/rev or in/sec in English units.
+**Posuv (f):** Je definovaný ako vzdialenosť, ktorú nástroj prejde počas jednej otáčky obrobku. V systéme SI sa uvádza v jednotkách mm/ot alebo mm/s, v anglických jednotkách v jednotkách in/ot alebo in/s.
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0001.jpg' | relative_url }})
 
-Drilling type process page
+Stránka o procese vŕtania
 
-## Material List 
+## Zoznam materiálov 
 
-In this Material List page, user can load a material from the library or keyword or database file using the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) options as shown in Fig. 39.4.2. The materials loaded here can be assigned to the objects from their respective material page. User can also add a new material using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and define its properties. User can use ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) button to delete the loaded material. User can also save the material using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) options.
+Na tejto stránke „Zoznam materiálov“ môže používateľ načítať materiál z knižnice, pomocou kľúčového slova alebo z databázového súboru pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), ako je znázornené na obr. 39.4.2. Materiály načítané na tejto stránke je možné priradiť k objektom na príslušnej stránke materiálov. Používateľ môže tiež pridať nový materiál pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a definovať jeho vlastnosti. Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) môže používateľ odstrániť načítaný materiál. Používateľ môže materiál uložiť aj pomocou možností ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0002.jpg' | relative_url }})
 
-Assigning the Material to Material list
+Priradenie materiálu do zoznamu materiálov
 
-## Tool 
+## Nástroj 
 
-In this Tool page, the user can define the temperature of the tool object. We can import the tool object using the ![]({{ '/assets/icons/pre_icons/mo_import_object_button.jpg' | relative_url }}) button. If user wants to calculate the thermal data for tool object, select the “**Calculate tool temperature** ” check box and we can observe that mesh options for tool are enabled so that we can mesh the tool to calculate temperature distribution. (See Fig. 39.4.3.)
+Na tejto stránke „Nástroj“ môže používateľ nastaviť teplotu objektu nástroja. Objekt nástroja môžeme načítať pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_import_object_button.jpg' | relative_url }}). Ak chce používateľ vypočítať tepelné údaje pre objekt nástroja, zaškrtne políčko „**Vypočítať teplotu nástroja**“ a zistí, že sa aktivujú možnosti vytvorenia siete pre nástroj, vďaka čomu je možné vytvoriť sieť nástroja na výpočet rozloženia teploty. (Pozri obr. 39.4.3.)
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0003.jpg' | relative_url }})
 
-Tool Page
+Stránka s nástrojmi
 
-### Insert Geometry 
+### Vložiť geometriu 
 
-In this Insert Geometry page (see Fig. 39.4.4.), the user can define the tool geometry using the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). The user can also import the geometry using the Import geometry ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) options. User can use “Advanced” option to define the number of flutes on drill bit tool (see Fig. 39.4.6.), which is used in feed calculations. 
+Na tejto stránke „Vložiť geometriu“ (pozri obr. 39.4.4.) môže používateľ definovať geometriu nástroja pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). Používateľ môže tiež importovať geometriu pomocou možností „Importovať geometriu“ ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Pomocou možnosti „Pokročilé“ môže používateľ definovať počet rezacích hrán na vrtáku (pozri obr. 39.4.6.), čo sa využíva pri výpočtoch posuvu. 
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0004.jpg' | relative_url }})
 
-Insert Geometry Page
+Stránka „Vložiť geometriu“
 
   
-**Defining Tool Geometry using Define Primitive option:**
+**Definovanie geometrie nástroja pomocou možnosti „Definovať primitív“:**
 
-Define Primitive will lead to the ‘Drillbit Primitive menu’ as shown in Fig. 39.4.5. After defining the geometry parameters of the drill bit user can click on ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) button to create drill bit geometry. 
+Voľba „Definovať primitív“ otvorí „Ponuku primitív vrtáka“, ako je znázornené na obr. 39.4.5. Po definovaní geometrických parametrov vrtáka môže používateľ kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) a vytvoriť geometriu vrtáka. 
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0005.jpg' | relative_url }})
 
-Drill bit primitive page
+Stránka s primitívmi vrtákov
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0006.jpg' | relative_url }})
 
-Advanced options for Drill bit geometry
+Pokročilé nastavenia geometrie vrtáka
 
-### Coating Material 
+### Materiál povlaku 
 
-User can apply coating to tool insert by defining coating layer and its thickness in “**Coating Material** ” page. User can define the coating layer material and its thickness by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}) button as shown in the Fig. 39.4.7. If user wants to delete any layer, then user must select the respective layer and click on ![]({{ '/assets/icons/pre_icons/mo_delete_icon.jpg' | relative_url }}) button.
+Používateľ môže na výmennú čepeľ naniesť povlak tak, že na stránke „**Materiál povlaku**“ definuje povlakovú vrstvu a jej hrúbku. Materiál vrstvy povlaku a jej hrúbku môže používateľ definovať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}), ako je znázornené na obr. 39.4.7. Ak chce používateľ odstrániť akúkoľvek vrstvu, musí vybrať príslušnú vrstvu a kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_icon.jpg' | relative_url }}).
 
   
-**Extract Coating Info** : After Generating the coating, we can extract the coating info using this button.
+**Extrahovať informácie o povlaku**: Po vytvorení povlaku môžeme pomocou tohto tlačidla extrahovať informácie o povlaku.
 
-**Delete Coating** : We can also delete the Costing layers using this button. 
+**Odstrániť vrstvu**: Pomocou tohto tlačidla môžeme odstrániť aj vrstvy s nákladmi. 
 
-Using the “**Preserve state variables and boundary conditions** ” check box the user can create the coating layer without losing the state variable and boundary conditions data of the tool.
+Zaškrtnutím políčka „**Zachovať stavové premenné a okrajové podmienky**“ môže používateľ vytvoriť povlakovú vrstvu bez straty údajov o stavových premenných a okrajových podmienkach nástroja.
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0007.jpg' | relative_url }})
 
-Coating Material Page
+Stránka o povlakových materiáloch
 
-### Tool material 
+### Materiál nástroja 
 
-In material page, all the materials added to material list are displayed as shown in Fig. 39.4.8. User can select the required material to assign it to respective object. If the desired material is not available in the list, then the user can load the material in object material page using “Import material” data from a File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or using “Load form Library” option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). User can also create new material if the material is not available in DEFORM library using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). User can delete the material from list using ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) or edit the material data using ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Modified / newly defined material can be saved using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). 
+Na stránke materiálov sa zobrazia všetky materiály pridané do zoznamu materiálov, ako je znázornené na obr. 39.4.8. Používateľ môže vybrať požadovaný materiál a priradiť ho k príslušnému objektu. Ak požadovaný materiál nie je k dispozícii v zozname, môže ho na stránke materiálov objektu načítať pomocou funkcie „Importovať materiál“ z súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti „Načítať z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Ak materiál nie je k dispozícii v knižnici DEFORM, môže ho používateľ vytvoriť pomocou ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Používateľ môže materiál zo zoznamu odstrániť pomocou ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) alebo údaje o materiáli upraviť pomocou ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Upravený alebo novo definovaný materiál je možné uložiť pomocou ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0008.jpg' | relative_url }})
 
-Assigning the Tool Material
+Priradenie materiálu nástroja
 
-### Tool Mesh 
+### Sieť nástrojov 
 
-User can generate mesh for the tool by defining relative or absolute mesh size data as shown in the Fig. 39.4.9. & Fig. 39.4.10. It also provides the preview of the mesh when we click on “Preview Mesh” option. Cutting edge information being part of the insert data, the wizard automatically applies finer mesh near the cutting zone. See Fig. 39.4.9. to view meshed drill bit.
+Používateľ môže vytvoriť sieť pre nástroj definovaním údajov o relatívnej alebo absolútnej veľkosti ôk, ako je znázornené na obr. 39.4.9 a obr. 39.4.10. Po kliknutí na možnosť „Preview Mesh“ (Náhľad siete) sa tiež zobrazí náhľad siete. Keďže informácie o reznom hrane sú súčasťou údajov o vložke, sprievodca automaticky použije jemnejšiu sieť v blízkosti reznej zóny. Pozrite si obr. 39.4.9., kde je zobrazené vŕtalo so sieťou.
 
   
-**Relative Mesh Method:**
+**Metóda relatívnej siete:**
 
-  * **Target number of elements:** The number of elements to be generated for an object can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation.
+  * **Cieľový počet prvkov:** Počet prvkov, ktoré sa majú pre daný objekt vygenerovať, je možné určiť jednoduchým posunutím posuvníka a výberom vhodnej hodnoty pre aktuálnu simuláciu.
 
-  * **Size Ratio:** It is the size ratio between the largest element edge length to smallest element edge length.
+  * **Pomer veľkostí:** Ide o pomer dĺžky hrany najväčšieho prvku k dĺžke hrany najmenšieho prvku.
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0009.jpg' | relative_url }})
 
-Tool Mesh Generation using relative mesh size
+Vytvorenie siete pomocou relatívnej veľkosti ôk
 
   
-**Absolute Mesh Method :**
+**Metóda absolútnej siete:**
 
-  * **Minimum element size:** Feed rate automatically calculates the minimum element size of the mesh to be generated which calculates the Number of elements value automatically as shown in the Fig. 39.4.10.
+  * **Minimálna veľkosť prvku:** Parameter „Rýchlosť výpočtu“ automaticky vypočíta minimálnu veľkosť prvku generovanej siete, na základe čoho sa automaticky vypočíta hodnota „Počet prvkov“, ako je znázornené na obr. 39.4.10.
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0010.jpg' | relative_url }})
 
-Tool Mesh Generation using absolute mesh size
+Vytvorenie siete pomocou absolútnej veľkosti ok
 
-### Tool BCC 
+### Nástroj BCC 
 
-In this BCC Page, the user can define the Thermal BCC like “Heat Exchange with Environment” and “Temperature”. The default BCCs are assigned automatically after generating the mesh as shown in the Fig. 39.4.11.
+Na tejto stránke BCC môže používateľ definovať tepelné BCC, ako napríklad „Výmena tepla s okolím“ a „Teplota“. Predvolené BCC sa priradia automaticky po vytvorení siete, ako je znázornené na obr. 39.4.11.
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0011.jpg' | relative_url }})
 
-Default Heat exchange BCC
+Predvolená hodnota výmeny tepla BCC
 
-## Workpiece 
+## Obrobok 
 
-In this Workpiece page, the user can define the object type and set its initial temperature. Plastic object type is selected by default as shown in Fig. 39.4.12., if user is interested to consider the effect of elastic properties then Elasto-plastic object type can be used. We can also import the object data using the ![]({{ '/assets/icons/pre_icons/mo_import_object_button.jpg' | relative_url }}) button.
+Na tejto stránke „Obrobok“ môže používateľ definovať typ objektu a nastaviť jeho počiatočnú teplotu. Predvolene je vybraný typ objektu „Plast“, ako je znázornené na obr. 39.4.12. Ak má používateľ záujem zohľadniť vplyv elastických vlastností, môže použiť typ objektu „Elastoplast“. Údaje o objekte môžeme tiež importovať pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_import_object_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0012.jpg' | relative_url }})
 
-Workpiece Page
+Stránka obrobku
 
-### Workpiece Geometry 
+### Geometria obrobku 
 
-In this Workpiece Geometry page, the user can define the workpiece geometry using the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). The user can also import the geometry using the Import geometry ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), option.
+Na tejto stránke „Geometria obrobku“ môže používateľ definovať geometriu obrobku pomocou funkcie ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). Používateľ môže tiež importovať geometriu pomocou možnosti „Importovať geometriu“ ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}).
 
 ####   
-Defining Workpiece Geometry using Define Primitive option
+Definovanie geometrie obrobku pomocou možnosti „Definovať primitív“
 
-“Define Primitive” will open ‘Workpiece Geo Primitive’ menu as shown in Fig. 39.4.13. Template provides options to create Cylindrical work piece or pre-shaped workpiece based on drill tip geometry. Fig. 39.4.13. and Fig. 39.4.14. shows geometry parameters to create workpiece from drill tip shape and cylindrical workpiece.
+Funkcia „Definovať primitív“ otvorí ponuku „Geometrické primitívy obrobku“, ako je znázornené na obr. 39.4.13. Šablóna ponúka možnosti na vytvorenie valcového obrobku alebo predtvarovaného obrobku na základe geometrie hrotu vrtáka. Obr. 39.4.13 a obr. 39.4.14 znázorňujú geometrické parametre na vytvorenie obrobku na základe tvaru hrotu vrtáka a valcového obrobku.
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0013.jpg' | relative_url }})
 
-Create from drill tip shape workpiece geometry
+Vytvoriť geometriu obrobku na základe tvaru hrotu vrtáka
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0014.jpg' | relative_url }})
 
-Cylinder workpiece geometry
+Geometria valcového obrobku
 
-### Workpiece Material Selection
+### Výber materiálu obrobku
 
-In material page, all the materials added to material list are displayed as shown in Fig. 39.4.15. User can select the required material to assign it to respective object. If the desired material is not available in the list, then the user can load the material in object material page using “Import Material” data from a File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or using “Load form Library” option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). User can also create new material if the material is not available in DEFORM library using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). User can delete the material from list using ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) or edit the material data using ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Modified / newly defined material can be saved using ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) .
+Na stránke materiálov sa zobrazujú všetky materiály pridané do zoznamu materiálov, ako je znázornené na obr. 39.4.15. Používateľ môže vybrať požadovaný materiál a priradiť ho k príslušnému objektu. Ak požadovaný materiál nie je k dispozícii v zozname, môže ho na stránke materiálov objektu načítať pomocou funkcie „Importovať materiál“ z súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti „Načítať z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Ak materiál nie je k dispozícii v knižnici DEFORM, môže ho používateľ vytvoriť pomocou ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Používateľ môže materiál zo zoznamu odstrániť pomocou ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) alebo údaje o materiáli upraviť pomocou ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Upravený alebo novo definovaný materiál je možné uložiť pomocou ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0015.jpg' | relative_url }})
 
-Assigning the material for the workpiece
+Priradenie materiálu k obrobku
 
-### Workpiece Mesh Generation
+### Vytvorenie siete obrobku
 
-The User can generate the mesh by defining relative or absolute mesh size data as shown in the Fig. 39.4.16. & Fig. 39.4.17. It also provides the preview of the mesh when we click on ![]({{ '/assets/icons/pre_icons/mo_preview_mesh_button.jpg' | relative_url }}) option.
+Používateľ môže vytvoriť sieť definovaním údajov o relatívnej alebo absolútnej veľkosti ôk, ako je znázornené na obr. 39.4.16 a obr. 39.4.17. Po kliknutí na možnosť ![]({{ '/assets/icons/pre_icons/mo_preview_mesh_button.jpg' | relative_url }}) sa tiež zobrazí náhľad siete.
 
-**Relative Mesh Method:**
+**Metóda relatívnej siete:**
 
-  * **Target number of elements** : The number of elements to be generated for an object can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation.
+  * **Cieľový počet prvkov**: Počet prvkov, ktoré sa majú pre daný objekt vygenerovať, je možné určiť jednoduchým posunutím posuvníka a výberom vhodnej hodnoty pre aktuálnu simuláciu.
 
-  * **Size Ratio** : It is the size ratio between the largest element edge length to smallest element edge length. Meshed pre-shaped workpiece based on drill tip looks like as shown in Fig. 39.4.16.
+  * **Pomer veľkostí**: Ide o pomer dĺžky hrany najväčšieho prvku k dĺžke hrany najmenšieho prvku. Predtvarovaný obrobok so sieťovou štruktúrou na základe hrotu vrtáka vyzerá tak, ako je znázornené na obr. 39.4.16.
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0016.jpg' | relative_url }})
 
-Workpiece mesh generation using relative mesh size
+Vytvorenie siete obrobku s použitím relatívnej veľkosti ôk
 
   
-**Absolute Mesh Method:**
+**Metóda absolútnej siete:**
 
-  * **Define size by percentage of feed:** The percentage of feed will automatically calculate the minimum element size of the mesh.
+  * **Určenie veľkosti na základe percentuálneho podielu krmiva:** Na základe percentuálneho podielu krmiva sa automaticky vypočíta minimálna veľkosť ok siete.
 
-  * **Minimum element size:** It sets the minimum element size of the mesh to be generated which is calculated from the percentage of feed value.
+  * **Minimálna veľkosť prvku:** Určuje minimálnu veľkosť prvku generovanej siete, ktorá sa vypočíta na základe percentuálnej hodnoty zadaného údaja.
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0017.jpg' | relative_url }})
 
-Workpiece mesh generation using absolute mesh size
+Vytvorenie siete obrobku s použitím absolútnej veľkosti ôk
 
-### Workpiece BCC 
+### Obrobok BCC 
 
-In this BCC Page, the user can define the Deformation and Thermal BCC (like Velocity, Heat Exchange with Environment and Temperature). The BCC data will be automatically assigned by default after generating the mesh as shown in the Fig. 39.4.18. and Fig. 39.4.19.
+Na tejto stránke BCC môže používateľ definovať deformačné a tepelné parametre BCC (napr. rýchlosť, výmenu tepla s okolím a teplotu). Údaje BCC sa po vytvorení siete automaticky priradia podľa predvoleného nastavenia, ako je znázornené na obr. 39.4.18 a obr. 39.4.19.
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0018.jpg' | relative_url }})
 
-Velocity BCC data for cylinder geometry
+Údaje o rýchlosti BCC pre geometriu valca
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0019.jpg' | relative_url }})
 
-Heat Exchange BCC for Create from drill tip shape geometry
+Výměna tepla BCC pre vytvorenie na základe geometrie tvaru vrtáka
 
-## Control
+## Ovládanie
 
-Using “Position objects” the tool can be positioned based on the feed rate and workpiece location. Various positioning options are available to position the objects as shown in Fig. 39.4.20., for more information on these options please refer [19\. Object Positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/).
+Pomocou funkcie „Umiestnenie objektov“ je možné nástroj umiestniť na základe rýchlosti posuvu a polohy obrobku. K dispozícii sú rôzne možnosti umiestnenia objektov, ako je znázornené na obr. 39.4.20. Ďalšie informácie o týchto možnostiach nájdete v dokumente [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0020.jpg' | relative_url }})
 
-Object positioning options
+Možnosti umiestnenia objektov
 
-## Tool Wear
+## Opotrebenie nástrojov
 
-User can turn on tool wear calculation using “**Define model to calculate tool wear** ” check box. After turning on check box user can select the tool wear model and define its parameters as shown in the Fig. 39.4.21., for more information on these options please refer [20.4. Tool Wear.](/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/)
+Používateľ môže zapnúť výpočet opotrebenia nástroja pomocou zaškrtávacieho políčka „**Definovať model na výpočet opotrebenia nástroja**“. Po zaškrtnutí tohto políčka môže používateľ vybrať model opotrebenia nástroja a definovať jeho parametre, ako je znázornené na obr. 39.4.21. Ďalšie informácie o týchto možnostiach nájdete v [20.4. Tool Wear.](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0021.jpg' | relative_url }})
 
-Tool Wear page
+Stránka „Opotrebenie nástrojov“
 
-## Contact
+## Kontakt
 
-User radio button will be selected and relations also will be defined by default for 3D Cutting operation as shown in Fig. 39.4.22.. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button. User can click on ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) button to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation. User can turn on check box next to contact relation to define sticking contact.  
-For more information please refer [20\. Inter-Object Relations](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+Pre operáciu 3D rezania bude predvolene vybrané rádio tlačidlo „User“ a budú tiež predvolene definované vzťahy, ako je znázornené na obr. 39.4.22. Používateľ môže zmeniť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Používateľ môže kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) na výpočet tolerancie kontaktu. Používateľ môže kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) na vytvorenie vzťahu kontaktu. Používateľ môže zaškrtnúť políčko vedľa vzťahu kontaktu, aby definoval priliehavý kontakt.  
+Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0022.jpg' | relative_url }})
 
-Contact page
+Stránka s kontaktnými údajmi
 
-## Step Control
+## Ovládanie krokov
 
-The user can define the step controls data using the Guided mode (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})) as shown in the Fig. 39.4.23. The user can define the number of steps, step increment and step increment control. The Drill depth is available, so the simulation stops after reaching the defined depth.If user wants to use the advanced simulation controls than we can switch to the Expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) as shown in the Fig. 39.4.24. For more information and description about options in Simulation controls please refer [9.Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/). 
+Používateľ môže nastaviť parametre krokov pomocou režimu s návodom (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})), ako je znázornené na obr. 39.4.23. Používateľ môže určiť počet krokov, veľkosť kroku a spôsob riadenia veľkosti kroku. K dispozícii je parameter „Hĺbka vŕtania“, vďaka čomu sa simulácia zastaví po dosiahnutí nastavenej hĺbky.Ak chce používateľ využiť pokročilé nastavenia simulácie, môže prejsť do režimu Expert (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})), ako je znázornené na obr. 39.4.24. Ďalšie informácie a popis možností v nastaveniach simulácie nájdete v [9.Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/). 
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0023.jpg' | relative_url }})
 
-Step controls page in Guided Mode
+Stránka s ovládacími prvkami krokov v režime s návodom
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0024.jpg' | relative_url }})
 
-Step controls page in Expert Mode
+Stránka s ovládacími prvkami krokov v režime Expert
 
-## Generate DB
+## Vytvoriť databázu
 
-**Check Data** ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}): It checks the Data. If Data is correct, we can generate DB. But while checking Data if it gives any errors or warnings then it should be corrected before generating Database. Errors will not allow the database to be generated while warnings will allow the DB to be generated.  
+**Kontrola údajov** ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}): Týmto sa vykoná kontrola údajov. Ak sú údaje správne, môžeme vygenerovať databázu. Ak sa však počas kontroly údajov vyskytnú chyby alebo varovania, je potrebné ich opraviť pred vygenerovaním databázy. Chyby zabránia vygenerovaniu databázy, zatiaľ čo varovania vygenerovanie databázy neumožnia.  
   
-**Generate Database**![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) : By clicking on this button, it generates the Database for the setup (See Fig. 39.4.25.).  
+**Vytvoriť databázu**![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}): Kliknutím na toto tlačidlo sa vygeneruje databáza pre inštaláciu (pozri obr. 39.4.25.).  
   
-**Append Key file :** Any information that is not defined in the wizard but still applicable to the process can be loaded as .key file. This option is also useful in the cases where only few values needs to be changed then those values can be defined as .key file and only .key file can be changed, and simulation can be resubmitted.
+**Pridať súbor .key:** Akékoľvek informácie, ktoré nie sú definované v sprievodcovi, ale stále sa vzťahujú na daný proces, je možné načítať ako súbor .key. Táto možnosť je užitočná aj v prípadoch, keď je potrebné zmeniť len niekoľko hodnôt – tieto hodnoty je možné definovať v súbore .key, následne stačí zmeniť len tento súbor a simuláciu je možné odoslať znovu.
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0025.jpg' | relative_url }})
 
-Generate DB page
+Vytvoriť stránku databázy
 
   
-**Related Topics:**
+**Súvisiace témy:**
 
-[39 Introduction to Cutting](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/)
+[39 Introduction to Cutting](/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/)
 
-[39.1. 2D Cutting](/docs/sk/operation_templates/39_cutting/39_1_2d_cutting/)
+[39.1. 2D Cutting](/docs/en/operation_templates/39_cutting/39_1_2d_cutting/)
 
-[39.2. 3D Turning](/docs/sk/operation_templates/39_cutting/39_2_3d_turning/)
+[39.2. 3D Turning](/docs/en/operation_templates/39_cutting/39_2_3d_turning/)
 
-[39.3. 3D Milling](/docs/sk/operation_templates/39_cutting/39_3_3d_milling/)
+[39.3. 3D Milling](/docs/en/operation_templates/39_cutting/39_3_3d_milling/)

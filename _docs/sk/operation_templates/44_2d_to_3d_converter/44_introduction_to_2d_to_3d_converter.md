@@ -1,18 +1,18 @@
 ---
 lang: sk
-title: "44. Introduction to 2D to 3D Convertor"
+title: "44. Úvod do konvertora z 2D do 3D"
 ---
 
-# 44\. Introduction to 2D to 3D Converter
+# 44\. Úvod do programu na konverziu z 2D do 3D
 
-Multiple operations system can handle both 2D DB and 3D DB, one DB can contain either 2D result, 3D result, or hybrid 2D/3D result. Each step will be either 2D or 3D.The MO 2D to 3D Converter simulation operator offers streamlined data flow quick setup of 3D problem from 2D problem interactively as well as in batch mode.
+Systém viacerých operácií dokáže spracovať aj 2D, aj 3D databázy; jedna databáza môže obsahovať buď 2D výsledok, 3D výsledok, alebo hybridný 2D/3D výsledok. Každý krok bude buď 2D, alebo 3D. Simulačný operátor MO 2D to 3D Converter ponúka zjednodušený tok dát a rýchle nastavenie 3D úlohy z 2D úlohy, a to interaktívne aj v dávkovom režime.
 
-Integrated Database offers unified storage to store/retrieve 2D/3D simulation data. The Integrated DB will have information about dimension and version number for each step, and stores 2D and 3D simulation to a single DB.
+Integrovaná databáza ponúka jednotný úložný priestor na ukladanie a načítavanie 2D a 3D simulačných údajov. Integrovaná databáza bude obsahovať informácie o rozmeroch a čísle verzie pre každý krok a ukladá 2D a 3D simulácie do jednej databázy.
 
-In multiple operation user can go for converter after the 2D simulation to convert and continue with 3D simulation for more metal flow details or can add converter as first operation to convert the existing 2D problem to 3D by importing the objects from the 2D problem.
+V režime viacerých operácií môže používateľ po 2D simulácii použiť konvertor na prevod a pokračovať v 3D simulácii s cieľom získať podrobnejšie informácie o toku kovu, alebo môže pridať konvertor ako prvú operáciu a previesť existujúcu 2D úlohu na 3D importom objektov z 2D úlohy.
 
-2D to 3D converter model will convert the 2D axisymmetric/torsion model by revolving about the centerline and 2D plane strain/plane stress model by extruding in the third direction.
+Model konvertora z 2D do 3D prevedie 2D osovo symetrický/torzný model otáčaním okolo stredovej osi a 2D model s rovinným deformovaním/rovinným napätím vytlačením v treťom smere.
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[44.1. 2D to 3D Converter](/docs/sk/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/)
+[44.1. 2D to 3D Converter](/docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/)

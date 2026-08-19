@@ -1,144 +1,144 @@
 ---
 lang: sk
-title: "3D Die Stress Analysis Theory"
+title: "Teória 3D analýzy napätí v čipe"
 ---
 
-# 3D Die Stress Analysis Theory
+# Teória analýzy napätí v 3D formách
 
-1\. Die Stress Analysis Importance
+1\. Význam analýzy napätí
 
-2\. Modes of Die Failure
+2\. Druhy porúch lisovacích foriem
 
-3\. Die Stress State
+3\. Stav stresu
 
-4\. Die Stress Analysis Effective Stress
+4\. Analýza napätí – efektívne napätie
 
-5\. Die Stress Analysis Fatigue Failure
+5\. Analýza napätí a únavové zlyhanie
 
-6\. Die Stress Example - Low Complexity
+6\. Príklad s maticou Stress – nízka zložitosť
 
-7\. Die Stress Example - Medium Complexity
+7\. Príklad s Die Stress – stredná zložitosť
 
-8\. Die Stress Example - High Complexity
+8\. Príklad stresového testu – vysoká zložitosť
 
-9\. Coupled Die Stress Analysis
+9\. Analýza napätí v spojených čipoch
 
-## Die Stress Analysis Importance
+## Význam analýzy napätí
 
-  * Forging results in high stress on tools and dies.
+  * Kovanie spôsobuje vysoké namáhanie nástrojov a foriem.
 
-  * Process simulation has been used to analyze industrial die failures for decades
+  * Simulácia procesov sa už desaťročia využíva na analýzu porúch priemyselných foriem
 
-  * Millions of dollars in savings have been attributed to using die stress analysis in conjunction with good engineering and process control.
+  * Úspory v hodnote miliónov dolárov sa pripisujú využitiu analýzy napätia v lisovacích formách v spojení s kvalitným inžinierstvom a riadením procesov.
 
-  * Leading companies worldwide are engineering tool & die performance before failures occur!
+  * Popredné spoločnosti po celom svete optimalizujú výkonnosť nástrojov a foriem ešte predtým, ako dôjde k poruchám!
 
-  * Why - die cost is directly related to die life!
+  * Prečo – cena formy priamo súvisí s jej životnosťou!
 
-## Modes of Die Failure
+## Druhy porúch lisovacích foriem
 
-  * Catastrophic failure
+  * Katastrofálna porucha
 
-  * Plastic deformation
+  * Plastická deformácia
 
-  * Large scale yielding
+  * Vysoká úroda
 
-  * Local yielding / upsetting
+  * Lokálne tvárnenie / lisovanie
 
-  * Low cycle fatigue (LCF)
+  * Únava pri nízkom počte cyklov (LCF)
 
-  * Mechanical fatigue
+  * Mechanická únava
 
-  * Thermal fatigue
+  * Tepelná únava
 
-  * Wear
+  * Opotrebenie
 
-## Die Stress State
+## Stresový stav
 
-For Die stress state and its components See Fig. 1 and Fig. 2.
+Stav napätia v matrici a jeho zložky sú znázornené na obr. 1 a obr. 2.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/3d_die_stress_analysis_theory/image0001.jpg' | relative_url }})
 
-Die stress state
+Stav stresu
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/3d_die_stress_analysis_theory/image0002.jpg' | relative_url }})
 
-Die stress components
+Zložky napätia
 
-## Die Stress Analysis Effective Stress
+## Analýza napätí – efektívne napätie
 
-  * The Effective stress is a numerical quantity used in converting a 3D stress state to 1D data for analysis.
+  * Efektívne napätie je číselná veličina, ktorá sa používa pri prevode trojrozmerného napäťového stavu na jednorozmerné údaje na účely analýzy.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/3d_die_stress_analysis_theory/eq_1.jpg' | relative_url }})
 
-  * The Effective stress is a ‘flag’ that will indicate the onset of plastic deformation (yielding).
+  * Efektívne napätie je „indikátor“, ktorý signalizuje začiatok plastickej deformácie (medza tečenia).
 
-  * Yield strength of a material is determined using a tensile test.
+  * Medza tečenia materiálu sa stanovuje pomocou ťahovej skúšky.
 
-## Die Stress Analysis Fatigue Failure
+## Analýza napätí a únavové zlyhanie
 
-  * Low Cycle Fatigue (LCF) is a common mode of die failure.
+  * Únava pri nízkom počte cyklov (LCF) je bežným spôsobom poruchy čipu.
 
-  * Failures occur in four stages:
+  * Poruchy sa vyskytujú v štyroch fázach:
 
-  * Fracture initiation
+  * Začiatok zlomeniny
 
-  * Slow crack growth
+  * Pomaly postupujúca trhlina
 
-  * Accelerated crack growth rate
+  * Zrýchlená rýchlosť šírenia trhlín
 
-  * Rapid fracture
+  * Rýchla zlomenina
 
-  * Maximum Principal Stress is important, because LCF failures can not occur without cyclic tensile stress.
+  * Maximálne hlavné napätie je dôležité, pretože k poruchám spôsobeným únavou (LCF) nemôže dôjsť bez cyklického ťahového napätia.
 
-## Die Stress Example Low Complexity
+## Príklad „Die Stress“ – nízka zložitosť
 
-To better determine where the die would plastically deform, use the yield stress as the minimum stress in your plot – anything in color has yielded as shown in Fig. 3.
+Aby ste mohli lepšie určiť, kde by sa matrica plasticky deformovala, použite medzu tečnosti ako minimálne napätie vo vašom grafe – všetko, čo je vyfarbené, už dosiahlo medzu tečnosti, ako je znázornené na obr. 3.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/3d_die_stress_analysis_theory/image0003.jpg' | relative_url }})
 
-Low complexity Models
+Modely s nízkou zložitosťou
 
-Maximum principal stress shows where the die is in tension or compression. Tensile areas are at risk of fatigue failure. (See Fig. 4)
+Maximálne hlavné napätie ukazuje, kde je výlisok vystavený ťahu alebo tlaku. Oblasti vystavené ťahu sú ohrozené únavovým zlyhaním. (Pozri obr. 4)
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/3d_die_stress_analysis_theory/image0004.jpg' | relative_url }})
 
-Maximum Principle stress
+Maximálne hlavné napätie
 
-## Die Stress Example Medium Complexity
+## Príklad hry „Die Stress“ – stredná zložitosť
 
-When using shrink fits, valuable information can be gained by running two die stress simulations – one with only the shrink fit and one with both the shrink fit and forming load. (See Fig. 5.)
+Pri použití tlakových spojov je možné získať cenné informácie vykonaním dvoch simulácií napätia v lisovacej matrici – jednej len s tlakovým spojom a druhej s tlakovým spojom aj s formovacím zaťažením. (Pozri obr. 5.)
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/3d_die_stress_analysis_theory/image0005.jpg' | relative_url }})
 
-Shrink fit and Forming load
+Tepelné sťahovanie a tvarovacie zaťaženie
 
-## Die Stress Example - High Complexity
+## Príklad Die Stress – vysoká zložitosť
 
-Mesh the elastic dies so that the mesh is the finest in the center and gets coarser as you go outward. Twenty-six inter-object relations must be defined to generate contact among all the objects. This is what makes this a much more complex simulation. (See Fig. 6 and Fig. 7)
+Elastické výseky je potrebné prepojiť tak, aby bola sieť najjemnejšia v strede a smerom von sa zosilňovala. Na vytvorenie kontaktu medzi všetkými objektmi je potrebné definovať dvadsaťšesť vzťahov medzi objektmi. Práve to robí túto simuláciu oveľa zložitejšou. (Pozri obr. 6 a obr. 7)
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/3d_die_stress_analysis_theory/image0006.jpg' | relative_url }})
 
-High complexity model
+Model s vysokou zložitosťou
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/3d_die_stress_analysis_theory/image0007.jpg' | relative_url }})
 
-High complexity model with shrink fit and Forming
+Vysoko komplexný model s montážou za tepla a tvárnením
 
-## Coupled Die Stress Analysis
+## Analýza napätí v prepojených čipoch
 
-  * Decoupled (one step) die stress has been very effective in predicting tool failures .
+  * Analýza napätia v matrici bez zohľadnenia vplyvu okolných faktorov (jednokroková) sa ukázala ako veľmi účinná pri predpovedaní porúch nástrojov.
 
-  * In some forgings, the highest stress occurs in the middle of the stroke. 
+  * Pri niektorých výkovkoch dochádza k najvyššiemu namáhaniu v strede zdvihu. 
 
-  * The punch failure due to a tensile stress is shown using a tightly coupled die stress analysis.
+  * Zlyhanie výseku v dôsledku ťahového namáhania je znázornené pomocou analýzy napätia v matrici s úzkou väzbou.
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/3d_die_stress_analysis_theory/image0008.jpg' | relative_url }})
 
-Couple die stress analysis
+Analýza únavovej pevnosti párov
 
-**Related Topics:**
+**Súvisiace témy:**
 
-[Coupled Die Stress analysis](/docs/sk/operation_templates/30_die_stress/coupled_die_stress_analysis/)
+[Coupled Die Stress analysis](/docs/en/operation_templates/30_die_stress/coupled_die_stress_analysis/)
 
-[Die Stress Lab](/docs/sk/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
+[Die Stress Lab](/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
