@@ -39,4 +39,4 @@ Applicable object types: [Rigid](../../pre_processor/11_general_object_data_defi
   
 RELATED TOPICS  
 ---  
-[Boundary constraints](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/), [Inter-object contact](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) Keywords: [DATOM](/docs/en/keyword_documentation/d/datom/), [BCCCRB (2D)](/docs/en/keyword_documentation/b/bcccrb/), [BCCCRB (3D)](/docs/en/keyword_documentation/b/bcccrb_3d/)
+[Boundary constraints]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}), [Inter-object contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}) Keywords: [DATOM]({{ '/docs/en/keyword_documentation/d/datom/' | relative_url }}), [BCCCRB (2D)]({{ '/docs/en/keyword_documentation/b/bcccrb/' | relative_url }}), [BCCCRB (3D)]({{ '/docs/en/keyword_documentation/b/bcccrb_3d/' | relative_url }})

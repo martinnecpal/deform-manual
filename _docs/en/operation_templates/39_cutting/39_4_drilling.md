@@ -233,7 +233,7 @@ Heat Exchange BCC for Create from drill tip shape geometry
 
 ## Control
 
-Using “Position objects” the tool can be positioned based on the feed rate and workpiece location. Various positioning options are available to position the objects as shown in Fig. 39.4.20., for more information on these options please refer [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+Using “Position objects” the tool can be positioned based on the feed rate and workpiece location. Various positioning options are available to position the objects as shown in Fig. 39.4.20., for more information on these options please refer [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0020.jpg' | relative_url }})
 
@@ -241,7 +241,7 @@ Object positioning options
 
 ## Tool Wear
 
-User can turn on tool wear calculation using “**Define model to calculate tool wear** ” check box. After turning on check box user can select the tool wear model and define its parameters as shown in the Fig. 39.4.21., for more information on these options please refer [20.4. Tool Wear.](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/)
+User can turn on tool wear calculation using “**Define model to calculate tool wear** ” check box. After turning on check box user can select the tool wear model and define its parameters as shown in the Fig. 39.4.21., for more information on these options please refer [20.4. Tool Wear.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0021.jpg' | relative_url }})
 
@@ -250,7 +250,7 @@ Tool Wear page
 ## Contact
 
 User radio button will be selected and relations also will be defined by default for 3D Cutting operation as shown in Fig. 39.4.22.. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button. User can click on ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) button to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation. User can turn on check box next to contact relation to define sticking contact.  
-For more information please refer [20\. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+For more information please refer [20\. Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0022.jpg' | relative_url }})
 
@@ -258,7 +258,7 @@ Contact page
 
 ## Step Control
 
-The user can define the step controls data using the Guided mode (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})) as shown in the Fig. 39.4.23. The user can define the number of steps, step increment and step increment control. The Drill depth is available, so the simulation stops after reaching the defined depth.If user wants to use the advanced simulation controls than we can switch to the Expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) as shown in the Fig. 39.4.24. For more information and description about options in Simulation controls please refer [9.Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/). 
+The user can define the step controls data using the Guided mode (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})) as shown in the Fig. 39.4.23. The user can define the number of steps, step increment and step increment control. The Drill depth is available, so the simulation stops after reaching the defined depth.If user wants to use the advanced simulation controls than we can switch to the Expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) as shown in the Fig. 39.4.24. For more information and description about options in Simulation controls please refer [9.Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0023.jpg' | relative_url }})
 
@@ -283,10 +283,10 @@ Generate DB page
   
 **Related Topics:**
 
-[39 Introduction to Cutting](/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/)
+[39 Introduction to Cutting]({{ '/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/' | relative_url }})
 
-[39.1. 2D Cutting](/docs/en/operation_templates/39_cutting/39_1_2d_cutting/)
+[39.1. 2D Cutting]({{ '/docs/en/operation_templates/39_cutting/39_1_2d_cutting/' | relative_url }})
 
-[39.2. 3D Turning](/docs/en/operation_templates/39_cutting/39_2_3d_turning/)
+[39.2. 3D Turning]({{ '/docs/en/operation_templates/39_cutting/39_2_3d_turning/' | relative_url }})
 
-[39.3. 3D Milling](/docs/en/operation_templates/39_cutting/39_3_3d_milling/)
+[39.3. 3D Milling]({{ '/docs/en/operation_templates/39_cutting/39_3_3d_milling/' | relative_url }})

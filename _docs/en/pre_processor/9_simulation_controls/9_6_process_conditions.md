@@ -73,11 +73,11 @@ Heat transfer processing conditions; (a) For 2D (b) For 3D
 
   * **Environment temperature (ENVTMP)**
 
-Environment temperature ([ENVTMP](/docs/en/keyword_documentation/e/envtmp/)) is used in radiation and convection heat transfer calculations and represents the temperature of the area in which the modelled process is taking place. The environment temperature may be specified as a constant or as a function of time. Heat transfer to this temperature is considered to occur from any nodes not in contact with another object. (Unless heat exchange windows are used).
+Environment temperature ([ENVTMP]({{ '/docs/en/keyword_documentation/e/envtmp/' | relative_url }})) is used in radiation and convection heat transfer calculations and represents the temperature of the area in which the modelled process is taking place. The environment temperature may be specified as a constant or as a function of time. Heat transfer to this temperature is considered to occur from any nodes not in contact with another object. (Unless heat exchange windows are used).
 
   * **Convection coefficient (CNVCOF)**
 
-The convection coefficient ([CNVCOF](/docs/en/keyword_documentation/c/cnvcof/)) is required for convection heat transfer calculations. The convection coefficient may be specified as a constant or as a function of temperature.
+The convection coefficient ([CNVCOF]({{ '/docs/en/keyword_documentation/c/cnvcof/' | relative_url }})) is required for convection heat transfer calculations. The convection coefficient may be specified as a constant or as a function of temperature.
 
   * **View Factor Calculation**
 
@@ -101,11 +101,11 @@ Diffusion processing conditions
 
   * **Environment atom content (ENVATM)**
 
-The percentage atom content ([ENVATM](/docs/en/keyword_documentation/e/envatm/)) of the dominant atom (usually carbon) in the environment for diffusion calculations.
+The percentage atom content ([ENVATM]({{ '/docs/en/keyword_documentation/e/envatm/' | relative_url }})) of the dominant atom (usually carbon) in the environment for diffusion calculations.
 
   * **Reaction rate coefficient (ACVCOF)**
 
-The surface reaction rate ([ACVCOF](/docs/en/keyword_documentation/a/acvcof/)) with the atmospheric atom content for diffusion calculations.  
+The surface reaction rate ([ACVCOF]({{ '/docs/en/keyword_documentation/a/acvcof/' | relative_url }})) with the atmospheric atom content for diffusion calculations.  
   
 From DEFORM-v12 onwards user can define multiple types of atoms for Diffusion by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button as show in Fig. 9.6.4.
 
@@ -116,7 +116,7 @@ Note: Current limitation is maximum 2 different types of atoms to be used.
 
 New Diffusion Process condition 
 
-  * **Atom ([ATOMID](/docs/en/keyword_documentation/a/atomid/))**
+  * **Atom ([ATOMID]({{ '/docs/en/keyword_documentation/a/atomid/' | relative_url }}))**
 
 In the Atom field user can modify the name of each type of atom and can activate/deactivate the diffusion by turning on/turning off the check box.  
 When we add 2 different types of Atom in Diffusion table, we can observe that the new field f(temperature, atom1, atom2) is added under Reaction rate coefficient as shown in Fig. 9.6.5.
@@ -152,7 +152,7 @@ Induction processing constants ; (a) For 2D (b) For 3D.
 
   * **Magnetic permeability (ENVMPR)**
 
-Permeability ([ENVMPR](/docs/en/keyword_documentation/e/envmpr/)) is the property of a material that is equal to the magnetic flux density B established within the material by a magnetizing field divided by the magnetic field strength H of the magnetizing field.
+Permeability ([ENVMPR]({{ '/docs/en/keyword_documentation/e/envmpr/' | relative_url }})) is the property of a material that is equal to the magnetic flux density B established within the material by a magnetizing field divided by the magnetic field strength H of the magnetizing field.
 
 The permeability of a vacuum (ENVMPR) is defined in the Simulation Controls > Process Conditions menu. The typical value is provided below for reference.
 
@@ -161,7 +161,7 @@ The permeability of a vacuum (ENVMPR) is defined in the Simulation Controls > Pr
 
   * **Magnetic permittivity (ENVMPT)**
 
-Permittivity ([ENVMPT](/docs/en/keyword_documentation/e/envmpt/)) is a quantity that describes how a magnetic field affects and is affected by a dielectric medium. It is determined by the ability of a material to polarize in response to the field and thereby reduce the total electric field inside the material. Thus, permittivity relates to a material's ability to transmit (or "permit") a magnetic field.
+Permittivity ([ENVMPT]({{ '/docs/en/keyword_documentation/e/envmpt/' | relative_url }})) is a quantity that describes how a magnetic field affects and is affected by a dielectric medium. It is determined by the ability of a material to polarize in response to the field and thereby reduce the total electric field inside the material. Thus, permittivity relates to a material's ability to transmit (or "permit") a magnetic field.
 
 The permittivity of a vacuum (ENVMPT) is defined in the Simulation Controls > Process Conditions menu. The typical value is provided below for reference.
 
@@ -170,7 +170,7 @@ The permittivity of a vacuum (ENVMPT) is defined in the Simulation Controls > Pr
 
   * **Source Energy Ratio (EHRATE)**
 
-"Source Energy Ratio" ([EHRATE](/docs/en/keyword_documentation/e/ehrate/)) is a conversion ratio from electric energy to heat.  
+"Source Energy Ratio" ([EHRATE]({{ '/docs/en/keyword_documentation/e/ehrate/' | relative_url }})) is a conversion ratio from electric energy to heat.  
 If "0" or "1000" is specified, it means 100% electric energy is converted to heat. If "500" is specified, it means 50% conversion.
 
   * **Activate overlapped air mesh check box [2D]**
@@ -195,20 +195,20 @@ Advanced process constants ; (a) For 2D (b) For 3D.
 
   * **Interface penalty constant (PENINF)**
 
-A large positive number used to penalize the penetration velocity ([PENINF](/docs/en/keyword_documentation/p/peninf/)) of a node through a master surface. The default value is adequate for most simulations. It should be at least two to three orders higher than the volume penalty constant ([PENVOL](/docs/en/keyword_documentation/p/penvol/)).  
+A large positive number used to penalize the penetration velocity ([PENINF]({{ '/docs/en/keyword_documentation/p/peninf/' | relative_url }})) of a node through a master surface. The default value is adequate for most simulations. It should be at least two to three orders higher than the volume penalty constant ([PENVOL]({{ '/docs/en/keyword_documentation/p/penvol/' | relative_url }})).  
 For objects of very small size (e.g. fasteners), it is recommended to reduce this number an order of magnitude or two to improve convergence. This will only aid convergence if the sparse solver is used. This constant can be edited only in Advanced user mode.
 
   * **Mechanical to heat conversion (UNTE2H)**
 
-A constant coefficient to relate units of heat energy (E.g. BTU) to mechanical energy (E.g. klb-in). Appropriate constant values are automatically set for English and SI Units. This constant can be edited only in Advanced user mode. ([UNTE2H](/docs/en/keyword_documentation/u/unte2h/))
+A constant coefficient to relate units of heat energy (E.g. BTU) to mechanical energy (E.g. klb-in). Appropriate constant values are automatically set for English and SI Units. This constant can be edited only in Advanced user mode. ([UNTE2H]({{ '/docs/en/keyword_documentation/u/unte2h/' | relative_url }}))
 
   * **Time integration factor (TINTGF)**
 
-The time integration factor ([TINTGF](/docs/en/keyword_documentation/t/tintgf/)) is the forward integration coefficient for temperature integration over time. Its value should be between 0.0 and 1.0. The value of 0.75 is adequate for most simulations. This constant can be edited only in Advanced user mode.
+The time integration factor ([TINTGF]({{ '/docs/en/keyword_documentation/t/tintgf/' | relative_url }})) is the forward integration coefficient for temperature integration over time. Its value should be between 0.0 and 1.0. The value of 0.75 is adequate for most simulations. This constant can be edited only in Advanced user mode.
 
   * **Boltzmann constant (BLZMAN)**
 
-The Boltzmann constant ([BLZMN](/docs/en/keyword_documentation/b/blzman/)) is required for radiation heat transfer calculations. Default values for English and SI are set automatically. In radiation heat calculations the nodal temperature will be automatically converted to absolute temperature (Rankin, Kelvin) based on the selected English or SI units. This constant can be edited only in Advanced user mode.
+The Boltzmann constant ([BLZMN]({{ '/docs/en/keyword_documentation/b/blzman/' | relative_url }})) is required for radiation heat transfer calculations. Default values for English and SI are set automatically. In radiation heat calculations the nodal temperature will be automatically converted to absolute temperature (Rankin, Kelvin) based on the selected English or SI units. This constant can be edited only in Advanced user mode.
 
   * **Friction heat reduction factor (UNTE2H)**
 
@@ -228,11 +228,11 @@ Heat source process conditions
 
 Related Topics:
 
-[9.1. Simulation type Settings](/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
-[9.2. Defining Step](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/)   
-[9.3. Stopping Controls](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/)   
-[9.4. Remesh Criteria](/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/)   
-[9.5. Solver Settings](/docs/en/pre_processor/9_simulation_controls/9_5_solver_settings/)   
-[9.7. Advanced Options](/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/)   
-[9.8. Control Files](/docs/en/pre_processor/9_simulation_controls/9_8_control_files/)   
-[9.9. Thermomechanical variables](/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)
+[9.1. Simulation type Settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }})   
+[9.2. Defining Step]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})   
+[9.3. Stopping Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})   
+[9.4. Remesh Criteria]({{ '/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }})   
+[9.5. Solver Settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }})   
+[9.7. Advanced Options]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }})   
+[9.8. Control Files]({{ '/docs/en/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }})   
+[9.9. Thermomechanical variables]({{ '/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }})

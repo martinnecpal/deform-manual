@@ -40,4 +40,4 @@ To take advantage of these extra state variables, a subroutine in the $DEFORM_DI
   
 RELATED TOPICS  
 ---  
-Keywords: [USRELM](/docs/sk/keyword_documentation/u/usrelm/), [UNNAME](/docs/sk/keyword_documentation/u/unname/), [UENAME](/docs/sk/keyword_documentation/u/uename/)
+Keywords: [USRELM]({{ '/docs/sk/keyword_documentation/u/usrelm/' | relative_url }}), [UNNAME]({{ '/docs/sk/keyword_documentation/u/unname/' | relative_url }}), [UENAME]({{ '/docs/sk/keyword_documentation/u/uename/' | relative_url }})

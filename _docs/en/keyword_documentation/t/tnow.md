@@ -32,4 +32,4 @@ For initial runs GlobalTime = 0. For continuing and remeshing runs, GlobalTime i
   
 RELATED TOPICS  
 ---  
-Keywords: [TMAX](/docs/en/keyword_documentation/t/tmax/), [TLOC](/docs/en/keyword_documentation/t/tloc/), [CURSIM](/docs/en/keyword_documentation/c/cursim/)
+Keywords: [TMAX]({{ '/docs/en/keyword_documentation/t/tmax/' | relative_url }}), [TLOC]({{ '/docs/en/keyword_documentation/t/tloc/' | relative_url }}), [CURSIM]({{ '/docs/en/keyword_documentation/c/cursim/' | relative_url }})

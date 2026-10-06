@@ -31,7 +31,7 @@ In the elasto-plastic model, the flow stress at zero strain represents the yield
 
 In order to provide guidance to users who are not familiar with modeling elasto-plastic materials, we offer the following suggestions.
 
-1\. When using the function form ([Power law](/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_2_power_law/)):
+1\. When using the function form ([Power law]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_2_power_law/' | relative_url }})):
 
 ![]({{ '/assets/equations/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/eq_10_1_1_2.jpg' | relative_url }}) |   
 ---|---  
@@ -48,7 +48,7 @@ Extrapolation of flow stress data to determine the initial yield stress
 
   * Set the EP initial guess under Objects/Properties/[Deformation](../pre_processor/16_object_properties/16_1_deformation_properties.htm#16_1_1_Creep_calculation) to Previous step solution.
 
-  * If there is a change in operation, e.g. moving the part from one station to another, initialize the velocity for the part under Objects/[Nodes Data](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/)/[Deformation](../pre_processor/17_object_data_initialization/17_2_element_data_window.htm#17_2_3_Deformation_Tab). This will improve the initial guess of the velocity solution.
+  * If there is a change in operation, e.g. moving the part from one station to another, initialize the velocity for the part under Objects/[Nodes Data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }})/[Deformation](../pre_processor/17_object_data_initialization/17_2_element_data_window.htm#17_2_3_Deformation_Tab). This will improve the initial guess of the velocity solution.
 
   * If moving the part from one set-up to another, allow the part to relax its stresses by placing a few springback steps between operations.
 
@@ -122,12 +122,12 @@ Linear interpolation at the small strain rate(= 0 ~ 1)
 
 **Related Topics:**
 
-[Material Properties](/docs/sk/pre_processor/10_material_data/10_material_data/)
+[Material Properties]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[Flow Stress](/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/)
+[Flow Stress]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/' | relative_url }})
 
-[Elastic data](/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/)
+[Elastic data]({{ '/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }})
 
-[Object Properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+[Object Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+[Simulation Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})

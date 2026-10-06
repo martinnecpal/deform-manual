@@ -32,4 +32,4 @@ REFPOS is to be used in conjunction with MDSOBJ which sets the distance between 
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Stopping Controls](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/) Keywords: [MDSOBJ(2D)](/docs/en/keyword_documentation/m/mdsobj/)
+Simulation Controls: [Stopping Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}) Keywords: [MDSOBJ(2D)]({{ '/docs/en/keyword_documentation/m/mdsobj/' | relative_url }})

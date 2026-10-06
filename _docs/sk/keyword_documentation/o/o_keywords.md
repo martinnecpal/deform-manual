@@ -5,28 +5,28 @@ title: "O Keywords"
 
 # O Keywords
 
-[OBJNAM (2D3D)](/docs/sk/keyword_documentation/o/objnam/)
+[OBJNAM (2D3D)]({{ '/docs/sk/keyword_documentation/o/objnam/' | relative_url }})
 
-[OBJPOS (2D)](/docs/sk/keyword_documentation/o/objpos/)
+[OBJPOS (2D)]({{ '/docs/sk/keyword_documentation/o/objpos/' | relative_url }})
 
-[OBJPOS (3D)](/docs/sk/keyword_documentation/o/objpos_3d/)
+[OBJPOS (3D)]({{ '/docs/sk/keyword_documentation/o/objpos_3d/' | relative_url }})
 
-[OBJSTP (2D)](/docs/sk/keyword_documentation/o/objstp/)
+[OBJSTP (2D)]({{ '/docs/sk/keyword_documentation/o/objstp/' | relative_url }})
 
-[OBJSTP (3D)](/docs/sk/keyword_documentation/o/objstp_3d/)
+[OBJSTP (3D)]({{ '/docs/sk/keyword_documentation/o/objstp_3d/' | relative_url }})
 
-[OBJTYP (2D)](/docs/sk/keyword_documentation/o/objtyp/)
+[OBJTYP (2D)]({{ '/docs/sk/keyword_documentation/o/objtyp/' | relative_url }})
 
-[OBJTYP (3D)](/docs/sk/keyword_documentation/o/objtyp_3d/)
+[OBJTYP (3D)]({{ '/docs/sk/keyword_documentation/o/objtyp_3d/' | relative_url }})
 
-[OBJUPD (3D)](/docs/sk/keyword_documentation/o/objupd/)
+[OBJUPD (3D)]({{ '/docs/sk/keyword_documentation/o/objupd/' | relative_url }})
 
-[ODMAX (3D)](/docs/sk/keyword_documentation/o/odmax/)
+[ODMAX (3D)]({{ '/docs/sk/keyword_documentation/o/odmax/' | relative_url }})
 
-[OPRNAM (2D3D)](/docs/sk/keyword_documentation/o/oprnam/)
+[OPRNAM (2D3D)]({{ '/docs/sk/keyword_documentation/o/oprnam/' | relative_url }})
 
-[OPSTOP (2D3D)](/docs/sk/keyword_documentation/o/opstop/)
+[OPSTOP (2D3D)]({{ '/docs/sk/keyword_documentation/o/opstop/' | relative_url }})
 
-[OSCTRL (2D)](/docs/sk/keyword_documentation/o/osctrl/)
+[OSCTRL (2D)]({{ '/docs/sk/keyword_documentation/o/osctrl/' | relative_url }})
 
-[OTPRNG (2D3D)](/docs/sk/keyword_documentation/o/otprng/)
+[OTPRNG (2D3D)]({{ '/docs/sk/keyword_documentation/o/otprng/' | relative_url }})

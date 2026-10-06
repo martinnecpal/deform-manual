@@ -187,7 +187,7 @@ Priradenie materiálu k obrobku
 
 ### Definovanie BCC obrobku
 
-Na stránke „Okrajové podmienky“ môže používateľ objektu priradiť rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako hranica objektu interaguje s inými objektmi a s prostredím. Bežne používanými okrajovými podmienkami sú výmena tepla s prostredím pri simuláciách zahŕňajúcich prenos tepla a kontakt medzi objektmi v modeli. V závislosti od výberu „Procesu“ a „Nastavenia simulácie“ systém generuje predvolené BCC pre neizotermický proces a pre objekty, ktoré sú v kontakte. Obr. 48.1.12. znázorňuje rôzne BCC, ktoré je možné priradiť k objektu. Ďalšie informácie nájdete v [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+Na stránke „Okrajové podmienky“ môže používateľ objektu priradiť rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako hranica objektu interaguje s inými objektmi a s prostredím. Bežne používanými okrajovými podmienkami sú výmena tepla s prostredím pri simuláciách zahŕňajúcich prenos tepla a kontakt medzi objektmi v modeli. V závislosti od výberu „Procesu“ a „Nastavenia simulácie“ systém generuje predvolené BCC pre neizotermický proces a pre objekty, ktoré sú v kontakte. Obr. 48.1.12. znázorňuje rôzne BCC, ktoré je možné priradiť k objektu. Ďalšie informácie nájdete v [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0012.jpg' | relative_url }})
 
@@ -229,7 +229,7 @@ Používateľ môže pri načítaní zo knižnice priradiť materiál zo zoznamu
 
 ### Vytvorenie BCC s mandrelom
 
-V závislosti od výberu položiek „Nastavenie simulácie“ a „Riešiteľ“ systém automaticky vygeneruje BCC. Medzi bežne používané typy BCC patria „Výmena tepla s okolím“ a „Kontakt“; ďalšie informácie nájdete v [14\. BCC Controls](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+V závislosti od výberu položiek „Nastavenie simulácie“ a „Riešiteľ“ systém automaticky vygeneruje BCC. Medzi bežne používané typy BCC patria „Výmena tepla s okolím“ a „Kontakt“; ďalšie informácie nájdete v [14\. BCC Controls]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ### Nastavenie referenčného bodu pre trn
 
@@ -262,9 +262,9 @@ Stránka o orientácii rolí – uhol orientácie
 
 ## Tabuľka priechodov
 
-Proces odstreďovania môže zahŕňať jeden alebo viacero prechodov; používateľ môže definovať údaje o pohybe pri viacerých prechodoch a viacerých otáčkach pomocou „Tabuľky prechodov“, ako je znázornené na obr. 48.1.18. Po kliknutí na tlačidlo sa zobrazia ovládacie prvky pre pohyb otáčania, ako je znázornené na obr. 48.1.19. Používateľ môže definovať posuvný pohyb pomocou typov „[Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/)“ a „[Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/)“. Pre rotačný pohyb sú k dispozícii typy uhlová rýchlosť a krútiaci moment. 
+Proces odstreďovania môže zahŕňať jeden alebo viacero prechodov; používateľ môže definovať údaje o pohybe pri viacerých prechodoch a viacerých otáčkach pomocou „Tabuľky prechodov“, ako je znázornené na obr. 48.1.18. Po kliknutí na tlačidlo sa zobrazia ovládacie prvky pre pohyb otáčania, ako je znázornené na obr. 48.1.19. Používateľ môže definovať posuvný pohyb pomocou typov „[Speed]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }})“ a „[Path]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }})“. Pre rotačný pohyb sú k dispozícii typy uhlová rýchlosť a krútiaci moment. 
 
-Pohyb typu „Path“ sa bežne používa v procese Spinning. Ďalšie informácie o tom, ako definovať pohyb typu „[Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/)“, nájdete v časti [15\. Movement controls](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/). Po definovaní údajov o pohybe po dráhe môže používateľ pomocou ![]({{ '/assets/icons/pre_icons/mo_show_path_movement_info_in_2d_button.jpg' | relative_url }}) zobraziť dráhu, ktorú bude referenčný bod valčeka sledovať v 2D, ako je znázornené na obr. 48.1.20.
+Pohyb typu „Path“ sa bežne používa v procese Spinning. Ďalšie informácie o tom, ako definovať pohyb typu „[Path]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }})“, nájdete v časti [15\. Movement controls]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}). Po definovaní údajov o pohybe po dráhe môže používateľ pomocou ![]({{ '/assets/icons/pre_icons/mo_show_path_movement_info_in_2d_button.jpg' | relative_url }}) zobraziť dráhu, ktorú bude referenčný bod valčeka sledovať v 2D, ako je znázornené na obr. 48.1.20.
 
 Používateľ môže v tabuľke hesiel definovať aj ďalšie údaje, ako je vysvetlené nižšie,
 
@@ -320,7 +320,7 @@ Polohovanie točiaceho sa valca v mieste kontaktu
 
 ### Pokročilé umiestňovanie objektov
 
-Ak chce používateľ zmeniť polohu niektorého z objektov, môže na ovládacej stránke použiť tlačidlo „Pokročilé nastavenie polohy objektu“. K dispozícii sú rôzne možnosti umiestnenia objektov, ako je znázornené na obr. 48.1.25. Ďalšie informácie o týchto možnostiach nájdete v [19\. positioning objects.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+Ak chce používateľ zmeniť polohu niektorého z objektov, môže na ovládacej stránke použiť tlačidlo „Pokročilé nastavenie polohy objektu“. K dispozícii sú rôzne možnosti umiestnenia objektov, ako je znázornené na obr. 48.1.25. Ďalšie informácie o týchto možnostiach nájdete v [19\. positioning objects.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0025.jpg' | relative_url }})
 
@@ -331,7 +331,7 @@ Pokročilé možnosti umiestňovania objektov
 Používateľ môže definovať kontakt medzi obrobkom a ostatnými valcovými objektmi stanovením vzťahov medzi objektmi. Pri operácii odstreďovania použijeme podmienky prilnutia pre obrobok s trnom a koníkom, ako je znázornené na obr. 48.1.26. Používateľ musí pre neizotermické procesy valcovania definovať koeficient trenia a koeficient prenosu tepla cez rozhranie a pre izotermický proces valcovania hodnotu trenia.  
 **Systém:** Po výbere tohto začiarkavacieho políčka systém priradí predvolené vzťahy medzi objektmi. V prípade potreby môže používateľ pridať mazivá tak, že z roletového menu vyberie možnosť „Pridať nové“ a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}), alebo môže na účely simulácie načítať požadované mazivá z knižnice.
 
-**Používateľ:** Pri operácii „Spinning“ je štandardne zaškrtnuté políčko „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), ako je znázornené na obr. 48.1.26. Používateľ môže zmeniť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môže používateľ priradiť rovnaké hodnoty všetkým vzťahom. Kliknutím na tlačidlo môže používateľ vypočítať toleranciu kontaktu. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) môže používateľ vygenerovať vzťah kontaktu. Zaškrtnutím políčka vedľa vzťahu kontaktu môže používateľ definovať zotrvačný kontakt. Ďalšie informácie nájdete v časti [20.Inter-Object Relations.](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+**Používateľ:** Pri operácii „Spinning“ je štandardne zaškrtnuté políčko „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), ako je znázornené na obr. 48.1.26. Používateľ môže zmeniť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môže používateľ priradiť rovnaké hodnoty všetkým vzťahom. Kliknutím na tlačidlo môže používateľ vypočítať toleranciu kontaktu. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) môže používateľ vygenerovať vzťah kontaktu. Zaškrtnutím políčka vedľa vzťahu kontaktu môže používateľ definovať zotrvačný kontakt. Ďalšie informácie nájdete v časti [20.Inter-Object Relations.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 Poznámka: Používateľ môže v nastaveniach simulácie typu ALE definovať okná trenia pre valce a trn, ako je znázornené na obr. 48.1.27, čím aktivuje vyhľadávanie „Lite Contact“, ktoré skráti čas vyhľadávania kontaktov.
 

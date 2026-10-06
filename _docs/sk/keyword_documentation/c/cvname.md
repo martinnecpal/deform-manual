@@ -32,4 +32,4 @@ This keyword can be used to import custom state variable from 3rd party software
   
 RELATED TOPICS  
 ---  
-Keyword: [CUSVAR](/docs/sk/keyword_documentation/c/cusvar/), [USRNOD](/docs/sk/keyword_documentation/u/usrnod/), [USRELM](/docs/sk/keyword_documentation/u/usrelm/), [UNNAME](/docs/sk/keyword_documentation/u/unname/)
+Keyword: [CUSVAR]({{ '/docs/sk/keyword_documentation/c/cusvar/' | relative_url }}), [USRNOD]({{ '/docs/sk/keyword_documentation/u/usrnod/' | relative_url }}), [USRELM]({{ '/docs/sk/keyword_documentation/u/usrelm/' | relative_url }}), [UNNAME]({{ '/docs/sk/keyword_documentation/u/unname/' | relative_url }})

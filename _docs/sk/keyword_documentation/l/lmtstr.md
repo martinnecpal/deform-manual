@@ -32,4 +32,4 @@ The recommended value for LimitSrate is .1% to 1% of the average strain rate (AV
   
 RELATED TOPICS  
 ---  
-[Deformation iteration](/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/) Keywords: [AVGSTR](/docs/sk/keyword_documentation/a/avgstr/)
+[Deformation iteration]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }}) Keywords: [AVGSTR]({{ '/docs/sk/keyword_documentation/a/avgstr/' | relative_url }})

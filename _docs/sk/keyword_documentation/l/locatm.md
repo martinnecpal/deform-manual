@@ -36,4 +36,4 @@ The keyword defines the heat exchange information such as environmental atom con
   
 RELATED TOPICS  
 ---  
-[Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/): Advanced Diffusion Keywords: [ENVATM](/docs/sk/keyword_documentation/e/envatm/), [ACVCOF](/docs/sk/keyword_documentation/a/acvcof/)
+[Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}): Advanced Diffusion Keywords: [ENVATM]({{ '/docs/sk/keyword_documentation/e/envatm/' | relative_url }}), [ACVCOF]({{ '/docs/sk/keyword_documentation/a/acvcof/' | relative_url }})

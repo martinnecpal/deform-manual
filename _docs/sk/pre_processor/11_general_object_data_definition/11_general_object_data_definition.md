@@ -65,7 +65,7 @@ Poznámka: Ak chcete nahradiť definíciu geometrie objektu bez odstránenia ovl
 
 ## Názov objektu (OBJNAM)
 
-Obrobok a každý kus nástroja musia byť identifikované ako jedinečný objekt a musí im byť pridelené číslo a názov objektu. (Pozri obr. 11.3.) Názov objektu ([OBJNAM](/docs/sk/keyword_documentation/o/objnam/)) je reťazec maximálne 64 znakov. Dôrazne sa odporúča, aby bol nastavený na niečo zmysluplné (napr. razník, matrica, obrobok).
+Obrobok a každý kus nástroja musia byť identifikované ako jedinečný objekt a musí im byť pridelené číslo a názov objektu. (Pozri obr. 11.3.) Názov objektu ([OBJNAM]({{ '/docs/sk/keyword_documentation/o/objnam/' | relative_url }})) je reťazec maximálne 64 znakov. Dôrazne sa odporúča, aby bol nastavený na niečo zmysluplné (napr. razník, matrica, obrobok).
 
 ![]({{ '/assets/images/pre-processor/11_object_general_definition/11_image003.jpg' | relative_url }})
 
@@ -78,18 +78,18 @@ Počiatočné podmienky je možné zadať pre akúkoľvek stavovú premennú sú
 Pri problémoch tepelného spracovania s premenlivým obsahom uhlíka v obrobku sa môže špecifikovať aj dominantný obsah atómov. V prípade sieťovaných objektov sa počiatočná teplota objektu a počiatočný obsah dominantného atómu zadávajú priradením hodnôt všetkým uzlom výberom ikony Uzly objektu ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) (![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}))![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Difúzia na karte Objekt.  
 Pri generovaní siete sa inicializujú hodnoty stavových premenných uzlov a prvkov na základe podmienok definovaných pre objekt.  
 Jednotnú teplotu objektu je možné zadať v príslušnom okne objektu. Uzlové hodnoty možno zadať aj výberom ikony Objekt ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Uzly objektu (![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}))![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Teplotná karta. Hodnoty pre celý objekt možno nastaviť pomocou ikony inicializovať ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) vedľa príslušného dátového poľa.  
-V prípade nemechanických pevných nástrojov je možné nastaviť konštantnú teplotu objektu pomocou referenčnej teploty ( [REFTMP](/docs/sk/keyword_documentation/r/reftmp/)) v rámci [Objects Properties.](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+V prípade nemechanických pevných nástrojov je možné nastaviť konštantnú teplotu objektu pomocou referenčnej teploty ( [REFTMP]({{ '/docs/sk/keyword_documentation/r/reftmp/' | relative_url }})) v rámci [Objects Properties.]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
 Poznámka:
-Použitie tejto aproximácie bude mať tendenciu nadhodnocovať teplotné straty, pretože povrch matrice sa počas simulácie nezahrieva. Tento efekt možno kompenzovať znížením koeficientu prestupu tepla medzi objektmi ([IHTCOF](/docs/sk/keyword_documentation/i/ihtcof/)).
+Použitie tejto aproximácie bude mať tendenciu nadhodnocovať teplotné straty, pretože povrch matrice sa počas simulácie nezahrieva. Tento efekt možno kompenzovať znížením koeficientu prestupu tepla medzi objektmi ([IHTCOF]({{ '/docs/sk/keyword_documentation/i/ihtcof/' | relative_url }})).
 
   
 Pre porézny objekt musí byť relatívna hustota zadaná tak, ako je popísané v type porézneho objektu pomocou tlačidla Priradiť hustotu. Tým sa inicializuje hodnota relatívnej hustoty pre všetky prvky definovanou hodnotou. Pomocou hodnôt údajov o prvku môžeme určiť objekty ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Objekt Ikona prvku (![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) ) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Deformácia ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Karta Všeobecné.  
-Pre každý objekt definovaný ako zmes sa musí priradiť počiatočný objemový podiel ([VOLFC](/docs/sk/keyword_documentation/v/volfc/)) a maximálny transformovaný objemový podiel ([VOLFS](/docs/sk/keyword_documentation/v/volfs/)) pre všetky objemové podiely. Vo všeobecnosti by sa [VOLFC](/docs/sk/keyword_documentation/v/volfc/) a [VOLFS](/docs/sk/keyword_documentation/v/volfs/) mali inicializovať na rovnakú hodnotu. Objemový zlomok možno definovať výberom ikony Object ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Objects Element (![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }})) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Transformation (Transformácia) na karte Objekt.
+Pre každý objekt definovaný ako zmes sa musí priradiť počiatočný objemový podiel ([VOLFC]({{ '/docs/sk/keyword_documentation/v/volfc/' | relative_url }})) a maximálny transformovaný objemový podiel ([VOLFS]({{ '/docs/sk/keyword_documentation/v/volfs/' | relative_url }})) pre všetky objemové podiely. Vo všeobecnosti by sa [VOLFC]({{ '/docs/sk/keyword_documentation/v/volfc/' | relative_url }}) a [VOLFS]({{ '/docs/sk/keyword_documentation/v/volfs/' | relative_url }}) mali inicializovať na rovnakú hodnotu. Objemový zlomok možno definovať výberom ikony Object ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Objects Element (![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }})) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Transformation (Transformácia) na karte Objekt.
 
 ## Typ objektu (OBJTYP)
 
-Typ objektu ([OBJTYP](/docs/sk/keyword_documentation/o/objtyp/)) definuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v probléme DEFORM.
+Typ objektu ([OBJTYP]({{ '/docs/sk/keyword_documentation/o/objtyp/' | relative_url }})) definuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v probléme DEFORM.
 
 Nižšie sú uvedené rôzne typy objektov, ktoré sú k dispozícii v DEFORM:
 
@@ -113,7 +113,7 @@ Nižšie sú uvedené rôzne typy objektov, ktoré sú k dispozícii v DEFORM:
 
 ### Plast [2D, 3D]
 
-Plastové objekty sa modelujú ako tuhý plastický alebo tuhý viskoplastický materiál v závislosti od vlastností materiálov. Formulácia predpokladá, že napätie v materiáli lineárne rastie s rýchlosťou deformácie až do prahovej rýchlosti deformácie, označovanej ako medzná rýchlosť deformácie ([LMTSTR](/docs/sk/keyword_documentation/l/lmtstr/)). Materiál sa plasticky deformuje nad medznou rýchlosťou deformácie. Plastické správanie sa materiálu objektu sa špecifikuje pomocou funkcie napätia toku materiálu alebo údajov o napätí toku ([FSTRES](/docs/sk/keyword_documentation/f/fstres/)).  
+Plastové objekty sa modelujú ako tuhý plastický alebo tuhý viskoplastický materiál v závislosti od vlastností materiálov. Formulácia predpokladá, že napätie v materiáli lineárne rastie s rýchlosťou deformácie až do prahovej rýchlosti deformácie, označovanej ako medzná rýchlosť deformácie ([LMTSTR]({{ '/docs/sk/keyword_documentation/l/lmtstr/' | relative_url }})). Materiál sa plasticky deformuje nad medznou rýchlosťou deformácie. Plastické správanie sa materiálu objektu sa špecifikuje pomocou funkcie napätia toku materiálu alebo údajov o napätí toku ([FSTRES]({{ '/docs/sk/keyword_documentation/f/fstres/' | relative_url }})).  
   
 **Aplikácie:**
 Pri použití na modelovanie obrobku poskytuje veľmi dobrú simuláciu skutočného správania materiálu. Presne zachytáva citlivosť na rýchlosť deformácie.  
@@ -123,8 +123,8 @@ Nemodeluje pružné zotavenie (spätné pruženie), a preto je nevhodný na ohý
 
 ### Elastické [2D, 3D]
 
-Pružné správanie materiálu je špecifikované pomocou Youngovho modulu ([YOUNG](/docs/sk/keyword_documentation/y/young/)) a Poissonovho pomeru ([POISON](/docs/sk/keyword_documentation/p/poison/)). Elastické objekty sa používajú, ak sú dôležité znalosti o napätí a deformácii nástroja v priebehu procesu. Ak sú pre napätie v zápustke potrebné informácie o maximálnom napätí alebo deformácii, odporúča sa na simuláciu deformácie použiť tuhé zápustky, potom sa použije simulácia napätia v zápustke v jednom kroku.  
-Ďalšie informácie nájdete v online pomocníkovi v časti Napätie v matrici 3D - [3D Die stress setup](/docs/sk/operation_templates/30_die_stress/30_2_3d_die_stress_setup/) , 2D- [2D Die Stress Analysis Theory](/docs/sk/operation_templates/30_die_stress/2d_die_stress_analysis_theory/) a [Die Stress study](/docs/sk/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/) [ labs](/docs/sk/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/). Pre 3D sa v súčasnosti vyžaduje plne prepojená analýza pružného nástroja s plastickým obrobkom, na odporúčanie je potrebné použiť prepojenú analýzu napätia v zápustke, ako je vysvetlené v [Coupled Die stress Analysis](/docs/sk/operation_templates/30_die_stress/coupled_die_stress_analysis/).  
+Pružné správanie materiálu je špecifikované pomocou Youngovho modulu ([YOUNG]({{ '/docs/sk/keyword_documentation/y/young/' | relative_url }})) a Poissonovho pomeru ([POISON]({{ '/docs/sk/keyword_documentation/p/poison/' | relative_url }})). Elastické objekty sa používajú, ak sú dôležité znalosti o napätí a deformácii nástroja v priebehu procesu. Ak sú pre napätie v zápustke potrebné informácie o maximálnom napätí alebo deformácii, odporúča sa na simuláciu deformácie použiť tuhé zápustky, potom sa použije simulácia napätia v zápustke v jednom kroku.  
+Ďalšie informácie nájdete v online pomocníkovi v časti Napätie v matrici 3D - [3D Die stress setup]({{ '/docs/sk/operation_templates/30_die_stress/30_2_3d_die_stress_setup/' | relative_url }}) , 2D- [2D Die Stress Analysis Theory]({{ '/docs/sk/operation_templates/30_die_stress/2d_die_stress_analysis_theory/' | relative_url }}) a [Die Stress study]({{ '/docs/sk/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/' | relative_url }}) [ labs]({{ '/docs/sk/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/' | relative_url }}). Pre 3D sa v súčasnosti vyžaduje plne prepojená analýza pružného nástroja s plastickým obrobkom, na odporúčanie je potrebné použiť prepojenú analýzu napätia v zápustke, ako je vysvetlené v [Coupled Die stress Analysis]({{ '/docs/sk/operation_templates/30_die_stress/coupled_die_stress_analysis/' | relative_url }}).  
   
 **Aplikácie:**
 Pri použití na modelovanie nástrojov môže elastický model poskytnúť informácie o napätí a deformácii nástroja. Užitočné v zriedkavých situáciách, keď môže mať priehyb nástroja významný vplyv na tvar súčiastky.  
@@ -135,7 +135,7 @@ Ak sa prekročí medza klzu nástroja, výsledky napätia a deformácie budú ne
 ### Elasto-plastické (Ela-Pla) [2D, 3D]
 
 Elasto-plastické objekty sa považujú za elastické objekty až do dosiahnutia medze klzu.  
-Potom sa všetky časti objektu, ktoré dosiahnu bod klzu, považujú za plastické, zatiaľ čo zvyšok objektu sa považuje za pružný. Pri elastoplastickej deformácii je celková deformácia v objekte kombináciou pružnej a nepružnej deformácie. Neelastická deformácia pozostáva z plastickej deformácie, deformácie tečením, tepelnej deformácie a transformačnej deformácie v závislosti od vlastností materiálov. Podrobnejšie informácie týkajúce sa materiálového modelu nájdete v kapitole [10\. Material Data](/docs/sk/pre_processor/10_material_data/10_material_data/). V prípade tehlových prvkov platí elastoplastický model pre všetky úrovne deformácie.
+Potom sa všetky časti objektu, ktoré dosiahnu bod klzu, považujú za plastické, zatiaľ čo zvyšok objektu sa považuje za pružný. Pri elastoplastickej deformácii je celková deformácia v objekte kombináciou pružnej a nepružnej deformácie. Neelastická deformácia pozostáva z plastickej deformácie, deformácie tečením, tepelnej deformácie a transformačnej deformácie v závislosti od vlastností materiálov. Podrobnejšie informácie týkajúce sa materiálového modelu nájdete v kapitole [10\. Material Data]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }}). V prípade tehlových prvkov platí elastoplastický model pre všetky úrovne deformácie.
 
 Pre elasto-plastický typ objektu sú k dispozícii tri formulácie prvkov.
 
@@ -158,7 +158,7 @@ Vo všeobecnosti trvá dlhý čas riešenia, konvergenčné správanie je výraz
 
 ### Porézne [2D, 3D]
 
-S poréznymi objektmi sa zaobchádza rovnako ako s plastickými objektmi (stlačiteľné tuhé-viskoplastické materiály) s tým rozdielom, že hustota materiálu sa počíta a aktualizuje ako súčasť simulácie. Správanie materiálu sa modeluje podobne ako pri plastických objektoch, ale model zahŕňa do formulácie stlačiteľnosť materiálu. V stave plnej hustoty sa musí určiť medzná miera deformácie ([LMTSTR](/docs/sk/keyword_documentation/l/lmtstr/)) a napätie pri prúdení ([FSTRES](/docs/sk/keyword_documentation/f/fstres/)). Hustota materiálu sa špecifikuje pri každom prvku ([DENSTY](/docs/sk/keyword_documentation/d/densty/)). Objekty s meniacou sa hustotou materiálu, ako sú napríklad materiály používané pri práškovom tvárnení, by sa mali modelovať ako porézne objekty. Jedinou iteračnou metódou, ktorá je v súčasnosti k dispozícii pre porézny materiál, je metóda priameho riešenia. Táto metóda nemá schopnosť rýchlej konvergencie, následne môže pórovitá simulácia trvať dlhšie ako porovnateľná plastická simulácia.
+S poréznymi objektmi sa zaobchádza rovnako ako s plastickými objektmi (stlačiteľné tuhé-viskoplastické materiály) s tým rozdielom, že hustota materiálu sa počíta a aktualizuje ako súčasť simulácie. Správanie materiálu sa modeluje podobne ako pri plastických objektoch, ale model zahŕňa do formulácie stlačiteľnosť materiálu. V stave plnej hustoty sa musí určiť medzná miera deformácie ([LMTSTR]({{ '/docs/sk/keyword_documentation/l/lmtstr/' | relative_url }})) a napätie pri prúdení ([FSTRES]({{ '/docs/sk/keyword_documentation/f/fstres/' | relative_url }})). Hustota materiálu sa špecifikuje pri každom prvku ([DENSTY]({{ '/docs/sk/keyword_documentation/d/densty/' | relative_url }})). Objekty s meniacou sa hustotou materiálu, ako sú napríklad materiály používané pri práškovom tvárnení, by sa mali modelovať ako porézne objekty. Jedinou iteračnou metódou, ktorá je v súčasnosti k dispozícii pre porézny materiál, je metóda priameho riešenia. Táto metóda nemá schopnosť rýchlej konvergencie, následne môže pórovitá simulácia trvať dlhšie ako porovnateľná plastická simulácia.
 
 Modely spekaných materiálov dostupné v systéme DEFORM nájdete na adrese [10.12.7. Sintering Driving Force Model.](../10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data.htm#10.12.7._Sintering_Driving_Force_model)
 
@@ -179,7 +179,7 @@ Nie je určený na modelovanie procesov zhutňovania sypkých práškov.
 
 ### Rigid [2D, 3D]
 
-Tuhé objekty sú modelované ako nedeformovateľné materiály. Pri deformačnej analýze je objekt reprezentovaný geometrickým profilom ([DIEGEO](/docs/sk/keyword_documentation/d/diegeo/)). Údaje o riešení deformácie dostupné pre tuhé objekty zahŕňajú zdvih objektu, zaťaženie a rýchlosť. Sieť pre tuhý objekt sa používa len na tepelné, transformačné a difúzne výpočty.  
+Tuhé objekty sú modelované ako nedeformovateľné materiály. Pri deformačnej analýze je objekt reprezentovaný geometrickým profilom ([DIEGEO]({{ '/docs/sk/keyword_documentation/d/diegeo/' | relative_url }})). Údaje o riešení deformácie dostupné pre tuhé objekty zahŕňajú zdvih objektu, zaťaženie a rýchlosť. Sieť pre tuhý objekt sa používa len na tepelné, transformačné a difúzne výpočty.  
   
 **Aplikácie:**
 Pri použití na modelovanie nástrojov zvyšuje rýchlosť simulácie (v porovnaní s pružnými nástrojmi) tým, že znižuje počet deformovateľných objektov, a tým aj počet rovníc, ktoré sa musia riešiť. Zanedbateľná strata presnosti pri typických simuláciách, pri ktorých majú nástroje oveľa vyššiu medzu klzu ako obrobok.  
@@ -189,7 +189,7 @@ Pri použití na modelovanie nástrojov zvyšuje rýchlosť simulácie (v porovn
 
 ### Hyperelastický [2D,3D]
 
-Hyperelastické správanie materiálu sa špecifikuje pomocou typu objektu hyperelastic ([HYPREL](/docs/sk/keyword_documentation/h/hyprel/)). Hyperelastický materiál je typ konštitutívneho modelu pre ideálne pružný materiál, pre ktorý vzťah napätie-deformácia vyplýva z funkcie hustoty deformačnej energie. Hyperelastické objekty sa používajú v aplikáciách, ako je tvarovanie gumových podložiek a pri deformácii niektorých polymérnych objektov. Používateľ môže vybrať túto možnosť, ak je typ objektu hyperelastický. V programe DEFORM sú na simuláciu hyperelasticity k dispozícii dva hyperelastické konštitutívne modely Neo-Hookean a Mooney-Rivlin.  
+Hyperelastické správanie materiálu sa špecifikuje pomocou typu objektu hyperelastic ([HYPREL]({{ '/docs/sk/keyword_documentation/h/hyprel/' | relative_url }})). Hyperelastický materiál je typ konštitutívneho modelu pre ideálne pružný materiál, pre ktorý vzťah napätie-deformácia vyplýva z funkcie hustoty deformačnej energie. Hyperelastické objekty sa používajú v aplikáciách, ako je tvarovanie gumových podložiek a pri deformácii niektorých polymérnych objektov. Používateľ môže vybrať túto možnosť, ak je typ objektu hyperelastický. V programe DEFORM sú na simuláciu hyperelasticity k dispozícii dva hyperelastické konštitutívne modely Neo-Hookean a Mooney-Rivlin.  
   
 **Aplikácie**
 Tvarovanie gumových podložiek, deformácia určitých polymérových predmetov atď.  
@@ -227,12 +227,12 @@ Používateľ má možnosť prispôsobiť správanie plastového materiálu. Pou
 
 ## Primárna matrica (PDIE)
 
-Primárna kocka ([PDIE](/docs/sk/keyword_documentation/p/pdie/)) určuje primárny objekt pre simuláciu. Primárny objekt sa zvyčajne priraďuje k objektu, ktorý je najtesnejšie ovládaný tvárniacim strojom.  
+Primárna kocka ([PDIE]({{ '/docs/sk/keyword_documentation/p/pdie/' | relative_url }})) určuje primárny objekt pre simuláciu. Primárny objekt sa zvyčajne priraďuje k objektu, ktorý je najtesnejšie ovládaný tvárniacim strojom.  
 Napríklad matrica pripevnená k baranu mechanického lisu sa označuje ako primárna matrica. Charakteristiky primárnej lisovacej formy možno použiť na riadenie rôznych aspektov simulácie vrátane:
 
-  * Veľkosť časového kroku simulácie ([DSMAX](/docs/sk/keyword_documentation/d/dsmax/))
+  * Veľkosť časového kroku simulácie ([DSMAX]({{ '/docs/sk/keyword_documentation/d/dsmax/' | relative_url }}))
   * Pohyb objektu ([MOVCTL](../../keyword_documentation/m/movctl_\(2d\).htm))
-  * Kritériá ukončenia simulácie ([SMAX](/docs/sk/keyword_documentation/s/smax/), [VMIN](/docs/sk/keyword_documentation/v/vmin/) a [LMAX](/docs/sk/keyword_documentation/l/lmax/))
+  * Kritériá ukončenia simulácie ([SMAX]({{ '/docs/sk/keyword_documentation/s/smax/' | relative_url }}), [VMIN]({{ '/docs/sk/keyword_documentation/v/vmin/' | relative_url }}) a [LMAX]({{ '/docs/sk/keyword_documentation/l/lmax/' | relative_url }}))
 
 Primárna matrica sa definuje pomocou zaškrtávacieho políčka (pozri obr. 11.3.). Ako primárnu kocku je možné definovať iba jeden objekt.
 
@@ -254,28 +254,28 @@ Používateľ môže uložiť údaje o objekte do knižnice a uložený súbor m
 
 **Súvisiace témy:**
 
-[9\. Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+[9\. Simulation Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[10\. Material Properties](/docs/sk/pre_processor/10_material_data/10_material_data/)
+[10\. Material Properties]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[12\. Geometry Modelling](/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/)
+[12\. Geometry Modelling]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})
 
-[13\. Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/)
+[13\. Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[15\. Movement Controls Settings]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[16\. Object Properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+[16\. Object Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[17\. Object Data Initialize](/docs/sk/pre_processor/17_object_data_initialization/17_object_data_initialize/)
+[17\. Object Data Initialize]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }})
 
-[18\. Advanced Object Data Definition](/docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/)
+[18\. Advanced Object Data Definition]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/' | relative_url }})
 
-[19\. Object positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/)
+[19\. Object positioning]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
-[20\. Inter-Object Definition](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[20\. Inter-Object Definition]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-[21\. Database Generation](/docs/sk/pre_processor/21_database_generation/21_database_generation/)
+[21\. Database Generation]({{ '/docs/sk/pre_processor/21_database_generation/21_database_generation/' | relative_url }})
 
-[22\. Convert 2D to 3D](/docs/sk/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/)
+[22\. Convert 2D to 3D]({{ '/docs/sk/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/' | relative_url }})

@@ -30,8 +30,8 @@ KFREAD loads a keyword file automatically into the preprocessor during a multipl
 REMARKS  
 ---  
   
-It is an action keyword placed in either an automatic script file or in a Master file. The purpose of KFREAD is to load a keyword file to be converted into a database or to load information into the Preprocessor to overwrite current information. For example, if during a multiple operations run the user wants to change the geometry of an object from a previous run, the user can load the database using a [DBREAD](/docs/sk/keyword_documentation/d/dbread/) keyword and then load in the new geometry data using the KFREAD keyword. 
+It is an action keyword placed in either an automatic script file or in a Master file. The purpose of KFREAD is to load a keyword file to be converted into a database or to load information into the Preprocessor to overwrite current information. For example, if during a multiple operations run the user wants to change the geometry of an object from a previous run, the user can load the database using a [DBREAD]({{ '/docs/sk/keyword_documentation/d/dbread/' | relative_url }}) keyword and then load in the new geometry data using the KFREAD keyword. 
 
 RELATED TOPICS  
 ---  
-[Multiple Operations](/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/) Keywords: [DBREAD](/docs/sk/keyword_documentation/d/dbread/), [KFWRIT](/docs/sk/keyword_documentation/k/kfwrit/)
+[Multiple Operations]({{ '/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }}) Keywords: [DBREAD]({{ '/docs/sk/keyword_documentation/d/dbread/' | relative_url }}), [KFWRIT]({{ '/docs/sk/keyword_documentation/k/kfwrit/' | relative_url }})

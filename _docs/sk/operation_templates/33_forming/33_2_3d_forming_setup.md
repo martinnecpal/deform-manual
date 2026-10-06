@@ -82,7 +82,7 @@ Pridať materiál z okna so zoznamom materiálov
 
 **Zloženie zmesi**
 
-Materiály typu „zmes“ ([MSTMTR](/docs/en/keyword_documentation/m/mstmtr/)) sa používajú v prípade, že sa v simulácii má modelovať fázová premena. Premenlivý materiál sa modeluje ako „zmes“ fáz, z ktorých sa skladá. Napríklad uhlíková oceľ sa môže modelovať ako zmes austenitu, perlitov, bainitu a martenzitu. Ak je definovaný zmesový materiál, mali by sa definovať pravidlá transformácie, ktoré riadia prechod jednej fázy do druhej. (Pozri obr. 33.2.6.)
+Materiály typu „zmes“ ([MSTMTR]({{ '/docs/en/keyword_documentation/m/mstmtr/' | relative_url }})) sa používajú v prípade, že sa v simulácii má modelovať fázová premena. Premenlivý materiál sa modeluje ako „zmes“ fáz, z ktorých sa skladá. Napríklad uhlíková oceľ sa môže modelovať ako zmes austenitu, perlitov, bainitu a martenzitu. Ak je definovaný zmesový materiál, mali by sa definovať pravidlá transformácie, ktoré riadia prechod jednej fázy do druhej. (Pozri obr. 33.2.6.)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image004.jpg' | relative_url }})
 
@@ -252,7 +252,7 @@ Okno s geometrickými primitívami 2D pre osovo symetrické a torzné modely
 
 **Check![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**
 
-Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), čím sa zobrazí vyskakovacie okno, ako je znázornené na obr. 33.2.26 nižšie. Ak sa vyskytnú nejaké chyby, geometria sa opraví po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
+Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), čím sa zobrazí vyskakovacie okno, ako je znázornené na obr. 33.2.26 nižšie. Ak sa vyskytnú nejaké chyby, geometria sa opraví po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image022.jpg' | relative_url }})
 
@@ -334,13 +334,13 @@ Počet prvkov, ktoré sa majú pre daný objekt vygenerovať, je možné určiť
 
 Možnosti okna „Mesh“ v režime s navádzaním
 
-Na nastavenie parametrov siete, ako sú veľkosť, tvar, hustota, typ prvkov atď., musí používateľ prejsť do expertného režimu ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), kde sú k dispozícii pokročilejšie možnosti vytvárania siete. Na obr. 33.2.32. sú zobrazené možnosti siete dostupné v expertnom režime. Na vytvorenie siete pre objekt máme k dispozícii možnosti tetraedrickej siete a tehličkovej siete. Ďalšie informácie týkajúce sa tetraedrickej siete nájdete v kapitole [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+Na nastavenie parametrov siete, ako sú veľkosť, tvar, hustota, typ prvkov atď., musí používateľ prejsť do expertného režimu ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), kde sú k dispozícii pokročilejšie možnosti vytvárania siete. Na obr. 33.2.32. sú zobrazené možnosti siete dostupné v expertnom režime. Na vytvorenie siete pre objekt máme k dispozícii možnosti tetraedrickej siete a tehličkovej siete. Ďalšie informácie týkajúce sa tetraedrickej siete nájdete v kapitole [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image027.jpg' | relative_url }})
 
 Možnosti okna „Mesh“ v režime pre pokročilých
 
-Na nižšie uvedenom obr. 33.2.33 sú zobrazené možnosti generovania mriežky typu „Brick“ v režime Expert. Ďalšie informácie týkajúce sa tetraedrickej mriežky nájdete v kapitole [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/).
+Na nižšie uvedenom obr. 33.2.33 sú zobrazené možnosti generovania mriežky typu „Brick“ v režime Expert. Ďalšie informácie týkajúce sa tetraedrickej mriežky nájdete v kapitole [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image028.jpg' | relative_url }})
 
@@ -359,24 +359,24 @@ Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_
   
 Jednotlivé súbory údajov sú:
 
-  * [Plastic ](/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/)
-  * [Elastic](/docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/)
-  * [Thermal ](/docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/)
-  * [Diffusion ](/docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/)
-  * [Dislocation ](/docs/en/pre_processor/10_material_data/10_5_dislocation_data/)
-  * [Grain ](/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/)
-  * [Hardness ](/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/)
-  * [Elec/ Mag ](/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/)
-  * [Transformation](/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/)
-  * [Coarsening](/docs/en/pre_processor/10_material_data/10_10_coarsening_data/)
-  * [Texture ](/docs/en/pre_processor/10_material_data/10_11_texture_data/)
-  * [Miscellaneous](/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/)
+  * [Plastic ]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/' | relative_url }})
+  * [Elastic]({{ '/docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }})
+  * [Thermal ]({{ '/docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }})
+  * [Diffusion ]({{ '/docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/' | relative_url }})
+  * [Dislocation ]({{ '/docs/en/pre_processor/10_material_data/10_5_dislocation_data/' | relative_url }})
+  * [Grain ]({{ '/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/' | relative_url }})
+  * [Hardness ]({{ '/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
+  * [Elec/ Mag ]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }})
+  * [Transformation]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }})
+  * [Coarsening]({{ '/docs/en/pre_processor/10_material_data/10_10_coarsening_data/' | relative_url }})
+  * [Texture ]({{ '/docs/en/pre_processor/10_material_data/10_11_texture_data/' | relative_url }})
+  * [Miscellaneous]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }})
 
 V tejto časti sa rozoberá spôsob definovania jednotlivých dátových súborov a uvádza sa, pre aký typ simulácie je ktorý z nich potrebný.
 
 Knižnica materiálov DEFORM obsahuje niekoľko stoviek súborov údajov. Takmer všetky materiály obsahujú údaje o plastickosti (tečivé napätie), pružnosti a tepelných vlastnostiach. V závislosti od zamýšľaného použitia môžu údaje o materiáloch zahŕňať aj údaje týkajúce sa mikrostruktúry.
 
-Používateľ by mal overiť, či je materiál vybraný z knižnice vhodný pre proces, ktorý chce modelovať. Ďalšie informácie o vlastnostiach materiálov nájdete v dokumente [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/).
+Používateľ by mal overiť, či je materiál vybraný z knižnice vhodný pre proces, ktorý chce modelovať. Ďalšie informácie o vlastnostiach materiálov nájdete v dokumente [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ### Okrajové podmienky
 
@@ -386,7 +386,7 @@ Na stránke „Okrajové podmienky“ môže používateľ priradiť objektu rô
 
 Okno „Okrajové podmienky“
 
-BCC sú rozdelené do kategórií [Symmetry](/docs/en/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/), [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/), [Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) a [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+BCC sú rozdelené do kategórií [Symmetry]({{ '/docs/en/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/' | relative_url }}), [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ### **Ovládanie pohybu**
 
@@ -394,7 +394,7 @@ Ovládacie prvky pohybu je možné použiť na tuhé objekty a hraničné uzly o
 
 **Hnutie za preklad**
 
-Medzi rôzne typy ovládacích prvkov pohybu, ktoré sú k dispozícii v rámci ovládacích prvkov pohybu pre preklad, patria [Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/), [Force](/docs/en/pre_processor/15_movement_controls_definition/15_2_force/), [Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/), [Screw press](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/), [Mechanical press](/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/), [Hydraulic press](/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/), [Sliding Die](/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/) a [Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/), ako je znázornené na obr. 33.2.36. Ďalšie informácie o týchto ovládacích prvkoch pohybu nájdete v [15\. Movement controls settings.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+Medzi rôzne typy ovládacích prvkov pohybu, ktoré sú k dispozícii v rámci ovládacích prvkov pohybu pre preklad, patria [Speed]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }}), [Force]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_2_force/' | relative_url }}), [Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}), [Screw press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }}), [Mechanical press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }}), [Hydraulic press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/' | relative_url }}), [Sliding Die]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/' | relative_url }}) a [Path]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }}), ako je znázornené na obr. 33.2.36. Ďalšie informácie o týchto ovládacích prvkoch pohybu nájdete v [15\. Movement controls settings.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image035.jpg' | relative_url }})
 
@@ -402,17 +402,17 @@ Preklad okna „Ovládacie prvky pohybu“
 
 **Rotačný pohyb**
 
-Rotačný pohyb je definovaný uhlovou rýchlosťou alebo krútiacim momentom okolo pevného stredu otáčania. V rámci ovládacích prvkov pre rotačný pohyb sú k dispozícii dva typy ovládacích prvkov: krútiaci moment a uhlová rýchlosť, ako je znázornené na obr. 33.2.37. Ďalšie informácie nájdete v [15.9. Rotational movement.](/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/).
+Rotačný pohyb je definovaný uhlovou rýchlosťou alebo krútiacim momentom okolo pevného stredu otáčania. V rámci ovládacích prvkov pre rotačný pohyb sú k dispozícii dva typy ovládacích prvkov: krútiaci moment a uhlová rýchlosť, ako je znázornené na obr. 33.2.37. Ďalšie informácie nájdete v [15.9. Rotational movement.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image034.jpg' | relative_url }})
 
 Okno Ovládacie prvky rotačného pohybu
 
-Ďalšie informácie o týchto ovládacích prvkoch nájdete v [15\. Movement Controls Settings.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+Ďalšie informácie o týchto ovládacích prvkoch nájdete v [15\. Movement Controls Settings.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
 ### Nehnuteľnosť
 
-V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 33.2.38.) Ďalšie informácie nájdete v [16\. Object properties.](/docs/en/pre_processor/16_object_properties/16_object_properties/).
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 33.2.38.) Ďalšie informácie nájdete v [16\. Object properties.]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image036.jpg' | relative_url }})
 
@@ -420,7 +420,7 @@ Okno vlastností objektu
 
 ### **Inicializácia**
 
-V okne „Initialize“ sú k dispozícii na inicializáciu niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie atď. Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 33.2.39. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne Initialize. V prípade stavových premenných, ako sú rýchlosť a posunutie, kde je k dispozícii toľko vstupných polí, koľko je rozmerov, musí používateľ v príslušných poliach zadať smerové hodnoty premenných a následným kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) sa vypočíta celková rýchlosť a posunutie. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z okien s údajmi o uzloch a prvkoch. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“ (pozri obr. 33.2.40. a obr. 33.2.41.), nájdete v [17.1. Object node variables](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [17.2. Object element variables.](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+V okne „Initialize“ sú k dispozícii na inicializáciu niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie atď. Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 33.2.39. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne Initialize. V prípade stavových premenných, ako sú rýchlosť a posunutie, kde je k dispozícii toľko vstupných polí, koľko je rozmerov, musí používateľ v príslušných poliach zadať smerové hodnoty premenných a následným kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) sa vypočíta celková rýchlosť a posunutie. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z okien s údajmi o uzloch a prvkoch. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“ (pozri obr. 33.2.40. a obr. 33.2.41.), nájdete v [17.1. Object node variables]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) a [17.2. Object element variables.]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image030.jpg' | relative_url }})
 
@@ -448,7 +448,7 @@ Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na s
 
 **Umiestňovanie objektov** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 33.2.43. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 33.2.43. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image038.jpg' | relative_url }})
 
@@ -514,9 +514,9 @@ Pridanie maziva z okna „Edit“
 
 **Používateľ**: Pri operácii „Forming“ je štandardne vybrané rádio tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo „Pridať“, ako je znázornené na obr. 33.2.45.
 
-Kliknutím na tlačidlo „Upraviť ****![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }})****“ môže používateľ nastaviť parametre trenia a prenosu tepla medzi fázami. Ďalšie informácie nájdete v časti [20\. Inter-object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+Kliknutím na tlačidlo „Upraviť ****![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }})****“ môže používateľ nastaviť parametre trenia a prenosu tepla medzi fázami. Ďalšie informácie nájdete v časti [20\. Inter-object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
-Ďalšie informácie o modeloch [Deformation](/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/), [Thermal](/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/), [Heating](/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/), [Friction window](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_6_Friction_Window), [Tool wear](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/) a [Rigid contact](/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/) nájdete v kapitole [20\. Inter-object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/). 
+Ďalšie informácie o modeloch [Deformation]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }}), [Heating]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }}), [Friction window](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_6_Friction_Window), [Tool wear]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}) a [Rigid contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }}) nájdete v kapitole [20\. Inter-object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}). 
 
 ## Ovládacie prvky na zastavenie
 
@@ -530,13 +530,13 @@ Na nižšie uvedenom obr. 33.2.49 sú znázornené rôzne typy zariadení na zas
 
 Okno „Ovládacie prvky zastavenia deformácie“
 
-**Maximálny zdvih matrice**: Ukončí simuláciu, keď celkový posun ([SMAX](/docs/en/keyword_documentation/s/smax/)) primárnej matrice dosiahne zadanú hodnotu. Hodnota zdvihu pre daný objekt sa zadáva na karte „Pohyb objektu“.
+**Maximálny zdvih matrice**: Ukončí simuláciu, keď celkový posun ([SMAX]({{ '/docs/en/keyword_documentation/s/smax/' | relative_url }})) primárnej matrice dosiahne zadanú hodnotu. Hodnota zdvihu pre daný objekt sa zadáva na karte „Pohyb objektu“.
 
-**Maximálne zaťaženie**: Ukončí simuláciu, keď zložka zaťaženia v osi X, Y alebo Z primárneho telesa dosiahne hodnotu X, Y alebo Z nastavenú v parametri [LMAX](/docs/en/keyword_documentation/l/lmax/). Zvyčajne sa používa v prípadoch, keď je riadenie pohybu primárneho objektu založené na rýchlosti alebo je určené používateľom.
+**Maximálne zaťaženie**: Ukončí simuláciu, keď zložka zaťaženia v osi X, Y alebo Z primárneho telesa dosiahne hodnotu X, Y alebo Z nastavenú v parametri [LMAX]({{ '/docs/en/keyword_documentation/l/lmax/' | relative_url }}). Zvyčajne sa používa v prípadoch, keď je riadenie pohybu primárneho objektu založené na rýchlosti alebo je určené používateľom.
 
 **Pomer kontaktnej plochy:** Pomer kontaktnej plochy je pomer plochy, ktorá je v kontakte s lisovacími formami, k celkovej povrchovej ploche polotovaru. Ak tento pomer prekročí stanovenú hodnotu, simulácia sa zastaví.
 
-**Vzdialenosť medzi objektmi:** Ukončí simuláciu, keď vzdialenosť medzi referenčnými bodmi ([MDSOBJ](/docs/en/keyword_documentation/m/mdsobj/)) na dvoch objektoch dosiahne zadanú hodnotu.
+**Vzdialenosť medzi objektmi:** Ukončí simuláciu, keď vzdialenosť medzi referenčnými bodmi ([MDSOBJ]({{ '/docs/en/keyword_documentation/m/mdsobj/' | relative_url }})) na dvoch objektoch dosiahne zadanú hodnotu.
 
 **Tepelná**
 
@@ -582,22 +582,22 @@ uvedené v ponuke ovládacích prvkov krokov.
 
 **Počet simulačných krokov (NSTEP)**
 
-Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú spustiť od počiatočného čísla kroku. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí príkaz na zastavenie simulácie alebo ak simulácia nenarazí na problém. Napríklad, ak je počiatočné číslo kroku -35 ([NSTART](/docs/en/keyword_documentation/n/nstart/)) a je špecifikovaných 30 krokov ([NSTEP](/docs/en/keyword_documentation/n/nstep/)), simulácia sa zastaví po 65. kroku, pokiaľ sa skôr nespustí iný príkaz na zastavenie.
+Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú spustiť od počiatočného čísla kroku. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí príkaz na zastavenie simulácie alebo ak simulácia nenarazí na problém. Napríklad, ak je počiatočné číslo kroku -35 ([NSTART]({{ '/docs/en/keyword_documentation/n/nstart/' | relative_url }})) a je špecifikovaných 30 krokov ([NSTEP]({{ '/docs/en/keyword_documentation/n/nstep/' | relative_url }})), simulácia sa zastaví po 65. kroku, pokiaľ sa skôr nespustí iný príkaz na zastavenie.
 
 **Krok pri ukladaní (STPINC)**
 
-Krok prírastku ([STPINC](/docs/en/keyword_documentation/s/stpinc/)), ktorý sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nemusí sa nutne uložiť do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať väčší úložný priestor.
+Krok prírastku ([STPINC]({{ '/docs/en/keyword_documentation/s/stpinc/' | relative_url }})), ktorý sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nemusí sa nutne uložiť do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať väčší úložný priestor.
 
 **Primárny čip (PDIE)**
 
-Primárna matrica ([PDIE](/docs/en/keyword_documentation/p/pdie/)) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad brzdná vzdialenosť založená na zdvihu primárnej matrice. Keď zdvih objektu definovaného ako primárna matrica dosiahne hodnotu posunu primárnej matrice, simulácia sa zastaví bez ohľadu na to, či boli špecifikované ďalšie kroky. Funkcia „Krok podľa zdvihu“ určuje veľkosť kroku na základe pohybu primárnej matrice. Primárna matrica je zvyčajne priradená k objektu, ktorý je najviac riadený kováčskym strojom. Napríklad matrica pripevnená k piestu mechanického lisu by bola označená ako primárny objekt.
+Primárna matrica ([PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }})) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad brzdná vzdialenosť založená na zdvihu primárnej matrice. Keď zdvih objektu definovaného ako primárna matrica dosiahne hodnotu posunu primárnej matrice, simulácia sa zastaví bez ohľadu na to, či boli špecifikované ďalšie kroky. Funkcia „Krok podľa zdvihu“ určuje veľkosť kroku na základe pohybu primárnej matrice. Primárna matrica je zvyčajne priradená k objektu, ktorý je najviac riadený kováčskym strojom. Napríklad matrica pripevnená k piestu mechanického lisu by bola označená ako primárny objekt.
 
-**Ovládanie krokového posunu ([DSMAX](/docs/en/keyword_documentation/d/dsmax/)/[DTMAX](/docs/en/keyword_documentation/d/dtmax/))**
+**Ovládanie krokového posunu ([DSMAX]({{ '/docs/en/keyword_documentation/d/dsmax/' | relative_url }})/[DTMAX]({{ '/docs/en/keyword_documentation/d/dtmax/' | relative_url }}))**
 
 Veľkosť kroku riešenia je možné riadiť časovým krokom alebo posunom primárnej matrice. Ak je špecifikovaný zdvih na krok, primárna matrica sa v každom časovom kroku posunie o zadanú hodnotu. Celkový posun primárnej matrice bude rovný posunu na krok vynásobenému celkovým počtom krokov. Ak je špecifikovaný čas na krok, použije sa časový interval na krok. Posun matrice na krok bude rovný časovému kroku vynásobenému rýchlosťou matrice.
 
   
-Nastavenia krokových regulátorov založených na teplote ([DTPMAX](/docs/en/keyword_documentation/d/dtpmax/)) tiež ovplyvňujú časový krok. Účelom týchto regulátorov je určiť časový krok simulácie, ktorá je riadená deformáciou vyvolanou teplotou.
+Nastavenia krokových regulátorov založených na teplote ([DTPMAX]({{ '/docs/en/keyword_documentation/d/dtpmax/' | relative_url }})) tiež ovplyvňujú časový krok. Účelom týchto regulátorov je určiť časový krok simulácie, ktorá je riadená deformáciou vyvolanou teplotou.
 
 Definícia riadenia krokového prírastku bola rozšírená tak, aby zahŕňala krokové funkcie závislé od času aj od zdvihu; tieto možnosti sú k dispozícii v režime Expert. To znamená, že veľkosť kroku (či už ide o čas na krok alebo zdvih na krok) je teraz možné definovať ako funkciu času alebo zdvihu. Táto funkcia umožňuje v prípade potreby dosiahnuť jemnejšie rozlíšenie uložených informácií o modeli. (typicky smerom ku koncu zdvihu, kde môžu nastať prudké zmeny zaťaženia formy, plnenia dutiny alebo tvorby prebytku materiálu)
 
@@ -614,7 +614,7 @@ Možnosti definované v časti „Ovládacie prvky simulácie“ (pozri obr. 33.
 Ovládacie prvky pre kroky a ukončenie slúžia na určenie časového kroku, celkového počtu krokov a kritérií na ukončenie simulácie.  
 Tu je možné zadať podmienky spracovania, ako napríklad teplotu okolia a konvekčný koeficient.
 
-Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ## Vytvoriť databázu 
 

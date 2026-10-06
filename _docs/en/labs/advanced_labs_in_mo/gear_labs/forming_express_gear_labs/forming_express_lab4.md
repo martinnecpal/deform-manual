@@ -9,7 +9,7 @@ title: "Forming Express Lab4"
 
 To investigate 3D symmetry in DEFORM, open the new project with **FE_Gear_3D_Thermal_Sym** name and with **English** unit.
 
-This project is the same as the previous **FE_Gear_3D_Thermal** ([Lab 3](/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/)), with the exception that only 45° of the workpiece is modeled. For this 45° sector of the part to deform the same as the full part, symmetry boundary conditions must be used. This lab will go over the differences when setting up a simulation with symmetry.
+This project is the same as the previous **FE_Gear_3D_Thermal** ([Lab 3]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }})), with the exception that only 45° of the workpiece is modeled. For this 45° sector of the part to deform the same as the full part, symmetry boundary conditions must be used. This lab will go over the differences when setting up a simulation with symmetry.
 
 ### Add Operations
 

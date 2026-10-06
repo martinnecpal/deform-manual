@@ -9,4 +9,4 @@ Copy/Mirroring template can be used to mirror/copy an object which is having a p
 
 **Related Topics:**
 
-**[46.1. Copy Mirroring](/docs/en/operation_templates/46_copy_mirroring/46_1_copy_mirroring/)**
+**[46.1. Copy Mirroring]({{ '/docs/en/operation_templates/46_copy_mirroring/46_1_copy_mirroring/' | relative_url }})**

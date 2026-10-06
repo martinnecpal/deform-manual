@@ -19,18 +19,18 @@ Stránka Vlastnosti materiálu
 
 **Rôzne súbory údajov sú:**
 
-  * [Plastic Data Definition](/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/)
-  * [Elastic Data Definition](/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/)
-  * [Thermal Data Definition](/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/)
-  * [Diffusion Data Definition](/docs/sk/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/)
+  * [Plastic Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/' | relative_url }})
+  * [Elastic Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }})
+  * [Thermal Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }})
+  * [Diffusion Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/' | relative_url }})
   * Definícia údajov o dislokácii
-  * [Grain Data Definition](/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/)
-  * [Hardness Data Definition](/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/)
-  * [Elec/ Mag Data Definition](/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/)
-  * [Transformation Definition](/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/)
+  * [Grain Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/' | relative_url }})
+  * [Hardness Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
+  * [Elec/ Mag Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }})
+  * [Transformation Definition]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }})
   * Hrubšie definovanie údajov
   * Definícia údajov o textúre
-  * [Miscellaneous Data Definition](/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/)
+  * [Miscellaneous Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }})
 
 V tejto kapitole je opísaný spôsob definovania jednotlivých súborov údajov a typ simulácie, pre ktorú je každý z nich potrebný.
 
@@ -39,7 +39,7 @@ Knižnica materiálov DEFORM obsahuje niekoľko stoviek súborov údajov. Takmer
 Používateľ by mal potvrdiť, že materiál vybraný z knižnice je vhodný pre proces, ktorý má v úmysle modelovať.
 
 **Fázy a zmesi (MSTMTR) [MIC]**
-Skupiny materiálov možno rozdeliť do dvoch kategórií: bežné a zmiešané. "Bežné" materiály sú vhodné na modelovanie väčšiny operácií spracovania kovov vrátane väčšiny problémov tvárnenia, rezania alebo analýzy napätia. "Zmesové" materiály ([MSTMTR](/docs/sk/keyword_documentation/m/mstmtr/)) sa používajú, ak sa má pri simulácii modelovať fázová premena. Transformujúci sa materiál sa modeluje ako "zmes" svojich zložiek - fáz. Napríklad uhlíková oceľ sa môže modelovať ako zmes austenitu, perlitu, bainitu a martenzitu. Ak je definovaný materiál zmesi, mali by sa definovať transformačné pravidlá, ktorými sa riadi transformácia jednej fázy na druhú.
+Skupiny materiálov možno rozdeliť do dvoch kategórií: bežné a zmiešané. "Bežné" materiály sú vhodné na modelovanie väčšiny operácií spracovania kovov vrátane väčšiny problémov tvárnenia, rezania alebo analýzy napätia. "Zmesové" materiály ([MSTMTR]({{ '/docs/sk/keyword_documentation/m/mstmtr/' | relative_url }})) sa používajú, ak sa má pri simulácii modelovať fázová premena. Transformujúci sa materiál sa modeluje ako "zmes" svojich zložiek - fáz. Napríklad uhlíková oceľ sa môže modelovať ako zmes austenitu, perlitu, bainitu a martenzitu. Ak je definovaný materiál zmesi, mali by sa definovať transformačné pravidlá, ktorými sa riadi transformácia jednej fázy na druhú.
 
 **Viacfázové:** Ak chceme pridať viac fáz, musíme zaškrtnúť políčko Mixture material check (Kontrola materiálu zmesi), ako je znázornené na nasledujúcom obrázku 10.3. Pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_add_phase_button.jpg' | relative_url }}) môžeme pridať nové fázy a pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_remove_phase_button.jpg' | relative_url }}) môžeme pridané fázy z materiálu odstrániť.
 
@@ -95,26 +95,26 @@ Okno Úprava materiálu
 
 Súvisiace témy:
 
-[10.1. Plastic Data Definition](/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/)
+[10.1. Plastic Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/' | relative_url }})
 
-[10.2. Elastic Data Definition](/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/)
+[10.2. Elastic Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }})
 
-[10.3. Thermal Data Definition](/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/)
+[10.3. Thermal Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }})
 
-[10.4. Diffusion Data Definition](/docs/sk/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/)
+[10.4. Diffusion Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/' | relative_url }})
 
 10.5. Definícia údajov o dislokácii
 
-[10.6. Grain Data Definition](/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/)
+[10.6. Grain Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/' | relative_url }})
 
-[10.7. Hardness Data Definition](/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/)
+[10.7. Hardness Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
 
-[10.8. Elec/ Mag Data Definition](/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/)
+[10.8. Elec/ Mag Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }})
 
-[10.9 Transformation Data Definition](/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/)
+[10.9 Transformation Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }})
 
 10.10. Definícia hrubých údajov
 
 10.11. Definícia údajov o textúre
 
-[10.12. Miscellaneous Data Definition](/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/)
+[10.12. Miscellaneous Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }})

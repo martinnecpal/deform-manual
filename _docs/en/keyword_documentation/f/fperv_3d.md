@@ -29,4 +29,4 @@ The following equation is used to calculate the body force for porous materials.
   
 RELATED TOPICS  
 ---  
-[Step parameters](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/) Keyword: [DENSTY](/docs/en/keyword_documentation/d/densty/)
+[Step parameters]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}) Keyword: [DENSTY]({{ '/docs/en/keyword_documentation/d/densty/' | relative_url }})

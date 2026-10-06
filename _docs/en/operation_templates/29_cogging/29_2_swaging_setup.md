@@ -214,7 +214,7 @@ Add material from Material List window
 
 **Mixture material**
 
-“Mixture” materials ([MSTMTR](/docs/en/keyword_documentation/m/mstmtr/)) are used when a phase transformation is to be modeled in the simulation. The transforming material is modeled as a “mixture” of its constituent phases. For example, carbon steel might be modeled as a mixture of Austenite, Pearlite, Bainite, and Martensite. If a mixture material is defined, transformation rules should be defined which govern the transformation of one phase into another.(See Fig. 29.2.9.)
+“Mixture” materials ([MSTMTR]({{ '/docs/en/keyword_documentation/m/mstmtr/' | relative_url }})) are used when a phase transformation is to be modeled in the simulation. The transforming material is modeled as a “mixture” of its constituent phases. For example, carbon steel might be modeled as a mixture of Austenite, Pearlite, Bainite, and Martensite. If a mixture material is defined, transformation rules should be defined which govern the transformation of one phase into another.(See Fig. 29.2.9.)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image018.jpg' | relative_url }})
 
@@ -273,7 +273,7 @@ For Rotational symmetry only hollow cylinder primitive will be available as show
 
 Geometry primitive window for rotational symmetry
 
-For more information about geometry options, please refer [12.3. 3D Geometry Data Definition](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+For more information about geometry options, please refer [12.3. 3D Geometry Data Definition]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 **Mesh**  
 **Brick mesh**  
@@ -319,10 +319,10 @@ In order to control the mesh parameters like size, shape, density, type of eleme
 
 Expert mode Mesh generation window
 
-For more information about expert mode mesh generation options please refer, [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) and [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
+For more information about expert mode mesh generation options please refer, [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}) and [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }})
 
 **Material**  
-Below Fig. 29.2.20. shows the material window. User can assign required material from the list or can import from file or library. User can also add new material. For more information on how to assign material, Please refer chapter [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/)
+Below Fig. 29.2.20. shows the material window. User can assign required material from the list or can import from file or library. User can also add new material. For more information on how to assign material, Please refer chapter [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image029.jpg' | relative_url }})
 
@@ -347,10 +347,10 @@ Boundary Conditions window
 
 Rotational symmetry BCC assigned
 
-The BCC’s are categorized as [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/),[Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) and [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). For more information about these BCC's please refer [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+The BCC’s are categorized as [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}),[Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
 **Property**  
-Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window (See Fig. 29.2.24.). For more information on these options, please refer [19\. Object properties.](/docs/en/pre_processor/10_material_data/10_material_data/)
+Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window (See Fig. 29.2.24.). For more information on these options, please refer [19\. Object properties.]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image032.jpg' | relative_url }})
 
@@ -379,7 +379,7 @@ Below Fig. 29.2.27. shows the Geometry primitive of Die. Only the flat surfaces 
 
 Top Die Geometry Primitive window
 
-For more information about geometry options please refer [12\. 3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+For more information about geometry options please refer [12\. 3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 **Mesh**  
 Mesh generation options for Dies are similar to that of the billet, for more information on Mesh generation please refer [Top Die Mesh](29_1_cogging_setup.htm#Top_Die_Mesh).
@@ -390,7 +390,7 @@ Assigning material to dies is similar to that of billet. User can assign require
 The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. This section describes the material data that may be specified for a DEFORM simulation. For more information, Please refer Material in Forming 3D setup.
 
 **Movement controls**  
-Depending on the process requirement and equipment used user can define movement control settings for dies. For a quick Swaging setup, [Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/) and [Mechanical press](/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/) movement controls will be used as shown in Fig. 29.2.28. If user want to define other movement controls than these, then advanced radio button can be used by clicking ![]({{ '/assets/icons/pre_icons/mo_define_movement_button.jpg' | relative_url }}) button, these options can also be accessed by switching to Expert mode as shown in Fig. 29.2.29. For more information about these movement controls, please refer [15\. Movement Controls Definition](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/).
+Depending on the process requirement and equipment used user can define movement control settings for dies. For a quick Swaging setup, [Speed]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }}) and [Mechanical press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }}) movement controls will be used as shown in Fig. 29.2.28. If user want to define other movement controls than these, then advanced radio button can be used by clicking ![]({{ '/assets/icons/pre_icons/mo_define_movement_button.jpg' | relative_url }}) button, these options can also be accessed by switching to Expert mode as shown in Fig. 29.2.29. For more information about these movement controls, please refer [15\. Movement Controls Definition]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image036.jpg' | relative_url }})
 
@@ -416,7 +416,7 @@ By clicking on this button, system automatically Positions the Objects with resp
 
   * **Positioning Objects![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})**
 
-By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as Drag, Offset, Interference, Flip and Rotational as shown in Fig. 29.2.31. For more information about these options, please refer [16.Object Positioning.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as Drag, Offset, Interference, Flip and Rotational as shown in Fig. 29.2.31. For more information about these options, please refer [16.Object Positioning.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image042.jpg' | relative_url }})
 
@@ -447,7 +447,7 @@ Inter object definition window in System mode
 
 Inter-Object definition window in user mode
 
-For more information please refer, [20.Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+For more information please refer, [20.Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
 ## Simulation preview
 
@@ -504,7 +504,7 @@ User has an option to select whether implicit solver to be used or explicit solv
 
 **Implicit:**
 
-Use RSE: RSE can be activated by turning on this checkbox. For more information on RSE please refer RSE[MO] under [16.Object properties.](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+Use RSE: RSE can be activated by turning on this checkbox. For more information on RSE please refer RSE[MO] under [16.Object properties.]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
 **Limiting Strain Rate** : The limiting strain rate (LMTSTR) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material.
 
@@ -513,7 +513,7 @@ Use RSE: RSE can be activated by turning on this checkbox. For more information 
 
 **Simulation controls in Expert Mode**
 
-Fig. 29.2.37. shows the Simulation Controls in Expert mode. For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Fig. 29.2.37. shows the Simulation Controls in Expert mode. For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image047.jpg' | relative_url }})
 
@@ -572,12 +572,12 @@ Workpiece cross section thickness
 
 **Related Topics:**
 
-[29.1. Cogging Setup](/docs/en/operation_templates/29_cogging/29_1_cogging_setup/)
+[29.1. Cogging Setup]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }})
 
-[Cogging Lab](/docs/en/labs/cogging_labs/cogging_lab1/)
+[Cogging Lab]({{ '/docs/en/labs/cogging_labs/cogging_lab1/' | relative_url }})
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Proces Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Proces Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})

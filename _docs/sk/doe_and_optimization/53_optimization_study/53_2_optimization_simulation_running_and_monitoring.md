@@ -83,6 +83,6 @@ Optimization Study runs in MO Post
 
 **Related Topics:**
 
-[53\. Introduction to Optimization](/docs/sk/doe_and_optimization/53_optimization_study/53_introduction_to_optimization/)
+[53\. Introduction to Optimization]({{ '/docs/sk/doe_and_optimization/53_optimization_study/53_introduction_to_optimization/' | relative_url }})
 
-[53.1. Optimization Setup](/docs/sk/doe_and_optimization/53_optimization_study/53_1_optimization_setup/)
+[53.1. Optimization Setup]({{ '/docs/sk/doe_and_optimization/53_optimization_study/53_1_optimization_setup/' | relative_url }})

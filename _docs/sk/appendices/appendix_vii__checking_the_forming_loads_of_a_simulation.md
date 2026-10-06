@@ -37,10 +37,10 @@ This should be of no surprise to anyone who designs tools are works in the metal
 
 **Related Topics:**
 
-[Material Properties](/docs/sk/pre_processor/10_material_data/10_material_data/)
+[Material Properties]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[Object Mesh](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/)
+[Object Mesh]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+[Simulation Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[Contact relations](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[Contact relations]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})

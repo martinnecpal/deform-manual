@@ -37,4 +37,4 @@ For element output option, state variables (stress, strain, and damage) are save
   
 RELATED TOPICS  
 ---  
-Keywords:[STRESS (2D)](/docs/en/keyword_documentation/s/stress/), [STRESS (3D)](/docs/en/keyword_documentation/s/stress_3d/) , [STRAIN (2D)](/docs/en/keyword_documentation/s/strain/), [STRAIN (3D)](/docs/en/keyword_documentation/s/strain_3d/), [DAMAGE (2D)](/docs/en/keyword_documentation/d/damage/), [DAMAGE (3D)](/docs/en/keyword_documentation/d/damage_3d/), , [GRNDAT](/docs/en/keyword_documentation/g/grndat/)
+Keywords:[STRESS (2D)]({{ '/docs/en/keyword_documentation/s/stress/' | relative_url }}), [STRESS (3D)]({{ '/docs/en/keyword_documentation/s/stress_3d/' | relative_url }}) , [STRAIN (2D)]({{ '/docs/en/keyword_documentation/s/strain/' | relative_url }}), [STRAIN (3D)]({{ '/docs/en/keyword_documentation/s/strain_3d/' | relative_url }}), [DAMAGE (2D)]({{ '/docs/en/keyword_documentation/d/damage/' | relative_url }}), [DAMAGE (3D)]({{ '/docs/en/keyword_documentation/d/damage_3d/' | relative_url }}), , [GRNDAT]({{ '/docs/en/keyword_documentation/g/grndat/' | relative_url }})

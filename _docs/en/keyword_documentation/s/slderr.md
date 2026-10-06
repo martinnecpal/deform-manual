@@ -29,4 +29,4 @@ Slave nodes which are in contact with a master surface, tend to slide along that
   
 RELATED TOPICS  
 ---  
-Non-Isothermal Deformation, [Inter-object contact](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/), [Step Parameters](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/) Keyword: [STPDEF](/docs/en/keyword_documentation/s/stpdef/)
+Non-Isothermal Deformation, [Inter-object contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}), [Step Parameters]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}) Keyword: [STPDEF]({{ '/docs/en/keyword_documentation/s/stpdef/' | relative_url }})

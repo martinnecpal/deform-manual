@@ -13,32 +13,32 @@ title: "16.7. Vlastnosti symetrie"
 
 Druhou položkou, ktorú musí používateľ zadať, sú plochy, ktoré majú navzájom vzťah rotačnej symetrie. Spôsob, akým sa to robí, je umiestnenie kontaktných okrajových podmienok na plochu, ktorá sa riadi pravidlom pravej ruky. Okrajovú podmienku možno aplikovať v okne Objekty, okrajové podmienky pomocou rozšírených okrajových podmienok. Používateľ musí vybrať plochu, ktorá sa riadi pravidlom pravej ruky, a aplikovať na ňu podmienky vlastného kontaktu. To umožní simulačnému motoru zistiť, na ktoré plochy sa vzťahuje podmienka rotačnej symetrie.
 
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_7_Symmetry_Properties/16_7_Image001.jpg)
+![]({{ '/assets/images/pre-processor/16_object_properties/16_7_symmetry_properties/16_7_image001.jpg' | relative_url }})
 
 Okno vlastností objektu rotačnej symetrie
 
 **Súvisiace témy:**
 
-[16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+[16\. Object properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[16.1. Deformation properties](/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/)
+[16.1. Deformation properties]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }})
 
-[16.2. Thermal properties](/docs/sk/pre_processor/16_object_properties/16_2_thermal_properties/)
+[16.2. Thermal properties]({{ '/docs/sk/pre_processor/16_object_properties/16_2_thermal_properties/' | relative_url }})
 
-[16.3. Reference](/docs/sk/pre_processor/16_object_properties/16_3_Reference/)
+[16.3. Reference]({{ '/docs/sk/pre_processor/16_object_properties/16_3_Reference/' | relative_url }})
 
-[16.4. Fracture Properties](/docs/sk/pre_processor/16_object_properties/16_4_Fracture_properties/)
+[16.4. Fracture Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_4_Fracture_properties/' | relative_url }})
 
-[16.5. Hardness Properties](/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/)
+[16.5. Hardness Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/' | relative_url }})
 
-[16.6. Heating Properties](/docs/sk/pre_processor/16_object_properties/16_6_heating_properties/)
+[16.6. Heating Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_6_heating_properties/' | relative_url }})
 
-[16.8. Body Force](/docs/sk/pre_processor/16_object_properties/16_8_body_force/)
+[16.8. Body Force]({{ '/docs/sk/pre_processor/16_object_properties/16_8_body_force/' | relative_url }})
 
-[16.9. RSE](/docs/sk/pre_processor/16_object_properties/16_9_rse/)
+[16.9. RSE]({{ '/docs/sk/pre_processor/16_object_properties/16_9_rse/' | relative_url }})
 
-[16.10. User](/docs/sk/pre_processor/16_object_properties/16_10_user/)
+[16.10. User]({{ '/docs/sk/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
 [3D-Geometry symmetry surface definition](../12_Geometry_Modelling/12_3_3d_geometry_data_defining.htm#Parallel_symmetry_planes)
 
-[3D-Mesh symmetry BCC definition](/docs/sk/pre_processor/14_Boundary_Conditions/14_1_symmetry_boundary_conditions/)
+[3D-Mesh symmetry BCC definition]({{ '/docs/sk/pre_processor/14_Boundary_Conditions/14_1_symmetry_boundary_conditions/' | relative_url }})

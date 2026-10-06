@@ -233,7 +233,7 @@ Výměna tepla BCC pre vytvorenie na základe geometrie tvaru vrtáka
 
 ## Ovládanie
 
-Pomocou funkcie „Umiestnenie objektov“ je možné nástroj umiestniť na základe rýchlosti posuvu a polohy obrobku. K dispozícii sú rôzne možnosti umiestnenia objektov, ako je znázornené na obr. 39.4.20. Ďalšie informácie o týchto možnostiach nájdete v dokumente [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+Pomocou funkcie „Umiestnenie objektov“ je možné nástroj umiestniť na základe rýchlosti posuvu a polohy obrobku. K dispozícii sú rôzne možnosti umiestnenia objektov, ako je znázornené na obr. 39.4.20. Ďalšie informácie o týchto možnostiach nájdete v dokumente [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0020.jpg' | relative_url }})
 
@@ -241,7 +241,7 @@ Možnosti umiestnenia objektov
 
 ## Opotrebenie nástrojov
 
-Používateľ môže zapnúť výpočet opotrebenia nástroja pomocou zaškrtávacieho políčka „**Definovať model na výpočet opotrebenia nástroja**“. Po zaškrtnutí tohto políčka môže používateľ vybrať model opotrebenia nástroja a definovať jeho parametre, ako je znázornené na obr. 39.4.21. Ďalšie informácie o týchto možnostiach nájdete v [20.4. Tool Wear.](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/).
+Používateľ môže zapnúť výpočet opotrebenia nástroja pomocou zaškrtávacieho políčka „**Definovať model na výpočet opotrebenia nástroja**“. Po zaškrtnutí tohto políčka môže používateľ vybrať model opotrebenia nástroja a definovať jeho parametre, ako je znázornené na obr. 39.4.21. Ďalšie informácie o týchto možnostiach nájdete v [20.4. Tool Wear.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0021.jpg' | relative_url }})
 
@@ -250,7 +250,7 @@ Stránka „Opotrebenie nástrojov“
 ## Kontakt
 
 Pre operáciu 3D rezania bude predvolene vybrané rádio tlačidlo „User“ a budú tiež predvolene definované vzťahy, ako je znázornené na obr. 39.4.22. Používateľ môže zmeniť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Používateľ môže kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) na výpočet tolerancie kontaktu. Používateľ môže kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) na vytvorenie vzťahu kontaktu. Používateľ môže zaškrtnúť políčko vedľa vzťahu kontaktu, aby definoval priliehavý kontakt.  
-Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0022.jpg' | relative_url }})
 
@@ -258,7 +258,7 @@ Stránka s kontaktnými údajmi
 
 ## Ovládanie krokov
 
-Používateľ môže nastaviť parametre krokov pomocou režimu s návodom (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})), ako je znázornené na obr. 39.4.23. Používateľ môže určiť počet krokov, veľkosť kroku a spôsob riadenia veľkosti kroku. K dispozícii je parameter „Hĺbka vŕtania“, vďaka čomu sa simulácia zastaví po dosiahnutí nastavenej hĺbky.Ak chce používateľ využiť pokročilé nastavenia simulácie, môže prejsť do režimu Expert (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})), ako je znázornené na obr. 39.4.24. Ďalšie informácie a popis možností v nastaveniach simulácie nájdete v [9.Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/). 
+Používateľ môže nastaviť parametre krokov pomocou režimu s návodom (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})), ako je znázornené na obr. 39.4.23. Používateľ môže určiť počet krokov, veľkosť kroku a spôsob riadenia veľkosti kroku. K dispozícii je parameter „Hĺbka vŕtania“, vďaka čomu sa simulácia zastaví po dosiahnutí nastavenej hĺbky.Ak chce používateľ využiť pokročilé nastavenia simulácie, môže prejsť do režimu Expert (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})), ako je znázornené na obr. 39.4.24. Ďalšie informácie a popis možností v nastaveniach simulácie nájdete v [9.Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_4_3d_drilling/image0023.jpg' | relative_url }})
 
@@ -283,10 +283,10 @@ Vytvoriť stránku databázy
   
 **Súvisiace témy:**
 
-[39 Introduction to Cutting](/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/)
+[39 Introduction to Cutting]({{ '/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/' | relative_url }})
 
-[39.1. 2D Cutting](/docs/en/operation_templates/39_cutting/39_1_2d_cutting/)
+[39.1. 2D Cutting]({{ '/docs/en/operation_templates/39_cutting/39_1_2d_cutting/' | relative_url }})
 
-[39.2. 3D Turning](/docs/en/operation_templates/39_cutting/39_2_3d_turning/)
+[39.2. 3D Turning]({{ '/docs/en/operation_templates/39_cutting/39_2_3d_turning/' | relative_url }})
 
-[39.3. 3D Milling](/docs/en/operation_templates/39_cutting/39_3_3d_milling/)
+[39.3. 3D Milling]({{ '/docs/en/operation_templates/39_cutting/39_3_3d_milling/' | relative_url }})

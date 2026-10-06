@@ -99,4 +99,4 @@ Applicable object types: [Plastic](../../pre_processor/11_general_object_data_de
   
 RELATED TOPICS  
 ---  
-Related keywords: [ELMNOD](/docs/en/keyword_documentation/e/elmnod/), [FRCMOD](/docs/en/keyword_documentation/f/frcmod/)
+Related keywords: [ELMNOD]({{ '/docs/en/keyword_documentation/e/elmnod/' | relative_url }}), [FRCMOD]({{ '/docs/en/keyword_documentation/f/frcmod/' | relative_url }})

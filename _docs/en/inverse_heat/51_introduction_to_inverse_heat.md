@@ -58,6 +58,6 @@ An overview of the inverse heat transfer wizard is as follows
   
 Inverse HT module is available for both 2D and 3D geometries, please refer
 
-[51.1. Inverse HT 2D manual](/docs/en/inverse_heat/51_1_2d_inverse_heat_manual/)
+[51.1. Inverse HT 2D manual]({{ '/docs/en/inverse_heat/51_1_2d_inverse_heat_manual/' | relative_url }})
 
-[51.2. Inverse HT 3D manual](/docs/en/inverse_heat/51_2_3d_inverse_heat_manual/)
+[51.2. Inverse HT 3D manual]({{ '/docs/en/inverse_heat/51_2_3d_inverse_heat_manual/' | relative_url }})

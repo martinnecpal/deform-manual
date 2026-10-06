@@ -44,4 +44,4 @@ It is an action keyword placed in Keyword and Master files that directs the prep
   
 RELATED TOPICS  
 ---  
-[Preprocessor](/docs/en/pre_processor/7_introduction_to_pre-processor/), [Multiple Operations](/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/)
+[Preprocessor]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }}), [Multiple Operations]({{ '/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }})

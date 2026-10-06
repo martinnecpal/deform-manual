@@ -38,4 +38,4 @@ ERECID defines the state variables in ERECVL. |  NRECID  |  State Variable
   
 RELATED TOPICS  
 ---  
-Related keywords: [ERECVL](/docs/sk/keyword_documentation/e/erecvl/)
+Related keywords: [ERECVL]({{ '/docs/sk/keyword_documentation/e/erecvl/' | relative_url }})

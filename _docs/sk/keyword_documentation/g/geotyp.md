@@ -34,4 +34,4 @@ Applicable simulation types: Heat Transfer Isothermal Deformation Non-Isothermal
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Geometry type](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\]), [Geometry](/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+Simulation Controls: [Geometry type](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\]), [Geometry]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }})

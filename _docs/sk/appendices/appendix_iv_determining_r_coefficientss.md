@@ -55,9 +55,9 @@ R. Hill. (1948). A theory of the yielding and plastic flow of anisotropic metals
 
 **Related Topics:**
 
-[Material Properties](/docs/sk/pre_processor/10_material_data/10_material_data/)
+[Material Properties]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[Yield function type](/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_yield_models/)
+[Yield function type]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_yield_models/' | relative_url }})
 
 [Hill’s quadratic (R value)](../pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_3_hill’s_quadratic_\(r\).htm)
 

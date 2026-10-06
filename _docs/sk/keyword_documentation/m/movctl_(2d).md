@@ -44,7 +44,7 @@ Movement controls can be applied to rigid objects and boundary nodes of meshed o
   
 RELATED TOPICS  
 ---  
-Keywords: [BCCDEF (2D)](/docs/sk/keyword_documentation/b/bccdef/), [BCCDEF (3D)](/docs/sk/keyword_documentation/b/bccdef_3d/)  
+Keywords: [BCCDEF (2D)]({{ '/docs/sk/keyword_documentation/b/bccdef/' | relative_url }}), [BCCDEF (3D)]({{ '/docs/sk/keyword_documentation/b/bccdef_3d/' | relative_url }})  
   
 Load Controlled (Type=0)
 

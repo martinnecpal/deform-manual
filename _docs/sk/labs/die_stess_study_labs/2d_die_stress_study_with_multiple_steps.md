@@ -66,11 +66,11 @@ In a multiple step die stress study, if the object requires positioning, then th
   * If the object is not part of the nominal setup and is not within the bounding box of the any of the nominal setup objects and requires positioning, then user needs to turn on Need positioning check box and select the object from the nominal setup with which the current object makes contact or follow as Following object. We should also turn on the Not original object checkbox. When user turns on the Not original object check box for an object, then the force interpolation will not be executed onto that object.
 
   
-We will be using Stub Shaft project generated during [Lab 25 Stub Shaft](/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/) in MO Basic Labs to setup the Die Stress Study at multiple steps.
+We will be using Stub Shaft project generated during [Lab 25 Stub Shaft]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/' | relative_url }}) in MO Basic Labs to setup the Die Stress Study at multiple steps.
 
 ## Setup the Nominal project
 
-Setup the [Lab 25 Stub Shaft](/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/) in MO Basic Labs. After the completion of the simulation, switch to ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) tab. (See Fig. 2DDSL2.2.)
+Setup the [Lab 25 Stub Shaft]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/' | relative_url }}) in MO Basic Labs. After the completion of the simulation, switch to ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) tab. (See Fig. 2DDSL2.2.)
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0001.jpg' | relative_url }})
 
@@ -231,6 +231,6 @@ Effective Stress distribution at the end of last step of die stress analysis in 
 
 Maximum Principal Stress distribution at the end of last step of die stress analysis in Cone operation
 
-[2D Die Stress Study with Single step](/docs/sk/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/)
+[2D Die Stress Study with Single step]({{ '/docs/sk/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/' | relative_url }})
 
-[49.1. 2D Die Stress Study](/docs/sk/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/)
+[49.1. 2D Die Stress Study]({{ '/docs/sk/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/' | relative_url }})

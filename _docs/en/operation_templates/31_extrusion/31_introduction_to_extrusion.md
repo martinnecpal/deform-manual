@@ -21,4 +21,4 @@ Extrusion setup
 
 **Related Topics:**
 
-[31.1. 3D Extrusion](/docs/en/operation_templates/31_extrusion/31_1_3d_extrusion/)
+[31.1. 3D Extrusion]({{ '/docs/en/operation_templates/31_extrusion/31_1_3d_extrusion/' | relative_url }})

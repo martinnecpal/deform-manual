@@ -25,11 +25,11 @@ Ponuka možností postprocesora
 
 ## **Životné prostredie**
 
-Používateľ môže prispôsobiť pracovné prostredie programu DEFORM pomocou možnosti „Prostredie“. Tu môže používateľ vykonávať zmeny v nastaveniach zobrazenia a grafických nastaveniach a môže si tieto nastavenia uložiť podľa vlastných potrieb. Nastavenia sa uplatnia od nasledujúcej relácie. Ďalšie informácie týkajúce sa prostredia nájdete v kapitole [8\. Pre-Processor Layout](/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/), v časti [Environment](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Environment).
+Používateľ môže prispôsobiť pracovné prostredie programu DEFORM pomocou možnosti „Prostredie“. Tu môže používateľ vykonávať zmeny v nastaveniach zobrazenia a grafických nastaveniach a môže si tieto nastavenia uložiť podľa vlastných potrieb. Nastavenia sa uplatnia od nasledujúcej relácie. Ďalšie informácie týkajúce sa prostredia nájdete v kapitole [8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}), v časti [Environment](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Environment).
 
 ## Nastavenia
 
-Poskytuje informácie o zobrazení a typoch objektov v geometriách. V tejto možnosti môže používateľ upraviť zobrazenie objektov v grafickom okne. Ďalšie informácie týkajúce sa prostredia nájdete v kapitole [8\. Pre-Processor Layout](/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/), v časti [Preference](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Preferences).
+Poskytuje informácie o zobrazení a typoch objektov v geometriách. V tejto možnosti môže používateľ upraviť zobrazenie objektov v grafickom okne. Ďalšie informácie týkajúce sa prostredia nájdete v kapitole [8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}), v časti [Preference](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Preferences).
 
 ## Vlastnosti zobrazenia ![]({{ '/assets/icons/post_icons/mo_display_properties_icon.jpg' | relative_url }})
 
@@ -91,6 +91,6 @@ Prevádzanie jednotiek
 
 **Súvisiace témy:**
 
-[8\. Pre-Processor Layout](/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/)
+[8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }})
 
-[26.2. Viewports and Windows menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/)
+[26.2. Viewports and Windows menu]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/' | relative_url }})

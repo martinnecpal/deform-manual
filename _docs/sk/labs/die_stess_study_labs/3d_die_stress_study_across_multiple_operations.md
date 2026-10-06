@@ -23,7 +23,7 @@ In a multiple step die stress study, if the object requires positioning, then th
 
   * If the object is not part of the nominal setup and is not within the bounding box of the any of the nominal setup objects and requires positioning, then user needs to turn on Need positioning check box and select the object from the nominal setup with which the current object makes contact or follow as Following object. We should also turn on the Not original object checkbox. When user turns on the Not original object check box for an object, then the force interpolation will not be executed onto that object.
 
-We will be using Stub Shaft project generated during [Lab 05 Stub Shaft](/docs/sk/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/) in MO Basic Labs to setup the Die Stress Study at multiple steps.
+We will be using Stub Shaft project generated during [Lab 05 Stub Shaft]({{ '/docs/sk/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/' | relative_url }}) in MO Basic Labs to setup the Die Stress Study at multiple steps.
 
   
 3.1. Setup the Nominal project
@@ -68,7 +68,7 @@ We will be using Stub Shaft project generated during [Lab 05 Stub Shaft](/docs/s
 
 ## Setup the Nominal project
 
-Setup the [Lab 05 Stub Shaft in MO Basic Labs](/docs/sk/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/). After the completion of the simulation switch to ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) tab. (See Fig. 3DDSL3.2.)
+Setup the [Lab 05 Stub Shaft in MO Basic Labs]({{ '/docs/sk/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/' | relative_url }}). After the completion of the simulation switch to ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) tab. (See Fig. 3DDSL3.2.)
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/3d_die_stress_study_with_multiple_step/image0001.jpg' | relative_url }})
 

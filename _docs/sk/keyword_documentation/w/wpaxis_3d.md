@@ -38,7 +38,7 @@ WPAXIS AxisType =0 (or =2) specifies the revolving mesh information used in ring
   
 RELATED TOPICS  
 ---  
-Related keywords: [MASDEN](/docs/sk/keyword_documentation/m/masden/), [FPERV (3D)](/docs/sk/keyword_documentation/f/fperv_3d/)  
+Related keywords: [MASDEN]({{ '/docs/sk/keyword_documentation/m/masden/' | relative_url }}), [FPERV (3D)]({{ '/docs/sk/keyword_documentation/f/fperv_3d/' | relative_url }})  
   
 Revolving / Rotation Sweep (AxisType = 0, 2)
 
@@ -314,7 +314,7 @@ The O-Vector represents the translation of the object. The X-Vector and Y-Vector
   
 RELATED TOPICS  
 ---  
-Related keywords: [OBJPOS (3D)](/docs/sk/keyword_documentation/o/objpos_3d/)  
+Related keywords: [OBJPOS (3D)]({{ '/docs/sk/keyword_documentation/o/objpos_3d/' | relative_url }})  
   
 (AxisType = 9, Brick Mesh) (Extrude type)
 
@@ -413,4 +413,4 @@ This WPAXIS type stores the parameters used to generate brick meshes.
   
 RELATED TOPICS  
 ---  
-Related keywords: [DEFAMG](/docs/sk/keyword_documentation/d/defamg/), [REMESH](/docs/sk/keyword_documentation/r/remesh/)
+Related keywords: [DEFAMG]({{ '/docs/sk/keyword_documentation/d/defamg/' | relative_url }}), [REMESH]({{ '/docs/sk/keyword_documentation/r/remesh/' | relative_url }})

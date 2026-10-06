@@ -29,4 +29,4 @@ PENINF is needed to numerically model physical contact between deforming objects
   
 RELATED TOPICS  
 ---  
-Node penetration, [Inter-object contact](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) Keywords: [PENVOL (2D)](/docs/en/keyword_documentation/p/penvol/), [PENVOL (3D)](/docs/en/keyword_documentation/p/penvol_3d/)
+Node penetration, [Inter-object contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}) Keywords: [PENVOL (2D)]({{ '/docs/en/keyword_documentation/p/penvol/' | relative_url }}), [PENVOL (3D)]({{ '/docs/en/keyword_documentation/p/penvol_3d/' | relative_url }})

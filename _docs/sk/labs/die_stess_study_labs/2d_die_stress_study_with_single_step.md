@@ -7,7 +7,7 @@ title: "2D Die Stress Study with Single step"
 
 Die Stress analysis can be setup using Die Stress study or Die Stress operation. Die Stress operation can be used to setup Die Stress analysis in batch mode, the operation picks the last step from the previous operation for analysis.
 
-We will be using Stub Shaft project generated during [Lab 25 Stub Shaft](/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/) in MO Basic Labs, to setup the Die stress study. In this lab, we will be performing Die stress study at a step where we observe maximum load in Cone and Head operations. Since we need to analyse two different steps from two different operations, we will be using Die Stress Study for each of it independently. In a typical die stress simulation, workpiece is removed and then forces exerted onto the dies by the workpiece are interpolated onto the tools. 
+We will be using Stub Shaft project generated during [Lab 25 Stub Shaft]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/' | relative_url }}) in MO Basic Labs, to setup the Die stress study. In this lab, we will be performing Die stress study at a step where we observe maximum load in Cone and Head operations. Since we need to analyse two different steps from two different operations, we will be using Die Stress Study for each of it independently. In a typical die stress simulation, workpiece is removed and then forces exerted onto the dies by the workpiece are interpolated onto the tools. 
 
 1.1. Setup the Nominal project
 
@@ -93,7 +93,7 @@ We will be using Stub Shaft project generated during [Lab 25 Stub Shaft](/docs/s
 
 ## Setup the Nominal project
 
-Setup the[ Lab 25 Stub Shaft](/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/) in MO Basic Labs. Switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) and plot Load-stroke curve, see Fig. 2DDSL1.1, we can observe that Load is maximum at the last step of Cone and Head operations. We will now execute Die Stress analysis at the last step of the Cone operation. Switch to ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) tab to add Die Stress study operation. 
+Setup the[ Lab 25 Stub Shaft]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/' | relative_url }}) in MO Basic Labs. Switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) and plot Load-stroke curve, see Fig. 2DDSL1.1, we can observe that Load is maximum at the last step of Cone and Head operations. We will now execute Die Stress analysis at the last step of the Cone operation. Switch to ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) tab to add Die Stress study operation. 
 
   
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/image0001.jpg' | relative_url }})
@@ -380,4 +380,4 @@ Maximum Principal Stress distribution at last step in Dies of Cone operation.
 
 [2D Die Stress Study with Single step]()
 
-[49.1. 2D Die Stress Study](/docs/sk/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/)
+[49.1. 2D Die Stress Study]({{ '/docs/sk/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/' | relative_url }})

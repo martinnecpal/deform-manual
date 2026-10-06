@@ -101,4 +101,4 @@ Operation editor for example2
 
 **Related Topics:**
 
-[6.1. Integrated Manufacturing Porcess (MO) Pre-processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Porcess (MO) Pre-processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})

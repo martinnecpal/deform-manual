@@ -69,4 +69,4 @@ Select the Generate DB in operation tree and click on ![]({{ '/assets/icons/pre_
 
 The workpiece at this point will be the input for the second operation. Factors such as accurate shape, strain (work hardening), damage, metal flow, temperature distribution (when calculated) and other information will be retained.
 
-Click on [Lab 3. Sequential 3D forge operation](/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab3/) to setup Lab3
+Click on [Lab 3. Sequential 3D forge operation]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab3/' | relative_url }}) to setup Lab3

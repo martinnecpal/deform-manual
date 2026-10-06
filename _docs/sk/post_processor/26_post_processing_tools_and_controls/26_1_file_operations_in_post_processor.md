@@ -45,19 +45,19 @@ Vyskakovacie okno „Nastavenie obrázku“
 
 **Ukončiť** (Ctrl+Q): Slúži na ukončenie postprocesora.
 
-Informácie o možnostiach v **ponuke Viewport** a **ponuke Windows****** nájdete v kapitole [26.2. Viewports and Windows Menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/).
+Informácie o možnostiach v **ponuke Viewport** a **ponuke Windows****** nájdete v kapitole [26.2. Viewports and Windows Menu]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/' | relative_url }}).
 
-Informácie o možnostiach **Ponuka „Display“**** a **Ponuka „Mouse“**** nájdete v kapitole [26.3. Object Display Controls](/docs/en/post_processor/26_post_processing_tools_and_controls/26_3_object_display_controls/).
+Informácie o možnostiach **Ponuka „Display“**** a **Ponuka „Mouse“**** nájdete v kapitole [26.3. Object Display Controls]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_3_object_display_controls/' | relative_url }}).
 
-Informácie o možnostiach v **ponuke „Kroky“** nájdete v kapitole [ 26.4. Simulation Step Display Controls](/docs/en/post_processor/26_post_processing_tools_and_controls/26_4_simulation_step_display_controls/)
+Informácie o možnostiach v **ponuke „Kroky“** nájdete v kapitole [ 26.4. Simulation Step Display Controls]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_4_simulation_step_display_controls/' | relative_url }})
 
-Informácie o možnostiach v **ponuke „Options“** nájdete v kapitole [26.5. PostProcessing Options Menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/)
+Informácie o možnostiach v **ponuke „Options“** nájdete v kapitole [26.5. PostProcessing Options Menu]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/' | relative_url }})
 
-Informácie o možnostiach v **ponuke Nástroje** nájdete v kapitole [26.6. Post Processing tools](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/)
+Informácie o možnostiach v **ponuke Nástroje** nájdete v kapitole [26.6. Post Processing tools]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/' | relative_url }})
 
-Informácie o možnostiach v **ponuke „Sekcie“** a **ponuke „Správa“** nájdete v [27\. Introduction to Report Generation](/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/)
+Informácie o možnostiach v **ponuke „Sekcie“** a **ponuke „Správa“** nájdete v [27\. Introduction to Report Generation]({{ '/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/' | relative_url }})
 
-Informácie o možnostiach v **Dock****Widgets****menu** nájdete v kapitole [25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/), v časti [25.5. Dock Widget menu](../25_post_processor_layout/25_post_processor_layout.htm#25_5_Dock_Widget_menu)
+Informácie o možnostiach v **Dock****Widgets****menu** nájdete v kapitole [25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }}), v časti [25.5. Dock Widget menu](../25_post_processor_layout/25_post_processor_layout.htm#25_5_Dock_Widget_menu)
 
 ## Práca s databázou v režime PIP
 
@@ -105,14 +105,14 @@ Možnosť objednávky pre PIP DB
 
 **Súvisiace témy:**
 
-[25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})
 
-[26.2. Viewports and Windows Menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/)
+[26.2. Viewports and Windows Menu]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/' | relative_url }})
 
-[26.3. Object Display Controls](/docs/en/post_processor/26_post_processing_tools_and_controls/26_3_object_display_controls/)
+[26.3. Object Display Controls]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_3_object_display_controls/' | relative_url }})
 
-[26.4. Simulation Step Display Controls](/docs/en/post_processor/26_post_processing_tools_and_controls/26_4_simulation_step_display_controls/)
+[26.4. Simulation Step Display Controls]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_4_simulation_step_display_controls/' | relative_url }})
 
-[26.5. PostProcessing Options Menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/)
+[26.5. PostProcessing Options Menu]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/' | relative_url }})
 
-[26.6. Post Processing tools](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/)
+[26.6. Post Processing tools]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/' | relative_url }})

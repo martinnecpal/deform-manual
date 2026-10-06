@@ -13,12 +13,12 @@ Medziobjektové vykurovacie okno
 
 **Súvisiace témy:**
 
-[20\. Inter-Object Data Definition](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/)
+[20\. Inter-Object Data Definition]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }})
 
-[20.1. Friction and Contact criteria](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/)
+[20.1. Friction and Contact criteria]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }})
 
-[20.2. Interface Thermal Data](/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/)
+[20.2. Interface Thermal Data]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }})
 
-[20.4. Tool Wear](/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/)
+[20.4. Tool Wear]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }})
 
-[20.5. Rigid Contact](/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/)
+[20.5. Rigid Contact]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }})

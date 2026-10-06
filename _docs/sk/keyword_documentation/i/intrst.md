@@ -42,4 +42,4 @@ Applicable object types: [Rigid](../../pre_processor/11_general_object_data_defi
   
 RELATED TOPICS  
 ---  
-[Inter-Object Conditions](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/):Heating Keyword: [CNTACT (2D)](/docs/sk/keyword_documentation/c/cntact/), [CNTACT (3D)](/docs/sk/keyword_documentation/c/cntact_3d/)
+[Inter-Object Conditions]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}):Heating Keyword: [CNTACT (2D)]({{ '/docs/sk/keyword_documentation/c/cntact/' | relative_url }}), [CNTACT (3D)]({{ '/docs/sk/keyword_documentation/c/cntact_3d/' | relative_url }})

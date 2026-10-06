@@ -15,7 +15,7 @@ title: "12.1. Definovanie 2D geometrických údajov"
 
 Stránka 2D geometrie je znázornená na nasledujúcom obrázku 12.1.1.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image003.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_1_2d_geometry_data_defining/12_1_image003.jpg' | relative_url }})
 
 2D geometria stránka
 
@@ -51,35 +51,35 @@ Nástroje s tesnou vôľou by sa mali ťahať tak, aby sa mierne prekrývali. Ak
 
 ## Nástroje 2D geometrie
 
-**Definovanie primitív** ![](../../../assets/Icons/Pre_icons/MO_Define_Primitive_label.jpg): Na stránke všeobecnej geometrie je teraz k dispozícii päť primitívnych tvarov, ktoré možno použiť na generovanie geometrie, ako je vidieť na obr. 12.1.2 a obr. 12.1.3. V každom prípade musí používateľ definovaním rozmerov vhodne prispôsobiť mierku problému.
+**Definovanie primitív** ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}): Na stránke všeobecnej geometrie je teraz k dispozícii päť primitívnych tvarov, ktoré možno použiť na generovanie geometrie, ako je vidieť na obr. 12.1.2 a obr. 12.1.3. V každom prípade musí používateľ definovaním rozmerov vhodne prispôsobiť mierku problému.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image004.JPG)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_1_2d_geometry_data_defining/12_1_image004.jpg' | relative_url }})
 
 Možnosti 2D osovo symetrických a torzných geoprimitívov
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image005.JPG)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_1_2d_geometry_data_defining/12_1_image005.jpg' | relative_url }})
 
 2D rovinná deformácia a napätie Geo Primitívne možnosti
 
-**Škálovanie geometrie**![](../../../assets/Icons/Pre_icons/MO_Scale_label.jpg) **:** Geometriu možno škálovať v Preprocesore zadaním faktora škálovania. (Pozri obr. 12.1.4.) Faktor škálovania možno vypočítať podľa teplotného rozdielu a údajov o materiáli závislých od teploty a škálovanú geometriu možno uložiť vo formátoch na ukladanie geometrie.
+**Škálovanie geometrie**![]({{ '/assets/icons/pre_icons/mo_scale_label.jpg' | relative_url }}) **:** Geometriu možno škálovať v Preprocesore zadaním faktora škálovania. (Pozri obr. 12.1.4.) Faktor škálovania možno vypočítať podľa teplotného rozdielu a údajov o materiáli závislých od teploty a škálovanú geometriu možno uložiť vo formátoch na ukladanie geometrie.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image001.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_1_2d_geometry_data_defining/12_1_image001.jpg' | relative_url }})
 
 Možnosti škálovania geometrie
 
-**Rozhranie CAD** ![](../../../assets/Icons/Pre_icons/MO_CAD_Interface_Label.jpg)**:** Pomocou tejto možnosti môže používateľ importovať súbor CAD s geometriou priamo pre Soildworks.
+**Rozhranie CAD** ![]({{ '/assets/icons/pre_icons/mo_cad_interface_label.jpg' | relative_url }})**:** Pomocou tejto možnosti môže používateľ importovať súbor CAD s geometriou priamo pre Soildworks.
 
-**Konštrukcia odčítaním**![](../../../assets/Icons/Pre_icons/MO_Construct_by_substraction_button.jpg) **:** Táto možnosť sa používa na vytvorenie geometrie odčítaním geometrie iných už prítomných objektov. Tu je potrebné zadať počiatočný bod, šírku a výšku geometrie objektu, od ktorej sa majú ostatné geometrie odčítať, ako je znázornené na obrázku (pozri obr. 12.1.5).
+**Konštrukcia odčítaním**![]({{ '/assets/icons/pre_icons/mo_construct_by_substraction_button.jpg' | relative_url }}) **:** Táto možnosť sa používa na vytvorenie geometrie odčítaním geometrie iných už prítomných objektov. Tu je potrebné zadať počiatočný bod, šírku a výšku geometrie objektu, od ktorej sa majú ostatné geometrie odčítať, ako je znázornené na obrázku (pozri obr. 12.1.5).
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image006.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_1_2d_geometry_data_defining/12_1_image006.jpg' | relative_url }})
 
 Konštrukcia pomocou okna Odčítať
 
-**Kontrola geometrie** ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg)
+**Kontrola geometrie** ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})
 
-Po vytvorení geometrie objektu sa aktivuje tlačidlo Check GEO. Je potrebné skontrolovať orientáciu geometrie. To možno vykonať kliknutím na tlačidlo ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg)objaví sa vyskakovacie okno, ako je znázornené na nasledujúcom obr. 12.1.6. Geometria sa opraví, keď klikneme na tlačidlo check & correct geometry (Skontrolovať a opraviť geometriu).
+Po vytvorení geometrie objektu sa aktivuje tlačidlo Check GEO. Je potrebné skontrolovať orientáciu geometrie. To možno vykonať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})objaví sa vyskakovacie okno, ako je znázornené na nasledujúcom obr. 12.1.6. Geometria sa opraví, keď klikneme na tlačidlo check & correct geometry (Skontrolovať a opraviť geometriu).
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image002.JPG)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_1_2d_geometry_data_defining/12_1_image002.jpg' | relative_url }})
 
 Kontrola okna možností geometrie v režime 2D
 
@@ -107,21 +107,21 @@ Nápravné opatrenia, ktoré sa majú prijať pre geometriu DEFORM 2D
 
 **Odstrániť kolineárne body:** Keď používateľ začiarkne políčko Odstrániť kolineárne body, odstránia sa kolineárne body prítomné v geometrii.
 
-**Reverse**![](../../../assets/Icons/Pre_icons/MO_Reverse_label.jpg) : Táto funkcia mení orientáciu geometrie. Orientácia 2D geometrie musí byť v prípade geometrie s jednou slučkou vždy vnútri, v prípade geometrie s viacerými slučkami môže mať slučka, ktorá sa delí o dve oblasti, orientáciu na oboch stranách, ale musí byť definovaná topológia.
+**Reverse**![]({{ '/assets/icons/pre_icons/mo_reverse_label.jpg' | relative_url }}) : Táto funkcia mení orientáciu geometrie. Orientácia 2D geometrie musí byť v prípade geometrie s jednou slučkou vždy vnútri, v prípade geometrie s viacerými slučkami môže mať slučka, ktorá sa delí o dve oblasti, orientáciu na oboch stranách, ale musí byť definovaná topológia.
 
-**Edit**![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) : Táto funkcia pomáha upravovať hranice 2D objektu. Okno na úpravu geometrie sa používa na vytvorenie, úpravu alebo zobrazenie geometrie daného objektu. Okno sa zobrazí po výbere ![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) v okne Geometria. Pozri [Chapter 12.2. 2D Geometry Editing.](/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+**Edit**![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) : Táto funkcia pomáha upravovať hranice 2D objektu. Okno na úpravu geometrie sa používa na vytvorenie, úpravu alebo zobrazenie geometrie daného objektu. Okno sa zobrazí po výbere ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) v okne Geometria. Pozri [Chapter 12.2. 2D Geometry Editing.]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }})
 
-**Extraktovať hranicu**![](../../../assets/Icons/Pre_icons/MO_Extract_border_button.jpg) : Táto funkcia extrahuje geometrické údaje z aktuálnej databázy pre všetky typy objektov okrem tuhého objektu.
+**Extraktovať hranicu**![]({{ '/assets/icons/pre_icons/mo_extract_border_button.jpg' | relative_url }}) : Táto funkcia extrahuje geometrické údaje z aktuálnej databázy pre všetky typy objektov okrem tuhého objektu.
 
-**Extract from Mesh**![](../../../assets/Icons/Pre_icons/MO_Extract_From_mesh.jpg) : Táto funkcia extrahuje geometriu zo siete.
+**Extract from Mesh**![]({{ '/assets/icons/pre_icons/mo_extract_from_mesh.jpg' | relative_url }}) : Táto funkcia extrahuje geometriu zo siete.
 
 **Zobraziť geometriu vnútri značky** : Začiarknutím tejto možnosti sa zapne zobrazenie orientácie geometrie.
 
-**Odstránenie geometrie :** Pomocou možnosti Odstrániť ![](../../../assets/Icons/Pre_icons/MO_clear_icon.jpg) sa odstráni geometria objektu.
+**Odstránenie geometrie :** Pomocou možnosti Odstrániť ![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}) sa odstráni geometria objektu.
 
 ## Načítanie a ukladanie údajov 2D geometrie
 
-**Importovanie geometrie :** Geometriu možno importovať zo súboru ![](../../../assets/Icons/Pre_icons/MO_Import_file_icon.jpg) alebo Načítať geometriu z knižnice ![](../../../assets/Icons/Pre_icons/MO_Load_from_Library_icon.jpg), z natívneho grafického súboru DEFORM (AMGGEO), zo súboru s kľúčovými slovami, z databázového súboru alebo vytvoriť pomocou editora geometrie. Pri importovaní súborov IGES alebo dxf vyberte pomocou myši objekt, ktorý chcete importovať. Kliknite na ľubovoľnú úsečku v objekte. Všetky segmenty pripojené k tomuto objektu budú tiež vybrané a zvýraznené.
+**Importovanie geometrie :** Geometriu možno importovať zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo Načítať geometriu z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), z natívneho grafického súboru DEFORM (AMGGEO), zo súboru s kľúčovými slovami, z databázového súboru alebo vytvoriť pomocou editora geometrie. Pri importovaní súborov IGES alebo dxf vyberte pomocou myši objekt, ktorý chcete importovať. Kliknite na ľubovoľnú úsečku v objekte. Všetky segmenty pripojené k tomuto objektu budú tiež vybrané a zvýraznené.
 
 **Vstup vo formáte AMGGEO [2D]**
 
@@ -133,11 +133,11 @@ Na výber objektu, ktorý sa má importovať, je potrebné použiť myš, aj ke�
 
 **Priradenie názvu súboru k názvu objektu pri načítaní geometrie** : Keď používateľ začiarkne túto možnosť pri načítaní alebo importovaní súboru geometrie, priradí názov súboru geometrie k názvu objektu.
 
-**Uloženie geometrie :** Uloží geometriu do súboru ![](../../../assets/Icons/Pre_icons/MO_Save_to_a_file_icon.jpg) alebo do knižnice ![](../../../assets/Icons/Pre_icons/MO_Save_to_Library_icon.jpg). Ukladá geometriu vo formátoch IGES, DXF a DEFORM natívneho formátu GEO pre 2D.
+**Uloženie geometrie :** Uloží geometriu do súboru ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) alebo do knižnice ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). Ukladá geometriu vo formátoch IGES, DXF a DEFORM natívneho formátu GEO pre 2D.
 
-## Nastavenia ![](../../../assets/Icons/Pre_icons/MO_Settings_icon.jpg)
+## Nastavenia ![]({{ '/assets/icons/pre_icons/mo_settings_icon.jpg' | relative_url }})
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image007.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_1_2d_geometry_data_defining/12_1_image007.jpg' | relative_url }})
 
 Okno nastavení 2D geometrie
 
@@ -145,10 +145,10 @@ Okno nastavení 2D geometrie
 
 **Počet bodov diskretizácie:**
 
-[12\. Geometry Modelling](/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/)
+[12\. Geometry Modelling]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})
 
-[12.2. 2D Geometry data Editing](/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+[12.2. 2D Geometry data Editing]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }})
 
-[12.3. 3D Geometry data Defining](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+[12.3. 3D Geometry data Defining]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
-[12.4. 3D Geometry data Editing (GEO TOOL)](/docs/sk/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_Editing_geo_toolL/)
+[12.4. 3D Geometry data Editing (GEO TOOL)]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_Editing_geo_toolL/' | relative_url }})

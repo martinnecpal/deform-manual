@@ -23,8 +23,8 @@ Merging operation for workpiece
 
 **Related Topics:**
 
-[18\. Object Manipulation Tools](/docs/en/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/)
+[18\. Object Manipulation Tools]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/' | relative_url }})
 
-[18.1 Boolean Operation](/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/)
+[18.1 Boolean Operation]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }})
 
-[18.2. Slicing](/docs/en/pre_processor/18_object_manipulation_tools/18_2_slicing/)
+[18.2. Slicing]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_2_slicing/' | relative_url }})

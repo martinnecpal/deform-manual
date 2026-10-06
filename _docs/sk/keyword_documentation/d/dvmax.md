@@ -30,4 +30,4 @@ DVMAX is one of several parameters used to control the size of time steps. Other
   
 RELATED TOPICS  
 ---  
-[Step Definition](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/) Keywords: [DSMAX](/docs/sk/keyword_documentation/d/dsmax/), [DTMAX](/docs/sk/keyword_documentation/d/dtmax/), [DVMAX](), [SLDERR](/docs/sk/keyword_documentation/s/slderr/), [STPDEF](/docs/sk/keyword_documentation/s/stpdef/)
+[Step Definition]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}) Keywords: [DSMAX]({{ '/docs/sk/keyword_documentation/d/dsmax/' | relative_url }}), [DTMAX]({{ '/docs/sk/keyword_documentation/d/dtmax/' | relative_url }}), [DVMAX](), [SLDERR]({{ '/docs/sk/keyword_documentation/s/slderr/' | relative_url }}), [STPDEF]({{ '/docs/sk/keyword_documentation/s/stpdef/' | relative_url }})

@@ -46,4 +46,4 @@ This keyword works in conjunction with ECCDEF to define the pressure and frictio
   
 RELATED TOPICS  
 ---  
-[Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/): Advanced Deformation Keywords: [ECCDEF (2D)](/docs/sk/keyword_documentation/e/eccdef/), [ECCDEF (3D)](/docs/sk/keyword_documentation/e/eccdef_3d/)
+[Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}): Advanced Deformation Keywords: [ECCDEF (2D)]({{ '/docs/sk/keyword_documentation/e/eccdef/' | relative_url }}), [ECCDEF (3D)]({{ '/docs/sk/keyword_documentation/e/eccdef_3d/' | relative_url }})

@@ -9,4 +9,4 @@ Booleovský operátor sa používa na odstránenie nežiaducej časti objektu al
 
 **Súvisiace témy:**
 
-[45.1. Boolean Operator](/docs/en/operation_templates/45_boolean_operation/45_1_boolean_operation/)
+[45.1. Boolean Operator]({{ '/docs/en/operation_templates/45_boolean_operation/45_1_boolean_operation/' | relative_url }})

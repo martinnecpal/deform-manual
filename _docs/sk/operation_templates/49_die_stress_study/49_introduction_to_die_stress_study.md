@@ -35,8 +35,8 @@ Operáciu „Die Stress Study“ môžeme nastaviť v sprievodcovi MO. Nižšie 
 
 **Súvisiace témy:**
 
-[49.1. 2D Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/)
+[49.1. 2D Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/' | relative_url }})
 
-[49.2. 3D Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/)
+[49.2. 3D Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/' | relative_url }})
 
-[Die Stress Study Labs](/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
+[Die Stress Study Labs]({{ '/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/' | relative_url }})

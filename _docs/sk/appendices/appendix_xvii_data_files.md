@@ -115,7 +115,7 @@ Line 1: 2
 
 Line 2: Bulk modulus of lubricant (MPa or Ksi)
 
-Refer [Appendix XVI: Adding Gas Trap Calculation to a Simulation for more information](/docs/sk/appendices/appendix_xvi_adding_gas_trap_calculation_to_a_simulation/).
+Refer [Appendix XVI: Adding Gas Trap Calculation to a Simulation for more information]({{ '/docs/sk/appendices/appendix_xvi_adding_gas_trap_calculation_to_a_simulation/' | relative_url }}).
 
 ## LAY.DAT
 
@@ -145,7 +145,7 @@ If the concave angle is between A1 and A2,the additional constraint is applied.
 
 Adding Constraint to Concave Surface
 
-Refer [Appendix XV: The Double Concave Corner Constraint](/docs/sk/appendices/appendix_xv_the_double_concave_corner_constraint/) for more information.
+Refer [Appendix XV: The Double Concave Corner Constraint]({{ '/docs/sk/appendices/appendix_xv_the_double_concave_corner_constraint/' | relative_url }}) for more information.
 
 ## PKVEL.DAT
 

@@ -191,7 +191,7 @@ Assigning material to workpiece
 
 ### Defining Workpiece BCC
 
-In Boundary conditions page, user can assign various boundary constraints to an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. Commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer and Contact between objects in the model. Depending on the “Process” selection and “Simulation setup”, system generates default BCC for non-isothermal process and with contacting objects. Fig. 48.2.12. shows various BCC that can be assigned to an object. For more information please go through the [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/). 
+In Boundary conditions page, user can assign various boundary constraints to an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. Commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer and Contact between objects in the model. Depending on the “Process” selection and “Simulation setup”, system generates default BCC for non-isothermal process and with contacting objects. Fig. 48.2.12. shows various BCC that can be assigned to an object. For more information please go through the [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_2_flow_forming/image0007.jpg' | relative_url }})
 
@@ -233,7 +233,7 @@ User can assign the material from the list on load from Library similar to 48.2.
 
 ### Generating Mandrel BCC
 
-Depending on the “Simulation setup” and “Solver” selection system generates BCC automatically. “Heat exchange with Environment” and “Contact” BCC are commonly used BCC, for more information refer [14\. BCC Controls](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+Depending on the “Simulation setup” and “Solver” selection system generates BCC automatically. “Heat exchange with Environment” and “Contact” BCC are commonly used BCC, for more information refer [14\. BCC Controls]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ### Reference point setup for Mandrel
 
@@ -267,9 +267,9 @@ Roll Orientation Page – Orientation Angle
 
 ## Pass table
 
-Flow forming process may involve single pass or multiple passes, user can define the multi pass and multi roll movement data using “Pass Table” as shown in the Fig. 48.2.18. When we click on the button we will get the Roll movement controls as shown in the [Fig. 48.2.19.](48_1_spinning_manual.htm#Fig_48_1_19__Roll_Movement_Controls) The user can define the Translation movement using the [Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/) and [Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/) type. For the [Rotation movement](/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/) we have Angular velocity and Torque type.
+Flow forming process may involve single pass or multiple passes, user can define the multi pass and multi roll movement data using “Pass Table” as shown in the Fig. 48.2.18. When we click on the button we will get the Roll movement controls as shown in the [Fig. 48.2.19.](48_1_spinning_manual.htm#Fig_48_1_19__Roll_Movement_Controls) The user can define the Translation movement using the [Speed]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }}) and [Path]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }}) type. For the [Rotation movement]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/' | relative_url }}) we have Angular velocity and Torque type.
 
-“Path” type translation movement is commonly used in flow forming process. For more information on how to define “[Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/)” type movement please refer [15\. Movement controls.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/) After defining the path movement data user can use the ![]({{ '/assets/icons/pre_icons/mo_show_path_movement_info_in_2d_button.jpg' | relative_url }}) to display the path that roller datum is going to trace in 2D as shown in the Fig. 48.2.20.
+“Path” type translation movement is commonly used in flow forming process. For more information on how to define “[Path]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }})” type movement please refer [15\. Movement controls.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}) After defining the path movement data user can use the ![]({{ '/assets/icons/pre_icons/mo_show_path_movement_info_in_2d_button.jpg' | relative_url }}) to display the path that roller datum is going to trace in 2D as shown in the Fig. 48.2.20.
 
 User can also define other data in pass table as explained below,
 
@@ -323,7 +323,7 @@ Automatic positioning for the Flow forming setup
 
 ### Advanced Object Positioning
 
-If user wants to modify any of the objects position, then user can use Advanced object position button in control page. Various positioning options are available to position the objects as shown in Fig. 48.2.24., for more information on these options please refer [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+If user wants to modify any of the objects position, then user can use Advanced object position button in control page. Various positioning options are available to position the objects as shown in Fig. 48.2.24., for more information on these options please refer [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/48_spinning/48_1_spinning_manual/image0025.jpg' | relative_url }})
 
@@ -337,7 +337,7 @@ The user can define the contact between the Workpiece and other roll objects by 
 
 **User:** By default, user radio button will be selected for Flow forming operation. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button as shown in Fig. 48.2.26. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button. User can use ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to assign same values to all relations. User can click on to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation. User can turn on check box next to contact relation to define sticking contact.
 
-For more information please refer, [20\. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+For more information please refer, [20\. Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 **Note** : User can define Friction windows for rolls and mandrel as shown in Fig. 48.2.26. in ALE type of simulation setup to activate Lite Contact search which will reduce the contact search time.
 

@@ -40,4 +40,4 @@ This keyword allows user to model anisotropic friction behavior for Cartesian or
   
 RELATED TOPICS  
 ---  
-Related keywords: [FRCFAC](/docs/sk/keyword_documentation/f/frcfac/)
+Related keywords: [FRCFAC]({{ '/docs/sk/keyword_documentation/f/frcfac/' | relative_url }})

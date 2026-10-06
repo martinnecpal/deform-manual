@@ -41,4 +41,4 @@ FRZ can only be applied to nodes which have been specified as having a nodal for
   
 RELATED TOPICS  
 ---  
-[Boundary constraints](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/) Keywords: [BCCDEF (2D)](/docs/en/keyword_documentation/b/bccdef/), [BCCDEF (3D)](/docs/en/keyword_documentation/b/bccdef_3d/), [BCCDFN (2D)](/docs/en/keyword_documentation/b/bccdfn/), [BCCDFN (3D)](/docs/en/keyword_documentation/b/bccdfn_3d/), [BCCFNC](/docs/en/keyword_documentation/b/bccfnc/), [BCCANG](/docs/en/keyword_documentation/b/bccang/)
+[Boundary constraints]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}) Keywords: [BCCDEF (2D)]({{ '/docs/en/keyword_documentation/b/bccdef/' | relative_url }}), [BCCDEF (3D)]({{ '/docs/en/keyword_documentation/b/bccdef_3d/' | relative_url }}), [BCCDFN (2D)]({{ '/docs/en/keyword_documentation/b/bccdfn/' | relative_url }}), [BCCDFN (3D)]({{ '/docs/en/keyword_documentation/b/bccdfn_3d/' | relative_url }}), [BCCFNC]({{ '/docs/en/keyword_documentation/b/bccfnc/' | relative_url }}), [BCCANG]({{ '/docs/en/keyword_documentation/b/bccang/' | relative_url }})

@@ -103,7 +103,7 @@ V prípade objektov so sieťou zapnite výstupnú sieť a vyberte typ siete. Zad
 
 Nastavenia konverzie mriežky
 
-Tlačidlo ![]({{ '/assets/icons/pre_icons/mo_advanced_button.jpg' | relative_url }}) slúži na priradenie rôznych parametrov 3D siete, ako je znázornené na obr. 44.1.10. Ďalšie informácie o všeobecných nastaveniach, váhových faktoroch, oknách siete, povrchovej úprave, kritériách pre vytvorenie novej siete a pokročilých nastaveniach tetraédrovej a tehličkovej/hexaédrovej siete nájdete v častiach [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) a [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/).
+Tlačidlo ![]({{ '/assets/icons/pre_icons/mo_advanced_button.jpg' | relative_url }}) slúži na priradenie rôznych parametrov 3D siete, ako je znázornené na obr. 44.1.10. Ďalšie informácie o všeobecných nastaveniach, váhových faktoroch, oknách siete, povrchovej úprave, kritériách pre vytvorenie novej siete a pokročilých nastaveniach tetraédrovej a tehličkovej/hexaédrovej siete nájdete v častiach [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}) a [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/image0010.jpg' | relative_url }})
 
@@ -193,4 +193,4 @@ V aplikácii MO Post môže používateľ prezerať integrovanú 2D a 3D databá
 
 Pracovná pozícia operátora konvertora 2D na 3D v spoločnosti MO
 
-Používateľ môže spustiť animáciu a vykresliť všetky stavové premenné a využiť ďalšie funkcie postprocesora dostupné v MO post. Ak chce mať viac možností, môže vybrať akčný štítok ![]({{ '/assets/icons/pre_icons/mo_post_label_link.jpg' | relative_url }}) a otvoriť databázu v postprocesore. Informácie o možnostiach postprocesora nájdete v [26\. Post Processor Features](/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/).
+Používateľ môže spustiť animáciu a vykresliť všetky stavové premenné a využiť ďalšie funkcie postprocesora dostupné v MO post. Ak chce mať viac možností, môže vybrať akčný štítok ![]({{ '/assets/icons/pre_icons/mo_post_label_link.jpg' | relative_url }}) a otvoriť databázu v postprocesore. Informácie o možnostiach postprocesora nájdete v [26\. Post Processor Features]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/' | relative_url }}).

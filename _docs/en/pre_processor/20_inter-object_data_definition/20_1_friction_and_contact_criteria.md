@@ -35,7 +35,7 @@ title: "20.1. Friction and Contact criteria"
 
 ## Friction (FRCFAC) [2D, 3D]
 
-The Friction coefficient ([FRCFAC](/docs/en/keyword_documentation/f/frcfac/)) specifies the friction at the interface between two objects. The friction coefficient may be specified as a constant, a function of time, temperature, pressure, pressure temperature surface stretch, pressure dependent, strain rate, and sliding velocity or user routine (See Fig. 20.1.1.).
+The Friction coefficient ([FRCFAC]({{ '/docs/en/keyword_documentation/f/frcfac/' | relative_url }})) specifies the friction at the interface between two objects. The friction coefficient may be specified as a constant, a function of time, temperature, pressure, pressure temperature surface stretch, pressure dependent, strain rate, and sliding velocity or user routine (See Fig. 20.1.1.).
 
 The friction types allowed are Shear, Coulomb, Hybrid and Constant Tau. Constant Tau is available only in 2D.
 
@@ -180,7 +180,7 @@ Rolling | 0.7-1.0 |
   
 ## Anisotropic [3D]
 
-The Anisotropic ([FRCFAI](/docs/en/keyword_documentation/f/frcfai/)) option allows the user to define the different friction scaling factor values along each axis, when different scaling factors for each axis are defined then the defined friction value will be scaled according to the scaling factor and applied to respective axis. (See Fig. 20.1.10.)
+The Anisotropic ([FRCFAI]({{ '/docs/en/keyword_documentation/f/frcfai/' | relative_url }})) option allows the user to define the different friction scaling factor values along each axis, when different scaling factors for each axis are defined then the defined friction value will be scaled according to the scaling factor and applied to respective axis. (See Fig. 20.1.10.)
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/20_1_image010.jpg' | relative_url }})
 
@@ -220,11 +220,11 @@ Under Node coordinate updates list we have:
 
 ## Separation Type
 
-  * **Separation Density****[2D**]: Separation density ([SEPDEN](/docs/en/keyword_documentation/s/sepden/)) is used to model the behavior of porous objects that have not been fully compacted. It defines the separation criterion of contacting nodes involving porous objects. Unless the density of the material is greater than density, nodal separation is not considered.
+  * **Separation Density****[2D**]: Separation density ([SEPDEN]({{ '/docs/en/keyword_documentation/s/sepden/' | relative_url }})) is used to model the behavior of porous objects that have not been fully compacted. It defines the separation criterion of contacting nodes involving porous objects. Unless the density of the material is greater than density, nodal separation is not considered.
 
-  * **Separable [3D]:** The separation criteria ([SEPRES](/docs/en/keyword_documentation/s/sepres/)) defines how the nodes at the Inter object interface will behave when acted upon by a tensile force. Three ways of defining the separation criteria exist.
+  * **Separable [3D]:** The separation criteria ([SEPRES]({{ '/docs/en/keyword_documentation/s/sepres/' | relative_url }})) defines how the nodes at the Inter object interface will behave when acted upon by a tensile force. Three ways of defining the separation criteria exist.
 
-  * **Non-separable [3D]:** The Separation Relation ([SEPRES](/docs/en/keyword_documentation/s/sepres/)) allows nodal contact to be defined as non-separable under any condition. This condition should generally only be used to attach nodes to a rigid symmetry plane when defining symmetry on a plane other than the XY, YZ, or ZX planes.
+  * **Non-separable [3D]:** The Separation Relation ([SEPRES]({{ '/docs/en/keyword_documentation/s/sepres/' | relative_url }})) allows nodal contact to be defined as non-separable under any condition. This condition should generally only be used to attach nodes to a rigid symmetry plane when defining symmetry on a plane other than the XY, YZ, or ZX planes.
 
   * **Adaptive contact BCC option [3D]** : This option will be used in the special contact relationship between two multiple deforming dies. The interface of two deforming dies is mechanically separable but keep the contact BCC so that the no node is allowed to go into the gap between two deforming dies.
 
@@ -248,7 +248,7 @@ In Geometry based criteria we have:
 
 ## Friction Window
 
-**[2D, 3D]** : Friction windows ([FRCWIN](/docs/en/keyword_documentation/f/frcwin/)) can be applied to a simulation as shown in Fig. 20.1.13. and Fig. 20.1.14. One of the purposes of this function is to allow the user to apply different friction conditions at specified regions of an object to simulate differences in the lubrication condition. Applying a window is done in the same manner as only other window function. In the case of two overlapping windows, the lower order number window takes precedence.
+**[2D, 3D]** : Friction windows ([FRCWIN]({{ '/docs/en/keyword_documentation/f/frcwin/' | relative_url }})) can be applied to a simulation as shown in Fig. 20.1.13. and Fig. 20.1.14. One of the purposes of this function is to allow the user to apply different friction conditions at specified regions of an object to simulate differences in the lubrication condition. Applying a window is done in the same manner as only other window function. In the case of two overlapping windows, the lower order number window takes precedence.
 
 Friction windows allow the user to specify different friction coefficient values for different contact regions of the same object pair. The friction window defines a friction coefficient for the specific area that is defined in the display window. The friction coefficient specifies the friction encountered by any object in contact with the workpiece.
 
@@ -270,10 +270,10 @@ If there is not a friction window assigned for portions of objects that are in c
 
 [20\. Inter-Object Data Definition]()
 
-[20.2. Interface Thermal Data](/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/)
+[20.2. Interface Thermal Data]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }})
 
-[20.3. Interface Resisitivity](/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/)
+[20.3. Interface Resisitivity]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }})
 
-[20.4. Tool Wear](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/)
+[20.4. Tool Wear]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }})
 
-[20.5. Rigid Contact](/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/)
+[20.5. Rigid Contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }})

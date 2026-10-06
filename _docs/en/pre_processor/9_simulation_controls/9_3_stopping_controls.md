@@ -35,7 +35,7 @@ title: "9.3. Stopping Controls"
 
 9.3.15. ALE Steady state (ALECON)
 
-The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on the maximum number of time steps simulated the maximum accumulated elemental strain, the maximum process time, or maximum stroke, minimum velocity, or maximum load of the primary object. A simulation will be stopped when the condition of any of the stopping parameters are met. If a zero value is assigned to any of the termination parameters other than number of steps ([NSTEP](/docs/en/keyword_documentation/n/nstep/)), the parameter will not be used. If no other stopping parameters are specified, the simulation will run until it has utilized all of the specified steps. (See Fig. 9.3.1. and  Fig. 9.3.2.)
+The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on the maximum number of time steps simulated the maximum accumulated elemental strain, the maximum process time, or maximum stroke, minimum velocity, or maximum load of the primary object. A simulation will be stopped when the condition of any of the stopping parameters are met. If a zero value is assigned to any of the termination parameters other than number of steps ([NSTEP]({{ '/docs/en/keyword_documentation/n/nstep/' | relative_url }})), the parameter will not be used. If no other stopping parameters are specified, the simulation will run until it has utilized all of the specified steps. (See Fig. 9.3.1. and  Fig. 9.3.2.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image001.jpg' | relative_url }})
 
@@ -47,25 +47,25 @@ The stopping parameters determine the process time at which the simulation termi
 
 ## Process Duration (TMAX) [2D, 3D]
 
-Terminates the simulation when the global process time ([TMAX](/docs/en/keyword_documentation/t/tmax/)) reaches the value specified.
+Terminates the simulation when the global process time ([TMAX]({{ '/docs/en/keyword_documentation/t/tmax/' | relative_url }})) reaches the value specified.
 
 ## Primary Die Displacement (SMAX) [2D, 3D]
 
-Terminates the simulation when the total displacement ([SMAX](/docs/en/keyword_documentation/s/smax/)) of the primary die reaches the specified value. The stroke value for the object is specified in the Object Movement tab.
+Terminates the simulation when the total displacement ([SMAX]({{ '/docs/en/keyword_documentation/s/smax/' | relative_url }})) of the primary die reaches the specified value. The stroke value for the object is specified in the Object Movement tab.
 
 ## Minimum velocity of Primary Die (VMIN) [2D, 3D]
 
-Terminates the simulation when the X or Y or Z component of the primary die velocity reaches the respective X or Y or Z values of the [VMIN](/docs/en/keyword_documentation/v/vmin/).
+Terminates the simulation when the X or Y or Z component of the primary die velocity reaches the respective X or Y or Z values of the [VMIN]({{ '/docs/en/keyword_documentation/v/vmin/' | relative_url }}).
 
-This parameter is typically used when the primary object movement is under load control, or when the power limit ([SPDLMT](/docs/en/keyword_documentation/s/spdlmt/)) parameter is enforced for a hydraulic press.
+This parameter is typically used when the primary object movement is under load control, or when the power limit ([SPDLMT]({{ '/docs/en/keyword_documentation/s/spdlmt/' | relative_url }})) parameter is enforced for a hydraulic press.
 
 ## Maximum load of Primary Die (LMAX) [2D, 3D]
 
-Terminates the simulation when the X or Y or Z load component of the primary die reaches the respective X or Y or Z value of [LMAX](/docs/en/keyword_documentation/l/lmax/). Typically used when the movement control of the primary object is velocity or user specified.
+Terminates the simulation when the X or Y or Z load component of the primary die reaches the respective X or Y or Z value of [LMAX]({{ '/docs/en/keyword_documentation/l/lmax/' | relative_url }}). Typically used when the movement control of the primary object is velocity or user specified.
 
 ## Maximum strain in any Element (EMAX) [2D, 3D]
 
-This ([EMAX](/docs/en/keyword_documentation/e/emax/)) option terminates a simulation when the accumulated strain of any element reaches the specified value.
+This ([EMAX]({{ '/docs/en/keyword_documentation/e/emax/' | relative_url }})) option terminates a simulation when the accumulated strain of any element reaches the specified value.
 
 ## Ring diameter measurement [3D]
 
@@ -124,7 +124,7 @@ Stopping plane window
 
 ## Die Distance [2D, 3D]
 
-Terminates a simulation when the distance between reference points ([MDSOBJ](/docs/en/keyword_documentation/m/mdsobj/)) on two objects reaches the specified distance. Stopping distance must be used in conjunction with the reference point ([REFPOS](/docs/en/keyword_documentation/r/refpos/)) definition Die Distance window. 
+Terminates a simulation when the distance between reference points ([MDSOBJ]({{ '/docs/en/keyword_documentation/m/mdsobj/' | relative_url }})) on two objects reaches the specified distance. Stopping distance must be used in conjunction with the reference point ([REFPOS]({{ '/docs/en/keyword_documentation/r/refpos/' | relative_url }})) definition Die Distance window. 
 
 From V12.0.2, for the reference objects if the reference points is defined (in Object Properties) we can observe the ![]({{ '/assets/icons/pre_icons/mo_dis_bw_dies_check_mark_icon.jpg' | relative_url }}) status and for the Reference object if reference object is not defined then we can observe the ![]({{ '/assets/icons/pre_icons/mo_dis_bw_dies_question_mark_icon.jpg' | relative_url }}) status in Die-Distance tab as shown in Fig. 9.3.5.
 
@@ -229,7 +229,7 @@ Stopping control based on thermal
 
 ## ALE Steady state (ALECON) [3D]
 
-From DEFORM V12, user can define ALE steady state ([ALECON](/docs/en/keyword_documentation/a/alecon/)) stopping criteria for ALE rolling operation in Stopping controls - ALE Steady state stopping control tab. (See Fig. 9.3.10.)
+From DEFORM V12, user can define ALE steady state ([ALECON]({{ '/docs/en/keyword_documentation/a/alecon/' | relative_url }})) stopping criteria for ALE rolling operation in Stopping controls - ALE Steady state stopping control tab. (See Fig. 9.3.10.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image006.jpg' | relative_url }})
 
@@ -237,11 +237,11 @@ ALE Steady state stopping criteria
 
 **Related Topics:**
 
-[9.1. Simulation type Settings](/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
-[9.2. Defining Step](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/)   
-[9.4. Remesh Criteria](/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/)   
-[9.5. Solver Settings](/docs/en/pre_processor/9_simulation_controls/9_5_solver_settings/)   
-[9.6. Process Conditions](/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/)   
-[9.7. Advanced Options](/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/)   
-[9.8. Control Files](/docs/en/pre_processor/9_simulation_controls/9_8_control_files/)   
-[9.9. Thermomechanical variables](/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)
+[9.1. Simulation type Settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }})   
+[9.2. Defining Step]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})   
+[9.4. Remesh Criteria]({{ '/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }})   
+[9.5. Solver Settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }})   
+[9.6. Process Conditions]({{ '/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})   
+[9.7. Advanced Options]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }})   
+[9.8. Control Files]({{ '/docs/en/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }})   
+[9.9. Thermomechanical variables]({{ '/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }})

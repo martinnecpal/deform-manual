@@ -154,7 +154,7 @@ Tool Page
 
 ### Insert Geometry 
 
-In this Insert Geometry page, user can define the tool geometry using the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) or import the geometry using the Import geometry options. (See Fig. 39.2.11). For more information please refer to [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+In this Insert Geometry page, user can define the tool geometry using the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) or import the geometry using the Import geometry options. (See Fig. 39.2.11). For more information please refer to [12.3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_2_3d_turning/image0011.jpg' | relative_url }})
 
@@ -292,7 +292,7 @@ Assigning the material for the workpiece
 
 ### Workpiece Mesh Generation
 
-The User can generate the mesh by defining relative or absolute mesh size data as shown in the Fig. 39.2.25 & Fig. 39.2.26\. It also provides the preview of the mesh when we click on ![]({{ '/assets/icons/pre_icons/mo_preview_mesh_button.jpg' | relative_url }}) option. For more information related to Expert mode Mesh option refer [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+The User can generate the mesh by defining relative or absolute mesh size data as shown in the Fig. 39.2.25 & Fig. 39.2.26\. It also provides the preview of the mesh when we click on ![]({{ '/assets/icons/pre_icons/mo_preview_mesh_button.jpg' | relative_url }}) option. For more information related to Expert mode Mesh option refer [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
 
   
 **Relative Mesh Method**
@@ -334,7 +334,7 @@ Temperature BCC for Curved geometry
 
 ## Control
 
-Using “Position objects” the tool can be positioned based on the feed rate and workpiece location. Various positioning options are available to position the objects as shown in Fig. 39.2.30, for more information on these options please refer [19\. Object positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/). 
+Using “Position objects” the tool can be positioned based on the feed rate and workpiece location. Various positioning options are available to position the objects as shown in Fig. 39.2.30, for more information on these options please refer [19\. Object positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_2_3d_turning/image0030.jpg' | relative_url }})
 
@@ -342,7 +342,7 @@ Object positioning options
 
 ## Tool Wear
 
-User can turn on tool wear calculation using “Define model to calculate tool wear” check box. After turning on check box user can select the tool wear model and define its parameters as shown in the Fig. 39.2.31, for more information on these options please refer [20.4.Tool Wear](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/). 
+User can turn on tool wear calculation using “Define model to calculate tool wear” check box. After turning on check box user can select the tool wear model and define its parameters as shown in the Fig. 39.2.31, for more information on these options please refer [20.4.Tool Wear]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_2_3d_turning/image0031.jpg' | relative_url }})
 
@@ -351,7 +351,7 @@ Tool Wear page
 ## Contact
 
 By default, user radio button will be selected and default relations also will be defined for 3D Cutting operation as shown in Fig. 39.2.32\. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button. User can click on ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) button to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation. User can turn on check box next to contact relation to define sticking contact.  
-For more information please refer [20\. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+For more information please refer [20\. Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_2_3d_turning/image0032.jpg' | relative_url }})
 
@@ -359,7 +359,7 @@ Contact page
 
 ## Step control
 
-The user can define the step controls data using the Guided mode (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})) as shown in the Fig. 39.2.33\. If user wants to use the advanced simulation controls than we can switch to the Expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) as shown in the Fig. 39.2.34\. For more information and description about options in Simulation controls please refer [9.Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/).
+The user can define the step controls data using the Guided mode (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})) as shown in the Fig. 39.2.33\. If user wants to use the advanced simulation controls than we can switch to the Expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) as shown in the Fig. 39.2.34\. For more information and description about options in Simulation controls please refer [9.Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}).
 
   
 **Starting Step Number** : If a new database is written, the specified step number will be the first step in the database. If data is written to an existing database, the pre-processor data will be appended to this database in proper numerical order, and any steps after the one specified will be overwritten.
@@ -395,10 +395,10 @@ Generate DB page
 
 **Related Topics:**
 
-[39 Introduction to Cutting](/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/)
+[39 Introduction to Cutting]({{ '/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/' | relative_url }})
 
-[39.1. 2D Cutting](/docs/en/operation_templates/39_cutting/39_1_2d_cutting/)
+[39.1. 2D Cutting]({{ '/docs/en/operation_templates/39_cutting/39_1_2d_cutting/' | relative_url }})
 
-[39.3. 3D Milling](/docs/en/operation_templates/39_cutting/39_3_3d_milling/)
+[39.3. 3D Milling]({{ '/docs/en/operation_templates/39_cutting/39_3_3d_milling/' | relative_url }})
 
-[39.4. 3D Drilling](/docs/en/operation_templates/39_cutting/39_4_drilling/)
+[39.4. 3D Drilling]({{ '/docs/en/operation_templates/39_cutting/39_4_drilling/' | relative_url }})

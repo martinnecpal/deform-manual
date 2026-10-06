@@ -36,4 +36,4 @@ Applicable object types: [Plastic](../../pre_processor/11_general_object_data_de
   
 RELATED TOPICS  
 ---  
-[Object Properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/): [Deformation](/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/) Keywords: [GEOTYP](/docs/sk/keyword_documentation/g/geotyp/)
+[Object Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }}): [Deformation]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }}) Keywords: [GEOTYP]({{ '/docs/sk/keyword_documentation/g/geotyp/' | relative_url }})

@@ -31,7 +31,7 @@ In this lab Report generation feature is explained in both interactive and batch
 
 ## Report generation in Batch post mode
 
-If 3D MO basic labs: lab [03 Spike Forging](/docs/sk/labs/basic_labs/3d_labs/lab03_spike_forging/) is already practiced, then open the Spike Forging project in MO by selecting the project file from DEFORM GUI Main and clicking on ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}). Otherwise copy the project file available in installation path as explained below.
+If 3D MO basic labs: lab [03 Spike Forging]({{ '/docs/sk/labs/basic_labs/3d_labs/lab03_spike_forging/' | relative_url }}) is already practiced, then open the Spike Forging project in MO by selecting the project file from DEFORM GUI Main and clicking on ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}). Otherwise copy the project file available in installation path as explained below.
 
 ### Copy the Existing Project
 
@@ -545,10 +545,10 @@ PDF Z-Load Vs Stroke graph is as shown in Fig. RGL1.66.
 
 Primary die Z-Load Vs Stroke graph PDF page
 
-For details on using other sections of the [Report generation](/docs/sk/operation_templates/41_report_generation/41_1_report_generation/) refer the related topics.
+For details on using other sections of the [Report generation]({{ '/docs/sk/operation_templates/41_report_generation/41_1_report_generation/' | relative_url }}) refer the related topics.
 
 **Related Topics:**
 
-[28\. Report Generation](/docs/sk/post_processor/28_report_generation/28_report_generation/)
+[28\. Report Generation]({{ '/docs/sk/post_processor/28_report_generation/28_report_generation/' | relative_url }})
 
-[41\. Report Generation](../../../assets/images/operation_templates/41_report_generation/41_introdcution_to_report_generation)
+[41\. Report Generation]({{ '/docs/sk/operation_templates/41_report_generation/41_introduction_to_report_generation/' | relative_url }})

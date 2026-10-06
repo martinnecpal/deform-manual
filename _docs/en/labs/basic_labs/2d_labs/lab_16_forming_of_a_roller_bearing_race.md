@@ -271,24 +271,24 @@ Plot Density state variable
 
 **Related Topics:**
 
-[12.1. 2D Geometry Data Defining ](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/)
+[12.1. 2D Geometry Data Defining ]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }})
 
-[12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+[12.2. 2D Geometry Data Editing]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }})
 
-[13.1. 2D Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+[13.1. 2D Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
-[14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[15\. Movement Controls Settings](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[15\. Movement Controls Settings]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/)
+[17\. Object Data Initialize]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }})
 
-[19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+[19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
-[20\. Inter-Object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[20\. Inter-Object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-[9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+[9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post-processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post-processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})

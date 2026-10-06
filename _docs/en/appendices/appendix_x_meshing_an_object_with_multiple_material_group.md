@@ -140,4 +140,4 @@ METALUGIJA 42 (2003) 4, 261-264
 
 **Related Topics:**
 
-[Geometry Data](/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/)
+[Geometry Data]({{ '/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})

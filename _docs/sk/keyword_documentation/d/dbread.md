@@ -30,4 +30,4 @@ It is an action keyword placed in Keyword files that drives the preprocessor to 
   
 RELATED TOPICS  
 ---  
-[Preprocessor](/docs/sk/pre_processor/7_introduction_to_pre-processor/)
+[Preprocessor]({{ '/docs/sk/pre_processor/7_introduction_to_pre-processor/' | relative_url }})

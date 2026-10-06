@@ -75,4 +75,4 @@ Applicable simulation types: Deformation Module, Microstructure Module, Non-Isot
 
 RELATED TOPICS  
 ---  
-Material Data: [Elastic Data](/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/) Keywords: [REFTMP](/docs/sk/keyword_documentation/r/reftmp/), [YOUNG](/docs/sk/keyword_documentation/y/young/), [POISON](/docs/sk/keyword_documentation/p/poison/)
+Material Data: [Elastic Data]({{ '/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }}) Keywords: [REFTMP]({{ '/docs/sk/keyword_documentation/r/reftmp/' | relative_url }}), [YOUNG]({{ '/docs/sk/keyword_documentation/y/young/' | relative_url }}), [POISON]({{ '/docs/sk/keyword_documentation/p/poison/' | relative_url }})

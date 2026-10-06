@@ -40,8 +40,8 @@ WPAXIS specifies the gravity and centrifugal force during deformation analysis. 
   
 REMARKS  
 ---  
-A corresponding material data keyword [MASDEN](/docs/en/keyword_documentation/m/masden/), introduced in v10.2 release, which defines mass density, is used together in FEM calculation.  
+A corresponding material data keyword [MASDEN]({{ '/docs/en/keyword_documentation/m/masden/' | relative_url }}), introduced in v10.2 release, which defines mass density, is used together in FEM calculation.  
   
 RELATED TOPICS  
 ---  
-Related keywords: [MASDEN](/docs/en/keyword_documentation/m/masden/), [FPERV(3D)](/docs/en/keyword_documentation/f/fperv_3d/)
+Related keywords: [MASDEN]({{ '/docs/en/keyword_documentation/m/masden/' | relative_url }}), [FPERV(3D)]({{ '/docs/en/keyword_documentation/f/fperv_3d/' | relative_url }})

@@ -16,7 +16,7 @@ V oblasti modelovania zŕn bolo publikovaných mnoho fenomenologických modelov 
 
 ## **Avrami Model**
 
-Avramiho rovnica opisuje, ako sa pevné látky menia z jednej fázy (stavu hmoty) na druhú pri konštantnej teplote. Môže konkrétne opísať kinetiku kryštalizácie ( obr. 10.6.2.). Ďalšie informácie nájdete v časti [chapter 10.6.1. Avrami model](/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_1_avrami_model/).
+Avramiho rovnica opisuje, ako sa pevné látky menia z jednej fázy (stavu hmoty) na druhú pri konštantnej teplote. Môže konkrétne opísať kinetiku kryštalizácie ( obr. 10.6.2.). Ďalšie informácie nájdete v časti [chapter 10.6.1. Avrami model]({{ '/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_1_avrami_model/' | relative_url }}).
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_6_grain_data/10_6_image002.jpg' | relative_url }})
 

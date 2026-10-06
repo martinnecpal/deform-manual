@@ -23,13 +23,13 @@ Určuje pevnú dominantnú rýchlosť toku prúdu cez prvky ohraničené uveden�
 
 Od verzie V12 pribudla možnosť PID regulácie do Current flux BCC pre 2D objekty, ako je znázornené na obr. 14.5.1. Pomocou tejto možnosti môže používateľ automaticky riadiť prúdový tok definovaním parametrov PID regulácie, cieľovej teploty a umiestnenia termočlánku.
 
-![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image001.jpg)
+![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_5_heating_boundary_conditions/14_5_image001.jpg' | relative_url }})
 
 Možnosť PID prúdového toku [len pre 2D]
 
 ## Indukčné vykurovanie
 
-**[2D]** : Po zaškrtnutí políčka Indukčný ohrev v ovládacích prvkoch simulácie sa aktivuje indukčný ohrev v okne vlastností a záložka Ohrev vo Vzťahoch medzi objektmi. Ďalšie informácie nájdete v dokumentoch [16.6. Heating Properties](/docs/sk/pre_processor/16_Object_Properties/16_6_heating_properties/) a [20.3. Interface Resistivity.](/docs/sk/pre_processor/20_Inter-object_Data_Definition/20_3_Interface_Resisitivity/)
+**[2D]** : Po zaškrtnutí políčka Indukčný ohrev v ovládacích prvkoch simulácie sa aktivuje indukčný ohrev v okne vlastností a záložka Ohrev vo Vzťahoch medzi objektmi. Ďalšie informácie nájdete v dokumentoch [16.6. Heating Properties]({{ '/docs/sk/pre_processor/16_Object_Properties/16_6_heating_properties/' | relative_url }}) a [20.3. Interface Resistivity.]({{ '/docs/sk/pre_processor/20_Inter-object_Data_Definition/20_3_Interface_Resisitivity/' | relative_url }})
 
 **[3D]** : Pre 3D cievky sú k dispozícii počiatočné a koncové plochy bcc (pozri obr. 14.5.2.).
 
@@ -37,7 +37,7 @@ Možnosť PID prúdového toku [len pre 2D]
 
 **Koncový povrch cievky [3D]** : Určuje koncový povrch cievky.
 
-![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image004.jpg)
+![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_5_heating_boundary_conditions/14_5_image004.jpg' | relative_url }})
 
 Indukčné okno BCC pre 3D
 
@@ -54,7 +54,7 @@ Určuje počiatočný povrch cievky.
 **Koncový povrch cievky [3D]**
 Určuje koncový povrch cievky. Nastavenia indukčného BEM BCC sú uvedené na obr. 14.5.3.
 
-![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image002.jpg) ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image003.jpg)
+![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_5_heating_boundary_conditions/14_5_image002.jpg' | relative_url }}) ![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_5_heating_boundary_conditions/14_5_image003.jpg' | relative_url }})
 
 (a) (b)
 
@@ -62,12 +62,12 @@ Indukčné (BEM) okno BCC: (a) pre 2D a (b) pre 3D
 
 **Súvisiace témy:**
 
-[14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[14.1. Symmetry Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/)
+[14.1. Symmetry Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/' | relative_url }})
 
-[14.2. Deformation Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/)
+[14.2. Deformation Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }})
 
-[14.3. Thermal Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/)
+[14.3. Thermal Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }})
 
-[14.4. Diffusion Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/)
+[14.4. Diffusion Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }})

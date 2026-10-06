@@ -51,7 +51,7 @@ Solver settings for the Deformation solver; (a) For 2D (b) For 3D
 
   * **Sparse solver**
 
-The sparse ([SOLMTD](/docs/en/keyword_documentation/s/solmtd/)) solver takes advantage of the characteristics of the DEFORM matrix equations to solve the equations. It is efficient, especially for large problems.
+The sparse ([SOLMTD]({{ '/docs/en/keyword_documentation/s/solmtd/' | relative_url }})) solver takes advantage of the characteristics of the DEFORM matrix equations to solve the equations. It is efficient, especially for large problems.
 
   * **SPOOLES and MUMPS [2D, 3D] :**
 
@@ -69,7 +69,7 @@ The skyline solver is a very basic matrix inversion solution. It is the original
 
   * **Conjugate Gradient [3D]**
 
-The sparse ([SOLMTD](/docs/en/keyword_documentation/s/solmtd/)) solver is a direct solution that makes use of the sparseness of FEM formulation to improve solution speed. The conjugate-gradient solver tries to solve the FEM problem by iteratively approximating to the solution. 
+The sparse ([SOLMTD]({{ '/docs/en/keyword_documentation/s/solmtd/' | relative_url }})) solver is a direct solution that makes use of the sparseness of FEM formulation to improve solution speed. The conjugate-gradient solver tries to solve the FEM problem by iteratively approximating to the solution. 
 
 In V11.3, the default 3D solver for simulations with plastic objects is Conjugate gradient (CG) with direct iterations. Specifically, the ‘Old and New’ CG solver (Level of fill in = 4, Method of partitioning = 1) is the default with the MUMPS solver being the backup if needed for convergence. Elasto-plastic (EP) simulations cannot use the direct iteration method, so the recommendation for EP is the MUMPS solver with Newton-Raphson iterations.
 
@@ -204,7 +204,7 @@ Solver selection in 3D is less straightforward than 2D. Most 3D DEFORM simulatio
 
 **Iteration methods (ITRMTH)** **[2D, 3D]**
 
-An iteration method ([ITRMTH](/docs/en/keyword_documentation/i/itrmth/)) is the manner in which the simulation solution is updated (or iterated upon) to try to approach the converged step solution.
+An iteration method ([ITRMTH]({{ '/docs/en/keyword_documentation/i/itrmth/' | relative_url }})) is the manner in which the simulation solution is updated (or iterated upon) to try to approach the converged step solution.
 
   * **Direct**
 
@@ -218,7 +218,7 @@ The Newton-Raphson method is recommended for most problems because it generally 
 
   * **Disable iterations among elastic objects**
 
-## Temperature solver ([SOLMTT](/docs/en/keyword_documentation/s/solmtt/)) [2D, 3D]
+## Temperature solver ([SOLMTT]({{ '/docs/en/keyword_documentation/s/solmtt/' | relative_url }})) [2D, 3D]
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image005.jpg' | relative_url }})  
 (a) 
@@ -242,7 +242,7 @@ Compared to other type of solvers, Conjugate-Gradient solver requires much less 
 
   * **Explicit [3D]**
 
-## Induction Heating solver ([SOLMTI](/docs/en/keyword_documentation/s/solmti/)) [3D]
+## Induction Heating solver ([SOLMTI]({{ '/docs/en/keyword_documentation/s/solmti/' | relative_url }})) [3D]
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image007.jpg' | relative_url }})
 
@@ -261,7 +261,7 @@ Advanced solver settings; (a) For 2D (b) For 3D
 
 **Convergence error limits (CVGERR) [2D, 3D]**
 
-Deformation iteration is assumed to have converged when the velocity and force error limits ([CVGERR](/docs/en/keyword_documentation/c/cvgerr/)) have been satisfied. This means that the change in both the nodal velocity norm and the nodal force norm is below the value specified as shown in Fig 9.5.7. The error norm values for each iteration step are displayed in the message file. If the message file shows that the force or velocity error norms are getting small, but not dropping below the error limits, the simulation may be continued by increasing the appropriate error limit to the smallest value in the message file. This will decrease the solution accuracy, so the simulation should be allowed to run a few steps, then the values should be reduced again. When doing this, extreme care should be exercised.  
+Deformation iteration is assumed to have converged when the velocity and force error limits ([CVGERR]({{ '/docs/en/keyword_documentation/c/cvgerr/' | relative_url }})) have been satisfied. This means that the change in both the nodal velocity norm and the nodal force norm is below the value specified as shown in Fig 9.5.7. The error norm values for each iteration step are displayed in the message file. If the message file shows that the force or velocity error norms are getting small, but not dropping below the error limits, the simulation may be continued by increasing the appropriate error limit to the smallest value in the message file. This will decrease the solution accuracy, so the simulation should be allowed to run a few steps, then the values should be reduced again. When doing this, extreme care should be exercised.  
   
 For die stress or press load calculations where extremely accurate force or load values are required, the load accuracy may be improved by decreasing the force error limit. This will increase simulation time, but give more accurate results.
 
@@ -270,20 +270,20 @@ It should be noted that the accuracy of the flow stress data will have great imp
 
 **Maximum number of iterations (ITRMXD, ITRMXT)** **[2D, 3D]**
 
-When Newton-Raphson iteration is being used, the specified number of iterations ([ITRMXD](/docs/en/keyword_documentation/i/itrmxd/) and [ITRMXT](/docs/en/keyword_documentation/i/itrmxt/)) will be performed for each iteration segment until the solution has converged. At most, 30 iterations will be performed during a Newton-Raphson segment. If the solution does not converge in the specified number of iterations, and with automatic step size reduction that follows, the simulation will terminate and a message will be written to the DEFORM message file.  
+When Newton-Raphson iteration is being used, the specified number of iterations ([ITRMXD]({{ '/docs/en/keyword_documentation/i/itrmxd/' | relative_url }}) and [ITRMXT]({{ '/docs/en/keyword_documentation/i/itrmxt/' | relative_url }})) will be performed for each iteration segment until the solution has converged. At most, 30 iterations will be performed during a Newton-Raphson segment. If the solution does not converge in the specified number of iterations, and with automatic step size reduction that follows, the simulation will terminate and a message will be written to the DEFORM message file.  
 If direct iteration is specified as the iteration method, the specified number of iterations will be performed. If the solution has not converged, another series of iterations will be performed. If the solution has still not converged, the simulation will terminate, and a message will be written to the DEFORM message file.
 
 **Bandwidth optimization (DEFBWD, TMPBWD)****[2D, 3D]**
 
-Bandwidth optimization ([DEFBWD](/docs/en/keyword_documentation/d/defbwd/) and [TMPBWD](/docs/en/keyword_documentation/t/tmpbwd/)) improves solution time by optimizing the structure of the matrix equation being solved. It should be used for almost all problems.
+Bandwidth optimization ([DEFBWD]({{ '/docs/en/keyword_documentation/d/defbwd/' | relative_url }}) and [TMPBWD]({{ '/docs/en/keyword_documentation/t/tmpbwd/' | relative_url }})) improves solution time by optimizing the structure of the matrix equation being solved. It should be used for almost all problems.
 
 Related Topics:
 
-[9.1. Simulation type Settings](/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
-[9.2. Defining Step](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/)   
-[9.3. Stopping Controls](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/)   
-[9.4. Remesh Criteria](/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/)   
-[9.6. Process Conditions](/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/)   
-[9.7. Advanced Options](/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/)   
-[9.8. Control Files](/docs/en/pre_processor/9_simulation_controls/9_8_control_files/)   
-[9.9. Thermomechanical variables](/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)
+[9.1. Simulation type Settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }})   
+[9.2. Defining Step]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})   
+[9.3. Stopping Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})   
+[9.4. Remesh Criteria]({{ '/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }})   
+[9.6. Process Conditions]({{ '/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})   
+[9.7. Advanced Options]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }})   
+[9.8. Control Files]({{ '/docs/en/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }})   
+[9.9. Thermomechanical variables]({{ '/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }})

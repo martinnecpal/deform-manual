@@ -21,9 +21,9 @@ Operáciu tvárnenia je možné otvoriť prostredníctvom sprievodcu integrovan�
 Do Editoru operácií bola pridaná operácia 3D tvarovania
 
   
-Integrovaný výrobný proces (MO) je rozdelený na niekoľko samostatných častí – konkrétne na okno DISPLAY, grafické nástroje, strom operácií, editor vlastností, editor operácií, prehliadač a grafické okno. Ďalšie informácie nájdete v [6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/).
+Integrovaný výrobný proces (MO) je rozdelený na niekoľko samostatných častí – konkrétne na okno DISPLAY, grafické nástroje, strom operácií, editor vlastností, editor operácií, prehliadač a grafické okno. Ďalšie informácie nájdete v [6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}).
 
-V procese integrovanej výroby (MO) sú k dispozícii tri režimy: [Pre-Processor](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/), [Simulator](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/) a [Post-Processor](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/). Tieto tri režimy je možné navzájom prepínať pomocou výberu na karte. Predspracovateľ slúži na nastavenie úlohy pre simuláciu, simuláciu je možné spustiť v sekcii Simulátor a výsledky sa zobrazujú v postspracovateľovi. Ak je potrebné vykonať zmenu v simulácii, táto zmena by sa mala vykonať v predspracovateľovi. Simulátor je miesto, kde sa simulácia spúšťa a monitoruje. Postprocesor disponuje mnohými nástrojmi na zobrazenie a interpretáciu výsledkov simulácie.
+V procese integrovanej výroby (MO) sú k dispozícii tri režimy: [Pre-Processor]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}), [Simulator]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}) a [Post-Processor]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }}). Tieto tri režimy je možné navzájom prepínať pomocou výberu na karte. Predspracovateľ slúži na nastavenie úlohy pre simuláciu, simuláciu je možné spustiť v sekcii Simulátor a výsledky sa zobrazujú v postspracovateľovi. Ak je potrebné vykonať zmenu v simulácii, táto zmena by sa mala vykonať v predspracovateľovi. Simulátor je miesto, kde sa simulácia spúšťa a monitoruje. Postprocesor disponuje mnohými nástrojmi na zobrazenie a interpretáciu výsledkov simulácie.
 
 ## Cieľ formovacej operácie
 
@@ -44,12 +44,12 @@ Príklad nastavenia postupných operácií v 3D
 
 **Súvisiace témy:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[33.1. 2D Forming Setup](/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/)
+[33.1. 2D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }})
 
-[33.2. 3D Forming Setup](/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/)
+[33.2. 3D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }})

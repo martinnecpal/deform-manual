@@ -29,4 +29,4 @@ Mechanical energy is converted to heat energy using: Eheat = Emechanical * Cfact
   
 RELATED TOPICS  
 ---  
-Keywords: [FRAE2H](/docs/en/keyword_documentation/f/frae2h/)
+Keywords: [FRAE2H]({{ '/docs/en/keyword_documentation/f/frae2h/' | relative_url }})

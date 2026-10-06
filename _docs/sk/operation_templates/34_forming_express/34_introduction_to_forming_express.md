@@ -39,6 +39,6 @@ Nižšie sú uvedené kroky na nastavenie operácie Forming Express v sprievodco
 
 **Súvisiace témy:**
 
-[34.1. 2D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/)
+[34.1. 2D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }})
 
-[34.2. 3D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_2_3d_forming_express_setup/)
+[34.2. 3D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_2_3d_forming_express_setup/' | relative_url }})

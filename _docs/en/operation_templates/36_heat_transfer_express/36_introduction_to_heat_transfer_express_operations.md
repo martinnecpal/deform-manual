@@ -56,10 +56,10 @@ Default process settings (heat condition) and object temperatures for different 
 Default process settings (heat condition) and object temperatures for different heating types
 
   
-For more information about the all four heat transfer operations setup refer the [2D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/) and [3D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/).
+For more information about the all four heat transfer operations setup refer the [2D Heat Transfer Express Operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}) and [3D Heat Transfer Express Operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/' | relative_url }}).
 
 **Related Topics:**
 
-[36.1. 2D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/)
+[36.1. 2D Heat Transfer Express Operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }})
 
-[36.2. 3D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/)
+[36.2. 3D Heat Transfer Express Operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/' | relative_url }})

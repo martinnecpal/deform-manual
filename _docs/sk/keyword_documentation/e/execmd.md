@@ -32,4 +32,4 @@ This keyword is mainly for internal use. The DEFORM executable directory is $DEF
   
 RELATED TOPICS  
 ---  
-[Pre-processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/)
+[Pre-processor]({{ '/docs/sk/pre_processor/7_introduction_to_pre-processor/' | relative_url }})

@@ -77,8 +77,8 @@ After all simulations are completed, DOE results will be prepared automatically 
 
 **Related Topics:**
 
-[52\. Introduction to DOE](/docs/en/doe_and_optimization/52_doe_study/51_introduction_to_doe/)
+[52\. Introduction to DOE]({{ '/docs/en/doe_and_optimization/52_doe_study/51_introduction_to_doe/' | relative_url }})
 
-[52.1. DOE and DOE Output Operation Setup](/docs/en/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/)
+[52.1. DOE and DOE Output Operation Setup]({{ '/docs/en/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/' | relative_url }})
 
-[54.1. DOE Post Processor](/docs/en/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/)
+[54.1. DOE Post Processor]({{ '/docs/en/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/' | relative_url }})

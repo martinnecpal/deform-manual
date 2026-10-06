@@ -13,9 +13,9 @@ title: "1.3. Capabilities"
 
   * Coupled modelling of deformation and heat transfer for simulation of cold, warm, or hot forging processes (all products).
 
-  * Extensive [material database](/docs/en/pre_processor/10_material_data/10_material_data/) for many common alloys including steels, aluminium’s, titanium’s, and super-alloys. (all products).
+  * Extensive [material database]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}) for many common alloys including steels, aluminium’s, titanium’s, and super-alloys. (all products).
 
-  * User defined material data input for any material not included in the [material database](/docs/en/pre_processor/10_material_data/10_material_data/). (all products).
+  * User defined material data input for any material not included in the [material database]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}). (all products).
 
   * Information on material flow, die fill, forging load, die stress, grain flow, defect formation and ductile fracture (all products).
 
@@ -27,7 +27,7 @@ title: "1.3. Capabilities"
 
   * Integrated forming equipment models for hydraulic presses, hammers, screw presses, and mechanical presses (all products).
 
-  * [User defined subroutines](/docs/en/user_routines/56_user_routines_in_deform/56_1_introduction_to_user_routines/) for material modelling, press modelling, fracture criteria and other functions (2D, 3D).
+  * [User defined subroutines]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_1_introduction_to_user_routines/' | relative_url }}) for material modelling, press modelling, fracture criteria and other functions (2D, 3D).
 
   * Built in Flownet is an option where user can define flownet value before simulating a database file to visualize any potential irregularities in the grain structure or to view potential surface defects.
 
@@ -37,7 +37,7 @@ title: "1.3. Capabilities"
 
   * Coupons Data extraction to evaluate the microstructure and Mechanical property of a particular cut part (2D, 3D).
 
-  * Post-Processor has been extended to produce simulation output as .pdf (3D) and .ppt reports. This enables more flexibility to the user for [report generation](/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/) (2D, 3D).
+  * Post-Processor has been extended to produce simulation output as .pdf (3D) and .ppt reports. This enables more flexibility to the user for [report generation]({{ '/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/' | relative_url }}) (2D, 3D).
 
   * Contour plots of temperature, strain, stress, damage, and other key variables simplify post processing (all products). 
 
@@ -81,7 +81,7 @@ A rapid cooling whose purpose is for the control of microstructure and phase pro
 
 DEFORM models a complex interaction between deformation, temperature and in the case of heat treatment, transformation and diffusion. There is coupling between the entire phenomenon, as illustrated in the Fig. 1.3.1. below. When appropriate modules are licensed and activated, these coupling effects include heating due to deformation work, thermal softening, temperature controlled transformation, latent heat of transformation, transformation plasticity, transformation strains, stress effects on transformation, and carbon content effects on all material properties.
 
-[DEFORM HT](/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/) allows setup heat treatment operations in cycles at a time and simulating them sequentially.
+[DEFORM HT]({{ '/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/' | relative_url }}) allows setup heat treatment operations in cycles at a time and simulating them sequentially.
 
 ![]({{ '/assets/images/about_deform/1_3_capabilities/1_3_image001.jpg' | relative_url }})
 
@@ -89,14 +89,14 @@ Relationship between various DEFORM modules
 
 **Related Topics:**
 
-[PRE-PROCESSOR](/docs/en/pre_processor/7_introduction_to_pre-processor/)
+[PRE-PROCESSOR]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }})
 
-[POST-PROCESSOR](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[POST-PROCESSOR]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})
 
-[INV. HEAT TRANSFER](/docs/en/inverse_heat/51_introduction_to_inverse_heat/)
+[INV. HEAT TRANSFER]({{ '/docs/en/inverse_heat/51_introduction_to_inverse_heat/' | relative_url }})
 
-[HEAT TREATMENT](/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/)
+[HEAT TREATMENT]({{ '/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/' | relative_url }})
 
-[Integrated Manufacturing Process](/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/) (MO)
+[Integrated Manufacturing Process]({{ '/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }}) (MO)
 
-[HT FURNACE](/docs/en/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/)
+[HT FURNACE]({{ '/docs/en/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/' | relative_url }})

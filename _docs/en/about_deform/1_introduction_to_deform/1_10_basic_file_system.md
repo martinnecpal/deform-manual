@@ -15,7 +15,7 @@ Each DEFORM problem has an associated problem ID and should be created in its ow
 
 **Database (DB) files**
 
-The database file contains the complete simulation data set for input data and each saved simulation step. The information is stored in a compressed, machine readable format, and is accessible only through the DEFORM [pre-procesor](/docs/en/pre_processor/7_introduction_to_pre-processor/) and [post-processor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/). As the simulation runs, data for each step is written to the end of the database file. If the step being written is specified as a step to be saved, information for the next step will be appended after the current data step. If the step is not specified to be saved, and a solution is found for the next step, the data for the current step will be overwritten by the data for the next step.
+The database file contains the complete simulation data set for input data and each saved simulation step. The information is stored in a compressed, machine readable format, and is accessible only through the DEFORM [pre-procesor]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }}) and [post-processor]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }}). As the simulation runs, data for each step is written to the end of the database file. If the step being written is specified as a step to be saved, information for the next step will be appended after the current data step. If the step is not specified to be saved, and a solution is found for the next step, the data for the current step will be overwritten by the data for the next step.
 
 **Keyword (KEY) files**
 
@@ -23,10 +23,10 @@ Keyword files contain specific problem definition data which is read by the pre-
 
 **Related Topics:**
 
-[Creating Input data](/docs/en/about_deform/1_introduction_to_deform/1_8_creating_input_data/)
+[Creating Input data]({{ '/docs/en/about_deform/1_introduction_to_deform/1_8_creating_input_data/' | relative_url }})
 
-[File structure](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure/)
+[File structure]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure/' | relative_url }})
 
-[Database Generation](/docs/en/pre_processor/21_database_generation/21_database_generation/)
+[Database Generation]({{ '/docs/en/pre_processor/21_database_generation/21_database_generation/' | relative_url }})
 
-[Keyword Documentation](/docs/en/keyword_documentation/deform_keywords_list/)
+[Keyword Documentation]({{ '/docs/en/keyword_documentation/deform_keywords_list/' | relative_url }})

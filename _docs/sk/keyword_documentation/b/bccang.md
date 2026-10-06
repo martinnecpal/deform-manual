@@ -37,4 +37,4 @@ The boundary constraint angle is defined by the angle measured from the X axis o
   
 RELATED TOPICS  
 ---  
-[Boundary constraints](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/) Keywords: [URZ (2D)](/docs/sk/keyword_documentation/u/urz/), [FRZ (2D)](/docs/sk/keyword_documentation/f/frz/), [URZ (3D)](/docs/sk/keyword_documentation/u/urz_3d/), [FRZ (3D)](/docs/sk/keyword_documentation/f/frz_3d/),
+[Boundary constraints]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}) Keywords: [URZ (2D)]({{ '/docs/sk/keyword_documentation/u/urz/' | relative_url }}), [FRZ (2D)]({{ '/docs/sk/keyword_documentation/f/frz/' | relative_url }}), [URZ (3D)]({{ '/docs/sk/keyword_documentation/u/urz_3d/' | relative_url }}), [FRZ (3D)]({{ '/docs/sk/keyword_documentation/f/frz_3d/' | relative_url }}),

@@ -12,7 +12,7 @@ title: "6.5. File Structure"
 6.5.5. Integrated Manufacturing process (MO) Wizard and Operation specific Files  
 6.5.6. Operation Specific Important Files
 
-The primary data storage structure is the database (DB) file. The database file stores a complete set of simulation data, including object data, simulation controls, material data, and inter-object relations, both from the original input, and from selected solution steps. More information on Basic File structure of DEFORM refer chapter [1.10. Basic File system.](/docs/sk/about_deform/1_introduction_to_deform/1_10_basic_file_system/)
+The primary data storage structure is the database (DB) file. The database file stores a complete set of simulation data, including object data, simulation controls, material data, and inter-object relations, both from the original input, and from selected solution steps. More information on Basic File structure of DEFORM refer chapter [1.10. Basic File system.]({{ '/docs/sk/about_deform/1_introduction_to_deform/1_10_basic_file_system/' | relative_url }})
 
   
 **Database (DB) files:**
@@ -92,6 +92,6 @@ MO Operation/Operator specific files
 
 **Related Topics:**
 
-[1.10. Basic File system.](/docs/sk/about_deform/1_introduction_to_deform/1_10_basic_file_system/)
+[1.10. Basic File system.]({{ '/docs/sk/about_deform/1_introduction_to_deform/1_10_basic_file_system/' | relative_url }})
 
-[Appendix XVII: Data Files](/docs/sk/appendices/appendix_xvii_data_files/)
+[Appendix XVII: Data Files]({{ '/docs/sk/appendices/appendix_xvii_data_files/' | relative_url }})

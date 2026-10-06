@@ -25,8 +25,8 @@ ODMAX limits the outside diameter of the ring object in the entire simulation. T
   
 REMARKS  
 ---  
-Applicable [simulation types](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/): Ring Rolling Deformation  
+Applicable [simulation types]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}): Ring Rolling Deformation  
   
 RELATED TOPICS  
 ---  
-[Ring Rolling Wizard](/docs/sk/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/)
+[Ring Rolling Wizard]({{ '/docs/sk/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/' | relative_url }})

@@ -35,4 +35,4 @@ It should be noted that the keyword can only be used in the fracture method max 
   
 RELATED TOPICS  
 ---  
-Material Data: [Fracture Models](/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/) Keywords: [FRCMOD](/docs/en/keyword_documentation/f/frcmod/)
+Material Data: [Fracture Models]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }}) Keywords: [FRCMOD]({{ '/docs/en/keyword_documentation/f/frcmod/' | relative_url }})

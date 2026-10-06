@@ -237,4 +237,4 @@ References:
 
 Related Topics:
 
-[Material Properties](/docs/en/pre_processor/10_material_data/10_material_data/)
+[Material Properties]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})

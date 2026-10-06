@@ -40,4 +40,4 @@ In RSE solver, the cutoff strain-rate is first determined in a conservative mann
   
 RELATED TOPICS  
 ---  
-Boundary Constraints: [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/)\- [Advanced BCC](../../pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions.htm#14.2.10._Advanced_deformation_BCC)
+Boundary Constraints: [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }})\- [Advanced BCC](../../pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions.htm#14.2.10._Advanced_deformation_BCC)

@@ -18,7 +18,7 @@ Okno s údajmi o tepelnom materiáli
 
 ## Tepelná vodivosť (THRCND)
 
-Vedenie je proces, pri ktorom teplo prúdi z oblasti s vyššou teplotou do oblasti s nižšou teplotou v prostredí. Tepelná vodivosť ([THRCND](/docs/sk/keyword_documentation/t/thrcnd/)) je v tomto prípade schopnosť daného materiálu viesť teplo v rámci objektu.  
+Vedenie je proces, pri ktorom teplo prúdi z oblasti s vyššou teplotou do oblasti s nižšou teplotou v prostredí. Tepelná vodivosť ([THRCND]({{ '/docs/sk/keyword_documentation/t/thrcnd/' | relative_url }})) je v tomto prípade schopnosť daného materiálu viesť teplo v rámci objektu.  
 Hodnota môže byť konštantná alebo funkcia teploty, funkcia obsahu atómov alebo funkcia teploty a obsahu atómov.
 
 ## Tepelná kapacita (HEATCP)
@@ -27,14 +27,14 @@ Tepelná kapacita je vo všeobecnosti definovaná ako množstvo tepla, ktoré mu
 
 Väčšina referenčných hodnôt tepelnej kapacity uvádza špecifickú tepelnú kapacitu ![]({{ '/assets/equations/pre_processor/10_material_data/10_3_thermal_data/rcp.jpg' | relative_url }}), čo je tepelná kapacita na jednotku hmotnosti. Definuje teplo potrebné na zvýšenie jednotkovej hmotnosti látky o jednotkový teplotný interval pri konštantnom tlaku. Inými slovami, je to tepelná energia na jednotku hmotnosti potrebná na dosiahnutie zvýšenia teploty o jeden stupeň.
 
-Predvolený termín tepelnej kapacity ([HEATCP](/docs/sk/keyword_documentation/h/heatcp/)) používaný v programe DEFORM je objemová tepelná kapacita, ρcp, čo je tepelná kapacita na jednotku objemu. Definuje teplo potrebné na zvýšenie jednotkového objemu látky o jednotkový teplotný interval pri konštantnom tlaku. Inými slovami, je to tepelná energia na jednotku objemu potrebná na dosiahnutie zvýšenia teploty o jeden stupeň.
+Predvolený termín tepelnej kapacity ([HEATCP]({{ '/docs/sk/keyword_documentation/h/heatcp/' | relative_url }})) používaný v programe DEFORM je objemová tepelná kapacita, ρcp, čo je tepelná kapacita na jednotku objemu. Definuje teplo potrebné na zvýšenie jednotkového objemu látky o jednotkový teplotný interval pri konštantnom tlaku. Inými slovami, je to tepelná energia na jednotku objemu potrebná na dosiahnutie zvýšenia teploty o jeden stupeň.
 
 Objemová tepelná kapacita sa získa vynásobením mernej tepelnej kapacity (tepelná kapacita na jednotku hmotnosti) hustotou (hmotnosť na jednotku objemu).
 
 ![]({{ '/assets/equations/pre_processor/10_material_data/10_3_thermal_data/eqn_10_3_1.jpg' | relative_url }}) |
 ---|---
   
-Ďalším výrazom tepelnej kapacity ([HEATCP](/docs/sk/keyword_documentation/h/heatcp/)), ktorý je k dispozícii v programe DEFORM, je hmotnostná merná tepelná kapacita. Je to špecifická tepelná kapacita, ale označená ako "hmotnostné špecifické teplo", aby sa zdôraznil jej vzťah k vstupným údajom o hmotnostnej hustote, ktoré sú k dispozícii v ponuke tepelných vlastností. Hmotnostná hustota sa musí definovať, ak bola definovaná hmotnostná merná tepelná kapacita. Hodnoty pre hmotnostnú hustotu a hmotnostnú špecifickú tepelnú kapacitu musia používať konzistentné jednotky hmotnosti. Ďalšie podrobnosti nájdete v časti [1.9. Units](/docs/sk/about_deform/1_introduction_to_deform/1_9_units/).
+Ďalším výrazom tepelnej kapacity ([HEATCP]({{ '/docs/sk/keyword_documentation/h/heatcp/' | relative_url }})), ktorý je k dispozícii v programe DEFORM, je hmotnostná merná tepelná kapacita. Je to špecifická tepelná kapacita, ale označená ako "hmotnostné špecifické teplo", aby sa zdôraznil jej vzťah k vstupným údajom o hmotnostnej hustote, ktoré sú k dispozícii v ponuke tepelných vlastností. Hmotnostná hustota sa musí definovať, ak bola definovaná hmotnostná merná tepelná kapacita. Hodnoty pre hmotnostnú hustotu a hmotnostnú špecifickú tepelnú kapacitu musia používať konzistentné jednotky hmotnosti. Ďalšie podrobnosti nájdete v časti [1.9. Units]({{ '/docs/sk/about_deform/1_introduction_to_deform/1_9_units/' | relative_url }}).
 
 DEFORM využíva objemovú tepelnú kapacitu na výpočty MKP. Ak bola definovaná hmotnostná merná tepelná kapacita, DEFORM vypočíta objemovú tepelnú kapacitu z hmotnostnej hustoty a hmotnostnej mernej tepelnej kapacity počas výpočtov MKP.
 
@@ -42,11 +42,11 @@ Objemová alebo hmotnostná merná tepelná kapacita môže byť do programu DEF
 
 ## Emisivita (EMSVTY)
 
-Emisný výkon telesa je celkové množstvo žiarenia vyžiarené telesom za jednotku plochy a času. Emisivita ([EMSVTY](/docs/sk/keyword_documentation/e/emsvty/)) telesa je pomer E/Eb, kde Eb je emisný výkon dokonalého čierneho telesa. Úplnejší opis vlastností emisivity nájdete v akomkoľvek zdroji zaoberajúcom sa prenosom tepla. Hodnota môže byť konštantná alebo funkcia teploty.
+Emisný výkon telesa je celkové množstvo žiarenia vyžiarené telesom za jednotku plochy a času. Emisivita ([EMSVTY]({{ '/docs/sk/keyword_documentation/e/emsvty/' | relative_url }})) telesa je pomer E/Eb, kde Eb je emisný výkon dokonalého čierneho telesa. Úplnejší opis vlastností emisivity nájdete v akomkoľvek zdroji zaoberajúcom sa prenosom tepla. Hodnota môže byť konštantná alebo funkcia teploty.
 
 ## Hmotnostná hustota (DENSTY)
 
-Hmotnostná hustota ([DENSTY](/docs/sk/keyword_documentation/d/densty/)) materiálu je jeho hmotnosť na jednotku objemu. Hmotnostná hustota môže byť definovaná ako konštanta alebo ako funkcia teploty. Hmotnostná hustota sa musí definovať v modeloch, ktoré zahŕňajú gravitáciu, silu telesa, odstredivú silu alebo explicitný riešiteľ.
+Hmotnostná hustota ([DENSTY]({{ '/docs/sk/keyword_documentation/d/densty/' | relative_url }})) materiálu je jeho hmotnosť na jednotku objemu. Hmotnostná hustota môže byť definovaná ako konštanta alebo ako funkcia teploty. Hmotnostná hustota sa musí definovať v modeloch, ktoré zahŕňajú gravitáciu, silu telesa, odstredivú silu alebo explicitný riešiteľ.
 
 Hodnoty hustoty pre rôzne materiály sú ľahko dostupné v online a tlačenej literatúre. Je potrebné poznamenať, že typ hustoty uvedený v týchto referenciách sa vo všeobecnosti líši na základe špecifikovanej jednotkovej sústavy, ako je opísané nižšie.
 

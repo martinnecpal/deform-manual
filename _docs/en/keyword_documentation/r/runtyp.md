@@ -29,4 +29,4 @@ This action keyword is only used by test-based pre-processing.
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Remesh Criteria](/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/) Keywords: [MESHNO](/docs/en/keyword_documentation/m/meshno/)
+Simulation Controls: [Remesh Criteria]({{ '/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }}) Keywords: [MESHNO]({{ '/docs/en/keyword_documentation/m/meshno/' | relative_url }})

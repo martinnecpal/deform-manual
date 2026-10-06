@@ -39,6 +39,6 @@ Data Flow in OPT
 
 **Related Topics:**
 
-[53.1. Optimization Setup](/docs/sk/doe_and_optimization/53_optimization_study/53_1_optimization_setup/)
+[53.1. Optimization Setup]({{ '/docs/sk/doe_and_optimization/53_optimization_study/53_1_optimization_setup/' | relative_url }})
 
-[53.2. Optimization Simulation Running and Monitoring](/docs/sk/doe_and_optimization/53_optimization_study/53_2_optimization_simulation_running_and_monitoring/)
+[53.2. Optimization Simulation Running and Monitoring]({{ '/docs/sk/doe_and_optimization/53_optimization_study/53_2_optimization_simulation_running_and_monitoring/' | relative_url }})

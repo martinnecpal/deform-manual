@@ -29,4 +29,4 @@ This is action keyword that executes border extraction
   
 RELATED TOPICS  
 ---  
-Text-based PRE, Remshing, Shape optimization Keywords: [DEFINT](/docs/sk/keyword_documentation/d/defint/), [DEFAMG](/docs/sk/keyword_documentation/d/defamg/), [REMESH ](/docs/sk/keyword_documentation/r/remesh/)
+Text-based PRE, Remshing, Shape optimization Keywords: [DEFINT]({{ '/docs/sk/keyword_documentation/d/defint/' | relative_url }}), [DEFAMG]({{ '/docs/sk/keyword_documentation/d/defamg/' | relative_url }}), [REMESH ]({{ '/docs/sk/keyword_documentation/r/remesh/' | relative_url }})

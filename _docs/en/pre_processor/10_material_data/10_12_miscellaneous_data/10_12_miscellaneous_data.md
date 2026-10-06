@@ -36,15 +36,15 @@ Advanced material properties window
 
 ## Fracture Data (FRCMOD)
 
-[FRCMOD](/docs/en/keyword_documentation/f/frcmod/) specifies the damage model that one wishes to use for damage calculation. There are ten different models to choose from. Cockcroft & Latham is the Default damage model that is used to calculate damage in DEFORM. It is also possible to write a user subroutine, which can be used for the damage model. For Fracture models refer chapter [10.12.1. Fracture Models](/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/)
+[FRCMOD]({{ '/docs/en/keyword_documentation/f/frcmod/' | relative_url }}) specifies the damage model that one wishes to use for damage calculation. There are ten different models to choose from. Cockcroft & Latham is the Default damage model that is used to calculate damage in DEFORM. It is also possible to write a user subroutine, which can be used for the damage model. For Fracture models refer chapter [10.12.1. Fracture Models]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }})
 
 ## Mechanical Work to Heat (FRAE2H)
 
-Mechanical work to heat ([FRAE2H](/docs/en/keyword_documentation/f/frae2h/)) specifies the fraction of mechanical work converted to heat. The conversion fraction would typically be 0.9 to 0.95. The default value is 0.9 and unless the user has a good feel for a value, this value should not be changed.
+Mechanical work to heat ([FRAE2H]({{ '/docs/en/keyword_documentation/f/frae2h/' | relative_url }})) specifies the fraction of mechanical work converted to heat. The conversion fraction would typically be 0.9 to 0.95. The default value is 0.9 and unless the user has a good feel for a value, this value should not be changed.
 
 ## Force per unit volume or Body Force (FPERV)
 
-The following equation is used to calculate the body force ([FPERV](/docs/en/keyword_documentation/f/fperv/)) (for example gravity) for porous, plastic and elasto-plastic materials:  
+The following equation is used to calculate the body force ([FPERV]({{ '/docs/en/keyword_documentation/f/fperv/' | relative_url }})) (for example gravity) for porous, plastic and elasto-plastic materials:  
 
 ![]({{ '/assets/equations/pre_processor/10_material_data/10_12_miscellaneous_data/eq_10_12_1.jpg' | relative_url }}) |   
 ---|---  
@@ -86,7 +86,7 @@ This model (See below Fig. 10.12.5.) can record information regarding phases, be
 Size model selection window
 
   
-The [SIZESH](/docs/en/keyword_documentation/s/sizesh/) stores information regarding the size of a 2nd phase and its shape. Thus, a 2nd phase (for example, delta phase particles in 718 nickel base super alloy) can be described as composing 5% of the volume fraction of each element of the material (defined in initial elemental volume fraction, [VOLFC](/docs/en/keyword_documentation/v/volfc/)); but it can also be described as consisting of particles which, on average, are ~10 microns in diameter. By default, the [SIZESH](/docs/en/keyword_documentation/s/sizesh/) keyword assumes that particles are spherical (See above Fig. 10.12.5.). By specifying the particle size model ([SIZEMD](/docs/en/keyword_documentation/s/sizemd/)), one can define more about the properties of the particles described in [SIZESH](/docs/en/keyword_documentation/s/sizesh/).  
+The [SIZESH]({{ '/docs/en/keyword_documentation/s/sizesh/' | relative_url }}) stores information regarding the size of a 2nd phase and its shape. Thus, a 2nd phase (for example, delta phase particles in 718 nickel base super alloy) can be described as composing 5% of the volume fraction of each element of the material (defined in initial elemental volume fraction, [VOLFC]({{ '/docs/en/keyword_documentation/v/volfc/' | relative_url }})); but it can also be described as consisting of particles which, on average, are ~10 microns in diameter. By default, the [SIZESH]({{ '/docs/en/keyword_documentation/s/sizesh/' | relative_url }}) keyword assumes that particles are spherical (See above Fig. 10.12.5.). By specifying the particle size model ([SIZEMD]({{ '/docs/en/keyword_documentation/s/sizemd/' | relative_url }})), one can define more about the properties of the particles described in [SIZESH]({{ '/docs/en/keyword_documentation/s/sizesh/' | relative_url }}).  
   
 Different particles size models available are,
 
@@ -294,19 +294,19 @@ Material data guidelines for Non-isothermal de-coupled die stress analysis
 
 Related Topics:
 
-[10.12.1. Fracture Models](/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/)
+[10.12.1. Fracture Models]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }})
 
 [Assigning Material to Object](../../../operation_templates/33_forming/33_1_2d_forming_setup.htm#Material)   
-[1.11. DEFORM Units](/docs/en/about_deform/1_introduction_to_deform/1_9_units/)  
-[Material Editing](/docs/en/labs/heat_treatment_labs/2d_ht_lab5_material_input/)  
+[1.11. DEFORM Units]({{ '/docs/en/about_deform/1_introduction_to_deform/1_9_units/' | relative_url }})  
+[Material Editing]({{ '/docs/en/labs/heat_treatment_labs/2d_ht_lab5_material_input/' | relative_url }})  
 [Material Units Converter](../10_material_data.htm#Material_Data)   
 [Units Converter Next Gen Post](../../../post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options.htm#26_5_6_Unit_Conversion)  
-[Appendix IV: Determining 'R' coefficients for anisotropy models](/docs/en/appendices/appendix_iv_determining_r_coefficientss/)  
-[Running an inertia weld simulation in DEFORM](/docs/en/applications/55_applications/55_inertia_welding/2d_inertia_welding/)  
-[Running 2D creep simulations in DEFORM](/docs/en/applications/55_applications/55_creep/2d_creep/)  
-[Appendix X: Meshing an object with multiple material groups](/docs/en/appendices/appendix_x_meshing_an_object_with_multiple_material_group/)  
-[Setting up 2D induction heating in DEFORM](/docs/en/applications/55_applications/55_4_induction_heating/setting_up_induction_heating_in_deform/)  
-[Fracture with Element Deletion and Damage Softening](/docs/en/applications/55_applications/55_fracture/3d_fracture/)  
-[Setting up 2D fracture with element deletion with DEFORM](/docs/en/applications/55_applications/55_fracture/2d_fracture/)  
-[A Theoretical Background to Resistance Heating Concepts](/docs/en/applications/55_applications/55_resistance_heating_labs/a_theoretical_background_to_resistance_heating/)   
-[Setting up 3D machining models](/docs/en/operation_templates/39_cutting/setting_up_3d_machining_models/)
+[Appendix IV: Determining 'R' coefficients for anisotropy models]({{ '/docs/en/appendices/appendix_iv_determining_r_coefficientss/' | relative_url }})  
+[Running an inertia weld simulation in DEFORM]({{ '/docs/en/applications/55_applications/55_inertia_welding/2d_inertia_welding/' | relative_url }})  
+[Running 2D creep simulations in DEFORM]({{ '/docs/en/applications/55_applications/55_creep/2d_creep/' | relative_url }})  
+[Appendix X: Meshing an object with multiple material groups]({{ '/docs/en/appendices/appendix_x_meshing_an_object_with_multiple_material_group/' | relative_url }})  
+[Setting up 2D induction heating in DEFORM]({{ '/docs/en/applications/55_applications/55_4_induction_heating/setting_up_induction_heating_in_deform/' | relative_url }})  
+[Fracture with Element Deletion and Damage Softening]({{ '/docs/en/applications/55_applications/55_fracture/3d_fracture/' | relative_url }})  
+[Setting up 2D fracture with element deletion with DEFORM]({{ '/docs/en/applications/55_applications/55_fracture/2d_fracture/' | relative_url }})  
+[A Theoretical Background to Resistance Heating Concepts]({{ '/docs/en/applications/55_applications/55_resistance_heating_labs/a_theoretical_background_to_resistance_heating/' | relative_url }})   
+[Setting up 3D machining models]({{ '/docs/en/operation_templates/39_cutting/setting_up_3d_machining_models/' | relative_url }})

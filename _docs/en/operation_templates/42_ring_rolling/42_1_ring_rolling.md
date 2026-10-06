@@ -250,7 +250,7 @@ Z-position Diameter measuring position
 
 ## Defining 2D Cross-section
 
-The user can create the geometry using the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) options as shown in the Fig. 42.1.19. The user can also import the 2D geometry using the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option and save the 2D geometry using the ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) options. For more explanation on different options refer [12.1. 2D Geometry Data Defining ](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) and [12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/).
+The user can create the geometry using the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) options as shown in the Fig. 42.1.19. The user can also import the 2D geometry using the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option and save the 2D geometry using the ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) options. For more explanation on different options refer [12.1. 2D Geometry Data Defining ]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) and [12.2. 2D Geometry Data Editing]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image016.jpg' | relative_url }})
 
@@ -258,7 +258,7 @@ The user can create the geometry using the ![]({{ '/assets/icons/pre_icons/mo_de
 
 ## Generating 2D mesh
 
-We can generate the 2D Cross Section mesh by defining the number of elements in guided mode as shown in Fig. 42.1.20. Advanced options to control 2D mesh generation can be accessed using expert mode toggle button from tool bar, see Fig. 42.1.22. For more information on advanced options please refer [13.1. 2D Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/).   
+We can generate the 2D Cross Section mesh by defining the number of elements in guided mode as shown in Fig. 42.1.20. Advanced options to control 2D mesh generation can be accessed using expert mode toggle button from tool bar, see Fig. 42.1.22. For more information on advanced options please refer [13.1. 2D Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}).   
 **Use coarse internal mesh** : In Guided Mode user is having this check box to generate coarse internal mesh as shown in Fig. 42.1.21.   
 **Ratio to largest element** : User can control the element size relatively using this setting  
 **Generate Mesh** ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}): Once user defines the mesh settings user can generate 2D Mesh using this button. 
@@ -277,7 +277,7 @@ We can generate the 2D Cross Section mesh by defining the number of elements in 
 
 ## Generating 3D Geometry
 
-User can convert the defined 2D cross section to 3D Geometry by using ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }})option (See Fig. 42.1.23.), settings for converting 2D into 3D by revolving can be defined in Revolve from 2D page as shown in Fig. 42.1.23. and Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to convert. For more information on other options please refer [12.3. 3D Geometry data modelling.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+User can convert the defined 2D cross section to 3D Geometry by using ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }})option (See Fig. 42.1.23.), settings for converting 2D into 3D by revolving can be defined in Revolve from 2D page as shown in Fig. 42.1.23. and Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to convert. For more information on other options please refer [12.3. 3D Geometry data modelling.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 ### Revolve Settings
 
@@ -333,7 +333,7 @@ Assigning the material to workpiece
 
 ## Workpiece BCC
 
-In Boundary conditions page, user can assign various boundary constraints to an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. Commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer, symmetry and velocity as shown in the Fig. 42.1.28. BCCs are automatically defined while generating 3D Mesh based on the Simulation setup in Ring Rolling Template, if user wants to modify this then options available in this page can be used. For more information on these options please refer [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+In Boundary conditions page, user can assign various boundary constraints to an object. Boundary conditions specify how the boundary of an object interacts with other objects and with the environment. Commonly used boundary conditions are heat exchange with the environment for simulations involving heat transfer, symmetry and velocity as shown in the Fig. 42.1.28. BCCs are automatically defined while generating 3D Mesh based on the Simulation setup in Ring Rolling Template, if user wants to modify this then options available in this page can be used. For more information on these options please refer [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image025.jpg' | relative_url }})
 
@@ -341,7 +341,7 @@ Workpiece BCC
 
 ## Property
 
-Miscellaneous object parameters, which affect either thermo-mechanical behaviour of the object or numerical solution behaviour are specified in the Object-Properties window. (See Fig. 42.1.29.). Volume compensation is used most in Ring Rolling and can be activated by selecting one of the options under “Target Volume” and calculating current object volume using ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) button. For more information, please refer [16\. Object properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
+Miscellaneous object parameters, which affect either thermo-mechanical behaviour of the object or numerical solution behaviour are specified in the Object-Properties window. (See Fig. 42.1.29.). Volume compensation is used most in Ring Rolling and can be activated by selecting one of the options under “Target Volume” and calculating current object volume using ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) button. For more information, please refer [16\. Object properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image026.jpg' | relative_url }})
 
@@ -352,7 +352,7 @@ Property page
 In Initialize window, few state variables that are commonly used such as temperature, strain, stress, damage, velocity, displacement, density and microstructure grain size and particle size are made available for initialization. In multiple ring rolling operation if user wants to initialize the temperature, strain or grain size then user can use this initialization page.
 
   
-User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 42.1.30. shows various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1 Node data window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [11.2 Element data window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 42.1.30. shows various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1 Node data window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) and [11.2 Element data window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image027.jpg' | relative_url }})
 
@@ -486,7 +486,7 @@ Copying Axial Roll #1 to Axial Roll #2
 
 ## Positioning
 
-When user wants further modification in any of these objects position even after using orientation, then user can use Position objects button in Positioning page. Various positioning options are available to position the objects as shown in Fig. 42.1.47., for more information on these options please refer [19\. Object positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+When user wants further modification in any of these objects position even after using orientation, then user can use Position objects button in Positioning page. Various positioning options are available to position the objects as shown in Fig. 42.1.47., for more information on these options please refer [19\. Object positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image044.jpg' | relative_url }})
 
@@ -504,7 +504,7 @@ Scheduled positioning options
 
 The user can define the contact between the Workpiece and other roll objects by defining the inter object relations as shown in Fig. 42.1.49. User must define friction and Interface heat transfer co-efficient for non-isothermal rolling processes and friction value for isothermal rolling process.  
 **System** : By selecting this radio button, system assigns default inter-object relationships. Also, user can add the lubricants if necessary, by selecting Add New from pull down menu and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button or user can load the required lubricants from the library for the simulation.  
-**User:** By default, user radio button will be selected for Ring Rolling operation. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button as shown in Fig. 42.1.49. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button. User can use ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to assign same values to all relations. User can click on to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation. User can turn on check box next to contact relation to define sticking contact. For more information please refer, [20\. Inter-Object Data Relations.](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+**User:** By default, user radio button will be selected for Ring Rolling operation. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button as shown in Fig. 42.1.49. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button. User can use ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to assign same values to all relations. User can click on to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation. User can turn on check box next to contact relation to define sticking contact. For more information please refer, [20\. Inter-Object Data Relations.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image046.jpg' | relative_url }})
 
@@ -596,7 +596,7 @@ Extracting the cross section to regenerate the Ring
 ###   
 Generating the Workpiece 2D Cross-section mesh
 
-Since the cross-section is extracted from the Object which is “Read From DB” it is always necessary to generate a new 2D Mesh when user is regenerating ring shape. User can turn on select “Perform remesh before this operation” check box as shown in the Fig. 42.1.57. and define 2D mesh settings to be used in new mesh generation. For more on mesh settings refer [13.1.2D Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+Since the cross-section is extracted from the Object which is “Read From DB” it is always necessary to generate a new 2D Mesh when user is regenerating ring shape. User can turn on select “Perform remesh before this operation” check box as shown in the Fig. 42.1.57. and define 2D mesh settings to be used in new mesh generation. For more on mesh settings refer [13.1.2D Mesh Generation.]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image054.jpg' | relative_url }})
 

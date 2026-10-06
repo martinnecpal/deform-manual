@@ -40,4 +40,4 @@ The magnetic field intensity is complex number. This state variable is used in s
   
 RELATED TOPICS  
 ---  
-Keywords: [ZEFI](/docs/en/keyword_documentation/z/zefi/), [CURRNT(2D)](/docs/en/keyword_documentation/c/currnt/), [CURRNT(3D)](/docs/en/keyword_documentation/c/currnt_3d/)
+Keywords: [ZEFI]({{ '/docs/en/keyword_documentation/z/zefi/' | relative_url }}), [CURRNT(2D)]({{ '/docs/en/keyword_documentation/c/currnt/' | relative_url }}), [CURRNT(3D)]({{ '/docs/en/keyword_documentation/c/currnt_3d/' | relative_url }})

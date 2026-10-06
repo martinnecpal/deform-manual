@@ -51,8 +51,8 @@ MORP specifies the source, target, and output geometries for morphing with assoc
   
 REMARKS  
 ---  
-This is action keyword which will create DEF_MORP2.INI and spawn DEF_MPRP2.EXE. The newly created geometry as a result of morphing will be loaded by action keyword [GFREAD](/docs/sk/keyword_documentation/g/gfread/). If nominal/source object has mesh, new mesh will be created from action keyword [DEFAMG](/docs/sk/keyword_documentation/d/defamg/). DOE variable numbers will be converted to weighting factors by parsing.  
+This is action keyword which will create DEF_MORP2.INI and spawn DEF_MPRP2.EXE. The newly created geometry as a result of morphing will be loaded by action keyword [GFREAD]({{ '/docs/sk/keyword_documentation/g/gfread/' | relative_url }}). If nominal/source object has mesh, new mesh will be created from action keyword [DEFAMG]({{ '/docs/sk/keyword_documentation/d/defamg/' | relative_url }}). DOE variable numbers will be converted to weighting factors by parsing.  
   
 RELATED TOPICS  
 ---  
-Related keywords: [GFREAD](/docs/sk/keyword_documentation/g/gfread/), [DEFAMG](/docs/sk/keyword_documentation/d/defamg/)
+Related keywords: [GFREAD]({{ '/docs/sk/keyword_documentation/g/gfread/' | relative_url }}), [DEFAMG]({{ '/docs/sk/keyword_documentation/d/defamg/' | relative_url }})

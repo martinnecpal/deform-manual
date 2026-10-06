@@ -142,24 +142,24 @@ Stress Effective plot in Solid shading display
 
 Max Principal stress plot in Line display
 
-In order to continue with the Die Stress Labs with Holder and with Holder and Shrink Fit do not close the MO project Refer the [Lab 12 Die Stress with Holder](/docs/en/labs/basic_labs/2d_labs/lab_12_die_stress_with_holder/) and [13 Die Stress with Shrink Fit](/docs/en/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/) respectively.
+In order to continue with the Die Stress Labs with Holder and with Holder and Shrink Fit do not close the MO project Refer the [Lab 12 Die Stress with Holder]({{ '/docs/en/labs/basic_labs/2d_labs/lab_12_die_stress_with_holder/' | relative_url }}) and [13 Die Stress with Shrink Fit]({{ '/docs/en/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/' | relative_url }}) respectively.
 
 **Related Topics:**
 
-[11\. General Object Data Definition](/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/)
+[11\. General Object Data Definition]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
 
-[14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post-processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post-processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})
 
-[2D Die Stress Study with Single step](/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/)
+[2D Die Stress Study with Single step]({{ '/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/' | relative_url }})
 
-[2D Die Stress Study with Multiple Steps](/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/)
+[2D Die Stress Study with Multiple Steps]({{ '/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/' | relative_url }})
 
-[49.1. 2D Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/)
+[49.1. 2D Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/' | relative_url }})
 
-[49.2. 3D Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/)
+[49.2. 3D Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/' | relative_url }})

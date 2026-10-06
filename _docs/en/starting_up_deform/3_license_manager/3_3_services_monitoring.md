@@ -28,8 +28,8 @@ In case of any license related issues, user can observe the License Log file for
 
 **Related Topics:**
 
-[3.1. DEFORM License Setup](/docs/en/starting_up_deform/3_license_manager/3_1_deform_license_setup/)
+[3.1. DEFORM License Setup]({{ '/docs/en/starting_up_deform/3_license_manager/3_1_deform_license_setup/' | relative_url }})
 
-[3.2. License Monitoring](/docs/en/starting_up_deform/3_license_manager/3_2_license_monitoring/)
+[3.2. License Monitoring]({{ '/docs/en/starting_up_deform/3_license_manager/3_2_license_monitoring/' | relative_url }})
 
-[3.4. Trouble Shooting License Issues](/docs/en/starting_up_deform/3_license_manager/3_4_trouble_shooting_license_issues/)
+[3.4. Trouble Shooting License Issues]({{ '/docs/en/starting_up_deform/3_license_manager/3_4_trouble_shooting_license_issues/' | relative_url }})

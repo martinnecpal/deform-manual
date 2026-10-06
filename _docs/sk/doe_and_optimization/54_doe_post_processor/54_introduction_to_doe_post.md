@@ -13,4 +13,4 @@ DOE Post Processor Layout
 
 **Related Topics:**
 
-[54.1. DOE Post Processor](/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/)
+[54.1. DOE Post Processor]({{ '/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/' | relative_url }})

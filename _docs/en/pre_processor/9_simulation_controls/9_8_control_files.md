@@ -23,7 +23,7 @@ From version 6.0, these data files can be specified through the graphical interf
 
 **Double corner constraints**
 
-This defines two angles where if a node is contacting a die corner an angle between these values, the node will be given a double contact condition. This is further explained in the [Appendix XV: The Double Concave Corner Constraint.](/docs/en/appendices/appendix_xv_the_double_concave_corner_constraint/)
+This defines two angles where if a node is contacting a die corner an angle between these values, the node will be given a double contact condition. This is further explained in the [Appendix XV: The Double Concave Corner Constraint.]({{ '/docs/en/appendices/appendix_xv_the_double_concave_corner_constraint/' | relative_url }})
 
 **Solver switch control**
 
@@ -31,11 +31,11 @@ This defines a number of elements where the switch to sparse solver is blocked. 
 
 Related Topics:
 
-[9.1. Simulation type Settings](/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
-[9.2. Defining Step](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/)   
-[9.3. Stopping Controls](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/)   
-[9.4. Remesh Criteria](/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/)   
-[9.5. Solver Settings](/docs/en/pre_processor/9_simulation_controls/9_5_solver_settings/)   
-[9.6. Process Conditions](/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/)   
-[9.7. Advanced Options](/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/)   
-[9.9. Thermomechanical variables](/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)
+[9.1. Simulation type Settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }})   
+[9.2. Defining Step]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})   
+[9.3. Stopping Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})   
+[9.4. Remesh Criteria]({{ '/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }})   
+[9.5. Solver Settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }})   
+[9.6. Process Conditions]({{ '/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})   
+[9.7. Advanced Options]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }})   
+[9.9. Thermomechanical variables]({{ '/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }})

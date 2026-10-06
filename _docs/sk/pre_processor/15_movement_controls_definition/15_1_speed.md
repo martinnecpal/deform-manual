@@ -35,24 +35,24 @@ Okno 3D Speed movement contros
 
 Súvisiace témy:
 
-[15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[15\. Movement Controls Settings]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[15.2. Force](/docs/sk/pre_processor/15_movement_controls_definition/15_2_force/)
+[15.2. Force]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_2_force/' | relative_url }})
 
-[15.3. Hammer](/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/)
+[15.3. Hammer]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }})
 
-[15.4. Screw press](/docs/sk/pre_processor/15_movement_controls_definition/15_4_screw_press/)
+[15.4. Screw press]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }})
 
-[15.5. Mechanical press](/docs/sk/pre_processor/15_movement_controls_definition/15_5_mechanical_press/)
+[15.5. Mechanical press]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }})
 
-[15.6. Hydraulic press](/docs/sk/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/)
+[15.6. Hydraulic press]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/' | relative_url }})
 
-[15.7. Sliding Die](/docs/sk/pre_processor/15_movement_controls_definition/15_7_sliding_die/)
+[15.7. Sliding Die]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_7_sliding_die/' | relative_url }})
 
-[15.8. Path](/docs/sk/pre_processor/15_movement_controls_definition/15_8_path/)
+[15.8. Path]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }})
 
-[15.9. Rotational Movement](/docs/sk/pre_processor/15_movement_controls_definition/15_9_rotational_movement/)
+[15.9. Rotational Movement]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_9_rotational_movement/' | relative_url }})
 
-[15.10. Torsional movement](/docs/sk/pre_processor/15_movement_controls_definition/15_10_torsional_movement/)
+[15.10. Torsional movement]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_10_torsional_movement/' | relative_url }})
 
-[15.11. Friction Welding movement](/docs/sk/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/).
+[15.11. Friction Welding movement]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/' | relative_url }}).

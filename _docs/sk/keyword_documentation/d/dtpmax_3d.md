@@ -47,4 +47,4 @@ The new time step ![]({{ '/assets/equations/keyword_documentation/d/t_dtpmax.jpg
   
 RELATED TOPICS  
 ---  
-[Step Definition](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/) Keyword: [STPDEF](/docs/sk/keyword_documentation/s/stpdef/), [DTMAX](/docs/sk/keyword_documentation/d/dtmax/), [DSMAX](/docs/sk/keyword_documentation/d/dsmax/)
+[Step Definition]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}) Keyword: [STPDEF]({{ '/docs/sk/keyword_documentation/s/stpdef/' | relative_url }}), [DTMAX]({{ '/docs/sk/keyword_documentation/d/dtmax/' | relative_url }}), [DSMAX]({{ '/docs/sk/keyword_documentation/d/dsmax/' | relative_url }})

@@ -99,4 +99,4 @@ Data for keyword TPLOGY is fully automatically generated from pre-processor. For
   
 RELATED TOPICS  
 ---  
-[Geometry](../../pre_processor/12_geometry_modelling): Topology Keywords: [DIEGEO (2D)](/docs/sk/keyword_documentation/d/diegeo/), [DIEGEO (3D)](/docs/sk/keyword_documentation/d/diegeo_3d/)
+[Geometry](../../pre_processor/12_geometry_modelling): Topology Keywords: [DIEGEO (2D)]({{ '/docs/sk/keyword_documentation/d/diegeo/' | relative_url }}), [DIEGEO (3D)]({{ '/docs/sk/keyword_documentation/d/diegeo_3d/' | relative_url }})

@@ -44,4 +44,4 @@ Users should distinguish the hardness as a material property and the hardness as
   
 RELATED TOPICS  
 ---  
-Material Data: [Hardness](/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/) Keyword: [HDNOBJ](/docs/sk/keyword_documentation/h/hdnobj/), [HDNEST](/docs/sk/keyword_documentation/h/hdnest/), [HDNTIM](/docs/sk/keyword_documentation/h/hdntim/), [JOMINY](/docs/sk/keyword_documentation/j/jominy/)
+Material Data: [Hardness]({{ '/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }}) Keyword: [HDNOBJ]({{ '/docs/sk/keyword_documentation/h/hdnobj/' | relative_url }}), [HDNEST]({{ '/docs/sk/keyword_documentation/h/hdnest/' | relative_url }}), [HDNTIM]({{ '/docs/sk/keyword_documentation/h/hdntim/' | relative_url }}), [JOMINY]({{ '/docs/sk/keyword_documentation/j/jominy/' | relative_url }})

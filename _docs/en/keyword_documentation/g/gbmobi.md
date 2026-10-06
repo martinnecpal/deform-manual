@@ -39,4 +39,4 @@ Applicable simulation type: [Heat treatment](../../pre_processor/9_simulation_co
 
 RELATED TOPICS  
 ---  
-Keywords: [GBENGY](/docs/en/keyword_documentation/g/gbengy/), [COARSE](/docs/en/keyword_documentation/c/coarse/), [NUCSIZ](/docs/en/keyword_documentation/n/nucsiz/), [DIFBND](/docs/en/keyword_documentation/d/difbnd/)
+Keywords: [GBENGY]({{ '/docs/en/keyword_documentation/g/gbengy/' | relative_url }}), [COARSE]({{ '/docs/en/keyword_documentation/c/coarse/' | relative_url }}), [NUCSIZ]({{ '/docs/en/keyword_documentation/n/nucsiz/' | relative_url }}), [DIFBND]({{ '/docs/en/keyword_documentation/d/difbnd/' | relative_url }})

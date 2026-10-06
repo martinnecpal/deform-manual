@@ -15,7 +15,7 @@ In the Objects table, add a 3rd object. Click ![]({{ '/assets/icons/pre_icons/mo
 
 ### Top die and Bottom die
 
-Repeat the same mesh/interpolation/material/BCC procedure as explained in [Lab 10: Die stress](/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab10/) for the Top Die and Bottom Die. After completing the setup, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object 4 page.
+Repeat the same mesh/interpolation/material/BCC procedure as explained in [Lab 10: Die stress]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab10/' | relative_url }}) for the Top Die and Bottom Die. After completing the setup, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object 4 page.
 
 ### Object 4 General page
 

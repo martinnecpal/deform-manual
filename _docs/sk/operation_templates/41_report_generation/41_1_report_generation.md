@@ -323,10 +323,10 @@ Na vlastnej stránke môžeme uložiť aktuálne zobrazenie objektu, pričom zob
 
 **Súvisiace témy:**
 
-[41\. Introduction ot Report Generation](/docs/en/operation_templates/41_report_generation/41_introduction_to_report_generation/)
+[41\. Introduction ot Report Generation]({{ '/docs/en/operation_templates/41_report_generation/41_introduction_to_report_generation/' | relative_url }})
 
-[28.1. Editing Chapters](/docs/en/post_processor/28_report_generation/28_1_editing_chapters/)
+[28.1. Editing Chapters]({{ '/docs/en/post_processor/28_report_generation/28_1_editing_chapters/' | relative_url }})
 
-[28\. Report Generation in Post-Processor](/docs/en/post_processor/28_report_generation/28_report_generation/)
+[28\. Report Generation in Post-Processor]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }})
 
-[Report Generation lab in MO](/docs/en/labs/report_generation_lab/report_generation_lab_in_mo/)
+[Report Generation lab in MO]({{ '/docs/en/labs/report_generation_lab/report_generation_lab_in_mo/' | relative_url }})

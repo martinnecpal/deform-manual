@@ -52,4 +52,4 @@ OBJPOS is an action keyword that positions objects when it is read in to the Pre
   
 RELATED TOPICS  
 ---  
-[Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+[Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})

@@ -117,4 +117,4 @@ Go to the Set up ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | 
 
 Max Principal Stress state variable plot
 
-Switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode and add another Die stress study to add Shrink Fit. Click [Lab 11. Die stres with a press fit.](/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab11/) to continue Shrink fit lab.
+Switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode and add another Die stress study to add Shrink Fit. Click [Lab 11. Die stres with a press fit.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab11/' | relative_url }}) to continue Shrink fit lab.

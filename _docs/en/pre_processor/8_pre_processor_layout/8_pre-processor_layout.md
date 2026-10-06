@@ -201,15 +201,15 @@ Fig. 8.17. shows the tool menu options, using these options or icons in the tool
 
 Tool menu options
 
-  * **Object Nodes** ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}) : The object node data window displays all available information about object nodes. All information can be modified and many of the variables can be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to section [17.1 Node Data](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/).
+  * **Object Nodes** ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}) : The object node data window displays all available information about object nodes. All information can be modified and many of the variables can be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to section [17.1 Node Data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}).
 
-  * **Object Elements** ![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) : The element data window displays all available information about object elements. All information can be modified and many of the variables can be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to section [17.2 Element Data](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+  * **Object Elements** ![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) : The element data window displays all available information about object elements. All information can be modified and many of the variables can be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to section [17.2 Element Data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
-  * **Boolean**![]({{ '/assets/icons/pre_icons/mo_boolean_icon.jpg' | relative_url }}) : This capability allows the user to subtract volume from the mesh of an object from the geometry of another object or Boolean with respect to a plane (option available only for 3D). For more information please refer to section [18.1 Boolean](/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/).
+  * **Boolean**![]({{ '/assets/icons/pre_icons/mo_boolean_icon.jpg' | relative_url }}) : This capability allows the user to subtract volume from the mesh of an object from the geometry of another object or Boolean with respect to a plane (option available only for 3D). For more information please refer to section [18.1 Boolean]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }}).
 
-  * **Data Interpolation** ![]({{ '/assets/icons/pre_icons/mo_data_interpolation_icon.jpg' | relative_url }}) : While doing the manual remeshing in the preprocessor, user can transfer data from another object from a different database using this dialog. Once the database is selected user can select the object, and step number from where the data needs to be interpolated. For more information please refer to section [17.3. Data Interpolation](/docs/en/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/).
+  * **Data Interpolation** ![]({{ '/assets/icons/pre_icons/mo_data_interpolation_icon.jpg' | relative_url }}) : While doing the manual remeshing in the preprocessor, user can transfer data from another object from a different database using this dialog. Once the database is selected user can select the object, and step number from where the data needs to be interpolated. For more information please refer to section [17.3. Data Interpolation]({{ '/docs/en/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/' | relative_url }}).
 
-  * **Convert 2D to 3D** ![]({{ '/assets/icons/pre_icons/convert_2d_to_3d_icon.jpg' | relative_url }}) : Convert 2D to 3D model will convert the 2D axisymmetric/torsion model by revolving about the centerline and 2D plane strain/plane stress model by extruding in the third direction. For more information please refer to section [22\. Convert 2D to 3D.](/docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/)
+  * **Convert 2D to 3D** ![]({{ '/assets/icons/pre_icons/convert_2d_to_3d_icon.jpg' | relative_url }}) : Convert 2D to 3D model will convert the 2D axisymmetric/torsion model by revolving about the centerline and 2D plane strain/plane stress model by extruding in the third direction. For more information please refer to section [22\. Convert 2D to 3D.]({{ '/docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/' | relative_url }})
 
 ### Options Menu
 
@@ -293,7 +293,7 @@ Output Controls options under Environment Settings window
 
   * Email:
 
-Email option under Environment Settings window appears as shown in Fig. 8.27. This function allows DEFORM to send an email notification at the start of the simulation and with last 25 lines from the Message file and Log file at end of the simulation. Emails are sent via SMTP using StartTLS (or no security). For more information refer [23.7. Email notification of the simulation](/docs/en/simulator/23_deform_simulator/23_7_email_the_results/).
+Email option under Environment Settings window appears as shown in Fig. 8.27. This function allows DEFORM to send an email notification at the start of the simulation and with last 25 lines from the Message file and Log file at end of the simulation. Emails are sent via SMTP using StartTLS (or no security). For more information refer [23.7. Email notification of the simulation]({{ '/docs/en/simulator/23_deform_simulator/23_7_email_the_results/' | relative_url }}).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image031.jpg' | relative_url }})
 
@@ -390,7 +390,7 @@ Help menu option
 
   * **About SFTC :** Provides SFTC contact information in a window.
 
-  * **About DEFORM Next-Gen Pre :** Provides brief information about DEFORM product in a window. For more details on the release note refer the chapter [1.11. Release Notes.](/docs/en/about_deform/1_introduction_to_deform/1_11_release_notes/)
+  * **About DEFORM Next-Gen Pre :** Provides brief information about DEFORM product in a window. For more details on the release note refer the chapter [1.11. Release Notes.]({{ '/docs/en/about_deform/1_introduction_to_deform/1_11_release_notes/' | relative_url }})
 
 ## Operation Tree
 
@@ -586,27 +586,27 @@ Under Operation tree following options are available to setup problem:
 
 Geometry type page
 
-  * **Simulation Controls [2D,3D] :** Options defined under Simulation Controls, control the numerical behaviour of the solution. Please refer to [9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/).
+  * **Simulation Controls [2D,3D] :** Options defined under Simulation Controls, control the numerical behaviour of the solution. Please refer to [9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}).
 
-  * **Material list [2D,3D] :** For a simulation to achieve a high level of accuracy it is important to understand the material properties required to specify a material used in DEFORM. Please refer to Chapter [10\. Material Properties](/docs/en/pre_processor/10_material_data/10_material_data/).
+  * **Material list [2D,3D] :** For a simulation to achieve a high level of accuracy it is important to understand the material properties required to specify a material used in DEFORM. Please refer to Chapter [10\. Material Properties]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
   * **Object [2D,3D]** : In Object page we will define the number of objects required for the problem setup.
 
-  * **General Definition [2D,3D]** : To define Object Name, Object Temperature and Object types for the object. Please refer to Chapter [11\. General Object Data Definition](/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/)
-  * **Geometry Data [2D,3D]** : To define the geometry data for the object by importing the geometry or by creating geometry using primitive options. Please refer to Chapter [12\. Geometry Modelling](/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/).
-  * **Mesh Data [2D,3D]** : option to generate mesh for the object geometry using mesh options. Please refer to Chapter [13\. Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/).
+  * **General Definition [2D,3D]** : To define Object Name, Object Temperature and Object types for the object. Please refer to Chapter [11\. General Object Data Definition]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
+  * **Geometry Data [2D,3D]** : To define the geometry data for the object by importing the geometry or by creating geometry using primitive options. Please refer to Chapter [12\. Geometry Modelling]({{ '/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }}).
+  * **Mesh Data [2D,3D]** : option to generate mesh for the object geometry using mesh options. Please refer to Chapter [13\. Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }}).
   * **Material assignment [2D,3D]** : option to assign material for the object by selecting the material in Material list. 
-  * **Boundary Conditions [2D,3D]** : option used to assign boundary condition for the object. Please refer to Chapter [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
-  * **Movement controls [2D,3D]** : option used to define movement for the object. Please refer to Chapter [15\. Movement Controls Settings](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/).
-  * **Properties [2D,3D]** : option to define object properties for the object. Please refer to Chapter [16\. Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
-  * **Initialize [2D,3D]** : option to initialize the state variable for the object. Please refer to Chapter [17\. Object Data Initialize.](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/)
+  * **Boundary Conditions [2D,3D]** : option used to assign boundary condition for the object. Please refer to Chapter [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
+  * **Movement controls [2D,3D]** : option used to define movement for the object. Please refer to Chapter [15\. Movement Controls Settings]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}).
+  * **Properties [2D,3D]** : option to define object properties for the object. Please refer to Chapter [16\. Object Properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
+  * **Initialize [2D,3D]** : option to initialize the state variable for the object. Please refer to Chapter [17\. Object Data Initialize.]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }})
   * **Built In Flownet [3D]** : option used to generate Built in Flownet for deformable object. 
 
-  * **Positioning [2D,3D]** : Once the object is defined, a variety of positioning features are available to place the objects in the correct position before the process is modelled. It can also be accessed from Pre Tools Menu. Please refer to Chapter [19\. Object positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+  * **Positioning [2D,3D]** : Once the object is defined, a variety of positioning features are available to place the objects in the correct position before the process is modelled. It can also be accessed from Pre Tools Menu. Please refer to Chapter [19\. Object positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
-  * **Contact [2D,3D]** : The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. Please refer to Chapter [20\. Inter-Object Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+  * **Contact [2D,3D]** : The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. Please refer to Chapter [20\. Inter-Object Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
-  * **Stopping Controls [2D,3D]** : In Guided mode Stopping controls page, it is having Deformation and Thermal Stopping criteria options as shown in below Fig. 8.57. In Expert mode will have [Simulation controls](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/) options.
+  * **Stopping Controls [2D,3D]** : In Guided mode Stopping controls page, it is having Deformation and Thermal Stopping criteria options as shown in below Fig. 8.57. In Expert mode will have [Simulation controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}) options.
 
 ![]({{ '/assets/images/pre-processor/8_pre_processor_layout/8_image013.jpg' | relative_url }})
 
@@ -618,65 +618,65 @@ Stopping controls page
 
 Step page
 
-  * ******Generate DB** [2D,3D]**:** The simulation data set entered into the pre-processor can be written as a new database or appended to an existing database file. Please refer to Chapter [21\. Database Generation](/docs/en/pre_processor/21_database_generation/21_database_generation/)
+  * ******Generate DB** [2D,3D]**:** The simulation data set entered into the pre-processor can be written as a new database or appended to an existing database file. Please refer to Chapter [21\. Database Generation]({{ '/docs/en/pre_processor/21_database_generation/21_database_generation/' | relative_url }})
 
   
 **Related Topics:**
 
-[9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+[9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[10\. Material Properties](/docs/en/pre_processor/10_material_data/10_material_data/)
+[10\. Material Properties]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[11\. General Object Data Definition](/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/)
+[11\. General Object Data Definition]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
 
-[12\. Geometry Modelling](/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/)
+[12\. Geometry Modelling]({{ '/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})
 
-[13\. Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/)
+[13\. Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[15\. Movement Controls Settings](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[15\. Movement Controls Settings]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[16\. Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+[16\. Object Properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/)
+[17\. Object Data Initialize]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }})
 
-[18\. Advanced Object Data Definition](/docs/en/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/)
+[18\. Advanced Object Data Definition]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/' | relative_url }})
 
-[19\. Object positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+[19\. Object positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
-[20\. Inter-Object Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[20\. Inter-Object Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-[21\. Database Generation](/docs/en/pre_processor/21_database_generation/21_database_generation/)
+[21\. Database Generation]({{ '/docs/en/pre_processor/21_database_generation/21_database_generation/' | relative_url }})
 
-[22\. Convert 2D to 3D](/docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/)
+[22\. Convert 2D to 3D]({{ '/docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/' | relative_url }})
 
-[23\. Simulatior](/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/)
+[23\. Simulatior]({{ '/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/' | relative_url }})
 
-[24\. Post Processor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[24\. Post Processor]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})
 
-[56\. User Routines](/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/)
+[56\. User Routines]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/' | relative_url }})
 
-[3\. License Manager](/docs/en/starting_up_deform/3_license_manager/license_manager_mainpg/)
+[3\. License Manager]({{ '/docs/en/starting_up_deform/3_license_manager/license_manager_mainpg/' | relative_url }})
 
-[Appendices](/docs/en/appendices/appendices_list/)
+[Appendices]({{ '/docs/en/appendices/appendices_list/' | relative_url }})
 
-[Keyword Documentation](/docs/en/keyword_documentation/deform_keywords_list/)
+[Keyword Documentation]({{ '/docs/en/keyword_documentation/deform_keywords_list/' | relative_url }})
 
   
 **Operations:**  
-[Integrated Manufacturing Process (MO)](/docs/en/integrated_manufacturing_process_setup/integrated_manufacturing_process_mainpg/)
+[Integrated Manufacturing Process (MO)]({{ '/docs/en/integrated_manufacturing_process_setup/integrated_manufacturing_process_mainpg/' | relative_url }})
 
-[Forming operation Manual](/docs/en/operation_templates/33_forming/33_introduction_to_forming/)
+[Forming operation Manual]({{ '/docs/en/operation_templates/33_forming/33_introduction_to_forming/' | relative_url }})
 
-[Shape Rolling Manual](/docs/en/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/)
+[Shape Rolling Manual]({{ '/docs/en/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/' | relative_url }})
 
-[Ring Rolling Manual](/docs/en/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/)
+[Ring Rolling Manual]({{ '/docs/en/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/' | relative_url }})
 
-[Extrusion Template Manual](/docs/en/operation_templates/31_extrusion/31_introduction_to_extrusion/)
+[Extrusion Template Manual]({{ '/docs/en/operation_templates/31_extrusion/31_introduction_to_extrusion/' | relative_url }})
 
-[Machining Template Manual](/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/)
+[Machining Template Manual]({{ '/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/' | relative_url }})
 
-[Inverse Heat Transfer Manual](/docs/en/inverse_heat/51_introduction_to_inverse_heat/)
+[Inverse Heat Transfer Manual]({{ '/docs/en/inverse_heat/51_introduction_to_inverse_heat/' | relative_url }})
 
-[3D Geo Tool](/docs/en/operation_templates/50_3d_geo_tool/50_introduction_to_3d_geo_tool/)
+[3D Geo Tool]({{ '/docs/en/operation_templates/50_3d_geo_tool/50_introduction_to_3d_geo_tool/' | relative_url }})

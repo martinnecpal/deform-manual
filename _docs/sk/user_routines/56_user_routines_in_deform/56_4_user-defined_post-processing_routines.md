@@ -293,12 +293,12 @@ The Post-processor provides the "User Defined Variable Tracking" option to selec
 
 Post user variables tracking user interface
 
-For detailed steps to use this user interface refer section [26.6.13. Set User Defined Variable Tracking.](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_13_set_user_defined_variable_tracking/)
+For detailed steps to use this user interface refer section [26.6.13. Set User Defined Variable Tracking.]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_13_set_user_defined_variable_tracking/' | relative_url }})
 
 **Related Topics:**
 
-[56.1. Introduction to User Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_1_introduction_to_user_routines/)
+[56.1. Introduction to User Routines]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_1_introduction_to_user_routines/' | relative_url }})
 
-[56.2. 2D User Defined FEM Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/)
+[56.2. 2D User Defined FEM Routines]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }})
 
-[56 3 3D User Defined FEM Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_3_3d_user_defined_fem_routines/)
+[56 3 3D User Defined FEM Routines]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_3_3d_user_defined_fem_routines/' | relative_url }})

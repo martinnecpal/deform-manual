@@ -9,7 +9,7 @@ Výsledky modelu je možné zobraziť ako súvislý rad obrázkov a animačných
 
 Na karte **Všeobecné** môže používateľ v poli Názov súboru zadať názov súboru; pomocou tlačidla Prehľadávať môže vybrať adresár, do ktorého sa má animácia uložiť. Vybraná cesta sa zobrazí v poli Adresár (pozri obr. 26.6.19.1.).
 
-Po vytvorení súboru prezentácie (.pre) sa aktivuje tlačidlo „Upraviť v editore prezentácií“ ![]({{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}). Kliknutím na toto tlačidlo spustíte editor prezentácií. Ďalšie informácie týkajúce sa editora prezentácií nájdete v [26.6.23. Presentation Editor](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_23_presentation_editor/)
+Po vytvorení súboru prezentácie (.pre) sa aktivuje tlačidlo „Upraviť v editore prezentácií“ ![]({{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}). Kliknutím na toto tlačidlo spustíte editor prezentácií. Ďalšie informácie týkajúce sa editora prezentácií nájdete v [26.6.23. Presentation Editor]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_23_presentation_editor/' | relative_url }})
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_19_animation_setup/image001.jpg' | relative_url }})
 

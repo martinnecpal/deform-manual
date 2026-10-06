@@ -99,4 +99,4 @@ The friction coefficient (or factor) may be specified as a constant value or as 
   
 RELATED TOPICS  
 ---  
-Inter-Object conditions: Deformation Keyword: [CNTACT (2D)](/docs/sk/keyword_documentation/c/cntact/), [CNTACT (3D)](/docs/sk/keyword_documentation/c/cntact_3d/),[CNTMTH (3D)](/docs/sk/keyword_documentation/c/cntmth/), [SEPRES](/docs/sk/keyword_documentation/s/sepres/), [SEPDEN (2D)](/docs/sk/keyword_documentation/s/sepden/)
+Inter-Object conditions: Deformation Keyword: [CNTACT (2D)]({{ '/docs/sk/keyword_documentation/c/cntact/' | relative_url }}), [CNTACT (3D)]({{ '/docs/sk/keyword_documentation/c/cntact_3d/' | relative_url }}),[CNTMTH (3D)]({{ '/docs/sk/keyword_documentation/c/cntmth/' | relative_url }}), [SEPRES]({{ '/docs/sk/keyword_documentation/s/sepres/' | relative_url }}), [SEPDEN (2D)]({{ '/docs/sk/keyword_documentation/s/sepden/' | relative_url }})

@@ -29,4 +29,4 @@ DEFINITION
 OPSTOP defines the various operation stopping criteria.  
 RELATED TOPICS  
 ---  
-Related Keyword: [OPRNAM](/docs/en/keyword_documentation/o/oprnam/), [OTPRNG](/docs/en/keyword_documentation/o/otprng/)
+Related Keyword: [OPRNAM]({{ '/docs/en/keyword_documentation/o/oprnam/' | relative_url }}), [OTPRNG]({{ '/docs/en/keyword_documentation/o/otprng/' | relative_url }})

@@ -32,4 +32,4 @@ The DEFORM system calculates the overall geometry size, geosiz, and the absolute
   
 RELATED TOPICS  
 ---  
-Simulation Controls:[ Advanced Controls](/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/)\- [Error Tolerances](../../pre_processor/9_simulation_controls/9_7_advanced_options.htm#9.7.2._Error_Tolerances), [Geometry](/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/)
+Simulation Controls:[ Advanced Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }})\- [Error Tolerances](../../pre_processor/9_simulation_controls/9_7_advanced_options.htm#9.7.2._Error_Tolerances), [Geometry]({{ '/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})

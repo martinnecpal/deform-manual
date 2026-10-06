@@ -43,7 +43,7 @@ Top die movement window
 
 #### Define Primary Die stroke for Upset
 
-Set the **total** **primary****die****travel** to **6.5** in (Same as used in [Lab 2](/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab2/)). (See Fig. L6.3.). If the initial position of the top die is at Top Dead Center or Bottom Dead center, accordingly ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) wizard button can be used for positioning the die and calculate the forming stroke automatically. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Stopping controls page.
+Set the **total** **primary****die****travel** to **6.5** in (Same as used in [Lab 2]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab2/' | relative_url }})). (See Fig. L6.3.). If the initial position of the top die is at Top Dead Center or Bottom Dead center, accordingly ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) wizard button can be used for positioning the die and calculate the forming stroke automatically. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Stopping controls page.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab6_image0003.jpg' | relative_url }})
 

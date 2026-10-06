@@ -223,7 +223,7 @@ Krok vykresľovania rozdielov
 
 Možnosť „Vykreslené interpolované SV“
 
-**Údaje o materiáli ![]({{ '/assets/icons/pre_icons/mo_material_icon.jpg' | relative_url }}) : [2D, 3D]: **Tlačidlá „Údaje o materiáli“ v paneli RMB umožňujú používateľovi otvoriť okno s vlastnosťami materiálu (pozri obr. 25.12.). Ďalšie informácie nájdete v [Chapter 10. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/)
+**Údaje o materiáli ![]({{ '/assets/icons/pre_icons/mo_material_icon.jpg' | relative_url }}) : [2D, 3D]: **Tlačidlá „Údaje o materiáli“ v paneli RMB umožňujú používateľovi otvoriť okno s vlastnosťami materiálu (pozri obr. 25.12.). Ďalšie informácie nájdete v [Chapter 10. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image013.jpg' | relative_url }})
 
@@ -248,7 +248,7 @@ Možnosti grafického okna pomocou pravého tlačidla myši; (a) pre 2D, (b) pre
 Funkcia generovania správ umožňuje vytvárať správy v rôznych formátoch, ako sú ppt a pdf, pre vybrané funkcie následného spracovania, napríklad kontúry stavových premenných, sledovanie bodov, Flownet, výňatky z extrahovaných údajov, oblasti záujmu, súhrnné grafy, grafy zaťaženia a posunu a extrakciu údajov.
 
   
-Ďalšie informácie o nastavení generovania správ nájdete v [Chapter 28. Report Generation](/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/).
+Ďalšie informácie o nastavení generovania správ nájdete v [Chapter 28. Report Generation]({{ '/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/' | relative_url }}).
 
 ## Ponuka widgetu v doku
 
@@ -260,10 +260,10 @@ Ponuka widgetu Dock pre postprocesor
 
 **Súvisiace témy:**
 
-[24\. Introduction to Post-Processor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[24\. Introduction to Post-Processor]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})
 
-[26\. Post Processor Display controls](/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/)
+[26\. Post Processor Display controls]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/' | relative_url }})
 
-[27\. Post Processing tools](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/)
+[27\. Post Processing tools]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/' | relative_url }})
 
-[28\. Report Generation](/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/)
+[28\. Report Generation]({{ '/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/' | relative_url }})

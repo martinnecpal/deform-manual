@@ -195,4 +195,4 @@ Mesh generated for Size ratio 1
 
 **Related Topics:**
 
-[12.2. 2D Geometry Data Editing](/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+[12.2. 2D Geometry Data Editing]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }})

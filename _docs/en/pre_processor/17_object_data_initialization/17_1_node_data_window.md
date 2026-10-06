@@ -130,21 +130,21 @@ Related to picking options refer 14. Boundary Condition [Picking options for 2D]
 
 **General Tab**
 
-  * **Displacement (DRZ) :** Displacement ([DRZ](/docs/en/keyword_documentation/d/drz/)) stores the displacement of each node since the last remeshing. For elastic objects, a displacement may be specified for interference fits. The elastic recover of the object will cause the appropriate stress values to be developed.
+  * **Displacement (DRZ) :** Displacement ([DRZ]({{ '/docs/en/keyword_documentation/d/drz/' | relative_url }})) stores the displacement of each node since the last remeshing. For elastic objects, a displacement may be specified for interference fits. The elastic recover of the object will cause the appropriate stress values to be developed.
 
-  * **Velocity (URZ) :**[URZ](/docs/en/keyword_documentation/u/urz/) is the velocity components of each node.
+  * **Velocity (URZ) :**[URZ]({{ '/docs/en/keyword_documentation/u/urz/' | relative_url }}) is the velocity components of each node.
 
-  * **Force (FRZ) :**[FRZ](/docs/en/keyword_documentation/f/frz/) specifies the value of the constant nodal force at individual nodes.
+  * **Force (FRZ) :**[FRZ]({{ '/docs/en/keyword_documentation/f/frz/' | relative_url }}) specifies the value of the constant nodal force at individual nodes.
 
-  * **Pressure (PRZ) :**[PRZ](/docs/en/keyword_documentation/p/prz/) maintains a specified normal pressure or shear traction across the face of the elements lying between the selected boundary nodes.
+  * **Pressure (PRZ) :**[PRZ]({{ '/docs/en/keyword_documentation/p/prz/' | relative_url }}) maintains a specified normal pressure or shear traction across the face of the elements lying between the selected boundary nodes.
 
-  * **Deform BCC (BCCDEF) :**[BCCDEF](/docs/en/keyword_documentation/b/bccdef/) specifies the deformation boundary condition in X and Y directions.
+  * **Deform BCC (BCCDEF) :**[BCCDEF]({{ '/docs/en/keyword_documentation/b/bccdef/' | relative_url }}) specifies the deformation boundary condition in X and Y directions.
 
 The code values are:
 
 **0** Node force specified
 
-**1** X, Y, or Z component of node velocity constrained, corresponding to the X, Y or Z component of [BCCDEF](/docs/en/keyword_documentation/b/bccdef/)
+**1** X, Y, or Z component of node velocity constrained, corresponding to the X, Y or Z component of [BCCDEF]({{ '/docs/en/keyword_documentation/b/bccdef/' | relative_url }})
 
 **2** Constrained node tractions specified by PRZ
 
@@ -154,7 +154,7 @@ The code values are:
 
 **Note** : There is no significance to the X, Y, or Z component of contact. Contact values are stored in the first free component, starting with Z, then Y, then X.
 
-  * **Function BCC (BCCDFN)** : [BCCDFN](/docs/en/keyword_documentation/b/bccdfn/) specifies if the value of a deformation boundary constraint (nodal velocity, force, or traction) associated with a particular node is to be specified as a constant or as a set of time/nodal value data.
+  * **Function BCC (BCCDFN)** : [BCCDFN]({{ '/docs/en/keyword_documentation/b/bccdfn/' | relative_url }}) specifies if the value of a deformation boundary constraint (nodal velocity, force, or traction) associated with a particular node is to be specified as a constant or as a set of time/nodal value data.
 
   * **Strain(Nodal)** : Strain (nodal) specifies the value of the Strain at individual nodes.
 
@@ -184,19 +184,19 @@ Nodal Deformation Stress data window for 3D
 
 2D Nodal Thermal data window
 
-  * **Node Temperature (NDTMP) :**[NDTMP](/docs/en/keyword_documentation/n/ndtmp/) specifies the nodal temperature to be applied to individual nodes.
+  * **Node Temperature (NDTMP) :**[NDTMP]({{ '/docs/en/keyword_documentation/n/ndtmp/' | relative_url }}) specifies the nodal temperature to be applied to individual nodes.
 
-  * **Heat (NDHEAT) :**[NDHEAT](/docs/en/keyword_documentation/n/ndheat/) specifies the nodal heat to be applied to individual nodes.
+  * **Heat (NDHEAT) :**[NDHEAT]({{ '/docs/en/keyword_documentation/n/ndheat/' | relative_url }}) specifies the nodal heat to be applied to individual nodes.
 
-  * **Heat flux (NDFLUX) :**[NDFLUX](/docs/en/keyword_documentation/n/ndflux/) specifies the distributed nodal heat flux to be applied to individual nodes. The heat flux constraint will be applied to the element faces lying between the selected boundary nodes.
+  * **Heat flux (NDFLUX) :**[NDFLUX]({{ '/docs/en/keyword_documentation/n/ndflux/' | relative_url }}) specifies the distributed nodal heat flux to be applied to individual nodes. The heat flux constraint will be applied to the element faces lying between the selected boundary nodes.
 
-  * **Thermal BCC (BCCTMP) :**[BCCTMP](/docs/en/keyword_documentation/b/bcctmp/) specifies the heat transfer boundary constraint code for individual nodes.
+  * **Thermal BCC (BCCTMP) :**[BCCTMP]({{ '/docs/en/keyword_documentation/b/bcctmp/' | relative_url }}) specifies the heat transfer boundary constraint code for individual nodes.
 
   1. Constant nodal temperature is specified
   2. Heat transfer with environment boundary condition
   3. Specified nodal heat flux
 
-  * **Boundary condition function (BCCTFN) :** [BCCFNC](/docs/en/keyword_documentation/b/bccfnc/) is used to specify time/nodal value pairs for nodal boundary constraints. Types of nodal boundary constraints that can be specified as time/nodal value pairs include velocity, force, traction, temperature, heat, and distributed heat flux. [BCCFNC](/docs/en/keyword_documentation/b/bccfnc/) can only be used when a node's boundary constraint function type, [BCCDFN](/docs/en/keyword_documentation/b/bccdfn/) or [BCCTFN](/docs/en/keyword_documentation/b/bcctfn/), has been specified as a time/nodal value type.
+  * **Boundary condition function (BCCTFN) :** [BCCFNC]({{ '/docs/en/keyword_documentation/b/bccfnc/' | relative_url }}) is used to specify time/nodal value pairs for nodal boundary constraints. Types of nodal boundary constraints that can be specified as time/nodal value pairs include velocity, force, traction, temperature, heat, and distributed heat flux. [BCCFNC]({{ '/docs/en/keyword_documentation/b/bccfnc/' | relative_url }}) can only be used when a node's boundary constraint function type, [BCCDFN]({{ '/docs/en/keyword_documentation/b/bccdfn/' | relative_url }}) or [BCCTFN]({{ '/docs/en/keyword_documentation/b/bcctfn/' | relative_url }}), has been specified as a time/nodal value type.
 
   * **Diffusion bonding :**
 
@@ -212,11 +212,11 @@ Nodal Diffusion data window for 2D
 
 Nodal Diffusion data window for 2D 
 
-  * **Atom Percentage (DATOM) :**[DATOM](/docs/en/keyword_documentation/d/datom/) specifies atom content at a node.
+  * **Atom Percentage (DATOM) :**[DATOM]({{ '/docs/en/keyword_documentation/d/datom/' | relative_url }}) specifies atom content at a node.
 
-  * **Diffusion Flux (CRBFLX)** : [CRBFLX](/docs/en/keyword_documentation/c/crbflx/) specifies "carbon flux" or atom flux for the surface of a workpiece.
+  * **Diffusion Flux (CRBFLX)** : [CRBFLX]({{ '/docs/en/keyword_documentation/c/crbflx/' | relative_url }}) specifies "carbon flux" or atom flux for the surface of a workpiece.
 
-  * **Diffusion BCC (BCCCRB)** : [BCCCRB](/docs/en/keyword_documentation/b/bcccrb/) specifies the atom transfer boundary constraint code for individual nodes.
+  * **Diffusion BCC (BCCCRB)** : [BCCCRB]({{ '/docs/en/keyword_documentation/b/bcccrb/' | relative_url }}) specifies the atom transfer boundary constraint code for individual nodes.
 
 ## Electric Heating Tab
 
@@ -226,15 +226,15 @@ Nodal Diffusion data window for 2D
 
 Nodal Electric Heating data window
 
-  * **Electric field intensity** **(VOTAGE)** : Electric field intensity ([VOTAGE](/docs/en/keyword_documentation/v/votage/)) specifies amount of voltage supplied to heat the object.
+  * **Electric field intensity** **(VOTAGE)** : Electric field intensity ([VOTAGE]({{ '/docs/en/keyword_documentation/v/votage/' | relative_url }})) specifies amount of voltage supplied to heat the object.
 
-  * **Resistance BCC** **(BCCRHT)** : Resistance BCC ([BCCRHT](/docs/en/keyword_documentation/b/bccrht/)) specifies if the value of a resistance boundary constraint (nodal velocity, force, or traction) associated with a particular node is to be specified as a constant or as a set of time/nodal value data.
+  * **Resistance BCC** **(BCCRHT)** : Resistance BCC ([BCCRHT]({{ '/docs/en/keyword_documentation/b/bccrht/' | relative_url }})) specifies if the value of a resistance boundary constraint (nodal velocity, force, or traction) associated with a particular node is to be specified as a constant or as a set of time/nodal value data.
 
-  * **Current Flux (RHTFLX)** :**** Rate of flow of current ([RHTFLX](/docs/en/keyword_documentation/r/rhtflx/)) supplied to heat the object.
+  * **Current Flux (RHTFLX)** :**** Rate of flow of current ([RHTFLX]({{ '/docs/en/keyword_documentation/r/rhtflx/' | relative_url }})) supplied to heat the object.
 
 ## User Tab
 
-**[2D,3D]** The data for User node variables ([USRNOD](/docs/en/keyword_documentation/u/usrnod/)) can be initialized, defined or examined here.
+**[2D,3D]** The data for User node variables ([USRNOD]({{ '/docs/en/keyword_documentation/u/usrnod/' | relative_url }})) can be initialized, defined or examined here.
 
 User node variable values can be defined using FORTRAN subroutines. Refer to a [Chapter 56 section USRUPD subroutines](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_3_User_defined_node_and_element_value_\(USRUPD\)). Each node value may accept both a name and a value (See Fig. 17.1.11.). Also, an infinite number of variables may be defined. A minimum of 2 user node variables will be defined by default, however, the user may increase this to as large number as wished. User needs to be cautious that a large number of variables defined can lead to a large database file.
 
@@ -244,7 +244,7 @@ User Nodal variables data window
 
 ## Thermomechanical variable Tab
 
-**[2D, 3D]** Under Simulation controls - [Thermomechanical](/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/) variable page, added variables related to Nodal data will be listed under Thermomechanical variable ( [NRECID](/docs/en/keyword_documentation/n/nrecid/)) tab in Node data window as shown in Fig. 17.1.12. Thermomechanical variable value can be initialized or examined here. 
+**[2D, 3D]** Under Simulation controls - [Thermomechanical]({{ '/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }}) variable page, added variables related to Nodal data will be listed under Thermomechanical variable ( [NRECID]({{ '/docs/en/keyword_documentation/n/nrecid/' | relative_url }})) tab in Node data window as shown in Fig. 17.1.12. Thermomechanical variable value can be initialized or examined here. 
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image012.jpg' | relative_url }})
 
@@ -252,7 +252,7 @@ Nodal Thermomechanical variables data window
 
 ## Additive Manufacturing Tab
 
-**[3D]** Under Additive manufacturing ([NODDEN](/docs/en/keyword_documentation/n/nodden/)) tab user can define the node density value of the object used for Additive manufacturing process. (See Fig. 17.1.13.) 
+**[3D]** Under Additive manufacturing ([NODDEN]({{ '/docs/en/keyword_documentation/n/nodden/' | relative_url }})) tab user can define the node density value of the object used for Additive manufacturing process. (See Fig. 17.1.13.) 
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image013.jpg' | relative_url }})
 
@@ -260,8 +260,8 @@ Nodal Thermomechanical variables data window
 
 **Related Topics:**
 
-[17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/)
+[17\. Object Data Initialize]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }})
 
-[17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/)
+[17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }})
 
-[17.3. Data Interpolation Window](/docs/en/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/)
+[17.3. Data Interpolation Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/' | relative_url }})

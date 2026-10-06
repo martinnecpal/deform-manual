@@ -30,4 +30,4 @@ Applicable Simulation Modes: Deformation Applicable object types: [Plastic](../.
   
 RELATED TOPICS  
 ---  
-[Object Properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/): [Thermal](/docs/sk/pre_processor/16_object_properties/16_2_thermal_properties/) Keywords: [REFTMP](/docs/sk/keyword_documentation/r/reftmp/), [OTPRNG](/docs/sk/keyword_documentation/o/otprng/)
+[Object Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }}): [Thermal]({{ '/docs/sk/pre_processor/16_object_properties/16_2_thermal_properties/' | relative_url }}) Keywords: [REFTMP]({{ '/docs/sk/keyword_documentation/r/reftmp/' | relative_url }}), [OTPRNG]({{ '/docs/sk/keyword_documentation/o/otprng/' | relative_url }})

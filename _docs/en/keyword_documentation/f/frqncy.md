@@ -48,4 +48,4 @@ Freq_CNT is for contact calculation frequency for explicit FEM. When “-1” is
   
 RELATED TOPICS  
 ---  
-Keywords: [SOLMTD (2D)](/docs/en/keyword_documentation/s/solmtd/), [SOLMTD (3D)](/docs/en/keyword_documentation/s/solmtd_3d/), [VFACTR (2D)](/docs/en/keyword_documentation/v/vfactr/), [VFACTR (3D)](/docs/en/keyword_documentation/v/vfactr_3d/) , [TXTODF](/docs/en/keyword_documentation/t/txtodf/), [ANISO](/docs/en/keyword_documentation/a/aniso/)
+Keywords: [SOLMTD (2D)]({{ '/docs/en/keyword_documentation/s/solmtd/' | relative_url }}), [SOLMTD (3D)]({{ '/docs/en/keyword_documentation/s/solmtd_3d/' | relative_url }}), [VFACTR (2D)]({{ '/docs/en/keyword_documentation/v/vfactr/' | relative_url }}), [VFACTR (3D)]({{ '/docs/en/keyword_documentation/v/vfactr_3d/' | relative_url }}) , [TXTODF]({{ '/docs/en/keyword_documentation/t/txtodf/' | relative_url }}), [ANISO]({{ '/docs/en/keyword_documentation/a/aniso/' | relative_url }})

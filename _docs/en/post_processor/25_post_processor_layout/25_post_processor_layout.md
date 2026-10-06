@@ -223,7 +223,7 @@ Plotting Diff step
 
 Plotted Interpolated SV option
 
-**Material Data![]({{ '/assets/icons/pre_icons/mo_material_icon.jpg' | relative_url }}) : [2D, 3D]: **The RMB Material Data buttons allows the user to access the material properties window (See Fig. 25.12.). For more information please refer [Chapter 10. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/)
+**Material Data![]({{ '/assets/icons/pre_icons/mo_material_icon.jpg' | relative_url }}) : [2D, 3D]: **The RMB Material Data buttons allows the user to access the material properties window (See Fig. 25.12.). For more information please refer [Chapter 10. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image013.jpg' | relative_url }})
 
@@ -248,7 +248,7 @@ Right mouse button graphics window options; (a) For 2D (b) For 3D
 Report Generation feature provided can be used to generate report in different formats such as ppt and pdf for selected post-processing features like State variables contour, Point tracking, Flownet, Coupons of data extraction, Regions of interest, Summary graphs, Load-stroke graphs and data extraction.
 
   
-For more information on report generation setup refer [Chapter 28. Report Generation](/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/).
+For more information on report generation setup refer [Chapter 28. Report Generation]({{ '/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/' | relative_url }}).
 
 ## Dock Widget menu
 
@@ -260,10 +260,10 @@ Post processor Dock widget menu
 
 **Related Topics:**
 
-[24\. Introduction to Post-Processor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[24\. Introduction to Post-Processor]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})
 
-[26\. Post Processor Display controls](/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/)
+[26\. Post Processor Display controls]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/' | relative_url }})
 
-[27\. Post Processing tools](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/)
+[27\. Post Processing tools]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_post_processing_tools/' | relative_url }})
 
-[28\. Report Generation](/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/)
+[28\. Report Generation]({{ '/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/' | relative_url }})

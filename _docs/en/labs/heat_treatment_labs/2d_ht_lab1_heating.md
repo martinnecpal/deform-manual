@@ -272,8 +272,8 @@ If User wants to continue the setup, can switch to pre mode directly and continu
 
 Related Topics:
 
-[2D HT Lab2 Carburization](/docs/en/labs/heat_treatment_labs/2d_ht_lab2_carburization/)
+[2D HT Lab2 Carburization]({{ '/docs/en/labs/heat_treatment_labs/2d_ht_lab2_carburization/' | relative_url }})
 
-[2D HT Lab3 Diffusion](/docs/en/labs/heat_treatment_labs/2d_ht_lab_3_diffusion/)
+[2D HT Lab3 Diffusion]({{ '/docs/en/labs/heat_treatment_labs/2d_ht_lab_3_diffusion/' | relative_url }})
 
-[2D HT Lab4 Quenching ](/docs/en/labs/heat_treatment_labs/2d_ht_lab4_quenching/)
+[2D HT Lab4 Quenching ]({{ '/docs/en/labs/heat_treatment_labs/2d_ht_lab4_quenching/' | relative_url }})

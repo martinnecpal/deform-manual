@@ -31,4 +31,4 @@ An operation name can be given to each specific process (or operation). It is ty
   
 RELATED TOPICS  
 ---  
-Related keyword: [CURSIM](/docs/sk/keyword_documentation/c/cursim/), [SIMNAM](/docs/sk/keyword_documentation/s/simnam/)
+Related keyword: [CURSIM]({{ '/docs/sk/keyword_documentation/c/cursim/' | relative_url }}), [SIMNAM]({{ '/docs/sk/keyword_documentation/s/simnam/' | relative_url }})

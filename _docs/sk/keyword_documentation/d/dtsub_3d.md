@@ -29,4 +29,4 @@ For a default DTSUB = 1.0, the system will not enable contact sub-stepping (DTSU
   
 RELATED TOPICS  
 ---  
-[Step Definition](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/) Keywords: [DTMAX](/docs/sk/keyword_documentation/d/dtmax/), [DSMAX](/docs/sk/keyword_documentation/d/dsmax/)
+[Step Definition]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}) Keywords: [DTMAX]({{ '/docs/sk/keyword_documentation/d/dtmax/' | relative_url }}), [DSMAX]({{ '/docs/sk/keyword_documentation/d/dsmax/' | relative_url }})

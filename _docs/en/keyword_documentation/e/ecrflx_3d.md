@@ -43,4 +43,4 @@ Distributed electric current flux is defined as electric current per unit time p
   
 RELATED TOPICS  
 ---  
-Object Edge data: Electric Heating, [Boundary Constraints](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/): Heating Keywords: [ECCRHT (2D)](/docs/en/keyword_documentation/e/eccrht/), [ECCRHT (3D)](/docs/en/keyword_documentation/e/eccrht_3d/), [ECRHFN (2D)](/docs/en/keyword_documentation/e/ecrhfn/), [ECRHFN (3D)](/docs/en/keyword_documentation/e/ecrhfn_3d/)
+Object Edge data: Electric Heating, [Boundary Constraints]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}): Heating Keywords: [ECCRHT (2D)]({{ '/docs/en/keyword_documentation/e/eccrht/' | relative_url }}), [ECCRHT (3D)]({{ '/docs/en/keyword_documentation/e/eccrht_3d/' | relative_url }}), [ECRHFN (2D)]({{ '/docs/en/keyword_documentation/e/ecrhfn/' | relative_url }}), [ECRHFN (3D)]({{ '/docs/en/keyword_documentation/e/ecrhfn_3d/' | relative_url }})

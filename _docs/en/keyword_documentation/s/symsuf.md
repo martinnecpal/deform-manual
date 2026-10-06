@@ -37,4 +37,4 @@ Applicable object types: [Rigid](../../pre_processor/11_general_object_data_defi
   
 RELATED TOPICS  
 ---  
-Boundary Constraints: [Symmetry Constraints](/docs/en/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/) Keywords: [ROTSYM](../r/rotsym_\(3d\).htm)
+Boundary Constraints: [Symmetry Constraints]({{ '/docs/en/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/' | relative_url }}) Keywords: [ROTSYM](../r/rotsym_\(3d\).htm)

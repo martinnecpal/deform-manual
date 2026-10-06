@@ -47,4 +47,4 @@ Applicable Object Types: ALL except Rigid
   
 RELATED TOPICS  
 ---  
-Material Data: [Hardness](/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/) Keyword: [HDNTIM](/docs/sk/keyword_documentation/h/hdntim/), [JOMINY](/docs/sk/keyword_documentation/j/jominy/), [HDNPHA](/docs/sk/keyword_documentation/h/hdnpha/)
+Material Data: [Hardness]({{ '/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }}) Keyword: [HDNTIM]({{ '/docs/sk/keyword_documentation/h/hdntim/' | relative_url }}), [JOMINY]({{ '/docs/sk/keyword_documentation/j/jominy/' | relative_url }}), [HDNPHA]({{ '/docs/sk/keyword_documentation/h/hdnpha/' | relative_url }})

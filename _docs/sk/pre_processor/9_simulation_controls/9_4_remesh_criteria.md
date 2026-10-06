@@ -21,7 +21,7 @@ title: "9.4. Kritériá pre generovanie novej siete"
 
 9.4.8. Metóda prepočítania siete
 
-**[2D, 3D]** : Kritériá pregenerovania siete (Autoremesh) predstavujú najpohodlnejší spôsob, ako riešiť pregenerovanie siete objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Kritériá pre vytváranie novej siete (obr. 9.4.1.) obsahuje skupinu parametrov, ktoré riadia, kedy a ako často sa sieť na objektu so sieťou regeneruje na základe priradenia určitých spúšťačov.Existujú štyri kľúčové slová, ktoré riadia spustenie postupu premenovania ([RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/), [RMTIME](/docs/sk/keyword_documentation/r/rmtime/), [RMSTEP](/docs/sk/keyword_documentation/r/rmstep/) a [RMSTRK](/docs/sk/keyword_documentation/r/rmstrk/)) pre objekt. Keď sú splnené kritériá pregenerovania siete pre ktorékoľvek z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (negatívna Jacobova matica), objekt bude pregenerovaný. Ak objekt počas simulácie spĺňa niektoré z kritérií pre vytváranie novej siete, vygeneruje sa nová sieť, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje.
+**[2D, 3D]** : Kritériá pregenerovania siete (Autoremesh) predstavujú najpohodlnejší spôsob, ako riešiť pregenerovanie siete objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Kritériá pre vytváranie novej siete (obr. 9.4.1.) obsahuje skupinu parametrov, ktoré riadia, kedy a ako často sa sieť na objektu so sieťou regeneruje na základe priradenia určitých spúšťačov.Existujú štyri kľúčové slová, ktoré riadia spustenie postupu premenovania ([RMDPTH]({{ '/docs/sk/keyword_documentation/r/rmdpth/' | relative_url }}), [RMTIME]({{ '/docs/sk/keyword_documentation/r/rmtime/' | relative_url }}), [RMSTEP]({{ '/docs/sk/keyword_documentation/r/rmstep/' | relative_url }}) a [RMSTRK]({{ '/docs/sk/keyword_documentation/r/rmstrk/' | relative_url }})) pre objekt. Keď sú splnené kritériá pregenerovania siete pre ktorékoľvek z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (negatívna Jacobova matica), objekt bude pregenerovaný. Ak objekt počas simulácie spĺňa niektoré z kritérií pre vytváranie novej siete, vygeneruje sa nová sieť, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_4_remesh_criteria/9_4_image001.jpg' | relative_url }})
 
@@ -35,15 +35,15 @@ Okno kritérií pre výpočet novej siete; (a) pre 2D, (b) pre 3D
 
 ## Maximálna hĺbka interferencie (RMDPTH) [2D, 3D]
 
-Hodnota maximálnej hĺbky zasahovania ([RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/)) slúži na spustenie procesu prepočítania sietí. Ak akákoľvek časť hlavného objektu zasahuje do podriadeného objektu hlbšie, ako je hĺbka špecifikovaná v parametri RMDPTH, spustí sa prepočítanie sietí. 
+Hodnota maximálnej hĺbky zasahovania ([RMDPTH]({{ '/docs/sk/keyword_documentation/r/rmdpth/' | relative_url }})) slúži na spustenie procesu prepočítania sietí. Ak akákoľvek časť hlavného objektu zasahuje do podriadeného objektu hlbšie, ako je hĺbka špecifikovaná v parametri RMDPTH, spustí sa prepočítanie sietí. 
 
 ## Maximálny prírastok zdvihu (RMSTRK) [2D, 3D]
 
-Vždy, keď prírastok zdvihu primárnej formy od posledného kroku vytvárania siete prekročí maximálny prírastok zdvihu ([RMSTRK](/docs/sk/keyword_documentation/r/rmstrk/)), spustí sa nový krok vytvárania siete. 
+Vždy, keď prírastok zdvihu primárnej formy od posledného kroku vytvárania siete prekročí maximálny prírastok zdvihu ([RMSTRK]({{ '/docs/sk/keyword_documentation/r/rmstrk/' | relative_url }})), spustí sa nový krok vytvárania siete. 
 
 ## Maximálny časový krok (RMTIME) [2D, 3D]
 
-Vždy, keď uplynie maximálny časový interval ([RMTIME](/docs/sk/keyword_documentation/r/rmtime/)) (hodnota uplynutého času) od posledného kroku vytvárania novej siete, spustí sa nový krok vytvárania novej siete. 
+Vždy, keď uplynie maximálny časový interval ([RMTIME]({{ '/docs/sk/keyword_documentation/r/rmtime/' | relative_url }})) (hodnota uplynutého času) od posledného kroku vytvárania novej siete, spustí sa nový krok vytvárania novej siete. 
 
 ## Maximálny krok (RMSTEP) [2D, 3D]
 
@@ -102,20 +102,20 @@ Okno s kritériami pre lokálne prepočítanie sietí
 
 **Súvisiace témy:**
 
-[9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)
+[9.1. Simulation type Settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }})
 
-[9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)
+[9.2. Defining Step]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})
 
-[9.3. Stopping Controls](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/)
+[9.3. Stopping Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})
 
-[9.5. Solver Settings](/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/)
+[9.5. Solver Settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }})
 
-[9.6. Process Conditions](/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/)
+[9.6. Process Conditions]({{ '/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})
 
-[9.7. Advanced Options](/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/)
+[9.7. Advanced Options]({{ '/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }})
 
-[9.8. Control Files](/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/)
+[9.8. Control Files]({{ '/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }})
 
-[9.9. Thermomechanical variables](/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)
+[9.9. Thermomechanical variables]({{ '/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }})
 
-[13\. Mesh Data Definition](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/)
+[13\. Mesh Data Definition]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})

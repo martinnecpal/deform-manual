@@ -41,4 +41,4 @@ This keyword represents nodal state variable that store time information with a 
   
 RELATED TOPICS  
 ---  
-Keywords: [TIMEID](/docs/en/keyword_documentation/t/timeid/), [DIFBND](/docs/en/keyword_documentation/d/difbnd/)
+Keywords: [TIMEID]({{ '/docs/en/keyword_documentation/t/timeid/' | relative_url }}), [DIFBND]({{ '/docs/en/keyword_documentation/d/difbnd/' | relative_url }})

@@ -33,4 +33,4 @@ Applicable object types: [Plastic](../../pre_processor/11_general_object_data_de
   
 RELATED TOPICS  
 ---  
-[Inter-object contact](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) Keywords: [CNTACT(2D)](/docs/en/keyword_documentation/c/cntact/), [CNTACT (3D)](/docs/en/keyword_documentation/c/cntact_3d/)
+[Inter-object contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}) Keywords: [CNTACT(2D)]({{ '/docs/en/keyword_documentation/c/cntact/' | relative_url }}), [CNTACT (3D)]({{ '/docs/en/keyword_documentation/c/cntact_3d/' | relative_url }})

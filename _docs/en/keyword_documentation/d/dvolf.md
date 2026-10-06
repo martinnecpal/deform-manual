@@ -33,4 +33,4 @@ DVOLF is determined by fcurrent - fprevious for each step where f is the volume 
   
 RELATED TOPICS  
 ---  
-[Object Element data](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/): Transformation Keywords: [VOLFC](/docs/en/keyword_documentation/v/volfc/), [VOLFS](/docs/en/keyword_documentation/v/volfs/),
+[Object Element data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}): Transformation Keywords: [VOLFC]({{ '/docs/en/keyword_documentation/v/volfc/' | relative_url }}), [VOLFS]({{ '/docs/en/keyword_documentation/v/volfs/' | relative_url }}),

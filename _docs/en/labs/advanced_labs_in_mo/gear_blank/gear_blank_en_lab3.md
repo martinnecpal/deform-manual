@@ -173,4 +173,4 @@ Observe the simulation graphics window and Simulation message tab to monitor the
 
 MO Simulation mode 3rd operation running status
 
-For next lab 4 click on teh link [Lab 4. 3D Non-isothermal Air transfer operation.](/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab4/)
+For next lab 4 click on teh link [Lab 4. 3D Non-isothermal Air transfer operation.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab4/' | relative_url }})

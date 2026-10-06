@@ -74,4 +74,4 @@ For Type 1: A is atom content and T is temperature For Type 2: C1(T) and C2(T) a
   
 RELATED TOPICS  
 ---  
-Material Data: [Diffusion](/docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/) Keywords: [ENVATM](/docs/en/keyword_documentation/e/envatm/), [ACVCOF](/docs/en/keyword_documentation/a/acvcof/), [DATOM](/docs/en/keyword_documentation/d/datom/), [CRBFLX](/docs/en/keyword_documentation/c/crbflx/), [BCCCRB(2D)](/docs/en/keyword_documentation/b/bcccrb/), [BCCCRB (3D)](/docs/en/keyword_documentation/b/bcccrb_3d/)
+Material Data: [Diffusion]({{ '/docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/' | relative_url }}) Keywords: [ENVATM]({{ '/docs/en/keyword_documentation/e/envatm/' | relative_url }}), [ACVCOF]({{ '/docs/en/keyword_documentation/a/acvcof/' | relative_url }}), [DATOM]({{ '/docs/en/keyword_documentation/d/datom/' | relative_url }}), [CRBFLX]({{ '/docs/en/keyword_documentation/c/crbflx/' | relative_url }}), [BCCCRB(2D)]({{ '/docs/en/keyword_documentation/b/bcccrb/' | relative_url }}), [BCCCRB (3D)]({{ '/docs/en/keyword_documentation/b/bcccrb_3d/' | relative_url }})

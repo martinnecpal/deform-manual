@@ -35,7 +35,7 @@ title: "20.1. Kritériá trenia a kontaktu"
 
 ## Trenie (FRCFAC) [2D, 3D]
 
-Koeficient trenia ([FRCFAC](/docs/sk/keyword_documentation/f/frcfac/)) určuje trenie na rozhraní medzi dvoma objektmi. Koeficient trenia môže byť špecifikovaný ako konštanta, funkcia času, teploty, tlaku, teploty povrchu pri tlaku, závislá od tlaku, rýchlosti deformácie a rýchlosti kĺzania alebo užívateľská rutina (pozri obr. 20.1.1.).
+Koeficient trenia ([FRCFAC]({{ '/docs/sk/keyword_documentation/f/frcfac/' | relative_url }})) určuje trenie na rozhraní medzi dvoma objektmi. Koeficient trenia môže byť špecifikovaný ako konštanta, funkcia času, teploty, tlaku, teploty povrchu pri tlaku, závislá od tlaku, rýchlosti deformácie a rýchlosti kĺzania alebo užívateľská rutina (pozri obr. 20.1.1.).
 
 Povolené typy trenia sú šmykové, Coulombovo, hybridné a s konštantným tau. Typ s konštantným tau je k dispozícii iba v 2D.
 
@@ -180,7 +180,7 @@ Valcovanie | 0,7–1,0 |
   
 ## Anizotropný [3D]
 
-Možnosť „Anizotropný“ ([FRCFAI](/docs/sk/keyword_documentation/f/frcfai/)) umožňuje používateľovi definovať rôzne hodnoty koeficientov mierky trenia pre každú os. Ak sú pre jednotlivé osi definované rôzne koeficienty mierky, definovaná hodnota trenia sa prispôsobí podľa príslušného koeficientu mierky a uplatní sa na danú os. (Pozri obr. 20.1.10.)
+Možnosť „Anizotropný“ ([FRCFAI]({{ '/docs/sk/keyword_documentation/f/frcfai/' | relative_url }})) umožňuje používateľovi definovať rôzne hodnoty koeficientov mierky trenia pre každú os. Ak sú pre jednotlivé osi definované rôzne koeficienty mierky, definovaná hodnota trenia sa prispôsobí podľa príslušného koeficientu mierky a uplatní sa na danú os. (Pozri obr. 20.1.10.)
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/20_1_image010.jpg' | relative_url }})
 
@@ -220,11 +220,11 @@ V zozname aktualizácií súradníc uzlov máme:
 
 ## Typ oddelenia
 
-  * **Hustota oddelenia****[2D**]: Hustota oddelenia ([SEPDEN](/docs/sk/keyword_documentation/s/sepden/)) sa používa na modelovanie správania poréznych objektov, ktoré neboli úplne zhutnené. Definuje kritérium oddelenia kontaktných uzlov zahŕňajúcich porézne objekty. Pokiaľ hustota materiálu nie je väčšia ako hustota, oddelenie uzlov sa nezohľadňuje.
+  * **Hustota oddelenia****[2D**]: Hustota oddelenia ([SEPDEN]({{ '/docs/sk/keyword_documentation/s/sepden/' | relative_url }})) sa používa na modelovanie správania poréznych objektov, ktoré neboli úplne zhutnené. Definuje kritérium oddelenia kontaktných uzlov zahŕňajúcich porézne objekty. Pokiaľ hustota materiálu nie je väčšia ako hustota, oddelenie uzlov sa nezohľadňuje.
 
-  * **Oddeliteľné [3D]:** Kritériá oddelenia ([SEPRES](/docs/sk/keyword_documentation/s/sepres/)) určujú, ako sa budú uzly na rozhraní medzi objektmi správať pri pôsobení ťahovej sily. Existujú tri spôsoby definovania kritérií oddelenia.
+  * **Oddeliteľné [3D]:** Kritériá oddelenia ([SEPRES]({{ '/docs/sk/keyword_documentation/s/sepres/' | relative_url }})) určujú, ako sa budú uzly na rozhraní medzi objektmi správať pri pôsobení ťahovej sily. Existujú tri spôsoby definovania kritérií oddelenia.
 
-  * **Neoddeliteľné [3D]:** Vztah oddelenia ([SEPRES](/docs/sk/keyword_documentation/s/sepres/)) umožňuje definovať kontakt uzlov ako neoddeliteľný za akýchkoľvek podmienok. Táto podmienka by sa vo všeobecnosti mala používať len na pripojenie uzlov k tuhej symetrickej rovine pri definovaní symetrie na rovine inej ako XY, YZ alebo ZX.
+  * **Neoddeliteľné [3D]:** Vztah oddelenia ([SEPRES]({{ '/docs/sk/keyword_documentation/s/sepres/' | relative_url }})) umožňuje definovať kontakt uzlov ako neoddeliteľný za akýchkoľvek podmienok. Táto podmienka by sa vo všeobecnosti mala používať len na pripojenie uzlov k tuhej symetrickej rovine pri definovaní symetrie na rovine inej ako XY, YZ alebo ZX.
 
   * **Možnosť adaptívneho kontaktu BCC [3D]**: Táto možnosť sa používa pri špeciálnom kontaktnom vzťahu medzi dvoma viacerými deformujúcimi sa maticami. Rozhranie dvoch deformujúcich sa matíc je mechanicky oddeliteľné, avšak zachováva kontakt BCC, takže žiadny uzol sa nesmie dostať do medzery medzi nimi.
 
@@ -248,7 +248,7 @@ Medzi kritériá založené na geometrii patria:
 
 ## Okno trenia
 
-**[2D, 3D]** : Okná trenia ([FRCWIN](/docs/sk/keyword_documentation/f/frcwin/)) je možné použiť v simulácii, ako je znázornené na obr. 20.1.13 a obr. 20.1.14. Jedným z účelov tejto funkcie je umožniť používateľovi použiť rôzne podmienky trenia v určitých oblastiach objektu, aby sa simulovali rozdiely v podmienkach mazania. Použitie okna sa vykonáva rovnakým spôsobom ako pri akejkoľvek inej funkcii okna. V prípade dvoch prekrývajúcich sa okien má prednosť okno s nižším poradovým číslom.
+**[2D, 3D]** : Okná trenia ([FRCWIN]({{ '/docs/sk/keyword_documentation/f/frcwin/' | relative_url }})) je možné použiť v simulácii, ako je znázornené na obr. 20.1.13 a obr. 20.1.14. Jedným z účelov tejto funkcie je umožniť používateľovi použiť rôzne podmienky trenia v určitých oblastiach objektu, aby sa simulovali rozdiely v podmienkach mazania. Použitie okna sa vykonáva rovnakým spôsobom ako pri akejkoľvek inej funkcii okna. V prípade dvoch prekrývajúcich sa okien má prednosť okno s nižším poradovým číslom.
 
 Okná trenia umožňujú používateľovi nastaviť rôzne hodnoty koeficientu trenia pre rôzne kontaktné oblasti v rámci jednej dvojice objektov. Okno trenia definuje koeficient trenia pre konkrétnu oblasť, ktorá je vyznačená v okne zobrazenia. Koeficient trenia určuje trenie, ktorému podlieha akýkoľvek objekt prichádzajúci do kontaktu s obrobkom.
 
@@ -270,10 +270,10 @@ Ak pre časti objektov, ktoré sú v kontakte, nie je priradené okno trenia, po
 
 [20\. Inter-Object Data Definition]()
 
-[20.2. Interface Thermal Data](/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/)
+[20.2. Interface Thermal Data]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }})
 
-[20.3. Interface Resisitivity](/docs/sk/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/)
+[20.3. Interface Resisitivity]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }})
 
-[20.4. Tool Wear](/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/)
+[20.4. Tool Wear]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }})
 
-[20.5. Rigid Contact](/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/)
+[20.5. Rigid Contact]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }})

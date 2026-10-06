@@ -261,7 +261,7 @@ _**Poznámka** : ___Informácie o inštalačnej ceste pre každú verziu je potr
 Okno DEFORM Setup Simulation Server
 
 Spúšťanie úloh na vzdialených počítačoch možno vykonávať pomocou karty Zdieľané priečinky. (Pozri obr. 2.1.23.)
-Podrobnejšie informácie nájdete v kapitole [23.6. Running Shared folder Simulations.](/docs/sk/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/)
+Podrobnejšie informácie nájdete v kapitole [23.6. Running Shared folder Simulations.]({{ '/docs/sk/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/' | relative_url }})
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0023.jpg' | relative_url }})
 
@@ -554,10 +554,10 @@ DEFORM Setup Karta ponuky Štart
 
 **Súvisiace témy:**
 
-[3\. License Manager](/docs/sk/starting_up_deform/3_license_manager/3_introduction_to_license_manager/)
+[3\. License Manager]({{ '/docs/sk/starting_up_deform/3_license_manager/3_introduction_to_license_manager/' | relative_url }})
 
-[3.4. Trouble Shooting License Issues](/docs/sk/starting_up_deform/3_license_manager/3_4_trouble_shooting_license_issues/)
+[3.4. Trouble Shooting License Issues]({{ '/docs/sk/starting_up_deform/3_license_manager/3_4_trouble_shooting_license_issues/' | relative_url }})
 
-[23.6. Running simulations remotely](../../../assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations)
+[23.6. Running simulations remotely]({{ '/docs/sk/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/' | relative_url }})
 
-[23.8. Trouble Shooting Simulation Running](../../../assets/images/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running)
+[23.8. Trouble Shooting Simulation Running]({{ '/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/' | relative_url }})

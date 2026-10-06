@@ -31,4 +31,4 @@ Again this is used for multiple operation problems.
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Main Controls](/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/) Related keywords: [TITLE](/docs/en/keyword_documentation/t/title/), [CURSIM](/docs/en/keyword_documentation/c/cursim/)
+Simulation Controls: [Main Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}) Related keywords: [TITLE]({{ '/docs/en/keyword_documentation/t/title/' | relative_url }}), [CURSIM]({{ '/docs/en/keyword_documentation/c/cursim/' | relative_url }})

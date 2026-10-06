@@ -91,10 +91,10 @@ A simulation engine for performing the numerical calculations required to analys
 
 Under simulator we have,  
 **Run** : This option is used to start the simulation immediately.   
-**Run options** : This option is used to define simulation environment such as MPICH, Simulation server and its settings, message file saving, Initial run or continuing the previous run..etc. Refer for [simulator](/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/) for more information  
+**Run options** : This option is used to define simulation environment such as MPICH, Simulation server and its settings, message file saving, Initial run or continuing the previous run..etc. Refer for [simulator]({{ '/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/' | relative_url }}) for more information  
 **Add to Queue** : User can select the problem and click on this label to ass the problem to Queue on the selected Simulation Server  
 Continue: This option is used to continue the problem that is stopped prematurely.  
-**Process Monitor** : Process monitor is used to know the current status of various problems to submitted for simulation on this system or by this system, Refer for [simulator](/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/) more information.  
+**Process Monitor** : Process monitor is used to know the current status of various problems to submitted for simulation on this system or by this system, Refer for [simulator]({{ '/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/' | relative_url }}) more information.  
 **Simulation Graphics** : This option can be used to launch independent “DEFORM Viewer” to monitor the current problems that are simulating.
 
 ###   
@@ -323,7 +323,7 @@ Simulator menu option
 **Process Monitor**![]({{ '/assets/icons/simulator_icons/mo_process_monitor_icon.jpg' | relative_url }}) : The process monitor displays the status of all simulations running on the CPU.  
 **Simulation Graphics** ![]({{ '/assets/icons/simulator_icons/mo_simulation_graphics_icon.jpg' | relative_url }}): This option is used to monitor the simulating problem.
 
-For more information about these options, please refer [Chapter 23. DEFORM Simulator](/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/).
+For more information about these options, please refer [Chapter 23. DEFORM Simulator]({{ '/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/' | relative_url }}).
 
 ###   
 Post Processor Menu
@@ -335,8 +335,8 @@ The below Fig. 4.1.23. shows the Post Processor menu options which are available
 Post Processor menu option
 
   
-**2D/3D post:** This option is used to open Next gen Post, for more information refer [Post-Poocessor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/).  
-**DOE Post** : This option is used to open DOE Post, for more information refer [DOE Post processor](/docs/en/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/).  
+**2D/3D post:** This option is used to open Next gen Post, for more information refer [Post-Poocessor]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }}).  
+**DOE Post** : This option is used to open DOE Post, for more information refer [DOE Post processor]({{ '/docs/en/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/' | relative_url }}).  
 **DEFORM Viewer** : This option is used to open Deform Viewer, for more information refer DEFORM Viewer.  
 **Material Suite:** This option is used to open Material Suite, for more information refer Material Suite.
 
@@ -479,7 +479,7 @@ Output Controls options under Environment Settings window
 
   * Email
 
-Email option under Environment Settings window appears as shown in Fig. 4.1.38. This function allows DEFORM to send an email notification at the start of the simulation and with last 25 lines from the Message file and Log file at end of the simulation. Emails are sent via SMTP using StartTLS (or no security). For more information refer [23.7. Email notification of the simulation](/docs/en/simulator/23_deform_simulator/23_7_email_the_results/).
+Email option under Environment Settings window appears as shown in Fig. 4.1.38. This function allows DEFORM to send an email notification at the start of the simulation and with last 25 lines from the Message file and Log file at end of the simulation. Emails are sent via SMTP using StartTLS (or no security). For more information refer [23.7. Email notification of the simulation]({{ '/docs/en/simulator/23_deform_simulator/23_7_email_the_results/' | relative_url }}).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image031.jpg' | relative_url }})
 

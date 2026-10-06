@@ -103,7 +103,7 @@ In case of meshed objects, turn on output mesh and select mesh type. Enter numbe
 
 Mesh conversion settings
 
-![]({{ '/assets/icons/pre_icons/mo_advanced_button.jpg' | relative_url }}) button can be used to assign the various 3D mesh parameters as shown in Fig. 44.1.10. For more information on general, weighting factors, mesh windows, coating, remesh criteria and advanced settings of tetrahedron and brick/hexahedron mesh please refer [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) and [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/).
+![]({{ '/assets/icons/pre_icons/mo_advanced_button.jpg' | relative_url }}) button can be used to assign the various 3D mesh parameters as shown in Fig. 44.1.10. For more information on general, weighting factors, mesh windows, coating, remesh criteria and advanced settings of tetrahedron and brick/hexahedron mesh please refer [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}) and [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/image0010.jpg' | relative_url }})
 
@@ -193,4 +193,4 @@ From MO Post user can review the 2D and 3D integrated DB, selection of the parti
 
 2D to 3D converter operator step in MO post
 
-User can play the animation and plot all state variables and use other post features available in MO post for more option user can select the ![]({{ '/assets/icons/pre_icons/mo_post_label_link.jpg' | relative_url }}) action label to open the DB in Post processor. For information on Post Processor options refer [26\. Post Processor Features](/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/).
+User can play the animation and plot all state variables and use other post features available in MO post for more option user can select the ![]({{ '/assets/icons/pre_icons/mo_post_label_link.jpg' | relative_url }}) action label to open the DB in Post processor. For information on Post Processor options refer [26\. Post Processor Features]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/' | relative_url }}).

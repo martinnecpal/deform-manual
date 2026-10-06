@@ -51,4 +51,4 @@ If the material has multiple phases, TXTODF lists the ODFs phase by phase, depen
   
 RELATED TOPICS  
 ---  
-Keywords: [TXTURE](/docs/en/keyword_documentation/t/txture/)
+Keywords: [TXTURE]({{ '/docs/en/keyword_documentation/t/txture/' | relative_url }})

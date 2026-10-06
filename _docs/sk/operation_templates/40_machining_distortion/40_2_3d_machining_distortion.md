@@ -81,9 +81,9 @@ Okno s okrajovými podmienkami
 
 V okne „Initialize“ sú na inicializáciu k dispozícii niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie atď.
 
-Používateľ môže inicializovať hodnoty týchto stavových premenných kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 40.2.5. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. Ďalšie informácie týkajúce sa možnosti inicializácie nájdete v časti [17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/). 
+Používateľ môže inicializovať hodnoty týchto stavových premenných kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 40.2.5. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. Ďalšie informácie týkajúce sa možnosti inicializácie nájdete v časti [17\. Object Data Initialize]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }}). 
 
-V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien „Node“ a „Element“. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v dokumentácii [17.1 Node node Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien „Node“ a „Element“. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v dokumentácii [17.1 Node node Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) a [17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image004.jpg' | relative_url }})
 
@@ -109,7 +109,7 @@ Okno s rozpisom zápasov
 
 ### Geometria
 
-Používateľ môže definovať novú geometriu pomocou možností v okne geometrie. Okno geometrie ponúka základné možnosti na definovanie geometrie (pozri obr. 40.2.8.). Geometriu je možné importovať aj pomocou možnosti Importovať geometriu zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Importovať z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Používateľ môže tiež importovať geometrie v iných formátoch, ako sú .key, .DB, .STL, .PDA, .NAS a .UNV. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii primitívy. Ďalšie informácie o vytváraní a úprave 3D geometrií nájdete v [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+Používateľ môže definovať novú geometriu pomocou možností v okne geometrie. Okno geometrie ponúka základné možnosti na definovanie geometrie (pozri obr. 40.2.8.). Geometriu je možné importovať aj pomocou možnosti Importovať geometriu zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Importovať z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Používateľ môže tiež importovať geometrie v iných formátoch, ako sú .key, .DB, .STL, .PDA, .NAS a .UNV. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii primitívy. Ďalšie informácie o vytváraní a úprave 3D geometrií nájdete v [12.3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image006.jpg' | relative_url }})
 
@@ -127,7 +127,7 @@ Okno na prechod
 
 ### Geometria
 
-Používateľ môže definovať novú geometriu pomocou možností v okne geometrie. Okno geometrie ponúka základné možnosti na definovanie geometrie (pozri obr. 40.2.10.). Geometriu je možné importovať aj pomocou možnosti „Importovať geometriu zo súboru“ (![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})) alebo pomocou možnosti „Importovať z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})). Používateľ môže tiež importovať geometrie v iných formátoch, ako sú .key, .DB, .STL, .PDA, .NAS a .UNV. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii primitívy. Ďalšie informácie o vytváraní a úprave 3D geometrií nájdete v [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+Používateľ môže definovať novú geometriu pomocou možností v okne geometrie. Okno geometrie ponúka základné možnosti na definovanie geometrie (pozri obr. 40.2.10.). Geometriu je možné importovať aj pomocou možnosti „Importovať geometriu zo súboru“ (![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})) alebo pomocou možnosti „Importovať z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})). Používateľ môže tiež importovať geometrie v iných formátoch, ako sú .key, .DB, .STL, .PDA, .NAS a .UNV. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii primitívy. Ďalšie informácie o vytváraní a úprave 3D geometrií nájdete v [12.3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image006.jpg' | relative_url }})
 
@@ -143,7 +143,7 @@ Okno na nastavenie polohy
 
 **Automatické polohovanie**![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}): Funkciu automatického polohovania používa používateľ na umiestnenie tuhých objektov voči obrobku. Táto možnosť sa osvedčuje pri troch objektoch v operácii tvarovania, avšak po použití automatického polohovania v režime „Machining Distortion“ musí používateľ skontrolovať polohu objektov.
 
-**Umiestňovanie objektov** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}): Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestňovania, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 40.2.12. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+**Umiestňovanie objektov** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}): Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestňovania, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 40.2.12. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image008.jpg' | relative_url }})
 
@@ -167,7 +167,7 @@ Plánované časové okno na umiestnenie
 
 **Používateľ**: Pri operácii „Deformácia pri obrábaní“ je štandardne zaškrtnuté políčko „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať), ako je znázornené na obr. 40.2.14.
 
-Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image010.jpg' | relative_url }})
 
@@ -201,7 +201,7 @@ Fáza 2 – Prechod, simuluje obrábací prechod
 
 3. etapa – Vykládka, demontáž upínacích prvkov a simulácia spätného pruženia.
 
-**Počet krokov na uloženie**: Počet krokov na uloženie ([STPINC](/docs/en/keyword_documentation/s/stpinc/)) do databázy určuje, koľko krokov systém uloží do databázy. Každý krok sa musí uložiť na účely simulácie deformácie pri obrábaní.
+**Počet krokov na uloženie**: Počet krokov na uloženie ([STPINC]({{ '/docs/en/keyword_documentation/s/stpinc/' | relative_url }})) do databázy určuje, koľko krokov systém uloží do databázy. Každý krok sa musí uložiť na účely simulácie deformácie pri obrábaní.
 
 **Riadenie veľkosti kroku**: Veľkosť kroku riešenia sa riadi časovým krokom. Maximálny čas trvania procesu na jeden krok možno pri operáciách s deformáciou pri obrábaní nastaviť na 1 sekundu. 
 
@@ -211,7 +211,7 @@ Na obr. 40.2.17 sú zobrazené ovládacie prvky simulácie v režime s navádzan
 
 Riadenie simulácie v režime s navádzaním
 
-Ďalšie informácie a popis možností v časti „Ovládacie prvky simulácie“ nájdete v dokumente [9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/).
+Ďalšie informácie a popis možností v časti „Ovládacie prvky simulácie“ nájdete v dokumente [9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}).
 
 ## Vytvoriť databázu
 

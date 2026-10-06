@@ -34,4 +34,4 @@ The initial carbon content should be specified at each node if a carburizing pro
   
 RELATED TOPICS  
 ---  
-[TTTD](/docs/sk/keyword_documentation/t/tttd/), [CRBFLX](/docs/sk/keyword_documentation/c/crbflx/), [BCCCRB(3D)](/docs/sk/keyword_documentation/b/bcccrb_3d/), [BCCCRB (2D)](/docs/sk/keyword_documentation/b/bcccrb/), [HDNOBJ](/docs/sk/keyword_documentation/h/hdnobj/)
+[TTTD]({{ '/docs/sk/keyword_documentation/t/tttd/' | relative_url }}), [CRBFLX]({{ '/docs/sk/keyword_documentation/c/crbflx/' | relative_url }}), [BCCCRB(3D)]({{ '/docs/sk/keyword_documentation/b/bcccrb_3d/' | relative_url }}), [BCCCRB (2D)]({{ '/docs/sk/keyword_documentation/b/bcccrb/' | relative_url }}), [HDNOBJ]({{ '/docs/sk/keyword_documentation/h/hdnobj/' | relative_url }})

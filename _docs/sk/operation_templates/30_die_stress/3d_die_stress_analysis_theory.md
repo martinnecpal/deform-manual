@@ -139,6 +139,6 @@ Analýza únavovej pevnosti párov
 
 **Súvisiace témy:**
 
-[Coupled Die Stress analysis](/docs/en/operation_templates/30_die_stress/coupled_die_stress_analysis/)
+[Coupled Die Stress analysis]({{ '/docs/en/operation_templates/30_die_stress/coupled_die_stress_analysis/' | relative_url }})
 
-[Die Stress Lab](/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
+[Die Stress Lab]({{ '/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/' | relative_url }})

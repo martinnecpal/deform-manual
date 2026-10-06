@@ -43,4 +43,4 @@ This state variable is used to determine the quality of current mesh. It is init
   
 RELATED TOPICS  
 ---  
-[Object Advanced nodal data](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) Keyword: [DRZ(2D)](/docs/sk/keyword_documentation/d/drz/), [DRZ (3D)](/docs/sk/keyword_documentation/d/drz_3d/)
+[Object Advanced nodal data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) Keyword: [DRZ(2D)]({{ '/docs/sk/keyword_documentation/d/drz/' | relative_url }}), [DRZ (3D)]({{ '/docs/sk/keyword_documentation/d/drz_3d/' | relative_url }})

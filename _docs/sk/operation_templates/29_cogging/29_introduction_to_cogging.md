@@ -12,6 +12,6 @@ Opakované údery do ingotu ďalej posilňujú kov. Kovanie kovu je zdĺhavý pr
 
 **Súvisiace témy:**
 
-[29.1. Cogging Setup](/docs/en/operation_templates/29_cogging/29_1_cogging_setup/)
+[29.1. Cogging Setup]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }})
 
-[29.2. Swaging Setup](/docs/en/operation_templates/29_cogging/29_2_swaging_setup/)
+[29.2. Swaging Setup]({{ '/docs/en/operation_templates/29_cogging/29_2_swaging_setup/' | relative_url }})

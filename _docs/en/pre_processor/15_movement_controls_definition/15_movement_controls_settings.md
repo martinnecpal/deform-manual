@@ -39,19 +39,19 @@ For 2.5D Friction welding geometry type, we have Translation and Friction weldin
 
 ### **Translation movement**
 
-During the simulation the constrained nodes will move synchronously in the speed and direction defined by the movement controls. Types of Movement controls that are available in Translation Movement controls are Speed, Force, Hammer, Screw press, Mechanical press, Hydraulic press, Sliding Die and Path. Translation movement for 2D and 3D are as shown in Fig. 15.1. and Fig. 15.2. For more information, please refer [15.1. Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/), [15.2. Force](/docs/en/pre_processor/15_movement_controls_definition/15_2_force/), [15.3. Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/), [15.4. Screw press](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/), [15.5. Mechanical press](/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/), [15.6. Hydraulic press](/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/), [15.7. Sliding Die](/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/) and [15.8. Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/).
+During the simulation the constrained nodes will move synchronously in the speed and direction defined by the movement controls. Types of Movement controls that are available in Translation Movement controls are Speed, Force, Hammer, Screw press, Mechanical press, Hydraulic press, Sliding Die and Path. Translation movement for 2D and 3D are as shown in Fig. 15.1. and Fig. 15.2. For more information, please refer [15.1. Speed]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }}), [15.2. Force]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_2_force/' | relative_url }}), [15.3. Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}), [15.4. Screw press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }}), [15.5. Mechanical press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }}), [15.6. Hydraulic press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/' | relative_url }}), [15.7. Sliding Die]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/' | relative_url }}) and [15.8. Path]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }}).
 
 ### **Rotational movement**
 
-****Rotational movement is defined by an angular velocity/torque about a fixed center of rotation. This movement type causes only rotation. Unless otherwise specified, translation is constrained. The rotational speed is controlled through the Controlling Method option and the point at which the object is rotated about is set through the Center of Rotational Movement. For more information, please refer[15.9. Rotational Movement](/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/).
+****Rotational movement is defined by an angular velocity/torque about a fixed center of rotation. This movement type causes only rotation. Unless otherwise specified, translation is constrained. The rotational speed is controlled through the Controlling Method option and the point at which the object is rotated about is set through the Center of Rotational Movement. For more information, please refer[15.9. Rotational Movement]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/' | relative_url }}).
 
 ### **Torsional movement**
 
-Torsional movement controls are applicable only in the case of torsional formulations. This movement control option is active for DEFORM-2D only. For more information, please refer [15.10. Torsional movement](/docs/en/pre_processor/15_movement_controls_definition/15_10_torsional_movement/).
+Torsional movement controls are applicable only in the case of torsional formulations. This movement control option is active for DEFORM-2D only. For more information, please refer [15.10. Torsional movement]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_10_torsional_movement/' | relative_url }}).
 
 ### **Friction Welding movement**
 
-Friction Welding movement controls are applicable only in the case of 2.5D Frictional welding formulations. This movement control option is active for DEFORM-2D only. For more information, please refer [15.11. Friction Welding movement](/docs/en/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/).
+Friction Welding movement controls are applicable only in the case of 2.5D Frictional welding formulations. This movement control option is active for DEFORM-2D only. For more information, please refer [15.11. Friction Welding movement]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/' | relative_url }}).
 
 **Directions [2D, 3D]** : Based on the problem setup user can select the direction of the translation movement. Other direction option is also available for the angular directions selections.
 
@@ -99,27 +99,27 @@ Movement preview window
 
 **Related Topics:**
 
-[15.1. Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/)
+[15.1. Speed]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }})
 
-[15.2. Force](/docs/en/pre_processor/15_movement_controls_definition/15_2_force/)
+[15.2. Force]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_2_force/' | relative_url }})
 
-[15.3. Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/)
+[15.3. Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }})
 
-[15.4. Screw press](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/)
+[15.4. Screw press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }})
 
-[15.5. Mechanical press](/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/)
+[15.5. Mechanical press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }})
 
-[15.6. Hydraulic press](/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/)
+[15.6. Hydraulic press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/' | relative_url }})
 
-[15.7. Sliding Die](/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/)
+[15.7. Sliding Die]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/' | relative_url }})
 
-[15.8. Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/)
+[15.8. Path]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }})
 
-[15.9. Rotational Movement](/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/)
+[15.9. Rotational Movement]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/' | relative_url }})
 
-[15.10. Torsional movement](/docs/en/pre_processor/15_movement_controls_definition/15_10_torsional_movement/)
+[15.10. Torsional movement]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_10_torsional_movement/' | relative_url }})
 
-[15.11. Friction Welding movement](/docs/en/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/)
+[15.11. Friction Welding movement]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/' | relative_url }})
 
 [Primary die selection from simulation controls](../9_simulation_controls/9_2_defining_step.htm#Primary_die_\(PDIE\))
 
@@ -133,12 +133,12 @@ Movement preview window
 
 [2D Geometry type selection from Simulation controls](../9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])
 
-[14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[18\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+[18\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 [Movement-User Routine (USRDSP)](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_2_User_defined_movement_control_\(USRDSP\))
 
-[2D Basic Labs](/docs/en/labs/basic_labs/2d_labs/2d_labs/)
+[2D Basic Labs]({{ '/docs/en/labs/basic_labs/2d_labs/2d_labs/' | relative_url }})
 
-[3D Basic Labs](/docs/en/labs/basic_labs/3d_labs/3d_labs/)
+[3D Basic Labs]({{ '/docs/en/labs/basic_labs/3d_labs/3d_labs/' | relative_url }})

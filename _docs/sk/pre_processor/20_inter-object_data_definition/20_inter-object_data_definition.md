@@ -57,7 +57,7 @@ Možnosti nastavenia konštanty šmykového trenia medzi objektmi v 3D
 
 ## **Kontaktný vzťah (CNTACT)**
 
-**[2D, 3D]:** Parameter vzťahu kontaktu ([CNTACT](/docs/sk/keyword_documentation/c/cntact/)) slúži na nastavenie vzťahu „hlavný/podriadený“ medzi obrobkom, formami a deformovateľnými telami. Podriadeným objektom by mal byť objekt s jemnejšou sieťou. V prípade dvoch objektov zložených z rovnakého materiálu môže byť podriadeným objektom ktorýkoľvek z nich, hoci objekt, u ktorého sa očakáva najväčšia elastická deformácia, by mal byť definovaný ako podriadený. Nastavenie vzťahu „Bez kontaktu“ spôsobí, že objekty budú pre seba navzájom neviditeľné a umožní im voľne sa navzájom prechádzať.
+**[2D, 3D]:** Parameter vzťahu kontaktu ([CNTACT]({{ '/docs/sk/keyword_documentation/c/cntact/' | relative_url }})) slúži na nastavenie vzťahu „hlavný/podriadený“ medzi obrobkom, formami a deformovateľnými telami. Podriadeným objektom by mal byť objekt s jemnejšou sieťou. V prípade dvoch objektov zložených z rovnakého materiálu môže byť podriadeným objektom ktorýkoľvek z nich, hoci objekt, u ktorého sa očakáva najväčšia elastická deformácia, by mal byť definovaný ako podriadený. Nastavenie vzťahu „Bez kontaktu“ spôsobí, že objekty budú pre seba navzájom neviditeľné a umožní im voľne sa navzájom prechádzať.
 
 Pre každú dvojicu deformovateľných objektov, ktoré sa môžu počas simulácie dotýkať, je potrebné určiť vlastnosť CNTACT.
 
@@ -162,38 +162,38 @@ Vzťah medzi objektmi po prepnutí pomocou šípky.
 
 **V oknách definície údajov medzi objektmi máme:**
 
-  * **Karta Deformácia**: Na karte Deformácia môže používateľ nastaviť hodnoty trenia, kritériá kontaktu a kritériá oddelenia. Ďalšie informácie týkajúce sa možností na karte Deformácia nájdete v dokumente [20.1. Friction and Contact criteria](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/).
+  * **Karta Deformácia**: Na karte Deformácia môže používateľ nastaviť hodnoty trenia, kritériá kontaktu a kritériá oddelenia. Ďalšie informácie týkajúce sa možností na karte Deformácia nájdete v dokumente [20.1. Friction and Contact criteria]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}).
 
-  * **Karta „Thermal“**: Na karte „Thermal“ môže používateľ nastaviť údaje týkajúce sa koeficientu prenosu tepla a kritérií kontaktu (len pre 2D). Ďalšie informácie nájdete v [20.2. Interface Thermal Data.](/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/)
+  * **Karta „Thermal“**: Na karte „Thermal“ môže používateľ nastaviť údaje týkajúce sa koeficientu prenosu tepla a kritérií kontaktu (len pre 2D). Ďalšie informácie nájdete v [20.2. Interface Thermal Data.]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }})
 
-  * **Karta „Kúrenie“**: Na karte „Kúrenie“ môže používateľ zadať údaje o mernom odpore rozhrania. Ďalšie informácie nájdete v dokumente [20.3. Interface Resisitivity.](/docs/sk/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/)
+  * **Karta „Kúrenie“**: Na karte „Kúrenie“ môže používateľ zadať údaje o mernom odpore rozhrania. Ďalšie informácie nájdete v dokumente [20.3. Interface Resisitivity.]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }})
 
-  * **Karta „Friction Window“**: Karta „Friction Window“ umožňuje používateľovi nastaviť rôzne hodnoty koeficientu trenia pre rôzne kontaktné oblasti v rámci jednej dvojice objektov. Ďalšie informácie nájdete v dokumente [20.1. Friction and Contact criteria](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/).
+  * **Karta „Friction Window“**: Karta „Friction Window“ umožňuje používateľovi nastaviť rôzne hodnoty koeficientu trenia pre rôzne kontaktné oblasti v rámci jednej dvojice objektov. Ďalšie informácie nájdete v dokumente [20.1. Friction and Contact criteria]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}).
 
-  * **Karta Opotrebenie nástroja******: Na karte Opotrebenie nástroja môže používateľ definovať model pre výpočet opotrebenia nástroja pri kontakte s iným objektom. Ďalšie informácie nájdete v [20.4. Tool Wear.](/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/)
+  * **Karta Opotrebenie nástroja******: Na karte Opotrebenie nástroja môže používateľ definovať model pre výpočet opotrebenia nástroja pri kontakte s iným objektom. Ďalšie informácie nájdete v [20.4. Tool Wear.]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }})
 
-  * **Karta „Rigid Contact“**: Na karte „Rigid Contact“ môže používateľ definovať referenčné body pre tuhé výsekové formy, aby sa zabránilo ich vzájomnému preniknutiu pri kontakte. Ďalšie informácie nájdete v dokumente [20.5. Rigid Contact.](/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/)
+  * **Karta „Rigid Contact“**: Na karte „Rigid Contact“ môže používateľ definovať referenčné body pre tuhé výsekové formy, aby sa zabránilo ich vzájomnému preniknutiu pri kontakte. Ďalšie informácie nájdete v dokumente [20.5. Rigid Contact.]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }})
 
 **Súvisiace témy:**
 
-[20.1. Friction and Contact criteria](/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/)
+[20.1. Friction and Contact criteria]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }})
 
-[20.2. Interface Thermal Data](/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/)
+[20.2. Interface Thermal Data]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }})
 
-[20.3. Interface Resisitivity](/docs/sk/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/)
+[20.3. Interface Resisitivity]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }})
 
-[20.4. Tool Wear](/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/)
+[20.4. Tool Wear]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }})
 
-[20.5. Rigid Contact](/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/)
+[20.5. Rigid Contact]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }})
 
 ([Simulation modes selection](../9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\))
 
-[Environment process conditions settings](/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/)
+[Environment process conditions settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})
 
 [DEFORM object types](../11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type)
 
 [Contact Boundary condition](../14_boundary_conditions/14_2_deformation_boundary_conditions.htm#14.2.6._Contact)
 
-[2D Tool Wear Lab](/docs/sk/applications/55_applications/55_tool_wear_labs/2d_tool_wear_lab_in_mo/)
+[2D Tool Wear Lab]({{ '/docs/sk/applications/55_applications/55_tool_wear_labs/2d_tool_wear_lab_in_mo/' | relative_url }})
 
-[2D Inertia weld simulation](/docs/sk/applications/55_applications/55_inertia_welding/2d_inertia_welding/)
+[2D Inertia weld simulation]({{ '/docs/sk/applications/55_applications/55_inertia_welding/2d_inertia_welding/' | relative_url }})

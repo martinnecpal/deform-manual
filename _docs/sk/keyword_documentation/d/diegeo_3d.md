@@ -130,4 +130,4 @@ DIEGEO boundary geometry may be used to specify a cross section of a object. DIE
   
 RELATED TOPICS  
 ---  
-[Geometry](/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/) Keyword: [CNTRAX](../c/cntrax\(3d\).htm)
+[Geometry]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }}) Keyword: [CNTRAX](../c/cntrax\(3d\).htm)

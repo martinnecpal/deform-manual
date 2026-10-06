@@ -43,4 +43,4 @@ The function type (Ftype) options are: < 0 user routine number > 0 function numb
   
 RELATED TOPICS  
 ---  
-Object Edge data: Thermal, [Boundary Constraints](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/): Thermal-Temperature Keywords: [ECCTMP (2D)](/docs/sk/keyword_documentation/e/ecctmp/), [ECCTMP (3D)](/docs/sk/keyword_documentation/e/ecctmp_3d/), [ECTMFN (2D)](/docs/sk/keyword_documentation/e/ectmfn/), [ECTMFN (3D)](), [BCCFNC](/docs/sk/keyword_documentation/b/bccfnc/), [LOCTMP](/docs/sk/keyword_documentation/l/loctmp/)
+Object Edge data: Thermal, [Boundary Constraints]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}): Thermal-Temperature Keywords: [ECCTMP (2D)]({{ '/docs/sk/keyword_documentation/e/ecctmp/' | relative_url }}), [ECCTMP (3D)]({{ '/docs/sk/keyword_documentation/e/ecctmp_3d/' | relative_url }}), [ECTMFN (2D)]({{ '/docs/sk/keyword_documentation/e/ectmfn/' | relative_url }}), [ECTMFN (3D)](), [BCCFNC]({{ '/docs/sk/keyword_documentation/b/bccfnc/' | relative_url }}), [LOCTMP]({{ '/docs/sk/keyword_documentation/l/loctmp/' | relative_url }})

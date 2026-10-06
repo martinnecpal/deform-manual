@@ -30,4 +30,4 @@ This is action keyword usually written in DEF_MULTI.INI which is input file to M
   
 RELATED TOPICS  
 ---  
-2D to 3D model conversion, M23.EXE Related keywords: [GEO23](/docs/sk/keyword_documentation/g/geo23/), [GEOSEC](/docs/sk/keyword_documentation/g/geosec/), [MSHSEC](/docs/sk/keyword_documentation/m/mshsec/), [CRDSYS](/docs/sk/keyword_documentation/c/crdsys/), [CNVT3D](/docs/sk/keyword_documentation/c/cnvt3d/)
+2D to 3D model conversion, M23.EXE Related keywords: [GEO23]({{ '/docs/sk/keyword_documentation/g/geo23/' | relative_url }}), [GEOSEC]({{ '/docs/sk/keyword_documentation/g/geosec/' | relative_url }}), [MSHSEC]({{ '/docs/sk/keyword_documentation/m/mshsec/' | relative_url }}), [CRDSYS]({{ '/docs/sk/keyword_documentation/c/crdsys/' | relative_url }}), [CNVT3D]({{ '/docs/sk/keyword_documentation/c/cnvt3d/' | relative_url }})

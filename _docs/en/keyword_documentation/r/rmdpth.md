@@ -30,4 +30,4 @@ There are four keywords that control the initiation of a remeshing procedure (RM
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Remesh Criteria](/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/) Keywords: [RMTIME](/docs/en/keyword_documentation/r/rmtime/), [RMSTEP](/docs/en/keyword_documentation/r/rmstep/), [RMSTRK](/docs/en/keyword_documentation/r/rmstrk/)
+Simulation Controls: [Remesh Criteria]({{ '/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }}) Keywords: [RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }}), [RMSTEP]({{ '/docs/en/keyword_documentation/r/rmstep/' | relative_url }}), [RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})

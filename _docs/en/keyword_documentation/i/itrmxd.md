@@ -29,4 +29,4 @@ When Newton-Raphson iteration is being used, MaxIteration iterations will be per
   
 RELATED TOPICS  
 ---  
-[Iteration procedures](/docs/en/pre_processor/9_simulation_controls/9_5_solver_settings/) Keywords: ,[CVGERR (2D)](/docs/en/keyword_documentation/c/cvgerr/), [CVGERR (3D)](/docs/en/keyword_documentation/c/cvgerr_3d/), [ITRMXD](), [ITRMXT](/docs/en/keyword_documentation/i/itrmxt/), [SOLMTT (2D)](/docs/en/keyword_documentation/s/solmtt/), [SOLMTT (3D)](/docs/en/keyword_documentation/s/solmtt_3d/)
+[Iteration procedures]({{ '/docs/en/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }}) Keywords: ,[CVGERR (2D)]({{ '/docs/en/keyword_documentation/c/cvgerr/' | relative_url }}), [CVGERR (3D)]({{ '/docs/en/keyword_documentation/c/cvgerr_3d/' | relative_url }}), [ITRMXD](), [ITRMXT]({{ '/docs/en/keyword_documentation/i/itrmxt/' | relative_url }}), [SOLMTT (2D)]({{ '/docs/en/keyword_documentation/s/solmtt/' | relative_url }}), [SOLMTT (3D)]({{ '/docs/en/keyword_documentation/s/solmtt_3d/' | relative_url }})

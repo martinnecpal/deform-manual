@@ -29,4 +29,4 @@ If Flag =1, the profile will be optimized every time a deformation boundary cond
   
 RELATED TOPICS  
 ---  
-[Inter-object contact](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[Inter-object contact]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})

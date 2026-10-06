@@ -122,7 +122,7 @@ Generates a database called DEFORM_DEMO.DB.
 
 ## Brief Introduction to Keywords
 
-There are two different types of keywords that can be read by the [Preprocessor](/docs/en/pre_processor/7_introduction_to_pre-processor/): Input keywords and Action keywords. Input keywords contain data that is directly used as data for a simulation. This can be a geometry definition, convection coefficient values, or other such data. Action keywords perform certain operations when the Preprocessor is reading the data. For example, the keyword [KFREAD](/docs/en/keyword_documentation/k/kfread/) tells the Preprocessor to read the next line into the Preprocessor as a keyword file. This is quite useful for segregating data into different keyword files and being able to load them in a modular manner into the Preprocessor. The most commonly used Action keywords are [KFREAD](/docs/en/keyword_documentation/k/kfread/) (keyword file reading), [DBREAD](/docs/en/keyword_documentation/d/dbread/) (database file reading), [GENCTC](/docs/en/keyword_documentation/g/genctc/) (generate contact based on proximity distance to dies), and [GENDB](/docs/en/keyword_documentation/g/gendb/) (generate database). All the keywords are referenced with their specification method in the keyword reference.
+There are two different types of keywords that can be read by the [Preprocessor]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }}): Input keywords and Action keywords. Input keywords contain data that is directly used as data for a simulation. This can be a geometry definition, convection coefficient values, or other such data. Action keywords perform certain operations when the Preprocessor is reading the data. For example, the keyword [KFREAD]({{ '/docs/en/keyword_documentation/k/kfread/' | relative_url }}) tells the Preprocessor to read the next line into the Preprocessor as a keyword file. This is quite useful for segregating data into different keyword files and being able to load them in a modular manner into the Preprocessor. The most commonly used Action keywords are [KFREAD]({{ '/docs/en/keyword_documentation/k/kfread/' | relative_url }}) (keyword file reading), [DBREAD]({{ '/docs/en/keyword_documentation/d/dbread/' | relative_url }}) (database file reading), [GENCTC]({{ '/docs/en/keyword_documentation/g/genctc/' | relative_url }}) (generate contact based on proximity distance to dies), and [GENDB]({{ '/docs/en/keyword_documentation/g/gendb/' | relative_url }}) (generate database). All the keywords are referenced with their specification method in the keyword reference.
 
 ## Help For Optimization Users
 
@@ -188,7 +188,7 @@ To specify multiple simulation server, the server name need to be separated with
 
 ## Extracting the Results
 
-There are two ways of performing this action: the text-based [Preprocessor](/docs/en/pre_processor/7_introduction_to_pre-processor/) and the text-based [Postprocessor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/). Which one is used depends on the desired output. The most brute-force but straightforward operation is to open the text-based preprocessor, load the last step of the database and save the data as a keyword file. This keyword file can then be parsed for any required information such as node temperatures (keyword: [NDTMP](/docs/en/keyword_documentation/n/ndtmp/)). The action keyword that allows the user to read a database file is [DBREAD](/docs/en/keyword_documentation/d/dbread/) and the action keyword that allows the user to write a keyword file out is [KFWRIT](/docs/en/keyword_documentation/k/kfwrit/) that is specified the same manner as the [KFREAD](/docs/en/keyword_documentation/k/kfread/) keyword. The keyword file can be read as in the case of assembling the input data as such:
+There are two ways of performing this action: the text-based [Preprocessor]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }}) and the text-based [Postprocessor]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }}). Which one is used depends on the desired output. The most brute-force but straightforward operation is to open the text-based preprocessor, load the last step of the database and save the data as a keyword file. This keyword file can then be parsed for any required information such as node temperatures (keyword: [NDTMP]({{ '/docs/en/keyword_documentation/n/ndtmp/' | relative_url }})). The action keyword that allows the user to read a database file is [DBREAD]({{ '/docs/en/keyword_documentation/d/dbread/' | relative_url }}) and the action keyword that allows the user to write a keyword file out is [KFWRIT]({{ '/docs/en/keyword_documentation/k/kfwrit/' | relative_url }}) that is specified the same manner as the [KFREAD]({{ '/docs/en/keyword_documentation/k/kfread/' | relative_url }}) keyword. The keyword file can be read as in the case of assembling the input data as such:
 
 DBREAD 0
 
@@ -202,10 +202,10 @@ The DEF_PRE_INP.txt would be the same where the DEF_COMMANDS.KEY file would cont
 
 **Related Topics:**
 
-1\. [Basic File System](/docs/en/about_deform/1_introduction_to_deform/1_10_basic_file_system/)
+1\. [Basic File System]({{ '/docs/en/about_deform/1_introduction_to_deform/1_10_basic_file_system/' | relative_url }})
 
-2\. [Preprocessor](/docs/en/pre_processor/7_introduction_to_pre-processor/)
+2\. [Preprocessor]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }})
 
-3\. [Simulation](/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/)
+3\. [Simulation]({{ '/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/' | relative_url }})
 
-4\. [Post Processor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+4\. [Post Processor]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})

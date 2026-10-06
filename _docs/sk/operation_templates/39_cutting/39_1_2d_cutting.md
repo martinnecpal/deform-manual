@@ -279,7 +279,7 @@ Na tejto inicializačnej stránke môže používateľ inicializovať hodnotu de
 Funkciu ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) je možné použiť na polohovanie nástroja pomocou polohy s presahom na základe rýchlosti posuvu a polohy obrobku. Nástroj je možné tiež otočiť tak, že sa zadá uhol otáčania a zaškrtne políčko „Uhol otáčania“ pri použití funkcie „Automatické polohovanie“.
 
   
-Používateľ môže umiestňovať objekty pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}). K dispozícii sú rôzne možnosti umiestňovania objektov, ako je znázornené na obr. 39.1.30. Ďalšie informácie o týchto možnostiach nájdete v [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+Používateľ môže umiestňovať objekty pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}). K dispozícii sú rôzne možnosti umiestňovania objektov, ako je znázornené na obr. 39.1.30. Ďalšie informácie o týchto možnostiach nájdete v [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_1_2d_cutting/image0028.jpg' | relative_url }})
 
@@ -287,7 +287,7 @@ Možnosti umiestnenia objektu
 
 ## Opotrebenie nástrojov 
 
-Používateľ môže aktivovať výpočet opotrebenia nástroja pomocou zaškrtávacieho políčka „Definovať model na výpočet opotrebenia nástroja“. Po zaškrtnutí tohto políčka môže používateľ vybrať model opotrebenia nástroja a definovať jeho parametre, ako je znázornené na obr. 39.1.31. Ďalšie informácie o týchto možnostiach nájdete v [20.4.Tool Wear.](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/).
+Používateľ môže aktivovať výpočet opotrebenia nástroja pomocou zaškrtávacieho políčka „Definovať model na výpočet opotrebenia nástroja“. Po zaškrtnutí tohto políčka môže používateľ vybrať model opotrebenia nástroja a definovať jeho parametre, ako je znázornené na obr. 39.1.31. Ďalšie informácie o týchto možnostiach nájdete v [20.4.Tool Wear.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_1_2d_cutting/image0029.jpg' | relative_url }})
 
@@ -297,7 +297,7 @@ Stránka „Opotrebenie nástrojov“
 
 V predvolenom nastavení bude zaškrtnuté políčko „užívateľ“ a pre operáciu 2D rezania budú tiež definované predvolené vzťahy, ako je znázornené na obr. 39.1.32. Užívateľ môže zmeniť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) môže používateľ vypočítať toleranciu kontaktu. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) môže používateľ vygenerovať vzťah kontaktu. Zaškrtnutím políčka vedľa vzťahu kontaktu môže používateľ definovať priliehavý kontakt.
 
-Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_1_2d_cutting/image0030.jpg' | relative_url }})
 
@@ -313,7 +313,7 @@ Stránka „Voľný povrch“ (pre analýzu v ustálenom stave)
 
 ## Riadenie krokov
 
-Používateľ môže definovať údaje pre ovládacie prvky krokov pomocou režimu „Guided“, ako je znázornené na obr. 39.1.34. V prípade prechodovej analýzy, ak chce používateľ využiť pokročilé ovládacie prvky simulácie, môže prejsť do režimu „Expert“, ako je znázornené na obr. 39.1.35. Ďalšie informácie a popis možností v nastaveniach simulácie nájdete v [9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/).
+Používateľ môže definovať údaje pre ovládacie prvky krokov pomocou režimu „Guided“, ako je znázornené na obr. 39.1.34. V prípade prechodovej analýzy, ak chce používateľ využiť pokročilé ovládacie prvky simulácie, môže prejsť do režimu „Expert“, ako je znázornené na obr. 39.1.35. Ďalšie informácie a popis možností v nastaveniach simulácie nájdete v [9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}).
 
 **Počiatočné číslo kroku:** Ak sa zapisuje do novej databázy, uvedené číslo kroku bude prvým krokom v tejto databáze. Ak sa údaje zapisujú do existujúcej databázy, údaje z predspracovateľa sa do tejto databázy pripojia v správnom číselnom poradí a všetky kroky nasledujúce po uvedenom kroku budú prepísané.
 

@@ -32,4 +32,4 @@ This is action keyword that reads the target geometry which is generated from so
   
 RELATED TOPICS  
 ---  
-Text-based PRE, Shape optimization, Morphing Keywords: [BRDEXT](/docs/en/keyword_documentation/b/brdext/), [DEFAMG](/docs/en/keyword_documentation/d/defamg/), [DEFINT](/docs/en/keyword_documentation/d/defint/), [REMESH](/docs/en/keyword_documentation/r/remesh/)
+Text-based PRE, Shape optimization, Morphing Keywords: [BRDEXT]({{ '/docs/en/keyword_documentation/b/brdext/' | relative_url }}), [DEFAMG]({{ '/docs/en/keyword_documentation/d/defamg/' | relative_url }}), [DEFINT]({{ '/docs/en/keyword_documentation/d/defint/' | relative_url }}), [REMESH]({{ '/docs/en/keyword_documentation/r/remesh/' | relative_url }})

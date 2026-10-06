@@ -33,4 +33,4 @@ Applicable simulation types: Isothermal Deformation Non-Isothermal Deformation
   
 RELATED TOPICS  
 ---  
-[Material Data](/docs/en/pre_processor/10_material_data/10_material_data/)
+[Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})

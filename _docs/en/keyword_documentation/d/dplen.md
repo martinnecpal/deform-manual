@@ -34,4 +34,4 @@ The default value is of 0.5 is a reasonable value for most forming processes. A 
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Substepping Control](../../pre_processor/9_simulation_controls/9_2_defining_step.htm#Sub-stepping_Controls) Keywords: [DTSUB(2D)](/docs/en/keyword_documentation/d/dtsub/), [DTSUB (3D)](/docs/en/keyword_documentation/d/dtsub_3d/), [DEMAX](/docs/en/keyword_documentation/d/demax/)
+Simulation Controls: [Substepping Control](../../pre_processor/9_simulation_controls/9_2_defining_step.htm#Sub-stepping_Controls) Keywords: [DTSUB(2D)]({{ '/docs/en/keyword_documentation/d/dtsub/' | relative_url }}), [DTSUB (3D)]({{ '/docs/en/keyword_documentation/d/dtsub_3d/' | relative_url }}), [DEMAX]({{ '/docs/en/keyword_documentation/d/demax/' | relative_url }})

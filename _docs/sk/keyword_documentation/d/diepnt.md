@@ -42,4 +42,4 @@ Bearing surface control points (when Ptype 1, 2) can be defined on the entrance 
   
 RELATED TOPICS  
 ---  
-[Geometry](/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/), [Extrusion wizard](/docs/sk/operation_templates/31_extrusion/31_introduction_to_extrusion/)
+[Geometry]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }}), [Extrusion wizard]({{ '/docs/sk/operation_templates/31_extrusion/31_introduction_to_extrusion/' | relative_url }})

@@ -18,7 +18,7 @@ Thermal material data window
 
 ## Thermal conductivity (THRCND)
 
-Conduction is the process by which heat flows from a region of higher temperature to a region of lower temperature within a medium. The thermal conductivity ([THRCND](/docs/en/keyword_documentation/t/thrcnd/)) in this case is the ability of the material in question to conduct heat within an object.  
+Conduction is the process by which heat flows from a region of higher temperature to a region of lower temperature within a medium. The thermal conductivity ([THRCND]({{ '/docs/en/keyword_documentation/t/thrcnd/' | relative_url }})) in this case is the ability of the material in question to conduct heat within an object.  
 The value can be a constant or a function of temperature, a function of atom content, or a function of temperature and atom content.
 
 ## Heat capacity (HEATCP)
@@ -27,14 +27,14 @@ Heat capacity is generally defined as the amount of heat an object must absorb t
 
 Most reference values for heat capacity list the specific heat capacity, ![]({{ '/assets/equations/pre_processor/10_material_data/10_3_thermal_data/rcp.jpg' | relative_url }}), which is the heat capacity per unit mass. It defines the heat required to raisea unit mass of a substance by a unit temperature interval under constant pressure. In other words, it is the thermal energy per unit mass required to achieve a one degree increase in temperature.
 
-The default heat capacity ([HEATCP](/docs/en/keyword_documentation/h/heatcp/)) term used in DEFORM is the volumetric heat capacity, ρcp, which is the heat capacity per unit volume. It defines the heat required to raise a unit volume of a substance by a unit temperature interval under constant pressure. In other words, it is the thermal energy per unit volume required to achieve a one degree increase in temperature.
+The default heat capacity ([HEATCP]({{ '/docs/en/keyword_documentation/h/heatcp/' | relative_url }})) term used in DEFORM is the volumetric heat capacity, ρcp, which is the heat capacity per unit volume. It defines the heat required to raise a unit volume of a substance by a unit temperature interval under constant pressure. In other words, it is the thermal energy per unit volume required to achieve a one degree increase in temperature.
 
 Volumetric heat capacity is obtained by multiplying specific heat capacity (heat capacity per unit mass) by density (mass per unit volume).
 
 ![]({{ '/assets/equations/pre_processor/10_material_data/10_3_thermal_data/eqn_10_3_1.jpg' | relative_url }}) |   
 ---|---  
   
-The other heat capacity ([HEATCP](/docs/en/keyword_documentation/h/heatcp/)) term available in DEFORM is the mass specific heat capacity. It is the specific heat capacity, but denoted as “mass specific heat” to highlight its relationship to the mass density input available in the thermal properties menu. Mass density must be defined if the mass specific heat capacity has been defined. Values for mass density and mass specific heat capacity must utilize consistent mass units. See Section [1.9. Units](/docs/en/about_deform/1_introduction_to_deform/1_9_units/) for more details.
+The other heat capacity ([HEATCP]({{ '/docs/en/keyword_documentation/h/heatcp/' | relative_url }})) term available in DEFORM is the mass specific heat capacity. It is the specific heat capacity, but denoted as “mass specific heat” to highlight its relationship to the mass density input available in the thermal properties menu. Mass density must be defined if the mass specific heat capacity has been defined. Values for mass density and mass specific heat capacity must utilize consistent mass units. See Section [1.9. Units]({{ '/docs/en/about_deform/1_introduction_to_deform/1_9_units/' | relative_url }}) for more details.
 
 DEFORM utilizes the volumetric heat capacity for FEM calculations. If mass specific heat capacity has been defined, then DEFORM will calculate the volumetric heat capacity from the mass density and mass specific heat capacity during FEM calculations.
 
@@ -42,11 +42,11 @@ The volumetric or mass specific heat capacity may be input to DEFORM as a consta
 
 ## Emissivity (EMSVTY)
 
-The emissive power, E, of a body is the total amount of radiation emitted by a body per unit area and time. The emissivity ([EMSVTY](/docs/en/keyword_documentation/e/emsvty/)) of a body is the ratio of E/Eb where Eb is the emissive power of a perfect blackbody. For a more complete description of the properties of emissivity, consult any source dealing with heat transfer. The value can be a constant or a function of temperature.
+The emissive power, E, of a body is the total amount of radiation emitted by a body per unit area and time. The emissivity ([EMSVTY]({{ '/docs/en/keyword_documentation/e/emsvty/' | relative_url }})) of a body is the ratio of E/Eb where Eb is the emissive power of a perfect blackbody. For a more complete description of the properties of emissivity, consult any source dealing with heat transfer. The value can be a constant or a function of temperature.
 
 ## Mass Density (DENSTY)
 
-The mass density ([DENSTY](/docs/en/keyword_documentation/d/densty/)) of a material is its mass per unit volume. Mass density may be defined as a constant or a function of temperature. Mass density must be defined in models that involve gravity, body force, centrifugal force or the explicit solver.
+The mass density ([DENSTY]({{ '/docs/en/keyword_documentation/d/densty/' | relative_url }})) of a material is its mass per unit volume. Mass density may be defined as a constant or a function of temperature. Mass density must be defined in models that involve gravity, body force, centrifugal force or the explicit solver.
 
 Density values for various materials are readily available in online and print literature. It should be noted that the type of density listed in these references generally differs based on the specified unit system, as described below.
 

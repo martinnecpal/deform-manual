@@ -21,9 +21,9 @@ Forming operation is accessible from Integrated Manufacturing Process (MO) Wizar
 Added 3D Forming operation into Operation Editor
 
   
-The Integrated Manufacturing Process (MO) is divided into several distinct sections - namely the DISPLAY window, Graphical Utilities, Operation Tree, property Editor, Operation Editor, Explorer and Graphics window. For more information, please refer [6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+The Integrated Manufacturing Process (MO) is divided into several distinct sections - namely the DISPLAY window, Graphical Utilities, Operation Tree, property Editor, Operation Editor, Explorer and Graphics window. For more information, please refer [6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-There are three modes in Integrated Manufacturing process (MO). The [Pre-Processor](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/), the [Simulator](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/) and the [Post-Processor](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/). These three modes can be selected among each other through a tab selection. The Pre-Processor is used to setup problem for simulation, the simulation can be run from Simulator section and the results are viewed in the Post-Processor. Each time a change is desired for a simulation, the change should be made in the Pre-Processor. The Simulator is where the simulation is run and monitored. The Post-Processor has many tools for viewing and interpreting the results of a simulation.
+There are three modes in Integrated Manufacturing process (MO). The [Pre-Processor]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}), the [Simulator]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}) and the [Post-Processor]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }}). These three modes can be selected among each other through a tab selection. The Pre-Processor is used to setup problem for simulation, the simulation can be run from Simulator section and the results are viewed in the Post-Processor. Each time a change is desired for a simulation, the change should be made in the Pre-Processor. The Simulator is where the simulation is run and monitored. The Post-Processor has many tools for viewing and interpreting the results of a simulation.
 
 ## Objective of Forming operation
 
@@ -44,12 +44,12 @@ Example of 3D successive operation setup
 
 **Related Topics:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[33.1. 2D Forming Setup](/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/)
+[33.1. 2D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }})
 
-[33.2. 3D Forming Setup](/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/)
+[33.2. 3D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }})

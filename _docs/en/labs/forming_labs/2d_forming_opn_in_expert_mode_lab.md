@@ -68,7 +68,7 @@ Process Condition settings for air transfer
 
 In simulation controls window expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) will be activated (see [Fig. 2DFEL1.7.]()), select the icon in the tool tab to observe the expert mode simulation control options.
 
-Keep only the Heat Transfer mode checked in Main tab as only heat transfer is modeled as shown in Fig. 2DFEL1.7. Also other advanced features like step, stop, solver, process conditions,.. etc are available, we will use some of these features in meshing, stopping and step controls during the later stage of the setup. For more information about simulation controls options refer [Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Keep only the Heat Transfer mode checked in Main tab as only heat transfer is modeled as shown in Fig. 2DFEL1.7. Also other advanced features like step, stop, solver, process conditions,.. etc are available, we will use some of these features in meshing, stopping and step controls during the later stage of the setup. For more information about simulation controls options refer [Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_forming_opn_lab_in_expert_mode/image0007.jpg' | relative_url }})
 
@@ -104,7 +104,7 @@ Cylinder geometry creation for workpiece
 
 ### Generate Workpiece Mesh
 
-Complete range of meshing options are available in expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})), for air transfer operation generate the mesh using **1000** elements and **size ratio** of**3** as shown in Fig. 2DFEL1.12. In the next operation we will use other mesh density window and remeshing options. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue. For more information about expert mode mesh options refer [13.1. 2D Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/).
+Complete range of meshing options are available in expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})), for air transfer operation generate the mesh using **1000** elements and **size ratio** of**3** as shown in Fig. 2DFEL1.12. In the next operation we will use other mesh density window and remeshing options. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue. For more information about expert mode mesh options refer [13.1. 2D Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_labs/2d_forming_opn_lab_in_expert_mode/image0012.jpg' | relative_url }})
 

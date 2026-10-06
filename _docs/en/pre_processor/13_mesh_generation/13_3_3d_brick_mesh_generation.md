@@ -77,11 +77,11 @@ Mesh density windows for 2D
 
 ## Coating Mesh
 
-The user can add coating layers using this option and generate mesh for the same. Coating mesh is a thin layer of elements along the object boundary with specific characteristics. For added coating layers user can assign material. For further information on the usage of coating mesh please refer to [Appendix XI](/docs/en/appendices/appendix_xi__near_surface_mesh_functions/).
+The user can add coating layers using this option and generate mesh for the same. Coating mesh is a thin layer of elements along the object boundary with specific characteristics. For added coating layers user can assign material. For further information on the usage of coating mesh please refer to [Appendix XI]({{ '/docs/en/appendices/appendix_xi__near_surface_mesh_functions/' | relative_url }}).
 
 ## Remeshing Criteria
 
-Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See Fig. 13.3.8.) contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they are Interference Depth ([RMDPTH](/docs/en/keyword_documentation/r/rmdpth/)),Max. Time Increment ([RMTIME](/docs/en/keyword_documentation/r/rmtime/)), Max. Step Increment ([RMSTEP](/docs/en/keyword_documentation/r/rmstep/)) and Max. Stroke Increment ([RMSTRK](/docs/en/keyword_documentation/r/rmstrk/)). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed. During the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.
+Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See Fig. 13.3.8.) contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they are Interference Depth ([RMDPTH]({{ '/docs/en/keyword_documentation/r/rmdpth/' | relative_url }})),Max. Time Increment ([RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }})), Max. Step Increment ([RMSTEP]({{ '/docs/en/keyword_documentation/r/rmstep/' | relative_url }})) and Max. Stroke Increment ([RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed. During the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image007.jpg' | relative_url }})
 
@@ -101,15 +101,15 @@ Advanced settings window for Brick mesh
 
 **Grid resolution**(**MGGRID**)
 
-When an object is meshed in 2D, a sampling grid is required to discretize density of the mesh throughout the starting geometry. Grid resolution ([MGGRID](/docs/en/keyword_documentation/m/mggrid/)) specifies the spacing of the sampling grids that are used to sample mesh densities. Increasing the value of X division or Y division will result in sharper gradients between areas of differing mesh density. In the case of blanking, where a very high mesh gradient is required over a narrow region, these values may need to increase to capture high changes in mesh gradient over short distances.
+When an object is meshed in 2D, a sampling grid is required to discretize density of the mesh throughout the starting geometry. Grid resolution ([MGGRID]({{ '/docs/en/keyword_documentation/m/mggrid/' | relative_url }})) specifies the spacing of the sampling grids that are used to sample mesh densities. Increasing the value of X division or Y division will result in sharper gradients between areas of differing mesh density. In the case of blanking, where a very high mesh gradient is required over a narrow region, these values may need to increase to capture high changes in mesh gradient over short distances.
 
 **Node addition parameters** (**MGERR**)  
-The node addition parameters ([MGERR](/docs/en/keyword_documentation/m/mgerr/)) specify the maximum distance and angle error permitted between the object boundary and its associated grid element side. The distance and angle tolerances are used to capture critical boundary geometry that might otherwise be lost when the mesh is generated. If an object is required to capture very small features, the maximum distance can be decreased or if a node needs to be placed on a shallow angle, the angle error can be decreased as well. Rarely will the user ever have to change these values. For parts that are very small, a value of 0.01% of the object’s bounding box is a good starting number that can be used for [MGERR](/docs/en/keyword_documentation/m/mgerr/) for better handling of mesh resolution.
+The node addition parameters ([MGERR]({{ '/docs/en/keyword_documentation/m/mgerr/' | relative_url }})) specify the maximum distance and angle error permitted between the object boundary and its associated grid element side. The distance and angle tolerances are used to capture critical boundary geometry that might otherwise be lost when the mesh is generated. If an object is required to capture very small features, the maximum distance can be decreased or if a node needs to be placed on a shallow angle, the angle error can be decreased as well. Rarely will the user ever have to change these values. For parts that are very small, a value of 0.01% of the object’s bounding box is a good starting number that can be used for [MGERR]({{ '/docs/en/keyword_documentation/m/mgerr/' | relative_url }}) for better handling of mesh resolution.
 
 Related Topics:
 
-[13\. Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/)
+[13\. Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[13.1. 2D Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+[13.1. 2D Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
-[13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/)
+[13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }})

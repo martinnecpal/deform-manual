@@ -39,19 +39,19 @@ Pre geometriu 2,5D trecieho zvárania máme k dispozícii ovládacie prvky prekl
 
 ### **Prekladový pohyb**
 
-Počas simulácie sa obmedzené uzly pohybujú synchrónne rýchlosťou a smerom definovaným ovládacími prvkami pohybu. Typy ovládacích prvkov pohybu, ktoré sú k dispozícii v ovládacích prvkoch pohybu prekladu, sú rýchlosť, sila, kladivo, skrutkový lis, mechanický lis, hydraulický lis, posuvná matrica a cesta. Translačný pohyb pre 2D a 3D je znázornený na obr. 15.1 a obr. 15.2. Ďalšie informácie nájdete v častiach [15.1. Speed](/docs/sk/pre_processor/15_movement_controls_definition/15_1_speed/), [15.2. Force](/docs/sk/pre_processor/15_movement_controls_definition/15_2_force/), [15.3. Hammer](/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/), [15.4. Screw press](/docs/sk/pre_processor/15_movement_controls_definition/15_4_screw_press/), [15.5. Mechanical press](/docs/sk/pre_processor/15_movement_controls_definition/15_5_mechanical_press/), [15.6. Hydraulic press](/docs/sk/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/), [15.7. Sliding Die](/docs/sk/pre_processor/15_movement_controls_definition/15_7_sliding_die/) a [15.8. Path](/docs/sk/pre_processor/15_movement_controls_definition/15_8_path/).
+Počas simulácie sa obmedzené uzly pohybujú synchrónne rýchlosťou a smerom definovaným ovládacími prvkami pohybu. Typy ovládacích prvkov pohybu, ktoré sú k dispozícii v ovládacích prvkoch pohybu prekladu, sú rýchlosť, sila, kladivo, skrutkový lis, mechanický lis, hydraulický lis, posuvná matrica a cesta. Translačný pohyb pre 2D a 3D je znázornený na obr. 15.1 a obr. 15.2. Ďalšie informácie nájdete v častiach [15.1. Speed]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }}), [15.2. Force]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_2_force/' | relative_url }}), [15.3. Hammer]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}), [15.4. Screw press]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }}), [15.5. Mechanical press]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }}), [15.6. Hydraulic press]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/' | relative_url }}), [15.7. Sliding Die]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_7_sliding_die/' | relative_url }}) a [15.8. Path]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }}).
 
 ### **Rotačný pohyb**
 
-****Rotačný pohyb je definovaný uhlovou rýchlosťou/krútiacim momentom okolo pevného stredu otáčania. Tento typ pohybu spôsobuje len rotáciu. Ak nie je uvedené inak, translácia je obmedzená. Rotačná rýchlosť sa riadi prostredníctvom voľby Controlling Method (Spôsob riadenia) a bod, okolo ktorého sa objekt otáča, sa nastavuje prostredníctvom Center of Rotational Movement (Stred rotačného pohybu). Ďalšie informácie nájdete v časti[15.9. Rotational Movement](/docs/sk/pre_processor/15_movement_controls_definition/15_9_rotational_movement/).
+****Rotačný pohyb je definovaný uhlovou rýchlosťou/krútiacim momentom okolo pevného stredu otáčania. Tento typ pohybu spôsobuje len rotáciu. Ak nie je uvedené inak, translácia je obmedzená. Rotačná rýchlosť sa riadi prostredníctvom voľby Controlling Method (Spôsob riadenia) a bod, okolo ktorého sa objekt otáča, sa nastavuje prostredníctvom Center of Rotational Movement (Stred rotačného pohybu). Ďalšie informácie nájdete v časti[15.9. Rotational Movement]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_9_rotational_movement/' | relative_url }}).
 
 ### **Krútiaci pohyb**
 
-Kontrola krútenia sa uplatňuje len v prípade krútiacich sa formulácií. Táto možnosť riadenia pohybu je aktívna len pre DEFORM-2D. Ďalšie informácie nájdete v časti [15.10. Torsional movement](/docs/sk/pre_processor/15_movement_controls_definition/15_10_torsional_movement/).
+Kontrola krútenia sa uplatňuje len v prípade krútiacich sa formulácií. Táto možnosť riadenia pohybu je aktívna len pre DEFORM-2D. Ďalšie informácie nájdete v časti [15.10. Torsional movement]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_10_torsional_movement/' | relative_url }}).
 
 ### **Pohyb frikčného zvárania**
 
-Kontrola pohybu pri trecom zváraní sa uplatňuje len v prípade 2,5D formulácií trecieho zvárania. Táto možnosť riadenia pohybu je aktívna len v prípade DEFORM-2D. Ďalšie informácie nájdete v časti [15.11. Friction Welding movement](/docs/sk/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/).
+Kontrola pohybu pri trecom zváraní sa uplatňuje len v prípade 2,5D formulácií trecieho zvárania. Táto možnosť riadenia pohybu je aktívna len v prípade DEFORM-2D. Ďalšie informácie nájdete v časti [15.11. Friction Welding movement]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/' | relative_url }}).
 
 **Smery [2D, 3D]** : Na základe nastavenia problému môže používateľ vybrať smer pohybu prekladu. Pre výber uhlových smerov je k dispozícii aj možnosť Iné smery.
 
@@ -99,27 +99,27 @@ Okno náhľadu pohybu
 
 **Súvisiace témy:**
 
-[15.1. Speed](/docs/sk/pre_processor/15_movement_controls_definition/15_1_speed/)
+[15.1. Speed]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }})
 
-[15.2. Force](/docs/sk/pre_processor/15_movement_controls_definition/15_2_force/)
+[15.2. Force]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_2_force/' | relative_url }})
 
-[15.3. Hammer](/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/)
+[15.3. Hammer]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }})
 
-[15.4. Screw press](/docs/sk/pre_processor/15_movement_controls_definition/15_4_screw_press/)
+[15.4. Screw press]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }})
 
-[15.5. Mechanical press](/docs/sk/pre_processor/15_movement_controls_definition/15_5_mechanical_press/)
+[15.5. Mechanical press]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }})
 
-[15.6. Hydraulic press](/docs/sk/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/)
+[15.6. Hydraulic press]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/' | relative_url }})
 
-[15.7. Sliding Die](/docs/sk/pre_processor/15_movement_controls_definition/15_7_sliding_die/)
+[15.7. Sliding Die]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_7_sliding_die/' | relative_url }})
 
-[15.8. Path](/docs/sk/pre_processor/15_movement_controls_definition/15_8_path/)
+[15.8. Path]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }})
 
-[15.9. Rotational Movement](/docs/sk/pre_processor/15_movement_controls_definition/15_9_rotational_movement/)
+[15.9. Rotational Movement]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_9_rotational_movement/' | relative_url }})
 
-[15.10. Torsional movement](/docs/sk/pre_processor/15_movement_controls_definition/15_10_torsional_movement/)
+[15.10. Torsional movement]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_10_torsional_movement/' | relative_url }})
 
-[15.11. Friction Welding movement](/docs/sk/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/)
+[15.11. Friction Welding movement]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/' | relative_url }})
 
 [Primary die selection from simulation controls](../9_simulation_controls/9_2_defining_step.htm#Primary_die_\(PDIE\))
 
@@ -133,12 +133,12 @@ Okno náhľadu pohybu
 
 [2D Geometry type selection from Simulation controls](../9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])
 
-[14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[18\. Object Positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/)
+[18\. Object Positioning]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 [Movement-User Routine (USRDSP)](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_2_User_defined_movement_control_\(USRDSP\))
 
-[2D Basic Labs](/docs/sk/labs/basic_labs/2d_labs/2d_labs/)
+[2D Basic Labs]({{ '/docs/sk/labs/basic_labs/2d_labs/2d_labs/' | relative_url }})
 
-[3D Basic Labs](/docs/sk/labs/basic_labs/3d_labs/3d_labs/)
+[3D Basic Labs]({{ '/docs/sk/labs/basic_labs/3d_labs/3d_labs/' | relative_url }})

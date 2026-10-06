@@ -73,4 +73,4 @@ For simulations where workpiece surface properties (residual stress, microstruct
 
 **Related Topics:**
 
-[Object Mesh Data](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/)
+[Object Mesh Data]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})

@@ -32,7 +32,7 @@ Tehlové prvky majú tendenciu poskytovať krajšie výsledky ako štvorstenné 
 
 ## **Difúzny koeficient (DIFCOE)**
 
-Difúzny koeficient ([DIFCOE](/docs/sk/keyword_documentation/d/difcoe/)) možno definovať nasledujúcimi metódami:
+Difúzny koeficient ([DIFCOE]({{ '/docs/sk/keyword_documentation/d/difcoe/' | relative_url }})) možno definovať nasledujúcimi metódami:
 
   * **Metóda 1**
 

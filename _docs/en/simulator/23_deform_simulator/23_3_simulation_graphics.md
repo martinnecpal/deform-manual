@@ -33,7 +33,7 @@ There are also four additional ways in which to monitor a simulation those are,
 
   * Depending up on the frequency of the steps saved in the database, it is recommended to opt for saved steps display rather than the current step.
 
-For more information related to state variable plot Refer chapter 4.5.2. State Variables and for Graphical options Refer [6.2. Integrated Manufacturing Process Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/) and 4.2. Graphical Display.
+For more information related to state variable plot Refer chapter 4.5.2. State Variables and for Graphical options Refer [6.2. Integrated Manufacturing Process Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}) and 4.2. Graphical Display.
 
 **Object mode** : Option used to select objects and object display mode in simulation graphics display. (See Fig. 23.3.4.)
 
@@ -43,10 +43,10 @@ Object mode window
 
 **Related Topics:**
 
-[Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/)
+[Process Monitor]({{ '/docs/en/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }})
 
-[Pre-Processor](/docs/en/post_processor/post_processor_mainpg/)
+[Pre-Processor]({{ '/docs/en/post_processor/post_processor_mainpg/' | relative_url }})
 
-[Integrated Manufacturing Process (MO)](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/)
+[Integrated Manufacturing Process (MO)]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/' | relative_url }})
 
-[Post-Processor](/docs/en/post_processor/post_processor_mainpg/)
+[Post-Processor]({{ '/docs/en/post_processor/post_processor_mainpg/' | relative_url }})

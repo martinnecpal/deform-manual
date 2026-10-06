@@ -5,19 +5,19 @@ title: "14.1. Symmetry Boundary Conditions"
 
 # 14.1. Symmetry Boundary Conditions [only for 3D]
 
-To specify **Symmetry plane** , select the symmetry plane on the object, then click on ![](../../../assets/Icons/Pre_icons/MO_Add_BCC_button.jpg) button as shown in Fig. 14.1.1.
+To specify **Symmetry plane** , select the symmetry plane on the object, then click on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) button as shown in Fig. 14.1.1.
 
-![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_1_Symmetry_Boundary_Conditions/14_1_Image001.jpg)
+![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/14_1_image001.jpg' | relative_url }})
 
 Symmetry plane BCC for quarter symmetry model
 
-To specify **Rotational symmetry plane** , select the Rotational symmetry plane on the object and define the Rotational axis and Rotational angle as shown in Fig. 14.1.2\. and click on ![](../../../assets/Icons/Pre_icons/MO_Add_BCC_button.jpg) button. Slave/master list added under Rotational symmetry, now select another rotational symmetry plnae and click on ![](../../../assets/Icons/Pre_icons/MO_Add_BCC_button.jpg) button. Added Roational symmetry plane BCC is as shown in Fig. 14.1.3\. 
+To specify **Rotational symmetry plane** , select the Rotational symmetry plane on the object and define the Rotational axis and Rotational angle as shown in Fig. 14.1.2\. and click on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) button. Slave/master list added under Rotational symmetry, now select another rotational symmetry plnae and click on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) button. Added Roational symmetry plane BCC is as shown in Fig. 14.1.3\. 
 
-![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_1_Symmetry_Boundary_Conditions/14_1_Image002.jpg)
+![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/14_1_image002.jpg' | relative_url }})
 
 Rotational symmetry plane BCC for quarter symmetry model
 
-![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_1_Symmetry_Boundary_Conditions/14_1_Image003.jpg)
+![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/14_1_image003.jpg' | relative_url }})
 
 Rotational symmetry plane BCC assigned for quarter symmetry model
 
@@ -25,12 +25,12 @@ User can also able to define planar symmetry and rotation symmetry surfaces from
 
 **Related Topics:**
 
-[14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[14.2. Deformation Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/)
+[14.2. Deformation Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }})
 
-[14.3. Thermal Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/)
+[14.3. Thermal Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }})
 
-[14.4. Diffusion Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/)
+[14.4. Diffusion Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }})
 
-[14.5. Heating Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/)
+[14.5. Heating Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }})

@@ -73,4 +73,4 @@ V prípade simulácií, pri ktorých sú dôležité vlastnosti povrchu obrobku 
 
 **Súvisiace témy:**
 
-[Object Mesh Data](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/)
+[Object Mesh Data]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})

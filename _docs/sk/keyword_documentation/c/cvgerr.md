@@ -40,4 +40,4 @@ Applicable simulation types: Isothermal Deformation, Non-Isothermal Deformation
 
 RELATED TOPICS  
 ---  
-Iteration procedures Keywords: [ITRMTH](/docs/sk/keyword_documentation/i/itrmth/), [ITRMXD](/docs/sk/keyword_documentation/i/itrmxd/), [ITRMXT](/docs/sk/keyword_documentation/i/itrmxt/)
+Iteration procedures Keywords: [ITRMTH]({{ '/docs/sk/keyword_documentation/i/itrmth/' | relative_url }}), [ITRMXD]({{ '/docs/sk/keyword_documentation/i/itrmxd/' | relative_url }}), [ITRMXT]({{ '/docs/sk/keyword_documentation/i/itrmxt/' | relative_url }})

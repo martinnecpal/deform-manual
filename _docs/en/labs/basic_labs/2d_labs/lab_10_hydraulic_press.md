@@ -5,7 +5,7 @@ title: "Lab 10 Hydraulic press"
 
 # Lab 10 Hydraulic press
 
-Requirement: To setup this operation, First we have to setup [Lab 03 Spike Isothermal Lab](/docs/en/labs/basic_labs/2d_labs/lab_03_spike_isothermal/).
+Requirement: To setup this operation, First we have to setup [Lab 03 Spike Isothermal Lab]({{ '/docs/en/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }}).
 
 This lab will repeat the spike isothermal forging simulation on a 1000 ton hydraulic press. The deformation results will appear similar to the previous spike forging labs, but the velocity will decrease as the press runs out of power during the end of the stroke. An initial die speed of 2”/second will be applied to the top die. As the forming load increases, it will require more power than the press can deliver with subsequent deceleration of the moving die.
 
@@ -124,10 +124,10 @@ Speed-Stoke Graph plot
 
 **Related Topics:**
 
-[15\. Movement Controls Settings](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[15\. Movement Controls Settings]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post-processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post-processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})

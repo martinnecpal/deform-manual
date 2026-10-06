@@ -36,4 +36,4 @@ Applicable [simulation types](../../pre_processor/9_simulation_controls/9_1_simu
   
 RELATED TOPICS  
 ---  
-Material Data: [Hardness](/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/) Keyword: [HDNOBJ](/docs/sk/keyword_documentation/h/hdnobj/), [HDNEST](/docs/sk/keyword_documentation/h/hdnest/), [JOMINY](/docs/sk/keyword_documentation/j/jominy/)
+Material Data: [Hardness]({{ '/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }}) Keyword: [HDNOBJ]({{ '/docs/sk/keyword_documentation/h/hdnobj/' | relative_url }}), [HDNEST]({{ '/docs/sk/keyword_documentation/h/hdnest/' | relative_url }}), [JOMINY]({{ '/docs/sk/keyword_documentation/j/jominy/' | relative_url }})

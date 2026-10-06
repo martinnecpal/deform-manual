@@ -34,4 +34,4 @@ This keyword should be used in conjunction with CNTACT, which specifies the inte
   
 RELATED TOPICS  
 ---  
-[Inter- Object Data](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/): [Rigid Contact](/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/) Keywords: [CNTACT (2D)](/docs/en/keyword_documentation/c/cntact/), [CNTACT (3D)](/docs/en/keyword_documentation/c/cntact_3d/)
+[Inter- Object Data]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}): [Rigid Contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }}) Keywords: [CNTACT (2D)]({{ '/docs/en/keyword_documentation/c/cntact/' | relative_url }}), [CNTACT (3D)]({{ '/docs/en/keyword_documentation/c/cntact_3d/' | relative_url }})

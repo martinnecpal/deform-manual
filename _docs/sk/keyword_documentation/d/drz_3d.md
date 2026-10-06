@@ -43,4 +43,4 @@ Xdisp(i), Ydisp(i), or Zdisp(i) should specify the amount of shrink fit interfer
   
 RELATED TOPICS  
 ---  
-[Object Advanced nodal data](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) Keyword: [RZ(3D)](/docs/sk/keyword_documentation/r/rz_3d/)
+[Object Advanced nodal data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) Keyword: [RZ(3D)]({{ '/docs/sk/keyword_documentation/r/rz_3d/' | relative_url }})

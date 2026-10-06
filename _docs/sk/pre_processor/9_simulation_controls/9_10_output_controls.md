@@ -74,13 +74,13 @@ Možnosti normalizovaných teplotných zložiek uzlov.
   
 **Súvisiace témy:**
 
-[9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
-[9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   
-[9.3. Stopping Controls](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/)   
-[9.4. Remesh Criteria](/docs/sk/pre_processor/9_simulation_controls/9_4_remesh_criteria/)   
-[9.5. Solver Settings](/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/)   
-[9.6. Process Conditions](/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/)   
-[9.7. Advanced Options](/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/)   
-[9.8. Control Files](/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/)
+[9.1. Simulation type Settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }})   
+[9.2. Defining Step]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})   
+[9.3. Stopping Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})   
+[9.4. Remesh Criteria]({{ '/docs/sk/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }})   
+[9.5. Solver Settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }})   
+[9.6. Process Conditions]({{ '/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})   
+[9.7. Advanced Options]({{ '/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }})   
+[9.8. Control Files]({{ '/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }})
 
-[9.9. Thermomechanical variables](/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)
+[9.9. Thermomechanical variables]({{ '/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }})

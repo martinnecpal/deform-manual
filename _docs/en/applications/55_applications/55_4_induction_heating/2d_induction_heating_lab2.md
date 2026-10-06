@@ -105,7 +105,7 @@ In Material list Window, click on ![]({{ '/assets/icons/pre_icons/mo_import_file
 
   * Choose the Database Files(*.db *.DB) option.
 
-  * Navigate to the area where the FEM Induction ran ([Induction Heating Lab1](/docs/en/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab1/)) and choose the IH_Lab_2DFEM1a.DB database and select the first step.
+  * Navigate to the area where the FEM Induction ran ([Induction Heating Lab1]({{ '/docs/en/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab1/' | relative_url }})) and choose the IH_Lab_2DFEM1a.DB database and select the first step.
 
   * Load the **S45C-JAPAN** , the other phases will load automatically and then click .
 
@@ -145,7 +145,7 @@ Workpiece Induction BEM - Heating surface Boundary Condition page
 
 ## Top Coil
 
-In Top die page, click on ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and import the **Lower****Middle****Coil** object from **IH_Lab_2DFEM1a.DB** database ([Induction Heating Lab1](/docs/en/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab1/)) at **-1** step. Change the object name to **Top Coil** and keep object type as **Rigid** and object temperature as **20** °C (see Fig. 2DINDL2.14.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Boundary Condition page.
+In Top die page, click on ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and import the **Lower****Middle****Coil** object from **IH_Lab_2DFEM1a.DB** database ([Induction Heating Lab1]({{ '/docs/en/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab1/' | relative_url }})) at **-1** step. Change the object name to **Top Coil** and keep object type as **Rigid** and object temperature as **20** °C (see Fig. 2DINDL2.14.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Boundary Condition page.
 
 ![]({{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0014.jpg' | relative_url }})
 
@@ -180,7 +180,7 @@ Top Coil Properties page
 
 ## Bottom Coil
 
-In Bottom die page, click on ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and import the **Bottom Coil** object from **IH_Lab_2DFEM1a.DB** database ([Induction Heating Lab1](/docs/en/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab1/)) at **-1** step. Keep the object name to **Bottom Coil** , object type as **Rigid** and **object temperature** as **20****°C** (see Fig. 2DINDL2.17.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Boundary Condition page.
+In Bottom die page, click on ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and import the **Bottom Coil** object from **IH_Lab_2DFEM1a.DB** database ([Induction Heating Lab1]({{ '/docs/en/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab1/' | relative_url }})) at **-1** step. Keep the object name to **Bottom Coil** , object type as **Rigid** and **object temperature** as **20****°C** (see Fig. 2DINDL2.17.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Boundary Condition page.
 
 ![]({{ '/assets/images/applications/55_induction_heating/2d_induction_heating_lab2/image0017.jpg' | relative_url }})'
 
@@ -284,4 +284,4 @@ Temperature distribution at the last step
 
 Related Topics:
 
-[2D Induction Heating Lab 1](/docs/en/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab1/)
+[2D Induction Heating Lab 1]({{ '/docs/en/applications/55_applications/55_4_induction_heating/2d_induction_heating_lab1/' | relative_url }})

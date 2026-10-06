@@ -40,4 +40,4 @@ Applicable object types: [Rigid](../../pre_processor/11_general_object_data_defi
   
 RELATED TOPICS  
 ---  
-[Object Nodal Data](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) Keywords: [WMODEL](/docs/en/keyword_documentation/w/wmodel/)
+[Object Nodal Data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) Keywords: [WMODEL]({{ '/docs/en/keyword_documentation/w/wmodel/' | relative_url }})

@@ -99,7 +99,7 @@ The various modes of die failure are as follows:
 
   3. **Low Cycle Fatigue (LCF) failure****by cyclic, thermal and mechanical loading** -This occurs when stresses are below yield for the die material but over many cycles of tensile loading lead to failure in the die. The manner in which to reduce this is to reduce or eliminate the tensile stresses.
 
-  4. **Wear** \- The most preferred mode of failure for dies. The estimation of this is outside the scope of die stress analysis. (For more information on this topic, please refer to the [20.4. Inter-object Data Tool wear section](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/) )
+  4. **Wear** \- The most preferred mode of failure for dies. The estimation of this is outside the scope of die stress analysis. (For more information on this topic, please refer to the [20.4. Inter-object Data Tool wear section]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}) )
 
 ## Required Data
 
@@ -223,8 +223,8 @@ Comparison of idealized elastic stress-strain curves with ductile and brittle ma
 
 **Related Topics:**
 
-[Object Boundary Condition](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[Object Boundary Condition]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[2D Die Stress Study with Multiple Steps](/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/)
+[2D Die Stress Study with Multiple Steps]({{ '/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/' | relative_url }})
 
-[2D Die Stress Study with Single steps](/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/)
+[2D Die Stress Study with Single steps]({{ '/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/' | relative_url }})

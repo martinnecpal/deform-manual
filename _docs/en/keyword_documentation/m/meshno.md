@@ -29,4 +29,4 @@ For initial runs MeshNum = 1. The mesh number increases by one for each remeshin
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Main Controls](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/), [Mesh](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/)
+Simulation Controls: [Main Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}), [Mesh]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})

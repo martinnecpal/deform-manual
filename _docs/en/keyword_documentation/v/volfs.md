@@ -33,4 +33,4 @@ Example of implementation of VOLFN A: Austenite P: Pearlite B: Bainite M: Marten
   
 RELATED TOPICS  
 ---  
-[Inter-Material Data](/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/) Keywords: [VOLFS](), VOLFC
+[Inter-Material Data]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }}) Keywords: [VOLFS](), VOLFC

@@ -29,4 +29,4 @@ Applicable simulation types: Isothermal Deformation, Heat Transfer, Non-Isotherm
   
 RELATED TOPICS  
 ---  
-Keywords: [TMAX](/docs/sk/keyword_documentation/t/tmax/), [TNOW](/docs/sk/keyword_documentation/t/tnow/)
+Keywords: [TMAX]({{ '/docs/sk/keyword_documentation/t/tmax/' | relative_url }}), [TNOW]({{ '/docs/sk/keyword_documentation/t/tnow/' | relative_url }})

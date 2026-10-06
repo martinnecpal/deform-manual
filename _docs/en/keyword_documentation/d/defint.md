@@ -29,4 +29,4 @@ This is action keyword that executes data interpolation.
   
 RELATED TOPICS  
 ---  
-Text-based PRE, Remeshing, Shape optimization Keywords: [BRDEXT](/docs/en/keyword_documentation/b/brdext/), [DEFAMG](/docs/en/keyword_documentation/d/defamg/), [REMESH](/docs/en/keyword_documentation/r/remesh/)
+Text-based PRE, Remeshing, Shape optimization Keywords: [BRDEXT]({{ '/docs/en/keyword_documentation/b/brdext/' | relative_url }}), [DEFAMG]({{ '/docs/en/keyword_documentation/d/defamg/' | relative_url }}), [REMESH]({{ '/docs/en/keyword_documentation/r/remesh/' | relative_url }})

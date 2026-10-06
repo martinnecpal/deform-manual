@@ -42,4 +42,4 @@ This is action keyword usually written in DEF_MULTI.INI which is input file to M
   
 RELATED TOPICS  
 ---  
-[2D to 3D model conversion](/docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/), M23.EXE Keywords: [ACTOUT](/docs/en/keyword_documentation/a/actout/), [GEOSEC](/docs/en/keyword_documentation/g/geosec/), [MSHSEC](/docs/en/keyword_documentation/m/mshsec/), [CRDSYS](/docs/en/keyword_documentation/c/crdsys/), [CNVT3D](/docs/en/keyword_documentation/c/cnvt3d/)
+[2D to 3D model conversion]({{ '/docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/' | relative_url }}), M23.EXE Keywords: [ACTOUT]({{ '/docs/en/keyword_documentation/a/actout/' | relative_url }}), [GEOSEC]({{ '/docs/en/keyword_documentation/g/geosec/' | relative_url }}), [MSHSEC]({{ '/docs/en/keyword_documentation/m/mshsec/' | relative_url }}), [CRDSYS]({{ '/docs/en/keyword_documentation/c/crdsys/' | relative_url }}), [CNVT3D]({{ '/docs/en/keyword_documentation/c/cnvt3d/' | relative_url }})

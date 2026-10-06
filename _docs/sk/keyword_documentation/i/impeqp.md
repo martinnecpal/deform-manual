@@ -30,4 +30,4 @@ This keyword is intended as a convenient way to load movement for an object. App
   
 RELATED TOPICS  
 ---  
-[Movement Controls](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/) Keywords: [MOVCTL (2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm),[ANGMOV (2D)](/docs/sk/keyword_documentation/a/angmov/), [ANGMOV(3D)](../a/angmov\(3d\).htm) , [ANGMVY(2D)](/docs/sk/keyword_documentation/a/angmvy/)
+[Movement Controls]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}) Keywords: [MOVCTL (2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm),[ANGMOV (2D)]({{ '/docs/sk/keyword_documentation/a/angmov/' | relative_url }}), [ANGMOV(3D)](../a/angmov\(3d\).htm) , [ANGMVY(2D)]({{ '/docs/sk/keyword_documentation/a/angmvy/' | relative_url }})

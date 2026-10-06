@@ -70,4 +70,4 @@ IPSNRG specifies the interface surface energy.
   
 RELATED TOPICS  
 ---  
-Related keywords: [GBMOBI](/docs/en/keyword_documentation/g/gbmobi/), [GBENGY](/docs/en/keyword_documentation/g/gbengy/), [COARSE](/docs/en/keyword_documentation/c/coarse/)
+Related keywords: [GBMOBI]({{ '/docs/en/keyword_documentation/g/gbmobi/' | relative_url }}), [GBENGY]({{ '/docs/en/keyword_documentation/g/gbengy/' | relative_url }}), [COARSE]({{ '/docs/en/keyword_documentation/c/coarse/' | relative_url }})

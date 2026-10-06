@@ -80,7 +80,7 @@ The workpiece mesh has the largest influence of all simulation settings on simul
 
 In general, features and defects which are of the same order of size or smaller than the element size will not be captured.
 
-DEFORM® offers two options for [mesh](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/) description:
+DEFORM® offers two options for [mesh]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }}) description:
 
 **Absolute mesh** allows the user to specify mesh resolution. The total number of mesh elements will be determined by the system, but resolution will remain constant.
 

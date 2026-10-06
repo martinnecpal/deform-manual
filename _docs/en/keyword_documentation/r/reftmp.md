@@ -30,4 +30,4 @@ The object reference temperature is used to calculate the material thermal expan
   
 RELATED TOPICS  
 ---  
-[Material Data](/docs/en/pre_processor/10_material_data/10_material_data/): [Elastic](/docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/) Data, [Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/): [Thermal](/docs/en/pre_processor/16_object_properties/16_2_thermal_properties/) Keywords: EXPAND, TMPLMT, OTPRNG
+[Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}): [Elastic]({{ '/docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }}) Data, [Object Properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}): [Thermal]({{ '/docs/en/pre_processor/16_object_properties/16_2_thermal_properties/' | relative_url }}) Keywords: EXPAND, TMPLMT, OTPRNG

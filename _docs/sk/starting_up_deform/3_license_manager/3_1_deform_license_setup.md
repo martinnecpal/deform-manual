@@ -374,8 +374,8 @@ Výzva na zadanie mena používateľa a hesla na spustenie ďalších používat
 
 **Súvisiace témy:**
 
-[3.2. License Monitoring](/docs/sk/starting_up_deform/3_license_manager/3_2_license_monitoring/)
+[3.2. License Monitoring]({{ '/docs/sk/starting_up_deform/3_license_manager/3_2_license_monitoring/' | relative_url }})
 
-[3.3. Services Monitoring](/docs/sk/starting_up_deform/3_license_manager/3_3_services_monitoring/)
+[3.3. Services Monitoring]({{ '/docs/sk/starting_up_deform/3_license_manager/3_3_services_monitoring/' | relative_url }})
 
-[3.4. Trouble Shooting License Issues](/docs/sk/starting_up_deform/3_license_manager/3_4_trouble_shooting_license_issues/)
+[3.4. Trouble Shooting License Issues]({{ '/docs/sk/starting_up_deform/3_license_manager/3_4_trouble_shooting_license_issues/' | relative_url }})

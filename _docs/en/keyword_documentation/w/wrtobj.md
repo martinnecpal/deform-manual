@@ -29,4 +29,4 @@ WRTOBJ writes out object information for a specified object. Bye specifying NewO
   
 RELATED TOPICS  
 ---  
-Keywords: [OBJNAM](/docs/en/keyword_documentation/o/objnam/)
+Keywords: [OBJNAM]({{ '/docs/en/keyword_documentation/o/objnam/' | relative_url }})

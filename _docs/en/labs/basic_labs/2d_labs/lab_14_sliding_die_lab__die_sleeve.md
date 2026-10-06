@@ -162,7 +162,7 @@ Bottom Die Geometry page
 
 ### Assign Movement to Bottom Die
 
-Select Movement type as **Sliding Di****e**. Define sliding die movement direction as**-Y** direction with constant **stiffness****500** klb/in, **Preload****2500** klb, **Max. disp**. **2.5** in and select other end of spring as**Fixed** as shown in Fig. L14.15. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until object 4 page. For more information on Sliding Die Movement Controls see Section [15.7. Sliding Die](/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/).
+Select Movement type as **Sliding Di****e**. Define sliding die movement direction as**-Y** direction with constant **stiffness****500** klb/in, **Preload****2500** klb, **Max. disp**. **2.5** in and select other end of spring as**Fixed** as shown in Fig. L14.15. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until object 4 page. For more information on Sliding Die Movement Controls see Section [15.7. Sliding Die]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_14_sliding_die_lab__die_sleeve/2d_mobl14_image0015.jpg' | relative_url }})
 

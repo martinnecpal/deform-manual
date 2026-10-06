@@ -46,4 +46,4 @@ Applicable object types: Elastoplastic
   
 RELATED TOPICS  
 ---  
-Keywords: [BURGRS](/docs/en/keyword_documentation/b/burgrs/), [NDISFM](/docs/en/keyword_documentation/n/ndisfm/), [GBMOBI](/docs/en/keyword_documentation/g/gbmobi/), [RECVRY](/docs/en/keyword_documentation/r/recvry/)
+Keywords: [BURGRS]({{ '/docs/en/keyword_documentation/b/burgrs/' | relative_url }}), [NDISFM]({{ '/docs/en/keyword_documentation/n/ndisfm/' | relative_url }}), [GBMOBI]({{ '/docs/en/keyword_documentation/g/gbmobi/' | relative_url }}), [RECVRY]({{ '/docs/en/keyword_documentation/r/recvry/' | relative_url }})

@@ -29,4 +29,4 @@ INICTC is an action keyword. This contact conditions are initialized when the ke
   
 RELATED TOPICS  
 ---  
-Inter-Object Conditions Keywords: [GENCTC (2D3D)](/docs/sk/keyword_documentation/g/genctc/), [CNTACT (2D)](/docs/sk/keyword_documentation/c/cntact/), [CNTACT (3D)](/docs/sk/keyword_documentation/c/cntact_3d/)
+Inter-Object Conditions Keywords: [GENCTC (2D3D)]({{ '/docs/sk/keyword_documentation/g/genctc/' | relative_url }}), [CNTACT (2D)]({{ '/docs/sk/keyword_documentation/c/cntact/' | relative_url }}), [CNTACT (3D)]({{ '/docs/sk/keyword_documentation/c/cntact_3d/' | relative_url }})

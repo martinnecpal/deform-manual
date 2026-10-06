@@ -57,7 +57,7 @@ Added 2D Heat Transfer operation into operation editor
 
 ## Geometry type
 
-In 2D Heat transfer operation currently four types of geometry models ([GEOTYP](/docs/en/keyword_documentation/g/geotyp/)) can be setup as shown in Fig. 35.1.2.
+In 2D Heat transfer operation currently four types of geometry models ([GEOTYP]({{ '/docs/en/keyword_documentation/g/geotyp/' | relative_url }})) can be setup as shown in Fig. 35.1.2.
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image002.jpg' | relative_url }})
 
@@ -91,7 +91,7 @@ There are four types of heat transfer operations available (See Fig. 35.1.3.),
   4. **Dwell on die** – Heat loss while dwelling on die after the deformation is completed
 
   
-For more details about these heating types are described in [35\. Introduction to Heat Transfer operation](/docs/en/operation_templates/35_heat_transfer/35_introduction_to_heat_transfer_operations/), refer Heating Types.
+For more details about these heating types are described in [35\. Introduction to Heat Transfer operation]({{ '/docs/en/operation_templates/35_heat_transfer/35_introduction_to_heat_transfer_operations/' | relative_url }}), refer Heating Types.
 
 ## Process condition
 
@@ -117,7 +117,7 @@ Guided mode Simulation controls
 
 ## Material List
 
-Materials required for the process can be loaded either from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from DB or Key file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) as shown in Fig. 35.1.7. User can also add new material and define required data from respective tab by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button. For more information on Material data definition please refer [10\. Material Data.](/docs/en/pre_processor/10_material_data/10_material_data/)
+Materials required for the process can be loaded either from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from DB or Key file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) as shown in Fig. 35.1.7. User can also add new material and define required data from respective tab by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button. For more information on Material data definition please refer [10\. Material Data.]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image007.jpg' | relative_url }})
 
@@ -143,7 +143,7 @@ Workpiece window
 
 User can define new geometry using primitives and also can import the geometry from other file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), user can also import geometries in other formats such as .DXF and .IGES. Primitives are provided for easy definition of basic geometry shapes. (See Fig. 35.1.10.) 
 
-For more information on creating and editing 2D geometries please refer to [12.1. 2D Geometry Data Defining.](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/)
+For more information on creating and editing 2D geometries please refer to [12.1. 2D Geometry Data Defining.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image009.jpg' | relative_url }})
 
@@ -153,7 +153,7 @@ Geometry definition window
 
 Mesh Page provides options to mesh the object. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides option to set number of elements only using slider bar to generate mesh. If the object geometry is complex or user would like to control the mesh density over the object, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like weighing factors, Mesh windows and user defined mode to control the mesh density. Meshing options available in expert mode and Guided more are shown in Fig. 35.1.12. and Fig. 35.1.11.
 
-For more detail description of these options, please refer [131\. 2D Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+For more detail description of these options, please refer [131\. 2D Mesh Generation.]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
   
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image019.jpg' | relative_url }})
@@ -181,16 +181,16 @@ In Boundary conditions page, user can assign various boundary constraints for an
 Boundary conditions window
 
   
-For more information about these BCC's please refer [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+For more information about these BCC's please refer [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ### Movement Controls
 
 Movement controls are applied to rigid objects when deformation is turned on in simulation control and movement control is not used for Heat transfer operation.  
-For more information about these movement controls please refer [15\. Movement Controls Settings.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+For more information about these movement controls please refer [15\. Movement Controls Settings.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
 ### Property
 
-Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See [Fig. 35.1.15.](35_introduction_to_heat_transfer_operations.htm#Fig_35_1_14_Boundary_conditions_window)) For more information, please refer [16\. Object properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
+Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See [Fig. 35.1.15.](35_introduction_to_heat_transfer_operations.htm#Fig_35_1_14_Boundary_conditions_window)) For more information, please refer [16\. Object properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image010.jpg' | relative_url }})
 
@@ -199,7 +199,7 @@ Property window
 ### Initialize
 
 In Initialize window, few state variables that are commonly used such as Temperature, strain, stress, damage, velocity, Displacement, etc.., are made available for initialization.  
-User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 35.1.16. shows the various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows (see Fig. 35.1.17. and Fig. 35.1.18. ). For more information on how to initialize state variables in Node and Element windows, please refer [17.1 Node data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [17.2. Element data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 35.1.16. shows the various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows (see Fig. 35.1.17. and Fig. 35.1.18. ). For more information on how to initialize state variables in Node and Element windows, please refer [17.1 Node data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) and [17.2. Element data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image028.jpg' | relative_url }})
 
@@ -229,7 +229,7 @@ By clicking on this button, system automatically Positions the Objects with resp
 
 **Positioning Objects**![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 35.1.20. For more information about these options, please refer [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 35.1.20. For more information about these options, please refer [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image029.jpg' | relative_url }})
 
@@ -252,7 +252,7 @@ The purpose of inter-object relations is to define how the different objects in 
 
 **User** : By default, user radio button will be selected for Heat transfer operation. User can add relationships by clicking on Add button as shown in Fig. 35.1.22.
 
-For more information please refer, [20\. Inter-Object Relations.](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+For more information please refer, [20\. Inter-Object Relations.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image012.jpg' | relative_url }})
 
@@ -260,7 +260,7 @@ Inter-Object definition window
 
 ## Stopping Controls
 
-The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on maximum number of time steps simulated or the maximum process time. A simulation will be stopped when the condition of any of the stopping parameters is met. For more information, please refer [Stopping Controls](../33_forming/33_2_3d_forming_setup.htm#33_2_7_Stopping_Controls) in [3D Forming setup](/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/).
+The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on maximum number of time steps simulated or the maximum process time. A simulation will be stopped when the condition of any of the stopping parameters is met. For more information, please refer [Stopping Controls](../33_forming/33_2_3d_forming_setup.htm#33_2_7_Stopping_Controls) in [3D Forming setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}).
 
 ## Step controls
 
@@ -283,9 +283,9 @@ Guided Mode Step Definition window
 Options defined under Step definition page control the numerical behavior of the solution. Expert mode simulation control Main controls details with specifying the simulation title, unit system, geometry type, etc.
 
   
-[Step](/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/) and [stopping controls](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/) are used to specify the time step, the total number of steps and the criteria used to terminate the simulation. [Processing conditions](/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/) like the environment temperature, convection coefficient can be specified here.
+[Step]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}) and [stopping controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}) are used to specify the time step, the total number of steps and the criteria used to terminate the simulation. [Processing conditions]({{ '/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }}) like the environment temperature, convection coefficient can be specified here.
 
-For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ## Generate DB
 

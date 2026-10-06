@@ -5,30 +5,30 @@ title: "B Keywords"
 
 # B Keywords
 
-[BCCANG (2D3D)](/docs/en/keyword_documentation/b/bccang/)
+[BCCANG (2D3D)]({{ '/docs/en/keyword_documentation/b/bccang/' | relative_url }})
 
-[BCCCRB (2D)](/docs/en/keyword_documentation/b/bcccrb/)
+[BCCCRB (2D)]({{ '/docs/en/keyword_documentation/b/bcccrb/' | relative_url }})
 
-[BCCCRB (3D)](/docs/en/keyword_documentation/b/bcccrb_3d/)
+[BCCCRB (3D)]({{ '/docs/en/keyword_documentation/b/bcccrb_3d/' | relative_url }})
 
-[BCCDEF (2D)](/docs/en/keyword_documentation/b/bccdef/)
+[BCCDEF (2D)]({{ '/docs/en/keyword_documentation/b/bccdef/' | relative_url }})
 
-[BCCDEF (3D)](/docs/en/keyword_documentation/b/bccdef_3d/)
+[BCCDEF (3D)]({{ '/docs/en/keyword_documentation/b/bccdef_3d/' | relative_url }})
 
-[BCCDFN (2D)](/docs/en/keyword_documentation/b/bccdfn/)
+[BCCDFN (2D)]({{ '/docs/en/keyword_documentation/b/bccdfn/' | relative_url }})
 
-[BCCDFN (3D)](/docs/en/keyword_documentation/b/bccdfn_3d/)
+[BCCDFN (3D)]({{ '/docs/en/keyword_documentation/b/bccdfn_3d/' | relative_url }})
 
-[BCCFNC (2D3D)](/docs/en/keyword_documentation/b/bccfnc/)
+[BCCFNC (2D3D)]({{ '/docs/en/keyword_documentation/b/bccfnc/' | relative_url }})
 
-[BCCRHT (2D3D)](/docs/en/keyword_documentation/b/bccrht/)
+[BCCRHT (2D3D)]({{ '/docs/en/keyword_documentation/b/bccrht/' | relative_url }})
 
-[BCCTFN (2D3D)](/docs/en/keyword_documentation/b/bcctfn/)
+[BCCTFN (2D3D)]({{ '/docs/en/keyword_documentation/b/bcctfn/' | relative_url }})
 
-[BCCTMP (2D3D)](/docs/en/keyword_documentation/b/bcctmp/)
+[BCCTMP (2D3D)]({{ '/docs/en/keyword_documentation/b/bcctmp/' | relative_url }})
 
-[BLZMAN (2D3D)](/docs/en/keyword_documentation/b/blzman/)
+[BLZMAN (2D3D)]({{ '/docs/en/keyword_documentation/b/blzman/' | relative_url }})
 
-[BRDEXT (2D3D)](/docs/en/keyword_documentation/b/brdext/)
+[BRDEXT (2D3D)]({{ '/docs/en/keyword_documentation/b/brdext/' | relative_url }})
 
-[BURGRS (2D3D)](/docs/en/keyword_documentation/b/burgrs/)
+[BURGRS (2D3D)]({{ '/docs/en/keyword_documentation/b/burgrs/' | relative_url }})

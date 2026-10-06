@@ -406,7 +406,7 @@ Pridať materiál z okna Zoznam materiálov
 
 **Zloženie zmesi**
 
-Materiály typu „zmes“ ([MSTMTR](/docs/en/keyword_documentation/m/mstmtr/)) sa používajú v prípade, že sa v simulácii má modelovať fázová premena. Premenlivý materiál sa modeluje ako „zmes“ fáz, z ktorých sa skladá. Napríklad uhlíková oceľ sa môže modelovať ako zmes austenitu, perlitov, bainitu a martenzitu. Ak je definovaný zmesový materiál, mali by sa definovať pravidlá premeny, ktoré riadia premenu jednej fázy na druhú. (Pozri obr. 29.1.27.)
+Materiály typu „zmes“ ([MSTMTR]({{ '/docs/en/keyword_documentation/m/mstmtr/' | relative_url }})) sa používajú v prípade, že sa v simulácii má modelovať fázová premena. Premenlivý materiál sa modeluje ako „zmes“ fáz, z ktorých sa skladá. Napríklad uhlíková oceľ sa môže modelovať ako zmes austenitu, perlitov, bainitu a martenzitu. Ak je definovaný zmesový materiál, mali by sa definovať pravidlá premeny, ktoré riadia premenu jednej fázy na druhú. (Pozri obr. 29.1.27.)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image018.jpg' | relative_url }})
 
@@ -477,7 +477,7 @@ Máme tri rôzne typy geometrických primitív pre polotovar: kruh, osemuholník
 
 Okno geometrických primitív
 
-Ďalšie informácie o možnostiach geometrie nájdete v [12.3. 3D Geometry Data Definition](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Ďalšie informácie o možnostiach geometrie nájdete v [12.3. 3D Geometry Data Definition]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 **Sieťovina**
 
@@ -525,11 +525,11 @@ Na nastavenie parametrov siete, ako sú veľkosť, tvar, hustota, typ prvkov at�
 
 Okno na generovanie siete v režime pre pokročilých
 
-Ďalšie informácie o možnostiach generovania sietí v expertnom režime nájdete v dokumentácii k [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) a [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
+Ďalšie informácie o možnostiach generovania sietí v expertnom režime nájdete v dokumentácii k [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}) a [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }})
 
 **Materiál**
 
-Na obr. 29.1.38. je zobrazené okno s materiálmi. Používateľ môže priradiť požadovaný materiál zo zoznamu alebo ho importovať zo súboru či knižnice. Používateľ môže tiež pridať nový materiál. Ďalšie informácie o tom, ako priradiť materiál, nájdete v kapitole [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/).
+Na obr. 29.1.38. je zobrazené okno s materiálmi. Používateľ môže priradiť požadovaný materiál zo zoznamu alebo ho importovať zo súboru či knižnice. Používateľ môže tiež pridať nový materiál. Ďalšie informácie o tom, ako priradiť materiál, nájdete v kapitole [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image029.jpg' | relative_url }})
 
@@ -551,12 +551,12 @@ V okne „Okrajové podmienky“ môže používateľ objektu priradiť rôzne o
 
 Okno „Okrajové podmienky“
 
-BCC sa delia na deformčné, tepelné, difúzne a ohrievacie. Ďalšie informácie o týchto BCC nájdete v dokumente [14\. Boundary Conditions.](/docs/en/pre_processor/10_material_data/10_material_data/).
+BCC sa delia na deformčné, tepelné, difúzne a ohrievacie. Ďalšie informácie o týchto BCC nájdete v dokumente [14\. Boundary Conditions.]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 **Nehnuteľnosť**
 
   
-V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 29.1.41.) Ďalšie informácie o týchto možnostiach nájdete v [19\. Object properties.](/docs/en/pre_processor/10_material_data/10_material_data/).
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 29.1.41.) Ďalšie informácie o týchto možnostiach nájdete v [19\. Object properties.]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image032.jpg' | relative_url }})
 
@@ -586,21 +586,21 @@ Na obr. 29.1.44. je znázornený geometrický primitív „Die“.
 
 Okno „Top Die Geometry Primitive“
 
-Ďalšie informácie o možnostiach geometrie nájdete v [12\. 3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Ďalšie informácie o možnostiach geometrie nájdete v [12\. 3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 **Sieťovina**
 
-Možnosti vytvárania sietí pre lisovacie formy sú podobné ako v prípade polotovaru; ďalšie informácie o vytváraní sietí nájdete v [3.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
+Možnosti vytvárania sietí pre lisovacie formy sú podobné ako v prípade polotovaru; ďalšie informácie o vytváraní sietí nájdete v [3.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }})
 
 **Materiál**
 
-Priradenie materiálu k lisovacím formám prebieha podobne ako v prípade sochorov. Používateľ môže priradiť požadovaný materiál zo zoznamu alebo ho importovať zo súboru či knižnice. Používateľ môže tiež pridať nový materiál. Ďalšie informácie o tom, ako priradiť materiál, nájdete v kapitole [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/).
+Priradenie materiálu k lisovacím formám prebieha podobne ako v prípade sochorov. Používateľ môže priradiť požadovaný materiál zo zoznamu alebo ho importovať zo súboru či knižnice. Používateľ môže tiež pridať nový materiál. Ďalšie informácie o tom, ako priradiť materiál, nájdete v kapitole [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 Vlastnosti materiálov, ktoré musí používateľ špecifikovať, závisia od typov materiálov, ktoré používateľ využíva v simulácii. V tejto časti sú popísané údaje o materiáloch, ktoré je možné špecifikovať pre simuláciu DEFORM. Ďalšie informácie nájdete v časti „Materiál“ v nastaveniach programu Forming 3D.
 
 **Ovládanie pohybu**
 
-V závislosti od požiadaviek procesu a použitého zariadenia môže používateľ definovať nastavenia riadenia pohybu pre lisovacie formy. Na rýchle nastavenie coggingu sa použijú ovládacie prvky rýchlosti a mechanického pohybu lisu, ako je znázornené na obr. 29.1.45. Ak chce používateľ definovať iné ovládacie prvky pohybu ako tieto, môže použiť pokročilé rádio tlačidlo kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_movement_button.jpg' | relative_url }}); k týmto možnostiam sa dá dostať aj prepnutím do režimu Expert, ako je znázornené na obr. 29.1.46. Ďalšie informácie o týchto ovládacích prvkoch pohybu nájdete v [10\. Movement Controls Definition.](/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/)
+V závislosti od požiadaviek procesu a použitého zariadenia môže používateľ definovať nastavenia riadenia pohybu pre lisovacie formy. Na rýchle nastavenie coggingu sa použijú ovládacie prvky rýchlosti a mechanického pohybu lisu, ako je znázornené na obr. 29.1.45. Ak chce používateľ definovať iné ovládacie prvky pohybu ako tieto, môže použiť pokročilé rádio tlačidlo kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_movement_button.jpg' | relative_url }}); k týmto možnostiam sa dá dostať aj prepnutím do režimu Expert, ako je znázornené na obr. 29.1.46. Ďalšie informácie o týchto ovládacích prvkoch pohybu nájdete v [10\. Movement Controls Definition.]({{ '/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image036.jpg' | relative_url }})
 
@@ -684,7 +684,7 @@ Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na s
 
   * **Umiestňovanie objektov ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})**
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestňovania, ako napríklad ťahanie, posun, kolízia, zrkadlenie a otáčanie, ako je znázornené na obr. 29.1.54. Ďalšie informácie o týchto možnostiach nájdete v [16.Object Positioning.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestňovania, ako napríklad ťahanie, posun, kolízia, zrkadlenie a otáčanie, ako je znázornené na obr. 29.1.54. Ďalšie informácie o týchto možnostiach nájdete v [16.Object Positioning.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image042.jpg' | relative_url }})
 
@@ -777,7 +777,7 @@ Používateľ má možnosť zvoliť si, či sa má použiť implicitný alebo ex
 
 **Implicitné:**
 
-Použitie RSE: Funkciu RSE je možné aktivovať zaškrtnutím tohto políčka. Ďalšie informácie o RSE nájdete v časti RSE[MO] v dokumente [16.Object properties.](/docs/en/pre_processor/16_object_properties/16_object_properties/).
+Použitie RSE: Funkciu RSE je možné aktivovať zaškrtnutím tohto políčka. Ďalšie informácie o RSE nájdete v časti RSE[MO] v dokumente [16.Object properties.]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 **Medzná rýchlosť deformácie**: Medzná rýchlosť deformácie (LMTSTR) definuje medznú hodnotu efektívnej rýchlosti deformácie, pod ktorou sa plastický alebo porézny materiál považuje za tuhý a správa sa ako materiál s newtonovskými vlastnosťami.
 
@@ -787,7 +787,7 @@ Použitie RSE: Funkciu RSE je možné aktivovať zaškrtnutím tohto políčka. 
 **Ovládacie prvky simulácie v režime Expert**
 
   
-Na obr. 29.1.58 sú zobrazené ovládacie prvky simulácie v režime Expert. Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+Na obr. 29.1.58 sú zobrazené ovládacie prvky simulácie v režime Expert. Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image047.jpg' | relative_url }})
 
@@ -845,12 +845,12 @@ Rozloženie teploty v sochách a maticiach
 
 **Súvisiace témy:**
 
-[Cogging Lab](/docs/en/labs/cogging_labs/cogging_lab1/)
+[Cogging Lab]({{ '/docs/en/labs/cogging_labs/cogging_lab1/' | relative_url }})
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Proces Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Proces Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[29\. Introduction to Cogging](/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/)
+[29\. Introduction to Cogging]({{ '/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/' | relative_url }})

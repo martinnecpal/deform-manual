@@ -23,6 +23,6 @@ only the data related to machining is defined in the template, while the system 
 
 **Related Topics:**
 
-[40.1. 2D Machining Distortion](/docs/en/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/)
+[40.1. 2D Machining Distortion]({{ '/docs/en/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/' | relative_url }})
 
-[40.2. 3D Machining Distortion](/docs/en/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/)
+[40.2. 3D Machining Distortion]({{ '/docs/en/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/' | relative_url }})

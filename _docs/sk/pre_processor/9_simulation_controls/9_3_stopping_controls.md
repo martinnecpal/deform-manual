@@ -35,7 +35,7 @@ title: "9.3. Ovládacie prvky na zastavenie"
 
 9.3.15. ALE v ustálenom stave (ALECON)
 
-Parametre ukončenia určujú čas priebehu, po ktorom sa simulácia ukončí. Simuláciu je možné ukončiť na základe maximálneho počtu simulovaných časových krokov, maximálneho kumulovaného elementárneho deformácie, maximálneho času priebehu, maximálneho zdvihu, minimálnej rýchlosti alebo maximálneho zaťaženia primárneho objektu. Simulácia sa zastaví, keď je splnená podmienka ktoréhokoľvek z parametrov ukončenia. Ak je niektorému z parametrov ukončenia okrem počtu krokov ([NSTEP](/docs/sk/keyword_documentation/n/nstep/)) priradená nulová hodnota, parameter sa nepoužije. Ak nie sú špecifikované žiadne iné parametre ukončenia, simulácia bude prebiehať, kým nevyčerpá všetky špecifikované kroky. (Pozri obr. 9.3.1. a  obr. 9.3.2.)
+Parametre ukončenia určujú čas priebehu, po ktorom sa simulácia ukončí. Simuláciu je možné ukončiť na základe maximálneho počtu simulovaných časových krokov, maximálneho kumulovaného elementárneho deformácie, maximálneho času priebehu, maximálneho zdvihu, minimálnej rýchlosti alebo maximálneho zaťaženia primárneho objektu. Simulácia sa zastaví, keď je splnená podmienka ktoréhokoľvek z parametrov ukončenia. Ak je niektorému z parametrov ukončenia okrem počtu krokov ([NSTEP]({{ '/docs/sk/keyword_documentation/n/nstep/' | relative_url }})) priradená nulová hodnota, parameter sa nepoužije. Ak nie sú špecifikované žiadne iné parametre ukončenia, simulácia bude prebiehať, kým nevyčerpá všetky špecifikované kroky. (Pozri obr. 9.3.1. a  obr. 9.3.2.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image001.jpg' | relative_url }})
 
@@ -47,25 +47,25 @@ Ovládacie prvky na zastavenie v 3D v režime s navádzaním
 
 ## Dĺžka spracovania (TMAX) [2D, 3D]
 
-Ukončí simuláciu, keď celková dĺžka procesu ([TMAX](/docs/sk/keyword_documentation/t/tmax/)) dosiahne zadanú hodnotu.
+Ukončí simuláciu, keď celková dĺžka procesu ([TMAX]({{ '/docs/sk/keyword_documentation/t/tmax/' | relative_url }})) dosiahne zadanú hodnotu.
 
 ## Posun primárneho výlisku (SMAX) [2D, 3D]
 
-Simulácia sa ukončí, keď celkový posun ([SMAX](/docs/sk/keyword_documentation/s/smax/)) hlavnej matrice dosiahne zadanú hodnotu. Hodnota zdvihu pre objekt sa zadáva na karte Pohyb objektu.
+Simulácia sa ukončí, keď celkový posun ([SMAX]({{ '/docs/sk/keyword_documentation/s/smax/' | relative_url }})) hlavnej matrice dosiahne zadanú hodnotu. Hodnota zdvihu pre objekt sa zadáva na karte Pohyb objektu.
 
 ## Minimálna rýchlosť primárnej matrice (VMIN) [2D, 3D]
 
-Simuláciu ukončí, keď zložka rýchlosti primárnej matice v smere X, Y alebo Z dosiahne príslušné hodnoty X, Y alebo Z parametra [VMIN](/docs/sk/keyword_documentation/v/vmin/).
+Simuláciu ukončí, keď zložka rýchlosti primárnej matice v smere X, Y alebo Z dosiahne príslušné hodnoty X, Y alebo Z parametra [VMIN]({{ '/docs/sk/keyword_documentation/v/vmin/' | relative_url }}).
 
-Tento parameter sa zvyčajne používa v prípadoch, keď je pohyb hlavného objektu riadený zaťažením, alebo keď sa pri hydraulickom lise uplatňuje parameter obmedzenia výkonu ([SPDLMT](/docs/sk/keyword_documentation/s/spdlmt/)).
+Tento parameter sa zvyčajne používa v prípadoch, keď je pohyb hlavného objektu riadený zaťažením, alebo keď sa pri hydraulickom lise uplatňuje parameter obmedzenia výkonu ([SPDLMT]({{ '/docs/sk/keyword_documentation/s/spdlmt/' | relative_url }})).
 
 ## Maximálne zaťaženie primárneho výlisku (LMAX) [2D, 3D]
 
-Ukončí simuláciu, keď zložka zaťaženia X, Y alebo Z primárneho telesa dosiahne príslušnú hodnotu X, Y alebo Z nastavenú v [LMAX](/docs/sk/keyword_documentation/l/lmax/). Zvyčajne sa používa v prípadoch, keď je riadenie pohybu primárneho objektu založené na rýchlosti alebo je určené používateľom.
+Ukončí simuláciu, keď zložka zaťaženia X, Y alebo Z primárneho telesa dosiahne príslušnú hodnotu X, Y alebo Z nastavenú v [LMAX]({{ '/docs/sk/keyword_documentation/l/lmax/' | relative_url }}). Zvyčajne sa používa v prípadoch, keď je riadenie pohybu primárneho objektu založené na rýchlosti alebo je určené používateľom.
 
 ## Maximálne napätie v ktoromkoľvek prvku (EMAX) [2D, 3D]
 
-Táto voľba ([EMAX](/docs/sk/keyword_documentation/e/emax/)) ukončí simuláciu, keď kumulované deformácie ktoréhokoľvek prvku dosiahnu zadanú hodnotu.
+Táto voľba ([EMAX]({{ '/docs/sk/keyword_documentation/e/emax/' | relative_url }})) ukončí simuláciu, keď kumulované deformácie ktoréhokoľvek prvku dosiahnu zadanú hodnotu.
 
 ## Meranie priemeru prsteňa [3D]
 
@@ -124,7 +124,7 @@ Okno lietadla
 
 ## Vzdialenosť medzi formami [2D, 3D]
 
-Ukončí simuláciu, keď vzdialenosť medzi referenčnými bodmi ([MDSOBJ](/docs/sk/keyword_documentation/m/mdsobj/)) na dvoch objektoch dosiahne zadanú hodnotu. Vzdialenosť zastavenia je potrebné nastaviť v okne „Die Distance“ pri definovaní referenčného bodu ([REFPOS](/docs/sk/keyword_documentation/r/refpos/)). 
+Ukončí simuláciu, keď vzdialenosť medzi referenčnými bodmi ([MDSOBJ]({{ '/docs/sk/keyword_documentation/m/mdsobj/' | relative_url }})) na dvoch objektoch dosiahne zadanú hodnotu. Vzdialenosť zastavenia je potrebné nastaviť v okne „Die Distance“ pri definovaní referenčného bodu ([REFPOS]({{ '/docs/sk/keyword_documentation/r/refpos/' | relative_url }})). 
 
 Od verzie V12.0.2 platí, že v prípade referenčných objektov, ak sú definované referenčné body (v vlastnostiach objektu), môžeme sledovať stav ![]({{ '/assets/icons/pre_icons/mo_dis_bw_dies_check_mark_icon.jpg' | relative_url }}) a v prípade referenčného objektu, ak nie je definovaný referenčný objekt, môžeme sledovať stav ![]({{ '/assets/icons/pre_icons/mo_dis_bw_dies_question_mark_icon.jpg' | relative_url }}) na karte Die-Distance, ako je znázornené na obr. 9.3.5.
 
@@ -229,7 +229,7 @@ Regulácia zastavenia na základe teploty
 
 ## ALE v ustálenom stave (ALECON) [3D]
 
-V programe DEFORM V12 môže používateľ definovať kritériá zastavenia pre ustálený stav ALE ([ALECON](/docs/sk/keyword_documentation/a/alecon/)) pri valcovom procese ALE na karte „Ovládanie zastavenia – Ovládanie zastavenia v ustálenom stave ALE“. (Pozri obr. 9.3.10.)
+V programe DEFORM V12 môže používateľ definovať kritériá zastavenia pre ustálený stav ALE ([ALECON]({{ '/docs/sk/keyword_documentation/a/alecon/' | relative_url }})) pri valcovom procese ALE na karte „Ovládanie zastavenia – Ovládanie zastavenia v ustálenom stave ALE“. (Pozri obr. 9.3.10.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_3_stopping_controls/9_3_image006.jpg' | relative_url }})
 
@@ -237,11 +237,11 @@ ALE Kritériá zastavenia v ustálenom stave
 
 **Súvisiace témy:**
 
-[9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
-[9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   
-[9.4. Remesh Criteria](/docs/sk/pre_processor/9_simulation_controls/9_4_remesh_criteria/)   
-[9.5. Solver Settings](/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/)   
-[9.6. Process Conditions](/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/)   
-[9.7. Advanced Options](/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/)   
-[9.8. Control Files](/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/)   
-[9.9. Thermomechanical variables](/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)
+[9.1. Simulation type Settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }})   
+[9.2. Defining Step]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})   
+[9.4. Remesh Criteria]({{ '/docs/sk/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }})   
+[9.5. Solver Settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }})   
+[9.6. Process Conditions]({{ '/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})   
+[9.7. Advanced Options]({{ '/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }})   
+[9.8. Control Files]({{ '/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }})   
+[9.9. Thermomechanical variables]({{ '/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }})

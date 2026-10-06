@@ -32,4 +32,4 @@ Ftype |  = **0** Constant = **1** Temperature dependent. = **2** Density (porosi
   
 RELATED TOPICS  
 ---  
-Material Data: [Thermal Data](/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/) Keywords: [DENSTY](/docs/sk/keyword_documentation/d/densty/)
+Material Data: [Thermal Data]({{ '/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }}) Keywords: [DENSTY]({{ '/docs/sk/keyword_documentation/d/densty/' | relative_url }})

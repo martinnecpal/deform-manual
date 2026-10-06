@@ -32,4 +32,4 @@ GENDB is an action keyword placed in Keyword files that drives the Preprocessor 
   
 RELATED TOPICS  
 ---  
-[Preprocessor](/docs/sk/pre_processor/7_introduction_to_pre-processor/): [Database Generation](/docs/sk/pre_processor/21_database_generation/21_database_generation/) Keywords: [PROBID](/docs/sk/keyword_documentation/p/probid/), [DBREAD](/docs/sk/keyword_documentation/d/dbread/), [KFREAD](/docs/sk/keyword_documentation/k/kfread/), [KFWRIT](/docs/sk/keyword_documentation/k/kfwrit/)
+[Preprocessor]({{ '/docs/sk/pre_processor/7_introduction_to_pre-processor/' | relative_url }}): [Database Generation]({{ '/docs/sk/pre_processor/21_database_generation/21_database_generation/' | relative_url }}) Keywords: [PROBID]({{ '/docs/sk/keyword_documentation/p/probid/' | relative_url }}), [DBREAD]({{ '/docs/sk/keyword_documentation/d/dbread/' | relative_url }}), [KFREAD]({{ '/docs/sk/keyword_documentation/k/kfread/' | relative_url }}), [KFWRIT]({{ '/docs/sk/keyword_documentation/k/kfwrit/' | relative_url }})

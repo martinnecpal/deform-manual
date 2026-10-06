@@ -40,4 +40,4 @@ Electric current flux at element center is a vector. This state variable is used
   
 RELATED TOPICS  
 ---  
-[Simulation Mode](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Heat transfer, Heating, Induction Keywords: [ZEFI](/docs/en/keyword_documentation/z/zefi/), [ZMFI](/docs/en/keyword_documentation/z/zmfi/)
+[Simulation Mode](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Heat transfer, Heating, Induction Keywords: [ZEFI]({{ '/docs/en/keyword_documentation/z/zefi/' | relative_url }}), [ZMFI]({{ '/docs/en/keyword_documentation/z/zmfi/' | relative_url }})

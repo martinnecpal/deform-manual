@@ -45,4 +45,4 @@ The interface heat coefficient may be specified as a constant, a function of tim
   
 RELATED TOPICS  
 ---  
-[Inter-Object Conditions](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/): Thermal Keywords: [CNTACT (2D)](/docs/sk/keyword_documentation/c/cntact/), [CNTACT (3D)](/docs/sk/keyword_documentation/c/cntact_3d/)
+[Inter-Object Conditions]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}): Thermal Keywords: [CNTACT (2D)]({{ '/docs/sk/keyword_documentation/c/cntact/' | relative_url }}), [CNTACT (3D)]({{ '/docs/sk/keyword_documentation/c/cntact_3d/' | relative_url }})

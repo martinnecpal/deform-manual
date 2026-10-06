@@ -82,7 +82,7 @@ Add material from material list window
 
 **Mixture material**
 
-“Mixture” materials ([MSTMTR](/docs/en/keyword_documentation/m/mstmtr/)) are used when a phase transformation is to be modeled in the simulation. The transforming material is modeled as a “mixture” of its constituent phases. For example, carbon steel might be modeled as a mixture of Austenite, Pearlite, Bainite, and Martensite. If a mixture material is defined, transformation rules should be defined which govern the transformation of one phase into another.(See Fig. 33.2.6.)
+“Mixture” materials ([MSTMTR]({{ '/docs/en/keyword_documentation/m/mstmtr/' | relative_url }})) are used when a phase transformation is to be modeled in the simulation. The transforming material is modeled as a “mixture” of its constituent phases. For example, carbon steel might be modeled as a mixture of Austenite, Pearlite, Bainite, and Martensite. If a mixture material is defined, transformation rules should be defined which govern the transformation of one phase into another.(See Fig. 33.2.6.)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image004.jpg' | relative_url }})
 
@@ -252,7 +252,7 @@ The geometry window appears for Axisymmetric type of geometry is shown in Fig. 3
 
 **Check![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**
 
-Once the geometry of the object is created, ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button a popup appears as shown in below Fig. 33.2.26. The Geometry gets corrected, if they are any errors when we click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). For more information please refer [12.1. 2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) section [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
+Once the geometry of the object is created, ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button a popup appears as shown in below Fig. 33.2.26. The Geometry gets corrected, if they are any errors when we click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). For more information please refer [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) section [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image022.jpg' | relative_url }})
 
@@ -334,13 +334,13 @@ The number of elements to be generated for an object can be specified merely by 
 
 Guided Mode Mesh window options
 
-In order to control the mesh parameters like size, shape, density, type of elements, etc..., user has to switch to expert mode ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) for more advanced mesh options. Below Fig. 33.2.32. shows the mesh options available from Expert mode. We have Tetrahedral mesh and brick mesh option to generate mesh for object. For more information related to Tetrahedral mesh, refer chapter [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+In order to control the mesh parameters like size, shape, density, type of elements, etc..., user has to switch to expert mode ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) for more advanced mesh options. Below Fig. 33.2.32. shows the mesh options available from Expert mode. We have Tetrahedral mesh and brick mesh option to generate mesh for object. For more information related to Tetrahedral mesh, refer chapter [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image027.jpg' | relative_url }})
 
 Expert Mode Mesh window options
 
-The below Fig. 33.2.33. shows the Brick mesh generation options in Expert mode. For more information related to Tetrahedral mesh, refer chapter [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
+The below Fig. 33.2.33. shows the Brick mesh generation options in Expert mode. For more information related to Tetrahedral mesh, refer chapter [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image028.jpg' | relative_url }})
 
@@ -359,24 +359,24 @@ Once after adding material click on ![]({{ '/assets/icons/pre_icons/mo_material_
   
 The different data sets are:
 
-  * [Plastic ](/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/)
-  * [Elastic](/docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/)
-  * [Thermal ](/docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/)
-  * [Diffusion ](/docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/)
-  * [Dislocation ](/docs/en/pre_processor/10_material_data/10_5_dislocation_data/)
-  * [Grain ](/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/)
-  * [Hardness ](/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/)
-  * [Elec/ Mag ](/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/)
-  * [Transformation](/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/)
-  * [Coarsening](/docs/en/pre_processor/10_material_data/10_10_coarsening_data/)
-  * [Texture ](/docs/en/pre_processor/10_material_data/10_11_texture_data/)
-  * [Miscellaneous](/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/)
+  * [Plastic ]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/' | relative_url }})
+  * [Elastic]({{ '/docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }})
+  * [Thermal ]({{ '/docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }})
+  * [Diffusion ]({{ '/docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/' | relative_url }})
+  * [Dislocation ]({{ '/docs/en/pre_processor/10_material_data/10_5_dislocation_data/' | relative_url }})
+  * [Grain ]({{ '/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/' | relative_url }})
+  * [Hardness ]({{ '/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
+  * [Elec/ Mag ]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }})
+  * [Transformation]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }})
+  * [Coarsening]({{ '/docs/en/pre_processor/10_material_data/10_10_coarsening_data/' | relative_url }})
+  * [Texture ]({{ '/docs/en/pre_processor/10_material_data/10_11_texture_data/' | relative_url }})
+  * [Miscellaneous]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }})
 
 This section discusses the manner in which to define each data set, and for which type of simulation each of these is required.
 
 The DEFORM material library contains several hundred data sets. Nearly all materials contain Plastic (flow stress), elastic and thermal data. Depending on the intended application, the material data may also include microstructure related data.
 
-The user should confirm that the material selected from the library is appropriate for the process they intend to model. For more information about Material Properties, please refer [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/).
+The user should confirm that the material selected from the library is appropriate for the process they intend to model. For more information about Material Properties, please refer [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ### Boundary Conditions
 
@@ -386,7 +386,7 @@ In Boundary conditions page, user can assign various boundary constraints for an
 
 Boundary Conditions window
 
-The BCC's are categorized as [Symmetry](/docs/en/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/), [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/), [Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) and [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). For more information about these BCC's please refer [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+The BCC's are categorized as [Symmetry]({{ '/docs/en/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/' | relative_url }}), [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ### **Movement Controls**
 
@@ -394,7 +394,7 @@ Movement controls can be applied to rigid objects and boundary nodes of meshed o
 
 **Translation Movement**
 
-Various types of Movement controls that are available in Translation Movement controls are [Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/), [Force](/docs/en/pre_processor/15_movement_controls_definition/15_2_force/), [Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/), [Screw press](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/), [Mechanical press](/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/), [Hydraulic press](/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/), [Sliding Die](/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/) and [Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/) as shown in Fig. 33.2.36. For more information about these movement controls, please refer [15\. Movement controls settings.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+Various types of Movement controls that are available in Translation Movement controls are [Speed]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }}), [Force]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_2_force/' | relative_url }}), [Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}), [Screw press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }}), [Mechanical press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }}), [Hydraulic press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/' | relative_url }}), [Sliding Die]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/' | relative_url }}) and [Path]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }}) as shown in Fig. 33.2.36. For more information about these movement controls, please refer [15\. Movement controls settings.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image035.jpg' | relative_url }})
 
@@ -402,17 +402,17 @@ Translation Movement Controls window
 
 **Rotational Movement**
 
-Rotational movement is defined by an angular velocity/torque about a fixed center of rotation. Two types of Movement controls that are available in Rotational Movement controls are Torque and Angular Velocity as shown in Fig. 33.2.37. For more information, please refer [15.9. Rotational movement.](/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/)
+Rotational movement is defined by an angular velocity/torque about a fixed center of rotation. Two types of Movement controls that are available in Rotational Movement controls are Torque and Angular Velocity as shown in Fig. 33.2.37. For more information, please refer [15.9. Rotational movement.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image034.jpg' | relative_url }})
 
 Rotation Movement Controls window
 
-For more information about these movement controls please refer [15\. Movement Controls Settings.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+For more information about these movement controls please refer [15\. Movement Controls Settings.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
 ### Property
 
-Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See Fig. 33.2.38.) For more information, Please refer [16\. Object properties.](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See Fig. 33.2.38.) For more information, Please refer [16\. Object properties.]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image036.jpg' | relative_url }})
 
@@ -420,7 +420,7 @@ Object property window
 
 ### **Initialize**
 
-In Initialize window, few state variables that are commonly used such as Temperature, strain, stress, damage, velocity, Displacement, etc.., are made available for initialization. User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 33.2.39. shows the various state variables that are available in Initialize window. For state variable like velocity and displacement, provided input fields as many as dimensions, user needs to define the directional values of the variables in respective fields and then clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button will calculate the total velocity and displacement. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows (See Fig. 33.2.40. and Fig. 33.2.41.), please refer [17.1. Object node variables](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [17.2. Object element variables.](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/)
+In Initialize window, few state variables that are commonly used such as Temperature, strain, stress, damage, velocity, Displacement, etc.., are made available for initialization. User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 33.2.39. shows the various state variables that are available in Initialize window. For state variable like velocity and displacement, provided input fields as many as dimensions, user needs to define the directional values of the variables in respective fields and then clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button will calculate the total velocity and displacement. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows (See Fig. 33.2.40. and Fig. 33.2.41.), please refer [17.1. Object node variables]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) and [17.2. Object element variables.]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image030.jpg' | relative_url }})
 
@@ -448,7 +448,7 @@ By clicking on this button, system automatically Positions the Objects with resp
 
 **Positioning Objects** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 33.2.43. For more information about these options, please refer [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 33.2.43. For more information about these options, please refer [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image038.jpg' | relative_url }})
 
@@ -514,9 +514,9 @@ Adding lubricant from Edit window
 
 **User** : By default, user radio button will be selected for Forming operation. User can add relationships by clicking on Add button as shown in Fig. 33.2.45.
 
-By clicking on edit ****![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }})**** button user can define the friction and Interface Heat relations. For more information refer, [20\. Inter-object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+By clicking on edit ****![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }})**** button user can define the friction and Interface Heat relations. For more information refer, [20\. Inter-object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-For more information about [Deformation](/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/), [Thermal](/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/), [Heating](/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/), [Friction window](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_6_Friction_Window), [Tool wear](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/) and [Rigid contact](/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/), refer chapter [20\. Inter-object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/). 
+For more information about [Deformation]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }}), [Heating]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }}), [Friction window](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_6_Friction_Window), [Tool wear]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}) and [Rigid contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }}), refer chapter [20\. Inter-object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}). 
 
 ## Stopping Controls
 
@@ -530,13 +530,13 @@ The Below Fig. 33.2.49. shows the various types of Deformation Stopping Controls
 
 Deformation Stopping Controls window
 
-**Max Die Stroke** : Terminates a simulation when the total displacement ([SMAX](/docs/en/keyword_documentation/s/smax/)) of the primary die reaches the specified value. The stroke value for the object is specified in the Object Movement tab.
+**Max Die Stroke** : Terminates a simulation when the total displacement ([SMAX]({{ '/docs/en/keyword_documentation/s/smax/' | relative_url }})) of the primary die reaches the specified value. The stroke value for the object is specified in the Object Movement tab.
 
-**Max Load** :Terminates a simulation when the X or Y or Z load component of the primary die reaches the X or Y or Z value of [LMAX](/docs/en/keyword_documentation/l/lmax/). Typically used when the movement control of the primary object is velocity or user specified.
+**Max Load** :Terminates a simulation when the X or Y or Z load component of the primary die reaches the X or Y or Z value of [LMAX]({{ '/docs/en/keyword_documentation/l/lmax/' | relative_url }}). Typically used when the movement control of the primary object is velocity or user specified.
 
 **Contact area ratio:** Contact area ration is the ratio of area which is in contact with the dies to the total surface area of the billet. If this ratio crosses beyond the specified value the simulation stops.
 
-**Distance between Objects:** Terminates a simulation when the distance between reference points ([MDSOBJ](/docs/en/keyword_documentation/m/mdsobj/)) on two objects reaches the specified distance.
+**Distance between Objects:** Terminates a simulation when the distance between reference points ([MDSOBJ]({{ '/docs/en/keyword_documentation/m/mdsobj/' | relative_url }})) on two objects reaches the specified distance.
 
 **Thermal**
 
@@ -582,22 +582,22 @@ specified in the step controls menu.
 
 **Number of simulation steps (NSTEP)**
 
-The number of simulation steps parameter defines the number of steps to run from the starting step number. The simulation will stop after this number of simulation steps have run, unless stopping control is triggered to stop the simulation or if the simulation runs into a problem. For example, if the starting step number is -35 ([NSTART](/docs/en/keyword_documentation/n/nstart/)), and 30 steps ([NSTEP](/docs/en/keyword_documentation/n/nstep/)) are specified, the simulation will stop after the 65th step, unless another stopping control is triggered first.
+The number of simulation steps parameter defines the number of steps to run from the starting step number. The simulation will stop after this number of simulation steps have run, unless stopping control is triggered to stop the simulation or if the simulation runs into a problem. For example, if the starting step number is -35 ([NSTART]({{ '/docs/en/keyword_documentation/n/nstart/' | relative_url }})), and 30 steps ([NSTEP]({{ '/docs/en/keyword_documentation/n/nstep/' | relative_url }})) are specified, the simulation will stop after the 65th step, unless another stopping control is triggered first.
 
 **Step increment to save (STPINC)**
 
-The step increment ([STPINC](/docs/en/keyword_documentation/s/stpinc/)) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
+The step increment ([STPINC]({{ '/docs/en/keyword_documentation/s/stpinc/' | relative_url }})) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
 
 **Primary die (PDIE)**
 
-The primary die ([PDIE](/docs/en/keyword_documentation/p/pdie/)) is the object for which many stopping and stepping criteria are defined. For example, stopping distance based on primary die stroke. When the stroke of the object defined as the primary die reaches the value for primary die displacement, the simulation will be stopped whether or not more steps were specified. The Step by Stroke feature determines step size based on the movement of the primary die. The primary die is usually assigned to the object most closely controlled by the forging machinery. For example, the die attached to the ram of a mechanical press would be designated as the primary object.
+The primary die ([PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }})) is the object for which many stopping and stepping criteria are defined. For example, stopping distance based on primary die stroke. When the stroke of the object defined as the primary die reaches the value for primary die displacement, the simulation will be stopped whether or not more steps were specified. The Step by Stroke feature determines step size based on the movement of the primary die. The primary die is usually assigned to the object most closely controlled by the forging machinery. For example, the die attached to the ram of a mechanical press would be designated as the primary object.
 
-**Step increment control ([DSMAX](/docs/en/keyword_documentation/d/dsmax/)/[DTMAX](/docs/en/keyword_documentation/d/dtmax/))**
+**Step increment control ([DSMAX]({{ '/docs/en/keyword_documentation/d/dsmax/' | relative_url }})/[DTMAX]({{ '/docs/en/keyword_documentation/d/dtmax/' | relative_url }}))**
 
 Solution step size can be controlled by time step or by displacement of the primary die. If stroke per step is specified, the primary die will move the specified amount in each time step. The total movement of the primary die will be the displacement per step multiplied by the total number of steps. If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.
 
   
-Even the temperature based step controls ([DTPMAX](/docs/en/keyword_documentation/d/dtpmax/)) settings control the time stepping. The purpose for these controls is to specify the time stepping of a simulation that is driven by thermal-induced deformation.
+Even the temperature based step controls ([DTPMAX]({{ '/docs/en/keyword_documentation/d/dtpmax/' | relative_url }})) settings control the time stepping. The purpose for these controls is to specify the time stepping of a simulation that is driven by thermal-induced deformation.
 
 The definition of step increment control have been enhanced to include both the time and stroke dependent step functions,these options are available under Expert mode. This means, step size (both time per step and stroke per step) can now be defined as a function of time or stroke. This functionality enables finer resolution of saved model information, where it is desired. (typically towards the end of the stroke, where steep changes of die load and cavity filling or flash formation can take place)
 
@@ -614,7 +614,7 @@ Options defined under Simulation Controls (See Fig. 33.2.53.) control the numeri
 Step and stopping controls are used to specify the time step, the total number of steps and the criteria used to terminate the simulation.  
 Processing conditions like the environment temperature, convection coefficient can be specified here.
 
-For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ## Generate DB 
 

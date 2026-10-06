@@ -113,7 +113,7 @@ Material Properties page
 
 ## Define Object 
 
-In object window, options are provided to maintain the mesh size on billet during simulation either by aspect ratio or element size. For detail description of these options, refer [Cogging Manual](/docs/en/operation_templates/29_cogging/29_1_cogging_setup/). User is also provided with a choice to perform billet straightening between passes or between bites. Billet straightening is a geometry manipulation operation performed in order to avoid the excessive bending caused by slight positioning error accumulated over multiple passes. For this lab we will not be doing any billet straightening (see Fig. 3DCGL1.8.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+In object window, options are provided to maintain the mesh size on billet during simulation either by aspect ratio or element size. For detail description of these options, refer [Cogging Manual]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}). User is also provided with a choice to perform billet straightening between passes or between bites. Billet straightening is a geometry manipulation operation performed in order to avoid the excessive bending caused by slight positioning error accumulated over multiple passes. For this lab we will not be doing any billet straightening (see Fig. 3DCGL1.8.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/cogging_labs/cogging_lab1/image0008.jpg' | relative_url }})
 

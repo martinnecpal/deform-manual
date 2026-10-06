@@ -24,7 +24,7 @@ Set Temperature to **2250** ° F and click ![]({{ '/assets/icons/pre_icons/mo_ne
 **Create workpiece Geometry**  
 Click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) to create a workpiece from a primitive **cylinder** with **5** ” diameter, **0.1** ” corner **radii** , **8.15** “ tall and **30** ° revolve angle with **30** sections. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close menu.
 
-As the dies upward direction is Y Workpiece must be rotated to align with the dies upward direction. So click on **Positioning** branch in operation tree and rotate workpiece 90° about the –X axis and center (0,0,0) using ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) option, as was the case in [Lab5](/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab5/).
+As the dies upward direction is Y Workpiece must be rotated to align with the dies upward direction. So click on **Positioning** branch in operation tree and rotate workpiece 90° about the –X axis and center (0,0,0) using ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) option, as was the case in [Lab5]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab5/' | relative_url }}).
 
 Go back to Workpiece Geometry window by clicking **Geometry** branch in operation tree to define symmetry planes.
 

@@ -33,7 +33,7 @@ Existujú tiež štyri ďalšie spôsoby, ako sledovať simuláciu, a to:
 
   * V závislosti od frekvencie krokov uložených v databáze sa odporúča zvoliť zobrazenie uložených krokov namiesto aktuálneho kroku.
 
-Ďalšie informácie týkajúce sa grafického znázornenia stavových premenných nájdete v kapitole 4.5.2. Stavové premenné a informácie o grafických možnostiach nájdete v [6.2. Integrated Manufacturing Process Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/) a v kapitole 4.2. Grafické zobrazenie.
+Ďalšie informácie týkajúce sa grafického znázornenia stavových premenných nájdete v kapitole 4.5.2. Stavové premenné a informácie o grafických možnostiach nájdete v [6.2. Integrated Manufacturing Process Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}) a v kapitole 4.2. Grafické zobrazenie.
 
 **Režim objektov**: Možnosť slúžiaca na výber objektov a na nastavenie režimu ich zobrazenia v grafickom rozhraní simulácie. (Pozri obr. 23.3.4.)
 
@@ -43,10 +43,10 @@ Okno režimu objektu
 
 **Súvisiace témy:**
 
-[Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/)
+[Process Monitor]({{ '/docs/en/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }})
 
-[Pre-Processor](/docs/en/post_processor/post_processor_mainpg/)
+[Pre-Processor]({{ '/docs/en/post_processor/post_processor_mainpg/' | relative_url }})
 
-[Integrated Manufacturing Process (MO)](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/)
+[Integrated Manufacturing Process (MO)]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/' | relative_url }})
 
-[Post-Processor](/docs/en/post_processor/post_processor_mainpg/)
+[Post-Processor]({{ '/docs/en/post_processor/post_processor_mainpg/' | relative_url }})

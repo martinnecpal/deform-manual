@@ -30,4 +30,4 @@ Type 0 should be used for objects that will undergo large deformations, while ty
   
 RELATED TOPICS  
 ---  
-[Object Properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/): [Deformation](/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/)
+[Object Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }}): [Deformation]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }})

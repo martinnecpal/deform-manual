@@ -39,7 +39,7 @@ Pick surface nodes in specified area and assign the residual stress via near-sur
 
 Picking surface node to assign residual stress
 
-This shows the stress assigned using the Post-processor function ([SV between two points](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/)) as shown in Fig. AXI.7.
+This shows the stress assigned using the Post-processor function ([SV between two points]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/' | relative_url }})) as shown in Fig. AXI.7.
 
 ![]({{ '/assets/images/appendices/appendix_xi_near_surface_mesh_functions/image0007.jpg' | relative_url }})
 
@@ -57,7 +57,7 @@ Assigned stress via near surface mesh in Post processor
 
   * In order to compare the simulation results to the CMM measurement results directly, it is necessary to move certain nodes onto a reference surface
 
-The function is accessible in the [node data](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) dialog as shown in below Fig. AXI.8.
+The function is accessible in the [node data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) dialog as shown in below Fig. AXI.8.
 
 ![]({{ '/assets/images/appendices/appendix_xi_near_surface_mesh_functions/image0008.jpg' | relative_url }})
 
@@ -71,6 +71,6 @@ Projecting the selected nodes onto the surface
 
 **Related Topics:**
 
-[13\. Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/)
+[13\. Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[17.1. Node Data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/)
+[17.1. Node Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }})

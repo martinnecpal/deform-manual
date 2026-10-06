@@ -33,4 +33,4 @@ The heat transfer and deformation mode's functions identically to the non-isothe
   
 RELATED TOPICS  
 ---  
-[Inter-Material Data](/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_1_transformation_kinetics_models/) Keywords: [SMODE](/docs/en/keyword_documentation/s/smode/), [VOLFS](/docs/en/keyword_documentation/v/volfs/), [VOLFC](/docs/en/keyword_documentation/v/volfc/), [TICF](/docs/en/keyword_documentation/t/ticf/), VOLFN
+[Inter-Material Data]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_1_transformation_kinetics_models/' | relative_url }}) Keywords: [SMODE]({{ '/docs/en/keyword_documentation/s/smode/' | relative_url }}), [VOLFS]({{ '/docs/en/keyword_documentation/v/volfs/' | relative_url }}), [VOLFC]({{ '/docs/en/keyword_documentation/v/volfc/' | relative_url }}), [TICF]({{ '/docs/en/keyword_documentation/t/ticf/' | relative_url }}), VOLFN

@@ -183,7 +183,7 @@ The general FEM solution process is given below:
 
 Flow stress in DEFORM is defined as a function of strain, strain rate and temperature.
 
-In general DEFORM [material data](/docs/en/pre_processor/10_material_data/10_material_data/) represents a single history. Separate data sets represent different histories,
+In general DEFORM [material data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}) represents a single history. Separate data sets represent different histories,
 
   * as received
 
@@ -195,7 +195,7 @@ In general DEFORM [material data](/docs/en/pre_processor/10_material_data/10_mat
 
 **Finite Element Method Single Element Behavior:**
 
-[Flow stress](/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/) data gives force and energy required to deform the element. Equivalent calculations on other elements, and friction behavior give external forces. (See Fig. AI.19.)
+[Flow stress]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/' | relative_url }}) data gives force and energy required to deform the element. Equivalent calculations on other elements, and friction behavior give external forces. (See Fig. AI.19.)
 
 ![]({{ '/assets/images/appendices/appendix_1_elementary_concept/image0019.jpg' | relative_url }})
 

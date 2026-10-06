@@ -39,4 +39,4 @@ It is recommended that if users use this, that the meshes on the two sides have 
   
 RELATED TOPICS  
 ---  
-Geometry: [Symmetry surface](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Specifying_Rotational_Symmetry), Boundary Constraints: [Symmetry BCC](/docs/sk/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/)
+Geometry: [Symmetry surface](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Specifying_Rotational_Symmetry), Boundary Constraints: [Symmetry BCC]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/' | relative_url }})

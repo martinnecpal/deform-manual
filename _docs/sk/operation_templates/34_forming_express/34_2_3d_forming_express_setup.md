@@ -67,13 +67,13 @@ Následne sa otvorí operácia 3D Forming Express, ako je znázornené na obr. 3
 
 Sprievodca Independent Forming Express.
 
-Tu môžete pridávať alebo odstraňovať expresné operácie a simulačné operátory. Expresné operácie pre prenos tepla sú vysvetlené v časti [36\. Introduction to Heat Transfer Express.](/docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/)
+Tu môžete pridávať alebo odstraňovať expresné operácie a simulačné operátory. Expresné operácie pre prenos tepla sú vysvetlené v časti [36\. Introduction to Heat Transfer Express.]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/' | relative_url }})
 
-Fungovanie konvertora z 2D do 3D je vysvetlené v časti [44.1. 2D to 3D Convertor](/docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/)
+Fungovanie konvertora z 2D do 3D je vysvetlené v časti [44.1. 2D to 3D Convertor]({{ '/docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/' | relative_url }})
 
-Boolovské operácie sú vysvetlené v časti [45.1. Boolean Operator.](/docs/en/operation_templates/45_boolean_operation/45_1_boolean_operation/)
+Boolovské operácie sú vysvetlené v časti [45.1. Boolean Operator.]({{ '/docs/en/operation_templates/45_boolean_operation/45_1_boolean_operation/' | relative_url }})
 
-Postup kopírovania/zrkadlenia je vysvetlený v časti [46.1. Copy Mirroring](/docs/en/operation_templates/46_copy_mirroring/46_1_copy_mirroring/)
+Postup kopírovania/zrkadlenia je vysvetlený v časti [46.1. Copy Mirroring]({{ '/docs/en/operation_templates/46_copy_mirroring/46_1_copy_mirroring/' | relative_url }})
 
 **Pridanie operácie Forming Express v sprievodcovi MO.**
 
@@ -159,11 +159,11 @@ Okno obrobku
 
 **Názov objektu**: Používateľ môže určiť názov pre všetky objekty dostupné v danej operácii.
 
-**Typ objektu******: Typ objektu ([OBJTYP](/docs/en/keyword_documentation/o/objtyp/)) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. Ďalšie typy objektov sú vysvetlené v kapitole 11. Všeobecná definícia údajov o objektoch, podrobnosti nájdete v [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
+**Typ objektu******: Typ objektu ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. Ďalšie typy objektov sú vysvetlené v kapitole 11. Všeobecná definícia údajov o objektoch, podrobnosti nájdete v [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
 
-  * **Plast**: Plastové objekty sa modelujú ako tuhé plastické alebo tuhé viskoplastické materiály v závislosti od vlastností materiálov. Model predpokladá, že napätie v materiáli lineárne rastie s rýchlosťou deformácie až do prahovej hodnoty rýchlosti deformácie, označovanej ako limitná rýchlosť deformácie ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)). Po prekročení medznej rýchlosti deformácie sa materiál deformuje plasticky. Plastické správanie materiálu objektu sa špecifikuje pomocou funkcie toku napätia materiálu alebo údajov o toku napätia ([FSTRES](/docs/en/keyword_documentation/f/fstres/)). V operácii Forming Express sa obrobok automaticky priradí k typu objektu „Plast“.
+  * **Plast**: Plastové objekty sa modelujú ako tuhé plastické alebo tuhé viskoplastické materiály v závislosti od vlastností materiálov. Model predpokladá, že napätie v materiáli lineárne rastie s rýchlosťou deformácie až do prahovej hodnoty rýchlosti deformácie, označovanej ako limitná rýchlosť deformácie ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). Po prekročení medznej rýchlosti deformácie sa materiál deformuje plasticky. Plastické správanie materiálu objektu sa špecifikuje pomocou funkcie toku napätia materiálu alebo údajov o toku napätia ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). V operácii Forming Express sa obrobok automaticky priradí k typu objektu „Plast“.
 
-  * **Tuhé**: Tuhé objekty sú modelované ako nedeformovateľné materiály. Pri analýze deformácie je geometria objektu reprezentovaná geometrickým profilom ([DIEGEO](/docs/en/keyword_documentation/d/diegeo/)). Údaje o riešení deformácie dostupné pre tuhé objekty zahŕňajú zdvih objektu, zaťaženie a rýchlosť. Geometrický profil sa používa pre všetky analýzy deformácie a sieť pre tuhý objekt sa používa pre všetky výpočty tepelné, transformačné a difúzne. V programe Forming Express sa lisovacie formy alebo nástroje automaticky priraďujú k kategórii „Tuhé“, keďže ide o nedeformovateľné objekty.
+  * **Tuhé**: Tuhé objekty sú modelované ako nedeformovateľné materiály. Pri analýze deformácie je geometria objektu reprezentovaná geometrickým profilom ([DIEGEO]({{ '/docs/en/keyword_documentation/d/diegeo/' | relative_url }})). Údaje o riešení deformácie dostupné pre tuhé objekty zahŕňajú zdvih objektu, zaťaženie a rýchlosť. Geometrický profil sa používa pre všetky analýzy deformácie a sieť pre tuhý objekt sa používa pre všetky výpočty tepelné, transformačné a difúzne. V programe Forming Express sa lisovacie formy alebo nástroje automaticky priraďujú k kategórii „Tuhé“, keďže ide o nedeformovateľné objekty.
 
 **Poznámka:**
 
@@ -182,16 +182,16 @@ Pomocou pokročilých nastavení môže používateľ inicializovať teplotu, de
 
 Pokročilé nastavenia objektov
 
-V operácii „Formovanie“ je možné inicializovať ďalšie premenné; podrobnosti nájdete v [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+V operácii „Formovanie“ je možné inicializovať ďalšie premenné; podrobnosti nájdete v [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
   
-Priemerná rýchlosť deformácie ([AVGSTR](/docs/en/keyword_documentation/a/avgstr/)) je charakteristická priemerná hodnota efektívnej rýchlosti deformácie. Na začiatku simulácie by sa mala zadať aproximácia tejto hodnoty.
+Priemerná rýchlosť deformácie ([AVGSTR]({{ '/docs/en/keyword_documentation/a/avgstr/' | relative_url }})) je charakteristická priemerná hodnota efektívnej rýchlosti deformácie. Na začiatku simulácie by sa mala zadať aproximácia tejto hodnoty.
 
-Medzná rýchlosť deformácie ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)) definuje medznú hodnotu efektívnej rýchlosti deformácie, pod ktorou sa plastický alebo porézny materiál považuje za tuhý a správa sa ako materiál s newtonovskými vlastnosťami.
+Medzná rýchlosť deformácie ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})) definuje medznú hodnotu efektívnej rýchlosti deformácie, pod ktorou sa plastický alebo porézny materiál považuje za tuhý a správa sa ako materiál s newtonovskými vlastnosťami.
 
 ![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}) : Pomocou tejto funkcie môže používateľ obnoviť hodnoty premenných v počiatočnom stave.
 
-Ďalšie možnosti vlastností objektu deformácie, ktoré sú k dispozícii v operácii tvarovania, nájdete v [16.1. Deformation Properties.](/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/)
+Ďalšie možnosti vlastností objektu deformácie, ktoré sú k dispozícii v operácii tvarovania, nájdete v [16.1. Deformation Properties.]({{ '/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }})
 
 ## Definícia geometrie objektu
 
@@ -311,21 +311,21 @@ Nastavenia relatívnej veľkosti siete
 
 Nastavenia absolútnej siete
 
-  * **Pomer veľkostí prvkov (MGSIZR):** Maximálny pomer veľkostí medzi prvkami je jedným z viacerých spôsobov, ako regulovať hustotu siete počas automatického generovania siete (AMG) prostredníctvom špecifikácie pomeru hustôt uzlov. Pri hodnote 3 pre [MGSIZR](/docs/en/keyword_documentation/m/mgsizr/) bude najväčšia hrana prvku na objekte približne 3-krát väčšia ako najmenšia hrana prvku na tom istom objekte. Ak sa požadujú prvky rovnakej veľkosti, pomer veľkostí je 1. Ak je pomer veľkostí 0, pomer veľkostí prvkov nebude mať vplyv na rozloženie hustoty siete.
+  * **Pomer veľkostí prvkov (MGSIZR):** Maximálny pomer veľkostí medzi prvkami je jedným z viacerých spôsobov, ako regulovať hustotu siete počas automatického generovania siete (AMG) prostredníctvom špecifikácie pomeru hustôt uzlov. Pri hodnote 3 pre [MGSIZR]({{ '/docs/en/keyword_documentation/m/mgsizr/' | relative_url }}) bude najväčšia hrana prvku na objekte približne 3-krát väčšia ako najmenšia hrana prvku na tom istom objekte. Ak sa požadujú prvky rovnakej veľkosti, pomer veľkostí je 1. Ak je pomer veľkostí 0, pomer veľkostí prvkov nebude mať vplyv na rozloženie hustoty siete.
 
-  * **Kritériá pregenerovania siete:** Kritériá pregenerovania siete (Autoremesh) predstavujú najpohodlnejší spôsob, ako riešiť pregenerovanie siete objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Kritériá pre vytváranie novej siete (pozri obr. 34.2.19.) obsahuje skupinu parametrov, ktoré na základe priradenia určitých spúšťačov riadia, kedy a ako často sa bude sieť na objektu so sieťou regenerovať. Existujú štyri kľúčové slová, ktoré riadia spustenie postupu premenovania siete pre objekt: Hĺbka interferencie ([RMDPTH](/docs/en/keyword_documentation/r/rmdpth/)), Max. časový prírastok ([RMTIME](/docs/en/keyword_documentation/r/rmtime/)), Max. krokový prírastok ([RMSTEP](/docs/en/keyword_documentation/r/rmstep/)) a Max. prírastok zdvihu ([RMSTRK](/docs/en/keyword_documentation/r/rmstrk/)). Keď sú splnené kritériá pregenerovania siete pre ktorékoľvek z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (záporná jacobiánska matica), objekt sa pregeneruje, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje.
+  * **Kritériá pregenerovania siete:** Kritériá pregenerovania siete (Autoremesh) predstavujú najpohodlnejší spôsob, ako riešiť pregenerovanie siete objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Kritériá pre vytváranie novej siete (pozri obr. 34.2.19.) obsahuje skupinu parametrov, ktoré na základe priradenia určitých spúšťačov riadia, kedy a ako často sa bude sieť na objektu so sieťou regenerovať. Existujú štyri kľúčové slová, ktoré riadia spustenie postupu premenovania siete pre objekt: Hĺbka interferencie ([RMDPTH]({{ '/docs/en/keyword_documentation/r/rmdpth/' | relative_url }})), Max. časový prírastok ([RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }})), Max. krokový prírastok ([RMSTEP]({{ '/docs/en/keyword_documentation/r/rmstep/' | relative_url }})) a Max. prírastok zdvihu ([RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})). Keď sú splnené kritériá pregenerovania siete pre ktorékoľvek z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (záporná jacobiánska matica), objekt sa pregeneruje, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje.
 
   * **Vzdialenosť penetrácie (relatívna)**: Ak zadáte záporné číslo (zlomok), program vykoná kontrolu na každej hrane povrchu, ktorá má na oboch koncoch kontaktný uzol. Vypočíta sa vzdialenosť od stredu hrany k povrchu formy a vydelí sa pôvodnou dĺžkou hrany. Ak tento pomer prekročí veľkosť zadaného hodnoty, spustí sa prepočítanie siete.
 
-  * **Maximálny prírastok zdvihu (RMSTRK)**: Vždy, keď prírastok zdvihu primárnej matrice od posledného kroku premenovania siete prekročí maximálny prírastok zdvihu ([RMSTRK](/docs/en/keyword_documentation/r/rmstrk/)), spustí sa nový krok premenovania siete. 
+  * **Maximálny prírastok zdvihu (RMSTRK)**: Vždy, keď prírastok zdvihu primárnej matrice od posledného kroku premenovania siete prekročí maximálny prírastok zdvihu ([RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})), spustí sa nový krok premenovania siete. 
 
-  * **Maximálny časový interval (RMTIME):** Vždy, keď uplynie maximálny časový interval ([RMTIME](/docs/en/keyword_documentation/r/rmtime/)) (hodnota uplynutého času) od posledného kroku premenovania siete, spustí sa nový krok premenovania siete.
+  * **Maximálny časový interval (RMTIME):** Vždy, keď uplynie maximálny časový interval ([RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }})) (hodnota uplynutého času) od posledného kroku premenovania siete, spustí sa nový krok premenovania siete.
 
   * **Maximálny prírastok kroku (RMSTEP):** Vždy, keď od posledného kroku premenovania siete dôjde k dosiahnutiu maximálneho prírastku kroku (počet krokov), spustí sa nový krok premenovania siete.
 
 **Odstrániť sieť** ![]({{ '/assets/icons/pre_icons/mo_delete_mesh_button.jpg' | relative_url }}) : Odstráni sieť vytvorenú pre daný objekt.
 
-Na rozdiel od operácie „Forming“ nie sú v operácii „Forming Express“ k dispozícii ďalšie možnosti siete, ako napríklad „Coating mesh“, „System mesh density weighting factors“ a „User Mesh Density Window“; informácie o týchto možnostiach nájdete v [13.2. 3D Tet Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+Na rozdiel od operácie „Forming“ nie sú v operácii „Forming Express“ k dispozícii ďalšie možnosti siete, ako napríklad „Coating mesh“, „System mesh density weighting factors“ a „User Mesh Density Window“; informácie o týchto možnostiach nájdete v [13.2. 3D Tet Mesh Generation.]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
 
 ## Materiál
 
@@ -344,7 +344,7 @@ Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_
 
 Okno na úpravu materiálu
 
-Požadované vlastnosti závisia od fyzikálnych javov simulovaných v programe DEFORM. Vlastnosti materiálov, ktoré musí používateľ zadať, závisia od typov materiálov, ktoré používateľ v simulácii využíva. V kapitole [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/) má používateľ prístup ku všetkým vlastnostiam materiálov; ďalšie informácie nájdete v kapitole [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/).
+Požadované vlastnosti závisia od fyzikálnych javov simulovaných v programe DEFORM. Vlastnosti materiálov, ktoré musí používateľ zadať, závisia od typov materiálov, ktoré používateľ v simulácii využíva. V kapitole [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}) má používateľ prístup ku všetkým vlastnostiam materiálov; ďalšie informácie nájdete v kapitole [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ## Okrajové podmienky
 
@@ -359,7 +359,7 @@ Pre obrobok bola nastavená okrajová podmienka symetrie
 
 Pre obrobok bola stanovená okrajová podmienka výmeny tepla s okolím
 
-BCC sú rozdelené do kategórií [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/), [Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) a [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
+BCC sú rozdelené do kategórií [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
 
 ## Ovládanie pohybu
 
@@ -369,7 +369,7 @@ Ovládacie prvky pohybu je možné aplikovať na tuhé objekty a hraničné uzly
 
 Počas simulácie sa viazané uzly budú pohybovať synchronizovane rýchlosťou a smerom, ktoré sú definované ovládacími prvkami pohybu. (Pozri obr. 34.2.24.)
 
-V funkcii Forming Express je v rámci typu pohybu „Translation“ k dispozícii len šesť typov ovládacích prvkov pohybu, a to [Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/), [Load](/docs/en/pre_processor/15_movement_controls_definition/15_2_force/), [Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/), [Screw press](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/), [Mechanical press](/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/) a [Hydraulic press](/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/). Operácia tvarovania obsahuje okrem ovládacích prvkov pre pohyb „Forming Express“ aj ovládacie prvky pre translačný pohyb [Sliding Die](/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/) a [Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/), ako aj typy rotačného a torzného pohybu. Ďalšie informácie nájdete v [15\. Movement Controls.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/).
+V funkcii Forming Express je v rámci typu pohybu „Translation“ k dispozícii len šesť typov ovládacích prvkov pohybu, a to [Speed]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }}), [Load]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_2_force/' | relative_url }}), [Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}), [Screw press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }}), [Mechanical press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }}) a [Hydraulic press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/' | relative_url }}). Operácia tvarovania obsahuje okrem ovládacích prvkov pre pohyb „Forming Express“ aj ovládacie prvky pre translačný pohyb [Sliding Die]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/' | relative_url }}) a [Path]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }}), ako aj typy rotačného a torzného pohybu. Ďalšie informácie nájdete v [15\. Movement Controls.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_2_3d_forming_express_setup/image016.jpg' | relative_url }})
 
@@ -400,7 +400,7 @@ Systém vždy aktualizuje zdvih podľa polohy objektu, pre ktorý je definovaný
 
 **Umiestňovanie objektov ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})**
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 34.2.26. Ďalšie informácie o týchto možnostiach nájdete v časti [19.Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 34.2.26. Ďalšie informácie o týchto možnostiach nájdete v časti [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_2_3d_forming_express_setup/image017.jpg' | relative_url }})
 
@@ -568,7 +568,7 @@ Veľkosť kroku riešenia je možné riadiť časovým krokom alebo posunom prim
 
 Počet zdvihov na krok je často intuitívnejší. Čas na krok je však potrebné určiť pri každej úlohe, v ktorej nedochádza k pohybu matice (napríklad pri prenose tepla), alebo pri každej úlohe, kde sa používa regulácia sily.
 
-V operáciách tvárnenia je k dispozícii vylepšené nastavenie riadenia krokového posunu, ktoré teraz zahŕňa krokové funkcie závislé ako od času, tak aj od zdvihu. To znamená, že veľkosť kroku (či už ide o čas na krok alebo zdvih na krok) je teraz možné definovať ako funkciu času alebo zdvihu. Táto funkcia umožňuje v prípade potreby dosiahnuť jemnejšie rozlíšenie uložených informácií o modeli. (typicky ku koncu zdvihu, kde môžu nastať prudké zmeny zaťaženia lisovacej formy a plnenia dutiny alebo tvorby otrepov) – ďalšie informácie nájdete v dokumente [9.2. Defining step.](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/)
+V operáciách tvárnenia je k dispozícii vylepšené nastavenie riadenia krokového posunu, ktoré teraz zahŕňa krokové funkcie závislé ako od času, tak aj od zdvihu. To znamená, že veľkosť kroku (či už ide o čas na krok alebo zdvih na krok) je teraz možné definovať ako funkciu času alebo zdvihu. Táto funkcia umožňuje v prípade potreby dosiahnuť jemnejšie rozlíšenie uložených informácií o modeli. (typicky ku koncu zdvihu, kde môžu nastať prudké zmeny zaťaženia lisovacej formy a plnenia dutiny alebo tvorby otrepov) – ďalšie informácie nájdete v dokumente [9.2. Defining step.]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})
 
 **Pokročilé ovládacie prvky simulácie**
 
@@ -578,7 +578,7 @@ Pokročilé ovládacie prvky simulácie ponúkajú možnosti výberu riešiteľo
 
 Nastavenia pokročilých ovládacích prvkov simulácie
 
-Pri riešení určitých úloh ponúka tento riešiteľ oproti riešiteľovi pre riedke matice obrovské výhody. Informácie o riešiteľoch nájdete v časti „Forming operation“, ktorá v expertnom režime poskytuje viac možností ovládania simulácie; podrobnosti o týchto možnostiach nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/).
+Pri riešení určitých úloh ponúka tento riešiteľ oproti riešiteľovi pre riedke matice obrovské výhody. Informácie o riešiteľoch nájdete v časti „Forming operation“, ktorá v expertnom režime poskytuje viac možností ovládania simulácie; podrobnosti o týchto možnostiach nájdete v [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}).
 
 ## Vytvoriť databázu
 
@@ -594,24 +594,24 @@ Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg
 
 Okno „Vytvoriť databázu“
 
-Ak používateľ potrebuje niektorú z pokročilých možností, ktoré nie sú k dispozícii v režime Forming Express, môže k nim získať prístup bez straty definovaných údajov v operácii Forming Express prostredníctvom prechodu do režimu Forming. Táto možnosť je k dispozícii v ponuke pravého tlačidla myši v editore operácií, ako je znázornené na obr. 34.2.37. Ďalšie podrobnosti o tomto prechode na vyššiu úroveň operácie nájdete v [6.6.4. Upgrading Operations.](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations/)
+Ak používateľ potrebuje niektorú z pokročilých možností, ktoré nie sú k dispozícii v režime Forming Express, môže k nim získať prístup bez straty definovaných údajov v operácii Forming Express prostredníctvom prechodu do režimu Forming. Táto možnosť je k dispozícii v ponuke pravého tlačidla myši v editore operácií, ako je znázornené na obr. 34.2.37. Ďalšie podrobnosti o tomto prechode na vyššiu úroveň operácie nájdete v [6.6.4. Upgrading Operations.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_2_3d_forming_express_setup/image022.jpg' | relative_url }})
 
 Presun položky „Forming Express“ do pravého menu v rámci operácie formovania
 
-Po vytvorení databázy musí používateľ vybrať kartu „Režim simulácie MO“, aby odoslal problém na simuláciu. Ďalšie informácie o režime simulácie MO nájdete v [6.2. MO Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/). Akonáhle sa na karte „Simulácia dokončená“ zobrazí príslušná správa, môže používateľ v režime MO Post skontrolovať výsledky. Ďalšie informácie o režime MO Post nájdete v [ 6.3. MO Post layout.](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/).
+Po vytvorení databázy musí používateľ vybrať kartu „Režim simulácie MO“, aby odoslal problém na simuláciu. Ďalšie informácie o režime simulácie MO nájdete v [6.2. MO Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}). Akonáhle sa na karte „Simulácia dokončená“ zobrazí príslušná správa, môže používateľ v režime MO Post skontrolovať výsledky. Ďalšie informácie o režime MO Post nájdete v [ 6.3. MO Post layout.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }}).
 
 **Súvisiace témy:**
 
-[34.1. 2D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/)
+[34.1. 2D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }})
 
 [Promote Forming Express to Forming operation](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations.htm#Fig._6.6.4.4._Forming_express_operation_after_promoting_it_to_forming_operation)
 
-[6.2. MO Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. MO Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. MO Post layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. MO Post layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[33.1. 2D Forming Setup](/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/)
+[33.1. 2D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }})
 
-[33.2. 3D Forming Setup](/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/)
+[33.2. 3D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }})

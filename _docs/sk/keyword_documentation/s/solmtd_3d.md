@@ -51,4 +51,4 @@ The skyline solver uses the skyline storage method in conjunction with Gaussian 
   
 RELATED TOPICS  
 ---  
-Keywords: [SOLMTT (2D)](/docs/sk/keyword_documentation/s/solmtt/), [SOLMTT (3D)](/docs/sk/keyword_documentation/s/solmtt_3d/)
+Keywords: [SOLMTT (2D)]({{ '/docs/sk/keyword_documentation/s/solmtt/' | relative_url }}), [SOLMTT (3D)]({{ '/docs/sk/keyword_documentation/s/solmtt_3d/' | relative_url }})

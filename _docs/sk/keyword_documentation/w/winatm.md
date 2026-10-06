@@ -40,4 +40,4 @@ Keyword Format Example Velx, Vely Win(X1) Win(Y1) Win(NdataX) Win(NdataY) NumCrb
   
 RELATED TOPICS  
 ---  
-[Boundary Constraints](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/): [Diffusion windows](../../pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions.htm#14.4.1._Diffusion_with_the_environment_BCC_) Keywords: [ENVATM](/docs/sk/keyword_documentation/e/envatm/), [ACVCOF](/docs/sk/keyword_documentation/a/acvcof/), [LOCATM](/docs/sk/keyword_documentation/l/locatm/)
+[Boundary Constraints]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}): [Diffusion windows](../../pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions.htm#14.4.1._Diffusion_with_the_environment_BCC_) Keywords: [ENVATM]({{ '/docs/sk/keyword_documentation/e/envatm/' | relative_url }}), [ACVCOF]({{ '/docs/sk/keyword_documentation/a/acvcof/' | relative_url }}), [LOCATM]({{ '/docs/sk/keyword_documentation/l/locatm/' | relative_url }})

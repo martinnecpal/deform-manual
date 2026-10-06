@@ -41,7 +41,7 @@ title: "33.1. Nastavenie 2D tvárnenia"
 
 ## Typ geometrie
 
-V module 2D Forming je v súčasnosti možné nastaviť štyri typy geometrických modelov ([GEOTYP](/docs/en/keyword_documentation/g/geotyp/)), ako je znázornené na obr. 33.1.1.
+V module 2D Forming je v súčasnosti možné nastaviť štyri typy geometrických modelov ([GEOTYP]({{ '/docs/en/keyword_documentation/g/geotyp/' | relative_url }})), ako je znázornené na obr. 33.1.1.
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image001.jpg' | relative_url }})
 
@@ -99,7 +99,7 @@ Pridať materiál z okna Zoznam materiálov
 
 **Zloženie zmesi**
 
-Materiály typu „zmes“ ([MSTMTR](/docs/en/keyword_documentation/m/mstmtr/)) sa používajú v prípade, že sa v simulácii má modelovať fázová premena. Premenlivý materiál sa modeluje ako „zmes“ fáz, z ktorých sa skladá. Napríklad uhlíková oceľ sa môže modelovať ako zmes austenitu, perlitov, bainitu a martenzitu. Ak je definovaný zmesový materiál, je potrebné definovať pravidlá premeny, ktoré riadia premenu jednej fázy na druhú. (Pozri obr. 33.1.6.)
+Materiály typu „zmes“ ([MSTMTR]({{ '/docs/en/keyword_documentation/m/mstmtr/' | relative_url }})) sa používajú v prípade, že sa v simulácii má modelovať fázová premena. Premenlivý materiál sa modeluje ako „zmes“ fáz, z ktorých sa skladá. Napríklad uhlíková oceľ sa môže modelovať ako zmes austenitu, perlitov, bainitu a martenzitu. Ak je definovaný zmesový materiál, je potrebné definovať pravidlá premeny, ktoré riadia premenu jednej fázy na druhú. (Pozri obr. 33.1.6.)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image004.jpg' | relative_url }})
 
@@ -167,7 +167,7 @@ Okno s geometrickými primitívami pre rovinné deformácie a napätia
 
 **Skontrolujte**![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})
 
-Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Zobrazí sa okno „Skontrolujte a opravte geometriu“, ako je znázornené na obr. 33.1.14. Geometria sa opraví, ak obsahuje nejaké chyby, po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}), ako je znázornené na obr. 33.1.14. Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
+Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Zobrazí sa okno „Skontrolujte a opravte geometriu“, ako je znázornené na obr. 33.1.14. Geometria sa opraví, ak obsahuje nejaké chyby, po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}), ako je znázornené na obr. 33.1.14. Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image008.jpg' | relative_url }})
 
@@ -375,13 +375,13 @@ Okno nastavení siete v režime pre pokročilých
 
 **Materiál**
 
-Na obr. 33.1.26. je zobrazené okno materiálov. Používateľ môže priradiť požadovaný materiál zo zoznamu alebo ho importovať a uložiť zo súboru či knižnice. Používateľ môže tiež pridať nový materiál, a dokonca aj upravovať a odstraňovať materiály zo zoznamu priamo z okna materiálov objektu. Ďalšie informácie o tom, ako priradiť materiál, nájdete v [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/).
+Na obr. 33.1.26. je zobrazené okno materiálov. Používateľ môže priradiť požadovaný materiál zo zoznamu alebo ho importovať a uložiť zo súboru či knižnice. Používateľ môže tiež pridať nový materiál, a dokonca aj upravovať a odstraňovať materiály zo zoznamu priamo z okna materiálov objektu. Ďalšie informácie o tom, ako priradiť materiál, nájdete v [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image029.jpg' | relative_url }})
 
 Okno s materiálmi
 
-Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}); otvorí sa okno s materiálom, ako je znázornené na obrázku [Fig. 10.9.](../../pre_processor/10_material_data/10_material_data.htm#Fig._10.9._Edit_material_window). Požadované vlastnosti závisia od fyzikálnych javov simulovaných v programe DEFORM. Vlastnosti materiálu, ktoré musí používateľ špecifikovať, závisia od typov materiálov, ktoré používateľ využíva v simulácii. Ďalšie informácie nájdete v [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/).
+Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}); otvorí sa okno s materiálom, ako je znázornené na obrázku [Fig. 10.9.](../../pre_processor/10_material_data/10_material_data.htm#Fig._10.9._Edit_material_window). Požadované vlastnosti závisia od fyzikálnych javov simulovaných v programe DEFORM. Vlastnosti materiálu, ktoré musí používateľ špecifikovať, závisia od typov materiálov, ktoré používateľ využíva v simulácii. Ďalšie informácie nájdete v [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ### Okrajové podmienky
 
@@ -391,7 +391,7 @@ Na stránke „Okrajové podmienky“ môže používateľ priradiť objektu rô
 
 Okno s okrajovými podmienkami
 
-BCC sú rozdelené do kategórií [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/), [Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) a [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
+BCC sú rozdelené do kategórií [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
 
 ### Ovládanie pohybu
 
@@ -402,7 +402,7 @@ Ovládacie prvky pohybu je možné použiť na tuhé objekty a hraničné uzly o
 Počas simulácie sa viazané uzly budú pohybovať synchronizovane rýchlosťou a smerom definovanými ovládacími prvkami pohybu. (Pozri obr. 33.1.28.)
 
   
-Dva typy ovládacích prvkov pohybu, ktoré sú k dispozícii v rámci ovládacích prvkov pre posun, sú [Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/), [Force](/docs/en/pre_processor/15_movement_controls_definition/15_2_force/), [Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/), [Screw press](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/), [Mechanical press](/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/), [Hydraulic press](/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/), [Sliding Die](/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/) a [Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/). Ďalšie informácie nájdete v [15\. Movement controls settings.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+Dva typy ovládacích prvkov pohybu, ktoré sú k dispozícii v rámci ovládacích prvkov pre posun, sú [Speed]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }}), [Force]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_2_force/' | relative_url }}), [Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}), [Screw press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }}), [Mechanical press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }}), [Hydraulic press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/' | relative_url }}), [Sliding Die]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/' | relative_url }}) a [Path]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }}). Ďalšie informácie nájdete v [15\. Movement controls settings.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image022.jpg' | relative_url }})
 
@@ -410,7 +410,7 @@ Okno ovládania translačného pohybu
 
 **Rotačný pohyb**
 
-Rotačný pohyb je definovaný uhlovou rýchlosťou/krútiacim momentom okolo pevného stredu otáčania (pozri obr. 33.1.29.). Tento typ pohybu spôsobuje iba otáčanie. Pokiaľ nie je uvedené inak, posun je obmedzený. Rýchlosť otáčania sa nastavuje pomocou možnosti Spôsob riadenia a bod, okolo ktorého sa objekt otáča, sa nastavuje pomocou položky Stred rotačného pohybu. Ďalšie informácie nájdete v [15.9. Rotational movement.](/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/)
+Rotačný pohyb je definovaný uhlovou rýchlosťou/krútiacim momentom okolo pevného stredu otáčania (pozri obr. 33.1.29.). Tento typ pohybu spôsobuje iba otáčanie. Pokiaľ nie je uvedené inak, posun je obmedzený. Rýchlosť otáčania sa nastavuje pomocou možnosti Spôsob riadenia a bod, okolo ktorého sa objekt otáča, sa nastavuje pomocou položky Stred rotačného pohybu. Ďalšie informácie nájdete v [15.9. Rotational movement.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_9_rotational_movement/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image023.jpg' | relative_url }})
 
@@ -418,7 +418,7 @@ Ovládacie prvky pre rotačný pohyb okna
 
 **Krútivý pohyb**
 
-Ovládacie prvky pre torzný pohyb sa dajú použiť iba v prípade torzných modelov. Táto možnosť ovládania pohybu je aktívna iba pre DEFORM-2D. Nastavenia pohybu sú znázornené na obr. 33.1.30. Ďalšie informácie nájdete v [15.10. Torsional movement.](/docs/en/pre_processor/15_movement_controls_definition/15_10_torsional_movement/)
+Ovládacie prvky pre torzný pohyb sa dajú použiť iba v prípade torzných modelov. Táto možnosť ovládania pohybu je aktívna iba pre DEFORM-2D. Nastavenia pohybu sú znázornené na obr. 33.1.30. Ďalšie informácie nájdete v [15.10. Torsional movement.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_10_torsional_movement/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image024.jpg' | relative_url }})
 
@@ -426,10 +426,10 @@ Typ riadenia torzného pohybu
 
 **Pohyb pri zváraní trením**
 
-Ovládacie prvky pohybu pri zváraní trením sa dajú použiť iba v prípade 2,5D modelov zvárania trením. Táto možnosť ovládania pohybu je k dispozícii pre DEFORM-2D a je aktívna iba vtedy, ak je v nastaveniach simulácie vybraný typ geometrie „2,5D zváranie trením“. Tento pohyb možno použiť na definovanie pohybu mimo roviny. Ďalšie informácie nájdete v dokumente [15.11. Friction Welding movement](/docs/en/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/).
+Ovládacie prvky pohybu pri zváraní trením sa dajú použiť iba v prípade 2,5D modelov zvárania trením. Táto možnosť ovládania pohybu je k dispozícii pre DEFORM-2D a je aktívna iba vtedy, ak je v nastaveniach simulácie vybraný typ geometrie „2,5D zváranie trením“. Tento pohyb možno použiť na definovanie pohybu mimo roviny. Ďalšie informácie nájdete v dokumente [15.11. Friction Welding movement]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/' | relative_url }}).
 
   
-Ďalšie informácie o týchto ovládacích prvkoch nájdete v dokumente [15_Movement Controls Settings](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/).
+Ďalšie informácie o týchto ovládacích prvkoch nájdete v dokumente [15_Movement Controls Settings]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}).
 
 ### Nehnuteľnosť
 
@@ -444,7 +444,7 @@ Okno vlastností
 V okne „Initialize“ sú na inicializáciu k dispozícii niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posun, hustota, veľkosť zŕn mikrostruktúry a veľkosť častíc.
 
   
-Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 33.1.32. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne Initialize. V prípade stavových premenných, ako sú rýchlosť a posunutie, kde je k dispozícii toľko vstupných polí, koľko je rozmerov, musí používateľ definovať smerové hodnoty premenných v príslušných poliach a následným kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) sa vypočíta celková rýchlosť a posunutie. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien Uzol a Prvok (pozri obr. 33.1.33. a obr. 33.2.34.). Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Uzel“ a „Prvok“, nájdete v [17.1. Object node variables](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [17.2. Object element variables.](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 33.1.32. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne Initialize. V prípade stavových premenných, ako sú rýchlosť a posunutie, kde je k dispozícii toľko vstupných polí, koľko je rozmerov, musí používateľ definovať smerové hodnoty premenných v príslušných poliach a následným kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) sa vypočíta celková rýchlosť a posunutie. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien Uzol a Prvok (pozri obr. 33.1.33. a obr. 33.2.34.). Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Uzel“ a „Prvok“, nájdete v [17.1. Object node variables]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) a [17.2. Object element variables.]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image028.jpg' | relative_url }})
 
@@ -472,7 +472,7 @@ Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na s
 
 **Umiestňovanie objektov**![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 33.1.36. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 33.1.36. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image029.jpg' | relative_url }})
 
@@ -496,7 +496,7 @@ Plánované časové okno na určovanie polohy
 
 **Používateľ**: Pri operácii „Forming“ je štandardne vybrané rádio tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo „Pridať“, ako je znázornené na obr. 33.1.38.
 
-Ďalšie informácie nájdete na stránke [, 20. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+Ďalšie informácie nájdete na stránke [, 20. Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image040.jpg' | relative_url }})
 
@@ -524,22 +524,22 @@ Ovládacie prvky simulácie v režime s návodom
 
 **Počet simulačných krokov (NSTEP)**
 
-Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú spustiť od počiatočného čísla kroku. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí príkaz na zastavenie simulácie alebo ak simulácia nenarazí na problém. Napríklad, ak je počiatočné číslo kroku -35 ([NSTART](/docs/en/keyword_documentation/n/nstart/)) a je špecifikovaných 30 krokov ([NSTEP](/docs/en/keyword_documentation/n/nstep/)), simulácia sa zastaví po 65. kroku, pokiaľ sa skôr nespustí iný príkaz na zastavenie.
+Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú spustiť od počiatočného čísla kroku. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí príkaz na zastavenie simulácie alebo ak simulácia nenarazí na problém. Napríklad, ak je počiatočné číslo kroku -35 ([NSTART]({{ '/docs/en/keyword_documentation/n/nstart/' | relative_url }})) a je špecifikovaných 30 krokov ([NSTEP]({{ '/docs/en/keyword_documentation/n/nstep/' | relative_url }})), simulácia sa zastaví po 65. kroku, pokiaľ sa skôr nespustí iný príkaz na zastavenie.
 
 **Krok pri ukladaní (STPINC)**
 
-Krok prírastku ([STPINC](/docs/en/keyword_documentation/s/stpinc/)), ktorý sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nemusí sa nutne uložiť do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať viac úložného priestoru.
+Krok prírastku ([STPINC]({{ '/docs/en/keyword_documentation/s/stpinc/' | relative_url }})), ktorý sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nemusí sa nutne uložiť do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať viac úložného priestoru.
 
 **Primárny čip (PDIE)**
 
-Primárna matrica ([PDIE](/docs/en/keyword_documentation/p/pdie/)) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad brzdná vzdialenosť založená na zdvihu primárnej matrice. Keď zdvih objektu definovaného ako primárna matrica dosiahne hodnotu posunu primárnej matrice, simulácia sa zastaví bez ohľadu na to, či boli špecifikované ďalšie kroky. Funkcia „Krok podľa zdvihu“ určuje veľkosť kroku na základe pohybu primárnej matrice. Primárna matrica sa zvyčajne priraďuje k objektu, ktorý je najviac riadený kováčskym strojom. Napríklad matrica pripevnená k piestu mechanického lisu by bola označená ako primárny objekt.
+Primárna matrica ([PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }})) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad brzdná vzdialenosť založená na zdvihu primárnej matrice. Keď zdvih objektu definovaného ako primárna matrica dosiahne hodnotu posunu primárnej matrice, simulácia sa zastaví bez ohľadu na to, či boli špecifikované ďalšie kroky. Funkcia „Krok podľa zdvihu“ určuje veľkosť kroku na základe pohybu primárnej matrice. Primárna matrica sa zvyčajne priraďuje k objektu, ktorý je najviac riadený kováčskym strojom. Napríklad matrica pripevnená k piestu mechanického lisu by bola označená ako primárny objekt.
 
-**Ovládanie krokového prírastku ([DSMAX](/docs/en/keyword_documentation/d/dsmax/)/[DTMAX](/docs/en/keyword_documentation/d/dtmax/))**
+**Ovládanie krokového prírastku ([DSMAX]({{ '/docs/en/keyword_documentation/d/dsmax/' | relative_url }})/[DTMAX]({{ '/docs/en/keyword_documentation/d/dtmax/' | relative_url }}))**
 
 Veľkosť kroku riešenia je možné riadiť časovým krokom alebo posunom primárnej matrice. Ak je špecifikovaný zdvih na krok, primárna matrica sa v každom časovom kroku posunie o zadanú hodnotu. Celkový posun primárneho lisovacieho nástroja bude rovný posunu na krok vynásobenému celkovým počtom krokov. Ak je špecifikovaný čas na krok, použije sa časový interval na krok. Posun lisovacieho nástroja na krok bude rovný časovému kroku vynásobenému rýchlosťou lisovacieho nástroja.
 
   
-Nastavenia krokových regulátorov založených na teplote ([DTPMAX](/docs/en/keyword_documentation/d/dtpmax/)) tiež ovplyvňujú časový krok. Účelom týchto regulátorov je určiť časový krok simulácie, ktorá je riadená deformáciou vyvolanou teplotou.
+Nastavenia krokových regulátorov založených na teplote ([DTPMAX]({{ '/docs/en/keyword_documentation/d/dtpmax/' | relative_url }})) tiež ovplyvňujú časový krok. Účelom týchto regulátorov je určiť časový krok simulácie, ktorá je riadená deformáciou vyvolanou teplotou.
 
 Definícia riadenia krokového prírastku bola rozšírená tak, aby zahŕňala krokové funkcie závislé od času aj od zdvihu; tieto možnosti sú k dispozícii v režime Expert. To znamená, že veľkosť kroku (či už ide o čas na krok alebo zdvih na krok) je teraz možné definovať ako funkciu času alebo zdvihu. Táto funkcia umožňuje v prípade potreby dosiahnuť jemnejšie rozlíšenie uložených informácií o modeli. (typicky smerom ku koncu zdvihu, kde môžu nastať prudké zmeny zaťaženia formy, plnenia dutiny alebo tvorby prebytku materiálu)
 
@@ -559,7 +559,7 @@ Ovládacie prvky pre kroky a ukončenie slúžia na určenie časového kroku, c
   
 Tu je možné zadať podmienky spracovania, ako napríklad teplotu okolia a konvekčný koeficient.
 
-Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ## Vytvoriť databázu
 
@@ -581,10 +581,10 @@ Okno „Vytvoriť databázu“
 
 **Súvisiace témy:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[2D MO Basic Labs](/docs/en/labs/basic_labs/2d_labs/2d_labs/)
+[2D MO Basic Labs]({{ '/docs/en/labs/basic_labs/2d_labs/2d_labs/' | relative_url }})

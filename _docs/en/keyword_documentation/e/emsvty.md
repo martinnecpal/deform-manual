@@ -43,4 +43,4 @@ Applicable simulation types: Heat Transfer, Non-Isothermal Deformation
   
 RELATED TOPICS  
 ---  
-Keywords: [BLZMAN](/docs/en/keyword_documentation/b/blzman/), [ENVTMP](/docs/en/keyword_documentation/e/envtmp/)
+Keywords: [BLZMAN]({{ '/docs/en/keyword_documentation/b/blzman/' | relative_url }}), [ENVTMP]({{ '/docs/en/keyword_documentation/e/envtmp/' | relative_url }})

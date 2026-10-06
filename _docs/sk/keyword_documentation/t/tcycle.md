@@ -25,8 +25,8 @@ DwellTime |  Time for dwell |  0.0
   
 DEFINITION  
 ---  
-TCYCLE calculates remaining cycle time for a crank press and assigns that value to [DTMAX](/docs/sk/keyword_documentation/d/dtmax/)  
+TCYCLE calculates remaining cycle time for a crank press and assigns that value to [DTMAX]({{ '/docs/sk/keyword_documentation/d/dtmax/' | relative_url }})  
   
 REMARKS  
 ---  
-TCYCLE is an action keyword and is mainly for internal use. It is used in the [cogging](/docs/sk/operation_templates/29_cogging/29_introduction_to_cogging/) template to automatically calculate heat transfer time (cycle time left after bite deformation time).
+TCYCLE is an action keyword and is mainly for internal use. It is used in the [cogging]({{ '/docs/sk/operation_templates/29_cogging/29_introduction_to_cogging/' | relative_url }}) template to automatically calculate heat transfer time (cycle time left after bite deformation time).

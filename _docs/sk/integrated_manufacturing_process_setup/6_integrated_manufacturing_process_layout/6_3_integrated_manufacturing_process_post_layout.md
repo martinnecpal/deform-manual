@@ -171,7 +171,7 @@ Post Tools window; (a) For 2D (b) For 3D
 Some of the most commonly used state variables like ![]({{ '/assets/icons/post_icons/mo_disp_sv_icon.jpg' | relative_url }}) Total displacement, ![]({{ '/assets/icons/post_icons/mo_vel_sv_icon.jpg' | relative_url }}) (Total Velocity), ![]({{ '/assets/icons/post_icons/mo_strain_sv_icon.jpg' | relative_url }}) (Effective strain), ![]({{ '/assets/icons/post_icons/mo_strain_rate_sv_icon.jpg' | relative_url }}) (Effective strain rate), ![]({{ '/assets/icons/post_icons/mo_eff_stress_sv_icon.jpg' | relative_url }}) (Effective stress), ![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}) (Temperature) and ![]({{ '/assets/icons/post_icons/mo_damage_sv_icon.jpg' | relative_url }}) (Damage) shortcut icons can be used to view contour plot for the objects displaying on the graphics window. ![]({{ '/assets/icons/post_icons/mo_clear_sv_icon.jpg' | relative_url }}) (Clear State Variable) icon can be used to clear the selected state variable for the objects.
 
   
-More state variables can be accessed using ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) (State variables setup) post tool bar icon as shown in Fig. 6.3.11. For more information on state variables different state variable groups and there plot options refer section [26.6.3. State Variables](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/) [.](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/)
+More state variables can be accessed using ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) (State variables setup) post tool bar icon as shown in Fig. 6.3.11. For more information on state variables different state variable groups and there plot options refer section [26.6.3. State Variables]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }}) [.]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }})
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_3_integrated_manufacturing_process_post_layout/6_3_image012.jpg' | relative_url }})
 
@@ -181,35 +181,35 @@ State variables window
 
 MO post provides post processor tools (See Fig. 6.3.10.) like Point tracking, Flownet, Summary graphs, Load-Stroke graphs, Animation setup, 3D viewer (for 2D only), Mirroring (for 3D only) and slicing (for 3D only). These tools can be used to track the state variables variation at specific key locations, study the material flow behavior, know the important state variables min, max values variation throughout the simulation, predict the load, studying the lap areas and presentation.
 
-  * **Summary**![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}) [2D,3D]: Gives the Summary graphs for important state variables verses simulation time. For Detailed information refer the section [26.6.6. Summary.](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_summary/)
+  * **Summary**![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}) [2D,3D]: Gives the Summary graphs for important state variables verses simulation time. For Detailed information refer the section [26.6.6. Summary.]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_summary/' | relative_url }})
 
   * **Load** -**Stroke**![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) [2D,3D]: 
 
-Gives the options to plot the Load, Speed, Torque, Angular velocity, Energy and Volume verses Time, Stroke, Step and Force. For Detailed information refer the section [26.6.7. Load Stroke.](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_7_load_stroke/)
+Gives the options to plot the Load, Speed, Torque, Angular velocity, Energy and Volume verses Time, Stroke, Step and Force. For Detailed information refer the section [26.6.7. Load Stroke.]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_7_load_stroke/' | relative_url }})
 
   * **Point tracking**![]({{ '/assets/icons/post_icons/mo_point_tracking_icon.jpg' | relative_url }}) [2D,3D]:
 
-Using this state variable variation at any particular fixed or moving location in the objects can be tracked. For detailed information refer the section [26.6.9. Point Tracking.](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_9_point_tracking/)
+Using this state variable variation at any particular fixed or moving location in the objects can be tracked. For detailed information refer the section [26.6.9. Point Tracking.]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_9_point_tracking/' | relative_url }})
 
   * **Flownet**![]({{ '/assets/icons/post_icons/mo_flownet_icon.jpg' | relative_url }}) [2D,3D]:
 
-Using this user can create a grid pattern across the deforming object and observe the irregularities in the grain structure and surface defects such as folds. For detailed information refer the section [26.6.12. Flownet Tracking.](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/)
+Using this user can create a grid pattern across the deforming object and observe the irregularities in the grain structure and surface defects such as folds. For detailed information refer the section [26.6.12. Flownet Tracking.]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/' | relative_url }})
 
   * **Animation setup** ![]({{ '/assets/icons/post_icons/mo_animation_setup_icon.jpg' | relative_url }})[2D,3D]: 
 
-Using this user can create simulation animation files in HTML, WMV, AVI and PPT formats. It also provides different options to change animation saving settings. For detailed information refer the section [26.6.19. Animation Setup](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_19_animation_setup/).
+Using this user can create simulation animation files in HTML, WMV, AVI and PPT formats. It also provides different options to change animation saving settings. For detailed information refer the section [26.6.19. Animation Setup]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_19_animation_setup/' | relative_url }}).
 
   * **3D viewer**![]({{ '/assets/icons/post_icons/mo_3d_view_icon.jpg' | relative_url }})[3D]:
 
-Using this user can view the revolved or extruded 3d view of the 2d objects. For detailed information refer the section [26.6.20. 3D Viewer.](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup/)
+Using this user can view the revolved or extruded 3d view of the 2d objects. For detailed information refer the section [26.6.20. 3D Viewer.]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup/' | relative_url }})
 
   * **Mirroring**![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }})[3D]:
 
-Using this user can visualize the full part in case of symmetric problem simulation. For detailed information refer the section [26.6.15. Mirroring Symmetry.](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_15_mirror_symmetry/)
+Using this user can visualize the full part in case of symmetric problem simulation. For detailed information refer the section [26.6.15. Mirroring Symmetry.]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_15_mirror_symmetry/' | relative_url }})
 
   * **Slicing**![]({{ '/assets/icons/post_icons/mo_slice.jpg' | relative_url }})[3D]:
 
-Using this user can section the objects at various depths and observe the state variable contours and defects in the cut area. For detailed information refer the section [26.6.16. Slicing.](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/)
+Using this user can section the objects at various depths and observe the state variable contours and defects in the cut area. For detailed information refer the section [26.6.16. Slicing.]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/' | relative_url }})
 
 ## Output tree
 
@@ -224,7 +224,7 @@ User can select the object to be visible display in graphics window by left clic
 Output Tree
 
   
-**Operation tree tool bar options:** Using these options user can switch on or off the object, geometry, mesh, transparency, backface and contacts display. For detailed information refer the section [6.1.4. Operation Tree Tool Bar options](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Operation_Tree_Tool_bar_options) from [Chapter 6.1. Intergrated Manufacturing process (MO) Pre-processor Layout.](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+**Operation tree tool bar options:** Using these options user can switch on or off the object, geometry, mesh, transparency, backface and contacts display. For detailed information refer the section [6.1.4. Operation Tree Tool Bar options](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Operation_Tree_Tool_bar_options) from [Chapter 6.1. Intergrated Manufacturing process (MO) Pre-processor Layout.]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
 **Database tab:**
 
@@ -232,26 +232,26 @@ This list the number of DB's available in the current project folder, it will be
 
 **Related Topics:**
 
-[Post -processor](/docs/sk/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[Post -processor]({{ '/docs/sk/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})
 
-[26.6.6.. Simulation summary](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_summary/)
+[26.6.6.. Simulation summary]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_summary/' | relative_url }})
 
-[26.6.3. State Variables](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/)
+[26.6.3. State Variables]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }})
 
-[26.6.7. Load Stroke](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_7_load_stroke/)
+[26.6.7. Load Stroke]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_7_load_stroke/' | relative_url }})
 
-[26.6.9. Point Tracking](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_9_point_tracking/)
+[26.6.9. Point Tracking]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_9_point_tracking/' | relative_url }})
 
-[26.6.12.. Flownet](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/)
+[26.6.12.. Flownet]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_12_flownet_tracking/' | relative_url }})
 
-[26.6.8. State variables distribution b/w two points](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/)
+[26.6.8. State variables distribution b/w two points]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_8_state_variables_between_2_points/' | relative_url }})
 
-[26.6.15. Mirroring](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_15_mirror_symmetry/)
+[26.6.15. Mirroring]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_15_mirror_symmetry/' | relative_url }})
 
-[26.6.17. Data Extraction](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_17_data_extraction/)
+[26.6.17. Data Extraction]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_17_data_extraction/' | relative_url }})
 
-[26.6.16. Slicing](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/)
+[26.6.16. Slicing]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/' | relative_url }})
 
-[26.6.19. Animation controls and saving](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_19_animation_setup/)
+[26.6.19. Animation controls and saving]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_19_animation_setup/' | relative_url }})
 
 [Operation Tree Tool Bar options](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Operation_Tree_Tool_bar_options)

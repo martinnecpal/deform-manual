@@ -31,4 +31,4 @@ CURSIM is used in multiple operations to determine the position of current simul
   
 RELATED TOPICS  
 ---  
-Keyword: [SIMNAM](/docs/en/keyword_documentation/s/simnam/), [OPRNAM](/docs/en/keyword_documentation/o/oprnam/)
+Keyword: [SIMNAM]({{ '/docs/en/keyword_documentation/s/simnam/' | relative_url }}), [OPRNAM]({{ '/docs/en/keyword_documentation/o/oprnam/' | relative_url }})

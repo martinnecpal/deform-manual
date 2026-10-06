@@ -29,4 +29,4 @@ The skyline solver uses the skyline storage method in conjunction with Gaussian 
   
 RELATED TOPICS  
 ---  
-Keyword: [SOLMTD (2D)](/docs/en/keyword_documentation/s/solmtd/), [SOLMTD (3D)](/docs/en/keyword_documentation/s/solmtd_3d/)
+Keyword: [SOLMTD (2D)]({{ '/docs/en/keyword_documentation/s/solmtd/' | relative_url }}), [SOLMTD (3D)]({{ '/docs/en/keyword_documentation/s/solmtd_3d/' | relative_url }})

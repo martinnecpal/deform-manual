@@ -65,7 +65,7 @@ Note: To replace an object geometry definition without deleting movement control
 
 ## Object name (OBJNAM)
 
-The workpiece and each piece of tooling must be identified as a unique object and assigned an object number and name. (See Fig. 11.3.) The object name ([OBJNAM](/docs/en/keyword_documentation/o/objnam/)) is a string of up to 64 characters. It is highly recommended that it be set to something meaningful (e.g. punch, die, workpiece).
+The workpiece and each piece of tooling must be identified as a unique object and assigned an object number and name. (See Fig. 11.3.) The object name ([OBJNAM]({{ '/docs/en/keyword_documentation/o/objnam/' | relative_url }})) is a string of up to 64 characters. It is highly recommended that it be set to something meaningful (e.g. punch, die, workpiece).
 
 ![]({{ '/assets/images/pre-processor/11_object_general_definition/11_image003.jpg' | relative_url }})
 
@@ -78,18 +78,18 @@ Initial conditions can be specified for any object related state variable in DEF
 For heat treatment problems with variable carbon content in the workpiece, dominant atom content may also be specified. For meshed objects, initial object temperature and initial dominant atom content are specified by assigning values to all the nodes by selecting the Object ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) object Nodes icon (![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}))![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Diffusion tab.  
 When a mesh is generated nodes and elements state variables will have their values initialized respectively based on the conditions defined for the object.  
 Uniform object temperature can be specified in respective object window. Nodal values may also be specified by selecting the Object ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Object Nodes icon (![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}))![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Thermal tab. Values for an entire object can be set using the initialize ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) icon next to the appropriate data field.  
-For non-meshed rigid tools, a constant object temperature may be set using the reference temperature ( [REFTMP](/docs/en/keyword_documentation/r/reftmp/)) under the [Objects Properties.](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+For non-meshed rigid tools, a constant object temperature may be set using the reference temperature ( [REFTMP]({{ '/docs/en/keyword_documentation/r/reftmp/' | relative_url }})) under the [Objects Properties.]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
 Note:  
-Using this approximation will tend to over-estimate temperature loss as the die surface will not heat up during the simulation. This effect can be compensated for by reducing the inter-object heat transfer coefficient ([IHTCOF](/docs/en/keyword_documentation/i/ihtcof/)).
+Using this approximation will tend to over-estimate temperature loss as the die surface will not heat up during the simulation. This effect can be compensated for by reducing the inter-object heat transfer coefficient ([IHTCOF]({{ '/docs/en/keyword_documentation/i/ihtcof/' | relative_url }})).
 
   
 For porous object relative density must be specified as described in porous object type using the Assign density button. This initializes the relative density value for all the elements by the value defined. Using the Element data values we can specify the Objects ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Object Element icon (![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) ) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Deformation ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) General tab.  
-For any object defined as a mixture, the initial volume fraction ([VOLFC](/docs/en/keyword_documentation/v/volfc/)) and maximum volume fraction transformed ([VOLFS](/docs/en/keyword_documentation/v/volfs/)) must be assigned for all volume fractions. In general [VOLFC](/docs/en/keyword_documentation/v/volfc/) and [VOLFS](/docs/en/keyword_documentation/v/volfs/) should be initialized to the same value. The volume fraction can be defined by selecting the Object ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Objects Element icon (![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }})) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Transformation tab.
+For any object defined as a mixture, the initial volume fraction ([VOLFC]({{ '/docs/en/keyword_documentation/v/volfc/' | relative_url }})) and maximum volume fraction transformed ([VOLFS]({{ '/docs/en/keyword_documentation/v/volfs/' | relative_url }})) must be assigned for all volume fractions. In general [VOLFC]({{ '/docs/en/keyword_documentation/v/volfc/' | relative_url }}) and [VOLFS]({{ '/docs/en/keyword_documentation/v/volfs/' | relative_url }}) should be initialized to the same value. The volume fraction can be defined by selecting the Object ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Objects Element icon (![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }})) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Transformation tab.
 
 ## Object type (OBJTYP)
 
-The object type ([OBJTYP](/docs/en/keyword_documentation/o/objtyp/)) defines if and how deformation is modelled for each individual object in a DEFORM problem. 
+The object type ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) defines if and how deformation is modelled for each individual object in a DEFORM problem. 
 
 Below are the different object type available in DEFORM: 
 
@@ -113,7 +113,7 @@ Below are the different object type available in DEFORM:
 
 ### Plastic [2D, 3D]
 
-Plastic objects are modelled as rigid-plastic or rigid-viscoplastic material depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)). The material deforms plastically beyond the limiting strain rate. The plastic material behaviour of the object is specified with a material flow stress function or flow stress data ([FSTRES](/docs/en/keyword_documentation/f/fstres/)).  
+Plastic objects are modelled as rigid-plastic or rigid-viscoplastic material depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). The material deforms plastically beyond the limiting strain rate. The plastic material behaviour of the object is specified with a material flow stress function or flow stress data ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})).  
   
 **Applications:**  
 When used to model workpiece, provides very good simulation of real material behavior. Accurately captures strain rate sensitivity.  
@@ -123,8 +123,8 @@ Does not model elastic recovery (spring back) and is therefore inappropriate for
 
 ### Elastic [2D, 3D]
 
-The elastic material behaviour is specified with Young's modulus ([YOUNG](/docs/en/keyword_documentation/y/young/)) and Poisson's ratio ([POISON](/docs/en/keyword_documentation/p/poison/)). Elastic objects are used if the knowledge of the tooling stress and deflection are important throughout the process. If maximum stress or deflection information is required for die stress, it is recommended that rigid dies be used for the deformation simulation, then a single step die stress simulation be used.  
-Refer to the die stress 3D - [3D Die stress setup](/docs/en/operation_templates/30_die_stress/30_2_3d_die_stress_setup/) , 2D-  [2D Die Stress Analysis Theory](/docs/en/operation_templates/30_die_stress/2d_die_stress_analysis_theory/) and [Die Stress study](/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/) [ labs](/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/) in the online help for more information. For 3D at this time a fully coupled elastic tool with plastic workpiece analysis is required, to be recommended to use coupled die stress analysis as explained in [Coupled Die stress Analysis](/docs/en/operation_templates/30_die_stress/coupled_die_stress_analysis/).  
+The elastic material behaviour is specified with Young's modulus ([YOUNG]({{ '/docs/en/keyword_documentation/y/young/' | relative_url }})) and Poisson's ratio ([POISON]({{ '/docs/en/keyword_documentation/p/poison/' | relative_url }})). Elastic objects are used if the knowledge of the tooling stress and deflection are important throughout the process. If maximum stress or deflection information is required for die stress, it is recommended that rigid dies be used for the deformation simulation, then a single step die stress simulation be used.  
+Refer to the die stress 3D - [3D Die stress setup]({{ '/docs/en/operation_templates/30_die_stress/30_2_3d_die_stress_setup/' | relative_url }}) , 2D-  [2D Die Stress Analysis Theory]({{ '/docs/en/operation_templates/30_die_stress/2d_die_stress_analysis_theory/' | relative_url }}) and [Die Stress study]({{ '/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/' | relative_url }}) [ labs]({{ '/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/' | relative_url }}) in the online help for more information. For 3D at this time a fully coupled elastic tool with plastic workpiece analysis is required, to be recommended to use coupled die stress analysis as explained in [Coupled Die stress Analysis]({{ '/docs/en/operation_templates/30_die_stress/coupled_die_stress_analysis/' | relative_url }}).  
   
 **Applications:**  
 When used to model tooling, the elastic model can provide information on tool stress and deflection. Useful in rare situations when tooling deflection can have a significant influence on the shape of the part.  
@@ -135,7 +135,7 @@ If yield stress for the tooling is exceeded, stress and deflection results will 
 ### Elasto-plastic (Ela-Pla) [2D, 3D]
 
 Elasto-plastic objects are treated as elastic objects until the yield point is reached.  
-Then, any portions of the object that reach the yield point are treated as plastic, while the remainder of the object is treated as elastic. In the Elasto-plastic deformation the total strain in the object is a combination of elastic strain and non-elastic strain. The non-elastic strain consists of plastic strain, creep strain, thermal strain and transformation strain depending on the characteristics of materials. For more details related to material model refer the Chapter [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/). In the case of brick elements, the Elasto-plastic model is valid for all levels of strain.
+Then, any portions of the object that reach the yield point are treated as plastic, while the remainder of the object is treated as elastic. In the Elasto-plastic deformation the total strain in the object is a combination of elastic strain and non-elastic strain. The non-elastic strain consists of plastic strain, creep strain, thermal strain and transformation strain depending on the characteristics of materials. For more details related to material model refer the Chapter [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}). In the case of brick elements, the Elasto-plastic model is valid for all levels of strain.
 
 Three element formulations are available for the elasto-plastic object type.
 
@@ -158,7 +158,7 @@ Generally, takes long solution time, convergence behaviour is greatly influence 
 
 ### Porous [2D, 3D]
 
-Porous objects are treated the same as plastic objects (compressible rigid-viscoplastic materials) except that the material density is calculated and updated as part of the simulation. The material behavior is modelled similar to plastic objects but the model includes the compressibility of the material in the formulation. The limiting strain rate ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)) and the flow stress ([FSTRES](/docs/en/keyword_documentation/f/fstres/)) must be specified at the fully dense state. The material density is specified at each element ([DENSTY](/docs/en/keyword_documentation/d/densty/)). Objects with changing material densities such as materials used in powder forming, should be modelled as Porous objects. The only iteration method currently available for the porous material is the direct solution method. This method does not have fast convergence capabilities, subsequently a porous simulation may take longer than a comparable plastic simulation.
+Porous objects are treated the same as plastic objects (compressible rigid-viscoplastic materials) except that the material density is calculated and updated as part of the simulation. The material behavior is modelled similar to plastic objects but the model includes the compressibility of the material in the formulation. The limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})) and the flow stress ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})) must be specified at the fully dense state. The material density is specified at each element ([DENSTY]({{ '/docs/en/keyword_documentation/d/densty/' | relative_url }})). Objects with changing material densities such as materials used in powder forming, should be modelled as Porous objects. The only iteration method currently available for the porous material is the direct solution method. This method does not have fast convergence capabilities, subsequently a porous simulation may take longer than a comparable plastic simulation.
 
 For the sintering material models available in DEFORM refer [10.12.7. Sintering Driving Force Model.](../10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data.htm#10.12.7._Sintering_Driving_Force_model)
 
@@ -179,7 +179,7 @@ Is not designed to model loose powder compaction processes.
 
 ### Rigid [2D, 3D]
 
-Rigid objects are modelled as non-deformable materials. In the deformation analysis, the object is represented by the geometric profile ([DIEGEO](/docs/en/keyword_documentation/d/diegeo/)). Deformation solution data available for rigid objects include object stroke, load, and velocity. The mesh for the rigid object is used only for thermal, transformation, and diffusion calculations.  
+Rigid objects are modelled as non-deformable materials. In the deformation analysis, the object is represented by the geometric profile ([DIEGEO]({{ '/docs/en/keyword_documentation/d/diegeo/' | relative_url }})). Deformation solution data available for rigid objects include object stroke, load, and velocity. The mesh for the rigid object is used only for thermal, transformation, and diffusion calculations.  
   
 **Applications:**  
 When used to model tooling, increases simulation speed (over elastic tooling) by reducing the number of deformable objects, and hence the number of equations which must be solved. Negligible loss of accuracy for typical simulations where the tools have a much higher yield stress than the workpiece.  
@@ -189,7 +189,7 @@ Stress and deflection data for the dies is not available during deformation. Thi
 
 ### Hyperelastic [2D,3D]
 
-A hyperelastic material behaviour is specified with the hyperelastic ([HYPREL](/docs/en/keyword_documentation/h/hyprel/)) object type. A hyperelastic material is a type of constitutive model for ideally elastic material for which the stress-strain relationship derives from a strain energy density function. Hyperelastic objects are used for applications like rubber pad forming and when deforming certain polymer objects. User can select this option if the object type is hyper-elastic. In DEFORM, Neo-Hookean and Mooney-Rivlin are the two hyperelastic constitutive models provided to simulate hyperelasticity.  
+A hyperelastic material behaviour is specified with the hyperelastic ([HYPREL]({{ '/docs/en/keyword_documentation/h/hyprel/' | relative_url }})) object type. A hyperelastic material is a type of constitutive model for ideally elastic material for which the stress-strain relationship derives from a strain energy density function. Hyperelastic objects are used for applications like rubber pad forming and when deforming certain polymer objects. User can select this option if the object type is hyper-elastic. In DEFORM, Neo-Hookean and Mooney-Rivlin are the two hyperelastic constitutive models provided to simulate hyperelasticity.  
   
 **Applications**  
 Rubber pad forming, deforming certain polymer objects, etc.  
@@ -227,12 +227,12 @@ User has been provided with an option to customize the plastic material behaviou
 
 ## Primary Die (PDIE)
 
-The primary die ([PDIE](/docs/en/keyword_documentation/p/pdie/)) specifies the primary object for the simulation. The primary object is usually assigned to the object most closely controlled by the forming machinery.  
+The primary die ([PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }})) specifies the primary object for the simulation. The primary object is usually assigned to the object most closely controlled by the forming machinery.  
 For example, the die attached to the ram of a mechanical press would be designated as the primary die. Characteristics of the primary die can be used to control various aspects of a simulation including:
 
-  * Simulation time step size ([DSMAX](/docs/en/keyword_documentation/d/dsmax/))
+  * Simulation time step size ([DSMAX]({{ '/docs/en/keyword_documentation/d/dsmax/' | relative_url }}))
   * Object movement ([MOVCTL](../../keyword_documentation/m/movctl_\(2d\).htm))
-  * Simulation termination criteria ([SMAX](/docs/en/keyword_documentation/s/smax/), [VMIN](/docs/en/keyword_documentation/v/vmin/) and [LMAX](/docs/en/keyword_documentation/l/lmax/))
+  * Simulation termination criteria ([SMAX]({{ '/docs/en/keyword_documentation/s/smax/' | relative_url }}), [VMIN]({{ '/docs/en/keyword_documentation/v/vmin/' | relative_url }}) and [LMAX]({{ '/docs/en/keyword_documentation/l/lmax/' | relative_url }}))
 
 The primary die is defined in using a check box (See Fig. 11.3.). Only one object can be defined as the primary die.
 
@@ -254,28 +254,28 @@ User can save the object data to library and saved file can be imported back by 
 
 **Related Topics:**
 
-[9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+[9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[10\. Material Properties](/docs/en/pre_processor/10_material_data/10_material_data/)
+[10\. Material Properties]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[12\. Geometry Modelling](/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/)
+[12\. Geometry Modelling]({{ '/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})
 
-[13\. Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/)
+[13\. Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[15\. Movement Controls Settings](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[15\. Movement Controls Settings]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[16\. Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+[16\. Object Properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/)
+[17\. Object Data Initialize]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }})
 
-[18\. Advanced Object Data Definition](/docs/en/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/)
+[18\. Advanced Object Data Definition]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/' | relative_url }})
 
-[19\. Object positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+[19\. Object positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
-[20\. Inter-Object Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[20\. Inter-Object Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-[21\. Database Generation](/docs/en/pre_processor/21_database_generation/21_database_generation/)
+[21\. Database Generation]({{ '/docs/en/pre_processor/21_database_generation/21_database_generation/' | relative_url }})
 
-[22\. Convert 2D to 3D](/docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/)
+[22\. Convert 2D to 3D]({{ '/docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/' | relative_url }})

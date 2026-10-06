@@ -52,4 +52,4 @@ The Permeability is used in simulations of induction heating.
   
 RELATED TOPICS  
 ---  
-Material Data: [Electromagnetic Data](../../pre_processor/10_material_data/10_8_elec_mag_data) Keywords:[ ELRST](/docs/sk/keyword_documentation/e/elrst/), [PMITT](/docs/sk/keyword_documentation/p/pmitt/)
+Material Data: [Electromagnetic Data](../../pre_processor/10_material_data/10_8_elec_mag_data) Keywords:[ ELRST]({{ '/docs/sk/keyword_documentation/e/elrst/' | relative_url }}), [PMITT]({{ '/docs/sk/keyword_documentation/p/pmitt/' | relative_url }})

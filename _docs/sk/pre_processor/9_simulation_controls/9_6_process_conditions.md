@@ -73,11 +73,11 @@ Podmienky spracovania s využitím prenosu tepla; (a) pre 2D (b) pre 3D
 
   * **Teplota okolia (ENVTMP)**
 
-Teplota okolia ([ENVTMP](/docs/sk/keyword_documentation/e/envtmp/)) sa používa pri výpočtoch prenosu tepla sálaním a konvekciou a predstavuje teplotu priestoru, v ktorom prebieha modelovaný proces. Teplotu okolia je možné zadať ako konštantu alebo ako funkciu času. Predpokladá sa, že k prenosu tepla na túto teplotu dochádza z akýchkoľvek uzlov, ktoré nie sú v kontakte s iným objektom. (Pokiaľ sa nepoužívajú okná na výmenu tepla).
+Teplota okolia ([ENVTMP]({{ '/docs/sk/keyword_documentation/e/envtmp/' | relative_url }})) sa používa pri výpočtoch prenosu tepla sálaním a konvekciou a predstavuje teplotu priestoru, v ktorom prebieha modelovaný proces. Teplotu okolia je možné zadať ako konštantu alebo ako funkciu času. Predpokladá sa, že k prenosu tepla na túto teplotu dochádza z akýchkoľvek uzlov, ktoré nie sú v kontakte s iným objektom. (Pokiaľ sa nepoužívajú okná na výmenu tepla).
 
   * **Koeficient konvekcie (CNVCOF)**
 
-Koeficient konvekcie ([CNVCOF](/docs/sk/keyword_documentation/c/cnvcof/)) je potrebný na výpočty konvekčného prenosu tepla. Koeficient konvekcie možno zadať ako konštantu alebo ako funkciu teploty.
+Koeficient konvekcie ([CNVCOF]({{ '/docs/sk/keyword_documentation/c/cnvcof/' | relative_url }})) je potrebný na výpočty konvekčného prenosu tepla. Koeficient konvekcie možno zadať ako konštantu alebo ako funkciu teploty.
 
   * **Výpočet koeficientu výhľadu**
 
@@ -101,11 +101,11 @@ Podmienky difúzneho spracovania
 
   * **Obsah atómov v prostredí (ENVATM)**
 
-Percentuálny podiel atómov ([ENVATM](/docs/sk/keyword_documentation/e/envatm/)) dominantného atómu (zvyčajne uhlíka) v prostredí pre výpočty difúzie.
+Percentuálny podiel atómov ([ENVATM]({{ '/docs/sk/keyword_documentation/e/envatm/' | relative_url }})) dominantného atómu (zvyčajne uhlíka) v prostredí pre výpočty difúzie.
 
   * **Koeficient rýchlosti reakcie (ACVCOF)**
 
-Rýchlosť povrchovej reakcie ([ACVCOF](/docs/sk/keyword_documentation/a/acvcof/)) s obsahom atómov v atmosfére pre výpočty difúzie.  
+Rýchlosť povrchovej reakcie ([ACVCOF]({{ '/docs/sk/keyword_documentation/a/acvcof/' | relative_url }})) s obsahom atómov v atmosfére pre výpočty difúzie.  
   
 Od verzie DEFORM-v12 môže používateľ definovať viacero typov atómov pre difúziu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}), ako je znázornené na obr. 9.6.4.
 
@@ -116,7 +116,7 @@ Poznámka: V súčasnosti je možné použiť maximálne 2 rôzne typy atómov.
 
 Nová podmienka difúzneho procesu 
 
-  * **Atom ([ATOMID](/docs/sk/keyword_documentation/a/atomid/))**
+  * **Atom ([ATOMID]({{ '/docs/sk/keyword_documentation/a/atomid/' | relative_url }}))**
 
 V poli „Atóm“ môže používateľ zmeniť názov každého typu atómu a aktivovať alebo deaktivovať difúziu zaškrtnutím alebo odškrtnutím príslušného políčka.  
 Keď do tabuľky difúzie pridáme dva rôzne typy atómov, môžeme vidieť, že pod položkou „Koeficient rýchlosti reakcie“ sa objaví nové pole f(teplota, atóm1, atóm2), ako je znázornené na obr. 9.6.5.
@@ -152,7 +152,7 @@ Konštanty indukčného spracovania; (a) pre 2D, (b) pre 3D.
 
   * **Magnetická permeabilita (ENVMPR)**
 
-Permeabilita ([ENVMPR](/docs/sk/keyword_documentation/e/envmpr/)) je vlastnosť materiálu, ktorá sa rovná hustote magnetického toku B vytvoreného v materiáli magnetizujúcim poľom, vydelená intenzitou magnetického poľa H tohto magnetizujúceho poľa.
+Permeabilita ([ENVMPR]({{ '/docs/sk/keyword_documentation/e/envmpr/' | relative_url }})) je vlastnosť materiálu, ktorá sa rovná hustote magnetického toku B vytvoreného v materiáli magnetizujúcim poľom, vydelená intenzitou magnetického poľa H tohto magnetizujúceho poľa.
 
 Priepustnosť vákua (ENVMPR) sa nastavuje v ponuke „Simulation Controls > Process Conditions“. Pre orientačné účely uvádzame nižšie typickú hodnotu.
 
@@ -161,7 +161,7 @@ Priepustnosť vákua (ENVMPR) sa nastavuje v ponuke „Simulation Controls > Pro
 
   * **Magnetická permitivita (ENVMPT)**
 
-Permitivita ([ENVMPT](/docs/sk/keyword_documentation/e/envmpt/)) je veličina, ktorá opisuje, ako magnetické pole pôsobí na dielektrické prostredie a ako je ním ovplyvňované. Určuje ju schopnosť materiálu polarizovať sa v reakcii na pole a tým znížiť celkové elektrické pole vo vnútri materiálu. Permitivita sa teda týka schopnosti materiálu prenášať (alebo „povoľovať“) magnetické pole.
+Permitivita ([ENVMPT]({{ '/docs/sk/keyword_documentation/e/envmpt/' | relative_url }})) je veličina, ktorá opisuje, ako magnetické pole pôsobí na dielektrické prostredie a ako je ním ovplyvňované. Určuje ju schopnosť materiálu polarizovať sa v reakcii na pole a tým znížiť celkové elektrické pole vo vnútri materiálu. Permitivita sa teda týka schopnosti materiálu prenášať (alebo „povoľovať“) magnetické pole.
 
 Dieliča elektrickej priepustnosti vákua (ENVMPT) sa nastavuje v ponuke „Simulation Controls > Process Conditions“. Pre orientačné účely uvádzame nižšie typickú hodnotu.
 
@@ -170,7 +170,7 @@ Dieliča elektrickej priepustnosti vákua (ENVMPT) sa nastavuje v ponuke „Simu
 
   * **Pomer zdrojovej energie (EHRATE)**
 
-„Koeficient premeny energie“ ([EHRATE](/docs/sk/keyword_documentation/e/ehrate/)) je koeficient premeny elektrickej energie na teplo.  
+„Koeficient premeny energie“ ([EHRATE]({{ '/docs/sk/keyword_documentation/e/ehrate/' | relative_url }})) je koeficient premeny elektrickej energie na teplo.  
 Ak je zadaná hodnota „0“ alebo „1000“, znamená to, že 100 % elektrickej energie sa premieňa na teplo. Ak je zadaná hodnota „500“, znamená to 50 % účinnosť.
 
   * **Zaškrtnite políčko „Prekrývajúca sa vzdušná sieťovina“ [2D]**
@@ -195,20 +195,20 @@ Pokročilé procesné konštanty; (a) pre 2D, (b) pre 3D.
 
   * **Konštanta penalizácie rozhrania (PENINF)**
 
-Veľké kladné číslo, ktoré sa používa na penalizáciu rýchlosti prenikania ([PENINF](/docs/sk/keyword_documentation/p/peninf/)) uzla cez hlavnú plochu. Predvolená hodnota je pre väčšinu simulácií postačujúca. Mala by byť aspoň o dva až tri rády vyššia ako konštanta objemovej penalizácie ([PENVOL](/docs/sk/keyword_documentation/p/penvol/)).  
+Veľké kladné číslo, ktoré sa používa na penalizáciu rýchlosti prenikania ([PENINF]({{ '/docs/sk/keyword_documentation/p/peninf/' | relative_url }})) uzla cez hlavnú plochu. Predvolená hodnota je pre väčšinu simulácií postačujúca. Mala by byť aspoň o dva až tri rády vyššia ako konštanta objemovej penalizácie ([PENVOL]({{ '/docs/sk/keyword_documentation/p/penvol/' | relative_url }})).  
 V prípade veľmi malých objektov (napr. spojovacích prvkov) sa odporúča znížiť tento počet o jeden alebo dva rády, aby sa zlepšila konvergencia. K zlepšeniu konvergencie to prispeje len v prípade, ak sa používa riešiteľ pre riedke matice. Túto konštantu je možné upravovať len v režime pre pokročilých používateľov.
 
   * **Premena mechanickej energie na tepelnú (UNTE2H)**
 
-Konštanta slúžiaca na prepojenie jednotiek tepelnej energie (napr. BTU) s jednotkami mechanickej energie (napr. klb-in). Pre anglické a jednotky SI sa automaticky nastavia príslušné hodnoty konštanty. Túto konštantu je možné upravovať iba v režime pre pokročilých používateľov. ([UNTE2H](/docs/sk/keyword_documentation/u/unte2h/))
+Konštanta slúžiaca na prepojenie jednotiek tepelnej energie (napr. BTU) s jednotkami mechanickej energie (napr. klb-in). Pre anglické a jednotky SI sa automaticky nastavia príslušné hodnoty konštanty. Túto konštantu je možné upravovať iba v režime pre pokročilých používateľov. ([UNTE2H]({{ '/docs/sk/keyword_documentation/u/unte2h/' | relative_url }}))
 
   * **Faktor časovej integrácie (TINTGF)**
 
-Faktor časovej integrácie ([TINTGF](/docs/sk/keyword_documentation/t/tintgf/)) je koeficient doprednej integrácie pre integráciu teploty v čase. Jeho hodnota by sa mala pohybovať v rozmedzí od 0,0 do 1,0. Pre väčšinu simulácií je vhodná hodnota 0,75. Túto konštantu je možné upravovať iba v režime pre pokročilých používateľov.
+Faktor časovej integrácie ([TINTGF]({{ '/docs/sk/keyword_documentation/t/tintgf/' | relative_url }})) je koeficient doprednej integrácie pre integráciu teploty v čase. Jeho hodnota by sa mala pohybovať v rozmedzí od 0,0 do 1,0. Pre väčšinu simulácií je vhodná hodnota 0,75. Túto konštantu je možné upravovať iba v režime pre pokročilých používateľov.
 
   * **Boltzmannova konštanta (BLZMAN)**
 
-Boltzmannova konštanta ([BLZMN](/docs/sk/keyword_documentation/b/blzman/)) je potrebná na výpočty prenosu tepla žiarením. Predvolené hodnoty pre anglické a SI jednotky sa nastavujú automaticky. Pri výpočtoch tepelného vyžarovania sa teplota uzla automaticky prepočíta na absolútnu teplotu (Rankin, Kelvin) na základe zvolených anglických alebo SI jednotiek. Túto konštantu je možné upravovať iba v režime Pokročilý používateľ.
+Boltzmannova konštanta ([BLZMN]({{ '/docs/sk/keyword_documentation/b/blzman/' | relative_url }})) je potrebná na výpočty prenosu tepla žiarením. Predvolené hodnoty pre anglické a SI jednotky sa nastavujú automaticky. Pri výpočtoch tepelného vyžarovania sa teplota uzla automaticky prepočíta na absolútnu teplotu (Rankin, Kelvin) na základe zvolených anglických alebo SI jednotiek. Túto konštantu je možné upravovať iba v režime Pokročilý používateľ.
 
   * **Koeficient zníženia tepla vznikajúceho trením (UNTE2H)**
 
@@ -228,11 +228,11 @@ Prevádzkové podmienky zdroja tepla
 
 Súvisiace témy:
 
-[9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
-[9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   
-[9.3. Stopping Controls](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/)   
-[9.4. Remesh Criteria](/docs/sk/pre_processor/9_simulation_controls/9_4_remesh_criteria/)   
-[9.5. Solver Settings](/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/)   
-[9.7. Advanced Options](/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/)   
-[9.8. Control Files](/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/)   
-[9.9. Thermomechanical variables](/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)
+[9.1. Simulation type Settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }})   
+[9.2. Defining Step]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})   
+[9.3. Stopping Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})   
+[9.4. Remesh Criteria]({{ '/docs/sk/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }})   
+[9.5. Solver Settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }})   
+[9.7. Advanced Options]({{ '/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }})   
+[9.8. Control Files]({{ '/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }})   
+[9.9. Thermomechanical variables]({{ '/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }})

@@ -23,10 +23,10 @@ Selecting the other sections from chapter window like summary, graph, state vari
 
 Chapter settings and modification window and Object tree report tab with user defined and other sections
 
-For more information on report sections settings refer chapter [28\. Report Generation](/docs/en/post_processor/28_report_generation/28_report_generation/) section [28.2. Sections.](28_report_generation.htm#28_2_Sections)
+For more information on report sections settings refer chapter [28\. Report Generation]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }}) section [28.2. Sections.](28_report_generation.htm#28_2_Sections)
 
 **Related Topics:**
 
-[28\. Report Generation](/docs/en/post_processor/28_report_generation/28_report_generation/)
+[28\. Report Generation]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }})
 
-[25\. Next Gen Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Next Gen Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})

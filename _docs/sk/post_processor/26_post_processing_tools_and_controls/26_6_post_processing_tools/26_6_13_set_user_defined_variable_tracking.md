@@ -23,4 +23,4 @@ Používateľom definované premenné príspevkov, ku ktorým sa pristupuje z ok
 
 Po dokončení sledovania premenných pre konkrétnu databázu sa v adresári problému vygeneruje súbor PDB, takže v nasledujúcich fázach následného spracovania môže používateľ na karte „Sledovanie“ vybrať existujúci súbor PDB a následne priamo vykresliť svoje premenné.  
 Užívateľská rutina postprocesora je k dispozícii v štandardnom inštalačnom umiestnení,  
-C:\Program files\SFTC\DEFORM\v*_*\UserRoutine\PostProcessor\PC_pstusr23.f (kde *_* je číslo verzie programu Deform) pre PC. Ďalšie informácie o užívateľských rutinách postprocesora nájdete v [Chapter 56. User routine.](/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/)
+C:\Program files\SFTC\DEFORM\v*_*\UserRoutine\PostProcessor\PC_pstusr23.f (kde *_* je číslo verzie programu Deform) pre PC. Ďalšie informácie o užívateľských rutinách postprocesora nájdete v [Chapter 56. User routine.]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/' | relative_url }})

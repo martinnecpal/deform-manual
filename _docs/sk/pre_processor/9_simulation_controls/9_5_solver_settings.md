@@ -51,7 +51,7 @@ Nastavenia riešiteľa pre riešiteľ deformácií; (a) pre 2D (b) pre 3D
 
   * **Riešiteľ riedkych matíc**
 
-Riešiteľ pre riedke matice ([SOLMTD](/docs/sk/keyword_documentation/s/solmtd/)) pri riešení rovníc využíva vlastnosti maticových rovníc DEFORM. Je efektívny, najmä pri riešení rozsiahlych úloh.
+Riešiteľ pre riedke matice ([SOLMTD]({{ '/docs/sk/keyword_documentation/s/solmtd/' | relative_url }})) pri riešení rovníc využíva vlastnosti maticových rovníc DEFORM. Je efektívny, najmä pri riešení rozsiahlych úloh.
 
   * **SPOOLES a MUMPS [2D, 3D] :**
 
@@ -69,7 +69,7 @@ Algoritmus Skyline je veľmi jednoduchý spôsob riešenia inverzie matíc. Ide 
 
   * **Konjugovaný gradient [3D]**
 
-Riešiteľ pre riedke matice ([SOLMTD](/docs/sk/keyword_documentation/s/solmtd/)) je metóda priameho riešenia, ktorá využíva riedkosť formulácie FEM na zvýšenie rýchlosti výpočtu. Riešiteľ s konjugovanými gradientmi sa snaží vyriešiť problém FEM prostredníctvom iteratívneho približovania sa k riešeniu. 
+Riešiteľ pre riedke matice ([SOLMTD]({{ '/docs/sk/keyword_documentation/s/solmtd/' | relative_url }})) je metóda priameho riešenia, ktorá využíva riedkosť formulácie FEM na zvýšenie rýchlosti výpočtu. Riešiteľ s konjugovanými gradientmi sa snaží vyriešiť problém FEM prostredníctvom iteratívneho približovania sa k riešeniu. 
 
 Vo verzii 11.3 je predvoleným 3D riešiteľom pre simulácie s plastickými objektmi konjugovaný gradient (CG) s priamymi iteráciami. Konkrétne je predvoleným riešiteľom „starý a nový“ CG (úroveň vyplnenia = 4, metóda rozdelenia = 1), pričom riešiteľ MUMPS slúži ako záloha v prípade potreby konvergencie. Elasto-plastické (EP) simulácie nemôžu používať metódu priamych iterácií, preto sa pre EP odporúča riešiteľ MUMPS s Newton-Raphsonovými iteráciami.
 
@@ -204,7 +204,7 @@ Výber riešiteľa v 3D nie je taký jednoznačný ako v 2D. Väčšina 3D simul
 
 **Iteračné metódy (ITRMTH)** **[2D, 3D]**
 
-Iteračná metóda ([ITRMTH](/docs/sk/keyword_documentation/i/itrmth/)) je spôsob, akým sa aktualizuje (alebo iteruje) riešenie simulácie s cieľom priblížiť sa k konvergentnému riešeniu daného kroku.
+Iteračná metóda ([ITRMTH]({{ '/docs/sk/keyword_documentation/i/itrmth/' | relative_url }})) je spôsob, akým sa aktualizuje (alebo iteruje) riešenie simulácie s cieľom priblížiť sa k konvergentnému riešeniu daného kroku.
 
   * **Priamy**
 
@@ -218,7 +218,7 @@ Metóda Newton-Raphson sa odporúča pre väčšinu úloh, pretože zvyčajne ko
 
   * **Zakázať iterácie medzi elastickými objektmi**
 
-## Riešiteľ teplotných úloh ([SOLMTT](/docs/sk/keyword_documentation/s/solmtt/)) [2D, 3D]
+## Riešiteľ teplotných úloh ([SOLMTT]({{ '/docs/sk/keyword_documentation/s/solmtt/' | relative_url }})) [2D, 3D]
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image005.jpg' | relative_url }})  
 a) 
@@ -242,7 +242,7 @@ V porovnaní s inými typmi riešiteľov vyžaduje riešiteľ konjugovaných gra
 
   * **Explicitné [3D]**
 
-## Riešiteľ indukčného ohrevu ([SOLMTI](/docs/sk/keyword_documentation/s/solmti/)) [3D]
+## Riešiteľ indukčného ohrevu ([SOLMTI]({{ '/docs/sk/keyword_documentation/s/solmti/' | relative_url }})) [3D]
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_5_solver_settings/9_5_image007.jpg' | relative_url }})
 
@@ -261,7 +261,7 @@ Pokročilé nastavenia riešiteľa; (a) pre 2D (b) pre 3D
 
 **Limity konvergenčnej chyby (CVGERR) [2D, 3D]**
 
-Iterácia deformácie sa považuje za konvergovalú, ak sú splnené limity chýb rýchlosti a sily ([CVGERR](/docs/sk/keyword_documentation/c/cvgerr/)). To znamená, že zmena normy uzlovej rýchlosti aj normy uzlovej sily je nižšia ako stanovená hodnota, ako je znázornené na obr. 9.5.7. Hodnoty normy chyby pre každý iteračný krok sa zobrazujú v súbore správ. Ak súbor správ ukazuje, že normy chyby sily alebo rýchlosti sa zmenšujú, ale neklesajú pod limity chyby, simulácia sa môže pokračovať zvýšením príslušného limitu chyby na najmenšiu hodnotu v súbore správ. Tým sa zníži presnosť riešenia, preto by sa simulácia mala nechať bežať niekoľko krokov a potom by sa hodnoty mali opäť znížiť. Pri tom je potrebné postupovať s mimoriadnou opatrnosťou.  
+Iterácia deformácie sa považuje za konvergovalú, ak sú splnené limity chýb rýchlosti a sily ([CVGERR]({{ '/docs/sk/keyword_documentation/c/cvgerr/' | relative_url }})). To znamená, že zmena normy uzlovej rýchlosti aj normy uzlovej sily je nižšia ako stanovená hodnota, ako je znázornené na obr. 9.5.7. Hodnoty normy chyby pre každý iteračný krok sa zobrazujú v súbore správ. Ak súbor správ ukazuje, že normy chyby sily alebo rýchlosti sa zmenšujú, ale neklesajú pod limity chyby, simulácia sa môže pokračovať zvýšením príslušného limitu chyby na najmenšiu hodnotu v súbore správ. Tým sa zníži presnosť riešenia, preto by sa simulácia mala nechať bežať niekoľko krokov a potom by sa hodnoty mali opäť znížiť. Pri tom je potrebné postupovať s mimoriadnou opatrnosťou.  
   
 Pri výpočtoch napätia v lisovacej forme alebo zaťaženia lisu, kde sú potrebné mimoriadne presné hodnoty síl alebo zaťaženia, je možné zvýšiť presnosť zaťaženia znížením limitu chyby sily. Tým sa síce predĺži čas simulácie, ale výsledky budú presnejšie.
 
@@ -270,20 +270,20 @@ Je potrebné poznamenať, že presnosť údajov o prietokovom napätí bude mať
 
 **Maximálny počet iterácií (ITRMXD, ITRMXT)** **[2D, 3D]**
 
-Pri použití Newton-Raphsonovej iterácie sa v každom iteračnom úseku vykoná zadaný počet iterácií ([ITRMXD](/docs/sk/keyword_documentation/i/itrmxd/) a [ITRMXT](/docs/sk/keyword_documentation/i/itrmxt/)), až kým riešenie nedosiahne konvergenciu. Počas segmentu Newton-Raphson sa vykoná maximálne 30 iterácií. Ak riešenie nekonverguje v zadanom počte iterácií a pri následnom automatickom znížení veľkosti kroku, simulácia sa ukončí a do súboru správ DEFORM sa zapíše správa.  
+Pri použití Newton-Raphsonovej iterácie sa v každom iteračnom úseku vykoná zadaný počet iterácií ([ITRMXD]({{ '/docs/sk/keyword_documentation/i/itrmxd/' | relative_url }}) a [ITRMXT]({{ '/docs/sk/keyword_documentation/i/itrmxt/' | relative_url }})), až kým riešenie nedosiahne konvergenciu. Počas segmentu Newton-Raphson sa vykoná maximálne 30 iterácií. Ak riešenie nekonverguje v zadanom počte iterácií a pri následnom automatickom znížení veľkosti kroku, simulácia sa ukončí a do súboru správ DEFORM sa zapíše správa.  
 Ak je ako metóda iterácie špecifikovaná priama iterácia, vykoná sa stanovený počet iterácií. Ak riešenie nedosiahne konvergenciu, vykoná sa ďalšia séria iterácií. Ak riešenie stále nedosiahne konvergenciu, simulácia sa ukončí a do súboru správ DEFORM sa zapíše správa.
 
 **Optimalizácia šírky pásma (DEFBWD, TMPBWD)****[2D, 3D]**
 
-Optimalizácia šírky pásma ([DEFBWD](/docs/sk/keyword_documentation/d/defbwd/) a [TMPBWD](/docs/sk/keyword_documentation/t/tmpbwd/)) skracuje čas riešenia optimalizáciou štruktúry riešenej maticovej rovnice. Malo by sa používať takmer pri všetkých úlohách.
+Optimalizácia šírky pásma ([DEFBWD]({{ '/docs/sk/keyword_documentation/d/defbwd/' | relative_url }}) a [TMPBWD]({{ '/docs/sk/keyword_documentation/t/tmpbwd/' | relative_url }})) skracuje čas riešenia optimalizáciou štruktúry riešenej maticovej rovnice. Malo by sa používať takmer pri všetkých úlohách.
 
 Súvisiace témy:
 
-[9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
-[9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   
-[9.3. Stopping Controls](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/)   
-[9.4. Remesh Criteria](/docs/sk/pre_processor/9_simulation_controls/9_4_remesh_criteria/)   
-[9.6. Process Conditions](/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/)   
-[9.7. Advanced Options](/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/)   
-[9.8. Control Files](/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/)   
-[9.9. Thermomechanical variables](/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)
+[9.1. Simulation type Settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }})   
+[9.2. Defining Step]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})   
+[9.3. Stopping Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})   
+[9.4. Remesh Criteria]({{ '/docs/sk/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }})   
+[9.6. Process Conditions]({{ '/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})   
+[9.7. Advanced Options]({{ '/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }})   
+[9.8. Control Files]({{ '/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }})   
+[9.9. Thermomechanical variables]({{ '/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }})

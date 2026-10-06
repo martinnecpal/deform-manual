@@ -250,7 +250,7 @@ Poloha Z – poloha merania priemeru
 
 ## Definovanie 2D priečneho rezu
 
-Používateľ môže vytvoriť geometriu pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}), ako je znázornené na obr. 42.1.19. Používateľ môže tiež importovať 2D geometriu pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a uložiť 2D geometriu pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). Ďalšie vysvetlenia k jednotlivým voľbám nájdete v častiach [12.1. 2D Geometry Data Defining ](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) a [12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/).
+Používateľ môže vytvoriť geometriu pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}), ako je znázornené na obr. 42.1.19. Používateľ môže tiež importovať 2D geometriu pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a uložiť 2D geometriu pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). Ďalšie vysvetlenia k jednotlivým voľbám nájdete v častiach [12.1. 2D Geometry Data Defining ]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) a [12.2. 2D Geometry Data Editing]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image016.jpg' | relative_url }})
 
@@ -258,7 +258,7 @@ Stránka s 2D rezom
 
 ## Vytvorenie 2D siete
 
-Sieť 2D priečneho rezu môžeme vytvoriť tak, že v režime s návodom zadáme počet prvkov, ako je znázornené na obr. 42.1.20. K pokročilým nastaveniam na riadenie vytvárania 2D siete sa dostanete pomocou prepínača „expertný režim“ na paneli nástrojov, pozri obr. 42.1.22. Ďalšie informácie o pokročilých možnostiach nájdete v [13.1. 2D Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/).   
+Sieť 2D priečneho rezu môžeme vytvoriť tak, že v režime s návodom zadáme počet prvkov, ako je znázornené na obr. 42.1.20. K pokročilým nastaveniam na riadenie vytvárania 2D siete sa dostanete pomocou prepínača „expertný režim“ na paneli nástrojov, pozri obr. 42.1.22. Ďalšie informácie o pokročilých možnostiach nájdete v [13.1. 2D Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}).   
 **Použiť hrubú vnútornú sieť**: V režime s návodom má používateľ k dispozícii toto zaškrtávacie políčko na vytvorenie hrubej vnútornej siete, ako je znázornené na obr. 42.1.21.   
 **Pomer k najväčšiemu prvku**: Pomocou tohto nastavenia môže používateľ relatívne ovládať veľkosť prvkov  
 **Vytvoriť sieť** ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}): Po nastavení parametrov siete môže používateľ pomocou tohto tlačidla vytvoriť 2D sieť. 
@@ -277,7 +277,7 @@ Stránka 2D siete (režim pre pokročilých)
 
 ## Vytváranie 3D geometrie
 
-Používateľ môže pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }}) previesť definovaný 2D priečny rez na 3D geometriu (pozri obr. 42.1.23.), nastavenia pre konverziu 2D na 3D otočením je možné definovať na stránke „Otočiť z 2D“, ako je znázornené na obr. 42.1.23, a na konverziu kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie o ostatných možnostiach nájdete v [12.3. 3D Geometry data modelling.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Používateľ môže pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }}) previesť definovaný 2D priečny rez na 3D geometriu (pozri obr. 42.1.23.), nastavenia pre konverziu 2D na 3D otočením je možné definovať na stránke „Otočiť z 2D“, ako je znázornené na obr. 42.1.23, a na konverziu kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie o ostatných možnostiach nájdete v [12.3. 3D Geometry data modelling.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 ### Nastavenia Revolve
 
@@ -333,7 +333,7 @@ Priradenie materiálu k obrobku
 
 ## Obrobok BCC
 
-Na stránke „Okrajové podmienky“ môže používateľ objektu priradiť rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako okraj objektu interaguje s ostatnými objektmi a s prostredím. Medzi bežne používané okrajové podmienky patrí výmena tepla s prostredím pri simuláciách zahŕňajúcich prenos tepla, symetria a rýchlosť, ako je znázornené na obr. 42.1.28. Hraničné podmienky sa automaticky definujú pri generovaní 3D siete na základe nastavení simulácie v šablóne valcovania prstencov. Ak ich chce používateľ upraviť, môže využiť možnosti dostupné na tejto stránke. Ďalšie informácie o týchto možnostiach nájdete v [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+Na stránke „Okrajové podmienky“ môže používateľ objektu priradiť rôzne okrajové obmedzenia. Okrajové podmienky určujú, ako okraj objektu interaguje s ostatnými objektmi a s prostredím. Medzi bežne používané okrajové podmienky patrí výmena tepla s prostredím pri simuláciách zahŕňajúcich prenos tepla, symetria a rýchlosť, ako je znázornené na obr. 42.1.28. Hraničné podmienky sa automaticky definujú pri generovaní 3D siete na základe nastavení simulácie v šablóne valcovania prstencov. Ak ich chce používateľ upraviť, môže využiť možnosti dostupné na tejto stránke. Ďalšie informácie o týchto možnostiach nájdete v [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image025.jpg' | relative_url }})
 
@@ -341,7 +341,7 @@ Obrobok BCC
 
 ## Nehnuteľnosť
 
-V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 42.1.29.) Objemová kompenzácia sa najčastejšie používa pri valcovaní prstencov a je možné ju aktivovať výberom jednej z možností v časti „Cieľový objem“ a výpočtom aktuálneho objemu objektu pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}). Ďalšie informácie nájdete v [16\. Object properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 42.1.29.) Objemová kompenzácia sa najčastejšie používa pri valcovaní prstencov a je možné ju aktivovať výberom jednej z možností v časti „Cieľový objem“ a výpočtom aktuálneho objemu objektu pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}). Ďalšie informácie nájdete v [16\. Object properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image026.jpg' | relative_url }})
 
@@ -352,7 +352,7 @@ Stránka nehnuteľnosti
 V okne „Initialize“ (Inicializácia) sú k dispozícii na inicializáciu niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posun, hustota, veľkosť zŕn mikrostruktúry a veľkosť častíc. Ak chce používateľ pri valcovaní s viacerými prstencami inicializovať teplotu, deformáciu alebo veľkosť zŕn, môže použiť túto stránku inicializácie.
 
   
-Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 42.1.30. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien uzlov a prvkov. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1 Node data window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [11.2 Element data window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 42.1.30. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien uzlov a prvkov. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1 Node data window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) a [11.2 Element data window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image027.jpg' | relative_url }})
 
@@ -486,7 +486,7 @@ Kopírovanie osového valca č. 1 do osového valca č. 2
 
 ## Polohovanie
 
-Ak chce používateľ aj po nastavení orientácie ďalej upravovať polohu niektorého z týchto objektov, môže použiť tlačidlo „Poloha objektov“ na stránke „Polohovanie“. Na umiestnenie objektov sú k dispozícii rôzne možnosti polohovania, ako je znázornené na obr. 42.1.47. Ďalšie informácie o týchto možnostiach nájdete v [19\. Object positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+Ak chce používateľ aj po nastavení orientácie ďalej upravovať polohu niektorého z týchto objektov, môže použiť tlačidlo „Poloha objektov“ na stránke „Polohovanie“. Na umiestnenie objektov sú k dispozícii rôzne možnosti polohovania, ako je znázornené na obr. 42.1.47. Ďalšie informácie o týchto možnostiach nájdete v [19\. Object positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image044.jpg' | relative_url }})
 
@@ -504,7 +504,7 @@ Možnosti plánovaného umiestnenia
 
 Používateľ môže definovať kontakt medzi obrobkom a ostatnými valcami tak, že stanoví vzťahy medzi objektmi, ako je znázornené na obr. 42.1.49. V prípade neizotermických procesov valcovania musí používateľ definovať koeficient trenia a koeficient prenosu tepla na rozhraní, zatiaľ čo v prípade izotermického procesu valcovania musí definovať hodnotu trenia.  
 **Systém**: Po výbere tohto prepínača systém priradí predvolené vzťahy medzi objektmi. V prípade potreby môže používateľ pridať mazivá tak, že z roletového menu vyberie možnosť „Pridať nové“ a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}), alebo môže na účely simulácie načítať požadované mazivá z knižnice.  
-**Používateľ:** Pri operácii „Ring Rolling“ je štandardne zaškrtnuté tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), ako je znázornené na obr. 42.1.49. Používateľ môže zmeniť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môže používateľ priradiť rovnaké hodnoty všetkým vzťahom. Kliknutím na tlačidlo môže používateľ vypočítať toleranciu kontaktu. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) môže používateľ vygenerovať vzťah kontaktu. Zaškrtnutím políčka vedľa vzťahu kontaktu môže používateľ definovať zotrvačný kontakt. Ďalšie informácie nájdete v časti [20\. Inter-Object Data Relations.](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+**Používateľ:** Pri operácii „Ring Rolling“ je štandardne zaškrtnuté tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), ako je znázornené na obr. 42.1.49. Používateľ môže zmeniť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môže používateľ priradiť rovnaké hodnoty všetkým vzťahom. Kliknutím na tlačidlo môže používateľ vypočítať toleranciu kontaktu. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) môže používateľ vygenerovať vzťah kontaktu. Zaškrtnutím políčka vedľa vzťahu kontaktu môže používateľ definovať zotrvačný kontakt. Ďalšie informácie nájdete v časti [20\. Inter-Object Data Relations.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image046.jpg' | relative_url }})
 
@@ -596,7 +596,7 @@ Extrakcia priečneho rezu na regeneráciu prstena
 ###   
 Vytvorenie 2D siete priečneho rezu obrobku
 
-Keďže prierez sa získava z objektu, ktorý je „načítaný z databázy“, pri regenerácii tvaru prstena je vždy potrebné vygenerovať novú 2D sieť. Používateľ môže zaškrtnúť políčko „Vykonaj remesh pred touto operáciou“, ako je znázornené na obr. 42.1.57, a definovať nastavenia 2D siete, ktoré sa majú použiť pri generovaní novej siete. Viac informácií o nastaveniach siete nájdete v [13.1.2D Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/).
+Keďže prierez sa získava z objektu, ktorý je „načítaný z databázy“, pri regenerácii tvaru prstena je vždy potrebné vygenerovať novú 2D sieť. Používateľ môže zaškrtnúť políčko „Vykonaj remesh pred touto operáciou“, ako je znázornené na obr. 42.1.57, a definovať nastavenia 2D siete, ktoré sa majú použiť pri generovaní novej siete. Viac informácií o nastaveniach siete nájdete v [13.1.2D Mesh Generation.]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/42_ring_rolling/42_1_ring_rolling/image054.jpg' | relative_url }})
 

@@ -39,4 +39,4 @@ Applicable Simulation Modules: Microstructure Applicable [Simulation Modes](../.
   
 RELATED TOPICS  
 ---  
-[Inter-Material Data](/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/): [Heat/Volume](../../pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data.htm#Latent_Heat) Keywords: [PHASLH](/docs/en/keyword_documentation/p/phaslh/)
+[Inter-Material Data]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }}): [Heat/Volume](../../pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data.htm#Latent_Heat) Keywords: [PHASLH]({{ '/docs/en/keyword_documentation/p/phaslh/' | relative_url }})

@@ -90,7 +90,7 @@ Okno „Blow Table“
 
 ## Ovládacie prvky simulácie
 
-V ovládacích prvkoch simulácie v režime s návodom môže používateľ vybrať typ simulačného režimu a typ výstupu (pozri obr. 32.2.3.). Tu sú k dispozícii základné možnosti potrebné na operáciu tvárnenia, zatiaľ čo režim Expert ponúka podrobnejšie možnosti. Ďalšie informácie o možnostiach simulácie v režime Export nájdete v [9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+V ovládacích prvkoch simulácie v režime s návodom môže používateľ vybrať typ simulačného režimu a typ výstupu (pozri obr. 32.2.3.). Tu sú k dispozícii základné možnosti potrebné na operáciu tvárnenia, zatiaľ čo režim Expert ponúka podrobnejšie možnosti. Ďalšie informácie o možnostiach simulácie v režime Export nájdete v [9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image004.jpg' | relative_url }})
 
@@ -125,7 +125,7 @@ Okno obrobku
 Okno „Geometria“ slúži na definovanie geometrie objektu, ako je znázornené na obr. 32.2.7. Ak nie je definovaná žiadna geometria, aktívne bude iba pole „Definovať primitívy“, ostatné možnosti budú sivé. Po vytvorení geometrie sa aktivujú všetky možnosti.
 
   
-Používateľ môže definovať novú geometriu pomocou primitív a tiež môže importovať geometriu z iného súboru alebo z knižnice; môže tiež importovať geometrie v iných formátoch, ako sú .STL, .UNV, .PDA, .GEO a ... Primitívy slúžia na jednoduché definovanie základných geometrických tvarov. Ďalšie informácie o vytváraní a úpravách 2D geometrií nájdete v [12.1. 2D Geometry Data Defining.](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/)
+Používateľ môže definovať novú geometriu pomocou primitív a tiež môže importovať geometriu z iného súboru alebo z knižnice; môže tiež importovať geometrie v iných formátoch, ako sú .STL, .UNV, .PDA, .GEO a ... Primitívy slúžia na jednoduché definovanie základných geometrických tvarov. Ďalšie informácie o vytváraní a úpravách 2D geometrií nájdete v [12.1. 2D Geometry Data Defining.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image004.jpg' | relative_url }})
 
@@ -134,7 +134,7 @@ Okno Geometria
   
 **Sieť objektu**
 
-Stránka „Mesh“ ponúka možnosti vytvorenia siete pre objekt. Režim „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ umožňuje nastaviť počet prvkov výlučne pomocou posuvníka na vytvorenie siete. Ak je geometria objektu zložitá alebo ak chce používateľ ovládať hustotu siete na celom objekte, musí prejsť do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Odborný režim ponúka rôzne možnosti, ako sú váhové faktory, okná siete a užívateľsky definovaný režim na riadenie hustoty siete. Možnosti vytvárania siete dostupné v odbornom režime a v režime „Guided“ sú znázornené na obr. 32.2.8 a obr. 32.2.9. Podrobnejší popis týchto možností nájdete v [13\. Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/).
+Stránka „Mesh“ ponúka možnosti vytvorenia siete pre objekt. Režim „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ umožňuje nastaviť počet prvkov výlučne pomocou posuvníka na vytvorenie siete. Ak je geometria objektu zložitá alebo ak chce používateľ ovládať hustotu siete na celom objekte, musí prejsť do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Odborný režim ponúka rôzne možnosti, ako sú váhové faktory, okná siete a užívateľsky definovaný režim na riadenie hustoty siete. Možnosti vytvárania siete dostupné v odbornom režime a v režime „Guided“ sú znázornené na obr. 32.2.8 a obr. 32.2.9. Podrobnejší popis týchto možností nájdete v [13\. Mesh Generation.]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image005.jpg' | relative_url }})
 
@@ -161,7 +161,7 @@ Na stránke „Okrajové podmienky“ môže používateľ priradiť objektu rô
 
 Okno s okrajovými podmienkami
 
-BCC sú rozdelené do kategórií [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/), [Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) a [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+BCC sú rozdelené do kategórií [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ## Horná matrica
 
@@ -181,7 +181,7 @@ Nastavenia riadenia pohybu kladiva
   
 Pri kovaní kladivom sa na plastickú deformáciu obrobku využíva len časť kinetickej energie piestu. Zvyšná energia sa stráca cez kovadlinu a rám stroja. Tieto hodnoty je možné nastaviť v okne ovládania pohybu.
 
-V zásade existujú dva typy kladív. Prvým je [anvil type hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer) a druhým c[ounter blow hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer). Pokiaľ ide o vzorce a predpoklady použité pre oba typy operácií kovania kladivom, pozrite si [15.3. Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/).
+V zásade existujú dva typy kladív. Prvým je [anvil type hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer) a druhým c[ounter blow hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer). Pokiaľ ide o vzorce a predpoklady použité pre oba typy operácií kovania kladivom, pozrite si [15.3. Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}).
 
 Pri **kladive typu kovadlina** sa obrobok spolu so spodnou sadou foriem umiestňuje na kovadlinu, ktorá je nehybná. V prípade jednoduchého gravitačného kladiva sa piest zrýchľuje pôsobením gravitácie a akumuluje energiu.
 
@@ -200,14 +200,14 @@ Nastavenia riadenia pohybu šnekového lisu
 
   * **Energia**: Energia rozbehu je veličina vyjadrujúca celkovú energiu, ktorú bude zotrvačník obsahovať po dosiahnutí požadovanej rýchlosti a pred zapojením spojky. Jednotky pre energiu rozbehu sú v anglickom systéme klb-in a v systéme SI N-mm.
 
-  * **Účinnosť vyfukovania**: Účinnosť vyfukovania predstavuje podiel celkovej energie, ktorý sa premení na energiu deformácie. Zvyšná energia sa absorbuje prostredníctvom spojkového mechanizmu, trenia a rámu stroja. Táto veličina nemá žiadne jednotky. V programe Forming Express môžeme použiť iba konštantnú hodnotu, avšak pri formovacích operáciách môže používateľ definovať aj funkciu sily. Ďalšie informácie nájdete v [15.4. Screw Press.](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/).
+  * **Účinnosť vyfukovania**: Účinnosť vyfukovania predstavuje podiel celkovej energie, ktorý sa premení na energiu deformácie. Zvyšná energia sa absorbuje prostredníctvom spojkového mechanizmu, trenia a rámu stroja. Táto veličina nemá žiadne jednotky. V programe Forming Express môžeme použiť iba konštantnú hodnotu, avšak pri formovacích operáciách môže používateľ definovať aj funkciu sily. Ďalšie informácie nájdete v [15.4. Screw Press.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }}).
 
   * **Moment****zotrvačnosti**: Moment zotrvačnosti je moment zotrvačnosti zotrvačníka. Jednotky zotrvačnosti v anglickom systéme sú klb*in*s², v systéme SI sú to N-mm*s². Moment zotrvačnosti pre kruhový disk s osou Z kolmou na stred je I = 2 ET /ω², kde ET je celková energia zotrvačníka a ω je uhlová rýchlosť v radiánoch za sekundu.
 
   * **Posun zdvihového piestu****alebo stúpanie vodiacich skrutiek**: Posun zdvihového piestu udáva vzdialenosť, o ktorú sa skrutka posunie pri jednej otáčke zotrvačníka. To pomáha pri určovaní lineárnej rýchlosti zdvihového piestu. Anglické jednotky pre posuv ramena sú palce/otáčka, zatiaľ čo jednotky SI sú mm/otáčka. Ak sú známe len uhol stúpania a priemer vretena, posuv ramena je možné vypočítať pomocou vzorca πdsin(θt), kde d je priemer vretena a θt je uhol stúpania vretena.
 
   
-Ďalšie informácie o šnekovom lise nájdete v katalógu [15.4. Screw Press.](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/)
+Ďalšie informácie o šnekovom lise nájdete v katalógu [15.4. Screw Press.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }})
 
 ## Spodná forma
 
@@ -227,7 +227,7 @@ Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na s
 
 **Umiestňovanie objektov ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) **
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov.K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 32.2.15. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov.K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 32.2.15. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image011.jpg' | relative_url }})
 
@@ -296,21 +296,21 @@ Okno ovládacích prvkov krokov v režime s navádzaním
 
 **Počet simulačných krokov (NSTEP)**
 
-Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú spustiť od počiatočného čísla kroku. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí príkaz na zastavenie simulácie alebo ak simulácia nenarazí na problém. Napríklad, ak je počiatočné číslo kroku -35 ([NSTART](/docs/en/keyword_documentation/n/nstart/)) a je špecifikovaných 30 krokov ([NSTEP](/docs/en/keyword_documentation/n/nstep/)), simulácia sa zastaví po 65. kroku, pokiaľ sa skôr nespustí iný príkaz na zastavenie. V prípade procesu opätovného ohrevu to môže byť teplota, pri ktorej sa má opätovný ohrievanie zastaviť.
+Parameter „Počet simulačných krokov“ určuje počet krokov, ktoré sa majú spustiť od počiatočného čísla kroku. Simulácia sa zastaví po vykonaní tohto počtu simulačných krokov, pokiaľ sa nespustí príkaz na zastavenie simulácie alebo ak simulácia nenarazí na problém. Napríklad, ak je počiatočné číslo kroku -35 ([NSTART]({{ '/docs/en/keyword_documentation/n/nstart/' | relative_url }})) a je špecifikovaných 30 krokov ([NSTEP]({{ '/docs/en/keyword_documentation/n/nstep/' | relative_url }})), simulácia sa zastaví po 65. kroku, pokiaľ sa skôr nespustí iný príkaz na zastavenie. V prípade procesu opätovného ohrevu to môže byť teplota, pri ktorej sa má opätovný ohrievanie zastaviť.
 
-Ďalšie informácie nájdete v dokumente [Stopping Controls.](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/)
+Ďalšie informácie nájdete v dokumente [Stopping Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})
 
   
 **Krok pri ukladaní (STPINC)**
 
-Krok prírastku ([STPINC](/docs/en/keyword_documentation/s/stpinc/)), ktorý sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nemusí sa nutne uložiť do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať väčší úložný priestor.
+Krok prírastku ([STPINC]({{ '/docs/en/keyword_documentation/s/stpinc/' | relative_url }})), ktorý sa má uložiť do databázy, určuje počet krokov, ktoré systém uloží do databázy. Pri spustení simulácie sa musí vypočítať každý krok, ale nemusí sa nutne uložiť do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať väčší úložný priestor.
 
   
 **Primárny čip (PDIE)**
 
-Primárna matrica ([PDIE](/docs/en/keyword_documentation/p/pdie/)) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad brzdná vzdialenosť založená na zdvihu primárnej matrice. Keď zdvih objektu definovaného ako primárna matrica dosiahne hodnotu posunu primárnej matrice, simulácia sa zastaví bez ohľadu na to, či boli špecifikované ďalšie kroky. Funkcia „Krok podľa zdvihu“ určuje veľkosť kroku na základe pohybu primárnej matrice. Primárna matrica je zvyčajne priradená k objektu, ktorý je najviac riadený kováčskym strojom. Napríklad matrica pripevnená k piestu mechanického lisu by bola označená ako primárny objekt. V prípade kladivového alebo skrutkového lisu je primárna matrica zvyčajne priradená k hornej matrici.
+Primárna matrica ([PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }})) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad brzdná vzdialenosť založená na zdvihu primárnej matrice. Keď zdvih objektu definovaného ako primárna matrica dosiahne hodnotu posunu primárnej matrice, simulácia sa zastaví bez ohľadu na to, či boli špecifikované ďalšie kroky. Funkcia „Krok podľa zdvihu“ určuje veľkosť kroku na základe pohybu primárnej matrice. Primárna matrica je zvyčajne priradená k objektu, ktorý je najviac riadený kováčskym strojom. Napríklad matrica pripevnená k piestu mechanického lisu by bola označená ako primárny objekt. V prípade kladivového alebo skrutkového lisu je primárna matrica zvyčajne priradená k hornej matrici.
 
-**Ovládanie krokového posunu ([DSMAX](/docs/en/keyword_documentation/d/dsmax/)/[DTMAX](/docs/en/keyword_documentation/d/dtmax/))**
+**Ovládanie krokového posunu ([DSMAX]({{ '/docs/en/keyword_documentation/d/dsmax/' | relative_url }})/[DTMAX]({{ '/docs/en/keyword_documentation/d/dtmax/' | relative_url }}))**
 
 Veľkosť kroku riešenia je možné riadiť časovým krokom alebo posunom primárnej matrice. Ak je špecifikovaný zdvih na krok, primárna matrica sa v každom časovom kroku posunie o zadanú hodnotu. Celkový posun primárnej matrice bude rovný posunu na krok vynásobenému celkovým počtom krokov. Ak je špecifikovaný čas na krok, použije sa časový interval na krok. Posun matrice na krok bude rovný časovému kroku vynásobenému rýchlosťou matrice.
 
@@ -334,7 +334,7 @@ Ovládacie prvky pre kroky a ukončenie slúžia na určenie časového kroku, c
   
 Tu je možné zadať podmienky spracovania, ako napríklad teplotu okolia a konvekčný koeficient.
 
-Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ## Vytvoriť databázu
 
@@ -357,10 +357,10 @@ Okno „Vytvoriť databázu“
 
 **Súvisiace témy:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[32.1. 2D Multi Blow Forging](/docs/en/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/)
+[32.1. 2D Multi Blow Forging]({{ '/docs/en/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/' | relative_url }})

@@ -73,4 +73,4 @@ Applicable object types: Elastoplastic
   
 RELATED TOPICS  
 ---  
-Keywords: [ALPHA](/docs/en/keyword_documentation/a/alpha/), [NDISFM](/docs/en/keyword_documentation/n/ndisfm/), [GBMOBI](/docs/en/keyword_documentation/g/gbmobi/), [RECVRY](/docs/en/keyword_documentation/r/recvry/)
+Keywords: [ALPHA]({{ '/docs/en/keyword_documentation/a/alpha/' | relative_url }}), [NDISFM]({{ '/docs/en/keyword_documentation/n/ndisfm/' | relative_url }}), [GBMOBI]({{ '/docs/en/keyword_documentation/g/gbmobi/' | relative_url }}), [RECVRY]({{ '/docs/en/keyword_documentation/r/recvry/' | relative_url }})

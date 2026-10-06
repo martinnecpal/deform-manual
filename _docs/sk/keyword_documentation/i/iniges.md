@@ -29,4 +29,4 @@ Initial guess calculation is required when the velocity solution of the current 
   
 RELATED TOPICS  
 ---  
-[Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+[Simulation Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})

@@ -30,4 +30,4 @@ When (Otype=1) is used in Lagrangian simulation, the object is stationary as if 
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Simulation Type](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/), [Ring Rolling Wizard](/docs/sk/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/), [Shape Rolling Wizard](/docs/sk/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/)
+Simulation Controls: [Simulation Type]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}), [Ring Rolling Wizard]({{ '/docs/sk/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/' | relative_url }}), [Shape Rolling Wizard]({{ '/docs/sk/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/' | relative_url }})

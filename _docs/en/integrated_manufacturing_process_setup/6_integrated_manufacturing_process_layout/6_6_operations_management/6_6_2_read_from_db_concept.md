@@ -31,7 +31,7 @@ Read from DB object type selection by passing the objects from operation editor 
 Read from DB option is not available in first operation object types, as there is no DB is available before first operation.
 
   
-For more information on Connecting operations and passing objects refer the chapter [6.6.1.Connecting Operations.](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_1_connecting_operations/)
+For more information on Connecting operations and passing objects refer the chapter [6.6.1.Connecting Operations.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_1_connecting_operations/' | relative_url }})
 
 When user wants to pass objects to Forming operation, user has to select the objects to be passed from previous operations as Forming operation is an open environment. But in guided operations like Heat transfer express, Heat treatment, forming express etc opening the operations will automatically add the objects and object type is set to Read from DB.
 
@@ -60,6 +60,6 @@ Object type selection in forming express operation; (a) Before opening the 2nd o
 
 **Related Topics:**
 
-[6.1. Integrated Manufacturing Porcess (MO) Pre-processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Porcess (MO) Pre-processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.6.1. Connecting Operations](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_1_connecting_operations/)
+[6.6.1. Connecting Operations]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_1_connecting_operations/' | relative_url }})

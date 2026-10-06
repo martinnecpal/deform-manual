@@ -20,4 +20,4 @@ Hlavné grafické rozhranie
 
 **Súvisiace témy:**
 
-[4.1. GUI Main Layout](/docs/sk/starting_up_deform/4_gui_main/4_1_gui_main_layout/)
+[4.1. GUI Main Layout]({{ '/docs/sk/starting_up_deform/4_gui_main/4_1_gui_main_layout/' | relative_url }})

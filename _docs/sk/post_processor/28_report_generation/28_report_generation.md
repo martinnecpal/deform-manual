@@ -49,7 +49,7 @@ Strom objektov správy
 
 ## Kapitola
 
-Kapitola obsahuje sekcie s rôznymi typmi výstupov, ako je sledovanie bodov, kontúrové znázornenie stavových premenných, grafy atď., a používateľ si môže vybrať rozsah operácií, ktoré je možné pridať do správy, ako je znázornené na obr. 28.3. Ďalšie informácie týkajúce sa úpravy kapitoly nájdete v [28.2. Editing Chapters](/docs/en/post_processor/28_report_generation/28_1_editing_chapters/).
+Kapitola obsahuje sekcie s rôznymi typmi výstupov, ako je sledovanie bodov, kontúrové znázornenie stavových premenných, grafy atď., a používateľ si môže vybrať rozsah operácií, ktoré je možné pridať do správy, ako je znázornené na obr. 28.3. Ďalšie informácie týkajúce sa úpravy kapitoly nájdete v [28.2. Editing Chapters]({{ '/docs/en/post_processor/28_report_generation/28_1_editing_chapters/' | relative_url }}).
 
 ![]({{ '/assets/images/post_processor/28_report_generation/image003.jpg' | relative_url }})
 
@@ -376,8 +376,8 @@ Poznámka: V súbore PPT sa nevytvorí výstup vo formáte 3D PDF; okrem výstup
 
 **Súvisiace témy:**
 
-[Report Generation Setup in MO Preprocessor](/docs/en/operation_templates/41_report_generation/41_1_report_generation/)
+[Report Generation Setup in MO Preprocessor]({{ '/docs/en/operation_templates/41_report_generation/41_1_report_generation/' | relative_url }})
 
-[25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})
 
-[27\. Introduction to Report Generation](/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/)
+[27\. Introduction to Report Generation]({{ '/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/' | relative_url }})

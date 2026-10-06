@@ -13,15 +13,15 @@ title: "16.6. Vykurovacie vlastnosti"
 
 [**2D, 3D**]: Ak sa vyžadujú výpočty indukčného ohrevu, je potrebné ho najprv zapnúť v ovládacích prvkoch simulácie a až potom definovať súvisiace hodnoty objektu, ako je napríklad frekvencia prúdu (pozri obr. 16.6.1 a obr. 16.6.2). Riešiteľ CG je tiež možnosťou riešenia modelov indukčného ohrevu a je schopný riešiť modely s primeranou veľkosťou.
 
-Výber režimu simulácie indukčného ohrevu nájdete v časti [Fig. 9.1.3.](../9_Simulation_Controls/9_1_Simulation_type_Settings.htm#Fig._9.1.3. Simulation Controls window - Heating). Elektrické a magnetické vlastnosti materiálu nájdete v časti [10.8. Electromagnetic data](/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/).
+Výber režimu simulácie indukčného ohrevu nájdete v časti [Fig. 9.1.3.](../9_Simulation_Controls/9_1_Simulation_type_Settings.htm#Fig._9.1.3. Simulation Controls window - Heating). Elektrické a magnetické vlastnosti materiálu nájdete v časti [10.8. Electromagnetic data]({{ '/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/' | relative_url }}).
 
 Motor DEFORM FEM teraz dokáže spracovať modely indukčného ohrevu s dvojfrekvenčnými vstupnými údajmi pre aktuálnu frekvenciu v 2D a 3D.
 
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_6_Heating_Properties/16_6_Image001.jpg)
+![]({{ '/assets/images/pre-processor/16_object_properties/16_6_heating_properties/16_6_image001.jpg' | relative_url }})
 
 Okno vlastností objektu indukčného ohrevu pre nastavenie jednej frekvencie
 
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_6_Heating_Properties/16_6_Image002.jpg)
+![]({{ '/assets/images/pre-processor/16_object_properties/16_6_heating_properties/16_6_image002.jpg' | relative_url }})
 
 Okno vlastností indukčného ohrevu pre nastavenie dvojitej frekvencie
 
@@ -43,26 +43,26 @@ Definícia údajov môže byť konštantná alebo funkcia času pre objemový n�
 
 **Súvisiace témy:**
 
-[16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+[16\. Object properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[16.1. Deformation properties](/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/)
+[16.1. Deformation properties]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }})
 
-[16.2. Thermal properties](/docs/sk/pre_processor/16_object_properties/16_2_thermal_properties/)
+[16.2. Thermal properties]({{ '/docs/sk/pre_processor/16_object_properties/16_2_thermal_properties/' | relative_url }})
 
-[16.3. Reference](/docs/sk/pre_processor/16_object_properties/16_3_Reference/)
+[16.3. Reference]({{ '/docs/sk/pre_processor/16_object_properties/16_3_Reference/' | relative_url }})
 
-[16.4. Fracture Properties](/docs/sk/pre_processor/16_object_properties/16_4_Fracture_properties/)
+[16.4. Fracture Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_4_Fracture_properties/' | relative_url }})
 
-[16.5. Hardness Properties](/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/)
+[16.5. Hardness Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/' | relative_url }})
 
-[16.7. Symmetry Properties](/docs/sk/pre_processor/16_object_properties/16_7_symmetry_properties/)
+[16.7. Symmetry Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_7_symmetry_properties/' | relative_url }})
 
-[16.8. Body Force](/docs/sk/pre_processor/16_object_properties/16_8_body_force/)
+[16.8. Body Force]({{ '/docs/sk/pre_processor/16_object_properties/16_8_body_force/' | relative_url }})
 
-[16.9. RSE](/docs/sk/pre_processor/16_object_properties/16_9_rse/)
+[16.9. RSE]({{ '/docs/sk/pre_processor/16_object_properties/16_9_rse/' | relative_url }})
 
-[16.10. User](/docs/sk/pre_processor/16_object_properties/16_10_user/)
+[16.10. User]({{ '/docs/sk/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Material Electrical and magnetic properties](/docs/sk/pre_processor/10_Material_Data/10_8_Elec_Mag_Data/10_8_Elec_Mag_Data/)
+[Material Electrical and magnetic properties]({{ '/docs/sk/pre_processor/10_Material_Data/10_8_Elec_Mag_Data/10_8_Elec_Mag_Data/' | relative_url }})
 
-[10\. Material Data](/docs/sk/pre_processor/10_Material_Data/10_Material_Data/)
+[10\. Material Data]({{ '/docs/sk/pre_processor/10_Material_Data/10_Material_Data/' | relative_url }})

@@ -57,7 +57,7 @@ Inter object constant Shear Friction options for 3D
 
 ## **Contact relation (CNTACT)**
 
-**[2D, 3D]:** The contact relation ([CNTACT](/docs/en/keyword_documentation/c/cntact/)) parameter is used to set the Master/Slave relationship between workpiece, dies, and deformable bodies. The Slave object should be the object with the finer mesh. In the case of two objects consisting of the same material, either can be the slave although the object expected to elastically deform the most should be defined as the slave. Setting a ``No Contact'' relation causes the objects to be invisible to each other and allows them to pass through each other uninhibited.
+**[2D, 3D]:** The contact relation ([CNTACT]({{ '/docs/en/keyword_documentation/c/cntact/' | relative_url }})) parameter is used to set the Master/Slave relationship between workpiece, dies, and deformable bodies. The Slave object should be the object with the finer mesh. In the case of two objects consisting of the same material, either can be the slave although the object expected to elastically deform the most should be defined as the slave. Setting a ``No Contact'' relation causes the objects to be invisible to each other and allows them to pass through each other uninhibited.
 
 CNTACT should be specified for every pair of deformable objects that may contact each other during the simulation.
 
@@ -162,38 +162,38 @@ Inter object relation after swapping using arrow button.
 
 **In Inter - Object data definition windows we have:**
 
-  * **Deformation Tab** : Under Deformation tab allows the user to define Friction value, Contact criteria and Seperation criteria data. For more information related to Deformation tab option, refer [20.1. Friction and Contact criteria](/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/).
+  * **Deformation Tab** : Under Deformation tab allows the user to define Friction value, Contact criteria and Seperation criteria data. For more information related to Deformation tab option, refer [20.1. Friction and Contact criteria]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}).
 
-  * **Thermal Tab** : Under Thermal tab allows the user to define Heat Transfer Coefficient and Contact criteria (only for 2D) data. For more information please refer [20.2. Interface Thermal Data.](/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/)
+  * **Thermal Tab** : Under Thermal tab allows the user to define Heat Transfer Coefficient and Contact criteria (only for 2D) data. For more information please refer [20.2. Interface Thermal Data.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }})
 
-  * **Heating Tab** : Under Heating tab allows the user to define Interface Resisitivity data. For more information please refer [20.3. Interface Resisitivity.](/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/)
+  * **Heating Tab** : Under Heating tab allows the user to define Interface Resisitivity data. For more information please refer [20.3. Interface Resisitivity.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }})
 
-  * **Friction Window Tab** : Under Friction Window tab allows the user to specify different friction coefficient values for different contact regions of the same object pair. For more information please refer [20.1. Friction and Contact criteria](/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/).
+  * **Friction Window Tab** : Under Friction Window tab allows the user to specify different friction coefficient values for different contact regions of the same object pair. For more information please refer [20.1. Friction and Contact criteria]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}).
 
-  * **Tool wear****Tab** : Under Tool wear tab user can define the model for tool wear calculation of an object which is in contact with other object. For more information please refer [20.4. Tool Wear.](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/)
+  * **Tool wear****Tab** : Under Tool wear tab user can define the model for tool wear calculation of an object which is in contact with other object. For more information please refer [20.4. Tool Wear.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }})
 
-  * **Rigid Contact Tab** : Under Rigid contact tab user can define the reference points for Rigid dies to prevent penetration when they come in contact with each other. For more information please refer [20.5. Rigid Contact.](/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/)
+  * **Rigid Contact Tab** : Under Rigid contact tab user can define the reference points for Rigid dies to prevent penetration when they come in contact with each other. For more information please refer [20.5. Rigid Contact.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }})
 
 **Related Topics:**
 
-[20.1. Friction and Contact criteria](/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/)
+[20.1. Friction and Contact criteria]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }})
 
-[20.2. Interface Thermal Data](/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/)
+[20.2. Interface Thermal Data]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }})
 
-[20.3. Interface Resisitivity](/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/)
+[20.3. Interface Resisitivity]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }})
 
-[20.4. Tool Wear](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/)
+[20.4. Tool Wear]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }})
 
-[20.5. Rigid Contact](/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/)
+[20.5. Rigid Contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }})
 
 [Simulation modes selection](../9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\))
 
-[Environment process conditions settings](/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/)
+[Environment process conditions settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})
 
 [DEFORM object types](../11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type)
 
 [Contact Boundary condition](../14_boundary_conditions/14_2_deformation_boundary_conditions.htm#14.2.6._Contact)
 
-[2D Tool Wear Lab](/docs/en/applications/55_applications/55_tool_wear_labs/2d_tool_wear_lab_in_mo/)
+[2D Tool Wear Lab]({{ '/docs/en/applications/55_applications/55_tool_wear_labs/2d_tool_wear_lab_in_mo/' | relative_url }})
 
-[2D Inertia weld simulation](/docs/en/applications/55_applications/55_inertia_welding/2d_inertia_welding/)
+[2D Inertia weld simulation]({{ '/docs/en/applications/55_applications/55_inertia_welding/2d_inertia_welding/' | relative_url }})

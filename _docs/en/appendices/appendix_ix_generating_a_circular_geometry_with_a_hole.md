@@ -45,4 +45,4 @@ A circular result with a hole
 
 **Related Topics:**
 
-[12\. Geometry Modelling](/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/)
+[12\. Geometry Modelling]({{ '/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})

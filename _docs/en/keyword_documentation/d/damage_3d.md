@@ -99,4 +99,4 @@ Applicable object types: Plastic, Elastoplastic, Porous
   
 RELATED TOPICS  
 ---  
-Keywords: Related keywords: [ELMNOD](/docs/en/keyword_documentation/e/elmnod/), [FRCMOD](/docs/en/keyword_documentation/f/frcmod/)
+Keywords: Related keywords: [ELMNOD]({{ '/docs/en/keyword_documentation/e/elmnod/' | relative_url }}), [FRCMOD]({{ '/docs/en/keyword_documentation/f/frcmod/' | relative_url }})

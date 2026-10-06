@@ -14,7 +14,7 @@ title: "16.4. Vlastnosti lomu"
 16.4.4 Deaktivácia lomového prvku
 
   
-V programe DEFORM možno modelovať tvárny lom deformujúceho sa obrobku. Ak je zapnutá funkcia lom, oddelenie materiálu sa bude modelovať pre všetky prvky, ktoré prekročia hodnotu kritického poškodenia zadanú na karte Vlastnosti materiálu ![](../../../assets/Icons/Pre_icons/arrow_front.jpg)Rôzne![](../../../assets/Icons/Pre_icons/arrow_front.jpg)[Fracture](/docs/sk/pre_processor/10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models/). Táto funkcia je užitočná pri modelovaní strihania a zaslepovania, obrábania, lomov deformovateľných montážnych spojovacích prvkov (popnitov) a iných aplikácií.
+V programe DEFORM možno modelovať tvárny lom deformujúceho sa obrobku. Ak je zapnutá funkcia lom, oddelenie materiálu sa bude modelovať pre všetky prvky, ktoré prekročia hodnotu kritického poškodenia zadanú na karte Vlastnosti materiálu ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Rôzne![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})[Fracture]({{ '/docs/sk/pre_processor/10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models/' | relative_url }}). Táto funkcia je užitočná pri modelovaní strihania a zaslepovania, obrábania, lomov deformovateľných montážnych spojovacích prvkov (popnitov) a iných aplikácií.
 
 **[2D]:****Vymazanie lomových prvkov** sa modeluje vymazaním všetkých prvkov, ktoré prekročia kritickú hodnotu poškodenia.
 
@@ -22,27 +22,27 @@ Preto by sa mala v každej oblasti, kde sa očakáva lom, použiť extrémne jem
 
 **Deaktivácia lomových prvkov** je nová metóda na štúdium šírenia trhlín. Tá deaktivuje prvok namiesto jeho vymazania, keď jeho poškodenie dosiahne kritickú hodnotu jeho materiálu (pozri obr. 16.4.2.).
 
-**[3D]** : Ak chcete aktivovať typ vymazania lomových prvkov, používateľ musí vybrať typ **Vymazanie lomového prvku** z rozbaľovacieho poľa Lom ([FRCNEL](/docs/sk/Keyword_Documentation/F/FRCNEL/)) (pozri obr. 16.4.1.) Tým sa iniciuje vymazanie prvkov, ktorých hodnota lomu je väčšia ako kritická hodnota definovaná v modeloch lomu/poškodenia materiálu počas postupov remeshingu. Model poškodenia a faktor kritického poškodenia definovaný v údajoch o materiáli sú dôležité údaje potrebné na aktiváciu tejto funkcie. Prehľad lomov nájdete v časti [3D Fracture.](/docs/sk/Applications/55_Applications/55_Fracture/3D_Fracture/)
+**[3D]** : Ak chcete aktivovať typ vymazania lomových prvkov, používateľ musí vybrať typ **Vymazanie lomového prvku** z rozbaľovacieho poľa Lom ([FRCNEL]({{ '/docs/sk/Keyword_Documentation/F/FRCNEL/' | relative_url }})) (pozri obr. 16.4.1.) Tým sa iniciuje vymazanie prvkov, ktorých hodnota lomu je väčšia ako kritická hodnota definovaná v modeloch lomu/poškodenia materiálu počas postupov remeshingu. Model poškodenia a faktor kritického poškodenia definovaný v údajoch o materiáli sú dôležité údaje potrebné na aktiváciu tejto funkcie. Prehľad lomov nájdete v časti [3D Fracture.]({{ '/docs/sk/Applications/55_Applications/55_Fracture/3D_Fracture/' | relative_url }})
 
 **Deaktivácia lomových prvkov** je nová metóda na štúdium šírenia trhlín. Tá deaktivuje prvok namiesto jeho vymazania, keď jeho poškodenie dosiahne kritickú hodnotu jeho materiálu (pozri obr. 16.4.2.).
 
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_4_Fracture_Properties/16_4_Image001.jpg)
+![]({{ '/assets/images/pre-processor/16_object_properties/16_4_fracture_properties/16_4_image001.jpg' | relative_url }})
 
 Typ odstránenia zlomového prvku
 
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_4_Fracture_Properties/16_4_Image002.jpg)
+![]({{ '/assets/images/pre-processor/16_object_properties/16_4_fracture_properties/16_4_image002.jpg' | relative_url }})
 
 Typ deaktivácie lomového prvku
 
-## Zlomový krok ([FRCSTP](/docs/sk/Keyword_Documentation/F/FRCSTP/)) [2D]
+## Zlomový krok ([FRCSTP]({{ '/docs/sk/Keyword_Documentation/F/FRCSTP/' | relative_url }})) [2D]
 
-Krok (**[FRCSTP](/docs/sk/Keyword_Documentation/F/FRCSTP/))** interval, v ktorom sa má simulácia zastaviť, aby sa vykonalo vymazanie prvku. Ak žiadny prvok nie je nad kritickou hodnotou poškodenia, žiadny sa nevymaže.
+Krok (**[FRCSTP]({{ '/docs/sk/Keyword_Documentation/F/FRCSTP/' | relative_url }}))** interval, v ktorom sa má simulácia zastaviť, aby sa vykonalo vymazanie prvku. Ak žiadny prvok nie je nad kritickou hodnotou poškodenia, žiadny sa nevymaže.
 
-## Odstránenie zlomových prvkov ([FRCNEL](/docs/sk/Keyword_Documentation/F/FRCNEL/)) [2D]
+## Odstránenie zlomových prvkov ([FRCNEL]({{ '/docs/sk/Keyword_Documentation/F/FRCNEL/' | relative_url }})) [2D]
 
 Počet prvkov, ktoré musia byť nad kritickou hodnotou poškodenia, aby sa simulácia zastavila a vykonalo sa vymazanie prvkov. Typická hodnota je približne 4.
 
-## Odstránenie zlomového prvku ([FRCNEL](/docs/sk/Keyword_Documentation/F/FRCNEL/)) [3D]
+## Odstránenie zlomového prvku ([FRCNEL]({{ '/docs/sk/Keyword_Documentation/F/FRCNEL/' | relative_url }})) [3D]
 
 Táto možnosť iniciuje odstránenie prvkov s hodnotou lomu vyššou ako kritická hodnota definovaná v modeloch lomu/poškodenia materiálu počas postupov remeshingu.
 
@@ -54,26 +54,26 @@ Deaktivácia lomových prvkov je nová metóda na štúdium šírenia trhlín. P
 
 **Súvisiace témy:**
 
-[16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+[16\. Object properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[16.1. Deformation properties](/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/)
+[16.1. Deformation properties]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }})
 
-[16.2. Thermal properties](/docs/sk/pre_processor/16_object_properties/16_2_thermal_properties/)
+[16.2. Thermal properties]({{ '/docs/sk/pre_processor/16_object_properties/16_2_thermal_properties/' | relative_url }})
 
-[16.3. Reference](/docs/sk/pre_processor/16_object_properties/16_3_Reference/)
+[16.3. Reference]({{ '/docs/sk/pre_processor/16_object_properties/16_3_Reference/' | relative_url }})
 
-[16.5. Hardness Properties](/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/)
+[16.5. Hardness Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/' | relative_url }})
 
-[16.6. Heating Properties](/docs/sk/pre_processor/16_object_properties/16_6_heating_properties/)
+[16.6. Heating Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_6_heating_properties/' | relative_url }})
 
-[16.7. Symmetry Properties](/docs/sk/pre_processor/16_object_properties/16_7_symmetry_properties/)
+[16.7. Symmetry Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_7_symmetry_properties/' | relative_url }})
 
-[16.8. Body Force](/docs/sk/pre_processor/16_object_properties/16_8_body_force/)
+[16.8. Body Force]({{ '/docs/sk/pre_processor/16_object_properties/16_8_body_force/' | relative_url }})
 
-[16.9. RSE](/docs/sk/pre_processor/16_object_properties/16_9_rse/)
+[16.9. RSE]({{ '/docs/sk/pre_processor/16_object_properties/16_9_rse/' | relative_url }})
 
-[16.10. User](/docs/sk/pre_processor/16_object_properties/16_10_user/)
+[16.10. User]({{ '/docs/sk/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Material Fracture/damage models](/docs/sk/pre_processor/10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models/)
+[Material Fracture/damage models]({{ '/docs/sk/pre_processor/10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models/' | relative_url }})
 
-[Applications - 3D Fracture](/docs/sk/Applications/55_Applications/55_Fracture/3D_Fracture/)
+[Applications - 3D Fracture]({{ '/docs/sk/Applications/55_Applications/55_Fracture/3D_Fracture/' | relative_url }})

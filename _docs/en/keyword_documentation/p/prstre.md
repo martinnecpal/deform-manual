@@ -32,4 +32,4 @@ Applicable object types: [Rigid](../../pre_processor/11_general_object_data_defi
   
 RELATED TOPICS  
 ---  
-[Movement Controls](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/): Elastic Losses Keywords: [MOVCTL (2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm)
+[Movement Controls]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}): Elastic Losses Keywords: [MOVCTL (2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm)

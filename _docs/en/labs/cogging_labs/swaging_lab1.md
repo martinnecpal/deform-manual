@@ -281,4 +281,4 @@ Workpiece cross section
 
 **Related Topics:**
 
-[Swaging Setup](/docs/en/operation_templates/29_cogging/29_2_swaging_setup/)
+[Swaging Setup]({{ '/docs/en/operation_templates/29_cogging/29_2_swaging_setup/' | relative_url }})

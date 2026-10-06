@@ -80,7 +80,7 @@ Initialization page
 
 ## Material selection
 
-Materials required for the process can be loaded either from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from DB or Keyfile using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) as shown in Fig. 37.2.5. User can also add new material and define required data from respective tab by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). For more information on Material data definition please refer [Material data](/docs/en/pre_processor/10_material_data/10_material_data/).
+Materials required for the process can be loaded either from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from DB or Keyfile using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) as shown in Fig. 37.2.5. User can also add new material and define required data from respective tab by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). For more information on Material data definition please refer [Material data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image003.jpg' | relative_url }})
 
@@ -104,7 +104,7 @@ Object General page
 
 ### Object Geometry
 
-User can define simple geometries using primitive options and geometries can also be imported using Import geometry from file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option (See Fig. 37.2.8.). For more information on various options of the geometry page please refer. [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+User can define simple geometries using primitive options and geometries can also be imported using Import geometry from file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option (See Fig. 37.2.8.). For more information on various options of the geometry page please refer. [12.3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image005.jpg' | relative_url }})
 
@@ -112,7 +112,7 @@ Object Geometry page
 
 ### Object Mesh
 
-In Mesh page, both Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) and Expert ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) mode options will be in Active mode, in guided mode only Number of Elements needs to be defined to generate mesh. User can change the number of mesh elements in guided mode and generate mesh with other default settings as shown in Fig. 37.2.9. More options to control mesh density are available by switching to Expert mode clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) button. Expert mode mesh options is as shown in Fig. 37.2.10. For detail description of these expert mode mesh settings please refer [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+In Mesh page, both Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) and Expert ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) mode options will be in Active mode, in guided mode only Number of Elements needs to be defined to generate mesh. User can change the number of mesh elements in guided mode and generate mesh with other default settings as shown in Fig. 37.2.9. More options to control mesh density are available by switching to Expert mode clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) button. Expert mode mesh options is as shown in Fig. 37.2.10. For detail description of these expert mode mesh settings please refer [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image006.jpg' | relative_url }})
 
@@ -146,7 +146,7 @@ User assigned Velocity BCC
 
 ### Object Property
 
-Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See Fig. 37.2.14.). For more information, Please refer [16\. Object properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
+Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See Fig. 37.2.14.). For more information, Please refer [16\. Object properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image011.jpg' | relative_url }})
 
@@ -233,7 +233,7 @@ Schedule Graph
 
 ## Positioning
 
-User can position the objects using position objects button. Various positioning options are available to position the objects (See Fig. 37.2.22.), for more information on these options please refer [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+User can position the objects using position objects button. Various positioning options are available to position the objects (See Fig. 37.2.22.), for more information on these options please refer [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image018.jpg' | relative_url }})
 
@@ -304,10 +304,10 @@ Generate database
 
 **Related Topics:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Proces Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Proces Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[3D Heat Treatment wizard Lab](/docs/en/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/)
+[3D Heat Treatment wizard Lab]({{ '/docs/en/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/' | relative_url }})

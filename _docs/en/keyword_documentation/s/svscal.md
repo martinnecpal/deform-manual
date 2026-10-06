@@ -37,4 +37,4 @@ SVSCAL is an action keyword that scales the values of state variable when it is 
   
 RELATED TOPICS  
 ---  
-[Object Nodal Data](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/), [Object Elemental Data](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/)
+[Object Nodal Data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}), [Object Elemental Data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }})

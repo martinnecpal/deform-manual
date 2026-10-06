@@ -45,4 +45,4 @@ ERECVL is the state variable for element record values.
   
 RELATED TOPICS  
 ---  
-Related keywords: [ERECID](/docs/en/keyword_documentation/e/erecid/)
+Related keywords: [ERECID]({{ '/docs/en/keyword_documentation/e/erecid/' | relative_url }})

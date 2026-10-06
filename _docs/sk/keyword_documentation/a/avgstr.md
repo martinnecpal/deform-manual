@@ -32,7 +32,7 @@ Initial Heightdefobj = Initial height of deforming object
   
 RELATED TOPICS  
 ---  
-Object Properties: [Deformation](/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/)  
-Keywords: [LMTSTR](/docs/sk/keyword_documentation/l/lmtstr/)  
+Object Properties: [Deformation]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }})  
+Keywords: [LMTSTR]({{ '/docs/sk/keyword_documentation/l/lmtstr/' | relative_url }})  
   
 #

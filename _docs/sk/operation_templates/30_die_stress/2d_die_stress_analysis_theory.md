@@ -99,7 +99,7 @@ Medzi rôzne spôsoby poruchy matrice patria:
 
   3. **Porucha spôsobená únavou pri nízkom počte cyklov (LCF)****v dôsledku cyklického, tepelného a mechanického zaťaženia** – K tomu dochádza, keď sú napätia nižšie ako medza tečnosti materiálu matrice, avšak po mnohých cykloch ťahového zaťaženia vedú k poruche matrice. Týmto javom je možné predísť znížením alebo odstránením ťahových napätí.
 
-  4. **Opotrebenie** – Najčastejší spôsob poruchy lisovacích foriem. Odhad tohto javu presahuje rámec analýzy napätí v lisovacích formách. (Ďalšie informácie k tejto téme nájdete v dokumente [20.4. Inter-object Data Tool wear section](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/).)
+  4. **Opotrebenie** – Najčastejší spôsob poruchy lisovacích foriem. Odhad tohto javu presahuje rámec analýzy napätí v lisovacích formách. (Ďalšie informácie k tejto téme nájdete v dokumente [20.4. Inter-object Data Tool wear section]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}).)
 
 ## Požadované údaje
 
@@ -223,8 +223,8 @@ Porovnanie idealizovaných kriviek napätia a deformácie s krivkami tvárnych a
 
 **Súvisiace témy:**
 
-[Object Boundary Condition](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[Object Boundary Condition]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[2D Die Stress Study with Multiple Steps](/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/)
+[2D Die Stress Study with Multiple Steps]({{ '/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/' | relative_url }})
 
-[2D Die Stress Study with Single steps](/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/)
+[2D Die Stress Study with Single steps]({{ '/docs/en/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/' | relative_url }})

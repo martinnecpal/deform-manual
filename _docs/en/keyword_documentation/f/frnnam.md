@@ -29,4 +29,4 @@ Heating in the furnace can be modeled using environment temperature (ENVTMP) in 
   
 RELATED TOPICS  
 ---  
-Keywords: [ENVTMP](/docs/en/keyword_documentation/e/envtmp/)
+Keywords: [ENVTMP]({{ '/docs/en/keyword_documentation/e/envtmp/' | relative_url }})

@@ -97,9 +97,9 @@ Vyskakovacie okno Plocha a objem siete
 
 Odstránenie vyskakovacieho okna siete
 
-**Povrchová sieť**![]({{ '/assets/icons/pre_icons/mo_surface_mesh_button.jpg' | relative_url }}) : Po nastavení všetkých parametrov siete je možné kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_surface_mesh_button.jpg' | relative_url }}) vytvoriť povrchovú sieť. Keď sa vygeneruje nová sieť pre objekt, ktorý má v súčasnosti sieť, stará sieť sa vymaže a nahradí sa novou sieťou. Ak dôjde k zlyhaniu pri generovaní povrchovej siete, pozrite si časť [Trouble shooting](/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/).
+**Povrchová sieť**![]({{ '/assets/icons/pre_icons/mo_surface_mesh_button.jpg' | relative_url }}) : Po nastavení všetkých parametrov siete je možné kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_surface_mesh_button.jpg' | relative_url }}) vytvoriť povrchovú sieť. Keď sa vygeneruje nová sieť pre objekt, ktorý má v súčasnosti sieť, stará sieť sa vymaže a nahradí sa novou sieťou. Ak dôjde k zlyhaniu pri generovaní povrchovej siete, pozrite si časť [Trouble shooting]({{ '/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/' | relative_url }}).
 
-**Tvrdá sieť** ![]({{ '/assets/icons/pre_icons/mo_solid_mesh_button.jpg' | relative_url }}) : Po vygenerovaní povrchovej siete by mal používateľ skontrolovať sieť pred generovaním pevnej siete. Venujte osobitnú pozornosť primeranej hustote siete v oblastiach so zložitou geometriou. Po vygenerovaní prijateľnej povrchovej siete sa môže vygenerovať pevná sieť kliknutím na tlačidlo Generate Solid Mesh (Generovať pevnú sieť). Ak je povrchová sieť importovaná ako geometria, používateľ môže upustiť od generovania povrchovej siete a priamo umiestniť pevnú sieť na povrchovú sieť. Ak generovanie pevnej siete zlyhá, pozrite si časť [Trouble shooting](/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/).
+**Tvrdá sieť** ![]({{ '/assets/icons/pre_icons/mo_solid_mesh_button.jpg' | relative_url }}) : Po vygenerovaní povrchovej siete by mal používateľ skontrolovať sieť pred generovaním pevnej siete. Venujte osobitnú pozornosť primeranej hustote siete v oblastiach so zložitou geometriou. Po vygenerovaní prijateľnej povrchovej siete sa môže vygenerovať pevná sieť kliknutím na tlačidlo Generate Solid Mesh (Generovať pevnú sieť). Ak je povrchová sieť importovaná ako geometria, používateľ môže upustiť od generovania povrchovej siete a priamo umiestniť pevnú sieť na povrchovú sieť. Ak generovanie pevnej siete zlyhá, pozrite si časť [Trouble shooting]({{ '/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/' | relative_url }}).
 
 **Ručné prepracovanie** ![]({{ '/assets/icons/pre_icons/mo_manual_remesh_button.jpg' | relative_url }}) : Ak simulácia pokračuje z predtým spustenej simulácie, odporúčané tlačidlo, na ktoré treba kliknúť, je Ručné prepracovanie. Tým sa automaticky vykoná extrakcia hraníc a používateľ bude vyzvaný na interpoláciu okrajových podmienok.
 
@@ -176,12 +176,12 @@ Možnosti okna s absolútnou sieťou
 
 Počet povrchových prvkov (MGNELS) predstavuje približný počet povrchových prvkov, ktoré vygeneruje generátor siete. Automatický generátor siete (AMG) prevezme hodnotu MGNELS a vygeneruje sieť, ktorá bude obsahovať približne rovnaký počet prvkov. Táto hodnota sa ignoruje, ak sa používajú okná siete s definíciou absolútnej hustoty siete.
 
-  * **Pomer veľkosti prvku**([MGSIZR](/docs/sk/keyword_documentation/m/mgsizr/))
+  * **Pomer veľkosti prvku**([MGSIZR]({{ '/docs/sk/keyword_documentation/m/mgsizr/' | relative_url }}))
 
 Pomer maximálnej veľkosti medzi prvkami je jedným z viacerých spôsobov riadenia hustoty siete počas automatického generovania siete (AMG) určením pomeru hustoty uzlov.
 
   
-Pri hodnote 3 pre [MGSIZR](/docs/sk/keyword_documentation/m/mgsizr/) bude najväčšia hrana prvku na objekte približne 3-krát väčšia ako najmenšia hrana prvku na tom istom objekte. Ak sa požadujú rovnako veľké prvky, potom je pomer veľkosti = 1. Ak je Size Ratio = 0, pomer veľkosti prvkov nebude faktorom pri rozdelení hustoty siete.
+Pri hodnote 3 pre [MGSIZR]({{ '/docs/sk/keyword_documentation/m/mgsizr/' | relative_url }}) bude najväčšia hrana prvku na objekte približne 3-krát väčšia ako najmenšia hrana prvku na tom istom objekte. Ak sa požadujú rovnako veľké prvky, potom je pomer veľkosti = 1. Ak je Size Ratio = 0, pomer veľkosti prvkov nebude faktorom pri rozdelení hustoty siete.
 
   * **Vnútorná jemnejšia sieť**
 
@@ -205,23 +205,23 @@ Okno 3D Mesh Weighting Factors
 
   * **Váhový faktor založený na zakrivení povrchu** (MGWCUV)
 
-Váha zakrivenia povrchu ([MGWCUV](/docs/sk/keyword_documentation/m/mgwcuv/)) použije vyššiu hustotu siete v oblastiach, kde sú dĺžky hrán geometrie menšie. Účelom je použiť jemnejšiu sieť v oblastiach, kde sa používajú menšie hrany, aby sa v oblasti malých prvkov vytvorila jemnejšia sieť. Ak je hodnota [MGWCUV](/docs/sk/keyword_documentation/m/mgwcuv/) väčšia ako 0, hraničná oblasť s krivkami dostane v tejto oblasti vyššiu hustotu siete. Ak je hodnota [MGWCUV](/docs/sk/keyword_documentation/m/mgwcuv/) nastavená na 0, toto váhové kritérium sa ignoruje.
+Váha zakrivenia povrchu ([MGWCUV]({{ '/docs/sk/keyword_documentation/m/mgwcuv/' | relative_url }})) použije vyššiu hustotu siete v oblastiach, kde sú dĺžky hrán geometrie menšie. Účelom je použiť jemnejšiu sieť v oblastiach, kde sa používajú menšie hrany, aby sa v oblasti malých prvkov vytvorila jemnejšia sieť. Ak je hodnota [MGWCUV]({{ '/docs/sk/keyword_documentation/m/mgwcuv/' | relative_url }}) väčšia ako 0, hraničná oblasť s krivkami dostane v tejto oblasti vyššiu hustotu siete. Ak je hodnota [MGWCUV]({{ '/docs/sk/keyword_documentation/m/mgwcuv/' | relative_url }}) nastavená na 0, toto váhové kritérium sa ignoruje.
 
   * **Váhový faktor založený na teplote** (MGWTMP)
 
-Tento váhový faktor ([MGWTMP](/docs/sk/keyword_documentation/m/mgwtmp/)) sa môže použiť na určenie jemných prvkov v oblastiach s vysokým teplotným gradientom.
+Tento váhový faktor ([MGWTMP]({{ '/docs/sk/keyword_documentation/m/mgwtmp/' | relative_url }})) sa môže použiť na určenie jemných prvkov v oblastiach s vysokým teplotným gradientom.
 
   * **Vážiaci faktor základne napätia** (MGWSTN)
 
-Na zachovanie jemnej siete v oblastiach s vysokým napätím možno tento váhový faktor ([MGWSTN](/docs/sk/keyword_documentation/m/mgwstn/)) upraviť.
+Na zachovanie jemnej siete v oblastiach s vysokým napätím možno tento váhový faktor ([MGWSTN]({{ '/docs/sk/keyword_documentation/m/mgwstn/' | relative_url }})) upraviť.
 
   * **Váhový faktor založený na rýchlosti ťahu** (MGWSTR)
 
-Ak sa na deformujúcom sa objekte nachádzajú oblasti s vysokou rýchlosťou deformácie a lokalizovanou deformáciou, potom sa použitím váhového faktora ([MGWSTR](/docs/sk/keyword_documentation/m/mgwstr/)) vytvorí jemná sieť v oblastiach s vysokým gradientom rýchlosti deformácie.
+Ak sa na deformujúcom sa objekte nachádzajú oblasti s vysokou rýchlosťou deformácie a lokalizovanou deformáciou, potom sa použitím váhového faktora ([MGWSTR]({{ '/docs/sk/keyword_documentation/m/mgwstr/' | relative_url }})) vytvorí jemná sieť v oblastiach s vysokým gradientom rýchlosti deformácie.
 
   * **Váhový faktor sieťových okien** (MGWUSR)
 
-Váhový faktor okien definovaný používateľom ([MGWUSR](/docs/sk/keyword_documentation/m/mgwusr/)) sa používa v spojení s oknami Mesh Density. Užívateľom definované váhové rozdelenie použije vyššiu hustotu siete na oblasti so zadaným oknom hustoty. Ak je tento parameter nastavený na 0, okná siete sa počas automatického remeshovania ignorujú.
+Váhový faktor okien definovaný používateľom ([MGWUSR]({{ '/docs/sk/keyword_documentation/m/mgwusr/' | relative_url }})) sa používa v spojení s oknami Mesh Density. Užívateľom definované váhové rozdelenie použije vyššiu hustotu siete na oblasti so zadaným oknom hustoty. Ak je tento parameter nastavený na 0, okná siete sa počas automatického remeshovania ignorujú.
 
   * **Dodatočný váhový koeficient**
 
@@ -299,7 +299,7 @@ Ak je oknu priradená rýchlosť, pred vykonaním druhej alebo tretej operácie 
 
 ## Povlak Mesh
 
-Používateľ môže pomocou tejto možnosti pridať vrstvy povlaku a vygenerovať pre ne sieť. Povlaková sieť je tenká vrstva prvkov pozdĺž hranice objektu so špecifickými vlastnosťami. Pre pridané povlakové vrstvy môže používateľ priradiť materiál. (Pozri obr. 13.2.13.) Ďalšie informácie o používaní povlakovej siete nájdete v dokumente [Appendix XI](/docs/sk/appendices/appendix_xi__near_surface_mesh_functions/).
+Používateľ môže pomocou tejto možnosti pridať vrstvy povlaku a vygenerovať pre ne sieť. Povlaková sieť je tenká vrstva prvkov pozdĺž hranice objektu so špecifickými vlastnosťami. Pre pridané povlakové vrstvy môže používateľ priradiť materiál. (Pozri obr. 13.2.13.) Ďalšie informácie o používaní povlakovej siete nájdete v dokumente [Appendix XI]({{ '/docs/sk/appendices/appendix_xi__near_surface_mesh_functions/' | relative_url }}).
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image013.jpg' | relative_url }})
 
@@ -392,8 +392,8 @@ K dispozícii sú aj ďalšie možnosti na uloženie vygenerovaného vstavaného
 
 **Súvisiace témy:**
 
-[13\. Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/)
+[13\. Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[13.1. 2D Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+[13.1. 2D Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
-[13.3. 3D Brick Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
+[13.3. 3D Brick Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }})

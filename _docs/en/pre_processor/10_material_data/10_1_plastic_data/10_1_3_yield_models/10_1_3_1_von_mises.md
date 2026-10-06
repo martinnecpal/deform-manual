@@ -15,4 +15,4 @@ This is the default setting. This specifies an isotropic material model. Flow oc
 
 [10.1.3.5. Hill’s Quadratic (polycrystalline plasticity model)](10_1_3_5_hill’s_quadratic_\(polycrystalline_plasticity_model\).htm)
 
-[10.1.3.6. User's routine](/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_6_user_s_routine/)
+[10.1.3.6. User's routine]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_6_user_s_routine/' | relative_url }})

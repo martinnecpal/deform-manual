@@ -23,6 +23,6 @@ V šablóne sú definované iba údaje týkajúce sa obrábania, zatiaľ čo sys
 
 **Súvisiace témy:**
 
-[40.1. 2D Machining Distortion](/docs/en/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/)
+[40.1. 2D Machining Distortion]({{ '/docs/en/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/' | relative_url }})
 
-[40.2. 3D Machining Distortion](/docs/en/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/)
+[40.2. 3D Machining Distortion]({{ '/docs/en/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/' | relative_url }})

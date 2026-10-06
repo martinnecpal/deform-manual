@@ -15,7 +15,7 @@ Každý problém DEFORM má pridelené ID problému a mal by byť vytvorený vo 
 
 **Súbory databázy (DB)**
 
-Databázový súbor obsahuje kompletný súbor simulačných údajov pre vstupné údaje a každý uložený krok simulácie. Informácie sú uložené v komprimovanom, strojovo čitateľnom formáte a sú prístupné len prostredníctvom DEFORM [pre-procesor](/docs/sk/pre_processor/7_introduction_to_pre-processor/) a [post-processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/). Počas simulácie sa údaje pre každý krok zapisujú na koniec databázového súboru. Ak je zapisovaný krok špecifikovaný ako krok, ktorý sa má uložiť, informácie pre ďalší krok sa pridajú za aktuálny krok s údajmi. Ak krok nie je špecifikovaný na uloženie a nájde sa riešenie pre nasledujúci krok, údaje pre aktuálny krok sa prepíšu údajmi pre nasledujúci krok.
+Databázový súbor obsahuje kompletný súbor simulačných údajov pre vstupné údaje a každý uložený krok simulácie. Informácie sú uložené v komprimovanom, strojovo čitateľnom formáte a sú prístupné len prostredníctvom DEFORM [pre-procesor]({{ '/docs/sk/pre_processor/7_introduction_to_pre-processor/' | relative_url }}) a [post-processor]({{ '/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }}). Počas simulácie sa údaje pre každý krok zapisujú na koniec databázového súboru. Ak je zapisovaný krok špecifikovaný ako krok, ktorý sa má uložiť, informácie pre ďalší krok sa pridajú za aktuálny krok s údajmi. Ak krok nie je špecifikovaný na uloženie a nájde sa riešenie pre nasledujúci krok, údaje pre aktuálny krok sa prepíšu údajmi pre nasledujúci krok.
 
 **Súbory s kľúčovými slovami (KEY)**
 
@@ -23,10 +23,10 @@ Súbory s kľúčovými slovami obsahujú špecifické údaje o definícii probl
 
 **Súvisiace témy:**
 
-[Creating Input data](/docs/sk/about_deform/1_introduction_to_deform/1_8_creating_input_data/)
+[Creating Input data]({{ '/docs/sk/about_deform/1_introduction_to_deform/1_8_creating_input_data/' | relative_url }})
 
-[File structure](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure/)
+[File structure]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure/' | relative_url }})
 
-[Database Generation](/docs/sk/pre_processor/21_database_generation/21_database_generation/)
+[Database Generation]({{ '/docs/sk/pre_processor/21_database_generation/21_database_generation/' | relative_url }})
 
-[Keyword Documentation](/docs/sk/keyword_documentation/deform_keywords_list/)
+[Keyword Documentation]({{ '/docs/sk/keyword_documentation/deform_keywords_list/' | relative_url }})

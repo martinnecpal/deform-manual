@@ -200,7 +200,7 @@ Process condition window
 
 ## Step Controls For Air cooling
 
-In Steps page, change the **Number of Steps** to **60** , **set increment to save** as **4** and Solution step definition **Time** as **1** sec/step (See [Fig. L4.19.](/docs/en/labs/basic_labs/2d_labs/lab_03_spike_isothermal/)), then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+In Steps page, change the **Number of Steps** to **60** , **set increment to save** as **4** and Solution step definition **Time** as **1** sec/step (See [Fig. L4.19.]({{ '/docs/en/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }})), then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0017.jpg' | relative_url }})
 
@@ -278,8 +278,8 @@ After these changes are made, it is much easier to see that the point on the OD 
 
 **Related Topics:**
 
-[35.1. 2D Heat Transfer Operation](/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/)
+[35.1. 2D Heat Transfer Operation]({{ '/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post-processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post-processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})

@@ -31,4 +31,4 @@ This is action keyword that copies various object data (BCC, mesh density window
   
 RELATED TOPICS  
 ---  
-Object Properties: [Fracture](/docs/sk/pre_processor/16_object_properties/16_4_fracture_properties/) Keywords: [FRCMOD](/docs/sk/keyword_documentation/f/frcmod/)
+Object Properties: [Fracture]({{ '/docs/sk/pre_processor/16_object_properties/16_4_fracture_properties/' | relative_url }}) Keywords: [FRCMOD]({{ '/docs/sk/keyword_documentation/f/frcmod/' | relative_url }})

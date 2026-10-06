@@ -180,7 +180,7 @@ Stránka o geometrických primitívoch
 
   * #### 2D sieť
 
-Sieť 2D priečneho rezu môžeme vytvoriť definovaním počtu prvkov v režime s návodom. Pokročilé možnosti na ovládanie vytvárania 2D siete sú dostupné prostredníctvom prepínača „expertný režim“ ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) na paneli nástrojov. Ďalšie informácie nájdete v [13.1. 2D Mesh Genearation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/).
+Sieť 2D priečneho rezu môžeme vytvoriť definovaním počtu prvkov v režime s návodom. Pokročilé možnosti na ovládanie vytvárania 2D siete sú dostupné prostredníctvom prepínača „expertný režim“ ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) na paneli nástrojov. Ďalšie informácie nájdete v [13.1. 2D Mesh Genearation]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0010.jpg' | relative_url }})
 
@@ -606,7 +606,7 @@ Stránka „Geometria valca“ v režime EXPERT (prevádzková úroveň)
 
 #### Stránka s roletovou sieťou
 
-Na prevádzkovej úrovni môžeme vygenerovať sieť valcov. Keď otvoríme stránku so sieťou valcov, štandardne je vybraný typ siete „Brick“, ako je znázornené na obr. 43.1.54. Ďalšie informácie nájdete v dokumentoch [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) a [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/). Lagrangeov typ valcovania je možné nastaviť pomocou mriežky typu „Brick“ aj „Tetrahedral“, zatiaľ čo typ valcovania ALE je možné nastaviť iba pomocou mriežky typu „Brick“.
+Na prevádzkovej úrovni môžeme vygenerovať sieť valcov. Keď otvoríme stránku so sieťou valcov, štandardne je vybraný typ siete „Brick“, ako je znázornené na obr. 43.1.54. Ďalšie informácie nájdete v dokumentoch [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}) a [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}). Lagrangeov typ valcovania je možné nastaviť pomocou mriežky typu „Brick“ aj „Tetrahedral“, zatiaľ čo typ valcovania ALE je možné nastaviť iba pomocou mriežky typu „Brick“.
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0051.jpg' | relative_url }})
 
@@ -616,7 +616,7 @@ Stránka „Roll Mesh“ (prevádzková úroveň)
 
 Pohyb okolo osi naklonu je možné definovať v režime s vedením aj v režime pre pokročilých. V režime s vedením môže používateľ definovať pohyb okolo osi naklonu ako uhlovú rýchlosť alebo krútiaci moment. Pohyb môže byť konštantný, závislý od času alebo závislý od uhla, ako je znázornené na obr. 43.1.55.  
 Váleček môže byť odpružený; v takom prípade môže používateľ zaškrtnúť políčko „Odpružený“ a nastaviť tuhosť (môže byť konštantná alebo funkciou posunutia), predpätie, aktuálne posunutie a maximálne posunutie, ako je znázornené na obr. 43.1.56.  
-Ak chce používateľ nastaviť akékoľvek pokročilé ovládacie prvky pohybu, môže tak urobiť prostredníctvom nastavení v režime Expert, ako je znázornené na obr. 43.1.57. Ďalšie informácie o týchto nastaveniach nájdete v [15\. Movement Controls Settings](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/). 
+Ak chce používateľ nastaviť akékoľvek pokročilé ovládacie prvky pohybu, môže tak urobiť prostredníctvom nastavení v režime Expert, ako je znázornené na obr. 43.1.57. Ďalšie informácie o týchto nastaveniach nájdete v [15\. Movement Controls Settings]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0052.jpg' | relative_url }})
 
@@ -666,7 +666,7 @@ Stránka objektu obrobku
 
 #### Sieť obrobku 
 
-Nastavenia siete obrobku sú podobné nastaveniam siete na stránke 3D nastavenia v časti „Generovanie siete obrobku“ na úrovni skupiny valcovania. Podrobnosti o nastaveniach siete nájdete na stránke 3D nastavenia. V prípade Lagrangeovho nastavenia, ak importujeme objekt alebo geometriu obrobku, zobrazí sa stránka „Všeobecná sieť“ na generovanie 3D siete obrobku, ako je znázornené na obr. 43.1.61. Ďalšie informácie o tejto stránke „Sieť“ nájdete v dokumentácii [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) a [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/).
+Nastavenia siete obrobku sú podobné nastaveniam siete na stránke 3D nastavenia v časti „Generovanie siete obrobku“ na úrovni skupiny valcovania. Podrobnosti o nastaveniach siete nájdete na stránke 3D nastavenia. V prípade Lagrangeovho nastavenia, ak importujeme objekt alebo geometriu obrobku, zobrazí sa stránka „Všeobecná sieť“ na generovanie 3D siete obrobku, ako je znázornené na obr. 43.1.61. Ďalšie informácie o tejto stránke „Sieť“ nájdete v dokumentácii [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}) a [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0077.jpg' | relative_url }})
 
@@ -758,7 +758,7 @@ Stránka o pohybe obrobku pre posúvač typu BCC
 #### Inicializácia obrobku 
 
 V okne „Initialize“ sú na inicializáciu k dispozícii niektoré bežne používané stavové premenné, ako sú teplota, deformácia, napätie, poškodenie, rýchlosť, posun, hustota, veľkosť zŕn mikrostruktúry a veľkosť častíc. Ak chce používateľ pri valcovaní s viacerými priechodmi inicializovať teplotu, deformáciu alebo veľkosť zŕn, môže využiť túto stránku na inicializáciu.  
-Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 43.1.71. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien uzlov a prvkov. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1. Node Data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 43.1.71. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien uzlov a prvkov. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1. Node Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) a [17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0066.jpg' | relative_url }})
 
@@ -774,7 +774,7 @@ Vstavaná stránka Flownet
 
 ### Polohovanie 
 
-Po kliknutí na tlačidlo „Auto position ![]({{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }})“ na stránke 3D nastavení alebo na tlačidlo „Automatic Position ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }})“ na stránke polohovania sa všetky valce, obrobok a posúvače automaticky nastavia do správnej polohy. Ak chce používateľ zmeniť polohu niektorého z týchto objektov, môže použiť tlačidlo „Position objects“ na stránke polohovania. Na umiestnenie objektov sú k dispozícii rôzne možnosti polohovania, ako je znázornené na obr. 43.1.73. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+Po kliknutí na tlačidlo „Auto position ![]({{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }})“ na stránke 3D nastavení alebo na tlačidlo „Automatic Position ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }})“ na stránke polohovania sa všetky valce, obrobok a posúvače automaticky nastavia do správnej polohy. Ak chce používateľ zmeniť polohu niektorého z týchto objektov, môže použiť tlačidlo „Position objects“ na stránke polohovania. Na umiestnenie objektov sú k dispozícii rôzne možnosti polohovania, ako je znázornené na obr. 43.1.73. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0068.jpg' | relative_url }})
 
@@ -796,7 +796,7 @@ Používateľ môže definovať kontakt medzi obrobkom a ostatnými valcovými o
 
 **Systém:** Po výbere tohto rádio tlačidla systém priradí predvolené vzťahy medzi objektmi. Okrem toho môže používateľ v prípade potreby pridať mazivá tak, že z roletového menu vyberie možnosť „Pridať nové“ a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button_2.jpg' | relative_url }}), alebo môže na účely simulácie načítať požadované mazivá z knižnice.
 
-**Používateľ:** Pri operácii valcovania tvaru je štandardne zaškrtnuté tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), ako je znázornené na obr. 43.1.75. Používateľ môže upraviť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môže používateľ priradiť rovnaké hodnoty všetkým vzťahom. Kliknutím na tlačidlo môže používateľ vypočítať toleranciu kontaktu. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) môže používateľ vygenerovať kontaktný vzťah. Zaškrtnutím políčka vedľa kontaktného vzťahu môže používateľ definovať zotrvávací kontakt. Ďalšie informácie nájdete v časti [20.Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+**Používateľ:** Pri operácii valcovania tvaru je štandardne zaškrtnuté tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), ako je znázornené na obr. 43.1.75. Používateľ môže upraviť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môže používateľ priradiť rovnaké hodnoty všetkým vzťahom. Kliknutím na tlačidlo môže používateľ vypočítať toleranciu kontaktu. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) môže používateľ vygenerovať kontaktný vzťah. Zaškrtnutím políčka vedľa kontaktného vzťahu môže používateľ definovať zotrvávací kontakt. Ďalšie informácie nájdete v časti [20.Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0070.jpg' | relative_url }})
 
@@ -804,7 +804,7 @@ Stránka s kontaktnými údajmi
 
 ### Ovládacie prvky simulácie
 
-Nastavenia ovládacích prvkov simulácie na úrovni priechodu sú podobné ako na úrovni valcovacej skupiny; pozri časť „Ovládacie prvky simulácie vo valcovacej skupine“. Ovládacie prvky simulácie definované na úrovni valcovacej skupiny sa automaticky uplatnia na úroveň priechodu po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}); používateľ môže tieto nastavenia upraviť pre každý priechod. Ak chce používateľ na úrovni jednotlivých priechodov využiť pokročilé nastavenia simulácie, musí zvoliť expertný režim, ako je znázornené na obr. 43.1.76. Pokiaľ ide o pokročilé nastavenia simulácie, pozri [9\. Simulation controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+Nastavenia ovládacích prvkov simulácie na úrovni priechodu sú podobné ako na úrovni valcovacej skupiny; pozri časť „Ovládacie prvky simulácie vo valcovacej skupine“. Ovládacie prvky simulácie definované na úrovni valcovacej skupiny sa automaticky uplatnia na úroveň priechodu po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}); používateľ môže tieto nastavenia upraviť pre každý priechod. Ak chce používateľ na úrovni jednotlivých priechodov využiť pokročilé nastavenia simulácie, musí zvoliť expertný režim, ako je znázornené na obr. 43.1.76. Pokiaľ ide o pokročilé nastavenia simulácie, pozri [9\. Simulation controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0071.jpg' | relative_url }})
 
@@ -816,4 +816,4 @@ Používateľ môže vytvoriť databázu na úrovni jednotlivého priechodu, ak 
 
 **Súvisiace témy:**
 
-[43\. Introduction to Shape Rolling operation](/docs/en/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/)
+[43\. Introduction to Shape Rolling operation]({{ '/docs/en/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/' | relative_url }})

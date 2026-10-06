@@ -184,7 +184,7 @@ Lighting Settings properties window
 
 Light Advanced Properties window
 
-For More details, please refer Chapter[ 8\. Pre-Processor Layout](/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/) section [Set Lighting Property](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Set_Lighting_Property).
+For More details, please refer Chapter[ 8\. Pre-Processor Layout]({{ '/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}) section [Set Lighting Property](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Set_Lighting_Property).
 
 **Display menu**
 
@@ -247,9 +247,9 @@ Fig. 6.4.20. shows the tool menu options, using these options or icons in the to
 
 Tool menu options
 
-  * **Object Nodes** ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}) : The object node data window displays all available information about object nodes. All information can be modified and many of the variables can be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to [section 17.1. Node Datae.](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/)
+  * **Object Nodes** ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}) : The object node data window displays all available information about object nodes. All information can be modified and many of the variables can be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to [section 17.1. Node Datae.]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }})
 
-  * **Object Elements** ![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) : The element data window displays all available information about object elements. All information can be modified and many of the variables can be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to section [17.2 .Element Data.](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/)
+  * **Object Elements** ![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) : The element data window displays all available information about object elements. All information can be modified and many of the variables can be plotted. This option will be activated only when object property windows like object main, geometry and mesh windows are selected. For more information please refer to section [17.2 .Element Data.]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }})
 
 **Options Menu**
 
@@ -333,7 +333,7 @@ Output Controls options under Environment Settings window
 
   * Email
 
-Email option under Environment Settings window appears as shown in Fig. 6.4.30. This function allows DEFORM to send an email notification at the start of the simulation and with last 25 lines from the Message file and Log file at end of the simulation. Emails are sent via SMTP using StartTLS (or no security). For more information refer [23.7. Email notification of the simulation](/docs/sk/simulator/23_deform_simulator/23_7_email_the_results/).
+Email option under Environment Settings window appears as shown in Fig. 6.4.30. This function allows DEFORM to send an email notification at the start of the simulation and with last 25 lines from the Message file and Log file at end of the simulation. Emails are sent via SMTP using StartTLS (or no security). For more information refer [23.7. Email notification of the simulation]({{ '/docs/sk/simulator/23_deform_simulator/23_7_email_the_results/' | relative_url }}).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image031.jpg' | relative_url }})
 
@@ -436,7 +436,7 @@ Help menu options
 
   * **About SFTC:** Provides SFTC contact information in a window.
 
-  * **About:** Provides brief information about DEFORM product in a window. For more details on the release note refer the [chapter 1.11. Release Notes.](/docs/sk/about_deform/1_introduction_to_deform/1_11_release_notes/)
+  * **About:** Provides brief information about DEFORM product in a window. For more details on the release note refer the [chapter 1.11. Release Notes.]({{ '/docs/sk/about_deform/1_introduction_to_deform/1_11_release_notes/' | relative_url }})
 
 ## Simulation Mode menu bar options
 
@@ -519,15 +519,15 @@ For example in forming operation object mesh window in expert mode having all ad
 
 **Boolean**![]({{ '/assets/icons/pre_icons/mo_boolean_icon.jpg' | relative_url }})
 
-This capability allows the user to subtract volume from the mesh of an object from the geometry of another object or Boolean with respect to a plane. (option available only for 3D). This will activate only when user selected the object windows like geometry, mesh, boundary conditions..etc. For more information on Boolean option refer [section 18.1. Boolean.](/docs/sk/pre_processor/18_object_manipulation_tools/18_1_boolean/)
+This capability allows the user to subtract volume from the mesh of an object from the geometry of another object or Boolean with respect to a plane. (option available only for 3D). This will activate only when user selected the object windows like geometry, mesh, boundary conditions..etc. For more information on Boolean option refer [section 18.1. Boolean.]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }})
 
 **Data Interpolation** ![]({{ '/assets/icons/pre_icons/mo_data_interpolation_icon.jpg' | relative_url }})
 
-While doing the manual remeshing in the preprocessor, user can transfer data from another object from a different database using this dialog. Once the database is selected user can select the object, and step number from where the data needs to be interpolated. For more information on Data interpolation refer section [17.3. Data interpolation](/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/)[.](/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/)
+While doing the manual remeshing in the preprocessor, user can transfer data from another object from a different database using this dialog. Once the database is selected user can select the object, and step number from where the data needs to be interpolated. For more information on Data interpolation refer section [17.3. Data interpolation]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/' | relative_url }})[.]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/' | relative_url }})
 
 **Slicing**![]({{ '/assets/icons/pre_icons/mo_slicing_option.jpg' | relative_url }})
 
-This utility enables the users to slice an object and save the 2D cross section,either as geometry or as a keyword file including the state variable data from the slicing plane. (option available only for 3D) For more information on Data interpolation refer section [18.2. Slicing.](/docs/sk/pre_processor/18_object_manipulation_tools/18_2_slicing/)
+This utility enables the users to slice an object and save the 2D cross section,either as geometry or as a keyword file including the state variable data from the slicing plane. (option available only for 3D) For more information on Data interpolation refer section [18.2. Slicing.]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_2_slicing/' | relative_url }})
 
 **Stop current task** ![]({{ '/assets/icons/pre_icons/mo_stop_current_task_icon.jpg' | relative_url }})
 
@@ -536,10 +536,10 @@ This utility enables the users to stop the current running tasks like Point trac
   
 **Related Topics:**
 
-[6.1. Integrated manufacturing process Pre-processor Layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated manufacturing process Pre-processor Layout]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated manufacturing process Simulation layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated manufacturing process Simulation layout]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated manufacturing process Post layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated manufacturing process Post layout]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[6.5. Files Structure](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure/)
+[6.5. Files Structure]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure/' | relative_url }})

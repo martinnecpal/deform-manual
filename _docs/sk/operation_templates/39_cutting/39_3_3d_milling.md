@@ -240,7 +240,7 @@ Bola priradená predvolená hodnota BCC pre výmenu tepla
 
 ##  Ovládanie
 
-Pomocou funkcie „Umiestnenie objektov“ je možné nástroj umiestniť na základe rýchlosti posuvu a polohy obrobku. K dispozícii sú rôzne možnosti umiestnenia objektov, ako je znázornené na obr. 39.3.21. Ďalšie informácie o týchto možnostiach nájdete v [16\. Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
+Pomocou funkcie „Umiestnenie objektov“ je možné nástroj umiestniť na základe rýchlosti posuvu a polohy obrobku. K dispozícii sú rôzne možnosti umiestnenia objektov, ako je znázornené na obr. 39.3.21. Ďalšie informácie o týchto možnostiach nájdete v [16\. Object Properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_3_3d_milling/image0021.jpg' | relative_url }})
 
@@ -248,7 +248,7 @@ Možnosti umiestnenia objektov
 
 ## Opotrebenie nástrojov
 
-Používateľ môže aktivovať výpočet opotrebenia nástroja pomocou zaškrtávacieho políčka „**Definovať model na výpočet opotrebenia nástroja******“. Po zaškrtnutí tohto políčka môže používateľ vybrať model opotrebenia nástroja a definovať jeho parametre, ako je znázornené na obr. 39.3.22. Ďalšie informácie o týchto možnostiach nájdete v [20.4. Tool Wear](/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/).
+Používateľ môže aktivovať výpočet opotrebenia nástroja pomocou zaškrtávacieho políčka „**Definovať model na výpočet opotrebenia nástroja******“. Po zaškrtnutí tohto políčka môže používateľ vybrať model opotrebenia nástroja a definovať jeho parametre, ako je znázornené na obr. 39.3.22. Ďalšie informácie o týchto možnostiach nájdete v [20.4. Tool Wear]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_3_3d_milling/image0022.jpg' | relative_url }})
 
@@ -257,7 +257,7 @@ Stránka „Opotrebenie nástrojov“
 ## Kontakt
 
 V predvolenom nastavení bude zaškrtnuté políčko „užívateľ“ a pre operáciu 3D rezania budú tiež definované predvolené vzťahy, ako je znázornené na obr. 39.3.23. Používateľ môže zmeniť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Používateľ môže kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) na výpočet tolerancie kontaktu. Používateľ môže kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) na vytvorenie vzťahu kontaktu. Používateľ môže zaškrtnúť políčko vedľa vzťahu kontaktu, aby definoval prilnavý kontakt.  
-Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/39_cutting/39_3_3d_milling/image0023.jpg' | relative_url }})
 
@@ -265,7 +265,7 @@ Stránka s kontaktnými údajmi
 
 ## Ovládanie krokov
 
-Používateľ môže definovať údaje ovládacích prvkov krokov pomocou režimu s návodom (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})), ako je znázornené na obr. 39.3.24. Ak chce používateľ využiť pokročilé nastavenia simulácie, môže prejsť do režimu Expert (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})), ako je znázornené na obr. 39.3.25. Ďalšie informácie a popis možností v nastaveniach simulácie nájdete v [9.Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/).
+Používateľ môže definovať údaje ovládacích prvkov krokov pomocou režimu s návodom (![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})), ako je znázornené na obr. 39.3.24. Ak chce používateľ využiť pokročilé nastavenia simulácie, môže prejsť do režimu Expert (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})), ako je znázornené na obr. 39.3.25. Ďalšie informácie a popis možností v nastaveniach simulácie nájdete v [9.Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}).
 
 V režime s vedením môže používateľ nastaviť počet krokov, veľkosť kroku a spôsob riadenia veľkosti kroku. Používateľ môže nastaviť uhol oblúka, po dosiahnutí ktorého sa simulácia zastaví.
 
@@ -291,8 +291,8 @@ Vytvoriť stránku databázy
 
 **Súvisiace témy:**
 
-[39 Introduction to Cutting](/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/)
+[39 Introduction to Cutting]({{ '/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/' | relative_url }})
 
-[39.1. 2D Cutting](/docs/en/operation_templates/39_cutting/39_1_2d_cutting/)
+[39.1. 2D Cutting]({{ '/docs/en/operation_templates/39_cutting/39_1_2d_cutting/' | relative_url }})
 
-[39.2. 3D Turning](/docs/en/operation_templates/39_cutting/39_2_3d_turning/)
+[39.2. 3D Turning]({{ '/docs/en/operation_templates/39_cutting/39_2_3d_turning/' | relative_url }})

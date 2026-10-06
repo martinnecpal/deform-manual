@@ -72,4 +72,4 @@ This keyword sets a flag to indicate how to use the equilibrium volume fraction 
   
 RELATED TOPICS  
 ---  
-Related keywords: [TTTD](/docs/sk/keyword_documentation/t/tttd/)
+Related keywords: [TTTD]({{ '/docs/sk/keyword_documentation/t/tttd/' | relative_url }})

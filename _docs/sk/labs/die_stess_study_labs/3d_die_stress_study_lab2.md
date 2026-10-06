@@ -37,7 +37,7 @@ In a typical die stress simulation, the workpiece is removed and the forces exer
 
 ## Opening project file
 
-Open Previously simulated [**Spike_Forging.moproj**](/docs/sk/labs/basic_labs/3d_labs/lab03_spike_forging/) file in ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}) (DEFORM Integrated Manufacturing Proc.) in [Lab03 Spike Forging](/docs/sk/labs/basic_labs/3d_labs/lab03_spike_forging/) as shown in Fig. 3DDSL2.1. Integrated Manufacturing Process user interface will open.
+Open Previously simulated [**Spike_Forging.moproj**]({{ '/docs/sk/labs/basic_labs/3d_labs/lab03_spike_forging/' | relative_url }}) file in ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}) (DEFORM Integrated Manufacturing Proc.) in [Lab03 Spike Forging]({{ '/docs/sk/labs/basic_labs/3d_labs/lab03_spike_forging/' | relative_url }}) as shown in Fig. 3DDSL2.1. Integrated Manufacturing Process user interface will open.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0001.jpg' | relative_url }})
 

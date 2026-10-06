@@ -36,15 +36,15 @@ Pokročilé okno vlastností materiálu
 
 ## Údaje o zlomoch (FRCMOD)
 
-[FRCMOD](/docs/sk/keyword_documentation/f/frcmod/) určuje model poškodenia, ktorý sa má použiť na výpočet poškodenia. Na výber je desať rôznych modelov. Cockcroft & Latham je predvolený model poškodenia, ktorý sa používa na výpočet poškodenia v programe DEFORM. Je možné napísať aj užívateľský podprogram, ktorý sa môže použiť pre model poškodenia. Modely lomu nájdete v kapitole [10.12.1. Fracture Models](/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/)
+[FRCMOD]({{ '/docs/sk/keyword_documentation/f/frcmod/' | relative_url }}) určuje model poškodenia, ktorý sa má použiť na výpočet poškodenia. Na výber je desať rôznych modelov. Cockcroft & Latham je predvolený model poškodenia, ktorý sa používa na výpočet poškodenia v programe DEFORM. Je možné napísať aj užívateľský podprogram, ktorý sa môže použiť pre model poškodenia. Modely lomu nájdete v kapitole [10.12.1. Fracture Models]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }})
 
 ## Mechanická práca na teplo (FRAE2H)
 
-Mechanická práca na teplo ([FRAE2H](/docs/sk/keyword_documentation/f/frae2h/)) udáva podiel mechanickej práce premenenej na teplo. Podiel premeny je zvyčajne 0,9 až 0,95. Predvolená hodnota je 0,9 a pokiaľ používateľ nemá dobrý cit pre hodnotu, táto hodnota by sa nemala meniť.
+Mechanická práca na teplo ([FRAE2H]({{ '/docs/sk/keyword_documentation/f/frae2h/' | relative_url }})) udáva podiel mechanickej práce premenenej na teplo. Podiel premeny je zvyčajne 0,9 až 0,95. Predvolená hodnota je 0,9 a pokiaľ používateľ nemá dobrý cit pre hodnotu, táto hodnota by sa nemala meniť.
 
 ## Sila na jednotku objemu alebo sila tela (FPERV)
 
-Na výpočet sily telesa ([FPERV](/docs/sk/keyword_documentation/f/fperv/)) (napríklad gravitácie) pre porézne, plastické a elasto-plastické materiály sa používa nasledujúca rovnica:
+Na výpočet sily telesa ([FPERV]({{ '/docs/sk/keyword_documentation/f/fperv/' | relative_url }})) (napríklad gravitácie) pre porézne, plastické a elasto-plastické materiály sa používa nasledujúca rovnica:
 
 ![]({{ '/assets/equations/pre_processor/10_material_data/10_12_miscellaneous_data/eq_10_12_1.jpg' | relative_url }}) |
 ---|---
@@ -86,7 +86,7 @@ Tento model (pozri nižšie obr. 10.12.5.) môže zaznamenávať informácie tý
 Okno výberu veľkosti modelu
 
   
-[SIZESH](/docs/sk/keyword_documentation/s/sizesh/) uchováva informácie o veľkosti 2. fázy a jej tvare. Takto môže byť 2. fáza (napríklad častice delta fázy v superzliatine na báze niklu 718) opísaná ako tvoriaca 5 % objemového podielu každého prvku materiálu (definovaného v počiatočnom objemovom podiele prvkov, [VOLFC](/docs/sk/keyword_documentation/v/volfc/)); ale môže byť opísaná aj ako pozostávajúca z častíc, ktoré majú v priemere priemer ~ 10 mikrónov. V predvolenom nastavení kľúčového slova [SIZESH](/docs/sk/keyword_documentation/s/sizesh/) sa predpokladá, že častice majú guľový tvar (pozri vyššie obr. 10.12.5.). Zadaním modelu veľkosti častíc ([SIZEMD](/docs/sk/keyword_documentation/s/sizemd/)) možno definovať viac o vlastnostiach častíc opísaných v [SIZESH](/docs/sk/keyword_documentation/s/sizesh/).  
+[SIZESH]({{ '/docs/sk/keyword_documentation/s/sizesh/' | relative_url }}) uchováva informácie o veľkosti 2. fázy a jej tvare. Takto môže byť 2. fáza (napríklad častice delta fázy v superzliatine na báze niklu 718) opísaná ako tvoriaca 5 % objemového podielu každého prvku materiálu (definovaného v počiatočnom objemovom podiele prvkov, [VOLFC]({{ '/docs/sk/keyword_documentation/v/volfc/' | relative_url }})); ale môže byť opísaná aj ako pozostávajúca z častíc, ktoré majú v priemere priemer ~ 10 mikrónov. V predvolenom nastavení kľúčového slova [SIZESH]({{ '/docs/sk/keyword_documentation/s/sizesh/' | relative_url }}) sa predpokladá, že častice majú guľový tvar (pozri vyššie obr. 10.12.5.). Zadaním modelu veľkosti častíc ([SIZEMD]({{ '/docs/sk/keyword_documentation/s/sizemd/' | relative_url }})) možno definovať viac o vlastnostiach častíc opísaných v [SIZESH]({{ '/docs/sk/keyword_documentation/s/sizesh/' | relative_url }}).  
   
 K dispozícii sú rôzne modely veľkosti častíc,
 
@@ -294,19 +294,19 @@ Usmernenia k údajom o materiáli pre neizotermickú analýzu napätia v zápust
 
 Súvisiace témy:
 
-[10.12.1. Fracture Models](/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/)
+[10.12.1. Fracture Models]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }})
 
 [Assigning Material to Object](../../../operation_templates/33_forming/33_1_2d_forming_setup.htm#Material)
-[1.11. DEFORM Units](/docs/sk/about_deform/1_introduction_to_deform/1_9_units/)
-[Material Editing](/docs/sk/labs/heat_treatment_labs/2d_ht_lab5_material_input/)
+[1.11. DEFORM Units]({{ '/docs/sk/about_deform/1_introduction_to_deform/1_9_units/' | relative_url }})
+[Material Editing]({{ '/docs/sk/labs/heat_treatment_labs/2d_ht_lab5_material_input/' | relative_url }})
 [Material Units Converter](../10_material_data.htm#Material_Data)
 [Units Converter Next Gen Post](../../../post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options.htm#26_5_6_Unit_Conversion)
-[Appendix IV: Determining 'R' coefficients for anisotropy models](/docs/sk/appendices/appendix_iv_determining_r_coefficientss/)
-[Running an inertia weld simulation in DEFORM](/docs/sk/applications/55_applications/55_inertia_welding/2d_inertia_welding/)
-[Running 2D creep simulations in DEFORM](/docs/sk/applications/55_applications/55_creep/2d_creep/)
-[Appendix X: Meshing an object with multiple material groups](/docs/sk/appendices/appendix_x_meshing_an_object_with_multiple_material_group/)
-[Setting up 2D induction heating in DEFORM](/docs/sk/applications/55_applications/55_4_induction_heating/setting_up_induction_heating_in_deform/)
-[Fracture with Element Deletion and Damage Softening](/docs/sk/applications/55_applications/55_fracture/3d_fracture/)
-[Setting up 2D fracture with element deletion with DEFORM](/docs/sk/applications/55_applications/55_fracture/2d_fracture/)
-[A Theoretical Background to Resistance Heating Concepts](/docs/sk/applications/55_applications/55_resistance_heating_labs/a_theoretical_background_to_resistance_heating/)
-[Setting up 3D machining models](/docs/sk/operation_templates/39_cutting/setting_up_3d_machining_models/)
+[Appendix IV: Determining 'R' coefficients for anisotropy models]({{ '/docs/sk/appendices/appendix_iv_determining_r_coefficientss/' | relative_url }})
+[Running an inertia weld simulation in DEFORM]({{ '/docs/sk/applications/55_applications/55_inertia_welding/2d_inertia_welding/' | relative_url }})
+[Running 2D creep simulations in DEFORM]({{ '/docs/sk/applications/55_applications/55_creep/2d_creep/' | relative_url }})
+[Appendix X: Meshing an object with multiple material groups]({{ '/docs/sk/appendices/appendix_x_meshing_an_object_with_multiple_material_group/' | relative_url }})
+[Setting up 2D induction heating in DEFORM]({{ '/docs/sk/applications/55_applications/55_4_induction_heating/setting_up_induction_heating_in_deform/' | relative_url }})
+[Fracture with Element Deletion and Damage Softening]({{ '/docs/sk/applications/55_applications/55_fracture/3d_fracture/' | relative_url }})
+[Setting up 2D fracture with element deletion with DEFORM]({{ '/docs/sk/applications/55_applications/55_fracture/2d_fracture/' | relative_url }})
+[A Theoretical Background to Resistance Heating Concepts]({{ '/docs/sk/applications/55_applications/55_resistance_heating_labs/a_theoretical_background_to_resistance_heating/' | relative_url }})
+[Setting up 3D machining models]({{ '/docs/sk/operation_templates/39_cutting/setting_up_3d_machining_models/' | relative_url }})

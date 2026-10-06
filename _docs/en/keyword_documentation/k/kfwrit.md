@@ -31,4 +31,4 @@ It is an action keyword placed in either an automatic script file or in a Master
   
 RELATED TOPICS  
 ---  
-[Multiple Operations](/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/) Keywords: [KFREAD](/docs/en/keyword_documentation/k/kfread/), [DBREAD](/docs/en/keyword_documentation/d/dbread/)
+[Multiple Operations]({{ '/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }}) Keywords: [KFREAD]({{ '/docs/en/keyword_documentation/k/kfread/' | relative_url }}), [DBREAD]({{ '/docs/en/keyword_documentation/d/dbread/' | relative_url }})

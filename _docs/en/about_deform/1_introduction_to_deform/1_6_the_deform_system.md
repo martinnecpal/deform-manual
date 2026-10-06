@@ -15,31 +15,31 @@ The DEFORM system consists of three major components:
 
 ## Pre-processing
 
-A pre-processor for creating, assembling, or modifying the data required to analyze the simulation, and for generating the required database file. The DEFORM [pre-processor](/docs/en/pre_processor/pre-processor_mainpg/) uses a graphical user interface to assemble the data required to run the simulation. Input data includes,
+A pre-processor for creating, assembling, or modifying the data required to analyze the simulation, and for generating the required database file. The DEFORM [pre-processor]({{ '/docs/en/pre_processor/pre-processor_mainpg/' | relative_url }}) uses a graphical user interface to assemble the data required to run the simulation. Input data includes,
 
 **Object description**
 
-[Object description](/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/) includes all data associated with an object, including [geometry](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/), [mesh](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/), temperature, [material](/docs/en/pre_processor/10_material_data/10_material_data/), etc.
+[Object description]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}) includes all data associated with an object, including [geometry]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}), [mesh]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }}), temperature, [material]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}), etc.
 
 **Material data**
 
-[Material](/docs/en/pre_processor/10_material_data/10_material_data/)[ data](/docs/en/pre_processor/10_material_data/10_material_data/) includes data describing the behavior of the material under the conditions which it will reasonably experience during deformation.
+[Material]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})[ data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}) includes data describing the behavior of the material under the conditions which it will reasonably experience during deformation.
 
 **Inter object conditions**
 
-[Inter object](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) conditions describes how the objects interact with each other, including contact, friction, and heat transfer between objects.
+[Inter object]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}) conditions describes how the objects interact with each other, including contact, friction, and heat transfer between objects.
 
 **Simulation controls**
 
-[Simulation controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/) includes instructions on the methods DEFORM should use to solve the problem, including the conditions of the processing environment, what physical processes should be modelled, how many discrete time steps should be used to model the process, etc.
+[Simulation controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}) includes instructions on the methods DEFORM should use to solve the problem, including the conditions of the processing environment, what physical processes should be modelled, how many discrete time steps should be used to model the process, etc.
 
 **Inter material data**
 
-[Inter material](/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/) data describes the physical process of one phase of a material transforming into other phases of the same material in a heat treatment process. For example, the transformation of austenite into pearlite, bainite, and martensite.
+[Inter material]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }}) data describes the physical process of one phase of a material transforming into other phases of the same material in a heat treatment process. For example, the transformation of austenite into pearlite, bainite, and martensite.
 
 **Integrated Manufacturing Process (MO)**
 
-DEFORM [Integrated Manufacturing Process (MO)](/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/)**** provides a user-friendly interface to construct many successive operations at the initial setup and simulate them sequentially without user interaction. MO environment facilitates the user to transfer objects across operations and connect different operations for transferring data.
+DEFORM [Integrated Manufacturing Process (MO)]({{ '/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }})**** provides a user-friendly interface to construct many successive operations at the initial setup and simulate them sequentially without user interaction. MO environment facilitates the user to transfer objects across operations and connect different operations for transferring data.
 
 ## Running the simulation
 
@@ -63,22 +63,22 @@ A post-processor for reading the database file from the simulation engine and di
 
 **Related Topics:**
 
-[Pre-Processor](/docs/en/pre_processor/7_introduction_to_pre-processor/)
+[Pre-Processor]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }})
 
-[Post-Processor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[Post-Processor]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})
 
-[Object Description](/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/)
+[Object Description]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
 
-[Material Data](/docs/en/pre_processor/10_material_data/10_material_data/)
+[Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[Inter-Object Data](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[Inter-Object Data]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-[Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+[Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[Simulator](/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/)
+[Simulator]({{ '/docs/en/simulator/23_deform_simulator/23_introduction_to_deform_simulator/' | relative_url }})
 
-[2D Stub Shaft Labs](/docs/en/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/)
+[2D Stub Shaft Labs]({{ '/docs/en/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/' | relative_url }})
 
-[3D Stub Shaft Labs](/docs/en/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/)
+[3D Stub Shaft Labs]({{ '/docs/en/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/' | relative_url }})

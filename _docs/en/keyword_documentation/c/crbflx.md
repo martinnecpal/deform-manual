@@ -39,4 +39,4 @@ Applicable object types: Rigid, Elastic, Plastic, Elastoplastic, and Porous.
   
 RELATED TOPICS  
 ---  
-Boundary constraints, Inter-object contact Keywords: [DATOM](/docs/en/keyword_documentation/d/datom/), [BCCCRB(2D)](/docs/en/keyword_documentation/b/bcccrb/), .[BCCCRB(3D)](/docs/en/keyword_documentation/b/bcccrb_3d/)
+Boundary constraints, Inter-object contact Keywords: [DATOM]({{ '/docs/en/keyword_documentation/d/datom/' | relative_url }}), [BCCCRB(2D)]({{ '/docs/en/keyword_documentation/b/bcccrb/' | relative_url }}), .[BCCCRB(3D)]({{ '/docs/en/keyword_documentation/b/bcccrb_3d/' | relative_url }})

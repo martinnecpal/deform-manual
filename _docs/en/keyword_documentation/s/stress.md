@@ -89,4 +89,4 @@ Applicable object types: [Plastic](../../pre_processor/11_general_object_data_de
 RELATED TOPICS  
 ---  
   
-Keyword: [ELMNOD](/docs/en/keyword_documentation/e/elmnod/)
+Keyword: [ELMNOD]({{ '/docs/en/keyword_documentation/e/elmnod/' | relative_url }})

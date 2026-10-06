@@ -5,7 +5,7 @@ title: "Lab 11 Screw press"
 
 # Lab 11 Screw press
 
-Requirement: To setup this operation, First we have to setup [Lab 03 Spike Isothermal Lab.](/docs/en/labs/basic_labs/2d_labs/lab_03_spike_isothermal/)
+Requirement: To setup this operation, First we have to setup [Lab 03 Spike Isothermal Lab.]({{ '/docs/en/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }})
 
 11.1. Creating a New Problem
 
@@ -111,10 +111,10 @@ Y Speed - Stroke graph plot
 
 **Related Topics:**
 
-[15\. Movement Controls Settings](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[15\. Movement Controls Settings]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post-processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post-processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})

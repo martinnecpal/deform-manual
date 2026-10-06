@@ -70,7 +70,7 @@ Loading material into Material list
 
 ## Adding Objects
 
-In Object page, we can observe 3 objects being added by default. For this lab, we will require only two objects for this lab hence, keep Workpiece and Top Die and delete the Bottom Die object (See [Fig. 3DINDL2.6.](/docs/sk/applications/55_applications/55_4_induction_heating/55_4_induction_heating_labs_main_pg/)). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Workpiece page. 
+In Object page, we can observe 3 objects being added by default. For this lab, we will require only two objects for this lab hence, keep Workpiece and Top Die and delete the Bottom Die object (See [Fig. 3DINDL2.6.]({{ '/docs/sk/applications/55_applications/55_4_induction_heating/55_4_induction_heating_labs_main_pg/' | relative_url }})). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Workpiece page. 
 
 ![]({{ '/assets/images/applications/55_induction_heating/3d_induction_heating_lab2/image0006.jpg' | relative_url }})
 

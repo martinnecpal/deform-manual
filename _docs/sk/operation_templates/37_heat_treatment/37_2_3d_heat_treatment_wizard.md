@@ -80,7 +80,7 @@ Na stránke „Inicializácia“ môže používateľ aktivovať simulačný re�
 
 ## Výber materiálu
 
-Materiály potrebné pre tento proces je možné načítať buď z knižnice pomocou ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), alebo z databázy či súboru kľúčov pomocou ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ako je znázornené na obr. 37.2.5. Používateľ môže tiež pridať nový materiál a definovať požadované údaje na príslušnej karte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Ďalšie informácie o definícii údajov o materiáloch nájdete v [Material data](/docs/en/pre_processor/10_material_data/10_material_data/).
+Materiály potrebné pre tento proces je možné načítať buď z knižnice pomocou ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), alebo z databázy či súboru kľúčov pomocou ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ako je znázornené na obr. 37.2.5. Používateľ môže tiež pridať nový materiál a definovať požadované údaje na príslušnej karte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Ďalšie informácie o definícii údajov o materiáloch nájdete v [Material data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image003.jpg' | relative_url }})
 
@@ -104,7 +104,7 @@ Stránka „Všeobecné informácie o objekte“
 
 ### Geometria objektu
 
-Používateľ môže definovať jednoduché geometrie pomocou základných možností; geometrie je možné tiež importovať pomocou možnosti „Importovať geometriu zo súboru“ (![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})) alebo z knižnice pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (pozri obr. 37.2.8.). Ďalšie informácie o rôznych možnostiach na stránke geometrie nájdete v časti [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+Používateľ môže definovať jednoduché geometrie pomocou základných možností; geometrie je možné tiež importovať pomocou možnosti „Importovať geometriu zo súboru“ (![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})) alebo z knižnice pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (pozri obr. 37.2.8.). Ďalšie informácie o rôznych možnostiach na stránke geometrie nájdete v časti [12.3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image005.jpg' | relative_url }})
 
@@ -112,7 +112,7 @@ Stránka „Geometria objektu“
 
 ### Sieť objektu
 
-Na stránke „Mesh“ budú obe možnosti režimu – „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ aj „Expert ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})“ – v aktívnom režime; v režime „Guided“ stačí na vytvorenie siete definovať iba počet prvkov. V režime „Guided“ môže používateľ zmeniť počet prvkov siete a vygenerovať sieť s ostatnými predvolenými nastaveniami, ako je znázornené na obr. 37.2.9. Ďalšie možnosti na ovládanie hustoty siete sú k dispozícii po prepnutí do režimu „Expert“ kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Možnosti siete v režime Expert sú znázornené na obr. 37.2.10. Podrobný popis týchto nastavení siete v režime Expert nájdete v časti [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+Na stránke „Mesh“ budú obe možnosti režimu – „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ aj „Expert ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})“ – v aktívnom režime; v režime „Guided“ stačí na vytvorenie siete definovať iba počet prvkov. V režime „Guided“ môže používateľ zmeniť počet prvkov siete a vygenerovať sieť s ostatnými predvolenými nastaveniami, ako je znázornené na obr. 37.2.9. Ďalšie možnosti na ovládanie hustoty siete sú k dispozícii po prepnutí do režimu „Expert“ kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Možnosti siete v režime Expert sú znázornené na obr. 37.2.10. Podrobný popis týchto nastavení siete v režime Expert nájdete v časti [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image006.jpg' | relative_url }})
 
@@ -146,7 +146,7 @@ Používateľom priradené BCC typu „Velocity“
 
 ### Vlastnosť objektu
 
-V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 37.2.14.) Ďalšie informácie nájdete v [16\. Object properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 37.2.14.) Ďalšie informácie nájdete v [16\. Object properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image011.jpg' | relative_url }})
 
@@ -233,7 +233,7 @@ Graf harmonogramu
 
 ## Polohovanie
 
-Používateľ môže objekty umiestniť pomocou tlačidla „Umiestniť objekty“. Na umiestnenie objektov sú k dispozícii rôzne možnosti (pozri obr. 37.2.22.); ďalšie informácie o týchto možnostiach nájdete v [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+Používateľ môže objekty umiestniť pomocou tlačidla „Umiestniť objekty“. Na umiestnenie objektov sú k dispozícii rôzne možnosti (pozri obr. 37.2.22.); ďalšie informácie o týchto možnostiach nájdete v [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/image018.jpg' | relative_url }})
 
@@ -304,10 +304,10 @@ Vytvoriť databázu
 
 **Súvisiace témy:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Proces Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Proces Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[3D Heat Treatment wizard Lab](/docs/en/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/)
+[3D Heat Treatment wizard Lab]({{ '/docs/en/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/' | relative_url }})

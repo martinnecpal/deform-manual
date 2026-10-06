@@ -23,13 +23,13 @@ Specifies a fixed dominant current flux rate over the elements bordered by the i
 
 From V12, PID control option added to Current flux BCC for 2D objects as shown in Fig. 14.5.1. Using this option user can automatically control the Current flux by defining the PID control parameters, target temperature and thermocouple location.
 
-![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image001.jpg)
+![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_5_heating_boundary_conditions/14_5_image001.jpg' | relative_url }})
 
 Current flux PID option [only for 2D]
 
 ## Induction Heating 
 
-**[2D]** : Once Induction Heating check box is checked in simulation controls, Induction heating in properties window and Heating tab in Inter object Relations get activated. For more information please refer [16.6. Heating Properties](/docs/en/pre_processor/16_Object_Properties/16_6_heating_properties/) and [20.3. Interface Resistivity.](/docs/en/pre_processor/20_Inter-object_Data_Definition/20_3_Interface_Resisitivity/)
+**[2D]** : Once Induction Heating check box is checked in simulation controls, Induction heating in properties window and Heating tab in Inter object Relations get activated. For more information please refer [16.6. Heating Properties]({{ '/docs/en/pre_processor/16_Object_Properties/16_6_heating_properties/' | relative_url }}) and [20.3. Interface Resistivity.]({{ '/docs/en/pre_processor/20_Inter-object_Data_Definition/20_3_Interface_Resisitivity/' | relative_url }})
 
 **[3D]** : For 3D coil begin and end surface bcc are available (see Fig. 14.5.2.).
 
@@ -37,7 +37,7 @@ Current flux PID option [only for 2D]
 
 **Coil End surface [3D]** : Specifies the end surface of coil.
 
-![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image004.jpg)
+![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_5_heating_boundary_conditions/14_5_image004.jpg' | relative_url }})
 
 Induction BCC window for 3D
 
@@ -54,7 +54,7 @@ Specifies the begin surface of Coil.
 **Coil End surface [3D]**  
 Specifies the end surface of Coil. See Fig. 14.5.3. for the induction BEM BCC settings.
 
-![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image002.jpg) ![](../../../assets/Images/Pre-Processor/14_Boundary_Conditions/14_5_Heating_Boundary_Conditions/14_5_Image003.jpg)
+![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_5_heating_boundary_conditions/14_5_image002.jpg' | relative_url }}) ![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_5_heating_boundary_conditions/14_5_image003.jpg' | relative_url }})
 
 (a) (b)
 
@@ -62,12 +62,12 @@ Induction (BEM) BCC window: (a) For 2D and (b) For 3D
 
 **Related Topics:**
 
-[14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[14.1. Symmetry Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/)
+[14.1. Symmetry Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/' | relative_url }})
 
-[14.2. Deformation Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/)
+[14.2. Deformation Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }})
 
-[14.3. Thermal Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/)
+[14.3. Thermal Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }})
 
-[14.4. Diffusion Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/)
+[14.4. Diffusion Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }})

@@ -107,18 +107,18 @@ The cut planes will show a poorly structured mesh. This is because many elements
 
   4. Go to mesh and mesh the object (Do not perform a manual remesh)
 
-  5. Go to [Data Interpolation](/docs/en/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/) to restore the state variables.
+  5. Go to [Data Interpolation]({{ '/docs/en/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/' | relative_url }}) to restore the state variables.
 
 After this, you should have successfully updated your part with the desired volume removed.
 
 **Related Topics:**
 
-[18\. Object Manipulation Tools](/docs/en/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/)
+[18\. Object Manipulation Tools]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/' | relative_url }})
 
-[18.2. Slicing](/docs/en/pre_processor/18_object_manipulation_tools/18_2_slicing/)
+[18.2. Slicing]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_2_slicing/' | relative_url }})
 
-[18.3. Mirror Merge](/docs/en/pre_processor/18_object_manipulation_tools/18_3_mirror_merge/)
+[18.3. Mirror Merge]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_3_mirror_merge/' | relative_url }})
 
-[17.3. Data Interpolation Window](/docs/en/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/)
+[17.3. Data Interpolation Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/' | relative_url }})
 
-[13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/)
+[13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }})

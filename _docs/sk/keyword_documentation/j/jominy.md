@@ -54,4 +54,4 @@ Applicable Simulation Types: Microstructure Module
   
 RELATED TOPICS  
 ---  
-Material Data: [Hardness](/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/) Keywords: [HDNEST](/docs/sk/keyword_documentation/h/hdnest/), [HDNTIM](/docs/sk/keyword_documentation/h/hdntim/),[HDNPHA](/docs/sk/keyword_documentation/h/hdnpha/)
+Material Data: [Hardness]({{ '/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }}) Keywords: [HDNEST]({{ '/docs/sk/keyword_documentation/h/hdnest/' | relative_url }}), [HDNTIM]({{ '/docs/sk/keyword_documentation/h/hdntim/' | relative_url }}),[HDNPHA]({{ '/docs/sk/keyword_documentation/h/hdnpha/' | relative_url }})

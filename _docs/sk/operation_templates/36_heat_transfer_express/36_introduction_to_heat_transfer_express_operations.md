@@ -56,10 +56,10 @@ Predvolené nastavenia procesu (tepelné podmienky) a teploty objektov pre rôzn
 Predvolené nastavenia procesu (tepelné podmienky) a teploty objektov pre rôzne typy ohrevu
 
   
-Ďalšie informácie o nastavení všetkých štyroch procesov prenosu tepla nájdete v dokumentácii k modelom [2D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/) a [3D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/).
+Ďalšie informácie o nastavení všetkých štyroch procesov prenosu tepla nájdete v dokumentácii k modelom [2D Heat Transfer Express Operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}) a [3D Heat Transfer Express Operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/' | relative_url }}).
 
 **Súvisiace témy:**
 
-[36.1. 2D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/)
+[36.1. 2D Heat Transfer Express Operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }})
 
-[36.2. 3D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/)
+[36.2. 3D Heat Transfer Express Operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/' | relative_url }})

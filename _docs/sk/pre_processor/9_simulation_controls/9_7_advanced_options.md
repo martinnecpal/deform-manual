@@ -61,25 +61,25 @@ Okno pokročilých premenných
 
 ### **Aktuálny svetový čas/aktuálny miestny čas (TNOW)**
 
-Tento parameter ([TNOW](/docs/sk/keyword_documentation/t/tnow/)) určuje hodnoty globálneho a lokálneho času procesu. (Pozri obr. 9.7.1.) Globálny čas predstavuje čas od začiatku riešenia úlohy a nemal by sa nikdy vynulovať. Lokálny čas je parameter, ktorý môže používateľ vynulovať. Globálny čas by sa nemal počas simulácie vynulovať, pretože postprocesor tento čas používa pre mnohé operácie postprocesingu. Pod definíciami lokálneho a globálneho času sa nachádza výberové pole, ktoré určuje, ktorý čas sa má použiť pre funkcie závislé od času, ako sú napríklad ovládacie prvky pohybu. Predvoleným nastavením je globálny čas, avšak funkcie závislé od času môžu byť nastavené aj na lokálny čas.
+Tento parameter ([TNOW]({{ '/docs/sk/keyword_documentation/t/tnow/' | relative_url }})) určuje hodnoty globálneho a lokálneho času procesu. (Pozri obr. 9.7.1.) Globálny čas predstavuje čas od začiatku riešenia úlohy a nemal by sa nikdy vynulovať. Lokálny čas je parameter, ktorý môže používateľ vynulovať. Globálny čas by sa nemal počas simulácie vynulovať, pretože postprocesor tento čas používa pre mnohé operácie postprocesingu. Pod definíciami lokálneho a globálneho času sa nachádza výberové pole, ktoré určuje, ktorý čas sa má použiť pre funkcie závislé od času, ako sú napríklad ovládacie prvky pohybu. Predvoleným nastavením je globálny čas, avšak funkcie závislé od času môžu byť nastavené aj na lokálny čas.
 
 ### **Hlavný obrobok (PDIE)**
 
-Tento parameter ([PDIE](/docs/sk/keyword_documentation/p/pdie/)) umožňuje používateľovi určiť obrobok ako objekt, ktorý sa nesmie pohybovať ako tuhé teleso. (Pozri obr. 9.7.1.) Ak sa teleso nedeformuje, simulácia sa zastaví. Jedným z účelov tejto funkcie je zabrániť tomu, aby simulácia valcovania pokračovala za valcovanú dĺžku materiálu.
+Tento parameter ([PDIE]({{ '/docs/sk/keyword_documentation/p/pdie/' | relative_url }})) umožňuje používateľovi určiť obrobok ako objekt, ktorý sa nesmie pohybovať ako tuhé teleso. (Pozri obr. 9.7.1.) Ak sa teleso nedeformuje, simulácia sa zastaví. Jedným z účelov tejto funkcie je zabrániť tomu, aby simulácia valcovania pokračovala za valcovanú dĺžku materiálu.
 
 ### **Použiť pravidlo pôvodnej aditívnosti pre kinetiku transformácie (TRANS)**
 
-Vylepšili sme pravidlo pre kinetiku transformácie ([TRANS](/docs/sk/keyword_documentation/t/trans/)) z verzie 6.0. V novej verzii môže pri danom materiáli dochádzať k viacerým transformáciám súčasne a pri rovnakej teplote. Ak používateľ nechce používať toto nové pravidlo a chce používať predchádzajúce, zaškrtnutím tohto políčka to môže urobiť. (Pozri obr. 9.7.1.)
+Vylepšili sme pravidlo pre kinetiku transformácie ([TRANS]({{ '/docs/sk/keyword_documentation/t/trans/' | relative_url }})) z verzie 6.0. V novej verzii môže pri danom materiáli dochádzať k viacerým transformáciám súčasne a pri rovnakej teplote. Ak používateľ nechce používať toto nové pravidlo a chce používať predchádzajúce, zaškrtnutím tohto políčka to môže urobiť. (Pozri obr. 9.7.1.)
 
 ##  Tolerancie chýb [2D, 3D]
 
   * **Spôsob uvoľnenia pri kontakte (CNTERR) [2D]:**
 
-V niektorých prípadoch súčasný algoritmus detekcie kontaktu neuvoľní uzly, ktoré sa počas časového kroku dotýkajú hlavnej plochy. Táto voľba [CNTERR](/docs/sk/keyword_documentation/c/cnterr/) umožňuje uvoľniť kontaktnú podmienku pre podriadený uzol, ak sa vzdiali od hlavnej hranice o predpísanú vzdialenosť. Táto hodnota sa môže použiť ako alternatíva k chybe posuvu ([SLDERR](/docs/sk/keyword_documentation/s/slderr/)). (Pozri obr. 9.7.2.)
+V niektorých prípadoch súčasný algoritmus detekcie kontaktu neuvoľní uzly, ktoré sa počas časového kroku dotýkajú hlavnej plochy. Táto voľba [CNTERR]({{ '/docs/sk/keyword_documentation/c/cnterr/' | relative_url }}) umožňuje uvoľniť kontaktnú podmienku pre podriadený uzol, ak sa vzdiali od hlavnej hranice o predpísanú vzdialenosť. Táto hodnota sa môže použiť ako alternatíva k chybe posuvu ([SLDERR]({{ '/docs/sk/keyword_documentation/s/slderr/' | relative_url }})). (Pozri obr. 9.7.2.)
 
   * **Chyba geometrie (GEOERR) [2D, 3D]**
 
-Hodnota [GEOERR](/docs/sk/keyword_documentation/g/geoerr/) predstavuje odhad chyby medzi diskretizovanými objektmi. Predvolená hodnota je pre väčšinu bežných aplikácií postačujúca. (Pozri obr. 9.7.2.)
+Hodnota [GEOERR]({{ '/docs/sk/keyword_documentation/g/geoerr/' | relative_url }}) predstavuje odhad chyby medzi diskretizovanými objektmi. Predvolená hodnota je pre väčšinu bežných aplikácií postačujúca. (Pozri obr. 9.7.2.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image002.jpg' | relative_url }})
 
@@ -87,7 +87,7 @@ Okno „Pokročilé nastavenia tolerancie chýb“
 
 ##  Používateľom definované premenné (USRDEF) [2D, 3D]
 
-Premenné definované používateľom ([USRDEF](/docs/sk/keyword_documentation/u/usrdef/)) sú reťazcové premenné s dĺžkou 80 znakov, ktoré sa odovzdávajú do podprogramov definovaných používateľom. Ďalšie informácie o používaní týchto premenných nájdete v kapitole [56\. User Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/). (Pozri obr. 9.7.3.)
+Premenné definované používateľom ([USRDEF]({{ '/docs/sk/keyword_documentation/u/usrdef/' | relative_url }})) sú reťazcové premenné s dĺžkou 80 znakov, ktoré sa odovzdávajú do podprogramov definovaných používateľom. Ďalšie informácie o používaní týchto premenných nájdete v kapitole [56\. User Routines]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/' | relative_url }}). (Pozri obr. 9.7.3.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image003.jpg' | relative_url }})
 
@@ -95,7 +95,7 @@ Hodnoty definované používateľom
 
 ## Kontakt [3D]
 
-V DEFORM-V12 bola na stránke „Pokročilé“ pridaná záložka „Kontakt“ a položka „Spôsob kontaktu“ ([CNTMTH](/docs/sk/keyword_documentation/c/cntmth/)), ktorá bola doteraz k dispozícii pre 3D objekty na stránke „Vzťahy medzi objektmi“, bola presunutá na túto stránku. Teraz máme k dispozícii 3 typy spôsobov kontaktu:
+V DEFORM-V12 bola na stránke „Pokročilé“ pridaná záložka „Kontakt“ a položka „Spôsob kontaktu“ ([CNTMTH]({{ '/docs/sk/keyword_documentation/c/cntmth/' | relative_url }})), ktorá bola doteraz k dispozícii pre 3D objekty na stránke „Vzťahy medzi objektmi“, bola presunutá na túto stránku. Teraz máme k dispozícii 3 typy spôsobov kontaktu:
 
   * Trest
   * Prispôsobivá spojka
@@ -125,7 +125,7 @@ Od verzie v12 bola zavedená nová metóda rozšíreného Lagrangeovho kontaktu 
 
 Rozšírený Lagrangeov funkcionál – kontaktná metóda
 
-  * **Metóda viacerých deformácií ([MULDEF](/docs/sk/keyword_documentation/m/muldef/))**
+  * **Metóda viacerých deformácií ([MULDEF]({{ '/docs/sk/keyword_documentation/m/muldef/' | relative_url }}))**
 
 V starších verziách bolo na simuláciu analýzy napätia v prepojených čipoch potrebné vytvoriť súbor DEF_LCDSTS.DAT; v programe DEFORM-V12 je teraz možné tieto nastavenia definovať priamo v grafickom rozhraní, ako je znázornené na obr. 9.7.7.
 
@@ -164,7 +164,7 @@ Aj pri simulácii ustáleného stavu metódou ALE môže používateľ definova�
 ## Kmitanie uzlov [2D]
 
   
-Nastavenia simulácie riadenia pokročilých uzlových kmitov ([OSCTRL](/docs/sk/keyword_documentation/o/osctrl/)) sú uvedené na obr. 9.7.9.
+Nastavenia simulácie riadenia pokročilých uzlových kmitov ([OSCTRL]({{ '/docs/sk/keyword_documentation/o/osctrl/' | relative_url }})) sú uvedené na obr. 9.7.9.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image009.jpg' | relative_url }})
 
@@ -180,7 +180,7 @@ Keď sa podriadené uzly dotknú hlavnej plochy a od nej oddelia, po dvoch oscil
 
 ## Kopírovanie objektu [3D]
 
-Na nahradenie súboru DEF_VIEWSYM.DAT bola v rámci ovládacích prvkov simulácie vytvorená možnosť „Kópia objektu“ ([OBJCPY](/docs/sk/keyword_documentation/o/objcpy/)) (pozri obr. 9.7.10.). Používateľ si môže vybrať spôsob usporiadania objektu (posunutím alebo zrkadlením). 
+Na nahradenie súboru DEF_VIEWSYM.DAT bola v rámci ovládacích prvkov simulácie vytvorená možnosť „Kópia objektu“ ([OBJCPY]({{ '/docs/sk/keyword_documentation/o/objcpy/' | relative_url }})) (pozri obr. 9.7.10.). Používateľ si môže vybrať spôsob usporiadania objektu (posunutím alebo zrkadlením). 
 
 **Pri preklade:** V metóde Translatinn musí používateľ určiť hodnotu vektora vzdialenosti, aby sa objekt skopíroval.
 
@@ -192,13 +192,13 @@ Okno kopírovania objektu
 
 **Súvisiace témy:**
 
-[9.1. Simulation type Settings](/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
-[9.2. Defining Step](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/)   
-[9.3. Stopping Controls](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/)   
-[9.4. Remesh Criteria](/docs/sk/pre_processor/9_simulation_controls/9_4_remesh_criteria/)   
-[9.5. Solver Settings](/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/)   
-[9.6. Process Conditions](/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/)   
-[9.8. Control Files](/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/)   
-[9.9. Thermomechanical variables](/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)
+[9.1. Simulation type Settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }})   
+[9.2. Defining Step]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})   
+[9.3. Stopping Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})   
+[9.4. Remesh Criteria]({{ '/docs/sk/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }})   
+[9.5. Solver Settings]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }})   
+[9.6. Process Conditions]({{ '/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})   
+[9.8. Control Files]({{ '/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }})   
+[9.9. Thermomechanical variables]({{ '/docs/sk/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }})
 
-[9.10. Output controls](/docs/sk/pre_processor/9_simulation_controls/9_10_output_controls/)
+[9.10. Output controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_10_output_controls/' | relative_url }})

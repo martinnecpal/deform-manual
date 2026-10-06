@@ -367,7 +367,7 @@ Plot the load - stroke graph for each operation to compare the load in each oper
 
 ### State variables
 
-From the [State variables](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/) list, click the Effective strain icon to plot the amount of strain that went into the workpiece. To change the plot settings, you can click on the ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) Set up icon. In this screen, you can display different kinds of contours (line, shaded or solid) as well as change the variable range that is shown on the contour bar (See Fig. 2DCFL1.29.). Using the Settings option, the range of the contour bar can be user-defined. Feel free to experiment with the display of the different state variables and plot options.
+From the [State variables]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }}) list, click the Effective strain icon to plot the amount of strain that went into the workpiece. To change the plot settings, you can click on the ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) Set up icon. In this screen, you can display different kinds of contours (line, shaded or solid) as well as change the variable range that is shown on the contour bar (See Fig. 2DCFL1.29.). Using the Settings option, the range of the contour bar can be user-defined. Feel free to experiment with the display of the different state variables and plot options.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0026.jpg' | relative_url }})
 

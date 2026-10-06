@@ -23,8 +23,8 @@ Object selection - Data interpolation window
 
 **Related Topics:**
 
-[17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/)
+[17\. Object Data Initialize]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }})
 
-[17.1. Node Data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/)
+[17.1. Node Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }})
 
-[17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/)
+[17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }})

@@ -16,7 +16,7 @@ Numerous phenomenological models have been published in the area of grain modell
 
 ## **Avrami Model**
 
-The Avrami equation describes how solids transform from one phase (state of matter) to another at constant temperature. It can specifically describe the kinetics of crystallization ( Fig. 10.6.2.). For more information refer [chapter 10.6.1. Avrami model](/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_1_avrami_model/). 
+The Avrami equation describes how solids transform from one phase (state of matter) to another at constant temperature. It can specifically describe the kinetics of crystallization ( Fig. 10.6.2.). For more information refer [chapter 10.6.1. Avrami model]({{ '/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_1_avrami_model/' | relative_url }}). 
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_6_grain_data/10_6_image002.jpg' | relative_url }})
 

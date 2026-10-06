@@ -29,4 +29,4 @@ Source Based method is not recommended for pure material, which doesn’t has Li
   
 RELATED TOPICS  
 ---  
-[Inter-Material Data](/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/): [Latent Heat](../../pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data.htm#Latent_Heat) Keyword: [LTHEAT](/docs/sk/keyword_documentation/l/ltheat/)
+[Inter-Material Data]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }}): [Latent Heat](../../pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data.htm#Latent_Heat) Keyword: [LTHEAT]({{ '/docs/sk/keyword_documentation/l/ltheat/' | relative_url }})

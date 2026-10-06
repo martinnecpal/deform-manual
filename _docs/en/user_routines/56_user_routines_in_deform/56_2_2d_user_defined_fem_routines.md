@@ -75,7 +75,7 @@ After the machine selection is made, select the appropriate prompt to build DEF_
 
 In PC Win7 environment the DEF_SIM system is built using Absoft Fortran90 v11.0. However the DEF_SIM object files for the earlier version of Absoft Fortran90 v9.0 are also built and released as a part of release pack. It was noted that the code generated using Absoft Fortran90 v11.0 is faster compared to the earlier versions of the same compiler.
 
-Currently user routines exist for flow stress definition, movement control, calculation of specialized nodal values ([USRNOD](/docs/en/keyword_documentation/u/usrnod/)), calculation of element values ([USRELM](/docs/en/keyword_documentation/u/usrelm/)), and many other capabilities. For example, there are many different methods for a user to control the movement of a rigid body within DEFORM, e.g. constant velocity, mechanical press, hammer press movement, speed as a function of time. However, there are some cases where a slightly more specialized movement control is required, such as movement based on variation of state variables of the workpiece. This can be performed using user-routines since these variables are available when the movement of the rigid die is calculated.
+Currently user routines exist for flow stress definition, movement control, calculation of specialized nodal values ([USRNOD]({{ '/docs/en/keyword_documentation/u/usrnod/' | relative_url }})), calculation of element values ([USRELM]({{ '/docs/en/keyword_documentation/u/usrelm/' | relative_url }})), and many other capabilities. For example, there are many different methods for a user to control the movement of a rigid body within DEFORM, e.g. constant velocity, mechanical press, hammer press movement, speed as a function of time. However, there are some cases where a slightly more specialized movement control is required, such as movement based on variation of state variables of the workpiece. This can be performed using user-routines since these variables are available when the movement of the rigid die is calculated.
 
 ## Summary of subroutines and calling structure of user-defined FEM routines
 
@@ -185,7 +185,7 @@ Please note that .atools files and .amake files need to be updated to compile DE
 
 ## Passing data to user routines from the Preprocessor
 
-The user defined data ([USRDEF](/docs/en/keyword_documentation/u/usrdef/)) field in the pre-processor can be used to store data that can be used to specify parameters for the user-routines. The purpose for importing data for user routines through this method is that this data can be stored within a keyword file or a database and can be made unique to an individual simulation. This data can be defined and accessed in the Simulation Controls, Advanced Controls menu as shown in Fig. 56.2.3. Ten data lines are assigned for user defined data. Each data should be separated by space and user can input as many of data in each lines with in 80 columns. In the user-routines inserting the following code lets the user access the [USRDEF](/docs/en/keyword_documentation/u/usrdef/) values common block through the variable IUSRVL.
+The user defined data ([USRDEF]({{ '/docs/en/keyword_documentation/u/usrdef/' | relative_url }})) field in the pre-processor can be used to store data that can be used to specify parameters for the user-routines. The purpose for importing data for user routines through this method is that this data can be stored within a keyword file or a database and can be made unique to an individual simulation. This data can be defined and accessed in the Simulation Controls, Advanced Controls menu as shown in Fig. 56.2.3. Ten data lines are assigned for user defined data. Each data should be separated by space and user can input as many of data in each lines with in 80 columns. In the user-routines inserting the following code lets the user access the [USRDEF]({{ '/docs/en/keyword_documentation/u/usrdef/' | relative_url }}) values common block through the variable IUSRVL.
 
 CHARACTER*80 IUSRVL
 
@@ -221,7 +221,7 @@ If the flow stress models supported in DEFORM system are not applicable for a pr
 
 3\. The derivative of the flow stress with respect to total effective plastic strain rate.
 
-A maximum of 100 flow stress routines can be defined in this program. In the pre-processor Material Properties the flow stress ([FSTRES](/docs/en/keyword_documentation/f/fstres/)) type selected should as User routine (as shown in Fig. 56.2.4.) and a routine number can be specified by selecting the icon to the right of the User routine line. This routine number (NPTRTN) is passed to the user defined flow stress subroutine to control branching to the specified UFLOW routine. (as listed in the file usr_mat.f).
+A maximum of 100 flow stress routines can be defined in this program. In the pre-processor Material Properties the flow stress ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})) type selected should as User routine (as shown in Fig. 56.2.4.) and a routine number can be specified by selecting the icon to the right of the User routine line. This routine number (NPTRTN) is passed to the user defined flow stress subroutine to control branching to the specified UFLOW routine. (as listed in the file usr_mat.f).
 
 ![]({{ '/assets/images/user_routines/56_2_2d_user_defined_fem_routines/image0004.jpg' | relative_url }})
 
@@ -517,7 +517,7 @@ UPDV = V_out
 
 ### **User defined node and element value (USRUPD)**
 
-The user can implement subroutines that can calculate nodal and elemental values (up to 1500) during the simulation for each node/element of the objects in the simulation. The inputs are all state variables and the outputs are the values for [USRNOD](/docs/en/keyword_documentation/u/usrnod/) and [USRELM](/docs/en/keyword_documentation/u/usrelm/).The variables can also be used in the flow stress routines to model flow stress as a function of new state variables.
+The user can implement subroutines that can calculate nodal and elemental values (up to 1500) during the simulation for each node/element of the objects in the simulation. The inputs are all state variables and the outputs are the values for [USRNOD]({{ '/docs/en/keyword_documentation/u/usrnod/' | relative_url }}) and [USRELM]({{ '/docs/en/keyword_documentation/u/usrelm/' | relative_url }}).The variables can also be used in the flow stress routines to model flow stress as a function of new state variables.
 
 The subroutine USRUPD is called to calculate the nodal and element values. This in turn calls USRSV1, USRSV2, etc based on the value of NPRTRN the material group number of the current element. If nodal values are being calculated the branching based on the material group number will not work if an object is composed of more than one material group.
 
@@ -833,7 +833,7 @@ ENDIF
 
 ### **User defined damage models (USRDMG)**
 
-User defined damage models can be implemented for calculating damage or for use with the fracture module of DEFORM where elements can be deleted when their damage values exceeds a certain value. To use the damage model select the fracture mode ([FRCMOD](/docs/en/keyword_documentation/f/frcmod/)) as User Routines in Materials Properties, Advanced and specify the user routine number to be called in the subroutine (See Fig. 56.2.6.) USRDMG. (the available routines can be seen in the file usr_dmg.f) The damage routines are functions USRDM1 onwards with the inputs being as follows: Element variables from ELMCOM block are also available here.
+User defined damage models can be implemented for calculating damage or for use with the fracture module of DEFORM where elements can be deleted when their damage values exceeds a certain value. To use the damage model select the fracture mode ([FRCMOD]({{ '/docs/en/keyword_documentation/f/frcmod/' | relative_url }})) as User Routines in Materials Properties, Advanced and specify the user routine number to be called in the subroutine (See Fig. 56.2.6.) USRDMG. (the available routines can be seen in the file usr_dmg.f) The damage routines are functions USRDM1 onwards with the inputs being as follows: Element variables from ELMCOM block are also available here.
 
 C INPUT :
 
@@ -1895,4 +1895,4 @@ In the problem folder (having DB), user can simply place a text file called DEF_
 
 **Related Topics:**
 
-[56.3. 3D User Routine](/docs/en/user_routines/56_user_routines_in_deform/56_3_3d_user_defined_fem_routines/)
+[56.3. 3D User Routine]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_3_3d_user_defined_fem_routines/' | relative_url }})

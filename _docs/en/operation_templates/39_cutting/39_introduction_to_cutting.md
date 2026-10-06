@@ -37,12 +37,12 @@ Cutting Operation template setup is designed for guiding user to setup different
 
 **Related Topics:**
 
-[Setting up 3D Machining Models ](/docs/en/operation_templates/39_cutting/setting_up_3d_machining_models/)
+[Setting up 3D Machining Models ]({{ '/docs/en/operation_templates/39_cutting/setting_up_3d_machining_models/' | relative_url }})
 
-[39.1. 2D Cutting](/docs/en/operation_templates/39_cutting/39_1_2d_cutting/)
+[39.1. 2D Cutting]({{ '/docs/en/operation_templates/39_cutting/39_1_2d_cutting/' | relative_url }})
 
-[39.2. 3D Turning](/docs/en/operation_templates/39_cutting/39_2_3d_turning/)
+[39.2. 3D Turning]({{ '/docs/en/operation_templates/39_cutting/39_2_3d_turning/' | relative_url }})
 
-[39.3. 3D Milling](/docs/en/operation_templates/39_cutting/39_3_3d_milling/)
+[39.3. 3D Milling]({{ '/docs/en/operation_templates/39_cutting/39_3_3d_milling/' | relative_url }})
 
-[39.4. 3D Drilling](/docs/en/operation_templates/39_cutting/39_4_drilling/)
+[39.4. 3D Drilling]({{ '/docs/en/operation_templates/39_cutting/39_4_drilling/' | relative_url }})

@@ -36,4 +36,4 @@ BCCFNC can only be used when a node's boundary constraint function type, BCCDFN 
   
 RELATED TOPICS  
 ---  
-[Boundary constraints](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/) Keywords: [BCCDEF(2D)](/docs/sk/keyword_documentation/b/bccdef/), [BCCDEF(3D)](/docs/sk/keyword_documentation/b/bccdef_3d/), [BCCDFN(2D)](/docs/sk/keyword_documentation/b/bccdfn/), [BCCDFN(3D)](/docs/sk/keyword_documentation/b/bccdfn_3d/), [BCCTMP](/docs/sk/keyword_documentation/b/bcctmp/), [BCCTFN](/docs/sk/keyword_documentation/b/bcctfn/).
+[Boundary constraints]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}) Keywords: [BCCDEF(2D)]({{ '/docs/sk/keyword_documentation/b/bccdef/' | relative_url }}), [BCCDEF(3D)]({{ '/docs/sk/keyword_documentation/b/bccdef_3d/' | relative_url }}), [BCCDFN(2D)]({{ '/docs/sk/keyword_documentation/b/bccdfn/' | relative_url }}), [BCCDFN(3D)]({{ '/docs/sk/keyword_documentation/b/bccdfn_3d/' | relative_url }}), [BCCTMP]({{ '/docs/sk/keyword_documentation/b/bcctmp/' | relative_url }}), [BCCTFN]({{ '/docs/sk/keyword_documentation/b/bcctfn/' | relative_url }}).

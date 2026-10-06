@@ -9,4 +9,4 @@ Nástroj 3D Geometria slúži na opravu zložitej neplatnej 3D geometrie pomocou
 
 **Súvisiace témy:**
 
-[50.1. 3D Geo Tool](/docs/en/operation_templates/50_3d_geo_tool/50_1_3d_geo_tool/)
+[50.1. 3D Geo Tool]({{ '/docs/en/operation_templates/50_3d_geo_tool/50_1_3d_geo_tool/' | relative_url }})

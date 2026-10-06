@@ -39,4 +39,4 @@ DENSTY is used when a porous material with relative densities less than 1.0 is b
   
 RELATED TOPICS  
 ---  
-[Object Elemental Data](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/)
+[Object Elemental Data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }})

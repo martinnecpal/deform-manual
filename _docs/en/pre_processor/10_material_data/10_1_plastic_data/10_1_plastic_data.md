@@ -26,13 +26,13 @@ Under Plastic Data Definition page user can define Flow Stress, Creep property, 
 
 Related Topics:
 
-[10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/)  
-[10.1.1. Flow Stress](/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/)
+[10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})  
+[10.1.1. Flow Stress]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/' | relative_url }})
 
-[10.1.2. Creep](/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_creep_models/)
+[10.1.2. Creep]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_creep_models/' | relative_url }})
 
-[10.1.3. Yield model](/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_yield_models/)
+[10.1.3. Yield model]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_yield_models/' | relative_url }})
 
 10.1.4. Porous model
 
-[10.1.5. Hardening rule](/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_5_hardening_rule/10_1_5_hardening_rule/)
+[10.1.5. Hardening rule]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_5_hardening_rule/10_1_5_hardening_rule/' | relative_url }})

@@ -12,18 +12,18 @@ title: "16.5. Typ odhadu tvrdosti"
   * Čas chladenia
   * Pevný roztok so zrážaním
 
-Údaje o tvrdosti materiálu možno definovať vo Vlastnostiach materiálu príslušného materiálu objektu a budú sa odhadovať na základe typu odhadu zvoleného v časti Vlastnosti príslušného objektu, Obr. 16.5.1. zobrazuje možnosti typu odhadu dostupné v časti Tvrdosť vo Vlastnostiach objektu. Je tam uvedený popis metódy predpovedania tvrdosti. Ďalšie informácie o definovaní tvrdosti v časti Vlastnosti materiálu nájdete v časti [10.7. Hardness data.](/docs/sk/pre_processor/10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data/)
+Údaje o tvrdosti materiálu možno definovať vo Vlastnostiach materiálu príslušného materiálu objektu a budú sa odhadovať na základe typu odhadu zvoleného v časti Vlastnosti príslušného objektu, Obr. 16.5.1. zobrazuje možnosti typu odhadu dostupné v časti Tvrdosť vo Vlastnostiach objektu. Je tam uvedený popis metódy predpovedania tvrdosti. Ďalšie informácie o definovaní tvrdosti v časti Vlastnosti materiálu nájdete v časti [10.7. Hardness data.]({{ '/docs/sk/pre_processor/10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data/' | relative_url }})
 
   
 **Referenčná počiatočná teplota, koncová teplota** : Horné a dolné hodnoty teploty pre Jominyho alebo krivky predpovede tvrdosti v čase chladnutia.
 
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image001.jpg)
+![]({{ '/assets/images/pre-processor/16_object_properties/16_5_hardness_properties/16_5_image001.jpg' | relative_url }})
 
 Typ odhadu tvrdosti v okne Vlastnosti objektu
 
   1. "**Použite objemové podiely** ": Tvrdosť sa vypočíta na základe jednotlivých fáz (pravidlo zmesi), ktoré sa vyvíjajú počas procesu kalenia v príslušnom prvku, s použitím údajov o tvrdosti definovaných vo vlastnostiach materiálu príslušnej fázy.
 
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image003.jpg)
+![]({{ '/assets/images/pre-processor/16_object_properties/16_5_hardness_properties/16_5_image003.jpg' | relative_url }})
 
 Použitie kriviek typu jominy Odhad tvrdosti
 
@@ -34,11 +34,11 @@ Použitie kriviek typu jominy Odhad tvrdosti
   3. Ak sa materiálový bod nachádza v referenčnom teplotnom rozsahu, čas chladnutia udáva len časovú značku vstupu materiálového bodu do tohto teplotného rozsahu, pozri obr. 16.5.4.
   4. Keď sa bod materiálu úplne ochladí pod ochladením, aktualizuje sa správna hodnota tvrdosti, pozri obr. 16.5.4.
 
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image002.jpg)
+![]({{ '/assets/images/pre-processor/16_object_properties/16_5_hardness_properties/16_5_image002.jpg' | relative_url }})
 
 Použitie odhadu tvrdosti typu jominyho krivky
 
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image006.jpg)
+![]({{ '/assets/images/pre-processor/16_object_properties/16_5_hardness_properties/16_5_image006.jpg' | relative_url }})
 
 Výsledky simulácie s použitím jominyho krivky typu Odhad tvrdosti
 
@@ -52,36 +52,36 @@ V dialógu údajov o prvku,
 
 Ak je príznak "Tvrdosť" -3, "čas chladenia" znamená čas do dosiahnutia referenčnej vysokej teploty; ak je príznak "Tvrdosť" -4, "čas chladenia" znamená časový interval od referenčnej vysokej teploty po referenčnú nízku teplotu.
 
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image003.jpg)
+![]({{ '/assets/images/pre-processor/16_object_properties/16_5_hardness_properties/16_5_image003.jpg' | relative_url }})
 
 Odhad tvrdosti len podľa času chladenia
 
   1. Pri možnosti "**Tvrdý roztok so zrazeninami** " sa tvrdosť vypočíta na základe modelu zrážania, pozri obr. 16.5.6..
 
-![](../../../assets/Images/Pre-Processor/16_Object_Properties/16_5_Hardness_Properties/16_5_Image003.jpg)
+![]({{ '/assets/images/pre-processor/16_object_properties/16_5_hardness_properties/16_5_image003.jpg' | relative_url }})
 
 Pevný roztok s typom zrazeniny Odhad tvrdosti
 
 **Súvisiace témy:**
 
-[16\. Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+[16\. Object properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[16.1. Deformation properties](/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/)
+[16.1. Deformation properties]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }})
 
-[16.2. Thermal properties](/docs/sk/pre_processor/16_object_properties/16_2_thermal_properties/)
+[16.2. Thermal properties]({{ '/docs/sk/pre_processor/16_object_properties/16_2_thermal_properties/' | relative_url }})
 
-[16.3. Reference](/docs/sk/pre_processor/16_object_properties/16_3_Reference/)
+[16.3. Reference]({{ '/docs/sk/pre_processor/16_object_properties/16_3_Reference/' | relative_url }})
 
-[16.4. Fracture Properties](/docs/sk/pre_processor/16_object_properties/16_4_Fracture_properties/)
+[16.4. Fracture Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_4_Fracture_properties/' | relative_url }})
 
-[16.6. Heating Properties](/docs/sk/pre_processor/16_object_properties/16_6_heating_properties/)
+[16.6. Heating Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_6_heating_properties/' | relative_url }})
 
-[16.7. Symmetry Properties](/docs/sk/pre_processor/16_object_properties/16_7_symmetry_properties/)
+[16.7. Symmetry Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_7_symmetry_properties/' | relative_url }})
 
-[16.8. Body Force](/docs/sk/pre_processor/16_object_properties/16_8_body_force/)
+[16.8. Body Force]({{ '/docs/sk/pre_processor/16_object_properties/16_8_body_force/' | relative_url }})
 
-[16.9. RSE](/docs/sk/pre_processor/16_object_properties/16_9_rse/)
+[16.9. RSE]({{ '/docs/sk/pre_processor/16_object_properties/16_9_rse/' | relative_url }})
 
-[16.10. User](/docs/sk/pre_processor/16_object_properties/16_10_user/)
+[16.10. User]({{ '/docs/sk/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Material Hardness properties](/docs/sk/pre_processor/10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data/)
+[Material Hardness properties]({{ '/docs/sk/pre_processor/10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data/' | relative_url }})

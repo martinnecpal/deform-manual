@@ -42,8 +42,8 @@ NUCSIZ specifies the size of nuclei during nucleation event.
   
 REMARKS  
 ---  
-The formation of nuclei would be associated with an energy requirement due to the formation of a new interface and energy liberation due to the formation of a new volume of lower energy material. It can be specified as constant or a function of temperature. Applicable object types: [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic) Applicable simulation type: [Heat treatment](/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/)  
+The formation of nuclei would be associated with an energy requirement due to the formation of a new interface and energy liberation due to the formation of a new volume of lower energy material. It can be specified as constant or a function of temperature. Applicable object types: [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic) Applicable simulation type: [Heat treatment]({{ '/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/' | relative_url }})  
   
 RELATED TOPICS  
 ---  
-Keywords: [GBMOBI](/docs/en/keyword_documentation/g/gbmobi/), [GBENGY](/docs/en/keyword_documentation/g/gbengy/), [COARSE](/docs/en/keyword_documentation/c/coarse/). [DIFBND](/docs/en/keyword_documentation/d/difbnd/)
+Keywords: [GBMOBI]({{ '/docs/en/keyword_documentation/g/gbmobi/' | relative_url }}), [GBENGY]({{ '/docs/en/keyword_documentation/g/gbengy/' | relative_url }}), [COARSE]({{ '/docs/en/keyword_documentation/c/coarse/' | relative_url }}). [DIFBND]({{ '/docs/en/keyword_documentation/d/difbnd/' | relative_url }})

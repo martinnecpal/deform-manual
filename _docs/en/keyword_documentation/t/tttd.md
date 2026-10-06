@@ -220,4 +220,4 @@ The two CCT curves describing the starting temperature of grain boundary alpha (
   
 RELATED TOPICS  
 ---  
-Inter-Material Data: [Transformation Kinetics](../../pre_processor/10_material_data/10_9_transformation_data/10_9_1_transformation_kinetics_models.htm#Transformation_Kinetics_Models) Related keywords: [VOLFS](/docs/en/keyword_documentation/v/volfs/), [VOLFC](/docs/en/keyword_documentation/v/volfc/), [STNOUT](/docs/en/keyword_documentation/s/stnout/)
+Inter-Material Data: [Transformation Kinetics](../../pre_processor/10_material_data/10_9_transformation_data/10_9_1_transformation_kinetics_models.htm#Transformation_Kinetics_Models) Related keywords: [VOLFS]({{ '/docs/en/keyword_documentation/v/volfs/' | relative_url }}), [VOLFC]({{ '/docs/en/keyword_documentation/v/volfc/' | relative_url }}), [STNOUT]({{ '/docs/en/keyword_documentation/s/stnout/' | relative_url }})

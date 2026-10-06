@@ -237,7 +237,7 @@ Delete operation option
 
 Extent to use the add cycles
 
-For more details on add cycles refer the chapter[ 6.6.5. Adding Cycles.](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_5_adding_cycles/)
+For more details on add cycles refer the chapter[ 6.6.5. Adding Cycles.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_5_adding_cycles/' | relative_url }})
 
 **Copy/Paste operation:** Copy/Paste operation option can be used to eliminate the duplicated input effort to speed up the problem preparation.
 
@@ -326,7 +326,7 @@ Pass object to all operation option; (a) Before passing and (b) After passing
 Delete object option
 
   
-For more details on connecting operations and passing objects across operation refer the [6.1.1. Connecting Operations.](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_1_connecting_operations/)
+For more details on connecting operations and passing objects across operation refer the [6.1.1. Connecting Operations.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_1_connecting_operations/' | relative_url }})
 
 **Set As Primary Die** : Using this user can set object as Primary die.
 
@@ -428,7 +428,7 @@ Operation tree Geometry RMB options; (a) For 2D (b) For 3D
 
 ## Property Editor
 
-As the project is being constructed most of the information is specified in the Property Editor (See Fig. 6.1.1.) like Geometry, Mesh , Boundary conditions, Material, Simulation control etc. By clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) in the window, it allows user to traverse the project list in order. Each window will have an effect on how the simulation performs so, care must be taken on each window. For detail information on editing varies properties of an object and operation setup, please refer [Basic forming operation setup](/docs/en/operation_templates/33_forming/33_introduction_to_forming/).
+As the project is being constructed most of the information is specified in the Property Editor (See Fig. 6.1.1.) like Geometry, Mesh , Boundary conditions, Material, Simulation control etc. By clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) in the window, it allows user to traverse the project list in order. Each window will have an effect on how the simulation performs so, care must be taken on each window. For detail information on editing varies properties of an object and operation setup, please refer [Basic forming operation setup]({{ '/docs/en/operation_templates/33_forming/33_introduction_to_forming/' | relative_url }}).
 
 ## Message tab
 
@@ -629,20 +629,20 @@ Tool bar options has been explained in [section 6.4.4. Tool bar options](6_4_mai
 
 **Related Topics:**
 
-[Material data](/docs/en/pre_processor/10_material_data/10_material_data/)
+[Material data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[Expert mode Simulation Controls settings](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+[Expert mode Simulation Controls settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[Geometry Definition](/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/)
+[Geometry Definition]({{ '/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})
 
-[Mesh definition](/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/)
+[Mesh definition]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[Boundary condition definitions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[Boundary condition definitions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[Movement controls](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[Movement controls]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[Object properties definitions](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+[Object properties definitions]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+[Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
-[Inter-Object data definitions](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[Inter-Object data definitions]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})

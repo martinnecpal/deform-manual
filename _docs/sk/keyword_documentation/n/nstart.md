@@ -29,4 +29,4 @@ In DEFORM a negative step number designates that the step number is used as inpu
   
 RELATED TOPICS  
 ---  
-[DEFORM database](/docs/sk/pre_processor/21_database_generation/21_database_generation/)
+[DEFORM database]({{ '/docs/sk/pre_processor/21_database_generation/21_database_generation/' | relative_url }})

@@ -9,7 +9,7 @@ title: "Lab07 Gear Carrier Lab"
 
 This is the second lab based on an actual industrial part from the 1999 German Forging Industry Association Benchmark. This part will be used to illustrate realistic problem setup. Depending on hardware and system settings, this problem will run from several hours to a day.
 
-The previous lab, [Lab04: Steering Link](/docs/sk/labs/basic_labs/3d_labs/lab04_steering_link/), explained the mesh settings in detail which are used to optimize execution time and problem resolution.
+The previous lab, [Lab04: Steering Link]({{ '/docs/sk/labs/basic_labs/3d_labs/lab04_steering_link/' | relative_url }}), explained the mesh settings in detail which are used to optimize execution time and problem resolution.
 
 ## The Process: Mechanical Press Forging
 

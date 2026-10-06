@@ -61,4 +61,4 @@ Deformation Module, Heat Transfer, Non-Isothermal Deformation, Microstructure Mo
   
 RELATED TOPICS  
 ---  
-Material Data: [Thermal Data](/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/) Keywords: [HEATCP](/docs/sk/keyword_documentation/h/heatcp/), [EMSVTY](/docs/sk/keyword_documentation/e/emsvty/), [MASDEN](/docs/sk/keyword_documentation/m/masden/)
+Material Data: [Thermal Data]({{ '/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }}) Keywords: [HEATCP]({{ '/docs/sk/keyword_documentation/h/heatcp/' | relative_url }}), [EMSVTY]({{ '/docs/sk/keyword_documentation/e/emsvty/' | relative_url }}), [MASDEN]({{ '/docs/sk/keyword_documentation/m/masden/' | relative_url }})

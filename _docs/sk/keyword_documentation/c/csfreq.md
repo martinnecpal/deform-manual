@@ -35,4 +35,4 @@ CSFREQ specifies the induction heating current source frequency of an object. Fo
   
 RELATED TOPICS  
 ---  
-Simulation Mode: Heat transfer, Heating, Induction Object Properties: [Induction Heating](/docs/sk/pre_processor/16_object_properties/16_6_heating_properties/) Keywords: [VOLCRG](/docs/sk/keyword_documentation/v/volcrg/)
+Simulation Mode: Heat transfer, Heating, Induction Object Properties: [Induction Heating]({{ '/docs/sk/pre_processor/16_object_properties/16_6_heating_properties/' | relative_url }}) Keywords: [VOLCRG]({{ '/docs/sk/keyword_documentation/v/volcrg/' | relative_url }})

@@ -31,4 +31,4 @@ It is an action keyword placed in either an automatic script file or in a Master
   
 RELATED TOPICS  
 ---  
-[Multiple Operations](/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/)
+[Multiple Operations]({{ '/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }})

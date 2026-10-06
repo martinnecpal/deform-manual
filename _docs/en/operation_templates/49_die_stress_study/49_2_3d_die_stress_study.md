@@ -129,7 +129,7 @@ Object page
 
 ### Geometry
 
-User can define the new geometry by using the options from geometry window. Geometry window provides basic options for defining geometry (See Fig. 49.2.7.). Geometry can also be imported using Import geometry from file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option or using Import from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option. User can also import geometries in other formats such as .key, .DB, .STL, .PDA, .NAS and .UNV. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 3D geometries please refer to [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+User can define the new geometry by using the options from geometry window. Geometry window provides basic options for defining geometry (See Fig. 49.2.7.). Geometry can also be imported using Import geometry from file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option or using Import from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option. User can also import geometries in other formats such as .key, .DB, .STL, .PDA, .NAS and .UNV. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 3D geometries please refer to [12.3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0006.jpg' | relative_url }})
 
@@ -137,7 +137,7 @@ Geometry window
 
 ### Object Mesh
 
-Mesh Page provides options to mesh the object. All the dies on which stresses need to be calculated should be meshed. Mesh page provides option to set number of elements using slider bar to generate mesh. Meshing options available in Guided mode mesh window are shown in Fig. 49.2.8. For more information related to Expert mode mesh option, refer [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) and [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
+Mesh Page provides options to mesh the object. All the dies on which stresses need to be calculated should be meshed. Mesh page provides option to set number of elements using slider bar to generate mesh. Meshing options available in Guided mode mesh window are shown in Fig. 49.2.8. For more information related to Expert mode mesh option, refer [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}) and [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0007.jpg' | relative_url }})
 
@@ -192,7 +192,7 @@ Shrink Fit BCC in 3D used for die stress analysis, shrink fit conditions are def
 
 If shrink fit is applied to the inner object, the value should be negative and If shrink fit is applied to the outer object then the value should be positive.
 
-For more information on shrink fit, Please refer [3D Die Stress Analysis.](/docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/) Fig. 49.2.12. & Fig. 49.2.13. shows shrink fit BCC applied to shrink ring.
+For more information on shrink fit, Please refer [3D Die Stress Analysis.]({{ '/docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/' | relative_url }}) Fig. 49.2.12. & Fig. 49.2.13. shows shrink fit BCC applied to shrink ring.
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0011.jpg' | relative_url }})
 
@@ -206,7 +206,7 @@ Shrink Fit Boundary conditions assigned
 
 In Initialize window, few state variables that are commonly used such as Temperature, strain, stress, damage, velocity, Displacement, etc.., are made available for initialization.
 
-User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 49.2.14. shows the various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1. Node Data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 49.2.14. shows the various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1. Node Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) and [17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0013.jpg' | relative_url }})
 
@@ -230,7 +230,7 @@ Fixtures that hold dies can be defined in this operation. Fixtures are considere
 
 ## Controls
 
-Fig. 49.2.17. shows Controls window, user can position the fixtures and die objects that are added using ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. The positioning will be applied only for the current selected step and will not be used in future steps. Various positioning options (See Fig. 49.2.18.) are available to position the objects, for more information on these options please refer [19.Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+Fig. 49.2.17. shows Controls window, user can position the fixtures and die objects that are added using ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. The positioning will be applied only for the current selected step and will not be used in future steps. Various positioning options (See Fig. 49.2.18.) are available to position the objects, for more information on these options please refer [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0016.jpg' | relative_url }})
 
@@ -244,7 +244,7 @@ Object Positioning window
 
 The purpose of inter-object relations is to define how the different objects in a simulation interact with each other.
 
-In Inter-object window, all the possible relations are already present in the list (See Fig. 49.2.19.). User needs to define the type of relation and Friction value for objects that are in contact for the selected relation. For more information related to expert mode contact page refer [20\. Inter-Object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+In Inter-object window, all the possible relations are already present in the list (See Fig. 49.2.19.). User needs to define the type of relation and Friction value for objects that are in contact for the selected relation. For more information related to expert mode contact page refer [20\. Inter-Object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0018.jpg' | relative_url }})
 
@@ -266,7 +266,7 @@ Fig. 49.2.20. shows the Simulation Controls window.
 
 Simulation control window
 
-For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ## Generate DB
 
@@ -282,6 +282,6 @@ DB generation window
 
 **Related Topics:**
 
-[49\. Introduction to Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_introduction_to_die_stress_study/)
+[49\. Introduction to Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_introduction_to_die_stress_study/' | relative_url }})
 
-[49.1. 2D Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/)
+[49.1. 2D Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/' | relative_url }})

@@ -9,7 +9,7 @@ The model results can be displayed as a continuous set of images and animation f
 
 Under **General** tab, user can define the File name in the File name field, using Browse button user can select the Animation saving directory. Selected path will be displayed in Directory field (See Fig. 26.6.19.1.).
 
-After a presentation file (.pre) has been created, the "Edit in Presentation Editor" ![]({{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}) button will be enabled. Clicking this button will launch the Presentation Editor. For more information related to presentation Editor refer [26.6.23. Presentation Editor](/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_23_presentation_editor/)
+After a presentation file (.pre) has been created, the "Edit in Presentation Editor" ![]({{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}) button will be enabled. Clicking this button will launch the Presentation Editor. For more information related to presentation Editor refer [26.6.23. Presentation Editor]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_23_presentation_editor/' | relative_url }})
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_19_animation_setup/image001.jpg' | relative_url }})
 

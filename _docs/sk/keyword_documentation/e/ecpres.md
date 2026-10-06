@@ -41,4 +41,4 @@ Pressure is defined as force per unit area. The pressure is assumed to be linear
   
 RELATED TOPICS  
 ---  
-Object Edge data: Deformation, Boundary Constraints: Deformation -Pressure Keywords: [ECDEFN (2D)](/docs/sk/keyword_documentation/e/ecdefn/), [ECDEFN (3D)](/docs/sk/keyword_documentation/e/ecdefn_3d/), [ECCDEF (2D)](/docs/sk/keyword_documentation/e/eccdef/), [ECCDEF (3D)](/docs/sk/keyword_documentation/e/eccdef_3d/), [LOCDEF (2D)](/docs/sk/keyword_documentation/l/locdef/), [LOCDEF (3D)](/docs/sk/keyword_documentation/l/locdef_3d/)
+Object Edge data: Deformation, Boundary Constraints: Deformation -Pressure Keywords: [ECDEFN (2D)]({{ '/docs/sk/keyword_documentation/e/ecdefn/' | relative_url }}), [ECDEFN (3D)]({{ '/docs/sk/keyword_documentation/e/ecdefn_3d/' | relative_url }}), [ECCDEF (2D)]({{ '/docs/sk/keyword_documentation/e/eccdef/' | relative_url }}), [ECCDEF (3D)]({{ '/docs/sk/keyword_documentation/e/eccdef_3d/' | relative_url }}), [LOCDEF (2D)]({{ '/docs/sk/keyword_documentation/l/locdef/' | relative_url }}), [LOCDEF (3D)]({{ '/docs/sk/keyword_documentation/l/locdef_3d/' | relative_url }})

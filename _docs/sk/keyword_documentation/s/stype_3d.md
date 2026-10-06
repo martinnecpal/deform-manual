@@ -29,4 +29,4 @@ Applicable simulation types: Isothermal Deformation, Heat Transfer, Non-Isotherm
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Main Controls - Types](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.1._Main_Settings_window) Keywords: [SMODE](/docs/sk/keyword_documentation/s/smode/), [TRANS](/docs/sk/keyword_documentation/t/trans/)
+Simulation Controls: [Main Controls - Types](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.1._Main_Settings_window) Keywords: [SMODE]({{ '/docs/sk/keyword_documentation/s/smode/' | relative_url }}), [TRANS]({{ '/docs/sk/keyword_documentation/t/trans/' | relative_url }})

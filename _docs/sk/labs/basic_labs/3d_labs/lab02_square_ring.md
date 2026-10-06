@@ -254,18 +254,18 @@ When finished viewing the results of the simulation, use the ![]({{ '/assets/ico
 
 **Related Topics:**
 
-[1\. Simulation Control](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+[1\. Simulation Control]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[2\. General](/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/)
+[2\. General]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
 
-[3\. Geometry](/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+[3\. Geometry]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
-[4\. Movement](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[4\. Movement]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[5\. Mesh](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/)
+[5\. Mesh]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[6\. Positioning](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+[6\. Positioning]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[7\. Inter-Object](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[7\. Inter-Object]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-[8\. Post - Processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[8\. Post - Processor]({{ '/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})

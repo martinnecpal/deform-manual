@@ -35,8 +35,8 @@ MATAXI specifies the material axis at each element. In 2D, it has one component,
   
 REMARKS  
 ---  
-These state variables are computed only when the material is anisotropic. Related keyword: [ANISO](/docs/sk/keyword_documentation/a/aniso/).  
+These state variables are computed only when the material is anisotropic. Related keyword: [ANISO]({{ '/docs/sk/keyword_documentation/a/aniso/' | relative_url }}).  
   
 RELATED TOPICS  
 ---  
-[Object Element Data](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/): Deformation- General Keywords: [ANISO](/docs/sk/keyword_documentation/a/aniso/)
+[Object Element Data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}): Deformation- General Keywords: [ANISO]({{ '/docs/sk/keyword_documentation/a/aniso/' | relative_url }})

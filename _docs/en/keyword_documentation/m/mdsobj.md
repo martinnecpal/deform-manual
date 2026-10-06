@@ -32,4 +32,4 @@ This keyword must be used in conjunction with reference points. It impossible to
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Stopping Controls](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/) Keywords: [REFPOS (2D)](/docs/en/keyword_documentation/r/refpos/), [REFPOS (3D)](/docs/en/keyword_documentation/r/refpos_3d/)
+Simulation Controls: [Stopping Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}) Keywords: [REFPOS (2D)]({{ '/docs/en/keyword_documentation/r/refpos/' | relative_url }}), [REFPOS (3D)]({{ '/docs/en/keyword_documentation/r/refpos_3d/' | relative_url }})

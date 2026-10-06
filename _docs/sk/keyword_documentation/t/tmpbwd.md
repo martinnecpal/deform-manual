@@ -29,4 +29,4 @@ Profile optimization is used to reduce the memory storage requirements for the t
   
 RELATED TOPICS  
 ---  
-[Inter-object contact](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) Keyword: [DEFBWD](/docs/sk/keyword_documentation/d/defbwd/)
+[Inter-object contact]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}) Keyword: [DEFBWD]({{ '/docs/sk/keyword_documentation/d/defbwd/' | relative_url }})

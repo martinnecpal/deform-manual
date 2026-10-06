@@ -16,7 +16,7 @@ First, **create a shared folder on the simulation server** as follows (see Fig. 
 
   3. Click on the Done button finally. 
 
-![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/image001.jpg' | relative_url }})
+![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/Image001.jpg' | relative_url }})
 
 Share a folder on the simulation server. 
 
@@ -37,18 +37,18 @@ Second, **access the shared folder** as follows.
 
   3. **Right-Click on the shared folder** TEST and select **Map network drive…** , as shown in Fig. 23.6.2. to create your mapped drive with a unique name such as “S:” (see Fig. 23.6.3.)
 
-![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/image002.jpg' | relative_url }})
+![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/Image002.jpg' | relative_url }})
 
 Access the shared folder from the client machine to map a network drive.
 
   
-![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/image003.jpg' | relative_url }})
+![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/Image003.jpg' | relative_url }})
 
 Map a network drive to the shared folder.
 
 Now you can see your mapped drive in **This PC** , shown in Fig. 23.6.4. Note that you can delete the created drive by right-clicking on its name and select Disconnect.
 
-![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/image004.jpg' | relative_url }})
+![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/Image004.jpg' | relative_url }})
 
 Mapped drive in This PC.
 
@@ -62,25 +62,25 @@ Third, **set up the mapped drives in Deform Setup** doing the following steps.
 
   4. Eventually, ensure that you **Save** the last changes in the Deform Setup. Fig. 23.6.8 shows the saved network drives on the client computers tuscan and puce (i.e. S: and R:), mapped to the shared folder on the simulation computer emerald.
 
-![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/image005.jpg' | relative_url }})
+![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/Image005.jpg' | relative_url }})
 
 Synchronize to the license sever in Deform Setup.
 
-![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/image006.jpg' | relative_url }})
+![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/Image006.jpg' | relative_url }})
 
 Create New Directory with the machine name and directory where the shared folder is located (on the simulation server).
 
-![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/image007.jpg' | relative_url }})
+![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/Image007.jpg' | relative_url }})
 
 Add share points from the simulation server and the client computers with the network drive letter. 
 
-![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/image008.jpg' | relative_url }})
+![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/Image008.jpg' | relative_url }})
 
 Save shared drives in Deform Setup.
 
 Now both network drives S: and R: on client computers tuscan and puce can access to the shared folder TEST on the simulation server machine emerald, as can be seen in Fig. 23.6.9. Therefore, users can work on MO project files and databases on their local machines and run them on the simulation server. 
 
-![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/image009.jpg' | relative_url }})
+![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/Image009.jpg' | relative_url }})
 
 Access to the simulation server from the mapped network drive on the client machine.
 
@@ -99,14 +99,14 @@ Users can then submit jobs to the simulation server as follows.
 
   6. Submit to Queue (DEF_SIM_64.exe will start on emerald machine.)
 
-![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/image010.jpg' | relative_url }})
+![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/Image010.jpg' | relative_url }})
 
 Submit a job to Batch Queue.
 
 Fig. 23.6.11. illustrates the control flow after the job submission. This image shows how the systems are getting the license from the server machine to perform the given task. We can see that client machines tuscan and puce are getting the licenses from the license server and the batch queue server machine lmwin11 to respectively open Deform applications and add jobs to the batch queue. The simulation server emerald is getting the license from the server machine lmwin11 for running the simulation, and it is also accessing the batch queue server to add the DBs to the list.   
 While all these options are going on, we can monitor this ongoing process through the Process Monitor and License Manager Administrator.
 
-![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/image011.jpg' | relative_url }})
+![]({{ '/assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/Image011.jpg' | relative_url }})
 
 Control flow after the job submission.
 
@@ -114,18 +114,18 @@ Finally, note that users can alternatively submit jobs for simulation using remo
 
 **Related Topics:**
 
-[23.1. Start, Stop and Resume Simulation](/docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/)
+[23.1. Start, Stop and Resume Simulation]({{ '/docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/' | relative_url }})
 
-[23.2. Interactive and batch modes using Run option](/docs/en/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/)
+[23.2. Interactive and batch modes using Run option]({{ '/docs/en/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/' | relative_url }})
 
-[23.3. Simulation Graphics](/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/)
+[23.3. Simulation Graphics]({{ '/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/' | relative_url }})
 
-[23.4. Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/)
+[23.4. Process Monitor]({{ '/docs/en/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }})
 
-[23.5. Setting up MPICH](/docs/en/simulator/23_deform_simulator/23_5_setting_up_mpich/)
+[23.5. Setting up MPICH]({{ '/docs/en/simulator/23_deform_simulator/23_5_setting_up_mpich/' | relative_url }})
 
-[23.8. Trouble Shooting Simulation Running](/docs/en/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/)
+[23.8. Trouble Shooting Simulation Running]({{ '/docs/en/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/' | relative_url }})
 
-[Pre-Processor](/docs/en/post_processor/post_processor_mainpg/)
+[Pre-Processor]({{ '/docs/en/post_processor/post_processor_mainpg/' | relative_url }})
 
-[Integrated Manufacturing Process (MO)](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/)
+[Integrated Manufacturing Process (MO)]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/' | relative_url }})

@@ -67,13 +67,13 @@ Then 3D Forming Express operation will open as shown in the Fig. 34.2.2.
 
 Independent Forming Express wizard.
 
-Here you can add or delete express operations and Simulation operators. Heat transfer express operations has been explained in section [36\. Introduction to Heat Transfer Express.](/docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/)
+Here you can add or delete express operations and Simulation operators. Heat transfer express operations has been explained in section [36\. Introduction to Heat Transfer Express.]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/' | relative_url }})
 
-2D to 3D converter operation has been explained in section [44.1. 2D to 3D Convertor](/docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/)
+2D to 3D converter operation has been explained in section [44.1. 2D to 3D Convertor]({{ '/docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/' | relative_url }})
 
-Boolean operations has been explained in section [45.1. Boolean Operator.](/docs/en/operation_templates/45_boolean_operation/45_1_boolean_operation/)
+Boolean operations has been explained in section [45.1. Boolean Operator.]({{ '/docs/en/operation_templates/45_boolean_operation/45_1_boolean_operation/' | relative_url }})
 
-Copy/Mirroring operation has been explained in section [46.1. Copy Mirroring](/docs/en/operation_templates/46_copy_mirroring/46_1_copy_mirroring/)
+Copy/Mirroring operation has been explained in section [46.1. Copy Mirroring]({{ '/docs/en/operation_templates/46_copy_mirroring/46_1_copy_mirroring/' | relative_url }})
 
 **For Adding Forming Express operation in MO Wizard.**
 
@@ -159,11 +159,11 @@ Workpiece window
 
 **Object****Name** : User can define the name for all the objects available in the operation.
 
-**Object****Type** : The object type ([OBJTYP](/docs/en/keyword_documentation/o/objtyp/)) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are explained in chapter 11. General Object Data Definition, for details refer [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
+**Object****Type** : The object type ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are explained in chapter 11. General Object Data Definition, for details refer [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
 
-  * **Plastic** : Plastic objects are modeled as rigid-plastic or rigid-viscoplastic materials depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)). The material deforms plastically beyond the limiting strain rate. The plastic material behavior of the object is specified with a material flow stress function or flow stress data ([FSTRES](/docs/en/keyword_documentation/f/fstres/)). In Forming Express operation workpiece is automatically assigned to Plastic object type.
+  * **Plastic** : Plastic objects are modeled as rigid-plastic or rigid-viscoplastic materials depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). The material deforms plastically beyond the limiting strain rate. The plastic material behavior of the object is specified with a material flow stress function or flow stress data ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). In Forming Express operation workpiece is automatically assigned to Plastic object type.
 
-  * **Rigid** : Rigid objects are modeled as non-deformable materials. In the deformation analysis, the object geometry is represented by a geometric profile ([DIEGEO](/docs/en/keyword_documentation/d/diegeo/)). Deformation solution data available for rigid objects include object stroke, load, and velocity. The geometric profile is used for all deformation analysis and the mesh for the rigid object is used for all thermal, transformation and diffusion calculations. In Forming Express, dies or tools are automatically assigned to Rigid as they are non-deformable objects.
+  * **Rigid** : Rigid objects are modeled as non-deformable materials. In the deformation analysis, the object geometry is represented by a geometric profile ([DIEGEO]({{ '/docs/en/keyword_documentation/d/diegeo/' | relative_url }})). Deformation solution data available for rigid objects include object stroke, load, and velocity. The geometric profile is used for all deformation analysis and the mesh for the rigid object is used for all thermal, transformation and diffusion calculations. In Forming Express, dies or tools are automatically assigned to Rigid as they are non-deformable objects.
 
 **Note:**
 
@@ -182,16 +182,16 @@ The user can initialize temperature, strain, velocity, damage and displacement t
 
 Advanced object settings
 
-More variables can be initialized in Forming operation, for detail refer [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+More variables can be initialized in Forming operation, for detail refer [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
   
-The average strain rate ([AVGSTR](/docs/en/keyword_documentation/a/avgstr/)) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation.
+The average strain rate ([AVGSTR]({{ '/docs/en/keyword_documentation/a/avgstr/' | relative_url }})) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation.
 
-The limiting strain rate ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material.
+The limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material.
 
 ![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}) : Using this user can rest back the initialized state variables value.
 
-For more Deformation object properties options available in Forming operation refer [16.1. Deformation Properties.](/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/)
+For more Deformation object properties options available in Forming operation refer [16.1. Deformation Properties.]({{ '/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }})
 
 ## Object geometry definition
 
@@ -311,21 +311,21 @@ Relative mesh settings
 
 Absolute mesh settings
 
-  * **Element size ratio (MGSIZR):** The maximum size ratio between elements is one of several ways to control the mesh density during automatic mesh generation (AMG) by specifying the ratio of node densities. For a value of 3 for [MGSIZR](/docs/en/keyword_documentation/m/mgsizr/), the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then Size Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.
+  * **Element size ratio (MGSIZR):** The maximum size ratio between elements is one of several ways to control the mesh density during automatic mesh generation (AMG) by specifying the ratio of node densities. For a value of 3 for [MGSIZR]({{ '/docs/en/keyword_documentation/m/mgsizr/' | relative_url }}), the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then Size Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.
 
-  * **Remeshing criteria :** Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See Fig. 34.2.19.) contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they are Interference Depth ([RMDPTH](/docs/en/keyword_documentation/r/rmdpth/)), Max. Time Increment ([RMTIME](/docs/en/keyword_documentation/r/rmtime/)), Max. Step Increment ([RMSTEP](/docs/en/keyword_documentation/r/rmstep/)) and Max. Stroke Increment ([RMSTRK](/docs/en/keyword_documentation/r/rmstrk/)). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.
+  * **Remeshing criteria :** Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See Fig. 34.2.19.) contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they are Interference Depth ([RMDPTH]({{ '/docs/en/keyword_documentation/r/rmdpth/' | relative_url }})), Max. Time Increment ([RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }})), Max. Step Increment ([RMSTEP]({{ '/docs/en/keyword_documentation/r/rmstep/' | relative_url }})) and Max. Stroke Increment ([RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.
 
   * **Penetration Distance (relative)** : If a negative number (a fraction) is entered, the program will conduct a check on each surface edge that has a contact node on each end. The distance from the middle of the edge to the die surface is calculated and divided by the original length of the edge. If the ratio exceeds the magnitude of the specified value, remeshing will be triggered.
 
-  * **Maximum stroke increment (RMSTRK)** : Anytime the maximum stroke increment ([RMSTRK](/docs/en/keyword_documentation/r/rmstrk/)) is exceeded by the stroke increment of the primary die since the last remeshing step, a new remeshing step will be initiated. 
+  * **Maximum stroke increment (RMSTRK)** : Anytime the maximum stroke increment ([RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})) is exceeded by the stroke increment of the primary die since the last remeshing step, a new remeshing step will be initiated. 
 
-  * **Maximum time increment (RMTIME):** Anytime the Maximum Time Increment ([RMTIME](/docs/en/keyword_documentation/r/rmtime/)) (Value of Elapsed Time) has elapsed since the last remeshing step, a new remeshing step will be initiated.
+  * **Maximum time increment (RMTIME):** Anytime the Maximum Time Increment ([RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }})) (Value of Elapsed Time) has elapsed since the last remeshing step, a new remeshing step will be initiated.
 
   * **Maximum step increment (RMSTEP):** Anytime the Maximum Step Increment (Number of Steps) has occurred since the last remeshing step, a new remeshing step will be initiated.
 
 **Delete Mesh** ![]({{ '/assets/icons/pre_icons/mo_delete_mesh_button.jpg' | relative_url }}) : Deletes the mesh generated for the object.
 
-More mesh options like Coating mesh, System mesh density weighting factors, User Mesh Density Window options are not available in Forming express operation unlike in Forming operation, for those mesh options refer [13.2. 3D Tet Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/)
+More mesh options like Coating mesh, System mesh density weighting factors, User Mesh Density Window options are not available in Forming express operation unlike in Forming operation, for those mesh options refer [13.2. 3D Tet Mesh Generation.]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }})
 
 ## Material
 
@@ -344,7 +344,7 @@ Once after adding material click on ![]({{ '/assets/icons/pre_icons/mo_material_
 
 Material editing window
 
-The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. In chapter [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/) user can get access to all material properties for more information refer [10\. Material Data](/docs/en/pre_processor/10_material_data/10_material_data/).
+The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. In chapter [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}) user can get access to all material properties for more information refer [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ## Boundary Conditions
 
@@ -359,7 +359,7 @@ Symmetry boundary condition assigned for workpiece
 
 Heat exchange with environment boundary condition assigned for workpiece
 
-The BCC’s are categorized as [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/),[Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) and [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). For more information about these BCC's please refer [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions)
+The BCC’s are categorized as [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}),[Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions)
 
 ## Movement Controls
 
@@ -369,7 +369,7 @@ Movement controls can be applied to rigid objects and boundary nodes of meshed o
 
 During the simulation the constrained nodes will move synchronously in the speed and direction defined by the movement controls. (See Fig. 34.2.24.)
 
-In Forming express only six types of Movement controls are available in Translation Movement type, those are [Speed](/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/), [Load](/docs/en/pre_processor/15_movement_controls_definition/15_2_force/), [Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/), [Screw press](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/), [Mechanical press](/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/), [Hydraulic press](/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/). Forming operation contains [Sliding Die](/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/) and [Path](/docs/en/pre_processor/15_movement_controls_definition/15_8_path/) translational movement controls in addition to the forming express and also contains rotational and Torsional movement types, for more information refer [15\. Movement Controls.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+In Forming express only six types of Movement controls are available in Translation Movement type, those are [Speed]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_1_speed/' | relative_url }}), [Load]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_2_force/' | relative_url }}), [Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}), [Screw press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }}), [Mechanical press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }}), [Hydraulic press]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_6_hydraulic_press/' | relative_url }}). Forming operation contains [Sliding Die]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_7_sliding_die/' | relative_url }}) and [Path]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_8_path/' | relative_url }}) translational movement controls in addition to the forming express and also contains rotational and Torsional movement types, for more information refer [15\. Movement Controls.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_2_3d_forming_express_setup/image016.jpg' | relative_url }})
 
@@ -400,7 +400,7 @@ System will always update stroke with positioning for the object that has mechan
 
 **Positioning Objects![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})**
 
-By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 34.2.26. For more information about these options, please refer [19.Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 34.2.26. For more information about these options, please refer [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_2_3d_forming_express_setup/image017.jpg' | relative_url }})
 
@@ -568,7 +568,7 @@ Solution step size can be controlled by time step or by displacement of the prim
 
 Stroke per step is frequently more intuitive. However, time per step must be specified for any problem in which there is no die movement (such as heat transfer) or for any problem where force control is used.
 
-In Forming operations enhanced definition of step increment control available to include both the time and stroke dependent step functions. This means, step size (both time per step and stroke per step) can now be defined as a function of time or stroke. This functionality enables finer resolution of saved model information, where it is desired. (typically towards the end of the stroke, where steep changes of die load and cavity filling or flash formation can take place) for more information refer [9.2. Defining step.](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/)
+In Forming operations enhanced definition of step increment control available to include both the time and stroke dependent step functions. This means, step size (both time per step and stroke per step) can now be defined as a function of time or stroke. This functionality enables finer resolution of saved model information, where it is desired. (typically towards the end of the stroke, where steep changes of die load and cavity filling or flash formation can take place) for more information refer [9.2. Defining step.]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})
 
 **Advanced Simulation controls**
 
@@ -578,7 +578,7 @@ Advanced Simulation controls provide options to select the Deformation solvers, 
 
 Advanced simulation controls settings
 
-For certain problems, this solver offers tremendous advantages over the sparse solver. For information on solvers, Forming operation gives more simulation controls options in expert mode, for these options details refer [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+For certain problems, this solver offers tremendous advantages over the sparse solver. For information on solvers, Forming operation gives more simulation controls options in expert mode, for these options details refer [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ## Generate DB
 
@@ -594,24 +594,24 @@ By clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relat
 
 Generate DB window
 
-If user need any of the advanced options which are not available in Forming express then such options can be accessed without loosing the defined data in forming express operation by promoting to forming operation. This option is available in the Right mouse button menu option in operation editor as shown in Fig. 34.2.37. For more details about this upgrading the operation refer to [6.6.4. Upgrading Operations.](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations/)
+If user need any of the advanced options which are not available in Forming express then such options can be accessed without loosing the defined data in forming express operation by promoting to forming operation. This option is available in the Right mouse button menu option in operation editor as shown in Fig. 34.2.37. For more details about this upgrading the operation refer to [6.6.4. Upgrading Operations.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_2_3d_forming_express_setup/image022.jpg' | relative_url }})
 
 Promoting forming express to forming operation right menu option
 
-After generating database user has to select the MO Simulation mode tab to submit the problem for simulation, for more information about MO Simulation mode refer [6.2. MO Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/). Once the Simulation completed message tab indicates it by giving the proper message then from MO Post mode user can review the results, for more information about MO Post mode refer[ 6.3. MO Post layout.](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+After generating database user has to select the MO Simulation mode tab to submit the problem for simulation, for more information about MO Simulation mode refer [6.2. MO Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}). Once the Simulation completed message tab indicates it by giving the proper message then from MO Post mode user can review the results, for more information about MO Post mode refer[ 6.3. MO Post layout.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
 **Related Topics:**
 
-[34.1. 2D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/)
+[34.1. 2D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }})
 
 [Promote Forming Express to Forming operation](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations.htm#Fig._6.6.4.4._Forming_express_operation_after_promoting_it_to_forming_operation)
 
-[6.2. MO Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. MO Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. MO Post layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. MO Post layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[33.1. 2D Forming Setup](/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/)
+[33.1. 2D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }})
 
-[33.2. 3D Forming Setup](/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/)
+[33.2. 3D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }})

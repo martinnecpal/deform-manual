@@ -23,7 +23,7 @@ Step editor
 
 Step editor with intermediate step selected for editing
 
-For more details on property editor setting of typical forming operation refer the chapter [Forming Operation Setup](/docs/sk/operation_templates/33_forming/33_introduction_to_forming/).
+For more details on property editor setting of typical forming operation refer the chapter [Forming Operation Setup]({{ '/docs/sk/operation_templates/33_forming/33_introduction_to_forming/' | relative_url }}).
 
 ![]({{ '/assets/icons/pre_icons/mo_outline_button.jpg' | relative_url }}): When selected displays only the first and last step of the operations in the step editor
 
@@ -39,6 +39,6 @@ For more information on step selection types and step list options refer the sec
 
 **Related Topics:**
 
-[6.1. Integrated Manufacturing Porcess (MO) Pre-processor Layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Porcess (MO) Pre-processor Layout]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[Forming Operation ](/docs/sk/operation_templates/33_forming/33_introduction_to_forming/)
+[Forming Operation ]({{ '/docs/sk/operation_templates/33_forming/33_introduction_to_forming/' | relative_url }})

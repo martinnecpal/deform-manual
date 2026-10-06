@@ -40,4 +40,4 @@ Object tree for Ring Rolling setup
 
 **Related Topics:**
 
-[42.1. Ring Rolling](/docs/en/operation_templates/42_ring_rolling/42_1_ring_rolling/)
+[42.1. Ring Rolling]({{ '/docs/en/operation_templates/42_ring_rolling/42_1_ring_rolling/' | relative_url }})

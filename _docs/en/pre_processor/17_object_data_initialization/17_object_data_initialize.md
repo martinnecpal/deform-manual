@@ -19,7 +19,7 @@ User can initialize the object data using initialize page, nodal data window, el
 
 User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. The value is initialized for entire object. Fig. 17.1. shows the various state variables that are available in Initialize window. For state variable like velocity and displacement, provided input fields as many as dimensions, user needs to define the directional values of the variables in respective fields and then clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button will calculate the total velocity and displacement.
 
-If the state variables are not available in the object initialize page or if user would like to use picking options to selectively apply state variable to a part of an object then user can user Node and Element data windows, for more information on how to initialize state variables in Node and Element windows please refer [Object node Data](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [Object element Data](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+If the state variables are not available in the object initialize page or if user would like to use picking options to selectively apply state variable to a part of an object then user can user Node and Element data windows, for more information on how to initialize state variables in Node and Element windows please refer [Object node Data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) and [Object element Data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ## **Major State Variables Tab**
 
@@ -63,8 +63,8 @@ Object initialize Other window
 
 **Related Topics:**
 
-[17.1. Node Data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/)
+[17.1. Node Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }})
 
-[17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/)
+[17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }})
 
-[17.3. Data interpolation Window](/docs/en/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/)
+[17.3. Data interpolation Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/' | relative_url }})

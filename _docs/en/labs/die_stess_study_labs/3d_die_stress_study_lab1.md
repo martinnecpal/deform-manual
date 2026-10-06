@@ -179,20 +179,20 @@ Max Principal stress
 
 **Related Topics:**
 
-[2D Die Stress Analysis - Theory](/docs/en/operation_templates/30_die_stress/2d_die_stress_analysis_theory/)
+[2D Die Stress Analysis - Theory]({{ '/docs/en/operation_templates/30_die_stress/2d_die_stress_analysis_theory/' | relative_url }})
 
-[3D Die Stress Analysis](/docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/)
+[3D Die Stress Analysis]({{ '/docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/' | relative_url }})
 
-[Coupled Die Stress analysis](/docs/en/operation_templates/30_die_stress/coupled_die_stress_analysis/)
+[Coupled Die Stress analysis]({{ '/docs/en/operation_templates/30_die_stress/coupled_die_stress_analysis/' | relative_url }})
 
-[Lab 06 Die Stress](/docs/en/labs/basic_labs/2d_labs/lab_06_die_stress/)
+[Lab 06 Die Stress]({{ '/docs/en/labs/basic_labs/2d_labs/lab_06_die_stress/' | relative_url }})
 
-[Lab 12 Die Stress with Holder](/docs/en/labs/basic_labs/2d_labs/lab_12_die_stress_with_holder/)
+[Lab 12 Die Stress with Holder]({{ '/docs/en/labs/basic_labs/2d_labs/lab_12_die_stress_with_holder/' | relative_url }})
 
-[Lab 13 Die Stress with Shrink Fit](/docs/en/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/)
+[Lab 13 Die Stress with Shrink Fit]({{ '/docs/en/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/' | relative_url }})
 
-[Die Stress study](/docs/en/operation_templates/49_die_stress_study/49_introduction_to_die_stress_study/)
+[Die Stress study]({{ '/docs/en/operation_templates/49_die_stress_study/49_introduction_to_die_stress_study/' | relative_url }})
 
-[49.1. 2D Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/)
+[49.1. 2D Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/' | relative_url }})
 
-[49.2. 3D Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/)
+[49.2. 3D Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/' | relative_url }})

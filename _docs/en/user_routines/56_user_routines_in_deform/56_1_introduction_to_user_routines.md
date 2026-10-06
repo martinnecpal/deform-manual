@@ -13,7 +13,7 @@ DEFORM V13.1 brings with it a few important changes in its support for Fortran c
 DEFORM V13.1 introduces support for Intel® Fortran Compiler. The free Intel compiler represents a computing upgrade, as it is designed for modern hardware. Testing has shown that it generally provides improved performance over the older Absoft compiler.
 
   
-For instructions on how to download and install Intel® Fortran Compiler, please refer [Appendix XXI: FEM User routine support](/docs/en/appendices/appendix_xxi_fem_user_routine_support/).
+For instructions on how to download and install Intel® Fortran Compiler, please refer [Appendix XXI: FEM User routine support]({{ '/docs/en/appendices/appendix_xxi_fem_user_routine_support/' | relative_url }}).
 
 **Prerequisites:**
 
@@ -51,8 +51,8 @@ From DEFORM v13.0, support for 32bit User-Defined FEM Routines and User-Defined 
 
 **Related Topics:**
 
-[56.2. 2D User Defined FEM Routines](/docs/en/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/)
+[56.2. 2D User Defined FEM Routines]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }})
 
-[56.3. 3D User Defined FEM Routines](/docs/en/user_routines/56_user_routines_in_deform/56_3_3d_user_defined_fem_routines/)
+[56.3. 3D User Defined FEM Routines]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_3_3d_user_defined_fem_routines/' | relative_url }})
 
-[56.4. User-Defined Post-Processing Routines](/docs/en/user_routines/56_user_routines_in_deform/56_4_user-defined_post-processing_routines/)
+[56.4. User-Defined Post-Processing Routines]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_4_user-defined_post-processing_routines/' | relative_url }})

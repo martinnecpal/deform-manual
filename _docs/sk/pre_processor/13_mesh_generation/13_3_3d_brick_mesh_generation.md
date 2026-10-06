@@ -77,11 +77,11 @@ Okná hustoty siete pre 2D
 
 ## Povlak Mesh
 
-Používateľ môže pomocou tejto možnosti pridať vrstvy povlaku a vygenerovať pre ne sieť. Povlaková sieť je tenká vrstva prvkov pozdĺž hranice objektu so špecifickými vlastnosťami. Pre pridané povlakové vrstvy môže používateľ priradiť materiál. Ďalšie informácie o používaní povlakovej siete nájdete v dokumente [Appendix XI](/docs/sk/appendices/appendix_xi__near_surface_mesh_functions/).
+Používateľ môže pomocou tejto možnosti pridať vrstvy povlaku a vygenerovať pre ne sieť. Povlaková sieť je tenká vrstva prvkov pozdĺž hranice objektu so špecifickými vlastnosťami. Pre pridané povlakové vrstvy môže používateľ priradiť materiál. Ďalšie informácie o používaní povlakovej siete nájdete v dokumente [Appendix XI]({{ '/docs/sk/appendices/appendix_xi__near_surface_mesh_functions/' | relative_url }}).
 
 ## Kritériá odstraňovania
 
-Kritériá remeshingu (Autoremesh) sú najvhodnejším spôsobom, ako zvládnuť remeshing objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Remeshing Criteria (Kritériá opätovného remeshovania) (pozri obr. 13.3.8.) obsahuje skupinu parametrov, ktoré riadia, kedy a ako často sa bude sieť na objekte s okom regenerovať na základe priradenia určitých spúšťačov. Existujú štyri kľúčové slová, ktoré riadia spustenie postupu remeshingu pre objekt, sú to Hĺbka zásahu ([RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/)),Max. Time Increment ([RMTIME](/docs/sk/keyword_documentation/r/rmtime/)), Max. Step Increment ([RMSTEP](/docs/sk/keyword_documentation/r/rmstep/)) a Max. Prírastok zdvihu ([RMSTRK](/docs/sk/keyword_documentation/r/rmstrk/)). Keď sa splnia kritériá remeshovania podľa niektorého z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (záporný jakobián), objekt sa remeshuje. Ak objekt počas simulácie splní niektoré z kritérií remeshingu, vygeneruje sa nová sieť, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje.
+Kritériá remeshingu (Autoremesh) sú najvhodnejším spôsobom, ako zvládnuť remeshing objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Remeshing Criteria (Kritériá opätovného remeshovania) (pozri obr. 13.3.8.) obsahuje skupinu parametrov, ktoré riadia, kedy a ako často sa bude sieť na objekte s okom regenerovať na základe priradenia určitých spúšťačov. Existujú štyri kľúčové slová, ktoré riadia spustenie postupu remeshingu pre objekt, sú to Hĺbka zásahu ([RMDPTH]({{ '/docs/sk/keyword_documentation/r/rmdpth/' | relative_url }})),Max. Time Increment ([RMTIME]({{ '/docs/sk/keyword_documentation/r/rmtime/' | relative_url }})), Max. Step Increment ([RMSTEP]({{ '/docs/sk/keyword_documentation/r/rmstep/' | relative_url }})) a Max. Prírastok zdvihu ([RMSTRK]({{ '/docs/sk/keyword_documentation/r/rmstrk/' | relative_url }})). Keď sa splnia kritériá remeshovania podľa niektorého z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (záporný jakobián), objekt sa remeshuje. Ak objekt počas simulácie splní niektoré z kritérií remeshingu, vygeneruje sa nová sieť, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_3_3d_brick_mesh_generation/13_3_image007.jpg' | relative_url }})
 
@@ -101,15 +101,15 @@ Okno pokročilých nastavení pre sieť Brick
 
 **Rozlíšenie siete**(**MGGRID**)
 
-Keď je objekt vynesený do 2D siete, na diskretizáciu hustoty siete v celej východiskovej geometrii je potrebná vzorkovacia sieť. Rozlíšenie mriežky ([MGGRID](/docs/sk/keyword_documentation/m/mggrid/)) určuje rozstupy vzorkovacích mriežok, ktoré sa používajú na vzorkovanie hustoty siete. Zvýšenie hodnoty delenia X alebo delenia Y bude mať za následok ostrejšie gradienty medzi oblasťami s rôznou hustotou siete. V prípade zaslepenia, keď sa vyžaduje veľmi vysoký gradient siete v úzkej oblasti, môže byť potrebné tieto hodnoty zvýšiť, aby sa zachytili veľké zmeny gradientu siete na krátkych vzdialenostiach.
+Keď je objekt vynesený do 2D siete, na diskretizáciu hustoty siete v celej východiskovej geometrii je potrebná vzorkovacia sieť. Rozlíšenie mriežky ([MGGRID]({{ '/docs/sk/keyword_documentation/m/mggrid/' | relative_url }})) určuje rozstupy vzorkovacích mriežok, ktoré sa používajú na vzorkovanie hustoty siete. Zvýšenie hodnoty delenia X alebo delenia Y bude mať za následok ostrejšie gradienty medzi oblasťami s rôznou hustotou siete. V prípade zaslepenia, keď sa vyžaduje veľmi vysoký gradient siete v úzkej oblasti, môže byť potrebné tieto hodnoty zvýšiť, aby sa zachytili veľké zmeny gradientu siete na krátkych vzdialenostiach.
 
 **Parametre pridávania uzlov** (**MGERR**)
-Parametre pridávania uzlov ([MGERR](/docs/sk/keyword_documentation/m/mgerr/)) určujú maximálnu povolenú chybu vzdialenosti a uhla medzi hranicou objektu a jeho pridruženou stranou prvku mriežky. Tolerancie vzdialenosti a uhla sa používajú na zachytenie kritickej geometrie hraníc, ktorá by sa inak mohla stratiť pri generovaní siete. Ak sa vyžaduje, aby objekt zachytil veľmi malé prvky, maximálna vzdialenosť sa môže znížiť, alebo ak je potrebné umiestniť uzol na malom uhle, môže sa znížiť aj chyba uhla. Len zriedkakedy bude musieť používateľ tieto hodnoty meniť. V prípade dielov, ktoré sú veľmi malé, je hodnota 0,01 % ohraničenia objektu dobrým východiskovým číslom, ktoré možno použiť pre [MGERR](/docs/sk/keyword_documentation/m/mgerr/) na lepšiu manipuláciu s rozlíšením siete.
+Parametre pridávania uzlov ([MGERR]({{ '/docs/sk/keyword_documentation/m/mgerr/' | relative_url }})) určujú maximálnu povolenú chybu vzdialenosti a uhla medzi hranicou objektu a jeho pridruženou stranou prvku mriežky. Tolerancie vzdialenosti a uhla sa používajú na zachytenie kritickej geometrie hraníc, ktorá by sa inak mohla stratiť pri generovaní siete. Ak sa vyžaduje, aby objekt zachytil veľmi malé prvky, maximálna vzdialenosť sa môže znížiť, alebo ak je potrebné umiestniť uzol na malom uhle, môže sa znížiť aj chyba uhla. Len zriedkakedy bude musieť používateľ tieto hodnoty meniť. V prípade dielov, ktoré sú veľmi malé, je hodnota 0,01 % ohraničenia objektu dobrým východiskovým číslom, ktoré možno použiť pre [MGERR]({{ '/docs/sk/keyword_documentation/m/mgerr/' | relative_url }}) na lepšiu manipuláciu s rozlíšením siete.
 
 Súvisiace témy:
 
-[13\. Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/)
+[13\. Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[13.1. 2D Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+[13.1. 2D Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
-[13.2. 3D Tet Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/)
+[13.2. 3D Tet Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }})

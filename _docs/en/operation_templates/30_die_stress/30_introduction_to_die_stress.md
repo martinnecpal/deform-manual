@@ -33,6 +33,6 @@ We can setup Die stress operation in MO Die stress wizard. Following are the ste
 
 **Related Topics:**
 
-[30.1. 2D Die stress setup](/docs/en/operation_templates/30_die_stress/30_1_2d_die_stress_setup/)
+[30.1. 2D Die stress setup]({{ '/docs/en/operation_templates/30_die_stress/30_1_2d_die_stress_setup/' | relative_url }})
 
-[30.2. 3D Die stress setup](/docs/en/operation_templates/30_die_stress/30_2_3d_die_stress_setup/)
+[30.2. 3D Die stress setup]({{ '/docs/en/operation_templates/30_die_stress/30_2_3d_die_stress_setup/' | relative_url }})

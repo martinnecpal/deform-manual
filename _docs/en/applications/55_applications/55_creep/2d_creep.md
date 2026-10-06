@@ -52,9 +52,9 @@ To run a creep simulation, the following requirements must be fulfilled:
 
   * The workpiece should be made elasto-plastic
 
-  * Creep (CREEP) has to be activated in the **Object Properties![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **[**Deformation**](/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/) tab
+  * Creep (CREEP) has to be activated in the **Object Properties![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **[**Deformation**]({{ '/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }}) tab
 
-  * A creep model with non-trivial data has been defined (any of the given model is sufficient). In the case of [user routines](/docs/en/user_routines/user_routine_mainpg/), the required routine should have the routine compiled and the simulation should run the special FEM engine.
+  * A creep model with non-trivial data has been defined (any of the given model is sufficient). In the case of [user routines]({{ '/docs/en/user_routines/user_routine_mainpg/' | relative_url }}), the required routine should have the routine compiled and the simulation should run the special FEM engine.
 
   * There is either a non-zero stress state on the part (relaxation case) or an applied traction to the body (creep).
 

@@ -5,7 +5,7 @@ title: "Steady State Extrusion Lab1"
 
 # Steady State Extrusion Lab1
 
-In this Lab we are setting up a simple operation of Steady state extrusion by importing a DB of the [ALE Extrusion lab](/docs/en/labs/extrusion_labs/ale_extrusion_lab1/) ([3D_ALE_EX_Lab1](ale_extrusion_lab1.htm#3D_ALE_EX_Lab1)) . We will also use bearing length adjustment in this Lab.
+In this Lab we are setting up a simple operation of Steady state extrusion by importing a DB of the [ALE Extrusion lab]({{ '/docs/en/labs/extrusion_labs/ale_extrusion_lab1/' | relative_url }}) ([3D_ALE_EX_Lab1](ale_extrusion_lab1.htm#3D_ALE_EX_Lab1)) . We will also use bearing length adjustment in this Lab.
 
 The application of this lab will extrude 5 small cylinder parts from a large cylinder billet. The model of the workpiece used in ALE is with symmetry as shown in Fig. SSEXTL1.1. The diameter of D0 is 140 mm. The diameter of D1 is 26 mm. The diameters of D2 and D4 are 27 mm. The diameters of D3 and D5 are 28 mm.
 
@@ -55,7 +55,7 @@ Add 3D Extrusion operation from the Explorer Operations list. Add the operation 
 
 ## Importing ALE Extrusion Database
 
-At this point, we can import the first step from the ALE database (Database generated in [**ALE Extrusion Lab1**](/docs/en/labs/extrusion_labs/ale_extrusion_lab1/) (**3D_ALE_EX_Lab1**) setup). Click **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Import** , select **3D_ALE_EX_Lab1.DB** and choose Step **-1.** Now we just need to change the things that are different between the ALE simulation and the new Steady State analysis.
+At this point, we can import the first step from the ALE database (Database generated in [**ALE Extrusion Lab1**]({{ '/docs/en/labs/extrusion_labs/ale_extrusion_lab1/' | relative_url }}) (**3D_ALE_EX_Lab1**) setup). Click **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Import** , select **3D_ALE_EX_Lab1.DB** and choose Step **-1.** Now we just need to change the things that are different between the ALE simulation and the new Steady State analysis.
 
 ## Simulation Setup
 

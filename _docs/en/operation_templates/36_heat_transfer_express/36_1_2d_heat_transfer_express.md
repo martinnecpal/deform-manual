@@ -92,7 +92,7 @@ There are four heating types or heat transfer operations available in both 2D an
 
   * Dwell on die
 
-Heating workpiece, heat transfer during transferring workpiece form furnace to press, resting workpiece on die (before forming) and workpiece dwell on die after forming operations can be setup easily by using the respective heating type. For more details about these heating types are described in [36\. Introduction to Heat transfer express operation](/docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/), refer Heating Types.
+Heating workpiece, heat transfer during transferring workpiece form furnace to press, resting workpiece on die (before forming) and workpiece dwell on die after forming operations can be setup easily by using the respective heating type. For more details about these heating types are described in [36\. Introduction to Heat transfer express operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/' | relative_url }}), refer Heating Types.
 
 For resting and dwelling operation thermal calculation window will activate to give options to select heat transfer with dies and not to calculate heat transfer with dies. These options will be explained further in respective operations explanations.
 
@@ -137,8 +137,8 @@ Workpiece window
 **Object Type** : The object type (OBJTYP) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are available in Forming operation, for its details refer [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type)
 
   
-**Plastic** : Plastic objects are modelled as rigid-plastic or rigid-viscoplastic material depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)). The material deforms plastically beyond the limiting strain rate. The plastic material behaviour of the object is specified with a material flow stress function or flow stress data ([FSTRES](/docs/en/keyword_documentation/f/fstres/)). In heat transfer express workpiece is automatically assigned to Plastic object type.  
-**Rigid** : Rigid objects are modelled as non-deformable materials. In the deformation analysis, the object is represented by the geometric profile ([DIEGEO](/docs/en/keyword_documentation/d/diegeo/)). Deformation solution data available for rigid objects include object stroke, load, and velocity. The mesh for the rigid object is used only for thermal, transformation, and diffusion calculations. In heat transfer express dies or tools are automatically assigned to Rigid as they are non-deformable objects.
+**Plastic** : Plastic objects are modelled as rigid-plastic or rigid-viscoplastic material depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). The material deforms plastically beyond the limiting strain rate. The plastic material behaviour of the object is specified with a material flow stress function or flow stress data ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). In heat transfer express workpiece is automatically assigned to Plastic object type.  
+**Rigid** : Rigid objects are modelled as non-deformable materials. In the deformation analysis, the object is represented by the geometric profile ([DIEGEO]({{ '/docs/en/keyword_documentation/d/diegeo/' | relative_url }})). Deformation solution data available for rigid objects include object stroke, load, and velocity. The mesh for the rigid object is used only for thermal, transformation, and diffusion calculations. In heat transfer express dies or tools are automatically assigned to Rigid as they are non-deformable objects.
 
 **Note:**
 
@@ -156,15 +156,15 @@ The user can initialize temperature, strain, velocity, damage and displacement t
 
 Advanced object settings
 
-More variables can be initialized in Forming operation, for detail refer [35\. 2D Heat Transfer](/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/) operation [Initialize](../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize).
+More variables can be initialized in Forming operation, for detail refer [35\. 2D Heat Transfer]({{ '/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}) operation [Initialize](../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize).
 
-The average strain rate ([AVGSTR](/docs/en/keyword_documentation/a/avgstr/)) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation.
+The average strain rate ([AVGSTR]({{ '/docs/en/keyword_documentation/a/avgstr/' | relative_url }})) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation.
 
-The limiting strain rate ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material.
+The limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material.
 
 ![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}) : Using this user can rest back the initialized state variables value.
 
-For more Deformation object properties options available in Forming operation refer [16.1. Deformation Properties.](/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/)
+For more Deformation object properties options available in Forming operation refer [16.1. Deformation Properties.]({{ '/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }})
 
 ### **Object geometry definition**
 
@@ -190,7 +190,7 @@ Geometry primitive window for Plane strain geometry type
 
 **Check**![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})
 
-Once the geometry of the object is created, ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button. Check and correct Geometry window appears as shown in below Fig. 36.1.8. The Geometry gets corrected, if they are any errors, when we click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) . For more information please refer [12.1. 2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) section [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
+Once the geometry of the object is created, ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button. Check and correct Geometry window appears as shown in below Fig. 36.1.8. The Geometry gets corrected, if they are any errors, when we click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) . For more information please refer [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) section [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image006.jpg' | relative_url }})
 
@@ -220,7 +220,7 @@ The Geometry editing option is used to create geometry for an object or edit the
 
 Edit Geometry Window
 
-Geometry can be created by using the create loop tool or by entering the geometry coordinates in Geometry editor table at right side bottom of the window as shown in Fig. 36.1.10. either in XYR or Line-Arc mode. For more details on 2D geometry editor refer the chapter [12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/).
+Geometry can be created by using the create loop tool or by entering the geometry coordinates in Geometry editor table at right side bottom of the window as shown in Fig. 36.1.10. either in XYR or Line-Arc mode. For more details on 2D geometry editor refer the chapter [12.2. 2D Geometry Data Editing]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }}).
 
 **Other Geometry options:**
 
@@ -252,7 +252,7 @@ User defined mode mesh settings
 
 **Number of elements (MGNELM)**
 
-The number of mesh elements represents the approximate number of elements that will be generated by the system. The Automatic Mesh Generator (AMG) takes the value for [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) and generates a mesh that will contain approximately the same number of elements.
+The number of mesh elements represents the approximate number of elements that will be generated by the system. The Automatic Mesh Generator (AMG) takes the value for [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}) and generates a mesh that will contain approximately the same number of elements.
 
 The error between the number of specified elements and the number of generated elements is typically about ten per-cent. When the mesh is generated, the specified total number of elements is used in conjunction with the "Point" and "Parameter" controls to determine the mesh density.
 
@@ -264,15 +264,15 @@ In addition to the Number of elements user can select Thickness elements and Siz
 
   * **Number of thickness elements (MGTELM)**
 
-The max thickness ratio is one of several ways to control the mesh density during automatic mesh generation (AMG). The number of elements in thickness direction represents the approximate number of elements that will be generated by the system across the thickness direction of any region of the part. The Automatic Mesh Generator (AMG) takes the value for [MGTELM](/docs/en/keyword_documentation/m/mgtelm/) and generates a mesh that will have that number of elements across the thinnest portion. For instance, if [MGTELM](/docs/en/keyword_documentation/m/mgtelm/) is set to 4, the AMG will try to have 4 elements across the thickness of the geometry.
+The max thickness ratio is one of several ways to control the mesh density during automatic mesh generation (AMG). The number of elements in thickness direction represents the approximate number of elements that will be generated by the system across the thickness direction of any region of the part. The Automatic Mesh Generator (AMG) takes the value for [MGTELM]({{ '/docs/en/keyword_documentation/m/mgtelm/' | relative_url }}) and generates a mesh that will have that number of elements across the thinnest portion. For instance, if [MGTELM]({{ '/docs/en/keyword_documentation/m/mgtelm/' | relative_url }}) is set to 4, the AMG will try to have 4 elements across the thickness of the geometry.
 
-The thickness direction of an object is perpendicular to a branched centre line axis for each region of the part. The total number of elements to be generated in a mesh is controlled by the value of number of elements in keyword [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) . If the value of thickness elements results in a mesh that contains more than the value specified in [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) elements, the value of [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) would be scaled down so that the mesh contains approximately [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) elements. If the value of [MGTELM](/docs/en/keyword_documentation/m/mgtelm/) results in a mesh that contains fewer than [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) elements, the remaining elements will be distributed to other user specified mesh density controls (curvature, strain, strain rate, and temperature).
+The thickness direction of an object is perpendicular to a branched centre line axis for each region of the part. The total number of elements to be generated in a mesh is controlled by the value of number of elements in keyword [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}) . If the value of thickness elements results in a mesh that contains more than the value specified in [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}) elements, the value of [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}) would be scaled down so that the mesh contains approximately [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}) elements. If the value of [MGTELM]({{ '/docs/en/keyword_documentation/m/mgtelm/' | relative_url }}) results in a mesh that contains fewer than [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}) elements, the remaining elements will be distributed to other user specified mesh density controls (curvature, strain, strain rate, and temperature).
 
   * **Element size ratio (MGSIZR)**
 
 The maximum size ratio between elements is one of several ways to control the mesh density during automatic mesh generation (AMG) by specifying the ratio of node densities.
 
-For a value of 3 for [MGSIZR](/docs/en/keyword_documentation/m/mgsizr/), the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then Size Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.
+For a value of 3 for [MGSIZR]({{ '/docs/en/keyword_documentation/m/mgsizr/' | relative_url }}), the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then Size Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.
 
 **Weighing Factors**
 
@@ -327,7 +327,7 @@ When user clicks on show mesh it shows the generated mesh in display window. Sho
 **Default Setting** ![]({{ '/assets/icons/pre_icons/mo_default_settings_button.jpg' | relative_url }})  
 When user clicks on Default settings tab all the settings will be changed to default values, by default Mesh window will be in greyed out mode as no mesh windows are defined. If user wants to activate mesh window, user has to change the weighting factor for mesh density by increasing the sliding bar value to 1.
 
-More mesh options are available in forming operations and Pre-Processor refer [13.1. 2D Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+More mesh options are available in forming operations and Pre-Processor refer [13.1. 2D Mesh Generation.]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
 ### Material Definition
 
@@ -346,7 +346,7 @@ Once after adding material click on ![]({{ '/assets/icons/pre_icons/mo_material_
 
 Material editing window
 
-The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. In Forming operation user can get access to all material properties for more information refer [10\. Material Data.](/docs/en/pre_processor/10_material_data/10_material_data/)
+The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. In Forming operation user can get access to all material properties for more information refer [10\. Material Data.]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
 ### Boundary Condition Definition
 
@@ -358,9 +358,9 @@ By default heat exchange with environment will be assigned to all surfaces excep
 
 Symmetry boundary condition assigned for workpiece
 
-Defined BCC can be initialized first by selecting the BCC type in tree and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}) button. Defined particular BCC can also be deleted by selecting on defined branch from the BCC tree and clicking on ![]({{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}) button. Environment temperature can be varied from the Heat condition window. Environment windows are not allowed for heat exchange with environment BCC in heat transfer operation but available in forming operation, for more details refer Thermal under [14.3 Thermal Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/).
+Defined BCC can be initialized first by selecting the BCC type in tree and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}) button. Defined particular BCC can also be deleted by selecting on defined branch from the BCC tree and clicking on ![]({{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}) button. Environment temperature can be varied from the Heat condition window. Environment windows are not allowed for heat exchange with environment BCC in heat transfer operation but available in forming operation, for more details refer Thermal under [14.3 Thermal Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}).
 
-More thermal BCC options and other different BCC categories are available in Pre-Processor and Forming Operation such as [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/),[Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) and [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). For more information about these BCC's please refer [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions)
+More thermal BCC options and other different BCC categories are available in Pre-Processor and Forming Operation such as [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}),[Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions)
 
 ### Heat Condition Definition
 
@@ -396,14 +396,14 @@ In User type user will get the access to change the step definitions as required
 
 User step definition controls
 
-Auto type is temperature based step controls, the ([DTPMAX)](/docs/en/keyword_documentation/d/dtpmax/) settings control the time stepping. The purpose for these controls is to specify the time stepping of a simulation that is driven by thermal-induced deformation. User has to specify the Initial time step (Time per step), Max. Temperature change per step, Min. time per step and Max. time per step as shown in Fig. 36.1.23.
+Auto type is temperature based step controls, the ([DTPMAX)]({{ '/docs/en/keyword_documentation/d/dtpmax/' | relative_url }}) settings control the time stepping. The purpose for these controls is to specify the time stepping of a simulation that is driven by thermal-induced deformation. User has to specify the Initial time step (Time per step), Max. Temperature change per step, Min. time per step and Max. time per step as shown in Fig. 36.1.23.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image016.jpg' | relative_url }})
 
 Advanced step definition controls
 
-**Temperature change per step**(([DTPMAX](/docs/en/keyword_documentation/d/dtpmax/))  
-The maximum temperature change increment limits the amount that the temperature of any node can change during one time step. If a non-zero value is assigned, a new sub step will be initiated when the temperature change at any node reaches the value of ([DTPMAX](/docs/en/keyword_documentation/d/dtpmax/). The maximum/minimum time step are the largest and smallest time step allowable with the temperature based sub-stepping.
+**Temperature change per step**(([DTPMAX]({{ '/docs/en/keyword_documentation/d/dtpmax/' | relative_url }}))  
+The maximum temperature change increment limits the amount that the temperature of any node can change during one time step. If a non-zero value is assigned, a new sub step will be initiated when the temperature change at any node reaches the value of ([DTPMAX]({{ '/docs/en/keyword_documentation/d/dtpmax/' | relative_url }}). The maximum/minimum time step are the largest and smallest time step allowable with the temperature based sub-stepping.
 
 ### Generate Database
 
@@ -484,7 +484,7 @@ For basic object definition, geometry, mesh, material and boundary condition det
 
 ### Positioning
 
-User has to select position objects button to position the objects as per the setup requirements, if objects are not read from DB as shown in Fig. 36.1.31. For more details about positioning options refer [19.Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/). If objects are read from DB then those objects positioning must be scheduled.
+User has to select position objects button to position the objects as per the setup requirements, if objects are not read from DB as shown in Fig. 36.1.31. For more details about positioning options refer [19.Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}). If objects are read from DB then those objects positioning must be scheduled.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image023.jpg' | relative_url }})
 
@@ -535,7 +535,7 @@ Next Database has to be generated in case interactive setup or if the transfer o
 
 ## Continue Defining the Forming Operations
 
-After the Heat transfer express operations user can add the forming operations (See Fig. 36.1.36.) and continue with the non-isothermal deformation setup. Heat transfer operations can also be added between the forming operations, especially after forming operation customized Heat Dwelling heating type available for dwelling simulation explained in the next section 36.1.7. Defining dwell on die operation. For more information about forming operations setup refer [33.1. 2D Forming Setup](/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/) or [34.1. 2D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/).
+After the Heat transfer express operations user can add the forming operations (See Fig. 36.1.36.) and continue with the non-isothermal deformation setup. Heat transfer operations can also be added between the forming operations, especially after forming operation customized Heat Dwelling heating type available for dwelling simulation explained in the next section 36.1.7. Defining dwell on die operation. For more information about forming operations setup refer [33.1. 2D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }}) or [34.1. 2D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image028.jpg' | relative_url }})
 
@@ -567,8 +567,8 @@ Next Database has to be generated in case interactive setup or if the transfer o
 
 **Related Topics:**
 
-[33.1. 2D Forming Setup](/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/)
+[33.1. 2D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }})
 
-[34.1. 2D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/).
+[34.1. 2D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}).
 
-[36.2.3D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/)
+[36.2.3D Heat Transfer Express Operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/' | relative_url }})

@@ -180,7 +180,7 @@ Geometry primitive page
 
   * #### Mesh 2D
 
-We can generate the 2D Cross Section mesh by defining the number of elements in guided mode. Advanced options to control 2D mesh generation can be accessed using expert mode ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) toggle button from tool bar. For more information please refer to [13.1. 2D Mesh Genearation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/).
+We can generate the 2D Cross Section mesh by defining the number of elements in guided mode. Advanced options to control 2D mesh generation can be accessed using expert mode ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) toggle button from tool bar. For more information please refer to [13.1. 2D Mesh Genearation]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0010.jpg' | relative_url }})
 
@@ -606,7 +606,7 @@ Roll Geometry page in EXPERT Mode (Operation level)
 
 #### Roll Mesh Page
 
-In operation level we can generate the rolls mesh. When we visit the roll mesh page by default the Brick mesh type is select as shown in the Fig. 43.1.54. For more information please go through the [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) and [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/). Lagrangian Rolling type can be set up using both Brick and Tetrahedral mesh while ALE rolling type can be set only using Brick mesh.
+In operation level we can generate the rolls mesh. When we visit the roll mesh page by default the Brick mesh type is select as shown in the Fig. 43.1.54. For more information please go through the [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}) and [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}). Lagrangian Rolling type can be set up using both Brick and Tetrahedral mesh while ALE rolling type can be set only using Brick mesh.
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0051.jpg' | relative_url }})
 
@@ -616,7 +616,7 @@ Roll Mesh page (Operation level)
 
 The Roll Movement can be defined in both Guided Mode and Expert Mode. Using guided mode user can define Roll movement as Angular velocity or Torque. The movement can be constant, function of time and function of angle as shown in Fig. 43.1.55.  
 A roll can be a spring loaded, in such case user can turn on Spring loaded check box and define Stiffness (can be constant or Function of displacement), Pre-load, Current displacement and Maximum Displacement as shown in Fig. 43.1.56.  
-If user wants to define any advanced movement controls, then it can be done using Expert mode settings as shown in Fig. 43.1.57. for more details on these settings please refer [15\. Movement Controls Settings](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/). 
+If user wants to define any advanced movement controls, then it can be done using Expert mode settings as shown in Fig. 43.1.57. for more details on these settings please refer [15\. Movement Controls Settings]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0052.jpg' | relative_url }})
 
@@ -666,7 +666,7 @@ Workpiece object page
 
 #### Workpiece Mesh 
 
-The mesh settings of workpiece are similar to that of mesh settings in 3D setup page of Workpiece mesh generation at Rolling Group level, for details on the mesh settings refer 3D setup page. For Lagrangian setup if we import the Workpiece object or geometry, then we will get the general mesh page to generate the 3D workpiece mesh as shown in Fig. 43.1.61. For more information on this Mesh page, please go through the [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) and [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/).
+The mesh settings of workpiece are similar to that of mesh settings in 3D setup page of Workpiece mesh generation at Rolling Group level, for details on the mesh settings refer 3D setup page. For Lagrangian setup if we import the Workpiece object or geometry, then we will get the general mesh page to generate the 3D workpiece mesh as shown in Fig. 43.1.61. For more information on this Mesh page, please go through the [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}) and [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0077.jpg' | relative_url }})
 
@@ -758,7 +758,7 @@ Workpiece movement page for pusher BCC type
 #### Workpiece Initialize 
 
 In Initialize window, few state variables that are commonly used such as temperature, strain, stress, damage, velocity, displacement, density and microstructure grain size and particle size are made available for initialization. In multiple pass rolling operation if user wants to initialize the temperature, strain or grain size then user can use this initialization page.  
-User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 43.1.71. shows various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1. Node Data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 43.1.71. shows various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1. Node Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) and [17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0066.jpg' | relative_url }})
 
@@ -774,7 +774,7 @@ Built-in Flownet page
 
 ### Positioning 
 
-When we click on Auto position ![]({{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }}) button in 3D setup page/ Automatic Position ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) button in positioning page, all rolls, workpiece and pusher objects are positioned automatically. If user wants to modify any of these objects position, then user can use Position objects button in Positioning page. Various positioning options are available to position the objects as shown in Fig. 43.1.73., for more information on these options please refer [19\. Object positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+When we click on Auto position ![]({{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }}) button in 3D setup page/ Automatic Position ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) button in positioning page, all rolls, workpiece and pusher objects are positioned automatically. If user wants to modify any of these objects position, then user can use Position objects button in Positioning page. Various positioning options are available to position the objects as shown in Fig. 43.1.73., for more information on these options please refer [19\. Object positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0068.jpg' | relative_url }})
 
@@ -796,7 +796,7 @@ The user can define the contact between the Workpiece and other roll objects by 
 
 **System:** By selecting this radio button, system assigns default inter-object relationships. Also, user can add the lubricants if necessary, by selecting Add New from pull down menu and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button_2.jpg' | relative_url }}) button or user can load the required lubricants from the library for the simulation.
 
-**User:** By default, user radio button will be selected for shape rolling operation. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button as shown in Fig. 43.1.75. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button. User can use ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to assign same values to all relations. User can click on to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation. User can turn on check box next to contact relation to define sticking contact. For more information please refer, [20.Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+**User:** By default, user radio button will be selected for shape rolling operation. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button as shown in Fig. 43.1.75. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button. User can use ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to assign same values to all relations. User can click on to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation. User can turn on check box next to contact relation to define sticking contact. For more information please refer, [20.Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0070.jpg' | relative_url }})
 
@@ -804,7 +804,7 @@ Contact Page
 
 ### Simulation Controls
 
-The simulation controls settings at Pass level are similar to that of Rolling Group level, refer Simulation control in Rolling group. Simulation controls defined at Rolling Group level are applied to pass level automatically when ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}) button is clicked, user can modify these settings for each pass. In each pass level if user want to use the advanced simulation controls select the expert mode as shown in Fig. 43.1.76. For advanced simulation controls refer to [9\. Simulation controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+The simulation controls settings at Pass level are similar to that of Rolling Group level, refer Simulation control in Rolling group. Simulation controls defined at Rolling Group level are applied to pass level automatically when ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}) button is clicked, user can modify these settings for each pass. In each pass level if user want to use the advanced simulation controls select the expert mode as shown in Fig. 43.1.76. For advanced simulation controls refer to [9\. Simulation controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0071.jpg' | relative_url }})
 
@@ -816,4 +816,4 @@ User can generate DB at pass level if it is a First pass or if previous passes s
 
 **Related Topics:**
 
-[43\. Introduction to Shape Rolling operation](/docs/en/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/)
+[43\. Introduction to Shape Rolling operation]({{ '/docs/en/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/' | relative_url }})

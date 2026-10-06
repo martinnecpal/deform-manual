@@ -29,4 +29,4 @@ This is special action keyword which sets dimension of the imported keyword. It 
   
 RELATED TOPICS  
 ---  
-[2D to 3D model conversion](/docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/), M23.EXE Keywords: [GEO23](/docs/en/keyword_documentation/g/geo23/), [CNVT3D](/docs/en/keyword_documentation/c/cnvt3d/)
+[2D to 3D model conversion]({{ '/docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/' | relative_url }}), M23.EXE Keywords: [GEO23]({{ '/docs/en/keyword_documentation/g/geo23/' | relative_url }}), [CNVT3D]({{ '/docs/en/keyword_documentation/c/cnvt3d/' | relative_url }})

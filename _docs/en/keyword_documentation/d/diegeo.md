@@ -83,4 +83,4 @@ DIEGEO information can be described by points (Gtype = 1) or entities (lines and
   
 RELATED TOPICS  
 ---  
-[Geometry](/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/) Keyword: [GEOTYP(2D)](/docs/en/keyword_documentation/g/geotyp/)
+[Geometry]({{ '/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }}) Keyword: [GEOTYP(2D)]({{ '/docs/en/keyword_documentation/g/geotyp/' | relative_url }})

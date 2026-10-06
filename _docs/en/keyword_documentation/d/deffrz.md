@@ -31,4 +31,4 @@ In Die Stress Analysis, we need to get the die force BBC, interpolated from work
   
 RELATED TOPICS  
 ---  
-Related keywords: [DEFINT](/docs/en/keyword_documentation/d/defint/)
+Related keywords: [DEFINT]({{ '/docs/en/keyword_documentation/d/defint/' | relative_url }})

@@ -107,18 +107,18 @@ V rezaných rovinách sa zobrazí zle štruktúrovaná sieť. Je to preto, že b
 
   4. Prejdite na mesh a vytvorte mesh objektu (nevykonávajte manuálne remeshovanie)
 
-  5. Prejdite na [Data Interpolation](/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/), aby ste obnovili stavové premenné.
+  5. Prejdite na [Data Interpolation]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/' | relative_url }}), aby ste obnovili stavové premenné.
 
 Potom by ste mali úspešne aktualizovať svoju časť s odstráneným požadovaným zväzkom.
 
 **Súvisiace témy:**
 
-[18\. Object Manipulation Tools](/docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/)
+[18\. Object Manipulation Tools]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/' | relative_url }})
 
-[18.2. Slicing](/docs/sk/pre_processor/18_object_manipulation_tools/18_2_slicing/)
+[18.2. Slicing]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_2_slicing/' | relative_url }})
 
-[18.3. Mirror Merge](/docs/sk/pre_processor/18_object_manipulation_tools/18_3_mirror_merge/)
+[18.3. Mirror Merge]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_3_mirror_merge/' | relative_url }})
 
-[17.3. Data Interpolation Window](/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/)
+[17.3. Data Interpolation Window]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/' | relative_url }})
 
-[13.2. 3D Tet Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/)
+[13.2. 3D Tet Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }})

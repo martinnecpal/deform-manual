@@ -91,10 +91,10 @@ Simulačný mechanizmus na vykonávanie numerických výpočtov potrebných na a
 
 Pod simulátorom máme,
 **Prevádzka** : Táto možnosť sa používa na okamžité spustenie simulácie.   
-**Možnosti spustenia** : Táto možnosť sa používa na definovanie simulačného prostredia, ako je MPICH, simulačný server a jeho nastavenia, ukladanie súborov správ, počiatočný beh alebo pokračovanie predchádzajúceho behu atď. Ďalšie informácie nájdete v časti [simulator](/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/)
+**Možnosti spustenia** : Táto možnosť sa používa na definovanie simulačného prostredia, ako je MPICH, simulačný server a jeho nastavenia, ukladanie súborov správ, počiatočný beh alebo pokračovanie predchádzajúceho behu atď. Ďalšie informácie nájdete v časti [simulator]({{ '/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/' | relative_url }})
 **Pridať do fronty** : Používateľ môže vybrať problém a kliknutím na tento štítok zaradiť problém do fronty na vybranom simulačnom serveri.
 Pokračujte: Táto možnosť sa používa na pokračovanie v probléme, ktorý bol predčasne zastavený.  
-**Monitor procesov** : Monitor procesov sa používa na zistenie aktuálneho stavu rôznych problémov, ktoré sa majú predložiť na simuláciu v tomto systéme alebo týmto systémom, Viac informácií nájdete v časti [simulator](/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/).  
+**Monitor procesov** : Monitor procesov sa používa na zistenie aktuálneho stavu rôznych problémov, ktoré sa majú predložiť na simuláciu v tomto systéme alebo týmto systémom, Viac informácií nájdete v časti [simulator]({{ '/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/' | relative_url }}).  
 **Simulačná grafika** : Túto možnosť možno použiť na spustenie nezávislého prehliadača "DEFORM Viewer" na monitorovanie aktuálnych problémov, ktoré sa simulujú.
 
 ###
@@ -323,7 +323,7 @@ Možnosť ponuky Simulátor
 **Monitor procesov**![]({{ '/assets/icons/simulator_icons/mo_process_monitor_icon.jpg' | relative_url }}) : Monitor procesov zobrazuje stav všetkých simulácií spustených na CPU.  
 **Simulačná grafika** ![]({{ '/assets/icons/simulator_icons/mo_simulation_graphics_icon.jpg' | relative_url }}): Táto možnosť sa používa na monitorovanie problému simulácie.
 
-Ďalšie informácie o týchto možnostiach nájdete v časti [Chapter 23. DEFORM Simulator](/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/).
+Ďalšie informácie o týchto možnostiach nájdete v časti [Chapter 23. DEFORM Simulator]({{ '/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/' | relative_url }}).
 
 ###
 Ponuka postprocesora
@@ -335,8 +335,8 @@ Na nasledujúcom obrázku 4.1.23. sú zobrazené možnosti ponuky Post Processor
 Možnosť ponuky Post Processor
 
   
-**2D/3D post:** Táto možnosť sa používa na otvorenie Next gen Post, viac informácií nájdete v [Post-Poocessor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/).  
-**DOE Post** : Táto možnosť sa používa na otvorenie DOE Post, viac informácií nájdete v [DOE Post processor](/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/).  
+**2D/3D post:** Táto možnosť sa používa na otvorenie Next gen Post, viac informácií nájdete v [Post-Poocessor]({{ '/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }}).  
+**DOE Post** : Táto možnosť sa používa na otvorenie DOE Post, viac informácií nájdete v [DOE Post processor]({{ '/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/' | relative_url }}).  
 **DEFORM Viewer** : Táto možnosť sa používa na otvorenie prehliadača deformácií, viac informácií nájdete v časti DEFORM Viewer.  
 **Súbor materiálov:** Táto možnosť sa používa na otvorenie súboru materiálov, viac informácií nájdete v časti Súbor materiálov.
 
@@ -479,7 +479,7 @@ Možnosti Output Controls v okne Nastavenia prostredia
 
   * E-mail
 
-V okne Nastavenia prostredia sa zobrazí možnosť E-mail, ako je znázornené na obr. 4.1.38. Táto funkcia umožňuje programu DEFORM odoslať e-mailové oznámenie na začiatku simulácie a s poslednými 25 riadkami zo súboru správ a súboru protokolu na konci simulácie. E-maily sa odosielajú prostredníctvom protokolu SMTP s použitím protokolu StartTLS (alebo bez zabezpečenia). Ďalšie informácie nájdete v časti [23.7. Email notification of the simulation](/docs/sk/simulator/23_deform_simulator/23_7_email_the_results/).
+V okne Nastavenia prostredia sa zobrazí možnosť E-mail, ako je znázornené na obr. 4.1.38. Táto funkcia umožňuje programu DEFORM odoslať e-mailové oznámenie na začiatku simulácie a s poslednými 25 riadkami zo súboru správ a súboru protokolu na konci simulácie. E-maily sa odosielajú prostredníctvom protokolu SMTP s použitím protokolu StartTLS (alebo bez zabezpečenia). Ďalšie informácie nájdete v časti [23.7. Email notification of the simulation]({{ '/docs/sk/simulator/23_deform_simulator/23_7_email_the_results/' | relative_url }}).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image031.jpg' | relative_url }})
 

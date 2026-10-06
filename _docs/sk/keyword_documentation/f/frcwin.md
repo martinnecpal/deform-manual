@@ -172,4 +172,4 @@ The desired window is specified using 1 to Npoints of (x,y) data points in a cou
   
 RELATED TOPICS  
 ---  
-[Inter-Object data](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/): Friction Window Keywords: [FRCFAC](/docs/sk/keyword_documentation/f/frcfac/)
+[Inter-Object data]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}): Friction Window Keywords: [FRCFAC]({{ '/docs/sk/keyword_documentation/f/frcfac/' | relative_url }})

@@ -31,4 +31,4 @@ Phase transformations in alloys often occur with specific orientation relationsh
   
 RELATED TOPICS  
 ---  
-Related keywords: [TTTD](/docs/sk/keyword_documentation/t/tttd/)
+Related keywords: [TTTD]({{ '/docs/sk/keyword_documentation/t/tttd/' | relative_url }})

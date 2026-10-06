@@ -41,4 +41,4 @@ Pressure is defined as force per unit area. The pressure is assumed to be linear
   
 RELATED TOPICS  
 ---  
-[Boundary Constraints](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/): Deformation- Pressure, [Object Nodal Data](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/): Deformation- Pressure Keywords: [BCCDEF (2D)](/docs/en/keyword_documentation/b/bccdef/), [BCCDEF (3D)](/docs/en/keyword_documentation/b/bccdef_3d/), [BCCFNC](/docs/en/keyword_documentation/b/bccfnc/)
+[Boundary Constraints]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}): Deformation- Pressure, [Object Nodal Data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}): Deformation- Pressure Keywords: [BCCDEF (2D)]({{ '/docs/en/keyword_documentation/b/bccdef/' | relative_url }}), [BCCDEF (3D)]({{ '/docs/en/keyword_documentation/b/bccdef_3d/' | relative_url }}), [BCCFNC]({{ '/docs/en/keyword_documentation/b/bccfnc/' | relative_url }})

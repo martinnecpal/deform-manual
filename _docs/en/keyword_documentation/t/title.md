@@ -26,4 +26,4 @@ TITLE provides a description of the simulation being performed.
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Main Controls](/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/) Keywords: [SIMNAM](/docs/en/keyword_documentation/s/simnam/), [CURSIM](/docs/en/keyword_documentation/c/cursim/)
+Simulation Controls: [Main Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}) Keywords: [SIMNAM]({{ '/docs/en/keyword_documentation/s/simnam/' | relative_url }}), [CURSIM]({{ '/docs/en/keyword_documentation/c/cursim/' | relative_url }})

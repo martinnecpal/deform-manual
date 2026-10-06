@@ -29,4 +29,4 @@ ITRMXT specifies the maximum number of iterations which can be performed during 
   
 RELATED TOPICS  
 ---  
-[Iteration procedures](/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/) Keywords: ,[CVGERR (2D)](/docs/sk/keyword_documentation/c/cvgerr/), [CVGERR (3D)](/docs/sk/keyword_documentation/c/cvgerr_3d/), [ITRMTH](/docs/sk/keyword_documentation/i/itrmth/), [ITRMXT](), [SOLMTT (2D)](/docs/sk/keyword_documentation/s/solmtt/), [SOLMTT (3D)](/docs/sk/keyword_documentation/s/solmtt_3d/)
+[Iteration procedures]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }}) Keywords: ,[CVGERR (2D)]({{ '/docs/sk/keyword_documentation/c/cvgerr/' | relative_url }}), [CVGERR (3D)]({{ '/docs/sk/keyword_documentation/c/cvgerr_3d/' | relative_url }}), [ITRMTH]({{ '/docs/sk/keyword_documentation/i/itrmth/' | relative_url }}), [ITRMXT](), [SOLMTT (2D)]({{ '/docs/sk/keyword_documentation/s/solmtt/' | relative_url }}), [SOLMTT (3D)]({{ '/docs/sk/keyword_documentation/s/solmtt_3d/' | relative_url }})

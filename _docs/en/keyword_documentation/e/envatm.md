@@ -45,4 +45,4 @@ Applicable Simulation Modules: Microstructure Applicable Simulation Modes: Diffu
   
 RELATED TOPICS  
 ---  
-[Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/): [Process condition](/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/) \- Diffusion Keywords: [ACVCOF](/docs/en/keyword_documentation/a/acvcof/), [ENVTMP](/docs/en/keyword_documentation/e/envtmp/), [CNVCOF](/docs/en/keyword_documentation/c/cnvcof/)
+[Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}): [Process condition]({{ '/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }}) \- Diffusion Keywords: [ACVCOF]({{ '/docs/en/keyword_documentation/a/acvcof/' | relative_url }}), [ENVTMP]({{ '/docs/en/keyword_documentation/e/envtmp/' | relative_url }}), [CNVCOF]({{ '/docs/en/keyword_documentation/c/cnvcof/' | relative_url }})

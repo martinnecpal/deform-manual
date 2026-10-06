@@ -29,4 +29,4 @@ Steady-State ALE Rolling type setup
 
 **Related Topics:**
 
-[43.1. Shape Rolling Manual](/docs/en/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/)
+[43.1. Shape Rolling Manual]({{ '/docs/en/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/' | relative_url }})

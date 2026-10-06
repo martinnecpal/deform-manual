@@ -30,4 +30,4 @@ The user routine FORTRAN file is called DEF_USR.FOR and is located in the DEFORM
   
 RELATED TOPICS  
 ---  
-[User Sub Routines](/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/) Keywords: [USRDEF](/docs/en/keyword_documentation/u/usrdef/)
+[User Sub Routines]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/' | relative_url }}) Keywords: [USRDEF]({{ '/docs/en/keyword_documentation/u/usrdef/' | relative_url }})

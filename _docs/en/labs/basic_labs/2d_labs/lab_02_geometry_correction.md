@@ -115,4 +115,4 @@ By selecting the File menu Export option,save a keyword file for the problem as 
 
 **Related Topics:**
 
-[12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+[12.2. 2D Geometry Data Editing]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }})

@@ -46,4 +46,4 @@ The rotational velocity of an object can be specified by a torque rate or an ang
   
 RELATED TOPICS  
 ---  
-Keywords: [MOVCTL](../m/movctl_\(2d\).htm), [CNTRAX](/docs/sk/keyword_documentation/c/cntrax/)
+Keywords: [MOVCTL](../m/movctl_\(2d\).htm), [CNTRAX]({{ '/docs/sk/keyword_documentation/c/cntrax/' | relative_url }})

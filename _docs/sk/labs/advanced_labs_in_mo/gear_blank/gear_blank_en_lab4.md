@@ -121,6 +121,6 @@ Click the Summary ![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relati
 
 Temperature summary plot
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) mode button to switch to Pre mode to continue with the sequential forming operation in [Lab 5.](/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab5/)
+Click on ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) mode button to switch to Pre mode to continue with the sequential forming operation in [Lab 5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab5/' | relative_url }})
 
-Click on [Lab 5. 3D Non-isothermal Forming operation](/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab5/) to setup sequential forming operation.
+Click on [Lab 5. 3D Non-isothermal Forming operation]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab5/' | relative_url }}) to setup sequential forming operation.

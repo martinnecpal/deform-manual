@@ -40,4 +40,4 @@ See also DIEGEO
   
 RELATED TOPICS  
 ---  
-[DIEGEO (2D)](/docs/en/keyword_documentation/d/diegeo/), [DIEGEO (3D)](/docs/en/keyword_documentation/d/diegeo_3d/)
+[DIEGEO (2D)]({{ '/docs/en/keyword_documentation/d/diegeo/' | relative_url }}), [DIEGEO (3D)]({{ '/docs/en/keyword_documentation/d/diegeo_3d/' | relative_url }})

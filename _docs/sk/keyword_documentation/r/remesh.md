@@ -32,4 +32,4 @@ This is action keyword that executes remeshing procedure.
   
 RELATED TOPICS  
 ---  
-Text-based PRE, Shape optimization, [Multiple operations](/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/) Keywords: [BRDEXT](/docs/sk/keyword_documentation/b/brdext/), [DEFINT](/docs/sk/keyword_documentation/d/defint/), [DEFAMG](/docs/sk/keyword_documentation/d/defamg/)
+Text-based PRE, Shape optimization, [Multiple operations]({{ '/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }}) Keywords: [BRDEXT]({{ '/docs/sk/keyword_documentation/b/brdext/' | relative_url }}), [DEFINT]({{ '/docs/sk/keyword_documentation/d/defint/' | relative_url }}), [DEFAMG]({{ '/docs/sk/keyword_documentation/d/defamg/' | relative_url }})

@@ -29,4 +29,4 @@ DEMAX is one of several parameters used to control the size of time steps. Other
   
 RELATED TOPICS  
 ---  
-Step parameters Keywords: [DSMAX](/docs/sk/keyword_documentation/d/dsmax/), [DTMAX](/docs/sk/keyword_documentation/d/dtmax/), [DVMAX](/docs/sk/keyword_documentation/d/dvmax/), [SLDERR](/docs/sk/keyword_documentation/s/slderr/), [STPDEF](/docs/sk/keyword_documentation/s/stpdef/)
+Step parameters Keywords: [DSMAX]({{ '/docs/sk/keyword_documentation/d/dsmax/' | relative_url }}), [DTMAX]({{ '/docs/sk/keyword_documentation/d/dtmax/' | relative_url }}), [DVMAX]({{ '/docs/sk/keyword_documentation/d/dvmax/' | relative_url }}), [SLDERR]({{ '/docs/sk/keyword_documentation/s/slderr/' | relative_url }}), [STPDEF]({{ '/docs/sk/keyword_documentation/s/stpdef/' | relative_url }})

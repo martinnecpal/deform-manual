@@ -81,9 +81,9 @@ Boundary conditions window
 
 In Initialize window, few state variables that are commonly used such as Temperature, strain, stress, damage, velocity, Displacement, etc.., are made available for initialization.
 
-User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 40.2.5. shows the various state variables that are available in Initialize window. For more information related to initialize option refer [17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/). 
+User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 40.2.5. shows the various state variables that are available in Initialize window. For more information related to initialize option refer [17\. Object Data Initialize]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }}). 
 
-Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1 Node node Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1 Node node Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) and [17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image004.jpg' | relative_url }})
 
@@ -109,7 +109,7 @@ Fixture window
 
 ### Geometry
 
-User can define the new geometry by using the options from geometry window. Geometry window provides basic options for defining geometry (see Fig. 40.2.8.). Geometry can also be imported using Import geometry from a file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option or using Import from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option. User can also import geometries in other formats such as .key, .DB, .STL, .PDA, .NAS and .UNV. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 3D geometries please refer to [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+User can define the new geometry by using the options from geometry window. Geometry window provides basic options for defining geometry (see Fig. 40.2.8.). Geometry can also be imported using Import geometry from a file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option or using Import from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option. User can also import geometries in other formats such as .key, .DB, .STL, .PDA, .NAS and .UNV. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 3D geometries please refer to [12.3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image006.jpg' | relative_url }})
 
@@ -127,7 +127,7 @@ Pass window
 
 ### Geometry
 
-User can define the new geometry by using the options from geometry window. Geometry window provides basic options for defining geometry (see Fig. 40.2.10.). Geometry can also be imported using Import geometry from a file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option or using Import from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option. User can also import geometries in other formats such as .key, .DB, .STL, .PDA, .NAS and .UNV. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 3D geometries please refer to [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+User can define the new geometry by using the options from geometry window. Geometry window provides basic options for defining geometry (see Fig. 40.2.10.). Geometry can also be imported using Import geometry from a file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option or using Import from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option. User can also import geometries in other formats such as .key, .DB, .STL, .PDA, .NAS and .UNV. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 3D geometries please refer to [12.3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image006.jpg' | relative_url }})
 
@@ -143,7 +143,7 @@ Positioning window
 
 **Automatic Positioning**![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) : Auto positioning is used by user to position the rigid objects with workpiece, this option works well for the three objects in forming operation however, user has to review the positioned objects after using the auto positioning in Machining Distortion.
 
-**Positioning Objects** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}): By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 40.2.12. For more information about these options, please refer [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+**Positioning Objects** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}): By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 40.2.12. For more information about these options, please refer [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image008.jpg' | relative_url }})
 
@@ -167,7 +167,7 @@ The purpose of inter-object relations is to define how different objects, fixtur
 
 **User** : By default, user radio button will be selected for Machining Distortion operation. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add) button as shown in Fig. 40.2.14.
 
-For more information please refer, [20\. Inter-Object Relations](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+For more information please refer, [20\. Inter-Object Relations]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image010.jpg' | relative_url }})
 
@@ -201,7 +201,7 @@ Stage 2 – Pass, Simulates machining pass
 
 Stage 3 – Unload, Removes the fixtures and simulates spring back.
 
-**Step increment to save** : The step increment ([STPINC](/docs/en/keyword_documentation/s/stpinc/)) to save in the database controls the number of steps that the system will save in the database. Each step must be saved for machining distortion simulation.
+**Step increment to save** : The step increment ([STPINC]({{ '/docs/en/keyword_documentation/s/stpinc/' | relative_url }})) to save in the database controls the number of steps that the system will save in the database. Each step must be saved for machining distortion simulation.
 
 **Step increment control** : Solution step size is controlled by time step. Maximum elapsed process time per step can be defined as 1 sec for Machining distortion operations. 
 
@@ -211,7 +211,7 @@ Fig. 40.2.17. shows the Simulation Controls in Guided mode.
 
 Simulation control in Guided mode
 
-For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/).
+For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}).
 
 ## Generate DB
 

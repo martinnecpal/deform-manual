@@ -116,4 +116,4 @@ The action keyword, GENGEO can be used to create geometry defined by GEOPR2.
 
 RELATED TOPICS  
 ---  
-Related keywords: [GEOPR3](/docs/en/keyword_documentation/g/geopr3/), [GENGEO](/docs/en/keyword_documentation/g/gengeo/), [WPAXIS(2D)](/docs/en/keyword_documentation/w/wpaxis/), [WPAXIS (3D)](/docs/en/keyword_documentation/w/wpaxis_3d/)
+Related keywords: [GEOPR3]({{ '/docs/en/keyword_documentation/g/geopr3/' | relative_url }}), [GENGEO]({{ '/docs/en/keyword_documentation/g/gengeo/' | relative_url }}), [WPAXIS(2D)]({{ '/docs/en/keyword_documentation/w/wpaxis/' | relative_url }}), [WPAXIS (3D)]({{ '/docs/en/keyword_documentation/w/wpaxis_3d/' | relative_url }})

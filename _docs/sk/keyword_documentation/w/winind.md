@@ -40,4 +40,4 @@ WININD is only for 3D. If WININD is defined, the induction heating calculation i
   
 RELATED TOPICS  
 ---  
-Similar keywords: [WINATM(2D)](/docs/sk/keyword_documentation/w/winatm/), [WINATM(3D)](/docs/sk/keyword_documentation/w/winatm_3d/) , [WINPRS(2D)](/docs/sk/keyword_documentation/w/winprs/), [WINPRS(3D)](/docs/sk/keyword_documentation/w/winprs_3d/), [WINRSE](/docs/sk/keyword_documentation/w/winrse/), [WINTMP (2D)](/docs/sk/keyword_documentation/w/wintmp/). [WINTMP(3D)](/docs/sk/keyword_documentation/w/wintmp_3d/)
+Similar keywords: [WINATM(2D)]({{ '/docs/sk/keyword_documentation/w/winatm/' | relative_url }}), [WINATM(3D)]({{ '/docs/sk/keyword_documentation/w/winatm_3d/' | relative_url }}) , [WINPRS(2D)]({{ '/docs/sk/keyword_documentation/w/winprs/' | relative_url }}), [WINPRS(3D)]({{ '/docs/sk/keyword_documentation/w/winprs_3d/' | relative_url }}), [WINRSE]({{ '/docs/sk/keyword_documentation/w/winrse/' | relative_url }}), [WINTMP (2D)]({{ '/docs/sk/keyword_documentation/w/wintmp/' | relative_url }}). [WINTMP(3D)]({{ '/docs/sk/keyword_documentation/w/wintmp_3d/' | relative_url }})

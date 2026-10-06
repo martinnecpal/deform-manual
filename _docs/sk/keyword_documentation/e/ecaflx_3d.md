@@ -43,4 +43,4 @@ Distributed atom flux is defined as atom per unit time per unit area. The atom f
   
 RELATED TOPICS  
 ---  
-Object data: [Diffusion](/docs/sk/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/) Keywords: [ECCATM(2D),](/docs/sk/keyword_documentation/e/eccatm/) [ECCATM (3D)](/docs/sk/keyword_documentation/e/eccatm_3d/), [ECTMFN (2D)](/docs/sk/keyword_documentation/e/ectmfn/), [ECTMFN (3D)](/docs/sk/keyword_documentation/e/ectmfn_3d/)
+Object data: [Diffusion]({{ '/docs/sk/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/' | relative_url }}) Keywords: [ECCATM(2D),]({{ '/docs/sk/keyword_documentation/e/eccatm/' | relative_url }}) [ECCATM (3D)]({{ '/docs/sk/keyword_documentation/e/eccatm_3d/' | relative_url }}), [ECTMFN (2D)]({{ '/docs/sk/keyword_documentation/e/ectmfn/' | relative_url }}), [ECTMFN (3D)]({{ '/docs/sk/keyword_documentation/e/ectmfn_3d/' | relative_url }})

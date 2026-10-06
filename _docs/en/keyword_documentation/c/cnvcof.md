@@ -50,4 +50,4 @@ Non-Isothermal Deformation
 
 RELATED TOPICS  
 ---  
-Keywords: [ENVTMP](/docs/en/keyword_documentation/e/envtmp/)
+Keywords: [ENVTMP]({{ '/docs/en/keyword_documentation/e/envtmp/' | relative_url }})

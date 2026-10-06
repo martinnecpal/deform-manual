@@ -31,4 +31,4 @@ A plane, used as a simulation stopping criterion, is defined with a point (x,y) 
   
 RELATED TOPICS  
 ---  
-Simulation Controls:[Stopping Controls](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/)
+Simulation Controls:[Stopping Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})

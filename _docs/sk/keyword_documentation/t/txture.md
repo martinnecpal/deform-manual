@@ -32,4 +32,4 @@ Applicable object types: [Plastic](../../pre_processor/11_general_object_data_de
   
 RELATED TOPICS  
 ---  
-[Material Data](/docs/sk/pre_processor/10_material_data/10_material_data/) Keywords: [TXTODF](/docs/sk/keyword_documentation/t/txtodf/)
+[Material Data]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }}) Keywords: [TXTODF]({{ '/docs/sk/keyword_documentation/t/txtodf/' | relative_url }})

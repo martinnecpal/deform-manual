@@ -13,17 +13,17 @@ The problem is common when the strain rate is very small, and is related to a va
 
 The rigid-plastic formulation in DEFORM is based on stresses developed in an element due to deformation. In the rigid-plastic model, if an element is not plastically deforming, the stress in the element is ambiguous. However, for good convergence, a consistent stress is required.
 
-To improve convergence, DEFORM uses a value known as Limiting Strain Rate ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)) to identify rigid, or nearly rigid regions of the part and to calculate flow stress in regions with near zero deformation rates.. Generally, the relationship between flow stress and strain rate is non-linear, as defined by the flow stress law. At values below the limiting strain rate, the flow stress-strain rate relationship is assumed to be linear between 0 and ![]({{ '/assets/images/appendices/appendix_vi_part_is_deforming/sigma_epsalon_l.jpg' | relative_url }}) where ![]({{ '/assets/images/appendices/appendix_vi_part_is_deforming/sigma_epsalon_l.jpg' | relative_url }}) is the flow stress at the limiting strain rate.
+To improve convergence, DEFORM uses a value known as Limiting Strain Rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})) to identify rigid, or nearly rigid regions of the part and to calculate flow stress in regions with near zero deformation rates.. Generally, the relationship between flow stress and strain rate is non-linear, as defined by the flow stress law. At values below the limiting strain rate, the flow stress-strain rate relationship is assumed to be linear between 0 and ![]({{ '/assets/images/appendices/appendix_vi_part_is_deforming/sigma_epsalon_l.jpg' | relative_url }}) where ![]({{ '/assets/images/appendices/appendix_vi_part_is_deforming/sigma_epsalon_l.jpg' | relative_url }}) is the flow stress at the limiting strain rate.
 
 Elements whose strain rate is below the limiting strain rate are considered to be “rigid” for the purposes of the calculation. They do not accumulate strain, and the reported effective stress may be quite low.
 
 **_How is limiting strain rate calculated?_**
 
-Limiting strain rate is maintained as a fixed ratio of the “Average Strain Rate”.The ratio is defined in the preprocessor [Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/) and is normally 100:1. At strain rates below [LMTSTR](/docs/en/keyword_documentation/l/lmtstr/), the flow stress is calculated based on a linear fit from 0,0 to the flow stress at [LMTSTR](/docs/en/keyword_documentation/l/lmtstr/).
+Limiting strain rate is maintained as a fixed ratio of the “Average Strain Rate”.The ratio is defined in the preprocessor [Object Properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}) and is normally 100:1. At strain rates below [LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }}), the flow stress is calculated based on a linear fit from 0,0 to the flow stress at [LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }}).
 
 At each deformation time step, the average strain rate of all deforming elements is calculated, then the limiting strain rate is recalculated from this updated value.
 
-Strain and damage are not incremented for elements with a strain rate below [LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)
+Strain and damage are not incremented for elements with a strain rate below [LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})
 
 **Why does this cause a problem?**
 
@@ -39,7 +39,7 @@ The exception is simulations where the rigid portion of the workpiece will see a
 
 _**Average strain rate calculation for different conditions:**_
 
-[LMTSTR](/docs/en/keyword_documentation/l/lmtstr/) is maintained as a constant ratio to the average strain rate [AVGSTR](/docs/en/keyword_documentation/a/avgstr/). After each solution step, [AVGSTR](/docs/en/keyword_documentation/a/avgstr/) is recalculated as the non-weighted average of all deforming elements. [LMTSTR](/docs/en/keyword_documentation/l/lmtstr/) is then recalculated based on the ratio initially defined in the preprocessor.
+[LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }}) is maintained as a constant ratio to the average strain rate [AVGSTR]({{ '/docs/en/keyword_documentation/a/avgstr/' | relative_url }}). After each solution step, [AVGSTR]({{ '/docs/en/keyword_documentation/a/avgstr/' | relative_url }}) is recalculated as the non-weighted average of all deforming elements. [LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }}) is then recalculated based on the ratio initially defined in the preprocessor.
 
 For typical simulations, a 2 order of magnitude ratio between AVGSTR & LMTSTR is appropriate (i.e. AVGSTR = 1, LMTSTR = 0.01)
 
@@ -53,4 +53,4 @@ Comparison between Flow stress and Limiting Strain Rate
 
 **Related Topics:**
 
-[Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+[Object Properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})

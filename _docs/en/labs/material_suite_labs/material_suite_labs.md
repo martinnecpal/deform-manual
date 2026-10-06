@@ -5,22 +5,22 @@ title: "Material Suite Labs"
 
 # Material Suite Labs
 
-[Deformation Texture Model Lab](/docs/en/labs/material_suite_labs/deformation_texture_model_lab/)
+[Deformation Texture Model Lab]({{ '/docs/en/labs/material_suite_labs/deformation_texture_model_lab/' | relative_url }})
 
-[Material Suite Labs for Cellular Automata (CA) model](/docs/en/labs/material_suite_labs/material_suite_labs_for_ca_model/)
+[Material Suite Labs for Cellular Automata (CA) model]({{ '/docs/en/labs/material_suite_labs/material_suite_labs_for_ca_model/' | relative_url }})
 
-[MEDC Model Lab](/docs/en/labs/material_suite_labs/medc_model_lab/)
+[MEDC Model Lab]({{ '/docs/en/labs/material_suite_labs/medc_model_lab/' | relative_url }})
 
-[RVE Lab1](/docs/en/labs/material_suite_labs/rve_lab1/)
+[RVE Lab1]({{ '/docs/en/labs/material_suite_labs/rve_lab1/' | relative_url }})
 
-[RVE Lab2](/docs/en/labs/material_suite_labs/rve_lab2/)
+[RVE Lab2]({{ '/docs/en/labs/material_suite_labs/rve_lab2/' | relative_url }})
 
-[SIESTA Lab](/docs/en/labs/material_suite_labs/siesta_lab/)
+[SIESTA Lab]({{ '/docs/en/labs/material_suite_labs/siesta_lab/' | relative_url }})
 
 **Material Parameters Fitting Labs**
 
-[Flow Stress Fitting Lab](/docs/en/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/)
+[Flow Stress Fitting Lab]({{ '/docs/en/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/' | relative_url }})
 
-[JMAK Parameters Fitting Lab](/docs/en/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/)
+[JMAK Parameters Fitting Lab]({{ '/docs/en/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/' | relative_url }})
 
-[TTT Calculation Lab](/docs/en/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/)
+[TTT Calculation Lab]({{ '/docs/en/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/' | relative_url }})

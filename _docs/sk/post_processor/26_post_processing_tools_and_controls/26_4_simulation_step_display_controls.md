@@ -101,6 +101,6 @@ Typ otáčania – Okno relatívneho pohybu
 
 **Súvisiace témy:**
 
-[26\. Post Processor Features](/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/)
+[26\. Post Processor Features]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_post_processor_features/' | relative_url }})
 
-[26.2. Viewport and Windows menu](/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/)
+[26.2. Viewport and Windows menu]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/' | relative_url }})

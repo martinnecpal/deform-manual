@@ -5,7 +5,7 @@ title: "Lab 07 Mechanical Press"
 
 # Lab 07 Mechanical Press
 
-Requirement: To setup this operation, First we have to setup [Lab 03 Spike Isothermal Lab](/docs/en/labs/basic_labs/2d_labs/lab_03_spike_isothermal/).
+Requirement: To setup this operation, First we have to setup [Lab 03 Spike Isothermal Lab]({{ '/docs/en/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }}).
 
 7.1. Creating a New Problem
 
@@ -111,8 +111,8 @@ After completion of Post processing, Save the Project and close the MO wizard by
 
 **Related Topics:**
 
-[Movement Controls](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[Movement Controls]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[Simulation](/docs/en/simulator/simulator_mainpg/)
+[Simulation]({{ '/docs/en/simulator/simulator_mainpg/' | relative_url }})
 
-[Post processor](/docs/en/post_processor/post_processor_mainpg/)
+[Post processor]({{ '/docs/en/post_processor/post_processor_mainpg/' | relative_url }})

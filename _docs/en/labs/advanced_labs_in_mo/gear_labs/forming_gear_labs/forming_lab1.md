@@ -519,4 +519,4 @@ Play through all steps. Note that the part does not completely fill out the die 
 
 Workpiece shape at last step of second operation
 
-To rerun using a larger billet size, we will create a new project based on the existing project. Please refer [Lab 2. Rerun Sequence with a Larger Bille](/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab2/)t
+To rerun using a larger billet size, we will create a new project based on the existing project. Please refer [Lab 2. Rerun Sequence with a Larger Bille]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab2/' | relative_url }})t

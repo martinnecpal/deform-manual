@@ -29,4 +29,4 @@ EMAX is one of several parameters used to control the termination of the simulat
   
 RELATED TOPICS  
 ---  
-Termination parameters Keywords: [SMAX](/docs/en/keyword_documentation/s/smax/), [TMAX](/docs/en/keyword_documentation/t/tmax/), [LMAX (2D)](/docs/en/keyword_documentation/l/lmax/), [LMAX (3D)](/docs/en/keyword_documentation/l/lmax_3d/), [NSTEP](/docs/en/keyword_documentation/n/nstep/), [VMIN](/docs/en/keyword_documentation/v/vmin/)
+Termination parameters Keywords: [SMAX]({{ '/docs/en/keyword_documentation/s/smax/' | relative_url }}), [TMAX]({{ '/docs/en/keyword_documentation/t/tmax/' | relative_url }}), [LMAX (2D)]({{ '/docs/en/keyword_documentation/l/lmax/' | relative_url }}), [LMAX (3D)]({{ '/docs/en/keyword_documentation/l/lmax_3d/' | relative_url }}), [NSTEP]({{ '/docs/en/keyword_documentation/n/nstep/' | relative_url }}), [VMIN]({{ '/docs/en/keyword_documentation/v/vmin/' | relative_url }})

@@ -71,4 +71,4 @@ Applicable object types: Elasto plastic
   
 RELATED TOPICS  
 ---  
-Keywords:ALPHA, [BURGRS](/docs/en/keyword_documentation/b/burgrs/), [RECVRY](/docs/en/keyword_documentation/r/recvry/), [GBMOBI](/docs/en/keyword_documentation/g/gbmobi/)
+Keywords:ALPHA, [BURGRS]({{ '/docs/en/keyword_documentation/b/burgrs/' | relative_url }}), [RECVRY]({{ '/docs/en/keyword_documentation/r/recvry/' | relative_url }}), [GBMOBI]({{ '/docs/en/keyword_documentation/g/gbmobi/' | relative_url }})

@@ -27,8 +27,8 @@ GENAXS creates WPAXIS (type=7) which constrains certain nodes on the billet to p
   
 REMARKS  
 ---  
-GENAXS is an action keyword and is mainly for internal use. It is used in the cogging template to create rigid zones for holding the billet in position. Handover Distance is the distance between manipulators (left/right) and the center of dies within which clamping occurs. Applicable simulation types: [Cogging](/docs/sk/operation_templates/29_cogging/29_introduction_to_cogging/)  
+GENAXS is an action keyword and is mainly for internal use. It is used in the cogging template to create rigid zones for holding the billet in position. Handover Distance is the distance between manipulators (left/right) and the center of dies within which clamping occurs. Applicable simulation types: [Cogging]({{ '/docs/sk/operation_templates/29_cogging/29_introduction_to_cogging/' | relative_url }})  
   
 RELATED TOPICS  
 ---  
-Related keywords: [GENSUB](/docs/sk/keyword_documentation/g/gensub/), [EXECMD](/docs/sk/keyword_documentation/e/execmd/)
+Related keywords: [GENSUB]({{ '/docs/sk/keyword_documentation/g/gensub/' | relative_url }}), [EXECMD]({{ '/docs/sk/keyword_documentation/e/execmd/' | relative_url }})

@@ -71,4 +71,4 @@ Applicable object types: [Elastoplastic](../../pre_processor/11_general_object_d
 
 RELATED TOPICS  
 ---  
-Keywords:ALPHA, [BURGRS](/docs/sk/keyword_documentation/b/burgrs/), [NDISFM](/docs/sk/keyword_documentation/n/ndisfm/), [GBMOBI](/docs/sk/keyword_documentation/g/gbmobi/)
+Keywords:ALPHA, [BURGRS]({{ '/docs/sk/keyword_documentation/b/burgrs/' | relative_url }}), [NDISFM]({{ '/docs/sk/keyword_documentation/n/ndisfm/' | relative_url }}), [GBMOBI]({{ '/docs/sk/keyword_documentation/g/gbmobi/' | relative_url }})

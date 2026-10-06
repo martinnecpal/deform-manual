@@ -27,16 +27,16 @@ Ak sa má simulovať séria úloh, po dokončení predchádzajúcej simulácie p
 
 Interaktívne odosielanie simulácií si vyžaduje, aby používateľ dohliadal na spúšťanie simulácií jedna po druhej; používateľ však môže využiť voľbu ![]({{ '/assets/icons/simulator_icons/gui_add_to_queue.jpg' | relative_url }}) v grafickom rozhraní alebo v dialógovom okne „Run options“ (![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }})), aby sa jednotlivé úlohy spúšťali automaticky jedna po druhej alebo súčasne, a to v závislosti od nastavení simulačného servera.
 
-Stav behu úlohy je možné sledovať v nástroji Process Monitor; ďalšie možnosti týkajúce sa vykonávania simulácií v interaktívnom a dávkovom režime nájdete v kapitole [23.4. Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/).
+Stav behu úlohy je možné sledovať v nástroji Process Monitor; ďalšie možnosti týkajúce sa vykonávania simulácií v interaktívnom a dávkovom režime nájdete v kapitole [23.4. Process Monitor]({{ '/docs/en/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }}).
 
-Od verzie 11.0 môžu používatelia odosielať úlohy na simuláciu pomocou vzdialených simulačných serverov v dávkovom režime z dialógového okna „Run options“ (Možnosti spustenia). (Pozri časť [6.2. MO Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/).) Týmto spôsobom sa úlohy dočasne presunú na vzdialený simulačný server na účely simulácie; po dokončení simulácie sa projekt skopíruje späť, čím sa zníži zaťaženie lokálneho počítača.
+Od verzie 11.0 môžu používatelia odosielať úlohy na simuláciu pomocou vzdialených simulačných serverov v dávkovom režime z dialógového okna „Run options“ (Možnosti spustenia). (Pozri časť [6.2. MO Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}).) Týmto spôsobom sa úlohy dočasne presunú na vzdialený simulačný server na účely simulácie; po dokončení simulácie sa projekt skopíruje späť, čím sa zníži zaťaženie lokálneho počítača.
 
 ## Simulácie čakania v rade
 
 **Spustenie servera fronty dávok a simulačného servera**
 
 ****  
-(Informácie o nastavení, simulačných serveroch, serveroch fronty dávkových úloh a správe priradených diskov v sieti na spúšťanie simulácií DEFORM nájdete v dokumente [Chapter 23.6. Running Shared folder Simulations](/docs/en/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/))
+(Informácie o nastavení, simulačných serveroch, serveroch fronty dávkových úloh a správe priradených diskov v sieti na spúšťanie simulácií DEFORM nájdete v dokumente [Chapter 23.6. Running Shared folder Simulations]({{ '/docs/en/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/' | relative_url }}))
 
 (Inštalácia týchto služieb – Batch Queue a Simulation Server – je súčasťou štandardného inštalačného procesu a informácie uvedené v tomto texte slúžia iba ako alternatívne možnosti v prípade, že daný systém má nejaké problémy alebo obmedzenia pri spracovaní týchto služieb)
 
@@ -183,16 +183,16 @@ Typy simulačných behov z možností spustenia pre bežné projekty
 
 **Súvisiace témy:**
 
-[23.3 Simulation Graphics](/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/)
+[23.3 Simulation Graphics]({{ '/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/' | relative_url }})
 
-[23.4. Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/)
+[23.4. Process Monitor]({{ '/docs/en/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }})
 
-[23.5. Setting up MPICH](/docs/en/simulator/23_deform_simulator/23_5_setting_up_mpich/)
+[23.5. Setting up MPICH]({{ '/docs/en/simulator/23_deform_simulator/23_5_setting_up_mpich/' | relative_url }})
 
-[23.8. Trouble Shooting Simulation Running](/docs/en/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/)
+[23.8. Trouble Shooting Simulation Running]({{ '/docs/en/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/' | relative_url }})
 
-[Pre-Processor](/docs/en/post_processor/post_processor_mainpg/)
+[Pre-Processor]({{ '/docs/en/post_processor/post_processor_mainpg/' | relative_url }})
 
-[Integrated Manufacturing Process (MO)](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/)
+[Integrated Manufacturing Process (MO)]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/' | relative_url }})
 
-[Post -Processor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[Post -Processor]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})

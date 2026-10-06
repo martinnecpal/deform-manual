@@ -47,12 +47,12 @@ Following are the steps to Setup Multi blow forging operation in MO wizard:
 
 **Related Topics:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Proces Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Proces Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[32.1. 2D Multi Blow Forging](/docs/en/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/)
+[32.1. 2D Multi Blow Forging]({{ '/docs/en/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/' | relative_url }})
 
-[32.2. 3D Multi Blow Forging setup](/docs/en/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/)
+[32.2. 3D Multi Blow Forging setup]({{ '/docs/en/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/' | relative_url }})

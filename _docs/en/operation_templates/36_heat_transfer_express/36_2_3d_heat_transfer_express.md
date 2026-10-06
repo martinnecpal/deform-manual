@@ -93,7 +93,7 @@ There are four heating types or heat transfer operations available in both 2D an
 
   * **Dwell on die**
 
-Heating workpiece, heat transfer during transferring workpiece form furnace to press, resting workpiece on die (before forming) and workpiece dwell on die after forming operations can be setup easily by using the respective heating type. For more details about these heating types are described in [36\. Introduction to heat transfer express operation](/docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/), refer Heating Types.
+Heating workpiece, heat transfer during transferring workpiece form furnace to press, resting workpiece on die (before forming) and workpiece dwell on die after forming operations can be setup easily by using the respective heating type. For more details about these heating types are described in [36\. Introduction to heat transfer express operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/' | relative_url }}), refer Heating Types.
 
 For resting and dwelling operation thermal calculation window will activate to give options to select heat transfer with dies and not to calculate heat transfer with dies. These options will be explained further in respective operations explanations.
 
@@ -138,11 +138,11 @@ Workpiece window
 **Object Name** : User can define the name for all the objects available in the operation.
 
   
-**Object Type** : The object type ([OBJTYP](/docs/en/keyword_documentation/o/objtyp/)) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are available in Forming operation, for its details refer [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type)
+**Object Type** : The object type ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are available in Forming operation, for its details refer [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type)
 
   
-**Plastic** : Plastic objects are modelled as rigid-plastic or rigid-viscoplastic material depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)). The material deforms plastically beyond the limiting strain rate. The plastic material behaviour of the object is specified with a material flow stress function or flow stress data ([FSTRES](/docs/en/keyword_documentation/f/fstres/)). In heat transfer express workpiece is automatically assigned to Plastic object type.  
-**Rigid** : Rigid objects are modelled as non-deformable materials. In the deformation analysis, the object is represented by the geometric profile ([DIEGEO](/docs/en/keyword_documentation/d/diegeo/)). Deformation solution data available for rigid objects include object stroke, load, and velocity. The mesh for the rigid object is used only for thermal, transformation, and diffusion calculations. In heat transfer express dies or tools are automatically assigned to Rigid as they are non-deformable objects.
+**Plastic** : Plastic objects are modelled as rigid-plastic or rigid-viscoplastic material depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). The material deforms plastically beyond the limiting strain rate. The plastic material behaviour of the object is specified with a material flow stress function or flow stress data ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). In heat transfer express workpiece is automatically assigned to Plastic object type.  
+**Rigid** : Rigid objects are modelled as non-deformable materials. In the deformation analysis, the object is represented by the geometric profile ([DIEGEO]({{ '/docs/en/keyword_documentation/d/diegeo/' | relative_url }})). Deformation solution data available for rigid objects include object stroke, load, and velocity. The mesh for the rigid object is used only for thermal, transformation, and diffusion calculations. In heat transfer express dies or tools are automatically assigned to Rigid as they are non-deformable objects.
 
 **Note:**
 
@@ -160,15 +160,15 @@ The user can initialize temperature, strain, velocity, damage and displacement t
 Advanced object settings
 
   
-More variables can be initialized in Forming operation, for detail refer [35\. 2D Heat Transfer](/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/) operation [Initialize](../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize).
+More variables can be initialized in Forming operation, for detail refer [35\. 2D Heat Transfer]({{ '/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}) operation [Initialize](../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize).
 
-The average strain rate ([AVGSTR](/docs/en/keyword_documentation/a/avgstr/)) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation.
+The average strain rate ([AVGSTR]({{ '/docs/en/keyword_documentation/a/avgstr/' | relative_url }})) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation.
 
-The limiting strain rate ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material.
+The limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material.
 
 ![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}) : Using this user can rest back the initialized state variables value.
 
-For more Deformation object properties options available in Forming operation refer [16.1. Deformation Properties.](/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/)
+For more Deformation object properties options available in Forming operation refer [16.1. Deformation Properties.]({{ '/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }})
 
 ### Object geometry definition
 
@@ -263,7 +263,7 @@ For user defined mesh mode option see Fig. 36.2.12., in this mode user can vary 
 
 **Number of elements (MGNELM):**
 
-The number of mesh elements represents the approximate number of elements that will be generated by the system. The Automatic Mesh Generator (AMG) takes the value for [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) and generates a mesh that will contain approximately the same number of elements. The number of elements can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation.
+The number of mesh elements represents the approximate number of elements that will be generated by the system. The Automatic Mesh Generator (AMG) takes the value for [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}) and generates a mesh that will contain approximately the same number of elements. The number of elements can be specified merely by adjusting the slider bar and selecting an appropriate value for the current simulation.
 
   
 The error between the number of specified elements and the number of generated elements is typically about ten percent.
@@ -291,11 +291,11 @@ Relative mesh settings
 
 Absolute mesh settings
 
-  * **Element size ratio (MGSIZR)** : The maximum size ratio between elements is one of several ways to control the mesh density during automatic mesh generation (AMG) by specifying the ratio of node densities. For a value of 3 for [MGSIZR](/docs/en/keyword_documentation/m/mgsizr/), the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then Size Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.
+  * **Element size ratio (MGSIZR)** : The maximum size ratio between elements is one of several ways to control the mesh density during automatic mesh generation (AMG) by specifying the ratio of node densities. For a value of 3 for [MGSIZR]({{ '/docs/en/keyword_documentation/m/mgsizr/' | relative_url }}), the largest element edge on an object will be roughly 3 times the size of the smallest element edge on the same object. If equal sized elements are desired, then Size Ratio = 1. If Size Ratio = 0, the element size ratio will not be a factor in the mesh density distribution.
 
   * **Remeshing criteria :**
 
-Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See Fig. 36.2.14.) contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they are Interference Depth ([RMDPTH](/docs/en/keyword_documentation/r/rmdpth/)), Max. Time Increment ([RMTIME](/docs/en/keyword_documentation/r/rmtime/)), Max. Step Increment ([RMSTEP](/docs/en/keyword_documentation/r/rmstep/)) and Max. Stroke Increment ([RMSTRK](/docs/en/keyword_documentation/r/rmstrk/)). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.
+Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See Fig. 36.2.14.) contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they are Interference Depth ([RMDPTH]({{ '/docs/en/keyword_documentation/r/rmdpth/' | relative_url }})), Max. Time Increment ([RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }})), Max. Step Increment ([RMSTEP]({{ '/docs/en/keyword_documentation/r/rmstep/' | relative_url }})) and Max. Stroke Increment ([RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues.
 
   * **Penetration Distance (relative)**
 
@@ -303,11 +303,11 @@ If a negative number (a fraction) is entered, the program will conduct a check o
 
   * **Maximum stroke increment (RMSTRK)**
 
-Anytime the maximum stroke increment ([RMSTRK](/docs/en/keyword_documentation/r/rmstrk/)) is exceeded by the stroke increment of the primary die since the last remeshing step, a new remeshing step will be initiated.
+Anytime the maximum stroke increment ([RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})) is exceeded by the stroke increment of the primary die since the last remeshing step, a new remeshing step will be initiated.
 
   * **Maximum time increment (RMTIME)**
 
-Anytime the Maximum Time Increment ([RMTIME](/docs/en/keyword_documentation/r/rmtime/)) (Value of Elapsed Time) has elapsed since the last remeshing step, a new remeshing step will be initiated.
+Anytime the Maximum Time Increment ([RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }})) (Value of Elapsed Time) has elapsed since the last remeshing step, a new remeshing step will be initiated.
 
   * **Maximum step increment (RMSTEP)**
 
@@ -317,7 +317,7 @@ Anytime the Maximum Step Increment (Number of Steps) has occurred since the last
 
 Deletes the mesh generated for the object.
 
-More mesh options like Coating mesh, System mesh density weighting factors, User Mesh Density Window options are not available in Forming express operation unlike in Forming operation, for those mesh options refer chapter [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+More mesh options like Coating mesh, System mesh density weighting factors, User Mesh Density Window options are not available in Forming express operation unlike in Forming operation, for those mesh options refer chapter [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
 
 ### Material Definition
 
@@ -336,7 +336,7 @@ Once after adding material click on ![]({{ '/assets/icons/pre_icons/mo_material_
 
 Material editing window
 
-The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. In Forming operation user can get access to all material properties for more information refer [10\. Material Data.](/docs/en/pre_processor/10_material_data/10_material_data/)
+The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. In Forming operation user can get access to all material properties for more information refer [10\. Material Data.]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
 ### Boundary Conditions
 
@@ -353,7 +353,7 @@ Symmetry boundary condition assigned for workpiece
 
 Heat exchange with environment boundary condition assigned for workpiece
 
-More BCC’s options under different categories are available in Pre-Processor and Forming Operation such as [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/),[Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) and [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). For more information about these BCC's please refer [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions)
+More BCC’s options under different categories are available in Pre-Processor and Forming Operation such as [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}),[Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions)
 
 ### Heat Condition Definition
 
@@ -477,7 +477,7 @@ For [basic object definition](36_1_2d_heat_transfer_express.htm#Object_Basic_def
 
 ### Positioning
 
-User has to select position objects button to position the objects as per the setup requirements, if objects are not read from DB as shown in Fig. 36.2.31. For more details about positioning options refer [19.Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/). If objects are read from DB then those objects positioning must be scheduled.
+User has to select position objects button to position the objects as per the setup requirements, if objects are not read from DB as shown in Fig. 36.2.31. For more details about positioning options refer [19.Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}). If objects are read from DB then those objects positioning must be scheduled.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/image010.jpg' | relative_url }})
 
@@ -529,7 +529,7 @@ Next Database has to be generated in case interactive setup or if the transfer o
 
 ## Continue Defining the Forming Operations
 
-After the Heat transfer express operations user can add the forming operations (See Fig. 36.2.36.) and continue with the non-isothermal deformation setup. Heat transfer operations can also be added between the forming operations, especially after forming operation customized Heat Dwelling heating type available for dwelling simulation explained in the next section Defining dwell on die operation. For more information about forming operations setup refer [3D Forming Setup](/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/) or [3D Forming Express setup](/docs/en/operation_templates/34_forming_express/34_2_3d_forming_express_setup/).
+After the Heat transfer express operations user can add the forming operations (See Fig. 36.2.36.) and continue with the non-isothermal deformation setup. Heat transfer operations can also be added between the forming operations, especially after forming operation customized Heat Dwelling heating type available for dwelling simulation explained in the next section Defining dwell on die operation. For more information about forming operations setup refer [3D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}) or [3D Forming Express setup]({{ '/docs/en/operation_templates/34_forming_express/34_2_3d_forming_express_setup/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/image014.jpg' | relative_url }})
 
@@ -561,8 +561,8 @@ Next Database has to be generated in case interactive setup or if the transfer o
 
 **Related Topics:**
 
-[3D Forming Setup](/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/)
+[3D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }})
 
-[3D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_2_3d_forming_express_setup/)
+[3D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_2_3d_forming_express_setup/' | relative_url }})
 
-[2D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/)
+[2D Heat Transfer Express Operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }})

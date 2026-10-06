@@ -74,6 +74,6 @@ Design of Experiments (DOE) simulation technique enables industrial designers to
   
 RELATED TOPICS  
 ---  
-Keywords: [NDTMP(2D)](/docs/en/keyword_documentation/n/ndtmp/), [NDTMP (3D)](/docs/en/keyword_documentation/n/ndtmp_3d/), [FSTRES](/docs/en/keyword_documentation/f/fstres/), [YOUNG](/docs/en/keyword_documentation/y/young/), [LOCTMP](/docs/en/keyword_documentation/l/loctmp/), FPERV, [MOVCTL(2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm)  
+Keywords: [NDTMP(2D)]({{ '/docs/en/keyword_documentation/n/ndtmp/' | relative_url }}), [NDTMP (3D)]({{ '/docs/en/keyword_documentation/n/ndtmp_3d/' | relative_url }}), [FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }}), [YOUNG]({{ '/docs/en/keyword_documentation/y/young/' | relative_url }}), [LOCTMP]({{ '/docs/en/keyword_documentation/l/loctmp/' | relative_url }}), FPERV, [MOVCTL(2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm)  
   
 ,

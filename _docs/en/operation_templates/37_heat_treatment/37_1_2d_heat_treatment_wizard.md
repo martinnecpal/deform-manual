@@ -78,7 +78,7 @@ Initialization page
 
 ## Material selection
 
-Materials required for the process can be loaded either from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from DB or Keyfile using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) as shown in Fig. 37.1.5. User can also add new material and define required data from respective tab by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). For more information on Material data definition please refer [Material data](/docs/en/pre_processor/10_material_data/10_material_data/). 
+Materials required for the process can be loaded either from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from DB or Keyfile using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) as shown in Fig. 37.1.5. User can also add new material and define required data from respective tab by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). For more information on Material data definition please refer [Material data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}). 
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image005.jpg' | relative_url }})
 
@@ -102,7 +102,7 @@ Object General page
 
 ### Object Geometry
 
-User can define new geometry using primitives and also can import the geometry from other file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), user can also import geometries in other formats such as .DXF and .IGES. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 2D geometries please refer to [12.1. 2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) and [12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/).
+User can define new geometry using primitives and also can import the geometry from other file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), user can also import geometries in other formats such as .DXF and .IGES. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 2D geometries please refer to [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) and [12.2. 2D Geometry Data Editing]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image008.jpg' | relative_url }})
 
@@ -110,7 +110,7 @@ Object Geometry page
 
 ### Object Mesh
 
-Mesh Page provides options to mesh the object. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides option to set number of elements only using slider bar to generate mesh. If the object geometry is complex or user would like to control the mesh density over the object, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like weighing factors, Mesh windows and user defined mode to control the mesh density. Meshing options available inexpert mode and Guided more are shown in Fig. 37.1.9. and Fig. 37.1.10. For more detail description of these options, please refer [13.1. 2D Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+Mesh Page provides options to mesh the object. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides option to set number of elements only using slider bar to generate mesh. If the object geometry is complex or user would like to control the mesh density over the object, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like weighing factors, Mesh windows and user defined mode to control the mesh density. Meshing options available inexpert mode and Guided more are shown in Fig. 37.1.9. and Fig. 37.1.10. For more detail description of these options, please refer [13.1. 2D Mesh Generation.]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image009.jpg' | relative_url }})
 
@@ -142,7 +142,7 @@ Assigned Velocity BCC for Plane Strain object
 
 ### Object Property
 
-Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See Fig. 37.1.14.) For more information, Please refer [16\. Object properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
+Miscellaneous object parameters, which affect either thermo-mechanical behavior of the object or numerical solution behavior are specified in the Object-Properties window. (See Fig. 37.1.14.) For more information, Please refer [16\. Object properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image014.jpg' | relative_url }}) ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image015.jpg' | relative_url }})
 
@@ -228,7 +228,7 @@ Schedule Graph
 
 ## Positioning
 
-User can position the objects using position objects button. Various positioning options are available to position the objects as shown in Fig. 37.1.22., for more information on these options please refer [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+User can position the objects using position objects button. Various positioning options are available to position the objects as shown in Fig. 37.1.22., for more information on these options please refer [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/image023.jpg' | relative_url }})
 
@@ -297,10 +297,10 @@ Generate database
 
 **Related Topics:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[2D Heat Treatment Wizard Lab1](/docs/en/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/)
+[2D Heat Treatment Wizard Lab1]({{ '/docs/en/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/' | relative_url }})

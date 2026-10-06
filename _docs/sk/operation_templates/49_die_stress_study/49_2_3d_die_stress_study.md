@@ -129,7 +129,7 @@ Stránka objektu
 
 ### Geometria
 
-Používateľ môže definovať novú geometriu pomocou možností v okne geometrie. Okno geometrie ponúka základné možnosti na definovanie geometrie (pozri obr. 49.2.7.). Geometriu je možné importovať aj pomocou možnosti „Importovať geometriu zo súboru“ (![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})) alebo pomocou možnosti „Importovať z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})). Používateľ môže tiež importovať geometrie v iných formátoch, ako sú .key, .DB, .STL, .PDA, .NAS a .UNV. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii primitívy. Ďalšie informácie o vytváraní a úpravách 3D geometrií nájdete v [12.3. 3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+Používateľ môže definovať novú geometriu pomocou možností v okne geometrie. Okno geometrie ponúka základné možnosti na definovanie geometrie (pozri obr. 49.2.7.). Geometriu je možné importovať aj pomocou možnosti „Importovať geometriu zo súboru“ (![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})) alebo pomocou možnosti „Importovať z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})). Používateľ môže tiež importovať geometrie v iných formátoch, ako sú .key, .DB, .STL, .PDA, .NAS a .UNV. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii primitívy. Ďalšie informácie o vytváraní a úpravách 3D geometrií nájdete v [12.3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0006.jpg' | relative_url }})
 
@@ -137,7 +137,7 @@ Okno Geometria
 
 ### Sieť objektu
 
-Stránka „Mesh“ ponúka možnosti vytvorenia siete pre objekt. Všetky formy, na ktorých je potrebné vypočítať napätia, by mali byť pokryté sieťou. Stránka „Mesh“ umožňuje nastaviť počet prvkov pomocou posuvníka na vytvorenie siete. Možnosti vytvárania siete dostupné v okne „Mesh“ v režime „Guided“ sú zobrazené na obr. 49.2.8. Ďalšie informácie týkajúce sa možnosti vytvorenia siete v režime Expert nájdete v dokumentácii [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) a [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/).
+Stránka „Mesh“ ponúka možnosti vytvorenia siete pre objekt. Všetky formy, na ktorých je potrebné vypočítať napätia, by mali byť pokryté sieťou. Stránka „Mesh“ umožňuje nastaviť počet prvkov pomocou posuvníka na vytvorenie siete. Možnosti vytvárania siete dostupné v okne „Mesh“ v režime „Guided“ sú zobrazené na obr. 49.2.8. Ďalšie informácie týkajúce sa možnosti vytvorenia siete v režime Expert nájdete v dokumentácii [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}) a [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0007.jpg' | relative_url }})
 
@@ -192,7 +192,7 @@ Okrajové podmienky rýchlosti priradené v smere Z
 
 Ak sa zúženie aplikuje na vnútorný objekt, hodnota by mala byť záporná, a ak sa zúženie aplikuje na vonkajší objekt, hodnota by mala byť kladná.
 
-Ďalšie informácie o montáži s tepelne zmrštiteľným spojom nájdete v dokumente [3D Die Stress Analysis.](/docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/) na obr. 49.2.12. a obr. 49.2.13. znázorňujú montáž s tepelne zmrštiteľným spojom BCC na zmrštiteľnom krúžku.
+Ďalšie informácie o montáži s tepelne zmrštiteľným spojom nájdete v dokumente [3D Die Stress Analysis.]({{ '/docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/' | relative_url }}) na obr. 49.2.12. a obr. 49.2.13. znázorňujú montáž s tepelne zmrštiteľným spojom BCC na zmrštiteľnom krúžku.
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0011.jpg' | relative_url }})
 
@@ -206,7 +206,7 @@ Priradené okrajové podmienky pre zúženie
 
 V okne „Initialize“ sú k dispozícii na inicializáciu niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie atď.
 
-Používateľ môže inicializovať hodnoty týchto stavových premenných kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 49.2.14 znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien uzlov a prvkov. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1. Node Data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Používateľ môže inicializovať hodnoty týchto stavových premenných kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 49.2.14 znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien uzlov a prvkov. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1. Node Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) a [17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0013.jpg' | relative_url }})
 
@@ -230,7 +230,7 @@ V tejto operácii je možné definovať upínacie prípravky, ktoré držia form
 
 ## Ovládacie prvky
 
-Obr. 49.2.17. znázorňuje okno „Ovládacie prvky“, v ktorom môže používateľ umiestňovať upínacie prvky a objekty foriem pridané pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}). Toto umiestnenie sa uplatní iba pre aktuálne vybraný krok a v nasledujúcich krokoch sa nebude používať. Na umiestnenie objektov sú k dispozícii rôzne možnosti umiestnenia (pozri obr. 49.2.18.). Ďalšie informácie o týchto možnostiach nájdete v [19.Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+Obr. 49.2.17. znázorňuje okno „Ovládacie prvky“, v ktorom môže používateľ umiestňovať upínacie prvky a objekty foriem pridané pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}). Toto umiestnenie sa uplatní iba pre aktuálne vybraný krok a v nasledujúcich krokoch sa nebude používať. Na umiestnenie objektov sú k dispozícii rôzne možnosti umiestnenia (pozri obr. 49.2.18.). Ďalšie informácie o týchto možnostiach nájdete v [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0016.jpg' | relative_url }})
 
@@ -244,7 +244,7 @@ Okno „Polohovanie objektu“
 
 Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty v simulácii vzájomne interagujú.
 
-V okne „Medzi objektmi“ sú už v zozname uvedené všetky možné vzťahy (pozri obr. 49.2.19.). Používateľ musí pre objekty, ktoré sú v kontakte, definovať typ vzťahu a hodnotu trenia pre vybraný vzťah. Ďalšie informácie týkajúce sa stránky „Kontakt“ v expertnom režime nájdete v [20\. Inter-Object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+V okne „Medzi objektmi“ sú už v zozname uvedené všetky možné vzťahy (pozri obr. 49.2.19.). Používateľ musí pre objekty, ktoré sú v kontakte, definovať typ vzťahu a hodnotu trenia pre vybraný vzťah. Ďalšie informácie týkajúce sa stránky „Kontakt“ v expertnom režime nájdete v [20\. Inter-Object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/image0018.jpg' | relative_url }})
 
@@ -266,7 +266,7 @@ Na obr. 49.2.20 je zobrazené okno „Simulation Controls“.
 
 Okno riadenia simulácie
 
-Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ## Vytvoriť databázu
 
@@ -282,6 +282,6 @@ Okno na generovanie databázy
 
 **Súvisiace témy:**
 
-[49\. Introduction to Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_introduction_to_die_stress_study/)
+[49\. Introduction to Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_introduction_to_die_stress_study/' | relative_url }})
 
-[49.1. 2D Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/)
+[49.1. 2D Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/' | relative_url }})

@@ -36,4 +36,4 @@ Up to ten lines of data can be stored in the storage region. Each line of data i
   
 RELATED TOPICS  
 ---  
-[User Sub Routines](/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/) Keywords: [USRSUB](/docs/en/keyword_documentation/u/usrsub/)
+[User Sub Routines]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/' | relative_url }}) Keywords: [USRSUB]({{ '/docs/en/keyword_documentation/u/usrsub/' | relative_url }})

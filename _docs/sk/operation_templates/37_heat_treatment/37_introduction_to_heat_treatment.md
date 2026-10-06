@@ -33,6 +33,6 @@ Nižšie sú uvedené kroky na nastavenie operácie tepelného spracovania v spr
 
 **Súvisiace témy:**
 
-[2D Heat Treatment Wizard manual](/docs/en/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/)
+[2D Heat Treatment Wizard manual]({{ '/docs/en/operation_templates/37_heat_treatment/37_1_2d_heat_treatment_wizard/' | relative_url }})
 
-[3D Heat Treatment Wizard manual](/docs/en/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/)
+[3D Heat Treatment Wizard manual]({{ '/docs/en/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/' | relative_url }})

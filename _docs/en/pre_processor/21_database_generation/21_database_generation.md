@@ -36,24 +36,24 @@ Database Step Selection window
 
 **Related Topics:**
 
-[DEFORM Basic file system](/docs/en/about_deform/1_introduction_to_deform/1_10_basic_file_system/)
+[DEFORM Basic file system]({{ '/docs/en/about_deform/1_introduction_to_deform/1_10_basic_file_system/' | relative_url }})
 
 [Primary Die selection from simulation control](../9_simulation_controls/9_2_defining_step.htm#Primary_die_\(PDIE\))
 
 [Primary Die selection from Object general definition window](../11_general_object_data_definition/11_general_object_data_definition.htm#11.5._Primary_Die)
 
-[Step definition in the simulation control](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/)
+[Step definition in the simulation control]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})
 
 [Max. Interference depth for remesh settings](../13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.8._Remeshing_criteria)
 
 [Volume compensation selection from Object properties window](../16_object_properties/16_1_deformation_properties.htm#16_1_3_Target_Volume_\(TRGVOL\))
 
-[Inter-Object data definition window](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[Inter-Object data definition window]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-[23.1. Start, Stop and Resume Simulation](/docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/)
+[23.1. Start, Stop and Resume Simulation]({{ '/docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/' | relative_url }})
 
-[23.2. Interactive and batch modes using Run option](/docs/en/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/)
+[23.2. Interactive and batch modes using Run option]({{ '/docs/en/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/' | relative_url }})
 
-[23.3. Simulation Graphics](/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/)
+[23.3. Simulation Graphics]({{ '/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/' | relative_url }})
 
-[23.4. Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/)
+[23.4. Process Monitor]({{ '/docs/en/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }})

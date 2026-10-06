@@ -87,8 +87,8 @@ Die-stress result comparison for all three options at the same step
 
 **Related Topics:**
 
-[Die Stress Lab](/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
+[Die Stress Lab]({{ '/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/' | relative_url }})
 
-[2D Die Stress Analysis - Theory](/docs/en/operation_templates/30_die_stress/2d_die_stress_analysis_theory/)
+[2D Die Stress Analysis - Theory]({{ '/docs/en/operation_templates/30_die_stress/2d_die_stress_analysis_theory/' | relative_url }})
 
-[3D Die Stress Analysis](/docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/)
+[3D Die Stress Analysis]({{ '/docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/' | relative_url }})

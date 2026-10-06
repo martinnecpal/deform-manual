@@ -79,7 +79,7 @@ The environment temperature may be specified as a constant value or as a set of 
   
 RELATED TOPICS  
 ---  
-Keywords: [BLZMAN](/docs/sk/keyword_documentation/b/blzman/), [CNVCOF](/docs/sk/keyword_documentation/c/cnvcof/), [FRNNAM](/docs/sk/keyword_documentation/f/frnnam/)  
+Keywords: [BLZMAN]({{ '/docs/sk/keyword_documentation/b/blzman/' | relative_url }}), [CNVCOF]({{ '/docs/sk/keyword_documentation/c/cnvcof/' | relative_url }}), [FRNNAM]({{ '/docs/sk/keyword_documentation/f/frnnam/' | relative_url }})  
   
 Followings are the predefined data sections for Furnace:
 

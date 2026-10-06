@@ -97,13 +97,13 @@ A new object added for Cutter object in operation tree
 
 ### Define Boolean object
 
-In Object window (See Fig. 45.1.6. ) no need to change any settings, it gives the details about the object type. For boolean object only Deformation boundary conditions constrains (BCC) and initialize state variable windows will be available, user can change the BCC in schedule before Boolean by checking “Redefine BCC” check box (See Fig. 45.1.7.). For more details on different BCC definition and its definition refer [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+In Object window (See Fig. 45.1.6. ) no need to change any settings, it gives the details about the object type. For boolean object only Deformation boundary conditions constrains (BCC) and initialize state variable windows will be available, user can change the BCC in schedule before Boolean by checking “Redefine BCC” check box (See Fig. 45.1.7.). For more details on different BCC definition and its definition refer [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0007.jpg' | relative_url }})
 
 Schedule BCC definition window for boolean object
 
-Similarly state variables can be initialized before Boolean by checking the respective available check boxes as shown in Fig. 45.1.8. For more details on state variables initialization refer [17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/).
+Similarly state variables can be initialized before Boolean by checking the respective available check boxes as shown in Fig. 45.1.8. For more details on state variables initialization refer [17\. Object Data Initialize]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0008.jpg' | relative_url }})
 
@@ -123,7 +123,7 @@ Cutter object window
 
 Simple Cutter geometry can be created from the geometry primitives or 2D geometry editor options as shown in Fig. 45.1.10. Even the 2D geometries can be imported from GEO, IGS and DXF formats. Based on the geometry type of previous operation respective geometry primitives will be available in boolean operation. As cutter object does not need the mesh Extract border from mesh option will not activate.
 
-For more details about the geometry available option refer [12.1. 2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) and [12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/). In this example we will create 2D geometry using ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) option as shown in Fig. 45.1.11.
+For more details about the geometry available option refer [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) and [12.2. 2D Geometry Data Editing]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }}). In this example we will create 2D geometry using ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) option as shown in Fig. 45.1.11.
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0010.jpg' | relative_url }})
 
@@ -217,13 +217,13 @@ A new object added for Cutter object in operation tree
 
 ###  Defining Boolean object
 
-In Object window (See Fig. 45.1.21.) no need to change any settings, it gives the details about the object type. For boolean object only Symmetry and Deformation boundary conditions constrains (BCC) and initialize state variable windows will be available, user can change the Advanced BCC in schedule before Boolean by checking “Redefine BCC” check box (See Fig. 45.1.22.). For more details on different BCC definition and its definition refer [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+In Object window (See Fig. 45.1.21.) no need to change any settings, it gives the details about the object type. For boolean object only Symmetry and Deformation boundary conditions constrains (BCC) and initialize state variable windows will be available, user can change the Advanced BCC in schedule before Boolean by checking “Redefine BCC” check box (See Fig. 45.1.22.). For more details on different BCC definition and its definition refer [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0022.jpg' | relative_url }})
 
 Schedule BCC definition window for boolean object
 
-Similarly state variables can be initialized before Boolean by checking the respective available check boxes as shown in Fig. 45.1.23. For more details on state variables initialization refer [17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/).
+Similarly state variables can be initialized before Boolean by checking the respective available check boxes as shown in Fig. 45.1.23. For more details on state variables initialization refer [17\. Object Data Initialize]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0023.jpg' | relative_url }})
 
@@ -241,7 +241,7 @@ Cutter object window
 
 ### Define Cutter geometry
 
-Simple Cutter geometry can be created from the geometry primitives or 3D geometry editor options as shown in Fig. 45.1.25. Even the 3D geometries can be imported from GEO, STL, PDA, NAS and UNV formats. For more details about the geometry available option refer [12.3. 3D Geometry Data Defining ](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/) In this example we will import the 3D geometry for cutter object.
+Simple Cutter geometry can be created from the geometry primitives or 3D geometry editor options as shown in Fig. 45.1.25. Even the 3D geometries can be imported from GEO, STL, PDA, NAS and UNV formats. For more details about the geometry available option refer [12.3. 3D Geometry Data Defining ]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}) In this example we will import the 3D geometry for cutter object.
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0025.jpg' | relative_url }})
 
@@ -271,7 +271,7 @@ Geometry based method Boolean preview
 
 Solid mesh method Boolean preview
 
-For more information related to Boolean option refer [18.1. Boolean](/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/). 
+For more information related to Boolean option refer [18.1. Boolean]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }}). 
 
 ### Generate Database
 
@@ -307,6 +307,6 @@ User can continue the further operations by adding respective operation from MO 
 
 **Related Topics:**
 
-[18.1. Boolean](/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/)
+[18.1. Boolean]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }})
 
-[45\. Introduction to Boolean Operation](/docs/en/operation_templates/45_boolean_operation/43_introduction_to_boolean_operation/)
+[45\. Introduction to Boolean Operation]({{ '/docs/en/operation_templates/45_boolean_operation/43_introduction_to_boolean_operation/' | relative_url }})

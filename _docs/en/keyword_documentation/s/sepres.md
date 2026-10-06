@@ -41,4 +41,4 @@ The two objects for which the separation criterion is to be applied to are set t
   
 RELATED TOPICS  
 ---  
-Inter-Object Conditions: [Deformation](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) Related keywords: [CNTACT (2D)](/docs/en/keyword_documentation/c/cntact/), [CNTACT (3D)](/docs/en/keyword_documentation/c/cntact_3d/)
+Inter-Object Conditions: [Deformation]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}) Related keywords: [CNTACT (2D)]({{ '/docs/en/keyword_documentation/c/cntact/' | relative_url }}), [CNTACT (3D)]({{ '/docs/en/keyword_documentation/c/cntact_3d/' | relative_url }})

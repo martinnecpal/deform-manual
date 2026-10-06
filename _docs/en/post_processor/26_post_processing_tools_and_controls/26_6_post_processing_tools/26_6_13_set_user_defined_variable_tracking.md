@@ -23,4 +23,4 @@ User defined post variables accessing from State variables window
 
 Once tracking the variables for particular DB is completed, it will generate the PDB in the problem directory, so in the next sessions of post processing user can select the existing PDB from the Tracking tab and then directly plot the user variables.  
 The Post processor user routine is available in the standard installation location,  
-C:\Program files\SFTC\DEFORM\v*_*\UserRoutine\PostProcessor\PC_pstusr23.f (where *_* is version number of deform) for PC. For more details on post processor user routines refer the [Chapter 56. User routine.](/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/)
+C:\Program files\SFTC\DEFORM\v*_*\UserRoutine\PostProcessor\PC_pstusr23.f (where *_* is version number of deform) for PC. For more details on post processor user routines refer the [Chapter 56. User routine.]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/' | relative_url }})

@@ -30,4 +30,4 @@ This is action keyword that executes mesh generation.
   
 RELATED TOPICS  
 ---  
-Text-based PRE, Shape optimization, [Multiple operations](/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/) Keywords: [BRDEXT](/docs/sk/keyword_documentation/b/brdext/), [DEFINT](/docs/sk/keyword_documentation/d/defint/), [REMESH](/docs/sk/keyword_documentation/r/remesh/)
+Text-based PRE, Shape optimization, [Multiple operations]({{ '/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }}) Keywords: [BRDEXT]({{ '/docs/sk/keyword_documentation/b/brdext/' | relative_url }}), [DEFINT]({{ '/docs/sk/keyword_documentation/d/defint/' | relative_url }}), [REMESH]({{ '/docs/sk/keyword_documentation/r/remesh/' | relative_url }})

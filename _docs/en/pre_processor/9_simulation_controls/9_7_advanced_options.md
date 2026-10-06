@@ -61,25 +61,25 @@ Advanced variables window
 
 ### **Current Global Time/Current Local Time (TNOW)**
 
-This ([TNOW](/docs/en/keyword_documentation/t/tnow/)) specifies the values of global process time and the local process time. (See Fig. 9.7.1. ). The global time is the time since the beginning of the problem, and should never be reset. Local time is a parameter that can be reset by the user. The global time should not be reset during a simulation as the post-processor uses this time for many post processing operations. Below the local and global time definitions is a selector box that determines which time is to be used for time dependent functions such as movement controls. The default is global time, however, the time dependent functions can also be made a function of local time.
+This ([TNOW]({{ '/docs/en/keyword_documentation/t/tnow/' | relative_url }})) specifies the values of global process time and the local process time. (See Fig. 9.7.1. ). The global time is the time since the beginning of the problem, and should never be reset. Local time is a parameter that can be reset by the user. The global time should not be reset during a simulation as the post-processor uses this time for many post processing operations. Below the local and global time definitions is a selector box that determines which time is to be used for time dependent functions such as movement controls. The default is global time, however, the time dependent functions can also be made a function of local time.
 
 ### **Primary Workpiece (PDIE)**
 
-This ([PDIE](/docs/en/keyword_documentation/p/pdie/)) parameter allows the user to specify the workpiece as an object that must not possess rigid body motion. (See Fig. 9.7.1. ) If the body does not deform, the simulation will stop. One purpose of this function is to prevent a rolling simulation from continuing past the rolled length of material.
+This ([PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }})) parameter allows the user to specify the workpiece as an object that must not possess rigid body motion. (See Fig. 9.7.1. ) If the body does not deform, the simulation will stop. One purpose of this function is to prevent a rolling simulation from continuing past the rolled length of material.
 
 ### **Use original additive rule for transformation kinetics (TRANS)**
 
-We have improved the transformation kinetics ([TRANS](/docs/en/keyword_documentation/t/trans/)) rule from version 6.0. With the new version, multiple transformations can occur at the same time and temperature for a given material. If the user does not want to use this new rule and wants to use the previous one, checking this box will allow this. (See Fig. 9.7.1.)
+We have improved the transformation kinetics ([TRANS]({{ '/docs/en/keyword_documentation/t/trans/' | relative_url }})) rule from version 6.0. With the new version, multiple transformations can occur at the same time and temperature for a given material. If the user does not want to use this new rule and wants to use the previous one, checking this box will allow this. (See Fig. 9.7.1.)
 
 ##  Error Tolerances [2D, 3D]
 
   * **Contact release method (CNTERR) [2D] :**
 
-In certain cases, the present contact algorithm does not release nodes that are touching a master surface within the time step. This option [CNTERR](/docs/en/keyword_documentation/c/cnterr/) allows the contact condition for a slave node to be released if it moves away from the master boundary by a prescribed distance. This value can be used as an alternative to the sliding error ([SLDERR](/docs/en/keyword_documentation/s/slderr/)). (See Fig. 9.7.2.)
+In certain cases, the present contact algorithm does not release nodes that are touching a master surface within the time step. This option [CNTERR]({{ '/docs/en/keyword_documentation/c/cnterr/' | relative_url }}) allows the contact condition for a slave node to be released if it moves away from the master boundary by a prescribed distance. This value can be used as an alternative to the sliding error ([SLDERR]({{ '/docs/en/keyword_documentation/s/slderr/' | relative_url }})). (See Fig. 9.7.2.)
 
   * **Geometry error (GEOERR) [2D, 3D]**
 
-This [GEOERR](/docs/en/keyword_documentation/g/geoerr/) value is an estimate of the error between discretized objects. The default value for this is sufficient for most of the general applications. (See Fig. 9.7.2.)
+This [GEOERR]({{ '/docs/en/keyword_documentation/g/geoerr/' | relative_url }}) value is an estimate of the error between discretized objects. The default value for this is sufficient for most of the general applications. (See Fig. 9.7.2.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image002.jpg' | relative_url }})
 
@@ -87,7 +87,7 @@ Advanced Error tolerances window
 
 ##  User defined variables (USRDEF) [2D, 3D]
 
-User defined variables ([USRDEF](/docs/en/keyword_documentation/u/usrdef/)) are 80 character string variables which are passed to user defined subroutines. Refer to the Chapter [56\. User Routines](/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/) for more information on how to use these variables. (See Fig. 9.7.3.)
+User defined variables ([USRDEF]({{ '/docs/en/keyword_documentation/u/usrdef/' | relative_url }})) are 80 character string variables which are passed to user defined subroutines. Refer to the Chapter [56\. User Routines]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/' | relative_url }}) for more information on how to use these variables. (See Fig. 9.7.3.)
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image003.jpg' | relative_url }})
 
@@ -95,7 +95,7 @@ User defined values
 
 ## Contact [3D]
 
-From DEFORM-V12 Contact tab has been added under Advanced page, Contact method ( [CNTMTH](/docs/en/keyword_documentation/c/cntmth/)) which was available for 3D object in Inter - object relations page has been moved to this page. Now we have 3 types of Contact methods:
+From DEFORM-V12 Contact tab has been added under Advanced page, Contact method ( [CNTMTH]({{ '/docs/en/keyword_documentation/c/cntmth/' | relative_url }})) which was available for 3D object in Inter - object relations page has been moved to this page. Now we have 3 types of Contact methods:
 
   * Penalty
   * Conforming coupling
@@ -125,7 +125,7 @@ New Augmented Lagrangian contact (ALC) method has been introduced from v12 for f
 
 Augmented Lagrangian - Contact method
 
-  * **Multiple deforming Method ([MULDEF](/docs/en/keyword_documentation/m/muldef/))**
+  * **Multiple deforming Method ([MULDEF]({{ '/docs/en/keyword_documentation/m/muldef/' | relative_url }}))**
 
 In Older versions to simulate Coupled die stress analysis we need to create DEF_LCDSTS.DAT file, now these options can be defined in GUI itself from DEFORM-V12 as shown in Fig. 9.7.7.
 
@@ -164,7 +164,7 @@ Even for ALE steady state simulation, user can define Strain update method and T
 ## Nodal Oscillations [2D]
 
   
-For Simulation control Advanced Nodal oscillations ([OSCTRL](/docs/en/keyword_documentation/o/osctrl/)) settings see Fig. 9.7.9.
+For Simulation control Advanced Nodal oscillations ([OSCTRL]({{ '/docs/en/keyword_documentation/o/osctrl/' | relative_url }})) settings see Fig. 9.7.9.
 
 ![]({{ '/assets/images/pre-processor/9_simulation_controls/9_7_advanced_options/9_7_image009.jpg' | relative_url }})
 
@@ -180,7 +180,7 @@ When slave nodes touch and separate from a master surface, after two oscillation
 
 ## Object Copy [3D]
 
-To replace the DEF_VIEWSYM.DAT file Object copy ([OBJCPY](/docs/en/keyword_documentation/o/objcpy/)) option has been developed under Simulation controls (See Fig. 9.7.10.). User can select the object arranged type (By Translating or By Mirroring) 
+To replace the DEF_VIEWSYM.DAT file Object copy ([OBJCPY]({{ '/docs/en/keyword_documentation/o/objcpy/' | relative_url }})) option has been developed under Simulation controls (See Fig. 9.7.10.). User can select the object arranged type (By Translating or By Mirroring) 
 
 **By Translating:** In Translatinn method user need to define the Distance vector value to copy object.
 
@@ -192,13 +192,13 @@ Object copy window
 
 **Related Topics:**
 
-[9.1. Simulation type Settings](/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/)   
-[9.2. Defining Step](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/)   
-[9.3. Stopping Controls](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/)   
-[9.4. Remesh Criteria](/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/)   
-[9.5. Solver Settings](/docs/en/pre_processor/9_simulation_controls/9_5_solver_settings/)   
-[9.6. Process Conditions](/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/)   
-[9.8. Control Files](/docs/en/pre_processor/9_simulation_controls/9_8_control_files/)   
-[9.9. Thermomechanical variables](/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/)
+[9.1. Simulation type Settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }})   
+[9.2. Defining Step]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})   
+[9.3. Stopping Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})   
+[9.4. Remesh Criteria]({{ '/docs/en/pre_processor/9_simulation_controls/9_4_remesh_criteria/' | relative_url }})   
+[9.5. Solver Settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }})   
+[9.6. Process Conditions]({{ '/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})   
+[9.8. Control Files]({{ '/docs/en/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }})   
+[9.9. Thermomechanical variables]({{ '/docs/en/pre_processor/9_simulation_controls/9_9_thermomechanical_variables/' | relative_url }})
 
-[9.10. Output controls](/docs/en/pre_processor/9_simulation_controls/9_10_output_controls/)
+[9.10. Output controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_10_output_controls/' | relative_url }})

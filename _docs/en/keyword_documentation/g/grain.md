@@ -61,4 +61,4 @@ The number of variable can be redefined such that the storage space can be easil
   
 RELATED TOPICS  
 ---  
-Keywords: [GRNDAT](/docs/en/keyword_documentation/g/grndat/)
+Keywords: [GRNDAT]({{ '/docs/en/keyword_documentation/g/grndat/' | relative_url }})

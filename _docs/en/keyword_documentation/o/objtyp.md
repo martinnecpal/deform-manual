@@ -30,4 +30,4 @@ Rigid objects are treated as non-deformable materials. Elastic objects are treat
   
 RELATED TOPICS  
 ---  
-[Object General Definition](/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/): Object Type Keywords: [OBJNAM](/docs/en/keyword_documentation/o/objnam/), [PDIE](/docs/en/keyword_documentation/p/pdie/)
+[Object General Definition]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}): Object Type Keywords: [OBJNAM]({{ '/docs/en/keyword_documentation/o/objnam/' | relative_url }}), [PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }})

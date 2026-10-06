@@ -69,4 +69,4 @@ During a forging type of simulation, as height of the billet reduces, a constant
   
 RELATED TOPICS  
 ---  
-[Step Definition](/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/) Keyword: [STEPDEF](/docs/sk/keyword_documentation/s/stpdef/), [DTMAX](/docs/sk/keyword_documentation/d/dtmax/), [DSMAX](/docs/sk/keyword_documentation/d/dsmax/)
+[Step Definition]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}) Keyword: [STEPDEF]({{ '/docs/sk/keyword_documentation/s/stpdef/' | relative_url }}), [DTMAX]({{ '/docs/sk/keyword_documentation/d/dtmax/' | relative_url }}), [DSMAX]({{ '/docs/sk/keyword_documentation/d/dsmax/' | relative_url }})

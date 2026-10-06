@@ -39,7 +39,7 @@ The edge boundary constraint code (bcc) options are: 2:edge pressure 9:local def
   
 RELATED TOPICS  
 ---  
-|  [Boundary constraints](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/), [Inter-object contact](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)  
+|  [Boundary constraints]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}), [Inter-object contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})  
 ---  
   
-Keywords: [ECDEFN (2D)](/docs/en/keyword_documentation/e/ecdefn/), [ECDEFN (3D)](/docs/en/keyword_documentation/e/ecdefn_3d/), [ECPRES (2D)](/docs/en/keyword_documentation/e/ecpres/), [ECPRES (3D)](/docs/en/keyword_documentation/e/ecpres_3d/), [LOCDEF (2D)](/docs/en/keyword_documentation/l/locdef/), [LOCDEF (3D)](/docs/en/keyword_documentation/l/locdef_3d/)
+Keywords: [ECDEFN (2D)]({{ '/docs/en/keyword_documentation/e/ecdefn/' | relative_url }}), [ECDEFN (3D)]({{ '/docs/en/keyword_documentation/e/ecdefn_3d/' | relative_url }}), [ECPRES (2D)]({{ '/docs/en/keyword_documentation/e/ecpres/' | relative_url }}), [ECPRES (3D)]({{ '/docs/en/keyword_documentation/e/ecpres_3d/' | relative_url }}), [LOCDEF (2D)]({{ '/docs/en/keyword_documentation/l/locdef/' | relative_url }}), [LOCDEF (3D)]({{ '/docs/en/keyword_documentation/l/locdef_3d/' | relative_url }})

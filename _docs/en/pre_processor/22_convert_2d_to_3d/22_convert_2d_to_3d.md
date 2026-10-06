@@ -13,7 +13,7 @@ title: "22. Convert 2D to 3D"
 
 The integrated system can handle both 2D DB and 3D DB, one DB can contain either 2D result, 3D result, or hybrid 2D/3D result. Each step will be either 2D or 3D. The Integrated system offers streamlined data flow quick setup of 3D problem from 2D problem, quick setup of 2D problem from 3D problem (under development) and easy comparison between 2D and 3D result
 
-Pre-processor offers dual definitions, unified [simulation controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/), built in conversion module and model conversion from 2D to 3D.
+Pre-processor offers dual definitions, unified [simulation controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}), built in conversion module and model conversion from 2D to 3D.
 
 Integrated Database offers unified storage to store/retrieve 2D/3D simulation data. The Integrated DB will have information about dimension and version number for each step, and stores 2D and 3D simulation to a single DB.
 
@@ -59,7 +59,7 @@ The fast creation of 3D mesh from 2D mesh can be accomplished using the built in
 
   1. **Geometry** : If only geometry needs to be converted, number of sections has to be defined and check output geometry check box to turned on.
 
-  1. **Mesh** : In case of meshed objects, turn on output mesh and select mesh type. Enter number of 3D elements for meshed objects. Advanced button can be used to assign the various 3D mesh parameters. For more information please refer [13.2. 3D Tet Mesh Data Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/) and [13.3. 3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/).
+  1. **Mesh** : In case of meshed objects, turn on output mesh and select mesh type. Enter number of 3D elements for meshed objects. Advanced button can be used to assign the various 3D mesh parameters. For more information please refer [13.2. 3D Tet Mesh Data Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}) and [13.3. 3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}).
 
   1. **Preview![]({{ '/assets/icons/pre_icons/converter_preview_button.jpg' | relative_url }}) **: This can be used to preview the objects.
 
@@ -87,7 +87,7 @@ Mesh density window handling
 
 The user can use interpolation module directly from the built in conversion window to plot the stress, strain, temperature values.
 
-When the model is converted from 2D to 3D the [symmetry plane](../14_boundary_conditions/14_1_symmetry_boundary_conditions.htm#Fig._14.1.1_Symmetry_plane_BCC_for_quarter_symmetry_model), [BCC](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/) assignments and materials are assigned automatically to the respective objects. (See [Fig. 22.7.](22_convert_2d_to_3d.htm#Fig_22_7_Automated_symmetry_plane_assignment_to_die/workpiece_geometry_and_boundary_code_assignment_for_mesh))
+When the model is converted from 2D to 3D the [symmetry plane](../14_boundary_conditions/14_1_symmetry_boundary_conditions.htm#Fig._14.1.1_Symmetry_plane_BCC_for_quarter_symmetry_model), [BCC]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}) assignments and materials are assigned automatically to the respective objects. (See [Fig. 22.7.](22_convert_2d_to_3d.htm#Fig_22_7_Automated_symmetry_plane_assignment_to_die/workpiece_geometry_and_boundary_code_assignment_for_mesh))
 
 ![]({{ '/assets/images/pre-processor/22_convert_2d_to_3d/image007.jpg' | relative_url }})
 
@@ -114,16 +114,16 @@ The 2D Geo is converted in to 3D Geo by revaluing in Z direction
 
 **Related Topics:**
 
-[2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/)
+[2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }})
 
-[3D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+[3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
-[2D Mesh Data Generation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+[2D Mesh Data Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
-[3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/)
+[3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }})
 
-[3D Brick Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
+[3D Brick Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }})
 
-[Boundary condition](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[Boundary condition]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[Simulation controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+[Simulation controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})

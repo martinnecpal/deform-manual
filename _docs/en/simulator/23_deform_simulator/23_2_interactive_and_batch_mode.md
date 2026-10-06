@@ -27,16 +27,16 @@ If batch of problems to be simulated then after completing the previous simulati
 
 Interactive submission of simulations requires user monitoring to start simulation one after the other however user can use ![]({{ '/assets/icons/simulator_icons/gui_add_to_queue.jpg' | relative_url }}) option from GUI or from Run options dialog ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}) to pick automatically each job one after the other or simultaneously based on the simulation server settings.
 
-The problem running status can be monitored from the Process monitor and also for additional options related to executing of interactive and batch mode simulations refer to chapter [23.4. Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/).
+The problem running status can be monitored from the Process monitor and also for additional options related to executing of interactive and batch mode simulations refer to chapter [23.4. Process Monitor]({{ '/docs/en/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }}).
 
-From version 11.0 users can submit jobs for simulation using remote machine Simulation servers in batch mode from Run options dialog. (Refer section [6.2. MO Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)) This will temporarily move the jobs to remote simulation server machine for simulation, after completion of simulation it copies back the project, so it reduces the load on the local machine.
+From version 11.0 users can submit jobs for simulation using remote machine Simulation servers in batch mode from Run options dialog. (Refer section [6.2. MO Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})) This will temporarily move the jobs to remote simulation server machine for simulation, after completion of simulation it copies back the project, so it reduces the load on the local machine.
 
 ## Queuing Simulations
 
 **Running Batch Queue Server and Simulation Server**
 
 ****  
-(Please refer to[Chapter 23.6. Running Shared folder Simulations](/docs/en/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/) on how to setup, simulation servers, batch queue servers and handle mapped drives on a network to run DEFORM simulations)
+(Please refer to[Chapter 23.6. Running Shared folder Simulations]({{ '/docs/en/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/' | relative_url }}) on how to setup, simulation servers, batch queue servers and handle mapped drives on a network to run DEFORM simulations)
 
 (Installing this Batch Queue and Simulation server services is a part of the default installation process, and the details indicated here are only standby options, if the given system has any issues/restrictions with handling the services)
 
@@ -183,16 +183,16 @@ Simulation Run types from Run options for normal projects
 
 **Related Topics:**
 
-[23.3 Simulation Graphics](/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/)
+[23.3 Simulation Graphics]({{ '/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/' | relative_url }})
 
-[23.4. Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/)
+[23.4. Process Monitor]({{ '/docs/en/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }})
 
-[23.5. Setting up MPICH](/docs/en/simulator/23_deform_simulator/23_5_setting_up_mpich/)
+[23.5. Setting up MPICH]({{ '/docs/en/simulator/23_deform_simulator/23_5_setting_up_mpich/' | relative_url }})
 
-[23.8. Trouble Shooting Simulation Running](/docs/en/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/)
+[23.8. Trouble Shooting Simulation Running]({{ '/docs/en/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/' | relative_url }})
 
-[Pre-Processor](/docs/en/post_processor/post_processor_mainpg/)
+[Pre-Processor]({{ '/docs/en/post_processor/post_processor_mainpg/' | relative_url }})
 
-[Integrated Manufacturing Process (MO)](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/)
+[Integrated Manufacturing Process (MO)]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/' | relative_url }})
 
-[Post -Processor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[Post -Processor]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})

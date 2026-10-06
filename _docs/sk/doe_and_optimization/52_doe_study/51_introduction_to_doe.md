@@ -25,10 +25,10 @@ DOE Preprocessor is where user needs to define the DOE variables, range of fluct
 
 **Related Topics:**
 
-[52.1. DOE and DOE Output Operation Setup](/docs/sk/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/)
+[52.1. DOE and DOE Output Operation Setup]({{ '/docs/sk/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/' | relative_url }})
 
-[52.2. DOE Simulation Running and Monitoring](/docs/sk/doe_and_optimization/52_doe_study/52_2_doe_simulation_running_and_monitoring/)
+[52.2. DOE Simulation Running and Monitoring]({{ '/docs/sk/doe_and_optimization/52_doe_study/52_2_doe_simulation_running_and_monitoring/' | relative_url }})
 
-[54.1. DOE Post Processor](/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/)
+[54.1. DOE Post Processor]({{ '/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/' | relative_url }})
 
-[2D DOE Lab1](/docs/sk/labs/doe_labs/2d_doe_lab/2d_doe_lab1/)
+[2D DOE Lab1]({{ '/docs/sk/labs/doe_labs/2d_doe_lab/2d_doe_lab1/' | relative_url }})

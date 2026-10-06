@@ -40,4 +40,4 @@ If no value is specified for DefTemp, it is assumed to be zero. Nodal temperatur
   
 RELATED TOPICS  
 ---  
-[Object Nodal Data](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/):Thermal Keyword: [BCCTMP](/docs/en/keyword_documentation/b/bcctmp/), [BCCFNC](/docs/en/keyword_documentation/b/bccfnc/)
+[Object Nodal Data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}):Thermal Keyword: [BCCTMP]({{ '/docs/en/keyword_documentation/b/bcctmp/' | relative_url }}), [BCCFNC]({{ '/docs/en/keyword_documentation/b/bccfnc/' | relative_url }})

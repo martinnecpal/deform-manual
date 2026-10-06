@@ -49,7 +49,7 @@ Report Object tree
 
 ## Chapter
 
-Chapter contains Sections with various type of outputs such as point tracking, contour plot of state variables, graphs,.. etc and user can select operation range that can be added to report as shown in Fig. 28.3. For more information related to Editing chapter Refer [28.2. Editing Chapters](/docs/en/post_processor/28_report_generation/28_1_editing_chapters/).
+Chapter contains Sections with various type of outputs such as point tracking, contour plot of state variables, graphs,.. etc and user can select operation range that can be added to report as shown in Fig. 28.3. For more information related to Editing chapter Refer [28.2. Editing Chapters]({{ '/docs/en/post_processor/28_report_generation/28_1_editing_chapters/' | relative_url }}).
 
 ![]({{ '/assets/images/post_processor/28_report_generation/image003.jpg' | relative_url }})
 
@@ -376,8 +376,8 @@ Note: In PPT file 3D PDF output will not generated, except 3D PDF output other o
 
 **Related Topics:**
 
-[Report Generation Setup in MO Preprocessor](/docs/en/operation_templates/41_report_generation/41_1_report_generation/)
+[Report Generation Setup in MO Preprocessor]({{ '/docs/en/operation_templates/41_report_generation/41_1_report_generation/' | relative_url }})
 
-[25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})
 
-[27\. Introduction to Report Generation](/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/)
+[27\. Introduction to Report Generation]({{ '/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/' | relative_url }})

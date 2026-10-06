@@ -59,4 +59,4 @@ If a non-zero value is assigned to the maximum time step t_DefMin and the minimu
   
 RELATED TOPICS  
 ---  
-[Step Definition](/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/) Keyword: [STPDEF](/docs/en/keyword_documentation/s/stpdef/), [DTMAX](/docs/en/keyword_documentation/d/dtmax/), [DSMAX](/docs/en/keyword_documentation/d/dsmax/)
+[Step Definition]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}) Keyword: [STPDEF]({{ '/docs/en/keyword_documentation/s/stpdef/' | relative_url }}), [DTMAX]({{ '/docs/en/keyword_documentation/d/dtmax/' | relative_url }}), [DSMAX]({{ '/docs/en/keyword_documentation/d/dsmax/' | relative_url }})

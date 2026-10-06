@@ -110,7 +110,7 @@ Lighting Settings properties window
 
 Light Advanced Properties window
 
-Refer Chapter[ 8\. Pre-Processor Layout](/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/) section [Set Lighting Property](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Set_Lighting_Property).
+Refer Chapter[ 8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}) section [Set Lighting Property](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Set_Lighting_Property).
 
 ## Windows Menu
 
@@ -132,4 +132,4 @@ Post-processor Windows menu
 
 **Related Topics:**
 
-[8\. Pre-Processor Layout](/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/)
+[8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }})

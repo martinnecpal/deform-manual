@@ -30,4 +30,4 @@ Applicable Object types: [Rigid](../../pre_processor/11_general_object_data_defi
   
 RELATED TOPICS  
 ---  
-[Object General](/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/) Definition: Object Name Related keyword: [OBJTYP (2D)](/docs/en/keyword_documentation/o/objtyp/), [OBJTYP (3D)](/docs/en/keyword_documentation/o/objtyp_3d/)
+[Object General]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}) Definition: Object Name Related keyword: [OBJTYP (2D)]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }}), [OBJTYP (3D)]({{ '/docs/en/keyword_documentation/o/objtyp_3d/' | relative_url }})

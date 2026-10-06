@@ -97,13 +97,13 @@ Do stromu operácií bol pridaný nový objekt pre objekt „Cutter“
 
 ### Definícia objektu typu Boolean
 
-V okne „Objekt“ (pozri obr. 45.1.6) nie je potrebné meniť žiadne nastavenia; obsahuje podrobnosti o type objektu. V prípade booleovského objektu budú k dispozícii iba okná s okrajovými podmienkami deformácie (BCC) a okná na inicializáciu stavových premenných; používateľ môže zmeniť BCC v pláne pred booleovským výpočtom zaškrtnutím políčka „Redefine BCC“ (pozri obr. 45.1.7.). Ďalšie podrobnosti o rôznych definíciách BCC a ich definovaní nájdete v [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+V okne „Objekt“ (pozri obr. 45.1.6) nie je potrebné meniť žiadne nastavenia; obsahuje podrobnosti o type objektu. V prípade booleovského objektu budú k dispozícii iba okná s okrajovými podmienkami deformácie (BCC) a okná na inicializáciu stavových premenných; používateľ môže zmeniť BCC v pláne pred booleovským výpočtom zaškrtnutím políčka „Redefine BCC“ (pozri obr. 45.1.7.). Ďalšie podrobnosti o rôznych definíciách BCC a ich definovaní nájdete v [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0007.jpg' | relative_url }})
 
 Okno s definíciou rozvrhu BCC pre booleovský objekt
 
-Podobne je možné inicializovať stavové premenné pred booleovskými premennými zaškrtnutím príslušných políčok, ako je znázornené na obr. 45.1.8. Ďalšie informácie o inicializácii stavových premenných nájdete v [17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/).
+Podobne je možné inicializovať stavové premenné pred booleovskými premennými zaškrtnutím príslušných políčok, ako je znázornené na obr. 45.1.8. Ďalšie informácie o inicializácii stavových premenných nájdete v [17\. Object Data Initialize]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0008.jpg' | relative_url }})
 
@@ -123,7 +123,7 @@ Okno objektu „Cutter“
 
 Jednoduchú geometriu rezacieho nástroja je možné vytvoriť z geometrických primitív alebo pomocou možností 2D geometrického editora, ako je znázornené na obr. 45.1.10. Dokonca aj 2D geometrie je možné importovať z formátov GEO, IGS a DXF. V závislosti od typu geometrie predchádzajúcej operácie budú v booleovskej operácii k dispozícii príslušné geometrické primitíva. Keďže objekt rezača nevyžaduje sieť, možnosť „Extrahovať ohraničenie zo siete“ sa neaktivuje.
 
-Ďalšie informácie o dostupnej možnosti geometrie nájdete v popise volieb [12.1. 2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) a [12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/). V tomto príklade vytvoríme 2D geometriu pomocou voľby ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}), ako je znázornené na obr. 45.1.11.
+Ďalšie informácie o dostupnej možnosti geometrie nájdete v popise volieb [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) a [12.2. 2D Geometry Data Editing]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }}). V tomto príklade vytvoríme 2D geometriu pomocou voľby ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}), ako je znázornené na obr. 45.1.11.
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0010.jpg' | relative_url }})
 
@@ -217,13 +217,13 @@ Do stromu operácií bol pridaný nový objekt pre objekt „Cutter“
 
 ###  Definovanie booleovského objektu
 
-V okne „Objekt“ (pozri obr. 45.1.21.) nie je potrebné meniť žiadne nastavenia; obsahuje podrobnosti o type objektu. Pre booleovský objekt budú k dispozícii iba okná s okrajovými podmienkami (BCC) typu Symetria a Deformácia a okná na inicializáciu stavových premenných. Používateľ môže zmeniť pokročilé okrajové podmienky (Advanced BCC) v pláne pred booleovským výpočtom zaškrtnutím políčka „Redefine BCC“ (pozri obr. 45.1.22.). Ďalšie podrobnosti o rôznych definíciách okrajových podmienok a ich definovaní nájdete v [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+V okne „Objekt“ (pozri obr. 45.1.21.) nie je potrebné meniť žiadne nastavenia; obsahuje podrobnosti o type objektu. Pre booleovský objekt budú k dispozícii iba okná s okrajovými podmienkami (BCC) typu Symetria a Deformácia a okná na inicializáciu stavových premenných. Používateľ môže zmeniť pokročilé okrajové podmienky (Advanced BCC) v pláne pred booleovským výpočtom zaškrtnutím políčka „Redefine BCC“ (pozri obr. 45.1.22.). Ďalšie podrobnosti o rôznych definíciách okrajových podmienok a ich definovaní nájdete v [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0022.jpg' | relative_url }})
 
 Okno s definíciou BCC pre booleovský objekt
 
-Podobne je možné inicializovať stavové premenné pred booleovskými premennými zaškrtnutím príslušných políčok, ako je znázornené na obr. 45.1.23. Ďalšie informácie o inicializácii stavových premenných nájdete v [17\. Object Data Initialize](/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/).
+Podobne je možné inicializovať stavové premenné pred booleovskými premennými zaškrtnutím príslušných políčok, ako je znázornené na obr. 45.1.23. Ďalšie informácie o inicializácii stavových premenných nájdete v [17\. Object Data Initialize]({{ '/docs/en/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0023.jpg' | relative_url }})
 
@@ -241,7 +241,7 @@ Okno objektu „Cutter“
 
 ### Definovanie geometrie rezačky
 
-Jednoduchú geometriu rezačky je možné vytvoriť pomocou geometrických primitív alebo prostredníctvom možností 3D geometrického editora, ako je znázornené na obr. 45.1.25. Dokonca aj 3D geometrie je možné importovať z formátov GEO, STL, PDA, NAS a UNV. Ďalšie informácie o dostupných možnostiach geometrie nájdete v [12.3. 3D Geometry Data Defining ](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/). V tomto príklade importujeme 3D geometriu pre objekt noža.
+Jednoduchú geometriu rezačky je možné vytvoriť pomocou geometrických primitív alebo prostredníctvom možností 3D geometrického editora, ako je znázornené na obr. 45.1.25. Dokonca aj 3D geometrie je možné importovať z formátov GEO, STL, PDA, NAS a UNV. Ďalšie informácie o dostupných možnostiach geometrie nájdete v [12.3. 3D Geometry Data Defining ]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}). V tomto príklade importujeme 3D geometriu pre objekt noža.
 
 ![]({{ '/assets/images/operation_templates/45_boolean_operator/45_1_boolean_operator/image0025.jpg' | relative_url }})
 
@@ -271,7 +271,7 @@ Metóda založená na geometrii – náhľad boolovských operácií
 
 Metóda pevnej siete – náhľad boolovských operácií
 
-Ďalšie informácie týkajúce sa booleovskej možnosti nájdete v [18.1. Boolean](/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/). 
+Ďalšie informácie týkajúce sa booleovskej možnosti nájdete v [18.1. Boolean]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }}). 
 
 ### Vytvoriť databázu
 
@@ -307,6 +307,6 @@ Používateľ môže pokračovať v ďalších operáciách pridaním príslušn
 
 **Súvisiace témy:**
 
-[18.1. Boolean](/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/)
+[18.1. Boolean]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }})
 
-[45\. Introduction to Boolean Operation](/docs/en/operation_templates/45_boolean_operation/43_introduction_to_boolean_operation/)
+[45\. Introduction to Boolean Operation]({{ '/docs/en/operation_templates/45_boolean_operation/43_introduction_to_boolean_operation/' | relative_url }})

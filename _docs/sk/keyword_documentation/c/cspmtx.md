@@ -32,8 +32,8 @@ CSPMTX: This keyword is to save the transformation matrix of the sketch plane, u
   
 REMARKS  
 ---  
-In the shape rolling template, 2D roll cross-sectional geometry is saved in each task folder. When it is saved, [DIEGEO](/docs/sk/keyword_documentation/d/diegeo_3d/), TPLOGY, CSPMTX are saved together in “ShapeRoll2DGeo.KEY” file. Applicable object types: Roll objects in Shape Rolling  
+In the shape rolling template, 2D roll cross-sectional geometry is saved in each task folder. When it is saved, [DIEGEO]({{ '/docs/sk/keyword_documentation/d/diegeo_3d/' | relative_url }}), TPLOGY, CSPMTX are saved together in “ShapeRoll2DGeo.KEY” file. Applicable object types: Roll objects in Shape Rolling  
   
 RELATED TOPICS  
 ---  
-Keywords: [DIEGEO (2D)](/docs/sk/keyword_documentation/d/diegeo/), [DIEGEO(3D)](/docs/sk/keyword_documentation/d/diegeo_3d/), [TPLOGY(2D)](/docs/sk/keyword_documentation/t/tplogy/)
+Keywords: [DIEGEO (2D)]({{ '/docs/sk/keyword_documentation/d/diegeo/' | relative_url }}), [DIEGEO(3D)]({{ '/docs/sk/keyword_documentation/d/diegeo_3d/' | relative_url }}), [TPLOGY(2D)]({{ '/docs/sk/keyword_documentation/t/tplogy/' | relative_url }})

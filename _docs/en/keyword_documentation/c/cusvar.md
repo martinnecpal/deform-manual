@@ -42,4 +42,4 @@ This keyword is used together with CVNAME which stores custom variable’s name 
   
 RELATED TOPICS  
 ---  
-Related keywords: [CVNAME](/docs/en/keyword_documentation/c/cvname/), [USRNOD](/docs/en/keyword_documentation/u/usrnod/), [USRELM](/docs/en/keyword_documentation/u/usrelm/), [UNNAME](/docs/en/keyword_documentation/u/unname/)
+Related keywords: [CVNAME]({{ '/docs/en/keyword_documentation/c/cvname/' | relative_url }}), [USRNOD]({{ '/docs/en/keyword_documentation/u/usrnod/' | relative_url }}), [USRELM]({{ '/docs/en/keyword_documentation/u/usrelm/' | relative_url }}), [UNNAME]({{ '/docs/en/keyword_documentation/u/unname/' | relative_url }})

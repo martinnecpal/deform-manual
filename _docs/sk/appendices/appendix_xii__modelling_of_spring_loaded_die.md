@@ -71,4 +71,4 @@ Sketch of spring-loaded die simulation with spring-loaded die set with movement 
 
 **Related Topics:**
 
-[Movement Controls](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[Movement Controls]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})

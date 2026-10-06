@@ -135,7 +135,7 @@ NOMENCLATURE
 
 RELATED TOPICS  
 ---  
-Keywords: [GRAIN](/docs/sk/keyword_documentation/g/grain/)  
+Keywords: [GRAIN]({{ '/docs/sk/keyword_documentation/g/grain/' | relative_url }})  
   
 (Model = 1, Avrami model)
 

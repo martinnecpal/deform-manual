@@ -222,7 +222,7 @@ Control points setting of bearing surface
 
 Modified die geometry after bearing length adjustment
 
-For more information please refer to the [steady state extrusion lab.](/docs/en/labs/extrusion_labs/steady_state_extrusion_lab1/)
+For more information please refer to the [steady state extrusion lab.]({{ '/docs/en/labs/extrusion_labs/steady_state_extrusion_lab1/' | relative_url }})
 
 ## Defining Extrusion Billet
 
@@ -234,7 +234,7 @@ Workpiece object page
 
 ### Workpiece Geometry Page
 
-The workpiece geometry is created using the "Define primitive" or we can import the geometry using the import options. In case of ALE type simulation setup, workpiece geometry can be created using Boolean label after creating the dies geometry. For more information on other options in “Geometry” page, please refer [12.3. 3D Geometry Data Defining.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+The workpiece geometry is created using the "Define primitive" or we can import the geometry using the import options. In case of ALE type simulation setup, workpiece geometry can be created using Boolean label after creating the dies geometry. For more information on other options in “Geometry” page, please refer [12.3. 3D Geometry Data Defining.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image020.jpg' | relative_url }})
 
@@ -311,7 +311,7 @@ Free Surface BCC of the Workpiece
 
 ### Property
 
-Miscellaneous object parameters, which affect either thermo-mechanical behaviour of the object or numerical solution behaviour are specified in the Object-Properties window. (See Fig. 31.1.27.). Volume compensation in one of the important parameters to be set in Lagrangian type of extrusion simulation, it can be activated by selecting one of the options under “Target Volume” and calculating current object volume using ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) button. For more information about options in “**Property** ” page, please refer [16\. Object properties.](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+Miscellaneous object parameters, which affect either thermo-mechanical behaviour of the object or numerical solution behaviour are specified in the Object-Properties window. (See Fig. 31.1.27.). Volume compensation in one of the important parameters to be set in Lagrangian type of extrusion simulation, it can be activated by selecting one of the options under “Target Volume” and calculating current object volume using ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) button. For more information about options in “**Property** ” page, please refer [16\. Object properties.]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image036.jpg' | relative_url }})
 
@@ -320,7 +320,7 @@ Property page
 ### Initialize
 
 In Initialize window, few state variables that are commonly used such as temperature, strain, stress, damage, velocity, displacement, density and microstructure grain size and particle size are made available for initialization.  
-User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 31.1.28. shows various state variables that are available in “Initialize” window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [Object node variables](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [Object element variables](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+User can initialize the values for these state variables by defining in the field next to it and clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 31.1.28. shows various state variables that are available in “Initialize” window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [Object node variables]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) and [Object element variables]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image027.jpg' | relative_url }})
 
@@ -337,7 +337,7 @@ Built-in Flownet page
 
 ## Controls
 
-User can position the objects using ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. Various positioning options are available to position the objects as shown in Fig. 31.1.30., for more information on these options please refer [19\. Object positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+User can position the objects using ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. Various positioning options are available to position the objects as shown in Fig. 31.1.30., for more information on these options please refer [19\. Object positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image028.jpg' | relative_url }})
 
@@ -355,7 +355,7 @@ Full Contact Generation pop-up
   
 **System** : When this radio button is selected, system assigns default inter-object relationships. Also, user can add the lubricants if necessary, by selecting Add New from pull down menu and clicking on "Edit" button or user can load the required lubricants from the library for the simulation.  
 **User** : By default, user radio button will be selected for Extrusion operation. User can add relationships by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button as shown in Fig. 31.1.32. User can modify the value of each relation by selecting it and clicking on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }})button. User can use ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to assign same values to all relations. User can click on ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) to calculate contact tolerance. User can click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact relation between objects that have contact relations defined. User can turn on check box next to contact relation to define sticking contact.  
-For more information on contact dialog, please refer [20.Inter-Object Relations.](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+For more information on contact dialog, please refer [20.Inter-Object Relations.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image030.jpg' | relative_url }})
 
@@ -369,12 +369,12 @@ In step controls, user can define the number of steps, step increment and Time/S
 
 Number of steps:**Number of steps to be simulated can be defined here. If the** simulation stops earlier due to stopping criteria then, next operation starting step will be continuation from previous operation.
 
-**Step increment** : The step increment ([STPINC](/docs/en/keyword_documentation/s/stpinc/)) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
+**Step increment** : The step increment ([STPINC]({{ '/docs/en/keyword_documentation/s/stpinc/' | relative_url }})) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
 
 **Time per Step:** If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.  
 Stroke per Step: If stroke per step is specified, the primary die will move by specified amount in each time step. The total movement of the primary die will be the displacement per step multiplied by the total number of steps.
 
-**Primary Die:** The primary die ([PDIE](/docs/en/keyword_documentation/p/pdie/)) is the object for which many stopping and stepping criteria are defined. For example, stopping distance based on primary die stroke. When the stroke of the object defined as the primary die reaches the value of primary die displacement, the simulation will be stopped even though more steps were specified. The Step by Stroke feature determines step size based on the movement of the primary die.
+**Primary Die:** The primary die ([PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }})) is the object for which many stopping and stepping criteria are defined. For example, stopping distance based on primary die stroke. When the stroke of the object defined as the primary die reaches the value of primary die displacement, the simulation will be stopped even though more steps were specified. The Step by Stroke feature determines step size based on the movement of the primary die.
 
 The primary die is usually assigned to the object most closely controlled by the machinery. For example, the die attached to the ram of a hydraulic press would be designated as the primary object.
 
@@ -385,7 +385,7 @@ Step Controls in GUIDED Mode
 ###   
 EXPERT MODE
 
-The user can define the step controls data using the expert mode simulation controls as shown in the Fig. 31.1.34. For more information and description about options in expert mode simulation controls, please refer [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+The user can define the step controls data using the expert mode simulation controls as shown in the Fig. 31.1.34. For more information and description about options in expert mode simulation controls, please refer [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image032.jpg' | relative_url }})
 
@@ -411,16 +411,16 @@ Generate DB page
 
 **Related Topics:**
 
-[9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+[9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[16\. Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+[16\. Object Properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+[19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
-[20\. Inter-Object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[20\. Inter-Object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-[Steady State Extrusion Lab](/docs/en/labs/extrusion_labs/steady_state_extrusion_lab1/)
+[Steady State Extrusion Lab]({{ '/docs/en/labs/extrusion_labs/steady_state_extrusion_lab1/' | relative_url }})
 
-[ALE Extrusion Lab](/docs/en/labs/extrusion_labs/ale_extrusion_lab1/)
+[ALE Extrusion Lab]({{ '/docs/en/labs/extrusion_labs/ale_extrusion_lab1/' | relative_url }})
 
-[Lagrangian Extrusion Lab](/docs/en/labs/extrusion_labs/lagrangian_extrusion_lab1/)
+[Lagrangian Extrusion Lab]({{ '/docs/en/labs/extrusion_labs/lagrangian_extrusion_lab1/' | relative_url }})

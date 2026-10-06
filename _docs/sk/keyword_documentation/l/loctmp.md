@@ -38,4 +38,4 @@ The keyword defines the heat exchange information such as temperature, convectio
   
 RELATED TOPICS  
 ---  
-[Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/): Advanced Thermal Keywords: [ENVTMP](/docs/sk/keyword_documentation/e/envtmp/), [IHTCOF (2D)](/docs/sk/keyword_documentation/i/ihtcof/), [IHTCOF (3D)](/docs/sk/keyword_documentation/i/ihtcof_3d/)
+[Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}): Advanced Thermal Keywords: [ENVTMP]({{ '/docs/sk/keyword_documentation/e/envtmp/' | relative_url }}), [IHTCOF (2D)]({{ '/docs/sk/keyword_documentation/i/ihtcof/' | relative_url }}), [IHTCOF (3D)]({{ '/docs/sk/keyword_documentation/i/ihtcof_3d/' | relative_url }})

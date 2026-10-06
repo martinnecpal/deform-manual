@@ -37,4 +37,4 @@ If no name is specified for a user element variable, an empty line will exist in
   
 RELATED TOPICS  
 ---  
-Keywords: [USRNOD](/docs/en/keyword_documentation/u/usrnod/), [UNNAME](/docs/en/keyword_documentation/u/unname/).
+Keywords: [USRNOD]({{ '/docs/en/keyword_documentation/u/usrnod/' | relative_url }}), [UNNAME]({{ '/docs/en/keyword_documentation/u/unname/' | relative_url }}).

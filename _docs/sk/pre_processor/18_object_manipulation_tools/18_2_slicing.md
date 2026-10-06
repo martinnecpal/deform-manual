@@ -53,8 +53,8 @@ Okno na krájanie
 
 **Súvisiace témy:**
 
-[18\. Object Manipulation Tools](/docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/)
+[18\. Object Manipulation Tools]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/' | relative_url }})
 
-[18.1 Boolean Operation](/docs/sk/pre_processor/18_object_manipulation_tools/18_1_boolean/)
+[18.1 Boolean Operation]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }})
 
-[18.3. Mirror Merge](/docs/sk/pre_processor/18_object_manipulation_tools/18_3_mirror_merge/)****
+[18.3. Mirror Merge]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_3_mirror_merge/' | relative_url }})****

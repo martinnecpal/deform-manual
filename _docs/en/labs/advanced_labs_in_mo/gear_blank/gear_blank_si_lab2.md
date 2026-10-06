@@ -67,4 +67,4 @@ Select the Generate DB in operation tree and click on ![]({{ '/assets/icons/pre_
 
 The workpiece at this point will be the input for the second operation. Factors such as accurate shape, strain (work hardening), damage, metal flow, temperature distribution (when calculated) and other information will be retained.
 
-Click on [Gear Blank SI Lab 3](/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab3/) to continue the sequential 3D operation.
+Click on [Gear Blank SI Lab 3]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab3/' | relative_url }}) to continue the sequential 3D operation.

@@ -30,4 +30,4 @@ The conversion fraction would typically be 0.9 ≤ Factor ≤ 0.95. Applicable s
   
 RELATED TOPICS  
 ---  
-[Plastic object](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic) Keyword: [UNTE2H](/docs/sk/keyword_documentation/u/unte2h/)
+[Plastic object](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic) Keyword: [UNTE2H]({{ '/docs/sk/keyword_documentation/u/unte2h/' | relative_url }})

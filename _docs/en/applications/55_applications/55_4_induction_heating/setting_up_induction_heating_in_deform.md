@@ -22,7 +22,7 @@ This documentation is assumes familiarity with induction heating and with the DE
 
 Turning 'on' induction heating
 
-  1. **Material properties** – The three material properties to provide for induction heating are electrical resistivity, relative magnetic permeability and relative magnetic permittivity (See Fig. IND.2). These material properties should be defined for the coil material, the air and the material of the billet being heated. The resistivity indicates the amount a given material resists an electrical current over an applied voltage difference. The relative permeability defines the ability of a material to increase the density of magnetic flux lines as compared to air. The relative permittivity defines the capacitance of a material. For more information related to units, refer chapter [1.9. Units](/docs/en/about_deform/1_introduction_to_deform/1_9_units/).
+  1. **Material properties** – The three material properties to provide for induction heating are electrical resistivity, relative magnetic permeability and relative magnetic permittivity (See Fig. IND.2). These material properties should be defined for the coil material, the air and the material of the billet being heated. The resistivity indicates the amount a given material resists an electrical current over an applied voltage difference. The relative permeability defines the ability of a material to increase the density of magnetic flux lines as compared to air. The relative permittivity defines the capacitance of a material. For more information related to units, refer chapter [1.9. Units]({{ '/docs/en/about_deform/1_introduction_to_deform/1_9_units/' | relative_url }}).
 
 ![]({{ '/assets/images/applications/55_induction_heating/setting_up_induction_heating_in_deform/image0002.jpg' | relative_url }})
 
@@ -60,12 +60,12 @@ Defining the induction heating settings on the coil objects
 
 **Related Topics:**
 
-[1.9 Units](/docs/en/about_deform/1_introduction_to_deform/1_9_units/)
+[1.9 Units]({{ '/docs/en/about_deform/1_introduction_to_deform/1_9_units/' | relative_url }})
 
-[Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+[Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[Material Properties](/docs/en/pre_processor/10_material_data/10_material_data/)
+[Material Properties]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+[Object Properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[Post Processing](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[Post Processing]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})

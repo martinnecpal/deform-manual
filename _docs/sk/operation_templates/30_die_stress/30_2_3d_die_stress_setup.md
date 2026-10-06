@@ -94,7 +94,7 @@ Okienko hornej matrice
   
 **Geometria**
 
-Používateľ môže definovať novú geometriu pomocou možností v okne geometrie. Režim s návodom ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) ponúka základné možnosti na definovanie geometrie (pozri obr. 30.2.5.). Ak používateľ potrebuje ďalšie pokročilé možnosti, musí prejsť do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Odborný režim ponúka rôzne možnosti, ako napríklad konverziu 2D na 3D, vyhľadanie osí, nastavenie mriežky blokov, symetrické roviny a kontrolu (pozri obr. 30.2.6.). Geometriu je možné importovať aj pomocou možnosti Importovať geometriu zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Importovať z knižnice. Používateľ môže tiež importovať geometrie v iných formátoch, ako sú .key, .DB, .STL, .PDA, .NAS a .UNV. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii primitívy. Ďalšie informácie o vytváraní a úprave 3D geometrií nájdete v časti [12\. 3. 3D Geometry Data Defining.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+Používateľ môže definovať novú geometriu pomocou možností v okne geometrie. Režim s návodom ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) ponúka základné možnosti na definovanie geometrie (pozri obr. 30.2.5.). Ak používateľ potrebuje ďalšie pokročilé možnosti, musí prejsť do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Odborný režim ponúka rôzne možnosti, ako napríklad konverziu 2D na 3D, vyhľadanie osí, nastavenie mriežky blokov, symetrické roviny a kontrolu (pozri obr. 30.2.6.). Geometriu je možné importovať aj pomocou možnosti Importovať geometriu zo súboru ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo pomocou možnosti Importovať z knižnice. Používateľ môže tiež importovať geometrie v iných formátoch, ako sú .key, .DB, .STL, .PDA, .NAS a .UNV. Na jednoduché definovanie základných geometrických tvarov sú k dispozícii primitívy. Ďalšie informácie o vytváraní a úprave 3D geometrií nájdete v časti [12\. 3. 3D Geometry Data Defining.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_2_3d_die_stress_setup/image003.jpg' | relative_url }})
 
@@ -107,7 +107,7 @@ Okno Geometria v režime Expert
   
 **Sieť objektu**
 
-Stránka „Mesh“ ponúka možnosti vytvorenia siete pre objekt. Režim „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ umožňuje nastaviť počet prvkov pomocou posuvníka na vytvorenie siete. Ak je geometria objektu zložitá alebo ak chce používateľ ovládať hustotu siete na celom objekte, musí prejsť do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Odborný režim ponúka rôzne možnosti, ako sú váhové faktory, okná siete a režim definovaný používateľom, ktoré slúžia na riadenie hustoty siete. Možnosti vytvárania siete dostupné v odbornom režime a v režime „Guided“ sú znázornené na obr. 30.2.7 a obr. 30.2.8. Podrobnejší popis týchto možností nájdete v časti [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+Stránka „Mesh“ ponúka možnosti vytvorenia siete pre objekt. Režim „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ umožňuje nastaviť počet prvkov pomocou posuvníka na vytvorenie siete. Ak je geometria objektu zložitá alebo ak chce používateľ ovládať hustotu siete na celom objekte, musí prejsť do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Odborný režim ponúka rôzne možnosti, ako sú váhové faktory, okná siete a režim definovaný používateľom, ktoré slúžia na riadenie hustoty siete. Možnosti vytvárania siete dostupné v odbornom režime a v režime „Guided“ sú znázornené na obr. 30.2.7 a obr. 30.2.8. Podrobnejší popis týchto možností nájdete v časti [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_2_3d_die_stress_setup/image005.jpg' | relative_url }})
 
@@ -171,7 +171,7 @@ Používateľ musí zadať hodnotu interferencie; Deform automaticky vyberie sme
   * Výber vnútornej plochy zmršťovacieho krúžku alebo vonkajšej plochy vložky matrice (plochy, ktorá prichádza do styku s matricou)
 
 Ak sa zúženie uplatňuje na vnútorný objekt, hodnota by mala byť záporná, a ak sa zúženie uplatňuje na vonkajší objekt, hodnota by mala byť kladná.  
-Ďalšie informácie o montáži s tepelne zmrštiteľným obalom nájdete v dokumente [3D Die Stress Analysis](/docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/).   
+Ďalšie informácie o montáži s tepelne zmrštiteľným obalom nájdete v dokumente [3D Die Stress Analysis]({{ '/docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/' | relative_url }}).   
 Na obr. 30.2.14 a obr. 30.2.15 je znázornené tesné uloženie pomocou zmršťovacieho krúžku.
 
   
@@ -188,7 +188,7 @@ Priradené okrajové podmienky pre zúženie
 V okne „Initialize“ sú na inicializáciu k dispozícii niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posun atď.
 
   
-Používateľ môže inicializovať hodnoty týchto stavových premenných kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 30.2.16 znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien „Node“ a „Element“. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1. Node Data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Používateľ môže inicializovať hodnoty týchto stavových premenných kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 30.2.16 znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien „Node“ a „Element“. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1. Node Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) a [17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_2_3d_die_stress_setup/image014.jpg' | relative_url }})
 
@@ -202,7 +202,7 @@ V tejto operácii je možné definovať upínacie prípravky, ktoré držia form
 ## Polohovanie
 
 Na obr. 30.2.17 je zobrazené okno na umiestňovanie, v ktorom môže používateľ umiestňovať upínacie prvky a objekty lisovacej formy pridané pomocou tlačidla „Umiestniť objekty“. Na umiestnenie objektov sú k dispozícii rôzne možnosti, ako je znázornené na obr. 30.2.18.  
-Ďalšie informácie o týchto možnostiach nájdete v dokumente [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+Ďalšie informácie o týchto možnostiach nájdete v dokumente [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image017.jpg' | relative_url }})
 
@@ -273,7 +273,7 @@ Riadenie simulácie v režime „Guided“
 
 Ovládanie simulácie v režime Expert
 
-Ďalšie informácie a popis možností v časti „Ovládacie prvky simulácie“ nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/).
+Ďalšie informácie a popis možností v časti „Ovládacie prvky simulácie“ nájdete v [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}).
 
 ## Vytvoriť databázu
 
@@ -299,14 +299,14 @@ Okno na generovanie databázy
 
 **Súvisiace témy:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[Die stress study labs](/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
+[Die stress study labs]({{ '/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/' | relative_url }})
 
-[30\. Introduction to Die Stress](/docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/)
+[30\. Introduction to Die Stress]({{ '/docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/' | relative_url }})
 
-[30.1. 2D Die stress setup](/docs/en/operation_templates/30_die_stress/30_1_2d_die_stress_setup/)
+[30.1. 2D Die stress setup]({{ '/docs/en/operation_templates/30_die_stress/30_1_2d_die_stress_setup/' | relative_url }})

@@ -31,4 +31,4 @@ If time increment is large or element size is not small enough to describe the g
   
 RELATED TOPICS  
 ---  
-[Object Properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/): [Deformation](/docs/sk/pre_processor/16_object_properties/16_object_properties/) \- [Target Volume](../../pre_processor/16_object_properties/16_1_deformation_properties.htm#16_1_3_Target_Volume_\(TRGVOL\)) Related keywords: [OBJTYP(2D)](/docs/sk/keyword_documentation/o/objtyp/), [OBJTYP(3D)](/docs/sk/keyword_documentation/o/objtyp_3d/)
+[Object Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }}): [Deformation]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }}) \- [Target Volume](../../pre_processor/16_object_properties/16_1_deformation_properties.htm#16_1_3_Target_Volume_\(TRGVOL\)) Related keywords: [OBJTYP(2D)]({{ '/docs/sk/keyword_documentation/o/objtyp/' | relative_url }}), [OBJTYP(3D)]({{ '/docs/sk/keyword_documentation/o/objtyp_3d/' | relative_url }})

@@ -141,21 +141,21 @@ Vyššia hustota siete (viac prvkov na jednotku plochy/objemu) ponúka zvýšen�
 
   * ******Počet prvkov (MGNELM)**
 
-Počet prvkov siete predstavuje približný počet prvkov, ktoré systém vytvorí. Automatický generátor siete (AMG) prevezme hodnotu pre [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) a vygeneruje sieť, ktorá bude obsahovať približne rovnaký počet prvkov.
+Počet prvkov siete predstavuje približný počet prvkov, ktoré systém vytvorí. Automatický generátor siete (AMG) prevezme hodnotu pre [MGNELM]({{ '/docs/sk/keyword_documentation/m/mgnelm/' | relative_url }}) a vygeneruje sieť, ktorá bude obsahovať približne rovnaký počet prvkov.
 
 Chyba medzi počtom zadaných prvkov a počtom vygenerovaných prvkov je zvyčajne približne desať percent. Pri generovaní siete sa zadaný celkový počet prvkov používa v spojení s ovládacími prvkami "Point" (Bod) a "Parameter" (Parameter) na určenie hustoty siete.
 
   * **Počet prvkov hrúbky (MGTELM)**
 
-Pomer maximálnej hrúbky je jedným z viacerých spôsobov riadenia hustoty siete počas automatického generovania siete (AMG). Počet prvkov v smere hrúbky predstavuje približný počet prvkov, ktoré systém vygeneruje v smere hrúbky ľubovoľnej oblasti súčiastky. Automatický generátor siete (AMG) vezme hodnotu pre [MGTELM](/docs/sk/keyword_documentation/m/mgtelm/) a vygeneruje sieť, ktorá bude mať tento počet prvkov naprieč najtenšou časťou. Ak je napríklad hodnota [MGTELM](/docs/sk/keyword_documentation/m/mgtelm/) nastavená na 4, AMG sa pokúsi mať 4 prvky naprieč hrúbkou geometrie.
+Pomer maximálnej hrúbky je jedným z viacerých spôsobov riadenia hustoty siete počas automatického generovania siete (AMG). Počet prvkov v smere hrúbky predstavuje približný počet prvkov, ktoré systém vygeneruje v smere hrúbky ľubovoľnej oblasti súčiastky. Automatický generátor siete (AMG) vezme hodnotu pre [MGTELM]({{ '/docs/sk/keyword_documentation/m/mgtelm/' | relative_url }}) a vygeneruje sieť, ktorá bude mať tento počet prvkov naprieč najtenšou časťou. Ak je napríklad hodnota [MGTELM]({{ '/docs/sk/keyword_documentation/m/mgtelm/' | relative_url }}) nastavená na 4, AMG sa pokúsi mať 4 prvky naprieč hrúbkou geometrie.
 
-Smer hrúbky objektu je kolmý na rozvetvenú os stredovej čiary pre každú oblasť dielu. Celkový počet prvkov, ktoré sa majú vytvoriť v sieti, sa riadi hodnotou počtu prvkov v kľúčovom slove [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) . Ak by hodnota hrúbky prvkov viedla k sieti, ktorá by obsahovala viac prvkov, ako je hodnota uvedená v slove [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/), hodnota [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) by sa zmenšila tak, aby sieť obsahovala približne [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) prvkov. Ak hodnota [MGTELM](/docs/sk/keyword_documentation/m/mgtelm/) vedie k sieti, ktorá obsahuje menej ako [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) prvkov, zostávajúce prvky sa rozdelia na iné používateľom zadané ovládacie prvky hustoty siete (zakrivenie, deformácia, miera deformácie a teplota).
+Smer hrúbky objektu je kolmý na rozvetvenú os stredovej čiary pre každú oblasť dielu. Celkový počet prvkov, ktoré sa majú vytvoriť v sieti, sa riadi hodnotou počtu prvkov v kľúčovom slove [MGNELM]({{ '/docs/sk/keyword_documentation/m/mgnelm/' | relative_url }}) . Ak by hodnota hrúbky prvkov viedla k sieti, ktorá by obsahovala viac prvkov, ako je hodnota uvedená v slove [MGNELM]({{ '/docs/sk/keyword_documentation/m/mgnelm/' | relative_url }}), hodnota [MGNELM]({{ '/docs/sk/keyword_documentation/m/mgnelm/' | relative_url }}) by sa zmenšila tak, aby sieť obsahovala približne [MGNELM]({{ '/docs/sk/keyword_documentation/m/mgnelm/' | relative_url }}) prvkov. Ak hodnota [MGTELM]({{ '/docs/sk/keyword_documentation/m/mgtelm/' | relative_url }}) vedie k sieti, ktorá obsahuje menej ako [MGNELM]({{ '/docs/sk/keyword_documentation/m/mgnelm/' | relative_url }}) prvkov, zostávajúce prvky sa rozdelia na iné používateľom zadané ovládacie prvky hustoty siete (zakrivenie, deformácia, miera deformácie a teplota).
 
   * **Pomer veľkosti prvkov (MGSIZR)**
 
 Pomer maximálnej veľkosti medzi prvkami je jedným z viacerých spôsobov riadenia hustoty siete počas automatického generovania siete (AMG) určením pomeru hustoty uzlov.
 
-Pri hodnote 3 pre [MGSIZR](/docs/sk/keyword_documentation/m/mgsizr/) bude najväčšia hrana prvku na objekte približne 3-krát väčšia ako najmenšia hrana prvku na tom istom objekte. Ak sa požadujú rovnako veľké prvky, potom je pomer veľkosti = 1. Ak je Size Ratio = 0, pomer veľkosti prvkov nebude faktorom pri rozdelení hustoty siete.
+Pri hodnote 3 pre [MGSIZR]({{ '/docs/sk/keyword_documentation/m/mgsizr/' | relative_url }}) bude najväčšia hrana prvku na objekte približne 3-krát väčšia ako najmenšia hrana prvku na tom istom objekte. Ak sa požadujú rovnako veľké prvky, potom je pomer veľkosti = 1. Ak je Size Ratio = 0, pomer veľkosti prvkov nebude faktorom pri rozdelení hustoty siete.
 
   * **Relatívny typ siete**
 
@@ -197,25 +197,25 @@ Okno váhových faktorov siete pre 2D
 
   * **Váhový faktor založený na hraničnej krivosti (MGWCUV)**
 
-Váha hraničnej krivosti použije vyššiu hustotu siete na krivky na hranici objektov. Ak je hodnota [MGWCUV](/docs/sk/keyword_documentation/m/mgwcuv/) väčšia ako 0, hraničná oblasť s krivkami dostane v tejto oblasti vyššiu hustotu siete. Ak je hodnota [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/) nastavená na 0, toto kritérium váženia sa ignoruje.
+Váha hraničnej krivosti použije vyššiu hustotu siete na krivky na hranici objektov. Ak je hodnota [MGWCUV]({{ '/docs/sk/keyword_documentation/m/mgwcuv/' | relative_url }}) väčšia ako 0, hraničná oblasť s krivkami dostane v tejto oblasti vyššiu hustotu siete. Ak je hodnota [MGNELM]({{ '/docs/sk/keyword_documentation/m/mgnelm/' | relative_url }}) nastavená na 0, toto kritérium váženia sa ignoruje.
 
 Hodnoty zo všetkých kľúčových slov hustoty siete sa počas procesu generovania siete kombinujú, aby sa vytvorilo rozloženie hustoty siete v rámci geometrickej hranice.
 
   * **Váhový faktor základne napätia (MGWSTN)**
 
-Na zachovanie jemnej siete v oblastiach s vysokým napätím možno tento váhový faktor ([MGWSTN](/docs/sk/keyword_documentation/m/mgwstn/)) upraviť. Od verzie 12 pridaná možnosť Use Gradient (Použiť gradient) pre váhový faktor základne deformácie
+Na zachovanie jemnej siete v oblastiach s vysokým napätím možno tento váhový faktor ([MGWSTN]({{ '/docs/sk/keyword_documentation/m/mgwstn/' | relative_url }})) upraviť. Od verzie 12 pridaná možnosť Use Gradient (Použiť gradient) pre váhový faktor základne deformácie
 
   * **Váhový faktor založený na rýchlosti ťahu (MGWSTR)**
 
-Ak sa na deformujúcom sa objekte nachádzajú oblasti s vysokou rýchlosťou deformácie ([MGWSTR](/docs/sk/keyword_documentation/m/mgwstr/)) a lokalizovanou deformáciou, potom použitie tohto váhového faktora spôsobí, že v oblastiach s vysokým gradientom rýchlosti deformácie sa vytvorí jemná sieť. Od verzie 12 pridaná možnosť Use Gradient (Použiť gradient) pre základný váhový faktor miery deformácie
+Ak sa na deformujúcom sa objekte nachádzajú oblasti s vysokou rýchlosťou deformácie ([MGWSTR]({{ '/docs/sk/keyword_documentation/m/mgwstr/' | relative_url }})) a lokalizovanou deformáciou, potom použitie tohto váhového faktora spôsobí, že v oblastiach s vysokým gradientom rýchlosti deformácie sa vytvorí jemná sieť. Od verzie 12 pridaná možnosť Use Gradient (Použiť gradient) pre základný váhový faktor miery deformácie
 
   * **Váhový faktor založený na teplote (MGWTMP)**
 
-Tento váhový faktor ([MGWTMP](/docs/sk/keyword_documentation/m/mgwtmp/)) sa môže použiť na určenie jemných prvkov v oblastiach s vysokým teplotným gradientom.
+Tento váhový faktor ([MGWTMP]({{ '/docs/sk/keyword_documentation/m/mgwtmp/' | relative_url }})) sa môže použiť na určenie jemných prvkov v oblastiach s vysokým teplotným gradientom.
 
   * **Váhový faktor sieťových okien (MGWUSR)**
 
-Váhový faktor okien definovaný používateľom sa používa v spojení s oknami Mesh Density ([MGWUSR](/docs/sk/keyword_documentation/m/mgwusr/)). Užívateľom definované váhové rozdelenie použije vyššiu hustotu siete na oblasti so zadaným oknom hustoty. Ak je tento parameter nastavený na 0, okná siete sa počas automatického remeshovania ignorujú.
+Váhový faktor okien definovaný používateľom sa používa v spojení s oknami Mesh Density ([MGWUSR]({{ '/docs/sk/keyword_documentation/m/mgwusr/' | relative_url }})). Užívateľom definované váhové rozdelenie použije vyššiu hustotu siete na oblasti so zadaným oknom hustoty. Ak je tento parameter nastavený na 0, okná siete sa počas automatického remeshovania ignorujú.
 
 Poznámka:
 
@@ -282,7 +282,7 @@ Ak je oknu priradená rýchlosť, pred vykonaním druhej alebo tretej operácie 
 
 ## Povlak
 
-Používateľ môže pomocou tejto možnosti pridať vrstvy povlaku a vygenerovať pre ne sieť. Pre pridaný povlakový materiál môže používateľ priradiť materiál. (Pozri obr. 13.1.10.) Ďalšie informácie o používaní okien povlakovania nájdete v dokumente [Appendix XI](/docs/sk/appendices/appendix_xi__near_surface_mesh_functions/).
+Používateľ môže pomocou tejto možnosti pridať vrstvy povlaku a vygenerovať pre ne sieť. Pre pridaný povlakový materiál môže používateľ priradiť materiál. (Pozri obr. 13.1.10.) Ďalšie informácie o používaní okien povlakovania nájdete v dokumente [Appendix XI]({{ '/docs/sk/appendices/appendix_xi__near_surface_mesh_functions/' | relative_url }}).
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image010.jpg' | relative_url }})
 
@@ -290,7 +290,7 @@ Povlak Okno Mesh
 
 ## Kritériá na opravu
 
-Kritériá remeshingu (Autoremesh) sú najvhodnejším spôsobom, ako zvládnuť remeshing objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Remeshing Criteria (Kritériá opätovného remeshovania) (pozri obr. 13.1.11.) obsahuje skupinu parametrov, ktoré riadia, kedy a ako často sa bude sieť na objekte s okom regenerovať na základe priradenia určitých spúšťačov. Existujú štyri kľúčové slová, ktoré riadia spustenie postupu remeshingu pre objekt, sú to Hĺbka zásahu ([RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/)),Max. Time Increment ([RMTIME](/docs/sk/keyword_documentation/r/rmtime/)), Max. Step Increment ([RMSTEP](/docs/sk/keyword_documentation/r/rmstep/)) a Max. Prírastok zdvihu ([RMSTRK](/docs/sk/keyword_documentation/r/rmstrk/)). Keď sa splnia kritériá remeshovania podľa niektorého z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (záporný jakobián), objekt sa remeshuje. Ak objekt počas simulácie splní niektoré z kritérií remeshingu, vygeneruje sa nová sieť, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje.
+Kritériá remeshingu (Autoremesh) sú najvhodnejším spôsobom, ako zvládnuť remeshing objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Remeshing Criteria (Kritériá opätovného remeshovania) (pozri obr. 13.1.11.) obsahuje skupinu parametrov, ktoré riadia, kedy a ako často sa bude sieť na objekte s okom regenerovať na základe priradenia určitých spúšťačov. Existujú štyri kľúčové slová, ktoré riadia spustenie postupu remeshingu pre objekt, sú to Hĺbka zásahu ([RMDPTH]({{ '/docs/sk/keyword_documentation/r/rmdpth/' | relative_url }})),Max. Time Increment ([RMTIME]({{ '/docs/sk/keyword_documentation/r/rmtime/' | relative_url }})), Max. Step Increment ([RMSTEP]({{ '/docs/sk/keyword_documentation/r/rmstep/' | relative_url }})) a Max. Prírastok zdvihu ([RMSTRK]({{ '/docs/sk/keyword_documentation/r/rmstrk/' | relative_url }})). Keď sa splnia kritériá remeshovania podľa niektorého z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (záporný jakobián), objekt sa remeshuje. Ak objekt počas simulácie splní niektoré z kritérií remeshingu, vygeneruje sa nová sieť, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje.
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_1_2d_mesh_generation/13_1_image011.jpg' | relative_url }})
 
@@ -299,7 +299,7 @@ Okno Kritériá na opravu
 ****
 
 **Maximálna hĺbka interferencie (RMDPTH)**
-Maximálna hĺbka interferencie ([RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/)) sa používa na spustenie postupu remeshingu. Ak akákoľvek časť hlavného objektu prenikne do podriadeného objektu nad hĺbku uvedenú v položke [RMDPTH](/docs/sk/keyword_documentation/r/rmdpth/), spustí sa opätovné vymazanie.
+Maximálna hĺbka interferencie ([RMDPTH]({{ '/docs/sk/keyword_documentation/r/rmdpth/' | relative_url }})) sa používa na spustenie postupu remeshingu. Ak akákoľvek časť hlavného objektu prenikne do podriadeného objektu nad hĺbku uvedenú v položke [RMDPTH]({{ '/docs/sk/keyword_documentation/r/rmdpth/' | relative_url }}), spustí sa opätovné vymazanie.
 
 Hĺbka interferencie riadi spustenie postupu remeshingu na základe hĺbky interferencie medzi podriadeným objektom a hlavným objektom. Hĺbka interferencie je hĺbka, v ktorej hrana prvku podriadeného objektu pretína povrch hlavného objektu. Objekt, ktorý sa má remeshovať, musí byť podriadený objekt.
 
@@ -308,13 +308,13 @@ Parameter hĺbky zásahu by sa mal používať pri extrémne ostrých rohoch, kd
 Ak dochádza k prenikaniu oka, prvým krokom by malo byť použitie ovládacích prvkov hustoty oka na umiestnenie menšieho oka do oblasti, v ktorej dochádza k prenikaniu oka. Ak sa problémy stále vyskytujú, je možné použiť hĺbku zásahu.
 
 **Maximálny prírastok zdvihu (RMSTRK)**
-Vždy, keď je maximálny prírastok zdvihu ([RMSTRK](/docs/sk/keyword_documentation/r/rmstrk/)) prekročený o prírastok zdvihu primárnej matrice od posledného kroku opätovného oddeľovania, spustí sa nový krok opätovného oddeľovania.
+Vždy, keď je maximálny prírastok zdvihu ([RMSTRK]({{ '/docs/sk/keyword_documentation/r/rmstrk/' | relative_url }})) prekročený o prírastok zdvihu primárnej matrice od posledného kroku opätovného oddeľovania, spustí sa nový krok opätovného oddeľovania.
 
 **Maximálny prírastok času (RMTIME)**
-Kedykoľvek uplynie maximálny časový prírastok ([RMTIME](/docs/sk/keyword_documentation/r/rmtime/)) (hodnota uplynulého času) od posledného kroku opätovného merania, spustí sa nový krok opätovného merania. Kľúčové slovo [RMTIME](/docs/sk/keyword_documentation/r/rmtime/) riadi iniciovanie postupu remeshovania na základe času procesu meraného od posledného remeshovania. Je to hodnota času procesu, ktorý môže uplynúť medzi remeshovaním objektu. Pri hodnote 10 pre [RMTIME](/docs/sk/keyword_documentation/r/rmtime/) sa bude objekt remeshovať najmenej každých 10 sekúnd. To je užitočné, keď sa simulácia predčasne zastaví z dôvodu zápornej jacobovej chyby. Skôr ako sa sieť stane nepoužiteľnou, objekt sa môže remeshovať. Uplynulý čas procesu medzi remeshovaním sa nepoužije na určenie, kedy sa objekt remeshuje.
+Kedykoľvek uplynie maximálny časový prírastok ([RMTIME]({{ '/docs/sk/keyword_documentation/r/rmtime/' | relative_url }})) (hodnota uplynulého času) od posledného kroku opätovného merania, spustí sa nový krok opätovného merania. Kľúčové slovo [RMTIME]({{ '/docs/sk/keyword_documentation/r/rmtime/' | relative_url }}) riadi iniciovanie postupu remeshovania na základe času procesu meraného od posledného remeshovania. Je to hodnota času procesu, ktorý môže uplynúť medzi remeshovaním objektu. Pri hodnote 10 pre [RMTIME]({{ '/docs/sk/keyword_documentation/r/rmtime/' | relative_url }}) sa bude objekt remeshovať najmenej každých 10 sekúnd. To je užitočné, keď sa simulácia predčasne zastaví z dôvodu zápornej jacobovej chyby. Skôr ako sa sieť stane nepoužiteľnou, objekt sa môže remeshovať. Uplynulý čas procesu medzi remeshovaním sa nepoužije na určenie, kedy sa objekt remeshuje.
 
 **Maximálny prírastok kroku (RMSTEP)**
-Kedykoľvek od posledného kroku remeshingu dôjde k maximálnemu prírastku kroku (počet krokov), spustí sa nový krok remeshingu. Kľúčové slovo [RMSTEP](/docs/sk/keyword_documentation/r/rmstep/) riadi začatie postupu remeshingu na základe počtu simulačných krokov meraných od posledného remeshingu. Je to hodnota simulačných krokov, ktoré môžu uplynúť medzi remeshovaním objektu. Pri hodnote 15 pre [RMSTEP](/docs/sk/keyword_documentation/r/rmstep/) sa bude objekt remešovať najmenej každých 15 krokov. To je užitočné, keď sa simulácia predčasne zastaví z dôvodu zápornej jacobovej chyby. Skôr ako sa sieť stane nepoužiteľnou, objekt sa môže remeshovať.
+Kedykoľvek od posledného kroku remeshingu dôjde k maximálnemu prírastku kroku (počet krokov), spustí sa nový krok remeshingu. Kľúčové slovo [RMSTEP]({{ '/docs/sk/keyword_documentation/r/rmstep/' | relative_url }}) riadi začatie postupu remeshingu na základe počtu simulačných krokov meraných od posledného remeshingu. Je to hodnota simulačných krokov, ktoré môžu uplynúť medzi remeshovaním objektu. Pri hodnote 15 pre [RMSTEP]({{ '/docs/sk/keyword_documentation/r/rmstep/' | relative_url }}) sa bude objekt remešovať najmenej každých 15 krokov. To je užitočné, keď sa simulácia predčasne zastaví z dôvodu zápornej jacobovej chyby. Skôr ako sa sieť stane nepoužiteľnou, objekt sa môže remeshovať.
 
 **Účel kritérií**
 
@@ -332,10 +332,10 @@ Okno pokročilých nastavení siete
 
 **Rozlíšenie siete**(**MGGRID**)
 
-Keď je objekt vynesený do 2D siete, na diskretizáciu hustoty siete v celej východiskovej geometrii je potrebná vzorkovacia sieť. Rozlíšenie mriežky ([MGGRID](/docs/sk/keyword_documentation/m/mggrid/)) určuje rozstupy vzorkovacích mriežok, ktoré sa používajú na vzorkovanie hustoty siete. Zvýšenie hodnoty delenia X alebo delenia Y bude mať za následok ostrejšie gradienty medzi oblasťami s rôznou hustotou siete. V prípade zaslepenia, keď sa vyžaduje veľmi vysoký gradient siete v úzkej oblasti, môže byť potrebné tieto hodnoty zvýšiť, aby sa zachytili veľké zmeny gradientu siete na krátkych vzdialenostiach.
+Keď je objekt vynesený do 2D siete, na diskretizáciu hustoty siete v celej východiskovej geometrii je potrebná vzorkovacia sieť. Rozlíšenie mriežky ([MGGRID]({{ '/docs/sk/keyword_documentation/m/mggrid/' | relative_url }})) určuje rozstupy vzorkovacích mriežok, ktoré sa používajú na vzorkovanie hustoty siete. Zvýšenie hodnoty delenia X alebo delenia Y bude mať za následok ostrejšie gradienty medzi oblasťami s rôznou hustotou siete. V prípade zaslepenia, keď sa vyžaduje veľmi vysoký gradient siete v úzkej oblasti, môže byť potrebné tieto hodnoty zvýšiť, aby sa zachytili veľké zmeny gradientu siete na krátkych vzdialenostiach.
 
 **Parametre pridávania uzlov** (**MGERR**)
-Parametre pridávania uzlov ([MGERR](/docs/sk/keyword_documentation/m/mgerr/)) určujú maximálnu povolenú chybu vzdialenosti a uhla medzi hranicou objektu a jeho pridruženou stranou prvku mriežky. Tolerancie vzdialenosti a uhla sa používajú na zachytenie kritickej geometrie hraníc, ktorá by sa inak mohla stratiť pri generovaní siete. Ak sa vyžaduje, aby objekt zachytil veľmi malé prvky, maximálna vzdialenosť sa môže znížiť, alebo ak je potrebné umiestniť uzol na malom uhle, môže sa znížiť aj chyba uhla. Len zriedkakedy bude musieť používateľ tieto hodnoty meniť. V prípade dielov, ktoré sú veľmi malé, je hodnota 0,01 % ohraničenia objektu dobrým východiskovým číslom, ktoré možno použiť pre [MGERR](/docs/sk/keyword_documentation/m/mgerr/) na lepšiu manipuláciu s rozlíšením siete.
+Parametre pridávania uzlov ([MGERR]({{ '/docs/sk/keyword_documentation/m/mgerr/' | relative_url }})) určujú maximálnu povolenú chybu vzdialenosti a uhla medzi hranicou objektu a jeho pridruženou stranou prvku mriežky. Tolerancie vzdialenosti a uhla sa používajú na zachytenie kritickej geometrie hraníc, ktorá by sa inak mohla stratiť pri generovaní siete. Ak sa vyžaduje, aby objekt zachytil veľmi malé prvky, maximálna vzdialenosť sa môže znížiť, alebo ak je potrebné umiestniť uzol na malom uhle, môže sa znížiť aj chyba uhla. Len zriedkakedy bude musieť používateľ tieto hodnoty meniť. V prípade dielov, ktoré sú veľmi malé, je hodnota 0,01 % ohraničenia objektu dobrým východiskovým číslom, ktoré možno použiť pre [MGERR]({{ '/docs/sk/keyword_documentation/m/mgerr/' | relative_url }}) na lepšiu manipuláciu s rozlíšením siete.
 
 ## Sieť definovaná používateľom
 
@@ -355,8 +355,8 @@ Okno definované používateľom pre 2D
 
 **Súvisiace témy:**
 
-[13\. Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/)
+[13\. Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[13.2. 3D Tet Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/)
+[13.2. 3D Tet Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }})
 
-[13.3. 3D Brick Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/)
+[13.3. 3D Brick Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }})

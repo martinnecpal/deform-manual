@@ -92,4 +92,4 @@ X1 is the value of Sigma X(![]({{ '/assets/images/keyword_documentation/s/sigmax
   
 RELATED TOPICS  
 ---  
-Related keywords: ELMN[ELMNOD (2D3D)](/docs/sk/keyword_documentation/e/elmnod/)OD
+Related keywords: ELMN[ELMNOD (2D3D)]({{ '/docs/sk/keyword_documentation/e/elmnod/' | relative_url }})OD

@@ -41,4 +41,4 @@ XDisp(i) or YDisp(i) should specify the amount of shrink fit interference. The i
   
 RELATED TOPICS  
 ---  
-[Object Advanced nodal data](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) Keyword: [RZ(2D)](/docs/sk/keyword_documentation/r/rz/)
+[Object Advanced nodal data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) Keyword: [RZ(2D)]({{ '/docs/sk/keyword_documentation/r/rz/' | relative_url }})

@@ -35,7 +35,7 @@ MACHINING DISTORTION |  |  HEAT TREATMENT
 
 **DEFORM Pre-Processor**
 
-DEFORM [Pre-Processor](/docs/en/pre_processor/7_introduction_to_pre-processor/) is an integrated product of 2D and 3D Products, it is capable of Modelling both 2D and 3D models and it allows to convert 2D Model to 3D model.
+DEFORM [Pre-Processor]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }}) is an integrated product of 2D and 3D Products, it is capable of Modelling both 2D and 3D models and it allows to convert 2D Model to 3D model.
 
 **2D:** Capable of modelling plane strain or plane stress or axisymmetric or torsion parts with a simple 2 dimensional model. A full function package containing the latest innovations in Finite Element Modelling, equally well suited for production or research environments.
 
@@ -43,11 +43,11 @@ DEFORM [Pre-Processor](/docs/en/pre_processor/7_introduction_to_pre-processor/) 
 
 **DIE STRESS**
 
-[Die stress](/docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/) module allows the user to construct tooling stress simulations with ease. (2D, 3D)
+[Die stress]({{ '/docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/' | relative_url }}) module allows the user to construct tooling stress simulations with ease. (2D, 3D)
 
 **integrated Manufacturing Process (MO)**
 
-[Integrated Manufacturing Process ](/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/)(MO) provides an user-friendly interface to construct many successive operations at the initial setup and simulate them sequentially without user interaction. (2D, 3D). Fig. 1.2.1. shows schematic representation of MO environment.
+[Integrated Manufacturing Process ]({{ '/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }})(MO) provides an user-friendly interface to construct many successive operations at the initial setup and simulate them sequentially without user interaction. (2D, 3D). Fig. 1.2.1. shows schematic representation of MO environment.
 
 ![]({{ '/assets/images/about_deform/1_2_deform_family_products/1_2_image001.jpg' | relative_url }})
 
@@ -55,16 +55,16 @@ Structure of MO ENVIRONMENT
 
 **MACHINING DISTORTION**
 
-[Machining Distortion](/docs/en/operation_templates/40_machining_distortion/40_introduction_to_machining_distortion/) module allows modelling of part deflection resulting from machining passes on a part with deformation history. (2D, 3D)
+[Machining Distortion]({{ '/docs/en/operation_templates/40_machining_distortion/40_introduction_to_machining_distortion/' | relative_url }}) module allows modelling of part deflection resulting from machining passes on a part with deformation history. (2D, 3D)
 
   
 **Post-Processor**
 
-[Post-Processor](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/) provides an environment for the user to generate 3D PDF reports of simulation results, coupon data extraction, interpret results across database using PIP, plot results in region of interest along with the general post processing features.
+[Post-Processor]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }}) provides an environment for the user to generate 3D PDF reports of simulation results, coupon data extraction, interpret results across database using PIP, plot results in region of interest along with the general post processing features.
 
 ## EXPRESS MODULES
 
-[Forming Express](/docs/en/operation_templates/34_forming_express/34_introduction_to_forming_express/) modules is used to setup various 2D and 3D forming operations in a quick wizard mode in DEFORM-MO environment.
+[Forming Express]({{ '/docs/en/operation_templates/34_forming_express/34_introduction_to_forming_express/' | relative_url }}) modules is used to setup various 2D and 3D forming operations in a quick wizard mode in DEFORM-MO environment.
 
 **Forming Express-2D:** Capable of modelling-two dimensional axisymmetric or plane strain problems. Suitable for small to mid-sized shops starting in Finite Element Modelling.
 
@@ -74,88 +74,88 @@ Structure of MO ENVIRONMENT
 
 **COGGING**
 
-[Cogging](/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/) wizard allows user to setup a series of Cogging/GFM operations on the billet representing a set of thermo-mechanical processing cycles to the final shape, size and metallurgical properties. (3D)
+[Cogging]({{ '/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/' | relative_url }}) wizard allows user to setup a series of Cogging/GFM operations on the billet representing a set of thermo-mechanical processing cycles to the final shape, size and metallurgical properties. (3D)
 
 **DOE**
 
-[DOE](/docs/en/doe_and_optimization/52_doe_study/51_introduction_to_doe/) is capable to do sensitivity analysis to address variabilities / uncertainties in processing conditions, material data and boundary conditions in a specified range and sampling. A specially designed DOE Post will help user to interpret the DOE simulations output. (2D, 3D)
+[DOE]({{ '/docs/en/doe_and_optimization/52_doe_study/51_introduction_to_doe/' | relative_url }}) is capable to do sensitivity analysis to address variabilities / uncertainties in processing conditions, material data and boundary conditions in a specified range and sampling. A specially designed DOE Post will help user to interpret the DOE simulations output. (2D, 3D)
 
 **EXTRUSION**
 
-[Extrusion](/docs/en/operation_templates/31_extrusion/31_introduction_to_extrusion/) interface allows the user to construct Extrusion process models to run ALE, Steady state and Lagrangian procedures. (3D)
+[Extrusion]({{ '/docs/en/operation_templates/31_extrusion/31_introduction_to_extrusion/' | relative_url }}) interface allows the user to construct Extrusion process models to run ALE, Steady state and Lagrangian procedures. (3D)
 
 **HT FURNACE**
 
-[HT Furnace](/docs/en/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/) module provides a customized environment to user to define Furnace conditions and simulate temperature distribution in billets when stacked in a particular pattern within Furnace. (3D)
+[HT Furnace]({{ '/docs/en/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/' | relative_url }}) module provides a customized environment to user to define Furnace conditions and simulate temperature distribution in billets when stacked in a particular pattern within Furnace. (3D)
 
   
 **HEAT TREATMENT**
 
-[Heat Treatment](/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/) module allows the user to construct many successive heat treatment simulations with minimal effort. (2D, 3D). It is available as an add-on to DEFORM-2D and 3D. In addition to the deformation modelling capabilities, DEFORM-HT can model the effects of heat treating, including hardness, volume fraction of metallic structure, distortion, residual stress, and carbon content.
+[Heat Treatment]({{ '/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/' | relative_url }}) module allows the user to construct many successive heat treatment simulations with minimal effort. (2D, 3D). It is available as an add-on to DEFORM-2D and 3D. In addition to the deformation modelling capabilities, DEFORM-HT can model the effects of heat treating, including hardness, volume fraction of metallic structure, distortion, residual stress, and carbon content.
 
 **INVERSE HEAT TRANSFER**
 
-[Inverse heat transfer](/docs/en/inverse_heat/51_introduction_to_inverse_heat/) wizard allows the user to determine the heat transfer coefficient at the boundary of an object by using actual thermocouple data coupled with iterative simulation results. (2D, 3D)
+[Inverse heat transfer]({{ '/docs/en/inverse_heat/51_introduction_to_inverse_heat/' | relative_url }}) wizard allows the user to determine the heat transfer coefficient at the boundary of an object by using actual thermocouple data coupled with iterative simulation results. (2D, 3D)
 
 **MACHINING**
 
-[Machining](/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/) wizard allows the user to perform two and three-dimensional metal cutting simulations for turning, boring, milling and drilling operations. (2D, 3D)
+[Machining]({{ '/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/' | relative_url }}) wizard allows the user to perform two and three-dimensional metal cutting simulations for turning, boring, milling and drilling operations. (2D, 3D)
 
 **MATERIAL SUITE**
 
-[Material Suite](/docs/en/52_material_suite/52_introduction_to_material_suite/) is an Integrated Computational material model which bridges process, micro structure, mechanical properties and performance. Also facilitate to develop constants from physical experimental data or virtual micro structure experiments.
+[Material Suite]({{ '/docs/en/52_material_suite/52_introduction_to_material_suite/' | relative_url }}) is an Integrated Computational material model which bridges process, micro structure, mechanical properties and performance. Also facilitate to develop constants from physical experimental data or virtual micro structure experiments.
 
 **OPTIMIZATION**
 
-[OPTIMIZATION](/docs/en/doe_and_optimization/53_optimization_study/53_introduction_to_optimization/) Module determines the suitable process conditions based on the objective function (Temperature, Die Geometry, Material, etc.) set initially. DOE Post module is designed specifically to help the user to interpret the optimization output and select the process conditions. (2D, 3D)
+[OPTIMIZATION]({{ '/docs/en/doe_and_optimization/53_optimization_study/53_introduction_to_optimization/' | relative_url }}) Module determines the suitable process conditions based on the objective function (Temperature, Die Geometry, Material, etc.) set initially. DOE Post module is designed specifically to help the user to interpret the optimization output and select the process conditions. (2D, 3D)
 
 **RING ROLLING**
 
-[Ring rolling](/docs/en/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/) module allows user to interactively generate the various components of the ring rolling process, and define process conditions.
+[Ring rolling]({{ '/docs/en/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/' | relative_url }}) module allows user to interactively generate the various components of the ring rolling process, and define process conditions.
 
 **SHAPE ROLLING**
 
-[Shape rolling](/docs/en/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/) interface allows the user to construct shape rolling models of Isothermal and Non-Isothermal with multi-pass/ multi-stands to run Lagrangian and ALE procedures. (3D)
+[Shape rolling]({{ '/docs/en/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/' | relative_url }}) interface allows the user to construct shape rolling models of Isothermal and Non-Isothermal with multi-pass/ multi-stands to run Lagrangian and ALE procedures. (3D)
 
   
 **SPINNING:**
 
-[Spinning](/docs/en/operation_templates/48_spinning/48_introduction_to_spinning/) interface allows the user to construct Flow forming and Spinning operations to run ALE and Lagrangian procedures (3D)
+[Spinning]({{ '/docs/en/operation_templates/48_spinning/48_introduction_to_spinning/' | relative_url }}) interface allows the user to construct Flow forming and Spinning operations to run ALE and Lagrangian procedures (3D)
 
 **Related Topics:**
 
-[PRE-PROCESSOR](/docs/en/pre_processor/7_introduction_to_pre-processor/)
+[PRE-PROCESSOR]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }})
 
-[POST-PROCESSOR](/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[POST-PROCESSOR]({{ '/docs/en/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})
 
-[FORMING EXPRESS](/docs/en/operation_templates/34_forming_express/34_introduction_to_forming_express/)
+[FORMING EXPRESS]({{ '/docs/en/operation_templates/34_forming_express/34_introduction_to_forming_express/' | relative_url }})
 
-[COGGING](/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/)
+[COGGING]({{ '/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/' | relative_url }})
 
-[MACHINING](/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/)
+[MACHINING]({{ '/docs/en/operation_templates/39_cutting/39_introduction_to_cutting/' | relative_url }})
 
-[INV. HEAT TRANSFER](/docs/en/inverse_heat/51_introduction_to_inverse_heat/)
+[INV. HEAT TRANSFER]({{ '/docs/en/inverse_heat/51_introduction_to_inverse_heat/' | relative_url }})
 
-[HEAT TREATMENT](/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/)
+[HEAT TREATMENT]({{ '/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/' | relative_url }})
 
-[INTEGRATED MANUFACTURING PROCESS](/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/) (MO)
+[INTEGRATED MANUFACTURING PROCESS]({{ '/docs/en/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }}) (MO)
 
-[SHAPE ROLLING](/docs/en/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/)
+[SHAPE ROLLING]({{ '/docs/en/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/' | relative_url }})
 
-[RING ROLLING](/docs/en/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/)
+[RING ROLLING]({{ '/docs/en/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/' | relative_url }})
 
-[DIE STRESS](/docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/)
+[DIE STRESS]({{ '/docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/' | relative_url }})
 
-[MACHINING DISTORTION](/docs/en/operation_templates/40_machining_distortion/40_introduction_to_machining_distortion/)
+[MACHINING DISTORTION]({{ '/docs/en/operation_templates/40_machining_distortion/40_introduction_to_machining_distortion/' | relative_url }})
 
-[EXTRUSION](/docs/en/operation_templates/31_extrusion/31_introduction_to_extrusion/)
+[EXTRUSION]({{ '/docs/en/operation_templates/31_extrusion/31_introduction_to_extrusion/' | relative_url }})
 
-[DOE](/docs/en/doe_and_optimization/52_doe_study/51_introduction_to_doe/)
+[DOE]({{ '/docs/en/doe_and_optimization/52_doe_study/51_introduction_to_doe/' | relative_url }})
 
-[OPTIMIZATION](/docs/en/doe_and_optimization/53_optimization_study/53_introduction_to_optimization/)
+[OPTIMIZATION]({{ '/docs/en/doe_and_optimization/53_optimization_study/53_introduction_to_optimization/' | relative_url }})
 
-[MATERIAL SUITE](/docs/en/52_material_suite/52_introduction_to_material_suite/)
+[MATERIAL SUITE]({{ '/docs/en/52_material_suite/52_introduction_to_material_suite/' | relative_url }})
 
-[HT FURNACE](/docs/en/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/)
+[HT FURNACE]({{ '/docs/en/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/' | relative_url }})
 
-[DOE POST](/docs/en/doe_and_optimization/54_doe_post_processor/54_introduction_to_doe_post/)
+[DOE POST]({{ '/docs/en/doe_and_optimization/54_doe_post_processor/54_introduction_to_doe_post/' | relative_url }})

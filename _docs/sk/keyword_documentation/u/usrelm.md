@@ -40,4 +40,4 @@ To take advantage of these extra state variables, a subroutine in the $DEFORM_DI
   
 RELATED TOPICS  
 ---  
-[Object Elemental Data](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/): User Element variable Keywords: [USRNOD](/docs/sk/keyword_documentation/u/usrnod/), [UENAME](/docs/sk/keyword_documentation/u/uename/), [UNNAME](/docs/sk/keyword_documentation/u/unname/)
+[Object Elemental Data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}): User Element variable Keywords: [USRNOD]({{ '/docs/sk/keyword_documentation/u/usrnod/' | relative_url }}), [UENAME]({{ '/docs/sk/keyword_documentation/u/uename/' | relative_url }}), [UNNAME]({{ '/docs/sk/keyword_documentation/u/unname/' | relative_url }})

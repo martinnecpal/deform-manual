@@ -29,4 +29,4 @@ A non-zero value must be assigned to either DSMAX or DTMAX, but values cannot be
   
 RELATED TOPICS  
 ---  
-Step parameters, Primary object Keywords: [DEMAX](/docs/sk/keyword_documentation/d/demax/), [DTMAX](/docs/sk/keyword_documentation/d/dtmax/), [DVMAX](/docs/sk/keyword_documentation/d/dvmax/), [SLDERR](/docs/sk/keyword_documentation/s/slderr/), [STPDEF](/docs/sk/keyword_documentation/s/stpdef/)
+Step parameters, Primary object Keywords: [DEMAX]({{ '/docs/sk/keyword_documentation/d/demax/' | relative_url }}), [DTMAX]({{ '/docs/sk/keyword_documentation/d/dtmax/' | relative_url }}), [DVMAX]({{ '/docs/sk/keyword_documentation/d/dvmax/' | relative_url }}), [SLDERR]({{ '/docs/sk/keyword_documentation/s/slderr/' | relative_url }}), [STPDEF]({{ '/docs/sk/keyword_documentation/s/stpdef/' | relative_url }})

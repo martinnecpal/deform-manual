@@ -32,7 +32,7 @@ Brick elements tend to produce nicer looking results than the tetrahedral elemen
 
 ## **Diffusion coefficient (DIFCOE)**
 
-The diffusion coefficient ([DIFCOE](/docs/en/keyword_documentation/d/difcoe/)) can be defined by the following methods:
+The diffusion coefficient ([DIFCOE]({{ '/docs/en/keyword_documentation/d/difcoe/' | relative_url }})) can be defined by the following methods:
 
   * **Method 1**
 

@@ -113,4 +113,4 @@ Temperature summary plot
 
 Click on ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) mode button to switch to Pre mode to continue with the sequential forming operation in [Lab 5.](gear_blank_si_lab4.htm#Lab5_3D_Non-isothermal_Forming_operation)
 
-Click on [Gear Blank SI Lab 5](/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab5/) to continue with the sequential forming operation.
+Click on [Gear Blank SI Lab 5]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab5/' | relative_url }}) to continue with the sequential forming operation.

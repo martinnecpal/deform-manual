@@ -49,6 +49,6 @@ Adding a symmetric surface to the top die prevents any leakage from occurring
 
 **Related Topics:**
 
-[Object Geometry](/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/)
+[Object Geometry]({{ '/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})
 
-[Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})

@@ -92,7 +92,7 @@ V režime Heat Transfer Express sú v 2D aj 3D k dispozícii štyri typy ohrevu 
 
   * Doba zdržania na čipe
 
-Ohrievanie obrobku, prenos tepla pri presúvaní obrobku z pece do lisu, odloženie obrobku na formu (pred tvárnením) a zotrvanie obrobku na forme po tvárnení je možné jednoducho nastaviť pomocou príslušného typu ohrevu. Podrobnejšie informácie o týchto typoch ohrevu sú uvedené v dokumente [36\. Introduction to Heat transfer express operation](/docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/), pozri časť „Typy ohrevu“.
+Ohrievanie obrobku, prenos tepla pri presúvaní obrobku z pece do lisu, odloženie obrobku na formu (pred tvárnením) a zotrvanie obrobku na forme po tvárnení je možné jednoducho nastaviť pomocou príslušného typu ohrevu. Podrobnejšie informácie o týchto typoch ohrevu sú uvedené v dokumente [36\. Introduction to Heat transfer express operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_introduction_to_heat_transfer_express_operations/' | relative_url }}), pozri časť „Typy ohrevu“.
 
 V režimoch „Odpočinok“ a „Prevádzka“ sa aktivuje okno pre tepelný výpočet, ktoré ponúka možnosti výberu, či sa má počítať prenos tepla cez matrice, alebo nie. Tieto možnosti budú podrobnejšie vysvetlené v popisoch príslušných režimov.
 
@@ -137,8 +137,8 @@ Okno obrobku
 **Typ objektu**: Typ objektu (OBJTYP) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe typu DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. V operácii Forming je k dispozícii viac typov objektov, podrobnosti nájdete v [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
 
   
-**Plast**: Plastové objekty sa modelujú ako tuho-plastický alebo tuho-viskoplastický materiál v závislosti od vlastností materiálov. Model predpokladá, že napätie v materiáli lineárne rastie s rýchlosťou deformácie až do prahovej hodnoty rýchlosti deformácie, označovanej ako limitná rýchlosť deformácie ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)). Po prekročení medznej rýchlosti deformácie sa materiál deformuje plasticky. Plastické správanie materiálu objektu sa špecifikuje pomocou funkcie tokového napätia materiálu alebo údajov o tokovom napätí ([FSTRES](/docs/en/keyword_documentation/f/fstres/)). V programe Heat Transfer Express sa obrobok automaticky priradí k typu objektu „Plast“.  
-**Tuhé**: Tuhé objekty sa modelujú ako nedeformovateľné materiály. V analýze deformácie je objekt reprezentovaný geometrickým profilom ([DIEGEO](/docs/en/keyword_documentation/d/diegeo/)). Údaje o riešení deformácie dostupné pre tuhé objekty zahŕňajú zdvih objektu, zaťaženie a rýchlosť. Sieť pre tuhý objekt sa používa iba na výpočty tepelného prenosu, transformácie a difúzie. V programe Heat Transfer Express sú lisovacie formy alebo nástroje automaticky priradené k kategórii „Tuhé“, keďže ide o nedeformovateľné objekty.
+**Plast**: Plastové objekty sa modelujú ako tuho-plastický alebo tuho-viskoplastický materiál v závislosti od vlastností materiálov. Model predpokladá, že napätie v materiáli lineárne rastie s rýchlosťou deformácie až do prahovej hodnoty rýchlosti deformácie, označovanej ako limitná rýchlosť deformácie ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). Po prekročení medznej rýchlosti deformácie sa materiál deformuje plasticky. Plastické správanie materiálu objektu sa špecifikuje pomocou funkcie tokového napätia materiálu alebo údajov o tokovom napätí ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). V programe Heat Transfer Express sa obrobok automaticky priradí k typu objektu „Plast“.  
+**Tuhé**: Tuhé objekty sa modelujú ako nedeformovateľné materiály. V analýze deformácie je objekt reprezentovaný geometrickým profilom ([DIEGEO]({{ '/docs/en/keyword_documentation/d/diegeo/' | relative_url }})). Údaje o riešení deformácie dostupné pre tuhé objekty zahŕňajú zdvih objektu, zaťaženie a rýchlosť. Sieť pre tuhý objekt sa používa iba na výpočty tepelného prenosu, transformácie a difúzie. V programe Heat Transfer Express sú lisovacie formy alebo nástroje automaticky priradené k kategórii „Tuhé“, keďže ide o nedeformovateľné objekty.
 
 **Poznámka:**
 
@@ -156,15 +156,15 @@ Pomocou pokročilých nastavení môže používateľ zadať teplotu, deformáci
 
 Pokročilé nastavenia objektov
 
-V operácii „Forming“ je možné inicializovať ďalšie premenné; podrobnosti nájdete v operácii [35\. 2D Heat Transfer](/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/) a [Initialize](../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize).
+V operácii „Forming“ je možné inicializovať ďalšie premenné; podrobnosti nájdete v operácii [35\. 2D Heat Transfer]({{ '/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}) a [Initialize](../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize).
 
-Priemerná rýchlosť deformácie ([AVGSTR](/docs/en/keyword_documentation/a/avgstr/)) je charakteristická priemerná hodnota efektívnej rýchlosti deformácie. Na začiatku simulácie by sa mala zadať aproximácia tejto hodnoty.
+Priemerná rýchlosť deformácie ([AVGSTR]({{ '/docs/en/keyword_documentation/a/avgstr/' | relative_url }})) je charakteristická priemerná hodnota efektívnej rýchlosti deformácie. Na začiatku simulácie by sa mala zadať aproximácia tejto hodnoty.
 
-Medzná rýchlosť deformácie ([LMTSTR](/docs/en/keyword_documentation/l/lmtstr/)) definuje medznú hodnotu efektívnej rýchlosti deformácie, pod ktorou sa plastický alebo porézny materiál považuje za tuhý a správa sa ako materiál s newtonovskými vlastnosťami.
+Medzná rýchlosť deformácie ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})) definuje medznú hodnotu efektívnej rýchlosti deformácie, pod ktorou sa plastický alebo porézny materiál považuje za tuhý a správa sa ako materiál s newtonovskými vlastnosťami.
 
 ![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}): Pomocou tejto funkcie môže používateľ obnoviť hodnoty premenných v počiatočnom stave.
 
-Ďalšie možnosti vlastností objektu deformácie, ktoré sú k dispozícii v operácii tvarovania, nájdete v [16.1. Deformation Properties.](/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/)
+Ďalšie možnosti vlastností objektu deformácie, ktoré sú k dispozícii v operácii tvarovania, nájdete v [16.1. Deformation Properties.]({{ '/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }})
 
 ### **Definícia geometrie objektu**
 
@@ -190,7 +190,7 @@ Okno s geometrickými primitívami pre typ geometrie „Rovinné deformácie“
 
 **Skontrolujte**![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})
 
-Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Zobrazí sa okno „Skontrolujte a opravte geometriu“, ako je znázornené na obr. 36.1.8 nižšie. Geometria sa opraví, ak obsahuje nejaké chyby, po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
+Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Zobrazí sa okno „Skontrolujte a opravte geometriu“, ako je znázornené na obr. 36.1.8 nižšie. Geometria sa opraví, ak obsahuje nejaké chyby, po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image006.jpg' | relative_url }})
 
@@ -220,7 +220,7 @@ Možnosť „Editácia geometrie“ slúži na vytvorenie geometrie objektu aleb
 
 Okno „Upraviť geometriu“
 
-Geometriu je možné vytvoriť pomocou nástroja na vytváranie slučiek alebo zadaním súradníc geometrie do tabuľky editora geometrie v pravom dolnom rohu okna, ako je znázornené na obr. 36.1.10, a to buď v režime XYR, alebo v režime Čiara-oblouk. Podrobnejšie informácie o 2D editore geometrie nájdete v kapitole [12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/).
+Geometriu je možné vytvoriť pomocou nástroja na vytváranie slučiek alebo zadaním súradníc geometrie do tabuľky editora geometrie v pravom dolnom rohu okna, ako je znázornené na obr. 36.1.10, a to buď v režime XYR, alebo v režime Čiara-oblouk. Podrobnejšie informácie o 2D editore geometrie nájdete v kapitole [12.2. 2D Geometry Data Editing]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }}).
 
 **Ďalšie možnosti geometrie:**
 
@@ -252,7 +252,7 @@ Nastavenia siete v užívateľsky definovanom režime
 
 **Počet prvkov (MGNELM)**
 
-Počet prvkov siete predstavuje približný počet prvkov, ktoré systém vygeneruje. Automatický generátor siete (AMG) použije hodnotu pre [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) a vygeneruje sieť, ktorá bude obsahovať približne rovnaký počet prvkov.
+Počet prvkov siete predstavuje približný počet prvkov, ktoré systém vygeneruje. Automatický generátor siete (AMG) použije hodnotu pre [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}) a vygeneruje sieť, ktorá bude obsahovať približne rovnaký počet prvkov.
 
 Chyba medzi počtom zadaných prvkov a počtom vygenerovaných prvkov sa zvyčajne pohybuje okolo desiatich percent. Pri generovaní siete sa na určenie hustoty siete používa zadaný celkový počet prvkov v kombinácii s ovládacími prvkami „Bod“ a „Parameter“.
 
@@ -264,15 +264,15 @@ Okrem počtu prvkov môže používateľ zvoliť aj hrúbku prvkov a hodnoty pom
 
   * **Počet prvkov hrúbky (MGTELM)**
 
-Pomer maximálnej hrúbky je jedným z viacerých spôsobov, ako regulovať hustotu siete počas automatického generovania siete (AMG). Počet prvkov v smere hrúbky predstavuje približný počet prvkov, ktoré systém vygeneruje v smere hrúbky v akejkoľvek oblasti dielu. Automatický generátor siete (AMG) použije hodnotu pre [MGTELM](/docs/en/keyword_documentation/m/mgtelm/) a vygeneruje sieť, ktorá bude mať tento počet prvkov v najtenšej časti. Napríklad, ak je [MGTELM](/docs/en/keyword_documentation/m/mgtelm/) nastavené na 4, AMG sa pokúsi vytvoriť 4 prvky v smere hrúbky geometrie.
+Pomer maximálnej hrúbky je jedným z viacerých spôsobov, ako regulovať hustotu siete počas automatického generovania siete (AMG). Počet prvkov v smere hrúbky predstavuje približný počet prvkov, ktoré systém vygeneruje v smere hrúbky v akejkoľvek oblasti dielu. Automatický generátor siete (AMG) použije hodnotu pre [MGTELM]({{ '/docs/en/keyword_documentation/m/mgtelm/' | relative_url }}) a vygeneruje sieť, ktorá bude mať tento počet prvkov v najtenšej časti. Napríklad, ak je [MGTELM]({{ '/docs/en/keyword_documentation/m/mgtelm/' | relative_url }}) nastavené na 4, AMG sa pokúsi vytvoriť 4 prvky v smere hrúbky geometrie.
 
-Smer hrúbky objektu je kolmý na os rozvetvenej stredovej čiary pre každú oblasť dielu. Celkový počet prvkov, ktoré sa majú vygenerovať v sieti, sa riadi hodnotou počtu prvkov v kľúčovom slove [MGNELM](/docs/en/keyword_documentation/m/mgnelm/). Ak hodnota prvkov hrúbky vedie k sieti, ktorá obsahuje viac prvkov, ako je hodnota špecifikovaná v [MGNELM](/docs/en/keyword_documentation/m/mgnelm/), hodnota [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) sa zníži tak, aby sieť obsahovala približne [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) prvkov. Ak hodnota [MGTELM](/docs/en/keyword_documentation/m/mgtelm/) vedie k sieti, ktorá obsahuje menej ako [MGNELM](/docs/en/keyword_documentation/m/mgnelm/) prvkov, zostávajúce prvky budú rozdelené medzi ostatné užívateľom špecifikované parametre hustoty siete (krivost, deformácia, rýchlosť deformácie a teplota).
+Smer hrúbky objektu je kolmý na os rozvetvenej stredovej čiary pre každú oblasť dielu. Celkový počet prvkov, ktoré sa majú vygenerovať v sieti, sa riadi hodnotou počtu prvkov v kľúčovom slove [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}). Ak hodnota prvkov hrúbky vedie k sieti, ktorá obsahuje viac prvkov, ako je hodnota špecifikovaná v [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}), hodnota [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}) sa zníži tak, aby sieť obsahovala približne [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}) prvkov. Ak hodnota [MGTELM]({{ '/docs/en/keyword_documentation/m/mgtelm/' | relative_url }}) vedie k sieti, ktorá obsahuje menej ako [MGNELM]({{ '/docs/en/keyword_documentation/m/mgnelm/' | relative_url }}) prvkov, zostávajúce prvky budú rozdelené medzi ostatné užívateľom špecifikované parametre hustoty siete (krivost, deformácia, rýchlosť deformácie a teplota).
 
   * **Pomer veľkostí prvkov (MGSIZR)**
 
 Maximálny pomer veľkostí medzi prvkami je jedným z viacerých spôsobov, ako regulovať hustotu siete počas automatického vytvárania siete (AMG) prostredníctvom zadania pomeru hustôt uzlov.
 
-Pri hodnote 3 pre [MGSIZR](/docs/en/keyword_documentation/m/mgsizr/) bude najväčšia hrana prvku na objekte približne trojnásobkom veľkosti najmenšej hrany prvku na tom istom objekte. Ak sa požadujú prvky rovnakej veľkosti, pomer veľkostí je 1. Ak je pomer veľkostí 0, pomer veľkostí prvkov nebude mať vplyv na rozloženie hustoty siete.
+Pri hodnote 3 pre [MGSIZR]({{ '/docs/en/keyword_documentation/m/mgsizr/' | relative_url }}) bude najväčšia hrana prvku na objekte približne trojnásobkom veľkosti najmenšej hrany prvku na tom istom objekte. Ak sa požadujú prvky rovnakej veľkosti, pomer veľkostí je 1. Ak je pomer veľkostí 0, pomer veľkostí prvkov nebude mať vplyv na rozloženie hustoty siete.
 
 **Faktory, ktoré sa zohľadňujú**
 
@@ -327,7 +327,7 @@ Keď používateľ klikne na tlačidlo „Zobraziť sieť“, v okne zobrazenia 
 **Predvolené nastavenie** ![]({{ '/assets/icons/pre_icons/mo_default_settings_button.jpg' | relative_url }})  
 Keď používateľ klikne na kartu „Predvolené nastavenia“, všetky nastavenia sa zmenia na predvolené hodnoty. Okno „Mesh“ bude štandardne neaktívne, keďže nie sú definované žiadne okná typu „Mesh“. Ak chce používateľ aktivovať okno „Mesh“, musí zmeniť váhový faktor hustoty siete tak, že posuvník nastaví na hodnotu 1.
 
-Ďalšie možnosti sietí sú k dispozícii v operáciách tvarovania a v predspracovateľovi – pozri [13.1. 2D Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+Ďalšie možnosti sietí sú k dispozícii v operáciách tvarovania a v predspracovateľovi – pozri [13.1. 2D Mesh Generation.]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
 ### Definícia materiálu
 
@@ -346,7 +346,7 @@ Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_
 
 Okno na úpravu materiálu
 
-Požadované vlastnosti závisia od fyzikálnych javov simulovaných v programe DEFORM. Vlastnosti materiálu, ktoré musí používateľ zadať, závisia od typov materiálov, ktoré používateľ v simulácii využíva. V operácii „Tvarovanie“ má používateľ prístup ku všetkým vlastnostiam materiálu; ďalšie informácie nájdete v [10\. Material Data.](/docs/en/pre_processor/10_material_data/10_material_data/).
+Požadované vlastnosti závisia od fyzikálnych javov simulovaných v programe DEFORM. Vlastnosti materiálu, ktoré musí používateľ zadať, závisia od typov materiálov, ktoré používateľ v simulácii využíva. V operácii „Tvarovanie“ má používateľ prístup ku všetkým vlastnostiam materiálu; ďalšie informácie nájdete v [10\. Material Data.]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ### Definícia okrajových podmienok
 
@@ -358,9 +358,9 @@ V predvolenom nastavení sa výmena tepla s okolím priradí ku všetkým povrch
 
 Pre obrobok bola nastavená okrajová podmienka symetrie
 
-Definované BCC je možné najskôr inicializovať výberom typu BCC v strome a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}). Konkrétne definované BCC je možné tiež odstrániť výberom definovanej vetvy zo stromu BCC a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}). Teplotu okolia je možné meniť v okne „Heat condition“ (Teplotné podmienky). Okná okolia nie sú povolené pre výmenu tepla s BCC okolia v režime prenosu tepla, sú však k dispozícii v režime tvárnenia; ďalšie podrobnosti nájdete v časti „Thermal“ (Tepelné vlastnosti) pod [14.3 Thermal Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/).
+Definované BCC je možné najskôr inicializovať výberom typu BCC v strome a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}). Konkrétne definované BCC je možné tiež odstrániť výberom definovanej vetvy zo stromu BCC a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}). Teplotu okolia je možné meniť v okne „Heat condition“ (Teplotné podmienky). Okná okolia nie sú povolené pre výmenu tepla s BCC okolia v režime prenosu tepla, sú však k dispozícii v režime tvárnenia; ďalšie podrobnosti nájdete v časti „Thermal“ (Tepelné vlastnosti) pod [14.3 Thermal Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}).
 
-V predspracovateľovi a pri operácii tvarovania sú k dispozícii ďalšie možnosti tepelného BCC a rôzne kategórie BCC, ako napríklad [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/), [Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) a [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
+V predspracovateľovi a pri operácii tvarovania sú k dispozícii ďalšie možnosti tepelného BCC a rôzne kategórie BCC, ako napríklad [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
 
 ### Definícia tepelného stavu
 
@@ -396,14 +396,14 @@ V rámci typu používateľa bude mať používateľ oprávnenie na úpravu defi
 
 Ovládacie prvky pre definíciu krokov používateľa
 
-Typ „Auto“ predstavuje krokové riadenie založené na teplote; nastavenia ([DTPMAX)](/docs/en/keyword_documentation/d/dtpmax/)) určujú dĺžku časového kroku. Účelom týchto nastavení je určiť dĺžku časového kroku simulácie, ktorá je riadená deformáciou vyvolanou teplotou. Používateľ musí zadať počiatočný časový krok (čas na krok), maximálnu zmenu teploty na krok, minimálny čas na krok a maximálny čas na krok, ako je znázornené na obr. 36.1.23.
+Typ „Auto“ predstavuje krokové riadenie založené na teplote; nastavenia ([DTPMAX)]({{ '/docs/en/keyword_documentation/d/dtpmax/' | relative_url }})) určujú dĺžku časového kroku. Účelom týchto nastavení je určiť dĺžku časového kroku simulácie, ktorá je riadená deformáciou vyvolanou teplotou. Používateľ musí zadať počiatočný časový krok (čas na krok), maximálnu zmenu teploty na krok, minimálny čas na krok a maximálny čas na krok, ako je znázornené na obr. 36.1.23.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image016.jpg' | relative_url }})
 
 Pokročilé ovládacie prvky na definovanie krokov
 
-**Zmena teploty na jeden krok**(([DTPMAX](/docs/en/keyword_documentation/d/dtpmax/))  
-Maximálny prírastok zmeny teploty obmedzuje rozsah, o ktorý sa môže teplota ktoréhokoľvek uzla zmeniť počas jedného časového kroku. Ak je priradená hodnota odlišná od nuly, spustí sa nový podkrok, keď zmena teploty v ktoromkoľvek uzle dosiahne hodnotu ([DTPMAX](/docs/en/keyword_documentation/d/dtpmax/). Maximálny/minimálny časový krok predstavuje najväčší a najmenší časový krok povolený pri podkrokovaní založenom na teplote.
+**Zmena teploty na jeden krok**(([DTPMAX]({{ '/docs/en/keyword_documentation/d/dtpmax/' | relative_url }}))  
+Maximálny prírastok zmeny teploty obmedzuje rozsah, o ktorý sa môže teplota ktoréhokoľvek uzla zmeniť počas jedného časového kroku. Ak je priradená hodnota odlišná od nuly, spustí sa nový podkrok, keď zmena teploty v ktoromkoľvek uzle dosiahne hodnotu ([DTPMAX]({{ '/docs/en/keyword_documentation/d/dtpmax/' | relative_url }}). Maximálny/minimálny časový krok predstavuje najväčší a najmenší časový krok povolený pri podkrokovaní založenom na teplote.
 
 ### Vytvoriť databázu
 
@@ -484,7 +484,7 @@ Podrobnosti o základnej definícii objektu, geometrii, sieti, materiáli a okra
 
 ### Polohovanie
 
-Ak sa objekty nečítajú z databázy, ako je znázornené na obr. 36.1.31, musí používateľ kliknúť na tlačidlo „Umiestniť objekty“, aby objekty umiestnil podľa požiadaviek nastavenia. Ďalšie informácie o možnostiach umiestňovania nájdete v [19.Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/). Ak sa objekty čítajú z databázy, ich umiestňovanie musí byť naplánované.
+Ak sa objekty nečítajú z databázy, ako je znázornené na obr. 36.1.31, musí používateľ kliknúť na tlačidlo „Umiestniť objekty“, aby objekty umiestnil podľa požiadaviek nastavenia. Ďalšie informácie o možnostiach umiestňovania nájdete v [19.Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}). Ak sa objekty čítajú z databázy, ich umiestňovanie musí byť naplánované.
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image023.jpg' | relative_url }})
 
@@ -535,7 +535,7 @@ Databáza „Next“ sa musí vygenerovať v prípade interaktívneho nastavenia
 
 ## Pokračovanie v definovaní tvárniacich operácií
 
-Po operáciách rýchleho prenosu tepla môže používateľ pridať operácie tvárnenia (pozri obr. 36.1.36.) a pokračovať v nastavení neizotermickej deformácie. Operácie prenosu tepla je možné pridať aj medzi operácie tvárnenia, najmä po operácii tvárnenia s prispôsobeným typom ohrevu „Heat Dwelling“, ktorý je k dispozícii pre simuláciu zdržania a je vysvetlený v nasledujúcej časti 36.1.7. Definovanie operácie zdržania na matrici. Ďalšie informácie o nastavení operácií tvárnenia nájdete v [33.1. 2D Forming Setup](/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/) alebo [34.1. 2D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/).
+Po operáciách rýchleho prenosu tepla môže používateľ pridať operácie tvárnenia (pozri obr. 36.1.36.) a pokračovať v nastavení neizotermickej deformácie. Operácie prenosu tepla je možné pridať aj medzi operácie tvárnenia, najmä po operácii tvárnenia s prispôsobeným typom ohrevu „Heat Dwelling“, ktorý je k dispozícii pre simuláciu zdržania a je vysvetlený v nasledujúcej časti 36.1.7. Definovanie operácie zdržania na matrici. Ďalšie informácie o nastavení operácií tvárnenia nájdete v [33.1. 2D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }}) alebo [34.1. 2D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image028.jpg' | relative_url }})
 
@@ -567,8 +567,8 @@ Databáza „Next“ sa musí vygenerovať v prípade interaktívneho nastavenia
 
 **Súvisiace témy:**
 
-[33.1. 2D Forming Setup](/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/)
+[33.1. 2D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }})
 
-[34.1. 2D Forming Express Setup](/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/).
+[34.1. 2D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}).
 
-[36.2.3D Heat Transfer Express Operation](/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/)
+[36.2.3D Heat Transfer Express Operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_2_3d_heat_transfer_express/' | relative_url }})

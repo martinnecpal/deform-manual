@@ -54,4 +54,4 @@ Applicable [object types](../../pre_processor/11_general_object_data_definition/
   
 RELATED TOPICS  
 ---  
-Keywords: [YOUNG](/docs/sk/keyword_documentation/y/young/)
+Keywords: [YOUNG]({{ '/docs/sk/keyword_documentation/y/young/' | relative_url }})

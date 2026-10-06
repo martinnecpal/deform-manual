@@ -30,4 +30,4 @@ The default values for both arguments are 0, that is, oscillation control is not
   
 RELATED TOPICS  
 ---  
-[Object Nodal Data](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) Keywords: [RZ (2D)](/docs/en/keyword_documentation/r/rz/), [RZ (3D)](/docs/en/keyword_documentation/r/rz_3d/)
+[Object Nodal Data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) Keywords: [RZ (2D)]({{ '/docs/en/keyword_documentation/r/rz/' | relative_url }}), [RZ (3D)]({{ '/docs/en/keyword_documentation/r/rz_3d/' | relative_url }})

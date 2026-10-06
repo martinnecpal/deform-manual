@@ -29,4 +29,4 @@ SMAX is one of several parameters used to control the termination of the simulat
   
 RELATED TOPICS  
 ---  
-[Stopping Controls](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/) Keywords: [EMAX](/docs/en/keyword_documentation/e/emax/), [LMAX (2D)](/docs/en/keyword_documentation/l/lmax/), [LMAX (3D)](/docs/en/keyword_documentation/l/lmax_3d/) , [NSTEP](/docs/en/keyword_documentation/n/nstep/), [TMAX](/docs/en/keyword_documentation/t/tmax/), [VMIN](/docs/en/keyword_documentation/v/vmin/)
+[Stopping Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}) Keywords: [EMAX]({{ '/docs/en/keyword_documentation/e/emax/' | relative_url }}), [LMAX (2D)]({{ '/docs/en/keyword_documentation/l/lmax/' | relative_url }}), [LMAX (3D)]({{ '/docs/en/keyword_documentation/l/lmax_3d/' | relative_url }}) , [NSTEP]({{ '/docs/en/keyword_documentation/n/nstep/' | relative_url }}), [TMAX]({{ '/docs/en/keyword_documentation/t/tmax/' | relative_url }}), [VMIN]({{ '/docs/en/keyword_documentation/v/vmin/' | relative_url }})

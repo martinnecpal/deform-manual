@@ -5,7 +5,7 @@ title: "Lab 13 Die Stress with Shrink Fit"
 
 # Lab 13 Die Stress with Shrink Fit
 
-In this lab we are doing Die stress study for [Spike_Nonisothermal](/docs/sk/labs/basic_labs/2d_labs/lab_05_spike_non-isothermal/) project and we are adding two extra object called Holder to support Bottom die and Shrink fit Rig on Top Die.
+In this lab we are doing Die stress study for [Spike_Nonisothermal]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_05_spike_non-isothermal/' | relative_url }}) project and we are adding two extra object called Holder to support Bottom die and Shrink fit Rig on Top Die.
 
 13.1. Opening Project File
 
@@ -269,12 +269,12 @@ Max Principal stress plot in Line display
 
 **Related Topics:**
 
-[11\. General Object Data Definition](/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/)
+[11\. General Object Data Definition]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
 
-[14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process Simulation layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process Simulation layout]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post-processor layout](/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post-processor layout]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[25\. Post Processor Layout](/docs/sk/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout]({{ '/docs/sk/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})

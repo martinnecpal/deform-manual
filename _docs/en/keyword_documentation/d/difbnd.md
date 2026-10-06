@@ -52,4 +52,4 @@ The time to achieve complete bonding is a strong function of temperature and pre
   
 RELATED TOPICS  
 ---  
-Keywords: [GBMOBI](/docs/en/keyword_documentation/g/gbmobi/), [GBENGY](/docs/en/keyword_documentation/g/gbengy/), [NUCSIZ](/docs/en/keyword_documentation/n/nucsiz/), [COARSE](/docs/en/keyword_documentation/c/coarse/)
+Keywords: [GBMOBI]({{ '/docs/en/keyword_documentation/g/gbmobi/' | relative_url }}), [GBENGY]({{ '/docs/en/keyword_documentation/g/gbengy/' | relative_url }}), [NUCSIZ]({{ '/docs/en/keyword_documentation/n/nucsiz/' | relative_url }}), [COARSE]({{ '/docs/en/keyword_documentation/c/coarse/' | relative_url }})

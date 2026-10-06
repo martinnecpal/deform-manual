@@ -30,4 +30,4 @@ LMAX is one of several parameters used to control the termination of the simulat
   
 RELATED TOPICS  
 ---  
-Termination parameters, [Primary object](../../pre_processor/9_simulation_controls/9_3_stopping_controls.htm#9.3.2._Primary_Die_Displacement_\(SMAX\)) Keywords: [SMAX](/docs/en/keyword_documentation/s/smax/), [TMAX](/docs/en/keyword_documentation/t/tmax/), [EMAX](/docs/en/keyword_documentation/e/emax/), [NSTEP](/docs/en/keyword_documentation/n/nstep/), [VMIN](/docs/en/keyword_documentation/v/vmin/)
+Termination parameters, [Primary object](../../pre_processor/9_simulation_controls/9_3_stopping_controls.htm#9.3.2._Primary_Die_Displacement_\(SMAX\)) Keywords: [SMAX]({{ '/docs/en/keyword_documentation/s/smax/' | relative_url }}), [TMAX]({{ '/docs/en/keyword_documentation/t/tmax/' | relative_url }}), [EMAX]({{ '/docs/en/keyword_documentation/e/emax/' | relative_url }}), [NSTEP]({{ '/docs/en/keyword_documentation/n/nstep/' | relative_url }}), [VMIN]({{ '/docs/en/keyword_documentation/v/vmin/' | relative_url }})

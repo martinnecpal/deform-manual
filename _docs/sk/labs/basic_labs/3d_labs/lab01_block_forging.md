@@ -233,7 +233,7 @@ Continue up to contact page by clicking on ![]({{ '/assets/icons/pre_icons/mo_ne
 
 **Note:**
 
-At any time when in the [Object Positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/) window, the ![]({{ '/assets/icons/pre_icons/mo_cancel_button.jpg' | relative_url }}) button or the ![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}) button can be used to return the objects to their positions prior to entering the Object Positioning window.
+At any time when in the [Object Positioning]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}) window, the ![]({{ '/assets/icons/pre_icons/mo_cancel_button.jpg' | relative_url }}) button or the ![]({{ '/assets/icons/pre_icons/mo_reset_button.jpg' | relative_url }}) button can be used to return the objects to their positions prior to entering the Object Positioning window.
 
 ## Inter-Object Relationships
 

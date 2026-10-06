@@ -125,7 +125,7 @@ Top die window
 
 ### Geometry
 
-User can define the new geometry or modify the existing geometry by using options from geometry window. Geometry window provides basic options for geometry defining (See Fig. 49.1.7.). Geometry can also be imported using Import geometry from File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option or using Import from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option. User can also import geometries in other formats such as .DXF and .IGES. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 2D geometries please refer to [12.1. 2D Geometry Data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/) and [12.2. 2D Geometry Data Editing.](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+User can define the new geometry or modify the existing geometry by using options from geometry window. Geometry window provides basic options for geometry defining (See Fig. 49.1.7.). Geometry can also be imported using Import geometry from File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) option or using Import from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option. User can also import geometries in other formats such as .DXF and .IGES. Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 2D geometries please refer to [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) and [12.2. 2D Geometry Data Editing.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/image0006.jpg' | relative_url }})
 
@@ -133,7 +133,7 @@ Geometry window
 
 ### Object Mesh
 
-Mesh Page provides options to mesh the object. All the dies on which stresses need to be calculated should be meshed. Mesh page provides the option to user to set number of elements using slider bar or by entering manually to generate mesh, see Fig. 49.1.8. Users can use expert mode to define the desired mesh, please refer [13.1. 2D Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/) for more information related to expert mesh options. 
+Mesh Page provides options to mesh the object. All the dies on which stresses need to be calculated should be meshed. Mesh page provides the option to user to set number of elements using slider bar or by entering manually to generate mesh, see Fig. 49.1.8. Users can use expert mode to define the desired mesh, please refer [13.1. 2D Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}) for more information related to expert mesh options. 
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/image0007.jpg' | relative_url }})
 
@@ -187,7 +187,7 @@ Shrink Fit Boundary conditions assigned
 
 In Initialize window, few state variables that are commonly used such as Temperature, strain, stress, damage, velocity, Displacement, etc.., are made available for initialization.
 
-User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 49.1.14. shows the various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1. Node Data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 49.1.14. shows the various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1. Node Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) and [17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/image0013.jpg' | relative_url }})
 
@@ -211,7 +211,7 @@ Fixtures that hold dies can be defined in this operation. Fixtures are considere
 
 ## Controls
 
-Fig. 49.1.17. shows Controls window, user can position the fixtures and die objects that are added using position objects ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. The positioning will be applied only for the current selected step and will not be used in future steps. Various positioning options (See Fig. 49.1.18.) are available to position the objects, for more information on these options please refer [16.Object Positioning](/docs/en/pre_processor/16_object_properties/16_object_properties/).
+Fig. 49.1.17. shows Controls window, user can position the fixtures and die objects that are added using position objects ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. The positioning will be applied only for the current selected step and will not be used in future steps. Various positioning options (See Fig. 49.1.18.) are available to position the objects, for more information on these options please refer [16.Object Positioning]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/49_die_stress_study/49_1_2d_die_stress_study/image0016.jpg' | relative_url }})
 
@@ -243,7 +243,7 @@ User can turn on thermal calculation by turning on Heat Transfer mode from Exper
 
 Simulation control window
 
-For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/).
+For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}).
 
 ## Generate DB
 
@@ -259,6 +259,6 @@ DB generation window
 
 **Related Topics:**
 
-[49\. Introduction to Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_introduction_to_die_stress_study/)
+[49\. Introduction to Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_introduction_to_die_stress_study/' | relative_url }})
 
-[49.2. 3D Die Stress Study](/docs/en/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/)
+[49.2. 3D Die Stress Study]({{ '/docs/en/operation_templates/49_die_stress_study/49_2_3d_die_stress_study/' | relative_url }})

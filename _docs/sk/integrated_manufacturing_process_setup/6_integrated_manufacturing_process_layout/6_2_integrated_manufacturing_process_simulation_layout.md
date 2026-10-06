@@ -249,7 +249,7 @@ Refresh is used to update the simulating job status and informations like simula
 
 ## Simulation Jobs tab
 
-The Simulation job will display the status of simulation submitted from the current MO project (See Fig. 6.2.12.). The status of job could be Running, Remeshing or Pending (when delay in simulation start or when in queue). Refresh button in the simulation options can be used to refresh the status and even to update the status as and when required. For more information on the jobs user can refer to the Simulation menu Process Monitor option. Refer the chapter [2](/docs/sk/simulator/23_deform_simulator/23_4_process_monitor/)[3.4. Process Monitor](/docs/sk/simulator/23_deform_simulator/23_4_process_monitor/) for details.
+The Simulation job will display the status of simulation submitted from the current MO project (See Fig. 6.2.12.). The status of job could be Running, Remeshing or Pending (when delay in simulation start or when in queue). Refresh button in the simulation options can be used to refresh the status and even to update the status as and when required. For more information on the jobs user can refer to the Simulation menu Process Monitor option. Refer the chapter [2]({{ '/docs/sk/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }})[3.4. Process Monitor]({{ '/docs/sk/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }}) for details.
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_2_integrated_manufacturing_process_simulation_layout/6_2_image011.jpg' | relative_url }})  
 (a) 
@@ -273,7 +273,7 @@ While the simulation is running, the second most recent saved step can be viewed
 
 **Simulation graphics tool bar options:**
 
-The simulation graphics tool bar contains the state variables window icon ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) and major state variables contour icons ![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}) (Temperature),![]({{ '/assets/icons/post_icons/mo_damage_sv_icon.jpg' | relative_url }}) (Damage), ![]({{ '/assets/icons/post_icons/mo_vel_sv_icon.jpg' | relative_url }}) (Velocity), ![]({{ '/assets/icons/post_icons/mo_disp_sv_icon.jpg' | relative_url }}) (Displacement), ![]({{ '/assets/icons/post_icons/mo_eff_stress_sv_icon.jpg' | relative_url }}) (Effective stress), ![]({{ '/assets/icons/post_icons/mo_strain_sv_icon.jpg' | relative_url }}) (Effective strain) and ![]({{ '/assets/icons/post_icons/mo_strain_rate_sv_icon.jpg' | relative_url }}) (Effective strain rate). The plotted state variables can be removed using the ![]({{ '/assets/icons/post_icons/mo_clear_sv_icon.jpg' | relative_url }}) (Clear) icon. For more detailed information about state variables refer to the NG Post mode section [26.6.3](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/)[. State Variables](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/).
+The simulation graphics tool bar contains the state variables window icon ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) and major state variables contour icons ![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}) (Temperature),![]({{ '/assets/icons/post_icons/mo_damage_sv_icon.jpg' | relative_url }}) (Damage), ![]({{ '/assets/icons/post_icons/mo_vel_sv_icon.jpg' | relative_url }}) (Velocity), ![]({{ '/assets/icons/post_icons/mo_disp_sv_icon.jpg' | relative_url }}) (Displacement), ![]({{ '/assets/icons/post_icons/mo_eff_stress_sv_icon.jpg' | relative_url }}) (Effective stress), ![]({{ '/assets/icons/post_icons/mo_strain_sv_icon.jpg' | relative_url }}) (Effective strain) and ![]({{ '/assets/icons/post_icons/mo_strain_rate_sv_icon.jpg' | relative_url }}) (Effective strain rate). The plotted state variables can be removed using the ![]({{ '/assets/icons/post_icons/mo_clear_sv_icon.jpg' | relative_url }}) (Clear) icon. For more detailed information about state variables refer to the NG Post mode section [26.6.3]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }})[. State Variables]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }}).
 
 Other options like Object mode ![]({{ '/assets/icons/post_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }}), Contact display ![]({{ '/assets/icons/post_icons/mo_show_cotact_icon.jpg' | relative_url }}), Contour plot types , Summary ![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}) , Load-Stroke graph ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}), Mirror symmetry ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }}) , Slicing ![]({{ '/assets/icons/post_icons/mo_slicing_option.jpg' | relative_url }}) , Measurement ![]({{ '/assets/icons/post_icons/mo_measure_tool.jpg' | relative_url }}) and 3D view ![]({{ '/assets/icons/post_icons/mo_3d_view_icon.jpg' | relative_url }}) ,3D setup ![]({{ '/assets/icons/post_icons/mo_3d_setup_icon.jpg' | relative_url }}) (only for 2D models) and Display Properties ![]({{ '/assets/icons/post_icons/mo_disp_porp_icon.jpg' | relative_url }}) are also available in Simulation graphics and are explained below,
 
@@ -345,16 +345,16 @@ Contour bar significants option
 Contour bar colorbar Preference
 
   
-**Summary** ![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}) : Certain characteristic data, such as press loads, principle die velocities and maximum and minimum values of state variables are stored for every simulation step, whether complete data is stored for that step or not in the respective tabs. This summary data vs time graphs for all the saved steps can be viewed in the graphics window. For more information refer the Section [26.6.6. Summary Graphs](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_summary/).
+**Summary** ![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}) : Certain characteristic data, such as press loads, principle die velocities and maximum and minimum values of state variables are stored for every simulation step, whether complete data is stored for that step or not in the respective tabs. This summary data vs time graphs for all the saved steps can be viewed in the graphics window. For more information refer the Section [26.6.6. Summary Graphs]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_summary/' | relative_url }}).
 
-Load/Stroke Graphs ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}): The graphs window is used to generate load, speed, torque, angular velocity, energy and volume vs. time (or stroke) plots for the object. For more information refer the Section [26.6.7. Load Stroke](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_7_load_stroke/) Graphs.
+Load/Stroke Graphs ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}): The graphs window is used to generate load, speed, torque, angular velocity, energy and volume vs. time (or stroke) plots for the object. For more information refer the Section [26.6.7. Load Stroke]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_7_load_stroke/' | relative_url }}) Graphs.
 
-Mirror Symmetry ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }}) : The purpose of object mirroring and symmetry is to allow the user to visualize the object both sides of the centerline of a part for 2D and in 3D user can visualize the entire part from symmetry model. For more information refer the Section [26.6.15. Mirror Symmetry](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_15_mirror_symmetry/).
+Mirror Symmetry ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }}) : The purpose of object mirroring and symmetry is to allow the user to visualize the object both sides of the centerline of a part for 2D and in 3D user can visualize the entire part from symmetry model. For more information refer the Section [26.6.15. Mirror Symmetry]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_15_mirror_symmetry/' | relative_url }}).
 
   
 **Interactive Slicing** ![]({{ '/assets/icons/post_icons/mo_slicing_option.jpg' | relative_url }}) :
 
-[3D]: The slicing dialog allows the user to cut a section into the workpiece. When the section is made, shaded contours can be seen in the cut area. For more information refer the Section [26.6.15.Slicing](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/).
+[3D]: The slicing dialog allows the user to cut a section into the workpiece. When the section is made, shaded contours can be seen in the cut area. For more information refer the Section [26.6.15.Slicing]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/' | relative_url }}).
 
   
 **Delete Slicing**![]({{ '/assets/icons/post_icons/mo_del_slicing_icon.jpg' | relative_url }}) :
@@ -366,7 +366,7 @@ Mirror Symmetry ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | rel
 
 **3D View![]({{ '/assets/icons/post_icons/mo_3d_view_icon.jpg' | relative_url }}) : **[2D]:This is used to view the 2D simulation results by revolving or extruding the objects into 3D.
 
-**3D Setup** ![]({{ '/assets/icons/post_icons/mo_3d_setup_icon.jpg' | relative_url }}) : [2D]: The revolved or extruded 2D simulation results 3D view settings can be controlled by using 3D Setup. For more information on 3D View and Setup refer the [Section 26.6.20. 3D Viewer and Setup](/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup/).
+**3D Setup** ![]({{ '/assets/icons/post_icons/mo_3d_setup_icon.jpg' | relative_url }}) : [2D]: The revolved or extruded 2D simulation results 3D view settings can be controlled by using 3D Setup. For more information on 3D View and Setup refer the [Section 26.6.20. 3D Viewer and Setup]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup/' | relative_url }}).
 
   
 For Menu bar and Tool bar options like Axis views, Display rendering modes, View fit, Display Refresh and Display modification options (Zoom, Pan, Rotate) refer the sections [6.4.1.2.Viewport Menu](6_4_main_menu.htm#Viewport_Menu), [6.4.1.3.Display Menu](6_4_main_menu.htm#Display_menu) and [6.4.1.4.Mouse Menu.](6_4_main_menu.htm#Mouse_Menu)
@@ -522,12 +522,12 @@ There are also four additional ways to monitor a simulation those are,
   
 **Related Topics:**
 
-[23.3. Simulation Graphics](/docs/sk/simulator/23_deform_simulator/23_3_simulation_graphics/)
+[23.3. Simulation Graphics]({{ '/docs/sk/simulator/23_deform_simulator/23_3_simulation_graphics/' | relative_url }})
 
-[23.4. Process Monitor](/docs/sk/simulator/23_deform_simulator/23_4_process_monitor/)
+[23.4. Process Monitor]({{ '/docs/sk/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }})
 
-[23.5. Setting up MPICH](/docs/sk/simulator/23_deform_simulator/23_5_setting_up_mpich/)
+[23.5. Setting up MPICH]({{ '/docs/sk/simulator/23_deform_simulator/23_5_setting_up_mpich/' | relative_url }})
 
-[23.6. Running Shared folder Simulations](/docs/sk/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/)
+[23.6. Running Shared folder Simulations]({{ '/docs/sk/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/' | relative_url }})
 
-[23.8. Trouble Shooting Simulation Running](/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/)
+[23.8. Trouble Shooting Simulation Running]({{ '/docs/sk/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/' | relative_url }})

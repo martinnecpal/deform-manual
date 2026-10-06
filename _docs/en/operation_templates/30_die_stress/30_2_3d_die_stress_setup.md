@@ -94,7 +94,7 @@ Top die window
   
 **Geometry**
 
-User can define the new geometry by using the options from geometry window. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides basic options for defining geometry (See Fig. 30.2.5.). If user need other advanced option, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like 2D->3D conversion, Find axis, Setup brick mesh, symmetry planes and examine (See Fig. 30.2.6.). Geometry can also be imported using Import geometry from File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})option or using Import from Library option. User can also import geometries in other formats such as .key, .DB, .STL, .PDA, .NAS and .UNV . Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 3D geometries please refer to [12\. 3. 3D Geometry Data Defining.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/)
+User can define the new geometry by using the options from geometry window. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides basic options for defining geometry (See Fig. 30.2.5.). If user need other advanced option, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like 2D->3D conversion, Find axis, Setup brick mesh, symmetry planes and examine (See Fig. 30.2.6.). Geometry can also be imported using Import geometry from File ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})option or using Import from Library option. User can also import geometries in other formats such as .key, .DB, .STL, .PDA, .NAS and .UNV . Primitives are provided for easy definition of basic geometry shapes. For more information on creating and editing 3D geometries please refer to [12\. 3. 3D Geometry Data Defining.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_2_3d_die_stress_setup/image003.jpg' | relative_url }})
 
@@ -107,7 +107,7 @@ Geometry window in Expert mode
   
 **Object Mesh**
 
-Mesh Page provides options to mesh the object. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides option to set number of elements using slider bar to generate mesh. If the object geometry is complex or user would like to control the mesh density over the object, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like weighing factors, Mesh windows and user defined mode to control the mesh density. Meshing options available in expert mode and Guided more are shown in Fig. 30.2.7. and Fig. 30.2.8. For more detail description of these options, please refer [13.2. 3D Tet Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+Mesh Page provides options to mesh the object. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides option to set number of elements using slider bar to generate mesh. If the object geometry is complex or user would like to control the mesh density over the object, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like weighing factors, Mesh windows and user defined mode to control the mesh density. Meshing options available in expert mode and Guided more are shown in Fig. 30.2.7. and Fig. 30.2.8. For more detail description of these options, please refer [13.2. 3D Tet Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_2_3d_die_stress_setup/image005.jpg' | relative_url }})
 
@@ -171,7 +171,7 @@ User has to define the interference value, Deform automatically selects the Dire
   * Selecting the inner surface of the shrink ring or outer surface of the Die insert (surface which is contact with the die)
 
 If shrink fit is applied to the inner object, the value should be negative and If shrink fit is applied to the outer object then the value should be positive.  
-For more information on shrink fit, Please refer [3D Die Stress Analysis](/docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/).   
+For more information on shrink fit, Please refer [3D Die Stress Analysis]({{ '/docs/en/operation_templates/30_die_stress/3d_die_stress_analysis_theory/' | relative_url }}).   
 Fig. 30.2.14. & Fig. 30.2.15. shows shrink fit assigned to shrink ring.
 
   
@@ -188,7 +188,7 @@ Shrink Fit Boundary conditions assigned
 In Initialize window, few state variables that are commonly used such as Temperature, strain, stress, damage, velocity, Displacement, etc.., are made available for initialization.
 
   
-User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 30.2.16. shows the various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1. Node Data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) and [17.2. Element Data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+User can initialize the values for these state variables by clicking on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button. Fig. 30.2.16. shows the various state variables that are available in Initialize window. Depending on the type of state variable, user can also initialize them from Node and Element data windows. For more information on how to initialize state variables in Node and Element windows, please refer [17.1. Node Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) and [17.2. Element Data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_2_3d_die_stress_setup/image014.jpg' | relative_url }})
 
@@ -202,7 +202,7 @@ Fixtures that hold dies can be defined in this operation. Fixtures are considere
 ## Positioning
 
 Fig. 30.2.17. shows Positioning window, user can position the fixtures and die objects that are added using position objects button. Various positioning options are available to position the objects as shown in Fig. 30.2.18.  
-For more information on these options please refer refer [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+For more information on these options please refer refer [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image017.jpg' | relative_url }})
 
@@ -273,7 +273,7 @@ Simulation control in Guided mode
 
 Simulation control in Expert mode
 
-For more information and description about options in Simulation controls, Please refer refer [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+For more information and description about options in Simulation controls, Please refer refer [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ## Generate DB
 
@@ -299,14 +299,14 @@ DB generation window
 
 **Related Topics:**
 
-[6.1. Integrated Manufacturing Process Pre- Processor Layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/)
+[6.1. Integrated Manufacturing Process Pre- Processor Layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process.Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process.Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post - Processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post - Processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[Die stress study labs](/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/)
+[Die stress study labs]({{ '/docs/en/labs/die_stess_study_labs/die_stess_labs_across_single_steps_main_pg/' | relative_url }})
 
-[30\. Introduction to Die Stress](/docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/)
+[30\. Introduction to Die Stress]({{ '/docs/en/operation_templates/30_die_stress/30_introduction_to_die_stress/' | relative_url }})
 
-[30.1. 2D Die stress setup](/docs/en/operation_templates/30_die_stress/30_1_2d_die_stress_setup/)
+[30.1. 2D Die stress setup]({{ '/docs/en/operation_templates/30_die_stress/30_1_2d_die_stress_setup/' | relative_url }})

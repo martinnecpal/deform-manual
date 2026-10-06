@@ -13,7 +13,7 @@ AXIII.3. Solution
 
 ## Objective
 
-In many simulations, force-controlled dies are used in order to simulate real-world tool loading conditions. As seen in [Appendix XII](/docs/sk/appendices/appendix_xii__modelling_of_spring_loaded_die/), these can be used in order to simulate spring-loaded dies. The purpose of this section is to explain the pitfalls that can occur while trying to simulate force-loaded dies in terms of obtaining good results and improving convergence of the solution
+In many simulations, force-controlled dies are used in order to simulate real-world tool loading conditions. As seen in [Appendix XII]({{ '/docs/sk/appendices/appendix_xii__modelling_of_spring_loaded_die/' | relative_url }}), these can be used in order to simulate spring-loaded dies. The purpose of this section is to explain the pitfalls that can occur while trying to simulate force-loaded dies in terms of obtaining good results and improving convergence of the solution
 
 ## Theory
 
@@ -25,4 +25,4 @@ As implied with the above statement on step functions, if there are no step func
 
 **Related Topics:**
 
-[Movement Controls Definition-Force](/docs/sk/pre_processor/15_movement_controls_definition/15_2_force/)
+[Movement Controls Definition-Force]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_2_force/' | relative_url }})

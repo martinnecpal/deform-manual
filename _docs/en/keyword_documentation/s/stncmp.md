@@ -40,4 +40,4 @@ The field width of strain components is determined by strain component storage f
   
 RELATED TOPICS  
 ---  
-[Object Elemental Data](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/): Deformation - Strain Components Keywords: [STNOUT](/docs/en/keyword_documentation/s/stnout/)
+[Object Elemental Data]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}): Deformation - Strain Components Keywords: [STNOUT]({{ '/docs/en/keyword_documentation/s/stnout/' | relative_url }})

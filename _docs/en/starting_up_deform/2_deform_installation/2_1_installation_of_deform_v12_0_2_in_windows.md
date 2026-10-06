@@ -261,7 +261,7 @@ _**Note** : ___Install_ path information for each version is required to be defi
 DEFORM Setup Simulation Server window
 
 Running jobs on remote computers can be performed by using the Shared Folders tab. (See Fig. 2.1.23.)  
-For more detailed information refer to Chapter [23.6. Running Shared folder Simulations.](/docs/en/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/)
+For more detailed information refer to Chapter [23.6. Running Shared folder Simulations.]({{ '/docs/en/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/' | relative_url }})
 
 ![]({{ '/assets/images/starting_up_deform/2_deform_installation/2_1_installation_of_deform_v12_0_1_in_windows/image0023.jpg' | relative_url }})
 
@@ -554,10 +554,10 @@ DEFORM Setup Start menu tab
 
 **Related Topics:**
 
-[3\. License Manager](/docs/en/starting_up_deform/3_license_manager/3_introduction_to_license_manager/)
+[3\. License Manager]({{ '/docs/en/starting_up_deform/3_license_manager/3_introduction_to_license_manager/' | relative_url }})
 
-[3.4. Trouble Shooting License Issues](/docs/en/starting_up_deform/3_license_manager/3_4_trouble_shooting_license_issues/)
+[3.4. Trouble Shooting License Issues]({{ '/docs/en/starting_up_deform/3_license_manager/3_4_trouble_shooting_license_issues/' | relative_url }})
 
-[23.6. Running simulations remotely](../../../assets/images/simulator/23_deform_simulator/23_6_running_shared_folder_simulations)
+[23.6. Running simulations remotely]({{ '/docs/en/simulator/23_deform_simulator/23_6_running_shared_folder_simulations/' | relative_url }})
 
-[23.8. Trouble Shooting Simulation Running](../../../assets/images/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running)
+[23.8. Trouble Shooting Simulation Running]({{ '/docs/en/simulator/23_deform_simulator/23_8_trouble_shooting_simulation_running/' | relative_url }})

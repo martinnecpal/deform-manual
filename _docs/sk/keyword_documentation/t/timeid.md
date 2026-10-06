@@ -38,4 +38,4 @@ When Time_Id(i) = 1 (for diffusion bonding time), control parameters are not nec
   
 RELATED TOPICS  
 ---  
-[Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/) Keywords: [TIMERC](/docs/sk/keyword_documentation/t/timerc/), [DIFBND](/docs/sk/keyword_documentation/d/difbnd/)
+[Simulation Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}) Keywords: [TIMERC]({{ '/docs/sk/keyword_documentation/t/timerc/' | relative_url }}), [DIFBND]({{ '/docs/sk/keyword_documentation/d/difbnd/' | relative_url }})

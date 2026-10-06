@@ -37,4 +37,4 @@ When material has a list of phases, material type is automatically set as mixtur
   
 RELATED TOPICS  
 ---  
-[Heat treatment](/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/), Phase transformation Related Keywords: [TTTD](/docs/en/keyword_documentation/t/tttd/)
+[Heat treatment]({{ '/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/' | relative_url }}), Phase transformation Related Keywords: [TTTD]({{ '/docs/en/keyword_documentation/t/tttd/' | relative_url }})

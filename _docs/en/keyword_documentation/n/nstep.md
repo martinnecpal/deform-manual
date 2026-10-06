@@ -29,4 +29,4 @@ NSTEP is one of several parameters used to control the termination of the simula
   
 RELATED TOPICS  
 ---  
-[Termination parameters](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/) Keywords: [EMAX](/docs/en/keyword_documentation/e/emax/), [LMAX(2D)](/docs/en/keyword_documentation/l/lmax/), [LMAX(3D)](/docs/en/keyword_documentation/l/lmax_3d/), [SMAX](/docs/en/keyword_documentation/s/smax/), [TMAX](/docs/en/keyword_documentation/t/tmax/), [VMIN](/docs/en/keyword_documentation/v/vmin/)
+[Termination parameters]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}) Keywords: [EMAX]({{ '/docs/en/keyword_documentation/e/emax/' | relative_url }}), [LMAX(2D)]({{ '/docs/en/keyword_documentation/l/lmax/' | relative_url }}), [LMAX(3D)]({{ '/docs/en/keyword_documentation/l/lmax_3d/' | relative_url }}), [SMAX]({{ '/docs/en/keyword_documentation/s/smax/' | relative_url }}), [TMAX]({{ '/docs/en/keyword_documentation/t/tmax/' | relative_url }}), [VMIN]({{ '/docs/en/keyword_documentation/v/vmin/' | relative_url }})

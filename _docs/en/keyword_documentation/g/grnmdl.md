@@ -54,4 +54,4 @@ If Ftype = 1 use the operands Npt, and Ndim. The typical values for N in metals 
   
 RELATED TOPICS  
 ---  
-[DEFORM-HT](/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/) Keywords: [GRNDAT](/docs/en/keyword_documentation/g/grndat/), [GRAIN](/docs/en/keyword_documentation/g/grain/)
+[DEFORM-HT]({{ '/docs/en/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/' | relative_url }}) Keywords: [GRNDAT]({{ '/docs/en/keyword_documentation/g/grndat/' | relative_url }}), [GRAIN]({{ '/docs/en/keyword_documentation/g/grain/' | relative_url }})

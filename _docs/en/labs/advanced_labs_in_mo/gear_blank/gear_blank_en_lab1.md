@@ -427,4 +427,4 @@ When you are finished viewing results, click to exit from State variable window.
 
 Click on ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) mode button to switch to Pre mode to continue with the Next lab 2.
 
-Click on [Lab 2. 2D to 3D Conversion to sequence 3D operation after 2D operation](/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab2/) to setup Lab6.
+Click on [Lab 2. 2D to 3D Conversion to sequence 3D operation after 2D operation]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab2/' | relative_url }}) to setup Lab6.

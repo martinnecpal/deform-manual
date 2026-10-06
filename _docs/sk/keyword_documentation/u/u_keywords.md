@@ -5,24 +5,24 @@ title: "U Keywords"
 
 # U Keywords
 
-[UENAME (2D3D)](/docs/sk/keyword_documentation/u/uename/)
+[UENAME (2D3D)]({{ '/docs/sk/keyword_documentation/u/uename/' | relative_url }})
 
-[UNIT (2D3D)](/docs/sk/keyword_documentation/u/unit/)
+[UNIT (2D3D)]({{ '/docs/sk/keyword_documentation/u/unit/' | relative_url }})
 
-[UNNAME (2D3D)](/docs/sk/keyword_documentation/u/unname/)
+[UNNAME (2D3D)]({{ '/docs/sk/keyword_documentation/u/unname/' | relative_url }})
 
-[UNTE2H (2D3D)](/docs/sk/keyword_documentation/u/unte2h/)
+[UNTE2H (2D3D)]({{ '/docs/sk/keyword_documentation/u/unte2h/' | relative_url }})
 
-[URZ (2D)](/docs/sk/keyword_documentation/u/urz/)
+[URZ (2D)]({{ '/docs/sk/keyword_documentation/u/urz/' | relative_url }})
 
-[URZ (3D)](/docs/sk/keyword_documentation/u/urz_3d/)
+[URZ (3D)]({{ '/docs/sk/keyword_documentation/u/urz_3d/' | relative_url }})
 
-[USRDEF (2D3D)](/docs/sk/keyword_documentation/u/usrdef/)
+[USRDEF (2D3D)]({{ '/docs/sk/keyword_documentation/u/usrdef/' | relative_url }})
 
-[USRELM (2D3D)](/docs/sk/keyword_documentation/u/usrelm/)
+[USRELM (2D3D)]({{ '/docs/sk/keyword_documentation/u/usrelm/' | relative_url }})
 
-[USRNOD (2D3D)](/docs/sk/keyword_documentation/u/usrnod/)
+[USRNOD (2D3D)]({{ '/docs/sk/keyword_documentation/u/usrnod/' | relative_url }})
 
-[USRSUB (2D3D)](/docs/sk/keyword_documentation/u/usrsub/)
+[USRSUB (2D3D)]({{ '/docs/sk/keyword_documentation/u/usrsub/' | relative_url }})
 
-[UTSDAT (2D3D)](/docs/sk/keyword_documentation/u/utsdat/)
+[UTSDAT (2D3D)]({{ '/docs/sk/keyword_documentation/u/utsdat/' | relative_url }})

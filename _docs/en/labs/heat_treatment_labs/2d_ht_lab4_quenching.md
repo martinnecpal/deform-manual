@@ -112,8 +112,8 @@ After completion of Post processing, Save the Project and close the MO wizard by
 
 Related Topics:
 
-[2D HT Lab1 Heating](/docs/en/labs/heat_treatment_labs/2d_ht_lab1_heating/)
+[2D HT Lab1 Heating]({{ '/docs/en/labs/heat_treatment_labs/2d_ht_lab1_heating/' | relative_url }})
 
-[2D HT Lab2 Carburization](/docs/en/labs/heat_treatment_labs/2d_ht_lab2_carburization/)
+[2D HT Lab2 Carburization]({{ '/docs/en/labs/heat_treatment_labs/2d_ht_lab2_carburization/' | relative_url }})
 
-[2D HT Lab3 Diffusion](/docs/en/labs/heat_treatment_labs/2d_ht_lab_3_diffusion/)
+[2D HT Lab3 Diffusion]({{ '/docs/en/labs/heat_treatment_labs/2d_ht_lab_3_diffusion/' | relative_url }})

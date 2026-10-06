@@ -45,4 +45,4 @@ NRECVL is the state variable for nodal record values.
   
 RELATED TOPICS  
 ---  
-Related keywords: [NRECID](/docs/en/keyword_documentation/n/nrecid/)
+Related keywords: [NRECID]({{ '/docs/en/keyword_documentation/n/nrecid/' | relative_url }})

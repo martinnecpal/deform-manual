@@ -42,4 +42,4 @@ The connectivity should represent either 8 noded brick elements or 4 noded tetra
   
 RELATED TOPICS  
 ---  
-[Object Elemental data](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/), [Mesh](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/) Keywords: [RZ (2D)](/docs/sk/keyword_documentation/r/rz/), [RZ (3D)](/docs/sk/keyword_documentation/r/rz_3d/)
+[Object Elemental data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}), [Mesh]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }}) Keywords: [RZ (2D)]({{ '/docs/sk/keyword_documentation/r/rz/' | relative_url }}), [RZ (3D)]({{ '/docs/sk/keyword_documentation/r/rz_3d/' | relative_url }})

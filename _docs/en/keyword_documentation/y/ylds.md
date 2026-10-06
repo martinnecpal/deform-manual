@@ -35,4 +35,4 @@ YLDS specifies the yield surface translation tensor.
   
 RELATED TOPICS  
 ---  
-Keyword: [STRESS (2D)](/docs/en/keyword_documentation/s/stress/), [STRESS (3D)](/docs/en/keyword_documentation/s/stress_3d/)
+Keyword: [STRESS (2D)]({{ '/docs/en/keyword_documentation/s/stress/' | relative_url }}), [STRESS (3D)]({{ '/docs/en/keyword_documentation/s/stress_3d/' | relative_url }})

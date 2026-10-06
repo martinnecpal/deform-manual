@@ -34,4 +34,4 @@ Applicable object types: Rigid XRotAxis and YRotAxis are used only for GEOTYP = 
   
 RELATED TOPICS  
 ---  
-Keywords: [ANGMOV(2D)](/docs/en/keyword_documentation/a/angmov/), [ANGMOV(3D)](../a/angmov\(3d\).htm),[MOVCTL (2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm), [GEOTYP(2D)](/docs/en/keyword_documentation/g/geotyp/)
+Keywords: [ANGMOV(2D)]({{ '/docs/en/keyword_documentation/a/angmov/' | relative_url }}), [ANGMOV(3D)](../a/angmov\(3d\).htm),[MOVCTL (2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm), [GEOTYP(2D)]({{ '/docs/en/keyword_documentation/g/geotyp/' | relative_url }})

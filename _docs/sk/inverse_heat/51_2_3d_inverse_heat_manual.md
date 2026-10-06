@@ -97,7 +97,7 @@ Geometry Page
 
 Mesh Page provides options to mesh the object. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides option only to set number of elements using slider bar to generate mesh. If the object geometry is complex or user would like to control the mesh density over the object, then user must switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like weighing factors and mesh windows to control the mesh density. Meshing options available in Guided mode and expert mode are shown in Fig. 51.2.8. and Fig. 51.2.9.
 
-For more detail description of these options, please refer [3D Mesh](/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/).
+For more detail description of these options, please refer [3D Mesh]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
 
   
 ![]({{ '/assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0008.jpg' | relative_url }})
@@ -126,7 +126,7 @@ BCC Page
 
 ### Property Page
 
-Miscellaneous object parameters, which affect either thermo-mechanical behaviour of the object or numerical solution behaviour are specified in the Object-Properties window (See Fig. 51.2.12.). For more information please refer [Object properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/).
+Miscellaneous object parameters, which affect either thermo-mechanical behaviour of the object or numerical solution behaviour are specified in the Object-Properties window (See Fig. 51.2.12.). For more information please refer [Object properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0012.jpg' | relative_url }})
 
@@ -190,7 +190,7 @@ Defined Function data page
 
 ## Positioning
 
-User can position the objects using ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. Various positioning options are available to position the objects as shown in Fig. 51.2.21., for more information on these options please refer [3D Positioning objects](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/)
+User can position the objects using ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. Various positioning options are available to position the objects as shown in Fig. 51.2.21., for more information on these options please refer [3D Positioning objects]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/inverse_heat_wizard/51_2_3d_inverse_heat_manual/image0021.jpg' | relative_url }})
 
@@ -281,4 +281,4 @@ Thermal history of the temperature measurement points
 Optimal HTC output for defined zones
 
   
-For more details on other post-processing tools please refer [Post processor](/docs/sk/post_processor/25_post_processor_layout/25_post_processor_layout/).
+For more details on other post-processing tools please refer [Post processor]({{ '/docs/sk/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }}).

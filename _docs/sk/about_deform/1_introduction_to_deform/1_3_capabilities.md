@@ -13,9 +13,9 @@ title: "1.3. Schopnosti"
 
   * Spájané modelovanie deformácie a prenosu tepla na simuláciu procesov kovania za studena, za tepla alebo za tepla (všetky výrobky).
 
-  * Rozsiahla [material database](/docs/sk/pre_processor/10_material_data/10_material_data/) pre mnohé bežné zliatiny vrátane ocelí, hliníka, titánu a superzliatin. (všetky výrobky).
+  * Rozsiahla [material database]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }}) pre mnohé bežné zliatiny vrátane ocelí, hliníka, titánu a superzliatin. (všetky výrobky).
 
-  * Zadanie údajov o materiáli definovaných používateľom pre akýkoľvek materiál, ktorý nie je zahrnutý v [material database](/docs/sk/pre_processor/10_material_data/10_material_data/). (všetky výrobky).
+  * Zadanie údajov o materiáli definovaných používateľom pre akýkoľvek materiál, ktorý nie je zahrnutý v [material database]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }}). (všetky výrobky).
 
   * Informácie o toku materiálu, plnení zápustky, zaťažení výkovku, napätí v zápustke, toku zŕn, tvorbe defektov a tvárnom lome (všetky výrobky).
 
@@ -27,7 +27,7 @@ title: "1.3. Schopnosti"
 
   * Integrované modely tvárniacich zariadení pre hydraulické lisy, kladivá, skrutkové lisy a mechanické lisy (všetky výrobky).
 
-  * [User defined subroutines](/docs/sk/user_routines/56_user_routines_in_deform/56_1_introduction_to_user_routines/) na modelovanie materiálov, modelovanie lisov, lomové kritériá a ďalšie funkcie (2D, 3D).
+  * [User defined subroutines]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_1_introduction_to_user_routines/' | relative_url }}) na modelovanie materiálov, modelovanie lisov, lomové kritériá a ďalšie funkcie (2D, 3D).
 
   * Vstavaná funkcia Flownet je možnosť, pomocou ktorej môže používateľ pred simuláciou databázového súboru definovať hodnotu flownet na vizualizáciu prípadných nepravidelností v štruktúre zrna alebo na zobrazenie potenciálnych povrchových defektov.
 
@@ -37,7 +37,7 @@ title: "1.3. Schopnosti"
 
   * Kupóny Extrakcia údajov na vyhodnotenie mikroštruktúry a mechanických vlastností konkrétnej rezanej časti (2D, 3D).
 
-  * Postprocesor bol rozšírený o výstupy simulácie vo formáte .pdf (3D) a .ppt. To umožňuje používateľovi väčšiu flexibilitu pre [report generation](/docs/sk/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/) (2D, 3D).
+  * Postprocesor bol rozšírený o výstupy simulácie vo formáte .pdf (3D) a .ppt. To umožňuje používateľovi väčšiu flexibilitu pre [report generation]({{ '/docs/sk/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/' | relative_url }}) (2D, 3D).
 
   * Obrysové grafy teploty, deformácie, napätia, poškodenia a ďalších kľúčových premenných zjednodušujú následné spracovanie (všetky produkty).
 
@@ -81,7 +81,7 @@ Rýchle chladenie, ktorého účelom je kontrola mikroštruktúry a fázových p
 
 DEFORM modeluje komplexnú interakciu medzi deformáciou, teplotou a v prípade tepelného spracovania aj transformáciou a difúziou. Medzi celým javom existuje väzba, ako je znázornené na obr. 1.3.1. nižšie. Ak sú licencované a aktivované príslušné moduly, tieto väzbové efekty zahŕňajú ohrev v dôsledku deformačnej práce, tepelné zmäkčenie, teplotne riadenú transformáciu, latentné teplo transformácie, transformačnú plasticitu, transformačné napätia, vplyv napätia na transformáciu a vplyv obsahu uhlíka na všetky vlastnosti materiálu.
 
-[DEFORM HT](/docs/sk/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/) umožňuje nastavenie operácií tepelného spracovania v cykloch za sebou a ich postupnú simuláciu.
+[DEFORM HT]({{ '/docs/sk/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/' | relative_url }}) umožňuje nastavenie operácií tepelného spracovania v cykloch za sebou a ich postupnú simuláciu.
 
 ![]({{ '/assets/images/about_deform/1_3_capabilities/1_3_image001.jpg' | relative_url }})
 
@@ -89,14 +89,14 @@ Vzťah medzi rôznymi modulmi DEFORM
 
 **Súvisiace témy:**
 
-[PRE-PROCESSOR](/docs/sk/pre_processor/7_introduction_to_pre-processor/)
+[PRE-PROCESSOR]({{ '/docs/sk/pre_processor/7_introduction_to_pre-processor/' | relative_url }})
 
-[POST-PROCESSOR](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[POST-PROCESSOR]({{ '/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})
 
-[INV. HEAT TRANSFER](/docs/sk/inverse_heat/51_introduction_to_inverse_heat/)
+[INV. HEAT TRANSFER]({{ '/docs/sk/inverse_heat/51_introduction_to_inverse_heat/' | relative_url }})
 
-[HEAT TREATMENT](/docs/sk/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/)
+[HEAT TREATMENT]({{ '/docs/sk/operation_templates/37_heat_treatment/37_introduction_to_heat_treatment/' | relative_url }})
 
-[Integrated Manufacturing Process](/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/) (MO)
+[Integrated Manufacturing Process]({{ '/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }}) (MO)
 
-[HT FURNACE](/docs/sk/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/)
+[HT FURNACE]({{ '/docs/sk/operation_templates/38_furnace_heating/38_introduction_to_3d_ht_furnace/' | relative_url }})

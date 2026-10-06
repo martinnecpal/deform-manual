@@ -201,15 +201,15 @@ Na obr. 8.17 sú zobrazené možnosti ponuky nástrojov. Pomocou týchto možnos
 
 Možnosti ponuky Nástroje
 
-  * **Uzly objektov** ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}) : V okne s údajmi o uzloch objektov sa zobrazujú všetky dostupné informácie o uzloch objektov. Všetky informácie je možné upravovať a mnohé premenné je možné znázorniť graficky. Táto možnosť sa aktivuje len vtedy, ak sú vybrané okná vlastností objektu, ako napríklad hlavné okno objektu, okno geometrie a okno siete. Ďalšie informácie nájdete v časti [17.1 Node Data](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/).
+  * **Uzly objektov** ![]({{ '/assets/icons/pre_icons/mo_nodal_data_icon.jpg' | relative_url }}) : V okne s údajmi o uzloch objektov sa zobrazujú všetky dostupné informácie o uzloch objektov. Všetky informácie je možné upravovať a mnohé premenné je možné znázorniť graficky. Táto možnosť sa aktivuje len vtedy, ak sú vybrané okná vlastností objektu, ako napríklad hlavné okno objektu, okno geometrie a okno siete. Ďalšie informácie nájdete v časti [17.1 Node Data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}).
 
-  * **Prvky objektu** ![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) : V okne s údajmi o prvkoch sa zobrazujú všetky dostupné informácie o prvkoch objektu. Všetky informácie je možné upravovať a mnohé premenné je možné zobraziť v grafe. Táto voľba sa aktivuje len vtedy, ak sú vybrané okná vlastností objektu, ako sú okná hlavného objektu, geometrie a siete. Ďalšie informácie nájdete v časti [17.2 Element Data](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+  * **Prvky objektu** ![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) : V okne s údajmi o prvkoch sa zobrazujú všetky dostupné informácie o prvkoch objektu. Všetky informácie je možné upravovať a mnohé premenné je možné zobraziť v grafe. Táto voľba sa aktivuje len vtedy, ak sú vybrané okná vlastností objektu, ako sú okná hlavného objektu, geometrie a siete. Ďalšie informácie nájdete v časti [17.2 Element Data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
-  * **Boolean**![]({{ '/assets/icons/pre_icons/mo_boolean_icon.jpg' | relative_url }}) : Táto funkcia umožňuje používateľovi odpočítať objem siete objektu od geometrie iného objektu alebo booleovského operátora vo vzťahu k rovine (táto možnosť je k dispozícii len pre 3D). Ďalšie informácie nájdete v časti [18.1 Boolean](/docs/sk/pre_processor/18_object_manipulation_tools/18_1_boolean/).
+  * **Boolean**![]({{ '/assets/icons/pre_icons/mo_boolean_icon.jpg' | relative_url }}) : Táto funkcia umožňuje používateľovi odpočítať objem siete objektu od geometrie iného objektu alebo booleovského operátora vo vzťahu k rovine (táto možnosť je k dispozícii len pre 3D). Ďalšie informácie nájdete v časti [18.1 Boolean]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }}).
 
-  * **Interpolácia údajov** ![]({{ '/assets/icons/pre_icons/mo_data_interpolation_icon.jpg' | relative_url }}) : Pri ručnom vytváraní novej siete v preprocesore môže používateľ prostredníctvom tohto dialógového okna preniesť údaje z iného objektu z inej databázy. Po výbere databázy môže používateľ vybrať objekt a číslo kroku, od ktorého sa majú údaje interpolovať. Ďalšie informácie nájdete v časti [17.3. Data Interpolation](/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/).
+  * **Interpolácia údajov** ![]({{ '/assets/icons/pre_icons/mo_data_interpolation_icon.jpg' | relative_url }}) : Pri ručnom vytváraní novej siete v preprocesore môže používateľ prostredníctvom tohto dialógového okna preniesť údaje z iného objektu z inej databázy. Po výbere databázy môže používateľ vybrať objekt a číslo kroku, od ktorého sa majú údaje interpolovať. Ďalšie informácie nájdete v časti [17.3. Data Interpolation]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/' | relative_url }}).
 
-  * **Previesť 2D na 3D** ![]({{ '/assets/icons/pre_icons/convert_2d_to_3d_icon.jpg' | relative_url }}) : Funkcia „Previesť 2D na 3D model“ prevedie 2D osovo symetrický/torzný model otočením okolo stredovej osi a 2D model s rovinným deformovaním/napätím vytlačením do tretieho smeru. Ďalšie informácie nájdete v časti [22\. Convert 2D to 3D.](/docs/sk/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/)
+  * **Previesť 2D na 3D** ![]({{ '/assets/icons/pre_icons/convert_2d_to_3d_icon.jpg' | relative_url }}) : Funkcia „Previesť 2D na 3D model“ prevedie 2D osovo symetrický/torzný model otočením okolo stredovej osi a 2D model s rovinným deformovaním/napätím vytlačením do tretieho smeru. Ďalšie informácie nájdete v časti [22\. Convert 2D to 3D.]({{ '/docs/sk/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/' | relative_url }})
 
 ### Ponuka možností
 
@@ -293,7 +293,7 @@ Možnosti ovládania výstupu v okne Nastavenia prostredia
 
   * E-mail:
 
-Možnosť „E-mail“ v okne „Nastavenia prostredia“ vyzerá tak, ako je znázornené na obr. 8.27. Táto funkcia umožňuje programu DEFORM odoslať e-mailové upozornenie na začiatku simulácie a na konci simulácie odoslať posledných 25 riadkov zo súboru správ a zo súboru protokolu. E-maily sa odosielajú prostredníctvom protokolu SMTP s použitím StartTLS (alebo bez zabezpečenia). Ďalšie informácie nájdete v [23.7. Email notification of the simulation](/docs/sk/simulator/23_deform_simulator/23_7_email_the_results/).
+Možnosť „E-mail“ v okne „Nastavenia prostredia“ vyzerá tak, ako je znázornené na obr. 8.27. Táto funkcia umožňuje programu DEFORM odoslať e-mailové upozornenie na začiatku simulácie a na konci simulácie odoslať posledných 25 riadkov zo súboru správ a zo súboru protokolu. E-maily sa odosielajú prostredníctvom protokolu SMTP s použitím StartTLS (alebo bez zabezpečenia). Ďalšie informácie nájdete v [23.7. Email notification of the simulation]({{ '/docs/sk/simulator/23_deform_simulator/23_7_email_the_results/' | relative_url }}).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image031.jpg' | relative_url }})
 
@@ -390,7 +390,7 @@ Položka ponuky Pomoc
 
   * **O SFTC:** V novom okne sa zobrazia kontaktné údaje SFTC.
 
-  * **O DEFORM Next-Gen Pre:** V okne sa zobrazujú stručné informácie o produkte DEFORM. Podrobnejšie informácie o poznámkach k verzii nájdete v kapitole [1.11. Release Notes.](/docs/sk/about_deform/1_introduction_to_deform/1_11_release_notes/)
+  * **O DEFORM Next-Gen Pre:** V okne sa zobrazujú stručné informácie o produkte DEFORM. Podrobnejšie informácie o poznámkach k verzii nájdete v kapitole [1.11. Release Notes.]({{ '/docs/sk/about_deform/1_introduction_to_deform/1_11_release_notes/' | relative_url }})
 
 ## Operácia Tree
 
@@ -586,27 +586,27 @@ V stromovej štruktúre Operácia sú na nastavenie problému k dispozícii nasl
 
 Stránka o typoch geometrie
 
-  * **Ovládacie prvky simulácie [2D, 3D]:** Nastavenia v časti „Ovládacie prvky simulácie“ ovplyvňujú numerické správanie riešenia. Pozrite si dokument [9\. Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/).
+  * **Ovládacie prvky simulácie [2D, 3D]:** Nastavenia v časti „Ovládacie prvky simulácie“ ovplyvňujú numerické správanie riešenia. Pozrite si dokument [9\. Simulation Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}).
 
-  * **Zoznam materiálov [2D, 3D]:** Aby simulácia dosiahla vysokú úroveň presnosti, je dôležité porozumieť vlastnostiam materiálov potrebným na špecifikáciu materiálu použitého v programe DEFORM. Pozrite si kapitolu [10\. Material Properties](/docs/sk/pre_processor/10_material_data/10_material_data/).
+  * **Zoznam materiálov [2D, 3D]:** Aby simulácia dosiahla vysokú úroveň presnosti, je dôležité porozumieť vlastnostiam materiálov potrebným na špecifikáciu materiálu použitého v programe DEFORM. Pozrite si kapitolu [10\. Material Properties]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
   * **Objekt [2D, 3D]**: Na stránke Objekt nastavíme počet objektov potrebných na vytvorenie úlohy.
 
-  * **Všeobecná definícia [2D, 3D]**: Definujte názov objektu, teplotu objektu a typy objektu. Pozrite si kapitolu [11\. General Object Data Definition](/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/)
-  * **Geometrické údaje [2D, 3D]**: Definovanie geometrických údajov objektu importom geometrie alebo vytvorením geometrie pomocou základných prvkov. Pozrite si kapitolu [12\. Geometry Modelling](/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/).
-  * **Dáta siete [2D, 3D]**: možnosť vytvoriť sieť pre geometriu objektu pomocou nastavení siete. Pozrite si kapitolu [13\. Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/).
+  * **Všeobecná definícia [2D, 3D]**: Definujte názov objektu, teplotu objektu a typy objektu. Pozrite si kapitolu [11\. General Object Data Definition]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
+  * **Geometrické údaje [2D, 3D]**: Definovanie geometrických údajov objektu importom geometrie alebo vytvorením geometrie pomocou základných prvkov. Pozrite si kapitolu [12\. Geometry Modelling]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }}).
+  * **Dáta siete [2D, 3D]**: možnosť vytvoriť sieť pre geometriu objektu pomocou nastavení siete. Pozrite si kapitolu [13\. Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }}).
   * **Priradenie materiálu [2D, 3D]**: možnosť priradiť objektu materiál výberom z zoznamu materiálov. 
-  * **Okrajové podmienky [2D, 3D]**: voľba slúžiaca na priradenie okrajovej podmienky k objektu. Pozrite si kapitolu [14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/).
-  * **Ovládanie pohybu [2D, 3D]**: voľba slúžiaca na definovanie pohybu objektu. Pozrite si kapitolu [15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/).
-  * **Vlastnosti [2D, 3D]**: možnosť definovať vlastnosti objektu. Pozrite si kapitolu [16\. Object Properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/).
-  * **Inicializácia [2D, 3D]**: možnosť inicializovať stavovú premennú objektu. Pozrite si kapitolu [17\. Object Data Initialize.](/docs/sk/pre_processor/17_object_data_initialization/17_object_data_initialize/)
+  * **Okrajové podmienky [2D, 3D]**: voľba slúžiaca na priradenie okrajovej podmienky k objektu. Pozrite si kapitolu [14\. Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
+  * **Ovládanie pohybu [2D, 3D]**: voľba slúžiaca na definovanie pohybu objektu. Pozrite si kapitolu [15\. Movement Controls Settings]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}).
+  * **Vlastnosti [2D, 3D]**: možnosť definovať vlastnosti objektu. Pozrite si kapitolu [16\. Object Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
+  * **Inicializácia [2D, 3D]**: možnosť inicializovať stavovú premennú objektu. Pozrite si kapitolu [17\. Object Data Initialize.]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }})
   * **Vstavaná sieť Flownet [3D]**: voľba slúžiaca na vytvorenie vstavanej siete Flownet pre deformovateľný objekt. 
 
-  * **Umiestňovanie [2D, 3D]**: Po definovaní objektu máte k dispozícii celý rad funkcií na umiestňovanie, ktoré slúžia na správne umiestnenie objektov pred modelovaním procesu. K týmto funkciám sa dostanete aj cez ponuku „Pre Tools“. Pozrite si kapitolu [19\. Object positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/).
+  * **Umiestňovanie [2D, 3D]**: Po definovaní objektu máte k dispozícii celý rad funkcií na umiestňovanie, ktoré slúžia na správne umiestnenie objektov pred modelovaním procesu. K týmto funkciám sa dostanete aj cez ponuku „Pre Tools“. Pozrite si kapitolu [19\. Object positioning]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
-  * **Kontakt [2D, 3D]**: Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty v simulácii vzájomne interagujú. Pozrite si kapitolu [20\. Inter-Object Definition](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/).
+  * **Kontakt [2D, 3D]**: Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty v simulácii vzájomne interagujú. Pozrite si kapitolu [20\. Inter-Object Definition]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
-  * **Ovládacie prvky zastavenia [2D, 3D]**: Na stránke Ovládacie prvky zastavenia v režime Guided sú k dispozícii možnosti kritérií zastavenia na základe deformácie a teploty, ako je znázornené na obr. 8.57 nižšie. V režime Expert sú k dispozícii možnosti [Simulation controls](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/).
+  * **Ovládacie prvky zastavenia [2D, 3D]**: Na stránke Ovládacie prvky zastavenia v režime Guided sú k dispozícii možnosti kritérií zastavenia na základe deformácie a teploty, ako je znázornené na obr. 8.57 nižšie. V režime Expert sú k dispozícii možnosti [Simulation controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}).
 
 ![]({{ '/assets/images/pre-processor/8_pre_processor_layout/8_image013.jpg' | relative_url }})
 
@@ -618,65 +618,65 @@ Stránka ovládacích prvkov zastavenia
 
 Stránka krokov
 
-  * ******Vytvoriť databázu** [2D, 3D]**:** Sada simulačných údajov zadaná do predspracovateľa môže byť uložená ako nová databáza alebo pridaná na koniec existujúceho databázového súboru. Pozrite si kapitolu [21\. Database Generation](/docs/sk/pre_processor/21_database_generation/21_database_generation/)
+  * ******Vytvoriť databázu** [2D, 3D]**:** Sada simulačných údajov zadaná do predspracovateľa môže byť uložená ako nová databáza alebo pridaná na koniec existujúceho databázového súboru. Pozrite si kapitolu [21\. Database Generation]({{ '/docs/sk/pre_processor/21_database_generation/21_database_generation/' | relative_url }})
 
   
 **Súvisiace témy:**
 
-[9\. Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+[9\. Simulation Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[10\. Material Properties](/docs/sk/pre_processor/10_material_data/10_material_data/)
+[10\. Material Properties]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[11\. General Object Data Definition](/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/)
+[11\. General Object Data Definition]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
 
-[12\. Geometry Modelling](/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/)
+[12\. Geometry Modelling]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})
 
-[13\. Mesh Generation](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/)
+[13\. Mesh Generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[14\. Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[15\. Movement Controls Settings](/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[15\. Movement Controls Settings]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[16\. Object Properties](/docs/sk/pre_processor/16_object_properties/16_object_properties/)
+[16\. Object Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[17\. Object Data Initialize](/docs/sk/pre_processor/17_object_data_initialization/17_object_data_initialize/)
+[17\. Object Data Initialize]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_object_data_initialize/' | relative_url }})
 
-[18\. Advanced Object Data Definition](/docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/)
+[18\. Advanced Object Data Definition]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_object_manipulation_tools/' | relative_url }})
 
-[19\. Object positioning](/docs/sk/pre_processor/19_object_positioning/19_object_positioning/)
+[19\. Object positioning]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
-[20\. Inter-Object Definition](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[20\. Inter-Object Definition]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-[21\. Database Generation](/docs/sk/pre_processor/21_database_generation/21_database_generation/)
+[21\. Database Generation]({{ '/docs/sk/pre_processor/21_database_generation/21_database_generation/' | relative_url }})
 
-[22\. Convert 2D to 3D](/docs/sk/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/)
+[22\. Convert 2D to 3D]({{ '/docs/sk/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/' | relative_url }})
 
-[23\. Simulatior](/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/)
+[23\. Simulatior]({{ '/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/' | relative_url }})
 
-[24\. Post Processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[24\. Post Processor]({{ '/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})
 
-[56\. User Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/)
+[56\. User Routines]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/' | relative_url }})
 
-[3\. License Manager](/docs/sk/starting_up_deform/3_license_manager/license_manager_mainpg/)
+[3\. License Manager]({{ '/docs/sk/starting_up_deform/3_license_manager/license_manager_mainpg/' | relative_url }})
 
-[Appendices](/docs/sk/appendices/appendices_list/)
+[Appendices]({{ '/docs/sk/appendices/appendices_list/' | relative_url }})
 
-[Keyword Documentation](/docs/sk/keyword_documentation/deform_keywords_list/)
+[Keyword Documentation]({{ '/docs/sk/keyword_documentation/deform_keywords_list/' | relative_url }})
 
   
 **Prevádzka:**  
-[Integrated Manufacturing Process (MO)](/docs/sk/integrated_manufacturing_process_setup/integrated_manufacturing_process_mainpg/)
+[Integrated Manufacturing Process (MO)]({{ '/docs/sk/integrated_manufacturing_process_setup/integrated_manufacturing_process_mainpg/' | relative_url }})
 
-[Forming operation Manual](/docs/sk/operation_templates/33_forming/33_introduction_to_forming/)
+[Forming operation Manual]({{ '/docs/sk/operation_templates/33_forming/33_introduction_to_forming/' | relative_url }})
 
-[Shape Rolling Manual](/docs/sk/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/)
+[Shape Rolling Manual]({{ '/docs/sk/operation_templates/43_shape_rolling/43_introduction_to_shape_rolling/' | relative_url }})
 
-[Ring Rolling Manual](/docs/sk/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/)
+[Ring Rolling Manual]({{ '/docs/sk/operation_templates/42_ring_rolling/42_introduction_to_ring_rolling/' | relative_url }})
 
-[Extrusion Template Manual](/docs/sk/operation_templates/31_extrusion/31_introduction_to_extrusion/)
+[Extrusion Template Manual]({{ '/docs/sk/operation_templates/31_extrusion/31_introduction_to_extrusion/' | relative_url }})
 
-[Machining Template Manual](/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/)
+[Machining Template Manual]({{ '/docs/sk/operation_templates/39_cutting/39_introduction_to_cutting/' | relative_url }})
 
-[Inverse Heat Transfer Manual](/docs/sk/inverse_heat/51_introduction_to_inverse_heat/)
+[Inverse Heat Transfer Manual]({{ '/docs/sk/inverse_heat/51_introduction_to_inverse_heat/' | relative_url }})
 
-[3D Geo Tool](/docs/sk/operation_templates/50_3d_geo_tool/50_introduction_to_3d_geo_tool/)
+[3D Geo Tool]({{ '/docs/sk/operation_templates/50_3d_geo_tool/50_introduction_to_3d_geo_tool/' | relative_url }})

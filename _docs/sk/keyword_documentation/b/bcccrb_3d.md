@@ -36,4 +36,4 @@ BCCCRB specifies the atom content at the surface for the entire simulation. Ther
   
 RELATED TOPICS  
 ---  
-[Boundary constraints](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/), [Inter-object contact](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) Keywords: [DATOM](/docs/sk/keyword_documentation/d/datom/), [CRBFLX](/docs/sk/keyword_documentation/c/crbflx/)
+[Boundary constraints]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}), [Inter-object contact]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}) Keywords: [DATOM]({{ '/docs/sk/keyword_documentation/d/datom/' | relative_url }}), [CRBFLX]({{ '/docs/sk/keyword_documentation/c/crbflx/' | relative_url }})

@@ -41,7 +41,7 @@ DEFORM GUI Main
 
 ## Add Die stress study
 
-If [Lab 06 Die Stress operation](/docs/en/labs/basic_labs/2d_labs/lab_06_die_stress/) is already done, then Die stress Study 1 tab can be noticed after as we open the Spike_Nonisothermal project as shown in Fig. L12.2. At top Left corner of the Display window, Left mouse click on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button and select Add Die stress Study operation as shown in Fig. L12.2.
+If [Lab 06 Die Stress operation]({{ '/docs/en/labs/basic_labs/2d_labs/lab_06_die_stress/' | relative_url }}) is already done, then Die stress Study 1 tab can be noticed after as we open the Spike_Nonisothermal project as shown in Fig. L12.2. At top Left corner of the Display window, Left mouse click on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button and select Add Die stress Study operation as shown in Fig. L12.2.
 
 A Die stress Study tab is added with Die stress operation in operation editor as shown in Fig. L12.3.
 
@@ -214,18 +214,18 @@ Stress Effective plot in Solid shading display
 
 Max Principal stress plot in Line display
 
-In order to continue with the next Lab [13 Die Stress with Shrink Fit](/docs/en/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/) do not close the MO project Refer the [Lab 13 Die Stress with Shrink Fit](/docs/en/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/).
+In order to continue with the next Lab [13 Die Stress with Shrink Fit]({{ '/docs/en/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/' | relative_url }}) do not close the MO project Refer the [Lab 13 Die Stress with Shrink Fit]({{ '/docs/en/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/' | relative_url }}).
 
 ****
 
 **Related Topics:**
 
-[11\. General Object Data Definition](/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/)
+[11\. General Object Data Definition]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
 
-[14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[6.2. Integrated Manufacturing Process Simulation layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/)
+[6.2. Integrated Manufacturing Process Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 
-[6.3. Integrated Manufacturing Process Post-processor layout](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/)
+[6.3. Integrated Manufacturing Process Post-processor layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_3_integrated_manufacturing_process_post_layout/' | relative_url }})
 
-[25\. Post Processor Layout](/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/)
+[25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }})

@@ -37,6 +37,6 @@ Running a simulation from a dos window
 
 **Related Topics:**
 
-[Appendix III: Running the DEFORM in text mode](/docs/sk/appendices/appendix_iii_running_deform_in_text_mode/)
+[Appendix III: Running the DEFORM in text mode]({{ '/docs/sk/appendices/appendix_iii_running_deform_in_text_mode/' | relative_url }})
 
-[Appendix XVII: Data Files](/docs/sk/appendices/appendix_xvii_data_files/)
+[Appendix XVII: Data Files]({{ '/docs/sk/appendices/appendix_xvii_data_files/' | relative_url }})

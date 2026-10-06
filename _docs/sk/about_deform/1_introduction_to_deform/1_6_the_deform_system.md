@@ -15,31 +15,31 @@ Systém DEFORM pozostáva z troch hlavných komponentov:
 
 ## Predbežné spracovanie
 
-Preprocesor na vytváranie, zostavovanie alebo úpravu údajov potrebných na analýzu simulácie a na generovanie požadovaného databázového súboru. DEFORM [pre-processor](/docs/sk/pre_processor/pre-processor_mainpg/) používa grafické používateľské rozhranie na zostavenie údajov potrebných na spustenie simulácie. Vstupné údaje zahŕňajú,
+Preprocesor na vytváranie, zostavovanie alebo úpravu údajov potrebných na analýzu simulácie a na generovanie požadovaného databázového súboru. DEFORM [pre-processor]({{ '/docs/sk/pre_processor/pre-processor_mainpg/' | relative_url }}) používa grafické používateľské rozhranie na zostavenie údajov potrebných na spustenie simulácie. Vstupné údaje zahŕňajú,
 
 **Opis objektu**
 
-[Object description](/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/) zahŕňa všetky údaje súvisiace s objektom vrátane [geometry](/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/), [mesh](/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/), teploty, [material](/docs/sk/pre_processor/10_material_data/10_material_data/) atď.
+[Object description]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}) zahŕňa všetky údaje súvisiace s objektom vrátane [geometry]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}), [mesh]({{ '/docs/sk/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }}), teploty, [material]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }}) atď.
 
 **Dáta o materiáli**
 
-[Material](/docs/sk/pre_processor/10_material_data/10_material_data/)[ data](/docs/sk/pre_processor/10_material_data/10_material_data/) obsahuje údaje opisujúce správanie sa materiálu za podmienok, ktoré sa v ňom počas deformácie primerane vyskytnú.
+[Material]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }})[ data]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }}) obsahuje údaje opisujúce správanie sa materiálu za podmienok, ktoré sa v ňom počas deformácie primerane vyskytnú.
 
 **Vnútorné podmienky objektu**
 
-[Inter object](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) podmienky popisujú, ako na seba objekty vzájomne pôsobia, vrátane kontaktu, trenia a prenosu tepla medzi objektmi.
+[Inter object]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}) podmienky popisujú, ako na seba objekty vzájomne pôsobia, vrátane kontaktu, trenia a prenosu tepla medzi objektmi.
 
 **Simulačné ovládacie prvky**
 
-[Simulation controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/) obsahuje inštrukcie o metódach, ktoré má DEFORM použiť na riešenie problému, vrátane podmienok prostredia spracovania, aké fyzikálne procesy sa majú modelovať, koľko diskrétnych časových krokov sa má použiť na modelovanie procesu atď.
+[Simulation controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}) obsahuje inštrukcie o metódach, ktoré má DEFORM použiť na riešenie problému, vrátane podmienok prostredia spracovania, aké fyzikálne procesy sa majú modelovať, koľko diskrétnych časových krokov sa má použiť na modelovanie procesu atď.
 
 **Interné údaje o materiáli**
 
-Údaje [Inter material](/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/) opisujú fyzikálny proces premeny jednej fázy materiálu na iné fázy toho istého materiálu v procese tepelného spracovania. Napríklad premena austenitu na perlit, bainit a martenzit.
+Údaje [Inter material]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }}) opisujú fyzikálny proces premeny jednej fázy materiálu na iné fázy toho istého materiálu v procese tepelného spracovania. Napríklad premena austenitu na perlit, bainit a martenzit.
 
 **Integrovaný výrobný proces (MO)**
 
-DEFORM [Integrated Manufacturing Process (MO)](/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/)**** poskytuje používateľsky prívetivé rozhranie na zostavenie mnohých po sebe nasledujúcich operácií pri počiatočnom nastavení a ich postupnú simuláciu bez interakcie používateľa. Prostredie MO uľahčuje používateľovi prenášať objekty medzi operáciami a spájať rôzne operácie na prenos údajov.
+DEFORM [Integrated Manufacturing Process (MO)]({{ '/docs/sk/integrated_manufacturing_process_setup/5_introduction_to_integrated_manufacturinghtm/' | relative_url }})**** poskytuje používateľsky prívetivé rozhranie na zostavenie mnohých po sebe nasledujúcich operácií pri počiatočnom nastavení a ich postupnú simuláciu bez interakcie používateľa. Prostredie MO uľahčuje používateľovi prenášať objekty medzi operáciami a spájať rôzne operácie na prenos údajov.
 
 ## Spustenie simulácie
 
@@ -63,22 +63,22 @@ Postprocesor na čítanie databázového súboru zo simulačného stroja a grafi
 
 **Súvisiace témy:**
 
-[Pre-Processor](/docs/sk/pre_processor/7_introduction_to_pre-processor/)
+[Pre-Processor]({{ '/docs/sk/pre_processor/7_introduction_to_pre-processor/' | relative_url }})
 
-[Post-Processor](/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/)
+[Post-Processor]({{ '/docs/sk/post_processor/24_introduction_to_post_processor/24_introduction_to_post_processor/' | relative_url }})
 
-[Object Description](/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/)
+[Object Description]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
 
-[Material Data](/docs/sk/pre_processor/10_material_data/10_material_data/)
+[Material Data]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[Boundary Conditions](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/)
+[Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
-[Inter-Object Data](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[Inter-Object Data]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-[Simulation Controls](/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/)
+[Simulation Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[Simulator](/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/)
+[Simulator]({{ '/docs/sk/simulator/23_deform_simulator/23_introduction_to_deform_simulator/' | relative_url }})
 
-[2D Stub Shaft Labs](/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/)
+[2D Stub Shaft Labs]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/' | relative_url }})
 
-[3D Stub Shaft Labs](/docs/sk/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/)
+[3D Stub Shaft Labs]({{ '/docs/sk/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/' | relative_url }})

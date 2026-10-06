@@ -45,4 +45,4 @@ The angular velocity may be specified as a constant, a function of time, or a fu
   
 RELATED TOPICS  
 ---  
-[Inter-Object data](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/): Thermal Keywords: [IHTCOF (2D)](/docs/en/keyword_documentation/i/ihtcof/), [IHTCOF (3D)](/docs/en/keyword_documentation/i/ihtcof_3d/)
+[Inter-Object data]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}): Thermal Keywords: [IHTCOF (2D)]({{ '/docs/en/keyword_documentation/i/ihtcof/' | relative_url }}), [IHTCOF (3D)]({{ '/docs/en/keyword_documentation/i/ihtcof_3d/' | relative_url }})

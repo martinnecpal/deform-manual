@@ -57,7 +57,7 @@ Do editora operácií bola pridaná operácia „2D prenos tepla“
 
 ## Typ geometrie
 
-V režime 2D prenosu tepla je v súčasnosti možné nastaviť štyri typy geometrických modelov ([GEOTYP](/docs/en/keyword_documentation/g/geotyp/)), ako je znázornené na obr. 35.1.2.
+V režime 2D prenosu tepla je v súčasnosti možné nastaviť štyri typy geometrických modelov ([GEOTYP]({{ '/docs/en/keyword_documentation/g/geotyp/' | relative_url }})), ako je znázornené na obr. 35.1.2.
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image002.jpg' | relative_url }})
 
@@ -91,7 +91,7 @@ K dispozícii sú štyri typy procesov prenosu tepla (pozri obr. 35.1.3.),
   4. **Doba zotrvania na matrici** – Tepelné straty počas zotrvania na matrici po dokončení deformácie
 
   
-Ďalšie podrobnosti o týchto typoch vykurovania sú uvedené v [35\. Introduction to Heat Transfer operation](/docs/en/operation_templates/35_heat_transfer/35_introduction_to_heat_transfer_operations/), pozri časť „Typy vykurovania“.
+Ďalšie podrobnosti o týchto typoch vykurovania sú uvedené v [35\. Introduction to Heat Transfer operation]({{ '/docs/en/operation_templates/35_heat_transfer/35_introduction_to_heat_transfer_operations/' | relative_url }}), pozri časť „Typy vykurovania“.
 
 ## Prevádzkové podmienky
 
@@ -117,7 +117,7 @@ Ovládacie prvky simulácie v režime s návodom
 
 ## Zoznam materiálov
 
-Materiály potrebné pre tento proces je možné načítať buď z knižnice pomocou ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), alebo z databázy či kľúčového súboru pomocou ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ako je znázornené na obr. 35.1.7. Používateľ môže tiež pridať nový materiál a definovať požadované údaje na príslušnej karte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Ďalšie informácie o definovaní údajov o materiáloch nájdete v [10\. Material Data.](/docs/en/pre_processor/10_material_data/10_material_data/).
+Materiály potrebné pre tento proces je možné načítať buď z knižnice pomocou ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), alebo z databázy či kľúčového súboru pomocou ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ako je znázornené na obr. 35.1.7. Používateľ môže tiež pridať nový materiál a definovať požadované údaje na príslušnej karte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Ďalšie informácie o definovaní údajov o materiáloch nájdete v [10\. Material Data.]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image007.jpg' | relative_url }})
 
@@ -143,7 +143,7 @@ Okno obrobku
 
 Používateľ môže definovať novú geometriu pomocou primitív a tiež môže importovať geometriu z iného súboru pomocou ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) alebo z knižnice pomocou ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}); používateľ môže tiež importovať geometrie v iných formátoch, ako sú .DXF a .IGES. Primitívy slúžia na jednoduchú definíciu základných geometrických tvarov. (Pozri obr. 35.1.10.) 
 
-Ďalšie informácie o vytváraní a úpravách 2D geometrií nájdete v [12.1. 2D Geometry Data Defining.](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/)
+Ďalšie informácie o vytváraní a úpravách 2D geometrií nájdete v [12.1. 2D Geometry Data Defining.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image009.jpg' | relative_url }})
 
@@ -153,7 +153,7 @@ Okno s definíciou geometrie
 
 Stránka „Mesh“ ponúka možnosti vytvorenia siete pre objekt. Režim „Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }})“ umožňuje nastaviť počet prvkov výlučne pomocou posuvníka na vytvorenie siete. Ak je geometria objektu zložitá alebo ak chce používateľ ovládať hustotu siete na celom objekte, musí prejsť do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Odborný režim ponúka rôzne možnosti, ako sú váhové faktory, okná siete a režim definovaný používateľom, ktoré slúžia na riadenie hustoty siete. Možnosti vytvárania siete dostupné v odbornom režime a v režime „Guided“ sú znázornené na obr. 35.1.12 a obr. 35.1.11.
 
-Podrobnejší popis týchto možností nájdete v [131\. 2D Mesh Generation.](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+Podrobnejší popis týchto možností nájdete v [131\. 2D Mesh Generation.]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
   
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image019.jpg' | relative_url }})
@@ -181,16 +181,16 @@ Na stránke „Okrajové podmienky“ môže používateľ objektu priradiť rô
 Okno s okrajovými podmienkami
 
   
-Ďalšie informácie o týchto BCC nájdete v dokumente [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+Ďalšie informácie o týchto BCC nájdete v dokumente [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ### Ovládanie pohybu
 
 Ovládanie pohybu sa uplatňuje na tuhé objekty, ak je v nastaveniach simulácie zapnutá deformácia a ak sa ovládanie pohybu nepoužíva pri operácii „Prenos tepla“.  
-Ďalšie informácie o týchto ovládacích prvkoch nájdete v [15\. Movement Controls Settings.](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+Ďalšie informácie o týchto ovládacích prvkoch nájdete v [15\. Movement Controls Settings.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
 ### Nehnuteľnosť
 
-V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri [Fig. 35.1.15.](35_introduction_to_heat_transfer_operations.htm#Fig_35_1_14_Boundary_conditions_window)) Ďalšie informácie nájdete v [16\. Object properties](/docs/en/pre_processor/16_object_properties/16_object_properties/).
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri [Fig. 35.1.15.](35_introduction_to_heat_transfer_operations.htm#Fig_35_1_14_Boundary_conditions_window)) Ďalšie informácie nájdete v [16\. Object properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image010.jpg' | relative_url }})
 
@@ -199,7 +199,7 @@ Okno vlastností
 ### Inicializácia
 
 V okne „Initialize“ sú na inicializáciu k dispozícii niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie atď.  
-Používateľ môže inicializovať hodnoty týchto stavových premenných kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 35.1.16. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne Initialize. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien Node a Element (pozri obr. 35.1.17. a obr. 35.1.18. ). Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1 Node data Window](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [17.2. Element data Window](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Používateľ môže inicializovať hodnoty týchto stavových premenných kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 35.1.16. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne Initialize. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien Node a Element (pozri obr. 35.1.17. a obr. 35.1.18. ). Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [17.1 Node data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) a [17.2. Element data Window]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image028.jpg' | relative_url }})
 
@@ -229,7 +229,7 @@ Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na s
 
 **Umiestňovanie objektov**![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 35.1.20. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 35.1.20. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image029.jpg' | relative_url }})
 
@@ -252,7 +252,7 @@ Plánované časové okno na určovanie polohy
 
 **Používateľ**: Pri operácii „Prenos tepla“ je štandardne zaškrtnuté políčko „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo „Pridať“, ako je znázornené na obr. 35.1.22.
 
-Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations.](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+Ďalšie informácie nájdete v dokumente [20\. Inter-Object Relations.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/image012.jpg' | relative_url }})
 
@@ -260,7 +260,7 @@ Okno definície medzi objektmi
 
 ## Ovládacie prvky na zastavenie
 
-Parametre ukončenia určujú čas priebehu, po uplynutí ktorého sa simulácia ukončí. Simuláciu je možné ukončiť na základe maximálneho počtu simulovaných časových krokov alebo maximálneho času priebehu. Simulácia sa zastaví, keď bude splnená podmienka ktoréhokoľvek z parametrov ukončenia. Ďalšie informácie nájdete v [Stopping Controls](../33_forming/33_2_3d_forming_setup.htm#33_2_7_Stopping_Controls) v [3D Forming setup](/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/).
+Parametre ukončenia určujú čas priebehu, po uplynutí ktorého sa simulácia ukončí. Simuláciu je možné ukončiť na základe maximálneho počtu simulovaných časových krokov alebo maximálneho času priebehu. Simulácia sa zastaví, keď bude splnená podmienka ktoréhokoľvek z parametrov ukončenia. Ďalšie informácie nájdete v [Stopping Controls](../33_forming/33_2_3d_forming_setup.htm#33_2_7_Stopping_Controls) v [3D Forming setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}).
 
 ## Ovládacie prvky krokov
 
@@ -283,9 +283,9 @@ Okno „Definícia kroku v režime s návodom“
 Možnosti definované na stránke „Definícia kroku“ ovplyvňujú numerické správanie riešenia. Ovládacie prvky simulácie v expertnom režime – hlavné ovládacie prvky umožňujú špecifikovať názov simulácie, systém jednotiek, typ geometrie atď.
 
   
-[Step](/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/) a [stopping controls](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/) slúžia na určenie časového kroku, celkového počtu krokov a kritérií na ukončenie simulácie. [Processing conditions](/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/) – tu je možné zadať napríklad teplotu okolia alebo konvekčný koeficient.
+[Step]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}) a [stopping controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}) slúžia na určenie časového kroku, celkového počtu krokov a kritérií na ukončenie simulácie. [Processing conditions]({{ '/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }}) – tu je možné zadať napríklad teplotu okolia alebo konvekčný koeficient.
 
-Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+Ďalšie informácie a popis možností v ovládacích prvkoch simulácie nájdete v [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ## Vytvoriť databázu
 

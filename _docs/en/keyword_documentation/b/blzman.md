@@ -34,4 +34,4 @@ Applicable simulation types: Heat Transfer, Non-Isothermal Deformation
   
 RELATED TOPICS  
 ---  
-Keywords: [EMSVTY](/docs/en/keyword_documentation/e/emsvty/), [ENVTMP](/docs/en/keyword_documentation/e/envtmp/).
+Keywords: [EMSVTY]({{ '/docs/en/keyword_documentation/e/emsvty/' | relative_url }}), [ENVTMP]({{ '/docs/en/keyword_documentation/e/envtmp/' | relative_url }}).

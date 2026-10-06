@@ -147,14 +147,14 @@ Sim Client utility window
 
 **Related Topics:**
 
-[Start, Stop and Resume Simulation](/docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/)
+[Start, Stop and Resume Simulation]({{ '/docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/' | relative_url }})
 
 [Queuing Simulations](23_2_interactive_and_batch_mode.htm#23_2_3_Queuing_Simulations)
 
-[23.5. Setting up MPICH](/docs/en/simulator/23_deform_simulator/23_5_setting_up_mpich/)
+[23.5. Setting up MPICH]({{ '/docs/en/simulator/23_deform_simulator/23_5_setting_up_mpich/' | relative_url }})
 
-[Pre-Processor](/docs/en/post_processor/post_processor_mainpg/)
+[Pre-Processor]({{ '/docs/en/post_processor/post_processor_mainpg/' | relative_url }})
 
-[Integrated Manufacturing Process (MO)](/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/)
+[Integrated Manufacturing Process (MO)]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_integrated_manufacturing_process_layout/' | relative_url }})
 
-[Post- Processor](/docs/en/post_processor/post_processor_mainpg/)
+[Post- Processor]({{ '/docs/en/post_processor/post_processor_mainpg/' | relative_url }})

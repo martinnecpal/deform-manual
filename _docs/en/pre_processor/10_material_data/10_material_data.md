@@ -19,18 +19,18 @@ Material Properties page
 
 **The different data sets are:**
 
-  * [Plastic Data Definition](/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/)
-  * [Elastic Data Definition](/docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/)
-  * [Thermal Data Definition](/docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/)
-  * [Diffusion Data Definition](/docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/)
+  * [Plastic Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/' | relative_url }})
+  * [Elastic Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }})
+  * [Thermal Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }})
+  * [Diffusion Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/' | relative_url }})
   * Dislocation Data Definition
-  * [Grain Data Definition](/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/)
-  * [Hardness Data Definition](/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/)
-  * [Elec/ Mag Data Definition](/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/)
-  * [Transformation Definition](/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/)
+  * [Grain Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/' | relative_url }})
+  * [Hardness Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
+  * [Elec/ Mag Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }})
+  * [Transformation Definition]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }})
   * Coarsening Data Definition
   * Texture Data Definition
-  * [Miscellaneous Data Definition](/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/)
+  * [Miscellaneous Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }})
 
 This chapter discusses the manner in which to define each data set, and for which type of simulation each of these is required.
 
@@ -39,7 +39,7 @@ The DEFORM material library contains several hundred data sets. Nearly all mater
 The user should confirm that the material selected from the library is appropriate for the process they intend to model.
 
 **Phases and mixtures (MSTMTR) [MIC]**  
-Material groups can be classified into two categories, Regular and Mixture. “Regular” materials are appropriate for modeling most metal processing operations, including most forming, cutting, or stress analysis problems. “Mixture” materials ([MSTMTR](/docs/en/keyword_documentation/m/mstmtr/)) are used when a phase transformation is to be modeled in the simulation. The transforming material is modeled as a “mixture” of its constituent phases. For example, carbon steel might be modeled as a mixture of Austenite, Pearlite, Bainite, and Martensite. If a mixture material is defined, transformation rules should be defined which govern the transformation of one phase into another.
+Material groups can be classified into two categories, Regular and Mixture. “Regular” materials are appropriate for modeling most metal processing operations, including most forming, cutting, or stress analysis problems. “Mixture” materials ([MSTMTR]({{ '/docs/en/keyword_documentation/m/mstmtr/' | relative_url }})) are used when a phase transformation is to be modeled in the simulation. The transforming material is modeled as a “mixture” of its constituent phases. For example, carbon steel might be modeled as a mixture of Austenite, Pearlite, Bainite, and Martensite. If a mixture material is defined, transformation rules should be defined which govern the transformation of one phase into another.
 
 **Multiphase:** To add multiple Phases we need check the Mixture material check as shown in Below Fig. 10.3. Using ![]({{ '/assets/icons/pre_icons/mo_add_phase_button.jpg' | relative_url }}) option we can add new phases and using ![]({{ '/assets/icons/pre_icons/mo_remove_phase_button.jpg' | relative_url }}) option we can remove the added phases to the material.
 
@@ -95,26 +95,26 @@ Edit material window
 
 Related Topics:
 
-[10.1. Plastic Data Definition](/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/)
+[10.1. Plastic Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/' | relative_url }})
 
-[10.2. Elastic Data Definition](/docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/)
+[10.2. Elastic Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }})
 
-[10.3. Thermal Data Definition](/docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/)
+[10.3. Thermal Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }})
 
-[10.4. Diffusion Data Definition](/docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/)
+[10.4. Diffusion Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_4_diffusion_data/10_4_diffusion_data/' | relative_url }})
 
 10.5. Dislocation Data Definition
 
-[10.6. Grain Data Definition](/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/)
+[10.6. Grain Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/' | relative_url }})
 
-[10.7. Hardness Data Definition](/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/)
+[10.7. Hardness Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
 
-[10.8. Elec/ Mag Data Definition](/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/)
+[10.8. Elec/ Mag Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }})
 
-[10.9 Transformation Data Definition](/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/)
+[10.9 Transformation Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }})
 
 10.10. Coarsening Data Definition
 
 10.11. Texture Data Definition
 
-[10.12. Miscellaneous Data Definition](/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/)
+[10.12. Miscellaneous Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }})

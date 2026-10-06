@@ -222,7 +222,7 @@ Nastavenie kontrolných bodov nosnej plochy
 
 Upravená geometria matrice po nastavení dĺžky ložiska
 
-Ďalšie informácie nájdete v dokumente [steady state extrusion lab.](/docs/en/labs/extrusion_labs/steady_state_extrusion_lab1/)
+Ďalšie informácie nájdete v dokumente [steady state extrusion lab.]({{ '/docs/en/labs/extrusion_labs/steady_state_extrusion_lab1/' | relative_url }})
 
 ## Definícia extruzného polotovaru
 
@@ -234,7 +234,7 @@ Stránka objektu obrobku
 
 ### Stránka „Geometria obrobku“
 
-Geometria obrobku sa vytvára pomocou funkcie „Definovať primitív“ alebo ju môžeme importovať pomocou možností importu. V prípade nastavenia simulácie typu ALE je možné geometriu obrobku vytvoriť pomocou booleovského štítku po vytvorení geometrie foriem. Ďalšie informácie o ostatných možnostiach na stránke „Geometria“ nájdete v [12.3. 3D Geometry Data Defining.](/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/).
+Geometria obrobku sa vytvára pomocou funkcie „Definovať primitív“ alebo ju môžeme importovať pomocou možností importu. V prípade nastavenia simulácie typu ALE je možné geometriu obrobku vytvoriť pomocou booleovského štítku po vytvorení geometrie foriem. Ďalšie informácie o ostatných možnostiach na stránke „Geometria“ nájdete v [12.3. 3D Geometry Data Defining.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image020.jpg' | relative_url }})
 
@@ -311,7 +311,7 @@ BCC s voľným povrchom obrobku
 
 ### Nehnuteľnosť
 
-V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 31.1.27.) Objemová kompenzácia je jedným z dôležitých parametrov, ktoré je potrebné nastaviť pri simulácii extrudovania typu Lagrange. Je možné ju aktivovať výberom jednej z možností v časti „Cieľový objem“ a výpočtom aktuálneho objemu objektu pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}). Ďalšie informácie o možnostiach na stránke „**Vlastnosti**“ nájdete v [16\. Object properties.](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 31.1.27.) Objemová kompenzácia je jedným z dôležitých parametrov, ktoré je potrebné nastaviť pri simulácii extrudovania typu Lagrange. Je možné ju aktivovať výberom jednej z možností v časti „Cieľový objem“ a výpočtom aktuálneho objemu objektu pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}). Ďalšie informácie o možnostiach na stránke „**Vlastnosti**“ nájdete v [16\. Object properties.]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image036.jpg' | relative_url }})
 
@@ -320,7 +320,7 @@ Stránka nehnuteľnosti
 ### Inicializácia
 
 V okne „Initialize“ sú na inicializáciu k dispozícii niektoré bežne používané stavové premenné, ako napríklad teplota, deformácia, napätie, poškodenie, rýchlosť, posunutie, hustota, veľkosť zŕn mikrostruktúry a veľkosť častíc.  
-Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 31.1.28. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien „Node“ a „Element“. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [Object node variables](/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [Object element variables](/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Používateľ môže inicializovať hodnoty týchto stavových premenných tak, že ich zadá do príslušného poľa a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Obr. 31.1.28. znázorňuje rôzne stavové premenné, ktoré sú k dispozícii v okne „Initialize“. V závislosti od typu stavovej premennej ich môže používateľ inicializovať aj z dátových okien „Node“ a „Element“. Ďalšie informácie o tom, ako inicializovať stavové premenné v oknách „Node“ a „Element“, nájdete v [Object node variables]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) a [Object element variables]({{ '/docs/en/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image027.jpg' | relative_url }})
 
@@ -337,7 +337,7 @@ Vstavaná stránka Flownet
 
 ## Ovládacie prvky
 
-Používateľ môže umiestňovať objekty pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}). K dispozícii sú rôzne možnosti umiestňovania objektov, ako je znázornené na obr. 31.1.30. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/).
+Používateľ môže umiestňovať objekty pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}). K dispozícii sú rôzne možnosti umiestňovania objektov, ako je znázornené na obr. 31.1.30. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image028.jpg' | relative_url }})
 
@@ -355,7 +355,7 @@ Vyskakovacie okno „Full Contact Generation“
   
 **Systém**: Ak je zaškrtnuté toto políčko, systém priradí predvolené vzťahy medzi objektmi. Okrem toho môže používateľ v prípade potreby pridať mazivá tak, že z roletového menu vyberie možnosť „Pridať nové“ a klikne na tlačidlo „Upraviť“, alebo môže na účely simulácie načítať požadované mazivá z knižnice.  
 **Používateľ**: Pri operácii „Extrúzia“ je štandardne vybrané rádio tlačidlo „Používateľ“. Používateľ môže pridať vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), ako je znázornené na obr. 31.1.32. Používateľ môže zmeniť hodnotu každého vzťahu tak, že ho vyberie a klikne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môže používateľ priradiť rovnaké hodnoty všetkým vzťahom. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) môže používateľ vypočítať toleranciu kontaktu. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) môže používateľ vygenerovať kontaktný vzťah medzi objektmi, pre ktoré sú definované kontaktné vzťahy. Zaškrtnutím políčka vedľa kontaktného vzťahu môže používateľ definovať priliehavý kontakt.  
-Ďalšie informácie o dialógovom okne s kontaktnými údajmi nájdete v [20.Inter-Object Relations.](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+Ďalšie informácie o dialógovom okne s kontaktnými údajmi nájdete v [20.Inter-Object Relations.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image030.jpg' | relative_url }})
 
@@ -369,12 +369,12 @@ V ovládacích prvkoch krokov môže používateľ definovať počet krokov, ve�
 
 Počet krokov:**Tu je možné zadať počet krokov, ktoré sa majú simulovať. Ak sa** simulácia ukončí skôr na základe kritérií ukončenia, nasledujúci krok spúšťajúci operáciu bude pokračovaním predchádzajúcej operácie.
 
-**Počet krokov**: Počet krokov ([STPINC](/docs/en/keyword_documentation/s/stpinc/)), ktoré sa majú uložiť do databázy, určuje, koľko krokov systém v databáze uloží. Pri spustení simulácie sa musí vypočítať každý krok, ale nie je nutné, aby sa všetky kroky uložili do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať väčší úložný priestor.
+**Počet krokov**: Počet krokov ([STPINC]({{ '/docs/en/keyword_documentation/s/stpinc/' | relative_url }})), ktoré sa majú uložiť do databázy, určuje, koľko krokov systém v databáze uloží. Pri spustení simulácie sa musí vypočítať každý krok, ale nie je nutné, aby sa všetky kroky uložili do databázy. Uložením väčšieho počtu krokov sa zachová viac informácií o procese, čo však bude vyžadovať väčší úložný priestor.
 
 **Čas na jeden krok:** Ak je zadaný čas na jeden krok, použije sa časový interval na jeden krok. Posun formy na jeden krok bude rovný časovému kroku vynásobenému rýchlosťou formy.  
 Posun na krok: Ak je nastavený posun na krok, primárny valec sa v každom časovom kroku posunie o zadanú hodnotu. Celkový posun primárneho valca bude rovný posunu na krok vynásobenému celkovým počtom krokov.
 
-**Primárny lisovací nástroj:** Primárny lisovací nástroj ([PDIE](/docs/en/keyword_documentation/p/pdie/)) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad vzdialenosť zastavenia založená na zdvihu primárneho lisovacieho nástroja. Keď zdvih objektu definovaného ako primárny lisovací nástroj dosiahne hodnotu posunu primárneho lisovacieho nástroja, simulácia sa zastaví, aj keď bolo špecifikovaných viac krokov. Funkcia „Krok podľa zdvihu“ určuje veľkosť kroku na základe pohybu primárneho lisovacieho nástroja.
+**Primárny lisovací nástroj:** Primárny lisovací nástroj ([PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }})) je objekt, pre ktorý je definovaných mnoho kritérií zastavenia a krokovania. Napríklad vzdialenosť zastavenia založená na zdvihu primárneho lisovacieho nástroja. Keď zdvih objektu definovaného ako primárny lisovací nástroj dosiahne hodnotu posunu primárneho lisovacieho nástroja, simulácia sa zastaví, aj keď bolo špecifikovaných viac krokov. Funkcia „Krok podľa zdvihu“ určuje veľkosť kroku na základe pohybu primárneho lisovacieho nástroja.
 
 Primárna forma sa zvyčajne priraďuje k objektu, ktorý je strojom najviac riadený. Napríklad forma pripevnená k piestu hydraulického lisu by bola označená ako primárny objekt.
 
@@ -385,7 +385,7 @@ Ovládacie prvky krokov v režime GUIDED
 ###   
 REŽIM PRE ODBORNÍKOV
 
-Používateľ môže definovať údaje pre riadenie krokov pomocou ovládacích prvkov simulácie v expertnom režime, ako je znázornené na obr. 31.1.34. Ďalšie informácie a popis možností ovládacích prvkov simulácie v expertnom režime nájdete v [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+Používateľ môže definovať údaje pre riadenie krokov pomocou ovládacích prvkov simulácie v expertnom režime, ako je znázornené na obr. 31.1.34. Ďalšie informácie a popis možností ovládacích prvkov simulácie v expertnom režime nájdete v [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image032.jpg' | relative_url }})
 
@@ -411,16 +411,16 @@ Vytvoriť stránku databázy
 
 **Súvisiace témy:**
 
-[9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+[9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[16\. Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/)
+[16\. Object Properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+[19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
-[20\. Inter-Object Data Definition](/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/)
+[20\. Inter-Object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-[Steady State Extrusion Lab](/docs/en/labs/extrusion_labs/steady_state_extrusion_lab1/)
+[Steady State Extrusion Lab]({{ '/docs/en/labs/extrusion_labs/steady_state_extrusion_lab1/' | relative_url }})
 
-[ALE Extrusion Lab](/docs/en/labs/extrusion_labs/ale_extrusion_lab1/)
+[ALE Extrusion Lab]({{ '/docs/en/labs/extrusion_labs/ale_extrusion_lab1/' | relative_url }})
 
-[Lagrangian Extrusion Lab](/docs/en/labs/extrusion_labs/lagrangian_extrusion_lab1/)
+[Lagrangian Extrusion Lab]({{ '/docs/en/labs/extrusion_labs/lagrangian_extrusion_lab1/' | relative_url }})

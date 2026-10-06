@@ -48,4 +48,4 @@ In superplastic forming, superplastic materials (Aluminum and Titanium alloys) c
   
 RELATED TOPICS  
 ---  
-Keywords: [GBMOBI](/docs/en/keyword_documentation/g/gbmobi/), [GBENGY](/docs/en/keyword_documentation/g/gbengy/)
+Keywords: [GBMOBI]({{ '/docs/en/keyword_documentation/g/gbmobi/' | relative_url }}), [GBENGY]({{ '/docs/en/keyword_documentation/g/gbengy/' | relative_url }})

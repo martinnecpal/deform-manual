@@ -15,4 +15,4 @@ Model konvertora z 2D do 3D prevedie 2D osovo symetrický/torzný model otáčan
 
 **Súvisiace témy:**
 
-[44.1. 2D to 3D Converter](/docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/)
+[44.1. 2D to 3D Converter]({{ '/docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/' | relative_url }})

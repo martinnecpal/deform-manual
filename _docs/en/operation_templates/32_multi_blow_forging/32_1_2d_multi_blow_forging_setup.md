@@ -115,7 +115,7 @@ For more information about these geometry types please refer [9.1.2 Geometry typ
 
 ## Simulation Controls
 
-In Guided mode simulation controls, user can select Simulation mode type and Output type (See Fig. 32.1.4.). The basic options required for forming operation are provided here while Expert mode provides more detailed options. For more information on Export mode simulation options, Please refer [9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+In Guided mode simulation controls, user can select Simulation mode type and Output type (See Fig. 32.1.4.). The basic options required for forming operation are provided here while Expert mode provides more detailed options. For more information on Export mode simulation options, Please refer [9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image004.jpg' | relative_url }})
 
@@ -123,7 +123,7 @@ Guided mode Simulation controls
 
 ## Material List
 
-Materials required for the process can be loaded either from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from DB or Key file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) as shown in Fig. 32.1.5. User can also add new material and define required data from respective tab by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). For more information on Material data definition please refer [10.Material.](/docs/en/pre_processor/10_material_data/10_material_data/)
+Materials required for the process can be loaded either from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) or from DB or Key file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) as shown in Fig. 32.1.5. User can also add new material and define required data from respective tab by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). For more information on Material data definition please refer [10.Material.]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
   
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image005.jpg' | relative_url }})
@@ -150,7 +150,7 @@ Workpiece window
 
 User can define new geometry using primitives and also can import the geometry from other file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), user can also import geometries in other formats such as .DXF and .IGES. Primitives are provided for easy definition of basic geometry shapes.(See Fig. 32.1.8.)
 
-For more information on creating and editing 2D geometries please refer [12.1. 2D Geometry Data Defining.](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/)
+For more information on creating and editing 2D geometries please refer [12.1. 2D Geometry Data Defining.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image008.jpg' | relative_url }})
 
@@ -159,7 +159,7 @@ Geometry definition window
 **Object Mesh**
 
 Mesh Page provides options to mesh the object. Guided ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) mode provides option to set number of elements only using slider bar to generate mesh. If the object geometry is complex or user would like to control the mesh density over the object, then user has to switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Expert mode provides various options like weighing factors, Mesh windows and user defined mode to control the mesh density. Meshing options available in expert mode and Guided more are shown in Fig. 32.1.9. and Fig. 32.1.10.  
-For more detail description of these options, please refer [13.1. 2D Mesh Generation](/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/)
+For more detail description of these options, please refer [13.1. 2D Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_1_2d_multi_blow_forging_setup/image009.jpg' | relative_url }})
 
@@ -186,7 +186,7 @@ In Boundary conditions page, user can assign various boundary constraints for an
 Boundary conditions window
 
   
-The BCC’s are categorized as [Deformation](/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/),[Thermal](/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/), [Diffusion](/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/) and [Heating](/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/). For more information about these BCC's please refer [14\. Boundary Conditions](/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/).
+The BCC’s are categorized as [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}),[Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ## Top Die
 
@@ -207,7 +207,7 @@ During hammer forging operation, only a portion of the kinetic energy of ram is 
 
 There are basically two types of hammer. The first is an [anvil type hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer) and the other c[ounter blow hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer).
 
-For the formulations and assumptions used for the two types of hammer forging operations please refer [15.3. Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/)
+For the formulations and assumptions used for the two types of hammer forging operations please refer [15.3. Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }})
 
   
 In an **Anvil****type****hammer** , the workpiece, together with the lower die set, is placed on an anvil which is stationary. In a simple gravity drop hammer, the ram is accelerated by gravity and accumulates energy.
@@ -216,7 +216,7 @@ In an **Anvil****type****hammer** , the workpiece, together with the lower die s
 A **counterblow hammer** can be specified for movement by selecting the Counter blow hammer check box as seen in Fig. 32.1.13. After this, the other moving hammer object can be specified as well as the mass of the other moving hammer. The mass of the objects do not have to be equal but the total energy is split between the two hammer dies.
 
   
-For more details about Hammer press control refer [15.3. Hammer](/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/).
+For more details about Hammer press control refer [15.3. Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}).
 
 **Screw Press**
 
@@ -231,14 +231,14 @@ Screw press movement control settings
 
   * **Energy** : The Blow Energy is a measure of the total energy that the flywheel will contain when the desired speed has been reached and prior to engaging the clutch. The units for blow energy in English units are klb-in and in SI units are N-mm.
 
-  * **Blow Efficiency:** The Blow Efficiency represents the fraction of the total energy that will be converted to deformation energy. The rest of the energy is absorbed through the clutch mechanism, friction and the machine frame. There are no units for this quantity. In Forming express only constant value we can use but in forming operation user can also define function of force, for more information refer [15.4. Screw Press.](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/)
+  * **Blow Efficiency:** The Blow Efficiency represents the fraction of the total energy that will be converted to deformation energy. The rest of the energy is absorbed through the clutch mechanism, friction and the machine frame. There are no units for this quantity. In Forming express only constant value we can use but in forming operation user can also define function of force, for more information refer [15.4. Screw Press.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }})
 
   * **Moment of Inertia** : The Moment of Inertia is the moment of inertia of the flywheel. The English units of inertia are klb*in*s2 and the SI units are N-mm*s2. The mass moment of inertia for a circular disc with the Z-axis perpendicular to the center is I = 2 ET /ω2 where ET is the total energy of the flywheel, and ω is the angular velocity in radians per second.
 
   * **Ram Displacement or Lead screw pitch** : The Ram Displacement specifies the distance per revolution of the flywheel that the screw will advance. This helps in determining the linear velocity of the ram. The English units for Ram Displacement are inch/revolution, while the SI units are mm/revolution. If only the pitch angle and diameter of the spindle is known, the Ram Displacement can be calculated using πdsin(θt) where d is the diameter of spindle and θt is the pitch angle of the spindle.
 
   
-For more details about Screw press refer refer [15.4. Screw Press.](/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/)
+For more details about Screw press refer refer [15.4. Screw Press.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_4_screw_press/' | relative_url }})
 
 ## Bottom Die
 
@@ -258,7 +258,7 @@ By clicking on this button, system automatically Positions the Objects with resp
 
 **Positioning Objects![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) **
 
-By clicking on this button, user can position the objects in required directions.Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 32.1.16. For more information about these options, please refer [19\. Object Positioning](/docs/en/pre_processor/19_object_positioning/19_object_positioning/)
+By clicking on this button, user can position the objects in required directions.Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 32.1.16. For more information about these options, please refer [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image018.jpg' | relative_url }})
 
@@ -330,21 +330,21 @@ Guided mode Step controls window
   
 **Number of simulation steps (NSTEP)**
 
-The number of simulation steps parameter defines the number of steps to run from the starting step number. The simulation will stop after this number of simulation steps have run, unless stopping control is triggered to stop the simulation or if the simulation runs into a problem. For example, if the starting step number is -35 ([NSTART](/docs/en/keyword_documentation/n/nstart/)), and 30 steps ([NSTEP](/docs/en/keyword_documentation/n/nstep/)) are specified, the simulation will stop after the 65th step, unless another stopping control is triggered first. In case of reheating process it could be Temp. to stop reheating.
+The number of simulation steps parameter defines the number of steps to run from the starting step number. The simulation will stop after this number of simulation steps have run, unless stopping control is triggered to stop the simulation or if the simulation runs into a problem. For example, if the starting step number is -35 ([NSTART]({{ '/docs/en/keyword_documentation/n/nstart/' | relative_url }})), and 30 steps ([NSTEP]({{ '/docs/en/keyword_documentation/n/nstep/' | relative_url }})) are specified, the simulation will stop after the 65th step, unless another stopping control is triggered first. In case of reheating process it could be Temp. to stop reheating.
 
-For more information, please refer [Stopping Controls.](/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/)
+For more information, please refer [Stopping Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }})
 
   
 **Step increment to save (STPINC)**
 
-The step increment ([STPINC](/docs/en/keyword_documentation/s/stpinc/)) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
+The step increment ([STPINC]({{ '/docs/en/keyword_documentation/s/stpinc/' | relative_url }})) to save in the database controls the number of steps that the system will save in the database. When a simulation runs, every step must be computed, but does not necessarily need to be saved in the database. Storing more steps will preserve more information about the process, consequently it will require more storage space.
 
   
 **Primary die (PDIE)**
 
-The primary die ([PDIE](/docs/en/keyword_documentation/p/pdie/)) is the object for which many stopping and stepping criteria are defined. For example, stopping distance based on primary die stroke. When the stroke of the object defined as the primary die reaches the value for primary die displacement, the simulation will be stopped whether or not more steps were specified. The Step by Stroke feature determines step size based on the movement of the primary die. The primary die is usually assigned to the object most closely controlled by the forging machinery. For example, the die attached to the ram of a mechanical press would be designated as the primary object. The primary die is usually assigned to Top Die in case of Hammer / Screw Press.
+The primary die ([PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }})) is the object for which many stopping and stepping criteria are defined. For example, stopping distance based on primary die stroke. When the stroke of the object defined as the primary die reaches the value for primary die displacement, the simulation will be stopped whether or not more steps were specified. The Step by Stroke feature determines step size based on the movement of the primary die. The primary die is usually assigned to the object most closely controlled by the forging machinery. For example, the die attached to the ram of a mechanical press would be designated as the primary object. The primary die is usually assigned to Top Die in case of Hammer / Screw Press.
 
-**Step increment control ([DSMAX](/docs/en/keyword_documentation/d/dsmax/)/[DTMAX](/docs/en/keyword_documentation/d/dtmax/))**
+**Step increment control ([DSMAX]({{ '/docs/en/keyword_documentation/d/dsmax/' | relative_url }})/[DTMAX]({{ '/docs/en/keyword_documentation/d/dtmax/' | relative_url }}))**
 
 Solution step size can be controlled by time step or by displacement of the primary die. If stroke per step is specified, the primary die will move the specified amount in each time step. The total movement of the primary die will be the displacement per step multiplied by the total number of steps. If time per step is specified, the time interval per step will be used. The die displacement per step will be the time step times the die velocity.
 
@@ -365,7 +365,7 @@ Step and stopping controls are used to specify the time step, the total number o
 
 Processing conditions like the environment temperature, convection coefficient can be specified here.
 
-For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+For more information and description about options in Simulation controls, Please refer [9\. Simulation Controls.]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
 ## Generate DB
 
@@ -386,10 +386,10 @@ Generate DB window
 
 **Related Topics:**
 
-[9\. Simulation Controls](/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/)
+[9\. Simulation Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }})
 
-[15\. Movement Controls Settings](/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/)
+[15\. Movement Controls Settings]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 
-[32\. Introduction to Multi Blow Hammer](/docs/en/operation_templates/32_multi_blow_forging/32_introduction_to_multi_blow_forging/)
+[32\. Introduction to Multi Blow Hammer]({{ '/docs/en/operation_templates/32_multi_blow_forging/32_introduction_to_multi_blow_forging/' | relative_url }})
 
-[32.2. 3D Multi Blow Forging setup](/docs/en/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/)
+[32.2. 3D Multi Blow Forging setup]({{ '/docs/en/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/' | relative_url }})

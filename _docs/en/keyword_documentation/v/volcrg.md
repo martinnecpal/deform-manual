@@ -35,4 +35,4 @@ VOLCRG specifies the induction heating volume charge of an object.
   
 RELATED TOPICS  
 ---  
-[Object Properties](/docs/en/pre_processor/16_object_properties/16_object_properties/): [Induction Heating](/docs/en/pre_processor/16_object_properties/16_6_heating_properties/) Keywords: [CSFREQ](/docs/en/keyword_documentation/c/csfreq/), [HTMTHD](/docs/en/keyword_documentation/h/htmthd/)
+[Object Properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }}): [Induction Heating]({{ '/docs/en/pre_processor/16_object_properties/16_6_heating_properties/' | relative_url }}) Keywords: [CSFREQ]({{ '/docs/en/keyword_documentation/c/csfreq/' | relative_url }}), [HTMTHD]({{ '/docs/en/keyword_documentation/h/htmthd/' | relative_url }})

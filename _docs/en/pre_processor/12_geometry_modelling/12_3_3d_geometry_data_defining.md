@@ -15,7 +15,7 @@ title: "12.3. 3D Geometry Data Defining"
 
 3D Geometry window is used to define the geometry of an object as shown in Fig. 12.3.1. Only define primitive, CAD interface, Edit and Preform field will be in active mode rest other options will be in grayed when no geometry is defined. Once after creating geometry all the options will be activated.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image001.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image001.jpg' | relative_url }})
 
 3D Geometry window
 
@@ -25,9 +25,9 @@ There are several conventions that must be followed when defining object surface
 
 **Orientation of Surface****Normals :** ****In DEFORM the surface normals of the closed geometries should point outwards from the geometry. This is how DEFORM defines the exterior of an object. In the case of a surface that isn't closed, the surface normals should point toward the deformable objects and great care should be taken that no nodes see the back of the object. In the case where a rigid plane is used to constrain a workpiece, it is recommended to make the plane sufficiently large such that the nodes cannot see around the plane. In the Geometry window, the direction of the surface normals can be viewed by clicking on the surface normal button in the lower left part of the screen. Failure to follow this convention may cause any of the following problems:
 
-  * Object won't [mesh](/docs/en/pre_processor/13_Mesh_Generation/13_Mesh_Generation/)
-  * Mesh distorts when[ boundary conditions](/docs/en/pre_processor/14_Boundary_Conditions/14_boundary_conditions/) are applied
-  * [Object positioning](/docs/en/pre_processor/19_Object_Positioning/19_Object_Positioning/) error using interference positioning
+  * Object won't [mesh]({{ '/docs/en/pre_processor/13_Mesh_Generation/13_Mesh_Generation/' | relative_url }})
+  * Mesh distorts when[ boundary conditions]({{ '/docs/en/pre_processor/14_Boundary_Conditions/14_boundary_conditions/' | relative_url }}) are applied
+  * [Object positioning]({{ '/docs/en/pre_processor/19_Object_Positioning/19_Object_Positioning/' | relative_url }}) error using interference positioning
 
 **Surface Patches :** In DEFORM a surface patch is defined by a section of a surface that is separated from other portions of the same surface by a 30 degree or greater bend in the surface. For example, a cube would have six surface patches due to the edges between each side having a 90 degree bend in the surface. In order to view the surface patches in DEFORM the user may click on the surface patches button in the geometry window at the lower left section of the screen. Any bend in the surface greater than 30 degrees will appear as a thick red line. The benefit of this feature is that folds in the surface will appear as red slivers in the middle of the geometry. This provides a method for finding where folds may exist.
 
@@ -38,37 +38,37 @@ Border extraction can fail for the following reasons:
 
 If a closed forming lap develops in the process, the surface geometry will be ill-defined. If an excessively large time step is used without [polygon length sub stepping](../9_Simulation_Controls/9_2_Defining_Step.htm#Polygon_length_sub_step_\(DPLEN\)), element faces can become crossed, also causing an ill-defined surface. Both of these cases can frequently be identified using the surface patches display in the geometry window.If a legitimate forming lap is developing, the process should be redesigned to eliminate the lap. If the lap is in a region where it is acceptable, it may be necessary to use a CAD system to edit the geometry, then remesh the part and interpolate data.If element faces are crossed, it is generally necessary to revert to the last good step in the database. The situation can be avoided by using a smaller time step, using [polygon length sub stepping](../9_Simulation_Controls/9_2_Defining_Step.htm#Polygon_length_sub_step_\(DPLEN\)), using smaller elements around tight corners, and force remeshing on a fixed step or stroke interval (under remeshing criteria).
 
-**Parallel symmetry planes** : When using symmetry, the user should not specify parallel fixed velocity boundary conditions. (for a comprehensive discussion on symmetry planes, refer to the [Appendix VIII](/docs/en/Appendices/Appendix_VIII_Preventing_leakage_of_nodes/) on the use of symmetry planes in 3D) In the case where two parallel symmetry planes are necessary, the user can specify one fixed velocity boundary condition and one rigid plane with no friction and a non-separable contact condition (To see how to implement this, please refer to the [Appendix VIII](/docs/en/Appendices/Appendix_VIII_Preventing_leakage_of_nodes/) on the use of symmetry planes in 3D). If two fixed velocity boundary conditions are set parallel to one another, border extraction will surely fail, causing any remeshing to fail.
+**Parallel symmetry planes** : When using symmetry, the user should not specify parallel fixed velocity boundary conditions. (for a comprehensive discussion on symmetry planes, refer to the [Appendix VIII]({{ '/docs/en/Appendices/Appendix_VIII_Preventing_leakage_of_nodes/' | relative_url }}) on the use of symmetry planes in 3D) In the case where two parallel symmetry planes are necessary, the user can specify one fixed velocity boundary condition and one rigid plane with no friction and a non-separable contact condition (To see how to implement this, please refer to the [Appendix VIII]({{ '/docs/en/Appendices/Appendix_VIII_Preventing_leakage_of_nodes/' | relative_url }}) on the use of symmetry planes in 3D). If two fixed velocity boundary conditions are set parallel to one another, border extraction will surely fail, causing any remeshing to fail.
 
 If the symmetry plane is not sufficiently large to cover the entire area where symmetry needs to be defined, it is possible that nodes may move around the plane of symmetry and this will also cause border extraction to fail. Since rigid planes, when used to define symmetry planes, need not have relations to any objects other than the workpiece, they may be arbitrarily large. For display reasons, the user is not recommended to make the rigid planes unreasonably large.
 
 ## 3D Geometry Tools
 
-**Define Primitive** ![](../../../assets/Icons/Pre_icons/MO_Define_Primitive_label.jpg) : We have three different types of Geometry primitives such as Box, Cylinder and Hollow Cylinder as shown in Fig. 12.3.2. Extrude and Revolve can be used to convert 2D cross-section to 3D.
+**Define Primitive** ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) : We have three different types of Geometry primitives such as Box, Cylinder and Hollow Cylinder as shown in Fig. 12.3.2. Extrude and Revolve can be used to convert 2D cross-section to 3D.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image002.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image002.jpg' | relative_url }})
 
 Geometry primitive window
 
-**CAD Interface** ![](../../../assets/Icons/Pre_icons/MO_CAD_Interface_Label.jpg) : Using this option user can import CAD geometry file directly for Soildworks directly.
+**CAD Interface** ![]({{ '/assets/icons/pre_icons/mo_cad_interface_label.jpg' | relative_url }}) : Using this option user can import CAD geometry file directly for Soildworks directly.
 
-**Preform**![](../../../assets/Icons/Pre_icons/MO_Preform_label.jpg) :
+**Preform**![]({{ '/assets/icons/pre_icons/mo_preform_label.jpg' | relative_url }}) :
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image020.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image020.jpg' | relative_url }})
 
 3D Preform window
 
-**Edit**![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) : Using Edit option we can modify the existing geometry in 3D GEO TOOL wizard. Refer Chapter [12.4. 3D Geometry Editing.](/docs/en/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_Editing_geo_toolL/)
+**Edit**![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) : Using Edit option we can modify the existing geometry in 3D GEO TOOL wizard. Refer Chapter [12.4. 3D Geometry Editing.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_Editing_geo_toolL/' | relative_url }})
 
-**Extract Border** ![](../../../assets/Icons/Pre_icons/MO_Extract_border_button.jpg) : This feature extracts the geometry data from the current database meshed object for all object types except the rigid object.
+**Extract Border** ![]({{ '/assets/icons/pre_icons/mo_extract_border_button.jpg' | relative_url }}) : This feature extracts the geometry data from the current database meshed object for all object types except the rigid object.
 
-**Extract from Mesh** ![](../../../assets/Icons/Pre_icons/MO_Extract_From_mesh.jpg) : This feature extracts geometry from the 3D object mesh.
+**Extract from Mesh** ![]({{ '/assets/icons/pre_icons/mo_extract_from_mesh.jpg' | relative_url }}) : This feature extracts geometry from the 3D object mesh.
 
-**Check**![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg) : Always check geometry. DEFORM has a checking algorithm that checks for number of invalid edges, invalid orientation, polygons with small area and number of surfaces. Every type of error cannot be detected.
+**Check**![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) : Always check geometry. DEFORM has a checking algorithm that checks for number of invalid edges, invalid orientation, polygons with small area and number of surfaces. Every type of error cannot be detected.
 
 Using this Check Geometry option opens the Geometry Checking Results window which gives a summary of the object’s geometry (See Fig. 12.3.4.). For an object that has a closed volume, there should be 1 surface, 0 free edges and 0 invalid entities (as circled below in Fig. 12.3.4.). Objects that are imported as surfaces and not solids will have a free edge but should still only have 1 surface.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image004.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image004.jpg' | relative_url }})
 
 Geometry Checking Results
 
@@ -83,131 +83,131 @@ Corrective measures to be taken for DEFORM 3D geometry
   
 Note: Correct orientation of the surface normals is NOT checked in geometry checking if all the normals are pointed in a consistent direction. 
 
-**Fix**![](../../../assets/Icons/Pre_icons/MO_Fix_label.jpg) : This feature will handle geometric problems where there are either multiple surfaces or open (holes) regions by deleting any extra surfaces and filling holes. For minor or localized problems, this works well. For more troublesome file such as this one, the repair may not produce a desirable result.(See Fig. 12.3.5.)
+**Fix**![]({{ '/assets/icons/pre_icons/mo_fix_label.jpg' | relative_url }}) : This feature will handle geometric problems where there are either multiple surfaces or open (holes) regions by deleting any extra surfaces and filling holes. For minor or localized problems, this works well. For more troublesome file such as this one, the repair may not produce a desirable result.(See Fig. 12.3.5.)
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image005.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image005.jpg' | relative_url }})
 
 Fixing Geometry of crankshaft Die
 
-**Scale**![](../../../assets/Icons/Pre_icons/MO_Scale_label.jpg) :Geometry can be scaled in forming operation to accommodate thermal expansion by specifying the scaling factor. (See Fig. 12.3.6.) The scaling factor can be calculated by temperature differential and temperature dependent material data. The scaled geometry can be saved into different Geometry saving formats.
+**Scale**![]({{ '/assets/icons/pre_icons/mo_scale_label.jpg' | relative_url }}) :Geometry can be scaled in forming operation to accommodate thermal expansion by specifying the scaling factor. (See Fig. 12.3.6.) The scaling factor can be calculated by temperature differential and temperature dependent material data. The scaled geometry can be saved into different Geometry saving formats.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image001.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_1_2d_geometry_data_defining/12_1_image001.jpg' | relative_url }})
 
 Scale Geometry window
 
-**Reverse**![](../../../assets/Icons/Pre_icons/MO_Reverse_label.jpg) : This feature reverses the surface/ normal of the geometry. Always surface/ Normal of the geometry should be outwards.
+**Reverse**![]({{ '/assets/icons/pre_icons/mo_reverse_label.jpg' | relative_url }}) : This feature reverses the surface/ normal of the geometry. Always surface/ Normal of the geometry should be outwards.
 
-**Find axis** ![](../../../assets/Icons/Pre_icons/MO_Find_Axis_label.jpg) : This feature determines the axis of the geometry automatically based on the geometry definition and displays it.
+**Find axis** ![]({{ '/assets/icons/pre_icons/mo_find_axis_label.jpg' | relative_url }}) : This feature determines the axis of the geometry automatically based on the geometry definition and displays it.
 
-**Setup Brick Mesh** ![](../../../assets/Icons/Pre_icons/MO_Setup_brick_mesh_label.jpg) : In order to define Brick mesh, user has to define start surface and End surface for created geometry as shown in Fig. 12.3.7. Brick mesh is used for the geometries of regular or identical cross-section.
+**Setup Brick Mesh** ![]({{ '/assets/icons/pre_icons/mo_setup_brick_mesh_label.jpg' | relative_url }}) : In order to define Brick mesh, user has to define start surface and End surface for created geometry as shown in Fig. 12.3.7. Brick mesh is used for the geometries of regular or identical cross-section.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image007.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image007.jpg' | relative_url }})
 
 Setup Brick Mesh window for Extrusion
 
 Brick mesh can be generated by selecting Extrude or Revolve options based on the geometry. If user selects Extrude radio button the brick mesh will be extruded with respect to start and end point as shown in Fig. 12.3.8.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image008.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image008.jpg' | relative_url }})
 
 Brick mesh of Extruded object
 
 If user selects Revolve radio button the brick mesh will be revolved in Z direction as shown in Fig. 12.3.9. and Fig. 12.3.1.10.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image009.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image009.jpg' | relative_url }})
 
 Setup brick mesh window for revolving
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image010.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image010.jpg' | relative_url }})
 
 Brick mesh of Revolving object
 
-**Symmetry Planes** ![](../../../assets/Icons/Pre_icons/MO_Symmetry_Planes_label.jpg): Both planar symmetry and rotational symmetry can be defined. In the case of planar symmetry, the simulation will have extra information that allows it to prevent material from flashing around it. In the case of rotational symmetry, meshing will automatically place the proper boundary conditions on the faces. This is meant as a uniform place to apply symmetry boundary conditions for all objects.
+**Symmetry Planes** ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}): Both planar symmetry and rotational symmetry can be defined. In the case of planar symmetry, the simulation will have extra information that allows it to prevent material from flashing around it. In the case of rotational symmetry, meshing will automatically place the proper boundary conditions on the faces. This is meant as a uniform place to apply symmetry boundary conditions for all objects.
 
-  * **Specifying Planar Symmetry** : To specify planar symmetry, select the symmetry plane on the geometry, then click on ![](../../../assets/Icons/Pre_icons/MO_Add_Icon2.jpg). The planar symmetry condition will be added to the list of currently specified symmetry. (See Fig. 12.3.11.) When symmetry plane is defined, during mesh generation a pop up appears with a message as shown in Fig. 12.3.12., requesting the user whether to create a default boundary condition, the user can select "No" option, if user would not like to use default BCC assigned by system based on symmetry conditions defined.
+  * **Specifying Planar Symmetry** : To specify planar symmetry, select the symmetry plane on the geometry, then click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). The planar symmetry condition will be added to the list of currently specified symmetry. (See Fig. 12.3.11.) When symmetry plane is defined, during mesh generation a pop up appears with a message as shown in Fig. 12.3.12., requesting the user whether to create a default boundary condition, the user can select "No" option, if user would not like to use default BCC assigned by system based on symmetry conditions defined.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image011.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image011.jpg' | relative_url }})
 
 Assigning symmetry surfaces
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image012.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image012.jpg' | relative_url }})
 
 Default Boundary Conditions popup window
 
 Note: Symmetry Popup message appears only when we setup a problem in Expert mode.
 
-  * **Specifying Rotational Symmetry** : To specify rotational symmetry, specify the point and vector of the rotational axis as well as the degree of symmetry available as shown in Fig. 12.3.13. After this, click on the starting plane and end plane of the geometry in the direction of rotation so that rotational symmetry to be applied. The symmetry condition will be added to the list of currently specified symmetry. For more information about rotational symmetry option refer to [16.7. ](/docs/en/pre_processor/16_Object_Properties/16_7_symmetry_properties/)[Rotational Symmetry](/docs/en/pre_processor/16_Object_Properties/16_7_symmetry_properties/).
+  * **Specifying Rotational Symmetry** : To specify rotational symmetry, specify the point and vector of the rotational axis as well as the degree of symmetry available as shown in Fig. 12.3.13. After this, click on the starting plane and end plane of the geometry in the direction of rotation so that rotational symmetry to be applied. The symmetry condition will be added to the list of currently specified symmetry. For more information about rotational symmetry option refer to [16.7. ]({{ '/docs/en/pre_processor/16_Object_Properties/16_7_symmetry_properties/' | relative_url }})[Rotational Symmetry]({{ '/docs/en/pre_processor/16_Object_Properties/16_7_symmetry_properties/' | relative_url }}).
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image013.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image013.jpg' | relative_url }})
 
 Rotational symmetry window
 
-**Examine**![](../../../assets/Icons/Pre_icons/MO_Examine_label.jpg) : This feature helps to examine the 3D geometry points and polygons. The geometry point’s co-ordinates can also be edited by using points co-ordinates fields and apply button after changing these co-ordinates. The current selection of the point and polygon display is highlighted by sphere or cube shapes using the check boxes at the bottom of the window.(See Fig. 12.3.14.)
+**Examine**![]({{ '/assets/icons/pre_icons/mo_examine_label.jpg' | relative_url }}) : This feature helps to examine the 3D geometry points and polygons. The geometry point’s co-ordinates can also be edited by using points co-ordinates fields and apply button after changing these co-ordinates. The current selection of the point and polygon display is highlighted by sphere or cube shapes using the check boxes at the bottom of the window.(See Fig. 12.3.14.)
 
-From DEFORM V12, using ![](../../../assets/Icons/Pre_icons/MO_Tolerance_icon.jpg) ("Detect zones") next to Surface field option we can calculate the number of zones exist in Geometry and for each zone we can assign different material or Layer ID using Assignment option. This option helps the user to model multi-layered composites, voids, inclusions,additive manufacturing,..etc.
+From DEFORM V12, using ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) ("Detect zones") next to Surface field option we can calculate the number of zones exist in Geometry and for each zone we can assign different material or Layer ID using Assignment option. This option helps the user to model multi-layered composites, voids, inclusions,additive manufacturing,..etc.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image006.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image006.jpg' | relative_url }})
 
 Geometry settings of Examine window
 
-**2D to 3D conversion** ![](../../../assets/Icons/Pre_icons/MO_2D_to_3D_conversion.jpg) : User can define 2D cross section geometry which can be used to generate 3D geometry by checking Use Cross Section check box.
+**2D to 3D conversion** ![]({{ '/assets/icons/pre_icons/mo_2d_to_3d_conversion.jpg' | relative_url }}) : User can define 2D cross section geometry which can be used to generate 3D geometry by checking Use Cross Section check box.
 
-**Define Primitive** ![](../../../assets/Icons/Pre_icons/MO_Define_Primitive_label.jpg) : We have three different types of Geometry primitives such as Bar, Cylinder and Hollow Cylinder as shown in  Fig. 12.3.15. This geometry window appears for plane strain type of geometry.
+**Define Primitive** ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) : We have three different types of Geometry primitives such as Bar, Cylinder and Hollow Cylinder as shown in  Fig. 12.3.15. This geometry window appears for plane strain type of geometry.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image005.JPG)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_1_2d_geometry_data_defining/12_1_image005.jpg' | relative_url }})
 
 2D Geometry primitive window for plane strain and plane stress Axisymmetric
 
 The geometry window appears for Axisymmetric type of geometry is shown in Fig. 12.3.16.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_1_2D_Geometry_Data_Defining/12_1_Image004.JPG)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_1_2d_geometry_data_defining/12_1_image004.jpg' | relative_url }})
 
 2D Geometry primitive window for Axisymmetric and Torsion
 
-**Check**![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg) : Once the geometry of the object is created, ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![](../../../assets/Icons/Pre_icons/MO_Check_label.jpg) button a popup appears as shown in below Fig. 12.3.17. The Geometry gets corrected, if they are any errors when we click on ![](../../../assets/Icons/Pre_icons/MO_Check_and_Correct_geo_button.jpg) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![](../../../assets/Icons/Pre_icons/MO_OK_button2.jpg). For more information please refer [Check Geometry](12_1_2d_geometry_data_defining.htm#Check_Geometry)
+**Check**![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) : Once the geometry of the object is created, ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button a popup appears as shown in below Fig. 12.3.17. The Geometry gets corrected, if they are any errors when we click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). For more information please refer [Check Geometry](12_1_2d_geometry_data_defining.htm#Check_Geometry)
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image014.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image014.jpg' | relative_url }})
 
 Check Geometry popup window
 
-**Edit**![](../../../assets/Icons/Pre_icons/MO_Edit_lable.jpg) : The Geometry editing option is used to create geometry for an object or edit the existing geometry. Imported geometry can be modified in Edit Geometry window.
+**Edit**![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) : The Geometry editing option is used to create geometry for an object or edit the existing geometry. Imported geometry can be modified in Edit Geometry window.
 
-For more information on 2D edit geometry, please refer [12.2. 2D Geometry Data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+For more information on 2D edit geometry, please refer [12.2. 2D Geometry Data Editing]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }})
 
 **Show geometry inside mark** : Checking this option enables the Geometry orientation display.
 
-**Settings**![](../../../assets/Icons/Pre_icons/MO_Settings..._button.jpg) : After creation of 2D geometry using these settings user can create 3D geometry from 2D geometry.
+**Settings**![]({{ '/assets/icons/pre_icons/mo_settings..._button.jpg' | relative_url }}) : After creation of 2D geometry using these settings user can create 3D geometry from 2D geometry.
 
 **Extrude** : The user can import the 2d cross-section or use defined 2D cross-section of the geometry and extrude it in the desired direction. This can also be done while importing the 2d cross-section files from the DB or key file.(See Fig. 12.3.18.)
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image015.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image015.jpg' | relative_url }})
 
 2d cross-section window settings for extrusion
 
 **Revolve** : The user can import the 2d cross-section of the geometry and revolve the geometry based upon the symmetry to get a 3d cross-section. (See Fig. 12.3.19.)
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image016.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image016.jpg' | relative_url }})
 
 2D cross-section window settings for Revolving
 
-**Generate 3D** ![](../../../assets/Icons/Pre_icons/MO_Generate_3D_button.jpg): By clicking on this button or inside Settings page ![](../../../assets/Icons/Pre_icons/MO_Generate_3D__label.jpg) button, created 2D geometry can be extruded or revolved to 3D geometry.
+**Generate 3D** ![]({{ '/assets/icons/pre_icons/mo_generate_3d_button.jpg' | relative_url }}): By clicking on this button or inside Settings page ![]({{ '/assets/icons/pre_icons/mo_generate_3d__label.jpg' | relative_url }}) button, created 2D geometry can be extruded or revolved to 3D geometry.
 
 **Show Geometry Normal Vectors** : This feature shows the geometry surface normal vectors. If the geometry is a closed volume, the correct orientation is defined when the surface normals are pointing out of the object. When the geometry is not a closed volume but is just a surface, the correct orientation is defined when the normals are pointing towards the workpiece.(See Fig. 12.3.20)
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image017.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image017.jpg' | relative_url }})
 
 Show Geometry Normal Vectors
 
 **Transparent** : By checking this check box it will turn on the transparency of the object. (See Fig. 12.3.21.)
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image018.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image018.jpg' | relative_url }})
 
 Transparent check box option
 
-**Delete Geometry**![](../../../assets/Icons/Pre_icons/MO_clear_icon.jpg) : It deletes the created geometry.
+**Delete Geometry**![]({{ '/assets/icons/pre_icons/mo_clear_icon.jpg' | relative_url }}) : It deletes the created geometry.
 
 ## 3D Geometry data Importing and Saving
 
-**Import Geometry :** Geometry can be imported from a file ![](../../../assets/Icons/Pre_icons/MO_Import_file_icon.jpg) or Load geometry from library ![](../../../assets/Icons/Pre_icons/MO_Load_from_Library_icon.jpg) options, a DEFORM native graphics file (AMGGEO), keyword file, database file or created using the geometry editor. When importing STL files or PATRAN files, use the mouse to select the object you wish to import. Click on any line segment in the object. Any segments connected to this object will also be selected and highlighted.
+**Import Geometry :** Geometry can be imported from a file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) or Load geometry from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) options, a DEFORM native graphics file (AMGGEO), keyword file, database file or created using the geometry editor. When importing STL files or PATRAN files, use the mouse to select the object you wish to import. Click on any line segment in the object. Any segments connected to this object will also be selected and highlighted.
 
 Geometry formats :
 
@@ -220,7 +220,7 @@ Geometry formats :
 
 **STL format input (DIEGEO)**
 
-The STL format ([DIEGEO](/docs/en/Keyword_Documentation/D/DIEGEO/)) represents a surface by a series of three sided facets. This format may be created from almost all commercial solid modelling packages from a either a solid model or a surface model. For very simple shapes, such as a cube, very few facets may be used to provide an excellent representation of the shape. In the case of an extrusion die where the facets are used to model a curved surface, many facets may be required in order to give the object a smooth representation or to render small details in a geometry. An economy of the number of facets used to represent a geometry is recommended in order to minimize the size of the database file. As more facets are used, the size of each step in the database file will increase. The increase in the time for the contact calculations is negligible with the increase of the number of facets in the die geometries.
+The STL format ([DIEGEO]({{ '/docs/en/Keyword_Documentation/D/DIEGEO/' | relative_url }})) represents a surface by a series of three sided facets. This format may be created from almost all commercial solid modelling packages from a either a solid model or a surface model. For very simple shapes, such as a cube, very few facets may be used to provide an excellent representation of the shape. In the case of an extrusion die where the facets are used to model a curved surface, many facets may be required in order to give the object a smooth representation or to render small details in a geometry. An economy of the number of facets used to represent a geometry is recommended in order to minimize the size of the database file. As more facets are used, the size of each step in the database file will increase. The increase in the time for the contact calculations is negligible with the increase of the number of facets in the die geometries.
 
 Upon inputting an STL file into the Pre-processor, the user is immediately prompted for a error tolerance value. This value is the snapping distance between the points in the STL file. Since the facets are not dependent on each other, the points in which adjacent facets share may not be represented exactly the same way in an STL file. Since they were meant to be the same point, the Preprocessor assumes some error tolerance where the points are merged into representing the same point. The default value of 1e-005 is usually a good starting value. If there are small cracks in the die geometry, they may closed by increasing the error tolerance value and hoping that the cracks are snapped closed. This is not a very controlled manner in which to close any cracks and should be used with extreme caution. After using this method, the geometry should be carefully checked to ensure that no holes are introduced or important features are lost.
 
@@ -307,15 +307,15 @@ The IDEAS neutral file format is an output format from IDEAS. This format specif
 **2D IGES format input [3D]**  
 3D geometry can also be created by extruding 2D IGS geometry file, using Import Geometry option by specifying extrision length and direction. Fig. 12.3.22. shows the 2d IGES geometry extrusion settings window which pops up while importing geometry using the import geometry option.
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image003.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image003.jpg' | relative_url }})
 
 Extrude Direction and Length window for 2D IGES import in 3D mode
 
 **Assign the file name to the object name while loading geometry :** When user checks this option while loading or importing geometry file, it assigns the geometry file name to the Object name.
 
-**Save Geometry** : Saves geometry to a file ![](../../../assets/Icons/Pre_icons/MO_Save_to_a_file_icon.jpg) or to library ![](../../../assets/Icons/Pre_icons/MO_Save_to_Library_icon.jpg). We can save geometry in STL, PATRAN, UNV and DEFORM native GEO format for 3D.
+**Save Geometry** : Saves geometry to a file ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) or to library ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). We can save geometry in STL, PATRAN, UNV and DEFORM native GEO format for 3D.
 
-## Settings ![](../../../assets/Icons/Pre_icons/MO_Settings_icon.jpg)
+## Settings ![]({{ '/assets/icons/pre_icons/mo_settings_icon.jpg' | relative_url }})
 
 **2D Import** :
 
@@ -323,7 +323,7 @@ Extrude Direction and Length window for 2D IGES import in 3D mode
 
 **No. of discretization points:**
 
-![](../../../assets/Images/Pre-Processor/12_Geometry_Modelling/12_3_3D_Geometry_Data_Definition/12_3_Image019.jpg)
+![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_3_3d_geometry_data_definition/12_3_image019.jpg' | relative_url }})
 
 3D Geometry Tolerance settings window
 
@@ -335,12 +335,12 @@ Extrude Direction and Length window for 2D IGES import in 3D mode
 
 Related Topics:
 
-[12\. Geometry Modelling](/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/)
+[12\. Geometry Modelling]({{ '/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})
 
-[12.1. 2D Geometry data Defining](/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/)
+[12.1. 2D Geometry data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }})
 
-[12.2. 2D Geometry data Editing](/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/)
+[12.2. 2D Geometry data Editing]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }})
 
-[12.4. 3D Geometry data Editing (GEO TOOL)](/docs/en/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_Editing_geo_toolL/)
+[12.4. 3D Geometry data Editing (GEO TOOL)]({{ '/docs/en/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_Editing_geo_toolL/' | relative_url }})
 
-[13\. Mesh Generation](/docs/en/pre_processor/13_Mesh_Generation/13_Mesh_Generation/)
+[13\. Mesh Generation]({{ '/docs/en/pre_processor/13_Mesh_Generation/13_Mesh_Generation/' | relative_url }})

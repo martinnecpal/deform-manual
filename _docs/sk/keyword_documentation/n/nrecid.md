@@ -42,4 +42,4 @@ NRECID defines the state variables in NRECVL. |  NRECID |  State Variable
   
 RELATED TOPICS  
 ---  
-Related keywords: [NRECVL](/docs/sk/keyword_documentation/n/nrecvl/)
+Related keywords: [NRECVL]({{ '/docs/sk/keyword_documentation/n/nrecvl/' | relative_url }})

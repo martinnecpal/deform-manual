@@ -9,4 +9,4 @@ Boolean operator is used to remove the unwanted area of the object or material l
 
 **Related Topics:**
 
-[45.1. Boolean Operator](/docs/en/operation_templates/45_boolean_operation/45_1_boolean_operation/)
+[45.1. Boolean Operator]({{ '/docs/en/operation_templates/45_boolean_operation/45_1_boolean_operation/' | relative_url }})

@@ -33,10 +33,10 @@ From DEFORM v11.0 the following MPICH2 64bit setup requirements are completely h
 
 **Related Topics:**
 
-[23.1. Start, Stop and Resume Simulation](/docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/)
+[23.1. Start, Stop and Resume Simulation]({{ '/docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/' | relative_url }})
 
-[23.2. Interactive and batch modes using Run option](/docs/en/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/)
+[23.2. Interactive and batch modes using Run option]({{ '/docs/en/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/' | relative_url }})
 
-[23.3. Simulation Graphics](/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/)
+[23.3. Simulation Graphics]({{ '/docs/en/simulator/23_deform_simulator/23_3_simulation_graphics/' | relative_url }})
 
-[23.4. Process Monitor](/docs/en/simulator/23_deform_simulator/23_4_process_monitor/)
+[23.4. Process Monitor]({{ '/docs/en/simulator/23_deform_simulator/23_4_process_monitor/' | relative_url }})

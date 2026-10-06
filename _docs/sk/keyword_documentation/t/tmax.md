@@ -25,8 +25,8 @@ TMAX terminates a simulation when the process time reaches MaxTime.
   
 REMARKS  
 ---  
-TMAX is one of several parameters used to control the termination of the simulation. Other keywords which effect simulation termination include: [EMAX](/docs/sk/keyword_documentation/e/emax/), LMAX, [NSTEP](/docs/sk/keyword_documentation/n/nstep/), [SMAX](/docs/sk/keyword_documentation/s/smax/), [VMIN](/docs/sk/keyword_documentation/v/vmin/). When the criteria specified in any of these keywords has been met, the simulation will terminate. If MaxTime = 0, [TMAX]() will not be used as a termination condition. Applicable simulation types: Isothermal Deformation, Heat Transfer , Non-Isothermal Deformation  
+TMAX is one of several parameters used to control the termination of the simulation. Other keywords which effect simulation termination include: [EMAX]({{ '/docs/sk/keyword_documentation/e/emax/' | relative_url }}), LMAX, [NSTEP]({{ '/docs/sk/keyword_documentation/n/nstep/' | relative_url }}), [SMAX]({{ '/docs/sk/keyword_documentation/s/smax/' | relative_url }}), [VMIN]({{ '/docs/sk/keyword_documentation/v/vmin/' | relative_url }}). When the criteria specified in any of these keywords has been met, the simulation will terminate. If MaxTime = 0, [TMAX]() will not be used as a termination condition. Applicable simulation types: Isothermal Deformation, Heat Transfer , Non-Isothermal Deformation  
   
 RELATED TOPICS  
 ---  
-[Stopping parameters](/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/) Keywords: [EMAX](/docs/sk/keyword_documentation/e/emax/), LMAX, [NSTEP](/docs/sk/keyword_documentation/n/nstep/), [SMAX](/docs/sk/keyword_documentation/s/smax/), [VMIN](/docs/sk/keyword_documentation/v/vmin/)
+[Stopping parameters]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}) Keywords: [EMAX]({{ '/docs/sk/keyword_documentation/e/emax/' | relative_url }}), LMAX, [NSTEP]({{ '/docs/sk/keyword_documentation/n/nstep/' | relative_url }}), [SMAX]({{ '/docs/sk/keyword_documentation/s/smax/' | relative_url }}), [VMIN]({{ '/docs/sk/keyword_documentation/v/vmin/' | relative_url }})

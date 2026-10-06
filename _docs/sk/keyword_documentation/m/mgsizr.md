@@ -30,4 +30,4 @@ MGSIZR is one of several keywords used to control the mesh density during AMG me
   
 RELATED TOPICS  
 ---  
-Automatic mesh generation, Automatic remeshing Keywords: [MGGRID](/docs/sk/keyword_documentation/m/mggrid/), [MGERR](/docs/sk/keyword_documentation/m/mgerr/), [MGNELM](/docs/sk/keyword_documentation/m/mgnelm/), [MGSIZR](), [MGWCUV](/docs/sk/keyword_documentation/m/mgwcuv/), [MGWTMP](/docs/sk/keyword_documentation/m/mgwtmp/), [MGWSTN](/docs/sk/keyword_documentation/m/mgwstn/), [MGWSTR](/docs/sk/keyword_documentation/m/mgwstr/)
+Automatic mesh generation, Automatic remeshing Keywords: [MGGRID]({{ '/docs/sk/keyword_documentation/m/mggrid/' | relative_url }}), [MGERR]({{ '/docs/sk/keyword_documentation/m/mgerr/' | relative_url }}), [MGNELM]({{ '/docs/sk/keyword_documentation/m/mgnelm/' | relative_url }}), [MGSIZR](), [MGWCUV]({{ '/docs/sk/keyword_documentation/m/mgwcuv/' | relative_url }}), [MGWTMP]({{ '/docs/sk/keyword_documentation/m/mgwtmp/' | relative_url }}), [MGWSTN]({{ '/docs/sk/keyword_documentation/m/mgwstn/' | relative_url }}), [MGWSTR]({{ '/docs/sk/keyword_documentation/m/mgwstr/' | relative_url }})

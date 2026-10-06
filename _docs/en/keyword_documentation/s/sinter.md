@@ -62,4 +62,4 @@ Applicable simulation type: Sintering
 
 RELATED TOPICS  
 ---  
-Related keywords: [OBJTYP (2D)](/docs/en/keyword_documentation/o/objtyp/), [OBJTYP (3D)](/docs/en/keyword_documentation/o/objtyp_3d/), [YOUNG](/docs/en/keyword_documentation/y/young/), [POISON](/docs/en/keyword_documentation/p/poison/)
+Related keywords: [OBJTYP (2D)]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }}), [OBJTYP (3D)]({{ '/docs/en/keyword_documentation/o/objtyp_3d/' | relative_url }}), [YOUNG]({{ '/docs/en/keyword_documentation/y/young/' | relative_url }}), [POISON]({{ '/docs/en/keyword_documentation/p/poison/' | relative_url }})

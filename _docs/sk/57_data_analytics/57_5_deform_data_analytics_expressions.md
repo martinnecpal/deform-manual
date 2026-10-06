@@ -18,7 +18,7 @@ The only difference is that an expression does not need to be trained. All param
 A defined model can be used as a function in an expression. A list of column names (variables) is in the Variables menu at the bottom of the expressions property page.
 
   
-Expressions serve several purposes. They can be used to perform unit conversions, transform from one coordinate system to another, scale data, compute differences between data columns, etc. Expressions can also be used to make predictions from models and validate models (more on this in [section 57.6](/docs/sk/57_data_analytics/57_6_deform_data_analytics_data_modelin/))
+Expressions serve several purposes. They can be used to perform unit conversions, transform from one coordinate system to another, scale data, compute differences between data columns, etc. Expressions can also be used to make predictions from models and validate models (more on this in [section 57.6]({{ '/docs/sk/57_data_analytics/57_6_deform_data_analytics_data_modelin/' | relative_url }}))
 
   
 Fig. 57.5.1 – Fig. 57.5.4. shows using an expression to convert temperature units.

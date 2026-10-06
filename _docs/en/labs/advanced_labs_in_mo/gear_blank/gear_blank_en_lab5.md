@@ -171,4 +171,4 @@ Select the last step of the simulation from the step list or last step icon. The
 
 Point tracking graph at last step
 
-Click on [Lab 6. Mechanical Press](/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab6/) to setup Lab6.
+Click on [Lab 6. Mechanical Press]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab6/' | relative_url }}) to setup Lab6.

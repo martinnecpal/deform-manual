@@ -29,10 +29,10 @@ Forming express operation after promoting it to forming operation
 
 The advanced options which will available in after promoting to forming operations are geometry types like plane stress and torsion in 2D, object types like Elasto plastic, elastic and porous, advanced geometry, advanced mesh, object properties and advanced simulation controls options including the different stopping controls, solvers selection, remesh options etc.
 
-For more details on options available in forming operation refer the chapter[ Introduction to Forming Operation.](/docs/en/operation_templates/33_forming/33_introduction_to_forming/)
+For more details on options available in forming operation refer the chapter[ Introduction to Forming Operation.]({{ '/docs/en/operation_templates/33_forming/33_introduction_to_forming/' | relative_url }})
 
 **Related Topics:**
 
-[31\. Introduction to Forming](/docs/en/operation_templates/33_forming/33_introduction_to_forming/)
+[31\. Introduction to Forming]({{ '/docs/en/operation_templates/33_forming/33_introduction_to_forming/' | relative_url }})
 
-[32\. Forming express operation](/docs/en/operation_templates/34_forming_express/34_introduction_to_forming_express/)
+[32\. Forming express operation]({{ '/docs/en/operation_templates/34_forming_express/34_introduction_to_forming_express/' | relative_url }})

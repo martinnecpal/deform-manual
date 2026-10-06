@@ -31,13 +31,13 @@ title: "56.3. 3D User Defined FEM Routines"
 
 This chapter explains the various user routines available in the DEFORM system for both the FEM engine and the post-processor. Examples on how to use each type of routine, how to compile the code and how to run the modified FEM engine and post-processor are also covered.
 
-In FEM engine user defined routines can be used for many different purposes during a simulation. Currently user routines exist for flow stress definition, movement control, calculation of user nodal values ([USRNOD](/docs/sk/keyword_documentation/u/usrnod/)), calculation of user element values ([USRELM](/docs/sk/keyword_documentation/u/usrelm/)), damage models and many other specialized needs. In the post-processor, user defined post-processing routines can be used to calculate field variables using the steps stored in the database. To implement the user routines user must have a FORTRAN compiler installed on the system where DEFORM system is running.
+In FEM engine user defined routines can be used for many different purposes during a simulation. Currently user routines exist for flow stress definition, movement control, calculation of user nodal values ([USRNOD]({{ '/docs/sk/keyword_documentation/u/usrnod/' | relative_url }})), calculation of user element values ([USRELM]({{ '/docs/sk/keyword_documentation/u/usrelm/' | relative_url }})), damage models and many other specialized needs. In the post-processor, user defined post-processing routines can be used to calculate field variables using the steps stored in the database. To implement the user routines user must have a FORTRAN compiler installed on the system where DEFORM system is running.
 
 **User-Defined FEM Routines:**
 
 User-Defined FEM Routines are FORTRAN subroutines in which the user can change internal routines within the DEFORM FEM engine to achieve very specialized functions within DEFORM. These subroutines can then be compiled and linked to provide object code to generate a custom built FEM engine. The user subroutines are grouped in to different fortran source files based on their functionality. These are text files containing all the available FORTRAN subroutines including all the common blocks with all the variables explained in comments. To compile this file, run the script file DEF_INS.COM (on Linux), select the routine (fem or user defined post) you would like build, and select the platform (like linux version etc..) for which you would like to build for. At this point, the FORTRAN files will be compiled and linked to the object code named DEF_SIM.OBJ (on Linux). This will then generate a new FEM engine, named DEF_SIM.EXE. As shown in [Fig. 56.3.2](56_3_3d_user_defined_fem_routines.htm#Fig_56_3_2_Description_on_how_to_compile/link_a_new_FEM_engine_On_PC) similar structure has been provided for PC environment as well, 32bit support for user-defined FEM has been stopped in Windows from v13.1 hence in PC DEF_SIM_64.EXE file will be built. This whole process is shown in [Fig. 56.3.1](56_3_3d_user_defined_fem_routines.htm#Fig_56_3_1_Description_on_how_to_compile/link_a_new_FEM_engine_On_Linux) for unix and [Fig. 56.3.2](56_3_3d_user_defined_fem_routines.htm#Fig_56_3_2_Description_on_how_to_compile/link_a_new_FEM_engine_On_PC) for PC environments.
 
-Currently user routines exist for flow stress definition, movement control, calculation of nodal values ([USRNOD](/docs/sk/keyword_documentation/u/usrnod/)), calculation of element values ([USRELM](/docs/sk/keyword_documentation/u/usrelm/)), and for other models. For example, there are many different methods for a user to control the movement of a rigid body within DEFORM, e.g. constant velocity, mechanical press, hammer press movement, speed as a function of time. However, there are some cases where a slightly more specialized movement control is required, such as movement based on variation of state variables of the workpiece. This can be performed using user-routines since these variables are available when the movement of the rigid die is calculated.
+Currently user routines exist for flow stress definition, movement control, calculation of nodal values ([USRNOD]({{ '/docs/sk/keyword_documentation/u/usrnod/' | relative_url }})), calculation of element values ([USRELM]({{ '/docs/sk/keyword_documentation/u/usrelm/' | relative_url }})), and for other models. For example, there are many different methods for a user to control the movement of a rigid body within DEFORM, e.g. constant velocity, mechanical press, hammer press movement, speed as a function of time. However, there are some cases where a slightly more specialized movement control is required, such as movement based on variation of state variables of the workpiece. This can be performed using user-routines since these variables are available when the movement of the rigid die is calculated.
 
 ![]({{ '/assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0001.jpg' | relative_url }})
 
@@ -169,7 +169,7 @@ This section contains a description of the different FEM user routines available
 
 ### User defined data (USRDEF)
 
-The user defined data ([USRDEF](/docs/sk/keyword_documentation/u/usrdef/)) field in the pre-processor can be used to stored data that can be used to specify parameters for the user-routines. This data can be defined in the Simulation Controls, Advanced Controls menu as shown in Fig. 56.3.3. In the user-routines the following code lets the user access the [USRDEF](/docs/sk/keyword_documentation/u/usrdef/) values common block through the variable IUSRVL. This data can be accessed from any type of user routines. This data is defined for a given model, not specific to an object or object type.
+The user defined data ([USRDEF]({{ '/docs/sk/keyword_documentation/u/usrdef/' | relative_url }})) field in the pre-processor can be used to stored data that can be used to specify parameters for the user-routines. This data can be defined in the Simulation Controls, Advanced Controls menu as shown in Fig. 56.3.3. In the user-routines the following code lets the user access the [USRDEF]({{ '/docs/sk/keyword_documentation/u/usrdef/' | relative_url }}) values common block through the variable IUSRVL. This data can be accessed from any type of user routines. This data is defined for a given model, not specific to an object or object type.
 
 CHARACTER*80 IUSRVL
 
@@ -202,7 +202,7 @@ Where
 TEPS = EFFECTIVE STRAIN  
 EFEPS = EFFECTIVE STRAIN RATE
 
-A maximum of 100 flow stress routines can be defined in this program. In the pre-processor Material Properties the flow stress ([FSTRES](/docs/sk/keyword_documentation/f/fstres/)) type selected should be Advanced and the routine number to be used should be specified for each material group which uses the user routine. (See Fig. 56.3.4.) This routine number (NPTRTN)is passed to the user defined flow stress subroutine USRMTR to control branching to the specified UFLOW module.
+A maximum of 100 flow stress routines can be defined in this program. In the pre-processor Material Properties the flow stress ([FSTRES]({{ '/docs/sk/keyword_documentation/f/fstres/' | relative_url }})) type selected should be Advanced and the routine number to be used should be specified for each material group which uses the user routine. (See Fig. 56.3.4.) This routine number (NPTRTN)is passed to the user defined flow stress subroutine USRMTR to control branching to the specified UFLOW module.
 
 ![]({{ '/assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0004.jpg' | relative_url }})
 
@@ -217,7 +217,7 @@ YS = 10. * (EFEPS)**PEM
 FIP = 10. * PEM * (EFEPS)**(PEM-1.)  
 YPS = 0.
 
-  1. The flow stress depends on the strain index (PEN), strain rate sensitivity index (PEM), the effective strain ([STRAIN](/docs/sk/keyword_documentation/s/strain/)) and the effective strain rate (EFEPS). The value of effective strain can be the element strain or from a user defined state variable. In the example given below the effective strain comes from a user defined state variable which stores the current strain. This example also illustrates the concept of using the user defined state variables to calculate flow stress.
+  1. The flow stress depends on the strain index (PEN), strain rate sensitivity index (PEM), the effective strain ([STRAIN]({{ '/docs/sk/keyword_documentation/s/strain/' | relative_url }})) and the effective strain rate (EFEPS). The value of effective strain can be the element strain or from a user defined state variable. In the example given below the effective strain comes from a user defined state variable which stores the current strain. This example also illustrates the concept of using the user defined state variables to calculate flow stress.
 
 STRAIN = USRE1(1)  
 IF (STRAIN.LE.0.) STRAIN = 1.E-5  
@@ -508,7 +508,7 @@ UPDV = V_out
 
 ### User defined node and element value (USRUPD)
 
-The user can implement subroutines which can calculate nodal and elemental values (up to 100) during the simulation for each node/element of the objects in the simulation. The inputs are all state variables and the outputs are the values for [USRNOD](/docs/sk/keyword_documentation/u/usrnod/) and [USRELM](/docs/sk/keyword_documentation/u/usrelm/). The variables can also be used in the flow stress routines to model flow stress as a function of new state variables.
+The user can implement subroutines which can calculate nodal and elemental values (up to 100) during the simulation for each node/element of the objects in the simulation. The inputs are all state variables and the outputs are the values for [USRNOD]({{ '/docs/sk/keyword_documentation/u/usrnod/' | relative_url }}) and [USRELM]({{ '/docs/sk/keyword_documentation/u/usrelm/' | relative_url }}). The variables can also be used in the flow stress routines to model flow stress as a function of new state variables.
 
 The advantage of using these variables instead of doing the same procedure using user defined post-processing is that these values are calculated for each step in the database whereas user defined post-processing is only for the steps that are stored in the database.
 
@@ -750,7 +750,7 @@ ENDIF
 
 ### User defined damage models (USRDMG)
 
-User defined damage models can be implemented for calculating damage or for use with the fracture module of DEFORM where elements can be deleted when their damage values exceeds a certain value. To use the damage model select the fracture mode ([FRCMOD](/docs/sk/keyword_documentation/f/frcmod/)) as User Routines in Materials Properties, Advanced and specify the user routine number to be called in the subroutine USRDMG. (See Fig. 56.3.6.)
+User defined damage models can be implemented for calculating damage or for use with the fracture module of DEFORM where elements can be deleted when their damage values exceeds a certain value. To use the damage model select the fracture mode ([FRCMOD]({{ '/docs/sk/keyword_documentation/f/frcmod/' | relative_url }})) as User Routines in Materials Properties, Advanced and specify the user routine number to be called in the subroutine USRDMG. (See Fig. 56.3.6.)
 
 ![]({{ '/assets/images/user_routines/56_3_3d_user_defined_fem_routines/image0006.jpg' | relative_url }})
 
@@ -1124,7 +1124,7 @@ ENDDO
 
 ## Compiling user routines on Linux
 
-The user routines are called for each node/element for every step during the simulation and efficient coding practices should be followed to minimize simulation time. Do not open or close data files during each subroutine call as this can degrade performance significantly. The [USRDEF](/docs/sk/keyword_documentation/u/usrdef/) field in the pre-processor can be used to store a limited number of parameters. If you require more space than what is available in [USRDEF](/docs/sk/keyword_documentation/u/usrdef/) then open the data files in the user subroutines and store a static variable in a COMMON block so that the file does not have to read each time the user subroutine is called.
+The user routines are called for each node/element for every step during the simulation and efficient coding practices should be followed to minimize simulation time. Do not open or close data files during each subroutine call as this can degrade performance significantly. The [USRDEF]({{ '/docs/sk/keyword_documentation/u/usrdef/' | relative_url }}) field in the pre-processor can be used to store a limited number of parameters. If you require more space than what is available in [USRDEF]({{ '/docs/sk/keyword_documentation/u/usrdef/' | relative_url }}) then open the data files in the user subroutines and store a static variable in a COMMON block so that the file does not have to read each time the user subroutine is called.
 
 Typically user is expected to make a copy of /USR folder from the installed folder available at $DEFORM_DIR/USR (default location being /usr/local/SFTC/DEFORM/v11.1/3d/USR). After the FORTRAN code has been modified a new local FEM engine can be build using the script build_fem or DEF_INS.COM which are available in /USR folder.
 
@@ -1249,8 +1249,8 @@ In the problem folder (having DB), user can simply place a text file called DEF_
 
 **Related Topics:**
 
-[56.1. Introduction to User Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_1_introduction_to_user_routines/)
+[56.1. Introduction to User Routines]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_1_introduction_to_user_routines/' | relative_url }})
 
-[56.2. 2D User Defined FEM Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/)
+[56.2. 2D User Defined FEM Routines]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }})
 
-[56 4 User-Defined Post-Processing Routines](/docs/sk/user_routines/56_user_routines_in_deform/56_4_user-defined_post-processing_routines/)
+[56 4 User-Defined Post-Processing Routines]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_4_user-defined_post-processing_routines/' | relative_url }})

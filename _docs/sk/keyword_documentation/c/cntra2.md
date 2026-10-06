@@ -32,4 +32,4 @@ Applicable object types: [Rigid](../../pre_processor/11_general_object_data_defi
   
 RELATED TOPICS  
 ---  
-[Boundary constraints](/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/), [Inter-object contact](/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/) Keywords: [ANGMOV(2D)](/docs/sk/keyword_documentation/a/angmov/), [ANGMOV(3D)](../a/angmov\(3d\).htm), [CNTRAX](/docs/sk/keyword_documentation/c/cntrax/), [CNTRAX(3D)](cntrax\(3d\).htm), [MOVCTL(2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm)
+[Boundary constraints]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}), [Inter-object contact]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}) Keywords: [ANGMOV(2D)]({{ '/docs/sk/keyword_documentation/a/angmov/' | relative_url }}), [ANGMOV(3D)](../a/angmov\(3d\).htm), [CNTRAX]({{ '/docs/sk/keyword_documentation/c/cntrax/' | relative_url }}), [CNTRAX(3D)](cntrax\(3d\).htm), [MOVCTL(2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm)

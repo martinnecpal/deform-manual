@@ -19,7 +19,7 @@ Používateľ môže inicializovať údaje objektu pomocou inicializačnej strá
 
 Používateľ môže inicializovať hodnoty týchto stavových premenných definovaním v poli vedľa a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Hodnota sa inicializuje pre celý objekt. Na obr. 17.1. sú znázornené rôzne stavové premenné, ktoré sú k dispozícii v okne Inicializovať. Pre stavové premenné, ako je rýchlosť a posunutie, poskytnuté vstupné polia toľko, koľko je rozmerov, používateľ musí definovať smerové hodnoty premenných v príslušných poliach a potom kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) sa vypočíta celková rýchlosť a posunutie.
 
-Ak stavové premenné nie sú k dispozícii na stránke inicializácie objektu alebo ak chce používateľ použiť možnosti výberu na selektívne použitie stavovej premennej na časť objektu, potom môže používateľ použiť dátové okná Uzol a Prvok, viac informácií o tom, ako inicializovať stavové premenné v oknách Uzol a Prvok, nájdete v [Object node Data](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/) a [Object element Data](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/).
+Ak stavové premenné nie sú k dispozícii na stránke inicializácie objektu alebo ak chce používateľ použiť možnosti výberu na selektívne použitie stavovej premennej na časť objektu, potom môže používateľ použiť dátové okná Uzol a Prvok, viac informácií o tom, ako inicializovať stavové premenné v oknách Uzol a Prvok, nájdete v [Object node Data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}) a [Object element Data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}).
 
 ## **Tabuľka s hlavnými premennými stavu**
 
@@ -63,8 +63,8 @@ Inicializácia objektu Iné okno
 
 **Súvisiace témy:**
 
-[17.1. Node Data Window](/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/)
+[17.1. Node Data Window]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }})
 
-[17.2. Element Data Window](/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/)
+[17.2. Element Data Window]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }})
 
-[17.3. Data interpolation Window](/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/)
+[17.3. Data interpolation Window]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_3_data_interpolation_window/' | relative_url }})
