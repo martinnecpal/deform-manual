@@ -1,5 +1,5 @@
 """
-Copy documentation_content/ → _docs/en/
+Copy en/documentation_content/ → _docs/en/
 Copy sk/documentation_content/ → _docs/sk/
 Add Jekyll front matter to each .htm file.
 
@@ -78,7 +78,7 @@ def copy_tree(src: str, dst: str, lang: str):
 
 def main():
     # English
-    en_src = os.path.join(BASE, 'documentation_content')
+    en_src = os.path.join(BASE, 'en', 'documentation_content')
     en_dst = os.path.join(BASE, '_docs', 'en')
     print(f"Copying EN: {en_src} -> {en_dst}")
     copy_tree(en_src, en_dst, 'en')

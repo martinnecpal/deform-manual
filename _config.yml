@@ -25,17 +25,23 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - CLAUDE.md
   - scripts/
   - "*.ppf"
-  - whxdata/
-  - template/
   - parentdata.js
   - screendata.js
   - projectdata.js
   - index.ppf
-  - index.html        # replaced by index.md
+  # Legacy RoboHelp sites (content served from _docs/en/ and _docs/sk/ instead)
+  - en/documentation_content/
+  - en/whxdata/
+  - en/template/
+  - en/index.html     # replaced by index.md
+  - sk/documentation_content/
+  - sk/whxdata/
+  - sk/template/
   - sk/index.html     # replaced by sk/index.md
-  - documentation_content/  # served from _docs/en/ instead
+  - sk/assets/        # duplicate of root assets/
 
 # Keep assets untouched
 keep_files:

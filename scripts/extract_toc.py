@@ -1,11 +1,11 @@
 """
-Extract RoboHelp TOC from whxdata/toc*.new.js files and write _data/nav_en.yml
+Extract RoboHelp TOC from en/whxdata/toc*.new.js files and write _data/nav_en.yml
 and _data/nav_sk.yml.
 
 Usage:
     python scripts/extract_toc.py
 
-Reads from:  whxdata/toc*.new.js  (English TOC)
+Reads from:  en/whxdata/toc*.new.js  (English TOC)
 Writes to:   _data/nav_en.yml
              _data/nav_sk.yml
 """
@@ -19,7 +19,7 @@ import sys
 # Helpers
 # ---------------------------------------------------------------------------
 
-TOC_DIR = os.path.join(os.path.dirname(__file__), '..', 'whxdata')
+TOC_DIR = os.path.join(os.path.dirname(__file__), '..', 'en', 'whxdata')
 OUT_DIR = os.path.join(os.path.dirname(__file__), '..', '_data')
 
 

@@ -65,9 +65,11 @@ The `default` layout detects language via `page.lang` front matter (`en` or `sk`
 
 ## Legacy Static Files (still present)
 
-- `documentation_content/` — original RoboHelp `.htm` files; excluded from Jekyll build via `_config.yml`
-- `template/` — RoboHelp theme (minified). **Do not edit minified files.** Excluded from Jekyll build.
-- `whxdata/` — RoboHelp TOC/search data. Excluded from Jekyll build.
+`en/` and `sk/` each hold a copy of the legacy RoboHelp site (excluded from the Jekyll build via `_config.yml`):
+- `<lang>/documentation_content/` — original RoboHelp `.htm` files
+- `<lang>/template/` — RoboHelp theme (minified). **Do not edit minified files.**
+- `<lang>/whxdata/` — RoboHelp TOC/search data
+- `<lang>/index.html` — RoboHelp entry page (replaced by `index.md` / `sk/index.md`)
 - `assets/equations/`, `assets/icons/`, `assets/images/` — shared image assets used by both legacy `.htm` files and migrated Markdown
 
 ## Deployment
