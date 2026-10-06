@@ -5,7 +5,7 @@ title: "16.3. Reference"
 
 # 16.3. Reference properties
 
-Reference properties ([REFPOS]({{ '/docs/en/Keyword_Documentation/R/REFPOS/' | relative_url }})) option mainly used in distance between object stopping controls. User can select the reference points by selecting coordinate options or by selecting Node option (only for meshed object) (See Fig. 16.3.1. and Fig. 16.3.2.)
+Reference properties ([REFPOS]({{ '/docs/en/keyword_documentation/r/refpos/' | relative_url }})) option mainly used in distance between object stopping controls. User can select the reference points by selecting coordinate options or by selecting Node option (only for meshed object) (See Fig. 16.3.1. and Fig. 16.3.2.)
 
 **For example** : Define one reference point for top die and one reference point for bottom die, now if we select distance between object stopping control and select top die and bottom die as distance between stopping control objects, it will automatically calculate the distance between top die reference point and bottom die reference point.
 

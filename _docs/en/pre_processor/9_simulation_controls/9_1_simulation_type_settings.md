@@ -65,7 +65,7 @@ Example for types of geometry model
 
 ## Units (UNIT) [2D, 3D]
 
-The DEFORM unit system ([UNIT]({{ '/docs/en/keyword_documentation/u/unit/' | relative_url }})) can be defined as English or Metric (SI). (See Fig. 9.1.1.) All information in DEFORM should be expressed in consistent units. The unit system should be selected at the beginning of the problem setup procedure, and should not be changed during a simulation or after an operation. (See [Table 1.9.1](../../about_deform/1_introduction_to_deform/1_9_units.htm#Table_DEFORM_unit_system) for more information of variables units in DEFORM
+The DEFORM unit system ([UNIT]({{ '/docs/en/keyword_documentation/u/unit/' | relative_url }})) can be defined as English or Metric (SI). (See Fig. 9.1.1.) All information in DEFORM should be expressed in consistent units. The unit system should be selected at the beginning of the problem setup procedure, and should not be changed during a simulation or after an operation. (See [Table 1.9.1]({{ '/docs/en/about_deform/1_introduction_to_deform/1_9_units/' | relative_url }}#Table_DEFORM_unit_system) for more information of variables units in DEFORM
 
 ##  Type (STYPE)
 
@@ -96,7 +96,7 @@ When this solver is selected the roll must have hole at the center and Non separ
 
 ## Simulation modes (SMODE, TRANS)
 
-[2D, 3D]: DEFORM features a group of simulation modes that may be turned on or off individually, or used in various combinations.(See Fig. 9.1.3.) For backward compatibility with old keywords and databases, before version 3.0, the Keyword [SMODE]({{ '/docs/en/keyword_documentation/s/smode/' | relative_url }}) (old style isothermal, non-isothermal, heat transfer) is read and the Corresponding keyword TRANS mode switches are set in the pre-processor. 
+\[2D, 3D]: DEFORM features a group of simulation modes that may be turned on or off individually, or used in various combinations.(See Fig. 9.1.3.) For backward compatibility with old keywords and databases, before version 3.0, the Keyword [SMODE]({{ '/docs/en/keyword_documentation/s/smode/' | relative_url }}) (old style isothermal, non-isothermal, heat transfer) is read and the Corresponding keyword TRANS mode switches are set in the pre-processor. 
 
   * **Deformation :** Simulates deformation due to mechanical, thermal, or phase transformation effects. 
 

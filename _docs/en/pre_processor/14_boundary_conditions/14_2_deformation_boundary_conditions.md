@@ -29,13 +29,13 @@ title: "14.2. Deformation Boundary Conditions"
 
 ## Velocity BCC [2D, 3D]
 
-[2D]: Velocity of each node can be specified independently in the X and Y directions. Velocity boundary conditions are normally set to zero for symmetry conditions, but may also be set to a specified non-zero value for processes such as drawing in which a workpiece is pulled through a die. (See Fig. 14.2.1.)
+\[2D]: Velocity of each node can be specified independently in the X and Y directions. Velocity boundary conditions are normally set to zero for symmetry conditions, but may also be set to a specified non-zero value for processes such as drawing in which a workpiece is pulled through a die. (See Fig. 14.2.1.)
 
 ![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_2_deformation_boundary_conditions/14_2_image001.jpg' | relative_url }})
 
 2D velocity BCC window
 
-[3D]: Velocity of each node can be specified independently in the X, Y, and Z directions. Velocity boundary conditions are normally set to zero for symmetry conditions (Symmetry BCC [3D]), but may also be set to a specified non-zero value for processes such as drawing in which a workpiece is pulled through a die.
+\[3D]: Velocity of each node can be specified independently in the X, Y, and Z directions. Velocity boundary conditions are normally set to zero for symmetry conditions (Symmetry BCC [3D]), but may also be set to a specified non-zero value for processes such as drawing in which a workpiece is pulled through a die.
 
 Even, we can define Velocity BCC using All direction option for both 2D and 3D, with this option user can assign BCC for all directions at a time.
 
@@ -96,7 +96,7 @@ Defined free distortion BCC
 
 ## Pressure BCC [2D, 3D]
 
-**[2D]** : The pressure boundary conditions specifies a uniform, or linearly varying, force per unit area on the element faces connecting the specified edges. Two values for the normal pressure are required, the first value is the beginning value of pressure from the beginning point where pressure is set, the second value is the value at the end of where the pressure is specified. The pressure is linearly interpolated between the start and the end. The keywords for pressure are [ECCDEF]({{ '/docs/en/Keyword_Documentation/E/ECCDEF/' | relative_url }}) and [ECPRES]({{ '/docs/en/Keyword_Documentation/E/ECPRES/' | relative_url }}). User can define Pressure window as shown in Fig. 14.2.9.
+**[2D]** : The pressure boundary conditions specifies a uniform, or linearly varying, force per unit area on the element faces connecting the specified edges. Two values for the normal pressure are required, the first value is the beginning value of pressure from the beginning point where pressure is set, the second value is the value at the end of where the pressure is specified. The pressure is linearly interpolated between the start and the end. The keywords for pressure are [ECCDEF]({{ '/docs/en/keyword_documentation/e/eccdef/' | relative_url }}) and [ECPRES]({{ '/docs/en/keyword_documentation/e/ecpres/' | relative_url }}). User can define Pressure window as shown in Fig. 14.2.9.
 
 ![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_2_deformation_boundary_conditions/14_2_image009.jpg' | relative_url }})
 
@@ -166,13 +166,13 @@ Shrink Fit BCC in 3D used for die stress analysis, This can be defined by follow
 
 If shrink fit is applied to the inner object, the value should be negative and If shrink fit is applied to the outer object then the value should be positive.
 
-For more information on shrink fit, Please refer [2D Die Stress Analysis Theory]({{ '/docs/en/Operation_Templates/30_Die_Stress/2D_Die_Stress_Analysis_Theory/' | relative_url }}).
+For more information on shrink fit, Please refer [2D Die Stress Analysis Theory]({{ '/docs/en/operation_templates/30_die_stress/2d_die_stress_analysis_theory/' | relative_url }}).
 
 ## Contact BCC [2D, 3D]
 
 The Contact boundary condition displays inter-object boundary contact conditions on a given object. The user should gain some experience with DEFORM before using this option. The contact conditions are stored in three components to represent the fact that there are three degrees of freedom for any given node.
 
-Contact boundary conditions are applied to nodes of a slave object, and specify contact between those nodes and the surface of a master object (See Fig. 14.2.1.). If a node is specified to be in contact with a particular object, it will be placed on the surface of that object. If this requires changing the position of that node, it will be changed as necessary. Contact boundary conditions are generated under the Inter-object Contact relation ([CNTACT]({{ '/docs/en/Keyword_Documentation/C/CNTACT/' | relative_url }})) section.
+Contact boundary conditions are applied to nodes of a slave object, and specify contact between those nodes and the surface of a master object (See Fig. 14.2.1.). If a node is specified to be in contact with a particular object, it will be placed on the surface of that object. If this requires changing the position of that node, it will be changed as necessary. Contact boundary conditions are generated under the Inter-object Contact relation ([CNTACT]({{ '/docs/en/keyword_documentation/c/cntact/' | relative_url }})) section.
 
 Contact boundary conditions can be displayed for a given object using the Objects, Boundary Conditions, Advanced Deformation BCC's icon.
 
@@ -194,9 +194,9 @@ Rolling Boundary condition window
 
 ## Advanced deformation BCC [2D, 3D]
 
-The Advanced boundary condition displays inter-object boundary contact conditions on a given object. This is the same information displayed in the Inter-Object BCC's window. There is no physical significance to the X or Y components of contact. Rather, the ``directions'' are dictated by numerical convenience. Contact conditions are first assigned to the Y direction. If that position is occupied by another value, conditions are assigned in the X direction. For more information please refer section [Nodal data- Deform BCC](../17_Object_Data_Initialization/17_1_Node_Data_Window.htm#Deform_BCC) ([BCCDEF]({{ '/docs/en/Keyword_Documentation/B/BCCDEF/' | relative_url }})).
+The Advanced boundary condition displays inter-object boundary contact conditions on a given object. This is the same information displayed in the Inter-Object BCC's window. There is no physical significance to the X or Y components of contact. Rather, the ``directions'' are dictated by numerical convenience. Contact conditions are first assigned to the Y direction. If that position is occupied by another value, conditions are assigned in the X direction. For more information please refer section [Nodal data- Deform BCC]({{ '/docs/en/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}#Deform_BCC) ([BCCDEF]({{ '/docs/en/keyword_documentation/b/bccdef/' | relative_url }})).
 
-Depending upon the BCC usr_bcc.f fortan file, user has to enter User Routine number. Please refer to [Chapter 56. User Routines]({{ '/docs/en/User_Routines/56_User_Routines_in_DEFORM/56_User_Routines_in_DEFORM/' | relative_url }}) for a description of how to implement user defined BCC routines. (See Fig. 14.2.17.)
+Depending upon the BCC usr_bcc.f fortan file, user has to enter User Routine number. Please refer to [Chapter 56. User Routines]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/' | relative_url }}) for a description of how to implement user defined BCC routines. (See Fig. 14.2.17.)
 
 ![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_2_deformation_boundary_conditions/14_2_image018.jpg' | relative_url }})
 

@@ -67,7 +67,7 @@ Confirm that symmetry boundary conditions are defined on the symmetry planes, an
 
 #### Assign Heat Condition
 
-Set the **Transfer****time** as **5** sec, accept the default Environment temperature and Convection coefficient (See [Fig. L3.6.](forming_express_lab3.htm#Fig_L3_6_Heat_condition_window)). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls page.
+Set the **Transfer****time** as **5** sec, accept the default Environment temperature and Convection coefficient (See [Fig. L3.6.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_6_Heat_condition_window)). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls page.
 
 #### Simulation controls
 
@@ -105,7 +105,7 @@ Verify that the Top Die temperature is **300** °F. Click ![]({{ '/assets/icons/
 
 Import the top die geometry STL file “**gear top die.****STL** ” using the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Import geometry from a file) button by browsing the geometry file path in installation folder V*_* \Tutorials directory. The die comes in oriented along a different axis than the workpiece. We will address that in a later step.
 
-We will use a die distance stopping control when we run the forming simulation, but since the tools are defined in the current operation, reference points must also be defined now. Click on ![]({{ '/assets/icons/pre_icons/mo_define_reference_point_button.jpg' | relative_url }}) and pick a point on the flash land (See [Fig. L3.7.](forming_express_lab3.htm#Fig_L3_7_Top_die_with_the_selected_reference_point)) to select the reference point on the top die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define bottom die.
+We will use a die distance stopping control when we run the forming simulation, but since the tools are defined in the current operation, reference points must also be defined now. Click on ![]({{ '/assets/icons/pre_icons/mo_define_reference_point_button.jpg' | relative_url }}) and pick a point on the flash land (See [Fig. L3.7.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_7_Top_die_with_the_selected_reference_point)) to select the reference point on the top die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define bottom die.
 
 #### Bottom die general page
 
@@ -115,11 +115,11 @@ Verify that the Bottom Die temperature is **300** °F. Click ![]({{ '/assets/ico
 
 Import the bottom die geometry STL file “**gear bottom die.****STL** ” using the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Import geometry from a file) button by browsing the geometry file path in installation folder V*_* \Tutorials directory. The die comes in oriented along a different axis than the workpiece. We will address that in a later step.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_define_reference_point_button.jpg' | relative_url }}) and pick a point on the flash gutter (See [Fig. L3.8.](forming_express_lab3.htm#Fig_L3_8_Bottom_die_with_the_selected_reference_point)) to select the reference point on the bottom die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define positioning.
+Click on ![]({{ '/assets/icons/pre_icons/mo_define_reference_point_button.jpg' | relative_url }}) and pick a point on the flash gutter (See [Fig. L3.8.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_8_Bottom_die_with_the_selected_reference_point)) to select the reference point on the bottom die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define positioning.
 
 #### Define Positioning for Heat Resting
 
-At this point, the workpiece is oriented along the Z axis, and the tools are oriented along the Y axis as shown in [Fig. L3.9.](forming_express_lab3.htm#Fig_L3_9_Orientation_of_does_and_Workpiece)
+At this point, the workpiece is oriented along the Z axis, and the tools are oriented along the Y axis as shown in [Fig. L3.9.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_9_Orientation_of_does_and_Workpiece)
 
 Click on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. First, rotate the dies to be oriented along the Z axis. Set Method to **Rotational**. Set the following:
 
@@ -131,9 +131,9 @@ Rotation center : User-defined (0,0,0)
 
 Angle : 90 deg.
 
-We want to rotate both dies together, so go to the **Coupled** tab, and check **Bottom****Die**. This will couple any positioning that is done (See [Fig. L3.10.)](forming_express_lab3.htm#Fig_L3_10_Positioning_Top_die_with_Coupled_Bottom_object). Click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) to rotate the tools to be aligned with the workpiece.
+We want to rotate both dies together, so go to the **Coupled** tab, and check **Bottom****Die**. This will couple any positioning that is done (See [Fig. L3.10.)]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_10_Positioning_Top_die_with_Coupled_Bottom_object). Click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) to rotate the tools to be aligned with the workpiece.
 
-Now the tools and workpiece are all aligned along the Z axis, but the tools are too close together as shown in [Fig. L3.11.](forming_express_lab3.htm#Fig_L3_11_Objects_after_rotation_position) The next step is to move the Top Die into an "up" position away from the workpiece.
+Now the tools and workpiece are all aligned along the Z axis, but the tools are too close together as shown in [Fig. L3.11.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_11_Objects_after_rotation_position) The next step is to move the Top Die into an "up" position away from the workpiece.
 
 Uncheck the coupled positioning, then position the**** Top **Die** using **Offset** by **12** in. in the Z direction.
 
@@ -143,7 +143,7 @@ Finally, we need to make sure that the Bottom Die is contacting properly with th
 
 Use ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) to add a scheduled positioning operation, and **Interference** position the **Bottom****Die** in the**Z** direction with the **Workpiece**.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) and the scheduled positioning page should show this scheduled operation (See [Fig. L3.13.](forming_express_lab3.htm#Fig_L3_13_Scheduled_positioning_window)). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact.
+Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) and the scheduled positioning page should show this scheduled operation (See [Fig. L3.13.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_13_Scheduled_positioning_window)). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact.
 
 #### Define contact settings for Heat Resting
 
@@ -189,15 +189,15 @@ The default **system-defined** settings for hot forging will be used, so no chan
 
 #### Set Primary Die Stroke Controls
 
-In Primary die stroke page, we need to set the total die movement to something appropriate for this forming operation. The height of the billet is 8.1 in. This is a good approximate value to use. Set the **Total primary die stroke** to **8.1** in. (See [Fig. L3.14.](forming_express_lab3.htm#Fig_L3_14_Primary_die_stroke_window)) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Stopping controls page.
+In Primary die stroke page, we need to set the total die movement to something appropriate for this forming operation. The height of the billet is 8.1 in. This is a good approximate value to use. Set the **Total primary die stroke** to **8.1** in. (See [Fig. L3.14.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_14_Primary_die_stroke_window)) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Stopping controls page.
 
 #### Assign Stopping controls
 
-Check the **Distance between objects** stopping criteria to **0.25** in, using the **Top Die** and **Bottom****Die** as the reference objects and **Z** as the direction. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define Simulation controls (See [Fig. L3.15.](forming_express_lab3.htm#Fig_L3_15_Distance_between_objects_stopping_control)).
+Check the **Distance between objects** stopping criteria to **0.25** in, using the **Top Die** and **Bottom****Die** as the reference objects and **Z** as the direction. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define Simulation controls (See [Fig. L3.15.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_15_Distance_between_objects_stopping_control)).
 
 #### Define simulation control for Forming
 
-Use the **system** define step definition type, which will use the 1.2 times the primary die stroke value as total displacement and divide it by default **number of steps** **100** , so in this case that is, (1.2 x 8.1)/100 = 0.0972 in/step and save every **10** steps in database. (See [Fig. L3.16.](forming_express_lab3.htm#Fig_L3_16_Forming_operation_Simulation_controls_settings))
+Use the **system** define step definition type, which will use the 1.2 times the primary die stroke value as total displacement and divide it by default **number of steps** **100** , so in this case that is, (1.2 x 8.1)/100 = 0.0972 in/step and save every **10** steps in database. (See [Fig. L3.16.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_16_Forming_operation_Simulation_controls_settings))
 
   
 As informed in resting operation, Data checking will be executed and shows if there are any errors otherwise, says database will generate during run time. Save the project.
@@ -209,7 +209,7 @@ Click on the MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' |
 3D simulations can be made to run faster by taking advantage of multiple processors or multiple cores on one processor. If your computer processors has 4 cores, then Click the ![]({{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}) label.
 
 set the Simulation Mode to **Interactive** and select **Continue****Run**  
-specify the MPI 3D as **4.** (See [Fig. L3.17.](forming_express_lab3.htm#Fig_L3_17_Run_option_window))
+specify the MPI 3D as **4.** (See [Fig. L3.17.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_17_Run_option_window))
 
 Then click on ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) button and then ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}).
 

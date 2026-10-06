@@ -21,7 +21,7 @@ Rovina rotačnej symetrie BCC pre model so štvrtinovou symetriou
 
 Rovina rotačnej symetrie BCC priradená pre model so štvrtinovou symetriou
 
-Používateľ môže tiež definovať rovinné symetrické a rotačné symetrické plochy z geometrických symetrických plôch. Ďalšie informácie o symetrických plochách nájdete v časti 1[2.3.2. 3D Geometry Tools - Symmetry Planes](../12_Geometry_Modelling/12_3_3d_geometry_data_defining.htm#Symmetry_Planes) Možnosti.
+Používateľ môže tiež definovať rovinné symetrické a rotačné symetrické plochy z geometrických symetrických plôch. Ďalšie informácie o symetrických plochách nájdete v časti 1[2.3.2. 3D Geometry Tools - Symmetry Planes]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}#Symmetry_Planes) Možnosti.
 
 **Súvisiace témy:**
 

@@ -111,7 +111,7 @@ Okno „Typ 2D geometrie“
 
   * Rovinné napätie
 
-Ďalšie informácie o týchto typoch geometrie nájdete v [9.1.2 Geometry type](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])[ (GEOTYP)](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\]).
+Ďalšie informácie o týchto typoch geometrie nájdete v [9.1.2 Geometry type]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])[ (GEOTYP)]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\]).
 
 ## Ovládacie prvky simulácie
 
@@ -205,7 +205,7 @@ Nastavenia riadenia pohybu kladiva
   
 Pri kovaní kladivom sa na plastickú deformáciu obrobku využíva len časť kinetickej energie piestu. Zvyšná energia sa stráca cez kovadlinu a rám stroja. Tieto hodnoty je možné nastaviť v okne ovládania pohybu.
 
-V zásade existujú dva typy kladív. Prvý je [anvil type hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer) a druhý c[ounter blow hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer).
+V zásade existujú dva typy kladív. Prvý je [anvil type hammer]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}#15_3_1_Anvil_Type_Hammer) a druhý c[ounter blow hammer]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}#15_3_2_Counterblow_Hammer).
 
 Formulácie a predpoklady použité pre oba typy operácií kovania kladivom nájdete v dokumente [15.3. Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }})
 
@@ -258,7 +258,7 @@ Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na s
 
 **Umiestňovanie objektov ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) **
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov.K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 32.1.16. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov.K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Offset]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning), [Flip]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_6_Flip_positioning) a [Rotational]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning), ako je znázornené na obr. 32.1.16. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image018.jpg' | relative_url }})
 
@@ -317,7 +317,7 @@ Parametre ukončenia určujú čas priebehu, po ktorom sa simulácia ukončí. S
 Okno ovládacích prvkov zastavenia
 
   
-Ďalšie informácie nájdete v dokumente [Stopping Controls in Forming 2D setup.](../33_forming/33_1_2d_forming_setup.htm#33_1_8_Stopping_Controls)
+Ďalšie informácie nájdete v dokumente [Stopping Controls in Forming 2D setup.]({{ '/docs/sk/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }}#33_1_8_Stopping_Controls)
 
 ## Ovládacie prvky krokov
 

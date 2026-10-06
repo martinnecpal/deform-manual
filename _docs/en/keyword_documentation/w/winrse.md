@@ -35,7 +35,7 @@ WINRSE specifies the rigid window which defines a specific region where plastic 
   
 REMARKS  
 ---  
-If only some portion of deforming object undergoes plastic deformation often found in [Cogging]({{ '/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/' | relative_url }}) simulation, using the rigid window can help RSE to improve the computational efficiency by reducing the effort in searching a plastically deforming zone. Applicable object types: [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic)  
+If only some portion of deforming object undergoes plastic deformation often found in [Cogging]({{ '/docs/en/operation_templates/29_cogging/29_introduction_to_cogging/' | relative_url }}) simulation, using the rigid window can help RSE to improve the computational efficiency by reducing the effort in searching a plastically deforming zone. Applicable object types: [Plastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic)  
   
 RELATED TOPICS  
 ---  

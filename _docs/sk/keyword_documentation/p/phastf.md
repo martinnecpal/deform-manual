@@ -27,4 +27,4 @@ PHASTF defines the phase relationship between two different phases. When the rel
   
 RELATED TOPICS  
 ---  
-Applicable Simulation Modules: Microstructure Applicable [Simulation Modes](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Transformation Applicable [object types](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type): ALL except Rigid
+Applicable Simulation Modules: Microstructure Applicable [Simulation Modes]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Transformation Applicable [object types]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type): ALL except Rigid

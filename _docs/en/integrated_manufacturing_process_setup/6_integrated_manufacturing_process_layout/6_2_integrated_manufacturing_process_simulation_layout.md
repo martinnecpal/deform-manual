@@ -172,7 +172,7 @@ Run options window for DOE job using multi sim server
 For DOE and OPT simulations, simulation server settings can be edited by selecting the particular simulation server and clicking on ![]({{ '/assets/icons/simulator_icons/mo_server_settings_button.jpg' | relative_url }}) button. Refer  Server_Settings for most of the server settings.
 
   
-**Max Jobs:** User can indicate maximum number of simulations that can be run simultaneously and this number should be equal to or less than the maximum number of jobs specified in DEFORMSetup for each simulation server and also based on the license available. This option is active only for DOE/OPT jobs submitted in queue. (See [Fig. 6.2.10.](6_2_integrated_manufacturing_process_simulation_layout.htm#Fig._6.2.10._DOE_/_OPT_project_sim_server_settings_window))
+**Max Jobs:** User can indicate maximum number of simulations that can be run simultaneously and this number should be equal to or less than the maximum number of jobs specified in DEFORMSetup for each simulation server and also based on the license available. This option is active only for DOE/OPT jobs submitted in queue. (See [Fig. 6.2.10.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}#Fig._6.2.10._DOE_/_OPT_project_sim_server_settings_window))
 
 User can save the settings using ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) button and close the Run options window using ![]({{ '/assets/icons/pre_icons/mo_close_button.jpg' | relative_url }}) button.
 
@@ -182,9 +182,9 @@ User can save the settings using ![]({{ '/assets/icons/pre_icons/mo_save_button.
 DOE / OPT project sim server settings window
 
   
-**Files to copy** : Create a new file with name "FILES_TO_COPY" inside the working directory without any extension. The file can be edited with notepad or Wordpad or with any text editor. User can enter the name of the files like *.DAT in [**FILES_TO_COPY**](../../appendices/appendix_xvii_data_files.htm#FILE_TO_COPY) file that are necessary to be copied to the remote system or to Run folders in DOE/OPT in addition to default files that are copied.
+**Files to copy** : Create a new file with name "FILES_TO_COPY" inside the working directory without any extension. The file can be edited with notepad or Wordpad or with any text editor. User can enter the name of the files like *.DAT in [**FILES_TO_COPY**]({{ '/docs/en/appendices/appendix_xvii_data_files/' | relative_url }}#FILE_TO_COPY) file that are necessary to be copied to the remote system or to Run folders in DOE/OPT in addition to default files that are copied.
 
-**Simulation Run types:** For DOE/OPT projects user can start the simulation from the first operation or if DOE/OPT variables added only from the intermediate operations then user can continue only from those intermediate operations. Even if DOE/OPT simulation stops abnormally then user can restart the incomplete projects from runs where it stopped and also these incomplete runs can be restarted from the intermediate operations. (See [Fig. 6.2.11.](6_2_integrated_manufacturing_process_simulation_layout.htm#Fig._6.2.11._Simulation_Run_types_for_DOE/OPT_projects))
+**Simulation Run types:** For DOE/OPT projects user can start the simulation from the first operation or if DOE/OPT variables added only from the intermediate operations then user can continue only from those intermediate operations. Even if DOE/OPT simulation stops abnormally then user can restart the incomplete projects from runs where it stopped and also these incomplete runs can be restarted from the intermediate operations. (See [Fig. 6.2.11.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}#Fig._6.2.11._Simulation_Run_types_for_DOE/OPT_projects))
 
   * **Initial Run:** This initial run will provide two options those are, 
 
@@ -277,9 +277,9 @@ The simulation graphics tool bar contains the state variables window icon ![]({{
 
 Other options like Object mode ![]({{ '/assets/icons/post_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }}), Contact display ![]({{ '/assets/icons/post_icons/mo_show_cotact_icon.jpg' | relative_url }}), Contour plot types , Summary ![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}) , Load-Stroke graph ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}), Mirror symmetry ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }}) , Slicing ![]({{ '/assets/icons/post_icons/mo_slicing_option.jpg' | relative_url }}) , Measurement ![]({{ '/assets/icons/post_icons/mo_measure_tool.jpg' | relative_url }}) and 3D view ![]({{ '/assets/icons/post_icons/mo_3d_view_icon.jpg' | relative_url }}) ,3D setup ![]({{ '/assets/icons/post_icons/mo_3d_setup_icon.jpg' | relative_url }}) (only for 2D models) and Display Properties ![]({{ '/assets/icons/post_icons/mo_disp_porp_icon.jpg' | relative_url }}) are also available in Simulation graphics and are explained below,
 
-**![]({{ '/assets/icons/post_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }})Object mode** : User can toggle the object's Display, Geometry, Mesh, Transparency (only for 3D) modes independently. This can be done by turning on/off respective check boxes as shown in [Fig. 6.1.22.](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Fig._6.1.22._User_defined_Object_Mode_window)
+**![]({{ '/assets/icons/post_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }})Object mode** : User can toggle the object's Display, Geometry, Mesh, Transparency (only for 3D) modes independently. This can be done by turning on/off respective check boxes as shown in [Fig. 6.1.22.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Fig._6.1.22._User_defined_Object_Mode_window)
 
-![]({{ '/assets/icons/post_icons/mo_show_cotact_icon.jpg' | relative_url }}) **Show Contact Nodes** : Turns on the contact display for the selected object from object tree with all other objects. (See [Fig. 6.1.22.](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Fig._6.1.22._User_defined_Object_Mode_window))
+![]({{ '/assets/icons/post_icons/mo_show_cotact_icon.jpg' | relative_url }}) **Show Contact Nodes** : Turns on the contact display for the selected object from object tree with all other objects. (See [Fig. 6.1.22.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Fig._6.1.22._User_defined_Object_Mode_window))
 
 ![]({{ '/assets/icons/post_icons/mo_contour_line_icon.jpg' | relative_url }}) **Contour Line** : This plots the state variables in line contour mode. User can change contour plot type, color bar type, label type, its significants etc as shown in Fig. 6.2.13. and Fig. 6.2.14.
 
@@ -354,7 +354,7 @@ Mirror Symmetry ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | rel
   
 **Interactive Slicing** ![]({{ '/assets/icons/post_icons/mo_slicing_option.jpg' | relative_url }}) :
 
-[3D]: The slicing dialog allows the user to cut a section into the workpiece. When the section is made, shaded contours can be seen in the cut area. For more information refer the Section [26.6.15.Slicing]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/' | relative_url }}).
+\[3D]: The slicing dialog allows the user to cut a section into the workpiece. When the section is made, shaded contours can be seen in the cut area. For more information refer the Section [26.6.15.Slicing]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/' | relative_url }}).
 
   
 **Delete Slicing**![]({{ '/assets/icons/post_icons/mo_del_slicing_icon.jpg' | relative_url }}) :
@@ -369,7 +369,7 @@ Mirror Symmetry ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | rel
 **3D Setup** ![]({{ '/assets/icons/post_icons/mo_3d_setup_icon.jpg' | relative_url }}) : [2D]: The revolved or extruded 2D simulation results 3D view settings can be controlled by using 3D Setup. For more information on 3D View and Setup refer the [Section 26.6.20. 3D Viewer and Setup]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup/' | relative_url }}).
 
   
-For Menu bar and Tool bar options like Axis views, Display rendering modes, View fit, Display Refresh and Display modification options (Zoom, Pan, Rotate) refer the sections [6.4.1.2.Viewport Menu](6_4_main_menu.htm#Viewport_Menu), [6.4.1.3.Display Menu](6_4_main_menu.htm#Display_menu) and [6.4.1.4.Mouse Menu.](6_4_main_menu.htm#Mouse_Menu)
+For Menu bar and Tool bar options like Axis views, Display rendering modes, View fit, Display Refresh and Display modification options (Zoom, Pan, Rotate) refer the sections [6.4.1.2.Viewport Menu]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu/' | relative_url }}#Viewport_Menu), [6.4.1.3.Display Menu]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu/' | relative_url }}#Display_menu) and [6.4.1.4.Mouse Menu.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu/' | relative_url }}#Mouse_Menu)
 
   
 **Display Properties** ![]({{ '/assets/icons/post_icons/mo_disp_porp_icon.jpg' | relative_url }}): This option used to define the Define the DB info and Title Labels to display in Graphical Display window. (See Fig. 6.2.20.)
@@ -403,7 +403,7 @@ Show Dimensions:** This will display the major dimensions for the displaying obj
 **Colorbar:** This will hide or display the state variable contour color bar in graphics display window.
 
   
-**Load and Save Viewport:** The user can move or change the views of the geometries by using display tools such as pan, dynamic zoom and box zoom in the display window. These views can be saved using save option. For more information refer the [Section 6.4.1.2.6. Load and Save viewport](6_4_main_menu.htm#Load_and_Save).
+**Load and Save Viewport:** The user can move or change the views of the geometries by using display tools such as pan, dynamic zoom and box zoom in the display window. These views can be saved using save option. For more information refer the [Section 6.4.1.2.6. Load and Save viewport]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu/' | relative_url }}#Load_and_Save).
 
   
 **Objects Display mode:** This is used to select the different objects display modes like Single, Multiple and User. Selecting this option will give popup to the user defined object selection window as shown in

@@ -65,7 +65,7 @@ Coarse internal mesh generation for 2D Cross-section
 
 ## Mesh Weighing Factors
 
-The weighting factors or parameters (system defined mesh density) for boundary curvature, temperature, strain and strain rate specify relative mesh density weights to be assigned to the associated parameter. For more information Refer [13.2.5. Mesh weighting factors.](13_2_3d_tet_mesh_generation.htm#13.2.5._Mesh_weighting_factors)
+The weighting factors or parameters (system defined mesh density) for boundary curvature, temperature, strain and strain rate specify relative mesh density weights to be assigned to the associated parameter. For more information Refer [13.2.5. Mesh weighting factors.]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.5._Mesh_weighting_factors)
 
 ## **Mesh Density Window for Brick mesh**
 
@@ -88,7 +88,7 @@ Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshi
 Remesh criteria option for Brick mesh
 
   
-For details about Maximum interference depth (RMDPTH), Maximum stroke increment (RMSTRK), Maximum time increment (RMTIME), Maximum step increment (RMSTEP) and Purpose of Criteria please refer [13.2.8. Remeshing criteria.](13_2_3d_tet_mesh_generation.htm#13.2.8._Remeshing_criteria)
+For details about Maximum interference depth (RMDPTH), Maximum stroke increment (RMSTRK), Maximum time increment (RMTIME), Maximum step increment (RMSTEP) and Purpose of Criteria please refer [13.2.8. Remeshing criteria.]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.8._Remeshing_criteria)
 
 ## Advanced Settings
 

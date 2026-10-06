@@ -268,7 +268,7 @@ Contour – Okno nastavení typu s tieňovaním
 
 Contour – Okno nastavení typu čiary
 
-  * **Graf minimálnych a maximálnych hodnôt**: Používateľ môže nastaviť veľkosť grafu minimálnych a maximálnych hodnôt pomocou možnosti pomeru veľkostí, ako je znázornené na obrázku [Fig. 26.6.3.7.](26_6_3_state_variables.htm#Fig_26_6_3_7_Contour__Min/Max_plot_type_settings_window)
+  * **Graf minimálnych a maximálnych hodnôt**: Používateľ môže nastaviť veľkosť grafu minimálnych a maximálnych hodnôt pomocou možnosti pomeru veľkostí, ako je znázornené na obrázku [Fig. 26.6.3.7.]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }}#Fig_26_6_3_7_Contour__Min/Max_plot_type_settings_window)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image007.jpg' | relative_url }})
 

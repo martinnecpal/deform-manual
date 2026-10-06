@@ -27,7 +27,7 @@ We will mesh both tools in order to simulate the temperature of the die. Click o
 
 Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button and select the **Die_material** category, then **AISI-H-13**. Assign the loaded material by selecting it in material list.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and define Heat exchange with environment boundary condition for entire object except top surface as shown in [Fig. L9.1.](gear_blank_si_lab9.htm#Fig_L9_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces)
+Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and define Heat exchange with environment boundary condition for entire object except top surface as shown in [Fig. L9.1.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab9/' | relative_url }}#Fig_L9_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab6_image0001.jpg' | relative_url }})
 
@@ -37,9 +37,9 @@ Top die Heat exchange with environment boundary condition surfaces
 
 Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to change the movement controls for Top die. Select **Hydraulic** press from the top row of radio buttons. Enter:
 
-\- **Speed**(Constant): **63.5** mm/sec (See [Fig. L9.2.](gear_blank_si_lab9.htm#Fig_L9_2_Hydraulic_press_movement_definition_main_tab))
+\- **Speed**(Constant): **63.5** mm/sec (See [Fig. L9.2.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab9/' | relative_url }}#Fig_L9_2_Hydraulic_press_movement_definition_main_tab))
 
-\- **Check****Power****limit** and enter **data** using**![]({{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}) **button as shown in below [Fig. L9.3.](gear_blank_si_lab9.htm#Fig_L9_3_Power_limit_definition)
+\- **Check****Power****limit** and enter **data** using**![]({{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}) **button as shown in below [Fig. L9.3.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab9/' | relative_url }}#Fig_L9_3_Power_limit_definition)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab9_image0002.jpg' | relative_url }})
 
@@ -49,7 +49,7 @@ Hydraulic press movement definition main tab
 
 Power limit definition
 
-Input a stopping limit (max load of primary die) of **17792880** N in the Y direction. So, select **Dwell** controls tab and define **Maximum****load** as 17792880 N in **Y** data field as shown in [Fig. L9.4.](gear_blank_si_lab9.htm#Fig_L9_4_Hydraulic_press_stopping_load_defined_in_dwell_controls_tab)
+Input a stopping limit (max load of primary die) of **17792880** N in the Y direction. So, select **Dwell** controls tab and define **Maximum****load** as 17792880 N in **Y** data field as shown in [Fig. L9.4.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab9/' | relative_url }}#Fig_L9_4_Hydraulic_press_stopping_load_defined_in_dwell_controls_tab)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab9_image0004.jpg' | relative_url }})
 
@@ -57,9 +57,9 @@ Hydraulic press stopping load defined in dwell controls tab
 
 ### Define Heat transfer with Bottom die
 
-Similar to Top die Heat transfer definition define Bottom die initial Temperature to **148.889** ° C and Mesh of **50000** Elements. (See [Section 6.4 Define Heat transfer with Top die](gear_blank_si_lab6.htm#Fig_L6_4_Top_and_bottom_die_contact_with_workpiece))
+Similar to Top die Heat transfer definition define Bottom die initial Temperature to **148.889** ° C and Mesh of **50000** Elements. (See [Section 6.4 Define Heat transfer with Top die]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab6/' | relative_url }}#Fig_L6_4_Top_and_bottom_die_contact_with_workpiece))
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **AISI-H-13** from material list to assign material. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Heat exchange with environment boundary condition and select all surfaces except bottom surface as shown in [Fig. L9.5.](gear_blank_si_lab9.htm#Fig_L9_5_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces)
+Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **AISI-H-13** from material list to assign material. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Heat exchange with environment boundary condition and select all surfaces except bottom surface as shown in [Fig. L9.5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab9/' | relative_url }}#Fig_L9_5_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab6_image0003.jpg' | relative_url }})
 
@@ -69,7 +69,7 @@ Click on **Contact** in operation tree to define inter-object relation ship.
 
 ### Define Inter-object relation ship
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) for any relation and add **heat****transfer****coefficient** of **11** N/s/mm/C. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to add for other relationships. Click the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerance) button followed by the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button (at bottom of the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See [Fig. L9.6.](gear_blank_si_lab9.htm#Fig_L9_6_Top_and_bottom_die_contact_with_workpiece) for how the Inter object window looks and contact generation displays in graphics window.
+Click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) for any relation and add **heat****transfer****coefficient** of **11** N/s/mm/C. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to add for other relationships. Click the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerance) button followed by the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button (at bottom of the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See [Fig. L9.6.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab9/' | relative_url }}#Fig_L9_6_Top_and_bottom_die_contact_with_workpiece) for how the Inter object window looks and contact generation displays in graphics window.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab6_image0004.jpg' | relative_url }})
 

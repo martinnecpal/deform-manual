@@ -11,9 +11,9 @@ title: "16.6. Heating Properties"
 
 16.6.3. Data Definition
 
-[**2D, 3D**]: When Induction heating computations are required, the same needs to be first turned on in the simulation controls before defining the associated object values like current frequency (See Fig. 16.6.1. and Fig. 16.6.2.). CG solver is also an option for solving induction heating models, and is capable of solving models with reasonable size.
+\[**2D, 3D**]: When Induction heating computations are required, the same needs to be first turned on in the simulation controls before defining the associated object values like current frequency (See Fig. 16.6.1. and Fig. 16.6.2.). CG solver is also an option for solving induction heating models, and is capable of solving models with reasonable size.
 
-See [Fig. 9.1.3.](../9_Simulation_Controls/9_1_Simulation_type_Settings.htm#Fig._9.1.3. Simulation Controls window - Heating) for selecting the Induction heating simulation mode. For Electrical and Magnetic material properties refer section [10.8. Electromagnetic data]({{ '/docs/en/pre_processor/16_object_properties/16_5_hardness_properties/' | relative_url }}).
+See [Fig. 9.1.3.]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Fig._9.1.3.%20Simulation%20Controls%20window%20-%20Heating) for selecting the Induction heating simulation mode. For Electrical and Magnetic material properties refer section [10.8. Electromagnetic data]({{ '/docs/en/pre_processor/16_object_properties/16_5_hardness_properties/' | relative_url }}).
 
 DEFORM FEM engine can now handle induction heating models with dual frequency input data for current frequency in both 2D & 3D.
 
@@ -63,6 +63,6 @@ Data definition can be a constant or function of time for a volume charge of Inp
 
 [16.10. User]({{ '/docs/en/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Material Electrical and magnetic properties]({{ '/docs/en/pre_processor/10_Material_Data/10_8_Elec_Mag_Data/10_8_Elec_Mag_Data/' | relative_url }})
+[Material Electrical and magnetic properties]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_Elec_Mag_Data/' | relative_url }})
 
-[10\. Material Data]({{ '/docs/en/pre_processor/10_Material_Data/10_Material_Data/' | relative_url }})
+[10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})

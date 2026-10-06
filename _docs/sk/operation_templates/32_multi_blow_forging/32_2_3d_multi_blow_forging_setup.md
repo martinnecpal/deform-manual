@@ -181,7 +181,7 @@ Nastavenia riadenia pohybu kladiva
   
 Pri kovaní kladivom sa na plastickú deformáciu obrobku využíva len časť kinetickej energie piestu. Zvyšná energia sa stráca cez kovadlinu a rám stroja. Tieto hodnoty je možné nastaviť v okne ovládania pohybu.
 
-V zásade existujú dva typy kladív. Prvým je [anvil type hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer) a druhým c[ounter blow hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer). Pokiaľ ide o vzorce a predpoklady použité pre oba typy operácií kovania kladivom, pozrite si [15.3. Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}).
+V zásade existujú dva typy kladív. Prvým je [anvil type hammer]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}#15_3_1_Anvil_Type_Hammer) a druhým c[ounter blow hammer]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}#15_3_2_Counterblow_Hammer). Pokiaľ ide o vzorce a predpoklady použité pre oba typy operácií kovania kladivom, pozrite si [15.3. Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}).
 
 Pri **kladive typu kovadlina** sa obrobok spolu so spodnou sadou foriem umiestňuje na kovadlinu, ktorá je nehybná. V prípade jednoduchého gravitačného kladiva sa piest zrýchľuje pôsobením gravitácie a akumuluje energiu.
 
@@ -227,7 +227,7 @@ Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na s
 
 **Umiestňovanie objektov ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) **
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov.K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 32.2.15. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov.K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Offset]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning), [Flip]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_6_Flip_positioning) a [Rotational]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning), ako je znázornené na obr. 32.2.15. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/32_multi_blow_forging/32_2_3d_multi_blow_forging_setup/image011.jpg' | relative_url }})
 
@@ -284,7 +284,7 @@ Parametre ukončenia určujú čas procesu, v ktorom sa simulácia ukončí. Sim
 
 Okno ovládacích prvkov zastavenia
 
-Ďalšie informácie nájdete v dokumente [Stopping Controls in Forming 3D setup](../33_forming/33_2_3d_forming_setup.htm#33_2_7_Stopping_Controls).
+Ďalšie informácie nájdete v dokumente [Stopping Controls in Forming 3D setup]({{ '/docs/sk/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}#33_2_7_Stopping_Controls).
 
 ## Ovládacie prvky krokov
 

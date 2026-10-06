@@ -130,7 +130,7 @@ Ponuka kliknutia pravým tlačidlom myši pre priečinok Mounted Problem
 **Duplikát** : Používateľ môže použiť túto možnosť z RMB na priečinok, aby ho duplikoval, priečinok sa duplikuje s novým názvom na rovnakom mieste ako zdrojový adresár.   
 **Delete**![]({{ '/assets/icons/pre_icons/mo_delete_folder_icon.jpg' | relative_url }}) : Používateľ môže odstrániť priečinok zo systému pomocou tejto možnosti z možností RMB na priečinku.  
 **Názov(F2)** : Názov priečinka možno premenovať pomocou tejto možnosti z možností RMB alebo klávesom F2 na priečinku.  
-**Archív databázy** : Dialógové okno "Archív databázy" možno spustiť na archiváciu projektov vo vybranom priečinku, viac informácií o "Archíve databázy" nájdete v [Database Archive](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu.htm#Database_Archive) in**** kapitola 6.4. Hlavná ponuka
+**Archív databázy** : Dialógové okno "Archív databázy" možno spustiť na archiváciu projektov vo vybranom priečinku, viac informácií o "Archíve databázy" nájdete v [Database Archive]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu/' | relative_url }}#Database_Archive) in**** kapitola 6.4. Hlavná ponuka
 **Upratovanie súborov** : Táto možnosť z možností RMB sa používa na vyčistenie dočasných súborov vytvorených programom DEFORM počas nastavovania problému alebo simulácie.
 **Vyčistiť stav chodu** : Ak je simulácia zastavená alebo ukončená používateľom a zostane zachovaný stav behu, potom je možné použiť túto možnosť RMB na vyčistenie stavu behu.  
 **Projekt sťahovania** : Priečinok projektu môžeme presunúť z jedného adresára do iného adresára pretiahnutím, ako je znázornené na obr. 4.1.4.
@@ -495,7 +495,7 @@ Možnosti pamäte v okne Nastavenia prostredia
 
   * Ikona/šablóna:
 
-Používateľ môže zmeniť ikonu a veľkosť písma v závislosti od požiadavky, ako je znázornené v [Fig. 4.1.40.](4_1_gui_main_layout.htm#Fig_4_1_40_Icon/Font_options_under_Environment_Settings_window)
+Používateľ môže zmeniť ikonu a veľkosť písma v závislosti od požiadavky, ako je znázornené v [Fig. 4.1.40.]({{ '/docs/sk/starting_up_deform/4_gui_main/4_1_gui_main_layout/' | relative_url }}#Fig_4_1_40_Icon/Font_options_under_Environment_Settings_window)
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image033.jpg' | relative_url }})
 

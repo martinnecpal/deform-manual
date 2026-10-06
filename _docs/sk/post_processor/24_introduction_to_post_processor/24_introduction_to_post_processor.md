@@ -7,7 +7,7 @@ title: "24. Úvod do postprocesora"
 
 Postprocesor DEFORM slúži na vyhodnocovanie výsledkov simulácie. Ide o integrovaný postprocesor vybavený novým užívateľsky prívetivým grafickým rozhraním, ktorý ponúka väčšinu existujúcich funkcií na spracovanie výsledkov simulácie, ako aj nové funkcie.
 
-Postprocesor DEFORM poskytuje prostredie s novými funkciami, ktoré používateľovi umožňujú generovať 3D PDF správy s výsledkami simulácií, [ coupon data extraction]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_11_coupon_data_extraction/' | relative_url }}), interpretovať výsledky v rámci databázy pomocou [PIP](../26_post_processing_tools_and_controls/26_1_file_operations_in_post_processor.htm#26_1_1_Working_with_DB_in_PIP_mode), znázorniť výsledky v oblasti záujmu, [CA microstructure modelling]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_10_ca_model_setup/' | relative_url }}) a vykonávať následné spracovanie [report generation]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }}) (formáty súborov .pdf a .ppt) s vopred definovanými užívateľskými nastaveniami.
+Postprocesor DEFORM poskytuje prostredie s novými funkciami, ktoré používateľovi umožňujú generovať 3D PDF správy s výsledkami simulácií, [ coupon data extraction]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_11_coupon_data_extraction/' | relative_url }}), interpretovať výsledky v rámci databázy pomocou [PIP]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_1_file_operations_in_post_processor/' | relative_url }}#26_1_1_Working_with_DB_in_PIP_mode), znázorniť výsledky v oblasti záujmu, [CA microstructure modelling]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_10_ca_model_setup/' | relative_url }}) a vykonávať následné spracovanie [report generation]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }}) (formáty súborov .pdf a .ppt) s vopred definovanými užívateľskými nastaveniami.
 
 Postprocesor s celou radou funkcií a grafických prvkov umožňuje inžinierom overovať výsledky modelovania a prezentovať ich spôsobom, ktorý umožňuje efektívne porozumieť týmto výsledkom. V tejto časti sú uvedené stručné informácie o systéme a dostupných funkciách.
 
@@ -17,9 +17,9 @@ Informácie, ktoré sú k dispozícii z postprocesora, zahŕňajú:
 
   * Deformovaná geometria, vrátane pohybov nástroja a deformovanej siete v každom uloženom kroku.
 
-  * [Contour plots](../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm#Display_options): Čiarové a tieňované kontúry znázorňujú rozloženie akýchkoľvek stavových veličín, vrátane napätia, deformácie, teploty, poškodenia a ďalších.
+  * [Contour plots]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }}#Display_options): Čiarové a tieňované kontúry znázorňujú rozloženie akýchkoľvek stavových veličín, vrátane napätia, deformácie, teploty, poškodenia a ďalších.
 
-  * [Vector plots](../26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables.htm#Display_options): Vektory posunutia a rýchlosti udávajú veľkosť a smer posunutia alebo rýchlosti pre každý uzol v každom kroku počas celého procesu.
+  * [Vector plots]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }}#Display_options): Vektory posunutia a rýchlosti udávajú veľkosť a smer posunutia alebo rýchlosti pre každý uzol v každom kroku počas celého procesu.
 
   * Grafy kľúčových premenných, ako sú tlakové zaťaženia, objemy, teplota, obsah atómov, tvrdosť a bodovo sledované stavové premenné.
 
@@ -41,7 +41,7 @@ Informácie, ktoré sú k dispozícii z postprocesora, zahŕňajú:
 
   * Modely bunkových automatov (CA) sú synchronné algoritmy, ktoré opisujú diskrétny priestorový a časový vývoj komplexných systémov prostredníctvom uplatňovania lokálnych (alebo mezoskopických, strednodobých) deterministických alebo pravdepodobnostných transformačných pravidiel na bunky mriežky s lokálnou prepojenosťou s cieľom predpovedať veľkosť zŕn.
 
-  * Nové možnosti [Multi viewports](../26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor.htm#Multi_Viewports), [Database comparison](../26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor.htm#Fig_26_2_3_DB_comparison) a „Prepojiť/Synchronizovať“ pre zobrazenie viacerých okien boli pridané a tieto možnosti je možné využiť na súčasné prezeranie viacerých databáz v programe NG Post.
+  * Nové možnosti [Multi viewports]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/' | relative_url }}#Multi_Viewports), [Database comparison]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/' | relative_url }}#Fig_26_2_3_DB_comparison) a „Prepojiť/Synchronizovať“ pre zobrazenie viacerých okien boli pridané a tieto možnosti je možné využiť na súčasné prezeranie viacerých databáz v programe NG Post.
 
 Stavové premenné, geometrické údaje a obrazové údaje je možné tiež exportovať v rôznych neutrálnych formátoch na použitie v iných programoch.
 

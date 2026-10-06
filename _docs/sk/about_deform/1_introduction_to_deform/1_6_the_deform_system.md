@@ -35,7 +35,7 @@ Preprocesor na vytváranie, zostavovanie alebo úpravu údajov potrebných na an
 
 **Interné údaje o materiáli**
 
-Údaje [Inter material]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }}) opisujú fyzikálny proces premeny jednej fázy materiálu na iné fázy toho istého materiálu v procese tepelného spracovania. Napríklad premena austenitu na perlit, bainit a martenzit.
+Údaje [Inter material]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }}) opisujú fyzikálny proces premeny jednej fázy materiálu na iné fázy toho istého materiálu v procese tepelného spracovania. Napríklad premena austenitu na perlit, bainit a martenzit.
 
 **Integrovaný výrobný proces (MO)**
 

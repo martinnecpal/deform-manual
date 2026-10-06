@@ -26,7 +26,7 @@ OBJUPD determines the coordinate handling scheme of rigid object in Lagrangian F
   
 REMARKS  
 ---  
-When (Otype=1) is used in Lagrangian simulation, the object is stationary as if in ALE simulation. It is efficient for modeling a) moving plate in shape rolling simulation and b) roller in ring rolling simulation. Applicable object types: [Rigid](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.5._Rigid)  
+When (Otype=1) is used in Lagrangian simulation, the object is stationary as if in ALE simulation. It is efficient for modeling a) moving plate in shape rolling simulation and b) roller in ring rolling simulation. Applicable object types: [Rigid]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.5._Rigid)  
   
 RELATED TOPICS  
 ---  

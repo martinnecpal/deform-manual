@@ -5,7 +5,7 @@ title: "15.7. Posuvná matrica"
 
 # 15.7. Posuvná matrica
 
-[2D, 3D]: Definovanie posuvného pohybu je možné vykonať v okne ovládania pohybu, ako je vidieť na obr. 15.7.1 a obr. 15.7.2. Ak chcete použiť pružinové matrice, objekt by mal byť tuhý a nemal by mať zadaný žiadny iný pohyb.
+\[2D, 3D]: Definovanie posuvného pohybu je možné vykonať v okne ovládania pohybu, ako je vidieť na obr. 15.7.1 a obr. 15.7.2. Ak chcete použiť pružinové matrice, objekt by mal byť tuhý a nemal by mať zadaný žiadny iný pohyb.
 
 Pre všetky pružinové zápustky by sa mali špecifikovať tieto položky:
 

@@ -17,7 +17,7 @@ title: "54.1. DOE Post Processor"
 
 54.1.2.4. Graphical Display utilities
 
-[54.1.2.5. DOE Output/Optimization Results Tree](54_1_doe_post_processor.htm#54_1_2_5_DOE_Output/Optimization_Results_Tree)
+[54.1.2.5. DOE Output/Optimization Results Tree]({{ '/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/' | relative_url }}#54_1_2_5_DOE_Output/Optimization_Results_Tree)
 
 Evaluation (DOE Study)
 
@@ -160,7 +160,7 @@ Property Control window
 
 ### Graphical Display utilities
 
-Graphical display utilities as shown in Fig. 54.1.9. are used to manipulate the display content in the display area like zoom, rotate, pan, fit view, Etc. These utilities are available only when we plot Response Surface, Response contour and Model view in interactive mode. For more information on these graphical utilities please refer [graphical utilities](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#8.1._Graphic_Utilities_Window).
+Graphical display utilities as shown in Fig. 54.1.9. are used to manipulate the display content in the display area like zoom, rotate, pan, fit view, Etc. These utilities are available only when we plot Response Surface, Response contour and Model view in interactive mode. For more information on these graphical utilities please refer [graphical utilities]({{ '/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#8.1._Graphic_Utilities_Window).
 
 ![]({{ '/assets/images/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/image0009.jpg' | relative_url }})
 
@@ -327,7 +327,7 @@ Tool Menu is Currently disabled in DOE Post-processor.
 
 ### Options Menu
 
-Options menu is used to set DEFORM Environment settings and Preferences. Options menu looks like as shown in Fig. 54.1.26. For more information on these options refer [Environment](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Environment) and [Preference](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Preferences).
+Options menu is used to set DEFORM Environment settings and Preferences. Options menu looks like as shown in Fig. 54.1.26. For more information on these options refer [Environment]({{ '/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#Environment) and [Preference]({{ '/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#Preferences).
 
 ![]({{ '/assets/images/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/image0026.jpg' | relative_url }})
 
@@ -649,7 +649,7 @@ Scatter plot (See Fig. 54.1.70.) shows correlation between DOE study input varia
 Scatter Plot
 
   
-The control window for Scatter plot is shown in Fig. 54.1.71. User can select the input and output variables from control window and even exclude the failed constraint runs by turning on the Exclude Failed Constraint Runs check box. User defined scale can be used to observe the output state variable in interested range. ![]({{ '/assets/icons/post_icons/doe_post_apply_to_all_button.jpg' | relative_url }}) button can be used to apply the same scale for the output variable to plots in other viewports. User have option to hide/show the selected Run in display window using right click on the specific run on scatter plot display as shown in [Fig. 54.1.72.](54_1_doe_post_processor.htm#Fig_54_1_72_Scatter_plot_Show/hide_selected_Run)
+The control window for Scatter plot is shown in Fig. 54.1.71. User can select the input and output variables from control window and even exclude the failed constraint runs by turning on the Exclude Failed Constraint Runs check box. User defined scale can be used to observe the output state variable in interested range. ![]({{ '/assets/icons/post_icons/doe_post_apply_to_all_button.jpg' | relative_url }}) button can be used to apply the same scale for the output variable to plots in other viewports. User have option to hide/show the selected Run in display window using right click on the specific run on scatter plot display as shown in [Fig. 54.1.72.]({{ '/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/' | relative_url }}#Fig_54_1_72_Scatter_plot_Show/hide_selected_Run)
 
 ![]({{ '/assets/images/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/image0071.jpg' | relative_url }})
 

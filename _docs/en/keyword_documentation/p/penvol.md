@@ -27,7 +27,7 @@ PENVOL specifies a volume penalty constant that is used to enforce the volume co
   
 REMARKS  
 ---  
-The volume penalty constant can be determined using PENVOL > 1000 * (average flow stress / average strain rate) The average flow stress can be determined by evaluating the flow stress data ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})) at the average values of strain, strain rate, and temperature that the object will experience during the simulation. This value should be used as constant unless convergence problems are experienced, then one must use the variable PENVOL. The volume penalty constant is required for plastic objects. Applicable object types: [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic).  
+The volume penalty constant can be determined using PENVOL > 1000 * (average flow stress / average strain rate) The average flow stress can be determined by evaluating the flow stress data ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})) at the average values of strain, strain rate, and temperature that the object will experience during the simulation. This value should be used as constant unless convergence problems are experienced, then one must use the variable PENVOL. The volume penalty constant is required for plastic objects. Applicable object types: [Plastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic).  
   
 RELATED TOPICS  
 ---  

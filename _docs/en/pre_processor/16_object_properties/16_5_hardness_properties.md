@@ -5,14 +5,14 @@ title: "16.5. Hardness estimation type"
 
 # 16.5. Hardness Estimation type
 
-[2D, 3D]: Material hardness predictions can be based on: (See Fig. 16.5.1. to Fig. 16.5.5.)
+\[2D, 3D]: Material hardness predictions can be based on: (See Fig. 16.5.1. to Fig. 16.5.5.)
 
   * Volume fraction of various phases
   * Jominy curve data
   * Cooling time
   * Solid solution with precipitation
 
-Hardness data for a material can be defined in the Material Properties of the respective object material and will be estimated based on the estimation type selected under Properties of the respective object, Fig. 16.5.1. shows estimation type options available under Hardness in Object Properties. A description of the hardness prediction method is given there. For more information on defining Hardness in Material Properties, please refer section [10.7. Hardness data.]({{ '/docs/en/pre_processor/10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data/' | relative_url }})
+Hardness data for a material can be defined in the Material Properties of the respective object material and will be estimated based on the estimation type selected under Properties of the respective object, Fig. 16.5.1. shows estimation type options available under Hardness in Object Properties. A description of the hardness prediction method is given there. For more information on defining Hardness in Material Properties, please refer section [10.7. Hardness data.]({{ '/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
 
   
 **Referenced Start temperature, End temperature** : Upper and lower temperature values for Jominy or cooling time hardness prediction curves. 
@@ -84,4 +84,4 @@ Solid solution with precipitate type Hardness estimation
 
 [16.10. User]({{ '/docs/en/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Material Hardness properties]({{ '/docs/en/pre_processor/10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data/' | relative_url }})
+[Material Hardness properties]({{ '/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})

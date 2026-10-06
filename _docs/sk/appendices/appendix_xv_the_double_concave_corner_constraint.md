@@ -19,7 +19,7 @@ A set of nodes lying on a die surface
 
 Note that as shown in Fig. AXV.2. nodes 1,2,3 should be constrained in the vertical direction and nodes 3,4,5 should be constrained in the horizontal direction.
 
-For this reason, there is a new functionality to let nodes in convex corners be applied with 2 contact conditions. In order to specify which nodes should be given this constraint, two angles are to be given for this consideration. As seen in Fig. AXV.3., angle a is the minimum angle value and angle b is the maximum. Between these two angles, nodes will be specified with a double contact constraint. Fig. AXV.4. indicates the corresponding settings in the simulation controls. ([Control Files]({{ '/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }}) : [Category 1](../pre_processor/9_simulation_controls/9_8_control_files.htm#9.8.1._Category_1))
+For this reason, there is a new functionality to let nodes in convex corners be applied with 2 contact conditions. In order to specify which nodes should be given this constraint, two angles are to be given for this consideration. As seen in Fig. AXV.3., angle a is the minimum angle value and angle b is the maximum. Between these two angles, nodes will be specified with a double contact constraint. Fig. AXV.4. indicates the corresponding settings in the simulation controls. ([Control Files]({{ '/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }}) : [Category 1]({{ '/docs/sk/pre_processor/9_simulation_controls/9_8_control_files/' | relative_url }}#9.8.1._Category_1))
 
 ![]({{ '/assets/images/appendices/appendix_xv_the_double_concave_corner/image0003.jpg' | relative_url }})
 

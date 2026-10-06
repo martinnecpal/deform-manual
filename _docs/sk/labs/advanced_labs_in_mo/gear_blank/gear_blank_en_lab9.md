@@ -57,7 +57,7 @@ Hydraulic press stopping load defined in dwell controls tab
 
 ### Define Heat transfer with Bottom die
 
-Similar to Top die Heat transfer definition define **Bottom****die** initial Temperature to **300** °F and Mesh of **50000** Elements. (See Section[ 6.4 Define Heat transfer with Top die](gear_blank_en_lab6.htm#6_4_Define_Heat_transfer_with_Top_die))
+Similar to Top die Heat transfer definition define **Bottom****die** initial Temperature to **300** °F and Mesh of **50000** Elements. (See Section[ 6.4 Define Heat transfer with Top die]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab6/' | relative_url }}#6_4_Define_Heat_transfer_with_Top_die))
 
 Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **AISI-H-13** from material list to assign material. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the **Heat exchange with environment boundary condition** and select all surfaces except bottom surface as shown in Fig. L9.5.
 

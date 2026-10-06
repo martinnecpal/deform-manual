@@ -79,7 +79,7 @@ MO wizard Files
 
 ## Operation Specific Important Files
 
-In MO for operators like 2D to 3D convertor, Boolean and Cycle and Report generation will save these operators data in the respective operation task0000n folders. These will be called during the DB generation and simulation of the respective operations. MO Operation specific files are as shown in below [Table 6.5.2.](6_5_files_structure.htm#Table_6.5.2._MO_Operation/Operator_specific_files)
+In MO for operators like 2D to 3D convertor, Boolean and Cycle and Report generation will save these operators data in the respective operation task0000n folders. These will be called during the DB generation and simulation of the respective operations. MO Operation specific files are as shown in below [Table 6.5.2.]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_5_files_structure/' | relative_url }}#Table_6.5.2._MO_Operation/Operator_specific_files)
 
 **Sl. NO.** | **MO Operations Specific files** | **Operation/Operator specific files** | **File Path**  
 ---|---|---|---  

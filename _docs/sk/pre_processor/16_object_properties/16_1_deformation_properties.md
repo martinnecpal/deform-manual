@@ -31,7 +31,7 @@ Okno Vlastnosti 3D objektu
 
 ## Výpočet plazivosti
 
-Aktivuje výpočty tečenia ([CREEP]({{ '/docs/sk/Keyword_Documentation/C/CREEP/' | relative_url }})) pre konkrétny objekt. Ďalšie informácie o dostupných modeloch creepu nájdete v časti [10.1.2. Creep]({{ '/docs/sk/pre_processor/10_Material_Data/10_1_Plastic_Data/10_1_2_Creep/10_1_2_Creep_Models/' | relative_url }}) (CREEP).
+Aktivuje výpočty tečenia ([CREEP]({{ '/docs/sk/keyword_documentation/c/creep/' | relative_url }})) pre konkrétny objekt. Ďalšie informácie o dostupných modeloch creepu nájdete v časti [10.1.2. Creep]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_creep_models/' | relative_url }}) (CREEP).
 
   
 Ak by používateľ chcel v postprocesore vidieť napätie Creep, potom by sa malo aktivovať zaškrtávacie políčko Creep v ceste "Simulation controls![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Advanced ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Output controls".
@@ -40,7 +40,7 @@ Ak by používateľ chcel v postprocesore vidieť napätie Creep, potom by sa ma
 
 ## Elasto-plastický počiatočný odhad (ELPSOL) [2D, 3D]
 
-Konvergencia elasto-plastického riešenia ([ELPSOL]({{ '/docs/sk/Keyword_Documentation/E/ELPSOL/' | relative_url }})) závisí od počiatočného odhadu stavu napätia a deformácie. K dispozícii sú tri počiatočné odhady riešení:
+Konvergencia elasto-plastického riešenia ([ELPSOL]({{ '/docs/sk/keyword_documentation/e/elpsol/' | relative_url }})) závisí od počiatočného odhadu stavu napätia a deformácie. K dispozícii sú tri počiatočné odhady riešení:
 
   * **Plastový roztok** : Na vytvorenie počiatočného odhadu používa čisto plastické údaje o deformácii.
   * **Elastické riešenie** : Na vytvorenie počiatočného odhadu sa používajú čisto elastické údaje o deformácii.
@@ -54,7 +54,7 @@ je pre konkrétny problém nedostatočná, možno použiť pružné alebo plasti
 Zachovanie objemu deformujúceho sa objektu v simulácii je veľmi dôležité pre presné predpovede modelu. Samotná dobrá veľkosť siete a jemnejší časový krok nedokážu zabezpečiť konštantnosť objemu pre niektoré triedy simulácií. Používateľ teraz môže aktivovať kompenzáciu objemu v rámci možnosti "Properties" (Vlastnosti) (pozri obr. 16.1.1. a obr. 16.1.2.).
 
   
-Môžete zapnúť "Aktivovať možnosti cieľového objemu" ([TRGVOL]({{ '/docs/sk/Keyword_Documentation/T/TRGVOL/' | relative_url }})) a potom použiť ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) na automatický výpočet objemu. Ak je kompenzácia objemu zapnutá, potom sa počas behu simulácie objem siete kompenzuje na uvedenú hodnotu.
+Môžete zapnúť "Aktivovať možnosti cieľového objemu" ([TRGVOL]({{ '/docs/sk/keyword_documentation/t/trgvol/' | relative_url }})) a potom použiť ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) na automatický výpočet objemu. Ak je kompenzácia objemu zapnutá, potom sa počas behu simulácie objem siete kompenzuje na uvedenú hodnotu.
 
   
 Pri analýze metódou konečných prvkov existuje niekoľko príčin objemových strát.
@@ -77,18 +77,18 @@ Ak je toto skreslenie neprijateľné, najlepšou alternatívou je použitie jemn
 
 ## Objemová penalizačná konštanta (PENVOL) [2D, 3D]
 
-Konštanta objemovej pokuty ([PENVOL]({{ '/docs/sk/Keyword_Documentation/P/PENVOL/' | relative_url }})) udáva veľkú kladnú hodnotu, ktorá sa používa na vynútenie objemovej stálosti plastických objektov. Predvolená hodnota 106 je pre väčšinu simulácií dostatočná. Ak je hodnota príliš malá, môže dôjsť k neprijateľne veľkým objemovým stratám. Ak je hodnota príliš veľká, riešenie môže mať problémy s konvergenciou.
+Konštanta objemovej pokuty ([PENVOL]({{ '/docs/sk/keyword_documentation/p/penvol/' | relative_url }})) udáva veľkú kladnú hodnotu, ktorá sa používa na vynútenie objemovej stálosti plastických objektov. Predvolená hodnota 106 je pre väčšinu simulácií dostatočná. Ak je hodnota príliš malá, môže dôjsť k neprijateľne veľkým objemovým stratám. Ak je hodnota príliš veľká, riešenie môže mať problémy s konvergenciou.
 
 ## Priemerná miera deformácie (AVGSTR) [2D, 3D]
 
-Priemerná miera deformácie ([AVGSTR]({{ '/docs/sk/Keyword_Documentation/A/AVGSTR/' | relative_url }})) je charakteristická priemerná hodnota efektívnej miery deformácie. Približná hodnota tejto hodnoty by sa mala uviesť na začiatku simulácie. Primeranú aproximáciu možno získať z:
+Priemerná miera deformácie ([AVGSTR]({{ '/docs/sk/keyword_documentation/a/avgstr/' | relative_url }})) je charakteristická priemerná hodnota efektívnej miery deformácie. Približná hodnota tejto hodnoty by sa mala uviesť na začiatku simulácie. Primeranú aproximáciu možno získať z:
 
 ![]({{ '/assets/equations/pre_processor/16_object_properties/eq_16_1_1.jpg' | relative_url }}) |
 ---|---
   
 ## Medzná miera deformácie (LMTSTR) [2D, 3D]
 
-Medzná miera deformácie ([LMTSTR]({{ '/docs/sk/Keyword_Documentation/L/LMTSTR/' | relative_url }})) definuje hraničnú hodnotu efektívnej miery deformácie, pod ktorou sa plastický alebo porézny materiál považuje za tuhý a správa sa ako newtonovská kvapalina. Vzťah medzi napätím a rýchlosťou deformácie v tuhej oblasti je aproximovaný vzťahom,
+Medzná miera deformácie ([LMTSTR]({{ '/docs/sk/keyword_documentation/l/lmtstr/' | relative_url }})) definuje hraničnú hodnotu efektívnej miery deformácie, pod ktorou sa plastický alebo porézny materiál považuje za tuhý a správa sa ako newtonovská kvapalina. Vzťah medzi napätím a rýchlosťou deformácie v tuhej oblasti je aproximovaný vzťahom,
 
 ![]({{ '/assets/equations/pre_processor/16_object_properties/eq_16_1_2.jpg' | relative_url }}) |
 ---|---
@@ -99,7 +99,7 @@ Ak je hraničná rýchlosť deformácie príliš malá, riešenie môže mať pr
 
 ## Zovšeobecnená kontrola rovinnej deformácie (ZSTR) [2D]
 
-Zovšeobecnené riadenie rovinnej deformácie ([ZSTR]({{ '/docs/sk/Keyword_Documentation/Z/ZSTR/' | relative_url }})) umožňuje určitému objektu deformáciu v smere hrúbky pre rovinný deformačný prvok. Deformáciu v smere hrúbky možno riadiť buď predpísanou rýchlosťou, alebo ťahom v smere hrúbky. Táto možnosť je k dispozícii pre elasto-plastický materiál s riadením rýchlosti aj trakcie a pre tuhý plastický materiál len s riadením rýchlosti.
+Zovšeobecnené riadenie rovinnej deformácie ([ZSTR]({{ '/docs/sk/keyword_documentation/z/zstr/' | relative_url }})) umožňuje určitému objektu deformáciu v smere hrúbky pre rovinný deformačný prvok. Deformáciu v smere hrúbky možno riadiť buď predpísanou rýchlosťou, alebo ťahom v smere hrúbky. Táto možnosť je k dispozícii pre elasto-plastický materiál s riadením rýchlosti aj trakcie a pre tuhý plastický materiál len s riadením rýchlosti.
 
 Objekt leží medzi dvoma ohraničujúcimi rovinami, ktoré sa môžu navzájom pohybovať ako tuhé telesá, čo spôsobuje deformáciu v smere hrúbky objektu. Nech P0(X0, Y0) je pevný bod vo vzťažných rovinách. Dĺžka medzi P0 a jeho obrazom v druhej rovine P1 je t0 + DuZ , kde t0 je počiatočná hrúbka a DuZ je zmena dĺžky v hrúbke.
 
@@ -138,11 +138,11 @@ Je definovaná ako pomer celkovej deformácie (prirodzený logaritmus zmenšenia
 
 [16.10. User]({{ '/docs/sk/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Selecting the Creep strain from simulation output controls](../9_Simulation_Controls/9_7_Advanced_Options.htm#9.7.4._Output_Control)
+[Selecting the Creep strain from simulation output controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#9.7.4._Output_Control)
 
-[Material Creep models]({{ '/docs/sk/pre_processor/10_Material_Data/10_1_Plastic_Data/10_1_2_Creep/10_1_2_Creep_Models/' | relative_url }})
+[Material Creep models]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_creep_models/' | relative_url }})
 
-[Object type selection from object data definition window](../11_General_Object_Data_Definition/11_General_Object_Data_Definition.htm#11.4._Object_type)
+[Object type selection from object data definition window]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type)
 
-[Remeshing-2D Settings](../13_Mesh_Generation/13_1_2D_Mesh_Generation.htm#13.1.8._Remeshing_criteria)
-[Remeshing-3D Settings](../13_Mesh_Generation/13_2_3D_Tet_Mesh_Generation.htm#13.2.8._Remeshing_criteria)
+[Remeshing-2D Settings]({{ '/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.8._Remeshing_criteria)
+[Remeshing-3D Settings]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.8._Remeshing_criteria)

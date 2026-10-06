@@ -43,4 +43,4 @@ Applicable simulation types: Heat Transfer, Non-Isothermal Deformation
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Process Conditions]({{ '/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }}) \- [Constants](../../pre_processor/9_simulation_controls/9_6_process_conditions.htm#9.6.4._Constants) Keywords: [TRANS]({{ '/docs/sk/keyword_documentation/t/trans/' | relative_url }})
+Simulation Controls: [Process Conditions]({{ '/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }}) \- [Constants]({{ '/docs/sk/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }}#9.6.4._Constants) Keywords: [TRANS]({{ '/docs/sk/keyword_documentation/t/trans/' | relative_url }})

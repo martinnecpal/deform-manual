@@ -29,7 +29,7 @@ Súbor s kľúčovými slovami môže obsahovať kompletný súbor simulačných
 
 Keď sa súbor s kľúčovým slovom načíta do preprocesora, zmenia sa len konkrétne dátové polia uvedené v danom kľúčovom slove; ostatné údaje sa nezmenia. Takto je možné zostaviť kompletný súbor údajov o probléme načítaním jedného súboru s kľúčovými slovami, ktorý obsahuje len údaje o jednom objekte, ďalšieho súboru s kľúčovými slovami, ktorý obsahuje údaje o materiáloch atď.
 
-Ak chcete uložiť konkrétne prvky súboru s kľúčovými slovami, je potrebné uložiť celý súbor a potom pomocou textového editora, ako je Notepad, VI, Emacs alebo iný ekvivalent, odstrániť nežiaduce informácie. Funkcie načítania a uloženia súboru kľúčových slov v hlavnej ponuke preprocesora načítajú alebo uložia celý súbor údajov. Ak chcete načítať čiastočné súbory kľúčových slov, použite možnosť Import alebo Importovať kľúčové slová z [File menu.](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#8.1.1._File_Menu)
+Ak chcete uložiť konkrétne prvky súboru s kľúčovými slovami, je potrebné uložiť celý súbor a potom pomocou textového editora, ako je Notepad, VI, Emacs alebo iný ekvivalent, odstrániť nežiaduce informácie. Funkcie načítania a uloženia súboru kľúčových slov v hlavnej ponuke preprocesora načítajú alebo uložia celý súbor údajov. Ak chcete načítať čiastočné súbory kľúčových slov, použite možnosť Import alebo Importovať kľúčové slová z [File menu.]({{ '/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#8.1.1._File_Menu)
 
 **Ďalšie vstupy súborov**
 

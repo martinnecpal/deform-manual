@@ -387,7 +387,7 @@ Image Showing Minimum distance region
 
 ### Create a new simulation
 
-Now we are going to perform the Cone_Blow operation, from above, with a heated billet. This involves heating the billet, letting it sit in air for 6 seconds (transfer), letting it sit in the die for 2 seconds (dwell) and then forming it (cone). We will do all of this by simulating 1/12th of the part using symmetry as shown in [Fig. 3DL5.37.](lab05_stub_shaft_labs.htm#FIg_3DL5_37_Workpiece_showing_1/12th_of_the_symmetry)
+Now we are going to perform the Cone_Blow operation, from above, with a heated billet. This involves heating the billet, letting it sit in air for 6 seconds (transfer), letting it sit in the die for 2 seconds (dwell) and then forming it (cone). We will do all of this by simulating 1/12th of the part using symmetry as shown in [Fig. 3DL5.37.]({{ '/docs/en/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/' | relative_url }}#FIg_3DL5_37_Workpiece_showing_1/12th_of_the_symmetry)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0037.jpg' | relative_url }})
 

@@ -5,7 +5,7 @@ title: "26.6.16. Interaktívne rozdeľovanie na rezy"
 
 # 26.6.16. Krájanie
 
-[3D]: Dialógové okno pre rezanie umožňuje používateľovi vyrezať rez do obrobku. Po vytvorení rezu sú v oblasti rezu viditeľné tieňované obrysy. Dialógové okno sa zobrazí tak, ako je znázornené na obr. 26.6.16.1. Rez sa dá vytvoriť kliknutím na čiaru ohraničujúceho obdĺžnika objektu. Predvolený režim pre rovinu rezu je jej definovanie bodom, na ktorom rovina leží, a vektorom, ktorý je normálny (alebo kolmý) k rovine rezu. Smer normály určuje stranu roviny, ktorá bude odrezaná. Po výbere roviny je možné zmeniť polohu bodu tak, že vyberiete hodnotu bodu, ktorá zodpovedá smeru normály roviny, a potiahnete posuvník.
+\[3D]: Dialógové okno pre rezanie umožňuje používateľovi vyrezať rez do obrobku. Po vytvorení rezu sú v oblasti rezu viditeľné tieňované obrysy. Dialógové okno sa zobrazí tak, ako je znázornené na obr. 26.6.16.1. Rez sa dá vytvoriť kliknutím na čiaru ohraničujúceho obdĺžnika objektu. Predvolený režim pre rovinu rezu je jej definovanie bodom, na ktorom rovina leží, a vektorom, ktorý je normálny (alebo kolmý) k rovine rezu. Smer normály určuje stranu roviny, ktorá bude odrezaná. Po výbere roviny je možné zmeniť polohu bodu tak, že vyberiete hodnotu bodu, ktorá zodpovedá smeru normály roviny, a potiahnete posuvník.
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/image001.jpg' | relative_url }})

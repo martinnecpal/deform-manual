@@ -7,7 +7,7 @@ title: "9.7. Advanced Options"
 
 9.7.1. Variables
 
-  * [Current Global Time/Current Local Time (TNOW)](9_7_advanced_options.htm#Current_Global_Time/Current_Local_Time_\(TNOW\))
+  * [Current Global Time/Current Local Time (TNOW)]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#Current_Global_Time/Current_Local_Time_\(TNOW\))
 
   * Primary Workpiece (PDIE)
 
@@ -47,7 +47,7 @@ No geometry update
 
   * Corner oscillations
 
-  * [Repeated touching / separating](9_7_advanced_options.htm#Repeated_touching_/_separating)
+  * [Repeated touching / separating]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#Repeated_touching_/_separating)
 
 9.7.7. Object Copy
 

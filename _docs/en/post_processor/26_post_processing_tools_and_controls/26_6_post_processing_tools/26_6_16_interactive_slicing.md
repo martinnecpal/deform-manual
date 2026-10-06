@@ -5,7 +5,7 @@ title: "26.6.16. Interactive slicing"
 
 # 26.6.16. Slicing
 
-[3D]:The slicing dialog allows the user to cut a section into the workpiece. When the section is made, shaded contours can be seen in the cut area. The dialog appears as shown in Fig. 26.6.16.1. The cut section can be made by clicking on a line of the bounding box of the object. The default mode for a slicing plane is to define it by a point on which the plane lies and a vector that is normal (or perpendicular) to the slicing plane. The normal direction indicates the side of the plane that will be cut away. Once a plane has been selected, the location of point can be changed by selecting the point value that corresponds to the normal direction of the plane and dragging the slider bar.
+\[3D]:The slicing dialog allows the user to cut a section into the workpiece. When the section is made, shaded contours can be seen in the cut area. The dialog appears as shown in Fig. 26.6.16.1. The cut section can be made by clicking on a line of the bounding box of the object. The default mode for a slicing plane is to define it by a point on which the plane lies and a vector that is normal (or perpendicular) to the slicing plane. The normal direction indicates the side of the plane that will be cut away. Once a plane has been selected, the location of point can be changed by selecting the point value that corresponds to the normal direction of the plane and dragging the slider bar.
 
   
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_16_interactive_slicing/image001.jpg' | relative_url }})

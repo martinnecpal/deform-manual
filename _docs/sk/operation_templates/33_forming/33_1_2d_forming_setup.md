@@ -55,7 +55,7 @@ Okno „Typ 2D geometrie“
 
   * **Rovinné napätie**
 
-Ďalšie informácie o týchto typoch geometrie nájdete v časti [9.1.2._Geometry_type_(GEOTYP)_[2D]](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])   
+Ďalšie informácie o týchto typoch geometrie nájdete v časti [9.1.2._Geometry_type_(GEOTYP)_[2D]]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])   
 Ovládacie prvky simulácie sú vysvetlené na konci tejto kapitoly v časti 33. 1.9. Ovládacie prvky simulácie
 
 ## Zoznam materiálov
@@ -167,7 +167,7 @@ Okno s geometrickými primitívami pre rovinné deformácie a napätia
 
 **Skontrolujte**![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})
 
-Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Zobrazí sa okno „Skontrolujte a opravte geometriu“, ako je znázornené na obr. 33.1.14. Geometria sa opraví, ak obsahuje nejaké chyby, po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}), ako je znázornené na obr. 33.1.14. Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
+Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Zobrazí sa okno „Skontrolujte a opravte geometriu“, ako je znázornené na obr. 33.1.14. Geometria sa opraví, ak obsahuje nejaké chyby, po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}), ako je znázornené na obr. 33.1.14. Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) [Check Geometry]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}#Check_Geometry). 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image008.jpg' | relative_url }})
 
@@ -381,7 +381,7 @@ Na obr. 33.1.26. je zobrazené okno materiálov. Používateľ môže priradiť 
 
 Okno s materiálmi
 
-Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}); otvorí sa okno s materiálom, ako je znázornené na obrázku [Fig. 10.9.](../../pre_processor/10_material_data/10_material_data.htm#Fig._10.9._Edit_material_window). Požadované vlastnosti závisia od fyzikálnych javov simulovaných v programe DEFORM. Vlastnosti materiálu, ktoré musí používateľ špecifikovať, závisia od typov materiálov, ktoré používateľ využíva v simulácii. Ďalšie informácie nájdete v [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
+Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}); otvorí sa okno s materiálom, ako je znázornené na obrázku [Fig. 10.9.]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }}#Fig._10.9._Edit_material_window). Požadované vlastnosti závisia od fyzikálnych javov simulovaných v programe DEFORM. Vlastnosti materiálu, ktoré musí používateľ špecifikovať, závisia od typov materiálov, ktoré používateľ využíva v simulácii. Ďalšie informácie nájdete v [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}).
 
 ### Okrajové podmienky
 
@@ -391,7 +391,7 @@ Na stránke „Okrajové podmienky“ môže používateľ priradiť objektu rô
 
 Okno s okrajovými podmienkami
 
-BCC sú rozdelené do kategórií [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
+BCC sú rozdelené do kategórií [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ### Ovládanie pohybu
 
@@ -433,7 +433,7 @@ Ovládacie prvky pohybu pri zváraní trením sa dajú použiť iba v prípade 2
 
 ### Nehnuteľnosť
 
-V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 33.1.31.) Ďalšie informácie nájdete v [16\. Object properties.](../../pre_processor/16_object_properties).
+V okne „Vlastnosti objektu“ sa zadávajú rôzne parametre objektu, ktoré ovplyvňujú buď termomechanické správanie objektu, alebo správanie numerického riešenia. (Pozri obr. 33.1.31.) Ďalšie informácie nájdete v [16\. Object properties.]({{ '/docs/sk/pre_processor/16_object_properties/16_object_properties/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image025.jpg' | relative_url }})
 
@@ -472,7 +472,7 @@ Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na s
 
 **Umiestňovanie objektov**![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 33.1.36. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Offset]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning), [Flip]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_6_Flip_positioning) a [Rotational]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning), ako je znázornené na obr. 33.1.36. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_1_2d_forming_setup/image029.jpg' | relative_url }})
 
@@ -506,7 +506,7 @@ Okno definície medzi objektmi
 
 Parametre ukončenia určujú čas priebehu, po uplynutí ktorého sa simulácia ukončí. Simuláciu je možné ukončiť na základe maximálneho počtu simulovaných časových krokov, maximálnej kumulovanej elementárnej deformácie, maximálneho času priebehu, maximálneho zdvihu, minimálnej rýchlosti alebo maximálneho zaťaženia primárneho objektu. Simulácia sa zastaví, keď bude splnená podmienka ktoréhokoľvek z týchto parametrov ukončenia.
 
-Ďalšie informácie nájdete v dokumente [Stopping Controls in Forming 3D setup.](33_2_3d_forming_setup.htm#33_2_7_Stopping_Controls)
+Ďalšie informácie nájdete v dokumente [Stopping Controls in Forming 3D setup.]({{ '/docs/sk/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}#33_2_7_Stopping_Controls)
 
 ## Ovládacie prvky simulácie
 

@@ -42,7 +42,7 @@ LOCDEF specifies the local deformation boundary definition for an object. It is 
   
 REMARKS  
 ---  
-This keyword works in conjunction with ECCDEF to define the pressure and friction on a specific surface polygon. Note that if the object is rigid, friction defined here has higher priority than the friction defined as inter-object data. If the data is of constant type, only the constant value is given in the data list. If tabular data is used to describe any of the above variables, the number of data sets is listed followed by the data set. Applicable [Simulation Modules](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Deformation Applicable [Object Types](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type): ALL except Rigid  
+This keyword works in conjunction with ECCDEF to define the pressure and friction on a specific surface polygon. Note that if the object is rigid, friction defined here has higher priority than the friction defined as inter-object data. If the data is of constant type, only the constant value is given in the data list. If tabular data is used to describe any of the above variables, the number of data sets is listed followed by the data set. Applicable [Simulation Modules]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Deformation Applicable [Object Types]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type): ALL except Rigid  
   
 RELATED TOPICS  
 ---  

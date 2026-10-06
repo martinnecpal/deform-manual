@@ -25,7 +25,7 @@ title: "37.1. 2D Heat Treatment Wizard"
 
   * Object Boundary Condition
 
-  * [Object Properties](37_2_3d_heat_treatment_wizard.htm#Object_Property)
+  * [Object Properties]({{ '/docs/en/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/' | relative_url }}#Object_Property)
 
   * Initialize
 

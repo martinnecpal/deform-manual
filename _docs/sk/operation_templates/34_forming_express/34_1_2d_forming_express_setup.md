@@ -96,9 +96,9 @@ Okno nastavení procesu
 
 V nástroji Forming je možné nastaviť iba dva geometrické modely, a to „Axisymmetric“ a „Plane Strain“.
 
-Axisymetrické modely predstavujú priečny rez vzhľadom na stredovú os. Model preto vyžaduje, aby deformujúca sa geometria bola osovo symetrická a nachádzala sa v prvom a štvrtom kvadrante (t. j. X > 0). Systém navyše predpokladá, že prúdenie v každej radiálnej rovine je identické. (Pozri [Fig. 9.1.2.](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model))
+Axisymetrické modely predstavujú priečny rez vzhľadom na stredovú os. Model preto vyžaduje, aby deformujúca sa geometria bola osovo symetrická a nachádzala sa v prvom a štvrtom kvadrante (t. j. X > 0). Systém navyše predpokladá, že prúdenie v každej radiálnej rovine je identické. (Pozri [Fig. 9.1.2.]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Fig._9.1.2._Example_for_types_of_geometry_model))
 
-Pri rovinnom deformovaní sa predpokladá, že geometria má jednotkovú hĺbku a že predná aj zadná plocha sú fixované. Simulácia vychádza z predpokladu, že objekty sa budú správať rovnako v akomkoľvek priereze v smere šírky aj výšky objektu. (Pozri [Fig. 9.1.2.](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model))
+Pri rovinnom deformovaní sa predpokladá, že geometria má jednotkovú hĺbku a že predná aj zadná plocha sú fixované. Simulácia vychádza z predpokladu, že objekty sa budú správať rovnako v akomkoľvek priereze v smere šírky aj výšky objektu. (Pozri [Fig. 9.1.2.]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Fig._9.1.2._Example_for_types_of_geometry_model))
 
 Ďalšie typy geometrie – „Rovinné napätie“ a „Krútenie“ – sú k dispozícii iba pri 2D operácii tvarovania; podrobnosti nájdete v [2D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }}).
 
@@ -157,7 +157,7 @@ Okno obrobku
   
 **Názov objektu**: Používateľ môže určiť názov pre všetky objekty dostupné v danej operácii.
 
-**Typ objektu******: Typ objektu ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. Ďalšie typy objektov sú vysvetlené v kapitole 11. Všeobecná definícia údajov o objektoch, podrobnosti nájdete v [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
+**Typ objektu******: Typ objektu ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. Ďalšie typy objektov sú vysvetlené v kapitole 11. Všeobecná definícia údajov o objektoch, podrobnosti nájdete v [11.4. Object Type]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type).
 
   * **Plast**: Plastové objekty sa modelujú ako tuhé plastické alebo tuhé viskoplastické materiály v závislosti od vlastností materiálov. Model predpokladá, že napätie v materiáli lineárne rastie s rýchlosťou deformácie až do prahovej hodnoty rýchlosti deformácie, označovanej ako limitná rýchlosť deformácie ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). Po prekročení medznej rýchlosti deformácie sa materiál deformuje plasticky. Plastické správanie materiálu objektu sa špecifikuje pomocou funkcie tečenia materiálu alebo údajov o tečnom napätí ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). V operácii Forming Express sa obrobok automaticky priradí k typu objektu „Plast“.
 
@@ -218,7 +218,7 @@ Okno s geometrickými primitívami pre typ geometrie „Rovinné deformácie“
 
 **Check![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**
 
-Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo **![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**. Zobrazí sa okno „Skontrolujte a opravte geometriu“, ako je znázornené na obr. 34.1.13 nižšie. Geometria sa opraví, ak obsahuje nejaké chyby, po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry) v kapitole [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}).
+Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo **![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**. Zobrazí sa okno „Skontrolujte a opravte geometriu“, ako je znázornené na obr. 34.1.13 nižšie. Geometria sa opraví, ak obsahuje nejaké chyby, po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [Check Geometry]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}#Check_Geometry) v kapitole [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image013.jpg' | relative_url }})
 
@@ -314,11 +314,11 @@ Hustoty teploty, deformácie a rýchlosti deformácie sa prideľujú na základe
 
 Hodnoty zo všetkých kľúčových slov týkajúcich sa hustoty siete sa počas procesu generovania siete kombinujú, čím sa vytvorí rozloženie hustoty siete v rámci geometrických hraníc.
 
-Operácia formovania obsahuje ďalší váhový faktor, a to možnosti v okne „Mesh Density“ (Hustota siete), pomocou ktorých môže používateľ definovať konkrétnu oblasť v priestore, ktorá sa bude počas deformácie pohybovať spolu s ostatnými objektmi s príslušnou hustotou siete. Pozrite si kapitolu [13.1.5. Mesh Weighting factors.](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.5._Mesh_weighting_factors).
+Operácia formovania obsahuje ďalší váhový faktor, a to možnosti v okne „Mesh Density“ (Hustota siete), pomocou ktorých môže používateľ definovať konkrétnu oblasť v priestore, ktorá sa bude počas deformácie pohybovať spolu s ostatnými objektmi s príslušnou hustotou siete. Pozrite si kapitolu [13.1.5. Mesh Weighting factors.]({{ '/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.5._Mesh_weighting_factors).
 
 **Kritériá pre generovanie novej siete**
 
-Kritériá pregenerovania siete (Autoremesh) predstavujú najpohodlnejší spôsob, ako riešiť pregenerovanie siete objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Kritériá pre vytváranie novej siete (pozri obr. 34.1.19.) obsahuje skupinu parametrov, ktoré na základe priradenia určitých spúšťačov riadia, kedy a ako často sa bude sieť na objektu so sieťou regenerovať. Existujú štyri kľúčové slová, ktoré riadia spustenie postupu premenovania siete pre objekt: Hĺbka interferencie ([RMDPTH]({{ '/docs/en/keyword_documentation/r/rmdpth/' | relative_url }})), Max. časový prírastok ([RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }})), Max. krokový prírastok ([RMSTEP]({{ '/docs/en/keyword_documentation/r/rmstep/' | relative_url }})) a Max. prírastok zdvihu ([RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})). Keď sa splnia kritériá pregenerovania siete pre ktorékoľvek z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (záporná jacobiánska matica), objekt sa pregeneruje. Ak objekt počas simulácie spĺňa ktorékoľvek z kritérií pre vytvorenie novej siete, vygeneruje sa nová sieť, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje. Ďalšie informácie o kritériách pre vytvorenie novej siete nájdete v [13.1.8. Remeshing criteria.](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.8._Remeshing_criteria)
+Kritériá pregenerovania siete (Autoremesh) predstavujú najpohodlnejší spôsob, ako riešiť pregenerovanie siete objektov, ktoré prechádzajú veľkou plastickou deformáciou. Okno Kritériá pre vytváranie novej siete (pozri obr. 34.1.19.) obsahuje skupinu parametrov, ktoré na základe priradenia určitých spúšťačov riadia, kedy a ako často sa bude sieť na objektu so sieťou regenerovať. Existujú štyri kľúčové slová, ktoré riadia spustenie postupu premenovania siete pre objekt: Hĺbka interferencie ([RMDPTH]({{ '/docs/en/keyword_documentation/r/rmdpth/' | relative_url }})), Max. časový prírastok ([RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }})), Max. krokový prírastok ([RMSTEP]({{ '/docs/en/keyword_documentation/r/rmstep/' | relative_url }})) a Max. prírastok zdvihu ([RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})). Keď sa splnia kritériá pregenerovania siete pre ktorékoľvek z týchto kľúčových slov alebo sa sieť stane nepoužiteľnou (záporná jacobiánska matica), objekt sa pregeneruje. Ak objekt počas simulácie spĺňa ktorékoľvek z kritérií pre vytvorenie novej siete, vygeneruje sa nová sieť, informácie o riešení zo starej siete sa interpolujú na novú sieť a simulácia pokračuje. Ďalšie informácie o kritériách pre vytvorenie novej siete nájdete v [13.1.8. Remeshing criteria.]({{ '/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.8._Remeshing_criteria)
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image019.jpg' | relative_url }})
 
@@ -355,7 +355,7 @@ Keď používateľ klikne na tlačidlo „Zobraziť sieť“, v okne zobrazenia 
 
 Keď používateľ klikne na kartu „Predvolené nastavenia“, všetky nastavenia sa zmenia na predvolené hodnoty. Okno „Mesh“ bude štandardne neaktívne, keďže nie sú definované žiadne okná typu „Mesh“. Ak chce používateľ aktivovať okno „Mesh“, musí zmeniť váhový koeficient hustoty siete tak, že posuvník nastaví na hodnotu 1.
 
-Na rozdiel od operácie „Forming“ nie sú v operácii „Forming express“ k dispozícii možnosti „Coating mesh“ a „User Mesh Density Window“; informácie o týchto možnostiach nájdete v [13.1.7. Coating Mesh](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.7._Coating), resp. [ 13.1.6. Mesh Density windows](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.6._Mesh_density_windows).
+Na rozdiel od operácie „Forming“ nie sú v operácii „Forming express“ k dispozícii možnosti „Coating mesh“ a „User Mesh Density Window“; informácie o týchto možnostiach nájdete v [13.1.7. Coating Mesh]({{ '/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.7._Coating), resp. [ 13.1.6. Mesh Density windows]({{ '/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.6._Mesh_density_windows).
 
 ## Materiál
 
@@ -391,7 +391,7 @@ Pre obrobok bola nastavená okrajová podmienka symetrie
 
 Pre obrobok bola stanovená okrajová podmienka výmeny tepla s okolím
 
-BCC sú rozdelené do kategórií [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
+BCC sú rozdelené do kategórií [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ## Ovládanie pohybu
 
@@ -418,7 +418,7 @@ V dolnej časti okna na ovládanie pohybov (pozri obr. 34.1.26.) môže použív
 
 Nastavenia ovládacích prvkov pohybu nákladu
 
-**Mechanický lis**: Typ „Mechanický lis“ napodobňuje cyklický pohyb mechanického lisu (pozri obr. 34.1.28.). Možnosť „Mechanický lis“ simuluje pohyb objektov poháňaných mechanickým lisom. V režime Forming je k dispozícii iba riadenie mechanického kľukového lisu; okrem toho bude v operácii Forming k dispozícii aj riadenie kĺbového lisu. Informácie o kĺbovom lise nájdete v [15.5.2. Knuckle Press.](../../pre_processor/15_movement_controls_definition/15_5_mechanical_press.htm#15_5_2_Knuckle_or_Wedge_Press).
+**Mechanický lis**: Typ „Mechanický lis“ napodobňuje cyklický pohyb mechanického lisu (pozri obr. 34.1.28.). Možnosť „Mechanický lis“ simuluje pohyb objektov poháňaných mechanickým lisom. V režime Forming je k dispozícii iba riadenie mechanického kľukového lisu; okrem toho bude v operácii Forming k dispozícii aj riadenie kĺbového lisu. Informácie o kĺbovom lise nájdete v [15.5.2. Knuckle Press.]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }}#15_5_2_Knuckle_or_Wedge_Press).
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image027.jpg' | relative_url }})
 
@@ -470,7 +470,7 @@ Nastavenia riadenia pohybu kladiva
 Pri kovaní kladivom sa na plastickú deformáciu obrobku využíva len časť kinetickej energie piestu. Zvyšná energia sa stráca cez kovadlinu a rám stroja. Tieto hodnoty je možné nastaviť v okne ovládania pohybu.
 
   
-V zásade existujú dva typy kladív. Prvým je [anvil type hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer) a druhým [counter blow hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer). Vzorce a predpoklady použité pre oba typy operácií kovania kladivom sa vzťahujú na [15.3. Hammer Energy.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }})
+V zásade existujú dva typy kladív. Prvým je [anvil type hammer]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}#15_3_1_Anvil_Type_Hammer) a druhým [counter blow hammer]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}#15_3_2_Counterblow_Hammer). Vzorce a predpoklady použité pre oba typy operácií kovania kladivom sa vzťahujú na [15.3. Hammer Energy.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }})
 
 Pri kladive typu „Anvil“ sa obrobok spolu so spodnou sadou foriem umiestňuje na nehybné kovadlinu. Pri jednoduchom gravitačnom kladive sa piest zrýchľuje pôsobením gravitácie a akumuluje energiu.
 
@@ -551,7 +551,7 @@ Systém vždy aktualizuje zdvih podľa polohy objektu, pre ktorý je definovaný
 
 **Umiestňovanie objektov ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})**
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 34.1.35. Ďalšie informácie o týchto možnostiach nájdete v časti [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Offset]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning), [Flip]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_6_Flip_positioning) a [Rotational]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning), ako je znázornené na obr. 34.1.35. Ďalšie informácie o týchto možnostiach nájdete v časti [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image034.jpg' | relative_url }})
 
@@ -702,7 +702,7 @@ Ak bola zvolená možnosť **Vzdialenosť medzi výsekovými formami**, vzdialen
 Ak bola zvolená možnosť **Vzdialenosť medzi formami**, používateľ musí určiť vzdialenosť medzi objektmi a referenčnými bodmi (obr. 34.1.43.(b)).
 
   
-Ďalšie informácie o kontrolách zastavenia nájdete v [9.3.10. Temperature stopping contorls](../../pre_processor/9_simulation_controls/9_3_stopping_controls.htm#9.3.10._Temperature_stopping_control)
+Ďalšie informácie o kontrolách zastavenia nájdete v [9.3.10. Temperature stopping contorls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}#9.3.10._Temperature_stopping_control)
 
 ## Ovládacie prvky simulácie
 
@@ -777,7 +777,7 @@ Po vytvorení databázy musí používateľ vybrať kartu „Režim simulácie M
 
 [34.2. 3D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_2_3d_forming_express_setup/' | relative_url }})
 
-[Promote Forming Express to Forming operation](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations.htm#Fig._6.6.4.4._Forming_express_operation_after_promoting_it_to_forming_operation)
+[Promote Forming Express to Forming operation]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations/' | relative_url }}#Fig._6.6.4.4._Forming_express_operation_after_promoting_it_to_forming_operation)
 
 [6.2. MO Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 

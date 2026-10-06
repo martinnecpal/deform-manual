@@ -50,4 +50,4 @@ The Electric Resistance is used in simulations of induction heating.
   
 RELATED TOPICS  
 ---  
-Material Data:[ Electromagnetic data]({{ '/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }}) Keyword: [PMEAB]({{ '/docs/sk/keyword_documentation/p/pmeab/' | relative_url }}), [PMITT]({{ '/docs/sk/keyword_documentation/p/pmitt/' | relative_url }})
+Material Data:[ Electromagnetic data]({{ '/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_Elec_Mag_Data/' | relative_url }}) Keyword: [PMEAB]({{ '/docs/sk/keyword_documentation/p/pmeab/' | relative_url }}), [PMITT]({{ '/docs/sk/keyword_documentation/p/pmitt/' | relative_url }})

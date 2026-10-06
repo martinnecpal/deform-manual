@@ -143,7 +143,7 @@ Max Principle stress contour plot; (a) For Top Die (b) For Bottom Die
 
 \- Open Project “**Gear** ” in DEFORM MO from DEFORM GUI Main.
 
-\- Add 2nd **Die stress study** and add Die Stress operation as shown in Lab 12: [12.1 Add Die Stress Study.](gear_blank_en.htm#12_1_Add_Die_stress_Study)
+\- Add 2nd **Die stress study** and add Die Stress operation as shown in Lab 12: [12.1 Add Die Stress Study.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/' | relative_url }}#12_1_Add_Die_stress_Study)
 
 \- Keep the selected last step, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and add an additional object from objects window (See Fig. L12.15.).
 

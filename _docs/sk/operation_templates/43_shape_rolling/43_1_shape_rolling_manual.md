@@ -656,7 +656,7 @@ Príručka – Definícia geometrických primitív
 
 ### Stránka objektu obrobku
 
-Používateľ môže zadať názov objektu, teplotu a typ objektu (ako je znázornené na obr. 43.1.60.). Predvolene je vybraný typ [Plastic object type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic); ak chce používateľ zohľadniť vplyv elastických vlastností, môže použiť typ objektu [Elasto-plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic). 
+Používateľ môže zadať názov objektu, teplotu a typ objektu (ako je znázornené na obr. 43.1.60.). Predvolene je vybraný typ [Plastic object type]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic); ak chce používateľ zohľadniť vplyv elastických vlastností, môže použiť typ objektu [Elasto-plastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic). 
 
 V prípade Lagrangeovho valcovania môžeme v prvom kroku importovať 3D objekt obrobku pomocou volieb ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Ak sa objekt „Workpiece“ importuje zo súboru, nastavenia siete budú také, ako je znázornené na obr. 43.1.61, čo je podobné stránke siete pre operáciu tvárnenia.
 
@@ -766,7 +766,7 @@ Inicializovať stránku
 
 #### Obrobok s integrovanou sieťou Flownet 
 
-Nastavenia valcovania s viacerými priechodmi zvyčajne generujú databázy s veľkým počtom krokov, a preto vykreslenie siete Flownet bude trvať dlho. Tento problém môže používateľ vyriešiť využitím funkcie „Built-in-Flownet“. Pri použití funkcie „Built-in-Flownet“ sa graf Flownet vypočíta priebežne počas simulácie problému. Ďalšie informácie nájdete v [Built in Flownet.](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet).
+Nastavenia valcovania s viacerými priechodmi zvyčajne generujú databázy s veľkým počtom krokov, a preto vykreslenie siete Flownet bude trvať dlho. Tento problém môže používateľ vyriešiť využitím funkcie „Built-in-Flownet“. Pri použití funkcie „Built-in-Flownet“ sa graf Flownet vypočíta priebežne počas simulácie problému. Ďalšie informácie nájdete v [Built in Flownet.]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13_2_9_Built_In_Flownet).
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0067.jpg' | relative_url }})
 

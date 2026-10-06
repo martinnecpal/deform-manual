@@ -59,7 +59,7 @@ FEM engine vypíše túto správu a ukončí činnosť, ak práve prebehlo preme
 
 Dôvodom môže byť to, že časový krok (DSMAX, DTMAX) môže byť veľký, ako sa to môže stať pri extrudovaní, kde rýchlosť piestu môže byť nízka, ale rýchlosť extrudátu môže byť veľmi vysoká, čo spôsobuje výrazné deformácie siete v blízkosti polomeru matrice. Ďalším príkladom je kovanie, keď sa materiál začne rozlievať a prvky v blízkosti oblasti rozliatia sa výrazne deformujú. Na zabránenie tomuto problému je možné znížiť časový krok, zvýšiť počet prvkov siete alebo zvýšiť hustotu siete v oblasti, kde dochádza k deformácii.
 
-Môže byť užitočné znázorniť rýchlosti uzlov v [Preprocessor]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }}). Neodporúča sa, aby posun uzlov v každom [ time step]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}) bol väčší ako dĺžka hrany prvkov. V tomto prípade môže byť užitočné [Polygon edge length substepping](../../pre_processor/9_simulation_controls/9_2_defining_step.htm#Polygon_length_sub_step_\(DPLEN\).
+Môže byť užitočné znázorniť rýchlosti uzlov v [Preprocessor]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }}). Neodporúča sa, aby posun uzlov v každom [ time step]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}) bol väčší ako dĺžka hrany prvkov. V tomto prípade môže byť užitočné [Polygon edge length substepping]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}#Polygon_length_sub_step_\(DPLEN\).
 
 ## Dôrazne odporúčame prepočítať sieť
 
@@ -83,7 +83,7 @@ K tomuto problému zvyčajne vedie uzavretý prekrývajúci sa okraj. Pozorne si
 
   * Ak z akéhokoľvek dôvodu uzol prenikol do jednej z foriem, vytvorenie novej siete bude problematické. Túto situáciu je možné posúdiť kontrolou siete FEM všetkých objektov v kroku bezprostredne pred vytvorením novej siete. Uzol, ktorý sa nachádza vnútri povrchu formy, sa po vytvorení novej siete a interpolácii okrajových podmienok vráti späť na povrch formy, avšak prvok, ktorý mal pôvodne prijateľnú geometriu, sa môže počas tohto procesu výrazne zdeformovať.
 
-  * Ak používateľ nastaví úlohu s veľmi veľkými časovými krokmi a s malou alebo žiadnou hodnotou [substepping criteria](../../pre_processor/9_simulation_controls/9_2_defining_step.htm#Sub-stepping_Controls), môže to viesť k problému spôsobenému výrazným deformovaním siete počas prvého kroku. Pozrite si [time step definition criteria](../../pre_processor/9_simulation_controls/9_2_defining_step.htm#9.2.2.Step_Increment) v časti [Preprocessor]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }}) tejto príručky.
+  * Ak používateľ nastaví úlohu s veľmi veľkými časovými krokmi a s malou alebo žiadnou hodnotou [substepping criteria]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}#Sub-stepping_Controls), môže to viesť k problému spôsobenému výrazným deformovaním siete počas prvého kroku. Pozrite si [time step definition criteria]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}#9.2.2.Step_Increment) v časti [Preprocessor]({{ '/docs/en/pre_processor/7_introduction_to_pre-processor/' | relative_url }}) tejto príručky.
 
   * Ak je v 3D simulácii vypnuté subkrokovanie, je potrebné venovať veľkú pozornosť tomu, aby sa používali dostatočne malé časové kroky. To znamená, že vždy, keď posun uzla vypočíta polohu uzla vnútri tuhého objektu, uzol sa vráti späť na povrch formy. Ak sú posuny uzlov malé, nie je to zlý predpoklad, avšak ak sú posuny uzlov veľké, tento predpoklad môže stratiť platnosť.
 
@@ -102,11 +102,11 @@ Existuje niekoľko bežných dôvodov, prečo riešenie nekonverguje.
 
 V prípadoch, keď sa problém nedá vyriešiť, by vám pri hľadaní príčiny mal pomôcť nasledujúci kontrolný zoznam. Pomôže vám to pri najbežnejších prípadoch.
 
-  * Zvýšte hodnotu [ Force Norm or Velocity Norm](../../pre_processor/9_simulation_controls/9_5_solver_settings.htm#Convergence_error_limits_\(CVGERR\)) až o jeden rád. Hodnota Force Norm môže byť v skutočnosti zvýšená až na 0,1 alebo dokonca na niekoľko krokov úplne eliminovaná. To by nemalo viesť k významnej chybe, ale mohlo by to mať za následok zníženú presnosť výpočtov zaťaženia. Ak sa konvergencia zlepší, nechajte simuláciu bežať 3 alebo 4 kroky, potom skúste nastavenia znížiť na pôvodné hodnoty.
+  * Zvýšte hodnotu [ Force Norm or Velocity Norm]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }}#Convergence_error_limits_\(CVGERR\)) až o jeden rád. Hodnota Force Norm môže byť v skutočnosti zvýšená až na 0,1 alebo dokonca na niekoľko krokov úplne eliminovaná. To by nemalo viesť k významnej chybe, ale mohlo by to mať za následok zníženú presnosť výpočtov zaťaženia. Ak sa konvergencia zlepší, nechajte simuláciu bežať 3 alebo 4 kroky, potom skúste nastavenia znížiť na pôvodné hodnoty.
 
   * Ak sa simulácia vykonáva s hlavným [die movement]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}) v režime regulácie zaťaženia alebo energie, vykonajte niekoľko krokov v režime regulácie otáčok, aby sa riešenie mohlo stabilizovať, a až potom pokračujte v pôvodnom režime.
 
-  * Zvýšte hodnotu [limiting strain rate](../../pre_processor/16_object_properties/16_1_deformation_properties.htm#16_1_6_Limiting_strain_rate_\(LMTSTR\) na 1/50 alebo 1/100 priemernej rýchlosti deformácie. To by nemalo mať žiadny významný vplyv na presnosť riešenia. Ak máte extrémne náročný prípad, pri ktorom je ťažké dosiahnuť konvergenciu, túto hodnotu môžete na niekoľko krokov znížiť na 1/10 priemernej rýchlosti deformácie a potom ju vrátiť na bežnejšiu hodnotu. V priebehu rokov sme odporúčali, aby limitná rýchlosť deformácie bola v rozmedzí 1/100 až 1/1000 priemernej rýchlosti deformácie. Ak je táto hodnota nastavená príliš nízko, bude to mať za následok umelo nižší výpočet zaťaženia.
+  * Zvýšte hodnotu [limiting strain rate]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }}#16_1_6_Limiting_strain_rate_\(LMTSTR\) na 1/50 alebo 1/100 priemernej rýchlosti deformácie. To by nemalo mať žiadny významný vplyv na presnosť riešenia. Ak máte extrémne náročný prípad, pri ktorom je ťažké dosiahnuť konvergenciu, túto hodnotu môžete na niekoľko krokov znížiť na 1/10 priemernej rýchlosti deformácie a potom ju vrátiť na bežnejšiu hodnotu. V priebehu rokov sme odporúčali, aby limitná rýchlosť deformácie bola v rozmedzí 1/100 až 1/1000 priemernej rýchlosti deformácie. Ak je táto hodnota nastavená príliš nízko, bude to mať za následok umelo nižší výpočet zaťaženia.
 
   * Porovnajte svoje nastavenia [material data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}) s podmienkami vášho procesu, aby ste sa uistili, že sa do FEM modulu neprenášajú žiadne „nezvyčajné“ vlastnosti materiálu. Venujte osobitnú pozornosť problémom s extrapoláciou. Ak sa napríklad vaše procesné podmienky nachádzajú v oblasti mimo definovanej oblasti tokového napätia, táto „citlivosť na reverznú rýchlosť deformácie“ spôsobuje problém (pozri obr. 23.8.2.), ktorý takmer znemožňuje, aby program DEFORM konvergoval k presnému riešeniu. Tento problém je možné vyriešiť opätovným vyhodnotením surových údajov a ich úpravou podľa potreby. Keďže je vysoko nepravdepodobné, aby materiál mal nižšie tečenie pri vyššej rýchlosti deformácie, bežnou príčinou tohto typu údajov je chýbajúca korekcia adiabatického ohrevu. Inými slovami, adiabatické zahrievanie pri vyšších rýchlostiach deformácie umelo zahrialo a zmäkčilo materiál, čo spôsobilo zdanlivo nižšie tečenie. Ak nie je možné určiť jasnú príčinu, nájdite údaje, ktoré nevykazujú túto citlivosť na opačnú rýchlosť deformácie.
 
@@ -114,7 +114,7 @@ V prípadoch, keď sa problém nedá vyriešiť, by vám pri hľadaní príčiny
 
 Extrapolácia prietokového napätia vedúca k inverznej rýchlosti deformácie
 
-  * Znížte počet plastových objektov ([penalty constant](../../pre_processor/16_object_properties/16_1_deformation_properties.htm#16_1_4_Volume_penalty_constant_\(PENVOL\)) na hodnotu 250 000 až 500 000 pomocou konštantnej hodnoty ([PENVOL]({{ '/docs/en/keyword_documentation/p/penvol/' | relative_url }})). Ak je táto hodnota v prípade bežných konštrukčných materiálov výrazne nižšia ako 100 000, môže to viesť k strate objemu.
+  * Znížte počet plastových objektov ([penalty constant]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }}#16_1_4_Volume_penalty_constant_\(PENVOL\)) na hodnotu 250 000 až 500 000 pomocou konštantnej hodnoty ([PENVOL]({{ '/docs/en/keyword_documentation/p/penvol/' | relative_url }})). Ak je táto hodnota v prípade bežných konštrukčných materiálov výrazne nižšia ako 100 000, môže to viesť k strate objemu.
 
   * Zmenšite časový krok. Táto rada platí najmä pre elasticko-plastické materiály. Veľmi malý časový krok často umožňuje systému DEFORM prekonať náročnú oblasť konvergencie. Až keď sa veľký počet uzlov dostane do kontaktu s formami a simulácia bude v plnom prúde, je možné opäť prejsť na väčší časový krok. Toho možno dosiahnuť buď reguláciou časového kroku, alebo pomocou modifikátora, ktorý vedie k subkrokovaniu, napríklad [DEMAX]({{ '/docs/en/keyword_documentation/d/demax/' | relative_url }}).
 
@@ -128,7 +128,7 @@ Extrapolácia prietokového napätia vedúca k inverznej rýchlosti deformácie
 
 Extrapolácia prietokového napätia vedúca k inverznej rýchlosti deformácie
 
-  * V niektorých prípadoch môžu byť problémy s konvergenciou spôsobené hrubou sieťou v oblasti s vysokou lokálnou deformáciou, napríklad pod rohom razníka počas operácie prepichovania. V takýchto prípadoch je potrebné vytvoriť jemnejšiu sieť a nastaviť parameter [remeshing criteria](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.8._Remeshing_criteria) tak, aby vykazoval väčší sklon k zohľadneniu zakrivenia hraníc a rýchlosti deformácie.
+  * V niektorých prípadoch môžu byť problémy s konvergenciou spôsobené hrubou sieťou v oblasti s vysokou lokálnou deformáciou, napríklad pod rohom razníka počas operácie prepichovania. V takýchto prípadoch je potrebné vytvoriť jemnejšiu sieť a nastaviť parameter [remeshing criteria]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.8._Remeshing_criteria) tak, aby vykazoval väčší sklon k zohľadneniu zakrivenia hraníc a rýchlosti deformácie.
 
 Tieto odporúčania slúžia ako všeobecné usmernenia a nemusia vyriešiť všetky problémy s nekonvergenciou. Hoci program DEFORM vykazuje pri väčšine úloh vynikajúcu konvergenciu, občas sa vyskytnú situácie, v ktorých môže používateľ naraziť na určité ťažkosti. Ak všetky tieto pokusy zlyhajú, odporúčame nám zaslať súbor s kľúčovými slovami na ďalšie preskúmanie.
 
@@ -138,11 +138,11 @@ Program DEFORM využíva metódu konečných prvkov na riešenie úloh plasticke
 
 Pri danom type simulácie existuje vlastnosť, ktorá s najväčšou pravdepodobnosťou vedie k tomuto problému. Je to nasledovné:
 
-  * **Prenos tepla**: [Heat Capacity](../../pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data.htm#Heat_capacity) a/alebo T[hermal Conductivity.](../../pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data.htm#Thermal_conductivity)
+  * **Prenos tepla**: [Heat Capacity]({{ '/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }}#Heat_capacity) a/alebo T[hermal Conductivity.]({{ '/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }}#Thermal_conductivity)
 
-  * **Elastic** : [Young's Modulus](../../pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data.htm#Young's_modulus).
+  * **Elastic** : [Young's Modulus]({{ '/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }}#Young's_modulus).
 
-  * **Plastická****deformácia**: [Flow Stress]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/' | relative_url }}).
+  * **Plastická****deformácia**: [Flow Stress]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_Flow_Stress_Models/' | relative_url }}).
 
   * Problémy s prenosom tepla je možné identifikovať na základe informácií v súbore správ. Informácie o iterácii budú obsahovať nadpis „Temperature Error Norm“ v časti bezprostredne pred ukončením daného problému.
 
@@ -150,7 +150,7 @@ Pri danom type simulácie existuje vlastnosť, ktorá s najväčšou pravdepodob
 
 ## Nulový otočný bod
 
-Pohyb tuhého telesa môže viesť k chybe „nulového otočného bodu“. To má za následok nárast normy rýchlosti a následné zlyhanie simulácie. Tento jav zvyčajne vyplýva z chýbajúcich adekvátnych okrajových podmienok a dá sa vyriešiť ich správnym definovaním. V prípade 2D simulácie existujú štyri možné geometrické režimy: [Axisymmetric](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Axisymmetric), [Plane Strain](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Plane_strain), [Plane Stress](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Plane_stress) a [Torsion](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Torsion). V prípade osovo symetrickej simulácie a simulácie krútenia je potrebné obmedziť iba smer y. V prípade simulácie rovinného deformovania a rovinného napätia je potrebné obmedziť smery x aj y pre objekty pokryté sieťou. V prípade tuhých objektov nie je potrebné žiadne obmedzenie, keďže fungujú skôr ako okrajové podmienky.
+Pohyb tuhého telesa môže viesť k chybe „nulového otočného bodu“. To má za následok nárast normy rýchlosti a následné zlyhanie simulácie. Tento jav zvyčajne vyplýva z chýbajúcich adekvátnych okrajových podmienok a dá sa vyriešiť ich správnym definovaním. V prípade 2D simulácie existujú štyri možné geometrické režimy: [Axisymmetric]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Axisymmetric), [Plane Strain]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Plane_strain), [Plane Stress]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Plane_stress) a [Torsion]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Torsion). V prípade osovo symetrickej simulácie a simulácie krútenia je potrebné obmedziť iba smer y. V prípade simulácie rovinného deformovania a rovinného napätia je potrebné obmedziť smery x aj y pre objekty pokryté sieťou. V prípade tuhých objektov nie je potrebné žiadne obmedzenie, keďže fungujú skôr ako okrajové podmienky.
 
 ## Extrapolácia údajov
 
@@ -178,19 +178,19 @@ Pri modeloch mimoriadne veľkých rozmerov sa môže používateľ stretnúť s 
 
 **Súvisiace témy:**
 
-[2D Geometry types](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])
+[2D Geometry types]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])
 
 [Step controls selection from Simulation controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }})
 
-[Step increment controls](../../pre_processor/9_simulation_controls/9_2_defining_step.htm#Step_increment_control_\(DSMAX/DTMAX\))
+[Step increment controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}#Step_increment_control_\(DSMAX/DTMAX\))
 
-[Velocity and Force error norms settings in Simulation controls](../../pre_processor/9_simulation_controls/9_5_solver_settings.htm#Convergence_error_limits_\(CVGERR\))
+[Velocity and Force error norms settings in Simulation controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }}#Convergence_error_limits_\(CVGERR\))
 
-[Object types](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type)
+[Object types]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type)
 
-[2D-remesh Criteria](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.8._Remeshing_criteria)
+[2D-remesh Criteria]({{ '/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.8._Remeshing_criteria)
 
-[3D-Remesh criteria](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.8._Remeshing_criteria)
+[3D-Remesh criteria]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.8._Remeshing_criteria)
 
 [Boundary conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
@@ -200,8 +200,8 @@ Pri modeloch mimoriadne veľkých rozmerov sa môže používateľ stretnúť s 
 
 [Object properties]({{ '/docs/en/pre_processor/16_object_properties/16_object_properties/' | relative_url }})
 
-[Limiting strain rate settings in Object properties](../../pre_processor/16_object_properties/16_1_deformation_properties.htm#16_1_6_Limiting_strain_rate_\(LMTSTR\))
+[Limiting strain rate settings in Object properties]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }}#16_1_6_Limiting_strain_rate_\(LMTSTR\))
 
-[EP Initial guess](../../pre_processor/16_object_properties/16_1_deformation_properties.htm#16_1_2_Elasto-plastic_initial_guess_\(ELPSOL\))
+[EP Initial guess]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }}#16_1_2_Elasto-plastic_initial_guess_\(ELPSOL\))
 
 [Submitting the problem to simulate]({{ '/docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/' | relative_url }})

@@ -228,4 +228,4 @@ Avrami Grain Model - Rex. vol. fraction
 
 ## Changing Conditions
 
-It is often interesting to see how the final microstructure deviates if the processing conditions are changed. For example, you can modify the air-cooling duration from 2 seconds to 10 seconds and see a very different final grain size distribution. You can also increase the coefficient “a4” in the “Meta-dynamic Recrystallization Kinetics” to accelerate the recrystallization, etc. (If you are interested in additional grain-related material data, load " WASPALOY[1750- 2100F(950-1150C)](Grain)" from the system material library).
+It is often interesting to see how the final microstructure deviates if the processing conditions are changed. For example, you can modify the air-cooling duration from 2 seconds to 10 seconds and see a very different final grain size distribution. You can also increase the coefficient “a4” in the “Meta-dynamic Recrystallization Kinetics” to accelerate the recrystallization, etc. (If you are interested in additional grain-related material data, load " WASPALOY\[1750- 2100F(950-1150C)\](Grain)" from the system material library).

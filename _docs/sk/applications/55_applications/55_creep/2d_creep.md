@@ -58,7 +58,7 @@ To run a creep simulation, the following requirements must be fulfilled:
 
   * There is either a non-zero stress state on the part (relaxation case) or an applied traction to the body (creep).
 
-  * Constrain the workpiece with [velocity boundary conditions](../../../pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions.htm#14.2.1._Velocity_BCC) alone as the penalty method of contact can give some numerical error in the stress solution for creep cases
+  * Constrain the workpiece with [velocity boundary conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}#14.2.1._Velocity_BCC) alone as the penalty method of contact can give some numerical error in the stress solution for creep cases
 
 ## Lab: 2D Creep Simulation setup 
 

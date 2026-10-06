@@ -19,7 +19,7 @@ title: "C Keywords"
 
 [CNTRAX]({{ '/docs/en/keyword_documentation/c/cntrax/' | relative_url }})
 
-[CNTRAX(3D)](cntrax\(3d\).htm)
+[CNTRAX(3D)]({{ '/docs/en/keyword_documentation/c/cntrax(3d)/' | relative_url }})
 
 [CNVCOF (2D3D)]({{ '/docs/en/keyword_documentation/c/cnvcof/' | relative_url }})
 

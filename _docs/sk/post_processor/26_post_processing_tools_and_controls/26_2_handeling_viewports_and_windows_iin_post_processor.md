@@ -110,7 +110,7 @@ Okno vlastností „Nastavenia osvetlenia“
 
 Okno „Pokročilé vlastnosti svetla“
 
-Pozri kapitolu [ 8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}), časť [Set Lighting Property](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Set_Lighting_Property).
+Pozri kapitolu [ 8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}), časť [Set Lighting Property]({{ '/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#Set_Lighting_Property).
 
 ## Ponuka Windows
 

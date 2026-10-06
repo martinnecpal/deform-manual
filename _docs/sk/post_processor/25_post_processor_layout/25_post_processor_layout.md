@@ -233,7 +233,7 @@ Možnosti ponuky RMB pre materiál v strome operácií
 
 V grafickom okne sa zobrazuje grafické znázornenie objektov. Zobrazujú sa tu kontúry stavových premenných nad objektmi, grafy, histogramy, sieť prietokov a vyplnenie čipu (kontaktné uzly). (Pozri obr. 25.1.)
 
-Kliknutím pravým tlačidlom myši na grafické okno sa zobrazia niektoré možnosti na zobrazenie informácií o simulácii, nastavenie zobrazenia, meranie rozmerov a zmenu motívu pozadia. (Pozri obr. 25.13.) Ďalšie informácie o týchto možnostiach nájdete v [Graphics window RMB options.](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm#Graphics_window_RMB_options)
+Kliknutím pravým tlačidlom myši na grafické okno sa zobrazia niektoré možnosti na zobrazenie informácií o simulácii, nastavenie zobrazenia, meranie rozmerov a zmenu motívu pozadia. (Pozri obr. 25.13.) Ďalšie informácie o týchto možnostiach nájdete v [Graphics window RMB options.]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Graphics_window_RMB_options)
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image014.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/25_post_processor_layout/image015.jpg' | relative_url }})
 

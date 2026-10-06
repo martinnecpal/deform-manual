@@ -42,8 +42,8 @@ ANGMOV specifies the rotational velocity of an object with the counterclockwise 
   
 REMARKS  
 ---  
-The rotational velocity of an object can be specified by a torque rate or an angular velocity Applicable object types: [Rigid](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.5._Rigid)  
+The rotational velocity of an object can be specified by a torque rate or an angular velocity Applicable object types: [Rigid]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.5._Rigid)  
   
 RELATED TOPICS  
 ---  
-Keywords: [MOVCTL](../m/movctl_\(2d\).htm), [CNTRAX]({{ '/docs/sk/keyword_documentation/c/cntrax/' | relative_url }})
+Keywords: [MOVCTL]({{ '/docs/sk/keyword_documentation/m/movctl_(2d)/' | relative_url }}), [CNTRAX]({{ '/docs/sk/keyword_documentation/c/cntrax/' | relative_url }})

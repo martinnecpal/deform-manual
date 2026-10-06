@@ -33,7 +33,7 @@ BCCANG specifies the angle at which nodal and force boundary constraints (URZ an
   
 REMARKS  
 ---  
-The boundary constraint angle is defined by the angle measured from the X axis of the global coordinate system to the X' axis of the local coordinate system counter clockwise. If no value is specified for DefAngle, it is assumed to be zero. Applicable object types: [Elastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.2._Elastic), [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic), [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic), and [Porous](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.4._Porous).  
+The boundary constraint angle is defined by the angle measured from the X axis of the global coordinate system to the X' axis of the local coordinate system counter clockwise. If no value is specified for DefAngle, it is assumed to be zero. Applicable object types: [Elastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.2._Elastic), [Plastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic), [Elastoplastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic), and [Porous]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.4._Porous).  
   
 RELATED TOPICS  
 ---  

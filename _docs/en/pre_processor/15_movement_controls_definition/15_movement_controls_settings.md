@@ -61,7 +61,7 @@ For 3D model X,Y,Z,-X,-Y,-Z and Other directions are available. Other direction 
 
 ## Assigning movement to Deformable objects
 
-[2D, 3D]: In case of coupled dies stress study or other situation where user need to define the translational movement for the deformable objects like, Elastic, Plastic, Elasto plastic and Porous Movement Boundary condition under deformation BCC tree must be defined for that object. The movement Boundary condition defined plane must be the surface not in contact with the other objects where the deformation is intended, because the Movement BCC defined plane wont deform but move with the translational movement defined. (See Fig. 15.3. and Fig. 15.4.)
+\[2D, 3D]: In case of coupled dies stress study or other situation where user need to define the translational movement for the deformable objects like, Elastic, Plastic, Elasto plastic and Porous Movement Boundary condition under deformation BCC tree must be defined for that object. The movement Boundary condition defined plane must be the surface not in contact with the other objects where the deformation is intended, because the Movement BCC defined plane wont deform but move with the translational movement defined. (See Fig. 15.3. and Fig. 15.4.)
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_image004.jpg' | relative_url }})
 
@@ -87,7 +87,7 @@ Movement preview window
 
 ## Movement control user subroutines
 
-[2D, 3D]: Complex die movement can be defined using user defined FORTRAN subroutines. USRDSP routine allows the user to calculate the speed of the rigid object that has movement defined as a user model. Please refer [chapter 56.2.3.2 USER ROUTINE USRDSP](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_2_User_defined_movement_control_\(USRDSP\)) for 2D and 3D for a description of how to implement user defined subroutines. The defined routine number must be specified in the movement control window as shown in the below Fig. 15.6. and Fig. 15.7.
+\[2D, 3D]: Complex die movement can be defined using user defined FORTRAN subroutines. USRDSP routine allows the user to calculate the speed of the rigid object that has movement defined as a user model. Please refer [chapter 56.2.3.2 USER ROUTINE USRDSP]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#56_2_3_2_User_defined_movement_control_\(USRDSP\)) for 2D and 3D for a description of how to implement user defined subroutines. The defined routine number must be specified in the movement control window as shown in the below Fig. 15.6. and Fig. 15.7.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_image006.jpg' | relative_url }})
 
@@ -121,23 +121,23 @@ Movement preview window
 
 [15.11. Friction Welding movement]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/' | relative_url }})
 
-[Primary die selection from simulation controls](../9_simulation_controls/9_2_defining_step.htm#Primary_die_\(PDIE\))
+[Primary die selection from simulation controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}#Primary_die_\(PDIE\))
 
-[Step increment control (DSMAX/DTMAX)](../9_simulation_controls/9_2_defining_step.htm#Step_increment_control_\(DSMAX/DTMAX\)) [2D, 3D]
+[Step increment control (DSMAX/DTMAX)]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}#Step_increment_control_\(DSMAX/DTMAX\)) [2D, 3D]
 
-[Selecting time step and number of steps](../9_simulation_controls/9_2_defining_step.htm#Selecting_time_step_and_number_of_steps) [2D, 3D]
+[Selecting time step and number of steps]({{ '/docs/en/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}#Selecting_time_step_and_number_of_steps) [2D, 3D]
 
-[Primary die stopping controls from simulation controls](../9_simulation_controls/9_3_stopping_controls.htm#9.3.2._Primary_Die_Displacement_\(SMAX\))
+[Primary die stopping controls from simulation controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}#9.3.2._Primary_Die_Displacement_\(SMAX\))
 
-[Primary die selection from general object data definition window](../11_general_object_data_definition/11_general_object_data_definition.htm#11.5._Primary_Die)
+[Primary die selection from general object data definition window]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.5._Primary_Die)
 
-[2D Geometry type selection from Simulation controls](../9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])
+[2D Geometry type selection from Simulation controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])
 
 [14\. Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
 [18\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
-[Movement-User Routine (USRDSP)](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_2_User_defined_movement_control_\(USRDSP\))
+[Movement-User Routine (USRDSP)]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#56_2_3_2_User_defined_movement_control_\(USRDSP\))
 
 [2D Basic Labs]({{ '/docs/en/labs/basic_labs/2d_labs/2d_labs/' | relative_url }})
 

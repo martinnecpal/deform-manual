@@ -245,7 +245,7 @@ For more details on add cycles refer the chapter[ 6.6.5. Adding Cycles.]({{ '/do
 To do Copy/pasting operation:
 
   1. Select one or more operations in the operation editor by Clicking in the background of the operation editor and dragging the mouse to select one or more operations or using ctrl + mouse click to select/unselect an operation 
-  2. Use mouse to right-click on one of the selected operations, and then click the ‘Copy’ menu item ([ Fig. 6.1.12 a.](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Fig._6.1.12.a_Select_copy_option_to_copy_the_selected_operation/s)).Use mouse to right-click on an operation and the click the ‘Paste’ menu item. The copied operations will be pasted after this operation[ Fig. 6.1.12\. b](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Fig._6.1.12.b_Select_paste_to_paste_the_copied_operation/s),  Fig. 6.1.12\. c ).
+  2. Use mouse to right-click on one of the selected operations, and then click the ‘Copy’ menu item ([ Fig. 6.1.12 a.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Fig._6.1.12.a_Select_copy_option_to_copy_the_selected_operation/s)).Use mouse to right-click on an operation and the click the ‘Paste’ menu item. The copied operations will be pasted after this operation[ Fig. 6.1.12\. b]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Fig._6.1.12.b_Select_paste_to_paste_the_copied_operation/s),  Fig. 6.1.12\. c ).
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image019.jpg' | relative_url }})
 
@@ -570,7 +570,7 @@ Load and Save viewport options; (a) Lod viewport (b) Save viewport
   
 **Object display mode** : Using this user can control the object display in graphics window, there are three types of object display modes, those are single Multi and user defined object display modes. Refer to Object display mode explanation under Operation Tree for more details.
 
-**Contact display:** Using this user can turn on/off the inter-object contact nodes display. (See[ Fig. 6.1.33.](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Fig._6.1.33._Contact_display_turn_on/off_options))
+**Contact display:** Using this user can turn on/off the inter-object contact nodes display. (See[ Fig. 6.1.33.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Fig._6.1.33._Contact_display_turn_on/off_options))
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image052.jpg' | relative_url }})
 
@@ -621,11 +621,11 @@ After turning on the contact display user can select point or polygon type displ
 2D Point and polygon contact nodes display example
 
   
-**Feature Angle (3D)** : User can use this option to change the range of selection when selecting the elements/nodes/polygons for adding BCC or editing geometry etc using surface patch method. It displays the surface patch by treating surfaces within the feature angle as the one surface. A curved surface with smaller feature angle means fewer surface polygons will be picked at a time. For more information refer 8. Pre-processor [Feature Angle](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Change_feature_angle)
+**Feature Angle (3D)** : User can use this option to change the range of selection when selecting the elements/nodes/polygons for adding BCC or editing geometry etc using surface patch method. It displays the surface patch by treating surfaces within the feature angle as the one surface. A curved surface with smaller feature angle means fewer surface polygons will be picked at a time. For more information refer 8. Pre-processor [Feature Angle]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#Change_feature_angle)
 
 ## Tool Bar Options
 
-Tool bar options has been explained in [section 6.4.4. Tool bar options](6_4_main_menu.htm#Tool_bar_options), hence please refer that section for more details.
+Tool bar options has been explained in [section 6.4.4. Tool bar options]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu/' | relative_url }}#Tool_bar_options), hence please refer that section for more details.
 
 **Related Topics:**
 

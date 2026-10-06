@@ -85,15 +85,15 @@ Radiálny posun na jeden zdvih: ide o vzdialenosť, o ktorú sa súprava matíc 
 
 ## Metóda polohovania matice
 
-  * ****[**0 - % (Percentage or fraction of billet length between 0 to 1)** :](29_1_cogging_setup.htm#Die_positioning_using_the_percentage_as_reference) Počiatočná alebo koncová poloha sa určuje ako zlomok dĺžky polotovaru od príslušných koncov polotovaru, pričom sa zohľadňuje smer zubovania.
+  * ****[**0 - % (Percentage or fraction of billet length between 0 to 1)** :]({{ '/docs/sk/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Die_positioning_using_the_percentage_as_reference) Počiatočná alebo koncová poloha sa určuje ako zlomok dĺžky polotovaru od príslušných koncov polotovaru, pričom sa zohľadňuje smer zubovania.
 
-  * [**1 – ref (Reference points)**](29_1_cogging_setup.htm#Die_positioning_with_reference_point): Počiatočná alebo koncová poloha sa určuje výberom dvoch bodov na polotovare; v tabuľke sú zobrazené iba súradnice x.
+  * [**1 – ref (Reference points)**]({{ '/docs/sk/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Die_positioning_with_reference_point): Počiatočná alebo koncová poloha sa určuje výberom dvoch bodov na polotovare; v tabuľke sú zobrazené iba súradnice x.
 
-  * [**2 – dst (Absolute distance from billet ends)**](29_1_cogging_setup.htm#Die_positioning_using_the_distance_as_reference): Počiatočná alebo koncová poloha sa určuje na základe vzdialenosti od príslušných koncov sochory, pričom sa zohľadňuje smer zubového posunu.
+  * [**2 – dst (Absolute distance from billet ends)**]({{ '/docs/sk/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Die_positioning_using_the_distance_as_reference): Počiatočná alebo koncová poloha sa určuje na základe vzdialenosti od príslušných koncov sochory, pričom sa zohľadňuje smer zubového posunu.
 
-  * [**3 -ofst (Offset)**](29_1_cogging_setup.htm#DIe_positioning_using_Offset_as_reference): Počiatočná poloha je určená ako relatívna vzdialenosť od predchádzajúcej polohy matrice.
+  * [**3 -ofst (Offset)**]({{ '/docs/sk/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#DIe_positioning_using_Offset_as_reference): Počiatočná poloha je určená ako relatívna vzdialenosť od predchádzajúcej polohy matrice.
 
-Ďalšie podrobnosti o metódach polohovania matrice sú vysvetlené v časti „Nastavenie coggingu“; ďalšie informácie nájdete v časti [29.1.2.Die Positioning Method](29_1_cogging_setup.htm#29_1_2_Die_Positioning_Method)
+Ďalšie podrobnosti o metódach polohovania matrice sú vysvetlené v časti „Nastavenie coggingu“; ďalšie informácie nájdete v časti [29.1.2.Die Positioning Method]({{ '/docs/sk/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#29_1_2_Die_Positioning_Method)
 
 ## Ako pridať operáciu lisovania
 
@@ -132,7 +132,7 @@ Lisovanie je zvyčajne proces spracovania za studena, využíva sa však aj v te
 
   * **Horúci proces – výpočet teploty v sochore a formách**: V rámci tohto procesu vieme vypočítať teplotu v sochore, formách a manipulátoroch. Všetky objekty by mali byť rozdelené na sieť, keďže potrebujeme vykonať tepelné výpočty na sochore, formách a manipulátoroch. Budeme môcť vykonať výpočty prenosu tepla aj deformácie.
 
-Prenos tepla medzi jednotlivými zdvihmi je možné nastaviť aj zaškrtnutím políčka „Prenos tepla na jeden zdvih“, ako je znázornené na obr. 29.2.2. Podrobnejšie informácie o týchto prevádzkových cykloch sú uvedené v časti „Nastavenie coggingu“ [Heat transfer per bite.](29_1_cogging_setup.htm#Heat_Transfer_Per_Bite)
+Prenos tepla medzi jednotlivými zdvihmi je možné nastaviť aj zaškrtnutím políčka „Prenos tepla na jeden zdvih“, ako je znázornené na obr. 29.2.2. Podrobnejšie informácie o týchto prevádzkových cykloch sú uvedené v časti „Nastavenie coggingu“ [Heat transfer per bite.]({{ '/docs/sk/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Heat_Transfer_Per_Bite)
 
 **Nastavenie objektu**
 
@@ -146,7 +146,7 @@ Prenos tepla medzi jednotlivými zdvihmi je možné nastaviť aj zaškrtnutím p
 
   * **Použiť rotačnú symetriu**: Zaškrtnutím tohto políčka bude môcť používateľ definovať symetriu na obrobku, pozri obr. Využitím symetrie je možné skrátiť čas simulácie.
 
-  * **Opätovné zahriatie obrobku medzi priechodmi** je možné simulovať pomocou zaškrtávacieho políčka „Použiť adaptívne opätovné zahriatie“ v okne procesu a definovaním vstupných údajov. Podrobnejšie informácie nájdete v časti „Nastavenie coggingu“ [Use Adaptive Reheat.](29_1_cogging_setup.htm#Use_Adaptive_Reheat)
+  * **Opätovné zahriatie obrobku medzi priechodmi** je možné simulovať pomocou zaškrtávacieho políčka „Použiť adaptívne opätovné zahriatie“ v okne procesu a definovaním vstupných údajov. Podrobnejšie informácie nájdete v časti „Nastavenie coggingu“ [Use Adaptive Reheat.]({{ '/docs/sk/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Use_Adaptive_Reheat)
 
 ## Tabuľka priechodov
 
@@ -174,7 +174,7 @@ Okno „Pokročilé informácie o preukaze“
 
 **Prechod medzi dvojicami matíc:**
 
-Táto voľba platí iba v prípade, ak sa používajú 4 matrice a veľkosť deformácie, t. j. zdvih kovania, sa líši pre horizontálnu sadu matríc a vertikálnu sadu matríc používaných pri zubovaní. Ďalšie podrobnosti nájdete v časti [Shift between pairs of dies](29_1_cogging_setup.htm#Shift_between_pairs_of_dies) v kapitole [Pass table.](29_1_cogging_setup.htm#29_1_6_Pass_Table).
+Táto voľba platí iba v prípade, ak sa používajú 4 matrice a veľkosť deformácie, t. j. zdvih kovania, sa líši pre horizontálnu sadu matríc a vertikálnu sadu matríc používaných pri zubovaní. Ďalšie podrobnosti nájdete v časti [Shift between pairs of dies]({{ '/docs/sk/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Shift_between_pairs_of_dies) v kapitole [Pass table.]({{ '/docs/sk/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#29_1_6_Pass_Table).
 
 ##  Zoznam materiálov
 
@@ -238,7 +238,7 @@ Okno pre prevod jednotiek
 
 ## Stránka objektu
 
-Na obr. 29.2.12. sú zobrazené informácie v okne objektu. Táto funkcia umožňuje zachovať veľkosť alebo tvar prvku v prípade väčšej deformácie, ako napríklad pri zubovaní. K dispozícii je tiež možnosť vyrovnania obrobku v prípade ohybu po každom zábere alebo prechode. Tieto funkcie sú užitočné pri operáciách s ozubením; podrobnosti o týchto možnostiach nájdete v [29.1.8. Object window](29_1_cogging_setup.htm#29_1_8_Object_window).
+Na obr. 29.2.12. sú zobrazené informácie v okne objektu. Táto funkcia umožňuje zachovať veľkosť alebo tvar prvku v prípade väčšej deformácie, ako napríklad pri zubovaní. K dispozícii je tiež možnosť vyrovnania obrobku v prípade ohybu po každom zábere alebo prechode. Tieto funkcie sú užitočné pri operáciách s ozubením; podrobnosti o týchto možnostiach nájdete v [29.1.8. Object window]({{ '/docs/sk/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#29_1_8_Object_window).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image021.jpg' | relative_url }})
 
@@ -382,7 +382,7 @@ Okno „Top Die Geometry Primitive“
 Ďalšie informácie o možnostiach geometrie nájdete v [12\. 3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 **Sieťovina**  
-Možnosti vytvárania sietí pre lisovacie formy sú podobné ako v prípade polotovaru; ďalšie informácie o vytváraní sietí nájdete v dokumente [Top Die Mesh](29_1_cogging_setup.htm#Top_Die_Mesh).
+Možnosti vytvárania sietí pre lisovacie formy sú podobné ako v prípade polotovaru; ďalšie informácie o vytváraní sietí nájdete v dokumente [Top Die Mesh]({{ '/docs/sk/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Top_Die_Mesh).
 
 **Materiál**  
 Priradenie materiálu k formám prebieha podobne ako v prípade sochoru. Používateľ môže vybrať požadovaný materiál zo zoznamu alebo ho importovať zo súboru či knižnice. Používateľ môže tiež pridať nový materiál. 

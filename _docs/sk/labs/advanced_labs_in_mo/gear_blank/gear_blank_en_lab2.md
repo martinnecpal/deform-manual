@@ -9,7 +9,7 @@ The next simulation will be continued in 3D mode. So to start preprocessing in 3
 
 ### Add Convertor operator
 
-To convert the workpiece results of previous 2D operation, 2D to 3D convert operator must be added after 2D operation. Click on the ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to **2D to 3D Convertor** under **Simulation Operators** list from **Explorer** tab as shown in [Fig. L2.1.](gear_blank_en_lab2.htm#Fig_L2_1_Adding_2D_to_3D_Convertor_Operator)
+To convert the workpiece results of previous 2D operation, 2D to 3D convert operator must be added after 2D operation. Click on the ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to **2D to 3D Convertor** under **Simulation Operators** list from **Explorer** tab as shown in [Fig. L2.1.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab2/' | relative_url }}#Fig_L2_1_Adding_2D_to_3D_Convertor_Operator)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab2_image0001.jpg' | relative_url }})
 

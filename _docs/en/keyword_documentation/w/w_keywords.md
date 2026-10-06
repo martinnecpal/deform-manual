@@ -17,9 +17,9 @@ title: "W Keywords"
 
 [WINRSE (2D3D)]({{ '/docs/en/keyword_documentation/w/winrse/' | relative_url }})
 
-[WINSTP (2D)](winstp_\(2d\).htm)
+[WINSTP (2D)]({{ '/docs/en/keyword_documentation/w/winstp_(2d)/' | relative_url }})
 
-[WINSTP (3D)](winstp_\(3d\).htm)
+[WINSTP (3D)]({{ '/docs/en/keyword_documentation/w/winstp_(3d)/' | relative_url }})
 
 [WINTMP (2D)]({{ '/docs/en/keyword_documentation/w/wintmp/' | relative_url }})
 

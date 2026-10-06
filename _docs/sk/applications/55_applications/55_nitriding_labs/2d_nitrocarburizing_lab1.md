@@ -184,7 +184,7 @@ Workpiece definition page
 
 ### Create Geometry
 
-In 'Geometry' page, click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), on the following page choose '**Bar** ', and give **13** mm as **width** , **13** mm as **height** and (-6.5, -6.5) as center X, Y (See [Fig. 2DNCL1.15](2d_nitriding_labs.htm#Fig_2DNL1_15_Mesh_Windows_Defined_for_Workpiece)), the object geometry is also previewed at the central graphic window area. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button to accept all the changes, and it will come back to the 'Geometry' definition. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Material page to assign material.
+In 'Geometry' page, click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), on the following page choose '**Bar** ', and give **13** mm as **width** , **13** mm as **height** and (-6.5, -6.5) as center X, Y (See [Fig. 2DNCL1.15]({{ '/docs/sk/applications/55_applications/55_nitriding_labs/2d_nitriding_labs/' | relative_url }}#Fig_2DNL1_15_Mesh_Windows_Defined_for_Workpiece)), the object geometry is also previewed at the central graphic window area. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button to accept all the changes, and it will come back to the 'Geometry' definition. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Material page to assign material.
 
 ![]({{ '/assets/images/applications/55_nitriding_labs/2d_nitrocarburizing_lab1/image0015.jpg' | relative_url }})
 

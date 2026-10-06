@@ -188,7 +188,7 @@ Anizotropný model
 
 **Karta Kontakt:**
 
-V časti DEFORM - V12 boli na karte Deformácia – Kontakt pridané možnosti kritérií oddelenia; boli implementované ďalšie kritériá kontaktu a oddelenia založené na vzdialenosti a geometrii (pozri obr. 20.1.11. (2D) a obr. 20.1.12. (3D)). Možnosti metódy kontaktu boli presunuté na kartu Simulačné ovládacie prvky ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Advanced ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})[Contact](../9_simulation_controls/9_7_advanced_options.htm#9.7.5._Contact_).
+V časti DEFORM - V12 boli na karte Deformácia – Kontakt pridané možnosti kritérií oddelenia; boli implementované ďalšie kritériá kontaktu a oddelenia založené na vzdialenosti a geometrii (pozri obr. 20.1.11. (2D) a obr. 20.1.12. (3D)). Možnosti metódy kontaktu boli presunuté na kartu Simulačné ovládacie prvky ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Advanced ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})[Contact]({{ '/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#9.7.5._Contact_).
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/20_1_image011.jpg' | relative_url }})
 

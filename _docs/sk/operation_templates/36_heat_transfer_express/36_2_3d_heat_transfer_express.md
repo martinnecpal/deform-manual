@@ -138,7 +138,7 @@ Okno obrobku
 **Názov objektu**: Používateľ môže definovať názov všetkých objektov dostupných v danej operácii.
 
   
-**Typ objektu**: Typ objektu ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe typu DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. V operácii Forming je k dispozícii viac typov objektov, podrobnosti nájdete v [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
+**Typ objektu**: Typ objektu ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe typu DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. V operácii Forming je k dispozícii viac typov objektov, podrobnosti nájdete v [11.4. Object Type]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type).
 
   
 **Plast**: Plastové objekty sa modelujú ako tuho-plastický alebo tuho-viskoplastický materiál v závislosti od vlastností materiálov. Model predpokladá, že napätie v materiáli lineárne rastie s rýchlosťou deformácie až do prahovej hodnoty rýchlosti deformácie, označovanej ako limitná rýchlosť deformácie ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). Po prekročení medznej rýchlosti deformácie sa materiál deformuje plasticky. Plastické správanie materiálu objektu sa špecifikuje pomocou funkcie tečenia materiálu alebo údajov o tečivom napätí ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). V programe Heat Transfer Express sa obrobok automaticky priradí k typu objektu „Plast“.  
@@ -160,7 +160,7 @@ Pomocou pokročilých nastavení môže používateľ zadať teplotu, deformáci
 Pokročilé nastavenia objektov
 
   
-V operácii „Forming“ je možné inicializovať ďalšie premenné; podrobnosti nájdete v operácii [35\. 2D Heat Transfer]({{ '/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}) a [Initialize](../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize).
+V operácii „Forming“ je možné inicializovať ďalšie premenné; podrobnosti nájdete v operácii [35\. 2D Heat Transfer]({{ '/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}) a [Initialize]({{ '/docs/sk/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}#Initialize).
 
 Priemerná rýchlosť deformácie ([AVGSTR]({{ '/docs/en/keyword_documentation/a/avgstr/' | relative_url }})) je charakteristická priemerná hodnota efektívnej rýchlosti deformácie. Na začiatku simulácie by sa mala zadať aproximácia tejto hodnoty.
 
@@ -353,7 +353,7 @@ Pre obrobok bola nastavená okrajová podmienka symetrie
 
 Pre obrobok bola nastavená okrajová podmienka výmeny tepla s okolím
 
-Ďalšie možnosti BCC v rôznych kategóriách sú k dispozícii v predspracovaní a formovacích operáciách, napríklad [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
+Ďalšie možnosti BCC v rôznych kategóriách sú k dispozícii v predspracovaní a formovacích operáciách, napríklad [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ### Definícia tepelného stavu
 
@@ -431,7 +431,7 @@ Nastavenia výberu objektov pri operácii presunu
 
 ### Umiestňovanie objektov a vytváranie vzťahov medzi objektmi
 
-Ak používateľ vyberie viac ako jeden objekt, systém za objektmi pridá ovládacie prvky (polohovanie) a okná naplánovaného polohovania a kontaktu, aby sa objekty správne umiestnili a aby sa v prípade potreby v nastavení vytvoril kontakt medzi objektmi. Ďalšie podrobnosti o týchto možnostiach nájdete v časti [Defining Rest on die operation](36_1_2d_heat_transfer_express.htm#36_1_5_Defining_Rest_on_die_Operation), konkrétne v oddieloch [Positioning](36_1_2d_heat_transfer_express.htm#Positioning) a [Scheduled Positioning](36_1_2d_heat_transfer_express.htm#Schedule_Positioning).
+Ak používateľ vyberie viac ako jeden objekt, systém za objektmi pridá ovládacie prvky (polohovanie) a okná naplánovaného polohovania a kontaktu, aby sa objekty správne umiestnili a aby sa v prípade potreby v nastavení vytvoril kontakt medzi objektmi. Ďalšie podrobnosti o týchto možnostiach nájdete v časti [Defining Rest on die operation]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#36_1_5_Defining_Rest_on_die_Operation), konkrétne v oddieloch [Positioning]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Positioning) a [Scheduled Positioning]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Schedule_Positioning).
 
 ### Definícia pojmu „tepelné podmienky“
 
@@ -443,7 +443,7 @@ Teplotné podmienky pri prevádzke prenosu
 
 Po nastavení teplotných podmienok musí používateľ definovať ovládacie prvky simulácie; podrobnosti o nastavení ovládacích prvkov simulácie nájdete v časti Definícia ovládacích prvkov simulácie.
 
-Databáza Next sa musí vytvoriť v prípade interaktívnej inštalácie alebo ak je operácia prenosu prvou operáciou; v opačnom prípade sa databáza vytvorí automaticky počas simulácie. Ďalšie informácie o ovládacích prvkoch simulácie a vytváraní databázy nájdete v častiach [Simuation controls Definition](36_1_2d_heat_transfer_express.htm#Simulation_controls_Definition) a [Generate Database](36_1_2d_heat_transfer_express.htm#Generate_Database).
+Databáza Next sa musí vytvoriť v prípade interaktívnej inštalácie alebo ak je operácia prenosu prvou operáciou; v opačnom prípade sa databáza vytvorí automaticky počas simulácie. Ďalšie informácie o ovládacích prvkoch simulácie a vytváraní databázy nájdete v častiach [Simuation controls Definition]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Simulation_controls_Definition) a [Generate Database]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Generate_Database).
 
 ## Definovanie operácie „Odpočinok na matrici“
 
@@ -473,7 +473,7 @@ V tomto okne si môže používateľ v závislosti od nastavenia procesu vybrať
 
 Okno na výber objektov
 
-Podrobnosti o modeloch [basic object definition](36_1_2d_heat_transfer_express.htm#Object_Basic_definition), [geometry](36_1_2d_heat_transfer_express.htm#Object_geometry_definition), [mesh](36_1_2d_heat_transfer_express.htm#Object_Mesh_Definition), [material](36_1_2d_heat_transfer_express.htm#Material_Definition) a [boundary condition](36_1_2d_heat_transfer_express.htm#Boundary_Condition_Definition) nájdete v bode 36.2.4. Definovanie režimu kúrenia.
+Podrobnosti o modeloch [basic object definition]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Object_Basic_definition), [geometry]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Object_geometry_definition), [mesh]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Object_Mesh_Definition), [material]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Material_Definition) a [boundary condition]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Boundary_Condition_Definition) nájdete v bode 36.2.4. Definovanie režimu kúrenia.
 
 ### Polohovanie
 
@@ -525,7 +525,7 @@ Okno nastavení teplotných podmienok
 Po nastavení teplotných podmienok musí používateľ definovať ovládacie prvky simulácie; podrobnosti o nastavení ovládacích prvkov simulácie nájdete v časti Definícia ovládacích prvkov simulácie.
 
   
-Databáza Next sa musí vygenerovať v prípade interaktívnej inštalácie alebo ak ide o prvú operáciu prenosu; v opačnom prípade sa databáza vygeneruje automaticky počas simulácie. Ďalšie informácie o ovládacích prvkoch simulácie a generovaní databázy nájdete v častiach [Simuation controls Definition](36_1_2d_heat_transfer_express.htm#Simulation_controls_Definition) a [Generate Database](36_1_2d_heat_transfer_express.htm#Generate_Database).
+Databáza Next sa musí vygenerovať v prípade interaktívnej inštalácie alebo ak ide o prvú operáciu prenosu; v opačnom prípade sa databáza vygeneruje automaticky počas simulácie. Ďalšie informácie o ovládacích prvkoch simulácie a generovaní databázy nájdete v častiach [Simuation controls Definition]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Simulation_controls_Definition) a [Generate Database]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Generate_Database).
 
 ## Pokračovanie v definovaní tvárniacich operácií
 
@@ -557,7 +557,7 @@ Okno nastavení teplotných podmienok
 Po nastavení teplotných podmienok musí používateľ definovať ovládacie prvky simulácie; podrobnosti o nastavení ovládacích prvkov simulácie nájdete v časti Definícia ovládacích prvkov simulácie.
 
   
-Databáza Next sa musí vytvoriť v prípade interaktívnej inštalácie alebo ak je operácia prenosu prvou operáciou; v opačnom prípade sa databáza vytvorí automaticky počas simulácie. Ďalšie informácie o ovládacích prvkoch simulácie a vytváraní databázy nájdete v častiach [Simuation controls Definition](36_1_2d_heat_transfer_express.htm#Simulation_controls_Definition) a [Generate Database](36_1_2d_heat_transfer_express.htm#Generate_Database).
+Databáza Next sa musí vytvoriť v prípade interaktívnej inštalácie alebo ak je operácia prenosu prvou operáciou; v opačnom prípade sa databáza vytvorí automaticky počas simulácie. Ďalšie informácie o ovládacích prvkoch simulácie a vytváraní databázy nájdete v častiach [Simuation controls Definition]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Simulation_controls_Definition) a [Generate Database]({{ '/docs/sk/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Generate_Database).
 
 **Súvisiace témy:**
 

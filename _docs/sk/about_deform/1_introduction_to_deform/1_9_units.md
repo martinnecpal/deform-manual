@@ -57,7 +57,7 @@ Systém jednotiek DEFORM
 
 Na začiatku simulácie je dôležité vybrať jednotkový systém. Po zadaní číselných hodnôt v predprocesore zostane číselná hodnota nezmenená, aj keď sa zmení označenie jednotkovej sústavy.
 
-Postprocesor bol vybavený funkciou na konverziu jednotiek pre zobrazenie databázy (pozri [Fig. 26.5.6.](../../post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options.htm#Fig_26_4_6_Unit_Conversion) ). Používateľ má k dispozícii štyri možnosti prepočtu jednotiek. Ak je zvolený konverzný faktor Default (Predvolené), potom sa jednotky vyberú automaticky v závislosti od toho, či je databáza anglická alebo SI. Keďže nie je potrebný žiadny prevod, všetky konverzné faktory sú v tomto stĺpci nastavené na 1,0. V prípadoch konverzie z angličtiny na SI alebo konverzie zo SI na angličtinu sa konverzné faktory a jednotky vyberú z dialógového okna a hodnoty sa prepočítajú a zobrazia v postprocesore. Štvrtá možnosť dáva používateľovi možnosť zobraziť údaje z databázy v jednotkách, ktoré nie sú anglické alebo SI. Používateľ môže voľne zadať konverzné faktory a jednotky zodpovedajúce konverzným faktorom.
+Postprocesor bol vybavený funkciou na konverziu jednotiek pre zobrazenie databázy (pozri [Fig. 26.5.6.]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/' | relative_url }}#Fig_26_4_6_Unit_Conversion) ). Používateľ má k dispozícii štyri možnosti prepočtu jednotiek. Ak je zvolený konverzný faktor Default (Predvolené), potom sa jednotky vyberú automaticky v závislosti od toho, či je databáza anglická alebo SI. Keďže nie je potrebný žiadny prevod, všetky konverzné faktory sú v tomto stĺpci nastavené na 1,0. V prípadoch konverzie z angličtiny na SI alebo konverzie zo SI na angličtinu sa konverzné faktory a jednotky vyberú z dialógového okna a hodnoty sa prepočítajú a zobrazia v postprocesore. Štvrtá možnosť dáva používateľovi možnosť zobraziť údaje z databázy v jednotkách, ktoré nie sú anglické alebo SI. Používateľ môže voľne zadať konverzné faktory a jednotky zodpovedajúce konverzným faktorom.
 
 Pre teplotu neexistuje žiadny používateľský typ prevodu jednotiek, pretože prevod teploty nie je jednoduchým násobením.
 
@@ -103,10 +103,10 @@ Dôležité konštanty jednotky v mobilite hraníc zrna a mikroštruktúry:
 
 **Súvisiace témy:**
 
-[Unit System Selection Pre-Processor](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.3._Units)
+[Unit System Selection Pre-Processor]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.3._Units)
 
-[Material Units Converter Pre-Processor](../../pre_processor/10_material_data/10_material_data.htm#Fig._10.7._Material_Unit_Convertor_window)
+[Material Units Converter Pre-Processor]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }}#Fig._10.7._Material_Unit_Convertor_window)
 
-[Units Converter Post-Processor](../../post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options.htm#26_5_6_Unit_Conversion)
+[Units Converter Post-Processor]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/' | relative_url }}#26_5_6_Unit_Conversion)
 
-[10.3.4. Mass Density](../../pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data.htm#Mass_Density)
+[10.3.4. Mass Density]({{ '/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }}#Mass_Density)

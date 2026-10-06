@@ -30,4 +30,4 @@ When creep calculation is turned on for a given object, the selected creep model
   
 RELATED TOPICS  
 ---  
-[Creep](../../pre_processor/16_object_properties/16_1_deformation_properties.htm#16_1_1_Creep_calculation), [Elasto-plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic) Related Keywords: [CREEP]({{ '/docs/en/keyword_documentation/c/creep/' | relative_url }})
+[Creep]({{ '/docs/en/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }}#16_1_1_Creep_calculation), [Elasto-plastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic) Related Keywords: [CREEP]({{ '/docs/en/keyword_documentation/c/creep/' | relative_url }})

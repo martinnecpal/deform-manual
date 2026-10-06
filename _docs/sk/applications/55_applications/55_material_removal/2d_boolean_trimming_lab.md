@@ -85,7 +85,7 @@ New MO Project window
 
 ## Adding 2D Forming Operation
 
-Multiple Operation wizard will open new project. Add 2D Forming operation from the Explorer Operations list. Operation can be add by clicking on **2D Forming operation** ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button (See [Fig. 2DBTL1.3.](../55_friction_stir_welding/55_friction_stir_welding.htm#Fig_FSWL1_3_Adding_3D_Forming_operation)) or user can also added by drag and drop into the Operation Editor.
+Multiple Operation wizard will open new project. Add 2D Forming operation from the Explorer Operations list. Operation can be add by clicking on **2D Forming operation** ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button (See [Fig. 2DBTL1.3.]({{ '/docs/sk/applications/55_applications/55_friction_stir_welding/55_friction_stir_welding/' | relative_url }}#Fig_FSWL1_3_Adding_3D_Forming_operation)) or user can also added by drag and drop into the Operation Editor.
 
 ![]({{ '/assets/images/applications/55_material_removal/2d_boolean_triming_lab/image0003.jpg' | relative_url }})
 

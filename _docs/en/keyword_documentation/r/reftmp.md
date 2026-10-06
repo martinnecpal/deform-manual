@@ -26,7 +26,7 @@ REFTMP specifies the reference temperature at which the geometry of the object i
   
 REMARKS  
 ---  
-The object reference temperature is used to calculate the material thermal expansion for elastic and elastoplastic objects. Applicable object types: [Elastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.2._Elastic), [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic)  
+The object reference temperature is used to calculate the material thermal expansion for elastic and elastoplastic objects. Applicable object types: [Elastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.2._Elastic), [Elastoplastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic)  
   
 RELATED TOPICS  
 ---  

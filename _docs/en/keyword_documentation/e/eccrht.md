@@ -37,7 +37,7 @@ ECCRHT specifies the resistance heating boundary condition code for individual e
   
 REMARKS  
 ---  
-The boundary condition code (bcc) options for DefBCRstHt and BCRstHt(i) are: 3 = Electric current flux 4 = Local definition (not implemented) For bcc = 3, the value of the electric current flux should be specified with ECRFLX. Applicable object types: [Elastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.2._Elastic), [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic), [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic), and [Porous](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.4._Porous).  
+The boundary condition code (bcc) options for DefBCRstHt and BCRstHt(i) are: 3 = Electric current flux 4 = Local definition (not implemented) For bcc = 3, the value of the electric current flux should be specified with ECRFLX. Applicable object types: [Elastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.2._Elastic), [Plastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic), [Elastoplastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic), and [Porous]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.4._Porous).  
   
 RELATED TOPICS  
 ---  

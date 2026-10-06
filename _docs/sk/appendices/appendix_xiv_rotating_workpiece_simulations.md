@@ -73,9 +73,9 @@ A rotating body with two non-parallel axes
 
 ## Spinning Workpiece
 
-There are some features used to model the deformation of a rotating workpiece with DEFORM-3D. They are under testing and have yet been officially added to DEFORM-3D. However, the user may activate these features when necessary by defining a data file "[AXIS.DAT](appendix_xvii_data_files.htm#AXIS_DAT)" in the working directory of a simulation. The options and contents of [AXIS.DAT](appendix_xvii_data_files.htm#AXIS_DAT) are explained as follows. This functionality works for a single rigid-plastic object and rigid tools only.
+There are some features used to model the deformation of a rotating workpiece with DEFORM-3D. They are under testing and have yet been officially added to DEFORM-3D. However, the user may activate these features when necessary by defining a data file "[AXIS.DAT]({{ '/docs/sk/appendices/appendix_xvii_data_files/' | relative_url }}#AXIS_DAT)" in the working directory of a simulation. The options and contents of [AXIS.DAT]({{ '/docs/sk/appendices/appendix_xvii_data_files/' | relative_url }}#AXIS_DAT) are explained as follows. This functionality works for a single rigid-plastic object and rigid tools only.
 
-Here is the outline of [AXIS.DAT](appendix_xvii_data_files.htm#AXIS_DAT) file structure as described on a line-by-line basis. Each line is data that define how this feature will work for the current simulation. Once this file is created and placed in the current directory that is running a simulation, it will be read by DEFORM and applied to the simulation.
+Here is the outline of [AXIS.DAT]({{ '/docs/sk/appendices/appendix_xvii_data_files/' | relative_url }}#AXIS_DAT) file structure as described on a line-by-line basis. Each line is data that define how this feature will work for the current simulation. Once this file is created and placed in the current directory that is running a simulation, it will be read by DEFORM and applied to the simulation.
 
 _**Caution:**_
 

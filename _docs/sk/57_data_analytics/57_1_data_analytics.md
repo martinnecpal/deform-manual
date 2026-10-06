@@ -21,7 +21,7 @@ title: "57.1. DEFORM Data Analytics User Interface Overview"
 
 ## Opening DEFORM Data analytics 
 
-Data analytics can be accessed from the DEFORM/v13.x folder by opening the “DEF_GUI_DA_64.EXE”. DEFORM Data analytics wizard will be opened, Clicking on ![]({{ '/assets/icons/post_icons/mo_new_file_button.jpg' | relative_url }}) button will create a new DEFORM Data analytics project as shown in the [Fig. 57.1.1.](57_1_data_analytics.htm#Fig_57_1_1_Creating_a_new_data_analytic_project)
+Data analytics can be accessed from the DEFORM/v13.x folder by opening the “DEF_GUI_DA_64.EXE”. DEFORM Data analytics wizard will be opened, Clicking on ![]({{ '/assets/icons/post_icons/mo_new_file_button.jpg' | relative_url }}) button will create a new DEFORM Data analytics project as shown in the [Fig. 57.1.1.]({{ '/docs/sk/57_data_analytics/57_1_data_analytics/' | relative_url }}#Fig_57_1_1_Creating_a_new_data_analytic_project)
 
 ![]({{ '/assets/images/data_analytics/57_1_data_analytics/image0001.jpg' | relative_url }})
 

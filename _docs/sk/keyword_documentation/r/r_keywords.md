@@ -27,7 +27,7 @@ title: "R Keywords"
 
 [RMTIME (2D3D)]({{ '/docs/sk/keyword_documentation/r/rmtime/' | relative_url }})
 
-[ROTSYM (3D)](rotsym_\(3d\).htm)
+[ROTSYM (3D)]({{ '/docs/sk/keyword_documentation/r/rotsym_(3d)/' | relative_url }})
 
 [RSEDEF (3D)]({{ '/docs/sk/keyword_documentation/r/rsedef/' | relative_url }})
 

@@ -39,7 +39,7 @@ Pridať konvertor z 2D do 3D
 
 Ak chcete vyskúšať uvedený príklad, otvorte sprievodcu MO v anglickom systéme jednotiek > pridajte 2D operáciu tvárnenia > importujte súbor kľúčových slov HAMMER_LAB.KEY zo zložky 2D/LABS > prejdite do okna na generovanie databázy > vygenerujte databázu > následne z priečinka Explorer pridajte simulačný operátor na konverziu z 2D do 3D.
 
-V editore operácií vyberte operátor „Prevodník z 2D do 3D“, aby sa otvoril tak, ako je znázornené na obrázku [Fig. 44.1.2.](44_1_2d_to_3d_converter.htm#Fig_44_1_2_Configuration_settings_of_converter_for_2D_axisymmetric/torsion_geometry_type)
+V editore operácií vyberte operátor „Prevodník z 2D do 3D“, aby sa otvoril tak, ako je znázornené na obrázku [Fig. 44.1.2.]({{ '/docs/sk/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/' | relative_url }}#Fig_44_1_2_Configuration_settings_of_converter_for_2D_axisymmetric/torsion_geometry_type)
 
 ![]({{ '/assets/images/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/image0002.jpg' | relative_url }})
 
@@ -49,9 +49,9 @@ Nastavenia konfigurácie prevodníka pre typ geometrie 2D osovo symetrickú/torz
 
 Používateľ musí zvoliť smer nahor pre 3D modely pomocou prepínačov na výber súradnicového systému. Ako je uvedené, ak je zvolená možnosť „Z je hore“, smer Z bude smerom nahor, takže osovo symetrický smer nahor Z v 2D alebo smer nahor Y pri rovinnom deformovaní sa v 3D modeli stane smerom Z. Podobne v prípade voľby „Y je hore“ sa os Y stane smerom nahor v 3D konvertovanom modeli. Predvolene je ako smer nahor zvolený smer Z.
 
-Používateľ môže ovládať počet otáčok a počiatočný uhol objektu pre typ 2D osovo symetrickej geometrie pomocou nastavenia 3D parametrov, ako je znázornené v [Fig. 44.1.2.](44_1_2d_to_3d_converter.htm#Fig_44_1_2_Configuration_settings_of_converter_for_2D_axisymmetric/torsion_geometry_type)
+Používateľ môže ovládať počet otáčok a počiatočný uhol objektu pre typ 2D osovo symetrickej geometrie pomocou nastavenia 3D parametrov, ako je znázornené v [Fig. 44.1.2.]({{ '/docs/sk/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/' | relative_url }}#Fig_44_1_2_Configuration_settings_of_converter_for_2D_axisymmetric/torsion_geometry_type)
 
-Pri konverzii 2D geometrie s rovinným deformovaním/rovinným napätím môže používateľ ovládať dĺžku extrudovania a počiatočnú polohu pomocou nastavení 3D parametrov, ako je znázornené v [Fig. 44.1.3.](44_1_2d_to_3d_converter.htm#Fig_44_1_3_Configuration_settings_of_converter_for_2D_plane_strain/plane_stress_geometry_type). To si možno vyskúšať importovaním príkladu Rib_web_SI.Príklad 2D kovania KEY do 2D operácie tvárnenia podobnej osovo symetrickému príkladu HAMMER_LAB uvedenému v tejto príručke v časti 44.1.1.
+Pri konverzii 2D geometrie s rovinným deformovaním/rovinným napätím môže používateľ ovládať dĺžku extrudovania a počiatočnú polohu pomocou nastavení 3D parametrov, ako je znázornené v [Fig. 44.1.3.]({{ '/docs/sk/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/' | relative_url }}#Fig_44_1_3_Configuration_settings_of_converter_for_2D_plane_strain/plane_stress_geometry_type). To si možno vyskúšať importovaním príkladu Rib_web_SI.Príklad 2D kovania KEY do 2D operácie tvárnenia podobnej osovo symetrickému príkladu HAMMER_LAB uvedenému v tejto príručke v časti 44.1.1.
 
 ![]({{ '/assets/images/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/image0003.jpg' | relative_url }})
 
@@ -89,7 +89,7 @@ Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_3d_preview_button.jpg' 
 
 Nastavenia konverzie geometrie pre lisovacie formy (osovo symetrické)
 
-V prípade 2D geometrie typu „rovinné deformácie/rovinné napätia“ bude používateľ mať k dispozícii iba možnosť geometrie s určitým počtom rezov v smere dĺžky extruzie, ako je znázornené na obrázku [Fig. 44.1.8.](44_1_2d_to_3d_converter.htm#Fig_44_1_8_Geometry_conversion_window_for_plane_strain/plane_stress)
+V prípade 2D geometrie typu „rovinné deformácie/rovinné napätia“ bude používateľ mať k dispozícii iba možnosť geometrie s určitým počtom rezov v smere dĺžky extruzie, ako je znázornené na obrázku [Fig. 44.1.8.]({{ '/docs/sk/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/' | relative_url }}#Fig_44_1_8_Geometry_conversion_window_for_plane_strain/plane_stress)
 
 ![]({{ '/assets/images/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/image0008.jpg' | relative_url }})
 

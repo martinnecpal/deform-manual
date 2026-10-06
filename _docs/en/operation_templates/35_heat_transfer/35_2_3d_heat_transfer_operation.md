@@ -204,7 +204,7 @@ By clicking on this button, system automatically Positions the Objects with resp
 
 **Positioning Objects**![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 35.2.19. For more information about these options, please refer [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Offset]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning), [Flip]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_6_Flip_positioning) and [Rotational]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning) as shown in Fig. 35.2.19. For more information about these options, please refer [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image038.jpg' | relative_url }})
 
@@ -235,7 +235,7 @@ Inter-Object definition window
 
 ## Stopping Controls
 
-The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on maximum number of time steps simulated or the maximum process time. A simulation will be stopped when the condition of any of the stopping parameters are met. For more information, please refer [Stopping Controls](../33_forming/33_2_3d_forming_setup.htm#33_2_7_Stopping_Controls) in [3D Forming setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}).
+The stopping parameters determine the process time at which the simulation terminates. A simulation can be terminated based on maximum number of time steps simulated or the maximum process time. A simulation will be stopped when the condition of any of the stopping parameters are met. For more information, please refer [Stopping Controls]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}#33_2_7_Stopping_Controls) in [3D Forming setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}).
 
 ## Step controls
 

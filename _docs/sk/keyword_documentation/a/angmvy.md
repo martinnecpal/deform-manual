@@ -45,5 +45,5 @@ ANGMVY specifies the torsion rotational movement. Note this is meaningful only f
   
 RELATED TOPICS  
 ---  
-Applicable Geometry types: [Torsion](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])   
-Keywords: [MOVCTL](../m/movctl_\(2d\).htm)
+Applicable Geometry types: [Torsion]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])   
+Keywords: [MOVCTL]({{ '/docs/sk/keyword_documentation/m/movctl_(2d)/' | relative_url }})

@@ -132,7 +132,7 @@ Save the project and click on the MO ![]({{ '/assets/icons/pre_icons/mo_simulati
 3D simulations can be made to run faster by taking advantage of multiple processors or multiple cores on one processor. If your computer processors has 4 cores, then Click the ![]({{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}) label.
 
 set the Simulation Mode to **Interactive** and select **Continue****Run**  
-specify the MPI 3D as **4.** (See [Fig. L3.17.](forming_express_lab3.htm#Fig_L3_17_Run_option_window))
+specify the MPI 3D as **4.** (See [Fig. L3.17.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab3/' | relative_url }}#Fig_L3_17_Run_option_window))
 
 Then click on ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) button and then ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}).
 

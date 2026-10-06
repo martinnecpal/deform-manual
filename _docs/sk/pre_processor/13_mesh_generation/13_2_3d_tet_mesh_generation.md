@@ -315,7 +315,7 @@ Kritériá remeshingu (Autoremesh) sú najvhodnejším spôsobom, ako zvládnuť
 
 Okno nastavenia kritérií na opravu
 
-Podrobnosti o maximálnej hĺbke zásahu (RMDPTH), maximálnom prírastku zdvihu (RMSTRK), maximálnom prírastku času (RMTIME), maximálnom prírastku kroku (RMSTEP) a účele kritérií nájdete v časti [13.1.8. Remeshing criteria](13_1_2d_mesh_generation.htm#13.1.8._Remeshing_criteria)
+Podrobnosti o maximálnej hĺbke zásahu (RMDPTH), maximálnom prírastku zdvihu (RMSTRK), maximálnom prírastku času (RMTIME), maximálnom prírastku kroku (RMSTEP) a účele kritérií nájdete v časti [13.1.8. Remeshing criteria]({{ '/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.8._Remeshing_criteria)
 
 **Vzdialenosť prieniku** (**absolútna**) : Ak je zadané kladné číslo (v jednotke dĺžky), program vykoná kontrolu na každej hrane povrchu, ktorá má na každom konci kontaktný uzol. Vypočíta sa vzdialenosť od stredu hrany k povrchu matrice. Ak maximálna hĺbka prieniku prekročí zadanú hranicu, spustí sa opätovné meranie.
 

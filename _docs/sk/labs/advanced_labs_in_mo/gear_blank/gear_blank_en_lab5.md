@@ -57,7 +57,7 @@ Click on **Top****die****Movement** branch in operation tree to define movement 
 
 Assign a constant **Speed** movement of **3** in/sec in the **–Y** direction.
 
-_Note The position of the imported top die will be corrected in _[section 5.5.](gear_blank_en.htm#5_5_Schedule_position_the_objects)__
+_Note The position of the imported top die will be corrected in _[section 5.5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/' | relative_url }}#5_5_Schedule_position_the_objects)__
 
 Click on **Bottom****die** branch in operation tree to define the bottom die.
 
@@ -65,7 +65,7 @@ Click on **Bottom****die** branch in operation tree to define the bottom die.
 
 Similar to the Top die object definition define set the Bottom die temperature to **300** °F and import the geometry from **Gear.DB** of previous lab. 
 
-_Note The position of the imported top die will be corrected in[section 5.5.](gear_blank_en.htm#5_5_Schedule_position_the_objects)_
+_Note The position of the imported top die will be corrected in[section 5.5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/' | relative_url }}#5_5_Schedule_position_the_objects)_
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab5_image0005.jpg' | relative_url }})
 
@@ -109,7 +109,7 @@ Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 
 
 ### Define Stopping and Step controls
 
-Set the flash thickness to **0.2** ” by using Distance between objects option by selecting points on the flash land of top and bottom dies (See lab3 section [3.10. Define Distance between objects Stopping controls](gear_blank_en_lab3.htm#3_10_Define_Distance_between_objects_Stopping_controls)).
+Set the flash thickness to **0.2** ” by using Distance between objects option by selecting points on the flash land of top and bottom dies (See lab3 section [3.10. Define Distance between objects Stopping controls]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab3/' | relative_url }}#3_10_Define_Distance_between_objects_Stopping_controls)).
 
 Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define other simulation controls.
 

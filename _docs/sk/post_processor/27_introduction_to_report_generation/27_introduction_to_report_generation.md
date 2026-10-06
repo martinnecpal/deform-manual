@@ -39,7 +39,7 @@ Ponuka správ
 
 **MikTeX:** Od verzie DEFORM v12.0 sa na generovanie správ v programe DEFORM používa softvér MikTeX.
 
-V časti „Vytvoriť súbor PDF“ si používateľ môže teraz prezrieť obsah jednotlivých kapitol, súhrn jednotlivých operácií a údajov o objektoch, ako aj výstupy jednotlivých sekcií. Ďalšie informácie týkajúce sa vygenerovanej správy nájdete v kapitole [28\. Report Generation]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }}), v sekcii [Generating Report](../28_report_generation/28_report_generation.htm#Generating__Report).
+V časti „Vytvoriť súbor PDF“ si používateľ môže teraz prezrieť obsah jednotlivých kapitol, súhrn jednotlivých operácií a údajov o objektoch, ako aj výstupy jednotlivých sekcií. Ďalšie informácie týkajúce sa vygenerovanej správy nájdete v kapitole [28\. Report Generation]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }}), v sekcii [Generating Report]({{ '/docs/sk/post_processor/28_report_generation/28_report_generation/' | relative_url }}#Generating__Report).
 
 **Súvisiace témy:**
 

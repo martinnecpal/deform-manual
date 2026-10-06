@@ -45,7 +45,7 @@ title: "40.2. 3D Machining Distortion"
 
 ## How to add 3D Machining Distortion operation
 
-3D Machining Distortion operation can be setup in Integrated Manufacturing Process environment that can be accessed from GUI Main. 3D Machining Distortion Operation can be added in MO wizard, from explorer tab by clicking on button next to 3D Machining Distortion. Also, user can add by drag and drop into the Operation Editor as shown in [Fig. 40.2.1.](40_1_2d_machining_distortion.htm#Fig_40_1_1_Adding_2D_Machining_Distortion_Operation_to_operation_editor)
+3D Machining Distortion operation can be setup in Integrated Manufacturing Process environment that can be accessed from GUI Main. 3D Machining Distortion Operation can be added in MO wizard, from explorer tab by clicking on button next to 3D Machining Distortion. Also, user can add by drag and drop into the Operation Editor as shown in [Fig. 40.2.1.]({{ '/docs/en/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/' | relative_url }}#Fig_40_1_1_Adding_2D_Machining_Distortion_Operation_to_operation_editor)
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image001.jpg' | relative_url }})
 
@@ -91,7 +91,7 @@ Initialize Window
 
 ### Built In Flownet
 
-Using Built in Flownet option user can generate Flownet mesh for the object. When user uses Built in Flownet, the Flownet is plotted as the problem is simulated. For more infromation related to Built in Flownet option refer [13.2.9. Built in Flownet.](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet)
+Using Built in Flownet option user can generate Flownet mesh for the object. When user uses Built in Flownet, the Flownet is plotted as the problem is simulated. For more infromation related to Built in Flownet option refer [13.2.9. Built in Flownet.]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13_2_9_Built_In_Flownet)
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image005.jpg' | relative_url }})
 
@@ -143,7 +143,7 @@ Positioning window
 
 **Automatic Positioning**![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) : Auto positioning is used by user to position the rigid objects with workpiece, this option works well for the three objects in forming operation however, user has to review the positioned objects after using the auto positioning in Machining Distortion.
 
-**Positioning Objects** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}): By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 40.2.12. For more information about these options, please refer [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
+**Positioning Objects** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}): By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Drop]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_5_Drop_positioning), [Offset]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning), and [Rotational]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning) as shown in Fig. 40.2.12. For more information about these options, please refer [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image008.jpg' | relative_url }})
 

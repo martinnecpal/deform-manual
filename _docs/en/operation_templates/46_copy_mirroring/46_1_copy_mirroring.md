@@ -7,7 +7,7 @@ title: "46.1. Copy Mirroring"
 
 46.1.1. How to add Copy/Mirroring Operation
 
-[46.1.2. Adding Copy/Mirroring Operation](46_1_copy_mirroring.htm#46_1_2_Adding_Copy/Mirroring_Operation)
+[46.1.2. Adding Copy/Mirroring Operation]({{ '/docs/en/operation_templates/46_copy_mirroring/46_1_copy_mirroring/' | relative_url }}#46_1_2_Adding_Copy/Mirroring_Operation)
 
 46.1.3. Objects Page
 
@@ -37,7 +37,7 @@ Importing the 3D Spike key file
 
 ## Adding Copy/Mirroring Operation
 
-After Running the first Forming operation simulation, we can add the Copy/Mirroring operation from explorer’s Simulation operator group as shown in [Fig. 46.1.2.](46_1_copy_mirroring.htm#Fig_46_1_2_Adding_Copy/Mirroring_Operation) Click on Copy/Mirroring operation, we will get the “Setup type” pop-up as shown in Fig. 46.1.3.
+After Running the first Forming operation simulation, we can add the Copy/Mirroring operation from explorer’s Simulation operator group as shown in [Fig. 46.1.2.]({{ '/docs/en/operation_templates/46_copy_mirroring/46_1_copy_mirroring/' | relative_url }}#Fig_46_1_2_Adding_Copy/Mirroring_Operation) Click on Copy/Mirroring operation, we will get the “Setup type” pop-up as shown in Fig. 46.1.3.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0002.jpg' | relative_url }})
 
@@ -106,7 +106,7 @@ After completing the Copy/Mirroring Setup we can add the 3D Forming Operation fr
 Adding 3D Forming Operation after Copy/Mirroring Operation
 
   
-Now we can define the 2nd forming operation setup data after mirroring the objects as shown in the [Fig. 46.1.12.](46_1_copy_mirroring.htm#Fig_46_1_12_3D_Forming_Operation_after_Copy/Mirroring_Operation_Batch_Mode) and Fig. 46.1.13.
+Now we can define the 2nd forming operation setup data after mirroring the objects as shown in the [Fig. 46.1.12.]({{ '/docs/en/operation_templates/46_copy_mirroring/46_1_copy_mirroring/' | relative_url }}#Fig_46_1_12_3D_Forming_Operation_after_Copy/Mirroring_Operation_Batch_Mode) and Fig. 46.1.13.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0012.jpg' | relative_url }})
 

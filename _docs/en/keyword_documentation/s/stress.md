@@ -84,7 +84,7 @@ REMARKS
 X1 is the value of Sigma X(sx), X2 is Sigma Y(sy), X3 is Sigma Z(sz), and X4 is Tau XY(txy). In Axisymmetric mode, X1 is the value of Sigma R(sr), X2 is Sigma Z (sz), X3 is Sigma Theta(sTheta), and X4 is Tau RZ (trz). The keyword format varies depending on stress output selection made at ELMNOD. For element output (ELMNOD = 0) option, stress at the centroid of each element is written. For dual output (ELMNOD = 2) option, stress at the centroid of element and at node are written. For integration point (ELMNOD = 3) option, stress at four integration points in element are written. For torsion mode, stress tensor have six components same as 3D definition. The stress tensor, Sij, of the object is represented by the matrix: ![]({{ '/assets/images/keyword_documentation/s/stress_2d_image001.jpg' | relative_url }}) | ![]({{ '/assets/equations/keyword_documentation/s/stress_eq_1.jpg' | relative_url }}) |   
 ---|---  
   
-Applicable object types: [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic), Elastoplastic, and [Porous](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.4._Porous).  
+Applicable object types: [Plastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic), Elastoplastic, and [Porous]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.4._Porous).  
   
 RELATED TOPICS  
 ---  

@@ -184,7 +184,7 @@ Lighting Settings properties window
 
 Light Advanced Properties window
 
-For More details, please refer Chapter[ 8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}) section [Set Lighting Property](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Set_Lighting_Property).
+For More details, please refer Chapter[ 8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}) section [Set Lighting Property]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#Set_Lighting_Property).
 
 **Display menu**
 
@@ -349,7 +349,7 @@ Memory options under Environment Settings window
 
   * Icon/Font:
 
-The user can change the icon and font size depending on the requirement as shown in the[ Fig. 6.4.32.](6_4_main_menu.htm#Fig._6.4.32._Icon/Font_options_under_Environment_Settings_window)
+The user can change the icon and font size depending on the requirement as shown in the[ Fig. 6.4.32.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu/' | relative_url }}#Fig._6.4.32._Icon/Font_options_under_Environment_Settings_window)
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image033.jpg' | relative_url }})
 
@@ -459,7 +459,7 @@ The simulation menu options are shown in Fig. 6.4.43., these options or icons on
 
 Simulation Menu bar options
 
-  * **Run (F9) or Submit simulation of the current Project** ![]({{ '/assets/icons/simulator_icons/mo_run_icon.jpg' | relative_url }}) : This is used to run the job. In case of DOE and Optimization study run option opens the run options as these includes the multiple jobs to run. Then user needs to select submit to queue option, this will generate all samples DB’s and submit to simulate based on the number of simultaneous simulations selected, till then all other samples will be pending in queue. For more details on Run options refer [6.2.1 Simulation options](6_2_integrated_manufacturing_process_simulation_layout.htm#6.2.1._Simulation_Options).
+  * **Run (F9) or Submit simulation of the current Project** ![]({{ '/assets/icons/simulator_icons/mo_run_icon.jpg' | relative_url }}) : This is used to run the job. In case of DOE and Optimization study run option opens the run options as these includes the multiple jobs to run. Then user needs to select submit to queue option, this will generate all samples DB’s and submit to simulate based on the number of simultaneous simulations selected, till then all other samples will be pending in queue. For more details on Run options refer [6.2.1 Simulation options]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}#6.2.1._Simulation_Options).
 
   * **Stop (F10)** ![]({{ '/assets/icons/simulator_icons/mo_stop_icon.jpg' | relative_url }}) : This option is used to Stop the running job.
 
@@ -467,7 +467,7 @@ Simulation Menu bar options
 
   * **Add to Batch Queue (Ctrl+Shift+A):** It is used to add the jobs in queue for simulation.
 
-  * **Run options :** This provides run options like run normally, run in queue, multiple processors run settings, fem run types.. etc. For more details on Run options refer [6.2.1 Simulation options](6_2_integrated_manufacturing_process_simulation_layout.htm#6.2.1._Simulation_Options).
+  * **Run options :** This provides run options like run normally, run in queue, multiple processors run settings, fem run types.. etc. For more details on Run options refer [6.2.1 Simulation options]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}#6.2.1._Simulation_Options).
 
   * **Process Monitor** : The process monitor displays the status of any simulations running on the CPU and pending jobs in queue for running.
 

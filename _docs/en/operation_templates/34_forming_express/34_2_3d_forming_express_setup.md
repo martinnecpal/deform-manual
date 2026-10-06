@@ -7,7 +7,7 @@ title: "34.2. 3D Forming Express Setup"
 
 34.2.1. How to add Forming Express operation
 
-[34.2.2. Process settings definition](34_1_2d_forming_express_setup.htm#34_1_2_Process_settings_definition)
+[34.2.2. Process settings definition]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}#34_1_2_Process_settings_definition)
 
 34.2.3. Temperature Calculation settings
 
@@ -159,7 +159,7 @@ Workpiece window
 
 **Object****Name** : User can define the name for all the objects available in the operation.
 
-**Object****Type** : The object type ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are explained in chapter 11. General Object Data Definition, for details refer [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
+**Object****Type** : The object type ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are explained in chapter 11. General Object Data Definition, for details refer [11.4. Object Type]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type).
 
   * **Plastic** : Plastic objects are modeled as rigid-plastic or rigid-viscoplastic materials depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). The material deforms plastically beyond the limiting strain rate. The plastic material behavior of the object is specified with a material flow stress function or flow stress data ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). In Forming Express operation workpiece is automatically assigned to Plastic object type.
 
@@ -359,11 +359,11 @@ Symmetry boundary condition assigned for workpiece
 
 Heat exchange with environment boundary condition assigned for workpiece
 
-The BCC’s are categorized as [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}),[Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions)
+The BCC’s are categorized as [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}),[Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions.]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
 ## Movement Controls
 
-Movement controls can be applied to rigid objects and boundary nodes of meshed objects. The surface defined by these nodes can be thought of as a "rigid surface". During the simulation, the constrained nodes will move synchronously in the speed and direction defined by the movement controls. Only translational movement type is available in Forming express, rotational movement available in Forming operation, for its more details refer [34.1.10. Movement Controls.](34_1_2d_forming_express_setup.htm#34_1_10_Movement_Controls)
+Movement controls can be applied to rigid objects and boundary nodes of meshed objects. The surface defined by these nodes can be thought of as a "rigid surface". During the simulation, the constrained nodes will move synchronously in the speed and direction defined by the movement controls. Only translational movement type is available in Forming express, rotational movement available in Forming operation, for its more details refer [34.1.10. Movement Controls.]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}#34_1_10_Movement_Controls)
 
 **Translational Movement:**
 
@@ -375,7 +375,7 @@ In Forming express only six types of Movement controls are available in Translat
 
 Translational Movement controls window
 
-The lower portion of the movement controls window (See Fig. 34.2.24.) allows the user to import movement specifications from other keyword or database files and to load press information from the library, save the movement controls to a file or movement library, observe the preview and delete the defined the movement definition. For more information on all movement available in forming express refer[ 34.1.10. Movement Controls.](34_1_2d_forming_express_setup.htm#34_1_10_Movement_Controls)
+The lower portion of the movement controls window (See Fig. 34.2.24.) allows the user to import movement specifications from other keyword or database files and to load press information from the library, save the movement controls to a file or movement library, observe the preview and delete the defined the movement definition. For more information on all movement available in forming express refer[ 34.1.10. Movement Controls.]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}#34_1_10_Movement_Controls)
 
 ## Positioning
 
@@ -400,7 +400,7 @@ System will always update stroke with positioning for the object that has mechan
 
 **Positioning Objects![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})**
 
-By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 34.2.26. For more information about these options, please refer [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Offset]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning), [Flip]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_6_Flip_positioning) and [Rotational]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning) as shown in Fig. 34.2.26. For more information about these options, please refer [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_2_3d_forming_express_setup/image017.jpg' | relative_url }})
 
@@ -530,7 +530,7 @@ The stopping parameters determine the process time at which the simulation termi
 
 Stopping controls window
 
-For more details about deformation stopping controls refer [34.1.15. Stopping Controls.](34_1_2d_forming_express_setup.htm#34_1_15_Stopping_controls)
+For more details about deformation stopping controls refer [34.1.15. Stopping Controls.]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}#34_1_15_Stopping_controls)
 
 ## Simulation controls
 
@@ -606,7 +606,7 @@ After generating database user has to select the MO Simulation mode tab to submi
 
 [34.1. 2D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }})
 
-[Promote Forming Express to Forming operation](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations.htm#Fig._6.6.4.4._Forming_express_operation_after_promoting_it_to_forming_operation)
+[Promote Forming Express to Forming operation]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations/' | relative_url }}#Fig._6.6.4.4._Forming_express_operation_after_promoting_it_to_forming_operation)
 
 [6.2. MO Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 

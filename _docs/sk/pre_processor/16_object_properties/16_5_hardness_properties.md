@@ -5,14 +5,14 @@ title: "16.5. Typ odhadu tvrdosti"
 
 # 16.5. Typ odhadu tvrdosti
 
-[2D, 3D]: (Pozri obr. 16.5.1 až obr. 16.5.5.)
+\[2D, 3D]: (Pozri obr. 16.5.1 až obr. 16.5.5.)
 
   * Objemový podiel rôznych fáz
   * Údaje o krivke Jominy
   * Čas chladenia
   * Pevný roztok so zrážaním
 
-Údaje o tvrdosti materiálu možno definovať vo Vlastnostiach materiálu príslušného materiálu objektu a budú sa odhadovať na základe typu odhadu zvoleného v časti Vlastnosti príslušného objektu, Obr. 16.5.1. zobrazuje možnosti typu odhadu dostupné v časti Tvrdosť vo Vlastnostiach objektu. Je tam uvedený popis metódy predpovedania tvrdosti. Ďalšie informácie o definovaní tvrdosti v časti Vlastnosti materiálu nájdete v časti [10.7. Hardness data.]({{ '/docs/sk/pre_processor/10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data/' | relative_url }})
+Údaje o tvrdosti materiálu možno definovať vo Vlastnostiach materiálu príslušného materiálu objektu a budú sa odhadovať na základe typu odhadu zvoleného v časti Vlastnosti príslušného objektu, Obr. 16.5.1. zobrazuje možnosti typu odhadu dostupné v časti Tvrdosť vo Vlastnostiach objektu. Je tam uvedený popis metódy predpovedania tvrdosti. Ďalšie informácie o definovaní tvrdosti v časti Vlastnosti materiálu nájdete v časti [10.7. Hardness data.]({{ '/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
 
   
 **Referenčná počiatočná teplota, koncová teplota** : Horné a dolné hodnoty teploty pre Jominyho alebo krivky predpovede tvrdosti v čase chladnutia.
@@ -84,4 +84,4 @@ Pevný roztok s typom zrazeniny Odhad tvrdosti
 
 [16.10. User]({{ '/docs/sk/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Material Hardness properties]({{ '/docs/sk/pre_processor/10_Material_Data/10_7_Hardness_Data/10_7_Hardness_Data/' | relative_url }})
+[Material Hardness properties]({{ '/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})

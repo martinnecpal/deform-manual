@@ -6,7 +6,7 @@ title: "26.6.17. Extrakcia údajov"
 # 26.6.17. Extrakcia údajov ![]({{ '/assets/icons/post_icons/mo_data_extraction_icon.jpg' | relative_url }})
 
   
-[2D, 3D]: Táto funkcia v postprocesore umožňuje používateľovi extrahovať ľubovoľnú premennú modelu pre daný objekt v danom kroku do textového súboru. (Pozri obr. 26.6.17.1.) Od verzie DEFORM -V12 môže používateľ extrahovať údaje o stavových premenných na základe súradnicového systému, ktorý sa používa na vykresľovanie stavových premenných na stránke „Stavové premenné“. 
+\[2D, 3D]: Táto funkcia v postprocesore umožňuje používateľovi extrahovať ľubovoľnú premennú modelu pre daný objekt v danom kroku do textového súboru. (Pozri obr. 26.6.17.1.) Od verzie DEFORM -V12 môže používateľ extrahovať údaje o stavových premenných na základe súradnicového systému, ktorý sa používa na vykresľovanie stavových premenných na stránke „Stavové premenné“. 
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_17_data_extraction/image001.jpg' | relative_url }})
 

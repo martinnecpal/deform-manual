@@ -35,7 +35,7 @@ DENSTY specifies the relative density of the material at each element.
   
 REMARKS  
 ---  
-DENSTY is used when a porous material with relative densities less than 1.0 is being simulated. If no value is specified for DefDensity, it is assumed to be 1.0. The flow stress of porous objects should be specified for the fully dense material. Applicable object types: [Porous](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.4._Porous).  
+DENSTY is used when a porous material with relative densities less than 1.0 is being simulated. If no value is specified for DefDensity, it is assumed to be 1.0. The flow stress of porous objects should be specified for the fully dense material. Applicable object types: [Porous]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.4._Porous).  
   
 RELATED TOPICS  
 ---  

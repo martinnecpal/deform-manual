@@ -27,7 +27,7 @@ title: "10.12.1. Modely zlomov"
 
   * Model poškodenia Zhoa & Kuhn
 
-  * [Maximum principal stress / ultimate tensile strength damage model](10_12_1_fracture_models.htm#Maximum_principal_stress_/_ultimate_tensile_strength)
+  * [Maximum principal stress / ultimate tensile strength damage model]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }}#Maximum_principal_stress_/_ultimate_tensile_strength)
 
   * Model poškodenia pri uzavretí prázdneho priestoru
 

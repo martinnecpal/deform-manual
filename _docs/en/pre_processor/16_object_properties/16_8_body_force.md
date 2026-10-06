@@ -9,7 +9,7 @@ The influence of gravity can be considered in the solution by activating the gra
 
 The centrifugal force acting on a rotating body will be considered when the centrifugal force check box is activated.
 
-When running simulations involving a body force, the user must define mass density (Section [10.3.4. Mass density](../10_Material_Data/10_3_Thermal_Data/10_3_Thermal_Data.htm#Mass_Density) )and apply boundary condition constraints. The boundary conditions must sufficiently prevent the part from gross rigid body motion. The free distortion boundary condition feature (Section [14.2.1. Velocity BCC - Free distorsion BCC](../14_Boundary_Conditions/14_2_deformation_boundary_conditions.htm#Free_Distortion_BCC) ) is designed to assist the user in this task, when necessary.
+When running simulations involving a body force, the user must define mass density (Section [10.3.4. Mass density]({{ '/docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }}#Mass_Density) )and apply boundary condition constraints. The boundary conditions must sufficiently prevent the part from gross rigid body motion. The free distortion boundary condition feature (Section [14.2.1. Velocity BCC - Free distorsion BCC]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}#Free_Distortion_BCC) ) is designed to assist the user in this task, when necessary.
 
 ![]({{ '/assets/images/pre-processor/16_object_properties/16_8_body_force/16_8_image001.jpg' | relative_url }})
 

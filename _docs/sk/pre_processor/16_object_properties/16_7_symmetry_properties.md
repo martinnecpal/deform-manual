@@ -39,6 +39,6 @@ Okno vlastností objektu rotačnej symetrie
 
 [16.10. User]({{ '/docs/sk/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[3D-Geometry symmetry surface definition](../12_Geometry_Modelling/12_3_3d_geometry_data_defining.htm#Parallel_symmetry_planes)
+[3D-Geometry symmetry surface definition]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}#Parallel_symmetry_planes)
 
-[3D-Mesh symmetry BCC definition]({{ '/docs/sk/pre_processor/14_Boundary_Conditions/14_1_symmetry_boundary_conditions/' | relative_url }})
+[3D-Mesh symmetry BCC definition]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/' | relative_url }})

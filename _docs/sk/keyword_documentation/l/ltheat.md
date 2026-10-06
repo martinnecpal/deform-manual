@@ -29,4 +29,4 @@ LTHEAT is not currently implemented in the current.
   
 RELATED TOPICS  
 ---  
-Inter-Material Data: [Latent Heat](../../pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data.htm#Latent_Heat) Keywords: [LATENT]({{ '/docs/sk/keyword_documentation/l/latent/' | relative_url }})
+Inter-Material Data: [Latent Heat]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }}#Latent_Heat) Keywords: [LATENT]({{ '/docs/sk/keyword_documentation/l/latent/' | relative_url }})

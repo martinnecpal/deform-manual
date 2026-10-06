@@ -43,7 +43,7 @@ In this lab we will setup two operation:
 
 ## Creating a New problem
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear. as shown below [Fig. L4.1.](lab_04_heat_transfer.htm#Fig_L4_1_DEFORM-2D/3D_GUI_main_window)
+On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear. as shown below [Fig. L4.1.]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_04_heat_transfer/' | relative_url }}#Fig_L4_1_DEFORM-2D/3D_GUI_main_window)
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg' | relative_url }})
 

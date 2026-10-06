@@ -51,13 +51,13 @@ Due to the number of revolutions of a drill necessary to establish characteristi
 
 ## Adding Drilling Operation
 
-To set up Drilling process user need to add the 3D cutting template and select “**Drilling** ” option in the “Process” page as shown in Fig. 39.4.1. For more details on how to add problem please refer [39.2.1. How to add 3D Cutting Operation](39_2_3d_turning.htm#39_2_1_How_to_add_3D_Cutting_Operation).
+To set up Drilling process user need to add the 3D cutting template and select “**Drilling** ” option in the “Process” page as shown in Fig. 39.4.1. For more details on how to add problem please refer [39.2.1. How to add 3D Cutting Operation]({{ '/docs/en/operation_templates/39_cutting/39_2_3d_turning/' | relative_url }}#39_2_1_How_to_add_3D_Cutting_Operation).
 
 ## Process page
 
 The process parameters to setup Drilling process are as shown in Fig. 39.4.1.
 
-**Environment Heat Transfer:** Environment temperature and convection co-efficient are defined under this tab, for more information on defining these parameters refer [39.2.4. Turning Process](39_2_3d_turning.htm#39_2_4_Process_page).
+**Environment Heat Transfer:** Environment temperature and convection co-efficient are defined under this tab, for more information on defining these parameters refer [39.2.4. Turning Process]({{ '/docs/en/operation_templates/39_cutting/39_2_3d_turning/' | relative_url }}#39_2_4_Process_page).
 
 **Cutting speed (v):** It is defined as the speed at which the tool moves. The cutting speed can be defined as mm/sec or m/min in SI and in/sec or ft/min in English units.
 

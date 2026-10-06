@@ -8,11 +8,11 @@ title: "55 Additive Manufacturing Lab"
 In this lab we will demonstrate how to setup Additive manufacturing process with layer scan model.
 
   
-[1.1. Creating a New Problem ](55_additive_manufacturing.htm#Fig_AML1_QT4_GUI_Main_window#1_1_Creating_a_New_Problem)
+[1.1. Creating a New Problem ]({{ '/docs/sk/applications/55_applications/55_additive_manufacturing/55_additive_manufacturing/' | relative_url }}#Fig_AML1_QT4_GUI_Main_window#1_1_Creating_a_New_Problem)
 
-[1.2. Adding Forming Operation](55_additive_manufacturing.htm#Fig_AML1_QT4_GUI_Main_window#1_2_Adding_Forming_Operation)
+[1.2. Adding Forming Operation]({{ '/docs/sk/applications/55_applications/55_additive_manufacturing/55_additive_manufacturing/' | relative_url }}#Fig_AML1_QT4_GUI_Main_window#1_2_Adding_Forming_Operation)
 
-[1.3. Simulation Controls](55_additive_manufacturing.htm#Fig_AML1_QT4_GUI_Main_window#1_3_Simulation_Controls)
+[1.3. Simulation Controls]({{ '/docs/sk/applications/55_applications/55_additive_manufacturing/55_additive_manufacturing/' | relative_url }}#Fig_AML1_QT4_GUI_Main_window#1_3_Simulation_Controls)
 
 1.4. Defining Additive Manufacturing process conditions
 
@@ -242,7 +242,7 @@ In '**Generate DB** ' page, click ![]({{ '/assets/icons/pre_icons/mo_check_data_
 
 ## Preparing Dat files for simulation of Additive Manufacturing
 
-We will see dat file content for Layer-by-Layer scanning and Line scanning methods. We can simulate the additive manufacturing process using one of the dat files. For this lab, we will consider heat source scanning at a speed of 750 mm/sec. From **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Folder option **use open working folder. Explorer will open showing the current project folder and we can observe the generated database file. We need to create dat file and place within this folder, the dat file should always be placed in the folder containing the database to be simulated. For more information related to [DEF_ADDMPARM.DAT](../../../appendices/appendix_xvii_data_files.htm#DEF_ADDMPARM_DAT) file, refer section [ Appendix XVII: Data Files]({{ '/docs/sk/appendices/appendix_xvii_data_files/' | relative_url }}).
+We will see dat file content for Layer-by-Layer scanning and Line scanning methods. We can simulate the additive manufacturing process using one of the dat files. For this lab, we will consider heat source scanning at a speed of 750 mm/sec. From **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Folder option **use open working folder. Explorer will open showing the current project folder and we can observe the generated database file. We need to create dat file and place within this folder, the dat file should always be placed in the folder containing the database to be simulated. For more information related to [DEF_ADDMPARM.DAT]({{ '/docs/sk/appendices/appendix_xvii_data_files/' | relative_url }}#DEF_ADDMPARM_DAT) file, refer section [ Appendix XVII: Data Files]({{ '/docs/sk/appendices/appendix_xvii_data_files/' | relative_url }}).
 
 ### Dat file for Layer-by-Layer scanning
 

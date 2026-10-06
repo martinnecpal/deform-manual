@@ -68,7 +68,7 @@ PHEQVF specifies the equilibrium volume fraction for precipitation.
   
 REMARKS  
 ---  
-This keyword sets a flag to indicate how to use the equilibrium volume fraction (i.e. proportional calculation on/off) in FEM calculation. Applicable object types: [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic), [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic) Applicable [simulation type](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.4._Type_\(STYPE\)): Microstructure, Heat treatment, Transformation  
+This keyword sets a flag to indicate how to use the equilibrium volume fraction (i.e. proportional calculation on/off) in FEM calculation. Applicable object types: [Plastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic), [Elastoplastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic) Applicable [simulation type]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.4._Type_\(STYPE\)): Microstructure, Heat treatment, Transformation  
   
 RELATED TOPICS  
 ---  

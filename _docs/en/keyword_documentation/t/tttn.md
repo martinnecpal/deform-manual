@@ -31,4 +31,4 @@ Applicable Simulation Modules: Microstructure
   
 RELATED TOPICS  
 ---  
-[Inter-Material Data](../../pre_processor/10_material_data/10_9_transformation_data) Related keywords: [MTNAME]({{ '/docs/en/keyword_documentation/m/mtname/' | relative_url }})
+[Inter-Material Data]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }}) Related keywords: [MTNAME]({{ '/docs/en/keyword_documentation/m/mtname/' | relative_url }})

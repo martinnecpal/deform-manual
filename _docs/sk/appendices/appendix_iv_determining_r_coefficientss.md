@@ -25,7 +25,7 @@ In DEFORM, the user may specify ![]({{ '/assets/images/appendices/appendix_iv_de
   
 **Quadratic Hill Criterion (From Wikipedia):**
 
-The [quadratic Hill yield](../pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_2_hill’s_quadratic_\(fghlmn\).htm) criterion [1]. has the form
+The [quadratic Hill yield]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_2_hill’s_quadratic_(fghlmn)/' | relative_url }}) criterion [1]. has the form
 
 ![]({{ '/assets/images/appendices/appendix_iv_determining_r_coefficients/eqn3.jpg' | relative_url }}) |  (EQ.3)  
 ---|---  
@@ -59,8 +59,8 @@ R. Hill. (1948). A theory of the yielding and plastic flow of anisotropic metals
 
 [Yield function type]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_yield_models/' | relative_url }})
 
-[Hill’s quadratic (R value)](../pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_3_hill’s_quadratic_\(r\).htm)
+[Hill’s quadratic (R value)]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_3_hill’s_quadratic_(r)/' | relative_url }})
 
-[Hill’s quadratic (FGHLMN)](../pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_2_hill’s_quadratic_\(fghlmn\).htm)
+[Hill’s quadratic (FGHLMN)]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_2_hill’s_quadratic_(fghlmn)/' | relative_url }})
 
-[Lankford coefficient (R value)](../pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_4_lankford_coefficient_\(r_value\).htm)
+[Lankford coefficient (R value)]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_4_lankford_coefficient_(r_value)/' | relative_url }})

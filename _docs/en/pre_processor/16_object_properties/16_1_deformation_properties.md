@@ -31,7 +31,7 @@ title: "16.1. Deformation_Properties"
 
 ## Creep calculation
 
-Activates creep calculations ([CREEP]({{ '/docs/en/Keyword_Documentation/C/CREEP/' | relative_url }})) for a particular object. For more information on available creep models, refer to section [10.1.2. Creep]({{ '/docs/en/pre_processor/10_Material_Data/10_1_Plastic_Data/10_1_2_Creep/10_1_2_Creep_Models/' | relative_url }}) (CREEP).
+Activates creep calculations ([CREEP]({{ '/docs/en/keyword_documentation/c/creep/' | relative_url }})) for a particular object. For more information on available creep models, refer to section [10.1.2. Creep]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_creep_models/' | relative_url }}) (CREEP).
 
   
 If the user would like to see the Creep strain in post processor then Creep check box in "Simulation controls![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Advanced ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Output controls" path should be activated.
@@ -40,7 +40,7 @@ If the user would like to see the Creep strain in post processor then Creep chec
 
 ## Elasto-plastic initial guess (ELPSOL) [2D, 3D]
 
-The convergence of an Elasto-plastic solution ([ELPSOL]({{ '/docs/en/Keyword_Documentation/E/ELPSOL/' | relative_url }})) is dependent on the initial guess of the stress-strain state. Three initial guess solutions are available:
+The convergence of an Elasto-plastic solution ([ELPSOL]({{ '/docs/en/keyword_documentation/e/elpsol/' | relative_url }})) is dependent on the initial guess of the stress-strain state. Three initial guess solutions are available:
 
   * **Plastic solution** : Uses the purely plastic deformation data to generate the initial guess.
   * **Elastic solution** : Uses the purely elastic deformation data to generate the initial guess.
@@ -54,7 +54,7 @@ is poor for a particular problem, the elastic or plastic solution can be used.
 Maintaining volume of the deforming object in the simulation is very important for accurate model predictions. Good mesh size and finer time step alone cannot ensure volume constancy for some class of the simulations. The user can now activate volume compensation under "Properties" option (See Fig. 16.1.1. and Fig. 16.1.2.)
 
   
-You can turn on "Activate Target Volume Options" ([TRGVOL]({{ '/docs/en/Keyword_Documentation/T/TRGVOL/' | relative_url }})) and then use ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) to automatically calculate the volume. If the volume compensation is turned on then while running simulation the volume of the mesh will be compensated to the value mentioned.
+You can turn on "Activate Target Volume Options" ([TRGVOL]({{ '/docs/en/keyword_documentation/t/trgvol/' | relative_url }})) and then use ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) to automatically calculate the volume. If the volume compensation is turned on then while running simulation the volume of the mesh will be compensated to the value mentioned.
 
   
 There are several causes of volume loss in finite element analysis.
@@ -77,18 +77,18 @@ If this distortion is unacceptable, the best alternative is to use a fine mesh, 
 
 ## Volume penalty constant (PENVOL) [2D, 3D]
 
-The volume penalty constant ([PENVOL]({{ '/docs/en/Keyword_Documentation/P/PENVOL/' | relative_url }})) specifies a large positive value that is used to enforce volume constancy of plastic objects. The default value of 106 is adequate for most simulations. If the value is too small, unacceptably large volume losses may occur. If the value is too large, the solution may have difficulty converging.
+The volume penalty constant ([PENVOL]({{ '/docs/en/keyword_documentation/p/penvol/' | relative_url }})) specifies a large positive value that is used to enforce volume constancy of plastic objects. The default value of 106 is adequate for most simulations. If the value is too small, unacceptably large volume losses may occur. If the value is too large, the solution may have difficulty converging.
 
 ## Average strain rate (AVGSTR) [2D, 3D]
 
-The average strain rate ([AVGSTR]({{ '/docs/en/Keyword_Documentation/A/AVGSTR/' | relative_url }})) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation. A reasonable approximation can be obtained from:
+The average strain rate ([AVGSTR]({{ '/docs/en/keyword_documentation/a/avgstr/' | relative_url }})) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation. A reasonable approximation can be obtained from:
 
 ![]({{ '/assets/equations/pre_processor/16_object_properties/eq_16_1_1.jpg' | relative_url }}) |   
 ---|---  
   
 ## Limiting strain rate (LMTSTR) [2D, 3D]
 
-The limiting strain rate ([LMTSTR]({{ '/docs/en/Keyword_Documentation/L/LMTSTR/' | relative_url }})) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material. The stress-strain-rate relationship in the rigid region is approximated by,
+The limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})) defines a limiting value of effective strain rate below which a plastic or porous material is considered rigid and behaves as Newtonian fluid like material. The stress-strain-rate relationship in the rigid region is approximated by,
 
 ![]({{ '/assets/equations/pre_processor/16_object_properties/eq_16_1_2.jpg' | relative_url }}) |   
 ---|---  
@@ -99,7 +99,7 @@ If the limiting strain rate is too small, the solution may have difficulty conve
 
 ## Generalized plane strain control (ZSTR) [2D]
 
-Generalized plane strain control ([ZSTR]({{ '/docs/en/Keyword_Documentation/Z/ZSTR/' | relative_url }})) allows certain object to have thickness direction deformation for plane strain element. The thickness direction deformation can be controlled either by prescribed velocity or by traction in thickness direction. This option is available for Elasto-plastic material with both velocity and traction control and for rigid plastic material with velocity control only.
+Generalized plane strain control ([ZSTR]({{ '/docs/en/keyword_documentation/z/zstr/' | relative_url }})) allows certain object to have thickness direction deformation for plane strain element. The thickness direction deformation can be controlled either by prescribed velocity or by traction in thickness direction. This option is available for Elasto-plastic material with both velocity and traction control and for rigid plastic material with velocity control only.
 
 The object lies between two bounding planes which may move as rigid bodies with respect each other, thus causing strain of the thickness direction of the object. Let P0(X0, Y0) be a fixed point in the reference planes. The length between P0 and its image in the other plane P1 is t0 + DuZ , where t0 is the initial thickness and DuZ is change in length in thickness.
 
@@ -138,11 +138,11 @@ This is defined as the ratio of total strain (natural log of reduction in cross 
 
 [16.10. User]({{ '/docs/en/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Selecting the Creep strain from simulation output controls](../9_Simulation_Controls/9_7_Advanced_Options.htm#9.7.4._Output_Control)
+[Selecting the Creep strain from simulation output controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#9.7.4._Output_Control)
 
-[Material Creep models]({{ '/docs/en/pre_processor/10_Material_Data/10_1_Plastic_Data/10_1_2_Creep/10_1_2_Creep_Models/' | relative_url }})
+[Material Creep models]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_creep_models/' | relative_url }})
 
-[Object type selection from object data definition window](../11_General_Object_Data_Definition/11_General_Object_Data_Definition.htm#11.4._Object_type)
+[Object type selection from object data definition window]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type)
 
-[Remeshing-2D Settings](../13_Mesh_Generation/13_1_2D_Mesh_Generation.htm#13.1.8._Remeshing_criteria)  
-[Remeshing-3D Settings](../13_Mesh_Generation/13_2_3D_Tet_Mesh_Generation.htm#13.2.8._Remeshing_criteria)
+[Remeshing-2D Settings]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.8._Remeshing_criteria)  
+[Remeshing-3D Settings]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.8._Remeshing_criteria)

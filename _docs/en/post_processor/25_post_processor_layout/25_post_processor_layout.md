@@ -233,7 +233,7 @@ RMB menu options on material in Operation tree
 
 Graphics window displays the graphical representation of the objects. This will display state variables contours over objects, graphs, histograms, flownet and die fill (contact nodes). (See Fig. 25.1. )
 
-Right mouse click on the graphics window will provide few options to display the simulation information, set the viewport, measure dimension and change background theme.(See Fig. 25.13.) For more information about these options refer the [Graphics window RMB options.](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm#Graphics_window_RMB_options)
+Right mouse click on the graphics window will provide few options to display the simulation information, set the viewport, measure dimension and change background theme.(See Fig. 25.13.) For more information about these options refer the [Graphics window RMB options.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Graphics_window_RMB_options)
 
 ![]({{ '/assets/images/post_processor/25_post_processor_layout/image014.jpg' | relative_url }}) ![]({{ '/assets/images/post_processor/25_post_processor_layout/image015.jpg' | relative_url }})
 

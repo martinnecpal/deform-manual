@@ -29,7 +29,7 @@ A keyword file may contain a complete simulation data set, or it may contain onl
 
 When a keyword file is read into the pre-processor, only the specific data fields listed in that keyword are changed; the remainder is unchanged. Thus, it is possible to assemble a complete set of problem data by loading one keyword file that contains only data for one object, another keyword file that contains material data, etc.
 
-To save specific elements of a keyword file, it is necessary to save the entire file, then use a text editor such as Notepad, VI, Emacs, or equivalent to delete unwanted information. The keyword file load and save features on the main pre-processor menu load or save an entire data set. To load partial keyword files, use Import or Import keyword option from the [File menu.](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#8.1.1._File_Menu)
+To save specific elements of a keyword file, it is necessary to save the entire file, then use a text editor such as Notepad, VI, Emacs, or equivalent to delete unwanted information. The keyword file load and save features on the main pre-processor menu load or save an entire data set. To load partial keyword files, use Import or Import keyword option from the [File menu.]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#8.1.1._File_Menu)
 
 **Other file inputs**
 

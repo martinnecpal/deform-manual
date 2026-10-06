@@ -51,7 +51,7 @@ DEFORM® provides machining template which can be used to setup the Milling proc
 
 ## Adding Milling Operation
 
-To set up Milling process user need to add the 3D cutting template and select “**Milling** ” option in the “Process” page as shown in Fig. 39.3.2. For more details on how to add problem please refer [39.2.1. How to add 3D Cutting Operation](39_2_3d_turning.htm#39_2_1_How_to_add_3D_Cutting_Operation).
+To set up Milling process user need to add the 3D cutting template and select “**Milling** ” option in the “Process” page as shown in Fig. 39.3.2. For more details on how to add problem please refer [39.2.1. How to add 3D Cutting Operation]({{ '/docs/en/operation_templates/39_cutting/39_2_3d_turning/' | relative_url }}#39_2_1_How_to_add_3D_Cutting_Operation).
 
 ## Process page
 

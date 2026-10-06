@@ -51,7 +51,7 @@ DEFORM® poskytuje šablónu pre obrábanie, ktorú je možné použiť na nasta
 
 ## Pridanie frézovacej operácie
 
-Na nastavenie procesu frézovania musí používateľ pridať 3D šablónu rezu a na stránke „Proces“ vybrať možnosť „**Frézovanie**“, ako je znázornené na obr. 39.3.2. Ďalšie informácie o tom, ako pridať úlohu, nájdete v dokumente [39.2.1. How to add 3D Cutting Operation](39_2_3d_turning.htm#39_2_1_How_to_add_3D_Cutting_Operation).
+Na nastavenie procesu frézovania musí používateľ pridať 3D šablónu rezu a na stránke „Proces“ vybrať možnosť „**Frézovanie**“, ako je znázornené na obr. 39.3.2. Ďalšie informácie o tom, ako pridať úlohu, nájdete v dokumente [39.2.1. How to add 3D Cutting Operation]({{ '/docs/sk/operation_templates/39_cutting/39_2_3d_turning/' | relative_url }}#39_2_1_How_to_add_3D_Cutting_Operation).
 
 ## Stránka procesu
 

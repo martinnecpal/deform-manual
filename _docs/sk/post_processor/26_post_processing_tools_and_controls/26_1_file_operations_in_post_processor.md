@@ -57,7 +57,7 @@ Informácie o možnostiach v **ponuke Nástroje** nájdete v kapitole [26.6. Pos
 
 Informácie o možnostiach v **ponuke „Sekcie“** a **ponuke „Správa“** nájdete v [27\. Introduction to Report Generation]({{ '/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/' | relative_url }})
 
-Informácie o možnostiach v **Dock****Widgets****menu** nájdete v kapitole [25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }}), v časti [25.5. Dock Widget menu](../25_post_processor_layout/25_post_processor_layout.htm#25_5_Dock_Widget_menu)
+Informácie o možnostiach v **Dock****Widgets****menu** nájdete v kapitole [25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }}), v časti [25.5. Dock Widget menu]({{ '/docs/sk/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }}#25_5_Dock_Widget_menu)
 
 ## Práca s databázou v režime PIP
 

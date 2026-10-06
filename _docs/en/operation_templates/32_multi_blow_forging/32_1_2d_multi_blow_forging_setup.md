@@ -111,7 +111,7 @@ In 2D Multi Blow Forging currently four types of geometry models (GEOTYP) can be
 
   * Plane stress
 
-For more information about these geometry types please refer [9.1.2 Geometry type](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])[ (GEOTYP)](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\]).
+For more information about these geometry types please refer [9.1.2 Geometry type]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])[ (GEOTYP)]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\]).
 
 ## Simulation Controls
 
@@ -205,7 +205,7 @@ Hammer movement control settings
   
 During hammer forging operation, only a portion of the kinetic energy of ram is used for the plastic deformation of work piece. The rest of the energy is lost through anvil and machine frame. These values can be set in the movement controls window.
 
-There are basically two types of hammer. The first is an [anvil type hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer) and the other c[ounter blow hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer).
+There are basically two types of hammer. The first is an [anvil type hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}#15_3_1_Anvil_Type_Hammer) and the other c[ounter blow hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}#15_3_2_Counterblow_Hammer).
 
 For the formulations and assumptions used for the two types of hammer forging operations please refer [15.3. Hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }})
 
@@ -258,7 +258,7 @@ By clicking on this button, system automatically Positions the Objects with resp
 
 **Positioning Objects![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) **
 
-By clicking on this button, user can position the objects in required directions.Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 32.1.16. For more information about these options, please refer [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+By clicking on this button, user can position the objects in required directions.Various types of Positioning Options are available such as [Drag]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Offset]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning), [Flip]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_6_Flip_positioning) and [Rotational]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning) as shown in Fig. 32.1.16. For more information about these options, please refer [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/30_die_stress/30_1_2d_die_stress_setup/image018.jpg' | relative_url }})
 
@@ -317,7 +317,7 @@ The stopping parameters determine the process time at which the simulation termi
 Stopping controls window
 
   
-For more information, please refer [Stopping Controls in Forming 2D setup.](../33_forming/33_1_2d_forming_setup.htm#33_1_8_Stopping_Controls)
+For more information, please refer [Stopping Controls in Forming 2D setup.]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }}#33_1_8_Stopping_Controls)
 
 ## Step controls
 

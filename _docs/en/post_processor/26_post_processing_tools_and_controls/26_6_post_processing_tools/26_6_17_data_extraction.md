@@ -6,7 +6,7 @@ title: "26.6.17. Data Extraction"
 # 26.6.17. Data Extraction ![]({{ '/assets/icons/post_icons/mo_data_extraction_icon.jpg' | relative_url }})
 
   
-[2D, 3D]:This utility in the post processor allows user to extract any model variable for a given object, at a given step in to a text file. (See Fig. 26.6.17.1.). From DEFORM -V12, user can extract State Variable data based on co-ordinate system that is used for plotting state variable in State Variable page. 
+\[2D, 3D]:This utility in the post processor allows user to extract any model variable for a given object, at a given step in to a text file. (See Fig. 26.6.17.1.). From DEFORM -V12, user can extract State Variable data based on co-ordinate system that is used for plotting state variable in State Variable page. 
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_17_data_extraction/image001.jpg' | relative_url }})
 

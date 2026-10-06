@@ -185,7 +185,7 @@ Grid Definition Window
 
 **Geometry tab :** Under Geometry tab, we can enter or modify the geometry entities. Geometry entities can be entered in two methods, in Line-Arc method and XYR methods.
 
-**XYR Method** : The **XYR** format ([DIEGEO]({{ '/docs/en/Keyword_Documentation/D/DIEGEO/' | relative_url }})) consists of defining an X coordinate, a Y coordinate and a radius for every point of the geometry defining an object. An arc with the specified radius is drawn connecting the lines that would have intersected at the point defined by the X and Y coordinate. (See Fig. 12.2.20.)
+**XYR Method** : The **XYR** format ([DIEGEO]({{ '/docs/en/keyword_documentation/d/diegeo/' | relative_url }})) consists of defining an X coordinate, a Y coordinate and a radius for every point of the geometry defining an object. An arc with the specified radius is drawn connecting the lines that would have intersected at the point defined by the X and Y coordinate. (See Fig. 12.2.20.)
 
   
 The XYR Table appears directly in the Geometry window. This table allows specifying and/or editing an object's geometry through a number of points in the XYR format. X and Y are the x- and y-coordinates of the point and R is the radius of the point (if it is to define a curved line).
@@ -194,7 +194,7 @@ The XYR Table appears directly in the Geometry window. This table allows specify
 
 2D Geometry Editor with XYR Geo type
 
-**Line-Arc Method :** Line-Arc format ([DIEGEO]({{ '/docs/en/Keyword_Documentation/D/DIEGEO/' | relative_url }})) is similar to XYR format in that it can define arcs, but it is more entity oriented. The XYR format defines the connecting points and the connection type, but the Line-Arc format defines the lines and arcs that make up the object, not the connections. The primary reason that the Line-Arc format is used is because IGES files are formatted in the Line-Arc scheme. (See Fig. 12.2.21.)
+**Line-Arc Method :** Line-Arc format ([DIEGEO]({{ '/docs/en/keyword_documentation/d/diegeo/' | relative_url }})) is similar to XYR format in that it can define arcs, but it is more entity oriented. The XYR format defines the connecting points and the connection type, but the Line-Arc format defines the lines and arcs that make up the object, not the connections. The primary reason that the Line-Arc format is used is because IGES files are formatted in the Line-Arc scheme. (See Fig. 12.2.21.)
 
 ![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_2_2d_geometry_editing/12_2_image024.jpg' | relative_url }})
 

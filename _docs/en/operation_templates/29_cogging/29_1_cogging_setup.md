@@ -353,7 +353,7 @@ If we use the positive value for shift between pairs of dies (Δ) then only the 
 So that distance between horizontal left and right dies at the end of the bite is more, twice the Δ value than the distance between vertical Top and bottom dies. This means the workpiece deformation along vertical direction is twice the Δ than the horizontal direction.  
 But if we use negative value for shift between pairs of dies (Δ), then Top and Bottom dies will shift away from the workpiece by this absolute value.
 
-**Boolean before Pass:** Option to trim the billet between passes as it elongates beyond desired length. (see Fig. 29.1.21.) For more information related to Brick boolean before pass option refer 43.1. Shape Rolling Manual : [Boolean between passes](../43_shape_rolling/43_1_shape_rolling_manual.htm#Boolean_between_passes) section
+**Boolean before Pass:** Option to trim the billet between passes as it elongates beyond desired length. (see Fig. 29.1.21.) For more information related to Brick boolean before pass option refer 43.1. Shape Rolling Manual : [Boolean between passes]({{ '/docs/en/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/' | relative_url }}#Boolean_between_passes) section
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image062.jpg' | relative_url }})
 
@@ -705,7 +705,7 @@ By default in Cogging operation **User** option is selected, user**** would like
   
 Frictional and Heat Transfer Coefficients can be applied even from simulation controls window, 
 
-For more information please refer, [Inter-Object Relations in Forming 3D setup](../33_forming/33_2_3d_forming_setup.htm#33_2_6_Inter-Object_Relation).
+For more information please refer, [Inter-Object Relations in Forming 3D setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}#33_2_6_Inter-Object_Relation).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image044.jpg' | relative_url }})
 

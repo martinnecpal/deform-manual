@@ -309,7 +309,7 @@ Možnosti pamäte v okne Nastavenia prostredia
 
   * Ikona/Písmo:
 
-Používateľ môže podľa potreby zmeniť ikonu a veľkosť písma, ako je znázornené v [Fig. 8.29.](8_pre-processor_layout.htm#Fig._8.29._Icon/Font_options_under_Environment_Settings_window)
+Používateľ môže podľa potreby zmeniť ikonu a veľkosť písma, ako je znázornené v [Fig. 8.29.]({{ '/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#Fig._8.29._Icon/Font_options_under_Environment_Settings_window)
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image033.jpg' | relative_url }})
 
@@ -477,7 +477,7 @@ Možnosti pravého tlačidla myši v stromovej štruktúre operácií; (a) pre 2
 
 ###  Možnosti zobrazenia pri kliknutí pravým tlačidlom myši
 
-[2D, 3D]: Po kliknutí pravým tlačidlom myši v zobrazenom okne predspracovateľa sa zobrazí ponuka, ako je znázornené na obr. 8.44. Táto ponuka poskytuje rýchly prístup k grafickým nástrojom, paneli ovládania objektov a nastaveniam zobrazenia v predspracovateľovi. Možnosti ponuky pravého tlačidla myši sa menia v závislosti od aktuálneho okna. 
+\[2D, 3D]: Po kliknutí pravým tlačidlom myši v zobrazenom okne predspracovateľa sa zobrazí ponuka, ako je znázornené na obr. 8.44. Táto ponuka poskytuje rýchly prístup k grafickým nástrojom, paneli ovládania objektov a nastaveniam zobrazenia v predspracovateľovi. Možnosti ponuky pravého tlačidla myši sa menia v závislosti od aktuálneho okna. 
 
 ![]({{ '/assets/images/pre-processor/8_pre_processor_layout/8_image009.jpg' | relative_url }}) ![]({{ '/assets/images/pre-processor/8_pre_processor_layout/8_image010.jpg' | relative_url }})
 
@@ -518,7 +518,7 @@ Možnosť automatického prispôsobenia
 
 Režim zobrazenia objektu
 
-  * **Zobrazenie kontaktov:** Pomocou tejto funkcie môže používateľ zapnúť alebo vypnúť zobrazenie kontaktných uzlov medzi objektmi. (Pozri [Fig. 8.47.](8_pre-processor_layout.htm#Fig._8.47._Contact_display_turn_on/off_options))
+  * **Zobrazenie kontaktov:** Pomocou tejto funkcie môže používateľ zapnúť alebo vypnúť zobrazenie kontaktných uzlov medzi objektmi. (Pozri [Fig. 8.47.]({{ '/docs/sk/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#Fig._8.47._Contact_display_turn_on/off_options))
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image052.jpg' | relative_url }})
 

@@ -67,7 +67,7 @@ title: "17.1. Okno s údajmi o uzle"
 
 17.1.9. Karta Aditívna výroba
 
-[**2D,3D**]: Okno s údajmi o uzloch zobrazuje všetky dostupné informácie o uzloch. Všetky informácie možno upravovať a mnohé z premenných možno vykresliť, ako je znázornené na obr. 17.1.1. a obr. 17.1.2.
+\[**2D,3D**]: Okno s údajmi o uzloch zobrazuje všetky dostupné informácie o uzloch. Všetky informácie možno upravovať a mnohé z premenných možno vykresliť, ako je znázornené na obr. 17.1.1. a obr. 17.1.2.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image001.jpg' | relative_url }})
 
@@ -120,7 +120,7 @@ Máme ďalšie dve možnosti:
 
 **Vyberanie** : Pomocou možnosti výberu môže používateľ vybrať uzly na inicializáciu hodnoty.
 
-V súvislosti s možnosťami výberu pozri 14. Hraničné podmienky [Picking options for 2D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_2D) a [Picking options for 3D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_3D).
+V súvislosti s možnosťami výberu pozri 14. Hraničné podmienky [Picking options for 2D]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}#Picking_option_for_2D) a [Picking options for 3D]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}#Picking_option_for_3D).
 
 **Priradenie metódy** : ****
 
@@ -162,7 +162,7 @@ Hodnoty kódu sú:
 
 **Poznámka** :
 
-Ak chceme aktivovať údaje o deformácii (uzol), poškodení (uzol) a napätí (uzol), musíme aktivovať rádiové tlačidlo Damage Element+Node output, rádiové tlačidlo Strain Element+Node output a rádiové tlačidlo Stress Element+Node output na karte Simulation control [Advanced output](../9_simulation_controls/9_7_advanced_options.htm#9.7.4._Output_Control).
+Ak chceme aktivovať údaje o deformácii (uzol), poškodení (uzol) a napätí (uzol), musíme aktivovať rádiové tlačidlo Damage Element+Node output, rádiové tlačidlo Strain Element+Node output a rádiové tlačidlo Stress Element+Node output na karte Simulation control [Advanced output]({{ '/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#9.7.4._Output_Control).
 
   
 ******Stress(Nodal) Tab**
@@ -236,7 +236,7 @@ Dátové okno elektrického vykurovania Nodal
 
 **[2D,3D]** Tu sa môžu inicializovať, definovať alebo skúmať údaje pre premenné uzla User ([USRNOD]({{ '/docs/sk/keyword_documentation/u/usrnod/' | relative_url }})).
 
-Hodnoty premenných užívateľských uzlov možno definovať pomocou podprogramov jazyka FORTRAN. Pozri [Chapter 56 section USRUPD subroutines](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_3_User_defined_node_and_element_value_\(USRUPD\)). Každá hodnota uzla môže akceptovať názov aj hodnotu (pozri obr. 17.1.11.). Taktiež je možné definovať nekonečný počet premenných. Štandardne sa definujú minimálne 2 používateľské premenné uzla, používateľ ich však môže zvýšiť na ľubovoľne veľký počet. Používateľ musí byť opatrný, že veľký počet definovaných premenných môže viesť k veľkému databázovému súboru.
+Hodnoty premenných užívateľských uzlov možno definovať pomocou podprogramov jazyka FORTRAN. Pozri [Chapter 56 section USRUPD subroutines]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#56_2_3_3_User_defined_node_and_element_value_\(USRUPD\)). Každá hodnota uzla môže akceptovať názov aj hodnotu (pozri obr. 17.1.11.). Taktiež je možné definovať nekonečný počet premenných. Štandardne sa definujú minimálne 2 používateľské premenné uzla, používateľ ich však môže zvýšiť na ľubovoľne veľký počet. Používateľ musí byť opatrný, že veľký počet definovaných premenných môže viesť k veľkému databázovému súboru.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image011.jpg' | relative_url }})
 

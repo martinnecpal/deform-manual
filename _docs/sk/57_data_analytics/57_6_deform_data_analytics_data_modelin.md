@@ -65,7 +65,7 @@ The model type and input/output columns are selected from the property page for 
 Making predictions from a trained model
 
   
-Model training works best if the inputs are independent. Many of the training algorithms rely on matrix inversion and dependent variables can result in matrices that cannot be inverted. So, the training will likely fail or the results may not be the best. If a pair of inputs are dependent, try using only one of them. See scatter plot [section 57.4.2](57_4_deform_data_analytics_plotting_data.htm#57_4_2_Scatter_plot) for a discussion of dependent and independent variables.
+Model training works best if the inputs are independent. Many of the training algorithms rely on matrix inversion and dependent variables can result in matrices that cannot be inverted. So, the training will likely fail or the results may not be the best. If a pair of inputs are dependent, try using only one of them. See scatter plot [section 57.4.2]({{ '/docs/sk/57_data_analytics/57_4_deform_data_analytics_plotting_data/' | relative_url }}#57_4_2_Scatter_plot) for a discussion of dependent and independent variables.
 
 ## Linear model
 

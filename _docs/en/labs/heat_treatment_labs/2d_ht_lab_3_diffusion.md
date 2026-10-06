@@ -20,7 +20,7 @@ title: "2D HT Lab 3 Diffusion"
 
 ## Opening Project File
 
-The DEFORM GUI MAIN window should already be open. With the **Gear_Blank**.**moproj** file highlighted in the file list, click on ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}) as shown in [Fig. 2DHTML2.1.](2d_ht_lab2_carburization.htm#Fig_2DHTML2_1_DEFORM_GUI_Main_Window) Integrated Manufacturing Proc. will open.
+The DEFORM GUI MAIN window should already be open. With the **Gear_Blank**.**moproj** file highlighted in the file list, click on ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}) as shown in [Fig. 2DHTML2.1.]({{ '/docs/en/labs/heat_treatment_labs/2d_ht_lab2_carburization/' | relative_url }}#Fig_2DHTML2_1_DEFORM_GUI_Main_Window) Integrated Manufacturing Proc. will open.
 
 ## Adding Operation
 
@@ -64,7 +64,7 @@ Generate Database window
 
 ## Running a Simulation
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog.[](../tool_life_study_lab/tool_life_study_lab1.htm#Fig_TLSL1_17_Run_Options_Popup) Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation. As we click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) ****button simulation starts.
+Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog.[]({{ '/docs/en/labs/tool_life_study_lab/tool_life_study_lab1/' | relative_url }}#Fig_TLSL1_17_Run_Options_Popup) Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation. As we click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) ****button simulation starts.
 
 When the simulation is finished without any issues, the following message will be added to the end of the Message file as shown in Fig. 2DHTML3.6.
 

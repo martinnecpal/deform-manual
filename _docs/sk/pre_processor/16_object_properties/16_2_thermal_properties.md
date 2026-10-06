@@ -22,22 +22,22 @@ Okno vlastností 3D tepelného objektu
 ## Referenčná teplota (REFTMP) [2D, 3D]
 
   
-V prípade pružných objektov je referenčná teplota ([REFTMP)]({{ '/docs/sk/Keyword_Documentation/R/REFTMP/' | relative_url }}) teplota, na ktorej sú založené výpočty tepelnej rozťažnosti. Tepelné deformácie sú dané: (Pozri obr. 16.2.1. a obr. 16.2.2.)
+V prípade pružných objektov je referenčná teplota ([REFTMP)]({{ '/docs/sk/keyword_documentation/r/reftmp/' | relative_url }}) teplota, na ktorej sú založené výpočty tepelnej rozťažnosti. Tepelné deformácie sú dané: (Pozri obr. 16.2.1. a obr. 16.2.2.)
 
 ![]({{ '/assets/equations/pre_processor/16_object_properties/eq_16_2_1.jpg' | relative_url }}) |
 ---|---
   
 Pre elasto-plastické objekty sa používa okamžitý koeficient tepelnej rozťažnosti.
 
-Koeficient tepelnej rozťažnosti sa nastavuje v ponuke Material Properties Elastic, pozri tiež časť [10.2.4. Material Reference temperature](../10_Material_Data/10_2_Elastic_Data/10_2_Elastic_Data.htm#Material_Reference_Temperature) pre rozdiel medzi referenčnými teplotami materiálu a objektu.
+Koeficient tepelnej rozťažnosti sa nastavuje v ponuke Material Properties Elastic, pozri tiež časť [10.2.4. Material Reference temperature]({{ '/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }}#Material_Reference_Temperature) pre rozdiel medzi referenčnými teplotami materiálu a objektu.
 
 ## Teplota skrátenia (TMPLMT) [2D, 3D]
 
-Teplota skrátenia ([TMPLMT]({{ '/docs/sk/Keyword_Documentation/T/TMPLMT/' | relative_url }})) je maximálna prípustná teplota uzla v ktoromkoľvek bode objektu. Ak vypočítaná teplota prekročí túto hodnotu, zníži sa na túto hodnotu.
+Teplota skrátenia ([TMPLMT]({{ '/docs/sk/keyword_documentation/t/tmplmt/' | relative_url }})) je maximálna prípustná teplota uzla v ktoromkoľvek bode objektu. Ak vypočítaná teplota prekročí túto hodnotu, zníži sa na túto hodnotu.
 
 ## Teplota zastavenia (OTPRNG) [2D, 3D]
 
-Teplota zastavenia ([OTPRNG]({{ '/docs/sk/Keyword_Documentation/O/OTPRNG/' | relative_url }})) nastavuje horný a dolný teplotný limit, ktorého prekročenie zastaví simuláciu. Používateľ má možnosť vynútiť tento limit, ak niektorý jednotlivý uzol prekročí teplotu, len ak všetky uzly prekročia teplotu alebo na základe teploty v konkrétnom uzle. Ďalšie informácie týkajúce sa možnosti zastavenia rozsahu teploty nájdete v časti [9.3.10. Temperature stopping control](../9_Simulation_Controls/9_3_Stopping_Controls.htm#9.3.10._Temperature_stopping_control)
+Teplota zastavenia ([OTPRNG]({{ '/docs/sk/keyword_documentation/o/otprng/' | relative_url }})) nastavuje horný a dolný teplotný limit, ktorého prekročenie zastaví simuláciu. Používateľ má možnosť vynútiť tento limit, ak niektorý jednotlivý uzol prekročí teplotu, len ak všetky uzly prekročia teplotu alebo na základe teploty v konkrétnom uzle. Ďalšie informácie týkajúce sa možnosti zastavenia rozsahu teploty nájdete v časti [9.3.10. Temperature stopping control]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}#9.3.10._Temperature_stopping_control)
 
 **Súvisiace témy:**
 
@@ -61,4 +61,4 @@ Teplota zastavenia ([OTPRNG]({{ '/docs/sk/Keyword_Documentation/O/OTPRNG/' | rel
 
 [16.10. User]({{ '/docs/sk/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Difference b/w material and object reference temperature](../10_Material_Data/10_2_Elastic_Data/10_2_Elastic_Data.htm#Material_Reference_Temperature)
+[Difference b/w material and object reference temperature]({{ '/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }}#Material_Reference_Temperature)

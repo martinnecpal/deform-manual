@@ -28,8 +28,8 @@ PRSTRE This keyword is to incorporate the press stretch (elastic energy loss) in
   
 REMARKS  
 ---  
-Applicable object types: [Rigid](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.5._Rigid),  
+Applicable object types: [Rigid]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.5._Rigid),  
   
 RELATED TOPICS  
 ---  
-[Movement Controls]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}): Elastic Losses Keywords: [MOVCTL (2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm)
+[Movement Controls]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}): Elastic Losses Keywords: [MOVCTL (2D)]({{ '/docs/en/keyword_documentation/m/movctl_(2d)/' | relative_url }}), [MOVCTL (3D)]({{ '/docs/en/keyword_documentation/m/movctl_(3d)/' | relative_url }})

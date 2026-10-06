@@ -29,7 +29,7 @@ Current flux PID option [only for 2D]
 
 ## Induction Heating 
 
-**[2D]** : Once Induction Heating check box is checked in simulation controls, Induction heating in properties window and Heating tab in Inter object Relations get activated. For more information please refer [16.6. Heating Properties]({{ '/docs/en/pre_processor/16_Object_Properties/16_6_heating_properties/' | relative_url }}) and [20.3. Interface Resistivity.]({{ '/docs/en/pre_processor/20_Inter-object_Data_Definition/20_3_Interface_Resisitivity/' | relative_url }})
+**[2D]** : Once Induction Heating check box is checked in simulation controls, Induction heating in properties window and Heating tab in Inter object Relations get activated. For more information please refer [16.6. Heating Properties]({{ '/docs/en/pre_processor/16_object_properties/16_6_heating_properties/' | relative_url }}) and [20.3. Interface Resistivity.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }})
 
 **[3D]** : For 3D coil begin and end surface bcc are available (see Fig. 14.5.2.).
 

@@ -67,7 +67,7 @@ User can select the required steps from the stored steps in the DB for display. 
 
 ## Step list ![]({{ '/assets/icons/post_icons/mo_step_list_icon.jpg' | relative_url }})
 
-This will provide more detailed information of all saved steps like Simulation number, Mesh number, Time, Stroke of primary die, Dimension, Version number and Fold (for 3D). It also lists the operations sequence on the left side window and provides more step selection options on right side window (see Fig. 26.4.3.). For more information on step selection types and step list options refer section [6.1.6. Step Editor](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm#6.1.6._Step_Editor).
+This will provide more detailed information of all saved steps like Simulation number, Mesh number, Time, Stroke of primary die, Dimension, Version number and Fold (for 3D). It also lists the operations sequence on the left side window and provides more step selection options on right side window (see Fig. 26.4.3.). For more information on step selection types and step list options refer section [6.1.6. Step Editor]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#6.1.6._Step_Editor).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_4_simulation_step_display_controls/image002.jpg' | relative_url }})
 

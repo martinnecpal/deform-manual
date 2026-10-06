@@ -28,8 +28,8 @@ FORCE specifies the current force of objects. These values are saved in the DB s
   
 REMARKS  
 ---  
-This keyword saves the current force of objects in the DB step header, same as the current stroke STROKE, in order to support a continuity of force throughout remeshing. Applicable object types: [Rigid](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.5._Rigid)  
+This keyword saves the current force of objects in the DB step header, same as the current stroke STROKE, in order to support a continuity of force throughout remeshing. Applicable object types: [Rigid]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.5._Rigid)  
   
 RELATED TOPICS  
 ---  
-Related Keywords: [PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }}), [MOVCTL (2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm)
+Related Keywords: [PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_url }}), [MOVCTL (2D)]({{ '/docs/en/keyword_documentation/m/movctl_(2d)/' | relative_url }}), [MOVCTL (3D)]({{ '/docs/en/keyword_documentation/m/movctl_(3d)/' | relative_url }})

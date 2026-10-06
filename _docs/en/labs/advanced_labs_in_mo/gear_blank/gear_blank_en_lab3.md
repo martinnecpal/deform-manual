@@ -87,7 +87,7 @@ Click on **Geometry** under bottom die in operation tree to define bottom die.
 
 ### Define Bottom die
 
-Import “**gear_bottom_die_ENG****.****STL** ” for the bottom die (object 3) from library. Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button and confirm that geometry is clean as explained in [3.6. Top die definition.](gear_blank_en.htm#3_6_Define_Top_die)
+Import “**gear_bottom_die_ENG****.****STL** ” for the bottom die (object 3) from library. Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button and confirm that geometry is clean as explained in [3.6. Top die definition.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/' | relative_url }}#3_6_Define_Top_die)
 
 Click on **Scheduled****Positioning** under Controls in operation tree to position the objects.
 

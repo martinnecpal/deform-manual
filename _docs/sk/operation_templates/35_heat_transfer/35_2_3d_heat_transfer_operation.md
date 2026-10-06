@@ -204,7 +204,7 @@ Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na s
 
 **Umiestňovanie objektov**![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 35.2.19. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Offset]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning), [Flip]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_6_Flip_positioning) a [Rotational]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning), ako je znázornené na obr. 35.2.19. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image038.jpg' | relative_url }})
 
@@ -235,7 +235,7 @@ Okno definície medzi objektmi
 
 ## Ovládacie prvky na zastavenie
 
-Parametre ukončenia určujú čas procesu, po uplynutí ktorého sa simulácia ukončí. Simuláciu je možné ukončiť na základe maximálneho počtu simulovaných časových krokov alebo maximálneho času procesu. Simulácia sa zastaví, keď bude splnená podmienka ktoréhokoľvek z parametrov ukončenia. Ďalšie informácie nájdete v [Stopping Controls](../33_forming/33_2_3d_forming_setup.htm#33_2_7_Stopping_Controls) v [3D Forming setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}).
+Parametre ukončenia určujú čas procesu, po uplynutí ktorého sa simulácia ukončí. Simuláciu je možné ukončiť na základe maximálneho počtu simulovaných časových krokov alebo maximálneho času procesu. Simulácia sa zastaví, keď bude splnená podmienka ktoréhokoľvek z parametrov ukončenia. Ďalšie informácie nájdete v [Stopping Controls]({{ '/docs/sk/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}#33_2_7_Stopping_Controls) v [3D Forming setup]({{ '/docs/en/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}).
 
 ## Ovládacie prvky krokov
 

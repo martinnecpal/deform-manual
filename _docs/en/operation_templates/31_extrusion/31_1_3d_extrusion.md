@@ -286,7 +286,7 @@ Mesh Generated using the mesh extruding utility options
   * **Workpiece Regular meshing**
 
 In the regular mesh setting user can control mesh by defining advanced settings like weighting factors, mesh windows, size ratioand remeshing criteria. User can click on “![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }})” to generate mesh, mesh generated using regular meshing looks like as shown in the Fig. 31.1.24.  
-For more information on mesh settings in regular meshing refer Expert mode mesh settings in [13.2.2. Expert mode 3D mesh generation](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.2._Expert_Mode_3D_Mesh_Generation)
+For more information on mesh settings in regular meshing refer Expert mode mesh settings in [13.2.2. Expert mode 3D mesh generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.2._Expert_Mode_3D_Mesh_Generation)
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image024.jpg' | relative_url }})
 
@@ -329,7 +329,7 @@ Initialize page
 ### B.I. Flownet
 
 In a DB with large number of steps, plotting a Flownet will take lot of time, user can overcome this issue by using Built in Flownet. When user uses Built in Flownet, the Flownet is plotted as the problem is simulated. (See Fig. 31.1.29.)  
-For more information on defining Built in Flownet,please refer [13.2.9. Built in Flownet](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet)
+For more information on defining Built in Flownet,please refer [13.2.9. Built in Flownet]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13_2_9_Built_In_Flownet)
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image016.jpg' | relative_url }})
 

@@ -25,13 +25,13 @@ In general, the elasto-plastic material model should be run in a very similar ma
 
 ## Material Properties
 
-In addition to the flow stress data, the material is also required to have [Young's modulus (YOUNG)](../pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data.htm#Young's_modulus) and [Poisson's ratio (POISON)](../pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data.htm#Poisson's_ratio). If thermal expansion and contraction is to be considered, the thermal expansion coefficient must also be present. Note: elastic and elasto-plastic materials in DEFORM deal with thermal expansion differently (see [Thermal expansion (EXPAND)](../pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data.htm#Thermal_expansion) for more details).
+In addition to the flow stress data, the material is also required to have [Young's modulus (YOUNG)]({{ '/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }}#Young's_modulus) and [Poisson's ratio (POISON)]({{ '/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }}#Poisson's_ratio). If thermal expansion and contraction is to be considered, the thermal expansion coefficient must also be present. Note: elastic and elasto-plastic materials in DEFORM deal with thermal expansion differently (see [Thermal expansion (EXPAND)]({{ '/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }}#Thermal_expansion) for more details).
 
 In the elasto-plastic model, the flow stress at zero strain represents the yield stress for the material. As the accumulated effective plastic strain increases, the yield stress increases. The flow stress data must have a reasonable description for the initial yield stress particularly in the case of low deformation simulations such as heat treatment. This is where the elastic part of the stress-strain curve intersects with the plastic part of the curve. If the flow stress data is only defined for high strain values, DEFORM will extrapolate the yield stress and this value may not be close to the actual yield stress. Thus, valid results are unlikely and convergence difficulties are possible. Thus, having some flow stress data at low effective plastic strain values may aid convergence. (See Fig. AV.1 for an example of extrapolation of the initial yield stress).
 
 In order to provide guidance to users who are not familiar with modeling elasto-plastic materials, we offer the following suggestions.
 
-1\. When using the function form ([Power law]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_2_power_law/' | relative_url }})):
+1\. When using the function form ([Power law]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_2_Power_Law/' | relative_url }})):
 
 ![]({{ '/assets/equations/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/eq_10_1_1_2.jpg' | relative_url }}) |   
 ---|---  
@@ -46,9 +46,9 @@ Extrapolation of flow stress data to determine the initial yield stress
 
 ## Object data
 
-  * Set the EP initial guess under Objects/Properties/[Deformation](../pre_processor/16_object_properties/16_1_deformation_properties.htm#16_1_1_Creep_calculation) to Previous step solution.
+  * Set the EP initial guess under Objects/Properties/[Deformation]({{ '/docs/sk/pre_processor/16_object_properties/16_1_deformation_properties/' | relative_url }}#16_1_1_Creep_calculation) to Previous step solution.
 
-  * If there is a change in operation, e.g. moving the part from one station to another, initialize the velocity for the part under Objects/[Nodes Data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }})/[Deformation](../pre_processor/17_object_data_initialization/17_2_element_data_window.htm#17_2_3_Deformation_Tab). This will improve the initial guess of the velocity solution.
+  * If there is a change in operation, e.g. moving the part from one station to another, initialize the velocity for the part under Objects/[Nodes Data]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }})/[Deformation]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_2_element_data_window/' | relative_url }}#17_2_3_Deformation_Tab). This will improve the initial guess of the velocity solution.
 
   * If moving the part from one set-up to another, allow the part to relax its stresses by placing a few springback steps between operations.
 
@@ -124,7 +124,7 @@ Linear interpolation at the small strain rate(= 0 ~ 1)
 
 [Material Properties]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }})
 
-[Flow Stress]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/' | relative_url }})
+[Flow Stress]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_Flow_Stress_Models/' | relative_url }})
 
 [Elastic data]({{ '/docs/sk/pre_processor/10_material_data/10_2_elastic_data/10_2_elastic_data/' | relative_url }})
 

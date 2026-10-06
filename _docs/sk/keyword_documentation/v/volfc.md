@@ -35,4 +35,4 @@ The volume fraction is determined from the keyword TTTD, which specifies the mod
   
 RELATED TOPICS  
 ---  
-[Inter-Material Data]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }}) Keywords: [VOLFS]({{ '/docs/sk/keyword_documentation/v/volfs/' | relative_url }}), VOLFN
+[Inter-Material Data]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }}) Keywords: [VOLFS]({{ '/docs/sk/keyword_documentation/v/volfs/' | relative_url }}), VOLFN

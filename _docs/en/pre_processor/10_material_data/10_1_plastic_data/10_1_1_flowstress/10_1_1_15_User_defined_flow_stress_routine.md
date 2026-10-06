@@ -13,7 +13,7 @@ Apart from the above flow stress models, DEFORM system allows the flexibility wi
 Flow stress User routine window
 
   
-Please refer to [Chapter 56. User Routines]({{ '/docs/en/User_Routines/56_User_Routines_in_DEFORM/56_User_Routines_in_DEFORM/' | relative_url }}) for a description of how to implement user defined flow stress routines.
+Please refer to [Chapter 56. User Routines]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/' | relative_url }}) for a description of how to implement user defined flow stress routines.
 
 [10.1.1.1. Tabular data format]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_1_Tabular_data_format/' | relative_url }})  
 [10.1.1.2. Power Law]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_2_Power_Law/' | relative_url }})  

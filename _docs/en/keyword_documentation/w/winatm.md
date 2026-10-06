@@ -36,8 +36,8 @@ WINATM specifies the diffusion window and window parameters for an object.
   
 REMARKS  
 ---  
-Keyword Format Example Velx, Vely Win(X1) Win(Y1) Win(NdataX) Win(NdataY) NumCrb Time(1) Atom(1) Time(Ndata) Atom(Ndata) Numtim NumAtm Time(1) Tim(Ndata) C(1) C(Ndata) Atm(1) Atm(Ndata) SRC(1) SRC(Ndata) Applicable Simulation Modules: Microstructure Applicable [Simulation Mode](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Transformation  
+Keyword Format Example Velx, Vely Win(X1) Win(Y1) Win(NdataX) Win(NdataY) NumCrb Time(1) Atom(1) Time(Ndata) Atom(Ndata) Numtim NumAtm Time(1) Tim(Ndata) C(1) C(Ndata) Atm(1) Atm(Ndata) SRC(1) SRC(Ndata) Applicable Simulation Modules: Microstructure Applicable [Simulation Mode]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Transformation  
   
 RELATED TOPICS  
 ---  
-[Boundary Constraints]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}): [Diffusion windows](../../pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions.htm#14.4.1._Diffusion_with_the_environment_BCC_) Keywords: [ENVATM]({{ '/docs/en/keyword_documentation/e/envatm/' | relative_url }}), [ACVCOF]({{ '/docs/en/keyword_documentation/a/acvcof/' | relative_url }}), [LOCATM]({{ '/docs/en/keyword_documentation/l/locatm/' | relative_url }})
+[Boundary Constraints]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}): [Diffusion windows]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}#14.4.1._Diffusion_with_the_environment_BCC_) Keywords: [ENVATM]({{ '/docs/en/keyword_documentation/e/envatm/' | relative_url }}), [ACVCOF]({{ '/docs/en/keyword_documentation/a/acvcof/' | relative_url }}), [LOCATM]({{ '/docs/en/keyword_documentation/l/locatm/' | relative_url }})

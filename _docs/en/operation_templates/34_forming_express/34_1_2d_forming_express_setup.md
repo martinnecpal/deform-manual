@@ -96,9 +96,9 @@ Process settings window
 
 In Forming express only two geometry models can be setup, those are Axisymmetric and Plane Strain.
 
-The Axisymmetric models as a cross-section with respect to the central axis. Therefore, the model requires the deforming geometry to be axially symmetric and in the first quadrant and fourth quadrant (i.e. X > 0). In addition, the system assumes that the flow in every radial plane is identical. (See [Fig. 9.1.2.](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model))
+The Axisymmetric models as a cross-section with respect to the central axis. Therefore, the model requires the deforming geometry to be axially symmetric and in the first quadrant and fourth quadrant (i.e. X > 0). In addition, the system assumes that the flow in every radial plane is identical. (See [Fig. 9.1.2.]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Fig._9.1.2._Example_for_types_of_geometry_model))
 
-The Plane-strain assumes that the geometry to have an unit depth with both front and back faces constrained. The simulation assumes that the objects will behave identically in any given cross-section across the width and height of the object. (See [Fig. 9.1.2.](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model))
+The Plane-strain assumes that the geometry to have an unit depth with both front and back faces constrained. The simulation assumes that the objects will behave identically in any given cross-section across the width and height of the object. (See [Fig. 9.1.2.]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Fig._9.1.2._Example_for_types_of_geometry_model))
 
 Other Geometry types Plane-stress and Torsion are available only in 2D Forming operation, for details Refer [2D Forming Setup]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }}).
 
@@ -157,7 +157,7 @@ Workpiece window
   
 **Object****Name** : User can define the name for all the objects available in the operation.
 
-**Object****Type** : The object type ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are explained in chapter 11. General Object Data Definition, for details refer [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
+**Object****Type** : The object type ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are explained in chapter 11. General Object Data Definition, for details refer [11.4. Object Type]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type).
 
   * **Plastic** : Plastic objects are modeled as rigid-plastic or rigid-viscoplastic materials depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). The material deforms plastically beyond the limiting strain rate. The plastic material behavior of the object is specified with a material flow stress function or flow stress data ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). In Forming Express operation workpiece is automatically assigned to Plastic object type.
 
@@ -218,7 +218,7 @@ Geometry primitive window for Plane strain geometry type
 
 **Check![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**
 
-Once the geometry of the object is created, ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the **![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**button. Check and correct Geometry window appears as shown in below Fig. 34.1.13. The Geometry gets corrected, if they are any errors, when we click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). For more information please refer [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry) in Chapter [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}).
+Once the geometry of the object is created, ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the **![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**button. Check and correct Geometry window appears as shown in below Fig. 34.1.13. The Geometry gets corrected, if they are any errors, when we click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). For more information please refer [Check Geometry]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}#Check_Geometry) in Chapter [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image013.jpg' | relative_url }})
 
@@ -314,11 +314,11 @@ Temperature, strain, and strain rate densities are assigned based on gradients i
 
 The values from all the mesh density keywords are combined during the mesh generation process to create a mesh density distribution within the geometric boundary.
 
-Forming operation contains other weighting factor that is, Mesh Density window options using this user can define specific area in space which will move with other objects during deformation with an appropriate mesh density, please refer chapter [13.1.5. Mesh Weighting factors.](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.5._Mesh_weighting_factors)
+Forming operation contains other weighting factor that is, Mesh Density window options using this user can define specific area in space which will move with other objects during deformation with an appropriate mesh density, please refer chapter [13.1.5. Mesh Weighting factors.]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.5._Mesh_weighting_factors)
 
 **Remeshing criteria**
 
-Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See Fig. 34.1.19.) contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they are Interference Depth ([RMDPTH]({{ '/docs/en/keyword_documentation/r/rmdpth/' | relative_url }})),Max. Time Increment ([RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }})), Max. Step Increment ([RMSTEP]({{ '/docs/en/keyword_documentation/r/rmstep/' | relative_url }})) and Max. Stroke Increment ([RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed. During the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues. For more information on Remesh Criteria, please refer [13.1.8. Remeshing criteria.](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.8._Remeshing_criteria)
+Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshing of objects undergoing large plastic deformation. The Remeshing Criteria Window (See Fig. 34.1.19.) contains a group of parameters that control when and how often the mesh will be regenerated on a meshed object based on assignment of certain triggers. There are four keywords that control the initiation of a remeshing procedure for an object, they are Interference Depth ([RMDPTH]({{ '/docs/en/keyword_documentation/r/rmdpth/' | relative_url }})),Max. Time Increment ([RMTIME]({{ '/docs/en/keyword_documentation/r/rmtime/' | relative_url }})), Max. Step Increment ([RMSTEP]({{ '/docs/en/keyword_documentation/r/rmstep/' | relative_url }})) and Max. Stroke Increment ([RMSTRK]({{ '/docs/en/keyword_documentation/r/rmstrk/' | relative_url }})). When the remeshing criteria of any of these keywords has been fulfilled or the mesh becomes unusable (negative Jacobian), the object will be remeshed. During the simulation, if an object satisfies any of its remeshing criteria, a new mesh is generated, the solution information from the old mesh is interpolated onto the new mesh and the simulation continues. For more information on Remesh Criteria, please refer [13.1.8. Remeshing criteria.]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.8._Remeshing_criteria)
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image019.jpg' | relative_url }})
 
@@ -355,7 +355,7 @@ When user clicks on show mesh it shows the generated mesh in display window. Sho
 
 When user clicks on Default settings tab all the settings will be changed to default values, by default Mesh window will be in greyed out mode as no mesh windows are defined. If user wants to activate mesh window, user has to change the weighting factor for mesh density by increasing the sliding bar value to 1.
 
-Coating mesh and User Mesh Density Window options are not available in Forming express operation unlike in Forming operation, for these options refer [13.1.7. Coating Mesh](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.7._Coating) and [ 13.1.6. Mesh Density windows](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.6._Mesh_density_windows) respectively.
+Coating mesh and User Mesh Density Window options are not available in Forming express operation unlike in Forming operation, for these options refer [13.1.7. Coating Mesh]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.7._Coating) and [ 13.1.6. Mesh Density windows]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.6._Mesh_density_windows) respectively.
 
 ## Material
 
@@ -391,7 +391,7 @@ Symmetry boundary condition assigned for workpiece
 
 Heat exchange with environment boundary condition assigned for workpiece
 
-The BCC’s are categorized as [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}),[Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions)
+The BCC’s are categorized as [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}),[Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions.]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
 ## Movement Controls
 
@@ -418,7 +418,7 @@ The lower portion of the movement controls window (See Fig. 34.1.26.) allows the
 
 Load Movement controls settings
 
-**Mechanical Press** : The Mechanical Press type replicates the cyclic motion of a mechanical press (See Fig. 34.1.28.). The "Mechanical Press" option simulates the motion of objects driven by a mechanical press. In Forming express only Mechanical Crank press control is available in addition to this knuckle press control will be available in Forming operation, for knuckle press information refer [15.5.2. Knuckle Press.](../../pre_processor/15_movement_controls_definition/15_5_mechanical_press.htm#15_5_2_Knuckle_or_Wedge_Press)
+**Mechanical Press** : The Mechanical Press type replicates the cyclic motion of a mechanical press (See Fig. 34.1.28.). The "Mechanical Press" option simulates the motion of objects driven by a mechanical press. In Forming express only Mechanical Crank press control is available in addition to this knuckle press control will be available in Forming operation, for knuckle press information refer [15.5.2. Knuckle Press.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_5_mechanical_press/' | relative_url }}#15_5_2_Knuckle_or_Wedge_Press)
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image027.jpg' | relative_url }})
 
@@ -470,7 +470,7 @@ Hammer movement control settings
 During hammer forging operation, only a portion of the kinetic energy of ram is used for the plastic deformation of work piece. The rest of the energy is lost through anvil and machine frame. These values can be set in the movement controls window.
 
   
-There are basically two types of hammer. The first is an [anvil type hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_1_Anvil_Type_Hammer) and the other [counter blow hammer](../../pre_processor/15_movement_controls_definition/15_3_hammer.htm#15_3_2_Counterblow_Hammer). The formulations and assumptions used for the two types of hammer forging operations refer [15.3. Hammer Energy.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }})
+There are basically two types of hammer. The first is an [anvil type hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}#15_3_1_Anvil_Type_Hammer) and the other [counter blow hammer]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }}#15_3_2_Counterblow_Hammer). The formulations and assumptions used for the two types of hammer forging operations refer [15.3. Hammer Energy.]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_3_hammer/' | relative_url }})
 
 In an Anvil type hammer, the workpiece, together with the lower die set, is placed on an anvil which is stationary. In a simple gravity drop hammer, the ram is accelerated by gravity and accumulates energy.
 
@@ -551,7 +551,7 @@ System will always update stroke with positioning for the object that has mechan
 
 **Positioning Objects![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})**
 
-By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 34.1.35. For more information about these options, please refer [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Offset]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning), [Flip]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_6_Flip_positioning) and [Rotational]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning) as shown in Fig. 34.1.35. For more information about these options, please refer [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_1_2d_forming_express_setup/image034.jpg' | relative_url }})
 
@@ -702,7 +702,7 @@ If **Distance between dies** was chosen, distance between objects will be checke
 If **Distance between dies** was chosen, the user must define distance between objects and reference points ( Fig. 34.1.43.(b).).
 
   
-For more information about stopping controls refer [9.3.10. Temperature stopping contorls](../../pre_processor/9_simulation_controls/9_3_stopping_controls.htm#9.3.10._Temperature_stopping_control)
+For more information about stopping controls refer [9.3.10. Temperature stopping contorls]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}#9.3.10._Temperature_stopping_control)
 
 ## Simulation controls
 
@@ -777,7 +777,7 @@ After generating database user has to select the MO Simulation mode tab to submi
 
 [34.2. 3D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_2_3d_forming_express_setup/' | relative_url }})
 
-[Promote Forming Express to Forming operation](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations.htm#Fig._6.6.4.4._Forming_express_operation_after_promoting_it_to_forming_operation)
+[Promote Forming Express to Forming operation]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations/' | relative_url }}#Fig._6.6.4.4._Forming_express_operation_after_promoting_it_to_forming_operation)
 
 [6.2. MO Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 

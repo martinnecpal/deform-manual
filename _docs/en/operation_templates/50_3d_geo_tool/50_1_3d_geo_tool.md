@@ -123,7 +123,7 @@ File Menu options
 
 ### Tool Menu
 
-  * **Geometry Primitive![]({{ '/assets/icons/pre_icons/geo_tool_geometry_primitive.jpg' | relative_url }}) : **When we click on the Geometry primitive option, Primitive window will open with options to create a new geometry. (See Fig. 50.1.3.) For more information about the Geometry Primitive options please visit the section [12.3.2. 3D Geometry Tool](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#12.3.2._3D_Geometry_Tools) \- [Define Primitive.](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Define_Primitive)
+  * **Geometry Primitive![]({{ '/assets/icons/pre_icons/geo_tool_geometry_primitive.jpg' | relative_url }}) : **When we click on the Geometry primitive option, Primitive window will open with options to create a new geometry. (See Fig. 50.1.3.) For more information about the Geometry Primitive options please visit the section [12.3.2. 3D Geometry Tool]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}#12.3.2._3D_Geometry_Tools) \- [Define Primitive.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}#Define_Primitive)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0003.jpg' | relative_url }})
 
@@ -395,7 +395,7 @@ Environment Directories tab
 
 Environment Feature Tab
 
-**Icon/Font** : The user can change the icon and font size depending on the requirement as shown in the [Fig. 50.1.26.](50_1_3d_geo_tool.htm#Fig_50_1_26_Icon/Font_options_under_Environment_Settings_window)
+**Icon/Font** : The user can change the icon and font size depending on the requirement as shown in the [Fig. 50.1.26.]({{ '/docs/en/operation_templates/50_3d_geo_tool/50_1_3d_geo_tool/' | relative_url }}#Fig_50_1_26_Icon/Font_options_under_Environment_Settings_window)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0026.jpg' | relative_url }})
 

@@ -138,7 +138,7 @@ Workpiece window
 **Object Name** : User can define the name for all the objects available in the operation.
 
   
-**Object Type** : The object type ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are available in Forming operation, for its details refer [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type)
+**Object Type** : The object type ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) defines if and how deformation is modeled for each individual object in a DEFORM problem. In Forming Express operation only two object type are available those are Plastic and Rigid and those two are automatically predefined by object number, so workpiece will be plastic and dies will be rigid. More object types are available in Forming operation, for its details refer [11.4. Object Type]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type)
 
   
 **Plastic** : Plastic objects are modelled as rigid-plastic or rigid-viscoplastic material depending on characteristics of materials. The formulation assumes that the material stress increases linearly with strain rate until a threshold strain rate, referred to as the limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). The material deforms plastically beyond the limiting strain rate. The plastic material behaviour of the object is specified with a material flow stress function or flow stress data ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). In heat transfer express workpiece is automatically assigned to Plastic object type.  
@@ -160,7 +160,7 @@ The user can initialize temperature, strain, velocity, damage and displacement t
 Advanced object settings
 
   
-More variables can be initialized in Forming operation, for detail refer [35\. 2D Heat Transfer]({{ '/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}) operation [Initialize](../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize).
+More variables can be initialized in Forming operation, for detail refer [35\. 2D Heat Transfer]({{ '/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}) operation [Initialize]({{ '/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}#Initialize).
 
 The average strain rate ([AVGSTR]({{ '/docs/en/keyword_documentation/a/avgstr/' | relative_url }})) is a characteristic average value of the effective strain rate. An approximation of this value should be given at the start of the simulation.
 
@@ -353,7 +353,7 @@ Symmetry boundary condition assigned for workpiece
 
 Heat exchange with environment boundary condition assigned for workpiece
 
-More BCC’s options under different categories are available in Pre-Processor and Forming Operation such as [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}),[Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions)
+More BCC’s options under different categories are available in Pre-Processor and Forming Operation such as [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}),[Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) and [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). For more information about these BCC's please refer [14\. Boundary Conditions.]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
 ### Heat Condition Definition
 
@@ -431,7 +431,7 @@ Transfer operation object selection settings
 
 ### Objects positioning and generating inter object relation
 
-If user selects more than one object then system adds the controls (positioning) and scheduled positioning and contact windows after objects to position the objects and to generate inter object contact if any in the setup. More details about these options refer [Defining Rest on die operation](36_1_2d_heat_transfer_express.htm#36_1_5_Defining_Rest_on_die_Operation) section [Positioning](36_1_2d_heat_transfer_express.htm#Positioning) and [Scheduled Positioning](36_1_2d_heat_transfer_express.htm#Schedule_Positioning).
+If user selects more than one object then system adds the controls (positioning) and scheduled positioning and contact windows after objects to position the objects and to generate inter object contact if any in the setup. More details about these options refer [Defining Rest on die operation]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#36_1_5_Defining_Rest_on_die_Operation) section [Positioning]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Positioning) and [Scheduled Positioning]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Schedule_Positioning).
 
 ### Heat condition Definition
 
@@ -443,7 +443,7 @@ Transfer operation heat conditions
 
 After setting the heat condition user has to define the simulations controls for simulation controls settings details refer Simulation Controls Definition.
 
-Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation refer [Simuation controls Definition](36_1_2d_heat_transfer_express.htm#Simulation_controls_Definition) and [Generate Database](36_1_2d_heat_transfer_express.htm#Generate_Database) section.
+Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation refer [Simuation controls Definition]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Simulation_controls_Definition) and [Generate Database]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Generate_Database) section.
 
 ## Defining Rest on Die Operation
 
@@ -473,7 +473,7 @@ The user can select the number of objects that is required to perform the operat
 
 Objects selection window
 
-For [basic object definition](36_1_2d_heat_transfer_express.htm#Object_Basic_definition), [geometry](36_1_2d_heat_transfer_express.htm#Object_geometry_definition), [mesh](36_1_2d_heat_transfer_express.htm#Object_Mesh_Definition), [material](36_1_2d_heat_transfer_express.htm#Material_Definition) and [boundary condition](36_1_2d_heat_transfer_express.htm#Boundary_Condition_Definition) details refer 36.2.4. Defining Heating operation.
+For [basic object definition]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Object_Basic_definition), [geometry]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Object_geometry_definition), [mesh]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Object_Mesh_Definition), [material]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Material_Definition) and [boundary condition]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Boundary_Condition_Definition) details refer 36.2.4. Defining Heating operation.
 
 ### Positioning
 
@@ -525,7 +525,7 @@ Heat condition settings window
 After setting the heat condition user has to define the simulations controls for simulation controls settings details refer Simulation Control Definition.
 
   
-Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation refer [Simuation controls Definition](36_1_2d_heat_transfer_express.htm#Simulation_controls_Definition) and [Generate Database](36_1_2d_heat_transfer_express.htm#Generate_Database) section.
+Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation refer [Simuation controls Definition]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Simulation_controls_Definition) and [Generate Database]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Generate_Database) section.
 
 ## Continue Defining the Forming Operations
 
@@ -557,7 +557,7 @@ Heat condition settings window
 After setting the heat condition user has to define the simulations controls for simulation controls settings details refer Simulation Control Definition.
 
   
-Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation refer [Simuation controls Definition](36_1_2d_heat_transfer_express.htm#Simulation_controls_Definition) and [Generate Database](36_1_2d_heat_transfer_express.htm#Generate_Database) section.
+Next Database has to be generated in case interactive setup or if the transfer operation is first operation, otherwise database will automatically generate during simulation. For more information on simulation controls and Database generation refer [Simuation controls Definition]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Simulation_controls_Definition) and [Generate Database]({{ '/docs/en/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/' | relative_url }}#Generate_Database) section.
 
 **Related Topics:**
 

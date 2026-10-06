@@ -126,42 +126,42 @@
           url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_plastic_data/
           children:
             - name: 10.1.1. FlowStress
-              url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/
+              url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_Flow_Stress_Models/
               children:
                 - name: 10.1.1.1. Tabular data format
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_1_tabular_data_format/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_1_Tabular_data_format/
                 - name: 10.1.1.2. Power Law
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_2_power_law/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_2_Power_Law/
                 - name: 10.1.1.3. Flow stress for aluminum alloys (Type 1)
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_3_flow_stress_for_aluminum_alloys_type_1/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_3_Flow_stress_for_aluminum_alloys_Type_1/
                 - name: 10.1.1.4. Flow stress for aluminum alloys (Type 2)
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_4_flow_stress_for_aluminum_alloys_type_2/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_4_Flow_stress_for_aluminum_alloys_Type_2/
                 - name: 10.1.1.5. Linear hardening
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_5_linear_hardening/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_5_Linear_hardening/
                 - name: 10.1.1.6. Tabular_data_format_2
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_6_tabular_data_format_2/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_6_Tabular_data_format_2/
                 - name: 10.1.1.7. Generalized Johnson and Cook model
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_7_generalized_johnson_and_cook_model/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_7_Generalized_Johnson_and_Cook_model/
                 - name: 10.1.1.8. Zerilli-Armstrong model
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_8_zerilli-armstrong_model/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_8_Zerilli-Armstrong_model/
                 - name: 10.1.1.9. Norton-Hoff Law model
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_9_norton-hoff_law_model/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_9_Norton-Hoff_Law_model/
                 - name: 10.1.1.10. Microstructure Flow stress model based on dislocation density and burgers vector
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_10_microstructure_dislocation_density_and_burgers_vector/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_10_Microstructure_dislocation_density_and_burgers_vector/
                 - name: 10.1.1.11. Texture based flow stress model f(strn,strnrt,O,T)
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_11_texture_based_flow_stress_model_fstrnstrnrtot/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_11_Texture_based_flow_stress_model_fstrnstrnrtOT/
                 - name: 10.1.1.12. User defined Tabular data
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_12_user_defined_tabular_data/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_12_User_defined_Tabular_data/
                 - name: 10.1.1.13. User defined Tabular data (log)
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_13_user_defined_tabular_data_log/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_13_User_defined_Tabular_data_log/
                 - name: 10.1.1.14. Bird-Mukharjee-Dorn equation
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_14_bird-mukharjee-dorn_equation/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_14_Bird-Mukharjee-Dorn_equation/
                 - name: 10.1.1.15.User defined flow stress routine
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_15_user_defined_flow_stress_routine/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_15_User_defined_flow_stress_routine/
                 - name: 10.1.1.16. Flow stress database
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_16_flow_stress_database/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_16_Flow_stress_database/
                 - name: 10.1.1.17. Material model data conversion utilities
-                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_17_material_model_data_conversion_utilities/
+                  url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_17_Material_model_data_conversion_utilities/
             - name: 10.1.2. Creep
               url: /docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_creep_models/
               children:
@@ -219,12 +219,12 @@
         - name: 10.7. Hardness Data
           url: /docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/
         - name: 10.8. Elec_Mag Data
-          url: /docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/
+          url: /docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_Elec_Mag_Data/
         - name: 10.9. Transformation Data
-          url: /docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/
+          url: /docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/
           children:
             - name: 10.9.1. Transformation Kinetics Models
-              url: /docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_1_transformation_kinetics_models/
+              url: /docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_1_Transformation_Kinetics_Models/
         - name: 10.12. Miscellaneous Data
           url: /docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/
           children:
@@ -242,7 +242,7 @@
         - name: 12.3. 3D Geometry Data Defining 
           url: /docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/
         - name: 12.4. 3D Geometry data Editing (GEO TOOL)
-          url: /docs/en/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_editing_geo_tooll/
+          url: /docs/en/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_Editing_geo_toolL/
     - name: 13. Mesh Generation
       url: /docs/en/pre_processor/13_mesh_generation/13_mesh_generation/
       children:
@@ -298,9 +298,9 @@
         - name: 16.2. Thermal Properties
           url: /docs/en/pre_processor/16_object_properties/16_2_thermal_properties/
         - name: 16.3. Reference
-          url: /docs/en/pre_processor/16_object_properties/16_3_reference/
+          url: /docs/en/pre_processor/16_object_properties/16_3_Reference/
         - name: 16.4. Fracture Properties
-          url: /docs/en/pre_processor/16_object_properties/16_4_fracture_properties/
+          url: /docs/en/pre_processor/16_object_properties/16_4_Fracture_properties/
         - name: 16.5. Hardness estimation type
           url: /docs/en/pre_processor/16_object_properties/16_5_hardness_properties/
         - name: 16.6. Heating Properties
@@ -312,7 +312,7 @@
         - name: 16.9. RSE
           url: /docs/en/pre_processor/16_object_properties/16_9_rse/
         - name: 16.10. Partial Domain 
-          url: /docs/en/pre_processor/16_object_properties/16_11_partial_domain/
+          url: /docs/en/pre_processor/16_object_properties/16_11_Partial_Domain/
         - name: 16.11. User
           url: /docs/en/pre_processor/16_object_properties/16_10_user/
     - name: 17. Object Data Initialization

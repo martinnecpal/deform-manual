@@ -55,4 +55,4 @@ The data defined by use of this keyword is not saved in A array or MAR array, bu
   
 RELATED TOPICS  
 ---  
-[ALE simulation](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\)), [Built-in flownet](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet)
+[ALE simulation]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\)), [Built-in flownet]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13_2_9_Built_In_Flownet)

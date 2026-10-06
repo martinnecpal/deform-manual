@@ -31,7 +31,7 @@ UTSDAT defines the ultimate tensile strength for a material. The ultimate tensil
   
 REMARKS  
 ---  
-It should be noted that the keyword can only be used in the fracture method max (eff stress/UTS), which is object specific. Applicable Simulation Module: Deformation Applicable [Simulation Modes](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Deformation Applicable object types: [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic) and [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic)  
+It should be noted that the keyword can only be used in the fracture method max (eff stress/UTS), which is object specific. Applicable Simulation Module: Deformation Applicable [Simulation Modes]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Deformation Applicable object types: [Plastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic) and [Elastoplastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic)  
   
 RELATED TOPICS  
 ---  

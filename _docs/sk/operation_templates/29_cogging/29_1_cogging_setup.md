@@ -353,7 +353,7 @@ Ak použijeme kladnú hodnotu posunu medzi pármi matíc (Δ), potom sa na zači
 Vzdialenosť medzi horizontálnymi ľavými a pravými maticami na konci záberu je teda väčšia – predstavuje dvojnásobok hodnoty Δ – ako vzdialenosť medzi vertikálnymi hornými a dolnými maticami. To znamená, že deformácia obrobku vo vertikálnom smere je dvojnásobkom hodnoty Δ v porovnaní s horizontálnym smerom.  
 Ak však použijeme zápornú hodnotu posunu medzi dvojicami matíc (Δ), horná a spodná matica sa o túto absolútnu hodnotu posunú ďalej od obrobku.
 
-**Booleovská operácia pred prechodom:** Možnosť skrátiť polotovar medzi jednotlivými prechodmi, ak sa predĺži nad požadovanú dĺžku. (pozri obr. 29.1.21.) Ďalšie informácie týkajúce sa možnosti „Booleovská operácia pred prechodom“ v systéme Brick nájdete v príručke 43.1. Shape Rolling Manual: časť [Boolean between passes](../43_shape_rolling/43_1_shape_rolling_manual.htm#Boolean_between_passes)
+**Booleovská operácia pred prechodom:** Možnosť skrátiť polotovar medzi jednotlivými prechodmi, ak sa predĺži nad požadovanú dĺžku. (pozri obr. 29.1.21.) Ďalšie informácie týkajúce sa možnosti „Booleovská operácia pred prechodom“ v systéme Brick nájdete v príručke 43.1. Shape Rolling Manual: časť [Boolean between passes]({{ '/docs/sk/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/' | relative_url }}#Boolean_between_passes)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image062.jpg' | relative_url }})
 
@@ -705,7 +705,7 @@ V režime Cogging je štandardne zvolená možnosť **User**; ak si používate�
   
 Koeficienty trenia a prenosu tepla je možné nastaviť dokonca priamo z okna ovládacích prvkov simulácie, 
 
-Ďalšie informácie nájdete v dokumente [Inter-Object Relations in Forming 3D setup](../33_forming/33_2_3d_forming_setup.htm#33_2_6_Inter-Object_Relation).
+Ďalšie informácie nájdete v dokumente [Inter-Object Relations in Forming 3D setup]({{ '/docs/sk/operation_templates/33_forming/33_2_3d_forming_setup/' | relative_url }}#33_2_6_Inter-Object_Relation).
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image044.jpg' | relative_url }})
 

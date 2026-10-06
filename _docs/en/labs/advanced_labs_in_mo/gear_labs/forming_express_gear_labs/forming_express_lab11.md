@@ -105,7 +105,7 @@ Go to the Set up ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | 
 
 Max Principal Stress state variable plot
 
-Compare the stress plots between the first and second die stress load cases. (See Fig. L11.9 and [Fig. L11.10.](forming_express_lab10.htm#Fig_L10_10_Max_Principal_Stress_state_variable_plot))
+Compare the stress plots between the first and second die stress load cases. (See Fig. L11.9 and [Fig. L11.10.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab10/' | relative_url }}#Fig_L10_10_Max_Principal_Stress_state_variable_plot))
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab11_image0008.jpg' | relative_url }})
 

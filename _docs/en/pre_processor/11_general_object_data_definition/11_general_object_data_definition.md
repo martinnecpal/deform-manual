@@ -160,7 +160,7 @@ Generally, takes long solution time, convergence behaviour is greatly influence 
 
 Porous objects are treated the same as plastic objects (compressible rigid-viscoplastic materials) except that the material density is calculated and updated as part of the simulation. The material behavior is modelled similar to plastic objects but the model includes the compressibility of the material in the formulation. The limiting strain rate ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})) and the flow stress ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})) must be specified at the fully dense state. The material density is specified at each element ([DENSTY]({{ '/docs/en/keyword_documentation/d/densty/' | relative_url }})). Objects with changing material densities such as materials used in powder forming, should be modelled as Porous objects. The only iteration method currently available for the porous material is the direct solution method. This method does not have fast convergence capabilities, subsequently a porous simulation may take longer than a comparable plastic simulation.
 
-For the sintering material models available in DEFORM refer [10.12.7. Sintering Driving Force Model.](../10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data.htm#10.12.7._Sintering_Driving_Force_model)
+For the sintering material models available in DEFORM refer [10.12.7. Sintering Driving Force Model.]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }}#10.12.7._Sintering_Driving_Force_model)
 
 From v14.0, user can model the elastic behavior of porous materials by selecting the Elasto-plastic option from the Porous object type options as shown in Fig. 11.4.
 
@@ -199,7 +199,7 @@ Not available for 2D plane stress
 
 ### User Defined [2D] [3D]
 
-User has been provided an option to customize the material behavior. Users can customize the material behavior using [usr_mat.f.](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_5_User_defined_material_models_\(USRMAT\)) by defining a unique constitutive model. Only one object with such definition is allowed, hence no need to pass any routine number. Users can model the elasto-plastic or rigid-plastic behavior and can select the respective option from the User Defined object type options as shown in Fig. 11.5. , Elasto-plastic for Elasto-plastic and Plastic for rigid-plastic. SP solver is suggested for user-defined elasto-plastic problems. From v12, this implementation replaces the UMAT.DAT function in previous versions.
+User has been provided an option to customize the material behavior. Users can customize the material behavior using [usr_mat.f.]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#56_2_3_5_User_defined_material_models_\(USRMAT\)) by defining a unique constitutive model. Only one object with such definition is allowed, hence no need to pass any routine number. Users can model the elasto-plastic or rigid-plastic behavior and can select the respective option from the User Defined object type options as shown in Fig. 11.5. , Elasto-plastic for Elasto-plastic and Plastic for rigid-plastic. SP solver is suggested for user-defined elasto-plastic problems. From v12, this implementation replaces the UMAT.DAT function in previous versions.
 
 ![]({{ '/assets/images/pre-processor/11_object_general_definition/11_image005.jpg' | relative_url }})
 
@@ -223,7 +223,7 @@ Environment Air(Electro-magnetic) type object selection
 
 ### User Defined (Plastic) [2D] [3D]
 
-User has been provided with an option to customize the plastic material behaviour. User can customize the material behaviour using [usr_mat.f.](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#User_Defined_\(Plastic\)) by defining an unique constitutive model. Only one object with such definition is allowed hence no need to pass any routine number. This object type can be used to simulate rigid-plastic material model. From v12 this new implementation replace the UMAT.DAT function in previous versions. In current v12 DEFORM, SP solver is suggested for user-defined elasto-plastic object problems.
+User has been provided with an option to customize the plastic material behaviour. User can customize the material behaviour using [usr_mat.f.]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#User_Defined_\(Plastic\)) by defining an unique constitutive model. Only one object with such definition is allowed hence no need to pass any routine number. This object type can be used to simulate rigid-plastic material model. From v12 this new implementation replace the UMAT.DAT function in previous versions. In current v12 DEFORM, SP solver is suggested for user-defined elasto-plastic object problems.
 
 ## Primary Die (PDIE)
 
@@ -231,7 +231,7 @@ The primary die ([PDIE]({{ '/docs/en/keyword_documentation/p/pdie/' | relative_u
 For example, the die attached to the ram of a mechanical press would be designated as the primary die. Characteristics of the primary die can be used to control various aspects of a simulation including:
 
   * Simulation time step size ([DSMAX]({{ '/docs/en/keyword_documentation/d/dsmax/' | relative_url }}))
-  * Object movement ([MOVCTL](../../keyword_documentation/m/movctl_\(2d\).htm))
+  * Object movement ([MOVCTL]({{ '/docs/en/keyword_documentation/m/movctl_(2d)/' | relative_url }}))
   * Simulation termination criteria ([SMAX]({{ '/docs/en/keyword_documentation/s/smax/' | relative_url }}), [VMIN]({{ '/docs/en/keyword_documentation/v/vmin/' | relative_url }}) and [LMAX]({{ '/docs/en/keyword_documentation/l/lmax/' | relative_url }}))
 
 The primary die is defined in using a check box (See Fig. 11.3.). Only one object can be defined as the primary die.

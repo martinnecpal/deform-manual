@@ -65,7 +65,7 @@ Príklad typov geometrických modelov
 
 ## Jednotky (UNIT) [2D, 3D]
 
-Systém jednotiek v programe DEFORM ([UNIT]({{ '/docs/sk/keyword_documentation/u/unit/' | relative_url }})) je možné nastaviť na anglický alebo metrický (SI). (Pozri obr. 9.1.1.) Všetky informácie v DEFORM by mali byť vyjadrené v jednotných jednotkách. Systém jednotiek by mal byť zvolený na začiatku postupu nastavenia problému a nemal by sa meniť počas simulácie ani po operácii. (Viac informácií o jednotkách premenných v DEFORM nájdete v [Table 1.9.1](../../about_deform/1_introduction_to_deform/1_9_units.htm#Table_DEFORM_unit_system))
+Systém jednotiek v programe DEFORM ([UNIT]({{ '/docs/sk/keyword_documentation/u/unit/' | relative_url }})) je možné nastaviť na anglický alebo metrický (SI). (Pozri obr. 9.1.1.) Všetky informácie v DEFORM by mali byť vyjadrené v jednotných jednotkách. Systém jednotiek by mal byť zvolený na začiatku postupu nastavenia problému a nemal by sa meniť počas simulácie ani po operácii. (Viac informácií o jednotkách premenných v DEFORM nájdete v [Table 1.9.1]({{ '/docs/sk/about_deform/1_introduction_to_deform/1_9_units/' | relative_url }}#Table_DEFORM_unit_system))
 
 ##  Typ (STYPE)
 
@@ -96,7 +96,7 @@ Ak je zvolený tento riešiteľ, valec musí mať v strede otvor a medzi vreteno
 
 ## Simulačné režimy (SMODE, TRANS)
 
-[2D, 3D]: Program DEFORM ponúka skupinu simulačných režimov, ktoré je možné zapínať alebo vypínať jednotlivo, alebo používať v rôznych kombináciách. (Pozri obr. 9.1.3.) Z dôvodu spätnej kompatibility so starými kľúčovými slovami a databázami pred verziou 3.0 sa načíta kľúčové slovo [SMODE]({{ '/docs/sk/keyword_documentation/s/smode/' | relative_url }}) (starý štýl izotermický, neizotermický, prenos tepla) a v preprocesore sa nastavia príslušné prepínače režimu kľúčového slova TRANS. 
+\[2D, 3D]: Program DEFORM ponúka skupinu simulačných režimov, ktoré je možné zapínať alebo vypínať jednotlivo, alebo používať v rôznych kombináciách. (Pozri obr. 9.1.3.) Z dôvodu spätnej kompatibility so starými kľúčovými slovami a databázami pred verziou 3.0 sa načíta kľúčové slovo [SMODE]({{ '/docs/sk/keyword_documentation/s/smode/' | relative_url }}) (starý štýl izotermický, neizotermický, prenos tepla) a v preprocesore sa nastavia príslušné prepínače režimu kľúčového slova TRANS. 
 
   * **Deformácia:** Simuluje deformáciu spôsobenú mechanickými, tepelnými vplyvmi alebo fázovými premenami. 
 

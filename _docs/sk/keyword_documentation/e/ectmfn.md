@@ -37,7 +37,7 @@ ECTMFN specifies whether a temperature edge boundary condition function is defin
   
 REMARKS  
 ---  
-The function type (Ftype) options are: < 0 user routine number > 0 function number (specified in BCCFNC) The user should be aware that the edge definition function shares the function structure with the nodal boundary condition function keyword (BCCFNC). Applicable object types: [Elastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.2._Elastic), [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic), [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic) and [Porous](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.4._Porous).  
+The function type (Ftype) options are: < 0 user routine number > 0 function number (specified in BCCFNC) The user should be aware that the edge definition function shares the function structure with the nodal boundary condition function keyword (BCCFNC). Applicable object types: [Elastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.2._Elastic), [Plastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic), [Elastoplastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic) and [Porous]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.4._Porous).  
   
 RELATED TOPICS  
 ---  

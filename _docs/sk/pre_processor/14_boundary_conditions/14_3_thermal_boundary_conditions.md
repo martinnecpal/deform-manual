@@ -13,7 +13,7 @@ title: "14.3. Tepelné okrajové podmienky"
 
 ## Výmena tepla s prostredím BCC [2D,3D]
 
-Táto okrajová podmienka [ECCTMP]({{ '/docs/sk/Keyword_Documentation/E/ECCTMP/' | relative_url }}) určuje, že by malo dochádzať k výmene tepla medzi plochami prvkov ohraničenými týmito uzlami a ich okolím. Kontaktná okrajová podmienka určuje, či dôjde k výmene s okolitou atmosférou alebo s kontaktným objektom.
+Táto okrajová podmienka [ECCTMP]({{ '/docs/sk/keyword_documentation/e/ecctmp/' | relative_url }}) určuje, že by malo dochádzať k výmene tepla medzi plochami prvkov ohraničenými týmito uzlami a ich okolím. Kontaktná okrajová podmienka určuje, či dôjde k výmene s okolitou atmosférou alebo s kontaktným objektom.
 
 Štandardná výmena tepla s okolím prebieha s okolitým prostredím, ako je opísané vyššie. Okná výmeny tepla však možno zadať pomocou ikony okien výmeny tepla. Výmena tepla pre uzly v rámci týchto okien sa riadi parametrami nastavenými pre každé okno.
 
@@ -44,7 +44,7 @@ Určuje pevnú teplotu v daných uzloch.
 
 ## Tepelný tok BCC [2D, 3D]
 
-Toto ([ECHFLX]({{ '/docs/sk/Keyword_Documentation/E/ECHFLX/' | relative_url }})) Určuje tok energie na jednotku plochy na ploche prvku ohraničenej uzlami. Jednotky sú energia/čas/plocha.
+Toto ([ECHFLX]({{ '/docs/sk/keyword_documentation/e/echflx/' | relative_url }})) Určuje tok energie na jednotku plochy na ploche prvku ohraničenej uzlami. Jednotky sú energia/čas/plocha.
 
 ## Uzlové teplo BCC [2D, 3D]
 
@@ -52,7 +52,7 @@ Určuje zdroj tepla v daných uzloch. Jednotky sú energia/čas.
 
 ## Pokročilé tepelné BCC [2D, 3D]
 
-Účelom tejto definície okrajových podmienok je umožniť používateľovi flexibilne špecifikovať všetky rôzne typy okrajových podmienok tepla na tej istej hrane. Používateľ môže zadať buď číslo používateľského podprogramu, alebo lokálnu definíciu prenosu tepla. (Pozri obr. 14.3.2.) Ak chce používateľ špecifikovať používateľskú rutinu, je potrebné zadať číslo používateľskej rutiny. Zadané číslo užívateľskej rutiny bude zodpovedať podrutine, ktorej bude zodpovedať okrajová podmienka. Ďalšie informácie o používaní týchto používateľských okrajových podmienok nájdete v časti User Routines (Používateľské rutiny). Ak číslo rutiny zostane nulové, používateľ potom môže definovať lokálne definovanú okrajovú podmienku, kde je potrebné určiť teplotu prostredia, koeficient konvekcie, emisivitu a tepelný tok okraj. Všetky tieto štyri premenné môžu byť definované ako konštanty alebo funkcie. Ak chcete použiť lokálnu okrajovú podmienku definovanú používateľom, nastavte požadované premenné, nastavte lokálne definované číslo na jedinečnú hodnotu a použite ju na sadu hrán prvkov. Nové kľúčové slová pre lokálne definovanie hrán sú [ECCDEF]({{ '/docs/sk/Keyword_Documentation/E/ECCDEF/' | relative_url }}), [ECTMFN]({{ '/docs/sk/Keyword_Documentation/E/ECTMFN/' | relative_url }}) a [LOCTMP]({{ '/docs/sk/Keyword_Documentation/L/LOCTMP/' | relative_url }}).
+Účelom tejto definície okrajových podmienok je umožniť používateľovi flexibilne špecifikovať všetky rôzne typy okrajových podmienok tepla na tej istej hrane. Používateľ môže zadať buď číslo používateľského podprogramu, alebo lokálnu definíciu prenosu tepla. (Pozri obr. 14.3.2.) Ak chce používateľ špecifikovať používateľskú rutinu, je potrebné zadať číslo používateľskej rutiny. Zadané číslo užívateľskej rutiny bude zodpovedať podrutine, ktorej bude zodpovedať okrajová podmienka. Ďalšie informácie o používaní týchto používateľských okrajových podmienok nájdete v časti User Routines (Používateľské rutiny). Ak číslo rutiny zostane nulové, používateľ potom môže definovať lokálne definovanú okrajovú podmienku, kde je potrebné určiť teplotu prostredia, koeficient konvekcie, emisivitu a tepelný tok okraj. Všetky tieto štyri premenné môžu byť definované ako konštanty alebo funkcie. Ak chcete použiť lokálnu okrajovú podmienku definovanú používateľom, nastavte požadované premenné, nastavte lokálne definované číslo na jedinečnú hodnotu a použite ju na sadu hrán prvkov. Nové kľúčové slová pre lokálne definovanie hrán sú [ECCDEF]({{ '/docs/sk/keyword_documentation/e/eccdef/' | relative_url }}), [ECTMFN]({{ '/docs/sk/keyword_documentation/e/ectmfn/' | relative_url }}) a [LOCTMP]({{ '/docs/sk/keyword_documentation/l/loctmp/' | relative_url }}).
 
 ![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_3_thermal_boundary_conditions/14_3_image002.jpg' | relative_url }})
 

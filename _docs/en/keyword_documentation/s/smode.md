@@ -29,4 +29,4 @@ There are three types of FEM analysis that can be performed in DEFORM. Isotherma
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Main Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}) \- [Modes](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\)) Related keywords: [TRANS]({{ '/docs/en/keyword_documentation/t/trans/' | relative_url }}), [STYPE (2D)]({{ '/docs/en/keyword_documentation/s/stype/' | relative_url }}), [STYPE (3D)]({{ '/docs/en/keyword_documentation/s/stype_3d/' | relative_url }})
+Simulation Controls: [Main Controls]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}) \- [Modes]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\)) Related keywords: [TRANS]({{ '/docs/en/keyword_documentation/t/trans/' | relative_url }}), [STYPE (2D)]({{ '/docs/en/keyword_documentation/s/stype/' | relative_url }}), [STYPE (3D)]({{ '/docs/en/keyword_documentation/s/stype_3d/' | relative_url }})

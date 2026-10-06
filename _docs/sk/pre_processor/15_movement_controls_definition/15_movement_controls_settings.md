@@ -61,7 +61,7 @@ Pre 3D model sú k dispozícii smery X,Y,Z,-X,-Y,-Z a iné. Typ Other direction 
 
 ## Priradenie pohybu deformovateľným objektom
 
-[2D, 3D]: V prípade štúdie spojeného napätia alebo inej situácie, keď používateľ potrebuje definovať translačný pohyb pre deformovateľné objekty, ako napríklad elastický, plastický, elastoplastický a porézny pohyb, musí byť pre tento objekt definovaný strom BCC. Pohybová hraničná podmienka definovaná rovinou musí byť povrch, ktorý nie je v kontakte s inými objektmi, kde je zamýšľaná deformácia, pretože pohybová BCC definovaná rovina sa nebude deformovať, ale pohybovať sa s definovaným translačným pohybom. (Pozri obr. 15.3. a obr. 15.4.)
+\[2D, 3D]: V prípade štúdie spojeného napätia alebo inej situácie, keď používateľ potrebuje definovať translačný pohyb pre deformovateľné objekty, ako napríklad elastický, plastický, elastoplastický a porézny pohyb, musí byť pre tento objekt definovaný strom BCC. Pohybová hraničná podmienka definovaná rovinou musí byť povrch, ktorý nie je v kontakte s inými objektmi, kde je zamýšľaná deformácia, pretože pohybová BCC definovaná rovina sa nebude deformovať, ale pohybovať sa s definovaným translačným pohybom. (Pozri obr. 15.3. a obr. 15.4.)
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_image004.jpg' | relative_url }})
 
@@ -87,7 +87,7 @@ Okno náhľadu pohybu
 
 ## Používateľské podprogramy na riadenie pohybu
 
-[2D, 3D]: Komplexný pohyb kocky možno definovať pomocou podprogramov jazyka FORTRAN definovaných používateľom. Rutina USRDSP umožňuje používateľovi vypočítať rýchlosť tuhého objektu, ktorý má pohyb definovaný ako používateľský model. Popis implementácie používateľsky definovaných podprogramov nájdete v časti [chapter 56.2.3.2 USER ROUTINE USRDSP](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_2_User_defined_movement_control_\(USRDSP\)) pre 2D a 3D. Číslo definovanej rutiny musí byť uvedené v okne ovládania pohybu, ako je znázornené na nasledujúcich obr. 15.6. a obr. 15.7.
+\[2D, 3D]: Komplexný pohyb kocky možno definovať pomocou podprogramov jazyka FORTRAN definovaných používateľom. Rutina USRDSP umožňuje používateľovi vypočítať rýchlosť tuhého objektu, ktorý má pohyb definovaný ako používateľský model. Popis implementácie používateľsky definovaných podprogramov nájdete v časti [chapter 56.2.3.2 USER ROUTINE USRDSP]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#56_2_3_2_User_defined_movement_control_\(USRDSP\)) pre 2D a 3D. Číslo definovanej rutiny musí byť uvedené v okne ovládania pohybu, ako je znázornené na nasledujúcich obr. 15.6. a obr. 15.7.
 
 ![]({{ '/assets/images/pre-processor/15_movement_controls/15_image006.jpg' | relative_url }})
 
@@ -121,23 +121,23 @@ Okno náhľadu pohybu
 
 [15.11. Friction Welding movement]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_11_friction_welding_movement/' | relative_url }})
 
-[Primary die selection from simulation controls](../9_simulation_controls/9_2_defining_step.htm#Primary_die_\(PDIE\))
+[Primary die selection from simulation controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}#Primary_die_\(PDIE\))
 
-[Step increment control (DSMAX/DTMAX)](../9_simulation_controls/9_2_defining_step.htm#Step_increment_control_\(DSMAX/DTMAX\)) [2D, 3D]
+[Step increment control (DSMAX/DTMAX)]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}#Step_increment_control_\(DSMAX/DTMAX\)) [2D, 3D]
 
-[Selecting time step and number of steps](../9_simulation_controls/9_2_defining_step.htm#Selecting_time_step_and_number_of_steps) [2D, 3D]
+[Selecting time step and number of steps]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}#Selecting_time_step_and_number_of_steps) [2D, 3D]
 
-[Primary die stopping controls from simulation controls](../9_simulation_controls/9_3_stopping_controls.htm#9.3.2._Primary_Die_Displacement_\(SMAX\))
+[Primary die stopping controls from simulation controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}#9.3.2._Primary_Die_Displacement_\(SMAX\))
 
-[Primary die selection from general object data definition window](../11_general_object_data_definition/11_general_object_data_definition.htm#11.5._Primary_Die)
+[Primary die selection from general object data definition window]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.5._Primary_Die)
 
-[2D Geometry type selection from Simulation controls](../9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])
+[2D Geometry type selection from Simulation controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])
 
 [14\. Boundary Conditions]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }})
 
 [18\. Object Positioning]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
-[Movement-User Routine (USRDSP)](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_2_User_defined_movement_control_\(USRDSP\))
+[Movement-User Routine (USRDSP)]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#56_2_3_2_User_defined_movement_control_\(USRDSP\))
 
 [2D Basic Labs]({{ '/docs/sk/labs/basic_labs/2d_labs/2d_labs/' | relative_url }})
 

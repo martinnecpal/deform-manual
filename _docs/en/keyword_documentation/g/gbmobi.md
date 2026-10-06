@@ -33,9 +33,9 @@ The movement of high angle grain boundaries (HAGB) has implications for recrysta
   
 The apparent activation energy (Q) may be related to the thermally activated atomistic processes that occur during boundary movement.  
   
-Applicable object types: [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic)
+Applicable object types: [Elastoplastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic)
 
-Applicable simulation type: [Heat treatment](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\))
+Applicable simulation type: [Heat treatment]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\))
 
 RELATED TOPICS  
 ---  

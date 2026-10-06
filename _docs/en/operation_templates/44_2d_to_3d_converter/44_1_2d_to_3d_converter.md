@@ -39,7 +39,7 @@ Add 2D to 3D converter
 
 For practicing above example open the MO wizard in English unit system > add 2D Forming operation > import the HAMMER_LAB.KEY keyword file from 2D/LABS folder > go to DB generation window > generate DB > after that add 2D to 3D converter simulation operator from explorer.
 
-In operation editor select the 2D to 3D converter operator to open as shown in [Fig. 44.1.2.](44_1_2d_to_3d_converter.htm#Fig_44_1_2_Configuration_settings_of_converter_for_2D_axisymmetric/torsion_geometry_type)
+In operation editor select the 2D to 3D converter operator to open as shown in [Fig. 44.1.2.]({{ '/docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/' | relative_url }}#Fig_44_1_2_Configuration_settings_of_converter_for_2D_axisymmetric/torsion_geometry_type)
 
 ![]({{ '/assets/images/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/image0002.jpg' | relative_url }})
 
@@ -49,9 +49,9 @@ Configuration settings of converter for 2D axisymmetric/torsion geometry type
 
 User need to select the upward direction for the 3D models by selecting coordinates system selection radio buttons. As indicated if “Z is up” is selected Z direction will be the upward direction, so 2D axisymmetric upward direction Z or plane strain upward direction Y becomes Z direction in 3D model. Similarly for “Y is up” option Y becomes the upward direction in 3D converted model. By default Z direction is selected as upward direction.
 
-User can control the revolution and start angle of the object for 2D axisymmetric geometry type using 3D parameters settings as shown in [Fig. 44.1.2.](44_1_2d_to_3d_converter.htm#Fig_44_1_2_Configuration_settings_of_converter_for_2D_axisymmetric/torsion_geometry_type)
+User can control the revolution and start angle of the object for 2D axisymmetric geometry type using 3D parameters settings as shown in [Fig. 44.1.2.]({{ '/docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/' | relative_url }}#Fig_44_1_2_Configuration_settings_of_converter_for_2D_axisymmetric/torsion_geometry_type)
 
-For plane strain/plane stress 2D geometry type conversion user can control extrusion length and start location using 3D parameter settings as shown in [Fig. 44.1.3.](44_1_2d_to_3d_converter.htm#Fig_44_1_3_Configuration_settings_of_converter_for_2D_plane_strain/plane_stress_geometry_type) This can be practiced by importing the Rib_web_SI.KEY 2D Forging example into 2D forming operation similar to the axisymmetric HAMMER_LAB example mentioned in this manual under section 44.1.1.
+For plane strain/plane stress 2D geometry type conversion user can control extrusion length and start location using 3D parameter settings as shown in [Fig. 44.1.3.]({{ '/docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/' | relative_url }}#Fig_44_1_3_Configuration_settings_of_converter_for_2D_plane_strain/plane_stress_geometry_type) This can be practiced by importing the Rib_web_SI.KEY 2D Forging example into 2D forming operation similar to the axisymmetric HAMMER_LAB example mentioned in this manual under section 44.1.1.
 
 ![]({{ '/assets/images/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/image0003.jpg' | relative_url }})
 
@@ -89,7 +89,7 @@ Click on ![]({{ '/assets/icons/pre_icons/mo_3d_preview_button.jpg' | relative_ur
 
 Geometry conversion settings for dies (Axisymmetric)
 
-For Plane strain/Plane stress 2D geometry type user will get only number of sections geometry option along the extrusion length direction as shown in [Fig. 44.1.8.](44_1_2d_to_3d_converter.htm#Fig_44_1_8_Geometry_conversion_window_for_plane_strain/plane_stress)
+For Plane strain/Plane stress 2D geometry type user will get only number of sections geometry option along the extrusion length direction as shown in [Fig. 44.1.8.]({{ '/docs/en/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/' | relative_url }}#Fig_44_1_8_Geometry_conversion_window_for_plane_strain/plane_stress)
 
 ![]({{ '/assets/images/operation_templates/44_2d_to_3d_converter/44_1_2d_to_3d_converter/image0008.jpg' | relative_url }})
 

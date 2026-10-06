@@ -7,7 +7,7 @@ title: "Appendix XI: Near surface mesh functions"
 
 _*From QT3 interface_
 
-Near surface mesh functions are generated to provide or simulate the intricate details of the surface . The user can generate, extract and delete the near - surface information for both Tet mesh and brick mesh using the [coating](../pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation.htm#13.3.5_Coating_Mesh) window option in mesh generation page: (See [Fig. AXI.1.](), Fig. AXI.2. and Fig. AXI.3.)
+Near surface mesh functions are generated to provide or simulate the intricate details of the surface . The user can generate, extract and delete the near - surface information for both Tet mesh and brick mesh using the [coating]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}#13.3.5_Coating_Mesh) window option in mesh generation page: (See [Fig. AXI.1.](), Fig. AXI.2. and Fig. AXI.3.)
 
 ![]({{ '/assets/images/appendices/appendix_xi_near_surface_mesh_functions/image0001.jpg' | relative_url }})
 
@@ -23,7 +23,7 @@ Deletion of near - surface mesh (brick)
 
 The user can assign residual stress via near-surface mesh using the Element + Node definition for stress
 
-( Simulation Control / Advanced / [Output Control](../pre_processor/9_simulation_controls/9_7_advanced_options.htm#9.7.4._Output_Control) ), which is accessible in node data dialog. (See Fig. AXI.4. and Fig. AXI.5.)
+( Simulation Control / Advanced / [Output Control]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#9.7.4._Output_Control) ), which is accessible in node data dialog. (See Fig. AXI.4. and Fig. AXI.5.)
 
 ![]({{ '/assets/images/appendices/appendix_xi_near_surface_mesh_functions/image0004.jpg' | relative_url }})
 

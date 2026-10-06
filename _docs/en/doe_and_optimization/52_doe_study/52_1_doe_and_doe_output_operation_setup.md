@@ -51,7 +51,7 @@ State variable in regions (State Variable min/max (One step))
 
 Summary plot (all steps from selected operation)
 
-[SV on all nodes/elements (Location specific (One step))](52_1_doe_and_doe_output_operation_setup.htm#SV_on_all_nodes/elements_Location_specific_One_step)
+[SV on all nodes/elements (Location specific (One step))]({{ '/docs/en/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/' | relative_url }}#SV_on_all_nodes/elements_Location_specific_One_step)
 
 Probe output
 
@@ -610,7 +610,7 @@ Probe definition window
 
 ****Selected state variable minimum / maximum value is plotted across all steps and all simulations of the selected operation for the selected object.
 
-To select the state variable first click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button to add rows and double click on each cell under Variable row to select state variable and double click on the cell in the same row under components to select the maximum or minimum or other directional components and Min/Max to select options like Min. of all steps, Max. of all steps, (Absolute)Min., (Absolute)Max., Diff (Max and Min difference), Average and Standard Deviation based on requirement. In [Fig. 52.1.68.](52_1_doe_and_doe_output_operation_setup.htm#Fig_52_1_68_Operation_Min/Max_state_variable_for_all_steps_selection_window) Max. value out of minimum Temperature values of all steps and Max. value out of maximum Effective strain values of all steps for workpiece and Punch Y-Load Absolute Max. values are added as output variables across all steps of the operation.
+To select the state variable first click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button to add rows and double click on each cell under Variable row to select state variable and double click on the cell in the same row under components to select the maximum or minimum or other directional components and Min/Max to select options like Min. of all steps, Max. of all steps, (Absolute)Min., (Absolute)Max., Diff (Max and Min difference), Average and Standard Deviation based on requirement. In [Fig. 52.1.68.]({{ '/docs/en/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/' | relative_url }}#Fig_52_1_68_Operation_Min/Max_state_variable_for_all_steps_selection_window) Max. value out of minimum Temperature values of all steps and Max. value out of maximum Effective strain values of all steps for workpiece and Punch Y-Load Absolute Max. values are added as output variables across all steps of the operation.
 
 ![]({{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0068.jpg' | relative_url }})
 
@@ -632,7 +632,7 @@ Summary Min/Max state variable for one step selection window
 
 Selected state variable component output’s min/max and other computed value is plotted at last step of selected operation for the selected object’s whole object or region of interest or probe.
 
-To select the state variable first click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button to add rows and double click on each cell under Variable row to select state variable and double click on the cells in the same row to select component, Min/Max, Object and Region/Probe under respective columns. For State variable output type, components will be the variable components like Directional values or Effective or Principal, Mean etc. Min/Max will give options like Min., Max., (Absolute)Min., (Absolute)Max., Diff (Max and Min difference), Average and Standard Deviation. In [Fig. 52.1.70.](52_1_doe_and_doe_output_operation_setup.htm#Fig_51_1_70_State_variable_Min/Max_within_a_region_for_one_step_selection_window) Maximum Effective stress of whole workpiece object, Maximum Effective strain within the region defined and Maximum Damage based on probe are added.
+To select the state variable first click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button to add rows and double click on each cell under Variable row to select state variable and double click on the cells in the same row to select component, Min/Max, Object and Region/Probe under respective columns. For State variable output type, components will be the variable components like Directional values or Effective or Principal, Mean etc. Min/Max will give options like Min., Max., (Absolute)Min., (Absolute)Max., Diff (Max and Min difference), Average and Standard Deviation. In [Fig. 52.1.70.]({{ '/docs/en/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/' | relative_url }}#Fig_51_1_70_State_variable_Min/Max_within_a_region_for_one_step_selection_window) Maximum Effective stress of whole workpiece object, Maximum Effective strain within the region defined and Maximum Damage based on probe are added.
 
 ![]({{ '/assets/images/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/image0070.jpg' | relative_url }})
 

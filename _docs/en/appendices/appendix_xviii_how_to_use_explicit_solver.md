@@ -21,7 +21,7 @@ Object General settings Window
 
 Make sure that Mass Density value defined from material thermal properties can be accessed from object material window by using the ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}) button. Material![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})thermal![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})mass density window is as shown in Fig. XVIII.2.
 
-Note that the English unit system density values published in literature typically represent weight density, not mass density. Please review Section [10.3.4. Mass density](../pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data.htm#Mass_Density) to understand the requirements for defining mass density in DEFORM.
+Note that the English unit system density values published in literature typically represent weight density, not mass density. Please review Section [10.3.4. Mass density]({{ '/docs/en/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }}#Mass_Density) to understand the requirements for defining mass density in DEFORM.
 
 ![]({{ '/assets/images/appendices/appendix_xviii_how_to_use_explicit_solver/image0002.jpg' | relative_url }})
 

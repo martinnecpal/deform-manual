@@ -27,7 +27,7 @@ We'll mesh both tools in order to simulate the temperature of the die. Click on 
 
 Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button and select the **Die_material** category, then **AISI-H-13**. Assign the loaded material by selecting it in material list.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and define Heat exchange with environment boundary condition for entire object except top surface as shown in [Fig. L6.1.](gear_blank_si_lab6.htm#Fig_L6_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces)
+Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and define Heat exchange with environment boundary condition for entire object except top surface as shown in [Fig. L6.1.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab6/' | relative_url }}#Fig_L6_1_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab6_image0001.jpg' | relative_url }})
 
@@ -41,7 +41,7 @@ Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) 
 
 \- **Forging stroke** : **40.005**[this represents the top die stroke form the current position to bottom dead center]
 
-\- **Cycles/sec** : **1.0** [this represents a flywheel rotation of 60 RPM] (See [Fig. L6.2.](gear_blank_si_lab6.htm#Fig_L6_2_Mechanical_press_movement_definition_for_top_die))
+\- **Cycles/sec** : **1.0** [this represents a flywheel rotation of 60 RPM] (See [Fig. L6.2.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab6/' | relative_url }}#Fig_L6_2_Mechanical_press_movement_definition_for_top_die))
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab6_image0002.jpg' | relative_url }})
 
@@ -49,9 +49,9 @@ Mechanical press movement definition for top die
 
 ### Define Heat transfer with Bottom die
 
-Similar to Top die Heat transfer definition define Bottom die initial Temperature to **148.889** °C and Mesh of **50000** Elements. (See [section 6.4 Define Heat transfer with Top die](gear_blank_si_lab6.htm#6_4_Define_Heat_transfer_with_Top_die))
+Similar to Top die Heat transfer definition define Bottom die initial Temperature to **148.889** °C and Mesh of **50000** Elements. (See [section 6.4 Define Heat transfer with Top die]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab6/' | relative_url }}#6_4_Define_Heat_transfer_with_Top_die))
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **AISI-H-13** from material list to assign material. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Heat exchange with environment boundary condition and select all surfaces except bottom surface as shown in [Fig. L6.3.](gear_blank_si_lab6.htm#Fig_L6_3_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces)
+Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **AISI-H-13** from material list to assign material. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Heat exchange with environment boundary condition and select all surfaces except bottom surface as shown in [Fig. L6.3.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab6/' | relative_url }}#Fig_L6_3_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab6_image0003.jpg' | relative_url }})
 
@@ -61,7 +61,7 @@ Click on **Contact** in operation tree to define inter-object relationship.
 
 ### Define Inter-object relation ship
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) for any relation and add **heat****transfer****coefficient** of **11** N/s/mm/C. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to add for other relationships. Click the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerance) button followed by the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button (at bottom of the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See [Fig. L6.4.](gear_blank_si_lab6.htm#Fig_L6_4_Top_and_bottom_die_contact_with_workpiece) for how the Inter object window looks and contact generation displays in graphics window.
+Click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) for any relation and add **heat****transfer****coefficient** of **11** N/s/mm/C. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to add for other relationships. Click the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerance) button followed by the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button (at bottom of the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See [Fig. L6.4.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab6/' | relative_url }}#Fig_L6_4_Top_and_bottom_die_contact_with_workpiece) for how the Inter object window looks and contact generation displays in graphics window.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab6_image0004.jpg' | relative_url }})
 
@@ -71,7 +71,7 @@ Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) 
 
 ### Define Stopping and Simulation controls
 
-Add a stopping criteria to stop the simulation when the stroke reaches -**304.8** (Max Die Stroke) in Y direction field as shown in [Fig. L6.5.](gear_blank_si_lab6.htm#Fig_L6_5_Maximum_primary_die_displacement_stopping_controls) and uncheck the Distance between objects stopping controls. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step page.
+Add a stopping criteria to stop the simulation when the stroke reaches -**304.8** (Max Die Stroke) in Y direction field as shown in [Fig. L6.5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab6/' | relative_url }}#Fig_L6_5_Maximum_primary_die_displacement_stopping_controls) and uncheck the Distance between objects stopping controls. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step page.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab6_image0005.jpg' | relative_url }})
 

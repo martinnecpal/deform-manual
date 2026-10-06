@@ -27,7 +27,7 @@ Under Plastic Data Definition page user can define Flow Stress, Creep property, 
 Related Topics:
 
 [10\. Material Data]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }})  
-[10.1.1. Flow Stress]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/' | relative_url }})
+[10.1.1. Flow Stress]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_Flow_Stress_Models/' | relative_url }})
 
 [10.1.2. Creep]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_creep_models/' | relative_url }})
 

@@ -29,13 +29,13 @@ title: "14.2. Hraničné podmienky deformácie"
 
 ## Rýchlosť BCC [2D, 3D]
 
-[2D]: Rýchlosť každého uzla možno určiť nezávisle v smeroch X a Y. Okrajové podmienky rýchlosti sú zvyčajne nastavené na nulu pre podmienky symetrie, ale môžu byť nastavené aj na zadanú nenulovú hodnotu pre procesy, ako je napríklad ťahanie, pri ktorom sa obrobok ťahá cez matricu. (Pozri obr. 14.2.1.)
+\[2D]: Rýchlosť každého uzla možno určiť nezávisle v smeroch X a Y. Okrajové podmienky rýchlosti sú zvyčajne nastavené na nulu pre podmienky symetrie, ale môžu byť nastavené aj na zadanú nenulovú hodnotu pre procesy, ako je napríklad ťahanie, pri ktorom sa obrobok ťahá cez matricu. (Pozri obr. 14.2.1.)
 
 ![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_2_deformation_boundary_conditions/14_2_image001.jpg' | relative_url }})
 
 2D okno rýchlosti BCC
 
-[3D]: Rýchlosť každého uzla možno určiť nezávisle v smeroch X, Y a Z. Okrajové podmienky rýchlosti sú zvyčajne nastavené na nulu pre podmienky symetrie (Symmetry BCC [3D]), ale môžu byť nastavené aj na zadanú nenulovú hodnotu pre procesy, ako je kreslenie, pri ktorom sa obrobok ťahá cez matricu.
+\[3D]: Rýchlosť každého uzla možno určiť nezávisle v smeroch X, Y a Z. Okrajové podmienky rýchlosti sú zvyčajne nastavené na nulu pre podmienky symetrie (Symmetry BCC [3D]), ale môžu byť nastavené aj na zadanú nenulovú hodnotu pre procesy, ako je kreslenie, pri ktorom sa obrobok ťahá cez matricu.
 
 Dokonca môžeme definovať rýchlosť BCC pomocou možnosti Všetky smery pre 2D aj 3D, pomocou tejto možnosti môže používateľ priradiť BCC pre všetky smery naraz.
 
@@ -96,7 +96,7 @@ Definované voľné skreslenie BCC
 
 ## Tlak BCC [2D, 3D]
 
-**[2D]** : Tlakové okrajové podmienky určujú rovnomernú alebo lineárne sa meniacu silu na jednotku plochy na plochách prvkov spájajúcich zadané hrany. Požadujú sa dve hodnoty normálového tlaku, prvá hodnota je počiatočná hodnota tlaku z počiatočného bodu, kde je tlak zadaný, druhá hodnota je hodnota na konci miesta, kde je tlak zadaný. Tlak sa lineárne interpoluje medzi začiatkom a koncom. Kľúčové slová pre tlak sú [ECCDEF]({{ '/docs/sk/Keyword_Documentation/E/ECCDEF/' | relative_url }}) a [ECPRES]({{ '/docs/sk/Keyword_Documentation/E/ECPRES/' | relative_url }}). Používateľ môže definovať okno Pressure (Tlak), ako je znázornené na obr. 14.2.9.
+**[2D]** : Tlakové okrajové podmienky určujú rovnomernú alebo lineárne sa meniacu silu na jednotku plochy na plochách prvkov spájajúcich zadané hrany. Požadujú sa dve hodnoty normálového tlaku, prvá hodnota je počiatočná hodnota tlaku z počiatočného bodu, kde je tlak zadaný, druhá hodnota je hodnota na konci miesta, kde je tlak zadaný. Tlak sa lineárne interpoluje medzi začiatkom a koncom. Kľúčové slová pre tlak sú [ECCDEF]({{ '/docs/sk/keyword_documentation/e/eccdef/' | relative_url }}) a [ECPRES]({{ '/docs/sk/keyword_documentation/e/ecpres/' | relative_url }}). Používateľ môže definovať okno Pressure (Tlak), ako je znázornené na obr. 14.2.9.
 
 ![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_2_deformation_boundary_conditions/14_2_image009.jpg' | relative_url }})
 
@@ -166,13 +166,13 @@ Shrink Fit BCC v 3D sa používa na analýzu napätia v zápustke, To možno def
 
 Ak sa na vnútorný objekt aplikuje zmrštenie, hodnota by mala byť záporná a ak sa na vonkajší objekt aplikuje zmrštenie, hodnota by mala byť kladná.
 
-Ďalšie informácie o zmršťovaní nájdete v časti [2D Die Stress Analysis Theory]({{ '/docs/sk/Operation_Templates/30_Die_Stress/2D_Die_Stress_Analysis_Theory/' | relative_url }}).
+Ďalšie informácie o zmršťovaní nájdete v časti [2D Die Stress Analysis Theory]({{ '/docs/sk/operation_templates/30_die_stress/2d_die_stress_analysis_theory/' | relative_url }}).
 
 ## Kontakt BCC [2D, 3D]
 
 Kontaktná okrajová podmienka zobrazuje medzipredmetové okrajové kontaktné podmienky na danom objekte. Pred použitím tejto možnosti by mal používateľ získať určité skúsenosti s programom DEFORM. Kontaktné podmienky sú uložené v troch zložkách, aby reprezentovali skutočnosť, že pre každý daný uzol existujú tri stupne voľnosti.
 
-Kontaktné okrajové podmienky sa aplikujú na uzly podriadeného objektu a určujú kontakt medzi týmito uzlami a povrchom nadradeného objektu (pozri obr. 14.2.1.). Ak je zadaný uzol, ktorý má byť v kontakte s konkrétnym objektom, bude umiestnený na povrchu tohto objektu. Ak si to vyžaduje zmenu polohy tohto uzla, zmení sa podľa potreby. Kontaktné okrajové podmienky sa generujú v rámci sekcie Inter-object Contact relation ([CNTACT]({{ '/docs/sk/Keyword_Documentation/C/CNTACT/' | relative_url }})).
+Kontaktné okrajové podmienky sa aplikujú na uzly podriadeného objektu a určujú kontakt medzi týmito uzlami a povrchom nadradeného objektu (pozri obr. 14.2.1.). Ak je zadaný uzol, ktorý má byť v kontakte s konkrétnym objektom, bude umiestnený na povrchu tohto objektu. Ak si to vyžaduje zmenu polohy tohto uzla, zmení sa podľa potreby. Kontaktné okrajové podmienky sa generujú v rámci sekcie Inter-object Contact relation ([CNTACT]({{ '/docs/sk/keyword_documentation/c/cntact/' | relative_url }})).
 
 Kontaktné okrajové podmienky možno pre daný objekt zobraziť pomocou ikony Objects, Boundary Conditions, Advanced Deformation BCC's.
 
@@ -194,9 +194,9 @@ Rolling Okno hraničných podmienok
 
 ## Pokročilá deformácia BCC [2D, 3D]
 
-Rozšírená okrajová podmienka zobrazuje podmienky medziobjektového kontaktu na danom objekte. Ide o rovnaké informácie, ktoré sa zobrazujú v okne Inter-Object BCC's. Zložky kontaktu X alebo Y nemajú žiadny fyzikálny význam. Smery sú skôr diktované numerickou pohodlnosťou. Podmienky kontaktu sa najprv priradia k smeru Y. Ak je táto pozícia obsadená inou hodnotou, podmienky sa priradia v smere X. Ďalšie informácie nájdete v časti [Nodal data- Deform BCC](../17_Object_Data_Initialization/17_1_Node_Data_Window.htm#Deform_BCC) ([BCCDEF]({{ '/docs/sk/Keyword_Documentation/B/BCCDEF/' | relative_url }})).
+Rozšírená okrajová podmienka zobrazuje podmienky medziobjektového kontaktu na danom objekte. Ide o rovnaké informácie, ktoré sa zobrazujú v okne Inter-Object BCC's. Zložky kontaktu X alebo Y nemajú žiadny fyzikálny význam. Smery sú skôr diktované numerickou pohodlnosťou. Podmienky kontaktu sa najprv priradia k smeru Y. Ak je táto pozícia obsadená inou hodnotou, podmienky sa priradia v smere X. Ďalšie informácie nájdete v časti [Nodal data- Deform BCC]({{ '/docs/sk/pre_processor/17_object_data_initialization/17_1_node_data_window/' | relative_url }}#Deform_BCC) ([BCCDEF]({{ '/docs/sk/keyword_documentation/b/bccdef/' | relative_url }})).
 
-V závislosti od súboru BCC usr_bcc.f fortan musí používateľ zadať číslo User Routine. Popis implementácie používateľsky definovaných rutín BCC nájdete v časti [Chapter 56. User Routines]({{ '/docs/sk/User_Routines/56_User_Routines_in_DEFORM/56_User_Routines_in_DEFORM/' | relative_url }}). (Pozri obr. 14.2.17.)
+V závislosti od súboru BCC usr_bcc.f fortan musí používateľ zadať číslo User Routine. Popis implementácie používateľsky definovaných rutín BCC nájdete v časti [Chapter 56. User Routines]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_user_routines_in_deform/' | relative_url }}). (Pozri obr. 14.2.17.)
 
 ![]({{ '/assets/images/pre-processor/14_boundary_conditions/14_2_deformation_boundary_conditions/14_2_image018.jpg' | relative_url }})
 

@@ -39,7 +39,7 @@ title: "Multipass spinning with Quick Evaluation solver lab"
 
 ## Introduction
 
-From v14.0, “[Partial](../../../pre_processor/9_simulation_controls/9_5_solver_settings.htm#Partial_domain_Solver)[ domain solver](../../../pre_processor/9_simulation_controls/9_5_solver_settings.htm#Partial_domain_Solver)” is available under Special solvers and is currently available only for “Lagrangian incremental” and “ALE spinning” simulation type. Under Partial Domain, we have “Quick evaluation” option which simulates localized deformation and updates axi-symmetrically (neglecting rotational speed). Quick evaluation solver solves one step (per revolution) model for incremental rotary forming and is currently available only for ALE Spinning. Quick Evaluation Method with partial domain solver can improve the computational efficiency and is good for the parametric study for initial check of the processing design.
+From v14.0, “[Partial]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }}#Partial_domain_Solver)[ domain solver]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }}#Partial_domain_Solver)” is available under Special solvers and is currently available only for “Lagrangian incremental” and “ALE spinning” simulation type. Under Partial Domain, we have “Quick evaluation” option which simulates localized deformation and updates axi-symmetrically (neglecting rotational speed). Quick evaluation solver solves one step (per revolution) model for incremental rotary forming and is currently available only for ALE Spinning. Quick Evaluation Method with partial domain solver can improve the computational efficiency and is good for the parametric study for initial check of the processing design.
 
 In this lab we will be setting up simple multi pass ALE spinning operation with Quick evaluation method.
 
@@ -234,7 +234,7 @@ Defining Solution step definition
 
 Click on ![]({{ '/assets/icons/pre_icons/mo_solver_settings.jpg' | relative_url }}), in **Deformation** tab under Special solver, select "**Partial domain** " and turn on **Quick evaluation solver** check box. Under solver controls, by default **Roll** object is added in the table, define the **Active domain total angle** as **20** degree and **Rotation****axis** as **X** as shown in Fig. 3DQEL1.21. In the table, define 20 as active domain Angle with -10 as Start angle and 10 as End angle. Click on ![]({{ '/assets/icons/pre_icons/mo_preview_button.jpg' | relative_url }}) to observe the active domain region, active domain region will be highlighted in White color in display region as shown in Fig. 3DQEL1.21.
 
-Under Boundary constraints, select method as Bar stiffness and Scaling factor as**0.1**. For more information related on Partial domain solver refer [9.5. Solver settings - Partial domain solver](../../../pre_processor/9_simulation_controls/9_5_solver_settings.htm#Partial_domain_Solver)
+Under Boundary constraints, select method as Bar stiffness and Scaling factor as**0.1**. For more information related on Partial domain solver refer [9.5. Solver settings - Partial domain solver]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }}#Partial_domain_Solver)
 
 ![]({{ '/assets/images/applications/55_mulitpass_spinning_with_qe_solver/image0021.jpg' | relative_url }})
 

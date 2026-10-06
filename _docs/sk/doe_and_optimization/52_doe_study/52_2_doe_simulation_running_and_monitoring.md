@@ -33,7 +33,7 @@ Run options window for DOE job using multi sim server
 
 For DOE and OPT simulations in both single and multi simulation server mode, selected simulation servers settings can be edited by selecting the particular simulation server and clicking on ![]({{ '/assets/icons/simulator_icons/mo_server_settings_button.jpg' | relative_url }}) button.
 
-For more details on "Run simulation on" run option refer Chapter [6.2.3. Section Run_Simulation_option](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout.htm#Fig._6.2.3._Run_Simulation_options).
+For more details on "Run simulation on" run option refer Chapter [6.2.3. Section Run_Simulation_option]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }}#Fig._6.2.3._Run_Simulation_options).
 
 **Simulation Run types:** For DOE/OPT projects user can start the simulation from the first operation or if DOE/OPT variables added only from the intermediate operations then user can continue only from those intermediate operations. Even if DOE/OPT simulation stops abnormally then user can restart the simulation from incomplete run where it stopped or from the intermediate operation of the incomplete run.
 

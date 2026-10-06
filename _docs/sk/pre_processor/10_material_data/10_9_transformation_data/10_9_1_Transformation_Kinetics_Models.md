@@ -27,7 +27,7 @@ title: "10.9.1. Modely kinetiky transformácie"
 
   * Ti-beta na bočnú dosku alfa
 
-  * [Solid/Liquid phase transformation](10_9_1_Transformation_Kinetics_Models.htm#Solid/Liquid_phase_transformation)
+  * [Solid/Liquid phase transformation]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_1_Transformation_Kinetics_Models/' | relative_url }}#Solid/Liquid_phase_transformation)
 
   * Difúzia (krivka rozpustnosti)
 
@@ -298,20 +298,20 @@ Okno definície modelu kinetickej transformácie Ti-beta na bočnú dosku alfa
 
   * **Používateľská rutina**
 
-Tento model je nastavený na požadované číslo používateľskej rutiny. Pozrite si kapitolu 56. [USER ROUTINE]({{ '/docs/sk/User_Routines/User_routine_MainPg/' | relative_url }}), kde nájdete ďalšie podrobnosti.
+Tento model je nastavený na požadované číslo používateľskej rutiny. Pozrite si kapitolu 56. [USER ROUTINE]({{ '/docs/sk/user_routines/user_routine_mainpg/' | relative_url }}), kde nájdete ďalšie podrobnosti.
 
 **Súvisiace témy:**
 
-[Assigning Material to Object in Pre-Processor](../../../Operation_Templates/33_Forming/33_1_2D_Forming_Setup.htm#Fig_33_1_5_Add_material_from_Material_List_window)
+[Assigning Material to Object in Pre-Processor]({{ '/docs/sk/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }}#Fig_33_1_5_Add_material_from_Material_List_window)
 
-[Deform Units]({{ '/docs/sk/About_DEFORM/1_Introduction_to_DEFORM/1_9_Units/' | relative_url }})
+[Deform Units]({{ '/docs/sk/about_deform/1_introduction_to_deform/1_9_units/' | relative_url }})
 
-[Material Editing in MO Lab]({{ '/docs/sk/Labs/Heat_Treatment_Labs/2D_HT_Lab5_Material_Input/' | relative_url }})
+[Material Editing in MO Lab]({{ '/docs/sk/labs/heat_treatment_labs/2d_ht_lab5_material_input/' | relative_url }})
 
-[TTT Calculation Lab]({{ '/docs/sk/Labs/Material_Suite_labs/Material_Parameters_Fitting_labs/TTT_Calculation_Lab/' | relative_url }})
+[TTT Calculation Lab]({{ '/docs/sk/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/' | relative_url }})
 
-[Material- Grain Models]({{ '/docs/sk/pre_processor/10_material_data/10_6_Grain_Data/10_6_Grain_Data/' | relative_url }})
+[Material- Grain Models]({{ '/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/' | relative_url }})
 
-[Material-Fracture models]({{ '/docs/sk/pre_processor/10_material_data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models/' | relative_url }})
+[Material-Fracture models]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }})
 
-[Heat Treatment Labs]({{ '/docs/sk/Labs/Heat_Treatment_Labs/Heat_Treatment_Labs_Main_Pg/' | relative_url }})
+[Heat Treatment Labs]({{ '/docs/sk/labs/heat_treatment_labs/heat_treatment_labs_main_pg/' | relative_url }})

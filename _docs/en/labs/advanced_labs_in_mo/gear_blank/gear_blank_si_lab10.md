@@ -29,7 +29,7 @@ As the dies upward direction is Y Workpiece must be rotated to align with the di
 
 Go back to Workpiece Geometry window by clicking **Geometry** branch in operation tree to define symmetry planes.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}) button. Select **Planar****symmetry** branch, using left side tool bar (below explorer) pick the symmetrical planes from graphics window as shown in [Fig. L10.1.](gear_blank_si_lab10.htm#Fig_L10_1_Symmetry_surfaces), one at a time.
+Click on ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}) button. Select **Planar****symmetry** branch, using left side tool bar (below explorer) pick the symmetrical planes from graphics window as shown in [Fig. L10.1.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab10/' | relative_url }}#Fig_L10_1_Symmetry_surfaces), one at a time.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab10_image0001.jpg' | relative_url }})
 
@@ -41,13 +41,13 @@ Once you have selected a plane, click on the ![]({{ '/assets/icons/pre_icons/mo_
 
 Symmetry will assist the mesh generator in determining edges to protect during meshing.
 
-Added symmetry surfaces appears under Planar symmetry branch as shown in [Fig. L10.2.](gear_blank_si_lab10.htm#Fig_L10_2_Added_symmetry_planes) Confirm the symmetry planes by selecting the added branches under planar symmetry and observing the highlighted plane in graphics window.
+Added symmetry surfaces appears under Planar symmetry branch as shown in [Fig. L10.2.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab10/' | relative_url }}#Fig_L10_2_Added_symmetry_planes) Confirm the symmetry planes by selecting the added branches under planar symmetry and observing the highlighted plane in graphics window.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab10_image0002.jpg' | relative_url }})
 
 Added symmetry planes
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and generate mesh with **10000** elements. Deform will ask if you would like to use the geometries symmetric definition in the mesh BCC. Click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}). (See [Fig. L10.3.](gear_blank_si_lab10.htm#Fig_L10_3_Generating_Mesh_BCC_from_Geometry_BCC_popup))
+Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and generate mesh with **10000** elements. Deform will ask if you would like to use the geometries symmetric definition in the mesh BCC. Click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}). (See [Fig. L10.3.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab10/' | relative_url }}#Fig_L10_3_Generating_Mesh_BCC_from_Geometry_BCC_popup))
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab10_image0003.jpg' | relative_url }})
 
@@ -55,7 +55,7 @@ Generating Mesh BCC from Geometry BCC popup
 
 Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select the **AISI-8620** material in material list.
 
-Go to the **Workpiece****Boundary****condition** window in operation tree and confirm the 2 symmetry planes. (See [Fig. L10.4.](gear_blank_si_lab10.htm#Fig_l10_4_Generated_mesh_symmetry_BCC_from_geometry_symmetry_BCC))
+Go to the **Workpiece****Boundary****condition** window in operation tree and confirm the 2 symmetry planes. (See [Fig. L10.4.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab10/' | relative_url }}#Fig_l10_4_Generated_mesh_symmetry_BCC_from_geometry_symmetry_BCC))
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab10_image0004.jpg' | relative_url }})
 
@@ -97,7 +97,7 @@ Run simulation, after completing running click on ![]({{ '/assets/icons/pre_icon
 
 ### Review Results
 
-In MO post processor, use the mirroring tool ![]({{ '/assets/icons/pre_icons/mo_mirror_merge_icon.jpg' | relative_url }}) from post tools to create a full 360 degree workpiece. In the mirroring mode, you can click on one of the workpiece symmetry planes to mirror it. It will take 11 clicks to get the full workpiece. You can switch to the delete mode and click on the mirrored objects to delete them from the display. (See [Fig. L10.5.](gear_blank_si_lab10.htm#Flg_L10_5_Mirrored_symmetry_object_with_pointer_mirroring_on_symmetry_plane))
+In MO post processor, use the mirroring tool ![]({{ '/assets/icons/pre_icons/mo_mirror_merge_icon.jpg' | relative_url }}) from post tools to create a full 360 degree workpiece. In the mirroring mode, you can click on one of the workpiece symmetry planes to mirror it. It will take 11 clicks to get the full workpiece. You can switch to the delete mode and click on the mirrored objects to delete them from the display. (See [Fig. L10.5.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab10/' | relative_url }}#Flg_L10_5_Mirrored_symmetry_object_with_pointer_mirroring_on_symmetry_plane))
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab10_image0005.jpg' | relative_url }})
 

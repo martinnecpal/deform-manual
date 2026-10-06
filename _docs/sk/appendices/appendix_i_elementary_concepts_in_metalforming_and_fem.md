@@ -146,7 +146,7 @@ Fig. AI.17 also shows the case of a two-dimensional element.
 
 Description of shape function
 
-After all the equations for the elements have been written out, they must be combined into a single set of simultaneous equations. This process is shown in Fig. AI.18. At the end, using a [Newton-Raphson](../pre_processor/9_simulation_controls/9_5_solver_settings.htm#9.5.1._Deformation_solver_\(SOLMTD\)) iteration method, the updated velocity can be solved for by solving a simultaneous set of equations. Once this velocity update is solved for, it is applied to the current velocity and velocity update is solved again.
+After all the equations for the elements have been written out, they must be combined into a single set of simultaneous equations. This process is shown in Fig. AI.18. At the end, using a [Newton-Raphson]({{ '/docs/sk/pre_processor/9_simulation_controls/9_5_solver_settings/' | relative_url }}#9.5.1._Deformation_solver_\(SOLMTD\)) iteration method, the updated velocity can be solved for by solving a simultaneous set of equations. Once this velocity update is solved for, it is applied to the current velocity and velocity update is solved again.
 
 ![]({{ '/assets/images/appendices/appendix_1_elementary_concept/image0018.jpg' | relative_url }})
 
@@ -195,7 +195,7 @@ In general DEFORM [material data]({{ '/docs/sk/pre_processor/10_material_data/10
 
 **Finite Element Method Single Element Behavior:**
 
-[Flow stress]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/' | relative_url }}) data gives force and energy required to deform the element. Equivalent calculations on other elements, and friction behavior give external forces. (See Fig. AI.19.)
+[Flow stress]({{ '/docs/sk/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_Flow_Stress_Models/' | relative_url }}) data gives force and energy required to deform the element. Equivalent calculations on other elements, and friction behavior give external forces. (See Fig. AI.19.)
 
 ![]({{ '/assets/images/appendices/appendix_1_elementary_concept/image0019.jpg' | relative_url }})
 

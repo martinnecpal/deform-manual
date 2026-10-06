@@ -55,9 +55,9 @@ Nástroje na paneli nástrojov príspevku
 
   * [**3****D Setup**]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_20_3d_setup/' | relative_url }}) ![]({{ '/assets/icons/post_icons/mo_3d_setup_icon.jpg' | relative_url }})
 
-  * **[Text Annotation](26_6_21_text_and_image_annotation.htm#Text_Annotations) **![]({{ '/assets/icons/post_icons/mo_text_annotation_icon.jpg' | relative_url }})
+  * **[Text Annotation]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_21_text_and_image_annotation/' | relative_url }}#Text_Annotations) **![]({{ '/assets/icons/post_icons/mo_text_annotation_icon.jpg' | relative_url }})
 
-  * **[Image Annotation](26_6_21_text_and_image_annotation.htm#Image_Annotations) **![]({{ '/assets/icons/post_icons/mo_image_annotation_icon.jpg' | relative_url }})
+  * **[Image Annotation]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_21_text_and_image_annotation/' | relative_url }}#Image_Annotations) **![]({{ '/assets/icons/post_icons/mo_image_annotation_icon.jpg' | relative_url }})
 
   * **[Presentation Editor (Animation)]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_23_presentation_editor/' | relative_url }}) **[XLPHX0XLPHX]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_6_23_presentation_editor/' | relative_url }})****
 

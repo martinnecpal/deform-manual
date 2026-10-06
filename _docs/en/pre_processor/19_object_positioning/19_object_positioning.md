@@ -207,14 +207,14 @@ Example showing usage of couple positioning with Drag positioning option
 
 **Related Topics:**
 
-[2D-Primitive geometries](../12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Define_Primitives)
+[2D-Primitive geometries]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}#Define_Primitives)
 
-[3D-Primitive geometries](../12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Define_Primitive)
+[3D-Primitive geometries]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}#Define_Primitive)
 
 [12\. Geometry Modelling]({{ '/docs/en/pre_processor/12_geometry_modelling/12_geometry_modelling/' | relative_url }})
 
 [13\. Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
-[Selecting the Movement direction of the objects](../15_movement_controls_definition/15_movement_controls_settings.htm#Directions)
+[Selecting the Movement direction of the objects]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}#Directions)
 
 [20\. Inter-object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})

@@ -25,11 +25,11 @@ Post-Processor Options menu
 
 ## **Environment**
 
-The user can adjust the DEFORM working environment using environment option. Here the user can make changes in display and graphical settings and can save the settings as for his convenience. Setting will update from next session onwards. For more information related to Environment refer Chapter [8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}) section [Environment](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Environment).
+The user can adjust the DEFORM working environment using environment option. Here the user can make changes in display and graphical settings and can save the settings as for his convenience. Setting will update from next session onwards. For more information related to Environment refer Chapter [8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}) section [Environment]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#Environment).
 
 ## Preference
 
-Provides viewing and object type information of the geometries. In this option, the user can modify the display of the objects in the graphic display window. For more information related to Environment refer Chapter [8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}) section [Preference](../../pre_processor/8_pre_processor_layout/8_pre-processor_layout.htm#Preferences).
+Provides viewing and object type information of the geometries. In this option, the user can modify the display of the objects in the graphic display window. For more information related to Environment refer Chapter [8\. Pre-Processor Layout]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}) section [Preference]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#Preferences).
 
 ## Display Properties ![]({{ '/assets/icons/post_icons/mo_display_properties_icon.jpg' | relative_url }})
 
@@ -44,7 +44,7 @@ Display properties
 
 **[2D, 3D]** : The user can set the all the four viewports display area in the display window using the available options. These options will only be applied to the current or selected Viewport in the Display Window.
 
-For Multi Viewports options are available in the graphical utilities and are also available from the Viewport Menu Multi options. For more information related to the multiple viewports refer the chapter [26.1. Viewports and Windows menu]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/' | relative_url }}) section [Multiple viewport control](26_2_handeling_viewports_and_windows_iin_post_processor.htm#Multi_Viewports).
+For Multi Viewports options are available in the graphical utilities and are also available from the Viewport Menu Multi options. For more information related to the multiple viewports refer the chapter [26.1. Viewports and Windows menu]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/' | relative_url }}) section [Multiple viewport control]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_2_handeling_viewports_and_windows_iin_post_processor/' | relative_url }}#Multi_Viewports).
 
 **[2D]** : User can set the X and Y axis Minimum and Maximum limits of the viewport for all the four viewports from the translation tab by selecting the pull down button in the top of the window. After selecting the viewport in the display window user has to select the viewport property dialog to select which of the four viewport settings to be applied. (See Fig. 26.5.3.)
 

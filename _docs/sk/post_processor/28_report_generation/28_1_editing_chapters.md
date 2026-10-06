@@ -23,7 +23,7 @@ Výberom ďalších sekcií z okna kapitoly, ako sú súhrn, graf, stavová prem
 
 Okno nastavení a úprav kapitol a karta „Správa“ v stromovej štruktúre objektov s užívateľsky definovanými a ďalšími sekciami
 
-Ďalšie informácie o nastaveniach častí správy nájdete v kapitole [28\. Report Generation]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }}), časť [28.2. Sections.](28_report_generation.htm#28_2_Sections)
+Ďalšie informácie o nastaveniach častí správy nájdete v kapitole [28\. Report Generation]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }}), časť [28.2. Sections.]({{ '/docs/sk/post_processor/28_report_generation/28_report_generation/' | relative_url }}#28_2_Sections)
 
 **Súvisiace témy:**
 

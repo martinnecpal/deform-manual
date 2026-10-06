@@ -30,4 +30,4 @@ DSTROKE is an action keyword. It can be used to modify current stroke or remaini
   
 RELATED TOPICS  
 ---  
-Keywords: [MOVCTL (2D)](../m/movctl_\(2d\).htm),[MOVCTL (3D)](../m/movctl_\(3d\).htm)
+Keywords: [MOVCTL (2D)]({{ '/docs/sk/keyword_documentation/m/movctl_(2d)/' | relative_url }}),[MOVCTL (3D)]({{ '/docs/sk/keyword_documentation/m/movctl_(3d)/' | relative_url }})

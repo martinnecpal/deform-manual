@@ -28,8 +28,8 @@ CNTRAX specifies the center of rotation for objects which move with a rotational
   
 REMARKS  
 ---  
-Applicable object types: [Rigid](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.5._Rigid)  
+Applicable object types: [Rigid]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.5._Rigid)  
   
 RELATED TOPICS  
 ---  
-Keywords: [ANGMOV(2D)]({{ '/docs/sk/keyword_documentation/a/angmov/' | relative_url }}), [ANGMOV(3D)](../a/angmov\(3d\).htm), [MOVCTL(2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm)
+Keywords: [ANGMOV(2D)]({{ '/docs/sk/keyword_documentation/a/angmov/' | relative_url }}), [ANGMOV(3D)]({{ '/docs/sk/keyword_documentation/a/angmov(3d)/' | relative_url }}), [MOVCTL(2D)]({{ '/docs/sk/keyword_documentation/m/movctl_(2d)/' | relative_url }}), [MOVCTL (3D)]({{ '/docs/sk/keyword_documentation/m/movctl_(3d)/' | relative_url }})

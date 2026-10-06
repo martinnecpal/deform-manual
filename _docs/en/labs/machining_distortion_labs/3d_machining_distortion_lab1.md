@@ -35,7 +35,7 @@ title: "3D Machining Distortion Lab1"
 
 ## Creating a New problem
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear, as shown in [Fig. 3DMDL1.1.](../heat_treatment_labs/3d_heat_treatment_wizard_lab.htm#Fig_3DHTWL1_1_DEFORM_GUI_main_window)
+On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear, as shown in [Fig. 3DMDL1.1.]({{ '/docs/en/labs/heat_treatment_labs/3d_heat_treatment_wizard_lab/' | relative_url }}#Fig_3DHTWL1_1_DEFORM_GUI_main_window)
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg' | relative_url }})
 

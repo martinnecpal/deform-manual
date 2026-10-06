@@ -17,7 +17,7 @@ title: "9.2. Definovanie kroku"
 
 9.2.2. Krok
 
-  * [Step increment control (DSMAX/DTMAX)](9_2_defining_step.htm#Step_increment_control_\(DSMAX/DTMAX\))
+  * [Step increment control (DSMAX/DTMAX)]({{ '/docs/sk/pre_processor/9_simulation_controls/9_2_defining_step/' | relative_url }}#Step_increment_control_\(DSMAX/DTMAX\))
 
   * Definícia kroku (STPDEF)
 

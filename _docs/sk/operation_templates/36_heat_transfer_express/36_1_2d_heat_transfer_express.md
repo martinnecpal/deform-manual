@@ -73,11 +73,11 @@ V okne „Process“ je potrebné pre operáciu prenosu tepla nastaviť simulač
 
 V nástroji Forming je možné nastaviť iba dva geometrické modely, a to „Axisymmetric“ a „Plane Strain“.
 
-Axisymetrické modely predstavujú priečny rez vzhľadom na stredovú os. Model preto vyžaduje, aby deformujúca sa geometria bola osovo symetrická a nachádzala sa v prvom a štvrtom kvadrante (t. j. X > 0). Systém navyše predpokladá, že prúdenie v každej radiálnej rovine je identické. (Pozri [Fig. 9.1.2.](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model))
+Axisymetrické modely predstavujú priečny rez vzhľadom na stredovú os. Model preto vyžaduje, aby deformujúca sa geometria bola osovo symetrická a nachádzala sa v prvom a štvrtom kvadrante (t. j. X > 0). Systém navyše predpokladá, že prúdenie v každej radiálnej rovine je identické. (Pozri [Fig. 9.1.2.]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Fig._9.1.2._Example_for_types_of_geometry_model))
 
-Pri rovinnom deformovaní sa predpokladá, že geometria má jednotkovú hĺbku a že predná aj zadná plocha sú fixované. Simulácia vychádza z predpokladu, že objekty sa budú správať rovnako v akomkoľvek priereze naprieč šírkou a výškou objektu. (Pozri [Fig. 9.1.2.](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.2._Example_for_types_of_geometry_model))
+Pri rovinnom deformovaní sa predpokladá, že geometria má jednotkovú hĺbku a že predná aj zadná plocha sú fixované. Simulácia vychádza z predpokladu, že objekty sa budú správať rovnako v akomkoľvek priereze naprieč šírkou a výškou objektu. (Pozri [Fig. 9.1.2.]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Fig._9.1.2._Example_for_types_of_geometry_model))
 
-Ďalšie typy geometrie – „Rovinné napätie“ a „Krútenie“ – sú k dispozícii iba v rámci 2D operácie tvárnenia. Ďalšie informácie o týchto typoch geometrie nájdete v [9.1.2. Geometry type (GEOTYP](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\]).
+Ďalšie typy geometrie – „Rovinné napätie“ a „Krútenie“ – sú k dispozícii iba v rámci 2D operácie tvárnenia. Ďalšie informácie o týchto typoch geometrie nájdete v [9.1.2. Geometry type (GEOTYP]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\]).
 
   
 **Typ vykurovania**
@@ -134,7 +134,7 @@ Okno obrobku
 
 **Názov objektu**: Používateľ môže definovať názov všetkých objektov dostupných v danej operácii.
 
-**Typ objektu**: Typ objektu (OBJTYP) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe typu DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. V operácii Forming je k dispozícii viac typov objektov, podrobnosti nájdete v [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
+**Typ objektu**: Typ objektu (OBJTYP) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe typu DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. V operácii Forming je k dispozícii viac typov objektov, podrobnosti nájdete v [11.4. Object Type]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type).
 
   
 **Plast**: Plastové objekty sa modelujú ako tuho-plastický alebo tuho-viskoplastický materiál v závislosti od vlastností materiálov. Model predpokladá, že napätie v materiáli lineárne rastie s rýchlosťou deformácie až do prahovej hodnoty rýchlosti deformácie, označovanej ako limitná rýchlosť deformácie ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). Po prekročení medznej rýchlosti deformácie sa materiál deformuje plasticky. Plastické správanie materiálu objektu sa špecifikuje pomocou funkcie tokového napätia materiálu alebo údajov o tokovom napätí ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). V programe Heat Transfer Express sa obrobok automaticky priradí k typu objektu „Plast“.  
@@ -156,7 +156,7 @@ Pomocou pokročilých nastavení môže používateľ zadať teplotu, deformáci
 
 Pokročilé nastavenia objektov
 
-V operácii „Forming“ je možné inicializovať ďalšie premenné; podrobnosti nájdete v operácii [35\. 2D Heat Transfer]({{ '/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}) a [Initialize](../35_heat_transfer/35_1_2d_heat_transfer_operation.htm#Initialize).
+V operácii „Forming“ je možné inicializovať ďalšie premenné; podrobnosti nájdete v operácii [35\. 2D Heat Transfer]({{ '/docs/en/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}) a [Initialize]({{ '/docs/sk/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }}#Initialize).
 
 Priemerná rýchlosť deformácie ([AVGSTR]({{ '/docs/en/keyword_documentation/a/avgstr/' | relative_url }})) je charakteristická priemerná hodnota efektívnej rýchlosti deformácie. Na začiatku simulácie by sa mala zadať aproximácia tejto hodnoty.
 
@@ -190,7 +190,7 @@ Okno s geometrickými primitívami pre typ geometrie „Rovinné deformácie“
 
 **Skontrolujte**![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})
 
-Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Zobrazí sa okno „Skontrolujte a opravte geometriu“, ako je znázornené na obr. 36.1.8 nižšie. Geometria sa opraví, ak obsahuje nejaké chyby, po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
+Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Zobrazí sa okno „Skontrolujte a opravte geometriu“, ako je znázornené na obr. 36.1.8 nižšie. Geometria sa opraví, ak obsahuje nejaké chyby, po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) [Check Geometry]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}#Check_Geometry). 
 
 ![]({{ '/assets/images/operation_templates/36_heat_transfer_express/36_1_2d_heat_transfer_express/image006.jpg' | relative_url }})
 
@@ -286,7 +286,7 @@ Hustoty teploty, deformácie a rýchlosti deformácie sa prideľujú na základe
 
 Hodnoty zo všetkých kľúčových slov týkajúcich sa hustoty siete sa počas procesu generovania siete kombinujú, čím sa vytvorí rozloženie hustoty siete v rámci geometrických hraníc. 
 
-Operácia tvarovania obsahuje ďalší váhový faktor, a to možnosti v okne „Mesh Density“ (Hustota siete), pomocou ktorých môže používateľ definovať konkrétnu oblasť v priestore, ktorá sa bude počas deformácie pohybovať spolu s ostatnými objektmi s príslušnou hustotou siete. Pozrite si [13.1.5. Mesh Weighting factors.](../../pre_processor/13_mesh_generation/13_1_2d_mesh_generation.htm#13.1.5._Mesh_weighting_factors).
+Operácia tvarovania obsahuje ďalší váhový faktor, a to možnosti v okne „Mesh Density“ (Hustota siete), pomocou ktorých môže používateľ definovať konkrétnu oblasť v priestore, ktorá sa bude počas deformácie pohybovať spolu s ostatnými objektmi s príslušnou hustotou siete. Pozrite si [13.1.5. Mesh Weighting factors.]({{ '/docs/sk/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.5._Mesh_weighting_factors).
 
 **Kritériá pre generovanie novej siete**
 
@@ -360,7 +360,7 @@ Pre obrobok bola nastavená okrajová podmienka symetrie
 
 Definované BCC je možné najskôr inicializovať výberom typu BCC v strome a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}). Konkrétne definované BCC je možné tiež odstrániť výberom definovanej vetvy zo stromu BCC a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}). Teplotu okolia je možné meniť v okne „Heat condition“ (Teplotné podmienky). Okná okolia nie sú povolené pre výmenu tepla s BCC okolia v režime prenosu tepla, sú však k dispozícii v režime tvárnenia; ďalšie podrobnosti nájdete v časti „Thermal“ (Tepelné vlastnosti) pod [14.3 Thermal Boundary Conditions]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}).
 
-V predspracovateľovi a pri operácii tvarovania sú k dispozícii ďalšie možnosti tepelného BCC a rôzne kategórie BCC, ako napríklad [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
+V predspracovateľovi a pri operácii tvarovania sú k dispozícii ďalšie možnosti tepelného BCC a rôzne kategórie BCC, ako napríklad [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ### Definícia tepelného stavu
 

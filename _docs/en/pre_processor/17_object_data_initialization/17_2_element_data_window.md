@@ -109,7 +109,7 @@ We have another two options:
 
 **Picking** : Using picking option user can select the Elements to initialize the value. 
 
-Related to picking options refer 14. Boundary Condition [Picking options for 2D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_2D) and [Picking options for 3D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_3D).
+Related to picking options refer 14. Boundary Condition [Picking options for 2D]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}#Picking_option_for_2D) and [Picking options for 3D]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}#Picking_option_for_3D).
 
 ## Deformation Tab **[2D, 3D]**
 
@@ -119,7 +119,7 @@ Related to picking options refer 14. Boundary Condition [Picking options for 2D]
 
   * **Density (DENSTY)** : [DENSTY]({{ '/docs/en/keyword_documentation/d/densty/' | relative_url }}) specifies the relative density of the material at each element. [DENSTY]({{ '/docs/en/keyword_documentation/d/densty/' | relative_url }})is used when a porous material with relative densities less than 1.0 is being simulated. If no value is specified for density, it is assumed to be 1.0. The flow stress of porous objects should be specified for the fully dense material.
 
-  * **Eff. Strain** **(STRAIN)** : [STRAIN]({{ '/docs/en/keyword_documentation/s/strain/' | relative_url }}) specifies the value of total effective strain at the centroid of each element. Elemental strains are interpolated between meshes during remeshing procedures. When user select "Integration" type Element/Nodal output for Strain under Simulation controls![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Advanced options ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) [Advanced output](../9_simulation_controls/9_7_advanced_options.htm#9.7.4._Output_Control), for Brick mesh object we can observe 8 Integration outputs values for each element as shown in Fig. 17.2.5. User can also initalize the values for each integration points. Even for Damage and Stress state varaibles "Integration" type Element/Nodal output option is available.
+  * **Eff. Strain** **(STRAIN)** : [STRAIN]({{ '/docs/en/keyword_documentation/s/strain/' | relative_url }}) specifies the value of total effective strain at the centroid of each element. Elemental strains are interpolated between meshes during remeshing procedures. When user select "Integration" type Element/Nodal output for Strain under Simulation controls![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Advanced options ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) [Advanced output]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#9.7.4._Output_Control), for Brick mesh object we can observe 8 Integration outputs values for each element as shown in Fig. 17.2.5. User can also initalize the values for each integration points. Even for Damage and Stress state varaibles "Integration" type Element/Nodal output option is available.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_2_element_data_window/17_2_image005.jpg' | relative_url }})
 
@@ -150,7 +150,7 @@ Back stress in Element data window for 3D
 **Strain Components Tab**  
 **[2D, 3D]** Specifies the Strain tensor of each element of an object.(See Fig. 17.2.8.)
 
-To activate the Strain component output we have to select type of strain output check box like Plastic, Elastic, Creep, Transformation and Thermal volumetric and Transformation volumetric under Simulation control [Advanced output](../9_simulation_controls/9_7_advanced_options.htm#9.7.4._Output_Control) tab.
+To activate the Strain component output we have to select type of strain output check box like Plastic, Elastic, Creep, Transformation and Thermal volumetric and Transformation volumetric under Simulation control [Advanced output]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#9.7.4._Output_Control) tab.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_2_element_data_window/17_2_image008.jpg' | relative_url }})
 
@@ -220,7 +220,7 @@ Elemental Phase Transformation variable data window
 
 **[2D,3D]** The data for User element variables ([USRELM]({{ '/docs/en/keyword_documentation/u/usrelm/' | relative_url }})) can be initialized, defined or examined here.
 
-User element variable values can be defined using FORTRAN subroutines. [Refer chapter 56 section USRUPD subroutines.](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_3_User_defined_node_and_element_value_\(USRUPD\)) Each element value may accept both a name and a value. (See Fig. 17.2.13.) Also, an infinite number of variables may be defined. A minimum of 2 user element variables will be defined by default, however, the user may increase this to as large number as wished. User needs to be cautious that a large number of variables defined can lead to a large database file.
+User element variable values can be defined using FORTRAN subroutines. [Refer chapter 56 section USRUPD subroutines.]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#56_2_3_3_User_defined_node_and_element_value_\(USRUPD\)) Each element value may accept both a name and a value. (See Fig. 17.2.13.) Also, an infinite number of variables may be defined. A minimum of 2 user element variables will be defined by default, however, the user may increase this to as large number as wished. User needs to be cautious that a large number of variables defined can lead to a large database file.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_2_element_data_window/17_2_image013.jpg' | relative_url }})
 
@@ -236,7 +236,7 @@ Thermomechanical Elemental variable data window
 
 ## Additive Manufacturing Tab
 
-**[3D]** Under Additive manufacturing ([LAYRID]({{ '/docs/en/keyword_documentation/l/layrid/' | relative_url }})) tab user can define the Layer ID for the sliced layers of the object used for Additive manufacturing process (see Fig. 17.2.15.). Even after doing [Slice Layers](../18_object_manipulation_tools/18_1_boolean.htm#Fig_18_1_8_Slice_layers_page) in [Boolean]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }}) page, user can assign Layer ID for each sliced layers in 3D Geometry Examine page.
+**[3D]** Under Additive manufacturing ([LAYRID]({{ '/docs/en/keyword_documentation/l/layrid/' | relative_url }})) tab user can define the Layer ID for the sliced layers of the object used for Additive manufacturing process (see Fig. 17.2.15.). Even after doing [Slice Layers]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }}#Fig_18_1_8_Slice_layers_page) in [Boolean]({{ '/docs/en/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }}) page, user can assign Layer ID for each sliced layers in 3D Geometry Examine page.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_2_element_data_window/17_2_image015.jpg' | relative_url }})
 

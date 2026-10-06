@@ -11,9 +11,9 @@ title: "16.6. Vykurovacie vlastnosti"
 
 16.6.3. Definícia údajov
 
-[**2D, 3D**]: Ak sa vyžadujú výpočty indukčného ohrevu, je potrebné ho najprv zapnúť v ovládacích prvkoch simulácie a až potom definovať súvisiace hodnoty objektu, ako je napríklad frekvencia prúdu (pozri obr. 16.6.1 a obr. 16.6.2). Riešiteľ CG je tiež možnosťou riešenia modelov indukčného ohrevu a je schopný riešiť modely s primeranou veľkosťou.
+\[**2D, 3D**]: Ak sa vyžadujú výpočty indukčného ohrevu, je potrebné ho najprv zapnúť v ovládacích prvkoch simulácie a až potom definovať súvisiace hodnoty objektu, ako je napríklad frekvencia prúdu (pozri obr. 16.6.1 a obr. 16.6.2). Riešiteľ CG je tiež možnosťou riešenia modelov indukčného ohrevu a je schopný riešiť modely s primeranou veľkosťou.
 
-Výber režimu simulácie indukčného ohrevu nájdete v časti [Fig. 9.1.3.](../9_Simulation_Controls/9_1_Simulation_type_Settings.htm#Fig._9.1.3. Simulation Controls window - Heating). Elektrické a magnetické vlastnosti materiálu nájdete v časti [10.8. Electromagnetic data]({{ '/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/' | relative_url }}).
+Výber režimu simulácie indukčného ohrevu nájdete v časti [Fig. 9.1.3.]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Fig._9.1.3.%20Simulation%20Controls%20window%20-%20Heating). Elektrické a magnetické vlastnosti materiálu nájdete v časti [10.8. Electromagnetic data]({{ '/docs/sk/pre_processor/16_object_properties/16_5_hardness_properties/' | relative_url }}).
 
 Motor DEFORM FEM teraz dokáže spracovať modely indukčného ohrevu s dvojfrekvenčnými vstupnými údajmi pre aktuálnu frekvenciu v 2D a 3D.
 
@@ -63,6 +63,6 @@ Definícia údajov môže byť konštantná alebo funkcia času pre objemový n�
 
 [16.10. User]({{ '/docs/sk/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Material Electrical and magnetic properties]({{ '/docs/sk/pre_processor/10_Material_Data/10_8_Elec_Mag_Data/10_8_Elec_Mag_Data/' | relative_url }})
+[Material Electrical and magnetic properties]({{ '/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_Elec_Mag_Data/' | relative_url }})
 
-[10\. Material Data]({{ '/docs/sk/pre_processor/10_Material_Data/10_Material_Data/' | relative_url }})
+[10\. Material Data]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }})

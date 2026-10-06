@@ -29,7 +29,7 @@ Možnosť PID prúdového toku [len pre 2D]
 
 ## Indukčné vykurovanie
 
-**[2D]** : Po zaškrtnutí políčka Indukčný ohrev v ovládacích prvkoch simulácie sa aktivuje indukčný ohrev v okne vlastností a záložka Ohrev vo Vzťahoch medzi objektmi. Ďalšie informácie nájdete v dokumentoch [16.6. Heating Properties]({{ '/docs/sk/pre_processor/16_Object_Properties/16_6_heating_properties/' | relative_url }}) a [20.3. Interface Resistivity.]({{ '/docs/sk/pre_processor/20_Inter-object_Data_Definition/20_3_Interface_Resisitivity/' | relative_url }})
+**[2D]** : Po zaškrtnutí políčka Indukčný ohrev v ovládacích prvkoch simulácie sa aktivuje indukčný ohrev v okne vlastností a záložka Ohrev vo Vzťahoch medzi objektmi. Ďalšie informácie nájdete v dokumentoch [16.6. Heating Properties]({{ '/docs/sk/pre_processor/16_object_properties/16_6_heating_properties/' | relative_url }}) a [20.3. Interface Resistivity.]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }})
 
 **[3D]** : Pre 3D cievky sú k dispozícii počiatočné a koncové plochy bcc (pozri obr. 14.5.2.).
 

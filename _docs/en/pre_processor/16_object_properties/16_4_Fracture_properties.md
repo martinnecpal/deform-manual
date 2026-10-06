@@ -14,7 +14,7 @@ title: "16.4. Fracture Properties"
 16.4.4 Fracture element deactivation
 
   
-Ductile fracture of a deforming workpiece can be modelled in DEFORM. If the fracture function is turned on, material separation will be modelled for any elements which exceed a critical damage value specified in the Material Properties ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Miscellaneous![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})[Fracture]({{ '/docs/en/pre_processor/10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models/' | relative_url }}) tab. This feature is useful for modelling shearing and blanking, machining, fracture of deformable installation fasteners (pop rivets) and other applications.
+Ductile fracture of a deforming workpiece can be modelled in DEFORM. If the fracture function is turned on, material separation will be modelled for any elements which exceed a critical damage value specified in the Material Properties ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Miscellaneous![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})[Fracture]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }}) tab. This feature is useful for modelling shearing and blanking, machining, fracture of deformable installation fasteners (pop rivets) and other applications.
 
 **[2D]:****Fracture elements deletion** is modelled by deleting any elements which exceed the critical damage value.
 
@@ -22,7 +22,7 @@ Therefore, an extremely fine mesh should be used in any region where fracture is
 
 **Fracture element deactivation** is a new method to study crack propagation. It will deactivate an element instead of deleting it when its damage reaches the critical value of its material (See Fig. 16.4.2.).
 
-**[3D]** : To activate fracture elements deletion type, user needs select**Fracture element deletion** type from Fracture pulldown ([FRCNEL]({{ '/docs/en/Keyword_Documentation/F/FRCNEL/' | relative_url }})) field (see Fig. 16.4.1.) This will initiate element deletion for elements with fracture value more than critical value defined in material fracture/damage models during remeshing procedures. Damage model and critical damage factor defined in the material data are important data needed to activate this feature. For an overview of fracture, please refer [3D Fracture.]({{ '/docs/en/Applications/55_Applications/55_Fracture/3D_Fracture/' | relative_url }})
+**[3D]** : To activate fracture elements deletion type, user needs select**Fracture element deletion** type from Fracture pulldown ([FRCNEL]({{ '/docs/en/keyword_documentation/f/frcnel/' | relative_url }})) field (see Fig. 16.4.1.) This will initiate element deletion for elements with fracture value more than critical value defined in material fracture/damage models during remeshing procedures. Damage model and critical damage factor defined in the material data are important data needed to activate this feature. For an overview of fracture, please refer [3D Fracture.]({{ '/docs/en/applications/55_applications/55_fracture/3d_fracture/' | relative_url }})
 
 **Fracture element deactivation** is a new method to study crack propagation. It will deactivate an element instead of deleting it when its damage reaches the critical value of its material (See Fig. 16.4.2.).
 
@@ -34,15 +34,15 @@ Fracture Element deletion type
 
 Fracture element deactivation type
 
-## Fracture step ([FRCSTP]({{ '/docs/en/Keyword_Documentation/F/FRCSTP/' | relative_url }})) [2D]
+## Fracture step ([FRCSTP]({{ '/docs/en/keyword_documentation/f/frcstp/' | relative_url }})) [2D]
 
-The step (**[FRCSTP]({{ '/docs/en/Keyword_Documentation/F/FRCSTP/' | relative_url }}))** interval at which the simulation should be stopped to perform element deletion. If no elements are above the critical damage value, none will be deleted.
+The step (**[FRCSTP]({{ '/docs/en/keyword_documentation/f/frcstp/' | relative_url }}))** interval at which the simulation should be stopped to perform element deletion. If no elements are above the critical damage value, none will be deleted.
 
-## Fracture elements deletion ([FRCNEL]({{ '/docs/en/Keyword_Documentation/F/FRCNEL/' | relative_url }})) [2D]
+## Fracture elements deletion ([FRCNEL]({{ '/docs/en/keyword_documentation/f/frcnel/' | relative_url }})) [2D]
 
 The number of elements that must be above the critical damage value for the simulation to be stopped to perform element deletion. A typical value is around 4.
 
-## Fracture element deletion ([FRCNEL]({{ '/docs/en/Keyword_Documentation/F/FRCNEL/' | relative_url }})) [3D]
+## Fracture element deletion ([FRCNEL]({{ '/docs/en/keyword_documentation/f/frcnel/' | relative_url }})) [3D]
 
 This option will initiate element deletion for elements with fracture value more than critical value defined in material fracture/damage models during remeshing procedures.
 
@@ -74,6 +74,6 @@ Fracture element deactivation is a new method to study crack propagation. It wil
 
 [16.10. User]({{ '/docs/en/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Material Fracture/damage models]({{ '/docs/en/pre_processor/10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models/' | relative_url }})
+[Material Fracture/damage models]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }})
 
-[Applications - 3D Fracture]({{ '/docs/en/Applications/55_Applications/55_Fracture/3D_Fracture/' | relative_url }})
+[Applications - 3D Fracture]({{ '/docs/en/applications/55_applications/55_fracture/3d_fracture/' | relative_url }})

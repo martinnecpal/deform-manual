@@ -23,7 +23,7 @@ title: "10.12. Rôzne údaje"
 
   * Ashby
 
-  * [Raj/Ashby](10_12_miscellaneous_data.htm#Raj/Ashby)
+  * [Raj/Ashby]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }}#Raj/Ashby)
 
 10.12.8. Požiadavky na údaje o materiáli
 
@@ -189,7 +189,7 @@ Okno Ashby Definícia
 
 **Raj****/Ashby**
 
-Pre vstupné okno rovnice Raj/Ashby pozri [Fig. 10.12.11.](10_12_miscellaneous_data.htm#Fig._10.12.11._Raj/Ashby__window_Definition)
+Pre vstupné okno rovnice Raj/Ashby pozri [Fig. 10.12.11.]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }}#Fig._10.12.11._Raj/Ashby__window_Definition)
 
 ![]({{ '/assets/equations/pre_processor/10_material_data/10_12_miscellaneous_data/eq_10_12_8.jpg' | relative_url }}) |
 ---|---
@@ -296,11 +296,11 @@ Súvisiace témy:
 
 [10.12.1. Fracture Models]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }})
 
-[Assigning Material to Object](../../../operation_templates/33_forming/33_1_2d_forming_setup.htm#Material)
+[Assigning Material to Object]({{ '/docs/sk/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }}#Material)
 [1.11. DEFORM Units]({{ '/docs/sk/about_deform/1_introduction_to_deform/1_9_units/' | relative_url }})
 [Material Editing]({{ '/docs/sk/labs/heat_treatment_labs/2d_ht_lab5_material_input/' | relative_url }})
-[Material Units Converter](../10_material_data.htm#Material_Data)
-[Units Converter Next Gen Post](../../../post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options.htm#26_5_6_Unit_Conversion)
+[Material Units Converter]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }}#Material_Data)
+[Units Converter Next Gen Post]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_5_post_processing_options/' | relative_url }}#26_5_6_Unit_Conversion)
 [Appendix IV: Determining 'R' coefficients for anisotropy models]({{ '/docs/sk/appendices/appendix_iv_determining_r_coefficientss/' | relative_url }})
 [Running an inertia weld simulation in DEFORM]({{ '/docs/sk/applications/55_applications/55_inertia_welding/2d_inertia_welding/' | relative_url }})
 [Running 2D creep simulations in DEFORM]({{ '/docs/sk/applications/55_applications/55_creep/2d_creep/' | relative_url }})

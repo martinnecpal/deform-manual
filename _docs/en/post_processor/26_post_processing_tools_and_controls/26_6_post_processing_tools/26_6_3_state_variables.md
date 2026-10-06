@@ -268,7 +268,7 @@ Contour - Shaded type settings window
 
 Contour - Line type settings window
 
-  * **Min/Max Plot** : User can control the size of Min/Max plot using size ration option as shown in [Fig. 26.6.3.7.](26_6_3_state_variables.htm#Fig_26_6_3_7_Contour__Min/Max_plot_type_settings_window)
+  * **Min/Max Plot** : User can control the size of Min/Max plot using size ration option as shown in [Fig. 26.6.3.7.]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }}#Fig_26_6_3_7_Contour__Min/Max_plot_type_settings_window)
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_6_post_processing_tools/26_6_3_state_variables/image007.jpg' | relative_url }})
 

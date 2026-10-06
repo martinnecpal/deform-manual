@@ -39,4 +39,4 @@ When "Contact area ratio" is selected, FEM simulation will stop if the workpiece
   
 RELATED TOPICS  
 ---  
-[Stopping controls: 9.3.11 Stopping Window ](../../pre_processor/9_simulation_controls/9_3_stopping_controls.htm#9_3_10_Stopping_Window)
+[Stopping controls: 9.3.11 Stopping Window ]({{ '/docs/en/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}#9_3_10_Stopping_Window)

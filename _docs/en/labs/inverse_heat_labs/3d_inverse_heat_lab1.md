@@ -53,7 +53,7 @@ Problem Setup window
 
 ## Mode selection page
 
-As the 3D Inverse Heat wizard opens, you should see a window as shown in [Fig. 3DINVL1.2.](../machining_labs/3d_cutting_lab2.htm#Fig_3DTL2_2_Process_page) If user is interested in calculating transformations or atom content due to diffusion then user can turn on respective check boxes under “Sim Mode” tab. In this lab we will not turn on any check box as we will be calculating only heat transfer co-efficients. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+As the 3D Inverse Heat wizard opens, you should see a window as shown in [Fig. 3DINVL1.2.]({{ '/docs/en/labs/machining_labs/3d_cutting_lab2/' | relative_url }}#Fig_3DTL2_2_Process_page) If user is interested in calculating transformations or atom content due to diffusion then user can turn on respective check boxes under “Sim Mode” tab. In this lab we will not turn on any check box as we will be calculating only heat transfer co-efficients. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/3d_inverse_heat_lab1/image0002.jpg' | relative_url }})
 

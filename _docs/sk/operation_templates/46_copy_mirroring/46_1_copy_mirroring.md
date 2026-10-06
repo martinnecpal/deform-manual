@@ -37,7 +37,7 @@ Import súboru 3D Spike Key
 
 ## Pridanie operácie kopírovania/zrkadlenia
 
-Po spustení prvej simulácie operácie tvarovania môžeme pridať operáciu Kopírovanie/Zrkadlenie zo skupiny operátorov Simulácia v prehliadači, ako je znázornené na obrázku [Fig. 46.1.2.](46_1_copy_mirroring.htm#Fig_46_1_2_Adding_Copy/Mirroring_Operation). Po kliknutí na operáciu Kopírovanie/Zrkadlenie sa zobrazí vyskakovacie okno „Typ nastavenia“, ako je znázornené na obr. 46.1.3.
+Po spustení prvej simulácie operácie tvarovania môžeme pridať operáciu Kopírovanie/Zrkadlenie zo skupiny operátorov Simulácia v prehliadači, ako je znázornené na obrázku [Fig. 46.1.2.]({{ '/docs/sk/operation_templates/46_copy_mirroring/46_1_copy_mirroring/' | relative_url }}#Fig_46_1_2_Adding_Copy/Mirroring_Operation). Po kliknutí na operáciu Kopírovanie/Zrkadlenie sa zobrazí vyskakovacie okno „Typ nastavenia“, ako je znázornené na obr. 46.1.3.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0002.jpg' | relative_url }})
 
@@ -106,7 +106,7 @@ Po dokončení nastavenia kopírovania/zrkadlenia môžeme pridať operáciu 3D 
 Pridanie operácie 3D tvarovania po operácii kopírovania/zrkadlenia
 
   
-Teraz môžeme po zrkadlení objektov, ako je znázornené v [Fig. 46.1.12.](46_1_copy_mirroring.htm#Fig_46_1_12_3D_Forming_Operation_after_Copy/Mirroring_Operation_Batch_Mode) a na obr. 46.1.13, definovať údaje o nastavení druhej formovacej operácie.
+Teraz môžeme po zrkadlení objektov, ako je znázornené v [Fig. 46.1.12.]({{ '/docs/sk/operation_templates/46_copy_mirroring/46_1_copy_mirroring/' | relative_url }}#Fig_46_1_12_3D_Forming_Operation_after_Copy/Mirroring_Operation_Batch_Mode) a na obr. 46.1.13, definovať údaje o nastavení druhej formovacej operácie.
 
 ![]({{ '/assets/images/operation_templates/46_copy_mirroring/46_1_copy_mirroring/image0012.jpg' | relative_url }})
 

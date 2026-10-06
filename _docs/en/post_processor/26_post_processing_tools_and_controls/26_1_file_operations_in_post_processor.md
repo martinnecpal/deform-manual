@@ -57,7 +57,7 @@ For **Tools Menu** options refer chapter [26.6. Post Processing tools]({{ '/docs
 
 For **Sections****menu** and **Report****menu** options refer [27\. Introduction to Report Generation]({{ '/docs/en/post_processor/27_introduction_to_report_generation/27_introduction_to_report_generation/' | relative_url }})
 
-For **Dock****Widgets****menu** options refer Chapter [25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }}) section [25.5. Dock Widget menu](../25_post_processor_layout/25_post_processor_layout.htm#25_5_Dock_Widget_menu)
+For **Dock****Widgets****menu** options refer Chapter [25\. Post Processor Layout]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }}) section [25.5. Dock Widget menu]({{ '/docs/en/post_processor/25_post_processor_layout/25_post_processor_layout/' | relative_url }}#25_5_Dock_Widget_menu)
 
 ## Working with DB in PIP mode
 

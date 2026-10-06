@@ -67,7 +67,7 @@ Používateľ si môže z krokov uložených v databáze vybrať tie, ktoré chc
 
 ## Zoznam krokov ![]({{ '/assets/icons/post_icons/mo_step_list_icon.jpg' | relative_url }})
 
-Týmto spôsobom získate podrobnejšie informácie o všetkých uložených krokoch, ako sú číslo simulácie, číslo siete, čas, zdvih primárnej matrice, rozmery, číslo verzie a ohyb (pre 3D). V ľavom okne sa tiež zobrazuje postup operácií a v pravom okne sú k dispozícii ďalšie možnosti výberu krokov (pozri obr. 26.4.3.). Ďalšie informácie o typoch výberu krokov a možnostiach zoznamu krokov nájdete v časti [6.1.6. Step Editor](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout.htm#6.1.6._Step_Editor).
+Týmto spôsobom získate podrobnejšie informácie o všetkých uložených krokoch, ako sú číslo simulácie, číslo siete, čas, zdvih primárnej matrice, rozmery, číslo verzie a ohyb (pre 3D). V ľavom okne sa tiež zobrazuje postup operácií a v pravom okne sú k dispozícii ďalšie možnosti výberu krokov (pozri obr. 26.4.3.). Ďalšie informácie o typoch výberu krokov a možnostiach zoznamu krokov nájdete v časti [6.1.6. Step Editor]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#6.1.6._Step_Editor).
 
 ![]({{ '/assets/images/post_processor/26_post_processor_display_controls/26_4_simulation_step_display_controls/image002.jpg' | relative_url }})
 

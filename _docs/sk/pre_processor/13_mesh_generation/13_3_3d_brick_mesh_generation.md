@@ -65,7 +65,7 @@ Generovanie hrubej vnútornej siete pre 2D prierez
 
 ## Váhové faktory siete
 
-Váhové faktory alebo parametre (systémovo definovaná hustota siete) pre hraničné zakrivenie, teplotu, deformáciu a mieru deformácie určujú relatívne váhy hustoty siete, ktoré sa majú priradiť príslušnému parametru. Ďalšie informácie nájdete v časti [13.2.5. Mesh weighting factors.](13_2_3d_tet_mesh_generation.htm#13.2.5._Mesh_weighting_factors)
+Váhové faktory alebo parametre (systémovo definovaná hustota siete) pre hraničné zakrivenie, teplotu, deformáciu a mieru deformácie určujú relatívne váhy hustoty siete, ktoré sa majú priradiť príslušnému parametru. Ďalšie informácie nájdete v časti [13.2.5. Mesh weighting factors.]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.5._Mesh_weighting_factors)
 
 ## **Okienko hustoty siete pre sieť Brick**
 
@@ -88,7 +88,7 @@ Kritériá remeshingu (Autoremesh) sú najvhodnejším spôsobom, ako zvládnuť
 Možnosť kritérií Remesh pre sieť Brick
 
   
-Podrobnosti o maximálnej hĺbke zásahu (RMDPTH), maximálnom prírastku zdvihu (RMSTRK), maximálnom prírastku času (RMTIME), maximálnom prírastku kroku (RMSTEP) a účele kritérií nájdete v časti [13.2.8. Remeshing criteria.](13_2_3d_tet_mesh_generation.htm#13.2.8._Remeshing_criteria)
+Podrobnosti o maximálnej hĺbke zásahu (RMDPTH), maximálnom prírastku zdvihu (RMSTRK), maximálnom prírastku času (RMTIME), maximálnom prírastku kroku (RMSTEP) a účele kritérií nájdete v časti [13.2.8. Remeshing criteria.]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.8._Remeshing_criteria)
 
 ## Rozšírené nastavenia
 

@@ -48,9 +48,9 @@ Grain boundary energy is defined as the excess free energy associated with the p
   
 As the energy of the boundary increases, the energy per dislocation decreases. Thus there is a driving force to produce fewer, more misoriented boundaries (i.e., grain growth).  
   
-Applicable object types: [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic)
+Applicable object types: [Elastoplastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic)
 
-Applicable simulation type: [Heat treatment](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\))
+Applicable simulation type: [Heat treatment]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\))
 
 RELATED TOPICS  
 ---  

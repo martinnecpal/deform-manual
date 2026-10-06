@@ -24,7 +24,7 @@ Rotation movement controls window settings for 2D Angular velocity
 
 Rotation movement controls window settings for 3D Torque and Angular velocity
 
-Rotational Motion can be applied to simulate rolling or any type of movement where an object will rotate about a fixed axis. Rotational Motion can only be applied to Rigid objects. Rigid objects can have both [Rotational](15_movement_controls_settings.htm#15.1.2._Rotational_movement) and [Translational](15_movement_controls_settings.htm#15.1.1._Translation_movement) movement simultaneously.
+Rotational Motion can be applied to simulate rolling or any type of movement where an object will rotate about a fixed axis. Rotational Motion can only be applied to Rigid objects. Rigid objects can have both [Rotational]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}#15.1.2._Rotational_movement) and [Translational]({{ '/docs/en/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}#15.1.1._Translation_movement) movement simultaneously.
 
 **Controlling Method**
 

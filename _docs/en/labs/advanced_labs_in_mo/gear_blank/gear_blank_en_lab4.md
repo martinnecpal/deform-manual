@@ -5,7 +5,7 @@ title: "Gear Blank EN Lab 4"
 
 # Lab 4. 3D Non-isothermal Air transfer operation
 
-Create a new project named **Gear_t** in DEFORM as explained in [Lab1.](gear_blank_en.htm#Lab1_2D_upset_operation) This is a two operation simulation. Operation 1 is heat transfer only, representing movement of the workpiece from the heater to the tools. Operation 2 is forging, with temperature calculations enabled.
+Create a new project named **Gear_t** in DEFORM as explained in [Lab1.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/' | relative_url }}#Lab1_2D_upset_operation) This is a two operation simulation. Operation 1 is heat transfer only, representing movement of the workpiece from the heater to the tools. Operation 2 is forging, with temperature calculations enabled.
 
 ### Add and name operation
 
@@ -71,9 +71,9 @@ Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 
 
 ### Load and assign material for workpiece
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button as shown in [Fig. L1.6.](gear_blank_en_lab1.htm#Fig_L1_6_Loading_material_from_library) Select the **Steel_at_Extended_Temperatures** category, then **AISI-8620[1550-2200F(850 -1200C)]** and click the ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button.
+Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button as shown in [Fig. L1.6.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_6_Loading_material_from_library) Select the **Steel_at_Extended_Temperatures** category, then **AISI-8620[1550-2200F(850 -1200C)]** and click the ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button.
 
-Click on **AISI-8620[1550-2200F(850 -1200C)]** to assign material for workpiece. Confirm the assigning from object tree displaying the material name next to material and in Assigned material information text above the material list as shown in [Fig. L1.11.](gear_blank_en.htm#Fig_L1_11_Object_Material_Assigning_window)
+Click on **AISI-8620[1550-2200F(850 -1200C)]** to assign material for workpiece. Confirm the assigning from object tree displaying the material name next to material and in Assigned material information text above the material list as shown in [Fig. L1.11.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/' | relative_url }}#Fig_L1_11_Object_Material_Assigning_window)
 
 Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define boundary condition.
 

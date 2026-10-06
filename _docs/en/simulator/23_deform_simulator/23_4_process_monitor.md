@@ -149,7 +149,7 @@ Sim Client utility window
 
 [Start, Stop and Resume Simulation]({{ '/docs/en/simulator/23_deform_simulator/23_1_start_stop_and_resume_simulations/' | relative_url }})
 
-[Queuing Simulations](23_2_interactive_and_batch_mode.htm#23_2_3_Queuing_Simulations)
+[Queuing Simulations]({{ '/docs/en/simulator/23_deform_simulator/23_2_interactive_and_batch_mode/' | relative_url }}#23_2_3_Queuing_Simulations)
 
 [23.5. Setting up MPICH]({{ '/docs/en/simulator/23_deform_simulator/23_5_setting_up_mpich/' | relative_url }})
 

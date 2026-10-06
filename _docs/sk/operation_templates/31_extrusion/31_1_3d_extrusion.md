@@ -286,7 +286,7 @@ Sieť vytvorená pomocou nastavení nástroja na extrudovanie siete
   * **Pravidelné zapojenie obrobku**
 
 V nastavení pravidelnej siete môže používateľ ovládať sieť definovaním pokročilých nastavení, ako sú váhové faktory, okná siete, pomer veľkostí a kritériá pregenerovania siete. Používateľ môže kliknúť na „![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }})“ na vygenerovanie siete; sieť vygenerovaná pomocou pravidelného vytvárania sietí vyzerá tak, ako je znázornené na obr. 31.1.24.  
-Ďalšie informácie o nastaveniach siete pri bežnom vytváraní sietí nájdete v časti „Nastavenia siete v expertnom režime“ v [13.2.2. Expert mode 3D mesh generation](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.2._Expert_Mode_3D_Mesh_Generation)
+Ďalšie informácie o nastaveniach siete pri bežnom vytváraní sietí nájdete v časti „Nastavenia siete v expertnom režime“ v [13.2.2. Expert mode 3D mesh generation]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.2._Expert_Mode_3D_Mesh_Generation)
 
 ![]({{ '/assets/images/operation_templates/31_extrusion/31_1_3d_extrusion/image024.jpg' | relative_url }})
 
@@ -329,7 +329,7 @@ Načítanie stránky
 ### B.I. Flownet
 
 V databáze s veľkým počtom krokov bude vykreslenie siete Flownet trvať veľmi dlho; používateľ môže tento problém vyriešiť využitím vstavanej siete Flownet. Ak používateľ využije vstavanú sieť Flownet, táto sa vykreslí priebežne počas simulácie problému. (Pozri obr. 31.1.29.)  
-Ďalšie informácie o definovaní v rámci systému Flownet nájdete v dokumente [13.2.9. Built in Flownet](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet)
+Ďalšie informácie o definovaní v rámci systému Flownet nájdete v dokumente [13.2.9. Built in Flownet]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13_2_9_Built_In_Flownet)
 
 ![]({{ '/assets/images/pre-processor/13_mesh_generation/13_2_3d_tet_mesh_generation/13_2_image016.jpg' | relative_url }})
 

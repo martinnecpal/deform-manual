@@ -30,4 +30,4 @@ When a material is heated, then phase transformation starts at tmpsol and it is 
   
 RELATED TOPICS  
 ---  
-[Inter-Material Data]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }}) Keywords: [TMPLIQ]({{ '/docs/en/keyword_documentation/t/tmpliq/' | relative_url }}), [LATENT]({{ '/docs/en/keyword_documentation/l/latent/' | relative_url }}), [TRANS]({{ '/docs/en/keyword_documentation/t/trans/' | relative_url }})
+[Inter-Material Data]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }}) Keywords: [TMPLIQ]({{ '/docs/en/keyword_documentation/t/tmpliq/' | relative_url }}), [LATENT]({{ '/docs/en/keyword_documentation/l/latent/' | relative_url }}), [TRANS]({{ '/docs/en/keyword_documentation/t/trans/' | relative_url }})

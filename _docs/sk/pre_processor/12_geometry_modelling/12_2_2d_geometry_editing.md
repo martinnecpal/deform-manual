@@ -185,7 +185,7 @@ Okno definície mriežky
 
 **Záložka Geometria :** V záložke Geometria môžeme zadávať alebo upravovať geometrické entity. Geometrické entity možno zadávať dvoma spôsobmi, metódou Line-Arc a metódou XYR.
 
-**Metóda XYR** : Formát **XYR** ([DIEGEO]({{ '/docs/sk/Keyword_Documentation/D/DIEGEO/' | relative_url }})) pozostáva z definovania súradnice X, súradnice Y a polomeru pre každý bod geometrie definujúci objekt. Nakreslí sa oblúk so zadaným polomerom spájajúci čiary, ktoré by sa pretínali v bode definovanom súradnicou X a Y. (Pozri obr. 12.2.20.)
+**Metóda XYR** : Formát **XYR** ([DIEGEO]({{ '/docs/sk/keyword_documentation/d/diegeo/' | relative_url }})) pozostáva z definovania súradnice X, súradnice Y a polomeru pre každý bod geometrie definujúci objekt. Nakreslí sa oblúk so zadaným polomerom spájajúci čiary, ktoré by sa pretínali v bode definovanom súradnicou X a Y. (Pozri obr. 12.2.20.)
 
   
 Tabuľka XYR sa zobrazí priamo v okne Geometria. Táto tabuľka umožňuje špecifikovať a/alebo upravovať geometriu objektu prostredníctvom množstva bodov vo formáte XYR. X a Y sú súradnice x a y bodu a R je polomer bodu (ak má definovať zakrivenú čiaru).
@@ -194,7 +194,7 @@ Tabuľka XYR sa zobrazí priamo v okne Geometria. Táto tabuľka umožňuje špe
 
 2D editor geometrie s typom XYR Geo
 
-**Metóda líniového oblúka :** Formát líniového oblúka ([DIEGEO]({{ '/docs/sk/Keyword_Documentation/D/DIEGEO/' | relative_url }})) je podobný formátu XYR v tom, že môže definovať oblúky, ale je viac orientovaný na entity. Formát XYR definuje spojovacie body a typ spojenia, ale formát Line-Arc definuje čiary a oblúky, ktoré tvoria objekt, nie spojenia. Hlavným dôvodom, prečo sa používa formát Line-Arc, je skutočnosť, že súbory IGES sú formátované v schéme Line-Arc. (Pozri obr. 12.2.21.)
+**Metóda líniového oblúka :** Formát líniového oblúka ([DIEGEO]({{ '/docs/sk/keyword_documentation/d/diegeo/' | relative_url }})) je podobný formátu XYR v tom, že môže definovať oblúky, ale je viac orientovaný na entity. Formát XYR definuje spojovacie body a typ spojenia, ale formát Line-Arc definuje čiary a oblúky, ktoré tvoria objekt, nie spojenia. Hlavným dôvodom, prečo sa používa formát Line-Arc, je skutočnosť, že súbory IGES sú formátované v schéme Line-Arc. (Pozri obr. 12.2.21.)
 
 ![]({{ '/assets/images/pre-processor/12_geometry_modelling/12_2_2d_geometry_editing/12_2_image024.jpg' | relative_url }})
 

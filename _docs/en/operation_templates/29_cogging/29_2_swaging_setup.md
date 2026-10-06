@@ -85,15 +85,15 @@ Radial feed per bite: it is the distance that a die set moves per bite in radial
 
 ## Die Positioning Method
 
-  * ****[**0 - % (Percentage or fraction of billet length between 0 to 1)** :](29_1_cogging_setup.htm#Die_positioning_using_the_percentage_as_reference) Start or stop position is specified as a fraction of the billet length from the respective billet ends, taking cogging direction into consideration.
+  * ****[**0 - % (Percentage or fraction of billet length between 0 to 1)** :]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Die_positioning_using_the_percentage_as_reference) Start or stop position is specified as a fraction of the billet length from the respective billet ends, taking cogging direction into consideration.
 
-  * [**1 – ref (Reference points)**](29_1_cogging_setup.htm#Die_positioning_with_reference_point): Start or stop position is specified by picking two points on the billet, only the x coordinates are displayed in the table.
+  * [**1 – ref (Reference points)**]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Die_positioning_with_reference_point): Start or stop position is specified by picking two points on the billet, only the x coordinates are displayed in the table.
 
-  * [**2 – dst (Absolute distance from billet ends)**](29_1_cogging_setup.htm#Die_positioning_using_the_distance_as_reference): Start or stop position is specified by distance from respective billet ends, taking cogging direction into consideration.
+  * [**2 – dst (Absolute distance from billet ends)**]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Die_positioning_using_the_distance_as_reference): Start or stop position is specified by distance from respective billet ends, taking cogging direction into consideration.
 
-  * [**3 -ofst (Offset)**](29_1_cogging_setup.htm#DIe_positioning_using_Offset_as_reference): Start position is specified as a relative distance from previous die position.
+  * [**3 -ofst (Offset)**]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#DIe_positioning_using_Offset_as_reference): Start position is specified as a relative distance from previous die position.
 
-More details about die positioning methods are explained in Cogging Setup section for more information refer section [29.1.2.Die Positioning Method](29_1_cogging_setup.htm#29_1_2_Die_Positioning_Method)
+More details about die positioning methods are explained in Cogging Setup section for more information refer section [29.1.2.Die Positioning Method]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#29_1_2_Die_Positioning_Method)
 
 ## How to add Swaging operation
 
@@ -132,7 +132,7 @@ Swaging is usually a cold working process, it is also used in semi hot and hot r
 
   * **Hot - Calculate Temp in Billet and Dies** :In this process, we are able to calculate temp in billet, dies and manipulators. All objects should be meshed as we need to perform thermal calculations on billet, dies and manipulators. We will able to perform both Heat Transfer and Deformation operations.
 
-Heat transfer between the bites can also preformed by checking the Heat transfer per bite check box as shown in Fig. 29.2.2. More details about these operation cycles are explained in Cogging Setup section [Heat transfer per bite.](29_1_cogging_setup.htm#Heat_Transfer_Per_Bite)
+Heat transfer between the bites can also preformed by checking the Heat transfer per bite check box as shown in Fig. 29.2.2. More details about these operation cycles are explained in Cogging Setup section [Heat transfer per bite.]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Heat_Transfer_Per_Bite)
 
 **Object Setup**
 
@@ -146,7 +146,7 @@ Heat transfer between the bites can also preformed by checking the Heat transfer
 
   * **Use rotational symmetry** : By checking this checkbox, user will be able to define symmetry on the workpiece, see Fig. Using symmetry the simulation time can be reduced.
 
-  * **Reheating of the workpiece between passes** can be simulated by using the Use adaptive reheat check box in process window and defining the inputs. For its more details refer Cogging Setup section [Use Adaptive Reheat.](29_1_cogging_setup.htm#Use_Adaptive_Reheat)
+  * **Reheating of the workpiece between passes** can be simulated by using the Use adaptive reheat check box in process window and defining the inputs. For its more details refer Cogging Setup section [Use Adaptive Reheat.]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Use_Adaptive_Reheat)
 
 ## Pass table
 
@@ -174,7 +174,7 @@ Advanced Pass Information window
 
 **Shift between pairs of dies:**
 
-This option is applicable only when 4 dies are used and the amount of the deformation, i.e. forging stroke, is different for horizontal set of dies and vertical set of dies used in cogging. For more details refer [Shift between pairs of dies](29_1_cogging_setup.htm#Shift_between_pairs_of_dies) in section [Pass table.](29_1_cogging_setup.htm#29_1_6_Pass_Table)
+This option is applicable only when 4 dies are used and the amount of the deformation, i.e. forging stroke, is different for horizontal set of dies and vertical set of dies used in cogging. For more details refer [Shift between pairs of dies]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Shift_between_pairs_of_dies) in section [Pass table.]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#29_1_6_Pass_Table)
 
 ##  Material List
 
@@ -238,7 +238,7 @@ Unit Conversion window
 
 ## Object page
 
-Below Fig. 29.2.12. shows the object window information. This provides option to maintain the element size or shape when more deformation takes place as in cogging. Also to straighten the workpiece in case of bending after each bite or pass option provided. These are useful in case of cogging operation, for details about these options refer [29.1.8. Object window](29_1_cogging_setup.htm#29_1_8_Object_window)
+Below Fig. 29.2.12. shows the object window information. This provides option to maintain the element size or shape when more deformation takes place as in cogging. Also to straighten the workpiece in case of bending after each bite or pass option provided. These are useful in case of cogging operation, for details about these options refer [29.1.8. Object window]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#29_1_8_Object_window)
 
 ![]({{ '/assets/images/operation_templates/29_cogging/29_1_cogging_setup/image021.jpg' | relative_url }})
 
@@ -382,7 +382,7 @@ Top Die Geometry Primitive window
 For more information about geometry options please refer [12\. 3. 3D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
 **Mesh**  
-Mesh generation options for Dies are similar to that of the billet, for more information on Mesh generation please refer [Top Die Mesh](29_1_cogging_setup.htm#Top_Die_Mesh).
+Mesh generation options for Dies are similar to that of the billet, for more information on Mesh generation please refer [Top Die Mesh]({{ '/docs/en/operation_templates/29_cogging/29_1_cogging_setup/' | relative_url }}#Top_Die_Mesh).
 
 **Material**  
 Assigning material to dies is similar to that of billet. User can assign required material from the list or can import from file or library. User can also add new material. 

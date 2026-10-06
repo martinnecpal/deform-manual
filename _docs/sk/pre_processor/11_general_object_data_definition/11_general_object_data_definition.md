@@ -160,7 +160,7 @@ Vo všeobecnosti trvá dlhý čas riešenia, konvergenčné správanie je výraz
 
 S poréznymi objektmi sa zaobchádza rovnako ako s plastickými objektmi (stlačiteľné tuhé-viskoplastické materiály) s tým rozdielom, že hustota materiálu sa počíta a aktualizuje ako súčasť simulácie. Správanie materiálu sa modeluje podobne ako pri plastických objektoch, ale model zahŕňa do formulácie stlačiteľnosť materiálu. V stave plnej hustoty sa musí určiť medzná miera deformácie ([LMTSTR]({{ '/docs/sk/keyword_documentation/l/lmtstr/' | relative_url }})) a napätie pri prúdení ([FSTRES]({{ '/docs/sk/keyword_documentation/f/fstres/' | relative_url }})). Hustota materiálu sa špecifikuje pri každom prvku ([DENSTY]({{ '/docs/sk/keyword_documentation/d/densty/' | relative_url }})). Objekty s meniacou sa hustotou materiálu, ako sú napríklad materiály používané pri práškovom tvárnení, by sa mali modelovať ako porézne objekty. Jedinou iteračnou metódou, ktorá je v súčasnosti k dispozícii pre porézny materiál, je metóda priameho riešenia. Táto metóda nemá schopnosť rýchlej konvergencie, následne môže pórovitá simulácia trvať dlhšie ako porovnateľná plastická simulácia.
 
-Modely spekaných materiálov dostupné v systéme DEFORM nájdete na adrese [10.12.7. Sintering Driving Force Model.](../10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data.htm#10.12.7._Sintering_Driving_Force_model)
+Modely spekaných materiálov dostupné v systéme DEFORM nájdete na adrese [10.12.7. Sintering Driving Force Model.]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }}#10.12.7._Sintering_Driving_Force_model)
 
 Od verzie 14.0 môže používateľ modelovať pružné správanie poréznych materiálov výberom možnosti Elasto-plastic (Pružný a plastický) z možností typu Porézny objekt, ako je znázornené na obr. 11.4.
 
@@ -199,7 +199,7 @@ Nie je k dispozícii pre 2D rovinné napätie
 
 ### Definované používateľom [2D] [3D]
 
-Používateľ má možnosť prispôsobiť správanie materiálu. Používatelia môžu prispôsobiť správanie materiálu pomocou [usr_mat.f.](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_5_User_defined_material_models_\(USRMAT\)) definovaním jedinečného konštitutívneho modelu. Povolený je len jeden objekt s takouto definíciou, preto nie je potrebné odovzdávať žiadne číslo procedúry. Používatelia môžu modelovať elasto-plastické alebo tuho-plastické správanie a môžu vybrať príslušnú možnosť z možností typu objektu definovaného používateľom, ako je znázornené na obr. 11.5. , Elasto-plastic pre elasto-plastické a Plastic pre tuhoplastické. Pre používateľom definované elasto-plastické problémy sa navrhuje SP riešiteľ. Od verzie 12 táto implementácia nahrádza funkciu UMAT.DAT v predchádzajúcich verziách.
+Používateľ má možnosť prispôsobiť správanie materiálu. Používatelia môžu prispôsobiť správanie materiálu pomocou [usr_mat.f.]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#56_2_3_5_User_defined_material_models_\(USRMAT\)) definovaním jedinečného konštitutívneho modelu. Povolený je len jeden objekt s takouto definíciou, preto nie je potrebné odovzdávať žiadne číslo procedúry. Používatelia môžu modelovať elasto-plastické alebo tuho-plastické správanie a môžu vybrať príslušnú možnosť z možností typu objektu definovaného používateľom, ako je znázornené na obr. 11.5. , Elasto-plastic pre elasto-plastické a Plastic pre tuhoplastické. Pre používateľom definované elasto-plastické problémy sa navrhuje SP riešiteľ. Od verzie 12 táto implementácia nahrádza funkciu UMAT.DAT v predchádzajúcich verziách.
 
 ![]({{ '/assets/images/pre-processor/11_object_general_definition/11_image005.jpg' | relative_url }})
 
@@ -223,7 +223,7 @@ Prostredie Výber objektu typu Air(Electro-magnetic)
 
 ### Definované používateľom (plast) [2D] [3D]
 
-Používateľ má možnosť prispôsobiť správanie plastového materiálu. Používateľ môže prispôsobiť správanie materiálu pomocou [usr_mat.f.](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#User_Defined_\(Plastic\)) definovaním jedinečného konštitutívneho modelu. Povolený je len jeden objekt s takouto definíciou, preto nie je potrebné odovzdávať žiadne číslo procedúry. Tento typ objektu možno použiť na simuláciu tuhého plastického modelu materiálu. Od verzie 12 táto nová implementácia nahrádza funkciu UMAT.DAT v predchádzajúcich verziách. V aktuálnej verzii v12 DEFORM je pre problémy s elasto-plastickými objektmi definovanými používateľom navrhnutý riešiteľ SP.
+Používateľ má možnosť prispôsobiť správanie plastového materiálu. Používateľ môže prispôsobiť správanie materiálu pomocou [usr_mat.f.]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#User_Defined_\(Plastic\)) definovaním jedinečného konštitutívneho modelu. Povolený je len jeden objekt s takouto definíciou, preto nie je potrebné odovzdávať žiadne číslo procedúry. Tento typ objektu možno použiť na simuláciu tuhého plastického modelu materiálu. Od verzie 12 táto nová implementácia nahrádza funkciu UMAT.DAT v predchádzajúcich verziách. V aktuálnej verzii v12 DEFORM je pre problémy s elasto-plastickými objektmi definovanými používateľom navrhnutý riešiteľ SP.
 
 ## Primárna matrica (PDIE)
 
@@ -231,7 +231,7 @@ Primárna kocka ([PDIE]({{ '/docs/sk/keyword_documentation/p/pdie/' | relative_u
 Napríklad matrica pripevnená k baranu mechanického lisu sa označuje ako primárna matrica. Charakteristiky primárnej lisovacej formy možno použiť na riadenie rôznych aspektov simulácie vrátane:
 
   * Veľkosť časového kroku simulácie ([DSMAX]({{ '/docs/sk/keyword_documentation/d/dsmax/' | relative_url }}))
-  * Pohyb objektu ([MOVCTL](../../keyword_documentation/m/movctl_\(2d\).htm))
+  * Pohyb objektu ([MOVCTL]({{ '/docs/sk/keyword_documentation/m/movctl_(2d)/' | relative_url }}))
   * Kritériá ukončenia simulácie ([SMAX]({{ '/docs/sk/keyword_documentation/s/smax/' | relative_url }}), [VMIN]({{ '/docs/sk/keyword_documentation/v/vmin/' | relative_url }}) a [LMAX]({{ '/docs/sk/keyword_documentation/l/lmax/' | relative_url }}))
 
 Primárna matrica sa definuje pomocou zaškrtávacieho políčka (pozri obr. 11.3.). Ako primárnu kocku je možné definovať iba jeden objekt.

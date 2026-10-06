@@ -25,7 +25,7 @@ title: "37.1. Sprievodca 2D tepelným spracovaním"
 
   * Okrajová podmienka objektu
 
-  * [Object Properties](37_2_3d_heat_treatment_wizard.htm#Object_Property)
+  * [Object Properties]({{ '/docs/sk/operation_templates/37_heat_treatment/37_2_3d_heat_treatment_wizard/' | relative_url }}#Object_Property)
 
   * Inicializovať
 

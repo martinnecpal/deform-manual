@@ -159,7 +159,7 @@ Okno obrobku
 
 **Názov objektu**: Používateľ môže určiť názov pre všetky objekty dostupné v danej operácii.
 
-**Typ objektu******: Typ objektu ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. Ďalšie typy objektov sú vysvetlené v kapitole 11. Všeobecná definícia údajov o objektoch, podrobnosti nájdete v [11.4. Object Type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type).
+**Typ objektu******: Typ objektu ([OBJTYP]({{ '/docs/en/keyword_documentation/o/objtyp/' | relative_url }})) určuje, či a ako sa modeluje deformácia pre každý jednotlivý objekt v úlohe DEFORM. V operácii Forming Express sú k dispozícii len dva typy objektov, a to plastický a tuhý, ktoré sú automaticky preddefinované podľa čísla objektu, takže obrobok bude plastický a formy budú tuhé. Ďalšie typy objektov sú vysvetlené v kapitole 11. Všeobecná definícia údajov o objektoch, podrobnosti nájdete v [11.4. Object Type]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type).
 
   * **Plast**: Plastové objekty sa modelujú ako tuhé plastické alebo tuhé viskoplastické materiály v závislosti od vlastností materiálov. Model predpokladá, že napätie v materiáli lineárne rastie s rýchlosťou deformácie až do prahovej hodnoty rýchlosti deformácie, označovanej ako limitná rýchlosť deformácie ([LMTSTR]({{ '/docs/en/keyword_documentation/l/lmtstr/' | relative_url }})). Po prekročení medznej rýchlosti deformácie sa materiál deformuje plasticky. Plastické správanie materiálu objektu sa špecifikuje pomocou funkcie toku napätia materiálu alebo údajov o toku napätia ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})). V operácii Forming Express sa obrobok automaticky priradí k typu objektu „Plast“.
 
@@ -359,11 +359,11 @@ Pre obrobok bola nastavená okrajová podmienka symetrie
 
 Pre obrobok bola stanovená okrajová podmienka výmeny tepla s okolím
 
-BCC sú rozdelené do kategórií [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.](../../pre_processor/14_boundary_conditions).
+BCC sú rozdelené do kategórií [Deformation]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/14_boundary_conditions/14_3_thermal_boundary_conditions/' | relative_url }}), [Diffusion]({{ '/docs/en/pre_processor/14_boundary_conditions/14_4_diffusion_boundary_conditions/' | relative_url }}) a [Heating]({{ '/docs/en/pre_processor/14_boundary_conditions/14_5_heating_boundary_conditions/' | relative_url }}). Ďalšie informácie o týchto BCC nájdete v [14\. Boundary Conditions.]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}).
 
 ## Ovládanie pohybu
 
-Ovládacie prvky pohybu je možné aplikovať na tuhé objekty a hraničné uzly objektov s sieťou. Povrch vymedzený týmito uzlami možno považovať za „tuhý povrch“. Počas simulácie sa obmedzené uzly budú pohybovať synchronizovane rýchlosťou a smerom definovanými ovládacími prvkami pohybu. V operácii Forming express je k dispozícii iba typ posuvného pohybu, rotačný pohyb je k dispozícii v operácii Forming. Podrobnejšie informácie nájdete v [34.1.10. Movement Controls.](34_1_2d_forming_express_setup.htm#34_1_10_Movement_Controls).
+Ovládacie prvky pohybu je možné aplikovať na tuhé objekty a hraničné uzly objektov s sieťou. Povrch vymedzený týmito uzlami možno považovať za „tuhý povrch“. Počas simulácie sa obmedzené uzly budú pohybovať synchronizovane rýchlosťou a smerom definovanými ovládacími prvkami pohybu. V operácii Forming express je k dispozícii iba typ posuvného pohybu, rotačný pohyb je k dispozícii v operácii Forming. Podrobnejšie informácie nájdete v [34.1.10. Movement Controls.]({{ '/docs/sk/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}#34_1_10_Movement_Controls).
 
 **Translačný pohyb:**
 
@@ -375,7 +375,7 @@ V funkcii Forming Express je v rámci typu pohybu „Translation“ k dispozíci
 
 Okno na ovládanie translačného pohybu
 
-V dolnej časti okna na riadenie pohybov (pozri obr. 34.2.24.) môže používateľ importovať špecifikácie pohybov z iných súborov kľúčových slov alebo databázových súborov, načítať informácie o lise z knižnice, uložiť nastavenia pohybov do súboru alebo do knižnice pohybov, prezrieť si náhľad a odstrániť definíciu pohybu. Ďalšie informácie o všetkých pohyboch dostupných v programe Forming Express nájdete v referenčnom manuáli [ 34.1.10. Movement Controls.](34_1_2d_forming_express_setup.htm#34_1_10_Movement_Controls).
+V dolnej časti okna na riadenie pohybov (pozri obr. 34.2.24.) môže používateľ importovať špecifikácie pohybov z iných súborov kľúčových slov alebo databázových súborov, načítať informácie o lise z knižnice, uložiť nastavenia pohybov do súboru alebo do knižnice pohybov, prezrieť si náhľad a odstrániť definíciu pohybu. Ďalšie informácie o všetkých pohyboch dostupných v programe Forming Express nájdete v referenčnom manuáli [ 34.1.10. Movement Controls.]({{ '/docs/sk/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}#34_1_10_Movement_Controls).
 
 ## Polohovanie
 
@@ -400,7 +400,7 @@ Systém vždy aktualizuje zdvih podľa polohy objektu, pre ktorý je definovaný
 
 **Umiestňovanie objektov ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})**
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning), [Flip](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_6_Flip_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 34.2.26. Ďalšie informácie o týchto možnostiach nájdete v časti [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Offset]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning), [Flip]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_6_Flip_positioning) a [Rotational]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning), ako je znázornené na obr. 34.2.26. Ďalšie informácie o týchto možnostiach nájdete v časti [19.Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/34_forming_express/34_2_3d_forming_express_setup/image017.jpg' | relative_url }})
 
@@ -530,7 +530,7 @@ Parametre ukončenia určujú čas, po uplynutí ktorého sa simulácia ukončí
 
 Okno ovládacích prvkov zastavenia
 
-Ďalšie informácie o kontrolách zabraňujúcich deformácii nájdete v [34.1.15. Stopping Controls.](34_1_2d_forming_express_setup.htm#34_1_15_Stopping_controls)
+Ďalšie informácie o kontrolách zabraňujúcich deformácii nájdete v [34.1.15. Stopping Controls.]({{ '/docs/sk/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}#34_1_15_Stopping_controls)
 
 ## Ovládacie prvky simulácie
 
@@ -606,7 +606,7 @@ Po vytvorení databázy musí používateľ vybrať kartu „Režim simulácie M
 
 [34.1. 2D Forming Express Setup]({{ '/docs/en/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }})
 
-[Promote Forming Express to Forming operation](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations.htm#Fig._6.6.4.4._Forming_express_operation_after_promoting_it_to_forming_operation)
+[Promote Forming Express to Forming operation]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_6_operations_management/6_6_4_upgrading_operations/' | relative_url }}#Fig._6.6.4.4._Forming_express_operation_after_promoting_it_to_forming_operation)
 
 [6.2. MO Simulation layout]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 

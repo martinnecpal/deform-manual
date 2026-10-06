@@ -51,13 +51,13 @@ Vzhľadom na počet otáčok vrtáka potrebných na stanovenie charakteristické
 
 ## Pridanie vŕtacieho úkonu
 
-Na nastavenie procesu vŕtania musí používateľ pridať 3D šablónu rezania a na stránke „Proces“ vybrať možnosť „**Vŕtanie**“, ako je znázornené na obr. 39.4.1. Ďalšie informácie o tom, ako pridať úlohu, nájdete v [39.2.1. How to add 3D Cutting Operation](39_2_3d_turning.htm#39_2_1_How_to_add_3D_Cutting_Operation).
+Na nastavenie procesu vŕtania musí používateľ pridať 3D šablónu rezania a na stránke „Proces“ vybrať možnosť „**Vŕtanie**“, ako je znázornené na obr. 39.4.1. Ďalšie informácie o tom, ako pridať úlohu, nájdete v [39.2.1. How to add 3D Cutting Operation]({{ '/docs/sk/operation_templates/39_cutting/39_2_3d_turning/' | relative_url }}#39_2_1_How_to_add_3D_Cutting_Operation).
 
 ## Stránka procesu
 
 Parametre procesu potrebné na nastavenie procesu vŕtania sú uvedené na obr. 39.4.1.
 
-**Prenos tepla v prostredí:** Na tejto karte sa nastavujú teplota prostredia a koeficient konvekcie. Ďalšie informácie o nastavení týchto parametrov nájdete v dokumente [39.2.4. Turning Process](39_2_3d_turning.htm#39_2_4_Process_page).
+**Prenos tepla v prostredí:** Na tejto karte sa nastavujú teplota prostredia a koeficient konvekcie. Ďalšie informácie o nastavení týchto parametrov nájdete v dokumente [39.2.4. Turning Process]({{ '/docs/sk/operation_templates/39_cutting/39_2_3d_turning/' | relative_url }}#39_2_4_Process_page).
 
 **Rýchlosť rezania (v):** Je definovaná ako rýchlosť, ktorou sa nástroj pohybuje. Rýchlosť rezania sa môže uvádzať v jednotkách mm/s alebo m/min v systéme SI a v jednotkách in/s alebo ft/min v anglických jednotkách.
 

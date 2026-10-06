@@ -40,4 +40,4 @@ REMARKS
 The Permitivity is used in simulations of induction heating.  
 RELATED TOPICS  
 ---  
-Material Data: [Electromagnetic Data]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }}) Keywords: [ELRST]({{ '/docs/en/keyword_documentation/e/elrst/' | relative_url }}), [PMEAB]({{ '/docs/en/keyword_documentation/p/pmeab/' | relative_url }})
+Material Data: [Electromagnetic Data]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_Elec_Mag_Data/' | relative_url }}) Keywords: [ELRST]({{ '/docs/en/keyword_documentation/e/elrst/' | relative_url }}), [PMEAB]({{ '/docs/en/keyword_documentation/p/pmeab/' | relative_url }})

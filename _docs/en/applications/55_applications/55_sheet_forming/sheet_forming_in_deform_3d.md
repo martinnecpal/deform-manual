@@ -128,7 +128,7 @@ When modeling a sheet forming process in DEFORM-3D, the following setup is recom
 
   * Define the workpiece as an elasto-plastic (EP) object. The object may be defined as plastic if springback effects are not significant.
 
-  * If the EP brick meshed workpiece only has 1-2 layers of brick elements through the thickness, then use the “Assumed strain (brick mesh)” EP formulation. See the “[Assumed](../../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#Assumed_strain_Brick_Mesh) [ strain (Brick mesh)](../../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#Assumed_strain_Brick_Mesh)” description in the “General Object Data Definition” section of the manual for more information.
+  * If the EP brick meshed workpiece only has 1-2 layers of brick elements through the thickness, then use the “Assumed strain (brick mesh)” EP formulation. See the “[Assumed]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#Assumed_strain_Brick_Mesh) [ strain (Brick mesh)]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#Assumed_strain_Brick_Mesh)” description in the “General Object Data Definition” section of the manual for more information.
 
   * Turn on “Adaptive contact penetration control” in the “Simulation controls > Step increment” menu.
 

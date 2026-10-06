@@ -23,13 +23,13 @@ Buckling of cylindrical parts is a fully three dimensional process, and must be 
 
 **Related Topics:**
 
-[2D Geometry Types](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])
+[2D Geometry Types]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.2._Geometry_type_\(GEOTYP\)_\[2D\])
 
-[2D Plane Strain](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Plane_strain)
+[2D Plane Strain]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Plane_strain)
 
 [2D Geo Edit Tool]({{ '/docs/en/pre_processor/12_geometry_modelling/12_2_2d_geometry_editing/' | relative_url }})
 
-[3D Geo Tool Manual]({{ '/docs/en/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_editing_geo_tooll/' | relative_url }})
+[3D Geo Tool Manual]({{ '/docs/en/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_Editing_geo_toolL/' | relative_url }})
 
 [Lab 01 Geometry Manipulation]({{ '/docs/en/labs/basic_labs/2d_labs/lab_01_geometry_manipulation_and_uniform_mesh/' | relative_url }})
 

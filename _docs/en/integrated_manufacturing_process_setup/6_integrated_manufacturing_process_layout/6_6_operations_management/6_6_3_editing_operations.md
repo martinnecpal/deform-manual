@@ -35,7 +35,7 @@ For more details on property editor setting of typical forming operation refer t
 
 ![]({{ '/assets/icons/pre_icons/mo_step_list.jpg' | relative_url }}) : This will provide more detailed information of all saved steps like Simulation number, Mesh number, Time, Stroke of primary die, Dimension, Version number and Fold (for 3D). It also list the operations sequence on the left side window and provides more step selection option on right side window.
 
-For more information on step selection types and step list options refer the section [6.1.7 Step Editor.](../6_1_integrated_manufacturing_process_preprocessor_layout.htm#Step_Editor)
+For more information on step selection types and step list options refer the section [6.1.7 Step Editor.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Step_Editor)
 
 **Related Topics:**
 

@@ -32,7 +32,7 @@ HDNTIM specifies the relation between cooling time and the distance from the wat
   
 REMARKS  
 ---  
-Applicable [simulation types](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Microstructure Module.  
+Applicable [simulation types]({{ '/docs/sk/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\)): Microstructure Module.  
   
 RELATED TOPICS  
 ---  

@@ -24,7 +24,7 @@ Ovládacie prvky pohybu otáčania Nastavenia okna pre 2D uhlovú rýchlosť
 
 Nastavenia okna pre ovládanie rotačného pohybu pre 3D krútiaci moment a uhlovú rýchlosť
 
-Rotačný pohyb možno použiť na simuláciu valenia alebo akéhokoľvek typu pohybu, pri ktorom sa objekt otáča okolo pevnej osi. Rotational Motion možno použiť len na tuhé objekty. Rigidné objekty môžu mať súčasne pohyb [Rotational](15_movement_controls_settings.htm#15.1.2._Rotational_movement) aj [Translational](15_movement_controls_settings.htm#15.1.1._Translation_movement).
+Rotačný pohyb možno použiť na simuláciu valenia alebo akéhokoľvek typu pohybu, pri ktorom sa objekt otáča okolo pevnej osi. Rotational Motion možno použiť len na tuhé objekty. Rigidné objekty môžu mať súčasne pohyb [Rotational]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}#15.1.2._Rotational_movement) aj [Translational]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }}#15.1.1._Translation_movement).
 
 **Kontrolná metóda**
 

@@ -32,4 +32,4 @@ PHASLH is the latent heat that is produced when material 1 transforms into mater
   
 RELATED TOPICS  
 ---  
-[Inter-Material Data]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }}): [Heat/Volume](../../pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data.htm#Latent_heat_and_volume\(PHASLH\)) Keywords: [PHASVL]({{ '/docs/sk/keyword_documentation/p/phasvl/' | relative_url }})
+[Inter-Material Data]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }}): [Heat/Volume]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }}#Latent_heat_and_volume\(PHASLH\)) Keywords: [PHASVL]({{ '/docs/sk/keyword_documentation/p/phasvl/' | relative_url }})

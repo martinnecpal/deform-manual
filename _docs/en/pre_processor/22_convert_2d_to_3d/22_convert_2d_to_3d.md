@@ -71,7 +71,7 @@ The fast creation of 3D mesh from 2D mesh can be accomplished using the built in
 
 ![]({{ '/assets/icons/pre_icons/converter_2d_toggle_button.jpg' | relative_url }}) button can be used to toggle between 2D and 3D after converting.
 
-The user can create object with tetrahedron mesh using the [3D mesh windows](../13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.6._Mesh_density_windows) (See Fig. 22.4.) option and brick mesh using [2D mesh windows](../13_mesh_generation/13_3_3d_brick_mesh_generation.htm#Fig._13.3.6.Mesh_density_windows_for_2D) (See Fig. 22.5.) option with full control for meshing parameters including Weighting factors. 2D mesh density window (poly-line type) will be converted to polygon surface type of mesh density window during conversion. (See Fig. 22.6.)
+The user can create object with tetrahedron mesh using the [3D mesh windows]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.6._Mesh_density_windows) (See Fig. 22.4.) option and brick mesh using [2D mesh windows]({{ '/docs/en/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}#Fig._13.3.6.Mesh_density_windows_for_2D) (See Fig. 22.5.) option with full control for meshing parameters including Weighting factors. 2D mesh density window (poly-line type) will be converted to polygon surface type of mesh density window during conversion. (See Fig. 22.6.)
 
 ![]({{ '/assets/images/pre-processor/22_convert_2d_to_3d/image004.jpg' | relative_url }})
 
@@ -87,7 +87,7 @@ Mesh density window handling
 
 The user can use interpolation module directly from the built in conversion window to plot the stress, strain, temperature values.
 
-When the model is converted from 2D to 3D the [symmetry plane](../14_boundary_conditions/14_1_symmetry_boundary_conditions.htm#Fig._14.1.1_Symmetry_plane_BCC_for_quarter_symmetry_model), [BCC]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}) assignments and materials are assigned automatically to the respective objects. (See [Fig. 22.7.](22_convert_2d_to_3d.htm#Fig_22_7_Automated_symmetry_plane_assignment_to_die/workpiece_geometry_and_boundary_code_assignment_for_mesh))
+When the model is converted from 2D to 3D the [symmetry plane]({{ '/docs/en/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/' | relative_url }}#Fig._14.1.1_Symmetry_plane_BCC_for_quarter_symmetry_model), [BCC]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}) assignments and materials are assigned automatically to the respective objects. (See [Fig. 22.7.]({{ '/docs/en/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/' | relative_url }}#Fig_22_7_Automated_symmetry_plane_assignment_to_die/workpiece_geometry_and_boundary_code_assignment_for_mesh))
 
 ![]({{ '/assets/images/pre-processor/22_convert_2d_to_3d/image007.jpg' | relative_url }})
 

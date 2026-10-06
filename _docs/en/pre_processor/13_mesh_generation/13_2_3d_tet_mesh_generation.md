@@ -315,7 +315,7 @@ Remeshing Criteria (Autoremesh) is the most convenient way to handle the remeshi
 
 Remeshing Criteria settings window
 
-For details about Maximum interference depth (RMDPTH), Maximum stroke increment (RMSTRK), Maximum time increment (RMTIME), Maximum step increment (RMSTEP) and Purpose of Criteria please refer [13.1.8. Remeshing criteria](13_1_2d_mesh_generation.htm#13.1.8._Remeshing_criteria)
+For details about Maximum interference depth (RMDPTH), Maximum stroke increment (RMSTRK), Maximum time increment (RMTIME), Maximum step increment (RMSTEP) and Purpose of Criteria please refer [13.1.8. Remeshing criteria]({{ '/docs/en/pre_processor/13_mesh_generation/13_1_2d_mesh_generation/' | relative_url }}#13.1.8._Remeshing_criteria)
 
 **Penetration Distance**(**Absolute**) : If a positive number (in the unit of length) is entered, the program will conduct a check on each surface edge that has a contact node on each end. The distance from the middle of the edge to the die surface is calculated. If the maximum penetration depth exceeds the specified limit, remeshing will be triggered.
 

@@ -14,7 +14,7 @@ title: "16.4. Vlastnosti lomu"
 16.4.4 Deaktivácia lomového prvku
 
   
-V programe DEFORM možno modelovať tvárny lom deformujúceho sa obrobku. Ak je zapnutá funkcia lom, oddelenie materiálu sa bude modelovať pre všetky prvky, ktoré prekročia hodnotu kritického poškodenia zadanú na karte Vlastnosti materiálu ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Rôzne![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})[Fracture]({{ '/docs/sk/pre_processor/10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models/' | relative_url }}). Táto funkcia je užitočná pri modelovaní strihania a zaslepovania, obrábania, lomov deformovateľných montážnych spojovacích prvkov (popnitov) a iných aplikácií.
+V programe DEFORM možno modelovať tvárny lom deformujúceho sa obrobku. Ak je zapnutá funkcia lom, oddelenie materiálu sa bude modelovať pre všetky prvky, ktoré prekročia hodnotu kritického poškodenia zadanú na karte Vlastnosti materiálu ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Rôzne![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})[Fracture]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }}). Táto funkcia je užitočná pri modelovaní strihania a zaslepovania, obrábania, lomov deformovateľných montážnych spojovacích prvkov (popnitov) a iných aplikácií.
 
 **[2D]:****Vymazanie lomových prvkov** sa modeluje vymazaním všetkých prvkov, ktoré prekročia kritickú hodnotu poškodenia.
 
@@ -22,7 +22,7 @@ Preto by sa mala v každej oblasti, kde sa očakáva lom, použiť extrémne jem
 
 **Deaktivácia lomových prvkov** je nová metóda na štúdium šírenia trhlín. Tá deaktivuje prvok namiesto jeho vymazania, keď jeho poškodenie dosiahne kritickú hodnotu jeho materiálu (pozri obr. 16.4.2.).
 
-**[3D]** : Ak chcete aktivovať typ vymazania lomových prvkov, používateľ musí vybrať typ **Vymazanie lomového prvku** z rozbaľovacieho poľa Lom ([FRCNEL]({{ '/docs/sk/Keyword_Documentation/F/FRCNEL/' | relative_url }})) (pozri obr. 16.4.1.) Tým sa iniciuje vymazanie prvkov, ktorých hodnota lomu je väčšia ako kritická hodnota definovaná v modeloch lomu/poškodenia materiálu počas postupov remeshingu. Model poškodenia a faktor kritického poškodenia definovaný v údajoch o materiáli sú dôležité údaje potrebné na aktiváciu tejto funkcie. Prehľad lomov nájdete v časti [3D Fracture.]({{ '/docs/sk/Applications/55_Applications/55_Fracture/3D_Fracture/' | relative_url }})
+**[3D]** : Ak chcete aktivovať typ vymazania lomových prvkov, používateľ musí vybrať typ **Vymazanie lomového prvku** z rozbaľovacieho poľa Lom ([FRCNEL]({{ '/docs/sk/keyword_documentation/f/frcnel/' | relative_url }})) (pozri obr. 16.4.1.) Tým sa iniciuje vymazanie prvkov, ktorých hodnota lomu je väčšia ako kritická hodnota definovaná v modeloch lomu/poškodenia materiálu počas postupov remeshingu. Model poškodenia a faktor kritického poškodenia definovaný v údajoch o materiáli sú dôležité údaje potrebné na aktiváciu tejto funkcie. Prehľad lomov nájdete v časti [3D Fracture.]({{ '/docs/sk/applications/55_applications/55_fracture/3d_fracture/' | relative_url }})
 
 **Deaktivácia lomových prvkov** je nová metóda na štúdium šírenia trhlín. Tá deaktivuje prvok namiesto jeho vymazania, keď jeho poškodenie dosiahne kritickú hodnotu jeho materiálu (pozri obr. 16.4.2.).
 
@@ -34,15 +34,15 @@ Typ odstránenia zlomového prvku
 
 Typ deaktivácie lomového prvku
 
-## Zlomový krok ([FRCSTP]({{ '/docs/sk/Keyword_Documentation/F/FRCSTP/' | relative_url }})) [2D]
+## Zlomový krok ([FRCSTP]({{ '/docs/sk/keyword_documentation/f/frcstp/' | relative_url }})) [2D]
 
-Krok (**[FRCSTP]({{ '/docs/sk/Keyword_Documentation/F/FRCSTP/' | relative_url }}))** interval, v ktorom sa má simulácia zastaviť, aby sa vykonalo vymazanie prvku. Ak žiadny prvok nie je nad kritickou hodnotou poškodenia, žiadny sa nevymaže.
+Krok (**[FRCSTP]({{ '/docs/sk/keyword_documentation/f/frcstp/' | relative_url }}))** interval, v ktorom sa má simulácia zastaviť, aby sa vykonalo vymazanie prvku. Ak žiadny prvok nie je nad kritickou hodnotou poškodenia, žiadny sa nevymaže.
 
-## Odstránenie zlomových prvkov ([FRCNEL]({{ '/docs/sk/Keyword_Documentation/F/FRCNEL/' | relative_url }})) [2D]
+## Odstránenie zlomových prvkov ([FRCNEL]({{ '/docs/sk/keyword_documentation/f/frcnel/' | relative_url }})) [2D]
 
 Počet prvkov, ktoré musia byť nad kritickou hodnotou poškodenia, aby sa simulácia zastavila a vykonalo sa vymazanie prvkov. Typická hodnota je približne 4.
 
-## Odstránenie zlomového prvku ([FRCNEL]({{ '/docs/sk/Keyword_Documentation/F/FRCNEL/' | relative_url }})) [3D]
+## Odstránenie zlomového prvku ([FRCNEL]({{ '/docs/sk/keyword_documentation/f/frcnel/' | relative_url }})) [3D]
 
 Táto možnosť iniciuje odstránenie prvkov s hodnotou lomu vyššou ako kritická hodnota definovaná v modeloch lomu/poškodenia materiálu počas postupov remeshingu.
 
@@ -74,6 +74,6 @@ Deaktivácia lomových prvkov je nová metóda na štúdium šírenia trhlín. P
 
 [16.10. User]({{ '/docs/sk/pre_processor/16_object_properties/16_10_user/' | relative_url }})
 
-[Material Fracture/damage models]({{ '/docs/sk/pre_processor/10_Material_Data/10_12_Miscellaneous_Data/10_12_1_Fracture_Models/' | relative_url }})
+[Material Fracture/damage models]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_1_fracture_models/' | relative_url }})
 
-[Applications - 3D Fracture]({{ '/docs/sk/Applications/55_Applications/55_Fracture/3D_Fracture/' | relative_url }})
+[Applications - 3D Fracture]({{ '/docs/sk/applications/55_applications/55_fracture/3d_fracture/' | relative_url }})

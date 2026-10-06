@@ -95,7 +95,7 @@ For dual output (ELMNOD = 2) option, damage at the centroid of element and damag
 
 For integration point (ELMNOD = 3) option, damage values at four integration points in element are written.
 
-Applicable object types: [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic), Elastoplastic, and Porous.  
+Applicable object types: [Plastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic), Elastoplastic, and Porous.  
   
 RELATED TOPICS  
 ---  

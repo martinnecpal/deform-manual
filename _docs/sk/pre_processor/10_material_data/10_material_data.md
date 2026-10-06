@@ -26,8 +26,8 @@ Stránka Vlastnosti materiálu
   * Definícia údajov o dislokácii
   * [Grain Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/' | relative_url }})
   * [Hardness Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
-  * [Elec/ Mag Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }})
-  * [Transformation Definition]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }})
+  * [Elec/ Mag Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_Elec_Mag_Data/' | relative_url }})
+  * [Transformation Definition]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }})
   * Hrubšie definovanie údajov
   * Definícia údajov o textúre
   * [Miscellaneous Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }})
@@ -109,9 +109,9 @@ Súvisiace témy:
 
 [10.7. Hardness Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
 
-[10.8. Elec/ Mag Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }})
+[10.8. Elec/ Mag Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_8_elec_mag_data/10_8_Elec_Mag_Data/' | relative_url }})
 
-[10.9 Transformation Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }})
+[10.9 Transformation Data Definition]({{ '/docs/sk/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }})
 
 10.10. Definícia hrubých údajov
 

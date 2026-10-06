@@ -9,7 +9,7 @@ Vplyv gravitácie možno v riešení zohľadniť aktivovaním možnosti gravita�
 
 Odstredivá sila pôsobiaca na rotujúce teleso sa zohľadní, keď je aktivované políčko Odstredivá sila.
 
-Pri vykonávaní simulácií zahŕňajúcich silu telesa musí používateľ definovať hustotu hmotnosti (časť [10.3.4. Mass density](../10_Material_Data/10_3_Thermal_Data/10_3_Thermal_Data.htm#Mass_Density) )a použiť obmedzenia okrajových podmienok. Okrajové podmienky musia dostatočne zabrániť hrubému pohybu tuhého telesa dielu. Funkcia okrajovej podmienky voľnej deformácie (časť [14.2.1. Velocity BCC - Free distorsion BCC](../14_Boundary_Conditions/14_2_deformation_boundary_conditions.htm#Free_Distortion_BCC) ) je navrhnutá tak, aby v prípade potreby pomáhala používateľovi pri tejto úlohe.
+Pri vykonávaní simulácií zahŕňajúcich silu telesa musí používateľ definovať hustotu hmotnosti (časť [10.3.4. Mass density]({{ '/docs/sk/pre_processor/10_material_data/10_3_thermal_data/10_3_thermal_data/' | relative_url }}#Mass_Density) )a použiť obmedzenia okrajových podmienok. Okrajové podmienky musia dostatočne zabrániť hrubému pohybu tuhého telesa dielu. Funkcia okrajovej podmienky voľnej deformácie (časť [14.2.1. Velocity BCC - Free distorsion BCC]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}#Free_Distortion_BCC) ) je navrhnutá tak, aby v prípade potreby pomáhala používateľovi pri tejto úlohe.
 
 ![]({{ '/assets/images/pre-processor/16_object_properties/16_8_body_force/16_8_image001.jpg' | relative_url }})
 

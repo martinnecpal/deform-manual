@@ -32,4 +32,4 @@ The heating method may be specified as an electrical resistance heating, inducti
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Modes](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.4._Type_\(STYPE\))
+Simulation Controls: [Modes]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.4._Type_\(STYPE\))

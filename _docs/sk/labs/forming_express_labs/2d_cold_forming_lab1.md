@@ -97,7 +97,7 @@ Geometry page
 
 ### Workpiece Mesh
 
-The settings that we set in the [Objects Shape Complexity](../../operation_templates/34_forming_express/34_1_2d_forming_express_setup.htm#Shape_Complexity_and_Accuracy) determined the number of elements and the number of time steps that were to be used in the simulation.
+The settings that we set in the [Objects Shape Complexity]({{ '/docs/sk/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}#Shape_Complexity_and_Accuracy) determined the number of elements and the number of time steps that were to be used in the simulation.
 
 For this lab to run quickly, go ahead and change the number of elements to 1000 by selecting user defined radio button and click ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). A mesh with approximately 1000 elements should be displayed on the Workpiece in the Display window.
 
@@ -257,7 +257,7 @@ Primary die stroke
 
 ### Set stopping criteria
 
-We want to form the part until the punch and die are within 0.008” of one another. In the [Stopping Controls](../../pre_processor/9_simulation_controls/9_3_stopping_controls.htm#9.3.8._Stopping_distance_\(MDSOBJ\)) screen, place a check mark next to **Distance between objects** to activate this option. With the mouse, click a point on the bottom of the punch and then click a point on the top of the Die. An arrow between these two points should get displayed on the screen. Set the value for this distance to **0.008** ” in the **Y** direction as shown in Fig. 2DCFL1.20. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+We want to form the part until the punch and die are within 0.008” of one another. In the [Stopping Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}#9.3.8._Stopping_distance_\(MDSOBJ\)) screen, place a check mark next to **Distance between objects** to activate this option. With the mouse, click a point on the bottom of the punch and then click a point on the top of the Die. An arrow between these two points should get displayed on the screen. Set the value for this distance to **0.008** ” in the **Y** direction as shown in Fig. 2DCFL1.20. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0019.jpg' | relative_url }})
 

@@ -91,7 +91,7 @@ Different step selection types are available like, outline, brief, auto, all and
 
 ![]({{ '/assets/icons/pre_icons/mo_step_list.jpg' | relative_url }}) : This will provide more detailed information of all saved steps like Simulation number, Mesh number, Time, Stroke of primary die, Dimension, Version number and Fold (for 3D). It also list the operations sequence on the left side window and provides more step selection option on right side window.
 
-For more information of step selection types and step list options refer the [section 6.1.7 Step Editor](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Step_Editor).
+For more information of step selection types and step list options refer the [section 6.1.7 Step Editor]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Step_Editor).
 
 **Right Mouse button step browser options**
 
@@ -151,7 +151,7 @@ Operation information for 3D operation
 
 Graphics window displays the graphical representation of the objects. This will display state variables contours over objects, graphs, histograms, flownet and die fill (contact nodes). (See Fig. 6.3.1.)
 
-Right mouse click on the graphics window will provide few options to display the simulation information, set the viewport, measure dimension and change background theme. For more information about these options refer the [6.1.8. Graphics window RMB options.](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Graphics_window_RMB_options)
+Right mouse click on the graphics window will provide few options to display the simulation information, set the viewport, measure dimension and change background theme. For more information about these options refer the [6.1.8. Graphics window RMB options.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Graphics_window_RMB_options)
 
 ## Post Tools
 
@@ -224,7 +224,7 @@ User can select the object to be visible display in graphics window by left clic
 Output Tree
 
   
-**Operation tree tool bar options:** Using these options user can switch on or off the object, geometry, mesh, transparency, backface and contacts display. For detailed information refer the section [6.1.4. Operation Tree Tool Bar options](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Operation_Tree_Tool_bar_options) from [Chapter 6.1. Intergrated Manufacturing process (MO) Pre-processor Layout.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
+**Operation tree tool bar options:** Using these options user can switch on or off the object, geometry, mesh, transparency, backface and contacts display. For detailed information refer the section [6.1.4. Operation Tree Tool Bar options]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Operation_Tree_Tool_bar_options) from [Chapter 6.1. Intergrated Manufacturing process (MO) Pre-processor Layout.]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }})
 
 **Database tab:**
 
@@ -254,4 +254,4 @@ This list the number of DB's available in the current project folder, it will be
 
 [26.6.19. Animation controls and saving]({{ '/docs/en/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_19_animation_setup/' | relative_url }})
 
-[Operation Tree Tool Bar options](6_1_integrated_manufacturing_process_preprocessor_layout.htm#Operation_Tree_Tool_bar_options)
+[Operation Tree Tool Bar options]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_1_integrated_manufacturing_process_preprocessor_layout/' | relative_url }}#Operation_Tree_Tool_bar_options)

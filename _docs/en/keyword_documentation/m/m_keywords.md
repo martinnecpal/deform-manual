@@ -49,9 +49,9 @@ title: "M Keywords"
 
 [MORP (2D3D)]({{ '/docs/en/keyword_documentation/m/morp/' | relative_url }})
 
-[MOVCTL (2D)](movctl_\(2d\).htm)
+[MOVCTL (2D)]({{ '/docs/en/keyword_documentation/m/movctl_(2d)/' | relative_url }})
 
-[MOVCTL (3D)](movctl_\(3d\).htm)
+[MOVCTL (3D)]({{ '/docs/en/keyword_documentation/m/movctl_(3d)/' | relative_url }})
 
 [MSHSEC (2D3D)]({{ '/docs/en/keyword_documentation/m/mshsec/' | relative_url }})
 

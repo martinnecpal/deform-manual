@@ -45,7 +45,7 @@ title: "40.2. Deformácia pri 3D obrábaní"
 
 ## Ako pridať operáciu „3D deformácia pri obrábaní“
 
-Operáciu „3D Machining Distortion“ je možné nastaviť v prostredí Integrated Manufacturing Process, ku ktorému sa dostanete z hlavného okna grafického používateľského rozhrania (GUI). Operáciu „3D Machining Distortion“ je možné pridať v sprievodcovi MO na karte „Explorer“ kliknutím na tlačidlo vedľa položky „3D Machining Distortion“. Používateľ ju môže tiež pridať pomocou funkcie drag and drop do editora operácií, ako je znázornené na obrázku [Fig. 40.2.1.](40_1_2d_machining_distortion.htm#Fig_40_1_1_Adding_2D_Machining_Distortion_Operation_to_operation_editor).
+Operáciu „3D Machining Distortion“ je možné nastaviť v prostredí Integrated Manufacturing Process, ku ktorému sa dostanete z hlavného okna grafického používateľského rozhrania (GUI). Operáciu „3D Machining Distortion“ je možné pridať v sprievodcovi MO na karte „Explorer“ kliknutím na tlačidlo vedľa položky „3D Machining Distortion“. Používateľ ju môže tiež pridať pomocou funkcie drag and drop do editora operácií, ako je znázornené na obrázku [Fig. 40.2.1.]({{ '/docs/sk/operation_templates/40_machining_distortion/40_1_2d_machining_distortion/' | relative_url }}#Fig_40_1_1_Adding_2D_Machining_Distortion_Operation_to_operation_editor).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image001.jpg' | relative_url }})
 
@@ -91,7 +91,7 @@ Inicializovať okno
 
 ### Vstavaná sieť Flownet
 
-Pomocou možnosti „Vstavaný Flownet“ môže používateľ vygenerovať sieť Flownet pre daný objekt. Ak používateľ použije možnosť „Vstavaný Flownet“, sieť Flownet sa vykresľuje priebežne počas simulácie úlohy. Ďalšie informácie týkajúce sa možnosti „Vstavaný Flownet“ nájdete v [13.2.9. Built in Flownet.](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet).
+Pomocou možnosti „Vstavaný Flownet“ môže používateľ vygenerovať sieť Flownet pre daný objekt. Ak používateľ použije možnosť „Vstavaný Flownet“, sieť Flownet sa vykresľuje priebežne počas simulácie úlohy. Ďalšie informácie týkajúce sa možnosti „Vstavaný Flownet“ nájdete v [13.2.9. Built in Flownet.]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13_2_9_Built_In_Flownet).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image005.jpg' | relative_url }})
 
@@ -143,7 +143,7 @@ Okno na nastavenie polohy
 
 **Automatické polohovanie**![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}): Funkciu automatického polohovania používa používateľ na umiestnenie tuhých objektov voči obrobku. Táto možnosť sa osvedčuje pri troch objektoch v operácii tvarovania, avšak po použití automatického polohovania v režime „Machining Distortion“ musí používateľ skontrolovať polohu objektov.
 
-**Umiestňovanie objektov** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}): Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestňovania, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 40.2.12. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
+**Umiestňovanie objektov** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}): Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestňovania, ako napríklad [Drag]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Drop]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_5_Drop_positioning), [Offset]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning) a [Rotational]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning), ako je znázornené na obr. 40.2.12. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}).
 
 ![]({{ '/assets/images/operation_templates/40_machining_distortion/40_2_3d_machining_distortion/image008.jpg' | relative_url }})
 

@@ -48,9 +48,9 @@ The Poisson's ratio may be specified as a constant value or specified as a set o
   
 Applicable Simulation Modules: Deformation, Microstructure
 
-Applicable [Simulation Modes:](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\)) Deformation
+Applicable [Simulation Modes:]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\)) Deformation
 
-Applicable [object types](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type): Elastic, Elastoplastic  
+Applicable [object types]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type): Elastic, Elastoplastic  
   
 RELATED TOPICS  
 ---  

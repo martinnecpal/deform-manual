@@ -109,7 +109,7 @@ Máme ďalšie dve možnosti:
 
 **Vyberanie** : Pomocou možnosti výberu môže používateľ vybrať prvky na inicializáciu hodnoty.
 
-V súvislosti s možnosťami výberu pozri 14. Hraničné podmienky [Picking options for 2D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_2D) a [Picking options for 3D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_3D).
+V súvislosti s možnosťami výberu pozri 14. Hraničné podmienky [Picking options for 2D]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}#Picking_option_for_2D) a [Picking options for 3D]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}#Picking_option_for_3D).
 
 ## Karta Deformácia **[2D, 3D]**
 
@@ -119,7 +119,7 @@ V súvislosti s možnosťami výberu pozri 14. Hraničné podmienky [Picking opt
 
   * **Hustota (DENSTY)** : [DENSTY]({{ '/docs/sk/keyword_documentation/d/densty/' | relative_url }}) udáva relatívnu hustotu materiálu v každom prvku. [DENSTY]({{ '/docs/sk/keyword_documentation/d/densty/' | relative_url }})sa používa, keď sa simuluje porézny materiál s relatívnou hustotou menšou ako 1,0. Ak nie je pre hustotu zadaná žiadna hodnota, predpokladá sa, že je 1,0. Napätie pri prúdení poréznych objektov by sa malo špecifikovať pre úplne hustý materiál.
 
-  * **Eff. Napätie** **(STRAIN)** : [STRAIN]({{ '/docs/sk/keyword_documentation/s/strain/' | relative_url }}) udáva hodnotu celkovej efektívnej deformácie v strede každého prvku. Deformácie prvkov sa interpolujú medzi sieťami počas postupov remeshingu. Keď používateľ vyberie "Integračný" typ výstupu Element/Nodal pre Strain v rámci Simulation controls![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Advanced options ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) [Advanced output](../9_simulation_controls/9_7_advanced_options.htm#9.7.4._Output_Control), pre objekt Brick mesh môžeme pozorovať 8 hodnôt integračných výstupov pre každý prvok, ako je znázornené na obr. 17.2.5. Používateľ môže tiež inititizovať hodnoty pre jednotlivé integračné body. Dokonca aj pre varianty stavu poškodenia a napätia je k dispozícii možnosť výstupu typu "Integrácia" Element/Nodal.
+  * **Eff. Napätie** **(STRAIN)** : [STRAIN]({{ '/docs/sk/keyword_documentation/s/strain/' | relative_url }}) udáva hodnotu celkovej efektívnej deformácie v strede každého prvku. Deformácie prvkov sa interpolujú medzi sieťami počas postupov remeshingu. Keď používateľ vyberie "Integračný" typ výstupu Element/Nodal pre Strain v rámci Simulation controls![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Advanced options ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) [Advanced output]({{ '/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#9.7.4._Output_Control), pre objekt Brick mesh môžeme pozorovať 8 hodnôt integračných výstupov pre každý prvok, ako je znázornené na obr. 17.2.5. Používateľ môže tiež inititizovať hodnoty pre jednotlivé integračné body. Dokonca aj pre varianty stavu poškodenia a napätia je k dispozícii možnosť výstupu typu "Integrácia" Element/Nodal.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_2_element_data_window/17_2_image005.jpg' | relative_url }})
 
@@ -150,7 +150,7 @@ Spätné napätie v dátovom okne prvku pre 3D
 **Záložka Komponenty ťahu**
 **[2D, 3D]** Určuje tenzor deformácie každého prvku objektu (pozri obr. 17.2.8).
 
-Ak chceme aktivovať výstup deformačnej zložky, musíme vybrať zaškrtávacie políčko Typ výstupu deformačnej zložky ako Plastická, Pružná, Creepová, Transformačná a tepelná volumetrická a Transformačná volumetrická v záložke Simulation control [Advanced output](../9_simulation_controls/9_7_advanced_options.htm#9.7.4._Output_Control).
+Ak chceme aktivovať výstup deformačnej zložky, musíme vybrať zaškrtávacie políčko Typ výstupu deformačnej zložky ako Plastická, Pružná, Creepová, Transformačná a tepelná volumetrická a Transformačná volumetrická v záložke Simulation control [Advanced output]({{ '/docs/sk/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#9.7.4._Output_Control).
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_2_element_data_window/17_2_image008.jpg' | relative_url }})
 
@@ -220,7 +220,7 @@ Okno s údajmi o premennej Transformácia fázy prvkov
 
 **[2D,3D]** Tu sa môžu inicializovať, definovať alebo skúmať údaje pre premenné používateľských prvkov ([USRELM]({{ '/docs/sk/keyword_documentation/u/usrelm/' | relative_url }})).
 
-Hodnoty premenných užívateľských prvkov možno definovať pomocou podprogramov jazyka FORTRAN. [Refer chapter 56 section USRUPD subroutines.](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_3_User_defined_node_and_element_value_\(USRUPD\)) Každá hodnota prvku môže akceptovať názov aj hodnotu. (Pozri obr. 17.2.13.) Takisto možno definovať nekonečný počet premenných. Štandardne sa definujú minimálne 2 premenné používateľských prvkov, používateľ ich však môže zvýšiť na ľubovoľne veľký počet. Používateľ musí byť opatrný, že veľký počet definovaných premenných môže viesť k veľkému databázovému súboru.
+Hodnoty premenných užívateľských prvkov možno definovať pomocou podprogramov jazyka FORTRAN. [Refer chapter 56 section USRUPD subroutines.]({{ '/docs/sk/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#56_2_3_3_User_defined_node_and_element_value_\(USRUPD\)) Každá hodnota prvku môže akceptovať názov aj hodnotu. (Pozri obr. 17.2.13.) Takisto možno definovať nekonečný počet premenných. Štandardne sa definujú minimálne 2 premenné používateľských prvkov, používateľ ich však môže zvýšiť na ľubovoľne veľký počet. Používateľ musí byť opatrný, že veľký počet definovaných premenných môže viesť k veľkému databázovému súboru.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_2_element_data_window/17_2_image013.jpg' | relative_url }})
 
@@ -236,7 +236,7 @@ Okno s údajmi o termomechanických premenných prvkov
 
 ## Karta aditívnej výroby
 
-**[3D]** V záložke Aditívna výroba ([LAYRID]({{ '/docs/sk/keyword_documentation/l/layrid/' | relative_url }})) môže používateľ definovať ID vrstvy pre narezané vrstvy objektu, ktoré sa používajú pre proces aditívnej výroby (pozri obr. 17.2.15.). Aj po vykonaní [Slice Layers](../18_object_manipulation_tools/18_1_boolean.htm#Fig_18_1_8_Slice_layers_page) na stránke [Boolean]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }}) môže používateľ priradiť Layer ID (ID vrstvy) pre jednotlivé nakrájané vrstvy na stránke 3D Geometry Examine (Preskúmanie 3D geometrie).
+**[3D]** V záložke Aditívna výroba ([LAYRID]({{ '/docs/sk/keyword_documentation/l/layrid/' | relative_url }})) môže používateľ definovať ID vrstvy pre narezané vrstvy objektu, ktoré sa používajú pre proces aditívnej výroby (pozri obr. 17.2.15.). Aj po vykonaní [Slice Layers]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }}#Fig_18_1_8_Slice_layers_page) na stránke [Boolean]({{ '/docs/sk/pre_processor/18_object_manipulation_tools/18_1_boolean/' | relative_url }}) môže používateľ priradiť Layer ID (ID vrstvy) pre jednotlivé nakrájané vrstvy na stránke 3D Geometry Examine (Preskúmanie 3D geometrie).
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_2_element_data_window/17_2_image015.jpg' | relative_url }})
 

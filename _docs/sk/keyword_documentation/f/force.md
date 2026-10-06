@@ -31,4 +31,4 @@ This keyword saves the current force of objects in the DB step header, same as t
   
 RELATED TOPICS  
 ---  
-Related Keywords: [PDIE]({{ '/docs/sk/keyword_documentation/p/pdie/' | relative_url }}), [MOVCTL (2D)](../m/movctl_\(2d\).htm), [MOVCTL (3D)](../m/movctl_\(3d\).htm)
+Related Keywords: [PDIE]({{ '/docs/sk/keyword_documentation/p/pdie/' | relative_url }}), [MOVCTL (2D)]({{ '/docs/sk/keyword_documentation/m/movctl_(2d)/' | relative_url }}), [MOVCTL (3D)]({{ '/docs/sk/keyword_documentation/m/movctl_(3d)/' | relative_url }})

@@ -309,7 +309,7 @@ Memory options under Environment Settings window
 
   * Icon/Font:
 
-The user can change the icon and font size depending on the requirement as shown in the [Fig. 8.29.](8_pre-processor_layout.htm#Fig._8.29._Icon/Font_options_under_Environment_Settings_window)
+The user can change the icon and font size depending on the requirement as shown in the [Fig. 8.29.]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#Fig._8.29._Icon/Font_options_under_Environment_Settings_window)
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image033.jpg' | relative_url }})
 
@@ -477,7 +477,7 @@ Operation tree Geometry RMB options; (a) For 2D (b) For 3D
 
 ###  Right Mouse Button Display Options
 
-[2D, 3D]: Right mouse click in display window of pre processor a menu option appears as shown in Fig. 8.44. This option provides a short cut for graphic utilities, object control bar, display modification settings in pre processor. Depending upon the window the RMB options will change. 
+\[2D, 3D]: Right mouse click in display window of pre processor a menu option appears as shown in Fig. 8.44. This option provides a short cut for graphic utilities, object control bar, display modification settings in pre processor. Depending upon the window the RMB options will change. 
 
 ![]({{ '/assets/images/pre-processor/8_pre_processor_layout/8_image009.jpg' | relative_url }}) ![]({{ '/assets/images/pre-processor/8_pre_processor_layout/8_image010.jpg' | relative_url }})
 
@@ -518,7 +518,7 @@ Auto fit option
 
 Object display mode
 
-  * **Contact display :** Using this user can turn on/off the inter-object contact nodes display. (See [Fig. 8.47.](8_pre-processor_layout.htm#Fig._8.47._Contact_display_turn_on/off_options))
+  * **Contact display :** Using this user can turn on/off the inter-object contact nodes display. (See [Fig. 8.47.]({{ '/docs/en/pre_processor/8_pre_processor_layout/8_pre-processor_layout/' | relative_url }}#Fig._8.47._Contact_display_turn_on/off_options))
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_1_integrated_manufacturing_process_preprocessor_layout/6_1_image052.jpg' | relative_url }})
 

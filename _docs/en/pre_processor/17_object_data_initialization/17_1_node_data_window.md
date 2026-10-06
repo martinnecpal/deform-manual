@@ -67,7 +67,7 @@ title: "17.1. Node Data Window"
 
 17.1.9. Additive Manufacturing Tab
 
-[**2D,3D**]: The node data window displays all available information about nodes. All information can be modified and many of the variables can be plotted as shown in Fig. 17.1.1. and Fig. 17.1.2.
+\[**2D,3D**]: The node data window displays all available information about nodes. All information can be modified and many of the variables can be plotted as shown in Fig. 17.1.1. and Fig. 17.1.2.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image001.jpg' | relative_url }})
 
@@ -120,7 +120,7 @@ We have another two options:
 
 **Picking** : Using picking option user can select the nodes to initialize the value. 
 
-Related to picking options refer 14. Boundary Condition [Picking options for 2D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_2D) and [Picking options for 3D](../14_boundary_conditions/14_boundary_conditions.htm#Picking_option_for_3D).
+Related to picking options refer 14. Boundary Condition [Picking options for 2D]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}#Picking_option_for_2D) and [Picking options for 3D]({{ '/docs/en/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}#Picking_option_for_3D).
 
 **Assign method** : ****
 
@@ -162,7 +162,7 @@ The code values are:
 
 **Note** :
 
-To activate Strain(Nodal), Damage(Nodal) and Stress (nodal) data, we have to activate Damage Element+Node output radio button, Strain Element+Node output radio button and Stress Element+Node output radio button under Simulation control [Advanced output](../9_simulation_controls/9_7_advanced_options.htm#9.7.4._Output_Control) tab.
+To activate Strain(Nodal), Damage(Nodal) and Stress (nodal) data, we have to activate Damage Element+Node output radio button, Strain Element+Node output radio button and Stress Element+Node output radio button under Simulation control [Advanced output]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#9.7.4._Output_Control) tab.
 
   
 ******Stress(Nodal) Tab**  
@@ -236,7 +236,7 @@ Nodal Electric Heating data window
 
 **[2D,3D]** The data for User node variables ([USRNOD]({{ '/docs/en/keyword_documentation/u/usrnod/' | relative_url }})) can be initialized, defined or examined here.
 
-User node variable values can be defined using FORTRAN subroutines. Refer to a [Chapter 56 section USRUPD subroutines](../../user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines.htm#56_2_3_3_User_defined_node_and_element_value_\(USRUPD\)). Each node value may accept both a name and a value (See Fig. 17.1.11.). Also, an infinite number of variables may be defined. A minimum of 2 user node variables will be defined by default, however, the user may increase this to as large number as wished. User needs to be cautious that a large number of variables defined can lead to a large database file.
+User node variable values can be defined using FORTRAN subroutines. Refer to a [Chapter 56 section USRUPD subroutines]({{ '/docs/en/user_routines/56_user_routines_in_deform/56_2_2d_user_defined_fem_routines/' | relative_url }}#56_2_3_3_User_defined_node_and_element_value_\(USRUPD\)). Each node value may accept both a name and a value (See Fig. 17.1.11.). Also, an infinite number of variables may be defined. A minimum of 2 user node variables will be defined by default, however, the user may increase this to as large number as wished. User needs to be cautious that a large number of variables defined can lead to a large database file.
 
 ![]({{ '/assets/images/pre-processor/17_object_data_initialize/17_1_node_data_window/17_1_image011.jpg' | relative_url }})
 

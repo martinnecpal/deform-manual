@@ -29,7 +29,7 @@ title: "A_Keywords"
 
 [AMVOXM]({{ '/docs/en/keyword_documentation/a/amvoxm/' | relative_url }})
 
-[ANGMO2 (3D)](angmo2_\(3d\).htm)
+[ANGMO2 (3D)]({{ '/docs/en/keyword_documentation/a/angmo2_(3d)/' | relative_url }})
 
 [ANGMOV]({{ '/docs/en/keyword_documentation/a/angmov/' | relative_url }})
 

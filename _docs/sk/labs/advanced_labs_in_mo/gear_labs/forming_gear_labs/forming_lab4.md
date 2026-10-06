@@ -144,7 +144,7 @@ Rotation center: User-defined (0,0,0)
 
 Angle: 90 deg.
 
-We want to rotate both dies together, so go to the **Coupled** tab, and check Bottom Die. This will couple any positioning that is done (See [Fig. L3.9.](forming_lab3.htm#Fig_L3_9_Positioning_Top_die_with_Coupled_Bottom_object)). Click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) to rotate the tools to be aligned with the workpiece.
+We want to rotate both dies together, so go to the **Coupled** tab, and check Bottom Die. This will couple any positioning that is done (See [Fig. L3.9.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab3/' | relative_url }}#Fig_L3_9_Positioning_Top_die_with_Coupled_Bottom_object)). Click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) to rotate the tools to be aligned with the workpiece.
 
 Now the tools and workpiece are all aligned along the Z axis, but the tools are too close together. The next step is to move the Top Die into an "up" position away from the workpiece. 
 
@@ -211,7 +211,7 @@ Click on the MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' |
 3D simulations can be made to run faster by taking advantage of multiple processors or multiple cores on one processor. If your computer processors has 4 cores, then Click the ![]({{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}) label.
 
 set the Simulation Mode to **Interactive** and select **Continue****Run**  
-specify the Processors Per Job as **4.** Then click on ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) button and then **![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}). (See[ Fig. L3.13.](forming_lab3.htm#Fig_L3_13_Run_option_window)).**
+specify the Processors Per Job as **4.** Then click on ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) button and then **![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}). (See[ Fig. L3.13.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab3/' | relative_url }}#Fig_L3_13_Run_option_window)).**
 
 As the simulation is running, click the Temperature ![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}) button to view temperatures in the graphics window. It is helpful to use Multi object mode ![]({{ '/assets/icons/pre_icons/mo_show_multi_obj_icon.jpg' | relative_url }}) to make the dies transparent. 
 

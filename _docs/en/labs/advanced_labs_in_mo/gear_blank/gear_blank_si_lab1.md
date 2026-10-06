@@ -9,13 +9,13 @@ title: "Gear Blank SI Lab 1"
 
 On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in [Fig. L1.1.](gear_blank_si_lab1.htm#Fig_L1_1_New_Problem_setup_window) Select " **Integrated Manufacturing Process** " radio button and Unit system as "**SI** " using radio button. Define Problem Name as "**Gear** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in [Fig. L1.1.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_1_New_Problem_setup_window) Select " **Integrated Manufacturing Process** " radio button and Unit system as "**SI** " using radio button. Define Problem Name as "**Gear** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image014.jpg' | relative_url }})
 
 New Problem setup window
 
-Multiple operation wizard will open with the New Project dialog, At this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘******Gear** ** **’ as the project name and confirm that First operation check box is unchecked as we will add operation later and use the default (home) directory as shown in [Fig. L1.2.](gear_blank_si_lab1.htm#Fig_L1_2_MO_New_Project_window) Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to continue to open new project. This lab will be referenced in future labs so it is important to use the name above.
+Multiple operation wizard will open with the New Project dialog, At this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘******Gear** ** **’ as the project name and confirm that First operation check box is unchecked as we will add operation later and use the default (home) directory as shown in [Fig. L1.2.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_2_MO_New_Project_window) Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to continue to open new project. This lab will be referenced in future labs so it is important to use the name above.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0002.jpg' | relative_url }})
 
@@ -23,13 +23,13 @@ MO New Project window
 
 ### Open Preprocessor
 
-Add the 2D Forming operation as first operation from Explorer tab as shown in [Fig. L1.3.](gear_blank_si_lab1.htm#Fig_L1_3_Adding_2D_Forming_operation_from_operation_explorer)
+Add the 2D Forming operation as first operation from Explorer tab as shown in [Fig. L1.3.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_3_Adding_2D_Forming_operation_from_operation_explorer)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0003.jpg' | relative_url }})
 
 Adding 2D Forming operation from operation explorer
 
-Change the default operation title to "**upset** " from Forming by selecting the title in the operation editor as shown in [Fig. L1.4.](gear_blank_si_lab1.htm#Fig_L1_4_Renaming_operation_title_to_upset) and press Enter keyboard button.
+Change the default operation title to "**upset** " from Forming by selecting the title in the operation editor as shown in [Fig. L1.4.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_4_Renaming_operation_title_to_upset) and press Enter keyboard button.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0004.jpg' | relative_url }})
 
@@ -39,7 +39,7 @@ Renaming operation title to upset
 
 Confirm the geometry type selected is **Axi-symmetric** in Geometry type page, then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-In this lab we will be showing how to setup simple Isothermal problem, so in Simulation controls page, **uncheck** the **Heat****transfer****mode** check box (see [Fig. L1.5](gear_blank_si_lab1.htm#Fig_L1_5_Simulation_control_window).). then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+In this lab we will be showing how to setup simple Isothermal problem, so in Simulation controls page, **uncheck** the **Heat****transfer****mode** check box (see [Fig. L1.5]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_5_Simulation_control_window).). then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0005.jpg' | relative_url }})
 
@@ -49,7 +49,7 @@ Select the **Material List** in operation tree to load the material from library
 
 ### Add material from Library
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button as shown in [Fig. L1.6.](gear_blank_si_lab1.htm#Fig_L1_6_Loading_material_from_library) Select the **Steel_at_Extended_Temperatures** category, then **AISI-8620[1550-2200F(850 -1200C)]** and click the ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button.
+Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button as shown in [Fig. L1.6.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_6_Loading_material_from_library) Select the **Steel_at_Extended_Temperatures** category, then **AISI-8620[1550-2200F(850 -1200C)]** and click the ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0006.jpg' | relative_url }})
 
@@ -59,7 +59,7 @@ Material is loaded to material list, click ![]({{ '/assets/icons/pre_icons/mo_ne
 
 ### Set number of Objects
 
-The forging operation to be simulated requires a workpiece and a top and bottom die. If there aren't already three objects, add the three objects by clicking the insert object button ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}). Object window looks as shown in [Fig. L1.7.](gear_blank_si_lab1.htm#Fig_L1_7_Objects_window_to_Add_or_Delete_the_objects) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+The forging operation to be simulated requires a workpiece and a top and bottom die. If there aren't already three objects, add the three objects by clicking the insert object button ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}). Object window looks as shown in [Fig. L1.7.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_7_Objects_window_to_Add_or_Delete_the_objects) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0007.jpg' | relative_url }})
 
@@ -82,7 +82,7 @@ _**Icon**_ |  _**Function**_ |  _**Description**_
   
 ### Define Workpiece general object data
 
-Accept the default object name **Workpiece**. Assign the temperature as **1232.22** °C and confirm the object type selected is **plastic**(see [Fig. L1.8.](gear_blank_si_lab1.htm#Fig_L1_8_Workpiece_object_window)). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Accept the default object name **Workpiece**. Assign the temperature as **1232.22** °C and confirm the object type selected is **plastic**(see [Fig. L1.8.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_8_Workpiece_object_window)). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0008.jpg' | relative_url }})
 
@@ -94,7 +94,7 @@ The Import Object button on the General tab is for importing data from a differe
 
 ### Create workpiece geometry from primitive
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) button to create a geometry within DEFORM. Select cylinder type. The workpiece diameter is 127.00mm, so you will define a width of half the diameter or 63.5mm. The length is 207.01mm, with corner radii of 2.54mm. Enter a **radius** of **63.5** , a **Height** of **207.01** , **R1** & **R2** of **2.54** (see [Fig. L1.9.](gear_blank_si_lab1.htm#Fig_L1_9_2D_axi-symmetric_geometry_primitive_window)). Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button and then observe the geometry in graphics window.
+Click on the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) button to create a geometry within DEFORM. Select cylinder type. The workpiece diameter is 127.00mm, so you will define a width of half the diameter or 63.5mm. The length is 207.01mm, with corner radii of 2.54mm. Enter a **radius** of **63.5** , a **Height** of **207.01** , **R1** & **R2** of **2.54** (see [Fig. L1.9.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_9_2D_axi-symmetric_geometry_primitive_window)). Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button and then observe the geometry in graphics window.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0009.jpg' | relative_url }})
 
@@ -127,7 +127,7 @@ Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) 
 
 ### Generate Mesh for workpiece
 
-The default Target number of elements is **1000**. Accept the default number of elements and click the ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button to generate the mesh for workpiece as shown in [Fig. L1.10.](gear_blank_si_lab1.htm#Fig_L1_10_Mesh_generation_window) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to assign material for workpiece.
+The default Target number of elements is **1000**. Accept the default number of elements and click the ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button to generate the mesh for workpiece as shown in [Fig. L1.10.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_10_Mesh_generation_window) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to assign material for workpiece.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0010.jpg' | relative_url }})
 
@@ -135,7 +135,7 @@ Mesh generation window
 
 ### Assign Material to Workpiece
 
-Click on the **AISI-8620[1550-2200F(850 -1200C)]** in the material window to assign the material to the workpiece as shown in [Fig. L1.11.](gear_blank_si_lab1.htm#Fig_L1_11_Object_Material_Assigning_window) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to assign the workpiece boundary conditions.
+Click on the **AISI-8620[1550-2200F(850 -1200C)]** in the material window to assign the material to the workpiece as shown in [Fig. L1.11.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_11_Object_Material_Assigning_window) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to assign the workpiece boundary conditions.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0011.jpg' | relative_url }})
 
@@ -143,7 +143,7 @@ Object Material Assigning window
 
 ### Assign Workpiece boundary condition
 
-By default Velocity constraint **Vx=0** boundary conditions assigned along the centerline as the Geometry type selection is Axi-symmetric. Confirm that the velocity is set to zero and the X direction is selected by selecting the line “X, Fixed” that appears in the Boundary Conditions tree and observing the graphics window (see [Fig. L1.12.](gear_blank_si_lab1.htm#Fig_L1_12_Workpiece_Boundary_Conditions_window)).
+By default Velocity constraint **Vx=0** boundary conditions assigned along the centerline as the Geometry type selection is Axi-symmetric. Confirm that the velocity is set to zero and the X direction is selected by selecting the line “X, Fixed” that appears in the Boundary Conditions tree and observing the graphics window (see [Fig. L1.12.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_12_Workpiece_Boundary_Conditions_window)).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0012.jpg' | relative_url }})
 
@@ -155,7 +155,7 @@ Click on**Top die** in operation tree as there is no Movement, Property and Init
 
 ### Defining Top die general object data
 
-Keep the Top die default temperature as **20** °C and confirm the object type selected is **rigid** and selected as Primary die as shown in [Fig. L1.13.](gear_blank_si_lab1.htm#Fig_L1_13_Top_die_object_window) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to define the top die geometry.
+Keep the Top die default temperature as **20** °C and confirm the object type selected is **rigid** and selected as Primary die as shown in [Fig. L1.13.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_13_Top_die_object_window) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to define the top die geometry.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0013.jpg' | relative_url }})
 
@@ -165,25 +165,25 @@ Top die object window
 
 Import the top die geometry from an igs file. Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load geometry from library) button and open (import) the file “**Flat_dies_SI****.****igs** ”. This can also be imported using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button by browsing the geometry file path. The geometry for billet is located in DEFORM installation folder \2D\Labs directory.
 
-Because there is more than one geometry in this file, you will need to select ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) for popup informing this to open geometry automatically for editing the geometry. (See [Fig. L1.14.](gear_blank_si_lab1.htm#Fig_L1_14_Top_die_Geometry_window))
+Because there is more than one geometry in this file, you will need to select ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) for popup informing this to open geometry automatically for editing the geometry. (See [Fig. L1.14.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_14_Top_die_Geometry_window))
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0014.jpg' | relative_url }})
 
 Top die Geometry window
 
-Geometry editor will be opened, select the ![]({{ '/assets/icons/pre_icons/mo_xyr_button.jpg' | relative_url }}) button above the geometry table to activate all geometry editing tool bar options. Use ![]({{ '/assets/icons/pre_icons/mo_area select.jpg' | relative_url }}) (Area select) icon, draw a box around the lower geometry to select it and press **Delete** keyboard button to keep only upper geometry (see [Fig. L1.15.](gear_blank_si_lab1.htm#Fig_L1_15_Boundary_selection_from_Geometry_editor_for_top_die)). Selected geometry can also be deleted by selecting the boundary to delete using ![]({{ '/assets/icons/pre_icons/mo_delete_selected.jpg' | relative_url }}) (Select deleted) icon.
+Geometry editor will be opened, select the ![]({{ '/assets/icons/pre_icons/mo_xyr_button.jpg' | relative_url }}) button above the geometry table to activate all geometry editing tool bar options. Use ![]({{ '/assets/icons/pre_icons/mo_area select.jpg' | relative_url }}) (Area select) icon, draw a box around the lower geometry to select it and press **Delete** keyboard button to keep only upper geometry (see [Fig. L1.15.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_15_Boundary_selection_from_Geometry_editor_for_top_die)). Selected geometry can also be deleted by selecting the boundary to delete using ![]({{ '/assets/icons/pre_icons/mo_delete_selected.jpg' | relative_url }}) (Select deleted) icon.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0015.jpg' | relative_url }})
 
 Boundary selection from Geometry editor for top die
 
-It is necessary to visually check the geometry orientation on the part. Click on the ![]({{ '/assets/icons/pre_icons/mo_show_inside.jpg' | relative_url }}) (Show inside) icon from top geometry tool bar to show the geometry orientation as shown in [Fig. L1.16.](gear_blank_si_lab1.htm#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation) Also select ![]({{ '/assets/icons/pre_icons/mo_show_vertex_numbers_icon.jpg' | relative_url }}) (Show vertex numbers) icon to observe the direction of geometry boundary creation using numbering order of the geometry vertices, clockwise direction of creation will have the geometry orientation inside. The shading / arrows of geometry orientation should be towards inside of the part. If it is towards outside, use the ![]({{ '/assets/icons/pre_icons/mo_reverse_direction.jpg' | relative_url }}) (Reverse direction) icon and click on the geometry boundary to be reversed as shown in [Fig. L1.16.](gear_blank_si_lab1.htm#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation) Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the geometry editing.
+It is necessary to visually check the geometry orientation on the part. Click on the ![]({{ '/assets/icons/pre_icons/mo_show_inside.jpg' | relative_url }}) (Show inside) icon from top geometry tool bar to show the geometry orientation as shown in [Fig. L1.16.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation) Also select ![]({{ '/assets/icons/pre_icons/mo_show_vertex_numbers_icon.jpg' | relative_url }}) (Show vertex numbers) icon to observe the direction of geometry boundary creation using numbering order of the geometry vertices, clockwise direction of creation will have the geometry orientation inside. The shading / arrows of geometry orientation should be towards inside of the part. If it is towards outside, use the ![]({{ '/assets/icons/pre_icons/mo_reverse_direction.jpg' | relative_url }}) (Reverse direction) icon and click on the geometry boundary to be reversed as shown in [Fig. L1.16.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation) Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the geometry editing.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0016.jpg' | relative_url }})
 
 Reversing the direction of the geometry orientation
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button to open the Check and Correct Geometry menu. Change the **Geometry open/close/auto** type to Open and click the ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. You should receive a message that the geometry is legal as shown in [Fig. L1.17.](gear_blank_si_lab1.htm#Fig_L1_17_Check_and_correct_geometry_window_for_top_die_geometry) Click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) in poup and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit the menu.
+Click on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button to open the Check and Correct Geometry menu. Change the **Geometry open/close/auto** type to Open and click the ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. You should receive a message that the geometry is legal as shown in [Fig. L1.17.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_17_Check_and_correct_geometry_window_for_top_die_geometry) Click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) in poup and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit the menu.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0017.jpg' | relative_url }})
 
@@ -195,7 +195,7 @@ Click on **Movement** under Top die in operation tree as this is an isothermal s
 
 ### Assigning movement controls to top die
 
-The default mode is constant **speed**. Input a value of **76.2** mm/sec for the Constant value and confirm that the Direction is **-Y** as shown in [Fig. L1.18.](gear_blank_si_lab1.htm#Fig_L1_18_Top_die_movement_controls_window)
+The default mode is constant **speed**. Input a value of **76.2** mm/sec for the Constant value and confirm that the Direction is **-Y** as shown in [Fig. L1.18.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_18_Top_die_movement_controls_window)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0018.jpg' | relative_url }})
 
@@ -209,13 +209,13 @@ Keep the Bottom die default temperature **20** °C and confirm its object type i
 
 ### Creating bottom die geometry from geometry editor
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) button to define the bottom die geometry from geometry editor. Make sure XYR format is selected in geometry table. To define the geometry, enter the geometry points in table form as shown in [Fig. L1.19.](gear_blank_si_lab1.htm#Fig_L1_19_Bottom_die_geometry_table_with_geometry)
+Click on the ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) button to define the bottom die geometry from geometry editor. Make sure XYR format is selected in geometry table. To define the geometry, enter the geometry points in table form as shown in [Fig. L1.19.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_19_Bottom_die_geometry_table_with_geometry)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0019.jpg' | relative_url }})
 
 Bottom die geometry table with geometry
 
-These points will trace out the geometry in a counter clockwise fashion to ensure that the geometry orientation is on the inside of the geometry as shown in [Fig. L1.20.](gear_blank_si_lab1.htm#Fig_L1_20_Bottom_die_geometry_orientation)
+These points will trace out the geometry in a counter clockwise fashion to ensure that the geometry orientation is on the inside of the geometry as shown in [Fig. L1.20.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_20_Bottom_die_geometry_orientation)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0020.jpg' | relative_url }})
 
@@ -227,7 +227,7 @@ Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to c
 
 **Confirm position**
 
-The geometries should be in the correct position. Confirm that the workpiece is positioned on top of the bottom die and that the top die is positioned against the workpiece as shown in [Fig. L1.21.](gear_blank_si_lab1.htm#Fig_L1_21_Correct_objects_positioning) Further positioning is not required for this operation.
+The geometries should be in the correct position. Confirm that the workpiece is positioned on top of the bottom die and that the top die is positioned against the workpiece as shown in [Fig. L1.21.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_21_Correct_objects_positioning) Further positioning is not required for this operation.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0021.jpg' | relative_url }})
 
@@ -235,17 +235,17 @@ Correct objects positioning
 
 Click on the **Contact** in operation tree to open the Inter-Object window, as there is no need of Scheduled positioning for this operation.
 
-Note: Scheduled positioning is explained in [lab3](gear_blank_si_lab1.htm#Lab3_Sequential_3D_forge_operation).
+Note: Scheduled positioning is explained in [lab3]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Lab3_Sequential_3D_forge_operation).
 
 **Inter-Object Relationships: Assign Friction; Generate contact**
 
-DEFORM will automatically create default Master-Slave relationships using ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button create three relationships as shown in [Fig. L1.22.](gear_blank_si_lab1.htm#Fig_l1_22_Inter_object_window_and_Objects_with_inter-object_contacts_display) DEFORM will create three relationships. Two where each tool is the master and the workpiece is the slave. The third relationship will be a (Workpiece – Workpiece) relationship. This relationship will allow self contact of the workpiece if a fold develops.
+DEFORM will automatically create default Master-Slave relationships using ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button create three relationships as shown in [Fig. L1.22.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_l1_22_Inter_object_window_and_Objects_with_inter-object_contacts_display) DEFORM will create three relationships. Two where each tool is the master and the workpiece is the slave. The third relationship will be a (Workpiece – Workpiece) relationship. This relationship will allow self contact of the workpiece if a fold develops.
 
 Click on the ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button for one of the relationships. Under the Friction ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Value box, use the Constant drop down menu to select **Hot****forging****(lubricated)****0.3**. If you have experience that suggests that a different friction value would give better results for your process, you can enter that value directly in this field. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit the menu. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to apply the friction value to the two other relationships.
 
 Next, assign contact. Initial contact conditions provide a starting condition for the finite element solver. After the solver calculation starts, contact is automatically updated.
 
-The ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerance) button calculates tolerances for contact generation. Click the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerance) button followed by the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button (at bottom of the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See [Fig. L1.22.](gear_blank_si_lab1.htm#Fig_l1_22_Inter_object_window_and_Objects_with_inter-object_contacts_display) for how the Inter object window looks and contact generation is displayed in graphics window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to set primary die stroke stopping controls.
+The ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerance) button calculates tolerances for contact generation. Click the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerance) button followed by the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button (at bottom of the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See [Fig. L1.22.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_l1_22_Inter_object_window_and_Objects_with_inter-object_contacts_display) for how the Inter object window looks and contact generation is displayed in graphics window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to set primary die stroke stopping controls.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0022.jpg' | relative_url }})
 
@@ -253,7 +253,7 @@ Inter object window and Objects with inter-object contacts display
 
 ### Set Primary die stroke
 
-Input stopping criteria that will stop the simulation when the tool has moved 158.75 mm. Input **158.75** into the **Max die stroke** (Y direction) field as shown in [Fig. L1.23.](gear_blank_si_lab1.htm#Fig_L1_23_Primary_die_displacement_Max_die_stroke_stopping_controls) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue with assigning Step controls.
+Input stopping criteria that will stop the simulation when the tool has moved 158.75 mm. Input **158.75** into the **Max die stroke** (Y direction) field as shown in [Fig. L1.23.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_23_Primary_die_displacement_Max_die_stroke_stopping_controls) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue with assigning Step controls.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0023.jpg' | relative_url }})
 
@@ -269,13 +269,13 @@ DEFORM uses a two-step process to establish the total punch movement distance:
 
 On the **Simulation Steps** tab, the number of steps and save interval is defined. On the **Step Increment** tab, the time or tool movement per time step is defined. If no other stopping controls are defined, total simulation length will be approximately the **step increment** * **number of steps**.
 
-For this operation, the tool needs to move 158.75mm to produce the desired shape. For a simple upset like this, 75 steps should be sufficient. Change the **Number of Simulation Steps** to **75**. Change the**Step Increment to Save** to **5** as shown in [Fig. L1.24.](gear_blank_si_lab1.htm#Fig_L1_24_Advanced_Step_controls_Simulations_steps_tab)
+For this operation, the tool needs to move 158.75mm to produce the desired shape. For a simple upset like this, 75 steps should be sufficient. Change the **Number of Simulation Steps** to **75**. Change the**Step Increment to Save** to **5** as shown in [Fig. L1.24.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_24_Advanced_Step_controls_Simulations_steps_tab)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0024.jpg' | relative_url }})
 
 Advanced Step controls Simulations steps tab
 
-Next, go to**Step Increment**. The die displacement value is the total distance you want the tool to travel (158.75mm) divided by the number of steps (75). Use the With **Die Displacement** option to define a die displacement of **2.1166 mm** (158.75 / 75) as shown in [Fig. L1.25.](gear_blank_si_lab1.htm#Fig_L1_25_Advanced_Step_controls_Step_increment_tab)
+Next, go to**Step Increment**. The die displacement value is the total distance you want the tool to travel (158.75mm) divided by the number of steps (75). Use the With **Die Displacement** option to define a die displacement of **2.1166 mm** (158.75 / 75) as shown in [Fig. L1.25.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_25_Advanced_Step_controls_Step_increment_tab)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0025.jpg' | relative_url }})
 
@@ -291,7 +291,7 @@ On the **Stop** tab, optional specific stopping control can be specified, which 
 
 Stopping controls reflect the**Primary die displacement** (Y direction) field **158.75** mm defined in stopping controls window earlier in guided mode.
 
-Go to the **Remesh****Criteria** Tab. The Interference Depth value should be half of a small element edge length. Measure the length of one of the smaller elements, divide by 2 and place the value in the interference depth field (see [Fig. L1.26.](gear_blank_si_lab1.htm#Fig_L1_26_Advanced_Step_controls_Remesh_criteria_tab)). You should get a number around 0.5 mm. A remesh will be triggered if one of the tools is able to penetrate into the workpiece by a distance of **0.5** mm.
+Go to the **Remesh****Criteria** Tab. The Interference Depth value should be half of a small element edge length. Measure the length of one of the smaller elements, divide by 2 and place the value in the interference depth field (see [Fig. L1.26.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_26_Advanced_Step_controls_Remesh_criteria_tab)). You should get a number around 0.5 mm. A remesh will be triggered if one of the tools is able to penetrate into the workpiece by a distance of **0.5** mm.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0026.jpg' | relative_url }})
 
@@ -301,7 +301,7 @@ Now click on **Movement** under **Top** die in operation tree to check the top d
 
 ### Confirm Movement
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_preview_icon.jpg' | relative_url }}) (Preview object movement) button in the lower right hand corner of the screen (see [Fig. L1.18.](gear_blank_si_lab1.htm#Fig_L1_18_Top_die_movement_controls_window)). Click on the ![]({{ '/assets/icons/pre_icons/mo_movement_play_button.jpg' | relative_url }}) (play) button (see [Fig. L1.27.](gear_blank_si_lab1.htm#Fig_L1_27_Top_die_movement_preview_window)) and watch the top die move through the workpiece. This tool will confirm that your tool is moving in the correct direction and that you have enough steps to complete the stroke.
+Click on the ![]({{ '/assets/icons/pre_icons/mo_preview_icon.jpg' | relative_url }}) (Preview object movement) button in the lower right hand corner of the screen (see [Fig. L1.18.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_18_Top_die_movement_controls_window)). Click on the ![]({{ '/assets/icons/pre_icons/mo_movement_play_button.jpg' | relative_url }}) (play) button (see [Fig. L1.27.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_27_Top_die_movement_preview_window)) and watch the top die move through the workpiece. This tool will confirm that your tool is moving in the correct direction and that you have enough steps to complete the stroke.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0027.jpg' | relative_url }})
 
@@ -311,7 +311,7 @@ Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to e
 
 ### Data checking and database generation
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button as shown in [Fig. L1.28.](gear_blank_si_lab1.htm#Fig_L1_28_DB_generation_window) The data checking system will confirm that all of the data is appropriate for running a simulation.
+Click on the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button as shown in [Fig. L1.28.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_28_DB_generation_window) The data checking system will confirm that all of the data is appropriate for running a simulation.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0028.jpg' | relative_url }})
 
@@ -359,7 +359,7 @@ When the simulation is completed, click the ![]({{ '/assets/icons/pre_icons/mo_s
 
 The graphics window displays the results of the calculation.
 
-The saved steps are listed in a step browser at the bottom of the graphics window as shown in [Fig. L1.30.](gear_blank_si_lab1.htm#Fig_L1_30_Step_browser_for_upset_operation)
+The saved steps are listed in a step browser at the bottom of the graphics window as shown in [Fig. L1.30.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_30_Step_browser_for_upset_operation)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0030.jpg' | relative_url }})
 
@@ -385,7 +385,7 @@ Play through the simulation.
 
 _**Load – stroke plot**_
 
-Click the ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) (load-stroke) icon in the post tools. Plot the**Y load** vs. **Stroke** for the top die by selecting ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) button. The graph displays load at any point through the simulation (see [Fig. L1.31](gear_blank_si_lab1.htm#Fig_L1_31_Velocity_vector_plot_with_Load_stroke_graph_for_top_die).). The vertical step tracer bar indicates the current step. Clicking at any point on the load stroke plot (or any graph in DEFORM) will display the results at that step. The graph may be hidden or removed by right clicking on the graph item at the bottom of the tree.
+Click the ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) (load-stroke) icon in the post tools. Plot the**Y load** vs. **Stroke** for the top die by selecting ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) button. The graph displays load at any point through the simulation (see [Fig. L1.31]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_31_Velocity_vector_plot_with_Load_stroke_graph_for_top_die).). The vertical step tracer bar indicates the current step. Clicking at any point on the load stroke plot (or any graph in DEFORM) will display the results at that step. The graph may be hidden or removed by right clicking on the graph item at the bottom of the tree.
 
 Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit from Load stroke window to plot the state variables.
 
@@ -407,7 +407,7 @@ Play through the simulation and watch how strain evolves as the part forms. The 
 
 Select **Local** scaling and click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Play through the simulation. At each step, the state variables rescale to the maximum value at that step.
 
-Select **Solid****display** and click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). The contour borders become sharp edges (see [Fig. L1.32.](gear_blank_si_lab1.htm#Fig_L1_32_Effective_strain_state_variable_contour_at_local,_global_scale)).
+Select **Solid****display** and click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). The contour borders become sharp edges (see [Fig. L1.32.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }}#Fig_L1_32_Effective_strain_state_variable_contour_at_local,_global_scale)).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/image0032.jpg' | relative_url }})
 

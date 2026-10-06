@@ -29,4 +29,4 @@ Currently the incremental simulation type is the only simulation type available.
   
 RELATED TOPICS  
 ---  
-Simulation Controls: [Main Controls - Types](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#Fig._9.1.1._Main_Settings_window) Keywords: [SMODE]({{ '/docs/en/keyword_documentation/s/smode/' | relative_url }}), [TRANS]({{ '/docs/en/keyword_documentation/t/trans/' | relative_url }})
+Simulation Controls: [Main Controls - Types]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#Fig._9.1.1._Main_Settings_window) Keywords: [SMODE]({{ '/docs/en/keyword_documentation/s/smode/' | relative_url }}), [TRANS]({{ '/docs/en/keyword_documentation/t/trans/' | relative_url }})

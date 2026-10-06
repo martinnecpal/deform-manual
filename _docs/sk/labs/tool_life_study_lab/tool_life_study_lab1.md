@@ -17,7 +17,7 @@ title: "Tool Life Study Lab1"
 
 1.2.2.2. Bottom Die
 
-[1.2.3. SS Temperature/Wear](tool_life_study_lab1.htm#1_2_3_SS_Temperature/Wear)
+[1.2.3. SS Temperature/Wear]({{ '/docs/sk/labs/tool_life_study_lab/tool_life_study_lab1/' | relative_url }}#1_2_3_SS_Temperature/Wear)
 
 1.2.3.1. Data Extraction
 

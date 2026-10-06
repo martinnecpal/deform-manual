@@ -121,7 +121,7 @@ In material window, select **AISI-H-13** material as shown in Fig. 3DDSL2.6. and
 
 ###  Assigning Boundary Conditions
 
-Select the Symmetry plane boundary condition, and then add a boundary condition to each of the symmetry surfaces as shown in[ Fig. 3DDSL2.11.](3d_die_stress_study_across_multiple_operations.htm#Fig_3DDSL3_11_Interpolated_forces_onto_Punch_from_Billet) We will use Lower support object to prevent Bottom Die from flying off in Z direction. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Force interpolation page.
+Select the Symmetry plane boundary condition, and then add a boundary condition to each of the symmetry surfaces as shown in[ Fig. 3DDSL2.11.]({{ '/docs/sk/labs/die_stess_study_labs/3d_die_stress_study_across_multiple_operations/' | relative_url }}#Fig_3DDSL3_11_Interpolated_forces_onto_Punch_from_Billet) We will use Lower support object to prevent Bottom Die from flying off in Z direction. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Force interpolation page.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/3d_die_stress_study_lab2/image0010.jpg' | relative_url }})
 

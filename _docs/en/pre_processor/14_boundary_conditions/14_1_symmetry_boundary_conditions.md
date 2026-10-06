@@ -21,7 +21,7 @@ Rotational symmetry plane BCC for quarter symmetry model
 
 Rotational symmetry plane BCC assigned for quarter symmetry model
 
-User can also able to define planar symmetry and rotation symmetry surfaces from Geometry symmetry surfaces. For more information on symmetry surfaces please refer section 1[2.3.2. 3D Geometry Tools - Symmetry Planes](../12_Geometry_Modelling/12_3_3d_geometry_data_defining.htm#Symmetry_Planes) options.
+User can also able to define planar symmetry and rotation symmetry surfaces from Geometry symmetry surfaces. For more information on symmetry surfaces please refer section 1[2.3.2. 3D Geometry Tools - Symmetry Planes]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}#Symmetry_Planes) options.
 
 **Related Topics:**
 

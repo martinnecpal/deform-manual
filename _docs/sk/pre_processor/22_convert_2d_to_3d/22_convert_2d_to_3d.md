@@ -71,7 +71,7 @@ Tlačidlom ![]({{ '/assets/icons/pre_icons/converter_cancel_button.jpg' | relati
 
 Tlačidlom ![]({{ '/assets/icons/pre_icons/converter_2d_toggle_button.jpg' | relative_url }}) môžete po konverzii prepínať medzi 2D a 3D zobrazením.
 
-Používateľ môže vytvoriť objekt s tetrahedrálnou sieťou pomocou voľby [3D mesh windows](../13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13.2.6._Mesh_density_windows) (pozri obr. 22.4.) a s tehlovou sieťou pomocou voľby [2D mesh windows](../13_mesh_generation/13_3_3d_brick_mesh_generation.htm#Fig._13.3.6.Mesh_density_windows_for_2D) (pozri obr. 22.5.) s plnou kontrolou nad parametrami vytvárania siete vrátane váhových faktorov. Okno hustoty 2D siete (typ polylínia) sa počas konverzie zmení na okno hustoty siete typu polygónová plocha. (Pozri obr. 22.6.)
+Používateľ môže vytvoriť objekt s tetrahedrálnou sieťou pomocou voľby [3D mesh windows]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13.2.6._Mesh_density_windows) (pozri obr. 22.4.) a s tehlovou sieťou pomocou voľby [2D mesh windows]({{ '/docs/sk/pre_processor/13_mesh_generation/13_3_3d_brick_mesh_generation/' | relative_url }}#Fig._13.3.6.Mesh_density_windows_for_2D) (pozri obr. 22.5.) s plnou kontrolou nad parametrami vytvárania siete vrátane váhových faktorov. Okno hustoty 2D siete (typ polylínia) sa počas konverzie zmení na okno hustoty siete typu polygónová plocha. (Pozri obr. 22.6.)
 
 ![]({{ '/assets/images/pre-processor/22_convert_2d_to_3d/image004.jpg' | relative_url }})
 
@@ -87,7 +87,7 @@ Spracovanie okien s hustotou mriežky
 
 Používateľ môže využiť interpolačný modul priamo z integrovaného okna pre konverziu na zobrazenie hodnôt napätia, deformácie a teploty.
 
-Pri konverzii modelu z 2D do 3D sa priradenia [symmetry plane](../14_boundary_conditions/14_1_symmetry_boundary_conditions.htm#Fig._14.1.1_Symmetry_plane_BCC_for_quarter_symmetry_model) a [BCC]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}) spolu s materiálmi automaticky priradia k príslušným objektom. (Pozri [Fig. 22.7.](22_convert_2d_to_3d.htm#Fig_22_7_Automated_symmetry_plane_assignment_to_die/workpiece_geometry_and_boundary_code_assignment_for_mesh))
+Pri konverzii modelu z 2D do 3D sa priradenia [symmetry plane]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_1_symmetry_boundary_conditions/' | relative_url }}#Fig._14.1.1_Symmetry_plane_BCC_for_quarter_symmetry_model) a [BCC]({{ '/docs/sk/pre_processor/14_boundary_conditions/14_boundary_conditions/' | relative_url }}) spolu s materiálmi automaticky priradia k príslušným objektom. (Pozri [Fig. 22.7.]({{ '/docs/sk/pre_processor/22_convert_2d_to_3d/22_convert_2d_to_3d/' | relative_url }}#Fig_22_7_Automated_symmetry_plane_assignment_to_die/workpiece_geometry_and_boundary_code_assignment_for_mesh))
 
 ![]({{ '/assets/images/pre-processor/22_convert_2d_to_3d/image007.jpg' | relative_url }})
 

@@ -67,7 +67,7 @@ The recovering term is given in
   
 [1] "A model of continuous dynamic recrystallization"; S. Gourdet, F. Montheillet. Acta Materialia 51 (2003) 2685–2699.  
   
-Applicable object types: [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic)
+Applicable object types: [Elastoplastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic)
 
 RELATED TOPICS  
 ---  

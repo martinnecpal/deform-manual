@@ -28,7 +28,7 @@ TXTURE specifies the basic information for texture representation of a material.
   
 REMARKS  
 ---  
-Applicable object types: [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic)  
+Applicable object types: [Plastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic)  
   
 RELATED TOPICS  
 ---  

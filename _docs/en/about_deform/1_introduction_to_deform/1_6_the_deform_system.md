@@ -35,7 +35,7 @@ A pre-processor for creating, assembling, or modifying the data required to anal
 
 **Inter material data**
 
-[Inter material]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }}) data describes the physical process of one phase of a material transforming into other phases of the same material in a heat treatment process. For example, the transformation of austenite into pearlite, bainite, and martensite.
+[Inter material]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }}) data describes the physical process of one phase of a material transforming into other phases of the same material in a heat treatment process. For example, the transformation of austenite into pearlite, bainite, and martensite.
 
 **Integrated Manufacturing Process (MO)**
 

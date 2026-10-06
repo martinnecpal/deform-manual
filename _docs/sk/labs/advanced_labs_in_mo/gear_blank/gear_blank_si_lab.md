@@ -51,7 +51,7 @@ Screw press movement definition for top die
 
 ### Define Heat transfer with Bottom die
 
-Similar to Top die Heat transfer definition define Bottom die initial Temperature to **148.889** °C and Mesh of **50000** Elements. (See [Section 6.4 Define Heat transfer with Top die](gear_blank_si_lab6.htm#Fig_L6_4_Top_and_bottom_die_contact_with_workpiece))
+Similar to Top die Heat transfer definition define Bottom die initial Temperature to **148.889** °C and Mesh of **50000** Elements. (See [Section 6.4 Define Heat transfer with Top die]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab6/' | relative_url }}#Fig_L6_4_Top_and_bottom_die_contact_with_workpiece))
 
 Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **AISI-H-13** from material list to assign material. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Heat exchange with environment boundary condition and select all surfaces except bottom surface as shown in Fig. L8.3.
 

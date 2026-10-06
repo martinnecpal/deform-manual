@@ -28,7 +28,7 @@ LMTSTR specifies a limiting value of effective strain rate under which the mater
   
 REMARKS  
 ---  
-The recommended value for LimitSrate is .1% to 1% of the average strain rate (AVGSTR). If the solution is having difficulty converging at the 1% level, increase LimitSrate up to 10% of the average strain rate. This is recommended for a couple of steps only, then reset. If LimitSrate is too small, the solution may have difficulty converging. If it is too large the accuracy of the solution will be degraded. The value of LimitSrate is updated by DEFORM during the simulation when there is a significant change in the strain rate. Applicable object types: [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic), [Porous](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.4._Porous).  
+The recommended value for LimitSrate is .1% to 1% of the average strain rate (AVGSTR). If the solution is having difficulty converging at the 1% level, increase LimitSrate up to 10% of the average strain rate. This is recommended for a couple of steps only, then reset. If LimitSrate is too small, the solution may have difficulty converging. If it is too large the accuracy of the solution will be degraded. The value of LimitSrate is updated by DEFORM during the simulation when there is a significant change in the strain rate. Applicable object types: [Plastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic), [Porous]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.4._Porous).  
   
 RELATED TOPICS  
 ---  

@@ -25,7 +25,7 @@ Multiple operation wizard will open with the New Project dialog (see Fig. 3FHL1.
 
 DEFORM New Multiple operation Main window
 
-At 'Location' the new project ant its folder will be created as shown in see [Fig. 3FHL1.3.](../multiple_blow_forging_labs/3d_multi_blow_forging_lab1.htm#Fig_3DMBL1_3_Added_multiple_blow_forging_operation_into_operation_editor)
+At 'Location' the new project ant its folder will be created as shown in see [Fig. 3FHL1.3.]({{ '/docs/en/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/' | relative_url }}#Fig_3DMBL1_3_Added_multiple_blow_forging_operation_into_operation_editor)
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0003.jpg' | relative_url }})
 

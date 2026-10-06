@@ -6,7 +6,7 @@ title: "10.1.1. Flow Stress Models"
 # 10.1.1 Flow Stress Models
 
   
-DEFORM provides different methods of defining the flow stress ([FSTRES]({{ '/docs/en/Keyword_Documentation/F/FSTRES/' | relative_url }})) as shown in Fig. 10.1.1.1. Use the links below to know more about different types of flow stress models available in DEFORM.
+DEFORM provides different methods of defining the flow stress ([FSTRES]({{ '/docs/en/keyword_documentation/f/fstres/' | relative_url }})) as shown in Fig. 10.1.1.1. Use the links below to know more about different types of flow stress models available in DEFORM.
 
 ![]({{ '/assets/images/pre-processor/10_material_data/10_1_plastic_data/10_1_1_flow_stress/10_1_1_image001.jpg' | relative_url }})
 
@@ -34,7 +34,7 @@ Related Topics:
 [10.1.1.15. User defined flow stress routine]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_15_User_defined_flow_stress_routine/' | relative_url }})  
 [10.1.1.16. Flow stress database]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_16_Flow_stress_database/' | relative_url }})  
 [10.1.1.17. Material model data conversion utilities]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_17_Material_model_data_conversion_utilities/' | relative_url }})  
-[10.1.2. Creep data]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_Creep/10_1_2_Creep_Models/' | relative_url }})  
-[10.1.3. Yield model data]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_Yield_Models/10_1_3_Yield_Models/' | relative_url }})  
+[10.1.2. Creep data]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_2_creep/10_1_2_creep_models/' | relative_url }})  
+[10.1.3. Yield model data]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_3_yield_models/10_1_3_yield_models/' | relative_url }})  
 10.1.4. Porous model data  
-[10.1.5. Hardening rule data]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_5_Hardening_rule/10_1_5_Hardening_rule/' | relative_url }})
+[10.1.5. Hardening rule data]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_5_hardening_rule/10_1_5_hardening_rule/' | relative_url }})

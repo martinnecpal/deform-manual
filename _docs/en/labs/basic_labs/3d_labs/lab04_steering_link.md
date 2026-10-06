@@ -192,7 +192,7 @@ Inter-Object Window with Default Relations
 
 The workpiece should be slave to both dies. Use a friction value of**0.3** (typical for hot forming), and an interface heat transfer coefficient of **5** (typical for SI units when dies are not meshed).Remember to generate contact boundary conditions.
 
-Highlight the first relationship in the table and click ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). On the **Deformation** tab, use the friction pull-down menu to select **Hot forging (lubricated)** from the list as shown in [Fig. 3DL3.47](lab03_spike_forging.htm#Fig_3DL3_47_Inter-Object_Data_Deformation_definition_Window) then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}).
+Highlight the first relationship in the table and click ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). On the **Deformation** tab, use the friction pull-down menu to select **Hot forging (lubricated)** from the list as shown in [Fig. 3DL3.47]({{ '/docs/en/labs/basic_labs/3d_labs/lab03_spike_forging/' | relative_url }}#Fig_3DL3_47_Inter-Object_Data_Deformation_definition_Window) then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}).
 
 Select **Thermal** Tab and enter an **interface****heat****transfer****coefficient** of **5** (typical for SI units when dies are not meshed) as shown in Fig. 3DL4.14. Then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}).
 
@@ -232,7 +232,7 @@ In Step controls, select ![]({{ '/assets/icons/pre_icons/mo_simulation_step.jpg'
 
 Steps Window
 
-Select ![]({{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }}) assign a stroke/step value of **0.2** mm/step as shown in [Fig. 3DL4.19.](lab03_spike_forging.htm#Fig_3DL3_19_Heat_Transfer_type_selection_page)
+Select ![]({{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }}) assign a stroke/step value of **0.2** mm/step as shown in [Fig. 3DL4.19.]({{ '/docs/en/labs/basic_labs/3d_labs/lab03_spike_forging/' | relative_url }}#Fig_3DL3_19_Heat_Transfer_type_selection_page)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab04_steering_link/image0019.jpg' | relative_url }})
 

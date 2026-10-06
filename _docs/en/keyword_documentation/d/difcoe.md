@@ -70,7 +70,7 @@ DIFCOE 1 2 3 3
 
 REMARKS  
 ---  
-For Type 1: A is atom content and T is temperature For Type 2: C1(T) and C2(T) are coefficients as a function of temperature and A is the atom content which is extracted from the element data. For Type 3: C1(A) and C2(A) are coefficients as a function of atom content and T is temperature which is extracted from the element data. Applicable simulation types: [Microstructure](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\)) Module  
+For Type 1: A is atom content and T is temperature For Type 2: C1(T) and C2(T) are coefficients as a function of temperature and A is the atom content which is extracted from the element data. For Type 3: C1(A) and C2(A) are coefficients as a function of atom content and T is temperature which is extracted from the element data. Applicable simulation types: [Microstructure]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\)) Module  
   
 RELATED TOPICS  
 ---  

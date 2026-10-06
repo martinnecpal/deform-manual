@@ -5,7 +5,7 @@ title: "16.3. Odkaz"
 
 # 16.3. Referenčné vlastnosti
 
-Možnosť referenčných vlastností ([REFPOS]({{ '/docs/sk/Keyword_Documentation/R/REFPOS/' | relative_url }})) sa používa najmä pri vzdialenosti medzi ovládacími prvkami zastavenia objektu. Používateľ môže vybrať referenčné body výberom súradnicových možností alebo výberom možnosti Uzol (len pre sieťovaný objekt) (pozri obr. 16.3.1. a obr. 16.3.2.).
+Možnosť referenčných vlastností ([REFPOS]({{ '/docs/sk/keyword_documentation/r/refpos/' | relative_url }})) sa používa najmä pri vzdialenosti medzi ovládacími prvkami zastavenia objektu. Používateľ môže vybrať referenčné body výberom súradnicových možností alebo výberom možnosti Uzol (len pre sieťovaný objekt) (pozri obr. 16.3.1. a obr. 16.3.2.).
 
 **Napríklad** : Definujte jeden referenčný bod pre hornú kocku a jeden referenčný bod pre dolnú kocku, ak teraz vyberieme vzdialenosť medzi objektmi kontroly zastavenia a vyberieme hornú kocku a dolnú kocku ako vzdialenosť medzi objektmi kontroly zastavenia, automaticky sa vypočíta vzdialenosť medzi referenčným bodom hornej kocky a referenčným bodom dolnej kocky.
 

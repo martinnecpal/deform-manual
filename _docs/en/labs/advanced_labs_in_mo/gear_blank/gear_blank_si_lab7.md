@@ -13,13 +13,13 @@ Add **3D Forming Express** operation and click on ![]({{ '/assets/icons/pre_icon
 
 ### Define process setup
 
-In this lab we show how to setup Hammer controls for a non-isothermal simulation with het transfer calculations for both workpiece and dies. So select **Hot forging** as process type (see [Fig. L7.1.](gear_blank_si_lab7.htm#Fig_L7_1_Process_settings_selection_window)). This activates the Heat transfer mode.
+In this lab we show how to setup Hammer controls for a non-isothermal simulation with het transfer calculations for both workpiece and dies. So select **Hot forging** as process type (see [Fig. L7.1.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_1_Process_settings_selection_window)). This activates the Heat transfer mode.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0001.jpg' | relative_url }})
 
 Process settings selection window
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **Calculate temperature in workpiece and dies**(see [Fig. L7.2.](gear_blank_si_lab7.htm#Fig_L7_2_Temperature_calculation_settings_window)). This adds mesh and Boundary condition windows for dies.
+Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **Calculate temperature in workpiece and dies**(see [Fig. L7.2.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_2_Temperature_calculation_settings_window)). This adds mesh and Boundary condition windows for dies.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0002.jpg' | relative_url }})
 
@@ -37,7 +37,7 @@ Mesh the Tools to simulate the dies temperature. Click on **Mesh** branch in ope
 
 Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button and select the **Die_material** category, then **AISI-H-13**. Assign the loaded material by selecting it in material list.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and define Heat exchange with environment boundary condition for entire object except top surface as shown in [Fig. L7.3.](gear_blank_si_lab7.htm#Fig_L7_3_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces)
+Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and define Heat exchange with environment boundary condition for entire object except top surface as shown in [Fig. L7.3.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_3_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0003.jpg' | relative_url }})
 
@@ -45,7 +45,7 @@ Top die Heat exchange with environment boundary condition surfaces
 
 ### Define Hammer Controls
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to change the movement controls for Top die. Select **Hammer** from the top row of radio buttons. (See [Fig. L7.4.](gear_blank_si_lab7.htm#Fig_L7_4_Mechanical_press_movement_definition_for_top_die)) Enter:
+Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to change the movement controls for Top die. Select **Hammer** from the top row of radio buttons. (See [Fig. L7.4.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_4_Mechanical_press_movement_definition_for_top_die)) Enter:
 
 \- **Energy** : 56492419.4 N-mm.
 
@@ -57,7 +57,7 @@ Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) 
 
 Mechanical press movement definition for top die
 
-Check **Use blow table** checkbox and click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (Define) button next to use blow table checkbox. Define **dwell time** as **0.5** sec for Blow 1 and add 4 more hits using No. Hits increment button. This adds other 4 blows with same values as shown in [Fig. L7.5.](gear_blank_si_lab7.htm#Fig_L7_5_Multiple_blow_definition_table) Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the multiple blows definition.
+Check **Use blow table** checkbox and click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (Define) button next to use blow table checkbox. Define **dwell time** as **0.5** sec for Blow 1 and add 4 more hits using No. Hits increment button. This adds other 4 blows with same values as shown in [Fig. L7.5.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_5_Multiple_blow_definition_table) Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the multiple blows definition.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0005.jpg' | relative_url }})
 
@@ -67,7 +67,7 @@ Multiple blow definition table
 
 Similar to Top die Heat transfer definition define Bottom die initial Temperature to **148.889** °**C** and set **50000** Elements using **User defined** option. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **AISI-H-13** from material list to assign material. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the **Heat exchange with environment boundary condition** and select all surfaces except bottom surface as shown in [Fig. L7.6.](gear_blank_si_lab7.htm#Fig_L7_6_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces)
+Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **AISI-H-13** from material list to assign material. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the **Heat exchange with environment boundary condition** and select all surfaces except bottom surface as shown in [Fig. L7.6.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_6_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0006.jpg' | relative_url }})
 
@@ -77,13 +77,13 @@ Click on **Contact** in operation tree to define inter-object relationship.
 
 ### Define Inter-object relation ship
 
-Select **User defined radio** button and assign Shear friction of 0.3 and heat transfer conduction coefficient as **11**. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg' | relative_url }}) to generate contact with heat transfer coefficient with friction as shown in [Fig. L7.7.](gear_blank_si_lab7.htm#Fig_L7_7_Forming_express_contact_generation_window)
+Select **User defined radio** button and assign Shear friction of 0.3 and heat transfer conduction coefficient as **11**. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg' | relative_url }}) to generate contact with heat transfer coefficient with friction as shown in [Fig. L7.7.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_7_Forming_express_contact_generation_window)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0007.jpg' | relative_url }})
 
 Forming express contact generation window
 
-You should see the contact nodes on the workpiece where contact has been generated. See [Fig. L7.8.](gear_blank_si_lab7.htm#Fig_L7_8_Top_and_bottom_die_contact_with_workpiece) how the Inter object window looks and contact generation displays in graphics window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Stopping controls page.
+You should see the contact nodes on the workpiece where contact has been generated. See [Fig. L7.8.]({{ '/docs/en/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_8_Top_and_bottom_die_contact_with_workpiece) how the Inter object window looks and contact generation displays in graphics window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Stopping controls page.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0008.jpg' | relative_url }})
 

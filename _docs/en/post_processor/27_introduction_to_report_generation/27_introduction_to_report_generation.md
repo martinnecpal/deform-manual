@@ -39,7 +39,7 @@ Report Menu
 
 **MikTex:** From DEFORM v12.0., MikTex software is used to generate Report in DEFORM.
 
-In Generate PDF file, now user can observe the Contents of each chapter, Summary summary of each operation and object/s data and each section output. For more information related generated report refer chapter [28\. Report Generation]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }}) section [Generating Report](../28_report_generation/28_report_generation.htm#Generating__Report)
+In Generate PDF file, now user can observe the Contents of each chapter, Summary summary of each operation and object/s data and each section output. For more information related generated report refer chapter [28\. Report Generation]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }}) section [Generating Report]({{ '/docs/en/post_processor/28_report_generation/28_report_generation/' | relative_url }}#Generating__Report)
 
 **Related Topics:**
 

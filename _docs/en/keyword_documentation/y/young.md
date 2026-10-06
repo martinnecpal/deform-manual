@@ -86,4 +86,4 @@ Applicable simulation Modules: Deformation, Microstructure, Thermal
   
 RELATED TOPICS  
 ---  
-Object Type: [Elastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.2._Elastic) Object Keyword: [POISON]({{ '/docs/en/keyword_documentation/p/poison/' | relative_url }})
+Object Type: [Elastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.2._Elastic) Object Keyword: [POISON]({{ '/docs/en/keyword_documentation/p/poison/' | relative_url }})

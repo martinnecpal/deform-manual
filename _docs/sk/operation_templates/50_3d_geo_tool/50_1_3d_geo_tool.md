@@ -123,7 +123,7 @@ Možnosti ponuky Súbor
 
 ### Ponuka nástrojov
 
-  * **Geometrické primitívy ![]({{ '/assets/icons/pre_icons/geo_tool_geometry_primitive.jpg' | relative_url }}): **Po kliknutí na možnosť „Geometrické primitívy“ sa otvorí okno „Primitívy“ s možnosťami na vytvorenie novej geometrie. (Pozri obr. 50.1.3.) Ďalšie informácie o možnostiach Geometrický primitív nájdete v časti [12.3.2. 3D Geometry Tool](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#12.3.2._3D_Geometry_Tools) – [Define Primitive.](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Define_Primitive)
+  * **Geometrické primitívy ![]({{ '/assets/icons/pre_icons/geo_tool_geometry_primitive.jpg' | relative_url }}): **Po kliknutí na možnosť „Geometrické primitívy“ sa otvorí okno „Primitívy“ s možnosťami na vytvorenie novej geometrie. (Pozri obr. 50.1.3.) Ďalšie informácie o možnostiach Geometrický primitív nájdete v časti [12.3.2. 3D Geometry Tool]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}#12.3.2._3D_Geometry_Tools) – [Define Primitive.]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}#Define_Primitive)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0003.jpg' | relative_url }})
 
@@ -395,7 +395,7 @@ Karta „Zoznamy životného prostredia“
 
 Karta „Funkcie pre životné prostredie“
 
-**Ikona/Písmo**: Používateľ môže podľa potreby zmeniť ikonu a veľkosť písma, ako je znázornené v [Fig. 50.1.26.](50_1_3d_geo_tool.htm#Fig_50_1_26_Icon/Font_options_under_Environment_Settings_window)
+**Ikona/Písmo**: Používateľ môže podľa potreby zmeniť ikonu a veľkosť písma, ako je znázornené v [Fig. 50.1.26.]({{ '/docs/sk/operation_templates/50_3d_geo_tool/50_1_3d_geo_tool/' | relative_url }}#Fig_50_1_26_Icon/Font_options_under_Environment_Settings_window)
 
 ![]({{ '/assets/images/operation_templates/50_3d_geometry_tools/50_1_geometry_tools/image0026.jpg' | relative_url }})
 

@@ -74,9 +74,9 @@ ANISO specifies the various Hill’s anisotropic yield function.
   
 REMARKS  
 ---  
-When Hill’s quadratic (Polycrystal Plasticity) anisotropy yield function is selected (YieldType=4), texture information (crystal type, texture type) should be defined in Material dialog. At each material point of an object, orientation distribution functions will be evaluated as explained in keyword [TXTODF]({{ '/docs/en/keyword_documentation/t/txtodf/' | relative_url }}). Applicable object types: [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic), [Elastoplastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic), Note: Anisotropy is not available in “Torsion” mode in 2D.  
+When Hill’s quadratic (Polycrystal Plasticity) anisotropy yield function is selected (YieldType=4), texture information (crystal type, texture type) should be defined in Material dialog. At each material point of an object, orientation distribution functions will be evaluated as explained in keyword [TXTODF]({{ '/docs/en/keyword_documentation/t/txtodf/' | relative_url }}). Applicable object types: [Plastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic), [Elastoplastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic), Note: Anisotropy is not available in “Torsion” mode in 2D.  
   
 RELATED TOPICS  
 ---  
-[Flow stress]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_flow_stress_models/' | relative_url }}), [Plastic object](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic)  
+[Flow stress]({{ '/docs/en/pre_processor/10_material_data/10_1_plastic_data/10_1_1_flowstress/10_1_1_Flow_Stress_Models/' | relative_url }}), [Plastic object]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic)  
 Keywords: [TXTURE]({{ '/docs/en/keyword_documentation/t/txture/' | relative_url }}), [TXTODF]({{ '/docs/en/keyword_documentation/t/txtodf/' | relative_url }})

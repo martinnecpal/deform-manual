@@ -79,7 +79,7 @@ title: "43.1. Shape Rolling Manual"
 
   * Roll Movement page
 
-[43.1.4.3. Table/Guide geometry page](43_1_shape_rolling_manual.htm#43_1_4_3_Table/Guide_geometry_page)
+[43.1.4.3. Table/Guide geometry page]({{ '/docs/en/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/' | relative_url }}#43_1_4_3_Table/Guide_geometry_page)
 
 43.1.4.4. Workpiece Object page
 
@@ -656,7 +656,7 @@ Guide Geometry Primitive definition
 
 ### Workpiece Object page
 
-The user can define the Object name, Temperature and object type (As shown in Fig. 43.1.60.). [Plastic object type](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic) is selected by default, if user is interested to consider the effect of elastic properties then [Elasto-plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.3._Elasto-plastic) object type can be used. 
+The user can define the Object name, Temperature and object type (As shown in Fig. 43.1.60.). [Plastic object type]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic) is selected by default, if user is interested to consider the effect of elastic properties then [Elasto-plastic]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.3._Elasto-plastic) object type can be used. 
 
 For Lagrangian rolling type we can import the 3D Workpiece object using the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) options at the first pass. If the Workpiece object is imported from a file then the mesh settings will be as shown in Fig. 43.1.61. which is similar to the Forming operation mesh page.
 
@@ -766,7 +766,7 @@ Initialize page
 
 #### Workpiece Built-in Flownet 
 
-Multiple pass rolling setups normally generate DBs with large number of steps hence plotting a Flownet will take lot of time. User can overcome this issue by using Built-in-Flownet. When user uses Built-in-Flownet, the Flownet is calculated as the problem is simulated. For more information please refer [Built in Flownet.](../../pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation.htm#13_2_9_Built_In_Flownet)
+Multiple pass rolling setups normally generate DBs with large number of steps hence plotting a Flownet will take lot of time. User can overcome this issue by using Built-in-Flownet. When user uses Built-in-Flownet, the Flownet is calculated as the problem is simulated. For more information please refer [Built in Flownet.]({{ '/docs/en/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}#13_2_9_Built_In_Flownet)
 
 ![]({{ '/assets/images/operation_templates/43_shape_rolling/43_1_shape_rolling_manual/image0067.jpg' | relative_url }})
 

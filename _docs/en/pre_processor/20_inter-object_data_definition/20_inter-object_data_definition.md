@@ -23,13 +23,13 @@ Inter Object Data Definition window
 
 The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. The relations table shows the current inter object relations that have been defined. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined. This includes an object having a relationship to itself if self-contact occurs. It is very important to define these relationships correctly for a simulation to model a forming process accurately. The critical variables to be defined between contacting objects are:
 
-  * [Friction factor](20_1_friction_and_contact_criteria.htm#20_1_1_Friction_\(FRCFAC\))
+  * [Friction factor]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}#20_1_1_Friction_\(FRCFAC\))
 
-  * [Interface heat transfer coefficient](20_2_interface_thermal_data.htm#20_2_1_Interface_heat_transfer_coefficient_\(IHTCOF\))
+  * [Interface heat transfer coefficient]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }}#20_2_1_Interface_heat_transfer_coefficient_\(IHTCOF\))
 
   * Contact relation
 
-  * [Separation criterion](20_1_friction_and_contact_criteria.htm#20_1_4_Separation_Type)
+  * [Separation criterion]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}#20_1_4_Separation_Type)
 
 Also covered in the inter object controls is generation of inter-object boundary conditions.
 
@@ -186,13 +186,13 @@ Inter object relation after swapping using arrow button.
 
 [20.5. Rigid Contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }})
 
-[Simulation modes selection](../9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\))
+[Simulation modes selection]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\))
 
 [Environment process conditions settings]({{ '/docs/en/pre_processor/9_simulation_controls/9_6_process_conditions/' | relative_url }})
 
-[DEFORM object types](../11_general_object_data_definition/11_general_object_data_definition.htm#11.4._Object_type)
+[DEFORM object types]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4._Object_type)
 
-[Contact Boundary condition](../14_boundary_conditions/14_2_deformation_boundary_conditions.htm#14.2.6._Contact)
+[Contact Boundary condition]({{ '/docs/en/pre_processor/14_boundary_conditions/14_2_deformation_boundary_conditions/' | relative_url }}#14.2.6._Contact)
 
 [2D Tool Wear Lab]({{ '/docs/en/applications/55_applications/55_tool_wear_labs/2d_tool_wear_lab_in_mo/' | relative_url }})
 

@@ -181,7 +181,7 @@ MO Post mode after simulation is completed
 
 We can plot Press model output using Load stroke Graph and using Summary Deformation State variable output.
 
-Click on **Graph**![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) , select Top die and plot press force-z /press torque -x to see the press loading history. Plotted **Press force****Z** and Press **torque X** is as shown in [Fig. 3DPML1.18.](3d_press_model_lab.htm#Fig_3DPML1_18_Load_stroke_-_Stroke_v/s_Press_force_Z_plot) and [Fig. 3DPML1.19.](3d_press_model_lab.htm#Fig_3DPML1_19_Load_stroke_-_Stroke_v/s_Press_torque_X_plot)
+Click on **Graph**![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) , select Top die and plot press force-z /press torque -x to see the press loading history. Plotted **Press force****Z** and Press **torque X** is as shown in [Fig. 3DPML1.18.]({{ '/docs/en/applications/55_applications/55_press_model/3d_press_model_lab/' | relative_url }}#Fig_3DPML1_18_Load_stroke_-_Stroke_v/s_Press_force_Z_plot) and [Fig. 3DPML1.19.]({{ '/docs/en/applications/55_applications/55_press_model/3d_press_model_lab/' | relative_url }}#Fig_3DPML1_19_Load_stroke_-_Stroke_v/s_Press_torque_X_plot)
 
 ![]({{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0018.jpg' | relative_url }})
 
@@ -192,7 +192,7 @@ Load stroke - Stroke v/s Press force Z plot
 Load stroke - Stroke v/s Press torque X plot
 
   
-Plot Press displacement -Z / Press rotated angle -x curves to see the press deformation history. Plotted **Press displacement****Z** and Press **rotated angle X** is as shown in [Fig. 3DPML1.20.](3d_press_model_lab.htm#Fig_3DPML1_20_Load_stroke_–_Stroke_v/s_Press_displacement_Z_plot) and [Fig. 3DPML1.21.](3d_press_model_lab.htm#Fig_3DPML1_21_Load_stroke_–_Stroke_v/s_Press_rotated_angle_X)
+Plot Press displacement -Z / Press rotated angle -x curves to see the press deformation history. Plotted **Press displacement****Z** and Press **rotated angle X** is as shown in [Fig. 3DPML1.20.]({{ '/docs/en/applications/55_applications/55_press_model/3d_press_model_lab/' | relative_url }}#Fig_3DPML1_20_Load_stroke_–_Stroke_v/s_Press_displacement_Z_plot) and [Fig. 3DPML1.21.]({{ '/docs/en/applications/55_applications/55_press_model/3d_press_model_lab/' | relative_url }}#Fig_3DPML1_21_Load_stroke_–_Stroke_v/s_Press_rotated_angle_X)
 
 ![]({{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0020.jpg' | relative_url }})
 
@@ -202,7 +202,7 @@ Load stroke – Stroke v/s Press displacement Z plot
 
 Load stroke – Stroke v/s Press rotated angle X
 
-Plot Press speed curves plot as shown in [Fig. 3DPML1.22.](3d_press_model_lab.htm#Fig_3DPML1_22_Load_stroke_–_Stroke_v/s_Press_translation_speed_Z)
+Plot Press speed curves plot as shown in [Fig. 3DPML1.22.]({{ '/docs/en/applications/55_applications/55_press_model/3d_press_model_lab/' | relative_url }}#Fig_3DPML1_22_Load_stroke_–_Stroke_v/s_Press_translation_speed_Z)
 
 ![]({{ '/assets/images/applications/55_press_model/3d_press_model_lab/image0022.jpg' | relative_url }})
 

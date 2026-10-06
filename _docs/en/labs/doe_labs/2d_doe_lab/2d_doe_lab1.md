@@ -297,7 +297,7 @@ Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 
 Operation Min/Max output variables definition window
 
   
-Click ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) twice to add **Minimum Effective Stress** and **Strain** at last step of the operation as summary variables and **Workpiece** as Object as shown in [Fig. DOEL1.38.](2d_doe_lab1.htm#Fig_DOEL1_38_Summary_Min/Max_variables_definition_window)
+Click ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) twice to add **Minimum Effective Stress** and **Strain** at last step of the operation as summary variables and **Workpiece** as Object as shown in [Fig. DOEL1.38.]({{ '/docs/en/labs/doe_labs/2d_doe_lab/2d_doe_lab1/' | relative_url }}#Fig_DOEL1_38_Summary_Min/Max_variables_definition_window)
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0038.jpg' | relative_url }})
 

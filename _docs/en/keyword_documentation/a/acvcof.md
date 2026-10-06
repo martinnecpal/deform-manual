@@ -49,4 +49,4 @@ ACVCOF 1 3
   
 RELATED TOPICS  
 ---  
-Applicable Simulation Modules: Microstructure Applicable Simulation Modes: [Diffusion](../../pre_processor/9_simulation_controls/9_1_simulation_type_settings.htm#9.1.5._Simulation_modes_\(SMODE,_TRANS\))
+Applicable Simulation Modules: Microstructure Applicable Simulation Modes: [Diffusion]({{ '/docs/en/pre_processor/9_simulation_controls/9_1_simulation_type_settings/' | relative_url }}#9.1.5._Simulation_modes_\(SMODE,_TRANS\))

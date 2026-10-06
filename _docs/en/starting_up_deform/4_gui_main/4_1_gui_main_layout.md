@@ -130,7 +130,7 @@ Right mouse button click menu for Mounted Problem folder
 **Duplicate** : User can use this option to from RMB on a folder to duplicate the folder, folder is duplicated with new name at the same location as that of the source directory.   
 **Delete**![]({{ '/assets/icons/pre_icons/mo_delete_folder_icon.jpg' | relative_url }}) : User can delete the folder from the system using this option from RMB options on a folder.  
 **Rename(F2)** : Folder name can be renamed using this option from RMB options or F2 key on a folder.  
-**Database archive** : “Database Archive” dialog can be launched to archive projects in the selected folder, for more information on “Database Archive” please refer [Database Archive](../../integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu.htm#Database_Archive) in**** Chapter 6.4. Main Menu   
+**Database archive** : “Database Archive” dialog can be launched to archive projects in the selected folder, for more information on “Database Archive” please refer [Database Archive]({{ '/docs/en/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_4_main_menu/' | relative_url }}#Database_Archive) in**** Chapter 6.4. Main Menu   
 **Clean up Files** : This option from RMB options is used to clean up temporary files created by DEFORM during setting up a problem or simulation  
 **Clean up running status** : If a simulation is stopped or killed by user and running status is remained then this RMB option can be used to clean up the running status.  
 **Move Project** : We can move project folder from one directory to another directory by drag and drop as shown in Fig. 4.1.4.
@@ -495,7 +495,7 @@ Memory options under Environment Settings window
 
   * Icon/Font:
 
-The user can change the icon and font size depending on the requirement as shown in the [Fig. 4.1.40.](4_1_gui_main_layout.htm#Fig_4_1_40_Icon/Font_options_under_Environment_Settings_window)
+The user can change the icon and font size depending on the requirement as shown in the [Fig. 4.1.40.]({{ '/docs/en/starting_up_deform/4_gui_main/4_1_gui_main_layout/' | relative_url }}#Fig_4_1_40_Icon/Font_options_under_Environment_Settings_window)
 
 ![]({{ '/assets/images/integrated_manufacturing_process_setup/6_4_main_menu/6_4_image033.jpg' | relative_url }})
 

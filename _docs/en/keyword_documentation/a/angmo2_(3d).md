@@ -30,8 +30,8 @@ ANGMO2 specifies the angular movement of the 2nd rotational axis.
   
 REMARKS  
 ---  
-The 2nd rotational velocity of an object can be specified by a torque rate or an angular velocity  Applicable object types: [Rigid](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.5._Rigid)  
+The 2nd rotational velocity of an object can be specified by a torque rate or an angular velocity  Applicable object types: [Rigid]({{ '/docs/en/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.5._Rigid)  
   
 RELATED TOPICS  
 ---  
-Keywords: [MOVCTL](../m/movctl_\(3d\).htm), [CNTRAX](../c/cntrax\(3d\).htm)
+Keywords: [MOVCTL]({{ '/docs/en/keyword_documentation/m/movctl_(3d)/' | relative_url }}), [CNTRAX]({{ '/docs/en/keyword_documentation/c/cntrax(3d)/' | relative_url }})

@@ -13,7 +13,7 @@ title: "JMAK Parameters Fitting Lab"
 
 1.4. Fit material parameters in DRX kinetics
 
-[1.5. Fit material parameters in MRX/SRX kinetics](jmak_parameters_fitting_lab.htm#1_5_Fit_material_parameters_in_MRX/SRX_kinetics_The_procedure_to_imp)
+[1.5. Fit material parameters in MRX/SRX kinetics]({{ '/docs/en/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/' | relative_url }}#1_5_Fit_material_parameters_in_MRX/SRX_kinetics_The_procedure_to_imp)
 
 1.6. Fit material parameters in grain growth kinetics
 

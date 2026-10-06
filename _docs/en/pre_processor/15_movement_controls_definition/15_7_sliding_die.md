@@ -5,7 +5,7 @@ title: "15.7. Sliding Die"
 
 # 15.7. Sliding Die
 
-[2D, 3D]: Defining sliding movement can be done in the movement controls window as seen in Fig. 15.7.1. and Fig. 15.7.2. To use spring-loaded dies, the object should be rigid and should not have any other movement specified.
+\[2D, 3D]: Defining sliding movement can be done in the movement controls window as seen in Fig. 15.7.1. and Fig. 15.7.2. To use spring-loaded dies, the object should be rigid and should not have any other movement specified.
 
 The following items should be specified for all spring-loaded die cases:
 

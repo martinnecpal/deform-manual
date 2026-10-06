@@ -188,7 +188,7 @@ Anisotropic model
 
 **Contact Tab:**
 
-From DEFORM -V12 Separation criteria options are added under Deformation - Contact tab, additional contact and separation criteria based on distance and geometry has been implemented (See Fig. 20.1.11. (2D) and Fig. 20.1.12. (3D)). Also contact method options are moved to Simulation Controls ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Advanced ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})[Contact](../9_simulation_controls/9_7_advanced_options.htm#9.7.5._Contact_) tab.
+From DEFORM -V12 Separation criteria options are added under Deformation - Contact tab, additional contact and separation criteria based on distance and geometry has been implemented (See Fig. 20.1.11. (2D) and Fig. 20.1.12. (3D)). Also contact method options are moved to Simulation Controls ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Advanced ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})[Contact]({{ '/docs/en/pre_processor/9_simulation_controls/9_7_advanced_options/' | relative_url }}#9.7.5._Contact_) tab.
 
 ![]({{ '/assets/images/pre-processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/20_1_image011.jpg' | relative_url }})
 

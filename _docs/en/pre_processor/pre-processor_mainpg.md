@@ -37,9 +37,9 @@ title: "Pre-Processor Main Pg.htm"
 
 [10.7. Hardness Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
 
-[10.8. Elec/ Mag Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }})
+[10.8. Elec/ Mag Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_Elec_Mag_Data/' | relative_url }})
 
-[10.9 Transformation Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }})
+[10.9 Transformation Data Definition]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }})
 
 10.10. Coarsening Data Definition
 
@@ -57,7 +57,7 @@ title: "Pre-Processor Main Pg.htm"
 
 [12.3. 3D Geometry data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }})
 
-[12.4. 3D Geometry data Editing (GEO TOOL)]({{ '/docs/en/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_editing_geo_tooll/' | relative_url }})
+[12.4. 3D Geometry data Editing (GEO TOOL)]({{ '/docs/en/pre_processor/12_geometry_modelling/12_4_3d_geometry_data_Editing_geo_toolL/' | relative_url }})
 
 [13\. Mesh Generation]({{ '/docs/en/pre_processor/13_mesh_generation/13_mesh_generation/' | relative_url }})
 
@@ -109,9 +109,9 @@ title: "Pre-Processor Main Pg.htm"
 
 [16.2. Thermal properties]({{ '/docs/en/pre_processor/16_object_properties/16_2_thermal_properties/' | relative_url }})
 
-[16.3. Reference]({{ '/docs/en/pre_processor/16_object_properties/16_3_reference/' | relative_url }})
+[16.3. Reference]({{ '/docs/en/pre_processor/16_object_properties/16_3_Reference/' | relative_url }})
 
-[16.4. Fracture]({{ '/docs/en/pre_processor/16_object_properties/16_4_fracture_properties/' | relative_url }})
+[16.4. Fracture]({{ '/docs/en/pre_processor/16_object_properties/16_4_Fracture_properties/' | relative_url }})
 
 [16.5. Hardness]({{ '/docs/en/pre_processor/16_object_properties/16_5_hardness_properties/' | relative_url }})
 

@@ -226,7 +226,7 @@ Vyskakovacie okno „Predvolené okrajové podmienky“
 
 **Určenie rotačnej symetrie**
 
-Na definovanie rotačnej symetrie zadajte bod a vektor osi otáčania, ako aj stupeň symetrie, ako je znázornené na obr. 33.2.23. Potom kliknite na počiatočnú a koncovú rovinu geometrie v smere otáčania, aby sa uplatnila rotačná symetria. Podmienka symetrie sa pridá do zoznamu aktuálne zadaných symetrií. Ďalšie informácie o možnosti rotačnej symetrie nájdete v [Rotational Symmetry.](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Specifying_Rotational_Symmetry)
+Na definovanie rotačnej symetrie zadajte bod a vektor osi otáčania, ako aj stupeň symetrie, ako je znázornené na obr. 33.2.23. Potom kliknite na počiatočnú a koncovú rovinu geometrie v smere otáčania, aby sa uplatnila rotačná symetria. Podmienka symetrie sa pridá do zoznamu aktuálne zadaných symetrií. Ďalšie informácie o možnosti rotačnej symetrie nájdete v [Rotational Symmetry.]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}#Specifying_Rotational_Symmetry)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image021.jpg' | relative_url }})
 
@@ -252,7 +252,7 @@ Okno s geometrickými primitívami 2D pre osovo symetrické a torzné modely
 
 **Check![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**
 
-Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), čím sa zobrazí vyskakovacie okno, ako je znázornené na obr. 33.2.26 nižšie. Ak sa vyskytnú nejaké chyby, geometria sa opraví po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
+Po vytvorení geometrie objektu sa aktivuje tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Je potrebné skontrolovať orientáciu geometrie. To je možné urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), čím sa zobrazí vyskakovacie okno, ako je znázornené na obr. 33.2.26 nižšie. Ak sa vyskytnú nejaké chyby, geometria sa opraví po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Po oprave geometrie alebo ak geometria neobsahuje žiadne chyby, zobrazí sa správa „Geometria je správna“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Ďalšie informácie nájdete v časti [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) [Check Geometry]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}#Check_Geometry). 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image022.jpg' | relative_url }})
 
@@ -260,7 +260,7 @@ Vyskakovacie okno „Skontrolovať geometriu“
 
 **Upraviť**![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }})
 
-Možnosť „Úprava geometrie“ slúži na vytvorenie geometrie objektu alebo na úpravu existujúcej geometrie. Importovanú geometriu je možné upraviť v okne „Úprava geometrie“. Ďalšie informácie o úprave geometrie nájdete v časti [ Edit Geometry](33_1_2d_forming_setup.htm#Edit_) v nastaveniach Forming 2D.
+Možnosť „Úprava geometrie“ slúži na vytvorenie geometrie objektu alebo na úpravu existujúcej geometrie. Importovanú geometriu je možné upraviť v okne „Úprava geometrie“. Ďalšie informácie o úprave geometrie nájdete v časti [ Edit Geometry]({{ '/docs/sk/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }}#Edit_) v nastaveniach Forming 2D.
 
 **Zobraziť geometriu vnútri značky**
 
@@ -354,7 +354,7 @@ Na nižšie uvedenom obr. 33.2.34. je zobrazené okno s materiálmi. Používate
 
 Okno „Materiál“
 
-Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}); otvorí sa okno s materiálom, ako je znázornené na obrázku [Fig. 10.9.](../../pre_processor/10_material_data/10_material_data.htm#Fig._10.9._Edit_material_window). Požadované vlastnosti závisia od fyzikálnych javov, ktoré sa simulujú v programe DEFORM. Vlastnosti materiálu, ktoré musí používateľ špecifikovať, závisia od typov materiálov, ktoré používateľ využíva v simulácii. V tejto časti sú popísané údaje o materiáloch, ktoré je možné špecifikovať pre simuláciu v programe DEFORM.
+Po pridaní materiálu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}); otvorí sa okno s materiálom, ako je znázornené na obrázku [Fig. 10.9.]({{ '/docs/sk/pre_processor/10_material_data/10_material_data/' | relative_url }}#Fig._10.9._Edit_material_window). Požadované vlastnosti závisia od fyzikálnych javov, ktoré sa simulujú v programe DEFORM. Vlastnosti materiálu, ktoré musí používateľ špecifikovať, závisia od typov materiálov, ktoré používateľ využíva v simulácii. V tejto časti sú popísané údaje o materiáloch, ktoré je možné špecifikovať pre simuláciu v programe DEFORM.
 
   
 Jednotlivé súbory údajov sú:
@@ -366,8 +366,8 @@ Jednotlivé súbory údajov sú:
   * [Dislocation ]({{ '/docs/en/pre_processor/10_material_data/10_5_dislocation_data/' | relative_url }})
   * [Grain ]({{ '/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/' | relative_url }})
   * [Hardness ]({{ '/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
-  * [Elec/ Mag ]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }})
-  * [Transformation]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }})
+  * [Elec/ Mag ]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_Elec_Mag_Data/' | relative_url }})
+  * [Transformation]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }})
   * [Coarsening]({{ '/docs/en/pre_processor/10_material_data/10_10_coarsening_data/' | relative_url }})
   * [Texture ]({{ '/docs/en/pre_processor/10_material_data/10_11_texture_data/' | relative_url }})
   * [Miscellaneous]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }})
@@ -448,7 +448,7 @@ Kliknutím na toto tlačidlo systém automaticky umiestni objekty vzhľadom na s
 
 **Umiestňovanie objektov** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) a [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning), ako je znázornené na obr. 33.2.43. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+Kliknutím na toto tlačidlo môže používateľ umiestniť objekty do požadovaných smerov. K dispozícii sú rôzne typy možností umiestnenia, ako napríklad [Drag]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Drop]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_5_Drop_positioning), [Offset]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning) a [Rotational]({{ '/docs/sk/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning), ako je znázornené na obr. 33.2.43. Ďalšie informácie o týchto možnostiach nájdete v časti [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image038.jpg' | relative_url }})
 
@@ -468,13 +468,13 @@ Plánované časové okno na určovanie polohy
 
 Účelom vzťahov medzi objektmi je definovať, ako rôzne objekty v simulácii vzájomne interagujú. Tabuľka vzťahov zobrazuje aktuálne definované vzťahy medzi objektmi. Všetky objekty, ktoré môžu prísť do kontaktu v priebehu simulácie, musia mať definovaný kontaktný vzťah. To zahŕňa aj objekt, ktorý má vzťah sám so sebou, ak dochádza k vlastnému kontaktu, ako je to v prípade prekrývania. Správne definovanie týchto vzťahov je veľmi dôležité, aby simulácia presne modelovala proces formovania. Kľúčové premenné, ktoré je potrebné definovať medzi kontaktujúcimi sa objektmi, sú:
 
-  * [Friction factor](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_1_Friction_\(FRCFAC\))
+  * [Friction factor]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}#20_1_1_Friction_\(FRCFAC\))
 
-  * [Interface heat transfer coefficient](../../pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data.htm#20_2_1_Interface_heat_transfer_coefficient_\(IHTCOF\))
+  * [Interface heat transfer coefficient]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }}#20_2_1_Interface_heat_transfer_coefficient_\(IHTCOF\))
 
-  * [Contact relation](../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm#20_1_Contact_relation_\(CNTACT\))
+  * [Contact relation]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}#20_1_Contact_relation_\(CNTACT\))
 
-  * [Separation criterion](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_4_Separation_Type)
+  * [Separation criterion]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}#20_1_4_Separation_Type)
 
 Súčasťou riadenia interakcií medzi objektmi je aj generovanie okrajových podmienok medzi objektmi.
 
@@ -482,7 +482,7 @@ Vzťahy medzi objektmi určujú, ktoré objekty sa môžu navzájom dotýkať, a
 
   * Určte kombináciu „master-slave“ – V prípade jediného deformovaného objektu by mal byť deformovaný objekt vždy objektom typu „slave“. V prípade viacerých deformovaných telies by mal byť objektom typu „slave“ ten objekt, ktorý má na rozhraní týchto dvoch objektov jemnejšiu sieť.
 
-  * Nastavte parametre pre danú dvojicu master-slave – to môžete urobiť kliknutím na tlačidlo „Edit“ a nastavením príslušných parametrov. (Pozri [Fig. 20.2.](../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm#Fig_20_2_Inter_object_constant_Shear_Friction_options_for__2D) a [Fig. 20.3.](../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm#Fig_20_3_Inter_object_constant_Shear_Friction_options_for_3D))
+  * Nastavte parametre pre danú dvojicu master-slave – to môžete urobiť kliknutím na tlačidlo „Edit“ a nastavením príslušných parametrov. (Pozri [Fig. 20.2.]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}#Fig_20_2_Inter_object_constant_Shear_Friction_options_for__2D) a [Fig. 20.3.]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}#Fig_20_3_Inter_object_constant_Shear_Friction_options_for_3D))
 
   * Vytvorenie kontaktu pre všetky objekty – Najskôr kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}) a potom na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}), čím sa vytvorí kontakt. Ak sa kontakt nevytvoril tak, ako ste očakávali, skontrolujte nasledujúce:
 
@@ -516,7 +516,7 @@ Pridanie maziva z okna „Edit“
 
 Kliknutím na tlačidlo „Upraviť ****![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }})****“ môže používateľ nastaviť parametre trenia a prenosu tepla medzi fázami. Ďalšie informácie nájdete v časti [20\. Inter-object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}).
 
-Ďalšie informácie o modeloch [Deformation]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }}), [Heating]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }}), [Friction window](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_6_Friction_Window), [Tool wear]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}) a [Rigid contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }}) nájdete v kapitole [20\. Inter-object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}). 
+Ďalšie informácie o modeloch [Deformation]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }}), [Heating]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }}), [Friction window]({{ '/docs/sk/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}#20_1_6_Friction_Window), [Tool wear]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}) a [Rigid contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }}) nájdete v kapitole [20\. Inter-object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}). 
 
 ## Ovládacie prvky na zastavenie
 

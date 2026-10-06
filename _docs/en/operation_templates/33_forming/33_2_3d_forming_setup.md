@@ -226,7 +226,7 @@ Default Boundary Conditions popup window
 
 **Specifying Rotational Symmetry**
 
-To specify rotational symmetry, specify the point and vector of the rotational axis as well as the degree of symmetry available as shown in Fig. 33.2.23. After this, click on the starting plane and end plane of the geometry in the direction of rotation so that rotational symmetry to be applied. The symmetry condition will be added to the list of currently specified symmetry. For more information about rotational symmetry option refer [Rotational Symmetry.](../../pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining.htm#Specifying_Rotational_Symmetry)
+To specify rotational symmetry, specify the point and vector of the rotational axis as well as the degree of symmetry available as shown in Fig. 33.2.23. After this, click on the starting plane and end plane of the geometry in the direction of rotation so that rotational symmetry to be applied. The symmetry condition will be added to the list of currently specified symmetry. For more information about rotational symmetry option refer [Rotational Symmetry.]({{ '/docs/en/pre_processor/12_geometry_modelling/12_3_3d_geometry_data_defining/' | relative_url }}#Specifying_Rotational_Symmetry)
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image021.jpg' | relative_url }})
 
@@ -252,7 +252,7 @@ The geometry window appears for Axisymmetric type of geometry is shown in Fig. 3
 
 **Check![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})**
 
-Once the geometry of the object is created, ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button a popup appears as shown in below Fig. 33.2.26. The Geometry gets corrected, if they are any errors when we click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). For more information please refer [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) section [Check Geometry](../../pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining.htm#Check_Geometry). 
+Once the geometry of the object is created, ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button gets activated. It is necessary to check the orientation of the geometry. This can be done by clicking on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button a popup appears as shown in below Fig. 33.2.26. The Geometry gets corrected, if they are any errors when we click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. A message saying, "Geometry is legal" will appear once the geometry is corrected or does not have any errors and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). For more information please refer [12.1. 2D Geometry Data Defining]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}) section [Check Geometry]({{ '/docs/en/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }}#Check_Geometry). 
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image022.jpg' | relative_url }})
 
@@ -260,7 +260,7 @@ Check Geometry popup window
 
 **Edit**![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }})
 
-The Geometry editing option is used to create geometry for an object or edit the existing geometry. Imported geometry can be modified in Edit Geometry window. For more information on edit geometry, please refer[ Edit Geometry](33_1_2d_forming_setup.htm#Edit_) in Forming 2D Setup.
+The Geometry editing option is used to create geometry for an object or edit the existing geometry. Imported geometry can be modified in Edit Geometry window. For more information on edit geometry, please refer[ Edit Geometry]({{ '/docs/en/operation_templates/33_forming/33_1_2d_forming_setup/' | relative_url }}#Edit_) in Forming 2D Setup.
 
 **Show geometry inside mark**
 
@@ -354,7 +354,7 @@ The below Fig. 33.2.34. shows the material window. User can assign required mate
 
 Material Window
 
-Once after adding material click on ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}) button, material window will open as shown in [Fig. 10.9.](../../pre_processor/10_material_data/10_material_data.htm#Fig._10.9._Edit_material_window) The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. This section describes the material data that may be specified for a DEFORM simulation.
+Once after adding material click on ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}) button, material window will open as shown in [Fig. 10.9.]({{ '/docs/en/pre_processor/10_material_data/10_material_data/' | relative_url }}#Fig._10.9._Edit_material_window) The properties required are dependent on the physical effects being simulated in DEFORM. The material properties that the user is required to specify is a function of the material types that the user is utilizing in the simulation. This section describes the material data that may be specified for a DEFORM simulation.
 
   
 The different data sets are:
@@ -366,8 +366,8 @@ The different data sets are:
   * [Dislocation ]({{ '/docs/en/pre_processor/10_material_data/10_5_dislocation_data/' | relative_url }})
   * [Grain ]({{ '/docs/en/pre_processor/10_material_data/10_6_grain_data/10_6_grain_data/' | relative_url }})
   * [Hardness ]({{ '/docs/en/pre_processor/10_material_data/10_7_hardness_data/10_7_hardness_data/' | relative_url }})
-  * [Elec/ Mag ]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_elec_mag_data/' | relative_url }})
-  * [Transformation]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_transformation_data/' | relative_url }})
+  * [Elec/ Mag ]({{ '/docs/en/pre_processor/10_material_data/10_8_elec_mag_data/10_8_Elec_Mag_Data/' | relative_url }})
+  * [Transformation]({{ '/docs/en/pre_processor/10_material_data/10_9_transformation_data/10_9_Transformation_Data/' | relative_url }})
   * [Coarsening]({{ '/docs/en/pre_processor/10_material_data/10_10_coarsening_data/' | relative_url }})
   * [Texture ]({{ '/docs/en/pre_processor/10_material_data/10_11_texture_data/' | relative_url }})
   * [Miscellaneous]({{ '/docs/en/pre_processor/10_material_data/10_12_miscellaneous_data/10_12_miscellaneous_data/' | relative_url }})
@@ -448,7 +448,7 @@ By clicking on this button, system automatically Positions the Objects with resp
 
 **Positioning Objects** ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }})
 
-By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_1_Drag_Positioning), [Drop](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_5_Drop_positioning), [Offset](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_2_Offset_Positioning), [Interference](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_3_Interference_positioning) and [Rotational](../../pre_processor/19_object_positioning/19_object_positioning.htm#19_4_Rotational_positioning) as shown in Fig. 33.2.43. For more information about these options, please refer [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
+By clicking on this button, user can position the objects in required directions. Various types of Positioning Options are available such as [Drag]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_1_Drag_Positioning), [Drop]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_5_Drop_positioning), [Offset]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_2_Offset_Positioning), [Interference]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_3_Interference_positioning) and [Rotational]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }}#19_4_Rotational_positioning) as shown in Fig. 33.2.43. For more information about these options, please refer [19\. Object Positioning.]({{ '/docs/en/pre_processor/19_object_positioning/19_object_positioning/' | relative_url }})
 
 ![]({{ '/assets/images/operation_templates/33_forming/33_2_3d_forming_setup/image038.jpg' | relative_url }})
 
@@ -468,13 +468,13 @@ Scheduled Positioning window
 
 The purpose of inter-object relations is to define how the different objects in a simulation interact with each other. The relations table shows the current inter object relations that have been defined. All objects which may come in contact with each other through the course of the simulation must have a contact relation defined. This includes an object having a relationship to itself, if self-contact occurs as in case of lap. It is very important to define these relationships correctly for a simulation to model a forming process accurately. The critical variables to be defined between contacting objects are:
 
-  * [Friction factor](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_1_Friction_\(FRCFAC\))
+  * [Friction factor]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}#20_1_1_Friction_\(FRCFAC\))
 
-  * [Interface heat transfer coefficient](../../pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data.htm#20_2_1_Interface_heat_transfer_coefficient_\(IHTCOF\))
+  * [Interface heat transfer coefficient]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }}#20_2_1_Interface_heat_transfer_coefficient_\(IHTCOF\))
 
-  * [Contact relation](../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm#20_1_Contact_relation_\(CNTACT\))
+  * [Contact relation]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}#20_1_Contact_relation_\(CNTACT\))
 
-  * [Separation criterion](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_4_Separation_Type)
+  * [Separation criterion]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}#20_1_4_Separation_Type)
 
 Also covered in the inter object controls is generation of inter-object boundary conditions.
 
@@ -482,7 +482,7 @@ Inter-Object relations define what objects can contact each other, and how conta
 
   * Define the master-slave combination – In the case of a single deforming object, the deforming object should be the slave object always. In the case of multiple deforming bodies, the object with the finer mesh at the interface of the two objects should be the slave object.
 
-  * Define the parameter for the given master-slave pair – This can be done by clicking the Edit button and setting the appropriate parameters . (See [Fig. 20.2.](../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm#Fig_20_2_Inter_object_constant_Shear_Friction_options_for__2D) and [Fig. 20.3.](../../pre_processor/20_inter-object_data_definition/20_inter-object_data_definition.htm#Fig_20_3_Inter_object_constant_Shear_Friction_options_for_3D))
+  * Define the parameter for the given master-slave pair – This can be done by clicking the Edit button and setting the appropriate parameters . (See [Fig. 20.2.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}#Fig_20_2_Inter_object_constant_Shear_Friction_options_for__2D) and [Fig. 20.3.]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}#Fig_20_3_Inter_object_constant_Shear_Friction_options_for_3D))
 
   * Generate the contact for all the objects – First click the ![]({{ '/assets/icons/pre_icons/mo_initialize_button.jpg' | relative_url }}) icon and then click the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button to generate contact. If contact is not generated where expected check following:
 
@@ -516,7 +516,7 @@ Adding lubricant from Edit window
 
 By clicking on edit ****![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }})**** button user can define the friction and Interface Heat relations. For more information refer, [20\. Inter-object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }})
 
-For more information about [Deformation]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }}), [Heating]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }}), [Friction window](../../pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria.htm#20_1_6_Friction_Window), [Tool wear]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}) and [Rigid contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }}), refer chapter [20\. Inter-object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}). 
+For more information about [Deformation]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}), [Thermal]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_2_interface_thermal_data/' | relative_url }}), [Heating]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_3_interface_resisitivity/' | relative_url }}), [Friction window]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_1_friction_and_contact_criteria/' | relative_url }}#20_1_6_Friction_Window), [Tool wear]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_4_tool_wear/' | relative_url }}) and [Rigid contact]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_5_rigid_contact/' | relative_url }}), refer chapter [20\. Inter-object Data Definition]({{ '/docs/en/pre_processor/20_inter-object_data_definition/20_inter-object_data_definition/' | relative_url }}). 
 
 ## Stopping Controls
 

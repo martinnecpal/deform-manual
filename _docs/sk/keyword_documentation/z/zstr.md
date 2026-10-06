@@ -32,7 +32,7 @@ To use this keyword it is assumed the strain rate in the direction (perpendicula
   
 It is equivalent to the plane strain case when the value is "0".
 
-Applicable object types: [Plastic](../../pre_processor/11_general_object_data_definition/11_general_object_data_definition.htm#11.4.1_Plastic), Elastoplastic  
+Applicable object types: [Plastic]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }}#11.4.1_Plastic), Elastoplastic  
   
 RELATED TOPICS  
 ---  
